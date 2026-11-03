@@ -7,21 +7,21 @@ import java.util.Objects;
 public final class n3 extends j3 {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final /* synthetic */ Activity f6680e;
+    public final /* synthetic */ Activity f6753e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final /* synthetic */ u3 f6681f;
+    public final /* synthetic */ u3 f6754f;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public n3(u3 u3Var, Activity activity) {
-        super(u3Var.f6821a, true);
-        this.f6680e = activity;
+        super(u3Var.f6895a, true);
+        this.f6753e = activity;
         Objects.requireNonNull(u3Var);
-        this.f6681f = u3Var;
+        this.f6754f = u3Var;
     }
 
     @Override // com.google.android.gms.internal.measurement.j3
     public final void a() {
-        ((u1) n9.m.l(this.f6681f.f6821a.m())).onActivityStartedByScionActivityInfo(zzdf.a(this.f6680e), this.b);
+        ((u1) n9.m.l(this.f6754f.f6895a.m())).onActivityStartedByScionActivityInfo(zzdf.a(this.f6753e), this.b);
     }
 }

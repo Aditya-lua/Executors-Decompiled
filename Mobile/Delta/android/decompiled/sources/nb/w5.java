@@ -7,54 +7,54 @@ import android.util.Log;
 public final class w5 extends k8 {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public char f26056c;
+    public char f26877c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public long f26057d;
+    public long f26878d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public String f26058e;
+    public String f26879e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final u5 f26059f;
+    public final u5 f26880f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final u5 f26060g;
+    public final u5 f26881g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final u5 f26061h;
+    public final u5 f26882h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final u5 f26062i;
+    public final u5 f26883i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final u5 f26063j;
+    public final u5 f26884j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final u5 f26064k;
+    public final u5 f26885k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final u5 f26065l;
+    public final u5 f26886l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final u5 f26066m;
+    public final u5 f26887m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public final u5 f26067n;
+    public final u5 f26888n;
 
     public w5(g7 g7Var) {
         super(g7Var);
-        this.f26056c = (char) 0;
-        this.f26057d = -1L;
-        this.f26059f = new u5(this, 6, false, false);
-        this.f26060g = new u5(this, 6, true, false);
-        this.f26061h = new u5(this, 6, false, true);
-        this.f26062i = new u5(this, 5, false, false);
-        this.f26063j = new u5(this, 5, true, false);
-        this.f26064k = new u5(this, 5, false, true);
-        this.f26065l = new u5(this, 4, false, false);
-        this.f26066m = new u5(this, 3, false, false);
-        this.f26067n = new u5(this, 2, false, false);
+        this.f26877c = (char) 0;
+        this.f26878d = -1L;
+        this.f26880f = new u5(this, 6, false, false);
+        this.f26881g = new u5(this, 6, true, false);
+        this.f26882h = new u5(this, 6, false, true);
+        this.f26883i = new u5(this, 5, false, false);
+        this.f26884j = new u5(this, 5, true, false);
+        this.f26885k = new u5(this, 5, false, true);
+        this.f26886l = new u5(this, 4, false, false);
+        this.f26887m = new u5(this, 3, false, false);
+        this.f26888n = new u5(this, 2, false, false);
     }
 
     public static String A(boolean z10, String str, Object obj, Object obj2, Object obj3) {
@@ -154,19 +154,19 @@ public final class w5 extends k8 {
     }
 
     public final /* synthetic */ char D() {
-        return this.f26056c;
+        return this.f26877c;
     }
 
     public final /* synthetic */ void E(char c10) {
-        this.f26056c = c10;
+        this.f26877c = c10;
     }
 
     public final /* synthetic */ long F() {
-        return this.f26057d;
+        return this.f26878d;
     }
 
     public final /* synthetic */ void G(long j10) {
-        this.f26057d = 133005L;
+        this.f26878d = 133005L;
     }
 
     @Override // nb.k8
@@ -175,39 +175,39 @@ public final class w5 extends k8 {
     }
 
     public final u5 o() {
-        return this.f26059f;
+        return this.f26880f;
     }
 
     public final u5 p() {
-        return this.f26060g;
+        return this.f26881g;
     }
 
     public final u5 q() {
-        return this.f26061h;
+        return this.f26882h;
     }
 
     public final u5 r() {
-        return this.f26062i;
+        return this.f26883i;
     }
 
     public final u5 s() {
-        return this.f26063j;
+        return this.f26884j;
     }
 
     public final u5 t() {
-        return this.f26064k;
+        return this.f26885k;
     }
 
     public final u5 u() {
-        return this.f26065l;
+        return this.f26886l;
     }
 
     public final u5 v() {
-        return this.f26066m;
+        return this.f26887m;
     }
 
     public final u5 w() {
-        return this.f26067n;
+        return this.f26888n;
     }
 
     public final void y(int i10, boolean z10, boolean z11, String str, Object obj, Object obj2, Object obj3) {
@@ -218,7 +218,7 @@ public final class w5 extends k8 {
             return;
         }
         n9.m.l(str);
-        c7 c7VarA = this.f25625a.A();
+        c7 c7VarA = this.f26446a.A();
         if (c7VarA == null) {
             Log.println(6, z(), "Scheduler not set. Not logging error/warn");
         } else {
@@ -237,11 +237,11 @@ public final class w5 extends k8 {
         String str;
         synchronized (this) {
             try {
-                if (this.f26058e == null) {
-                    this.f26058e = this.f25625a.w().u();
+                if (this.f26879e == null) {
+                    this.f26879e = this.f26446a.w().u();
                 }
-                n9.m.l(this.f26058e);
-                str = this.f26058e;
+                n9.m.l(this.f26879e);
+                str = this.f26879e;
             } catch (Throwable th2) {
                 throw th2;
             }

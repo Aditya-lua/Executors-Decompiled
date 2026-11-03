@@ -17,17 +17,17 @@ import n0.SurfaceStreamSpecQueryResult;
 public final class l2 implements n0.m0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object f36679a;
+    public final Object f37374a;
     public final Map<String, g5> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final g f36680c;
+    public final g f37375c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final a0.p0 f36681d;
+    public final a0.p0 f37376d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Context f36682e;
+    public final Context f37377e;
 
     public class a implements g {
         @Override // z.g
@@ -56,7 +56,7 @@ public final class l2 implements n0.m0 {
     public void f(List<String> list) throws n0.i1 {
         HashSet<String> hashSet;
         HashMap map = new HashMap();
-        synchronized (this.f36679a) {
+        synchronized (this.f37374a) {
             hashSet = new HashSet(list);
             hashSet.removeAll(this.b.keySet());
         }
@@ -64,7 +64,7 @@ public final class l2 implements n0.m0 {
             for (String str : hashSet) {
                 map.put(str, i(str));
             }
-            synchronized (this.f36679a) {
+            synchronized (this.f37374a) {
                 try {
                     HashMap map2 = new HashMap();
                     for (String str2 : list) {
@@ -96,21 +96,21 @@ public final class l2 implements n0.m0 {
     public final g5 i(String str) {
         j0.a mVar = j0.a.b;
         if (Build.VERSION.SDK_INT >= 35) {
-            mVar = new y.m(this.f36682e, str, this.f36681d);
+            mVar = new y.m(this.f37377e, str, this.f37376d);
         }
-        return new g5(this.f36682e, str, this.f36681d, this.f36680c, mVar);
+        return new g5(this.f37377e, str, this.f37376d, this.f37375c, mVar);
     }
 
     public l2(Context context, g gVar, Object obj, Set<String> set) throws g0.x {
-        this.f36679a = new Object();
+        this.f37374a = new Object();
         this.b = new HashMap();
         x2.g.g(gVar);
-        this.f36680c = gVar;
-        this.f36682e = context;
+        this.f37375c = gVar;
+        this.f37377e = context;
         if (obj instanceof a0.p0) {
-            this.f36681d = (a0.p0) obj;
+            this.f37376d = (a0.p0) obj;
         } else {
-            this.f36681d = a0.p0.a(context);
+            this.f37376d = a0.p0.a(context);
         }
         try {
             f(new ArrayList(set));

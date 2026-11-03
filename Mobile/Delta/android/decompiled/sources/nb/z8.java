@@ -6,18 +6,18 @@ import java.util.Objects;
 public final class z8 extends w {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final /* synthetic */ qa f26220e;
+    public final /* synthetic */ qa f27041e;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public z8(qa qaVar, l8 l8Var) {
         super(l8Var);
         Objects.requireNonNull(qaVar);
-        this.f26220e = qaVar;
+        this.f27041e = qaVar;
     }
 
     @Override // nb.w
     public final void a() {
-        final qa qaVarB = this.f26220e.f25625a.B();
+        final qa qaVarB = this.f27041e.f26446a.B();
         Objects.requireNonNull(qaVarB);
         new Thread(new Runnable() { // from class: nb.y8
             @Override // java.lang.Runnable

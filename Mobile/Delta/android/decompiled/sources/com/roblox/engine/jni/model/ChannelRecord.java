@@ -4,11 +4,11 @@ package com.roblox.engine.jni.model;
 public class ChannelRecord {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public String f9654a;
+    public String f9734a;
     public long b;
 
     public ChannelRecord(String str, long j10) {
-        this.f9654a = str;
+        this.f9734a = str;
         this.b = j10;
     }
 }

@@ -9,10 +9,10 @@ import java.util.ArrayList;
 public class c extends Exception {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final w1.a f22270a;
+    public final w1.a f22494a;
 
     public c(@NonNull w1.a aVar) {
-        this.f22270a = aVar;
+        this.f22494a = aVar;
     }
 
     @Override // java.lang.Throwable
@@ -20,8 +20,8 @@ public class c extends Exception {
     public String getMessage() {
         ArrayList arrayList = new ArrayList();
         boolean z10 = true;
-        for (l9.b bVar : this.f22270a.keySet()) {
-            ConnectionResult connectionResult = (ConnectionResult) n9.m.l((ConnectionResult) this.f22270a.get(bVar));
+        for (l9.b bVar : this.f22494a.keySet()) {
+            ConnectionResult connectionResult = (ConnectionResult) n9.m.l((ConnectionResult) this.f22494a.get(bVar));
             z10 &= !connectionResult.A3();
             arrayList.add(bVar.b() + ": " + String.valueOf(connectionResult));
         }

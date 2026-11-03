@@ -8,7 +8,7 @@ import java.util.Objects;
 public final class e0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f15263a = ",\n  ";
+    public final String f15877a = ",\n  ";
 
     public e0(String str) {
     }
@@ -27,7 +27,7 @@ public final class e0 {
             if (it.hasNext()) {
                 sb2.append(d(it.next()));
                 while (it.hasNext()) {
-                    sb2.append((CharSequence) this.f15263a);
+                    sb2.append((CharSequence) this.f15877a);
                     sb2.append(d(it.next()));
                 }
             }

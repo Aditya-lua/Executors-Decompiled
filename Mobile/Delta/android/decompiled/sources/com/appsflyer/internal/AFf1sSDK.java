@@ -35,7 +35,7 @@ public final class AFf1sSDK extends AFe1kSDK<String> {
         /* JADX INFO: Access modifiers changed from: private */
         public static String AFLogger(AFh1nSDK p8) {
             try {
-                return new URL(p8.f5401i).getHost();
+                return new URL(p8.f5474i).getHost();
             } catch (MalformedURLException unused) {
                 return "";
             }
@@ -53,7 +53,7 @@ public final class AFf1sSDK extends AFe1kSDK<String> {
         AFe1zSDK aFe1zSDK = aFh1nSDK.AFLoggerLogLevel;
         AFe1zSDK aFe1zSDK2 = aFe1zSDK == null ? AFd1bSDK.CACHED_EVENT : aFe1zSDK;
         Intrinsics.checkNotNullExpressionValue(aFe1zSDK2, "");
-        super(aFe1zSDK2, new AFe1zSDK[]{AFd1bSDK.RC_CDN}, aFc1bSDK, aFh1nSDK.f5403w + "-" + Companion.AFLogger(aFh1nSDK), aFh1nSDK.f5403w);
+        super(aFe1zSDK2, new AFe1zSDK[]{AFd1bSDK.RC_CDN}, aFc1bSDK, aFh1nSDK.f5476w + "-" + Companion.AFLogger(aFh1nSDK), aFh1nSDK.f5476w);
         this.registerClient = aFh1nSDK;
     }
 
@@ -64,7 +64,7 @@ public final class AFf1sSDK extends AFe1kSDK<String> {
         String strEncodeToString = Base64.encodeToString(this.registerClient.force, 2);
         AFLoggerBase.i$default(AFLogger.INSTANCE, LogTag.CACHE, "cached data: " + strEncodeToString, false, 4, null);
         AFd1uSDK aFKeystoreWrapper = getAFKeystoreWrapper();
-        String str = this.registerClient.f5401i;
+        String str = this.registerClient.f5474i;
         Intrinsics.checkNotNull(strEncodeToString);
         aFKeystoreWrapper.AFKeystoreWrapper(str, strEncodeToString);
         return getD().unregisterClient(this.registerClient);

@@ -2,10 +2,10 @@ package com.withpersona.sdk2.inquiry.network.core;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import um.h;
-import um.m;
-import um.t;
-import um.w;
+import sm.h;
+import sm.m;
+import sm.t;
+import sm.w;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class GenericFileUploadErrorResponse_DocumentErrorResponse_MalformedFileError_DetailsJsonAdapter extends h<GenericFileUploadErrorResponse.DocumentErrorResponse.MalformedFileError.Details> {
@@ -24,7 +24,7 @@ public final class GenericFileUploadErrorResponse_DocumentErrorResponse_Malforme
     }
 
     /* JADX WARN: Can't rename method to resolve collision */
-    @Override // um.h
+    @Override // sm.h
     @NotNull
     public GenericFileUploadErrorResponse.DocumentErrorResponse.MalformedFileError.Details fromJson(@NotNull m mVar) {
         mVar.b();
@@ -38,7 +38,7 @@ public final class GenericFileUploadErrorResponse_DocumentErrorResponse_Malforme
         return new GenericFileUploadErrorResponse.DocumentErrorResponse.MalformedFileError.Details();
     }
 
-    @Override // um.h
+    @Override // sm.h
     public void toJson(@NotNull t tVar, @Nullable GenericFileUploadErrorResponse.DocumentErrorResponse.MalformedFileError.Details details) {
         if (details == null) {
             throw new NullPointerException("value_ was null! Wrap in .nullSafe() to write nullable values.");

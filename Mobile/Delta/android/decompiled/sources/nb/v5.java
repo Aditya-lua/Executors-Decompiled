@@ -4,13 +4,13 @@ package nb;
 public final class v5 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f26024a;
+    public final String f26845a;
 
     public v5(String str) {
-        this.f26024a = str;
+        this.f26845a = str;
     }
 
     public final /* synthetic */ String a() {
-        return this.f26024a;
+        return this.f26845a;
     }
 }

@@ -4,22 +4,22 @@ package com.google.android.gms.internal.measurement;
 public final class yc implements lc {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final oc f6958a;
+    public final oc f7032a;
     public final String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Object[] f6959c;
+    public final Object[] f7033c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final int f6960d;
+    public final int f7034d;
 
     public yc(oc ocVar, String str, Object[] objArr) {
-        this.f6958a = ocVar;
+        this.f7032a = ocVar;
         this.b = str;
-        this.f6959c = objArr;
+        this.f7033c = objArr;
         char cCharAt = str.charAt(0);
         if (cCharAt < 55296) {
-            this.f6960d = cCharAt;
+            this.f7034d = cCharAt;
             return;
         }
         int i10 = cCharAt & 8191;
@@ -29,7 +29,7 @@ public final class yc implements lc {
             int i13 = i11 + 1;
             char cCharAt2 = str.charAt(i11);
             if (cCharAt2 < 55296) {
-                this.f6960d = i10 | (cCharAt2 << i12);
+                this.f7034d = i10 | (cCharAt2 << i12);
                 return;
             } else {
                 i10 |= (cCharAt2 & 8191) << i12;
@@ -44,22 +44,22 @@ public final class yc implements lc {
     }
 
     public final Object[] b() {
-        return this.f6959c;
+        return this.f7033c;
     }
 
     @Override // com.google.android.gms.internal.measurement.lc
     public final boolean zza() {
-        return (this.f6960d & 2) == 2;
+        return (this.f7034d & 2) == 2;
     }
 
     @Override // com.google.android.gms.internal.measurement.lc
     public final oc zzb() {
-        return this.f6958a;
+        return this.f7032a;
     }
 
     @Override // com.google.android.gms.internal.measurement.lc
     public final int zzc() {
-        int i10 = this.f6960d;
+        int i10 = this.f7034d;
         if ((i10 & 1) != 0) {
             return 1;
         }

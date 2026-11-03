@@ -31,80 +31,80 @@ public class e implements r2.a {
     public static final int[] A = {1, 4, 5, 3, 2, 0};
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f914a;
+    public final Context f759a;
     public final Resources b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f915c;
+    public boolean f760c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public boolean f916d;
+    public boolean f761d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public a f917e;
+    public a f762e;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public ContextMenu.ContextMenuInfo f925m;
+    public ContextMenu.ContextMenuInfo f770m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public CharSequence f926n;
+    public CharSequence f771n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public Drawable f927o;
+    public Drawable f772o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public View f928p;
+    public View f773p;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public g f936x;
+    public g f781x;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public boolean f938z;
+    public boolean f783z;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public int f924l = 0;
+    public int f769l = 0;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public boolean f929q = false;
+    public boolean f774q = false;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public boolean f930r = false;
+    public boolean f775r = false;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public boolean f931s = false;
+    public boolean f776s = false;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public boolean f932t = false;
+    public boolean f777t = false;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public boolean f933u = false;
+    public boolean f778u = false;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public ArrayList<g> f934v = new ArrayList<>();
+    public ArrayList<g> f779v = new ArrayList<>();
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public CopyOnWriteArrayList<WeakReference<i>> f935w = new CopyOnWriteArrayList<>();
+    public CopyOnWriteArrayList<WeakReference<i>> f780w = new CopyOnWriteArrayList<>();
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public boolean f937y = false;
+    public boolean f782y = false;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public ArrayList<g> f918f = new ArrayList<>();
+    public ArrayList<g> f763f = new ArrayList<>();
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public ArrayList<g> f919g = new ArrayList<>();
+    public ArrayList<g> f764g = new ArrayList<>();
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public boolean f920h = true;
+    public boolean f765h = true;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public ArrayList<g> f921i = new ArrayList<>();
+    public ArrayList<g> f766i = new ArrayList<>();
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public ArrayList<g> f922j = new ArrayList<>();
+    public ArrayList<g> f767j = new ArrayList<>();
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public boolean f923k = true;
+    public boolean f768k = true;
 
     public interface a {
         boolean a(@NonNull e eVar, @NonNull MenuItem menuItem);
@@ -117,7 +117,7 @@ public class e implements r2.a {
     }
 
     public e(Context context) {
-        this.f914a = context;
+        this.f759a = context;
         this.b = context.getResources();
         c0(true);
     }
@@ -143,7 +143,7 @@ public class e implements r2.a {
     }
 
     public boolean A() {
-        return this.f932t;
+        return this.f777t;
     }
 
     public Resources C() {
@@ -156,60 +156,60 @@ public class e implements r2.a {
 
     @NonNull
     public ArrayList<g> E() {
-        if (!this.f920h) {
-            return this.f919g;
+        if (!this.f765h) {
+            return this.f764g;
         }
-        this.f919g.clear();
-        int size = this.f918f.size();
+        this.f764g.clear();
+        int size = this.f763f.size();
         for (int i10 = 0; i10 < size; i10++) {
-            g gVar = this.f918f.get(i10);
+            g gVar = this.f763f.get(i10);
             if (gVar.isVisible()) {
-                this.f919g.add(gVar);
+                this.f764g.add(gVar);
             }
         }
-        this.f920h = false;
-        this.f923k = true;
-        return this.f919g;
+        this.f765h = false;
+        this.f768k = true;
+        return this.f764g;
     }
 
     public boolean F() {
-        return !this.f929q;
+        return !this.f774q;
     }
 
     public boolean G() {
-        return this.f937y;
+        return this.f782y;
     }
 
     public boolean H() {
-        return this.f915c;
+        return this.f760c;
     }
 
     public boolean I() {
-        return this.f916d;
+        return this.f761d;
     }
 
     public void J(g gVar) {
-        this.f923k = true;
+        this.f768k = true;
         L(true);
     }
 
     public void K(g gVar) {
-        this.f920h = true;
+        this.f765h = true;
         L(true);
     }
 
     public void L(boolean z10) {
-        if (this.f929q) {
-            this.f930r = true;
+        if (this.f774q) {
+            this.f775r = true;
             if (z10) {
-                this.f931s = true;
+                this.f776s = true;
                 return;
             }
             return;
         }
         if (z10) {
-            this.f920h = true;
-            this.f923k = true;
+            this.f765h = true;
+            this.f768k = true;
         }
         i(z10);
     }
@@ -257,20 +257,20 @@ public class e implements r2.a {
     }
 
     public final void O(int i10, boolean z10) {
-        if (i10 < 0 || i10 >= this.f918f.size()) {
+        if (i10 < 0 || i10 >= this.f763f.size()) {
             return;
         }
-        this.f918f.remove(i10);
+        this.f763f.remove(i10);
         if (z10) {
             L(true);
         }
     }
 
     public void P(i iVar) {
-        for (WeakReference<i> weakReference : this.f935w) {
+        for (WeakReference<i> weakReference : this.f780w) {
             i iVar2 = weakReference.get();
             if (iVar2 == null || iVar2 == iVar) {
-                this.f935w.remove(weakReference);
+                this.f780w.remove(weakReference);
             }
         }
     }
@@ -324,20 +324,20 @@ public class e implements r2.a {
     }
 
     public void S(a aVar) {
-        this.f917e = aVar;
+        this.f762e = aVar;
     }
 
     public e T(int i10) {
-        this.f924l = i10;
+        this.f769l = i10;
         return this;
     }
 
     public void U(MenuItem menuItem) {
         int groupId = menuItem.getGroupId();
-        int size = this.f918f.size();
+        int size = this.f763f.size();
         e0();
         for (int i10 = 0; i10 < size; i10++) {
-            g gVar = this.f918f.get(i10);
+            g gVar = this.f763f.get(i10);
             if (gVar.getGroupId() == groupId && gVar.m() && gVar.isCheckable()) {
                 gVar.s(gVar == menuItem);
             }
@@ -358,21 +358,21 @@ public class e implements r2.a {
     public final void X(int i10, CharSequence charSequence, int i11, Drawable drawable, View view) {
         Resources resourcesC = C();
         if (view != null) {
-            this.f928p = view;
-            this.f926n = null;
-            this.f927o = null;
+            this.f773p = view;
+            this.f771n = null;
+            this.f772o = null;
         } else {
             if (i10 > 0) {
-                this.f926n = resourcesC.getText(i10);
+                this.f771n = resourcesC.getText(i10);
             } else if (charSequence != null) {
-                this.f926n = charSequence;
+                this.f771n = charSequence;
             }
             if (i11 > 0) {
-                this.f927o = l2.b.f(u(), i11);
+                this.f772o = l2.b.f(u(), i11);
             } else if (drawable != null) {
-                this.f927o = drawable;
+                this.f772o = drawable;
             }
-            this.f928p = null;
+            this.f773p = null;
         }
         L(false);
     }
@@ -389,12 +389,12 @@ public class e implements r2.a {
 
     public MenuItem a(int i10, int i11, int i12, CharSequence charSequence) {
         int iB = B(i12);
-        g gVarG = g(i10, i11, i12, iB, charSequence, this.f924l);
-        ContextMenu.ContextMenuInfo contextMenuInfo = this.f925m;
+        g gVarG = g(i10, i11, i12, iB, charSequence, this.f769l);
+        ContextMenu.ContextMenuInfo contextMenuInfo = this.f770m;
         if (contextMenuInfo != null) {
             gVarG.v(contextMenuInfo);
         }
-        ArrayList<g> arrayList = this.f918f;
+        ArrayList<g> arrayList = this.f763f;
         arrayList.add(n(arrayList, iB), gVarG);
         L(true);
         return gVarG;
@@ -413,7 +413,7 @@ public class e implements r2.a {
     @Override // android.view.Menu
     public int addIntentOptions(int i10, int i11, int i12, ComponentName componentName, Intent[] intentArr, Intent intent, int i13, MenuItem[] menuItemArr) {
         int i14;
-        PackageManager packageManager = this.f914a.getPackageManager();
+        PackageManager packageManager = this.f759a.getPackageManager();
         List<ResolveInfo> listQueryIntentActivityOptions = packageManager.queryIntentActivityOptions(componentName, intentArr, intent, 0);
         int size = listQueryIntentActivityOptions != null ? listQueryIntentActivityOptions.size() : 0;
         if ((i13 & 1) == 0) {
@@ -439,42 +439,42 @@ public class e implements r2.a {
     }
 
     public void b(i iVar) {
-        c(iVar, this.f914a);
+        c(iVar, this.f759a);
     }
 
     public void b0(boolean z10) {
-        this.f938z = z10;
+        this.f783z = z10;
     }
 
     public void c(i iVar, Context context) {
-        this.f935w.add(new WeakReference<>(iVar));
+        this.f780w.add(new WeakReference<>(iVar));
         iVar.i(context, this);
-        this.f923k = true;
+        this.f768k = true;
     }
 
     /* JADX WARN: Code duplicated, block: B:8:0x001c  */
     public final void c0(boolean z10) {
         boolean z11;
         if (z10) {
-            z11 = this.b.getConfiguration().keyboard != 1 && r0.j(ViewConfiguration.get(this.f914a), this.f914a);
+            z11 = this.b.getConfiguration().keyboard != 1 && r0.j(ViewConfiguration.get(this.f759a), this.f759a);
         }
-        this.f916d = z11;
+        this.f761d = z11;
     }
 
     @Override // android.view.Menu
     public void clear() {
-        g gVar = this.f936x;
+        g gVar = this.f781x;
         if (gVar != null) {
             f(gVar);
         }
-        this.f918f.clear();
+        this.f763f.clear();
         L(true);
     }
 
     public void clearHeader() {
-        this.f927o = null;
-        this.f926n = null;
-        this.f928p = null;
+        this.f772o = null;
+        this.f771n = null;
+        this.f773p = null;
         L(false);
     }
 
@@ -484,50 +484,50 @@ public class e implements r2.a {
     }
 
     public void d() {
-        a aVar = this.f917e;
+        a aVar = this.f762e;
         if (aVar != null) {
             aVar.b(this);
         }
     }
 
     public void d0() {
-        this.f929q = false;
-        if (this.f930r) {
-            this.f930r = false;
-            L(this.f931s);
+        this.f774q = false;
+        if (this.f775r) {
+            this.f775r = false;
+            L(this.f776s);
         }
     }
 
     public final void e(boolean z10) {
-        if (this.f933u) {
+        if (this.f778u) {
             return;
         }
-        this.f933u = true;
-        for (WeakReference<i> weakReference : this.f935w) {
+        this.f778u = true;
+        for (WeakReference<i> weakReference : this.f780w) {
             i iVar = weakReference.get();
             if (iVar == null) {
-                this.f935w.remove(weakReference);
+                this.f780w.remove(weakReference);
             } else {
                 iVar.b(this, z10);
             }
         }
-        this.f933u = false;
+        this.f778u = false;
     }
 
     public void e0() {
-        if (this.f929q) {
+        if (this.f774q) {
             return;
         }
-        this.f929q = true;
-        this.f930r = false;
-        this.f931s = false;
+        this.f774q = true;
+        this.f775r = false;
+        this.f776s = false;
     }
 
     public boolean f(g gVar) {
         boolean zH = false;
-        if (!this.f935w.isEmpty() && this.f936x == gVar) {
+        if (!this.f780w.isEmpty() && this.f781x == gVar) {
             e0();
-            for (WeakReference<i> weakReference : this.f935w) {
+            for (WeakReference<i> weakReference : this.f780w) {
                 i iVar = weakReference.get();
                 if (iVar != null) {
                     zH = iVar.h(this, gVar);
@@ -535,12 +535,12 @@ public class e implements r2.a {
                         break;
                     }
                 } else {
-                    this.f935w.remove(weakReference);
+                    this.f780w.remove(weakReference);
                 }
             }
             d0();
             if (zH) {
-                this.f936x = null;
+                this.f781x = null;
             }
         }
         return zH;
@@ -551,7 +551,7 @@ public class e implements r2.a {
         MenuItem menuItemFindItem;
         int size = size();
         for (int i11 = 0; i11 < size; i11++) {
-            g gVar = this.f918f.get(i11);
+            g gVar = this.f763f.get(i11);
             if (gVar.getItemId() == i10) {
                 return gVar;
             }
@@ -568,22 +568,22 @@ public class e implements r2.a {
 
     @Override // android.view.Menu
     public MenuItem getItem(int i10) {
-        return this.f918f.get(i10);
+        return this.f763f.get(i10);
     }
 
     public boolean h(@NonNull e eVar, @NonNull MenuItem menuItem) {
-        a aVar = this.f917e;
+        a aVar = this.f762e;
         return aVar != null && aVar.a(eVar, menuItem);
     }
 
     @Override // android.view.Menu
     public boolean hasVisibleItems() {
-        if (this.f938z) {
+        if (this.f783z) {
             return true;
         }
         int size = size();
         for (int i10 = 0; i10 < size; i10++) {
-            if (this.f918f.get(i10).isVisible()) {
+            if (this.f763f.get(i10).isVisible()) {
                 return true;
             }
         }
@@ -591,14 +591,14 @@ public class e implements r2.a {
     }
 
     public final void i(boolean z10) {
-        if (this.f935w.isEmpty()) {
+        if (this.f780w.isEmpty()) {
             return;
         }
         e0();
-        for (WeakReference<i> weakReference : this.f935w) {
+        for (WeakReference<i> weakReference : this.f780w) {
             i iVar = weakReference.get();
             if (iVar == null) {
-                this.f935w.remove(weakReference);
+                this.f780w.remove(weakReference);
             } else {
                 iVar.f(z10);
             }
@@ -612,14 +612,14 @@ public class e implements r2.a {
     }
 
     public final boolean j(l lVar, i iVar) {
-        if (this.f935w.isEmpty()) {
+        if (this.f780w.isEmpty()) {
             return false;
         }
         boolean zE = iVar != null ? iVar.e(lVar) : false;
-        for (WeakReference<i> weakReference : this.f935w) {
+        for (WeakReference<i> weakReference : this.f780w) {
             i iVar2 = weakReference.get();
             if (iVar2 == null) {
-                this.f935w.remove(weakReference);
+                this.f780w.remove(weakReference);
             } else if (!zE) {
                 zE = iVar2.e(lVar);
             }
@@ -629,11 +629,11 @@ public class e implements r2.a {
 
     public boolean k(g gVar) {
         boolean zC = false;
-        if (this.f935w.isEmpty()) {
+        if (this.f780w.isEmpty()) {
             return false;
         }
         e0();
-        for (WeakReference<i> weakReference : this.f935w) {
+        for (WeakReference<i> weakReference : this.f780w) {
             i iVar = weakReference.get();
             if (iVar != null) {
                 zC = iVar.c(this, gVar);
@@ -641,12 +641,12 @@ public class e implements r2.a {
                     break;
                 }
             } else {
-                this.f935w.remove(weakReference);
+                this.f780w.remove(weakReference);
             }
         }
         d0();
         if (zC) {
-            this.f936x = gVar;
+            this.f781x = gVar;
         }
         return zC;
     }
@@ -661,7 +661,7 @@ public class e implements r2.a {
             i11 = 0;
         }
         while (i11 < size) {
-            if (this.f918f.get(i11).getGroupId() == i10) {
+            if (this.f763f.get(i11).getGroupId() == i10) {
                 return i11;
             }
             i11++;
@@ -672,7 +672,7 @@ public class e implements r2.a {
     public int o(int i10) {
         int size = size();
         for (int i11 = 0; i11 < size; i11++) {
-            if (this.f918f.get(i11).getItemId() == i10) {
+            if (this.f763f.get(i11).getItemId() == i10) {
                 return i11;
             }
         }
@@ -680,7 +680,7 @@ public class e implements r2.a {
     }
 
     public g p(int i10, KeyEvent keyEvent) {
-        ArrayList<g> arrayList = this.f934v;
+        ArrayList<g> arrayList = this.f779v;
         arrayList.clear();
         q(arrayList, i10, keyEvent);
         if (arrayList.isEmpty()) {
@@ -725,9 +725,9 @@ public class e implements r2.a {
         int modifiers = keyEvent.getModifiers();
         KeyCharacterMap.KeyData keyData = new KeyCharacterMap.KeyData();
         if (keyEvent.getKeyData(keyData) || i10 == 67) {
-            int size = this.f918f.size();
+            int size = this.f763f.size();
             for (int i11 = 0; i11 < size; i11++) {
-                g gVar = this.f918f.get(i11);
+                g gVar = this.f763f.get(i11);
                 if (gVar.hasSubMenu()) {
                     ((e) gVar.getSubMenu()).q(list, i10, keyEvent);
                 }
@@ -744,34 +744,34 @@ public class e implements r2.a {
 
     public void r() {
         ArrayList<g> arrayListE = E();
-        if (this.f923k) {
+        if (this.f768k) {
             boolean zG = false;
-            for (WeakReference<i> weakReference : this.f935w) {
+            for (WeakReference<i> weakReference : this.f780w) {
                 i iVar = weakReference.get();
                 if (iVar == null) {
-                    this.f935w.remove(weakReference);
+                    this.f780w.remove(weakReference);
                 } else {
                     zG |= iVar.g();
                 }
             }
             if (zG) {
-                this.f921i.clear();
-                this.f922j.clear();
+                this.f766i.clear();
+                this.f767j.clear();
                 int size = arrayListE.size();
                 for (int i10 = 0; i10 < size; i10++) {
                     g gVar = arrayListE.get(i10);
                     if (gVar.l()) {
-                        this.f921i.add(gVar);
+                        this.f766i.add(gVar);
                     } else {
-                        this.f922j.add(gVar);
+                        this.f767j.add(gVar);
                     }
                 }
             } else {
-                this.f921i.clear();
-                this.f922j.clear();
-                this.f922j.addAll(E());
+                this.f766i.clear();
+                this.f767j.clear();
+                this.f767j.addAll(E());
             }
-            this.f923k = false;
+            this.f768k = false;
         }
     }
 
@@ -779,11 +779,11 @@ public class e implements r2.a {
     public void removeGroup(int i10) {
         int iL = l(i10);
         if (iL >= 0) {
-            int size = this.f918f.size() - iL;
+            int size = this.f763f.size() - iL;
             int i11 = 0;
             while (true) {
                 int i12 = i11 + 1;
-                if (i11 >= size || this.f918f.get(iL).getGroupId() != i10) {
+                if (i11 >= size || this.f763f.get(iL).getGroupId() != i10) {
                     break;
                 }
                 O(iL, false);
@@ -800,14 +800,14 @@ public class e implements r2.a {
 
     public ArrayList<g> s() {
         r();
-        return this.f921i;
+        return this.f766i;
     }
 
     @Override // android.view.Menu
     public void setGroupCheckable(int i10, boolean z10, boolean z11) {
-        int size = this.f918f.size();
+        int size = this.f763f.size();
         for (int i11 = 0; i11 < size; i11++) {
-            g gVar = this.f918f.get(i11);
+            g gVar = this.f763f.get(i11);
             if (gVar.getGroupId() == i10) {
                 gVar.t(z11);
                 gVar.setCheckable(z10);
@@ -817,14 +817,14 @@ public class e implements r2.a {
 
     @Override // android.view.Menu
     public void setGroupDividerEnabled(boolean z10) {
-        this.f937y = z10;
+        this.f782y = z10;
     }
 
     @Override // android.view.Menu
     public void setGroupEnabled(int i10, boolean z10) {
-        int size = this.f918f.size();
+        int size = this.f763f.size();
         for (int i11 = 0; i11 < size; i11++) {
-            g gVar = this.f918f.get(i11);
+            g gVar = this.f763f.get(i11);
             if (gVar.getGroupId() == i10) {
                 gVar.setEnabled(z10);
             }
@@ -833,10 +833,10 @@ public class e implements r2.a {
 
     @Override // android.view.Menu
     public void setGroupVisible(int i10, boolean z10) {
-        int size = this.f918f.size();
+        int size = this.f763f.size();
         boolean z11 = false;
         for (int i11 = 0; i11 < size; i11++) {
-            g gVar = this.f918f.get(i11);
+            g gVar = this.f763f.get(i11);
             if (gVar.getGroupId() == i10 && gVar.y(z10)) {
                 z11 = true;
             }
@@ -848,13 +848,13 @@ public class e implements r2.a {
 
     @Override // android.view.Menu
     public void setQwertyMode(boolean z10) {
-        this.f915c = z10;
+        this.f760c = z10;
         L(false);
     }
 
     @Override // android.view.Menu
     public int size() {
-        return this.f918f.size();
+        return this.f763f.size();
     }
 
     public String t() {
@@ -862,28 +862,28 @@ public class e implements r2.a {
     }
 
     public Context u() {
-        return this.f914a;
+        return this.f759a;
     }
 
     public g v() {
-        return this.f936x;
+        return this.f781x;
     }
 
     public Drawable w() {
-        return this.f927o;
+        return this.f772o;
     }
 
     public CharSequence x() {
-        return this.f926n;
+        return this.f771n;
     }
 
     public View y() {
-        return this.f928p;
+        return this.f773p;
     }
 
     public ArrayList<g> z() {
         r();
-        return this.f922j;
+        return this.f767j;
     }
 
     @Override // android.view.Menu
@@ -904,7 +904,7 @@ public class e implements r2.a {
     @Override // android.view.Menu
     public SubMenu addSubMenu(int i10, int i11, int i12, CharSequence charSequence) {
         g gVar = (g) a(i10, i11, i12, charSequence);
-        l lVar = new l(this.f914a, this, gVar);
+        l lVar = new l(this.f759a, this, gVar);
         gVar.x(lVar);
         return lVar;
     }

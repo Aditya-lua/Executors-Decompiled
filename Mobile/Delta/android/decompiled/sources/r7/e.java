@@ -1,164 +1,164 @@
 package r7;
 
 import java.io.EOFException;
-import xu.g;
-import xu.h;
+import vu.g;
+import vu.h;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class e extends c {
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public static final h f29812n = h.e("'\\");
+    public static final h f30214n = h.e("'\\");
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public static final h f29813o = h.e("\"\\");
+    public static final h f30215o = h.e("\"\\");
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public static final h f29814p = h.e("{}[]:, \n\t\r\f/\\;#=");
+    public static final h f30216p = h.e("{}[]:, \n\t\r\f/\\;#=");
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public static final h f29815q = h.e("\n\r");
+    public static final h f30217q = h.e("\n\r");
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public static final h f29816r = h.e("*/");
+    public static final h f30218r = h.e("*/");
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final g f29817h;
+    public final g f30219h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final xu.e f29818i;
+    public final vu.e f30220i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public int f29819j = 0;
+    public int f30221j = 0;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public long f29820k;
+    public long f30222k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public int f29821l;
+    public int f30223l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public String f29822m;
+    public String f30224m;
 
     public e(g gVar) {
         if (gVar == null) {
             throw new NullPointerException("source == null");
         }
-        this.f29817h = gVar;
-        this.f29818i = gVar.getBufferField();
+        this.f30219h = gVar;
+        this.f30220i = gVar.getBufferField();
         q(6);
     }
 
-    public final int B() throws EOFException, b {
+    public final int A() throws EOFException, b {
         int[] iArr = this.b;
-        int i10 = this.f29796a;
+        int i10 = this.f30198a;
         int i11 = iArr[i10 - 1];
         if (i11 == 1) {
             iArr[i10 - 1] = 2;
         } else if (i11 == 2) {
             int I = I(true);
-            this.f29818i.readByte();
+            this.f30220i.readByte();
             if (I != 44) {
                 if (I != 59) {
                     if (I != 93) {
                         throw w("Unterminated array");
                     }
-                    this.f29819j = 4;
+                    this.f30221j = 4;
                     return 4;
                 }
-                y();
+                x();
             }
         } else {
             if (i11 == 3 || i11 == 5) {
                 iArr[i10 - 1] = 4;
                 if (i11 == 5) {
                     int I2 = I(true);
-                    this.f29818i.readByte();
+                    this.f30220i.readByte();
                     if (I2 != 44) {
                         if (I2 != 59) {
                             if (I2 != 125) {
                                 throw w("Unterminated object");
                             }
-                            this.f29819j = 2;
+                            this.f30221j = 2;
                             return 2;
                         }
-                        y();
+                        x();
                     }
                 }
                 int I3 = I(true);
                 if (I3 == 34) {
-                    this.f29818i.readByte();
-                    this.f29819j = 13;
+                    this.f30220i.readByte();
+                    this.f30221j = 13;
                     return 13;
                 }
                 if (I3 == 39) {
-                    this.f29818i.readByte();
-                    y();
-                    this.f29819j = 12;
+                    this.f30220i.readByte();
+                    x();
+                    this.f30221j = 12;
                     return 12;
                 }
                 if (I3 != 125) {
-                    y();
+                    x();
                     if (!H((char) I3)) {
                         throw w("Expected name");
                     }
-                    this.f29819j = 14;
+                    this.f30221j = 14;
                     return 14;
                 }
                 if (i11 == 5) {
                     throw w("Expected name");
                 }
-                this.f29818i.readByte();
-                this.f29819j = 2;
+                this.f30220i.readByte();
+                this.f30221j = 2;
                 return 2;
             }
             if (i11 == 4) {
                 iArr[i10 - 1] = 5;
                 int I4 = I(true);
-                this.f29818i.readByte();
+                this.f30220i.readByte();
                 if (I4 != 58) {
                     if (I4 != 61) {
                         throw w("Expected ':'");
                     }
-                    y();
-                    if (this.f29817h.request(1L) && this.f29818i.j(0L) == 62) {
-                        this.f29818i.readByte();
+                    x();
+                    if (this.f30219h.request(1L) && this.f30220i.j(0L) == 62) {
+                        this.f30220i.readByte();
                     }
                 }
             } else if (i11 == 6) {
                 iArr[i10 - 1] = 7;
             } else if (i11 == 7) {
                 if (I(false) == -1) {
-                    this.f29819j = 18;
+                    this.f30221j = 18;
                     return 18;
                 }
-                y();
+                x();
             } else if (i11 == 8) {
                 throw new IllegalStateException("JsonReader is closed");
             }
         }
         int I5 = I(true);
         if (I5 == 34) {
-            this.f29818i.readByte();
-            this.f29819j = 9;
+            this.f30220i.readByte();
+            this.f30221j = 9;
             return 9;
         }
         if (I5 == 39) {
-            y();
-            this.f29818i.readByte();
-            this.f29819j = 8;
+            x();
+            this.f30220i.readByte();
+            this.f30221j = 8;
             return 8;
         }
         if (I5 != 44 && I5 != 59) {
             if (I5 == 91) {
-                this.f29818i.readByte();
-                this.f29819j = 3;
+                this.f30220i.readByte();
+                this.f30221j = 3;
                 return 3;
             }
             if (I5 != 93) {
                 if (I5 == 123) {
-                    this.f29818i.readByte();
-                    this.f29819j = 1;
+                    this.f30220i.readByte();
+                    this.f30221j = 1;
                     return 1;
                 }
                 int iP = P();
@@ -169,33 +169,33 @@ public final class e extends c {
                 if (iU != 0) {
                     return iU;
                 }
-                if (!H(this.f29818i.j(0L))) {
+                if (!H(this.f30220i.j(0L))) {
                     throw w("Expected value");
                 }
-                y();
-                this.f29819j = 10;
+                x();
+                this.f30221j = 10;
                 return 10;
             }
             if (i11 == 1) {
-                this.f29818i.readByte();
-                this.f29819j = 4;
+                this.f30220i.readByte();
+                this.f30221j = 4;
                 return 4;
             }
         }
         if (i11 != 1 && i11 != 2) {
             throw w("Unexpected value");
         }
-        y();
-        this.f29819j = 7;
+        x();
+        this.f30221j = 7;
         return 7;
     }
 
     public final int F(String str, c.a aVar) {
-        int length = aVar.f29801a.length;
+        int length = aVar.f30203a.length;
         for (int i10 = 0; i10 < length; i10++) {
-            if (str.equals(aVar.f29801a[i10])) {
-                this.f29819j = 0;
-                this.f29797c[this.f29796a - 1] = str;
+            if (str.equals(aVar.f30203a[i10])) {
+                this.f30221j = 0;
+                this.f30199c[this.f30198a - 1] = str;
                 return i10;
             }
         }
@@ -227,7 +227,7 @@ public final class e extends c {
                 }
             }
         }
-        y();
+        x();
         return false;
     }
 
@@ -237,32 +237,32 @@ public final class e extends c {
             int i10 = 0;
             while (true) {
                 int i11 = i10 + 1;
-                if (!this.f29817h.request(i11)) {
+                if (!this.f30219h.request(i11)) {
                     if (z10) {
                         throw new EOFException("End of input");
                     }
                     return -1;
                 }
-                bJ = this.f29818i.j(i10);
+                bJ = this.f30220i.j(i10);
                 if (bJ == 10 || bJ == 32 || bJ == 13 || bJ == 9) {
                     i10 = i11;
                 }
             }
-            this.f29818i.skip(i10);
+            this.f30220i.skip(i10);
             if (bJ == 47) {
-                if (this.f29817h.request(2L)) {
-                    y();
-                    byte bJ2 = this.f29818i.j(1L);
+                if (this.f30219h.request(2L)) {
+                    x();
+                    byte bJ2 = this.f30220i.j(1L);
                     if (bJ2 == 42) {
-                        this.f29818i.readByte();
-                        this.f29818i.readByte();
-                        if (!Z()) {
+                        this.f30220i.readByte();
+                        this.f30220i.readByte();
+                        if (!Y()) {
                             throw w("Unterminated comment");
                         }
                     } else if (bJ2 == 47) {
-                        this.f29818i.readByte();
-                        this.f29818i.readByte();
-                        a0();
+                        this.f30220i.readByte();
+                        this.f30220i.readByte();
+                        Z();
                     }
                 }
                 return bJ;
@@ -270,40 +270,40 @@ public final class e extends c {
             if (bJ != 35) {
                 return bJ;
             }
-            y();
-            a0();
+            x();
+            Z();
         }
     }
 
     public final String L(h hVar) throws EOFException, b {
         StringBuilder sb2 = null;
         while (true) {
-            long jH0 = this.f29817h.h0(hVar);
-            if (jH0 == -1) {
+            long jE1 = this.f30219h.e1(hVar);
+            if (jE1 == -1) {
                 throw w("Unterminated string");
             }
-            if (this.f29818i.j(jH0) != 92) {
+            if (this.f30220i.j(jE1) != 92) {
                 if (sb2 == null) {
-                    String strG1 = this.f29818i.G1(jH0);
-                    this.f29818i.readByte();
-                    return strG1;
+                    String strD1 = this.f30220i.D1(jE1);
+                    this.f30220i.readByte();
+                    return strD1;
                 }
-                sb2.append(this.f29818i.G1(jH0));
-                this.f29818i.readByte();
+                sb2.append(this.f30220i.D1(jE1));
+                this.f30220i.readByte();
                 return sb2.toString();
             }
             if (sb2 == null) {
                 sb2 = new StringBuilder();
             }
-            sb2.append(this.f29818i.G1(jH0));
-            this.f29818i.readByte();
-            sb2.append(X());
+            sb2.append(this.f30220i.D1(jE1));
+            this.f30220i.readByte();
+            sb2.append(W());
         }
     }
 
     public final String M() {
-        long jH0 = this.f29817h.h0(f29814p);
-        return jH0 != -1 ? this.f29818i.G1(jH0) : this.f29818i.R2();
+        long jE1 = this.f30219h.e1(f30216p);
+        return jE1 != -1 ? this.f30220i.D1(jE1) : this.f30220i.Q2();
     }
 
     /* JADX WARN: Type inference fix 'apply assigned field type' failed
@@ -320,7 +320,7 @@ public final class e extends c {
         String str;
         String str2;
         int i10;
-        byte bJ = this.f29818i.j(0L);
+        byte bJ = this.f30220i.j(0L);
         if (bJ == 116 || bJ == 84) {
             str = "true";
             str2 = "TRUE";
@@ -341,20 +341,20 @@ public final class e extends c {
         int i11 = 1;
         while (i11 < length) {
             int i12 = i11 + 1;
-            if (!this.f29817h.request(i12)) {
+            if (!this.f30219h.request(i12)) {
                 return 0;
             }
-            byte bJ2 = this.f29818i.j(i11);
+            byte bJ2 = this.f30220i.j(i11);
             if (bJ2 != str.charAt(i11) && bJ2 != str2.charAt(i11)) {
                 return 0;
             }
             i11 = i12;
         }
-        if (this.f29817h.request(length + 1) && H(this.f29818i.j(length))) {
+        if (this.f30219h.request(length + 1) && H(this.f30220i.j(length))) {
             return 0;
         }
-        this.f29818i.skip(length);
-        this.f29819j = i10;
+        this.f30220i.skip(length);
+        this.f30221j = i10;
         return i10;
     }
 
@@ -368,13 +368,13 @@ public final class e extends c {
         boolean z11 = false;
         while (true) {
             int i12 = i11 + 1;
-            if (!this.f29817h.request(i12)) {
+            if (!this.f30219h.request(i12)) {
                 j10 = 0;
                 i10 = 0;
                 break;
             }
             j10 = 0;
-            byte bJ = this.f29818i.j(i11);
+            byte bJ = this.f30220i.j(i11);
             i10 = 0;
             if (bJ != 43) {
                 if (bJ == 69 || bJ == 101) {
@@ -428,25 +428,25 @@ public final class e extends c {
             if (!z11) {
                 j11 = -j11;
             }
-            this.f29820k = j11;
-            this.f29818i.skip(i11);
-            this.f29819j = 16;
+            this.f30222k = j11;
+            this.f30220i.skip(i11);
+            this.f30221j = 16;
             return 16;
         }
         if (c10 != 2 && c10 != 4 && c10 != 7) {
             return i10;
         }
-        this.f29821l = i11;
-        this.f29819j = 17;
+        this.f30223l = i11;
+        this.f30221j = 17;
         return 17;
     }
 
-    public final char X() throws EOFException, b {
+    public final char W() throws EOFException, b {
         int i10;
-        if (!this.f29817h.request(1L)) {
+        if (!this.f30219h.request(1L)) {
             throw w("Unterminated escape sequence");
         }
-        byte b = this.f29818i.readByte();
+        byte b = this.f30220i.readByte();
         if (b == 10 || b == 34 || b == 39 || b == 47 || b == 92) {
             return (char) b;
         }
@@ -466,17 +466,17 @@ public final class e extends c {
             return '\t';
         }
         if (b != 117) {
-            if (this.f29799e) {
+            if (this.f30201e) {
                 return (char) b;
             }
             throw w("Invalid escape sequence: \\" + ((char) b));
         }
-        if (!this.f29817h.request(4L)) {
+        if (!this.f30219h.request(4L)) {
             throw new EOFException("Unterminated escape sequence at path " + getPath());
         }
         char c10 = 0;
         for (int i11 = 0; i11 < 4; i11++) {
-            byte bJ = this.f29818i.j(i11);
+            byte bJ = this.f30220i.j(i11);
             char c11 = (char) (c10 << 4);
             if (bJ >= 48 && bJ <= 57) {
                 i10 = bJ - 48;
@@ -484,81 +484,81 @@ public final class e extends c {
                 i10 = bJ - 87;
             } else {
                 if (bJ < 65 || bJ > 70) {
-                    throw w("\\u" + this.f29818i.G1(4L));
+                    throw w("\\u" + this.f30220i.D1(4L));
                 }
                 i10 = bJ - 55;
             }
             c10 = (char) (c11 + i10);
         }
-        this.f29818i.skip(4L);
+        this.f30220i.skip(4L);
         return c10;
     }
 
-    public final void Y(h hVar) throws EOFException, b {
+    public final void X(h hVar) throws EOFException, b {
         while (true) {
-            long jH0 = this.f29817h.h0(hVar);
-            if (jH0 == -1) {
+            long jE1 = this.f30219h.e1(hVar);
+            if (jE1 == -1) {
                 throw w("Unterminated string");
             }
-            if (this.f29818i.j(jH0) != 92) {
-                this.f29818i.skip(jH0 + 1);
+            if (this.f30220i.j(jE1) != 92) {
+                this.f30220i.skip(jE1 + 1);
                 return;
             } else {
-                this.f29818i.skip(jH0 + 1);
-                X();
+                this.f30220i.skip(jE1 + 1);
+                W();
             }
         }
     }
 
-    public final boolean Z() throws EOFException {
-        g gVar = this.f29817h;
-        h hVar = f29816r;
-        long jV = gVar.V(hVar);
-        boolean z10 = jV != -1;
-        xu.e eVar = this.f29818i;
-        eVar.skip(z10 ? jV + ((long) hVar.I()) : eVar.getSize());
+    public final boolean Y() throws EOFException {
+        g gVar = this.f30219h;
+        h hVar = f30218r;
+        long jR1 = gVar.R1(hVar);
+        boolean z10 = jR1 != -1;
+        vu.e eVar = this.f30220i;
+        eVar.skip(z10 ? jR1 + ((long) hVar.I()) : eVar.getSize());
         return z10;
     }
 
+    public final void Z() throws EOFException {
+        long jE1 = this.f30219h.e1(f30217q);
+        vu.e eVar = this.f30220i;
+        eVar.skip(jE1 != -1 ? jE1 + 1 : eVar.getSize());
+    }
+
     public final void a0() throws EOFException {
-        long jH0 = this.f29817h.h0(f29815q);
-        xu.e eVar = this.f29818i;
-        eVar.skip(jH0 != -1 ? jH0 + 1 : eVar.getSize());
+        long jE1 = this.f30219h.e1(f30216p);
+        vu.e eVar = this.f30220i;
+        if (jE1 == -1) {
+            jE1 = eVar.getSize();
+        }
+        eVar.skip(jE1);
     }
 
     @Override // r7.c
     public void b() throws EOFException, b {
-        int iB = this.f29819j;
-        if (iB == 0) {
-            iB = B();
+        int iA = this.f30221j;
+        if (iA == 0) {
+            iA = A();
         }
-        if (iB == 3) {
+        if (iA == 3) {
             q(1);
-            this.f29798d[this.f29796a - 1] = 0;
-            this.f29819j = 0;
+            this.f30200d[this.f30198a - 1] = 0;
+            this.f30221j = 0;
         } else {
             throw new a("Expected BEGIN_ARRAY but was " + o() + " at path " + getPath());
         }
     }
 
-    public final void b0() throws EOFException {
-        long jH0 = this.f29817h.h0(f29814p);
-        xu.e eVar = this.f29818i;
-        if (jH0 == -1) {
-            jH0 = eVar.getSize();
-        }
-        eVar.skip(jH0);
-    }
-
     @Override // r7.c
     public void c() throws EOFException, b {
-        int iB = this.f29819j;
-        if (iB == 0) {
-            iB = B();
+        int iA = this.f30221j;
+        if (iA == 0) {
+            iA = A();
         }
-        if (iB == 1) {
+        if (iA == 1) {
             q(3);
-            this.f29819j = 0;
+            this.f30221j = 0;
             return;
         }
         throw new a("Expected BEGIN_OBJECT but was " + o() + " at path " + getPath());
@@ -566,75 +566,75 @@ public final class e extends c {
 
     @Override // java.io.Closeable, java.lang.AutoCloseable
     public void close() throws EOFException {
-        this.f29819j = 0;
+        this.f30221j = 0;
         this.b[0] = 8;
-        this.f29796a = 1;
-        this.f29818i.a();
-        this.f29817h.close();
+        this.f30198a = 1;
+        this.f30220i.a();
+        this.f30219h.close();
     }
 
     @Override // r7.c
     public void d() throws EOFException, b {
-        int iB = this.f29819j;
-        if (iB == 0) {
-            iB = B();
+        int iA = this.f30221j;
+        if (iA == 0) {
+            iA = A();
         }
-        if (iB != 4) {
+        if (iA != 4) {
             throw new a("Expected END_ARRAY but was " + o() + " at path " + getPath());
         }
-        int i10 = this.f29796a;
-        this.f29796a = i10 - 1;
-        int[] iArr = this.f29798d;
+        int i10 = this.f30198a;
+        this.f30198a = i10 - 1;
+        int[] iArr = this.f30200d;
         int i11 = i10 - 2;
         iArr[i11] = iArr[i11] + 1;
-        this.f29819j = 0;
+        this.f30221j = 0;
     }
 
     @Override // r7.c
     public void e() throws EOFException, b {
-        int iB = this.f29819j;
-        if (iB == 0) {
-            iB = B();
+        int iA = this.f30221j;
+        if (iA == 0) {
+            iA = A();
         }
-        if (iB != 2) {
+        if (iA != 2) {
             throw new a("Expected END_OBJECT but was " + o() + " at path " + getPath());
         }
-        int i10 = this.f29796a;
+        int i10 = this.f30198a;
         int i11 = i10 - 1;
-        this.f29796a = i11;
-        this.f29797c[i11] = null;
-        int[] iArr = this.f29798d;
+        this.f30198a = i11;
+        this.f30199c[i11] = null;
+        int[] iArr = this.f30200d;
         int i12 = i10 - 2;
         iArr[i12] = iArr[i12] + 1;
-        this.f29819j = 0;
+        this.f30221j = 0;
     }
 
     @Override // r7.c
     public boolean f() throws EOFException, b {
-        int iB = this.f29819j;
-        if (iB == 0) {
-            iB = B();
+        int iA = this.f30221j;
+        if (iA == 0) {
+            iA = A();
         }
-        return (iB == 2 || iB == 4 || iB == 18) ? false : true;
+        return (iA == 2 || iA == 4 || iA == 18) ? false : true;
     }
 
     @Override // r7.c
     public boolean g() throws EOFException, b {
-        int iB = this.f29819j;
-        if (iB == 0) {
-            iB = B();
+        int iA = this.f30221j;
+        if (iA == 0) {
+            iA = A();
         }
-        if (iB == 5) {
-            this.f29819j = 0;
-            int[] iArr = this.f29798d;
-            int i10 = this.f29796a - 1;
+        if (iA == 5) {
+            this.f30221j = 0;
+            int[] iArr = this.f30200d;
+            int i10 = this.f30198a - 1;
             iArr[i10] = iArr[i10] + 1;
             return true;
         }
-        if (iB == 6) {
-            this.f29819j = 0;
-            int[] iArr2 = this.f29798d;
-            int i11 = this.f29796a - 1;
+        if (iA == 6) {
+            this.f30221j = 0;
+            int[] iArr2 = this.f30200d;
+            int i11 = this.f30198a - 1;
             iArr2[i11] = iArr2[i11] + 1;
             return false;
         }
@@ -643,160 +643,160 @@ public final class e extends c {
 
     @Override // r7.c
     public double h() throws EOFException, b {
-        int iB = this.f29819j;
-        if (iB == 0) {
-            iB = B();
+        int iA = this.f30221j;
+        if (iA == 0) {
+            iA = A();
         }
-        if (iB == 16) {
-            this.f29819j = 0;
-            int[] iArr = this.f29798d;
-            int i10 = this.f29796a - 1;
+        if (iA == 16) {
+            this.f30221j = 0;
+            int[] iArr = this.f30200d;
+            int i10 = this.f30198a - 1;
             iArr[i10] = iArr[i10] + 1;
-            return this.f29820k;
+            return this.f30222k;
         }
-        if (iB == 17) {
-            this.f29822m = this.f29818i.G1(this.f29821l);
-        } else if (iB == 9) {
-            this.f29822m = L(f29813o);
-        } else if (iB == 8) {
-            this.f29822m = L(f29812n);
-        } else if (iB == 10) {
-            this.f29822m = M();
-        } else if (iB != 11) {
+        if (iA == 17) {
+            this.f30224m = this.f30220i.D1(this.f30223l);
+        } else if (iA == 9) {
+            this.f30224m = L(f30215o);
+        } else if (iA == 8) {
+            this.f30224m = L(f30214n);
+        } else if (iA == 10) {
+            this.f30224m = M();
+        } else if (iA != 11) {
             throw new a("Expected a double but was " + o() + " at path " + getPath());
         }
-        this.f29819j = 11;
+        this.f30221j = 11;
         try {
-            double d10 = Double.parseDouble(this.f29822m);
-            if (this.f29799e || !(Double.isNaN(d10) || Double.isInfinite(d10))) {
-                this.f29822m = null;
-                this.f29819j = 0;
-                int[] iArr2 = this.f29798d;
-                int i11 = this.f29796a - 1;
+            double d10 = Double.parseDouble(this.f30224m);
+            if (this.f30201e || !(Double.isNaN(d10) || Double.isInfinite(d10))) {
+                this.f30224m = null;
+                this.f30221j = 0;
+                int[] iArr2 = this.f30200d;
+                int i11 = this.f30198a - 1;
                 iArr2[i11] = iArr2[i11] + 1;
                 return d10;
             }
             throw new b("JSON forbids NaN and infinities: " + d10 + " at path " + getPath());
         } catch (NumberFormatException unused) {
-            throw new a("Expected a double but was " + this.f29822m + " at path " + getPath());
+            throw new a("Expected a double but was " + this.f30224m + " at path " + getPath());
         }
     }
 
     @Override // r7.c
     public int j() throws EOFException, b {
-        int iB = this.f29819j;
-        if (iB == 0) {
-            iB = B();
+        int iA = this.f30221j;
+        if (iA == 0) {
+            iA = A();
         }
-        if (iB == 16) {
-            long j10 = this.f29820k;
+        if (iA == 16) {
+            long j10 = this.f30222k;
             int i10 = (int) j10;
             if (j10 == i10) {
-                this.f29819j = 0;
-                int[] iArr = this.f29798d;
-                int i11 = this.f29796a - 1;
+                this.f30221j = 0;
+                int[] iArr = this.f30200d;
+                int i11 = this.f30198a - 1;
                 iArr[i11] = iArr[i11] + 1;
                 return i10;
             }
-            throw new a("Expected an int but was " + this.f29820k + " at path " + getPath());
+            throw new a("Expected an int but was " + this.f30222k + " at path " + getPath());
         }
-        if (iB == 17) {
-            this.f29822m = this.f29818i.G1(this.f29821l);
-        } else if (iB == 9 || iB == 8) {
-            String strL = iB == 9 ? L(f29813o) : L(f29812n);
-            this.f29822m = strL;
+        if (iA == 17) {
+            this.f30224m = this.f30220i.D1(this.f30223l);
+        } else if (iA == 9 || iA == 8) {
+            String strL = iA == 9 ? L(f30215o) : L(f30214n);
+            this.f30224m = strL;
             try {
                 int i12 = Integer.parseInt(strL);
-                this.f29819j = 0;
-                int[] iArr2 = this.f29798d;
-                int i13 = this.f29796a - 1;
+                this.f30221j = 0;
+                int[] iArr2 = this.f30200d;
+                int i13 = this.f30198a - 1;
                 iArr2[i13] = iArr2[i13] + 1;
                 return i12;
             } catch (NumberFormatException unused) {
             }
-        } else if (iB != 11) {
+        } else if (iA != 11) {
             throw new a("Expected an int but was " + o() + " at path " + getPath());
         }
-        this.f29819j = 11;
+        this.f30221j = 11;
         try {
-            double d10 = Double.parseDouble(this.f29822m);
+            double d10 = Double.parseDouble(this.f30224m);
             int i14 = (int) d10;
             if (i14 == d10) {
-                this.f29822m = null;
-                this.f29819j = 0;
-                int[] iArr3 = this.f29798d;
-                int i15 = this.f29796a - 1;
+                this.f30224m = null;
+                this.f30221j = 0;
+                int[] iArr3 = this.f30200d;
+                int i15 = this.f30198a - 1;
                 iArr3[i15] = iArr3[i15] + 1;
                 return i14;
             }
-            throw new a("Expected an int but was " + this.f29822m + " at path " + getPath());
+            throw new a("Expected an int but was " + this.f30224m + " at path " + getPath());
         } catch (NumberFormatException unused2) {
-            throw new a("Expected an int but was " + this.f29822m + " at path " + getPath());
+            throw new a("Expected an int but was " + this.f30224m + " at path " + getPath());
         }
     }
 
     @Override // r7.c
     public String l() throws EOFException, b {
         String strL;
-        int iB = this.f29819j;
-        if (iB == 0) {
-            iB = B();
+        int iA = this.f30221j;
+        if (iA == 0) {
+            iA = A();
         }
-        if (iB == 14) {
+        if (iA == 14) {
             strL = M();
-        } else if (iB == 13) {
-            strL = L(f29813o);
-        } else if (iB == 12) {
-            strL = L(f29812n);
+        } else if (iA == 13) {
+            strL = L(f30215o);
+        } else if (iA == 12) {
+            strL = L(f30214n);
         } else {
-            if (iB != 15) {
+            if (iA != 15) {
                 throw new a("Expected a name but was " + o() + " at path " + getPath());
             }
-            strL = this.f29822m;
+            strL = this.f30224m;
         }
-        this.f29819j = 0;
-        this.f29797c[this.f29796a - 1] = strL;
+        this.f30221j = 0;
+        this.f30199c[this.f30198a - 1] = strL;
         return strL;
     }
 
     @Override // r7.c
     public String m() throws EOFException, b {
-        String strG1;
-        int iB = this.f29819j;
-        if (iB == 0) {
-            iB = B();
+        String strD1;
+        int iA = this.f30221j;
+        if (iA == 0) {
+            iA = A();
         }
-        if (iB == 10) {
-            strG1 = M();
-        } else if (iB == 9) {
-            strG1 = L(f29813o);
-        } else if (iB == 8) {
-            strG1 = L(f29812n);
-        } else if (iB == 11) {
-            strG1 = this.f29822m;
-            this.f29822m = null;
-        } else if (iB == 16) {
-            strG1 = Long.toString(this.f29820k);
+        if (iA == 10) {
+            strD1 = M();
+        } else if (iA == 9) {
+            strD1 = L(f30215o);
+        } else if (iA == 8) {
+            strD1 = L(f30214n);
+        } else if (iA == 11) {
+            strD1 = this.f30224m;
+            this.f30224m = null;
+        } else if (iA == 16) {
+            strD1 = Long.toString(this.f30222k);
         } else {
-            if (iB != 17) {
+            if (iA != 17) {
                 throw new a("Expected a string but was " + o() + " at path " + getPath());
             }
-            strG1 = this.f29818i.G1(this.f29821l);
+            strD1 = this.f30220i.D1(this.f30223l);
         }
-        this.f29819j = 0;
-        int[] iArr = this.f29798d;
-        int i10 = this.f29796a - 1;
+        this.f30221j = 0;
+        int[] iArr = this.f30200d;
+        int i10 = this.f30198a - 1;
         iArr[i10] = iArr[i10] + 1;
-        return strG1;
+        return strD1;
     }
 
     @Override // r7.c
     public c.b o() throws EOFException, b {
-        int iB = this.f29819j;
-        if (iB == 0) {
-            iB = B();
+        int iA = this.f30221j;
+        if (iA == 0) {
+            iA = A();
         }
-        switch (iB) {
+        switch (iA) {
             case 1:
                 return c.b.BEGIN_OBJECT;
             case 2:
@@ -832,112 +832,112 @@ public final class e extends c {
 
     @Override // r7.c
     public int r(c.a aVar) throws EOFException, b {
-        int iB = this.f29819j;
-        if (iB == 0) {
-            iB = B();
+        int iA = this.f30221j;
+        if (iA == 0) {
+            iA = A();
         }
-        if (iB < 12 || iB > 15) {
+        if (iA < 12 || iA > 15) {
             return -1;
         }
-        if (iB == 15) {
-            return F(this.f29822m, aVar);
+        if (iA == 15) {
+            return F(this.f30224m, aVar);
         }
-        int iL3 = this.f29817h.l3(aVar.b);
-        if (iL3 != -1) {
-            this.f29819j = 0;
-            this.f29797c[this.f29796a - 1] = aVar.f29801a[iL3];
-            return iL3;
+        int iJ1 = this.f30219h.J1(aVar.b);
+        if (iJ1 != -1) {
+            this.f30221j = 0;
+            this.f30199c[this.f30198a - 1] = aVar.f30203a[iJ1];
+            return iJ1;
         }
-        String str = this.f29797c[this.f29796a - 1];
+        String str = this.f30199c[this.f30198a - 1];
         String strL = l();
         int iF = F(strL, aVar);
         if (iF == -1) {
-            this.f29819j = 15;
-            this.f29822m = strL;
-            this.f29797c[this.f29796a - 1] = str;
+            this.f30221j = 15;
+            this.f30224m = strL;
+            this.f30199c[this.f30198a - 1] = str;
         }
         return iF;
     }
 
     @Override // r7.c
     public void s() throws EOFException, b {
-        if (this.f29800f) {
+        if (this.f30202f) {
             throw new a("Cannot skip unexpected " + o() + " at " + getPath());
         }
-        int iB = this.f29819j;
-        if (iB == 0) {
-            iB = B();
+        int iA = this.f30221j;
+        if (iA == 0) {
+            iA = A();
         }
-        if (iB == 14) {
-            b0();
-        } else if (iB == 13) {
-            Y(f29813o);
-        } else if (iB == 12) {
-            Y(f29812n);
-        } else if (iB != 15) {
+        if (iA == 14) {
+            a0();
+        } else if (iA == 13) {
+            X(f30215o);
+        } else if (iA == 12) {
+            X(f30214n);
+        } else if (iA != 15) {
             throw new a("Expected a name but was " + o() + " at path " + getPath());
         }
-        this.f29819j = 0;
-        this.f29797c[this.f29796a - 1] = "null";
+        this.f30221j = 0;
+        this.f30199c[this.f30198a - 1] = "null";
     }
 
     public String toString() {
-        return "JsonReader(" + this.f29817h + ")";
+        return "JsonReader(" + this.f30219h + ")";
     }
 
     @Override // r7.c
     public void u() throws EOFException, b {
-        if (this.f29800f) {
+        if (this.f30202f) {
             throw new a("Cannot skip unexpected " + o() + " at " + getPath());
         }
         int i10 = 0;
         do {
-            int iB = this.f29819j;
-            if (iB == 0) {
-                iB = B();
+            int iA = this.f30221j;
+            if (iA == 0) {
+                iA = A();
             }
-            if (iB == 3) {
+            if (iA == 3) {
                 q(1);
             } else {
-                if (iB == 1) {
+                if (iA == 1) {
                     q(3);
-                } else if (iB == 4) {
+                } else if (iA == 4) {
                     i10--;
                     if (i10 < 0) {
                         throw new a("Expected a value but was " + o() + " at path " + getPath());
                     }
-                    this.f29796a--;
-                } else if (iB == 2) {
+                    this.f30198a--;
+                } else if (iA == 2) {
                     i10--;
                     if (i10 < 0) {
                         throw new a("Expected a value but was " + o() + " at path " + getPath());
                     }
-                    this.f29796a--;
-                } else if (iB == 14 || iB == 10) {
-                    b0();
-                } else if (iB == 9 || iB == 13) {
-                    Y(f29813o);
-                } else if (iB == 8 || iB == 12) {
-                    Y(f29812n);
-                } else if (iB == 17) {
-                    this.f29818i.skip(this.f29821l);
-                } else if (iB == 18) {
+                    this.f30198a--;
+                } else if (iA == 14 || iA == 10) {
+                    a0();
+                } else if (iA == 9 || iA == 13) {
+                    X(f30215o);
+                } else if (iA == 8 || iA == 12) {
+                    X(f30214n);
+                } else if (iA == 17) {
+                    this.f30220i.skip(this.f30223l);
+                } else if (iA == 18) {
                     throw new a("Expected a value but was " + o() + " at path " + getPath());
                 }
-                this.f29819j = 0;
+                this.f30221j = 0;
             }
             i10++;
-            this.f29819j = 0;
+            this.f30221j = 0;
         } while (i10 != 0);
-        int[] iArr = this.f29798d;
-        int i11 = this.f29796a;
+        int[] iArr = this.f30200d;
+        int i11 = this.f30198a;
         int i12 = i11 - 1;
         iArr[i12] = iArr[i12] + 1;
-        this.f29797c[i11 - 1] = "null";
+        this.f30199c[i11 - 1] = "null";
     }
 
-    public final void y() throws b {
-        if (!this.f29799e) {
+    public final void x() throws b {
+        if (!this.f30201e) {
             throw w("Use JsonReader.setLenient(true) to accept malformed JSON");
         }
     }

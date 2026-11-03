@@ -8,16 +8,16 @@ import android.os.Parcel;
 public class a implements IInterface {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final IBinder f32111a;
+    public final IBinder f32764a;
     public final String b = "com.google.android.gms.ads.identifier.internal.IAdvertisingIdService";
 
     public a(IBinder iBinder, String str) {
-        this.f32111a = iBinder;
+        this.f32764a = iBinder;
     }
 
     @Override // android.os.IInterface
     public final IBinder asBinder() {
-        return this.f32111a;
+        return this.f32764a;
     }
 
     public final Parcel r2() {
@@ -30,7 +30,7 @@ public class a implements IInterface {
         Parcel parcelObtain = Parcel.obtain();
         try {
             try {
-                this.f32111a.transact(i10, parcel, parcelObtain, 0);
+                this.f32764a.transact(i10, parcel, parcelObtain, 0);
                 parcelObtain.readException();
                 parcel.recycle();
                 return parcelObtain;

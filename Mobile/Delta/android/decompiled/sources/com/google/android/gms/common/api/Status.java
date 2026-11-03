@@ -17,61 +17,61 @@ import o9.b;
 public final class Status extends AbstractSafeParcelable implements n, ReflectedParcelable {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f5725f;
+    public final int f5798f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final String f5726g;
+    public final String f5799g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final PendingIntent f5727h;
+    public final PendingIntent f5800h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final ConnectionResult f5728i;
+    public final ConnectionResult f5801i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
     @NonNull
-    public static final Status f5717j = new Status(-1);
+    public static final Status f5790j = new Status(-1);
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
     @NonNull
-    public static final Status f5718k = new Status(0);
+    public static final Status f5791k = new Status(0);
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
     @NonNull
-    public static final Status f5719l = new Status(14);
+    public static final Status f5792l = new Status(14);
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
     @NonNull
-    public static final Status f5720m = new Status(8);
+    public static final Status f5793m = new Status(8);
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
     @NonNull
-    public static final Status f5721n = new Status(15);
+    public static final Status f5794n = new Status(15);
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
     @NonNull
-    public static final Status f5722o = new Status(16);
+    public static final Status f5795o = new Status(16);
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
     @NonNull
-    public static final Status f5723p = new Status(17);
+    public static final Status f5796p = new Status(17);
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
     @NonNull
-    public static final Status f5724q = new Status(18);
+    public static final Status f5797q = new Status(18);
 
     @NonNull
     public static final Parcelable.Creator<Status> CREATOR = new x();
 
     public Status(int i10, String str, PendingIntent pendingIntent, ConnectionResult connectionResult) {
-        this.f5725f = i10;
-        this.f5726g = str;
-        this.f5727h = pendingIntent;
-        this.f5728i = connectionResult;
+        this.f5798f = i10;
+        this.f5799g = str;
+        this.f5800h = pendingIntent;
+        this.f5801i = connectionResult;
     }
 
     public boolean A3() {
-        return this.f5725f <= 0;
+        return this.f5798f <= 0;
     }
 
     public boolean equals(Object obj) {
@@ -79,11 +79,11 @@ public final class Status extends AbstractSafeParcelable implements n, Reflected
             return false;
         }
         Status status = (Status) obj;
-        return this.f5725f == status.f5725f && k.b(this.f5726g, status.f5726g) && k.b(this.f5727h, status.f5727h) && k.b(this.f5728i, status.f5728i);
+        return this.f5798f == status.f5798f && k.b(this.f5799g, status.f5799g) && k.b(this.f5800h, status.f5800h) && k.b(this.f5801i, status.f5801i);
     }
 
     public int hashCode() {
-        return k.c(Integer.valueOf(this.f5725f), this.f5726g, this.f5727h, this.f5728i);
+        return k.c(Integer.valueOf(this.f5798f), this.f5799g, this.f5800h, this.f5801i);
     }
 
     @Override // k9.n
@@ -96,16 +96,16 @@ public final class Status extends AbstractSafeParcelable implements n, Reflected
     public String toString() {
         k.a aVarD = k.d(this);
         aVarD.a("statusCode", zza());
-        aVarD.a("resolution", this.f5727h);
+        aVarD.a("resolution", this.f5800h);
         return aVarD.toString();
     }
 
     public ConnectionResult v3() {
-        return this.f5728i;
+        return this.f5801i;
     }
 
     public PendingIntent w3() {
-        return this.f5727h;
+        return this.f5800h;
     }
 
     @Override // android.os.Parcelable
@@ -113,27 +113,27 @@ public final class Status extends AbstractSafeParcelable implements n, Reflected
         int iA = b.a(parcel);
         b.n(parcel, 1, x3());
         b.v(parcel, 2, y3(), false);
-        b.t(parcel, 3, this.f5727h, i10, false);
+        b.t(parcel, 3, this.f5800h, i10, false);
         b.t(parcel, 4, v3(), i10, false);
         b.b(parcel, iA);
     }
 
     public int x3() {
-        return this.f5725f;
+        return this.f5798f;
     }
 
     public String y3() {
-        return this.f5726g;
+        return this.f5799g;
     }
 
     public boolean z3() {
-        return this.f5727h != null;
+        return this.f5800h != null;
     }
 
     @NonNull
     public final String zza() {
-        String str = this.f5726g;
-        return str != null ? str : d.a(this.f5725f);
+        String str = this.f5799g;
+        return str != null ? str : d.a(this.f5798f);
     }
 
     public Status(int i10) {

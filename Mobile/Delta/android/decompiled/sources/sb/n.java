@@ -4,14 +4,14 @@ package sb;
 public final class n implements g {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ h f30591a;
+    public final /* synthetic */ h f31138a;
 
     public n(s sVar, h hVar) {
-        this.f30591a = hVar;
+        this.f31138a = hVar;
     }
 
     @Override // sb.g
     public final /* bridge */ /* synthetic */ void onSuccess(Object obj) {
-        this.f30591a.a();
+        this.f31138a.a();
     }
 }

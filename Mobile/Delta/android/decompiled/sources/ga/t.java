@@ -6,19 +6,19 @@ import com.google.android.gms.common.api.Status;
 public final class t implements l9.d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ n9.c.e f17978a;
+    public final /* synthetic */ n9.c.e f18517a;
 
     public t(n9.c.e eVar) {
-        this.f17978a = eVar;
+        this.f18517a = eVar;
     }
 
     @Override // l9.d
     public final /* bridge */ /* synthetic */ void a(Object obj) {
-        this.f17978a.a();
+        this.f18517a.a();
     }
 
     @Override // l9.d
     public final void b(Status status) {
-        this.f17978a.a();
+        this.f18517a.a();
     }
 }

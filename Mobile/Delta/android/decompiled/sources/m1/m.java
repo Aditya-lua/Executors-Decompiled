@@ -4,7 +4,7 @@ package m1;
 public interface m {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final m f23829a = new a();
+    public static final m f24479a = new a();
 
     public class a implements m {
         @Override // m1.m

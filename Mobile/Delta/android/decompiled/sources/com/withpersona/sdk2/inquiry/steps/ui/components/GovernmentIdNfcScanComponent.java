@@ -1,21 +1,19 @@
 package com.withpersona.sdk2.inquiry.steps.ui.components;
 
-import an.r;
-import an.u;
 import android.os.Parcel;
 import android.os.Parcelable;
+import ar.h2;
+import ar.o;
+import ar.x;
+import br.HelpBottomSheetViewModel;
+import br.HelpPagerItem;
 import com.google.mlkit.vision.barcode.common.Barcode;
 import com.withpersona.sdk2.inquiry.network.dto.JsonLogicBoolean;
 import com.withpersona.sdk2.inquiry.network.dto.ui.components.GovernmentIdNfcScan;
 import com.withpersona.sdk2.inquiry.steps.ui.components.utils.GovernmentIdNfcData;
-import cr.h2;
-import cr.o;
-import cr.x;
-import dr.HelpBottomSheetViewModel;
-import dr.HelpPagerItem;
-import er.g;
-import er.h;
-import er.i;
+import cr.g;
+import cr.h;
+import cr.i;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
@@ -23,9 +21,11 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import ym.r;
+import ym.u;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000\u0094\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\b\r\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0007\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u001d\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0087\b\u0018\u00002\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u00042\u00020\u0005Be\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b\u0012\u0006\u0010\n\u001a\u00020\u0006\u0012\b\u0010\u000b\u001a\u0004\u0018\u00010\u0006\u0012\b\u0010\f\u001a\u0004\u0018\u00010\u0006\u0012\u0006\u0010\r\u001a\u00020\u0006\u0012\b\u0010\u000f\u001a\u0004\u0018\u00010\u000e\u0012\b\u0010\u0010\u001a\u0004\u0018\u00010\u000e\u0012\n\b\u0002\u0010\u0012\u001a\u0004\u0018\u00010\u0011\u0012\b\b\u0002\u0010\u0014\u001a\u00020\u0013¢\u0006\u0004\b\u0015\u0010\u0016B\u0011\b\u0016\u0012\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\u0015\u0010\u0017J\u0015\u0010\u0019\u001a\u00020\u00002\u0006\u0010\u0018\u001a\u00020\u0006¢\u0006\u0004\b\u0019\u0010\u001aJ\u0015\u0010\u001b\u001a\u00020\u00002\u0006\u0010\u0018\u001a\u00020\u0006¢\u0006\u0004\b\u001b\u0010\u001aJ\u0017\u0010\u001d\u001a\u00020\u00002\b\u0010\u001c\u001a\u0004\u0018\u00010\u0006¢\u0006\u0004\b\u001d\u0010\u001aJ\u0017\u0010\u001e\u001a\u00020\u00002\b\u0010\u001c\u001a\u0004\u0018\u00010\u0006¢\u0006\u0004\b\u001e\u0010\u001aJ\u0017\u0010\u001f\u001a\u00020\u00002\b\u0010\u0018\u001a\u0004\u0018\u00010\u0011¢\u0006\u0004\b\u001f\u0010 J\u0019\u0010$\u001a\u0004\u0018\u00010#2\u0006\u0010\"\u001a\u00020!H\u0016¢\u0006\u0004\b$\u0010%J\r\u0010&\u001a\u00020!¢\u0006\u0004\b&\u0010'J\u001d\u0010,\u001a\u00020+2\u0006\u0010)\u001a\u00020(2\u0006\u0010*\u001a\u00020!¢\u0006\u0004\b,\u0010-J~\u0010.\u001a\u00020\u00002\b\b\u0002\u0010\u0007\u001a\u00020\u00062\b\b\u0002\u0010\t\u001a\u00020\b2\b\b\u0002\u0010\n\u001a\u00020\u00062\n\b\u0002\u0010\u000b\u001a\u0004\u0018\u00010\u00062\n\b\u0002\u0010\f\u001a\u0004\u0018\u00010\u00062\b\b\u0002\u0010\r\u001a\u00020\u00062\n\b\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u000e2\n\b\u0002\u0010\u0010\u001a\u0004\u0018\u00010\u000e2\n\b\u0002\u0010\u0012\u001a\u0004\u0018\u00010\u00112\b\b\u0002\u0010\u0014\u001a\u00020\u0013HÆ\u0001¢\u0006\u0004\b.\u0010/J\u0010\u00100\u001a\u00020\u0006HÖ\u0001¢\u0006\u0004\b0\u00101J\u0010\u00102\u001a\u00020!HÖ\u0001¢\u0006\u0004\b2\u0010'J\u001a\u00106\u001a\u0002052\b\u00104\u001a\u0004\u0018\u000103HÖ\u0003¢\u0006\u0004\b6\u00107R\u001a\u0010\u0007\u001a\u00020\u00068\u0016X\u0096\u0004¢\u0006\f\n\u0004\b.\u00108\u001a\u0004\b9\u00101R\u0017\u0010\t\u001a\u00020\b8\u0006¢\u0006\f\n\u0004\b:\u0010;\u001a\u0004\b<\u0010=R\u0017\u0010\n\u001a\u00020\u00068\u0006¢\u0006\f\n\u0004\b>\u00108\u001a\u0004\b?\u00101R\u0019\u0010\u000b\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\b@\u00108\u001a\u0004\bA\u00101R\u0019\u0010\f\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\bB\u00108\u001a\u0004\bC\u00101R\u0017\u0010\r\u001a\u00020\u00068\u0006¢\u0006\f\n\u0004\bD\u00108\u001a\u0004\bE\u00101R\u001c\u0010\u000f\u001a\u0004\u0018\u00010\u000e8\u0016X\u0096\u0004¢\u0006\f\n\u0004\bF\u0010G\u001a\u0004\bH\u0010IR\u001c\u0010\u0010\u001a\u0004\u0018\u00010\u000e8\u0016X\u0096\u0004¢\u0006\f\n\u0004\bJ\u0010G\u001a\u0004\bK\u0010IR\u0019\u0010\u0012\u001a\u0004\u0018\u00010\u00118\u0006¢\u0006\f\n\u0004\bL\u0010M\u001a\u0004\bN\u0010OR\u001a\u0010\u0014\u001a\u00020\u00138\u0016X\u0096\u0004¢\u0006\f\n\u0004\b<\u0010P\u001a\u0004\bQ\u0010RR&\u0010Z\u001a\b\u0012\u0004\u0012\u00020T0S8\u0016X\u0096\u0004¢\u0006\u0012\n\u0004\bU\u0010V\u0012\u0004\bX\u0010Y\u001a\u0004\bL\u0010WR(\u0010a\u001a\u0002058\u0016@\u0016X\u0096\u000e¢\u0006\u0018\n\u0004\b[\u0010\\\u0012\u0004\b`\u0010Y\u001a\u0004\b]\u0010^\"\u0004\b:\u0010_R(\u0010i\u001a\u00020b8\u0006@\u0006X\u0087\u000e¢\u0006\u0018\n\u0004\bc\u0010d\u0012\u0004\bh\u0010Y\u001a\u0004\bF\u0010e\"\u0004\bf\u0010gR(\u0010m\u001a\u00020b8\u0006@\u0006X\u0087\u000e¢\u0006\u0018\n\u0004\bj\u0010d\u0012\u0004\bl\u0010Y\u001a\u0004\bc\u0010e\"\u0004\bk\u0010gR(\u0010u\u001a\u00020n8\u0006@\u0006X\u0087\u000e¢\u0006\u0018\n\u0004\bo\u0010p\u0012\u0004\bt\u0010Y\u001a\u0004\bU\u0010q\"\u0004\br\u0010sR(\u0010y\u001a\u00020n8\u0006@\u0006X\u0087\u000e¢\u0006\u0018\n\u0004\bv\u0010p\u0012\u0004\bx\u0010Y\u001a\u0004\bj\u0010q\"\u0004\bw\u0010sR)\u0010\u0080\u0001\u001a\u00020z8\u0006@\u0006X\u0087\u000e¢\u0006\u0018\n\u0004\b\u0019\u0010{\u0012\u0004\b\u007f\u0010Y\u001a\u0004\bo\u0010|\"\u0004\b}\u0010~R\u0014\u0010\u0083\u0001\u001a\u00030\u0081\u00018F¢\u0006\u0007\u001a\u0005\bv\u0010\u0082\u0001R\u0016\u0010\u0084\u0001\u001a\u0002058VX\u0096\u0004¢\u0006\u0007\u001a\u0005\b\u0084\u0001\u0010^¨\u0006\u0085\u0001"}, d2 = {"Lcom/withpersona/sdk2/inquiry/steps/ui/components/GovernmentIdNfcScanComponent;", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;", "Lcr/o;", "Lcr/x;", "Lcr/h2;", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/HelpBottomSheetComponent;", "", "name", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/GovernmentIdNfcScan;", "config", "documentNumber", "dateOfBirth", "expirationDate", "cardAccessNumber", "Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;", "hidden", "disabled", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/utils/GovernmentIdNfcData;", "governmentIdNfcData", "", "lastValueUpdateTs", "<init>", "(Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/GovernmentIdNfcScan;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;Lcom/withpersona/sdk2/inquiry/steps/ui/components/utils/GovernmentIdNfcData;J)V", "(Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/GovernmentIdNfcScan;)V", "newValue", "q", "(Ljava/lang/String;)Lcom/withpersona/sdk2/inquiry/steps/ui/components/GovernmentIdNfcScanComponent;", "s", "newDate", "r", "t", "u", "(Lcom/withpersona/sdk2/inquiry/steps/ui/components/utils/GovernmentIdNfcData;)Lcom/withpersona/sdk2/inquiry/steps/ui/components/GovernmentIdNfcScanComponent;", "", "timesShown", "Ldr/o;", "o1", "(I)Ldr/o;", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "a", "(Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/GovernmentIdNfcScan;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;Lcom/withpersona/sdk2/inquiry/steps/ui/components/utils/GovernmentIdNfcData;J)Lcom/withpersona/sdk2/inquiry/steps/ui/components/GovernmentIdNfcScanComponent;", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "Ljava/lang/String;", "getName", "b", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/GovernmentIdNfcScan;", "j", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/GovernmentIdNfcScan;", "c", "getDocumentNumber", "d", "getDateOfBirth", "e", "getExpirationDate", "f", "getCardAccessNumber", "g", "Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;", "getHidden", "()Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;", "h", "getDisabled", "i", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/utils/GovernmentIdNfcData;", "getGovernmentIdNfcData", "()Lcom/withpersona/sdk2/inquiry/steps/ui/components/utils/GovernmentIdNfcData;", "J", "R0", "()J", "", "Lmr/a;", "k", "Ljava/util/List;", "()Ljava/util/List;", "getAssociatedViews$annotations", "()V", "associatedViews", "l", "Z", "Y0", "()Z", "(Z)V", "getWasTapped$annotations", "wasTapped", "Lan/r;", "m", "Lan/r;", "()Lan/r;", "setCardAccessNumberController", "(Lan/r;)V", "getCardAccessNumberController$annotations", "cardAccessNumberController", "n", "setDocumentNumberController", "getDocumentNumberController$annotations", "documentNumberController", "Ler/g;", "o", "Ler/g;", "()Ler/g;", "setDateOfBirthController", "(Ler/g;)V", "getDateOfBirthController$annotations", "dateOfBirthController", "p", "setExpirationDateController", "getExpirationDateController$annotations", "expirationDateController", "Ler/i;", "Ler/i;", "()Ler/i;", "setNfcDataController", "(Ler/i;)V", "getNfcDataController$annotations", "nfcDataController", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/GovernmentIdNfcScan$TipsButtonLocation;", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/GovernmentIdNfcScan$TipsButtonLocation;", "tipsButtonLocation", "isEnabled", "ui-step-renderer_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000\u0094\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\b\r\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0007\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u001d\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0087\b\u0018\u00002\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u00042\u00020\u0005Be\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b\u0012\u0006\u0010\n\u001a\u00020\u0006\u0012\b\u0010\u000b\u001a\u0004\u0018\u00010\u0006\u0012\b\u0010\f\u001a\u0004\u0018\u00010\u0006\u0012\u0006\u0010\r\u001a\u00020\u0006\u0012\b\u0010\u000f\u001a\u0004\u0018\u00010\u000e\u0012\b\u0010\u0010\u001a\u0004\u0018\u00010\u000e\u0012\n\b\u0002\u0010\u0012\u001a\u0004\u0018\u00010\u0011\u0012\b\b\u0002\u0010\u0014\u001a\u00020\u0013¢\u0006\u0004\b\u0015\u0010\u0016B\u0011\b\u0016\u0012\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\u0015\u0010\u0017J\u0015\u0010\u0019\u001a\u00020\u00002\u0006\u0010\u0018\u001a\u00020\u0006¢\u0006\u0004\b\u0019\u0010\u001aJ\u0015\u0010\u001b\u001a\u00020\u00002\u0006\u0010\u0018\u001a\u00020\u0006¢\u0006\u0004\b\u001b\u0010\u001aJ\u0017\u0010\u001d\u001a\u00020\u00002\b\u0010\u001c\u001a\u0004\u0018\u00010\u0006¢\u0006\u0004\b\u001d\u0010\u001aJ\u0017\u0010\u001e\u001a\u00020\u00002\b\u0010\u001c\u001a\u0004\u0018\u00010\u0006¢\u0006\u0004\b\u001e\u0010\u001aJ\u0017\u0010\u001f\u001a\u00020\u00002\b\u0010\u0018\u001a\u0004\u0018\u00010\u0011¢\u0006\u0004\b\u001f\u0010 J\u0019\u0010$\u001a\u0004\u0018\u00010#2\u0006\u0010\"\u001a\u00020!H\u0016¢\u0006\u0004\b$\u0010%J\r\u0010&\u001a\u00020!¢\u0006\u0004\b&\u0010'J\u001d\u0010,\u001a\u00020+2\u0006\u0010)\u001a\u00020(2\u0006\u0010*\u001a\u00020!¢\u0006\u0004\b,\u0010-J~\u0010.\u001a\u00020\u00002\b\b\u0002\u0010\u0007\u001a\u00020\u00062\b\b\u0002\u0010\t\u001a\u00020\b2\b\b\u0002\u0010\n\u001a\u00020\u00062\n\b\u0002\u0010\u000b\u001a\u0004\u0018\u00010\u00062\n\b\u0002\u0010\f\u001a\u0004\u0018\u00010\u00062\b\b\u0002\u0010\r\u001a\u00020\u00062\n\b\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u000e2\n\b\u0002\u0010\u0010\u001a\u0004\u0018\u00010\u000e2\n\b\u0002\u0010\u0012\u001a\u0004\u0018\u00010\u00112\b\b\u0002\u0010\u0014\u001a\u00020\u0013HÆ\u0001¢\u0006\u0004\b.\u0010/J\u0010\u00100\u001a\u00020\u0006HÖ\u0001¢\u0006\u0004\b0\u00101J\u0010\u00102\u001a\u00020!HÖ\u0001¢\u0006\u0004\b2\u0010'J\u001a\u00106\u001a\u0002052\b\u00104\u001a\u0004\u0018\u000103HÖ\u0003¢\u0006\u0004\b6\u00107R\u001a\u0010\u0007\u001a\u00020\u00068\u0016X\u0096\u0004¢\u0006\f\n\u0004\b.\u00108\u001a\u0004\b9\u00101R\u0017\u0010\t\u001a\u00020\b8\u0006¢\u0006\f\n\u0004\b:\u0010;\u001a\u0004\b<\u0010=R\u0017\u0010\n\u001a\u00020\u00068\u0006¢\u0006\f\n\u0004\b>\u00108\u001a\u0004\b?\u00101R\u0019\u0010\u000b\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\b@\u00108\u001a\u0004\bA\u00101R\u0019\u0010\f\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\bB\u00108\u001a\u0004\bC\u00101R\u0017\u0010\r\u001a\u00020\u00068\u0006¢\u0006\f\n\u0004\bD\u00108\u001a\u0004\bE\u00101R\u001c\u0010\u000f\u001a\u0004\u0018\u00010\u000e8\u0016X\u0096\u0004¢\u0006\f\n\u0004\bF\u0010G\u001a\u0004\bH\u0010IR\u001c\u0010\u0010\u001a\u0004\u0018\u00010\u000e8\u0016X\u0096\u0004¢\u0006\f\n\u0004\bJ\u0010G\u001a\u0004\bK\u0010IR\u0019\u0010\u0012\u001a\u0004\u0018\u00010\u00118\u0006¢\u0006\f\n\u0004\bL\u0010M\u001a\u0004\bN\u0010OR\u001a\u0010\u0014\u001a\u00020\u00138\u0016X\u0096\u0004¢\u0006\f\n\u0004\b<\u0010P\u001a\u0004\bQ\u0010RR&\u0010Z\u001a\b\u0012\u0004\u0012\u00020T0S8\u0016X\u0096\u0004¢\u0006\u0012\n\u0004\bU\u0010V\u0012\u0004\bX\u0010Y\u001a\u0004\bL\u0010WR(\u0010a\u001a\u0002058\u0016@\u0016X\u0096\u000e¢\u0006\u0018\n\u0004\b[\u0010\\\u0012\u0004\b`\u0010Y\u001a\u0004\b]\u0010^\"\u0004\b:\u0010_R(\u0010i\u001a\u00020b8\u0006@\u0006X\u0087\u000e¢\u0006\u0018\n\u0004\bc\u0010d\u0012\u0004\bh\u0010Y\u001a\u0004\bF\u0010e\"\u0004\bf\u0010gR(\u0010m\u001a\u00020b8\u0006@\u0006X\u0087\u000e¢\u0006\u0018\n\u0004\bj\u0010d\u0012\u0004\bl\u0010Y\u001a\u0004\bc\u0010e\"\u0004\bk\u0010gR(\u0010u\u001a\u00020n8\u0006@\u0006X\u0087\u000e¢\u0006\u0018\n\u0004\bo\u0010p\u0012\u0004\bt\u0010Y\u001a\u0004\bU\u0010q\"\u0004\br\u0010sR(\u0010y\u001a\u00020n8\u0006@\u0006X\u0087\u000e¢\u0006\u0018\n\u0004\bv\u0010p\u0012\u0004\bx\u0010Y\u001a\u0004\bj\u0010q\"\u0004\bw\u0010sR)\u0010\u0080\u0001\u001a\u00020z8\u0006@\u0006X\u0087\u000e¢\u0006\u0018\n\u0004\b\u0019\u0010{\u0012\u0004\b\u007f\u0010Y\u001a\u0004\bo\u0010|\"\u0004\b}\u0010~R\u0014\u0010\u0083\u0001\u001a\u00030\u0081\u00018F¢\u0006\u0007\u001a\u0005\bv\u0010\u0082\u0001R\u0016\u0010\u0084\u0001\u001a\u0002058VX\u0096\u0004¢\u0006\u0007\u001a\u0005\b\u0084\u0001\u0010^¨\u0006\u0085\u0001"}, d2 = {"Lcom/withpersona/sdk2/inquiry/steps/ui/components/GovernmentIdNfcScanComponent;", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;", "Lar/o;", "Lar/x;", "Lar/h2;", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/HelpBottomSheetComponent;", "", "name", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/GovernmentIdNfcScan;", "config", "documentNumber", "dateOfBirth", "expirationDate", "cardAccessNumber", "Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;", "hidden", "disabled", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/utils/GovernmentIdNfcData;", "governmentIdNfcData", "", "lastValueUpdateTs", "<init>", "(Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/GovernmentIdNfcScan;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;Lcom/withpersona/sdk2/inquiry/steps/ui/components/utils/GovernmentIdNfcData;J)V", "(Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/GovernmentIdNfcScan;)V", "newValue", "q", "(Ljava/lang/String;)Lcom/withpersona/sdk2/inquiry/steps/ui/components/GovernmentIdNfcScanComponent;", "s", "newDate", "r", "t", "u", "(Lcom/withpersona/sdk2/inquiry/steps/ui/components/utils/GovernmentIdNfcData;)Lcom/withpersona/sdk2/inquiry/steps/ui/components/GovernmentIdNfcScanComponent;", "", "timesShown", "Lbr/o;", "l1", "(I)Lbr/o;", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "a", "(Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/GovernmentIdNfcScan;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;Lcom/withpersona/sdk2/inquiry/steps/ui/components/utils/GovernmentIdNfcData;J)Lcom/withpersona/sdk2/inquiry/steps/ui/components/GovernmentIdNfcScanComponent;", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "Ljava/lang/String;", "getName", "b", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/GovernmentIdNfcScan;", "j", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/GovernmentIdNfcScan;", "c", "getDocumentNumber", "d", "getDateOfBirth", "e", "getExpirationDate", "f", "getCardAccessNumber", "g", "Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;", "getHidden", "()Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;", "h", "getDisabled", "i", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/utils/GovernmentIdNfcData;", "getGovernmentIdNfcData", "()Lcom/withpersona/sdk2/inquiry/steps/ui/components/utils/GovernmentIdNfcData;", "J", "N0", "()J", "", "Lkr/a;", "k", "Ljava/util/List;", "()Ljava/util/List;", "getAssociatedViews$annotations", "()V", "associatedViews", "l", "Z", "U0", "()Z", "(Z)V", "getWasTapped$annotations", "wasTapped", "Lym/r;", "m", "Lym/r;", "()Lym/r;", "setCardAccessNumberController", "(Lym/r;)V", "getCardAccessNumberController$annotations", "cardAccessNumberController", "n", "setDocumentNumberController", "getDocumentNumberController$annotations", "documentNumberController", "Lcr/g;", "o", "Lcr/g;", "()Lcr/g;", "setDateOfBirthController", "(Lcr/g;)V", "getDateOfBirthController$annotations", "dateOfBirthController", "p", "setExpirationDateController", "getExpirationDateController$annotations", "expirationDateController", "Lcr/i;", "Lcr/i;", "()Lcr/i;", "setNfcDataController", "(Lcr/i;)V", "getNfcDataController$annotations", "nfcDataController", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/GovernmentIdNfcScan$TipsButtonLocation;", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/GovernmentIdNfcScan$TipsButtonLocation;", "tipsButtonLocation", "isEnabled", "ui-step-renderer_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final /* data */ class GovernmentIdNfcScanComponent implements UiComponent, o, x, h2, HelpBottomSheetComponent {
 
     @NotNull
@@ -72,7 +72,7 @@ public final /* data */ class GovernmentIdNfcScanComponent implements UiComponen
 
     /* JADX INFO: renamed from: k, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final List<mr.a> associatedViews;
+    public final List<kr.a> associatedViews;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name and from kotlin metadata */
     public boolean wasTapped;
@@ -178,33 +178,33 @@ public final /* data */ class GovernmentIdNfcScanComponent implements UiComponen
         return governmentIdNfcScanComponent.a(str, governmentIdNfcScan, str8, str3, str7, str6, jsonLogicBoolean4, jsonLogicBoolean3, governmentIdNfcData2, j11);
     }
 
-    @um.g(ignore = true)
+    @sm.g(ignore = true)
     public static /* synthetic */ void getCardAccessNumberController$annotations() {
     }
 
-    @um.g(ignore = true)
+    @sm.g(ignore = true)
     public static /* synthetic */ void getDateOfBirthController$annotations() {
     }
 
-    @um.g(ignore = true)
+    @sm.g(ignore = true)
     public static /* synthetic */ void getDocumentNumberController$annotations() {
     }
 
-    @um.g(ignore = true)
+    @sm.g(ignore = true)
     public static /* synthetic */ void getExpirationDateController$annotations() {
     }
 
-    @um.g(ignore = true)
+    @sm.g(ignore = true)
     public static /* synthetic */ void getNfcDataController$annotations() {
     }
 
     @Override // com.withpersona.sdk2.inquiry.steps.ui.components.UiComponent
-    /* JADX INFO: renamed from: R0, reason: from getter */
+    /* JADX INFO: renamed from: N0, reason: from getter */
     public long getLastValueUpdateTs() {
         return this.lastValueUpdateTs;
     }
 
-    /* JADX INFO: renamed from: Y0, reason: from getter */
+    /* JADX INFO: renamed from: U0, reason: from getter */
     public boolean getWasTapped() {
         return this.wasTapped;
     }
@@ -218,7 +218,7 @@ public final /* data */ class GovernmentIdNfcScanComponent implements UiComponen
         return new GovernmentIdNfcScanComponent(name, config, documentNumber, dateOfBirth, expirationDate, cardAccessNumber, hidden, disabled, governmentIdNfcData, lastValueUpdateTs);
     }
 
-    @Override // cr.h2
+    @Override // ar.h2
     public void b(boolean z10) {
         this.wasTapped = z10;
     }
@@ -245,13 +245,13 @@ public final /* data */ class GovernmentIdNfcScanComponent implements UiComponen
         return this.cardAccessNumberController;
     }
 
-    @Override // cr.o
+    @Override // ar.o
     @Nullable
     public JsonLogicBoolean getDisabled() {
         return this.disabled;
     }
 
-    @Override // cr.x
+    @Override // ar.x
     @Nullable
     public JsonLogicBoolean getHidden() {
         return this.hidden;
@@ -277,9 +277,9 @@ public final /* data */ class GovernmentIdNfcScanComponent implements UiComponen
         return ((iHashCode5 + (governmentIdNfcData != null ? governmentIdNfcData.hashCode() : 0)) * 31) + Long.hashCode(this.lastValueUpdateTs);
     }
 
-    @Override // cr.x
+    @Override // ar.x
     @NotNull
-    public List<mr.a> i() {
+    public List<kr.a> i() {
         return this.associatedViews;
     }
 
@@ -302,6 +302,19 @@ public final /* data */ class GovernmentIdNfcScanComponent implements UiComponen
         return this.dateOfBirthController;
     }
 
+    @Override // com.withpersona.sdk2.inquiry.steps.ui.components.HelpBottomSheetComponent
+    @Nullable
+    public HelpBottomSheetViewModel l1(int timesShown) {
+        List<GovernmentIdNfcScan.ScanHint> scanHints;
+        List<HelpPagerItem> listI;
+        GovernmentIdNfcScan.Attributes attributes = this.config.getAttributes();
+        if (attributes == null || (scanHints = attributes.getScanHints()) == null || (listI = h.i(scanHints)) == null) {
+            return null;
+        }
+        boolean z10 = timesShown >= attributes.getUnableToScanButtonMinAttempts();
+        return new HelpBottomSheetViewModel(null, attributes.getCloseHintSheetButtonText(), z10 ? attributes.getUserUnableToScanHintSheetButtonText() : null, z10 ? attributes.getUnableToScanTransitionComponentName() : null, listI, this.config.getStyles());
+    }
+
     @NotNull
     /* JADX INFO: renamed from: m, reason: from getter */
     public final r getDocumentNumberController() {
@@ -318,19 +331,6 @@ public final /* data */ class GovernmentIdNfcScanComponent implements UiComponen
     /* JADX INFO: renamed from: o, reason: from getter */
     public final i getNfcDataController() {
         return this.nfcDataController;
-    }
-
-    @Override // com.withpersona.sdk2.inquiry.steps.ui.components.HelpBottomSheetComponent
-    @Nullable
-    public HelpBottomSheetViewModel o1(int timesShown) {
-        List<GovernmentIdNfcScan.ScanHint> scanHints;
-        List<HelpPagerItem> listI;
-        GovernmentIdNfcScan.Attributes attributes = this.config.getAttributes();
-        if (attributes == null || (scanHints = attributes.getScanHints()) == null || (listI = h.i(scanHints)) == null) {
-            return null;
-        }
-        boolean z10 = timesShown >= attributes.getUnableToScanButtonMinAttempts();
-        return new HelpBottomSheetViewModel(null, attributes.getCloseHintSheetButtonText(), z10 ? attributes.getUserUnableToScanHintSheetButtonText() : null, z10 ? attributes.getUnableToScanTransitionComponentName() : null, listI, this.config.getStyles());
     }
 
     @NotNull

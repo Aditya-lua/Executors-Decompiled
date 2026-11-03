@@ -1,15 +1,5 @@
 package com.withpersona.sdk2.inquiry.shared.ui;
 
-import an.ViewEnvironment;
-import an.a0;
-import an.c0;
-import an.e0;
-import an.f;
-import an.f0;
-import an.g;
-import an.g0;
-import an.h0;
-import an.m;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -18,15 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.FrameLayout;
-import bn.d;
+import bn.a;
 import com.appsflyer.sdk_base.referrer.Payload;
 import com.squareup.workflow1.ui.backstack.ViewStateCache;
 import com.withpersona.sdk2.inquiry.shared.ui.ScreenWithTransitionContainer;
 import d5.i;
-import dn.a;
-import hu.c;
-import jq.t;
-import jt.s;
+import fu.c;
+import gt.s;
+import hq.t;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.Unit;
@@ -42,11 +31,22 @@ import o5.p;
 import o5.y;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import wq.l;
-import zt.o;
+import uq.l;
+import xt.o;
+import ym.ViewEnvironment;
+import ym.a0;
+import ym.c0;
+import ym.e0;
+import ym.f;
+import ym.f0;
+import ym.g;
+import ym.g0;
+import ym.h0;
+import ym.m;
+import zm.d;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000X\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\b\u0017\u0018\u0000 \u00102\u00020\u0001:\u0002,#B1\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0004\u0012\b\b\u0002\u0010\u0007\u001a\u00020\u0006\u0012\b\b\u0002\u0010\b\u001a\u00020\u0006¢\u0006\u0004\b\t\u0010\nJ\u001f\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\f\u001a\u00020\u000b2\u0006\u0010\u000e\u001a\u00020\rH\u0004¢\u0006\u0004\b\u0010\u0010\u0011J)\u0010\u0017\u001a\u00020\u000f2\b\u0010\u0013\u001a\u0004\u0018\u00010\u00122\u0006\u0010\u0014\u001a\u00020\u00122\u0006\u0010\u0016\u001a\u00020\u0015H\u0014¢\u0006\u0004\b\u0017\u0010\u0018J\u0011\u0010\u001a\u001a\u0004\u0018\u00010\u0019H\u0014¢\u0006\u0004\b\u001a\u0010\u001bJ\u0017\u0010\u001d\u001a\u00020\u000f2\u0006\u0010\u001c\u001a\u00020\u0019H\u0014¢\u0006\u0004\b\u001d\u0010\u001eJ\u000f\u0010\u001f\u001a\u00020\u000fH\u0014¢\u0006\u0004\b\u001f\u0010 J\u000f\u0010!\u001a\u00020\u000fH\u0014¢\u0006\u0004\b!\u0010 R\u0014\u0010%\u001a\u00020\"8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b#\u0010$R\u001c\u0010(\u001a\b\u0012\u0002\b\u0003\u0018\u00010&8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0017\u0010'R\u0016\u0010+\u001a\u0004\u0018\u00010\u00128BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b)\u0010*¨\u0006-"}, d2 = {"Lcom/withpersona/sdk2/inquiry/shared/ui/ScreenWithTransitionContainer;", "Landroid/widget/FrameLayout;", "Landroid/content/Context;", "context", "Landroid/util/AttributeSet;", "attributeSet", "", "defStyle", "defStyleRes", "<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;II)V", "Lwq/m;", "newRendering", "Lan/y;", "newViewEnvironment", "", "c", "(Lwq/m;Lan/y;)V", "Landroid/view/View;", "oldViewMaybe", "newView", "Lwq/l;", "transition", "b", "(Landroid/view/View;Landroid/view/View;Lwq/l;)V", "Landroid/os/Parcelable;", "onSaveInstanceState", "()Landroid/os/Parcelable;", "state", "onRestoreInstanceState", "(Landroid/os/Parcelable;)V", "onAttachedToWindow", "()V", "onDetachedFromWindow", "Lcom/squareup/workflow1/ui/backstack/ViewStateCache;", "a", "Lcom/squareup/workflow1/ui/backstack/ViewStateCache;", "viewStateCache", "Lan/m;", "Lan/m;", "currentRendering", "getCurrentView", "()Landroid/view/View;", "currentView", "SavedState", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000X\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\b\u0017\u0018\u0000 \u00102\u00020\u0001:\u0002,#B1\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0004\u0012\b\b\u0002\u0010\u0007\u001a\u00020\u0006\u0012\b\b\u0002\u0010\b\u001a\u00020\u0006¢\u0006\u0004\b\t\u0010\nJ\u001f\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\f\u001a\u00020\u000b2\u0006\u0010\u000e\u001a\u00020\rH\u0004¢\u0006\u0004\b\u0010\u0010\u0011J)\u0010\u0017\u001a\u00020\u000f2\b\u0010\u0013\u001a\u0004\u0018\u00010\u00122\u0006\u0010\u0014\u001a\u00020\u00122\u0006\u0010\u0016\u001a\u00020\u0015H\u0014¢\u0006\u0004\b\u0017\u0010\u0018J\u0011\u0010\u001a\u001a\u0004\u0018\u00010\u0019H\u0014¢\u0006\u0004\b\u001a\u0010\u001bJ\u0017\u0010\u001d\u001a\u00020\u000f2\u0006\u0010\u001c\u001a\u00020\u0019H\u0014¢\u0006\u0004\b\u001d\u0010\u001eJ\u000f\u0010\u001f\u001a\u00020\u000fH\u0014¢\u0006\u0004\b\u001f\u0010 J\u000f\u0010!\u001a\u00020\u000fH\u0014¢\u0006\u0004\b!\u0010 R\u0014\u0010%\u001a\u00020\"8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b#\u0010$R\u001c\u0010(\u001a\b\u0012\u0002\b\u0003\u0018\u00010&8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0017\u0010'R\u0016\u0010+\u001a\u0004\u0018\u00010\u00128BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b)\u0010*¨\u0006-"}, d2 = {"Lcom/withpersona/sdk2/inquiry/shared/ui/ScreenWithTransitionContainer;", "Landroid/widget/FrameLayout;", "Landroid/content/Context;", "context", "Landroid/util/AttributeSet;", "attributeSet", "", "defStyle", "defStyleRes", "<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;II)V", "Luq/m;", "newRendering", "Lym/y;", "newViewEnvironment", "", "c", "(Luq/m;Lym/y;)V", "Landroid/view/View;", "oldViewMaybe", "newView", "Luq/l;", "transition", "b", "(Landroid/view/View;Landroid/view/View;Luq/l;)V", "Landroid/os/Parcelable;", "onSaveInstanceState", "()Landroid/os/Parcelable;", "state", "onRestoreInstanceState", "(Landroid/os/Parcelable;)V", "onAttachedToWindow", "()V", "onDetachedFromWindow", "Lcom/squareup/workflow1/ui/backstack/ViewStateCache;", "a", "Lcom/squareup/workflow1/ui/backstack/ViewStateCache;", "viewStateCache", "Lym/m;", "Lym/m;", "currentRendering", "getCurrentView", "()Landroid/view/View;", "currentView", "SavedState", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public class ScreenWithTransitionContainer extends FrameLayout {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
@@ -62,29 +62,29 @@ public class ScreenWithTransitionContainer extends FrameLayout {
     public m<?> currentRendering;
 
     /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.shared.ui.ScreenWithTransitionContainer$a, reason: from kotlin metadata */
-    @Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0086\u0003\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0003\u0010\u0004J2\u0010\r\u001a\u00020\f2\u0006\u0010\u0005\u001a\u00020\u00022\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\b2\b\u0010\u000b\u001a\u0004\u0018\u00010\nH\u0096\u0001¢\u0006\u0004\b\r\u0010\u000eR\u001c\u0010\u0012\u001a\n\u0012\u0006\b\u0000\u0012\u00020\u00020\u000f8\u0016X\u0096\u0005¢\u0006\u0006\u001a\u0004\b\u0010\u0010\u0011¨\u0006\u0013"}, d2 = {"Lcom/withpersona/sdk2/inquiry/shared/ui/ScreenWithTransitionContainer$a;", "Lan/a0;", "Lwq/m;", "<init>", "()V", "initialRendering", "Lan/y;", "initialViewEnvironment", "Landroid/content/Context;", "contextForNewView", "Landroid/view/ViewGroup;", "container", "Landroid/view/View;", "d", "(Lwq/m;Lan/y;Landroid/content/Context;Landroid/view/ViewGroup;)Landroid/view/View;", "Lhu/c;", "getType", "()Lhu/c;", Payload.TYPE, "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    public static final class Companion implements a0<wq.m> {
+    @Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0086\u0003\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0003\u0010\u0004J2\u0010\r\u001a\u00020\f2\u0006\u0010\u0005\u001a\u00020\u00022\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\b2\b\u0010\u000b\u001a\u0004\u0018\u00010\nH\u0096\u0001¢\u0006\u0004\b\r\u0010\u000eR\u001c\u0010\u0012\u001a\n\u0012\u0006\b\u0000\u0012\u00020\u00020\u000f8\u0016X\u0096\u0005¢\u0006\u0006\u001a\u0004\b\u0010\u0010\u0011¨\u0006\u0013"}, d2 = {"Lcom/withpersona/sdk2/inquiry/shared/ui/ScreenWithTransitionContainer$a;", "Lym/a0;", "Luq/m;", "<init>", "()V", "initialRendering", "Lym/y;", "initialViewEnvironment", "Landroid/content/Context;", "contextForNewView", "Landroid/view/ViewGroup;", "container", "Landroid/view/View;", "d", "(Luq/m;Lym/y;Landroid/content/Context;Landroid/view/ViewGroup;)Landroid/view/View;", "Lfu/c;", "getType", "()Lfu/c;", Payload.TYPE, "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final class Companion implements a0<uq.m> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ f<wq.m> f13228a;
+        public final /* synthetic */ f<uq.m> f13309a;
 
         /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.shared.ui.ScreenWithTransitionContainer$a$a, reason: collision with other inner class name */
         @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-        public static final /* synthetic */ class C0248a extends k implements Function2<wq.m, ViewEnvironment, Unit> {
-            public C0248a(Object obj) {
+        public static final /* synthetic */ class C0251a extends k implements Function2<uq.m, ViewEnvironment, Unit> {
+            public C0251a(Object obj) {
                 super(2, obj, ScreenWithTransitionContainer.class, "update", "update(Lcom/withpersona/sdk2/inquiry/shared/ui/ScreenWithTransition;Lcom/squareup/workflow1/ui/ViewEnvironment;)V", 0);
             }
 
-            public final void d(wq.m p8, ViewEnvironment p10) {
+            public final void d(uq.m p8, ViewEnvironment p10) {
                 Intrinsics.checkNotNullParameter(p8, "p0");
                 Intrinsics.checkNotNullParameter(p10, "p1");
                 ((ScreenWithTransitionContainer) this.receiver).c(p8, p10);
             }
 
             @Override // kotlin.jvm.functions.Function2
-            public /* bridge */ /* synthetic */ Unit invoke(wq.m mVar, ViewEnvironment viewEnvironment) {
+            public /* bridge */ /* synthetic */ Unit invoke(uq.m mVar, ViewEnvironment viewEnvironment) {
                 d(mVar, viewEnvironment);
-                return Unit.f22483a;
+                return Unit.f22938a;
             }
         }
 
@@ -92,36 +92,36 @@ public class ScreenWithTransitionContainer extends FrameLayout {
             this();
         }
 
-        public static final View c(wq.m initialRendering, ViewEnvironment initialEnv, Context context, ViewGroup viewGroup) {
+        public static final View c(uq.m initialRendering, ViewEnvironment initialEnv, Context context, ViewGroup viewGroup) {
             Intrinsics.checkNotNullParameter(initialRendering, "initialRendering");
             Intrinsics.checkNotNullParameter(initialEnv, "initialEnv");
             Intrinsics.checkNotNullParameter(context, "context");
             ScreenWithTransitionContainer screenWithTransitionContainer = new ScreenWithTransitionContainer(context, null, 0, 0, 14, null);
-            screenWithTransitionContainer.setId(t.f21670r);
+            screenWithTransitionContainer.setId(t.f19678r);
             screenWithTransitionContainer.setLayoutParams(new ViewGroup.LayoutParams(-1, -1));
-            e0.a(screenWithTransitionContainer, initialRendering, initialEnv, new C0248a(screenWithTransitionContainer));
+            e0.a(screenWithTransitionContainer, initialRendering, initialEnv, new C0251a(screenWithTransitionContainer));
             return screenWithTransitionContainer;
         }
 
-        @Override // an.a0
+        @Override // ym.a0
         @NotNull
         /* JADX INFO: renamed from: d, reason: merged with bridge method [inline-methods] */
-        public View a(@NotNull wq.m initialRendering, @NotNull ViewEnvironment initialViewEnvironment, @NotNull Context contextForNewView, @Nullable ViewGroup container) {
+        public View a(@NotNull uq.m initialRendering, @NotNull ViewEnvironment initialViewEnvironment, @NotNull Context contextForNewView, @Nullable ViewGroup container) {
             Intrinsics.checkNotNullParameter(initialRendering, "initialRendering");
             Intrinsics.checkNotNullParameter(initialViewEnvironment, "initialViewEnvironment");
             Intrinsics.checkNotNullParameter(contextForNewView, "contextForNewView");
-            return this.f13228a.a(initialRendering, initialViewEnvironment, contextForNewView, container);
+            return this.f13309a.a(initialRendering, initialViewEnvironment, contextForNewView, container);
         }
 
-        @Override // an.a0
+        @Override // ym.a0
         @NotNull
-        public c<? super wq.m> getType() {
-            return this.f13228a.getType();
+        public c<? super uq.m> getType() {
+            return this.f13309a.getType();
         }
 
         public Companion() {
-            this.f13228a = new f<>(d0.b(wq.m.class), new o() { // from class: wq.o
-                @Override // zt.o
+            this.f13309a = new f<>(d0.b(uq.m.class), new o() { // from class: uq.o
+                @Override // xt.o
                 public final Object e(Object obj, Object obj2, Object obj3, Object obj4) {
                     return ScreenWithTransitionContainer.Companion.c((m) obj, (ViewEnvironment) obj2, (Context) obj3, (ViewGroup) obj4);
                 }
@@ -133,7 +133,7 @@ public class ScreenWithTransitionContainer extends FrameLayout {
     public static final /* synthetic */ class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f13229a;
+        public static final /* synthetic */ int[] f13310a;
 
         static {
             int[] iArr = new int[l.values().length];
@@ -149,7 +149,7 @@ public class ScreenWithTransitionContainer extends FrameLayout {
                 iArr[l.NONE.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
-            f13229a = iArr;
+            f13310a = iArr;
         }
     }
 
@@ -179,7 +179,7 @@ public class ScreenWithTransitionContainer extends FrameLayout {
             addView(newView);
             return;
         }
-        int i10 = a.f14761a;
+        int i10 = a.f4353a;
         View viewFindViewById = oldViewMaybe.findViewById(i10);
         View viewFindViewById2 = newView.findViewById(i10);
         if (viewFindViewById == null || viewFindViewById2 == null) {
@@ -187,13 +187,13 @@ public class ScreenWithTransitionContainer extends FrameLayout {
         } else {
             oldViewMaybe = viewFindViewById;
         }
-        int i11 = b.f13229a[transition.ordinal()];
+        int i11 = b.f13310a[transition.ordinal()];
         if (i11 == 1) {
             pairA = s.a(8388611, 8388613);
         } else {
             if (i11 != 2) {
                 if (i11 != 3) {
-                    throw new jt.l();
+                    throw new gt.l();
                 }
                 y.f(new n(this, newView), null);
                 return;
@@ -206,11 +206,11 @@ public class ScreenWithTransitionContainer extends FrameLayout {
         y.f(new n(this, newView), b0VarV0);
     }
 
-    public final void c(@NotNull wq.m newRendering, @NotNull ViewEnvironment newViewEnvironment) {
+    public final void c(@NotNull uq.m newRendering, @NotNull ViewEnvironment newViewEnvironment) {
         d dVarC;
         Intrinsics.checkNotNullParameter(newRendering, "newRendering");
         Intrinsics.checkNotNullParameter(newViewEnvironment, "newViewEnvironment");
-        ViewEnvironment viewEnvironmentC = newViewEnvironment.c(s.a(cn.a.INSTANCE, cn.a.First));
+        ViewEnvironment viewEnvironmentC = newViewEnvironment.c(s.a(an.a.INSTANCE, an.a.First));
         m<?> mVar = new m<>(newRendering.getScreen(), "screen_with_transition");
         View currentView = getCurrentView();
         if (currentView != null) {
@@ -224,8 +224,8 @@ public class ScreenWithTransitionContainer extends FrameLayout {
         c0 c0Var = (c0) viewEnvironmentC.a(c0.INSTANCE);
         Context context = getContext();
         Intrinsics.checkNotNullExpressionValue(context, "getContext(...)");
-        View viewC = an.d0.c(c0Var, mVar, viewEnvironmentC, context, this, new f0() { // from class: wq.n
-            @Override // an.f0
+        View viewC = ym.d0.c(c0Var, mVar, viewEnvironmentC, context, this, new f0() { // from class: uq.n
+            @Override // ym.f0
             public final void a(View view2, Function0 function0) {
                 ScreenWithTransitionContainer.d(view2, function0);
             }
@@ -233,7 +233,7 @@ public class ScreenWithTransitionContainer extends FrameLayout {
         e0.h(viewC);
         b(currentView, viewC, newRendering.getTransition());
         if (currentView != null && (dVarC = d.INSTANCE.c(currentView)) != null) {
-            dVarC.L();
+            dVarC.K();
         }
         this.currentRendering = mVar;
     }
@@ -241,7 +241,7 @@ public class ScreenWithTransitionContainer extends FrameLayout {
     @Override // android.view.ViewGroup, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        i iVarC = bn.c.f4262a.c(this);
+        i iVarC = zm.c.f38190a.c(this);
         g.Companion companion = g.INSTANCE;
         g0<?> g0VarD = h0.d(this);
         Object objC = g0VarD == null ? null : g0VarD.c();

@@ -10,7 +10,7 @@ public final class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final c f15184a = new c();
+    public static final c f15798a = new c();
 
     public static final void a(@NotNull View view) {
         x6.x.a(view).a();

@@ -12,11 +12,11 @@ import n0.z3;
 public class j0 implements j2 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final j2 f23615a;
+    public final j2 f24265a;
     public v0 b;
 
     public j0(j2 j2Var) {
-        this.f23615a = j2Var;
+        this.f24265a = j2Var;
     }
 
     public static /* synthetic */ void a(j0 j0Var, j2.a aVar, j2 j2Var) {
@@ -26,57 +26,57 @@ public class j0 implements j2 {
 
     @Override // n0.j2
     public androidx.camera.core.d b() {
-        return j(this.f23615a.b());
+        return j(this.f24265a.b());
     }
 
     @Override // n0.j2
     public int c() {
-        return this.f23615a.c();
+        return this.f24265a.c();
     }
 
     @Override // n0.j2
     public void close() {
-        this.f23615a.close();
+        this.f24265a.close();
     }
 
     @Override // n0.j2
     public void d() {
-        this.f23615a.d();
+        this.f24265a.d();
     }
 
     @Override // n0.j2
     public int e() {
-        return this.f23615a.e();
+        return this.f24265a.e();
     }
 
     @Override // n0.j2
     public void f(final j2.a aVar, Executor executor) {
-        this.f23615a.f(new j2.a() { // from class: m0.i0
+        this.f24265a.f(new j2.a() { // from class: m0.i0
             @Override // n0.j2.a
             public final void a(j2 j2Var) {
-                j0.a(this.f23601a, aVar, j2Var);
+                j0.a(this.f24251a, aVar, j2Var);
             }
         }, executor);
     }
 
     @Override // n0.j2
     public androidx.camera.core.d g() {
-        return j(this.f23615a.g());
+        return j(this.f24265a.g());
     }
 
     @Override // n0.j2
     public int getHeight() {
-        return this.f23615a.getHeight();
+        return this.f24265a.getHeight();
     }
 
     @Override // n0.j2
     public Surface getSurface() {
-        return this.f23615a.getSurface();
+        return this.f24265a.getSurface();
     }
 
     @Override // n0.j2
     public int getWidth() {
-        return this.f23615a.getWidth();
+        return this.f24265a.getWidth();
     }
 
     public void h(v0 v0Var) {
@@ -94,6 +94,6 @@ public class j0 implements j2 {
         }
         z3 z3VarB = this.b == null ? z3.b() : z3.a(new Pair(this.b.j(), this.b.i().get(0)));
         this.b = null;
-        return new h2(dVar, new Size(dVar.getWidth(), dVar.getHeight()), new s0.c(new b1.l(z3VarB, dVar.H2().getTimestamp())));
+        return new h2(dVar, new Size(dVar.getWidth(), dVar.getHeight()), new s0.c(new b1.l(z3VarB, dVar.I2().getTimestamp())));
     }
 }

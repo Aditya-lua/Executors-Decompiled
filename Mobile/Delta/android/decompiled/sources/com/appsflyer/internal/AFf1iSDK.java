@@ -25,7 +25,7 @@ public final class AFf1iSDK {
     private static AFf1iSDK unregisterClient;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    private final Map<String, String> f5347d = new HashMap<String, String>() { // from class: com.appsflyer.internal.AFf1iSDK.2
+    private final Map<String, String> f5420d = new HashMap<String, String>() { // from class: com.appsflyer.internal.AFf1iSDK.2
         {
             put("aa", "ro.arch");
             put("ab", "ro.chipname");
@@ -58,10 +58,10 @@ public final class AFf1iSDK {
 
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        String f5348d;
+        String f5421d;
 
         AFa1vSDK(String str) {
-            this.f5348d = str;
+            this.f5421d = str;
         }
     }
 
@@ -89,7 +89,7 @@ public final class AFf1iSDK {
                 for (StackTraceElement stackTraceElement : it.next().getValue()) {
                     if (stackTraceElement.toString().contains("de.robv.android.xposed") && i11 <= 2) {
                         i11++;
-                        sb2.append(AFa1vSDK.XPOSED.f5348d);
+                        sb2.append(AFa1vSDK.XPOSED.f5421d);
                         if (stackTraceElement.getMethodName().equals("main")) {
                             sb2.append("+a");
                         }
@@ -114,7 +114,7 @@ public final class AFf1iSDK {
             sb3.append(Process.myPid());
             sb3.append("/maps");
             if (d(sb3.toString(), "frida")) {
-                sb2.append(AFa1vSDK.FRIDA.f5348d);
+                sb2.append(AFa1vSDK.FRIDA.f5421d);
                 if (Build.VERSION.SDK_INT < 29 && d("/proc/net/tcp", "69A2")) {
                     sb2.append("+prt");
                 }
@@ -166,7 +166,7 @@ public final class AFf1iSDK {
     private AFg1gSDK registerClient() throws Throwable {
         AFg1gSDK aFg1gSDK = new AFg1gSDK();
         try {
-            for (Map.Entry<String, String> entry : this.f5347d.entrySet()) {
+            for (Map.Entry<String, String> entry : this.f5420d.entrySet()) {
                 String strAFKeystoreWrapper = AFKeystoreWrapper(entry.getValue());
                 if (strAFKeystoreWrapper != null && !strAFKeystoreWrapper.equals("")) {
                     aFg1gSDK.AFKeystoreWrapper(entry.getKey(), strAFKeystoreWrapper);

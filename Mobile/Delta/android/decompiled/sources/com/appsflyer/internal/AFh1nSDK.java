@@ -8,7 +8,7 @@ public final class AFh1nSDK extends AFh1pSDK {
 
     public AFh1nSDK(String str, byte[] bArr, String str2, AFe1zSDK aFe1zSDK, Map<String, String> map) {
         super(null, str, Boolean.FALSE);
-        this.f5403w = str2;
+        this.f5476w = str2;
         this.force = bArr;
         this.AFLoggerLogLevel = aFe1zSDK;
         if (map != null) {

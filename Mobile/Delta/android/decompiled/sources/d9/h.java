@@ -12,7 +12,7 @@ import java.util.Iterator;
 public final class h extends n9.e {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final GoogleSignInOptions f14496e;
+    public final GoogleSignInOptions f14476e;
 
     public h(Context context, Looper looper, n9.d dVar, GoogleSignInOptions googleSignInOptions, k9.f.a aVar, k9.f.b bVar) {
         super(context, looper, 91, dVar, aVar, bVar);
@@ -24,7 +24,7 @@ public final class h extends n9.e {
                 aVar2.d(it.next(), new Scope[0]);
             }
         }
-        this.f14496e = aVar2.a();
+        this.f14476e = aVar2.a();
     }
 
     @Override // n9.c
@@ -37,7 +37,7 @@ public final class h extends n9.e {
     }
 
     public final GoogleSignInOptions g() {
-        return this.f14496e;
+        return this.f14476e;
     }
 
     @Override // n9.c, k9.a.f

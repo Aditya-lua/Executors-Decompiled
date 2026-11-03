@@ -11,7 +11,7 @@ import nb.p6;
 public final class AppMeasurementReceiver extends a implements o6 {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public p6 f7402c;
+    public p6 f7476c;
 
     @Override // nb.o6
     public void a(@NonNull Context context, @NonNull Intent intent) {
@@ -20,9 +20,9 @@ public final class AppMeasurementReceiver extends a implements o6 {
 
     @Override // android.content.BroadcastReceiver
     public void onReceive(@NonNull Context context, @NonNull Intent intent) {
-        if (this.f7402c == null) {
-            this.f7402c = new p6(this);
+        if (this.f7476c == null) {
+            this.f7476c = new p6(this);
         }
-        this.f7402c.a(context, intent);
+        this.f7476c.a(context, intent);
     }
 }

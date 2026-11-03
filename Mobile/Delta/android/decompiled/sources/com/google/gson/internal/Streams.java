@@ -26,7 +26,7 @@ public final class Streams {
                 } catch (EOFException e10) {
                     e = e10;
                     if (z10) {
-                        return jg.n.f21439a;
+                        return jg.n.f21898a;
                     }
                     throw new jg.u(e);
                 }

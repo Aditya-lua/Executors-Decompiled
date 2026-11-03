@@ -5,7 +5,7 @@ public final class j0 implements h1 {
     public static final q0 b = new a();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final q0 f2216a;
+    public final q0 f2061a;
 
     public class a implements q0 {
         @Override // androidx.datastore.preferences.protobuf.q0
@@ -22,11 +22,11 @@ public final class j0 implements h1 {
     public static /* synthetic */ class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f2217a;
+        public static final /* synthetic */ int[] f2062a;
 
         static {
             int[] iArr = new int[b1.values().length];
-            f2217a = iArr;
+            f2062a = iArr;
             try {
                 iArr[b1.PROTO3.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
@@ -37,15 +37,15 @@ public final class j0 implements h1 {
     public static class c implements q0 {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public q0[] f2218a;
+        public q0[] f2063a;
 
         public c(q0... q0VarArr) {
-            this.f2218a = q0VarArr;
+            this.f2063a = q0VarArr;
         }
 
         @Override // androidx.datastore.preferences.protobuf.q0
         public p0 a(Class<?> cls) {
-            for (q0 q0Var : this.f2218a) {
+            for (q0 q0Var : this.f2063a) {
                 if (q0Var.b(cls)) {
                     return q0Var.a(cls);
                 }
@@ -55,7 +55,7 @@ public final class j0 implements h1 {
 
         @Override // androidx.datastore.preferences.protobuf.q0
         public boolean b(Class<?> cls) {
-            for (q0 q0Var : this.f2218a) {
+            for (q0 q0Var : this.f2063a) {
                 if (q0Var.b(cls)) {
                     return true;
                 }
@@ -69,7 +69,7 @@ public final class j0 implements h1 {
     }
 
     public static boolean b(p0 p0Var) {
-        return b.f2217a[p0Var.c().ordinal()] != 1;
+        return b.f2062a[p0Var.c().ordinal()] != 1;
     }
 
     public static q0 c() {
@@ -77,7 +77,7 @@ public final class j0 implements h1 {
     }
 
     public static q0 d() {
-        if (c1.f2152d) {
+        if (c1.f1997d) {
             return b;
         }
         try {
@@ -102,13 +102,13 @@ public final class j0 implements h1 {
     }
 
     public static boolean f(Class<?> cls) {
-        return c1.f2152d || x.class.isAssignableFrom(cls);
+        return c1.f1997d || x.class.isAssignableFrom(cls);
     }
 
     @Override // androidx.datastore.preferences.protobuf.h1
     public <T> g1<T> a(Class<T> cls) {
         i1.H(cls);
-        p0 p0VarA = this.f2216a.a(cls);
+        p0 p0VarA = this.f2061a.a(cls);
         if (p0VarA.a()) {
             return f(cls) ? v0.l(i1.L(), r.b(), p0VarA.b()) : v0.l(i1.K(), r.a(), p0VarA.b());
         }
@@ -116,6 +116,6 @@ public final class j0 implements h1 {
     }
 
     public j0(q0 q0Var) {
-        this.f2216a = (q0) z.b(q0Var, "messageInfoFactory");
+        this.f2061a = (q0) z.b(q0Var, "messageInfoFactory");
     }
 }

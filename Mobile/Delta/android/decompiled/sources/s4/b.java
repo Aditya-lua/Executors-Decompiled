@@ -15,7 +15,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000H\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\b&\u0018\u0000 \u00072\u00020\u0001:\u0001\u0007B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u0018\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H¦@¢\u0006\u0004\b\u0007\u0010\bJ\"\u0010\r\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\t2\b\u0010\f\u001a\u0004\u0018\u00010\u000bH§@¢\u0006\u0004\b\r\u0010\u000eJ\u0018\u0010\u0010\u001a\u00020\u00062\u0006\u0010\u000f\u001a\u00020\tH§@¢\u0006\u0004\b\u0010\u0010\u0011J\u0018\u0010\u0014\u001a\u00020\u00062\u0006\u0010\u0013\u001a\u00020\u0012H§@¢\u0006\u0004\b\u0014\u0010\u0015J\u0018\u0010\u0017\u001a\u00020\u00062\u0006\u0010\u0013\u001a\u00020\u0016H§@¢\u0006\u0004\b\u0017\u0010\u0018J\u0018\u0010\u001a\u001a\u00020\u00062\u0006\u0010\u0013\u001a\u00020\u0019H§@¢\u0006\u0004\b\u001a\u0010\u001bJ\u0010\u0010\u001d\u001a\u00020\u001cH§@¢\u0006\u0004\b\u001d\u0010\u001e¨\u0006\u001f"}, d2 = {"Ls4/b;", "", "<init>", "()V", "Ls4/a;", "deletionRequest", "", "a", "(Ls4/a;Lnt/b;)Ljava/lang/Object;", "Landroid/net/Uri;", "attributionSource", "Landroid/view/InputEvent;", "inputEvent", "c", "(Landroid/net/Uri;Landroid/view/InputEvent;Lnt/b;)Ljava/lang/Object;", "trigger", "e", "(Landroid/net/Uri;Lnt/b;)Ljava/lang/Object;", "Ls4/i;", "request", "f", "(Ls4/i;Lnt/b;)Ljava/lang/Object;", "Ls4/j;", "g", "(Ls4/j;Lnt/b;)Ljava/lang/Object;", "Ls4/h;", "d", "(Ls4/h;Lnt/b;)Ljava/lang/Object;", "", "b", "(Lnt/b;)Ljava/lang/Object;", "ads-adservices_release"}, k = 1, mv = {1, 8, 0}, xi = 48)
+@Metadata(d1 = {"\u0000H\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\b&\u0018\u0000 \u00072\u00020\u0001:\u0001\u0007B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u0018\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H¦@¢\u0006\u0004\b\u0007\u0010\bJ\"\u0010\r\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\t2\b\u0010\f\u001a\u0004\u0018\u00010\u000bH§@¢\u0006\u0004\b\r\u0010\u000eJ\u0018\u0010\u0010\u001a\u00020\u00062\u0006\u0010\u000f\u001a\u00020\tH§@¢\u0006\u0004\b\u0010\u0010\u0011J\u0018\u0010\u0014\u001a\u00020\u00062\u0006\u0010\u0013\u001a\u00020\u0012H§@¢\u0006\u0004\b\u0014\u0010\u0015J\u0018\u0010\u0017\u001a\u00020\u00062\u0006\u0010\u0013\u001a\u00020\u0016H§@¢\u0006\u0004\b\u0017\u0010\u0018J\u0018\u0010\u001a\u001a\u00020\u00062\u0006\u0010\u0013\u001a\u00020\u0019H§@¢\u0006\u0004\b\u001a\u0010\u001bJ\u0010\u0010\u001d\u001a\u00020\u001cH§@¢\u0006\u0004\b\u001d\u0010\u001e¨\u0006\u001f"}, d2 = {"Ls4/b;", "", "<init>", "()V", "Ls4/a;", "deletionRequest", "", "a", "(Ls4/a;Llt/b;)Ljava/lang/Object;", "Landroid/net/Uri;", "attributionSource", "Landroid/view/InputEvent;", "inputEvent", "c", "(Landroid/net/Uri;Landroid/view/InputEvent;Llt/b;)Ljava/lang/Object;", "trigger", "e", "(Landroid/net/Uri;Llt/b;)Ljava/lang/Object;", "Ls4/i;", "request", "f", "(Ls4/i;Llt/b;)Ljava/lang/Object;", "Ls4/j;", "g", "(Ls4/j;Llt/b;)Ljava/lang/Object;", "Ls4/h;", "d", "(Ls4/h;Llt/b;)Ljava/lang/Object;", "", "b", "(Llt/b;)Ljava/lang/Object;", "ads-adservices_release"}, k = 1, mv = {1, 8, 0}, xi = 48)
 public abstract class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -28,22 +28,22 @@ public abstract class b {
 
         /* JADX INFO: renamed from: s4.b$a$a, reason: collision with other inner class name */
         @Metadata(d1 = {"\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u0004\u0018\u00010\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Landroid/content/Context;", "it", "Ls4/c;", "a", "(Landroid/content/Context;)Ls4/c;"}, k = 3, mv = {1, 8, 0})
-        public static final class C0540a extends m implements Function1<Context, c> {
+        public static final class C0545a extends m implements Function1<Context, c> {
 
             /* JADX INFO: renamed from: i, reason: collision with root package name */
-            public final /* synthetic */ Context f30453i;
+            public final /* synthetic */ Context f31000i;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C0540a(Context context) {
+            public C0545a(Context context) {
                 super(1);
-                this.f30453i = context;
+                this.f31000i = context;
             }
 
             @Override // kotlin.jvm.functions.Function1
             /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
             public final c invoke(Context it) {
                 Intrinsics.checkNotNullParameter(it, "it");
-                return new c(this.f30453i);
+                return new c(this.f31000i);
             }
         }
 
@@ -57,14 +57,14 @@ public abstract class b {
             Intrinsics.checkNotNullParameter(context, "context");
             StringBuilder sb2 = new StringBuilder();
             sb2.append("AdServicesInfo.version=");
-            p4.a aVar = p4.a.f28213a;
+            p4.a aVar = p4.a.f28432a;
             sb2.append(aVar.a());
             Log.d("MeasurementManager", sb2.toString());
             if (aVar.a() >= 5) {
                 return new f(context);
             }
             if (aVar.b() >= 9) {
-                return (b) p4.b.f28216a.a(context, "MeasurementManager", new C0540a(context));
+                return (b) p4.b.f28435a.a(context, "MeasurementManager", new C0545a(context));
             }
             return null;
         }
@@ -74,23 +74,23 @@ public abstract class b {
     }
 
     @Nullable
-    public abstract Object a(@NotNull a aVar, @NotNull nt.b<? super Unit> bVar);
+    public abstract Object a(@NotNull a aVar, @NotNull lt.b<? super Unit> bVar);
 
     @Nullable
-    public abstract Object b(@NotNull nt.b<? super Integer> bVar);
+    public abstract Object b(@NotNull lt.b<? super Integer> bVar);
 
     @Nullable
-    public abstract Object c(@NotNull Uri uri, @Nullable InputEvent inputEvent, @NotNull nt.b<? super Unit> bVar);
+    public abstract Object c(@NotNull Uri uri, @Nullable InputEvent inputEvent, @NotNull lt.b<? super Unit> bVar);
 
     @Nullable
-    public abstract Object d(@NotNull h hVar, @NotNull nt.b<? super Unit> bVar);
+    public abstract Object d(@NotNull h hVar, @NotNull lt.b<? super Unit> bVar);
 
     @Nullable
-    public abstract Object e(@NotNull Uri uri, @NotNull nt.b<? super Unit> bVar);
+    public abstract Object e(@NotNull Uri uri, @NotNull lt.b<? super Unit> bVar);
 
     @Nullable
-    public abstract Object f(@NotNull i iVar, @NotNull nt.b<? super Unit> bVar);
+    public abstract Object f(@NotNull i iVar, @NotNull lt.b<? super Unit> bVar);
 
     @Nullable
-    public abstract Object g(@NotNull j jVar, @NotNull nt.b<? super Unit> bVar);
+    public abstract Object g(@NotNull j jVar, @NotNull lt.b<? super Unit> bVar);
 }

@@ -4,10 +4,10 @@ import com.withpersona.sdk2.inquiry.network.dto.ui.components.Title;
 import kotlin.collections.q0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import um.h;
-import um.m;
-import um.t;
-import um.w;
+import sm.h;
+import sm.m;
+import sm.t;
+import sm.w;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class GenericFileUploadErrorResponse_DocumentErrorResponse_DisabledFileTypeErrorJsonAdapter extends h<GenericFileUploadErrorResponse.DocumentErrorResponse.DisabledFileTypeError> {
@@ -34,7 +34,7 @@ public final class GenericFileUploadErrorResponse_DocumentErrorResponse_Disabled
     }
 
     /* JADX WARN: Can't rename method to resolve collision */
-    @Override // um.h
+    @Override // sm.h
     @NotNull
     public GenericFileUploadErrorResponse.DocumentErrorResponse.DisabledFileTypeError fromJson(@NotNull m mVar) {
         mVar.b();
@@ -49,31 +49,31 @@ public final class GenericFileUploadErrorResponse_DocumentErrorResponse_Disabled
             } else if (iF == 0) {
                 strFromJson = this.stringAdapter.fromJson(mVar);
                 if (strFromJson == null) {
-                    throw wm.c.x(Title.type, Title.type, mVar);
+                    throw um.c.x(Title.type, Title.type, mVar);
                 }
             } else if (iF == 1) {
                 strFromJson2 = this.stringAdapter.fromJson(mVar);
                 if (strFromJson2 == null) {
-                    throw wm.c.x("code", "code", mVar);
+                    throw um.c.x("code", "code", mVar);
                 }
             } else if (iF == 2 && (detailsFromJson = this.detailsAdapter.fromJson(mVar)) == null) {
-                throw wm.c.x("details", "details", mVar);
+                throw um.c.x("details", "details", mVar);
             }
         }
         mVar.d();
         if (strFromJson == null) {
-            throw wm.c.o(Title.type, Title.type, mVar);
+            throw um.c.o(Title.type, Title.type, mVar);
         }
         if (strFromJson2 == null) {
-            throw wm.c.o("code", "code", mVar);
+            throw um.c.o("code", "code", mVar);
         }
         if (detailsFromJson != null) {
             return new GenericFileUploadErrorResponse.DocumentErrorResponse.DisabledFileTypeError(strFromJson, strFromJson2, detailsFromJson);
         }
-        throw wm.c.o("details", "details", mVar);
+        throw um.c.o("details", "details", mVar);
     }
 
-    @Override // um.h
+    @Override // sm.h
     public void toJson(@NotNull t tVar, @Nullable GenericFileUploadErrorResponse.DocumentErrorResponse.DisabledFileTypeError disabledFileTypeError) {
         if (disabledFileTypeError == null) {
             throw new NullPointerException("value_ was null! Wrap in .nullSafe() to write nullable values.");

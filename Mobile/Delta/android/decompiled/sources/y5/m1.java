@@ -47,7 +47,7 @@ public final class m1 {
         f6.j0.IdAndState idAndState = (f6.j0.IdAndState) CollectionsKt.firstOrNull(listR);
         if (idAndState == null) {
             function0.invoke();
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
         f6.j0 j0VarK = k0VarC0.k(idAndState.id);
         if (j0VarK == null) {
@@ -59,7 +59,7 @@ public final class m1 {
         if (idAndState.state == x5.o0.c.CANCELLED) {
             k0VarC0.a(idAndState.id);
             function0.invoke();
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
         f6.j0 j0VarE = f6.j0.e(q0Var.getWorkSpec(), idAndState.id, null, null, null, null, null, 0L, 0L, 0L, null, 0, null, 0L, 0L, 0L, 0L, false, null, 0, 0, 0L, 0, 0, null, null, 33554430, null);
         s sVarR = f1Var.r();
@@ -71,12 +71,12 @@ public final class m1 {
         List<u> listS = f1Var.s();
         Intrinsics.checkNotNullExpressionValue(listS, "getSchedulers(...)");
         h(sVarR, workDatabaseU, aVarN, listS, j0VarE, q0Var.c());
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit g(x5.q0 q0Var, f1 f1Var, String str) {
         g6.j.b(new f0(f1Var, str, x5.j.KEEP, kotlin.collections.o.d(q0Var)));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final x5.p0.b h(s sVar, final WorkDatabase workDatabase, androidx.work.a aVar, final List<? extends u> list, final f6.j0 j0Var, final Set<String> set) {

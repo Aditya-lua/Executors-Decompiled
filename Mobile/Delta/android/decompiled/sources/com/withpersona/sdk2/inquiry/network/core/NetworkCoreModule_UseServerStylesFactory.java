@@ -1,9 +1,9 @@
 package com.withpersona.sdk2.inquiry.network.core;
 
-import ft.h;
+import dt.h;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class NetworkCoreModule_UseServerStylesFactory implements ft.d<String> {
+public final class NetworkCoreModule_UseServerStylesFactory implements dt.d<String> {
     private final NetworkCoreModule module;
 
     private NetworkCoreModule_UseServerStylesFactory(NetworkCoreModule networkCoreModule) {
@@ -18,7 +18,7 @@ public final class NetworkCoreModule_UseServerStylesFactory implements ft.d<Stri
         return (String) h.e(networkCoreModule.useServerStyles());
     }
 
-    @Override // ht.a
+    @Override // ft.a
     public String get() {
         return useServerStyles(this.module);
     }

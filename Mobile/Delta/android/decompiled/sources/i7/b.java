@@ -25,20 +25,20 @@ public class b extends g<Integer> {
     public int s(t7.a<Integer> aVar, float f10) {
         float f11;
         Float f12;
-        if (aVar.b == null || aVar.f31671c == null) {
+        if (aVar.b == null || aVar.f32190c == null) {
             throw new IllegalStateException("Missing values for keyframe.");
         }
-        t7.c<A> cVar = this.f20288e;
-        if (cVar == 0 || (f12 = aVar.f31676h) == null) {
+        t7.c<A> cVar = this.f20404e;
+        if (cVar == 0 || (f12 = aVar.f32195h) == null) {
             f11 = f10;
         } else {
             f11 = f10;
-            Integer num = (Integer) cVar.b(aVar.f31675g, f12.floatValue(), aVar.b, aVar.f31671c, f11, e(), f());
+            Integer num = (Integer) cVar.b(aVar.f32194g, f12.floatValue(), aVar.b, aVar.f32190c, f11, e(), f());
             if (num != null) {
                 return num.intValue();
             }
         }
-        return s7.c.c(s7.j.b(f11, 0.0f, 1.0f), aVar.b.intValue(), aVar.f31671c.intValue());
+        return s7.c.c(s7.j.b(f11, 0.0f, 1.0f), aVar.b.intValue(), aVar.f32190c.intValue());
     }
 
     @Override // i7.a

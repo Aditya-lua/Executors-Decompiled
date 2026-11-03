@@ -1,48 +1,64 @@
 package cd;
 
-import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.Rect;
+import android.animation.TimeInterpolator;
+import android.content.Context;
+import android.util.TypedValue;
+import android.view.animation.AnimationUtils;
 import androidx.annotation.NonNull;
-import cd.b;
 
 /* JADX INFO: loaded from: classes2.dex */
-public abstract class h<S extends b> {
-
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public S f4742a;
-
-    public static class a {
-
-        /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public float f4743a;
-        public float b;
-
-        /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public int f4744c;
-
-        /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public int f4745d;
+public class h {
+    public static float a(String[] strArr, int i10) {
+        float f10 = Float.parseFloat(strArr[i10]);
+        if (f10 >= 0.0f && f10 <= 1.0f) {
+            return f10;
+        }
+        throw new IllegalArgumentException("Motion easing control point value must be between 0 and 1; instead got: " + f10);
     }
 
-    public h(S s8) {
-        this.f4742a = s8;
+    public static String b(String str, String str2) {
+        return str.substring(str2.length() + 1, str.length() - 1);
     }
 
-    public abstract void a(@NonNull Canvas canvas, @NonNull Rect rect, float f10, boolean z10, boolean z11);
+    public static TimeInterpolator c(String str) {
+        if (!e(str, "cubic-bezier")) {
+            if (e(str, "path")) {
+                return z2.a.b(androidx.core.graphics.e.e(b(str, "path")));
+            }
+            throw new IllegalArgumentException("Invalid motion easing type: " + str);
+        }
+        String[] strArrSplit = b(str, "cubic-bezier").split(",");
+        if (strArrSplit.length == 4) {
+            return z2.a.a(a(strArrSplit, 0), a(strArrSplit, 1), a(strArrSplit, 2), a(strArrSplit, 3));
+        }
+        throw new IllegalArgumentException("Motion easing theme attribute must have 4 control points if using bezier curve format; instead got: " + strArrSplit.length);
+    }
 
-    public abstract void b(@NonNull Canvas canvas, @NonNull Paint paint, int i10, int i11);
+    public static boolean d(String str) {
+        return e(str, "cubic-bezier") || e(str, "path");
+    }
 
-    public abstract void c(@NonNull Canvas canvas, @NonNull Paint paint, @NonNull a aVar, int i10);
+    public static boolean e(String str, String str2) {
+        StringBuilder sb2 = new StringBuilder();
+        sb2.append(str2);
+        sb2.append("(");
+        return str.startsWith(sb2.toString()) && str.endsWith(")");
+    }
 
-    public abstract void d(@NonNull Canvas canvas, @NonNull Paint paint, float f10, float f11, int i10, int i11, int i12);
+    public static int f(@NonNull Context context, int i10, int i11) {
+        return ed.b.c(context, i10, i11);
+    }
 
-    public abstract int e();
-
-    public abstract int f();
-
-    public void g(@NonNull Canvas canvas, @NonNull Rect rect, float f10, boolean z10, boolean z11) {
-        this.f4742a.e();
-        a(canvas, rect, f10, z10, z11);
+    @NonNull
+    public static TimeInterpolator g(@NonNull Context context, int i10, @NonNull TimeInterpolator timeInterpolator) {
+        TypedValue typedValue = new TypedValue();
+        if (!context.getTheme().resolveAttribute(i10, typedValue, true)) {
+            return timeInterpolator;
+        }
+        if (typedValue.type != 3) {
+            throw new IllegalArgumentException("Motion easing theme attribute must be an @interpolator resource for ?attr/motionEasing*Interpolator attributes or a string for ?attr/motionEasing* attributes.");
+        }
+        String strValueOf = String.valueOf(typedValue.string);
+        return d(strValueOf) ? c(strValueOf) : AnimationUtils.loadInterpolator(context, typedValue.resourceId);
     }
 }

@@ -17,10 +17,10 @@ public class z {
     public static final Map<x, Range<Integer>> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final Map<Integer, Rational> f16065c;
+    public static final Map<Integer, Rational> f16661c;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Map<a, List<Size>> f16066a = new HashMap();
+    public final Map<a, List<Size>> f16662a = new HashMap();
 
     public static abstract class a {
         public static a c(x xVar, int i10) {
@@ -35,22 +35,22 @@ public class z {
     static {
         HashMap map = new HashMap();
         b = map;
-        map.put(x.f16052d, Range.create(2160, 4319));
-        map.put(x.f16051c, Range.create(1080, 1439));
+        map.put(x.f16648d, Range.create(2160, 4319));
+        map.put(x.f16647c, Range.create(1080, 1439));
         map.put(x.b, Range.create(720, 1079));
-        map.put(x.f16050a, Range.create(241, 719));
+        map.put(x.f16646a, Range.create(241, 719));
         HashMap map2 = new HashMap();
-        f16065c = map2;
-        map2.put(0, p0.a.f28051a);
-        map2.put(1, p0.a.f28052c);
+        f16661c = map2;
+        map2.put(0, p0.a.f28270a);
+        map2.put(1, p0.a.f28271c);
     }
 
     public z(List<Size> list, Map<x, Size> map) {
         for (x xVar : b.keySet()) {
-            this.f16066a.put(a.c(xVar, -1), new ArrayList());
-            Iterator<Integer> it = f16065c.keySet().iterator();
+            this.f16662a.put(a.c(xVar, -1), new ArrayList());
+            Iterator<Integer> it = f16661c.keySet().iterator();
             while (it.hasNext()) {
-                this.f16066a.put(a.c(xVar, it.next().intValue()), new ArrayList());
+                this.f16662a.put(a.c(xVar, it.next().intValue()), new ArrayList());
             }
         }
         b(map);
@@ -63,7 +63,7 @@ public class z {
     }
 
     public static Integer d(Size size) {
-        for (Map.Entry<Integer, Rational> entry : f16065c.entrySet()) {
+        for (Map.Entry<Integer, Rational> entry : f16661c.entrySet()) {
             if (p0.a.b(size, entry.getValue(), w0.d.b)) {
                 return entry.getKey();
             }
@@ -101,7 +101,7 @@ public class z {
     }
 
     public final List<Size> f(x xVar, int i10) {
-        return this.f16066a.get(a.c(xVar, i10));
+        return this.f16662a.get(a.c(xVar, i10));
     }
 
     public List<Size> g(x xVar, int i10) {
@@ -110,7 +110,7 @@ public class z {
     }
 
     public final void h(Map<x, Size> map) {
-        for (Map.Entry<a, List<Size>> entry : this.f16066a.entrySet()) {
+        for (Map.Entry<a, List<Size>> entry : this.f16662a.entrySet()) {
             Size size = map.get(entry.getKey().b());
             if (size != null) {
                 final int iC = w0.d.c(size);

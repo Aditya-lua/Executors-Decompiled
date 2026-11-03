@@ -10,16 +10,16 @@ import com.google.mlkit.vision.barcode.common.Barcode;
 public final class l1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final g f1883a;
+    public final g f1728a;
 
     public static class a extends g {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Window f1884a;
+        public final Window f1729a;
         public final i0 b;
 
         public a(Window window, i0 i0Var) {
-            this.f1884a = window;
+            this.f1729a = window;
             this.b = i0Var;
         }
 
@@ -34,7 +34,7 @@ public final class l1 {
 
         @Override // androidx.core.view.l1.g
         public void e(int i10) {
-            this.f1884a.getDecorView().setTag(356039078, Integer.valueOf(i10));
+            this.f1729a.getDecorView().setTag(356039078, Integer.valueOf(i10));
             if (i10 == 0) {
                 k(6144);
                 return;
@@ -74,12 +74,12 @@ public final class l1 {
         }
 
         public void h(int i10) {
-            View decorView = this.f1884a.getDecorView();
+            View decorView = this.f1729a.getDecorView();
             decorView.setSystemUiVisibility(i10 | decorView.getSystemUiVisibility());
         }
 
         public void i(int i10) {
-            this.f1884a.addFlags(i10);
+            this.f1729a.addFlags(i10);
         }
 
         public final void j(int i10) {
@@ -97,12 +97,12 @@ public final class l1 {
         }
 
         public void k(int i10) {
-            View decorView = this.f1884a.getDecorView();
+            View decorView = this.f1729a.getDecorView();
             decorView.setSystemUiVisibility((~i10) & decorView.getSystemUiVisibility());
         }
 
         public void l(int i10) {
-            this.f1884a.clearFlags(i10);
+            this.f1729a.clearFlags(i10);
         }
     }
 
@@ -113,7 +113,7 @@ public final class l1 {
 
         @Override // androidx.core.view.l1.g
         public boolean b() {
-            return (this.f1884a.getDecorView().getSystemUiVisibility() & 8192) != 0;
+            return (this.f1729a.getDecorView().getSystemUiVisibility() & 8192) != 0;
         }
 
         @Override // androidx.core.view.l1.g
@@ -204,9 +204,9 @@ public final class l1 {
     @Deprecated
     public l1(WindowInsetsController windowInsetsController) {
         if (Build.VERSION.SDK_INT >= 35) {
-            this.f1883a = new f(windowInsetsController, this, new i0(windowInsetsController));
+            this.f1728a = new f(windowInsetsController, this, new i0(windowInsetsController));
         } else {
-            this.f1883a = new d(windowInsetsController, this, new i0(windowInsetsController));
+            this.f1728a = new d(windowInsetsController, this, new i0(windowInsetsController));
         }
     }
 
@@ -216,53 +216,53 @@ public final class l1 {
     }
 
     public void a(int i10) {
-        this.f1883a.a(i10);
+        this.f1728a.a(i10);
     }
 
     public boolean b() {
-        return this.f1883a.b();
+        return this.f1728a.b();
     }
 
     public void c(boolean z10) {
-        this.f1883a.c(z10);
+        this.f1728a.c(z10);
     }
 
     public void d(boolean z10) {
-        this.f1883a.d(z10);
+        this.f1728a.d(z10);
     }
 
     public void e(int i10) {
-        this.f1883a.e(i10);
+        this.f1728a.e(i10);
     }
 
     public void f(int i10) {
-        this.f1883a.f(i10);
+        this.f1728a.f(i10);
     }
 
     public static class d extends g {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final l1 f1885a;
+        public final l1 f1730a;
         public final WindowInsetsController b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final i0 f1886c;
+        public final i0 f1731c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final w1.j<Object, WindowInsetsController.OnControllableInsetsChangedListener> f1887d;
+        public final w1.j<Object, WindowInsetsController.OnControllableInsetsChangedListener> f1732d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public Window f1888e;
+        public Window f1733e;
 
         public d(Window window, l1 l1Var, i0 i0Var) {
             this(window.getInsetsController(), l1Var, i0Var);
-            this.f1888e = window;
+            this.f1733e = window;
         }
 
         @Override // androidx.core.view.l1.g
         public void a(int i10) {
             if ((i10 & 8) != 0) {
-                this.f1886c.a();
+                this.f1731c.a();
             }
             this.b.hide(i10 & (-9));
         }
@@ -276,12 +276,12 @@ public final class l1 {
         @Override // androidx.core.view.l1.g
         public void c(boolean z10) {
             if (z10) {
-                if (this.f1888e != null) {
+                if (this.f1733e != null) {
                     g(16);
                 }
                 this.b.setSystemBarsAppearance(16, 16);
             } else {
-                if (this.f1888e != null) {
+                if (this.f1733e != null) {
                     h(16);
                 }
                 this.b.setSystemBarsAppearance(0, 16);
@@ -291,12 +291,12 @@ public final class l1 {
         @Override // androidx.core.view.l1.g
         public void d(boolean z10) {
             if (z10) {
-                if (this.f1888e != null) {
+                if (this.f1733e != null) {
                     g(8192);
                 }
                 this.b.setSystemBarsAppearance(8, 8);
             } else {
-                if (this.f1888e != null) {
+                if (this.f1733e != null) {
                     h(8192);
                 }
                 this.b.setSystemBarsAppearance(0, 8);
@@ -305,7 +305,7 @@ public final class l1 {
 
         @Override // androidx.core.view.l1.g
         public void e(int i10) {
-            Window window = this.f1888e;
+            Window window = this.f1733e;
             if (window == null) {
                 this.b.setSystemBarsBehavior(i10);
                 return;
@@ -330,26 +330,26 @@ public final class l1 {
         @Override // androidx.core.view.l1.g
         public void f(int i10) {
             if ((i10 & 8) != 0) {
-                this.f1886c.b();
+                this.f1731c.b();
             }
             this.b.show(i10 & (-9));
         }
 
         public void g(int i10) {
-            View decorView = this.f1888e.getDecorView();
+            View decorView = this.f1733e.getDecorView();
             decorView.setSystemUiVisibility(i10 | decorView.getSystemUiVisibility());
         }
 
         public void h(int i10) {
-            View decorView = this.f1888e.getDecorView();
+            View decorView = this.f1733e.getDecorView();
             decorView.setSystemUiVisibility((~i10) & decorView.getSystemUiVisibility());
         }
 
         public d(WindowInsetsController windowInsetsController, l1 l1Var, i0 i0Var) {
-            this.f1887d = new w1.j<>();
+            this.f1732d = new w1.j<>();
             this.b = windowInsetsController;
-            this.f1885a = l1Var;
-            this.f1886c = i0Var;
+            this.f1730a = l1Var;
+            this.f1731c = i0Var;
         }
     }
 
@@ -357,11 +357,11 @@ public final class l1 {
         i0 i0Var = new i0(view);
         int i10 = Build.VERSION.SDK_INT;
         if (i10 >= 35) {
-            this.f1883a = new f(window, this, i0Var);
+            this.f1728a = new f(window, this, i0Var);
         } else if (i10 >= 30) {
-            this.f1883a = new d(window, this, i0Var);
+            this.f1728a = new d(window, this, i0Var);
         } else {
-            this.f1883a = new c(window, i0Var);
+            this.f1728a = new c(window, i0Var);
         }
     }
 }

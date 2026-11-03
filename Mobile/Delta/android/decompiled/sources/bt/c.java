@@ -1,14 +1,10 @@
 package bt;
 
-import android.text.Spanned;
+import java.util.Map;
 
 /* JADX INFO: loaded from: classes3.dex */
-public abstract class c {
-    public static boolean a(int i10, CharSequence charSequence, Object obj) {
-        return (charSequence instanceof Spanned) && ((Spanned) charSequence).getSpanEnd(obj) == i10;
-    }
-
-    public static boolean b(int i10, CharSequence charSequence, Object obj) {
-        return (charSequence instanceof Spanned) && ((Spanned) charSequence).getSpanStart(obj) == i10;
+public final class c<T> implements dt.d<b<T>> {
+    public static <T> b<T> a(Map<Class<?>, ft.a<a.InterfaceC0090a<?>>> map, Map<String, ft.a<a.InterfaceC0090a<?>>> map2) {
+        return new b<>(map, map2);
     }
 }

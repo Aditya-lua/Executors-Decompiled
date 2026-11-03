@@ -41,8 +41,8 @@ public class ExcludeStretchedVideoQualityQuirk implements VideoQualityQuirk {
     @Override // androidx.camera.video.internal.compat.quirk.VideoQualityQuirk
     public boolean c(o0 o0Var, x xVar) {
         if (h()) {
-            return xVar == x.f16051c || xVar == x.f16052d;
+            return xVar == x.f16647c || xVar == x.f16648d;
         }
-        return (g() || i() || j() || l() || m() || k()) && xVar == x.f16051c;
+        return (g() || i() || j() || l() || m() || k()) && xVar == x.f16647c;
     }
 }

@@ -15,7 +15,7 @@ public class GetPhoneNumberHintIntentRequest extends AbstractSafeParcelable {
     public static final Parcelable.Creator<GetPhoneNumberHintIntentRequest> CREATOR = new g();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f5584f;
+    public final int f5657f;
 
     public static final class a {
         public /* synthetic */ a(f fVar) {
@@ -28,7 +28,7 @@ public class GetPhoneNumberHintIntentRequest extends AbstractSafeParcelable {
     }
 
     public GetPhoneNumberHintIntentRequest(int i10) {
-        this.f5584f = i10;
+        this.f5657f = i10;
     }
 
     @NonNull
@@ -38,18 +38,18 @@ public class GetPhoneNumberHintIntentRequest extends AbstractSafeParcelable {
 
     public boolean equals(Object obj) {
         if (obj instanceof GetPhoneNumberHintIntentRequest) {
-            return k.b(Integer.valueOf(this.f5584f), Integer.valueOf(((GetPhoneNumberHintIntentRequest) obj).f5584f));
+            return k.b(Integer.valueOf(this.f5657f), Integer.valueOf(((GetPhoneNumberHintIntentRequest) obj).f5657f));
         }
         return false;
     }
 
     public int hashCode() {
-        return k.c(Integer.valueOf(this.f5584f));
+        return k.c(Integer.valueOf(this.f5657f));
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
-        int i11 = this.f5584f;
+        int i11 = this.f5657f;
         int iA = o9.b.a(parcel);
         o9.b.n(parcel, 1, i11);
         o9.b.b(parcel, iA);

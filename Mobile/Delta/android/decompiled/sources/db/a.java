@@ -8,24 +8,24 @@ import android.os.Parcel;
 public class a implements IInterface {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final IBinder f14535a;
+    public final IBinder f14515a;
     public final String b;
 
     public a(IBinder iBinder, String str) {
-        this.f14535a = iBinder;
+        this.f14515a = iBinder;
         this.b = str;
     }
 
     @Override // android.os.IInterface
     public final IBinder asBinder() {
-        return this.f14535a;
+        return this.f14515a;
     }
 
     public final Parcel r2(int i10, Parcel parcel) {
         Parcel parcelObtain = Parcel.obtain();
         try {
             try {
-                this.f14535a.transact(i10, parcel, parcelObtain, 0);
+                this.f14515a.transact(i10, parcel, parcelObtain, 0);
                 parcelObtain.readException();
                 parcel.recycle();
                 return parcelObtain;

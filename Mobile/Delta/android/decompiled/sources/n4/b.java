@@ -9,37 +9,37 @@ import java.io.PrintWriter;
 public class b<D> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f25041a;
+    public int f25862a;
     public a<D> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public Context f25042c;
+    public Context f25863c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public boolean f25043d = false;
+    public boolean f25864d = false;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public boolean f25044e = false;
+    public boolean f25865e = false;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public boolean f25045f = true;
+    public boolean f25866f = true;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public boolean f25046g = false;
+    public boolean f25867g = false;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public boolean f25047h = false;
+    public boolean f25868h = false;
 
     public interface a<D> {
         void a(@NonNull b<D> bVar, D d10);
     }
 
     public b(@NonNull Context context) {
-        this.f25042c = context.getApplicationContext();
+        this.f25863c = context.getApplicationContext();
     }
 
     public void a() {
-        this.f25044e = true;
+        this.f25865e = true;
         k();
     }
 
@@ -48,7 +48,7 @@ public class b<D> {
     }
 
     public void c() {
-        this.f25047h = false;
+        this.f25868h = false;
     }
 
     @NonNull
@@ -80,24 +80,24 @@ public class b<D> {
     public void g(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
         printWriter.print(str);
         printWriter.print("mId=");
-        printWriter.print(this.f25041a);
+        printWriter.print(this.f25862a);
         printWriter.print(" mListener=");
         printWriter.println(this.b);
-        if (this.f25043d || this.f25046g || this.f25047h) {
+        if (this.f25864d || this.f25867g || this.f25868h) {
             printWriter.print(str);
             printWriter.print("mStarted=");
-            printWriter.print(this.f25043d);
+            printWriter.print(this.f25864d);
             printWriter.print(" mContentChanged=");
-            printWriter.print(this.f25046g);
+            printWriter.print(this.f25867g);
             printWriter.print(" mProcessingChange=");
-            printWriter.println(this.f25047h);
+            printWriter.println(this.f25868h);
         }
-        if (this.f25044e || this.f25045f) {
+        if (this.f25865e || this.f25866f) {
             printWriter.print(str);
             printWriter.print("mAbandoned=");
-            printWriter.print(this.f25044e);
+            printWriter.print(this.f25865e);
             printWriter.print(" mReset=");
-            printWriter.println(this.f25045f);
+            printWriter.println(this.f25866f);
         }
     }
 
@@ -106,11 +106,11 @@ public class b<D> {
     }
 
     public boolean i() {
-        return this.f25044e;
+        return this.f25865e;
     }
 
     public boolean j() {
-        return this.f25043d;
+        return this.f25864d;
     }
 
     public void k() {
@@ -121,10 +121,10 @@ public class b<D> {
     }
 
     public void m() {
-        if (this.f25043d) {
+        if (this.f25864d) {
             h();
         } else {
-            this.f25046g = true;
+            this.f25867g = true;
         }
     }
 
@@ -146,20 +146,20 @@ public class b<D> {
             throw new IllegalStateException("There is already a listener registered");
         }
         this.b = aVar;
-        this.f25041a = i10;
+        this.f25862a = i10;
     }
 
     public void s() {
         o();
-        this.f25045f = true;
-        this.f25043d = false;
-        this.f25044e = false;
-        this.f25046g = false;
-        this.f25047h = false;
+        this.f25866f = true;
+        this.f25864d = false;
+        this.f25865e = false;
+        this.f25867g = false;
+        this.f25868h = false;
     }
 
     public void t() {
-        if (this.f25047h) {
+        if (this.f25868h) {
             m();
         }
     }
@@ -172,20 +172,20 @@ public class b<D> {
         sb2.append("{");
         sb2.append(Integer.toHexString(System.identityHashCode(cls)));
         sb2.append(" id=");
-        sb2.append(this.f25041a);
+        sb2.append(this.f25862a);
         sb2.append("}");
         return sb2.toString();
     }
 
     public final void u() {
-        this.f25043d = true;
-        this.f25045f = false;
-        this.f25044e = false;
+        this.f25864d = true;
+        this.f25866f = false;
+        this.f25865e = false;
         p();
     }
 
     public void v() {
-        this.f25043d = false;
+        this.f25864d = false;
         q();
     }
 

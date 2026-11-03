@@ -8,17 +8,17 @@ import java.util.Objects;
 public final class jc implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ nc f25641a;
+    public final /* synthetic */ nc f26462a;
 
     public jc(nc ncVar) {
         Objects.requireNonNull(ncVar);
-        this.f25641a = ncVar;
+        this.f26462a = ncVar;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        tc tcVar = this.f25641a.f25801c;
-        g7 g7Var = tcVar.f25625a;
+        tc tcVar = this.f26462a.f26622c;
+        g7 g7Var = tcVar.f26446a;
         Context contextD = g7Var.d();
         g7Var.c();
         tcVar.K(new ComponentName(contextD, "com.google.android.gms.measurement.AppMeasurementService"));

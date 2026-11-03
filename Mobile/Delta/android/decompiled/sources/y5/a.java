@@ -14,6 +14,6 @@ public final class a implements a5.a {
         db2.R("UPDATE workspec SET period_count = 1 WHERE last_enqueue_time <> 0 AND interval_duration <> 0");
         ContentValues contentValues = new ContentValues(1);
         contentValues.put("last_enqueue_time", Long.valueOf(System.currentTimeMillis()));
-        db2.r2("WorkSpec", 3, contentValues, "last_enqueue_time = 0 AND interval_duration <> 0 ", new Object[0]);
+        db2.s2("WorkSpec", 3, contentValues, "last_enqueue_time = 0 AND interval_duration <> 0 ", new Object[0]);
     }
 }

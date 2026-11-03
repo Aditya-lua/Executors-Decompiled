@@ -1,91 +1,116 @@
 package ym;
 
+import android.content.res.Resources;
+import android.view.View;
+import iu.CoroutineName;
+import iu.d2;
+import iu.g2;
+import iu.p0;
+import iu.q0;
+import iu.r0;
 import kotlin.Metadata;
-import kotlin.Pair;
 import kotlin.Unit;
+import kotlin.coroutines.CoroutineContext;
 import kotlin.jvm.functions.Function0;
-import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u00002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u001ae\u0010\n\u001a\u0014\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00028\u0001\u0012\u0004\u0012\u00028\u00020\u0007\"\u0004\b\u0000\u0010\u0000\"\u0004\b\u0001\u0010\u0001\"\u0004\b\u0002\u0010\u00022\b\b\u0002\u0010\u0004\u001a\u00020\u00032(\u0010\t\u001a$\u0012\u001a\u0012\u00180\u0006R\u0014\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00028\u0001\u0012\u0004\u0012\u00028\u00020\u0007\u0012\u0004\u0012\u00020\b0\u0005¢\u0006\u0004\b\n\u0010\u000b\u001ai\u0010\r\u001a\u0014\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00028\u0001\u0012\u0004\u0012\u00028\u00020\u0007\"\u0004\b\u0000\u0010\u0000\"\u0004\b\u0001\u0010\u0001\"\u0004\b\u0002\u0010\u00022\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00030\f2(\u0010\t\u001a$\u0012\u001a\u0012\u00180\u0006R\u0014\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00028\u0001\u0012\u0004\u0012\u00028\u00020\u0007\u0012\u0004\u0012\u00020\b0\u0005¢\u0006\u0004\b\r\u0010\u000e\u001aY\u0010\u0013\u001a\u0016\u0012\u0004\u0012\u00028\u0001\u0012\f\u0012\n\u0012\u0004\u0012\u00028\u0002\u0018\u00010\u00120\u0011\"\u0004\b\u0000\u0010\u0000\"\u0004\b\u0001\u0010\u0001\"\u0004\b\u0002\u0010\u0002*\u0014\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00028\u0001\u0012\u0004\u0012\u00028\u00020\u00072\u0006\u0010\u000f\u001a\u00028\u00002\u0006\u0010\u0010\u001a\u00028\u0001¢\u0006\u0004\b\u0013\u0010\u0014¨\u0006\u0015"}, d2 = {"PropsT", "StateT", "OutputT", "", "name", "Lkotlin/Function1;", "Lym/r$c;", "Lym/r;", "", "apply", "a", "(Ljava/lang/String;Lkotlin/jvm/functions/Function1;)Lym/r;", "Lkotlin/Function0;", "b", "(Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;)Lym/r;", "props", "state", "Lkotlin/Pair;", "Lym/v;", "d", "(Lym/r;Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;", "wf1-workflow-core"}, k = 5, mv = {1, 6, 0}, xi = 48, xs = "com/squareup/workflow1/Workflows")
-public final /* synthetic */ class b0 {
+@Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u001aD\u0010\n\u001a\u00020\t*\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00012\"\u0010\b\u001a\u001e\b\u0001\u0012\u0004\u0012\u00020\u0004\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00060\u0005\u0012\u0006\u0012\u0004\u0018\u00010\u00070\u0003H\u0001ø\u0001\u0000¢\u0006\u0004\b\n\u0010\u000b\u001a\u0013\u0010\r\u001a\u00020\f*\u00020\u0000H\u0003¢\u0006\u0004\b\r\u0010\u000e\u0082\u0002\u0004\n\u0002\b\u0019¨\u0006\u000f"}, d2 = {"Landroid/view/View;", "Lkotlin/coroutines/CoroutineContext;", "context", "Lkotlin/Function2;", "Liu/p0;", "Llt/b;", "", "", "block", "Liu/d2;", "b", "(Landroid/view/View;Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;)Liu/d2;", "Lym/c;", "a", "(Landroid/view/View;)Lym/c;", "wf1-core-android"}, k = 2, mv = {1, 6, 0}, xi = 48)
+public final class b0 {
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0002\u0010\u0004\u001a\u00020\u0003\"\u0004\b\u0000\u0010\u0000\"\u0004\b\u0001\u0010\u0001\"\u0004\b\u0002\u0010\u0002H\n¢\u0006\u0004\b\u0004\u0010\u0005"}, d2 = {"PropsT", "StateT", "OutputT", "", "b", "()Ljava/lang/String;"}, k = 3, mv = {1, 6, 0})
-    public static final class a extends kotlin.jvm.internal.m implements Function0<String> {
+    @Metadata(d1 = {"\u0000\b\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0001\u001a\u00020\u0000H\n¢\u0006\u0004\b\u0001\u0010\u0002"}, d2 = {"", "b", "()V"}, k = 3, mv = {1, 6, 0})
+    public static final class a extends kotlin.jvm.internal.m implements Function0<Unit> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ String f35918i;
+        public final /* synthetic */ c f36832i;
+
+        /* JADX INFO: renamed from: j, reason: collision with root package name */
+        public final /* synthetic */ CoroutineContext f36833j;
+
+        /* JADX INFO: renamed from: k, reason: collision with root package name */
+        public final /* synthetic */ Function2<p0, lt.b<? super Unit>, Object> f36834k;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public a(String str) {
+        /* JADX WARN: Multi-variable type inference failed */
+        public a(c cVar, CoroutineContext coroutineContext, Function2<? super p0, ? super lt.b<? super Unit>, ? extends Object> function2) {
             super(0);
-            this.f35918i = str;
+            this.f36832i = cVar;
+            this.f36833j = coroutineContext;
+            this.f36834k = function2;
+        }
+
+        public final void b() {
+            iu.i.c(this.f36832i.getCoroutineScope(), this.f36833j, r0.UNDISPATCHED, this.f36834k);
         }
 
         @Override // kotlin.jvm.functions.Function0
-        @NotNull
-        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-        public final String invoke() {
-            return this.f35918i;
+        public /* bridge */ /* synthetic */ Unit invoke() {
+            b();
+            return Unit.f22938a;
         }
     }
 
-    /* JADX INFO: Add missing generic type declarations: [StateT, OutputT, PropsT] */
-    @Metadata(d1 = {"\u0000\u001d\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\u0014\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00028\u0001\u0012\u0004\u0012\u00028\u00020\u0001J)\u0010\u0004\u001a\u00020\u0003*\u00180\u0002R\u0014\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00028\u0001\u0012\u0004\u0012\u00028\u00020\u0001H\u0016¢\u0006\u0004\b\u0004\u0010\u0005J\u000f\u0010\u0007\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"ym/b0$b", "Lym/r;", "Lym/r$c;", "", "a", "(Lym/r$c;)V", "", "toString", "()Ljava/lang/String;", "wf1-workflow-core"}, k = 1, mv = {1, 6, 0}, xi = 48)
-    public static final class b<OutputT, PropsT, StateT> extends r<PropsT, StateT, OutputT> {
-
-        /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ Function1<r<? super PropsT, StateT, ? extends OutputT>.c, Unit> f35919c;
-
-        /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final /* synthetic */ Function0<String> f35920d;
-
-        /* JADX WARN: Multi-variable type inference failed */
-        public b(Function1<? super r<? super PropsT, StateT, ? extends OutputT>.c, Unit> function1, Function0<String> function0) {
-            this.f35919c = function1;
-            this.f35920d = function0;
+    public static final c a(View view) {
+        Object tag = view.getTag(o.b);
+        c cVar = null;
+        c cVar2 = tag instanceof c ? (c) tag : null;
+        if (cVar2 != null && q0.i(cVar2.getCoroutineScope())) {
+            cVar = cVar2;
         }
-
-        @Override // ym.r
-        public void a(@NotNull r<? super PropsT, StateT, ? extends OutputT>.c cVar) {
-            Intrinsics.checkNotNullParameter(cVar, "<this>");
-            this.f35919c.invoke(cVar);
+        if (cVar != null) {
+            return cVar;
         }
-
-        @NotNull
-        public String toString() {
-            return "WorkflowAction(" + this.f35920d.invoke() + ")@" + hashCode();
+        androidx.p000lifecycle.s sVarA = zm.c.f38190a.a(view);
+        if (sVarA == null) {
+            throw new IllegalStateException("ViewTreeLifecycleOwner is required by View.ensureAttachedScope");
         }
+        androidx.p000lifecycle.m mVarA = androidx.p000lifecycle.t.a(sVarA);
+        StringBuilder sb2 = new StringBuilder();
+        StringBuilder sb3 = new StringBuilder();
+        sb3.append((Object) view.getClass().getName());
+        sb3.append('@');
+        sb3.append(view.hashCode());
+        sb2.append(sb3.toString());
+        if (view.getId() != -1) {
+            try {
+                String resourceEntryName = view.getResources().getResourceEntryName(view.getId());
+                sb2.append('-');
+                sb2.append(resourceEntryName);
+            } catch (Resources.NotFoundException unused) {
+            }
+        }
+        String string = sb2.toString();
+        Intrinsics.checkNotNullExpressionValue(string, "StringBuilder().apply(builderAction).toString()");
+        c cVar3 = new c(q0.j(mVarA, new CoroutineName(string)));
+        view.setTag(o.b, cVar3);
+        view.addOnAttachStateChangeListener(cVar3);
+        return cVar3;
     }
 
     @NotNull
-    public static final <PropsT, StateT, OutputT> r<PropsT, StateT, OutputT> a(@NotNull String name, @NotNull Function1<? super r<? super PropsT, StateT, ? extends OutputT>.c, Unit> apply) {
-        Intrinsics.checkNotNullParameter(name, "name");
-        Intrinsics.checkNotNullParameter(apply, "apply");
-        return w.c(new a(name), apply);
+    public static final d2 b(@NotNull View view, @NotNull CoroutineContext context, @NotNull Function2<? super p0, ? super lt.b<? super Unit>, ? extends Object> block) {
+        Intrinsics.checkNotNullParameter(view, "<this>");
+        Intrinsics.checkNotNullParameter(context, "context");
+        Intrinsics.checkNotNullParameter(block, "block");
+        if (context.get(d2.INSTANCE) != null) {
+            throw new IllegalArgumentException("Expected custom CoroutineContext to not contain a Job.");
+        }
+        c cVarA = a(view);
+        a aVar = new a(cVarA, context, block);
+        if (view.isAttachedToWindow()) {
+            aVar.invoke();
+        } else {
+            cVarA.c(aVar);
+        }
+        return g2.h(cVarA.getCoroutineScope().getCoroutineContext());
     }
 
-    @NotNull
-    public static final <PropsT, StateT, OutputT> r<PropsT, StateT, OutputT> b(@NotNull Function0<String> name, @NotNull Function1<? super r<? super PropsT, StateT, ? extends OutputT>.c, Unit> apply) {
-        Intrinsics.checkNotNullParameter(name, "name");
-        Intrinsics.checkNotNullParameter(apply, "apply");
-        return new b(apply, name);
-    }
-
-    public static /* synthetic */ r c(String str, Function1 function1, int i10, Object obj) {
+    public static /* synthetic */ d2 c(View view, CoroutineContext coroutineContext, Function2 function2, int i10, Object obj) {
         if ((i10 & 1) != 0) {
-            str = "";
+            coroutineContext = kotlin.coroutines.e.f22980a;
         }
-        return w.b(str, function1);
-    }
-
-    @NotNull
-    public static final <PropsT, StateT, OutputT> Pair<StateT, WorkflowOutput<OutputT>> d(@NotNull r<? super PropsT, StateT, ? extends OutputT> rVar, PropsT propst, StateT statet) {
-        Intrinsics.checkNotNullParameter(rVar, "<this>");
-        r<? super Object, StateT, ? extends Object>.c cVar = new r.c(rVar, propst, statet);
-        rVar.a(cVar);
-        return new Pair<>(cVar.c(), cVar.a());
+        return b(view, coroutineContext, function2);
     }
 }

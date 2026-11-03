@@ -4,42 +4,42 @@ package f1;
 public final class g extends s {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final c2 f15851a;
+    public final c2 f16447a;
     public final f1.a b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final int f15852c;
+    public final int f16448c;
 
     public static final class b extends s.a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public c2 f15853a;
+        public c2 f16449a;
         public f1.a b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public Integer f15854c;
+        public Integer f16450c;
 
         @Override // f1.s.a
         public s a() {
             String str = "";
-            if (this.f15853a == null) {
+            if (this.f16449a == null) {
                 str = " videoSpec";
             }
             if (this.b == null) {
                 str = str + " audioSpec";
             }
-            if (this.f15854c == null) {
+            if (this.f16450c == null) {
                 str = str + " outputFormat";
             }
             if (str.isEmpty()) {
-                return new g(this.f15853a, this.b, this.f15854c.intValue());
+                return new g(this.f16449a, this.b, this.f16450c.intValue());
             }
             throw new IllegalStateException("Missing required properties:" + str);
         }
 
         @Override // f1.s.a
         public c2 c() {
-            c2 c2Var = this.f15853a;
+            c2 c2Var = this.f16449a;
             if (c2Var != null) {
                 return c2Var;
             }
@@ -57,7 +57,7 @@ public final class g extends s {
 
         @Override // f1.s.a
         public s.a e(int i10) {
-            this.f15854c = Integer.valueOf(i10);
+            this.f16450c = Integer.valueOf(i10);
             return this;
         }
 
@@ -66,7 +66,7 @@ public final class g extends s {
             if (c2Var == null) {
                 throw new NullPointerException("Null videoSpec");
             }
-            this.f15853a = c2Var;
+            this.f16449a = c2Var;
             return this;
         }
 
@@ -74,9 +74,9 @@ public final class g extends s {
         }
 
         public b(s sVar) {
-            this.f15853a = sVar.d();
+            this.f16449a = sVar.d();
             this.b = sVar.b();
-            this.f15854c = Integer.valueOf(sVar.c());
+            this.f16450c = Integer.valueOf(sVar.c());
         }
     }
 
@@ -87,12 +87,12 @@ public final class g extends s {
 
     @Override // f1.s
     public int c() {
-        return this.f15852c;
+        return this.f16448c;
     }
 
     @Override // f1.s
     public c2 d() {
-        return this.f15851a;
+        return this.f16447a;
     }
 
     public boolean equals(Object obj) {
@@ -101,7 +101,7 @@ public final class g extends s {
         }
         if (obj instanceof s) {
             s sVar = (s) obj;
-            if (this.f15851a.equals(sVar.d()) && this.b.equals(sVar.b()) && this.f15852c == sVar.c()) {
+            if (this.f16447a.equals(sVar.d()) && this.b.equals(sVar.b()) && this.f16448c == sVar.c()) {
                 return true;
             }
         }
@@ -109,7 +109,7 @@ public final class g extends s {
     }
 
     public int hashCode() {
-        return ((((this.f15851a.hashCode() ^ 1000003) * 1000003) ^ this.b.hashCode()) * 1000003) ^ this.f15852c;
+        return ((((this.f16447a.hashCode() ^ 1000003) * 1000003) ^ this.b.hashCode()) * 1000003) ^ this.f16448c;
     }
 
     @Override // f1.s
@@ -118,12 +118,12 @@ public final class g extends s {
     }
 
     public String toString() {
-        return "MediaSpec{videoSpec=" + this.f15851a + ", audioSpec=" + this.b + ", outputFormat=" + this.f15852c + "}";
+        return "MediaSpec{videoSpec=" + this.f16447a + ", audioSpec=" + this.b + ", outputFormat=" + this.f16448c + "}";
     }
 
     public g(c2 c2Var, f1.a aVar, int i10) {
-        this.f15851a = c2Var;
+        this.f16447a = c2Var;
         this.b = aVar;
-        this.f15852c = i10;
+        this.f16448c = i10;
     }
 }

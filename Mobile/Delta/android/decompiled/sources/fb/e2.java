@@ -18,7 +18,7 @@ public abstract class e2 extends q implements f2 {
         Status status = (Status) k0.b(parcel, Status.CREATOR);
         zzs zzsVar = (zzs) k0.b(parcel, zzs.CREATOR);
         k0.e(parcel);
-        v0(status, zzsVar);
+        t0(status, zzsVar);
         return true;
     }
 }

@@ -10,24 +10,24 @@ import java.lang.ref.WeakReference;
 public class a {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static a f8203e;
+    public static a f8277e;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final Object f8204a = new Object();
+    public final Object f8278a = new Object();
 
     @NonNull
-    public final Handler b = new Handler(Looper.getMainLooper(), new C0123a());
+    public final Handler b = new Handler(Looper.getMainLooper(), new C0127a());
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public c f8205c;
+    public c f8279c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public c f8206d;
+    public c f8280d;
 
     /* JADX INFO: renamed from: com.google.android.material.snackbar.a$a, reason: collision with other inner class name */
-    public class C0123a implements Handler.Callback {
-        public C0123a() {
+    public class C0127a implements Handler.Callback {
+        public C0127a() {
         }
 
         @Override // android.os.Handler.Callback
@@ -50,31 +50,31 @@ public class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NonNull
-        public final WeakReference<b> f8208a;
+        public final WeakReference<b> f8282a;
         public int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public boolean f8209c;
+        public boolean f8283c;
 
         public c(int i10, b bVar) {
-            this.f8208a = new WeakReference<>(bVar);
+            this.f8282a = new WeakReference<>(bVar);
             this.b = i10;
         }
 
         public boolean a(b bVar) {
-            return bVar != null && this.f8208a.get() == bVar;
+            return bVar != null && this.f8282a.get() == bVar;
         }
     }
 
     public static a c() {
-        if (f8203e == null) {
-            f8203e = new a();
+        if (f8277e == null) {
+            f8277e = new a();
         }
-        return f8203e;
+        return f8277e;
     }
 
     public final boolean a(@NonNull c cVar, int i10) {
-        b bVar = cVar.f8208a.get();
+        b bVar = cVar.f8282a.get();
         if (bVar == null) {
             return false;
         }
@@ -84,12 +84,12 @@ public class a {
     }
 
     public void b(b bVar, int i10) {
-        synchronized (this.f8204a) {
+        synchronized (this.f8278a) {
             try {
                 if (f(bVar)) {
-                    a(this.f8205c, i10);
+                    a(this.f8279c, i10);
                 } else if (g(bVar)) {
-                    a(this.f8206d, i10);
+                    a(this.f8280d, i10);
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -98,9 +98,9 @@ public class a {
     }
 
     public void d(@NonNull c cVar) {
-        synchronized (this.f8204a) {
+        synchronized (this.f8278a) {
             try {
-                if (this.f8205c == cVar || this.f8206d == cVar) {
+                if (this.f8279c == cVar || this.f8280d == cVar) {
                     a(cVar, 2);
                 }
             } catch (Throwable th2) {
@@ -111,7 +111,7 @@ public class a {
 
     public boolean e(b bVar) {
         boolean z10;
-        synchronized (this.f8204a) {
+        synchronized (this.f8278a) {
             try {
                 z10 = f(bVar) || g(bVar);
             } catch (Throwable th2) {
@@ -122,21 +122,21 @@ public class a {
     }
 
     public final boolean f(b bVar) {
-        c cVar = this.f8205c;
+        c cVar = this.f8279c;
         return cVar != null && cVar.a(bVar);
     }
 
     public final boolean g(b bVar) {
-        c cVar = this.f8206d;
+        c cVar = this.f8280d;
         return cVar != null && cVar.a(bVar);
     }
 
     public void h(b bVar) {
-        synchronized (this.f8204a) {
+        synchronized (this.f8278a) {
             try {
                 if (f(bVar)) {
-                    this.f8205c = null;
-                    if (this.f8206d != null) {
+                    this.f8279c = null;
+                    if (this.f8280d != null) {
                         n();
                     }
                 }
@@ -147,10 +147,10 @@ public class a {
     }
 
     public void i(b bVar) {
-        synchronized (this.f8204a) {
+        synchronized (this.f8278a) {
             try {
                 if (f(bVar)) {
-                    l(this.f8205c);
+                    l(this.f8279c);
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -159,12 +159,12 @@ public class a {
     }
 
     public void j(b bVar) {
-        synchronized (this.f8204a) {
+        synchronized (this.f8278a) {
             try {
                 if (f(bVar)) {
-                    c cVar = this.f8205c;
-                    if (!cVar.f8209c) {
-                        cVar.f8209c = true;
+                    c cVar = this.f8279c;
+                    if (!cVar.f8283c) {
+                        cVar.f8283c = true;
                         this.b.removeCallbacksAndMessages(cVar);
                     }
                 }
@@ -175,12 +175,12 @@ public class a {
     }
 
     public void k(b bVar) {
-        synchronized (this.f8204a) {
+        synchronized (this.f8278a) {
             try {
                 if (f(bVar)) {
-                    c cVar = this.f8205c;
-                    if (cVar.f8209c) {
-                        cVar.f8209c = false;
+                    c cVar = this.f8279c;
+                    if (cVar.f8283c) {
+                        cVar.f8283c = false;
                         l(cVar);
                     }
                 }
@@ -204,23 +204,23 @@ public class a {
     }
 
     public void m(int i10, b bVar) {
-        synchronized (this.f8204a) {
+        synchronized (this.f8278a) {
             try {
                 if (f(bVar)) {
-                    c cVar = this.f8205c;
+                    c cVar = this.f8279c;
                     cVar.b = i10;
                     this.b.removeCallbacksAndMessages(cVar);
-                    l(this.f8205c);
+                    l(this.f8279c);
                     return;
                 }
                 if (g(bVar)) {
-                    this.f8206d.b = i10;
+                    this.f8280d.b = i10;
                 } else {
-                    this.f8206d = new c(i10, bVar);
+                    this.f8280d = new c(i10, bVar);
                 }
-                c cVar2 = this.f8205c;
+                c cVar2 = this.f8279c;
                 if (cVar2 == null || !a(cVar2, 4)) {
-                    this.f8205c = null;
+                    this.f8279c = null;
                     n();
                 }
             } catch (Throwable th2) {
@@ -230,15 +230,15 @@ public class a {
     }
 
     public final void n() {
-        c cVar = this.f8206d;
+        c cVar = this.f8280d;
         if (cVar != null) {
-            this.f8205c = cVar;
-            this.f8206d = null;
-            b bVar = cVar.f8208a.get();
+            this.f8279c = cVar;
+            this.f8280d = null;
+            b bVar = cVar.f8282a.get();
             if (bVar != null) {
                 bVar.show();
             } else {
-                this.f8205c = null;
+                this.f8279c = null;
             }
         }
     }

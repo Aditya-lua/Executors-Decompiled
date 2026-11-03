@@ -11,21 +11,21 @@ import androidx.annotation.NonNull;
 public final class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final b f3887a;
+    public final b f3785a;
     public int b = Integer.MAX_VALUE;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f3888c = 0;
+    public int f3786c = 0;
 
     /* JADX INFO: renamed from: b4.a$a, reason: collision with other inner class name */
-    public static class C0070a extends b {
+    public static class C0069a extends b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final EditText f3889a;
+        public final EditText f3787a;
         public final g b;
 
-        public C0070a(@NonNull EditText editText, boolean z10) {
-            this.f3889a = editText;
+        public C0069a(@NonNull EditText editText, boolean z10) {
+            this.f3787a = editText;
             g gVar = new g(editText, z10);
             this.b = gVar;
             editText.addTextChangedListener(gVar);
@@ -45,7 +45,7 @@ public final class a {
 
         @Override // b4.a.b
         public InputConnection b(@NonNull InputConnection inputConnection, @NonNull EditorInfo editorInfo) {
-            return inputConnection instanceof c ? inputConnection : new c(this.f3889a, inputConnection, editorInfo);
+            return inputConnection instanceof c ? inputConnection : new c(this.f3787a, inputConnection, editorInfo);
         }
 
         @Override // b4.a.b
@@ -70,21 +70,21 @@ public final class a {
 
     public a(@NonNull EditText editText, boolean z10) {
         x2.g.h(editText, "editText cannot be null");
-        this.f3887a = new C0070a(editText, z10);
+        this.f3785a = new C0069a(editText, z10);
     }
 
     public KeyListener a(KeyListener keyListener) {
-        return this.f3887a.a(keyListener);
+        return this.f3785a.a(keyListener);
     }
 
     public InputConnection b(InputConnection inputConnection, @NonNull EditorInfo editorInfo) {
         if (inputConnection == null) {
             return null;
         }
-        return this.f3887a.b(inputConnection, editorInfo);
+        return this.f3785a.b(inputConnection, editorInfo);
     }
 
     public void c(boolean z10) {
-        this.f3887a.c(z10);
+        this.f3785a.c(z10);
     }
 }

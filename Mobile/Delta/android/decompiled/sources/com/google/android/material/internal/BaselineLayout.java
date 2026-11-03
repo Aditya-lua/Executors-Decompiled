@@ -9,16 +9,16 @@ import android.view.ViewGroup;
 public class BaselineLayout extends ViewGroup {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f8026a;
+    public int f8100a;
 
     public BaselineLayout(Context context, AttributeSet attributeSet) {
         super(context, attributeSet, 0);
-        this.f8026a = -1;
+        this.f8100a = -1;
     }
 
     @Override // android.view.View
     public int getBaseline() {
-        return this.f8026a;
+        return this.f8100a;
     }
 
     @Override // android.view.ViewGroup, android.view.View
@@ -33,7 +33,7 @@ public class BaselineLayout extends ViewGroup {
                 int measuredWidth = childAt.getMeasuredWidth();
                 int measuredHeight = childAt.getMeasuredHeight();
                 int i15 = ((paddingRight - measuredWidth) / 2) + paddingLeft;
-                int baseline = (this.f8026a == -1 || childAt.getBaseline() == -1) ? paddingTop : (this.f8026a + paddingTop) - childAt.getBaseline();
+                int baseline = (this.f8100a == -1 || childAt.getBaseline() == -1) ? paddingTop : (this.f8100a + paddingTop) - childAt.getBaseline();
                 childAt.layout(i15, baseline, measuredWidth + i15, measuredHeight + baseline);
             }
         }
@@ -63,7 +63,7 @@ public class BaselineLayout extends ViewGroup {
         }
         if (iMax3 != -1) {
             iMax = Math.max(iMax, Math.max(iMax4, getPaddingBottom()) + iMax3);
-            this.f8026a = iMax3;
+            this.f8100a = iMax3;
         }
         setMeasuredDimension(View.resolveSizeAndState(Math.max(iMax2, getSuggestedMinimumWidth()), i10, iCombineMeasuredStates), View.resolveSizeAndState(Math.max(iMax, getSuggestedMinimumHeight()), i11, iCombineMeasuredStates << 16));
     }

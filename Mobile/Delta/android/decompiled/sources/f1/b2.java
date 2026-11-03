@@ -4,25 +4,25 @@ package f1;
 public abstract class b2 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final u f15810a;
+    public final u f16406a;
     public final f1 b;
 
     public static final class a extends b2 {
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final v f15811c;
+        public final v f16407c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final int f15812d;
+        public final int f16408d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final Throwable f15813e;
+        public final Throwable f16409e;
 
         public a(u uVar, f1 f1Var, v vVar, int i10, Throwable th2) {
             super(uVar, f1Var);
-            this.f15811c = vVar;
-            this.f15812d = i10;
-            this.f15813e = th2;
+            this.f16407c = vVar;
+            this.f16408d = i10;
+            this.f16409e = th2;
         }
 
         public static String h(int i10) {
@@ -55,15 +55,15 @@ public abstract class b2 {
         }
 
         public Throwable i() {
-            return this.f15813e;
+            return this.f16409e;
         }
 
         public int j() {
-            return this.f15812d;
+            return this.f16408d;
         }
 
         public boolean k() {
-            return this.f15812d != 0;
+            return this.f16408d != 0;
         }
     }
 
@@ -92,7 +92,7 @@ public abstract class b2 {
     }
 
     public b2(u uVar, f1 f1Var) {
-        this.f15810a = (u) x2.g.g(uVar);
+        this.f16406a = (u) x2.g.g(uVar);
         this.b = (f1) x2.g.g(f1Var);
     }
 
@@ -122,6 +122,6 @@ public abstract class b2 {
     }
 
     public u c() {
-        return this.f15810a;
+        return this.f16406a;
     }
 }

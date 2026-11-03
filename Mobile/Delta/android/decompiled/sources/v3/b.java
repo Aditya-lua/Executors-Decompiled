@@ -11,10 +11,10 @@ public final class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final Set<String> f32749a = new LinkedHashSet();
+    public static final Set<String> f33317a = new LinkedHashSet();
 
     @NotNull
     public static final Set<String> a() {
-        return f32749a;
+        return f33317a;
     }
 }

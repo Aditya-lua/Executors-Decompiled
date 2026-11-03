@@ -6,6 +6,9 @@ import android.os.Looper;
 import android.os.Parcel;
 import android.os.Parcelable;
 import com.withpersona.sdk2.inquiry.network.dto.ui.components.UiComponentConfig;
+import iu.g1;
+import iu.l0;
+import iu.p0;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -16,14 +19,11 @@ import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.Intrinsics;
-import ku.g1;
-import ku.l0;
-import ku.p0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0007\u0018\u0000 \u00122\u00020\u0001:\u0002\u0016\u001fB\u0019\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J7\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\n\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\b2\u000e\u0010\u000e\u001a\n\u0012\u0004\u0012\u00020\r\u0018\u00010\fH\u0007¢\u0006\u0004\b\u0010\u0010\u0011J0\u0010\u0012\u001a\n\u0012\u0004\u0012\u00020\r\u0018\u00010\f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\n\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\bH\u0086@¢\u0006\u0004\b\u0012\u0010\u0013J\u0010\u0010\u0014\u001a\u00020\u000fH\u0086@¢\u0006\u0004\b\u0014\u0010\u0015R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0016\u0010\u0017R\u0014\u0010\u001b\u001a\u00020\u00188\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0019\u0010\u001aR\u0018\u0010\u001e\u001a\u0004\u0018\u00010\u001c8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0014\u0010\u001d¨\u0006 "}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/UiStepSavedStateHelper;", "", "Landroid/content/Context;", "applicationContext", "Lku/p0;", "coroutineScope", "<init>", "(Landroid/content/Context;Lku/p0;)V", "", "sessionToken", "inquiryId", "stepName", "", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/UiComponentConfig;", "componentConfigs", "", "e", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V", "d", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnt/b;)Ljava/lang/Object;", "c", "(Lnt/b;)Ljava/lang/Object;", "a", "Lku/p0;", "Ljava/io/File;", "b", "Ljava/io/File;", "configFile", "Lcom/withpersona/sdk2/inquiry/internal/UiStepSavedStateHelper$UiStepUiComponentConfig;", "Lcom/withpersona/sdk2/inquiry/internal/UiStepSavedStateHelper$UiStepUiComponentConfig;", "savedData", "UiStepUiComponentConfig", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0007\u0018\u0000 \u00122\u00020\u0001:\u0002\u0016\u001fB\u0019\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J7\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\n\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\b2\u000e\u0010\u000e\u001a\n\u0012\u0004\u0012\u00020\r\u0018\u00010\fH\u0007¢\u0006\u0004\b\u0010\u0010\u0011J0\u0010\u0012\u001a\n\u0012\u0004\u0012\u00020\r\u0018\u00010\f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\n\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\bH\u0086@¢\u0006\u0004\b\u0012\u0010\u0013J\u0010\u0010\u0014\u001a\u00020\u000fH\u0086@¢\u0006\u0004\b\u0014\u0010\u0015R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0016\u0010\u0017R\u0014\u0010\u001b\u001a\u00020\u00188\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0019\u0010\u001aR\u0018\u0010\u001e\u001a\u0004\u0018\u00010\u001c8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0014\u0010\u001d¨\u0006 "}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/UiStepSavedStateHelper;", "", "Landroid/content/Context;", "applicationContext", "Liu/p0;", "coroutineScope", "<init>", "(Landroid/content/Context;Liu/p0;)V", "", "sessionToken", "inquiryId", "stepName", "", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/UiComponentConfig;", "componentConfigs", "", "e", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V", "d", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Llt/b;)Ljava/lang/Object;", "c", "(Llt/b;)Ljava/lang/Object;", "a", "Liu/p0;", "Ljava/io/File;", "b", "Ljava/io/File;", "configFile", "Lcom/withpersona/sdk2/inquiry/internal/UiStepSavedStateHelper$UiStepUiComponentConfig;", "Lcom/withpersona/sdk2/inquiry/internal/UiStepSavedStateHelper$UiStepUiComponentConfig;", "savedData", "UiStepUiComponentConfig", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class UiStepSavedStateHelper {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -38,7 +38,7 @@ public final class UiStepSavedStateHelper {
     @Nullable
     public UiStepUiComponentConfig savedData;
 
-    @Metadata(d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u000e\b\u0007\u0018\u00002\u00020\u0001B-\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0004\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0002\u0012\f\u0010\b\u001a\b\u0012\u0004\u0012\u00020\u00070\u0006¢\u0006\u0004\b\t\u0010\nJ\r\u0010\f\u001a\u00020\u000b¢\u0006\u0004\b\f\u0010\rJ\u001d\u0010\u0012\u001a\u00020\u00112\u0006\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0010\u001a\u00020\u000b¢\u0006\u0004\b\u0012\u0010\u0013R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0014\u0010\u0015\u001a\u0004\b\u0016\u0010\u0017R\u0017\u0010\u0004\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0018\u0010\u0015\u001a\u0004\b\u0014\u0010\u0017R\u0017\u0010\u0005\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0019\u0010\u0015\u001a\u0004\b\u001a\u0010\u0017R\u001d\u0010\b\u001a\b\u0012\u0004\u0012\u00020\u00070\u00068\u0006¢\u0006\f\n\u0004\b\u001b\u0010\u001c\u001a\u0004\b\u001d\u0010\u001e¨\u0006\u001f"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/UiStepSavedStateHelper$UiStepUiComponentConfig;", "Landroid/os/Parcelable;", "", "sessionToken", "inquiryId", "stepName", "", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/UiComponentConfig;", "uiComponentConfig", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "a", "Ljava/lang/String;", "y", "()Ljava/lang/String;", "b", "c", "f", "d", "Ljava/util/List;", "g", "()Ljava/util/List;", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u000e\b\u0007\u0018\u00002\u00020\u0001B-\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0004\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0002\u0012\f\u0010\b\u001a\b\u0012\u0004\u0012\u00020\u00070\u0006¢\u0006\u0004\b\t\u0010\nJ\r\u0010\f\u001a\u00020\u000b¢\u0006\u0004\b\f\u0010\rJ\u001d\u0010\u0012\u001a\u00020\u00112\u0006\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0010\u001a\u00020\u000b¢\u0006\u0004\b\u0012\u0010\u0013R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0014\u0010\u0015\u001a\u0004\b\u0016\u0010\u0017R\u0017\u0010\u0004\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0018\u0010\u0015\u001a\u0004\b\u0014\u0010\u0017R\u0017\u0010\u0005\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0019\u0010\u0015\u001a\u0004\b\u001a\u0010\u0017R\u001d\u0010\b\u001a\b\u0012\u0004\u0012\u00020\u00070\u00068\u0006¢\u0006\f\n\u0004\b\u001b\u0010\u001c\u001a\u0004\b\u001d\u0010\u001e¨\u0006\u001f"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/UiStepSavedStateHelper$UiStepUiComponentConfig;", "Landroid/os/Parcelable;", "", "sessionToken", "inquiryId", "stepName", "", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/UiComponentConfig;", "uiComponentConfig", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "a", "Ljava/lang/String;", "x", "()Ljava/lang/String;", "b", "c", "f", "d", "Ljava/util/List;", "g", "()Ljava/util/List;", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class UiStepUiComponentConfig implements Parcelable {
 
         @NotNull
@@ -133,189 +133,194 @@ public final class UiStepSavedStateHelper {
         }
 
         @NotNull
-        /* JADX INFO: renamed from: y, reason: from getter */
+        /* JADX INFO: renamed from: x, reason: from getter */
         public final String getSessionToken() {
             return this.sessionToken;
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.internal.UiStepSavedStateHelper$clearSavedState$2", f = "UiStepSavedStateHelper.kt", l = {}, m = "invokeSuspend")
-    public static final class b extends pt.m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.internal.UiStepSavedStateHelper$clearSavedState$2", f = "UiStepSavedStateHelper.kt", l = {}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class b extends nt.m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f11420t;
+        public int f11501t;
 
-        public b(nt.b<? super b> bVar) {
+        public b(lt.b<? super b> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             return UiStepSavedStateHelper.this.new b(bVar);
         }
 
-        @Override // pt.a
-        public final Object invokeSuspend(Object obj) {
-            ot.c.e();
-            if (this.f11420t != 0) {
-                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-            }
-            jt.o.b(obj);
-            UiStepSavedStateHelper.this.configFile.delete();
-            UiStepSavedStateHelper.this.savedData = null;
-            return Unit.f22483a;
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((b) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
         }
 
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((b) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+        @Override // nt.a
+        public final Object invokeSuspend(Object obj) {
+            mt.c.e();
+            if (this.f11501t != 0) {
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            }
+            gt.o.b(obj);
+            UiStepSavedStateHelper.this.configFile.delete();
+            UiStepSavedStateHelper.this.savedData = null;
+            return Unit.f22938a;
         }
     }
 
-    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0003\u001a\n\u0012\u0004\u0012\u00020\u0002\u0018\u00010\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Lku/p0;", "", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/UiComponentConfig;", "<anonymous>", "(Lku/p0;)Ljava/util/List;"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.internal.UiStepSavedStateHelper$restoreComponentConfigs$2", f = "UiStepSavedStateHelper.kt", l = {129, 162}, m = "invokeSuspend")
-    public static final class c extends pt.m implements Function2<p0, nt.b<? super List<? extends UiComponentConfig>>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.internal.UiStepSavedStateHelper$restoreComponentConfigs$2", f = "UiStepSavedStateHelper.kt", l = {129, 162}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0003\u001a\n\u0012\u0004\u0012\u00020\u0002\u0018\u00010\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Liu/p0;", "", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/UiComponentConfig;", "<anonymous>", "(Liu/p0;)Ljava/util/List;"}, k = 3, mv = {2, 2, 0})
+    public static final class c extends nt.m implements Function2<p0, lt.b<? super List<? extends UiComponentConfig>>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f11422t;
+        public Object f11503t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f11423u;
+        public Object f11504u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public int f11424v;
+        public int f11505v;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public final /* synthetic */ String f11426x;
+        public final /* synthetic */ String f11507x;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public final /* synthetic */ String f11427y;
+        public final /* synthetic */ String f11508y;
 
         /* JADX INFO: renamed from: z, reason: collision with root package name */
-        public final /* synthetic */ String f11428z;
+        public final /* synthetic */ String f11509z;
 
-        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-        @pt.f(c = "com.withpersona.sdk2.inquiry.internal.UiStepSavedStateHelper$restoreComponentConfigs$2$1", f = "UiStepSavedStateHelper.kt", l = {}, m = "invokeSuspend")
-        public static final class a extends pt.m implements Function2<p0, nt.b<? super Unit>, Object> {
+        @nt.f(c = "com.withpersona.sdk2.inquiry.internal.UiStepSavedStateHelper$restoreComponentConfigs$2$1", f = "UiStepSavedStateHelper.kt", l = {}, m = "invokeSuspend")
+        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+        public static final class a extends nt.m implements Function2<p0, lt.b<? super Unit>, Object> {
 
             /* JADX INFO: renamed from: t, reason: collision with root package name */
-            public int f11429t;
+            public int f11510t;
 
             /* JADX INFO: renamed from: u, reason: collision with root package name */
-            public final /* synthetic */ UiStepSavedStateHelper f11430u;
+            public final /* synthetic */ UiStepSavedStateHelper f11511u;
 
             /* JADX INFO: renamed from: v, reason: collision with root package name */
-            public final /* synthetic */ UiStepUiComponentConfig f11431v;
+            public final /* synthetic */ UiStepUiComponentConfig f11512v;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public a(UiStepSavedStateHelper uiStepSavedStateHelper, UiStepUiComponentConfig uiStepUiComponentConfig, nt.b<? super a> bVar) {
+            public a(UiStepSavedStateHelper uiStepSavedStateHelper, UiStepUiComponentConfig uiStepUiComponentConfig, lt.b<? super a> bVar) {
                 super(2, bVar);
-                this.f11430u = uiStepSavedStateHelper;
-                this.f11431v = uiStepUiComponentConfig;
+                this.f11511u = uiStepSavedStateHelper;
+                this.f11512v = uiStepUiComponentConfig;
             }
 
-            @Override // pt.a
-            public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-                return new a(this.f11430u, this.f11431v, bVar);
-            }
-
-            @Override // pt.a
-            public final Object invokeSuspend(Object obj) {
-                ot.c.e();
-                if (this.f11429t != 0) {
-                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-                }
-                jt.o.b(obj);
-                this.f11430u.savedData = this.f11431v;
-                return Unit.f22483a;
+            @Override // nt.a
+            public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+                return new a(this.f11511u, this.f11512v, bVar);
             }
 
             @Override // kotlin.jvm.functions.Function2
-            public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-                return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+                return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+            }
+
+            @Override // nt.a
+            public final Object invokeSuspend(Object obj) {
+                mt.c.e();
+                if (this.f11510t != 0) {
+                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                }
+                gt.o.b(obj);
+                this.f11511u.savedData = this.f11512v;
+                return Unit.f22938a;
             }
         }
 
-        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-        @pt.f(c = "com.withpersona.sdk2.inquiry.internal.UiStepSavedStateHelper$restoreComponentConfigs$2$restoredData$1", f = "UiStepSavedStateHelper.kt", l = {}, m = "invokeSuspend")
-        public static final class b extends pt.m implements Function2<p0, nt.b<? super Unit>, Object> {
+        @nt.f(c = "com.withpersona.sdk2.inquiry.internal.UiStepSavedStateHelper$restoreComponentConfigs$2$restoredData$1", f = "UiStepSavedStateHelper.kt", l = {}, m = "invokeSuspend")
+        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+        public static final class b extends nt.m implements Function2<p0, lt.b<? super Unit>, Object> {
 
             /* JADX INFO: renamed from: t, reason: collision with root package name */
-            public int f11432t;
+            public int f11513t;
 
             /* JADX INFO: renamed from: u, reason: collision with root package name */
-            public final /* synthetic */ UiStepSavedStateHelper f11433u;
+            public final /* synthetic */ UiStepSavedStateHelper f11514u;
 
             /* JADX INFO: renamed from: v, reason: collision with root package name */
-            public final /* synthetic */ Parcel f11434v;
+            public final /* synthetic */ Parcel f11515v;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public b(UiStepSavedStateHelper uiStepSavedStateHelper, Parcel parcel, nt.b<? super b> bVar) {
+            public b(UiStepSavedStateHelper uiStepSavedStateHelper, Parcel parcel, lt.b<? super b> bVar) {
                 super(2, bVar);
-                this.f11433u = uiStepSavedStateHelper;
-                this.f11434v = parcel;
+                this.f11514u = uiStepSavedStateHelper;
+                this.f11515v = parcel;
             }
 
-            @Override // pt.a
-            public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-                return new b(this.f11433u, this.f11434v, bVar);
+            @Override // nt.a
+            public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+                return new b(this.f11514u, this.f11515v, bVar);
             }
 
-            @Override // pt.a
+            @Override // kotlin.jvm.functions.Function2
+            public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+                return ((b) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+            }
+
+            @Override // nt.a
             public final Object invokeSuspend(Object obj) {
-                ot.c.e();
-                if (this.f11432t != 0) {
+                mt.c.e();
+                if (this.f11513t != 0) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                 }
-                jt.o.b(obj);
-                FileInputStream fileInputStream = new FileInputStream(this.f11433u.configFile);
-                Parcel parcel = this.f11434v;
+                gt.o.b(obj);
+                FileInputStream fileInputStream = new FileInputStream(this.f11514u.configFile);
+                Parcel parcel = this.f11515v;
                 try {
-                    byte[] bArrC = ut.b.c(fileInputStream);
+                    byte[] bArrC = st.b.c(fileInputStream);
                     parcel.unmarshall(bArrC, 0, bArrC.length);
-                    Unit unit = Unit.f22483a;
-                    ut.c.a(fileInputStream, null);
-                    return Unit.f22483a;
+                    Unit unit = Unit.f22938a;
+                    st.c.a(fileInputStream, null);
+                    return Unit.f22938a;
                 } catch (Throwable th2) {
                     try {
                         throw th2;
                     } catch (Throwable th3) {
-                        ut.c.a(fileInputStream, th2);
+                        st.c.a(fileInputStream, th2);
                         throw th3;
                     }
                 }
             }
-
-            @Override // kotlin.jvm.functions.Function2
-            public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-                return ((b) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
-            }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public c(String str, String str2, String str3, nt.b<? super c> bVar) {
+        public c(String str, String str2, String str3, lt.b<? super c> bVar) {
             super(2, bVar);
-            this.f11426x = str;
-            this.f11427y = str2;
-            this.f11428z = str3;
+            this.f11507x = str;
+            this.f11508y = str2;
+            this.f11509z = str3;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return UiStepSavedStateHelper.this.new c(this.f11426x, this.f11427y, this.f11428z, bVar);
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return UiStepSavedStateHelper.this.new c(this.f11507x, this.f11508y, this.f11509z, bVar);
+        }
+
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super List<? extends UiComponentConfig>> bVar) {
+            return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:42:0x00c5, code lost:
         
-            if (ku.i.g(r9, r4, r8) == r1) goto L43;
+            if (iu.i.g(r9, r4, r8) == r1) goto L43;
          */
         /* JADX WARN: Multi-variable type inference failed */
         /* JADX WARN: Type inference failed for: r2v0, types: [int] */
         /* JADX WARN: Type inference failed for: r2v10 */
         /* JADX WARN: Type inference failed for: r2v6, types: [android.os.Parcel] */
         /* JADX WARN: Type inference failed for: r2v9 */
-        @Override // pt.a
+        @Override // nt.a
         /*
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct add '--show-bad-code' argument
@@ -327,130 +332,125 @@ public final class UiStepSavedStateHelper {
             */
             throw new UnsupportedOperationException("Method not decompiled: com.withpersona.sdk2.inquiry.internal.UiStepSavedStateHelper.c.invokeSuspend(java.lang.Object):java.lang.Object");
         }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super List<? extends UiComponentConfig>> bVar) {
-            return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
-        }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.internal.UiStepSavedStateHelper$saveComponentConfigs$2", f = "UiStepSavedStateHelper.kt", l = {96}, m = "invokeSuspend")
-    public static final class d extends pt.m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.internal.UiStepSavedStateHelper$saveComponentConfigs$2", f = "UiStepSavedStateHelper.kt", l = {96}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class d extends nt.m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f11435t;
+        public Object f11516t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public int f11436u;
+        public int f11517u;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public final /* synthetic */ UiStepUiComponentConfig f11438w;
+        public final /* synthetic */ UiStepUiComponentConfig f11519w;
 
-        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-        @pt.f(c = "com.withpersona.sdk2.inquiry.internal.UiStepSavedStateHelper$saveComponentConfigs$2$1", f = "UiStepSavedStateHelper.kt", l = {}, m = "invokeSuspend")
-        public static final class a extends pt.m implements Function2<p0, nt.b<? super Unit>, Object> {
+        @nt.f(c = "com.withpersona.sdk2.inquiry.internal.UiStepSavedStateHelper$saveComponentConfigs$2$1", f = "UiStepSavedStateHelper.kt", l = {}, m = "invokeSuspend")
+        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+        public static final class a extends nt.m implements Function2<p0, lt.b<? super Unit>, Object> {
 
             /* JADX INFO: renamed from: t, reason: collision with root package name */
-            public int f11439t;
+            public int f11520t;
 
             /* JADX INFO: renamed from: u, reason: collision with root package name */
-            public final /* synthetic */ UiStepSavedStateHelper f11440u;
+            public final /* synthetic */ UiStepSavedStateHelper f11521u;
 
             /* JADX INFO: renamed from: v, reason: collision with root package name */
-            public final /* synthetic */ Bundle f11441v;
+            public final /* synthetic */ Bundle f11522v;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public a(UiStepSavedStateHelper uiStepSavedStateHelper, Bundle bundle, nt.b<? super a> bVar) {
+            public a(UiStepSavedStateHelper uiStepSavedStateHelper, Bundle bundle, lt.b<? super a> bVar) {
                 super(2, bVar);
-                this.f11440u = uiStepSavedStateHelper;
-                this.f11441v = bundle;
+                this.f11521u = uiStepSavedStateHelper;
+                this.f11522v = bundle;
             }
 
-            @Override // pt.a
-            public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-                return new a(this.f11440u, this.f11441v, bVar);
+            @Override // nt.a
+            public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+                return new a(this.f11521u, this.f11522v, bVar);
             }
 
-            @Override // pt.a
+            @Override // kotlin.jvm.functions.Function2
+            public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+                return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+            }
+
+            @Override // nt.a
             public final Object invokeSuspend(Object obj) {
-                ot.c.e();
-                if (this.f11439t != 0) {
+                mt.c.e();
+                if (this.f11520t != 0) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                 }
-                jt.o.b(obj);
-                FileOutputStream fileOutputStream = new FileOutputStream(this.f11440u.configFile);
-                Bundle bundle = this.f11441v;
+                gt.o.b(obj);
+                FileOutputStream fileOutputStream = new FileOutputStream(this.f11521u.configFile);
+                Bundle bundle = this.f11522v;
                 try {
                     Parcel parcelObtain = Parcel.obtain();
                     Intrinsics.checkNotNullExpressionValue(parcelObtain, "obtain(...)");
                     parcelObtain.writeBundle(bundle);
                     fileOutputStream.write(parcelObtain.marshall());
                     parcelObtain.recycle();
-                    Unit unit = Unit.f22483a;
-                    ut.c.a(fileOutputStream, null);
-                    return Unit.f22483a;
+                    Unit unit = Unit.f22938a;
+                    st.c.a(fileOutputStream, null);
+                    return Unit.f22938a;
                 } catch (Throwable th2) {
                     try {
                         throw th2;
                     } catch (Throwable th3) {
-                        ut.c.a(fileOutputStream, th2);
+                        st.c.a(fileOutputStream, th2);
                         throw th3;
                     }
                 }
             }
-
-            @Override // kotlin.jvm.functions.Function2
-            public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-                return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
-            }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public d(UiStepUiComponentConfig uiStepUiComponentConfig, nt.b<? super d> bVar) {
+        public d(UiStepUiComponentConfig uiStepUiComponentConfig, lt.b<? super d> bVar) {
             super(2, bVar);
-            this.f11438w = uiStepUiComponentConfig;
+            this.f11519w = uiStepUiComponentConfig;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return UiStepSavedStateHelper.this.new d(this.f11438w, bVar);
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return UiStepSavedStateHelper.this.new d(this.f11519w, bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((d) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            Object objE = ot.c.e();
-            int i10 = this.f11436u;
+            Object objE = mt.c.e();
+            int i10 = this.f11517u;
             try {
                 if (i10 == 0) {
-                    jt.o.b(obj);
+                    gt.o.b(obj);
                     File parentFile = UiStepSavedStateHelper.this.configFile.getParentFile();
                     if (parentFile != null) {
-                        pt.b.a(parentFile.mkdirs());
+                        nt.b.a(parentFile.mkdirs());
                     }
                     Bundle bundle = new Bundle();
-                    bundle.putParcelable("data", this.f11438w);
+                    bundle.putParcelable("data", this.f11519w);
                     l0 l0VarB = g1.b();
                     a aVar = new a(UiStepSavedStateHelper.this, bundle, null);
-                    this.f11435t = pt.l.a(bundle);
-                    this.f11436u = 1;
-                    if (ku.i.g(l0VarB, aVar, this) == objE) {
+                    this.f11516t = nt.l.a(bundle);
+                    this.f11517u = 1;
+                    if (iu.i.g(l0VarB, aVar, this) == objE) {
                         return objE;
                     }
                 } else {
                     if (i10 != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                     }
-                    jt.o.b(obj);
+                    gt.o.b(obj);
                 }
             } catch (Exception unused) {
             }
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((d) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            return Unit.f22938a;
         }
     }
 
@@ -462,14 +462,14 @@ public final class UiStepSavedStateHelper {
     }
 
     @Nullable
-    public final Object c(@NotNull nt.b<? super Unit> bVar) {
-        Object objG = ku.i.g(g1.c(), new b(null), bVar);
-        return objG == ot.c.e() ? objG : Unit.f22483a;
+    public final Object c(@NotNull lt.b<? super Unit> bVar) {
+        Object objG = iu.i.g(g1.c(), new b(null), bVar);
+        return objG == mt.c.e() ? objG : Unit.f22938a;
     }
 
     @Nullable
-    public final Object d(@NotNull String str, @NotNull String str2, @NotNull String str3, @NotNull nt.b<? super List<? extends UiComponentConfig>> bVar) {
-        return ku.i.g(g1.a(), new c(str, str2, str3, null), bVar);
+    public final Object d(@NotNull String str, @NotNull String str2, @NotNull String str3, @NotNull lt.b<? super List<? extends UiComponentConfig>> bVar) {
+        return iu.i.g(g1.a(), new c(str, str2, str3, null), bVar);
     }
 
     public final void e(@NotNull String sessionToken, @NotNull String inquiryId, @NotNull String stepName, @Nullable List<? extends UiComponentConfig> componentConfigs) {
@@ -494,6 +494,6 @@ public final class UiStepSavedStateHelper {
         }
         UiStepUiComponentConfig uiStepUiComponentConfig4 = new UiStepUiComponentConfig(sessionToken, inquiryId, stepName, componentConfigs);
         this.savedData = uiStepUiComponentConfig4;
-        ku.k.d(this.coroutineScope, null, null, new d(uiStepUiComponentConfig4, null), 3, null);
+        iu.k.d(this.coroutineScope, null, null, new d(uiStepUiComponentConfig4, null), 3, null);
     }
 }

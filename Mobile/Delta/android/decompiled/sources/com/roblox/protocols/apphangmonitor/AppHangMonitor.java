@@ -4,7 +4,7 @@ package com.roblox.protocols.apphangmonitor;
 public class AppHangMonitor {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public long f9685a = createAppHangMonitor();
+    public long f9765a = createAppHangMonitor();
 
     private native long createAppHangMonitor();
 
@@ -15,21 +15,21 @@ public class AppHangMonitor {
     private native void nativeStartMonitoring(long j10);
 
     public void a() {
-        long j10 = this.f9685a;
+        long j10 = this.f9765a;
         if (j10 != 0) {
             nativePause(j10);
         }
     }
 
     public void b() {
-        long j10 = this.f9685a;
+        long j10 = this.f9765a;
         if (j10 != 0) {
             nativeResume(j10);
         }
     }
 
     public void c() {
-        long j10 = this.f9685a;
+        long j10 = this.f9765a;
         if (j10 != 0) {
             nativeStartMonitoring(j10);
         }

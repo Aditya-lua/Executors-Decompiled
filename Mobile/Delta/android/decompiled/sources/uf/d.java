@@ -1,12 +1,15 @@
 package uf;
 
-import java.util.concurrent.Executor;
-
 /* JADX INFO: loaded from: classes2.dex */
-public interface d {
-    <T> void a(Class<T> cls, Executor executor, b<? super T> bVar);
+public @interface d {
 
-    <T> void b(Class<T> cls, b<? super T> bVar);
+    public enum a {
+        DEFAULT,
+        SIGNED,
+        FIXED
+    }
 
-    <T> void c(Class<T> cls, b<? super T> bVar);
+    a intEncoding() default a.DEFAULT;
+
+    int tag();
 }

@@ -7,27 +7,27 @@ import java.util.logging.Logger;
 public class Logging {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Logger f27918a = a();
+    public static final Logger f28165a = a();
     public static volatile boolean b;
 
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f27919a;
+        public static final /* synthetic */ int[] f28166a;
 
         static {
             int[] iArr = new int[b.values().length];
-            f27919a = iArr;
+            f28166a = iArr;
             try {
                 iArr[b.LS_ERROR.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f27919a[b.LS_WARNING.ordinal()] = 2;
+                f28166a[b.LS_WARNING.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f27919a[b.LS_INFO.ordinal()] = 3;
+                f28166a[b.LS_INFO.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
         }
@@ -64,7 +64,7 @@ public class Logging {
             nativeLog(bVar.ordinal(), str, str2);
             return;
         }
-        int i10 = a.f27919a[bVar.ordinal()];
+        int i10 = a.f28166a[bVar.ordinal()];
         if (i10 == 1) {
             level = Level.SEVERE;
         } else if (i10 != 2) {
@@ -72,7 +72,7 @@ public class Logging {
         } else {
             level = Level.WARNING;
         }
-        f27918a.log(level, str + ": " + str2);
+        f28165a.log(level, str + ": " + str2);
     }
 
     public static void e(String str, String str2) {

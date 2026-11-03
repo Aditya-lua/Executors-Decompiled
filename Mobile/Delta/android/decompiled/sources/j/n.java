@@ -27,40 +27,40 @@ public class n {
     public static final Class<?>[] b = {Context.class, AttributeSet.class};
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final int[] f20962c = {R.attr.onClick};
+    public static final int[] f21535c = {R.attr.onClick};
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final int[] f20963d = {R.attr.accessibilityHeading};
+    public static final int[] f21536d = {R.attr.accessibilityHeading};
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final int[] f20964e = {R.attr.accessibilityPaneTitle};
+    public static final int[] f21537e = {R.attr.accessibilityPaneTitle};
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final int[] f20965f = {R.attr.screenReaderFocusable};
+    public static final int[] f21538f = {R.attr.screenReaderFocusable};
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final String[] f20966g = {"android.widget.", "android.view.", "android.webkit."};
+    public static final String[] f21539g = {"android.widget.", "android.view.", "android.webkit."};
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final w1.j<String, Constructor<? extends View>> f20967h = new w1.j<>();
+    public static final w1.j<String, Constructor<? extends View>> f21540h = new w1.j<>();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object[] f20968a = new Object[2];
+    public final Object[] f21541a = new Object[2];
 
     public static class a implements View.OnClickListener {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final View f20969a;
+        public final View f21542a;
         public final String b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public Method f20970c;
+        public Method f21543c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public Context f20971d;
+        public Context f21544d;
 
         public a(@NonNull View view, @NonNull String str) {
-            this.f20969a = view;
+            this.f21542a = view;
             this.b = str;
         }
 
@@ -70,30 +70,30 @@ public class n {
             while (context != null) {
                 try {
                     if (!context.isRestricted() && (method = context.getClass().getMethod(this.b, View.class)) != null) {
-                        this.f20970c = method;
-                        this.f20971d = context;
+                        this.f21543c = method;
+                        this.f21544d = context;
                         return;
                     }
                 } catch (NoSuchMethodException unused) {
                 }
                 context = context instanceof ContextWrapper ? ((ContextWrapper) context).getBaseContext() : null;
             }
-            int id2 = this.f20969a.getId();
+            int id2 = this.f21542a.getId();
             if (id2 == -1) {
                 str = "";
             } else {
-                str = " with id '" + this.f20969a.getContext().getResources().getResourceEntryName(id2) + "'";
+                str = " with id '" + this.f21542a.getContext().getResources().getResourceEntryName(id2) + "'";
             }
-            throw new IllegalStateException("Could not find method " + this.b + "(View) in a parent or ancestor Context for android:onClick attribute defined on view " + this.f20969a.getClass() + str);
+            throw new IllegalStateException("Could not find method " + this.b + "(View) in a parent or ancestor Context for android:onClick attribute defined on view " + this.f21542a.getClass() + str);
         }
 
         @Override // android.view.View.OnClickListener
         public void onClick(@NonNull View view) {
-            if (this.f20970c == null) {
-                a(this.f20969a.getContext());
+            if (this.f21543c == null) {
+                a(this.f21542a.getContext());
             }
             try {
-                this.f20970c.invoke(this.f20971d, view);
+                this.f21543c.invoke(this.f21544d, view);
             } catch (IllegalAccessException e10) {
                 throw new IllegalStateException("Could not execute non-public method for android:onClick", e10);
             } catch (InvocationTargetException e11) {
@@ -116,17 +116,17 @@ public class n {
         if (Build.VERSION.SDK_INT > 28) {
             return;
         }
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, f20963d);
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, f21536d);
         if (typedArrayObtainStyledAttributes.hasValue(0)) {
             o0.n0(view, typedArrayObtainStyledAttributes.getBoolean(0, false));
         }
         typedArrayObtainStyledAttributes.recycle();
-        TypedArray typedArrayObtainStyledAttributes2 = context.obtainStyledAttributes(attributeSet, f20964e);
+        TypedArray typedArrayObtainStyledAttributes2 = context.obtainStyledAttributes(attributeSet, f21537e);
         if (typedArrayObtainStyledAttributes2.hasValue(0)) {
             o0.p0(view, typedArrayObtainStyledAttributes2.getString(0));
         }
         typedArrayObtainStyledAttributes2.recycle();
-        TypedArray typedArrayObtainStyledAttributes3 = context.obtainStyledAttributes(attributeSet, f20965f);
+        TypedArray typedArrayObtainStyledAttributes3 = context.obtainStyledAttributes(attributeSet, f21538f);
         if (typedArrayObtainStyledAttributes3.hasValue(0)) {
             o0.C0(view, typedArrayObtainStyledAttributes3.getBoolean(0, false));
         }
@@ -136,7 +136,7 @@ public class n {
     public final void b(View view, AttributeSet attributeSet) {
         Context context = view.getContext();
         if ((context instanceof ContextWrapper) && view.hasOnClickListeners()) {
-            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, f20962c);
+            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, f21535c);
             String string = typedArrayObtainStyledAttributes.getString(0);
             if (string != null) {
                 view.setOnClickListener(new a(view, string));
@@ -302,7 +302,7 @@ public class n {
 
     public final View s(Context context, String str, String str2) {
         String str3;
-        w1.j<String, Constructor<? extends View>> jVar = f20967h;
+        w1.j<String, Constructor<? extends View>> jVar = f21540h;
         Constructor<? extends View> constructor = jVar.get(str);
         if (constructor == null) {
             if (str2 != null) {
@@ -318,7 +318,7 @@ public class n {
             jVar.put(str, constructor);
         }
         constructor.setAccessible(true);
-        return constructor.newInstance(this.f20968a);
+        return constructor.newInstance(this.f21541a);
     }
 
     public final View t(Context context, String str, AttributeSet attributeSet) {
@@ -326,7 +326,7 @@ public class n {
             str = attributeSet.getAttributeValue(null, "class");
         }
         try {
-            Object[] objArr = this.f20968a;
+            Object[] objArr = this.f21541a;
             objArr[0] = context;
             objArr[1] = attributeSet;
             if (-1 != str.indexOf(46)) {
@@ -334,7 +334,7 @@ public class n {
             }
             int i10 = 0;
             while (true) {
-                String[] strArr = f20966g;
+                String[] strArr = f21539g;
                 if (i10 >= strArr.length) {
                     return null;
                 }
@@ -347,7 +347,7 @@ public class n {
         } catch (Exception unused) {
             return null;
         } finally {
-            Object[] objArr2 = this.f20968a;
+            Object[] objArr2 = this.f21541a;
             objArr2[0] = null;
             objArr2[1] = null;
         }

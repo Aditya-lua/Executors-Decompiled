@@ -11,11 +11,11 @@ import n0.a3;
 public abstract class g1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final g1 f15856a = d(0, a.INACTIVE);
+    public static final g1 f16452a = d(0, a.INACTIVE);
     public static final Set<Integer> b = Collections.unmodifiableSet(new HashSet(Arrays.asList(0, -1)));
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final a3<g1> f15857c = n0.p1.f(d(0, a.ACTIVE));
+    public static final a3<g1> f16453c = n0.p1.f(d(0, a.ACTIVE));
 
     public enum a {
         ACTIVE,

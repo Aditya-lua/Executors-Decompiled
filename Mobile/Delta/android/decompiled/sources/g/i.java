@@ -16,7 +16,7 @@ public final class i {
 
     public static /* synthetic */ h b(h.f.h hVar, int i10, boolean z10, h.f.b bVar, int i11, Object obj) {
         if ((i11 & 1) != 0) {
-            hVar = h.f.c.f18485a;
+            hVar = h.f.c.f18972a;
         }
         if ((i11 & 2) != 0) {
             i10 = h.e.INSTANCE.a();
@@ -25,7 +25,7 @@ public final class i {
             z10 = false;
         }
         if ((i11 & 8) != 0) {
-            bVar = h.f.b.a.f18484a;
+            bVar = h.f.b.a.f18971a;
         }
         return a(hVar, i10, z10, bVar);
     }

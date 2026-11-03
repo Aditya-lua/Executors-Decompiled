@@ -42,7 +42,7 @@ public final class AFj1sSDK {
         Boolean bool = (Boolean) AFLogger(new Function0() { // from class: com.appsflyer.internal.k1
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return Boolean.valueOf(AFj1sSDK.registerClient(this.f5500a, str));
+                return Boolean.valueOf(AFj1sSDK.registerClient(this.f5573a, str));
             }
         }, "Error while trying to check presence of " + str + " extra from intent", Boolean.TRUE, true);
         if (bool != null) {
@@ -57,7 +57,7 @@ public final class AFj1sSDK {
         return (T) AFLogger(new Function0() { // from class: com.appsflyer.internal.h1
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return AFj1sSDK.U_(this.f5490a, str);
+                return AFj1sSDK.U_(this.f5563a, str);
             }
         }, "Error while trying to read " + str + " extra from intent", null, true);
     }
@@ -68,7 +68,7 @@ public final class AFj1sSDK {
         return (Intent) AFLogger(new Function0() { // from class: com.appsflyer.internal.i1
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return AFj1sSDK.V_(this.f5493a, str, j10);
+                return AFj1sSDK.V_(this.f5566a, str, j10);
             }
         }, "Error while trying to write " + str + " extra to intent", null, true);
     }
@@ -79,7 +79,7 @@ public final class AFj1sSDK {
         return (String) AFLogger(new Function0() { // from class: com.appsflyer.internal.j1
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return AFj1sSDK.AFKeystoreWrapper(this.f5497a, str);
+                return AFj1sSDK.AFKeystoreWrapper(this.f5570a, str);
             }
         }, "Error while trying to read " + str + " extra from intent", null, true);
     }
@@ -95,16 +95,16 @@ public final class AFj1sSDK {
         Object objAFLogger;
         synchronized (this.AFKeystoreWrapper) {
             try {
-                jt.n.Companion companion = jt.n.INSTANCE;
-                objB = jt.n.b(function0.invoke());
+                gt.n.Companion companion = gt.n.INSTANCE;
+                objB = gt.n.b(function0.invoke());
             } catch (Throwable th2) {
-                jt.n.Companion companion2 = jt.n.INSTANCE;
-                objB = jt.n.b(jt.o.a(th2));
+                gt.n.Companion companion2 = gt.n.INSTANCE;
+                objB = gt.n.b(gt.o.a(th2));
             }
-            hu.c cVarB = kotlin.jvm.internal.d0.b(ConcurrentModificationException.class);
+            fu.c cVarB = kotlin.jvm.internal.d0.b(ConcurrentModificationException.class);
             Object objB2 = kotlin.jvm.internal.d0.b(ArrayIndexOutOfBoundsException.class);
-            hu.c[] cVarArr = {cVarB, objB2};
-            Throwable thE = jt.n.e(objB);
+            fu.c[] cVarArr = {cVarB, objB2};
+            Throwable thE = gt.n.e(objB);
             if (thE == null) {
                 objB2 = t8;
             } else {
@@ -119,21 +119,21 @@ public final class AFj1sSDK {
                                 AFLoggerBase.e$default(AFLogger.INSTANCE, LogTag.GENERAL, str, thE, false, false, false, false, 72, null);
                                 objAFLogger = objB2;
                             }
-                            objB = jt.n.b(objAFLogger);
+                            objB = gt.n.b(objAFLogger);
                         } else {
                             throw thE;
                         }
                     } catch (Throwable th3) {
                         th = th3;
-                        jt.n.Companion companion3 = jt.n.INSTANCE;
-                        objB = jt.n.b(jt.o.a(th));
+                        gt.n.Companion companion3 = gt.n.INSTANCE;
+                        objB = gt.n.b(gt.o.a(th));
                     }
                 } catch (Throwable th4) {
                     th = th4;
                     objB2 = t8;
                 }
             }
-            Throwable thE2 = jt.n.e(objB);
+            Throwable thE2 = gt.n.e(objB);
             if (thE2 != null) {
                 AFLoggerBase.e$default(AFLogger.INSTANCE, LogTag.GENERAL, str, thE2, false, false, false, false, 72, null);
                 objB = (T) objB2;

@@ -12491,1074 +12491,1077 @@ public final class R {
         public static final int list_item = 0x7f090167;
 
         /* JADX INFO: Added by JADX */
-        public static final int loading_layout = 0x7f090168;
+        public static final int loading_content_stub = 0x7f090168;
 
         /* JADX INFO: Added by JADX */
-        public static final int loading_layout_stub = 0x7f090169;
+        public static final int loading_layout = 0x7f090169;
 
         /* JADX INFO: Added by JADX */
-        public static final int loading_progress_view = 0x7f09016a;
+        public static final int loading_layout_stub = 0x7f09016a;
 
         /* JADX INFO: Added by JADX */
-        public static final int loading_view = 0x7f09016b;
+        public static final int loading_progress_view = 0x7f09016b;
 
         /* JADX INFO: Added by JADX */
-        public static final int local_settings_button = 0x7f09016c;
+        public static final int loading_view = 0x7f09016c;
 
         /* JADX INFO: Added by JADX */
-        public static final int m3_side_sheet = 0x7f09016d;
+        public static final int local_settings_button = 0x7f09016d;
 
         /* JADX INFO: Added by JADX */
-        public static final int main_activity_avatar_editor_tab = 0x7f09016e;
+        public static final int m3_side_sheet = 0x7f09016e;
 
         /* JADX INFO: Added by JADX */
-        public static final int main_activity_catalog_tab = 0x7f09016f;
+        public static final int main_activity_avatar_editor_tab = 0x7f09016f;
 
         /* JADX INFO: Added by JADX */
-        public static final int main_activity_chat_tab = 0x7f090170;
+        public static final int main_activity_catalog_tab = 0x7f090170;
 
         /* JADX INFO: Added by JADX */
-        public static final int main_activity_friends_tab = 0x7f090171;
+        public static final int main_activity_chat_tab = 0x7f090171;
 
         /* JADX INFO: Added by JADX */
-        public static final int main_activity_games_tab = 0x7f090172;
+        public static final int main_activity_friends_tab = 0x7f090172;
 
         /* JADX INFO: Added by JADX */
-        public static final int main_activity_home_tab = 0x7f090173;
+        public static final int main_activity_games_tab = 0x7f090173;
 
         /* JADX INFO: Added by JADX */
-        public static final int main_activity_more_tab = 0x7f090174;
+        public static final int main_activity_home_tab = 0x7f090174;
 
         /* JADX INFO: Added by JADX */
-        public static final int marquee = 0x7f090175;
+        public static final int main_activity_more_tab = 0x7f090175;
 
         /* JADX INFO: Added by JADX */
-        public static final int masked = 0x7f090176;
+        public static final int marquee = 0x7f090176;
 
         /* JADX INFO: Added by JADX */
-        public static final int match_constraint = 0x7f090177;
+        public static final int masked = 0x7f090177;
 
         /* JADX INFO: Added by JADX */
-        public static final int match_parent = 0x7f090178;
+        public static final int match_constraint = 0x7f090178;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_clock_display = 0x7f090179;
+        public static final int match_parent = 0x7f090179;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_clock_display_and_toggle = 0x7f09017a;
+        public static final int material_clock_display = 0x7f09017a;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_clock_face = 0x7f09017b;
+        public static final int material_clock_display_and_toggle = 0x7f09017b;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_clock_hand = 0x7f09017c;
+        public static final int material_clock_face = 0x7f09017c;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_clock_level = 0x7f09017d;
+        public static final int material_clock_hand = 0x7f09017d;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_clock_period_am_button = 0x7f09017e;
+        public static final int material_clock_level = 0x7f09017e;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_clock_period_pm_button = 0x7f09017f;
+        public static final int material_clock_period_am_button = 0x7f09017f;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_clock_period_toggle = 0x7f090180;
+        public static final int material_clock_period_pm_button = 0x7f090180;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_hour_text_input = 0x7f090181;
+        public static final int material_clock_period_toggle = 0x7f090181;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_hour_tv = 0x7f090182;
+        public static final int material_hour_text_input = 0x7f090182;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_label = 0x7f090183;
+        public static final int material_hour_tv = 0x7f090183;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_minute_text_input = 0x7f090184;
+        public static final int material_label = 0x7f090184;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_minute_tv = 0x7f090185;
+        public static final int material_minute_text_input = 0x7f090185;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_textinput_timepicker = 0x7f090186;
+        public static final int material_minute_tv = 0x7f090186;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_timepicker_cancel_button = 0x7f090187;
+        public static final int material_textinput_timepicker = 0x7f090187;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_timepicker_container = 0x7f090188;
+        public static final int material_timepicker_cancel_button = 0x7f090188;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_timepicker_mode_button = 0x7f090189;
+        public static final int material_timepicker_container = 0x7f090189;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_timepicker_ok_button = 0x7f09018a;
+        public static final int material_timepicker_mode_button = 0x7f09018a;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_timepicker_view = 0x7f09018b;
+        public static final int material_timepicker_ok_button = 0x7f09018b;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_value_index = 0x7f09018c;
+        public static final int material_timepicker_view = 0x7f09018c;
 
         /* JADX INFO: Added by JADX */
-        public static final int matrix = 0x7f09018d;
+        public static final int material_value_index = 0x7f09018d;
 
         /* JADX INFO: Added by JADX */
-        public static final int menu_search_friends = 0x7f09018e;
+        public static final int matrix = 0x7f09018e;
 
         /* JADX INFO: Added by JADX */
-        public static final int message_res_0x7f09018f = 0x7f09018f;
+        public static final int menu_search_friends = 0x7f09018f;
 
         /* JADX INFO: Added by JADX */
-        public static final int middle = 0x7f090190;
+        public static final int message_res_0x7f090190 = 0x7f090190;
 
         /* JADX INFO: Added by JADX */
-        public static final int mini = 0x7f090191;
+        public static final int middle = 0x7f090191;
 
         /* JADX INFO: Added by JADX */
-        public static final int mode_button = 0x7f090192;
+        public static final int mini = 0x7f090192;
 
         /* JADX INFO: Added by JADX */
-        public static final int month_grid = 0x7f090193;
+        public static final int mode_button = 0x7f090193;
 
         /* JADX INFO: Added by JADX */
-        public static final int month_navigation_bar = 0x7f090194;
+        public static final int month_grid = 0x7f090194;
 
         /* JADX INFO: Added by JADX */
-        public static final int month_navigation_fragment_toggle = 0x7f090195;
+        public static final int month_navigation_bar = 0x7f090195;
 
         /* JADX INFO: Added by JADX */
-        public static final int month_navigation_next = 0x7f090196;
+        public static final int month_navigation_fragment_toggle = 0x7f090196;
 
         /* JADX INFO: Added by JADX */
-        public static final int month_navigation_previous = 0x7f090197;
+        public static final int month_navigation_next = 0x7f090197;
 
         /* JADX INFO: Added by JADX */
-        public static final int month_title = 0x7f090198;
+        public static final int month_navigation_previous = 0x7f090198;
 
         /* JADX INFO: Added by JADX */
-        public static final int more_option_tag = 0x7f090199;
+        public static final int month_title = 0x7f090199;
 
         /* JADX INFO: Added by JADX */
-        public static final int motion_base = 0x7f09019a;
+        public static final int more_option_tag = 0x7f09019a;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_anchor_parent = 0x7f09019b;
+        public static final int motion_base = 0x7f09019b;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_calendar_day_selector_frame = 0x7f09019c;
+        public static final int mtrl_anchor_parent = 0x7f09019c;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_calendar_days_of_week = 0x7f09019d;
+        public static final int mtrl_calendar_day_selector_frame = 0x7f09019d;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_calendar_frame = 0x7f09019e;
+        public static final int mtrl_calendar_days_of_week = 0x7f09019e;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_calendar_main_pane = 0x7f09019f;
+        public static final int mtrl_calendar_frame = 0x7f09019f;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_calendar_months = 0x7f0901a0;
+        public static final int mtrl_calendar_main_pane = 0x7f0901a0;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_calendar_selection_frame = 0x7f0901a1;
+        public static final int mtrl_calendar_months = 0x7f0901a1;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_calendar_text_input_frame = 0x7f0901a2;
+        public static final int mtrl_calendar_selection_frame = 0x7f0901a2;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_calendar_year_selector_frame = 0x7f0901a3;
+        public static final int mtrl_calendar_text_input_frame = 0x7f0901a3;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_card_checked_layer_id = 0x7f0901a4;
+        public static final int mtrl_calendar_year_selector_frame = 0x7f0901a4;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_child_content_container = 0x7f0901a5;
+        public static final int mtrl_card_checked_layer_id = 0x7f0901a5;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_internal_children_alpha_tag = 0x7f0901a6;
+        public static final int mtrl_child_content_container = 0x7f0901a6;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_motion_snapshot_view = 0x7f0901a7;
+        public static final int mtrl_internal_children_alpha_tag = 0x7f0901a7;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_picker_fullscreen = 0x7f0901a8;
+        public static final int mtrl_motion_snapshot_view = 0x7f0901a8;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_picker_header = 0x7f0901a9;
+        public static final int mtrl_picker_fullscreen = 0x7f0901a9;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_picker_header_selection_text = 0x7f0901aa;
+        public static final int mtrl_picker_header = 0x7f0901aa;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_picker_header_title_and_selection = 0x7f0901ab;
+        public static final int mtrl_picker_header_selection_text = 0x7f0901ab;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_picker_header_toggle = 0x7f0901ac;
+        public static final int mtrl_picker_header_title_and_selection = 0x7f0901ac;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_picker_text_input_date = 0x7f0901ad;
+        public static final int mtrl_picker_header_toggle = 0x7f0901ad;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_picker_text_input_range_end = 0x7f0901ae;
+        public static final int mtrl_picker_text_input_date = 0x7f0901ae;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_picker_text_input_range_start = 0x7f0901af;
+        public static final int mtrl_picker_text_input_range_end = 0x7f0901af;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_picker_title_text = 0x7f0901b0;
+        public static final int mtrl_picker_text_input_range_start = 0x7f0901b0;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_view_tag_bottom_padding = 0x7f0901b1;
+        public static final int mtrl_picker_title_text = 0x7f0901b1;
 
         /* JADX INFO: Added by JADX */
-        public static final int multiply = 0x7f0901b2;
+        public static final int mtrl_view_tag_bottom_padding = 0x7f0901b2;
 
         /* JADX INFO: Added by JADX */
-        public static final int navigation_bar_item_active_indicator_view = 0x7f0901b3;
+        public static final int multiply = 0x7f0901b3;
 
         /* JADX INFO: Added by JADX */
-        public static final int navigation_bar_item_icon_container = 0x7f0901b4;
+        public static final int navigation_bar_item_active_indicator_view = 0x7f0901b4;
 
         /* JADX INFO: Added by JADX */
-        public static final int navigation_bar_item_icon_view = 0x7f0901b5;
+        public static final int navigation_bar_item_icon_container = 0x7f0901b5;
 
         /* JADX INFO: Added by JADX */
-        public static final int navigation_bar_item_labels_group = 0x7f0901b6;
+        public static final int navigation_bar_item_icon_view = 0x7f0901b6;
 
         /* JADX INFO: Added by JADX */
-        public static final int navigation_bar_item_large_label_view = 0x7f0901b7;
+        public static final int navigation_bar_item_labels_group = 0x7f0901b7;
 
         /* JADX INFO: Added by JADX */
-        public static final int navigation_bar_item_small_label_view = 0x7f0901b8;
+        public static final int navigation_bar_item_large_label_view = 0x7f0901b8;
 
         /* JADX INFO: Added by JADX */
-        public static final int navigation_header_container = 0x7f0901b9;
+        public static final int navigation_bar_item_small_label_view = 0x7f0901b9;
 
         /* JADX INFO: Added by JADX */
-        public static final int never = 0x7f0901ba;
+        public static final int navigation_header_container = 0x7f0901ba;
 
         /* JADX INFO: Added by JADX */
-        public static final int neverCompleteToEnd = 0x7f0901bb;
+        public static final int never = 0x7f0901bb;
 
         /* JADX INFO: Added by JADX */
-        public static final int neverCompleteToStart = 0x7f0901bc;
+        public static final int neverCompleteToEnd = 0x7f0901bc;
 
         /* JADX INFO: Added by JADX */
-        public static final int noScroll = 0x7f0901bd;
+        public static final int neverCompleteToStart = 0x7f0901bd;
 
         /* JADX INFO: Added by JADX */
-        public static final int noState = 0x7f0901be;
+        public static final int noScroll = 0x7f0901be;
 
         /* JADX INFO: Added by JADX */
-        public static final int none = 0x7f0901bf;
+        public static final int noState = 0x7f0901bf;
 
         /* JADX INFO: Added by JADX */
-        public static final int normal = 0x7f0901c0;
+        public static final int none = 0x7f0901c0;
 
         /* JADX INFO: Added by JADX */
-        public static final int north = 0x7f0901c1;
+        public static final int normal = 0x7f0901c1;
 
         /* JADX INFO: Added by JADX */
-        public static final int notification_background = 0x7f0901c2;
+        public static final int north = 0x7f0901c2;
 
         /* JADX INFO: Added by JADX */
-        public static final int notification_button = 0x7f0901c3;
+        public static final int notification_background = 0x7f0901c3;
 
         /* JADX INFO: Added by JADX */
-        public static final int notification_count = 0x7f0901c4;
+        public static final int notification_button = 0x7f0901c4;
 
         /* JADX INFO: Added by JADX */
-        public static final int notification_main_column = 0x7f0901c5;
+        public static final int notification_count = 0x7f0901c5;
 
         /* JADX INFO: Added by JADX */
-        public static final int notification_main_column_container = 0x7f0901c6;
+        public static final int notification_main_column = 0x7f0901c6;
 
         /* JADX INFO: Added by JADX */
-        public static final int notification_stream = 0x7f0901c7;
+        public static final int notification_main_column_container = 0x7f0901c7;
 
         /* JADX INFO: Added by JADX */
-        public static final int off = 0x7f0901c8;
+        public static final int notification_stream = 0x7f0901c8;
+
+        /* JADX INFO: Added by JADX */
+        public static final int off = 0x7f0901c9;
 
         /* JADX INFO: Added by JADX */
         /* JADX INFO: renamed from: on, reason: collision with root package name */
-        public static final int f9175on = 0x7f0901c9;
+        public static final int f9248on = 0x7f0901ca;
 
         /* JADX INFO: Added by JADX */
-        public static final int onInterceptTouchReturnSwipe = 0x7f0901ca;
+        public static final int onInterceptTouchReturnSwipe = 0x7f0901cb;
 
         /* JADX INFO: Added by JADX */
-        public static final int open_search_bar_text_view = 0x7f0901cb;
+        public static final int open_search_bar_text_view = 0x7f0901cc;
 
         /* JADX INFO: Added by JADX */
-        public static final int open_search_view_background = 0x7f0901cc;
+        public static final int open_search_view_background = 0x7f0901cd;
 
         /* JADX INFO: Added by JADX */
-        public static final int open_search_view_clear_button = 0x7f0901cd;
+        public static final int open_search_view_clear_button = 0x7f0901ce;
 
         /* JADX INFO: Added by JADX */
-        public static final int open_search_view_content_container = 0x7f0901ce;
+        public static final int open_search_view_content_container = 0x7f0901cf;
 
         /* JADX INFO: Added by JADX */
-        public static final int open_search_view_divider = 0x7f0901cf;
+        public static final int open_search_view_divider = 0x7f0901d0;
 
         /* JADX INFO: Added by JADX */
-        public static final int open_search_view_dummy_toolbar = 0x7f0901d0;
+        public static final int open_search_view_dummy_toolbar = 0x7f0901d1;
 
         /* JADX INFO: Added by JADX */
-        public static final int open_search_view_edit_text = 0x7f0901d1;
+        public static final int open_search_view_edit_text = 0x7f0901d2;
 
         /* JADX INFO: Added by JADX */
-        public static final int open_search_view_header_container = 0x7f0901d2;
+        public static final int open_search_view_header_container = 0x7f0901d3;
 
         /* JADX INFO: Added by JADX */
-        public static final int open_search_view_root = 0x7f0901d3;
+        public static final int open_search_view_root = 0x7f0901d4;
 
         /* JADX INFO: Added by JADX */
-        public static final int open_search_view_scrim = 0x7f0901d4;
+        public static final int open_search_view_scrim = 0x7f0901d5;
 
         /* JADX INFO: Added by JADX */
-        public static final int open_search_view_search_prefix = 0x7f0901d5;
+        public static final int open_search_view_search_prefix = 0x7f0901d6;
 
         /* JADX INFO: Added by JADX */
-        public static final int open_search_view_status_bar_spacer = 0x7f0901d6;
+        public static final int open_search_view_status_bar_spacer = 0x7f0901d7;
 
         /* JADX INFO: Added by JADX */
-        public static final int open_search_view_toolbar = 0x7f0901d7;
+        public static final int open_search_view_toolbar = 0x7f0901d8;
 
         /* JADX INFO: Added by JADX */
-        public static final int open_search_view_toolbar_container = 0x7f0901d8;
+        public static final int open_search_view_toolbar_container = 0x7f0901d9;
 
         /* JADX INFO: Added by JADX */
-        public static final int outline = 0x7f0901d9;
+        public static final int outline = 0x7f0901da;
 
         /* JADX INFO: Added by JADX */
-        public static final int outward = 0x7f0901da;
+        public static final int outward = 0x7f0901db;
 
         /* JADX INFO: Added by JADX */
-        public static final int overshoot = 0x7f0901db;
+        public static final int overshoot = 0x7f0901dc;
 
         /* JADX INFO: Added by JADX */
-        public static final int packed = 0x7f0901dc;
+        public static final int packed = 0x7f0901dd;
 
         /* JADX INFO: Added by JADX */
-        public static final int parallax = 0x7f0901dd;
+        public static final int parallax = 0x7f0901de;
 
         /* JADX INFO: Added by JADX */
-        public static final int parent = 0x7f0901de;
+        public static final int parent = 0x7f0901df;
 
         /* JADX INFO: Added by JADX */
-        public static final int parentPanel = 0x7f0901df;
+        public static final int parentPanel = 0x7f0901e0;
 
         /* JADX INFO: Added by JADX */
-        public static final int parentRelative = 0x7f0901e0;
+        public static final int parentRelative = 0x7f0901e1;
 
         /* JADX INFO: Added by JADX */
-        public static final int parent_matrix = 0x7f0901e1;
+        public static final int parent_matrix = 0x7f0901e2;
 
         /* JADX INFO: Added by JADX */
-        public static final int password_toggle = 0x7f0901e2;
+        public static final int password_toggle = 0x7f0901e3;
 
         /* JADX INFO: Added by JADX */
-        public static final int path = 0x7f0901e3;
+        public static final int path = 0x7f0901e4;
 
         /* JADX INFO: Added by JADX */
-        public static final int pathRelative = 0x7f0901e4;
+        public static final int pathRelative = 0x7f0901e5;
 
         /* JADX INFO: Added by JADX */
-        public static final int peekHeight = 0x7f0901e5;
+        public static final int peekHeight = 0x7f0901e6;
 
         /* JADX INFO: Added by JADX */
-        public static final int percent = 0x7f0901e6;
+        public static final int percent = 0x7f0901e7;
 
         /* JADX INFO: Added by JADX */
-        public static final int performance = 0x7f0901e7;
+        public static final int performance = 0x7f0901e8;
 
         /* JADX INFO: Added by JADX */
-        public static final int pi2_last_image_path = 0x7f0901e8;
+        public static final int pi2_last_image_path = 0x7f0901e9;
 
         /* JADX INFO: Added by JADX */
-        public static final int pin = 0x7f0901e9;
+        public static final int pin = 0x7f0901ea;
 
         /* JADX INFO: Added by JADX */
-        public static final int player_ui_animation_tag = 0x7f0901ea;
+        public static final int player_ui_animation_tag = 0x7f0901eb;
 
         /* JADX INFO: Added by JADX */
-        public static final int pooling_container_listener_holder_tag = 0x7f0901eb;
+        public static final int pooling_container_listener_holder_tag = 0x7f0901ec;
 
         /* JADX INFO: Added by JADX */
-        public static final int portEdit = 0x7f0901ec;
+        public static final int portEdit = 0x7f0901ed;
 
         /* JADX INFO: Added by JADX */
-        public static final int portLabel = 0x7f0901ed;
+        public static final int portLabel = 0x7f0901ee;
 
         /* JADX INFO: Added by JADX */
-        public static final int port_edit = 0x7f0901ee;
+        public static final int port_edit = 0x7f0901ef;
 
         /* JADX INFO: Added by JADX */
-        public static final int position = 0x7f0901ef;
+        public static final int position = 0x7f0901f0;
 
         /* JADX INFO: Added by JADX */
-        public static final int postLayout = 0x7f0901f0;
+        public static final int postLayout = 0x7f0901f1;
 
         /* JADX INFO: Added by JADX */
-        public static final int pressed = 0x7f0901f1;
+        public static final int pressed = 0x7f0901f2;
 
         /* JADX INFO: Added by JADX */
-        public static final int progress_circular = 0x7f0901f2;
+        public static final int progress_circular = 0x7f0901f3;
 
         /* JADX INFO: Added by JADX */
-        public static final int progress_download = 0x7f0901f3;
+        public static final int progress_download = 0x7f0901f4;
 
         /* JADX INFO: Added by JADX */
-        public static final int progress_horizontal = 0x7f0901f4;
+        public static final int progress_horizontal = 0x7f0901f5;
 
         /* JADX INFO: Added by JADX */
-        public static final int qr_align_qr_code_text = 0x7f0901f5;
+        public static final int qr_align_qr_code_text = 0x7f0901f6;
 
         /* JADX INFO: Added by JADX */
-        public static final int qr_preview_view = 0x7f0901f6;
+        public static final int qr_preview_view = 0x7f0901f7;
 
         /* JADX INFO: Added by JADX */
-        public static final int qr_viewfinder_view = 0x7f0901f7;
+        public static final int qr_viewfinder_view = 0x7f0901f8;
 
         /* JADX INFO: Added by JADX */
-        public static final int radio = 0x7f0901f8;
+        public static final int radio = 0x7f0901f9;
 
         /* JADX INFO: Added by JADX */
-        public static final int ratio = 0x7f0901f9;
+        public static final int ratio = 0x7f0901fa;
 
         /* JADX INFO: Added by JADX */
-        public static final int rbxTextView = 0x7f0901fa;
+        public static final int rbxTextView = 0x7f0901fb;
 
         /* JADX INFO: Added by JADX */
-        public static final int rbx_edit_text = 0x7f0901fb;
+        public static final int rbx_edit_text = 0x7f0901fc;
 
         /* JADX INFO: Added by JADX */
-        public static final int recently_played_container = 0x7f0901fc;
+        public static final int recently_played_container = 0x7f0901fd;
 
         /* JADX INFO: Added by JADX */
-        public static final int reconnect_button = 0x7f0901fd;
+        public static final int reconnect_button = 0x7f0901fe;
 
         /* JADX INFO: Added by JADX */
-        public static final int rectangles = 0x7f0901fe;
+        public static final int rectangles = 0x7f0901ff;
 
         /* JADX INFO: Added by JADX */
-        public static final int report_drawn = 0x7f0901ff;
+        public static final int report_drawn = 0x7f090200;
 
         /* JADX INFO: Added by JADX */
-        public static final int reset_btn = 0x7f090200;
+        public static final int reset_btn = 0x7f090201;
 
         /* JADX INFO: Added by JADX */
-        public static final int retry_layout = 0x7f090201;
+        public static final int retry_layout = 0x7f090202;
 
         /* JADX INFO: Added by JADX */
-        public static final int retry_layout_stub = 0x7f090202;
+        public static final int retry_layout_stub = 0x7f090203;
 
         /* JADX INFO: Added by JADX */
-        public static final int reverseSawtooth = 0x7f090203;
+        public static final int reverseSawtooth = 0x7f090204;
 
         /* JADX INFO: Added by JADX */
-        public static final int right = 0x7f090204;
+        public static final int right = 0x7f090205;
 
         /* JADX INFO: Added by JADX */
-        public static final int rightToLeft = 0x7f090205;
+        public static final int rightToLeft = 0x7f090206;
 
         /* JADX INFO: Added by JADX */
-        public static final int right_icon = 0x7f090206;
+        public static final int right_icon = 0x7f090207;
 
         /* JADX INFO: Added by JADX */
-        public static final int right_side = 0x7f090207;
+        public static final int right_side = 0x7f090208;
 
         /* JADX INFO: Added by JADX */
-        public static final int roblox_logo = 0x7f090208;
+        public static final int roblox_logo = 0x7f090209;
 
         /* JADX INFO: Added by JADX */
-        public static final int rounded = 0x7f090209;
+        public static final int rounded = 0x7f09020a;
 
         /* JADX INFO: Added by JADX */
-        public static final int row_index_key = 0x7f09020a;
+        public static final int row_index_key = 0x7f09020b;
 
         /* JADX INFO: Added by JADX */
-        public static final int save_btn = 0x7f09020b;
+        public static final int save_btn = 0x7f09020c;
 
         /* JADX INFO: Added by JADX */
-        public static final int save_local_settings = 0x7f09020c;
+        public static final int save_local_settings = 0x7f09020d;
 
         /* JADX INFO: Added by JADX */
-        public static final int save_non_transition_alpha = 0x7f09020d;
+        public static final int save_non_transition_alpha = 0x7f09020e;
 
         /* JADX INFO: Added by JADX */
-        public static final int save_overlay_view = 0x7f09020e;
+        public static final int save_overlay_view = 0x7f09020f;
 
         /* JADX INFO: Added by JADX */
-        public static final int sawtooth = 0x7f09020f;
+        public static final int sawtooth = 0x7f090210;
 
         /* JADX INFO: Added by JADX */
-        public static final int scale = 0x7f090210;
+        public static final int scale = 0x7f090211;
 
         /* JADX INFO: Added by JADX */
-        public static final int scan_qr_code_title = 0x7f090211;
+        public static final int scan_qr_code_title = 0x7f090212;
 
         /* JADX INFO: Added by JADX */
-        public static final int screen = 0x7f090212;
+        public static final int screen = 0x7f090213;
 
         /* JADX INFO: Added by JADX */
-        public static final int scroll = 0x7f090213;
+        public static final int scroll = 0x7f090214;
 
         /* JADX INFO: Added by JADX */
-        public static final int scrollIndicatorDown = 0x7f090214;
+        public static final int scrollIndicatorDown = 0x7f090215;
 
         /* JADX INFO: Added by JADX */
-        public static final int scrollIndicatorUp = 0x7f090215;
+        public static final int scrollIndicatorUp = 0x7f090216;
 
         /* JADX INFO: Added by JADX */
-        public static final int scrollView = 0x7f090216;
+        public static final int scrollView = 0x7f090217;
 
         /* JADX INFO: Added by JADX */
-        public static final int scrollable = 0x7f090217;
+        public static final int scrollable = 0x7f090218;
 
         /* JADX INFO: Added by JADX */
-        public static final int search_badge = 0x7f090218;
+        public static final int search_badge = 0x7f090219;
 
         /* JADX INFO: Added by JADX */
-        public static final int search_bar = 0x7f090219;
+        public static final int search_bar = 0x7f09021a;
 
         /* JADX INFO: Added by JADX */
-        public static final int search_button = 0x7f09021a;
+        public static final int search_button = 0x7f09021b;
 
         /* JADX INFO: Added by JADX */
-        public static final int search_close_btn = 0x7f09021b;
+        public static final int search_close_btn = 0x7f09021c;
 
         /* JADX INFO: Added by JADX */
-        public static final int search_edit_frame = 0x7f09021c;
+        public static final int search_edit_frame = 0x7f09021d;
 
         /* JADX INFO: Added by JADX */
-        public static final int search_go_btn = 0x7f09021d;
+        public static final int search_go_btn = 0x7f09021e;
 
         /* JADX INFO: Added by JADX */
-        public static final int search_mag_icon = 0x7f09021e;
+        public static final int search_mag_icon = 0x7f09021f;
 
         /* JADX INFO: Added by JADX */
-        public static final int search_plate = 0x7f09021f;
+        public static final int search_plate = 0x7f090220;
 
         /* JADX INFO: Added by JADX */
-        public static final int search_src_text = 0x7f090220;
+        public static final int search_src_text = 0x7f090221;
 
         /* JADX INFO: Added by JADX */
-        public static final int search_voice_btn = 0x7f090221;
+        public static final int search_voice_btn = 0x7f090222;
 
         /* JADX INFO: Added by JADX */
-        public static final int select_dialog_listview = 0x7f090222;
+        public static final int select_dialog_listview = 0x7f090223;
 
         /* JADX INFO: Added by JADX */
-        public static final int selected = 0x7f090223;
+        public static final int selected = 0x7f090224;
 
         /* JADX INFO: Added by JADX */
-        public static final int selection_type = 0x7f090224;
+        public static final int selection_type = 0x7f090225;
 
         /* JADX INFO: Added by JADX */
-        public static final int setting_list = 0x7f090225;
+        public static final int setting_list = 0x7f090226;
 
         /* JADX INFO: Added by JADX */
-        public static final int setting_search = 0x7f090226;
+        public static final int setting_search = 0x7f090227;
 
         /* JADX INFO: Added by JADX */
-        public static final int settings_json_text = 0x7f090227;
+        public static final int settings_json_text = 0x7f090228;
 
         /* JADX INFO: Added by JADX */
-        public static final int sharedValueSet = 0x7f090228;
+        public static final int sharedValueSet = 0x7f090229;
 
         /* JADX INFO: Added by JADX */
-        public static final int sharedValueUnset = 0x7f090229;
+        public static final int sharedValueUnset = 0x7f09022a;
 
         /* JADX INFO: Added by JADX */
-        public static final int shortcut = 0x7f09022a;
+        public static final int shortcut = 0x7f09022b;
 
         /* JADX INFO: Added by JADX */
-        public static final int showCustom = 0x7f09022b;
+        public static final int showCustom = 0x7f09022c;
 
         /* JADX INFO: Added by JADX */
-        public static final int showHome = 0x7f09022c;
+        public static final int showHome = 0x7f09022d;
 
         /* JADX INFO: Added by JADX */
-        public static final int showTitle = 0x7f09022d;
+        public static final int showTitle = 0x7f09022e;
 
         /* JADX INFO: Added by JADX */
-        public static final int sin = 0x7f09022e;
+        public static final int sin = 0x7f09022f;
 
         /* JADX INFO: Added by JADX */
-        public static final int skipCollapsed = 0x7f09022f;
+        public static final int skipCollapsed = 0x7f090230;
 
         /* JADX INFO: Added by JADX */
-        public static final int skipped = 0x7f090230;
+        public static final int skipped = 0x7f090231;
 
         /* JADX INFO: Added by JADX */
-        public static final int slide = 0x7f090231;
+        public static final int slide = 0x7f090232;
 
         /* JADX INFO: Added by JADX */
-        public static final int snackbar_action = 0x7f090232;
+        public static final int snackbar_action = 0x7f090233;
 
         /* JADX INFO: Added by JADX */
-        public static final int snackbar_text = 0x7f090233;
+        public static final int snackbar_text = 0x7f090234;
 
         /* JADX INFO: Added by JADX */
-        public static final int snap = 0x7f090234;
+        public static final int snap = 0x7f090235;
 
         /* JADX INFO: Added by JADX */
-        public static final int snapMargins = 0x7f090235;
+        public static final int snapMargins = 0x7f090236;
 
         /* JADX INFO: Added by JADX */
-        public static final int south = 0x7f090236;
+        public static final int south = 0x7f090237;
 
         /* JADX INFO: Added by JADX */
-        public static final int spacer = 0x7f090237;
+        public static final int spacer = 0x7f090238;
 
         /* JADX INFO: Added by JADX */
-        public static final int special_effects_controller_view_tag = 0x7f090238;
+        public static final int special_effects_controller_view_tag = 0x7f090239;
 
         /* JADX INFO: Added by JADX */
-        public static final int splash_progress_bar = 0x7f090239;
+        public static final int splash_progress_bar = 0x7f09023a;
 
         /* JADX INFO: Added by JADX */
-        public static final int spline = 0x7f09023a;
+        public static final int spline = 0x7f09023b;
 
         /* JADX INFO: Added by JADX */
-        public static final int split_action_bar = 0x7f09023b;
+        public static final int split_action_bar = 0x7f09023c;
 
         /* JADX INFO: Added by JADX */
-        public static final int spread = 0x7f09023c;
+        public static final int spread = 0x7f09023d;
 
         /* JADX INFO: Added by JADX */
-        public static final int spread_inside = 0x7f09023d;
+        public static final int spread_inside = 0x7f09023e;
 
         /* JADX INFO: Added by JADX */
-        public static final int spring = 0x7f09023e;
+        public static final int spring = 0x7f09023f;
 
         /* JADX INFO: Added by JADX */
-        public static final int square = 0x7f09023f;
+        public static final int square = 0x7f090240;
 
         /* JADX INFO: Added by JADX */
-        public static final int src_atop = 0x7f090240;
+        public static final int src_atop = 0x7f090241;
 
         /* JADX INFO: Added by JADX */
-        public static final int src_in = 0x7f090241;
+        public static final int src_in = 0x7f090242;
 
         /* JADX INFO: Added by JADX */
-        public static final int src_over = 0x7f090242;
+        public static final int src_over = 0x7f090243;
 
         /* JADX INFO: Added by JADX */
-        public static final int standard = 0x7f090243;
+        public static final int standard = 0x7f090244;
 
         /* JADX INFO: Added by JADX */
-        public static final int start = 0x7f090244;
+        public static final int start = 0x7f090245;
 
         /* JADX INFO: Added by JADX */
-        public static final int startHorizontal = 0x7f090245;
+        public static final int startHorizontal = 0x7f090246;
 
         /* JADX INFO: Added by JADX */
-        public static final int startToEnd = 0x7f090246;
+        public static final int startToEnd = 0x7f090247;
 
         /* JADX INFO: Added by JADX */
-        public static final int startVertical = 0x7f090247;
+        public static final int startVertical = 0x7f090248;
 
         /* JADX INFO: Added by JADX */
-        public static final int staticLayout = 0x7f090248;
+        public static final int staticLayout = 0x7f090249;
 
         /* JADX INFO: Added by JADX */
-        public static final int staticPostLayout = 0x7f090249;
+        public static final int staticPostLayout = 0x7f09024a;
 
         /* JADX INFO: Added by JADX */
-        public static final int statusLabel = 0x7f09024a;
+        public static final int statusLabel = 0x7f09024b;
 
         /* JADX INFO: Added by JADX */
-        public static final int stop = 0x7f09024b;
+        public static final int stop = 0x7f09024c;
 
         /* JADX INFO: Added by JADX */
-        public static final int stretch = 0x7f09024c;
+        public static final int stretch = 0x7f09024d;
 
         /* JADX INFO: Added by JADX */
-        public static final int submenuarrow = 0x7f09024d;
+        public static final int submenuarrow = 0x7f09024e;
 
         /* JADX INFO: Added by JADX */
-        public static final int submit_area = 0x7f09024e;
+        public static final int submit_area = 0x7f09024f;
 
         /* JADX INFO: Added by JADX */
-        public static final int subtitle_text = 0x7f09024f;
+        public static final int subtitle_text = 0x7f090250;
 
         /* JADX INFO: Added by JADX */
-        public static final int supportScrollUp = 0x7f090250;
+        public static final int supportScrollUp = 0x7f090251;
 
         /* JADX INFO: Added by JADX */
-        public static final int surfaceview = 0x7f090251;
+        public static final int surfaceview = 0x7f090252;
 
         /* JADX INFO: Added by JADX */
-        public static final int swipe_container = 0x7f090252;
+        public static final int swipe_container = 0x7f090253;
 
         /* JADX INFO: Added by JADX */
-        public static final int tabMode = 0x7f090253;
+        public static final int tabMode = 0x7f090254;
 
         /* JADX INFO: Added by JADX */
-        public static final int tag_accessibility_actions = 0x7f090254;
+        public static final int tag_accessibility_actions = 0x7f090255;
 
         /* JADX INFO: Added by JADX */
-        public static final int tag_accessibility_clickable_spans = 0x7f090255;
+        public static final int tag_accessibility_clickable_spans = 0x7f090256;
 
         /* JADX INFO: Added by JADX */
-        public static final int tag_accessibility_heading = 0x7f090256;
+        public static final int tag_accessibility_heading = 0x7f090257;
 
         /* JADX INFO: Added by JADX */
-        public static final int tag_accessibility_pane_title = 0x7f090257;
+        public static final int tag_accessibility_pane_title = 0x7f090258;
 
         /* JADX INFO: Added by JADX */
-        public static final int tag_compat_insets_dispatch = 0x7f090258;
+        public static final int tag_compat_insets_dispatch = 0x7f090259;
 
         /* JADX INFO: Added by JADX */
-        public static final int tag_on_apply_window_listener = 0x7f090259;
+        public static final int tag_on_apply_window_listener = 0x7f09025a;
 
         /* JADX INFO: Added by JADX */
-        public static final int tag_on_receive_content_listener = 0x7f09025a;
+        public static final int tag_on_receive_content_listener = 0x7f09025b;
 
         /* JADX INFO: Added by JADX */
-        public static final int tag_on_receive_content_mime_types = 0x7f09025b;
+        public static final int tag_on_receive_content_mime_types = 0x7f09025c;
 
         /* JADX INFO: Added by JADX */
-        public static final int tag_screen_reader_focusable = 0x7f09025c;
+        public static final int tag_screen_reader_focusable = 0x7f09025d;
 
         /* JADX INFO: Added by JADX */
-        public static final int tag_state_description = 0x7f09025d;
+        public static final int tag_state_description = 0x7f09025e;
 
         /* JADX INFO: Added by JADX */
-        public static final int tag_system_bar_state_monitor = 0x7f09025e;
+        public static final int tag_system_bar_state_monitor = 0x7f09025f;
 
         /* JADX INFO: Added by JADX */
-        public static final int tag_transition_group = 0x7f09025f;
+        public static final int tag_transition_group = 0x7f090260;
 
         /* JADX INFO: Added by JADX */
-        public static final int tag_unhandled_key_event_manager = 0x7f090260;
+        public static final int tag_unhandled_key_event_manager = 0x7f090261;
 
         /* JADX INFO: Added by JADX */
-        public static final int tag_unhandled_key_listeners = 0x7f090261;
+        public static final int tag_unhandled_key_listeners = 0x7f090262;
 
         /* JADX INFO: Added by JADX */
-        public static final int tag_window_insets_animation_callback = 0x7f090262;
+        public static final int tag_window_insets_animation_callback = 0x7f090263;
 
         /* JADX INFO: Added by JADX */
-        public static final int testConnButton = 0x7f090263;
+        public static final int testConnButton = 0x7f090264;
 
         /* JADX INFO: Added by JADX */
-        public static final int text_res_0x7f090264 = 0x7f090264;
+        public static final int text_res_0x7f090265 = 0x7f090265;
 
         /* JADX INFO: Added by JADX */
-        public static final int text2 = 0x7f090265;
+        public static final int text2 = 0x7f090266;
 
         /* JADX INFO: Added by JADX */
-        public static final int textEnd = 0x7f090266;
+        public static final int textEnd = 0x7f090267;
 
         /* JADX INFO: Added by JADX */
-        public static final int textSpacerNoButtons = 0x7f090267;
+        public static final int textSpacerNoButtons = 0x7f090268;
 
         /* JADX INFO: Added by JADX */
-        public static final int textSpacerNoTitle = 0x7f090268;
+        public static final int textSpacerNoTitle = 0x7f090269;
 
         /* JADX INFO: Added by JADX */
-        public static final int textStart = 0x7f090269;
+        public static final int textStart = 0x7f09026a;
 
         /* JADX INFO: Added by JADX */
-        public static final int textTop = 0x7f09026a;
+        public static final int textTop = 0x7f09026b;
 
         /* JADX INFO: Added by JADX */
-        public static final int textView = 0x7f09026b;
+        public static final int textView = 0x7f09026c;
 
         /* JADX INFO: Added by JADX */
-        public static final int textView1 = 0x7f09026c;
+        public static final int textView1 = 0x7f09026d;
 
         /* JADX INFO: Added by JADX */
-        public static final int text_container = 0x7f09026d;
+        public static final int text_container = 0x7f09026e;
 
         /* JADX INFO: Added by JADX */
-        public static final int text_input_end_icon = 0x7f09026e;
+        public static final int text_input_end_icon = 0x7f09026f;
 
         /* JADX INFO: Added by JADX */
-        public static final int text_input_error_icon = 0x7f09026f;
+        public static final int text_input_error_icon = 0x7f090270;
 
         /* JADX INFO: Added by JADX */
-        public static final int text_input_start_icon = 0x7f090270;
+        public static final int text_input_start_icon = 0x7f090271;
 
         /* JADX INFO: Added by JADX */
-        public static final int textinput_counter = 0x7f090271;
+        public static final int textinput_counter = 0x7f090272;
 
         /* JADX INFO: Added by JADX */
-        public static final int textinput_error = 0x7f090272;
+        public static final int textinput_error = 0x7f090273;
 
         /* JADX INFO: Added by JADX */
-        public static final int textinput_helper_text = 0x7f090273;
+        public static final int textinput_helper_text = 0x7f090274;
 
         /* JADX INFO: Added by JADX */
-        public static final int textinput_placeholder = 0x7f090274;
+        public static final int textinput_placeholder = 0x7f090275;
 
         /* JADX INFO: Added by JADX */
-        public static final int textinput_prefix_text = 0x7f090275;
+        public static final int textinput_prefix_text = 0x7f090276;
 
         /* JADX INFO: Added by JADX */
-        public static final int textinput_suffix_text = 0x7f090276;
+        public static final int textinput_suffix_text = 0x7f090277;
 
         /* JADX INFO: Added by JADX */
-        public static final int time = 0x7f090277;
+        public static final int time = 0x7f090278;
 
         /* JADX INFO: Added by JADX */
-        public static final int title_res_0x7f090278 = 0x7f090278;
+        public static final int title_res_0x7f090279 = 0x7f090279;
 
         /* JADX INFO: Added by JADX */
-        public static final int titleDividerNoCustom = 0x7f090279;
+        public static final int titleDividerNoCustom = 0x7f09027a;
 
         /* JADX INFO: Added by JADX */
-        public static final int title_layout_container = 0x7f09027a;
+        public static final int title_layout_container = 0x7f09027b;
 
         /* JADX INFO: Added by JADX */
-        public static final int title_template = 0x7f09027b;
+        public static final int title_template = 0x7f09027c;
 
         /* JADX INFO: Added by JADX */
-        public static final int title_text = 0x7f09027c;
+        public static final int title_text = 0x7f09027d;
 
         /* JADX INFO: Added by JADX */
-        public static final int toggle = 0x7f09027d;
+        public static final int toggle = 0x7f09027e;
 
         /* JADX INFO: Added by JADX */
-        public static final int toolbar_res_0x7f09027e = 0x7f09027e;
+        public static final int toolbar_res_0x7f09027f = 0x7f09027f;
 
         /* JADX INFO: Added by JADX */
-        public static final int toolbar1 = 0x7f09027f;
+        public static final int toolbar1 = 0x7f090280;
 
         /* JADX INFO: Added by JADX */
-        public static final int toolbar2 = 0x7f090280;
+        public static final int toolbar2 = 0x7f090281;
 
         /* JADX INFO: Added by JADX */
-        public static final int toolbar_back_button = 0x7f090281;
+        public static final int toolbar_back_button = 0x7f090282;
 
         /* JADX INFO: Added by JADX */
-        public static final int toolbar_close = 0x7f090282;
+        public static final int toolbar_close = 0x7f090283;
 
         /* JADX INFO: Added by JADX */
-        public static final int toolbar_close_button = 0x7f090283;
+        public static final int toolbar_close_button = 0x7f090284;
 
         /* JADX INFO: Added by JADX */
-        public static final int toolbar_subtitle = 0x7f090284;
+        public static final int toolbar_subtitle = 0x7f090285;
 
         /* JADX INFO: Added by JADX */
-        public static final int toolbar_title = 0x7f090285;
+        public static final int toolbar_title = 0x7f090286;
 
         /* JADX INFO: Added by JADX */
-        public static final int tooltip_nav_up = 0x7f090286;
+        public static final int tooltip_nav_up = 0x7f090287;
 
         /* JADX INFO: Added by JADX */
-        public static final int top = 0x7f090287;
+        public static final int top = 0x7f090288;
 
         /* JADX INFO: Added by JADX */
-        public static final int topPanel = 0x7f090288;
+        public static final int topPanel = 0x7f090289;
 
         /* JADX INFO: Added by JADX */
-        public static final int touch_outside = 0x7f090289;
+        public static final int touch_outside = 0x7f09028a;
 
         /* JADX INFO: Added by JADX */
-        public static final int transitionToEnd = 0x7f09028a;
+        public static final int transitionToEnd = 0x7f09028b;
 
         /* JADX INFO: Added by JADX */
-        public static final int transitionToStart = 0x7f09028b;
+        public static final int transitionToStart = 0x7f09028c;
 
         /* JADX INFO: Added by JADX */
-        public static final int transition_clip = 0x7f09028c;
+        public static final int transition_clip = 0x7f09028d;
 
         /* JADX INFO: Added by JADX */
-        public static final int transition_current_scene = 0x7f09028d;
+        public static final int transition_current_scene = 0x7f09028e;
 
         /* JADX INFO: Added by JADX */
-        public static final int transition_image_transform = 0x7f09028e;
+        public static final int transition_image_transform = 0x7f09028f;
 
         /* JADX INFO: Added by JADX */
-        public static final int transition_layout_save = 0x7f09028f;
+        public static final int transition_layout_save = 0x7f090290;
 
         /* JADX INFO: Added by JADX */
-        public static final int transition_pause_alpha = 0x7f090290;
+        public static final int transition_pause_alpha = 0x7f090291;
 
         /* JADX INFO: Added by JADX */
-        public static final int transition_position = 0x7f090291;
+        public static final int transition_position = 0x7f090292;
 
         /* JADX INFO: Added by JADX */
-        public static final int transition_scene_layoutid_cache = 0x7f090292;
+        public static final int transition_scene_layoutid_cache = 0x7f090293;
 
         /* JADX INFO: Added by JADX */
-        public static final int transition_transform = 0x7f090293;
+        public static final int transition_transform = 0x7f090294;
 
         /* JADX INFO: Added by JADX */
-        public static final int triangle = 0x7f090294;
+        public static final int triangle = 0x7f090295;
 
         /* JADX INFO: Added by JADX */
-        public static final int ua_edit = 0x7f090295;
+        public static final int ua_edit = 0x7f090296;
 
         /* JADX INFO: Added by JADX */
-        public static final int ua_reset_btn = 0x7f090296;
+        public static final int ua_reset_btn = 0x7f090297;
 
         /* JADX INFO: Added by JADX */
-        public static final int ua_save_btn = 0x7f090297;
+        public static final int ua_save_btn = 0x7f090298;
 
         /* JADX INFO: Added by JADX */
-        public static final int unchecked = 0x7f090298;
+        public static final int unchecked = 0x7f090299;
 
         /* JADX INFO: Added by JADX */
-        public static final int uniform = 0x7f090299;
+        public static final int uniform = 0x7f09029a;
 
         /* JADX INFO: Added by JADX */
-        public static final int unlabeled = 0x7f09029a;
+        public static final int unlabeled = 0x7f09029b;
 
         /* JADX INFO: Added by JADX */
         /* JADX INFO: renamed from: up, reason: collision with root package name */
-        public static final int f9176up = 0x7f09029b;
+        public static final int f9249up = 0x7f09029c;
 
         /* JADX INFO: Added by JADX */
-        public static final int url = 0x7f09029c;
+        public static final int url = 0x7f09029d;
 
         /* JADX INFO: Added by JADX */
-        public static final int url_go = 0x7f09029d;
+        public static final int url_go = 0x7f09029e;
 
         /* JADX INFO: Added by JADX */
-        public static final int useLogo = 0x7f09029e;
+        public static final int useLogo = 0x7f09029f;
 
         /* JADX INFO: Added by JADX */
-        public static final int user_agent_button = 0x7f09029f;
+        public static final int user_agent_button = 0x7f0902a0;
 
         /* JADX INFO: Added by JADX */
-        public static final int value = 0x7f0902a0;
+        public static final int value = 0x7f0902a1;
 
         /* JADX INFO: Added by JADX */
-        public static final int vertical = 0x7f0902a1;
+        public static final int vertical = 0x7f0902a2;
 
         /* JADX INFO: Added by JADX */
-        public static final int vertical_only = 0x7f0902a2;
+        public static final int vertical_only = 0x7f0902a3;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_login_password_bottom_label = 0x7f0902a3;
+        public static final int view_login_password_bottom_label = 0x7f0902a4;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_login_password_field = 0x7f0902a4;
+        public static final int view_login_password_field = 0x7f0902a5;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_login_username_bottom_label = 0x7f0902a5;
+        public static final int view_login_username_bottom_label = 0x7f0902a6;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_login_username_field = 0x7f0902a6;
+        public static final int view_login_username_field = 0x7f0902a7;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_offset_helper = 0x7f0902a7;
+        public static final int view_offset_helper = 0x7f0902a8;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_phone_code_field = 0x7f0902a8;
+        public static final int view_phone_code_field = 0x7f0902a9;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_signup_displayname_bottom_label = 0x7f0902a9;
+        public static final int view_signup_displayname_bottom_label = 0x7f0902aa;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_signup_displayname_field = 0x7f0902aa;
+        public static final int view_signup_displayname_field = 0x7f0902ab;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_signup_email_bottom_label = 0x7f0902ab;
+        public static final int view_signup_email_bottom_label = 0x7f0902ac;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_signup_email_field = 0x7f0902ac;
+        public static final int view_signup_email_field = 0x7f0902ad;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_signup_password_bottom_label = 0x7f0902ad;
+        public static final int view_signup_password_bottom_label = 0x7f0902ae;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_signup_password_field = 0x7f0902ae;
+        public static final int view_signup_password_field = 0x7f0902af;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_signup_phone_bottom_label = 0x7f0902af;
+        public static final int view_signup_phone_bottom_label = 0x7f0902b0;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_signup_phone_field = 0x7f0902b0;
+        public static final int view_signup_phone_field = 0x7f0902b1;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_signup_username_bottom_label = 0x7f0902b1;
+        public static final int view_signup_username_bottom_label = 0x7f0902b2;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_signup_username_field = 0x7f0902b2;
+        public static final int view_signup_username_field = 0x7f0902b3;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_transition = 0x7f0902b3;
+        public static final int view_transition = 0x7f0902b4;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_tree_disjoint_parent = 0x7f0902b4;
+        public static final int view_tree_disjoint_parent = 0x7f0902b5;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_tree_lifecycle_owner = 0x7f0902b5;
+        public static final int view_tree_lifecycle_owner = 0x7f0902b6;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_tree_navigation_event_dispatcher_owner = 0x7f0902b6;
+        public static final int view_tree_navigation_event_dispatcher_owner = 0x7f0902b7;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_tree_on_back_pressed_dispatcher_owner = 0x7f0902b7;
+        public static final int view_tree_on_back_pressed_dispatcher_owner = 0x7f0902b8;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_tree_saved_state_registry_owner = 0x7f0902b8;
+        public static final int view_tree_saved_state_registry_owner = 0x7f0902b9;
 
         /* JADX INFO: Added by JADX */
-        public static final int view_tree_view_model_store_owner = 0x7f0902b9;
+        public static final int view_tree_view_model_store_owner = 0x7f0902ba;
 
         /* JADX INFO: Added by JADX */
-        public static final int visible = 0x7f0902ba;
+        public static final int visible = 0x7f0902bb;
 
         /* JADX INFO: Added by JADX */
-        public static final int visible_removing_fragment_view_tag = 0x7f0902bb;
+        public static final int visible_removing_fragment_view_tag = 0x7f0902bc;
 
         /* JADX INFO: Added by JADX */
-        public static final int web_layout = 0x7f0902bc;
+        public static final int web_layout = 0x7f0902bd;
 
         /* JADX INFO: Added by JADX */
-        public static final int web_overlay_layout = 0x7f0902bd;
+        public static final int web_overlay_layout = 0x7f0902be;
 
         /* JADX INFO: Added by JADX */
-        public static final int web_view = 0x7f0902be;
+        public static final int web_view = 0x7f0902bf;
 
         /* JADX INFO: Added by JADX */
-        public static final int webview_close_button = 0x7f0902bf;
+        public static final int webview_close_button = 0x7f0902c0;
 
         /* JADX INFO: Added by JADX */
-        public static final int webview_close_button_layout = 0x7f0902c0;
+        public static final int webview_close_button_layout = 0x7f0902c1;
 
         /* JADX INFO: Added by JADX */
-        public static final int webview_urlbar = 0x7f0902c1;
+        public static final int webview_urlbar = 0x7f0902c2;
 
         /* JADX INFO: Added by JADX */
-        public static final int west = 0x7f0902c2;
+        public static final int west = 0x7f0902c3;
 
         /* JADX INFO: Added by JADX */
-        public static final int wide = 0x7f0902c3;
+        public static final int wide = 0x7f0902c4;
 
         /* JADX INFO: Added by JADX */
-        public static final int withText = 0x7f0902c4;
+        public static final int withText = 0x7f0902c5;
 
         /* JADX INFO: Added by JADX */
-        public static final int with_icon = 0x7f0902c5;
+        public static final int with_icon = 0x7f0902c6;
 
         /* JADX INFO: Added by JADX */
-        public static final int withinBounds = 0x7f0902c6;
+        public static final int withinBounds = 0x7f0902c7;
 
         /* JADX INFO: Added by JADX */
-        public static final int wrap = 0x7f0902c7;
+        public static final int wrap = 0x7f0902c8;
 
         /* JADX INFO: Added by JADX */
-        public static final int wrap_content = 0x7f0902c8;
+        public static final int wrap_content = 0x7f0902c9;
 
         /* JADX INFO: Added by JADX */
-        public static final int wrap_content_constrained = 0x7f0902c9;
+        public static final int wrap_content_constrained = 0x7f0902ca;
 
         /* JADX INFO: Added by JADX */
-        public static final int x_left = 0x7f0902ca;
+        public static final int x_left = 0x7f0902cb;
 
         /* JADX INFO: Added by JADX */
-        public static final int x_right = 0x7f0902cb;
+        public static final int x_right = 0x7f0902cc;
 
         private id() {
         }
@@ -14239,256 +14242,259 @@ public final class R {
         public static final int loading_bar = 0x7f0c0053;
 
         /* JADX INFO: Added by JADX */
-        public static final int loading_layout_wrapper = 0x7f0c0054;
+        public static final int loading_content_roblox = 0x7f0c0054;
 
         /* JADX INFO: Added by JADX */
-        public static final int m3_alert_dialog = 0x7f0c0055;
+        public static final int loading_layout_wrapper = 0x7f0c0055;
 
         /* JADX INFO: Added by JADX */
-        public static final int m3_alert_dialog_actions = 0x7f0c0056;
+        public static final int m3_alert_dialog = 0x7f0c0056;
 
         /* JADX INFO: Added by JADX */
-        public static final int m3_alert_dialog_title = 0x7f0c0057;
+        public static final int m3_alert_dialog_actions = 0x7f0c0057;
 
         /* JADX INFO: Added by JADX */
-        public static final int m3_auto_complete_simple_item = 0x7f0c0058;
+        public static final int m3_alert_dialog_title = 0x7f0c0058;
 
         /* JADX INFO: Added by JADX */
-        public static final int m3_side_sheet_dialog = 0x7f0c0059;
+        public static final int m3_auto_complete_simple_item = 0x7f0c0059;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_chip_input_combo = 0x7f0c005a;
+        public static final int m3_side_sheet_dialog = 0x7f0c005a;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_clock_display = 0x7f0c005b;
+        public static final int material_chip_input_combo = 0x7f0c005b;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_clock_display_divider = 0x7f0c005c;
+        public static final int material_clock_display = 0x7f0c005c;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_clock_period_toggle = 0x7f0c005d;
+        public static final int material_clock_display_divider = 0x7f0c005d;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_clock_period_toggle_land = 0x7f0c005e;
+        public static final int material_clock_period_toggle = 0x7f0c005e;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_clockface_textview = 0x7f0c005f;
+        public static final int material_clock_period_toggle_land = 0x7f0c005f;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_clockface_view = 0x7f0c0060;
+        public static final int material_clockface_textview = 0x7f0c0060;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_radial_view_group = 0x7f0c0061;
+        public static final int material_clockface_view = 0x7f0c0061;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_textinput_timepicker = 0x7f0c0062;
+        public static final int material_radial_view_group = 0x7f0c0062;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_time_chip = 0x7f0c0063;
+        public static final int material_textinput_timepicker = 0x7f0c0063;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_time_input = 0x7f0c0064;
+        public static final int material_time_chip = 0x7f0c0064;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_timepicker = 0x7f0c0065;
+        public static final int material_time_input = 0x7f0c0065;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_timepicker_dialog = 0x7f0c0066;
+        public static final int material_timepicker = 0x7f0c0066;
 
         /* JADX INFO: Added by JADX */
-        public static final int material_timepicker_textinput_display = 0x7f0c0067;
+        public static final int material_timepicker_dialog = 0x7f0c0067;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_alert_dialog = 0x7f0c0068;
+        public static final int material_timepicker_textinput_display = 0x7f0c0068;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_alert_dialog_actions = 0x7f0c0069;
+        public static final int mtrl_alert_dialog = 0x7f0c0069;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_alert_dialog_title = 0x7f0c006a;
+        public static final int mtrl_alert_dialog_actions = 0x7f0c006a;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_alert_select_dialog_item = 0x7f0c006b;
+        public static final int mtrl_alert_dialog_title = 0x7f0c006b;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_alert_select_dialog_multichoice = 0x7f0c006c;
+        public static final int mtrl_alert_select_dialog_item = 0x7f0c006c;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_alert_select_dialog_singlechoice = 0x7f0c006d;
+        public static final int mtrl_alert_select_dialog_multichoice = 0x7f0c006d;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_auto_complete_simple_item = 0x7f0c006e;
+        public static final int mtrl_alert_select_dialog_singlechoice = 0x7f0c006e;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_calendar_day = 0x7f0c006f;
+        public static final int mtrl_auto_complete_simple_item = 0x7f0c006f;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_calendar_day_of_week = 0x7f0c0070;
+        public static final int mtrl_calendar_day = 0x7f0c0070;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_calendar_days_of_week = 0x7f0c0071;
+        public static final int mtrl_calendar_day_of_week = 0x7f0c0071;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_calendar_horizontal = 0x7f0c0072;
+        public static final int mtrl_calendar_days_of_week = 0x7f0c0072;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_calendar_month = 0x7f0c0073;
+        public static final int mtrl_calendar_horizontal = 0x7f0c0073;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_calendar_month_labeled = 0x7f0c0074;
+        public static final int mtrl_calendar_month = 0x7f0c0074;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_calendar_month_navigation = 0x7f0c0075;
+        public static final int mtrl_calendar_month_labeled = 0x7f0c0075;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_calendar_months = 0x7f0c0076;
+        public static final int mtrl_calendar_month_navigation = 0x7f0c0076;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_calendar_vertical = 0x7f0c0077;
+        public static final int mtrl_calendar_months = 0x7f0c0077;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_calendar_year = 0x7f0c0078;
+        public static final int mtrl_calendar_vertical = 0x7f0c0078;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_layout_snackbar = 0x7f0c0079;
+        public static final int mtrl_calendar_year = 0x7f0c0079;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_layout_snackbar_include = 0x7f0c007a;
+        public static final int mtrl_layout_snackbar = 0x7f0c007a;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_navigation_rail_item = 0x7f0c007b;
+        public static final int mtrl_layout_snackbar_include = 0x7f0c007b;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_picker_actions = 0x7f0c007c;
+        public static final int mtrl_navigation_rail_item = 0x7f0c007c;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_picker_dialog = 0x7f0c007d;
+        public static final int mtrl_picker_actions = 0x7f0c007d;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_picker_fullscreen = 0x7f0c007e;
+        public static final int mtrl_picker_dialog = 0x7f0c007e;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_picker_header_dialog = 0x7f0c007f;
+        public static final int mtrl_picker_fullscreen = 0x7f0c007f;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_picker_header_fullscreen = 0x7f0c0080;
+        public static final int mtrl_picker_header_dialog = 0x7f0c0080;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_picker_header_selection_text = 0x7f0c0081;
+        public static final int mtrl_picker_header_fullscreen = 0x7f0c0081;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_picker_header_title_text = 0x7f0c0082;
+        public static final int mtrl_picker_header_selection_text = 0x7f0c0082;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_picker_header_toggle = 0x7f0c0083;
+        public static final int mtrl_picker_header_title_text = 0x7f0c0083;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_picker_text_input_date = 0x7f0c0084;
+        public static final int mtrl_picker_header_toggle = 0x7f0c0084;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_picker_text_input_date_range = 0x7f0c0085;
+        public static final int mtrl_picker_text_input_date = 0x7f0c0085;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_search_bar = 0x7f0c0086;
+        public static final int mtrl_picker_text_input_date_range = 0x7f0c0086;
 
         /* JADX INFO: Added by JADX */
-        public static final int mtrl_search_view = 0x7f0c0087;
+        public static final int mtrl_search_bar = 0x7f0c0087;
 
         /* JADX INFO: Added by JADX */
-        public static final int notification_action = 0x7f0c0088;
+        public static final int mtrl_search_view = 0x7f0c0088;
 
         /* JADX INFO: Added by JADX */
-        public static final int notification_action_tombstone = 0x7f0c0089;
+        public static final int notification_action = 0x7f0c0089;
 
         /* JADX INFO: Added by JADX */
-        public static final int notification_stream_dialog_shell = 0x7f0c008a;
+        public static final int notification_action_tombstone = 0x7f0c008a;
 
         /* JADX INFO: Added by JADX */
-        public static final int notification_stream_layout = 0x7f0c008b;
+        public static final int notification_stream_dialog_shell = 0x7f0c008b;
 
         /* JADX INFO: Added by JADX */
-        public static final int notification_template_custom_big = 0x7f0c008c;
+        public static final int notification_stream_layout = 0x7f0c008c;
 
         /* JADX INFO: Added by JADX */
-        public static final int notification_template_icon_group = 0x7f0c008d;
+        public static final int notification_template_custom_big = 0x7f0c008d;
 
         /* JADX INFO: Added by JADX */
-        public static final int notification_template_part_chronometer = 0x7f0c008e;
+        public static final int notification_template_icon_group = 0x7f0c008e;
 
         /* JADX INFO: Added by JADX */
-        public static final int notification_template_part_time = 0x7f0c008f;
+        public static final int notification_template_part_chronometer = 0x7f0c008f;
 
         /* JADX INFO: Added by JADX */
-        public static final int progress_bar = 0x7f0c0090;
+        public static final int notification_template_part_time = 0x7f0c0090;
 
         /* JADX INFO: Added by JADX */
-        public static final int recently_played_widget_empty_large_med = 0x7f0c0091;
+        public static final int progress_bar = 0x7f0c0091;
 
         /* JADX INFO: Added by JADX */
-        public static final int recently_played_widget_empty_small = 0x7f0c0092;
+        public static final int recently_played_widget_empty_large_med = 0x7f0c0092;
 
         /* JADX INFO: Added by JADX */
-        public static final int recently_played_widget_large = 0x7f0c0093;
+        public static final int recently_played_widget_empty_small = 0x7f0c0093;
 
         /* JADX INFO: Added by JADX */
-        public static final int recently_played_widget_large_item = 0x7f0c0094;
+        public static final int recently_played_widget_large = 0x7f0c0094;
 
         /* JADX INFO: Added by JADX */
-        public static final int recently_played_widget_large_item_v2 = 0x7f0c0095;
+        public static final int recently_played_widget_large_item = 0x7f0c0095;
 
         /* JADX INFO: Added by JADX */
-        public static final int recently_played_widget_large_v2 = 0x7f0c0096;
+        public static final int recently_played_widget_large_item_v2 = 0x7f0c0096;
 
         /* JADX INFO: Added by JADX */
-        public static final int recently_played_widget_medium = 0x7f0c0097;
+        public static final int recently_played_widget_large_v2 = 0x7f0c0097;
 
         /* JADX INFO: Added by JADX */
-        public static final int recently_played_widget_medium_item = 0x7f0c0098;
+        public static final int recently_played_widget_medium = 0x7f0c0098;
 
         /* JADX INFO: Added by JADX */
-        public static final int recently_played_widget_medium_item_v2 = 0x7f0c0099;
+        public static final int recently_played_widget_medium_item = 0x7f0c0099;
 
         /* JADX INFO: Added by JADX */
-        public static final int recently_played_widget_medium_v2 = 0x7f0c009a;
+        public static final int recently_played_widget_medium_item_v2 = 0x7f0c009a;
 
         /* JADX INFO: Added by JADX */
-        public static final int recently_played_widget_preview = 0x7f0c009b;
+        public static final int recently_played_widget_medium_v2 = 0x7f0c009b;
 
         /* JADX INFO: Added by JADX */
-        public static final int recently_played_widget_small = 0x7f0c009c;
+        public static final int recently_played_widget_preview = 0x7f0c009c;
 
         /* JADX INFO: Added by JADX */
-        public static final int recently_played_widget_small_v2 = 0x7f0c009d;
+        public static final int recently_played_widget_small = 0x7f0c009d;
 
         /* JADX INFO: Added by JADX */
-        public static final int retry_layout_wrapper = 0x7f0c009e;
+        public static final int recently_played_widget_small_v2 = 0x7f0c009e;
 
         /* JADX INFO: Added by JADX */
-        public static final int select_dialog_item_material = 0x7f0c009f;
+        public static final int retry_layout_wrapper = 0x7f0c009f;
 
         /* JADX INFO: Added by JADX */
-        public static final int select_dialog_multichoice_material = 0x7f0c00a0;
+        public static final int select_dialog_item_material = 0x7f0c00a0;
 
         /* JADX INFO: Added by JADX */
-        public static final int select_dialog_singlechoice_material = 0x7f0c00a1;
+        public static final int select_dialog_multichoice_material = 0x7f0c00a1;
 
         /* JADX INFO: Added by JADX */
-        public static final int setting_list_item = 0x7f0c00a2;
+        public static final int select_dialog_singlechoice_material = 0x7f0c00a2;
 
         /* JADX INFO: Added by JADX */
-        public static final int splash_retry_button = 0x7f0c00a3;
+        public static final int setting_list_item = 0x7f0c00a3;
 
         /* JADX INFO: Added by JADX */
-        public static final int support_simple_spinner_dropdown_item = 0x7f0c00a4;
+        public static final int splash_retry_button = 0x7f0c00a4;
 
         /* JADX INFO: Added by JADX */
-        public static final int toolbar_frame = 0x7f0c00a5;
+        public static final int support_simple_spinner_dropdown_item = 0x7f0c00a5;
 
         /* JADX INFO: Added by JADX */
-        public static final int toolbar_include = 0x7f0c00a6;
+        public static final int toolbar_frame = 0x7f0c00a6;
 
         /* JADX INFO: Added by JADX */
-        public static final int web_dialog_title_layout = 0x7f0c00a7;
+        public static final int toolbar_include = 0x7f0c00a7;
+
+        /* JADX INFO: Added by JADX */
+        public static final int web_dialog_title_layout = 0x7f0c00a8;
 
         private layout() {
         }
@@ -21188,25 +21194,28 @@ public final class R {
         public static final int title_personasdk = 0x7f12087e;
 
         /* JADX INFO: Added by JADX */
-        public static final int zgooglebinarycompresswarm25743 = 0x7f12087f;
+        public static final int title_pgs = 0x7f12087f;
 
         /* JADX INFO: Added by JADX */
-        public static final int zgooglebinarycontrol743743 = 0x7f120880;
+        public static final int zgooglebinarycontrol745 = 0x7f120880;
 
         /* JADX INFO: Added by JADX */
-        public static final int zgooglebinarydeferredfonts743743 = 0x7f120881;
+        public static final int zgooglebinaryfmodupgrade745 = 0x7f120881;
 
         /* JADX INFO: Added by JADX */
-        public static final int zgooglebinarymimalloc743743 = 0x7f120882;
+        public static final int zgooglebinarym154buck2745 = 0x7f120882;
 
         /* JADX INFO: Added by JADX */
-        public static final int zgooglebinarytonecompress25743 = 0x7f120883;
+        public static final int zgooglebinarym154cmake745 = 0x7f120883;
 
         /* JADX INFO: Added by JADX */
-        public static final int zgooglebinarywarmceiling25743 = 0x7f120884;
+        public static final int zgooglebinarymimalloc745 = 0x7f120884;
 
         /* JADX INFO: Added by JADX */
-        public static final int gpdeku_split_title = 0x7f120885;
+        public static final int zgooglebinaryupdateorderfile745 = 0x7f120885;
+
+        /* JADX INFO: Added by JADX */
+        public static final int gpdeku_split_title = 0x7f120886;
     }
 
     public static final class style {

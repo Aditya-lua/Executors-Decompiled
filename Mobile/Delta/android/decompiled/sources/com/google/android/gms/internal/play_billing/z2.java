@@ -4,7 +4,7 @@ package com.google.android.gms.internal.play_billing;
 public final class z2 implements w4 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final w4 f7355a = new z2();
+    public static final w4 f7429a = new z2();
 
     @Override // com.google.android.gms.internal.play_billing.w4
     public final boolean a(int i10) {

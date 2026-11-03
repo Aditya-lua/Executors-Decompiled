@@ -16,26 +16,26 @@ public class AuthenticationExtensionsClientOutputs extends AbstractSafeParcelabl
     public static final Parcelable.Creator<AuthenticationExtensionsClientOutputs> CREATOR = new w();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final UvmEntries f5922f;
+    public final UvmEntries f5995f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final zzf f5923g;
+    public final zzf f5996g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final AuthenticationExtensionsCredPropsOutputs f5924h;
+    public final AuthenticationExtensionsCredPropsOutputs f5997h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final zzh f5925i;
+    public final zzh f5998i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final String f5926j;
+    public final String f5999j;
 
     public AuthenticationExtensionsClientOutputs(UvmEntries uvmEntries, zzf zzfVar, AuthenticationExtensionsCredPropsOutputs authenticationExtensionsCredPropsOutputs, zzh zzhVar, String str) {
-        this.f5922f = uvmEntries;
-        this.f5923g = zzfVar;
-        this.f5924h = authenticationExtensionsCredPropsOutputs;
-        this.f5925i = zzhVar;
-        this.f5926j = str;
+        this.f5995f = uvmEntries;
+        this.f5996g = zzfVar;
+        this.f5997h = authenticationExtensionsCredPropsOutputs;
+        this.f5998i = zzhVar;
+        this.f5999j = str;
     }
 
     public boolean equals(Object obj) {
@@ -43,11 +43,11 @@ public class AuthenticationExtensionsClientOutputs extends AbstractSafeParcelabl
             return false;
         }
         AuthenticationExtensionsClientOutputs authenticationExtensionsClientOutputs = (AuthenticationExtensionsClientOutputs) obj;
-        return k.b(this.f5922f, authenticationExtensionsClientOutputs.f5922f) && k.b(this.f5923g, authenticationExtensionsClientOutputs.f5923g) && k.b(this.f5924h, authenticationExtensionsClientOutputs.f5924h) && k.b(this.f5925i, authenticationExtensionsClientOutputs.f5925i) && k.b(this.f5926j, authenticationExtensionsClientOutputs.f5926j);
+        return k.b(this.f5995f, authenticationExtensionsClientOutputs.f5995f) && k.b(this.f5996g, authenticationExtensionsClientOutputs.f5996g) && k.b(this.f5997h, authenticationExtensionsClientOutputs.f5997h) && k.b(this.f5998i, authenticationExtensionsClientOutputs.f5998i) && k.b(this.f5999j, authenticationExtensionsClientOutputs.f5999j);
     }
 
     public int hashCode() {
-        return k.c(this.f5922f, this.f5923g, this.f5924h, this.f5925i, this.f5926j);
+        return k.c(this.f5995f, this.f5996g, this.f5997h, this.f5998i, this.f5999j);
     }
 
     @NonNull
@@ -56,21 +56,21 @@ public class AuthenticationExtensionsClientOutputs extends AbstractSafeParcelabl
     }
 
     public AuthenticationExtensionsCredPropsOutputs v3() {
-        return this.f5924h;
+        return this.f5997h;
     }
 
     public UvmEntries w3() {
-        return this.f5922f;
+        return this.f5995f;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
         int iA = o9.b.a(parcel);
         o9.b.t(parcel, 1, w3(), i10, false);
-        o9.b.t(parcel, 2, this.f5923g, i10, false);
+        o9.b.t(parcel, 2, this.f5996g, i10, false);
         o9.b.t(parcel, 3, v3(), i10, false);
-        o9.b.t(parcel, 4, this.f5925i, i10, false);
-        o9.b.v(parcel, 5, this.f5926j, false);
+        o9.b.t(parcel, 4, this.f5998i, i10, false);
+        o9.b.v(parcel, 5, this.f5999j, false);
         o9.b.b(parcel, iA);
     }
 
@@ -78,19 +78,19 @@ public class AuthenticationExtensionsClientOutputs extends AbstractSafeParcelabl
     public final JSONObject x3() {
         try {
             JSONObject jSONObject = new JSONObject();
-            AuthenticationExtensionsCredPropsOutputs authenticationExtensionsCredPropsOutputs = this.f5924h;
+            AuthenticationExtensionsCredPropsOutputs authenticationExtensionsCredPropsOutputs = this.f5997h;
             if (authenticationExtensionsCredPropsOutputs != null) {
                 jSONObject.put("credProps", authenticationExtensionsCredPropsOutputs.w3());
             }
-            UvmEntries uvmEntries = this.f5922f;
+            UvmEntries uvmEntries = this.f5995f;
             if (uvmEntries != null) {
                 jSONObject.put("uvm", uvmEntries.w3());
             }
-            zzh zzhVar = this.f5925i;
+            zzh zzhVar = this.f5998i;
             if (zzhVar != null) {
                 jSONObject.put("prf", zzhVar.v3());
             }
-            String str = this.f5926j;
+            String str = this.f5999j;
             if (str != null) {
                 jSONObject.put("txAuthSimple", str);
             }

@@ -1,10 +1,10 @@
 package l4;
 
-import jt.m;
+import gt.m;
+import iu.g1;
+import iu.z2;
 import kotlin.Metadata;
 import kotlin.coroutines.CoroutineContext;
-import ku.g1;
-import ku.z2;
 import org.jetbrains.annotations.NotNull;
 
 /* JADX INFO: loaded from: classes.dex */
@@ -12,14 +12,14 @@ import org.jetbrains.annotations.NotNull;
 public final class c {
     @NotNull
     public static final b a() {
-        CoroutineContext coroutineContextX;
+        CoroutineContext coroutineContextW;
         try {
-            coroutineContextX = g1.c().X();
-        } catch (IllegalStateException unused) {
-            coroutineContextX = kotlin.coroutines.e.f22525a;
-        } catch (m unused2) {
-            coroutineContextX = kotlin.coroutines.e.f22525a;
+            coroutineContextW = g1.c().W();
+        } catch (m unused) {
+            coroutineContextW = kotlin.coroutines.e.f22980a;
+        } catch (IllegalStateException unused2) {
+            coroutineContextW = kotlin.coroutines.e.f22980a;
         }
-        return new b(coroutineContextX.plus(z2.b(null, 1, null)));
+        return new b(coroutineContextW.plus(z2.b(null, 1, null)));
     }
 }

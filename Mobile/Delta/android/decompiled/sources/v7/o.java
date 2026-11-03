@@ -6,13 +6,13 @@ import androidx.annotation.NonNull;
 public final class o {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f32815a;
+    public final String f33383a;
     public final boolean b;
 
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public String f32816a;
+        public String f33384a;
         public boolean b = false;
 
         public /* synthetic */ a(z1 z1Var) {
@@ -20,7 +20,7 @@ public final class o {
 
         @NonNull
         public o a() {
-            String str = this.f32816a;
+            String str = this.f33384a;
             if (str == null) {
                 throw new IllegalArgumentException("Product type must be set");
             }
@@ -32,13 +32,13 @@ public final class o {
 
         @NonNull
         public a b(@NonNull String str) {
-            this.f32816a = str;
+            this.f33384a = str;
             return this;
         }
     }
 
     public /* synthetic */ o(a aVar, z1 z1Var) {
-        this.f32815a = aVar.f32816a;
+        this.f33383a = aVar.f33384a;
         this.b = aVar.b;
     }
 
@@ -53,6 +53,6 @@ public final class o {
 
     @NonNull
     public final String c() {
-        return this.f32815a;
+        return this.f33383a;
     }
 }

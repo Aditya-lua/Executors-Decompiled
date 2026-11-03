@@ -8,32 +8,32 @@ public class o extends g<l7.b> {
     public class a extends t7.c<l7.b> {
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final /* synthetic */ t7.b f20328d;
+        public final /* synthetic */ t7.b f20444d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final /* synthetic */ t7.c f20329e;
+        public final /* synthetic */ t7.c f20445e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public final /* synthetic */ l7.b f20330f;
+        public final /* synthetic */ l7.b f20446f;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public final /* synthetic */ o f20331g;
+        public final /* synthetic */ o f20447g;
 
         public a(o oVar, t7.b bVar, t7.c cVar, l7.b bVar2) {
-            this.f20328d = bVar;
-            this.f20329e = cVar;
-            this.f20330f = bVar2;
-            this.f20331g = oVar;
+            this.f20444d = bVar;
+            this.f20445e = cVar;
+            this.f20446f = bVar2;
+            this.f20447g = oVar;
         }
 
         @Override // t7.c
         /* JADX INFO: renamed from: d, reason: merged with bridge method [inline-methods] */
         public l7.b a(t7.b<l7.b> bVar) {
-            this.f20328d.h(bVar.f(), bVar.a(), bVar.g().f22953a, bVar.b().f22953a, bVar.d(), bVar.c(), bVar.e());
-            String str = (String) this.f20329e.a(this.f20328d);
+            this.f20444d.h(bVar.f(), bVar.a(), bVar.g().f23347a, bVar.b().f23347a, bVar.d(), bVar.c(), bVar.e());
+            String str = (String) this.f20445e.a(this.f20444d);
             l7.b bVarB = bVar.c() == 1.0f ? bVar.b() : bVar.g();
-            this.f20330f.a(str, bVarB.b, bVarB.f22954c, bVarB.f22955d, bVarB.f22956e, bVarB.f22957f, bVarB.f22958g, bVarB.f22959h, bVarB.f22960i, bVarB.f22961j, bVarB.f22962k, bVarB.f22963l, bVarB.f22964m);
-            return this.f20330f;
+            this.f20446f.a(str, bVarB.b, bVarB.f23348c, bVarB.f23349d, bVarB.f23350e, bVarB.f23351f, bVarB.f23352g, bVarB.f23353h, bVarB.f23354i, bVarB.f23355j, bVarB.f23356k, bVarB.f23357l, bVarB.f23358m);
+            return this.f20446f;
         }
     }
 
@@ -55,16 +55,16 @@ public class o extends g<l7.b> {
     /* JADX INFO: renamed from: r, reason: merged with bridge method [inline-methods] */
     public l7.b i(t7.a<l7.b> aVar, float f10) {
         l7.b bVar;
-        t7.c<A> cVar = this.f20288e;
+        t7.c<A> cVar = this.f20404e;
         if (cVar == 0) {
-            return (f10 != 1.0f || (bVar = aVar.f31671c) == null) ? aVar.b : bVar;
+            return (f10 != 1.0f || (bVar = aVar.f32190c) == null) ? aVar.b : bVar;
         }
-        float f11 = aVar.f31675g;
-        Float f12 = aVar.f31676h;
+        float f11 = aVar.f32194g;
+        Float f12 = aVar.f32195h;
         float fFloatValue = f12 == null ? Float.MAX_VALUE : f12.floatValue();
         l7.b bVar2 = aVar.b;
         l7.b bVar3 = bVar2;
-        l7.b bVar4 = aVar.f31671c;
+        l7.b bVar4 = aVar.f32190c;
         return (l7.b) cVar.b(f11, fFloatValue, bVar3, bVar4 == null ? bVar2 : bVar4, f10, d(), f());
     }
 

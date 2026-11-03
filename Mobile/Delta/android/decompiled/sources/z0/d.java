@@ -27,38 +27,38 @@ import x0.c0;
 public final class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final int[] f37023a = {12344};
+    public static final int[] f37718a = {12344};
     public static final int[] b = {12445, 13632, 12344};
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final String f37024c;
+    public static final String f37719c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final String f37025d;
+    public static final String f37720d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final c0 f37026e;
+    public static final c0 f37721e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final c0 f37027f;
+    public static final c0 f37722f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final c0 f37028g;
+    public static final c0 f37723g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final float[] f37029h;
+    public static final float[] f37724h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final FloatBuffer f37030i;
+    public static final FloatBuffer f37725i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final float[] f37031j;
+    public static final float[] f37726j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final FloatBuffer f37032k;
+    public static final FloatBuffer f37727k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final z0.g f37033l;
+    public static final z0.g f37728l;
 
     public class a implements c0 {
         @Override // x0.c0
@@ -82,8 +82,8 @@ public final class d {
     }
 
     /* JADX INFO: renamed from: z0.d$d, reason: collision with other inner class name */
-    public static class C0669d extends f {
-        public C0669d() {
+    public static class C0679d extends f {
+        public C0679d() {
             super("uniform mat4 uTransMatrix;\nattribute vec4 aPosition;\nvoid main() {\n    gl_Position = uTransMatrix * aPosition;\n}\n", "precision mediump float;\nuniform float uAlphaScale;\nvoid main() {\n    gl_FragColor = vec4(0.0, 0.0, 0.0, uAlphaScale);\n}\n");
         }
     }
@@ -97,14 +97,14 @@ public final class d {
     public static abstract class f {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public int f37037a;
+        public int f37732a;
         public int b = -1;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public int f37038c = -1;
+        public int f37733c = -1;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public int f37039d = -1;
+        public int f37734d = -1;
 
         /* JADX WARN: Code duplicated, block: B:32:0x0078  */
         /* JADX WARN: Code duplicated, block: B:34:0x007d  */
@@ -129,7 +129,7 @@ public final class d {
                             int[] iArr = new int[1];
                             GLES20.glGetProgramiv(iGlCreateProgram, 35714, iArr, 0);
                             if (iArr[0] == 1) {
-                                this.f37037a = iGlCreateProgram;
+                                this.f37732a = iGlCreateProgram;
                                 c();
                             } else {
                                 throw new IllegalStateException("Could not link program: " + GLES20.glGetProgramInfoLog(iGlCreateProgram));
@@ -187,23 +187,23 @@ public final class d {
 
         /* JADX INFO: Access modifiers changed from: private */
         public void c() {
-            int iGlGetAttribLocation = GLES20.glGetAttribLocation(this.f37037a, "aPosition");
-            this.f37039d = iGlGetAttribLocation;
+            int iGlGetAttribLocation = GLES20.glGetAttribLocation(this.f37732a, "aPosition");
+            this.f37734d = iGlGetAttribLocation;
             d.j(iGlGetAttribLocation, "aPosition");
-            int iGlGetUniformLocation = GLES20.glGetUniformLocation(this.f37037a, "uTransMatrix");
+            int iGlGetUniformLocation = GLES20.glGetUniformLocation(this.f37732a, "uTransMatrix");
             this.b = iGlGetUniformLocation;
             d.j(iGlGetUniformLocation, "uTransMatrix");
-            int iGlGetUniformLocation2 = GLES20.glGetUniformLocation(this.f37037a, "uAlphaScale");
-            this.f37038c = iGlGetUniformLocation2;
+            int iGlGetUniformLocation2 = GLES20.glGetUniformLocation(this.f37732a, "uAlphaScale");
+            this.f37733c = iGlGetUniformLocation2;
             d.j(iGlGetUniformLocation2, "uAlphaScale");
         }
 
         public void b() {
-            GLES20.glDeleteProgram(this.f37037a);
+            GLES20.glDeleteProgram(this.f37732a);
         }
 
         public void d(float f10) {
-            GLES20.glUniform1f(this.f37038c, f10);
+            GLES20.glUniform1f(this.f37733c, f10);
             d.g("glUniform1f");
         }
 
@@ -213,11 +213,11 @@ public final class d {
         }
 
         public void f() {
-            GLES20.glUseProgram(this.f37037a);
+            GLES20.glUseProgram(this.f37732a);
             d.g("glUseProgram");
-            GLES20.glEnableVertexAttribArray(this.f37039d);
+            GLES20.glEnableVertexAttribArray(this.f37734d);
             d.g("glEnableVertexAttribArray");
-            GLES20.glVertexAttribPointer(this.f37039d, 2, 5126, false, 0, (Buffer) d.f37030i);
+            GLES20.glVertexAttribPointer(this.f37734d, 2, 5126, false, 0, (Buffer) d.f37725i);
             d.g("glVertexAttribPointer");
             e(d.l());
             d(1.0f);
@@ -227,13 +227,13 @@ public final class d {
     public static class g extends f {
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public int f37040e;
+        public int f37735e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public int f37041f;
+        public int f37736f;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public int f37042g;
+        public int f37737g;
 
         public g(k0 k0Var, e eVar) {
             this(k0Var, g(k0Var, eVar));
@@ -241,63 +241,63 @@ public final class d {
 
         public static c0 g(k0 k0Var, e eVar) {
             if (!k0Var.d()) {
-                return d.f37026e;
+                return d.f37721e;
             }
             x2.g.b(eVar != e.UNKNOWN, "No default sampler shader available for" + eVar);
-            return eVar == e.YUV ? d.f37028g : d.f37027f;
+            return eVar == e.YUV ? d.f37723g : d.f37722f;
         }
 
         public final void c() {
             c();
-            int iGlGetUniformLocation = GLES20.glGetUniformLocation(this.f37037a, "sTexture");
-            this.f37040e = iGlGetUniformLocation;
+            int iGlGetUniformLocation = GLES20.glGetUniformLocation(this.f37732a, "sTexture");
+            this.f37735e = iGlGetUniformLocation;
             d.j(iGlGetUniformLocation, "sTexture");
-            int iGlGetAttribLocation = GLES20.glGetAttribLocation(this.f37037a, "aTextureCoord");
-            this.f37042g = iGlGetAttribLocation;
+            int iGlGetAttribLocation = GLES20.glGetAttribLocation(this.f37732a, "aTextureCoord");
+            this.f37737g = iGlGetAttribLocation;
             d.j(iGlGetAttribLocation, "aTextureCoord");
-            int iGlGetUniformLocation2 = GLES20.glGetUniformLocation(this.f37037a, "uTexMatrix");
-            this.f37041f = iGlGetUniformLocation2;
+            int iGlGetUniformLocation2 = GLES20.glGetUniformLocation(this.f37732a, "uTexMatrix");
+            this.f37736f = iGlGetUniformLocation2;
             d.j(iGlGetUniformLocation2, "uTexMatrix");
         }
 
         @Override // z0.d.f
         public void f() {
             super.f();
-            GLES20.glUniform1i(this.f37040e, 0);
-            GLES20.glEnableVertexAttribArray(this.f37042g);
+            GLES20.glUniform1i(this.f37735e, 0);
+            GLES20.glEnableVertexAttribArray(this.f37737g);
             d.g("glEnableVertexAttribArray");
-            GLES20.glVertexAttribPointer(this.f37042g, 2, 5126, false, 0, (Buffer) d.f37032k);
+            GLES20.glVertexAttribPointer(this.f37737g, 2, 5126, false, 0, (Buffer) d.f37727k);
             d.g("glVertexAttribPointer");
         }
 
         public void h(float[] fArr) {
-            GLES20.glUniformMatrix4fv(this.f37041f, 1, false, fArr, 0);
+            GLES20.glUniformMatrix4fv(this.f37736f, 1, false, fArr, 0);
             d.g("glUniformMatrix4fv");
         }
 
         public g(k0 k0Var, c0 c0Var) {
-            super(k0Var.d() ? d.f37025d : d.f37024c, d.v(c0Var));
-            this.f37040e = -1;
-            this.f37041f = -1;
-            this.f37042g = -1;
+            super(k0Var.d() ? d.f37720d : d.f37719c, d.v(c0Var));
+            this.f37735e = -1;
+            this.f37736f = -1;
+            this.f37737g = -1;
             c();
         }
     }
 
     static {
         Locale locale = Locale.US;
-        f37024c = String.format(locale, "uniform mat4 uTexMatrix;\nuniform mat4 uTransMatrix;\nattribute vec4 aPosition;\nattribute vec4 aTextureCoord;\nvarying vec2 %s;\nvoid main() {\n    gl_Position = uTransMatrix * aPosition;\n    %s = (uTexMatrix * aTextureCoord).xy;\n}\n", "vTextureCoord", "vTextureCoord");
-        f37025d = String.format(locale, "#version 300 es\nin vec4 aPosition;\nin vec4 aTextureCoord;\nuniform mat4 uTexMatrix;\nuniform mat4 uTransMatrix;\nout vec2 %s;\nvoid main() {\n  gl_Position = uTransMatrix * aPosition;\n  %s = (uTexMatrix * aTextureCoord).xy;\n}\n", "vTextureCoord", "vTextureCoord");
-        f37026e = new a();
-        f37027f = new b();
-        f37028g = new c();
+        f37719c = String.format(locale, "uniform mat4 uTexMatrix;\nuniform mat4 uTransMatrix;\nattribute vec4 aPosition;\nattribute vec4 aTextureCoord;\nvarying vec2 %s;\nvoid main() {\n    gl_Position = uTransMatrix * aPosition;\n    %s = (uTexMatrix * aTextureCoord).xy;\n}\n", "vTextureCoord", "vTextureCoord");
+        f37720d = String.format(locale, "#version 300 es\nin vec4 aPosition;\nin vec4 aTextureCoord;\nuniform mat4 uTexMatrix;\nuniform mat4 uTransMatrix;\nout vec2 %s;\nvoid main() {\n  gl_Position = uTransMatrix * aPosition;\n  %s = (uTexMatrix * aTextureCoord).xy;\n}\n", "vTextureCoord", "vTextureCoord");
+        f37721e = new a();
+        f37722f = new b();
+        f37723g = new c();
         float[] fArr = {-1.0f, -1.0f, 1.0f, -1.0f, -1.0f, 1.0f, 1.0f, 1.0f};
-        f37029h = fArr;
-        f37030i = m(fArr);
+        f37724h = fArr;
+        f37725i = m(fArr);
         float[] fArr2 = {0.0f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f};
-        f37031j = fArr2;
-        f37032k = m(fArr2);
-        f37033l = z0.g.d(EGL14.EGL_NO_SURFACE, 0, 0);
+        f37726j = fArr2;
+        f37727k = m(fArr2);
+        f37728l = z0.g.d(EGL14.EGL_NO_SURFACE, 0, 0);
     }
 
     public static void e(String str) {
@@ -340,7 +340,7 @@ public final class d {
     }
 
     public static int[] k(String str, k0 k0Var) {
-        int[] iArr = f37023a;
+        int[] iArr = f37718a;
         if (k0Var.b() == 3) {
             if (str.contains("EGL_EXT_gl_colorspace_bt2020_hlg")) {
                 return b;
@@ -390,7 +390,7 @@ public final class d {
             } else {
                 x2.g.j(eVar2 == e.UNKNOWN, "Unhandled input format: " + eVar2);
                 if (k0Var.d()) {
-                    gVar = new C0669d();
+                    gVar = new C0679d();
                 } else {
                     c0 c0Var2 = map.get(eVar);
                     gVar = c0Var2 != null ? new g(k0Var, c0Var2) : new g(k0Var, eVar);

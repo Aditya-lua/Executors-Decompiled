@@ -6,10 +6,10 @@ import android.location.Location;
 public final class l extends lb.q {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final l9.k<lb.e> f18754a;
+    public final l9.k<lb.e> f19241a;
 
     @Override // lb.r
     public final synchronized void s(Location location) {
-        this.f18754a.c(new k(this, location));
+        this.f19241a.c(new k(this, location));
     }
 }

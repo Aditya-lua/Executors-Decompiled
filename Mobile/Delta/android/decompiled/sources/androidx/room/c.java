@@ -2,6 +2,8 @@ package androidx.room;
 
 import android.content.Context;
 import android.content.Intent;
+import gt.o;
+import iu.p0;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -9,7 +11,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.locks.ReentrantLock;
-import jt.o;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.Unit;
@@ -20,19 +21,18 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.k;
-import ku.p0;
-import nu.h;
-import nu.j;
+import lu.h;
+import lu.j;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pt.m;
 import x4.g;
 import x4.l0;
 import x4.u;
 import z4.r;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000¬\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010$\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\"\n\u0000\n\u0002\u0010\u0011\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u000f\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010%\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0016\u0018\u0000 #2\u00020\u0001:\u0002?;BS\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0012\u0010\u0006\u001a\u000e\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\u00050\u0004\u0012\u0018\u0010\b\u001a\u0014\u0012\u0004\u0012\u00020\u0005\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00050\u00070\u0004\u0012\u0012\u0010\n\u001a\n\u0012\u0006\b\u0001\u0012\u00020\u00050\t\"\u00020\u0005¢\u0006\u0004\b\u000b\u0010\fJ\u000f\u0010\u000e\u001a\u00020\rH\u0002¢\u0006\u0004\b\u000e\u0010\u000fJ\u0017\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0011\u001a\u00020\u0010H\u0002¢\u0006\u0004\b\u0013\u0010\u0014J\u0017\u0010\u0015\u001a\u00020\u00122\u0006\u0010\u0011\u001a\u00020\u0010H\u0002¢\u0006\u0004\b\u0015\u0010\u0014J\u0015\u0010\u0017\u001a\b\u0012\u0004\u0012\u00020\u00100\u0016H\u0002¢\u0006\u0004\b\u0017\u0010\u0018J\u001d\u0010\u001b\u001a\u00020\r2\f\u0010\u001a\u001a\b\u0012\u0004\u0012\u00020\u00190\u0007H\u0002¢\u0006\u0004\b\u001b\u0010\u001cJ\u0017\u0010\u001f\u001a\u00020\r2\u0006\u0010\u001e\u001a\u00020\u001dH\u0000¢\u0006\u0004\b\u001f\u0010 J\u0017\u0010#\u001a\u00020\r2\u0006\u0010\"\u001a\u00020!H\u0000¢\u0006\u0004\b#\u0010$J\u0010\u0010%\u001a\u00020\rH\u0080@¢\u0006\u0004\b%\u0010&J\u000f\u0010'\u001a\u00020\rH\u0001¢\u0006\u0004\b'\u0010\u000fJ\r\u0010(\u001a\u00020\r¢\u0006\u0004\b(\u0010\u000fJ9\u0010,\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00050\u00070+2\u0012\u0010)\u001a\n\u0012\u0006\b\u0001\u0012\u00020\u00050\t\"\u00020\u00052\b\b\u0002\u0010*\u001a\u00020\u0012H\u0007¢\u0006\u0004\b,\u0010-J\u0017\u0010.\u001a\u00020\r2\u0006\u0010\u0011\u001a\u00020\u0010H\u0000¢\u0006\u0004\b.\u0010/J\u0017\u00100\u001a\u00020\r2\u0006\u0010\u0011\u001a\u00020\u0010H\u0017¢\u0006\u0004\b0\u0010/J\u000f\u00101\u001a\u00020\rH\u0016¢\u0006\u0004\b1\u0010\u000fJ\u001d\u00102\u001a\u00020\r2\f\u0010)\u001a\b\u0012\u0004\u0012\u00020\u00050\u0007H\u0000¢\u0006\u0004\b2\u0010\u001cJ'\u00108\u001a\u00020\r2\u0006\u00104\u001a\u0002032\u0006\u00105\u001a\u00020\u00052\u0006\u00107\u001a\u000206H\u0000¢\u0006\u0004\b8\u00109J\u000f\u0010:\u001a\u00020\rH\u0000¢\u0006\u0004\b:\u0010\u000fR\u001a\u0010\u0003\u001a\u00020\u00028\u0000X\u0080\u0004¢\u0006\f\n\u0004\b;\u0010<\u001a\u0004\b=\u0010>R \u0010\u0006\u001a\u000e\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\u00050\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b?\u0010@R&\u0010\b\u001a\u0014\u0012\u0004\u0012\u00020\u0005\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00050\u00070\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bA\u0010@R\"\u0010\n\u001a\n\u0012\u0006\b\u0001\u0012\u00020\u00050\t8\u0000X\u0080\u0004¢\u0006\f\n\u0004\bB\u0010C\u001a\u0004\bD\u0010ER\u0014\u0010I\u001a\u00020F8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bG\u0010HR \u0010M\u001a\u000e\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020K0J8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bL\u0010@R\u0018\u0010R\u001a\u00060Nj\u0002`O8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bP\u0010QR\u0018\u0010\u001e\u001a\u0004\u0018\u00010\u001d8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0013\u0010SR\u001a\u0010V\u001a\b\u0012\u0004\u0012\u00020\r0T8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b.\u0010UR\u001a\u0010W\u001a\b\u0012\u0004\u0012\u00020\r0T8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b,\u0010UR\u0014\u0010Z\u001a\u00020X8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0017\u0010YR\u0018\u0010\\\u001a\u0004\u0018\u0001068\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b=\u0010[R\u0018\u0010_\u001a\u0004\u0018\u00010]8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bD\u0010^R\u0014\u0010a\u001a\u00020\u00018\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b8\u0010`¨\u0006b"}, d2 = {"Landroidx/room/c;", "", "Lx4/u;", "database", "", "", "shadowTablesMap", "", "viewTables", "", "tableNames", "<init>", "(Lx4/u;Ljava/util/Map;Ljava/util/Map;[Ljava/lang/String;)V", "", "r", "()V", "Landroidx/room/c$b;", "observer", "", "h", "(Landroidx/room/c$b;)Z", "x", "", "k", "()Ljava/util/List;", "", "tableIds", "p", "(Ljava/util/Set;)V", "Lb5/b;", "autoCloser", "y", "(Lb5/b;)V", "Lf5/b;", "connection", "o", "(Lf5/b;)V", "A", "(Lnt/b;)Ljava/lang/Object;", "B", "u", "tables", "emitInitialState", "Lnu/h;", "j", "([Ljava/lang/String;Z)Lnu/h;", "i", "(Landroidx/room/c$b;)V", "w", "v", "q", "Landroid/content/Context;", "context", "name", "Landroid/content/Intent;", "serviceIntent", "n", "(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;)V", "z", "a", "Lx4/u;", "l", "()Lx4/u;", "b", "Ljava/util/Map;", "c", "d", "[Ljava/lang/String;", "m", "()[Ljava/lang/String;", "Lx4/l0;", "e", "Lx4/l0;", "implementation", "", "Landroidx/room/e;", "f", "observerMap", "Ljava/util/concurrent/locks/ReentrantLock;", "Landroidx/room/concurrent/ReentrantLock;", "g", "Ljava/util/concurrent/locks/ReentrantLock;", "observerMapLock", "Lb5/b;", "Lkotlin/Function0;", "Lkotlin/jvm/functions/Function0;", "onRefreshScheduled", "onRefreshCompleted", "Lx4/g;", "Lx4/g;", "invalidationLiveDataContainer", "Landroid/content/Intent;", "multiInstanceInvalidationIntent", "Landroidx/room/d;", "Landroidx/room/d;", "multiInstanceInvalidationClient", "Ljava/lang/Object;", "trackerLock", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
+@Metadata(d1 = {"\u0000¬\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010$\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\"\n\u0000\n\u0002\u0010\u0011\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u000f\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010%\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0016\u0018\u0000 #2\u00020\u0001:\u0002?;BS\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0012\u0010\u0006\u001a\u000e\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\u00050\u0004\u0012\u0018\u0010\b\u001a\u0014\u0012\u0004\u0012\u00020\u0005\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00050\u00070\u0004\u0012\u0012\u0010\n\u001a\n\u0012\u0006\b\u0001\u0012\u00020\u00050\t\"\u00020\u0005¢\u0006\u0004\b\u000b\u0010\fJ\u000f\u0010\u000e\u001a\u00020\rH\u0002¢\u0006\u0004\b\u000e\u0010\u000fJ\u0017\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0011\u001a\u00020\u0010H\u0002¢\u0006\u0004\b\u0013\u0010\u0014J\u0017\u0010\u0015\u001a\u00020\u00122\u0006\u0010\u0011\u001a\u00020\u0010H\u0002¢\u0006\u0004\b\u0015\u0010\u0014J\u0015\u0010\u0017\u001a\b\u0012\u0004\u0012\u00020\u00100\u0016H\u0002¢\u0006\u0004\b\u0017\u0010\u0018J\u001d\u0010\u001b\u001a\u00020\r2\f\u0010\u001a\u001a\b\u0012\u0004\u0012\u00020\u00190\u0007H\u0002¢\u0006\u0004\b\u001b\u0010\u001cJ\u0017\u0010\u001f\u001a\u00020\r2\u0006\u0010\u001e\u001a\u00020\u001dH\u0000¢\u0006\u0004\b\u001f\u0010 J\u0017\u0010#\u001a\u00020\r2\u0006\u0010\"\u001a\u00020!H\u0000¢\u0006\u0004\b#\u0010$J\u0010\u0010%\u001a\u00020\rH\u0080@¢\u0006\u0004\b%\u0010&J\u000f\u0010'\u001a\u00020\rH\u0001¢\u0006\u0004\b'\u0010\u000fJ\r\u0010(\u001a\u00020\r¢\u0006\u0004\b(\u0010\u000fJ9\u0010,\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00050\u00070+2\u0012\u0010)\u001a\n\u0012\u0006\b\u0001\u0012\u00020\u00050\t\"\u00020\u00052\b\b\u0002\u0010*\u001a\u00020\u0012H\u0007¢\u0006\u0004\b,\u0010-J\u0017\u0010.\u001a\u00020\r2\u0006\u0010\u0011\u001a\u00020\u0010H\u0000¢\u0006\u0004\b.\u0010/J\u0017\u00100\u001a\u00020\r2\u0006\u0010\u0011\u001a\u00020\u0010H\u0017¢\u0006\u0004\b0\u0010/J\u000f\u00101\u001a\u00020\rH\u0016¢\u0006\u0004\b1\u0010\u000fJ\u001d\u00102\u001a\u00020\r2\f\u0010)\u001a\b\u0012\u0004\u0012\u00020\u00050\u0007H\u0000¢\u0006\u0004\b2\u0010\u001cJ'\u00108\u001a\u00020\r2\u0006\u00104\u001a\u0002032\u0006\u00105\u001a\u00020\u00052\u0006\u00107\u001a\u000206H\u0000¢\u0006\u0004\b8\u00109J\u000f\u0010:\u001a\u00020\rH\u0000¢\u0006\u0004\b:\u0010\u000fR\u001a\u0010\u0003\u001a\u00020\u00028\u0000X\u0080\u0004¢\u0006\f\n\u0004\b;\u0010<\u001a\u0004\b=\u0010>R \u0010\u0006\u001a\u000e\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\u00050\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b?\u0010@R&\u0010\b\u001a\u0014\u0012\u0004\u0012\u00020\u0005\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00050\u00070\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bA\u0010@R\"\u0010\n\u001a\n\u0012\u0006\b\u0001\u0012\u00020\u00050\t8\u0000X\u0080\u0004¢\u0006\f\n\u0004\bB\u0010C\u001a\u0004\bD\u0010ER\u0014\u0010I\u001a\u00020F8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bG\u0010HR \u0010M\u001a\u000e\u0012\u0004\u0012\u00020\u0010\u0012\u0004\u0012\u00020K0J8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bL\u0010@R\u0018\u0010R\u001a\u00060Nj\u0002`O8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bP\u0010QR\u0018\u0010\u001e\u001a\u0004\u0018\u00010\u001d8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0013\u0010SR\u001a\u0010V\u001a\b\u0012\u0004\u0012\u00020\r0T8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b.\u0010UR\u001a\u0010W\u001a\b\u0012\u0004\u0012\u00020\r0T8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b,\u0010UR\u0014\u0010Z\u001a\u00020X8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0017\u0010YR\u0018\u0010\\\u001a\u0004\u0018\u0001068\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b=\u0010[R\u0018\u0010_\u001a\u0004\u0018\u00010]8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bD\u0010^R\u0014\u0010a\u001a\u00020\u00018\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b8\u0010`¨\u0006b"}, d2 = {"Landroidx/room/c;", "", "Lx4/u;", "database", "", "", "shadowTablesMap", "", "viewTables", "", "tableNames", "<init>", "(Lx4/u;Ljava/util/Map;Ljava/util/Map;[Ljava/lang/String;)V", "", "r", "()V", "Landroidx/room/c$b;", "observer", "", "h", "(Landroidx/room/c$b;)Z", "x", "", "k", "()Ljava/util/List;", "", "tableIds", "p", "(Ljava/util/Set;)V", "Lb5/b;", "autoCloser", "y", "(Lb5/b;)V", "Lf5/b;", "connection", "o", "(Lf5/b;)V", "A", "(Llt/b;)Ljava/lang/Object;", "B", "u", "tables", "emitInitialState", "Llu/h;", "j", "([Ljava/lang/String;Z)Llu/h;", "i", "(Landroidx/room/c$b;)V", "w", "v", "q", "Landroid/content/Context;", "context", "name", "Landroid/content/Intent;", "serviceIntent", "n", "(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;)V", "z", "a", "Lx4/u;", "l", "()Lx4/u;", "b", "Ljava/util/Map;", "c", "d", "[Ljava/lang/String;", "m", "()[Ljava/lang/String;", "Lx4/l0;", "e", "Lx4/l0;", "implementation", "", "Landroidx/room/e;", "f", "observerMap", "Ljava/util/concurrent/locks/ReentrantLock;", "Landroidx/room/concurrent/ReentrantLock;", "g", "Ljava/util/concurrent/locks/ReentrantLock;", "observerMapLock", "Lb5/b;", "Lkotlin/Function0;", "Lkotlin/jvm/functions/Function0;", "onRefreshScheduled", "onRefreshCompleted", "Lx4/g;", "Lx4/g;", "invalidationLiveDataContainer", "Landroid/content/Intent;", "multiInstanceInvalidationIntent", "Landroidx/room/d;", "Landroidx/room/d;", "multiInstanceInvalidationClient", "Ljava/lang/Object;", "trackerLock", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
 public class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -118,8 +118,8 @@ public class c {
 
     /* JADX INFO: renamed from: androidx.room.c$c, reason: collision with other inner class name */
     @Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
-    public static final /* synthetic */ class C0059c extends k implements Function1<Set<? extends Integer>, Unit> {
-        public C0059c(Object obj) {
+    public static final /* synthetic */ class C0055c extends k implements Function1<Set<? extends Integer>, Unit> {
+        public C0055c(Object obj) {
             super(1, obj, c.class, "notifyInvalidatedObservers", "notifyInvalidatedObservers(Ljava/util/Set;)V", 0);
         }
 
@@ -131,34 +131,39 @@ public class c {
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(Set<? extends Integer> set) {
             d(set);
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 1, 0})
-    @pt.f(c = "androidx.room.InvalidationTracker$removeObserver$1", f = "InvalidationTracker.android.kt", l = {310}, m = "invokeSuspend")
-    public static final class d extends m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "androidx.room.InvalidationTracker$removeObserver$1", f = "InvalidationTracker.android.kt", l = {310}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 1, 0})
+    public static final class d extends m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f3325t;
+        public int f3170t;
 
-        public d(nt.b<? super d> bVar) {
+        public d(lt.b<? super d> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             return c.this.new d(bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((d) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            Object objE = ot.c.e();
-            int i10 = this.f3325t;
+            Object objE = mt.c.e();
+            int i10 = this.f3170t;
             if (i10 == 0) {
                 o.b(obj);
                 l0 l0Var = c.this.implementation;
-                this.f3325t = 1;
+                this.f3170t = 1;
                 if (l0Var.x(this) == objE) {
                     return objE;
                 }
@@ -168,12 +173,7 @@ public class c {
                 }
                 o.b(obj);
             }
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((d) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            return Unit.f22938a;
         }
     }
 
@@ -190,34 +190,39 @@ public class c {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             d();
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 1, 0})
-    @pt.f(c = "androidx.room.InvalidationTracker$syncBlocking$1", f = "InvalidationTracker.android.kt", l = {152}, m = "invokeSuspend")
-    public static final class f extends m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "androidx.room.InvalidationTracker$syncBlocking$1", f = "InvalidationTracker.android.kt", l = {152}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 1, 0})
+    public static final class f extends m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f3327t;
+        public int f3172t;
 
-        public f(nt.b<? super f> bVar) {
+        public f(lt.b<? super f> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             return c.this.new f(bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((f) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            Object objE = ot.c.e();
-            int i10 = this.f3327t;
+            Object objE = mt.c.e();
+            int i10 = this.f3172t;
             if (i10 == 0) {
                 o.b(obj);
                 c cVar = c.this;
-                this.f3327t = 1;
+                this.f3172t = 1;
                 if (cVar.A(this) == objE) {
                     return objE;
                 }
@@ -227,12 +232,7 @@ public class c {
                 }
                 o.b(obj);
             }
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((f) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            return Unit.f22938a;
         }
     }
 
@@ -245,20 +245,20 @@ public class c {
         this.shadowTablesMap = shadowTablesMap;
         this.viewTables = viewTables;
         this.tableNames = tableNames;
-        l0 l0Var = new l0(database, shadowTablesMap, viewTables, tableNames, database.getUseTempTrackingTable(), new C0059c(this));
+        l0 l0Var = new l0(database, shadowTablesMap, viewTables, tableNames, database.getUseTempTrackingTable(), new C0055c(this));
         this.implementation = l0Var;
         this.observerMap = new LinkedHashMap();
         this.observerMapLock = new ReentrantLock();
         this.onRefreshScheduled = new Function0() { // from class: x4.h
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return androidx.room.c.t(this.f34743a);
+                return androidx.room.c.t(this.f35241a);
             }
         };
         this.onRefreshCompleted = new Function0() { // from class: x4.i
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return androidx.room.c.s(this.f34744a);
+                return androidx.room.c.s(this.f35242a);
             }
         };
         this.invalidationLiveDataContainer = new g(database);
@@ -266,7 +266,7 @@ public class c {
         l0Var.u(new Function0() { // from class: x4.j
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return Boolean.valueOf(androidx.room.c.d(this.f34745a));
+                return Boolean.valueOf(androidx.room.c.d(this.f35243a));
             }
         });
     }
@@ -280,7 +280,7 @@ public class c {
         if (bVar != null) {
             bVar.g();
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit t(c cVar) {
@@ -288,13 +288,13 @@ public class c {
         if (bVar != null) {
             bVar.j();
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     @Nullable
-    public final Object A(@NotNull nt.b<? super Unit> bVar) throws Throwable {
+    public final Object A(@NotNull lt.b<? super Unit> bVar) throws Throwable {
         Object objX = this.implementation.x(bVar);
-        return objX == ot.c.e() ? objX : Unit.f22483a;
+        return objX == mt.c.e() ? objX : Unit.f22938a;
     }
 
     public final void B() {
@@ -379,7 +379,7 @@ public class c {
                         throw new IllegalStateException("Required value was null.");
                     }
                     dVar.k(intent);
-                    Unit unit = Unit.f22483a;
+                    Unit unit = Unit.f22938a;
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -438,7 +438,7 @@ public class c {
                     }
                 }
                 this.implementation.s();
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }

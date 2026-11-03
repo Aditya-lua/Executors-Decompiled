@@ -9,18 +9,20 @@ import m9.e;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface Achievement extends e<Achievement>, Parcelable {
-    Uri C2();
+    @NonNull
+    String D0();
+
+    Uri D2();
 
     Uri H();
 
-    @NonNull
-    String H0();
-
-    String J1();
+    String H1();
 
     int J2();
 
     String W1();
+
+    long d1();
 
     @NonNull
     String getDescription();
@@ -40,11 +42,9 @@ public interface Achievement extends e<Achievement>, Parcelable {
     @Deprecated
     String getUnlockedImageUrl();
 
-    long h1();
+    int n1();
 
-    long n2();
-
-    int p1();
+    long o2();
 
     @NonNull
     String zza();

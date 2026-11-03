@@ -5,20 +5,20 @@ import android.os.Parcelable;
 import com.appsflyer.sdk_base.referrer.Payload;
 import com.withpersona.sdk2.inquiry.network.dto.ui.components.InputAddress;
 import com.withpersona.sdk2.inquiry.network.dto.ui.components.InputInternationalDb;
+import gt.l;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import jt.l;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import um.f;
-import um.h;
-import um.i;
-import um.m;
-import um.t;
-import um.w;
-import um.z;
+import sm.f;
+import sm.h;
+import sm.i;
+import sm.m;
+import sm.t;
+import sm.w;
+import sm.z;
 
 /* JADX INFO: loaded from: classes3.dex */
 public abstract class UiComponentError implements Parcelable {
@@ -47,9 +47,9 @@ public abstract class UiComponentError implements Parcelable {
         }
 
         /* JADX WARN: Can't rename method to resolve collision */
-        @Override // um.h
-        @Nullable
+        @Override // sm.h
         @f
+        @Nullable
         public UiComponentError fromJson(@NotNull m mVar) {
             w wVarD = new w.b().d();
             String jsonType = getJsonType(mVar);
@@ -71,7 +71,7 @@ public abstract class UiComponentError implements Parcelable {
             return (UiComponentError) wVarD.c(UiInputComponentError.class).fromJson(mVar);
         }
 
-        @Override // um.h
+        @Override // sm.h
         @z
         public void toJson(@NotNull t tVar, @Nullable UiComponentError uiComponentError) {
             w wVarD = new w.b().d();

@@ -16,11 +16,11 @@ public final class x1 {
     public class a implements r0.c<List<Surface>> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ boolean f24945a;
+        public final /* synthetic */ boolean f25766a;
         public final /* synthetic */ y1.c.a b;
 
         public a(boolean z10, y1.c.a aVar) {
-            this.f24945a = z10;
+            this.f25766a = z10;
             this.b = aVar;
         }
 
@@ -29,7 +29,7 @@ public final class x1 {
         public void onSuccess(List<Surface> list) {
             x2.g.g(list);
             ArrayList arrayList = new ArrayList(list);
-            if (this.f24945a) {
+            if (this.f25766a) {
                 arrayList.removeAll(Collections.singleton(null));
             }
             this.b.c(arrayList);
@@ -45,7 +45,7 @@ public final class x1 {
         }
     }
 
-    public static /* synthetic */ Object a(final me.x xVar, Executor executor, boolean z10, Collection collection, y1.c.a aVar) {
+    public static /* synthetic */ Object a(final ne.x xVar, Executor executor, boolean z10, Collection collection, y1.c.a aVar) {
         aVar.a(new Runnable() { // from class: n0.w1
             @Override // java.lang.Runnable
             public final void run() {
@@ -81,15 +81,15 @@ public final class x1 {
         } while (i10 < list.size());
     }
 
-    public static me.x<List<Surface>> e(final Collection<u1> collection, final boolean z10, long j10, final Executor executor, ScheduledExecutorService scheduledExecutorService) {
+    public static ne.x<List<Surface>> e(final Collection<u1> collection, final boolean z10, long j10, final Executor executor, ScheduledExecutorService scheduledExecutorService) {
         ArrayList arrayList = new ArrayList();
         Iterator<u1> it = collection.iterator();
         while (it.hasNext()) {
             arrayList.add(r0.n.s(it.next().j()));
         }
-        final me.x xVarR = r0.n.r(j10, scheduledExecutorService, r0.n.w(arrayList));
-        return y1.c.a(new y1.c.InterfaceC0650c() { // from class: n0.v1
-            @Override // y1.c.InterfaceC0650c
+        final ne.x xVarR = r0.n.r(j10, scheduledExecutorService, r0.n.w(arrayList));
+        return y1.c.a(new y1.c.InterfaceC0665c() { // from class: n0.v1
+            @Override // y1.c.InterfaceC0665c
             public final Object a(y1.c.a aVar) {
                 return x1.a(xVarR, executor, z10, collection, aVar);
             }

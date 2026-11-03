@@ -13,25 +13,25 @@ import androidx.annotation.NonNull;
 public class g extends CheckBox implements d3.k {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final j f28980a;
+    public final j f29333a;
     public final e b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final a0 f28981c;
+    public final a0 f29334c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public n f28982d;
+    public n f29335d;
 
     public g(@NonNull Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, i.a.f19903s);
+        this(context, attributeSet, i.a.f20019s);
     }
 
     @NonNull
     private n getEmojiTextViewHelper() {
-        if (this.f28982d == null) {
-            this.f28982d = new n(this);
+        if (this.f29335d == null) {
+            this.f29335d = new n(this);
         }
-        return this.f28982d;
+        return this.f29335d;
     }
 
     @Override // android.widget.CompoundButton, android.widget.TextView, android.view.View
@@ -41,7 +41,7 @@ public class g extends CheckBox implements d3.k {
         if (eVar != null) {
             eVar.b();
         }
-        a0 a0Var = this.f28981c;
+        a0 a0Var = this.f29334c;
         if (a0Var != null) {
             a0Var.b();
         }
@@ -65,7 +65,7 @@ public class g extends CheckBox implements d3.k {
 
     @Override // d3.k
     public ColorStateList getSupportButtonTintList() {
-        j jVar = this.f28980a;
+        j jVar = this.f29333a;
         if (jVar != null) {
             return jVar.b();
         }
@@ -73,7 +73,7 @@ public class g extends CheckBox implements d3.k {
     }
 
     public PorterDuff.Mode getSupportButtonTintMode() {
-        j jVar = this.f28980a;
+        j jVar = this.f29333a;
         if (jVar != null) {
             return jVar.c();
         }
@@ -81,11 +81,11 @@ public class g extends CheckBox implements d3.k {
     }
 
     public ColorStateList getSupportCompoundDrawablesTintList() {
-        return this.f28981c.j();
+        return this.f29334c.j();
     }
 
     public PorterDuff.Mode getSupportCompoundDrawablesTintMode() {
-        return this.f28981c.k();
+        return this.f29334c.k();
     }
 
     @Override // android.widget.TextView
@@ -115,7 +115,7 @@ public class g extends CheckBox implements d3.k {
     @Override // android.widget.CompoundButton
     public void setButtonDrawable(Drawable drawable) {
         super.setButtonDrawable(drawable);
-        j jVar = this.f28980a;
+        j jVar = this.f29333a;
         if (jVar != null) {
             jVar.e();
         }
@@ -124,7 +124,7 @@ public class g extends CheckBox implements d3.k {
     @Override // android.widget.TextView
     public void setCompoundDrawables(Drawable drawable, Drawable drawable2, Drawable drawable3, Drawable drawable4) {
         super.setCompoundDrawables(drawable, drawable2, drawable3, drawable4);
-        a0 a0Var = this.f28981c;
+        a0 a0Var = this.f29334c;
         if (a0Var != null) {
             a0Var.p();
         }
@@ -133,7 +133,7 @@ public class g extends CheckBox implements d3.k {
     @Override // android.widget.TextView
     public void setCompoundDrawablesRelative(Drawable drawable, Drawable drawable2, Drawable drawable3, Drawable drawable4) {
         super.setCompoundDrawablesRelative(drawable, drawable2, drawable3, drawable4);
-        a0 a0Var = this.f28981c;
+        a0 a0Var = this.f29334c;
         if (a0Var != null) {
             a0Var.p();
         }
@@ -164,7 +164,7 @@ public class g extends CheckBox implements d3.k {
 
     @Override // d3.k
     public void setSupportButtonTintList(ColorStateList colorStateList) {
-        j jVar = this.f28980a;
+        j jVar = this.f29333a;
         if (jVar != null) {
             jVar.f(colorStateList);
         }
@@ -172,33 +172,33 @@ public class g extends CheckBox implements d3.k {
 
     @Override // d3.k
     public void setSupportButtonTintMode(PorterDuff.Mode mode) {
-        j jVar = this.f28980a;
+        j jVar = this.f29333a;
         if (jVar != null) {
             jVar.g(mode);
         }
     }
 
     public void setSupportCompoundDrawablesTintList(ColorStateList colorStateList) {
-        this.f28981c.w(colorStateList);
-        this.f28981c.b();
+        this.f29334c.w(colorStateList);
+        this.f29334c.b();
     }
 
     public void setSupportCompoundDrawablesTintMode(PorterDuff.Mode mode) {
-        this.f28981c.x(mode);
-        this.f28981c.b();
+        this.f29334c.x(mode);
+        this.f29334c.b();
     }
 
     public g(@NonNull Context context, AttributeSet attributeSet, int i10) {
         super(x0.b(context), attributeSet, i10);
         v0.a(this, getContext());
         j jVar = new j(this);
-        this.f28980a = jVar;
+        this.f29333a = jVar;
         jVar.d(attributeSet, i10);
         e eVar = new e(this);
         this.b = eVar;
         eVar.e(attributeSet, i10);
         a0 a0Var = new a0(this);
-        this.f28981c = a0Var;
+        this.f29334c = a0Var;
         a0Var.m(attributeSet, i10);
         getEmojiTextViewHelper().c(attributeSet, i10);
     }

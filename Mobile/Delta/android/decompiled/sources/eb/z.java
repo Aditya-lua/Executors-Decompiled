@@ -4,7 +4,7 @@ package eb;
 public final class z extends m0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final z f15427a = new z();
+    public static final z f16041a = new z();
 
     @Override // eb.m0
     public final Object a() {

@@ -30,101 +30,101 @@ public final class g implements r2.b {
     public ContextMenu.ContextMenuInfo E;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f942a;
+    public final int f787a;
     public final int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final int f943c;
+    public final int f788c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final int f944d;
+    public final int f789d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public CharSequence f945e;
+    public CharSequence f790e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public CharSequence f946f;
+    public CharSequence f791f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public Intent f947g;
+    public Intent f792g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public char f948h;
+    public char f793h;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public char f950j;
+    public char f795j;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public Drawable f952l;
+    public Drawable f797l;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public e f954n;
+    public e f799n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public l f955o;
+    public l f800o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public Runnable f956p;
+    public Runnable f801p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public MenuItem.OnMenuItemClickListener f957q;
+    public MenuItem.OnMenuItemClickListener f802q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public CharSequence f958r;
+    public CharSequence f803r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public CharSequence f959s;
+    public CharSequence f804s;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public int f966z;
+    public int f811z;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public int f949i = Barcode.FORMAT_AZTEC;
+    public int f794i = Barcode.FORMAT_AZTEC;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public int f951k = Barcode.FORMAT_AZTEC;
+    public int f796k = Barcode.FORMAT_AZTEC;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public int f953m = 0;
+    public int f798m = 0;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public ColorStateList f960t = null;
+    public ColorStateList f805t = null;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public PorterDuff.Mode f961u = null;
+    public PorterDuff.Mode f806u = null;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public boolean f962v = false;
+    public boolean f807v = false;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public boolean f963w = false;
+    public boolean f808w = false;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public boolean f964x = false;
+    public boolean f809x = false;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public int f965y = 16;
+    public int f810y = 16;
     public boolean D = false;
 
-    public class a implements androidx.core.view.b.InterfaceC0027b {
+    public class a implements androidx.core.view.b.InterfaceC0023b {
         public a() {
         }
 
-        @Override // androidx.core.view.b.InterfaceC0027b
+        @Override // androidx.core.view.b.InterfaceC0023b
         public void onActionProviderVisibilityChanged(boolean z10) {
             g gVar = g.this;
-            gVar.f954n.K(gVar);
+            gVar.f799n.K(gVar);
         }
     }
 
     public g(e eVar, int i10, int i11, int i12, int i13, CharSequence charSequence, int i14) {
-        this.f954n = eVar;
-        this.f942a = i11;
+        this.f799n = eVar;
+        this.f787a = i11;
         this.b = i10;
-        this.f943c = i12;
-        this.f944d = i13;
-        this.f945e = charSequence;
-        this.f966z = i14;
+        this.f788c = i12;
+        this.f789d = i13;
+        this.f790e = charSequence;
+        this.f811z = i14;
     }
 
     public static void d(StringBuilder sb2, int i10, int i11, String str) {
@@ -134,11 +134,11 @@ public final class g implements r2.b {
     }
 
     public boolean A() {
-        return this.f954n.I() && g() != 0;
+        return this.f799n.I() && g() != 0;
     }
 
     public boolean B() {
-        return (this.f966z & 4) == 4;
+        return (this.f811z & 4) == 4;
     }
 
     @Override // r2.b
@@ -155,7 +155,7 @@ public final class g implements r2.b {
         }
         this.A = null;
         this.B = bVar;
-        this.f954n.L(true);
+        this.f799n.L(true);
         androidx.core.view.b bVar3 = this.B;
         if (bVar3 != null) {
             bVar3.j(new a());
@@ -164,12 +164,12 @@ public final class g implements r2.b {
     }
 
     public void c() {
-        this.f954n.J(this);
+        this.f799n.J(this);
     }
 
     @Override // r2.b, android.view.MenuItem
     public boolean collapseActionView() {
-        if ((this.f966z & 8) == 0) {
+        if ((this.f811z & 8) == 0) {
             return false;
         }
         if (this.A == null) {
@@ -177,21 +177,21 @@ public final class g implements r2.b {
         }
         MenuItem.OnActionExpandListener onActionExpandListener = this.C;
         if (onActionExpandListener == null || onActionExpandListener.onMenuItemActionCollapse(this)) {
-            return this.f954n.f(this);
+            return this.f799n.f(this);
         }
         return false;
     }
 
     public final Drawable e(Drawable drawable) {
-        if (drawable != null && this.f964x && (this.f962v || this.f963w)) {
+        if (drawable != null && this.f809x && (this.f807v || this.f808w)) {
             drawable = q2.a.r(drawable).mutate();
-            if (this.f962v) {
-                q2.a.o(drawable, this.f960t);
+            if (this.f807v) {
+                q2.a.o(drawable, this.f805t);
             }
-            if (this.f963w) {
-                q2.a.p(drawable, this.f961u);
+            if (this.f808w) {
+                q2.a.p(drawable, this.f806u);
             }
-            this.f964x = false;
+            this.f809x = false;
         }
         return drawable;
     }
@@ -203,17 +203,17 @@ public final class g implements r2.b {
         }
         MenuItem.OnActionExpandListener onActionExpandListener = this.C;
         if (onActionExpandListener == null || onActionExpandListener.onMenuItemActionExpand(this)) {
-            return this.f954n.k(this);
+            return this.f799n.k(this);
         }
         return false;
     }
 
     public int f() {
-        return this.f944d;
+        return this.f789d;
     }
 
     public char g() {
-        return this.f954n.H() ? this.f950j : this.f948h;
+        return this.f799n.H() ? this.f795j : this.f793h;
     }
 
     @Override // android.view.MenuItem
@@ -238,17 +238,17 @@ public final class g implements r2.b {
 
     @Override // r2.b, android.view.MenuItem
     public int getAlphabeticModifiers() {
-        return this.f951k;
+        return this.f796k;
     }
 
     @Override // android.view.MenuItem
     public char getAlphabeticShortcut() {
-        return this.f950j;
+        return this.f795j;
     }
 
     @Override // r2.b, android.view.MenuItem
     public CharSequence getContentDescription() {
-        return this.f958r;
+        return this.f803r;
     }
 
     @Override // android.view.MenuItem
@@ -258,38 +258,38 @@ public final class g implements r2.b {
 
     @Override // android.view.MenuItem
     public Drawable getIcon() {
-        Drawable drawable = this.f952l;
+        Drawable drawable = this.f797l;
         if (drawable != null) {
             return e(drawable);
         }
-        if (this.f953m == 0) {
+        if (this.f798m == 0) {
             return null;
         }
-        Drawable drawableB = k.a.b(this.f954n.u(), this.f953m);
-        this.f953m = 0;
-        this.f952l = drawableB;
+        Drawable drawableB = k.a.b(this.f799n.u(), this.f798m);
+        this.f798m = 0;
+        this.f797l = drawableB;
         return e(drawableB);
     }
 
     @Override // r2.b, android.view.MenuItem
     public ColorStateList getIconTintList() {
-        return this.f960t;
+        return this.f805t;
     }
 
     @Override // r2.b, android.view.MenuItem
     public PorterDuff.Mode getIconTintMode() {
-        return this.f961u;
+        return this.f806u;
     }
 
     @Override // android.view.MenuItem
     public Intent getIntent() {
-        return this.f947g;
+        return this.f792g;
     }
 
     @Override // android.view.MenuItem
     @ViewDebug.CapturedViewProperty
     public int getItemId() {
-        return this.f942a;
+        return this.f787a;
     }
 
     @Override // android.view.MenuItem
@@ -299,39 +299,39 @@ public final class g implements r2.b {
 
     @Override // r2.b, android.view.MenuItem
     public int getNumericModifiers() {
-        return this.f949i;
+        return this.f794i;
     }
 
     @Override // android.view.MenuItem
     public char getNumericShortcut() {
-        return this.f948h;
+        return this.f793h;
     }
 
     @Override // android.view.MenuItem
     public int getOrder() {
-        return this.f943c;
+        return this.f788c;
     }
 
     @Override // android.view.MenuItem
     public SubMenu getSubMenu() {
-        return this.f955o;
+        return this.f800o;
     }
 
     @Override // android.view.MenuItem
     @ViewDebug.CapturedViewProperty
     public CharSequence getTitle() {
-        return this.f945e;
+        return this.f790e;
     }
 
     @Override // android.view.MenuItem
     public CharSequence getTitleCondensed() {
-        CharSequence charSequence = this.f946f;
-        return charSequence != null ? charSequence : this.f945e;
+        CharSequence charSequence = this.f791f;
+        return charSequence != null ? charSequence : this.f790e;
     }
 
     @Override // r2.b, android.view.MenuItem
     public CharSequence getTooltipText() {
-        return this.f959s;
+        return this.f804s;
     }
 
     public String h() {
@@ -339,33 +339,33 @@ public final class g implements r2.b {
         if (cG == 0) {
             return "";
         }
-        Resources resources = this.f954n.u().getResources();
+        Resources resources = this.f799n.u().getResources();
         StringBuilder sb2 = new StringBuilder();
-        if (ViewConfiguration.get(this.f954n.u()).hasPermanentMenuKey()) {
-            sb2.append(resources.getString(i.h.f20012o));
+        if (ViewConfiguration.get(this.f799n.u()).hasPermanentMenuKey()) {
+            sb2.append(resources.getString(i.h.f20128o));
         }
-        int i10 = this.f954n.H() ? this.f951k : this.f949i;
-        d(sb2, i10, 65536, resources.getString(i.h.f20008k));
-        d(sb2, i10, Barcode.FORMAT_AZTEC, resources.getString(i.h.f20004g));
-        d(sb2, i10, 2, resources.getString(i.h.f20003f));
-        d(sb2, i10, 1, resources.getString(i.h.f20009l));
-        d(sb2, i10, 4, resources.getString(i.h.f20011n));
-        d(sb2, i10, 8, resources.getString(i.h.f20007j));
+        int i10 = this.f799n.H() ? this.f796k : this.f794i;
+        d(sb2, i10, 65536, resources.getString(i.h.f20124k));
+        d(sb2, i10, Barcode.FORMAT_AZTEC, resources.getString(i.h.f20120g));
+        d(sb2, i10, 2, resources.getString(i.h.f20119f));
+        d(sb2, i10, 1, resources.getString(i.h.f20125l));
+        d(sb2, i10, 4, resources.getString(i.h.f20127n));
+        d(sb2, i10, 8, resources.getString(i.h.f20123j));
         if (cG == '\b') {
-            sb2.append(resources.getString(i.h.f20005h));
+            sb2.append(resources.getString(i.h.f20121h));
         } else if (cG == '\n') {
-            sb2.append(resources.getString(i.h.f20006i));
+            sb2.append(resources.getString(i.h.f20122i));
         } else if (cG != ' ') {
             sb2.append(cG);
         } else {
-            sb2.append(resources.getString(i.h.f20010m));
+            sb2.append(resources.getString(i.h.f20126m));
         }
         return sb2.toString();
     }
 
     @Override // android.view.MenuItem
     public boolean hasSubMenu() {
-        return this.f955o != null;
+        return this.f800o != null;
     }
 
     public CharSequence i(j.a aVar) {
@@ -379,31 +379,31 @@ public final class g implements r2.b {
 
     @Override // android.view.MenuItem
     public boolean isCheckable() {
-        return (this.f965y & 1) == 1;
+        return (this.f810y & 1) == 1;
     }
 
     @Override // android.view.MenuItem
     public boolean isChecked() {
-        return (this.f965y & 2) == 2;
+        return (this.f810y & 2) == 2;
     }
 
     @Override // android.view.MenuItem
     public boolean isEnabled() {
-        return (this.f965y & 16) != 0;
+        return (this.f810y & 16) != 0;
     }
 
     @Override // android.view.MenuItem
     public boolean isVisible() {
         androidx.core.view.b bVar = this.B;
         if (bVar == null || !bVar.g()) {
-            return (this.f965y & 8) == 0;
+            return (this.f810y & 8) == 0;
         }
-        return (this.f965y & 8) == 0 && this.B.b();
+        return (this.f810y & 8) == 0 && this.B.b();
     }
 
     public boolean j() {
         androidx.core.view.b bVar;
-        if ((this.f966z & 8) != 0) {
+        if ((this.f811z & 8) != 0) {
             if (this.A == null && (bVar = this.B) != null) {
                 this.A = bVar.d(this);
             }
@@ -415,22 +415,22 @@ public final class g implements r2.b {
     }
 
     public boolean k() {
-        MenuItem.OnMenuItemClickListener onMenuItemClickListener = this.f957q;
+        MenuItem.OnMenuItemClickListener onMenuItemClickListener = this.f802q;
         if (onMenuItemClickListener != null && onMenuItemClickListener.onMenuItemClick(this)) {
             return true;
         }
-        e eVar = this.f954n;
+        e eVar = this.f799n;
         if (eVar.h(eVar, this)) {
             return true;
         }
-        Runnable runnable = this.f956p;
+        Runnable runnable = this.f801p;
         if (runnable != null) {
             runnable.run();
             return true;
         }
-        if (this.f947g != null) {
+        if (this.f792g != null) {
             try {
-                this.f954n.u().startActivity(this.f947g);
+                this.f799n.u().startActivity(this.f792g);
                 return true;
             } catch (ActivityNotFoundException e10) {
                 Log.e("MenuItemImpl", "Can't find activity to handle intent; ignoring", e10);
@@ -441,26 +441,26 @@ public final class g implements r2.b {
     }
 
     public boolean l() {
-        return (this.f965y & 32) == 32;
+        return (this.f810y & 32) == 32;
     }
 
     public boolean m() {
-        return (this.f965y & 4) != 0;
+        return (this.f810y & 4) != 0;
     }
 
     public boolean n() {
-        return (this.f966z & 1) == 1;
+        return (this.f811z & 1) == 1;
     }
 
     public boolean o() {
-        return (this.f966z & 2) == 2;
+        return (this.f811z & 2) == 2;
     }
 
     @Override // r2.b, android.view.MenuItem
     @NonNull
     /* JADX INFO: renamed from: p, reason: merged with bridge method [inline-methods] */
     public r2.b setActionView(int i10) {
-        Context contextU = this.f954n.u();
+        Context contextU = this.f799n.u();
         setActionView(LayoutInflater.from(contextU).inflate(i10, (ViewGroup) new LinearLayout(contextU), false));
         return this;
     }
@@ -472,24 +472,24 @@ public final class g implements r2.b {
         int i10;
         this.A = view;
         this.B = null;
-        if (view != null && view.getId() == -1 && (i10 = this.f942a) > 0) {
+        if (view != null && view.getId() == -1 && (i10 = this.f787a) > 0) {
             view.setId(i10);
         }
-        this.f954n.J(this);
+        this.f799n.J(this);
         return this;
     }
 
     public void r(boolean z10) {
         this.D = z10;
-        this.f954n.L(false);
+        this.f799n.L(false);
     }
 
     public void s(boolean z10) {
-        int i10 = this.f965y;
+        int i10 = this.f810y;
         int i11 = (z10 ? 2 : 0) | (i10 & (-3));
-        this.f965y = i11;
+        this.f810y = i11;
         if (i10 != i11) {
-            this.f954n.L(false);
+            this.f799n.L(false);
         }
     }
 
@@ -500,29 +500,29 @@ public final class g implements r2.b {
 
     @Override // android.view.MenuItem
     public MenuItem setAlphabeticShortcut(char c10) {
-        if (this.f950j == c10) {
+        if (this.f795j == c10) {
             return this;
         }
-        this.f950j = Character.toLowerCase(c10);
-        this.f954n.L(false);
+        this.f795j = Character.toLowerCase(c10);
+        this.f799n.L(false);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setCheckable(boolean z10) {
-        int i10 = this.f965y;
+        int i10 = this.f810y;
         int i11 = (z10 ? 1 : 0) | (i10 & (-2));
-        this.f965y = i11;
+        this.f810y = i11;
         if (i10 != i11) {
-            this.f954n.L(false);
+            this.f799n.L(false);
         }
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setChecked(boolean z10) {
-        if ((this.f965y & 4) != 0) {
-            this.f954n.U(this);
+        if ((this.f810y & 4) != 0) {
+            this.f799n.U(this);
             return this;
         }
         s(z10);
@@ -532,56 +532,56 @@ public final class g implements r2.b {
     @Override // android.view.MenuItem
     public MenuItem setEnabled(boolean z10) {
         if (z10) {
-            this.f965y |= 16;
+            this.f810y |= 16;
         } else {
-            this.f965y &= -17;
+            this.f810y &= -17;
         }
-        this.f954n.L(false);
+        this.f799n.L(false);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setIcon(Drawable drawable) {
-        this.f953m = 0;
-        this.f952l = drawable;
-        this.f964x = true;
-        this.f954n.L(false);
+        this.f798m = 0;
+        this.f797l = drawable;
+        this.f809x = true;
+        this.f799n.L(false);
         return this;
     }
 
     @Override // r2.b, android.view.MenuItem
     @NonNull
     public MenuItem setIconTintList(ColorStateList colorStateList) {
-        this.f960t = colorStateList;
-        this.f962v = true;
-        this.f964x = true;
-        this.f954n.L(false);
+        this.f805t = colorStateList;
+        this.f807v = true;
+        this.f809x = true;
+        this.f799n.L(false);
         return this;
     }
 
     @Override // r2.b, android.view.MenuItem
     @NonNull
     public MenuItem setIconTintMode(PorterDuff.Mode mode) {
-        this.f961u = mode;
-        this.f963w = true;
-        this.f964x = true;
-        this.f954n.L(false);
+        this.f806u = mode;
+        this.f808w = true;
+        this.f809x = true;
+        this.f799n.L(false);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setIntent(Intent intent) {
-        this.f947g = intent;
+        this.f792g = intent;
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setNumericShortcut(char c10) {
-        if (this.f948h == c10) {
+        if (this.f793h == c10) {
             return this;
         }
-        this.f948h = c10;
-        this.f954n.L(false);
+        this.f793h = c10;
+        this.f799n.L(false);
         return this;
     }
 
@@ -593,15 +593,15 @@ public final class g implements r2.b {
 
     @Override // android.view.MenuItem
     public MenuItem setOnMenuItemClickListener(MenuItem.OnMenuItemClickListener onMenuItemClickListener) {
-        this.f957q = onMenuItemClickListener;
+        this.f802q = onMenuItemClickListener;
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setShortcut(char c10, char c11) {
-        this.f948h = c10;
-        this.f950j = Character.toLowerCase(c11);
-        this.f954n.L(false);
+        this.f793h = c10;
+        this.f795j = Character.toLowerCase(c11);
+        this.f799n.L(false);
         return this;
     }
 
@@ -611,15 +611,15 @@ public final class g implements r2.b {
         if (i11 != 0 && i11 != 1 && i11 != 2) {
             throw new IllegalArgumentException("SHOW_AS_ACTION_ALWAYS, SHOW_AS_ACTION_IF_ROOM, and SHOW_AS_ACTION_NEVER are mutually exclusive.");
         }
-        this.f966z = i10;
-        this.f954n.J(this);
+        this.f811z = i10;
+        this.f799n.J(this);
     }
 
     @Override // android.view.MenuItem
     public MenuItem setTitle(CharSequence charSequence) {
-        this.f945e = charSequence;
-        this.f954n.L(false);
-        l lVar = this.f955o;
+        this.f790e = charSequence;
+        this.f799n.L(false);
+        l lVar = this.f800o;
         if (lVar != null) {
             lVar.setHeaderTitle(charSequence);
         }
@@ -628,25 +628,25 @@ public final class g implements r2.b {
 
     @Override // android.view.MenuItem
     public MenuItem setTitleCondensed(CharSequence charSequence) {
-        this.f946f = charSequence;
-        this.f954n.L(false);
+        this.f791f = charSequence;
+        this.f799n.L(false);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setVisible(boolean z10) {
         if (y(z10)) {
-            this.f954n.K(this);
+            this.f799n.K(this);
         }
         return this;
     }
 
     public void t(boolean z10) {
-        this.f965y = (z10 ? 4 : 0) | (this.f965y & (-5));
+        this.f810y = (z10 ? 4 : 0) | (this.f810y & (-5));
     }
 
     public String toString() {
-        CharSequence charSequence = this.f945e;
+        CharSequence charSequence = this.f790e;
         if (charSequence != null) {
             return charSequence.toString();
         }
@@ -655,9 +655,9 @@ public final class g implements r2.b {
 
     public void u(boolean z10) {
         if (z10) {
-            this.f965y |= 32;
+            this.f810y |= 32;
         } else {
-            this.f965y &= -33;
+            this.f810y &= -33;
         }
     }
 
@@ -674,83 +674,83 @@ public final class g implements r2.b {
     }
 
     public void x(l lVar) {
-        this.f955o = lVar;
+        this.f800o = lVar;
         lVar.setHeaderTitle(getTitle());
     }
 
     public boolean y(boolean z10) {
-        int i10 = this.f965y;
+        int i10 = this.f810y;
         int i11 = (z10 ? 0 : 8) | (i10 & (-9));
-        this.f965y = i11;
+        this.f810y = i11;
         return i10 != i11;
     }
 
     public boolean z() {
-        return this.f954n.A();
+        return this.f799n.A();
     }
 
     @Override // r2.b, android.view.MenuItem
     @NonNull
     public r2.b setContentDescription(CharSequence charSequence) {
-        this.f958r = charSequence;
-        this.f954n.L(false);
+        this.f803r = charSequence;
+        this.f799n.L(false);
         return this;
     }
 
     @Override // r2.b, android.view.MenuItem
     @NonNull
     public r2.b setTooltipText(CharSequence charSequence) {
-        this.f959s = charSequence;
-        this.f954n.L(false);
+        this.f804s = charSequence;
+        this.f799n.L(false);
         return this;
     }
 
     @Override // r2.b, android.view.MenuItem
     @NonNull
     public MenuItem setAlphabeticShortcut(char c10, int i10) {
-        if (this.f950j == c10 && this.f951k == i10) {
+        if (this.f795j == c10 && this.f796k == i10) {
             return this;
         }
-        this.f950j = Character.toLowerCase(c10);
-        this.f951k = KeyEvent.normalizeMetaState(i10);
-        this.f954n.L(false);
+        this.f795j = Character.toLowerCase(c10);
+        this.f796k = KeyEvent.normalizeMetaState(i10);
+        this.f799n.L(false);
         return this;
     }
 
     @Override // r2.b, android.view.MenuItem
     @NonNull
     public MenuItem setNumericShortcut(char c10, int i10) {
-        if (this.f948h == c10 && this.f949i == i10) {
+        if (this.f793h == c10 && this.f794i == i10) {
             return this;
         }
-        this.f948h = c10;
-        this.f949i = KeyEvent.normalizeMetaState(i10);
-        this.f954n.L(false);
+        this.f793h = c10;
+        this.f794i = KeyEvent.normalizeMetaState(i10);
+        this.f799n.L(false);
         return this;
     }
 
     @Override // r2.b, android.view.MenuItem
     @NonNull
     public MenuItem setShortcut(char c10, char c11, int i10, int i11) {
-        this.f948h = c10;
-        this.f949i = KeyEvent.normalizeMetaState(i10);
-        this.f950j = Character.toLowerCase(c11);
-        this.f951k = KeyEvent.normalizeMetaState(i11);
-        this.f954n.L(false);
+        this.f793h = c10;
+        this.f794i = KeyEvent.normalizeMetaState(i10);
+        this.f795j = Character.toLowerCase(c11);
+        this.f796k = KeyEvent.normalizeMetaState(i11);
+        this.f799n.L(false);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setIcon(int i10) {
-        this.f952l = null;
-        this.f953m = i10;
-        this.f964x = true;
-        this.f954n.L(false);
+        this.f797l = null;
+        this.f798m = i10;
+        this.f809x = true;
+        this.f799n.L(false);
         return this;
     }
 
     @Override // android.view.MenuItem
     public MenuItem setTitle(int i10) {
-        return setTitle(this.f954n.u().getString(i10));
+        return setTitle(this.f799n.u().getString(i10));
     }
 }

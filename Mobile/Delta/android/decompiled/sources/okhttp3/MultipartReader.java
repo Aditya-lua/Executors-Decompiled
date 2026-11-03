@@ -11,16 +11,16 @@ import kotlin.jvm.internal.Intrinsics;
 import okhttp3.internal.http1.HeadersReader;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import xu.b0;
-import xu.e;
-import xu.f0;
-import xu.g;
-import xu.h;
-import xu.r0;
-import xu.s0;
+import vu.b0;
+import vu.e;
+import vu.f0;
+import vu.g;
+import vu.h;
+import vu.r0;
+import vu.s0;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000V\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0006\u0018\u0000 &2\u00020\u0001:\u0003'(&B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007B\u0011\b\u0016\u0012\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\u0006\u0010\nJ\u0017\u0010\r\u001a\u00020\u000b2\u0006\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\r\u0010\u000eJ\u000f\u0010\u0010\u001a\u0004\u0018\u00010\u000f¢\u0006\u0004\b\u0010\u0010\u0011J\u000f\u0010\u0013\u001a\u00020\u0012H\u0016¢\u0006\u0004\b\u0013\u0010\u0014R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0003\u0010\u0015R\u0017\u0010\u0005\u001a\u00020\u00048\u0007¢\u0006\f\n\u0004\b\u0005\u0010\u0016\u001a\u0004\b\u0005\u0010\u0017R\u0014\u0010\u0019\u001a\u00020\u00188\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0019\u0010\u001aR\u0014\u0010\u001b\u001a\u00020\u00188\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001b\u0010\u001aR\u0016\u0010\u001d\u001a\u00020\u001c8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u001d\u0010\u001eR\u0016\u0010 \u001a\u00020\u001f8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b \u0010!R\u0016\u0010\"\u001a\u00020\u001f8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\"\u0010!R\u001c\u0010$\u001a\b\u0018\u00010#R\u00020\u00008\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b$\u0010%¨\u0006)"}, d2 = {"Lokhttp3/MultipartReader;", "Ljava/io/Closeable;", "Lxu/g;", Payload.SOURCE, "", "boundary", "<init>", "(Lxu/g;Ljava/lang/String;)V", "Lokhttp3/ResponseBody;", Payload.RESPONSE, "(Lokhttp3/ResponseBody;)V", "", "maxByteCount", "currentPartBytesRemaining", "(J)J", "Lokhttp3/MultipartReader$Part;", "nextPart", "()Lokhttp3/MultipartReader$Part;", "", "close", "()V", "Lxu/g;", "Ljava/lang/String;", "()Ljava/lang/String;", "Lxu/h;", "dashDashBoundary", "Lxu/h;", "crlfDashDashBoundary", "", "partCount", "I", "", "closed", "Z", "noMoreParts", "Lokhttp3/MultipartReader$PartSource;", "currentPart", "Lokhttp3/MultipartReader$PartSource;", "Companion", "PartSource", "Part", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000V\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0006\u0018\u0000 &2\u00020\u0001:\u0003'(&B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007B\u0011\b\u0016\u0012\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\u0006\u0010\nJ\u0017\u0010\r\u001a\u00020\u000b2\u0006\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\r\u0010\u000eJ\u000f\u0010\u0010\u001a\u0004\u0018\u00010\u000f¢\u0006\u0004\b\u0010\u0010\u0011J\u000f\u0010\u0013\u001a\u00020\u0012H\u0016¢\u0006\u0004\b\u0013\u0010\u0014R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0003\u0010\u0015R\u0017\u0010\u0005\u001a\u00020\u00048\u0007¢\u0006\f\n\u0004\b\u0005\u0010\u0016\u001a\u0004\b\u0005\u0010\u0017R\u0014\u0010\u0019\u001a\u00020\u00188\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0019\u0010\u001aR\u0014\u0010\u001b\u001a\u00020\u00188\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001b\u0010\u001aR\u0016\u0010\u001d\u001a\u00020\u001c8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u001d\u0010\u001eR\u0016\u0010 \u001a\u00020\u001f8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b \u0010!R\u0016\u0010\"\u001a\u00020\u001f8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\"\u0010!R\u001c\u0010$\u001a\b\u0018\u00010#R\u00020\u00008\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b$\u0010%¨\u0006)"}, d2 = {"Lokhttp3/MultipartReader;", "Ljava/io/Closeable;", "Lvu/g;", Payload.SOURCE, "", "boundary", "<init>", "(Lvu/g;Ljava/lang/String;)V", "Lokhttp3/ResponseBody;", Payload.RESPONSE, "(Lokhttp3/ResponseBody;)V", "", "maxByteCount", "currentPartBytesRemaining", "(J)J", "Lokhttp3/MultipartReader$Part;", "nextPart", "()Lokhttp3/MultipartReader$Part;", "", "close", "()V", "Lvu/g;", "Ljava/lang/String;", "()Ljava/lang/String;", "Lvu/h;", "dashDashBoundary", "Lvu/h;", "crlfDashDashBoundary", "", "partCount", "I", "", "closed", "Z", "noMoreParts", "Lokhttp3/MultipartReader$PartSource;", "currentPart", "Lokhttp3/MultipartReader$PartSource;", "Companion", "PartSource", "Part", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class MultipartReader implements Closeable {
 
     /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
@@ -48,7 +48,7 @@ public final class MultipartReader implements Closeable {
     @NotNull
     private final g source;
 
-    @Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0080\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003R\u0017\u0010\u0005\u001a\u00020\u00048\u0006¢\u0006\f\n\u0004\b\u0005\u0010\u0006\u001a\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"Lokhttp3/MultipartReader$Companion;", "", "<init>", "()V", "Lxu/f0;", "afterBoundaryOptions", "Lxu/f0;", "getAfterBoundaryOptions", "()Lxu/f0;", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0080\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003R\u0017\u0010\u0005\u001a\u00020\u00048\u0006¢\u0006\f\n\u0004\b\u0005\u0010\u0006\u001a\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"Lokhttp3/MultipartReader$Companion;", "", "<init>", "()V", "Lvu/f0;", "afterBoundaryOptions", "Lvu/f0;", "getAfterBoundaryOptions", "()Lvu/f0;", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class Companion {
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
             this();
@@ -63,7 +63,7 @@ public final class MultipartReader implements Closeable {
         }
     }
 
-    @Metadata(d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0007\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bH\u0096\u0001¢\u0006\u0004\b\t\u0010\nR\u0017\u0010\u0003\u001a\u00020\u00028\u0007¢\u0006\f\n\u0004\b\u0003\u0010\u000b\u001a\u0004\b\u0003\u0010\fR\u0017\u0010\u0005\u001a\u00020\u00048\u0007¢\u0006\f\n\u0004\b\u0005\u0010\r\u001a\u0004\b\u0005\u0010\u000e¨\u0006\u000f"}, d2 = {"Lokhttp3/MultipartReader$Part;", "Ljava/io/Closeable;", "Lokhttp3/Headers;", "headers", "Lxu/g;", "body", "<init>", "(Lokhttp3/Headers;Lxu/g;)V", "", "close", "()V", "Lokhttp3/Headers;", "()Lokhttp3/Headers;", "Lxu/g;", "()Lxu/g;", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0007\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bH\u0096\u0001¢\u0006\u0004\b\t\u0010\nR\u0017\u0010\u0003\u001a\u00020\u00028\u0007¢\u0006\f\n\u0004\b\u0003\u0010\u000b\u001a\u0004\b\u0003\u0010\fR\u0017\u0010\u0005\u001a\u00020\u00048\u0007¢\u0006\f\n\u0004\b\u0005\u0010\r\u001a\u0004\b\u0005\u0010\u000e¨\u0006\u000f"}, d2 = {"Lokhttp3/MultipartReader$Part;", "Ljava/io/Closeable;", "Lokhttp3/Headers;", "headers", "Lvu/g;", "body", "<init>", "(Lokhttp3/Headers;Lvu/g;)V", "", "close", "()V", "Lokhttp3/Headers;", "()Lokhttp3/Headers;", "Lvu/g;", "()Lvu/g;", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class Part implements Closeable {
 
         @NotNull
@@ -97,7 +97,7 @@ public final class MultipartReader implements Closeable {
         }
     }
 
-    @Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0082\u0004\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0005\u0010\u0006J\u001f\u0010\u000b\u001a\u00020\t2\u0006\u0010\b\u001a\u00020\u00072\u0006\u0010\n\u001a\u00020\tH\u0016¢\u0006\u0004\b\u000b\u0010\fJ\u000f\u0010\u000e\u001a\u00020\rH\u0016¢\u0006\u0004\b\u000e\u0010\u000fR\u0014\u0010\u000e\u001a\u00020\r8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000e\u0010\u0010¨\u0006\u0011"}, d2 = {"Lokhttp3/MultipartReader$PartSource;", "Lxu/r0;", "<init>", "(Lokhttp3/MultipartReader;)V", "", "close", "()V", "Lxu/e;", "sink", "", "byteCount", "read", "(Lxu/e;J)J", "Lxu/s0;", "timeout", "()Lxu/s0;", "Lxu/s0;", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0082\u0004\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0005\u0010\u0006J\u001f\u0010\u000b\u001a\u00020\t2\u0006\u0010\b\u001a\u00020\u00072\u0006\u0010\n\u001a\u00020\tH\u0016¢\u0006\u0004\b\u000b\u0010\fJ\u000f\u0010\u000e\u001a\u00020\rH\u0016¢\u0006\u0004\b\u000e\u0010\u000fR\u0014\u0010\u000e\u001a\u00020\r8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000e\u0010\u0010¨\u0006\u0011"}, d2 = {"Lokhttp3/MultipartReader$PartSource;", "Lvu/r0;", "<init>", "(Lokhttp3/MultipartReader;)V", "", "close", "()V", "Lvu/e;", "sink", "", "byteCount", "read", "(Lvu/e;J)J", "Lvu/s0;", "timeout", "()Lvu/s0;", "Lvu/s0;", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public final class PartSource implements r0 {
 
         @NotNull
@@ -106,14 +106,14 @@ public final class MultipartReader implements Closeable {
         public PartSource() {
         }
 
-        @Override // xu.r0, java.io.Closeable, java.lang.AutoCloseable
+        @Override // vu.r0, java.io.Closeable, java.lang.AutoCloseable
         public void close() {
             if (Intrinsics.c(MultipartReader.this.currentPart, this)) {
                 MultipartReader.this.currentPart = null;
             }
         }
 
-        @Override // xu.r0
+        @Override // vu.r0
         public long read(@NotNull e sink, long byteCount) {
             Intrinsics.checkNotNullParameter(sink, "sink");
             if (byteCount < 0) {
@@ -156,7 +156,7 @@ public final class MultipartReader implements Closeable {
             }
         }
 
-        @Override // xu.r0
+        @Override // vu.r0
         @NotNull
         /* JADX INFO: renamed from: timeout, reason: from getter */
         public s0 getTimeout() {
@@ -175,16 +175,16 @@ public final class MultipartReader implements Closeable {
         Intrinsics.checkNotNullParameter(boundary, "boundary");
         this.source = source;
         this.boundary = boundary;
-        this.dashDashBoundary = new e().C0("--").C0(boundary).F2();
-        this.crlfDashDashBoundary = new e().C0("\r\n--").C0(boundary).F2();
+        this.dashDashBoundary = new e().y0("--").y0(boundary).G2();
+        this.crlfDashDashBoundary = new e().y0("\r\n--").y0(boundary).G2();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public final long currentPartBytesRemaining(long maxByteCount) throws EOFException {
         long jMin = Math.min(this.source.getBufferField().getSize(), maxByteCount) + 1;
-        long jR1 = this.source.r1(this.crlfDashDashBoundary, 0L, jMin);
-        if (jR1 != -1) {
-            return jR1;
+        long jD3 = this.source.d3(this.crlfDashDashBoundary, 0L, jMin);
+        if (jD3 != -1) {
+            return jD3;
         }
         if (this.source.getBufferField().getSize() >= jMin) {
             return Math.min(jMin, maxByteCount);
@@ -216,7 +216,7 @@ public final class MultipartReader implements Closeable {
         if (this.noMoreParts) {
             return null;
         }
-        if (this.partCount == 0 && this.source.o0(0L, this.dashDashBoundary)) {
+        if (this.partCount == 0 && this.source.m1(0L, this.dashDashBoundary)) {
             this.source.skip(this.dashDashBoundary.I());
         } else {
             while (true) {
@@ -230,18 +230,18 @@ public final class MultipartReader implements Closeable {
         }
         boolean z10 = false;
         while (true) {
-            int iL3 = this.source.l3(afterBoundaryOptions);
-            if (iL3 == -1) {
+            int iJ1 = this.source.J1(afterBoundaryOptions);
+            if (iJ1 == -1) {
                 throw new ProtocolException("unexpected characters after boundary");
             }
-            if (iL3 == 0) {
+            if (iJ1 == 0) {
                 this.partCount++;
                 Headers headers = new HeadersReader(this.source).readHeaders();
                 PartSource partSource = new PartSource();
                 this.currentPart = partSource;
                 return new Part(headers, b0.c(partSource));
             }
-            if (iL3 == 1) {
+            if (iJ1 == 1) {
                 if (z10) {
                     throw new ProtocolException("unexpected characters after boundary");
                 }
@@ -251,7 +251,7 @@ public final class MultipartReader implements Closeable {
                 this.noMoreParts = true;
                 return null;
             }
-            if (iL3 == 2 || iL3 == 3) {
+            if (iJ1 == 2 || iJ1 == 3) {
                 z10 = true;
             }
         }

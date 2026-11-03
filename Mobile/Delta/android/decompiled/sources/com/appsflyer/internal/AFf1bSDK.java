@@ -18,7 +18,7 @@ public final class AFf1bSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    private final Map<String, Object> f5334d;
+    private final Map<String, Object> f5407d;
 
     @NotNull
     private final String registerClient;
@@ -26,10 +26,10 @@ public final class AFf1bSDK {
     public AFf1bSDK(@NotNull AFd1zSDK aFd1zSDK, @NotNull AFc1iSDK aFc1iSDK) {
         Intrinsics.checkNotNullParameter(aFd1zSDK, "");
         Intrinsics.checkNotNullParameter(aFc1iSDK, "");
-        this.f5334d = new LinkedHashMap();
-        Context context = aFd1zSDK.f5305d;
+        this.f5407d = new LinkedHashMap();
+        Context context = aFd1zSDK.f5378d;
         this.AFKeystoreWrapper = context != null ? context.getPackageManager() : null;
-        String packageName = aFc1iSDK.f5258d.f5305d.getPackageName();
+        String packageName = aFc1iSDK.f5331d.f5378d.getPackageName();
         Intrinsics.checkNotNullExpressionValue(packageName, "");
         this.registerClient = packageName;
     }
@@ -64,18 +64,18 @@ public final class AFf1bSDK {
     @NotNull
     public final Map<String, Object> AFKeystoreWrapper() {
         String installerPackageName;
-        if (this.f5334d.isEmpty()) {
+        if (this.f5407d.isEmpty()) {
             try {
                 PackageManager packageManager = this.AFKeystoreWrapper;
                 if (packageManager != null && (installerPackageName = packageManager.getInstallerPackageName(this.registerClient)) != null) {
-                    this.f5334d.put("installer_package", installerPackageName);
+                    this.f5407d.put("installer_package", installerPackageName);
                 }
             } catch (Throwable unused) {
             }
             if (Build.VERSION.SDK_INT >= 30) {
-                this.f5334d.put("install_source_info", AFLogger());
+                this.f5407d.put("install_source_info", AFLogger());
             }
         }
-        return this.f5334d;
+        return this.f5407d;
     }
 }

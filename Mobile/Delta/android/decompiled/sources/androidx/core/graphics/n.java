@@ -10,9 +10,9 @@ public class n extends m {
     @Override // androidx.core.graphics.m
     public Typeface i(Object obj) {
         try {
-            Object objNewInstance = Array.newInstance(this.f1803g, 1);
+            Object objNewInstance = Array.newInstance(this.f1648g, 1);
             Array.set(objNewInstance, 0, obj);
-            return (Typeface) this.f1809m.invoke(null, objNewInstance, "sans-serif", -1, -1);
+            return (Typeface) this.f1654m.invoke(null, objNewInstance, "sans-serif", -1, -1);
         } catch (IllegalAccessException | InvocationTargetException e10) {
             throw new RuntimeException(e10);
         }

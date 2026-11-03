@@ -27,19 +27,19 @@ public final class e extends k9.e<k9.a.d.c> implements o {
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
     @NotNull
-    public static final k9.a.g<ta.d> f31698l;
+    public static final k9.a.g<ta.d> f32217l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
     @NotNull
-    public static final a f31699m;
+    public static final a f32218m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
     @NotNull
-    public static final k9.a<k9.a.d.c> f31700n;
+    public static final k9.a<k9.a.d.c> f32219n;
 
     @Metadata(d1 = {"\u00003\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004*\u0001\u0000\b\n\u0018\u00002\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001J?\u0010\u000f\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\n\u001a\u00020\u00032\u0006\u0010\f\u001a\u00020\u000b2\u0006\u0010\u000e\u001a\u00020\rH\u0016¢\u0006\u0004\b\u000f\u0010\u0010¨\u0006\u0011"}, d2 = {"ta/e$a", "Lk9/a$a;", "Lta/d;", "Lk9/a$d$c;", "Landroid/content/Context;", "context", "Landroid/os/Looper;", "looper", "Ln9/d;", "commonSettings", "apiOptions", "Ll9/e;", "connectedListener", "Ll9/n;", "connectionFailedListener", "c", "(Landroid/content/Context;Landroid/os/Looper;Ln9/d;Lk9/a$d$c;Ll9/e;Ll9/n;)Lta/d;", "java.com.google.android.gmscore.integ.client.identity_credentials_identity_credentials"}, k = 1, mv = {2, 1, 0}, xi = 48)
-    public static final class a extends k9.a.AbstractC0392a<ta.d, k9.a.d.c> {
-        @Override // k9.a.AbstractC0392a
+    public static final class a extends k9.a.AbstractC0391a<ta.d, k9.a.d.c> {
+        @Override // k9.a.AbstractC0391a
         /* JADX INFO: renamed from: c, reason: merged with bridge method [inline-methods] */
         public ta.d b(Context context, Looper looper, n9.d commonSettings, k9.a.d.c apiOptions, l9.e connectedListener, n connectionFailedListener) {
             Intrinsics.checkNotNullParameter(context, "context");
@@ -52,20 +52,20 @@ public final class e extends k9.e<k9.a.d.c> implements o {
         }
     }
 
-    @Metadata(d1 = {"\u0000\u001d\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J!\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"ta/e$c", "Lta/c;", "Lcom/google/android/gms/common/api/Status;", "status", "Lcom/google/android/gms/identitycredentials/CreateCredentialHandle;", "result", "", "V0", "(Lcom/google/android/gms/common/api/Status;Lcom/google/android/gms/identitycredentials/CreateCredentialHandle;)V", "java.com.google.android.gmscore.integ.client.identity_credentials_identity_credentials"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000\u001d\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J!\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"ta/e$c", "Lta/c;", "Lcom/google/android/gms/common/api/Status;", "status", "Lcom/google/android/gms/identitycredentials/CreateCredentialHandle;", "result", "", "S0", "(Lcom/google/android/gms/common/api/Status;Lcom/google/android/gms/identitycredentials/CreateCredentialHandle;)V", "java.com.google.android.gmscore.integ.client.identity_credentials_identity_credentials"}, k = 1, mv = {2, 1, 0}, xi = 48)
     public static final class c extends ta.c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ k<CreateCredentialHandle> f31701a;
+        public final /* synthetic */ k<CreateCredentialHandle> f32220a;
 
         public c(k<CreateCredentialHandle> kVar) {
-            this.f31701a = kVar;
+            this.f32220a = kVar;
         }
 
         @Override // ta.c, ta.a
-        public void V0(Status status, CreateCredentialHandle result) {
+        public void S0(Status status, CreateCredentialHandle result) {
             Intrinsics.checkNotNullParameter(status, "status");
-            v.a(status, result, this.f31701a);
+            v.a(status, result, this.f32220a);
         }
     }
 
@@ -73,48 +73,48 @@ public final class e extends k9.e<k9.a.d.c> implements o {
     public static final class d extends ta.c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ k<PendingGetCredentialHandle> f31702a;
+        public final /* synthetic */ k<PendingGetCredentialHandle> f32221a;
 
         public d(k<PendingGetCredentialHandle> kVar) {
-            this.f31702a = kVar;
+            this.f32221a = kVar;
         }
 
         @Override // ta.c, ta.a
         public void G1(Status status, PendingGetCredentialHandle result) {
             Intrinsics.checkNotNullParameter(status, "status");
-            v.a(status, result, this.f31702a);
+            v.a(status, result, this.f32221a);
         }
     }
 
     /* JADX INFO: renamed from: ta.e$e, reason: collision with other inner class name */
-    @Metadata(d1 = {"\u0000\u001d\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J!\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"ta/e$e", "Lta/c;", "Lcom/google/android/gms/common/api/Status;", "status", "Lcom/google/android/gms/identitycredentials/SignalCredentialStateResponse;", "result", "", "e1", "(Lcom/google/android/gms/common/api/Status;Lcom/google/android/gms/identitycredentials/SignalCredentialStateResponse;)V", "java.com.google.android.gmscore.integ.client.identity_credentials_identity_credentials"}, k = 1, mv = {2, 1, 0}, xi = 48)
-    public static final class BinderC0568e extends ta.c {
+    @Metadata(d1 = {"\u0000\u001d\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J!\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"ta/e$e", "Lta/c;", "Lcom/google/android/gms/common/api/Status;", "status", "Lcom/google/android/gms/identitycredentials/SignalCredentialStateResponse;", "result", "", "b1", "(Lcom/google/android/gms/common/api/Status;Lcom/google/android/gms/identitycredentials/SignalCredentialStateResponse;)V", "java.com.google.android.gmscore.integ.client.identity_credentials_identity_credentials"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    public static final class BinderC0576e extends ta.c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ k<SignalCredentialStateResponse> f31703a;
+        public final /* synthetic */ k<SignalCredentialStateResponse> f32222a;
 
-        public BinderC0568e(k<SignalCredentialStateResponse> kVar) {
-            this.f31703a = kVar;
+        public BinderC0576e(k<SignalCredentialStateResponse> kVar) {
+            this.f32222a = kVar;
         }
 
         @Override // ta.c, ta.a
-        public void e1(Status status, SignalCredentialStateResponse result) {
+        public void b1(Status status, SignalCredentialStateResponse result) {
             Intrinsics.checkNotNullParameter(status, "status");
-            v.a(status, result, this.f31703a);
+            v.a(status, result, this.f32222a);
         }
     }
 
     static {
         k9.a.g<ta.d> gVar = new k9.a.g<>();
-        f31698l = gVar;
+        f32217l = gVar;
         a aVar = new a();
-        f31699m = aVar;
-        f31700n = new k9.a<>("IdentityCredentials.API", aVar, gVar);
+        f32218m = aVar;
+        f32219n = new k9.a<>("IdentityCredentials.API", aVar, gVar);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public e(@NonNull Context context) {
-        super(context, f31700n, k9.a.d.Jo, k9.e.a.f22280c);
+        super(context, f32219n, k9.a.d.Ko, k9.e.a.f22504c);
         Intrinsics.checkNotNullParameter(context, "context");
     }
 
@@ -127,14 +127,14 @@ public final class e extends k9.e<k9.a.d.c> implements o {
     }
 
     public static final void R(SignalCredentialStateRequest signalCredentialStateRequest, ta.d dVar, k kVar) {
-        ((b) dVar.getService()).m2(new BinderC0568e(kVar), signalCredentialStateRequest, gb.g.a(dVar.getContext()));
+        ((b) dVar.getService()).m2(new BinderC0576e(kVar), signalCredentialStateRequest, gb.g.a(dVar.getContext()));
     }
 
     @Override // sa.o
     @NotNull
     public Task<PendingGetCredentialHandle> k(@NonNull final GetCredentialRequest request) {
         Intrinsics.checkNotNullParameter(request, "request");
-        Task taskZ = z(u.c().d(gb.d.f17983a).b(new q() { // from class: ta.h
+        Task taskZ = z(u.c().d(gb.d.f18522a).b(new q() { // from class: ta.h
             @Override // l9.q
             public final /* synthetic */ void accept(Object obj, Object obj2) {
                 e.Q(request, (d) obj, (k) obj2);
@@ -148,7 +148,7 @@ public final class e extends k9.e<k9.a.d.c> implements o {
     @NotNull
     public Task<CreateCredentialHandle> l(@NonNull final CreateCredentialRequest request) {
         Intrinsics.checkNotNullParameter(request, "request");
-        Task taskD = D(u.c().d(gb.d.f17987f).b(new q() { // from class: ta.f
+        Task taskD = D(u.c().d(gb.d.f18526f).b(new q() { // from class: ta.f
             @Override // l9.q
             public final /* synthetic */ void accept(Object obj, Object obj2) {
                 e.P(request, (d) obj, (k) obj2);
@@ -162,7 +162,7 @@ public final class e extends k9.e<k9.a.d.c> implements o {
     @NotNull
     public Task<SignalCredentialStateResponse> s(@NonNull final SignalCredentialStateRequest request) {
         Intrinsics.checkNotNullParameter(request, "request");
-        Task taskD = D(u.c().d(gb.d.f17991j).b(new q() { // from class: ta.g
+        Task taskD = D(u.c().d(gb.d.f18530j).b(new q() { // from class: ta.g
             @Override // l9.q
             public final /* synthetic */ void accept(Object obj, Object obj2) {
                 e.R(request, (d) obj, (k) obj2);

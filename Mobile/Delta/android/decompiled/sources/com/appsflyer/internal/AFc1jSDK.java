@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 public final class AFc1jSDK {
 
     @NotNull
-    private static final jt.h unregisterClient = jt.i.b(new Function0() { // from class: com.appsflyer.internal.z
+    private static final gt.h unregisterClient = gt.i.b(new Function0() { // from class: com.appsflyer.internal.z
         @Override // kotlin.jvm.functions.Function0
         public final Object invoke() {
             return AFc1jSDK.registerClient();

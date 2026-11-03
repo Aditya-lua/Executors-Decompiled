@@ -8,36 +8,36 @@ import java.util.concurrent.Executor;
 public final class g0<TResult, TContinuationResult> implements g<TContinuationResult>, f, e, h0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Executor f30583a;
+    public final Executor f31130a;
     public final j b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final n0 f30584c;
+    public final n0 f31131c;
 
     public g0(@NonNull Executor executor, @NonNull j jVar, @NonNull n0 n0Var) {
-        this.f30583a = executor;
+        this.f31130a = executor;
         this.b = jVar;
-        this.f30584c = n0Var;
+        this.f31131c = n0Var;
     }
 
     @Override // sb.e
     public final void a() {
-        this.f30584c.r();
+        this.f31131c.r();
     }
 
     @Override // sb.h0
     public final void b(@NonNull Task task) {
-        this.f30583a.execute(new f0(this, task));
+        this.f31130a.execute(new f0(this, task));
     }
 
     @Override // sb.f
     public final void onFailure(@NonNull Exception exc) {
-        this.f30584c.p(exc);
+        this.f31131c.p(exc);
     }
 
     @Override // sb.g
     public final void onSuccess(TContinuationResult tcontinuationresult) {
-        this.f30584c.q(tcontinuationresult);
+        this.f31131c.q(tcontinuationresult);
     }
 
     @Override // sb.h0

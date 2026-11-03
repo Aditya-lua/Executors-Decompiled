@@ -12,7 +12,7 @@ public final /* data */ class Size {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    public static final Size f35746d;
+    public static final Size f36603d;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
     @NotNull
@@ -23,8 +23,8 @@ public final /* data */ class Size {
     public final a height;
 
     static {
-        a.b bVar = a.b.f35735a;
-        f35746d = new Size(bVar, bVar);
+        a.b bVar = a.b.f36592a;
+        f36603d = new Size(bVar, bVar);
     }
 
     public Size(@NotNull a aVar, @NotNull a aVar2) {

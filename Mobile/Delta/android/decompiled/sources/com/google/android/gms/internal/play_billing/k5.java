@@ -6,17 +6,17 @@ import java.util.concurrent.Executor;
 public final class k5 {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final k5 f7121d = new k5(null, null);
+    public static final k5 f7195d = new k5(null, null);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Runnable f7122a;
+    public final Runnable f7196a;
     public final Executor b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public k5 f7123c;
+    public k5 f7197c;
 
     public k5(Runnable runnable, Executor executor) {
-        this.f7122a = runnable;
+        this.f7196a = runnable;
         this.b = executor;
     }
 }

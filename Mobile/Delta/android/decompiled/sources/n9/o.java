@@ -9,19 +9,19 @@ import com.withpersona.sdk2.inquiry.network.dto.InquiryField;
 public class o {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Resources f25292a;
+    public final Resources f26113a;
     public final String b;
 
     public o(@NonNull Context context) {
         m.l(context);
         Resources resources = context.getResources();
-        this.f25292a = resources;
-        this.b = resources.getResourcePackageName(j9.j.f21198a);
+        this.f26113a = resources;
+        this.b = resources.getResourcePackageName(j9.j.f21771a);
     }
 
     public String a(@NonNull String str) {
         String str2 = this.b;
-        Resources resources = this.f25292a;
+        Resources resources = this.f26113a;
         int identifier = resources.getIdentifier(str, InquiryField.StringField.TYPE, str2);
         if (identifier == 0) {
             return null;

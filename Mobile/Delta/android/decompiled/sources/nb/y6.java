@@ -8,7 +8,7 @@ import com.withpersona.sdk2.inquiry.network.dto.InquiryField;
 public final class y6 {
     public static String a(Context context) {
         try {
-            return context.getResources().getResourcePackageName(j9.j.f21198a);
+            return context.getResources().getResourcePackageName(j9.j.f21771a);
         } catch (Resources.NotFoundException unused) {
             return context.getPackageName();
         }

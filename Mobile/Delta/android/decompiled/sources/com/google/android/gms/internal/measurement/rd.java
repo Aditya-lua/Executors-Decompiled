@@ -6,10 +6,10 @@ import sun.misc.Unsafe;
 public abstract class rd {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Unsafe f6776a;
+    public final Unsafe f6850a;
 
     public rd(Unsafe unsafe) {
-        this.f6776a = unsafe;
+        this.f6850a = unsafe;
     }
 
     public abstract void a(Object obj, long j10, byte b);

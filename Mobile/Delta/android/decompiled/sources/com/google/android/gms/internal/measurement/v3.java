@@ -27,58 +27,58 @@ import java.util.concurrent.TimeUnit;
 public final class v3 {
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static volatile v3 f6839j;
+    public static volatile v3 f6913j;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f6840a = "FA";
+    public final String f6914a = "FA";
     public final u9.e b = u9.h.c();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final ExecutorService f6841c;
+    public final ExecutorService f6915c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final AppMeasurementSdk f6842d;
+    public final AppMeasurementSdk f6916d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final List f6843e;
+    public final List f6917e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public int f6844f;
+    public int f6918f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public boolean f6845g;
+    public boolean f6919g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final String f6846h;
+    public final String f6920h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public volatile u1 f6847i;
+    public volatile u1 f6921i;
 
     public v3(Context context, Bundle bundle) {
         p1.a();
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(1, 1, 60L, TimeUnit.SECONDS, new LinkedBlockingQueue(), new b3(this));
         threadPoolExecutor.allowCoreThreadTimeOut(true);
-        this.f6841c = Executors.unconfigurableExecutorService(threadPoolExecutor);
-        this.f6842d = new AppMeasurementSdk(this);
-        this.f6843e = new ArrayList();
+        this.f6915c = Executors.unconfigurableExecutorService(threadPoolExecutor);
+        this.f6916d = new AppMeasurementSdk(this);
+        this.f6917e = new ArrayList();
         try {
             if (nb.ab.a(context, "google_app_id", nb.y6.a(context)) != null) {
                 try {
                     Class.forName("com.google.firebase.analytics.FirebaseAnalytics", false, v3.class.getClassLoader());
                 } catch (ClassNotFoundException unused) {
-                    this.f6846h = null;
-                    this.f6845g = true;
-                    Log.w(this.f6840a, "Disabling data collection. Found google_app_id in strings.xml but Google Analytics for Firebase is missing. Add Google Analytics for Firebase to resume data collection.");
+                    this.f6920h = null;
+                    this.f6919g = true;
+                    Log.w(this.f6914a, "Disabling data collection. Found google_app_id in strings.xml but Google Analytics for Firebase is missing. Add Google Analytics for Firebase to resume data collection.");
                     return;
                 }
             }
         } catch (IllegalStateException unused2) {
         }
-        this.f6846h = "fa";
+        this.f6920h = "fa";
         i(new o2(this, context, bundle));
         Application application = (Application) context.getApplicationContext();
         if (application == null) {
-            Log.w(this.f6840a, "Unable to register lifecycle notifications. Application null.");
+            Log.w(this.f6914a, "Unable to register lifecycle notifications. Application null.");
         } else {
             application.registerActivityLifecycleCallbacks(new u3(this));
         }
@@ -86,18 +86,18 @@ public final class v3 {
 
     public static v3 r(Context context, Bundle bundle) {
         n9.m.l(context);
-        if (f6839j == null) {
+        if (f6913j == null) {
             synchronized (v3.class) {
                 try {
-                    if (f6839j == null) {
-                        f6839j = new v3(context, bundle);
+                    if (f6913j == null) {
+                        f6913j = new v3(context, bundle);
                     }
                 } catch (Throwable th2) {
                     throw th2;
                 }
             }
         }
-        return f6839j;
+        return f6913j;
     }
 
     public final void A(Bundle bundle) {
@@ -151,8 +151,8 @@ public final class v3 {
             return lT2.longValue();
         }
         long jNextLong = new Random(System.nanoTime() ^ this.b.a()).nextLong();
-        int i10 = this.f6844f + 1;
-        this.f6844f = i10;
+        int i10 = this.f6918f + 1;
+        this.f6918f = i10;
         return jNextLong + ((long) i10);
     }
 
@@ -209,7 +209,7 @@ public final class v3 {
     }
 
     public final String g() {
-        return this.f6846h;
+        return this.f6920h;
     }
 
     public final void h(boolean z10) {
@@ -217,33 +217,33 @@ public final class v3 {
     }
 
     public final /* synthetic */ String k() {
-        return this.f6840a;
+        return this.f6914a;
     }
 
     public final /* synthetic */ boolean l() {
-        return this.f6845g;
+        return this.f6919g;
     }
 
     public final /* synthetic */ u1 m() {
-        return this.f6847i;
+        return this.f6921i;
     }
 
     public final /* synthetic */ void n(u1 u1Var) {
-        this.f6847i = u1Var;
+        this.f6921i = u1Var;
     }
 
     /* JADX INFO: renamed from: o, reason: merged with bridge method [inline-methods] */
     public final void i(j3 j3Var) {
-        this.f6841c.execute(j3Var);
+        this.f6915c.execute(j3Var);
     }
 
     /* JADX INFO: renamed from: p, reason: merged with bridge method [inline-methods] */
     public final void j(Exception exc, boolean z10, boolean z11) {
         v3 v3Var;
         Exception exc2;
-        this.f6845g |= z10;
+        this.f6919g |= z10;
         if (z10) {
-            Log.w(this.f6840a, "Data collection startup failed. No data will be collected.", exc);
+            Log.w(this.f6914a, "Data collection startup failed. No data will be collected.", exc);
             return;
         }
         if (z11) {
@@ -254,7 +254,7 @@ public final class v3 {
             v3Var = this;
             exc2 = exc;
         }
-        Log.w(v3Var.f6840a, "Error with data collection. Data lost.", exc2);
+        Log.w(v3Var.f6914a, "Error with data collection. Data lost.", exc2);
     }
 
     public final void q(String str, String str2, Bundle bundle, boolean z10, boolean z11, Long l10) {
@@ -262,12 +262,12 @@ public final class v3 {
     }
 
     public final AppMeasurementSdk s() {
-        return this.f6842d;
+        return this.f6916d;
     }
 
     public final u1 t(Context context, boolean z10) {
         try {
-            return t1.asInterface(DynamiteModule.e(context, z10 ? DynamiteModule.f5865e : DynamiteModule.f5863c, ModuleDescriptor.MODULE_ID).d("com.google.android.gms.measurement.internal.AppMeasurementDynamiteService"));
+            return t1.asInterface(DynamiteModule.e(context, z10 ? DynamiteModule.f5938e : DynamiteModule.f5936c, ModuleDescriptor.MODULE_ID).d("com.google.android.gms.measurement.internal.AppMeasurementDynamiteService"));
         } catch (DynamiteModule.a e10) {
             j(e10, true, false);
             return null;
@@ -276,12 +276,12 @@ public final class v3 {
 
     public final void u(nb.u8 u8Var) {
         k3 k3Var = new k3(u8Var);
-        if (this.f6847i != null) {
+        if (this.f6921i != null) {
             try {
-                this.f6847i.setEventInterceptor(k3Var);
+                this.f6921i.setEventInterceptor(k3Var);
                 return;
             } catch (BadParcelableException | NetworkOnMainThreadException | RemoteException | IllegalArgumentException | IllegalStateException | NullPointerException | SecurityException | UnsupportedOperationException unused) {
-                Log.w(this.f6840a, "Failed to set event interceptor on calling thread. Trying again on the dynamite thread.");
+                Log.w(this.f6914a, "Failed to set event interceptor on calling thread. Trying again on the dynamite thread.");
             }
         }
         i(new f3(this, k3Var));
@@ -289,12 +289,12 @@ public final class v3 {
 
     public final void v(nb.v8 v8Var) {
         n9.m.l(v8Var);
-        List list = this.f6843e;
+        List list = this.f6917e;
         synchronized (list) {
             for (int i10 = 0; i10 < list.size(); i10++) {
                 try {
                     if (v8Var.equals(((Pair) list.get(i10)).first)) {
-                        Log.w(this.f6840a, "OnEventListener already registered.");
+                        Log.w(this.f6914a, "OnEventListener already registered.");
                         return;
                     }
                 } catch (Throwable th2) {
@@ -303,12 +303,12 @@ public final class v3 {
             }
             l3 l3Var = new l3(v8Var);
             list.add(new Pair(v8Var, l3Var));
-            if (this.f6847i != null) {
+            if (this.f6921i != null) {
                 try {
-                    this.f6847i.registerOnMeasurementEventListener(l3Var);
+                    this.f6921i.registerOnMeasurementEventListener(l3Var);
                     return;
                 } catch (BadParcelableException | NetworkOnMainThreadException | RemoteException | IllegalArgumentException | IllegalStateException | NullPointerException | SecurityException | UnsupportedOperationException unused) {
-                    Log.w(this.f6840a, "Failed to register event listener on calling thread. Trying again on the dynamite thread.");
+                    Log.w(this.f6914a, "Failed to register event listener on calling thread. Trying again on the dynamite thread.");
                 }
             }
             i(new g3(this, l3Var));
@@ -318,7 +318,7 @@ public final class v3 {
     public final void w(nb.v8 v8Var) {
         Pair pair;
         n9.m.l(v8Var);
-        List list = this.f6843e;
+        List list = this.f6917e;
         synchronized (list) {
             int i10 = 0;
             while (true) {
@@ -338,17 +338,17 @@ public final class v3 {
                 }
             }
             if (pair == null) {
-                Log.w(this.f6840a, "OnEventListener had not been registered.");
+                Log.w(this.f6914a, "OnEventListener had not been registered.");
                 return;
             }
             list.remove(pair);
             l3 l3Var = (l3) pair.second;
-            if (this.f6847i != null) {
+            if (this.f6921i != null) {
                 try {
-                    this.f6847i.unregisterOnMeasurementEventListener(l3Var);
+                    this.f6921i.unregisterOnMeasurementEventListener(l3Var);
                     return;
                 } catch (BadParcelableException | NetworkOnMainThreadException | RemoteException | IllegalArgumentException | IllegalStateException | NullPointerException | SecurityException | UnsupportedOperationException unused) {
-                    Log.w(this.f6840a, "Failed to unregister event listener on calling thread. Trying again on the dynamite thread.");
+                    Log.w(this.f6914a, "Failed to unregister event listener on calling thread. Trying again on the dynamite thread.");
                 }
             }
             i(new h3(this, l3Var));

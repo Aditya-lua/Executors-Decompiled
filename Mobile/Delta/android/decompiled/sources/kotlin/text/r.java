@@ -62,7 +62,7 @@ public class r extends n {
     public static final String i(@NotNull String str, @NotNull final String indent) {
         Intrinsics.checkNotNullParameter(str, "<this>");
         Intrinsics.checkNotNullParameter(indent, "indent");
-        return iu.p.w(iu.p.x(StringsKt__StringsKt.v0(str), new Function1() { // from class: kotlin.text.q
+        return gu.p.w(gu.p.x(StringsKt__StringsKt.v0(str), new Function1() { // from class: kotlin.text.q
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
                 return r.k(indent, (String) obj);

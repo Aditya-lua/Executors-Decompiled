@@ -1,14 +1,31 @@
 package he;
 
-import java.util.Comparator;
+import java.util.logging.Logger;
 
 /* JADX INFO: loaded from: classes2.dex */
 public final class m {
-    public static <T, S extends T> Comparator<Iterable<S>> a(Comparator<T> comparator) {
-        return new c0((Comparator) ge.n.l(comparator));
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final Logger f19409a = Logger.getLogger(m.class.getName());
+    public static final l b = b();
+
+    public static final class b implements l {
+        public b() {
+        }
     }
 
-    public static <T extends Comparable<? super T>> T b(T t8, T t10) {
-        return t8.compareTo(t10) >= 0 ? t8 : t10;
+    public static String a(String str) {
+        if (c(str)) {
+            return null;
+        }
+        return str;
+    }
+
+    public static l b() {
+        return new b();
+    }
+
+    public static boolean c(String str) {
+        return str == null || str.isEmpty();
     }
 }

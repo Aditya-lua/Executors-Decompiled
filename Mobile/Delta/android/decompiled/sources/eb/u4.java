@@ -18,7 +18,7 @@ public abstract class u4 extends a0 implements v4 {
         Status status = (Status) b1.a(parcel, Status.CREATOR);
         PendingIntent pendingIntent = (PendingIntent) b1.a(parcel, PendingIntent.CREATOR);
         b1.b(parcel);
-        C0(status, pendingIntent);
+        y0(status, pendingIntent);
         return true;
     }
 }

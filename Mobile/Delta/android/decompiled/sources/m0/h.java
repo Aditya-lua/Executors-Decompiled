@@ -4,14 +4,14 @@ package m0;
 public final class h extends u0.b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final v0 f23598a;
+    public final v0 f24248a;
     public final androidx.camera.core.d b;
 
     public h(v0 v0Var, androidx.camera.core.d dVar) {
         if (v0Var == null) {
             throw new NullPointerException("Null processingRequest");
         }
-        this.f23598a = v0Var;
+        this.f24248a = v0Var;
         if (dVar == null) {
             throw new NullPointerException("Null imageProxy");
         }
@@ -25,7 +25,7 @@ public final class h extends u0.b {
 
     @Override // m0.u0.b
     public v0 b() {
-        return this.f23598a;
+        return this.f24248a;
     }
 
     public boolean equals(Object obj) {
@@ -34,7 +34,7 @@ public final class h extends u0.b {
         }
         if (obj instanceof u0.b) {
             u0.b bVar = (u0.b) obj;
-            if (this.f23598a.equals(bVar.b()) && this.b.equals(bVar.a())) {
+            if (this.f24248a.equals(bVar.b()) && this.b.equals(bVar.a())) {
                 return true;
             }
         }
@@ -42,10 +42,10 @@ public final class h extends u0.b {
     }
 
     public int hashCode() {
-        return ((this.f23598a.hashCode() ^ 1000003) * 1000003) ^ this.b.hashCode();
+        return ((this.f24248a.hashCode() ^ 1000003) * 1000003) ^ this.b.hashCode();
     }
 
     public String toString() {
-        return "InputPacket{processingRequest=" + this.f23598a + ", imageProxy=" + this.b + "}";
+        return "InputPacket{processingRequest=" + this.f24248a + ", imageProxy=" + this.b + "}";
     }
 }

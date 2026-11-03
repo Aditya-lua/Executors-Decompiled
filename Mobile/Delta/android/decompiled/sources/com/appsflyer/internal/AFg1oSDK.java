@@ -64,7 +64,7 @@ public final class AFg1oSDK implements AFg1rSDK {
     private final AFc1eSDK AFLoggerLogLevel;
 
     @NotNull
-    private final jt.h afDebugLog;
+    private final gt.h afDebugLog;
 
     @NotNull
     private final AppsFlyerProperties afErrorLog;
@@ -77,18 +77,18 @@ public final class AFg1oSDK implements AFg1rSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    private final AFj1cSDK f5377d;
+    private final AFj1cSDK f5450d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
     @NotNull
-    private final AFc1kSDK f5378e;
+    private final AFc1kSDK f5451e;
 
     @NotNull
     private final AFi1vSDK force;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
     @NotNull
-    private final AFc1iSDK f5379i;
+    private final AFc1iSDK f5452i;
 
     @NotNull
     private final AFj1ySDK registerClient;
@@ -98,11 +98,11 @@ public final class AFg1oSDK implements AFg1rSDK {
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
     @NotNull
-    private final AFh1xSDK f5380v;
+    private final AFh1xSDK f5453v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
     @NotNull
-    private final AFf1fSDK f5381w;
+    private final AFf1fSDK f5454w;
     private static char[] valueOf = {13891, 31402, 44955, 53476, 1481, 46615, 64288, 11290, 20859, 33360, 14001, 31619, 44172, 53759, 724, 17751, 2465, 56472, 41961, 30409};
     private static long getEntries = 8025551254644932716L;
 
@@ -122,20 +122,20 @@ public final class AFg1oSDK implements AFg1rSDK {
         Intrinsics.checkNotNullParameter(aFc1eSDK, "");
         Intrinsics.checkNotNullParameter(appsFlyerProperties, "");
         this.AFLogger = context;
-        this.f5377d = aFj1cSDK;
+        this.f5450d = aFj1cSDK;
         this.unregisterClient = aFg1wSDK;
         this.registerClient = aFj1ySDK;
         this.AFKeystoreWrapper = aFg1qSDK;
-        this.f5380v = aFh1xSDK;
-        this.f5378e = aFc1kSDK;
-        this.f5379i = aFc1iSDK;
+        this.f5453v = aFh1xSDK;
+        this.f5451e = aFc1kSDK;
+        this.f5452i = aFc1iSDK;
         this.force = aFi1vSDK;
-        this.f5381w = aFf1fSDK;
+        this.f5454w = aFf1fSDK;
         this.afWarnLog = aFd1zSDK;
         this.afInfoLog = aFf1bSDK;
         this.AFLoggerLogLevel = aFc1eSDK;
         this.afErrorLog = appsFlyerProperties;
-        this.afDebugLog = jt.i.b(new Function0() { // from class: com.appsflyer.internal.r0
+        this.afDebugLog = gt.i.b(new Function0() { // from class: com.appsflyer.internal.r0
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
                 return AFg1oSDK.AFLoggerLogLevel();
@@ -188,7 +188,7 @@ public final class AFg1oSDK implements AFg1rSDK {
 
     @SuppressLint({"HardwareIds"})
     private final String afErrorLog() {
-        String strD = this.f5378e.d("androidIdCached");
+        String strD = this.f5451e.d("androidIdCached");
         try {
             String string = Settings.Secure.getString(this.AFLogger.getContentResolver(), "android_id");
             if (string != null) {
@@ -261,12 +261,12 @@ public final class AFg1oSDK implements AFg1rSDK {
             getLevel = i10 % 128;
             if (i10 % 2 == 0) {
                 unregisterClient(new Object[]{this, map2}, 1798824484, -1798824476, System.identityHashCode(this));
-                if (this.f5379i.AFKeystoreWrapper.AFLogger("appsFlyerCount", 0) <= 5) {
+                if (this.f5452i.AFKeystoreWrapper.AFLogger("appsFlyerCount", 0) <= 5) {
                     map2.putAll(this.registerClient.AFLogger());
                 }
             } else {
                 unregisterClient(new Object[]{this, map2}, 1798824484, -1798824476, System.identityHashCode(this));
-                if (this.f5379i.AFKeystoreWrapper.AFLogger("appsFlyerCount", 0) <= 2) {
+                if (this.f5452i.AFKeystoreWrapper.AFLogger("appsFlyerCount", 0) <= 2) {
                     map2.putAll(this.registerClient.AFLogger());
                 }
             }
@@ -282,7 +282,7 @@ public final class AFg1oSDK implements AFg1rSDK {
 
     private void e(@NotNull Map<String, Object> map) {
         Intrinsics.checkNotNullParameter(map, "");
-        AFh1xSDK aFh1xSDK = this.f5380v;
+        AFh1xSDK aFh1xSDK = this.f5453v;
         HashMap map2 = new HashMap(aFh1xSDK.AFLogger);
         aFh1xSDK.AFLogger.clear();
         aFh1xSDK.AFKeystoreWrapper.AFLogger("gcd");
@@ -298,7 +298,7 @@ public final class AFg1oSDK implements AFg1rSDK {
     private void enableTCFDataCollection(@NotNull Map<String, Object> map) {
         AppsFlyerLib = (getLevel + 9) % 128;
         Intrinsics.checkNotNullParameter(map, "");
-        map.put("af_preinstalled", String.valueOf(this.f5379i.AFKeystoreWrapper(this.AFLogger)));
+        map.put("af_preinstalled", String.valueOf(this.f5452i.AFKeystoreWrapper(this.AFLogger)));
         getLevel = (AppsFlyerLib + 115) % 128;
     }
 
@@ -307,17 +307,17 @@ public final class AFg1oSDK implements AFg1rSDK {
         AFg1oSDK aFg1oSDK = (AFg1oSDK) objArr[0];
         AFh1pSDK aFh1pSDK = (AFh1pSDK) objArr[1];
         Intrinsics.checkNotNullParameter(aFh1pSDK, "");
-        AFc1eSDK aFc1eSDK = aFg1oSDK.f5379i.registerClient;
+        AFc1eSDK aFc1eSDK = aFg1oSDK.f5452i.registerClient;
         if (aFc1eSDK.setAndroidIdData) {
             int i10 = getLevel + 45;
             AppsFlyerLib = i10 % 128;
             if (i10 % 2 != 0) {
-                Map<String, Object> map = aFh1pSDK.f5399d;
+                Map<String, Object> map = aFh1pSDK.f5472d;
                 Intrinsics.checkNotNullExpressionValue(map, "");
                 AFj1iSDK.AFLogger(map).put("ad_ids_disabled", Boolean.TRUE);
                 throw null;
             }
-            Map<String, Object> map2 = aFh1pSDK.f5399d;
+            Map<String, Object> map2 = aFh1pSDK.f5472d;
             Intrinsics.checkNotNullExpressionValue(map2, "");
             AFj1iSDK.AFLogger(map2).put("ad_ids_disabled", Boolean.TRUE);
             getLevel = (AppsFlyerLib + 63) % 128;
@@ -340,10 +340,10 @@ public final class AFg1oSDK implements AFg1rSDK {
                 }
             }
         }
-        AdvertisingIdData advertisingIdData2 = aFg1oSDK.f5379i.registerClient.updateServerUninstallToken;
+        AdvertisingIdData advertisingIdData2 = aFg1oSDK.f5452i.registerClient.updateServerUninstallToken;
         aFh1pSDK.AFKeystoreWrapper("GAID_retry", String.valueOf(advertisingIdData2 != null ? Intrinsics.c(advertisingIdData2.retry, Boolean.TRUE) : false));
         if (CollectionsKt.W(kotlin.collections.p.n(AFd1bSDK.CONVERSION, AFd1bSDK.LAUNCH), aFh1pSDK.AFKeystoreWrapper()) && (aFd1nSDK = aFg1oSDK.AFLoggerLogLevel.setOaidData) != null) {
-            Map<String, Object> map3 = aFh1pSDK.f5399d;
+            Map<String, Object> map3 = aFh1pSDK.f5472d;
             Intrinsics.checkNotNullExpressionValue(map3, "");
             AFj1iSDK.AFLogger(map3).put("fetchAdIdLatency", Long.valueOf(aFd1nSDK.registerClient));
         }
@@ -352,7 +352,7 @@ public final class AFg1oSDK implements AFg1rSDK {
 
     private void getEntries(@NotNull Map<String, Object> map) {
         Intrinsics.checkNotNullParameter(map, "");
-        long j10 = this.f5380v.afInfoLog;
+        long j10 = this.f5453v.afInfoLog;
         if (j10 != 0) {
             getLevel = (AppsFlyerLib + 71) % 128;
             map.put("prev_session_dur", Long.valueOf(j10));
@@ -365,12 +365,12 @@ public final class AFg1oSDK implements AFg1rSDK {
         getLevel = i10 % 128;
         if (i10 % 2 == 0) {
             Intrinsics.checkNotNullParameter(map, "");
-            this.f5378e.registerClient("is_stop_tracking_used");
+            this.f5451e.registerClient("is_stop_tracking_used");
             throw null;
         }
         Intrinsics.checkNotNullParameter(map, "");
-        if (this.f5378e.registerClient("is_stop_tracking_used")) {
-            map.put("istu", String.valueOf(this.f5378e.AFKeystoreWrapper("is_stop_tracking_used")));
+        if (this.f5451e.registerClient("is_stop_tracking_used")) {
+            map.put("istu", String.valueOf(this.f5451e.AFKeystoreWrapper("is_stop_tracking_used")));
         }
         int i11 = getLevel + 19;
         AppsFlyerLib = i11 % 128;
@@ -391,7 +391,7 @@ public final class AFg1oSDK implements AFg1rSDK {
         boolean z11 = false;
         if (i10 % 2 != 0) {
             Intrinsics.checkNotNullParameter(map, "");
-            strAFLogger = this.f5379i.AFLogger("CHANNEL");
+            strAFLogger = this.f5452i.AFLogger("CHANNEL");
             int i11 = 94 / 0;
             if (strAFLogger != null) {
                 if (strAFLogger.equals("")) {
@@ -401,7 +401,7 @@ public final class AFg1oSDK implements AFg1rSDK {
             }
         } else {
             Intrinsics.checkNotNullParameter(map, "");
-            strAFLogger = this.f5379i.AFLogger("CHANNEL");
+            strAFLogger = this.f5452i.AFLogger("CHANNEL");
             if (strAFLogger != null) {
                 if (strAFLogger.equals("")) {
                     AppsFlyerLib = (getLevel + 29) % 128;
@@ -409,7 +409,7 @@ public final class AFg1oSDK implements AFg1rSDK {
                 }
             }
         }
-        String strRegisterClient = registerClient(this.f5378e, strAFLogger);
+        String strRegisterClient = registerClient(this.f5451e, strAFLogger);
         if (strRegisterClient == null || Intrinsics.c(strRegisterClient, strAFLogger)) {
             z10 = false;
         } else {
@@ -460,11 +460,11 @@ public final class AFg1oSDK implements AFg1rSDK {
             int i10 = AppsFlyerLib + 107;
             getLevel = i10 % 128;
             if (i10 % 2 == 0) {
-                map.put("amazon_aid", aFb1lSDKH_.f5235d);
+                map.put("amazon_aid", aFb1lSDKH_.f5308d);
                 map.put("amazon_aid_limit", String.valueOf(aFb1lSDKH_.AFLogger));
                 throw null;
             }
-            map.put("amazon_aid", aFb1lSDKH_.f5235d);
+            map.put("amazon_aid", aFb1lSDKH_.f5308d);
             map.put("amazon_aid_limit", String.valueOf(aFb1lSDKH_.AFLogger));
             int i11 = getLevel + 63;
             AppsFlyerLib = i11 % 128;
@@ -536,17 +536,17 @@ public final class AFg1oSDK implements AFg1rSDK {
                 }
             }
         }
-        map.put("registeredUninstall", Boolean.valueOf(this.f5378e.AFKeystoreWrapper("sentRegisterRequestToAF")));
+        map.put("registeredUninstall", Boolean.valueOf(this.f5451e.AFKeystoreWrapper("sentRegisterRequestToAF")));
     }
 
     private void setImeiData(@NotNull Map<String, Object> map) {
         String strRegisterClient;
         Intrinsics.checkNotNullParameter(map, "");
-        String strAFLogger = this.f5379i.AFLogger("AF_COLLECT_FACEBOOK_ATTR_ID");
+        String strAFLogger = this.f5452i.AFLogger("AF_COLLECT_FACEBOOK_ATTR_ID");
         if (strAFLogger != null ? Boolean.parseBoolean(strAFLogger) : true) {
             try {
                 this.AFLogger.getPackageManager().getApplicationInfo("com.facebook.katana", 0);
-                strRegisterClient = this.f5379i.registerClient(this.AFLogger);
+                strRegisterClient = this.f5452i.registerClient(this.AFLogger);
             } catch (Throwable unused) {
                 strRegisterClient = null;
             }
@@ -560,7 +560,7 @@ public final class AFg1oSDK implements AFg1rSDK {
 
     private void setOaidData(@NotNull Map<String, Object> map) {
         Intrinsics.checkNotNullParameter(map, "");
-        AFf1fSDK aFf1fSDK = this.f5381w;
+        AFf1fSDK aFf1fSDK = this.f5454w;
         String str = (String) AFf1fSDK.unregisterClient(new Object[]{aFf1fSDK}, -1660886869, 1660886871, System.identityHashCode(aFf1fSDK));
         if (str != null && str.length() != 0) {
             int i10 = AppsFlyerLib + 109;
@@ -680,7 +680,7 @@ public final class AFg1oSDK implements AFg1rSDK {
             AppsFlyerLib = (getLevel + 67) % 128;
             return string;
         }
-        String strD = this.f5378e.d("preInstallName");
+        String strD = this.f5451e.d("preInstallName");
         if (strD != null) {
             this.afErrorLog.set("preInstallName", strD);
             getLevel = (AppsFlyerLib + 23) % 128;
@@ -698,7 +698,7 @@ public final class AFg1oSDK implements AFg1rSDK {
             }
         }
         if (strAfWarnLog != null) {
-            this.f5378e.d("preInstallName", strAfWarnLog);
+            this.f5451e.d("preInstallName", strAfWarnLog);
             this.afErrorLog.set("preInstallName", strAfWarnLog);
             getLevel = (AppsFlyerLib + 115) % 128;
         }
@@ -708,11 +708,11 @@ public final class AFg1oSDK implements AFg1rSDK {
     @Override // com.appsflyer.internal.AFg1rSDK
     public final void AFLogger(@NotNull Map<String, Object> map) {
         Intrinsics.checkNotNullParameter(map, "");
-        AFi1ySDK aFi1ySDK = this.force.f5429d;
+        AFi1ySDK aFi1ySDK = this.force.f5502d;
         AFi1xSDK aFi1xSDKUnregisterClient = aFi1ySDK != null ? aFi1ySDK.unregisterClient() : null;
         if (aFi1xSDKUnregisterClient != null) {
             map.put("network", aFi1xSDKUnregisterClient.unregisterClient);
-            map.put("ivc", Boolean.valueOf(aFi1xSDKUnregisterClient.f5430d));
+            map.put("ivc", Boolean.valueOf(aFi1xSDKUnregisterClient.f5503d));
             if (this.AFLoggerLogLevel.afErrorLog) {
                 return;
             }
@@ -744,27 +744,27 @@ public final class AFg1oSDK implements AFg1rSDK {
     public final void registerClient(@NotNull AFh1pSDK aFh1pSDK) {
         int i10;
         Intrinsics.checkNotNullParameter(aFh1pSDK, "");
-        Map<String, Object> map = aFh1pSDK.f5399d;
+        Map<String, Object> map = aFh1pSDK.f5472d;
         boolean z10 = false;
-        if (aFh1pSDK.f5402v == null) {
+        if (aFh1pSDK.f5475v == null) {
             int i11 = (getLevel + 105) % 128;
             AppsFlyerLib = i11;
-            if (aFh1pSDK.f5403w == null) {
+            if (aFh1pSDK.f5476w == null) {
                 getLevel = (i11 + 113) % 128;
-                unregisterClient(new Object[]{this, aFh1pSDK, this.AFLoggerLogLevel.f5250v}, -2092575724, 2092575725, System.identityHashCode(this));
+                unregisterClient(new Object[]{this, aFh1pSDK, this.AFLoggerLogLevel.f5323v}, -2092575724, 2092575725, System.identityHashCode(this));
                 AppsFlyerLib = (getLevel + 41) % 128;
             } else if (!(aFh1pSDK instanceof AFh1eSDK)) {
                 i10 = getLevel + 1;
                 AppsFlyerLib = i10 % 128;
                 if (i10 % 2 != 0) {
                     Intrinsics.checkNotNull(map);
-                    String str = aFh1pSDK.f5402v;
+                    String str = aFh1pSDK.f5475v;
                     Intrinsics.checkNotNullExpressionValue(str, "");
                     AFKeystoreWrapper(map, str);
                     int i12 = 40 / 0;
                 } else {
                     Intrinsics.checkNotNull(map);
-                    String str2 = aFh1pSDK.f5402v;
+                    String str2 = aFh1pSDK.f5475v;
                     Intrinsics.checkNotNullExpressionValue(str2, "");
                     AFKeystoreWrapper(map, str2);
                 }
@@ -774,13 +774,13 @@ public final class AFg1oSDK implements AFg1rSDK {
             AppsFlyerLib = i10 % 128;
             if (i10 % 2 != 0) {
                 Intrinsics.checkNotNull(map);
-                String str3 = aFh1pSDK.f5402v;
+                String str3 = aFh1pSDK.f5475v;
                 Intrinsics.checkNotNullExpressionValue(str3, "");
                 AFKeystoreWrapper(map, str3);
                 int i13 = 40 / 0;
             } else {
                 Intrinsics.checkNotNull(map);
-                String str4 = aFh1pSDK.f5402v;
+                String str4 = aFh1pSDK.f5475v;
                 Intrinsics.checkNotNullExpressionValue(str4, "");
                 AFKeystoreWrapper(map, str4);
             }
@@ -807,7 +807,7 @@ public final class AFg1oSDK implements AFg1rSDK {
         valueOf(map);
         values(map);
         AFKeystoreWrapper(map);
-        if (aFh1pSDK.f5402v == null && aFh1pSDK.f5403w == null) {
+        if (aFh1pSDK.f5475v == null && aFh1pSDK.f5476w == null) {
             z10 = true;
         }
         AFKeystoreWrapper(map, z10);
@@ -825,7 +825,7 @@ public final class AFg1oSDK implements AFg1rSDK {
             map.put("email_hashed", str);
             getLevel = (AppsFlyerLib + 27) % 128;
         }
-        String str2 = this.AFLoggerLogLevel.f5247d;
+        String str2 = this.AFLoggerLogLevel.f5320d;
         if (str2 != null) {
             map.put("phone_number_hashed", str2);
         }
@@ -839,7 +839,7 @@ public final class AFg1oSDK implements AFg1rSDK {
             getLevel = (AppsFlyerLib + 53) % 128;
             map.put("first_name_hashed", str4);
         }
-        String str5 = this.AFLoggerLogLevel.f5248e;
+        String str5 = this.AFLoggerLogLevel.f5321e;
         if (str5 != null) {
             int i10 = AppsFlyerLib + 99;
             getLevel = i10 % 128;
@@ -850,7 +850,7 @@ public final class AFg1oSDK implements AFg1rSDK {
                 map.put("last_name_hashed", str5);
             }
         }
-        Long l10 = this.AFLoggerLogLevel.f5249i;
+        Long l10 = this.AFLoggerLogLevel.f5322i;
         if (l10 != null) {
             map.put("fb_login_id", Long.valueOf(l10.longValue()));
         }
@@ -902,11 +902,11 @@ public final class AFg1oSDK implements AFg1rSDK {
         AppsFlyerLib = i10 % 128;
         if (i10 % 2 == 0) {
             Intrinsics.checkNotNullParameter(aFh1pSDK, "");
-            Map<String, Object> map = aFh1pSDK.f5399d;
+            Map<String, Object> map = aFh1pSDK.f5472d;
             Intrinsics.checkNotNull(map);
-            if (aFh1pSDK.f5402v == null) {
+            if (aFh1pSDK.f5475v == null) {
                 getLevel = (AppsFlyerLib + 99) % 128;
-                if (aFh1pSDK.f5403w == null) {
+                if (aFh1pSDK.f5476w == null) {
                     z10 = true;
                 } else {
                     z10 = false;
@@ -920,7 +920,7 @@ public final class AFg1oSDK implements AFg1rSDK {
             AFLogger(map);
             registerClient(map, this.AFLoggerLogLevel.force);
             getSdkVersion(map);
-            map.put("cell", kotlin.collections.k0.m(jt.s.a("mcc", Integer.valueOf(this.AFLogger.getResources().getConfiguration().mcc)), jt.s.a("mnc", Integer.valueOf(this.AFLogger.getResources().getConfiguration().mnc))));
+            map.put("cell", kotlin.collections.k0.m(gt.s.a("mcc", Integer.valueOf(this.AFLogger.getResources().getConfiguration().mcc)), gt.s.a("mnc", Integer.valueOf(this.AFLogger.getResources().getConfiguration().mnc))));
             map.put("sig", d());
             map.put("last_boot_time", Long.valueOf(AFKeystoreWrapper()));
             map.put("disk", (String) unregisterClient(new Object[0], -137455512, 137455519, (int) System.currentTimeMillis()));
@@ -928,7 +928,7 @@ public final class AFg1oSDK implements AFg1rSDK {
             return;
         }
         Intrinsics.checkNotNullParameter(aFh1pSDK, "");
-        Intrinsics.checkNotNull(aFh1pSDK.f5399d);
+        Intrinsics.checkNotNull(aFh1pSDK.f5472d);
         throw null;
     }
 
@@ -1032,9 +1032,9 @@ public final class AFg1oSDK implements AFg1rSDK {
         int i10 = getLevel + 93;
         AppsFlyerLib = i10 % 128;
         if (i10 % 2 == 0) {
-            return Boolean.parseBoolean(this.f5378e.d("sentSuccessfully"));
+            return Boolean.parseBoolean(this.f5451e.d("sentSuccessfully"));
         }
-        Boolean.parseBoolean(this.f5378e.d("sentSuccessfully"));
+        Boolean.parseBoolean(this.f5451e.d("sentSuccessfully"));
         throw null;
     }
 
@@ -1214,7 +1214,7 @@ public final class AFg1oSDK implements AFg1rSDK {
                 throw null;
             }
         }
-        AFb1rSDK aFb1rSDK = this.AFLoggerLogLevel.f5251w;
+        AFb1rSDK aFb1rSDK = this.AFLoggerLogLevel.f5324w;
         if (aFb1rSDK != null) {
             int i13 = getLevel + 47;
             AppsFlyerLib = i13 % 128;
@@ -1238,22 +1238,22 @@ public final class AFg1oSDK implements AFg1rSDK {
     public final void AFLogger(@NotNull AFh1pSDK aFh1pSDK) {
         getLevel = (AppsFlyerLib + 43) % 128;
         Intrinsics.checkNotNullParameter(aFh1pSDK, "");
-        Map<String, Object> map = aFh1pSDK.f5399d;
+        Map<String, Object> map = aFh1pSDK.f5472d;
         Intrinsics.checkNotNullExpressionValue(map, "");
         v(map);
-        Map<String, Object> map2 = aFh1pSDK.f5399d;
+        Map<String, Object> map2 = aFh1pSDK.f5472d;
         Intrinsics.checkNotNullExpressionValue(map2, "");
         unregisterClient(map2, aFh1pSDK.afWarnLog);
-        Map<String, Object> map3 = aFh1pSDK.f5399d;
+        Map<String, Object> map3 = aFh1pSDK.f5472d;
         Intrinsics.checkNotNullExpressionValue(map3, "");
         getLevel(map3);
-        Map<String, Object> map4 = aFh1pSDK.f5399d;
+        Map<String, Object> map4 = aFh1pSDK.f5472d;
         Intrinsics.checkNotNullExpressionValue(map4, "");
         enableTCFDataCollection(map4);
-        Map<String, Object> map5 = aFh1pSDK.f5399d;
+        Map<String, Object> map5 = aFh1pSDK.f5472d;
         Intrinsics.checkNotNullExpressionValue(map5, "");
         setImeiData(map5);
-        Map<String, Object> map6 = aFh1pSDK.f5399d;
+        Map<String, Object> map6 = aFh1pSDK.f5472d;
         Intrinsics.checkNotNullExpressionValue(map6, "");
         AFe1zSDK aFe1zSDKAFKeystoreWrapper = aFh1pSDK.AFKeystoreWrapper();
         Intrinsics.checkNotNullExpressionValue(aFe1zSDKAFKeystoreWrapper, "");
@@ -1287,9 +1287,9 @@ public final class AFg1oSDK implements AFg1rSDK {
                 Map map = (Map) objArr[1];
                 getLevel = (AppsFlyerLib + 5) % 128;
                 Intrinsics.checkNotNullParameter(map, "");
-                long jUnregisterClient = aFg1oSDK.f5378e.unregisterClient("AppsFlyerTimePassedSincePrevLaunch", 0L);
+                long jUnregisterClient = aFg1oSDK.f5451e.unregisterClient("AppsFlyerTimePassedSincePrevLaunch", 0L);
                 long jCurrentTimeMillis = System.currentTimeMillis();
-                aFg1oSDK.f5378e.AFLogger("AppsFlyerTimePassedSincePrevLaunch", jCurrentTimeMillis);
+                aFg1oSDK.f5451e.AFLogger("AppsFlyerTimePassedSincePrevLaunch", jCurrentTimeMillis);
                 if (jUnregisterClient > 0) {
                     seconds = TimeUnit.MILLISECONDS.toSeconds(jCurrentTimeMillis - jUnregisterClient);
                     AppsFlyerLib = (getLevel + 1) % 128;
@@ -1349,19 +1349,19 @@ public final class AFg1oSDK implements AFg1rSDK {
         getLevel = i10 % 128;
         if (i10 % 2 == 0) {
             Intrinsics.checkNotNullParameter(map, "");
-            map.put("platformextension", this.f5377d.unregisterClient());
+            map.put("platformextension", this.f5450d.unregisterClient());
             int i11 = 65 / 0;
             if (!z10) {
                 return;
             }
         } else {
             Intrinsics.checkNotNullParameter(map, "");
-            map.put("platformextension", this.f5377d.unregisterClient());
+            map.put("platformextension", this.f5450d.unregisterClient());
             if (!z10) {
                 return;
             }
         }
-        map.put("platform_extension_v2", this.f5377d.AFLogger());
+        map.put("platform_extension_v2", this.f5450d.AFLogger());
         getLevel = (AppsFlyerLib + 109) % 128;
     }
 
@@ -1387,16 +1387,16 @@ public final class AFg1oSDK implements AFg1rSDK {
                     AFLoggerBase.d$default(AFLogger.INSTANCE, LogTag.GENERAL, "Skipping push payload processing: deeplink already extracted from intent", false, 4, null);
                 } else {
                     try {
-                        jt.n.Companion companion = jt.n.INSTANCE;
+                        gt.n.Companion companion = gt.n.INSTANCE;
                         JSONObject jSONObject = new JSONObject(str2);
                         jSONObject.put("isPush", "true");
                         map.put("af_deeplink", jSONObject.toString());
-                        objB = jt.n.b(Unit.f22483a);
+                        objB = gt.n.b(Unit.f22938a);
                     } catch (Throwable th2) {
-                        jt.n.Companion companion2 = jt.n.INSTANCE;
-                        objB = jt.n.b(jt.o.a(th2));
+                        gt.n.Companion companion2 = gt.n.INSTANCE;
+                        objB = gt.n.b(gt.o.a(th2));
                     }
-                    Throwable thE = jt.n.e(objB);
+                    Throwable thE = gt.n.e(objB);
                     if (thE != null) {
                         int i12 = AppsFlyerLib + 17;
                         getLevel = i12 % 128;
@@ -1423,7 +1423,7 @@ public final class AFg1oSDK implements AFg1rSDK {
                         }
                         AFLoggerBase.e$default(aFLogger, logTag, str, thE, z10, z11, z12, z13, i10, obj);
                     }
-                    jt.n.a(objB);
+                    gt.n.a(objB);
                 }
             } else {
                 map.get("af_deeplink");
@@ -1442,7 +1442,7 @@ public final class AFg1oSDK implements AFg1rSDK {
         String str = "";
         if (i11 % 2 != 0) {
             Intrinsics.checkNotNullParameter(simpleDateFormat, "");
-            String strD = this.f5378e.d("appsFlyerFirstInstall");
+            String strD = this.f5451e.d("appsFlyerFirstInstall");
             if (strD == null || strD.length() == 0) {
                 if (i10 <= 1) {
                     AFLoggerBase.d$default(AFLogger.INSTANCE, LogTag.SDK_LIFECYCLE, "First app launch detected, recording install timestamp", false, 4, null);
@@ -1451,7 +1451,7 @@ public final class AFg1oSDK implements AFg1rSDK {
                 } else {
                     AppsFlyerLib = (getLevel + 103) % 128;
                 }
-                this.f5378e.d("appsFlyerFirstInstall", str);
+                this.f5451e.d("appsFlyerFirstInstall", str);
                 strD = str;
             }
             AFLoggerBase.i$default(AFLogger.INSTANCE, LogTag.GENERAL, "AppsFlyer: first launch date: " + strD, false, 4, null);
@@ -1459,13 +1459,13 @@ public final class AFg1oSDK implements AFg1rSDK {
             return strD;
         }
         Intrinsics.checkNotNullParameter(simpleDateFormat, "");
-        this.f5378e.d("appsFlyerFirstInstall");
+        this.f5451e.d("appsFlyerFirstInstall");
         throw null;
     }
 
     @Nullable
     private String force() {
-        String strD = this.f5378e.d("INSTALL_STORE");
+        String strD = this.f5451e.d("INSTALL_STORE");
         if (strD != null) {
             getLevel = (AppsFlyerLib + 27) % 128;
             return strD;
@@ -1475,11 +1475,11 @@ public final class AFg1oSDK implements AFg1rSDK {
             int i10 = AppsFlyerLib + 123;
             getLevel = i10 % 128;
             if (i10 % 2 == 0) {
-                this.f5378e.d("INSTALL_STORE", strE);
+                this.f5451e.d("INSTALL_STORE", strE);
                 int i11 = 97 / 0;
                 return strE;
             }
-            this.f5378e.d("INSTALL_STORE", strE);
+            this.f5451e.d("INSTALL_STORE", strE);
         }
         return strE;
     }
@@ -1491,21 +1491,21 @@ public final class AFg1oSDK implements AFg1rSDK {
             if (i10 % 2 != 0) {
                 Intrinsics.checkNotNullParameter(map, "");
                 Intrinsics.checkNotNullParameter(str, "");
-                String strD = this.f5378e.d("prev_event_name");
+                String strD = this.f5451e.d("prev_event_name");
                 if (strD != null) {
                     JSONObject jSONObject = new JSONObject();
-                    jSONObject.put("prev_event_timestamp", this.f5378e.unregisterClient("prev_event_timestamp", -1L));
+                    jSONObject.put("prev_event_timestamp", this.f5451e.unregisterClient("prev_event_timestamp", -1L));
                     jSONObject.put("prev_event_name", strD);
                     map.put("prev_event", jSONObject);
                     AppsFlyerLib = (getLevel + 31) % 128;
                 }
-                this.f5378e.d("prev_event_name", str);
-                this.f5378e.AFLogger("prev_event_timestamp", System.currentTimeMillis());
+                this.f5451e.d("prev_event_name", str);
+                this.f5451e.AFLogger("prev_event_timestamp", System.currentTimeMillis());
                 return;
             }
             Intrinsics.checkNotNullParameter(map, "");
             Intrinsics.checkNotNullParameter(str, "");
-            this.f5378e.d("prev_event_name");
+            this.f5451e.d("prev_event_name");
             throw null;
         } catch (Exception e10) {
             AFLoggerBase.e$default(AFLogger.INSTANCE, LogTag.GENERAL, "Failed to save previous event metadata to preferences", e10, false, false, false, false, 120, null);
@@ -1554,7 +1554,7 @@ public final class AFg1oSDK implements AFg1rSDK {
         String strD = d(str);
         if (strD != null) {
             AppsFlyerLib = (getLevel + 47) % 128;
-            this.f5378e.d("androidIdCached", strD);
+            this.f5451e.d("androidIdCached", strD);
             map.put("android_id", strD);
         } else {
             AFLoggerBase.i$default(AFLogger.INSTANCE, LogTag.ADVERTISING_ID, "Android ID collection skipped: not available or not permitted", false, 4, null);
@@ -1563,7 +1563,7 @@ public final class AFg1oSDK implements AFg1rSDK {
         if (aFb1lSDKUnregisterClient != null) {
             LinkedHashMap linkedHashMap = new LinkedHashMap();
             linkedHashMap.put("isManual", aFb1lSDKUnregisterClient.unregisterClient);
-            linkedHashMap.put("val", aFb1lSDKUnregisterClient.f5235d);
+            linkedHashMap.put("val", aFb1lSDKUnregisterClient.f5308d);
             Boolean bool = aFb1lSDKUnregisterClient.AFLogger;
             if (bool != null) {
                 int i12 = AppsFlyerLib + 103;
@@ -1591,20 +1591,20 @@ public final class AFg1oSDK implements AFg1rSDK {
         AppsFlyerLib = i10 % 128;
         if (i10 % 2 != 0) {
             Intrinsics.checkNotNullParameter(map, "");
-            strAFLogger = AFb1jSDK.AFLogger(this.f5379i.AFKeystoreWrapper);
+            strAFLogger = AFb1jSDK.AFLogger(this.f5452i.AFKeystoreWrapper);
             int i11 = 2 / 0;
             if (strAFLogger == null) {
                 return;
             }
         } else {
             Intrinsics.checkNotNullParameter(map, "");
-            strAFLogger = AFb1jSDK.AFLogger(this.f5379i.AFKeystoreWrapper);
+            strAFLogger = AFb1jSDK.AFLogger(this.f5452i.AFKeystoreWrapper);
             if (strAFLogger == null) {
                 return;
             }
         }
         map.put("uid", strAFLogger);
-        if (this.f5379i.AFKeystoreWrapper.AFKeystoreWrapper("CUSTOM_INSTALL_ID_APPLIED")) {
+        if (this.f5452i.AFKeystoreWrapper.AFKeystoreWrapper("CUSTOM_INSTALL_ID_APPLIED")) {
             map.put("custom_install_id", Boolean.TRUE);
             getLevel = (AppsFlyerLib + 119) % 128;
         }
@@ -1678,14 +1678,14 @@ public final class AFg1oSDK implements AFg1rSDK {
         Integer intOrNull;
         getLevel = (AppsFlyerLib + 17) % 128;
         try {
-            if (this.f5379i.r_().versionCode > this.f5378e.AFLogger("versionCode", 0)) {
-                this.f5378e.d("versionCode", this.f5379i.r_().versionCode);
+            if (this.f5452i.r_().versionCode > this.f5451e.AFLogger("versionCode", 0)) {
+                this.f5451e.d("versionCode", this.f5452i.r_().versionCode);
             }
-            map.put("app_version_code", String.valueOf(this.f5379i.r_().versionCode));
-            map.put("app_version_name", this.f5379i.r_().versionName);
-            map.put("targetSDKver", Integer.valueOf(this.f5379i.f5258d.f5305d.getApplicationInfo().targetSdkVersion));
+            map.put("app_version_code", String.valueOf(this.f5452i.r_().versionCode));
+            map.put("app_version_name", this.f5452i.r_().versionName);
+            map.put("targetSDKver", Integer.valueOf(this.f5452i.f5331d.f5378d.getApplicationInfo().targetSdkVersion));
             map.put("date1", AFLogger().format(new Date(registerClient().longValue())));
-            map.put("date2", AFLogger().format(new Date(this.f5379i.r_().lastUpdateTime)));
+            map.put("date2", AFLogger().format(new Date(this.f5452i.r_().lastUpdateTime)));
             Object obj = map.get("counter");
             if (obj == null || (string = obj.toString()) == null || (intOrNull = StringsKt.toIntOrNull(string)) == null) {
                 AppsFlyerLib = (getLevel + R.styleable.AppCompatTheme_windowMinWidthMinor) % 128;
@@ -1784,7 +1784,7 @@ public final class AFg1oSDK implements AFg1rSDK {
     private static void AFLogger(@NotNull Map<String, Object> map, @NotNull AFh1pSDK aFh1pSDK) {
         Intrinsics.checkNotNullParameter(map, "");
         Intrinsics.checkNotNullParameter(aFh1pSDK, "");
-        String str = aFh1pSDK.f5402v;
+        String str = aFh1pSDK.f5475v;
         if (str != null) {
             map.put("eventName", str);
             Map map2 = aFh1pSDK.AFKeystoreWrapper;
@@ -1798,9 +1798,9 @@ public final class AFg1oSDK implements AFg1rSDK {
     private static /* synthetic */ Object d(Object[] objArr) {
         AFh1pSDK aFh1pSDK = (AFh1pSDK) objArr[1];
         Intrinsics.checkNotNullParameter(aFh1pSDK, "");
-        Map<String, Object> map = aFh1pSDK.f5399d;
+        Map<String, Object> map = aFh1pSDK.f5472d;
         Intrinsics.checkNotNull(map);
-        map.put("open_referrer", aFh1pSDK.f5400e);
+        map.put("open_referrer", aFh1pSDK.f5473e);
         String str = aFh1pSDK.afInfoLog;
         if (str == null) {
             return null;
@@ -1829,10 +1829,10 @@ public final class AFg1oSDK implements AFg1rSDK {
         int i10 = AppsFlyerLib + 15;
         getLevel = i10 % 128;
         if (i10 % 2 != 0) {
-            return Long.valueOf(this.f5379i.r_().firstInstallTime);
+            return Long.valueOf(this.f5452i.r_().firstInstallTime);
         }
         int i11 = 28 / 0;
-        return Long.valueOf(this.f5379i.r_().firstInstallTime);
+        return Long.valueOf(this.f5452i.r_().firstInstallTime);
     }
 
     private static String d(File file, String str) {
@@ -1891,7 +1891,7 @@ public final class AFg1oSDK implements AFg1rSDK {
 
     private final String registerClient(String str) {
         AppsFlyerLib = (getLevel + R.styleable.AppCompatTheme_windowMinWidthMinor) % 128;
-        String strAFLogger = this.f5379i.AFLogger(str);
+        String strAFLogger = this.f5452i.AFLogger(str);
         AppsFlyerLib = (getLevel + 69) % 128;
         return strAFLogger;
     }
@@ -1904,7 +1904,7 @@ public final class AFg1oSDK implements AFg1rSDK {
         getLevel = i10 % 128;
         if (i10 % 2 != 0) {
             Intrinsics.checkNotNullParameter(aFh1pSDK, "");
-            Map<String, Object> map = aFh1pSDK.f5399d;
+            Map<String, Object> map = aFh1pSDK.f5472d;
             if (aFh1pSDK.AFKeystoreWrapper() == AFd1bSDK.CONVERSION) {
                 int i11 = AppsFlyerLib + 9;
                 getLevel = i11 % 128;
@@ -1913,13 +1913,13 @@ public final class AFg1oSDK implements AFg1rSDK {
                     aFg1oSDK.afErrorLog(map);
                     aFg1oSDK.afWarnLog(map);
                     unregisterClient(new Object[]{aFg1oSDK, map}, 884869374, -884869365, System.identityHashCode(aFg1oSDK));
-                    AFa1uSDK.unregisterClient(aFg1oSDK.afWarnLog, aFg1oSDK.f5379i, aFg1oSDK.afErrorLog);
+                    AFa1uSDK.unregisterClient(aFg1oSDK.afWarnLog, aFg1oSDK.f5452i, aFg1oSDK.afErrorLog);
                 } else {
                     Intrinsics.checkNotNull(map);
                     aFg1oSDK.afErrorLog(map);
                     aFg1oSDK.afWarnLog(map);
                     unregisterClient(new Object[]{aFg1oSDK, map}, 884869374, -884869365, System.identityHashCode(aFg1oSDK));
-                    AFa1uSDK.unregisterClient(aFg1oSDK.afWarnLog, aFg1oSDK.f5379i, aFg1oSDK.afErrorLog);
+                    AFa1uSDK.unregisterClient(aFg1oSDK.afWarnLog, aFg1oSDK.f5452i, aFg1oSDK.afErrorLog);
                     throw null;
                 }
             }
@@ -1936,7 +1936,7 @@ public final class AFg1oSDK implements AFg1rSDK {
             return null;
         }
         Intrinsics.checkNotNullParameter(aFh1pSDK, "");
-        Map<String, Object> map2 = aFh1pSDK.f5399d;
+        Map<String, Object> map2 = aFh1pSDK.f5472d;
         aFh1pSDK.AFKeystoreWrapper();
         AFd1bSDK.Companion companion = AFd1bSDK.INSTANCE;
         throw null;
@@ -1950,7 +1950,7 @@ public final class AFg1oSDK implements AFg1rSDK {
         if (CollectionsKt.W((List) unregisterClient(new Object[0], 1713251753, -1713251742, (int) System.currentTimeMillis()), aFe1zSDK)) {
             AFc1eSDK aFc1eSDK = this.AFLoggerLogLevel;
             if (aFc1eSDK.setCustomerUserId) {
-                map.put("app_set_id", kotlin.collections.j0.g(jt.s.a("app_set_id_disabled", Boolean.TRUE)));
+                map.put("app_set_id", kotlin.collections.j0.g(gt.s.a("app_set_id_disabled", Boolean.TRUE)));
                 if (this.AFLoggerLogLevel.setUserEmail != null) {
                     getLevel = (AppsFlyerLib + 59) % 128;
                     AFLoggerBase.i$default(AFLogger.INSTANCE, LogTag.APP_SET_ID, "App Set Id was collected, but will not be included in the payload.To prevent collection entirely, call disableAppSetId() before initializing the SDK.", false, 4, null);
@@ -1962,7 +1962,7 @@ public final class AFg1oSDK implements AFg1rSDK {
             }
             AFc1rSDK aFc1rSDK = aFc1eSDK.setUserEmail;
             if (aFc1rSDK != null) {
-                map.put("app_set_id", kotlin.collections.k0.m(jt.s.a("scope", Integer.valueOf(aFc1rSDK.AFKeystoreWrapper)), jt.s.a("id", aFc1rSDK.unregisterClient)));
+                map.put("app_set_id", kotlin.collections.k0.m(gt.s.a("scope", Integer.valueOf(aFc1rSDK.AFKeystoreWrapper)), gt.s.a("id", aFc1rSDK.unregisterClient)));
             }
         }
     }

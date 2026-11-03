@@ -14,23 +14,23 @@ public final class f {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final a4.b f2462a;
+    public final a4.b f2307a;
 
     @NonNull
     public final char[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NonNull
-    public final a f2463c = new a(Barcode.FORMAT_UPC_E);
+    public final a f2308c = new a(Barcode.FORMAT_UPC_E);
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NonNull
-    public final Typeface f2464d;
+    public final Typeface f2309d;
 
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final SparseArray<a> f2465a;
+        public final SparseArray<a> f2310a;
         public i b;
 
         public a() {
@@ -38,7 +38,7 @@ public final class f {
         }
 
         public a a(int i10) {
-            SparseArray<a> sparseArray = this.f2465a;
+            SparseArray<a> sparseArray = this.f2310a;
             if (sparseArray == null) {
                 return null;
             }
@@ -53,7 +53,7 @@ public final class f {
             a aVarA = a(iVar.b(i10));
             if (aVarA == null) {
                 aVarA = new a();
-                this.f2465a.put(iVar.b(i10), aVarA);
+                this.f2310a.put(iVar.b(i10), aVarA);
             }
             if (i11 > i10) {
                 aVarA.c(iVar, i10 + 1, i11);
@@ -63,13 +63,13 @@ public final class f {
         }
 
         public a(int i10) {
-            this.f2465a = new SparseArray<>(i10);
+            this.f2310a = new SparseArray<>(i10);
         }
     }
 
     public f(@NonNull Typeface typeface, @NonNull a4.b bVar) {
-        this.f2464d = typeface;
-        this.f2462a = bVar;
+        this.f2309d = typeface;
+        this.f2307a = bVar;
         this.b = new char[bVar.k() * 2];
         a(bVar);
     }
@@ -100,26 +100,26 @@ public final class f {
 
     @NonNull
     public a4.b d() {
-        return this.f2462a;
+        return this.f2307a;
     }
 
     public int e() {
-        return this.f2462a.l();
+        return this.f2307a.l();
     }
 
     @NonNull
     public a f() {
-        return this.f2463c;
+        return this.f2308c;
     }
 
     @NonNull
     public Typeface g() {
-        return this.f2464d;
+        return this.f2309d;
     }
 
     public void h(@NonNull i iVar) {
         x2.g.h(iVar, "emoji metadata cannot be null");
         x2.g.b(iVar.c() > 0, "invalid metadata codepoint length");
-        this.f2463c.c(iVar, 0, iVar.c() - 1);
+        this.f2308c.c(iVar, 0, iVar.c() - 1);
     }
 }

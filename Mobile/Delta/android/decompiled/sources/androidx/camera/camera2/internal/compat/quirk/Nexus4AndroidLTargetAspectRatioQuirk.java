@@ -9,7 +9,7 @@ import n0.g3;
 public class Nexus4AndroidLTargetAspectRatioQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final List<String> f1342a = Arrays.asList("NEXUS 4");
+    public static final List<String> f1187a = Arrays.asList("NEXUS 4");
 
     public static boolean h() {
         "GOOGLE".equalsIgnoreCase(Build.BRAND);

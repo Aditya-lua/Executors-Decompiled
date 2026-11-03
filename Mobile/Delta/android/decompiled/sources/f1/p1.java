@@ -51,28 +51,28 @@ public final class p1<T extends a2> extends w2 {
     public final a3.a<g1> G;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public n0.u1 f15909s;
+    public n0.u1 f16505s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public x0.n0 f15910t;
+    public x0.n0 f16506t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public g1 f15911u;
+    public g1 f16507u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public o3.b f15912v;
+    public o3.b f16508v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public me.x<Void> f15913w;
+    public ne.x<Void> f16509w;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public v2 f15914x;
+    public v2 f16510x;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public a2.a f15915y;
+    public a2.a f16511y;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public x0.v0 f15916z;
+    public x0.v0 f16512z;
 
     public class a implements a3.a<g1> {
         public a() {
@@ -84,13 +84,13 @@ public final class p1<T extends a2> extends w2 {
             if (g1Var == null) {
                 throw new IllegalArgumentException("StreamInfo can't be null");
             }
-            if (p1.this.f15915y == a2.a.INACTIVE) {
+            if (p1.this.f16511y == a2.a.INACTIVE) {
                 return;
             }
-            g0.r1.a("VideoCapture", "Stream info update: old: " + p1.this.f15911u + " new: " + g1Var);
+            g0.r1.a("VideoCapture", "Stream info update: old: " + p1.this.f16507u + " new: " + g1Var);
             p1 p1Var = p1.this;
-            g1 g1Var2 = p1Var.f15911u;
-            p1Var.f15911u = g1Var;
+            g1 g1Var2 = p1Var.f16507u;
+            p1Var.f16507u = g1Var;
             t3 t3Var = (t3) x2.g.g(p1Var.g());
             if (p1.this.T0(g1Var2.a(), g1Var.a()) || p1.this.k1(g1Var2, g1Var)) {
                 p1.this.V0();
@@ -98,17 +98,17 @@ public final class p1<T extends a2> extends w2 {
             }
             if ((g1Var2.a() != -1 && g1Var.a() == -1) || (g1Var2.a() == -1 && g1Var.a() != -1)) {
                 p1 p1Var2 = p1.this;
-                p1Var2.z0(p1Var2.f15912v, g1Var, t3Var);
+                p1Var2.z0(p1Var2.f16508v, g1Var, t3Var);
                 p1 p1Var3 = p1.this;
-                p1Var3.d0(g0.o0.a(new Object[]{p1Var3.f15912v.p()}));
+                p1Var3.d0(g0.o0.a(new Object[]{p1Var3.f16508v.p()}));
                 p1.this.L();
                 return;
             }
             if (g1Var2.c() != g1Var.c()) {
                 p1 p1Var4 = p1.this;
-                p1Var4.z0(p1Var4.f15912v, g1Var, t3Var);
+                p1Var4.z0(p1Var4.f16508v, g1Var, t3Var);
                 p1 p1Var5 = p1.this;
-                p1Var5.d0(g0.o0.a(new Object[]{p1Var5.f15912v.p()}));
+                p1Var5.d0(g0.o0.a(new Object[]{p1Var5.f16508v.p()}));
                 p1.this.N();
             }
         }
@@ -122,19 +122,19 @@ public final class p1<T extends a2> extends w2 {
     public class b extends n0.u {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public boolean f15918a = true;
+        public boolean f16514a = true;
         public final /* synthetic */ AtomicBoolean b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ y1.c.a f15919c;
+        public final /* synthetic */ y1.c.a f16515c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final /* synthetic */ o3.b f15920d;
+        public final /* synthetic */ o3.b f16516d;
 
         public b(AtomicBoolean atomicBoolean, y1.c.a aVar, o3.b bVar) {
             this.b = atomicBoolean;
-            this.f15919c = aVar;
-            this.f15920d = bVar;
+            this.f16515c = aVar;
+            this.f16516d = bVar;
         }
 
         public static /* synthetic */ void e(b bVar, o3.b bVar2) {
@@ -146,19 +146,19 @@ public final class p1<T extends a2> extends w2 {
         public void b(int i10, n0.e0 e0Var) {
             Object objD;
             super.b(i10, e0Var);
-            if (this.f15918a) {
-                this.f15918a = false;
+            if (this.f16514a) {
+                this.f16514a = false;
                 g0.r1.a("VideoCapture", "cameraCaptureResult timestampNs = " + e0Var.getTimestamp() + ", current system uptimeMs = " + SystemClock.uptimeMillis() + ", current system realtimeMs = " + SystemClock.elapsedRealtime());
             }
-            if (this.b.get() || (objD = e0Var.c().d("androidx.camera.video.VideoCapture.streamUpdate")) == null || ((Integer) objD).intValue() != this.f15919c.hashCode() || !this.f15919c.c(null) || this.b.getAndSet(true)) {
+            if (this.b.get() || (objD = e0Var.c().d("androidx.camera.video.VideoCapture.streamUpdate")) == null || ((Integer) objD).intValue() != this.f16515c.hashCode() || !this.f16515c.c(null) || this.b.getAndSet(true)) {
                 return;
             }
             ScheduledExecutorService scheduledExecutorServiceE = q0.c.e();
-            final o3.b bVar = this.f15920d;
+            final o3.b bVar = this.f16516d;
             scheduledExecutorServiceE.execute(new Runnable() { // from class: f1.q1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    p1.b.e(this.f15933a, bVar);
+                    p1.b.e(this.f16529a, bVar);
                 }
             });
         }
@@ -167,20 +167,20 @@ public final class p1<T extends a2> extends w2 {
     public class c implements r0.c<Void> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ me.x f15922a;
+        public final /* synthetic */ ne.x f16518a;
         public final /* synthetic */ boolean b;
 
-        public c(me.x xVar, boolean z10) {
-            this.f15922a = xVar;
+        public c(ne.x xVar, boolean z10) {
+            this.f16518a = xVar;
             this.b = z10;
         }
 
         @Override // r0.c
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public void onSuccess(Void r8) {
-            me.x<Void> xVar = this.f15922a;
+            ne.x<Void> xVar = this.f16518a;
             p1 p1Var = p1.this;
-            if (xVar != p1Var.f15913w || p1Var.f15915y == a2.a.INACTIVE) {
+            if (xVar != p1Var.f16509w || p1Var.f16511y == a2.a.INACTIVE) {
                 return;
             }
             p1Var.b1(this.b ? a2.a.ACTIVE_STREAMING : a2.a.ACTIVE_NON_STREAMING);
@@ -198,7 +198,7 @@ public final class p1<T extends a2> extends w2 {
     public static final class d<T extends a2> implements i4.b<p1<T>, g1.a<T>, d<T>>, i2.a<d<T>> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final x2 f15924a;
+        public final x2 f16520a;
 
         public d(T t8) {
             this(g(t8));
@@ -216,7 +216,7 @@ public final class p1<T extends a2> extends w2 {
 
         @Override // g0.l0
         public n0.w2 a() {
-            return this.f15924a;
+            return this.f16520a;
         }
 
         public p1<T> f() {
@@ -226,7 +226,7 @@ public final class p1<T extends a2> extends w2 {
         @Override // n0.i4.b
         /* JADX INFO: renamed from: i, reason: merged with bridge method [inline-methods] */
         public g1.a<T> e() {
-            return new g1.a<>(c3.j0(this.f15924a));
+            return new g1.a<>(c3.j0(this.f16520a));
         }
 
         public d<T> j(j4.b bVar) {
@@ -235,19 +235,19 @@ public final class p1<T extends a2> extends w2 {
         }
 
         public d<T> k(g0.k0 k0Var) {
-            a().G(h2.f24672l, k0Var);
+            a().G(h2.f25493l, k0Var);
             return this;
         }
 
         public d<T> l(int i10) {
-            a().G(i2.f24687p, Integer.valueOf(i10));
+            a().G(i2.f25508p, Integer.valueOf(i10));
             return this;
         }
 
         @Override // n0.i2.a
         /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
         public d<T> b(a1.c cVar) {
-            a().G(i2.f24692u, cVar);
+            a().G(i2.f25513u, cVar);
             return this;
         }
 
@@ -288,7 +288,7 @@ public final class p1<T extends a2> extends w2 {
         @Override // n0.i2.a
         /* JADX INFO: renamed from: t, reason: merged with bridge method [inline-methods] */
         public d<T> c(int i10) {
-            a().G(i2.f24685n, Integer.valueOf(i10));
+            a().G(i2.f25506n, Integer.valueOf(i10));
             return this;
         }
 
@@ -298,7 +298,7 @@ public final class p1<T extends a2> extends w2 {
         }
 
         public d(x2 x2Var) {
-            this.f15924a = x2Var;
+            this.f16520a = x2Var;
             if (!x2Var.a(g1.a.Q)) {
                 throw new IllegalArgumentException("VideoOutput is required");
             }
@@ -315,27 +315,27 @@ public final class p1<T extends a2> extends w2 {
     public static final class e {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final u3 f15925a;
+        public static final u3 f16521a;
         public static final a2 b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static final g1.a<?> f15926c;
+        public static final g1.a<?> f16522c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final m1.r1.a f15927d;
+        public static final m1.r1.a f16523d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public static final Range<Integer> f15928e;
+        public static final Range<Integer> f16524e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public static final Range<Integer> f15929f;
+        public static final Range<Integer> f16525f;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public static final g0.k0 f15930g;
+        public static final g0.k0 f16526g;
 
         static {
             u3 u3Var = u3.VIDEO_RECORD;
-            f15925a = u3Var;
+            f16521a = u3Var;
             a2 a2Var = new a2() { // from class: f1.r1
                 @Override // f1.a2
                 public final void a(v2 v2Var) {
@@ -343,38 +343,38 @@ public final class p1<T extends a2> extends w2 {
                 }
             };
             b = a2Var;
-            m1.r1.a aVar = m1.t1.f23853d;
-            f15927d = aVar;
-            f15928e = new Range<>(30, 30);
-            f15929f = new Range<>(120, 120);
-            g0.k0 k0Var = g0.k0.f17470d;
-            f15930g = k0Var;
-            f15926c = new d(a2Var).o(5).n(u3Var).u(aVar).k(k0Var).e();
+            m1.r1.a aVar = m1.t1.f24503d;
+            f16523d = aVar;
+            f16524e = new Range<>(30, 30);
+            f16525f = new Range<>(120, 120);
+            g0.k0 k0Var = g0.k0.f18009d;
+            f16526g = k0Var;
+            f16522c = new d(a2Var).o(5).n(u3Var).u(aVar).k(k0Var).e();
         }
 
         public g1.a<?> a() {
-            return f15926c;
+            return f16522c;
         }
     }
 
     public static class f implements a3.a<Boolean> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public n0.l0 f15931a;
+        public n0.l0 f16527a;
         public boolean b = false;
 
         public f(n0.l0 l0Var) {
-            this.f15931a = l0Var;
+            this.f16527a = l0Var;
         }
 
         public void b() {
             x2.g.j(p0.z.d(), "SourceStreamRequirementObserver can be closed from main thread only");
             g0.r1.a("VideoCapture", "SourceStreamRequirementObserver#close: mIsSourceStreamRequired = " + this.b);
-            if (this.f15931a == null) {
+            if (this.f16527a == null) {
                 g0.r1.a("VideoCapture", "SourceStreamRequirementObserver#close: Already closed!");
             } else {
                 d(false);
-                this.f15931a = null;
+                this.f16527a = null;
             }
         }
 
@@ -390,7 +390,7 @@ public final class p1<T extends a2> extends w2 {
                 return;
             }
             this.b = z10;
-            n0.l0 l0Var = this.f15931a;
+            n0.l0 l0Var = this.f16527a;
             if (l0Var == null) {
                 g0.r1.a("VideoCapture", "SourceStreamRequirementObserver#isSourceStreamRequired: Received new data despite being closed already");
             } else if (z10) {
@@ -408,10 +408,10 @@ public final class p1<T extends a2> extends w2 {
 
     public p1(g1.a<T> aVar) {
         super(aVar);
-        this.f15911u = g1.f15856a;
-        this.f15912v = new o3.b();
-        this.f15913w = null;
-        this.f15915y = a2.a.INACTIVE;
+        this.f16507u = g1.f16452a;
+        this.f16508v = new o3.b();
+        this.f16509w = null;
+        this.f16511y = a2.a.INACTIVE;
         this.C = false;
         this.F = Collections.EMPTY_MAP;
         this.G = new a();
@@ -424,30 +424,30 @@ public final class p1<T extends a2> extends w2 {
             cVar.b();
             this.E = null;
         }
-        n0.u1 u1Var = this.f15909s;
+        n0.u1 u1Var = this.f16505s;
         if (u1Var != null) {
             u1Var.d();
-            this.f15909s = null;
+            this.f16505s = null;
         }
-        x0.v0 v0Var = this.f15916z;
+        x0.v0 v0Var = this.f16512z;
         if (v0Var != null) {
             v0Var.f();
-            this.f15916z = null;
+            this.f16512z = null;
         }
-        x0.n0 n0Var = this.f15910t;
+        x0.n0 n0Var = this.f16506t;
         if (n0Var != null) {
             n0Var.i();
-            this.f15910t = null;
+            this.f16506t = null;
         }
         this.A = null;
-        this.f15914x = null;
-        this.f15911u = g1.f15856a;
+        this.f16510x = null;
+        this.f16507u = g1.f16452a;
         this.B = 0;
         this.C = false;
     }
 
     public static <T> T F0(a3<T> a3Var, T t8) {
-        me.x<T> xVarB = a3Var.b();
+        ne.x<T> xVarB = a3Var.b();
         if (!xVarB.isDone()) {
             return t8;
         }
@@ -500,8 +500,8 @@ public final class p1<T extends a2> extends w2 {
 
     public static Range<Integer> W0(t3 t3Var) {
         Range<Integer> rangeC = t3Var.c();
-        if (Objects.equals(rangeC, t3.f24861a)) {
-            return t3Var.g() == 1 ? e.f15929f : e.f15928e;
+        if (Objects.equals(rangeC, t3.f25682a)) {
+            return t3Var.g() == 1 ? e.f16525f : e.f16524e;
         }
         return rangeC;
     }
@@ -521,7 +521,7 @@ public final class p1<T extends a2> extends w2 {
 
     private void Z0() {
         n0.p0 p0VarI = i();
-        x0.n0 n0Var = this.f15910t;
+        x0.n0 n0Var = this.f16506t;
         if (p0VarI == null || n0Var == null) {
             return;
         }
@@ -555,7 +555,7 @@ public final class p1<T extends a2> extends w2 {
     }
 
     public static /* synthetic */ void j0(p1 p1Var, n0.u1 u1Var) {
-        if (u1Var == p1Var.f15909s) {
+        if (u1Var == p1Var.f16505s) {
             p1Var.B0();
         }
     }
@@ -750,7 +750,7 @@ public final class p1<T extends a2> extends w2 {
         Runnable runnable = new Runnable() { // from class: f1.j1
             @Override // java.lang.Runnable
             public final void run() {
-                this.f15869a.L();
+                this.f16465a.L();
             }
         };
         Range<Integer> rangeW0 = W0(t3Var);
@@ -771,43 +771,43 @@ public final class p1<T extends a2> extends w2 {
         Rect rect = p1Var.A;
         Rect rectS0 = s0(rect, p1Var.B, p1Var.S0(p0Var, aVar, iG, rect, sizeF, k0VarB), r1VarY0);
         p1Var.A = rectS0;
-        p1Var.f15916z = p1Var.C0(p0Var, aVar, iG, rectS0, sizeF, k0VarB);
-        final boolean z10 = (p0Var.q() && p1Var.f15916z == null) ? false : true;
-        final a4 a4VarX0 = X0(p0Var, p1Var.f15916z);
+        p1Var.f16512z = p1Var.C0(p0Var, aVar, iG, rectS0, sizeF, k0VarB);
+        final boolean z10 = (p0Var.q() && p1Var.f16512z == null) ? false : true;
+        final a4 a4VarX0 = X0(p0Var, p1Var.f16512z);
         g0.r1.a("VideoCapture", "camera timebase = " + p0Var.k().t() + ", processing timebase = " + a4VarX0);
         t3 t3VarA = t3Var.i().f(sizeV0).c(rangeW0).a();
-        x2.g.i(p1Var.f15910t == null);
+        x2.g.i(p1Var.f16506t == null);
         x0.n0 n0Var = new x0.n0(2, 34, t3VarA, p1Var.y(), p0Var.q(), p1Var.A, p1Var.B, p1Var.f(), p1Var.j1(p0Var));
-        p1Var.f15910t = n0Var;
+        p1Var.f16506t = n0Var;
         n0Var.e(runnable);
-        if (p1Var.f15916z != null) {
-            z0.f fVarJ = z0.f.j(p1Var.f15910t);
-            final x0.n0 n0Var2 = p1Var.f15916z.j(x0.v0.b.c(p1Var.f15910t, Collections.singletonList(fVarJ))).get(fVarJ);
+        if (p1Var.f16512z != null) {
+            z0.f fVarJ = z0.f.j(p1Var.f16506t);
+            final x0.n0 n0Var2 = p1Var.f16512z.j(x0.v0.b.c(p1Var.f16506t, Collections.singletonList(fVarJ))).get(fVarJ);
             Objects.requireNonNull(n0Var2);
             p1Var = this;
             n0Var2.e(new Runnable() { // from class: f1.k1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f15876a.U0(n0Var2, p0Var, aVar, a4VarX0, z10);
+                    this.f16472a.U0(n0Var2, p0Var, aVar, a4VarX0, z10);
                 }
             });
-            p1Var.f15914x = n0Var2.k(p0Var);
-            final n0.u1 u1VarO = p1Var.f15910t.o();
-            p1Var.f15909s = u1VarO;
+            p1Var.f16510x = n0Var2.k(p0Var);
+            final n0.u1 u1VarO = p1Var.f16506t.o();
+            p1Var.f16505s = u1VarO;
             u1VarO.k().a(new Runnable() { // from class: f1.l1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    p1.j0(this.f15884a, u1VarO);
+                    p1.j0(this.f16480a, u1VarO);
                 }
             }, q0.c.e());
         } else {
-            v2 v2VarK = p1Var.f15910t.k(p0Var);
-            p1Var.f15914x = v2VarK;
-            p1Var.f15909s = v2VarK.n();
+            v2 v2VarK = p1Var.f16506t.k(p0Var);
+            p1Var.f16510x = v2VarK;
+            p1Var.f16505s = v2VarK.n();
         }
-        aVar.i0().b(p1Var.f15914x, a4VarX0, z10);
+        aVar.i0().b(p1Var.f16510x, a4VarX0, z10);
         p1Var.Z0();
-        p1Var.f15909s.p(MediaCodec.class);
+        p1Var.f16505s.p(MediaCodec.class);
         o3.b bVarR = o3.b.r(aVar, t3Var.f());
         bVarR.A(iG);
         p1Var.b(bVarR, t3Var);
@@ -819,7 +819,7 @@ public final class p1<T extends a2> extends w2 {
         o3.c cVar2 = new o3.c(new o3.d() { // from class: f1.m1
             @Override // n0.o3.d
             public final void a(o3 o3Var, o3.g gVar) {
-                this.f15889a.V0();
+                this.f16485a.V0();
             }
         });
         p1Var.E = cVar2;
@@ -836,7 +836,7 @@ public final class p1<T extends a2> extends w2 {
         if (!e1()) {
             return iU;
         }
-        v2.h hVarB = this.f15911u.b();
+        v2.h hVarB = this.f16507u.b();
         Objects.requireNonNull(hVarB);
         int iB = hVarB.b();
         if (zH != hVarB.f()) {
@@ -885,7 +885,7 @@ public final class p1<T extends a2> extends w2 {
 
     public final List<Size> P0(n0.o0 o0Var, int i10, Range<Integer> range) {
         if (i10 == 1) {
-            return t3.f24861a.equals(range) ? o0Var.y() : o0Var.r(range);
+            return t3.f25682a.equals(range) ? o0Var.y() : o0Var.r(range);
         }
         return o0Var.m(p());
     }
@@ -897,7 +897,7 @@ public final class p1<T extends a2> extends w2 {
     }
 
     public final Range<Integer> Q0(g1.a<T> aVar) {
-        Range<Integer> rangeZ = aVar.z(t3.f24861a);
+        Range<Integer> rangeZ = aVar.z(t3.f25682a);
         Objects.requireNonNull(rangeZ);
         return rangeZ;
     }
@@ -906,15 +906,15 @@ public final class p1<T extends a2> extends w2 {
     public void R() {
         super.R();
         g0.r1.a("VideoCapture", "VideoCapture#onStateAttached: cameraID = " + k());
-        if (g() == null || this.f15914x != null) {
+        if (g() == null || this.f16510x != null) {
             return;
         }
         t3 t3Var = (t3) x2.g.g(g());
-        this.f15911u = (g1) F0(L0().e(), g1.f15856a);
+        this.f16507u = (g1) F0(L0().e(), g1.f16452a);
         o3.b bVarE0 = E0((g1.a) l(), t3Var);
-        this.f15912v = bVarE0;
-        z0(bVarE0, this.f15911u, t3Var);
-        d0(g0.o0.a(new Object[]{this.f15912v.p()}));
+        this.f16508v = bVarE0;
+        z0(bVarE0, this.f16507u, t3Var);
+        d0(g0.o0.a(new Object[]{this.f16508v.p()}));
         J();
         L0().e().c(q0.c.e(), this.G);
         f fVar = this.D;
@@ -941,7 +941,7 @@ public final class p1<T extends a2> extends w2 {
         }
         b1(a2.a.INACTIVE);
         L0().e().d(this.G);
-        me.x<Void> xVar = this.f15913w;
+        ne.x<Void> xVar = this.f16509w;
         if (xVar != null && xVar.cancel(false)) {
             g0.r1.a("VideoCapture", "VideoCapture is detached from the camera. Surface update cancelled.");
         }
@@ -957,8 +957,8 @@ public final class p1<T extends a2> extends w2 {
 
     @Override // g0.w2
     public t3 T(n0.n1 n1Var) {
-        this.f15912v.g(n1Var);
-        d0(g0.o0.a(new Object[]{this.f15912v.p()}));
+        this.f16508v.g(n1Var);
+        d0(g0.o0.a(new Object[]{this.f16508v.p()}));
         t3 t3VarG = g();
         Objects.requireNonNull(t3VarG);
         return t3VarG.i().d(n1Var).a();
@@ -981,8 +981,8 @@ public final class p1<T extends a2> extends w2 {
 
     public final void U0(x0.n0 n0Var, n0.p0 p0Var, g1.a<T> aVar, a4 a4Var, boolean z10) {
         if (p0Var == i()) {
-            this.f15914x = n0Var.k(p0Var);
-            aVar.i0().b(this.f15914x, a4Var, z10);
+            this.f16510x = n0Var.k(p0Var);
+            aVar.i0().b(this.f16510x, a4Var, z10);
             Z0();
         }
     }
@@ -993,9 +993,9 @@ public final class p1<T extends a2> extends w2 {
         }
         B0();
         o3.b bVarE0 = E0((g1.a) l(), (t3) x2.g.g(g()));
-        this.f15912v = bVarE0;
-        z0(bVarE0, this.f15911u, g());
-        d0(g0.o0.a(new Object[]{this.f15912v.p()}));
+        this.f16508v = bVarE0;
+        z0(bVarE0, this.f16507u, g());
+        d0(g0.o0.a(new Object[]{this.f16508v.p()}));
         L();
     }
 
@@ -1006,7 +1006,7 @@ public final class p1<T extends a2> extends w2 {
             arrayList.addAll(it.next());
         }
         g0.r1.a("VideoCapture", "Set custom ordered resolutions = " + arrayList);
-        bVar.a().G(i2.f24693v, arrayList);
+        bVar.a().G(i2.f25514v, arrayList);
         this.F = linkedHashMap;
     }
 
@@ -1017,8 +1017,8 @@ public final class p1<T extends a2> extends w2 {
     }
 
     public void b1(a2.a aVar) {
-        if (aVar != this.f15915y) {
-            this.f15915y = aVar;
+        if (aVar != this.f16511y) {
+            this.f16511y = aVar;
             L0().d(aVar);
         }
     }
@@ -1030,22 +1030,22 @@ public final class p1<T extends a2> extends w2 {
     }
 
     public final void d1(final o3.b bVar, boolean z10) {
-        me.x<Void> xVar = this.f15913w;
+        ne.x<Void> xVar = this.f16509w;
         if (xVar != null && xVar.cancel(false)) {
             g0.r1.a("VideoCapture", "A newer surface update is requested. Previous surface update cancelled.");
         }
-        me.x<Void> xVarA = y1.c.a(new y1.c.InterfaceC0650c() { // from class: f1.i1
-            @Override // y1.c.InterfaceC0650c
+        ne.x<Void> xVarA = y1.c.a(new y1.c.InterfaceC0665c() { // from class: f1.i1
+            @Override // y1.c.InterfaceC0665c
             public final Object a(y1.c.a aVar) {
-                return p1.m0(this.f15864a, bVar, aVar);
+                return p1.m0(this.f16460a, bVar, aVar);
             }
         });
-        this.f15913w = xVarA;
+        this.f16509w = xVarA;
         r0.n.j(xVarA, new c(xVarA, z10), q0.c.e());
     }
 
     public final boolean e1() {
-        return this.f15911u.b() != null;
+        return this.f16507u.b() != null;
     }
 
     public boolean k1(g1 g1Var, g1 g1Var2) {
@@ -1056,7 +1056,7 @@ public final class p1<T extends a2> extends w2 {
         s sVarK0 = K0();
         a0 a0VarE = sVarK0.d().e();
         g1.a<T> aVar = (g1.a) bVar.e();
-        if (aVar.a(i2.f24693v)) {
+        if (aVar.a(i2.f25514v)) {
             x2.g.b(a0VarE == c2.b, "Custom ordered resolutions and QualitySelector can't both be set");
             return;
         }
@@ -1091,7 +1091,7 @@ public final class p1<T extends a2> extends w2 {
     }
 
     public final Rect u0(Rect rect, int i10) {
-        return e1() ? p0.a0.r(p0.a0.f(((v2.h) x2.g.g(this.f15911u.b())).a(), i10)) : rect;
+        return e1() ? p0.a0.r(p0.a0.f(((v2.h) x2.g.g(this.f16507u.b())).a(), i10)) : rect;
     }
 
     public final Size v0(Size size, Rect rect, Rect rect2) {
@@ -1111,7 +1111,7 @@ public final class p1<T extends a2> extends w2 {
         }
         bVar.q();
         g0.k0 k0VarB = t3Var.b();
-        if (!z10 && (u1Var = this.f15909s) != null) {
+        if (!z10 && (u1Var = this.f16505s) != null) {
             if (z11) {
                 bVar.n(u1Var, k0VarB, null, -1);
             } else {

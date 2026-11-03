@@ -1,72 +1,63 @@
 package ym;
 
+import java.util.ArrayList;
+import java.util.Map;
 import kotlin.Metadata;
-import kotlin.Pair;
-import kotlin.Unit;
-import kotlin.jvm.functions.Function0;
-import kotlin.jvm.functions.Function1;
+import kotlin.collections.k0;
+import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"ym/x", "ym/y", "ym/z", "ym/a0", "ym/b0", "ym/c0"}, d2 = {}, k = 4, mv = {1, 6, 0}, xi = 48)
-public final class w {
+@Metadata(d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0011\n\u0000\n\u0002\u0010\u0000\n\u0002\b\u0007\b\u0001\u0018\u00002\u00020\u0001B%\b\u0002\u0012\u001a\u0010\u0005\u001a\u0016\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u0003\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u00040\u0002¢\u0006\u0004\b\u0006\u0010\u0007B%\b\u0016\u0012\u001a\u0010\u0005\u001a\u000e\u0012\n\b\u0001\u0012\u0006\u0012\u0002\b\u00030\u00040\b\"\u0006\u0012\u0002\b\u00030\u0004¢\u0006\u0004\b\u0006\u0010\tJ1\u0010\r\u001a\n\u0012\u0004\u0012\u00028\u0000\u0018\u00010\u0004\"\b\b\u0000\u0010\u000b*\u00020\n2\u000e\u0010\f\u001a\n\u0012\u0006\b\u0001\u0012\u00028\u00000\u0003H\u0016¢\u0006\u0004\b\r\u0010\u000eR(\u0010\u0005\u001a\u0016\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u0003\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u00040\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000f\u0010\u0010¨\u0006\u0011"}, d2 = {"Lym/w;", "Lym/c0;", "", "Lfu/c;", "Lym/a0;", "bindings", "<init>", "(Ljava/util/Map;)V", "", "([Lym/a0;)V", "", "RenderingT", "renderingType", "a", "(Lfu/c;)Lym/a0;", "b", "Ljava/util/Map;", "wf1-core-android"}, k = 1, mv = {1, 6, 0}, xi = 48)
+public final class w implements c0 {
+
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull
-    public static final <PropsT, StateT, OutputT, RenderingT> k<PropsT, StateT, OutputT, RenderingT>.a a(@NotNull a<? extends PropsT, StateT, ? super OutputT> aVar, @NotNull k<? super PropsT, StateT, ? extends OutputT, ? extends RenderingT> kVar) {
-        return z.a(aVar, kVar);
+    public final Map<fu.c<?>, a0<?>> bindings;
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public w(Map<fu.c<?>, ? extends a0<?>> map) {
+        this.bindings = map;
     }
 
-    @NotNull
-    public static final <PropsT, StateT, OutputT> r<PropsT, StateT, OutputT> b(@NotNull String str, @NotNull Function1<? super r<? super PropsT, StateT, ? extends OutputT>.c, Unit> function1) {
-        return b0.a(str, function1);
-    }
-
-    @NotNull
-    public static final <PropsT, StateT, OutputT> r<PropsT, StateT, OutputT> c(@NotNull Function0<String> function0, @NotNull Function1<? super r<? super PropsT, StateT, ? extends OutputT>.c, Unit> function1) {
-        return b0.b(function0, function1);
-    }
-
-    @NotNull
-    public static final <PropsT, StateT, OutputT, RenderingT> r<PropsT, StateT, OutputT> d(@NotNull k<? super PropsT, StateT, ? extends OutputT, ? extends RenderingT> kVar, @NotNull String str, @NotNull Function1<? super r<? super PropsT, StateT, ? extends OutputT>.c, Unit> function1) {
-        return z.b(kVar, str, function1);
-    }
-
-    @NotNull
-    public static final <PropsT, StateT, OutputT, RenderingT> r<PropsT, StateT, OutputT> e(@NotNull k<? super PropsT, StateT, ? extends OutputT, ? extends RenderingT> kVar, @NotNull Function0<String> function0, @NotNull Function1<? super r<? super PropsT, StateT, ? extends OutputT>.c, Unit> function1) {
-        return z.c(kVar, function0, function1);
-    }
-
-    @NotNull
-    public static final <PropsT, StateT, OutputT> Pair<StateT, WorkflowOutput<OutputT>> h(@NotNull r<? super PropsT, StateT, ? extends OutputT> rVar, PropsT propst, StateT statet) {
-        return b0.d(rVar, propst, statet);
-    }
-
+    @Override // ym.c0
     @Nullable
-    public static final <T, PropsT, StateT, OutputT> Object i(@NotNull nu.h<? extends T> hVar, @NotNull h<? super r<? super PropsT, StateT, ? extends OutputT>> hVar2, @NotNull Function1<? super T, ? extends r<? super PropsT, StateT, ? extends OutputT>> function1, @NotNull nt.b<? super Unit> bVar) {
-        return y.a(hVar, hVar2, function1, bVar);
+    public <RenderingT> a0<RenderingT> a(@NotNull fu.c<? extends RenderingT> renderingType) {
+        Intrinsics.checkNotNullParameter(renderingType, "renderingType");
+        Object obj = this.bindings.get(renderingType);
+        if (obj instanceof a0) {
+            return (a0) obj;
+        }
+        return null;
     }
 
-    @NotNull
-    public static final s j(@NotNull q<?, ?, ?> qVar) {
-        return c0.a(qVar);
-    }
-
-    @Nullable
-    public static final <OutputT> Object k(@NotNull o<? extends OutputT> oVar, @NotNull String str, @NotNull h<? super r<? super o<? extends OutputT>, Integer, ? extends OutputT>> hVar, @NotNull nt.b<? super Unit> bVar) {
-        return a0.d(oVar, str, hVar, bVar);
-    }
-
-    public static final <T, PropsT, StateT, OutputT> void l(@NotNull a<? extends PropsT, StateT, ? super OutputT> aVar, @NotNull o<? extends T> oVar, @NotNull hu.m mVar, @NotNull String str, @NotNull Function1<? super T, ? extends r<? super PropsT, StateT, ? extends OutputT>> function1) {
-        x.a(aVar, oVar, mVar, str, function1);
-    }
-
-    @Nullable
-    public static final <PropsT, StateT, OutputT> Object m(@NotNull h<? super r<? super PropsT, StateT, ? extends OutputT>> hVar, @NotNull r<? super PropsT, StateT, ? extends OutputT> rVar, @NotNull nt.b<? super Unit> bVar) {
-        return y.b(hVar, rVar, bVar);
-    }
-
-    @NotNull
-    public static final s n(@NotNull hu.m mVar) {
-        return c0.b(mVar);
+    public w(@NotNull a0<?>... bindings) {
+        Intrinsics.checkNotNullParameter(bindings, "bindings");
+        ArrayList arrayList = new ArrayList(bindings.length);
+        int length = bindings.length;
+        int i10 = 0;
+        int i11 = 0;
+        while (i11 < length) {
+            a0<?> a0Var = bindings[i11];
+            i11++;
+            arrayList.add(gt.s.a(a0Var.getType(), a0Var));
+        }
+        Map mapT = k0.t(arrayList);
+        if (mapT.keySet().size() == bindings.length) {
+            this((Map<fu.c<?>, ? extends a0<?>>) mapT);
+            return;
+        }
+        StringBuilder sb2 = new StringBuilder();
+        ArrayList arrayList2 = new ArrayList(bindings.length);
+        int length2 = bindings.length;
+        while (i10 < length2) {
+            a0<?> a0Var2 = bindings[i10];
+            i10++;
+            arrayList2.add(a0Var2.getType());
+        }
+        sb2.append(arrayList2);
+        sb2.append(" must not have duplicate entries.");
+        throw new IllegalStateException(sb2.toString().toString());
     }
 }

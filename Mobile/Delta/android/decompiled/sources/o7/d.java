@@ -46,7 +46,7 @@ public class d extends b {
         if (aVar != null && (bitmapH = aVar.h()) != null) {
             return bitmapH;
         }
-        Bitmap bitmapG = this.f27238p.G(this.f27239q.n());
+        Bitmap bitmapG = this.f27803p.G(this.f27804q.n());
         if (bitmapG != null) {
             return bitmapG;
         }
@@ -83,7 +83,7 @@ public class d extends b {
                 return;
             }
         }
-        if (t8 == o0.f16423e && (cVar6 = this.L) != null) {
+        if (t8 == o0.f17019e && (cVar6 = this.L) != null) {
             cVar6.c(cVar);
             return;
         }
@@ -111,12 +111,12 @@ public class d extends b {
         super.e(rectF, matrix, z10);
         if (this.I != null) {
             float fE = m.e();
-            if (this.f27238p.Q() || (bitmapP = P()) == null) {
+            if (this.f27803p.Q() || (bitmapP = P()) == null) {
                 rectF.set(0.0f, 0.0f, this.I.f() * fE, this.I.d() * fE);
             } else {
                 rectF.set(0.0f, 0.0f, bitmapP.getWidth() * fE, bitmapP.getHeight() * fE);
             }
-            this.f27237o.mapRect(rectF);
+            this.f27802o.mapRect(rectF);
         }
     }
 
@@ -137,7 +137,7 @@ public class d extends b {
             bVar = cVar.b(matrix, i10);
         }
         this.F.set(0, 0, bitmapP.getWidth(), bitmapP.getHeight());
-        if (this.f27238p.Q()) {
+        if (this.f27803p.Q()) {
             this.G.set(0, 0, (int) (this.I.f() * fE), (int) (this.I.d() * fE));
         } else {
             this.G.set(0, 0, (int) (bitmapP.getWidth() * fE), (int) (bitmapP.getHeight() * fE));

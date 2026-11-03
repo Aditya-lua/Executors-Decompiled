@@ -6,11 +6,11 @@ import java.util.NoSuchElementException;
 public final class u0 extends f1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object f7325a;
+    public final Object f7399a;
     public boolean b;
 
     public u0(Object obj) {
-        this.f7325a = obj;
+        this.f7399a = obj;
     }
 
     @Override // java.util.Iterator
@@ -24,6 +24,6 @@ public final class u0 extends f1 {
             throw new NoSuchElementException();
         }
         this.b = true;
-        return this.f7325a;
+        return this.f7399a;
     }
 }

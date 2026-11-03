@@ -12,7 +12,7 @@ public abstract class AFe1rSDK extends AFe1lSDK {
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
     @Nullable
-    private final PurchaseHandler.PurchaseValidationCallback f5322v;
+    private final PurchaseHandler.PurchaseValidationCallback f5395v;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public AFe1rSDK(@NotNull AFe1zSDK aFe1zSDK, @NotNull AFe1zSDK[] aFe1zSDKArr, @NotNull AFc1bSDK aFc1bSDK, @NotNull Map<String, ? extends Object> map, @Nullable PurchaseHandler.PurchaseValidationCallback purchaseValidationCallback) {
@@ -21,7 +21,7 @@ public abstract class AFe1rSDK extends AFe1lSDK {
         Intrinsics.checkNotNullParameter(aFe1zSDKArr, "");
         Intrinsics.checkNotNullParameter(aFc1bSDK, "");
         Intrinsics.checkNotNullParameter(map, "");
-        this.f5322v = purchaseValidationCallback;
+        this.f5395v = purchaseValidationCallback;
     }
 
     @Override // com.appsflyer.internal.AFe1lSDK
@@ -65,11 +65,11 @@ public abstract class AFe1rSDK extends AFe1lSDK {
         PurchaseHandler.PurchaseValidationCallback purchaseValidationCallback2;
         super.force();
         Throwable v5 = getV();
-        if (v5 != null && (purchaseValidationCallback2 = this.f5322v) != null) {
+        if (v5 != null && (purchaseValidationCallback2 = this.f5395v) != null) {
             purchaseValidationCallback2.onFailure(v5);
         }
         ResponseNetwork<String> responseNetwork = ((AFe1kSDK) this).v;
-        if (responseNetwork == null || (purchaseValidationCallback = this.f5322v) == null) {
+        if (responseNetwork == null || (purchaseValidationCallback = this.f5395v) == null) {
             return;
         }
         purchaseValidationCallback.onResponse(responseNetwork);

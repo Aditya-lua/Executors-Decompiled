@@ -11,7 +11,7 @@ import q.m0;
 public class FitWindowsFrameLayout extends FrameLayout {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public m0 f1128a;
+    public m0 f973a;
 
     public FitWindowsFrameLayout(@NonNull Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
@@ -19,7 +19,7 @@ public class FitWindowsFrameLayout extends FrameLayout {
 
     @Override // android.view.View
     public boolean fitSystemWindows(Rect rect) {
-        m0 m0Var = this.f1128a;
+        m0 m0Var = this.f973a;
         if (m0Var != null) {
             m0Var.a(rect);
         }
@@ -27,6 +27,6 @@ public class FitWindowsFrameLayout extends FrameLayout {
     }
 
     public void setOnFitSystemWindowsListener(m0 m0Var) {
-        this.f1128a = m0Var;
+        this.f973a = m0Var;
     }
 }

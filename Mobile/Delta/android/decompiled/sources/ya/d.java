@@ -7,14 +7,14 @@ import com.google.android.gms.common.api.Status;
 public final class d extends f0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ sb.k f35783a;
+    public final /* synthetic */ sb.k f36640a;
 
     public d(e eVar, sb.k kVar) {
-        this.f35783a = kVar;
+        this.f36640a = kVar;
     }
 
     @Override // ya.g0
     public final void X1(Status status, SavePasswordResult savePasswordResult) {
-        l9.v.a(status, savePasswordResult, this.f35783a);
+        l9.v.a(status, savePasswordResult, this.f36640a);
     }
 }

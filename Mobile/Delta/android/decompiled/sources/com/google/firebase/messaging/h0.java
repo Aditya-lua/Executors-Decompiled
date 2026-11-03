@@ -18,13 +18,13 @@ public class h0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final Bundle f8776a;
+    public final Bundle f8850a;
 
     public h0(@NonNull Bundle bundle) {
         if (bundle == null) {
             throw new NullPointerException("data");
         }
-        this.f8776a = new Bundle(bundle);
+        this.f8850a = new Bundle(bundle);
     }
 
     public static int d(String str) {
@@ -211,7 +211,7 @@ public class h0 {
     }
 
     public String p(String str) {
-        return this.f8776a.getString(w(str));
+        return this.f8850a.getString(w(str));
     }
 
     public long[] q() {
@@ -248,9 +248,9 @@ public class h0 {
     }
 
     public final String w(String str) {
-        if (!this.f8776a.containsKey(str) && str.startsWith("gcm.n.")) {
+        if (!this.f8850a.containsKey(str) && str.startsWith("gcm.n.")) {
             String strV = v(str);
-            if (this.f8776a.containsKey(strV)) {
+            if (this.f8850a.containsKey(strV)) {
                 return strV;
             }
         }
@@ -258,8 +258,8 @@ public class h0 {
     }
 
     public Bundle x() {
-        Bundle bundle = new Bundle(this.f8776a);
-        for (String str : this.f8776a.keySet()) {
+        Bundle bundle = new Bundle(this.f8850a);
+        for (String str : this.f8850a.keySet()) {
             if (!s(str)) {
                 bundle.remove(str);
             }
@@ -268,8 +268,8 @@ public class h0 {
     }
 
     public Bundle y() {
-        Bundle bundle = new Bundle(this.f8776a);
-        for (String str : this.f8776a.keySet()) {
+        Bundle bundle = new Bundle(this.f8850a);
+        for (String str : this.f8850a.keySet()) {
             if (u(str)) {
                 bundle.remove(str);
             }

@@ -10,11 +10,11 @@ public class l extends k {
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final OutputConfiguration f3769a;
+        public final OutputConfiguration f3667a;
         public long b = 1;
 
         public a(OutputConfiguration outputConfiguration) {
-            this.f3769a = outputConfiguration;
+            this.f3667a = outputConfiguration;
         }
 
         public boolean equals(Object obj) {
@@ -22,11 +22,11 @@ public class l extends k {
                 return false;
             }
             a aVar = (a) obj;
-            return Objects.equals(this.f3769a, aVar.f3769a) && this.b == aVar.b;
+            return Objects.equals(this.f3667a, aVar.f3667a) && this.b == aVar.b;
         }
 
         public int hashCode() {
-            int iHashCode = this.f3769a.hashCode() ^ 31;
+            int iHashCode = this.f3667a.hashCode() ^ 31;
             return Long.hashCode(this.b) ^ ((iHashCode << 5) - iHashCode);
         }
     }
@@ -41,7 +41,7 @@ public class l extends k {
 
     @Override // b0.k, b0.i.a
     public void c(long j10) {
-        ((a) this.f3770a).b = j10;
+        ((a) this.f3668a).b = j10;
     }
 
     @Override // b0.k, b0.i.a
@@ -56,8 +56,8 @@ public class l extends k {
 
     @Override // b0.k, b0.j, b0.i.a
     public Object h() {
-        x2.g.a(this.f3770a instanceof a);
-        return ((a) this.f3770a).f3769a;
+        x2.g.a(this.f3668a instanceof a);
+        return ((a) this.f3668a).f3667a;
     }
 
     public l(Object obj) {

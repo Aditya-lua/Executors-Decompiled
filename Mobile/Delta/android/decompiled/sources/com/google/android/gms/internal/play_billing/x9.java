@@ -9,11 +9,11 @@ import java.util.concurrent.TimeUnit;
 public final class x9 implements i2 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final WeakReference f7343a;
+    public final WeakReference f7417a;
     public final s9 b = new w9(this);
 
     public x9(t9 t9Var) {
-        this.f7343a = new WeakReference(t9Var);
+        this.f7417a = new WeakReference(t9Var);
     }
 
     @Override // com.google.android.gms.internal.play_billing.i2
@@ -27,7 +27,7 @@ public final class x9 implements i2 {
 
     @Override // java.util.concurrent.Future
     public final boolean cancel(boolean z10) {
-        t9 t9Var = (t9) this.f7343a.get();
+        t9 t9Var = (t9) this.f7417a.get();
         boolean zCancel = this.b.cancel(z10);
         if (!zCancel || t9Var == null) {
             return zCancel;
@@ -38,7 +38,7 @@ public final class x9 implements i2 {
 
     public final boolean d(Throwable th2) {
         m4 m4Var = new m4(th2);
-        x1 x1Var = s9.f7313f;
+        x1 x1Var = s9.f7387f;
         s9 s9Var = this.b;
         if (!x1Var.d(s9Var, null, m4Var)) {
             return false;
@@ -54,7 +54,7 @@ public final class x9 implements i2 {
 
     @Override // java.util.concurrent.Future
     public final boolean isCancelled() {
-        return this.b.f7315a instanceof q2;
+        return this.b.f7389a instanceof q2;
     }
 
     @Override // java.util.concurrent.Future

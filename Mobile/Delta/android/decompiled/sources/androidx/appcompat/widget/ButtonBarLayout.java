@@ -14,28 +14,28 @@ import i.j;
 public class ButtonBarLayout extends LinearLayout {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f1119a;
+    public boolean f964a;
     public boolean b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f1120c;
+    public int f965c;
 
     public ButtonBarLayout(@NonNull Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.f1120c = -1;
+        this.f965c = -1;
         int[] iArr = j.P0;
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr);
         o0.k0(this, context, iArr, attributeSet, typedArrayObtainStyledAttributes, 0, 0);
-        this.f1119a = typedArrayObtainStyledAttributes.getBoolean(j.Q0, true);
+        this.f964a = typedArrayObtainStyledAttributes.getBoolean(j.Q0, true);
         typedArrayObtainStyledAttributes.recycle();
         if (getOrientation() == 1) {
-            setStacked(this.f1119a);
+            setStacked(this.f964a);
         }
     }
 
     private void setStacked(boolean z10) {
         if (this.b != z10) {
-            if (!z10 || this.f1119a) {
+            if (!z10 || this.f964a) {
                 this.b = z10;
                 setOrientation(z10 ? 1 : 0);
                 setGravity(z10 ? 8388613 : 80);
@@ -71,11 +71,11 @@ public class ButtonBarLayout extends LinearLayout {
         boolean z10;
         int size = View.MeasureSpec.getSize(i10);
         int paddingBottom = 0;
-        if (this.f1119a) {
-            if (size > this.f1120c && b()) {
+        if (this.f964a) {
+            if (size > this.f965c && b()) {
                 setStacked(false);
             }
-            this.f1120c = size;
+            this.f965c = size;
         }
         if (b() || View.MeasureSpec.getMode(i10) != 1073741824) {
             iMakeMeasureSpec = i10;
@@ -85,7 +85,7 @@ public class ButtonBarLayout extends LinearLayout {
             z10 = true;
         }
         super.onMeasure(iMakeMeasureSpec, i11);
-        if (this.f1119a && !b() && (getMeasuredWidthAndState() & (-16777216)) == 16777216) {
+        if (this.f964a && !b() && (getMeasuredWidthAndState() & (-16777216)) == 16777216) {
             setStacked(true);
             z10 = true;
         }
@@ -116,8 +116,8 @@ public class ButtonBarLayout extends LinearLayout {
     }
 
     public void setAllowStacking(boolean z10) {
-        if (this.f1119a != z10) {
-            this.f1119a = z10;
+        if (this.f964a != z10) {
+            this.f964a = z10;
             if (!z10 && b()) {
                 setStacked(false);
             }

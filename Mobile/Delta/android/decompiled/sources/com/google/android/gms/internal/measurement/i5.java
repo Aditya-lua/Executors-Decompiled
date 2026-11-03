@@ -8,7 +8,7 @@ public final class i5 extends gb implements pc {
     static {
         i5 i5Var = new i5();
         zzd = i5Var;
-        gb.u(i5.class, i5Var);
+        gb.t(i5.class, i5Var);
     }
 
     @Override // com.google.android.gms.internal.measurement.gb

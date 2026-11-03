@@ -4,11 +4,11 @@ package g0;
 public final class f extends w.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f17372a;
+    public final int f17911a;
     public final Throwable b;
 
     public f(int i10, Throwable th2) {
-        this.f17372a = i10;
+        this.f17911a = i10;
         this.b = th2;
     }
 
@@ -19,7 +19,7 @@ public final class f extends w.a {
 
     @Override // g0.w.a
     public int d() {
-        return this.f17372a;
+        return this.f17911a;
     }
 
     public boolean equals(Object obj) {
@@ -29,7 +29,7 @@ public final class f extends w.a {
         }
         if (obj instanceof w.a) {
             w.a aVar = (w.a) obj;
-            if (this.f17372a == aVar.d() && ((th2 = this.b) != null ? th2.equals(aVar.c()) : aVar.c() == null)) {
+            if (this.f17911a == aVar.d() && ((th2 = this.b) != null ? th2.equals(aVar.c()) : aVar.c() == null)) {
                 return true;
             }
         }
@@ -37,12 +37,12 @@ public final class f extends w.a {
     }
 
     public int hashCode() {
-        int i10 = (this.f17372a ^ 1000003) * 1000003;
+        int i10 = (this.f17911a ^ 1000003) * 1000003;
         Throwable th2 = this.b;
         return i10 ^ (th2 == null ? 0 : th2.hashCode());
     }
 
     public String toString() {
-        return "StateError{code=" + this.f17372a + ", cause=" + this.b + "}";
+        return "StateError{code=" + this.f17911a + ", cause=" + this.b + "}";
     }
 }

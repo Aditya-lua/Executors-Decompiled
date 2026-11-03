@@ -19,98 +19,98 @@ public class h {
     public static class a implements ThreadFactory {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public String f32729a;
+        public String f33297a;
         public int b;
 
         /* JADX INFO: renamed from: v2.h$a$a, reason: collision with other inner class name */
-        public static class C0594a extends Thread {
+        public static class C0607a extends Thread {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final int f32730a;
+            public final int f33298a;
 
-            public C0594a(Runnable runnable, String str, int i10) {
+            public C0607a(Runnable runnable, String str, int i10) {
                 super(runnable, str);
-                this.f32730a = i10;
+                this.f33298a = i10;
             }
 
             @Override // java.lang.Thread, java.lang.Runnable
             public void run() {
-                Process.setThreadPriority(this.f32730a);
+                Process.setThreadPriority(this.f33298a);
                 super.run();
             }
         }
 
         public a(String str, int i10) {
-            this.f32729a = str;
+            this.f33297a = str;
             this.b = i10;
         }
 
         @Override // java.util.concurrent.ThreadFactory
         public Thread newThread(Runnable runnable) {
-            return new C0594a(runnable, this.f32729a, this.b);
+            return new C0607a(runnable, this.f33297a, this.b);
         }
     }
 
     public static class b implements Executor {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Handler f32731a;
+        public final Handler f33299a;
 
         public b(Handler handler) {
-            this.f32731a = (Handler) x2.g.g(handler);
+            this.f33299a = (Handler) x2.g.g(handler);
         }
 
         @Override // java.util.concurrent.Executor
         public void execute(Runnable runnable) {
-            if (this.f32731a.post((Runnable) x2.g.g(runnable))) {
+            if (this.f33299a.post((Runnable) x2.g.g(runnable))) {
                 return;
             }
-            throw new RejectedExecutionException(this.f32731a + " is shutting down");
+            throw new RejectedExecutionException(this.f33299a + " is shutting down");
         }
     }
 
     public static class c<T> implements Runnable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public Callable<T> f32732a;
+        public Callable<T> f33300a;
         public x2.a<T> b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public Handler f32733c;
+        public Handler f33301c;
 
         public class a implements Runnable {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ x2.a f32734a;
+            public final /* synthetic */ x2.a f33302a;
             public final /* synthetic */ Object b;
 
             public a(x2.a aVar, Object obj) {
-                this.f32734a = aVar;
+                this.f33302a = aVar;
                 this.b = obj;
             }
 
             /* JADX WARN: Multi-variable type inference failed */
             @Override // java.lang.Runnable
             public void run() {
-                this.f32734a.accept(this.b);
+                this.f33302a.accept(this.b);
             }
         }
 
         public c(Handler handler, Callable<T> callable, x2.a<T> aVar) {
-            this.f32732a = callable;
+            this.f33300a = callable;
             this.b = aVar;
-            this.f32733c = handler;
+            this.f33301c = handler;
         }
 
         @Override // java.lang.Runnable
         public void run() {
             T tCall;
             try {
-                tCall = this.f32732a.call();
+                tCall = this.f33300a.call();
             } catch (Exception unused) {
                 tCall = null;
             }
-            this.f32733c.post(new a(this.b, tCall));
+            this.f33301c.post(new a(this.b, tCall));
         }
     }
 

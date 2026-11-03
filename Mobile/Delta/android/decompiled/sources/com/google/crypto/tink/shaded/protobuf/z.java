@@ -9,24 +9,24 @@ import java.util.RandomAccess;
 public final class z extends c<Integer> implements a0.g, RandomAccess {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final z f8666d = new z(new int[0], 0, false);
+    public static final z f8740d = new z(new int[0], 0, false);
     public int[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f8667c;
+    public int f8741c;
 
     public z() {
         this(new int[10], 0, true);
     }
 
     private void f(int i10) {
-        if (i10 < 0 || i10 >= this.f8667c) {
+        if (i10 < 0 || i10 >= this.f8741c) {
             throw new IndexOutOfBoundsException(i(i10));
         }
     }
 
     private String i(int i10) {
-        return "Index:" + i10 + ", Size:" + this.f8667c;
+        return "Index:" + i10 + ", Size:" + this.f8741c;
     }
 
     @Override // com.google.crypto.tink.shaded.protobuf.c, java.util.AbstractCollection, java.util.Collection, java.util.List
@@ -37,11 +37,11 @@ public final class z extends c<Integer> implements a0.g, RandomAccess {
             return super.addAll(collection);
         }
         z zVar = (z) collection;
-        int i10 = zVar.f8667c;
+        int i10 = zVar.f8741c;
         if (i10 == 0) {
             return false;
         }
-        int i11 = this.f8667c;
+        int i11 = this.f8741c;
         if (Integer.MAX_VALUE - i11 < i10) {
             throw new OutOfMemoryError();
         }
@@ -50,8 +50,8 @@ public final class z extends c<Integer> implements a0.g, RandomAccess {
         if (i12 > iArr.length) {
             this.b = Arrays.copyOf(iArr, i12);
         }
-        System.arraycopy(zVar.b, 0, this.b, this.f8667c, zVar.f8667c);
-        this.f8667c = i12;
+        System.arraycopy(zVar.b, 0, this.b, this.f8741c, zVar.f8741c);
+        this.f8741c = i12;
         ((AbstractList) this).modCount++;
         return true;
     }
@@ -76,7 +76,7 @@ public final class z extends c<Integer> implements a0.g, RandomAccess {
 
     public void d(int i10) {
         a();
-        int i11 = this.f8667c;
+        int i11 = this.f8741c;
         int[] iArr = this.b;
         if (i11 == iArr.length) {
             int[] iArr2 = new int[((i11 * 3) / 2) + 1];
@@ -84,15 +84,15 @@ public final class z extends c<Integer> implements a0.g, RandomAccess {
             this.b = iArr2;
         }
         int[] iArr3 = this.b;
-        int i12 = this.f8667c;
-        this.f8667c = i12 + 1;
+        int i12 = this.f8741c;
+        this.f8741c = i12 + 1;
         iArr3[i12] = i10;
     }
 
     public final void e(int i10, int i11) {
         int i12;
         a();
-        if (i10 < 0 || i10 > (i12 = this.f8667c)) {
+        if (i10 < 0 || i10 > (i12 = this.f8741c)) {
             throw new IndexOutOfBoundsException(i(i10));
         }
         int[] iArr = this.b;
@@ -101,11 +101,11 @@ public final class z extends c<Integer> implements a0.g, RandomAccess {
         } else {
             int[] iArr2 = new int[((i12 * 3) / 2) + 1];
             System.arraycopy(iArr, 0, iArr2, 0, i10);
-            System.arraycopy(this.b, i10, iArr2, i10 + 1, this.f8667c - i10);
+            System.arraycopy(this.b, i10, iArr2, i10 + 1, this.f8741c - i10);
             this.b = iArr2;
         }
         this.b[i10] = i11;
-        this.f8667c++;
+        this.f8741c++;
         ((AbstractList) this).modCount++;
     }
 
@@ -118,11 +118,11 @@ public final class z extends c<Integer> implements a0.g, RandomAccess {
             return super.equals(obj);
         }
         z zVar = (z) obj;
-        if (this.f8667c != zVar.f8667c) {
+        if (this.f8741c != zVar.f8741c) {
             return false;
         }
         int[] iArr = zVar.b;
-        for (int i10 = 0; i10 < this.f8667c; i10++) {
+        for (int i10 = 0; i10 < this.f8741c; i10++) {
             if (this.b[i10] != iArr[i10]) {
                 return false;
             }
@@ -144,7 +144,7 @@ public final class z extends c<Integer> implements a0.g, RandomAccess {
     @Override // com.google.crypto.tink.shaded.protobuf.c, java.util.AbstractList, java.util.Collection, java.util.List
     public int hashCode() {
         int i10 = 1;
-        for (int i11 = 0; i11 < this.f8667c; i11++) {
+        for (int i11 = 0; i11 < this.f8741c; i11++) {
             i10 = (i10 * 31) + this.b[i11];
         }
         return i10;
@@ -168,8 +168,8 @@ public final class z extends c<Integer> implements a0.g, RandomAccess {
     @Override // com.google.crypto.tink.shaded.protobuf.a0.i
     /* JADX INFO: renamed from: k, reason: merged with bridge method [inline-methods] */
     public a0.g o(int i10) {
-        if (i10 >= this.f8667c) {
-            return new z(Arrays.copyOf(this.b, i10), this.f8667c, true);
+        if (i10 >= this.f8741c) {
+            return new z(Arrays.copyOf(this.b, i10), this.f8741c, true);
         }
         throw new IllegalArgumentException();
     }
@@ -181,11 +181,11 @@ public final class z extends c<Integer> implements a0.g, RandomAccess {
         f(i10);
         int[] iArr = this.b;
         int i11 = iArr[i10];
-        int i12 = this.f8667c;
+        int i12 = this.f8741c;
         if (i10 < i12 - 1) {
             System.arraycopy(iArr, i10 + 1, iArr, i10, (i12 - i10) - 1);
         }
-        this.f8667c--;
+        this.f8741c--;
         ((AbstractList) this).modCount++;
         return Integer.valueOf(i11);
     }
@@ -212,19 +212,19 @@ public final class z extends c<Integer> implements a0.g, RandomAccess {
             throw new IndexOutOfBoundsException("toIndex < fromIndex");
         }
         int[] iArr = this.b;
-        System.arraycopy(iArr, i11, iArr, i10, this.f8667c - i11);
-        this.f8667c -= i11 - i10;
+        System.arraycopy(iArr, i11, iArr, i10, this.f8741c - i11);
+        this.f8741c -= i11 - i10;
         ((AbstractList) this).modCount++;
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public int size() {
-        return this.f8667c;
+        return this.f8741c;
     }
 
     public z(int[] iArr, int i10, boolean z10) {
         super(z10);
         this.b = iArr;
-        this.f8667c = i10;
+        this.f8741c = i10;
     }
 }

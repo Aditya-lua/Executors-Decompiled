@@ -6,7 +6,7 @@ public abstract class k8 extends j8 {
 
     public k8(g7 g7Var) {
         super(g7Var);
-        this.f25625a.k();
+        this.f26446a.k();
     }
 
     public abstract boolean i();
@@ -31,7 +31,7 @@ public abstract class k8 extends j8 {
         if (i()) {
             return;
         }
-        this.f25625a.l();
+        this.f26446a.l();
         this.b = true;
     }
 
@@ -40,7 +40,7 @@ public abstract class k8 extends j8 {
             throw new IllegalStateException("Can't initialize twice");
         }
         j();
-        this.f25625a.l();
+        this.f26446a.l();
         this.b = true;
     }
 }

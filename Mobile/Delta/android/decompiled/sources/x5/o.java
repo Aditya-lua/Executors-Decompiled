@@ -11,12 +11,12 @@ public final class o {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final String f34959a;
+    public static final String f35457a;
 
     static {
         String strI = w.i("InputMerger");
         Intrinsics.checkNotNullExpressionValue(strI, "tagWithPrefix(...)");
-        f34959a = strI;
+        f35457a = strI;
     }
 
     @Nullable
@@ -27,7 +27,7 @@ public final class o {
             Intrinsics.d(objNewInstance, "null cannot be cast to non-null type androidx.work.InputMerger");
             return (m) objNewInstance;
         } catch (Exception e10) {
-            w.e().d(f34959a, "Trouble instantiating " + className, e10);
+            w.e().d(f35457a, "Trouble instantiating " + className, e10);
             return null;
         }
     }

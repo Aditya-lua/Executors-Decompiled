@@ -1,107 +1,142 @@
 package bg;
 
+import android.content.SharedPreferences;
+import android.util.Base64;
+import android.util.Log;
 import androidx.annotation.NonNull;
+import ff.e;
+import java.security.KeyFactory;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.PublicKey;
+import java.security.spec.InvalidKeySpecException;
+import java.security.spec.X509EncodedKeySpec;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /* JADX INFO: loaded from: classes2.dex */
-public final class b extends f {
-
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f4179a;
-    public final long b;
+public class b {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final f.b f4180c;
+    public static final String[] f4208c = {"*", "FCM", "GCM", ""};
 
-    /* JADX INFO: renamed from: bg.b$b, reason: collision with other inner class name */
-    public static final class C0082b extends f.a {
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final SharedPreferences f4209a;
+    public final String b;
 
-        /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public String f4181a;
-        public long b;
+    public b(@NonNull e eVar) {
+        this.f4209a = eVar.j().getSharedPreferences("com.google.android.gms.appid", 0);
+        this.b = b(eVar);
+    }
 
-        /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public f.b f4182c;
-
-        /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public byte f4183d;
-
-        @Override // bg.f.a
-        public f a() {
-            if (this.f4183d == 1) {
-                return new b(this.f4181a, this.b, this.f4182c);
-            }
-            throw new IllegalStateException("Missing required properties: tokenExpirationTimestamp");
+    public static String b(e eVar) {
+        String strD = eVar.m().d();
+        if (strD != null) {
+            return strD;
         }
-
-        @Override // bg.f.a
-        public f.a b(f.b bVar) {
-            this.f4182c = bVar;
-            return this;
+        String strC = eVar.m().c();
+        if (!strC.startsWith("1:") && !strC.startsWith("2:")) {
+            return strC;
         }
-
-        @Override // bg.f.a
-        public f.a c(String str) {
-            this.f4181a = str;
-            return this;
+        String[] strArrSplit = strC.split(":");
+        if (strArrSplit.length != 4) {
+            return null;
         }
+        String str = strArrSplit[1];
+        if (str.isEmpty()) {
+            return null;
+        }
+        return str;
+    }
 
-        @Override // bg.f.a
-        public f.a d(long j10) {
-            this.b = j10;
-            this.f4183d = (byte) (this.f4183d | 1);
-            return this;
+    public static String c(@NonNull PublicKey publicKey) {
+        try {
+            byte[] bArrDigest = MessageDigest.getInstance("SHA1").digest(publicKey.getEncoded());
+            bArrDigest[0] = (byte) (((bArrDigest[0] & 15) + 112) & 255);
+            return Base64.encodeToString(bArrDigest, 0, 8, 11);
+        } catch (NoSuchAlgorithmException unused) {
+            Log.w("ContentValues", "Unexpected error, device missing required algorithms");
+            return null;
         }
     }
 
-    @Override // bg.f
-    public f.b b() {
-        return this.f4180c;
+    public final String a(@NonNull String str, @NonNull String str2) {
+        return "|T|" + str + "|" + str2;
     }
 
-    @Override // bg.f
-    public String c() {
-        return this.f4179a;
-    }
-
-    @Override // bg.f
-    @NonNull
-    public long d() {
-        return this.b;
-    }
-
-    public boolean equals(Object obj) {
-        f.b bVar;
-        if (obj == this) {
-            return true;
+    public final String d(String str) {
+        try {
+            return new JSONObject(str).getString("token");
+        } catch (JSONException unused) {
+            return null;
         }
-        if (obj instanceof f) {
-            f fVar = (f) obj;
-            String str = this.f4179a;
-            if (str != null ? str.equals(fVar.c()) : fVar.c() == null) {
-                if (this.b == fVar.d() && ((bVar = this.f4180c) != null ? bVar.equals(fVar.b()) : fVar.b() == null)) {
-                    return true;
+    }
+
+    public final PublicKey e(String str) {
+        try {
+            return KeyFactory.getInstance("RSA").generatePublic(new X509EncodedKeySpec(Base64.decode(str, 8)));
+        } catch (IllegalArgumentException | NoSuchAlgorithmException | InvalidKeySpecException e10) {
+            Log.w("ContentValues", "Invalid key stored " + e10);
+            return null;
+        }
+    }
+
+    public String f() {
+        synchronized (this.f4209a) {
+            try {
+                String strG = g();
+                if (strG != null) {
+                    return strG;
                 }
+                return h();
+            } catch (Throwable th2) {
+                throw th2;
             }
         }
-        return false;
     }
 
-    public int hashCode() {
-        String str = this.f4179a;
-        int iHashCode = str == null ? 0 : str.hashCode();
-        long j10 = this.b;
-        int i10 = (((iHashCode ^ 1000003) * 1000003) ^ ((int) (j10 ^ (j10 >>> 32)))) * 1000003;
-        f.b bVar = this.f4180c;
-        return i10 ^ (bVar != null ? bVar.hashCode() : 0);
+    public final String g() {
+        String string;
+        synchronized (this.f4209a) {
+            string = this.f4209a.getString("|S|id", null);
+        }
+        return string;
     }
 
-    public String toString() {
-        return "TokenResult{token=" + this.f4179a + ", tokenExpirationTimestamp=" + this.b + ", responseCode=" + this.f4180c + "}";
+    public final String h() {
+        synchronized (this.f4209a) {
+            try {
+                String string = this.f4209a.getString("|S||P|", null);
+                if (string == null) {
+                    return null;
+                }
+                PublicKey publicKeyE = e(string);
+                if (publicKeyE == null) {
+                    return null;
+                }
+                return c(publicKeyE);
+            } catch (Throwable th2) {
+                throw th2;
+            }
+        }
     }
 
-    public b(String str, long j10, f.b bVar) {
-        this.f4179a = str;
-        this.b = j10;
-        this.f4180c = bVar;
+    public String i() {
+        synchronized (this.f4209a) {
+            try {
+                for (String str : f4208c) {
+                    String string = this.f4209a.getString(a(this.b, str), null);
+                    if (string != null && !string.isEmpty()) {
+                        if (string.startsWith("{")) {
+                            string = d(string);
+                        }
+                        return string;
+                    }
+                }
+                return null;
+            } catch (Throwable th2) {
+                throw th2;
+            }
+        }
     }
 }

@@ -1,18 +1,18 @@
 package com.withpersona.sdk2.inquiry.tracking.network;
 
-import jt.n;
-import jt.o;
-import jv.x;
+import gt.n;
+import gt.o;
+import hv.x;
 import kotlin.Metadata;
 import kotlin.Unit;
-import nt.b;
+import lt.b;
+import mt.c;
+import nt.l;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import ot.c;
-import pt.l;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\b\u0007\u0018\u00002\u00020\u0001B\u0011\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u001e\u0010\f\u001a\b\u0012\u0004\u0012\u00020\t0\b2\u0006\u0010\u0007\u001a\u00020\u0006H\u0080@¢\u0006\u0004\b\n\u0010\u000bJ&\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u000f0\b2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u000e\u001a\u00020\rH\u0080@¢\u0006\u0004\b\u0010\u0010\u0011R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0003\u0010\u0013¨\u0006\u0014"}, d2 = {"Lcom/withpersona/sdk2/inquiry/tracking/network/TrackingEventsService;", "", "Lcom/withpersona/sdk2/inquiry/tracking/network/TrackingEventsServiceApi;", "trackingEventsServiceApi", "<init>", "(Lcom/withpersona/sdk2/inquiry/tracking/network/TrackingEventsServiceApi;)V", "", "sessionToken", "Ljt/n;", "Lcom/withpersona/sdk2/inquiry/tracking/network/PublicKeyResponse;", "getPublicKey-gIAlu-s$tracking_events_release", "(Ljava/lang/String;Lnt/b;)Ljava/lang/Object;", "getPublicKey", "Lcom/withpersona/sdk2/inquiry/tracking/network/EncryptedTrackingEventsRequest;", "request", "", "sendEvents-0E7RQCE$tracking_events_release", "(Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/tracking/network/EncryptedTrackingEventsRequest;Lnt/b;)Ljava/lang/Object;", "sendEvents", "Lcom/withpersona/sdk2/inquiry/tracking/network/TrackingEventsServiceApi;", "tracking-events_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\b\u0007\u0018\u00002\u00020\u0001B\u0011\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u001e\u0010\f\u001a\b\u0012\u0004\u0012\u00020\t0\b2\u0006\u0010\u0007\u001a\u00020\u0006H\u0080@¢\u0006\u0004\b\n\u0010\u000bJ&\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u000f0\b2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u000e\u001a\u00020\rH\u0080@¢\u0006\u0004\b\u0010\u0010\u0011R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0003\u0010\u0013¨\u0006\u0014"}, d2 = {"Lcom/withpersona/sdk2/inquiry/tracking/network/TrackingEventsService;", "", "Lcom/withpersona/sdk2/inquiry/tracking/network/TrackingEventsServiceApi;", "trackingEventsServiceApi", "<init>", "(Lcom/withpersona/sdk2/inquiry/tracking/network/TrackingEventsServiceApi;)V", "", "sessionToken", "Lgt/n;", "Lcom/withpersona/sdk2/inquiry/tracking/network/PublicKeyResponse;", "getPublicKey-gIAlu-s$tracking_events_release", "(Ljava/lang/String;Llt/b;)Ljava/lang/Object;", "getPublicKey", "Lcom/withpersona/sdk2/inquiry/tracking/network/EncryptedTrackingEventsRequest;", "request", "", "sendEvents-0E7RQCE$tracking_events_release", "(Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/tracking/network/EncryptedTrackingEventsRequest;Llt/b;)Ljava/lang/Object;", "sendEvents", "Lcom/withpersona/sdk2/inquiry/tracking/network/TrackingEventsServiceApi;", "tracking-events_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class TrackingEventsService {
 
     @NotNull
@@ -71,7 +71,7 @@ public final class TrackingEventsService {
             return n.b(o.a(new Exception("Failed to get public key: " + xVar.b())));
         } catch (Exception e10) {
             n.Companion companion3 = n.INSTANCE;
-            return n.b(o.a(new Exception("Failed to get public key: " + jt.a.b(e10))));
+            return n.b(o.a(new Exception("Failed to get public key: " + gt.a.b(e10))));
         }
     }
 
@@ -114,13 +114,13 @@ public final class TrackingEventsService {
             x xVar = (x) objSendEvents;
             if (xVar.g()) {
                 n.Companion companion = n.INSTANCE;
-                return n.b(Unit.f22483a);
+                return n.b(Unit.f22938a);
             }
             n.Companion companion2 = n.INSTANCE;
             return n.b(o.a(new Exception("Failed to send events: " + xVar.b())));
         } catch (Exception e10) {
             n.Companion companion3 = n.INSTANCE;
-            return n.b(o.a(new Exception("Failed to send events: " + jt.a.b(e10))));
+            return n.b(o.a(new Exception("Failed to send events: " + gt.a.b(e10))));
         }
     }
 }

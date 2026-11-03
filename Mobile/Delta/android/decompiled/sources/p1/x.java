@@ -11,14 +11,14 @@ import g0.v1;
 public class x extends v1 {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final PointF f28196e = new PointF(2.0f, 2.0f);
+    public static final PointF f28415e = new PointF(2.0f, 2.0f);
     public final androidx.camera.view.b b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public Rect f28197c = null;
+    public Rect f28416c = null;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public Matrix f28198d;
+    public Matrix f28417d;
 
     public x(androidx.camera.view.b bVar) {
         this.b = bVar;
@@ -29,9 +29,9 @@ public class x extends v1 {
         float[] fArr = {f10, f11};
         synchronized (this) {
             try {
-                Matrix matrix = this.f28198d;
+                Matrix matrix = this.f28417d;
                 if (matrix == null) {
-                    return f28196e;
+                    return f28415e;
                 }
                 matrix.mapPoints(fArr);
                 return new PointF(fArr[0], fArr[1]);
@@ -46,11 +46,11 @@ public class x extends v1 {
         p0.z.b();
         synchronized (this) {
             try {
-                if (size.getWidth() != 0 && size.getHeight() != 0 && (rect = this.f28197c) != null) {
-                    this.f28198d = this.b.c(size, i10, rect);
+                if (size.getWidth() != 0 && size.getHeight() != 0 && (rect = this.f28416c) != null) {
+                    this.f28417d = this.b.c(size, i10, rect);
                     return;
                 }
-                this.f28198d = null;
+                this.f28417d = null;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -60,7 +60,7 @@ public class x extends v1 {
     public void g(Rect rect) {
         e(new Rational(rect.width(), rect.height()));
         synchronized (this) {
-            this.f28197c = rect;
+            this.f28416c = rect;
         }
     }
 }

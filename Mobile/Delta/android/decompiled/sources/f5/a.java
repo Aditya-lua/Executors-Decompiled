@@ -14,13 +14,13 @@ public final class a {
         Intrinsics.checkNotNullParameter(sql, "sql");
         d dVarR3 = bVar.r3(sql);
         try {
-            dVarR3.g3();
-            xt.a.a(dVarR3, null);
+            dVarR3.i3();
+            vt.a.a(dVarR3, null);
         } catch (Throwable th2) {
             try {
                 throw th2;
             } catch (Throwable th3) {
-                xt.a.a(dVarR3, th2);
+                vt.a.a(dVarR3, th2);
                 throw th3;
             }
         }

@@ -16,7 +16,7 @@ public class AFd1fSDK<Body> implements ResponseNetwork<Body> {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NonNull
-    final Map<String, List<String>> f5276d;
+    final Map<String, List<String>> f5349d;
 
     @NonNull
     private final Body registerClient;
@@ -26,7 +26,7 @@ public class AFd1fSDK<Body> implements ResponseNetwork<Body> {
         this.registerClient = body;
         this.unregisterClient = i10;
         this.AFLogger = z10;
-        this.f5276d = new HashMap(map);
+        this.f5349d = new HashMap(map);
         this.AFKeystoreWrapper = aFd1nSDK;
     }
 
@@ -52,7 +52,7 @@ public class AFd1fSDK<Body> implements ResponseNetwork<Body> {
             return false;
         }
         AFd1fSDK aFd1fSDK = (AFd1fSDK) obj;
-        if (this.unregisterClient == aFd1fSDK.unregisterClient && this.AFLogger == aFd1fSDK.AFLogger && this.registerClient.equals(aFd1fSDK.registerClient) && this.f5276d.equals(aFd1fSDK.f5276d)) {
+        if (this.unregisterClient == aFd1fSDK.unregisterClient && this.AFLogger == aFd1fSDK.AFLogger && this.registerClient.equals(aFd1fSDK.registerClient) && this.f5349d.equals(aFd1fSDK.f5349d)) {
             return this.AFKeystoreWrapper.equals(aFd1fSDK.AFKeystoreWrapper);
         }
         return false;
@@ -66,9 +66,9 @@ public class AFd1fSDK<Body> implements ResponseNetwork<Body> {
 
     @Override // com.appsflyer.share.network.http.ResponseNetwork
     public List<String> getHeaderField(@NonNull String str) {
-        for (String str2 : this.f5276d.keySet()) {
+        for (String str2 : this.f5349d.keySet()) {
             if (str2 != null && str2.equalsIgnoreCase(str)) {
-                return this.f5276d.get(str2);
+                return this.f5349d.get(str2);
             }
         }
         return null;
@@ -80,7 +80,7 @@ public class AFd1fSDK<Body> implements ResponseNetwork<Body> {
     }
 
     public int hashCode() {
-        return (((((((this.registerClient.hashCode() * 31) + this.unregisterClient) * 31) + (this.AFLogger ? 1 : 0)) * 31) + this.f5276d.hashCode()) * 31) + this.AFKeystoreWrapper.hashCode();
+        return (((((((this.registerClient.hashCode() * 31) + this.unregisterClient) * 31) + (this.AFLogger ? 1 : 0)) * 31) + this.f5349d.hashCode()) * 31) + this.AFKeystoreWrapper.hashCode();
     }
 
     @Override // com.appsflyer.share.network.http.ResponseNetwork

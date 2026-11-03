@@ -2,14 +2,14 @@ package com.roblox.client.captcha;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import sg.a1;
+import rg.a1;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class LoginCaptchaConfig implements CaptchaConfig {
     public static final Parcelable.Creator<LoginCaptchaConfig> CREATOR = new a();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public String f8977a;
+    public String f9051a;
     public String b;
 
     public class a implements Parcelable.Creator<LoginCaptchaConfig> {
@@ -29,21 +29,21 @@ public class LoginCaptchaConfig implements CaptchaConfig {
     public static /* synthetic */ class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f8978a;
+        public static final /* synthetic */ int[] f9052a;
 
         static {
             int[] iArr = new int[c.values().length];
-            f8978a = iArr;
+            f9052a = iArr;
             try {
                 iArr[c.EMAIL.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f8978a[c.PHONE_NUMBER.ordinal()] = 2;
+                f9052a[c.PHONE_NUMBER.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f8978a[c.USERNAME.ordinal()] = 3;
+                f9052a[c.USERNAME.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
         }
@@ -56,7 +56,7 @@ public class LoginCaptchaConfig implements CaptchaConfig {
     }
 
     public static String a(c cVar) {
-        int i10 = b.f8978a[cVar.ordinal()];
+        int i10 = b.f9052a[cVar.ordinal()];
         if (i10 != 1) {
             return i10 != 2 ? "username" : "phonenumber";
         }
@@ -70,26 +70,26 @@ public class LoginCaptchaConfig implements CaptchaConfig {
 
     @Override // com.roblox.client.captcha.CaptchaConfig
     public String getUrl() {
-        return a1.p(this.f8977a, this.b);
+        return a1.p(this.f9051a, this.b);
     }
 
     public String toString() {
-        return "CredentialType: " + this.f8977a + ". CredentialValue: " + this.b;
+        return "CredentialType: " + this.f9051a + ". CredentialValue: " + this.b;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i10) {
-        parcel.writeString(this.f8977a);
+        parcel.writeString(this.f9051a);
         parcel.writeString(this.b);
     }
 
     public LoginCaptchaConfig(c cVar, String str) {
-        this.f8977a = a(cVar);
+        this.f9051a = a(cVar);
         this.b = str;
     }
 
     public LoginCaptchaConfig(Parcel parcel) {
-        this.f8977a = parcel.readString();
+        this.f9051a = parcel.readString();
         this.b = parcel.readString();
     }
 }

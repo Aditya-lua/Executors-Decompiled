@@ -11,14 +11,14 @@ import com.google.android.apps.common.proguard.SideEffectFree;
 public final class i {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static Boolean f32095a;
+    public static Boolean f32748a;
     public static Boolean b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static Boolean f32096c;
+    public static Boolean f32749c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static Boolean f32097d;
+    public static Boolean f32750d;
 
     @SideEffectFree
     public static boolean a(@NonNull Context context) {
@@ -26,7 +26,7 @@ public final class i {
     }
 
     public static boolean b() {
-        int i10 = j9.h.f21189a;
+        int i10 = j9.h.f21762a;
         return "user".equals(Build.TYPE);
     }
 
@@ -48,10 +48,10 @@ public final class i {
 
     @SideEffectFree
     public static boolean e(@NonNull PackageManager packageManager) {
-        if (f32095a == null) {
-            f32095a = Boolean.valueOf(packageManager.hasSystemFeature("android.hardware.type.watch"));
+        if (f32748a == null) {
+            f32748a = Boolean.valueOf(packageManager.hasSystemFeature("android.hardware.type.watch"));
         }
-        return f32095a.booleanValue();
+        return f32748a.booleanValue();
     }
 
     public static boolean f(@NonNull Context context) {
@@ -62,21 +62,21 @@ public final class i {
     }
 
     public static boolean g(@NonNull Context context) {
-        if (f32096c == null) {
-            f32096c = Boolean.valueOf(m.g() ? context.getPackageManager().hasSystemFeature("android.hardware.type.embedded") : context.getPackageManager().hasSystemFeature("android.hardware.type.iot"));
+        if (f32749c == null) {
+            f32749c = Boolean.valueOf(m.g() ? context.getPackageManager().hasSystemFeature("android.hardware.type.embedded") : context.getPackageManager().hasSystemFeature("android.hardware.type.iot"));
         }
-        return f32096c.booleanValue();
+        return f32749c.booleanValue();
     }
 
     @SideEffectFree
     public static boolean h(@NonNull PackageManager packageManager) {
-        if (f32097d == null) {
+        if (f32750d == null) {
             boolean z10 = false;
             if (m.g() && packageManager.hasSystemFeature("android.hardware.type.automotive")) {
                 z10 = true;
             }
-            f32097d = Boolean.valueOf(z10);
+            f32750d = Boolean.valueOf(z10);
         }
-        return f32097d.booleanValue();
+        return f32750d.booleanValue();
     }
 }

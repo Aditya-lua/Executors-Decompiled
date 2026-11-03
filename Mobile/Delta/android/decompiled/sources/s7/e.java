@@ -6,21 +6,21 @@ import f7.m0;
 public class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static m0 f30495a = new d();
+    public static m0 f31042a = new d();
 
     public static void a(String str) {
-        f30495a.c(str);
+        f31042a.c(str);
     }
 
     public static void b(String str, Throwable th2) {
-        f30495a.b(str, th2);
+        f31042a.b(str, th2);
     }
 
     public static void c(String str) {
-        f30495a.a(str);
+        f31042a.a(str);
     }
 
     public static void d(String str, Throwable th2) {
-        f30495a.d(str, th2);
+        f31042a.d(str, th2);
     }
 }

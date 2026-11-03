@@ -6,12 +6,12 @@ import com.google.android.gms.tasks.Task;
 public final class z implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ Task f30616a;
+    public final /* synthetic */ Task f31163a;
     public final /* synthetic */ a0 b;
 
     public z(a0 a0Var, Task task) {
         this.b = a0Var;
-        this.f30616a = task;
+        this.f31163a = task;
     }
 
     @Override // java.lang.Runnable
@@ -19,8 +19,8 @@ public final class z implements Runnable {
         synchronized (this.b.b) {
             try {
                 a0 a0Var = this.b;
-                if (a0Var.f30574c != null) {
-                    a0Var.f30574c.onComplete(this.f30616a);
+                if (a0Var.f31121c != null) {
+                    a0Var.f31121c.onComplete(this.f31163a);
                 }
             } catch (Throwable th2) {
                 throw th2;

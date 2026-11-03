@@ -26,18 +26,18 @@ import okhttp3.internal.http2.Http2;
 public final class m {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Map<String, Map<Integer, q1>> f22910a;
+    public static final Map<String, Map<Integer, q1>> f23304a;
 
     static {
         HashMap map = new HashMap();
-        f22910a = map;
+        f23304a = map;
         HashMap map2 = new HashMap();
-        q1 q1Var = q1.f23838a;
+        q1 q1Var = q1.f24488a;
         map2.put(1, q1Var);
-        q1 q1Var2 = q1.f23840d;
+        q1 q1Var2 = q1.f24490d;
         map2.put(2, q1Var2);
         Integer numValueOf = Integer.valueOf(Barcode.FORMAT_AZTEC);
-        q1 q1Var3 = q1.f23841e;
+        q1 q1Var3 = q1.f24491e;
         map2.put(numValueOf, q1Var3);
         map2.put(8192, q1Var3);
         HashMap map3 = new HashMap();
@@ -79,16 +79,16 @@ public final class m {
 
     public static q1 b(String str, int i10) {
         q1 q1Var;
-        Map<Integer, q1> map = f22910a.get(str);
+        Map<Integer, q1> map = f23304a.get(str);
         if (map != null && (q1Var = map.get(Integer.valueOf(i10))) != null) {
             return q1Var;
         }
         r1.l("VideoConfigUtil", String.format("Unsupported mime type %s or profile level %d. Data space is unspecified.", str, Integer.valueOf(i10)));
-        return q1.f23838a;
+        return q1.f24488a;
     }
 
     public static CaptureEncodeRates c(c2 c2Var, Range<Integer> range) {
-        Range<Integer> range2 = v2.f17544q;
+        Range<Integer> range2 = v2.f18083q;
         int iIntValue = range2.equals(range) ? 30 : ((Integer) range.getUpper()).intValue();
         int iD = c2Var.d() != 0 ? c2Var.d() : iIntValue;
         Locale locale = Locale.ENGLISH;
@@ -155,7 +155,7 @@ public final class m {
     public static int f(int i10, int i11, int i12, int i13, int i14, int i15, int i16, int i17, int i18, Range<Integer> range) {
         int iDoubleValue = (int) (((double) i10) * new Rational(i11, i12).doubleValue() * new Rational(i13, i14).doubleValue() * new Rational(i15, i16).doubleValue() * new Rational(i17, i18).doubleValue());
         String str = r1.f("VideoConfigUtil") ? String.format("Base Bitrate(%dbps) * Bit Depth Ratio (%d / %d) * Frame Rate Ratio(%d / %d) * Width Ratio(%d / %d) * Height Ratio(%d / %d) = %d", Integer.valueOf(i10), Integer.valueOf(i11), Integer.valueOf(i12), Integer.valueOf(i13), Integer.valueOf(i14), Integer.valueOf(i15), Integer.valueOf(i16), Integer.valueOf(i17), Integer.valueOf(i18), Integer.valueOf(iDoubleValue)) : "";
-        if (!c2.f15828a.equals(range)) {
+        if (!c2.f16424a.equals(range)) {
             Integer num = (Integer) range.clamp(Integer.valueOf(iDoubleValue));
             int iIntValue = num.intValue();
             if (r1.f("VideoConfigUtil")) {
@@ -168,7 +168,7 @@ public final class m {
     }
 
     public static p1 g(p1 p1Var, boolean z10) {
-        if (p1Var.h() != q1.f23838a) {
+        if (p1Var.h() != q1.f24488a) {
             return p1Var;
         }
         MediaCodecDefaultDataSpaceQuirk mediaCodecDefaultDataSpaceQuirk = (MediaCodecDefaultDataSpaceQuirk) k1.c.b(MediaCodecDefaultDataSpaceQuirk.class);

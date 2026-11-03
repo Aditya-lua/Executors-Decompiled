@@ -4,21 +4,21 @@ package v7;
 public final class l1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static boolean f32808a = false;
+    public static boolean f33376a = false;
     public static long b = 3000;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static long f32809c = 30000;
+    public static long f33377c = 30000;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static int f32810d = 3;
+    public static int f33378d = 3;
 
     public static int a() {
-        return f32810d;
+        return f33378d;
     }
 
     public static long b() {
-        return f32809c;
+        return f33377c;
     }
 
     public static long c() {
@@ -26,11 +26,11 @@ public final class l1 {
     }
 
     public static void d(long j10) {
-        f32809c = j10;
+        f33377c = j10;
     }
 
     public static void e(int i10) {
-        f32810d = i10;
+        f33378d = i10;
     }
 
     public static void f(long j10) {
@@ -38,6 +38,6 @@ public final class l1 {
     }
 
     public static void g(boolean z10) {
-        f32808a = z10;
+        f33376a = z10;
     }
 }

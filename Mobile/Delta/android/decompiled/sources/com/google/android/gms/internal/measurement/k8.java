@@ -10,7 +10,7 @@ import android.util.Log;
 public final class k8 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static UserManager f6587a;
+    public static UserManager f6660a;
     public static volatile boolean b = !a();
 
     public static boolean a() {
@@ -40,10 +40,10 @@ public final class k8 {
                 while (true) {
                     boolean z10 = false;
                     if (i10 <= 2) {
-                        if (f6587a == null) {
-                            f6587a = (UserManager) context.getSystemService(UserManager.class);
+                        if (f6660a == null) {
+                            f6660a = (UserManager) context.getSystemService(UserManager.class);
                         }
-                        UserManager userManager = f6587a;
+                        UserManager userManager = f6660a;
                         if (userManager == null) {
                             z10 = true;
                         } else {
@@ -53,7 +53,7 @@ public final class k8 {
                                 }
                             } catch (NullPointerException e10) {
                                 Log.w("DirectBootUtils", "Failed to check if user is unlocked.", e10);
-                                f6587a = null;
+                                f6660a = null;
                                 i10++;
                             }
                         }
@@ -63,7 +63,7 @@ public final class k8 {
                         return z10;
                     }
                     if (z10) {
-                        f6587a = null;
+                        f6660a = null;
                     }
                     if (z10) {
                         b = true;

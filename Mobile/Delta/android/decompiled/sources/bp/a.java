@@ -1,86 +1,22 @@
 package bp;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import com.withpersona.sdk2.inquiry.shared.ui.PersonaMaterialButton;
-import zo.e0;
-import zo.f0;
+import ep.InquiryAttributes;
+import gt.n;
+import hv.x;
+import kotlin.Metadata;
+import okhttp3.RequestBody;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class a implements r5.a {
+@Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\b`\u0018\u00002\u00020\u0001J\u001e\u0010\u0006\u001a\b\u0012\u0004\u0012\u00020\u00050\u00042\u0006\u0010\u0003\u001a\u00020\u0002H¦@¢\u0006\u0004\b\u0006\u0010\u0007J$\u0010\r\u001a\u0006\u0012\u0002\b\u00030\f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\nH¦@¢\u0006\u0004\b\r\u0010\u000eJ$\u0010\u000f\u001a\u0006\u0012\u0002\b\u00030\f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\nH¦@¢\u0006\u0004\b\u000f\u0010\u000e¨\u0006\u0010À\u0006\u0003"}, d2 = {"Lbp/a;", "", "Lep/e;", "attributes", "Lgt/n;", "Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/i;", "c", "(Lep/e;Llt/b;)Ljava/lang/Object;", "", "sessionToken", "Lokhttp3/RequestBody;", "body", "Lhv/x;", "a", "(Ljava/lang/String;Lokhttp3/RequestBody;Llt/b;)Ljava/lang/Object;", "b", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public interface a {
+    @Nullable
+    Object a(@NotNull String str, @NotNull RequestBody requestBody, @NotNull lt.b<? super x<?>> bVar);
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    @NonNull
-    public final ConstraintLayout f4291a;
+    @Nullable
+    Object b(@NotNull String str, @NotNull RequestBody requestBody, @NotNull lt.b<? super x<?>> bVar);
 
-    @NonNull
-    public final ConstraintLayout b;
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    @NonNull
-    public final PersonaMaterialButton f4292c;
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    @NonNull
-    public final TextView f4293d;
-
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    @NonNull
-    public final TextView f4294e;
-
-    /* JADX INFO: renamed from: f, reason: collision with root package name */
-    @NonNull
-    public final PersonaMaterialButton f4295f;
-
-    public a(@NonNull ConstraintLayout constraintLayout, @NonNull ConstraintLayout constraintLayout2, @NonNull PersonaMaterialButton personaMaterialButton, @NonNull TextView textView, @NonNull TextView textView2, @NonNull PersonaMaterialButton personaMaterialButton2) {
-        this.f4291a = constraintLayout;
-        this.b = constraintLayout2;
-        this.f4292c = personaMaterialButton;
-        this.f4293d = textView;
-        this.f4294e = textView2;
-        this.f4295f = personaMaterialButton2;
-    }
-
-    @NonNull
-    public static a a(@NonNull View view) {
-        ConstraintLayout constraintLayout = (ConstraintLayout) view;
-        int i10 = e0.b;
-        PersonaMaterialButton personaMaterialButton = (PersonaMaterialButton) r5.b.a(view, i10);
-        if (personaMaterialButton != null) {
-            i10 = e0.f37856g;
-            TextView textView = (TextView) r5.b.a(view, i10);
-            if (textView != null) {
-                i10 = e0.f37857h;
-                TextView textView2 = (TextView) r5.b.a(view, i10);
-                if (textView2 != null) {
-                    i10 = e0.f37861l;
-                    PersonaMaterialButton personaMaterialButton2 = (PersonaMaterialButton) r5.b.a(view, i10);
-                    if (personaMaterialButton2 != null) {
-                        return new a(constraintLayout, constraintLayout, personaMaterialButton, textView, textView2, personaMaterialButton2);
-                    }
-                }
-            }
-        }
-        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
-    }
-
-    @NonNull
-    public static a c(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
-        View viewInflate = layoutInflater.inflate(f0.f37875a, viewGroup, false);
-        if (z10) {
-            viewGroup.addView(viewInflate);
-        }
-        return a(viewInflate);
-    }
-
-    @Override // r5.a
-    @NonNull
-    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public ConstraintLayout getRoot() {
-        return this.f4291a;
-    }
+    @Nullable
+    Object c(@NotNull InquiryAttributes inquiryAttributes, @NotNull lt.b<? super n<com.withpersona.sdk2.inquiry.internal.fallbackmode.i>> bVar);
 }

@@ -13,7 +13,7 @@ public final class n {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final n f34834a = new n();
+    public static final n f35332a = new n();
 
     @NotNull
     public static final <T extends u> u.a<T> a(@NotNull Context context, @NotNull Class<T> klass, @Nullable String name) {

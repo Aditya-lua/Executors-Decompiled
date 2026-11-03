@@ -9,28 +9,28 @@ import java.util.Comparator;
 public final class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Rational f28051a = new Rational(4, 3);
+    public static final Rational f28270a = new Rational(4, 3);
     public static final Rational b = new Rational(3, 4);
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final Rational f28052c = new Rational(16, 9);
+    public static final Rational f28271c = new Rational(16, 9);
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final Rational f28053d = new Rational(9, 16);
+    public static final Rational f28272d = new Rational(9, 16);
 
     /* JADX INFO: renamed from: p0.a$a, reason: collision with other inner class name */
-    public static final class C0489a implements Comparator<Rational> {
+    public static final class C0495a implements Comparator<Rational> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Rational f28054a;
+        public final Rational f28273a;
         public final RectF b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final Rational f28055c;
+        public final Rational f28274c;
 
-        public C0489a(Rational rational, Rational rational2) {
-            this.f28054a = rational;
-            this.f28055c = rational2 == null ? new Rational(4, 3) : rational2;
+        public C0495a(Rational rational, Rational rational2) {
+            this.f28273a = rational;
+            this.f28274c = rational2 == null ? new Rational(4, 3) : rational2;
             this.b = d(rational);
         }
 
@@ -65,10 +65,10 @@ public final class a {
         }
 
         public final RectF d(Rational rational) {
-            if (rational.floatValue() == this.f28055c.floatValue()) {
-                return new RectF(0.0f, 0.0f, this.f28055c.getNumerator(), this.f28055c.getDenominator());
+            if (rational.floatValue() == this.f28274c.floatValue()) {
+                return new RectF(0.0f, 0.0f, this.f28274c.getNumerator(), this.f28274c.getDenominator());
             }
-            return rational.floatValue() > this.f28055c.floatValue() ? new RectF(0.0f, 0.0f, this.f28055c.getNumerator(), (rational.getDenominator() * this.f28055c.getNumerator()) / rational.getNumerator()) : new RectF(0.0f, 0.0f, (rational.getNumerator() * this.f28055c.getDenominator()) / rational.getDenominator(), this.f28055c.getDenominator());
+            return rational.floatValue() > this.f28274c.floatValue() ? new RectF(0.0f, 0.0f, this.f28274c.getNumerator(), (rational.getDenominator() * this.f28274c.getNumerator()) / rational.getNumerator()) : new RectF(0.0f, 0.0f, (rational.getNumerator() * this.f28274c.getDenominator()) / rational.getDenominator(), this.f28274c.getDenominator());
         }
 
         public final boolean e(RectF rectF, RectF rectF2) {
@@ -77,7 +77,7 @@ public final class a {
     }
 
     public static boolean a(Size size, Rational rational) {
-        return b(size, rational, w0.d.f33584c);
+        return b(size, rational, w0.d.f33790c);
     }
 
     public static boolean b(Size size, Rational rational, Size size2) {

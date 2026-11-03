@@ -13,34 +13,34 @@ import sun.misc.Unsafe;
 public final class a7 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Unsafe f6997a;
+    public static final Unsafe f7071a;
     public static final Class b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final boolean f6998c;
+    public static final boolean f7072c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final z6 f6999d;
+    public static final z6 f7073d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final boolean f7000e;
+    public static final boolean f7074e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final long f7001f;
+    public static final long f7075f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final boolean f7002g;
+    public static final boolean f7076g;
 
     static {
         boolean z10;
         z6 z6Var;
         Unsafe unsafeK = k();
-        f6997a = unsafeK;
-        int i10 = e3.f7032a;
+        f7071a = unsafeK;
+        int i10 = e3.f7106a;
         b = Memory.class;
         Class cls = Long.TYPE;
         boolean z11 = z(cls);
-        f6998c = z11;
+        f7072c = z11;
         Class cls2 = Integer.TYPE;
         boolean z12 = z(cls2);
         z6 x6Var = null;
@@ -51,10 +51,10 @@ public final class a7 {
                 x6Var = new x6(unsafeK);
             }
         }
-        f6999d = x6Var;
+        f7073d = x6Var;
         if (x6Var != null) {
             try {
-                Class<?> cls3 = x6Var.f7358a.getClass();
+                Class<?> cls3 = x6Var.f7432a.getClass();
                 cls3.getMethod("objectFieldOffset", Field.class);
                 cls3.getMethod("getLong", Object.class, cls);
                 a();
@@ -62,12 +62,12 @@ public final class a7 {
                 l(th2);
             }
         }
-        z6 z6Var2 = f6999d;
+        z6 z6Var2 = f7073d;
         if (z6Var2 == null) {
             z10 = false;
         } else {
             try {
-                Class<?> cls4 = z6Var2.f7358a.getClass();
+                Class<?> cls4 = z6Var2.f7432a.getClass();
                 cls4.getMethod("objectFieldOffset", Field.class);
                 cls4.getMethod("arrayBaseOffset", Class.class);
                 cls4.getMethod("arrayIndexScale", Class.class);
@@ -83,8 +83,8 @@ public final class a7 {
                 z10 = false;
             }
         }
-        f7000e = z10;
-        f7001f = C(byte[].class);
+        f7074e = z10;
+        f7075f = C(byte[].class);
         C(boolean[].class);
         D(boolean[].class);
         C(int[].class);
@@ -98,36 +98,36 @@ public final class a7 {
         C(Object[].class);
         D(Object[].class);
         Field fieldA = a();
-        if (fieldA != null && (z6Var = f6999d) != null) {
-            z6Var.f7358a.objectFieldOffset(fieldA);
+        if (fieldA != null && (z6Var = f7073d) != null) {
+            z6Var.f7432a.objectFieldOffset(fieldA);
         }
-        f7002g = ByteOrder.nativeOrder() == ByteOrder.BIG_ENDIAN;
+        f7076g = ByteOrder.nativeOrder() == ByteOrder.BIG_ENDIAN;
     }
 
     public static boolean A(Object obj, long j10) {
-        return f6999d.g(obj, j10);
+        return f7073d.g(obj, j10);
     }
 
     public static boolean B() {
-        return f7000e;
+        return f7074e;
     }
 
     public static int C(Class cls) {
-        if (f7000e) {
-            return f6999d.f7358a.arrayBaseOffset(cls);
+        if (f7074e) {
+            return f7073d.f7432a.arrayBaseOffset(cls);
         }
         return -1;
     }
 
     public static int D(Class cls) {
-        if (f7000e) {
-            return f6999d.f7358a.arrayIndexScale(cls);
+        if (f7074e) {
+            return f7073d.f7432a.arrayIndexScale(cls);
         }
         return -1;
     }
 
     public static Field a() {
-        int i10 = e3.f7032a;
+        int i10 = e3.f7106a;
         Field fieldB = b(Buffer.class, "effectiveDirectAddress");
         if (fieldB != null) {
             return fieldB;
@@ -148,7 +148,7 @@ public final class a7 {
     }
 
     public static void c(Object obj, long j10, byte b10) {
-        Unsafe unsafe = f6999d.f7358a;
+        Unsafe unsafe = f7073d.f7432a;
         long j11 = (-4) & j10;
         int i10 = unsafe.getInt(obj, j11);
         int i11 = ((~((int) j10)) & 3) << 3;
@@ -156,38 +156,38 @@ public final class a7 {
     }
 
     public static void d(Object obj, long j10, byte b10) {
-        Unsafe unsafe = f6999d.f7358a;
+        Unsafe unsafe = f7073d.f7432a;
         long j11 = (-4) & j10;
         int i10 = (((int) j10) & 3) << 3;
         unsafe.putInt(obj, j11, ((255 & b10) << i10) | (unsafe.getInt(obj, j11) & (~(255 << i10))));
     }
 
     public static double e(Object obj, long j10) {
-        return f6999d.a(obj, j10);
+        return f7073d.a(obj, j10);
     }
 
     public static float f(Object obj, long j10) {
-        return f6999d.b(obj, j10);
+        return f7073d.b(obj, j10);
     }
 
     public static int g(Object obj, long j10) {
-        return f6999d.f7358a.getInt(obj, j10);
+        return f7073d.f7432a.getInt(obj, j10);
     }
 
     public static long h(Object obj, long j10) {
-        return f6999d.f7358a.getLong(obj, j10);
+        return f7073d.f7432a.getLong(obj, j10);
     }
 
     public static Object i(Class cls) {
         try {
-            return f6997a.allocateInstance(cls);
+            return f7071a.allocateInstance(cls);
         } catch (InstantiationException e10) {
             throw new IllegalStateException(e10);
         }
     }
 
     public static Object j(Object obj, long j10) {
-        return f6999d.f7358a.getObject(obj, j10);
+        return f7073d.f7432a.getObject(obj, j10);
     }
 
     public static Unsafe k() {
@@ -214,43 +214,43 @@ public final class a7 {
     }
 
     public static void q(Object obj, long j10, boolean z10) {
-        f6999d.c(obj, j10, z10);
+        f7073d.c(obj, j10, z10);
     }
 
     public static void r(byte[] bArr, long j10, byte b10) {
-        f6999d.d(bArr, f7001f + j10, b10);
+        f7073d.d(bArr, f7075f + j10, b10);
     }
 
     public static void s(Object obj, long j10, double d10) {
-        f6999d.e(obj, j10, d10);
+        f7073d.e(obj, j10, d10);
     }
 
     public static void t(Object obj, long j10, float f10) {
-        f6999d.f(obj, j10, f10);
+        f7073d.f(obj, j10, f10);
     }
 
     public static void u(Object obj, long j10, int i10) {
-        f6999d.f7358a.putInt(obj, j10, i10);
+        f7073d.f7432a.putInt(obj, j10, i10);
     }
 
     public static void v(Object obj, long j10, long j11) {
-        f6999d.f7358a.putLong(obj, j10, j11);
+        f7073d.f7432a.putLong(obj, j10, j11);
     }
 
     public static void w(Object obj, long j10, Object obj2) {
-        f6999d.f7358a.putObject(obj, j10, obj2);
+        f7073d.f7432a.putObject(obj, j10, obj2);
     }
 
     public static /* bridge */ /* synthetic */ boolean x(Object obj, long j10) {
-        return ((byte) ((f6999d.f7358a.getInt(obj, (-4) & j10) >>> ((int) (((~j10) & 3) << 3))) & 255)) != 0;
+        return ((byte) ((f7073d.f7432a.getInt(obj, (-4) & j10) >>> ((int) (((~j10) & 3) << 3))) & 255)) != 0;
     }
 
     public static /* bridge */ /* synthetic */ boolean y(Object obj, long j10) {
-        return ((byte) ((f6999d.f7358a.getInt(obj, (-4) & j10) >>> ((int) ((j10 & 3) << 3))) & 255)) != 0;
+        return ((byte) ((f7073d.f7432a.getInt(obj, (-4) & j10) >>> ((int) ((j10 & 3) << 3))) & 255)) != 0;
     }
 
     public static boolean z(Class cls) {
-        int i10 = e3.f7032a;
+        int i10 = e3.f7106a;
         try {
             Class cls2 = b;
             Class cls3 = Boolean.TYPE;

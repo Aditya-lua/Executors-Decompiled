@@ -33,20 +33,20 @@ import l9.q0;
 public class c extends d {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public String f21175c;
+    public String f21748c;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final Object f21173e = new Object();
+    public static final Object f21746e = new Object();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final c f21174f = new c();
+    public static final c f21747f = new c();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final int f21172d = d.f21184a;
+    public static final int f21745d = d.f21757a;
 
     @NonNull
     public static c o() {
-        return f21174f;
+        return f21747f;
     }
 
     @NonNull
@@ -98,7 +98,7 @@ public class c extends d {
         return z(gVar, gVarArr).o(new sb.j() { // from class: j9.m
             @Override // sb.j
             public final Task then(Object obj) {
-                int i10 = c.f21172d;
+                int i10 = c.f21745d;
                 return sb.m.f(null);
             }
         });
@@ -227,22 +227,22 @@ public class c extends d {
             n9.m.p(u9.m.d());
             fVarB.z(context.getApplicationInfo().icon).x(2);
             if (u9.i.d(context)) {
-                fVarB.a(h9.a.f18734a, resources.getString(h9.b.f18748o), pendingIntent);
+                fVarB.a(h9.a.f19221a, resources.getString(h9.b.f19235o), pendingIntent);
             } else {
                 fVarB.j(pendingIntent);
             }
         } else {
-            fVarB.z(R.drawable.stat_sys_warning).C(resources.getString(h9.b.f18741h)).G(System.currentTimeMillis()).j(pendingIntent).k(strD);
+            fVarB.z(R.drawable.stat_sys_warning).C(resources.getString(h9.b.f19228h)).G(System.currentTimeMillis()).j(pendingIntent).k(strD);
         }
         if (u9.m.g()) {
             n9.m.p(u9.m.g());
-            synchronized (f21173e) {
-                str2 = this.f21175c;
+            synchronized (f21746e) {
+                str2 = this.f21748c;
             }
             if (str2 == null) {
                 str2 = "com.google.android.gms.availability";
                 NotificationChannel notificationChannel = notificationManager.getNotificationChannel("com.google.android.gms.availability");
-                String string = context.getResources().getString(h9.b.f18740g);
+                String string = context.getResources().getString(h9.b.f19227g);
                 if (notificationChannel == null) {
                     notificationManager.createNotificationChannel(new NotificationChannel("com.google.android.gms.availability", string, 4));
                 } else if (!string.contentEquals(notificationChannel.getName())) {
@@ -281,7 +281,7 @@ public class c extends d {
         if (w9.a.a(context) || (pendingIntentN = n(context, connectionResult)) == null) {
             return false;
         }
-        v(context, connectionResult.w3(), null, PendingIntent.getActivity(context, 0, GoogleApiActivity.a(context, pendingIntentN, i10, true), bb.i.f4084a | 134217728));
+        v(context, connectionResult.w3(), null, PendingIntent.getActivity(context, 0, GoogleApiActivity.a(context, pendingIntentN, i10, true), bb.i.f3982a | 134217728));
         return true;
     }
 }

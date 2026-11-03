@@ -15,7 +15,7 @@ public final class View {
     public static final s a(@NotNull android.view.View view) {
         Intrinsics.checkNotNullParameter(view, "<this>");
         while (view != null) {
-            Object tag = view.getTag(a.f21091a);
+            Object tag = view.getTag(a.f21664a);
             s sVar = tag instanceof s ? (s) tag : null;
             if (sVar != null) {
                 return sVar;
@@ -28,6 +28,6 @@ public final class View {
 
     public static final void b(@NotNull android.view.View view, @Nullable s sVar) {
         Intrinsics.checkNotNullParameter(view, "<this>");
-        view.setTag(a.f21091a, sVar);
+        view.setTag(a.f21664a, sVar);
     }
 }

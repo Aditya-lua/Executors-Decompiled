@@ -22,27 +22,27 @@ public final class g0 implements s0.q<f0> {
     public static final n0.n1.a<h3> Z;
 
     /* JADX INFO: renamed from: a0, reason: collision with root package name */
-    public static final n0.n1.a<Integer> f17429a0;
+    public static final n0.n1.a<Integer> f17968a0;
 
     /* JADX INFO: renamed from: b0, reason: collision with root package name */
-    public static final n0.n1.a<Boolean> f17430b0;
+    public static final n0.n1.a<Boolean> f17969b0;
     public final c3 P;
 
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final n0.x2 f17431a;
+        public final n0.x2 f17970a;
 
         public a() {
             this(n0.x2.k0());
         }
 
         public g0 a() {
-            return new g0(c3.j0(this.f17431a));
+            return new g0(c3.j0(this.f17970a));
         }
 
         public n0.w2 b() {
-            return this.f17431a;
+            return this.f17970a;
         }
 
         public a c(n0.n0.a aVar) {
@@ -51,7 +51,7 @@ public final class g0 implements s0.q<f0> {
         }
 
         public a d(int i10) {
-            b().G(g0.f17429a0, Integer.valueOf(i10));
+            b().G(g0.f17968a0, Integer.valueOf(i10));
             return this;
         }
 
@@ -61,7 +61,7 @@ public final class g0 implements s0.q<f0> {
         }
 
         public a f(boolean z10) {
-            b().G(g0.f17430b0, Boolean.valueOf(z10));
+            b().G(g0.f17969b0, Boolean.valueOf(z10));
             return this;
         }
 
@@ -84,7 +84,7 @@ public final class g0 implements s0.q<f0> {
         }
 
         public a(n0.x2 x2Var) {
-            this.f17431a = x2Var;
+            this.f17970a = x2Var;
             Class cls = (Class) x2Var.h(s0.q.N, null);
             if (cls == null || cls.equals(f0.class)) {
                 g(f0.class);
@@ -105,8 +105,8 @@ public final class g0 implements s0.q<f0> {
         X = n0.n1.a.a("camerax.core.appConfig.cameraOpenRetryMaxTimeoutInMillisWhileResuming", Long.TYPE);
         Y = n0.n1.a.a("camerax.core.appConfig.cameraProviderInitRetryPolicy", c2.class);
         Z = n0.n1.a.a("camerax.core.appConfig.quirksSettings", h3.class);
-        f17429a0 = n0.n1.a.a("camerax.core.appConfig.configImplType", cls);
-        f17430b0 = n0.n1.a.a("camerax.core.appConfig.repeatingStreamForced", Boolean.TYPE);
+        f17968a0 = n0.n1.a.a("camerax.core.appConfig.configImplType", cls);
+        f17969b0 = n0.n1.a.a("camerax.core.appConfig.repeatingStreamForced", Boolean.TYPE);
     }
 
     public g0(c3 c3Var) {
@@ -136,7 +136,7 @@ public final class g0 implements s0.q<f0> {
     }
 
     public int m0() {
-        return ((Integer) this.P.h(f17429a0, -1)).intValue();
+        return ((Integer) this.P.h(f17968a0, -1)).intValue();
     }
 
     @Override // n0.l3
@@ -161,6 +161,6 @@ public final class g0 implements s0.q<f0> {
     }
 
     public boolean r0() {
-        return ((Boolean) this.P.h(f17430b0, Boolean.TRUE)).booleanValue();
+        return ((Boolean) this.P.h(f17969b0, Boolean.TRUE)).booleanValue();
     }
 }

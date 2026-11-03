@@ -89,8 +89,8 @@ public class j<K, V> {
 
     public void clear() {
         if (this.size > 0) {
-            this.hashes = x1.a.f34678a;
-            this.array = x1.a.f34679c;
+            this.hashes = x1.a.f35176a;
+            this.array = x1.a.f35177c;
             this.size = 0;
         }
         if (this.size > 0) {
@@ -437,8 +437,8 @@ public class j<K, V> {
     }
 
     public j(int i10) {
-        this.hashes = i10 == 0 ? x1.a.f34678a : new int[i10];
-        this.array = i10 == 0 ? x1.a.f34679c : new Object[i10 << 1];
+        this.hashes = i10 == 0 ? x1.a.f35176a : new int[i10];
+        this.array = i10 == 0 ? x1.a.f35177c : new Object[i10 << 1];
     }
 
     public boolean remove(K key, V value) {

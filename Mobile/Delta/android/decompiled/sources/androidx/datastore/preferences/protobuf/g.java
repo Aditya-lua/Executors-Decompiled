@@ -9,40 +9,40 @@ import java.util.NoSuchElementException;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class g implements Iterable<Byte>, Serializable {
-    public static final g b = new j(z.f2400d);
+    public static final g b = new j(z.f2245d);
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final f f2164c;
+    public static final f f2009c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final Comparator<g> f2165d;
+    public static final Comparator<g> f2010d;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f2166a = 0;
+    public int f2011a = 0;
 
     public class a extends c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public int f2167a = 0;
+        public int f2012a = 0;
         public final int b;
 
         public a() {
             this.b = g.this.size();
         }
 
-        @Override // androidx.datastore.preferences.protobuf.g.InterfaceC0032g
+        @Override // androidx.datastore.preferences.protobuf.g.InterfaceC0028g
         public byte c() {
-            int i10 = this.f2167a;
+            int i10 = this.f2012a;
             if (i10 >= this.b) {
                 throw new NoSuchElementException();
             }
-            this.f2167a = i10 + 1;
+            this.f2012a = i10 + 1;
             return g.this.i(i10);
         }
 
         @Override // java.util.Iterator
         public boolean hasNext() {
-            return this.f2167a < this.b;
+            return this.f2012a < this.b;
         }
     }
 
@@ -50,8 +50,8 @@ public abstract class g implements Iterable<Byte>, Serializable {
         @Override // java.util.Comparator
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public int compare(g gVar, g gVar2) {
-            InterfaceC0032g it = gVar.iterator();
-            InterfaceC0032g it2 = gVar2.iterator();
+            InterfaceC0028g it = gVar.iterator();
+            InterfaceC0028g it2 = gVar2.iterator();
             while (it.hasNext() && it2.hasNext()) {
                 int iCompareTo = Integer.valueOf(g.y(it.c())).compareTo(Integer.valueOf(g.y(it2.c())));
                 if (iCompareTo != 0) {
@@ -62,7 +62,7 @@ public abstract class g implements Iterable<Byte>, Serializable {
         }
     }
 
-    public static abstract class c implements InterfaceC0032g {
+    public static abstract class c implements InterfaceC0028g {
         @Override // java.util.Iterator
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final Byte next() {
@@ -92,42 +92,42 @@ public abstract class g implements Iterable<Byte>, Serializable {
     public static final class e extends j {
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public final int f2169f;
+        public final int f2014f;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public final int f2170g;
+        public final int f2015g;
 
         public e(byte[] bArr, int i10, int i11) {
             super(bArr);
             g.d(i10, i10 + i11, bArr.length);
-            this.f2169f = i10;
-            this.f2170g = i11;
+            this.f2014f = i10;
+            this.f2015g = i11;
         }
 
         @Override // androidx.datastore.preferences.protobuf.g.j
         public int E() {
-            return this.f2169f;
+            return this.f2014f;
         }
 
         @Override // androidx.datastore.preferences.protobuf.g.j, androidx.datastore.preferences.protobuf.g
         public byte b(int i10) {
             g.c(i10, size());
-            return this.f2172e[this.f2169f + i10];
+            return this.f2017e[this.f2014f + i10];
         }
 
         @Override // androidx.datastore.preferences.protobuf.g.j, androidx.datastore.preferences.protobuf.g
         public void h(byte[] bArr, int i10, int i11, int i12) {
-            System.arraycopy(this.f2172e, E() + i10, bArr, i11, i12);
+            System.arraycopy(this.f2017e, E() + i10, bArr, i11, i12);
         }
 
         @Override // androidx.datastore.preferences.protobuf.g.j, androidx.datastore.preferences.protobuf.g
         public byte i(int i10) {
-            return this.f2172e[this.f2169f + i10];
+            return this.f2017e[this.f2014f + i10];
         }
 
         @Override // androidx.datastore.preferences.protobuf.g.j, androidx.datastore.preferences.protobuf.g
         public int size() {
-            return this.f2170g;
+            return this.f2015g;
         }
     }
 
@@ -136,14 +136,14 @@ public abstract class g implements Iterable<Byte>, Serializable {
     }
 
     /* JADX INFO: renamed from: androidx.datastore.preferences.protobuf.g$g, reason: collision with other inner class name */
-    public interface InterfaceC0032g extends Iterator<Byte> {
+    public interface InterfaceC0028g extends Iterator<Byte> {
         byte c();
     }
 
     public static final class h {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final androidx.datastore.preferences.protobuf.j f2171a;
+        public final androidx.datastore.preferences.protobuf.j f2016a;
         public final byte[] b;
 
         public /* synthetic */ h(int i10, a aVar) {
@@ -151,18 +151,18 @@ public abstract class g implements Iterable<Byte>, Serializable {
         }
 
         public g a() {
-            this.f2171a.c();
+            this.f2016a.c();
             return new j(this.b);
         }
 
         public androidx.datastore.preferences.protobuf.j b() {
-            return this.f2171a;
+            return this.f2016a;
         }
 
         public h(int i10) {
             byte[] bArr = new byte[i10];
             this.b = bArr;
-            this.f2171a = androidx.datastore.preferences.protobuf.j.f0(bArr);
+            this.f2016a = androidx.datastore.preferences.protobuf.j.f0(bArr);
         }
     }
 
@@ -183,17 +183,17 @@ public abstract class g implements Iterable<Byte>, Serializable {
     public static class j extends i {
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final byte[] f2172e;
+        public final byte[] f2017e;
 
         public j(byte[] bArr) {
             super(null);
             bArr.getClass();
-            this.f2172e = bArr;
+            this.f2017e = bArr;
         }
 
         @Override // androidx.datastore.preferences.protobuf.g
         public final void C(androidx.datastore.preferences.protobuf.f fVar) {
-            fVar.a(this.f2172e, E(), size());
+            fVar.a(this.f2017e, E(), size());
         }
 
         public final boolean D(g gVar, int i10, int i11) {
@@ -208,8 +208,8 @@ public abstract class g implements Iterable<Byte>, Serializable {
                 return gVar.u(i10, i12).equals(u(0, i11));
             }
             j jVar = (j) gVar;
-            byte[] bArr = this.f2172e;
-            byte[] bArr2 = jVar.f2172e;
+            byte[] bArr = this.f2017e;
+            byte[] bArr2 = jVar.f2017e;
             int iE = E() + i11;
             int iE2 = E();
             int iE3 = jVar.E() + i10;
@@ -229,7 +229,7 @@ public abstract class g implements Iterable<Byte>, Serializable {
 
         @Override // androidx.datastore.preferences.protobuf.g
         public byte b(int i10) {
-            return this.f2172e[i10];
+            return this.f2017e[i10];
         }
 
         @Override // androidx.datastore.preferences.protobuf.g
@@ -257,33 +257,33 @@ public abstract class g implements Iterable<Byte>, Serializable {
 
         @Override // androidx.datastore.preferences.protobuf.g
         public void h(byte[] bArr, int i10, int i11, int i12) {
-            System.arraycopy(this.f2172e, i10, bArr, i11, i12);
+            System.arraycopy(this.f2017e, i10, bArr, i11, i12);
         }
 
         @Override // androidx.datastore.preferences.protobuf.g
         public byte i(int i10) {
-            return this.f2172e[i10];
+            return this.f2017e[i10];
         }
 
         @Override // androidx.datastore.preferences.protobuf.g
         public final androidx.datastore.preferences.protobuf.h m() {
-            return androidx.datastore.preferences.protobuf.h.k(this.f2172e, E(), size(), true);
+            return androidx.datastore.preferences.protobuf.h.k(this.f2017e, E(), size(), true);
         }
 
         @Override // androidx.datastore.preferences.protobuf.g
         public final int p(int i10, int i11, int i12) {
-            return z.h(i10, this.f2172e, E() + i11, i12);
+            return z.h(i10, this.f2017e, E() + i11, i12);
         }
 
         @Override // androidx.datastore.preferences.protobuf.g
         public int size() {
-            return this.f2172e.length;
+            return this.f2017e.length;
         }
 
         @Override // androidx.datastore.preferences.protobuf.g
         public final g u(int i10, int i11) {
             int iD = g.d(i10, i11, size());
-            return iD == 0 ? g.b : new e(this.f2172e, E() + i10, iD);
+            return iD == 0 ? g.b : new e(this.f2017e, E() + i10, iD);
         }
     }
 
@@ -305,8 +305,8 @@ public abstract class g implements Iterable<Byte>, Serializable {
 
     static {
         a aVar = null;
-        f2164c = androidx.datastore.preferences.protobuf.d.c() ? new k(aVar) : new d(aVar);
-        f2165d = new b();
+        f2009c = androidx.datastore.preferences.protobuf.d.c() ? new k(aVar) : new d(aVar);
+        f2010d = new b();
     }
 
     public static g A(byte[] bArr) {
@@ -346,7 +346,7 @@ public abstract class g implements Iterable<Byte>, Serializable {
 
     public static g f(byte[] bArr, int i10, int i11) {
         d(i10, i10 + i11, bArr.length);
-        return new j(f2164c.a(bArr, i10, i11));
+        return new j(f2009c.a(bArr, i10, i11));
     }
 
     public static g g(String str) {
@@ -370,14 +370,14 @@ public abstract class g implements Iterable<Byte>, Serializable {
     public abstract void h(byte[] bArr, int i10, int i11, int i12);
 
     public final int hashCode() {
-        int iP = this.f2166a;
+        int iP = this.f2011a;
         if (iP == 0) {
             int size = size();
             iP = p(size, 0, size);
             if (iP == 0) {
                 iP = 1;
             }
-            this.f2166a = iP;
+            this.f2011a = iP;
         }
         return iP;
     }
@@ -386,7 +386,7 @@ public abstract class g implements Iterable<Byte>, Serializable {
 
     @Override // java.lang.Iterable
     /* JADX INFO: renamed from: k, reason: merged with bridge method [inline-methods] */
-    public InterfaceC0032g iterator() {
+    public InterfaceC0028g iterator() {
         return new a();
     }
 
@@ -397,7 +397,7 @@ public abstract class g implements Iterable<Byte>, Serializable {
     public abstract int size();
 
     public final int t() {
-        return this.f2166a;
+        return this.f2011a;
     }
 
     public final String toString() {
@@ -409,7 +409,7 @@ public abstract class g implements Iterable<Byte>, Serializable {
     public final byte[] x() {
         int size = size();
         if (size == 0) {
-            return z.f2400d;
+            return z.f2245d;
         }
         byte[] bArr = new byte[size];
         h(bArr, 0, 0, size);

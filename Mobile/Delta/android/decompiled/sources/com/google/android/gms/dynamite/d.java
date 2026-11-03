@@ -5,19 +5,19 @@ import android.content.Context;
 /* JADX INFO: loaded from: classes.dex */
 public final class d implements DynamiteModule.b {
     @Override // com.google.android.gms.dynamite.DynamiteModule.b
-    public final DynamiteModule.b.C0115b a(Context context, String str, DynamiteModule.b.a aVar) {
-        DynamiteModule.b.C0115b c0115b = new DynamiteModule.b.C0115b();
+    public final DynamiteModule.b.C0119b a(Context context, String str, DynamiteModule.b.a aVar) {
+        DynamiteModule.b.C0119b c0119b = new DynamiteModule.b.C0119b();
         int iB = aVar.b(context, str);
-        c0115b.f5881a = iB;
+        c0119b.f5954a = iB;
         if (iB != 0) {
-            c0115b.f5882c = -1;
-            return c0115b;
+            c0119b.f5955c = -1;
+            return c0119b;
         }
         int iA = aVar.a(context, str, true);
-        c0115b.b = iA;
+        c0119b.b = iA;
         if (iA != 0) {
-            c0115b.f5882c = 1;
+            c0119b.f5955c = 1;
         }
-        return c0115b;
+        return c0119b;
     }
 }

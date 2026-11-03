@@ -7,19 +7,19 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class m0 extends x {
     public m0() {
-        this.f6892a.add(n0.ASSIGN);
-        this.f6892a.add(n0.CONST);
-        this.f6892a.add(n0.CREATE_ARRAY);
-        this.f6892a.add(n0.CREATE_OBJECT);
-        this.f6892a.add(n0.EXPRESSION_LIST);
-        this.f6892a.add(n0.GET);
-        this.f6892a.add(n0.GET_INDEX);
-        this.f6892a.add(n0.GET_PROPERTY);
-        this.f6892a.add(n0.NULL);
-        this.f6892a.add(n0.SET_PROPERTY);
-        this.f6892a.add(n0.TYPEOF);
-        this.f6892a.add(n0.UNDEFINED);
-        this.f6892a.add(n0.VAR);
+        this.f6966a.add(n0.ASSIGN);
+        this.f6966a.add(n0.CONST);
+        this.f6966a.add(n0.CREATE_ARRAY);
+        this.f6966a.add(n0.CREATE_OBJECT);
+        this.f6966a.add(n0.EXPRESSION_LIST);
+        this.f6966a.add(n0.GET);
+        this.f6966a.add(n0.GET_INDEX);
+        this.f6966a.add(n0.GET_PROPERTY);
+        this.f6966a.add(n0.NULL);
+        this.f6966a.add(n0.SET_PROPERTY);
+        this.f6966a.add(n0.TYPEOF);
+        this.f6966a.add(n0.UNDEFINED);
+        this.f6966a.add(n0.VAR);
     }
 
     @Override // com.google.android.gms.internal.measurement.x
@@ -54,11 +54,11 @@ public final class m0 extends x {
                 u4Var.g(qVarA3.zzc(), u4Var.a((q) list.get(i10 + 1)));
                 i10 += 2;
             }
-            return q.f6743zo;
+            return q.f6816yo;
         }
         if (iOrdinal == 24) {
             v5.b(n0.EXPRESSION_LIST.name(), 1, list);
-            q qVarA4 = q.f6743zo;
+            q qVarA4 = q.f6816yo;
             while (i10 < list.size()) {
                 qVarA4 = u4Var.a((q) list.get(i10));
                 if (qVarA4 instanceof h) {
@@ -78,14 +78,14 @@ public final class m0 extends x {
         }
         if (iOrdinal == 49) {
             v5.a(n0.NULL.name(), 0, list);
-            return q.Ao;
+            return q.f6817zo;
         }
         if (iOrdinal == 58) {
             v5.a(n0.SET_PROPERTY.name(), 3, list);
             q qVarA6 = u4Var.a((q) list.get(0));
             q qVarA7 = u4Var.a((q) list.get(1));
             q qVarA8 = u4Var.a((q) list.get(2));
-            if (qVarA6 == q.f6743zo || qVarA6 == q.Ao) {
+            if (qVarA6 == q.f6816yo || qVarA6 == q.f6817zo) {
                 throw new IllegalStateException(String.format("Can't set property %s of %s", qVarA7.zzc(), qVarA6.zzc()));
             }
             if ((qVarA6 instanceof f) && (qVarA7 instanceof j)) {
@@ -151,7 +151,7 @@ public final class m0 extends x {
                     return new u(String.valueOf(qVarA12.zzc().charAt(qVarA13.zzd().intValue())));
                 }
             }
-            return q.f6743zo;
+            return q.f6816yo;
         }
         switch (iOrdinal) {
             case 62:
@@ -176,7 +176,7 @@ public final class m0 extends x {
                 return new u(str2);
             case 63:
                 v5.a(n0.UNDEFINED.name(), 0, list);
-                return q.f6743zo;
+                return q.f6816yo;
             case 64:
                 v5.b(n0.VAR.name(), 1, list);
                 Iterator it2 = list.iterator();
@@ -185,9 +185,9 @@ public final class m0 extends x {
                     if (!(qVarA15 instanceof u)) {
                         throw new IllegalArgumentException(String.format("Expected string for var name. got %s", qVarA15.getClass().getCanonicalName()));
                     }
-                    u4Var.f(qVarA15.zzc(), q.f6743zo);
+                    u4Var.f(qVarA15.zzc(), q.f6816yo);
                 }
-                return q.f6743zo;
+                return q.f6816yo;
             default:
                 return super.b(str);
         }

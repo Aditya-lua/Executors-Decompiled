@@ -12,46 +12,46 @@ import n0.a4;
 public class n implements x2.h<p1> {
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final Size f22911g = new Size(1280, 720);
+    public static final Size f23305g = new Size(1280, 720);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f22912a;
+    public final String f23306a;
     public final a4 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final c2 f22913c;
+    public final c2 f23307c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Size f22914d;
+    public final Size f23308d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final k0 f22915e;
+    public final k0 f23309e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final Range<Integer> f22916f;
+    public final Range<Integer> f23310f;
 
     public n(String str, a4 a4Var, c2 c2Var, Size size, k0 k0Var, Range<Integer> range) {
-        this.f22912a = str;
+        this.f23306a = str;
         this.b = a4Var;
-        this.f22913c = c2Var;
-        this.f22914d = size;
-        this.f22915e = k0Var;
-        this.f22916f = range;
+        this.f23307c = c2Var;
+        this.f23308d = size;
+        this.f23309e = k0Var;
+        this.f23310f = range;
     }
 
     @Override // x2.h
     /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
     public p1 get() {
-        CaptureEncodeRates captureEncodeRatesC = m.c(this.f22913c, this.f22916f);
+        CaptureEncodeRates captureEncodeRatesC = m.c(this.f23307c, this.f23310f);
         r1.a("VidEncCfgDefaultRslvr", "Resolved VIDEO frame rates: Capture frame rate = " + captureEncodeRatesC.getCaptureRate() + "fps. Encode frame rate = " + captureEncodeRatesC.getEncodeRate() + "fps.");
-        Range<Integer> rangeC = this.f22913c.c();
+        Range<Integer> rangeC = this.f23307c.c();
         r1.a("VidEncCfgDefaultRslvr", "Using fallback VIDEO bitrate");
-        int iA = this.f22915e.a();
+        int iA = this.f23309e.a();
         int encodeRate = captureEncodeRatesC.getEncodeRate();
-        int width = this.f22914d.getWidth();
-        Size size = f22911g;
-        int iF = m.f(14000000, iA, 8, encodeRate, 30, width, size.getWidth(), this.f22914d.getHeight(), size.getHeight(), rangeC);
-        int iA2 = n1.b.a(this.f22912a, this.f22915e);
-        return p1.d().i(this.f22912a).h(this.b).k(this.f22914d).b(iF).c(captureEncodeRatesC.getCaptureRate()).f(captureEncodeRatesC.getEncodeRate()).j(iA2).e(m.b(this.f22912a, iA2)).a();
+        int width = this.f23308d.getWidth();
+        Size size = f23305g;
+        int iF = m.f(14000000, iA, 8, encodeRate, 30, width, size.getWidth(), this.f23308d.getHeight(), size.getHeight(), rangeC);
+        int iA2 = n1.b.a(this.f23306a, this.f23309e);
+        return p1.d().i(this.f23306a).h(this.b).k(this.f23308d).b(iF).c(captureEncodeRatesC.getCaptureRate()).f(captureEncodeRatesC.getEncodeRate()).j(iA2).e(m.b(this.f23306a, iA2)).a();
     }
 }

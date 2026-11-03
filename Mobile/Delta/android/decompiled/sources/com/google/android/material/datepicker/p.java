@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class p {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static AtomicReference<o> f7920a = new AtomicReference<>();
+    public static AtomicReference<o> f7994a = new AtomicReference<>();
 
     public static long a(long j10) {
         Calendar calendarI = i();
@@ -41,7 +41,7 @@ public class p {
     }
 
     public static o e() {
-        o oVar = f7920a.get();
+        o oVar = f7994a.get();
         return oVar == null ? o.c() : oVar;
     }
 

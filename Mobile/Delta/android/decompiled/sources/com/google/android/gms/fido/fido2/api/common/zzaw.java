@@ -11,26 +11,26 @@ public final class zzaw extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzaw> CREATOR = new p();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final String f6043f;
+    public final String f6116f;
 
     public zzaw(String str) {
-        this.f6043f = str;
+        this.f6116f = str;
     }
 
     public final boolean equals(Object obj) {
         if (obj instanceof zzaw) {
-            return k.b(this.f6043f, ((zzaw) obj).f6043f);
+            return k.b(this.f6116f, ((zzaw) obj).f6116f);
         }
         return false;
     }
 
     public final int hashCode() {
-        return k.c(this.f6043f);
+        return k.c(this.f6116f);
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i10) {
-        String str = this.f6043f;
+        String str = this.f6116f;
         int iA = o9.b.a(parcel);
         o9.b.v(parcel, 1, str, false);
         o9.b.b(parcel, iA);

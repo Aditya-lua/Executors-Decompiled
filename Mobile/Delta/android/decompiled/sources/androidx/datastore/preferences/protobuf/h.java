@@ -11,59 +11,59 @@ import java.util.List;
 public abstract class h {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static volatile int f2173f = 100;
+    public static volatile int f2018f = 100;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f2174a;
+    public int f2019a;
     public int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f2175c;
+    public int f2020c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public i f2176d;
+    public i f2021d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public boolean f2177e;
+    public boolean f2022e;
 
     public static final class b extends h {
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public final byte[] f2178g;
+        public final byte[] f2023g;
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public final boolean f2179h;
+        public final boolean f2024h;
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public int f2180i;
+        public int f2025i;
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public int f2181j;
+        public int f2026j;
 
         /* JADX INFO: renamed from: k, reason: collision with root package name */
-        public int f2182k;
+        public int f2027k;
 
         /* JADX INFO: renamed from: l, reason: collision with root package name */
-        public int f2183l;
+        public int f2028l;
 
         /* JADX INFO: renamed from: m, reason: collision with root package name */
-        public int f2184m;
+        public int f2029m;
 
         /* JADX INFO: renamed from: n, reason: collision with root package name */
-        public boolean f2185n;
+        public boolean f2030n;
 
         /* JADX INFO: renamed from: o, reason: collision with root package name */
-        public int f2186o;
+        public int f2031o;
 
         @Override // androidx.datastore.preferences.protobuf.h
         public String A() throws a0 {
             int iL = L();
             if (iL > 0) {
-                int i10 = this.f2180i;
-                int i11 = this.f2182k;
+                int i10 = this.f2025i;
+                int i11 = this.f2027k;
                 if (iL <= i10 - i11) {
-                    String str = new String(this.f2178g, i11, iL, z.b);
-                    this.f2182k += iL;
+                    String str = new String(this.f2023g, i11, iL, z.b);
+                    this.f2027k += iL;
                     return str;
                 }
             }
@@ -80,11 +80,11 @@ public abstract class h {
         public String B() throws a0 {
             int iL = L();
             if (iL > 0) {
-                int i10 = this.f2180i;
-                int i11 = this.f2182k;
+                int i10 = this.f2025i;
+                int i11 = this.f2027k;
                 if (iL <= i10 - i11) {
-                    String strA = r1.a(this.f2178g, i11, iL);
-                    this.f2182k += iL;
+                    String strA = r1.a(this.f2023g, i11, iL);
+                    this.f2027k += iL;
                     return strA;
                 }
             }
@@ -100,13 +100,13 @@ public abstract class h {
         @Override // androidx.datastore.preferences.protobuf.h
         public int C() throws a0 {
             if (f()) {
-                this.f2184m = 0;
+                this.f2029m = 0;
                 return 0;
             }
             int iL = L();
-            this.f2184m = iL;
+            this.f2029m = iL;
             if (s1.a(iL) != 0) {
-                return this.f2184m;
+                return this.f2029m;
             }
             throw a0.c();
         }
@@ -152,64 +152,64 @@ public abstract class h {
         }
 
         public byte H() throws a0 {
-            int i10 = this.f2182k;
-            if (i10 == this.f2180i) {
+            int i10 = this.f2027k;
+            if (i10 == this.f2025i) {
                 throw a0.m();
             }
-            byte[] bArr = this.f2178g;
-            this.f2182k = i10 + 1;
+            byte[] bArr = this.f2023g;
+            this.f2027k = i10 + 1;
             return bArr[i10];
         }
 
         public byte[] I(int i10) throws a0 {
             if (i10 > 0) {
-                int i11 = this.f2180i;
-                int i12 = this.f2182k;
+                int i11 = this.f2025i;
+                int i12 = this.f2027k;
                 if (i10 <= i11 - i12) {
                     int i13 = i10 + i12;
-                    this.f2182k = i13;
-                    return Arrays.copyOfRange(this.f2178g, i12, i13);
+                    this.f2027k = i13;
+                    return Arrays.copyOfRange(this.f2023g, i12, i13);
                 }
             }
             if (i10 > 0) {
                 throw a0.m();
             }
             if (i10 == 0) {
-                return z.f2400d;
+                return z.f2245d;
             }
             throw a0.g();
         }
 
         public int J() throws a0 {
-            int i10 = this.f2182k;
-            if (this.f2180i - i10 < 4) {
+            int i10 = this.f2027k;
+            if (this.f2025i - i10 < 4) {
                 throw a0.m();
             }
-            byte[] bArr = this.f2178g;
-            this.f2182k = i10 + 4;
+            byte[] bArr = this.f2023g;
+            this.f2027k = i10 + 4;
             return ((bArr[i10 + 3] & 255) << 24) | (bArr[i10] & 255) | ((bArr[i10 + 1] & 255) << 8) | ((bArr[i10 + 2] & 255) << 16);
         }
 
         public long K() throws a0 {
-            int i10 = this.f2182k;
-            if (this.f2180i - i10 < 8) {
+            int i10 = this.f2027k;
+            if (this.f2025i - i10 < 8) {
                 throw a0.m();
             }
-            byte[] bArr = this.f2178g;
-            this.f2182k = i10 + 8;
+            byte[] bArr = this.f2023g;
+            this.f2027k = i10 + 8;
             return ((((long) bArr[i10 + 7]) & 255) << 56) | (((long) bArr[i10]) & 255) | ((((long) bArr[i10 + 1]) & 255) << 8) | ((((long) bArr[i10 + 2]) & 255) << 16) | ((((long) bArr[i10 + 3]) & 255) << 24) | ((((long) bArr[i10 + 4]) & 255) << 32) | ((((long) bArr[i10 + 5]) & 255) << 40) | ((((long) bArr[i10 + 6]) & 255) << 48);
         }
 
         public int L() {
             int i10;
-            int i11 = this.f2182k;
-            int i12 = this.f2180i;
+            int i11 = this.f2027k;
+            int i12 = this.f2025i;
             if (i12 != i11) {
-                byte[] bArr = this.f2178g;
+                byte[] bArr = this.f2023g;
                 int i13 = i11 + 1;
                 byte b = bArr[i11];
                 if (b >= 0) {
-                    this.f2182k = i13;
+                    this.f2027k = i13;
                     return b;
                 }
                 if (i12 - i13 >= 9) {
@@ -257,7 +257,7 @@ public abstract class h {
                         }
                         i14 = i16;
                     }
-                    this.f2182k = i14;
+                    this.f2027k = i14;
                     return i10;
                 }
             }
@@ -268,14 +268,14 @@ public abstract class h {
             long j10;
             long j11;
             long j12;
-            int i10 = this.f2182k;
-            int i11 = this.f2180i;
+            int i10 = this.f2027k;
+            int i11 = this.f2025i;
             if (i11 != i10) {
-                byte[] bArr = this.f2178g;
+                byte[] bArr = this.f2023g;
                 int i12 = i10 + 1;
                 byte b = bArr[i10];
                 if (b >= 0) {
-                    this.f2182k = i12;
+                    this.f2027k = i12;
                     return b;
                 }
                 if (i11 - i12 >= 9) {
@@ -337,7 +337,7 @@ public abstract class h {
                             }
                         }
                     }
-                    this.f2182k = i13;
+                    this.f2027k = i13;
                     return j10;
                 }
             }
@@ -357,25 +357,25 @@ public abstract class h {
         }
 
         public final void O() {
-            int i10 = this.f2180i + this.f2181j;
-            this.f2180i = i10;
-            int i11 = i10 - this.f2183l;
-            int i12 = this.f2186o;
+            int i10 = this.f2025i + this.f2026j;
+            this.f2025i = i10;
+            int i11 = i10 - this.f2028l;
+            int i12 = this.f2031o;
             if (i11 <= i12) {
-                this.f2181j = 0;
+                this.f2026j = 0;
                 return;
             }
             int i13 = i11 - i12;
-            this.f2181j = i13;
-            this.f2180i = i10 - i13;
+            this.f2026j = i13;
+            this.f2025i = i10 - i13;
         }
 
         public void P(int i10) throws a0 {
             if (i10 >= 0) {
-                int i11 = this.f2180i;
-                int i12 = this.f2182k;
+                int i11 = this.f2025i;
+                int i12 = this.f2027k;
                 if (i10 <= i11 - i12) {
-                    this.f2182k = i12 + i10;
+                    this.f2027k = i12 + i10;
                     return;
                 }
             }
@@ -386,7 +386,7 @@ public abstract class h {
         }
 
         public final void Q() throws a0 {
-            if (this.f2180i - this.f2182k >= 10) {
+            if (this.f2025i - this.f2027k >= 10) {
                 R();
             } else {
                 S();
@@ -395,9 +395,9 @@ public abstract class h {
 
         public final void R() throws a0 {
             for (int i10 = 0; i10 < 10; i10++) {
-                byte[] bArr = this.f2178g;
-                int i11 = this.f2182k;
-                this.f2182k = i11 + 1;
+                byte[] bArr = this.f2023g;
+                int i11 = this.f2027k;
+                this.f2027k = i11 + 1;
                 if (bArr[i11] >= 0) {
                     return;
                 }
@@ -416,24 +416,24 @@ public abstract class h {
 
         @Override // androidx.datastore.preferences.protobuf.h
         public void a(int i10) throws a0 {
-            if (this.f2184m != i10) {
+            if (this.f2029m != i10) {
                 throw a0.b();
             }
         }
 
         @Override // androidx.datastore.preferences.protobuf.h
         public int e() {
-            return this.f2182k - this.f2183l;
+            return this.f2027k - this.f2028l;
         }
 
         @Override // androidx.datastore.preferences.protobuf.h
         public boolean f() {
-            return this.f2182k == this.f2180i;
+            return this.f2027k == this.f2025i;
         }
 
         @Override // androidx.datastore.preferences.protobuf.h
         public void l(int i10) {
-            this.f2186o = i10;
+            this.f2031o = i10;
             O();
         }
 
@@ -446,11 +446,11 @@ public abstract class h {
             if (iE < 0) {
                 throw a0.h();
             }
-            int i11 = this.f2186o;
+            int i11 = this.f2031o;
             if (iE > i11) {
                 throw a0.m();
             }
-            this.f2186o = iE;
+            this.f2031o = iE;
             O();
             return i11;
         }
@@ -464,11 +464,11 @@ public abstract class h {
         public g o() {
             int iL = L();
             if (iL > 0) {
-                int i10 = this.f2180i;
-                int i11 = this.f2182k;
+                int i10 = this.f2025i;
+                int i11 = this.f2027k;
                 if (iL <= i10 - i11) {
-                    g gVarB = (this.f2179h && this.f2185n) ? g.B(this.f2178g, i11, iL) : g.f(this.f2178g, i11, iL);
-                    this.f2182k += iL;
+                    g gVarB = (this.f2024h && this.f2030n) ? g.B(this.f2023g, i11, iL) : g.f(this.f2023g, i11, iL);
+                    this.f2027k += iL;
                     return gVarB;
                 }
             }
@@ -532,40 +532,40 @@ public abstract class h {
 
         public b(byte[] bArr, int i10, int i11, boolean z10) {
             super();
-            this.f2186o = Integer.MAX_VALUE;
-            this.f2178g = bArr;
-            this.f2180i = i11 + i10;
-            this.f2182k = i10;
-            this.f2183l = i10;
-            this.f2179h = z10;
+            this.f2031o = Integer.MAX_VALUE;
+            this.f2023g = bArr;
+            this.f2025i = i11 + i10;
+            this.f2027k = i10;
+            this.f2028l = i10;
+            this.f2024h = z10;
         }
     }
 
     public static final class c extends h {
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public final InputStream f2187g;
+        public final InputStream f2032g;
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public final byte[] f2188h;
+        public final byte[] f2033h;
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public int f2189i;
+        public int f2034i;
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public int f2190j;
+        public int f2035j;
 
         /* JADX INFO: renamed from: k, reason: collision with root package name */
-        public int f2191k;
+        public int f2036k;
 
         /* JADX INFO: renamed from: l, reason: collision with root package name */
-        public int f2192l;
+        public int f2037l;
 
         /* JADX INFO: renamed from: m, reason: collision with root package name */
-        public int f2193m;
+        public int f2038m;
 
         /* JADX INFO: renamed from: n, reason: collision with root package name */
-        public int f2194n;
+        public int f2039n;
 
         public static int H(InputStream inputStream) throws a0 {
             try {
@@ -586,17 +586,17 @@ public abstract class h {
         }
 
         private void T() {
-            int i10 = this.f2189i + this.f2190j;
-            this.f2189i = i10;
-            int i11 = this.f2193m + i10;
-            int i12 = this.f2194n;
+            int i10 = this.f2034i + this.f2035j;
+            this.f2034i = i10;
+            int i11 = this.f2038m + i10;
+            int i12 = this.f2039n;
             if (i11 <= i12) {
-                this.f2190j = 0;
+                this.f2035j = 0;
                 return;
             }
             int i13 = i11 - i12;
-            this.f2190j = i13;
-            this.f2189i = i10 - i13;
+            this.f2035j = i13;
+            this.f2034i = i10 - i13;
         }
 
         public static long V(InputStream inputStream, long j10) throws a0 {
@@ -609,7 +609,7 @@ public abstract class h {
         }
 
         private void Y() throws a0 {
-            if (this.f2189i - this.f2191k >= 10) {
+            if (this.f2034i - this.f2036k >= 10) {
                 Z();
             } else {
                 a0();
@@ -618,9 +618,9 @@ public abstract class h {
 
         private void Z() throws a0 {
             for (int i10 = 0; i10 < 10; i10++) {
-                byte[] bArr = this.f2188h;
-                int i11 = this.f2191k;
-                this.f2191k = i11 + 1;
+                byte[] bArr = this.f2033h;
+                int i11 = this.f2036k;
+                this.f2036k = i11 + 1;
                 if (bArr[i11] >= 0) {
                     return;
                 }
@@ -641,11 +641,11 @@ public abstract class h {
         public String A() throws a0 {
             int iQ = Q();
             if (iQ > 0) {
-                int i10 = this.f2189i;
-                int i11 = this.f2191k;
+                int i10 = this.f2034i;
+                int i11 = this.f2036k;
                 if (iQ <= i10 - i11) {
-                    String str = new String(this.f2188h, i11, iQ, z.b);
-                    this.f2191k += iQ;
+                    String str = new String(this.f2033h, i11, iQ, z.b);
+                    this.f2036k += iQ;
                     return str;
                 }
             }
@@ -655,12 +655,12 @@ public abstract class h {
             if (iQ < 0) {
                 throw a0.g();
             }
-            if (iQ > this.f2189i) {
+            if (iQ > this.f2034i) {
                 return new String(L(iQ, false), z.b);
             }
             U(iQ);
-            String str2 = new String(this.f2188h, this.f2191k, iQ, z.b);
-            this.f2191k += iQ;
+            String str2 = new String(this.f2033h, this.f2036k, iQ, z.b);
+            this.f2036k += iQ;
             return str2;
         }
 
@@ -668,11 +668,11 @@ public abstract class h {
         public String B() throws IOException {
             byte[] bArrL;
             int iQ = Q();
-            int i10 = this.f2191k;
-            int i11 = this.f2189i;
+            int i10 = this.f2036k;
+            int i11 = this.f2034i;
             if (iQ <= i11 - i10 && iQ > 0) {
-                bArrL = this.f2188h;
-                this.f2191k = i10 + iQ;
+                bArrL = this.f2033h;
+                this.f2036k = i10 + iQ;
             } else {
                 if (iQ == 0) {
                     return "";
@@ -683,8 +683,8 @@ public abstract class h {
                 i10 = 0;
                 if (iQ <= i11) {
                     U(iQ);
-                    bArrL = this.f2188h;
-                    this.f2191k = iQ;
+                    bArrL = this.f2033h;
+                    this.f2036k = iQ;
                 } else {
                     bArrL = L(iQ, false);
                 }
@@ -695,13 +695,13 @@ public abstract class h {
         @Override // androidx.datastore.preferences.protobuf.h
         public int C() throws a0 {
             if (f()) {
-                this.f2192l = 0;
+                this.f2037l = 0;
                 return 0;
             }
             int iQ = Q();
-            this.f2192l = iQ;
+            this.f2037l = iQ;
             if (s1.a(iQ) != 0) {
-                return this.f2192l;
+                return this.f2037l;
             }
             throw a0.c();
         }
@@ -751,15 +751,15 @@ public abstract class h {
             if (bArrM != null) {
                 return g.e(bArrM);
             }
-            int i11 = this.f2191k;
-            int i12 = this.f2189i;
+            int i11 = this.f2036k;
+            int i12 = this.f2034i;
             int length = i12 - i11;
-            this.f2193m += i12;
-            this.f2191k = 0;
-            this.f2189i = 0;
+            this.f2038m += i12;
+            this.f2036k = 0;
+            this.f2034i = 0;
             List<byte[]> listN = N(i10 - length);
             byte[] bArr = new byte[i10];
-            System.arraycopy(this.f2188h, i11, bArr, 0, length);
+            System.arraycopy(this.f2033h, i11, bArr, 0, length);
             for (byte[] bArr2 : listN) {
                 System.arraycopy(bArr2, 0, bArr, length, bArr2.length);
                 length += bArr2.length;
@@ -768,12 +768,12 @@ public abstract class h {
         }
 
         public byte K() throws a0 {
-            if (this.f2191k == this.f2189i) {
+            if (this.f2036k == this.f2034i) {
                 U(1);
             }
-            byte[] bArr = this.f2188h;
-            int i10 = this.f2191k;
-            this.f2191k = i10 + 1;
+            byte[] bArr = this.f2033h;
+            int i10 = this.f2036k;
+            this.f2036k = i10 + 1;
             return bArr[i10];
         }
 
@@ -782,15 +782,15 @@ public abstract class h {
             if (bArrM != null) {
                 return z10 ? (byte[]) bArrM.clone() : bArrM;
             }
-            int i11 = this.f2191k;
-            int i12 = this.f2189i;
+            int i11 = this.f2036k;
+            int i12 = this.f2034i;
             int length = i12 - i11;
-            this.f2193m += i12;
-            this.f2191k = 0;
-            this.f2189i = 0;
+            this.f2038m += i12;
+            this.f2036k = 0;
+            this.f2034i = 0;
             List<byte[]> listN = N(i10 - length);
             byte[] bArr = new byte[i10];
-            System.arraycopy(this.f2188h, i11, bArr, 0, length);
+            System.arraycopy(this.f2033h, i11, bArr, 0, length);
             for (byte[] bArr2 : listN) {
                 System.arraycopy(bArr2, 0, bArr, length, bArr2.length);
                 length += bArr2.length;
@@ -800,38 +800,38 @@ public abstract class h {
 
         public final byte[] M(int i10) throws a0 {
             if (i10 == 0) {
-                return z.f2400d;
+                return z.f2245d;
             }
             if (i10 < 0) {
                 throw a0.g();
             }
-            int i11 = this.f2193m;
-            int i12 = this.f2191k;
+            int i11 = this.f2038m;
+            int i12 = this.f2036k;
             int i13 = i11 + i12 + i10;
-            if (i13 - this.f2175c > 0) {
+            if (i13 - this.f2020c > 0) {
                 throw a0.l();
             }
-            int i14 = this.f2194n;
+            int i14 = this.f2039n;
             if (i13 > i14) {
                 W((i14 - i11) - i12);
                 throw a0.m();
             }
-            int i15 = this.f2189i - i12;
+            int i15 = this.f2034i - i12;
             int i16 = i10 - i15;
-            if (i16 >= 4096 && i16 > H(this.f2187g)) {
+            if (i16 >= 4096 && i16 > H(this.f2032g)) {
                 return null;
             }
             byte[] bArr = new byte[i10];
-            System.arraycopy(this.f2188h, this.f2191k, bArr, 0, i15);
-            this.f2193m += this.f2189i;
-            this.f2191k = 0;
-            this.f2189i = 0;
+            System.arraycopy(this.f2033h, this.f2036k, bArr, 0, i15);
+            this.f2038m += this.f2034i;
+            this.f2036k = 0;
+            this.f2034i = 0;
             while (i15 < i10) {
-                int I = I(this.f2187g, bArr, i15, i10 - i15);
+                int I = I(this.f2032g, bArr, i15, i10 - i15);
                 if (I == -1) {
                     throw a0.m();
                 }
-                this.f2193m += I;
+                this.f2038m += I;
                 i15 += I;
             }
             return bArr;
@@ -844,11 +844,11 @@ public abstract class h {
                 byte[] bArr = new byte[iMin];
                 int i11 = 0;
                 while (i11 < iMin) {
-                    int i12 = this.f2187g.read(bArr, i11, iMin - i11);
+                    int i12 = this.f2032g.read(bArr, i11, iMin - i11);
                     if (i12 == -1) {
                         throw a0.m();
                     }
-                    this.f2193m += i12;
+                    this.f2038m += i12;
                     i11 += i12;
                 }
                 i10 -= iMin;
@@ -858,37 +858,37 @@ public abstract class h {
         }
 
         public int O() throws a0 {
-            int i10 = this.f2191k;
-            if (this.f2189i - i10 < 4) {
+            int i10 = this.f2036k;
+            if (this.f2034i - i10 < 4) {
                 U(4);
-                i10 = this.f2191k;
+                i10 = this.f2036k;
             }
-            byte[] bArr = this.f2188h;
-            this.f2191k = i10 + 4;
+            byte[] bArr = this.f2033h;
+            this.f2036k = i10 + 4;
             return ((bArr[i10 + 3] & 255) << 24) | (bArr[i10] & 255) | ((bArr[i10 + 1] & 255) << 8) | ((bArr[i10 + 2] & 255) << 16);
         }
 
         public long P() throws a0 {
-            int i10 = this.f2191k;
-            if (this.f2189i - i10 < 8) {
+            int i10 = this.f2036k;
+            if (this.f2034i - i10 < 8) {
                 U(8);
-                i10 = this.f2191k;
+                i10 = this.f2036k;
             }
-            byte[] bArr = this.f2188h;
-            this.f2191k = i10 + 8;
+            byte[] bArr = this.f2033h;
+            this.f2036k = i10 + 8;
             return ((((long) bArr[i10 + 7]) & 255) << 56) | (((long) bArr[i10]) & 255) | ((((long) bArr[i10 + 1]) & 255) << 8) | ((((long) bArr[i10 + 2]) & 255) << 16) | ((((long) bArr[i10 + 3]) & 255) << 24) | ((((long) bArr[i10 + 4]) & 255) << 32) | ((((long) bArr[i10 + 5]) & 255) << 40) | ((((long) bArr[i10 + 6]) & 255) << 48);
         }
 
         public int Q() {
             int i10;
-            int i11 = this.f2191k;
-            int i12 = this.f2189i;
+            int i11 = this.f2036k;
+            int i12 = this.f2034i;
             if (i12 != i11) {
-                byte[] bArr = this.f2188h;
+                byte[] bArr = this.f2033h;
                 int i13 = i11 + 1;
                 byte b = bArr[i11];
                 if (b >= 0) {
-                    this.f2191k = i13;
+                    this.f2036k = i13;
                     return b;
                 }
                 if (i12 - i13 >= 9) {
@@ -936,7 +936,7 @@ public abstract class h {
                         }
                         i14 = i16;
                     }
-                    this.f2191k = i14;
+                    this.f2036k = i14;
                     return i10;
                 }
             }
@@ -947,14 +947,14 @@ public abstract class h {
             long j10;
             long j11;
             long j12;
-            int i10 = this.f2191k;
-            int i11 = this.f2189i;
+            int i10 = this.f2036k;
+            int i11 = this.f2034i;
             if (i11 != i10) {
-                byte[] bArr = this.f2188h;
+                byte[] bArr = this.f2033h;
                 int i12 = i10 + 1;
                 byte b = bArr[i10];
                 if (b >= 0) {
-                    this.f2191k = i12;
+                    this.f2036k = i12;
                     return b;
                 }
                 if (i11 - i12 >= 9) {
@@ -1016,7 +1016,7 @@ public abstract class h {
                             }
                         }
                     }
-                    this.f2191k = i13;
+                    this.f2036k = i13;
                     return j10;
                 }
             }
@@ -1039,19 +1039,19 @@ public abstract class h {
             if (b0(i10)) {
                 return;
             }
-            if (i10 <= (this.f2175c - this.f2193m) - this.f2191k) {
+            if (i10 <= (this.f2020c - this.f2038m) - this.f2036k) {
                 throw a0.m();
             }
             throw a0.l();
         }
 
         public void W(int i10) throws a0 {
-            int i11 = this.f2189i;
-            int i12 = this.f2191k;
+            int i11 = this.f2034i;
+            int i12 = this.f2036k;
             if (i10 > i11 - i12 || i10 < 0) {
                 X(i10);
             } else {
-                this.f2191k = i12 + i10;
+                this.f2036k = i12 + i10;
             }
         }
 
@@ -1059,24 +1059,24 @@ public abstract class h {
             if (i10 < 0) {
                 throw a0.g();
             }
-            int i11 = this.f2193m;
-            int i12 = this.f2191k;
+            int i11 = this.f2038m;
+            int i12 = this.f2036k;
             int i13 = i11 + i12 + i10;
-            int i14 = this.f2194n;
+            int i14 = this.f2039n;
             if (i13 > i14) {
                 W((i14 - i11) - i12);
                 throw a0.m();
             }
-            this.f2193m = i11 + i12;
-            int i15 = this.f2189i - i12;
-            this.f2189i = 0;
-            this.f2191k = 0;
+            this.f2038m = i11 + i12;
+            int i15 = this.f2034i - i12;
+            this.f2034i = 0;
+            this.f2036k = 0;
             while (i15 < i10) {
                 try {
                     long j10 = i10 - i15;
-                    long jV = V(this.f2187g, j10);
+                    long jV = V(this.f2032g, j10);
                     if (jV < 0 || jV > j10) {
-                        throw new IllegalStateException(this.f2187g.getClass() + "#skip returned invalid result: " + jV + "\nThe InputStream implementation is buggy.");
+                        throw new IllegalStateException(this.f2032g.getClass() + "#skip returned invalid result: " + jV + "\nThe InputStream implementation is buggy.");
                     }
                     if (jV == 0) {
                         break;
@@ -1084,29 +1084,29 @@ public abstract class h {
                         i15 += (int) jV;
                     }
                 } catch (Throwable th2) {
-                    this.f2193m += i15;
+                    this.f2038m += i15;
                     T();
                     throw th2;
                 }
             }
-            this.f2193m += i15;
+            this.f2038m += i15;
             T();
             if (i15 >= i10) {
                 return;
             }
-            int i16 = this.f2189i;
-            int i17 = i16 - this.f2191k;
-            this.f2191k = i16;
+            int i16 = this.f2034i;
+            int i17 = i16 - this.f2036k;
+            this.f2036k = i16;
             U(1);
             while (true) {
                 int i18 = i10 - i17;
-                int i19 = this.f2189i;
+                int i19 = this.f2034i;
                 if (i18 <= i19) {
-                    this.f2191k = i18;
+                    this.f2036k = i18;
                     return;
                 } else {
                     i17 += i19;
-                    this.f2191k = i19;
+                    this.f2036k = i19;
                     U(1);
                 }
             }
@@ -1114,45 +1114,45 @@ public abstract class h {
 
         @Override // androidx.datastore.preferences.protobuf.h
         public void a(int i10) throws a0 {
-            if (this.f2192l != i10) {
+            if (this.f2037l != i10) {
                 throw a0.b();
             }
         }
 
         public final boolean b0(int i10) throws a0 {
-            int i11 = this.f2191k;
+            int i11 = this.f2036k;
             int i12 = i11 + i10;
-            int i13 = this.f2189i;
+            int i13 = this.f2034i;
             if (i12 <= i13) {
                 throw new IllegalStateException("refillBuffer() called when " + i10 + " bytes were already available in buffer");
             }
-            int i14 = this.f2175c;
-            int i15 = this.f2193m;
-            if (i10 > (i14 - i15) - i11 || i15 + i11 + i10 > this.f2194n) {
+            int i14 = this.f2020c;
+            int i15 = this.f2038m;
+            if (i10 > (i14 - i15) - i11 || i15 + i11 + i10 > this.f2039n) {
                 return false;
             }
             if (i11 > 0) {
                 if (i13 > i11) {
-                    byte[] bArr = this.f2188h;
+                    byte[] bArr = this.f2033h;
                     System.arraycopy(bArr, i11, bArr, 0, i13 - i11);
                 }
-                this.f2193m += i11;
-                this.f2189i -= i11;
-                this.f2191k = 0;
+                this.f2038m += i11;
+                this.f2034i -= i11;
+                this.f2036k = 0;
             }
-            InputStream inputStream = this.f2187g;
-            byte[] bArr2 = this.f2188h;
-            int i16 = this.f2189i;
-            int I = I(inputStream, bArr2, i16, Math.min(bArr2.length - i16, (this.f2175c - this.f2193m) - i16));
-            if (I == 0 || I < -1 || I > this.f2188h.length) {
-                throw new IllegalStateException(this.f2187g.getClass() + "#read(byte[]) returned invalid result: " + I + "\nThe InputStream implementation is buggy.");
+            InputStream inputStream = this.f2032g;
+            byte[] bArr2 = this.f2033h;
+            int i16 = this.f2034i;
+            int I = I(inputStream, bArr2, i16, Math.min(bArr2.length - i16, (this.f2020c - this.f2038m) - i16));
+            if (I == 0 || I < -1 || I > this.f2033h.length) {
+                throw new IllegalStateException(this.f2032g.getClass() + "#read(byte[]) returned invalid result: " + I + "\nThe InputStream implementation is buggy.");
             }
             if (I <= 0) {
                 return false;
             }
-            this.f2189i += I;
+            this.f2034i += I;
             T();
-            if (this.f2189i >= i10) {
+            if (this.f2034i >= i10) {
                 return true;
             }
             return b0(i10);
@@ -1160,17 +1160,17 @@ public abstract class h {
 
         @Override // androidx.datastore.preferences.protobuf.h
         public int e() {
-            return this.f2193m + this.f2191k;
+            return this.f2038m + this.f2036k;
         }
 
         @Override // androidx.datastore.preferences.protobuf.h
         public boolean f() {
-            return this.f2191k == this.f2189i && !b0(1);
+            return this.f2036k == this.f2034i && !b0(1);
         }
 
         @Override // androidx.datastore.preferences.protobuf.h
         public void l(int i10) {
-            this.f2194n = i10;
+            this.f2039n = i10;
             T();
         }
 
@@ -1179,15 +1179,15 @@ public abstract class h {
             if (i10 < 0) {
                 throw a0.g();
             }
-            int i11 = i10 + this.f2193m + this.f2191k;
+            int i11 = i10 + this.f2038m + this.f2036k;
             if (i11 < 0) {
                 throw a0.h();
             }
-            int i12 = this.f2194n;
+            int i12 = this.f2039n;
             if (i11 > i12) {
                 throw a0.m();
             }
-            this.f2194n = i11;
+            this.f2039n = i11;
             T();
             return i12;
         }
@@ -1200,11 +1200,11 @@ public abstract class h {
         @Override // androidx.datastore.preferences.protobuf.h
         public g o() throws a0 {
             int iQ = Q();
-            int i10 = this.f2189i;
-            int i11 = this.f2191k;
+            int i10 = this.f2034i;
+            int i11 = this.f2036k;
             if (iQ <= i10 - i11 && iQ > 0) {
-                g gVarF = g.f(this.f2188h, i11, iQ);
-                this.f2191k += iQ;
+                g gVarF = g.f(this.f2033h, i11, iQ);
+                this.f2036k += iQ;
                 return gVarF;
             }
             if (iQ == 0) {
@@ -1273,13 +1273,13 @@ public abstract class h {
 
         public c(InputStream inputStream, int i10) {
             super();
-            this.f2194n = Integer.MAX_VALUE;
+            this.f2039n = Integer.MAX_VALUE;
             z.b(inputStream, "input");
-            this.f2187g = inputStream;
-            this.f2188h = new byte[i10];
-            this.f2189i = 0;
-            this.f2191k = 0;
-            this.f2193m = 0;
+            this.f2032g = inputStream;
+            this.f2033h = new byte[i10];
+            this.f2034i = 0;
+            this.f2036k = 0;
+            this.f2038m = 0;
         }
     }
 
@@ -1297,7 +1297,7 @@ public abstract class h {
 
     public static h h(InputStream inputStream, int i10) {
         if (i10 > 0) {
-            return inputStream == null ? i(z.f2400d) : new c(inputStream, i10);
+            return inputStream == null ? i(z.f2245d) : new c(inputStream, i10);
         }
         throw new IllegalArgumentException("bufferSize must be > 0");
     }
@@ -1340,16 +1340,16 @@ public abstract class h {
                 return;
             }
             b();
-            this.f2174a++;
+            this.f2019a++;
             zF = F(iC);
-            this.f2174a--;
+            this.f2019a--;
         } while (zF);
     }
 
     public abstract void a(int i10);
 
     public void b() throws a0 {
-        if (this.f2174a >= this.b) {
+        if (this.f2019a >= this.b) {
             throw a0.i();
         }
     }
@@ -1389,8 +1389,8 @@ public abstract class h {
     public abstract long z();
 
     public h() {
-        this.b = f2173f;
-        this.f2175c = Integer.MAX_VALUE;
-        this.f2177e = false;
+        this.b = f2018f;
+        this.f2020c = Integer.MAX_VALUE;
+        this.f2022e = false;
     }
 }

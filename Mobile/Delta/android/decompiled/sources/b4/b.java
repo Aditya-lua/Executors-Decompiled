@@ -8,23 +8,23 @@ import androidx.annotation.NonNull;
 public final class b extends Editable.Factory {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Object f3890a = new Object();
+    public static final Object f3788a = new Object();
     public static volatile Editable.Factory b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static Class<?> f3891c;
+    public static Class<?> f3789c;
 
     @SuppressLint({"PrivateApi"})
     public b() {
         try {
-            f3891c = Class.forName("android.text.DynamicLayout$ChangeWatcher", false, b.class.getClassLoader());
+            f3789c = Class.forName("android.text.DynamicLayout$ChangeWatcher", false, b.class.getClassLoader());
         } catch (Throwable unused) {
         }
     }
 
     public static Editable.Factory getInstance() {
         if (b == null) {
-            synchronized (f3890a) {
+            synchronized (f3788a) {
                 try {
                     if (b == null) {
                         b = new b();
@@ -39,7 +39,7 @@ public final class b extends Editable.Factory {
 
     @Override // android.text.Editable.Factory
     public Editable newEditable(@NonNull CharSequence charSequence) {
-        Class<?> cls = f3891c;
+        Class<?> cls = f3789c;
         return cls != null ? z3.h.c(cls, charSequence) : super.newEditable(charSequence);
     }
 }

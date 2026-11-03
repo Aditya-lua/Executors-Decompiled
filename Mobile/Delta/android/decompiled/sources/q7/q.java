@@ -7,11 +7,11 @@ import java.util.Collections;
 public class q {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final r7.c.a f29265a = r7.c.a.a("nm", "g", "o", "t", "s", "e", "w", "lc", "lj", "ml", "hd", "d");
+    public static final r7.c.a f29618a = r7.c.a.a("nm", "g", "o", "t", "s", "e", "w", "lc", "lj", "ml", "hd", "d");
     public static final r7.c.a b = r7.c.a.a("p", "k");
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final r7.c.a f29266c = r7.c.a.a("n", "v");
+    public static final r7.c.a f29619c = r7.c.a.a("n", "v");
 
     /* JADX WARN: Failed to find 'out' block for switch in B:6:0x0027. Please report as an issue. */
     public static n7.f a(r7.c cVar, f7.i iVar) {
@@ -31,7 +31,7 @@ public class q {
         m7.d dVarH = null;
         while (cVar.f()) {
             n7.g gVar2 = gVar;
-            switch (cVar.r(f29265a)) {
+            switch (cVar.r(f29618a)) {
                 case 0:
                     strM = cVar.m();
                     gVar = gVar2;
@@ -105,7 +105,7 @@ public class q {
                         String strM2 = null;
                         m7.b bVarE2 = null;
                         while (cVar.f()) {
-                            int iR2 = cVar.r(f29266c);
+                            int iR2 = cVar.r(f29619c);
                             if (iR2 != 0) {
                                 m7.d dVar2 = dVarH;
                                 if (iR2 != 1) {

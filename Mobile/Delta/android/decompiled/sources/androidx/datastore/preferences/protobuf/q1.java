@@ -13,71 +13,71 @@ import sun.misc.Unsafe;
 public final class q1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Unsafe f2258a = A();
+    public static final Unsafe f2103a = A();
     public static final Class<?> b = androidx.datastore.preferences.protobuf.d.b();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final boolean f2259c = m(Long.TYPE);
+    public static final boolean f2104c = m(Long.TYPE);
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final boolean f2260d = m(Integer.TYPE);
+    public static final boolean f2105d = m(Integer.TYPE);
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final e f2261e = y();
+    public static final e f2106e = y();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final boolean f2262f = Q();
+    public static final boolean f2107f = Q();
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final boolean f2263g = P();
+    public static final boolean f2108g = P();
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final long f2264h;
+    public static final long f2109h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final long f2265i;
+    public static final long f2110i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final long f2266j;
+    public static final long f2111j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final long f2267k;
+    public static final long f2112k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final long f2268l;
+    public static final long f2113l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public static final long f2269m;
+    public static final long f2114m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public static final long f2270n;
+    public static final long f2115n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public static final long f2271o;
+    public static final long f2116o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public static final long f2272p;
+    public static final long f2117p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public static final long f2273q;
+    public static final long f2118q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public static final long f2274r;
+    public static final long f2119r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public static final long f2275s;
+    public static final long f2120s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public static final long f2276t;
+    public static final long f2121t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public static final long f2277u;
+    public static final long f2122u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public static final int f2278v;
+    public static final int f2123v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public static final boolean f2279w;
+    public static final boolean f2124w;
 
     public class a implements PrivilegedExceptionAction<Unsafe> {
         @Override // java.security.PrivilegedExceptionAction
@@ -101,7 +101,7 @@ public final class q1 {
 
         @Override // androidx.datastore.preferences.protobuf.q1.e
         public boolean c(Object obj, long j10) {
-            return q1.f2279w ? q1.q(obj, j10) : q1.r(obj, j10);
+            return q1.f2124w ? q1.q(obj, j10) : q1.r(obj, j10);
         }
 
         @Override // androidx.datastore.preferences.protobuf.q1.e
@@ -116,7 +116,7 @@ public final class q1 {
 
         @Override // androidx.datastore.preferences.protobuf.q1.e
         public void j(Object obj, long j10, boolean z10) {
-            if (q1.f2279w) {
+            if (q1.f2124w) {
                 q1.F(obj, j10, z10);
             } else {
                 q1.G(obj, j10, z10);
@@ -125,7 +125,7 @@ public final class q1 {
 
         @Override // androidx.datastore.preferences.protobuf.q1.e
         public void k(Object obj, long j10, byte b) {
-            if (q1.f2279w) {
+            if (q1.f2124w) {
                 q1.I(obj, j10, b);
             } else {
                 q1.J(obj, j10, b);
@@ -155,7 +155,7 @@ public final class q1 {
 
         @Override // androidx.datastore.preferences.protobuf.q1.e
         public boolean c(Object obj, long j10) {
-            return q1.f2279w ? q1.q(obj, j10) : q1.r(obj, j10);
+            return q1.f2124w ? q1.q(obj, j10) : q1.r(obj, j10);
         }
 
         @Override // androidx.datastore.preferences.protobuf.q1.e
@@ -170,7 +170,7 @@ public final class q1 {
 
         @Override // androidx.datastore.preferences.protobuf.q1.e
         public void j(Object obj, long j10, boolean z10) {
-            if (q1.f2279w) {
+            if (q1.f2124w) {
                 q1.F(obj, j10, z10);
             } else {
                 q1.G(obj, j10, z10);
@@ -179,7 +179,7 @@ public final class q1 {
 
         @Override // androidx.datastore.preferences.protobuf.q1.e
         public void k(Object obj, long j10, byte b) {
-            if (q1.f2279w) {
+            if (q1.f2124w) {
                 q1.I(obj, j10, b);
             } else {
                 q1.J(obj, j10, b);
@@ -209,37 +209,37 @@ public final class q1 {
 
         @Override // androidx.datastore.preferences.protobuf.q1.e
         public boolean c(Object obj, long j10) {
-            return this.f2280a.getBoolean(obj, j10);
+            return this.f2125a.getBoolean(obj, j10);
         }
 
         @Override // androidx.datastore.preferences.protobuf.q1.e
         public double d(Object obj, long j10) {
-            return this.f2280a.getDouble(obj, j10);
+            return this.f2125a.getDouble(obj, j10);
         }
 
         @Override // androidx.datastore.preferences.protobuf.q1.e
         public float e(Object obj, long j10) {
-            return this.f2280a.getFloat(obj, j10);
+            return this.f2125a.getFloat(obj, j10);
         }
 
         @Override // androidx.datastore.preferences.protobuf.q1.e
         public void j(Object obj, long j10, boolean z10) {
-            this.f2280a.putBoolean(obj, j10, z10);
+            this.f2125a.putBoolean(obj, j10, z10);
         }
 
         @Override // androidx.datastore.preferences.protobuf.q1.e
         public void k(Object obj, long j10, byte b) {
-            this.f2280a.putByte(obj, j10, b);
+            this.f2125a.putByte(obj, j10, b);
         }
 
         @Override // androidx.datastore.preferences.protobuf.q1.e
         public void l(Object obj, long j10, double d10) {
-            this.f2280a.putDouble(obj, j10, d10);
+            this.f2125a.putDouble(obj, j10, d10);
         }
 
         @Override // androidx.datastore.preferences.protobuf.q1.e
         public void m(Object obj, long j10, float f10) {
-            this.f2280a.putFloat(obj, j10, f10);
+            this.f2125a.putFloat(obj, j10, f10);
         }
 
         @Override // androidx.datastore.preferences.protobuf.q1.e
@@ -248,7 +248,7 @@ public final class q1 {
                 return false;
             }
             try {
-                Class<?> cls = this.f2280a.getClass();
+                Class<?> cls = this.f2125a.getClass();
                 Class cls2 = Long.TYPE;
                 cls.getMethod("getByte", Object.class, cls2);
                 cls.getMethod("putByte", Object.class, cls2, Byte.TYPE);
@@ -271,7 +271,7 @@ public final class q1 {
                 return false;
             }
             try {
-                Class<?> cls = this.f2280a.getClass();
+                Class<?> cls = this.f2125a.getClass();
                 Class cls2 = Long.TYPE;
                 cls.getMethod("getByte", cls2);
                 cls.getMethod("putByte", cls2, Byte.TYPE);
@@ -292,18 +292,18 @@ public final class q1 {
     public static abstract class e {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public Unsafe f2280a;
+        public Unsafe f2125a;
 
         public e(Unsafe unsafe) {
-            this.f2280a = unsafe;
+            this.f2125a = unsafe;
         }
 
         public final int a(Class<?> cls) {
-            return this.f2280a.arrayBaseOffset(cls);
+            return this.f2125a.arrayBaseOffset(cls);
         }
 
         public final int b(Class<?> cls) {
-            return this.f2280a.arrayIndexScale(cls);
+            return this.f2125a.arrayIndexScale(cls);
         }
 
         public abstract boolean c(Object obj, long j10);
@@ -313,19 +313,19 @@ public final class q1 {
         public abstract float e(Object obj, long j10);
 
         public final int f(Object obj, long j10) {
-            return this.f2280a.getInt(obj, j10);
+            return this.f2125a.getInt(obj, j10);
         }
 
         public final long g(Object obj, long j10) {
-            return this.f2280a.getLong(obj, j10);
+            return this.f2125a.getLong(obj, j10);
         }
 
         public final Object h(Object obj, long j10) {
-            return this.f2280a.getObject(obj, j10);
+            return this.f2125a.getObject(obj, j10);
         }
 
         public final long i(Field field) {
-            return this.f2280a.objectFieldOffset(field);
+            return this.f2125a.objectFieldOffset(field);
         }
 
         public abstract void j(Object obj, long j10, boolean z10);
@@ -337,19 +337,19 @@ public final class q1 {
         public abstract void m(Object obj, long j10, float f10);
 
         public final void n(Object obj, long j10, int i10) {
-            this.f2280a.putInt(obj, j10, i10);
+            this.f2125a.putInt(obj, j10, i10);
         }
 
         public final void o(Object obj, long j10, long j11) {
-            this.f2280a.putLong(obj, j10, j11);
+            this.f2125a.putLong(obj, j10, j11);
         }
 
         public final void p(Object obj, long j10, Object obj2) {
-            this.f2280a.putObject(obj, j10, obj2);
+            this.f2125a.putObject(obj, j10, obj2);
         }
 
         public boolean q() {
-            Unsafe unsafe = this.f2280a;
+            Unsafe unsafe = this.f2125a;
             if (unsafe == null) {
                 return false;
             }
@@ -373,7 +373,7 @@ public final class q1 {
         }
 
         public boolean r() {
-            Unsafe unsafe = this.f2280a;
+            Unsafe unsafe = this.f2125a;
             if (unsafe == null) {
                 return false;
             }
@@ -391,22 +391,22 @@ public final class q1 {
 
     static {
         long j10 = j(byte[].class);
-        f2264h = j10;
-        f2265i = j(boolean[].class);
-        f2266j = k(boolean[].class);
-        f2267k = j(int[].class);
-        f2268l = k(int[].class);
-        f2269m = j(long[].class);
-        f2270n = k(long[].class);
-        f2271o = j(float[].class);
-        f2272p = k(float[].class);
-        f2273q = j(double[].class);
-        f2274r = k(double[].class);
-        f2275s = j(Object[].class);
-        f2276t = k(Object[].class);
-        f2277u = o(l());
-        f2278v = (int) (j10 & 7);
-        f2279w = ByteOrder.nativeOrder() == ByteOrder.BIG_ENDIAN;
+        f2109h = j10;
+        f2110i = j(boolean[].class);
+        f2111j = k(boolean[].class);
+        f2112k = j(int[].class);
+        f2113l = k(int[].class);
+        f2114m = j(long[].class);
+        f2115n = k(long[].class);
+        f2116o = j(float[].class);
+        f2117p = k(float[].class);
+        f2118q = j(double[].class);
+        f2119r = k(double[].class);
+        f2120s = j(Object[].class);
+        f2121t = k(Object[].class);
+        f2122u = o(l());
+        f2123v = (int) (j10 & 7);
+        f2124w = ByteOrder.nativeOrder() == ByteOrder.BIG_ENDIAN;
     }
 
     public static Unsafe A() {
@@ -418,11 +418,11 @@ public final class q1 {
     }
 
     public static boolean B() {
-        return f2263g;
+        return f2108g;
     }
 
     public static boolean C() {
-        return f2262f;
+        return f2107f;
     }
 
     public static void D(Throwable th2) {
@@ -430,7 +430,7 @@ public final class q1 {
     }
 
     public static void E(Object obj, long j10, boolean z10) {
-        f2261e.j(obj, j10, z10);
+        f2106e.j(obj, j10, z10);
     }
 
     public static void F(Object obj, long j10, boolean z10) {
@@ -442,7 +442,7 @@ public final class q1 {
     }
 
     public static void H(byte[] bArr, long j10, byte b10) {
-        f2261e.k(bArr, f2264h + j10, b10);
+        f2106e.k(bArr, f2109h + j10, b10);
     }
 
     public static void I(Object obj, long j10, byte b10) {
@@ -459,27 +459,27 @@ public final class q1 {
     }
 
     public static void K(Object obj, long j10, double d10) {
-        f2261e.l(obj, j10, d10);
+        f2106e.l(obj, j10, d10);
     }
 
     public static void L(Object obj, long j10, float f10) {
-        f2261e.m(obj, j10, f10);
+        f2106e.m(obj, j10, f10);
     }
 
     public static void M(Object obj, long j10, int i10) {
-        f2261e.n(obj, j10, i10);
+        f2106e.n(obj, j10, i10);
     }
 
     public static void N(Object obj, long j10, long j11) {
-        f2261e.o(obj, j10, j11);
+        f2106e.o(obj, j10, j11);
     }
 
     public static void O(Object obj, long j10, Object obj2) {
-        f2261e.p(obj, j10, obj2);
+        f2106e.p(obj, j10, obj2);
     }
 
     public static boolean P() {
-        e eVar = f2261e;
+        e eVar = f2106e;
         if (eVar == null) {
             return false;
         }
@@ -487,7 +487,7 @@ public final class q1 {
     }
 
     public static boolean Q() {
-        e eVar = f2261e;
+        e eVar = f2106e;
         if (eVar == null) {
             return false;
         }
@@ -496,22 +496,22 @@ public final class q1 {
 
     public static <T> T i(Class<T> cls) {
         try {
-            return (T) f2258a.allocateInstance(cls);
+            return (T) f2103a.allocateInstance(cls);
         } catch (InstantiationException e10) {
             throw new IllegalStateException(e10);
         }
     }
 
     public static int j(Class<?> cls) {
-        if (f2263g) {
-            return f2261e.a(cls);
+        if (f2108g) {
+            return f2106e.a(cls);
         }
         return -1;
     }
 
     public static int k(Class<?> cls) {
-        if (f2263g) {
-            return f2261e.b(cls);
+        if (f2108g) {
+            return f2106e.b(cls);
         }
         return -1;
     }
@@ -560,14 +560,14 @@ public final class q1 {
 
     public static long o(Field field) {
         e eVar;
-        if (field == null || (eVar = f2261e) == null) {
+        if (field == null || (eVar = f2106e) == null) {
             return -1L;
         }
         return eVar.i(field);
     }
 
     public static boolean p(Object obj, long j10) {
-        return f2261e.c(obj, j10);
+        return f2106e.c(obj, j10);
     }
 
     public static boolean q(Object obj, long j10) {
@@ -587,39 +587,39 @@ public final class q1 {
     }
 
     public static double u(Object obj, long j10) {
-        return f2261e.d(obj, j10);
+        return f2106e.d(obj, j10);
     }
 
     public static float v(Object obj, long j10) {
-        return f2261e.e(obj, j10);
+        return f2106e.e(obj, j10);
     }
 
     public static int w(Object obj, long j10) {
-        return f2261e.f(obj, j10);
+        return f2106e.f(obj, j10);
     }
 
     public static long x(Object obj, long j10) {
-        return f2261e.g(obj, j10);
+        return f2106e.g(obj, j10);
     }
 
     public static e y() {
-        Unsafe unsafe = f2258a;
+        Unsafe unsafe = f2103a;
         if (unsafe == null) {
             return null;
         }
         if (!androidx.datastore.preferences.protobuf.d.c()) {
             return new d(unsafe);
         }
-        if (f2259c) {
+        if (f2104c) {
             return new c(unsafe);
         }
-        if (f2260d) {
+        if (f2105d) {
             return new b(unsafe);
         }
         return null;
     }
 
     public static Object z(Object obj, long j10) {
-        return f2261e.h(obj, j10);
+        return f2106e.h(obj, j10);
     }
 }

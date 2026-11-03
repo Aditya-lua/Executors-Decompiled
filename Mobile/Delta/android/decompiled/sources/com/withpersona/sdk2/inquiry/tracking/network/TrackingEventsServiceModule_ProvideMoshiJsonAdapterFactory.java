@@ -1,7 +1,7 @@
 package com.withpersona.sdk2.inquiry.tracking.network;
 
-import ft.d;
-import ft.h;
+import dt.d;
+import dt.h;
 import java.util.Set;
 
 /* JADX INFO: loaded from: classes3.dex */
@@ -22,7 +22,7 @@ public final class TrackingEventsServiceModule_ProvideMoshiJsonAdapterFactory im
         return (Set) h.e(TrackingEventsServiceModule.provideMoshiJsonAdapter());
     }
 
-    @Override // ht.a
+    @Override // ft.a
     public Set<Object> get() {
         return provideMoshiJsonAdapter();
     }

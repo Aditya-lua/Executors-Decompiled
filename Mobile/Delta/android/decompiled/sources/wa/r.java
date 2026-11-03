@@ -7,11 +7,11 @@ import com.google.android.gms.tasks.Task;
 public final class r implements x8.b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final x8.b f34158a;
+    public final x8.b f34364a;
     public final x8.b b;
 
     public r(Context context) {
-        this.f34158a = new p(context, j9.d.f());
+        this.f34364a = new p(context, j9.d.f());
         this.b = l.c(context);
     }
 
@@ -36,10 +36,10 @@ public final class r implements x8.b {
 
     @Override // x8.b
     public final Task<x8.c> j() {
-        return this.f34158a.j().j(new sb.c() { // from class: wa.q
+        return this.f34364a.j().j(new sb.c() { // from class: wa.q
             @Override // sb.c
             public final Object then(Task task) {
-                return r.a(this.f34157a, task);
+                return r.a(this.f34363a, task);
             }
         });
     }

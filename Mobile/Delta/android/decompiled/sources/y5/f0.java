@@ -13,32 +13,32 @@ import kotlin.jvm.functions.Function0;
 public class f0 extends x5.n0 {
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final String f35604j = x5.w.i("WorkContinuationImpl");
+    public static final String f36461j = x5.w.i("WorkContinuationImpl");
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final f1 f35605a;
+    public final f1 f36462a;
     public final String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final x5.j f35606c;
+    public final x5.j f36463c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final List<? extends x5.q0> f35607d;
+    public final List<? extends x5.q0> f36464d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final List<String> f35608e;
+    public final List<String> f36465e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final List<String> f35609f;
+    public final List<String> f36466f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final List<f0> f35610g;
+    public final List<f0> f36467g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public boolean f35611h;
+    public boolean f36468h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public x5.a0 f35612i;
+    public x5.a0 f36469i;
 
     public f0(f1 f1Var, List<? extends x5.q0> list) {
         this(f1Var, null, x5.j.KEEP, list, null);
@@ -47,7 +47,7 @@ public class f0 extends x5.n0 {
     public static /* synthetic */ Unit a(f0 f0Var) {
         f0Var.getClass();
         g6.j.b(f0Var);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static boolean j(f0 f0Var, Set<String> set) {
@@ -85,25 +85,25 @@ public class f0 extends x5.n0 {
     }
 
     public x5.a0 b() {
-        if (this.f35611h) {
-            x5.w.e().k(f35604j, "Already enqueued work ids (" + TextUtils.join(", ", this.f35608e) + ")");
+        if (this.f36468h) {
+            x5.w.e().k(f36461j, "Already enqueued work ids (" + TextUtils.join(", ", this.f36465e) + ")");
         } else {
-            this.f35612i = x5.e0.c(this.f35605a.n().getTracer(), "EnqueueRunnable_" + c().name(), this.f35605a.v().c(), new Function0() { // from class: y5.e0
+            this.f36469i = x5.e0.c(this.f36462a.n().getTracer(), "EnqueueRunnable_" + c().name(), this.f36462a.v().c(), new Function0() { // from class: y5.e0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return f0.a(this.f35601a);
+                    return f0.a(this.f36458a);
                 }
             });
         }
-        return this.f35612i;
+        return this.f36469i;
     }
 
     public x5.j c() {
-        return this.f35606c;
+        return this.f36463c;
     }
 
     public List<String> d() {
-        return this.f35608e;
+        return this.f36465e;
     }
 
     public String e() {
@@ -111,15 +111,15 @@ public class f0 extends x5.n0 {
     }
 
     public List<f0> f() {
-        return this.f35610g;
+        return this.f36467g;
     }
 
     public List<? extends x5.q0> g() {
-        return this.f35607d;
+        return this.f36464d;
     }
 
     public f1 h() {
-        return this.f35605a;
+        return this.f36462a;
     }
 
     public boolean i() {
@@ -127,11 +127,11 @@ public class f0 extends x5.n0 {
     }
 
     public boolean k() {
-        return this.f35611h;
+        return this.f36468h;
     }
 
     public void l() {
-        this.f35611h = true;
+        this.f36468h = true;
     }
 
     public f0(f1 f1Var, String str, x5.j jVar, List<? extends x5.q0> list) {
@@ -139,17 +139,17 @@ public class f0 extends x5.n0 {
     }
 
     public f0(f1 f1Var, String str, x5.j jVar, List<? extends x5.q0> list, List<f0> list2) {
-        this.f35605a = f1Var;
+        this.f36462a = f1Var;
         this.b = str;
-        this.f35606c = jVar;
-        this.f35607d = list;
-        this.f35610g = list2;
-        this.f35608e = new ArrayList(list.size());
-        this.f35609f = new ArrayList();
+        this.f36463c = jVar;
+        this.f36464d = list;
+        this.f36467g = list2;
+        this.f36465e = new ArrayList(list.size());
+        this.f36466f = new ArrayList();
         if (list2 != null) {
             Iterator<f0> it = list2.iterator();
             while (it.hasNext()) {
-                this.f35609f.addAll(it.next().f35609f);
+                this.f36466f.addAll(it.next().f36466f);
             }
         }
         for (int i10 = 0; i10 < list.size(); i10++) {
@@ -157,8 +157,8 @@ public class f0 extends x5.n0 {
                 throw new IllegalArgumentException("Next Schedule Time Override must be used with ExistingPeriodicWorkPolicyUPDATE (preferably) or KEEP");
             }
             String strB = list.get(i10).b();
-            this.f35608e.add(strB);
-            this.f35609f.add(strB);
+            this.f36465e.add(strB);
+            this.f36466f.add(strB);
         }
     }
 }

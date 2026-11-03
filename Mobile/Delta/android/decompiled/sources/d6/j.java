@@ -16,12 +16,12 @@ public final class j {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final String f14454a;
+    public static final String f14434a;
 
     static {
         String strI = w.i("NetworkStateTracker");
         Intrinsics.checkNotNullExpressionValue(strI, "tagWithPrefix(...)");
-        f14454a = strI;
+        f14434a = strI;
     }
 
     @NotNull
@@ -72,7 +72,7 @@ public final class j {
                 } catch (SecurityException e10) {
                     e = e10;
                     securityException = e;
-                    w.e().d(f14454a, "Unable to get active network state", securityException);
+                    w.e().d(f14434a, "Unable to get active network state", securityException);
                     return new NetworkState(false, false, false, true, z11);
                 }
             } catch (SecurityException e11) {
@@ -83,7 +83,7 @@ public final class j {
             e = e12;
             z11 = z10;
         }
-        w.e().d(f14454a, "Unable to get active network state", securityException);
+        w.e().d(f14434a, "Unable to get active network state", securityException);
         return new NetworkState(false, false, false, true, z11);
     }
 
@@ -96,7 +96,7 @@ public final class j {
             }
             return false;
         } catch (SecurityException e10) {
-            w.e().d(f14454a, "Unable to validate active network", e10);
+            w.e().d(f14434a, "Unable to validate active network", e10);
             return false;
         }
     }

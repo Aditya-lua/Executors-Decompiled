@@ -131,10 +131,10 @@ public final class j implements MatchResult {
 
         @Override // java.util.Collection, java.lang.Iterable
         public Iterator<MatchGroup> iterator() {
-            return iu.p.x(CollectionsKt.U(kotlin.collections.p.l(this)), new Function1() { // from class: kotlin.text.k
+            return gu.p.x(CollectionsKt.U(kotlin.collections.p.l(this)), new Function1() { // from class: kotlin.text.k
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return j.b.f(this.f22664a, ((Integer) obj).intValue());
+                    return j.b.f(this.f23119a, ((Integer) obj).intValue());
                 }
             }).iterator();
         }

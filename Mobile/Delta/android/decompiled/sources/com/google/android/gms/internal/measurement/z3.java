@@ -18,11 +18,11 @@ public final class z3 extends gb implements pc {
     static {
         z3 z3Var = new z3();
         zzl = z3Var;
-        gb.u(z3.class, z3Var);
+        gb.t(z3.class, z3Var);
     }
 
     public static y3 T() {
-        return (y3) zzl.q();
+        return (y3) zzl.p();
     }
 
     @Override // com.google.android.gms.internal.measurement.gb

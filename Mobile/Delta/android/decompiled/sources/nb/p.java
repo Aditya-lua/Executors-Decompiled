@@ -4,21 +4,21 @@ package nb;
 public final class p {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public long f25833a;
+    public long f26654a;
     public long b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public long f25834c;
+    public long f26655c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public long f25835d;
+    public long f26656d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public long f25836e;
+    public long f26657e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public long f25837f;
+    public long f26658f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public long f25838g;
+    public long f26659g;
 }

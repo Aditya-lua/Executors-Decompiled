@@ -10,7 +10,7 @@ public final class x4 extends gb implements pc {
     static {
         x4 x4Var = new x4();
         zzf = x4Var;
-        gb.u(x4.class, x4Var);
+        gb.t(x4.class, x4Var);
     }
 
     @Override // com.google.android.gms.internal.measurement.gb

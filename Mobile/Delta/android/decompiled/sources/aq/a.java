@@ -1,170 +1,30 @@
 package aq;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import androidx.annotation.NonNull;
-import androidx.camera.view.PreviewView;
-import androidx.constraintlayout.widget.Barrier;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import com.withpersona.sdk2.camera.camera2.Camera2PreviewView;
-import com.withpersona.sdk2.inquiry.selfie.view.OldSelfieOverlayView;
-import com.withpersona.sdk2.inquiry.shared.ui.Pi2NavigationBar;
-import yp.r;
-import yp.s;
+import com.withpersona.sdk2.inquiry.selfie.network.SelfiePoseStateRequest;
+import com.withpersona.sdk2.inquiry.selfie.network.SelfiePoseStateResponse;
+import hv.x;
+import java.util.List;
+import kotlin.Metadata;
+import kv.i;
+import kv.k;
+import kv.l;
+import kv.o;
+import kv.q;
+import kv.s;
+import okhttp3.MultipartBody;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class a implements r5.a {
+@Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0004\bf\u0018\u00002\u00020\u0001J*\u0010\b\u001a\b\u0012\u0004\u0012\u00020\u00070\u00062\b\b\u0001\u0010\u0003\u001a\u00020\u00022\b\b\u0001\u0010\u0005\u001a\u00020\u0004H§@¢\u0006\u0004\b\b\u0010\tJ8\u0010\u000e\u001a\u0006\u0012\u0002\b\u00030\u00062\b\b\u0001\u0010\u0003\u001a\u00020\u00022\b\b\u0001\u0010\n\u001a\u00020\u00022\u000e\b\u0001\u0010\r\u001a\b\u0012\u0004\u0012\u00020\f0\u000bH§@¢\u0006\u0004\b\u000e\u0010\u000f¨\u0006\u0010À\u0006\u0003"}, d2 = {"Laq/a;", "", "", "sessionToken", "Lcom/withpersona/sdk2/inquiry/selfie/network/SelfiePoseStateRequest;", "request", "Lhv/x;", "Lcom/withpersona/sdk2/inquiry/selfie/network/SelfiePoseStateResponse;", "a", "(Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/selfie/network/SelfiePoseStateRequest;Llt/b;)Ljava/lang/Object;", "inquiryId", "", "Lokhttp3/MultipartBody$Part;", "body", "b", "(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Llt/b;)Ljava/lang/Object;", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public interface a {
+    @o("/api/internal/verify/v1/inquiries/{inquiryId}/selfie-pose")
+    @Nullable
+    Object a(@i("Authorization") @NotNull String str, @kv.a @NotNull SelfiePoseStateRequest selfiePoseStateRequest, @NotNull lt.b<? super x<SelfiePoseStateResponse>> bVar);
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    @NonNull
-    public final ConstraintLayout f3575a;
-
-    @NonNull
-    public final Button b;
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    @NonNull
-    public final Camera2PreviewView f3576c;
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    @NonNull
-    public final View f3577d;
-
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    @NonNull
-    public final TextView f3578e;
-
-    /* JADX INFO: renamed from: f, reason: collision with root package name */
-    @NonNull
-    public final TextView f3579f;
-
-    /* JADX INFO: renamed from: g, reason: collision with root package name */
-    @NonNull
-    public final ProgressBar f3580g;
-
-    /* JADX INFO: renamed from: h, reason: collision with root package name */
-    @NonNull
-    public final Pi2NavigationBar f3581h;
-
-    /* JADX INFO: renamed from: i, reason: collision with root package name */
-    @NonNull
-    public final Barrier f3582i;
-
-    /* JADX INFO: renamed from: j, reason: collision with root package name */
-    @NonNull
-    public final FrameLayout f3583j;
-
-    /* JADX INFO: renamed from: k, reason: collision with root package name */
-    @NonNull
-    public final PreviewView f3584k;
-
-    /* JADX INFO: renamed from: l, reason: collision with root package name */
-    @NonNull
-    public final OldSelfieOverlayView f3585l;
-
-    /* JADX INFO: renamed from: m, reason: collision with root package name */
-    @NonNull
-    public final TextView f3586m;
-
-    /* JADX INFO: renamed from: n, reason: collision with root package name */
-    @NonNull
-    public final TextView f3587n;
-
-    public a(@NonNull ConstraintLayout constraintLayout, @NonNull Button button, @NonNull Camera2PreviewView camera2PreviewView, @NonNull View view, @NonNull TextView textView, @NonNull TextView textView2, @NonNull ProgressBar progressBar, @NonNull Pi2NavigationBar pi2NavigationBar, @NonNull Barrier barrier, @NonNull FrameLayout frameLayout, @NonNull PreviewView previewView, @NonNull OldSelfieOverlayView oldSelfieOverlayView, @NonNull TextView textView3, @NonNull TextView textView4) {
-        this.f3575a = constraintLayout;
-        this.b = button;
-        this.f3576c = camera2PreviewView;
-        this.f3577d = view;
-        this.f3578e = textView;
-        this.f3579f = textView2;
-        this.f3580g = progressBar;
-        this.f3581h = pi2NavigationBar;
-        this.f3582i = barrier;
-        this.f3583j = frameLayout;
-        this.f3584k = previewView;
-        this.f3585l = oldSelfieOverlayView;
-        this.f3586m = textView3;
-        this.f3587n = textView4;
-    }
-
-    @NonNull
-    public static a a(@NonNull View view) {
-        View viewA;
-        int i10 = r.f36220h;
-        Button button = (Button) r5.b.a(view, i10);
-        if (button != null) {
-            i10 = r.f36221i;
-            Camera2PreviewView camera2PreviewView = (Camera2PreviewView) r5.b.a(view, i10);
-            if (camera2PreviewView != null && (viewA = r5.b.a(view, (i10 = r.f36222j))) != null) {
-                i10 = r.f36227o;
-                TextView textView = (TextView) r5.b.a(view, i10);
-                if (textView != null) {
-                    i10 = r.f36234v;
-                    TextView textView2 = (TextView) r5.b.a(view, i10);
-                    if (textView2 != null) {
-                        i10 = r.C;
-                        ProgressBar progressBar = (ProgressBar) r5.b.a(view, i10);
-                        if (progressBar != null) {
-                            i10 = r.F;
-                            Pi2NavigationBar pi2NavigationBar = (Pi2NavigationBar) r5.b.a(view, i10);
-                            if (pi2NavigationBar != null) {
-                                i10 = r.J;
-                                Barrier barrier = (Barrier) r5.b.a(view, i10);
-                                if (barrier != null) {
-                                    i10 = r.K;
-                                    FrameLayout frameLayout = (FrameLayout) r5.b.a(view, i10);
-                                    if (frameLayout != null) {
-                                        i10 = r.L;
-                                        PreviewView previewView = (PreviewView) r5.b.a(view, i10);
-                                        if (previewView != null) {
-                                            i10 = r.U;
-                                            OldSelfieOverlayView oldSelfieOverlayView = (OldSelfieOverlayView) r5.b.a(view, i10);
-                                            if (oldSelfieOverlayView != null) {
-                                                i10 = r.f36209b0;
-                                                TextView textView3 = (TextView) r5.b.a(view, i10);
-                                                if (textView3 != null) {
-                                                    i10 = r.f36219g0;
-                                                    TextView textView4 = (TextView) r5.b.a(view, i10);
-                                                    if (textView4 != null) {
-                                                        return new a((ConstraintLayout) view, button, camera2PreviewView, viewA, textView, textView2, progressBar, pi2NavigationBar, barrier, frameLayout, previewView, oldSelfieOverlayView, textView3, textView4);
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
-    }
-
-    @NonNull
-    public static a c(@NonNull LayoutInflater layoutInflater) {
-        return d(layoutInflater, null, false);
-    }
-
-    @NonNull
-    public static a d(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
-        View viewInflate = layoutInflater.inflate(s.f36245a, viewGroup, false);
-        if (z10) {
-            viewGroup.addView(viewInflate);
-        }
-        return a(viewInflate);
-    }
-
-    @Override // r5.a
-    @NonNull
-    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public ConstraintLayout getRoot() {
-        return this.f3575a;
-    }
+    @k({"Accept: multipart/form-data"})
+    @Nullable
+    @l
+    @o("/api/internal/verify/v1/inquiries/{inquiryId}/transition")
+    Object b(@i("Authorization") @NotNull String str, @s("inquiryId") @NotNull String str2, @q @NotNull List<MultipartBody.Part> list, @NotNull lt.b<? super x<?>> bVar);
 }

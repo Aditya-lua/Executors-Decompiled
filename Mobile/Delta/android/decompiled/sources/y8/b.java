@@ -7,24 +7,24 @@ public final class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public static final k9.a<c> f35772a;
+    public static final k9.a<c> f36629a;
 
     @NonNull
     public static final b9.a b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NonNull
-    public static final k9.a.g f35773c;
+    public static final k9.a.g f36630c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final k9.a.AbstractC0392a f35774d;
+    public static final k9.a.AbstractC0391a f36631d;
 
     static {
         k9.a.g gVar = new k9.a.g();
-        f35773c = gVar;
+        f36630c = gVar;
         h hVar = new h();
-        f35774d = hVar;
-        f35772a = new k9.a<>("Auth.PROXY_API", hVar, gVar);
+        f36631d = hVar;
+        f36629a = new k9.a<>("Auth.PROXY_API", hVar, gVar);
         b = new xa.d();
     }
 }

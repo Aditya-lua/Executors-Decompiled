@@ -16,7 +16,7 @@ public final class AFc1tSDK implements AFb1aSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    private final AFf1fSDK f5265d;
+    private final AFf1fSDK f5338d;
 
     @NotNull
     private final AFd1zSDK unregisterClient;
@@ -27,7 +27,7 @@ public final class AFc1tSDK implements AFb1aSDK {
         Intrinsics.checkNotNullParameter(aFf1fSDK, "");
         this.AFLogger = aFc1eSDK;
         this.unregisterClient = aFd1zSDK;
-        this.f5265d = aFf1fSDK;
+        this.f5338d = aFf1fSDK;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -41,23 +41,23 @@ public final class AFc1tSDK implements AFb1aSDK {
 
     @Override // com.appsflyer.internal.AFb1aSDK
     public final boolean AFLogger() {
-        return !this.f5265d.AFLogger() && !this.AFLogger.setCustomerUserId && AFj1qSDK.AFLogger(this.unregisterClient.f5305d) && AFj1qSDK.registerClient(this.unregisterClient.f5305d);
+        return !this.f5338d.AFLogger() && !this.AFLogger.setCustomerUserId && AFj1qSDK.AFLogger(this.unregisterClient.f5378d) && AFj1qSDK.registerClient(this.unregisterClient.f5378d);
     }
 
     @Override // com.appsflyer.internal.AFb1aSDK
     public final void unregisterClient() {
-        Context context = this.unregisterClient.f5305d;
+        Context context = this.unregisterClient.f5378d;
         if (context != null) {
             try {
                 x8.a.a(context).j().g(new sb.g() { // from class: com.appsflyer.internal.b0
                     @Override // sb.g
                     public final void onSuccess(Object obj) {
-                        AFc1tSDK.registerClient(this.f5474a, (x8.c) obj);
+                        AFc1tSDK.registerClient(this.f5547a, (x8.c) obj);
                     }
                 });
             } catch (Throwable th2) {
                 AFLoggerBase.e$default(AFLogger.INSTANCE, LogTag.APP_SET_ID, "Error while trying to  fetch App set ID", th2, false, false, false, false, 120, null);
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             }
         }
     }

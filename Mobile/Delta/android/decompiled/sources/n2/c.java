@@ -18,7 +18,7 @@ import org.xmlpull.v1.XmlPullParserException;
 public final class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final ThreadLocal<TypedValue> f24994a = new ThreadLocal<>();
+    public static final ThreadLocal<TypedValue> f25815a = new ThreadLocal<>();
 
     public static ColorStateList a(Resources resources, XmlPullParser xmlPullParser, Resources.Theme theme) throws XmlPullParserException, IOException {
         int next;
@@ -44,7 +44,7 @@ public final class c {
     }
 
     public static TypedValue c() {
-        ThreadLocal<TypedValue> threadLocal = f24994a;
+        ThreadLocal<TypedValue> threadLocal = f25815a;
         TypedValue typedValue = threadLocal.get();
         if (typedValue != null) {
             return typedValue;
@@ -80,7 +80,7 @@ public final class c {
             }
             if (next == 2 && depth <= depth2 && xmlPullParser.getName().equals("item")) {
                 TypedArray typedArrayH = h(resources, theme, attributeSet, j2.g.b);
-                int i12 = j2.g.f21065c;
+                int i12 = j2.g.f21638c;
                 int resourceId = typedArrayH.getResourceId(i12, -1);
                 if (resourceId == -1 || f(resources, resourceId)) {
                     color = typedArrayH.getColor(i12, -65281);
@@ -88,28 +88,28 @@ public final class c {
                     try {
                         color = a(resources, resources.getXml(resourceId), theme).getDefaultColor();
                     } catch (Exception unused) {
-                        color = typedArrayH.getColor(j2.g.f21065c, -65281);
+                        color = typedArrayH.getColor(j2.g.f21638c, -65281);
                     }
                 }
-                int i13 = j2.g.f21066d;
+                int i13 = j2.g.f21639d;
                 float f11 = 1.0f;
                 if (typedArrayH.hasValue(i13)) {
                     f11 = typedArrayH.getFloat(i13, 1.0f);
                 } else {
-                    int i14 = j2.g.f21068f;
+                    int i14 = j2.g.f21641f;
                     if (typedArrayH.hasValue(i14)) {
                         f11 = typedArrayH.getFloat(i14, 1.0f);
                     }
                 }
                 if (Build.VERSION.SDK_INT >= 31) {
-                    int i15 = j2.g.f21067e;
+                    int i15 = j2.g.f21640e;
                     if (typedArrayH.hasValue(i15)) {
                         f10 = typedArrayH.getFloat(i15, -1.0f);
                     } else {
-                        f10 = typedArrayH.getFloat(j2.g.f21069g, -1.0f);
+                        f10 = typedArrayH.getFloat(j2.g.f21642g, -1.0f);
                     }
                 } else {
-                    f10 = typedArrayH.getFloat(j2.g.f21069g, -1.0f);
+                    f10 = typedArrayH.getFloat(j2.g.f21642g, -1.0f);
                 }
                 typedArrayH.recycle();
                 int attributeCount = attributeSet.getAttributeCount();
@@ -117,7 +117,7 @@ public final class c {
                 int i16 = 0;
                 for (int i17 = 0; i17 < attributeCount; i17++) {
                     int attributeNameResource = attributeSet.getAttributeNameResource(i17);
-                    if (attributeNameResource != 16843173 && attributeNameResource != 16843551 && attributeNameResource != j2.a.f21027a && attributeNameResource != j2.a.b) {
+                    if (attributeNameResource != 16843173 && attributeNameResource != 16843551 && attributeNameResource != j2.a.f21600a && attributeNameResource != j2.a.b) {
                         int i18 = i16 + 1;
                         if (!attributeSet.getAttributeBooleanValue(i17, false)) {
                             attributeNameResource = -attributeNameResource;

@@ -30,7 +30,7 @@ public abstract class AFe1lSDK extends AFe1kSDK<String> {
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
     @NotNull
-    private final Map<String, Object> f5319v;
+    private final Map<String, Object> f5392v;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public AFe1lSDK(@NotNull AFe1zSDK aFe1zSDK, @NotNull AFe1zSDK[] aFe1zSDKArr, @NotNull AFc1bSDK aFc1bSDK, @Nullable String str, @NotNull Map<String, ? extends Object> map) {
@@ -40,7 +40,7 @@ public abstract class AFe1lSDK extends AFe1kSDK<String> {
         Intrinsics.checkNotNullParameter(aFc1bSDK, "");
         Intrinsics.checkNotNullParameter(map, "");
         this.force = aFe1zSDK;
-        this.f5319v = map;
+        this.f5392v = map;
         AFc1iSDK aFc1iSDKAFLogger = aFc1bSDK.AFLogger();
         Intrinsics.checkNotNullExpressionValue(aFc1iSDKAFLogger, "");
         this.afWarnLog = aFc1iSDKAFLogger;
@@ -66,7 +66,7 @@ public abstract class AFe1lSDK extends AFe1kSDK<String> {
     public final AFd1pSDK<String> AFLogger(@NotNull String str) {
         AFd1oSDK aFd1oSDK;
         Intrinsics.checkNotNullParameter(str, "");
-        Map<String, Object> mapX = kotlin.collections.k0.x(this.f5319v);
+        Map<String, Object> mapX = kotlin.collections.k0.x(this.f5392v);
         String strRegisterClient = registerClient(mapX);
         String strAFKeystoreWrapper = AFKeystoreWrapper(mapX);
         Map<String, Object> mapX2 = kotlin.collections.k0.x(mapX);
@@ -76,14 +76,14 @@ public abstract class AFe1lSDK extends AFe1kSDK<String> {
         if (strAFLogger != null && !StringsKt.p0(strAFLogger)) {
             linkedHashMap.put("advertising_id", strAFLogger);
         }
-        AFb1lSDK aFb1lSDKUnregisterClient = AFb1iSDK.unregisterClient(this.afWarnLog.f5258d.f5305d);
+        AFb1lSDK aFb1lSDKUnregisterClient = AFb1iSDK.unregisterClient(this.afWarnLog.f5331d.f5378d);
         String str2 = null;
-        String str3 = aFb1lSDKUnregisterClient != null ? aFb1lSDKUnregisterClient.f5235d : null;
+        String str3 = aFb1lSDKUnregisterClient != null ? aFb1lSDKUnregisterClient.f5308d : null;
         if (str3 != null && !StringsKt.p0(str3)) {
             linkedHashMap.put("oaid", str3);
         }
-        AFb1lSDK aFb1lSDKH_ = AFb1iSDK.h_(this.afWarnLog.f5258d.f5305d.getContentResolver());
-        String str4 = aFb1lSDKH_ != null ? aFb1lSDKH_.f5235d : null;
+        AFb1lSDK aFb1lSDKH_ = AFb1iSDK.h_(this.afWarnLog.f5331d.f5378d.getContentResolver());
+        String str4 = aFb1lSDKH_ != null ? aFb1lSDKH_.f5308d : null;
         if (str4 != null && !StringsKt.p0(str4)) {
             linkedHashMap.put("amazon_aid", str4);
         }
@@ -112,7 +112,7 @@ public abstract class AFe1lSDK extends AFe1kSDK<String> {
         this.afInfoLog.unregisterClient(mapX2);
         AFd1pSDK<String> aFd1pSDKD = d(mapX2, str);
         if (aFd1pSDKD != null && (aFd1oSDK = aFd1pSDKD.unregisterClient) != null) {
-            str2 = aFd1oSDK.f5281d;
+            str2 = aFd1oSDK.f5354d;
         }
         if (str2 != null) {
             JSONObject jSONObject = new JSONObject(mapX2);
@@ -146,7 +146,7 @@ public abstract class AFe1lSDK extends AFe1kSDK<String> {
 
     public void registerClient(@NotNull Map<String, Object> map, @Nullable String str) {
         Intrinsics.checkNotNullParameter(map, "");
-        map.put("app_id", this.afWarnLog.f5258d.f5305d.getPackageName());
+        map.put("app_id", this.afWarnLog.f5331d.f5378d.getPackageName());
         String str2 = this.afWarnLog.registerClient.valueOf;
         if (str2 != null) {
             map.put("cuid", str2);

@@ -12,7 +12,7 @@ public final class y implements CoroutineContext.Element, CoroutineContext.b<y> 
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final y f34901a = new y();
+    public static final y f35399a = new y();
 
     @Override // kotlin.coroutines.CoroutineContext
     public <R> R fold(R r8, @NotNull Function2<? super R, ? super CoroutineContext.Element, ? extends R> function2) {
@@ -28,7 +28,7 @@ public final class y implements CoroutineContext.Element, CoroutineContext.b<y> 
     @Override // kotlin.coroutines.CoroutineContext.Element
     @NotNull
     public CoroutineContext.b<y> getKey() {
-        return f34901a;
+        return f35399a;
     }
 
     @Override // kotlin.coroutines.CoroutineContext

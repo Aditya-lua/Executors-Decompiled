@@ -11,22 +11,22 @@ import com.google.android.gms.tasks.Task;
 public final class f0 implements c0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Application f16528a;
+    public final Application f17124a;
     public final ga.o b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final n f16529c;
+    public final n f17125c;
 
     public f0(Application application, ga.o oVar, n nVar) {
-        this.f16528a = application;
+        this.f17124a = application;
         this.b = oVar;
-        this.f16529c = nVar;
+        this.f17125c = nVar;
     }
 
     @Override // fb.c0
     public final Task a(final zzq zzqVar) {
         final boolean z10 = false;
-        if (zzqVar.zzc() == 0 && !w9.a.a(this.f16528a)) {
+        if (zzqVar.zzc() == 0 && !w9.a.a(this.f17124a)) {
             z10 = true;
         }
         Task taskF = c().f(zzqVar, z10);
@@ -34,7 +34,7 @@ public final class f0 implements c0 {
         taskF.i(t1.a(), new sb.c() { // from class: fb.e0
             @Override // sb.c
             public final /* synthetic */ Object then(Task task) {
-                return this.f16525a.b(zzqVar, z10, task);
+                return this.f17121a.b(zzqVar, z10, task);
             }
         }).c(t1.a(), new OnCompleteListener() { // from class: fb.d0
             @Override // com.google.android.gms.tasks.OnCompleteListener
@@ -70,9 +70,9 @@ public final class f0 implements c0 {
     public final w1 c() {
         Activity activityD = this.b.d();
         if (activityD != null) {
-            return v1.a(activityD, this.f16529c.b);
+            return v1.a(activityD, this.f17125c.b);
         }
-        n nVar = this.f16529c;
-        return v1.a(nVar.f16557a, nVar.b);
+        n nVar = this.f17125c;
+        return v1.a(nVar.f17153a, nVar.b);
     }
 }

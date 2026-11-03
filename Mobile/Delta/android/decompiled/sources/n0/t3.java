@@ -7,7 +7,7 @@ import android.util.Size;
 public abstract class t3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Range<Integer> f24861a = new Range<>(0, 0);
+    public static final Range<Integer> f25682a = new Range<>(0, 0);
 
     public static abstract class a {
         public abstract t3 a();
@@ -28,7 +28,7 @@ public abstract class t3 {
     }
 
     public static a a(Size size) {
-        return new s.b().f(size).e(size).g(0).c(f24861a).b(g0.k0.f17470d).h(false);
+        return new s.b().f(size).e(size).g(0).c(f25682a).b(g0.k0.f18009d).h(false);
     }
 
     public abstract g0.k0 b();

@@ -7,11 +7,11 @@ import java.util.Objects;
 public abstract class g1 implements f1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final MediaCodecInfo f23749a;
+    public final MediaCodecInfo f24399a;
     public final MediaCodecInfo.CodecCapabilities b;
 
     public g1(MediaCodecInfo mediaCodecInfo, String str) throws k1 {
-        this.f23749a = mediaCodecInfo;
+        this.f24399a = mediaCodecInfo;
         try {
             MediaCodecInfo.CodecCapabilities capabilitiesForType = mediaCodecInfo.getCapabilitiesForType(str);
             Objects.requireNonNull(capabilitiesForType);

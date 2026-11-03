@@ -1,12 +1,12 @@
 package kotlin.jvm.internal;
 
 /* JADX INFO: loaded from: classes2.dex */
-public abstract class r extends x implements hu.i {
+public abstract class r extends x implements fu.i {
     public r() {
     }
 
     @Override // kotlin.jvm.internal.d
-    public hu.b computeReflected() {
+    public fu.b computeReflected() {
         return d0.f(this);
     }
 

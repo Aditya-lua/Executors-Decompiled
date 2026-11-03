@@ -16,6 +16,6 @@ public class VideoEncoderCrashQuirk implements VideoQualityQuirk {
 
     @Override // androidx.camera.video.internal.compat.quirk.VideoQualityQuirk
     public boolean c(o0 o0Var, x xVar) {
-        return g() && o0Var.i() == 0 && xVar == x.f16050a;
+        return g() && o0Var.i() == 0 && xVar == x.f16646a;
     }
 }

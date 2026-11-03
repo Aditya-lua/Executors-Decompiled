@@ -11,11 +11,11 @@ import n9.m1;
 public abstract class x extends l1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f21209a;
+    public final int f21782a;
 
     public x(byte[] bArr) {
         n9.m.a(bArr.length == 25);
-        this.f21209a = Arrays.hashCode(bArr);
+        this.f21782a = Arrays.hashCode(bArr);
     }
 
     public static byte[] u2(String str) {
@@ -33,7 +33,7 @@ public abstract class x extends l1 {
         }
         try {
             m1 m1Var = (m1) obj;
-            if (m1Var.zze() == this.f21209a && (aVarZzd = m1Var.zzd()) != null) {
+            if (m1Var.zze() == this.f21782a && (aVarZzd = m1Var.zzd()) != null) {
                 return Arrays.equals(t2(), (byte[]) y9.b.t2(aVarZzd));
             }
             return false;
@@ -44,7 +44,7 @@ public abstract class x extends l1 {
     }
 
     public final int hashCode() {
-        return this.f21209a;
+        return this.f21782a;
     }
 
     public abstract byte[] t2();
@@ -56,6 +56,6 @@ public abstract class x extends l1 {
 
     @Override // n9.m1
     public final int zze() {
-        return this.f21209a;
+        return this.f21782a;
     }
 }

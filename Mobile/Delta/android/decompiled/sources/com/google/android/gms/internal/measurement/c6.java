@@ -12,11 +12,11 @@ public final class c6 extends gb implements pc {
     static {
         c6 c6Var = new c6();
         zzh = c6Var;
-        gb.u(c6.class, c6Var);
+        gb.t(c6.class, c6Var);
     }
 
     public static b6 O() {
-        return (b6) zzh.q();
+        return (b6) zzh.p();
     }
 
     @Override // com.google.android.gms.internal.measurement.gb

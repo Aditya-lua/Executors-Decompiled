@@ -9,24 +9,24 @@ import java.util.concurrent.Executor;
 public class c implements n0.j2 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ImageReader f17348a;
+    public final ImageReader f17887a;
     public final Object b = new Object();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f17349c = true;
+    public boolean f17888c = true;
 
     public c(ImageReader imageReader) {
-        this.f17348a = imageReader;
+        this.f17887a = imageReader;
     }
 
     public static /* synthetic */ void a(final c cVar, Executor executor, final n0.j2.a aVar, ImageReader imageReader) {
         synchronized (cVar.b) {
             try {
-                if (!cVar.f17349c) {
+                if (!cVar.f17888c) {
                     executor.execute(new Runnable() { // from class: g0.b
                         @Override // java.lang.Runnable
                         public final void run() {
-                            c.h(this.f17341a, aVar);
+                            c.h(this.f17880a, aVar);
                         }
                     });
                 }
@@ -46,7 +46,7 @@ public class c implements n0.j2 {
         Image imageAcquireLatestImage;
         synchronized (this.b) {
             try {
-                imageAcquireLatestImage = this.f17348a.acquireLatestImage();
+                imageAcquireLatestImage = this.f17887a.acquireLatestImage();
             } catch (RuntimeException e10) {
                 if (!i(e10)) {
                     throw e10;
@@ -64,7 +64,7 @@ public class c implements n0.j2 {
     public int c() {
         int imageFormat;
         synchronized (this.b) {
-            imageFormat = this.f17348a.getImageFormat();
+            imageFormat = this.f17887a.getImageFormat();
         }
         return imageFormat;
     }
@@ -72,15 +72,15 @@ public class c implements n0.j2 {
     @Override // n0.j2
     public void close() {
         synchronized (this.b) {
-            this.f17348a.close();
+            this.f17887a.close();
         }
     }
 
     @Override // n0.j2
     public void d() {
         synchronized (this.b) {
-            this.f17349c = true;
-            this.f17348a.setOnImageAvailableListener(null, null);
+            this.f17888c = true;
+            this.f17887a.setOnImageAvailableListener(null, null);
         }
     }
 
@@ -88,7 +88,7 @@ public class c implements n0.j2 {
     public int e() {
         int maxImages;
         synchronized (this.b) {
-            maxImages = this.f17348a.getMaxImages();
+            maxImages = this.f17887a.getMaxImages();
         }
         return maxImages;
     }
@@ -96,11 +96,11 @@ public class c implements n0.j2 {
     @Override // n0.j2
     public void f(final n0.j2.a aVar, final Executor executor) {
         synchronized (this.b) {
-            this.f17349c = false;
-            this.f17348a.setOnImageAvailableListener(new ImageReader.OnImageAvailableListener() { // from class: g0.a
+            this.f17888c = false;
+            this.f17887a.setOnImageAvailableListener(new ImageReader.OnImageAvailableListener() { // from class: g0.a
                 @Override // android.media.ImageReader.OnImageAvailableListener
                 public final void onImageAvailable(ImageReader imageReader) {
-                    c.a(this.f17326a, executor, aVar, imageReader);
+                    c.a(this.f17865a, executor, aVar, imageReader);
                 }
             }, p0.o.a());
         }
@@ -111,7 +111,7 @@ public class c implements n0.j2 {
         Image imageAcquireNextImage;
         synchronized (this.b) {
             try {
-                imageAcquireNextImage = this.f17348a.acquireNextImage();
+                imageAcquireNextImage = this.f17887a.acquireNextImage();
             } catch (RuntimeException e10) {
                 if (!i(e10)) {
                     throw e10;
@@ -129,7 +129,7 @@ public class c implements n0.j2 {
     public int getHeight() {
         int height;
         synchronized (this.b) {
-            height = this.f17348a.getHeight();
+            height = this.f17887a.getHeight();
         }
         return height;
     }
@@ -138,7 +138,7 @@ public class c implements n0.j2 {
     public Surface getSurface() {
         Surface surface;
         synchronized (this.b) {
-            surface = this.f17348a.getSurface();
+            surface = this.f17887a.getSurface();
         }
         return surface;
     }
@@ -147,7 +147,7 @@ public class c implements n0.j2 {
     public int getWidth() {
         int width;
         synchronized (this.b) {
-            width = this.f17348a.getWidth();
+            width = this.f17887a.getWidth();
         }
         return width;
     }

@@ -24,20 +24,20 @@ import kotlin.Unit;
 import kotlin.collections.m;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
-import me.x;
 import n0.b2;
 import n0.h0;
 import n0.j0;
 import n0.k0;
 import n0.o0;
 import n0.p0;
+import ne.x;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import p0.z;
 import r0.n;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000º\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u000e\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0010%\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u000b\b\u0001\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003JG\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u00062\n\b\u0002\u0010\b\u001a\u0004\u0018\u00010\u00062\b\b\u0002\u0010\n\u001a\u00020\t2\b\b\u0002\u0010\u000b\u001a\u00020\t2\u0006\u0010\r\u001a\u00020\fH\u0002¢\u0006\u0004\b\u000f\u0010\u0010J\u001f\u0010\u0015\u001a\u00020\u00142\u0006\u0010\u0011\u001a\u00020\u00062\u0006\u0010\u0013\u001a\u00020\u0012H\u0002¢\u0006\u0004\b\u0015\u0010\u0016J)\u0010\u001d\u001a\b\u0012\u0004\u0012\u00020\u001c0\u001b2\u0006\u0010\u0018\u001a\u00020\u00172\n\b\u0002\u0010\u001a\u001a\u0004\u0018\u00010\u0019H\u0000¢\u0006\u0004\b\u001d\u0010\u001eJ\u0017\u0010 \u001a\u00020\u001f2\u0006\u0010\u001a\u001a\u00020\u0019H\u0000¢\u0006\u0004\b \u0010!J\u001f\u0010$\u001a\b\u0012\u0004\u0012\u00020\u001c0\u001b2\b\b\u0002\u0010#\u001a\u00020\"H\u0000¢\u0006\u0004\b$\u0010%J'\u0010)\u001a\u00020\u001f2\u0016\u0010(\u001a\f\u0012\b\b\u0001\u0012\u0004\u0018\u00010'0&\"\u0004\u0018\u00010'H\u0017¢\u0006\u0004\b)\u0010*J\u000f\u0010+\u001a\u00020\u001fH\u0017¢\u0006\u0004\b+\u0010\u0003J'\u0010.\u001a\u00020\u000e2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0011\u001a\u00020\u00062\u0006\u0010-\u001a\u00020,H\u0017¢\u0006\u0004\b.\u0010/J\u0017\u00100\u001a\u00020\u00122\u0006\u0010\u0011\u001a\u00020\u0006H\u0016¢\u0006\u0004\b0\u00101R\u0014\u00104\u001a\u00020\u00018\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b2\u00103R*\u0010=\u001a\u0004\u0018\u0001058\u0000@\u0000X\u0081\u000e¢\u0006\u0018\n\u0004\b6\u00107\u0012\u0004\b<\u0010\u0003\u001a\u0004\b8\u00109\"\u0004\b:\u0010;R\u001e\u0010@\u001a\n\u0012\u0004\u0012\u00020\u001c\u0018\u00010\u001b8\u0002@\u0002X\u0083\u000e¢\u0006\u0006\n\u0004\b>\u0010?R$\u0010C\u001a\u0010\u0012\f\u0012\n A*\u0004\u0018\u00010\u001c0\u001c0\u001b8\u0002@\u0002X\u0083\u000e¢\u0006\u0006\n\u0004\bB\u0010?R\u0014\u0010G\u001a\u00020D8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bE\u0010FR\u0018\u0010K\u001a\u0004\u0018\u00010H8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bI\u0010JR*\u0010\u0018\u001a\u0004\u0018\u00010\u00178\u0000@\u0000X\u0081\u000e¢\u0006\u0018\n\u0004\bL\u0010M\u0012\u0004\bR\u0010\u0003\u001a\u0004\bN\u0010O\"\u0004\bP\u0010QR \u0010X\u001a\u000e\u0012\u0004\u0012\u00020T\u0012\u0004\u0012\u00020U0S8\u0002X\u0083\u0004¢\u0006\u0006\n\u0004\bV\u0010WR$\u0010^\u001a\u0012\u0012\u0004\u0012\u00020Z0Yj\b\u0012\u0004\u0012\u00020Z`[8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\\\u0010]R\"\u0010f\u001a\u00020_8\u0016@\u0016X\u0096\u000e¢\u0006\u0012\n\u0004\b`\u0010a\u001a\u0004\bb\u0010c\"\u0004\bd\u0010eR$\u0010g\u001a\u00020_2\u0006\u0010g\u001a\u00020_8B@BX\u0082\u000e¢\u0006\f\u001a\u0004\bh\u0010c\"\u0004\bi\u0010e¨\u0006j"}, d2 = {"Ld1/g;", "", "<init>", "()V", "Landroidx/lifecycle/s;", "lifecycleOwner", "Lg0/v;", "primaryCameraSelector", "secondaryCameraSelector", "Lg0/i0;", "primaryCompositionSettings", "secondaryCompositionSettings", "Lg0/g2;", "sessionConfig", "Lg0/l;", "n", "(Landroidx/lifecycle/s;Lg0/v;Lg0/v;Lg0/i0;Lg0/i0;Lg0/g2;)Lg0/l;", "cameraSelector", "Lg0/t;", "cameraInfo", "Ln0/h0;", "q", "(Lg0/v;Lg0/t;)Ln0/h0;", "Landroid/content/Context;", "context", "Lg0/g0;", "cameraXConfig", "Lme/x;", "Ljava/lang/Void;", "u", "(Landroid/content/Context;Lg0/g0;)Lme/x;", "", "p", "(Lg0/g0;)V", "", "clearConfigProvider", "B", "(Z)Lme/x;", "", "Lg0/w2;", "useCases", "D", "([Lg0/w2;)V", "E", "Lg0/x2;", "useCaseGroup", "m", "(Landroidx/lifecycle/s;Lg0/v;Lg0/x2;)Lg0/l;", "r", "(Lg0/v;)Lg0/t;", "a", "Ljava/lang/Object;", "lock", "Lg0/g0$b;", "b", "Lg0/g0$b;", "t", "()Lg0/g0$b;", "y", "(Lg0/g0$b;)V", "getCameraXConfigProvider$camera_lifecycle_release$annotations", "cameraXConfigProvider", "c", "Lme/x;", "cameraXInitializeFuture", "kotlin.jvm.PlatformType", "d", "cameraXShutdownFuture", "Ld1/h;", "e", "Ld1/h;", "lifecycleCameraRepository", "Lg0/f0;", "f", "Lg0/f0;", "cameraX", "g", "Landroid/content/Context;", "getContext$camera_lifecycle_release", "()Landroid/content/Context;", "A", "(Landroid/content/Context;)V", "getContext$camera_lifecycle_release$annotations", "", "Lg0/s;", "Ln0/e;", "h", "Ljava/util/Map;", "cameraInfoMap", "Ljava/util/HashSet;", "Ld1/h$a;", "Lkotlin/collections/HashSet;", "i", "Ljava/util/HashSet;", "lifecycleCameraKeys", "", "j", "I", "getConfigImplType", "()I", "z", "(I)V", "configImplType", "cameraOperatingMode", "s", "x", "camera-lifecycle_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
+@Metadata(d1 = {"\u0000º\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u000e\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0010%\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u000b\b\u0001\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003JG\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u00062\n\b\u0002\u0010\b\u001a\u0004\u0018\u00010\u00062\b\b\u0002\u0010\n\u001a\u00020\t2\b\b\u0002\u0010\u000b\u001a\u00020\t2\u0006\u0010\r\u001a\u00020\fH\u0002¢\u0006\u0004\b\u000f\u0010\u0010J\u001f\u0010\u0015\u001a\u00020\u00142\u0006\u0010\u0011\u001a\u00020\u00062\u0006\u0010\u0013\u001a\u00020\u0012H\u0002¢\u0006\u0004\b\u0015\u0010\u0016J)\u0010\u001d\u001a\b\u0012\u0004\u0012\u00020\u001c0\u001b2\u0006\u0010\u0018\u001a\u00020\u00172\n\b\u0002\u0010\u001a\u001a\u0004\u0018\u00010\u0019H\u0000¢\u0006\u0004\b\u001d\u0010\u001eJ\u0017\u0010 \u001a\u00020\u001f2\u0006\u0010\u001a\u001a\u00020\u0019H\u0000¢\u0006\u0004\b \u0010!J\u001f\u0010$\u001a\b\u0012\u0004\u0012\u00020\u001c0\u001b2\b\b\u0002\u0010#\u001a\u00020\"H\u0000¢\u0006\u0004\b$\u0010%J'\u0010)\u001a\u00020\u001f2\u0016\u0010(\u001a\f\u0012\b\b\u0001\u0012\u0004\u0018\u00010'0&\"\u0004\u0018\u00010'H\u0017¢\u0006\u0004\b)\u0010*J\u000f\u0010+\u001a\u00020\u001fH\u0017¢\u0006\u0004\b+\u0010\u0003J'\u0010.\u001a\u00020\u000e2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0011\u001a\u00020\u00062\u0006\u0010-\u001a\u00020,H\u0017¢\u0006\u0004\b.\u0010/J\u0017\u00100\u001a\u00020\u00122\u0006\u0010\u0011\u001a\u00020\u0006H\u0016¢\u0006\u0004\b0\u00101R\u0014\u00104\u001a\u00020\u00018\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b2\u00103R*\u0010=\u001a\u0004\u0018\u0001058\u0000@\u0000X\u0081\u000e¢\u0006\u0018\n\u0004\b6\u00107\u0012\u0004\b<\u0010\u0003\u001a\u0004\b8\u00109\"\u0004\b:\u0010;R\u001e\u0010@\u001a\n\u0012\u0004\u0012\u00020\u001c\u0018\u00010\u001b8\u0002@\u0002X\u0083\u000e¢\u0006\u0006\n\u0004\b>\u0010?R$\u0010C\u001a\u0010\u0012\f\u0012\n A*\u0004\u0018\u00010\u001c0\u001c0\u001b8\u0002@\u0002X\u0083\u000e¢\u0006\u0006\n\u0004\bB\u0010?R\u0014\u0010G\u001a\u00020D8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bE\u0010FR\u0018\u0010K\u001a\u0004\u0018\u00010H8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bI\u0010JR*\u0010\u0018\u001a\u0004\u0018\u00010\u00178\u0000@\u0000X\u0081\u000e¢\u0006\u0018\n\u0004\bL\u0010M\u0012\u0004\bR\u0010\u0003\u001a\u0004\bN\u0010O\"\u0004\bP\u0010QR \u0010X\u001a\u000e\u0012\u0004\u0012\u00020T\u0012\u0004\u0012\u00020U0S8\u0002X\u0083\u0004¢\u0006\u0006\n\u0004\bV\u0010WR$\u0010^\u001a\u0012\u0012\u0004\u0012\u00020Z0Yj\b\u0012\u0004\u0012\u00020Z`[8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\\\u0010]R\"\u0010f\u001a\u00020_8\u0016@\u0016X\u0096\u000e¢\u0006\u0012\n\u0004\b`\u0010a\u001a\u0004\bb\u0010c\"\u0004\bd\u0010eR$\u0010g\u001a\u00020_2\u0006\u0010g\u001a\u00020_8B@BX\u0082\u000e¢\u0006\f\u001a\u0004\bh\u0010c\"\u0004\bi\u0010e¨\u0006j"}, d2 = {"Ld1/g;", "", "<init>", "()V", "Landroidx/lifecycle/s;", "lifecycleOwner", "Lg0/v;", "primaryCameraSelector", "secondaryCameraSelector", "Lg0/i0;", "primaryCompositionSettings", "secondaryCompositionSettings", "Lg0/g2;", "sessionConfig", "Lg0/l;", "n", "(Landroidx/lifecycle/s;Lg0/v;Lg0/v;Lg0/i0;Lg0/i0;Lg0/g2;)Lg0/l;", "cameraSelector", "Lg0/t;", "cameraInfo", "Ln0/h0;", "q", "(Lg0/v;Lg0/t;)Ln0/h0;", "Landroid/content/Context;", "context", "Lg0/g0;", "cameraXConfig", "Lne/x;", "Ljava/lang/Void;", "u", "(Landroid/content/Context;Lg0/g0;)Lne/x;", "", "p", "(Lg0/g0;)V", "", "clearConfigProvider", "B", "(Z)Lne/x;", "", "Lg0/w2;", "useCases", "D", "([Lg0/w2;)V", "E", "Lg0/x2;", "useCaseGroup", "m", "(Landroidx/lifecycle/s;Lg0/v;Lg0/x2;)Lg0/l;", "r", "(Lg0/v;)Lg0/t;", "a", "Ljava/lang/Object;", "lock", "Lg0/g0$b;", "b", "Lg0/g0$b;", "t", "()Lg0/g0$b;", "y", "(Lg0/g0$b;)V", "getCameraXConfigProvider$camera_lifecycle_release$annotations", "cameraXConfigProvider", "c", "Lne/x;", "cameraXInitializeFuture", "kotlin.jvm.PlatformType", "d", "cameraXShutdownFuture", "Ld1/h;", "e", "Ld1/h;", "lifecycleCameraRepository", "Lg0/f0;", "f", "Lg0/f0;", "cameraX", "g", "Landroid/content/Context;", "getContext$camera_lifecycle_release", "()Landroid/content/Context;", "A", "(Landroid/content/Context;)V", "getContext$camera_lifecycle_release$annotations", "", "Lg0/s;", "Ln0/e;", "h", "Ljava/util/Map;", "cameraInfoMap", "Ljava/util/HashSet;", "Ld1/h$a;", "Lkotlin/collections/HashSet;", "i", "Ljava/util/HashSet;", "lifecycleCameraKeys", "", "j", "I", "getConfigImplType", "()I", "z", "(I)V", "configImplType", "cameraOperatingMode", "s", "x", "camera-lifecycle_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
 public final class g {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -83,15 +83,15 @@ public final class g {
     public static final class a implements g0.b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ g0 f14292a;
+        public final /* synthetic */ g0 f14272a;
 
         public a(g0 g0Var) {
-            this.f14292a = g0Var;
+            this.f14272a = g0Var;
         }
 
         @Override // g0.g0.b
         public final g0 getCameraXConfig() {
-            return this.f14292a;
+            return this.f14272a;
         }
     }
 
@@ -100,18 +100,18 @@ public final class g {
         public final /* synthetic */ f0 b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ Context f14294c;
+        public final /* synthetic */ Context f14274c;
 
         public b(f0 f0Var, Context context) {
             this.b = f0Var;
-            this.f14294c = context;
+            this.f14274c = context;
         }
 
         @Override // r0.c
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public void onSuccess(Void r8) {
             g.this.cameraX = this.b;
-            g.this.A(p0.f.a(this.f14294c));
+            g.this.A(p0.f.a(this.f14274c));
         }
 
         @Override // r0.c
@@ -144,11 +144,11 @@ public final class g {
         }
         v vVar3 = vVar2;
         if ((i10 & 8) != 0) {
-            i0Var = i0.f17453d;
+            i0Var = i0.f17992d;
         }
         i0 i0Var3 = i0Var;
         if ((i10 & 16) != 0) {
-            i0Var2 = i0.f17453d;
+            i0Var2 = i0.f17992d;
         }
         return gVar.n(sVar, vVar, vVar3, i0Var3, i0Var2, g2Var);
     }
@@ -171,7 +171,7 @@ public final class g {
         z.f(new Runnable() { // from class: d1.f
             @Override // java.lang.Runnable
             public final void run() {
-                g.C(this.f14282a);
+                g.C(this.f14262a);
             }
         });
         f0 f0Var = this.cameraX;
@@ -194,7 +194,7 @@ public final class g {
             this.cameraXShutdownFuture = xVarP;
             this.cameraInfoMap.clear();
             this.lifecycleCameraKeys.clear();
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
         }
         this.cameraX = null;
         this.context = null;
@@ -210,7 +210,7 @@ public final class g {
                 throw new UnsupportedOperationException("Unbind UseCase is not supported in concurrent camera mode, call unbindAll() first.");
             }
             this.lifecycleCameraRepository.m(new q1(m.I(useCases), null, null, 6, null), this.lifecycleCameraKeys);
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
             n5.a.f();
         } catch (Throwable th2) {
             n5.a.f();
@@ -224,7 +224,7 @@ public final class g {
             z.b();
             x(0);
             this.lifecycleCameraRepository.n(this.lifecycleCameraKeys);
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
         } finally {
             n5.a.f();
         }
@@ -285,7 +285,7 @@ public final class g {
                     Intrinsics.checkNotNullExpressionValue(cVar, "next(...)");
                     c cVar2 = cVar;
                     if (cVar2.v(w2Var) && !Intrinsics.c(cVar2.t(), lifecycleOwner)) {
-                        kotlin.jvm.internal.g0 g0Var = kotlin.jvm.internal.g0.f22559a;
+                        kotlin.jvm.internal.g0 g0Var = kotlin.jvm.internal.g0.f23014a;
                         String str = String.format("Use case %s already bound to a different lifecycle.", Arrays.copyOf(new Object[]{w2Var}, 1));
                         Intrinsics.checkNotNullExpressionValue(str, "format(...)");
                         throw new IllegalStateException(str);
@@ -324,7 +324,7 @@ public final class g {
                 x2.g.g(cameraXConfig);
                 x2.g.j(getCameraXConfigProvider() == null, "CameraX has already been configured. To use a different configuration, shutdown() must be called.");
                 y(new a(cameraXConfig));
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             }
             n5.a.f();
         } catch (Throwable th2) {
@@ -341,7 +341,7 @@ public final class g {
             r next = it.next();
             Intrinsics.checkNotNullExpressionValue(next, "next(...)");
             r rVar = next;
-            if (!Intrinsics.c(rVar.a(), r.f17505a)) {
+            if (!Intrinsics.c(rVar.a(), r.f18044a)) {
                 j0 j0VarA = b2.a(rVar.a());
                 Context context = this.context;
                 Intrinsics.checkNotNull(context);
@@ -381,7 +381,7 @@ public final class g {
                         eVar = new n0.e(o0VarK, h0VarQ);
                         this.cameraInfoMap.put(sVarB, eVar);
                     }
-                    Unit unit = Unit.f22483a;
+                    Unit unit = Unit.f22938a;
                 } catch (Throwable th2) {
                     throw th2;
                 }

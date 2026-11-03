@@ -45,65 +45,65 @@ import x0.z0;
 public final class f implements g0.l {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final n0.f f30412a;
+    public final n0.f f30959a;
     public final n0.f b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final j4 f30413c;
+    public final j4 f30960c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final g0.s f30414d;
+    public final g0.s f30961d;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final h0.a f30417g;
+    public final h0.a f30964g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public y2 f30418h;
+    public y2 f30965h;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final h0 f30422l;
+    public final h0 f30969l;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public w2 f30426p;
+    public w2 f30973p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public b1.g f30427q;
+    public b1.g f30974q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public final i0 f30428r;
+    public final i0 f30975r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public final i0 f30429s;
+    public final i0 f30976s;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public final m f30431u;
+    public final m f30978u;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final List<w2> f30415e = new ArrayList();
+    public final List<w2> f30962e = new ArrayList();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final List<w2> f30416f = new ArrayList();
+    public final List<w2> f30963f = new ArrayList();
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public List<g0.n> f30419i = Collections.EMPTY_LIST;
+    public List<g0.n> f30966i = Collections.EMPTY_LIST;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public int f30420j = 0;
+    public int f30967j = 0;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public Range<Integer> f30421k = t3.f24861a;
+    public Range<Integer> f30968k = t3.f25682a;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final Object f30423m = new Object();
+    public final Object f30970m = new Object();
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public boolean f30424n = true;
+    public boolean f30971n = true;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public n1 f30425o = null;
+    public n1 f30972o = null;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public final v0.e f30430t = new v0.e();
+    public final v0.e f30977t = new v0.e();
 
     public static final class a extends Exception {
         public a(Throwable th2) {
@@ -114,29 +114,29 @@ public final class f implements g0.l {
     public static class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public i4<?> f30432a;
+        public i4<?> f30979a;
         public i4<?> b;
 
         public b(i4<?> i4Var, i4<?> i4Var2) {
-            this.f30432a = i4Var;
+            this.f30979a = i4Var;
             this.b = i4Var2;
         }
     }
 
     public f(p0 p0Var, p0 p0Var2, n0.e eVar, n0.e eVar2, i0 i0Var, i0 i0Var2, h0.a aVar, m mVar, j4 j4Var) {
-        this.f30422l = eVar.C();
-        this.f30412a = new n0.f(p0Var, eVar);
+        this.f30969l = eVar.C();
+        this.f30959a = new n0.f(p0Var, eVar);
         if (p0Var2 == null || eVar2 == null) {
             this.b = null;
         } else {
             this.b = new n0.f(p0Var2, eVar2);
         }
-        this.f30428r = i0Var;
-        this.f30429s = i0Var2;
-        this.f30417g = aVar;
-        this.f30413c = j4Var;
-        this.f30414d = g0.s.b(eVar, eVar2);
-        this.f30431u = mVar;
+        this.f30975r = i0Var;
+        this.f30976s = i0Var2;
+        this.f30964g = aVar;
+        this.f30960c = j4Var;
+        this.f30961d = g0.s.b(eVar, eVar2);
+        this.f30978u = mVar;
     }
 
     public static Matrix B(Rect rect, Size size) {
@@ -166,9 +166,9 @@ public final class f implements g0.l {
     }
 
     private int K() {
-        synchronized (this.f30423m) {
+        synchronized (this.f30970m) {
             try {
-                return this.f30417g.e() == 2 ? 1 : 0;
+                return this.f30964g.e() == 2 ? 1 : 0;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -327,7 +327,7 @@ public final class f implements g0.l {
         return false;
     }
 
-    public static /* synthetic */ void g(v2 v2Var) {
+    public static /* synthetic */ void f(v2 v2Var) {
         final SurfaceTexture surfaceTexture = new SurfaceTexture(0);
         surfaceTexture.setDefaultBufferSize(v2Var.q().getWidth(), v2Var.q().getHeight());
         surfaceTexture.detachFromGLContext();
@@ -389,7 +389,7 @@ public final class f implements g0.l {
     public static i4<?> v(w2 w2Var, i4<?> i4Var, int i10, Range<Integer> range) {
         x2 x2VarL0 = i4Var != null ? x2.l0(i4Var) : x2.k0();
         x2VarL0.G(i4.B, Integer.valueOf(i10));
-        if (!t3.f24861a.equals(range)) {
+        if (!t3.f25682a.equals(range)) {
             x2VarL0.D(i4.C, n1.c.HIGH_PRIORITY_REQUIRED, range);
             x2VarL0.G(i4.D, Boolean.TRUE);
         }
@@ -411,7 +411,7 @@ public final class f implements g0.l {
     /* JADX WARN: Code duplicated, block: B:23:0x0049  */
     public final w2 A(Collection<w2> collection, b1.g gVar) {
         w2 w2VarE;
-        synchronized (this.f30423m) {
+        synchronized (this.f30970m) {
             try {
                 ArrayList arrayList = new ArrayList(collection);
                 if (gVar != null) {
@@ -421,9 +421,9 @@ public final class f implements g0.l {
                 if (!V()) {
                     w2VarE = null;
                 } else if (X(arrayList)) {
-                    w2VarE = b0(this.f30426p) ? this.f30426p : F();
+                    w2VarE = b0(this.f30973p) ? this.f30973p : F();
                 } else if (W(arrayList)) {
-                    w2VarE = Z(this.f30426p) ? this.f30426p : E();
+                    w2VarE = Z(this.f30973p) ? this.f30973p : E();
                 } else {
                     w2VarE = null;
                 }
@@ -443,9 +443,9 @@ public final class f implements g0.l {
                 throw new IllegalArgumentException("Extensions are not supported for use with Raw image capture.");
             }
         }
-        synchronized (this.f30423m) {
+        synchronized (this.f30970m) {
             try {
-                if (!this.f30419i.isEmpty() && (T(collection) || S(collection))) {
+                if (!this.f30966i.isEmpty() && (T(collection) || S(collection))) {
                     throw new IllegalArgumentException("Ultra HDR image and Raw capture does not support for use with CameraEffect.");
                 }
             } catch (Throwable th2) {
@@ -463,26 +463,26 @@ public final class f implements g0.l {
         a2VarF.q0(new a2.c() { // from class: s0.e
             @Override // g0.a2.c
             public final void a(v2 v2Var) {
-                f.g(v2Var);
+                f.f(v2Var);
             }
         });
         return a2VarF;
     }
 
     public final b1.g G(Collection<w2> collection, boolean z10) {
-        synchronized (this.f30423m) {
+        synchronized (this.f30970m) {
             try {
                 Set<w2> setN = N(collection, z10);
                 if (setN.size() >= 2 || (P() && U(setN))) {
-                    b1.g gVar = this.f30427q;
+                    b1.g gVar = this.f30974q;
                     if (gVar == null || !gVar.s0().equals(setN)) {
                         if (!d0(setN)) {
                             return null;
                         }
-                        return new b1.g(this.f30412a, this.b, this.f30428r, this.f30429s, setN, this.f30413c);
+                        return new b1.g(this.f30959a, this.b, this.f30975r, this.f30976s, setN, this.f30960c);
                     }
-                    this.f30427q.F0(setN);
-                    b1.g gVar2 = this.f30427q;
+                    this.f30974q.F0(setN);
+                    b1.g gVar2 = this.f30974q;
                     Objects.requireNonNull(gVar2);
                     return gVar2;
                 }
@@ -494,16 +494,16 @@ public final class f implements g0.l {
     }
 
     public void H() {
-        synchronized (this.f30423m) {
+        synchronized (this.f30970m) {
             try {
-                if (this.f30424n) {
-                    this.f30412a.j(new ArrayList(this.f30416f));
+                if (this.f30971n) {
+                    this.f30959a.j(new ArrayList(this.f30963f));
                     n0.f fVar = this.b;
                     if (fVar != null) {
-                        fVar.j(new ArrayList(this.f30416f));
+                        fVar.j(new ArrayList(this.f30963f));
                     }
                     x();
-                    this.f30424n = false;
+                    this.f30971n = false;
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -512,14 +512,14 @@ public final class f implements g0.l {
     }
 
     public g0.s J() {
-        return this.f30414d;
+        return this.f30961d;
     }
 
     public final int M(boolean z10) {
         int iG;
-        synchronized (this.f30423m) {
+        synchronized (this.f30970m) {
             try {
-                Iterator<g0.n> it = this.f30419i.iterator();
+                Iterator<g0.n> it = this.f30966i.iterator();
                 g0.n nVar = null;
                 while (true) {
                     iG = 0;
@@ -559,25 +559,25 @@ public final class f implements g0.l {
 
     public List<w2> O() {
         ArrayList arrayList;
-        synchronized (this.f30423m) {
-            arrayList = new ArrayList(this.f30415e);
+        synchronized (this.f30970m) {
+            arrayList = new ArrayList(this.f30962e);
         }
         return arrayList;
     }
 
     public final boolean P() {
         boolean z10;
-        synchronized (this.f30423m) {
-            z10 = this.f30422l.w(null) != null;
+        synchronized (this.f30970m) {
+            z10 = this.f30969l.w(null) != null;
         }
         return z10;
     }
 
     public final boolean V() {
         boolean z10;
-        synchronized (this.f30423m) {
+        synchronized (this.f30970m) {
             z10 = true;
-            if (this.f30422l.v() != 1) {
+            if (this.f30969l.v() != 1) {
                 z10 = false;
             }
         }
@@ -586,36 +586,36 @@ public final class f implements g0.l {
 
     @Override // g0.l
     public g0.m c() {
-        return this.f30412a.c();
+        return this.f30959a.c();
     }
 
     public final boolean c0() {
-        return (P() || this.b != null || this.f30420j == 1) ? false : true;
+        return (P() || this.b != null || this.f30967j == 1) ? false : true;
     }
 
     @Override // g0.l
     public t d() {
-        return this.f30412a.d();
+        return this.f30959a.d();
     }
 
     public void f0(Collection<w2> collection) {
-        synchronized (this.f30423m) {
+        synchronized (this.f30970m) {
             D(collection);
-            LinkedHashSet linkedHashSet = new LinkedHashSet(this.f30415e);
+            LinkedHashSet linkedHashSet = new LinkedHashSet(this.f30962e);
             linkedHashSet.removeAll(collection);
             s(y(linkedHashSet, this.b != null, false));
         }
     }
 
     public void h(boolean z10) {
-        this.f30412a.h(z10);
+        this.f30959a.h(z10);
     }
 
     public final void h0() {
-        synchronized (this.f30423m) {
+        synchronized (this.f30970m) {
             try {
-                if (this.f30425o != null) {
-                    this.f30412a.e().l(this.f30425o);
+                if (this.f30972o != null) {
+                    this.f30959a.e().l(this.f30972o);
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -624,35 +624,35 @@ public final class f implements g0.l {
     }
 
     public void i0(List<g0.n> list) {
-        synchronized (this.f30423m) {
-            this.f30419i = list;
+        synchronized (this.f30970m) {
+            this.f30966i = list;
         }
     }
 
     public void k0(Range<Integer> range) {
-        synchronized (this.f30423m) {
-            this.f30421k = range;
+        synchronized (this.f30970m) {
+            this.f30968k = range;
         }
     }
 
     public void l0(int i10) {
-        synchronized (this.f30423m) {
-            this.f30420j = i10;
+        synchronized (this.f30970m) {
+            this.f30967j = i10;
         }
     }
 
     public void m0(y2 y2Var) {
-        synchronized (this.f30423m) {
-            this.f30418h = y2Var;
+        synchronized (this.f30970m) {
+            this.f30965h = y2Var;
         }
     }
 
     public void n(Collection<w2> collection, ResolvedFeatureGroup resolvedFeatureGroup) {
         r1.a("CameraUseCaseAdapter", "addUseCases: appUseCasesToAdd = " + collection + ", featureGroup = " + resolvedFeatureGroup);
-        synchronized (this.f30423m) {
+        synchronized (this.f30970m) {
             try {
                 t();
-                LinkedHashSet linkedHashSet = new LinkedHashSet(this.f30415e);
+                LinkedHashSet linkedHashSet = new LinkedHashSet(this.f30962e);
                 linkedHashSet.addAll(collection);
                 Map<w2, Set<i0.b>> mapU = u(linkedHashSet, resolvedFeatureGroup);
                 try {
@@ -671,15 +671,15 @@ public final class f implements g0.l {
         if (P() && U(collection)) {
             return true;
         }
-        return this.f30430t.a(this.f30412a.k().e(), collection);
+        return this.f30977t.a(this.f30959a.k().e(), collection);
     }
 
     public CalculatedUseCaseInfo o0(Collection<w2> collection, ResolvedFeatureGroup resolvedFeatureGroup, boolean z10) {
         CalculatedUseCaseInfo calculatedUseCaseInfoY;
         r1.a("CameraUseCaseAdapter", "simulateAddUseCases: appUseCasesToAdd = " + collection + ", featureGroup = " + resolvedFeatureGroup);
-        synchronized (this.f30423m) {
+        synchronized (this.f30970m) {
             t();
-            LinkedHashSet linkedHashSet = new LinkedHashSet(this.f30415e);
+            LinkedHashSet linkedHashSet = new LinkedHashSet(this.f30962e);
             linkedHashSet.addAll(collection);
             Map<w2, Set<i0.b>> mapU = u(linkedHashSet, resolvedFeatureGroup);
             try {
@@ -699,19 +699,19 @@ public final class f implements g0.l {
 
     public final void q0(Map<w2, t3> map, Collection<w2> collection) {
         Map<w2, t3> map2;
-        synchronized (this.f30423m) {
+        synchronized (this.f30970m) {
             try {
-                if (this.f30418h == null || collection.isEmpty()) {
+                if (this.f30965h == null || collection.isEmpty()) {
                     map2 = map;
                 } else {
                     map2 = map;
-                    Map<w2, Rect> mapA = s.a(this.f30412a.k().h(), this.f30412a.k().i() == 0, this.f30418h.a(), this.f30412a.k().w(this.f30418h.c()), this.f30418h.d(), this.f30418h.b(), map2);
+                    Map<w2, Rect> mapA = s.a(this.f30959a.k().h(), this.f30959a.k().i() == 0, this.f30965h.a(), this.f30959a.k().w(this.f30965h.c()), this.f30965h.d(), this.f30965h.b(), map2);
                     for (w2 w2Var : collection) {
                         w2Var.b0((Rect) x2.g.g(mapA.get(w2Var)));
                     }
                 }
                 for (w2 w2Var2 : collection) {
-                    w2Var2.Z(B(this.f30412a.k().h(), ((t3) x2.g.g(map2.get(w2Var2))).f()));
+                    w2Var2.Z(B(this.f30959a.k().h(), ((t3) x2.g.g(map2.get(w2Var2))).f()));
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -721,12 +721,12 @@ public final class f implements g0.l {
 
     public final void s(CalculatedUseCaseInfo calculatedUseCaseInfo) {
         q0(calculatedUseCaseInfo.getPrimaryStreamSpecResult().b(), calculatedUseCaseInfo.b());
-        p0(this.f30419i, calculatedUseCaseInfo.b(), calculatedUseCaseInfo.a());
+        p0(this.f30966i, calculatedUseCaseInfo.b(), calculatedUseCaseInfo.a());
         Iterator<w2> it = calculatedUseCaseInfo.d().iterator();
         while (it.hasNext()) {
-            it.next().c0(this.f30412a);
+            it.next().c0(this.f30959a);
         }
-        this.f30412a.j(calculatedUseCaseInfo.d());
+        this.f30959a.j(calculatedUseCaseInfo.d());
         if (this.b != null) {
             for (w2 w2Var : calculatedUseCaseInfo.d()) {
                 n0.f fVar = this.b;
@@ -746,12 +746,12 @@ public final class f implements g0.l {
                     n1 n1VarD = t3Var.d();
                     if (n1VarD != null && Q(t3Var, w2Var2.z())) {
                         w2Var2.f0(n1VarD);
-                        if (this.f30424n) {
-                            this.f30412a.g(w2Var2);
+                        if (this.f30971n) {
+                            this.f30959a.f(w2Var2);
                             n0.f fVar3 = this.b;
                             if (fVar3 != null) {
                                 Objects.requireNonNull(fVar3);
-                                fVar3.g(w2Var2);
+                                fVar3.f(w2Var2);
                             }
                         }
                     }
@@ -763,17 +763,17 @@ public final class f implements g0.l {
             Objects.requireNonNull(bVar);
             n0.f fVar4 = this.b;
             if (fVar4 != null) {
-                n0.f fVar5 = this.f30412a;
+                n0.f fVar5 = this.f30959a;
                 Objects.requireNonNull(fVar4);
-                w2Var3.d(fVar5, fVar4, bVar.f30432a, bVar.b);
+                w2Var3.d(fVar5, fVar4, bVar.f30979a, bVar.b);
                 w2Var3.e0((t3) x2.g.g(calculatedUseCaseInfo.getPrimaryStreamSpecResult().b().get(w2Var3)), ((StreamSpecQueryResult) x2.g.g(calculatedUseCaseInfo.getSecondaryStreamSpecResult())).b().get(w2Var3));
             } else {
-                w2Var3.d(this.f30412a, null, bVar.f30432a, bVar.b);
+                w2Var3.d(this.f30959a, null, bVar.f30979a, bVar.b);
                 w2Var3.e0((t3) x2.g.g(calculatedUseCaseInfo.getPrimaryStreamSpecResult().b().get(w2Var3)), null);
             }
         }
-        if (this.f30424n) {
-            this.f30412a.i(calculatedUseCaseInfo.c());
+        if (this.f30971n) {
+            this.f30959a.i(calculatedUseCaseInfo.c());
             n0.f fVar6 = this.b;
             if (fVar6 != null) {
                 Objects.requireNonNull(fVar6);
@@ -784,44 +784,44 @@ public final class f implements g0.l {
         while (it2.hasNext()) {
             it2.next().M();
         }
-        this.f30415e.clear();
-        this.f30415e.addAll(calculatedUseCaseInfo.a());
-        this.f30416f.clear();
-        this.f30416f.addAll(calculatedUseCaseInfo.b());
-        this.f30426p = calculatedUseCaseInfo.getPlaceholderForExtensions();
-        this.f30427q = calculatedUseCaseInfo.getStreamSharing();
+        this.f30962e.clear();
+        this.f30962e.addAll(calculatedUseCaseInfo.a());
+        this.f30963f.clear();
+        this.f30963f.addAll(calculatedUseCaseInfo.b());
+        this.f30973p = calculatedUseCaseInfo.getPlaceholderForExtensions();
+        this.f30974q = calculatedUseCaseInfo.getStreamSharing();
     }
 
     public final void t() {
-        this.f30412a.o(this.f30422l);
+        this.f30959a.o(this.f30969l);
         n0.f fVar = this.b;
         if (fVar != null) {
-            fVar.o(this.f30422l);
+            fVar.o(this.f30969l);
         }
     }
 
     public void w() {
-        synchronized (this.f30423m) {
+        synchronized (this.f30970m) {
             try {
-                if (!this.f30424n) {
-                    if (!this.f30416f.isEmpty()) {
-                        this.f30412a.o(this.f30422l);
+                if (!this.f30971n) {
+                    if (!this.f30963f.isEmpty()) {
+                        this.f30959a.o(this.f30969l);
                         n0.f fVar = this.b;
                         if (fVar != null) {
-                            fVar.o(this.f30422l);
+                            fVar.o(this.f30969l);
                         }
                     }
-                    this.f30412a.i(this.f30416f);
+                    this.f30959a.i(this.f30963f);
                     n0.f fVar2 = this.b;
                     if (fVar2 != null) {
-                        fVar2.i(this.f30416f);
+                        fVar2.i(this.f30963f);
                     }
                     h0();
-                    Iterator<w2> it = this.f30416f.iterator();
+                    Iterator<w2> it = this.f30963f.iterator();
                     while (it.hasNext()) {
                         it.next().M();
                     }
-                    this.f30424n = true;
+                    this.f30971n = true;
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -830,9 +830,9 @@ public final class f implements g0.l {
     }
 
     public final void x() {
-        synchronized (this.f30423m) {
-            l0 l0VarE = this.f30412a.e();
-            this.f30425o = l0VarE.j();
+        synchronized (this.f30970m) {
+            l0 l0VarE = this.f30959a.e();
+            this.f30972o = l0VarE.j();
             l0VarE.n();
         }
     }
@@ -848,23 +848,23 @@ public final class f implements g0.l {
         w2 w2VarA = A(collection, gVarG);
         Collection<w2> collectionZ = z(collection, w2VarA, gVarG);
         ArrayList arrayList = new ArrayList(collectionZ);
-        arrayList.removeAll(this.f30416f);
+        arrayList.removeAll(this.f30963f);
         ArrayList arrayList2 = new ArrayList(collectionZ);
-        arrayList2.retainAll(this.f30416f);
-        ArrayList arrayList3 = new ArrayList(this.f30416f);
+        arrayList2.retainAll(this.f30963f);
+        ArrayList arrayList3 = new ArrayList(this.f30963f);
         arrayList3.removeAll(collectionZ);
-        Map<w2, b> mapL = L(arrayList, this.f30422l.k(), this.f30413c, this.f30420j, this.f30421k);
+        Map<w2, b> mapL = L(arrayList, this.f30969l.k(), this.f30960c, this.f30967j, this.f30968k);
         boolean zY = Y(arrayList, arrayList2);
         try {
-            StreamSpecQueryResult lVarA2 = this.f30431u.a(K(), this.f30412a.k(), arrayList, arrayList2, this.f30422l, this.f30420j, this.f30421k, zY, z12);
+            StreamSpecQueryResult lVarA2 = this.f30978u.a(K(), this.f30959a.k(), arrayList, arrayList2, this.f30969l, this.f30967j, this.f30968k, zY, z12);
             try {
                 if (this.b != null) {
-                    m mVar = this.f30431u;
+                    m mVar = this.f30978u;
                     int iK = K();
                     n0.f fVar = this.b;
                     Objects.requireNonNull(fVar);
                     z12 = z11;
-                    lVarA = mVar.a(iK, fVar.k(), arrayList, arrayList2, this.f30422l, this.f30420j, this.f30421k, zY, z12);
+                    lVarA = mVar.a(iK, fVar.k(), arrayList, arrayList2, this.f30969l, this.f30967j, this.f30968k, zY, z12);
                 } else {
                     lVarA = null;
                 }

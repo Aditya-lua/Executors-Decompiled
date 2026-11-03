@@ -15,44 +15,44 @@ public class l extends RecyclerView.a0 {
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
     @SuppressLint({"UnknownNullness"})
-    public PointF f3272k;
+    public PointF f3117k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final DisplayMetrics f3273l;
+    public final DisplayMetrics f3118l;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public float f3275n;
+    public float f3120n;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final LinearInterpolator f3270i = new LinearInterpolator();
+    public final LinearInterpolator f3115i = new LinearInterpolator();
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final DecelerateInterpolator f3271j = new DecelerateInterpolator();
+    public final DecelerateInterpolator f3116j = new DecelerateInterpolator();
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public boolean f3274m = false;
+    public boolean f3119m = false;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public int f3276o = 0;
+    public int f3121o = 0;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public int f3277p = 0;
+    public int f3122p = 0;
 
     @SuppressLint({"UnknownNullness"})
     public l(Context context) {
-        this.f3273l = context.getResources().getDisplayMetrics();
+        this.f3118l = context.getResources().getDisplayMetrics();
     }
 
     public final float A() {
-        if (!this.f3274m) {
-            this.f3275n = v(this.f3273l);
-            this.f3274m = true;
+        if (!this.f3119m) {
+            this.f3120n = v(this.f3118l);
+            this.f3119m = true;
         }
-        return this.f3275n;
+        return this.f3120n;
     }
 
     public int B() {
-        PointF pointF = this.f3272k;
+        PointF pointF = this.f3117k;
         if (pointF == null) {
             return 0;
         }
@@ -72,10 +72,10 @@ public class l extends RecyclerView.a0 {
             return;
         }
         i(pointFA);
-        this.f3272k = pointFA;
-        this.f3276o = (int) (pointFA.x * 10000.0f);
-        this.f3277p = (int) (pointFA.y * 10000.0f);
-        aVar.d((int) (this.f3276o * 1.2f), (int) (this.f3277p * 1.2f), (int) (x(BacktraceMetrics.defaultTimeBetweenRetriesMs) * 1.2f), this.f3270i);
+        this.f3117k = pointFA;
+        this.f3121o = (int) (pointFA.x * 10000.0f);
+        this.f3122p = (int) (pointFA.y * 10000.0f);
+        aVar.d((int) (this.f3121o * 1.2f), (int) (this.f3122p * 1.2f), (int) (x(BacktraceMetrics.defaultTimeBetweenRetriesMs) * 1.2f), this.f3115i);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.a0
@@ -85,10 +85,10 @@ public class l extends RecyclerView.a0 {
             r();
             return;
         }
-        this.f3276o = y(this.f3276o, i10);
-        int iY = y(this.f3277p, i11);
-        this.f3277p = iY;
-        if (this.f3276o == 0 && iY == 0) {
+        this.f3121o = y(this.f3121o, i10);
+        int iY = y(this.f3122p, i11);
+        this.f3122p = iY;
+        if (this.f3121o == 0 && iY == 0) {
             C(aVar);
         }
     }
@@ -99,9 +99,9 @@ public class l extends RecyclerView.a0 {
 
     @Override // androidx.recyclerview.widget.RecyclerView.a0
     public void n() {
-        this.f3277p = 0;
-        this.f3276o = 0;
-        this.f3272k = null;
+        this.f3122p = 0;
+        this.f3121o = 0;
+        this.f3117k = null;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.a0
@@ -111,7 +111,7 @@ public class l extends RecyclerView.a0 {
         int iU = u(view, B());
         int iW = w((int) Math.sqrt((iT * iT) + (iU * iU)));
         if (iW > 0) {
-            aVar.d(-iT, -iU, iW, this.f3271j);
+            aVar.d(-iT, -iU, iW, this.f3116j);
         }
     }
 
@@ -178,7 +178,7 @@ public class l extends RecyclerView.a0 {
     }
 
     public int z() {
-        PointF pointF = this.f3272k;
+        PointF pointF = this.f3117k;
         if (pointF == null) {
             return 0;
         }

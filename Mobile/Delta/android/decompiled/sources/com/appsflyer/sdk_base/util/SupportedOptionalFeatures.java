@@ -9,7 +9,7 @@ public enum SupportedOptionalFeatures {
     EXCEPTION_MANAGER("com.appsflyer.exception_manager.ExceptionManager"),
     LVL("com.appsflyer.lvl.AppsFlyerLVL");
 
-    private static final /* synthetic */ qt.a $ENTRIES = qt.b.a(values());
+    private static final /* synthetic */ ot.a $ENTRIES = ot.b.a(values());
 
     @NotNull
     private final String className;
@@ -19,7 +19,7 @@ public enum SupportedOptionalFeatures {
     }
 
     @NotNull
-    public static qt.a<SupportedOptionalFeatures> getEntries() {
+    public static ot.a<SupportedOptionalFeatures> getEntries() {
         return $ENTRIES;
     }
 

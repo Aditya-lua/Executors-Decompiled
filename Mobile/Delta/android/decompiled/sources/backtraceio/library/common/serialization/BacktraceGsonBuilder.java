@@ -8,6 +8,6 @@ import jg.g;
 public class BacktraceGsonBuilder implements CustomGsonBuilder {
     @Override // backtraceio.library.common.serialization.CustomGsonBuilder
     public f buildGson() {
-        return new g().g(c.f21382f).d(StackTraceElement.class, new StackTraceElementTypeAdapter()).e(new ThrowableTypeAdapterFactory()).b();
+        return new g().g(c.f21841f).d(StackTraceElement.class, new StackTraceElementTypeAdapter()).e(new ThrowableTypeAdapterFactory()).b();
     }
 }

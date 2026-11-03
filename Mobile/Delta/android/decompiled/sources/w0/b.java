@@ -21,18 +21,18 @@ public final class b {
     public static final class a extends Exception {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final EnumC0613a f33579a;
+        public final EnumC0623a f33785a;
 
         /* JADX INFO: renamed from: w0.b$a$a, reason: collision with other inner class name */
-        public enum EnumC0613a {
+        public enum EnumC0623a {
             ENCODE_FAILED,
             DECODE_FAILED,
             UNKNOWN
         }
 
-        public a(String str, EnumC0613a enumC0613a) {
+        public a(String str, EnumC0623a enumC0623a) {
             super(str);
-            this.f33579a = enumC0613a;
+            this.f33785a = enumC0623a;
         }
     }
 
@@ -99,8 +99,8 @@ public final class b {
 
     public static Bitmap e(androidx.camera.core.d dVar) {
         Bitmap bitmapCreateBitmap = Bitmap.createBitmap(dVar.getWidth(), dVar.getHeight(), Bitmap.Config.ARGB_8888);
-        dVar.H1()[0].k().rewind();
-        ImageProcessingUtil.j(bitmapCreateBitmap, dVar.H1()[0].k(), dVar.H1()[0].l());
+        dVar.E1()[0].k().rewind();
+        ImageProcessingUtil.j(bitmapCreateBitmap, dVar.E1()[0].k(), dVar.E1()[0].l());
         return bitmapCreateBitmap;
     }
 
@@ -136,7 +136,7 @@ public final class b {
         if (!j(dVar.getFormat())) {
             throw new IllegalArgumentException("Incorrect image format of the input image proxy: " + dVar.getFormat());
         }
-        ByteBuffer byteBufferK = dVar.H1()[0].k();
+        ByteBuffer byteBufferK = dVar.E1()[0].k();
         byte[] bArr = new byte[byteBufferK.capacity()];
         byteBufferK.rewind();
         byteBufferK.get(bArr);
@@ -162,13 +162,13 @@ public final class b {
         if (yuvImage.compressToJpeg(rect, i10, jVar)) {
             return byteArrayOutputStream.toByteArray();
         }
-        throw new a("YuvImage failed to encode jpeg.", a.EnumC0613a.ENCODE_FAILED);
+        throw new a("YuvImage failed to encode jpeg.", a.EnumC0623a.ENCODE_FAILED);
     }
 
     public static byte[] o(androidx.camera.core.d dVar) {
-        androidx.camera.core.d.a aVar = dVar.H1()[0];
-        androidx.camera.core.d.a aVar2 = dVar.H1()[1];
-        androidx.camera.core.d.a aVar3 = dVar.H1()[2];
+        androidx.camera.core.d.a aVar = dVar.E1()[0];
+        androidx.camera.core.d.a aVar2 = dVar.E1()[1];
+        androidx.camera.core.d.a aVar3 = dVar.E1()[2];
         ByteBuffer byteBufferK = aVar.k();
         ByteBuffer byteBufferK2 = aVar2.k();
         ByteBuffer byteBufferK3 = aVar3.k();

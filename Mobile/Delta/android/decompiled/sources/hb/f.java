@@ -6,7 +6,7 @@ import com.google.android.gms.internal.location.zzl;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface f extends IInterface {
-    void W(zzl zzlVar);
+    void U(zzl zzlVar);
 
     void q2(boolean z10);
 

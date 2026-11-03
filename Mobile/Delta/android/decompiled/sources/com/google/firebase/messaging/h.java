@@ -67,7 +67,7 @@ public abstract class h extends Service {
         this.executor.execute(new Runnable() { // from class: com.google.firebase.messaging.g
             @Override // java.lang.Runnable
             public final void run() {
-                h.a(this.f8768a, intent, kVar);
+                h.a(this.f8842a, intent, kVar);
             }
         });
         return kVar.a();
@@ -123,7 +123,7 @@ public abstract class h extends Service {
         taskProcessIntent.c(new e3.n(), new OnCompleteListener() { // from class: com.google.firebase.messaging.f
             @Override // com.google.android.gms.tasks.OnCompleteListener
             public final void onComplete(Task task) {
-                this.f8766a.finishTask(intent);
+                this.f8840a.finishTask(intent);
             }
         });
         return 3;

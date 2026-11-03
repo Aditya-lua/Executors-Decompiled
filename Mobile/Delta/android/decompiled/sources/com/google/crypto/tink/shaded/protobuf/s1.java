@@ -4,14 +4,14 @@ package com.google.crypto.tink.shaded.protobuf;
 public final class s1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final int f8551a = c(1, 3);
+    public static final int f8625a = c(1, 3);
     public static final int b = c(1, 4);
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final int f8552c = c(2, 0);
+    public static final int f8626c = c(2, 0);
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final int f8553d = c(3, 2);
+    public static final int f8627d = c(3, 2);
 
     /* JADX WARN: Enum visitor error
     jadx.core.utils.exceptions.JadxRuntimeException: Init of enum field 'e' uses external variables
@@ -26,64 +26,64 @@ public final class s1 {
     public static class b {
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static final b f8554c;
+        public static final b f8628c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final b f8555d;
+        public static final b f8629d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public static final b f8556e;
+        public static final b f8630e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public static final b f8557f;
+        public static final b f8631f;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public static final b f8558g;
+        public static final b f8632g;
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public static final b f8559h;
+        public static final b f8633h;
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public static final b f8560i;
+        public static final b f8634i;
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public static final b f8561j;
+        public static final b f8635j;
 
         /* JADX INFO: renamed from: k, reason: collision with root package name */
-        public static final b f8562k;
+        public static final b f8636k;
 
         /* JADX INFO: renamed from: l, reason: collision with root package name */
-        public static final b f8563l;
+        public static final b f8637l;
 
         /* JADX INFO: renamed from: m, reason: collision with root package name */
-        public static final b f8564m;
+        public static final b f8638m;
 
         /* JADX INFO: renamed from: n, reason: collision with root package name */
-        public static final b f8565n;
+        public static final b f8639n;
 
         /* JADX INFO: renamed from: o, reason: collision with root package name */
-        public static final b f8566o;
+        public static final b f8640o;
 
         /* JADX INFO: renamed from: p, reason: collision with root package name */
-        public static final b f8567p;
+        public static final b f8641p;
 
         /* JADX INFO: renamed from: q, reason: collision with root package name */
-        public static final b f8568q;
+        public static final b f8642q;
 
         /* JADX INFO: renamed from: r, reason: collision with root package name */
-        public static final b f8569r;
+        public static final b f8643r;
 
         /* JADX INFO: renamed from: s, reason: collision with root package name */
-        public static final b f8570s;
+        public static final b f8644s;
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public static final b f8571t;
+        public static final b f8645t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public static final /* synthetic */ b[] f8572u;
+        public static final /* synthetic */ b[] f8646u;
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final c f8573a;
+        public final c f8647a;
         public final int b;
 
         public final enum a extends b {
@@ -93,8 +93,8 @@ public final class s1 {
         }
 
         /* JADX INFO: renamed from: com.google.crypto.tink.shaded.protobuf.s1$b$b, reason: collision with other inner class name */
-        public final enum C0128b extends b {
-            public C0128b(String str, int i10, c cVar, int i11) {
+        public final enum C0132b extends b {
+            public C0132b(String str, int i10, c cVar, int i11) {
                 super(str, i10, cVar, i11);
             }
         }
@@ -113,45 +113,45 @@ public final class s1 {
 
         static {
             b bVar = new b("DOUBLE", 0, c.DOUBLE, 1);
-            f8554c = bVar;
+            f8628c = bVar;
             b bVar2 = new b("FLOAT", 1, c.FLOAT, 5);
-            f8555d = bVar2;
+            f8629d = bVar2;
             c cVar = c.LONG;
             b bVar3 = new b("INT64", 2, cVar, 0);
-            f8556e = bVar3;
+            f8630e = bVar3;
             b bVar4 = new b("UINT64", 3, cVar, 0);
-            f8557f = bVar4;
+            f8631f = bVar4;
             c cVar2 = c.INT;
             b bVar5 = new b("INT32", 4, cVar2, 0);
-            f8558g = bVar5;
+            f8632g = bVar5;
             b bVar6 = new b("FIXED64", 5, cVar, 1);
-            f8559h = bVar6;
+            f8633h = bVar6;
             b bVar7 = new b("FIXED32", 6, cVar2, 5);
-            f8560i = bVar7;
+            f8634i = bVar7;
             b bVar8 = new b("BOOL", 7, c.BOOLEAN, 0);
-            f8561j = bVar8;
+            f8635j = bVar8;
             a aVar = new a("STRING", 8, c.STRING, 2);
-            f8562k = aVar;
+            f8636k = aVar;
             c cVar3 = c.MESSAGE;
-            C0128b c0128b = new C0128b("GROUP", 9, cVar3, 3);
-            f8563l = c0128b;
+            C0132b c0132b = new C0132b("GROUP", 9, cVar3, 3);
+            f8637l = c0132b;
             c cVar4 = new c("MESSAGE", 10, cVar3, 2);
-            f8564m = cVar4;
+            f8638m = cVar4;
             d dVar = new d("BYTES", 11, c.BYTE_STRING, 2);
-            f8565n = dVar;
+            f8639n = dVar;
             b bVar9 = new b("UINT32", 12, cVar2, 0);
-            f8566o = bVar9;
+            f8640o = bVar9;
             b bVar10 = new b("ENUM", 13, c.ENUM, 0);
-            f8567p = bVar10;
+            f8641p = bVar10;
             b bVar11 = new b("SFIXED32", 14, cVar2, 5);
-            f8568q = bVar11;
+            f8642q = bVar11;
             b bVar12 = new b("SFIXED64", 15, cVar, 1);
-            f8569r = bVar12;
+            f8643r = bVar12;
             b bVar13 = new b("SINT32", 16, cVar2, 0);
-            f8570s = bVar13;
+            f8644s = bVar13;
             b bVar14 = new b("SINT64", 17, cVar, 0);
-            f8571t = bVar14;
-            f8572u = new b[]{bVar, bVar2, bVar3, bVar4, bVar5, bVar6, bVar7, bVar8, aVar, c0128b, cVar4, dVar, bVar9, bVar10, bVar11, bVar12, bVar13, bVar14};
+            f8645t = bVar14;
+            f8646u = new b[]{bVar, bVar2, bVar3, bVar4, bVar5, bVar6, bVar7, bVar8, aVar, c0132b, cVar4, dVar, bVar9, bVar10, bVar11, bVar12, bVar13, bVar14};
         }
 
         public static b valueOf(String str) {
@@ -159,16 +159,16 @@ public final class s1 {
         }
 
         public static b[] values() {
-            return (b[]) f8572u.clone();
+            return (b[]) f8646u.clone();
         }
 
         public c a() {
-            return this.f8573a;
+            return this.f8647a;
         }
 
         public b(String str, int i10, c cVar, int i11) {
             super(str, i10);
-            this.f8573a = cVar;
+            this.f8647a = cVar;
             this.b = i11;
         }
     }
@@ -186,10 +186,10 @@ public final class s1 {
 
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Object f8583a;
+        public final Object f8657a;
 
         c(Object obj) {
-            this.f8583a = obj;
+            this.f8657a = obj;
         }
     }
 

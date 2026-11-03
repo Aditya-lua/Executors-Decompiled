@@ -20,14 +20,14 @@ public final class h {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public h.f.h mediaType = h.f.c.f18485a;
+    public h.f.h mediaType = h.f.c.f18972a;
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public int maxItems = h.e.INSTANCE.a();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public h.f.b defaultTab = h.f.b.a.f18484a;
+    public h.f.b defaultTab = h.f.b.a.f18971a;
 
     @Metadata(d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\t\n\u0002\b\u0004\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u0015\u0010\u0006\u001a\u00020\u00002\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0017\u0010\n\u001a\u00020\u00002\b\b\u0001\u0010\t\u001a\u00020\b¢\u0006\u0004\b\n\u0010\u000bJ\u0015\u0010\u000e\u001a\u00020\u00002\u0006\u0010\r\u001a\u00020\f¢\u0006\u0004\b\u000e\u0010\u000fJ\u0015\u0010\u0012\u001a\u00020\u00002\u0006\u0010\u0011\u001a\u00020\u0010¢\u0006\u0004\b\u0012\u0010\u0013J\r\u0010\u0015\u001a\u00020\u0014¢\u0006\u0004\b\u0015\u0010\u0016R\u0016\u0010\u0005\u001a\u00020\u00048\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0015\u0010\u0017R\u0016\u0010\t\u001a\u00020\b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0012\u0010\u0018R\u0016\u0010\r\u001a\u00020\f8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\n\u0010\u0019R\u0016\u0010\u0011\u001a\u00020\u00108\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0006\u0010\u001aR\u0016\u0010\u001b\u001a\u00020\f8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u000e\u0010\u0019R\u0016\u0010\u001f\u001a\u00020\u001c8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u001d\u0010\u001e¨\u0006 "}, d2 = {"Lg/h$a;", "", "<init>", "()V", "Lh/f$h;", "mediaType", "d", "(Lh/f$h;)Lg/h$a;", "", "maxItems", "c", "(I)Lg/h$a;", "", "isOrderedSelection", "e", "(Z)Lg/h$a;", "Lh/f$b;", "defaultTab", "b", "(Lh/f$b;)Lg/h$a;", "Lg/h;", "a", "()Lg/h;", "Lh/f$h;", "I", "Z", "Lh/f$b;", "isCustomAccentColorApplied", "", "f", "J", "accentColor", "activity"}, k = 1, mv = {2, 0, 0}, xi = 48)
     public static final class a {
@@ -43,14 +43,14 @@ public final class h {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         @NotNull
-        public h.f.h mediaType = h.f.c.f18485a;
+        public h.f.h mediaType = h.f.c.f18972a;
 
         /* JADX INFO: renamed from: b, reason: from kotlin metadata */
         public int maxItems = h.e.INSTANCE.a();
 
         /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
         @NotNull
-        public h.f.b defaultTab = h.f.b.a.f18484a;
+        public h.f.b defaultTab = h.f.b.a.f18971a;
 
         @NotNull
         public final h a() {

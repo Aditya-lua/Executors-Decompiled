@@ -4,6 +4,8 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.net.Uri;
 import android.webkit.MimeTypeMap;
+import iu.g1;
+import iu.p0;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -16,17 +18,15 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
-import ku.g1;
-import ku.p0;
-import mp.v;
+import kp.v;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pt.m;
-import ym.o;
+import wm.o;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000N\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u000b\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u00012\b\u0012\u0004\u0012\u00020\u00020\u0003:\u0003\u0013$\u0011B/\b\u0007\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b\u0012\f\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000b0\n¢\u0006\u0004\b\r\u0010\u000eJ\u001b\u0010\u0011\u001a\u00020\u00102\n\u0010\u000f\u001a\u0006\u0012\u0002\b\u00030\u0001H\u0016¢\u0006\u0004\b\u0011\u0010\u0012J\u001b\u0010\u0013\u001a\u00020\u00102\n\u0010\u000f\u001a\u0006\u0012\u0002\b\u00030\u0003H\u0016¢\u0006\u0004\b\u0013\u0010\u0014J\u0015\u0010\u0016\u001a\b\u0012\u0004\u0012\u00020\u00020\u0015H\u0016¢\u0006\u0004\b\u0016\u0010\u0017J(\u0010\u001c\u001a\u00020\u000b*\b\u0012\u0004\u0012\u00020\u00020\u00182\f\u0010\u001b\u001a\b\u0012\u0004\u0012\u00020\u001a0\u0019H\u0082@¢\u0006\u0004\b\u001c\u0010\u001dR\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0011\u0010\u001eR\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0013\u0010\u001fR\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b \u0010!R\u001a\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000b0\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\"\u0010#¨\u0006%"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/i;", "Lym/o;", "Lcom/withpersona/sdk2/inquiry/document/i$c;", "Lvr/h;", "", "key", "Landroid/content/Context;", "context", "Lqq/c;", "sdkFilesManager", "Lkotlin/Function0;", "", "launchPicker", "<init>", "(Ljava/lang/String;Landroid/content/Context;Lqq/c;Lkotlin/jvm/functions/Function0;)V", "otherWorker", "", "b", "(Lym/o;)Z", "c", "(Lvr/h;)Z", "Lnu/h;", "run", "()Lnu/h;", "Lnu/i;", "", "Landroid/net/Uri;", "documentSelectResult", "f", "(Lnu/i;Ljava/util/List;Lnt/b;)Ljava/lang/Object;", "Ljava/lang/String;", "Landroid/content/Context;", "d", "Lqq/c;", "e", "Lkotlin/jvm/functions/Function0;", "a", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class i implements o<c>, vr.h<c> {
+@Metadata(d1 = {"\u0000N\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u000b\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u00012\b\u0012\u0004\u0012\u00020\u00020\u0003:\u0003\u0011\u0013\u001eB/\b\u0007\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b\u0012\f\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000b0\n¢\u0006\u0004\b\r\u0010\u000eJ\u001b\u0010\u0011\u001a\u00020\u00102\n\u0010\u000f\u001a\u0006\u0012\u0002\b\u00030\u0001H\u0016¢\u0006\u0004\b\u0011\u0010\u0012J\u001b\u0010\u0013\u001a\u00020\u00102\n\u0010\u000f\u001a\u0006\u0012\u0002\b\u00030\u0003H\u0016¢\u0006\u0004\b\u0013\u0010\u0014J\u0015\u0010\u0016\u001a\b\u0012\u0004\u0012\u00020\u00020\u0015H\u0016¢\u0006\u0004\b\u0016\u0010\u0017J(\u0010\u001c\u001a\u00020\u000b*\b\u0012\u0004\u0012\u00020\u00020\u00182\f\u0010\u001b\u001a\b\u0012\u0004\u0012\u00020\u001a0\u0019H\u0082@¢\u0006\u0004\b\u001c\u0010\u001dR\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001e\u0010\u001fR\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0011\u0010 R\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b!\u0010\"R\u001a\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000b0\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b#\u0010$¨\u0006%"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/i;", "Lwm/o;", "Lcom/withpersona/sdk2/inquiry/document/i$c;", "Ltr/h;", "", "key", "Landroid/content/Context;", "context", "Loq/c;", "sdkFilesManager", "Lkotlin/Function0;", "", "launchPicker", "<init>", "(Ljava/lang/String;Landroid/content/Context;Loq/c;Lkotlin/jvm/functions/Function0;)V", "otherWorker", "", "c", "(Lwm/o;)Z", "a", "(Ltr/h;)Z", "Llu/h;", "run", "()Llu/h;", "Llu/i;", "", "Landroid/net/Uri;", "documentSelectResult", "f", "(Llu/i;Ljava/util/List;Llt/b;)Ljava/lang/Object;", "b", "Ljava/lang/String;", "Landroid/content/Context;", "d", "Loq/c;", "e", "Lkotlin/jvm/functions/Function0;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class i implements o<c>, tr.h<c> {
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull
@@ -38,7 +38,7 @@ public final class i implements o<c>, vr.h<c> {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final qq.c sdkFilesManager;
+    public final oq.c sdkFilesManager;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -51,10 +51,10 @@ public final class i implements o<c>, vr.h<c> {
 
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f10214d = qt.b.a(a());
+        public static final /* synthetic */ ot.a f10295d = ot.b.a(a());
     }
 
-    @Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0011\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\n\u0018\u00002\u00020\u0001B?\b\u0007\u0012\u0014\b\u0001\u0010\u0005\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00040\u00030\u0002\u0012\u000e\b\u0001\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\u00060\u0002\u0012\u0006\u0010\t\u001a\u00020\b\u0012\u0006\u0010\u000b\u001a\u00020\n¢\u0006\u0004\b\f\u0010\rJ\r\u0010\u000f\u001a\u00020\u000e¢\u0006\u0004\b\u000f\u0010\u0010J\r\u0010\u0011\u001a\u00020\u000e¢\u0006\u0004\b\u0011\u0010\u0010R \u0010\u0005\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00040\u00030\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0012\u0010\u0013R\u001a\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\u00060\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0014\u0010\u0013R\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000f\u0010\u0015R\u0014\u0010\u000b\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0016\u0010\u0017¨\u0006\u0018"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/i$b;", "", "Lg/c;", "", "", "openDocumentLauncher", "Lg/h;", "selectFromPhotoLibraryLauncher", "Landroid/content/Context;", "context", "Lqq/c;", "sdkFilesManager", "<init>", "(Lg/c;Lg/c;Landroid/content/Context;Lqq/c;)V", "Lcom/withpersona/sdk2/inquiry/document/i;", "c", "()Lcom/withpersona/sdk2/inquiry/document/i;", "e", "a", "Lg/c;", "b", "Landroid/content/Context;", "d", "Lqq/c;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0011\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\n\u0018\u00002\u00020\u0001B?\b\u0007\u0012\u0014\b\u0001\u0010\u0005\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00040\u00030\u0002\u0012\u000e\b\u0001\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\u00060\u0002\u0012\u0006\u0010\t\u001a\u00020\b\u0012\u0006\u0010\u000b\u001a\u00020\n¢\u0006\u0004\b\f\u0010\rJ\r\u0010\u000f\u001a\u00020\u000e¢\u0006\u0004\b\u000f\u0010\u0010J\r\u0010\u0011\u001a\u00020\u000e¢\u0006\u0004\b\u0011\u0010\u0010R \u0010\u0005\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00040\u00030\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0012\u0010\u0013R\u001a\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\u00060\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0014\u0010\u0013R\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000f\u0010\u0015R\u0014\u0010\u000b\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0016\u0010\u0017¨\u0006\u0018"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/i$b;", "", "Lg/c;", "", "", "openDocumentLauncher", "Lg/h;", "selectFromPhotoLibraryLauncher", "Landroid/content/Context;", "context", "Loq/c;", "sdkFilesManager", "<init>", "(Lg/c;Lg/c;Landroid/content/Context;Loq/c;)V", "Lcom/withpersona/sdk2/inquiry/document/i;", "c", "()Lcom/withpersona/sdk2/inquiry/document/i;", "e", "a", "Lg/c;", "b", "Landroid/content/Context;", "d", "Loq/c;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -71,9 +71,9 @@ public final class i implements o<c>, vr.h<c> {
 
         /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
         @NotNull
-        public final qq.c sdkFilesManager;
+        public final oq.c sdkFilesManager;
 
-        public b(@NotNull g.c<String[]> openDocumentLauncher, @NotNull g.c<g.h> selectFromPhotoLibraryLauncher, @NotNull Context context, @NotNull qq.c sdkFilesManager) {
+        public b(@NotNull g.c<String[]> openDocumentLauncher, @NotNull g.c<g.h> selectFromPhotoLibraryLauncher, @NotNull Context context, @NotNull oq.c sdkFilesManager) {
             Intrinsics.checkNotNullParameter(openDocumentLauncher, "openDocumentLauncher");
             Intrinsics.checkNotNullParameter(selectFromPhotoLibraryLauncher, "selectFromPhotoLibraryLauncher");
             Intrinsics.checkNotNullParameter(context, "context");
@@ -86,30 +86,30 @@ public final class i implements o<c>, vr.h<c> {
 
         public static final Unit d(b bVar) {
             bVar.openDocumentLauncher.b(new String[]{"image/*", "application/pdf"});
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
 
         public static final Unit f(b bVar) {
-            bVar.selectFromPhotoLibraryLauncher.b(g.i.b(h.f.d.f18486a, 0, false, null, 14, null));
-            return Unit.f22483a;
+            bVar.selectFromPhotoLibraryLauncher.b(g.i.b(h.f.d.f18973a, 0, false, null, 14, null));
+            return Unit.f22938a;
         }
 
         @NotNull
         public final i c() {
-            return new i("DocumentPicker", this.context, this.sdkFilesManager, new Function0() { // from class: zn.l2
+            return new i("DocumentPicker", this.context, this.sdkFilesManager, new Function0() { // from class: xn.l2
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return com.withpersona.sdk2.inquiry.document.i.b.d(this.f37766a);
+                    return com.withpersona.sdk2.inquiry.document.i.b.d(this.f35889a);
                 }
             });
         }
 
         @NotNull
         public final i e() {
-            return new i("PhotoLibraryPicker", this.context, this.sdkFilesManager, new Function0() { // from class: zn.m2
+            return new i("PhotoLibraryPicker", this.context, this.sdkFilesManager, new Function0() { // from class: xn.m2
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return com.withpersona.sdk2.inquiry.document.i.b.f(this.f37769a);
+                    return com.withpersona.sdk2.inquiry.document.i.b.f(this.f35892a);
                 }
             });
         }
@@ -123,7 +123,7 @@ public final class i implements o<c>, vr.h<c> {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final a f10218a = new a();
+            public static final a f10299a = new a();
 
             public a() {
                 super(null);
@@ -222,126 +222,126 @@ public final class i implements o<c>, vr.h<c> {
         }
     }
 
-    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u0002*\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Lnu/i;", "Lcom/withpersona/sdk2/inquiry/document/i$c;", "", "<anonymous>", "(Lnu/i;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.document.DocumentsSelectWorker$run$1", f = "DocumentsSelectWorker.kt", l = {45, 49, 53, 57}, m = "invokeSuspend")
-    public static final class d extends m implements Function2<nu.i<? super c>, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.document.DocumentsSelectWorker$run$1", f = "DocumentsSelectWorker.kt", l = {45, 49, 53, 57}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u0002*\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Llu/i;", "Lcom/withpersona/sdk2/inquiry/document/i$c;", "", "<anonymous>", "(Llu/i;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class d extends m implements Function2<lu.i<? super c>, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f10221t;
+        public Object f10302t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public int f10222u;
+        public int f10303u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public /* synthetic */ Object f10223v;
+        public /* synthetic */ Object f10304v;
 
-        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-        @pt.f(c = "com.withpersona.sdk2.inquiry.document.DocumentsSelectWorker$run$1$1", f = "DocumentsSelectWorker.kt", l = {}, m = "invokeSuspend")
-        public static final class a extends m implements Function2<p0, nt.b<? super Unit>, Object> {
+        @nt.f(c = "com.withpersona.sdk2.inquiry.document.DocumentsSelectWorker$run$1$1", f = "DocumentsSelectWorker.kt", l = {}, m = "invokeSuspend")
+        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+        public static final class a extends m implements Function2<p0, lt.b<? super Unit>, Object> {
 
             /* JADX INFO: renamed from: t, reason: collision with root package name */
-            public int f10225t;
+            public int f10306t;
 
             /* JADX INFO: renamed from: u, reason: collision with root package name */
-            public final /* synthetic */ i f10226u;
+            public final /* synthetic */ i f10307u;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public a(i iVar, nt.b<? super a> bVar) {
+            public a(i iVar, lt.b<? super a> bVar) {
                 super(2, bVar);
-                this.f10226u = iVar;
+                this.f10307u = iVar;
             }
 
-            @Override // pt.a
-            public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-                return new a(this.f10226u, bVar);
-            }
-
-            @Override // pt.a
-            public final Object invokeSuspend(Object obj) {
-                ot.c.e();
-                if (this.f10225t != 0) {
-                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-                }
-                jt.o.b(obj);
-                this.f10226u.launchPicker.invoke();
-                return Unit.f22483a;
+            @Override // nt.a
+            public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+                return new a(this.f10307u, bVar);
             }
 
             @Override // kotlin.jvm.functions.Function2
-            public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-                return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+                return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+            }
+
+            @Override // nt.a
+            public final Object invokeSuspend(Object obj) {
+                mt.c.e();
+                if (this.f10306t != 0) {
+                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                }
+                gt.o.b(obj);
+                this.f10307u.launchPicker.invoke();
+                return Unit.f22938a;
             }
         }
 
         @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-        public static final class b<T> implements nu.i {
+        public static final class b<T> implements lu.i {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ i f10227a;
-            public final /* synthetic */ nu.i<c> b;
+            public final /* synthetic */ i f10308a;
+            public final /* synthetic */ lu.i<c> b;
 
             /* JADX WARN: Multi-variable type inference failed */
-            public b(i iVar, nu.i<? super c> iVar2) {
-                this.f10227a = iVar;
+            public b(i iVar, lu.i<? super c> iVar2) {
+                this.f10308a = iVar;
                 this.b = iVar2;
             }
 
-            @Override // nu.i
+            @Override // lu.i
             /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-            public final Object emit(List<? extends Uri> list, nt.b<? super Unit> bVar) {
-                Object objF = this.f10227a.f(this.b, list, bVar);
-                return objF == ot.c.e() ? objF : Unit.f22483a;
+            public final Object emit(List<? extends Uri> list, lt.b<? super Unit> bVar) {
+                Object objF = this.f10308a.f(this.b, list, bVar);
+                return objF == mt.c.e() ? objF : Unit.f22938a;
             }
         }
 
-        @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0003\u001a\n\u0012\u0004\u0012\u00020\u0002\u0018\u00010\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Lku/p0;", "", "Landroid/net/Uri;", "<anonymous>", "(Lku/p0;)Ljava/util/List;"}, k = 3, mv = {2, 2, 0})
-        @pt.f(c = "com.withpersona.sdk2.inquiry.document.DocumentsSelectWorker$run$1$documentSelectResult$1", f = "DocumentsSelectWorker.kt", l = {46}, m = "invokeSuspend")
-        public static final class c extends m implements Function2<p0, nt.b<? super List<? extends Uri>>, Object> {
+        @nt.f(c = "com.withpersona.sdk2.inquiry.document.DocumentsSelectWorker$run$1$documentSelectResult$1", f = "DocumentsSelectWorker.kt", l = {46}, m = "invokeSuspend")
+        @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0003\u001a\n\u0012\u0004\u0012\u00020\u0002\u0018\u00010\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Liu/p0;", "", "Landroid/net/Uri;", "<anonymous>", "(Liu/p0;)Ljava/util/List;"}, k = 3, mv = {2, 2, 0})
+        public static final class c extends m implements Function2<p0, lt.b<? super List<? extends Uri>>, Object> {
 
             /* JADX INFO: renamed from: t, reason: collision with root package name */
-            public int f10228t;
+            public int f10309t;
 
-            public c(nt.b<? super c> bVar) {
+            public c(lt.b<? super c> bVar) {
                 super(2, bVar);
             }
 
-            @Override // pt.a
-            public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+            @Override // nt.a
+            public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
                 return new c(bVar);
             }
 
-            @Override // pt.a
+            @Override // kotlin.jvm.functions.Function2
+            public final Object invoke(p0 p0Var, lt.b<? super List<? extends Uri>> bVar) {
+                return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+            }
+
+            @Override // nt.a
             public final Object invokeSuspend(Object obj) {
-                Object objE = ot.c.e();
-                int i10 = this.f10228t;
+                Object objE = mt.c.e();
+                int i10 = this.f10309t;
                 if (i10 != 0) {
                     if (i10 != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                     }
-                    jt.o.b(obj);
+                    gt.o.b(obj);
                     return obj;
                 }
-                jt.o.b(obj);
+                gt.o.b(obj);
                 v vVar = new v();
-                this.f10228t = 1;
-                Object objV = nu.j.v(vVar, this);
+                this.f10309t = 1;
+                Object objV = lu.j.v(vVar, this);
                 return objV == objE ? objE : objV;
-            }
-
-            @Override // kotlin.jvm.functions.Function2
-            public final Object invoke(p0 p0Var, nt.b<? super List<? extends Uri>> bVar) {
-                return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
             }
         }
 
-        public d(nt.b<? super d> bVar) {
+        public d(lt.b<? super d> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             d dVar = i.this.new d(bVar);
-            dVar.f10223v = obj;
+            dVar.f10304v = obj;
             return dVar;
         }
 
@@ -353,7 +353,7 @@ public final class i implements o<c>, vr.h<c> {
         
             if (r10.collect(r3, r9) == r1) goto L29;
          */
-        @Override // pt.a
+        @Override // nt.a
         /*
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct add '--show-bad-code' argument
@@ -361,10 +361,10 @@ public final class i implements o<c>, vr.h<c> {
         public final java.lang.Object invokeSuspend(java.lang.Object r10) {
             /*
                 r9 = this;
-                java.lang.Object r0 = r9.f10223v
-                nu.i r0 = (nu.i) r0
-                java.lang.Object r1 = ot.c.e()
-                int r2 = r9.f10222u
+                java.lang.Object r0 = r9.f10304v
+                lu.i r0 = (lu.i) r0
+                java.lang.Object r1 = mt.c.e()
+                int r2 = r9.f10303u
                 r3 = 0
                 r4 = 4
                 r5 = 3
@@ -380,31 +380,31 @@ public final class i implements o<c>, vr.h<c> {
                 r10.<init>(r0)
                 throw r10
             L21:
-                java.lang.Object r0 = r9.f10221t
+                java.lang.Object r0 = r9.f10302t
                 java.util.List r0 = (java.util.List) r0
-                jt.o.b(r10)
+                gt.o.b(r10)
                 goto Laf
             L2a:
-                java.lang.Object r2 = r9.f10221t
+                java.lang.Object r2 = r9.f10302t
                 java.util.List r2 = (java.util.List) r2
-                jt.o.b(r10)
+                gt.o.b(r10)
                 goto L8e
             L32:
-                java.lang.Object r0 = r9.f10221t
+                java.lang.Object r0 = r9.f10302t
                 java.util.List r0 = (java.util.List) r0
-                jt.o.b(r10)
+                gt.o.b(r10)
                 goto L6f
             L3a:
-                jt.o.b(r10)
+                gt.o.b(r10)
                 goto L53
             L3e:
-                jt.o.b(r10)
+                gt.o.b(r10)
                 com.withpersona.sdk2.inquiry.document.i$d$c r10 = new com.withpersona.sdk2.inquiry.document.i$d$c
                 r10.<init>(r3)
-                r9.f10223v = r0
-                r9.f10222u = r7
+                r9.f10304v = r0
+                r9.f10303u = r7
                 r7 = 100
-                java.lang.Object r10 = ku.g3.e(r7, r10, r9)
+                java.lang.Object r10 = iu.g3.e(r7, r10, r9)
                 if (r10 != r1) goto L53
                 goto Lae
             L53:
@@ -412,46 +412,46 @@ public final class i implements o<c>, vr.h<c> {
                 java.util.List r2 = (java.util.List) r2
                 if (r2 == 0) goto L72
                 com.withpersona.sdk2.inquiry.document.i r10 = com.withpersona.sdk2.inquiry.document.i.this
-                java.lang.Object r3 = pt.l.a(r0)
-                r9.f10223v = r3
-                java.lang.Object r3 = pt.l.a(r2)
-                r9.f10221t = r3
-                r9.f10222u = r6
+                java.lang.Object r3 = nt.l.a(r0)
+                r9.f10304v = r3
+                java.lang.Object r3 = nt.l.a(r2)
+                r9.f10302t = r3
+                r9.f10303u = r6
                 java.lang.Object r10 = com.withpersona.sdk2.inquiry.document.i.e(r10, r0, r2, r9)
                 if (r10 != r1) goto L6f
                 goto Lae
             L6f:
-                kotlin.Unit r10 = kotlin.Unit.f22483a
+                kotlin.Unit r10 = kotlin.Unit.f22938a
                 return r10
             L72:
-                ku.n2 r10 = ku.g1.c()
+                iu.n2 r10 = iu.g1.c()
                 com.withpersona.sdk2.inquiry.document.i$d$a r6 = new com.withpersona.sdk2.inquiry.document.i$d$a
                 com.withpersona.sdk2.inquiry.document.i r7 = com.withpersona.sdk2.inquiry.document.i.this
                 r6.<init>(r7, r3)
-                r9.f10223v = r0
-                java.lang.Object r3 = pt.l.a(r2)
-                r9.f10221t = r3
-                r9.f10222u = r5
-                java.lang.Object r10 = ku.i.g(r10, r6, r9)
+                r9.f10304v = r0
+                java.lang.Object r3 = nt.l.a(r2)
+                r9.f10302t = r3
+                r9.f10303u = r5
+                java.lang.Object r10 = iu.i.g(r10, r6, r9)
                 if (r10 != r1) goto L8e
                 goto Lae
             L8e:
-                mp.v r10 = new mp.v
+                kp.v r10 = new kp.v
                 r10.<init>()
                 com.withpersona.sdk2.inquiry.document.i$d$b r3 = new com.withpersona.sdk2.inquiry.document.i$d$b
                 com.withpersona.sdk2.inquiry.document.i r5 = com.withpersona.sdk2.inquiry.document.i.this
                 r3.<init>(r5, r0)
-                java.lang.Object r0 = pt.l.a(r0)
-                r9.f10223v = r0
-                java.lang.Object r0 = pt.l.a(r2)
-                r9.f10221t = r0
-                r9.f10222u = r4
+                java.lang.Object r0 = nt.l.a(r0)
+                r9.f10304v = r0
+                java.lang.Object r0 = nt.l.a(r2)
+                r9.f10302t = r0
+                r9.f10303u = r4
                 java.lang.Object r10 = r10.collect(r3, r9)
                 if (r10 != r1) goto Laf
             Lae:
                 return r1
             Laf:
-                jt.d r10 = new jt.d
+                gt.d r10 = new gt.d
                 r10.<init>()
                 throw r10
             */
@@ -459,13 +459,13 @@ public final class i implements o<c>, vr.h<c> {
         }
 
         @Override // kotlin.jvm.functions.Function2
-        /* JADX INFO: renamed from: q, reason: merged with bridge method [inline-methods] */
-        public final Object invoke(nu.i<? super c> iVar, nt.b<? super Unit> bVar) {
-            return ((d) create(iVar, bVar)).invokeSuspend(Unit.f22483a);
+        /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
+        public final Object invoke(lu.i<? super c> iVar, lt.b<? super Unit> bVar) {
+            return ((d) create(iVar, bVar)).invokeSuspend(Unit.f22938a);
         }
     }
 
-    public i(@NotNull String key, @NotNull Context context, @NotNull qq.c sdkFilesManager, @NotNull Function0<Unit> launchPicker) {
+    public i(@NotNull String key, @NotNull Context context, @NotNull oq.c sdkFilesManager, @NotNull Function0<Unit> launchPicker) {
         Intrinsics.checkNotNullParameter(key, "key");
         Intrinsics.checkNotNullParameter(context, "context");
         Intrinsics.checkNotNullParameter(sdkFilesManager, "sdkFilesManager");
@@ -476,37 +476,37 @@ public final class i implements o<c>, vr.h<c> {
         this.launchPicker = launchPicker;
     }
 
-    @Override // vr.h
-    public boolean a(@NotNull vr.h<?> hVar) {
-        return super.a(hVar);
-    }
-
-    @Override // ym.o
-    public boolean b(@NotNull o<?> otherWorker) {
+    @Override // tr.h
+    public boolean a(@NotNull tr.h<?> otherWorker) {
         Intrinsics.checkNotNullParameter(otherWorker, "otherWorker");
         return (otherWorker instanceof i) && Intrinsics.c(this.key, ((i) otherWorker).key);
     }
 
-    @Override // vr.h
-    public boolean c(@NotNull vr.h<?> otherWorker) {
+    @Override // tr.h
+    public boolean b(@NotNull tr.h<?> hVar) {
+        return super.b(hVar);
+    }
+
+    @Override // wm.o
+    public boolean c(@NotNull o<?> otherWorker) {
         Intrinsics.checkNotNullParameter(otherWorker, "otherWorker");
         return (otherWorker instanceof i) && Intrinsics.c(this.key, ((i) otherWorker).key);
     }
 
-    public final Object f(nu.i<? super c> iVar, List<? extends Uri> list, nt.b<? super Unit> bVar) {
+    public final Object f(lu.i<? super c> iVar, List<? extends Uri> list, lt.b<? super Unit> bVar) {
         String absolutePath;
         MimeTypeMap singleton = MimeTypeMap.getSingleton();
         ContentResolver contentResolver = this.context.getContentResolver();
         if (list.isEmpty()) {
-            Object objEmit = iVar.emit(c.a.f10218a, bVar);
-            return objEmit == ot.c.e() ? objEmit : Unit.f22483a;
+            Object objEmit = iVar.emit(c.a.f10299a, bVar);
+            return objEmit == mt.c.e() ? objEmit : Unit.f22938a;
         }
         ArrayList arrayList = new ArrayList();
         a aVar = null;
         for (Uri uri : list) {
             try {
                 String extensionFromMimeType = singleton.getExtensionFromMimeType(contentResolver.getType(uri));
-                qq.c cVar = this.sdkFilesManager;
+                oq.c cVar = this.sdkFilesManager;
                 if (extensionFromMimeType == null) {
                     extensionFromMimeType = "jpg";
                 }
@@ -517,10 +517,10 @@ public final class i implements o<c>, vr.h<c> {
                 }
                 FileOutputStream fileOutputStream = new FileOutputStream(fileE);
                 try {
-                    ut.b.b(inputStreamOpenInputStream, fileOutputStream, 0, 2, null);
+                    st.b.b(inputStreamOpenInputStream, fileOutputStream, 0, 2, null);
                     try {
-                        ut.c.a(inputStreamOpenInputStream, null);
-                        ut.c.a(fileOutputStream, null);
+                        st.c.a(inputStreamOpenInputStream, null);
+                        st.c.a(fileOutputStream, null);
                         absolutePath = fileE.getAbsolutePath();
                         if (absolutePath != null) {
                             arrayList.add(absolutePath);
@@ -529,7 +529,7 @@ public final class i implements o<c>, vr.h<c> {
                         try {
                             throw th2;
                         } catch (Throwable th3) {
-                            ut.c.a(fileOutputStream, th2);
+                            st.c.a(fileOutputStream, th2);
                             throw th3;
                         }
                     }
@@ -537,7 +537,7 @@ public final class i implements o<c>, vr.h<c> {
                     try {
                         throw th4;
                     } catch (Throwable th5) {
-                        ut.c.a(inputStreamOpenInputStream, th4);
+                        st.c.a(inputStreamOpenInputStream, th4);
                         throw th5;
                     }
                 }
@@ -551,21 +551,21 @@ public final class i implements o<c>, vr.h<c> {
         }
         if (aVar == null) {
             Object objEmit2 = iVar.emit(new c.Success(arrayList), bVar);
-            if (objEmit2 == ot.c.e()) {
+            if (objEmit2 == mt.c.e()) {
                 return objEmit2;
             }
         } else {
             Object objEmit3 = iVar.emit(new c.Failure(arrayList, aVar), bVar);
-            if (objEmit3 == ot.c.e()) {
+            if (objEmit3 == mt.c.e()) {
                 return objEmit3;
             }
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    @Override // ym.o, vr.h
+    @Override // wm.o, tr.h
     @NotNull
-    public nu.h<c> run() {
-        return nu.j.y(nu.j.w(new d(null)), g1.b());
+    public lu.h<c> run() {
+        return lu.j.y(lu.j.w(new d(null)), g1.b());
     }
 }

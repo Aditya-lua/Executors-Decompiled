@@ -6,11 +6,11 @@ import android.content.Context;
 public class j8 implements l8 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final g7 f25625a;
+    public final g7 f26446a;
 
     public j8(g7 g7Var) {
         n9.m.l(g7Var);
-        this.f25625a = g7Var;
+        this.f26446a = g7Var;
     }
 
     @Override // nb.l8
@@ -39,10 +39,10 @@ public class j8 implements l8 {
     }
 
     public void g() {
-        this.f25625a.b().g();
+        this.f26446a.b().g();
     }
 
     public void h() {
-        this.f25625a.b().h();
+        this.f26446a.b().h();
     }
 }

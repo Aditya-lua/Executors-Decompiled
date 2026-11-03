@@ -29,7 +29,7 @@ public interface e {
         @Override // kotlin.time.e
         @NotNull
         public c toInstant() {
-            throw new ju.d(this.error + " when parsing an Instant from \"" + d.x(this.input, 64) + '\"');
+            throw new hu.d(this.error + " when parsing an Instant from \"" + d.x(this.input, 64) + '\"');
         }
     }
 
@@ -55,7 +55,7 @@ public interface e {
             if (j10 >= companion.d().getEpochSeconds() && this.epochSeconds <= companion.c().getEpochSeconds()) {
                 return companion.a(this.epochSeconds, this.nanosecondsOfSecond);
             }
-            throw new ju.d("The parsed date is outside the range representable by Instant (Unix epoch second " + this.epochSeconds + ')');
+            throw new hu.d("The parsed date is outside the range representable by Instant (Unix epoch second " + this.epochSeconds + ')');
         }
     }
 

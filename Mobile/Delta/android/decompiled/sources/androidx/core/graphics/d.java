@@ -11,7 +11,7 @@ import android.os.Build;
 public final class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final ThreadLocal<x2.c<Rect, Rect>> f1783a = new ThreadLocal<>();
+    public static final ThreadLocal<x2.c<Rect, Rect>> f1628a = new ThreadLocal<>();
 
     public static class a {
         public static boolean a(Paint paint, String str) {
@@ -31,7 +31,7 @@ public final class d {
 
     public static boolean b(Paint paint, androidx.core.graphics.a aVar) {
         if (Build.VERSION.SDK_INT >= 29) {
-            b.a(paint, aVar != null ? androidx.core.graphics.b.C0025b.a(aVar) : null);
+            b.a(paint, aVar != null ? androidx.core.graphics.b.C0021b.a(aVar) : null);
             return true;
         }
         if (aVar == null) {

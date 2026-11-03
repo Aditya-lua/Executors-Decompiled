@@ -22,11 +22,11 @@ public final class h extends a<String, Boolean> {
     @Override // h.a
     @Nullable
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public a.C0332a<Boolean> getSynchronousResult(@NotNull Context context, @NotNull String input) {
+    public a.C0334a<Boolean> getSynchronousResult(@NotNull Context context, @NotNull String input) {
         Intrinsics.checkNotNullParameter(context, "context");
         Intrinsics.checkNotNullParameter(input, "input");
         if (l2.b.a(context, input) == 0) {
-            return new a.C0332a<>(Boolean.TRUE);
+            return new a.C0334a<>(Boolean.TRUE);
         }
         return null;
     }

@@ -6,10 +6,10 @@ import java.util.Arrays;
 public final class c4 extends e4 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f15256a;
+    public final String f15870a;
 
     public c4(String str) {
-        this.f15256a = str;
+        this.f15870a = str;
     }
 
     @Override // java.lang.Comparable
@@ -21,8 +21,8 @@ public final class c4 extends e4 {
             length = e4Var.zza();
             length2 = e4.c((byte) 96);
         } else {
-            String str = this.f15256a;
-            String str2 = ((c4) e4Var).f15256a;
+            String str = this.f15870a;
+            String str2 = ((c4) e4Var).f15870a;
             if (str.length() == str2.length()) {
                 return str.compareTo(str2);
             }
@@ -37,17 +37,17 @@ public final class c4 extends e4 {
             return true;
         }
         if (obj != null && c4.class == obj.getClass()) {
-            return this.f15256a.equals(((c4) obj).f15256a);
+            return this.f15870a.equals(((c4) obj).f15870a);
         }
         return false;
     }
 
     public final int hashCode() {
-        return Arrays.hashCode(new Object[]{Integer.valueOf(e4.c((byte) 96)), this.f15256a});
+        return Arrays.hashCode(new Object[]{Integer.valueOf(e4.c((byte) 96)), this.f15870a});
     }
 
     public final String toString() {
-        return "\"" + this.f15256a + "\"";
+        return "\"" + this.f15870a + "\"";
     }
 
     @Override // eb.e4

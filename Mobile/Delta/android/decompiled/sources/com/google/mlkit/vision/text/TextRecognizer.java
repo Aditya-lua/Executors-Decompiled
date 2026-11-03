@@ -8,7 +8,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.mlkit.vision.common.InputImage;
 import com.google.mlkit.vision.interfaces.Detector;
 import k9.h;
-import nd.a;
+import od.a;
 
 /* JADX INFO: loaded from: classes2.dex */
 public interface TextRecognizer extends Detector<Text>, h {

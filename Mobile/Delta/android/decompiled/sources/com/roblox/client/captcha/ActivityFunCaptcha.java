@@ -5,12 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.TypedValue;
 import androidx.fragment.app.FragmentManager;
-import sg.k0;
-import sg.m0;
-import sg.n0;
+import rg.k0;
+import rg.m0;
+import rg.n0;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class ActivityFunCaptcha extends com.roblox.client.a implements a.InterfaceC0135a {
+public class ActivityFunCaptcha extends com.roblox.client.a implements a.InterfaceC0138a {
     public static Intent i2(Context context, CaptchaConfig captchaConfig) {
         Intent intent = new Intent(context, (Class<?>) ActivityFunCaptcha.class);
         Bundle bundle = new Bundle();
@@ -23,16 +23,16 @@ public class ActivityFunCaptcha extends com.roblox.client.a implements a.Interfa
     public void E1() {
     }
 
-    @Override // com.roblox.client.captcha.a.InterfaceC0135a
-    public void Y() {
+    @Override // com.roblox.client.captcha.a.InterfaceC0138a
+    public void X() {
     }
 
-    @Override // com.roblox.client.captcha.a.InterfaceC0135a
+    @Override // com.roblox.client.captcha.a.InterfaceC0138a
     public void c0(String str, String str2) {
         j2(101);
     }
 
-    @Override // com.roblox.client.captcha.a.InterfaceC0135a
+    @Override // com.roblox.client.captcha.a.InterfaceC0138a
     public void dismiss() {
         j2(102);
     }
@@ -51,10 +51,10 @@ public class ActivityFunCaptcha extends com.roblox.client.a implements a.Interfa
     @Override // com.roblox.client.a, com.roblox.client.b, e4.q, e.p, k2.g, android.app.Activity
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        setContentView(n0.f30876a);
+        setContentView(n0.f30481a);
         CaptchaConfig captchaConfig = (CaptchaConfig) getIntent().getBundleExtra("captchaConfigKey").getParcelable("captchaConfigKey");
         float f10 = getResources().getDisplayMetrics().widthPixels;
-        int iApplyDimension = (int) TypedValue.applyDimension(1, getResources().getDimension(k0.f30791a), getResources().getDisplayMetrics());
+        int iApplyDimension = (int) TypedValue.applyDimension(1, getResources().getDimension(k0.f30394a), getResources().getDisplayMetrics());
         int iApplyDimension2 = (int) TypedValue.applyDimension(1, 330.0f, getResources().getDisplayMetrics());
         if (f10 < iApplyDimension) {
             iApplyDimension = (int) f10;
@@ -62,7 +62,7 @@ public class ActivityFunCaptcha extends com.roblox.client.a implements a.Interfa
         getWindow().setLayout(iApplyDimension, iApplyDimension2);
         FragmentManager fragmentManagerL1 = l1();
         if (fragmentManagerL1.n0("FragmentFunCaptcha") == null) {
-            fragmentManagerL1.r().b(m0.f30836g, a.K3(captchaConfig), "FragmentFunCaptcha").g();
+            fragmentManagerL1.r().b(m0.f30439g, a.K3(captchaConfig), "FragmentFunCaptcha").g();
         }
     }
 

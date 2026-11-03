@@ -1,44 +1,29 @@
 package aq;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import yp.s;
+import com.withpersona.sdk2.camera.CameraProperties;
+import com.withpersona.sdk2.inquiry.selfie.Selfie;
+import com.withpersona.sdk2.inquiry.selfie.SelfieType;
+import dt.e;
+import dt.i;
+import java.util.List;
+import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class d implements r5.a {
+public final class d implements b.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    @NonNull
-    public final ConstraintLayout f3620a;
+    public final c f3506a;
 
-    public d(@NonNull ConstraintLayout constraintLayout) {
-        this.f3620a = constraintLayout;
+    public d(c cVar) {
+        this.f3506a = cVar;
     }
 
-    @NonNull
-    public static d a(@NonNull View view) {
-        if (view != null) {
-            return new d((ConstraintLayout) view);
-        }
-        throw new NullPointerException("rootView");
+    public static i<b.a> b(c cVar) {
+        return e.a(new d(cVar));
     }
 
-    @NonNull
-    public static d c(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
-        View viewInflate = layoutInflater.inflate(s.f36247d, viewGroup, false);
-        if (z10) {
-            viewGroup.addView(viewInflate);
-        }
-        return a(viewInflate);
-    }
-
-    @Override // r5.a
-    @NonNull
-    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public ConstraintLayout getRoot() {
-        return this.f3620a;
+    @Override // aq.b.a
+    public b a(String str, String str2, String str3, String str4, SelfieType selfieType, String str5, List<? extends Selfie> list, @Nullable String str6, CameraProperties cameraProperties, long j10, @Nullable String str7, bq.a aVar) {
+        return this.f3506a.b(str, str2, selfieType, list, str4, str3, str5, str6, cameraProperties, j10, str7, aVar);
     }
 }

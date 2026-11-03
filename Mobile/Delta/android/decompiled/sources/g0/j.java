@@ -6,11 +6,11 @@ import android.view.Surface;
 public final class j extends v2.g {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f17459a;
+    public final int f17998a;
     public final Surface b;
 
     public j(int i10, Surface surface) {
-        this.f17459a = i10;
+        this.f17998a = i10;
         if (surface == null) {
             throw new NullPointerException("Null surface");
         }
@@ -19,7 +19,7 @@ public final class j extends v2.g {
 
     @Override // g0.v2.g
     public int a() {
-        return this.f17459a;
+        return this.f17998a;
     }
 
     @Override // g0.v2.g
@@ -33,7 +33,7 @@ public final class j extends v2.g {
         }
         if (obj instanceof v2.g) {
             v2.g gVar = (v2.g) obj;
-            if (this.f17459a == gVar.a() && this.b.equals(gVar.b())) {
+            if (this.f17998a == gVar.a() && this.b.equals(gVar.b())) {
                 return true;
             }
         }
@@ -41,10 +41,10 @@ public final class j extends v2.g {
     }
 
     public int hashCode() {
-        return ((this.f17459a ^ 1000003) * 1000003) ^ this.b.hashCode();
+        return ((this.f17998a ^ 1000003) * 1000003) ^ this.b.hashCode();
     }
 
     public String toString() {
-        return "Result{resultCode=" + this.f17459a + ", surface=" + this.b + "}";
+        return "Result{resultCode=" + this.f17998a + ", surface=" + this.b + "}";
     }
 }

@@ -1,9 +1,5 @@
 package com.roblox.client;
 
-import ak.l2;
-import ak.r0;
-import ak.s0;
-import ak.x;
 import android.app.Application;
 import android.content.Context;
 import android.content.res.Configuration;
@@ -19,49 +15,54 @@ import com.roblox.universalapp.applifecyclenativeadapter.JNIAppLifecycleNativeAd
 import com.roblox.universalapp.linking.JNIBaseUrlProtocol;
 import com.roblox.universalapp.linking.JNIWebLoginProtocol;
 import com.roblox.universalapp.logging.LoggingProtocol;
-import gk.p;
-import gk.v;
+import ek.q;
+import ek.w;
+import hj.m;
 import java.util.Iterator;
 import java.util.Locale;
-import jj.m;
 import k6.d0;
 import k6.s;
-import sg.a1;
-import sg.r;
-import sh.i;
-import th.f;
-import th.h;
-import wh.t0;
-import wk.e;
+import qh.i;
+import rg.a1;
+import rg.r;
+import rh.f;
+import rh.h;
+import uh.p;
+import uh.u0;
+import uk.e;
 import x5.p0;
+import yj.l2;
+import yj.r0;
+import yj.s0;
+import yj.x;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class RobloxApplication extends Application implements d0.a, androidx.work.a.c {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static Context f8912c;
+    public static Context f8980c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static Locale f8913d;
+    public static Locale f8981d;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final long f8914a = SystemClock.elapsedRealtime();
+    public final long f8982a = SystemClock.elapsedRealtime();
     public long b;
 
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f8915a;
+        public static final /* synthetic */ int[] f8983a;
 
         static {
-            int[] iArr = new int[t0.values().length];
-            f8915a = iArr;
+            int[] iArr = new int[u0.values().length];
+            f8983a = iArr;
             try {
-                iArr[t0.APP.ordinal()] = 1;
+                iArr[u0.APP.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f8915a[t0.EXPERIENCE.ordinal()] = 2;
+                f8983a[u0.EXPERIENCE.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
         }
@@ -75,12 +76,12 @@ public class RobloxApplication extends Application implements d0.a, androidx.wor
     }
 
     public static Context f() {
-        return f8912c;
+        return f8980c;
     }
 
-    public static void g(String str, t0 t0Var, int i10) {
+    public static void g(String str, u0 u0Var, int i10) {
         String str2;
-        int i11 = a.f8915a[t0Var.ordinal()];
+        int i11 = a.f8983a[u0Var.ordinal()];
         String str3 = "unknown";
         if (i11 != 1) {
             str2 = i11 != 2 ? "unknown" : "experience";
@@ -102,13 +103,13 @@ public class RobloxApplication extends Application implements d0.a, androidx.wor
         } else if (i10 == 80) {
             str3 = "TRIM_MEMORY_COMPLETE";
         }
-        p.k(str, "Mode: " + str2 + ", TrimLevel: " + str3);
+        q.k(str, "Mode: " + str2 + ", TrimLevel: " + str3);
     }
 
     @Override // k6.d0.a
     @NonNull
     public s a(@NonNull Context context) {
-        return ik.a.f20504a.a(context);
+        return gk.a.f18561a.a(context);
     }
 
     @Override // android.content.ContextWrapper
@@ -124,16 +125,16 @@ public class RobloxApplication extends Application implements d0.a, androidx.wor
     @Override // androidx.work.a.c
     @NonNull
     public androidx.work.a b() {
-        return new androidx.work.a.C0063a().w(4).v(new x2.a() { // from class: sg.v0
+        return new androidx.work.a.C0059a().w(4).v(new x2.a() { // from class: rg.v0
             @Override // x2.a
             public final void accept(Object obj) {
-                gk.p.f("rbx.application", "WorkManager failed to initialize", (Throwable) obj);
+                ek.q.f("rbx.application", "WorkManager failed to initialize", (Throwable) obj);
             }
         }).a();
     }
 
     public final void d() {
-        if (h.a().q3()) {
+        if (h.a().C3()) {
             long jElapsedRealtime = SystemClock.elapsedRealtime();
             Iterator<String> it = i.c(this).iterator();
             int i10 = 0;
@@ -156,89 +157,87 @@ public class RobloxApplication extends Application implements d0.a, androidx.wor
     @Override // android.app.Application, android.content.ComponentCallbacks
     public void onConfigurationChanged(@NonNull Configuration configuration) {
         super.onConfigurationChanged(configuration);
-        qi.b.f().q(configuration.getLocales().get(0));
+        oi.b.f().q(configuration.getLocales().get(0));
     }
 
     @Override // android.app.Application
     public void onCreate() {
         long jElapsedRealtime = SystemClock.elapsedRealtime();
         super.onCreate();
-        f8912c = getApplicationContext();
-        if (nh.b.a()) {
+        f8980c = getApplicationContext();
+        if (mh.b.a()) {
             e();
         }
-        f.f31815a.p(a1.U(this));
-        if (h.a().j5()) {
-            m.g();
-        }
-        vg.i.a(f8912c);
+        f.f30722a.p(a1.U(this));
+        m.g();
+        ug.i.a(f8980c);
         x xVarM = x.m();
         xVarM.E();
         xVarM.B();
-        ah.c.c(f8912c);
+        zg.c.c(f8980c);
         long jElapsedRealtime2 = SystemClock.elapsedRealtime();
-        l2.c(f8912c);
-        sg.s.b(f8912c);
+        l2.c(f8980c);
+        rg.s.b(f8980c);
         r.c();
-        ah.c.h(f8912c);
+        zg.c.h(f8980c);
         registerActivityLifecycleCallbacks(new JNIActivityLifecycleCallbacks());
-        if (h.a().P2()) {
+        if (h.a().a3()) {
             registerActivityLifecycleCallbacks(PlatformSystemDialogHandler.INSTANCE);
         }
-        if (h.a().S4()) {
-            h0.m().a().a(pi.m.f28640a);
+        if (h.a().f5()) {
+            h0.m().a().a(ni.m.f27234a);
         } else {
-            h0.m().a().a(pi.c.f28623a);
+            h0.m().a().a(ni.c.f27217a);
         }
-        if (h.a().M1()) {
-            e.o(this);
-            e.q(a1.g());
-            p.h("rbx.application", "NativeCookieStorage context injected, migrationSourceUrl=" + a1.g());
+        if (h.a().W1()) {
+            e.x(this);
+            e.z(a1.g());
+            q.h("rbx.application", "NativeCookieStorage context injected, migrationSourceUrl=" + a1.g());
         }
-        if (h.a().W3()) {
+        if (h.a().h4()) {
             LoggingProtocol.k("work_manager_initialization_deferred");
         } else {
             p0.i(this, b());
         }
-        if (h.a().G1()) {
-            if (h.a().i4()) {
+        if (h.a().Q1()) {
+            if (h.a().t4()) {
                 r0.a(this);
             }
             com.roblox.client.startup.a.I("main");
-            JNIAAssetManagerSetup.a(f8912c);
-            LocalStorageManager.a(f8912c);
-            if (h.a().t2()) {
+            JNIAAssetManagerSetup.a(f8980c);
+            LocalStorageManager.a(f8980c);
+            if (h.a().F2()) {
                 LoggingProtocol.l("application_attachbasecontext", Long.valueOf(this.b));
             }
-            LoggingProtocol.l("application_constructor", Long.valueOf(this.f8914a));
+            LoggingProtocol.l("application_constructor", Long.valueOf(this.f8982a));
             LoggingProtocol.l("application_oncreate", Long.valueOf(jElapsedRealtime));
-            if (!v.a(this).equals("foreground")) {
-                p.h("rbx.application", "Background process detected");
-                jm.a.i();
+            if (!w.a(this).equals("foreground")) {
+                q.h("rbx.application", "Background process detected");
+                hm.a.i();
             }
             h0.m().a().a(new JNIAppLifecycleNativeAdapter());
-            p.h("rbx.application", "GameActivity = ON. Return after loading native libs!");
+            q.h("rbx.application", "GameActivity = ON. Return after loading native libs!");
             return;
         }
-        com.roblox.client.startup.a.v(f8912c);
-        boolean zEquals = v.a(this).equals("foreground");
-        NativeGLJavaInterface.setDeviceStaticParams(wh.p.e());
-        if (h.a().i4()) {
+        com.roblox.client.startup.a.v(f8980c);
+        boolean zEquals = w.a(this).equals("foreground");
+        NativeGLJavaInterface.setDeviceStaticParams(p.e());
+        if (h.a().t4()) {
             r0.a(this);
         }
         com.roblox.client.startup.a.I("main");
-        JNIAAssetManagerSetup.a(f8912c);
-        LocalStorageManager.a(f8912c);
-        f8913d = Locale.getDefault();
-        if (h.a().t2()) {
+        JNIAAssetManagerSetup.a(f8980c);
+        LocalStorageManager.a(f8980c);
+        f8981d = Locale.getDefault();
+        if (h.a().F2()) {
             LoggingProtocol.l("application_attachbasecontext", Long.valueOf(this.b));
         }
-        LoggingProtocol.l("application_constructor", Long.valueOf(this.f8914a));
+        LoggingProtocol.l("application_constructor", Long.valueOf(this.f8982a));
         LoggingProtocol.l("flag_prefetch_begin", Long.valueOf(jElapsedRealtime2));
         LoggingProtocol.l("application_oncreate", Long.valueOf(jElapsedRealtime));
         if (!zEquals) {
-            p.h("rbx.application", "Background process detected");
-            jm.a.i();
+            q.h("rbx.application", "Background process detected");
+            hm.a.i();
         }
         JNIBaseUrlProtocol.init(getApplicationContext());
         JNIWebLoginProtocol.init(getApplicationContext());

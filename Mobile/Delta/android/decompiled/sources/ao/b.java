@@ -1,50 +1,28 @@
 package ao;
 
-import android.view.View;
-import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import com.google.android.material.card.MaterialCardView;
-import com.withpersona.sdk2.inquiry.shared.ui.ThemeableLottieAnimationView;
-import zn.n2;
+import com.withpersona.sdk2.inquiry.document.DocumentWorkflow;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class b implements r5.a {
+@Metadata(d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\u0015\u0012\f\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00020\u0001¢\u0006\u0004\b\u0004\u0010\u0005J!\u0010\n\u001a\u00020\t2\u0006\u0010\u0006\u001a\u00020\u00022\b\u0010\b\u001a\u0004\u0018\u00010\u0007H\u0016¢\u0006\u0004\b\n\u0010\u000bR\u001a\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00020\u00018\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\n\u0010\f¨\u0006\r"}, d2 = {"Lao/b;", "Lyq/f;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c$b;", "wrapped", "<init>", "(Lyq/f;)V", "rendering", "Ltq/a;", "systemUiController", "", "b", "(Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c$b;Ltq/a;)V", "Lyq/f;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class b implements yq.f<DocumentWorkflow.c.b> {
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    @NonNull
-    public final ConstraintLayout f3549a;
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
+    @NotNull
+    public final yq.f<DocumentWorkflow.c.b> wrapped;
 
-    @NonNull
-    public final ThemeableLottieAnimationView b;
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    @NonNull
-    public final MaterialCardView f3550c;
-
-    public b(@NonNull ConstraintLayout constraintLayout, @NonNull ThemeableLottieAnimationView themeableLottieAnimationView, @NonNull MaterialCardView materialCardView) {
-        this.f3549a = constraintLayout;
-        this.b = themeableLottieAnimationView;
-        this.f3550c = materialCardView;
+    public b(@NotNull yq.f<DocumentWorkflow.c.b> wrapped) {
+        Intrinsics.checkNotNullParameter(wrapped, "wrapped");
+        this.wrapped = wrapped;
     }
 
-    @NonNull
-    public static b a(@NonNull View view) {
-        int i10 = n2.f37772a;
-        ThemeableLottieAnimationView themeableLottieAnimationView = (ThemeableLottieAnimationView) r5.b.a(view, i10);
-        if (themeableLottieAnimationView != null) {
-            i10 = n2.f37776f;
-            MaterialCardView materialCardView = (MaterialCardView) r5.b.a(view, i10);
-            if (materialCardView != null) {
-                return new b((ConstraintLayout) view, themeableLottieAnimationView, materialCardView);
-            }
-        }
-        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
-    }
-
-    @Override // r5.a
-    @NonNull
+    @Override // yq.f
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public ConstraintLayout getRoot() {
-        return this.f3549a;
+    public void a(@NotNull DocumentWorkflow.c.b rendering, @Nullable tq.a systemUiController) {
+        Intrinsics.checkNotNullParameter(rendering, "rendering");
+        this.wrapped.a(rendering, systemUiController);
     }
 }

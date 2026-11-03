@@ -13,10 +13,10 @@ public enum UiFramework {
     PersonaWorkflow,
     SquareWorkflow;
 
-    private static final /* synthetic */ qt.a $ENTRIES = qt.b.a(values());
+    private static final /* synthetic */ ot.a $ENTRIES = ot.b.a(values());
 
     @NotNull
-    public static qt.a<UiFramework> getEntries() {
+    public static ot.a<UiFramework> getEntries() {
         return $ENTRIES;
     }
 }

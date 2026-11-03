@@ -13,39 +13,39 @@ import okhttp3.internal.ws.RealWebSocket;
 public class s {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static s f20976d;
+    public static s f21549d;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f20977a;
+    public final Context f21550a;
     public final LocationManager b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final a f20978c = new a();
+    public final a f21551c = new a();
 
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public boolean f20979a;
+        public boolean f21552a;
         public long b;
     }
 
     public s(@NonNull Context context, @NonNull LocationManager locationManager) {
-        this.f20977a = context;
+        this.f21550a = context;
         this.b = locationManager;
     }
 
     public static s a(@NonNull Context context) {
-        if (f20976d == null) {
+        if (f21549d == null) {
             Context applicationContext = context.getApplicationContext();
-            f20976d = new s(applicationContext, (LocationManager) applicationContext.getSystemService("location"));
+            f21549d = new s(applicationContext, (LocationManager) applicationContext.getSystemService("location"));
         }
-        return f20976d;
+        return f21549d;
     }
 
     @SuppressLint({"MissingPermission"})
     public final Location b() {
-        Location locationC = l2.g.b(this.f20977a, "android.permission.ACCESS_COARSE_LOCATION") == 0 ? c("network") : null;
-        Location locationC2 = l2.g.b(this.f20977a, "android.permission.ACCESS_FINE_LOCATION") == 0 ? c("gps") : null;
+        Location locationC = l2.g.b(this.f21550a, "android.permission.ACCESS_COARSE_LOCATION") == 0 ? c("network") : null;
+        Location locationC2 = l2.g.b(this.f21550a, "android.permission.ACCESS_FINE_LOCATION") == 0 ? c("gps") : null;
         if (locationC2 == null || locationC == null) {
             return locationC2 != null ? locationC2 : locationC;
         }
@@ -65,14 +65,14 @@ public class s {
     }
 
     public boolean d() {
-        a aVar = this.f20978c;
+        a aVar = this.f21551c;
         if (e()) {
-            return aVar.f20979a;
+            return aVar.f21552a;
         }
         Location locationB = b();
         if (locationB != null) {
             f(locationB);
-            return aVar.f20979a;
+            return aVar.f21552a;
         }
         Log.i("TwilightManager", "Could not get last known location. This is probably because the app does not have any location permissions. Falling back to hardcoded sunrise/sunset values.");
         int i10 = Calendar.getInstance().get(11);
@@ -80,19 +80,19 @@ public class s {
     }
 
     public final boolean e() {
-        return this.f20978c.b > System.currentTimeMillis();
+        return this.f21551c.b > System.currentTimeMillis();
     }
 
     public final void f(@NonNull Location location) {
         long j10;
-        a aVar = this.f20978c;
+        a aVar = this.f21551c;
         long jCurrentTimeMillis = System.currentTimeMillis();
         r rVarB = r.b();
         rVarB.a(jCurrentTimeMillis - 86400000, location.getLatitude(), location.getLongitude());
         rVarB.a(jCurrentTimeMillis, location.getLatitude(), location.getLongitude());
-        boolean z10 = rVarB.f20975c == 1;
+        boolean z10 = rVarB.f21548c == 1;
         long j11 = rVarB.b;
-        long j12 = rVarB.f20974a;
+        long j12 = rVarB.f21547a;
         rVarB.a(jCurrentTimeMillis + 86400000, location.getLatitude(), location.getLongitude());
         long j13 = rVarB.b;
         if (j11 == -1 || j12 == -1) {
@@ -105,7 +105,7 @@ public class s {
             }
             j10 = j11 + RealWebSocket.CANCEL_AFTER_CLOSE_MILLIS;
         }
-        aVar.f20979a = z10;
+        aVar.f21552a = z10;
         aVar.b = j10;
     }
 }

@@ -7,8 +7,8 @@ import com.roblox.universalapp.facialageestimation.a;
 import com.withpersona.sdk2.inquiry.Inquiry;
 import com.withpersona.sdk2.inquiry.InquiryResponse;
 import g.c;
+import gt.l;
 import j.b;
-import jt.l;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
@@ -27,26 +27,26 @@ public final class PersonaActivityResultLauncher implements a {
     public static final /* data */ class InquiryCall {
 
         @NotNull
-        private final a.InterfaceC0155a callback;
+        private final a.InterfaceC0158a callback;
 
         @NotNull
         private final String inquiryId;
 
-        public InquiryCall(@NotNull String inquiryId, @NotNull a.InterfaceC0155a callback) {
+        public InquiryCall(@NotNull String inquiryId, @NotNull a.InterfaceC0158a callback) {
             Intrinsics.checkNotNullParameter(inquiryId, "inquiryId");
             Intrinsics.checkNotNullParameter(callback, "callback");
             this.inquiryId = inquiryId;
             this.callback = callback;
         }
 
-        public static /* synthetic */ InquiryCall copy$default(InquiryCall inquiryCall, String str, a.InterfaceC0155a interfaceC0155a, int i10, Object obj) {
+        public static /* synthetic */ InquiryCall copy$default(InquiryCall inquiryCall, String str, a.InterfaceC0158a interfaceC0158a, int i10, Object obj) {
             if ((i10 & 1) != 0) {
                 str = inquiryCall.inquiryId;
             }
             if ((i10 & 2) != 0) {
-                interfaceC0155a = inquiryCall.callback;
+                interfaceC0158a = inquiryCall.callback;
             }
-            return inquiryCall.copy(str, interfaceC0155a);
+            return inquiryCall.copy(str, interfaceC0158a);
         }
 
         @NotNull
@@ -57,12 +57,12 @@ public final class PersonaActivityResultLauncher implements a {
 
         @NotNull
         /* JADX INFO: renamed from: component2, reason: from getter */
-        public final a.InterfaceC0155a getCallback() {
+        public final a.InterfaceC0158a getCallback() {
             return this.callback;
         }
 
         @NotNull
-        public final InquiryCall copy(@NotNull String inquiryId, @NotNull a.InterfaceC0155a callback) {
+        public final InquiryCall copy(@NotNull String inquiryId, @NotNull a.InterfaceC0158a callback) {
             Intrinsics.checkNotNullParameter(inquiryId, "inquiryId");
             Intrinsics.checkNotNullParameter(callback, "callback");
             return new InquiryCall(inquiryId, callback);
@@ -80,7 +80,7 @@ public final class PersonaActivityResultLauncher implements a {
         }
 
         @NotNull
-        public final a.InterfaceC0155a getCallback() {
+        public final a.InterfaceC0158a getCallback() {
             return this.callback;
         }
 
@@ -101,7 +101,7 @@ public final class PersonaActivityResultLauncher implements a {
 
     /* JADX INFO: Access modifiers changed from: private */
     public static final void onActivityCreated$lambda$0(PersonaActivityResultLauncher personaActivityResultLauncher, InquiryResponse result) {
-        a.InterfaceC0155a callback;
+        a.InterfaceC0158a callback;
         Intrinsics.checkNotNullParameter(result, "result");
         if (result instanceof InquiryResponse.Complete) {
             String inquiryId = ((InquiryResponse.Complete) result).getInquiryId();
@@ -140,7 +140,7 @@ public final class PersonaActivityResultLauncher implements a {
     }
 
     @Override // com.roblox.universalapp.facialageestimation.a
-    public void launchInquiry(@NotNull String inquiryId, @NotNull String sessionToken, @NotNull a.InterfaceC0155a callback) {
+    public void launchInquiry(@NotNull String inquiryId, @NotNull String sessionToken, @NotNull a.InterfaceC0158a callback) {
         Intrinsics.checkNotNullParameter(inquiryId, "inquiryId");
         Intrinsics.checkNotNullParameter(sessionToken, "sessionToken");
         Intrinsics.checkNotNullParameter(callback, "callback");
@@ -157,10 +157,10 @@ public final class PersonaActivityResultLauncher implements a {
     @Override // com.roblox.universalapp.facialageestimation.a
     public void onActivityCreated(@NotNull b activity) {
         Intrinsics.checkNotNullParameter(activity, "activity");
-        this.inquiryLauncher = activity.h(new Inquiry.Contract(activity), new g.a() { // from class: bj.a
+        this.inquiryLauncher = activity.h(new Inquiry.Contract(activity), new g.a() { // from class: zi.a
             @Override // g.a
             public final void a(Object obj) {
-                PersonaActivityResultLauncher.onActivityCreated$lambda$0(this.f4198a, (InquiryResponse) obj);
+                PersonaActivityResultLauncher.onActivityCreated$lambda$0(this.f38127a, (InquiryResponse) obj);
             }
         });
     }

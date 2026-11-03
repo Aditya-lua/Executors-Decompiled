@@ -5,13 +5,13 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class w extends x {
     public w() {
-        this.f6892a.add(n0.BITWISE_AND);
-        this.f6892a.add(n0.BITWISE_LEFT_SHIFT);
-        this.f6892a.add(n0.BITWISE_NOT);
-        this.f6892a.add(n0.BITWISE_OR);
-        this.f6892a.add(n0.BITWISE_RIGHT_SHIFT);
-        this.f6892a.add(n0.BITWISE_UNSIGNED_RIGHT_SHIFT);
-        this.f6892a.add(n0.BITWISE_XOR);
+        this.f6966a.add(n0.BITWISE_AND);
+        this.f6966a.add(n0.BITWISE_LEFT_SHIFT);
+        this.f6966a.add(n0.BITWISE_NOT);
+        this.f6966a.add(n0.BITWISE_OR);
+        this.f6966a.add(n0.BITWISE_RIGHT_SHIFT);
+        this.f6966a.add(n0.BITWISE_UNSIGNED_RIGHT_SHIFT);
+        this.f6966a.add(n0.BITWISE_XOR);
     }
 
     @Override // com.google.android.gms.internal.measurement.x

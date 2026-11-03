@@ -31,8 +31,8 @@ import okhttp3.internal.tls.CertificateChainCleaner;
 import okhttp3.internal.tls.TrustRootIndex;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import wu.a;
-import wu.b;
+import uu.a;
+import uu.b;
 
 /* JADX INFO: loaded from: classes2.dex */
 @SuppressSignatureCheck

@@ -18,11 +18,11 @@ public class p extends o0 {
     public static final g Z = new d();
 
     /* JADX INFO: renamed from: a0, reason: collision with root package name */
-    public static final g f27154a0 = new e();
+    public static final g f27719a0 = new e();
 
     /* JADX INFO: renamed from: b0, reason: collision with root package name */
-    public static final g f27155b0 = new f();
-    public g S = f27155b0;
+    public static final g f27720b0 = new f();
+    public g S = f27720b0;
     public int T = 80;
 
     public class a extends h {
@@ -132,7 +132,7 @@ public class p extends o0 {
     private void B0(d0 d0Var) {
         int[] iArr = new int[2];
         d0Var.b.getLocationOnScreen(iArr);
-        d0Var.f27089a.put("android:slide:screenPosition", iArr);
+        d0Var.f27654a.put("android:slide:screenPosition", iArr);
     }
 
     @Override // o5.o0
@@ -140,7 +140,7 @@ public class p extends o0 {
         if (d0Var2 == null) {
             return null;
         }
-        int[] iArr = (int[]) d0Var2.f27089a.get("android:slide:screenPosition");
+        int[] iArr = (int[]) d0Var2.f27654a.get("android:slide:screenPosition");
         float translationX = view.getTranslationX();
         float translationY = view.getTranslationY();
         return f0.a(view, d0Var2, iArr[0], iArr[1], this.S.b(viewGroup, view), this.S.a(viewGroup, view), translationX, translationY, U, this);
@@ -151,7 +151,7 @@ public class p extends o0 {
         if (d0Var == null) {
             return null;
         }
-        int[] iArr = (int[]) d0Var.f27089a.get("android:slide:screenPosition");
+        int[] iArr = (int[]) d0Var.f27654a.get("android:slide:screenPosition");
         return f0.a(view, d0Var, iArr[0], iArr[1], view.getTranslationX(), view.getTranslationY(), this.S.b(viewGroup, view), this.S.a(viewGroup, view), V, this);
     }
 
@@ -163,14 +163,14 @@ public class p extends o0 {
         } else if (i10 == 48) {
             this.S = Y;
         } else if (i10 == 80) {
-            this.S = f27155b0;
+            this.S = f27720b0;
         } else if (i10 == 8388611) {
             this.S = X;
         } else {
             if (i10 != 8388613) {
                 throw new IllegalArgumentException("Invalid slide direction");
             }
-            this.S = f27154a0;
+            this.S = f27719a0;
         }
         this.T = i10;
         o oVar = new o();

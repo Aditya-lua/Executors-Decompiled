@@ -11,7 +11,7 @@ public class f extends p<PointF, PointF> {
 
     @Override // m7.o
     public i7.a<PointF, PointF> a() {
-        return new i7.k(this.f24039a);
+        return new i7.k(this.f24689a);
     }
 
     @Override // m7.p, m7.o

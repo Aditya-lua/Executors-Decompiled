@@ -12,10 +12,10 @@ import androidx.annotation.NonNull;
 public final class j extends e {
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static Paint f37146g;
+    public static Paint f37841g;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public TextPaint f37147f;
+    public TextPaint f37842f;
 
     public j(@NonNull i iVar) {
         super(iVar);
@@ -23,13 +23,13 @@ public final class j extends e {
 
     @NonNull
     public static Paint e() {
-        if (f37146g == null) {
+        if (f37841g == null) {
             TextPaint textPaint = new TextPaint();
-            f37146g = textPaint;
+            f37841g = textPaint;
             textPaint.setColor(androidx.emoji2.text.c.c().d());
-            f37146g.setStyle(Paint.Style.FILL);
+            f37841g.setStyle(Paint.Style.FILL);
         }
-        return f37146g;
+        return f37841g;
     }
 
     public final TextPaint c(CharSequence charSequence, int i10, int i11, Paint paint) {
@@ -42,10 +42,10 @@ public final class j extends e {
         CharacterStyle[] characterStyleArr = (CharacterStyle[]) ((Spanned) charSequence).getSpans(i10, i11, CharacterStyle.class);
         if (characterStyleArr.length != 0) {
             if (characterStyleArr.length != 1 || characterStyleArr[0] != this) {
-                TextPaint textPaint = this.f37147f;
+                TextPaint textPaint = this.f37842f;
                 if (textPaint == null) {
                     textPaint = new TextPaint();
-                    this.f37147f = textPaint;
+                    this.f37842f = textPaint;
                 }
                 textPaint.set(paint);
                 for (CharacterStyle characterStyle : characterStyleArr) {

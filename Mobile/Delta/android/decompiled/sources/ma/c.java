@@ -5,23 +5,23 @@ import m9.e;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface c extends e<c> {
-    int A1();
-
     @NonNull
     String I();
 
-    long N2();
+    long M2();
 
     boolean P();
 
-    int U2();
+    int T2();
 
-    long l1();
+    long i1();
 
     @NonNull
-    String n1();
+    String k1();
 
-    long y2();
+    int y1();
+
+    long z2();
 
     @NonNull
     String zza();

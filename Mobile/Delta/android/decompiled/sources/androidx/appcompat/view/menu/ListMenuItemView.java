@@ -22,67 +22,67 @@ import q.a1;
 public class ListMenuItemView extends LinearLayout implements j.a, AbsListView.SelectionBoundsAdjuster {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public g f843a;
+    public g f688a;
     public ImageView b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public RadioButton f844c;
+    public RadioButton f689c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public TextView f845d;
+    public TextView f690d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public CheckBox f846e;
+    public CheckBox f691e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public TextView f847f;
+    public TextView f692f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public ImageView f848g;
+    public ImageView f693g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public ImageView f849h;
+    public ImageView f694h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public LinearLayout f850i;
+    public LinearLayout f695i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public Drawable f851j;
+    public Drawable f696j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public int f852k;
+    public int f697k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public Context f853l;
+    public Context f698l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public boolean f854m;
+    public boolean f699m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public Drawable f855n;
+    public Drawable f700n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public boolean f856o;
+    public boolean f701o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public LayoutInflater f857p;
+    public LayoutInflater f702p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public boolean f858q;
+    public boolean f703q;
 
     public ListMenuItemView(Context context, AttributeSet attributeSet) {
         this(context, attributeSet, i.a.F);
     }
 
     private LayoutInflater getInflater() {
-        if (this.f857p == null) {
-            this.f857p = LayoutInflater.from(getContext());
+        if (this.f702p == null) {
+            this.f702p = LayoutInflater.from(getContext());
         }
-        return this.f857p;
+        return this.f702p;
     }
 
     private void setSubMenuArrowVisible(boolean z10) {
-        ImageView imageView = this.f848g;
+        ImageView imageView = this.f693g;
         if (imageView != null) {
             imageView.setVisibility(z10 ? 0 : 8);
         }
@@ -94,16 +94,16 @@ public class ListMenuItemView extends LinearLayout implements j.a, AbsListView.S
 
     @Override // android.widget.AbsListView.SelectionBoundsAdjuster
     public void adjustListItemSelectionBounds(Rect rect) {
-        ImageView imageView = this.f849h;
+        ImageView imageView = this.f694h;
         if (imageView == null || imageView.getVisibility() != 0) {
             return;
         }
-        LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) this.f849h.getLayoutParams();
-        rect.top += this.f849h.getHeight() + layoutParams.topMargin + layoutParams.bottomMargin;
+        LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) this.f694h.getLayoutParams();
+        rect.top += this.f694h.getHeight() + layoutParams.topMargin + layoutParams.bottomMargin;
     }
 
     public final void b(View view, int i10) {
-        LinearLayout linearLayout = this.f850i;
+        LinearLayout linearLayout = this.f695i;
         if (linearLayout != null) {
             linearLayout.addView(view, i10);
         } else {
@@ -113,7 +113,7 @@ public class ListMenuItemView extends LinearLayout implements j.a, AbsListView.S
 
     @Override // androidx.appcompat.view.menu.j.a
     public void c(g gVar, int i10) {
-        this.f843a = gVar;
+        this.f688a = gVar;
         setVisibility(gVar.isVisible() ? 0 : 8);
         setTitle(gVar.i(this));
         setCheckable(gVar.isCheckable());
@@ -130,61 +130,61 @@ public class ListMenuItemView extends LinearLayout implements j.a, AbsListView.S
     }
 
     public final void e() {
-        CheckBox checkBox = (CheckBox) getInflater().inflate(i.g.f19987j, (ViewGroup) this, false);
-        this.f846e = checkBox;
+        CheckBox checkBox = (CheckBox) getInflater().inflate(i.g.f20103j, (ViewGroup) this, false);
+        this.f691e = checkBox;
         a(checkBox);
     }
 
     public final void f() {
-        ImageView imageView = (ImageView) getInflater().inflate(i.g.f19988k, (ViewGroup) this, false);
+        ImageView imageView = (ImageView) getInflater().inflate(i.g.f20104k, (ViewGroup) this, false);
         this.b = imageView;
         b(imageView, 0);
     }
 
     public final void g() {
-        RadioButton radioButton = (RadioButton) getInflater().inflate(i.g.f19990m, (ViewGroup) this, false);
-        this.f844c = radioButton;
+        RadioButton radioButton = (RadioButton) getInflater().inflate(i.g.f20106m, (ViewGroup) this, false);
+        this.f689c = radioButton;
         a(radioButton);
     }
 
     @Override // androidx.appcompat.view.menu.j.a
     public g getItemData() {
-        return this.f843a;
+        return this.f688a;
     }
 
     public void h(boolean z10, char c10) {
-        int i10 = (z10 && this.f843a.A()) ? 0 : 8;
+        int i10 = (z10 && this.f688a.A()) ? 0 : 8;
         if (i10 == 0) {
-            this.f847f.setText(this.f843a.h());
+            this.f692f.setText(this.f688a.h());
         }
-        if (this.f847f.getVisibility() != i10) {
-            this.f847f.setVisibility(i10);
+        if (this.f692f.getVisibility() != i10) {
+            this.f692f.setVisibility(i10);
         }
     }
 
     @Override // android.view.View
     public void onFinishInflate() {
         super.onFinishInflate();
-        setBackground(this.f851j);
+        setBackground(this.f696j);
         TextView textView = (TextView) findViewById(i.f.R);
-        this.f845d = textView;
-        int i10 = this.f852k;
+        this.f690d = textView;
+        int i10 = this.f697k;
         if (i10 != -1) {
-            textView.setTextAppearance(this.f853l, i10);
+            textView.setTextAppearance(this.f698l, i10);
         }
-        this.f847f = (TextView) findViewById(i.f.K);
+        this.f692f = (TextView) findViewById(i.f.K);
         ImageView imageView = (ImageView) findViewById(i.f.N);
-        this.f848g = imageView;
+        this.f693g = imageView;
         if (imageView != null) {
-            imageView.setImageDrawable(this.f855n);
+            imageView.setImageDrawable(this.f700n);
         }
-        this.f849h = (ImageView) findViewById(i.f.f19973u);
-        this.f850i = (LinearLayout) findViewById(i.f.f19965m);
+        this.f694h = (ImageView) findViewById(i.f.f20089u);
+        this.f695i = (LinearLayout) findViewById(i.f.f20081m);
     }
 
     @Override // android.widget.LinearLayout, android.view.View
     public void onMeasure(int i10, int i11) {
-        if (this.b != null && this.f854m) {
+        if (this.b != null && this.f699m) {
             ViewGroup.LayoutParams layoutParams = getLayoutParams();
             LinearLayout.LayoutParams layoutParams2 = (LinearLayout.LayoutParams) this.b.getLayoutParams();
             int i12 = layoutParams.height;
@@ -198,24 +198,24 @@ public class ListMenuItemView extends LinearLayout implements j.a, AbsListView.S
     public void setCheckable(boolean z10) {
         CompoundButton compoundButton;
         View view;
-        if (!z10 && this.f844c == null && this.f846e == null) {
+        if (!z10 && this.f689c == null && this.f691e == null) {
             return;
         }
-        if (this.f843a.m()) {
-            if (this.f844c == null) {
+        if (this.f688a.m()) {
+            if (this.f689c == null) {
                 g();
             }
-            compoundButton = this.f844c;
-            view = this.f846e;
+            compoundButton = this.f689c;
+            view = this.f691e;
         } else {
-            if (this.f846e == null) {
+            if (this.f691e == null) {
                 e();
             }
-            compoundButton = this.f846e;
-            view = this.f844c;
+            compoundButton = this.f691e;
+            view = this.f689c;
         }
         if (z10) {
-            compoundButton.setChecked(this.f843a.isChecked());
+            compoundButton.setChecked(this.f688a.isChecked());
             if (compoundButton.getVisibility() != 0) {
                 compoundButton.setVisibility(0);
             }
@@ -225,11 +225,11 @@ public class ListMenuItemView extends LinearLayout implements j.a, AbsListView.S
             view.setVisibility(8);
             return;
         }
-        CheckBox checkBox = this.f846e;
+        CheckBox checkBox = this.f691e;
         if (checkBox != null) {
             checkBox.setVisibility(8);
         }
-        RadioButton radioButton = this.f844c;
+        RadioButton radioButton = this.f689c;
         if (radioButton != null) {
             radioButton.setVisibility(8);
         }
@@ -237,43 +237,43 @@ public class ListMenuItemView extends LinearLayout implements j.a, AbsListView.S
 
     public void setChecked(boolean z10) {
         CompoundButton compoundButton;
-        if (this.f843a.m()) {
-            if (this.f844c == null) {
+        if (this.f688a.m()) {
+            if (this.f689c == null) {
                 g();
             }
-            compoundButton = this.f844c;
+            compoundButton = this.f689c;
         } else {
-            if (this.f846e == null) {
+            if (this.f691e == null) {
                 e();
             }
-            compoundButton = this.f846e;
+            compoundButton = this.f691e;
         }
         compoundButton.setChecked(z10);
     }
 
     public void setForceShowIcon(boolean z10) {
-        this.f858q = z10;
-        this.f854m = z10;
+        this.f703q = z10;
+        this.f699m = z10;
     }
 
     public void setGroupDividerEnabled(boolean z10) {
-        ImageView imageView = this.f849h;
+        ImageView imageView = this.f694h;
         if (imageView != null) {
-            imageView.setVisibility((this.f856o || !z10) ? 8 : 0);
+            imageView.setVisibility((this.f701o || !z10) ? 8 : 0);
         }
     }
 
     public void setIcon(Drawable drawable) {
-        boolean z10 = this.f843a.z() || this.f858q;
-        if (z10 || this.f854m) {
+        boolean z10 = this.f688a.z() || this.f703q;
+        if (z10 || this.f699m) {
             ImageView imageView = this.b;
-            if (imageView == null && drawable == null && !this.f854m) {
+            if (imageView == null && drawable == null && !this.f699m) {
                 return;
             }
             if (imageView == null) {
                 f();
             }
-            if (drawable == null && !this.f854m) {
+            if (drawable == null && !this.f699m) {
                 this.b.setVisibility(8);
                 return;
             }
@@ -290,13 +290,13 @@ public class ListMenuItemView extends LinearLayout implements j.a, AbsListView.S
 
     public void setTitle(CharSequence charSequence) {
         if (charSequence == null) {
-            if (this.f845d.getVisibility() != 8) {
-                this.f845d.setVisibility(8);
+            if (this.f690d.getVisibility() != 8) {
+                this.f690d.setVisibility(8);
             }
         } else {
-            this.f845d.setText(charSequence);
-            if (this.f845d.getVisibility() != 0) {
-                this.f845d.setVisibility(0);
+            this.f690d.setText(charSequence);
+            if (this.f690d.getVisibility() != 0) {
+                this.f690d.setVisibility(0);
             }
         }
     }
@@ -304,13 +304,13 @@ public class ListMenuItemView extends LinearLayout implements j.a, AbsListView.S
     public ListMenuItemView(Context context, AttributeSet attributeSet, int i10) {
         super(context, attributeSet);
         a1 a1VarV = a1.v(getContext(), attributeSet, i.j.V1, i10, 0);
-        this.f851j = a1VarV.g(i.j.X1);
-        this.f852k = a1VarV.n(i.j.W1, -1);
-        this.f854m = a1VarV.a(i.j.Y1, false);
-        this.f853l = context;
-        this.f855n = a1VarV.g(i.j.Z1);
+        this.f696j = a1VarV.g(i.j.X1);
+        this.f697k = a1VarV.n(i.j.W1, -1);
+        this.f699m = a1VarV.a(i.j.Y1, false);
+        this.f698l = context;
+        this.f700n = a1VarV.g(i.j.Z1);
         TypedArray typedArrayObtainStyledAttributes = context.getTheme().obtainStyledAttributes(null, new int[]{R.attr.divider}, i.a.C, 0);
-        this.f856o = typedArrayObtainStyledAttributes.hasValue(0);
+        this.f701o = typedArrayObtainStyledAttributes.hasValue(0);
         a1VarV.x();
         typedArrayObtainStyledAttributes.recycle();
     }

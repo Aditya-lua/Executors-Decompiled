@@ -6,18 +6,18 @@ import java.util.Objects;
 public final class a1 extends n0 {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final transient Object[] f6980c;
+    public final transient Object[] f7054c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final transient int f6981d;
+    public final transient int f7055d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final transient int f6982e;
+    public final transient int f7056e;
 
     public a1(Object[] objArr, int i10, int i11) {
-        this.f6980c = objArr;
-        this.f6981d = i10;
-        this.f6982e = i11;
+        this.f7054c = objArr;
+        this.f7055d = i10;
+        this.f7056e = i11;
     }
 
     @Override // com.google.android.gms.internal.play_billing.j0
@@ -27,14 +27,14 @@ public final class a1 extends n0 {
 
     @Override // java.util.List
     public final Object get(int i10) {
-        x.a(i10, this.f6982e, "index");
-        Object obj = this.f6980c[i10 + i10 + this.f6981d];
+        x.a(i10, this.f7056e, "index");
+        Object obj = this.f7054c[i10 + i10 + this.f7055d];
         Objects.requireNonNull(obj);
         return obj;
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final int size() {
-        return this.f6982e;
+        return this.f7056e;
     }
 }

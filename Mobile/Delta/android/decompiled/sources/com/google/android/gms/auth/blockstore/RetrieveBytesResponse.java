@@ -21,13 +21,13 @@ public class RetrieveBytesResponse extends AbstractSafeParcelable {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @Deprecated
-    public final Bundle f5668f;
+    public final Bundle f5741f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final List f5669g;
+    public final List f5742g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final Map f5670h;
+    public final Map f5743h;
 
     public static class BlockstoreData extends AbstractSafeParcelable {
 
@@ -35,14 +35,14 @@ public class RetrieveBytesResponse extends AbstractSafeParcelable {
         public static final Parcelable.Creator<BlockstoreData> CREATOR = new a();
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public final byte[] f5671f;
+        public final byte[] f5744f;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public final String f5672g;
+        public final String f5745g;
 
         public BlockstoreData(byte[] bArr, String str) {
-            this.f5671f = bArr;
-            this.f5672g = str;
+            this.f5744f = bArr;
+            this.f5745g = str;
         }
 
         public boolean equals(Object obj) {
@@ -52,55 +52,55 @@ public class RetrieveBytesResponse extends AbstractSafeParcelable {
             if (this == obj) {
                 return true;
             }
-            return Arrays.equals(this.f5671f, ((BlockstoreData) obj).f5671f);
+            return Arrays.equals(this.f5744f, ((BlockstoreData) obj).f5744f);
         }
 
         public int hashCode() {
-            return k.c(Integer.valueOf(Arrays.hashCode(this.f5671f)));
+            return k.c(Integer.valueOf(Arrays.hashCode(this.f5744f)));
         }
 
         @NonNull
         public byte[] v3() {
-            return this.f5671f;
+            return this.f5744f;
         }
 
         @Override // android.os.Parcelable
         public void writeToParcel(@NonNull Parcel parcel, int i10) {
             int iA = o9.b.a(parcel);
             o9.b.g(parcel, 1, v3(), false);
-            o9.b.v(parcel, 2, this.f5672g, false);
+            o9.b.v(parcel, 2, this.f5745g, false);
             o9.b.b(parcel, iA);
         }
 
         @NonNull
         public final String zza() {
-            return this.f5672g;
+            return this.f5745g;
         }
     }
 
     public RetrieveBytesResponse(Bundle bundle, List list) {
-        this.f5668f = bundle;
-        this.f5669g = list;
+        this.f5741f = bundle;
+        this.f5742g = list;
         HashMap map = new HashMap();
         Iterator it = list.iterator();
         while (it.hasNext()) {
             BlockstoreData blockstoreData = (BlockstoreData) it.next();
             map.put(blockstoreData.zza(), blockstoreData);
         }
-        this.f5670h = map;
+        this.f5743h = map;
     }
 
     @NonNull
     public Map<String, BlockstoreData> v3() {
-        return Collections.unmodifiableMap(this.f5670h);
+        return Collections.unmodifiableMap(this.f5743h);
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
-        Bundle bundle = this.f5668f;
+        Bundle bundle = this.f5741f;
         int iA = o9.b.a(parcel);
         o9.b.f(parcel, 1, bundle, false);
-        o9.b.z(parcel, 2, this.f5669g, false);
+        o9.b.z(parcel, 2, this.f5742g, false);
         o9.b.b(parcel, iA);
     }
 }

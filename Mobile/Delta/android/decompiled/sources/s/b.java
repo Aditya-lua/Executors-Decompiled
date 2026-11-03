@@ -9,14 +9,14 @@ import java.util.WeakHashMap;
 public class b<K, V> implements Iterable<Map.Entry<K, V>> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public c<K, V> f30389a;
+    public c<K, V> f30936a;
     public c<K, V> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final WeakHashMap<f<K, V>, Boolean> f30390c = new WeakHashMap<>();
+    public final WeakHashMap<f<K, V>, Boolean> f30937c = new WeakHashMap<>();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public int f30391d = 0;
+    public int f30938d = 0;
 
     public static class a<K, V> extends e<K, V> {
         public a(c<K, V> cVar, c<K, V> cVar2) {
@@ -25,29 +25,29 @@ public class b<K, V> implements Iterable<Map.Entry<K, V>> {
 
         @Override // s.b.e
         public c<K, V> b(c<K, V> cVar) {
-            return cVar.f30394d;
+            return cVar.f30941d;
         }
 
         @Override // s.b.e
         public c<K, V> d(c<K, V> cVar) {
-            return cVar.f30393c;
+            return cVar.f30940c;
         }
     }
 
     /* JADX INFO: renamed from: s.b$b, reason: collision with other inner class name */
-    public static class C0539b<K, V> extends e<K, V> {
-        public C0539b(c<K, V> cVar, c<K, V> cVar2) {
+    public static class C0544b<K, V> extends e<K, V> {
+        public C0544b(c<K, V> cVar, c<K, V> cVar2) {
             super(cVar, cVar2);
         }
 
         @Override // s.b.e
         public c<K, V> b(c<K, V> cVar) {
-            return cVar.f30393c;
+            return cVar.f30940c;
         }
 
         @Override // s.b.e
         public c<K, V> d(c<K, V> cVar) {
-            return cVar.f30394d;
+            return cVar.f30941d;
         }
     }
 
@@ -55,19 +55,19 @@ public class b<K, V> implements Iterable<Map.Entry<K, V>> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NonNull
-        public final K f30392a;
+        public final K f30939a;
 
         @NonNull
         public final V b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public c<K, V> f30393c;
+        public c<K, V> f30940c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public c<K, V> f30394d;
+        public c<K, V> f30941d;
 
         public c(@NonNull K k10, @NonNull V v5) {
-            this.f30392a = k10;
+            this.f30939a = k10;
             this.b = v5;
         }
 
@@ -80,13 +80,13 @@ public class b<K, V> implements Iterable<Map.Entry<K, V>> {
                 return false;
             }
             c cVar = (c) obj;
-            return this.f30392a.equals(cVar.f30392a) && this.b.equals(cVar.b);
+            return this.f30939a.equals(cVar.f30939a) && this.b.equals(cVar.b);
         }
 
         @Override // java.util.Map.Entry
         @NonNull
         public K getKey() {
-            return this.f30392a;
+            return this.f30939a;
         }
 
         @Override // java.util.Map.Entry
@@ -97,7 +97,7 @@ public class b<K, V> implements Iterable<Map.Entry<K, V>> {
 
         @Override // java.util.Map.Entry
         public int hashCode() {
-            return this.f30392a.hashCode() ^ this.b.hashCode();
+            return this.f30939a.hashCode() ^ this.b.hashCode();
         }
 
         @Override // java.util.Map.Entry
@@ -106,14 +106,14 @@ public class b<K, V> implements Iterable<Map.Entry<K, V>> {
         }
 
         public String toString() {
-            return this.f30392a + "=" + this.b;
+            return this.f30939a + "=" + this.b;
         }
     }
 
     public class d extends f<K, V> implements Iterator<Map.Entry<K, V>> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public c<K, V> f30395a;
+        public c<K, V> f30942a;
         public boolean b = true;
 
         public d() {
@@ -121,10 +121,10 @@ public class b<K, V> implements Iterable<Map.Entry<K, V>> {
 
         @Override // s.b.f
         public void a(@NonNull c<K, V> cVar) {
-            c<K, V> cVar2 = this.f30395a;
+            c<K, V> cVar2 = this.f30942a;
             if (cVar == cVar2) {
-                c<K, V> cVar3 = cVar2.f30394d;
-                this.f30395a = cVar3;
+                c<K, V> cVar3 = cVar2.f30941d;
+                this.f30942a = cVar3;
                 this.b = cVar3 == null;
             }
         }
@@ -134,44 +134,44 @@ public class b<K, V> implements Iterable<Map.Entry<K, V>> {
         public Map.Entry<K, V> next() {
             if (this.b) {
                 this.b = false;
-                this.f30395a = b.this.f30389a;
+                this.f30942a = b.this.f30936a;
             } else {
-                c<K, V> cVar = this.f30395a;
-                this.f30395a = cVar != null ? cVar.f30393c : null;
+                c<K, V> cVar = this.f30942a;
+                this.f30942a = cVar != null ? cVar.f30940c : null;
             }
-            return this.f30395a;
+            return this.f30942a;
         }
 
         @Override // java.util.Iterator
         public boolean hasNext() {
             if (this.b) {
-                return b.this.f30389a != null;
+                return b.this.f30936a != null;
             }
-            c<K, V> cVar = this.f30395a;
-            return (cVar == null || cVar.f30393c == null) ? false : true;
+            c<K, V> cVar = this.f30942a;
+            return (cVar == null || cVar.f30940c == null) ? false : true;
         }
     }
 
     public static abstract class e<K, V> extends f<K, V> implements Iterator<Map.Entry<K, V>> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public c<K, V> f30397a;
+        public c<K, V> f30944a;
         public c<K, V> b;
 
         public e(c<K, V> cVar, c<K, V> cVar2) {
-            this.f30397a = cVar2;
+            this.f30944a = cVar2;
             this.b = cVar;
         }
 
         @Override // s.b.f
         public void a(@NonNull c<K, V> cVar) {
-            if (this.f30397a == cVar && cVar == this.b) {
+            if (this.f30944a == cVar && cVar == this.b) {
                 this.b = null;
-                this.f30397a = null;
+                this.f30944a = null;
             }
-            c<K, V> cVar2 = this.f30397a;
+            c<K, V> cVar2 = this.f30944a;
             if (cVar2 == cVar) {
-                this.f30397a = b(cVar2);
+                this.f30944a = b(cVar2);
             }
             if (this.b == cVar) {
                 this.b = f();
@@ -192,7 +192,7 @@ public class b<K, V> implements Iterable<Map.Entry<K, V>> {
 
         public final c<K, V> f() {
             c<K, V> cVar = this.b;
-            c<K, V> cVar2 = this.f30397a;
+            c<K, V> cVar2 = this.f30944a;
             if (cVar == cVar2 || cVar2 == null) {
                 return null;
             }
@@ -210,13 +210,13 @@ public class b<K, V> implements Iterable<Map.Entry<K, V>> {
     }
 
     public Map.Entry<K, V> a() {
-        return this.f30389a;
+        return this.f30936a;
     }
 
     public c<K, V> b(K k10) {
-        c<K, V> cVar = this.f30389a;
-        while (cVar != null && !cVar.f30392a.equals(k10)) {
-            cVar = cVar.f30393c;
+        c<K, V> cVar = this.f30936a;
+        while (cVar != null && !cVar.f30939a.equals(k10)) {
+            cVar = cVar.f30940c;
         }
         return cVar;
     }
@@ -224,7 +224,7 @@ public class b<K, V> implements Iterable<Map.Entry<K, V>> {
     @NonNull
     public b<K, V>.d c() {
         b<K, V>.d dVar = new d();
-        this.f30390c.put(dVar, Boolean.FALSE);
+        this.f30937c.put(dVar, Boolean.FALSE);
         return dVar;
     }
 
@@ -234,22 +234,22 @@ public class b<K, V> implements Iterable<Map.Entry<K, V>> {
 
     @NonNull
     public Iterator<Map.Entry<K, V>> descendingIterator() {
-        C0539b c0539b = new C0539b(this.b, this.f30389a);
-        this.f30390c.put(c0539b, Boolean.FALSE);
-        return c0539b;
+        C0544b c0544b = new C0544b(this.b, this.f30936a);
+        this.f30937c.put(c0544b, Boolean.FALSE);
+        return c0544b;
     }
 
     public c<K, V> e(@NonNull K k10, @NonNull V v5) {
         c<K, V> cVar = new c<>(k10, v5);
-        this.f30391d++;
+        this.f30938d++;
         c<K, V> cVar2 = this.b;
         if (cVar2 == null) {
-            this.f30389a = cVar;
+            this.f30936a = cVar;
             this.b = cVar;
             return cVar;
         }
-        cVar2.f30393c = cVar;
-        cVar.f30394d = cVar2;
+        cVar2.f30940c = cVar;
+        cVar.f30941d = cVar2;
         this.b = cVar;
         return cVar;
     }
@@ -291,27 +291,27 @@ public class b<K, V> implements Iterable<Map.Entry<K, V>> {
         if (cVarB == null) {
             return null;
         }
-        this.f30391d--;
-        if (!this.f30390c.isEmpty()) {
-            Iterator<f<K, V>> it = this.f30390c.keySet().iterator();
+        this.f30938d--;
+        if (!this.f30937c.isEmpty()) {
+            Iterator<f<K, V>> it = this.f30937c.keySet().iterator();
             while (it.hasNext()) {
                 it.next().a(cVarB);
             }
         }
-        c<K, V> cVar = cVarB.f30394d;
+        c<K, V> cVar = cVarB.f30941d;
         if (cVar != null) {
-            cVar.f30393c = cVarB.f30393c;
+            cVar.f30940c = cVarB.f30940c;
         } else {
-            this.f30389a = cVarB.f30393c;
+            this.f30936a = cVarB.f30940c;
         }
-        c<K, V> cVar2 = cVarB.f30393c;
+        c<K, V> cVar2 = cVarB.f30940c;
         if (cVar2 != null) {
-            cVar2.f30394d = cVar;
+            cVar2.f30941d = cVar;
         } else {
             this.b = cVar;
         }
-        cVarB.f30393c = null;
-        cVarB.f30394d = null;
+        cVarB.f30940c = null;
+        cVarB.f30941d = null;
         return cVarB.b;
     }
 
@@ -327,13 +327,13 @@ public class b<K, V> implements Iterable<Map.Entry<K, V>> {
     @Override // java.lang.Iterable
     @NonNull
     public Iterator<Map.Entry<K, V>> iterator() {
-        a aVar = new a(this.f30389a, this.b);
-        this.f30390c.put(aVar, Boolean.FALSE);
+        a aVar = new a(this.f30936a, this.b);
+        this.f30937c.put(aVar, Boolean.FALSE);
         return aVar;
     }
 
     public int size() {
-        return this.f30391d;
+        return this.f30938d;
     }
 
     public String toString() {

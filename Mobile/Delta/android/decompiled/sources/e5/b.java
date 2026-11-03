@@ -131,8 +131,8 @@ public final class b {
         this.onAttach.invoke();
         this.owner.a().a(new p() { // from class: e5.a
             @Override // androidx.p000lifecycle.p
-            public final void g(s sVar, l.a aVar) {
-                b.g(this.f15168a, sVar, aVar);
+            public final void f(s sVar, l.a aVar) {
+                b.g(this.f15782a, sVar, aVar);
             }
         });
         this.attached = true;
@@ -168,7 +168,7 @@ public final class b {
         } else {
             ArrayList arrayList = new ArrayList(mapJ.size());
             for (Map.Entry entry : mapJ.entrySet()) {
-                arrayList.add(jt.s.a((String) entry.getKey(), entry.getValue()));
+                arrayList.add(gt.s.a((String) entry.getKey(), entry.getValue()));
             }
             pairArr = (Pair[]) arrayList.toArray(new Pair[0]);
         }
@@ -183,7 +183,7 @@ public final class b {
                 for (Map.Entry entry2 : this.keyToProviders.entrySet()) {
                     j.c(bundleA2, (String) entry2.getKey(), ((f.b) entry2.getValue()).a());
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -202,7 +202,7 @@ public final class b {
                 throw new IllegalArgumentException("SavedStateProvider with the given key is already registered");
             }
             this.keyToProviders.put(key, provider);
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
         }
     }
 

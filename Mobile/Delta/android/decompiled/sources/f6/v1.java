@@ -22,20 +22,20 @@ public final class v1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final v1 f16323a = new v1();
+    public static final v1 f16919a = new v1();
 
     @Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
     public static final /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f16324a;
+        public static final /* synthetic */ int[] f16920a;
         public static final /* synthetic */ int[] b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static final /* synthetic */ int[] f16325c;
+        public static final /* synthetic */ int[] f16921c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final /* synthetic */ int[] f16326d;
+        public static final /* synthetic */ int[] f16922d;
 
         static {
             int[] iArr = new int[x5.o0.c.values().length];
@@ -63,7 +63,7 @@ public final class v1 {
                 iArr[x5.o0.c.CANCELLED.ordinal()] = 6;
             } catch (NoSuchFieldError unused6) {
             }
-            f16324a = iArr;
+            f16920a = iArr;
             int[] iArr2 = new int[x5.a.values().length];
             try {
                 iArr2[x5.a.EXPONENTIAL.ordinal()] = 1;
@@ -95,7 +95,7 @@ public final class v1 {
                 iArr3[x5.x.METERED.ordinal()] = 5;
             } catch (NoSuchFieldError unused13) {
             }
-            f16325c = iArr3;
+            f16921c = iArr3;
             int[] iArr4 = new int[x5.f0.values().length];
             try {
                 iArr4[x5.f0.RUN_AS_NON_EXPEDITED_WORK_REQUEST.ordinal()] = 1;
@@ -105,7 +105,7 @@ public final class v1 {
                 iArr4[x5.f0.DROP_WORK_REQUEST.ordinal()] = 2;
             } catch (NoSuchFieldError unused15) {
             }
-            f16326d = iArr4;
+            f16922d = iArr4;
         }
     }
 
@@ -118,7 +118,7 @@ public final class v1 {
         if (i10 == 2) {
             return 1;
         }
-        throw new jt.l();
+        throw new gt.l();
     }
 
     @NotNull
@@ -140,16 +140,16 @@ public final class v1 {
                         Intrinsics.checkNotNull(uri);
                         linkedHashSet.add(new x5.d.c(uri, z10));
                     }
-                    Unit unit = Unit.f22483a;
-                    ut.c.a(objectInputStream, null);
-                    Unit unit2 = Unit.f22483a;
-                    ut.c.a(byteArrayInputStream, null);
+                    Unit unit = Unit.f22938a;
+                    st.c.a(objectInputStream, null);
+                    Unit unit2 = Unit.f22938a;
+                    st.c.a(byteArrayInputStream, null);
                     return linkedHashSet;
                 } catch (Throwable th2) {
                     try {
                         throw th2;
                     } catch (Throwable th3) {
-                        ut.c.a(objectInputStream, th2);
+                        st.c.a(objectInputStream, th2);
                         throw th3;
                     }
                 }
@@ -157,7 +157,7 @@ public final class v1 {
                 try {
                     throw th4;
                 } catch (Throwable th5) {
-                    ut.c.a(byteArrayInputStream, th4);
+                    st.c.a(byteArrayInputStream, th4);
                     throw th5;
                 }
             }
@@ -190,9 +190,9 @@ public final class v1 {
                 for (int i11 : iArrB) {
                     objectOutputStream.writeInt(i11);
                 }
-                Unit unit = Unit.f22483a;
-                ut.c.a(objectOutputStream, null);
-                ut.c.a(byteArrayOutputStream, null);
+                Unit unit = Unit.f22938a;
+                st.c.a(objectOutputStream, null);
+                st.c.a(byteArrayOutputStream, null);
                 byte[] byteArray = byteArrayOutputStream.toByteArray();
                 Intrinsics.checkNotNullExpressionValue(byteArray, "toByteArray(...)");
                 return byteArray;
@@ -200,7 +200,7 @@ public final class v1 {
                 try {
                     throw th2;
                 } catch (Throwable th3) {
-                    ut.c.a(objectOutputStream, th2);
+                    st.c.a(objectOutputStream, th2);
                     throw th3;
                 }
             }
@@ -208,7 +208,7 @@ public final class v1 {
             try {
                 throw th4;
             } catch (Throwable th5) {
-                ut.c.a(byteArrayOutputStream, th4);
+                st.c.a(byteArrayOutputStream, th4);
                 throw th5;
             }
         }
@@ -284,7 +284,7 @@ public final class v1 {
 
     public static final int h(@NotNull x5.x networkType) {
         Intrinsics.checkNotNullParameter(networkType, "networkType");
-        int i10 = a.f16325c[networkType.ordinal()];
+        int i10 = a.f16921c[networkType.ordinal()];
         if (i10 == 1) {
             return 0;
         }
@@ -308,14 +308,14 @@ public final class v1 {
 
     public static final int i(@NotNull x5.f0 policy) {
         Intrinsics.checkNotNullParameter(policy, "policy");
-        int i10 = a.f16326d[policy.ordinal()];
+        int i10 = a.f16922d[policy.ordinal()];
         if (i10 == 1) {
             return 0;
         }
         if (i10 == 2) {
             return 1;
         }
-        throw new jt.l();
+        throw new gt.l();
     }
 
     @NotNull
@@ -333,9 +333,9 @@ public final class v1 {
                     objectOutputStream.writeUTF(cVar.getUri().toString());
                     objectOutputStream.writeBoolean(cVar.getIsTriggeredForDescendants());
                 }
-                Unit unit = Unit.f22483a;
-                ut.c.a(objectOutputStream, null);
-                ut.c.a(byteArrayOutputStream, null);
+                Unit unit = Unit.f22938a;
+                st.c.a(objectOutputStream, null);
+                st.c.a(byteArrayOutputStream, null);
                 byte[] byteArray = byteArrayOutputStream.toByteArray();
                 Intrinsics.checkNotNullExpressionValue(byteArray, "toByteArray(...)");
                 return byteArray;
@@ -343,7 +343,7 @@ public final class v1 {
                 try {
                     throw th2;
                 } catch (Throwable th3) {
-                    ut.c.a(objectOutputStream, th2);
+                    st.c.a(objectOutputStream, th2);
                     throw th3;
                 }
             }
@@ -351,7 +351,7 @@ public final class v1 {
             try {
                 throw th4;
             } catch (Throwable th5) {
-                ut.c.a(byteArrayOutputStream, th4);
+                st.c.a(byteArrayOutputStream, th4);
                 throw th5;
             }
         }
@@ -359,7 +359,7 @@ public final class v1 {
 
     public static final int k(@NotNull x5.o0.c state) {
         Intrinsics.checkNotNullParameter(state, "state");
-        switch (a.f16324a[state.ordinal()]) {
+        switch (a.f16920a[state.ordinal()]) {
             case 1:
                 return 0;
             case 2:
@@ -373,7 +373,7 @@ public final class v1 {
             case 6:
                 return 5;
             default:
-                throw new jt.l();
+                throw new gt.l();
         }
     }
 
@@ -397,15 +397,15 @@ public final class v1 {
                 for (int i13 = 0; i13 < i12; i13++) {
                     iArr2[i13] = objectInputStream.readInt();
                 }
-                NetworkRequestCompat networkRequestCompatB = g6.q.f17926a.b(iArr2, iArr);
-                ut.c.a(objectInputStream, null);
-                ut.c.a(byteArrayInputStream, null);
+                NetworkRequestCompat networkRequestCompatB = g6.q.f18465a.b(iArr2, iArr);
+                st.c.a(objectInputStream, null);
+                st.c.a(byteArrayInputStream, null);
                 return networkRequestCompatB;
             } catch (Throwable th2) {
                 try {
                     throw th2;
                 } catch (Throwable th3) {
-                    ut.c.a(objectInputStream, th2);
+                    st.c.a(objectInputStream, th2);
                     throw th3;
                 }
             }
@@ -413,7 +413,7 @@ public final class v1 {
             try {
                 throw th4;
             } catch (Throwable th5) {
-                ut.c.a(byteArrayInputStream, th4);
+                st.c.a(byteArrayInputStream, th4);
                 throw th5;
             }
         }

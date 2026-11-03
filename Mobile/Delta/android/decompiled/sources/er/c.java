@@ -1,41 +1,101 @@
 package er;
 
-import android.graphics.Bitmap;
-import kotlin.Metadata;
-import nu.c0;
-import nu.r0;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\b\u0018\u00002\u00020\u0001B\u0011\u0012\b\u0010\u0003\u001a\u0004\u0018\u00010\u0002¢\u0006\u0004\b\u0004\u0010\u0005R\u001c\u0010\t\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0007\u0010\bR\u001f\u0010\u000e\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00020\n8\u0006¢\u0006\f\n\u0004\b\u000b\u0010\f\u001a\u0004\b\u0007\u0010\rR(\u0010\u000f\u001a\u0004\u0018\u00010\u00022\b\u0010\u000f\u001a\u0004\u0018\u00010\u00028F@FX\u0086\u000e¢\u0006\f\u001a\u0004\b\u000b\u0010\u0010\"\u0004\b\u0011\u0010\u0005¨\u0006\u0012"}, d2 = {"Ler/c;", "", "Landroid/graphics/Bitmap;", "initialValue", "<init>", "(Landroid/graphics/Bitmap;)V", "Lnu/c0;", "a", "Lnu/c0;", "_bitmapValue", "Lnu/h;", "b", "Lnu/h;", "()Lnu/h;", "onChanged", "value", "()Landroid/graphics/Bitmap;", "c", "ui-step-renderer_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class c {
+public final class c implements r5.a {
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
-    @NotNull
-    public final c0<Bitmap> _bitmapValue;
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    @NonNull
+    public final ConstraintLayout f16285a;
 
-    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
-    @NotNull
-    public final nu.h<Bitmap> onChanged;
+    @NonNull
+    public final TextInputLayout b;
 
-    public c(@Nullable Bitmap bitmap) {
-        c0<Bitmap> c0VarA = r0.a(bitmap);
-        this._bitmapValue = c0VarA;
-        this.onChanged = nu.j.n(c0VarA, 1);
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    @NonNull
+    public final TextInputEditText f16286c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    @NonNull
+    public final TextInputLayout f16287d;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    @NonNull
+    public final TextInputLayout f16288e;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    @NonNull
+    public final TextInputEditText f16289f;
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name */
+    @NonNull
+    public final TextInputLayout f16290g;
+
+    public c(@NonNull ConstraintLayout constraintLayout, @NonNull TextInputLayout textInputLayout, @NonNull TextInputEditText textInputEditText, @NonNull TextInputLayout textInputLayout2, @NonNull TextInputLayout textInputLayout3, @NonNull TextInputEditText textInputEditText2, @NonNull TextInputLayout textInputLayout4) {
+        this.f16285a = constraintLayout;
+        this.b = textInputLayout;
+        this.f16286c = textInputEditText;
+        this.f16287d = textInputLayout2;
+        this.f16288e = textInputLayout3;
+        this.f16289f = textInputEditText2;
+        this.f16290g = textInputLayout4;
     }
 
-    @NotNull
-    public final nu.h<Bitmap> a() {
-        return this.onChanged;
+    @NonNull
+    public static c a(@NonNull View view) {
+        int i10 = yq.d.J;
+        TextInputLayout textInputLayout = (TextInputLayout) r5.b.a(view, i10);
+        if (textInputLayout != null) {
+            i10 = yq.d.K;
+            TextInputEditText textInputEditText = (TextInputEditText) r5.b.a(view, i10);
+            if (textInputEditText != null) {
+                i10 = yq.d.M;
+                TextInputLayout textInputLayout2 = (TextInputLayout) r5.b.a(view, i10);
+                if (textInputLayout2 != null) {
+                    i10 = yq.d.C0;
+                    TextInputLayout textInputLayout3 = (TextInputLayout) r5.b.a(view, i10);
+                    if (textInputLayout3 != null) {
+                        i10 = yq.d.D0;
+                        TextInputEditText textInputEditText2 = (TextInputEditText) r5.b.a(view, i10);
+                        if (textInputEditText2 != null) {
+                            i10 = yq.d.L0;
+                            TextInputLayout textInputLayout4 = (TextInputLayout) r5.b.a(view, i10);
+                            if (textInputLayout4 != null) {
+                                return new c((ConstraintLayout) view, textInputLayout, textInputEditText, textInputLayout2, textInputLayout3, textInputEditText2, textInputLayout4);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
     }
 
-    @Nullable
-    public final Bitmap b() {
-        return this._bitmapValue.getValue();
+    @NonNull
+    public static c c(@NonNull LayoutInflater layoutInflater) {
+        return d(layoutInflater, null, false);
     }
 
-    public final void c(@Nullable Bitmap bitmap) {
-        this._bitmapValue.setValue(bitmap);
+    @NonNull
+    public static c d(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
+        View viewInflate = layoutInflater.inflate(yq.e.f37069c, viewGroup, false);
+        if (z10) {
+            viewGroup.addView(viewInflate);
+        }
+        return a(viewInflate);
+    }
+
+    @Override // r5.a
+    @NonNull
+    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+    public ConstraintLayout getRoot() {
+        return this.f16285a;
     }
 }

@@ -6,10 +6,10 @@ import android.net.Uri;
 public final class a9 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final w1.a f6373a = new w1.a();
+    public static final w1.a f6446a = new w1.a();
 
     public static synchronized Uri a(String str) {
-        w1.a aVar = f6373a;
+        w1.a aVar = f6446a;
         Uri uri = (Uri) aVar.get("com.google.android.gms.measurement");
         if (uri != null) {
             return uri;

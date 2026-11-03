@@ -25,106 +25,106 @@ public final class PlayerEntity extends GamesDowngradeableSafeParcel implements 
     public final String F;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final String f6073h;
+    public final String f6146h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final String f6074i;
+    public final String f6147i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final Uri f6075j;
+    public final Uri f6148j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final Uri f6076k;
+    public final Uri f6149k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final long f6077l;
+    public final long f6150l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final int f6078m;
+    public final int f6151m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public final long f6079n;
+    public final long f6152n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public final String f6080o;
+    public final String f6153o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public final String f6081p;
+    public final String f6154p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public final String f6082q;
+    public final String f6155q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public final MostRecentGameInfoEntity f6083r;
+    public final MostRecentGameInfoEntity f6156r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public final PlayerLevelInfo f6084s;
+    public final PlayerLevelInfo f6157s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public final boolean f6085t;
+    public final boolean f6158t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public final boolean f6086u;
+    public final boolean f6159u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public final String f6087v;
+    public final String f6160v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public final String f6088w;
+    public final String f6161w;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public final Uri f6089x;
+    public final Uri f6162x;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public final String f6090y;
+    public final String f6163y;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public final Uri f6091z;
+    public final Uri f6164z;
 
     public PlayerEntity(@NonNull Player player) {
-        String strK3 = player.k3();
-        this.f6073h = strK3;
+        String strM3 = player.m3();
+        this.f6146h = strM3;
         String strL = player.l();
-        this.f6074i = strL;
-        this.f6075j = player.h();
-        this.f6080o = player.getIconImageUrl();
-        this.f6076k = player.B();
-        this.f6081p = player.getHiResImageUrl();
-        long jA0 = player.a0();
-        this.f6077l = jA0;
-        this.f6078m = player.zze();
-        this.f6079n = player.r0();
-        this.f6082q = player.getTitle();
-        this.f6085t = player.zzf();
+        this.f6147i = strL;
+        this.f6148j = player.h();
+        this.f6153o = player.getIconImageUrl();
+        this.f6149k = player.A();
+        this.f6154p = player.getHiResImageUrl();
+        long jZ = player.Z();
+        this.f6150l = jZ;
+        this.f6151m = player.zze();
+        this.f6152n = player.n0();
+        this.f6155q = player.getTitle();
+        this.f6158t = player.zzf();
         com.google.android.gms.games.internal.player.zza zzaVarZzh = player.zzh();
-        this.f6083r = zzaVarZzh == null ? null : new MostRecentGameInfoEntity(zzaVarZzh);
-        this.f6084s = player.z0();
-        this.f6086u = player.zzd();
-        this.f6087v = player.zzb();
-        this.f6088w = player.zzc();
-        this.f6089x = player.I1();
-        this.f6090y = player.getBannerImageLandscapeUrl();
-        this.f6091z = player.e0();
+        this.f6156r = zzaVarZzh == null ? null : new MostRecentGameInfoEntity(zzaVarZzh);
+        this.f6157s = player.v0();
+        this.f6159u = player.zzd();
+        this.f6160v = player.zzb();
+        this.f6161w = player.zzc();
+        this.f6162x = player.G1();
+        this.f6163y = player.getBannerImageLandscapeUrl();
+        this.f6164z = player.c0();
         this.A = player.getBannerImagePortraitUrl();
         this.B = player.d();
-        PlayerRelationshipInfo playerRelationshipInfoC1 = player.c1();
-        this.C = playerRelationshipInfoC1 == null ? null : new zzo(playerRelationshipInfoC1.freeze());
-        CurrentPlayerInfo currentPlayerInfoD2 = player.d2();
-        this.D = currentPlayerInfoD2 != null ? (zza) currentPlayerInfoD2.freeze() : null;
+        PlayerRelationshipInfo playerRelationshipInfoY0 = player.Y0();
+        this.C = playerRelationshipInfoY0 == null ? null : new zzo(playerRelationshipInfoY0.freeze());
+        CurrentPlayerInfo currentPlayerInfoE2 = player.e2();
+        this.D = currentPlayerInfoE2 != null ? (zza) currentPlayerInfoE2.freeze() : null;
         this.E = player.c();
         this.F = player.zza();
-        b.a(strK3);
+        b.a(strM3);
         b.a(strL);
-        b.b(jA0 > 0);
+        b.b(jZ > 0);
     }
 
     public static String A3(Player player) {
-        k.a aVarA = k.d(player).a("PlayerId", player.k3()).a("DisplayName", player.l()).a("HasDebugAccess", Boolean.valueOf(player.zzd())).a("IconImageUri", player.h()).a("IconImageUrl", player.getIconImageUrl()).a("HiResImageUri", player.B()).a("HiResImageUrl", player.getHiResImageUrl()).a("RetrievedTimestamp", Long.valueOf(player.a0())).a("Title", player.getTitle()).a("LevelInfo", player.z0()).a("GamerTag", player.zzb()).a("Name", player.zzc()).a("BannerImageLandscapeUri", player.I1()).a("BannerImageLandscapeUrl", player.getBannerImageLandscapeUrl()).a("BannerImagePortraitUri", player.e0()).a("BannerImagePortraitUrl", player.getBannerImagePortraitUrl()).a("CurrentPlayerInfo", player.d2()).a("TotalUnlockedAchievement", Long.valueOf(player.d()));
+        k.a aVarA = k.d(player).a("PlayerId", player.m3()).a("DisplayName", player.l()).a("HasDebugAccess", Boolean.valueOf(player.zzd())).a("IconImageUri", player.h()).a("IconImageUrl", player.getIconImageUrl()).a("HiResImageUri", player.A()).a("HiResImageUrl", player.getHiResImageUrl()).a("RetrievedTimestamp", Long.valueOf(player.Z())).a("Title", player.getTitle()).a("LevelInfo", player.v0()).a("GamerTag", player.zzb()).a("Name", player.zzc()).a("BannerImageLandscapeUri", player.G1()).a("BannerImageLandscapeUrl", player.getBannerImageLandscapeUrl()).a("BannerImagePortraitUri", player.c0()).a("BannerImagePortraitUrl", player.getBannerImagePortraitUrl()).a("CurrentPlayerInfo", player.e2()).a("TotalUnlockedAchievement", Long.valueOf(player.d()));
         if (player.c()) {
             aVarA.a("AlwaysAutoSignIn", Boolean.valueOf(player.c()));
         }
-        if (player.c1() != null) {
-            aVarA.a("RelationshipInfo", player.c1());
+        if (player.Y0() != null) {
+            aVarA.a("RelationshipInfo", player.Y0());
         }
         if (player.zza() != null) {
             aVarA.a("GamePlayerId", player.zza());
@@ -133,7 +133,7 @@ public final class PlayerEntity extends GamesDowngradeableSafeParcel implements 
     }
 
     public static int y3(Player player) {
-        return k.c(player.k3(), player.l(), Boolean.valueOf(player.zzd()), player.h(), player.B(), Long.valueOf(player.a0()), player.getTitle(), player.z0(), player.zzb(), player.zzc(), player.I1(), player.e0(), Long.valueOf(player.d()), player.c1(), player.d2(), Boolean.valueOf(player.c()), player.zza());
+        return k.c(player.m3(), player.l(), Boolean.valueOf(player.zzd()), player.h(), player.A(), Long.valueOf(player.Z()), player.getTitle(), player.v0(), player.zzb(), player.zzc(), player.G1(), player.c0(), Long.valueOf(player.d()), player.Y0(), player.e2(), Boolean.valueOf(player.c()), player.zza());
     }
 
     public static boolean z3(Player player, Object obj) {
@@ -144,22 +144,27 @@ public final class PlayerEntity extends GamesDowngradeableSafeParcel implements 
             return true;
         }
         Player player2 = (Player) obj;
-        return k.b(player2.k3(), player.k3()) && k.b(player2.l(), player.l()) && k.b(Boolean.valueOf(player2.zzd()), Boolean.valueOf(player.zzd())) && k.b(player2.h(), player.h()) && k.b(player2.B(), player.B()) && k.b(Long.valueOf(player2.a0()), Long.valueOf(player.a0())) && k.b(player2.getTitle(), player.getTitle()) && k.b(player2.z0(), player.z0()) && k.b(player2.zzb(), player.zzb()) && k.b(player2.zzc(), player.zzc()) && k.b(player2.I1(), player.I1()) && k.b(player2.e0(), player.e0()) && k.b(Long.valueOf(player2.d()), Long.valueOf(player.d())) && k.b(player2.d2(), player.d2()) && k.b(player2.c1(), player.c1()) && k.b(Boolean.valueOf(player2.c()), Boolean.valueOf(player.c())) && k.b(player2.zza(), player.zza());
+        return k.b(player2.m3(), player.m3()) && k.b(player2.l(), player.l()) && k.b(Boolean.valueOf(player2.zzd()), Boolean.valueOf(player.zzd())) && k.b(player2.h(), player.h()) && k.b(player2.A(), player.A()) && k.b(Long.valueOf(player2.Z()), Long.valueOf(player.Z())) && k.b(player2.getTitle(), player.getTitle()) && k.b(player2.v0(), player.v0()) && k.b(player2.zzb(), player.zzb()) && k.b(player2.zzc(), player.zzc()) && k.b(player2.G1(), player.G1()) && k.b(player2.c0(), player.c0()) && k.b(Long.valueOf(player2.d()), Long.valueOf(player.d())) && k.b(player2.e2(), player.e2()) && k.b(player2.Y0(), player.Y0()) && k.b(Boolean.valueOf(player2.c()), Boolean.valueOf(player.c())) && k.b(player2.zza(), player.zza());
     }
 
     @Override // com.google.android.gms.games.Player
-    public Uri B() {
-        return this.f6076k;
+    public Uri A() {
+        return this.f6149k;
     }
 
     @Override // com.google.android.gms.games.Player
-    public Uri I1() {
-        return this.f6089x;
+    public Uri G1() {
+        return this.f6162x;
     }
 
     @Override // com.google.android.gms.games.Player
-    public long a0() {
-        return this.f6077l;
+    public PlayerRelationshipInfo Y0() {
+        return this.C;
+    }
+
+    @Override // com.google.android.gms.games.Player
+    public long Z() {
+        return this.f6150l;
     }
 
     @Override // com.google.android.gms.games.Player
@@ -168,8 +173,8 @@ public final class PlayerEntity extends GamesDowngradeableSafeParcel implements 
     }
 
     @Override // com.google.android.gms.games.Player
-    public PlayerRelationshipInfo c1() {
-        return this.C;
+    public Uri c0() {
+        return this.f6164z;
     }
 
     @Override // com.google.android.gms.games.Player
@@ -179,13 +184,8 @@ public final class PlayerEntity extends GamesDowngradeableSafeParcel implements 
 
     @Override // com.google.android.gms.games.Player
     @NonNull
-    public CurrentPlayerInfo d2() {
+    public CurrentPlayerInfo e2() {
         return this.D;
-    }
-
-    @Override // com.google.android.gms.games.Player
-    public Uri e0() {
-        return this.f6091z;
     }
 
     public boolean equals(Object obj) {
@@ -194,7 +194,7 @@ public final class PlayerEntity extends GamesDowngradeableSafeParcel implements 
 
     @Override // com.google.android.gms.games.Player
     public String getBannerImageLandscapeUrl() {
-        return this.f6090y;
+        return this.f6163y;
     }
 
     @Override // com.google.android.gms.games.Player
@@ -204,22 +204,22 @@ public final class PlayerEntity extends GamesDowngradeableSafeParcel implements 
 
     @Override // com.google.android.gms.games.Player
     public String getHiResImageUrl() {
-        return this.f6081p;
+        return this.f6154p;
     }
 
     @Override // com.google.android.gms.games.Player
     public String getIconImageUrl() {
-        return this.f6080o;
+        return this.f6153o;
     }
 
     @Override // com.google.android.gms.games.Player
     public String getTitle() {
-        return this.f6082q;
+        return this.f6155q;
     }
 
     @Override // com.google.android.gms.games.Player
     public Uri h() {
-        return this.f6075j;
+        return this.f6148j;
     }
 
     public int hashCode() {
@@ -228,19 +228,19 @@ public final class PlayerEntity extends GamesDowngradeableSafeParcel implements 
 
     @Override // com.google.android.gms.games.Player
     @NonNull
-    public String k3() {
-        return this.f6073h;
+    public String l() {
+        return this.f6147i;
     }
 
     @Override // com.google.android.gms.games.Player
     @NonNull
-    public String l() {
-        return this.f6074i;
+    public String m3() {
+        return this.f6146h;
     }
 
     @Override // com.google.android.gms.games.Player
-    public long r0() {
-        return this.f6079n;
+    public long n0() {
+        return this.f6152n;
     }
 
     @NonNull
@@ -248,50 +248,50 @@ public final class PlayerEntity extends GamesDowngradeableSafeParcel implements 
         return A3(this);
     }
 
+    @Override // com.google.android.gms.games.Player
+    public PlayerLevelInfo v0() {
+        return this.f6157s;
+    }
+
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
         if (w3()) {
-            parcel.writeString(this.f6073h);
-            parcel.writeString(this.f6074i);
-            Uri uri = this.f6075j;
+            parcel.writeString(this.f6146h);
+            parcel.writeString(this.f6147i);
+            Uri uri = this.f6148j;
             parcel.writeString(uri == null ? null : uri.toString());
-            Uri uri2 = this.f6076k;
+            Uri uri2 = this.f6149k;
             parcel.writeString(uri2 != null ? uri2.toString() : null);
-            parcel.writeLong(this.f6077l);
+            parcel.writeLong(this.f6150l);
             return;
         }
         int iA = o9.b.a(parcel);
-        o9.b.v(parcel, 1, k3(), false);
+        o9.b.v(parcel, 1, m3(), false);
         o9.b.v(parcel, 2, l(), false);
         o9.b.t(parcel, 3, h(), i10, false);
-        o9.b.t(parcel, 4, B(), i10, false);
-        o9.b.r(parcel, 5, a0());
-        o9.b.n(parcel, 6, this.f6078m);
-        o9.b.r(parcel, 7, r0());
+        o9.b.t(parcel, 4, A(), i10, false);
+        o9.b.r(parcel, 5, Z());
+        o9.b.n(parcel, 6, this.f6151m);
+        o9.b.r(parcel, 7, n0());
         o9.b.v(parcel, 8, getIconImageUrl(), false);
         o9.b.v(parcel, 9, getHiResImageUrl(), false);
         o9.b.v(parcel, 14, getTitle(), false);
-        o9.b.t(parcel, 15, this.f6083r, i10, false);
-        o9.b.t(parcel, 16, z0(), i10, false);
-        o9.b.c(parcel, 18, this.f6085t);
-        o9.b.c(parcel, 19, this.f6086u);
-        o9.b.v(parcel, 20, this.f6087v, false);
-        o9.b.v(parcel, 21, this.f6088w, false);
-        o9.b.t(parcel, 22, I1(), i10, false);
+        o9.b.t(parcel, 15, this.f6156r, i10, false);
+        o9.b.t(parcel, 16, v0(), i10, false);
+        o9.b.c(parcel, 18, this.f6158t);
+        o9.b.c(parcel, 19, this.f6159u);
+        o9.b.v(parcel, 20, this.f6160v, false);
+        o9.b.v(parcel, 21, this.f6161w, false);
+        o9.b.t(parcel, 22, G1(), i10, false);
         o9.b.v(parcel, 23, getBannerImageLandscapeUrl(), false);
-        o9.b.t(parcel, 24, e0(), i10, false);
+        o9.b.t(parcel, 24, c0(), i10, false);
         o9.b.v(parcel, 25, getBannerImagePortraitUrl(), false);
         o9.b.r(parcel, 29, this.B);
-        o9.b.t(parcel, 33, c1(), i10, false);
-        o9.b.t(parcel, 35, d2(), i10, false);
+        o9.b.t(parcel, 33, Y0(), i10, false);
+        o9.b.t(parcel, 35, e2(), i10, false);
         o9.b.c(parcel, 36, this.E);
         o9.b.v(parcel, 37, this.F, false);
         o9.b.b(parcel, iA);
-    }
-
-    @Override // com.google.android.gms.games.Player
-    public PlayerLevelInfo z0() {
-        return this.f6084s;
     }
 
     @Override // com.google.android.gms.games.Player
@@ -301,55 +301,55 @@ public final class PlayerEntity extends GamesDowngradeableSafeParcel implements 
 
     @Override // com.google.android.gms.games.Player
     public final String zzb() {
-        return this.f6087v;
+        return this.f6160v;
     }
 
     @Override // com.google.android.gms.games.Player
     @NonNull
     public final String zzc() {
-        return this.f6088w;
+        return this.f6161w;
     }
 
     @Override // com.google.android.gms.games.Player
     public final boolean zzd() {
-        return this.f6086u;
+        return this.f6159u;
     }
 
     @Override // com.google.android.gms.games.Player
     public final int zze() {
-        return this.f6078m;
+        return this.f6151m;
     }
 
     @Override // com.google.android.gms.games.Player
     public final boolean zzf() {
-        return this.f6085t;
+        return this.f6158t;
     }
 
     @Override // com.google.android.gms.games.Player
     public final com.google.android.gms.games.internal.player.zza zzh() {
-        return this.f6083r;
+        return this.f6156r;
     }
 
     public PlayerEntity(String str, String str2, Uri uri, Uri uri2, long j10, int i10, long j11, String str3, String str4, String str5, MostRecentGameInfoEntity mostRecentGameInfoEntity, PlayerLevelInfo playerLevelInfo, boolean z10, boolean z11, String str6, String str7, Uri uri3, String str8, Uri uri4, String str9, long j12, zzo zzoVar, zza zzaVar, boolean z12, String str10) {
-        this.f6073h = str;
-        this.f6074i = str2;
-        this.f6075j = uri;
-        this.f6080o = str3;
-        this.f6076k = uri2;
-        this.f6081p = str4;
-        this.f6077l = j10;
-        this.f6078m = i10;
-        this.f6079n = j11;
-        this.f6082q = str5;
-        this.f6085t = z10;
-        this.f6083r = mostRecentGameInfoEntity;
-        this.f6084s = playerLevelInfo;
-        this.f6086u = z11;
-        this.f6087v = str6;
-        this.f6088w = str7;
-        this.f6089x = uri3;
-        this.f6090y = str8;
-        this.f6091z = uri4;
+        this.f6146h = str;
+        this.f6147i = str2;
+        this.f6148j = uri;
+        this.f6153o = str3;
+        this.f6149k = uri2;
+        this.f6154p = str4;
+        this.f6150l = j10;
+        this.f6151m = i10;
+        this.f6152n = j11;
+        this.f6155q = str5;
+        this.f6158t = z10;
+        this.f6156r = mostRecentGameInfoEntity;
+        this.f6157s = playerLevelInfo;
+        this.f6159u = z11;
+        this.f6160v = str6;
+        this.f6161w = str7;
+        this.f6162x = uri3;
+        this.f6163y = str8;
+        this.f6164z = uri4;
         this.A = str9;
         this.B = j12;
         this.C = zzoVar;

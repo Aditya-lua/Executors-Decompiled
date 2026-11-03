@@ -1,129 +1,194 @@
 package af;
 
-import com.google.mlkit.vision.barcode.common.Barcode;
-
 /* JADX INFO: loaded from: classes2.dex */
-public final class e0 {
+public final class e0 extends com.google.crypto.tink.shaded.protobuf.y<e0, b> implements com.google.crypto.tink.shaded.protobuf.t0 {
+    private static final e0 DEFAULT_INSTANCE;
+    public static final int HASH_FIELD_NUMBER = 1;
+    private static volatile com.google.crypto.tink.shaded.protobuf.a1<e0> PARSER = null;
+    public static final int TAG_SIZE_FIELD_NUMBER = 2;
+    private int hash_;
+    private int tagSize_;
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final a f397a = (a) ve.r0.a(new ve.r0.a() { // from class: af.q
-        @Override // ve.r0.a
-        public final Object get() {
-            return a.b().c(a.d.b).b(a.c.f377c).d(a.e.f384c).e(a.f.b).a();
-        }
-    });
-    public static final a b = (a) ve.r0.a(new ve.r0.a() { // from class: af.z
-        @Override // ve.r0.a
-        public final Object get() {
-            return a.b().c(a.d.f382d).b(a.c.f378d).d(a.e.f384c).e(a.f.b).a();
-        }
-    });
+    public static /* synthetic */ class a {
 
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final a f398c = (a) ve.r0.a(new ve.r0.a() { // from class: af.a0
-        @Override // ve.r0.a
-        public final Object get() {
-            return a.b().c(a.d.f382d).b(a.c.f379e).d(a.e.f384c).e(a.f.b).a();
-        }
-    });
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final /* synthetic */ int[] f499a;
 
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final a f399d = (a) ve.r0.a(new ve.r0.a() { // from class: af.b0
-        @Override // ve.r0.a
-        public final Object get() {
-            return a.b().d(a.e.b).b(a.c.f377c).c(a.d.b).e(a.f.b).a();
+        static {
+            int[] iArr = new int[com.google.crypto.tink.shaded.protobuf.y.f.values().length];
+            f499a = iArr;
+            try {
+                iArr[com.google.crypto.tink.shaded.protobuf.y.f.NEW_MUTABLE_INSTANCE.ordinal()] = 1;
+            } catch (NoSuchFieldError unused) {
+            }
+            try {
+                f499a[com.google.crypto.tink.shaded.protobuf.y.f.NEW_BUILDER.ordinal()] = 2;
+            } catch (NoSuchFieldError unused2) {
+            }
+            try {
+                f499a[com.google.crypto.tink.shaded.protobuf.y.f.BUILD_MESSAGE_INFO.ordinal()] = 3;
+            } catch (NoSuchFieldError unused3) {
+            }
+            try {
+                f499a[com.google.crypto.tink.shaded.protobuf.y.f.GET_DEFAULT_INSTANCE.ordinal()] = 4;
+            } catch (NoSuchFieldError unused4) {
+            }
+            try {
+                f499a[com.google.crypto.tink.shaded.protobuf.y.f.GET_PARSER.ordinal()] = 5;
+            } catch (NoSuchFieldError unused5) {
+            }
+            try {
+                f499a[com.google.crypto.tink.shaded.protobuf.y.f.GET_MEMOIZED_IS_INITIALIZED.ordinal()] = 6;
+            } catch (NoSuchFieldError unused6) {
+            }
+            try {
+                f499a[com.google.crypto.tink.shaded.protobuf.y.f.SET_MEMOIZED_IS_INITIALIZED.ordinal()] = 7;
+            } catch (NoSuchFieldError unused7) {
+            }
         }
-    });
-
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final a f400e = (a) ve.r0.a(new ve.r0.a() { // from class: af.c0
-        @Override // ve.r0.a
-        public final Object get() {
-            return a.b().d(a.e.b).b(a.c.f378d).c(a.d.f382d).e(a.f.b).a();
-        }
-    });
-
-    /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final a f401f = (a) ve.r0.a(new ve.r0.a() { // from class: af.d0
-        @Override // ve.r0.a
-        public final Object get() {
-            return a.b().d(a.e.b).b(a.c.f377c).c(a.d.b).e(a.f.f388e).a();
-        }
-    });
-
-    /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final a f402g = (a) ve.r0.a(new ve.r0.a() { // from class: af.r
-        @Override // ve.r0.a
-        public final Object get() {
-            return a.b().c(a.d.f382d).b(a.c.f379e).d(a.e.b).e(a.f.b).a();
-        }
-    });
-
-    /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final i f403h = (i) ve.r0.a(new ve.r0.a() { // from class: af.s
-        @Override // ve.r0.a
-        public final Object get() {
-            return i.b(i.a.b);
-        }
-    });
-
-    /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final i f404i = (i) ve.r0.a(new ve.r0.a() { // from class: af.t
-        @Override // ve.r0.a
-        public final Object get() {
-            return i.b(i.a.f420e);
-        }
-    });
-
-    /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final j0 f405j = (j0) ve.r0.a(new ve.r0.a() { // from class: af.u
-        @Override // ve.r0.a
-        public final Object get() {
-            return j0.b().b(j0.c.b).c(3072).d(j0.f425e).e(j0.d.b).a();
-        }
-    });
-
-    /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final j0 f406k = (j0) ve.r0.a(new ve.r0.a() { // from class: af.v
-        @Override // ve.r0.a
-        public final Object get() {
-            return j0.b().b(j0.c.b).c(3072).d(j0.f425e).e(j0.d.f439e).a();
-        }
-    });
-
-    /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final j0 f407l = (j0) ve.r0.a(new ve.r0.a() { // from class: af.w
-        @Override // ve.r0.a
-        public final Object get() {
-            return j0.b().b(j0.c.f435d).c(Barcode.FORMAT_AZTEC).d(j0.f425e).e(j0.d.b).a();
-        }
-    });
-
-    /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public static final r0 f408m = (r0) ve.r0.a(new ve.r0.a() { // from class: af.x
-        @Override // ve.r0.a
-        public final Object get() {
-            return e0.g();
-        }
-    });
-
-    /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public static final r0 f409n = (r0) ve.r0.a(new ve.r0.a() { // from class: af.y
-        @Override // ve.r0.a
-        public final Object get() {
-            return e0.l();
-        }
-    });
-
-    public static /* synthetic */ r0 g() {
-        r0.b bVarB = r0.b();
-        r0.c cVar = r0.c.b;
-        return bVarB.f(cVar).b(cVar).e(32).c(3072).d(r0.f471g).g(r0.d.b).a();
     }
 
-    public static /* synthetic */ r0 l() {
-        r0.b bVarB = r0.b();
-        r0.c cVar = r0.c.f485d;
-        return bVarB.f(cVar).b(cVar).e(64).c(Barcode.FORMAT_AZTEC).d(r0.f471g).g(r0.d.b).a();
+    public static final class b extends com.google.crypto.tink.shaded.protobuf.y.a<e0, b> implements com.google.crypto.tink.shaded.protobuf.t0 {
+        public /* synthetic */ b(a aVar) {
+            this();
+        }
+
+        public b C(b0 b0Var) {
+            r();
+            ((e0) this.b).g0(b0Var);
+            return this;
+        }
+
+        public b D(int i10) {
+            r();
+            ((e0) this.b).h0(i10);
+            return this;
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.y.a, com.google.crypto.tink.shaded.protobuf.s0.a
+        public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0.a F(com.google.crypto.tink.shaded.protobuf.i iVar, com.google.crypto.tink.shaded.protobuf.p pVar) {
+            return super.F(iVar, pVar);
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.a.AbstractC0130a, com.google.crypto.tink.shaded.protobuf.s0.a
+        public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0.a H(com.google.crypto.tink.shaded.protobuf.s0 s0Var) {
+            return super.H(s0Var);
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.y.a, com.google.crypto.tink.shaded.protobuf.s0.a
+        public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0 build() {
+            return super.build();
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.y.a
+        public /* bridge */ /* synthetic */ Object clone() {
+            return super.clone();
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.y.a, com.google.crypto.tink.shaded.protobuf.s0.a
+        public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0 d() {
+            return super.d();
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.y.a, com.google.crypto.tink.shaded.protobuf.t0
+        public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0 f() {
+            return super.f();
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.y.a, com.google.crypto.tink.shaded.protobuf.a.AbstractC0130a
+        public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.a.AbstractC0130a j(com.google.crypto.tink.shaded.protobuf.a aVar) {
+            return super.j((com.google.crypto.tink.shaded.protobuf.y) aVar);
+        }
+
+        public b() {
+            super(e0.DEFAULT_INSTANCE);
+        }
+    }
+
+    static {
+        e0 e0Var = new e0();
+        DEFAULT_INSTANCE = e0Var;
+        com.google.crypto.tink.shaded.protobuf.y.W(e0.class, e0Var);
+    }
+
+    public static e0 c0() {
+        return DEFAULT_INSTANCE;
+    }
+
+    public static b f0() {
+        return DEFAULT_INSTANCE.v();
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void h0(int i10) {
+        this.tagSize_ = i10;
+    }
+
+    @Override // com.google.crypto.tink.shaded.protobuf.y, com.google.crypto.tink.shaded.protobuf.s0
+    public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0.a a() {
+        return super.a();
+    }
+
+    public b0 d0() {
+        b0 b0VarA = b0.a(this.hash_);
+        return b0VarA == null ? b0.UNRECOGNIZED : b0VarA;
+    }
+
+    @Override // com.google.crypto.tink.shaded.protobuf.y, com.google.crypto.tink.shaded.protobuf.s0
+    public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0.a e() {
+        return super.e();
+    }
+
+    public int e0() {
+        return this.tagSize_;
+    }
+
+    @Override // com.google.crypto.tink.shaded.protobuf.y, com.google.crypto.tink.shaded.protobuf.t0
+    public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0 f() {
+        return super.f();
+    }
+
+    public final void g0(b0 b0Var) {
+        this.hash_ = b0Var.getNumber();
+    }
+
+    @Override // com.google.crypto.tink.shaded.protobuf.y
+    public final Object z(com.google.crypto.tink.shaded.protobuf.y.f fVar, Object obj, Object obj2) {
+        com.google.crypto.tink.shaded.protobuf.a1 bVar;
+        a aVar = null;
+        switch (a.f499a[fVar.ordinal()]) {
+            case 1:
+                return new e0();
+            case 2:
+                return new b(aVar);
+            case 3:
+                return com.google.crypto.tink.shaded.protobuf.y.O(DEFAULT_INSTANCE, "\u0000\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0000\u0000\u0001\f\u0002\u000b", new Object[]{"hash_", "tagSize_"});
+            case 4:
+                return DEFAULT_INSTANCE;
+            case 5:
+                com.google.crypto.tink.shaded.protobuf.a1<e0> a1Var = PARSER;
+                if (a1Var != null) {
+                    return a1Var;
+                }
+                synchronized (e0.class) {
+                    try {
+                        bVar = PARSER;
+                        if (bVar == null) {
+                            bVar = new com.google.crypto.tink.shaded.protobuf.y.b(DEFAULT_INSTANCE);
+                            PARSER = bVar;
+                        }
+                    } catch (Throwable th2) {
+                        throw th2;
+                    }
+                    break;
+                }
+                return bVar;
+            case 6:
+                return (byte) 1;
+            case 7:
+                return null;
+            default:
+                throw new UnsupportedOperationException();
+        }
     }
 }

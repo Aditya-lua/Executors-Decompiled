@@ -8,21 +8,21 @@ import java.util.SortedSet;
 public abstract class m1 extends h1 implements NavigableSet, a2 {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final transient Comparator f15303c;
+    public final transient Comparator f15917c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public transient m1 f15304d;
+    public transient m1 f15918d;
 
     public m1(Comparator comparator) {
-        this.f15303c = comparator;
+        this.f15917c = comparator;
     }
 
     public static v1 B(Comparator comparator) {
-        if (q1.f15359a.equals(comparator)) {
-            return v1.f15416f;
+        if (q1.f15973a.equals(comparator)) {
+            return v1.f16030f;
         }
         d2 d2Var = e1.b;
-        return new v1(t1.f15397e, comparator);
+        return new v1(t1.f16011e, comparator);
     }
 
     public abstract m1 A(Object obj, boolean z10);
@@ -39,7 +39,7 @@ public abstract class m1 extends h1 implements NavigableSet, a2 {
 
     @Override // java.util.SortedSet, eb.a2
     public final Comparator comparator() {
-        return this.f15303c;
+        return this.f15917c;
     }
 
     @Override // java.util.SortedSet
@@ -100,13 +100,13 @@ public abstract class m1 extends h1 implements NavigableSet, a2 {
     @Override // java.util.NavigableSet
     /* JADX INFO: renamed from: u, reason: merged with bridge method [inline-methods] */
     public final m1 descendingSet() {
-        m1 m1Var = this.f15304d;
+        m1 m1Var = this.f15918d;
         if (m1Var != null) {
             return m1Var;
         }
         m1 m1VarT = t();
-        this.f15304d = m1VarT;
-        m1VarT.f15304d = this;
+        this.f15918d = m1VarT;
+        m1VarT.f15918d = this;
         return m1VarT;
     }
 
@@ -117,7 +117,7 @@ public abstract class m1 extends h1 implements NavigableSet, a2 {
     public final m1 subSet(Object obj, boolean z10, Object obj2, boolean z11) {
         obj.getClass();
         obj2.getClass();
-        n0.c(this.f15303c.compare(obj, obj2) <= 0);
+        n0.c(this.f15917c.compare(obj, obj2) <= 0);
         return z(obj, z10, obj2, z11);
     }
 

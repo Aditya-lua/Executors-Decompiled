@@ -6,9 +6,9 @@ import com.google.android.gms.common.api.Status;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface s extends IInterface {
-    void A1(Status status);
+    void X(GoogleSignInAccount googleSignInAccount, Status status);
 
-    void Z(GoogleSignInAccount googleSignInAccount, Status status);
+    void o1(Status status);
 
-    void r1(Status status);
+    void z1(Status status);
 }

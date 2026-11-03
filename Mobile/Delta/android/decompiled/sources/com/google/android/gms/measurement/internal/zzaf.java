@@ -11,27 +11,27 @@ public final class zzaf extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzaf> CREATOR = new g();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final long f7406f;
+    public final long f7480f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final int f7407g;
+    public final int f7481g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final long f7408h;
+    public final long f7482h;
 
     public zzaf(long j10, int i10, long j11) {
-        this.f7406f = j10;
-        this.f7407g = i10;
-        this.f7408h = j11;
+        this.f7480f = j10;
+        this.f7481g = i10;
+        this.f7482h = j11;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i10) {
-        long j10 = this.f7406f;
+        long j10 = this.f7480f;
         int iA = b.a(parcel);
         b.r(parcel, 1, j10);
-        b.n(parcel, 2, this.f7407g);
-        b.r(parcel, 3, this.f7408h);
+        b.n(parcel, 2, this.f7481g);
+        b.r(parcel, 3, this.f7482h);
         b.b(parcel, iA);
     }
 }

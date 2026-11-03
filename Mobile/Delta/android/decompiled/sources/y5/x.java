@@ -13,7 +13,7 @@ import java.util.concurrent.Executor;
 public class x {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final String f35727a = x5.w.i("Schedulers");
+    public static final String f36584a = x5.w.i("Schedulers");
 
     public static /* synthetic */ void b(List list, WorkGenerationalId workGenerationalId, androidx.work.a aVar, WorkDatabase workDatabase) {
         Iterator it = list.iterator();
@@ -26,7 +26,7 @@ public class x {
     public static u c(Context context, WorkDatabase workDatabase, androidx.work.a aVar) {
         a6.f fVar = new a6.f(context, workDatabase, aVar);
         g6.v.c(context, SystemJobService.class, true);
-        x5.w.e().a(f35727a, "Created SystemJobScheduler and enabled SystemJobService");
+        x5.w.e().a(f36584a, "Created SystemJobScheduler and enabled SystemJobService");
         return fVar;
     }
 

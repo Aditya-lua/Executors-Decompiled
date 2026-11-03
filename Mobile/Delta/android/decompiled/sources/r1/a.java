@@ -7,22 +7,22 @@ import java.util.Objects;
 public class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final EnumC0526a f29733a;
+    public final EnumC0528a f30135a;
     public final f1.j b;
 
     /* JADX INFO: renamed from: r1.a$a, reason: collision with other inner class name */
-    public enum EnumC0526a {
+    public enum EnumC0528a {
         PREVIEW_VIEW,
         SCREEN_FLASH_VIEW
     }
 
-    public a(EnumC0526a enumC0526a, f1.j jVar) {
-        this.f29733a = enumC0526a;
+    public a(EnumC0528a enumC0528a, f1.j jVar) {
+        this.f30135a = enumC0528a;
         this.b = jVar;
     }
 
-    public EnumC0526a a() {
-        return this.f29733a;
+    public EnumC0528a a() {
+        return this.f30135a;
     }
 
     public f1.j b() {
@@ -37,10 +37,10 @@ public class a {
             return false;
         }
         a aVar = (a) obj;
-        return this.f29733a == aVar.f29733a && Objects.equals(this.b, aVar.b);
+        return this.f30135a == aVar.f30135a && Objects.equals(this.b, aVar.b);
     }
 
     public int hashCode() {
-        return Objects.hash(this.f29733a, this.b);
+        return Objects.hash(this.f30135a, this.b);
     }
 }

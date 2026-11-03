@@ -1,91 +1,85 @@
 package an;
 
-import android.view.View;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import kotlin.Metadata;
-import kotlin.Unit;
-import kotlin.jvm.functions.Function0;
+import kotlin.collections.CollectionsKt;
+import kotlin.collections.o;
+import kotlin.collections.q;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
-import ku.g2;
-import ku.p0;
-import ku.q0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010!\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\b\u0002\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u001b\u0010\t\u001a\u00020\u00072\f\u0010\b\u001a\b\u0012\u0004\u0012\u00020\u00070\u0006¢\u0006\u0004\b\t\u0010\nJ\u0017\u0010\r\u001a\u00020\u00072\u0006\u0010\f\u001a\u00020\u000bH\u0016¢\u0006\u0004\b\r\u0010\u000eJ\u0017\u0010\u000f\u001a\u00020\u00072\u0006\u0010\f\u001a\u00020\u000bH\u0016¢\u0006\u0004\b\u000f\u0010\u000eR \u0010\u0013\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00070\u00060\u00108\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0011\u0010\u0012R\u0014\u0010\u0017\u001a\u00020\u00148\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010\u0016R\u0017\u0010\u001a\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\t\u0010\u0018\u001a\u0004\b\u0015\u0010\u0019¨\u0006\u001b"}, d2 = {"Lan/c;", "Landroid/view/View$OnAttachStateChangeListener;", "Lku/p0;", "parentCoroutineScope", "<init>", "(Lku/p0;)V", "Lkotlin/Function0;", "", "block", "c", "(Lkotlin/jvm/functions/Function0;)V", "Landroid/view/View;", "v", "onViewAttachedToWindow", "(Landroid/view/View;)V", "onViewDetachedFromWindow", "", "a", "Ljava/util/List;", "attachHandlers", "Lku/a0;", "b", "Lku/a0;", "attachedJob", "Lku/p0;", "()Lku/p0;", "coroutineScope", "wf1-core-android"}, k = 1, mv = {1, 6, 0}, xi = 48)
-public final class c implements View.OnAttachStateChangeListener {
+@Metadata(d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\r\b\u0007\u0018\u0000*\b\b\u0000\u0010\u0002*\u00020\u00012\u00020\u0001B\u001d\u0012\u0006\u0010\u0003\u001a\u00028\u0000\u0012\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00028\u00000\u0004¢\u0006\u0004\b\u0006\u0010\u0007J1\u0010\u000b\u001a\b\u0012\u0004\u0012\u00028\u00010\u0000\"\b\b\u0001\u0010\b*\u00020\u00012\u0012\u0010\n\u001a\u000e\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00028\u00010\t¢\u0006\u0004\b\u000b\u0010\fJ\u001a\u0010\u000f\u001a\u00020\u000e2\b\u0010\r\u001a\u0004\u0018\u00010\u0001H\u0096\u0002¢\u0006\u0004\b\u000f\u0010\u0010J\u000f\u0010\u0012\u001a\u00020\u0011H\u0016¢\u0006\u0004\b\u0012\u0010\u0013J\u000f\u0010\u0015\u001a\u00020\u0014H\u0016¢\u0006\u0004\b\u0015\u0010\u0016R\u001d\u0010\u001b\u001a\b\u0012\u0004\u0012\u00028\u00000\u00048\u0006¢\u0006\f\n\u0004\b\u0017\u0010\u0018\u001a\u0004\b\u0019\u0010\u001aR\u0017\u0010\u001f\u001a\u00028\u00008\u0006¢\u0006\f\n\u0004\b\u0019\u0010\u001c\u001a\u0004\b\u001d\u0010\u001eR\u001d\u0010 \u001a\b\u0012\u0004\u0012\u00028\u00000\u00048\u0006¢\u0006\f\n\u0004\b\u001d\u0010\u0018\u001a\u0004\b\u0017\u0010\u001a¨\u0006!"}, d2 = {"Lan/c;", "", "StackedT", "bottom", "", "rest", "<init>", "(Ljava/lang/Object;Ljava/util/List;)V", "R", "Lkotlin/Function1;", "transform", "d", "(Lkotlin/jvm/functions/Function1;)Lan/c;", "other", "", "equals", "(Ljava/lang/Object;)Z", "", "hashCode", "()I", "", "toString", "()Ljava/lang/String;", "a", "Ljava/util/List;", "b", "()Ljava/util/List;", "frames", "Ljava/lang/Object;", "c", "()Ljava/lang/Object;", "top", "backStack", "wf1-container-common"}, k = 1, mv = {1, 6, 0}, xi = 48)
+public final class c<StackedT> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final List<Function0<Unit>> attachHandlers;
+    public final List<StackedT> frames;
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull
-    public final ku.a0 attachedJob;
+    public final StackedT top;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final p0 coroutineScope;
+    public final List<StackedT> backStack;
 
-    @Metadata(d1 = {"\u0000\u000e\n\u0002\u0010\u0003\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u00022\b\u0010\u0001\u001a\u0004\u0018\u00010\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"", "it", "", "a", "(Ljava/lang/Throwable;)V"}, k = 3, mv = {1, 6, 0})
-    public static final class a extends kotlin.jvm.internal.m implements Function1<Throwable, Unit> {
-        public a() {
-            super(1);
-        }
-
-        public final void a(@Nullable Throwable th2) {
-            c.this.attachHandlers.clear();
-        }
-
-        @Override // kotlin.jvm.functions.Function1
-        public /* bridge */ /* synthetic */ Unit invoke(Throwable th2) {
-            a(th2);
-            return Unit.f22483a;
-        }
-    }
-
-    public c(@NotNull p0 parentCoroutineScope) {
-        Intrinsics.checkNotNullParameter(parentCoroutineScope, "parentCoroutineScope");
-        this.attachHandlers = new ArrayList();
-        ku.a0 a0VarA = g2.a(g2.h(parentCoroutineScope.getCoroutineContext()));
-        a0VarA.q(new a());
-        this.attachedJob = a0VarA;
-        this.coroutineScope = q0.j(parentCoroutineScope, a0VarA);
+    public c(@NotNull StackedT bottom, @NotNull List<? extends StackedT> rest) {
+        Intrinsics.checkNotNullParameter(bottom, "bottom");
+        Intrinsics.checkNotNullParameter(rest, "rest");
+        List<StackedT> listW0 = CollectionsKt.w0(o.d(bottom), rest);
+        this.frames = listW0;
+        this.top = (StackedT) CollectionsKt.o0(listW0);
+        this.backStack = listW0.subList(0, listW0.size() - 1);
     }
 
     @NotNull
-    /* JADX INFO: renamed from: b, reason: from getter */
-    public final p0 getCoroutineScope() {
-        return this.coroutineScope;
+    public final List<StackedT> a() {
+        return this.backStack;
     }
 
-    public final void c(@NotNull Function0<Unit> block) {
-        Intrinsics.checkNotNullParameter(block, "block");
-        if (!q0.i(this.coroutineScope)) {
-            throw new IllegalStateException("Expected AttachedScope to be active when adding attach handler.");
-        }
-        this.attachHandlers.add(block);
+    @NotNull
+    public final List<StackedT> b() {
+        return this.frames;
     }
 
-    @Override // android.view.View.OnAttachStateChangeListener
-    public void onViewAttachedToWindow(@NotNull View v5) {
-        Intrinsics.checkNotNullParameter(v5, "v");
-        List<Function0<Unit>> list = this.attachHandlers;
+    @NotNull
+    public final StackedT c() {
+        return this.top;
+    }
+
+    @NotNull
+    public final <R> c<R> d(@NotNull Function1<? super StackedT, ? extends R> transform) {
+        Intrinsics.checkNotNullParameter(transform, "transform");
+        List<StackedT> list = this.frames;
+        ArrayList arrayList = new ArrayList(q.u(list, 10));
         Iterator<T> it = list.iterator();
         while (it.hasNext()) {
-            ((Function0) it.next()).invoke();
+            arrayList.add(transform.invoke((Object) it.next()));
         }
-        list.clear();
+        return d.a(arrayList);
     }
 
-    @Override // android.view.View.OnAttachStateChangeListener
-    public void onViewDetachedFromWindow(@NotNull View v5) {
-        Intrinsics.checkNotNullParameter(v5, "v");
-        q0.e(this.coroutineScope, "View detached", null, 2, null);
-        v5.removeOnAttachStateChangeListener(this);
+    public boolean equals(@Nullable Object other) {
+        c cVar = other instanceof c ? (c) other : null;
+        return Intrinsics.c(cVar != null ? cVar.frames : null, this.frames);
+    }
+
+    public int hashCode() {
+        return this.frames.hashCode();
+    }
+
+    @NotNull
+    public String toString() {
+        StringBuilder sb2 = new StringBuilder();
+        sb2.append((Object) c.class.getSimpleName());
+        sb2.append('(');
+        sb2.append(this.frames);
+        sb2.append(')');
+        return sb2.toString();
     }
 }

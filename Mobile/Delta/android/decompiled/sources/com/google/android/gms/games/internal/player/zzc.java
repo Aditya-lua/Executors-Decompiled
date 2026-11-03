@@ -11,11 +11,11 @@ import m9.d;
 public final class zzc extends d implements zza {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final b f6174d;
+    public final b f6247d;
 
     public zzc(DataHolder dataHolder, int i10, b bVar) {
         super(dataHolder, i10);
-        this.f6174d = bVar;
+        this.f6247d = bVar;
     }
 
     @Override // android.os.Parcelable
@@ -42,31 +42,31 @@ public final class zzc extends d implements zza {
 
     @Override // com.google.android.gms.games.internal.player.zza
     public final String zza() {
-        return j(this.f6174d.f21230t);
+        return j(this.f6247d.f21803t);
     }
 
     @Override // com.google.android.gms.games.internal.player.zza
     public final String zzb() {
-        return j(this.f6174d.f21231u);
+        return j(this.f6247d.f21804u);
     }
 
     @Override // com.google.android.gms.games.internal.player.zza
     public final long zzc() {
-        return i(this.f6174d.f21232v);
+        return i(this.f6247d.f21805v);
     }
 
     @Override // com.google.android.gms.games.internal.player.zza
     public final Uri zzd() {
-        return n(this.f6174d.f21233w);
+        return n(this.f6247d.f21806w);
     }
 
     @Override // com.google.android.gms.games.internal.player.zza
     public final Uri zze() {
-        return n(this.f6174d.f21234x);
+        return n(this.f6247d.f21807x);
     }
 
     @Override // com.google.android.gms.games.internal.player.zza
     public final Uri zzf() {
-        return n(this.f6174d.f21235y);
+        return n(this.f6247d.f21808y);
     }
 }

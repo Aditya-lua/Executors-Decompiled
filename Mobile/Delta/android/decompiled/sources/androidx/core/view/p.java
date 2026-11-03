@@ -12,31 +12,31 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class p {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Runnable f1907a;
+    public final Runnable f1752a;
     public final CopyOnWriteArrayList<r> b = new CopyOnWriteArrayList<>();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Map<r, a> f1908c = new HashMap();
+    public final Map<r, a> f1753c = new HashMap();
 
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final androidx.p000lifecycle.l f1909a;
+        public final androidx.p000lifecycle.l f1754a;
         public androidx.p000lifecycle.p b;
 
         public void a() {
-            this.f1909a.d(this.b);
+            this.f1754a.d(this.b);
             this.b = null;
         }
     }
 
     public p(Runnable runnable) {
-        this.f1907a = runnable;
+        this.f1752a = runnable;
     }
 
     public void a(r rVar) {
         this.b.add(rVar);
-        this.f1907a.run();
+        this.f1752a.run();
     }
 
     public void b(Menu menu, MenuInflater menuInflater) {
@@ -72,10 +72,10 @@ public class p {
 
     public void f(r rVar) {
         this.b.remove(rVar);
-        a aVarRemove = this.f1908c.remove(rVar);
+        a aVarRemove = this.f1753c.remove(rVar);
         if (aVarRemove != null) {
             aVarRemove.a();
         }
-        this.f1907a.run();
+        this.f1752a.run();
     }
 }

@@ -113,7 +113,7 @@ public class e extends a<g.h, List<Uri>> {
     @Override // h.a
     @Nullable
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public final a.C0332a<List<Uri>> getSynchronousResult(@NotNull Context context, @NotNull g.h input) {
+    public final a.C0334a<List<Uri>> getSynchronousResult(@NotNull Context context, @NotNull g.h input) {
         Intrinsics.checkNotNullParameter(context, "context");
         Intrinsics.checkNotNullParameter(input, "input");
         return null;

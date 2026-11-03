@@ -5,6 +5,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Looper;
 import android.util.Log;
+import iu.d2;
+import iu.p0;
+import iu.q0;
+import iu.v1;
+import iu.z2;
 import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -28,16 +33,11 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.Intrinsics;
-import ku.d2;
-import ku.p0;
-import ku.q0;
-import ku.v1;
-import ku.z2;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000Ò\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\"\n\u0002\b\u0006\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\f\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010%\n\u0002\b\u0017\b&\u0018\u0000 '2\u00020\u0001:\u0006]T`V\u0010YB\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u0005\u0010\u0003J\u000f\u0010\u0006\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u0006\u0010\u0003J\u000f\u0010\u0007\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u0007\u0010\u0003J#\u0010\u000b\u001a\u00028\u0000\"\u0004\b\u0000\u0010\b2\f\u0010\n\u001a\b\u0012\u0004\u0012\u00028\u00000\tH\u0002¢\u0006\u0004\b\u000b\u0010\fJ#\u0010\u0010\u001a\u00020\u00042\n\u0010\u000e\u001a\u0006\u0012\u0002\b\u00030\r2\u0006\u0010\u000f\u001a\u00020\u0001H\u0000¢\u0006\u0004\b\u0010\u0010\u0011J\u0017\u0010\u0014\u001a\u00020\u00042\u0006\u0010\u0013\u001a\u00020\u0012H\u0017¢\u0006\u0004\b\u0014\u0010\u0015J\u0017\u0010\u0017\u001a\u00020\u00162\u0006\u0010\u0013\u001a\u00020\u0012H\u0000¢\u0006\u0004\b\u0017\u0010\u0018J1\u0010\u001f\u001a\b\u0012\u0004\u0012\u00020\u001e0\u001d2\u001a\u0010\u001c\u001a\u0016\u0012\f\u0012\n\u0012\u0006\b\u0001\u0012\u00020\u001b0\u001a\u0012\u0004\u0012\u00020\u001b0\u0019H\u0017¢\u0006\u0004\b\u001f\u0010 J1\u0010!\u001a\b\u0012\u0004\u0012\u00020\u001e0\u001d2\u001a\u0010\u001c\u001a\u0016\u0012\f\u0012\n\u0012\u0006\b\u0001\u0012\u00020\u001b0\r\u0012\u0004\u0012\u00020\u001b0\u0019H\u0017¢\u0006\u0004\b!\u0010 J\u0017\u0010$\u001a\u00020#2\u0006\u0010\"\u001a\u00020\u0012H\u0015¢\u0006\u0004\b$\u0010%J\u000f\u0010'\u001a\u00020&H\u0015¢\u0006\u0004\b'\u0010(J\u000f\u0010*\u001a\u00020)H$¢\u0006\u0004\b*\u0010+J\u000f\u0010-\u001a\u00020,H\u0007¢\u0006\u0004\b-\u0010.J\u000f\u00100\u001a\u00020/H\u0007¢\u0006\u0004\b0\u00101J\u000f\u00102\u001a\u00020/H\u0000¢\u0006\u0004\b2\u00101J)\u00103\u001a\u001c\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u001a\u0012\u000e\u0012\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u001a0\u001d0\u0019H\u0015¢\u0006\u0004\b3\u00104J)\u00105\u001a\u001c\u0012\b\u0012\u0006\u0012\u0002\b\u00030\r\u0012\u000e\u0012\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\r0\u001d0\u0019H\u0015¢\u0006\u0004\b5\u00104J\u001d\u00107\u001a\u0010\u0012\f\u0012\n\u0012\u0006\b\u0001\u0012\u00020\u001b0\u001a06H\u0017¢\u0006\u0004\b7\u00108J\u001d\u00109\u001a\u0010\u0012\f\u0012\n\u0012\u0006\b\u0001\u0012\u00020\u001b0\r06H\u0017¢\u0006\u0004\b9\u00108J\u000f\u0010:\u001a\u00020\u0004H\u0017¢\u0006\u0004\b:\u0010\u0003J\u000f\u0010;\u001a\u00020\u0004H\u0017¢\u0006\u0004\b;\u0010\u0003JB\u0010C\u001a\u00028\u0000\"\u0004\b\u0000\u0010<2\u0006\u0010>\u001a\u00020=2\"\u0010B\u001a\u001e\b\u0001\u0012\u0004\u0012\u00020@\u0012\n\u0012\b\u0012\u0004\u0012\u00028\u00000A\u0012\u0006\u0012\u0004\u0018\u00010\u00010?H\u0087@¢\u0006\u0004\bC\u0010DJ\u000f\u0010E\u001a\u00020=H\u0007¢\u0006\u0004\bE\u0010FJ\u000f\u0010G\u001a\u00020\u0004H\u0017¢\u0006\u0004\bG\u0010\u0003J\u000f\u0010H\u001a\u00020\u0004H\u0017¢\u0006\u0004\bH\u0010\u0003J\u000f\u0010I\u001a\u00020\u0004H\u0017¢\u0006\u0004\bI\u0010\u0003J\u0017\u0010<\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020JH\u0016¢\u0006\u0004\b<\u0010KJ#\u0010M\u001a\u00028\u0000\"\u0004\b\u0000\u0010I2\f\u0010\n\u001a\b\u0012\u0004\u0012\u00028\u00000LH\u0016¢\u0006\u0004\bM\u0010NJ\u0017\u0010Q\u001a\u00020\u00042\u0006\u0010P\u001a\u00020OH\u0005¢\u0006\u0004\bQ\u0010RJ\u000f\u0010S\u001a\u00020=H\u0016¢\u0006\u0004\bS\u0010FR\u0016\u0010\u0013\u001a\u00020\u00128\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\bT\u0010UR\u0016\u0010X\u001a\u00020,8\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\bV\u0010WR\u0016\u0010[\u001a\u00020/8\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\bY\u0010ZR\u0016\u0010_\u001a\u00020\\8\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\b]\u0010^R\u0016\u0010a\u001a\u00020\\8\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\b`\u0010^R\u0016\u0010c\u001a\u00020\u00168\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\b\u0010\u0010bR\u0016\u0010e\u001a\u00020)8\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\b:\u0010dR\u001a\u0010j\u001a\u00020f8\u0000X\u0080\u0004¢\u0006\f\n\u0004\b;\u0010g\u001a\u0004\bh\u0010iR\u0016\u0010l\u001a\u00020=8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bG\u0010kR\u0018\u0010o\u001a\u0004\u0018\u00010m8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b!\u0010nR\u001d\u0010u\u001a\b\u0012\u0004\u0012\u00020/0p8G¢\u0006\f\n\u0004\bq\u0010r\u001a\u0004\bs\u0010tR$\u0010x\u001a\u0012\u0012\b\u0012\u0006\u0012\u0002\b\u00030\r\u0012\u0004\u0012\u00020\u00010v8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0017\u0010wR\"\u0010|\u001a\u00020=8\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b*\u0010k\u001a\u0004\by\u0010F\"\u0004\bz\u0010{R\u0014\u0010~\u001a\u00020=8BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b}\u0010FR\u0016\u0010\u0081\u0001\u001a\u00020\\8VX\u0096\u0004¢\u0006\u0007\u001a\u0005\b\u007f\u0010\u0080\u0001R\u0017\u0010\u0084\u0001\u001a\u00020#8VX\u0096\u0004¢\u0006\b\u001a\u0006\b\u0082\u0001\u0010\u0083\u0001R\u0016\u0010\u0086\u0001\u001a\u00020)8VX\u0096\u0004¢\u0006\u0007\u001a\u0005\b\u0085\u0001\u0010+R0\u0010\u0088\u0001\u001a\u001c\u0012\b\u0012\u0006\u0012\u0002\b\u00030\r\u0012\u000e\u0012\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\r0\u001d0\u00198@X\u0080\u0004¢\u0006\u0007\u001a\u0005\b\u0087\u0001\u00104R\u0016\u0010\u008a\u0001\u001a\u00020=8@X\u0080\u0004¢\u0006\u0007\u001a\u0005\b\u0089\u0001\u0010FR\u0016\u0010\u008c\u0001\u001a\u00020=8@X\u0080\u0004¢\u0006\u0007\u001a\u0005\b\u008b\u0001\u0010F¨\u0006\u008d\u0001"}, d2 = {"Lx4/u;", "", "<init>", "()V", "", "O", "I", "J", "T", "Lkotlin/Function0;", "body", "Q", "(Lkotlin/jvm/functions/Function0;)Ljava/lang/Object;", "Lhu/c;", "kclass", "converter", "f", "(Lhu/c;Ljava/lang/Object;)V", "Lx4/c;", "configuration", "H", "(Lx4/c;)V", "Lx4/p;", "l", "(Lx4/c;)Lx4/p;", "", "Ljava/lang/Class;", "La5/a;", "autoMigrationSpecs", "", "La5/b;", "q", "(Ljava/util/Map;)Ljava/util/List;", "j", "config", "Lg5/d;", "o", "(Lx4/c;)Lg5/d;", "Lx4/b0;", "n", "()Lx4/b0;", "Landroidx/room/c;", "m", "()Landroidx/room/c;", "Lku/p0;", "s", "()Lku/p0;", "Lkotlin/coroutines/CoroutineContext;", "v", "()Lkotlin/coroutines/CoroutineContext;", "C", "A", "()Ljava/util/Map;", "y", "", "x", "()Ljava/util/Set;", "w", "g", "h", "R", "", "isReadOnly", "Lkotlin/Function2;", "Lx4/g0;", "Lnt/b;", "block", "W", "(ZLkotlin/jvm/functions/Function2;Lnt/b;)Ljava/lang/Object;", "F", "()Z", "i", "p", "V", "Ljava/lang/Runnable;", "(Ljava/lang/Runnable;)V", "Ljava/util/concurrent/Callable;", "P", "(Ljava/util/concurrent/Callable;)Ljava/lang/Object;", "Lf5/b;", "connection", "K", "(Lf5/b;)V", "G", "a", "Lx4/c;", "b", "Lku/p0;", "coroutineScope", "c", "Lkotlin/coroutines/CoroutineContext;", "transactionContext", "Ljava/util/concurrent/Executor;", "d", "Ljava/util/concurrent/Executor;", "internalQueryExecutor", "e", "internalTransactionExecutor", "Lx4/p;", "connectionManager", "Landroidx/room/c;", "internalTracker", "Ly4/a;", "Ly4/a;", "r", "()Ly4/a;", "closeBarrier", "Z", "allowMainThreadQueries", "Lb5/b;", "Lb5/b;", "autoCloser", "Ljava/lang/ThreadLocal;", "k", "Ljava/lang/ThreadLocal;", "B", "()Ljava/lang/ThreadLocal;", "suspendingTransactionContext", "", "Ljava/util/Map;", "typeConverters", "E", "setUseTempTrackingTable$room_runtime", "(Z)V", "useTempTrackingTable", "N", "isThreadInSuspendingTransaction", "D", "()Ljava/util/concurrent/Executor;", "transactionExecutor", "u", "()Lg5/d;", "openHelper", "t", "invalidationTracker", "z", "requiredTypeConverterClassesMap", "M", "isOpenInternal", "L", "isMainThread", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
+@Metadata(d1 = {"\u0000Ò\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\"\n\u0002\b\u0006\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\f\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010%\n\u0002\b\u0017\b&\u0018\u0000 '2\u00020\u0001:\u0006]T`V\u0010YB\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u0005\u0010\u0003J\u000f\u0010\u0006\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u0006\u0010\u0003J\u000f\u0010\u0007\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u0007\u0010\u0003J#\u0010\u000b\u001a\u00028\u0000\"\u0004\b\u0000\u0010\b2\f\u0010\n\u001a\b\u0012\u0004\u0012\u00028\u00000\tH\u0002¢\u0006\u0004\b\u000b\u0010\fJ#\u0010\u0010\u001a\u00020\u00042\n\u0010\u000e\u001a\u0006\u0012\u0002\b\u00030\r2\u0006\u0010\u000f\u001a\u00020\u0001H\u0000¢\u0006\u0004\b\u0010\u0010\u0011J\u0017\u0010\u0014\u001a\u00020\u00042\u0006\u0010\u0013\u001a\u00020\u0012H\u0017¢\u0006\u0004\b\u0014\u0010\u0015J\u0017\u0010\u0017\u001a\u00020\u00162\u0006\u0010\u0013\u001a\u00020\u0012H\u0000¢\u0006\u0004\b\u0017\u0010\u0018J1\u0010\u001f\u001a\b\u0012\u0004\u0012\u00020\u001e0\u001d2\u001a\u0010\u001c\u001a\u0016\u0012\f\u0012\n\u0012\u0006\b\u0001\u0012\u00020\u001b0\u001a\u0012\u0004\u0012\u00020\u001b0\u0019H\u0017¢\u0006\u0004\b\u001f\u0010 J1\u0010!\u001a\b\u0012\u0004\u0012\u00020\u001e0\u001d2\u001a\u0010\u001c\u001a\u0016\u0012\f\u0012\n\u0012\u0006\b\u0001\u0012\u00020\u001b0\r\u0012\u0004\u0012\u00020\u001b0\u0019H\u0017¢\u0006\u0004\b!\u0010 J\u0017\u0010$\u001a\u00020#2\u0006\u0010\"\u001a\u00020\u0012H\u0015¢\u0006\u0004\b$\u0010%J\u000f\u0010'\u001a\u00020&H\u0015¢\u0006\u0004\b'\u0010(J\u000f\u0010*\u001a\u00020)H$¢\u0006\u0004\b*\u0010+J\u000f\u0010-\u001a\u00020,H\u0007¢\u0006\u0004\b-\u0010.J\u000f\u00100\u001a\u00020/H\u0007¢\u0006\u0004\b0\u00101J\u000f\u00102\u001a\u00020/H\u0000¢\u0006\u0004\b2\u00101J)\u00103\u001a\u001c\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u001a\u0012\u000e\u0012\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u001a0\u001d0\u0019H\u0015¢\u0006\u0004\b3\u00104J)\u00105\u001a\u001c\u0012\b\u0012\u0006\u0012\u0002\b\u00030\r\u0012\u000e\u0012\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\r0\u001d0\u0019H\u0015¢\u0006\u0004\b5\u00104J\u001d\u00107\u001a\u0010\u0012\f\u0012\n\u0012\u0006\b\u0001\u0012\u00020\u001b0\u001a06H\u0017¢\u0006\u0004\b7\u00108J\u001d\u00109\u001a\u0010\u0012\f\u0012\n\u0012\u0006\b\u0001\u0012\u00020\u001b0\r06H\u0017¢\u0006\u0004\b9\u00108J\u000f\u0010:\u001a\u00020\u0004H\u0017¢\u0006\u0004\b:\u0010\u0003J\u000f\u0010;\u001a\u00020\u0004H\u0017¢\u0006\u0004\b;\u0010\u0003JB\u0010C\u001a\u00028\u0000\"\u0004\b\u0000\u0010<2\u0006\u0010>\u001a\u00020=2\"\u0010B\u001a\u001e\b\u0001\u0012\u0004\u0012\u00020@\u0012\n\u0012\b\u0012\u0004\u0012\u00028\u00000A\u0012\u0006\u0012\u0004\u0018\u00010\u00010?H\u0087@¢\u0006\u0004\bC\u0010DJ\u000f\u0010E\u001a\u00020=H\u0007¢\u0006\u0004\bE\u0010FJ\u000f\u0010G\u001a\u00020\u0004H\u0017¢\u0006\u0004\bG\u0010\u0003J\u000f\u0010H\u001a\u00020\u0004H\u0017¢\u0006\u0004\bH\u0010\u0003J\u000f\u0010I\u001a\u00020\u0004H\u0017¢\u0006\u0004\bI\u0010\u0003J\u0017\u0010<\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020JH\u0016¢\u0006\u0004\b<\u0010KJ#\u0010M\u001a\u00028\u0000\"\u0004\b\u0000\u0010I2\f\u0010\n\u001a\b\u0012\u0004\u0012\u00028\u00000LH\u0016¢\u0006\u0004\bM\u0010NJ\u0017\u0010Q\u001a\u00020\u00042\u0006\u0010P\u001a\u00020OH\u0005¢\u0006\u0004\bQ\u0010RJ\u000f\u0010S\u001a\u00020=H\u0016¢\u0006\u0004\bS\u0010FR\u0016\u0010\u0013\u001a\u00020\u00128\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\bT\u0010UR\u0016\u0010X\u001a\u00020,8\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\bV\u0010WR\u0016\u0010[\u001a\u00020/8\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\bY\u0010ZR\u0016\u0010_\u001a\u00020\\8\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\b]\u0010^R\u0016\u0010a\u001a\u00020\\8\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\b`\u0010^R\u0016\u0010c\u001a\u00020\u00168\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\b\u0010\u0010bR\u0016\u0010e\u001a\u00020)8\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\b:\u0010dR\u001a\u0010j\u001a\u00020f8\u0000X\u0080\u0004¢\u0006\f\n\u0004\b;\u0010g\u001a\u0004\bh\u0010iR\u0016\u0010l\u001a\u00020=8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bG\u0010kR\u0018\u0010o\u001a\u0004\u0018\u00010m8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b!\u0010nR\u001d\u0010u\u001a\b\u0012\u0004\u0012\u00020/0p8G¢\u0006\f\n\u0004\bq\u0010r\u001a\u0004\bs\u0010tR$\u0010x\u001a\u0012\u0012\b\u0012\u0006\u0012\u0002\b\u00030\r\u0012\u0004\u0012\u00020\u00010v8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0017\u0010wR\"\u0010|\u001a\u00020=8\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b*\u0010k\u001a\u0004\by\u0010F\"\u0004\bz\u0010{R\u0014\u0010~\u001a\u00020=8BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b}\u0010FR\u0016\u0010\u0081\u0001\u001a\u00020\\8VX\u0096\u0004¢\u0006\u0007\u001a\u0005\b\u007f\u0010\u0080\u0001R\u0017\u0010\u0084\u0001\u001a\u00020#8VX\u0096\u0004¢\u0006\b\u001a\u0006\b\u0082\u0001\u0010\u0083\u0001R\u0016\u0010\u0086\u0001\u001a\u00020)8VX\u0096\u0004¢\u0006\u0007\u001a\u0005\b\u0085\u0001\u0010+R0\u0010\u0088\u0001\u001a\u001c\u0012\b\u0012\u0006\u0012\u0002\b\u00030\r\u0012\u000e\u0012\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\r0\u001d0\u00198@X\u0080\u0004¢\u0006\u0007\u001a\u0005\b\u0087\u0001\u00104R\u0016\u0010\u008a\u0001\u001a\u00020=8@X\u0080\u0004¢\u0006\u0007\u001a\u0005\b\u0089\u0001\u0010FR\u0016\u0010\u008c\u0001\u001a\u00020=8@X\u0080\u0004¢\u0006\u0007\u001a\u0005\b\u008b\u0001\u0010F¨\u0006\u008d\u0001"}, d2 = {"Lx4/u;", "", "<init>", "()V", "", "O", "I", "J", "T", "Lkotlin/Function0;", "body", "Q", "(Lkotlin/jvm/functions/Function0;)Ljava/lang/Object;", "Lfu/c;", "kclass", "converter", "f", "(Lfu/c;Ljava/lang/Object;)V", "Lx4/c;", "configuration", "H", "(Lx4/c;)V", "Lx4/p;", "l", "(Lx4/c;)Lx4/p;", "", "Ljava/lang/Class;", "La5/a;", "autoMigrationSpecs", "", "La5/b;", "q", "(Ljava/util/Map;)Ljava/util/List;", "j", "config", "Lg5/d;", "o", "(Lx4/c;)Lg5/d;", "Lx4/b0;", "n", "()Lx4/b0;", "Landroidx/room/c;", "m", "()Landroidx/room/c;", "Liu/p0;", "s", "()Liu/p0;", "Lkotlin/coroutines/CoroutineContext;", "v", "()Lkotlin/coroutines/CoroutineContext;", "C", "A", "()Ljava/util/Map;", "y", "", "x", "()Ljava/util/Set;", "w", "g", "h", "R", "", "isReadOnly", "Lkotlin/Function2;", "Lx4/g0;", "Llt/b;", "block", "W", "(ZLkotlin/jvm/functions/Function2;Llt/b;)Ljava/lang/Object;", "F", "()Z", "i", "p", "V", "Ljava/lang/Runnable;", "(Ljava/lang/Runnable;)V", "Ljava/util/concurrent/Callable;", "P", "(Ljava/util/concurrent/Callable;)Ljava/lang/Object;", "Lf5/b;", "connection", "K", "(Lf5/b;)V", "G", "a", "Lx4/c;", "b", "Liu/p0;", "coroutineScope", "c", "Lkotlin/coroutines/CoroutineContext;", "transactionContext", "Ljava/util/concurrent/Executor;", "d", "Ljava/util/concurrent/Executor;", "internalQueryExecutor", "e", "internalTransactionExecutor", "Lx4/p;", "connectionManager", "Landroidx/room/c;", "internalTracker", "Ly4/a;", "Ly4/a;", "r", "()Ly4/a;", "closeBarrier", "Z", "allowMainThreadQueries", "Lb5/b;", "Lb5/b;", "autoCloser", "Ljava/lang/ThreadLocal;", "k", "Ljava/lang/ThreadLocal;", "B", "()Ljava/lang/ThreadLocal;", "suspendingTransactionContext", "", "Ljava/util/Map;", "typeConverters", "E", "setUseTempTrackingTable$room_runtime", "(Z)V", "useTempTrackingTable", "N", "isThreadInSuspendingTransaction", "D", "()Ljava/util/concurrent/Executor;", "transactionExecutor", "u", "()Lg5/d;", "openHelper", "t", "invalidationTracker", "z", "requiredTypeConverterClassesMap", "M", "isOpenInternal", "L", "isMainThread", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
 public abstract class u {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -78,12 +78,12 @@ public abstract class u {
 
     /* JADX INFO: renamed from: l, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final Map<hu.c<?>, Object> typeConverters = new LinkedHashMap();
+    public final Map<fu.c<?>, Object> typeConverters = new LinkedHashMap();
 
     /* JADX INFO: renamed from: m, reason: collision with root package name and from kotlin metadata */
     public boolean useTempTrackingTable = true;
 
-    @Metadata(d1 = {"\u0000Ä\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010!\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010#\n\u0002\u0010\b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0006\b\u0016\u0018\u0000*\b\b\u0000\u0010\u0002*\u00020\u00012\u00020\u0003B)\b\u0010\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\f\u0010\u0007\u001a\b\u0012\u0004\u0012\u00028\u00000\u0006\u0012\b\u0010\t\u001a\u0004\u0018\u00010\b¢\u0006\u0004\b\n\u0010\u000bJ\u001f\u0010\u000e\u001a\b\u0012\u0004\u0012\u00028\u00000\u00002\b\u0010\r\u001a\u0004\u0018\u00010\fH\u0016¢\u0006\u0004\b\u000e\u0010\u000fJ)\u0010\u0013\u001a\b\u0012\u0004\u0012\u00028\u00000\u00002\u0012\u0010\u0012\u001a\n\u0012\u0006\b\u0001\u0012\u00020\u00110\u0010\"\u00020\u0011H\u0016¢\u0006\u0004\b\u0013\u0010\u0014J\u0015\u0010\u0015\u001a\b\u0012\u0004\u0012\u00028\u00000\u0000H\u0016¢\u0006\u0004\b\u0015\u0010\u0016J\u001d\u0010\u0019\u001a\b\u0012\u0004\u0012\u00028\u00000\u00002\u0006\u0010\u0018\u001a\u00020\u0017H\u0016¢\u0006\u0004\b\u0019\u0010\u001aJ\u001b\u0010\u001d\u001a\b\u0012\u0004\u0012\u00028\u00000\u00002\u0006\u0010\u001c\u001a\u00020\u001b¢\u0006\u0004\b\u001d\u0010\u001eJ\u001d\u0010!\u001a\b\u0012\u0004\u0012\u00028\u00000\u00002\u0006\u0010 \u001a\u00020\u001fH\u0016¢\u0006\u0004\b!\u0010\"J\u000f\u0010#\u001a\u00028\u0000H\u0016¢\u0006\u0004\b#\u0010$R\u001a\u0010\u0007\u001a\b\u0012\u0004\u0012\u00028\u00000%8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b!\u0010&R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0013\u0010'R\u0016\u0010\t\u001a\u0004\u0018\u00010\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010(R\u001c\u0010\r\u001a\n\u0012\u0004\u0012\u00028\u0000\u0018\u00010)8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b#\u0010*R\u001a\u0010-\u001a\b\u0012\u0004\u0012\u00020\u001f0+8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001d\u0010,R\u001a\u0010.\u001a\b\u0012\u0004\u0012\u00020\u00030+8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000e\u0010,R\u0018\u00100\u001a\u0004\u0018\u00010\u00178\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0019\u0010/R\u0018\u00102\u001a\u0004\u0018\u00010\u00178\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b1\u0010/R\u0018\u00105\u001a\u0004\u0018\u00010\f8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b3\u00104R\u0016\u00108\u001a\u00020\u001b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b6\u00107R\u0016\u0010<\u001a\u0002098\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b:\u0010;R\u0018\u0010@\u001a\u0004\u0018\u00010=8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b>\u0010?R\u0016\u0010D\u001a\u00020A8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bB\u0010CR\u0018\u0010H\u001a\u0004\u0018\u00010E8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bF\u0010GR\u0014\u0010L\u001a\u00020I8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bJ\u0010KR\u001c\u0010Q\u001a\b\u0012\u0004\u0012\u00020N0M8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bO\u0010PR\u001a\u0010S\u001a\b\u0012\u0004\u0012\u00020N0M8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bR\u0010PR\u001a\u0010V\u001a\b\u0012\u0004\u0012\u00020T0+8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bU\u0010,R\u0016\u0010X\u001a\u00020\u001b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bW\u00107R\u0016\u0010Z\u001a\u00020\u001b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bY\u00107R\u0016\u0010\\\u001a\u00020\u001b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b[\u00107R\u0018\u0010^\u001a\u0004\u0018\u00010\b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b]\u0010(R\u0018\u0010b\u001a\u0004\u0018\u00010_8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b`\u0010aR\u001e\u0010g\u001a\n\u0012\u0004\u0012\u00020d\u0018\u00010c8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\be\u0010fR\u0018\u0010k\u001a\u0004\u0018\u00010h8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bi\u0010jR\u0018\u0010o\u001a\u0004\u0018\u00010l8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bm\u0010nR\u0016\u0010q\u001a\u00020\u001b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bp\u00107¨\u0006r"}, d2 = {"Lx4/u$a;", "Lx4/u;", "T", "", "Landroid/content/Context;", "context", "Ljava/lang/Class;", "klass", "", "name", "<init>", "(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/String;)V", "Lg5/d$c;", "factory", "f", "(Lg5/d$c;)Lx4/u$a;", "", "La5/b;", "migrations", "b", "([La5/b;)Lx4/u$a;", "c", "()Lx4/u$a;", "Ljava/util/concurrent/Executor;", "executor", "g", "(Ljava/util/concurrent/Executor;)Lx4/u$a;", "", "dropAllTables", "e", "(Z)Lx4/u$a;", "Lx4/u$b;", "callback", "a", "(Lx4/u$b;)Lx4/u$a;", "d", "()Lx4/u;", "Lhu/c;", "Lhu/c;", "Landroid/content/Context;", "Ljava/lang/String;", "Lkotlin/Function0;", "Lkotlin/jvm/functions/Function0;", "", "Ljava/util/List;", "callbacks", "typeConverters", "Ljava/util/concurrent/Executor;", "queryExecutor", "h", "transactionExecutor", "i", "Lg5/d$c;", "supportOpenHelperFactory", "j", "Z", "allowMainThreadQueries", "Lx4/u$d;", "k", "Lx4/u$d;", "journalMode", "Landroid/content/Intent;", "l", "Landroid/content/Intent;", "multiInstanceInvalidationIntent", "", "m", "J", "autoCloseTimeout", "Ljava/util/concurrent/TimeUnit;", "n", "Ljava/util/concurrent/TimeUnit;", "autoCloseTimeUnit", "Lx4/u$e;", "o", "Lx4/u$e;", "migrationContainer", "", "", "p", "Ljava/util/Set;", "migrationsNotRequiredFrom", "q", "migrationStartAndEndVersions", "La5/a;", "r", "autoMigrationSpecs", "s", "requireMigration", "t", "allowDestructiveMigrationOnDowngrade", "u", "allowDestructiveMigrationForAllTables", "v", "copyFromAssetPath", "Ljava/io/File;", "w", "Ljava/io/File;", "copyFromFile", "Ljava/util/concurrent/Callable;", "Ljava/io/InputStream;", "x", "Ljava/util/concurrent/Callable;", "copyFromInputStream", "Lf5/c;", "y", "Lf5/c;", "driver", "Lkotlin/coroutines/CoroutineContext;", "z", "Lkotlin/coroutines/CoroutineContext;", "queryCoroutineContext", "A", "inMemoryTrackingTableMode", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000Ä\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010!\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010#\n\u0002\u0010\b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0006\b\u0016\u0018\u0000*\b\b\u0000\u0010\u0002*\u00020\u00012\u00020\u0003B)\b\u0010\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\f\u0010\u0007\u001a\b\u0012\u0004\u0012\u00028\u00000\u0006\u0012\b\u0010\t\u001a\u0004\u0018\u00010\b¢\u0006\u0004\b\n\u0010\u000bJ\u001f\u0010\u000e\u001a\b\u0012\u0004\u0012\u00028\u00000\u00002\b\u0010\r\u001a\u0004\u0018\u00010\fH\u0016¢\u0006\u0004\b\u000e\u0010\u000fJ)\u0010\u0013\u001a\b\u0012\u0004\u0012\u00028\u00000\u00002\u0012\u0010\u0012\u001a\n\u0012\u0006\b\u0001\u0012\u00020\u00110\u0010\"\u00020\u0011H\u0016¢\u0006\u0004\b\u0013\u0010\u0014J\u0015\u0010\u0015\u001a\b\u0012\u0004\u0012\u00028\u00000\u0000H\u0016¢\u0006\u0004\b\u0015\u0010\u0016J\u001d\u0010\u0019\u001a\b\u0012\u0004\u0012\u00028\u00000\u00002\u0006\u0010\u0018\u001a\u00020\u0017H\u0016¢\u0006\u0004\b\u0019\u0010\u001aJ\u001b\u0010\u001d\u001a\b\u0012\u0004\u0012\u00028\u00000\u00002\u0006\u0010\u001c\u001a\u00020\u001b¢\u0006\u0004\b\u001d\u0010\u001eJ\u001d\u0010!\u001a\b\u0012\u0004\u0012\u00028\u00000\u00002\u0006\u0010 \u001a\u00020\u001fH\u0016¢\u0006\u0004\b!\u0010\"J\u000f\u0010#\u001a\u00028\u0000H\u0016¢\u0006\u0004\b#\u0010$R\u001a\u0010\u0007\u001a\b\u0012\u0004\u0012\u00028\u00000%8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b!\u0010&R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0013\u0010'R\u0016\u0010\t\u001a\u0004\u0018\u00010\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010(R\u001c\u0010\r\u001a\n\u0012\u0004\u0012\u00028\u0000\u0018\u00010)8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b#\u0010*R\u001a\u0010-\u001a\b\u0012\u0004\u0012\u00020\u001f0+8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001d\u0010,R\u001a\u0010.\u001a\b\u0012\u0004\u0012\u00020\u00030+8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000e\u0010,R\u0018\u00100\u001a\u0004\u0018\u00010\u00178\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0019\u0010/R\u0018\u00102\u001a\u0004\u0018\u00010\u00178\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b1\u0010/R\u0018\u00105\u001a\u0004\u0018\u00010\f8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b3\u00104R\u0016\u00108\u001a\u00020\u001b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b6\u00107R\u0016\u0010<\u001a\u0002098\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b:\u0010;R\u0018\u0010@\u001a\u0004\u0018\u00010=8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b>\u0010?R\u0016\u0010D\u001a\u00020A8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bB\u0010CR\u0018\u0010H\u001a\u0004\u0018\u00010E8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bF\u0010GR\u0014\u0010L\u001a\u00020I8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bJ\u0010KR\u001c\u0010Q\u001a\b\u0012\u0004\u0012\u00020N0M8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bO\u0010PR\u001a\u0010S\u001a\b\u0012\u0004\u0012\u00020N0M8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bR\u0010PR\u001a\u0010V\u001a\b\u0012\u0004\u0012\u00020T0+8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bU\u0010,R\u0016\u0010X\u001a\u00020\u001b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bW\u00107R\u0016\u0010Z\u001a\u00020\u001b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bY\u00107R\u0016\u0010\\\u001a\u00020\u001b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b[\u00107R\u0018\u0010^\u001a\u0004\u0018\u00010\b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b]\u0010(R\u0018\u0010b\u001a\u0004\u0018\u00010_8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b`\u0010aR\u001e\u0010g\u001a\n\u0012\u0004\u0012\u00020d\u0018\u00010c8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\be\u0010fR\u0018\u0010k\u001a\u0004\u0018\u00010h8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bi\u0010jR\u0018\u0010o\u001a\u0004\u0018\u00010l8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bm\u0010nR\u0016\u0010q\u001a\u00020\u001b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bp\u00107¨\u0006r"}, d2 = {"Lx4/u$a;", "Lx4/u;", "T", "", "Landroid/content/Context;", "context", "Ljava/lang/Class;", "klass", "", "name", "<init>", "(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/String;)V", "Lg5/d$c;", "factory", "f", "(Lg5/d$c;)Lx4/u$a;", "", "La5/b;", "migrations", "b", "([La5/b;)Lx4/u$a;", "c", "()Lx4/u$a;", "Ljava/util/concurrent/Executor;", "executor", "g", "(Ljava/util/concurrent/Executor;)Lx4/u$a;", "", "dropAllTables", "e", "(Z)Lx4/u$a;", "Lx4/u$b;", "callback", "a", "(Lx4/u$b;)Lx4/u$a;", "d", "()Lx4/u;", "Lfu/c;", "Lfu/c;", "Landroid/content/Context;", "Ljava/lang/String;", "Lkotlin/Function0;", "Lkotlin/jvm/functions/Function0;", "", "Ljava/util/List;", "callbacks", "typeConverters", "Ljava/util/concurrent/Executor;", "queryExecutor", "h", "transactionExecutor", "i", "Lg5/d$c;", "supportOpenHelperFactory", "j", "Z", "allowMainThreadQueries", "Lx4/u$d;", "k", "Lx4/u$d;", "journalMode", "Landroid/content/Intent;", "l", "Landroid/content/Intent;", "multiInstanceInvalidationIntent", "", "m", "J", "autoCloseTimeout", "Ljava/util/concurrent/TimeUnit;", "n", "Ljava/util/concurrent/TimeUnit;", "autoCloseTimeUnit", "Lx4/u$e;", "o", "Lx4/u$e;", "migrationContainer", "", "", "p", "Ljava/util/Set;", "migrationsNotRequiredFrom", "q", "migrationStartAndEndVersions", "La5/a;", "r", "autoMigrationSpecs", "s", "requireMigration", "t", "allowDestructiveMigrationOnDowngrade", "u", "allowDestructiveMigrationForAllTables", "v", "copyFromAssetPath", "Ljava/io/File;", "w", "Ljava/io/File;", "copyFromFile", "Ljava/util/concurrent/Callable;", "Ljava/io/InputStream;", "x", "Ljava/util/concurrent/Callable;", "copyFromInputStream", "Lf5/c;", "y", "Lf5/c;", "driver", "Lkotlin/coroutines/CoroutineContext;", "z", "Lkotlin/coroutines/CoroutineContext;", "queryCoroutineContext", "A", "inMemoryTrackingTableMode", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
     public static class a<T extends u> {
 
         /* JADX INFO: renamed from: A, reason: from kotlin metadata */
@@ -91,7 +91,7 @@ public abstract class u {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         @NotNull
-        public final hu.c<T> klass;
+        public final fu.c<T> klass;
 
         /* JADX INFO: renamed from: b, reason: from kotlin metadata */
         @NotNull
@@ -201,7 +201,7 @@ public abstract class u {
             this.autoMigrationSpecs = new ArrayList();
             this.requireMigration = true;
             this.inMemoryTrackingTableMode = true;
-            this.klass = yt.a.c(klass);
+            this.klass = wt.a.c(klass);
             this.context = context;
             this.name = str;
             this.factory = null;
@@ -316,7 +316,7 @@ public abstract class u {
             cVar3.g(this.inMemoryTrackingTableMode);
             Function0<T> function0 = this.factory;
             if (function0 == null || (tInvoke = function0.invoke()) == null) {
-                tInvoke = (T) c5.f.b(yt.a.a(this.klass), null, 2, null);
+                tInvoke = (T) c5.f.b(wt.a.a(this.klass), null, 2, null);
             }
             tInvoke.H(cVar3);
             return tInvoke;
@@ -391,7 +391,7 @@ public abstract class u {
 
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f34889e = qt.b.a(a());
+        public static final /* synthetic */ ot.a f35387e = ot.b.a(a());
 
         @NotNull
         public final d b(@NotNull Context context) {
@@ -457,7 +457,7 @@ public abstract class u {
             if (treeMap == null) {
                 return null;
             }
-            return jt.s.a(treeMap, treeMap.descendingKeySet());
+            return gt.s.a(treeMap, treeMap.descendingKeySet());
         }
 
         @Nullable
@@ -466,7 +466,7 @@ public abstract class u {
             if (treeMap == null) {
                 return null;
             }
-            return jt.s.a(treeMap, treeMap.keySet());
+            return gt.s.a(treeMap, treeMap.keySet());
         }
     }
 
@@ -487,39 +487,39 @@ public abstract class u {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             d();
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
     }
 
     @Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
-    public static final /* synthetic */ class h extends kotlin.jvm.internal.k implements Function2<Function1<? super nt.b<? super Object>, ? extends Object>, nt.b<? super Object>, Object> {
+    public static final /* synthetic */ class h extends kotlin.jvm.internal.k implements Function2<Function1<? super lt.b<? super Object>, ? extends Object>, lt.b<? super Object>, Object> {
         public h(Object obj) {
             super(2, obj, x.class, "compatTransactionCoroutineExecute", "compatTransactionCoroutineExecute(Landroidx/room/RoomDatabase;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;", 1);
         }
 
         @Override // kotlin.jvm.functions.Function2
         /* JADX INFO: renamed from: d, reason: merged with bridge method [inline-methods] */
-        public final Object invoke(Function1<? super nt.b<Object>, ? extends Object> function1, nt.b<Object> bVar) {
+        public final Object invoke(Function1<? super lt.b<Object>, ? extends Object> function1, lt.b<Object> bVar) {
             return v.a((u) this.receiver, function1, bVar);
         }
     }
 
     @Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
-    public static final /* synthetic */ class i extends kotlin.jvm.internal.k implements Function2<Function1<? super nt.b<? super Object>, ? extends Object>, nt.b<? super Object>, Object> {
+    public static final /* synthetic */ class i extends kotlin.jvm.internal.k implements Function2<Function1<? super lt.b<? super Object>, ? extends Object>, lt.b<? super Object>, Object> {
         public i(Object obj) {
             super(2, obj, x.class, "compatTransactionCoroutineExecute", "compatTransactionCoroutineExecute(Landroidx/room/RoomDatabase;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;", 1);
         }
 
         @Override // kotlin.jvm.functions.Function2
         /* JADX INFO: renamed from: d, reason: merged with bridge method [inline-methods] */
-        public final Object invoke(Function1<? super nt.b<Object>, ? extends Object> function1, nt.b<Object> bVar) {
+        public final Object invoke(Function1<? super lt.b<Object>, ? extends Object> function1, lt.b<Object> bVar) {
             return v.a((u) this.receiver, function1, bVar);
         }
     }
 
     public static final Unit S(Runnable runnable) {
         runnable.run();
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Object T(Callable callable) {
@@ -581,7 +581,7 @@ public abstract class u {
     }
 
     public boolean G() {
-        return M() && u().t2().D();
+        return M() && u().u2().D();
     }
 
     public void H(@NotNull c configuration) {
@@ -598,7 +598,7 @@ public abstract class u {
         if (coroutineContext2 != null) {
             CoroutineContext.Element element = coroutineContext2.get(kotlin.coroutines.d.INSTANCE);
             Intrinsics.d(element, "null cannot be cast to non-null type kotlinx.coroutines.CoroutineDispatcher");
-            ku.l0 l0Var = (ku.l0) element;
+            iu.l0 l0Var = (iu.l0) element;
             Executor executorA = v1.a(l0Var);
             this.internalQueryExecutor = executorA;
             if (executorA == null) {
@@ -613,7 +613,7 @@ public abstract class u {
                     Intrinsics.u("coroutineScope");
                     p0Var2 = null;
                 }
-                coroutineContext = p0Var2.getCoroutineContext().plus(l0Var.I(1));
+                coroutineContext = p0Var2.getCoroutineContext().plus(l0Var.M(1));
             } else {
                 p0 p0Var3 = this.coroutineScope;
                 if (p0Var3 == null) {
@@ -709,19 +709,19 @@ public abstract class u {
 
     public final void I() {
         g();
-        g5.c cVarT2 = u().t2();
-        if (!cVarT2.D()) {
+        g5.c cVarU2 = u().u2();
+        if (!cVarU2.D()) {
             t().B();
         }
-        if (cVarT2.b3()) {
-            cVarT2.u0();
+        if (cVarU2.b3()) {
+            cVarU2.q0();
         } else {
-            cVarT2.G();
+            cVarU2.G();
         }
     }
 
     public final void J() {
-        u().t2().G0();
+        u().u2().C0();
         if (G()) {
             return;
         }
@@ -817,11 +817,11 @@ public abstract class u {
     }
 
     public void V() {
-        u().t2().q0();
+        u().u2().m0();
     }
 
     @Nullable
-    public final <R> Object W(boolean z10, @NotNull Function2<? super g0, ? super nt.b<? super R>, ? extends Object> function2, @NotNull nt.b<? super R> bVar) {
+    public final <R> Object W(boolean z10, @NotNull Function2<? super g0, ? super lt.b<? super R>, ? extends Object> function2, @NotNull lt.b<? super R> bVar) {
         p pVar = this.connectionManager;
         if (pVar == null) {
             Intrinsics.u("connectionManager");
@@ -830,7 +830,7 @@ public abstract class u {
         return pVar.K(z10, function2, bVar);
     }
 
-    public final void f(@NotNull hu.c<?> kclass, @NotNull Object converter) {
+    public final void f(@NotNull fu.c<?> kclass, @NotNull Object converter) {
         Intrinsics.checkNotNullParameter(kclass, "kclass");
         Intrinsics.checkNotNullParameter(converter, "converter");
         this.typeConverters.put(kclass, converter);
@@ -854,13 +854,13 @@ public abstract class u {
     }
 
     @NotNull
-    public List<a5.b> j(@NotNull Map<hu.c<? extends a5.a>, ? extends a5.a> autoMigrationSpecs) {
+    public List<a5.b> j(@NotNull Map<fu.c<? extends a5.a>, ? extends a5.a> autoMigrationSpecs) {
         Intrinsics.checkNotNullParameter(autoMigrationSpecs, "autoMigrationSpecs");
         LinkedHashMap linkedHashMap = new LinkedHashMap(kotlin.collections.j0.f(autoMigrationSpecs.size()));
         Iterator<T> it = autoMigrationSpecs.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry entry = (Map.Entry) it.next();
-            linkedHashMap.put(yt.a.a((hu.c) entry.getKey()), entry.getValue());
+            linkedHashMap.put(wt.a.a((fu.c) entry.getKey()), entry.getValue());
         }
         return q(linkedHashMap);
     }
@@ -873,13 +873,13 @@ public abstract class u {
             b0 b0VarN = n();
             Intrinsics.d(b0VarN, "null cannot be cast to non-null type androidx.room.RoomOpenDelegate");
             a0Var = (a0) b0VarN;
-        } catch (jt.m unused) {
+        } catch (gt.m unused) {
             a0Var = null;
         }
         return a0Var == null ? new p(configuration, (Function1<? super c, ? extends g5.d>) new Function1() { // from class: x4.q
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return u.k(this.f34844a, (c) obj);
+                return u.k(this.f35342a, (c) obj);
             }
         }, new h(this)) : new p(configuration, a0Var, new i(this));
     }
@@ -889,13 +889,13 @@ public abstract class u {
 
     @NotNull
     public b0 n() {
-        throw new jt.m(null, 1, null);
+        throw new gt.m(null, 1, null);
     }
 
     @NotNull
     public g5.d o(@NotNull c config) {
         Intrinsics.checkNotNullParameter(config, "config");
-        throw new jt.m(null, 1, null);
+        throw new gt.m(null, 1, null);
     }
 
     public void p() {
@@ -959,12 +959,12 @@ public abstract class u {
     }
 
     @NotNull
-    public Set<hu.c<? extends a5.a>> w() {
+    public Set<fu.c<? extends a5.a>> w() {
         Set<Class<? extends a5.a>> setX = x();
         ArrayList arrayList = new ArrayList(kotlin.collections.q.u(setX, 10));
         Iterator<T> it = setX.iterator();
         while (it.hasNext()) {
-            arrayList.add(yt.a.c((Class) it.next()));
+            arrayList.add(wt.a.c((Class) it.next()));
         }
         return CollectionsKt.Q0(arrayList);
     }
@@ -975,7 +975,7 @@ public abstract class u {
     }
 
     @NotNull
-    public Map<hu.c<?>, List<hu.c<?>>> y() {
+    public Map<fu.c<?>, List<fu.c<?>>> y() {
         Set<Map.Entry<Class<?>, List<Class<?>>>> setEntrySet = A().entrySet();
         LinkedHashMap linkedHashMap = new LinkedHashMap(kotlin.ranges.d.c(kotlin.collections.j0.f(kotlin.collections.q.u(setEntrySet, 10)), 16));
         Iterator<T> it = setEntrySet.iterator();
@@ -983,21 +983,21 @@ public abstract class u {
             Map.Entry entry = (Map.Entry) it.next();
             Class cls = (Class) entry.getKey();
             List list = (List) entry.getValue();
-            hu.c cVarC = yt.a.c(cls);
+            fu.c cVarC = wt.a.c(cls);
             List list2 = list;
             ArrayList arrayList = new ArrayList(kotlin.collections.q.u(list2, 10));
             Iterator it2 = list2.iterator();
             while (it2.hasNext()) {
-                arrayList.add(yt.a.c((Class) it2.next()));
+                arrayList.add(wt.a.c((Class) it2.next()));
             }
-            Pair pairA = jt.s.a(cVarC, arrayList);
+            Pair pairA = gt.s.a(cVarC, arrayList);
             linkedHashMap.put(pairA.c(), pairA.d());
         }
         return linkedHashMap;
     }
 
     @NotNull
-    public final Map<hu.c<?>, List<hu.c<?>>> z() {
+    public final Map<fu.c<?>, List<fu.c<?>>> z() {
         return y();
     }
 }

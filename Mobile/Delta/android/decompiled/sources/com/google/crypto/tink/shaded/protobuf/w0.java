@@ -7,20 +7,20 @@ import java.util.Map;
 public final class w0<T> implements g1<T> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final s0 f8649a;
+    public final s0 f8723a;
     public final n1<?, ?> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final boolean f8650c;
+    public final boolean f8724c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final q<?> f8651d;
+    public final q<?> f8725d;
 
     public w0(n1<?, ?> n1Var, q<?> qVar, s0 s0Var) {
         this.b = n1Var;
-        this.f8650c = qVar.e(s0Var);
-        this.f8651d = qVar;
-        this.f8649a = s0Var;
+        this.f8724c = qVar.e(s0Var);
+        this.f8725d = qVar;
+        this.f8723a = s0Var;
     }
 
     private <UT, UB> int k(n1<UT, UB> n1Var, T t8) {
@@ -68,38 +68,38 @@ public final class w0<T> implements g1<T> {
     @Override // com.google.crypto.tink.shaded.protobuf.g1
     public void a(T t8, T t10) {
         i1.G(this.b, t8, t10);
-        if (this.f8650c) {
-            i1.E(this.f8651d, t8, t10);
+        if (this.f8724c) {
+            i1.E(this.f8725d, t8, t10);
         }
     }
 
     @Override // com.google.crypto.tink.shaded.protobuf.g1
     public void b(T t8) {
         this.b.j(t8);
-        this.f8651d.f(t8);
+        this.f8725d.f(t8);
     }
 
     @Override // com.google.crypto.tink.shaded.protobuf.g1
     public final boolean c(T t8) {
-        return this.f8651d.c(t8).o();
+        return this.f8725d.c(t8).o();
     }
 
     @Override // com.google.crypto.tink.shaded.protobuf.g1
     public int d(T t8) {
         int iK = k(this.b, t8);
-        return this.f8650c ? iK + this.f8651d.c(t8).j() : iK;
+        return this.f8724c ? iK + this.f8725d.c(t8).j() : iK;
     }
 
     @Override // com.google.crypto.tink.shaded.protobuf.g1
     public T e() {
-        s0 s0Var = this.f8649a;
+        s0 s0Var = this.f8723a;
         return s0Var instanceof y ? (T) ((y) s0Var).P() : (T) s0Var.e().d();
     }
 
     @Override // com.google.crypto.tink.shaded.protobuf.g1
     public int f(T t8) {
         int iHashCode = this.b.g(t8).hashCode();
-        return this.f8650c ? (iHashCode * 53) + this.f8651d.c(t8).hashCode() : iHashCode;
+        return this.f8724c ? (iHashCode * 53) + this.f8725d.c(t8).hashCode() : iHashCode;
     }
 
     @Override // com.google.crypto.tink.shaded.protobuf.g1
@@ -107,8 +107,8 @@ public final class w0<T> implements g1<T> {
         if (!this.b.g(t8).equals(this.b.g(t10))) {
             return false;
         }
-        if (this.f8650c) {
-            return this.f8651d.c(t8).equals(this.f8651d.c(t10));
+        if (this.f8724c) {
+            return this.f8725d.c(t8).equals(this.f8725d.c(t10));
         }
         return true;
     }
@@ -130,8 +130,8 @@ public final class w0<T> implements g1<T> {
         y.e eVar = null;
         while (i10 < i11) {
             int iJ2 = e.J(bArr, i10, bVar);
-            int i12 = bVar.f8424a;
-            if (i12 == s1.f8551a) {
+            int i12 = bVar.f8498a;
+            if (i12 == s1.f8625a) {
                 int i13 = i11;
                 e.b bVar2 = bVar;
                 int i14 = 0;
@@ -142,17 +142,17 @@ public final class w0<T> implements g1<T> {
                         break;
                     }
                     iJ = e.J(bArr, iJ2, bVar2);
-                    int i15 = bVar2.f8424a;
+                    int i15 = bVar2.f8498a;
                     int iA = s1.a(i15);
                     int iB = s1.b(i15);
                     if (iA != 2) {
                         if (iA == 3) {
                             if (eVar != null) {
                                 iJ2 = e.q(c1.a().c(eVar.b().getClass()), bArr, iJ, i13, bVar2);
-                                uVarZ.x(eVar.b, bVar2.f8425c);
+                                uVarZ.x(eVar.b, bVar2.f8499c);
                             } else if (iB == 2) {
                                 iJ2 = e.c(bArr, iJ, bVar2);
-                                hVar = (h) bVar2.f8425c;
+                                hVar = (h) bVar2.f8499c;
                             }
                         }
                         if (i15 == s1.b) {
@@ -162,8 +162,8 @@ public final class w0<T> implements g1<T> {
                         }
                     } else if (iB == 0) {
                         iJ2 = e.J(bArr, iJ, bVar2);
-                        i14 = bVar2.f8424a;
-                        eVar = (y.e) this.f8651d.b(bVar2.f8426d, this.f8649a, i14);
+                        i14 = bVar2.f8498a;
+                        eVar = (y.e) this.f8725d.b(bVar2.f8500d, this.f8723a, i14);
                     } else {
                         if (i15 == s1.b) {
                             break;
@@ -179,10 +179,10 @@ public final class w0<T> implements g1<T> {
                 i11 = i13;
                 bVar = bVar2;
             } else if (s1.b(i12) == 2) {
-                eVar = (y.e) this.f8651d.b(bVar.f8426d, this.f8649a, s1.a(i12));
+                eVar = (y.e) this.f8725d.b(bVar.f8500d, this.f8723a, s1.a(i12));
                 if (eVar != null) {
                     i10 = e.q(c1.a().c(eVar.b().getClass()), bArr, iJ2, i11, bVar);
-                    uVarZ.x(eVar.b, bVar.f8425c);
+                    uVarZ.x(eVar.b, bVar.f8499c);
                 } else {
                     i10 = e.H(i12, bArr, iJ2, i11, o1Var, bVar);
                 }
@@ -197,12 +197,12 @@ public final class w0<T> implements g1<T> {
 
     @Override // com.google.crypto.tink.shaded.protobuf.g1
     public void i(T t8, f1 f1Var, p pVar) throws Throwable {
-        l(this.b, this.f8651d, t8, f1Var, pVar);
+        l(this.b, this.f8725d, t8, f1Var, pVar);
     }
 
     @Override // com.google.crypto.tink.shaded.protobuf.g1
     public void j(T t8, t1 t1Var) {
-        Iterator itS = this.f8651d.c(t8).s();
+        Iterator itS = this.f8725d.c(t8).s();
         while (itS.hasNext()) {
             Map.Entry entry = (Map.Entry) itS.next();
             u.b bVar = (u.b) entry.getKey();
@@ -222,11 +222,11 @@ public final class w0<T> implements g1<T> {
     public final <UT, UB, ET extends u.b<ET>> boolean n(f1 f1Var, p pVar, q<ET> qVar, u<ET> uVar, n1<UT, UB> n1Var, UB ub) throws b0 {
         int iA = f1Var.a();
         int iH = 0;
-        if (iA != s1.f8551a) {
+        if (iA != s1.f8625a) {
             if (s1.b(iA) != 2) {
                 return f1Var.D();
             }
-            Object objB = qVar.b(pVar, this.f8649a, s1.a(iA));
+            Object objB = qVar.b(pVar, this.f8723a, s1.a(iA));
             if (objB == null) {
                 return n1Var.m(ub, f1Var, 0);
             }
@@ -237,10 +237,10 @@ public final class w0<T> implements g1<T> {
         h hVarO = null;
         while (f1Var.A() != Integer.MAX_VALUE) {
             int iA2 = f1Var.a();
-            if (iA2 == s1.f8552c) {
+            if (iA2 == s1.f8626c) {
                 iH = f1Var.h();
-                objB2 = qVar.b(pVar, this.f8649a, iH);
-            } else if (iA2 == s1.f8553d) {
+                objB2 = qVar.b(pVar, this.f8723a, iH);
+            } else if (iA2 == s1.f8627d) {
                 if (objB2 != null) {
                     qVar.h(f1Var, objB2, pVar, uVar);
                 } else {

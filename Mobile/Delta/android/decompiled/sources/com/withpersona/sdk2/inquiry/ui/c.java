@@ -3,40 +3,40 @@ package com.withpersona.sdk2.inquiry.ui;
 import android.content.Context;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class c implements ft.d<a> {
+public final class c implements dt.d<a> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ft.i<Context> f13826a;
-    public final ft.i<com.withpersona.sdk2.inquiry.ui.network.b.a> b;
+    public final dt.i<Context> f13907a;
+    public final dt.i<com.withpersona.sdk2.inquiry.ui.network.b.a> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final ft.i<qr.a.C0521a> f13827c;
+    public final dt.i<or.a.C0489a> f13908c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final ft.i<zq.a.C0689a> f13828d;
+    public final dt.i<xq.a.C0658a> f13909d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final ft.i<h.a> f13829e;
+    public final dt.i<h.a> f13910e;
 
-    public c(ft.i<Context> iVar, ft.i<com.withpersona.sdk2.inquiry.ui.network.b.a> iVar2, ft.i<qr.a.C0521a> iVar3, ft.i<zq.a.C0689a> iVar4, ft.i<h.a> iVar5) {
-        this.f13826a = iVar;
+    public c(dt.i<Context> iVar, dt.i<com.withpersona.sdk2.inquiry.ui.network.b.a> iVar2, dt.i<or.a.C0489a> iVar3, dt.i<xq.a.C0658a> iVar4, dt.i<h.a> iVar5) {
+        this.f13907a = iVar;
         this.b = iVar2;
-        this.f13827c = iVar3;
-        this.f13828d = iVar4;
-        this.f13829e = iVar5;
+        this.f13908c = iVar3;
+        this.f13909d = iVar4;
+        this.f13910e = iVar5;
     }
 
-    public static c a(ft.i<Context> iVar, ft.i<com.withpersona.sdk2.inquiry.ui.network.b.a> iVar2, ft.i<qr.a.C0521a> iVar3, ft.i<zq.a.C0689a> iVar4, ft.i<h.a> iVar5) {
+    public static c a(dt.i<Context> iVar, dt.i<com.withpersona.sdk2.inquiry.ui.network.b.a> iVar2, dt.i<or.a.C0489a> iVar3, dt.i<xq.a.C0658a> iVar4, dt.i<h.a> iVar5) {
         return new c(iVar, iVar2, iVar3, iVar4, iVar5);
     }
 
-    public static a c(Context context, com.withpersona.sdk2.inquiry.ui.network.b.a aVar, qr.a.C0521a c0521a, zq.a.C0689a c0689a, h.a aVar2) {
-        return new a(context, aVar, c0521a, c0689a, aVar2);
+    public static a c(Context context, com.withpersona.sdk2.inquiry.ui.network.b.a aVar, or.a.C0489a c0489a, xq.a.C0658a c0658a, h.a aVar2) {
+        return new a(context, aVar, c0489a, c0658a, aVar2);
     }
 
-    @Override // ht.a
+    @Override // ft.a
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
     public a get() {
-        return c(this.f13826a.get(), this.b.get(), this.f13827c.get(), this.f13828d.get(), this.f13829e.get());
+        return c(this.f13907a.get(), this.b.get(), this.f13908c.get(), this.f13909d.get(), this.f13910e.get());
     }
 }

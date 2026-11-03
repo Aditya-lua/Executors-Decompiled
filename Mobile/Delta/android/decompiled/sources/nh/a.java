@@ -1,64 +1,127 @@
 package nh;
 
-import android.content.Context;
-import org.json.JSONObject;
+import android.security.keystore.KeyGenParameterSpec;
+import android.util.Base64;
+import ek.q;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.InvalidKeyException;
+import java.security.KeyStore;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
+import java.security.UnrecoverableEntryException;
+import java.security.cert.CertificateException;
+import javax.crypto.BadPaddingException;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.KeyGenerator;
+import javax.crypto.NoSuchPaddingException;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.GCMParameterSpec;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class a {
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f26277a = "configure_dev_settings";
-    public final String b = "config_json";
+    /* JADX INFO: renamed from: nh.a$a, reason: collision with other inner class name */
+    public static class C0464a {
 
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public gh.d f26278c;
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public final String f27214a;
+        public final String b;
 
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public JSONObject f26279d;
+        public C0464a(String str, String str2) {
+            this.f27214a = str;
+            this.b = str2;
+        }
 
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public Context f26280e;
+        public String a() {
+            return this.b;
+        }
 
-    public a(Context context) {
-        this.f26280e = context;
-        gh.d dVar = new gh.d(context);
-        this.f26278c = dVar;
-        gh.c cVarA = dVar.a(context);
-        this.f26279d = cVarA != null ? cVarA.i() : new JSONObject();
+        public String b() {
+            return this.f27214a;
+        }
     }
 
-    public static JSONObject b(Context context) {
-        if (context != null) {
-            return new a(context).a();
+    public static String a(String str, String str2) {
+        try {
+            KeyStore keyStore = KeyStore.getInstance("AndroidKeyStore");
+            keyStore.load(null);
+            try {
+                KeyStore.SecretKeyEntry secretKeyEntry = (KeyStore.SecretKeyEntry) keyStore.getEntry("encryption_alias", null);
+                if (secretKeyEntry == null) {
+                    q.b("Encryption", "No key entry found");
+                    return null;
+                }
+                SecretKey secretKey = secretKeyEntry.getSecretKey();
+                byte[] bArrDecode = Base64.decode(str2, 0);
+                if (bArrDecode == null) {
+                    q.b("Encryption", "Error getting encryption IV.");
+                    return null;
+                }
+                try {
+                    Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
+                    cipher.init(2, secretKey, new GCMParameterSpec(128, bArrDecode));
+                    return new String(cipher.doFinal(Base64.decode(str, 0)), StandardCharsets.UTF_8);
+                } catch (InvalidAlgorithmParameterException | InvalidKeyException | NoSuchAlgorithmException | BadPaddingException | IllegalBlockSizeException | NoSuchPaddingException e10) {
+                    q.b("Encryption", e10.getMessage());
+                    return null;
+                }
+            } catch (UnsupportedOperationException | KeyStoreException | NoSuchAlgorithmException | UnrecoverableEntryException e11) {
+                q.b("Encryption", e11.getMessage());
+                return null;
+            }
+        } catch (IOException | KeyStoreException | NoSuchAlgorithmException | CertificateException e12) {
+            q.b("Encryption", e12.getMessage());
+            return null;
         }
-        return null;
     }
 
-    public static String c(JSONObject jSONObject, String str, com.roblox.client.flags.a aVar) {
-        String strD = d(str, aVar);
-        if (jSONObject.has(strD)) {
-            return strD;
+    public static C0464a b(String str) {
+        SecretKey secretKeyD = d();
+        if (secretKeyD == null) {
+            q.b("Encryption", "Error getting secret key");
+            return null;
         }
-        if (jSONObject.has(str)) {
-            return str;
+        Cipher cipherC = c(secretKeyD);
+        if (cipherC == null) {
+            q.b("Encryption", "Error getting encrypt cipher.");
+            return null;
         }
-        return null;
+        try {
+            return new C0464a(new String(Base64.encode(cipherC.getIV(), 0)), new String(Base64.encode(cipherC.doFinal(str.getBytes(StandardCharsets.UTF_8)), 0)));
+        } catch (BadPaddingException | IllegalBlockSizeException e10) {
+            q.b("Encryption", e10.getMessage());
+            return null;
+        }
     }
 
-    public static String d(String str, com.roblox.client.flags.a aVar) {
-        if (aVar instanceof com.roblox.client.flags.a.d) {
-            return "FFlag" + str;
+    public static Cipher c(SecretKey secretKey) {
+        try {
+            Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
+            cipher.init(1, secretKey);
+            return cipher;
+        } catch (InvalidKeyException | NoSuchAlgorithmException | NoSuchPaddingException e10) {
+            q.b("Encryption", e10.getMessage());
+            return null;
         }
-        if (aVar instanceof com.roblox.client.flags.a.f) {
-            return "FInt" + str;
-        }
-        if (!(aVar instanceof com.roblox.client.flags.a.g)) {
-            return str;
-        }
-        return "FString" + str;
     }
 
-    public JSONObject a() {
-        return this.f26279d;
+    public static SecretKey d() {
+        try {
+            KeyGenerator keyGenerator = KeyGenerator.getInstance("AES", "AndroidKeyStore");
+            try {
+                keyGenerator.init(new KeyGenParameterSpec.Builder("encryption_alias", 3).setBlockModes("GCM").setEncryptionPaddings("NoPadding").build());
+                return keyGenerator.generateKey();
+            } catch (InvalidAlgorithmParameterException e10) {
+                q.b("Encryption", e10.getLocalizedMessage());
+                return null;
+            }
+        } catch (NoSuchAlgorithmException | NoSuchProviderException e11) {
+            q.b("Encryption", e11.getMessage());
+            return null;
+        }
     }
 }

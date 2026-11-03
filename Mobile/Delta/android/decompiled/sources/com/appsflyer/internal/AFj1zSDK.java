@@ -8,12 +8,12 @@ public final class AFj1zSDK implements AFj1uSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    private final String f5453d = "DeeplinkProcessedCondition";
+    private final String f5526d = "DeeplinkProcessedCondition";
 
     @Override // com.appsflyer.internal.AFj1uSDK
     @NotNull
     public final String d() {
-        return this.f5453d;
+        return this.f5526d;
     }
 
     @Override // com.appsflyer.internal.AFj1uSDK

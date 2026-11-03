@@ -17,7 +17,7 @@ public abstract class JpMyNumberNfcReaderOutput implements Parcelable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NotNull
-        public static final Cancel f12147a = new Cancel();
+        public static final Cancel f12228a = new Cancel();
 
         @NotNull
         public static final Parcelable.Creator<Cancel> CREATOR = new a();
@@ -29,7 +29,7 @@ public abstract class JpMyNumberNfcReaderOutput implements Parcelable {
             public final Cancel createFromParcel(Parcel parcel) {
                 Intrinsics.checkNotNullParameter(parcel, "parcel");
                 parcel.readInt();
-                return Cancel.f12147a;
+                return Cancel.f12228a;
             }
 
             @Override // android.os.Parcelable.Creator

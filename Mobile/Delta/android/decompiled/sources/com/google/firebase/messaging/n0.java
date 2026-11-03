@@ -8,7 +8,7 @@ import android.os.Parcelable;
 public class n0 implements Parcelable.Creator<RemoteMessage> {
     public static void c(RemoteMessage remoteMessage, Parcel parcel, int i10) {
         int iA = o9.b.a(parcel);
-        o9.b.f(parcel, 2, remoteMessage.f8717f, false);
+        o9.b.f(parcel, 2, remoteMessage.f8791f, false);
         o9.b.b(parcel, iA);
     }
 

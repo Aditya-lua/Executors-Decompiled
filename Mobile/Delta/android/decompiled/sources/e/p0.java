@@ -50,50 +50,50 @@ public final class p0 {
         }
     }
 
-    @Metadata(d1 = {"\u0000%\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005*\u0001\u0000\b\n\u0018\u00002\u00020\u00012\u00060\u0002j\u0002`\u0003J\u001f\u0010\t\u001a\u00020\b2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\t\u0010\nJ\u000f\u0010\u000b\u001a\u00020\bH\u0016¢\u0006\u0004\b\u000b\u0010\f¨\u0006\r"}, d2 = {"e/p0$b", "Landroidx/lifecycle/p;", "Ljava/lang/AutoCloseable;", "Lkotlin/AutoCloseable;", "Landroidx/lifecycle/s;", Payload.SOURCE, "Landroidx/lifecycle/l$a;", "event", "", "g", "(Landroidx/lifecycle/s;Landroidx/lifecycle/l$a;)V", "close", "()V", "activity"}, k = 1, mv = {2, 0, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000%\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005*\u0001\u0000\b\n\u0018\u00002\u00020\u00012\u00060\u0002j\u0002`\u0003J\u001f\u0010\t\u001a\u00020\b2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\t\u0010\nJ\u000f\u0010\u000b\u001a\u00020\bH\u0016¢\u0006\u0004\b\u000b\u0010\f¨\u0006\r"}, d2 = {"e/p0$b", "Landroidx/lifecycle/p;", "Ljava/lang/AutoCloseable;", "Lkotlin/AutoCloseable;", "Landroidx/lifecycle/s;", Payload.SOURCE, "Landroidx/lifecycle/l$a;", "event", "", "f", "(Landroidx/lifecycle/s;Landroidx/lifecycle/l$a;)V", "close", "()V", "activity"}, k = 1, mv = {2, 0, 0}, xi = 48)
     public static final class b implements androidx.p000lifecycle.p, AutoCloseable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ o4.e<?> f14944a;
+        public final /* synthetic */ o4.e<?> f15558a;
         public final /* synthetic */ m0 b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ p0 f14945c;
+        public final /* synthetic */ p0 f15559c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final /* synthetic */ androidx.p000lifecycle.l f14946d;
+        public final /* synthetic */ androidx.p000lifecycle.l f15560d;
 
         public b(o4.e<?> eVar, m0 m0Var, p0 p0Var, androidx.p000lifecycle.l lVar) {
-            this.f14944a = eVar;
+            this.f15558a = eVar;
             this.b = m0Var;
-            this.f14945c = p0Var;
-            this.f14946d = lVar;
+            this.f15559c = p0Var;
+            this.f15560d = lVar;
         }
 
         @Override // java.lang.AutoCloseable
         public void close() {
-            this.f14946d.d(this);
+            this.f15560d.d(this);
         }
 
         @Override // androidx.p000lifecycle.p
-        public void g(androidx.p000lifecycle.s source, androidx.lifecycle.l.a event) {
+        public void f(androidx.p000lifecycle.s source, androidx.lifecycle.l.a event) {
             Intrinsics.checkNotNullParameter(source, "source");
             Intrinsics.checkNotNullParameter(event, "event");
             boolean z10 = false;
             if (e.a.isOnBackPressedLifecycleOrderMaintained) {
-                o4.e<?> eVar = this.f14944a;
+                o4.e<?> eVar = this.f15558a;
                 if (event.b().b(androidx.lifecycle.l.b.STARTED) && this.b.getIsEnabled()) {
                     z10 = true;
                 }
                 eVar.x(z10);
             } else if (event == androidx.lifecycle.l.a.ON_START) {
-                o4.c.b(this.f14945c.getEventDispatcher(), this.f14944a, 0, 2, null);
+                o4.c.b(this.f15559c.getEventDispatcher(), this.f15558a, 0, 2, null);
             } else if (event == androidx.lifecycle.l.a.ON_STOP) {
-                this.f14944a.w();
+                this.f15558a.w();
             }
             if (event == androidx.lifecycle.l.a.ON_DESTROY) {
-                this.f14944a.w();
-                this.f14946d.d(this);
+                this.f15558a.w();
+                this.f15560d.d(this);
             }
         }
     }
@@ -160,7 +160,7 @@ public final class p0 {
         o4.c cVar = new o4.c(new o4.l() { // from class: e.o0
             @Override // o4.l
             public final void a() {
-                p0.f(this.f14911a);
+                p0.f(this.f15525a);
             }
         });
         this.eventDispatcher = cVar;

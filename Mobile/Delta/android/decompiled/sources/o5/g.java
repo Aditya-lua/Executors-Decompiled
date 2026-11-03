@@ -15,26 +15,26 @@ public class g extends e4.j0 {
     public class a extends q.e {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ Rect f27104a;
+        public final /* synthetic */ Rect f27669a;
 
         public a(Rect rect) {
-            this.f27104a = rect;
+            this.f27669a = rect;
         }
 
         @Override // o5.q.e
         public Rect a(@NonNull q qVar) {
-            return this.f27104a;
+            return this.f27669a;
         }
     }
 
     public class b implements q.h {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ View f27105a;
+        public final /* synthetic */ View f27670a;
         public final /* synthetic */ ArrayList b;
 
         public b(View view, ArrayList arrayList) {
-            this.f27105a = view;
+            this.f27670a = view;
             this.b = arrayList;
         }
 
@@ -59,7 +59,7 @@ public class g extends e4.j0 {
         @Override // o5.q.h
         public void k(@NonNull q qVar) {
             qVar.m0(this);
-            this.f27105a.setVisibility(8);
+            this.f27670a.setVisibility(8);
             int size = this.b.size();
             for (int i10 = 0; i10 < size; i10++) {
                 ((View) this.b.get(i10)).setVisibility(0);
@@ -70,43 +70,43 @@ public class g extends e4.j0 {
     public class c extends x {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ Object f27107a;
+        public final /* synthetic */ Object f27672a;
         public final /* synthetic */ ArrayList b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ Object f27108c;
+        public final /* synthetic */ Object f27673c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final /* synthetic */ ArrayList f27109d;
+        public final /* synthetic */ ArrayList f27674d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final /* synthetic */ Object f27110e;
+        public final /* synthetic */ Object f27675e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public final /* synthetic */ ArrayList f27111f;
+        public final /* synthetic */ ArrayList f27676f;
 
         public c(Object obj, ArrayList arrayList, Object obj2, ArrayList arrayList2, Object obj3, ArrayList arrayList3) {
-            this.f27107a = obj;
+            this.f27672a = obj;
             this.b = arrayList;
-            this.f27108c = obj2;
-            this.f27109d = arrayList2;
-            this.f27110e = obj3;
-            this.f27111f = arrayList3;
+            this.f27673c = obj2;
+            this.f27674d = arrayList2;
+            this.f27675e = obj3;
+            this.f27676f = arrayList3;
         }
 
         @Override // o5.x, o5.q.h
         public void g(@NonNull q qVar) {
-            Object obj = this.f27107a;
+            Object obj = this.f27672a;
             if (obj != null) {
                 g.this.E(obj, this.b, null);
             }
-            Object obj2 = this.f27108c;
+            Object obj2 = this.f27673c;
             if (obj2 != null) {
-                g.this.E(obj2, this.f27109d, null);
+                g.this.E(obj2, this.f27674d, null);
             }
-            Object obj3 = this.f27110e;
+            Object obj3 = this.f27675e;
             if (obj3 != null) {
-                g.this.E(obj3, this.f27111f, null);
+                g.this.E(obj3, this.f27676f, null);
             }
         }
 
@@ -119,10 +119,10 @@ public class g extends e4.j0 {
     public class d implements q.h {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ Runnable f27113a;
+        public final /* synthetic */ Runnable f27678a;
 
         public d(Runnable runnable) {
-            this.f27113a = runnable;
+            this.f27678a = runnable;
         }
 
         @Override // o5.q.h
@@ -143,26 +143,26 @@ public class g extends e4.j0 {
 
         @Override // o5.q.h
         public void k(@NonNull q qVar) {
-            this.f27113a.run();
+            this.f27678a.run();
         }
     }
 
     public class e extends q.e {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ Rect f27114a;
+        public final /* synthetic */ Rect f27679a;
 
         public e(Rect rect) {
-            this.f27114a = rect;
+            this.f27679a = rect;
         }
 
         @Override // o5.q.e
         public Rect a(@NonNull q qVar) {
-            Rect rect = this.f27114a;
+            Rect rect = this.f27679a;
             if (rect == null || rect.isEmpty()) {
                 return null;
             }
-            return this.f27114a;
+            return this.f27679a;
         }
     }
 

@@ -1,12 +1,12 @@
 package okhttp3.internal;
 
+import gt.s;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import jt.s;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.collections.m;
@@ -80,7 +80,7 @@ public final class _HeadersCommonKt {
         Intrinsics.checkNotNullParameter(builder, "<this>");
         Intrinsics.checkNotNullParameter(name, "name");
         int size = builder.getNamesAndValues$okhttp().size() - 2;
-        int iC = rt.c.c(size, 0, -2);
+        int iC = pt.c.c(size, 0, -2);
         if (iC > size) {
             return null;
         }
@@ -103,7 +103,7 @@ public final class _HeadersCommonKt {
         Intrinsics.checkNotNullParameter(namesAndValues, "namesAndValues");
         Intrinsics.checkNotNullParameter(name, "name");
         int length = namesAndValues.length - 2;
-        int iC = rt.c.c(length, 0, -2);
+        int iC = pt.c.c(length, 0, -2);
         if (iC > length) {
             return null;
         }
@@ -131,7 +131,7 @@ public final class _HeadersCommonKt {
             }
             strArr[i11] = StringsKt.p1(inputNamesAndValues[i11]).toString();
         }
-        int iC = rt.c.c(0, strArr.length - 1, 2);
+        int iC = pt.c.c(0, strArr.length - 1, 2);
         if (iC >= 0) {
             while (true) {
                 String str = strArr[i10];

@@ -1,81 +1,95 @@
 package nq;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.widget.NestedScrollView;
-import com.withpersona.sdk2.inquiry.shared.ui.Pi2NavigationBar;
-import jq.t;
-import jq.u;
+import kotlin.Metadata;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class b implements r5.a {
+@Metadata(d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\bv\u0018\u00002\u00020\u0001:\u0004\u0002\u0003\u0004\u0005\u0082\u0001\u0004\u0006\u0007\b\t¨\u0006\nÀ\u0006\u0003"}, d2 = {"Lnq/b;", "", "b", "c", "a", "d", "Lnq/b$a;", "Lnq/b$b;", "Lnq/b$c;", "Lnq/b$d;", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public interface b {
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    @NonNull
-    public final ConstraintLayout f26636a;
+    @Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\bÆ\n\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0010\u0010\u0005\u001a\u00020\u0004HÖ\u0001¢\u0006\u0004\b\u0005\u0010\u0006J\u0010\u0010\b\u001a\u00020\u0007HÖ\u0001¢\u0006\u0004\b\b\u0010\tJ\u001a\u0010\r\u001a\u00020\f2\b\u0010\u000b\u001a\u0004\u0018\u00010\nHÖ\u0003¢\u0006\u0004\b\r\u0010\u000e¨\u0006\u000f"}, d2 = {"Lnq/b$a;", "Lnq/b;", "<init>", "()V", "", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final /* data */ class a implements b {
 
-    @NonNull
-    public final FrameLayout b;
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        @NotNull
+        public static final a f27402a = new a();
 
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    @NonNull
-    public final NestedScrollView f26637c;
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    @NonNull
-    public final FrameLayout f26638d;
-
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    @NonNull
-    public final Pi2NavigationBar f26639e;
-
-    public b(@NonNull ConstraintLayout constraintLayout, @NonNull FrameLayout frameLayout, @NonNull NestedScrollView nestedScrollView, @NonNull FrameLayout frameLayout2, @NonNull Pi2NavigationBar pi2NavigationBar) {
-        this.f26636a = constraintLayout;
-        this.b = frameLayout;
-        this.f26637c = nestedScrollView;
-        this.f26638d = frameLayout2;
-        this.f26639e = pi2NavigationBar;
-    }
-
-    @NonNull
-    public static b a(@NonNull View view) {
-        int i10 = t.f21658f;
-        FrameLayout frameLayout = (FrameLayout) r5.b.a(view, i10);
-        if (frameLayout != null) {
-            i10 = t.f21659g;
-            NestedScrollView nestedScrollView = (NestedScrollView) r5.b.a(view, i10);
-            if (nestedScrollView != null) {
-                i10 = t.f21662j;
-                FrameLayout frameLayout2 = (FrameLayout) r5.b.a(view, i10);
-                if (frameLayout2 != null) {
-                    i10 = t.f21669q;
-                    Pi2NavigationBar pi2NavigationBar = (Pi2NavigationBar) r5.b.a(view, i10);
-                    if (pi2NavigationBar != null) {
-                        return new b((ConstraintLayout) view, frameLayout, nestedScrollView, frameLayout2, pi2NavigationBar);
-                    }
-                }
-            }
+        public boolean equals(@Nullable Object other) {
+            return this == other || (other instanceof a);
         }
-        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
-    }
 
-    @NonNull
-    public static b c(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
-        View viewInflate = layoutInflater.inflate(u.b, viewGroup, false);
-        if (z10) {
-            viewGroup.addView(viewInflate);
+        public int hashCode() {
+            return -1611120582;
         }
-        return a(viewInflate);
+
+        @NotNull
+        public String toString() {
+            return "Pending";
+        }
     }
 
-    @Override // r5.a
-    @NonNull
-    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public ConstraintLayout getRoot() {
-        return this.f26636a;
+    /* JADX INFO: renamed from: nq.b$b, reason: collision with other inner class name */
+    @Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\bÆ\n\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0010\u0010\u0005\u001a\u00020\u0004HÖ\u0001¢\u0006\u0004\b\u0005\u0010\u0006J\u0010\u0010\b\u001a\u00020\u0007HÖ\u0001¢\u0006\u0004\b\b\u0010\tJ\u001a\u0010\r\u001a\u00020\f2\b\u0010\u000b\u001a\u0004\u0018\u00010\nHÖ\u0003¢\u0006\u0004\b\r\u0010\u000e¨\u0006\u000f"}, d2 = {"Lnq/b$b;", "Lnq/b;", "<init>", "()V", "", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final /* data */ class C0472b implements b {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        @NotNull
+        public static final C0472b f27403a = new C0472b();
+
+        public boolean equals(@Nullable Object other) {
+            return this == other || (other instanceof C0472b);
+        }
+
+        public int hashCode() {
+            return -39927199;
+        }
+
+        @NotNull
+        public String toString() {
+            return "Prompt";
+        }
+    }
+
+    @Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\bÆ\n\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0010\u0010\u0005\u001a\u00020\u0004HÖ\u0001¢\u0006\u0004\b\u0005\u0010\u0006J\u0010\u0010\b\u001a\u00020\u0007HÖ\u0001¢\u0006\u0004\b\b\u0010\tJ\u001a\u0010\r\u001a\u00020\f2\b\u0010\u000b\u001a\u0004\u0018\u00010\nHÖ\u0003¢\u0006\u0004\b\r\u0010\u000e¨\u0006\u000f"}, d2 = {"Lnq/b$c;", "Lnq/b;", "<init>", "()V", "", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final /* data */ class c implements b {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        @NotNull
+        public static final c f27404a = new c();
+
+        public boolean equals(@Nullable Object other) {
+            return this == other || (other instanceof c);
+        }
+
+        public int hashCode() {
+            return 5529685;
+        }
+
+        @NotNull
+        public String toString() {
+            return "Review";
+        }
+    }
+
+    @Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\bÆ\n\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0010\u0010\u0005\u001a\u00020\u0004HÖ\u0001¢\u0006\u0004\b\u0005\u0010\u0006J\u0010\u0010\b\u001a\u00020\u0007HÖ\u0001¢\u0006\u0004\b\b\u0010\tJ\u001a\u0010\r\u001a\u00020\f2\b\u0010\u000b\u001a\u0004\u0018\u00010\nHÖ\u0003¢\u0006\u0004\b\r\u0010\u000e¨\u0006\u000f"}, d2 = {"Lnq/b$d;", "Lnq/b;", "<init>", "()V", "", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final /* data */ class d implements b {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        @NotNull
+        public static final d f27405a = new d();
+
+        public boolean equals(@Nullable Object other) {
+            return this == other || (other instanceof d);
+        }
+
+        public int hashCode() {
+            return -1776980018;
+        }
+
+        @NotNull
+        public String toString() {
+            return "TakePhoto";
+        }
     }
 }

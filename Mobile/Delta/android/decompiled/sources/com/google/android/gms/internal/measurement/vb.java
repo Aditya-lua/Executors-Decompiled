@@ -7,25 +7,25 @@ import java.util.Map;
 public final class vb implements Iterator {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Iterator f6853a;
+    public final Iterator f6927a;
 
     public vb(Iterator it) {
-        this.f6853a = it;
+        this.f6927a = it;
     }
 
     @Override // java.util.Iterator
     public final boolean hasNext() {
-        return this.f6853a.hasNext();
+        return this.f6927a.hasNext();
     }
 
     @Override // java.util.Iterator
     public final /* bridge */ /* synthetic */ Object next() {
-        Map.Entry entry = (Map.Entry) this.f6853a.next();
+        Map.Entry entry = (Map.Entry) this.f6927a.next();
         return entry.getValue() instanceof wb ? new ub(entry, null) : entry;
     }
 
     @Override // java.util.Iterator
     public final void remove() {
-        this.f6853a.remove();
+        this.f6927a.remove();
     }
 }

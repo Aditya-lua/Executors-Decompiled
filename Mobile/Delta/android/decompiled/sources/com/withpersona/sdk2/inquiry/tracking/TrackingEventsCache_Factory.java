@@ -1,6 +1,6 @@
 package com.withpersona.sdk2.inquiry.tracking;
 
-import ft.d;
+import dt.d;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class TrackingEventsCache_Factory implements d<TrackingEventsCache> {
@@ -20,7 +20,7 @@ public final class TrackingEventsCache_Factory implements d<TrackingEventsCache>
         return new TrackingEventsCache();
     }
 
-    @Override // ht.a
+    @Override // ft.a
     public TrackingEventsCache get() {
         return newInstance();
     }

@@ -14,33 +14,33 @@ import o9.b;
 public final class ConnectionResult extends AbstractSafeParcelable {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f5689f;
+    public final int f5762f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final int f5690g;
+    public final int f5763g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final PendingIntent f5691h;
+    public final PendingIntent f5764h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final String f5692i;
+    public final String f5765i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final Integer f5693j;
+    public final Integer f5766j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
     @NonNull
-    public static final ConnectionResult f5688k = new ConnectionResult(0);
+    public static final ConnectionResult f5761k = new ConnectionResult(0);
 
     @NonNull
     public static final Parcelable.Creator<ConnectionResult> CREATOR = new o();
 
     public ConnectionResult(int i10, int i11, PendingIntent pendingIntent, String str, Integer num) {
-        this.f5689f = i10;
-        this.f5690g = i11;
-        this.f5691h = pendingIntent;
-        this.f5692i = str;
-        this.f5693j = num;
+        this.f5762f = i10;
+        this.f5763g = i11;
+        this.f5764h = pendingIntent;
+        this.f5765i = str;
+        this.f5766j = num;
     }
 
     @NonNull
@@ -117,7 +117,7 @@ public final class ConnectionResult extends AbstractSafeParcelable {
     }
 
     public boolean A3() {
-        return this.f5690g == 0;
+        return this.f5763g == 0;
     }
 
     public boolean equals(Object obj) {
@@ -128,34 +128,34 @@ public final class ConnectionResult extends AbstractSafeParcelable {
             return false;
         }
         ConnectionResult connectionResult = (ConnectionResult) obj;
-        return this.f5690g == connectionResult.f5690g && k.b(this.f5691h, connectionResult.f5691h) && k.b(this.f5692i, connectionResult.f5692i) && k.b(this.f5693j, connectionResult.f5693j);
+        return this.f5763g == connectionResult.f5763g && k.b(this.f5764h, connectionResult.f5764h) && k.b(this.f5765i, connectionResult.f5765i) && k.b(this.f5766j, connectionResult.f5766j);
     }
 
     public int hashCode() {
-        return k.c(Integer.valueOf(this.f5690g), this.f5691h, this.f5692i, this.f5693j);
+        return k.c(Integer.valueOf(this.f5763g), this.f5764h, this.f5765i, this.f5766j);
     }
 
     @NonNull
     public String toString() {
         k.a aVarD = k.d(this);
-        aVarD.a("statusCode", B3(this.f5690g));
-        aVarD.a("resolution", this.f5691h);
-        aVarD.a("message", this.f5692i);
-        aVarD.a("clientMethodKey", this.f5693j);
+        aVarD.a("statusCode", B3(this.f5763g));
+        aVarD.a("resolution", this.f5764h);
+        aVarD.a("message", this.f5765i);
+        aVarD.a("clientMethodKey", this.f5766j);
         return aVarD.toString();
     }
 
     public Integer v3() {
-        return this.f5693j;
+        return this.f5766j;
     }
 
     public int w3() {
-        return this.f5690g;
+        return this.f5763g;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
-        int i11 = this.f5689f;
+        int i11 = this.f5762f;
         int iA = b.a(parcel);
         b.n(parcel, 1, i11);
         b.n(parcel, 2, w3());
@@ -166,15 +166,15 @@ public final class ConnectionResult extends AbstractSafeParcelable {
     }
 
     public String x3() {
-        return this.f5692i;
+        return this.f5765i;
     }
 
     public PendingIntent y3() {
-        return this.f5691h;
+        return this.f5764h;
     }
 
     public boolean z3() {
-        return (this.f5690g == 0 || this.f5691h == null) ? false : true;
+        return (this.f5763g == 0 || this.f5764h == null) ? false : true;
     }
 
     public ConnectionResult(int i10) {

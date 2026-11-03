@@ -29,7 +29,7 @@ public final class _CacheControlCommonKt {
         Intrinsics.checkNotNullParameter(companion, "<this>");
         CacheControl.Builder builderOnlyIfCached = new CacheControl.Builder().onlyIfCached();
         kotlin.time.a.Companion companion2 = kotlin.time.a.INSTANCE;
-        return builderOnlyIfCached.m96maxStaleLRDsOJo(kotlin.time.b.p(Integer.MAX_VALUE, ju.b.SECONDS)).build();
+        return builderOnlyIfCached.m97maxStaleLRDsOJo(kotlin.time.b.p(Integer.MAX_VALUE, hu.b.SECONDS)).build();
     }
 
     @NotNull

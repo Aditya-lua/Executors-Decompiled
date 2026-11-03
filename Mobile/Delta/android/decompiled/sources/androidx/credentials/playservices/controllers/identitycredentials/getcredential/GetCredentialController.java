@@ -95,7 +95,7 @@ public final class GetCredentialController extends CredentialProviderController<
     /* JADX INFO: Access modifiers changed from: private */
     public static final Unit invokePlayServices$lambda$2(CancellationSignal cancellationSignal, GetCredentialController getCredentialController, final Executor executor, final p pVar, PendingGetCredentialHandle pendingGetCredentialHandle) {
         if (CredentialProviderPlayServicesImpl.INSTANCE.cancellationReviewer$credentials_play_services_auth_release(cancellationSignal)) {
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
         Intent intent = new Intent(getCredentialController.context, (Class<?>) HiddenActivity.class);
         getCredentialController.generateHiddenActivityIntent(getCredentialController.resultReceiver, intent, CredentialProviderBaseController.BEGIN_SIGN_IN_TAG);
@@ -110,7 +110,7 @@ public final class GetCredentialController extends CredentialProviderController<
                 }
             });
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -121,7 +121,7 @@ public final class GetCredentialController extends CredentialProviderController<
                 GetCredentialController.invokePlayServices$lambda$2$lambda$1$lambda$0(pVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */

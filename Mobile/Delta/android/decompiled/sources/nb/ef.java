@@ -13,18 +13,18 @@ import java.util.Objects;
 public final class ef {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public com.google.android.gms.internal.measurement.o6 f25498a;
+    public com.google.android.gms.internal.measurement.o6 f26319a;
     public Long b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public long f25499c;
+    public long f26320c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final /* synthetic */ e f25500d;
+    public final /* synthetic */ e f26321d;
 
     public /* synthetic */ ef(e eVar, byte[] bArr) {
         Objects.requireNonNull(eVar);
-        this.f25500d = eVar;
+        this.f26321d = eVar;
     }
 
     /* JADX WARN: Code duplicated, block: B:44:0x00f6  */
@@ -39,7 +39,7 @@ public final class ef {
         Object obj;
         String strJ = o6Var.J();
         List listF = o6Var.F();
-        e eVar = this.f25500d;
+        e eVar = this.f26321d;
         me meVar = eVar.b;
         meVar.K0();
         Long l10 = (Long) re.u(o6Var, "_eid");
@@ -50,10 +50,10 @@ public final class ef {
                 String str2 = (String) re.u(o6Var, "_en");
                 ?? r8 = 0;
                 if (TextUtils.isEmpty(str2)) {
-                    eVar.f25625a.a().p().b("Extra parameter without an event name. eventId", l10);
+                    eVar.f26446a.a().p().b("Extra parameter without an event name. eventId", l10);
                     return null;
                 }
-                if (this.f25498a == null || this.b == null || l10.longValue() != this.b.longValue()) {
+                if (this.f26319a == null || this.b == null || l10.longValue() != this.b.longValue()) {
                     t tVarF0 = meVar.F0();
                     tVarF0.h();
                     tVarF0.j();
@@ -66,30 +66,30 @@ public final class ef {
                                         pairCreate = Pair.create((com.google.android.gms.internal.measurement.o6) ((com.google.android.gms.internal.measurement.n6) re.W(com.google.android.gms.internal.measurement.o6.R(), cursorRawQuery.getBlob(0))).t(), Long.valueOf(cursorRawQuery.getLong(1)));
                                         cursorRawQuery.close();
                                     } catch (IOException e10) {
-                                        tVarF0.f25625a.a().o().d("Failed to merge main event. appId, eventId", w5.x(str), l10, e10);
+                                        tVarF0.f26446a.a().o().d("Failed to merge main event. appId, eventId", w5.x(str), l10, e10);
                                         cursorRawQuery.close();
                                         pairCreate = null;
                                     }
                                     if (pairCreate != null || (obj = pairCreate.first) == null) {
-                                        this.f25500d.f25625a.a().p().c("Extra parameter without existing main event. eventName, eventId", str2, l10);
+                                        this.f26321d.f26446a.a().p().c("Extra parameter without existing main event. eventName, eventId", str2, l10);
                                         return null;
                                     }
-                                    this.f25498a = (com.google.android.gms.internal.measurement.o6) obj;
-                                    this.f25499c = ((Long) pairCreate.second).longValue();
-                                    this.f25500d.b.K0();
-                                    this.b = (Long) re.u(this.f25498a, "_eid");
+                                    this.f26319a = (com.google.android.gms.internal.measurement.o6) obj;
+                                    this.f26320c = ((Long) pairCreate.second).longValue();
+                                    this.f26321d.b.K0();
+                                    this.b = (Long) re.u(this.f26319a, "_eid");
                                 } else {
-                                    tVarF0.f25625a.a().w().a("Main event not found");
+                                    tVarF0.f26446a.a().w().a("Main event not found");
                                 }
                             } catch (SQLiteException e11) {
                                 e = e11;
-                                tVarF0.f25625a.a().o().b("Error selecting main event", e);
+                                tVarF0.f26446a.a().o().b("Error selecting main event", e);
                                 if (cursorRawQuery != null) {
                                 }
                                 pairCreate = null;
                                 if (pairCreate != null) {
                                 }
-                                this.f25500d.f25625a.a().p().c("Extra parameter without existing main event. eventName, eventId", str2, l10);
+                                this.f26321d.f26446a.a().p().c("Extra parameter without existing main event. eventName, eventId", str2, l10);
                                 return null;
                             }
                         } catch (Throwable th2) {
@@ -114,32 +114,32 @@ public final class ef {
                     pairCreate = null;
                     if (pairCreate != null) {
                     }
-                    this.f25500d.f25625a.a().p().c("Extra parameter without existing main event. eventName, eventId", str2, l10);
+                    this.f26321d.f26446a.a().p().c("Extra parameter without existing main event. eventName, eventId", str2, l10);
                     return null;
                 }
-                long j10 = this.f25499c - 1;
-                this.f25499c = j10;
+                long j10 = this.f26320c - 1;
+                this.f26320c = j10;
                 if (j10 <= 0) {
-                    t tVarF1 = this.f25500d.b.F0();
+                    t tVarF1 = this.f26321d.b.F0();
                     tVarF1.h();
-                    tVarF1.f25625a.a().w().b("Clearing complex main event info. appId", str);
+                    tVarF1.f26446a.a().w().b("Clearing complex main event info. appId", str);
                     try {
                         tVarF1.u0().execSQL("delete from main_event_params where app_id=?", new String[]{str});
                     } catch (SQLiteException e13) {
-                        tVarF1.f25625a.a().o().b("Error clearing complex main event", e13);
+                        tVarF1.f26446a.a().o().b("Error clearing complex main event", e13);
                     }
                 } else {
-                    this.f25500d.b.F0().F(str, l10, this.f25499c, this.f25498a);
+                    this.f26321d.b.F0().F(str, l10, this.f26320c, this.f26319a);
                 }
                 ArrayList arrayList = new ArrayList();
-                for (com.google.android.gms.internal.measurement.s6 s6Var : this.f25498a.F()) {
-                    this.f25500d.b.K0();
+                for (com.google.android.gms.internal.measurement.s6 s6Var : this.f26319a.F()) {
+                    this.f26321d.b.K0();
                     if (re.r(o6Var, s6Var.G()) == null) {
                         arrayList.add(s6Var);
                     }
                 }
                 if (arrayList.isEmpty()) {
-                    this.f25500d.f25625a.a().p().b("No unique parameters in main event. eventName", str2);
+                    this.f26321d.f26446a.a().p().b("No unique parameters in main event. eventName", str2);
                 } else {
                     arrayList.addAll(listF);
                     listF = arrayList;
@@ -147,18 +147,18 @@ public final class ef {
                 strJ = str2;
             } else {
                 this.b = l10;
-                this.f25498a = o6Var;
+                this.f26319a = o6Var;
                 meVar.K0();
                 long jLongValue = ((Long) re.v(o6Var, "_epc", 0L)).longValue();
-                this.f25499c = jLongValue;
+                this.f26320c = jLongValue;
                 if (jLongValue <= 0) {
-                    eVar.f25625a.a().p().b("Complex event with zero extra param count. eventName", strJ);
+                    eVar.f26446a.a().p().b("Complex event with zero extra param count. eventName", strJ);
                 } else {
-                    meVar.F0().F(str, (Long) n9.m.l(l10), this.f25499c, o6Var);
+                    meVar.F0().F(str, (Long) n9.m.l(l10), this.f26320c, o6Var);
                 }
             }
         }
-        com.google.android.gms.internal.measurement.n6 n6Var = (com.google.android.gms.internal.measurement.n6) o6Var.r();
+        com.google.android.gms.internal.measurement.n6 n6Var = (com.google.android.gms.internal.measurement.n6) o6Var.q();
         n6Var.P(strJ);
         n6Var.K();
         n6Var.J(listF);

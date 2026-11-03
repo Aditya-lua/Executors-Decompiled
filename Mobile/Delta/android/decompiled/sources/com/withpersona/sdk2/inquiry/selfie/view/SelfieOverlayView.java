@@ -13,7 +13,7 @@ import android.widget.FrameLayout;
 import com.google.mlkit.vision.barcode.common.Barcode;
 import com.withpersona.sdk2.camera.selfie.SelfieBrightnessInfo;
 import com.withpersona.sdk2.inquiry.selfie.view.SelfieOverlayView;
-import jt.l;
+import gt.l;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -22,8 +22,8 @@ import kotlin.jvm.internal.y;
 import kotlin.ranges.d;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import qt.a;
-import qt.b;
+import ot.a;
+import ot.b;
 
 /* JADX INFO: loaded from: classes3.dex */
 @Metadata(d1 = {"\u0000\u0086\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0007\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\bS\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\n\u0018\u0000 ¬\u00012\u00020\u0001:\u0006MUPWSJB\u001b\b\u0016\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004¢\u0006\u0004\b\u0006\u0010\u0007J/\u0010\u000e\u001a\u00020\r2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\n\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\b2\u0006\u0010\f\u001a\u00020\bH\u0014¢\u0006\u0004\b\u000e\u0010\u000fJ\u000f\u0010\u0010\u001a\u00020\rH\u0014¢\u0006\u0004\b\u0010\u0010\u0011J\u0015\u0010\u0014\u001a\u00020\r2\u0006\u0010\u0013\u001a\u00020\u0012¢\u0006\u0004\b\u0014\u0010\u0015J\u001f\u0010\u0019\u001a\u00020\r2\u0006\u0010\u0017\u001a\u00020\u00162\b\b\u0002\u0010\u0018\u001a\u00020\u0012¢\u0006\u0004\b\u0019\u0010\u001aJ\u0017\u0010\u001d\u001a\u00020\r2\b\u0010\u001c\u001a\u0004\u0018\u00010\u001b¢\u0006\u0004\b\u001d\u0010\u001eJ\u0015\u0010!\u001a\u00020\r2\u0006\u0010 \u001a\u00020\u001f¢\u0006\u0004\b!\u0010\"J\u0017\u0010%\u001a\u00020\r2\u0006\u0010$\u001a\u00020#H\u0014¢\u0006\u0004\b%\u0010&J\u001f\u0010(\u001a\u00020\r2\u0006\u0010'\u001a\u00020\u00162\u0006\u0010\u0017\u001a\u00020\u0016H\u0002¢\u0006\u0004\b(\u0010)J'\u0010/\u001a\n .*\u0004\u0018\u00010-0-2\u0006\u0010+\u001a\u00020*2\u0006\u0010,\u001a\u00020*H\u0002¢\u0006\u0004\b/\u00100J\u000f\u00101\u001a\u00020\rH\u0002¢\u0006\u0004\b1\u0010\u0011JS\u0010;\u001a\u00020\r*\u0002022\u0006\u00103\u001a\u00020\u001f2\u0006\u00104\u001a\u00020\u001f2\u0006\u00105\u001a\u00020\u001f2\u0006\u00106\u001a\u00020\u001f2\u0006\u00107\u001a\u00020\u001f2\u0006\u00108\u001a\u00020\u001f2\u0006\u00109\u001a\u00020\b2\u0006\u0010:\u001a\u00020\u001fH\u0002¢\u0006\u0004\b;\u0010<J\u000f\u0010=\u001a\u00020\rH\u0002¢\u0006\u0004\b=\u0010\u0011J\u000f\u0010?\u001a\u00020>H\u0002¢\u0006\u0004\b?\u0010@J\u000f\u0010A\u001a\u00020>H\u0002¢\u0006\u0004\bA\u0010@J\u000f\u0010\t\u001a\u00020>H\u0002¢\u0006\u0004\b\t\u0010@J+\u0010E\u001a\u00020\r*\u00020*2\u0006\u0010B\u001a\u00020*2\u0006\u0010C\u001a\u00020*2\u0006\u0010D\u001a\u00020\u001fH\u0002¢\u0006\u0004\bE\u0010FJ\u001b\u0010G\u001a\u00020**\u00020*2\u0006\u0010 \u001a\u00020\u001fH\u0002¢\u0006\u0004\bG\u0010HJ\u000f\u0010I\u001a\u00020\rH\u0002¢\u0006\u0004\bI\u0010\u0011R\u0016\u0010L\u001a\u00020\u00168\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bJ\u0010KR\u0016\u0010O\u001a\u00020\u001f8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bM\u0010NR\u0014\u0010R\u001a\u00020\b8\u0002X\u0082D¢\u0006\u0006\n\u0004\bP\u0010QR\u0014\u0010T\u001a\u00020\b8\u0002X\u0082D¢\u0006\u0006\n\u0004\bS\u0010QR\u0014\u0010V\u001a\u00020\b8\u0002X\u0082D¢\u0006\u0006\n\u0004\bU\u0010QR\u0014\u0010X\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bW\u0010QR\u0014\u0010Z\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bY\u0010QR\u0014\u0010[\u001a\u00020\u001f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\n\u0010NR\u0014\u0010]\u001a\u00020\u001f8\u0002X\u0082D¢\u0006\u0006\n\u0004\b\\\u0010NR\u0014\u0010_\u001a\u00020\u001f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b^\u0010NR\u0014\u0010a\u001a\u00020\u001f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b`\u0010NR\u0014\u0010c\u001a\u00020\u001f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bb\u0010NR\u0014\u0010e\u001a\u0002028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b;\u0010dR\u0014\u0010f\u001a\u0002028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b=\u0010dR\u0014\u0010g\u001a\u0002028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bG\u0010dR\u0014\u0010i\u001a\u0002028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bh\u0010dR\u0014\u0010j\u001a\u0002028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bE\u0010dR\u0014\u0010l\u001a\u0002028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bk\u0010dR\u0014\u0010m\u001a\u0002028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bA\u0010dR\u0014\u0010n\u001a\u0002028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b?\u0010dR\u0014\u0010o\u001a\u0002028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b/\u0010dR\u0014\u0010q\u001a\u0002028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bp\u0010dR\u0014\u0010r\u001a\u0002028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\t\u0010dR\u0014\u0010s\u001a\u0002028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b(\u0010dR\u0014\u0010v\u001a\u00020>8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bt\u0010uR\u0014\u0010x\u001a\u00020>8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bw\u0010uR\u0014\u0010z\u001a\u00020>8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\by\u0010uR\u0014\u0010|\u001a\u00020>8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b{\u0010uR\u0014\u0010~\u001a\u00020>8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b}\u0010uR\u0014\u0010\u007f\u001a\u00020>8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0019\u0010uR\u0016\u0010\u0081\u0001\u001a\u00020>8\u0002X\u0082\u0004¢\u0006\u0007\n\u0005\b\u0080\u0001\u0010uR\u0015\u0010\u0082\u0001\u001a\u00020>8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bN\u0010uR\u0015\u0010\u0083\u0001\u001a\u00020>8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bI\u0010uR\u0015\u0010\u0084\u0001\u001a\u00020>8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b1\u0010uR\u0017\u0010\u0085\u0001\u001a\u00020\u001f8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bQ\u0010NR\u0018\u0010\u0087\u0001\u001a\u00020\u001f8\u0002@\u0002X\u0082\u000e¢\u0006\u0007\n\u0005\b\u0086\u0001\u0010NR\u0018\u0010\u0089\u0001\u001a\u00020\u001f8\u0002@\u0002X\u0082\u000e¢\u0006\u0007\n\u0005\b\u0088\u0001\u0010NR\u0018\u0010\u008b\u0001\u001a\u00020\u001f8\u0002@\u0002X\u0082\u000e¢\u0006\u0007\n\u0005\b\u008a\u0001\u0010NR\u0017\u0010\u008e\u0001\u001a\u00020*8\u0002X\u0082\u0004¢\u0006\b\n\u0006\b\u008c\u0001\u0010\u008d\u0001R\u001b\u0010\u0091\u0001\u001a\u0004\u0018\u00010-8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u008f\u0001\u0010\u0090\u0001R\u001c\u0010\u0095\u0001\u001a\u0005\u0018\u00010\u0092\u00018\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0093\u0001\u0010\u0094\u0001R\u001b\u0010\u0097\u0001\u001a\u0004\u0018\u00010-8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0096\u0001\u0010\u0090\u0001R\u001c\u0010\u009b\u0001\u001a\u0005\u0018\u00010\u0098\u00018\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0099\u0001\u0010\u009a\u0001R\u001b\u0010\u009d\u0001\u001a\u0004\u0018\u00010-8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u009c\u0001\u0010\u0090\u0001R\u0018\u0010\u001c\u001a\u00020\u001b8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u009e\u0001\u0010\u009f\u0001R\u0019\u0010¢\u0001\u001a\u00020\u00128\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b \u0001\u0010¡\u0001R\u001a\u0010,\u001a\u00030£\u0001*\u00020\u00168BX\u0082\u0004¢\u0006\u0007\u001a\u0005\bh\u0010¤\u0001R\u001a\u0010¦\u0001\u001a\u00020\u0012*\u00020*8BX\u0082\u0004¢\u0006\u0007\u001a\u0005\bk\u0010¥\u0001R-\u0010«\u0001\u001a\u00020\b*\u00020>2\u0007\u0010§\u0001\u001a\u00020\b8B@BX\u0082\u000e¢\u0006\u000f\u001a\u0006\b¨\u0001\u0010©\u0001\"\u0005\b}\u0010ª\u0001¨\u0006\u00ad\u0001"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView;", "Landroid/widget/FrameLayout;", "Landroid/content/Context;", "context", "Landroid/util/AttributeSet;", "attrs", "<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", "", "w", "h", "oldw", "oldh", "", "onSizeChanged", "(IIII)V", "onDetachedFromWindow", "()V", "", "mirrored", "setIsPreviewMirrored", "(Z)V", "Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$e;", "newState", "animate", "D", "(Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$e;Z)V", "Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "brightnessInfo", "setCameraStreamBrightnessInfo", "(Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;)V", "", "intensity", "setIntensity", "(F)V", "Landroid/graphics/Canvas;", "canvas", "onDraw", "(Landroid/graphics/Canvas;)V", "oldState", "x", "(Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$e;Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$e;)V", "Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$a;", "startState", "endState", "Landroid/animation/ValueAnimator;", "kotlin.jvm.PlatformType", "u", "(Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$a;Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$a;)Landroid/animation/ValueAnimator;", "H", "Landroid/graphics/Path;", "left", "top", "right", "bottom", "startAngle", "sweepAngle", "numTicks", "tickLength", "m", "(Landroid/graphics/Path;FFFFFFIF)V", "n", "Landroid/graphics/Paint;", "t", "()Landroid/graphics/Paint;", "s", "start", "end", "percent", "q", "(Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$a;Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$a;Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$a;F)V", "o", "(Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$a;F)Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$a;", "G", "a", "Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$e;", "state", "b", "F", "currentIntensity", "c", "I", "colorOnSurface", "d", "shadowColor", "e", "accentColor", "f", "arcBaseColor", "g", "arcHighlightColor", "arcInset", "i", "arcGapDegrees", "j", "arcStrokeWidth", "k", "arcDialStrokeWidth", "l", "arcTickLength", "Landroid/graphics/Path;", "arcTop", "arcBottom", "arcLeft", "p", "arcRight", "arcDialLeft", "r", "arcDialRight", "arcDialTop", "arcDialBottom", "arcDialHighlightClipPathRight", "v", "arcDialHighlightClipPathLeft", "arcDialHighlightClipPathTop", "arcDialHighlightClipPathBottom", "y", "Landroid/graphics/Paint;", "arcTopPaint", "z", "arcBottomPaint", "A", "arcLeftPaint", "B", "arcRightPaint", "C", "shadowPaint", "arcDialLeftPaint", "E", "arcDialRightPaint", "arcDialTopPaint", "arcDialBottomPaint", "filledArcDialPaint", "arcDialLeftIntensity", "J", "arcDialRightIntensity", "K", "arcDialTopIntensity", "L", "arcDialBottomIntensity", "M", "Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$a;", "arcHoverState", "N", "Landroid/animation/ValueAnimator;", "stateAnimator", "Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$f;", "O", "Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$f;", "stateAnimationState", "P", "intensityAnimator", "Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$d;", "Q", "Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$d;", "intensityAnimationState", "R", "directionHintAnimator", "S", "Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "T", "Z", "isPreviewMirrored", "Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$c;", "(Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$e;)Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$c;", "(Lcom/withpersona/sdk2/inquiry/selfie/view/SelfieOverlayView$a;)Z", "isIdentity", "value", "getShadowAlpha", "(Landroid/graphics/Paint;)I", "(Landroid/graphics/Paint;I)V", "shadowAlpha", "U", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
@@ -209,7 +209,7 @@ public final class SelfieOverlayView extends FrameLayout {
 
 
         /* JADX INFO: renamed from: q, reason: collision with root package name */
-        public static final /* synthetic */ a f13155q = b.a(a());
+        public static final /* synthetic */ a f13236q = b.a(a());
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         public final float arcTopAlpha;
@@ -358,7 +358,7 @@ public final class SelfieOverlayView extends FrameLayout {
 
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public static final /* synthetic */ a f13172i = b.a(a());
+        public static final /* synthetic */ a f13253i = b.a(a());
     }
 
     /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.selfie.view.SelfieOverlayView$f, reason: from toString */
@@ -520,7 +520,7 @@ public final class SelfieOverlayView extends FrameLayout {
     public static final /* synthetic */ class g {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f13185a;
+        public static final /* synthetic */ int[] f13266a;
 
         static {
             int[] iArr = new int[e.values().length];
@@ -552,7 +552,7 @@ public final class SelfieOverlayView extends FrameLayout {
                 iArr[e.Finalizing.ordinal()] = 7;
             } catch (NoSuchFieldError unused7) {
             }
-            f13185a = iArr;
+            f13266a = iArr;
         }
     }
 
@@ -560,35 +560,35 @@ public final class SelfieOverlayView extends FrameLayout {
     public static final class h implements Animator.AnimatorListener {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ y f13186a;
+        public final /* synthetic */ y f13267a;
         public final /* synthetic */ e b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ SelfieOverlayView f13187c;
+        public final /* synthetic */ SelfieOverlayView f13268c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final /* synthetic */ y f13188d;
+        public final /* synthetic */ y f13269d;
 
         public h(y yVar, e eVar, SelfieOverlayView selfieOverlayView, y yVar2) {
-            this.f13186a = yVar;
+            this.f13267a = yVar;
             this.b = eVar;
-            this.f13187c = selfieOverlayView;
-            this.f13188d = yVar2;
+            this.f13268c = selfieOverlayView;
+            this.f13269d = yVar2;
         }
 
         @Override // android.animation.Animator.AnimatorListener
         public void onAnimationCancel(@NotNull Animator animator) {
             Intrinsics.e(animator, "animator");
-            this.f13188d.f22568a = true;
+            this.f13269d.f23023a = true;
         }
 
         @Override // android.animation.Animator.AnimatorListener
         public void onAnimationEnd(@NotNull Animator animator) {
             Intrinsics.e(animator, "animator");
-            if (this.f13186a.f22568a) {
+            if (this.f13267a.f23023a) {
                 return;
             }
-            SelfieOverlayView.z(this.b, this.f13187c);
+            SelfieOverlayView.z(this.b, this.f13268c);
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -672,11 +672,11 @@ public final class SelfieOverlayView extends FrameLayout {
         this.accentColor = -13910906;
         this.arcBaseColor = -1;
         this.arcHighlightColor = -13910906;
-        this.arcInset = (float) jq.j.a(48.0d);
+        this.arcInset = (float) hq.j.a(48.0d);
         this.arcGapDegrees = 20.0f;
-        this.arcStrokeWidth = (float) jq.j.a(4.0d);
-        this.arcDialStrokeWidth = (float) jq.j.a(2.0d);
-        this.arcTickLength = (float) jq.j.a(24.0d);
+        this.arcStrokeWidth = (float) hq.j.a(4.0d);
+        this.arcDialStrokeWidth = (float) hq.j.a(2.0d);
+        this.arcTickLength = (float) hq.j.a(24.0d);
         this.arcTop = new Path();
         this.arcBottom = new Path();
         this.arcLeft = new Path();
@@ -762,7 +762,7 @@ public final class SelfieOverlayView extends FrameLayout {
     }
 
     public static final void z(e eVar, SelfieOverlayView selfieOverlayView) {
-        switch (g.f13185a[eVar.ordinal()]) {
+        switch (g.f13266a[eVar.ordinal()]) {
             case 1:
             case 6:
             case 7:
@@ -770,8 +770,8 @@ public final class SelfieOverlayView extends FrameLayout {
             case 2:
                 ArcHoverState arcHoverStateB = ArcHoverState.b(selfieOverlayView.arcHoverState, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 511, null);
                 ArcHoverState arcHoverState = new ArcHoverState(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 511, null);
-                arcHoverState.n(-((float) jq.j.c(48.0d)));
-                Unit unit = Unit.f22483a;
+                arcHoverState.n(-((float) hq.j.c(48.0d)));
+                Unit unit = Unit.f22938a;
                 ValueAnimator valueAnimatorU = selfieOverlayView.u(arcHoverStateB, arcHoverState);
                 valueAnimatorU.start();
                 selfieOverlayView.directionHintAnimator = valueAnimatorU;
@@ -779,8 +779,8 @@ public final class SelfieOverlayView extends FrameLayout {
             case 3:
                 ArcHoverState arcHoverStateB2 = ArcHoverState.b(selfieOverlayView.arcHoverState, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 511, null);
                 ArcHoverState arcHoverState2 = new ArcHoverState(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 511, null);
-                arcHoverState2.p((float) jq.j.c(48.0d));
-                Unit unit2 = Unit.f22483a;
+                arcHoverState2.p((float) hq.j.c(48.0d));
+                Unit unit2 = Unit.f22938a;
                 ValueAnimator valueAnimatorU2 = selfieOverlayView.u(arcHoverStateB2, arcHoverState2);
                 valueAnimatorU2.start();
                 selfieOverlayView.directionHintAnimator = valueAnimatorU2;
@@ -788,8 +788,8 @@ public final class SelfieOverlayView extends FrameLayout {
             case 4:
                 ArcHoverState arcHoverStateB3 = ArcHoverState.b(selfieOverlayView.arcHoverState, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 511, null);
                 ArcHoverState arcHoverState3 = new ArcHoverState(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 511, null);
-                arcHoverState3.t(-((float) jq.j.c(48.0d)));
-                Unit unit3 = Unit.f22483a;
+                arcHoverState3.t(-((float) hq.j.c(48.0d)));
+                Unit unit3 = Unit.f22938a;
                 ValueAnimator valueAnimatorU3 = selfieOverlayView.u(arcHoverStateB3, arcHoverState3);
                 valueAnimatorU3.start();
                 selfieOverlayView.directionHintAnimator = valueAnimatorU3;
@@ -797,8 +797,8 @@ public final class SelfieOverlayView extends FrameLayout {
             case 5:
                 ArcHoverState arcHoverStateB4 = ArcHoverState.b(selfieOverlayView.arcHoverState, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 511, null);
                 ArcHoverState arcHoverState4 = new ArcHoverState(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 511, null);
-                arcHoverState4.m((float) jq.j.c(48.0d));
-                Unit unit4 = Unit.f22483a;
+                arcHoverState4.m((float) hq.j.c(48.0d));
+                Unit unit4 = Unit.f22938a;
                 ValueAnimator valueAnimatorU4 = selfieOverlayView.u(arcHoverStateB4, arcHoverState4);
                 valueAnimatorU4.start();
                 selfieOverlayView.directionHintAnimator = valueAnimatorU4;
@@ -848,10 +848,10 @@ public final class SelfieOverlayView extends FrameLayout {
         valueAnimatorOfFloat.setStartDelay(0L);
         valueAnimatorOfFloat.setRepeatCount(0);
         valueAnimatorOfFloat.setDuration(400L);
-        valueAnimatorOfFloat.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: iq.r
+        valueAnimatorOfFloat.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: gq.r
             @Override // android.animation.ValueAnimator.AnimatorUpdateListener
             public final void onAnimationUpdate(ValueAnimator valueAnimator2) {
-                SelfieOverlayView.F(this.f20841a, valueAnimator2);
+                SelfieOverlayView.F(this.f18898a, valueAnimator2);
             }
         });
         Intrinsics.checkNotNull(valueAnimatorOfFloat);
@@ -1085,7 +1085,7 @@ public final class SelfieOverlayView extends FrameLayout {
     }
 
     public final ArcHoverState o(ArcHoverState arcHoverState, float f10) {
-        float fC = (float) jq.j.c(48.0d);
+        float fC = (float) hq.j.c(48.0d);
         arcHoverState.s(0.0f);
         float f11 = fC * f10;
         arcHoverState.t(f11);
@@ -1266,7 +1266,7 @@ public final class SelfieOverlayView extends FrameLayout {
     }
 
     public final c p(e eVar) {
-        switch (g.f13185a[eVar.ordinal()]) {
+        switch (g.f13266a[eVar.ordinal()]) {
             case 1:
                 return c.Center;
             case 2:
@@ -1344,17 +1344,17 @@ public final class SelfieOverlayView extends FrameLayout {
         if (this.state == e.Center) {
             final ArcHoverState arcHoverStateB = ArcHoverState.b(this.arcHoverState, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 511, null);
             final ArcHoverState arcHoverStateO = o(new ArcHoverState(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 511, null), fI);
-            valueAnimatorOfFloat.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: iq.p
+            valueAnimatorOfFloat.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: gq.p
                 @Override // android.animation.ValueAnimator.AnimatorUpdateListener
                 public final void onAnimationUpdate(ValueAnimator valueAnimator2) {
-                    SelfieOverlayView.A(this.f20838a, arcHoverStateB, arcHoverStateO, valueAnimator2);
+                    SelfieOverlayView.A(this.f18895a, arcHoverStateB, arcHoverStateO, valueAnimator2);
                 }
             });
         } else {
-            valueAnimatorOfFloat.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: iq.q
+            valueAnimatorOfFloat.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: gq.q
                 @Override // android.animation.ValueAnimator.AnimatorUpdateListener
                 public final void onAnimationUpdate(ValueAnimator valueAnimator2) {
-                    SelfieOverlayView.B(this.f20840a, valueAnimator2);
+                    SelfieOverlayView.B(this.f18897a, valueAnimator2);
                 }
             });
         }
@@ -1389,10 +1389,10 @@ public final class SelfieOverlayView extends FrameLayout {
         valueAnimatorOfFloat.setStartDelay(0L);
         valueAnimatorOfFloat.setRepeatCount(-1);
         valueAnimatorOfFloat.setDuration(700L);
-        valueAnimatorOfFloat.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: iq.t
+        valueAnimatorOfFloat.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: gq.t
             @Override // android.animation.ValueAnimator.AnimatorUpdateListener
             public final void onAnimationUpdate(ValueAnimator valueAnimator) {
-                SelfieOverlayView.v(this.f20844a, startState, endState, valueAnimator);
+                SelfieOverlayView.v(this.f18901a, startState, endState, valueAnimator);
             }
         });
         return valueAnimatorOfFloat;
@@ -1427,10 +1427,10 @@ public final class SelfieOverlayView extends FrameLayout {
         final ArcHoverState arcHoverStateB = ArcHoverState.b(this.arcHoverState, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 511, null);
         final ArcHoverState arcHoverState = new ArcHoverState(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 511, null);
         y yVar = new y();
-        valueAnimatorOfFloat.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: iq.s
+        valueAnimatorOfFloat.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: gq.s
             @Override // android.animation.ValueAnimator.AnimatorUpdateListener
             public final void onAnimationUpdate(ValueAnimator valueAnimator2) {
-                SelfieOverlayView.y(this.f20842a, arcHoverStateB, arcHoverState, valueAnimator2);
+                SelfieOverlayView.y(this.f18899a, arcHoverStateB, arcHoverState, valueAnimator2);
             }
         });
         Intrinsics.checkNotNull(valueAnimatorOfFloat);

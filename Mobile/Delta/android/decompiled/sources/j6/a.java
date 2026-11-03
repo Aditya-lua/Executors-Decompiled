@@ -19,7 +19,7 @@ import java.util.Map;
 public class a extends BacktraceBase {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public BacktraceANRHandler f21097a;
+    public BacktraceANRHandler f21670a;
 
     public a(Context context, b bVar) {
         this(context, bVar, (Database) null);
@@ -44,7 +44,7 @@ public class a extends BacktraceBase {
     }
 
     public void d(AnrType anrType, BacktraceANRSettings backtraceANRSettings) {
-        this.f21097a = f(anrType, backtraceANRSettings);
+        this.f21670a = f(anrType, backtraceANRSettings);
     }
 
     public void e(BacktraceANRSettings backtraceANRSettings) {

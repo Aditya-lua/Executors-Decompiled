@@ -12,5 +12,5 @@ public enum f {
 
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final /* synthetic */ qt.a f23982f = qt.b.a(a());
+    public static final /* synthetic */ ot.a f24632f = ot.b.a(a());
 }

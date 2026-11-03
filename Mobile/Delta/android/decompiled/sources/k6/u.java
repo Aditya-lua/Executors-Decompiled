@@ -9,18 +9,18 @@ public final class u {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final Extras.c<Integer> f22220a = new Extras.c<>(4);
+    public static final Extras.c<Integer> f22444a = new Extras.c<>(4);
 
     @NotNull
-    public static final Extras.c<m6.o> b = new Extras.c<>(m6.o.f23991c);
+    public static final Extras.c<m6.o> b = new Extras.c<>(m6.o.f24641c);
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static final Extras.c<Boolean> f22221c = new Extras.c<>(Boolean.TRUE);
+    public static final Extras.c<Boolean> f22445c = new Extras.c<>(Boolean.TRUE);
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    public static final Extras.c<Double> f22222d = new Extras.c<>(Double.valueOf(1.0d));
+    public static final Extras.c<Double> f22446d = new Extras.c<>(Double.valueOf(1.0d));
 
     @NotNull
     public static final m6.o a(@NotNull w.Options options) {
@@ -28,14 +28,14 @@ public final class u {
     }
 
     public static final int b(@NotNull w.Options options) {
-        return ((Number) m.c(options.getDefaults().getExtras(), f22220a)).intValue();
+        return ((Number) m.c(options.getDefaults().getExtras(), f22444a)).intValue();
     }
 
     public static final boolean c(@NotNull w.Options options) {
-        return ((Boolean) m.c(options.getDefaults().getExtras(), f22221c)).booleanValue();
+        return ((Boolean) m.c(options.getDefaults().getExtras(), f22445c)).booleanValue();
     }
 
     public static final double d(@NotNull w.Options options) {
-        return ((Number) m.c(options.getDefaults().getExtras(), f22222d)).doubleValue();
+        return ((Number) m.c(options.getDefaults().getExtras(), f22446d)).doubleValue();
     }
 }

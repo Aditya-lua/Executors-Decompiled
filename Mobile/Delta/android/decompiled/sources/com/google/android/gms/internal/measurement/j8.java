@@ -12,29 +12,29 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public final class j8 implements f8 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final AtomicBoolean f6557a = new AtomicBoolean();
+    public final AtomicBoolean f6630a = new AtomicBoolean();
     public HashMap b = null;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final HashMap f6558c = new HashMap(16, 1.0f);
+    public final HashMap f6631c = new HashMap(16, 1.0f);
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final HashMap f6559d = new HashMap(16, 1.0f);
+    public final HashMap f6632d = new HashMap(16, 1.0f);
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final HashMap f6560e = new HashMap(16, 1.0f);
+    public final HashMap f6633e = new HashMap(16, 1.0f);
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final HashMap f6561f = new HashMap(16, 1.0f);
+    public final HashMap f6634f = new HashMap(16, 1.0f);
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public Object f6562g = null;
+    public Object f6635g = null;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public boolean f6563h = false;
+    public boolean f6636h = false;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final String[] f6564i = new String[0];
+    public final String[] f6637i = new String[0];
 
     @Override // com.google.android.gms.internal.measurement.f8
     public final String a(ContentResolver contentResolver, String str, String str2) {
@@ -46,20 +46,20 @@ public final class j8 implements f8 {
             try {
                 String str3 = null;
                 if (this.b == null) {
-                    this.f6557a.set(false);
+                    this.f6630a.set(false);
                     this.b = new HashMap(16, 1.0f);
-                    this.f6562g = new Object();
-                    contentResolver.registerContentObserver(e8.f6426a, true, new h8(this, null));
-                } else if (this.f6557a.getAndSet(false)) {
+                    this.f6635g = new Object();
+                    contentResolver.registerContentObserver(e8.f6499a, true, new h8(this, null));
+                } else if (this.f6630a.getAndSet(false)) {
                     this.b.clear();
-                    this.f6558c.clear();
-                    this.f6559d.clear();
-                    this.f6560e.clear();
-                    this.f6561f.clear();
-                    this.f6562g = new Object();
-                    this.f6563h = false;
+                    this.f6631c.clear();
+                    this.f6632d.clear();
+                    this.f6633e.clear();
+                    this.f6634f.clear();
+                    this.f6635g = new Object();
+                    this.f6636h = false;
                 }
-                Object obj = this.f6562g;
+                Object obj = this.f6635g;
                 if (this.b.containsKey(str)) {
                     String str4 = (String) this.b.get(str);
                     if (str4 != null) {
@@ -68,7 +68,7 @@ public final class j8 implements f8 {
                     return str3;
                 }
                 try {
-                    Uri uri = e8.f6426a;
+                    Uri uri = e8.f6499a;
                     ContentProviderClient contentProviderClientAcquireUnstableContentProviderClient = contentResolver.acquireUnstableContentProviderClient(uri);
                     try {
                         if (contentProviderClientAcquireUnstableContentProviderClient == null) {
@@ -94,7 +94,7 @@ public final class j8 implements f8 {
                                 }
                                 synchronized (this) {
                                     try {
-                                        if (obj == this.f6562g) {
+                                        if (obj == this.f6635g) {
                                             this.b.put(str, string);
                                         }
                                     } catch (Throwable th2) {
@@ -134,6 +134,6 @@ public final class j8 implements f8 {
     }
 
     public final /* synthetic */ AtomicBoolean b() {
-        return this.f6557a;
+        return this.f6630a;
     }
 }

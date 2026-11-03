@@ -1,77 +1,88 @@
 package dh;
 
+import ek.q;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
+
 /* JADX INFO: loaded from: classes2.dex */
-public class a {
+public abstract class a<T> implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public long f14619a;
-    public String b;
+    public AtomicBoolean f14769a = new AtomicBoolean(false);
+    public AtomicInteger b = new AtomicInteger(0);
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public String f14620c;
+    public T f14770c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public String f14621d;
+    public ScheduledExecutorService f14771d;
 
-    public a(long j10, String str) {
-        this.f14619a = j10;
-        this.b = str == null ? "" : str;
-        this.f14620c = "";
-        this.f14621d = "";
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public ScheduledFuture<?> f14772e;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    public String f14773f;
+
+    public a(String str) {
+        this.f14773f = str;
     }
 
-    public String a() {
-        return this.f14621d;
-    }
+    public abstract void a(T t8);
 
-    public long b() {
-        return this.f14619a;
-    }
-
-    public String c() {
-        return this.f14620c;
-    }
-
-    public String d() {
-        String str = this.b;
-        if (str != null) {
-            return str;
+    public final ScheduledExecutorService b() {
+        if (this.f14771d == null) {
+            this.f14771d = Executors.newSingleThreadScheduledExecutor();
         }
-        return "User " + b();
+        return this.f14771d;
     }
 
-    public void e(String str) {
-        this.f14621d = str;
+    public final synchronized T c() {
+        return this.f14770c;
     }
 
-    public void f(long j10) {
-        this.f14619a = j10;
+    public final void d(long j10) {
+        this.f14772e = b().schedule(this, j10, TimeUnit.MILLISECONDS);
     }
 
-    public void g(String str) {
-        this.f14620c = str;
+    public synchronized void e(T t8) {
+        try {
+            if (!this.f14769a.get() && (g() <= 0 || this.b.incrementAndGet() < g())) {
+                long jF = f();
+                if (jF <= 0) {
+                    a(t8);
+                    return;
+                }
+                q.h(this.f14773f, "queue value: " + t8);
+                this.f14770c = t8;
+                if (this.f14772e == null) {
+                    d(jF);
+                }
+                return;
+            }
+            ScheduledFuture<?> scheduledFuture = this.f14772e;
+            if (scheduledFuture != null) {
+                scheduledFuture.cancel(false);
+            }
+            this.f14770c = t8;
+            q.h(this.f14773f, "set immediately: " + t8);
+            a(t8);
+            this.f14769a.set(true);
+        } catch (Throwable th2) {
+            throw th2;
+        }
     }
 
-    public void h(String str) {
-        this.b = str;
-    }
+    public abstract long f();
 
-    public void i(a aVar) {
-        if (aVar == this) {
-            return;
-        }
-        if (this.f14619a != aVar.b() && aVar.b() != -1) {
-            f(aVar.b());
-        }
-        if (!this.b.equals(aVar.d()) && !aVar.d().isEmpty()) {
-            h(aVar.d());
-        }
-        if (!this.f14620c.equals(aVar.c()) && !aVar.c().isEmpty()) {
-            g(aVar.c());
-        }
-        if (this.f14621d.equals(aVar.a()) || aVar.a().isEmpty()) {
-            return;
-        }
-        e(aVar.a());
+    public abstract int g();
+
+    @Override // java.lang.Runnable
+    public synchronized void run() {
+        a(c());
+        this.f14769a.set(true);
     }
 }

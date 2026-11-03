@@ -50,7 +50,7 @@ public final class AFa1uSDK {
         }
         AFLogger aFLogger = AFLogger.INSTANCE;
         AFLoggerBase.d$default(aFLogger, LogTag.ATTRIBUTION, "OS SDK is=" + i10 + "; use KeyStore", false, 4, null);
-        AFKeystoreWrapper aFKeystoreWrapper = new AFKeystoreWrapper(p8.f5305d);
+        AFKeystoreWrapper aFKeystoreWrapper = new AFKeystoreWrapper(p8.f5378d);
         if (aFKeystoreWrapper.d()) {
             String strAFKeystoreWrapper = aFKeystoreWrapper.AFKeystoreWrapper();
             synchronized (aFKeystoreWrapper.AFLogger) {
@@ -70,7 +70,7 @@ public final class AFa1uSDK {
             }
             aFKeystoreWrapper.AFKeystoreWrapper(aFKeystoreWrapper.AFKeystoreWrapper());
         } else {
-            aFKeystoreWrapper.f5196d = AFb1jSDK.AFLogger(p10.AFKeystoreWrapper);
+            aFKeystoreWrapper.f5269d = AFb1jSDK.AFLogger(p10.AFKeystoreWrapper);
             aFKeystoreWrapper.unregisterClient = 0;
             aFKeystoreWrapper.AFKeystoreWrapper(aFKeystoreWrapper.AFKeystoreWrapper());
         }

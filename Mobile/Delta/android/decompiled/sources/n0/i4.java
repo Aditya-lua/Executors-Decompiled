@@ -19,16 +19,16 @@ public interface i4<T extends g0.w2> extends s0.q<T>, h2 {
     public static final n1.a<u3> K;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public static final n1.a<o3> f24697w = n1.a.a("camerax.core.useCase.defaultSessionConfig", o3.class);
+    public static final n1.a<o3> f25518w = n1.a.a("camerax.core.useCase.defaultSessionConfig", o3.class);
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public static final n1.a<l1> f24698x = n1.a.a("camerax.core.useCase.defaultCaptureConfig", l1.class);
+    public static final n1.a<l1> f25519x = n1.a.a("camerax.core.useCase.defaultCaptureConfig", l1.class);
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public static final n1.a<o3.e> f24699y = n1.a.a("camerax.core.useCase.sessionConfigUnpacker", o3.e.class);
+    public static final n1.a<o3.e> f25520y = n1.a.a("camerax.core.useCase.sessionConfigUnpacker", o3.e.class);
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public static final n1.a<l1.b> f24700z = n1.a.a("camerax.core.useCase.captureConfigUnpacker", l1.b.class);
+    public static final n1.a<l1.b> f25521z = n1.a.a("camerax.core.useCase.captureConfigUnpacker", l1.b.class);
 
     public class a implements m0.b1.b {
         public a() {
@@ -69,7 +69,7 @@ public interface i4<T extends g0.w2> extends s0.q<T>, h2 {
     }
 
     default o3.e F(o3.e eVar) {
-        return (o3.e) h(f24699y, eVar);
+        return (o3.e) h(f25520y, eVar);
     }
 
     default boolean H() {
@@ -79,11 +79,11 @@ public interface i4<T extends g0.w2> extends s0.q<T>, h2 {
     }
 
     default l1.b K(l1.b bVar) {
-        return (l1.b) h(f24700z, bVar);
+        return (l1.b) h(f25521z, bVar);
     }
 
     default o3 S() {
-        return (o3) e(f24697w);
+        return (o3) e(f25518w);
     }
 
     default boolean T(boolean z10) {
@@ -109,7 +109,7 @@ public interface i4<T extends g0.w2> extends s0.q<T>, h2 {
     }
 
     default o3 j(o3 o3Var) {
-        return (o3) h(f24697w, o3Var);
+        return (o3) h(f25518w, o3Var);
     }
 
     default int o(int i10) {
@@ -123,7 +123,7 @@ public interface i4<T extends g0.w2> extends s0.q<T>, h2 {
     }
 
     default l1 s(l1 l1Var) {
-        return (l1) h(f24698x, l1Var);
+        return (l1) h(f25519x, l1Var);
     }
 
     default int x() {

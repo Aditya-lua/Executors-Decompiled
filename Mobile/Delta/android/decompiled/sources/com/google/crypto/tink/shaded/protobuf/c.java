@@ -9,14 +9,14 @@ import java.util.RandomAccess;
 public abstract class c<E> extends AbstractList<E> implements a0.i<E> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f8398a;
+    public boolean f8472a;
 
     public c(boolean z10) {
-        this.f8398a = z10;
+        this.f8472a = z10;
     }
 
     public void a() {
-        if (!this.f8398a) {
+        if (!this.f8472a) {
             throw new UnsupportedOperationException();
         }
     }
@@ -69,14 +69,14 @@ public abstract class c<E> extends AbstractList<E> implements a0.i<E> {
 
     @Override // com.google.crypto.tink.shaded.protobuf.a0.i
     public final void j() {
-        if (this.f8398a) {
-            this.f8398a = false;
+        if (this.f8472a) {
+            this.f8472a = false;
         }
     }
 
     @Override // com.google.crypto.tink.shaded.protobuf.a0.i
     public boolean n() {
-        return this.f8398a;
+        return this.f8472a;
     }
 
     @Override // java.util.AbstractList, java.util.List

@@ -6,5 +6,5 @@ import android.content.Context;
 public final class AFd1zSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public Context f5305d;
+    public Context f5378d;
 }

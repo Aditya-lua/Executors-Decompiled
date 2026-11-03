@@ -4,12 +4,12 @@ package jb;
 public final class h {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final e f21238a;
+    public static final e f21811a;
     public static volatile e b;
 
     static {
         g gVar = new g(null);
-        f21238a = gVar;
+        f21811a = gVar;
         b = gVar;
     }
 

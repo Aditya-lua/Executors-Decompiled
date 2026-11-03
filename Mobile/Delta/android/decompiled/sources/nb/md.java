@@ -10,22 +10,22 @@ import java.util.Objects;
 public final class md {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Map f25752a;
+    public final Map f26573a;
 
     public md(Map map) {
         HashMap map2 = new HashMap();
-        this.f25752a = map2;
+        this.f26573a = map2;
         map2.putAll(map);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public final String a() {
         StringBuilder sb2 = new StringBuilder();
-        he.t tVar = od.f25824a;
+        ie.t tVar = od.f26645a;
         int size = tVar.size();
         for (int i10 = 0; i10 < size; i10++) {
             String str = (String) tVar.get(i10);
-            Map map = this.f25752a;
+            Map map = this.f26573a;
             if (map.containsKey(str)) {
                 if (sb2.length() > 0) {
                     sb2.append(";");
@@ -55,27 +55,27 @@ public final class md {
         Bundle bundle;
         String str;
         String str2;
-        y4 y4Var = z4.f26151a1;
+        y4 y4Var = z4.f26972a1;
         if (((Boolean) y4Var.b(null)).booleanValue()) {
-            Map map2 = this.f25752a;
+            Map map2 = this.f26573a;
             if ("1".equals(map2.get("gdprApplies")) && "1".equals(map2.get("EnableAdvertiserConsentMode"))) {
                 if (((Boolean) y4Var.b(null)).booleanValue()) {
                     return f();
                 }
-                map = this.f25752a;
+                map = this.f26573a;
                 if (map.get("Version") == null) {
                     return f();
                 }
                 if (g() >= 0) {
                     bundle = new Bundle();
-                    String str3 = p8.AD_STORAGE.f25855a;
+                    String str3 = p8.AD_STORAGE.f26676a;
                     if (true != Objects.equals(map.get("AuthorizePurpose1"), "1")) {
                         str = "denied";
                     } else {
                         str = "granted";
                     }
                     bundle.putString(str3, str);
-                    String str4 = p8.AD_PERSONALIZATION.f25855a;
+                    String str4 = p8.AD_PERSONALIZATION.f26676a;
                     if (Objects.equals(map.get("AuthorizePurpose3"), "1") || !Objects.equals(map.get("AuthorizePurpose4"), "1")) {
                         str2 = "denied";
                     } else {
@@ -83,31 +83,31 @@ public final class md {
                     }
                     bundle.putString(str4, str2);
                     if (g() >= 4) {
-                        bundle.putString(p8.AD_USER_DATA.f25855a, (Objects.equals(map.get("AuthorizePurpose1"), "1") || !Objects.equals(map.get("AuthorizePurpose7"), "1")) ? "denied" : "granted");
+                        bundle.putString(p8.AD_USER_DATA.f26676a, (Objects.equals(map.get("AuthorizePurpose1"), "1") || !Objects.equals(map.get("AuthorizePurpose7"), "1")) ? "denied" : "granted");
                     }
                     return bundle;
                 }
             }
         } else {
-            Map map3 = this.f25752a;
+            Map map3 = this.f26573a;
             if ("1".equals(map3.get("GoogleConsent")) && "1".equals(map3.get("gdprApplies")) && "1".equals(map3.get("EnableAdvertiserConsentMode"))) {
                 if (((Boolean) y4Var.b(null)).booleanValue()) {
                     return f();
                 }
-                map = this.f25752a;
+                map = this.f26573a;
                 if (map.get("Version") == null) {
                     return f();
                 }
                 if (g() >= 0) {
                     bundle = new Bundle();
-                    String str5 = p8.AD_STORAGE.f25855a;
+                    String str5 = p8.AD_STORAGE.f26676a;
                     if (true != Objects.equals(map.get("AuthorizePurpose1"), "1")) {
                         str = "denied";
                     } else {
                         str = "granted";
                     }
                     bundle.putString(str5, str);
-                    String str6 = p8.AD_PERSONALIZATION.f25855a;
+                    String str6 = p8.AD_PERSONALIZATION.f26676a;
                     if (Objects.equals(map.get("AuthorizePurpose3"), "1")) {
                         str2 = "denied";
                     } else {
@@ -115,7 +115,7 @@ public final class md {
                     }
                     bundle.putString(str6, str2);
                     if (g() >= 4) {
-                        bundle.putString(p8.AD_USER_DATA.f25855a, (Objects.equals(map.get("AuthorizePurpose1"), "1") || !Objects.equals(map.get("AuthorizePurpose7"), "1")) ? "denied" : "granted");
+                        bundle.putString(p8.AD_USER_DATA.f26676a, (Objects.equals(map.get("AuthorizePurpose1"), "1") || !Objects.equals(map.get("AuthorizePurpose7"), "1")) ? "denied" : "granted");
                     }
                     return bundle;
                 }
@@ -125,12 +125,12 @@ public final class md {
     }
 
     public final String c() {
-        String str = (String) this.f25752a.get("PurposeDiagnostics");
+        String str = (String) this.f26573a.get("PurposeDiagnostics");
         return TextUtils.isEmpty(str) ? "200000" : str;
     }
 
     public final String d(md mdVar) {
-        Map map = mdVar.f25752a;
+        Map map = mdVar.f26573a;
         String str = (map.isEmpty() || ((String) map.get("Version")) != null) ? "0" : "1";
         Bundle bundleB = b();
         Bundle bundleB2 = mdVar.b();
@@ -142,7 +142,7 @@ public final class md {
         sb2.append("1");
         int i10 = -1;
         try {
-            String str = (String) this.f25752a.get("CmpSdkID");
+            String str = (String) this.f26573a.get("CmpSdkID");
             if (!TextUtils.isEmpty(str)) {
                 i10 = Integer.parseInt(str);
             }
@@ -161,7 +161,7 @@ public final class md {
             sb2.append("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_".charAt(iG));
         }
         n9.m.a(true);
-        Map map = this.f25752a;
+        Map map = this.f26573a;
         int i11 = true != "1".equals(map.get("gdprApplies")) ? 0 : 2;
         boolean zEquals = "1".equals(map.get("EnableAdvertiserConsentMode"));
         int i12 = i11 | 4;
@@ -181,20 +181,20 @@ public final class md {
 
     public final Bundle f() {
         int iG;
-        Map map = this.f25752a;
+        Map map = this.f26573a;
         if ("1".equals(map.get("GoogleConsent")) && (iG = g()) >= 0) {
             String str = (String) map.get("PurposeConsents");
             if (!TextUtils.isEmpty(str)) {
                 Bundle bundle = new Bundle();
                 String str2 = "denied";
                 if (str.length() > 0) {
-                    bundle.putString(p8.AD_STORAGE.f25855a, str.charAt(0) == '1' ? "granted" : "denied");
+                    bundle.putString(p8.AD_STORAGE.f26676a, str.charAt(0) == '1' ? "granted" : "denied");
                 }
                 if (str.length() > 3) {
-                    bundle.putString(p8.AD_PERSONALIZATION.f25855a, (str.charAt(2) == '1' && str.charAt(3) == '1') ? "granted" : "denied");
+                    bundle.putString(p8.AD_PERSONALIZATION.f26676a, (str.charAt(2) == '1' && str.charAt(3) == '1') ? "granted" : "denied");
                 }
                 if (str.length() > 6 && iG >= 4) {
-                    String str3 = p8.AD_USER_DATA.f25855a;
+                    String str3 = p8.AD_USER_DATA.f26676a;
                     if (str.charAt(0) == '1' && str.charAt(6) == '1') {
                         str2 = "granted";
                     }
@@ -208,7 +208,7 @@ public final class md {
 
     public final int g() {
         try {
-            String str = (String) this.f25752a.get("PolicyVersion");
+            String str = (String) this.f26573a.get("PolicyVersion");
             if (TextUtils.isEmpty(str)) {
                 return -1;
             }

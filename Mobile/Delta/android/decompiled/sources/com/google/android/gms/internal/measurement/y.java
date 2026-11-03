@@ -9,7 +9,7 @@ import java.util.Map;
 public final class y {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Map f6950a = new HashMap();
+    public final Map f7024a = new HashMap();
     public final l0 b = new l0();
 
     public y() {
@@ -23,9 +23,9 @@ public final class y {
     }
 
     public final void a(x xVar) {
-        Iterator it = xVar.f6892a.iterator();
+        Iterator it = xVar.f6966a.iterator();
         while (it.hasNext()) {
-            this.f6950a.put(((n0) it.next()).b().toString(), xVar);
+            this.f7024a.put(((n0) it.next()).b().toString(), xVar);
         }
     }
 
@@ -37,7 +37,7 @@ public final class y {
         r rVar = (r) qVar;
         ArrayList arrayListC = rVar.c();
         String strB = rVar.b();
-        Map map = this.f6950a;
+        Map map = this.f7024a;
         return (map.containsKey(strB) ? (x) map.get(strB) : this.b).a(strB, u4Var, arrayListC);
     }
 }

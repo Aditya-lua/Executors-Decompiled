@@ -9,7 +9,7 @@ import android.os.Parcelable;
 public final class k0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final /* synthetic */ int f16549a = 0;
+    public static final /* synthetic */ int f17145a = 0;
 
     static {
         k0.class.getClassLoader();

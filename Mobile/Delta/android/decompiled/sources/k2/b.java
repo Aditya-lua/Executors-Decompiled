@@ -27,7 +27,7 @@ public class b extends l2.b {
     }
 
     /* JADX INFO: renamed from: k2.b$b, reason: collision with other inner class name */
-    public static class C0388b {
+    public static class C0387b {
         @SuppressLint({"BanUncheckedReflection"})
         public static boolean a(Activity activity, String str) {
             try {
@@ -45,7 +45,7 @@ public class b extends l2.b {
     }
 
     public interface d {
-        void P(int i10);
+        void O(int i10);
     }
 
     public static /* synthetic */ void r(Activity activity) {
@@ -98,7 +98,7 @@ public class b extends l2.b {
             }
         }
         if (activity instanceof d) {
-            ((d) activity).P(i10);
+            ((d) activity).O(i10);
         }
         a.a(activity, strArr, i10);
     }
@@ -111,7 +111,7 @@ public class b extends l2.b {
         if (i10 >= 32) {
             return c.a(activity, str);
         }
-        return i10 == 31 ? C0388b.a(activity, str) : a.b(activity, str);
+        return i10 == 31 ? C0387b.a(activity, str) : a.b(activity, str);
     }
 
     public static void w(Activity activity, Intent intent, int i10, Bundle bundle) {

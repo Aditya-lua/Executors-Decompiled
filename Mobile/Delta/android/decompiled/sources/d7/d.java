@@ -13,7 +13,7 @@ public interface d {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         @NotNull
-        public static final Companion INSTANCE = Companion.f14484a;
+        public static final Companion INSTANCE = Companion.f14464a;
 
         @NotNull
         public static final a b = new c.a();
@@ -23,7 +23,7 @@ public interface d {
         public static final class Companion {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public static final /* synthetic */ Companion f14484a = new Companion();
+            public static final /* synthetic */ Companion f14464a = new Companion();
         }
 
         @NotNull

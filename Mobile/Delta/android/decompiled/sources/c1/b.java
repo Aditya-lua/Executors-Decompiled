@@ -8,10 +8,10 @@ import android.hardware.camera2.params.SessionConfiguration;
 public class b implements d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final CameraDevice.CameraDeviceSetup f4316a;
+    public final CameraDevice.CameraDeviceSetup f4482a;
 
     public b(CameraManager cameraManager, String str) {
-        this.f4316a = cameraManager.getCameraDeviceSetup(str);
+        this.f4482a = cameraManager.getCameraDeviceSetup(str);
     }
 
     public static long b() {
@@ -28,6 +28,6 @@ public class b implements d {
 
     @Override // c1.d
     public d.a a(SessionConfiguration sessionConfiguration) {
-        return new d.a(this.f4316a.isSessionConfigurationSupported(sessionConfiguration) ? 1 : 2, 2, b());
+        return new d.a(this.f4482a.isSessionConfigurationSupported(sessionConfiguration) ? 1 : 2, 2, b());
     }
 }

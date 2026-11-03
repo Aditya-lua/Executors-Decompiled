@@ -12,23 +12,23 @@ import java.util.logging.Logger;
 public abstract class s1<V> extends o2 implements i2<V> {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final Object f7227d = new Object();
+    public static final Object f7301d = new Object();
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final h2 f7228e = new h2(m1.class);
+    public static final h2 f7302e = new h2(m1.class);
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final boolean f7229f;
+    public static final boolean f7303f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final n1 f7230g;
+    public static final n1 f7304g;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public volatile Object f7231a;
+    public volatile Object f7305a;
     public volatile k1 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public volatile r1 f7232c;
+    public volatile r1 f7306c;
 
     static {
         boolean z10;
@@ -40,7 +40,7 @@ public abstract class s1<V> extends o2 implements i2<V> {
         } catch (SecurityException unused) {
             z10 = false;
         }
-        f7229f = z10;
+        f7303f = z10;
         String property = System.getProperty("java.runtime.name", "");
         w1 w1Var = null;
         if (property == null || property.contains("Android")) {
@@ -66,9 +66,9 @@ public abstract class s1<V> extends o2 implements i2<V> {
         }
         th2 = null;
         th3 = null;
-        f7230g = p1Var;
+        f7304g = p1Var;
         if (th2 != null) {
-            h2 h2Var = f7228e;
+            h2 h2Var = f7302e;
             Logger loggerA = h2Var.a();
             Level level = Level.SEVERE;
             loggerA.logp(level, "com.google.common.util.concurrent.AbstractFutureState", "<clinit>", "UnsafeAtomicHelper is broken!", th3);
@@ -77,24 +77,24 @@ public abstract class s1<V> extends o2 implements i2<V> {
     }
 
     public static boolean k(s1 s1Var, Object obj, Object obj2) {
-        return f7230g.f(s1Var, obj, obj2);
+        return f7304g.f(s1Var, obj, obj2);
     }
 
     public final void d(r1 r1Var) {
-        r1Var.f7222a = null;
+        r1Var.f7296a = null;
         while (true) {
-            r1 r1Var2 = this.f7232c;
-            if (r1Var2 != r1.f7221c) {
+            r1 r1Var2 = this.f7306c;
+            if (r1Var2 != r1.f7295c) {
                 r1 r1Var3 = null;
                 while (r1Var2 != null) {
                     r1 r1Var4 = r1Var2.b;
-                    if (r1Var2.f7222a != null) {
+                    if (r1Var2.f7296a != null) {
                         r1Var3 = r1Var2;
                     } else if (r1Var3 != null) {
                         r1Var3.b = r1Var4;
-                        if (r1Var3.f7222a == null) {
+                        if (r1Var3.f7296a == null) {
                         }
-                    } else if (!f7230g.g(this, r1Var2, r1Var4)) {
+                    } else if (!f7304g.g(this, r1Var2, r1Var4)) {
                     }
                     r1Var2 = r1Var4;
                 }
@@ -105,7 +105,7 @@ public abstract class s1<V> extends o2 implements i2<V> {
     }
 
     public final k1 e(k1 k1Var) {
-        return f7230g.a(this, k1Var);
+        return f7304g.a(this, k1Var);
     }
 
     public final Object f() throws InterruptedException {
@@ -113,15 +113,15 @@ public abstract class s1<V> extends o2 implements i2<V> {
         if (Thread.interrupted()) {
             throw new InterruptedException();
         }
-        Object obj2 = this.f7231a;
+        Object obj2 = this.f7305a;
         if ((obj2 != null) && m1.q(obj2)) {
             return m1.m(obj2);
         }
-        r1 r1Var = this.f7232c;
-        if (r1Var != r1.f7221c) {
+        r1 r1Var = this.f7306c;
+        if (r1Var != r1.f7295c) {
             r1 r1Var2 = new r1();
             do {
-                n1 n1Var = f7230g;
+                n1 n1Var = f7304g;
                 n1Var.c(r1Var2, r1Var);
                 if (n1Var.g(this, r1Var, r1Var2)) {
                     do {
@@ -130,14 +130,14 @@ public abstract class s1<V> extends o2 implements i2<V> {
                             d(r1Var2);
                             throw new InterruptedException();
                         }
-                        obj = this.f7231a;
+                        obj = this.f7305a;
                     } while (!((obj != null) & m1.q(obj)));
                     return m1.m(obj);
                 }
-                r1Var = this.f7232c;
-            } while (r1Var != r1.f7221c);
+                r1Var = this.f7306c;
+            } while (r1Var != r1.f7295c);
         }
-        Object obj3 = this.f7231a;
+        Object obj3 = this.f7305a;
         Objects.requireNonNull(obj3);
         return m1.m(obj3);
     }
@@ -147,18 +147,18 @@ public abstract class s1<V> extends o2 implements i2<V> {
         if (Thread.interrupted()) {
             throw new InterruptedException();
         }
-        Object obj = this.f7231a;
+        Object obj = this.f7305a;
         boolean z10 = true;
         if ((obj != null) && m1.q(obj)) {
             return m1.m(obj);
         }
         long jNanoTime = nanos > 0 ? System.nanoTime() + nanos : 0L;
         if (nanos >= 1000) {
-            r1 r1Var = this.f7232c;
-            if (r1Var != r1.f7221c) {
+            r1 r1Var = this.f7306c;
+            if (r1Var != r1.f7295c) {
                 r1 r1Var2 = new r1();
                 while (true) {
-                    n1 n1Var = f7230g;
+                    n1 n1Var = f7304g;
                     n1Var.c(r1Var2, r1Var);
                     if (n1Var.g(this, r1Var, r1Var2)) {
                         do {
@@ -167,7 +167,7 @@ public abstract class s1<V> extends o2 implements i2<V> {
                                 d(r1Var2);
                                 throw new InterruptedException();
                             }
-                            Object obj2 = this.f7231a;
+                            Object obj2 = this.f7305a;
                             if ((obj2 != null) && m1.q(obj2)) {
                                 return m1.m(obj2);
                             }
@@ -176,17 +176,17 @@ public abstract class s1<V> extends o2 implements i2<V> {
                         d(r1Var2);
                         break;
                     }
-                    r1Var = this.f7232c;
-                    if (r1Var == r1.f7221c) {
+                    r1Var = this.f7306c;
+                    if (r1Var == r1.f7295c) {
                     }
                 }
             }
-            Object obj3 = this.f7231a;
+            Object obj3 = this.f7305a;
             Objects.requireNonNull(obj3);
             return m1.m(obj3);
         }
         while (nanos > 0) {
-            Object obj4 = this.f7231a;
+            Object obj4 = this.f7305a;
             if ((obj4 != null) && m1.q(obj4)) {
                 return m1.m(obj4);
             }
@@ -227,16 +227,16 @@ public abstract class s1<V> extends o2 implements i2<V> {
     }
 
     public final void i() {
-        for (r1 r1VarB = f7230g.b(this, r1.f7221c); r1VarB != null; r1VarB = r1VarB.b) {
-            Thread thread = r1VarB.f7222a;
+        for (r1 r1VarB = f7304g.b(this, r1.f7295c); r1VarB != null; r1VarB = r1VarB.b) {
+            Thread thread = r1VarB.f7296a;
             if (thread != null) {
-                r1VarB.f7222a = null;
+                r1VarB.f7296a = null;
                 LockSupport.unpark(thread);
             }
         }
     }
 
     public final boolean j(k1 k1Var, k1 k1Var2) {
-        return f7230g.e(this, k1Var, k1Var2);
+        return f7304g.e(this, k1Var, k1Var2);
     }
 }

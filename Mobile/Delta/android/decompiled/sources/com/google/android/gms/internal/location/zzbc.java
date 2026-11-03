@@ -19,35 +19,35 @@ public final class zzbc extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzbc> CREATOR = new q();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f6353f;
+    public final int f6426f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final zzba f6354g;
+    public final zzba f6427g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final r f6355h;
+    public final r f6428h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final PendingIntent f6356i;
+    public final PendingIntent f6429i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final o f6357j;
+    public final o f6430j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final d f6358k;
+    public final d f6431k;
 
     public zzbc(int i10, zzba zzbaVar, IBinder iBinder, PendingIntent pendingIntent, IBinder iBinder2, IBinder iBinder3) {
-        this.f6353f = i10;
-        this.f6354g = zzbaVar;
+        this.f6426f = i10;
+        this.f6427g = zzbaVar;
         d cVar = null;
-        this.f6355h = iBinder == null ? null : lb.q.s2(iBinder);
-        this.f6356i = pendingIntent;
-        this.f6357j = iBinder2 == null ? null : n.s2(iBinder2);
+        this.f6428h = iBinder == null ? null : lb.q.s2(iBinder);
+        this.f6429i = pendingIntent;
+        this.f6430j = iBinder2 == null ? null : n.s2(iBinder2);
         if (iBinder3 != null) {
             IInterface iInterfaceQueryLocalInterface = iBinder3.queryLocalInterface("com.google.android.gms.location.internal.IFusedLocationProviderCallback");
             cVar = iInterfaceQueryLocalInterface instanceof d ? (d) iInterfaceQueryLocalInterface : new c(iBinder3);
         }
-        this.f6358k = cVar;
+        this.f6431k = cVar;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -73,14 +73,14 @@ public final class zzbc extends AbstractSafeParcelable {
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i10) {
         int iA = b.a(parcel);
-        b.n(parcel, 1, this.f6353f);
-        b.t(parcel, 2, this.f6354g, i10, false);
-        r rVar = this.f6355h;
+        b.n(parcel, 1, this.f6426f);
+        b.t(parcel, 2, this.f6427g, i10, false);
+        r rVar = this.f6428h;
         b.m(parcel, 3, rVar == null ? null : rVar.asBinder(), false);
-        b.t(parcel, 4, this.f6356i, i10, false);
-        o oVar = this.f6357j;
+        b.t(parcel, 4, this.f6429i, i10, false);
+        o oVar = this.f6430j;
         b.m(parcel, 5, oVar == null ? null : oVar.asBinder(), false);
-        d dVar = this.f6358k;
+        d dVar = this.f6431k;
         b.m(parcel, 6, dVar != null ? dVar.asBinder() : null, false);
         b.b(parcel, iA);
     }

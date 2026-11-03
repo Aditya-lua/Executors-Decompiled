@@ -8,8 +8,8 @@ import com.google.mlkit.vision.barcode.common.Barcode;
 import g0.a2;
 import g0.f1;
 import g0.w2;
+import gt.l;
 import java.util.Iterator;
-import jt.l;
 import kotlin.Metadata;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
@@ -38,7 +38,7 @@ public enum c {
     public final int defaultImageFormat;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final /* synthetic */ qt.a f21023j = qt.b.a(a());
+    public static final /* synthetic */ ot.a f21596j = ot.b.a(a());
 
     /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -50,10 +50,10 @@ public enum c {
 
         /* JADX INFO: renamed from: j0.c$a$a, reason: collision with other inner class name */
         @Metadata(k = 3, mv = {2, 0, 0}, xi = 48)
-        public /* synthetic */ class C0373a {
+        public /* synthetic */ class C0374a {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public static final /* synthetic */ int[] f21025a;
+            public static final /* synthetic */ int[] f21598a;
             public static final /* synthetic */ int[] b;
 
             static {
@@ -74,7 +74,7 @@ public enum c {
                     iArr[j4.b.STREAM_SHARING.ordinal()] = 4;
                 } catch (NoSuchFieldError unused4) {
                 }
-                f21025a = iArr;
+                f21598a = iArr;
                 int[] iArr2 = new int[k0.b.values().length];
                 try {
                     iArr2[k0.b.DYNAMIC_RANGE.ordinal()] = 1;
@@ -133,7 +133,7 @@ public enum c {
         @NotNull
         public final c c(@NotNull i4<?> i4Var) {
             Intrinsics.checkNotNullParameter(i4Var, "<this>");
-            int i10 = C0373a.f21025a[i4Var.X().ordinal()];
+            int i10 = C0374a.f21598a[i4Var.X().ordinal()];
             if (i10 == 1) {
                 return c.IMAGE_CAPTURE;
             }
@@ -147,7 +147,7 @@ public enum c {
         }
 
         public final boolean d(k0.b bVar, w2 w2Var) {
-            int i10 = C0373a.b[bVar.ordinal()];
+            int i10 = C0374a.b[bVar.ordinal()];
             if (i10 == 1) {
                 return e(w2Var);
             }
@@ -187,7 +187,7 @@ public enum c {
     public /* synthetic */ class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f21026a;
+        public static final /* synthetic */ int[] f21599a;
 
         static {
             int[] iArr = new int[c.values().length];
@@ -211,7 +211,7 @@ public enum c {
                 iArr[c.UNDEFINED.ordinal()] = 5;
             } catch (NoSuchFieldError unused5) {
             }
-            f21026a = iArr;
+            f21599a = iArr;
         }
     }
 
@@ -228,7 +228,7 @@ public enum c {
     @Override // java.lang.Enum
     @NotNull
     public String toString() {
-        int i10 = b.f21026a[ordinal()];
+        int i10 = b.f21599a[ordinal()];
         if (i10 == 1) {
             return "Preview";
         }

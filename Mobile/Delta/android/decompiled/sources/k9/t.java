@@ -9,10 +9,10 @@ public final class t implements Parcelable.Creator {
     public static final t b = new t(new u());
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Parcelable.Creator f22286a;
+    public final Parcelable.Creator f22510a;
 
     public t(Parcelable.Creator creator) {
-        this.f22286a = creator;
+        this.f22510a = creator;
     }
 
     public static t a() {

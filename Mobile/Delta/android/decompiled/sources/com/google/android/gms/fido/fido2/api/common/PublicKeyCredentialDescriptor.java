@@ -21,17 +21,17 @@ public class PublicKeyCredentialDescriptor extends AbstractSafeParcelable {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NonNull
-    public final PublicKeyCredentialType f5995f;
+    public final PublicKeyCredentialType f6068f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
     @NonNull
-    public final m3 f5996g;
+    public final m3 f6069g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final List f5997h;
+    public final List f6070h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final h1 f5994i = h1.p(p3.f15328a, p3.b);
+    public static final h1 f6067i = h1.p(p3.f15942a, p3.b);
 
     @NonNull
     public static final Parcelable.Creator<PublicKeyCredentialDescriptor> CREATOR = new l();
@@ -39,9 +39,9 @@ public class PublicKeyCredentialDescriptor extends AbstractSafeParcelable {
     public PublicKeyCredentialDescriptor(String str, m3 m3Var, List<Transport> list) {
         m.l(str);
         try {
-            this.f5995f = PublicKeyCredentialType.a(str);
-            this.f5996g = (m3) m.l(m3Var);
-            this.f5997h = list;
+            this.f6068f = PublicKeyCredentialType.a(str);
+            this.f6069g = (m3) m.l(m3Var);
+            this.f6070h = list;
         } catch (PublicKeyCredentialType.a e10) {
             throw new IllegalArgumentException(e10);
         }
@@ -58,32 +58,32 @@ public class PublicKeyCredentialDescriptor extends AbstractSafeParcelable {
             return false;
         }
         PublicKeyCredentialDescriptor publicKeyCredentialDescriptor = (PublicKeyCredentialDescriptor) obj;
-        if (!this.f5995f.equals(publicKeyCredentialDescriptor.f5995f) || !k.b(this.f5996g, publicKeyCredentialDescriptor.f5996g)) {
+        if (!this.f6068f.equals(publicKeyCredentialDescriptor.f6068f) || !k.b(this.f6069g, publicKeyCredentialDescriptor.f6069g)) {
             return false;
         }
-        List list2 = this.f5997h;
-        if (list2 == null && publicKeyCredentialDescriptor.f5997h == null) {
+        List list2 = this.f6070h;
+        if (list2 == null && publicKeyCredentialDescriptor.f6070h == null) {
             return true;
         }
-        return list2 != null && (list = publicKeyCredentialDescriptor.f5997h) != null && list2.containsAll(list) && publicKeyCredentialDescriptor.f5997h.containsAll(this.f5997h);
+        return list2 != null && (list = publicKeyCredentialDescriptor.f6070h) != null && list2.containsAll(list) && publicKeyCredentialDescriptor.f6070h.containsAll(this.f6070h);
     }
 
     public int hashCode() {
-        return k.c(this.f5995f, this.f5996g, this.f5997h);
+        return k.c(this.f6068f, this.f6069g, this.f6070h);
     }
 
     @NonNull
     public final String toString() {
-        return "PublicKeyCredentialDescriptor{\n type=" + String.valueOf(this.f5995f) + ", \n id=" + u9.c.b(v3()) + ", \n transports=" + String.valueOf(this.f5997h) + "}";
+        return "PublicKeyCredentialDescriptor{\n type=" + String.valueOf(this.f6068f) + ", \n id=" + u9.c.b(v3()) + ", \n transports=" + String.valueOf(this.f6070h) + "}";
     }
 
     @NonNull
     public byte[] v3() {
-        return this.f5996g.p();
+        return this.f6069g.p();
     }
 
     public List<Transport> w3() {
-        return this.f5997h;
+        return this.f6070h;
     }
 
     @Override // android.os.Parcelable
@@ -97,7 +97,7 @@ public class PublicKeyCredentialDescriptor extends AbstractSafeParcelable {
 
     @NonNull
     public String x3() {
-        return this.f5995f.toString();
+        return this.f6068f.toString();
     }
 
     /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */

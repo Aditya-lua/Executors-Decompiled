@@ -6,7 +6,7 @@ import android.graphics.Color;
 public final class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final ThreadLocal<double[]> f1782a = new ThreadLocal<>();
+    public static final ThreadLocal<double[]> f1627a = new ThreadLocal<>();
 
     public static void a(int i10, int i11, int i12, double[] dArr) {
         if (dArr.length != 3) {
@@ -80,7 +80,7 @@ public final class c {
     }
 
     public static double[] k() {
-        ThreadLocal<double[]> threadLocal = f1782a;
+        ThreadLocal<double[]> threadLocal = f1627a;
         double[] dArr = threadLocal.get();
         if (dArr != null) {
             return dArr;

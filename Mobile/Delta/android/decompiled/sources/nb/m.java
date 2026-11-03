@@ -6,10 +6,10 @@ import java.util.EnumMap;
 public final class m {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final EnumMap f25738a;
+    public final EnumMap f26559a;
 
     public m() {
-        this.f25738a = new EnumMap(p8.class);
+        this.f26559a = new EnumMap(p8.class);
     }
 
     public static m d(String str) {
@@ -32,7 +32,7 @@ public final class m {
     }
 
     public final l a(p8 p8Var) {
-        l lVar = (l) this.f25738a.get(p8Var);
+        l lVar = (l) this.f26559a.get(p8Var);
         return lVar == null ? l.UNSET : lVar;
     }
 
@@ -50,17 +50,17 @@ public final class m {
         } else if (i10 == 30) {
             lVar = l.INITIALIZATION;
         }
-        this.f25738a.put(p8Var, lVar);
+        this.f26559a.put(p8Var, lVar);
     }
 
     public final void c(p8 p8Var, l lVar) {
-        this.f25738a.put(p8Var, lVar);
+        this.f26559a.put(p8Var, lVar);
     }
 
     public final String toString() {
         StringBuilder sb2 = new StringBuilder("1");
         for (p8 p8Var : p8.values()) {
-            l lVar = (l) this.f25738a.get(p8Var);
+            l lVar = (l) this.f26559a.get(p8Var);
             if (lVar == null) {
                 lVar = l.UNSET;
             }
@@ -71,7 +71,7 @@ public final class m {
 
     public m(EnumMap enumMap) {
         EnumMap enumMap2 = new EnumMap(p8.class);
-        this.f25738a = enumMap2;
+        this.f26559a = enumMap2;
         enumMap2.putAll(enumMap);
     }
 }

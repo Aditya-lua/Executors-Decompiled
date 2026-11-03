@@ -18,19 +18,19 @@ public final class AFc1sSDK {
     public AFe1zSDK AFLogger;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public byte[] f5263d;
+    public byte[] f5336d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public Map<String, String> f5264e;
+    public Map<String, String> f5337e;
     public String registerClient;
     public String unregisterClient;
 
     public AFc1sSDK(String str, byte[] bArr, String str2, AFe1zSDK aFe1zSDK, Map<String, String> map) {
         this.unregisterClient = str;
-        this.f5263d = bArr;
+        this.f5336d = bArr;
         this.AFKeystoreWrapper = str2;
         this.AFLogger = aFe1zSDK;
-        this.f5264e = map;
+        this.f5337e = map;
     }
 
     public final boolean equals(Object obj) {
@@ -39,7 +39,7 @@ public final class AFc1sSDK {
         }
         if (obj != null && AFc1sSDK.class == obj.getClass()) {
             AFc1sSDK aFc1sSDK = (AFc1sSDK) obj;
-            if (Objects.equals(this.AFKeystoreWrapper, aFc1sSDK.AFKeystoreWrapper) && Arrays.equals(this.f5263d, aFc1sSDK.f5263d) && Objects.equals(this.unregisterClient, aFc1sSDK.unregisterClient) && Objects.equals(this.registerClient, aFc1sSDK.registerClient) && Objects.equals(this.f5264e, aFc1sSDK.f5264e) && this.AFLogger == aFc1sSDK.AFLogger) {
+            if (Objects.equals(this.AFKeystoreWrapper, aFc1sSDK.AFKeystoreWrapper) && Arrays.equals(this.f5336d, aFc1sSDK.f5336d) && Objects.equals(this.unregisterClient, aFc1sSDK.unregisterClient) && Objects.equals(this.registerClient, aFc1sSDK.registerClient) && Objects.equals(this.f5337e, aFc1sSDK.f5337e) && this.AFLogger == aFc1sSDK.AFLogger) {
                 return true;
             }
         }
@@ -48,14 +48,14 @@ public final class AFc1sSDK {
 
     public final int hashCode() {
         String str = this.AFKeystoreWrapper;
-        int iHashCode = (((str != null ? str.hashCode() : 0) * 31) + Arrays.hashCode(this.f5263d)) * 31;
+        int iHashCode = (((str != null ? str.hashCode() : 0) * 31) + Arrays.hashCode(this.f5336d)) * 31;
         String str2 = this.unregisterClient;
         int iHashCode2 = (iHashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
         String str3 = this.registerClient;
         int iHashCode3 = (iHashCode2 + (str3 != null ? str3.hashCode() : 0)) * 31;
         AFe1zSDK aFe1zSDK = this.AFLogger;
         int iHashCode4 = (iHashCode3 + (aFe1zSDK != null ? aFe1zSDK.hashCode() : 0)) * 31;
-        Map<String, String> map = this.f5264e;
+        Map<String, String> map = this.f5337e;
         return iHashCode4 + (map != null ? map.hashCode() : 0);
     }
 
@@ -70,13 +70,13 @@ public final class AFc1sSDK {
                     this.AFKeystoreWrapper = strNextLine.substring(8).trim();
                 } else if (strNextLine.startsWith("headers=")) {
                     try {
-                        this.f5264e = JsonUtils.toStringMap(new JSONObject(new String(Base64.decode(strNextLine.substring(8).trim(), 2), Charset.defaultCharset())));
+                        this.f5337e = JsonUtils.toStringMap(new JSONObject(new String(Base64.decode(strNextLine.substring(8).trim(), 2), Charset.defaultCharset())));
                     } catch (Exception e10) {
                         AFLogger.INSTANCE.e(LogTag.CACHE, "Error parsing headers", e10);
-                        this.f5264e = new HashMap();
+                        this.f5337e = new HashMap();
                     }
                 } else if (strNextLine.startsWith("data=")) {
-                    this.f5263d = Base64.decode(strNextLine.substring(5).trim(), 2);
+                    this.f5336d = Base64.decode(strNextLine.substring(5).trim(), 2);
                 } else if (strNextLine.startsWith("type=")) {
                     String strTrim = strNextLine.substring(5).trim();
                     AFd1bSDK aFd1bSDKRegisterClient = AFd1bSDK.registerClient(strTrim);

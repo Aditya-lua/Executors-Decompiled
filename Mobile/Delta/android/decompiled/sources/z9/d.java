@@ -7,7 +7,7 @@ import android.util.Log;
 public final class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static ClassLoader f37347a;
+    public static ClassLoader f38042a;
     public static Thread b;
 
     /* JADX WARN: Code duplicated, block: B:52:0x00b6 A[Catch: all -> 0x00b2, PHI: r2
@@ -17,7 +17,7 @@ public final class d {
         SecurityException e10;
         Thread thread;
         ThreadGroup threadGroup;
-        if (f37347a == null) {
+        if (f38042a == null) {
             Thread thread2 = b;
             ClassLoader contextClassLoader = null;
             if (thread2 != null) {
@@ -32,7 +32,7 @@ public final class d {
                         Log.w("DynamiteLoaderV2CL", sb2.toString());
                     }
                 }
-                f37347a = contextClassLoader;
+                f38042a = contextClassLoader;
             } else {
                 ThreadGroup threadGroup2 = Looper.getMainLooper().getThread().getThreadGroup();
                 if (threadGroup2 == null) {
@@ -110,9 +110,9 @@ public final class d {
                         contextClassLoader = b.getContextClassLoader();
                     }
                 }
-                f37347a = contextClassLoader;
+                f38042a = contextClassLoader;
             }
         }
-        return f37347a;
+        return f38042a;
     }
 }

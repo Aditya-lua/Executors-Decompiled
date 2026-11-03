@@ -11,14 +11,14 @@ import n0.g3;
 public class ImageCaptureFailedForVideoSnapshotQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Set<String> f1333a = new HashSet(Arrays.asList("itel l6006", "itel w6004", "moto g(20)", "moto e13", "moto e20", "rmx3231", "rmx3511", "sm-a032f", "sm-a035m", "sm-f946u1", "tecno mobile bf6"));
+    public static final Set<String> f1178a = new HashSet(Arrays.asList("itel l6006", "itel w6004", "moto g(20)", "moto e13", "moto e20", "rmx3231", "rmx3511", "sm-a032f", "sm-a035m", "sm-f946u1", "tecno mobile bf6"));
 
     public static boolean g() {
         return "HUAWEI".equalsIgnoreCase(Build.BRAND) && "FIG-LX1".equalsIgnoreCase(Build.MODEL);
     }
 
     public static boolean h() {
-        Set<String> set = f1333a;
+        Set<String> set = f1178a;
         String str = Build.MODEL;
         Locale locale = Locale.US;
         if (set.contains(str.toLowerCase(locale))) {

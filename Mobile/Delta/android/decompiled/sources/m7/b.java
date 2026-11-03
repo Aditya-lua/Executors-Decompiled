@@ -21,7 +21,7 @@ public class b extends p<Float, Float> {
     @Override // m7.o
     /* JADX INFO: renamed from: d, reason: merged with bridge method [inline-methods] */
     public i7.d a() {
-        return new i7.d(this.f24039a);
+        return new i7.d(this.f24689a);
     }
 
     @Override // m7.p

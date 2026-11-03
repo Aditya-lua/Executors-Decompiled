@@ -72,34 +72,34 @@ public final class b {
     public static final class a extends FilterInputStream {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public long f8746a;
+        public long f8820a;
         public long b;
 
         public a(InputStream inputStream, long j10) {
             super(inputStream);
             this.b = -1L;
-            this.f8746a = j10;
+            this.f8820a = j10;
         }
 
         @Override // java.io.FilterInputStream, java.io.InputStream
         public int available() {
-            return (int) Math.min(((FilterInputStream) this).in.available(), this.f8746a);
+            return (int) Math.min(((FilterInputStream) this).in.available(), this.f8820a);
         }
 
         @Override // java.io.FilterInputStream, java.io.InputStream
         public synchronized void mark(int i10) {
             ((FilterInputStream) this).in.mark(i10);
-            this.b = this.f8746a;
+            this.b = this.f8820a;
         }
 
         @Override // java.io.FilterInputStream, java.io.InputStream
         public int read() throws IOException {
-            if (this.f8746a == 0) {
+            if (this.f8820a == 0) {
                 return -1;
             }
             int i10 = ((FilterInputStream) this).in.read();
             if (i10 != -1) {
-                this.f8746a--;
+                this.f8820a--;
             }
             return i10;
         }
@@ -113,25 +113,25 @@ public final class b {
                 throw new IOException("Mark not set");
             }
             ((FilterInputStream) this).in.reset();
-            this.f8746a = this.b;
+            this.f8820a = this.b;
         }
 
         @Override // java.io.FilterInputStream, java.io.InputStream
         public long skip(long j10) throws IOException {
-            long jSkip = ((FilterInputStream) this).in.skip(Math.min(j10, this.f8746a));
-            this.f8746a -= jSkip;
+            long jSkip = ((FilterInputStream) this).in.skip(Math.min(j10, this.f8820a));
+            this.f8820a -= jSkip;
             return jSkip;
         }
 
         @Override // java.io.FilterInputStream, java.io.InputStream
         public int read(byte[] bArr, int i10, int i11) throws IOException {
-            long j10 = this.f8746a;
+            long j10 = this.f8820a;
             if (j10 == 0) {
                 return -1;
             }
             int i12 = ((FilterInputStream) this).in.read(bArr, i10, (int) Math.min(i11, j10));
             if (i12 != -1) {
-                this.f8746a -= (long) i12;
+                this.f8820a -= (long) i12;
             }
             return i12;
         }

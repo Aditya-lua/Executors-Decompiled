@@ -14,21 +14,21 @@ import java.util.Locale;
 public class d extends BaseAdapter {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final int f7849d = 4;
+    public static final int f7923d = 4;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final Calendar f7850a;
+    public final Calendar f7924a;
     public final int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final int f7851c;
+    public final int f7925c;
 
     public d() {
         Calendar calendarI = p.i();
-        this.f7850a = calendarI;
+        this.f7924a = calendarI;
         this.b = calendarI.getMaximum(7);
-        this.f7851c = calendarI.getFirstDayOfWeek();
+        this.f7925c = calendarI.getFirstDayOfWeek();
     }
 
     @Override // android.widget.Adapter
@@ -41,7 +41,7 @@ public class d extends BaseAdapter {
     }
 
     public final int b(int i10) {
-        int i11 = i10 + this.f7851c;
+        int i11 = i10 + this.f7925c;
         int i12 = this.b;
         return i11 > i12 ? i11 - i12 : i11;
     }
@@ -61,18 +61,18 @@ public class d extends BaseAdapter {
     public View getView(int i10, View view, @NonNull ViewGroup viewGroup) {
         TextView textView = (TextView) view;
         if (view == null) {
-            textView = (TextView) LayoutInflater.from(viewGroup.getContext()).inflate(hc.h.f18900o, viewGroup, false);
+            textView = (TextView) LayoutInflater.from(viewGroup.getContext()).inflate(ic.h.f20722o, viewGroup, false);
         }
-        this.f7850a.set(7, b(i10));
-        textView.setText(this.f7850a.getDisplayName(7, f7849d, textView.getResources().getConfiguration().locale));
-        textView.setContentDescription(String.format(viewGroup.getContext().getString(hc.i.f18919l), this.f7850a.getDisplayName(7, 2, Locale.getDefault())));
+        this.f7924a.set(7, b(i10));
+        textView.setText(this.f7924a.getDisplayName(7, f7923d, textView.getResources().getConfiguration().locale));
+        textView.setContentDescription(String.format(viewGroup.getContext().getString(ic.i.f20741l), this.f7924a.getDisplayName(7, 2, Locale.getDefault())));
         return textView;
     }
 
     public d(int i10) {
         Calendar calendarI = p.i();
-        this.f7850a = calendarI;
+        this.f7924a = calendarI;
         this.b = calendarI.getMaximum(7);
-        this.f7851c = i10;
+        this.f7925c = i10;
     }
 }

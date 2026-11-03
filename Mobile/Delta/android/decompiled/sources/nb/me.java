@@ -82,97 +82,97 @@ public final class me implements l8 {
     public long I;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final x6 f25753a;
+    public final x6 f26574a;
     public final b6 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public t f25754c;
+    public t f26575c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public e6 f25755d;
+    public e6 f26576d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public sd f25756e;
+    public sd f26577e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public e f25757f;
+    public e f26578f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final re f25758g;
+    public final re f26579g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public wa f25759h;
+    public wa f26580h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public vc f25760i;
+    public vc f26581i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final zd f25761j;
+    public final zd f26582j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public n6 f25762k;
+    public n6 f26583k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final g7 f25763l;
+    public final g7 f26584l;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public boolean f25765n;
+    public boolean f26586n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public long f25766o;
+    public long f26587o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public List f25767p;
+    public List f26588p;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public int f25769r;
+    public int f26590r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public int f25770s;
+    public int f26591s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public boolean f25771t;
+    public boolean f26592t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public boolean f25772u;
+    public boolean f26593u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public boolean f25773v;
+    public boolean f26594v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public FileLock f25774w;
+    public FileLock f26595w;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public FileChannel f25775x;
+    public FileChannel f26596x;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public List f25776y;
+    public List f26597y;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public List f25777z;
+    public List f26598z;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final AtomicBoolean f25764m = new AtomicBoolean(false);
+    public final AtomicBoolean f26585m = new AtomicBoolean(false);
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public final Deque f25768q = new LinkedList();
+    public final Deque f26589q = new LinkedList();
     public final Map E = new HashMap();
     public final ue J = new he(this);
 
     public me(ne neVar, g7 g7Var) {
         n9.m.l(neVar);
-        this.f25763l = g7.O(neVar.f25806a, null, null);
+        this.f26584l = g7.O(neVar.f26627a, null, null);
         this.A = -1L;
-        this.f25761j = new zd(this);
+        this.f26582j = new zd(this);
         re reVar = new re(this);
         reVar.k();
-        this.f25758g = reVar;
+        this.f26579g = reVar;
         b6 b6Var = new b6(this);
         b6Var.k();
         this.b = b6Var;
         x6 x6Var = new x6(this);
         x6Var.k();
-        this.f25753a = x6Var;
+        this.f26574a = x6Var;
         this.B = new HashMap();
         this.C = new HashMap();
         this.D = new HashMap();
@@ -197,9 +197,9 @@ public final class me implements l8 {
     }
 
     public static final void G(com.google.android.gms.internal.measurement.n6 n6Var, int i10, String str) {
-        List listX = n6Var.x();
-        for (int i11 = 0; i11 < listX.size(); i11++) {
-            if ("_err".equals(((com.google.android.gms.internal.measurement.s6) listX.get(i11)).G())) {
+        List listY = n6Var.y();
+        for (int i11 = 0; i11 < listY.size(); i11++) {
+            if ("_err".equals(((com.google.android.gms.internal.measurement.s6) listY.get(i11)).G())) {
                 return;
             }
         }
@@ -216,9 +216,9 @@ public final class me implements l8 {
     }
 
     public static final void H(com.google.android.gms.internal.measurement.n6 n6Var, @NonNull String str) {
-        List listX = n6Var.x();
-        for (int i10 = 0; i10 < listX.size(); i10++) {
-            if (str.equals(((com.google.android.gms.internal.measurement.s6) listX.get(i10)).G())) {
+        List listY = n6Var.y();
+        for (int i10 = 0; i10 < listY.size(); i10++) {
+            if (str.equals(((com.google.android.gms.internal.measurement.s6) listY.get(i10)).G())) {
                 n6Var.N(i10);
                 return;
             }
@@ -249,7 +249,7 @@ public final class me implements l8 {
     }
 
     public static final boolean X(zzr zzrVar) {
-        return !TextUtils.isEmpty(zzrVar.f7446g);
+        return !TextUtils.isEmpty(zzrVar.f7520g);
     }
 
     public static final xd Y(xd xdVar) {
@@ -263,7 +263,7 @@ public final class me implements l8 {
     }
 
     public static final Boolean Z(zzr zzrVar) {
-        Boolean bool = zzrVar.f7460u;
+        Boolean bool = zzrVar.f7534u;
         String str = zzrVar.H;
         if (!TextUtils.isEmpty(str)) {
             n8 n8VarA = z2.c(str).a();
@@ -321,15 +321,15 @@ public final class me implements l8 {
             try {
                 bArr2 = new byte[0];
             } catch (Throwable th3) {
-                this.f25772u = false;
+                this.f26593u = false;
                 S();
                 throw th3;
             }
         } else {
             bArr2 = bArr;
         }
-        List<Long> list2 = (List) n9.m.l(this.f25776y);
-        this.f25776y = null;
+        List<Long> list2 = (List) n9.m.l(this.f26597y);
+        this.f26597y = null;
         if (z10) {
             if (i11 == 200) {
                 if (th2 != null) {
@@ -337,9 +337,9 @@ public final class me implements l8 {
                     numValueOf = Integer.valueOf(i11);
                     u5VarW.c("Network upload successful with code, uploadAttempted", numValueOf, Boolean.valueOf(z10));
                     if (z10) {
-                        this.f25760i.f26037h.b(e().a());
+                        this.f26581i.f26858h.b(e().a());
                     }
-                    this.f25760i.f26038i.b(0L);
+                    this.f26581i.f26859i.b(0L);
                     R();
                     if (z10) {
                         a().w().c("Successful upload. Got network response. code, size", numValueOf, Integer.valueOf(bArr2.length));
@@ -381,7 +381,7 @@ public final class me implements l8 {
                     }
                     F0().s0();
                     F0().t0();
-                    this.f25777z = null;
+                    this.f26598z = null;
                     if (!E0().m()) {
                         if (E0().m()) {
                             this.A = -1L;
@@ -397,7 +397,7 @@ public final class me implements l8 {
                         this.A = -1L;
                         R();
                     }
-                    this.f25766o = 0L;
+                    this.f26587o = 0L;
                 }
             } else if (i11 == 204) {
                 i11 = 204;
@@ -406,9 +406,9 @@ public final class me implements l8 {
                     numValueOf = Integer.valueOf(i11);
                     u5VarW2.c("Network upload successful with code, uploadAttempted", numValueOf, Boolean.valueOf(z10));
                     if (z10) {
-                        this.f25760i.f26037h.b(e().a());
+                        this.f26581i.f26858h.b(e().a());
                     }
-                    this.f25760i.f26038i.b(0L);
+                    this.f26581i.f26859i.b(0L);
                     R();
                     if (z10) {
                         a().w().c("Successful upload. Got network response. code, size", numValueOf, Integer.valueOf(bArr2.length));
@@ -450,7 +450,7 @@ public final class me implements l8 {
                     }
                     F0().s0();
                     F0().t0();
-                    this.f25777z = null;
+                    this.f26598z = null;
                     if (!E0().m()) {
                         if (E0().m()) {
                             this.A = -1L;
@@ -466,14 +466,14 @@ public final class me implements l8 {
                         this.A = -1L;
                         R();
                     }
-                    this.f25766o = 0L;
+                    this.f26587o = 0L;
                 }
             }
             String str2 = new String(bArr2, StandardCharsets.UTF_8);
             a().t().d("Network upload failed. Will retry later. code, error", Integer.valueOf(i11), th2, str2.substring(0, Math.min(32, str2.length())));
-            this.f25760i.f26038i.b(e().a());
+            this.f26581i.f26859i.b(e().a());
             if (i11 == 503 || i11 == 429) {
-                this.f25760i.f26036g.b(e().a());
+                this.f26581i.f26857g.b(e().a());
             }
             F0().v(list2);
             R();
@@ -483,14 +483,14 @@ public final class me implements l8 {
             u5VarW3.c("Network upload successful with code, uploadAttempted", numValueOf, Boolean.valueOf(z10));
             if (z10) {
                 try {
-                    this.f25760i.f26037h.b(e().a());
+                    this.f26581i.f26858h.b(e().a());
                 } catch (SQLiteException e10) {
                     a().o().b("Database error while trying to delete uploaded bundles", e10);
-                    this.f25766o = e().b();
-                    a().w().b("Disable upload, time", Long.valueOf(this.f25766o));
+                    this.f26587o = e().b();
+                    a().w().b("Disable upload, time", Long.valueOf(this.f26587o));
                 }
             }
-            this.f25760i.f26038i.b(0L);
+            this.f26581i.f26859i.b(0L);
             R();
             if (z10) {
                 a().w().c("Successful upload. Got network response. code, size", numValueOf, Integer.valueOf(bArr2.length));
@@ -532,7 +532,7 @@ public final class me implements l8 {
                     try {
                         F0().t(l10.longValue());
                     } catch (SQLiteException e11) {
-                        List list3 = this.f25777z;
+                        List list3 = this.f26598z;
                         if (list3 == null || !list3.contains(l10)) {
                             throw e11;
                         }
@@ -540,7 +540,7 @@ public final class me implements l8 {
                 }
                 F0().s0();
                 F0().t0();
-                this.f25777z = null;
+                this.f26598z = null;
                 if (!E0().m() && F0().p(str)) {
                     u(str);
                 } else if (E0().m() || !P()) {
@@ -549,13 +549,13 @@ public final class me implements l8 {
                 } else {
                     r();
                 }
-                this.f25766o = 0L;
+                this.f26587o = 0L;
             } catch (Throwable th4) {
                 F0().t0();
                 throw th4;
             }
         }
-        this.f25772u = false;
+        this.f26593u = false;
         S();
     }
 
@@ -566,18 +566,18 @@ public final class me implements l8 {
         tVarF0.h();
         tVarF0.j();
         if (tVarF0.a0()) {
-            y4 y4Var = z4.f26205w0;
+            y4 y4Var = z4.f27026w0;
             if (((Long) y4Var.b(null)).longValue() != 0) {
                 SQLiteDatabase sQLiteDatabaseU0 = tVarF0.u0();
-                g7 g7Var = tVarF0.f25625a;
+                g7 g7Var = tVarF0.f26446a;
                 int iDelete = sQLiteDatabaseU0.delete("trigger_uris", "abs(timestamp_millis - ?) > cast(? as integer)", new String[]{String.valueOf(g7Var.e().a()), String.valueOf(y4Var.b(null))});
                 if (iDelete > 0) {
                     g7Var.a().w().b("Deleted stale trigger uris. rowsDeleted", Integer.valueOf(iDelete));
                 }
             }
         }
-        if (this.f25760i.f26037h.a() == 0) {
-            this.f25760i.f26037h.b(e().a());
+        if (this.f26581i.f26858h.a() == 0) {
+            this.f26581i.f26858h.b(e().a());
         }
         R();
     }
@@ -606,17 +606,17 @@ public final class me implements l8 {
                 aVar.put("If-None-Match", strZ);
             }
         }
-        this.f25771t = true;
+        this.f26592t = true;
         E0().o(c6Var, aVar, new y5() { // from class: nb.le
             @Override // nb.y5
             public final /* synthetic */ void a(String str2, int i10, Throwable th2, byte[] bArr, Map map) {
-                this.f25737a.C(str2, i10, th2, bArr, map);
+                this.f26558a.C(str2, i10, th2, bArr, map);
             }
         });
     }
 
     public final k B0() {
-        return ((g7) n9.m.l(this.f25763l)).w();
+        return ((g7) n9.m.l(this.f26584l)).w();
     }
 
     /* JADX WARN: Code duplicated, block: B:14:0x0045 A[PHI: r8
@@ -631,7 +631,7 @@ public final class me implements l8 {
             try {
                 bArr = new byte[0];
             } catch (Throwable th3) {
-                this.f25771t = false;
+                this.f26592t = false;
                 S();
                 throw th3;
             }
@@ -687,15 +687,15 @@ public final class me implements l8 {
                 F0().K0(c6VarJ0, false, false);
                 a().w().c("Fetching config failed. code, error", Integer.valueOf(i10), th2);
                 D0().A(str);
-                this.f25760i.f26038i.b(e().a());
+                this.f26581i.f26859i.b(e().a());
                 if (i10 == 503 || i10 == 429) {
-                    this.f25760i.f26036g.b(e().a());
+                    this.f26581i.f26857g.b(e().a());
                 }
                 R();
             }
             F0().s0();
             F0().t0();
-            this.f25771t = false;
+            this.f26592t = false;
             S();
         } catch (Throwable th4) {
             F0().t0();
@@ -704,19 +704,19 @@ public final class me implements l8 {
     }
 
     public final zd C0() {
-        return this.f25761j;
+        return this.f26582j;
     }
 
     public final void D(Runnable runnable) {
         b().h();
-        if (this.f25767p == null) {
-            this.f25767p = new ArrayList();
+        if (this.f26588p == null) {
+            this.f26588p = new ArrayList();
         }
-        this.f25767p.add(runnable);
+        this.f26588p.add(runnable);
     }
 
     public final x6 D0() {
-        x6 x6Var = this.f25753a;
+        x6 x6Var = this.f26574a;
         Y(x6Var);
         return x6Var;
     }
@@ -724,12 +724,12 @@ public final class me implements l8 {
     public final void E() {
         b().h();
         O0();
-        if (this.f25765n) {
+        if (this.f26586n) {
             return;
         }
-        this.f25765n = true;
+        this.f26586n = true;
         if (a0()) {
-            FileChannel fileChannel = this.f25775x;
+            FileChannel fileChannel = this.f26596x;
             b().h();
             int i10 = 0;
             if (fileChannel == null || !fileChannel.isOpen()) {
@@ -749,14 +749,14 @@ public final class me implements l8 {
                     a().o().b("Failed to read from channel", e10);
                 }
             }
-            int iT = this.f25763l.L().t();
+            int iT = this.f26584l.L().t();
             b().h();
             if (i10 > iT) {
                 a().o().c("Panic: can't downgrade version. Previous, current version", Integer.valueOf(i10), Integer.valueOf(iT));
                 return;
             }
             if (i10 < iT) {
-                FileChannel fileChannel2 = this.f25775x;
+                FileChannel fileChannel2 = this.f26596x;
                 b().h();
                 if (fileChannel2 == null || !fileChannel2.isOpen()) {
                     a().o().a("Bad channel to read from");
@@ -789,13 +789,13 @@ public final class me implements l8 {
     }
 
     public final t F0() {
-        t tVar = this.f25754c;
+        t tVar = this.f26575c;
         Y(tVar);
         return tVar;
     }
 
     public final e6 G0() {
-        e6 e6Var = this.f25755d;
+        e6 e6Var = this.f26576d;
         if (e6Var != null) {
             return e6Var;
         }
@@ -803,7 +803,7 @@ public final class me implements l8 {
     }
 
     public final sd H0() {
-        sd sdVar = this.f25756e;
+        sd sdVar = this.f26577e;
         Y(sdVar);
         return sdVar;
     }
@@ -811,7 +811,7 @@ public final class me implements l8 {
     public final int I(String str, m mVar) {
         p8 p8Var;
         n8 n8VarM;
-        x6 x6Var = this.f25753a;
+        x6 x6Var = this.f26574a;
         if (x6Var.R(str) == null) {
             mVar.c(p8.AD_PERSONALIZATION, l.FAILSAFE);
             return 1;
@@ -827,7 +827,7 @@ public final class me implements l8 {
     }
 
     public final e I0() {
-        e eVar = this.f25757f;
+        e eVar = this.f26578f;
         Y(eVar);
         return eVar;
     }
@@ -842,20 +842,20 @@ public final class me implements l8 {
     }
 
     public final wa J0() {
-        wa waVar = this.f25759h;
+        wa waVar = this.f26580h;
         Y(waVar);
         return waVar;
     }
 
     public final w K() {
         if (this.H == null) {
-            this.H = new de(this, this.f25763l);
+            this.H = new de(this, this.f26584l);
         }
         return this.H;
     }
 
     public final re K0() {
-        re reVar = this.f25758g;
+        re reVar = this.f26579g;
         Y(reVar);
         return reVar;
     }
@@ -863,7 +863,7 @@ public final class me implements l8 {
     /* JADX INFO: renamed from: L, reason: merged with bridge method [inline-methods] */
     public final void v0() {
         b().h();
-        if (this.f25768q.isEmpty() || K().c()) {
+        if (this.f26589q.isEmpty() || K().c()) {
             return;
         }
         long jMax = Math.max(0L, ((long) ((Integer) z4.C0.b(null)).intValue()) - (e().b() - this.I));
@@ -872,7 +872,7 @@ public final class me implements l8 {
     }
 
     public final vc L0() {
-        return this.f25760i;
+        return this.f26581i;
     }
 
     /* JADX WARN: Code duplicated, block: B:114:0x03bd A[Catch: all -> 0x00f6, TryCatch #2 {all -> 0x00f6, blocks: (B:3:0x0017, B:5:0x002e, B:8:0x0038, B:9:0x004e, B:12:0x0060, B:15:0x008a, B:17:0x00bf, B:20:0x00d0, B:22:0x00da, B:226:0x06cf, B:26:0x0107, B:29:0x0119, B:31:0x011f, B:46:0x0163, B:48:0x0171, B:51:0x0191, B:53:0x0197, B:55:0x01a7, B:57:0x01b5, B:59:0x01c5, B:60:0x01d2, B:61:0x01d5, B:64:0x01eb, B:73:0x021e, B:76:0x0228, B:78:0x0236, B:82:0x027d, B:79:0x0253, B:81:0x0263, B:86:0x028a, B:89:0x02bf, B:90:0x02e9, B:92:0x0322, B:94:0x0328, B:97:0x0334, B:99:0x036b, B:100:0x0386, B:102:0x038c, B:104:0x039a, B:108:0x03af, B:105:0x03a3, B:111:0x03b6, B:114:0x03bd, B:115:0x03d5, B:117:0x03ee, B:118:0x03fa, B:121:0x0404, B:127:0x0427, B:124:0x0416, B:149:0x04a5, B:151:0x04b1, B:154:0x04c2, B:156:0x04d3, B:158:0x04df, B:193:0x05ab, B:195:0x05b1, B:196:0x05bd, B:198:0x05c3, B:200:0x05d3, B:202:0x05dd, B:203:0x05ee, B:205:0x05f4, B:206:0x060f, B:208:0x0615, B:209:0x0633, B:210:0x0640, B:214:0x0665, B:211:0x0646, B:213:0x0652, B:215:0x066c, B:216:0x0682, B:218:0x0688, B:220:0x069b, B:221:0x06a8, B:223:0x06af, B:225:0x06bd, B:163:0x04fc, B:165:0x050a, B:168:0x051d, B:170:0x052f, B:172:0x053b, B:174:0x054b, B:176:0x055a, B:179:0x0566, B:181:0x0570, B:183:0x057a, B:186:0x0585, B:188:0x058b, B:190:0x059b, B:191:0x05a6, B:131:0x042f, B:133:0x043b, B:135:0x0447, B:148:0x048d, B:140:0x0465, B:143:0x0477, B:145:0x047d, B:147:0x0487, B:35:0x012b, B:37:0x0138, B:39:0x0144, B:41:0x014a, B:45:0x0155, B:229:0x06e9, B:231:0x06f7, B:233:0x0700, B:244:0x0730, B:234:0x0708, B:236:0x0711, B:238:0x0717, B:241:0x0723, B:243:0x072b, B:245:0x0733, B:246:0x073f, B:249:0x0747, B:251:0x0759, B:252:0x0764, B:254:0x076c, B:258:0x0792, B:260:0x07ac, B:262:0x07c1, B:264:0x07db, B:266:0x07f0, B:267:0x07fe, B:269:0x0804, B:271:0x0814, B:272:0x081b, B:274:0x0827, B:275:0x082e, B:276:0x0831, B:278:0x0873, B:280:0x0879, B:286:0x08a0, B:288:0x08a8, B:289:0x08b1, B:291:0x08b7, B:292:0x08bd, B:294:0x08d2, B:296:0x08e2, B:298:0x08f2, B:300:0x08fa, B:301:0x08fd, B:309:0x0973, B:311:0x098c, B:313:0x09a2, B:315:0x09a7, B:317:0x09ab, B:319:0x09af, B:321:0x09b9, B:323:0x09c2, B:325:0x09c6, B:327:0x09cc, B:329:0x09d7, B:331:0x09e5, B:337:0x0a0d, B:340:0x0a15, B:281:0x0887, B:283:0x088d, B:285:0x0893, B:265:0x07ed, B:261:0x07be, B:255:0x0772, B:257:0x0778), top: B:479:0x0017, inners: #3 }] */
@@ -1041,7 +1041,7 @@ public final class me implements l8 {
     /* JADX WARN: Type inference failed for: r9v7, types: [com.google.android.gms.internal.measurement.z6] */
     /* JADX WARN: Type inference failed for: r9v8 */
     /* JADX WARN: Type inference failed for: r9v9 */
-    public final boolean M(String str, long j10) throws Throwable {
+    public final boolean M(String str, long j10) {
         ?? r8;
         boolean z10;
         ?? r10;
@@ -1086,7 +1086,7 @@ public final class me implements l8 {
         ?? r11;
         int i13;
         int i14;
-        com.google.android.gms.internal.measurement.s6 s6VarA;
+        com.google.android.gms.internal.measurement.s6 s6VarB;
         com.google.android.gms.internal.measurement.n6 n6Var;
         String str6;
         int i15;
@@ -1098,7 +1098,7 @@ public final class me implements l8 {
         int i17;
         com.google.android.gms.internal.measurement.r6 r6VarT;
         Object obj;
-        com.google.android.gms.internal.measurement.s6 s6VarA2;
+        com.google.android.gms.internal.measurement.s6 s6VarB2;
         String str7;
         int i18;
         ?? r12;
@@ -1122,7 +1122,7 @@ public final class me implements l8 {
         try {
             ie ieVar = new ie(r13, null);
             r13.F0().n0(str, j10, r13.A, ieVar);
-            List list2 = ieVar.f25613c;
+            List list2 = ieVar.f26434c;
             try {
                 if (list2 == null || list2.isEmpty()) {
                     ?? r15 = r13;
@@ -1130,7 +1130,7 @@ public final class me implements l8 {
                     z10 = false;
                     r10 = r15;
                 } else {
-                    com.google.android.gms.internal.measurement.z6 z6Var = (com.google.android.gms.internal.measurement.z6) ieVar.f25612a.r();
+                    com.google.android.gms.internal.measurement.z6 z6Var = (com.google.android.gms.internal.measurement.z6) ieVar.f26433a.q();
                     z6Var.d1();
                     ?? r17 = 0;
                     ?? r18 = 0;
@@ -1146,16 +1146,16 @@ public final class me implements l8 {
                         String str11 = "_et";
                         i10 = i25;
                         boolean z16 = z14;
-                        if (i24 >= ieVar.f25613c.size()) {
+                        if (i24 >= ieVar.f26434c.size()) {
                             break;
                         }
-                        ?? r110 = (com.google.android.gms.internal.measurement.n6) ((com.google.android.gms.internal.measurement.o6) ieVar.f25613c.get(i24)).r();
+                        ?? r110 = (com.google.android.gms.internal.measurement.n6) ((com.google.android.gms.internal.measurement.o6) ieVar.f26434c.get(i24)).q();
                         Long l16 = l15;
                         int i26 = i24;
-                        if (r13.D0().D(ieVar.f25612a.F(), r110.O())) {
-                            r13.a().r().c("Dropping blocked raw event. appId", w5.x(ieVar.f25612a.F()), r13.f25763l.D().a(r110.O()));
-                            if (!r13.D0().H(ieVar.f25612a.F()) && !r13.D0().I(ieVar.f25612a.F()) && !"_err".equals(r110.O())) {
-                                r13.N0().B(r13.J, ieVar.f25612a.F(), 11, "_ev", r110.O(), 0);
+                        if (r13.D0().D(ieVar.f26433a.F(), r110.O())) {
+                            r13.a().r().c("Dropping blocked raw event. appId", w5.x(ieVar.f26433a.F()), r13.f26584l.D().a(r110.O()));
+                            if (!r13.D0().H(ieVar.f26433a.F()) && !r13.D0().I(ieVar.f26433a.F()) && !"_err".equals(r110.O())) {
+                                r13.N0().B(r13.J, ieVar.f26433a.F(), 11, "_ev", r110.O(), 0);
                             }
                             i25 = i10;
                             str4 = str9;
@@ -1172,7 +1172,7 @@ public final class me implements l8 {
                                 if (z16) {
                                     str3 = "returning";
                                 } else {
-                                    String strF = ieVar.f25612a.F();
+                                    String strF = ieVar.f26433a.F();
                                     if (r13.V(strF, str9) && r13.V(strF, "_iap") && r13.V(strF, "ecommerce_purchase")) {
                                         str3 = "new";
                                     } else {
@@ -1190,13 +1190,13 @@ public final class me implements l8 {
                                 r13.a().w().a("Renaming ad_impression to _ai");
                                 if (Log.isLoggable(r13.a().z(), 5)) {
                                     for (int i27 = 0; i27 < r110.z(); i27++) {
-                                        if ("ad_platform".equals(r110.A(i27).G()) && !r110.A(i27).J().isEmpty() && "admob".equalsIgnoreCase(r110.A(i27).J())) {
+                                        if ("ad_platform".equals(r110.B(i27).G()) && !r110.B(i27).J().isEmpty() && "admob".equalsIgnoreCase(r110.B(i27).J())) {
                                             r13.a().t().a("AdMob ad impression logged from app. Potentially duplicative.");
                                         }
                                     }
                                 }
                             }
-                            boolean zE = r13.D0().E(ieVar.f25612a.F(), r110.O());
+                            boolean zE = r13.D0().E(ieVar.f26433a.F(), r110.O());
                             if (zE) {
                                 r21 = r16;
                                 str4 = str9;
@@ -1215,7 +1215,7 @@ public final class me implements l8 {
                                     r22 = r23;
                                 }
                                 if (z13) {
-                                    arrayList2 = new ArrayList(r110.x());
+                                    arrayList2 = new ArrayList(r110.y());
                                     i20 = -1;
                                     i21 = -1;
                                     for (i19 = 0; i19 < arrayList2.size(); i19++) {
@@ -1314,11 +1314,11 @@ public final class me implements l8 {
                                         }
                                     } else {
                                         i13 = i23;
-                                        if (r13.B0().H(null, z4.f26180k1) && (("_f".equals(r110.O()) || "_v".equals(r110.O())) && ("_f".equals(r110.O()) || "_v".equals(r110.O())))) {
+                                        if (r13.B0().H(null, z4.f27001k1) && (("_f".equals(r110.O()) || "_v".equals(r110.O())) && ("_f".equals(r110.O()) || "_v".equals(r110.O())))) {
                                             for (i14 = 0; i14 < r110.z(); i14++) {
-                                                s6VarA = r110.A(i14);
-                                                if ("_elt".equals(s6VarA.G())) {
-                                                    r110.V(s6VarA.L());
+                                                s6VarB = r110.B(i14);
+                                                if ("_elt".equals(s6VarB.G())) {
+                                                    r110.V(s6VarB.L());
                                                     r110.N(i14);
                                                     break;
                                                 }
@@ -1333,19 +1333,19 @@ public final class me implements l8 {
                                 }
                                 if (r110.z() != 0) {
                                     r13.K0();
-                                    bundleQ = re.q(r110.x());
+                                    bundleQ = re.q(r110.y());
                                     i16 = 0;
                                     while (i16 < r110.z()) {
-                                        s6VarA2 = r110.A(i16);
+                                        s6VarB2 = r110.B(i16);
                                         str7 = str12;
-                                        if (s6VarA2.G().equals(str7) || s6VarA2.R().isEmpty()) {
+                                        if (s6VarB2.G().equals(str7) || s6VarB2.R().isEmpty()) {
                                             i18 = i16;
-                                            if (!s6VarA2.G().equals(str7)) {
-                                                r13.z(r110.O(), (com.google.android.gms.internal.measurement.r6) s6VarA2.r(), bundleQ, ieVar.f25612a.F());
+                                            if (!s6VarB2.G().equals(str7)) {
+                                                r13.z(r110.O(), (com.google.android.gms.internal.measurement.r6) s6VarB2.q(), bundleQ, ieVar.f26433a.F());
                                             }
                                         } else {
-                                            String strF2 = ieVar.f25612a.F();
-                                            List listR = s6VarA2.R();
+                                            String strF2 = ieVar.f26433a.F();
+                                            List listR = s6VarB2.R();
                                             Bundle[] bundleArr = new Bundle[listR.size()];
                                             int i29 = 0;
                                             while (i29 < listR.size()) {
@@ -1354,7 +1354,7 @@ public final class me implements l8 {
                                                 Bundle bundleQ2 = re.q(s6Var2.R());
                                                 Iterator it2 = s6Var2.R().iterator();
                                                 while (it2.hasNext()) {
-                                                    r13.z(r110.O(), (com.google.android.gms.internal.measurement.r6) ((com.google.android.gms.internal.measurement.s6) it2.next()).r(), bundleQ2, strF2);
+                                                    r13.z(r110.O(), (com.google.android.gms.internal.measurement.r6) ((com.google.android.gms.internal.measurement.s6) it2.next()).q(), bundleQ2, strF2);
                                                     i16 = i16;
                                                     listR = listR;
                                                 }
@@ -1393,7 +1393,7 @@ public final class me implements l8 {
                                     str6 = str12;
                                 }
                                 i15 = i26;
-                                ieVar.f25613c.set(i15, (com.google.android.gms.internal.measurement.o6) r110.t());
+                                ieVar.f26434c.set(i15, (com.google.android.gms.internal.measurement.o6) r110.t());
                                 r19.b1(r110);
                                 i25 = i10 + 1;
                             }
@@ -1406,16 +1406,16 @@ public final class me implements l8 {
                                 if (i30 >= r110.z()) {
                                     break;
                                 }
-                                if ("_c".equals(r110.A(i30).G())) {
-                                    com.google.android.gms.internal.measurement.r6 r6Var = (com.google.android.gms.internal.measurement.r6) r110.A(i30).r();
+                                if ("_c".equals(r110.B(i30).G())) {
+                                    com.google.android.gms.internal.measurement.r6 r6Var = (com.google.android.gms.internal.measurement.r6) r110.B(i30).q();
                                     str8 = str11;
                                     r6Var.E(1L);
                                     r110.C(i30, (com.google.android.gms.internal.measurement.s6) r6Var.t());
                                     z18 = true;
                                 } else {
                                     str8 = str11;
-                                    if ("_r".equals(r110.A(i30).G())) {
-                                        com.google.android.gms.internal.measurement.r6 r6Var2 = (com.google.android.gms.internal.measurement.r6) r110.A(i30).r();
+                                    if ("_r".equals(r110.B(i30).G())) {
+                                        com.google.android.gms.internal.measurement.r6 r6Var2 = (com.google.android.gms.internal.measurement.r6) r110.B(i30).q();
                                         r6Var2.E(1L);
                                         r110.C(i30, (com.google.android.gms.internal.measurement.s6) r6Var2.t());
                                         z17 = true;
@@ -1427,21 +1427,21 @@ public final class me implements l8 {
                             }
                             str5 = str11;
                             if (!z18 && z13) {
-                                r13.a().w().b("Marking event as conversion", r13.f25763l.D().a(r110.O()));
+                                r13.a().w().b("Marking event as conversion", r13.f26584l.D().a(r110.O()));
                                 com.google.android.gms.internal.measurement.r6 r6VarT3 = com.google.android.gms.internal.measurement.s6.T();
                                 r6VarT3.z("_c");
                                 r6VarT3.E(1L);
                                 r110.G(r6VarT3);
                             }
                             if (!z17) {
-                                r13.a().w().b("Marking event as real-time", r13.f25763l.D().a(r110.O()));
+                                r13.a().w().b("Marking event as real-time", r13.f26584l.D().a(r110.O()));
                                 com.google.android.gms.internal.measurement.r6 r6VarT4 = com.google.android.gms.internal.measurement.s6.T();
                                 r6VarT4.z("_r");
                                 r6VarT4.E(1L);
                                 r110.G(r6VarT4);
                             }
                             r29 = r19;
-                            if (r13.F0().L0(r13.h(), ieVar.f25612a.F(), false, false, false, false, true, false, false).f25836e > r13.B0().E(ieVar.f25612a.F(), z4.f26190p)) {
+                            if (r13.F0().L0(r13.h(), ieVar.f26433a.F(), false, false, false, false, true, false, false).f26657e > r13.B0().E(ieVar.f26433a.F(), z4.f27011p)) {
                                 H(r110, "_r");
                             } else {
                                 z15 = true;
@@ -1450,19 +1450,19 @@ public final class me implements l8 {
                             r22 = r21;
                             r28 = r29;
                             r28 = r29;
-                            if (ve.r0(r110.O()) && z13 && r13.F0().L0(r13.h(), ieVar.f25612a.F(), false, false, true, false, false, false, false).f25834c > r13.B0().E(ieVar.f25612a.F(), z4.f26188o)) {
+                            if (ve.r0(r110.O()) && z13 && r13.F0().L0(r13.h(), ieVar.f26433a.F(), false, false, true, false, false, false, false).f26655c > r13.B0().E(ieVar.f26433a.F(), z4.f27009o)) {
                                 r22 = r21;
                                 r28 = r29;
-                                r13.a().r().b("Too many conversions. Not logging as conversion. appId", w5.x(ieVar.f25612a.F()));
+                                r13.a().r().b("Too many conversions. Not logging as conversion. appId", w5.x(ieVar.f26433a.F()));
                                 boolean z19 = false;
                                 int i31 = -1;
                                 com.google.android.gms.internal.measurement.r6 r6Var3 = null;
                                 for (int i32 = 0; i32 < r110.z(); i32++) {
-                                    com.google.android.gms.internal.measurement.s6 s6VarA3 = r110.A(i32);
-                                    if ("_c".equals(s6VarA3.G())) {
-                                        r6Var3 = (com.google.android.gms.internal.measurement.r6) s6VarA3.r();
+                                    com.google.android.gms.internal.measurement.s6 s6VarB3 = r110.B(i32);
+                                    if ("_c".equals(s6VarB3.G())) {
+                                        r6Var3 = (com.google.android.gms.internal.measurement.r6) s6VarB3.q();
                                         i31 = i32;
-                                    } else if ("_err".equals(s6VarA3.G())) {
+                                    } else if ("_err".equals(s6VarB3.G())) {
                                         z19 = true;
                                     }
                                 }
@@ -1481,7 +1481,7 @@ public final class me implements l8 {
                                             r22 = r21;
                                             r28 = r29;
                                         } else {
-                                            r13.a().o().b("Did not find conversion parameter. appId", w5.x(ieVar.f25612a.F()));
+                                            r13.a().o().b("Did not find conversion parameter. appId", w5.x(ieVar.f26433a.F()));
                                             r22 = r21;
                                             r28 = r29;
                                         }
@@ -1494,13 +1494,13 @@ public final class me implements l8 {
                                     r22 = r21;
                                     r28 = r29;
                                 } else {
-                                    r13.a().o().b("Did not find conversion parameter. appId", w5.x(ieVar.f25612a.F()));
+                                    r13.a().o().b("Did not find conversion parameter. appId", w5.x(ieVar.f26433a.F()));
                                     r22 = r21;
                                     r28 = r29;
                                 }
                             }
                             if (z13) {
-                                arrayList2 = new ArrayList(r110.x());
+                                arrayList2 = new ArrayList(r110.y());
                                 i20 = -1;
                                 i21 = -1;
                                 while (i19 < arrayList2.size()) {
@@ -1595,11 +1595,11 @@ public final class me implements l8 {
                                     }
                                 } else {
                                     i13 = i23;
-                                    if (r13.B0().H(null, z4.f26180k1)) {
+                                    if (r13.B0().H(null, z4.f27001k1)) {
                                         while (i14 < r110.z()) {
-                                            s6VarA = r110.A(i14);
-                                            if ("_elt".equals(s6VarA.G())) {
-                                                r110.V(s6VarA.L());
+                                            s6VarB = r110.B(i14);
+                                            if ("_elt".equals(s6VarB.G())) {
+                                                r110.V(s6VarB.L());
                                                 r110.N(i14);
                                                 break;
                                             }
@@ -1614,20 +1614,20 @@ public final class me implements l8 {
                             }
                             if (r110.z() != 0) {
                                 r13.K0();
-                                bundleQ = re.q(r110.x());
+                                bundleQ = re.q(r110.y());
                                 i16 = 0;
                                 while (i16 < r110.z()) {
-                                    s6VarA2 = r110.A(i16);
+                                    s6VarB2 = r110.B(i16);
                                     str7 = str12;
-                                    if (s6VarA2.G().equals(str7)) {
+                                    if (s6VarB2.G().equals(str7)) {
                                         i18 = i16;
-                                        if (!s6VarA2.G().equals(str7)) {
-                                            r13.z(r110.O(), (com.google.android.gms.internal.measurement.r6) s6VarA2.r(), bundleQ, ieVar.f25612a.F());
+                                        if (!s6VarB2.G().equals(str7)) {
+                                            r13.z(r110.O(), (com.google.android.gms.internal.measurement.r6) s6VarB2.q(), bundleQ, ieVar.f26433a.F());
                                         }
                                     } else {
                                         i18 = i16;
-                                        if (!s6VarA2.G().equals(str7)) {
-                                            r13.z(r110.O(), (com.google.android.gms.internal.measurement.r6) s6VarA2.r(), bundleQ, ieVar.f25612a.F());
+                                        if (!s6VarB2.G().equals(str7)) {
+                                            r13.z(r110.O(), (com.google.android.gms.internal.measurement.r6) s6VarB2.q(), bundleQ, ieVar.f26433a.F());
                                         }
                                     }
                                     i16 = i18 + 1;
@@ -1657,7 +1657,7 @@ public final class me implements l8 {
                                 str6 = str12;
                             }
                             i15 = i26;
-                            ieVar.f25613c.set(i15, (com.google.android.gms.internal.measurement.o6) r110.t());
+                            ieVar.f26434c.set(i15, (com.google.android.gms.internal.measurement.o6) r110.t());
                             r19.b1(r110);
                             i25 = i10 + 1;
                         }
@@ -1728,10 +1728,10 @@ public final class me implements l8 {
                         int iX = re.X(r19, "_se");
                         if (iX >= 0) {
                             r19.m1(iX);
-                            r13.a().o().b("Session engagement user property is in the bundle without session ID. appId", w5.x(ieVar.f25612a.F()));
+                            r13.a().o().b("Session engagement user property is in the bundle without session ID. appId", w5.x(ieVar.f26433a.F()));
                         }
                     }
-                    String strF3 = ieVar.f25612a.F();
+                    String strF3 = ieVar.f26433a.F();
                     r13.b().h();
                     r13.O0();
                     c6 c6VarJ0 = r13.F0().J0(strF3);
@@ -1740,7 +1740,7 @@ public final class me implements l8 {
                     } else {
                         r13.n(c6VarJ0, r19);
                     }
-                    String strF4 = ieVar.f25612a.F();
+                    String strF4 = ieVar.f26433a.F();
                     r13.b().h();
                     r13.O0();
                     c6 c6VarJ1 = r13.F0().J0(strF4);
@@ -1761,15 +1761,15 @@ public final class me implements l8 {
                         }
                     }
                     r19.G0();
-                    q8 q8Var = q8.f25885c;
-                    q8 q8VarS = r13.g(ieVar.f25612a.F()).s(q8.f(ieVar.f25612a.N0(), 100));
-                    q8 q8VarX = r13.F0().X(ieVar.f25612a.F());
-                    r13.F0().W(ieVar.f25612a.F(), q8VarS);
+                    q8 q8Var = q8.f26706c;
+                    q8 q8VarS = r13.g(ieVar.f26433a.F()).s(q8.f(ieVar.f26433a.N0(), 100));
+                    q8 q8VarX = r13.F0().X(ieVar.f26433a.F());
+                    r13.F0().W(ieVar.f26433a.F(), q8VarS);
                     p8 p8Var = p8.ANALYTICS_STORAGE;
                     if (!q8VarS.o(p8Var) && q8VarX.o(p8Var)) {
-                        r13.F0().x0(ieVar.f25612a.F());
+                        r13.F0().x0(ieVar.f26433a.F());
                     } else if (q8VarS.o(p8Var) && !q8VarX.o(p8Var)) {
-                        r13.F0().y0(ieVar.f25612a.F());
+                        r13.F0().y0(ieVar.f26433a.F());
                     }
                     p8 p8Var2 = p8.AD_STORAGE;
                     if (!q8VarS.o(p8Var2)) {
@@ -1782,12 +1782,12 @@ public final class me implements l8 {
                         r19.R0();
                     }
                     vf.a();
-                    if (r13.B0().H(ieVar.f25612a.F(), z4.Q0) && r13.N0().L(ieVar.f25612a.F()) && r13.g(ieVar.f25612a.F()).o(p8Var2) && ieVar.f25612a.S0()) {
+                    if (r13.B0().H(ieVar.f26433a.F(), z4.Q0) && r13.N0().L(ieVar.f26433a.F()) && r13.g(ieVar.f26433a.F()).o(p8Var2) && ieVar.f26433a.S0()) {
                         r13.y(r19, ieVar);
                     }
                     r19.C0();
                     r19.B0(r13.I0().m(r19.O(), r19.W0(), r19.f1(), Long.valueOf(r19.p1()), Long.valueOf(r19.r1()), !q8VarS.o(p8Var)));
-                    if (r13.B0().l(ieVar.f25612a.F())) {
+                    if (r13.B0().l(ieVar.f26433a.F())) {
                         try {
                             HashMap map = new HashMap();
                             ArrayList arrayList3 = new ArrayList();
@@ -1795,24 +1795,24 @@ public final class me implements l8 {
                             int i36 = 0;
                             r13 = r13;
                             while (i36 < r19.X0()) {
-                                com.google.android.gms.internal.measurement.n6 n6Var3 = (com.google.android.gms.internal.measurement.n6) r19.Y0(i36).r();
+                                com.google.android.gms.internal.measurement.n6 n6Var3 = (com.google.android.gms.internal.measurement.n6) r19.Y0(i36).q();
                                 String str14 = "_efs";
                                 if (n6Var3.O().equals("_ep")) {
                                     r13.K0();
                                     String str15 = (String) re.u((com.google.android.gms.internal.measurement.o6) n6Var3.t(), "_en");
                                     b0 b0VarV0 = (b0) map.get(str15);
-                                    if (b0VarV0 == null && (b0VarV0 = r13.F0().v0(ieVar.f25612a.F(), (String) n9.m.l(str15))) != null) {
+                                    if (b0VarV0 == null && (b0VarV0 = r13.F0().v0(ieVar.f26433a.F(), (String) n9.m.l(str15))) != null) {
                                         map.put(str15, b0VarV0);
                                     }
-                                    if (b0VarV0 == null || b0VarV0.f25353i != null) {
+                                    if (b0VarV0 == null || b0VarV0.f26174i != null) {
                                         l10 = l17;
                                     } else {
-                                        Long l18 = b0VarV0.f25354j;
+                                        Long l18 = b0VarV0.f26175j;
                                         if (l18 != null && l18.longValue() > 1) {
                                             r13.K0();
                                             re.o(n6Var3, "_sr", l18);
                                         }
-                                        Boolean bool = b0VarV0.f25355k;
+                                        Boolean bool = b0VarV0.f26176k;
                                         if (bool == null || !bool.booleanValue()) {
                                             l10 = l17;
                                         } else {
@@ -1831,21 +1831,21 @@ public final class me implements l8 {
                                 } else {
                                     l10 = l17;
                                     x6 x6VarD0 = r13.D0();
-                                    String strF5 = ieVar.f25612a.F();
+                                    String strF5 = ieVar.f26433a.F();
                                     String strF6 = x6VarD0.f(strF5, "measurement.account.time_zone_offset_minutes");
                                     if (!TextUtils.isEmpty(strF6)) {
                                         try {
                                             j12 = Long.parseLong(strF6);
                                             j13 = j13;
                                         } catch (NumberFormatException e10) {
-                                            x6VarD0.f25625a.a().r().c("Unable to parse timezone offset. appId", w5.x(strF5), e10);
+                                            x6VarD0.f26446a.a().r().c("Unable to parse timezone offset. appId", w5.x(strF5), e10);
                                             j12 = j13;
                                         }
                                         jY = r13.N0().Y(n6Var3.R(), j12);
                                         o6Var = (com.google.android.gms.internal.measurement.o6) n6Var3.t();
                                         if (TextUtils.isEmpty("_dbg")) {
                                             str2 = str14;
-                                            iG = D0().G(ieVar.f25612a.F(), n6Var3.O());
+                                            iG = D0().G(ieVar.f26433a.F(), n6Var3.O());
                                         } else {
                                             it = o6Var.F().iterator();
                                             while (true) {
@@ -1857,11 +1857,11 @@ public final class me implements l8 {
                                                     } else if (l10.equals(Long.valueOf(s6Var.L()))) {
                                                         iG = 1;
                                                     } else {
-                                                        iG = D0().G(ieVar.f25612a.F(), n6Var3.O());
+                                                        iG = D0().G(ieVar.f26433a.F(), n6Var3.O());
                                                     }
                                                 } else {
                                                     str2 = str14;
-                                                    iG = D0().G(ieVar.f25612a.F(), n6Var3.O());
+                                                    iG = D0().G(ieVar.f26433a.F(), n6Var3.O());
                                                 }
                                             }
                                         }
@@ -1877,10 +1877,10 @@ public final class me implements l8 {
                                             b0VarC = (b0) map.get(n6Var3.O());
                                             if (b0VarC == null) {
                                                 l11 = l10;
-                                                b0VarC = F0().v0(ieVar.f25612a.F(), n6Var3.O());
+                                                b0VarC = F0().v0(ieVar.f26433a.F(), n6Var3.O());
                                                 if (b0VarC == null) {
-                                                    a().r().c("Event being bundled has no eventAggregate. appId, eventName", ieVar.f25612a.F(), n6Var3.O());
-                                                    b0VarC = new b0(ieVar.f25612a.F(), n6Var3.O(), 1L, 1L, 1L, n6Var3.R(), 0L, null, null, null, null);
+                                                    a().r().c("Event being bundled has no eventAggregate. appId, eventName", ieVar.f26433a.F(), n6Var3.O());
+                                                    b0VarC = new b0(ieVar.f26433a.F(), n6Var3.O(), 1L, 1L, 1L, n6Var3.R(), 0L, null, null, null, null);
                                                 }
                                                 K0();
                                                 l12 = (Long) re.u((com.google.android.gms.internal.measurement.o6) n6Var3.t(), "_eid");
@@ -1891,7 +1891,7 @@ public final class me implements l8 {
                                                 }
                                                 if (iG == 1) {
                                                     arrayList3.add((com.google.android.gms.internal.measurement.o6) n6Var3.t());
-                                                    if (z12 && (b0VarC.f25353i != null || b0VarC.f25354j != null || b0VarC.f25355k != null)) {
+                                                    if (z12 && (b0VarC.f26174i != null || b0VarC.f26175j != null || b0VarC.f26176k != null)) {
                                                         map.put(n6Var3.O(), b0VarC.c(null, null, null));
                                                     }
                                                     r19.a1(i36, n6Var3);
@@ -1913,7 +1913,7 @@ public final class me implements l8 {
                                                         ieVar = ieVar;
                                                         l14 = l11;
                                                     } else {
-                                                        l13 = b0VarC.f25352h;
+                                                        l13 = b0VarC.f26173h;
                                                         if (l13 != null) {
                                                             jY2 = l13.longValue();
                                                         } else {
@@ -1974,7 +1974,7 @@ public final class me implements l8 {
                                                     ieVar = ieVar;
                                                     l14 = l11;
                                                 } else {
-                                                    l13 = b0VarC.f25352h;
+                                                    l13 = b0VarC.f26173h;
                                                     if (l13 != null) {
                                                         jY2 = l13.longValue();
                                                     } else {
@@ -2015,18 +2015,18 @@ public final class me implements l8 {
                                                 if ("_dbg".equals(s6Var.G())) {
                                                     str14 = str2;
                                                 } else if (l10.equals(Long.valueOf(s6Var.L()))) {
-                                                    iG = D0().G(ieVar.f25612a.F(), n6Var3.O());
+                                                    iG = D0().G(ieVar.f26433a.F(), n6Var3.O());
                                                 } else {
                                                     iG = 1;
                                                 }
                                             } else {
                                                 str2 = str14;
-                                                iG = D0().G(ieVar.f25612a.F(), n6Var3.O());
+                                                iG = D0().G(ieVar.f26433a.F(), n6Var3.O());
                                             }
                                         }
                                     } else {
                                         str2 = str14;
-                                        iG = D0().G(ieVar.f25612a.F(), n6Var3.O());
+                                        iG = D0().G(ieVar.f26433a.F(), n6Var3.O());
                                     }
                                     if (iG <= 0) {
                                         a().r().c("Sample rate must be positive. event, rate", n6Var3.O(), Integer.valueOf(iG));
@@ -2040,10 +2040,10 @@ public final class me implements l8 {
                                         b0VarC = (b0) map.get(n6Var3.O());
                                         if (b0VarC == null) {
                                             l11 = l10;
-                                            b0VarC = F0().v0(ieVar.f25612a.F(), n6Var3.O());
+                                            b0VarC = F0().v0(ieVar.f26433a.F(), n6Var3.O());
                                             if (b0VarC == null) {
-                                                a().r().c("Event being bundled has no eventAggregate. appId, eventName", ieVar.f25612a.F(), n6Var3.O());
-                                                b0VarC = new b0(ieVar.f25612a.F(), n6Var3.O(), 1L, 1L, 1L, n6Var3.R(), 0L, null, null, null, null);
+                                                a().r().c("Event being bundled has no eventAggregate. appId, eventName", ieVar.f26433a.F(), n6Var3.O());
+                                                b0VarC = new b0(ieVar.f26433a.F(), n6Var3.O(), 1L, 1L, 1L, n6Var3.R(), 0L, null, null, null, null);
                                             }
                                             K0();
                                             l12 = (Long) re.u((com.google.android.gms.internal.measurement.o6) n6Var3.t(), "_eid");
@@ -2076,7 +2076,7 @@ public final class me implements l8 {
                                                     ieVar = ieVar;
                                                     l14 = l11;
                                                 } else {
-                                                    l13 = b0VarC.f25352h;
+                                                    l13 = b0VarC.f26173h;
                                                     if (l13 != null) {
                                                         jY2 = l13.longValue();
                                                     } else {
@@ -2137,7 +2137,7 @@ public final class me implements l8 {
                                                 ieVar = ieVar;
                                                 l14 = l11;
                                             } else {
-                                                l13 = b0VarC.f25352h;
+                                                l13 = b0VarC.f26173h;
                                                 if (l13 != null) {
                                                     jY2 = l13.longValue();
                                                 } else {
@@ -2193,16 +2193,16 @@ public final class me implements l8 {
                         j11 = 0;
                         z11 = true;
                     }
-                    String strF7 = ieVar.f25612a.F();
+                    String strF7 = ieVar.f26433a.F();
                     c6 c6VarJ2 = F0().J0(strF7);
                     try {
                         if (c6VarJ2 == null) {
-                            a().o().b("Bundling raw events w/o app info. appId", w5.x(ieVar.f25612a.F()));
+                            a().o().b("Bundling raw events w/o app info. appId", w5.x(ieVar.f26433a.F()));
                         } else {
                             if (r19.X0() > 0) {
                                 long jB0 = c6VarJ2.B0();
                                 if (jB0 != j11) {
-                                    r19.x(jB0);
+                                    r19.y(jB0);
                                 } else {
                                     r19.z();
                                 }
@@ -2231,14 +2231,14 @@ public final class me implements l8 {
                             }
                             if (r19.X0() > 0) {
                                 meVar = this;
-                                meVar.f25763l.c();
-                                g5VarW = meVar.D0().w(ieVar.f25612a.F());
+                                meVar.f26584l.c();
+                                g5VarW = meVar.D0().w(ieVar.f26433a.F());
                                 if (g5VarW == null && g5VarW.F()) {
                                     r19.H0(g5VarW.G());
-                                } else if (ieVar.f25612a.W().isEmpty()) {
+                                } else if (ieVar.f26433a.W().isEmpty()) {
                                     r19.H0(-1L);
                                 } else {
-                                    meVar.a().r().b("Did not find measurement config or missing version info. appId", w5.x(ieVar.f25612a.F()));
+                                    meVar.a().r().b("Did not find measurement config or missing version info. appId", w5.x(ieVar.f26433a.F()));
                                 }
                                 meVar.F0().O0((com.google.android.gms.internal.measurement.a7) r19.t(), z15);
                                 r14 = meVar;
@@ -2260,7 +2260,7 @@ public final class me implements l8 {
                             sb2.append(")");
                             iDelete = tVarF0.u0().delete("raw_events", sb2.toString(), null);
                             if (iDelete != list.size()) {
-                                tVarF0.f25625a.a().o().c("Deleted fewer rows from raw events table than expected", Integer.valueOf(iDelete), Integer.valueOf(list.size()));
+                                tVarF0.f26446a.a().o().c("Deleted fewer rows from raw events table than expected", Integer.valueOf(iDelete), Integer.valueOf(list.size()));
                             }
                             tVarF1 = r14.F0();
                             tVarF1.u0().execSQL("delete from raw_events_metadata where app_id=? and metadata_fingerprint not in (select distinct metadata_fingerprint from raw_events where app_id=?)", new String[]{strF7, strF7});
@@ -2270,23 +2270,23 @@ public final class me implements l8 {
                         }
                         tVarF1.u0().execSQL("delete from raw_events_metadata where app_id=? and metadata_fingerprint not in (select distinct metadata_fingerprint from raw_events where app_id=?)", new String[]{strF7, strF7});
                     } catch (SQLiteException e11) {
-                        tVarF1.f25625a.a().o().c("Failed to remove unused event metadata. appId", w5.x(strF7), e11);
+                        tVarF1.f26446a.a().o().c("Failed to remove unused event metadata. appId", w5.x(strF7), e11);
                     }
                     i11 = 0;
                     if (r19.X0() > 0) {
                         meVar = this;
-                        meVar.f25763l.c();
-                        g5VarW = meVar.D0().w(ieVar.f25612a.F());
+                        meVar.f26584l.c();
+                        g5VarW = meVar.D0().w(ieVar.f26433a.F());
                         if (g5VarW == null) {
-                            if (ieVar.f25612a.W().isEmpty()) {
+                            if (ieVar.f26433a.W().isEmpty()) {
                                 r19.H0(-1L);
                             } else {
-                                meVar.a().r().b("Did not find measurement config or missing version info. appId", w5.x(ieVar.f25612a.F()));
+                                meVar.a().r().b("Did not find measurement config or missing version info. appId", w5.x(ieVar.f26433a.F()));
                             }
-                        } else if (ieVar.f25612a.W().isEmpty()) {
+                        } else if (ieVar.f26433a.W().isEmpty()) {
                             r19.H0(-1L);
                         } else {
-                            meVar.a().r().b("Did not find measurement config or missing version info. appId", w5.x(ieVar.f25612a.F()));
+                            meVar.a().r().b("Did not find measurement config or missing version info. appId", w5.x(ieVar.f26433a.F()));
                         }
                         meVar.F0().O0((com.google.android.gms.internal.measurement.a7) r19.t(), z15);
                         r14 = meVar;
@@ -2308,7 +2308,7 @@ public final class me implements l8 {
                     sb2.append(")");
                     iDelete = tVarF0.u0().delete("raw_events", sb2.toString(), null);
                     if (iDelete != list.size()) {
-                        tVarF0.f25625a.a().o().c("Deleted fewer rows from raw events table than expected", Integer.valueOf(iDelete), Integer.valueOf(list.size()));
+                        tVarF0.f26446a.a().o().c("Deleted fewer rows from raw events table than expected", Integer.valueOf(iDelete), Integer.valueOf(list.size()));
                     }
                     tVarF1 = r14.F0();
                     r14.F0().s0();
@@ -2328,18 +2328,18 @@ public final class me implements l8 {
     }
 
     public final p5 M0() {
-        return this.f25763l.D();
+        return this.f26584l.D();
     }
 
     public final void N(com.google.android.gms.internal.measurement.z6 z6Var, long j10, boolean z10) {
         Object obj;
         String str = true != z10 ? "_lte" : "_se";
         te teVarB0 = F0().B0(z6Var.O(), str);
-        te teVar = (teVarB0 == null || (obj = teVarB0.f25998e) == null) ? new te(z6Var.O(), "auto", str, e().a(), Long.valueOf(j10)) : new te(z6Var.O(), "auto", str, e().a(), Long.valueOf(((Long) obj).longValue() + j10));
+        te teVar = (teVarB0 == null || (obj = teVarB0.f26819e) == null) ? new te(z6Var.O(), "auto", str, e().a(), Long.valueOf(j10)) : new te(z6Var.O(), "auto", str, e().a(), Long.valueOf(((Long) obj).longValue() + j10));
         com.google.android.gms.internal.measurement.q7 q7VarS = com.google.android.gms.internal.measurement.r7.S();
         q7VarS.z(str);
-        q7VarS.x(e().a());
-        Object obj2 = teVar.f25998e;
+        q7VarS.y(e().a());
+        Object obj2 = teVar.f26819e;
         q7VarS.D(((Long) obj2).longValue());
         com.google.android.gms.internal.measurement.r7 r7Var = (com.google.android.gms.internal.measurement.r7) q7VarS.t();
         int iX = re.X(z6Var, str);
@@ -2355,7 +2355,7 @@ public final class me implements l8 {
     }
 
     public final ve N0() {
-        return ((g7) n9.m.l(this.f25763l)).C();
+        return ((g7) n9.m.l(this.f26584l)).C();
     }
 
     public final boolean O(com.google.android.gms.internal.measurement.n6 n6Var, com.google.android.gms.internal.measurement.n6 n6Var2) {
@@ -2389,7 +2389,7 @@ public final class me implements l8 {
     }
 
     public final void O0() {
-        if (!this.f25764m.get()) {
+        if (!this.f26585m.get()) {
             throw new IllegalStateException("UploadController is not initialized");
         }
     }
@@ -2403,9 +2403,9 @@ public final class me implements l8 {
     public final void P0(zzr zzrVar) {
         b().h();
         O0();
-        String str = zzrVar.f7445f;
+        String str = zzrVar.f7519f;
         n9.m.f(str);
-        q8 q8VarF = q8.f(zzrVar.f7463x, zzrVar.C);
+        q8 q8VarF = q8.f(zzrVar.f7537x, zzrVar.C);
         g(str);
         a().w().c("Setting storage consent for package", str, q8VarF);
         f(str, q8VarF);
@@ -2414,7 +2414,7 @@ public final class me implements l8 {
     public final void Q0(zzr zzrVar) {
         b().h();
         O0();
-        String str = zzrVar.f7445f;
+        String str = zzrVar.f7519f;
         n9.m.f(str);
         x xVarG = x.g(zzrVar.D);
         a().w().c("Setting DMA consent for package", str, xVarG);
@@ -2432,9 +2432,9 @@ public final class me implements l8 {
         if (z10 || z11) {
             a().w().b("Generated _dcu event for", str);
             Bundle bundle = new Bundle();
-            if (F0().L0(h(), str, false, false, false, false, false, false, false).f25837f < B0().E(str, z4.f26187n0)) {
+            if (F0().L0(h(), str, false, false, false, false, false, false, false).f26658f < B0().E(str, z4.f27008n0)) {
                 bundle.putLong("_r", 1L);
-                a().w().c("_dcu realtime event count", str, Long.valueOf(F0().L0(h(), str, false, false, false, false, false, true, false).f25837f));
+                a().w().c("_dcu realtime event count", str, Long.valueOf(F0().L0(h(), str, false, false, false, false, false, true, false).f26658f));
             }
             this.J.a(str, "_dcu", bundle);
         }
@@ -2445,17 +2445,17 @@ public final class me implements l8 {
         long jMax2;
         b().h();
         O0();
-        if (this.f25766o > 0) {
-            long jAbs = 3600000 - Math.abs(e().b() - this.f25766o);
+        if (this.f26587o > 0) {
+            long jAbs = 3600000 - Math.abs(e().b() - this.f26587o);
             if (jAbs > 0) {
                 a().w().b("Upload has been suspended. Will update scheduling later in approximately ms", Long.valueOf(jAbs));
                 G0().b();
                 H0().n();
                 return;
             }
-            this.f25766o = 0L;
+            this.f26587o = 0L;
         }
-        if (!this.f25763l.m() || !P()) {
+        if (!this.f26584l.m() || !P()) {
             a().w().a("Nothing to upload or uploading impossible");
             G0().b();
             H0().n();
@@ -2481,8 +2481,8 @@ public final class me implements l8 {
             B0();
             jMax = Math.max(0L, ((Long) z4.I.b(null)).longValue());
         }
-        long jA2 = this.f25760i.f26037h.a();
-        long jA3 = this.f25760i.f26038i.a();
+        long jA2 = this.f26581i.f26858h.a();
+        long jA3 = this.f26581i.f26859i.a();
         long j10 = 0;
         boolean z11 = z10;
         long jMax4 = Math.max(F0().y(), F0().A());
@@ -2531,7 +2531,7 @@ public final class me implements l8 {
             H0().n();
             return;
         }
-        long jA4 = this.f25760i.f26036g.a();
+        long jA4 = this.f26581i.f26857g.a();
         B0();
         long jMax6 = Math.max(0L, ((Long) z4.G.b(null)).longValue());
         if (!K0().S(jA4, jMax6)) {
@@ -2542,7 +2542,7 @@ public final class me implements l8 {
         if (jA5 <= 0) {
             B0();
             jA5 = Math.max(0L, ((Long) z4.L.b(null)).longValue());
-            this.f25760i.f26037h.b(e().a());
+            this.f26581i.f26858h.b(e().a());
         }
         a().w().b("Upload scheduled in approximately ms", Long.valueOf(jA5));
         H0().m(jA5);
@@ -2563,12 +2563,12 @@ public final class me implements l8 {
 
     public final void S() {
         b().h();
-        if (this.f25771t || this.f25772u || this.f25773v) {
-            a().w().d("Not stopping services. fetch, network, upload", Boolean.valueOf(this.f25771t), Boolean.valueOf(this.f25772u), Boolean.valueOf(this.f25773v));
+        if (this.f26592t || this.f26593u || this.f26594v) {
+            a().w().d("Not stopping services. fetch, network, upload", Boolean.valueOf(this.f26592t), Boolean.valueOf(this.f26593u), Boolean.valueOf(this.f26594v));
             return;
         }
         a().w().a("Stopping uploading service(s)");
-        List list = this.f25767p;
+        List list = this.f26588p;
         if (list == null) {
             return;
         }
@@ -2576,7 +2576,7 @@ public final class me implements l8 {
         while (it.hasNext()) {
             ((Runnable) it.next()).run();
         }
-        ((List) n9.m.l(this.f25767p)).clear();
+        ((List) n9.m.l(this.f26588p)).clear();
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -2594,18 +2594,18 @@ public final class me implements l8 {
         bundle.putAll(q8VarG.n());
         bundle.putAll(T0(str, R0(str), q8VarG, new m()).f());
         te teVarB0 = F0().B0(str, "_npa");
-        bundle.putString("ad_personalization", 1 != (teVarB0 != null ? teVarB0.f25998e.equals(1L) : I(str, new m())) ? "granted" : "denied");
+        bundle.putString("ad_personalization", 1 != (teVarB0 != null ? teVarB0.f26819e.equals(1L) : I(str, new m())) ? "granted" : "denied");
         return bundle;
     }
 
     public final Boolean T(c6 c6Var) {
         try {
             if (c6Var.F0() != -2147483648L) {
-                if (c6Var.F0() == w9.c.a(this.f25763l.d()).e(c6Var.o0(), 0).versionCode) {
+                if (c6Var.F0() == w9.c.a(this.f26584l.d()).e(c6Var.o0(), 0).versionCode) {
                     return Boolean.TRUE;
                 }
             } else {
-                String str = w9.c.a(this.f25763l.d()).e(c6Var.o0(), 0).versionName;
+                String str = w9.c.a(this.f26584l.d()).e(c6Var.o0(), 0).versionName;
                 String strD0 = c6Var.D0();
                 if (strD0 != null && strD0.equals(str)) {
                     return Boolean.TRUE;
@@ -2645,14 +2645,14 @@ public final class me implements l8 {
             iB = xVar.b();
             mVar.b(p8.AD_USER_DATA, iB);
         } else if (n8VarC == n8.POLICY) {
-            x6 x6Var2 = this.f25753a;
+            x6 x6Var2 = this.f26574a;
             p8 p8Var2 = p8.AD_USER_DATA;
             n8 n8VarM = x6Var2.m(str, p8Var2);
             if (n8VarM != n8.UNINITIALIZED) {
                 mVar.c(p8Var2, l.REMOTE_ENFORCED_DEFAULT);
                 n8VarC = n8VarM;
             } else {
-                x6Var = this.f25753a;
+                x6Var = this.f26574a;
                 p8Var = p8.AD_USER_DATA;
                 p8VarQ = x6Var.Q(str, p8Var);
                 n8VarP = q8Var.p();
@@ -2674,7 +2674,7 @@ public final class me implements l8 {
                 }
             }
         } else {
-            x6Var = this.f25753a;
+            x6Var = this.f26574a;
             p8Var = p8.AD_USER_DATA;
             p8VarQ = x6Var.Q(str, p8Var);
             n8VarP = q8Var.p();
@@ -2699,7 +2699,7 @@ public final class me implements l8 {
                 }
             }
         }
-        boolean zS = this.f25753a.S(str);
+        boolean zS = this.f26574a.S(str);
         SortedSet sortedSetT = D0().T(str);
         if (n8VarC == n8.DENIED || sortedSetT.isEmpty()) {
             return new x(Boolean.FALSE, iB, Boolean.valueOf(zS), "-");
@@ -2723,30 +2723,30 @@ public final class me implements l8 {
 
     public final boolean V(String str, String str2) {
         b0 b0VarV0 = F0().v0(str, str2);
-        return b0VarV0 == null || b0VarV0.f25347c < 1;
+        return b0VarV0 == null || b0VarV0.f26168c < 1;
     }
 
     @Override // nb.l8
     public final w5 a() {
-        return ((g7) n9.m.l(this.f25763l)).a();
+        return ((g7) n9.m.l(this.f26584l)).a();
     }
 
     public final boolean a0() {
         b().h();
-        FileLock fileLock = this.f25774w;
+        FileLock fileLock = this.f26595w;
         if (fileLock != null && fileLock.isValid()) {
             a().w().a("Storage concurrent access okay");
             return true;
         }
-        this.f25754c.f25625a.w();
-        File filesDir = this.f25763l.d().getFilesDir();
+        this.f26575c.f26446a.w();
+        File filesDir = this.f26584l.d().getFilesDir();
         com.google.android.gms.internal.measurement.y0.a();
-        com.google.android.gms.internal.measurement.e1 e1Var = com.google.android.gms.internal.measurement.e1.f6422a;
+        com.google.android.gms.internal.measurement.e1 e1Var = com.google.android.gms.internal.measurement.e1.f6495a;
         try {
             FileChannel channel = new RandomAccessFile(new File(new File(filesDir, "google_app_measurement.db").getPath()), "rw").getChannel();
-            this.f25775x = channel;
+            this.f26596x = channel;
             FileLock fileLockTryLock = channel.tryLock();
-            this.f25774w = fileLockTryLock;
+            this.f26595w = fileLockTryLock;
             if (fileLockTryLock != null) {
                 a().w().a("Storage concurrent access okay");
                 return true;
@@ -2767,17 +2767,17 @@ public final class me implements l8 {
 
     @Override // nb.l8
     public final c7 b() {
-        return ((g7) n9.m.l(this.f25763l)).b();
+        return ((g7) n9.m.l(this.f26584l)).b();
     }
 
     public final void b0(zzr zzrVar) {
-        if (this.f25776y != null) {
+        if (this.f26597y != null) {
             ArrayList arrayList = new ArrayList();
-            this.f25777z = arrayList;
-            arrayList.addAll(this.f25776y);
+            this.f26598z = arrayList;
+            arrayList.addAll(this.f26597y);
         }
         t tVarF0 = F0();
-        String str = (String) n9.m.l(zzrVar.f7445f);
+        String str = (String) n9.m.l(zzrVar.f7519f);
         n9.m.f(str);
         tVarF0.h();
         tVarF0.j();
@@ -2786,24 +2786,24 @@ public final class me implements l8 {
             String[] strArr = {str};
             int iDelete = sQLiteDatabaseU0.delete("apps", "app_id=?", strArr) + sQLiteDatabaseU0.delete("events", "app_id=?", strArr) + sQLiteDatabaseU0.delete("events_snapshot", "app_id=?", strArr) + sQLiteDatabaseU0.delete("user_attributes", "app_id=?", strArr) + sQLiteDatabaseU0.delete("conditional_properties", "app_id=?", strArr) + sQLiteDatabaseU0.delete("raw_events", "app_id=?", strArr) + sQLiteDatabaseU0.delete("raw_events_metadata", "app_id=?", strArr) + sQLiteDatabaseU0.delete("queue", "app_id=?", strArr) + sQLiteDatabaseU0.delete("audience_filter_values", "app_id=?", strArr) + sQLiteDatabaseU0.delete("main_event_params", "app_id=?", strArr) + sQLiteDatabaseU0.delete("default_event_params", "app_id=?", strArr) + sQLiteDatabaseU0.delete("trigger_uris", "app_id=?", strArr) + sQLiteDatabaseU0.delete("upload_queue", "app_id=?", strArr);
             com.google.android.gms.internal.measurement.se.a();
-            g7 g7Var = tVarF0.f25625a;
-            if (g7Var.w().H(null, z4.f26174i1)) {
+            g7 g7Var = tVarF0.f26446a;
+            if (g7Var.w().H(null, z4.f26995i1)) {
                 iDelete += sQLiteDatabaseU0.delete("no_data_mode_events", "app_id=?", strArr);
             }
             if (iDelete > 0) {
                 g7Var.a().w().c("Reset analytics data. app, records", str, Integer.valueOf(iDelete));
             }
         } catch (SQLiteException e10) {
-            tVarF0.f25625a.a().o().c("Error resetting analytics data. appId, error", w5.x(str), e10);
+            tVarF0.f26446a.a().o().c("Error resetting analytics data. appId, error", w5.x(str), e10);
         }
-        if (zzrVar.f7452m) {
+        if (zzrVar.f7526m) {
             h0(zzrVar);
         }
     }
 
     @Override // nb.l8
     public final f c() {
-        return this.f25763l.c();
+        return this.f26584l.c();
     }
 
     /* JADX WARN: Code duplicated, block: B:38:0x00d1 A[DONT_INVERT] */
@@ -2817,18 +2817,18 @@ public final class me implements l8 {
         b().h();
         O0();
         if (X(zzrVar)) {
-            if (!zzrVar.f7452m) {
+            if (!zzrVar.f7526m) {
                 o0(zzrVar);
                 return;
             }
             ve veVarN0 = N0();
-            String str = zzplVar.f7439g;
+            String str = zzplVar.f7513g;
             int iY0 = veVarN0.y0(str);
             int length = 0;
             if (iY0 != 0) {
                 ve veVarN1 = N0();
                 B0();
-                N0().B(this.J, zzrVar.f7445f, iY0, "_ev", veVarN1.q(str, 24, true), str != null ? str.length() : 0);
+                N0().B(this.J, zzrVar.f7519f, iY0, "_ev", veVarN1.q(str, 24, true), str != null ? str.length() : 0);
                 return;
             }
             int iY = N0().y(str, zzplVar.zza());
@@ -2840,28 +2840,28 @@ public final class me implements l8 {
                 if (objZza != null && ((objZza instanceof String) || (objZza instanceof CharSequence))) {
                     length = objZza.toString().length();
                 }
-                N0().B(this.J, zzrVar.f7445f, iY, "_ev", strQ, length);
+                N0().B(this.J, zzrVar.f7519f, iY, "_ev", strQ, length);
                 return;
             }
             Object objZ = N0().z(str, zzplVar.zza());
             if (objZ != null) {
                 if ("_sid".equals(str)) {
-                    long j10 = zzplVar.f7440h;
-                    String str2 = zzplVar.f7443k;
-                    String str3 = (String) n9.m.l(zzrVar.f7445f);
+                    long j10 = zzplVar.f7514h;
+                    String str2 = zzplVar.f7517k;
+                    String str3 = (String) n9.m.l(zzrVar.f7519f);
                     te teVarB1 = F0().B0(str3, "_sno");
                     if (teVarB1 != null) {
-                        Object obj = teVarB1.f25998e;
+                        Object obj = teVarB1.f26819e;
                         if (obj instanceof Long) {
                             jLongValue = ((Long) obj).longValue();
                         } else {
                             if (teVarB1 != null) {
-                                a().r().b("Retrieved last session number from database does not contain a valid (long) value", teVarB1.f25998e);
+                                a().r().b("Retrieved last session number from database does not contain a valid (long) value", teVarB1.f26819e);
                             }
                             b0VarV0 = F0().v0(str3, "_s");
                             if (b0VarV0 != null) {
                                 u5 u5VarW = a().w();
-                                long j11 = b0VarV0.f25347c;
+                                long j11 = b0VarV0.f26168c;
                                 u5VarW.b("Backfill the session number. Last used session number", Long.valueOf(j11));
                                 jLongValue = j11;
                             } else {
@@ -2870,12 +2870,12 @@ public final class me implements l8 {
                         }
                     } else {
                         if (teVarB1 != null) {
-                            a().r().b("Retrieved last session number from database does not contain a valid (long) value", teVarB1.f25998e);
+                            a().r().b("Retrieved last session number from database does not contain a valid (long) value", teVarB1.f26819e);
                         }
                         b0VarV0 = F0().v0(str3, "_s");
                         if (b0VarV0 != null) {
                             u5 u5VarW2 = a().w();
-                            long j12 = b0VarV0.f25347c;
+                            long j12 = b0VarV0.f26168c;
                             u5VarW2.b("Backfill the session number. Last used session number", Long.valueOf(j12));
                             jLongValue = j12;
                         } else {
@@ -2884,21 +2884,21 @@ public final class me implements l8 {
                     }
                     c0(new zzpl("_sno", j10, Long.valueOf(jLongValue + 1), str2), zzrVar);
                 }
-                String str4 = zzrVar.f7445f;
-                te teVar = new te((String) n9.m.l(str4), (String) n9.m.l(zzplVar.f7443k), str, zzplVar.f7440h, objZ);
+                String str4 = zzrVar.f7519f;
+                te teVar = new te((String) n9.m.l(str4), (String) n9.m.l(zzplVar.f7517k), str, zzplVar.f7514h, objZ);
                 u5 u5VarW3 = a().w();
-                g7 g7Var = this.f25763l;
-                String str5 = teVar.f25996c;
+                g7 g7Var = this.f26584l;
+                String str5 = teVar.f26817c;
                 u5VarW3.c("Setting user property", g7Var.D().c(str5), objZ);
                 F0().r0();
                 try {
-                    if ("_id".equals(str5) && (teVarB0 = F0().B0(str4, "_id")) != null && !teVar.f25998e.equals(teVarB0.f25998e)) {
+                    if ("_id".equals(str5) && (teVarB0 = F0().B0(str4, "_id")) != null && !teVar.f26819e.equals(teVarB0.f26819e)) {
                         F0().z0(str4, "_lair");
                     }
                     o0(zzrVar);
                     boolean zA0 = F0().A0(teVar);
                     if ("_sid".equals(str)) {
-                        long jU = K0().U(zzrVar.f7465z);
+                        long jU = K0().U(zzrVar.f7539z);
                         c6 c6VarJ0 = F0().J0(str4);
                         if (c6VarJ0 != null) {
                             c6VarJ0.a0(jU);
@@ -2909,7 +2909,7 @@ public final class me implements l8 {
                     }
                     F0().s0();
                     if (!zA0) {
-                        a().o().c("Too many unique user properties are set. Ignoring user property", g7Var.D().c(str5), teVar.f25998e);
+                        a().o().c("Too many unique user properties are set. Ignoring user property", g7Var.D().c(str5), teVar.f26819e);
                         N0().B(this.J, str4, 9, null, null, 0);
                     }
                 } finally {
@@ -2921,14 +2921,14 @@ public final class me implements l8 {
 
     @Override // nb.l8
     public final Context d() {
-        return this.f25763l.d();
+        return this.f26584l.d();
     }
 
     public final void d0(String str, zzr zzrVar) {
         b().h();
         O0();
         if (X(zzrVar)) {
-            if (!zzrVar.f7452m) {
+            if (!zzrVar.f7526m) {
                 o0(zzrVar);
                 return;
             }
@@ -2939,15 +2939,15 @@ public final class me implements l8 {
                 return;
             }
             u5 u5VarV = a().v();
-            g7 g7Var = this.f25763l;
+            g7 g7Var = this.f26584l;
             u5VarV.b("Removing user property", g7Var.D().c(str));
             F0().r0();
             try {
                 o0(zzrVar);
                 if ("_id".equals(str)) {
-                    F0().z0((String) n9.m.l(zzrVar.f7445f), "_lair");
+                    F0().z0((String) n9.m.l(zzrVar.f7519f), "_lair");
                 }
-                F0().z0((String) n9.m.l(zzrVar.f7445f), str);
+                F0().z0((String) n9.m.l(zzrVar.f7519f), str);
                 F0().s0();
                 a().v().b("User property removed", g7Var.D().c(str));
             } finally {
@@ -2958,11 +2958,11 @@ public final class me implements l8 {
 
     @Override // nb.l8
     public final u9.e e() {
-        return ((g7) n9.m.l(this.f25763l)).e();
+        return ((g7) n9.m.l(this.f26584l)).e();
     }
 
     public final void e0() {
-        this.f25769r++;
+        this.f26590r++;
     }
 
     public final void f(String str, q8 q8Var) {
@@ -2973,18 +2973,18 @@ public final class me implements l8 {
     }
 
     public final void f0() {
-        this.f25770s++;
+        this.f26591s++;
     }
 
     public final q8 g(String str) {
-        q8 q8Var = q8.f25885c;
+        q8 q8Var = q8.f26706c;
         b().h();
         O0();
         q8 q8VarJ = (q8) this.B.get(str);
         if (q8VarJ == null) {
             q8VarJ = F0().J(str);
             if (q8VarJ == null) {
-                q8VarJ = q8.f25885c;
+                q8VarJ = q8.f26706c;
             }
             f(str, q8VarJ);
         }
@@ -2992,18 +2992,18 @@ public final class me implements l8 {
     }
 
     public final g7 g0() {
-        return this.f25763l;
+        return this.f26584l;
     }
 
     public final long h() {
         long jA = e().a();
-        vc vcVar = this.f25760i;
+        vc vcVar = this.f26581i;
         vcVar.j();
         vcVar.h();
-        h6 h6Var = vcVar.f26039j;
+        h6 h6Var = vcVar.f26860j;
         long jA2 = h6Var.a();
         if (jA2 == 0) {
-            jA2 = ((long) vcVar.f25625a.C().q0().nextInt(86400000)) + 1;
+            jA2 = ((long) vcVar.f26446a.C().q0().nextInt(86400000)) + 1;
             h6Var.b(jA2);
         }
         return ((((jA + jA2) / 1000) / 60) / 60) / 24;
@@ -3022,25 +3022,25 @@ public final class me implements l8 {
         b().h();
         O0();
         n9.m.l(zzrVar);
-        String str2 = zzrVar.f7445f;
+        String str2 = zzrVar.f7519f;
         n9.m.f(str2);
         if (X(zzrVar)) {
             c6 c6VarJ0 = F0().J0(str2);
-            if (c6VarJ0 != null && TextUtils.isEmpty(c6VarJ0.r0()) && !TextUtils.isEmpty(zzrVar.f7446g)) {
+            if (c6VarJ0 != null && TextUtils.isEmpty(c6VarJ0.r0()) && !TextUtils.isEmpty(zzrVar.f7520g)) {
                 c6VarJ0.i(0L);
                 F0().K0(c6VarJ0, false, false);
                 D0().B(str2);
             }
-            if (!zzrVar.f7452m) {
+            if (!zzrVar.f7526m) {
                 o0(zzrVar);
                 return;
             }
-            long jA = zzrVar.f7456q;
+            long jA = zzrVar.f7530q;
             if (jA == 0) {
                 jA = e().a();
             }
             long j13 = jA;
-            int i10 = zzrVar.f7457r;
+            int i10 = zzrVar.f7531r;
             if (i10 != 0 && i10 != 1) {
                 a().r().c("Incorrect app type, assuming installed app. appId, appType", w5.x(str2), Integer.valueOf(i10));
                 i10 = 0;
@@ -3056,7 +3056,7 @@ public final class me implements l8 {
                     zzpl zzplVar = new zzpl("_npa", j13, Long.valueOf(true != boolZ.booleanValue() ? 0L : 1L), "auto");
                     j11 = 1;
                     j10 = j13;
-                    if (teVarB0 == null || !teVarB0.f25998e.equals(zzplVar.f7441i)) {
+                    if (teVarB0 == null || !teVarB0.f26819e.equals(zzplVar.f7515i)) {
                         c0(zzplVar, zzrVar);
                     }
                 } else {
@@ -3066,7 +3066,7 @@ public final class me implements l8 {
                         d0("_npa", zzrVar);
                     }
                 }
-                if (B0().H(null, z4.f26156c1)) {
+                if (B0().H(null, z4.f26977c1)) {
                     n0(zzrVar, zzrVar.I);
                 } else {
                     n0(zzrVar, j10);
@@ -3090,10 +3090,10 @@ public final class me implements l8 {
                         bundle.putLong("_c", 1L);
                         bundle.putLong("_r", 1L);
                         bundle.putLong("_et", 1L);
-                        if (zzrVar.f7459t) {
+                        if (zzrVar.f7533t) {
                             bundle.putLong("_dac", 1L);
                         }
-                        if (B0().H(null, z4.f26180k1)) {
+                        if (B0().H(null, z4.f27001k1)) {
                             bundle.putLong("_elt", e().a());
                         }
                         j(new zzbg("_v", new zzbe(bundle), "auto", j15), zzrVar);
@@ -3102,12 +3102,12 @@ public final class me implements l8 {
                         long j16 = j10;
                         c0(new zzpl("_fot", j16, lValueOf, "auto"), zzrVar);
                         b().h();
-                        n6 n6Var = (n6) n9.m.l(this.f25762k);
+                        n6 n6Var = (n6) n9.m.l(this.f26583k);
                         if (str2 == null || str2.isEmpty()) {
                             str = "_elt";
-                            n6Var.f25786a.a().s().a("Install Referrer Reporter was called with invalid app package name");
+                            n6Var.f26607a.a().s().a("Install Referrer Reporter was called with invalid app package name");
                         } else {
-                            g7 g7Var = n6Var.f25786a;
+                            g7 g7Var = n6Var.f26607a;
                             g7Var.b().h();
                             if (n6Var.a()) {
                                 m6 m6Var = new m6(n6Var, str2);
@@ -3130,7 +3130,7 @@ public final class me implements l8 {
                                                 try {
                                                     g7Var.a().w().b("Install Referrer Service is", t9.a.b().a(g7Var.d(), new Intent(intent), m6Var, 1) ? "available" : "not available");
                                                 } catch (RuntimeException e10) {
-                                                    n6Var.f25786a.a().o().b("Exception occurred while binding to Install Referrer Service", e10.getMessage());
+                                                    n6Var.f26607a.a().o().b("Exception occurred while binding to Install Referrer Service", e10.getMessage());
                                                 }
                                             } else {
                                                 g7Var.a().r().a("Play Store version 8.3.73 or higher required for Install Referrer");
@@ -3154,16 +3154,16 @@ public final class me implements l8 {
                         bundle2.putLong("_sys", 0L);
                         bundle2.putLong("_sysu", 0L);
                         bundle2.putLong("_et", j17);
-                        if (zzrVar.f7459t) {
+                        if (zzrVar.f7533t) {
                             bundle2.putLong("_dac", j17);
                         }
-                        String str4 = (String) n9.m.l(zzrVar.f7445f);
+                        String str4 = (String) n9.m.l(zzrVar.f7519f);
                         t tVarF0 = F0();
                         n9.m.f(str4);
                         tVarF0.h();
                         tVarF0.j();
                         long jZ = tVarF0.z(str4, "first_open_count");
-                        g7 g7Var2 = this.f25763l;
+                        g7 g7Var2 = this.f26584l;
                         if (g7Var2.d().getPackageManager() == null) {
                             a().o().b("PackageManager is null, first open report might be inaccurate. appId", w5.x(str4));
                         } else {
@@ -3191,7 +3191,7 @@ public final class me implements l8 {
                                 }
                             }
                             try {
-                                applicationInfoC = w9.c.a(this.f25763l.d()).c(str4, 0);
+                                applicationInfoC = w9.c.a(this.f26584l.d()).c(str4, 0);
                             } catch (PackageManager.NameNotFoundException e12) {
                                 a().o().c("Application info is null, first open report might be inaccurate. appId", w5.x(str4), e12);
                                 applicationInfoC = null;
@@ -3211,14 +3211,14 @@ public final class me implements l8 {
                         if (jZ >= 0) {
                             bundle2.putLong("_pfo", jZ);
                         }
-                        if (B0().H(null, z4.f26180k1)) {
+                        if (B0().H(null, z4.f27001k1)) {
                             bundle2.putLong(str, e().a());
                         }
                         j(new zzbg("_f", new zzbe(bundle2), "auto", j16), zzrVar);
                     }
                 } else {
                     long j19 = j10;
-                    if (zzrVar.f7453n) {
+                    if (zzrVar.f7527n) {
                         j(new zzbg("_cd", new zzbe(new Bundle()), "auto", j19), zzrVar);
                     }
                 }
@@ -3239,7 +3239,7 @@ public final class me implements l8 {
         }
         Boolean boolT = T(c6VarJ0);
         if (boolT == null) {
-            if (!"_ui".equals(zzbgVar.f7422f)) {
+            if (!"_ui".equals(zzbgVar.f7496f)) {
                 a().r().b("Could not find package. appId", w5.x(str));
             }
         } else if (!boolT.booleanValue()) {
@@ -3249,16 +3249,16 @@ public final class me implements l8 {
         j(zzbgVar, new zzr(str, c6VarJ0.r0(), c6VarJ0.D0(), c6VarJ0.F0(), c6VarJ0.H0(), c6VarJ0.J0(), c6VarJ0.L0(), (String) null, c6VarJ0.d(), false, c6VarJ0.x0(), 0L, 0, c6VarJ0.P(), false, c6VarJ0.R(), c6VarJ0.b(), c6VarJ0.T(), g(str).l(), "", (String) null, c6VarJ0.V(), c6VarJ0.X(), g(str).b(), R0(str).e(), c6VarJ0.b0(), c6VarJ0.j0(), c6VarJ0.l0(), c6VarJ0.I(), 0L, c6VarJ0.M()));
     }
 
-    public final void i0(zzr zzrVar) throws Throwable {
+    public final void i0(zzr zzrVar) {
         b().h();
         O0();
         n9.m.l(zzrVar);
-        String str = zzrVar.f7445f;
+        String str = zzrVar.f7519f;
         n9.m.f(str);
         int i10 = 0;
         if (B0().H(null, z4.A0)) {
             long jA = e().a();
-            int iE = B0().E(null, z4.f26176j0);
+            int iE = B0().E(null, z4.f26997j0);
             B0();
             long jN = jA - k.n();
             while (i10 < iE && M(null, jN)) {
@@ -3275,25 +3275,25 @@ public final class me implements l8 {
             b().h();
             v0();
         }
-        if (this.f25761j.j(str, com.google.android.gms.internal.measurement.k7.a(zzrVar.J))) {
+        if (this.f26582j.j(str, com.google.android.gms.internal.measurement.k7.a(zzrVar.J))) {
             a().w().b("[sgtm] Going background, trigger client side upload. appId", str);
             s(str, e().a());
         }
     }
 
     public final void j(zzbg zzbgVar, zzr zzrVar) {
-        String str = zzrVar.f7445f;
+        String str = zzrVar.f7519f;
         n9.m.f(str);
         x5 x5VarA = x5.a(zzbgVar);
-        N0().w(x5VarA.f26090d, F0().G(str));
+        N0().w(x5VarA.f26911d, F0().G(str));
         N0().u(x5VarA, B0().w(str));
         zzbg zzbgVarB = x5VarA.b();
-        if (!B0().H(null, z4.f26168g1) && "_cmp".equals(zzbgVarB.f7422f)) {
-            zzbe zzbeVar = zzbgVarB.f7423g;
+        if (!B0().H(null, z4.f26989g1) && "_cmp".equals(zzbgVarB.f7496f)) {
+            zzbe zzbeVar = zzbgVarB.f7497g;
             if ("referrer API v2".equals(zzbeVar.x3("_cis"))) {
                 String strX3 = zzbeVar.x3("gclid");
                 if (!TextUtils.isEmpty(strX3)) {
-                    c0(new zzpl("_lgclid", zzbgVarB.f7425i, strX3, "auto"), zzrVar);
+                    c0(new zzpl("_lgclid", zzbgVarB.f7499i, strX3, "auto"), zzrVar);
                 }
             }
         }
@@ -3301,7 +3301,7 @@ public final class me implements l8 {
     }
 
     public final void j0(zzah zzahVar) {
-        zzr zzrVarU = U((String) n9.m.l(zzahVar.f7409f));
+        zzr zzrVarU = U((String) n9.m.l(zzahVar.f7483f));
         if (zzrVarU != null) {
             k0(zzahVar, zzrVarU);
         }
@@ -3314,39 +3314,39 @@ public final class me implements l8 {
         List<zzah> listI2;
         String str;
         n9.m.l(zzrVar);
-        String str2 = zzrVar.f7445f;
+        String str2 = zzrVar.f7519f;
         n9.m.f(str2);
         b().h();
         O0();
-        long j10 = zzbgVar.f7425i;
+        long j10 = zzbgVar.f7499i;
         x5 x5VarA = x5.a(zzbgVar);
         b().h();
-        ve.k0((this.F == null || (str = this.G) == null || !str.equals(str2)) ? null : this.F, x5VarA.f26090d, false);
+        ve.k0((this.F == null || (str = this.G) == null || !str.equals(str2)) ? null : this.F, x5VarA.f26911d, false);
         zzbg zzbgVarB = x5VarA.b();
         K0();
         if (re.p(zzbgVarB, zzrVar)) {
-            if (!zzrVar.f7452m) {
+            if (!zzrVar.f7526m) {
                 o0(zzrVar);
                 return;
             }
-            List list = zzrVar.f7462w;
+            List list = zzrVar.f7536w;
             if (list != null) {
-                String str3 = zzbgVarB.f7422f;
+                String str3 = zzbgVarB.f7496f;
                 if (!list.contains(str3)) {
-                    a().v().d("Dropping non-safelisted event. appId, event name, origin", str2, zzbgVarB.f7422f, zzbgVarB.f7424h);
+                    a().v().d("Dropping non-safelisted event. appId, event name, origin", str2, zzbgVarB.f7496f, zzbgVarB.f7498h);
                     return;
                 } else {
-                    Bundle bundleY3 = zzbgVarB.f7423g.y3();
+                    Bundle bundleY3 = zzbgVarB.f7497g.y3();
                     bundleY3.putLong("ga_safelisted", 1L);
-                    zzbgVar2 = new zzbg(str3, new zzbe(bundleY3), zzbgVarB.f7424h, zzbgVarB.f7425i);
+                    zzbgVar2 = new zzbg(str3, new zzbe(bundleY3), zzbgVarB.f7498h, zzbgVarB.f7499i);
                 }
             } else {
                 zzbgVar2 = zzbgVarB;
             }
             F0().r0();
             try {
-                String str4 = zzbgVar2.f7422f;
-                if ("_s".equals(str4) && !F0().C(str2, "_s") && zzbgVar2.f7423g.v3("_sid").longValue() != 0) {
+                String str4 = zzbgVar2.f7496f;
+                if ("_s".equals(str4) && !F0().C(str2, "_s") && zzbgVar2.f7497g.v3("_sid").longValue() != 0) {
                     if (F0().C(str2, "_f") || F0().C(str2, "_v")) {
                         F0().I(str2, null, "_sid", l(str2, zzbgVar2));
                     } else {
@@ -3358,19 +3358,19 @@ public final class me implements l8 {
                 tVarF0.h();
                 tVarF0.j();
                 if (j10 < 0) {
-                    tVarF0.f25625a.a().r().c("Invalid time querying timed out conditional properties", w5.x(str2), Long.valueOf(j10));
+                    tVarF0.f26446a.a().r().c("Invalid time querying timed out conditional properties", w5.x(str2), Long.valueOf(j10));
                     listI0 = Collections.EMPTY_LIST;
                 } else {
                     listI0 = tVarF0.I0("active=0 and app_id=? and abs(? - creation_timestamp) > trigger_timeout", new String[]{str2, String.valueOf(j10)});
                 }
                 for (zzah zzahVar : listI0) {
                     if (zzahVar != null) {
-                        a().w().d("User property timed out", zzahVar.f7409f, this.f25763l.D().c(zzahVar.f7411h.f7439g), zzahVar.f7411h.zza());
-                        zzbg zzbgVar3 = zzahVar.f7415l;
+                        a().w().d("User property timed out", zzahVar.f7483f, this.f26584l.D().c(zzahVar.f7485h.f7513g), zzahVar.f7485h.zza());
+                        zzbg zzbgVar3 = zzahVar.f7489l;
                         if (zzbgVar3 != null) {
                             m(new zzbg(zzbgVar3, j10), zzrVar);
                         }
-                        F0().G0(str2, zzahVar.f7411h.f7439g);
+                        F0().G0(str2, zzahVar.f7485h.f7513g);
                     }
                 }
                 t tVarF1 = F0();
@@ -3378,7 +3378,7 @@ public final class me implements l8 {
                 tVarF1.h();
                 tVarF1.j();
                 if (j10 < 0) {
-                    tVarF1.f25625a.a().r().c("Invalid time querying expired conditional properties", w5.x(str2), Long.valueOf(j10));
+                    tVarF1.f26446a.a().r().c("Invalid time querying expired conditional properties", w5.x(str2), Long.valueOf(j10));
                     listI1 = Collections.EMPTY_LIST;
                 } else {
                     listI1 = tVarF1.I0("active<>0 and app_id=? and abs(? - triggered_timestamp) > time_to_live", new String[]{str2, String.valueOf(j10)});
@@ -3386,13 +3386,13 @@ public final class me implements l8 {
                 ArrayList arrayList = new ArrayList(listI1.size());
                 for (zzah zzahVar2 : listI1) {
                     if (zzahVar2 != null) {
-                        a().w().d("User property expired", zzahVar2.f7409f, this.f25763l.D().c(zzahVar2.f7411h.f7439g), zzahVar2.f7411h.zza());
-                        F0().z0(str2, zzahVar2.f7411h.f7439g);
-                        zzbg zzbgVar4 = zzahVar2.f7419p;
+                        a().w().d("User property expired", zzahVar2.f7483f, this.f26584l.D().c(zzahVar2.f7485h.f7513g), zzahVar2.f7485h.zza());
+                        F0().z0(str2, zzahVar2.f7485h.f7513g);
+                        zzbg zzbgVar4 = zzahVar2.f7493p;
                         if (zzbgVar4 != null) {
                             arrayList.add(zzbgVar4);
                         }
-                        F0().G0(str2, zzahVar2.f7411h.f7439g);
+                        F0().G0(str2, zzahVar2.f7485h.f7513g);
                     }
                 }
                 int size = arrayList.size();
@@ -3408,7 +3408,7 @@ public final class me implements l8 {
                 tVarF2.h();
                 tVarF2.j();
                 if (j10 < 0) {
-                    g7 g7Var = tVarF2.f25625a;
+                    g7 g7Var = tVarF2.f26446a;
                     g7Var.a().r().d("Invalid time querying triggered conditional properties", w5.x(str2), g7Var.D().a(str4), Long.valueOf(j10));
                     listI2 = Collections.EMPTY_LIST;
                 } else {
@@ -3417,19 +3417,19 @@ public final class me implements l8 {
                 ArrayList arrayList2 = new ArrayList(listI2.size());
                 for (zzah zzahVar3 : listI2) {
                     if (zzahVar3 != null) {
-                        zzpl zzplVar = zzahVar3.f7411h;
-                        te teVar = new te((String) n9.m.l(zzahVar3.f7409f), zzahVar3.f7410g, zzplVar.f7439g, j10, n9.m.l(zzplVar.zza()));
+                        zzpl zzplVar = zzahVar3.f7485h;
+                        te teVar = new te((String) n9.m.l(zzahVar3.f7483f), zzahVar3.f7484g, zzplVar.f7513g, j10, n9.m.l(zzplVar.zza()));
                         if (F0().A0(teVar)) {
-                            a().w().d("User property triggered", zzahVar3.f7409f, this.f25763l.D().c(teVar.f25996c), teVar.f25998e);
+                            a().w().d("User property triggered", zzahVar3.f7483f, this.f26584l.D().c(teVar.f26817c), teVar.f26819e);
                         } else {
-                            a().o().d("Too many active user properties, ignoring", w5.x(zzahVar3.f7409f), this.f25763l.D().c(teVar.f25996c), teVar.f25998e);
+                            a().o().d("Too many active user properties, ignoring", w5.x(zzahVar3.f7483f), this.f26584l.D().c(teVar.f26817c), teVar.f26819e);
                         }
-                        zzbg zzbgVar5 = zzahVar3.f7417n;
+                        zzbg zzbgVar5 = zzahVar3.f7491n;
                         if (zzbgVar5 != null) {
                             arrayList2.add(zzbgVar5);
                         }
-                        zzahVar3.f7411h = new zzpl(teVar);
-                        zzahVar3.f7413j = true;
+                        zzahVar3.f7485h = new zzpl(teVar);
+                        zzahVar3.f7487j = true;
                         F0().E0(zzahVar3);
                     }
                 }
@@ -3450,57 +3450,57 @@ public final class me implements l8 {
 
     public final void k0(zzah zzahVar, zzr zzrVar) {
         n9.m.l(zzahVar);
-        n9.m.f(zzahVar.f7409f);
-        n9.m.l(zzahVar.f7410g);
-        n9.m.l(zzahVar.f7411h);
-        n9.m.f(zzahVar.f7411h.f7439g);
+        n9.m.f(zzahVar.f7483f);
+        n9.m.l(zzahVar.f7484g);
+        n9.m.l(zzahVar.f7485h);
+        n9.m.f(zzahVar.f7485h.f7513g);
         b().h();
         O0();
         if (X(zzrVar)) {
-            if (!zzrVar.f7452m) {
+            if (!zzrVar.f7526m) {
                 o0(zzrVar);
                 return;
             }
             zzah zzahVar2 = new zzah(zzahVar);
             boolean z10 = false;
-            zzahVar2.f7413j = false;
+            zzahVar2.f7487j = false;
             F0().r0();
             try {
-                zzah zzahVarF0 = F0().F0((String) n9.m.l(zzahVar2.f7409f), zzahVar2.f7411h.f7439g);
-                if (zzahVarF0 != null && !zzahVarF0.f7410g.equals(zzahVar2.f7410g)) {
-                    a().r().d("Updating a conditional user property with different origin. name, origin, origin (from DB)", this.f25763l.D().c(zzahVar2.f7411h.f7439g), zzahVar2.f7410g, zzahVarF0.f7410g);
+                zzah zzahVarF0 = F0().F0((String) n9.m.l(zzahVar2.f7483f), zzahVar2.f7485h.f7513g);
+                if (zzahVarF0 != null && !zzahVarF0.f7484g.equals(zzahVar2.f7484g)) {
+                    a().r().d("Updating a conditional user property with different origin. name, origin, origin (from DB)", this.f26584l.D().c(zzahVar2.f7485h.f7513g), zzahVar2.f7484g, zzahVarF0.f7484g);
                 }
-                if (zzahVarF0 != null && zzahVarF0.f7413j) {
-                    zzahVar2.f7410g = zzahVarF0.f7410g;
-                    zzahVar2.f7412i = zzahVarF0.f7412i;
-                    zzahVar2.f7416m = zzahVarF0.f7416m;
-                    zzahVar2.f7414k = zzahVarF0.f7414k;
-                    zzahVar2.f7417n = zzahVarF0.f7417n;
-                    zzahVar2.f7413j = true;
-                    zzpl zzplVar = zzahVar2.f7411h;
-                    zzahVar2.f7411h = new zzpl(zzplVar.f7439g, zzahVarF0.f7411h.f7440h, zzplVar.zza(), zzahVarF0.f7411h.f7443k);
-                } else if (TextUtils.isEmpty(zzahVar2.f7414k)) {
-                    zzpl zzplVar2 = zzahVar2.f7411h;
-                    zzahVar2.f7411h = new zzpl(zzplVar2.f7439g, zzahVar2.f7412i, zzplVar2.zza(), zzahVar2.f7411h.f7443k);
-                    zzahVar2.f7413j = true;
+                if (zzahVarF0 != null && zzahVarF0.f7487j) {
+                    zzahVar2.f7484g = zzahVarF0.f7484g;
+                    zzahVar2.f7486i = zzahVarF0.f7486i;
+                    zzahVar2.f7490m = zzahVarF0.f7490m;
+                    zzahVar2.f7488k = zzahVarF0.f7488k;
+                    zzahVar2.f7491n = zzahVarF0.f7491n;
+                    zzahVar2.f7487j = true;
+                    zzpl zzplVar = zzahVar2.f7485h;
+                    zzahVar2.f7485h = new zzpl(zzplVar.f7513g, zzahVarF0.f7485h.f7514h, zzplVar.zza(), zzahVarF0.f7485h.f7517k);
+                } else if (TextUtils.isEmpty(zzahVar2.f7488k)) {
+                    zzpl zzplVar2 = zzahVar2.f7485h;
+                    zzahVar2.f7485h = new zzpl(zzplVar2.f7513g, zzahVar2.f7486i, zzplVar2.zza(), zzahVar2.f7485h.f7517k);
+                    zzahVar2.f7487j = true;
                     z10 = true;
                 }
-                if (zzahVar2.f7413j) {
-                    zzpl zzplVar3 = zzahVar2.f7411h;
-                    te teVar = new te((String) n9.m.l(zzahVar2.f7409f), zzahVar2.f7410g, zzplVar3.f7439g, zzplVar3.f7440h, n9.m.l(zzplVar3.zza()));
+                if (zzahVar2.f7487j) {
+                    zzpl zzplVar3 = zzahVar2.f7485h;
+                    te teVar = new te((String) n9.m.l(zzahVar2.f7483f), zzahVar2.f7484g, zzplVar3.f7513g, zzplVar3.f7514h, n9.m.l(zzplVar3.zza()));
                     if (F0().A0(teVar)) {
-                        a().v().d("User property updated immediately", zzahVar2.f7409f, this.f25763l.D().c(teVar.f25996c), teVar.f25998e);
+                        a().v().d("User property updated immediately", zzahVar2.f7483f, this.f26584l.D().c(teVar.f26817c), teVar.f26819e);
                     } else {
-                        a().o().d("(2)Too many active user properties, ignoring", w5.x(zzahVar2.f7409f), this.f25763l.D().c(teVar.f25996c), teVar.f25998e);
+                        a().o().d("(2)Too many active user properties, ignoring", w5.x(zzahVar2.f7483f), this.f26584l.D().c(teVar.f26817c), teVar.f26819e);
                     }
-                    if (z10 && zzahVar2.f7417n != null) {
-                        m(new zzbg(zzahVar2.f7417n, zzahVar2.f7412i), zzrVar);
+                    if (z10 && zzahVar2.f7491n != null) {
+                        m(new zzbg(zzahVar2.f7491n, zzahVar2.f7486i), zzrVar);
                     }
                 }
                 if (F0().E0(zzahVar2)) {
-                    a().v().d("Conditional property added", zzahVar2.f7409f, this.f25763l.D().c(zzahVar2.f7411h.f7439g), zzahVar2.f7411h.zza());
+                    a().v().d("Conditional property added", zzahVar2.f7483f, this.f26584l.D().c(zzahVar2.f7485h.f7513g), zzahVar2.f7485h.zza());
                 } else {
-                    a().o().d("Too many conditional properties, ignoring", w5.x(zzahVar2.f7409f), this.f25763l.D().c(zzahVar2.f7411h.f7439g), zzahVar2.f7411h.zza());
+                    a().o().d("Too many conditional properties, ignoring", w5.x(zzahVar2.f7483f), this.f26584l.D().c(zzahVar2.f7485h.f7513g), zzahVar2.f7485h.zza());
                 }
                 F0().s0();
             } finally {
@@ -3511,10 +3511,10 @@ public final class me implements l8 {
 
     public final Bundle l(String str, zzbg zzbgVar) {
         Bundle bundle = new Bundle();
-        bundle.putLong("_sid", zzbgVar.f7423g.v3("_sid").longValue());
+        bundle.putLong("_sid", zzbgVar.f7497g.v3("_sid").longValue());
         te teVarB0 = F0().B0(str, "_sno");
         if (teVarB0 != null) {
-            Object obj = teVarB0.f25998e;
+            Object obj = teVarB0.f26819e;
             if (obj instanceof Long) {
                 bundle.putLong("_sno", ((Long) obj).longValue());
             }
@@ -3523,7 +3523,7 @@ public final class me implements l8 {
     }
 
     public final void l0(zzah zzahVar) {
-        zzr zzrVarU = U((String) n9.m.l(zzahVar.f7409f));
+        zzr zzrVarU = U((String) n9.m.l(zzahVar.f7483f));
         if (zzrVarU != null) {
             m0(zzahVar, zzrVarU);
         }
@@ -3704,21 +3704,21 @@ public final class me implements l8 {
         String str12 = "_fx";
         String str13 = "raw_events";
         n9.m.l(zzrVar);
-        String str14 = zzrVar.f7445f;
+        String str14 = zzrVar.f7519f;
         n9.m.f(str14);
         long jNanoTime = System.nanoTime();
         b().h();
         O0();
         K0();
         if (re.p(zzbgVar, zzrVar)) {
-            if (!zzrVar.f7452m) {
+            if (!zzrVar.f7526m) {
                 o0(zzrVar);
                 return;
             }
             x6 x6VarD0 = D0();
-            String str15 = zzbgVar.f7422f;
+            String str15 = zzbgVar.f7496f;
             if (x6VarD0.D(str14, str15)) {
-                a().r().c("Dropping blocked event. appId", w5.x(str14), this.f25763l.D().a(str15));
+                a().r().c("Dropping blocked event. appId", w5.x(str14), this.f26584l.D().a(str15));
                 if (!D0().H(str14) && !D0().I(str14)) {
                     if ("_err".equals(str15)) {
                         return;
@@ -3741,8 +3741,8 @@ public final class me implements l8 {
             }
             x5 x5VarA = x5.a(zzbgVar);
             N0().u(x5VarA, B0().w(str14));
-            int iF = B0().F(str14, z4.f26170h0, 10, 35);
-            Bundle bundle = x5VarA.f26090d;
+            int iF = B0().F(str14, z4.f26991h0, 10, 35);
+            Bundle bundle = x5VarA.f26911d;
             for (String str16 : new TreeSet(bundle.keySet())) {
                 if ("items".equals(str16)) {
                     N0().v(bundle.getParcelableArray(str16), iF);
@@ -3750,15 +3750,15 @@ public final class me implements l8 {
             }
             zzbg zzbgVarB = x5VarA.b();
             if (Log.isLoggable(a().z(), 2)) {
-                a().w().b("Logging event", this.f25763l.D().d(zzbgVarB));
+                a().w().b("Logging event", this.f26584l.D().d(zzbgVarB));
             }
             F0().r0();
             try {
                 o0(zzrVar);
-                String str17 = zzbgVarB.f7422f;
+                String str17 = zzbgVarB.f7496f;
                 boolean z18 = "ecommerce_purchase".equals(str17) || "purchase".equals(str17) || "refund".equals(str17);
                 if ("_iap".equals(str17)) {
-                    zzbeVar = zzbgVarB.f7423g;
+                    zzbeVar = zzbgVarB.f7497g;
                     strX3 = zzbeVar.x3("currency");
                     if (z18) {
                         dDoubleValue = zzbeVar.w3("value").doubleValue() * 1000000.0d;
@@ -3781,11 +3781,11 @@ public final class me implements l8 {
                     }
                     if (TextUtils.isEmpty(strX3)) {
                         zzbgVarB = zzbgVarB;
-                        str = zzbgVarB.f7422f;
+                        str = zzbgVarB.f7496f;
                         zR0 = ve.r0(str);
                         zEquals = "_err".equals(str);
                         N0();
-                        zzbeVar2 = zzbgVarB.f7423g;
+                        zzbeVar2 = zzbgVarB.f7497g;
                         if (zzbeVar2 == null) {
                             length = 0;
                         } else {
@@ -3814,10 +3814,10 @@ public final class me implements l8 {
                                 if (zEquals) {
                                     j10 = 1;
                                     r8 = 0;
-                                    jMax = pVarM0.f25835d - ((long) Math.max(0, Math.min(1000000, B0().E(zzrVar.f7445f, z4.f26184m))));
+                                    jMax = pVarM0.f26656d - ((long) Math.max(0, Math.min(1000000, B0().E(zzrVar.f7519f, z4.f27005m))));
                                     if (jMax > 0) {
                                         if (jMax == 1) {
-                                            a().o().c("Too many error events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f25835d));
+                                            a().o().c("Too many error events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f26656d));
                                         }
                                         F0().s0();
                                     }
@@ -3827,7 +3827,7 @@ public final class me implements l8 {
                                 }
                                 bundleY3 = zzbeVar2.y3();
                                 ve veVarN0 = N0();
-                                String str18 = zzbgVar2.f7424h;
+                                String str18 = zzbgVar2.f7498h;
                                 veVarN0.A(bundleY3, "_o", str18);
                                 if (N0().P(str2, zzrVar.G)) {
                                     ve veVarN1 = N0();
@@ -3836,7 +3836,7 @@ public final class me implements l8 {
                                     N0().A(bundleY3, "_r", lValueOf);
                                 }
                                 if ("_s".equals(str)) {
-                                    obj3 = teVarB1.f25998e;
+                                    obj3 = teVarB1.f26819e;
                                     if (obj3 instanceof Long) {
                                         N0().A(bundleY3, "_sno", obj3);
                                     }
@@ -3853,23 +3853,23 @@ public final class me implements l8 {
                                 n9.m.f(str2);
                                 tVarF1.h();
                                 tVarF1.j();
-                                jDelete = tVarF1.u0().delete("raw_events", "rowid in (select rowid from raw_events where app_id=? order by rowid desc limit -1 offset ?)", new String[]{str2, String.valueOf(Math.max((int) r8, Math.min(1000000, tVarF1.f25625a.w().E(str2, z4.f26192q))))});
+                                jDelete = tVarF1.u0().delete("raw_events", "rowid in (select rowid from raw_events where app_id=? order by rowid desc limit -1 offset ?)", new String[]{str2, String.valueOf(Math.max((int) r8, Math.min(1000000, tVarF1.f26446a.w().E(str2, z4.f27013q))))});
                                 if (jDelete > 0) {
                                     a().r().c("Data lost. Too many events stored on disk, deleted. appId", w5.x(str2), Long.valueOf(jDelete));
                                 }
-                                g7Var = this.f25763l;
-                                a0Var = new a0(g7Var, zzbgVar2.f7424h, str2, zzbgVar2.f7422f, zzbgVar2.f7425i, 0L, bundleY3);
+                                g7Var = this.f26584l;
+                                a0Var = new a0(g7Var, zzbgVar2.f7498h, str2, zzbgVar2.f7496f, zzbgVar2.f7499i, 0L, bundleY3);
                                 t tVarF4 = F0();
                                 str3 = a0Var.b;
                                 b0VarV0 = tVarF4.v0(str2, str3);
                                 if (b0VarV0 != null) {
                                     if (F0().E(str2) >= B0().z(str2)) {
                                     }
-                                    b0Var = new b0(str2, str3, 0L, 0L, 0L, a0Var.f25316d, 0L, null, null, null, null);
+                                    b0Var = new b0(str2, str3, 0L, 0L, 0L, a0Var.f26137d, 0L, null, null, null, null);
                                     a0Var2 = a0Var;
                                 } else {
-                                    a0 a0VarA = a0Var.a(g7Var, b0VarV0.f25350f);
-                                    b0 b0VarA = b0VarV0.a(a0VarA.f25316d);
+                                    a0 a0VarA = a0Var.a(g7Var, b0VarV0.f26171f);
+                                    b0 b0VarA = b0VarV0.a(a0VarA.f26137d);
                                     a0Var2 = a0VarA;
                                     b0Var = b0VarA;
                                 }
@@ -3878,38 +3878,38 @@ public final class me implements l8 {
                                 O0();
                                 n9.m.l(a0Var2);
                                 n9.m.l(zzrVar);
-                                String str19 = a0Var2.f25314a;
+                                String str19 = a0Var2.f26135a;
                                 n9.m.f(str19);
-                                str4 = zzrVar.f7445f;
+                                str4 = zzrVar.f7519f;
                                 n9.m.a(str19.equals(str4));
                                 z6VarM0 = com.google.android.gms.internal.measurement.a7.m0();
                                 z6VarM0.e0(1);
-                                z6VarM0.A("android");
+                                z6VarM0.B("android");
                                 if (!TextUtils.isEmpty(str4)) {
                                     z6VarM0.P(str4);
                                 }
-                                str5 = zzrVar.f7448i;
+                                str5 = zzrVar.f7522i;
                                 if (!TextUtils.isEmpty(str5)) {
                                     z6VarM0.N(str5);
                                 }
-                                str6 = zzrVar.f7447h;
+                                str6 = zzrVar.f7521h;
                                 if (!TextUtils.isEmpty(str6)) {
                                     z6VarM0.Q(str6);
                                 }
-                                str7 = zzrVar.f7465z;
+                                str7 = zzrVar.f7539z;
                                 if (!TextUtils.isEmpty(str7)) {
                                     z6VarM0.Q0(str7);
                                 }
-                                j11 = zzrVar.f7454o;
+                                j11 = zzrVar.f7528o;
                                 if (j11 != -2147483648L) {
                                     z6VarM0.F0((int) j11);
                                 }
-                                z6VarM0.R(zzrVar.f7449j);
-                                str8 = zzrVar.f7446g;
+                                z6VarM0.R(zzrVar.f7523j);
+                                str8 = zzrVar.f7520g;
                                 if (!TextUtils.isEmpty(str8)) {
                                     z6VarM0.z0(str8);
                                 }
-                                q8VarS = g((String) n9.m.l(str4)).s(q8.f(zzrVar.f7463x, 100));
+                                q8VarS = g((String) n9.m.l(str4)).s(q8.f(zzrVar.f7537x, 100));
                                 z6VarM0.P0(q8VarS.k());
                                 vf.a();
                                 if (B0().H(str4, z4.Q0)) {
@@ -3931,7 +3931,7 @@ public final class me implements l8 {
                                         } else {
                                             z11 = r8;
                                         }
-                                        z5VarO.x(z11);
+                                        z5VarO.y(z11);
                                         if ((j13 & 2) != 0) {
                                             z12 = 1;
                                         } else {
@@ -3943,7 +3943,7 @@ public final class me implements l8 {
                                         } else {
                                             z13 = r8;
                                         }
-                                        z5VarO.A(z13);
+                                        z5VarO.B(z13);
                                         if ((j13 & 8) != 0) {
                                             z14 = 1;
                                         } else {
@@ -3971,13 +3971,13 @@ public final class me implements l8 {
                                         z6VarM0.n0((com.google.android.gms.internal.measurement.a6) z5VarO.t());
                                     }
                                 }
-                                j12 = zzrVar.f7450k;
+                                j12 = zzrVar.f7524k;
                                 if (j12 != 0) {
                                     z6VarM0.c0(j12);
                                 }
-                                z6VarM0.N0(zzrVar.f7461v);
+                                z6VarM0.N0(zzrVar.f7535v);
                                 re reVarK0 = K0();
-                                p8VarC = com.google.android.gms.internal.measurement.p8.c(reVarK0.b.f25763l.d().getContentResolver(), com.google.android.gms.internal.measurement.a9.a("com.google.android.gms.measurement"), new Runnable() { // from class: nb.v4
+                                p8VarC = com.google.android.gms.internal.measurement.p8.c(reVarK0.b.f26584l.d().getContentResolver(), com.google.android.gms.internal.measurement.a9.a("com.google.android.gms.measurement"), new Runnable() { // from class: nb.v4
                                     @Override // java.lang.Runnable
                                     public final /* synthetic */ void run() {
                                         com.google.android.gms.internal.measurement.l9.c();
@@ -3996,11 +3996,11 @@ public final class me implements l8 {
                                 if (arrayList != null) {
                                     z6VarM0.M0(arrayList);
                                 }
-                                if (B0().H(null, z4.f26153b1)) {
+                                if (B0().H(null, z4.f26974b1)) {
                                     z6VarM0.u0("");
                                 }
-                                str9 = zzrVar.f7445f;
-                                q8VarS2 = g((String) n9.m.l(str9)).s(q8.f(zzrVar.f7463x, 100));
+                                str9 = zzrVar.f7519f;
+                                q8VarS2 = g((String) n9.m.l(str9)).s(q8.f(zzrVar.f7537x, 100));
                                 p8Var = p8.AD_STORAGE;
                                 if (q8VarS2.o(p8Var)) {
                                     str13 = "raw_events";
@@ -4009,7 +4009,7 @@ public final class me implements l8 {
                                     str13 = "raw_events";
                                     p8Var = p8Var;
                                 }
-                                g7Var2 = this.f25763l;
+                                g7Var2 = this.f26584l;
                                 g7Var2.K().l();
                                 z6VarM0.E(Build.MODEL);
                                 g7Var2.K().l();
@@ -4027,21 +4027,21 @@ public final class me implements l8 {
                                 if (c6VarJ0 == null) {
                                     c6VarJ0 = new c6(g7Var2, str9);
                                     c6VarJ0.q0(p(q8VarS2));
-                                    c6VarJ0.y0(zzrVar.f7455p);
-                                    c6VarJ0.s0(zzrVar.f7446g);
+                                    c6VarJ0.y0(zzrVar.f7529p);
+                                    c6VarJ0.s0(zzrVar.f7520g);
                                     if (q8VarS2.o(p8Var)) {
-                                        c6VarJ0.w0(this.f25760i.o(str9, zzrVar.f7458s));
+                                        c6VarJ0.w0(this.f26581i.o(str9, zzrVar.f7532s));
                                     }
                                     c6VarJ0.f(0L);
                                     c6VarJ0.A0(0L);
                                     c6VarJ0.C0(0L);
-                                    c6VarJ0.E0(zzrVar.f7447h);
-                                    c6VarJ0.G0(zzrVar.f7454o);
-                                    c6VarJ0.I0(zzrVar.f7448i);
-                                    c6VarJ0.K0(zzrVar.f7449j);
-                                    c6VarJ0.a(zzrVar.f7450k);
-                                    c6VarJ0.e(zzrVar.f7452m);
-                                    c6VarJ0.c(zzrVar.f7461v);
+                                    c6VarJ0.E0(zzrVar.f7521h);
+                                    c6VarJ0.G0(zzrVar.f7528o);
+                                    c6VarJ0.I0(zzrVar.f7522i);
+                                    c6VarJ0.K0(zzrVar.f7523j);
+                                    c6VarJ0.a(zzrVar.f7524k);
+                                    c6VarJ0.e(zzrVar.f7526m);
+                                    c6VarJ0.c(zzrVar.f7535v);
                                     i10 = 0;
                                     F0().K0(c6VarJ0, false, false);
                                 } else {
@@ -4056,11 +4056,11 @@ public final class me implements l8 {
                                 listC0 = F0().C0(str9);
                                 for (i11 = i10; i11 < listC0.size(); i11++) {
                                     com.google.android.gms.internal.measurement.q7 q7VarS = com.google.android.gms.internal.measurement.r7.S();
-                                    q7VarS.z(((te) listC0.get(i11)).f25996c);
-                                    q7VarS.x(((te) listC0.get(i11)).f25997d);
-                                    K0().G(q7VarS, ((te) listC0.get(i11)).f25998e);
+                                    q7VarS.z(((te) listC0.get(i11)).f26817c);
+                                    q7VarS.y(((te) listC0.get(i11)).f26818d);
+                                    K0().G(q7VarS, ((te) listC0.get(i11)).f26819e);
                                     z6VarM0.k1(q7VarS);
-                                    if (!"_sid".equals(((te) listC0.get(i11)).f25996c)) {
+                                    if (!"_sid".equals(((te) listC0.get(i11)).f26817c)) {
                                     }
                                 }
                                 tVarF2 = F0();
@@ -4078,11 +4078,11 @@ public final class me implements l8 {
                                 contentValues2.put("metadata", bArrD);
                                 tVarF2.u0().insertWithOnConflict("raw_events_metadata", null, contentValues2, 4);
                                 tVarF3 = F0();
-                                c0Var2 = new c0(a0Var2.f25318f);
+                                c0Var2 = new c0(a0Var2.f26139f);
                                 while (true) {
                                     if (c0Var2.hasNext()) {
                                         x6 x6VarD1 = D0();
-                                        String str21 = a0Var2.f25314a;
+                                        String str21 = a0Var2.f26135a;
                                         zE = x6VarD1.E(str21, a0Var2.b);
                                         p pVarL0 = F0().L0(h(), str21, false, false, false, false, false, false, false);
                                         if (zE) {
@@ -4098,20 +4098,20 @@ public final class me implements l8 {
                                 tVarF3.h();
                                 tVarF3.j();
                                 n9.m.l(a0Var2);
-                                str10 = a0Var2.f25314a;
+                                str10 = a0Var2.f26135a;
                                 n9.m.f(str10);
                                 byte[] bArrD2 = tVarF3.b.K0().J(a0Var2).d();
                                 contentValues = new ContentValues();
                                 contentValues.put(str20, str10);
                                 contentValues.put("name", a0Var2.b);
-                                contentValues.put("timestamp", Long.valueOf(a0Var2.f25316d));
+                                contentValues.put("timestamp", Long.valueOf(a0Var2.f26137d));
                                 contentValues.put("metadata_fingerprint", Long.valueOf(jT));
                                 contentValues.put("data", bArrD2);
                                 contentValues.put("realtime", Integer.valueOf(i12));
                                 if (tVarF3.u0().insert(str13, null, contentValues) == -1) {
-                                    tVarF3.f25625a.a().o().b("Failed to insert raw event (got -1). appId", w5.x(str10));
+                                    tVarF3.f26446a.a().o().b("Failed to insert raw event (got -1). appId", w5.x(str10));
                                 } else {
-                                    this.f25766o = 0L;
+                                    this.f26587o = 0L;
                                 }
                                 F0().s0();
                                 F0().t0();
@@ -4119,17 +4119,17 @@ public final class me implements l8 {
                                 a().w().b("Background event processing time, ms", Long.valueOf(((System.nanoTime() - jNanoTime) + 500000) / 1000000));
                                 return;
                             }
-                            long j15 = pVarM0.f25833a;
+                            long j15 = pVarM0.f26654a;
                             B0();
-                            jIntValue = j15 - ((long) ((Integer) z4.f26186n.b(null)).intValue());
+                            jIntValue = j15 - ((long) ((Integer) z4.f27007n.b(null)).intValue());
                             if (jIntValue > 0) {
                                 if (zEquals) {
                                     j10 = 1;
                                     r8 = 0;
-                                    jMax = pVarM0.f25835d - ((long) Math.max(0, Math.min(1000000, B0().E(zzrVar.f7445f, z4.f26184m))));
+                                    jMax = pVarM0.f26656d - ((long) Math.max(0, Math.min(1000000, B0().E(zzrVar.f7519f, z4.f27005m))));
                                     if (jMax > 0) {
                                         if (jMax == 1) {
-                                            a().o().c("Too many error events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f25835d));
+                                            a().o().c("Too many error events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f26656d));
                                         }
                                         F0().s0();
                                     }
@@ -4139,7 +4139,7 @@ public final class me implements l8 {
                                 }
                                 bundleY3 = zzbeVar2.y3();
                                 ve veVarN2 = N0();
-                                String str110 = zzbgVar2.f7424h;
+                                String str110 = zzbgVar2.f7498h;
                                 veVarN2.A(bundleY3, "_o", str110);
                                 if (N0().P(str2, zzrVar.G)) {
                                     ve veVarN3 = N0();
@@ -4148,7 +4148,7 @@ public final class me implements l8 {
                                     N0().A(bundleY3, "_r", lValueOf2);
                                 }
                                 if ("_s".equals(str)) {
-                                    obj3 = teVarB1.f25998e;
+                                    obj3 = teVarB1.f26819e;
                                     if (obj3 instanceof Long) {
                                         N0().A(bundleY3, "_sno", obj3);
                                     }
@@ -4165,23 +4165,23 @@ public final class me implements l8 {
                                 n9.m.f(str2);
                                 tVarF1.h();
                                 tVarF1.j();
-                                jDelete = tVarF1.u0().delete("raw_events", "rowid in (select rowid from raw_events where app_id=? order by rowid desc limit -1 offset ?)", new String[]{str2, String.valueOf(Math.max((int) r8, Math.min(1000000, tVarF1.f25625a.w().E(str2, z4.f26192q))))});
+                                jDelete = tVarF1.u0().delete("raw_events", "rowid in (select rowid from raw_events where app_id=? order by rowid desc limit -1 offset ?)", new String[]{str2, String.valueOf(Math.max((int) r8, Math.min(1000000, tVarF1.f26446a.w().E(str2, z4.f27013q))))});
                                 if (jDelete > 0) {
                                     a().r().c("Data lost. Too many events stored on disk, deleted. appId", w5.x(str2), Long.valueOf(jDelete));
                                 }
-                                g7Var = this.f25763l;
-                                a0Var = new a0(g7Var, zzbgVar2.f7424h, str2, zzbgVar2.f7422f, zzbgVar2.f7425i, 0L, bundleY3);
+                                g7Var = this.f26584l;
+                                a0Var = new a0(g7Var, zzbgVar2.f7498h, str2, zzbgVar2.f7496f, zzbgVar2.f7499i, 0L, bundleY3);
                                 t tVarF5 = F0();
                                 str3 = a0Var.b;
                                 b0VarV0 = tVarF5.v0(str2, str3);
                                 if (b0VarV0 != null) {
                                     if (F0().E(str2) >= B0().z(str2)) {
                                     }
-                                    b0Var = new b0(str2, str3, 0L, 0L, 0L, a0Var.f25316d, 0L, null, null, null, null);
+                                    b0Var = new b0(str2, str3, 0L, 0L, 0L, a0Var.f26137d, 0L, null, null, null, null);
                                     a0Var2 = a0Var;
                                 } else {
-                                    a0 a0VarA2 = a0Var.a(g7Var, b0VarV0.f25350f);
-                                    b0 b0VarA2 = b0VarV0.a(a0VarA2.f25316d);
+                                    a0 a0VarA2 = a0Var.a(g7Var, b0VarV0.f26171f);
+                                    b0 b0VarA2 = b0VarV0.a(a0VarA2.f26137d);
                                     a0Var2 = a0VarA2;
                                     b0Var = b0VarA2;
                                 }
@@ -4190,38 +4190,38 @@ public final class me implements l8 {
                                 O0();
                                 n9.m.l(a0Var2);
                                 n9.m.l(zzrVar);
-                                String str111 = a0Var2.f25314a;
+                                String str111 = a0Var2.f26135a;
                                 n9.m.f(str111);
-                                str4 = zzrVar.f7445f;
+                                str4 = zzrVar.f7519f;
                                 n9.m.a(str111.equals(str4));
                                 z6VarM0 = com.google.android.gms.internal.measurement.a7.m0();
                                 z6VarM0.e0(1);
-                                z6VarM0.A("android");
+                                z6VarM0.B("android");
                                 if (!TextUtils.isEmpty(str4)) {
                                     z6VarM0.P(str4);
                                 }
-                                str5 = zzrVar.f7448i;
+                                str5 = zzrVar.f7522i;
                                 if (!TextUtils.isEmpty(str5)) {
                                     z6VarM0.N(str5);
                                 }
-                                str6 = zzrVar.f7447h;
+                                str6 = zzrVar.f7521h;
                                 if (!TextUtils.isEmpty(str6)) {
                                     z6VarM0.Q(str6);
                                 }
-                                str7 = zzrVar.f7465z;
+                                str7 = zzrVar.f7539z;
                                 if (!TextUtils.isEmpty(str7)) {
                                     z6VarM0.Q0(str7);
                                 }
-                                j11 = zzrVar.f7454o;
+                                j11 = zzrVar.f7528o;
                                 if (j11 != -2147483648L) {
                                     z6VarM0.F0((int) j11);
                                 }
-                                z6VarM0.R(zzrVar.f7449j);
-                                str8 = zzrVar.f7446g;
+                                z6VarM0.R(zzrVar.f7523j);
+                                str8 = zzrVar.f7520g;
                                 if (!TextUtils.isEmpty(str8)) {
                                     z6VarM0.z0(str8);
                                 }
-                                q8VarS = g((String) n9.m.l(str4)).s(q8.f(zzrVar.f7463x, 100));
+                                q8VarS = g((String) n9.m.l(str4)).s(q8.f(zzrVar.f7537x, 100));
                                 z6VarM0.P0(q8VarS.k());
                                 vf.a();
                                 if (B0().H(str4, z4.Q0)) {
@@ -4243,7 +4243,7 @@ public final class me implements l8 {
                                         } else {
                                             z11 = r8;
                                         }
-                                        z5VarO2.x(z11);
+                                        z5VarO2.y(z11);
                                         if ((j13 & 2) != 0) {
                                             z12 = 1;
                                         } else {
@@ -4255,7 +4255,7 @@ public final class me implements l8 {
                                         } else {
                                             z13 = r8;
                                         }
-                                        z5VarO2.A(z13);
+                                        z5VarO2.B(z13);
                                         if ((j13 & 8) != 0) {
                                             z14 = 1;
                                         } else {
@@ -4283,13 +4283,13 @@ public final class me implements l8 {
                                         z6VarM0.n0((com.google.android.gms.internal.measurement.a6) z5VarO2.t());
                                     }
                                 }
-                                j12 = zzrVar.f7450k;
+                                j12 = zzrVar.f7524k;
                                 if (j12 != 0) {
                                     z6VarM0.c0(j12);
                                 }
-                                z6VarM0.N0(zzrVar.f7461v);
+                                z6VarM0.N0(zzrVar.f7535v);
                                 re reVarK1 = K0();
-                                p8VarC = com.google.android.gms.internal.measurement.p8.c(reVarK1.b.f25763l.d().getContentResolver(), com.google.android.gms.internal.measurement.a9.a("com.google.android.gms.measurement"), new Runnable() { // from class: nb.v4
+                                p8VarC = com.google.android.gms.internal.measurement.p8.c(reVarK1.b.f26584l.d().getContentResolver(), com.google.android.gms.internal.measurement.a9.a("com.google.android.gms.measurement"), new Runnable() { // from class: nb.v4
                                     @Override // java.lang.Runnable
                                     public final /* synthetic */ void run() {
                                         com.google.android.gms.internal.measurement.l9.c();
@@ -4308,11 +4308,11 @@ public final class me implements l8 {
                                 if (arrayList != null) {
                                     z6VarM0.M0(arrayList);
                                 }
-                                if (B0().H(null, z4.f26153b1)) {
+                                if (B0().H(null, z4.f26974b1)) {
                                     z6VarM0.u0("");
                                 }
-                                str9 = zzrVar.f7445f;
-                                q8VarS2 = g((String) n9.m.l(str9)).s(q8.f(zzrVar.f7463x, 100));
+                                str9 = zzrVar.f7519f;
+                                q8VarS2 = g((String) n9.m.l(str9)).s(q8.f(zzrVar.f7537x, 100));
                                 p8Var = p8.AD_STORAGE;
                                 if (q8VarS2.o(p8Var)) {
                                     str13 = "raw_events";
@@ -4321,7 +4321,7 @@ public final class me implements l8 {
                                     str13 = "raw_events";
                                     p8Var = p8Var;
                                 }
-                                g7Var2 = this.f25763l;
+                                g7Var2 = this.f26584l;
                                 g7Var2.K().l();
                                 z6VarM0.E(Build.MODEL);
                                 g7Var2.K().l();
@@ -4339,21 +4339,21 @@ public final class me implements l8 {
                                 if (c6VarJ0 == null) {
                                     c6VarJ0 = new c6(g7Var2, str9);
                                     c6VarJ0.q0(p(q8VarS2));
-                                    c6VarJ0.y0(zzrVar.f7455p);
-                                    c6VarJ0.s0(zzrVar.f7446g);
+                                    c6VarJ0.y0(zzrVar.f7529p);
+                                    c6VarJ0.s0(zzrVar.f7520g);
                                     if (q8VarS2.o(p8Var)) {
-                                        c6VarJ0.w0(this.f25760i.o(str9, zzrVar.f7458s));
+                                        c6VarJ0.w0(this.f26581i.o(str9, zzrVar.f7532s));
                                     }
                                     c6VarJ0.f(0L);
                                     c6VarJ0.A0(0L);
                                     c6VarJ0.C0(0L);
-                                    c6VarJ0.E0(zzrVar.f7447h);
-                                    c6VarJ0.G0(zzrVar.f7454o);
-                                    c6VarJ0.I0(zzrVar.f7448i);
-                                    c6VarJ0.K0(zzrVar.f7449j);
-                                    c6VarJ0.a(zzrVar.f7450k);
-                                    c6VarJ0.e(zzrVar.f7452m);
-                                    c6VarJ0.c(zzrVar.f7461v);
+                                    c6VarJ0.E0(zzrVar.f7521h);
+                                    c6VarJ0.G0(zzrVar.f7528o);
+                                    c6VarJ0.I0(zzrVar.f7522i);
+                                    c6VarJ0.K0(zzrVar.f7523j);
+                                    c6VarJ0.a(zzrVar.f7524k);
+                                    c6VarJ0.e(zzrVar.f7526m);
+                                    c6VarJ0.c(zzrVar.f7535v);
                                     i10 = 0;
                                     F0().K0(c6VarJ0, false, false);
                                 } else {
@@ -4368,11 +4368,11 @@ public final class me implements l8 {
                                 listC0 = F0().C0(str9);
                                 while (i11 < listC0.size()) {
                                     com.google.android.gms.internal.measurement.q7 q7VarS2 = com.google.android.gms.internal.measurement.r7.S();
-                                    q7VarS2.z(((te) listC0.get(i11)).f25996c);
-                                    q7VarS2.x(((te) listC0.get(i11)).f25997d);
-                                    K0().G(q7VarS2, ((te) listC0.get(i11)).f25998e);
+                                    q7VarS2.z(((te) listC0.get(i11)).f26817c);
+                                    q7VarS2.y(((te) listC0.get(i11)).f26818d);
+                                    K0().G(q7VarS2, ((te) listC0.get(i11)).f26819e);
                                     z6VarM0.k1(q7VarS2);
-                                    if (!"_sid".equals(((te) listC0.get(i11)).f25996c)) {
+                                    if (!"_sid".equals(((te) listC0.get(i11)).f26817c)) {
                                     }
                                 }
                                 tVarF2 = F0();
@@ -4390,11 +4390,11 @@ public final class me implements l8 {
                                 contentValues3.put("metadata", bArrD3);
                                 tVarF2.u0().insertWithOnConflict("raw_events_metadata", null, contentValues3, 4);
                                 tVarF3 = F0();
-                                c0Var2 = new c0(a0Var2.f25318f);
+                                c0Var2 = new c0(a0Var2.f26139f);
                                 while (true) {
                                     if (c0Var2.hasNext()) {
                                         x6 x6VarD2 = D0();
-                                        String str23 = a0Var2.f25314a;
+                                        String str23 = a0Var2.f26135a;
                                         zE = x6VarD2.E(str23, a0Var2.b);
                                         p pVarL1 = F0().L0(h(), str23, false, false, false, false, false, false, false);
                                         if (zE) {
@@ -4410,20 +4410,20 @@ public final class me implements l8 {
                                 tVarF3.h();
                                 tVarF3.j();
                                 n9.m.l(a0Var2);
-                                str10 = a0Var2.f25314a;
+                                str10 = a0Var2.f26135a;
                                 n9.m.f(str10);
                                 byte[] bArrD4 = tVarF3.b.K0().J(a0Var2).d();
                                 contentValues = new ContentValues();
                                 contentValues.put(str22, str10);
                                 contentValues.put("name", a0Var2.b);
-                                contentValues.put("timestamp", Long.valueOf(a0Var2.f25316d));
+                                contentValues.put("timestamp", Long.valueOf(a0Var2.f26137d));
                                 contentValues.put("metadata_fingerprint", Long.valueOf(jT2));
                                 contentValues.put("data", bArrD4);
                                 contentValues.put("realtime", Integer.valueOf(i12));
                                 if (tVarF3.u0().insert(str13, null, contentValues) == -1) {
-                                    tVarF3.f25625a.a().o().b("Failed to insert raw event (got -1). appId", w5.x(str10));
+                                    tVarF3.f26446a.a().o().b("Failed to insert raw event (got -1). appId", w5.x(str10));
                                 } else {
-                                    this.f25766o = 0L;
+                                    this.f26587o = 0L;
                                 }
                                 F0().s0();
                                 F0().t0();
@@ -4432,9 +4432,9 @@ public final class me implements l8 {
                                 return;
                             }
                             if (jIntValue % 1000 == 1) {
-                                a().o().c("Data loss. Too many public events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f25833a));
+                                a().o().c("Data loss. Too many public events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f26654a));
                             }
-                            N0().B(this.J, str2, 16, "_ev", zzbgVar2.f7422f, 0);
+                            N0().B(this.J, str2, 16, "_ev", zzbgVar2.f7496f, 0);
                             F0().s0();
                         }
                     } else {
@@ -4443,9 +4443,9 @@ public final class me implements l8 {
                             strConcat = "_ltv_".concat(upperCase);
                             teVarB0 = F0().B0(str14, strConcat);
                             if (teVarB0 != null) {
-                                obj = teVarB0.f25998e;
+                                obj = teVarB0.f26819e;
                                 if (obj instanceof Long) {
-                                    teVar = new te(str14, zzbgVarB.f7424h, strConcat, e().a(), Long.valueOf(((Long) obj).longValue() + jLongValue));
+                                    teVar = new te(str14, zzbgVarB.f7498h, strConcat, e().a(), Long.valueOf(((Long) obj).longValue() + jLongValue));
                                     str14 = str14;
                                 } else {
                                     tVarF0 = F0();
@@ -4456,14 +4456,14 @@ public final class me implements l8 {
                                     try {
                                         tVarF0.u0().execSQL("delete from user_attributes where app_id=? and name in (select name from user_attributes where app_id=? and name like '!_ltv!_%' escape '!'order by set_timestamp desc limit ?,10);", new String[]{str14, str14, String.valueOf(iE)});
                                     } catch (SQLiteException e10) {
-                                        tVarF0.f25625a.a().o().c("Error pruning currencies. appId", w5.x(str14), e10);
+                                        tVarF0.f26446a.a().o().c("Error pruning currencies. appId", w5.x(str14), e10);
                                     }
-                                    teVar = new te(str14, zzbgVarB.f7424h, strConcat, e().a(), Long.valueOf(jLongValue));
+                                    teVar = new te(str14, zzbgVarB.f7498h, strConcat, e().a(), Long.valueOf(jLongValue));
                                     str14 = str14;
                                 }
                                 teVar2 = teVar;
                                 if (!F0().A0(teVar2)) {
-                                    a().o().d("Too many unique user properties are set. Ignoring user property. appId", w5.x(str14), this.f25763l.D().c(teVar2.f25996c), teVar2.f25998e);
+                                    a().o().d("Too many unique user properties are set. Ignoring user property. appId", w5.x(str14), this.f26584l.D().c(teVar2.f26817c), teVar2.f26819e);
                                     N0().B(this.J, str14, 9, null, null, 0);
                                 }
                             } else {
@@ -4473,22 +4473,22 @@ public final class me implements l8 {
                                 tVarF0.h();
                                 tVarF0.j();
                                 tVarF0.u0().execSQL("delete from user_attributes where app_id=? and name in (select name from user_attributes where app_id=? and name like '!_ltv!_%' escape '!'order by set_timestamp desc limit ?,10);", new String[]{str14, str14, String.valueOf(iE2)});
-                                teVar = new te(str14, zzbgVarB.f7424h, strConcat, e().a(), Long.valueOf(jLongValue));
+                                teVar = new te(str14, zzbgVarB.f7498h, strConcat, e().a(), Long.valueOf(jLongValue));
                                 str14 = str14;
                                 teVar2 = teVar;
                                 if (!F0().A0(teVar2)) {
-                                    a().o().d("Too many unique user properties are set. Ignoring user property. appId", w5.x(str14), this.f25763l.D().c(teVar2.f25996c), teVar2.f25998e);
+                                    a().o().d("Too many unique user properties are set. Ignoring user property. appId", w5.x(str14), this.f26584l.D().c(teVar2.f26817c), teVar2.f26819e);
                                     N0().B(this.J, str14, 9, null, null, 0);
                                 }
                             }
                         } else {
                             zzbgVarB = zzbgVarB;
                         }
-                        str = zzbgVarB.f7422f;
+                        str = zzbgVarB.f7496f;
                         zR0 = ve.r0(str);
                         zEquals = "_err".equals(str);
                         N0();
-                        zzbeVar2 = zzbgVarB.f7423g;
+                        zzbeVar2 = zzbgVarB.f7497g;
                         if (zzbeVar2 == null) {
                             length = 0;
                         } else {
@@ -4517,10 +4517,10 @@ public final class me implements l8 {
                                 if (zEquals) {
                                     j10 = 1;
                                     r8 = 0;
-                                    jMax = pVarM0.f25835d - ((long) Math.max(0, Math.min(1000000, B0().E(zzrVar.f7445f, z4.f26184m))));
+                                    jMax = pVarM0.f26656d - ((long) Math.max(0, Math.min(1000000, B0().E(zzrVar.f7519f, z4.f27005m))));
                                     if (jMax > 0) {
                                         if (jMax == 1) {
-                                            a().o().c("Too many error events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f25835d));
+                                            a().o().c("Too many error events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f26656d));
                                         }
                                         F0().s0();
                                     }
@@ -4530,7 +4530,7 @@ public final class me implements l8 {
                                 }
                                 bundleY3 = zzbeVar2.y3();
                                 ve veVarN4 = N0();
-                                String str112 = zzbgVar2.f7424h;
+                                String str112 = zzbgVar2.f7498h;
                                 veVarN4.A(bundleY3, "_o", str112);
                                 if (N0().P(str2, zzrVar.G)) {
                                     ve veVarN5 = N0();
@@ -4539,7 +4539,7 @@ public final class me implements l8 {
                                     N0().A(bundleY3, "_r", lValueOf3);
                                 }
                                 if ("_s".equals(str)) {
-                                    obj3 = teVarB1.f25998e;
+                                    obj3 = teVarB1.f26819e;
                                     if (obj3 instanceof Long) {
                                         N0().A(bundleY3, "_sno", obj3);
                                     }
@@ -4556,23 +4556,23 @@ public final class me implements l8 {
                                 n9.m.f(str2);
                                 tVarF1.h();
                                 tVarF1.j();
-                                jDelete = tVarF1.u0().delete("raw_events", "rowid in (select rowid from raw_events where app_id=? order by rowid desc limit -1 offset ?)", new String[]{str2, String.valueOf(Math.max((int) r8, Math.min(1000000, tVarF1.f25625a.w().E(str2, z4.f26192q))))});
+                                jDelete = tVarF1.u0().delete("raw_events", "rowid in (select rowid from raw_events where app_id=? order by rowid desc limit -1 offset ?)", new String[]{str2, String.valueOf(Math.max((int) r8, Math.min(1000000, tVarF1.f26446a.w().E(str2, z4.f27013q))))});
                                 if (jDelete > 0) {
                                     a().r().c("Data lost. Too many events stored on disk, deleted. appId", w5.x(str2), Long.valueOf(jDelete));
                                 }
-                                g7Var = this.f25763l;
-                                a0Var = new a0(g7Var, zzbgVar2.f7424h, str2, zzbgVar2.f7422f, zzbgVar2.f7425i, 0L, bundleY3);
+                                g7Var = this.f26584l;
+                                a0Var = new a0(g7Var, zzbgVar2.f7498h, str2, zzbgVar2.f7496f, zzbgVar2.f7499i, 0L, bundleY3);
                                 t tVarF6 = F0();
                                 str3 = a0Var.b;
                                 b0VarV0 = tVarF6.v0(str2, str3);
                                 if (b0VarV0 != null) {
                                     if (F0().E(str2) >= B0().z(str2)) {
                                     }
-                                    b0Var = new b0(str2, str3, 0L, 0L, 0L, a0Var.f25316d, 0L, null, null, null, null);
+                                    b0Var = new b0(str2, str3, 0L, 0L, 0L, a0Var.f26137d, 0L, null, null, null, null);
                                     a0Var2 = a0Var;
                                 } else {
-                                    a0 a0VarA3 = a0Var.a(g7Var, b0VarV0.f25350f);
-                                    b0 b0VarA3 = b0VarV0.a(a0VarA3.f25316d);
+                                    a0 a0VarA3 = a0Var.a(g7Var, b0VarV0.f26171f);
+                                    b0 b0VarA3 = b0VarV0.a(a0VarA3.f26137d);
                                     a0Var2 = a0VarA3;
                                     b0Var = b0VarA3;
                                 }
@@ -4581,38 +4581,38 @@ public final class me implements l8 {
                                 O0();
                                 n9.m.l(a0Var2);
                                 n9.m.l(zzrVar);
-                                String str113 = a0Var2.f25314a;
+                                String str113 = a0Var2.f26135a;
                                 n9.m.f(str113);
-                                str4 = zzrVar.f7445f;
+                                str4 = zzrVar.f7519f;
                                 n9.m.a(str113.equals(str4));
                                 z6VarM0 = com.google.android.gms.internal.measurement.a7.m0();
                                 z6VarM0.e0(1);
-                                z6VarM0.A("android");
+                                z6VarM0.B("android");
                                 if (!TextUtils.isEmpty(str4)) {
                                     z6VarM0.P(str4);
                                 }
-                                str5 = zzrVar.f7448i;
+                                str5 = zzrVar.f7522i;
                                 if (!TextUtils.isEmpty(str5)) {
                                     z6VarM0.N(str5);
                                 }
-                                str6 = zzrVar.f7447h;
+                                str6 = zzrVar.f7521h;
                                 if (!TextUtils.isEmpty(str6)) {
                                     z6VarM0.Q(str6);
                                 }
-                                str7 = zzrVar.f7465z;
+                                str7 = zzrVar.f7539z;
                                 if (!TextUtils.isEmpty(str7)) {
                                     z6VarM0.Q0(str7);
                                 }
-                                j11 = zzrVar.f7454o;
+                                j11 = zzrVar.f7528o;
                                 if (j11 != -2147483648L) {
                                     z6VarM0.F0((int) j11);
                                 }
-                                z6VarM0.R(zzrVar.f7449j);
-                                str8 = zzrVar.f7446g;
+                                z6VarM0.R(zzrVar.f7523j);
+                                str8 = zzrVar.f7520g;
                                 if (!TextUtils.isEmpty(str8)) {
                                     z6VarM0.z0(str8);
                                 }
-                                q8VarS = g((String) n9.m.l(str4)).s(q8.f(zzrVar.f7463x, 100));
+                                q8VarS = g((String) n9.m.l(str4)).s(q8.f(zzrVar.f7537x, 100));
                                 z6VarM0.P0(q8VarS.k());
                                 vf.a();
                                 if (B0().H(str4, z4.Q0)) {
@@ -4634,7 +4634,7 @@ public final class me implements l8 {
                                         } else {
                                             z11 = r8;
                                         }
-                                        z5VarO3.x(z11);
+                                        z5VarO3.y(z11);
                                         if ((j13 & 2) != 0) {
                                             z12 = 1;
                                         } else {
@@ -4646,7 +4646,7 @@ public final class me implements l8 {
                                         } else {
                                             z13 = r8;
                                         }
-                                        z5VarO3.A(z13);
+                                        z5VarO3.B(z13);
                                         if ((j13 & 8) != 0) {
                                             z14 = 1;
                                         } else {
@@ -4674,13 +4674,13 @@ public final class me implements l8 {
                                         z6VarM0.n0((com.google.android.gms.internal.measurement.a6) z5VarO3.t());
                                     }
                                 }
-                                j12 = zzrVar.f7450k;
+                                j12 = zzrVar.f7524k;
                                 if (j12 != 0) {
                                     z6VarM0.c0(j12);
                                 }
-                                z6VarM0.N0(zzrVar.f7461v);
+                                z6VarM0.N0(zzrVar.f7535v);
                                 re reVarK2 = K0();
-                                p8VarC = com.google.android.gms.internal.measurement.p8.c(reVarK2.b.f25763l.d().getContentResolver(), com.google.android.gms.internal.measurement.a9.a("com.google.android.gms.measurement"), new Runnable() { // from class: nb.v4
+                                p8VarC = com.google.android.gms.internal.measurement.p8.c(reVarK2.b.f26584l.d().getContentResolver(), com.google.android.gms.internal.measurement.a9.a("com.google.android.gms.measurement"), new Runnable() { // from class: nb.v4
                                     @Override // java.lang.Runnable
                                     public final /* synthetic */ void run() {
                                         com.google.android.gms.internal.measurement.l9.c();
@@ -4699,11 +4699,11 @@ public final class me implements l8 {
                                 if (arrayList != null) {
                                     z6VarM0.M0(arrayList);
                                 }
-                                if (B0().H(null, z4.f26153b1)) {
+                                if (B0().H(null, z4.f26974b1)) {
                                     z6VarM0.u0("");
                                 }
-                                str9 = zzrVar.f7445f;
-                                q8VarS2 = g((String) n9.m.l(str9)).s(q8.f(zzrVar.f7463x, 100));
+                                str9 = zzrVar.f7519f;
+                                q8VarS2 = g((String) n9.m.l(str9)).s(q8.f(zzrVar.f7537x, 100));
                                 p8Var = p8.AD_STORAGE;
                                 if (q8VarS2.o(p8Var)) {
                                     str13 = "raw_events";
@@ -4712,7 +4712,7 @@ public final class me implements l8 {
                                     str13 = "raw_events";
                                     p8Var = p8Var;
                                 }
-                                g7Var2 = this.f25763l;
+                                g7Var2 = this.f26584l;
                                 g7Var2.K().l();
                                 z6VarM0.E(Build.MODEL);
                                 g7Var2.K().l();
@@ -4730,21 +4730,21 @@ public final class me implements l8 {
                                 if (c6VarJ0 == null) {
                                     c6VarJ0 = new c6(g7Var2, str9);
                                     c6VarJ0.q0(p(q8VarS2));
-                                    c6VarJ0.y0(zzrVar.f7455p);
-                                    c6VarJ0.s0(zzrVar.f7446g);
+                                    c6VarJ0.y0(zzrVar.f7529p);
+                                    c6VarJ0.s0(zzrVar.f7520g);
                                     if (q8VarS2.o(p8Var)) {
-                                        c6VarJ0.w0(this.f25760i.o(str9, zzrVar.f7458s));
+                                        c6VarJ0.w0(this.f26581i.o(str9, zzrVar.f7532s));
                                     }
                                     c6VarJ0.f(0L);
                                     c6VarJ0.A0(0L);
                                     c6VarJ0.C0(0L);
-                                    c6VarJ0.E0(zzrVar.f7447h);
-                                    c6VarJ0.G0(zzrVar.f7454o);
-                                    c6VarJ0.I0(zzrVar.f7448i);
-                                    c6VarJ0.K0(zzrVar.f7449j);
-                                    c6VarJ0.a(zzrVar.f7450k);
-                                    c6VarJ0.e(zzrVar.f7452m);
-                                    c6VarJ0.c(zzrVar.f7461v);
+                                    c6VarJ0.E0(zzrVar.f7521h);
+                                    c6VarJ0.G0(zzrVar.f7528o);
+                                    c6VarJ0.I0(zzrVar.f7522i);
+                                    c6VarJ0.K0(zzrVar.f7523j);
+                                    c6VarJ0.a(zzrVar.f7524k);
+                                    c6VarJ0.e(zzrVar.f7526m);
+                                    c6VarJ0.c(zzrVar.f7535v);
                                     i10 = 0;
                                     F0().K0(c6VarJ0, false, false);
                                 } else {
@@ -4759,11 +4759,11 @@ public final class me implements l8 {
                                 listC0 = F0().C0(str9);
                                 while (i11 < listC0.size()) {
                                     com.google.android.gms.internal.measurement.q7 q7VarS3 = com.google.android.gms.internal.measurement.r7.S();
-                                    q7VarS3.z(((te) listC0.get(i11)).f25996c);
-                                    q7VarS3.x(((te) listC0.get(i11)).f25997d);
-                                    K0().G(q7VarS3, ((te) listC0.get(i11)).f25998e);
+                                    q7VarS3.z(((te) listC0.get(i11)).f26817c);
+                                    q7VarS3.y(((te) listC0.get(i11)).f26818d);
+                                    K0().G(q7VarS3, ((te) listC0.get(i11)).f26819e);
                                     z6VarM0.k1(q7VarS3);
-                                    if (!"_sid".equals(((te) listC0.get(i11)).f25996c)) {
+                                    if (!"_sid".equals(((te) listC0.get(i11)).f26817c)) {
                                     }
                                 }
                                 tVarF2 = F0();
@@ -4781,11 +4781,11 @@ public final class me implements l8 {
                                 contentValues4.put("metadata", bArrD5);
                                 tVarF2.u0().insertWithOnConflict("raw_events_metadata", null, contentValues4, 4);
                                 tVarF3 = F0();
-                                c0Var2 = new c0(a0Var2.f25318f);
+                                c0Var2 = new c0(a0Var2.f26139f);
                                 while (true) {
                                     if (c0Var2.hasNext()) {
                                         x6 x6VarD3 = D0();
-                                        String str25 = a0Var2.f25314a;
+                                        String str25 = a0Var2.f26135a;
                                         zE = x6VarD3.E(str25, a0Var2.b);
                                         p pVarL2 = F0().L0(h(), str25, false, false, false, false, false, false, false);
                                         if (zE) {
@@ -4801,20 +4801,20 @@ public final class me implements l8 {
                                 tVarF3.h();
                                 tVarF3.j();
                                 n9.m.l(a0Var2);
-                                str10 = a0Var2.f25314a;
+                                str10 = a0Var2.f26135a;
                                 n9.m.f(str10);
                                 byte[] bArrD6 = tVarF3.b.K0().J(a0Var2).d();
                                 contentValues = new ContentValues();
                                 contentValues.put(str24, str10);
                                 contentValues.put("name", a0Var2.b);
-                                contentValues.put("timestamp", Long.valueOf(a0Var2.f25316d));
+                                contentValues.put("timestamp", Long.valueOf(a0Var2.f26137d));
                                 contentValues.put("metadata_fingerprint", Long.valueOf(jT3));
                                 contentValues.put("data", bArrD6);
                                 contentValues.put("realtime", Integer.valueOf(i12));
                                 if (tVarF3.u0().insert(str13, null, contentValues) == -1) {
-                                    tVarF3.f25625a.a().o().b("Failed to insert raw event (got -1). appId", w5.x(str10));
+                                    tVarF3.f26446a.a().o().b("Failed to insert raw event (got -1). appId", w5.x(str10));
                                 } else {
-                                    this.f25766o = 0L;
+                                    this.f26587o = 0L;
                                 }
                                 F0().s0();
                                 F0().t0();
@@ -4822,17 +4822,17 @@ public final class me implements l8 {
                                 a().w().b("Background event processing time, ms", Long.valueOf(((System.nanoTime() - jNanoTime) + 500000) / 1000000));
                                 return;
                             }
-                            long j17 = pVarM0.f25833a;
+                            long j17 = pVarM0.f26654a;
                             B0();
-                            jIntValue = j17 - ((long) ((Integer) z4.f26186n.b(null)).intValue());
+                            jIntValue = j17 - ((long) ((Integer) z4.f27007n.b(null)).intValue());
                             if (jIntValue > 0) {
                                 if (zEquals) {
                                     j10 = 1;
                                     r8 = 0;
-                                    jMax = pVarM0.f25835d - ((long) Math.max(0, Math.min(1000000, B0().E(zzrVar.f7445f, z4.f26184m))));
+                                    jMax = pVarM0.f26656d - ((long) Math.max(0, Math.min(1000000, B0().E(zzrVar.f7519f, z4.f27005m))));
                                     if (jMax > 0) {
                                         if (jMax == 1) {
-                                            a().o().c("Too many error events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f25835d));
+                                            a().o().c("Too many error events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f26656d));
                                         }
                                         F0().s0();
                                     }
@@ -4842,7 +4842,7 @@ public final class me implements l8 {
                                 }
                                 bundleY3 = zzbeVar2.y3();
                                 ve veVarN6 = N0();
-                                String str114 = zzbgVar2.f7424h;
+                                String str114 = zzbgVar2.f7498h;
                                 veVarN6.A(bundleY3, "_o", str114);
                                 if (N0().P(str2, zzrVar.G)) {
                                     ve veVarN7 = N0();
@@ -4850,8 +4850,8 @@ public final class me implements l8 {
                                     veVarN7.A(bundleY3, "_dbg", lValueOf4);
                                     N0().A(bundleY3, "_r", lValueOf4);
                                 }
-                                if ("_s".equals(str) && (teVarB1 = F0().B0(zzrVar.f7445f, "_sno")) != null) {
-                                    obj3 = teVarB1.f25998e;
+                                if ("_s".equals(str) && (teVarB1 = F0().B0(zzrVar.f7519f, "_sno")) != null) {
+                                    obj3 = teVarB1.f26819e;
                                     if (obj3 instanceof Long) {
                                         N0().A(bundleY3, "_sno", obj3);
                                     }
@@ -4874,14 +4874,14 @@ public final class me implements l8 {
                                 try {
                                     try {
                                         try {
-                                            jDelete = tVarF1.u0().delete("raw_events", "rowid in (select rowid from raw_events where app_id=? order by rowid desc limit -1 offset ?)", new String[]{str2, String.valueOf(Math.max((int) r8, Math.min(1000000, tVarF1.f25625a.w().E(str2, z4.f26192q))))});
+                                            jDelete = tVarF1.u0().delete("raw_events", "rowid in (select rowid from raw_events where app_id=? order by rowid desc limit -1 offset ?)", new String[]{str2, String.valueOf(Math.max((int) r8, Math.min(1000000, tVarF1.f26446a.w().E(str2, z4.f27013q))))});
                                             while (true) {
                                                 if (c0Var2.hasNext()) {
                                                     x6 x6VarD4 = D0();
-                                                    String str26 = a0Var2.f25314a;
+                                                    String str26 = a0Var2.f26135a;
                                                     zE = x6VarD4.E(str26, a0Var2.b);
                                                     p pVarL3 = F0().L0(h(), str26, false, false, false, false, false, false, false);
-                                                    if (zE || pVarL3.f25836e >= B0().E(str26, z4.f26190p)) {
+                                                    if (zE || pVarL3.f26657e >= B0().E(str26, z4.f27011p)) {
                                                         i12 = i10;
                                                         break;
                                                     }
@@ -4891,36 +4891,36 @@ public final class me implements l8 {
                                                 break;
                                             }
                                         } catch (SQLiteException e11) {
-                                            tVarF1.f25625a.a().o().c("Error deleting over the limit events. appId", w5.x(str2), e11);
+                                            tVarF1.f26446a.a().o().c("Error deleting over the limit events. appId", w5.x(str2), e11);
                                             jDelete = 0;
                                         }
                                         tVarF2.u0().insertWithOnConflict("raw_events_metadata", null, contentValues4, 4);
                                         tVarF3 = F0();
-                                        c0Var2 = new c0(a0Var2.f25318f);
+                                        c0Var2 = new c0(a0Var2.f26139f);
                                         tVarF3.h();
                                         tVarF3.j();
                                         n9.m.l(a0Var2);
-                                        str10 = a0Var2.f25314a;
+                                        str10 = a0Var2.f26135a;
                                         n9.m.f(str10);
                                         byte[] bArrD7 = tVarF3.b.K0().J(a0Var2).d();
                                         contentValues = new ContentValues();
                                         contentValues.put(str24, str10);
                                         contentValues.put("name", a0Var2.b);
-                                        contentValues.put("timestamp", Long.valueOf(a0Var2.f25316d));
+                                        contentValues.put("timestamp", Long.valueOf(a0Var2.f26137d));
                                         contentValues.put("metadata_fingerprint", Long.valueOf(jT3));
                                         contentValues.put("data", bArrD7);
                                         contentValues.put("realtime", Integer.valueOf(i12));
                                         try {
                                             if (tVarF3.u0().insert(str13, null, contentValues) == -1) {
-                                                tVarF3.f25625a.a().o().b("Failed to insert raw event (got -1). appId", w5.x(str10));
+                                                tVarF3.f26446a.a().o().b("Failed to insert raw event (got -1). appId", w5.x(str10));
                                             } else {
-                                                this.f25766o = 0L;
+                                                this.f26587o = 0L;
                                             }
                                         } catch (SQLiteException e12) {
-                                            tVarF3.f25625a.a().o().c("Error storing raw event. appId", w5.x(a0Var2.f25314a), e12);
+                                            tVarF3.f26446a.a().o().c("Error storing raw event. appId", w5.x(a0Var2.f26135a), e12);
                                         }
                                     } catch (SQLiteException e13) {
-                                        tVarF2.f25625a.a().o().c("Error storing raw event metadata. appId", w5.x(a7Var.F()), e13);
+                                        tVarF2.f26446a.a().o().c("Error storing raw event metadata. appId", w5.x(a7Var.F()), e13);
                                         throw e13;
                                     }
                                     tVarF2 = F0();
@@ -4942,18 +4942,18 @@ public final class me implements l8 {
                                 if (jDelete > 0) {
                                     a().r().c("Data lost. Too many events stored on disk, deleted. appId", w5.x(str2), Long.valueOf(jDelete));
                                 }
-                                g7Var = this.f25763l;
-                                a0Var = new a0(g7Var, zzbgVar2.f7424h, str2, zzbgVar2.f7422f, zzbgVar2.f7425i, 0L, bundleY3);
+                                g7Var = this.f26584l;
+                                a0Var = new a0(g7Var, zzbgVar2.f7498h, str2, zzbgVar2.f7496f, zzbgVar2.f7499i, 0L, bundleY3);
                                 t tVarF7 = F0();
                                 str3 = a0Var.b;
                                 b0VarV0 = tVarF7.v0(str2, str3);
                                 if (b0VarV0 != null) {
-                                    a0 a0VarA4 = a0Var.a(g7Var, b0VarV0.f25350f);
-                                    b0 b0VarA4 = b0VarV0.a(a0VarA4.f25316d);
+                                    a0 a0VarA4 = a0Var.a(g7Var, b0VarV0.f26171f);
+                                    b0 b0VarA4 = b0VarV0.a(a0VarA4.f26137d);
                                     a0Var2 = a0VarA4;
                                     b0Var = b0VarA4;
                                 } else if (F0().E(str2) >= B0().z(str2) || !zR0) {
-                                    b0Var = new b0(str2, str3, 0L, 0L, 0L, a0Var.f25316d, 0L, null, null, null, null);
+                                    b0Var = new b0(str2, str3, 0L, 0L, 0L, a0Var.f26137d, 0L, null, null, null, null);
                                     a0Var2 = a0Var;
                                 } else {
                                     a().o().d("Too many event names used, ignoring event. appId, name, supported count", w5.x(str2), g7Var.D().a(str3), Integer.valueOf(B0().z(str2)));
@@ -4964,38 +4964,38 @@ public final class me implements l8 {
                                 O0();
                                 n9.m.l(a0Var2);
                                 n9.m.l(zzrVar);
-                                String str115 = a0Var2.f25314a;
+                                String str115 = a0Var2.f26135a;
                                 n9.m.f(str115);
-                                str4 = zzrVar.f7445f;
+                                str4 = zzrVar.f7519f;
                                 n9.m.a(str115.equals(str4));
                                 z6VarM0 = com.google.android.gms.internal.measurement.a7.m0();
                                 z6VarM0.e0(1);
-                                z6VarM0.A("android");
+                                z6VarM0.B("android");
                                 if (!TextUtils.isEmpty(str4)) {
                                     z6VarM0.P(str4);
                                 }
-                                str5 = zzrVar.f7448i;
+                                str5 = zzrVar.f7522i;
                                 if (!TextUtils.isEmpty(str5)) {
                                     z6VarM0.N(str5);
                                 }
-                                str6 = zzrVar.f7447h;
+                                str6 = zzrVar.f7521h;
                                 if (!TextUtils.isEmpty(str6)) {
                                     z6VarM0.Q(str6);
                                 }
-                                str7 = zzrVar.f7465z;
+                                str7 = zzrVar.f7539z;
                                 if (!TextUtils.isEmpty(str7)) {
                                     z6VarM0.Q0(str7);
                                 }
-                                j11 = zzrVar.f7454o;
+                                j11 = zzrVar.f7528o;
                                 if (j11 != -2147483648L) {
                                     z6VarM0.F0((int) j11);
                                 }
-                                z6VarM0.R(zzrVar.f7449j);
-                                str8 = zzrVar.f7446g;
+                                z6VarM0.R(zzrVar.f7523j);
+                                str8 = zzrVar.f7520g;
                                 if (!TextUtils.isEmpty(str8)) {
                                     z6VarM0.z0(str8);
                                 }
-                                q8VarS = g((String) n9.m.l(str4)).s(q8.f(zzrVar.f7463x, 100));
+                                q8VarS = g((String) n9.m.l(str4)).s(q8.f(zzrVar.f7537x, 100));
                                 z6VarM0.P0(q8VarS.k());
                                 vf.a();
                                 if (B0().H(str4, z4.Q0) && N0().L(str4)) {
@@ -5017,7 +5017,7 @@ public final class me implements l8 {
                                         } else {
                                             z11 = r8;
                                         }
-                                        z5VarO4.x(z11);
+                                        z5VarO4.y(z11);
                                         if ((j13 & 2) != 0) {
                                             z12 = 1;
                                         } else {
@@ -5029,7 +5029,7 @@ public final class me implements l8 {
                                         } else {
                                             z13 = r8;
                                         }
-                                        z5VarO4.A(z13);
+                                        z5VarO4.B(z13);
                                         if ((j13 & 8) != 0) {
                                             z14 = 1;
                                         } else {
@@ -5057,13 +5057,13 @@ public final class me implements l8 {
                                         z6VarM0.n0((com.google.android.gms.internal.measurement.a6) z5VarO4.t());
                                     }
                                 }
-                                j12 = zzrVar.f7450k;
+                                j12 = zzrVar.f7524k;
                                 if (j12 != 0) {
                                     z6VarM0.c0(j12);
                                 }
-                                z6VarM0.N0(zzrVar.f7461v);
+                                z6VarM0.N0(zzrVar.f7535v);
                                 re reVarK3 = K0();
-                                p8VarC = com.google.android.gms.internal.measurement.p8.c(reVarK3.b.f25763l.d().getContentResolver(), com.google.android.gms.internal.measurement.a9.a("com.google.android.gms.measurement"), new Runnable() { // from class: nb.v4
+                                p8VarC = com.google.android.gms.internal.measurement.p8.c(reVarK3.b.f26584l.d().getContentResolver(), com.google.android.gms.internal.measurement.a9.a("com.google.android.gms.measurement"), new Runnable() { // from class: nb.v4
                                     @Override // java.lang.Runnable
                                     public final /* synthetic */ void run() {
                                         com.google.android.gms.internal.measurement.l9.c();
@@ -5076,7 +5076,7 @@ public final class me implements l8 {
                                 }
                                 if (mapD == null && !mapD.isEmpty()) {
                                     arrayList = new ArrayList();
-                                    int iIntValue = ((Integer) z4.f26167g0.b(null)).intValue();
+                                    int iIntValue = ((Integer) z4.f26988g0.b(null)).intValue();
                                     for (Map.Entry entry : mapD.entrySet()) {
                                         if (((String) entry.getKey()).startsWith("measurement.id.")) {
                                             try {
@@ -5084,7 +5084,7 @@ public final class me implements l8 {
                                                 if (i13 != 0) {
                                                     arrayList.add(Integer.valueOf(i13));
                                                     if (arrayList.size() >= iIntValue) {
-                                                        reVarK3.f25625a.a().r().b("Too many experiment IDs. Number of IDs", Integer.valueOf(arrayList.size()));
+                                                        reVarK3.f26446a.a().r().b("Too many experiment IDs. Number of IDs", Integer.valueOf(arrayList.size()));
                                                         break;
                                                     }
                                                     continue;
@@ -5092,7 +5092,7 @@ public final class me implements l8 {
                                                     continue;
                                                 }
                                             } catch (NumberFormatException e15) {
-                                                reVarK3.f25625a.a().r().b("Experiment ID NumberFormatException", e15);
+                                                reVarK3.f26446a.a().r().b("Experiment ID NumberFormatException", e15);
                                             }
                                         }
                                     }
@@ -5106,17 +5106,17 @@ public final class me implements l8 {
                                 if (arrayList != null) {
                                     z6VarM0.M0(arrayList);
                                 }
-                                if (B0().H(null, z4.f26153b1)) {
+                                if (B0().H(null, z4.f26974b1)) {
                                     z6VarM0.u0("");
                                 }
-                                str9 = zzrVar.f7445f;
-                                q8VarS2 = g((String) n9.m.l(str9)).s(q8.f(zzrVar.f7463x, 100));
+                                str9 = zzrVar.f7519f;
+                                q8VarS2 = g((String) n9.m.l(str9)).s(q8.f(zzrVar.f7537x, 100));
                                 p8Var = p8.AD_STORAGE;
-                                if (q8VarS2.o(p8Var) || !zzrVar.f7458s) {
+                                if (q8VarS2.o(p8Var) || !zzrVar.f7532s) {
                                     str13 = "raw_events";
                                     p8Var = p8Var;
                                 } else {
-                                    Pair pairM = this.f25760i.m(str9, q8VarS2);
+                                    Pair pairM = this.f26581i.m(str9, q8VarS2);
                                     if (TextUtils.isEmpty((CharSequence) pairM.first)) {
                                         str13 = "raw_events";
                                         p8Var = p8Var;
@@ -5146,7 +5146,7 @@ public final class me implements l8 {
                                         }
                                     }
                                 }
-                                g7Var2 = this.f25763l;
+                                g7Var2 = this.f26584l;
                                 g7Var2.K().l();
                                 z6VarM0.E(Build.MODEL);
                                 g7Var2.K().l();
@@ -5164,21 +5164,21 @@ public final class me implements l8 {
                                 if (c6VarJ0 == null) {
                                     c6VarJ0 = new c6(g7Var2, str9);
                                     c6VarJ0.q0(p(q8VarS2));
-                                    c6VarJ0.y0(zzrVar.f7455p);
-                                    c6VarJ0.s0(zzrVar.f7446g);
+                                    c6VarJ0.y0(zzrVar.f7529p);
+                                    c6VarJ0.s0(zzrVar.f7520g);
                                     if (q8VarS2.o(p8Var)) {
-                                        c6VarJ0.w0(this.f25760i.o(str9, zzrVar.f7458s));
+                                        c6VarJ0.w0(this.f26581i.o(str9, zzrVar.f7532s));
                                     }
                                     c6VarJ0.f(0L);
                                     c6VarJ0.A0(0L);
                                     c6VarJ0.C0(0L);
-                                    c6VarJ0.E0(zzrVar.f7447h);
-                                    c6VarJ0.G0(zzrVar.f7454o);
-                                    c6VarJ0.I0(zzrVar.f7448i);
-                                    c6VarJ0.K0(zzrVar.f7449j);
-                                    c6VarJ0.a(zzrVar.f7450k);
-                                    c6VarJ0.e(zzrVar.f7452m);
-                                    c6VarJ0.c(zzrVar.f7461v);
+                                    c6VarJ0.E0(zzrVar.f7521h);
+                                    c6VarJ0.G0(zzrVar.f7528o);
+                                    c6VarJ0.I0(zzrVar.f7522i);
+                                    c6VarJ0.K0(zzrVar.f7523j);
+                                    c6VarJ0.a(zzrVar.f7524k);
+                                    c6VarJ0.e(zzrVar.f7526m);
+                                    c6VarJ0.c(zzrVar.f7535v);
                                     i10 = 0;
                                     F0().K0(c6VarJ0, false, false);
                                 } else {
@@ -5193,11 +5193,11 @@ public final class me implements l8 {
                                 listC0 = F0().C0(str9);
                                 while (i11 < listC0.size()) {
                                     com.google.android.gms.internal.measurement.q7 q7VarS4 = com.google.android.gms.internal.measurement.r7.S();
-                                    q7VarS4.z(((te) listC0.get(i11)).f25996c);
-                                    q7VarS4.x(((te) listC0.get(i11)).f25997d);
-                                    K0().G(q7VarS4, ((te) listC0.get(i11)).f25998e);
+                                    q7VarS4.z(((te) listC0.get(i11)).f26817c);
+                                    q7VarS4.y(((te) listC0.get(i11)).f26818d);
+                                    K0().G(q7VarS4, ((te) listC0.get(i11)).f26819e);
                                     z6VarM0.k1(q7VarS4);
-                                    if (!"_sid".equals(((te) listC0.get(i11)).f25996c) && c6VarJ0.Z() != 0 && K0().U(zzrVar.f7465z) != c6VarJ0.Z()) {
+                                    if (!"_sid".equals(((te) listC0.get(i11)).f26817c) && c6VarJ0.Z() != 0 && K0().U(zzrVar.f7539z) != c6VarJ0.Z()) {
                                         z6VarM0.R0();
                                     }
                                 }
@@ -5208,16 +5208,16 @@ public final class me implements l8 {
                                 return;
                             }
                             if (jIntValue % 1000 == 1) {
-                                a().o().c("Data loss. Too many public events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f25833a));
+                                a().o().c("Data loss. Too many public events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f26654a));
                             }
-                            N0().B(this.J, str2, 16, "_ev", zzbgVar2.f7422f, 0);
+                            N0().B(this.J, str2, 16, "_ev", zzbgVar2.f7496f, 0);
                             F0().s0();
                         }
                     }
                 } else {
                     if (z18) {
                         z18 = true;
-                        zzbeVar = zzbgVarB.f7423g;
+                        zzbeVar = zzbgVarB.f7497g;
                         strX3 = zzbeVar.x3("currency");
                         if (z18) {
                             dDoubleValue = zzbeVar.w3("value").doubleValue() * 1000000.0d;
@@ -5239,7 +5239,7 @@ public final class me implements l8 {
                                 strConcat = "_ltv_".concat(upperCase);
                                 teVarB0 = F0().B0(str14, strConcat);
                                 if (teVarB0 != null) {
-                                    obj = teVarB0.f25998e;
+                                    obj = teVarB0.f26819e;
                                     if (obj instanceof Long) {
                                         tVarF0 = F0();
                                         int iE3 = B0().E(str14, z4.U) - 1;
@@ -5247,15 +5247,15 @@ public final class me implements l8 {
                                         tVarF0.h();
                                         tVarF0.j();
                                         tVarF0.u0().execSQL("delete from user_attributes where app_id=? and name in (select name from user_attributes where app_id=? and name like '!_ltv!_%' escape '!'order by set_timestamp desc limit ?,10);", new String[]{str14, str14, String.valueOf(iE3)});
-                                        teVar = new te(str14, zzbgVarB.f7424h, strConcat, e().a(), Long.valueOf(jLongValue));
+                                        teVar = new te(str14, zzbgVarB.f7498h, strConcat, e().a(), Long.valueOf(jLongValue));
                                         str14 = str14;
                                     } else {
-                                        teVar = new te(str14, zzbgVarB.f7424h, strConcat, e().a(), Long.valueOf(((Long) obj).longValue() + jLongValue));
+                                        teVar = new te(str14, zzbgVarB.f7498h, strConcat, e().a(), Long.valueOf(((Long) obj).longValue() + jLongValue));
                                         str14 = str14;
                                     }
                                     teVar2 = teVar;
                                     if (!F0().A0(teVar2)) {
-                                        a().o().d("Too many unique user properties are set. Ignoring user property. appId", w5.x(str14), this.f25763l.D().c(teVar2.f25996c), teVar2.f25998e);
+                                        a().o().d("Too many unique user properties are set. Ignoring user property. appId", w5.x(str14), this.f26584l.D().c(teVar2.f26817c), teVar2.f26819e);
                                         N0().B(this.J, str14, 9, null, null, 0);
                                     }
                                 } else {
@@ -5265,20 +5265,20 @@ public final class me implements l8 {
                                     tVarF0.h();
                                     tVarF0.j();
                                     tVarF0.u0().execSQL("delete from user_attributes where app_id=? and name in (select name from user_attributes where app_id=? and name like '!_ltv!_%' escape '!'order by set_timestamp desc limit ?,10);", new String[]{str14, str14, String.valueOf(iE4)});
-                                    teVar = new te(str14, zzbgVarB.f7424h, strConcat, e().a(), Long.valueOf(jLongValue));
+                                    teVar = new te(str14, zzbgVarB.f7498h, strConcat, e().a(), Long.valueOf(jLongValue));
                                     str14 = str14;
                                     teVar2 = teVar;
                                     if (!F0().A0(teVar2)) {
-                                        a().o().d("Too many unique user properties are set. Ignoring user property. appId", w5.x(str14), this.f25763l.D().c(teVar2.f25996c), teVar2.f25998e);
+                                        a().o().d("Too many unique user properties are set. Ignoring user property. appId", w5.x(str14), this.f26584l.D().c(teVar2.f26817c), teVar2.f26819e);
                                         N0().B(this.J, str14, 9, null, null, 0);
                                     }
                                 }
                             }
-                            str = zzbgVarB.f7422f;
+                            str = zzbgVarB.f7496f;
                             zR0 = ve.r0(str);
                             zEquals = "_err".equals(str);
                             N0();
-                            zzbeVar2 = zzbgVarB.f7423g;
+                            zzbeVar2 = zzbgVarB.f7497g;
                             if (zzbeVar2 == null) {
                                 length = 0;
                             } else {
@@ -5307,10 +5307,10 @@ public final class me implements l8 {
                                     if (zEquals) {
                                         j10 = 1;
                                         r8 = 0;
-                                        jMax = pVarM0.f25835d - ((long) Math.max(0, Math.min(1000000, B0().E(zzrVar.f7445f, z4.f26184m))));
+                                        jMax = pVarM0.f26656d - ((long) Math.max(0, Math.min(1000000, B0().E(zzrVar.f7519f, z4.f27005m))));
                                         if (jMax > 0) {
                                             if (jMax == 1) {
-                                                a().o().c("Too many error events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f25835d));
+                                                a().o().c("Too many error events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f26656d));
                                             }
                                             F0().s0();
                                         }
@@ -5320,7 +5320,7 @@ public final class me implements l8 {
                                     }
                                     bundleY3 = zzbeVar2.y3();
                                     ve veVarN8 = N0();
-                                    String str116 = zzbgVar2.f7424h;
+                                    String str116 = zzbgVar2.f7498h;
                                     veVarN8.A(bundleY3, "_o", str116);
                                     if (N0().P(str2, zzrVar.G)) {
                                         ve veVarN9 = N0();
@@ -5329,7 +5329,7 @@ public final class me implements l8 {
                                         N0().A(bundleY3, "_r", lValueOf5);
                                     }
                                     if ("_s".equals(str)) {
-                                        obj3 = teVarB1.f25998e;
+                                        obj3 = teVarB1.f26819e;
                                         if (obj3 instanceof Long) {
                                             N0().A(bundleY3, "_sno", obj3);
                                         }
@@ -5346,23 +5346,23 @@ public final class me implements l8 {
                                     n9.m.f(str2);
                                     tVarF1.h();
                                     tVarF1.j();
-                                    jDelete = tVarF1.u0().delete("raw_events", "rowid in (select rowid from raw_events where app_id=? order by rowid desc limit -1 offset ?)", new String[]{str2, String.valueOf(Math.max((int) r8, Math.min(1000000, tVarF1.f25625a.w().E(str2, z4.f26192q))))});
+                                    jDelete = tVarF1.u0().delete("raw_events", "rowid in (select rowid from raw_events where app_id=? order by rowid desc limit -1 offset ?)", new String[]{str2, String.valueOf(Math.max((int) r8, Math.min(1000000, tVarF1.f26446a.w().E(str2, z4.f27013q))))});
                                     if (jDelete > 0) {
                                         a().r().c("Data lost. Too many events stored on disk, deleted. appId", w5.x(str2), Long.valueOf(jDelete));
                                     }
-                                    g7Var = this.f25763l;
-                                    a0Var = new a0(g7Var, zzbgVar2.f7424h, str2, zzbgVar2.f7422f, zzbgVar2.f7425i, 0L, bundleY3);
+                                    g7Var = this.f26584l;
+                                    a0Var = new a0(g7Var, zzbgVar2.f7498h, str2, zzbgVar2.f7496f, zzbgVar2.f7499i, 0L, bundleY3);
                                     t tVarF8 = F0();
                                     str3 = a0Var.b;
                                     b0VarV0 = tVarF8.v0(str2, str3);
                                     if (b0VarV0 != null) {
                                         if (F0().E(str2) >= B0().z(str2)) {
                                         }
-                                        b0Var = new b0(str2, str3, 0L, 0L, 0L, a0Var.f25316d, 0L, null, null, null, null);
+                                        b0Var = new b0(str2, str3, 0L, 0L, 0L, a0Var.f26137d, 0L, null, null, null, null);
                                         a0Var2 = a0Var;
                                     } else {
-                                        a0 a0VarA5 = a0Var.a(g7Var, b0VarV0.f25350f);
-                                        b0 b0VarA5 = b0VarV0.a(a0VarA5.f25316d);
+                                        a0 a0VarA5 = a0Var.a(g7Var, b0VarV0.f26171f);
+                                        b0 b0VarA5 = b0VarV0.a(a0VarA5.f26137d);
                                         a0Var2 = a0VarA5;
                                         b0Var = b0VarA5;
                                     }
@@ -5371,38 +5371,38 @@ public final class me implements l8 {
                                     O0();
                                     n9.m.l(a0Var2);
                                     n9.m.l(zzrVar);
-                                    String str117 = a0Var2.f25314a;
+                                    String str117 = a0Var2.f26135a;
                                     n9.m.f(str117);
-                                    str4 = zzrVar.f7445f;
+                                    str4 = zzrVar.f7519f;
                                     n9.m.a(str117.equals(str4));
                                     z6VarM0 = com.google.android.gms.internal.measurement.a7.m0();
                                     z6VarM0.e0(1);
-                                    z6VarM0.A("android");
+                                    z6VarM0.B("android");
                                     if (!TextUtils.isEmpty(str4)) {
                                         z6VarM0.P(str4);
                                     }
-                                    str5 = zzrVar.f7448i;
+                                    str5 = zzrVar.f7522i;
                                     if (!TextUtils.isEmpty(str5)) {
                                         z6VarM0.N(str5);
                                     }
-                                    str6 = zzrVar.f7447h;
+                                    str6 = zzrVar.f7521h;
                                     if (!TextUtils.isEmpty(str6)) {
                                         z6VarM0.Q(str6);
                                     }
-                                    str7 = zzrVar.f7465z;
+                                    str7 = zzrVar.f7539z;
                                     if (!TextUtils.isEmpty(str7)) {
                                         z6VarM0.Q0(str7);
                                     }
-                                    j11 = zzrVar.f7454o;
+                                    j11 = zzrVar.f7528o;
                                     if (j11 != -2147483648L) {
                                         z6VarM0.F0((int) j11);
                                     }
-                                    z6VarM0.R(zzrVar.f7449j);
-                                    str8 = zzrVar.f7446g;
+                                    z6VarM0.R(zzrVar.f7523j);
+                                    str8 = zzrVar.f7520g;
                                     if (!TextUtils.isEmpty(str8)) {
                                         z6VarM0.z0(str8);
                                     }
-                                    q8VarS = g((String) n9.m.l(str4)).s(q8.f(zzrVar.f7463x, 100));
+                                    q8VarS = g((String) n9.m.l(str4)).s(q8.f(zzrVar.f7537x, 100));
                                     z6VarM0.P0(q8VarS.k());
                                     vf.a();
                                     if (B0().H(str4, z4.Q0)) {
@@ -5424,7 +5424,7 @@ public final class me implements l8 {
                                             } else {
                                                 z11 = r8;
                                             }
-                                            z5VarO5.x(z11);
+                                            z5VarO5.y(z11);
                                             if ((j13 & 2) != 0) {
                                                 z12 = 1;
                                             } else {
@@ -5436,7 +5436,7 @@ public final class me implements l8 {
                                             } else {
                                                 z13 = r8;
                                             }
-                                            z5VarO5.A(z13);
+                                            z5VarO5.B(z13);
                                             if ((j13 & 8) != 0) {
                                                 z14 = 1;
                                             } else {
@@ -5464,13 +5464,13 @@ public final class me implements l8 {
                                             z6VarM0.n0((com.google.android.gms.internal.measurement.a6) z5VarO5.t());
                                         }
                                     }
-                                    j12 = zzrVar.f7450k;
+                                    j12 = zzrVar.f7524k;
                                     if (j12 != 0) {
                                         z6VarM0.c0(j12);
                                     }
-                                    z6VarM0.N0(zzrVar.f7461v);
+                                    z6VarM0.N0(zzrVar.f7535v);
                                     re reVarK4 = K0();
-                                    p8VarC = com.google.android.gms.internal.measurement.p8.c(reVarK4.b.f25763l.d().getContentResolver(), com.google.android.gms.internal.measurement.a9.a("com.google.android.gms.measurement"), new Runnable() { // from class: nb.v4
+                                    p8VarC = com.google.android.gms.internal.measurement.p8.c(reVarK4.b.f26584l.d().getContentResolver(), com.google.android.gms.internal.measurement.a9.a("com.google.android.gms.measurement"), new Runnable() { // from class: nb.v4
                                         @Override // java.lang.Runnable
                                         public final /* synthetic */ void run() {
                                             com.google.android.gms.internal.measurement.l9.c();
@@ -5489,11 +5489,11 @@ public final class me implements l8 {
                                     if (arrayList != null) {
                                         z6VarM0.M0(arrayList);
                                     }
-                                    if (B0().H(null, z4.f26153b1)) {
+                                    if (B0().H(null, z4.f26974b1)) {
                                         z6VarM0.u0("");
                                     }
-                                    str9 = zzrVar.f7445f;
-                                    q8VarS2 = g((String) n9.m.l(str9)).s(q8.f(zzrVar.f7463x, 100));
+                                    str9 = zzrVar.f7519f;
+                                    q8VarS2 = g((String) n9.m.l(str9)).s(q8.f(zzrVar.f7537x, 100));
                                     p8Var = p8.AD_STORAGE;
                                     if (q8VarS2.o(p8Var)) {
                                         str13 = "raw_events";
@@ -5502,7 +5502,7 @@ public final class me implements l8 {
                                         str13 = "raw_events";
                                         p8Var = p8Var;
                                     }
-                                    g7Var2 = this.f25763l;
+                                    g7Var2 = this.f26584l;
                                     g7Var2.K().l();
                                     z6VarM0.E(Build.MODEL);
                                     g7Var2.K().l();
@@ -5520,21 +5520,21 @@ public final class me implements l8 {
                                     if (c6VarJ0 == null) {
                                         c6VarJ0 = new c6(g7Var2, str9);
                                         c6VarJ0.q0(p(q8VarS2));
-                                        c6VarJ0.y0(zzrVar.f7455p);
-                                        c6VarJ0.s0(zzrVar.f7446g);
+                                        c6VarJ0.y0(zzrVar.f7529p);
+                                        c6VarJ0.s0(zzrVar.f7520g);
                                         if (q8VarS2.o(p8Var)) {
-                                            c6VarJ0.w0(this.f25760i.o(str9, zzrVar.f7458s));
+                                            c6VarJ0.w0(this.f26581i.o(str9, zzrVar.f7532s));
                                         }
                                         c6VarJ0.f(0L);
                                         c6VarJ0.A0(0L);
                                         c6VarJ0.C0(0L);
-                                        c6VarJ0.E0(zzrVar.f7447h);
-                                        c6VarJ0.G0(zzrVar.f7454o);
-                                        c6VarJ0.I0(zzrVar.f7448i);
-                                        c6VarJ0.K0(zzrVar.f7449j);
-                                        c6VarJ0.a(zzrVar.f7450k);
-                                        c6VarJ0.e(zzrVar.f7452m);
-                                        c6VarJ0.c(zzrVar.f7461v);
+                                        c6VarJ0.E0(zzrVar.f7521h);
+                                        c6VarJ0.G0(zzrVar.f7528o);
+                                        c6VarJ0.I0(zzrVar.f7522i);
+                                        c6VarJ0.K0(zzrVar.f7523j);
+                                        c6VarJ0.a(zzrVar.f7524k);
+                                        c6VarJ0.e(zzrVar.f7526m);
+                                        c6VarJ0.c(zzrVar.f7535v);
                                         i10 = 0;
                                         F0().K0(c6VarJ0, false, false);
                                     } else {
@@ -5549,11 +5549,11 @@ public final class me implements l8 {
                                     listC0 = F0().C0(str9);
                                     while (i11 < listC0.size()) {
                                         com.google.android.gms.internal.measurement.q7 q7VarS5 = com.google.android.gms.internal.measurement.r7.S();
-                                        q7VarS5.z(((te) listC0.get(i11)).f25996c);
-                                        q7VarS5.x(((te) listC0.get(i11)).f25997d);
-                                        K0().G(q7VarS5, ((te) listC0.get(i11)).f25998e);
+                                        q7VarS5.z(((te) listC0.get(i11)).f26817c);
+                                        q7VarS5.y(((te) listC0.get(i11)).f26818d);
+                                        K0().G(q7VarS5, ((te) listC0.get(i11)).f26819e);
                                         z6VarM0.k1(q7VarS5);
-                                        if (!"_sid".equals(((te) listC0.get(i11)).f25996c)) {
+                                        if (!"_sid".equals(((te) listC0.get(i11)).f26817c)) {
                                         }
                                     }
                                     tVarF2 = F0();
@@ -5571,11 +5571,11 @@ public final class me implements l8 {
                                     contentValues6.put("metadata", bArrD9);
                                     tVarF2.u0().insertWithOnConflict("raw_events_metadata", null, contentValues6, 4);
                                     tVarF3 = F0();
-                                    c0Var2 = new c0(a0Var2.f25318f);
+                                    c0Var2 = new c0(a0Var2.f26139f);
                                     while (true) {
                                         if (c0Var2.hasNext()) {
                                             x6 x6VarD5 = D0();
-                                            String str210 = a0Var2.f25314a;
+                                            String str210 = a0Var2.f26135a;
                                             zE = x6VarD5.E(str210, a0Var2.b);
                                             p pVarL4 = F0().L0(h(), str210, false, false, false, false, false, false, false);
                                             if (zE) {
@@ -5591,20 +5591,20 @@ public final class me implements l8 {
                                     tVarF3.h();
                                     tVarF3.j();
                                     n9.m.l(a0Var2);
-                                    str10 = a0Var2.f25314a;
+                                    str10 = a0Var2.f26135a;
                                     n9.m.f(str10);
                                     byte[] bArrD10 = tVarF3.b.K0().J(a0Var2).d();
                                     contentValues = new ContentValues();
                                     contentValues.put(str29, str10);
                                     contentValues.put("name", a0Var2.b);
-                                    contentValues.put("timestamp", Long.valueOf(a0Var2.f25316d));
+                                    contentValues.put("timestamp", Long.valueOf(a0Var2.f26137d));
                                     contentValues.put("metadata_fingerprint", Long.valueOf(jT5));
                                     contentValues.put("data", bArrD10);
                                     contentValues.put("realtime", Integer.valueOf(i12));
                                     if (tVarF3.u0().insert(str13, null, contentValues) == -1) {
-                                        tVarF3.f25625a.a().o().b("Failed to insert raw event (got -1). appId", w5.x(str10));
+                                        tVarF3.f26446a.a().o().b("Failed to insert raw event (got -1). appId", w5.x(str10));
                                     } else {
-                                        this.f25766o = 0L;
+                                        this.f26587o = 0L;
                                     }
                                     F0().s0();
                                     F0().t0();
@@ -5612,17 +5612,17 @@ public final class me implements l8 {
                                     a().w().b("Background event processing time, ms", Long.valueOf(((System.nanoTime() - jNanoTime) + 500000) / 1000000));
                                     return;
                                 }
-                                long j19 = pVarM0.f25833a;
+                                long j19 = pVarM0.f26654a;
                                 B0();
-                                jIntValue = j19 - ((long) ((Integer) z4.f26186n.b(null)).intValue());
+                                jIntValue = j19 - ((long) ((Integer) z4.f27007n.b(null)).intValue());
                                 if (jIntValue > 0) {
                                     if (zEquals) {
                                         j10 = 1;
                                         r8 = 0;
-                                        jMax = pVarM0.f25835d - ((long) Math.max(0, Math.min(1000000, B0().E(zzrVar.f7445f, z4.f26184m))));
+                                        jMax = pVarM0.f26656d - ((long) Math.max(0, Math.min(1000000, B0().E(zzrVar.f7519f, z4.f27005m))));
                                         if (jMax > 0) {
                                             if (jMax == 1) {
-                                                a().o().c("Too many error events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f25835d));
+                                                a().o().c("Too many error events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f26656d));
                                             }
                                             F0().s0();
                                         }
@@ -5632,7 +5632,7 @@ public final class me implements l8 {
                                     }
                                     bundleY3 = zzbeVar2.y3();
                                     ve veVarN10 = N0();
-                                    String str118 = zzbgVar2.f7424h;
+                                    String str118 = zzbgVar2.f7498h;
                                     veVarN10.A(bundleY3, "_o", str118);
                                     if (N0().P(str2, zzrVar.G)) {
                                         ve veVarN11 = N0();
@@ -5641,7 +5641,7 @@ public final class me implements l8 {
                                         N0().A(bundleY3, "_r", lValueOf6);
                                     }
                                     if ("_s".equals(str)) {
-                                        obj3 = teVarB1.f25998e;
+                                        obj3 = teVarB1.f26819e;
                                         if (obj3 instanceof Long) {
                                             N0().A(bundleY3, "_sno", obj3);
                                         }
@@ -5658,23 +5658,23 @@ public final class me implements l8 {
                                     n9.m.f(str2);
                                     tVarF1.h();
                                     tVarF1.j();
-                                    jDelete = tVarF1.u0().delete("raw_events", "rowid in (select rowid from raw_events where app_id=? order by rowid desc limit -1 offset ?)", new String[]{str2, String.valueOf(Math.max((int) r8, Math.min(1000000, tVarF1.f25625a.w().E(str2, z4.f26192q))))});
+                                    jDelete = tVarF1.u0().delete("raw_events", "rowid in (select rowid from raw_events where app_id=? order by rowid desc limit -1 offset ?)", new String[]{str2, String.valueOf(Math.max((int) r8, Math.min(1000000, tVarF1.f26446a.w().E(str2, z4.f27013q))))});
                                     if (jDelete > 0) {
                                         a().r().c("Data lost. Too many events stored on disk, deleted. appId", w5.x(str2), Long.valueOf(jDelete));
                                     }
-                                    g7Var = this.f25763l;
-                                    a0Var = new a0(g7Var, zzbgVar2.f7424h, str2, zzbgVar2.f7422f, zzbgVar2.f7425i, 0L, bundleY3);
+                                    g7Var = this.f26584l;
+                                    a0Var = new a0(g7Var, zzbgVar2.f7498h, str2, zzbgVar2.f7496f, zzbgVar2.f7499i, 0L, bundleY3);
                                     t tVarF9 = F0();
                                     str3 = a0Var.b;
                                     b0VarV0 = tVarF9.v0(str2, str3);
                                     if (b0VarV0 != null) {
                                         if (F0().E(str2) >= B0().z(str2)) {
                                         }
-                                        b0Var = new b0(str2, str3, 0L, 0L, 0L, a0Var.f25316d, 0L, null, null, null, null);
+                                        b0Var = new b0(str2, str3, 0L, 0L, 0L, a0Var.f26137d, 0L, null, null, null, null);
                                         a0Var2 = a0Var;
                                     } else {
-                                        a0 a0VarA6 = a0Var.a(g7Var, b0VarV0.f25350f);
-                                        b0 b0VarA6 = b0VarV0.a(a0VarA6.f25316d);
+                                        a0 a0VarA6 = a0Var.a(g7Var, b0VarV0.f26171f);
+                                        b0 b0VarA6 = b0VarV0.a(a0VarA6.f26137d);
                                         a0Var2 = a0VarA6;
                                         b0Var = b0VarA6;
                                     }
@@ -5683,38 +5683,38 @@ public final class me implements l8 {
                                     O0();
                                     n9.m.l(a0Var2);
                                     n9.m.l(zzrVar);
-                                    String str119 = a0Var2.f25314a;
+                                    String str119 = a0Var2.f26135a;
                                     n9.m.f(str119);
-                                    str4 = zzrVar.f7445f;
+                                    str4 = zzrVar.f7519f;
                                     n9.m.a(str119.equals(str4));
                                     z6VarM0 = com.google.android.gms.internal.measurement.a7.m0();
                                     z6VarM0.e0(1);
-                                    z6VarM0.A("android");
+                                    z6VarM0.B("android");
                                     if (!TextUtils.isEmpty(str4)) {
                                         z6VarM0.P(str4);
                                     }
-                                    str5 = zzrVar.f7448i;
+                                    str5 = zzrVar.f7522i;
                                     if (!TextUtils.isEmpty(str5)) {
                                         z6VarM0.N(str5);
                                     }
-                                    str6 = zzrVar.f7447h;
+                                    str6 = zzrVar.f7521h;
                                     if (!TextUtils.isEmpty(str6)) {
                                         z6VarM0.Q(str6);
                                     }
-                                    str7 = zzrVar.f7465z;
+                                    str7 = zzrVar.f7539z;
                                     if (!TextUtils.isEmpty(str7)) {
                                         z6VarM0.Q0(str7);
                                     }
-                                    j11 = zzrVar.f7454o;
+                                    j11 = zzrVar.f7528o;
                                     if (j11 != -2147483648L) {
                                         z6VarM0.F0((int) j11);
                                     }
-                                    z6VarM0.R(zzrVar.f7449j);
-                                    str8 = zzrVar.f7446g;
+                                    z6VarM0.R(zzrVar.f7523j);
+                                    str8 = zzrVar.f7520g;
                                     if (!TextUtils.isEmpty(str8)) {
                                         z6VarM0.z0(str8);
                                     }
-                                    q8VarS = g((String) n9.m.l(str4)).s(q8.f(zzrVar.f7463x, 100));
+                                    q8VarS = g((String) n9.m.l(str4)).s(q8.f(zzrVar.f7537x, 100));
                                     z6VarM0.P0(q8VarS.k());
                                     vf.a();
                                     if (B0().H(str4, z4.Q0)) {
@@ -5736,7 +5736,7 @@ public final class me implements l8 {
                                             } else {
                                                 z11 = r8;
                                             }
-                                            z5VarO6.x(z11);
+                                            z5VarO6.y(z11);
                                             if ((j13 & 2) != 0) {
                                                 z12 = 1;
                                             } else {
@@ -5748,7 +5748,7 @@ public final class me implements l8 {
                                             } else {
                                                 z13 = r8;
                                             }
-                                            z5VarO6.A(z13);
+                                            z5VarO6.B(z13);
                                             if ((j13 & 8) != 0) {
                                                 z14 = 1;
                                             } else {
@@ -5776,13 +5776,13 @@ public final class me implements l8 {
                                             z6VarM0.n0((com.google.android.gms.internal.measurement.a6) z5VarO6.t());
                                         }
                                     }
-                                    j12 = zzrVar.f7450k;
+                                    j12 = zzrVar.f7524k;
                                     if (j12 != 0) {
                                         z6VarM0.c0(j12);
                                     }
-                                    z6VarM0.N0(zzrVar.f7461v);
+                                    z6VarM0.N0(zzrVar.f7535v);
                                     re reVarK5 = K0();
-                                    p8VarC = com.google.android.gms.internal.measurement.p8.c(reVarK5.b.f25763l.d().getContentResolver(), com.google.android.gms.internal.measurement.a9.a("com.google.android.gms.measurement"), new Runnable() { // from class: nb.v4
+                                    p8VarC = com.google.android.gms.internal.measurement.p8.c(reVarK5.b.f26584l.d().getContentResolver(), com.google.android.gms.internal.measurement.a9.a("com.google.android.gms.measurement"), new Runnable() { // from class: nb.v4
                                         @Override // java.lang.Runnable
                                         public final /* synthetic */ void run() {
                                             com.google.android.gms.internal.measurement.l9.c();
@@ -5801,11 +5801,11 @@ public final class me implements l8 {
                                     if (arrayList != null) {
                                         z6VarM0.M0(arrayList);
                                     }
-                                    if (B0().H(null, z4.f26153b1)) {
+                                    if (B0().H(null, z4.f26974b1)) {
                                         z6VarM0.u0("");
                                     }
-                                    str9 = zzrVar.f7445f;
-                                    q8VarS2 = g((String) n9.m.l(str9)).s(q8.f(zzrVar.f7463x, 100));
+                                    str9 = zzrVar.f7519f;
+                                    q8VarS2 = g((String) n9.m.l(str9)).s(q8.f(zzrVar.f7537x, 100));
                                     p8Var = p8.AD_STORAGE;
                                     if (q8VarS2.o(p8Var)) {
                                         str13 = "raw_events";
@@ -5814,7 +5814,7 @@ public final class me implements l8 {
                                         str13 = "raw_events";
                                         p8Var = p8Var;
                                     }
-                                    g7Var2 = this.f25763l;
+                                    g7Var2 = this.f26584l;
                                     g7Var2.K().l();
                                     z6VarM0.E(Build.MODEL);
                                     g7Var2.K().l();
@@ -5832,21 +5832,21 @@ public final class me implements l8 {
                                     if (c6VarJ0 == null) {
                                         c6VarJ0 = new c6(g7Var2, str9);
                                         c6VarJ0.q0(p(q8VarS2));
-                                        c6VarJ0.y0(zzrVar.f7455p);
-                                        c6VarJ0.s0(zzrVar.f7446g);
+                                        c6VarJ0.y0(zzrVar.f7529p);
+                                        c6VarJ0.s0(zzrVar.f7520g);
                                         if (q8VarS2.o(p8Var)) {
-                                            c6VarJ0.w0(this.f25760i.o(str9, zzrVar.f7458s));
+                                            c6VarJ0.w0(this.f26581i.o(str9, zzrVar.f7532s));
                                         }
                                         c6VarJ0.f(0L);
                                         c6VarJ0.A0(0L);
                                         c6VarJ0.C0(0L);
-                                        c6VarJ0.E0(zzrVar.f7447h);
-                                        c6VarJ0.G0(zzrVar.f7454o);
-                                        c6VarJ0.I0(zzrVar.f7448i);
-                                        c6VarJ0.K0(zzrVar.f7449j);
-                                        c6VarJ0.a(zzrVar.f7450k);
-                                        c6VarJ0.e(zzrVar.f7452m);
-                                        c6VarJ0.c(zzrVar.f7461v);
+                                        c6VarJ0.E0(zzrVar.f7521h);
+                                        c6VarJ0.G0(zzrVar.f7528o);
+                                        c6VarJ0.I0(zzrVar.f7522i);
+                                        c6VarJ0.K0(zzrVar.f7523j);
+                                        c6VarJ0.a(zzrVar.f7524k);
+                                        c6VarJ0.e(zzrVar.f7526m);
+                                        c6VarJ0.c(zzrVar.f7535v);
                                         i10 = 0;
                                         F0().K0(c6VarJ0, false, false);
                                     } else {
@@ -5861,11 +5861,11 @@ public final class me implements l8 {
                                     listC0 = F0().C0(str9);
                                     while (i11 < listC0.size()) {
                                         com.google.android.gms.internal.measurement.q7 q7VarS6 = com.google.android.gms.internal.measurement.r7.S();
-                                        q7VarS6.z(((te) listC0.get(i11)).f25996c);
-                                        q7VarS6.x(((te) listC0.get(i11)).f25997d);
-                                        K0().G(q7VarS6, ((te) listC0.get(i11)).f25998e);
+                                        q7VarS6.z(((te) listC0.get(i11)).f26817c);
+                                        q7VarS6.y(((te) listC0.get(i11)).f26818d);
+                                        K0().G(q7VarS6, ((te) listC0.get(i11)).f26819e);
                                         z6VarM0.k1(q7VarS6);
-                                        if (!"_sid".equals(((te) listC0.get(i11)).f25996c)) {
+                                        if (!"_sid".equals(((te) listC0.get(i11)).f26817c)) {
                                         }
                                     }
                                     tVarF2 = F0();
@@ -5883,11 +5883,11 @@ public final class me implements l8 {
                                     contentValues7.put("metadata", bArrD11);
                                     tVarF2.u0().insertWithOnConflict("raw_events_metadata", null, contentValues7, 4);
                                     tVarF3 = F0();
-                                    c0Var2 = new c0(a0Var2.f25318f);
+                                    c0Var2 = new c0(a0Var2.f26139f);
                                     while (true) {
                                         if (c0Var2.hasNext()) {
                                             x6 x6VarD6 = D0();
-                                            String str212 = a0Var2.f25314a;
+                                            String str212 = a0Var2.f26135a;
                                             zE = x6VarD6.E(str212, a0Var2.b);
                                             p pVarL5 = F0().L0(h(), str212, false, false, false, false, false, false, false);
                                             if (zE) {
@@ -5903,20 +5903,20 @@ public final class me implements l8 {
                                     tVarF3.h();
                                     tVarF3.j();
                                     n9.m.l(a0Var2);
-                                    str10 = a0Var2.f25314a;
+                                    str10 = a0Var2.f26135a;
                                     n9.m.f(str10);
                                     byte[] bArrD12 = tVarF3.b.K0().J(a0Var2).d();
                                     contentValues = new ContentValues();
                                     contentValues.put(str211, str10);
                                     contentValues.put("name", a0Var2.b);
-                                    contentValues.put("timestamp", Long.valueOf(a0Var2.f25316d));
+                                    contentValues.put("timestamp", Long.valueOf(a0Var2.f26137d));
                                     contentValues.put("metadata_fingerprint", Long.valueOf(jT6));
                                     contentValues.put("data", bArrD12);
                                     contentValues.put("realtime", Integer.valueOf(i12));
                                     if (tVarF3.u0().insert(str13, null, contentValues) == -1) {
-                                        tVarF3.f25625a.a().o().b("Failed to insert raw event (got -1). appId", w5.x(str10));
+                                        tVarF3.f26446a.a().o().b("Failed to insert raw event (got -1). appId", w5.x(str10));
                                     } else {
-                                        this.f25766o = 0L;
+                                        this.f26587o = 0L;
                                     }
                                     F0().s0();
                                     F0().t0();
@@ -5925,9 +5925,9 @@ public final class me implements l8 {
                                     return;
                                 }
                                 if (jIntValue % 1000 == 1) {
-                                    a().o().c("Data loss. Too many public events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f25833a));
+                                    a().o().c("Data loss. Too many public events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f26654a));
                                 }
-                                N0().B(this.J, str2, 16, "_ev", zzbgVar2.f7422f, 0);
+                                N0().B(this.J, str2, 16, "_ev", zzbgVar2.f7496f, 0);
                                 F0().s0();
                             }
                         }
@@ -5936,11 +5936,11 @@ public final class me implements l8 {
                         str12 = "_fx";
                     }
                     zzbgVarB = zzbgVarB;
-                    str = zzbgVarB.f7422f;
+                    str = zzbgVarB.f7496f;
                     zR0 = ve.r0(str);
                     zEquals = "_err".equals(str);
                     N0();
-                    zzbeVar2 = zzbgVarB.f7423g;
+                    zzbeVar2 = zzbgVarB.f7497g;
                     if (zzbeVar2 == null) {
                         length = 0;
                     } else {
@@ -5969,10 +5969,10 @@ public final class me implements l8 {
                             if (zEquals) {
                                 j10 = 1;
                                 r8 = 0;
-                                jMax = pVarM0.f25835d - ((long) Math.max(0, Math.min(1000000, B0().E(zzrVar.f7445f, z4.f26184m))));
+                                jMax = pVarM0.f26656d - ((long) Math.max(0, Math.min(1000000, B0().E(zzrVar.f7519f, z4.f27005m))));
                                 if (jMax > 0) {
                                     if (jMax == 1) {
-                                        a().o().c("Too many error events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f25835d));
+                                        a().o().c("Too many error events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f26656d));
                                     }
                                     F0().s0();
                                 }
@@ -5982,7 +5982,7 @@ public final class me implements l8 {
                             }
                             bundleY3 = zzbeVar2.y3();
                             ve veVarN12 = N0();
-                            String str1110 = zzbgVar2.f7424h;
+                            String str1110 = zzbgVar2.f7498h;
                             veVarN12.A(bundleY3, "_o", str1110);
                             if (N0().P(str2, zzrVar.G)) {
                                 ve veVarN13 = N0();
@@ -5991,7 +5991,7 @@ public final class me implements l8 {
                                 N0().A(bundleY3, "_r", lValueOf7);
                             }
                             if ("_s".equals(str)) {
-                                obj3 = teVarB1.f25998e;
+                                obj3 = teVarB1.f26819e;
                                 if (obj3 instanceof Long) {
                                     N0().A(bundleY3, "_sno", obj3);
                                 }
@@ -6008,23 +6008,23 @@ public final class me implements l8 {
                             n9.m.f(str2);
                             tVarF1.h();
                             tVarF1.j();
-                            jDelete = tVarF1.u0().delete("raw_events", "rowid in (select rowid from raw_events where app_id=? order by rowid desc limit -1 offset ?)", new String[]{str2, String.valueOf(Math.max((int) r8, Math.min(1000000, tVarF1.f25625a.w().E(str2, z4.f26192q))))});
+                            jDelete = tVarF1.u0().delete("raw_events", "rowid in (select rowid from raw_events where app_id=? order by rowid desc limit -1 offset ?)", new String[]{str2, String.valueOf(Math.max((int) r8, Math.min(1000000, tVarF1.f26446a.w().E(str2, z4.f27013q))))});
                             if (jDelete > 0) {
                                 a().r().c("Data lost. Too many events stored on disk, deleted. appId", w5.x(str2), Long.valueOf(jDelete));
                             }
-                            g7Var = this.f25763l;
-                            a0Var = new a0(g7Var, zzbgVar2.f7424h, str2, zzbgVar2.f7422f, zzbgVar2.f7425i, 0L, bundleY3);
+                            g7Var = this.f26584l;
+                            a0Var = new a0(g7Var, zzbgVar2.f7498h, str2, zzbgVar2.f7496f, zzbgVar2.f7499i, 0L, bundleY3);
                             t tVarF10 = F0();
                             str3 = a0Var.b;
                             b0VarV0 = tVarF10.v0(str2, str3);
                             if (b0VarV0 != null) {
                                 if (F0().E(str2) >= B0().z(str2)) {
                                 }
-                                b0Var = new b0(str2, str3, 0L, 0L, 0L, a0Var.f25316d, 0L, null, null, null, null);
+                                b0Var = new b0(str2, str3, 0L, 0L, 0L, a0Var.f26137d, 0L, null, null, null, null);
                                 a0Var2 = a0Var;
                             } else {
-                                a0 a0VarA7 = a0Var.a(g7Var, b0VarV0.f25350f);
-                                b0 b0VarA7 = b0VarV0.a(a0VarA7.f25316d);
+                                a0 a0VarA7 = a0Var.a(g7Var, b0VarV0.f26171f);
+                                b0 b0VarA7 = b0VarV0.a(a0VarA7.f26137d);
                                 a0Var2 = a0VarA7;
                                 b0Var = b0VarA7;
                             }
@@ -6033,38 +6033,38 @@ public final class me implements l8 {
                             O0();
                             n9.m.l(a0Var2);
                             n9.m.l(zzrVar);
-                            String str1111 = a0Var2.f25314a;
+                            String str1111 = a0Var2.f26135a;
                             n9.m.f(str1111);
-                            str4 = zzrVar.f7445f;
+                            str4 = zzrVar.f7519f;
                             n9.m.a(str1111.equals(str4));
                             z6VarM0 = com.google.android.gms.internal.measurement.a7.m0();
                             z6VarM0.e0(1);
-                            z6VarM0.A("android");
+                            z6VarM0.B("android");
                             if (!TextUtils.isEmpty(str4)) {
                                 z6VarM0.P(str4);
                             }
-                            str5 = zzrVar.f7448i;
+                            str5 = zzrVar.f7522i;
                             if (!TextUtils.isEmpty(str5)) {
                                 z6VarM0.N(str5);
                             }
-                            str6 = zzrVar.f7447h;
+                            str6 = zzrVar.f7521h;
                             if (!TextUtils.isEmpty(str6)) {
                                 z6VarM0.Q(str6);
                             }
-                            str7 = zzrVar.f7465z;
+                            str7 = zzrVar.f7539z;
                             if (!TextUtils.isEmpty(str7)) {
                                 z6VarM0.Q0(str7);
                             }
-                            j11 = zzrVar.f7454o;
+                            j11 = zzrVar.f7528o;
                             if (j11 != -2147483648L) {
                                 z6VarM0.F0((int) j11);
                             }
-                            z6VarM0.R(zzrVar.f7449j);
-                            str8 = zzrVar.f7446g;
+                            z6VarM0.R(zzrVar.f7523j);
+                            str8 = zzrVar.f7520g;
                             if (!TextUtils.isEmpty(str8)) {
                                 z6VarM0.z0(str8);
                             }
-                            q8VarS = g((String) n9.m.l(str4)).s(q8.f(zzrVar.f7463x, 100));
+                            q8VarS = g((String) n9.m.l(str4)).s(q8.f(zzrVar.f7537x, 100));
                             z6VarM0.P0(q8VarS.k());
                             vf.a();
                             if (B0().H(str4, z4.Q0)) {
@@ -6086,7 +6086,7 @@ public final class me implements l8 {
                                     } else {
                                         z11 = r8;
                                     }
-                                    z5VarO7.x(z11);
+                                    z5VarO7.y(z11);
                                     if ((j13 & 2) != 0) {
                                         z12 = 1;
                                     } else {
@@ -6098,7 +6098,7 @@ public final class me implements l8 {
                                     } else {
                                         z13 = r8;
                                     }
-                                    z5VarO7.A(z13);
+                                    z5VarO7.B(z13);
                                     if ((j13 & 8) != 0) {
                                         z14 = 1;
                                     } else {
@@ -6126,13 +6126,13 @@ public final class me implements l8 {
                                     z6VarM0.n0((com.google.android.gms.internal.measurement.a6) z5VarO7.t());
                                 }
                             }
-                            j12 = zzrVar.f7450k;
+                            j12 = zzrVar.f7524k;
                             if (j12 != 0) {
                                 z6VarM0.c0(j12);
                             }
-                            z6VarM0.N0(zzrVar.f7461v);
+                            z6VarM0.N0(zzrVar.f7535v);
                             re reVarK6 = K0();
-                            p8VarC = com.google.android.gms.internal.measurement.p8.c(reVarK6.b.f25763l.d().getContentResolver(), com.google.android.gms.internal.measurement.a9.a("com.google.android.gms.measurement"), new Runnable() { // from class: nb.v4
+                            p8VarC = com.google.android.gms.internal.measurement.p8.c(reVarK6.b.f26584l.d().getContentResolver(), com.google.android.gms.internal.measurement.a9.a("com.google.android.gms.measurement"), new Runnable() { // from class: nb.v4
                                 @Override // java.lang.Runnable
                                 public final /* synthetic */ void run() {
                                     com.google.android.gms.internal.measurement.l9.c();
@@ -6151,11 +6151,11 @@ public final class me implements l8 {
                             if (arrayList != null) {
                                 z6VarM0.M0(arrayList);
                             }
-                            if (B0().H(null, z4.f26153b1)) {
+                            if (B0().H(null, z4.f26974b1)) {
                                 z6VarM0.u0("");
                             }
-                            str9 = zzrVar.f7445f;
-                            q8VarS2 = g((String) n9.m.l(str9)).s(q8.f(zzrVar.f7463x, 100));
+                            str9 = zzrVar.f7519f;
+                            q8VarS2 = g((String) n9.m.l(str9)).s(q8.f(zzrVar.f7537x, 100));
                             p8Var = p8.AD_STORAGE;
                             if (q8VarS2.o(p8Var)) {
                                 str13 = "raw_events";
@@ -6164,7 +6164,7 @@ public final class me implements l8 {
                                 str13 = "raw_events";
                                 p8Var = p8Var;
                             }
-                            g7Var2 = this.f25763l;
+                            g7Var2 = this.f26584l;
                             g7Var2.K().l();
                             z6VarM0.E(Build.MODEL);
                             g7Var2.K().l();
@@ -6182,21 +6182,21 @@ public final class me implements l8 {
                             if (c6VarJ0 == null) {
                                 c6VarJ0 = new c6(g7Var2, str9);
                                 c6VarJ0.q0(p(q8VarS2));
-                                c6VarJ0.y0(zzrVar.f7455p);
-                                c6VarJ0.s0(zzrVar.f7446g);
+                                c6VarJ0.y0(zzrVar.f7529p);
+                                c6VarJ0.s0(zzrVar.f7520g);
                                 if (q8VarS2.o(p8Var)) {
-                                    c6VarJ0.w0(this.f25760i.o(str9, zzrVar.f7458s));
+                                    c6VarJ0.w0(this.f26581i.o(str9, zzrVar.f7532s));
                                 }
                                 c6VarJ0.f(0L);
                                 c6VarJ0.A0(0L);
                                 c6VarJ0.C0(0L);
-                                c6VarJ0.E0(zzrVar.f7447h);
-                                c6VarJ0.G0(zzrVar.f7454o);
-                                c6VarJ0.I0(zzrVar.f7448i);
-                                c6VarJ0.K0(zzrVar.f7449j);
-                                c6VarJ0.a(zzrVar.f7450k);
-                                c6VarJ0.e(zzrVar.f7452m);
-                                c6VarJ0.c(zzrVar.f7461v);
+                                c6VarJ0.E0(zzrVar.f7521h);
+                                c6VarJ0.G0(zzrVar.f7528o);
+                                c6VarJ0.I0(zzrVar.f7522i);
+                                c6VarJ0.K0(zzrVar.f7523j);
+                                c6VarJ0.a(zzrVar.f7524k);
+                                c6VarJ0.e(zzrVar.f7526m);
+                                c6VarJ0.c(zzrVar.f7535v);
                                 i10 = 0;
                                 F0().K0(c6VarJ0, false, false);
                             } else {
@@ -6211,11 +6211,11 @@ public final class me implements l8 {
                             listC0 = F0().C0(str9);
                             while (i11 < listC0.size()) {
                                 com.google.android.gms.internal.measurement.q7 q7VarS7 = com.google.android.gms.internal.measurement.r7.S();
-                                q7VarS7.z(((te) listC0.get(i11)).f25996c);
-                                q7VarS7.x(((te) listC0.get(i11)).f25997d);
-                                K0().G(q7VarS7, ((te) listC0.get(i11)).f25998e);
+                                q7VarS7.z(((te) listC0.get(i11)).f26817c);
+                                q7VarS7.y(((te) listC0.get(i11)).f26818d);
+                                K0().G(q7VarS7, ((te) listC0.get(i11)).f26819e);
                                 z6VarM0.k1(q7VarS7);
-                                if (!"_sid".equals(((te) listC0.get(i11)).f25996c)) {
+                                if (!"_sid".equals(((te) listC0.get(i11)).f26817c)) {
                                 }
                             }
                             tVarF2 = F0();
@@ -6233,11 +6233,11 @@ public final class me implements l8 {
                             contentValues8.put("metadata", bArrD13);
                             tVarF2.u0().insertWithOnConflict("raw_events_metadata", null, contentValues8, 4);
                             tVarF3 = F0();
-                            c0Var2 = new c0(a0Var2.f25318f);
+                            c0Var2 = new c0(a0Var2.f26139f);
                             while (true) {
                                 if (c0Var2.hasNext()) {
                                     x6 x6VarD7 = D0();
-                                    String str214 = a0Var2.f25314a;
+                                    String str214 = a0Var2.f26135a;
                                     zE = x6VarD7.E(str214, a0Var2.b);
                                     p pVarL6 = F0().L0(h(), str214, false, false, false, false, false, false, false);
                                     if (zE) {
@@ -6253,20 +6253,20 @@ public final class me implements l8 {
                             tVarF3.h();
                             tVarF3.j();
                             n9.m.l(a0Var2);
-                            str10 = a0Var2.f25314a;
+                            str10 = a0Var2.f26135a;
                             n9.m.f(str10);
                             byte[] bArrD14 = tVarF3.b.K0().J(a0Var2).d();
                             contentValues = new ContentValues();
                             contentValues.put(str213, str10);
                             contentValues.put("name", a0Var2.b);
-                            contentValues.put("timestamp", Long.valueOf(a0Var2.f25316d));
+                            contentValues.put("timestamp", Long.valueOf(a0Var2.f26137d));
                             contentValues.put("metadata_fingerprint", Long.valueOf(jT7));
                             contentValues.put("data", bArrD14);
                             contentValues.put("realtime", Integer.valueOf(i12));
                             if (tVarF3.u0().insert(str13, null, contentValues) == -1) {
-                                tVarF3.f25625a.a().o().b("Failed to insert raw event (got -1). appId", w5.x(str10));
+                                tVarF3.f26446a.a().o().b("Failed to insert raw event (got -1). appId", w5.x(str10));
                             } else {
-                                this.f25766o = 0L;
+                                this.f26587o = 0L;
                             }
                             F0().s0();
                             F0().t0();
@@ -6274,17 +6274,17 @@ public final class me implements l8 {
                             a().w().b("Background event processing time, ms", Long.valueOf(((System.nanoTime() - jNanoTime) + 500000) / 1000000));
                             return;
                         }
-                        long j111 = pVarM0.f25833a;
+                        long j111 = pVarM0.f26654a;
                         B0();
-                        jIntValue = j111 - ((long) ((Integer) z4.f26186n.b(null)).intValue());
+                        jIntValue = j111 - ((long) ((Integer) z4.f27007n.b(null)).intValue());
                         if (jIntValue > 0) {
                             if (zEquals) {
                                 j10 = 1;
                                 r8 = 0;
-                                jMax = pVarM0.f25835d - ((long) Math.max(0, Math.min(1000000, B0().E(zzrVar.f7445f, z4.f26184m))));
+                                jMax = pVarM0.f26656d - ((long) Math.max(0, Math.min(1000000, B0().E(zzrVar.f7519f, z4.f27005m))));
                                 if (jMax > 0) {
                                     if (jMax == 1) {
-                                        a().o().c("Too many error events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f25835d));
+                                        a().o().c("Too many error events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f26656d));
                                     }
                                     F0().s0();
                                 }
@@ -6294,7 +6294,7 @@ public final class me implements l8 {
                             }
                             bundleY3 = zzbeVar2.y3();
                             ve veVarN14 = N0();
-                            String str1112 = zzbgVar2.f7424h;
+                            String str1112 = zzbgVar2.f7498h;
                             veVarN14.A(bundleY3, "_o", str1112);
                             if (N0().P(str2, zzrVar.G)) {
                                 ve veVarN15 = N0();
@@ -6303,7 +6303,7 @@ public final class me implements l8 {
                                 N0().A(bundleY3, "_r", lValueOf8);
                             }
                             if ("_s".equals(str)) {
-                                obj3 = teVarB1.f25998e;
+                                obj3 = teVarB1.f26819e;
                                 if (obj3 instanceof Long) {
                                     N0().A(bundleY3, "_sno", obj3);
                                 }
@@ -6320,23 +6320,23 @@ public final class me implements l8 {
                             n9.m.f(str2);
                             tVarF1.h();
                             tVarF1.j();
-                            jDelete = tVarF1.u0().delete("raw_events", "rowid in (select rowid from raw_events where app_id=? order by rowid desc limit -1 offset ?)", new String[]{str2, String.valueOf(Math.max((int) r8, Math.min(1000000, tVarF1.f25625a.w().E(str2, z4.f26192q))))});
+                            jDelete = tVarF1.u0().delete("raw_events", "rowid in (select rowid from raw_events where app_id=? order by rowid desc limit -1 offset ?)", new String[]{str2, String.valueOf(Math.max((int) r8, Math.min(1000000, tVarF1.f26446a.w().E(str2, z4.f27013q))))});
                             if (jDelete > 0) {
                                 a().r().c("Data lost. Too many events stored on disk, deleted. appId", w5.x(str2), Long.valueOf(jDelete));
                             }
-                            g7Var = this.f25763l;
-                            a0Var = new a0(g7Var, zzbgVar2.f7424h, str2, zzbgVar2.f7422f, zzbgVar2.f7425i, 0L, bundleY3);
+                            g7Var = this.f26584l;
+                            a0Var = new a0(g7Var, zzbgVar2.f7498h, str2, zzbgVar2.f7496f, zzbgVar2.f7499i, 0L, bundleY3);
                             t tVarF11 = F0();
                             str3 = a0Var.b;
                             b0VarV0 = tVarF11.v0(str2, str3);
                             if (b0VarV0 != null) {
                                 if (F0().E(str2) >= B0().z(str2)) {
                                 }
-                                b0Var = new b0(str2, str3, 0L, 0L, 0L, a0Var.f25316d, 0L, null, null, null, null);
+                                b0Var = new b0(str2, str3, 0L, 0L, 0L, a0Var.f26137d, 0L, null, null, null, null);
                                 a0Var2 = a0Var;
                             } else {
-                                a0 a0VarA8 = a0Var.a(g7Var, b0VarV0.f25350f);
-                                b0 b0VarA8 = b0VarV0.a(a0VarA8.f25316d);
+                                a0 a0VarA8 = a0Var.a(g7Var, b0VarV0.f26171f);
+                                b0 b0VarA8 = b0VarV0.a(a0VarA8.f26137d);
                                 a0Var2 = a0VarA8;
                                 b0Var = b0VarA8;
                             }
@@ -6345,38 +6345,38 @@ public final class me implements l8 {
                             O0();
                             n9.m.l(a0Var2);
                             n9.m.l(zzrVar);
-                            String str1113 = a0Var2.f25314a;
+                            String str1113 = a0Var2.f26135a;
                             n9.m.f(str1113);
-                            str4 = zzrVar.f7445f;
+                            str4 = zzrVar.f7519f;
                             n9.m.a(str1113.equals(str4));
                             z6VarM0 = com.google.android.gms.internal.measurement.a7.m0();
                             z6VarM0.e0(1);
-                            z6VarM0.A("android");
+                            z6VarM0.B("android");
                             if (!TextUtils.isEmpty(str4)) {
                                 z6VarM0.P(str4);
                             }
-                            str5 = zzrVar.f7448i;
+                            str5 = zzrVar.f7522i;
                             if (!TextUtils.isEmpty(str5)) {
                                 z6VarM0.N(str5);
                             }
-                            str6 = zzrVar.f7447h;
+                            str6 = zzrVar.f7521h;
                             if (!TextUtils.isEmpty(str6)) {
                                 z6VarM0.Q(str6);
                             }
-                            str7 = zzrVar.f7465z;
+                            str7 = zzrVar.f7539z;
                             if (!TextUtils.isEmpty(str7)) {
                                 z6VarM0.Q0(str7);
                             }
-                            j11 = zzrVar.f7454o;
+                            j11 = zzrVar.f7528o;
                             if (j11 != -2147483648L) {
                                 z6VarM0.F0((int) j11);
                             }
-                            z6VarM0.R(zzrVar.f7449j);
-                            str8 = zzrVar.f7446g;
+                            z6VarM0.R(zzrVar.f7523j);
+                            str8 = zzrVar.f7520g;
                             if (!TextUtils.isEmpty(str8)) {
                                 z6VarM0.z0(str8);
                             }
-                            q8VarS = g((String) n9.m.l(str4)).s(q8.f(zzrVar.f7463x, 100));
+                            q8VarS = g((String) n9.m.l(str4)).s(q8.f(zzrVar.f7537x, 100));
                             z6VarM0.P0(q8VarS.k());
                             vf.a();
                             if (B0().H(str4, z4.Q0)) {
@@ -6398,7 +6398,7 @@ public final class me implements l8 {
                                     } else {
                                         z11 = r8;
                                     }
-                                    z5VarO8.x(z11);
+                                    z5VarO8.y(z11);
                                     if ((j13 & 2) != 0) {
                                         z12 = 1;
                                     } else {
@@ -6410,7 +6410,7 @@ public final class me implements l8 {
                                     } else {
                                         z13 = r8;
                                     }
-                                    z5VarO8.A(z13);
+                                    z5VarO8.B(z13);
                                     if ((j13 & 8) != 0) {
                                         z14 = 1;
                                     } else {
@@ -6438,13 +6438,13 @@ public final class me implements l8 {
                                     z6VarM0.n0((com.google.android.gms.internal.measurement.a6) z5VarO8.t());
                                 }
                             }
-                            j12 = zzrVar.f7450k;
+                            j12 = zzrVar.f7524k;
                             if (j12 != 0) {
                                 z6VarM0.c0(j12);
                             }
-                            z6VarM0.N0(zzrVar.f7461v);
+                            z6VarM0.N0(zzrVar.f7535v);
                             re reVarK7 = K0();
-                            p8VarC = com.google.android.gms.internal.measurement.p8.c(reVarK7.b.f25763l.d().getContentResolver(), com.google.android.gms.internal.measurement.a9.a("com.google.android.gms.measurement"), new Runnable() { // from class: nb.v4
+                            p8VarC = com.google.android.gms.internal.measurement.p8.c(reVarK7.b.f26584l.d().getContentResolver(), com.google.android.gms.internal.measurement.a9.a("com.google.android.gms.measurement"), new Runnable() { // from class: nb.v4
                                 @Override // java.lang.Runnable
                                 public final /* synthetic */ void run() {
                                     com.google.android.gms.internal.measurement.l9.c();
@@ -6463,11 +6463,11 @@ public final class me implements l8 {
                             if (arrayList != null) {
                                 z6VarM0.M0(arrayList);
                             }
-                            if (B0().H(null, z4.f26153b1)) {
+                            if (B0().H(null, z4.f26974b1)) {
                                 z6VarM0.u0("");
                             }
-                            str9 = zzrVar.f7445f;
-                            q8VarS2 = g((String) n9.m.l(str9)).s(q8.f(zzrVar.f7463x, 100));
+                            str9 = zzrVar.f7519f;
+                            q8VarS2 = g((String) n9.m.l(str9)).s(q8.f(zzrVar.f7537x, 100));
                             p8Var = p8.AD_STORAGE;
                             if (q8VarS2.o(p8Var)) {
                                 str13 = "raw_events";
@@ -6476,7 +6476,7 @@ public final class me implements l8 {
                                 str13 = "raw_events";
                                 p8Var = p8Var;
                             }
-                            g7Var2 = this.f25763l;
+                            g7Var2 = this.f26584l;
                             g7Var2.K().l();
                             z6VarM0.E(Build.MODEL);
                             g7Var2.K().l();
@@ -6494,21 +6494,21 @@ public final class me implements l8 {
                             if (c6VarJ0 == null) {
                                 c6VarJ0 = new c6(g7Var2, str9);
                                 c6VarJ0.q0(p(q8VarS2));
-                                c6VarJ0.y0(zzrVar.f7455p);
-                                c6VarJ0.s0(zzrVar.f7446g);
+                                c6VarJ0.y0(zzrVar.f7529p);
+                                c6VarJ0.s0(zzrVar.f7520g);
                                 if (q8VarS2.o(p8Var)) {
-                                    c6VarJ0.w0(this.f25760i.o(str9, zzrVar.f7458s));
+                                    c6VarJ0.w0(this.f26581i.o(str9, zzrVar.f7532s));
                                 }
                                 c6VarJ0.f(0L);
                                 c6VarJ0.A0(0L);
                                 c6VarJ0.C0(0L);
-                                c6VarJ0.E0(zzrVar.f7447h);
-                                c6VarJ0.G0(zzrVar.f7454o);
-                                c6VarJ0.I0(zzrVar.f7448i);
-                                c6VarJ0.K0(zzrVar.f7449j);
-                                c6VarJ0.a(zzrVar.f7450k);
-                                c6VarJ0.e(zzrVar.f7452m);
-                                c6VarJ0.c(zzrVar.f7461v);
+                                c6VarJ0.E0(zzrVar.f7521h);
+                                c6VarJ0.G0(zzrVar.f7528o);
+                                c6VarJ0.I0(zzrVar.f7522i);
+                                c6VarJ0.K0(zzrVar.f7523j);
+                                c6VarJ0.a(zzrVar.f7524k);
+                                c6VarJ0.e(zzrVar.f7526m);
+                                c6VarJ0.c(zzrVar.f7535v);
                                 i10 = 0;
                                 F0().K0(c6VarJ0, false, false);
                             } else {
@@ -6523,11 +6523,11 @@ public final class me implements l8 {
                             listC0 = F0().C0(str9);
                             while (i11 < listC0.size()) {
                                 com.google.android.gms.internal.measurement.q7 q7VarS8 = com.google.android.gms.internal.measurement.r7.S();
-                                q7VarS8.z(((te) listC0.get(i11)).f25996c);
-                                q7VarS8.x(((te) listC0.get(i11)).f25997d);
-                                K0().G(q7VarS8, ((te) listC0.get(i11)).f25998e);
+                                q7VarS8.z(((te) listC0.get(i11)).f26817c);
+                                q7VarS8.y(((te) listC0.get(i11)).f26818d);
+                                K0().G(q7VarS8, ((te) listC0.get(i11)).f26819e);
                                 z6VarM0.k1(q7VarS8);
-                                if (!"_sid".equals(((te) listC0.get(i11)).f25996c)) {
+                                if (!"_sid".equals(((te) listC0.get(i11)).f26817c)) {
                                 }
                             }
                             tVarF2 = F0();
@@ -6545,11 +6545,11 @@ public final class me implements l8 {
                             contentValues9.put("metadata", bArrD15);
                             tVarF2.u0().insertWithOnConflict("raw_events_metadata", null, contentValues9, 4);
                             tVarF3 = F0();
-                            c0Var2 = new c0(a0Var2.f25318f);
+                            c0Var2 = new c0(a0Var2.f26139f);
                             while (true) {
                                 if (c0Var2.hasNext()) {
                                     x6 x6VarD8 = D0();
-                                    String str216 = a0Var2.f25314a;
+                                    String str216 = a0Var2.f26135a;
                                     zE = x6VarD8.E(str216, a0Var2.b);
                                     p pVarL7 = F0().L0(h(), str216, false, false, false, false, false, false, false);
                                     if (zE) {
@@ -6565,20 +6565,20 @@ public final class me implements l8 {
                             tVarF3.h();
                             tVarF3.j();
                             n9.m.l(a0Var2);
-                            str10 = a0Var2.f25314a;
+                            str10 = a0Var2.f26135a;
                             n9.m.f(str10);
                             byte[] bArrD16 = tVarF3.b.K0().J(a0Var2).d();
                             contentValues = new ContentValues();
                             contentValues.put(str215, str10);
                             contentValues.put("name", a0Var2.b);
-                            contentValues.put("timestamp", Long.valueOf(a0Var2.f25316d));
+                            contentValues.put("timestamp", Long.valueOf(a0Var2.f26137d));
                             contentValues.put("metadata_fingerprint", Long.valueOf(jT8));
                             contentValues.put("data", bArrD16);
                             contentValues.put("realtime", Integer.valueOf(i12));
                             if (tVarF3.u0().insert(str13, null, contentValues) == -1) {
-                                tVarF3.f25625a.a().o().b("Failed to insert raw event (got -1). appId", w5.x(str10));
+                                tVarF3.f26446a.a().o().b("Failed to insert raw event (got -1). appId", w5.x(str10));
                             } else {
-                                this.f25766o = 0L;
+                                this.f26587o = 0L;
                             }
                             F0().s0();
                             F0().t0();
@@ -6587,9 +6587,9 @@ public final class me implements l8 {
                             return;
                         }
                         if (jIntValue % 1000 == 1) {
-                            a().o().c("Data loss. Too many public events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f25833a));
+                            a().o().c("Data loss. Too many public events logged. appId, count", w5.x(str2), Long.valueOf(pVarM0.f26654a));
                         }
-                        N0().B(this.J, str2, 16, "_ev", zzbgVar2.f7422f, 0);
+                        N0().B(this.J, str2, 16, "_ev", zzbgVar2.f7496f, 0);
                         F0().s0();
                     }
                 }
@@ -6603,34 +6603,34 @@ public final class me implements l8 {
 
     public final void m0(zzah zzahVar, zzr zzrVar) {
         n9.m.l(zzahVar);
-        n9.m.f(zzahVar.f7409f);
-        n9.m.l(zzahVar.f7411h);
-        n9.m.f(zzahVar.f7411h.f7439g);
+        n9.m.f(zzahVar.f7483f);
+        n9.m.l(zzahVar.f7485h);
+        n9.m.f(zzahVar.f7485h.f7513g);
         b().h();
         O0();
         if (X(zzrVar)) {
-            if (!zzrVar.f7452m) {
+            if (!zzrVar.f7526m) {
                 o0(zzrVar);
                 return;
             }
             F0().r0();
             try {
                 o0(zzrVar);
-                String str = (String) n9.m.l(zzahVar.f7409f);
-                zzah zzahVarF0 = F0().F0(str, zzahVar.f7411h.f7439g);
+                String str = (String) n9.m.l(zzahVar.f7483f);
+                zzah zzahVarF0 = F0().F0(str, zzahVar.f7485h.f7513g);
                 if (zzahVarF0 != null) {
-                    a().v().c("Removing conditional user property", zzahVar.f7409f, this.f25763l.D().c(zzahVar.f7411h.f7439g));
-                    F0().G0(str, zzahVar.f7411h.f7439g);
-                    if (zzahVarF0.f7413j) {
-                        F0().z0(str, zzahVar.f7411h.f7439g);
+                    a().v().c("Removing conditional user property", zzahVar.f7483f, this.f26584l.D().c(zzahVar.f7485h.f7513g));
+                    F0().G0(str, zzahVar.f7485h.f7513g);
+                    if (zzahVarF0.f7487j) {
+                        F0().z0(str, zzahVar.f7485h.f7513g);
                     }
-                    zzbg zzbgVar = zzahVar.f7419p;
+                    zzbg zzbgVar = zzahVar.f7493p;
                     if (zzbgVar != null) {
-                        zzbe zzbeVar = zzbgVar.f7423g;
-                        m((zzbg) n9.m.l(N0().R(str, ((zzbg) n9.m.l(zzbgVar)).f7422f, zzbeVar != null ? zzbeVar.y3() : null, zzahVarF0.f7410g, zzbgVar.f7425i, true, true)), zzrVar);
+                        zzbe zzbeVar = zzbgVar.f7497g;
+                        m((zzbg) n9.m.l(N0().R(str, ((zzbg) n9.m.l(zzbgVar)).f7496f, zzbeVar != null ? zzbeVar.y3() : null, zzahVarF0.f7484g, zzbgVar.f7499i, true, true)), zzrVar);
                     }
                 } else {
-                    a().r().c("Conditional user property doesn't exist", w5.x(zzahVar.f7409f), this.f25763l.D().c(zzahVar.f7411h.f7439g));
+                    a().r().c("Conditional user property doesn't exist", w5.x(zzahVar.f7483f), this.f26584l.D().c(zzahVar.f7485h.f7513g));
                 }
                 F0().s0();
             } finally {
@@ -6709,22 +6709,22 @@ public final class me implements l8 {
             int I = I(c6Var.o0(), mVarD);
             com.google.android.gms.internal.measurement.q7 q7VarS = com.google.android.gms.internal.measurement.r7.S();
             q7VarS.z("_npa");
-            q7VarS.x(e().a());
+            q7VarS.y(e().a());
             q7VarS.D(I);
             z6Var.j1((com.google.android.gms.internal.measurement.r7) q7VarS.t());
             a().w().c("Setting user property", "non_personalized_ads(_npa)", Integer.valueOf(I));
         }
         z6Var.g0(mVarD.toString());
-        boolean zS = this.f25753a.S(c6Var.o0());
+        boolean zS = this.f26574a.S(c6Var.o0());
         List listW0 = z6Var.W0();
         int i10 = 0;
         for (int i11 = 0; i11 < listW0.size(); i11++) {
             if ("_tcf".equals(((com.google.android.gms.internal.measurement.o6) listW0.get(i11)).J())) {
-                com.google.android.gms.internal.measurement.n6 n6Var = (com.google.android.gms.internal.measurement.n6) ((com.google.android.gms.internal.measurement.o6) listW0.get(i11)).r();
-                List listX = n6Var.x();
-                for (int i12 = 0; i12 < listX.size(); i12++) {
-                    if ("_tcfd".equals(((com.google.android.gms.internal.measurement.s6) listX.get(i12)).G())) {
-                        String strJ = ((com.google.android.gms.internal.measurement.s6) listX.get(i12)).J();
+                com.google.android.gms.internal.measurement.n6 n6Var = (com.google.android.gms.internal.measurement.n6) ((com.google.android.gms.internal.measurement.o6) listW0.get(i11)).q();
+                List listY = n6Var.y();
+                for (int i12 = 0; i12 < listY.size(); i12++) {
+                    if ("_tcfd".equals(((com.google.android.gms.internal.measurement.s6) listY.get(i12)).G())) {
+                        String strJ = ((com.google.android.gms.internal.measurement.s6) listY.get(i12)).J();
                         if (zS && strJ.length() > 4) {
                             char[] charArray = strJ.toCharArray();
                             for (int i13 = 1; i13 < 64; i13++) {
@@ -6750,8 +6750,8 @@ public final class me implements l8 {
     }
 
     public final void n0(zzr zzrVar, long j10) {
-        c6 c6VarJ0 = F0().J0((String) n9.m.l(zzrVar.f7445f));
-        if (c6VarJ0 != null && N0().p(zzrVar.f7446g, c6VarJ0.r0())) {
+        c6 c6VarJ0 = F0().J0((String) n9.m.l(zzrVar.f7519f));
+        if (c6VarJ0 != null && N0().p(zzrVar.f7520g, c6VarJ0.r0())) {
             a().r().b("New GMP App Id passed in. Removing cached database data. appId", w5.x(c6VarJ0.o0()));
             t tVarF0 = F0();
             String strO0 = c6VarJ0.o0();
@@ -6763,26 +6763,26 @@ public final class me implements l8 {
                 String[] strArr = {strO0};
                 int iDelete = sQLiteDatabaseU0.delete("events", "app_id=?", strArr) + sQLiteDatabaseU0.delete("user_attributes", "app_id=?", strArr) + sQLiteDatabaseU0.delete("conditional_properties", "app_id=?", strArr) + sQLiteDatabaseU0.delete("apps", "app_id=?", strArr) + sQLiteDatabaseU0.delete("raw_events", "app_id=?", strArr) + sQLiteDatabaseU0.delete("raw_events_metadata", "app_id=?", strArr) + sQLiteDatabaseU0.delete("event_filters", "app_id=?", strArr) + sQLiteDatabaseU0.delete("property_filters", "app_id=?", strArr) + sQLiteDatabaseU0.delete("audience_filter_values", "app_id=?", strArr) + sQLiteDatabaseU0.delete("consent_settings", "app_id=?", strArr) + sQLiteDatabaseU0.delete("default_event_params", "app_id=?", strArr) + sQLiteDatabaseU0.delete("trigger_uris", "app_id=?", strArr);
                 com.google.android.gms.internal.measurement.se.a();
-                g7 g7Var = tVarF0.f25625a;
-                if (g7Var.w().H(null, z4.f26174i1)) {
+                g7 g7Var = tVarF0.f26446a;
+                if (g7Var.w().H(null, z4.f26995i1)) {
                     iDelete += sQLiteDatabaseU0.delete("no_data_mode_events", "app_id=?", strArr);
                 }
                 if (iDelete > 0) {
                     g7Var.a().w().c("Deleted application data. app, records", strO0, Integer.valueOf(iDelete));
                 }
             } catch (SQLiteException e10) {
-                tVarF0.f25625a.a().o().c("Error deleting application data. appId, error", w5.x(strO0), e10);
+                tVarF0.f26446a.a().o().c("Error deleting application data. appId, error", w5.x(strO0), e10);
             }
             c6VarJ0 = null;
         }
         if (c6VarJ0 != null) {
-            boolean z10 = (c6VarJ0.F0() == -2147483648L || c6VarJ0.F0() == zzrVar.f7454o) ? false : true;
+            boolean z10 = (c6VarJ0.F0() == -2147483648L || c6VarJ0.F0() == zzrVar.f7528o) ? false : true;
             String strD0 = c6VarJ0.D0();
-            if (z10 || ((c6VarJ0.F0() != -2147483648L || strD0 == null || strD0.equals(zzrVar.f7447h)) ? false : true)) {
+            if (z10 || ((c6VarJ0.F0() != -2147483648L || strD0 == null || strD0.equals(zzrVar.f7521h)) ? false : true)) {
                 Bundle bundle = new Bundle();
                 bundle.putString("_pv", strD0);
                 zzbg zzbgVar = new zzbg("_au", new zzbe(bundle), "auto", j10);
-                if (B0().H(null, z4.f26159d1)) {
+                if (B0().H(null, z4.f26980d1)) {
                     j(zzbgVar, zzrVar);
                 } else {
                     k(zzbgVar, zzrVar);
@@ -6808,7 +6808,7 @@ public final class me implements l8 {
                 String str = (String) re.v(o6Var, "gclid", "");
                 String str2 = (String) re.v(o6Var, "gbraid", "");
                 String str3 = (String) re.v(o6Var, "gad_source", "");
-                String[] strArrSplit = ((String) z4.f26171h1.b(null)).split(",");
+                String[] strArrSplit = ((String) z4.f26992h1.b(null)).split(",");
                 K0();
                 if (!re.s(o6Var, strArrSplit).isEmpty()) {
                     long jLongValue = ((Long) re.v(o6Var, "click_timestamp", 0L)).longValue();
@@ -6840,12 +6840,12 @@ public final class me implements l8 {
                         if (str.isEmpty()) {
                             s5VarH0.z();
                         } else {
-                            s5VarH0.x(str);
+                            s5VarH0.y(str);
                         }
                         if (str2.isEmpty()) {
                             s5VarH0.C();
                         } else {
-                            s5VarH0.A(str2);
+                            s5VarH0.B(str2);
                         }
                         if (str3.isEmpty()) {
                             s5VarH0.E();
@@ -6866,7 +6866,7 @@ public final class me implements l8 {
         if (c6Var.A()) {
             F0().K0(c6Var, false, false);
         }
-        if (B0().H(null, z4.f26168g1)) {
+        if (B0().H(null, z4.f26989g1)) {
             F0().z0(c6Var.o0(), "_lgclid");
         }
     }
@@ -6893,20 +6893,19 @@ public final class me implements l8 {
         b().h();
         O0();
         n9.m.l(zzrVar);
-        String str5 = zzrVar.f7445f;
+        String str5 = zzrVar.f7519f;
         n9.m.f(str5);
-        String str6 = zzrVar.f7464y;
-        byte[] bArr = null;
+        String str6 = zzrVar.f7538y;
         if (!str6.isEmpty()) {
-            this.D.put(str5, new je(this, str6, bArr));
+            this.D.put(str5, new je(this, str6, null));
         }
         c6 c6VarJ0 = F0().J0(str5);
-        q8 q8VarS = g(str5).s(q8.f(zzrVar.f7463x, 100));
+        q8 q8VarS = g(str5).s(q8.f(zzrVar.f7537x, 100));
         p8 p8Var = p8.AD_STORAGE;
-        String strO = q8VarS.o(p8Var) ? this.f25760i.o(str5, zzrVar.f7458s) : "";
+        String strO = q8VarS.o(p8Var) ? this.f26581i.o(str5, zzrVar.f7532s) : "";
         boolean z11 = true;
         if (c6VarJ0 == null) {
-            c6 c6Var = new c6(this.f25763l, str5);
+            c6 c6Var = new c6(this.f26584l, str5);
             if (q8VarS.o(p8.ANALYTICS_STORAGE)) {
                 c6Var.q0(p(q8VarS));
             }
@@ -6918,7 +6917,7 @@ public final class me implements l8 {
             if (q8VarS.o(p8Var) && strO != null && !strO.equals(c6VarJ0.v0())) {
                 boolean zIsEmpty = TextUtils.isEmpty(c6VarJ0.v0());
                 c6VarJ0.w0(strO);
-                if (zzrVar.f7458s && !"00000000-0000-0000-0000-000000000000".equals(this.f25760i.m(str5, q8VarS).first) && !zIsEmpty) {
+                if (zzrVar.f7532s && !"00000000-0000-0000-0000-000000000000".equals(this.f26581i.m(str5, q8VarS).first) && !zIsEmpty) {
                     if (q8VarS.o(p8.ANALYTICS_STORAGE)) {
                         c6VarJ0.q0(p(q8VarS));
                         z10 = false;
@@ -6931,37 +6930,37 @@ public final class me implements l8 {
                 } else if (TextUtils.isEmpty(c6VarJ0.p0()) && q8VarS.o(p8.ANALYTICS_STORAGE)) {
                     c6VarJ0.q0(p(q8VarS));
                 }
-                c6VarJ0.s0(zzrVar.f7446g);
-                str = zzrVar.f7455p;
+                c6VarJ0.s0(zzrVar.f7520g);
+                str = zzrVar.f7529p;
                 if (!TextUtils.isEmpty(str)) {
                     c6VarJ0.y0(str);
                 }
-                j10 = zzrVar.f7449j;
+                j10 = zzrVar.f7523j;
                 if (j10 != 0) {
                     c6VarJ0.K0(j10);
                 }
-                str2 = zzrVar.f7447h;
+                str2 = zzrVar.f7521h;
                 if (!TextUtils.isEmpty(str2)) {
                     c6VarJ0.E0(str2);
                 }
-                c6VarJ0.G0(zzrVar.f7454o);
-                str3 = zzrVar.f7448i;
+                c6VarJ0.G0(zzrVar.f7528o);
+                str3 = zzrVar.f7522i;
                 if (str3 != null) {
                     c6VarJ0.I0(str3);
                 }
-                c6VarJ0.a(zzrVar.f7450k);
-                c6VarJ0.e(zzrVar.f7452m);
-                str4 = zzrVar.f7451l;
+                c6VarJ0.a(zzrVar.f7524k);
+                c6VarJ0.e(zzrVar.f7526m);
+                str4 = zzrVar.f7525l;
                 if (!TextUtils.isEmpty(str4)) {
                     c6VarJ0.O(str4);
                 }
-                c6VarJ0.Q(zzrVar.f7458s);
-                c6VarJ0.S(zzrVar.f7460u);
-                c6VarJ0.c(zzrVar.f7461v);
-                c6VarJ0.u0(zzrVar.f7465z);
+                c6VarJ0.Q(zzrVar.f7532s);
+                c6VarJ0.S(zzrVar.f7534u);
+                c6VarJ0.c(zzrVar.f7535v);
+                c6VarJ0.u0(zzrVar.f7539z);
                 com.google.android.gms.internal.measurement.ve.a();
                 if (B0().H(null, z4.M0)) {
-                    c6VarJ0.U(zzrVar.f7462w);
+                    c6VarJ0.U(zzrVar.f7536w);
                 } else {
                     com.google.android.gms.internal.measurement.ve.a();
                     if (B0().H(null, z4.L0)) {
@@ -6990,37 +6989,37 @@ public final class me implements l8 {
             }
         }
         z10 = false;
-        c6VarJ0.s0(zzrVar.f7446g);
-        str = zzrVar.f7455p;
+        c6VarJ0.s0(zzrVar.f7520g);
+        str = zzrVar.f7529p;
         if (!TextUtils.isEmpty(str)) {
             c6VarJ0.y0(str);
         }
-        j10 = zzrVar.f7449j;
+        j10 = zzrVar.f7523j;
         if (j10 != 0) {
             c6VarJ0.K0(j10);
         }
-        str2 = zzrVar.f7447h;
+        str2 = zzrVar.f7521h;
         if (!TextUtils.isEmpty(str2)) {
             c6VarJ0.E0(str2);
         }
-        c6VarJ0.G0(zzrVar.f7454o);
-        str3 = zzrVar.f7448i;
+        c6VarJ0.G0(zzrVar.f7528o);
+        str3 = zzrVar.f7522i;
         if (str3 != null) {
             c6VarJ0.I0(str3);
         }
-        c6VarJ0.a(zzrVar.f7450k);
-        c6VarJ0.e(zzrVar.f7452m);
-        str4 = zzrVar.f7451l;
+        c6VarJ0.a(zzrVar.f7524k);
+        c6VarJ0.e(zzrVar.f7526m);
+        str4 = zzrVar.f7525l;
         if (!TextUtils.isEmpty(str4)) {
             c6VarJ0.O(str4);
         }
-        c6VarJ0.Q(zzrVar.f7458s);
-        c6VarJ0.S(zzrVar.f7460u);
-        c6VarJ0.c(zzrVar.f7461v);
-        c6VarJ0.u0(zzrVar.f7465z);
+        c6VarJ0.Q(zzrVar.f7532s);
+        c6VarJ0.S(zzrVar.f7534u);
+        c6VarJ0.c(zzrVar.f7535v);
+        c6VarJ0.u0(zzrVar.f7539z);
         com.google.android.gms.internal.measurement.ve.a();
         if (B0().H(null, z4.M0)) {
-            c6VarJ0.U(zzrVar.f7462w);
+            c6VarJ0.U(zzrVar.f7536w);
         } else {
             com.google.android.gms.internal.measurement.ve.a();
             if (B0().H(null, z4.L0)) {
@@ -7058,17 +7057,17 @@ public final class me implements l8 {
         try {
             return (String) b().r(new ee(this, zzrVar)).get(30000L, TimeUnit.MILLISECONDS);
         } catch (InterruptedException | ExecutionException | TimeoutException e10) {
-            a().o().c("Failed to get app instance id. appId", w5.x(zzrVar.f7445f), e10);
+            a().o().c("Failed to get app instance id. appId", w5.x(zzrVar.f7519f), e10);
             return null;
         }
     }
 
     public final void q(List list) {
         n9.m.a(!list.isEmpty());
-        if (this.f25776y != null) {
+        if (this.f26597y != null) {
             a().o().a("Set uploading progress before finishing the previous upload");
         } else {
-            this.f25776y = new ArrayList(list);
+            this.f26597y = new ArrayList(list);
         }
     }
 
@@ -7076,7 +7075,7 @@ public final class me implements l8 {
         b().h();
         vf.a();
         k kVarB0 = B0();
-        String str = zzrVar.f7445f;
+        String str = zzrVar.f7519f;
         if (!kVarB0.H(str, z4.Q0) || str == null) {
             return new ArrayList();
         }
@@ -7096,21 +7095,21 @@ public final class me implements l8 {
                         tVarF0.j();
                         try {
                             int iDelete = tVarF0.u0().delete("trigger_uris", "app_id=? and source=? and timestamp_millis<=?", new String[]{str, String.valueOf(i11), String.valueOf(j10)});
-                            u5 u5VarW = tVarF0.f25625a.a().w();
+                            u5 u5VarW = tVarF0.f26446a.a().w();
                             StringBuilder sb2 = new StringBuilder(String.valueOf(iDelete).length() + 46);
                             sb2.append("Pruned ");
                             sb2.append(iDelete);
                             sb2.append(" trigger URIs. appId, source, timestamp");
                             u5VarW.d(sb2.toString(), str, Integer.valueOf(i11), Long.valueOf(j10));
                         } catch (SQLiteException e10) {
-                            tVarF0.f25625a.a().o().c("Error pruning trigger URIs. appId", w5.x(str), e10);
+                            tVarF0.f26446a.a().o().c("Error pruning trigger URIs. appId", w5.x(str), e10);
                         }
                     }
                 }
             }
         }
         t tVarF1 = F0();
-        String str2 = zzrVar.f7445f;
+        String str2 = zzrVar.f7519f;
         n9.m.f(str2);
         tVarF1.h();
         tVarF1.j();
@@ -7129,7 +7128,7 @@ public final class me implements l8 {
                     } while (cursorQuery.moveToNext());
                 }
             } catch (SQLiteException e11) {
-                tVarF1.f25625a.a().o().c("Error querying trigger uris. appId", w5.x(str2), e11);
+                tVarF1.f26446a.a().o().c("Error querying trigger uris. appId", w5.x(str2), e11);
                 arrayList = Collections.EMPTY_LIST;
             }
             return arrayList;
@@ -7157,20 +7156,20 @@ public final class me implements l8 {
         c6 c6VarJ0;
         b().h();
         O0();
-        this.f25773v = true;
+        this.f26594v = true;
         try {
-            g7 g7Var = this.f25763l;
+            g7 g7Var = this.f26584l;
             g7Var.c();
             Boolean boolX = g7Var.J().x();
             if (boolX == null) {
                 a().r().a("Upload data called on the client side before use of service was decided");
             } else if (boolX.booleanValue()) {
                 a().o().a("Upload called in the client side when service should be used");
-            } else if (this.f25766o > 0) {
+            } else if (this.f26587o > 0) {
                 R();
             } else {
                 b().h();
-                if (this.f25776y != null) {
+                if (this.f26597y != null) {
                     a().w().a("Uploading requested multiple times");
                 } else if (E0().m()) {
                     ?? A = e().a();
@@ -7180,7 +7179,7 @@ public final class me implements l8 {
                     string = null;
                     string = null;
                     String string = null;
-                    int iE = B0().E(null, z4.f26176j0);
+                    int iE = B0().E(null, z4.f26997j0);
                     B0();
                     long jN = A - k.n();
                     for (int i10 = 0; i10 < iE && M(null, jN); i10++) {
@@ -7188,7 +7187,7 @@ public final class me implements l8 {
                     vf.a();
                     b().h();
                     v0();
-                    long jA = this.f25760i.f26037h.a();
+                    long jA = this.f26581i.f26858h.a();
                     if (jA != 0) {
                         a().v().b("Uploading events. Elapsed time since last upload attempt (ms)", Long.valueOf(Math.abs(A - jA)));
                     }
@@ -7208,18 +7207,18 @@ public final class me implements l8 {
                                     if (A.moveToFirst()) {
                                         string = A.getString(0);
                                     } else {
-                                        tVarF0.f25625a.a().w().a("No expired configs for apps with pending events");
+                                        tVarF0.f26446a.a().w().a("No expired configs for apps with pending events");
                                     }
                                 } catch (SQLiteException e11) {
                                     e10 = e11;
                                     A = A;
-                                    tVarF0.f25625a.a().o().b("Error selecting expired configs", e10);
+                                    tVarF0.f26446a.a().o().b("Error selecting expired configs", e10);
                                     if (A != 0) {
                                     }
                                     if (!TextUtils.isEmpty(string)) {
                                         B(c6VarJ0);
                                     }
-                                    this.f25773v = false;
+                                    this.f26594v = false;
                                     S();
                                 }
                             } catch (SQLiteException e12) {
@@ -7251,12 +7250,12 @@ public final class me implements l8 {
                                         j10 = cursorRawQuery.getLong(0);
                                     }
                                 } catch (SQLiteException e13) {
-                                    tVarF1.f25625a.a().o().b("Error querying raw events", e13);
+                                    tVarF1.f26446a.a().o().b("Error querying raw events", e13);
                                     if (cursorRawQuery != null) {
                                     }
                                     this.A = j10;
                                     s(strR, A);
-                                    this.f25773v = false;
+                                    this.f26594v = false;
                                     S();
                                 }
                                 cursorRawQuery.close();
@@ -7275,10 +7274,10 @@ public final class me implements l8 {
                     R();
                 }
             }
-            this.f25773v = false;
+            this.f26594v = false;
             S();
         } catch (Throwable th5) {
-            this.f25773v = false;
+            this.f26594v = false;
             S();
             throw th5;
         }
@@ -7288,15 +7287,15 @@ public final class me implements l8 {
         b().h();
         O0();
         t tVarF0 = F0();
-        long j10 = zzafVar.f7406f;
+        long j10 = zzafVar.f7480f;
         pe peVarN = tVarF0.n(j10);
         if (peVarN == null) {
             a().r().c("[sgtm] Queued batch doesn't exist. appId, rowId", str, Long.valueOf(j10));
             return;
         }
         String strE = peVarN.e();
-        if (zzafVar.f7407g != ya.SUCCESS.zza()) {
-            if (zzafVar.f7407g == ya.BACKOFF.zza()) {
+        if (zzafVar.f7481g != ya.SUCCESS.zza()) {
+            if (zzafVar.f7481g == ya.BACKOFF.zza()) {
                 Map map = this.E;
                 ke keVar = (ke) map.get(strE);
                 if (keVar == null) {
@@ -7308,7 +7307,7 @@ public final class me implements l8 {
                 a().w().d("[sgtm] Putting sGTM server in backoff mode. appId, destination, nextRetryInSeconds", str, strE, Long.valueOf((keVar.c() - e().a()) / 1000));
             }
             t tVarF1 = F0();
-            Long lValueOf = Long.valueOf(zzafVar.f7406f);
+            Long lValueOf = Long.valueOf(zzafVar.f7480f);
             tVarF1.w(lValueOf);
             a().w().c("[sgtm] increased batch retry count after failed client upload. appId, rowId", str, lValueOf);
             return;
@@ -7321,7 +7320,7 @@ public final class me implements l8 {
         Long lValueOf2 = Long.valueOf(j10);
         tVarF2.q(lValueOf2);
         a().w().c("[sgtm] queued batch deleted after successful client upload. appId, rowId", str, lValueOf2);
-        long j11 = zzafVar.f7408h;
+        long j11 = zzafVar.f7482h;
         if (j11 > 0) {
             t tVarF3 = F0();
             tVarF3.h();
@@ -7330,16 +7329,16 @@ public final class me implements l8 {
             n9.m.l(lValueOf3);
             ContentValues contentValues = new ContentValues();
             contentValues.put("upload_type", Integer.valueOf(za.GOOGLE_SIGNAL.zza()));
-            g7 g7Var = tVarF3.f25625a;
+            g7 g7Var = tVarF3.f26446a;
             contentValues.put("creation_timestamp", Long.valueOf(g7Var.e().a()));
             try {
                 if (tVarF3.u0().update("upload_queue", contentValues, "rowid=? AND app_id=? AND upload_type=?", new String[]{String.valueOf(j11), str, String.valueOf(za.GOOGLE_SIGNAL_PENDING.zza())}) != 1) {
                     g7Var.a().r().c("Google Signal pending batch not updated. appId, rowId", str, lValueOf3);
                 }
-                a().w().c("[sgtm] queued Google Signal batch updated. appId, signalRowId", str, Long.valueOf(zzafVar.f7408h));
+                a().w().c("[sgtm] queued Google Signal batch updated. appId, signalRowId", str, Long.valueOf(zzafVar.f7482h));
                 u(str);
             } catch (SQLiteException e10) {
-                tVarF3.f25625a.a().o().d("Failed to update google Signal pending batch. appid, rowId", str, Long.valueOf(j11), e10);
+                tVarF3.f26446a.a().o().d("Failed to update google Signal pending batch. appid, rowId", str, Long.valueOf(j11), e10);
                 throw e10;
             }
         }
@@ -7450,7 +7449,7 @@ public final class me implements l8 {
     /* JADX WARN: Code duplicated, block: B:474:? A[RETURN, SYNTHETIC] */
     /* JADX WARN: Code duplicated, block: B:475:? A[RETURN, SYNTHETIC] */
     /* JADX WARN: Code duplicated, block: B:476:? A[RETURN, SYNTHETIC] */
-    public final void s(String str, long j10) throws Throwable {
+    public final void s(String str, long j10) {
         long j11;
         Cursor cursor;
         Cursor cursorQuery;
@@ -7537,9 +7536,9 @@ public final class me implements l8 {
         long jN;
         long j12;
         long jN2;
-        int iE = B0().E(str, z4.f26169h);
+        int iE = B0().E(str, z4.f26990h);
         int i17 = 0;
-        int iMax = Math.max(0, B0().E(str, z4.f26172i));
+        int iMax = Math.max(0, B0().E(str, z4.f26993i));
         t tVarF1 = F0();
         tVarF1.h();
         tVarF1.j();
@@ -7579,11 +7578,11 @@ public final class me implements l8 {
                                                 e = e10;
                                             }
                                             try {
-                                                reVarK0.f25625a.a().o().b("Failed to ungzip content", e);
+                                                reVarK0.f26446a.a().o().b("Failed to ungzip content", e);
                                                 throw e;
                                             } catch (IOException e11) {
                                                 e = e11;
-                                                tVarF1.f25625a.a().o().c("Failed to unzip queued bundle. appId", w5.x(str), e);
+                                                tVarF1.f26446a.a().o().c("Failed to unzip queued bundle. appId", w5.x(str), e);
                                                 try {
                                                     if (cursor3.moveToNext()) {
                                                         break;
@@ -7595,7 +7594,7 @@ public final class me implements l8 {
                                                     e = e12;
                                                     cursorQuery = cursor3;
                                                     try {
-                                                        tVarF1.f25625a.a().o().c("Error querying bundles. appId", w5.x(str), e);
+                                                        tVarF1.f26446a.a().o().c("Error querying bundles. appId", w5.x(str), e);
                                                         list = Collections.EMPTY_LIST;
                                                         if (cursorQuery != null) {
                                                             cursorQuery.close();
@@ -7622,7 +7621,7 @@ public final class me implements l8 {
                                                 }
                                                 com.google.android.gms.internal.measurement.se.a();
                                                 kVarB0 = B0();
-                                                y4Var = z4.f26174i1;
+                                                y4Var = z4.f26995i1;
                                                 if (kVarB0.H(null, y4Var)) {
                                                     com.google.android.gms.internal.measurement.se.a();
                                                     if (B0().H(null, y4Var)) {
@@ -7634,7 +7633,7 @@ public final class me implements l8 {
                                                             tVarF0.j();
                                                             arrayList6 = new ArrayList();
                                                             sQLiteDatabaseU0 = tVarF0.u0();
-                                                            jA = tVarF0.f25625a.e().a();
+                                                            jA = tVarF0.f26446a.e().a();
                                                             cursorQuery2 = sQLiteDatabaseU0.query("no_data_mode_events", new String[]{"data"}, "app_id=? AND timestamp_millis <= CAST(? AS INTEGER)", new String[]{str, String.valueOf(jA)}, null, null, "rowid", null);
                                                             list3 = listSubList;
                                                             if (cursorQuery2.moveToFirst()) {
@@ -7648,7 +7647,7 @@ public final class me implements l8 {
                                                                 }
                                                                 cursorQuery2.close();
                                                                 int iDelete = sQLiteDatabaseU0.delete("no_data_mode_events", "app_id=? AND timestamp_millis <= CAST(? AS INTEGER)", new String[]{str, String.valueOf(jA)});
-                                                                u5 u5VarW = tVarF0.f25625a.a().w();
+                                                                u5 u5VarW = tVarF0.f26446a.a().w();
                                                                 StringBuilder sb2 = new StringBuilder(String.valueOf(iDelete).length() + 34);
                                                                 sb2.append("Pruned ");
                                                                 sb2.append(iDelete);
@@ -7662,7 +7661,7 @@ public final class me implements l8 {
                                                             z20 = true;
                                                             while (it5.hasNext()) {
                                                                 Pair pair = (Pair) it5.next();
-                                                                z6Var2 = (com.google.android.gms.internal.measurement.z6) ((com.google.android.gms.internal.measurement.a7) pair.first).r();
+                                                                z6Var2 = (com.google.android.gms.internal.measurement.z6) ((com.google.android.gms.internal.measurement.a7) pair.first).q();
                                                                 if (z20) {
                                                                     List listW0 = z6Var2.W0();
                                                                     z6Var2.d1();
@@ -7700,7 +7699,7 @@ public final class me implements l8 {
                                                                             i15 = 3;
                                                                             i16 = 3;
                                                                         }
-                                                                        g6VarF.x(i16);
+                                                                        g6VarF.y(i16);
                                                                         iJ = o4Var.J() - 1;
                                                                         if (iJ == 1) {
                                                                             i15 = 2;
@@ -7717,7 +7716,7 @@ public final class me implements l8 {
                                                                 Iterator it7 = it5;
                                                                 boolean z22 = z20;
                                                                 List list5 = arrayList6;
-                                                                d6VarG.x(arrayList7);
+                                                                d6VarG.y(arrayList7);
                                                                 z6Var2.v0(d6VarG);
                                                                 arrayList5.add(Pair.create((com.google.android.gms.internal.measurement.a7) z6Var2.t(), (Long) pair.second));
                                                                 z20 = z22;
@@ -7735,7 +7734,7 @@ public final class me implements l8 {
                                                             try {
                                                                 try {
                                                                     sQLiteDatabaseU0 = tVarF0.u0();
-                                                                    jA = tVarF0.f25625a.e().a();
+                                                                    jA = tVarF0.f26446a.e().a();
                                                                     cursorQuery2 = sQLiteDatabaseU0.query("no_data_mode_events", new String[]{"data"}, "app_id=? AND timestamp_millis <= CAST(? AS INTEGER)", new String[]{str, String.valueOf(jA)}, null, null, "rowid", null);
                                                                     list3 = listSubList;
                                                                     try {
@@ -7744,7 +7743,7 @@ public final class me implements l8 {
                                                                                 try {
                                                                                     arrayList6.add((com.google.android.gms.internal.measurement.o6) ((com.google.android.gms.internal.measurement.n6) re.W(com.google.android.gms.internal.measurement.o6.R(), cursorQuery2.getBlob(0))).t());
                                                                                 } catch (com.google.android.gms.internal.measurement.sb e13) {
-                                                                                    tVarF0.f25625a.a().t().c("Failed to parse stored NO_DATA mode event, appId", w5.x(str), e13);
+                                                                                    tVarF0.f26446a.a().t().c("Failed to parse stored NO_DATA mode event, appId", w5.x(str), e13);
                                                                                 }
                                                                                 try {
                                                                                     try {
@@ -7755,7 +7754,7 @@ public final class me implements l8 {
                                                                                         }
                                                                                     } catch (SQLiteException e14) {
                                                                                         e = e14;
-                                                                                        tVarF0.f25625a.a().o().c("Error flushing NO_DATA mode events. appId", w5.x(str), e);
+                                                                                        tVarF0.f26446a.a().o().c("Error flushing NO_DATA mode events. appId", w5.x(str), e);
                                                                                         arrayList6 = Collections.EMPTY_LIST;
                                                                                         if (cursorQuery2 != null) {
                                                                                             cursorQuery2.close();
@@ -7773,7 +7772,7 @@ public final class me implements l8 {
                                                                             cursorQuery2.close();
                                                                             try {
                                                                                 int iDelete2 = sQLiteDatabaseU0.delete("no_data_mode_events", "app_id=? AND timestamp_millis <= CAST(? AS INTEGER)", new String[]{str, String.valueOf(jA)});
-                                                                                u5 u5VarW2 = tVarF0.f25625a.a().w();
+                                                                                u5 u5VarW2 = tVarF0.f26446a.a().w();
                                                                                 StringBuilder sb3 = new StringBuilder(String.valueOf(iDelete2).length() + 34);
                                                                                 sb3.append("Pruned ");
                                                                                 sb3.append(iDelete2);
@@ -7782,7 +7781,7 @@ public final class me implements l8 {
                                                                             } catch (SQLiteException e15) {
                                                                                 e = e15;
                                                                                 cursorQuery2 = null;
-                                                                                tVarF0.f25625a.a().o().c("Error flushing NO_DATA mode events. appId", w5.x(str), e);
+                                                                                tVarF0.f26446a.a().o().c("Error flushing NO_DATA mode events. appId", w5.x(str), e);
                                                                                 arrayList6 = Collections.EMPTY_LIST;
                                                                                 if (cursorQuery2 != null) {
                                                                                     cursorQuery2.close();
@@ -7820,7 +7819,7 @@ public final class me implements l8 {
                                                             z20 = true;
                                                             while (it5.hasNext()) {
                                                                 Pair pair2 = (Pair) it5.next();
-                                                                z6Var2 = (com.google.android.gms.internal.measurement.z6) ((com.google.android.gms.internal.measurement.a7) pair2.first).r();
+                                                                z6Var2 = (com.google.android.gms.internal.measurement.z6) ((com.google.android.gms.internal.measurement.a7) pair2.first).q();
                                                                 if (z20) {
                                                                     List listW1 = z6Var2.W0();
                                                                     z6Var2.d1();
@@ -7858,7 +7857,7 @@ public final class me implements l8 {
                                                                             i15 = 3;
                                                                             i16 = 3;
                                                                         }
-                                                                        g6VarF2.x(i16);
+                                                                        g6VarF2.y(i16);
                                                                         iJ = o4Var.J() - 1;
                                                                         if (iJ == 1) {
                                                                             i15 = 2;
@@ -7875,7 +7874,7 @@ public final class me implements l8 {
                                                                 Iterator it9 = it5;
                                                                 boolean z24 = z20;
                                                                 List list6 = arrayList6;
-                                                                d6VarG2.x(arrayList7);
+                                                                d6VarG2.y(arrayList7);
                                                                 z6Var2.v0(d6VarG2);
                                                                 arrayList5.add(Pair.create((com.google.android.gms.internal.measurement.a7) z6Var2.t(), (Long) pair2.second));
                                                                 z20 = z24;
@@ -7926,12 +7925,12 @@ public final class me implements l8 {
                                                 zO2 = g(str).o(p8.ANALYTICS_STORAGE);
                                                 ig.a();
                                                 zH = B0().H(str, z4.N0);
-                                                zdVar = this.f25761j;
+                                                zdVar = this.f26582j;
                                                 ydVarI = zdVar.i(str);
                                                 i10 = 0;
                                                 while (i10 < size) {
                                                     z13 = zO;
-                                                    z6Var = (com.google.android.gms.internal.measurement.z6) ((com.google.android.gms.internal.measurement.a7) ((Pair) listSubList.get(i10)).first).r();
+                                                    z6Var = (com.google.android.gms.internal.measurement.z6) ((com.google.android.gms.internal.measurement.a7) ((Pair) listSubList.get(i10)).first).q();
                                                     int i20 = size;
                                                     arrayList.add((Long) ((Pair) listSubList.get(i10)).second);
                                                     B0().A();
@@ -7939,7 +7938,7 @@ public final class me implements l8 {
                                                     z15 = zO2;
                                                     z6Var.S(133005L);
                                                     z6Var.n1(j10);
-                                                    this.f25763l.c();
+                                                    this.f26584l.c();
                                                     z6Var.A0(false);
                                                     if (!z14) {
                                                         z6Var.J0();
@@ -8091,9 +8090,9 @@ public final class me implements l8 {
                                                         K0();
                                                         byte[] bArrD = y6Var.d();
                                                         q(arrayList);
-                                                        this.f25760i.f26038i.b(j10);
+                                                        this.f26581i.f26859i.b(j10);
                                                         a().w().d("Uploading data. app, uncompressed size, data", str, Integer.valueOf(bArrD.length), objK);
-                                                        this.f25772u = true;
+                                                        this.f26593u = true;
                                                         E0().n(str, ydVarI, y6Var, new be(this, str, arrayList2));
                                                         return;
                                                     }
@@ -8159,7 +8158,7 @@ public final class me implements l8 {
                                                     strX2 = zdVar.b.D0().x(str);
                                                     if (TextUtils.isEmpty(strX2)) {
                                                         objK = null;
-                                                        String str2 = (String) z4.f26196s.b(null);
+                                                        String str2 = (String) z4.f27017s.b(null);
                                                         if (z12) {
                                                             zaVar = za.GOOGLE_SIGNAL_PENDING;
                                                         } else {
@@ -8167,7 +8166,7 @@ public final class me implements l8 {
                                                         }
                                                         ydVar = new yd(str2, Collections.EMPTY_MAP, zaVar, null);
                                                     } else {
-                                                        Uri uri = Uri.parse((String) z4.f26196s.b(null));
+                                                        Uri uri = Uri.parse((String) z4.f27017s.b(null));
                                                         Uri.Builder builderBuildUpon = uri.buildUpon();
                                                         String authority = uri.getAuthority();
                                                         StringBuilder sb4 = new StringBuilder(String.valueOf(strX2).length() + 1 + String.valueOf(authority).length());
@@ -8195,17 +8194,17 @@ public final class me implements l8 {
                                                         K0();
                                                         byte[] bArrD2 = y6Var.d();
                                                         q(arrayList);
-                                                        this.f25760i.f26038i.b(j10);
+                                                        this.f26581i.f26859i.b(j10);
                                                         a().w().d("Uploading data. app, uncompressed size, data", str, Integer.valueOf(bArrD2.length), objK);
-                                                        this.f25772u = true;
+                                                        this.f26593u = true;
                                                         E0().n(str, ydVarI, y6Var, new be(this, str, arrayList2));
                                                         return;
                                                     }
                                                     return;
                                                 }
-                                                v6Var = (com.google.android.gms.internal.measurement.v6) y6Var2.r();
+                                                v6Var = (com.google.android.gms.internal.measurement.v6) y6Var2.q();
                                                 for (i11 = 0; i11 < y6Var2.G(); i11++) {
-                                                    com.google.android.gms.internal.measurement.z6 z6Var3 = (com.google.android.gms.internal.measurement.z6) y6Var2.H(i11).r();
+                                                    com.google.android.gms.internal.measurement.z6 z6Var3 = (com.google.android.gms.internal.measurement.z6) y6Var2.H(i11).q();
                                                     z6Var3.o1();
                                                     z6Var3.t0(j10);
                                                     v6Var.C(i11, z6Var3);
@@ -8218,7 +8217,7 @@ public final class me implements l8 {
                                                     Intent intent = new Intent();
                                                     intent.setAction("com.google.android.gms.measurement.BATCHES_AVAILABLE");
                                                     intent.setPackage(str);
-                                                    W(this.f25763l.d(), intent);
+                                                    W(this.f26584l.d(), intent);
                                                 }
                                             }
                                         }
@@ -8275,7 +8274,7 @@ public final class me implements l8 {
                                                 length += byteArray.length;
                                                 listSubList.add(Pair.create((com.google.android.gms.internal.measurement.a7) z6Var4.t(), Long.valueOf(j13)));
                                             } catch (IOException e18) {
-                                                tVarF1.f25625a.a().o().c("Failed to merge queued bundle. appId", w5.x(str), e18);
+                                                tVarF1.f26446a.a().o().c("Failed to merge queued bundle. appId", w5.x(str), e18);
                                             }
                                             cursor3 = cursorQuery;
                                             if (cursor3.moveToNext() || length > iMax) {
@@ -8314,7 +8313,7 @@ public final class me implements l8 {
                 } catch (SQLiteException e22) {
                     e = e22;
                     cursorQuery = null;
-                    tVarF1.f25625a.a().o().c("Error querying bundles. appId", w5.x(str), e);
+                    tVarF1.f26446a.a().o().c("Error querying bundles. appId", w5.x(str), e);
                     list = Collections.EMPTY_LIST;
                     if (cursorQuery != null) {
                         cursorQuery.close();
@@ -8325,7 +8324,7 @@ public final class me implements l8 {
                     }
                     com.google.android.gms.internal.measurement.se.a();
                     kVarB0 = B0();
-                    y4Var = z4.f26174i1;
+                    y4Var = z4.f26995i1;
                     if (kVarB0.H(null, y4Var)) {
                         com.google.android.gms.internal.measurement.se.a();
                         if (B0().H(null, y4Var)) {
@@ -8337,7 +8336,7 @@ public final class me implements l8 {
                                 tVarF0.j();
                                 arrayList6 = new ArrayList();
                                 sQLiteDatabaseU0 = tVarF0.u0();
-                                jA = tVarF0.f25625a.e().a();
+                                jA = tVarF0.f26446a.e().a();
                                 cursorQuery2 = sQLiteDatabaseU0.query("no_data_mode_events", new String[]{"data"}, "app_id=? AND timestamp_millis <= CAST(? AS INTEGER)", new String[]{str, String.valueOf(jA)}, null, null, "rowid", null);
                                 list3 = listSubList;
                                 if (cursorQuery2.moveToFirst()) {
@@ -8351,7 +8350,7 @@ public final class me implements l8 {
                                     }
                                     cursorQuery2.close();
                                     int iDelete3 = sQLiteDatabaseU0.delete("no_data_mode_events", "app_id=? AND timestamp_millis <= CAST(? AS INTEGER)", new String[]{str, String.valueOf(jA)});
-                                    u5 u5VarW4 = tVarF0.f25625a.a().w();
+                                    u5 u5VarW4 = tVarF0.f26446a.a().w();
                                     StringBuilder sb5 = new StringBuilder(String.valueOf(iDelete3).length() + 34);
                                     sb5.append("Pruned ");
                                     sb5.append(iDelete3);
@@ -8365,7 +8364,7 @@ public final class me implements l8 {
                                 z20 = true;
                                 while (it5.hasNext()) {
                                     Pair pair3 = (Pair) it5.next();
-                                    z6Var2 = (com.google.android.gms.internal.measurement.z6) ((com.google.android.gms.internal.measurement.a7) pair3.first).r();
+                                    z6Var2 = (com.google.android.gms.internal.measurement.z6) ((com.google.android.gms.internal.measurement.a7) pair3.first).q();
                                     if (z20) {
                                         List listW2 = z6Var2.W0();
                                         z6Var2.d1();
@@ -8403,7 +8402,7 @@ public final class me implements l8 {
                                                 i15 = 3;
                                                 i16 = 3;
                                             }
-                                            g6VarF3.x(i16);
+                                            g6VarF3.y(i16);
                                             iJ = o4Var.J() - 1;
                                             if (iJ == 1) {
                                                 i15 = 2;
@@ -8420,7 +8419,7 @@ public final class me implements l8 {
                                     Iterator it14 = it5;
                                     boolean z26 = z20;
                                     List list7 = arrayList6;
-                                    d6VarG3.x(arrayList7);
+                                    d6VarG3.y(arrayList7);
                                     z6Var2.v0(d6VarG3);
                                     arrayList5.add(Pair.create((com.google.android.gms.internal.measurement.a7) z6Var2.t(), (Long) pair3.second));
                                     z20 = z26;
@@ -8436,7 +8435,7 @@ public final class me implements l8 {
                                 tVarF0.j();
                                 arrayList6 = new ArrayList();
                                 sQLiteDatabaseU0 = tVarF0.u0();
-                                jA = tVarF0.f25625a.e().a();
+                                jA = tVarF0.f26446a.e().a();
                                 cursorQuery2 = sQLiteDatabaseU0.query("no_data_mode_events", new String[]{"data"}, "app_id=? AND timestamp_millis <= CAST(? AS INTEGER)", new String[]{str, String.valueOf(jA)}, null, null, "rowid", null);
                                 list3 = listSubList;
                                 if (cursorQuery2.moveToFirst()) {
@@ -8450,7 +8449,7 @@ public final class me implements l8 {
                                     }
                                     cursorQuery2.close();
                                     int iDelete4 = sQLiteDatabaseU0.delete("no_data_mode_events", "app_id=? AND timestamp_millis <= CAST(? AS INTEGER)", new String[]{str, String.valueOf(jA)});
-                                    u5 u5VarW5 = tVarF0.f25625a.a().w();
+                                    u5 u5VarW5 = tVarF0.f26446a.a().w();
                                     StringBuilder sb6 = new StringBuilder(String.valueOf(iDelete4).length() + 34);
                                     sb6.append("Pruned ");
                                     sb6.append(iDelete4);
@@ -8464,7 +8463,7 @@ public final class me implements l8 {
                                 z20 = true;
                                 while (it5.hasNext()) {
                                     Pair pair4 = (Pair) it5.next();
-                                    z6Var2 = (com.google.android.gms.internal.measurement.z6) ((com.google.android.gms.internal.measurement.a7) pair4.first).r();
+                                    z6Var2 = (com.google.android.gms.internal.measurement.z6) ((com.google.android.gms.internal.measurement.a7) pair4.first).q();
                                     if (z20) {
                                         List listW3 = z6Var2.W0();
                                         z6Var2.d1();
@@ -8502,7 +8501,7 @@ public final class me implements l8 {
                                                 i15 = 3;
                                                 i16 = 3;
                                             }
-                                            g6VarF4.x(i16);
+                                            g6VarF4.y(i16);
                                             iJ = o4Var.J() - 1;
                                             if (iJ == 1) {
                                                 i15 = 2;
@@ -8519,7 +8518,7 @@ public final class me implements l8 {
                                     Iterator it16 = it5;
                                     boolean z28 = z20;
                                     List list8 = arrayList6;
-                                    d6VarG4.x(arrayList7);
+                                    d6VarG4.y(arrayList7);
                                     z6Var2.v0(d6VarG4);
                                     arrayList5.add(Pair.create((com.google.android.gms.internal.measurement.a7) z6Var2.t(), (Long) pair4.second));
                                     z20 = z28;
@@ -8570,12 +8569,12 @@ public final class me implements l8 {
                     zO2 = g(str).o(p8.ANALYTICS_STORAGE);
                     ig.a();
                     zH = B0().H(str, z4.N0);
-                    zdVar = this.f25761j;
+                    zdVar = this.f26582j;
                     ydVarI = zdVar.i(str);
                     i10 = 0;
                     while (i10 < size) {
                         z13 = zO;
-                        z6Var = (com.google.android.gms.internal.measurement.z6) ((com.google.android.gms.internal.measurement.a7) ((Pair) listSubList.get(i10)).first).r();
+                        z6Var = (com.google.android.gms.internal.measurement.z6) ((com.google.android.gms.internal.measurement.a7) ((Pair) listSubList.get(i10)).first).q();
                         int i21 = size;
                         arrayList.add((Long) ((Pair) listSubList.get(i10)).second);
                         B0().A();
@@ -8583,7 +8582,7 @@ public final class me implements l8 {
                         z15 = zO2;
                         z6Var.S(133005L);
                         z6Var.n1(j10);
-                        this.f25763l.c();
+                        this.f26584l.c();
                         z6Var.A0(false);
                         if (!z14) {
                             z6Var.J0();
@@ -8735,9 +8734,9 @@ public final class me implements l8 {
                             K0();
                             byte[] bArrD3 = y6Var.d();
                             q(arrayList);
-                            this.f25760i.f26038i.b(j10);
+                            this.f26581i.f26859i.b(j10);
                             a().w().d("Uploading data. app, uncompressed size, data", str, Integer.valueOf(bArrD3.length), objK);
-                            this.f25772u = true;
+                            this.f26593u = true;
                             E0().n(str, ydVarI, y6Var, new be(this, str, arrayList2));
                             return;
                         }
@@ -8800,7 +8799,7 @@ public final class me implements l8 {
                         com.google.android.gms.internal.measurement.y6 y6Var8 = (com.google.android.gms.internal.measurement.y6) v6VarO2.t();
                         strX2 = zdVar.b.D0().x(str);
                         if (TextUtils.isEmpty(strX2)) {
-                            Uri uri2 = Uri.parse((String) z4.f26196s.b(null));
+                            Uri uri2 = Uri.parse((String) z4.f27017s.b(null));
                             Uri.Builder builderBuildUpon2 = uri2.buildUpon();
                             String authority2 = uri2.getAuthority();
                             StringBuilder sb7 = new StringBuilder(String.valueOf(strX2).length() + 1 + String.valueOf(authority2).length());
@@ -8818,7 +8817,7 @@ public final class me implements l8 {
                             ydVar = new yd(string3, Collections.EMPTY_MAP, zaVar2, null);
                         } else {
                             objK = null;
-                            String str3 = (String) z4.f26196s.b(null);
+                            String str3 = (String) z4.f27017s.b(null);
                             if (z12) {
                                 zaVar = za.GOOGLE_SIGNAL_PENDING;
                             } else {
@@ -8839,17 +8838,17 @@ public final class me implements l8 {
                             K0();
                             byte[] bArrD4 = y6Var.d();
                             q(arrayList);
-                            this.f25760i.f26038i.b(j10);
+                            this.f26581i.f26859i.b(j10);
                             a().w().d("Uploading data. app, uncompressed size, data", str, Integer.valueOf(bArrD4.length), objK);
-                            this.f25772u = true;
+                            this.f26593u = true;
                             E0().n(str, ydVarI, y6Var, new be(this, str, arrayList2));
                             return;
                         }
                         return;
                     }
-                    v6Var = (com.google.android.gms.internal.measurement.v6) y6Var2.r();
+                    v6Var = (com.google.android.gms.internal.measurement.v6) y6Var2.q();
                     while (i11 < y6Var2.G()) {
-                        com.google.android.gms.internal.measurement.z6 z6Var5 = (com.google.android.gms.internal.measurement.z6) y6Var2.H(i11).r();
+                        com.google.android.gms.internal.measurement.z6 z6Var5 = (com.google.android.gms.internal.measurement.z6) y6Var2.H(i11).q();
                         z6Var5.o1();
                         z6Var5.t0(j10);
                         v6Var.C(i11, z6Var5);
@@ -8862,7 +8861,7 @@ public final class me implements l8 {
                         Intent intent2 = new Intent();
                         intent2.setAction("com.google.android.gms.measurement.BATCHES_AVAILABLE");
                         intent2.setPackage(str);
-                        W(this.f25763l.d(), intent2);
+                        W(this.f26584l.d(), intent2);
                     }
                 }
             } catch (Throwable th8) {
@@ -8878,7 +8877,7 @@ public final class me implements l8 {
         }
         com.google.android.gms.internal.measurement.se.a();
         kVarB0 = B0();
-        y4Var = z4.f26174i1;
+        y4Var = z4.f26995i1;
         if (kVarB0.H(null, y4Var)) {
             com.google.android.gms.internal.measurement.se.a();
             if (B0().H(null, y4Var)) {
@@ -8890,7 +8889,7 @@ public final class me implements l8 {
                     tVarF0.j();
                     arrayList6 = new ArrayList();
                     sQLiteDatabaseU0 = tVarF0.u0();
-                    jA = tVarF0.f25625a.e().a();
+                    jA = tVarF0.f26446a.e().a();
                     cursorQuery2 = sQLiteDatabaseU0.query("no_data_mode_events", new String[]{"data"}, "app_id=? AND timestamp_millis <= CAST(? AS INTEGER)", new String[]{str, String.valueOf(jA)}, null, null, "rowid", null);
                     list3 = listSubList;
                     if (cursorQuery2.moveToFirst()) {
@@ -8904,7 +8903,7 @@ public final class me implements l8 {
                         }
                         cursorQuery2.close();
                         int iDelete5 = sQLiteDatabaseU0.delete("no_data_mode_events", "app_id=? AND timestamp_millis <= CAST(? AS INTEGER)", new String[]{str, String.valueOf(jA)});
-                        u5 u5VarW7 = tVarF0.f25625a.a().w();
+                        u5 u5VarW7 = tVarF0.f26446a.a().w();
                         StringBuilder sb8 = new StringBuilder(String.valueOf(iDelete5).length() + 34);
                         sb8.append("Pruned ");
                         sb8.append(iDelete5);
@@ -8918,7 +8917,7 @@ public final class me implements l8 {
                     z20 = true;
                     while (it5.hasNext()) {
                         Pair pair5 = (Pair) it5.next();
-                        z6Var2 = (com.google.android.gms.internal.measurement.z6) ((com.google.android.gms.internal.measurement.a7) pair5.first).r();
+                        z6Var2 = (com.google.android.gms.internal.measurement.z6) ((com.google.android.gms.internal.measurement.a7) pair5.first).q();
                         if (z20 && !arrayList6.isEmpty()) {
                             List listW4 = z6Var2.W0();
                             z6Var2.d1();
@@ -8956,7 +8955,7 @@ public final class me implements l8 {
                                     i15 = 3;
                                     i16 = 3;
                                 }
-                                g6VarF5.x(i16);
+                                g6VarF5.y(i16);
                                 iJ = o4Var.J() - 1;
                                 if (iJ == 1) {
                                     i15 = 2;
@@ -8973,7 +8972,7 @@ public final class me implements l8 {
                         Iterator it18 = it5;
                         boolean z210 = z20;
                         List list9 = arrayList6;
-                        d6VarG5.x(arrayList7);
+                        d6VarG5.y(arrayList7);
                         z6Var2.v0(d6VarG5);
                         arrayList5.add(Pair.create((com.google.android.gms.internal.measurement.a7) z6Var2.t(), (Long) pair5.second));
                         z20 = z210;
@@ -8982,14 +8981,14 @@ public final class me implements l8 {
                     }
                     listSubList = arrayList5;
                 } else {
-                    List listAsList = Arrays.asList(((String) z4.f26177j1.b(null)).split(","));
+                    List listAsList = Arrays.asList(((String) z4.f26998j1.b(null)).split(","));
                     for (Pair pair6 : listSubList) {
                         try {
                             F0().t(((Long) pair6.second).longValue());
                             for (com.google.android.gms.internal.measurement.o6 o6Var2 : ((com.google.android.gms.internal.measurement.a7) pair6.first).j2()) {
                                 if (listAsList.contains(o6Var2.J())) {
                                     if (o6Var2.J().equals("_f") || o6Var2.J().equals("_v")) {
-                                        com.google.android.gms.internal.measurement.n6 n6Var = (com.google.android.gms.internal.measurement.n6) o6Var2.r();
+                                        com.google.android.gms.internal.measurement.n6 n6Var = (com.google.android.gms.internal.measurement.n6) o6Var2.q();
                                         K0();
                                         re.o(n6Var, "_dac", 1L);
                                         o6Var2 = (com.google.android.gms.internal.measurement.o6) n6Var.t();
@@ -8999,7 +8998,7 @@ public final class me implements l8 {
                                     tVarF2.j();
                                     n9.m.l(o6Var2);
                                     n9.m.f(str);
-                                    g7 g7Var = tVarF2.f25625a;
+                                    g7 g7Var = tVarF2.f26446a;
                                     g7Var.a().w().b("Caching events in NO_DATA mode", o6Var2);
                                     ContentValues contentValues = new ContentValues();
                                     contentValues.put("app_id", str);
@@ -9011,7 +9010,7 @@ public final class me implements l8 {
                                             g7Var.a().o().b("Failed to insert NO_DATA mode event (got -1). appId", w5.x(str));
                                         }
                                     } catch (SQLiteException e24) {
-                                        tVarF2.f25625a.a().o().c("Error storing NO_DATA mode event. appId", w5.x(str), e24);
+                                        tVarF2.f26446a.a().o().c("Error storing NO_DATA mode event. appId", w5.x(str), e24);
                                     }
                                 }
                             }
@@ -9063,12 +9062,12 @@ public final class me implements l8 {
         zO2 = g(str).o(p8.ANALYTICS_STORAGE);
         ig.a();
         zH = B0().H(str, z4.N0);
-        zdVar = this.f25761j;
+        zdVar = this.f26582j;
         ydVarI = zdVar.i(str);
         i10 = 0;
         while (i10 < size) {
             z13 = zO;
-            z6Var = (com.google.android.gms.internal.measurement.z6) ((com.google.android.gms.internal.measurement.a7) ((Pair) listSubList.get(i10)).first).r();
+            z6Var = (com.google.android.gms.internal.measurement.z6) ((com.google.android.gms.internal.measurement.a7) ((Pair) listSubList.get(i10)).first).q();
             int i22 = size;
             arrayList.add((Long) ((Pair) listSubList.get(i10)).second);
             B0().A();
@@ -9076,7 +9075,7 @@ public final class me implements l8 {
             z15 = zO2;
             z6Var.S(133005L);
             z6Var.n1(j10);
-            this.f25763l.c();
+            this.f26584l.c();
             z6Var.A0(false);
             if (!z14) {
                 z6Var.J0();
@@ -9189,9 +9188,9 @@ public final class me implements l8 {
                 K0();
                 byte[] bArrD5 = y6Var.d();
                 q(arrayList);
-                this.f25760i.f26038i.b(j10);
+                this.f26581i.f26859i.b(j10);
                 a().w().d("Uploading data. app, uncompressed size, data", str, Integer.valueOf(bArrD5.length), objK);
-                this.f25772u = true;
+                this.f26593u = true;
                 E0().n(str, ydVarI, y6Var, new be(this, str, arrayList2));
                 return;
             }
@@ -9254,7 +9253,7 @@ public final class me implements l8 {
             com.google.android.gms.internal.measurement.y6 y6Var11 = (com.google.android.gms.internal.measurement.y6) v6VarO2.t();
             strX2 = zdVar.b.D0().x(str);
             if (TextUtils.isEmpty(strX2)) {
-                Uri uri3 = Uri.parse((String) z4.f26196s.b(null));
+                Uri uri3 = Uri.parse((String) z4.f27017s.b(null));
                 Uri.Builder builderBuildUpon3 = uri3.buildUpon();
                 String authority3 = uri3.getAuthority();
                 StringBuilder sb9 = new StringBuilder(String.valueOf(strX2).length() + 1 + String.valueOf(authority3).length());
@@ -9272,7 +9271,7 @@ public final class me implements l8 {
                 ydVar = new yd(string4, Collections.EMPTY_MAP, zaVar2, null);
             } else {
                 objK = null;
-                String str4 = (String) z4.f26196s.b(null);
+                String str4 = (String) z4.f27017s.b(null);
                 if (z12) {
                     zaVar = za.GOOGLE_SIGNAL_PENDING;
                 } else {
@@ -9293,17 +9292,17 @@ public final class me implements l8 {
                 K0();
                 byte[] bArrD6 = y6Var.d();
                 q(arrayList);
-                this.f25760i.f26038i.b(j10);
+                this.f26581i.f26859i.b(j10);
                 a().w().d("Uploading data. app, uncompressed size, data", str, Integer.valueOf(bArrD6.length), objK);
-                this.f25772u = true;
+                this.f26593u = true;
                 E0().n(str, ydVarI, y6Var, new be(this, str, arrayList2));
                 return;
             }
             return;
         }
-        v6Var = (com.google.android.gms.internal.measurement.v6) y6Var2.r();
+        v6Var = (com.google.android.gms.internal.measurement.v6) y6Var2.q();
         while (i11 < y6Var2.G()) {
-            com.google.android.gms.internal.measurement.z6 z6Var6 = (com.google.android.gms.internal.measurement.z6) y6Var2.H(i11).r();
+            com.google.android.gms.internal.measurement.z6 z6Var6 = (com.google.android.gms.internal.measurement.z6) y6Var2.H(i11).q();
             z6Var6.o1();
             z6Var6.t0(j10);
             v6Var.C(i11, z6Var6);
@@ -9316,7 +9315,7 @@ public final class me implements l8 {
             Intent intent3 = new Intent();
             intent3.setAction("com.google.android.gms.measurement.BATCHES_AVAILABLE");
             intent3.setPackage(str);
-            W(this.f25763l.d(), intent3);
+            W(this.f26584l.d(), intent3);
         }
     }
 
@@ -9350,16 +9349,16 @@ public final class me implements l8 {
         com.google.android.gms.internal.measurement.y6 y6VarD;
         b().h();
         O0();
-        this.f25773v = true;
+        this.f26594v = true;
         try {
-            g7 g7Var = this.f25763l;
+            g7 g7Var = this.f26584l;
             g7Var.c();
             Boolean boolX = g7Var.J().x();
             if (boolX == null) {
                 a().r().a("Upload data called on the client side before use of service was decided");
             } else if (boolX.booleanValue()) {
                 a().o().a("Upload called in the client side when service should be used");
-            } else if (this.f25766o > 0) {
+            } else if (this.f26587o > 0) {
                 R();
             } else if (!E0().m()) {
                 a().w().a("Network not connected, ignoring upload request");
@@ -9378,42 +9377,42 @@ public final class me implements l8 {
                         a().w().d("[sgtm] Uploading data from upload queue. appId, uncompressed size, data", str, Integer.valueOf(bArrD.length), K0().K(y6VarD));
                     }
                     yd ydVarA = peVar.a();
-                    this.f25772u = true;
+                    this.f26593u = true;
                     E0().n(str, ydVarA, y6VarD, new ce(this, str, peVar));
                 }
             } else {
                 a().w().b("[sgtm] Upload queue has no batches for appId", str);
             }
         } finally {
-            this.f25773v = false;
+            this.f26594v = false;
             S();
         }
     }
 
     public final /* synthetic */ void u0(ne neVar) {
         b().h();
-        this.f25762k = new n6(this);
+        this.f26583k = new n6(this);
         t tVar = new t(this);
         tVar.k();
-        this.f25754c = tVar;
-        B0().t((j) n9.m.l(this.f25753a));
+        this.f26575c = tVar;
+        B0().t((j) n9.m.l(this.f26574a));
         vc vcVar = new vc(this);
         vcVar.k();
-        this.f25760i = vcVar;
+        this.f26581i = vcVar;
         e eVar = new e(this);
         eVar.k();
-        this.f25757f = eVar;
+        this.f26578f = eVar;
         wa waVar = new wa(this);
         waVar.k();
-        this.f25759h = waVar;
+        this.f26580h = waVar;
         sd sdVar = new sd(this);
         sdVar.k();
-        this.f25756e = sdVar;
-        this.f25755d = new e6(this);
-        if (this.f25769r != this.f25770s) {
-            a().o().c("Not all upload components initialized", Integer.valueOf(this.f25769r), Integer.valueOf(this.f25770s));
+        this.f26577e = sdVar;
+        this.f26576d = new e6(this);
+        if (this.f26590r != this.f26591s) {
+            a().o().c("Not all upload components initialized", Integer.valueOf(this.f26590r), Integer.valueOf(this.f26591s));
         }
-        this.f25764m.set(true);
+        this.f26585m.set(true);
         a().w().a("UploadController is now fully initialized");
     }
 
@@ -9431,7 +9430,7 @@ public final class me implements l8 {
             try {
                 bArr = new byte[0];
             } finally {
-                this.f25772u = false;
+                this.f26593u = false;
                 S();
             }
         }
@@ -9534,11 +9533,11 @@ public final class me implements l8 {
             if (g(str).o(p8.ANALYTICS_STORAGE)) {
                 Map map = this.D;
                 je jeVar = (je) map.get(str);
-                if (jeVar == null || jeVar.b + B0().D(str, z4.f26182l0) < e().b()) {
+                if (jeVar == null || jeVar.b + B0().D(str, z4.f27003l0) < e().b()) {
                     jeVar = new je(this, (byte[]) null);
                     map.put(str, jeVar);
                 }
-                z6Var.T0(jeVar.f25645a);
+                z6Var.T0(jeVar.f26466a);
             }
         }
         if (D0().O(str)) {
@@ -9547,20 +9546,20 @@ public final class me implements l8 {
     }
 
     public final /* synthetic */ g7 x0() {
-        return this.f25763l;
+        return this.f26584l;
     }
 
     public final void y(com.google.android.gms.internal.measurement.z6 z6Var, ie ieVar) {
         for (int i10 = 0; i10 < z6Var.X0(); i10++) {
-            com.google.android.gms.internal.measurement.n6 n6Var = (com.google.android.gms.internal.measurement.n6) z6Var.Y0(i10).r();
-            Iterator it = n6Var.x().iterator();
+            com.google.android.gms.internal.measurement.n6 n6Var = (com.google.android.gms.internal.measurement.n6) z6Var.Y0(i10).q();
+            Iterator it = n6Var.y().iterator();
             while (it.hasNext()) {
                 if ("_c".equals(((com.google.android.gms.internal.measurement.s6) it.next()).G())) {
-                    if (ieVar.f25612a.Z0() >= B0().E(ieVar.f25612a.F(), z4.f26185m0)) {
-                        int iE = B0().E(ieVar.f25612a.F(), z4.f26211z0);
+                    if (ieVar.f26433a.Z0() >= B0().E(ieVar.f26433a.F(), z4.f27006m0)) {
+                        int iE = B0().E(ieVar.f26433a.F(), z4.f27032z0);
                         String strL0 = null;
                         if (iE <= 0) {
-                            if (B0().H(ieVar.f25612a.F(), z4.S0)) {
+                            if (B0().H(ieVar.f26433a.F(), z4.S0)) {
                                 strL0 = N0().l0();
                                 com.google.android.gms.internal.measurement.r6 r6VarT = com.google.android.gms.internal.measurement.s6.T();
                                 r6VarT.z("_tu");
@@ -9571,22 +9570,22 @@ public final class me implements l8 {
                             r6VarT2.z("_tr");
                             r6VarT2.E(1L);
                             n6Var.E((com.google.android.gms.internal.measurement.s6) r6VarT2.t());
-                            zzoh zzohVarI = K0().I(ieVar.f25612a.F(), z6Var, n6Var, strL0);
+                            zzoh zzohVarI = K0().I(ieVar.f26433a.F(), z6Var, n6Var, strL0);
                             if (zzohVarI != null) {
-                                a().w().c("Generated trigger URI. appId, uri", ieVar.f25612a.F(), zzohVarI.f7426f);
-                                F0().K(ieVar.f25612a.F(), zzohVarI);
-                                Deque deque = this.f25768q;
-                                if (!deque.contains(ieVar.f25612a.F())) {
-                                    deque.add(ieVar.f25612a.F());
+                                a().w().c("Generated trigger URI. appId, uri", ieVar.f26433a.F(), zzohVarI.f7500f);
+                                F0().K(ieVar.f26433a.F(), zzohVarI);
+                                Deque deque = this.f26589q;
+                                if (!deque.contains(ieVar.f26433a.F())) {
+                                    deque.add(ieVar.f26433a.F());
                                 }
                             }
-                        } else if (F0().L0(h(), ieVar.f25612a.F(), false, false, false, false, false, false, true).f25838g > iE) {
+                        } else if (F0().L0(h(), ieVar.f26433a.F(), false, false, false, false, false, false, true).f26659g > iE) {
                             com.google.android.gms.internal.measurement.r6 r6VarT3 = com.google.android.gms.internal.measurement.s6.T();
                             r6VarT3.z("_tnr");
                             r6VarT3.E(1L);
                             n6Var.E((com.google.android.gms.internal.measurement.s6) r6VarT3.t());
                         } else {
-                            if (B0().H(ieVar.f25612a.F(), z4.S0)) {
+                            if (B0().H(ieVar.f26433a.F(), z4.S0)) {
                                 strL0 = N0().l0();
                                 com.google.android.gms.internal.measurement.r6 r6VarT4 = com.google.android.gms.internal.measurement.s6.T();
                                 r6VarT4.z("_tu");
@@ -9597,13 +9596,13 @@ public final class me implements l8 {
                             r6VarT5.z("_tr");
                             r6VarT5.E(1L);
                             n6Var.E((com.google.android.gms.internal.measurement.s6) r6VarT5.t());
-                            zzoh zzohVarI2 = K0().I(ieVar.f25612a.F(), z6Var, n6Var, strL0);
+                            zzoh zzohVarI2 = K0().I(ieVar.f26433a.F(), z6Var, n6Var, strL0);
                             if (zzohVarI2 != null) {
-                                a().w().c("Generated trigger URI. appId, uri", ieVar.f25612a.F(), zzohVarI2.f7426f);
-                                F0().K(ieVar.f25612a.F(), zzohVarI2);
-                                Deque deque2 = this.f25768q;
-                                if (!deque2.contains(ieVar.f25612a.F())) {
-                                    deque2.add(ieVar.f25612a.F());
+                                a().w().c("Generated trigger URI. appId, uri", ieVar.f26433a.F(), zzohVarI2.f7500f);
+                                F0().K(ieVar.f26433a.F(), zzohVarI2);
+                                Deque deque2 = this.f26589q;
+                                if (!deque2.contains(ieVar.f26433a.F())) {
+                                    deque2.add(ieVar.f26433a.F());
                                 }
                             }
                         }
@@ -9616,22 +9615,22 @@ public final class me implements l8 {
     }
 
     public final /* synthetic */ Deque y0() {
-        return this.f25768q;
+        return this.f26589q;
     }
 
     public final void z(String str, com.google.android.gms.internal.measurement.r6 r6Var, Bundle bundle, String str2) {
         List listB = u9.f.b("_o", "_sn", "_sc", "_si");
-        long jY = (ve.N(r6Var.x()) || ve.N(str)) ? B0().y(str2, true) : B0().x(str2, true);
-        long jCodePointCount = r6Var.A().codePointCount(0, r6Var.A().length());
+        long jY = (ve.N(r6Var.y()) || ve.N(str)) ? B0().y(str2, true) : B0().x(str2, true);
+        long jCodePointCount = r6Var.B().codePointCount(0, r6Var.B().length());
         ve veVarN0 = N0();
-        String strX = r6Var.x();
+        String strY = r6Var.y();
         B0();
-        String strQ = veVarN0.q(strX, 40, true);
-        if (jCodePointCount <= jY || listB.contains(r6Var.x())) {
+        String strQ = veVarN0.q(strY, 40, true);
+        if (jCodePointCount <= jY || listB.contains(r6Var.y())) {
             return;
         }
-        if ("_ev".equals(r6Var.x())) {
-            bundle.putString("_ev", N0().q(r6Var.A(), B0().y(str2, true), true));
+        if ("_ev".equals(r6Var.y())) {
+            bundle.putString("_ev", N0().q(r6Var.B(), B0().y(str2, true), true));
             return;
         }
         a().t().c("Param value is too long; discarded. Name, value length", strQ, Long.valueOf(jCodePointCount));
@@ -9642,7 +9641,7 @@ public final class me implements l8 {
                 bundle.putLong("_el", jCodePointCount);
             }
         }
-        bundle.remove(r6Var.x());
+        bundle.remove(r6Var.y());
     }
 
     public final /* synthetic */ void z0(long j10) {

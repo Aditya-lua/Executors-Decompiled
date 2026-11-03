@@ -1,24 +1,17 @@
 package on;
 
-import qn.s;
-
 /* JADX INFO: loaded from: classes3.dex */
-public class l implements sn.g {
+public class l extends s {
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final s f27549a;
-    public final sn.h b;
+    /* JADX INFO: renamed from: g, reason: collision with root package name */
+    public String f28025g;
 
-    public l(s sVar, sn.h hVar) {
-        this.f27549a = sVar;
-        this.b = hVar;
+    @Override // on.s
+    public void a(d0 d0Var) {
+        d0Var.r(this);
     }
 
-    public s c() {
-        return this.f27549a;
-    }
-
-    public sn.h d() {
-        return this.b;
+    public void o(String str) {
+        this.f28025g = str;
     }
 }

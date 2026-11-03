@@ -41,7 +41,7 @@ public final class b6 {
         this.executor.execute(new Runnable() { // from class: z.z5
             @Override // java.lang.Runnable
             public final void run() {
-                b6.d(this.f37007a);
+                b6.d(this.f37702a);
             }
         });
     }
@@ -54,7 +54,7 @@ public final class b6 {
         this.executor.execute(new Runnable() { // from class: z.a6
             @Override // java.lang.Runnable
             public final void run() {
-                b6.g(this.f36440a);
+                b6.g(this.f37135a);
             }
         });
     }

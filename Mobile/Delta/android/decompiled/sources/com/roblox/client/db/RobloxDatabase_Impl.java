@@ -3,46 +3,46 @@ package com.roblox.client.db;
 import c5.o;
 import com.roblox.client.db.RobloxDatabase_Impl;
 import f5.b;
-import hu.c;
+import fu.c;
+import gt.h;
+import gt.i;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import jt.h;
-import jt.i;
-import kh.d;
-import kh.e;
-import kh.f;
+import jh.d;
+import jh.e;
+import jh.f;
+import kh.g;
+import kh.m;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.d0;
-import lh.g;
-import lh.m;
 import org.jetbrains.annotations.NotNull;
 import x4.a0;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000X\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010$\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\b\u0002\n\u0002\u0010\"\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0014¢\u0006\u0004\b\u0005\u0010\u0006J\u000f\u0010\b\u001a\u00020\u0007H\u0014¢\u0006\u0004\b\b\u0010\tJ)\u0010\r\u001a\u001c\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u000b\u0012\u000e\u0012\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u000b0\f0\nH\u0014¢\u0006\u0004\b\r\u0010\u000eJ\u001d\u0010\u0011\u001a\u0010\u0012\f\u0012\n\u0012\u0006\b\u0001\u0012\u00020\u00100\u000b0\u000fH\u0016¢\u0006\u0004\b\u0011\u0010\u0012J1\u0010\u0015\u001a\b\u0012\u0004\u0012\u00020\u00140\f2\u001a\u0010\u0013\u001a\u0016\u0012\f\u0012\n\u0012\u0006\b\u0001\u0012\u00020\u00100\u000b\u0012\u0004\u0012\u00020\u00100\nH\u0016¢\u0006\u0004\b\u0015\u0010\u0016J\u000f\u0010\u0018\u001a\u00020\u0017H\u0016¢\u0006\u0004\b\u0018\u0010\u0019J\u000f\u0010\u001b\u001a\u00020\u001aH\u0016¢\u0006\u0004\b\u001b\u0010\u001cR\u001a\u0010 \u001a\b\u0012\u0004\u0012\u00020\u00170\u001d8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001e\u0010\u001fR\u001a\u0010\"\u001a\b\u0012\u0004\u0012\u00020\u001a0\u001d8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b!\u0010\u001f¨\u0006#"}, d2 = {"Lcom/roblox/client/db/RobloxDatabase_Impl;", "Lcom/roblox/client/db/RobloxDatabase;", "<init>", "()V", "Lx4/a0;", "e0", "()Lx4/a0;", "Landroidx/room/c;", "m", "()Landroidx/room/c;", "", "Lhu/c;", "", "y", "()Ljava/util/Map;", "", "La5/a;", "w", "()Ljava/util/Set;", "autoMigrationSpecs", "La5/b;", "j", "(Ljava/util/Map;)Ljava/util/List;", "Llh/a;", "X", "()Llh/a;", "Llh/i;", "Y", "()Llh/i;", "Ljt/h;", "o", "Ljt/h;", "_analyticEventDao", "p", "_notificationIdDao", "database_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000X\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010$\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\b\u0002\n\u0002\u0010\"\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0014¢\u0006\u0004\b\u0005\u0010\u0006J\u000f\u0010\b\u001a\u00020\u0007H\u0014¢\u0006\u0004\b\b\u0010\tJ)\u0010\r\u001a\u001c\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u000b\u0012\u000e\u0012\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u000b0\f0\nH\u0014¢\u0006\u0004\b\r\u0010\u000eJ\u001d\u0010\u0011\u001a\u0010\u0012\f\u0012\n\u0012\u0006\b\u0001\u0012\u00020\u00100\u000b0\u000fH\u0016¢\u0006\u0004\b\u0011\u0010\u0012J1\u0010\u0015\u001a\b\u0012\u0004\u0012\u00020\u00140\f2\u001a\u0010\u0013\u001a\u0016\u0012\f\u0012\n\u0012\u0006\b\u0001\u0012\u00020\u00100\u000b\u0012\u0004\u0012\u00020\u00100\nH\u0016¢\u0006\u0004\b\u0015\u0010\u0016J\u000f\u0010\u0018\u001a\u00020\u0017H\u0016¢\u0006\u0004\b\u0018\u0010\u0019J\u000f\u0010\u001b\u001a\u00020\u001aH\u0016¢\u0006\u0004\b\u001b\u0010\u001cR\u001a\u0010 \u001a\b\u0012\u0004\u0012\u00020\u00170\u001d8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001e\u0010\u001fR\u001a\u0010\"\u001a\b\u0012\u0004\u0012\u00020\u001a0\u001d8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b!\u0010\u001f¨\u0006#"}, d2 = {"Lcom/roblox/client/db/RobloxDatabase_Impl;", "Lcom/roblox/client/db/RobloxDatabase;", "<init>", "()V", "Lx4/a0;", "e0", "()Lx4/a0;", "Landroidx/room/c;", "m", "()Landroidx/room/c;", "", "Lfu/c;", "", "y", "()Ljava/util/Map;", "", "La5/a;", "w", "()Ljava/util/Set;", "autoMigrationSpecs", "La5/b;", "j", "(Ljava/util/Map;)Ljava/util/List;", "Lkh/a;", "X", "()Lkh/a;", "Lkh/i;", "Y", "()Lkh/i;", "Lgt/h;", "o", "Lgt/h;", "_analyticEventDao", "p", "_notificationIdDao", "database_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class RobloxDatabase_Impl extends RobloxDatabase {
 
     /* JADX INFO: renamed from: o, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final h<lh.a> _analyticEventDao = i.b(new Function0() { // from class: kh.h
+    public final h<kh.a> _analyticEventDao = i.b(new Function0() { // from class: jh.h
         @Override // kotlin.jvm.functions.Function0
         public final Object invoke() {
-            return RobloxDatabase_Impl.b0(this.f22318a);
+            return RobloxDatabase_Impl.b0(this.f21917a);
         }
     });
 
     /* JADX INFO: renamed from: p, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final h<lh.i> _notificationIdDao = i.b(new Function0() { // from class: kh.i
+    public final h<kh.i> _notificationIdDao = i.b(new Function0() { // from class: jh.i
         @Override // kotlin.jvm.functions.Function0
         public final Object invoke() {
-            return RobloxDatabase_Impl.c0(this.f22319a);
+            return RobloxDatabase_Impl.c0(this.f21918a);
         }
     });
 
@@ -128,13 +128,13 @@ public final class RobloxDatabase_Impl extends RobloxDatabase {
 
     @Override // com.roblox.client.db.RobloxDatabase
     @NotNull
-    public lh.a X() {
+    public kh.a X() {
         return this._analyticEventDao.getValue();
     }
 
     @Override // com.roblox.client.db.RobloxDatabase
     @NotNull
-    public lh.i Y() {
+    public kh.i Y() {
         return this._notificationIdDao.getValue();
     }
 
@@ -153,7 +153,7 @@ public final class RobloxDatabase_Impl extends RobloxDatabase {
         arrayList.add(new d());
         arrayList.add(new e());
         arrayList.add(new f());
-        arrayList.add(new kh.g());
+        arrayList.add(new jh.g());
         return arrayList;
     }
 
@@ -173,8 +173,8 @@ public final class RobloxDatabase_Impl extends RobloxDatabase {
     @NotNull
     public Map<c<?>, List<c<?>>> y() {
         LinkedHashMap linkedHashMap = new LinkedHashMap();
-        linkedHashMap.put(d0.b(lh.a.class), g.INSTANCE.a());
-        linkedHashMap.put(d0.b(lh.i.class), m.INSTANCE.a());
+        linkedHashMap.put(d0.b(kh.a.class), g.INSTANCE.a());
+        linkedHashMap.put(d0.b(kh.i.class), m.INSTANCE.a());
         return linkedHashMap;
     }
 }

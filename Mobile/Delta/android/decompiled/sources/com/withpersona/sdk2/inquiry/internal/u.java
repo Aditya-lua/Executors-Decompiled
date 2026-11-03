@@ -9,18 +9,18 @@ import org.jetbrains.annotations.Nullable;
 public final class u implements TransitionWorker.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final t f12087a;
+    public final t f12168a;
 
     public u(t tVar) {
-        this.f12087a = tVar;
+        this.f12168a = tVar;
     }
 
-    public static ft.i<TransitionWorker.a> b(t tVar) {
-        return ft.e.a(new u(tVar));
+    public static dt.i<TransitionWorker.a> b(t tVar) {
+        return dt.e.a(new u(tVar));
     }
 
     @Override // com.withpersona.sdk2.inquiry.internal.TransitionWorker.a
     public TransitionWorker a(String str, @Nullable String str2, String str3, @Nullable String str4, List<FieldMapping> list, InquirySessionConfig inquirySessionConfig, TransitionWorker.TransitionData transitionData) {
-        return this.f12087a.b(str, str2, str3, str4, list, inquirySessionConfig, transitionData);
+        return this.f12168a.b(str, str2, str3, str4, list, inquirySessionConfig, transitionData);
     }
 }

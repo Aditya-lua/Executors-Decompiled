@@ -37,6 +37,6 @@ public final class b implements f5.c {
         } else if (!Intrinsics.c(name, fileName) && !Intrinsics.c(StringsKt.e1(name, '/', null, 2, null), StringsKt.e1(fileName, '/', null, 2, null))) {
             throw new IllegalArgumentException(("This driver is configured to open a database named '" + this.openHelper.getName() + "' but '" + fileName + "' was requested.").toString());
         }
-        return new a(this.openHelper.t2());
+        return new a(this.openHelper.u2());
     }
 }

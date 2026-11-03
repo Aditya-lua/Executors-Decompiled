@@ -8,10 +8,10 @@ import com.google.android.gms.common.api.Status;
 public abstract class o1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f23063a;
+    public final int f23457a;
 
     public o1(int i10) {
-        this.f23063a = i10;
+        this.f23457a = i10;
     }
 
     public static /* bridge */ /* synthetic */ Status e(RemoteException remoteException) {

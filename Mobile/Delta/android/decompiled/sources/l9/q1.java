@@ -6,17 +6,17 @@ import com.google.android.gms.common.ConnectionResult;
 public final class q1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f23077a;
+    public final int f23471a;
     public final ConnectionResult b;
 
     public q1(ConnectionResult connectionResult, int i10) {
         n9.m.l(connectionResult);
         this.b = connectionResult;
-        this.f23077a = i10;
+        this.f23471a = i10;
     }
 
     public final int a() {
-        return this.f23077a;
+        return this.f23471a;
     }
 
     public final ConnectionResult b() {

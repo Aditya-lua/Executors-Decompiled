@@ -22,41 +22,41 @@ import java.lang.reflect.Method;
 public class l0 extends ListView {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Rect f29018a;
+    public final Rect f29371a;
     public int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f29019c;
+    public int f29372c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public int f29020d;
+    public int f29373d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public int f29021e;
+    public int f29374e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public int f29022f;
+    public int f29375f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public d f29023g;
+    public d f29376g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public boolean f29024h;
+    public boolean f29377h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public boolean f29025i;
+    public boolean f29378i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public boolean f29026j;
+    public boolean f29379j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public androidx.core.view.y0 f29027k;
+    public androidx.core.view.y0 f29380k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public d3.g f29028l;
+    public d3.g f29381l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public f f29029m;
+    public f f29382m;
 
     public static class a {
         public static void a(View view, float f10, float f11) {
@@ -67,14 +67,14 @@ public class l0 extends ListView {
     public static class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static Method f29030a;
+        public static Method f29383a;
         public static Method b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static Method f29031c;
+        public static Method f29384c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static boolean f29032d;
+        public static boolean f29385d;
 
         static {
             try {
@@ -82,30 +82,30 @@ public class l0 extends ListView {
                 Class cls2 = Boolean.TYPE;
                 Class cls3 = Float.TYPE;
                 Method declaredMethod = AbsListView.class.getDeclaredMethod("positionSelector", cls, View.class, cls2, cls3, cls3);
-                f29030a = declaredMethod;
+                f29383a = declaredMethod;
                 declaredMethod.setAccessible(true);
                 Method declaredMethod2 = AdapterView.class.getDeclaredMethod("setSelectedPositionInt", cls);
                 b = declaredMethod2;
                 declaredMethod2.setAccessible(true);
                 Method declaredMethod3 = AdapterView.class.getDeclaredMethod("setNextSelectedPositionInt", cls);
-                f29031c = declaredMethod3;
+                f29384c = declaredMethod3;
                 declaredMethod3.setAccessible(true);
-                f29032d = true;
+                f29385d = true;
             } catch (NoSuchMethodException e10) {
                 e10.printStackTrace();
             }
         }
 
         public static boolean a() {
-            return f29032d;
+            return f29385d;
         }
 
         @SuppressLint({"BanUncheckedReflection"})
         public static void b(l0 l0Var, int i10, View view) {
             try {
-                f29030a.invoke(l0Var, Integer.valueOf(i10), view, Boolean.FALSE, -1, -1);
+                f29383a.invoke(l0Var, Integer.valueOf(i10), view, Boolean.FALSE, -1, -1);
                 b.invoke(l0Var, Integer.valueOf(i10));
-                f29031c.invoke(l0Var, Integer.valueOf(i10));
+                f29384c.invoke(l0Var, Integer.valueOf(i10));
             } catch (IllegalAccessException e10) {
                 e10.printStackTrace();
             } catch (InvocationTargetException e11) {
@@ -177,7 +177,7 @@ public class l0 extends ListView {
     public static class e {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final Field f29033a;
+        public static final Field f29386a;
 
         static {
             Field declaredField = null;
@@ -187,11 +187,11 @@ public class l0 extends ListView {
             } catch (NoSuchFieldException e10) {
                 e10.printStackTrace();
             }
-            f29033a = declaredField;
+            f29386a = declaredField;
         }
 
         public static boolean a(AbsListView absListView) {
-            Field field = f29033a;
+            Field field = f29386a;
             if (field == null) {
                 return false;
             }
@@ -204,7 +204,7 @@ public class l0 extends ListView {
         }
 
         public static void b(AbsListView absListView, boolean z10) {
-            Field field = f29033a;
+            Field field = f29386a;
             if (field != null) {
                 try {
                     field.set(absListView, Boolean.valueOf(z10));
@@ -221,7 +221,7 @@ public class l0 extends ListView {
 
         public void a() {
             l0 l0Var = l0.this;
-            l0Var.f29029m = null;
+            l0Var.f29382m = null;
             l0Var.removeCallbacks(this);
         }
 
@@ -232,41 +232,41 @@ public class l0 extends ListView {
         @Override // java.lang.Runnable
         public void run() {
             l0 l0Var = l0.this;
-            l0Var.f29029m = null;
+            l0Var.f29382m = null;
             l0Var.drawableStateChanged();
         }
     }
 
     public l0(@NonNull Context context, boolean z10) {
         super(context, null, i.a.C);
-        this.f29018a = new Rect();
+        this.f29371a = new Rect();
         this.b = 0;
-        this.f29019c = 0;
-        this.f29020d = 0;
-        this.f29021e = 0;
-        this.f29025i = z10;
+        this.f29372c = 0;
+        this.f29373d = 0;
+        this.f29374e = 0;
+        this.f29378i = z10;
         setCacheColorHint(0);
     }
 
     private void setSelectorEnabled(boolean z10) {
-        d dVar = this.f29023g;
+        d dVar = this.f29376g;
         if (dVar != null) {
             dVar.b(z10);
         }
     }
 
     public final void a() {
-        this.f29026j = false;
+        this.f29379j = false;
         setPressed(false);
         drawableStateChanged();
-        View childAt = getChildAt(this.f29022f - getFirstVisiblePosition());
+        View childAt = getChildAt(this.f29375f - getFirstVisiblePosition());
         if (childAt != null) {
             childAt.setPressed(false);
         }
-        androidx.core.view.y0 y0Var = this.f29027k;
+        androidx.core.view.y0 y0Var = this.f29380k;
         if (y0Var != null) {
             y0Var.c();
-            this.f29027k = null;
+            this.f29380k = null;
         }
     }
 
@@ -276,10 +276,10 @@ public class l0 extends ListView {
 
     public final void c(Canvas canvas) {
         Drawable selector;
-        if (this.f29018a.isEmpty() || (selector = getSelector()) == null) {
+        if (this.f29371a.isEmpty() || (selector = getSelector()) == null) {
             return;
         }
-        selector.setBounds(this.f29018a);
+        selector.setBounds(this.f29371a);
         selector.draw(canvas);
     }
 
@@ -339,7 +339,7 @@ public class l0 extends ListView {
 
     @Override // android.widget.AbsListView, android.view.ViewGroup, android.view.View
     public void drawableStateChanged() {
-        if (this.f29029m != null) {
+        if (this.f29382m != null) {
             return;
         }
         super.drawableStateChanged();
@@ -373,17 +373,17 @@ public class l0 extends ListView {
                     a();
                 }
                 if (z10) {
-                    gVar = this.f29028l;
+                    gVar = this.f29381l;
                     if (gVar != null) {
                         gVar.m(false);
                     }
                     return z10;
                 }
-                if (this.f29028l == null) {
-                    this.f29028l = new d3.g(this);
+                if (this.f29381l == null) {
+                    this.f29381l = new d3.g(this);
                 }
-                this.f29028l.m(true);
-                this.f29028l.onTouch(this, motionEvent);
+                this.f29381l.m(true);
+                this.f29381l.onTouch(this, motionEvent);
                 return z10;
             }
             z10 = true;
@@ -414,27 +414,27 @@ public class l0 extends ListView {
             a();
         }
         if (z10) {
-            gVar = this.f29028l;
+            gVar = this.f29381l;
             if (gVar != null) {
                 gVar.m(false);
             }
             return z10;
         }
-        if (this.f29028l == null) {
-            this.f29028l = new d3.g(this);
+        if (this.f29381l == null) {
+            this.f29381l = new d3.g(this);
         }
-        this.f29028l.m(true);
-        this.f29028l.onTouch(this, motionEvent);
+        this.f29381l.m(true);
+        this.f29381l.onTouch(this, motionEvent);
         return z10;
     }
 
     public final void f(int i10, View view) {
-        Rect rect = this.f29018a;
+        Rect rect = this.f29371a;
         rect.set(view.getLeft(), view.getTop(), view.getRight(), view.getBottom());
         rect.left -= this.b;
-        rect.top -= this.f29019c;
-        rect.right += this.f29020d;
-        rect.bottom += this.f29021e;
+        rect.top -= this.f29372c;
+        rect.right += this.f29373d;
+        rect.bottom += this.f29374e;
         boolean zJ = j();
         if (view.isEnabled() != zJ) {
             k(!zJ);
@@ -452,7 +452,7 @@ public class l0 extends ListView {
         }
         f(i10, view);
         if (z10) {
-            Rect rect = this.f29018a;
+            Rect rect = this.f29371a;
             float fExactCenterX = rect.exactCenterX();
             float fExactCenterY = rect.exactCenterY();
             selector.setVisible(getVisibility() == 0, false);
@@ -471,27 +471,27 @@ public class l0 extends ListView {
 
     @Override // android.view.ViewGroup, android.view.View
     public boolean hasFocus() {
-        return this.f29025i || super.hasFocus();
+        return this.f29378i || super.hasFocus();
     }
 
     @Override // android.view.View
     public boolean hasWindowFocus() {
-        return this.f29025i || super.hasWindowFocus();
+        return this.f29378i || super.hasWindowFocus();
     }
 
     public final void i(View view, int i10, float f10, float f11) {
         View childAt;
-        this.f29026j = true;
+        this.f29379j = true;
         a.a(this, f10, f11);
         if (!isPressed()) {
             setPressed(true);
         }
         layoutChildren();
-        int i11 = this.f29022f;
+        int i11 = this.f29375f;
         if (i11 != -1 && (childAt = getChildAt(i11 - getFirstVisiblePosition())) != null && childAt != view && childAt.isPressed()) {
             childAt.setPressed(false);
         }
-        this.f29022f = i10;
+        this.f29375f = i10;
         a.a(view, f10 - view.getLeft(), f11 - view.getTop());
         if (!view.isPressed()) {
             view.setPressed(true);
@@ -503,12 +503,12 @@ public class l0 extends ListView {
 
     @Override // android.view.View
     public boolean isFocused() {
-        return this.f29025i || super.isFocused();
+        return this.f29378i || super.isFocused();
     }
 
     @Override // android.view.View
     public boolean isInTouchMode() {
-        return (this.f29025i && this.f29024h) || super.isInTouchMode();
+        return (this.f29378i && this.f29377h) || super.isInTouchMode();
     }
 
     public final boolean j() {
@@ -524,7 +524,7 @@ public class l0 extends ListView {
     }
 
     public final boolean l() {
-        return this.f29026j;
+        return this.f29379j;
     }
 
     public final void m() {
@@ -536,7 +536,7 @@ public class l0 extends ListView {
 
     @Override // android.widget.ListView, android.widget.AbsListView, android.widget.AdapterView, android.view.ViewGroup, android.view.View
     public void onDetachedFromWindow() {
-        this.f29029m = null;
+        this.f29382m = null;
         super.onDetachedFromWindow();
     }
 
@@ -544,9 +544,9 @@ public class l0 extends ListView {
     public boolean onHoverEvent(@NonNull MotionEvent motionEvent) {
         int i10 = Build.VERSION.SDK_INT;
         int actionMasked = motionEvent.getActionMasked();
-        if (actionMasked == 10 && this.f29029m == null) {
+        if (actionMasked == 10 && this.f29382m == null) {
             f fVar = new f();
-            this.f29029m = fVar;
+            this.f29382m = fVar;
             fVar.b();
         }
         boolean zOnHoverEvent = super.onHoverEvent(motionEvent);
@@ -573,9 +573,9 @@ public class l0 extends ListView {
     @Override // android.widget.AbsListView, android.view.View
     public boolean onTouchEvent(MotionEvent motionEvent) {
         if (motionEvent.getAction() == 0) {
-            this.f29022f = pointToPosition((int) motionEvent.getX(), (int) motionEvent.getY());
+            this.f29375f = pointToPosition((int) motionEvent.getX(), (int) motionEvent.getY());
         }
-        f fVar = this.f29029m;
+        f fVar = this.f29382m;
         if (fVar != null) {
             fVar.a();
         }
@@ -583,21 +583,21 @@ public class l0 extends ListView {
     }
 
     public void setListSelectionHidden(boolean z10) {
-        this.f29024h = z10;
+        this.f29377h = z10;
     }
 
     @Override // android.widget.AbsListView
     public void setSelector(Drawable drawable) {
         d dVar = drawable != null ? new d(drawable) : null;
-        this.f29023g = dVar;
+        this.f29376g = dVar;
         super.setSelector(dVar);
         Rect rect = new Rect();
         if (drawable != null) {
             drawable.getPadding(rect);
         }
         this.b = rect.left;
-        this.f29019c = rect.top;
-        this.f29020d = rect.right;
-        this.f29021e = rect.bottom;
+        this.f29372c = rect.top;
+        this.f29373d = rect.right;
+        this.f29374e = rect.bottom;
     }
 }

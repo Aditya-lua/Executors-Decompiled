@@ -7,36 +7,36 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0004\bæ\u0080\u0001\u0018\u0000 \t2\u00020\u0001:\u0001\tJ!\u0010\u0007\u001a\u00020\u00062\b\u0010\u0003\u001a\u0004\u0018\u00010\u00022\u0006\u0010\u0005\u001a\u00020\u0004H&¢\u0006\u0004\b\u0007\u0010\bø\u0001\u0000\u0082\u0002\u0006\n\u0004\b!0\u0001¨\u0006\nÀ\u0006\u0001"}, d2 = {"Lm6/o;", "", "", "mimeType", "Lxu/g;", Payload.SOURCE, "", "e", "(Ljava/lang/String;Lxu/g;)Z", "a", "coil-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0004\bæ\u0080\u0001\u0018\u0000 \t2\u00020\u0001:\u0001\tJ!\u0010\u0007\u001a\u00020\u00062\b\u0010\u0003\u001a\u0004\u0018\u00010\u00022\u0006\u0010\u0005\u001a\u00020\u0004H&¢\u0006\u0004\b\u0007\u0010\bø\u0001\u0000\u0082\u0002\u0006\n\u0004\b!0\u0001¨\u0006\nÀ\u0006\u0001"}, d2 = {"Lm6/o;", "", "", "mimeType", "Lvu/g;", Payload.SOURCE, "", "g", "(Ljava/lang/String;Lvu/g;)Z", "a", "coil-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public interface o {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public static final Companion INSTANCE = Companion.f23993a;
+    public static final Companion INSTANCE = Companion.f24643a;
 
     @NotNull
     public static final o b = new o() { // from class: m6.l
         @Override // m6.o
-        public final boolean e(String str, xu.g gVar) {
-            return o.c(str, gVar);
+        public final boolean g(String str, vu.g gVar) {
+            return o.e(str, gVar);
         }
     };
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static final o f23991c = new o() { // from class: m6.m
+    public static final o f24641c = new o() { // from class: m6.m
         @Override // m6.o
-        public final boolean e(String str, xu.g gVar) {
-            return o.d(str, gVar);
+        public final boolean g(String str, vu.g gVar) {
+            return o.a(str, gVar);
         }
     };
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    public static final o f23992d = new o() { // from class: m6.n
+    public static final o f24642d = new o() { // from class: m6.n
         @Override // m6.o
-        public final boolean e(String str, xu.g gVar) {
-            return o.b(str, gVar);
+        public final boolean g(String str, vu.g gVar) {
+            return o.f(str, gVar);
         }
     };
 
@@ -45,23 +45,23 @@ public interface o {
     public static final class Companion {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ Companion f23993a = new Companion();
+        public static final /* synthetic */ Companion f24643a = new Companion();
     }
 
-    static boolean b(String str, xu.g gVar) {
-        return true;
-    }
-
-    static boolean c(String str, xu.g gVar) {
-        return false;
-    }
-
-    static boolean d(String str, xu.g gVar) {
+    static boolean a(String str, vu.g gVar) {
         if (str != null) {
             return Intrinsics.c(str, "image/jpeg") || Intrinsics.c(str, "image/webp") || Intrinsics.c(str, "image/heic") || Intrinsics.c(str, "image/heif");
         }
         return false;
     }
 
-    boolean e(@Nullable String mimeType, @NotNull xu.g source);
+    static boolean e(String str, vu.g gVar) {
+        return false;
+    }
+
+    static boolean f(String str, vu.g gVar) {
+        return true;
+    }
+
+    boolean g(@Nullable String mimeType, @NotNull vu.g source);
 }

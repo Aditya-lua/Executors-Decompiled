@@ -11,7 +11,7 @@ public final class VideoStabilizationFeature extends i0.b {
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
     @NotNull
-    public static final b f22010j = b.OFF;
+    public static final b f22234j = b.OFF;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -30,7 +30,7 @@ public final class VideoStabilizationFeature extends i0.b {
 
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f22016e = qt.b.a(a());
+        public static final /* synthetic */ ot.a f22240e = ot.b.a(a());
     }
 
     public VideoStabilizationFeature(@NotNull b mode) {

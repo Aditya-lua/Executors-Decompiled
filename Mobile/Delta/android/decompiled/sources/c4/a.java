@@ -56,149 +56,149 @@ public class a {
     public static final SimpleDateFormat W;
 
     /* JADX INFO: renamed from: a0, reason: collision with root package name */
-    public static final e[] f4477a0;
+    public static final e[] f4643a0;
 
     /* JADX INFO: renamed from: b0, reason: collision with root package name */
-    public static final e[] f4478b0;
+    public static final e[] f4644b0;
 
     /* JADX INFO: renamed from: c0, reason: collision with root package name */
-    public static final e[] f4479c0;
+    public static final e[] f4645c0;
 
     /* JADX INFO: renamed from: d0, reason: collision with root package name */
-    public static final e[] f4480d0;
+    public static final e[] f4646d0;
 
     /* JADX INFO: renamed from: e0, reason: collision with root package name */
-    public static final e[] f4481e0;
+    public static final e[] f4647e0;
 
     /* JADX INFO: renamed from: f0, reason: collision with root package name */
-    public static final e f4482f0;
+    public static final e f4648f0;
 
     /* JADX INFO: renamed from: g0, reason: collision with root package name */
-    public static final e[] f4483g0;
+    public static final e[] f4649g0;
 
     /* JADX INFO: renamed from: h0, reason: collision with root package name */
-    public static final e[] f4484h0;
+    public static final e[] f4650h0;
 
     /* JADX INFO: renamed from: i0, reason: collision with root package name */
-    public static final e[] f4485i0;
+    public static final e[] f4651i0;
 
     /* JADX INFO: renamed from: j0, reason: collision with root package name */
-    public static final e[] f4486j0;
+    public static final e[] f4652j0;
 
     /* JADX INFO: renamed from: k0, reason: collision with root package name */
-    public static final e[][] f4487k0;
+    public static final e[][] f4653k0;
 
     /* JADX INFO: renamed from: l0, reason: collision with root package name */
-    public static final e[] f4488l0;
+    public static final e[] f4654l0;
 
     /* JADX INFO: renamed from: m0, reason: collision with root package name */
-    public static final HashMap<Integer, e>[] f4489m0;
+    public static final HashMap<Integer, e>[] f4655m0;
 
     /* JADX INFO: renamed from: n0, reason: collision with root package name */
-    public static final HashMap<String, e>[] f4490n0;
+    public static final HashMap<String, e>[] f4656n0;
 
     /* JADX INFO: renamed from: o0, reason: collision with root package name */
-    public static final Set<String> f4491o0;
+    public static final Set<String> f4657o0;
 
     /* JADX INFO: renamed from: p0, reason: collision with root package name */
-    public static final HashMap<Integer, Integer> f4492p0;
+    public static final HashMap<Integer, Integer> f4658p0;
 
     /* JADX INFO: renamed from: q0, reason: collision with root package name */
-    public static final Charset f4493q0;
+    public static final Charset f4659q0;
 
     /* JADX INFO: renamed from: r0, reason: collision with root package name */
-    public static final byte[] f4494r0;
+    public static final byte[] f4660r0;
 
     /* JADX INFO: renamed from: s0, reason: collision with root package name */
-    public static final byte[] f4495s0;
+    public static final byte[] f4661s0;
 
     /* JADX INFO: renamed from: t0, reason: collision with root package name */
-    public static final Pattern f4496t0;
+    public static final Pattern f4662t0;
 
     /* JADX INFO: renamed from: u0, reason: collision with root package name */
-    public static final Pattern f4497u0;
+    public static final Pattern f4663u0;
 
     /* JADX INFO: renamed from: v0, reason: collision with root package name */
-    public static final Pattern f4498v0;
+    public static final Pattern f4664v0;
 
     /* JADX INFO: renamed from: w0, reason: collision with root package name */
-    public static final Pattern f4500w0;
+    public static final Pattern f4666w0;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public String f4504a;
+    public String f4670a;
     public FileDescriptor b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public AssetManager.AssetInputStream f4505c;
+    public AssetManager.AssetInputStream f4671c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public int f4506d;
+    public int f4672d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public boolean f4507e;
+    public boolean f4673e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final HashMap<String, d>[] f4508f;
+    public final HashMap<String, d>[] f4674f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public Set<Integer> f4509g;
+    public Set<Integer> f4675g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public ByteOrder f4510h;
+    public ByteOrder f4676h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public boolean f4511i;
+    public boolean f4677i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public boolean f4512j;
+    public boolean f4678j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public boolean f4513k;
+    public boolean f4679k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public int f4514l;
+    public int f4680l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public int f4515m;
+    public int f4681m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public byte[] f4516n;
+    public byte[] f4682n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public int f4517o;
+    public int f4683o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public int f4518p;
+    public int f4684p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public int f4519q;
+    public int f4685q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public int f4520r;
+    public int f4686r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public int f4521s;
+    public int f4687s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public boolean f4522t;
+    public boolean f4688t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public d f4523u;
+    public d f4689u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public boolean f4524v;
+    public boolean f4690v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public static final boolean f4499w = Log.isLoggable("ExifInterface", 3);
+    public static final boolean f4665w = Log.isLoggable("ExifInterface", 3);
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public static final List<Integer> f4501x = Arrays.asList(1, 6, 3, 8);
+    public static final List<Integer> f4667x = Arrays.asList(1, 6, 3, 8);
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public static final List<Integer> f4502y = Arrays.asList(2, 7, 4, 5);
+    public static final List<Integer> f4668y = Arrays.asList(2, 7, 4, 5);
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public static final int[] f4503z = {8, 8, 8};
+    public static final int[] f4669z = {8, 8, 8};
     public static final int[] A = {4};
     public static final int[] B = {8};
     public static final byte[] C = {-1, -40, -1};
@@ -228,7 +228,7 @@ public class a {
     public class C0094a extends MediaDataSource {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public long f4525a;
+        public long f4691a;
         public final /* synthetic */ g b;
 
         public C0094a(g gVar) {
@@ -253,25 +253,25 @@ public class a {
                 return -1;
             }
             try {
-                long j11 = this.f4525a;
+                long j11 = this.f4691a;
                 if (j11 != j10) {
                     if (j11 >= 0 && j10 >= j11 + ((long) this.b.available())) {
                         return -1;
                     }
                     this.b.g(j10);
-                    this.f4525a = j10;
+                    this.f4691a = j10;
                 }
                 if (i11 > this.b.available()) {
                     i11 = this.b.available();
                 }
                 int i12 = this.b.read(bArr, i10, i11);
                 if (i12 >= 0) {
-                    this.f4525a += (long) i12;
+                    this.f4691a += (long) i12;
                     return i12;
                 }
             } catch (IOException unused) {
             }
-            this.f4525a = -1L;
+            this.f4691a = -1L;
             return -1;
         }
     }
@@ -279,12 +279,12 @@ public class a {
     public static class c extends FilterOutputStream {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final DataOutputStream f4531a;
+        public final DataOutputStream f4697a;
         public ByteOrder b;
 
         public c(OutputStream outputStream, ByteOrder byteOrder) {
             super(outputStream);
-            this.f4531a = new DataOutputStream(outputStream);
+            this.f4697a = new DataOutputStream(outputStream);
             this.b = byteOrder;
         }
 
@@ -293,34 +293,34 @@ public class a {
         }
 
         public void b(int i10) throws IOException {
-            this.f4531a.write(i10);
+            this.f4697a.write(i10);
         }
 
         public void c(int i10) throws IOException {
             ByteOrder byteOrder = this.b;
             if (byteOrder == ByteOrder.LITTLE_ENDIAN) {
-                this.f4531a.write(i10 & 255);
-                this.f4531a.write((i10 >>> 8) & 255);
-                this.f4531a.write((i10 >>> 16) & 255);
-                this.f4531a.write((i10 >>> 24) & 255);
+                this.f4697a.write(i10 & 255);
+                this.f4697a.write((i10 >>> 8) & 255);
+                this.f4697a.write((i10 >>> 16) & 255);
+                this.f4697a.write((i10 >>> 24) & 255);
                 return;
             }
             if (byteOrder == ByteOrder.BIG_ENDIAN) {
-                this.f4531a.write((i10 >>> 24) & 255);
-                this.f4531a.write((i10 >>> 16) & 255);
-                this.f4531a.write((i10 >>> 8) & 255);
-                this.f4531a.write(i10 & 255);
+                this.f4697a.write((i10 >>> 24) & 255);
+                this.f4697a.write((i10 >>> 16) & 255);
+                this.f4697a.write((i10 >>> 8) & 255);
+                this.f4697a.write(i10 & 255);
             }
         }
 
         public void d(short s8) throws IOException {
             ByteOrder byteOrder = this.b;
             if (byteOrder == ByteOrder.LITTLE_ENDIAN) {
-                this.f4531a.write(s8 & 255);
-                this.f4531a.write((s8 >>> 8) & 255);
+                this.f4697a.write(s8 & 255);
+                this.f4697a.write((s8 >>> 8) & 255);
             } else if (byteOrder == ByteOrder.BIG_ENDIAN) {
-                this.f4531a.write((s8 >>> 8) & 255);
-                this.f4531a.write(s8 & 255);
+                this.f4697a.write((s8 >>> 8) & 255);
+                this.f4697a.write(s8 & 255);
             }
         }
 
@@ -340,26 +340,26 @@ public class a {
 
         @Override // java.io.FilterOutputStream, java.io.OutputStream
         public void write(byte[] bArr) throws IOException {
-            this.f4531a.write(bArr);
+            this.f4697a.write(bArr);
         }
 
         @Override // java.io.FilterOutputStream, java.io.OutputStream
         public void write(byte[] bArr, int i10, int i11) throws IOException {
-            this.f4531a.write(bArr, i10, i11);
+            this.f4697a.write(bArr, i10, i11);
         }
     }
 
     public static class d {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final int f4532a;
+        public final int f4698a;
         public final int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final long f4533c;
+        public final long f4699c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final byte[] f4534d;
+        public final byte[] f4700d;
 
         public d(int i10, int i11, byte[] bArr) {
             this(i10, i11, -1L, bArr);
@@ -369,7 +369,7 @@ public class a {
             if (str.length() == 1 && str.charAt(0) >= '0' && str.charAt(0) <= '1') {
                 return new d(1, 1, new byte[]{(byte) (str.charAt(0) - '0')});
             }
-            byte[] bytes = str.getBytes(a.f4493q0);
+            byte[] bytes = str.getBytes(a.f4659q0);
             return new d(1, bytes.length, bytes);
         }
 
@@ -395,14 +395,14 @@ public class a {
             ByteBuffer byteBufferWrap = ByteBuffer.wrap(new byte[a.Y[10] * fVarArr.length]);
             byteBufferWrap.order(byteOrder);
             for (f fVar : fVarArr) {
-                byteBufferWrap.putInt((int) fVar.f4538a);
+                byteBufferWrap.putInt((int) fVar.f4704a);
                 byteBufferWrap.putInt((int) fVar.b);
             }
             return new d(10, fVarArr.length, byteBufferWrap.array());
         }
 
         public static d e(String str) {
-            byte[] bytes = (str + (char) 0).getBytes(a.f4493q0);
+            byte[] bytes = (str + (char) 0).getBytes(a.f4659q0);
             return new d(2, bytes.length, bytes);
         }
 
@@ -427,7 +427,7 @@ public class a {
             ByteBuffer byteBufferWrap = ByteBuffer.wrap(new byte[a.Y[5] * fVarArr.length]);
             byteBufferWrap.order(byteOrder);
             for (f fVar : fVarArr) {
-                byteBufferWrap.putInt((int) fVar.f4538a);
+                byteBufferWrap.putInt((int) fVar.f4704a);
                 byteBufferWrap.putInt((int) fVar.b);
             }
             return new d(5, fVarArr.length, byteBufferWrap.array());
@@ -558,7 +558,7 @@ public class a {
             }
             f[] fVarArr = (f[]) objO;
             while (i10 < fVarArr.length) {
-                sb2.append(fVarArr[i10].f4538a);
+                sb2.append(fVarArr[i10].f4704a);
                 sb2.append('/');
                 sb2.append(fVarArr[i10].b);
                 i10++;
@@ -583,19 +583,19 @@ public class a {
             InputStream inputStream2 = null;
             try {
                 try {
-                    bVar = new b(this.f4534d);
+                    bVar = new b(this.f4700d);
                     try {
                         bVar.e(byteOrder);
                         int length = 0;
-                        switch (this.f4532a) {
+                        switch (this.f4698a) {
                             case 1:
                             case 6:
-                                byte[] bArr = this.f4534d;
+                                byte[] bArr = this.f4700d;
                                 if (bArr.length == 1 && (b = bArr[0]) >= 0 && b <= 1) {
                                     str = new String(new char[]{(char) (b + 48)});
                                     break;
                                 } else {
-                                    String str2 = new String(bArr, a.f4493q0);
+                                    String str2 = new String(bArr, a.f4659q0);
                                     try {
                                         bVar.close();
                                         return str2;
@@ -612,13 +612,13 @@ public class a {
                                     while (true) {
                                         if (i10 >= a.Z.length) {
                                             length = a.Z.length;
-                                        } else if (this.f4534d[i10] == a.Z[i10]) {
+                                        } else if (this.f4700d[i10] == a.Z[i10]) {
                                             i10++;
                                         }
                                     }
                                 }
                                 StringBuilder sb2 = new StringBuilder();
-                                while (length < this.b && (b10 = this.f4534d[length]) != 0) {
+                                while (length < this.b && (b10 = this.f4700d[length]) != 0) {
                                     if (b10 >= 32) {
                                         sb2.append((char) b10);
                                     } else {
@@ -764,25 +764,25 @@ public class a {
         }
 
         public int p() {
-            return a.Y[this.f4532a] * this.b;
+            return a.Y[this.f4698a] * this.b;
         }
 
         public String toString() {
-            return "(" + a.X[this.f4532a] + ", data length:" + this.f4534d.length + ")";
+            return "(" + a.X[this.f4698a] + ", data length:" + this.f4700d.length + ")";
         }
 
         public d(int i10, int i11, long j10, byte[] bArr) {
-            this.f4532a = i10;
+            this.f4698a = i10;
             this.b = i11;
-            this.f4533c = j10;
-            this.f4534d = bArr;
+            this.f4699c = j10;
+            this.f4700d = bArr;
         }
     }
 
     public static class f {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final long f4538a;
+        public final long f4704a;
         public final long b;
 
         public /* synthetic */ f(long j10, long j11, C0094a c0094a) {
@@ -823,19 +823,19 @@ public class a {
         }
 
         public double a() {
-            return this.f4538a / this.b;
+            return this.f4704a / this.b;
         }
 
         public String toString() {
-            return this.f4538a + "/" + this.b;
+            return this.f4704a + "/" + this.b;
         }
 
         public f(long j10, long j11) {
             if (j11 == 0) {
-                this.f4538a = 0L;
+                this.f4704a = 0L;
                 this.b = 1L;
             } else {
-                this.f4538a = j10;
+                this.f4704a = j10;
                 this.b = j11;
             }
         }
@@ -843,35 +843,35 @@ public class a {
 
     static {
         e[] eVarArr = {new e("NewSubfileType", 254, 4), new e("SubfileType", 255, 4), new e("ImageWidth", Barcode.FORMAT_QR_CODE, 3, 4), new e("ImageLength", 257, 3, 4), new e("BitsPerSample", 258, 3), new e("Compression", 259, 3), new e("PhotometricInterpretation", 262, 3), new e("ImageDescription", 270, 2), new e("Make", 271, 2), new e("Model", 272, 2), new e("StripOffsets", 273, 3, 4), new e("Orientation", 274, 3), new e("SamplesPerPixel", 277, 3), new e("RowsPerStrip", 278, 3, 4), new e("StripByteCounts", 279, 3, 4), new e("XResolution", 282, 5), new e("YResolution", 283, 5), new e("PlanarConfiguration", 284, 3), new e("ResolutionUnit", 296, 3), new e("TransferFunction", MlKitException.LOW_LIGHT_IMAGE_CAPTURE_PROCESSING_FAILURE, 3), new e("Software", 305, 2), new e("DateTime", 306, 2), new e("Artist", 315, 2), new e("WhitePoint", 318, 5), new e("PrimaryChromaticities", 319, 5), new e("SubIFDPointer", 330, 4), new e("JPEGInterchangeFormat", 513, 4), new e("JPEGInterchangeFormatLength", 514, 4), new e("YCbCrCoefficients", 529, 5), new e("YCbCrSubSampling", 530, 3), new e("YCbCrPositioning", 531, 3), new e("ReferenceBlackWhite", 532, 5), new e("Copyright", 33432, 2), new e("ExifIFDPointer", 34665, 4), new e("GPSInfoIFDPointer", 34853, 4), new e("SensorTopBorder", 4, 4), new e("SensorLeftBorder", 5, 4), new e("SensorBottomBorder", 6, 4), new e("SensorRightBorder", 7, 4), new e("ISO", 23, 3), new e("JpgFromRaw", 46, 7), new e("Xmp", 700, 1)};
-        f4477a0 = eVarArr;
+        f4643a0 = eVarArr;
         e[] eVarArr2 = {new e("ExposureTime", 33434, 5), new e("FNumber", 33437, 5), new e("ExposureProgram", 34850, 3), new e("SpectralSensitivity", 34852, 2), new e("PhotographicSensitivity", 34855, 3), new e("OECF", 34856, 7), new e("SensitivityType", 34864, 3), new e("StandardOutputSensitivity", 34865, 4), new e("RecommendedExposureIndex", 34866, 4), new e("ISOSpeed", 34867, 4), new e("ISOSpeedLatitudeyyy", 34868, 4), new e("ISOSpeedLatitudezzz", 34869, 4), new e("ExifVersion", 36864, 2), new e("DateTimeOriginal", 36867, 2), new e("DateTimeDigitized", 36868, 2), new e("OffsetTime", 36880, 2), new e("OffsetTimeOriginal", 36881, 2), new e("OffsetTimeDigitized", 36882, 2), new e("ComponentsConfiguration", 37121, 7), new e("CompressedBitsPerPixel", 37122, 5), new e("ShutterSpeedValue", 37377, 10), new e("ApertureValue", 37378, 5), new e("BrightnessValue", 37379, 10), new e("ExposureBiasValue", 37380, 10), new e("MaxApertureValue", 37381, 5), new e("SubjectDistance", 37382, 5), new e("MeteringMode", 37383, 3), new e("LightSource", 37384, 3), new e("Flash", 37385, 3), new e("FocalLength", 37386, 5), new e("SubjectArea", 37396, 3), new e("MakerNote", 37500, 7), new e("UserComment", 37510, 7), new e("SubSecTime", 37520, 2), new e("SubSecTimeOriginal", 37521, 2), new e("SubSecTimeDigitized", 37522, 2), new e("FlashpixVersion", 40960, 7), new e("ColorSpace", 40961, 3), new e("PixelXDimension", 40962, 3, 4), new e("PixelYDimension", 40963, 3, 4), new e("RelatedSoundFile", 40964, 2), new e("InteroperabilityIFDPointer", 40965, 4), new e("FlashEnergy", 41483, 5), new e("SpatialFrequencyResponse", 41484, 7), new e("FocalPlaneXResolution", 41486, 5), new e("FocalPlaneYResolution", 41487, 5), new e("FocalPlaneResolutionUnit", 41488, 3), new e("SubjectLocation", 41492, 3), new e("ExposureIndex", 41493, 5), new e("SensingMethod", 41495, 3), new e("FileSource", 41728, 7), new e("SceneType", 41729, 7), new e("CFAPattern", 41730, 7), new e("CustomRendered", 41985, 3), new e("ExposureMode", 41986, 3), new e("WhiteBalance", 41987, 3), new e("DigitalZoomRatio", 41988, 5), new e("FocalLengthIn35mmFilm", 41989, 3), new e("SceneCaptureType", 41990, 3), new e("GainControl", 41991, 3), new e("Contrast", 41992, 3), new e("Saturation", 41993, 3), new e("Sharpness", 41994, 3), new e("DeviceSettingDescription", 41995, 7), new e("SubjectDistanceRange", 41996, 3), new e("ImageUniqueID", 42016, 2), new e("CameraOwnerName", 42032, 2), new e("BodySerialNumber", 42033, 2), new e("LensSpecification", 42034, 5), new e("LensMake", 42035, 2), new e("LensModel", 42036, 2), new e("Gamma", 42240, 5), new e("DNGVersion", 50706, 1), new e("DefaultCropSize", 50720, 3, 4)};
-        f4478b0 = eVarArr2;
+        f4644b0 = eVarArr2;
         e[] eVarArr3 = {new e("GPSVersionID", 0, 1), new e("GPSLatitudeRef", 1, 2), new e("GPSLatitude", 2, 5, 10), new e("GPSLongitudeRef", 3, 2), new e("GPSLongitude", 4, 5, 10), new e("GPSAltitudeRef", 5, 1), new e("GPSAltitude", 6, 5), new e("GPSTimeStamp", 7, 5), new e("GPSSatellites", 8, 2), new e("GPSStatus", 9, 2), new e("GPSMeasureMode", 10, 2), new e("GPSDOP", 11, 5), new e("GPSSpeedRef", 12, 2), new e("GPSSpeed", 13, 5), new e("GPSTrackRef", 14, 2), new e("GPSTrack", 15, 5), new e("GPSImgDirectionRef", 16, 2), new e("GPSImgDirection", 17, 5), new e("GPSMapDatum", 18, 2), new e("GPSDestLatitudeRef", 19, 2), new e("GPSDestLatitude", 20, 5), new e("GPSDestLongitudeRef", 21, 2), new e("GPSDestLongitude", 22, 5), new e("GPSDestBearingRef", 23, 2), new e("GPSDestBearing", 24, 5), new e("GPSDestDistanceRef", 25, 2), new e("GPSDestDistance", 26, 5), new e("GPSProcessingMethod", 27, 7), new e("GPSAreaInformation", 28, 7), new e("GPSDateStamp", 29, 2), new e("GPSDifferential", 30, 3), new e("GPSHPositioningError", 31, 5)};
-        f4479c0 = eVarArr3;
+        f4645c0 = eVarArr3;
         e[] eVarArr4 = {new e("InteroperabilityIndex", 1, 2)};
-        f4480d0 = eVarArr4;
+        f4646d0 = eVarArr4;
         e[] eVarArr5 = {new e("NewSubfileType", 254, 4), new e("SubfileType", 255, 4), new e("ThumbnailImageWidth", Barcode.FORMAT_QR_CODE, 3, 4), new e("ThumbnailImageLength", 257, 3, 4), new e("BitsPerSample", 258, 3), new e("Compression", 259, 3), new e("PhotometricInterpretation", 262, 3), new e("ImageDescription", 270, 2), new e("Make", 271, 2), new e("Model", 272, 2), new e("StripOffsets", 273, 3, 4), new e("ThumbnailOrientation", 274, 3), new e("SamplesPerPixel", 277, 3), new e("RowsPerStrip", 278, 3, 4), new e("StripByteCounts", 279, 3, 4), new e("XResolution", 282, 5), new e("YResolution", 283, 5), new e("PlanarConfiguration", 284, 3), new e("ResolutionUnit", 296, 3), new e("TransferFunction", MlKitException.LOW_LIGHT_IMAGE_CAPTURE_PROCESSING_FAILURE, 3), new e("Software", 305, 2), new e("DateTime", 306, 2), new e("Artist", 315, 2), new e("WhitePoint", 318, 5), new e("PrimaryChromaticities", 319, 5), new e("SubIFDPointer", 330, 4), new e("JPEGInterchangeFormat", 513, 4), new e("JPEGInterchangeFormatLength", 514, 4), new e("YCbCrCoefficients", 529, 5), new e("YCbCrSubSampling", 530, 3), new e("YCbCrPositioning", 531, 3), new e("ReferenceBlackWhite", 532, 5), new e("Copyright", 33432, 2), new e("ExifIFDPointer", 34665, 4), new e("GPSInfoIFDPointer", 34853, 4), new e("DNGVersion", 50706, 1), new e("DefaultCropSize", 50720, 3, 4)};
-        f4481e0 = eVarArr5;
-        f4482f0 = new e("StripOffsets", 273, 3);
+        f4647e0 = eVarArr5;
+        f4648f0 = new e("StripOffsets", 273, 3);
         e[] eVarArr6 = {new e("ThumbnailImage", Barcode.FORMAT_QR_CODE, 7), new e("CameraSettingsIFDPointer", 8224, 4), new e("ImageProcessingIFDPointer", 8256, 4)};
-        f4483g0 = eVarArr6;
+        f4649g0 = eVarArr6;
         e[] eVarArr7 = {new e("PreviewImageStart", 257, 4), new e("PreviewImageLength", 258, 4)};
-        f4484h0 = eVarArr7;
+        f4650h0 = eVarArr7;
         e[] eVarArr8 = {new e("AspectFrame", 4371, 3)};
-        f4485i0 = eVarArr8;
+        f4651i0 = eVarArr8;
         e[] eVarArr9 = {new e("ColorSpace", 55, 3)};
-        f4486j0 = eVarArr9;
+        f4652j0 = eVarArr9;
         e[][] eVarArr10 = {eVarArr, eVarArr2, eVarArr3, eVarArr4, eVarArr5, eVarArr, eVarArr6, eVarArr7, eVarArr8, eVarArr9};
-        f4487k0 = eVarArr10;
-        f4488l0 = new e[]{new e("SubIFDPointer", 330, 4), new e("ExifIFDPointer", 34665, 4), new e("GPSInfoIFDPointer", 34853, 4), new e("InteroperabilityIFDPointer", 40965, 4), new e("CameraSettingsIFDPointer", 8224, 1), new e("ImageProcessingIFDPointer", 8256, 1)};
-        f4489m0 = new HashMap[eVarArr10.length];
-        f4490n0 = new HashMap[eVarArr10.length];
-        f4491o0 = Collections.unmodifiableSet(new HashSet(Arrays.asList("FNumber", "DigitalZoomRatio", "ExposureTime", "SubjectDistance")));
-        f4492p0 = new HashMap<>();
+        f4653k0 = eVarArr10;
+        f4654l0 = new e[]{new e("SubIFDPointer", 330, 4), new e("ExifIFDPointer", 34665, 4), new e("GPSInfoIFDPointer", 34853, 4), new e("InteroperabilityIFDPointer", 40965, 4), new e("CameraSettingsIFDPointer", 8224, 1), new e("ImageProcessingIFDPointer", 8256, 1)};
+        f4655m0 = new HashMap[eVarArr10.length];
+        f4656n0 = new HashMap[eVarArr10.length];
+        f4657o0 = Collections.unmodifiableSet(new HashSet(Arrays.asList("FNumber", "DigitalZoomRatio", "ExposureTime", "SubjectDistance")));
+        f4658p0 = new HashMap<>();
         Charset charsetForName = Charset.forName("US-ASCII");
-        f4493q0 = charsetForName;
-        f4494r0 = "Exif\u0000\u0000".getBytes(charsetForName);
-        f4495s0 = "http://ns.adobe.com/xap/1.0/\u0000".getBytes(charsetForName);
+        f4659q0 = charsetForName;
+        f4660r0 = "Exif\u0000\u0000".getBytes(charsetForName);
+        f4661s0 = "http://ns.adobe.com/xap/1.0/\u0000".getBytes(charsetForName);
         Locale locale = Locale.US;
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy:MM:dd HH:mm:ss", locale);
         V = simpleDateFormat;
@@ -881,37 +881,37 @@ public class a {
         simpleDateFormat2.setTimeZone(TimeZone.getTimeZone("UTC"));
         int i10 = 0;
         while (true) {
-            e[][] eVarArr11 = f4487k0;
+            e[][] eVarArr11 = f4653k0;
             if (i10 >= eVarArr11.length) {
-                HashMap<Integer, Integer> map = f4492p0;
-                e[] eVarArr12 = f4488l0;
-                map.put(Integer.valueOf(eVarArr12[0].f4535a), 5);
-                map.put(Integer.valueOf(eVarArr12[1].f4535a), 1);
-                map.put(Integer.valueOf(eVarArr12[2].f4535a), 2);
-                map.put(Integer.valueOf(eVarArr12[3].f4535a), 3);
-                map.put(Integer.valueOf(eVarArr12[4].f4535a), 7);
-                map.put(Integer.valueOf(eVarArr12[5].f4535a), 8);
-                f4496t0 = Pattern.compile(".*[1-9].*");
-                f4497u0 = Pattern.compile("^(\\d{2}):(\\d{2}):(\\d{2})$");
-                f4498v0 = Pattern.compile("^(\\d{4}):(\\d{2}):(\\d{2})\\s(\\d{2}):(\\d{2}):(\\d{2})$");
-                f4500w0 = Pattern.compile("^(\\d{4})-(\\d{2})-(\\d{2})\\s(\\d{2}):(\\d{2}):(\\d{2})$");
+                HashMap<Integer, Integer> map = f4658p0;
+                e[] eVarArr12 = f4654l0;
+                map.put(Integer.valueOf(eVarArr12[0].f4701a), 5);
+                map.put(Integer.valueOf(eVarArr12[1].f4701a), 1);
+                map.put(Integer.valueOf(eVarArr12[2].f4701a), 2);
+                map.put(Integer.valueOf(eVarArr12[3].f4701a), 3);
+                map.put(Integer.valueOf(eVarArr12[4].f4701a), 7);
+                map.put(Integer.valueOf(eVarArr12[5].f4701a), 8);
+                f4662t0 = Pattern.compile(".*[1-9].*");
+                f4663u0 = Pattern.compile("^(\\d{2}):(\\d{2}):(\\d{2})$");
+                f4664v0 = Pattern.compile("^(\\d{4}):(\\d{2}):(\\d{2})\\s(\\d{2}):(\\d{2}):(\\d{2})$");
+                f4666w0 = Pattern.compile("^(\\d{4})-(\\d{2})-(\\d{2})\\s(\\d{2}):(\\d{2}):(\\d{2})$");
                 return;
             }
-            f4489m0[i10] = new HashMap<>();
-            f4490n0[i10] = new HashMap<>();
+            f4655m0[i10] = new HashMap<>();
+            f4656n0[i10] = new HashMap<>();
             for (e eVar : eVarArr11[i10]) {
-                f4489m0[i10].put(Integer.valueOf(eVar.f4535a), eVar);
-                f4490n0[i10].put(eVar.b, eVar);
+                f4655m0[i10].put(Integer.valueOf(eVar.f4701a), eVar);
+                f4656n0[i10].put(eVar.b, eVar);
             }
             i10++;
         }
     }
 
     public a(String str) throws Throwable {
-        e[][] eVarArr = f4487k0;
-        this.f4508f = new HashMap[eVarArr.length];
-        this.f4509g = new HashSet(eVarArr.length);
-        this.f4510h = ByteOrder.BIG_ENDIAN;
+        e[][] eVarArr = f4653k0;
+        this.f4674f = new HashMap[eVarArr.length];
+        this.f4675g = new HashSet(eVarArr.length);
+        this.f4676h = ByteOrder.BIG_ENDIAN;
         if (str == null) {
             throw new NullPointerException("filename cannot be null");
         }
@@ -1000,7 +1000,7 @@ public class a {
             Os.lseek(fileDescriptor, 0L, OsConstants.SEEK_CUR);
             return true;
         } catch (Exception unused) {
-            if (!f4499w) {
+            if (!f4665w) {
                 return false;
             }
             Log.d("ExifInterface", "The file descriptor for the given input is not seekable");
@@ -1051,15 +1051,15 @@ public class a {
         InputStream fileInputStream;
         Exception e10;
         InputStream inputStream = null;
-        if (!this.f4511i) {
+        if (!this.f4677i) {
             return null;
         }
-        byte[] bArr = this.f4516n;
+        byte[] bArr = this.f4682n;
         if (bArr != null) {
             return bArr;
         }
         try {
-            fileInputStream = this.f4505c;
+            fileInputStream = this.f4671c;
             if (fileInputStream != null) {
                 try {
                     if (!fileInputStream.markSupported()) {
@@ -1088,8 +1088,8 @@ public class a {
                     }
                     throw th;
                 }
-            } else if (this.f4504a != null) {
-                fileInputStream = new FileInputStream(this.f4504a);
+            } else if (this.f4670a != null) {
+                fileInputStream = new FileInputStream(this.f4670a);
                 fileDescriptor = null;
             } else {
                 FileDescriptor fileDescriptorDup = Os.dup(this.b);
@@ -1120,10 +1120,10 @@ public class a {
             try {
                 try {
                     b bVar = new b(fileInputStream);
-                    bVar.f(this.f4514l + this.f4518p);
-                    byte[] bArr2 = new byte[this.f4515m];
+                    bVar.f(this.f4680l + this.f4684p);
+                    byte[] bArr2 = new byte[this.f4681m];
                     bVar.readFully(bArr2);
-                    this.f4516n = bArr2;
+                    this.f4682n = bArr2;
                     c4.b.b(fileInputStream);
                     if (fileDescriptor != null) {
                         c4.b.a(fileDescriptor);
@@ -1158,7 +1158,7 @@ public class a {
     }
 
     public final void B(b bVar) throws Throwable {
-        if (f4499w) {
+        if (f4665w) {
             Log.d("ExifInterface", "getWebpAttributes starting with: " + bVar);
         }
         bVar.e(ByteOrder.LITTLE_ENDIAN);
@@ -1176,11 +1176,11 @@ public class a {
                 if (Arrays.equals(O, bArr2)) {
                     byte[] bArrCopyOfRange = new byte[i11];
                     bVar.readFully(bArrCopyOfRange);
-                    byte[] bArr3 = f4494r0;
+                    byte[] bArr3 = f4660r0;
                     if (c4.b.f(bArrCopyOfRange, bArr3)) {
                         bArrCopyOfRange = Arrays.copyOfRange(bArrCopyOfRange, bArr3.length, i11);
                     }
-                    this.f4518p = i12;
+                    this.f4684p = i12;
                     X(bArrCopyOfRange, 0);
                     k0(new b(bArrCopyOfRange));
                     return;
@@ -1208,23 +1208,23 @@ public class a {
         if (dVar == null || dVar2 == null) {
             return;
         }
-        int iM = dVar.m(this.f4510h);
-        int iM2 = dVar2.m(this.f4510h);
-        if (this.f4506d == 7) {
-            iM += this.f4519q;
+        int iM = dVar.m(this.f4676h);
+        int iM2 = dVar2.m(this.f4676h);
+        if (this.f4672d == 7) {
+            iM += this.f4685q;
         }
         if (iM > 0 && iM2 > 0) {
-            this.f4511i = true;
-            if (this.f4504a == null && this.f4505c == null && this.b == null) {
+            this.f4677i = true;
+            if (this.f4670a == null && this.f4671c == null && this.b == null) {
                 byte[] bArr = new byte[iM2];
                 bVar.f(iM);
                 bVar.readFully(bArr);
-                this.f4516n = bArr;
+                this.f4682n = bArr;
             }
-            this.f4514l = iM;
-            this.f4515m = iM2;
+            this.f4680l = iM;
+            this.f4681m = iM2;
         }
-        if (f4499w) {
+        if (f4665w) {
             Log.d("ExifInterface", "Setting thumbnail attributes with offset: " + iM + ", length: " + iM2);
         }
     }
@@ -1236,8 +1236,8 @@ public class a {
         if (dVar == null || dVar2 == null) {
             return;
         }
-        long[] jArrC = c4.b.c(dVar.o(this.f4510h));
-        long[] jArrC2 = c4.b.c(dVar2.o(this.f4510h));
+        long[] jArrC = c4.b.c(dVar.o(this.f4676h));
+        long[] jArrC2 = c4.b.c(dVar2.o(this.f4676h));
         if (jArrC == null || jArrC.length == 0) {
             Log.w("ExifInterface", "stripOffsets should not be null or have zero length.");
             return;
@@ -1257,9 +1257,9 @@ public class a {
         int i11 = (int) j10;
         byte[] bArr = new byte[i11];
         int i12 = 1;
-        this.f4513k = true;
-        this.f4512j = true;
-        this.f4511i = true;
+        this.f4679k = true;
+        this.f4678j = true;
+        this.f4677i = true;
         int i13 = 0;
         int i14 = 0;
         int i15 = 0;
@@ -1269,7 +1269,7 @@ public class a {
             if (i13 < jArrC.length - i12) {
                 i10 = i13;
                 if (i16 + i17 != jArrC[i10 + 1]) {
-                    this.f4513k = false;
+                    this.f4679k = false;
                 }
             } else {
                 i10 = i13;
@@ -1299,10 +1299,10 @@ public class a {
                 return;
             }
         }
-        this.f4516n = bArr;
-        if (this.f4513k) {
-            this.f4514l = (int) jArrC[0];
-            this.f4515m = i11;
+        this.f4682n = bArr;
+        if (this.f4679k) {
+            this.f4680l = (int) jArrC[0];
+            this.f4681m = i11;
         }
     }
 
@@ -1311,8 +1311,8 @@ public class a {
             throw new NullPointerException("filename cannot be null");
         }
         FileInputStream fileInputStream = null;
-        this.f4505c = null;
-        this.f4504a = str;
+        this.f4671c = null;
+        this.f4670a = str;
         try {
             FileInputStream fileInputStream2 = new FileInputStream(str);
             try {
@@ -1408,7 +1408,7 @@ public class a {
                 } catch (Exception e10) {
                     e = e10;
                     bVar = bVar2;
-                    if (f4499w) {
+                    if (f4665w) {
                         Log.d("ExifInterface", "Exception parsing HEIF file type box.", e);
                     }
                     if (bVar != null) {
@@ -1437,7 +1437,7 @@ public class a {
             b bVar2 = new b(bArr);
             try {
                 ByteOrder byteOrderW = W(bVar2);
-                this.f4510h = byteOrderW;
+                this.f4676h = byteOrderW;
                 bVar2.e(byteOrderW);
                 short s8 = bVar2.readShort();
                 boolean z10 = s8 == 20306 || s8 == 21330;
@@ -1493,7 +1493,7 @@ public class a {
             b bVar2 = new b(bArr);
             try {
                 ByteOrder byteOrderW = W(bVar2);
-                this.f4510h = byteOrderW;
+                this.f4676h = byteOrderW;
                 bVar2.e(byteOrderW);
                 boolean z10 = bVar2.readShort() == 85;
                 bVar2.close();
@@ -1523,16 +1523,16 @@ public class a {
         int iM;
         d dVar2 = map.get("BitsPerSample");
         if (dVar2 != null) {
-            int[] iArr = (int[]) dVar2.o(this.f4510h);
-            int[] iArr2 = f4503z;
+            int[] iArr = (int[]) dVar2.o(this.f4676h);
+            int[] iArr2 = f4669z;
             if (Arrays.equals(iArr2, iArr)) {
                 return true;
             }
-            if (this.f4506d == 3 && (dVar = map.get("PhotometricInterpretation")) != null && (((iM = dVar.m(this.f4510h)) == 1 && Arrays.equals(iArr, B)) || (iM == 6 && Arrays.equals(iArr, iArr2)))) {
+            if (this.f4672d == 3 && (dVar = map.get("PhotometricInterpretation")) != null && (((iM = dVar.m(this.f4676h)) == 1 && Arrays.equals(iArr, B)) || (iM == 6 && Arrays.equals(iArr, iArr2)))) {
                 return true;
             }
         }
-        if (!f4499w) {
+        if (!f4665w) {
             return false;
         }
         Log.d("ExifInterface", "Unsupported data type value");
@@ -1545,7 +1545,7 @@ public class a {
         if (dVar == null || dVar2 == null) {
             return false;
         }
-        return dVar.m(this.f4510h) <= 512 && dVar2.m(this.f4510h) <= 512;
+        return dVar.m(this.f4676h) <= 512 && dVar2.m(this.f4676h) <= 512;
     }
 
     public final boolean S(byte[] bArr) {
@@ -1578,20 +1578,20 @@ public class a {
     /* JADX WARN: Code duplicated, block: B:70:? A[RETURN, SYNTHETIC] */
     public final void T(InputStream inputStream) {
         boolean z10;
-        for (int i10 = 0; i10 < f4487k0.length; i10++) {
+        for (int i10 = 0; i10 < f4653k0.length; i10++) {
             try {
                 try {
-                    this.f4508f[i10] = new HashMap<>();
+                    this.f4674f[i10] = new HashMap<>();
                 } catch (Throwable th2) {
                     e();
-                    if (f4499w) {
+                    if (f4665w) {
                         V();
                     }
                     throw th2;
                 }
             } catch (IOException e10) {
                 e = e10;
-                z10 = f4499w;
+                z10 = f4665w;
                 if (z10) {
                     Log.w("ExifInterface", "Invalid image: ExifInterface got an unsupported image format file (ExifInterface supports JPEG and some RAW image formats only) or a corrupted JPEG file to ExifInterface.", e);
                 }
@@ -1603,7 +1603,7 @@ public class a {
                 return;
             } catch (UnsupportedOperationException e11) {
                 e = e11;
-                z10 = f4499w;
+                z10 = f4665w;
                 if (z10) {
                     Log.w("ExifInterface", "Invalid image: ExifInterface got an unsupported image format file (ExifInterface supports JPEG and some RAW image formats only) or a corrupted JPEG file to ExifInterface.", e);
                 }
@@ -1615,15 +1615,15 @@ public class a {
                 return;
             }
         }
-        if (!this.f4507e) {
+        if (!this.f4673e) {
             BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream, BacktraceANRSettings.DEFAULT_ANR_TIMEOUT);
-            this.f4506d = r(bufferedInputStream);
+            this.f4672d = r(bufferedInputStream);
             inputStream = bufferedInputStream;
         }
-        if (l0(this.f4506d)) {
+        if (l0(this.f4672d)) {
             g gVar = new g(inputStream);
-            if (!this.f4507e) {
-                int i11 = this.f4506d;
+            if (!this.f4673e) {
+                int i11 = this.f4672d;
                 if (i11 == 12 || i11 == 15) {
                     o(gVar, i11);
                 } else if (i11 == 7) {
@@ -1635,17 +1635,17 @@ public class a {
                 }
             } else if (!y(gVar)) {
                 e();
-                if (f4499w) {
+                if (f4665w) {
                     V();
                     return;
                 }
                 return;
             }
-            gVar.g(this.f4518p);
+            gVar.g(this.f4684p);
             k0(gVar);
         } else {
             b bVar = new b(inputStream);
-            int i12 = this.f4506d;
+            int i12 = this.f4672d;
             if (i12 == 4) {
                 p(bVar, 0, 0);
             } else if (i12 == 13) {
@@ -1657,17 +1657,17 @@ public class a {
             }
         }
         e();
-        if (f4499w) {
+        if (f4665w) {
             V();
         }
     }
 
     public final void U(b bVar) throws IOException {
         ByteOrder byteOrderW = W(bVar);
-        this.f4510h = byteOrderW;
+        this.f4676h = byteOrderW;
         bVar.e(byteOrderW);
         int unsignedShort = bVar.readUnsignedShort();
-        int i10 = this.f4506d;
+        int i10 = this.f4672d;
         if (i10 != 7 && i10 != 10 && unsignedShort != 42) {
             throw new IOException("Invalid start code: " + Integer.toHexString(unsignedShort));
         }
@@ -1682,11 +1682,11 @@ public class a {
     }
 
     public final void V() {
-        for (int i10 = 0; i10 < this.f4508f.length; i10++) {
-            Log.d("ExifInterface", "The size of tag group[" + i10 + "]: " + this.f4508f[i10].size());
-            for (Map.Entry<String, d> entry : this.f4508f[i10].entrySet()) {
+        for (int i10 = 0; i10 < this.f4674f.length; i10++) {
+            Log.d("ExifInterface", "The size of tag group[" + i10 + "]: " + this.f4674f[i10].size());
+            for (Map.Entry<String, d> entry : this.f4674f[i10].entrySet()) {
                 d value = entry.getValue();
-                Log.d("ExifInterface", "tagName: " + entry.getKey() + ", tagType: " + value.toString() + ", tagValue: '" + value.n(this.f4510h) + "'");
+                Log.d("ExifInterface", "tagName: " + entry.getKey() + ", tagType: " + value.toString() + ", tagValue: '" + value.n(this.f4676h) + "'");
             }
         }
     }
@@ -1694,13 +1694,13 @@ public class a {
     public final ByteOrder W(b bVar) throws IOException {
         short s8 = bVar.readShort();
         if (s8 == 18761) {
-            if (f4499w) {
+            if (f4665w) {
                 Log.d("ExifInterface", "readExifSegment: Byte Align II");
             }
             return ByteOrder.LITTLE_ENDIAN;
         }
         if (s8 == 19789) {
-            if (f4499w) {
+            if (f4665w) {
                 Log.d("ExifInterface", "readExifSegment: Byte Align MM");
             }
             return ByteOrder.BIG_ENDIAN;
@@ -1762,9 +1762,9 @@ public class a {
         long jD;
         String str;
         int i12;
-        this.f4509g.add(Integer.valueOf(gVar.b()));
+        this.f4675g.add(Integer.valueOf(gVar.b()));
         short s8 = gVar.readShort();
-        if (f4499w) {
+        if (f4665w) {
             Log.d("ExifInterface", "numberOfDirectoryEntry: " + ((int) s8));
         }
         if (s8 <= 0) {
@@ -1776,8 +1776,8 @@ public class a {
             int unsignedShort3 = gVar.readUnsignedShort();
             int i13 = gVar.readInt();
             long jB = ((long) gVar.b()) + 4;
-            e eVar4 = f4489m0[i10].get(Integer.valueOf(unsignedShort2));
-            boolean z12 = f4499w;
+            e eVar4 = f4655m0[i10].get(Integer.valueOf(unsignedShort2));
+            boolean z12 = f4665w;
             if (z12) {
                 i11 = 4;
                 Log.d("ExifInterface", String.format("ifdType: %d, tagNumber: %d, tagName: %s, dataFormat: %d, numberOfComponents: %d", Integer.valueOf(i10), Integer.valueOf(unsignedShort2), eVar4 != null ? eVar4.b : null, Integer.valueOf(unsignedShort3), Integer.valueOf(i13)));
@@ -1790,7 +1790,7 @@ public class a {
                     if (unsignedShort3 < iArr.length) {
                         if (eVar4.a(unsignedShort3)) {
                             if (unsignedShort3 == 7) {
-                                unsignedShort3 = eVar4.f4536c;
+                                unsignedShort3 = eVar4.f4702c;
                             }
                             eVar = eVar4;
                             j10 = ((long) i13) * ((long) iArr[unsignedShort3]);
@@ -1812,20 +1812,20 @@ public class a {
                             if (z12) {
                                 Log.d("ExifInterface", "seek to data offset: " + i12);
                             }
-                            if (this.f4506d == 7) {
+                            if (this.f4672d == 7) {
                                 z11 = z12;
                                 eVar2 = eVar;
                                 if ("MakerNote".equals(eVar2.b)) {
-                                    this.f4519q = i12;
+                                    this.f4685q = i12;
                                 } else if (i10 != 6 && "ThumbnailImage".equals(eVar2.b)) {
-                                    this.f4520r = i12;
-                                    this.f4521s = i13;
-                                    d dVarJ = d.j(6, this.f4510h);
-                                    d dVarF = d.f(this.f4520r, this.f4510h);
-                                    d dVarF2 = d.f(this.f4521s, this.f4510h);
-                                    this.f4508f[i11].put("Compression", dVarJ);
-                                    this.f4508f[i11].put("JPEGInterchangeFormat", dVarF);
-                                    this.f4508f[i11].put("JPEGInterchangeFormatLength", dVarF2);
+                                    this.f4686r = i12;
+                                    this.f4687s = i13;
+                                    d dVarJ = d.j(6, this.f4676h);
+                                    d dVarF = d.f(this.f4686r, this.f4676h);
+                                    d dVarF2 = d.f(this.f4687s, this.f4676h);
+                                    this.f4674f[i11].put("Compression", dVarJ);
+                                    this.f4674f[i11].put("JPEGInterchangeFormat", dVarF);
+                                    this.f4674f[i11].put("JPEGInterchangeFormatLength", dVarF2);
                                 }
                             } else {
                                 z11 = z12;
@@ -1837,7 +1837,7 @@ public class a {
                             jB = jB;
                             eVar2 = eVar;
                         }
-                        num = f4492p0.get(Integer.valueOf(unsignedShort2));
+                        num = f4658p0.get(Integer.valueOf(unsignedShort2));
                         if (z11) {
                             Log.d("ExifInterface", "nextIfdType: " + num + " byteCount: " + j10);
                         }
@@ -1863,7 +1863,7 @@ public class a {
                                         }
                                         Log.d("ExifInterface", str);
                                     }
-                                } else if (!this.f4509g.contains(Integer.valueOf((int) jD))) {
+                                } else if (!this.f4675g.contains(Integer.valueOf((int) jD))) {
                                     gVar.g(jD);
                                     Y(gVar, num.intValue());
                                 } else if (z11) {
@@ -1894,19 +1894,19 @@ public class a {
                             }
                             gVar.g(jB);
                         } else {
-                            int iB = gVar.b() + this.f4518p;
+                            int iB = gVar.b() + this.f4684p;
                             byte[] bArr = new byte[(int) j10];
                             gVar.readFully(bArr);
                             long j12 = iB;
                             eVar3 = eVar2;
                             j11 = jB;
                             d dVar = new d(unsignedShort3, i13, j12, bArr);
-                            this.f4508f[i10].put(eVar3.b, dVar);
+                            this.f4674f[i10].put(eVar3.b, dVar);
                             if ("DNGVersion".equals(eVar3.b)) {
-                                this.f4506d = 3;
+                                this.f4672d = 3;
                             }
-                            if (((!"Make".equals(eVar3.b) || "Model".equals(eVar3.b)) && dVar.n(this.f4510h).contains("PENTAX")) || ("Compression".equals(eVar3.b) && dVar.m(this.f4510h) == 65535)) {
-                                this.f4506d = 8;
+                            if (((!"Make".equals(eVar3.b) || "Model".equals(eVar3.b)) && dVar.n(this.f4676h).contains("PENTAX")) || ("Compression".equals(eVar3.b) && dVar.m(this.f4676h) == 65535)) {
+                                this.f4672d = 8;
                             }
                             if (gVar.b() != j11) {
                                 gVar.g(j11);
@@ -1932,11 +1932,11 @@ public class a {
                         if (z12) {
                             Log.d("ExifInterface", "seek to data offset: " + i12);
                         }
-                        if (this.f4506d == 7) {
+                        if (this.f4672d == 7) {
                             z11 = z12;
                             eVar2 = eVar;
                             if ("MakerNote".equals(eVar2.b)) {
-                                this.f4519q = i12;
+                                this.f4685q = i12;
                             } else if (i10 != 6) {
                             }
                         } else {
@@ -1949,7 +1949,7 @@ public class a {
                         jB = jB;
                         eVar2 = eVar;
                     }
-                    num = f4492p0.get(Integer.valueOf(unsignedShort2));
+                    num = f4658p0.get(Integer.valueOf(unsignedShort2));
                     if (z11) {
                         Log.d("ExifInterface", "nextIfdType: " + num + " byteCount: " + j10);
                     }
@@ -2007,20 +2007,20 @@ public class a {
                         }
                         gVar.g(jB);
                     } else {
-                        int iB2 = gVar.b() + this.f4518p;
+                        int iB2 = gVar.b() + this.f4684p;
                         byte[] bArr2 = new byte[(int) j10];
                         gVar.readFully(bArr2);
                         long j13 = iB2;
                         eVar3 = eVar2;
                         j11 = jB;
                         d dVar2 = new d(unsignedShort3, i13, j13, bArr2);
-                        this.f4508f[i10].put(eVar3.b, dVar2);
+                        this.f4674f[i10].put(eVar3.b, dVar2);
                         if ("DNGVersion".equals(eVar3.b)) {
-                            this.f4506d = 3;
+                            this.f4672d = 3;
                         }
                         if (!"Make".equals(eVar3.b)) {
                         }
-                        this.f4506d = 8;
+                        this.f4672d = 8;
                         if (gVar.b() != j11) {
                             gVar.g(j11);
                         }
@@ -2042,11 +2042,11 @@ public class a {
                     if (z12) {
                         Log.d("ExifInterface", "seek to data offset: " + i12);
                     }
-                    if (this.f4506d == 7) {
+                    if (this.f4672d == 7) {
                         z11 = z12;
                         eVar2 = eVar;
                         if ("MakerNote".equals(eVar2.b)) {
-                            this.f4519q = i12;
+                            this.f4685q = i12;
                         } else if (i10 != 6) {
                         }
                     } else {
@@ -2059,7 +2059,7 @@ public class a {
                     jB = jB;
                     eVar2 = eVar;
                 }
-                num = f4492p0.get(Integer.valueOf(unsignedShort2));
+                num = f4658p0.get(Integer.valueOf(unsignedShort2));
                 if (z11) {
                     Log.d("ExifInterface", "nextIfdType: " + num + " byteCount: " + j10);
                 }
@@ -2117,20 +2117,20 @@ public class a {
                     }
                     gVar.g(jB);
                 } else {
-                    int iB3 = gVar.b() + this.f4518p;
+                    int iB3 = gVar.b() + this.f4684p;
                     byte[] bArr3 = new byte[(int) j10];
                     gVar.readFully(bArr3);
                     long j14 = iB3;
                     eVar3 = eVar2;
                     j11 = jB;
                     d dVar3 = new d(unsignedShort3, i13, j14, bArr3);
-                    this.f4508f[i10].put(eVar3.b, dVar3);
+                    this.f4674f[i10].put(eVar3.b, dVar3);
                     if ("DNGVersion".equals(eVar3.b)) {
-                        this.f4506d = 3;
+                        this.f4672d = 3;
                     }
                     if (!"Make".equals(eVar3.b)) {
                     }
-                    this.f4506d = 8;
+                    this.f4672d = 8;
                     if (gVar.b() != j11) {
                         gVar.g(j11);
                     }
@@ -2140,7 +2140,7 @@ public class a {
             s8 = s8;
         }
         int i14 = gVar.readInt();
-        boolean z13 = f4499w;
+        boolean z13 = f4665w;
         if (z13) {
             Log.d("ExifInterface", String.format("nextIfdOffset: %d", Integer.valueOf(i14)));
         }
@@ -2152,7 +2152,7 @@ public class a {
             }
             return;
         }
-        if (this.f4509g.contains(Integer.valueOf(i14))) {
+        if (this.f4675g.contains(Integer.valueOf(i14))) {
             if (z13) {
                 Log.d("ExifInterface", "Stop reading file since re-reading an IFD may cause an infinite loop: " + i14);
                 return;
@@ -2160,39 +2160,39 @@ public class a {
             return;
         }
         gVar.g(j15);
-        if (this.f4508f[4].isEmpty()) {
+        if (this.f4674f[4].isEmpty()) {
             Y(gVar, 4);
-        } else if (this.f4508f[5].isEmpty()) {
+        } else if (this.f4674f[5].isEmpty()) {
             Y(gVar, 5);
         }
     }
 
     public final void Z(String str) {
-        for (int i10 = 0; i10 < f4487k0.length; i10++) {
-            this.f4508f[i10].remove(str);
+        for (int i10 = 0; i10 < f4653k0.length; i10++) {
+            this.f4674f[i10].remove(str);
         }
     }
 
     public final void a0(int i10, String str, String str2) {
-        if (this.f4508f[i10].isEmpty() || this.f4508f[i10].get(str) == null) {
+        if (this.f4674f[i10].isEmpty() || this.f4674f[i10].get(str) == null) {
             return;
         }
-        HashMap<String, d> map = this.f4508f[i10];
+        HashMap<String, d> map = this.f4674f[i10];
         map.put(str2, map.get(str));
-        this.f4508f[i10].remove(str);
+        this.f4674f[i10].remove(str);
     }
 
     public final void b0(g gVar, int i10) throws Throwable {
-        d dVar = this.f4508f[i10].get("ImageLength");
-        d dVar2 = this.f4508f[i10].get("ImageWidth");
+        d dVar = this.f4674f[i10].get("ImageLength");
+        d dVar2 = this.f4674f[i10].get("ImageWidth");
         if (dVar == null || dVar2 == null) {
-            d dVar3 = this.f4508f[i10].get("JPEGInterchangeFormat");
-            d dVar4 = this.f4508f[i10].get("JPEGInterchangeFormatLength");
+            d dVar3 = this.f4674f[i10].get("JPEGInterchangeFormat");
+            d dVar4 = this.f4674f[i10].get("JPEGInterchangeFormatLength");
             if (dVar3 == null || dVar4 == null) {
                 return;
             }
-            int iM = dVar3.m(this.f4510h);
-            int iM2 = dVar3.m(this.f4510h);
+            int iM = dVar3.m(this.f4676h);
+            int iM2 = dVar3.m(this.f4676h);
             gVar.g(iM);
             byte[] bArr = new byte[iM2];
             gVar.readFully(bArr);
@@ -2212,22 +2212,22 @@ public class a {
         InputStream fileInputStream2;
         Exception e10;
         FileOutputStream fileOutputStream4;
-        if (!Q(this.f4506d)) {
+        if (!Q(this.f4672d)) {
             throw new IOException("ExifInterface only supports saving attributes for JPEG, PNG, and WebP formats.");
         }
-        if (this.b == null && this.f4504a == null) {
+        if (this.b == null && this.f4670a == null) {
             throw new IOException("ExifInterface does not support saving attributes for the current input.");
         }
-        if (this.f4511i && this.f4512j && !this.f4513k) {
+        if (this.f4677i && this.f4678j && !this.f4679k) {
             throw new IOException("ExifInterface does not support saving attributes when the image file has non-consecutive thumbnail strips");
         }
-        this.f4522t = true;
-        this.f4516n = z();
+        this.f4688t = true;
+        this.f4682n = z();
         InputStream inputStream = null;
         try {
             File fileCreateTempFile = File.createTempFile("temp", "tmp");
-            if (this.f4504a != null) {
-                fileInputStream = new FileInputStream(this.f4504a);
+            if (this.f4670a != null) {
+                fileInputStream = new FileInputStream(this.f4670a);
             } else {
                 Os.lseek(this.b, 0L, OsConstants.SEEK_SET);
                 fileInputStream = new FileInputStream(this.b);
@@ -2243,8 +2243,8 @@ public class a {
                             try {
                                 FileInputStream fileInputStream3 = new FileInputStream(fileCreateTempFile);
                                 try {
-                                    if (this.f4504a != null) {
-                                        fileOutputStream3 = new FileOutputStream(this.f4504a);
+                                    if (this.f4670a != null) {
+                                        fileOutputStream3 = new FileOutputStream(this.f4670a);
                                     } else {
                                         Os.lseek(this.b, 0L, OsConstants.SEEK_SET);
                                         fileOutputStream3 = new FileOutputStream(this.b);
@@ -2254,7 +2254,7 @@ public class a {
                                         try {
                                             BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(fileOutputStream3);
                                             try {
-                                                int i10 = this.f4506d;
+                                                int i10 = this.f4672d;
                                                 if (i10 == 4) {
                                                     d0(bufferedInputStream, bufferedOutputStream);
                                                 } else if (i10 == 13) {
@@ -2265,15 +2265,15 @@ public class a {
                                                 c4.b.b(bufferedInputStream);
                                                 c4.b.b(bufferedOutputStream);
                                                 fileCreateTempFile.delete();
-                                                this.f4516n = null;
+                                                this.f4682n = null;
                                             } catch (Exception e11) {
                                                 exc = e11;
                                                 inputStream = fileInputStream3;
                                                 try {
                                                     fileInputStream2 = new FileInputStream(fileCreateTempFile);
                                                     try {
-                                                        if (this.f4504a != null) {
-                                                            fileOutputStream4 = new FileOutputStream(this.f4504a);
+                                                        if (this.f4670a != null) {
+                                                            fileOutputStream4 = new FileOutputStream(this.f4670a);
                                                         } else {
                                                             Os.lseek(this.b, 0L, OsConstants.SEEK_SET);
                                                             fileOutputStream4 = new FileOutputStream(this.b);
@@ -2335,8 +2335,8 @@ public class a {
                                     exc = e;
                                     fileOutputStream3 = fileOutputStream2;
                                     fileInputStream2 = new FileInputStream(fileCreateTempFile);
-                                    if (this.f4504a != null) {
-                                        fileOutputStream4 = new FileOutputStream(this.f4504a);
+                                    if (this.f4670a != null) {
+                                        fileOutputStream4 = new FileOutputStream(this.f4670a);
                                     } else {
                                         Os.lseek(this.b, 0L, OsConstants.SEEK_SET);
                                         fileOutputStream4 = new FileOutputStream(this.b);
@@ -2399,7 +2399,7 @@ public class a {
 
     public final void d0(InputStream inputStream, OutputStream outputStream) throws IOException {
         byte[] bArr;
-        if (f4499w) {
+        if (f4665w) {
             Log.d("ExifInterface", "saveJpegAttributes starting with (inputStream: " + inputStream + ", outputStream: " + outputStream + ")");
         }
         b bVar = new b(inputStream);
@@ -2414,15 +2414,15 @@ public class a {
         cVar.b(-40);
         cVar.b(-1);
         cVar.b(-31);
-        this.f4518p = q0(cVar);
-        if (this.f4523u != null) {
+        this.f4684p = q0(cVar);
+        if (this.f4689u != null) {
             cVar.write(-1);
             cVar.b(-31);
-            byte[] bArr2 = f4495s0;
-            cVar.f(bArr2.length + 2 + this.f4523u.f4534d.length);
+            byte[] bArr2 = f4661s0;
+            cVar.f(bArr2.length + 2 + this.f4689u.f4700d.length);
             cVar.write(bArr2);
-            cVar.write(this.f4523u.f4534d);
-            this.f4524v = true;
+            cVar.write(this.f4689u.f4700d);
+            this.f4690v = true;
         }
         byte[] bArr3 = new byte[Barcode.FORMAT_AZTEC];
         while (bVar.readByte() == -1) {
@@ -2456,16 +2456,16 @@ public class a {
                 if (length < 0) {
                     throw new IOException("Invalid length");
                 }
-                byte[] bArr4 = f4495s0;
+                byte[] bArr4 = f4661s0;
                 if (length >= bArr4.length) {
                     bArr = new byte[bArr4.length];
                 } else {
-                    byte[] bArr5 = f4494r0;
+                    byte[] bArr5 = f4660r0;
                     bArr = length >= bArr5.length ? new byte[bArr5.length] : null;
                 }
                 if (bArr != null) {
                     bVar.readFully(bArr);
-                    if (c4.b.f(bArr, f4494r0) || c4.b.f(bArr, bArr4)) {
+                    if (c4.b.f(bArr, f4660r0) || c4.b.f(bArr, bArr4)) {
                         bVar.f(length - bArr.length);
                     }
                 }
@@ -2492,19 +2492,19 @@ public class a {
     public final void e() {
         String strK = k("DateTimeOriginal");
         if (strK != null && k("DateTime") == null) {
-            this.f4508f[0].put("DateTime", d.e(strK));
+            this.f4674f[0].put("DateTime", d.e(strK));
         }
         if (k("ImageWidth") == null) {
-            this.f4508f[0].put("ImageWidth", d.f(0L, this.f4510h));
+            this.f4674f[0].put("ImageWidth", d.f(0L, this.f4676h));
         }
         if (k("ImageLength") == null) {
-            this.f4508f[0].put("ImageLength", d.f(0L, this.f4510h));
+            this.f4674f[0].put("ImageLength", d.f(0L, this.f4676h));
         }
         if (k("Orientation") == null) {
-            this.f4508f[0].put("Orientation", d.f(0L, this.f4510h));
+            this.f4674f[0].put("Orientation", d.f(0L, this.f4676h));
         }
         if (k("LightSource") == null) {
-            this.f4508f[1].put("LightSource", d.f(0L, this.f4510h));
+            this.f4674f[1].put("LightSource", d.f(0L, this.f4676h));
         }
     }
 
@@ -2554,7 +2554,7 @@ public class a {
         int i14;
         int iQ0;
         boolean z10;
-        if (f4499w) {
+        if (f4665w) {
             Log.d("ExifInterface", "saveWebpAttributes starting with (inputStream: " + inputStream + ", outputStream: " + outputStream + ")");
         }
         ByteOrder byteOrder = ByteOrder.LITTLE_ENDIAN;
@@ -2571,7 +2571,7 @@ public class a {
                 ByteArrayOutputStream byteArrayOutputStream2 = new ByteArrayOutputStream();
                 try {
                     c cVar2 = new c(byteArrayOutputStream2, byteOrder);
-                    int i16 = this.f4518p;
+                    int i16 = this.f4684p;
                     if (i16 == 0) {
                         byte[] bArr3 = new byte[4];
                         bVar.readFully(bArr3);
@@ -2689,7 +2689,7 @@ public class a {
                         cVar.c(size + bArr11.length);
                         cVar.write(bArr11);
                         if (iQ0 != i10) {
-                            this.f4518p = cVar.f4531a.size() + iQ0;
+                            this.f4684p = cVar.f4697a.size() + iQ0;
                         }
                         byteArrayOutputStream2.writeTo(cVar);
                         c4.b.d(bVar, cVar);
@@ -2710,7 +2710,7 @@ public class a {
                     cVar.c(size2 + bArr12.length);
                     cVar.write(bArr12);
                     if (iQ0 != i10) {
-                        this.f4518p = cVar.f4531a.size() + iQ0;
+                        this.f4684p = cVar.f4697a.size() + iQ0;
                     }
                     byteArrayOutputStream2.writeTo(cVar);
                     c4.b.d(bVar, cVar);
@@ -2764,7 +2764,7 @@ public class a {
             throw new NullPointerException("tag shouldn't be null");
         }
         if ("ISOSpeedRatings".equals(str4)) {
-            if (f4499w) {
+            if (f4665w) {
                 Log.d("ExifInterface", "setAttribute: Replacing TAG_ISO_SPEED_RATINGS with TAG_PHOTOGRAPHIC_SENSITIVITY.");
             }
             str4 = "PhotographicSensitivity";
@@ -2773,7 +2773,7 @@ public class a {
         String str5 = "/";
         int i14 = 1;
         if (strReplaceAll != null) {
-            if (f4491o0.contains(str4) && !strReplaceAll.contains("/")) {
+            if (f4657o0.contains(str4) && !strReplaceAll.contains("/")) {
                 try {
                     strReplaceAll = f.b(Double.parseDouble(strReplaceAll)).toString();
                 } catch (NumberFormatException unused) {
@@ -2781,15 +2781,15 @@ public class a {
                     return;
                 }
             } else if (str4.equals("GPSTimeStamp")) {
-                Matcher matcher = f4497u0.matcher(strReplaceAll);
+                Matcher matcher = f4663u0.matcher(strReplaceAll);
                 if (!matcher.find()) {
                     Log.w("ExifInterface", "Invalid value for " + str4 + " : " + strReplaceAll);
                     return;
                 }
                 strReplaceAll = Integer.parseInt(matcher.group(1)) + "/1," + Integer.parseInt(matcher.group(2)) + "/1," + Integer.parseInt(matcher.group(3)) + "/1";
             } else if ("DateTime".equals(str4) || "DateTimeOriginal".equals(str4) || "DateTimeDigitized".equals(str4)) {
-                boolean zFind = f4498v0.matcher(strReplaceAll).find();
-                boolean zFind2 = f4500w0.matcher(strReplaceAll).find();
+                boolean zFind = f4664v0.matcher(strReplaceAll).find();
+                boolean zFind2 = f4666w0.matcher(strReplaceAll).find();
                 if (strReplaceAll.length() != 19 || (!zFind && !zFind2)) {
                     Log.w("ExifInterface", "Invalid value for " + str4 + " : " + strReplaceAll);
                     return;
@@ -2801,34 +2801,34 @@ public class a {
         }
         int i15 = 0;
         if ("Xmp".equals(str4)) {
-            boolean z10 = this.f4508f[0].containsKey("Xmp") || this.f4508f[5].containsKey("Xmp");
-            int iC = C(this.f4506d);
-            if ((iC == 2 && (this.f4523u != null || !z10)) || (iC == 3 && !z10)) {
-                this.f4523u = strReplaceAll != null ? d.a(strReplaceAll) : null;
+            boolean z10 = this.f4674f[0].containsKey("Xmp") || this.f4674f[5].containsKey("Xmp");
+            int iC = C(this.f4672d);
+            if ((iC == 2 && (this.f4689u != null || !z10)) || (iC == 3 && !z10)) {
+                this.f4689u = strReplaceAll != null ? d.a(strReplaceAll) : null;
                 return;
             }
         }
         int i16 = 0;
-        while (i16 < f4487k0.length) {
-            if ((i16 != 4 || this.f4511i) && (eVar = f4490n0[i16].get(str4)) != null) {
+        while (i16 < f4653k0.length) {
+            if ((i16 != 4 || this.f4677i) && (eVar = f4656n0[i16].get(str4)) != null) {
                 if (strReplaceAll != null) {
                     Pair<Integer, Integer> pairD = D(strReplaceAll);
-                    if (eVar.f4536c == ((Integer) pairD.first).intValue() || eVar.f4536c == ((Integer) pairD.second).intValue()) {
-                        i10 = eVar.f4536c;
+                    if (eVar.f4702c == ((Integer) pairD.first).intValue() || eVar.f4702c == ((Integer) pairD.second).intValue()) {
+                        i10 = eVar.f4702c;
                     } else {
-                        int i17 = eVar.f4537d;
-                        if (i17 == -1 || !(i17 == ((Integer) pairD.first).intValue() || eVar.f4537d == ((Integer) pairD.second).intValue())) {
-                            int i18 = eVar.f4536c;
+                        int i17 = eVar.f4703d;
+                        if (i17 == -1 || !(i17 == ((Integer) pairD.first).intValue() || eVar.f4703d == ((Integer) pairD.second).intValue())) {
+                            int i18 = eVar.f4702c;
                             if (i18 == i14 || i18 == 7 || i18 == i13) {
                                 i10 = i18;
-                            } else if (f4499w) {
+                            } else if (f4665w) {
                                 StringBuilder sb2 = new StringBuilder();
                                 sb2.append("Given tag (");
                                 sb2.append(str4);
                                 sb2.append(") value didn't match with one of expected formats: ");
                                 String[] strArr = X;
-                                sb2.append(strArr[eVar.f4536c]);
-                                sb2.append(eVar.f4537d == -1 ? "" : ", " + strArr[eVar.f4537d]);
+                                sb2.append(strArr[eVar.f4702c]);
+                                sb2.append(eVar.f4703d == -1 ? "" : ", " + strArr[eVar.f4703d]);
                                 sb2.append(" (guess: ");
                                 sb2.append(strArr[((Integer) pairD.first).intValue()]);
                                 sb2.append(((Integer) pairD.second).intValue() != -1 ? ", " + strArr[((Integer) pairD.second).intValue()] : "");
@@ -2836,7 +2836,7 @@ public class a {
                                 Log.d("ExifInterface", sb2.toString());
                             }
                         } else {
-                            i10 = eVar.f4537d;
+                            i10 = eVar.f4703d;
                         }
                     }
                     switch (i10) {
@@ -2844,14 +2844,14 @@ public class a {
                             str3 = str5;
                             i11 = i14;
                             i12 = i15;
-                            this.f4508f[i16].put(str4, d.a(strReplaceAll));
+                            this.f4674f[i16].put(str4, d.a(strReplaceAll));
                             break;
                         case 2:
                         case 7:
                             str3 = str5;
                             i11 = i14;
                             i12 = i15;
-                            this.f4508f[i16].put(str4, d.e(strReplaceAll));
+                            this.f4674f[i16].put(str4, d.e(strReplaceAll));
                             break;
                         case 3:
                             str3 = str5;
@@ -2862,7 +2862,7 @@ public class a {
                             for (int i19 = i12; i19 < strArrSplit.length; i19++) {
                                 iArr[i19] = Integer.parseInt(strArrSplit[i19]);
                             }
-                            this.f4508f[i16].put(str4, d.k(iArr, this.f4510h));
+                            this.f4674f[i16].put(str4, d.k(iArr, this.f4676h));
                             break;
                         case 4:
                             str3 = str5;
@@ -2873,7 +2873,7 @@ public class a {
                             for (int i20 = i12; i20 < strArrSplit2.length; i20++) {
                                 jArr[i20] = Long.parseLong(strArrSplit2[i20]);
                             }
-                            this.f4508f[i16].put(str4, d.g(jArr, this.f4510h));
+                            this.f4674f[i16].put(str4, d.g(jArr, this.f4676h));
                             break;
                         case 5:
                             i11 = i14;
@@ -2888,13 +2888,13 @@ public class a {
                                 str5 = str5;
                             }
                             str3 = str5;
-                            this.f4508f[i16].put(str4, d.i(fVarArr, this.f4510h));
+                            this.f4674f[i16].put(str4, d.i(fVarArr, this.f4676h));
                             break;
                         case 6:
                         case 8:
                         case 11:
                         default:
-                            if (f4499w) {
+                            if (f4665w) {
                                 Log.d("ExifInterface", "Data format isn't one of expected formats: " + i10);
                             }
                             break;
@@ -2906,7 +2906,7 @@ public class a {
                             for (int i22 = i12; i22 < strArrSplit5.length; i22++) {
                                 iArr2[i22] = Integer.parseInt(strArrSplit5[i22]);
                             }
-                            this.f4508f[i16].put(str4, d.c(iArr2, this.f4510h));
+                            this.f4674f[i16].put(str4, d.c(iArr2, this.f4676h));
                             str3 = str5;
                             break;
                         case 10:
@@ -2925,7 +2925,7 @@ public class a {
                             }
                             i11 = i14;
                             i12 = i15;
-                            this.f4508f[i16].put(str4, d.d(fVarArr2, this.f4510h));
+                            this.f4674f[i16].put(str4, d.d(fVarArr2, this.f4676h));
                             str3 = str5;
                             break;
                         case 12:
@@ -2934,11 +2934,11 @@ public class a {
                             for (int i26 = i15; i26 < strArrSplit8.length; i26++) {
                                 dArr[i26] = Double.parseDouble(strArrSplit8[i26]);
                             }
-                            this.f4508f[i16].put(str4, d.b(dArr, this.f4510h));
+                            this.f4674f[i16].put(str4, d.b(dArr, this.f4676h));
                             break;
                     }
                 } else {
-                    this.f4508f[i16].remove(str4);
+                    this.f4674f[i16].remove(str4);
                 }
                 str3 = str5;
                 i11 = i14;
@@ -3011,43 +3011,43 @@ public class a {
             return null;
         }
         if (!str.equals("GPSTimeStamp")) {
-            if (!f4491o0.contains(str)) {
-                return dVarN.n(this.f4510h);
+            if (!f4657o0.contains(str)) {
+                return dVarN.n(this.f4676h);
             }
             try {
-                return Double.toString(dVarN.l(this.f4510h));
+                return Double.toString(dVarN.l(this.f4676h));
             } catch (NumberFormatException unused) {
                 return null;
             }
         }
-        int i10 = dVarN.f4532a;
+        int i10 = dVarN.f4698a;
         if (i10 != 5 && i10 != 10) {
-            Log.w("ExifInterface", "GPS Timestamp format is not rational. format=" + dVarN.f4532a);
+            Log.w("ExifInterface", "GPS Timestamp format is not rational. format=" + dVarN.f4698a);
             return null;
         }
-        f[] fVarArr = (f[]) dVarN.o(this.f4510h);
+        f[] fVarArr = (f[]) dVarN.o(this.f4676h);
         if (fVarArr == null || fVarArr.length != 3) {
             Log.w("ExifInterface", "Invalid GPS Timestamp array. array=" + Arrays.toString(fVarArr));
             return null;
         }
         f fVar = fVarArr[0];
-        Integer numValueOf = Integer.valueOf((int) (fVar.f4538a / fVar.b));
+        Integer numValueOf = Integer.valueOf((int) (fVar.f4704a / fVar.b));
         f fVar2 = fVarArr[1];
-        Integer numValueOf2 = Integer.valueOf((int) (fVar2.f4538a / fVar2.b));
+        Integer numValueOf2 = Integer.valueOf((int) (fVar2.f4704a / fVar2.b));
         f fVar3 = fVarArr[2];
-        return String.format("%02d:%02d:%02d", numValueOf, numValueOf2, Integer.valueOf((int) (fVar3.f4538a / fVar3.b)));
+        return String.format("%02d:%02d:%02d", numValueOf, numValueOf2, Integer.valueOf((int) (fVar3.f4704a / fVar3.b)));
     }
 
     public final void k0(b bVar) throws Throwable {
-        HashMap<String, d> map = this.f4508f[4];
+        HashMap<String, d> map = this.f4674f[4];
         d dVar = map.get("Compression");
         if (dVar == null) {
-            this.f4517o = 6;
+            this.f4683o = 6;
             E(bVar, map);
             return;
         }
-        int iM = dVar.m(this.f4510h);
-        this.f4517o = iM;
+        int iM = dVar.m(this.f4676h);
+        this.f4683o = iM;
         if (iM != 1) {
             if (iM == 6) {
                 E(bVar, map);
@@ -3068,7 +3068,7 @@ public class a {
         d dVarN = n(str);
         if (dVarN != null) {
             try {
-                return dVarN.l(this.f4510h);
+                return dVarN.l(this.f4676h);
             } catch (NumberFormatException unused) {
             }
         }
@@ -3082,7 +3082,7 @@ public class a {
         d dVarN = n(str);
         if (dVarN != null) {
             try {
-                return dVarN.m(this.f4510h);
+                return dVarN.m(this.f4676h);
             } catch (NumberFormatException unused) {
             }
         }
@@ -3090,39 +3090,39 @@ public class a {
     }
 
     public final void m0(int i10, int i11) throws Throwable {
-        if (this.f4508f[i10].isEmpty() || this.f4508f[i11].isEmpty()) {
-            if (f4499w) {
+        if (this.f4674f[i10].isEmpty() || this.f4674f[i11].isEmpty()) {
+            if (f4665w) {
                 Log.d("ExifInterface", "Cannot perform swap since only one image data exists");
                 return;
             }
             return;
         }
-        d dVar = this.f4508f[i10].get("ImageLength");
-        d dVar2 = this.f4508f[i10].get("ImageWidth");
-        d dVar3 = this.f4508f[i11].get("ImageLength");
-        d dVar4 = this.f4508f[i11].get("ImageWidth");
+        d dVar = this.f4674f[i10].get("ImageLength");
+        d dVar2 = this.f4674f[i10].get("ImageWidth");
+        d dVar3 = this.f4674f[i11].get("ImageLength");
+        d dVar4 = this.f4674f[i11].get("ImageWidth");
         if (dVar == null || dVar2 == null) {
-            if (f4499w) {
+            if (f4665w) {
                 Log.d("ExifInterface", "First image does not contain valid size information");
                 return;
             }
             return;
         }
         if (dVar3 == null || dVar4 == null) {
-            if (f4499w) {
+            if (f4665w) {
                 Log.d("ExifInterface", "Second image does not contain valid size information");
                 return;
             }
             return;
         }
-        int iM = dVar.m(this.f4510h);
-        int iM2 = dVar2.m(this.f4510h);
-        int iM3 = dVar3.m(this.f4510h);
-        int iM4 = dVar4.m(this.f4510h);
+        int iM = dVar.m(this.f4676h);
+        int iM2 = dVar2.m(this.f4676h);
+        int iM3 = dVar3.m(this.f4676h);
+        int iM4 = dVar4.m(this.f4676h);
         if (iM >= iM3 || iM2 >= iM4) {
             return;
         }
-        HashMap<String, d>[] mapArr = this.f4508f;
+        HashMap<String, d>[] mapArr = this.f4674f;
         HashMap<String, d> map = mapArr[i10];
         mapArr[i10] = mapArr[i11];
         mapArr[i11] = map;
@@ -3135,21 +3135,21 @@ public class a {
             throw new NullPointerException("tag shouldn't be null");
         }
         if ("ISOSpeedRatings".equals(str)) {
-            if (f4499w) {
+            if (f4665w) {
                 Log.d("ExifInterface", "getExifAttribute: Replacing TAG_ISO_SPEED_RATINGS with TAG_PHOTOGRAPHIC_SENSITIVITY.");
             }
             str = "PhotographicSensitivity";
         }
-        if ("Xmp".equals(str) && C(this.f4506d) == 2 && (dVar2 = this.f4523u) != null) {
+        if ("Xmp".equals(str) && C(this.f4672d) == 2 && (dVar2 = this.f4689u) != null) {
             return dVar2;
         }
-        for (int i10 = 0; i10 < f4487k0.length; i10++) {
-            d dVar3 = this.f4508f[i10].get(str);
+        for (int i10 = 0; i10 < f4653k0.length; i10++) {
+            d dVar3 = this.f4674f[i10].get(str);
             if (dVar3 != null) {
                 return dVar3;
             }
         }
-        if (!"Xmp".equals(str) || (dVar = this.f4523u) == null) {
+        if (!"Xmp".equals(str) || (dVar = this.f4689u) == null) {
             return null;
         }
         return dVar;
@@ -3189,10 +3189,10 @@ public class a {
                     strExtractMetadata3 = null;
                 }
                 if (strExtractMetadata != null) {
-                    this.f4508f[0].put("ImageWidth", d.j(Integer.parseInt(strExtractMetadata), this.f4510h));
+                    this.f4674f[0].put("ImageWidth", d.j(Integer.parseInt(strExtractMetadata), this.f4676h));
                 }
                 if (strExtractMetadata3 != null) {
-                    this.f4508f[0].put("ImageLength", d.j(Integer.parseInt(strExtractMetadata3), this.f4510h));
+                    this.f4674f[0].put("ImageLength", d.j(Integer.parseInt(strExtractMetadata3), this.f4676h));
                 }
                 if (strExtractMetadata2 != null) {
                     int i13 = Integer.parseInt(strExtractMetadata2);
@@ -3203,7 +3203,7 @@ public class a {
                     } else {
                         i11 = 3;
                     }
-                    this.f4508f[0].put("Orientation", d.j(i11, this.f4510h));
+                    this.f4674f[0].put("Orientation", d.j(i11, this.f4676h));
                 }
                 if (strExtractMetadata4 != null && strExtractMetadata5 != null) {
                     int i14 = Integer.parseInt(strExtractMetadata4);
@@ -3216,12 +3216,12 @@ public class a {
                     gVar.readFully(bArr);
                     int i16 = i14 + 6;
                     int i17 = i15 - 6;
-                    if (!Arrays.equals(bArr, f4494r0)) {
+                    if (!Arrays.equals(bArr, f4660r0)) {
                         throw new IOException("Invalid identifier");
                     }
                     byte[] bArr2 = new byte[i17];
                     gVar.readFully(bArr2);
-                    this.f4518p = i16;
+                    this.f4684p = i16;
                     X(bArr2, 0);
                 }
                 String strExtractMetadata8 = mediaMetadataRetriever.extractMetadata(41);
@@ -3233,10 +3233,10 @@ public class a {
                     gVar.g(j10);
                     byte[] bArr3 = new byte[i19];
                     gVar.readFully(bArr3);
-                    this.f4523u = new d(1, i19, j10, bArr3);
-                    this.f4524v = true;
+                    this.f4689u = new d(1, i19, j10, bArr3);
+                    this.f4690v = true;
                 }
-                if (f4499w) {
+                if (f4665w) {
                     Log.d("ExifInterface", "Heif meta: " + strExtractMetadata + "x" + strExtractMetadata3 + ", rotation " + strExtractMetadata2);
                 }
                 try {
@@ -3259,48 +3259,48 @@ public class a {
     public final void o0(g gVar, int i10) throws Throwable {
         d dVarJ;
         d dVarJ2;
-        d dVar = this.f4508f[i10].get("DefaultCropSize");
-        d dVar2 = this.f4508f[i10].get("SensorTopBorder");
-        d dVar3 = this.f4508f[i10].get("SensorLeftBorder");
-        d dVar4 = this.f4508f[i10].get("SensorBottomBorder");
-        d dVar5 = this.f4508f[i10].get("SensorRightBorder");
+        d dVar = this.f4674f[i10].get("DefaultCropSize");
+        d dVar2 = this.f4674f[i10].get("SensorTopBorder");
+        d dVar3 = this.f4674f[i10].get("SensorLeftBorder");
+        d dVar4 = this.f4674f[i10].get("SensorBottomBorder");
+        d dVar5 = this.f4674f[i10].get("SensorRightBorder");
         if (dVar == null) {
             if (dVar2 == null || dVar3 == null || dVar4 == null || dVar5 == null) {
                 b0(gVar, i10);
                 return;
             }
-            int iM = dVar2.m(this.f4510h);
-            int iM2 = dVar4.m(this.f4510h);
-            int iM3 = dVar5.m(this.f4510h);
-            int iM4 = dVar3.m(this.f4510h);
+            int iM = dVar2.m(this.f4676h);
+            int iM2 = dVar4.m(this.f4676h);
+            int iM3 = dVar5.m(this.f4676h);
+            int iM4 = dVar3.m(this.f4676h);
             if (iM2 <= iM || iM3 <= iM4) {
                 return;
             }
-            d dVarJ3 = d.j(iM2 - iM, this.f4510h);
-            d dVarJ4 = d.j(iM3 - iM4, this.f4510h);
-            this.f4508f[i10].put("ImageLength", dVarJ3);
-            this.f4508f[i10].put("ImageWidth", dVarJ4);
+            d dVarJ3 = d.j(iM2 - iM, this.f4676h);
+            d dVarJ4 = d.j(iM3 - iM4, this.f4676h);
+            this.f4674f[i10].put("ImageLength", dVarJ3);
+            this.f4674f[i10].put("ImageWidth", dVarJ4);
             return;
         }
-        if (dVar.f4532a == 5) {
-            f[] fVarArr = (f[]) dVar.o(this.f4510h);
+        if (dVar.f4698a == 5) {
+            f[] fVarArr = (f[]) dVar.o(this.f4676h);
             if (fVarArr == null || fVarArr.length != 2) {
                 Log.w("ExifInterface", "Invalid crop size values. cropSize=" + Arrays.toString(fVarArr));
                 return;
             }
-            dVarJ = d.h(fVarArr[0], this.f4510h);
-            dVarJ2 = d.h(fVarArr[1], this.f4510h);
+            dVarJ = d.h(fVarArr[0], this.f4676h);
+            dVarJ2 = d.h(fVarArr[1], this.f4676h);
         } else {
-            int[] iArr = (int[]) dVar.o(this.f4510h);
+            int[] iArr = (int[]) dVar.o(this.f4676h);
             if (iArr == null || iArr.length != 2) {
                 Log.w("ExifInterface", "Invalid crop size values. cropSize=" + Arrays.toString(iArr));
                 return;
             }
-            dVarJ = d.j(iArr[0], this.f4510h);
-            dVarJ2 = d.j(iArr[1], this.f4510h);
+            dVarJ = d.j(iArr[0], this.f4676h);
+            dVarJ2 = d.j(iArr[1], this.f4676h);
         }
-        this.f4508f[i10].put("ImageWidth", dVarJ);
-        this.f4508f[i10].put("ImageLength", dVarJ2);
+        this.f4674f[i10].put("ImageWidth", dVarJ);
+        this.f4674f[i10].put("ImageLength", dVarJ2);
     }
 
     /* JADX WARN: Code duplicated, block: B:34:0x00b5 A[FALL_THROUGH] */
@@ -3315,7 +3315,7 @@ public class a {
     /* JADX WARN: Failed to find 'out' block for switch in B:31:0x00ad. Please report as an issue. */
     /*  JADX ERROR: UnsupportedOperationException in pass: RegionMakerVisitor
         java.lang.UnsupportedOperationException
-        	at java.base/java.util.Collections$UnmodifiableCollection.add(Collections.java:1092)
+        	at java.base/java.util.Collections$UnmodifiableCollection.add(Unknown Source)
         	at jadx.core.dex.visitors.regions.maker.SwitchRegionMaker$1.leaveRegion(SwitchRegionMaker.java:419)
         	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverseInternal(DepthRegionTraversal.java:91)
         	at jadx.core.dex.visitors.regions.DepthRegionTraversal.traverse(DepthRegionTraversal.java:31)
@@ -3339,18 +3339,18 @@ public class a {
         m0(0, 5);
         m0(0, 4);
         m0(5, 4);
-        d dVar = this.f4508f[1].get("PixelXDimension");
-        d dVar2 = this.f4508f[1].get("PixelYDimension");
+        d dVar = this.f4674f[1].get("PixelXDimension");
+        d dVar2 = this.f4674f[1].get("PixelYDimension");
         if (dVar != null && dVar2 != null) {
-            this.f4508f[0].put("ImageWidth", dVar);
-            this.f4508f[0].put("ImageLength", dVar2);
+            this.f4674f[0].put("ImageWidth", dVar);
+            this.f4674f[0].put("ImageLength", dVar2);
         }
-        if (this.f4508f[4].isEmpty() && R(this.f4508f[5])) {
-            HashMap<String, d>[] mapArr = this.f4508f;
+        if (this.f4674f[4].isEmpty() && R(this.f4674f[5])) {
+            HashMap<String, d>[] mapArr = this.f4674f;
             mapArr[4] = mapArr[5];
             mapArr[5] = new HashMap<>();
         }
-        if (!R(this.f4508f[4])) {
+        if (!R(this.f4674f[4])) {
             Log.d("ExifInterface", "No image meets the size requirements of a thumbnail image.");
         }
         a0(0, "ThumbnailOrientation", "Orientation");
@@ -3382,14 +3382,14 @@ public class a {
 
     public final int q0(c cVar) throws IOException {
         long j10;
-        e[][] eVarArr = f4487k0;
+        e[][] eVarArr = f4653k0;
         int[] iArr = new int[eVarArr.length];
         int[] iArr2 = new int[eVarArr.length];
-        for (e eVar : f4488l0) {
+        for (e eVar : f4654l0) {
             Z(eVar.b);
         }
-        if (this.f4511i) {
-            if (this.f4512j) {
+        if (this.f4677i) {
+            if (this.f4678j) {
                 Z("StripOffsets");
                 Z("StripByteCounts");
             } else {
@@ -3397,8 +3397,8 @@ public class a {
                 Z("JPEGInterchangeFormatLength");
             }
         }
-        for (int i10 = 0; i10 < f4487k0.length; i10++) {
-            Iterator<Map.Entry<String, d>> it = this.f4508f[i10].entrySet().iterator();
+        for (int i10 = 0; i10 < f4653k0.length; i10++) {
+            Iterator<Map.Entry<String, d>> it = this.f4674f[i10].entrySet().iterator();
             while (it.hasNext()) {
                 if (it.next().getValue() == null) {
                     it.remove();
@@ -3406,26 +3406,26 @@ public class a {
             }
         }
         long j11 = 0;
-        if (!this.f4508f[1].isEmpty()) {
-            this.f4508f[0].put(f4488l0[1].b, d.f(0L, this.f4510h));
+        if (!this.f4674f[1].isEmpty()) {
+            this.f4674f[0].put(f4654l0[1].b, d.f(0L, this.f4676h));
         }
-        if (!this.f4508f[2].isEmpty()) {
-            this.f4508f[0].put(f4488l0[2].b, d.f(0L, this.f4510h));
+        if (!this.f4674f[2].isEmpty()) {
+            this.f4674f[0].put(f4654l0[2].b, d.f(0L, this.f4676h));
         }
-        if (!this.f4508f[3].isEmpty()) {
-            this.f4508f[1].put(f4488l0[3].b, d.f(0L, this.f4510h));
+        if (!this.f4674f[3].isEmpty()) {
+            this.f4674f[1].put(f4654l0[3].b, d.f(0L, this.f4676h));
         }
-        if (this.f4511i) {
-            if (this.f4512j) {
-                this.f4508f[4].put("StripOffsets", d.j(0, this.f4510h));
-                this.f4508f[4].put("StripByteCounts", d.j(this.f4515m, this.f4510h));
+        if (this.f4677i) {
+            if (this.f4678j) {
+                this.f4674f[4].put("StripOffsets", d.j(0, this.f4676h));
+                this.f4674f[4].put("StripByteCounts", d.j(this.f4681m, this.f4676h));
             } else {
-                this.f4508f[4].put("JPEGInterchangeFormat", d.f(0L, this.f4510h));
-                this.f4508f[4].put("JPEGInterchangeFormatLength", d.f(this.f4515m, this.f4510h));
+                this.f4674f[4].put("JPEGInterchangeFormat", d.f(0L, this.f4676h));
+                this.f4674f[4].put("JPEGInterchangeFormatLength", d.f(this.f4681m, this.f4676h));
             }
         }
-        for (int i11 = 0; i11 < f4487k0.length; i11++) {
-            Iterator<Map.Entry<String, d>> it2 = this.f4508f[i11].entrySet().iterator();
+        for (int i11 = 0; i11 < f4653k0.length; i11++) {
+            Iterator<Map.Entry<String, d>> it2 = this.f4674f[i11].entrySet().iterator();
             int i12 = 0;
             while (it2.hasNext()) {
                 int iP = it2.next().getValue().p();
@@ -3436,45 +3436,45 @@ public class a {
             iArr2[i11] = iArr2[i11] + i12;
         }
         int size = 8;
-        for (int i13 = 0; i13 < f4487k0.length; i13++) {
-            if (!this.f4508f[i13].isEmpty()) {
+        for (int i13 = 0; i13 < f4653k0.length; i13++) {
+            if (!this.f4674f[i13].isEmpty()) {
                 iArr[i13] = size;
-                size += (this.f4508f[i13].size() * 12) + 6 + iArr2[i13];
+                size += (this.f4674f[i13].size() * 12) + 6 + iArr2[i13];
             }
         }
-        if (this.f4511i) {
-            if (this.f4512j) {
-                this.f4508f[4].put("StripOffsets", d.j(size, this.f4510h));
+        if (this.f4677i) {
+            if (this.f4678j) {
+                this.f4674f[4].put("StripOffsets", d.j(size, this.f4676h));
             } else {
-                this.f4508f[4].put("JPEGInterchangeFormat", d.f(size, this.f4510h));
+                this.f4674f[4].put("JPEGInterchangeFormat", d.f(size, this.f4676h));
             }
-            this.f4514l = size;
-            size += this.f4515m;
+            this.f4680l = size;
+            size += this.f4681m;
         }
-        if (this.f4506d == 4) {
+        if (this.f4672d == 4) {
             size += 8;
         }
-        if (f4499w) {
-            for (int i14 = 0; i14 < f4487k0.length; i14++) {
-                Log.d("ExifInterface", String.format("index: %d, offsets: %d, tag count: %d, data sizes: %d, total size: %d", Integer.valueOf(i14), Integer.valueOf(iArr[i14]), Integer.valueOf(this.f4508f[i14].size()), Integer.valueOf(iArr2[i14]), Integer.valueOf(size)));
+        if (f4665w) {
+            for (int i14 = 0; i14 < f4653k0.length; i14++) {
+                Log.d("ExifInterface", String.format("index: %d, offsets: %d, tag count: %d, data sizes: %d, total size: %d", Integer.valueOf(i14), Integer.valueOf(iArr[i14]), Integer.valueOf(this.f4674f[i14].size()), Integer.valueOf(iArr2[i14]), Integer.valueOf(size)));
             }
         }
-        if (!this.f4508f[1].isEmpty()) {
-            this.f4508f[0].put(f4488l0[1].b, d.f(iArr[1], this.f4510h));
+        if (!this.f4674f[1].isEmpty()) {
+            this.f4674f[0].put(f4654l0[1].b, d.f(iArr[1], this.f4676h));
         }
-        if (!this.f4508f[r13].isEmpty()) {
-            this.f4508f[0].put(f4488l0[r13].b, d.f(iArr[2], this.f4510h));
+        if (!this.f4674f[r13].isEmpty()) {
+            this.f4674f[0].put(f4654l0[r13].b, d.f(iArr[2], this.f4676h));
         }
-        if (!this.f4508f[r14].isEmpty()) {
-            this.f4508f[1].put(f4488l0[r14].b, d.f(iArr[3], this.f4510h));
+        if (!this.f4674f[r14].isEmpty()) {
+            this.f4674f[1].put(f4654l0[r14].b, d.f(iArr[3], this.f4676h));
         }
-        int i15 = this.f4506d;
+        int i15 = this.f4672d;
         if (i15 == 4) {
             if (size > 65535) {
                 throw new IllegalStateException("Size of exif data (" + size + " bytes) exceeds the max size of a JPEG APP1 segment (65536 bytes)");
             }
             cVar.f(size);
-            cVar.write(f4494r0);
+            cVar.write(f4660r0);
         } else if (i15 == 13) {
             cVar.c(size);
             cVar.c(1700284774);
@@ -3482,30 +3482,30 @@ public class a {
             cVar.write(O);
             cVar.c(size);
         }
-        int size2 = cVar.f4531a.size();
-        cVar.d(this.f4510h == ByteOrder.BIG_ENDIAN ? (short) 19789 : (short) 18761);
-        cVar.a(this.f4510h);
+        int size2 = cVar.f4697a.size();
+        cVar.d(this.f4676h == ByteOrder.BIG_ENDIAN ? (short) 19789 : (short) 18761);
+        cVar.a(this.f4676h);
         cVar.f(42);
         cVar.e(8L);
         int i16 = 0;
-        while (i16 < f4487k0.length) {
-            if (this.f4508f[i16].isEmpty()) {
+        while (i16 < f4653k0.length) {
+            if (this.f4674f[i16].isEmpty()) {
                 j10 = j11;
             } else {
-                cVar.f(this.f4508f[i16].size());
-                int size3 = iArr[i16] + 2 + (this.f4508f[i16].size() * 12) + 4;
-                for (Map.Entry<String, d> entry : this.f4508f[i16].entrySet()) {
-                    int i17 = f4490n0[i16].get(entry.getKey()).f4535a;
+                cVar.f(this.f4674f[i16].size());
+                int size3 = iArr[i16] + 2 + (this.f4674f[i16].size() * 12) + 4;
+                for (Map.Entry<String, d> entry : this.f4674f[i16].entrySet()) {
+                    int i17 = f4656n0[i16].get(entry.getKey()).f4701a;
                     d value = entry.getValue();
                     int iP2 = value.p();
                     cVar.f(i17);
-                    cVar.f(value.f4532a);
+                    cVar.f(value.f4698a);
                     cVar.c(value.b);
                     if (iP2 > 4) {
                         cVar.e(size3);
                         size3 += iP2;
                     } else {
-                        cVar.write(value.f4534d);
+                        cVar.write(value.f4700d);
                         if (iP2 < 4) {
                             while (iP2 < 4) {
                                 cVar.b(0);
@@ -3514,16 +3514,16 @@ public class a {
                         }
                     }
                 }
-                if (i16 != 0 || this.f4508f[4].isEmpty()) {
+                if (i16 != 0 || this.f4674f[4].isEmpty()) {
                     j10 = 0;
                     cVar.e(0L);
                 } else {
                     cVar.e(iArr[4]);
                     j10 = 0;
                 }
-                Iterator<Map.Entry<String, d>> it3 = this.f4508f[i16].entrySet().iterator();
+                Iterator<Map.Entry<String, d>> it3 = this.f4674f[i16].entrySet().iterator();
                 while (it3.hasNext()) {
-                    byte[] bArr = it3.next().getValue().f4534d;
+                    byte[] bArr = it3.next().getValue().f4700d;
                     if (bArr.length > 4) {
                         cVar.write(bArr, 0, bArr.length);
                     }
@@ -3532,10 +3532,10 @@ public class a {
             i16++;
             j11 = j10;
         }
-        if (this.f4511i) {
+        if (this.f4677i) {
             cVar.write(A());
         }
-        if (this.f4506d == 14 && size % 2 == 1) {
+        if (this.f4672d == 14 && size % 2 == 1) {
             cVar.b(0);
         }
         cVar.a(ByteOrder.BIG_ENDIAN);
@@ -3571,7 +3571,7 @@ public class a {
 
     public final void r0(c cVar) throws IOException {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        this.f4518p = cVar.f4531a.size() + q0(new c(byteArrayOutputStream, ByteOrder.BIG_ENDIAN));
+        this.f4684p = cVar.f4697a.size() + q0(new c(byteArrayOutputStream, ByteOrder.BIG_ENDIAN));
         byte[] byteArray = byteArrayOutputStream.toByteArray();
         cVar.write(byteArray);
         CRC32 crc32 = new CRC32();
@@ -3583,10 +3583,10 @@ public class a {
         int i10;
         int i11;
         v(gVar);
-        d dVar = this.f4508f[1].get("MakerNote");
+        d dVar = this.f4674f[1].get("MakerNote");
         if (dVar != null) {
-            g gVar2 = new g(dVar.f4534d);
-            gVar2.e(this.f4510h);
+            g gVar2 = new g(dVar.f4700d);
+            gVar2.e(this.f4676h);
             byte[] bArr = I;
             byte[] bArr2 = new byte[bArr.length];
             gVar2.readFully(bArr2);
@@ -3600,15 +3600,15 @@ public class a {
                 gVar2.g(12L);
             }
             Y(gVar2, 6);
-            d dVar2 = this.f4508f[7].get("PreviewImageStart");
-            d dVar3 = this.f4508f[7].get("PreviewImageLength");
+            d dVar2 = this.f4674f[7].get("PreviewImageStart");
+            d dVar3 = this.f4674f[7].get("PreviewImageLength");
             if (dVar2 != null && dVar3 != null) {
-                this.f4508f[5].put("JPEGInterchangeFormat", dVar2);
-                this.f4508f[5].put("JPEGInterchangeFormatLength", dVar3);
+                this.f4674f[5].put("JPEGInterchangeFormat", dVar2);
+                this.f4674f[5].put("JPEGInterchangeFormatLength", dVar3);
             }
-            d dVar4 = this.f4508f[8].get("AspectFrame");
+            d dVar4 = this.f4674f[8].get("AspectFrame");
             if (dVar4 != null) {
-                int[] iArr = (int[]) dVar4.o(this.f4510h);
+                int[] iArr = (int[]) dVar4.o(this.f4676h);
                 if (iArr == null || iArr.length != 4) {
                     Log.w("ExifInterface", "Invalid aspect frame values. frame=" + Arrays.toString(iArr));
                     return;
@@ -3625,30 +3625,30 @@ public class a {
                     i15 = i16 - i15;
                     i14 = i16 - i15;
                 }
-                d dVarJ = d.j(i14, this.f4510h);
-                d dVarJ2 = d.j(i15, this.f4510h);
-                this.f4508f[0].put("ImageWidth", dVarJ);
-                this.f4508f[0].put("ImageLength", dVarJ2);
+                d dVarJ = d.j(i14, this.f4676h);
+                d dVarJ2 = d.j(i15, this.f4676h);
+                this.f4674f[0].put("ImageWidth", dVarJ);
+                this.f4674f[0].put("ImageLength", dVarJ2);
             }
         }
     }
 
     public final void s0(c cVar) throws IOException {
-        cVar.c(this.f4523u.f4534d.length + 22);
+        cVar.c(this.f4689u.f4700d.length + 22);
         CRC32 crc32 = new CRC32();
         cVar.c(1767135348);
         n0(crc32, 1767135348);
         byte[] bArr = L;
         cVar.write(bArr);
         crc32.update(bArr);
-        cVar.write(this.f4523u.f4534d);
-        crc32.update(this.f4523u.f4534d);
+        cVar.write(this.f4689u.f4700d);
+        crc32.update(this.f4689u.f4700d);
         cVar.c((int) crc32.getValue());
-        this.f4524v = true;
+        this.f4690v = true;
     }
 
     public final void t(b bVar) throws Throwable {
-        if (f4499w) {
+        if (f4665w) {
             Log.d("ExifInterface", "getPngAttributes starting with: " + bVar);
         }
         bVar.e(ByteOrder.BIG_ENDIAN);
@@ -3671,7 +3671,7 @@ public class a {
                     break;
                 }
                 if (i11 == 1700284774 && !z10) {
-                    this.f4518p = bVar.b() - iB;
+                    this.f4684p = bVar.b() - iB;
                     byte[] bArr = new byte[i10];
                     bVar.readFully(bArr);
                     int i12 = bVar.readInt();
@@ -3696,7 +3696,7 @@ public class a {
                             int i13 = i10 - length;
                             byte[] bArr4 = new byte[i13];
                             bVar.readFully(bArr4);
-                            this.f4523u = new d(1, i13, iB3, bArr4);
+                            this.f4689u = new d(1, i13, iB3, bArr4);
                             z11 = true;
                         }
                     }
@@ -3706,11 +3706,11 @@ public class a {
                 throw new IOException("Encountered corrupt PNG file.", e10);
             }
         }
-        this.f4524v = z11;
+        this.f4690v = z11;
     }
 
     public final void u(b bVar) throws Throwable {
-        boolean z10 = f4499w;
+        boolean z10 = f4665w;
         if (z10) {
             Log.d("ExifInterface", "getRafAttributes starting with: " + bVar);
         }
@@ -3737,14 +3737,14 @@ public class a {
         for (int i14 = 0; i14 < i13; i14++) {
             int unsignedShort = bVar.readUnsignedShort();
             int unsignedShort2 = bVar.readUnsignedShort();
-            if (unsignedShort == f4482f0.f4535a) {
+            if (unsignedShort == f4648f0.f4701a) {
                 short s8 = bVar.readShort();
                 short s10 = bVar.readShort();
-                d dVarJ = d.j(s8, this.f4510h);
-                d dVarJ2 = d.j(s10, this.f4510h);
-                this.f4508f[0].put("ImageLength", dVarJ);
-                this.f4508f[0].put("ImageWidth", dVarJ2);
-                if (f4499w) {
+                d dVarJ = d.j(s8, this.f4676h);
+                d dVarJ2 = d.j(s10, this.f4676h);
+                this.f4674f[0].put("ImageLength", dVarJ);
+                this.f4674f[0].put("ImageWidth", dVarJ2);
+                if (f4665w) {
                     Log.d("ExifInterface", "Updated to length: " + ((int) s8) + ", width: " + ((int) s10));
                     return;
                 }
@@ -3762,16 +3762,16 @@ public class a {
         o0(gVar, 5);
         o0(gVar, 4);
         p0();
-        if (this.f4506d != 8 || (dVar = this.f4508f[1].get("MakerNote")) == null) {
+        if (this.f4672d != 8 || (dVar = this.f4674f[1].get("MakerNote")) == null) {
             return;
         }
-        g gVar2 = new g(dVar.f4534d);
-        gVar2.e(this.f4510h);
+        g gVar2 = new g(dVar.f4700d);
+        gVar2.e(this.f4676h);
         gVar2.f(6);
         Y(gVar2, 9);
-        d dVar2 = this.f4508f[9].get("ColorSpace");
+        d dVar2 = this.f4674f[9].get("ColorSpace");
         if (dVar2 != null) {
-            this.f4508f[1].put("ColorSpace", dVar2);
+            this.f4674f[1].put("ColorSpace", dVar2);
         }
     }
 
@@ -3792,24 +3792,24 @@ public class a {
     }
 
     public final void x(g gVar) throws Throwable {
-        if (f4499w) {
+        if (f4665w) {
             Log.d("ExifInterface", "getRw2Attributes starting with: " + gVar);
         }
         v(gVar);
-        d dVar = this.f4508f[0].get("JpgFromRaw");
+        d dVar = this.f4674f[0].get("JpgFromRaw");
         if (dVar != null) {
-            p(new b(dVar.f4534d), (int) dVar.f4533c, 5);
+            p(new b(dVar.f4700d), (int) dVar.f4699c, 5);
         }
-        d dVar2 = this.f4508f[0].get("ISO");
-        d dVar3 = this.f4508f[1].get("PhotographicSensitivity");
+        d dVar2 = this.f4674f[0].get("ISO");
+        d dVar3 = this.f4674f[1].get("PhotographicSensitivity");
         if (dVar2 == null || dVar3 != null) {
             return;
         }
-        this.f4508f[1].put("PhotographicSensitivity", dVar2);
+        this.f4674f[1].put("PhotographicSensitivity", dVar2);
     }
 
     public final boolean y(g gVar) throws IOException {
-        byte[] bArr = f4494r0;
+        byte[] bArr = f4660r0;
         byte[] bArr2 = new byte[bArr.length];
         gVar.readFully(bArr2);
         if (!Arrays.equals(bArr2, bArr)) {
@@ -3817,13 +3817,13 @@ public class a {
             return false;
         }
         byte[] bArrC = gVar.c();
-        this.f4518p = bArr.length;
+        this.f4684p = bArr.length;
         X(bArrC, 0);
         return true;
     }
 
     public byte[] z() {
-        int i10 = this.f4517o;
+        int i10 = this.f4683o;
         if (i10 == 6 || i10 == 7) {
             return A();
         }
@@ -3833,30 +3833,30 @@ public class a {
     public static class b extends InputStream implements DataInput {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final DataInputStream f4527a;
+        public final DataInputStream f4693a;
         public int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public ByteOrder f4528c;
+        public ByteOrder f4694c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public byte[] f4529d;
+        public byte[] f4695d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public int f4530e;
+        public int f4696e;
 
         public b(byte[] bArr) {
             this(new ByteArrayInputStream(bArr), ByteOrder.BIG_ENDIAN);
-            this.f4530e = bArr.length;
+            this.f4696e = bArr.length;
         }
 
         public int a() {
-            return this.f4530e;
+            return this.f4696e;
         }
 
         @Override // java.io.InputStream
         public int available() {
-            return this.f4527a.available();
+            return this.f4693a.available();
         }
 
         public int b() {
@@ -3870,7 +3870,7 @@ public class a {
                 if (i10 == bArrCopyOf.length) {
                     bArrCopyOf = Arrays.copyOf(bArrCopyOf, bArrCopyOf.length * 2);
                 }
-                int i11 = this.f4527a.read(bArrCopyOf, i10, bArrCopyOf.length - i10);
+                int i11 = this.f4693a.read(bArrCopyOf, i10, bArrCopyOf.length - i10);
                 if (i11 == -1) {
                     return Arrays.copyOf(bArrCopyOf, i10);
                 }
@@ -3884,19 +3884,19 @@ public class a {
         }
 
         public void e(ByteOrder byteOrder) {
-            this.f4528c = byteOrder;
+            this.f4694c = byteOrder;
         }
 
         public void f(int i10) throws IOException {
             int i11 = 0;
             while (i11 < i10) {
                 int i12 = i10 - i11;
-                int iSkip = (int) this.f4527a.skip(i12);
+                int iSkip = (int) this.f4693a.skip(i12);
                 if (iSkip <= 0) {
-                    if (this.f4529d == null) {
-                        this.f4529d = new byte[8192];
+                    if (this.f4695d == null) {
+                        this.f4695d = new byte[8192];
                     }
-                    iSkip = this.f4527a.read(this.f4529d, 0, Math.min(8192, i12));
+                    iSkip = this.f4693a.read(this.f4695d, 0, Math.min(8192, i12));
                     if (iSkip == -1) {
                         throw new EOFException("Reached EOF while skipping " + i10 + " bytes.");
                     }
@@ -3914,19 +3914,19 @@ public class a {
         @Override // java.io.InputStream
         public int read() {
             this.b++;
-            return this.f4527a.read();
+            return this.f4693a.read();
         }
 
         @Override // java.io.DataInput
         public boolean readBoolean() {
             this.b++;
-            return this.f4527a.readBoolean();
+            return this.f4693a.readBoolean();
         }
 
         @Override // java.io.DataInput
         public byte readByte() throws IOException {
             this.b++;
-            int i10 = this.f4527a.read();
+            int i10 = this.f4693a.read();
             if (i10 >= 0) {
                 return (byte) i10;
             }
@@ -3936,7 +3936,7 @@ public class a {
         @Override // java.io.DataInput
         public char readChar() {
             this.b += 2;
-            return this.f4527a.readChar();
+            return this.f4693a.readChar();
         }
 
         @Override // java.io.DataInput
@@ -3952,27 +3952,27 @@ public class a {
         @Override // java.io.DataInput
         public void readFully(byte[] bArr, int i10, int i11) throws IOException {
             this.b += i11;
-            this.f4527a.readFully(bArr, i10, i11);
+            this.f4693a.readFully(bArr, i10, i11);
         }
 
         @Override // java.io.DataInput
         public int readInt() throws IOException {
             this.b += 4;
-            int i10 = this.f4527a.read();
-            int i11 = this.f4527a.read();
-            int i12 = this.f4527a.read();
-            int i13 = this.f4527a.read();
+            int i10 = this.f4693a.read();
+            int i11 = this.f4693a.read();
+            int i12 = this.f4693a.read();
+            int i13 = this.f4693a.read();
             if ((i10 | i11 | i12 | i13) < 0) {
                 throw new EOFException();
             }
-            ByteOrder byteOrder = this.f4528c;
+            ByteOrder byteOrder = this.f4694c;
             if (byteOrder == ByteOrder.LITTLE_ENDIAN) {
                 return (i13 << 24) + (i12 << 16) + (i11 << 8) + i10;
             }
             if (byteOrder == ByteOrder.BIG_ENDIAN) {
                 return (i10 << 24) + (i11 << 16) + (i12 << 8) + i13;
             }
-            throw new IOException("Invalid byte order: " + this.f4528c);
+            throw new IOException("Invalid byte order: " + this.f4694c);
         }
 
         @Override // java.io.DataInput
@@ -3984,73 +3984,73 @@ public class a {
         @Override // java.io.DataInput
         public long readLong() throws IOException {
             this.b += 8;
-            int i10 = this.f4527a.read();
-            int i11 = this.f4527a.read();
-            int i12 = this.f4527a.read();
-            int i13 = this.f4527a.read();
-            int i14 = this.f4527a.read();
-            int i15 = this.f4527a.read();
-            int i16 = this.f4527a.read();
-            int i17 = this.f4527a.read();
+            int i10 = this.f4693a.read();
+            int i11 = this.f4693a.read();
+            int i12 = this.f4693a.read();
+            int i13 = this.f4693a.read();
+            int i14 = this.f4693a.read();
+            int i15 = this.f4693a.read();
+            int i16 = this.f4693a.read();
+            int i17 = this.f4693a.read();
             if ((i10 | i11 | i12 | i13 | i14 | i15 | i16 | i17) < 0) {
                 throw new EOFException();
             }
-            ByteOrder byteOrder = this.f4528c;
+            ByteOrder byteOrder = this.f4694c;
             if (byteOrder == ByteOrder.LITTLE_ENDIAN) {
                 return (((long) i17) << 56) + (((long) i16) << 48) + (((long) i15) << 40) + (((long) i14) << 32) + (((long) i13) << 24) + (((long) i12) << 16) + (((long) i11) << 8) + ((long) i10);
             }
             if (byteOrder == ByteOrder.BIG_ENDIAN) {
                 return (((long) i10) << 56) + (((long) i11) << 48) + (((long) i12) << 40) + (((long) i13) << 32) + (((long) i14) << 24) + (((long) i15) << 16) + (((long) i16) << 8) + ((long) i17);
             }
-            throw new IOException("Invalid byte order: " + this.f4528c);
+            throw new IOException("Invalid byte order: " + this.f4694c);
         }
 
         @Override // java.io.DataInput
         public short readShort() throws IOException {
             this.b += 2;
-            int i10 = this.f4527a.read();
-            int i11 = this.f4527a.read();
+            int i10 = this.f4693a.read();
+            int i11 = this.f4693a.read();
             if ((i10 | i11) < 0) {
                 throw new EOFException();
             }
-            ByteOrder byteOrder = this.f4528c;
+            ByteOrder byteOrder = this.f4694c;
             if (byteOrder == ByteOrder.LITTLE_ENDIAN) {
                 return (short) ((i11 << 8) + i10);
             }
             if (byteOrder == ByteOrder.BIG_ENDIAN) {
                 return (short) ((i10 << 8) + i11);
             }
-            throw new IOException("Invalid byte order: " + this.f4528c);
+            throw new IOException("Invalid byte order: " + this.f4694c);
         }
 
         @Override // java.io.DataInput
         public String readUTF() {
             this.b += 2;
-            return this.f4527a.readUTF();
+            return this.f4693a.readUTF();
         }
 
         @Override // java.io.DataInput
         public int readUnsignedByte() {
             this.b++;
-            return this.f4527a.readUnsignedByte();
+            return this.f4693a.readUnsignedByte();
         }
 
         @Override // java.io.DataInput
         public int readUnsignedShort() throws IOException {
             this.b += 2;
-            int i10 = this.f4527a.read();
-            int i11 = this.f4527a.read();
+            int i10 = this.f4693a.read();
+            int i11 = this.f4693a.read();
             if ((i10 | i11) < 0) {
                 throw new EOFException();
             }
-            ByteOrder byteOrder = this.f4528c;
+            ByteOrder byteOrder = this.f4694c;
             if (byteOrder == ByteOrder.LITTLE_ENDIAN) {
                 return (i11 << 8) + i10;
             }
             if (byteOrder == ByteOrder.BIG_ENDIAN) {
                 return (i10 << 8) + i11;
             }
-            throw new IOException("Invalid byte order: " + this.f4528c);
+            throw new IOException("Invalid byte order: " + this.f4694c);
         }
 
         @Override // java.io.InputStream
@@ -4069,7 +4069,7 @@ public class a {
 
         @Override // java.io.InputStream
         public int read(byte[] bArr, int i10, int i11) throws IOException {
-            int i12 = this.f4527a.read(bArr, i10, i11);
+            int i12 = this.f4693a.read(bArr, i10, i11);
             this.b += i12;
             return i12;
         }
@@ -4077,30 +4077,30 @@ public class a {
         @Override // java.io.DataInput
         public void readFully(byte[] bArr) throws IOException {
             this.b += bArr.length;
-            this.f4527a.readFully(bArr);
+            this.f4693a.readFully(bArr);
         }
 
         public b(InputStream inputStream, ByteOrder byteOrder) {
             DataInputStream dataInputStream = new DataInputStream(inputStream);
-            this.f4527a = dataInputStream;
+            this.f4693a = dataInputStream;
             dataInputStream.mark(0);
             this.b = 0;
-            this.f4528c = byteOrder;
-            this.f4530e = inputStream instanceof b ? ((b) inputStream).a() : -1;
+            this.f4694c = byteOrder;
+            this.f4696e = inputStream instanceof b ? ((b) inputStream).a() : -1;
         }
     }
 
     public static class g extends b {
         public g(byte[] bArr) {
             super(bArr);
-            this.f4527a.mark(Integer.MAX_VALUE);
+            this.f4693a.mark(Integer.MAX_VALUE);
         }
 
         public void g(long j10) throws IOException {
             int i10 = this.b;
             if (i10 > j10) {
                 this.b = 0;
-                this.f4527a.reset();
+                this.f4693a.reset();
             } else {
                 j10 -= (long) i10;
             }
@@ -4110,7 +4110,7 @@ public class a {
         public g(InputStream inputStream) {
             super(inputStream);
             if (inputStream.markSupported()) {
-                this.f4527a.mark(Integer.MAX_VALUE);
+                this.f4693a.mark(Integer.MAX_VALUE);
                 return;
             }
             throw new IllegalArgumentException("Cannot create SeekableByteOrderedDataInputStream with stream that does not support mark/reset");
@@ -4120,26 +4120,26 @@ public class a {
     public static class e {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final int f4535a;
+        public final int f4701a;
         public final String b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final int f4536c;
+        public final int f4702c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final int f4537d;
+        public final int f4703d;
 
         public e(String str, int i10, int i11) {
             this.b = str;
-            this.f4535a = i10;
-            this.f4536c = i11;
-            this.f4537d = -1;
+            this.f4701a = i10;
+            this.f4702c = i11;
+            this.f4703d = -1;
         }
 
         public boolean a(int i10) {
             int i11;
-            int i12 = this.f4536c;
-            if (i12 == 7 || i10 == 7 || i12 == i10 || (i11 = this.f4537d) == i10) {
+            int i12 = this.f4702c;
+            if (i12 == 7 || i10 == 7 || i12 == i10 || (i11 = this.f4703d) == i10) {
                 return true;
             }
             if ((i12 == 4 || i11 == 4) && i10 == 3) {
@@ -4153,9 +4153,9 @@ public class a {
 
         public e(String str, int i10, int i11, int i12) {
             this.b = str;
-            this.f4535a = i10;
-            this.f4536c = i11;
-            this.f4537d = i12;
+            this.f4701a = i10;
+            this.f4702c = i11;
+            this.f4703d = i12;
         }
     }
 
@@ -4165,31 +4165,31 @@ public class a {
 
     /* JADX WARN: Code duplicated, block: B:19:0x004f  */
     public a(InputStream inputStream, int i10) {
-        e[][] eVarArr = f4487k0;
-        this.f4508f = new HashMap[eVarArr.length];
-        this.f4509g = new HashSet(eVarArr.length);
-        this.f4510h = ByteOrder.BIG_ENDIAN;
+        e[][] eVarArr = f4653k0;
+        this.f4674f = new HashMap[eVarArr.length];
+        this.f4675g = new HashSet(eVarArr.length);
+        this.f4676h = ByteOrder.BIG_ENDIAN;
         if (inputStream != null) {
-            this.f4504a = null;
+            this.f4670a = null;
             boolean z10 = i10 == 1;
-            this.f4507e = z10;
+            this.f4673e = z10;
             if (z10) {
-                this.f4505c = null;
+                this.f4671c = null;
                 this.b = null;
             } else if (inputStream instanceof AssetManager.AssetInputStream) {
-                this.f4505c = (AssetManager.AssetInputStream) inputStream;
+                this.f4671c = (AssetManager.AssetInputStream) inputStream;
                 this.b = null;
             } else if (inputStream instanceof FileInputStream) {
                 FileInputStream fileInputStream = (FileInputStream) inputStream;
                 if (O(fileInputStream.getFD())) {
-                    this.f4505c = null;
+                    this.f4671c = null;
                     this.b = fileInputStream.getFD();
                 } else {
-                    this.f4505c = null;
+                    this.f4671c = null;
                     this.b = null;
                 }
             } else {
-                this.f4505c = null;
+                this.f4671c = null;
                 this.b = null;
             }
             T(inputStream);

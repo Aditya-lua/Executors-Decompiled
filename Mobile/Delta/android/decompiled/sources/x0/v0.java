@@ -16,38 +16,38 @@ import java.util.concurrent.CancellationException;
 public class v0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final r0 f34653a;
+    public final r0 f35151a;
     public final n0.p0 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public c f34654c;
+    public c f35152c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public b f34655d;
+    public b f35153d;
 
     public class a implements r0.c<j2> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ n0 f34656a;
+        public final /* synthetic */ n0 f35154a;
 
         public a(n0 n0Var) {
-            this.f34656a = n0Var;
+            this.f35154a = n0Var;
         }
 
         @Override // r0.c
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public void onSuccess(j2 j2Var) {
             x2.g.g(j2Var);
-            v0.this.f34653a.d(j2Var);
+            v0.this.f35151a.d(j2Var);
         }
 
         @Override // r0.c
         public void onFailure(Throwable th2) {
-            if (this.f34656a.t() == 2 && (th2 instanceof CancellationException)) {
+            if (this.f35154a.t() == 2 && (th2 instanceof CancellationException)) {
                 r1.a("SurfaceProcessorNode", "Downstream VideoCapture failed to provide Surface.");
                 return;
             }
-            r1.m("SurfaceProcessorNode", "Downstream node failed to provide Surface. Target: " + z0.b(this.f34656a.t()), th2);
+            r1.m("SurfaceProcessorNode", "Downstream node failed to provide Surface. Target: " + z0.b(this.f35154a.t()), th2);
         }
     }
 
@@ -66,7 +66,7 @@ public class v0 {
 
     public v0(n0.p0 p0Var, r0 r0Var) {
         this.b = p0Var;
-        this.f34653a = r0Var;
+        this.f35151a = r0Var;
     }
 
     public static /* synthetic */ void b(Map map, v2.h hVar) {
@@ -80,7 +80,7 @@ public class v0 {
     }
 
     public static /* synthetic */ void c(v0 v0Var) {
-        c cVar = v0Var.f34654c;
+        c cVar = v0Var.f35152c;
         if (cVar != null) {
             Iterator<n0> it = cVar.values().iterator();
             while (it.hasNext()) {
@@ -96,15 +96,15 @@ public class v0 {
     }
 
     public r0 e() {
-        return this.f34653a;
+        return this.f35151a;
     }
 
     public void f() {
-        this.f34653a.a();
+        this.f35151a.a();
         p0.z.e(new Runnable() { // from class: x0.u0
             @Override // java.lang.Runnable
             public final void run() {
-                v0.c(this.f34651a);
+                v0.c(this.f35149a);
             }
         });
     }
@@ -115,14 +115,14 @@ public class v0 {
             entry.getValue().e(new Runnable() { // from class: x0.s0
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f34636a.d(n0Var, entry);
+                    this.f35134a.d(n0Var, entry);
                 }
             });
         }
     }
 
     public final void h(n0 n0Var) {
-        this.f34653a.b(n0Var.k(this.b));
+        this.f35151a.b(n0Var.k(this.b));
     }
 
     public void i(n0 n0Var, final Map<z0.f, n0> map) {
@@ -136,21 +136,21 @@ public class v0 {
 
     public c j(b bVar) {
         p0.z.b();
-        r1.a("SurfaceProcessorNode", "SurfaceProcessorNode Transform (Processor=" + this.f34653a + "\n   inputEdge = " + bVar.b());
+        r1.a("SurfaceProcessorNode", "SurfaceProcessorNode Transform (Processor=" + this.f35151a + "\n   inputEdge = " + bVar.b());
         Iterator<z0.f> it = bVar.a().iterator();
         while (it.hasNext()) {
             r1.a("SurfaceProcessorNode", "   outputConfig = " + it.next());
         }
-        this.f34655d = bVar;
-        this.f34654c = new c();
+        this.f35153d = bVar;
+        this.f35152c = new c();
         n0 n0VarB = bVar.b();
         for (z0.f fVar : bVar.a()) {
-            this.f34654c.put(fVar, k(n0VarB, fVar));
+            this.f35152c.put(fVar, k(n0VarB, fVar));
         }
         h(n0VarB);
-        g(n0VarB, this.f34654c);
-        i(n0VarB, this.f34654c);
-        return this.f34654c;
+        g(n0VarB, this.f35152c);
+        i(n0VarB, this.f35152c);
+        return this.f35152c;
     }
 
     public final n0 k(n0 n0Var, z0.f fVar) {

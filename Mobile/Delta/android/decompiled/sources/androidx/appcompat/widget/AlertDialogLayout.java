@@ -45,10 +45,10 @@ public class AlertDialogLayout extends b {
                 int id2 = childAt.getId();
                 if (id2 == f.U) {
                     view = childAt;
-                } else if (id2 == f.f19964l) {
+                } else if (id2 == f.f20080l) {
                     view2 = childAt;
                 } else {
-                    if ((id2 != f.f19966n && id2 != f.f19968p) || view3 != null) {
+                    if ((id2 != f.f20082n && id2 != f.f20084p) || view3 != null) {
                         return false;
                     }
                     view3 = childAt;

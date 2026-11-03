@@ -12,21 +12,21 @@ import java.util.List;
 public final class c0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f20415a;
+    public final Context f20531a;
     public int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f20416c = 0;
+    public int f20532c = 0;
 
     public c0(Context context) {
-        this.f20415a = context;
+        this.f20531a = context;
     }
 
     public final synchronized int a() {
         PackageInfo packageInfoE;
         if (this.b == 0) {
             try {
-                packageInfoE = w9.c.a(this.f20415a).e("com.google.android.gms", 0);
+                packageInfoE = w9.c.a(this.f20531a).e("com.google.android.gms", 0);
             } catch (PackageManager.NameNotFoundException e10) {
                 Log.w("Metadata", "Failed to find package ".concat(e10.toString()));
                 packageInfoE = null;
@@ -43,11 +43,11 @@ public final class c0 {
     /* JADX WARN: Code duplicated, block: B:32:0x0074  */
     public final synchronized int b() {
         List<ResolveInfo> listQueryBroadcastReceivers;
-        int i10 = this.f20416c;
+        int i10 = this.f20532c;
         if (i10 != 0) {
             return i10;
         }
-        Context context = this.f20415a;
+        Context context = this.f20531a;
         PackageManager packageManager = context.getPackageManager();
         if (w9.c.a(context).b("com.google.android.c2dm.permission.SEND", "com.google.android.gms") == -1) {
             Log.e("Metadata", "Google Play services missing or without correct permission.");
@@ -64,7 +64,7 @@ public final class c0 {
             if (true != u9.m.g()) {
                 i11 = 2;
             }
-            this.f20416c = i11;
+            this.f20532c = i11;
             return i11;
         }
         Intent intent2 = new Intent("com.google.android.c2dm.intent.REGISTER");
@@ -79,12 +79,12 @@ public final class c0 {
                 if (true != u9.m.g()) {
                     i11 = 2;
                 }
-                this.f20416c = i11;
+                this.f20532c = i11;
                 return i11;
             }
             i11 = 2;
         }
-        this.f20416c = i11;
+        this.f20532c = i11;
         return i11;
     }
 }

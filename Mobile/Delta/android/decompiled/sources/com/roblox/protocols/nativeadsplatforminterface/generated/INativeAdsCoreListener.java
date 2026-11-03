@@ -36,7 +36,13 @@ public abstract class INativeAdsCoreListener {
 
         private native void native_onInitializeSdkSuccess(long j10, String str);
 
+        private native void native_onLoadInterstitialAdFailed(long j10, String str, LoadAdFailureReason loadAdFailureReason, String str2);
+
+        private native void native_onLoadInterstitialAdSuccess(long j10, String str);
+
         private native void native_onReportAd(long j10, String str, String str2);
+
+        private native void native_onServeInterstitialAd(long j10, String str, String str2);
 
         private native void native_onSetAdStringCompleted(long j10, int i10, boolean z10, String str);
 
@@ -73,8 +79,23 @@ public abstract class INativeAdsCoreListener {
         }
 
         @Override // com.roblox.protocols.nativeadsplatforminterface.generated.INativeAdsCoreListener
+        public void onLoadInterstitialAdFailed(String str, LoadAdFailureReason loadAdFailureReason, String str2) {
+            native_onLoadInterstitialAdFailed(this.nativeRef, str, loadAdFailureReason, str2);
+        }
+
+        @Override // com.roblox.protocols.nativeadsplatforminterface.generated.INativeAdsCoreListener
+        public void onLoadInterstitialAdSuccess(String str) {
+            native_onLoadInterstitialAdSuccess(this.nativeRef, str);
+        }
+
+        @Override // com.roblox.protocols.nativeadsplatforminterface.generated.INativeAdsCoreListener
         public void onReportAd(String str, String str2) {
             native_onReportAd(this.nativeRef, str, str2);
+        }
+
+        @Override // com.roblox.protocols.nativeadsplatforminterface.generated.INativeAdsCoreListener
+        public void onServeInterstitialAd(String str, String str2) {
+            native_onServeInterstitialAd(this.nativeRef, str, str2);
         }
 
         @Override // com.roblox.protocols.nativeadsplatforminterface.generated.INativeAdsCoreListener
@@ -108,7 +129,16 @@ public abstract class INativeAdsCoreListener {
     public void onInitializeSdkSuccess(String str) {
     }
 
+    public void onLoadInterstitialAdFailed(String str, LoadAdFailureReason loadAdFailureReason, String str2) {
+    }
+
+    public void onLoadInterstitialAdSuccess(String str) {
+    }
+
     public void onReportAd(String str, String str2) {
+    }
+
+    public void onServeInterstitialAd(String str, String str2) {
     }
 
     public void onSetAdStringCompleted(int i10, boolean z10, String str) {

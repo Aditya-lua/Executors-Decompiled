@@ -4,10 +4,10 @@ package com.google.crypto.tink.shaded.protobuf;
 public class x implements r0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final x f8652a = new x();
+    public static final x f8726a = new x();
 
     public static x c() {
-        return f8652a;
+        return f8726a;
     }
 
     @Override // com.google.crypto.tink.shaded.protobuf.r0

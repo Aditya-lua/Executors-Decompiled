@@ -16,16 +16,16 @@ import o9.b;
 public final class LocationResult extends AbstractSafeParcelable implements ReflectedParcelable {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final List<Location> f7381f;
+    public final List<Location> f7455f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final List<Location> f7380g = Collections.EMPTY_LIST;
+    public static final List<Location> f7454g = Collections.EMPTY_LIST;
 
     @NonNull
     public static final Parcelable.Creator<LocationResult> CREATOR = new u();
 
     public LocationResult(List<Location> list) {
-        this.f7381f = list;
+        this.f7455f = list;
     }
 
     public boolean equals(@NonNull Object obj) {
@@ -33,11 +33,11 @@ public final class LocationResult extends AbstractSafeParcelable implements Refl
             return false;
         }
         LocationResult locationResult = (LocationResult) obj;
-        if (locationResult.f7381f.size() != this.f7381f.size()) {
+        if (locationResult.f7455f.size() != this.f7455f.size()) {
             return false;
         }
-        Iterator<Location> it = locationResult.f7381f.iterator();
-        Iterator<Location> it2 = this.f7381f.iterator();
+        Iterator<Location> it = locationResult.f7455f.iterator();
+        Iterator<Location> it2 = this.f7455f.iterator();
         while (it.hasNext()) {
             if (it2.next().getTime() != it.next().getTime()) {
                 return false;
@@ -47,7 +47,7 @@ public final class LocationResult extends AbstractSafeParcelable implements Refl
     }
 
     public int hashCode() {
-        Iterator<Location> it = this.f7381f.iterator();
+        Iterator<Location> it = this.f7455f.iterator();
         int i10 = 17;
         while (it.hasNext()) {
             long time = it.next().getTime();
@@ -58,7 +58,7 @@ public final class LocationResult extends AbstractSafeParcelable implements Refl
 
     @NonNull
     public String toString() {
-        String strValueOf = String.valueOf(this.f7381f);
+        String strValueOf = String.valueOf(this.f7455f);
         StringBuilder sb2 = new StringBuilder(strValueOf.length() + 27);
         sb2.append("LocationResult[locations: ");
         sb2.append(strValueOf);
@@ -68,7 +68,7 @@ public final class LocationResult extends AbstractSafeParcelable implements Refl
 
     @NonNull
     public List<Location> v3() {
-        return this.f7381f;
+        return this.f7455f;
     }
 
     @Override // android.os.Parcelable

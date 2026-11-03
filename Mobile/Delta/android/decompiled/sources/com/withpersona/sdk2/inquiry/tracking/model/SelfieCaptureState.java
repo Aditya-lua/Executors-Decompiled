@@ -14,10 +14,10 @@ public enum SelfieCaptureState {
     SUBMITTING,
     RECORDING_TIMED_OUT;
 
-    private static final /* synthetic */ qt.a $ENTRIES = qt.b.a(values());
+    private static final /* synthetic */ ot.a $ENTRIES = ot.b.a(values());
 
     @NotNull
-    public static qt.a<SelfieCaptureState> getEntries() {
+    public static ot.a<SelfieCaptureState> getEntries() {
         return $ENTRIES;
     }
 }

@@ -2,9 +2,9 @@ package com.google.android.gms.internal.mlkit_vision_common;
 
 import androidx.annotation.NonNull;
 import java.io.IOException;
-import qf.c;
-import qf.d;
-import qf.h;
+import rf.c;
+import rf.d;
+import rf.h;
 
 /* JADX INFO: loaded from: classes.dex */
 final class zzao implements h {
@@ -58,7 +58,7 @@ final class zzao implements h {
         return this;
     }
 
-    @Override // qf.h
+    @Override // rf.h
     @NonNull
     public final h add(String str) throws IOException {
         zzb();
@@ -66,7 +66,7 @@ final class zzao implements h {
         return this;
     }
 
-    @Override // qf.h
+    @Override // rf.h
     @NonNull
     public final h add(boolean z10) throws IOException {
         zzb();

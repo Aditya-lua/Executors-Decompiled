@@ -10,48 +10,48 @@ public abstract class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final DataHolder f24043a;
+    public final DataHolder f24693a;
     public int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f24044c;
+    public int f24694c;
 
     public d(@NonNull DataHolder dataHolder, int i10) {
-        this.f24043a = (DataHolder) m.l(dataHolder);
+        this.f24693a = (DataHolder) m.l(dataHolder);
         o(i10);
     }
 
     public boolean a(@NonNull String str) {
-        return this.f24043a.a(str, this.b, this.f24044c);
+        return this.f24693a.a(str, this.b, this.f24694c);
     }
 
     public float f(@NonNull String str) {
-        return this.f24043a.D3(str, this.b, this.f24044c);
+        return this.f24693a.D3(str, this.b, this.f24694c);
     }
 
     public int g(@NonNull String str) {
-        return this.f24043a.v3(str, this.b, this.f24044c);
+        return this.f24693a.v3(str, this.b, this.f24694c);
     }
 
     public long i(@NonNull String str) {
-        return this.f24043a.w3(str, this.b, this.f24044c);
+        return this.f24693a.w3(str, this.b, this.f24694c);
     }
 
     @NonNull
     public String j(@NonNull String str) {
-        return this.f24043a.z3(str, this.b, this.f24044c);
+        return this.f24693a.z3(str, this.b, this.f24694c);
     }
 
     public boolean k(@NonNull String str) {
-        return this.f24043a.B3(str);
+        return this.f24693a.B3(str);
     }
 
     public boolean m(@NonNull String str) {
-        return this.f24043a.C3(str, this.b, this.f24044c);
+        return this.f24693a.C3(str, this.b, this.f24694c);
     }
 
     public Uri n(@NonNull String str) {
-        String strZ3 = this.f24043a.z3(str, this.b, this.f24044c);
+        String strZ3 = this.f24693a.z3(str, this.b, this.f24694c);
         if (strZ3 == null) {
             return null;
         }
@@ -60,11 +60,11 @@ public abstract class d {
 
     public final void o(int i10) {
         boolean z10 = false;
-        if (i10 >= 0 && i10 < this.f24043a.getCount()) {
+        if (i10 >= 0 && i10 < this.f24693a.getCount()) {
             z10 = true;
         }
         m.p(z10);
         this.b = i10;
-        this.f24044c = this.f24043a.A3(i10);
+        this.f24694c = this.f24693a.A3(i10);
     }
 }

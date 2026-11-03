@@ -102,7 +102,7 @@ public final class o0 {
 
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f34979h = qt.b.a(a());
+        public static final /* synthetic */ ot.a f35477h = ot.b.a(a());
 
         public final boolean b() {
             return this == SUCCEEDED || this == FAILED || this == CANCELLED;

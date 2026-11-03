@@ -22,7 +22,7 @@ public final class p {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // java.util.Comparator
         public final int compare(T t8, T t10) {
-            return mt.a.a(((o.a) t8).name, ((o.a) t10).name);
+            return kt.a.a(((o.a) t8).name, ((o.a) t10).name);
         }
     }
 
@@ -31,7 +31,7 @@ public final class p {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // java.util.Comparator
         public final int compare(T t8, T t10) {
-            return mt.a.a(((o.d) t8).name, ((o.d) t10).name);
+            return kt.a.a(((o.d) t8).name, ((o.d) t10).name);
         }
     }
 

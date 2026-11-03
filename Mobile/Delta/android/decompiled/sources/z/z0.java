@@ -19,64 +19,64 @@ import java.util.concurrent.Executor;
 public final class z0 implements n0.o0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f36964a;
+    public final String f37659a;
     public final a0.c0 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final f0.h f36965c;
+    public final f0.h f37660c;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public y f36967e;
+    public y f37662e;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final p0.v<g0.w> f36972j;
+    public final p0.v<g0.w> f37667j;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final n0.k3 f36974l;
+    public final n0.k3 f37669l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final n0.z1 f36975m;
+    public final n0.z1 f37670m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public final a0.p0 f36976n;
+    public final a0.p0 f37671n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public final s0.m f36977o;
+    public final s0.m f37672o;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Object f36966d = new Object();
+    public final Object f37661d = new Object();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public p0.v<Integer> f36968f = null;
+    public p0.v<Integer> f37663f = null;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public p0.v<Integer> f36969g = null;
+    public p0.v<Integer> f37664g = null;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public p0.v<Integer> f36970h = null;
+    public p0.v<Integer> f37665h = null;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public p0.v<g0.z2> f36971i = null;
+    public p0.v<g0.z2> f37666i = null;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public List<Pair<n0.u, Executor>> f36973k = null;
+    public List<Pair<n0.u, Executor>> f37668k = null;
 
     public z0(String str, a0.p0 p0Var, s0.m mVar) {
         String str2 = (String) x2.g.g(str);
-        this.f36964a = str2;
-        this.f36976n = p0Var;
+        this.f37659a = str2;
+        this.f37671n = p0Var;
         a0.c0 c0VarC = p0Var.c(str2);
         this.b = c0VarC;
-        this.f36965c = new f0.h(this);
+        this.f37660c = new f0.h(this);
         n0.k3 k3VarA = c0.a.a(str, c0VarC);
-        this.f36974l = k3VarA;
-        this.f36975m = new m2(str, k3VarA);
-        this.f36972j = new p0.v<>(g0.w.a(g0.w.b.CLOSED));
-        this.f36977o = mVar;
+        this.f37669l = k3VarA;
+        this.f37670m = new m2(str, k3VarA);
+        this.f37667j = new p0.v<>(g0.w.a(g0.w.b.CLOSED));
+        this.f37672o = mVar;
     }
 
     public f0.h B() {
-        return this.f36965c;
+        return this.f37660c;
     }
 
     public a0.c0 C() {
@@ -100,31 +100,31 @@ public final class z0 implements n0.o0 {
     }
 
     public void G(y yVar) {
-        synchronized (this.f36966d) {
+        synchronized (this.f37661d) {
             try {
-                this.f36967e = yVar;
-                p0.v<g0.z2> vVar = this.f36971i;
+                this.f37662e = yVar;
+                p0.v<g0.z2> vVar = this.f37666i;
                 if (vVar != null) {
                     vVar.u(yVar.W().j());
                 }
-                p0.v<Integer> vVar2 = this.f36968f;
+                p0.v<Integer> vVar2 = this.f37663f;
                 if (vVar2 != null) {
-                    vVar2.u(this.f36967e.U().g());
+                    vVar2.u(this.f37662e.U().g());
                 }
-                p0.v<Integer> vVar3 = this.f36969g;
+                p0.v<Integer> vVar3 = this.f37664g;
                 if (vVar3 != null) {
-                    vVar3.u(this.f36967e.U().h());
+                    vVar3.u(this.f37662e.U().h());
                 }
-                p0.v<Integer> vVar4 = this.f36970h;
+                p0.v<Integer> vVar4 = this.f37665h;
                 if (vVar4 != null) {
-                    vVar4.u(this.f36967e.J().c());
+                    vVar4.u(this.f37662e.J().c());
                 }
-                List<Pair<n0.u, Executor>> list = this.f36973k;
+                List<Pair<n0.u, Executor>> list = this.f37668k;
                 if (list != null) {
                     for (Pair<n0.u, Executor> pair : list) {
-                        this.f36967e.C((Executor) pair.second, (n0.u) pair.first);
+                        this.f37662e.C((Executor) pair.second, (n0.u) pair.first);
                     }
-                    this.f36973k = null;
+                    this.f37668k = null;
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -157,7 +157,7 @@ public final class z0 implements n0.o0 {
     }
 
     public void J(androidx.p000lifecycle.a0<g0.w> a0Var) {
-        this.f36972j.u(a0Var);
+        this.f37667j.u(a0Var);
     }
 
     @Override // n0.o0
@@ -175,7 +175,7 @@ public final class z0 implements n0.o0 {
 
     @Override // g0.t
     public androidx.p000lifecycle.a0<g0.w> b() {
-        return this.f36972j;
+        return this.f37667j;
     }
 
     @Override // n0.o0
@@ -190,22 +190,22 @@ public final class z0 implements n0.o0 {
 
     @Override // n0.o0
     public String e() {
-        return this.f36964a;
+        return this.f37659a;
     }
 
     @Override // n0.o0
     public void f(Executor executor, n0.u uVar) {
-        synchronized (this.f36966d) {
+        synchronized (this.f37661d) {
             try {
-                y yVar = this.f36967e;
+                y yVar = this.f37662e;
                 if (yVar != null) {
                     yVar.C(executor, uVar);
                     return;
                 }
-                if (this.f36973k == null) {
-                    this.f36973k = new ArrayList();
+                if (this.f37668k == null) {
+                    this.f37668k = new ArrayList();
                 }
-                this.f36973k.add(new Pair<>(uVar, executor));
+                this.f37668k.add(new Pair<>(uVar, executor));
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -238,7 +238,7 @@ public final class z0 implements n0.o0 {
 
     @Override // n0.o0
     public n0.k3 l() {
-        return this.f36974l;
+        return this.f37669l;
     }
 
     @Override // n0.o0
@@ -274,16 +274,16 @@ public final class z0 implements n0.o0 {
 
     @Override // g0.t
     public androidx.p000lifecycle.a0<Integer> p() {
-        synchronized (this.f36966d) {
+        synchronized (this.f37661d) {
             try {
-                y yVar = this.f36967e;
+                y yVar = this.f37662e;
                 if (yVar == null) {
-                    if (this.f36968f == null) {
-                        this.f36968f = new p0.v<>(0);
+                    if (this.f37663f == null) {
+                        this.f37663f = new p0.v<>(0);
                     }
-                    return this.f36968f;
+                    return this.f37663f;
                 }
-                p0.v<Integer> vVar = this.f36968f;
+                p0.v<Integer> vVar = this.f37663f;
                 if (vVar != null) {
                     return vVar;
                 }
@@ -325,14 +325,14 @@ public final class z0 implements n0.o0 {
 
     @Override // n0.o0
     public void v(n0.u uVar) {
-        synchronized (this.f36966d) {
+        synchronized (this.f37661d) {
             try {
-                y yVar = this.f36967e;
+                y yVar = this.f37662e;
                 if (yVar != null) {
                     yVar.h0(uVar);
                     return;
                 }
-                List<Pair<n0.u, Executor>> list = this.f36973k;
+                List<Pair<n0.u, Executor>> list = this.f37668k;
                 if (list == null) {
                     return;
                 }
@@ -355,7 +355,7 @@ public final class z0 implements n0.o0 {
 
     @Override // n0.o0
     public n0.z1 x() {
-        return this.f36975m;
+        return this.f37670m;
     }
 
     @Override // n0.o0
@@ -366,16 +366,16 @@ public final class z0 implements n0.o0 {
 
     @Override // g0.t
     public androidx.p000lifecycle.a0<g0.z2> z() {
-        synchronized (this.f36966d) {
+        synchronized (this.f37661d) {
             try {
-                y yVar = this.f36967e;
+                y yVar = this.f37662e;
                 if (yVar == null) {
-                    if (this.f36971i == null) {
-                        this.f36971i = new p0.v<>(g6.h(this.b));
+                    if (this.f37666i == null) {
+                        this.f37666i = new p0.v<>(g6.h(this.b));
                     }
-                    return this.f36971i;
+                    return this.f37666i;
                 }
-                p0.v<g0.z2> vVar = this.f36971i;
+                p0.v<g0.z2> vVar = this.f37666i;
                 if (vVar != null) {
                     return vVar;
                 }

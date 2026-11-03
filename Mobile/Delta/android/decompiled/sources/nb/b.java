@@ -9,22 +9,22 @@ import java.util.Objects;
 public final class b extends c {
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final com.google.android.gms.internal.measurement.z3 f25344g;
+    public final com.google.android.gms.internal.measurement.z3 f26165g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final /* synthetic */ e f25345h;
+    public final /* synthetic */ e f26166h;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public b(e eVar, String str, int i10, com.google.android.gms.internal.measurement.z3 z3Var) {
         super(str, i10);
         Objects.requireNonNull(eVar);
-        this.f25345h = eVar;
-        this.f25344g = z3Var;
+        this.f26166h = eVar;
+        this.f26165g = z3Var;
     }
 
     @Override // nb.c
     public final int a() {
-        return this.f25344g.G();
+        return this.f26165g.G();
     }
 
     @Override // nb.c
@@ -34,7 +34,7 @@ public final class b extends c {
 
     @Override // nb.c
     public final boolean c() {
-        return this.f25344g.N();
+        return this.f26165g.N();
     }
 
     /* JADX WARN: Code duplicated, block: B:100:0x0285  */
@@ -111,13 +111,13 @@ public final class b extends c {
         Double dValueOf;
         com.google.android.gms.internal.measurement.b4 b4Var2;
         com.google.android.gms.internal.measurement.ye.a();
-        e eVar = this.f25345h;
-        g7 g7Var = eVar.f25625a;
+        e eVar = this.f26166h;
+        g7 g7Var = eVar.f26446a;
         k kVarW = g7Var.w();
-        String str2 = this.f25377a;
+        String str2 = this.f26198a;
         boolean zH = kVarW.H(str2, z4.G0);
-        com.google.android.gms.internal.measurement.z3 z3Var = this.f25344g;
-        long j11 = z3Var.S() ? b0Var.f25349e : j10;
+        com.google.android.gms.internal.measurement.z3 z3Var = this.f26165g;
+        long j11 = z3Var.S() ? b0Var.f26170e : j10;
         bool = null;
         bool = null;
         bool = null;
@@ -416,23 +416,23 @@ public final class b extends c {
             return false;
         }
         Boolean bool2 = Boolean.TRUE;
-        this.f25378c = bool2;
+        this.f26199c = bool2;
         if (!bool.booleanValue()) {
             return true;
         }
-        this.f25379d = bool2;
+        this.f26200d = bool2;
         if (objArr != false && o6Var.K()) {
             Long lValueOf2 = Long.valueOf(o6Var.L());
             if (z3Var.Q()) {
                 if (zH && z3Var.N()) {
                     lValueOf2 = l10;
                 }
-                this.f25381f = lValueOf2;
+                this.f26202f = lValueOf2;
             } else {
                 if (zH && z3Var.N()) {
                     lValueOf2 = l11;
                 }
-                this.f25380e = lValueOf2;
+                this.f26201e = lValueOf2;
             }
         }
         return true;

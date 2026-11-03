@@ -21,20 +21,20 @@ public final class i0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @Nullable
-    public static final ColorSpace f15193a = null;
+    public static final ColorSpace f15807a = null;
 
     @NotNull
     public static final Bitmap.Config[] b = {Bitmap.Config.ARGB_8888, Bitmap.Config.RGBA_F16};
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static final Bitmap.Config f15194c = Bitmap.Config.HARDWARE;
+    public static final Bitmap.Config f15808c = Bitmap.Config.HARDWARE;
 
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
     public static final /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f15195a;
+        public static final /* synthetic */ int[] f15809a;
         public static final /* synthetic */ int[] b;
 
         static {
@@ -59,7 +59,7 @@ public final class i0 {
                 iArr[u.a.Error.ordinal()] = 5;
             } catch (NoSuchFieldError unused5) {
             }
-            f15195a = iArr;
+            f15809a = iArr;
             int[] iArr2 = new int[ImageView.ScaleType.values().length];
             try {
                 iArr2[ImageView.ScaleType.FIT_START.ordinal()] = 1;
@@ -83,7 +83,7 @@ public final class i0 {
 
     @NotNull
     public static final Bitmap.Config a() {
-        return f15194c;
+        return f15808c;
     }
 
     public static final int b(@NotNull Drawable drawable) {
@@ -94,7 +94,7 @@ public final class i0 {
 
     @Nullable
     public static final ColorSpace c() {
-        return f15193a;
+        return f15807a;
     }
 
     public static final int d(@NotNull Configuration configuration) {

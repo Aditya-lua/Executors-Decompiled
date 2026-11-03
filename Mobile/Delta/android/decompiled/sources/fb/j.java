@@ -7,19 +7,19 @@ import java.util.concurrent.atomic.AtomicReference;
 public final class j {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final AtomicReference f16544c = new AtomicReference();
+    public static final AtomicReference f17140c = new AtomicReference();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final i f16545a;
+    public final i f17141a;
     public final m b;
 
     public j(Application application, m mVar) {
-        this.f16545a = new i(this, application, null);
+        this.f17141a = new i(this, application, null);
         this.b = mVar;
     }
 
     public static j a(Application application) {
-        AtomicReference atomicReference = f16544c;
+        AtomicReference atomicReference = f17140c;
         j jVar = (j) atomicReference.get();
         if (jVar != null) {
             return jVar;
@@ -30,7 +30,7 @@ public final class j {
 
     public final void b() {
         s0.a("AutomaticGamesAuthenticator", "startWatching()");
-        this.f16545a.a();
+        this.f17141a.a();
     }
 
     public final /* synthetic */ m c() {

@@ -1,6 +1,7 @@
 package com.withpersona.sdk2.inquiry.network.core;
 
 import android.util.Base64;
+import gt.s;
 import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -11,7 +12,6 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import jt.s;
 import kotlin.Pair;
 import kotlin.collections.CollectionsKt;
 import kotlin.collections.j0;
@@ -42,46 +42,46 @@ public final class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final a f12167a = new a();
+    public static final a f12248a = new a();
 
     /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.network.core.a$a, reason: collision with other inner class name */
-    public static final class C0223a {
+    public static final class C0226a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NotNull
-        public final String f12168a;
+        public final String f12249a;
 
         @NotNull
         public final String b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
         @NotNull
-        public final String f12169c;
+        public final String f12250c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
         @NotNull
-        public final String f12170d;
+        public final String f12251d;
 
-        public C0223a(@NotNull String str, @NotNull String str2, @NotNull String str3, @NotNull String str4) {
-            this.f12168a = str;
+        public C0226a(@NotNull String str, @NotNull String str2, @NotNull String str3, @NotNull String str4) {
+            this.f12249a = str;
             this.b = str2;
-            this.f12169c = str3;
-            this.f12170d = str4;
+            this.f12250c = str3;
+            this.f12251d = str4;
         }
 
         @NotNull
         public final String a() {
-            return this.f12169c;
+            return this.f12250c;
         }
 
         @NotNull
         public final String b() {
-            return this.f12168a;
+            return this.f12249a;
         }
 
         @NotNull
         public final String c() {
-            return this.f12170d;
+            return this.f12251d;
         }
 
         @NotNull
@@ -96,11 +96,11 @@ public final class a {
         public final int compare(T t8, T t10) {
             Pair pair = (Pair) t8;
             Pair pair2 = (Pair) t10;
-            return mt.a.a(CollectionsKt.m0(p.n(pair.c(), pair.d()), null, null, null, 0, null, null, 63, null), CollectionsKt.m0(p.n(pair2.c(), pair2.d()), null, null, null, 0, null, null, 63, null));
+            return kt.a.a(CollectionsKt.m0(p.n(pair.c(), pair.d()), null, null, null, 0, null, null, 63, null), CollectionsKt.m0(p.n(pair2.c(), pair2.d()), null, null, null, 0, null, null, 63, null));
         }
     }
 
-    public static /* synthetic */ Request a(a aVar, Request request, np.e eVar, long j10, int i10, Object obj) {
+    public static /* synthetic */ Request a(a aVar, Request request, lp.e eVar, long j10, int i10, Object obj) {
         if ((i10 & 2) != 0) {
             j10 = System.currentTimeMillis();
         }
@@ -108,14 +108,14 @@ public final class a {
     }
 
     public final String b(RequestBody requestBody) {
-        xu.e eVar = new xu.e();
+        vu.e eVar = new vu.e();
         requestBody.writeTo(eVar);
-        return StringsKt.p1(eVar.R2()).toString();
+        return StringsKt.p1(eVar.Q2()).toString();
     }
 
     @NotNull
     public final JSONArray c(@NotNull RequestBody requestBody) {
-        List<Pair<String, Object>> listC = f12167a.c(a(requestBody));
+        List<Pair<String, Object>> listC = f12248a.c(a(requestBody));
         ArrayList arrayList = new ArrayList(q.u(listC, 10));
         Iterator<T> it = listC.iterator();
         while (it.hasNext()) {
@@ -156,9 +156,9 @@ public final class a {
     }
 
     @NotNull
-    public final Request a(@NotNull Request request, @NotNull np.e eVar, long j10) {
-        C0223a c0223aA = a(j10, request, eVar);
-        return c0223aA != null ? request.newBuilder().addHeader("NHMJLNRS", c0223aA.d()).addHeader("STPBWSBB", c0223aA.b()).addHeader("DNLGNZLZ", c0223aA.a()).addHeader("TLJLGGDG", c0223aA.c()).build() : request;
+    public final Request a(@NotNull Request request, @NotNull lp.e eVar, long j10) {
+        C0226a c0226aA = a(j10, request, eVar);
+        return c0226aA != null ? request.newBuilder().addHeader("NHMJLNRS", c0226aA.d()).addHeader("STPBWSBB", c0226aA.b()).addHeader("DNLGNZLZ", c0226aA.a()).addHeader("TLJLGGDG", c0226aA.c()).build() : request;
     }
 
     public final boolean b(List<String> list) {
@@ -174,7 +174,7 @@ public final class a {
         return false;
     }
 
-    public final C0223a a(long j10, Request request, np.e eVar) {
+    public final C0226a a(long j10, Request request, lp.e eVar) {
         String str = request.headers().get("Authorization");
         RequestBody requestBodyBody = request.body();
         if (str == null || requestBodyBody == null) {
@@ -195,7 +195,7 @@ public final class a {
                 String strOptString = new JSONObject(new String(Base64.decode((String) StringsKt.split$default(str3, new String[]{"."}, false, 0, 6, null).get(1), 0), Charsets.UTF_8)).optString("sub");
                 if (strOptString != null && !StringsKt.p0(strOptString)) {
                     String strValueOf = String.valueOf(j10 / ((long) 1000));
-                    return new C0223a(a(CollectionsKt.m0(p.n(strOptString, strValueOf, x.N(c(requestBodyBody).toString(), "\\/", "/", false, 4, null)), ":", null, null, 0, null, null, 62, null)), strValueOf, a(CollectionsKt.m0(p.n(CollectionsKt.m0(collectionValues, "", null, null, 0, null, null, 62, null), strValueOf, x.N(c(requestBodyBody).toString(), "\\/", "/", false, 4, null)), ":", null, null, 0, null, null, 62, null)), CollectionsKt.m0(setKeySet, ", ", null, null, 0, null, null, 62, null));
+                    return new C0226a(a(CollectionsKt.m0(p.n(strOptString, strValueOf, x.N(c(requestBodyBody).toString(), "\\/", "/", false, 4, null)), ":", null, null, 0, null, null, 62, null)), strValueOf, a(CollectionsKt.m0(p.n(CollectionsKt.m0(collectionValues, "", null, null, 0, null, null, 62, null), strValueOf, x.N(c(requestBodyBody).toString(), "\\/", "/", false, 4, null)), ":", null, null, 0, null, null, 62, null)), CollectionsKt.m0(setKeySet, ", ", null, null, 0, null, null, 62, null));
                 }
                 eVar.a("Session token is null.", null);
                 return null;
@@ -303,7 +303,7 @@ public final class a {
                 } else {
                     listK = p.k();
                 }
-                a aVar = f12167a;
+                a aVar = f12248a;
                 String strA = aVar.a(listK);
                 if (strA != null) {
                     if (aVar.b(listK)) {
@@ -350,7 +350,7 @@ public final class a {
             Iterator<String> itKeys = jSONObject.keys();
             while (itKeys.hasNext()) {
                 String next = itKeys.next();
-                a aVar = f12167a;
+                a aVar = f12248a;
                 Object objOpt = jSONObject.opt(next);
                 if (str != null) {
                     next = str + "[" + next + "]";

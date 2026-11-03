@@ -17,51 +17,51 @@ import java.util.concurrent.Executor;
 public final class f1 implements ServiceConnection, i1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Map f25261a;
+    public final Map f26082a;
     public int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f25262c;
+    public boolean f26083c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public IBinder f25263d;
+    public IBinder f26084d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final e1 f25264e;
+    public final e1 f26085e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public ComponentName f25265f;
+    public ComponentName f26086f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final /* synthetic */ h1 f25266g;
+    public final /* synthetic */ h1 f26087g;
 
     public f1(h1 h1Var, e1 e1Var) {
         Objects.requireNonNull(h1Var);
-        this.f25266g = h1Var;
-        this.f25264e = e1Var;
-        this.f25261a = new HashMap();
+        this.f26087g = h1Var;
+        this.f26085e = e1Var;
+        this.f26082a = new HashMap();
         this.b = 2;
     }
 
     public final void a(String str) {
-        e1 e1Var = this.f25264e;
-        h1 h1Var = this.f25266g;
+        e1 e1Var = this.f26085e;
+        h1 h1Var = this.f26087g;
         h1Var.h().removeMessages(1, e1Var);
         h1Var.i().c(h1Var.g(), this);
-        this.f25262c = false;
+        this.f26083c = false;
         this.b = 2;
     }
 
     public final void b(ServiceConnection serviceConnection, ServiceConnection serviceConnection2, String str) {
-        this.f25261a.put(serviceConnection, serviceConnection2);
+        this.f26082a.put(serviceConnection, serviceConnection2);
     }
 
     public final void c(ServiceConnection serviceConnection, String str) {
-        this.f25261a.remove(serviceConnection);
+        this.f26082a.remove(serviceConnection);
     }
 
     public final boolean d() {
-        return this.f25262c;
+        return this.f26083c;
     }
 
     public final int e() {
@@ -69,37 +69,37 @@ public final class f1 implements ServiceConnection, i1 {
     }
 
     public final boolean f(ServiceConnection serviceConnection) {
-        return this.f25261a.containsKey(serviceConnection);
+        return this.f26082a.containsKey(serviceConnection);
     }
 
     public final boolean g() {
-        return this.f25261a.isEmpty();
+        return this.f26082a.isEmpty();
     }
 
     public final IBinder h() {
-        return this.f25263d;
+        return this.f26084d;
     }
 
     public final ComponentName i() {
-        return this.f25265f;
+        return this.f26086f;
     }
 
     public final /* synthetic */ ConnectionResult j(String str, Executor executor) throws Throwable {
         try {
-            Intent intentA = t0.a(this.f25266g.g(), this.f25264e);
+            Intent intentA = t0.a(this.f26087g.g(), this.f26085e);
             this.b = 3;
             StrictMode.VmPolicy vmPolicyA = u9.t.a();
             try {
-                h1 h1Var = this.f25266g;
+                h1 h1Var = this.f26087g;
                 t9.a aVarI = h1Var.i();
                 Context contextG = h1Var.g();
-                e1 e1Var = this.f25264e;
+                e1 e1Var = this.f26085e;
                 try {
                     boolean zD = aVarI.d(contextG, str, intentA, this, 4225, executor);
-                    this.f25262c = zD;
+                    this.f26083c = zD;
                     if (zD) {
                         h1Var.h().sendMessageDelayed(h1Var.h().obtainMessage(1, e1Var), h1Var.j());
-                        ConnectionResult connectionResult = ConnectionResult.f5688k;
+                        ConnectionResult connectionResult = ConnectionResult.f5761k;
                         StrictMode.setVmPolicy(vmPolicyA);
                         return connectionResult;
                     }
@@ -121,7 +121,7 @@ public final class f1 implements ServiceConnection, i1 {
                 th = th4;
             }
         } catch (r0 e10) {
-            return e10.f25298a;
+            return e10.f26119a;
         }
     }
 
@@ -132,13 +132,13 @@ public final class f1 implements ServiceConnection, i1 {
 
     @Override // android.content.ServiceConnection
     public final void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-        h1 h1Var = this.f25266g;
+        h1 h1Var = this.f26087g;
         synchronized (h1Var.f()) {
             try {
-                h1Var.h().removeMessages(1, this.f25264e);
-                this.f25263d = iBinder;
-                this.f25265f = componentName;
-                Iterator it = this.f25261a.values().iterator();
+                h1Var.h().removeMessages(1, this.f26085e);
+                this.f26084d = iBinder;
+                this.f26086f = componentName;
+                Iterator it = this.f26082a.values().iterator();
                 while (it.hasNext()) {
                     ((ServiceConnection) it.next()).onServiceConnected(componentName, iBinder);
                 }
@@ -151,13 +151,13 @@ public final class f1 implements ServiceConnection, i1 {
 
     @Override // android.content.ServiceConnection
     public final void onServiceDisconnected(ComponentName componentName) {
-        h1 h1Var = this.f25266g;
+        h1 h1Var = this.f26087g;
         synchronized (h1Var.f()) {
             try {
-                h1Var.h().removeMessages(1, this.f25264e);
-                this.f25263d = null;
-                this.f25265f = componentName;
-                Iterator it = this.f25261a.values().iterator();
+                h1Var.h().removeMessages(1, this.f26085e);
+                this.f26084d = null;
+                this.f26086f = componentName;
+                Iterator it = this.f26082a.values().iterator();
                 while (it.hasNext()) {
                     ((ServiceConnection) it.next()).onServiceDisconnected(componentName);
                 }

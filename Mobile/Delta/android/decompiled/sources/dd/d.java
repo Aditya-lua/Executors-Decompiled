@@ -1,275 +1,241 @@
 package dd;
 
-import android.content.Context;
-import android.content.res.ColorStateList;
-import android.content.res.Resources;
-import android.content.res.TypedArray;
-import android.graphics.Typeface;
-import android.text.TextPaint;
-import android.util.Log;
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.ObjectAnimator;
+import android.util.Property;
 import androidx.annotation.NonNull;
-import hc.k;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class d {
-
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ColorStateList f14552a;
-    public final ColorStateList b;
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final ColorStateList f14553c;
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final String f14554d;
-
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final int f14555e;
-
-    /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f14556f;
-
-    /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final boolean f14557g;
-
-    /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final float f14558h;
-
-    /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final float f14559i;
-
-    /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final float f14560j;
+public final class d extends i<ObjectAnimator> {
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final boolean f14561k;
+    public static final int[] f14540k = {0, 1350, 2700, 4050};
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final float f14562l;
+    public static final int[] f14541l = {667, 2017, 3367, 4717};
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public ColorStateList f14563m;
+    public static final int[] f14542m = {1000, 2350, 3700, 5050};
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public float f14564n;
+    public static final Property<d, Float> f14543n = new c(Float.class, "animationFraction");
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public final int f14565o;
+    public static final Property<d, Float> f14544o = new C0281d(Float.class, "completeEndFraction");
 
-    /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public boolean f14566p = false;
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public ObjectAnimator f14545c;
 
-    /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public Typeface f14567q;
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public ObjectAnimator f14546d;
 
-    public class a extends n2.h.f {
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public final g4.b f14547e;
 
-        /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ f f14568a;
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    public final dd.b f14548f;
 
-        public a(f fVar) {
-            this.f14568a = fVar;
+    /* JADX INFO: renamed from: g, reason: collision with root package name */
+    public int f14549g;
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name */
+    public float f14550h;
+
+    /* JADX INFO: renamed from: i, reason: collision with root package name */
+    public float f14551i;
+
+    /* JADX INFO: renamed from: j, reason: collision with root package name */
+    public p5.b f14552j;
+
+    public class a extends AnimatorListenerAdapter {
+        public a() {
         }
 
-        @Override // n2.h.f
-        public void f(int i10) {
-            d.this.f14566p = true;
-            this.f14568a.a(i10);
-        }
-
-        @Override // n2.h.f
-        public void g(@NonNull Typeface typeface) {
+        @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+        public void onAnimationRepeat(Animator animator) {
+            super.onAnimationRepeat(animator);
             d dVar = d.this;
-            dVar.f14567q = Typeface.create(typeface, dVar.f14555e);
-            d.this.f14566p = true;
-            this.f14568a.b(d.this.f14567q, false);
+            dVar.f14549g = (dVar.f14549g + 4) % d.this.f14548f.f14531c.length;
         }
     }
 
-    public class b extends f {
-
-        /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ Context f14569a;
-        public final /* synthetic */ TextPaint b;
-
-        /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ f f14570c;
-
-        public b(Context context, TextPaint textPaint, f fVar) {
-            this.f14569a = context;
-            this.b = textPaint;
-            this.f14570c = fVar;
+    public class b extends AnimatorListenerAdapter {
+        public b() {
         }
 
-        @Override // dd.f
-        public void a(int i10) {
-            this.f14570c.a(i10);
-        }
-
-        @Override // dd.f
-        public void b(@NonNull Typeface typeface, boolean z10) {
-            d.this.p(this.f14569a, this.b, typeface);
-            this.f14570c.b(typeface, z10);
-        }
-    }
-
-    public d(@NonNull Context context, int i10) {
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(i10, k.f19010f6);
-        l(typedArrayObtainStyledAttributes.getDimension(k.f19019g6, 0.0f));
-        k(c.a(context, typedArrayObtainStyledAttributes, k.f19046j6));
-        this.f14552a = c.a(context, typedArrayObtainStyledAttributes, k.f19055k6);
-        this.b = c.a(context, typedArrayObtainStyledAttributes, k.f19064l6);
-        this.f14555e = typedArrayObtainStyledAttributes.getInt(k.f19037i6, 0);
-        this.f14556f = typedArrayObtainStyledAttributes.getInt(k.f19028h6, 1);
-        int iE = c.e(typedArrayObtainStyledAttributes, k.f19118r6, k.f19109q6);
-        this.f14565o = typedArrayObtainStyledAttributes.getResourceId(iE, 0);
-        this.f14554d = typedArrayObtainStyledAttributes.getString(iE);
-        this.f14557g = typedArrayObtainStyledAttributes.getBoolean(k.f19127s6, false);
-        this.f14553c = c.a(context, typedArrayObtainStyledAttributes, k.f19073m6);
-        this.f14558h = typedArrayObtainStyledAttributes.getFloat(k.f19082n6, 0.0f);
-        this.f14559i = typedArrayObtainStyledAttributes.getFloat(k.f19091o6, 0.0f);
-        this.f14560j = typedArrayObtainStyledAttributes.getFloat(k.f19100p6, 0.0f);
-        typedArrayObtainStyledAttributes.recycle();
-        TypedArray typedArrayObtainStyledAttributes2 = context.obtainStyledAttributes(i10, k.f19107q4);
-        int i11 = k.f19116r4;
-        this.f14561k = typedArrayObtainStyledAttributes2.hasValue(i11);
-        this.f14562l = typedArrayObtainStyledAttributes2.getFloat(i11, 0.0f);
-        typedArrayObtainStyledAttributes2.recycle();
-    }
-
-    public final void d() {
-        String str;
-        if (this.f14567q == null && (str = this.f14554d) != null) {
-            this.f14567q = Typeface.create(str, this.f14555e);
-        }
-        if (this.f14567q == null) {
-            int i10 = this.f14556f;
-            if (i10 == 1) {
-                this.f14567q = Typeface.SANS_SERIF;
-            } else if (i10 == 2) {
-                this.f14567q = Typeface.SERIF;
-            } else if (i10 != 3) {
-                this.f14567q = Typeface.DEFAULT;
-            } else {
-                this.f14567q = Typeface.MONOSPACE;
-            }
-            this.f14567q = Typeface.create(this.f14567q, this.f14555e);
-        }
-    }
-
-    public Typeface e() {
-        d();
-        return this.f14567q;
-    }
-
-    @NonNull
-    public Typeface f(@NonNull Context context) {
-        if (this.f14566p) {
-            return this.f14567q;
-        }
-        if (!context.isRestricted()) {
-            try {
-                Typeface typefaceH = n2.h.h(context, this.f14565o);
-                this.f14567q = typefaceH;
-                if (typefaceH != null) {
-                    this.f14567q = Typeface.create(typefaceH, this.f14555e);
-                }
-            } catch (Resources.NotFoundException | UnsupportedOperationException unused) {
-            } catch (Exception e10) {
-                Log.d("TextAppearance", "Error loading font " + this.f14554d, e10);
+        @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+        public void onAnimationEnd(Animator animator) {
+            super.onAnimationEnd(animator);
+            d.this.a();
+            d dVar = d.this;
+            p5.b bVar = dVar.f14552j;
+            if (bVar != null) {
+                bVar.b(dVar.f14584a);
             }
         }
-        d();
-        this.f14566p = true;
-        return this.f14567q;
     }
 
-    public void g(@NonNull Context context, @NonNull TextPaint textPaint, @NonNull f fVar) {
-        p(context, textPaint, e());
-        h(context, new b(context, textPaint, fVar));
+    public class c extends Property<d, Float> {
+        public c(Class cls, String str) {
+            super(cls, str);
+        }
+
+        @Override // android.util.Property
+        /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
+        public Float get(d dVar) {
+            return Float.valueOf(dVar.o());
+        }
+
+        @Override // android.util.Property
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public void set(d dVar, Float f10) {
+            dVar.t(f10.floatValue());
+        }
     }
 
-    public void h(@NonNull Context context, @NonNull f fVar) {
-        if (m(context)) {
-            f(context);
-        } else {
-            d();
+    /* JADX INFO: renamed from: dd.d$d, reason: collision with other inner class name */
+    public class C0281d extends Property<d, Float> {
+        public C0281d(Class cls, String str) {
+            super(cls, str);
         }
-        int i10 = this.f14565o;
-        if (i10 == 0) {
-            this.f14566p = true;
+
+        @Override // android.util.Property
+        /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
+        public Float get(d dVar) {
+            return Float.valueOf(dVar.p());
         }
-        if (this.f14566p) {
-            fVar.b(this.f14567q, true);
+
+        @Override // android.util.Property
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public void set(d dVar, Float f10) {
+            dVar.u(f10.floatValue());
+        }
+    }
+
+    public d(@NonNull e eVar) {
+        super(1);
+        this.f14549g = 0;
+        this.f14552j = null;
+        this.f14548f = eVar;
+        this.f14547e = new g4.b();
+    }
+
+    @Override // dd.i
+    public void a() {
+        ObjectAnimator objectAnimator = this.f14545c;
+        if (objectAnimator != null) {
+            objectAnimator.cancel();
+        }
+    }
+
+    @Override // dd.i
+    public void c() {
+        s();
+    }
+
+    @Override // dd.i
+    public void d(@NonNull p5.b bVar) {
+        this.f14552j = bVar;
+    }
+
+    @Override // dd.i
+    public void f() {
+        ObjectAnimator objectAnimator = this.f14546d;
+        if (objectAnimator == null || objectAnimator.isRunning()) {
             return;
         }
-        try {
-            n2.h.j(context, i10, new a(fVar), null);
-        } catch (Resources.NotFoundException unused) {
-            this.f14566p = true;
-            fVar.a(1);
-        } catch (Exception e10) {
-            Log.d("TextAppearance", "Error loading font " + this.f14554d, e10);
-            this.f14566p = true;
-            fVar.a(-3);
-        }
-    }
-
-    public ColorStateList i() {
-        return this.f14563m;
-    }
-
-    public float j() {
-        return this.f14564n;
-    }
-
-    public void k(ColorStateList colorStateList) {
-        this.f14563m = colorStateList;
-    }
-
-    public void l(float f10) {
-        this.f14564n = f10;
-    }
-
-    public final boolean m(Context context) {
-        if (e.a()) {
-            return true;
-        }
-        int i10 = this.f14565o;
-        return (i10 != 0 ? n2.h.c(context, i10) : null) != null;
-    }
-
-    public void n(@NonNull Context context, @NonNull TextPaint textPaint, @NonNull f fVar) {
-        o(context, textPaint, fVar);
-        ColorStateList colorStateList = this.f14563m;
-        textPaint.setColor(colorStateList != null ? colorStateList.getColorForState(textPaint.drawableState, colorStateList.getDefaultColor()) : -16777216);
-        float f10 = this.f14560j;
-        float f11 = this.f14558h;
-        float f12 = this.f14559i;
-        ColorStateList colorStateList2 = this.f14553c;
-        textPaint.setShadowLayer(f10, f11, f12, colorStateList2 != null ? colorStateList2.getColorForState(textPaint.drawableState, colorStateList2.getDefaultColor()) : 0);
-    }
-
-    public void o(@NonNull Context context, @NonNull TextPaint textPaint, @NonNull f fVar) {
-        if (m(context)) {
-            p(context, textPaint, f(context));
+        if (this.f14584a.isVisible()) {
+            this.f14546d.start();
         } else {
-            g(context, textPaint, fVar);
+            a();
         }
     }
 
-    public void p(@NonNull Context context, @NonNull TextPaint textPaint, @NonNull Typeface typeface) {
-        Typeface typefaceA = h.a(context, typeface);
-        if (typefaceA != null) {
-            typeface = typefaceA;
+    @Override // dd.i
+    public void g() {
+        q();
+        s();
+        this.f14545c.start();
+    }
+
+    @Override // dd.i
+    public void h() {
+        this.f14552j = null;
+    }
+
+    public final float o() {
+        return this.f14550h;
+    }
+
+    public final float p() {
+        return this.f14551i;
+    }
+
+    public final void q() {
+        if (this.f14545c == null) {
+            ObjectAnimator objectAnimatorOfFloat = ObjectAnimator.ofFloat(this, f14543n, 0.0f, 1.0f);
+            this.f14545c = objectAnimatorOfFloat;
+            objectAnimatorOfFloat.setDuration(5400L);
+            this.f14545c.setInterpolator(null);
+            this.f14545c.setRepeatCount(-1);
+            this.f14545c.addListener(new a());
         }
-        textPaint.setTypeface(typeface);
-        int i10 = this.f14555e & (~typeface.getStyle());
-        textPaint.setFakeBoldText((i10 & 1) != 0);
-        textPaint.setTextSkewX((i10 & 2) != 0 ? -0.25f : 0.0f);
-        textPaint.setTextSize(this.f14564n);
-        if (this.f14561k) {
-            textPaint.setLetterSpacing(this.f14562l);
+        if (this.f14546d == null) {
+            ObjectAnimator objectAnimatorOfFloat2 = ObjectAnimator.ofFloat(this, f14544o, 0.0f, 1.0f);
+            this.f14546d = objectAnimatorOfFloat2;
+            objectAnimatorOfFloat2.setDuration(333L);
+            this.f14546d.setInterpolator(this.f14547e);
+            this.f14546d.addListener(new b());
         }
+    }
+
+    public final void r(int i10) {
+        for (int i11 = 0; i11 < 4; i11++) {
+            float fB = b(i10, f14542m[i11], 333);
+            if (fB >= 0.0f && fB <= 1.0f) {
+                int i12 = i11 + this.f14549g;
+                int[] iArr = this.f14548f.f14531c;
+                int length = i12 % iArr.length;
+                int length2 = (length + 1) % iArr.length;
+                int i13 = iArr[length];
+                int i14 = iArr[length2];
+                this.b.get(0).f14582c = jc.c.b().evaluate(this.f14547e.getInterpolation(fB), Integer.valueOf(i13), Integer.valueOf(i14)).intValue();
+                return;
+            }
+        }
+    }
+
+    public void s() {
+        this.f14549g = 0;
+        this.b.get(0).f14582c = this.f14548f.f14531c[0];
+        this.f14551i = 0.0f;
+    }
+
+    public void t(float f10) {
+        this.f14550h = f10;
+        int i10 = (int) (f10 * 5400.0f);
+        v(i10);
+        r(i10);
+        this.f14584a.invalidateSelf();
+    }
+
+    public final void u(float f10) {
+        this.f14551i = f10;
+    }
+
+    public final void v(int i10) {
+        h.a aVar = this.b.get(0);
+        float f10 = this.f14550h;
+        aVar.f14581a = (f10 * 1520.0f) - 20.0f;
+        aVar.b = f10 * 1520.0f;
+        for (int i11 = 0; i11 < 4; i11++) {
+            aVar.b += this.f14547e.getInterpolation(b(i10, f14540k[i11], 667)) * 250.0f;
+            aVar.f14581a += this.f14547e.getInterpolation(b(i10, f14541l[i11], 667)) * 250.0f;
+        }
+        float f11 = aVar.f14581a;
+        float f12 = aVar.b;
+        aVar.f14581a = (f11 + ((f12 - f11) * this.f14551i)) / 360.0f;
+        aVar.b = f12 / 360.0f;
     }
 }

@@ -2,9 +2,9 @@ package s6;
 
 import e7.h0;
 import e7.u;
+import gt.l;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import jt.l;
 import k6.BitmapImage;
 import k6.s;
 import kotlin.Metadata;
@@ -38,7 +38,7 @@ public final class e {
     public static final /* synthetic */ class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f30476a;
+        public static final /* synthetic */ int[] f31023a;
         public static final /* synthetic */ int[] b;
 
         static {
@@ -51,7 +51,7 @@ public final class e {
                 iArr[y6.f.FIT.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
-            f30476a = iArr;
+            f31023a = iArr;
             int[] iArr2 = new int[y6.c.values().length];
             try {
                 iArr2[y6.c.EXACT.ordinal()] = 1;
@@ -93,7 +93,7 @@ public final class e {
     }
 
     public final boolean c(@NotNull ImageRequest request, @NotNull d.Key cacheKey, @NotNull d.Value cacheValue, @NotNull Size size, @NotNull y6.f scale) {
-        if (this.requestService.c(request, cacheValue)) {
+        if (this.requestService.b(request, cacheValue)) {
             return d(request, cacheKey, cacheValue, size, scale);
         }
         u uVar = this.logger;
@@ -129,18 +129,18 @@ public final class e {
         }
         int width = cacheValue.getImage().getWidth();
         int height = cacheValue.getImage().getHeight();
-        Size sizeF = cacheValue.getImage() instanceof BitmapImage ? x6.i.f(request) : Size.f35746d;
+        Size sizeF = cacheValue.getImage() instanceof BitmapImage ? x6.i.f(request) : Size.f36603d;
         y6.a aVarD = size.d();
-        int px = aVarD instanceof y6.a.C0655a ? ((y6.a.C0655a) aVarD).getPx() : Integer.MAX_VALUE;
+        int px = aVarD instanceof y6.a.C0670a ? ((y6.a.C0670a) aVarD).getPx() : Integer.MAX_VALUE;
         y6.a aVarD2 = sizeF.d();
-        int iMin = Math.min(px, aVarD2 instanceof y6.a.C0655a ? ((y6.a.C0655a) aVarD2).getPx() : Integer.MAX_VALUE);
+        int iMin = Math.min(px, aVarD2 instanceof y6.a.C0670a ? ((y6.a.C0670a) aVarD2).getPx() : Integer.MAX_VALUE);
         y6.a aVarC = size.c();
-        int px2 = aVarC instanceof y6.a.C0655a ? ((y6.a.C0655a) aVarC).getPx() : Integer.MAX_VALUE;
+        int px2 = aVarC instanceof y6.a.C0670a ? ((y6.a.C0670a) aVarC).getPx() : Integer.MAX_VALUE;
         y6.a aVarC2 = sizeF.c();
-        int iMin2 = Math.min(px2, aVarC2 instanceof y6.a.C0655a ? ((y6.a.C0655a) aVarC2).getPx() : Integer.MAX_VALUE);
+        int iMin2 = Math.min(px2, aVarC2 instanceof y6.a.C0670a ? ((y6.a.C0670a) aVarC2).getPx() : Integer.MAX_VALUE);
         double d10 = ((double) iMin) / ((double) width);
         double d11 = ((double) iMin2) / ((double) height);
-        int i10 = b.f30476a[((iMin == Integer.MAX_VALUE || iMin2 == Integer.MAX_VALUE) ? y6.f.FIT : scale).ordinal()];
+        int i10 = b.f31023a[((iMin == Integer.MAX_VALUE || iMin2 == Integer.MAX_VALUE) ? y6.f.FIT : scale).ordinal()];
         if (i10 != 1) {
             if (i10 != 2) {
                 throw new l();

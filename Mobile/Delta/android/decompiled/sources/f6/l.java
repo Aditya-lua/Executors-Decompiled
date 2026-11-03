@@ -37,25 +37,25 @@ public final class l implements i {
         public void a(f5.d statement, Preference entity) {
             Intrinsics.checkNotNullParameter(statement, "statement");
             Intrinsics.checkNotNullParameter(entity, "entity");
-            statement.k0(1, entity.getKey());
+            statement.h0(1, entity.getKey());
             Long value = entity.getValue();
             if (value == null) {
-                statement.C(2);
+                statement.B(2);
             } else {
-                statement.z(2, value.longValue());
+                statement.y(2, value.longValue());
             }
         }
     }
 
     /* JADX INFO: renamed from: f6.l$b, reason: from kotlin metadata */
-    @Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0006\u001a\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u00050\u0004¢\u0006\u0004\b\u0006\u0010\u0007¨\u0006\b"}, d2 = {"Lf6/l$b;", "", "<init>", "()V", "", "Lhu/c;", "a", "()Ljava/util/List;", "work-runtime_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0006\u001a\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u00050\u0004¢\u0006\u0004\b\u0006\u0010\u0007¨\u0006\b"}, d2 = {"Lf6/l$b;", "", "<init>", "()V", "", "Lfu/c;", "a", "()Ljava/util/List;", "work-runtime_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
     public static final class Companion {
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
             this();
         }
 
         @NotNull
-        public final List<hu.c<?>> a() {
+        public final List<fu.c<?>> a() {
             return kotlin.collections.p.k();
         }
 
@@ -73,9 +73,9 @@ public final class l implements i {
         Intrinsics.checkNotNullParameter(_connection, "_connection");
         f5.d dVarR3 = _connection.r3(str);
         try {
-            dVarR3.k0(1, str2);
+            dVarR3.h0(1, str2);
             Long lValueOf = null;
-            if (dVarR3.g3() && !dVarR3.isNull(0)) {
+            if (dVarR3.i3() && !dVarR3.isNull(0)) {
                 lValueOf = Long.valueOf(dVarR3.getLong(0));
             }
             return lValueOf;
@@ -87,7 +87,7 @@ public final class l implements i {
     public static final Unit f(l lVar, Preference preference, f5.b _connection) throws Exception {
         Intrinsics.checkNotNullParameter(_connection, "_connection");
         lVar.__insertAdapterOfPreference.d(_connection, preference);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     @Override // f6.i
@@ -96,7 +96,7 @@ public final class l implements i {
         c5.a.c(this.__db, false, true, new Function1() { // from class: f6.j
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return l.f(this.f16240a, preference, (f5.b) obj);
+                return l.f(this.f16836a, preference, (f5.b) obj);
             }
         });
     }

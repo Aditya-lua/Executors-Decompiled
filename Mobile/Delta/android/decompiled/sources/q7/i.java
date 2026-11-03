@@ -6,7 +6,7 @@ import android.graphics.PointF;
 public class i implements n0<l7.b> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final i f29244a = new i();
+    public static final i f29597a = new i();
     public static final r7.c.a b = r7.c.a.a("t", "f", "s", "j", "tr", "lh", "ls", "fc", "sc", "sw", "of", "ps", "sz");
 
     @Override // q7.n0

@@ -31,19 +31,19 @@ public class AuthenticatorAttestationResponse extends AuthenticatorResponse {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NonNull
-    public final m3 f5933f;
+    public final m3 f6006f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
     @NonNull
-    public final m3 f5934g;
+    public final m3 f6007g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
     @NonNull
-    public final m3 f5935h;
+    public final m3 f6008h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
     @NonNull
-    public final String[] f5936i;
+    public final String[] f6009i;
 
     public AuthenticatorAttestationResponse(@NonNull byte[] bArr, @NonNull byte[] bArr2, @NonNull byte[] bArr3, @NonNull String[] strArr) {
         byte[] bArr4 = (byte[]) m.l(bArr);
@@ -53,10 +53,10 @@ public class AuthenticatorAttestationResponse extends AuthenticatorResponse {
         m3 m3VarM2 = m3.m(bArr5, 0, bArr5.length);
         byte[] bArr6 = (byte[]) m.l(bArr3);
         m3 m3VarM3 = m3.m(bArr6, 0, bArr6.length);
-        this.f5933f = (m3) m.l(m3VarM);
-        this.f5934g = (m3) m.l(m3VarM2);
-        this.f5935h = (m3) m.l(m3VarM3);
-        this.f5936i = (String[]) m.l(strArr);
+        this.f6006f = (m3) m.l(m3VarM);
+        this.f6007g = (m3) m.l(m3VarM2);
+        this.f6008h = (m3) m.l(m3VarM3);
+        this.f6009i = (String[]) m.l(strArr);
     }
 
     public boolean equals(Object obj) {
@@ -64,11 +64,11 @@ public class AuthenticatorAttestationResponse extends AuthenticatorResponse {
             return false;
         }
         AuthenticatorAttestationResponse authenticatorAttestationResponse = (AuthenticatorAttestationResponse) obj;
-        return k.b(this.f5933f, authenticatorAttestationResponse.f5933f) && k.b(this.f5934g, authenticatorAttestationResponse.f5934g) && k.b(this.f5935h, authenticatorAttestationResponse.f5935h);
+        return k.b(this.f6006f, authenticatorAttestationResponse.f6006f) && k.b(this.f6007g, authenticatorAttestationResponse.f6007g) && k.b(this.f6008h, authenticatorAttestationResponse.f6008h);
     }
 
     public int hashCode() {
-        return k.c(Integer.valueOf(k.c(this.f5933f)), Integer.valueOf(k.c(this.f5934g)), Integer.valueOf(k.c(this.f5935h)));
+        return k.c(Integer.valueOf(k.c(this.f6006f)), Integer.valueOf(k.c(this.f6007g)), Integer.valueOf(k.c(this.f6008h)));
     }
 
     @NonNull
@@ -83,18 +83,18 @@ public class AuthenticatorAttestationResponse extends AuthenticatorResponse {
         u2 u2VarD3 = u2.d();
         byte[] bArrV3 = v3();
         j0VarA.b("attestationObject", u2VarD3.e(bArrV3, 0, bArrV3.length));
-        j0VarA.b("transports", Arrays.toString(this.f5936i));
+        j0VarA.b("transports", Arrays.toString(this.f6009i));
         return j0VarA.toString();
     }
 
     @NonNull
     public byte[] v3() {
-        return this.f5935h.p();
+        return this.f6008h.p();
     }
 
     @NonNull
     public byte[] w3() {
-        return this.f5934g.p();
+        return this.f6007g.p();
     }
 
     @Override // android.os.Parcelable
@@ -110,12 +110,12 @@ public class AuthenticatorAttestationResponse extends AuthenticatorResponse {
     @NonNull
     @Deprecated
     public byte[] x3() {
-        return this.f5933f.p();
+        return this.f6006f.p();
     }
 
     @NonNull
     public String[] y3() {
-        return this.f5936i;
+        return this.f6009i;
     }
 
     /* JADX WARN: Code duplicated, block: B:38:0x0110  */
@@ -129,23 +129,23 @@ public class AuthenticatorAttestationResponse extends AuthenticatorResponse {
         byte[] bArrA;
         try {
             JSONObject jSONObject = new JSONObject();
-            if (this.f5934g != null) {
+            if (this.f6007g != null) {
                 jSONObject.put("clientDataJSON", u9.c.b(w3()));
             }
-            if (this.f5935h != null) {
+            if (this.f6008h != null) {
                 jSONObject.put("attestationObject", u9.c.b(v3()));
             }
             JSONArray jSONArray = new JSONArray();
             int i10 = 0;
             while (true) {
-                String[] strArr = this.f5936i;
+                String[] strArr = this.f6009i;
                 if (i10 >= strArr.length) {
                     break;
                 }
                 if (strArr[i10].equals(Transport.HYBRID.toString())) {
                     jSONArray.put(i10, "hybrid");
                 } else {
-                    jSONArray.put(i10, this.f5936i[i10]);
+                    jSONArray.put(i10, this.f6009i[i10]);
                 }
                 i10++;
             }

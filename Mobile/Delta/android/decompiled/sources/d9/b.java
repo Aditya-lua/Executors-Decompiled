@@ -14,13 +14,13 @@ import org.json.JSONException;
 public class b {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final Lock f14489c = new ReentrantLock();
+    public static final Lock f14469c = new ReentrantLock();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static b f14490d;
+    public static b f14470d;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Lock f14491a = new ReentrantLock();
+    public final Lock f14471a = new ReentrantLock();
     public final SharedPreferences b;
 
     public b(Context context) {
@@ -30,14 +30,14 @@ public class b {
     @NonNull
     public static b b(@NonNull Context context) {
         n9.m.l(context);
-        f14489c.lock();
+        f14469c.lock();
         try {
-            if (f14490d == null) {
-                f14490d = new b(context.getApplicationContext());
+            if (f14470d == null) {
+                f14470d = new b(context.getApplicationContext());
             }
-            return f14490d;
+            return f14470d;
         } finally {
-            f14489c.unlock();
+            f14469c.unlock();
         }
     }
 
@@ -46,11 +46,11 @@ public class b {
     }
 
     public void a() {
-        this.f14491a.lock();
+        this.f14471a.lock();
         try {
             this.b.edit().clear().apply();
         } finally {
-            this.f14491a.unlock();
+            this.f14471a.unlock();
         }
     }
 
@@ -94,20 +94,20 @@ public class b {
     }
 
     public final String g(@NonNull String str) {
-        this.f14491a.lock();
+        this.f14471a.lock();
         try {
             return this.b.getString(str, null);
         } finally {
-            this.f14491a.unlock();
+            this.f14471a.unlock();
         }
     }
 
     public final void h(@NonNull String str, @NonNull String str2) {
-        this.f14491a.lock();
+        this.f14471a.lock();
         try {
             this.b.edit().putString(str, str2).apply();
         } finally {
-            this.f14491a.unlock();
+            this.f14471a.unlock();
         }
     }
 }

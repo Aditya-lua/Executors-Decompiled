@@ -237,7 +237,7 @@ public final class re extends xd {
 
     public static com.google.android.gms.internal.measurement.nc W(com.google.android.gms.internal.measurement.nc ncVar, byte[] bArr) {
         com.google.android.gms.internal.measurement.ra raVarA = com.google.android.gms.internal.measurement.ra.a();
-        return raVarA != null ? ncVar.I(bArr, raVarA) : ncVar.m(bArr);
+        return raVarA != null ? ncVar.I(bArr, raVarA) : ncVar.u(bArr);
     }
 
     public static int X(com.google.android.gms.internal.measurement.z6 z6Var, String str) {
@@ -274,13 +274,13 @@ public final class re extends xd {
     }
 
     public static final void o(com.google.android.gms.internal.measurement.n6 n6Var, String str, Object obj) {
-        List listX = n6Var.x();
+        List listY = n6Var.y();
         int i10 = 0;
         while (true) {
-            if (i10 >= listX.size()) {
+            if (i10 >= listY.size()) {
                 i10 = -1;
                 break;
-            } else if (str.equals(((com.google.android.gms.internal.measurement.s6) listX.get(i10)).G())) {
+            } else if (str.equals(((com.google.android.gms.internal.measurement.s6) listY.get(i10)).G())) {
                 break;
             } else {
                 i10++;
@@ -299,7 +299,7 @@ public final class re extends xd {
     public static final boolean p(zzbg zzbgVar, zzr zzrVar) {
         n9.m.l(zzbgVar);
         n9.m.l(zzrVar);
-        return !TextUtils.isEmpty(zzrVar.f7446g);
+        return !TextUtils.isEmpty(zzrVar.f7520g);
     }
 
     public static final Bundle q(List list) {
@@ -384,7 +384,7 @@ public final class re extends xd {
         q7Var.E();
         q7Var.J();
         if (obj instanceof String) {
-            q7Var.A((String) obj);
+            q7Var.B((String) obj);
             return;
         }
         if (obj instanceof Long) {
@@ -392,7 +392,7 @@ public final class re extends xd {
         } else if (obj instanceof Double) {
             q7Var.G(((Double) obj).doubleValue());
         } else {
-            this.f25625a.a().o().b("Ignoring invalid (type) user attribute value", obj);
+            this.f26446a.a().o().b("Ignoring invalid (type) user attribute value", obj);
         }
     }
 
@@ -415,7 +415,7 @@ public final class re extends xd {
             return;
         }
         if (!(obj instanceof Bundle[])) {
-            this.f25625a.a().o().b("Ignoring invalid (type) event param value", obj);
+            this.f26446a.a().o().b("Ignoring invalid (type) event param value", obj);
             return;
         }
         ArrayList arrayList = new ArrayList();
@@ -447,29 +447,29 @@ public final class re extends xd {
     public final zzoh I(String str, com.google.android.gms.internal.measurement.z6 z6Var, com.google.android.gms.internal.measurement.n6 n6Var, String str2) {
         int iIndexOf;
         vf.a();
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         if (!g7Var.w().H(str, z4.Q0)) {
             return null;
         }
         long jA = g7Var.e().a();
-        Set setA = qe.a(g7Var.w().C(str, z4.f26203v0).split(","));
+        Set setA = qe.a(g7Var.w().C(str, z4.f27024v0).split(","));
         me meVar = this.b;
         zd zdVarC0 = meVar.C0();
         String strX = zdVarC0.b.D0().x(str);
         Uri.Builder builder = new Uri.Builder();
-        g7 g7Var2 = zdVarC0.f25625a;
-        builder.scheme(g7Var2.w().C(str, z4.f26189o0));
+        g7 g7Var2 = zdVarC0.f26446a;
+        builder.scheme(g7Var2.w().C(str, z4.f27010o0));
         if (TextUtils.isEmpty(strX)) {
-            builder.authority(g7Var2.w().C(str, z4.f26191p0));
+            builder.authority(g7Var2.w().C(str, z4.f27012p0));
         } else {
-            String strC = g7Var2.w().C(str, z4.f26191p0);
+            String strC = g7Var2.w().C(str, z4.f27012p0);
             StringBuilder sb2 = new StringBuilder(String.valueOf(strX).length() + 1 + String.valueOf(strC).length());
             sb2.append(strX);
             sb2.append(".");
             sb2.append(strC);
             builder.authority(sb2.toString());
         }
-        builder.path(g7Var2.w().C(str, z4.f26193q0));
+        builder.path(g7Var2.w().C(str, z4.f27014q0));
         z(builder, "gmp_app_id", z6Var.y0(), setA);
         g7Var.w().A();
         z(builder, "gmp_version", String.valueOf(133005L), setA);
@@ -502,9 +502,9 @@ public final class re extends xd {
         z(builder, "trigger_uri_source", "1", setA);
         z(builder, "trigger_uri_timestamp", String.valueOf(jA), setA);
         z(builder, "request_uuid", str2, setA);
-        List<com.google.android.gms.internal.measurement.s6> listX = n6Var.x();
+        List<com.google.android.gms.internal.measurement.s6> listY = n6Var.y();
         Bundle bundle = new Bundle();
-        for (com.google.android.gms.internal.measurement.s6 s6Var : listX) {
+        for (com.google.android.gms.internal.measurement.s6 s6Var : listY) {
             String strG = s6Var.G();
             if (s6Var.P()) {
                 bundle.putString(strG, String.valueOf(s6Var.Q()));
@@ -516,7 +516,7 @@ public final class re extends xd {
                 bundle.putString(strG, String.valueOf(s6Var.L()));
             }
         }
-        C(builder, g7Var.w().C(str, z4.f26201u0).split("\\|"), bundle, setA);
+        C(builder, g7Var.w().C(str, z4.f27022u0).split("\\|"), bundle, setA);
         List<com.google.android.gms.internal.measurement.r7> listF1 = z6Var.f1();
         Bundle bundle2 = new Bundle();
         for (com.google.android.gms.internal.measurement.r7 r7Var : listF1) {
@@ -531,7 +531,7 @@ public final class re extends xd {
                 bundle2.putString(strH, String.valueOf(r7Var.N()));
             }
         }
-        C(builder, g7Var.w().C(str, z4.f26199t0).split("\\|"), bundle2, setA);
+        C(builder, g7Var.w().C(str, z4.f27020t0).split("\\|"), bundle2, setA);
         z(builder, "dma", true != z6Var.h0() ? "0" : "1", setA);
         if (!z6Var.j0().isEmpty()) {
             z(builder, "dma_cps", z6Var.j0(), setA);
@@ -568,8 +568,8 @@ public final class re extends xd {
 
     public final com.google.android.gms.internal.measurement.o6 J(a0 a0Var) {
         com.google.android.gms.internal.measurement.n6 n6VarR = com.google.android.gms.internal.measurement.o6.R();
-        n6VarR.U(a0Var.f25317e);
-        zzbe zzbeVar = a0Var.f25318f;
+        n6VarR.U(a0Var.f26138e);
+        zzbe zzbeVar = a0Var.f26139f;
         c0 c0Var = new c0(zzbeVar);
         while (c0Var.hasNext()) {
             String next = c0Var.next();
@@ -580,7 +580,7 @@ public final class re extends xd {
             H(r6VarT, objA);
             n6VarR.G(r6VarT);
         }
-        String str = a0Var.f25315c;
+        String str = a0Var.f26136c;
         if (!TextUtils.isEmpty(str) && zzbeVar.a("_o") == null) {
             com.google.android.gms.internal.measurement.r6 r6VarT2 = com.google.android.gms.internal.measurement.s6.T();
             r6VarT2.z("_o");
@@ -614,7 +614,7 @@ public final class re extends xd {
                     E(sb2, 1, "protocol_version", Integer.valueOf(a7Var.i1()));
                 }
                 ig.a();
-                g7 g7Var = this.f25625a;
+                g7 g7Var = this.f26446a;
                 if (g7Var.w().H(a7Var.F(), z4.N0) && a7Var.O0()) {
                     E(sb2, 1, "session_stitching_token", a7Var.P0());
                 }
@@ -884,7 +884,7 @@ public final class re extends xd {
         if (z3Var.F()) {
             E(sb2, 0, "filter_id", Integer.valueOf(z3Var.G()));
         }
-        E(sb2, 0, "event_name", this.f25625a.D().a(z3Var.H()));
+        E(sb2, 0, "event_name", this.f26446a.D().a(z3Var.H()));
         String strA = A(z3Var.P(), z3Var.Q(), z3Var.S());
         if (!strA.isEmpty()) {
             E(sb2, 0, "filter_type", strA);
@@ -913,7 +913,7 @@ public final class re extends xd {
         if (h4Var.F()) {
             E(sb2, 0, "filter_id", Integer.valueOf(h4Var.G()));
         }
-        E(sb2, 0, "property_name", this.f25625a.D().c(h4Var.H()));
+        E(sb2, 0, "property_name", this.f26446a.D().c(h4Var.H()));
         String strA = A(h4Var.K(), h4Var.L(), h4Var.O());
         if (!strA.isEmpty()) {
             E(sb2, 0, "filter_type", strA);
@@ -933,8 +933,8 @@ public final class re extends xd {
             parcelObtain.unmarshall(bArr, 0, bArr.length);
             parcelObtain.setDataPosition(0);
             parcelable = (Parcelable) creator.createFromParcel(parcelObtain);
-        } catch (o9.a.C0471a unused) {
-            this.f25625a.a().o().a("Failed to load parcelable from buffer");
+        } catch (o9.a.C0482a unused) {
+            this.f26446a.a().o().a("Failed to load parcelable from buffer");
         } finally {
             parcelObtain.recycle();
         }
@@ -948,11 +948,11 @@ public final class re extends xd {
         while (it.hasNext()) {
             Integer num = (Integer) it.next();
             if (num.intValue() < 0) {
-                this.f25625a.a().r().b("Ignoring negative bit index to be cleared", num);
+                this.f26446a.a().r().b("Ignoring negative bit index to be cleared", num);
             } else {
                 int iIntValue = num.intValue() / 64;
                 if (iIntValue >= arrayList.size()) {
-                    this.f25625a.a().r().c("Ignoring bit index greater than bitSet size", num, Integer.valueOf(arrayList.size()));
+                    this.f26446a.a().r().c("Ignoring bit index greater than bitSet size", num, Integer.valueOf(arrayList.size()));
                 } else {
                     arrayList.set(iIntValue, Long.valueOf(((Long) arrayList.get(iIntValue)).longValue() & (~(1 << (num.intValue() % 64)))));
                 }
@@ -973,12 +973,12 @@ public final class re extends xd {
     }
 
     public final boolean S(long j10, long j11) {
-        return j10 == 0 || j11 <= 0 || Math.abs(this.f25625a.e().a() - j10) > j11;
+        return j10 == 0 || j11 <= 0 || Math.abs(this.f26446a.e().a() - j10) > j11;
     }
 
     public final long T(byte[] bArr) {
         n9.m.l(bArr);
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         g7Var.C().h();
         MessageDigest messageDigestC = ve.C();
         if (messageDigestC != null) {
@@ -1004,7 +1004,7 @@ public final class re extends xd {
             byteArrayOutputStream.close();
             return byteArrayOutputStream.toByteArray();
         } catch (IOException e10) {
-            this.f25625a.a().o().b("Failed to gzip content", e10);
+            this.f26446a.a().o().b("Failed to gzip content", e10);
             throw e10;
         }
     }
@@ -1096,7 +1096,7 @@ public final class re extends xd {
             if (s6Var != null) {
                 y(sb2, i11);
                 sb2.append("param {\n");
-                E(sb2, i11, "name", s6Var.F() ? this.f25625a.D().b(s6Var.G()) : null);
+                E(sb2, i11, "name", s6Var.F() ? this.f26446a.D().b(s6Var.G()) : null);
                 E(sb2, i11, "string_value", s6Var.H() ? s6Var.J() : null);
                 E(sb2, i11, "int_value", s6Var.K() ? Long.valueOf(s6Var.L()) : null);
                 E(sb2, i11, "double_value", s6Var.P() ? Double.valueOf(s6Var.Q()) : null);
@@ -1120,7 +1120,7 @@ public final class re extends xd {
             E(sb2, i10, "complement", Boolean.valueOf(b4Var.L()));
         }
         if (b4Var.N()) {
-            E(sb2, i10, "param_name", this.f25625a.D().b(b4Var.O()));
+            E(sb2, i10, "param_name", this.f26446a.D().b(b4Var.O()));
         }
         if (b4Var.F()) {
             int i11 = i10 + 1;

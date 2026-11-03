@@ -16,50 +16,50 @@ import org.xmlpull.v1.XmlPullParserException;
 public class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ConstraintLayout f17641a;
+    public final ConstraintLayout f18180a;
     public androidx.constraintlayout.widget.c b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f17642c = -1;
+    public int f18181c = -1;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public int f17643d = -1;
+    public int f18182d = -1;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public SparseArray<C0316a> f17644e = new SparseArray<>();
+    public SparseArray<C0320a> f18183e = new SparseArray<>();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public SparseArray<androidx.constraintlayout.widget.c> f17645f = new SparseArray<>();
+    public SparseArray<androidx.constraintlayout.widget.c> f18184f = new SparseArray<>();
 
     /* JADX INFO: renamed from: g2.a$a, reason: collision with other inner class name */
-    public static class C0316a {
+    public static class C0320a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public int f17646a;
+        public int f18185a;
         public ArrayList<b> b = new ArrayList<>();
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public int f17647c;
+        public int f18186c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public androidx.constraintlayout.widget.c f17648d;
+        public androidx.constraintlayout.widget.c f18187d;
 
-        public C0316a(Context context, XmlPullParser xmlPullParser) {
-            this.f17647c = -1;
+        public C0320a(Context context, XmlPullParser xmlPullParser) {
+            this.f18186c = -1;
             TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(Xml.asAttributeSet(xmlPullParser), d.P6);
             int indexCount = typedArrayObtainStyledAttributes.getIndexCount();
             for (int i10 = 0; i10 < indexCount; i10++) {
                 int index = typedArrayObtainStyledAttributes.getIndex(i10);
                 if (index == d.Q6) {
-                    this.f17646a = typedArrayObtainStyledAttributes.getResourceId(index, this.f17646a);
+                    this.f18185a = typedArrayObtainStyledAttributes.getResourceId(index, this.f18185a);
                 } else if (index == d.R6) {
-                    this.f17647c = typedArrayObtainStyledAttributes.getResourceId(index, this.f17647c);
-                    String resourceTypeName = context.getResources().getResourceTypeName(this.f17647c);
-                    context.getResources().getResourceName(this.f17647c);
+                    this.f18186c = typedArrayObtainStyledAttributes.getResourceId(index, this.f18186c);
+                    String resourceTypeName = context.getResources().getResourceTypeName(this.f18186c);
+                    context.getResources().getResourceName(this.f18186c);
                     if ("layout".equals(resourceTypeName)) {
                         androidx.constraintlayout.widget.c cVar = new androidx.constraintlayout.widget.c();
-                        this.f17648d = cVar;
-                        cVar.e(context, this.f17647c);
+                        this.f18187d = cVar;
+                        cVar.e(context, this.f18186c);
                     }
                 }
             }
@@ -83,48 +83,48 @@ public class a {
     public static class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public float f17649a;
+        public float f18188a;
         public float b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public float f17650c;
+        public float f18189c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public float f17651d;
+        public float f18190d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public int f17652e;
+        public int f18191e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public androidx.constraintlayout.widget.c f17653f;
+        public androidx.constraintlayout.widget.c f18192f;
 
         public b(Context context, XmlPullParser xmlPullParser) {
-            this.f17649a = Float.NaN;
+            this.f18188a = Float.NaN;
             this.b = Float.NaN;
-            this.f17650c = Float.NaN;
-            this.f17651d = Float.NaN;
-            this.f17652e = -1;
-            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(Xml.asAttributeSet(xmlPullParser), d.f17733i7);
+            this.f18189c = Float.NaN;
+            this.f18190d = Float.NaN;
+            this.f18191e = -1;
+            TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(Xml.asAttributeSet(xmlPullParser), d.f18272i7);
             int indexCount = typedArrayObtainStyledAttributes.getIndexCount();
             for (int i10 = 0; i10 < indexCount; i10++) {
                 int index = typedArrayObtainStyledAttributes.getIndex(i10);
-                if (index == d.f17742j7) {
-                    this.f17652e = typedArrayObtainStyledAttributes.getResourceId(index, this.f17652e);
-                    String resourceTypeName = context.getResources().getResourceTypeName(this.f17652e);
-                    context.getResources().getResourceName(this.f17652e);
+                if (index == d.f18281j7) {
+                    this.f18191e = typedArrayObtainStyledAttributes.getResourceId(index, this.f18191e);
+                    String resourceTypeName = context.getResources().getResourceTypeName(this.f18191e);
+                    context.getResources().getResourceName(this.f18191e);
                     if ("layout".equals(resourceTypeName)) {
                         androidx.constraintlayout.widget.c cVar = new androidx.constraintlayout.widget.c();
-                        this.f17653f = cVar;
-                        cVar.e(context, this.f17652e);
+                        this.f18192f = cVar;
+                        cVar.e(context, this.f18191e);
                     }
-                } else if (index == d.f17751k7) {
-                    this.f17651d = typedArrayObtainStyledAttributes.getDimension(index, this.f17651d);
-                } else if (index == d.f17760l7) {
+                } else if (index == d.f18290k7) {
+                    this.f18190d = typedArrayObtainStyledAttributes.getDimension(index, this.f18190d);
+                } else if (index == d.f18299l7) {
                     this.b = typedArrayObtainStyledAttributes.getDimension(index, this.b);
-                } else if (index == d.f17769m7) {
-                    this.f17650c = typedArrayObtainStyledAttributes.getDimension(index, this.f17650c);
-                } else if (index == d.f17778n7) {
-                    this.f17649a = typedArrayObtainStyledAttributes.getDimension(index, this.f17649a);
+                } else if (index == d.f18308m7) {
+                    this.f18189c = typedArrayObtainStyledAttributes.getDimension(index, this.f18189c);
+                } else if (index == d.f18317n7) {
+                    this.f18188a = typedArrayObtainStyledAttributes.getDimension(index, this.f18188a);
                 } else {
                     Log.v("ConstraintLayoutStates", "Unknown tag");
                 }
@@ -133,21 +133,21 @@ public class a {
         }
 
         public boolean a(float f10, float f11) {
-            if (!Float.isNaN(this.f17649a) && f10 < this.f17649a) {
+            if (!Float.isNaN(this.f18188a) && f10 < this.f18188a) {
                 return false;
             }
             if (!Float.isNaN(this.b) && f11 < this.b) {
                 return false;
             }
-            if (Float.isNaN(this.f17650c) || f10 <= this.f17650c) {
-                return Float.isNaN(this.f17651d) || f11 <= this.f17651d;
+            if (Float.isNaN(this.f18189c) || f10 <= this.f18189c) {
+                return Float.isNaN(this.f18190d) || f11 <= this.f18190d;
             }
             return false;
         }
     }
 
     public a(Context context, ConstraintLayout constraintLayout, int i10) {
-        this.f17641a = constraintLayout;
+        this.f18180a = constraintLayout;
         a(context, i10);
     }
 
@@ -155,7 +155,7 @@ public class a {
         String str;
         XmlResourceParser xml = context.getResources().getXml(i10);
         try {
-            C0316a c0316a = null;
+            C0320a c0320a = null;
             for (int eventType = xml.getEventType(); eventType != 1; eventType = xml.next()) {
                 if (eventType == 2) {
                     String name = xml.getName();
@@ -167,9 +167,9 @@ public class a {
                             break;
                         case 80204913:
                             if (name.equals("State")) {
-                                C0316a c0316a2 = new C0316a(context, xml);
-                                this.f17644e.put(c0316a2.f17646a, c0316a2);
-                                c0316a = c0316a2;
+                                C0320a c0320a2 = new C0320a(context, xml);
+                                this.f18183e.put(c0320a2.f18185a, c0320a2);
+                                c0320a = c0320a2;
                             }
                             break;
                         case 1382829617:
@@ -183,8 +183,8 @@ public class a {
                         case 1901439077:
                             if (name.equals("Variant")) {
                                 b bVar = new b(context, xml);
-                                if (c0316a != null) {
-                                    c0316a.a(bVar);
+                                if (c0320a != null) {
+                                    c0320a.a(bVar);
                                 }
                             }
                             break;
@@ -214,7 +214,7 @@ public class a {
                     }
                 }
                 cVar.u(context, xmlPullParser);
-                this.f17645f.put(identifier, cVar);
+                this.f18184f.put(identifier, cVar);
                 return;
             }
         }
@@ -225,34 +225,34 @@ public class a {
 
     public void d(int i10, float f10, float f11) {
         int iB;
-        int i11 = this.f17642c;
+        int i11 = this.f18181c;
         if (i11 == i10) {
-            C0316a c0316aValueAt = i10 == -1 ? this.f17644e.valueAt(0) : this.f17644e.get(i11);
-            int i12 = this.f17643d;
-            if ((i12 == -1 || !c0316aValueAt.b.get(i12).a(f10, f11)) && this.f17643d != (iB = c0316aValueAt.b(f10, f11))) {
-                androidx.constraintlayout.widget.c cVar = iB == -1 ? this.b : c0316aValueAt.b.get(iB).f17653f;
+            C0320a c0320aValueAt = i10 == -1 ? this.f18183e.valueAt(0) : this.f18183e.get(i11);
+            int i12 = this.f18182d;
+            if ((i12 == -1 || !c0320aValueAt.b.get(i12).a(f10, f11)) && this.f18182d != (iB = c0320aValueAt.b(f10, f11))) {
+                androidx.constraintlayout.widget.c cVar = iB == -1 ? this.b : c0320aValueAt.b.get(iB).f18192f;
                 if (iB != -1) {
-                    int i13 = c0316aValueAt.b.get(iB).f17652e;
+                    int i13 = c0320aValueAt.b.get(iB).f18191e;
                 }
                 if (cVar == null) {
                     return;
                 }
-                this.f17643d = iB;
-                cVar.c(this.f17641a);
+                this.f18182d = iB;
+                cVar.c(this.f18180a);
                 return;
             }
             return;
         }
-        this.f17642c = i10;
-        C0316a c0316a = this.f17644e.get(i10);
-        int iB2 = c0316a.b(f10, f11);
-        androidx.constraintlayout.widget.c cVar2 = iB2 == -1 ? c0316a.f17648d : c0316a.b.get(iB2).f17653f;
+        this.f18181c = i10;
+        C0320a c0320a = this.f18183e.get(i10);
+        int iB2 = c0320a.b(f10, f11);
+        androidx.constraintlayout.widget.c cVar2 = iB2 == -1 ? c0320a.f18187d : c0320a.b.get(iB2).f18192f;
         if (iB2 != -1) {
-            int i14 = c0316a.b.get(iB2).f17652e;
+            int i14 = c0320a.b.get(iB2).f18191e;
         }
         if (cVar2 != null) {
-            this.f17643d = iB2;
-            cVar2.c(this.f17641a);
+            this.f18182d = iB2;
+            cVar2.c(this.f18180a);
             return;
         }
         Log.v("ConstraintLayoutStates", "NO Constraint set found ! id=" + i10 + ", dim =" + f10 + ", " + f11);

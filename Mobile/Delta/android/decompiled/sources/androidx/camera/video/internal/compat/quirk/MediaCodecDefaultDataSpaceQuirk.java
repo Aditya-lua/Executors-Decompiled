@@ -10,6 +10,6 @@ public class MediaCodecDefaultDataSpaceQuirk implements g3 {
     }
 
     public q1 g() {
-        return q1.f23839c;
+        return q1.f24489c;
     }
 }

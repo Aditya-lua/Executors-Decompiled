@@ -1,72 +1,33 @@
 package jc;
 
-import android.content.Context;
-import android.util.AttributeSet;
-import android.view.View;
+import android.animation.TypeEvaluator;
 import androidx.annotation.NonNull;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class c<V extends View> extends CoordinatorLayout.c<V> {
+public class c implements TypeEvaluator<Integer> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public d f21252a;
-    public int b;
+    public static final c f21816a = new c();
 
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f21253c;
-
-    public c() {
-        this.b = 0;
-        this.f21253c = 0;
+    @NonNull
+    public static c b() {
+        return f21816a;
     }
 
-    public int I() {
-        d dVar = this.f21252a;
-        if (dVar != null) {
-            return dVar.b();
-        }
-        return 0;
-    }
-
-    public void J(@NonNull CoordinatorLayout coordinatorLayout, @NonNull V v5, int i10) {
-        coordinatorLayout.I(v5, i10);
-    }
-
-    public boolean K(int i10) {
-        d dVar = this.f21252a;
-        if (dVar != null) {
-            return dVar.e(i10);
-        }
-        this.b = i10;
-        return false;
-    }
-
-    @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
-    public boolean p(@NonNull CoordinatorLayout coordinatorLayout, @NonNull V v5, int i10) {
-        J(coordinatorLayout, v5, i10);
-        if (this.f21252a == null) {
-            this.f21252a = new d(v5);
-        }
-        this.f21252a.c();
-        this.f21252a.a();
-        int i11 = this.b;
-        if (i11 != 0) {
-            this.f21252a.e(i11);
-            this.b = 0;
-        }
-        int i12 = this.f21253c;
-        if (i12 == 0) {
-            return true;
-        }
-        this.f21252a.d(i12);
-        this.f21253c = 0;
-        return true;
-    }
-
-    public c(Context context, AttributeSet attributeSet) {
-        super(context, attributeSet);
-        this.b = 0;
-        this.f21253c = 0;
+    @Override // android.animation.TypeEvaluator
+    @NonNull
+    /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
+    public Integer evaluate(float f10, Integer num, Integer num2) {
+        int iIntValue = num.intValue();
+        float f11 = ((iIntValue >> 24) & 255) / 255.0f;
+        int iIntValue2 = num2.intValue();
+        float fPow = (float) Math.pow(((iIntValue >> 16) & 255) / 255.0f, 2.2d);
+        float fPow2 = (float) Math.pow(((iIntValue >> 8) & 255) / 255.0f, 2.2d);
+        float fPow3 = (float) Math.pow((iIntValue & 255) / 255.0f, 2.2d);
+        float fPow4 = (float) Math.pow(((iIntValue2 >> 16) & 255) / 255.0f, 2.2d);
+        float f12 = f11 + (((((iIntValue2 >> 24) & 255) / 255.0f) - f11) * f10);
+        float fPow5 = fPow2 + ((((float) Math.pow(((iIntValue2 >> 8) & 255) / 255.0f, 2.2d)) - fPow2) * f10);
+        float fPow6 = fPow3 + (f10 * (((float) Math.pow((iIntValue2 & 255) / 255.0f, 2.2d)) - fPow3));
+        return Integer.valueOf((Math.round(((float) Math.pow(fPow + ((fPow4 - fPow) * f10), 0.45454545454545453d)) * 255.0f) << 16) | (Math.round(f12 * 255.0f) << 24) | (Math.round(((float) Math.pow(fPow5, 0.45454545454545453d)) * 255.0f) << 8) | Math.round(((float) Math.pow(fPow6, 0.45454545454545453d)) * 255.0f));
     }
 }

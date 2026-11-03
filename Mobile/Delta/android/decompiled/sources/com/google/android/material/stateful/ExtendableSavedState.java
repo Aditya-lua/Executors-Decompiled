@@ -13,7 +13,7 @@ public class ExtendableSavedState extends AbsSavedState {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NonNull
-    public final j<String, Bundle> f8210c;
+    public final j<String, Bundle> f8284c;
 
     public class a implements Parcelable.ClassLoaderCreator<ExtendableSavedState> {
         /* JADX WARN: Multi-variable type inference failed */
@@ -44,19 +44,19 @@ public class ExtendableSavedState extends AbsSavedState {
 
     @NonNull
     public String toString() {
-        return "ExtendableSavedState{" + Integer.toHexString(System.identityHashCode(this)) + " states=" + this.f8210c + "}";
+        return "ExtendableSavedState{" + Integer.toHexString(System.identityHashCode(this)) + " states=" + this.f8284c + "}";
     }
 
     @Override // androidx.customview.view.AbsSavedState, android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
         super.writeToParcel(parcel, i10);
-        int size = this.f8210c.getSize();
+        int size = this.f8284c.getSize();
         parcel.writeInt(size);
         String[] strArr = new String[size];
         Bundle[] bundleArr = new Bundle[size];
         for (int i11 = 0; i11 < size; i11++) {
-            strArr[i11] = this.f8210c.f(i11);
-            bundleArr[i11] = this.f8210c.k(i11);
+            strArr[i11] = this.f8284c.f(i11);
+            bundleArr[i11] = this.f8284c.k(i11);
         }
         parcel.writeStringArray(strArr);
         parcel.writeTypedArray(bundleArr, 0);
@@ -64,7 +64,7 @@ public class ExtendableSavedState extends AbsSavedState {
 
     public ExtendableSavedState(Parcelable parcelable) {
         super(parcelable);
-        this.f8210c = new j<>();
+        this.f8284c = new j<>();
     }
 
     public ExtendableSavedState(@NonNull Parcel parcel, ClassLoader classLoader) {
@@ -74,9 +74,9 @@ public class ExtendableSavedState extends AbsSavedState {
         parcel.readStringArray(strArr);
         Bundle[] bundleArr = new Bundle[i10];
         parcel.readTypedArray(bundleArr, Bundle.CREATOR);
-        this.f8210c = new j<>(i10);
+        this.f8284c = new j<>(i10);
         for (int i11 = 0; i11 < i10; i11++) {
-            this.f8210c.put(strArr[i11], bundleArr[i11]);
+            this.f8284c.put(strArr[i11], bundleArr[i11]);
         }
     }
 }

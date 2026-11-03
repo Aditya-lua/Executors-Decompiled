@@ -14,19 +14,19 @@ public final class zzq extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzq> CREATOR = new f0();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final long f6048f;
+    public final long f6121f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
     @NonNull
-    public final m3 f6049g;
+    public final m3 f6122g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
     @NonNull
-    public final m3 f6050h;
+    public final m3 f6123h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
     @NonNull
-    public final m3 f6051i;
+    public final m3 f6124i;
 
     public zzq(long j10, @NonNull byte[] bArr, @NonNull byte[] bArr2, @NonNull byte[] bArr3) {
         byte[] bArr4 = (byte[]) m.l(bArr);
@@ -36,10 +36,10 @@ public final class zzq extends AbstractSafeParcelable {
         m3 m3VarM2 = m3.m(bArr5, 0, bArr5.length);
         byte[] bArr6 = (byte[]) m.l(bArr3);
         m3 m3VarM3 = m3.m(bArr6, 0, bArr6.length);
-        this.f6048f = j10;
-        this.f6049g = (m3) m.l(m3VarM);
-        this.f6050h = (m3) m.l(m3VarM2);
-        this.f6051i = (m3) m.l(m3VarM3);
+        this.f6121f = j10;
+        this.f6122g = (m3) m.l(m3VarM);
+        this.f6123h = (m3) m.l(m3VarM2);
+        this.f6124i = (m3) m.l(m3VarM3);
     }
 
     public final boolean equals(Object obj) {
@@ -47,21 +47,21 @@ public final class zzq extends AbstractSafeParcelable {
             return false;
         }
         zzq zzqVar = (zzq) obj;
-        return this.f6048f == zzqVar.f6048f && k.b(this.f6049g, zzqVar.f6049g) && k.b(this.f6050h, zzqVar.f6050h) && k.b(this.f6051i, zzqVar.f6051i);
+        return this.f6121f == zzqVar.f6121f && k.b(this.f6122g, zzqVar.f6122g) && k.b(this.f6123h, zzqVar.f6123h) && k.b(this.f6124i, zzqVar.f6124i);
     }
 
     public final int hashCode() {
-        return k.c(Long.valueOf(this.f6048f), this.f6049g, this.f6050h, this.f6051i);
+        return k.c(Long.valueOf(this.f6121f), this.f6122g, this.f6123h, this.f6124i);
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i10) {
-        long j10 = this.f6048f;
+        long j10 = this.f6121f;
         int iA = o9.b.a(parcel);
         o9.b.r(parcel, 1, j10);
-        o9.b.g(parcel, 2, this.f6049g.p(), false);
-        o9.b.g(parcel, 3, this.f6050h.p(), false);
-        o9.b.g(parcel, 4, this.f6051i.p(), false);
+        o9.b.g(parcel, 2, this.f6122g.p(), false);
+        o9.b.g(parcel, 3, this.f6123h.p(), false);
+        o9.b.g(parcel, 4, this.f6124i.p(), false);
         o9.b.b(parcel, iA);
     }
 }

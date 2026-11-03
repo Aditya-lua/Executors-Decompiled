@@ -34,20 +34,20 @@ import okhttp3.internal.http.StatusLine;
 import okhttp3.internal.platform.Platform;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import xu.b0;
-import xu.e;
-import xu.f;
-import xu.g;
-import xu.h;
-import xu.h0;
-import xu.l;
-import xu.o;
-import xu.p;
-import xu.p0;
-import xu.r0;
+import vu.b0;
+import vu.e;
+import vu.f;
+import vu.g;
+import vu.h;
+import vu.h0;
+import vu.l;
+import vu.o;
+import vu.p;
+import vu.p0;
+import vu.r0;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000x\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u000f\n\u0002\u0010)\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0013\n\u0002\u0010\u000b\n\u0002\b\t\u0018\u0000 T2\u00020\u00012\u00020\u0002:\u0004UVWTB)\b\u0000\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\b\u001a\u00020\u0007\u0012\u0006\u0010\n\u001a\u00020\t¢\u0006\u0004\b\u000b\u0010\fB!\b\u0016\u0012\u0006\u0010\b\u001a\u00020\u0007\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005¢\u0006\u0004\b\u000b\u0010\rB\u0019\b\u0016\u0012\u0006\u0010\u0004\u001a\u00020\u000e\u0012\u0006\u0010\u0006\u001a\u00020\u0005¢\u0006\u0004\b\u000b\u0010\u000fJ\u001d\u0010\u0014\u001a\u00020\u00132\f\u0010\u0012\u001a\b\u0018\u00010\u0010R\u00020\u0011H\u0002¢\u0006\u0004\b\u0014\u0010\u0015J\u0019\u0010\u001b\u001a\u0004\u0018\u00010\u00182\u0006\u0010\u0017\u001a\u00020\u0016H\u0000¢\u0006\u0004\b\u0019\u0010\u001aJ\u0019\u0010 \u001a\u0004\u0018\u00010\u001d2\u0006\u0010\u001c\u001a\u00020\u0018H\u0000¢\u0006\u0004\b\u001e\u0010\u001fJ\u0017\u0010#\u001a\u00020\u00132\u0006\u0010\u0017\u001a\u00020\u0016H\u0000¢\u0006\u0004\b!\u0010\"J\u001f\u0010(\u001a\u00020\u00132\u0006\u0010$\u001a\u00020\u00182\u0006\u0010%\u001a\u00020\u0018H\u0000¢\u0006\u0004\b&\u0010'J\r\u0010)\u001a\u00020\u0013¢\u0006\u0004\b)\u0010*J\r\u0010+\u001a\u00020\u0013¢\u0006\u0004\b+\u0010*J\r\u0010,\u001a\u00020\u0013¢\u0006\u0004\b,\u0010*J\u0013\u0010/\u001a\b\u0012\u0004\u0012\u00020.0-¢\u0006\u0004\b/\u00100J\r\u00102\u001a\u000201¢\u0006\u0004\b2\u00103J\r\u00104\u001a\u000201¢\u0006\u0004\b4\u00103J\r\u00105\u001a\u00020\u0005¢\u0006\u0004\b5\u00106J\r\u0010\u0006\u001a\u00020\u0005¢\u0006\u0004\b\u0006\u00106J\u000f\u00107\u001a\u00020\u0013H\u0016¢\u0006\u0004\b7\u0010*J\u000f\u00108\u001a\u00020\u0013H\u0016¢\u0006\u0004\b8\u0010*J\u000f\u0010\u0004\u001a\u00020\u000eH\u0007¢\u0006\u0004\b9\u0010:J\u0017\u0010?\u001a\u00020\u00132\u0006\u0010<\u001a\u00020;H\u0000¢\u0006\u0004\b=\u0010>J\u000f\u0010A\u001a\u00020\u0013H\u0000¢\u0006\u0004\b@\u0010*J\r\u0010B\u001a\u000201¢\u0006\u0004\bB\u00103J\r\u0010C\u001a\u000201¢\u0006\u0004\bC\u00103J\r\u0010D\u001a\u000201¢\u0006\u0004\bD\u00103R\u001a\u0010E\u001a\u00020\u00118\u0000X\u0080\u0004¢\u0006\f\n\u0004\bE\u0010F\u001a\u0004\bG\u0010HR\"\u00104\u001a\u0002018\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b4\u0010I\u001a\u0004\bJ\u00103\"\u0004\bK\u0010LR\"\u00102\u001a\u0002018\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b2\u0010I\u001a\u0004\bM\u00103\"\u0004\bN\u0010LR\u0016\u0010B\u001a\u0002018\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bB\u0010IR\u0016\u0010C\u001a\u0002018\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bC\u0010IR\u0016\u0010D\u001a\u0002018\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bD\u0010IR\u0011\u0010P\u001a\u00020O8F¢\u0006\u0006\u001a\u0004\bP\u0010QR\u0011\u0010\u0004\u001a\u00020\u000e8G¢\u0006\u0006\u001a\u0004\b\u0004\u0010:R\u0011\u0010R\u001a\u00020\u00038G¢\u0006\u0006\u001a\u0004\bR\u0010S¨\u0006X"}, d2 = {"Lokhttp3/Cache;", "Ljava/io/Closeable;", "Ljava/io/Flushable;", "Lxu/h0;", "directory", "", "maxSize", "Lxu/l;", "fileSystem", "Lokhttp3/internal/concurrent/TaskRunner;", "taskRunner", "<init>", "(Lxu/h0;JLxu/l;Lokhttp3/internal/concurrent/TaskRunner;)V", "(Lxu/l;Lxu/h0;J)V", "Ljava/io/File;", "(Ljava/io/File;J)V", "Lokhttp3/internal/cache/DiskLruCache$Editor;", "Lokhttp3/internal/cache/DiskLruCache;", "editor", "", "abortQuietly", "(Lokhttp3/internal/cache/DiskLruCache$Editor;)V", "Lokhttp3/Request;", "request", "Lokhttp3/Response;", "get$okhttp", "(Lokhttp3/Request;)Lokhttp3/Response;", "get", Payload.RESPONSE, "Lokhttp3/internal/cache/CacheRequest;", "put$okhttp", "(Lokhttp3/Response;)Lokhttp3/internal/cache/CacheRequest;", "put", "remove$okhttp", "(Lokhttp3/Request;)V", "remove", "cached", "network", "update$okhttp", "(Lokhttp3/Response;Lokhttp3/Response;)V", "update", "initialize", "()V", "delete", "evictAll", "", "", "urls", "()Ljava/util/Iterator;", "", "writeAbortCount", "()I", "writeSuccessCount", "size", "()J", "flush", "close", "-deprecated_directory", "()Ljava/io/File;", "Lokhttp3/internal/cache/CacheStrategy;", "cacheStrategy", "trackResponse$okhttp", "(Lokhttp3/internal/cache/CacheStrategy;)V", "trackResponse", "trackConditionalCacheHit$okhttp", "trackConditionalCacheHit", "networkCount", "hitCount", "requestCount", "cache", "Lokhttp3/internal/cache/DiskLruCache;", "getCache$okhttp", "()Lokhttp3/internal/cache/DiskLruCache;", "I", "getWriteSuccessCount$okhttp", "setWriteSuccessCount$okhttp", "(I)V", "getWriteAbortCount$okhttp", "setWriteAbortCount$okhttp", "", "isClosed", "()Z", "directoryPath", "()Lxu/h0;", "Companion", "RealCacheRequest", "Entry", "CacheResponseBody", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000x\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u000f\n\u0002\u0010)\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0013\n\u0002\u0010\u000b\n\u0002\b\t\u0018\u0000 T2\u00020\u00012\u00020\u0002:\u0004UVWTB)\b\u0000\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\b\u001a\u00020\u0007\u0012\u0006\u0010\n\u001a\u00020\t¢\u0006\u0004\b\u000b\u0010\fB!\b\u0016\u0012\u0006\u0010\b\u001a\u00020\u0007\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005¢\u0006\u0004\b\u000b\u0010\rB\u0019\b\u0016\u0012\u0006\u0010\u0004\u001a\u00020\u000e\u0012\u0006\u0010\u0006\u001a\u00020\u0005¢\u0006\u0004\b\u000b\u0010\u000fJ\u001d\u0010\u0014\u001a\u00020\u00132\f\u0010\u0012\u001a\b\u0018\u00010\u0010R\u00020\u0011H\u0002¢\u0006\u0004\b\u0014\u0010\u0015J\u0019\u0010\u001b\u001a\u0004\u0018\u00010\u00182\u0006\u0010\u0017\u001a\u00020\u0016H\u0000¢\u0006\u0004\b\u0019\u0010\u001aJ\u0019\u0010 \u001a\u0004\u0018\u00010\u001d2\u0006\u0010\u001c\u001a\u00020\u0018H\u0000¢\u0006\u0004\b\u001e\u0010\u001fJ\u0017\u0010#\u001a\u00020\u00132\u0006\u0010\u0017\u001a\u00020\u0016H\u0000¢\u0006\u0004\b!\u0010\"J\u001f\u0010(\u001a\u00020\u00132\u0006\u0010$\u001a\u00020\u00182\u0006\u0010%\u001a\u00020\u0018H\u0000¢\u0006\u0004\b&\u0010'J\r\u0010)\u001a\u00020\u0013¢\u0006\u0004\b)\u0010*J\r\u0010+\u001a\u00020\u0013¢\u0006\u0004\b+\u0010*J\r\u0010,\u001a\u00020\u0013¢\u0006\u0004\b,\u0010*J\u0013\u0010/\u001a\b\u0012\u0004\u0012\u00020.0-¢\u0006\u0004\b/\u00100J\r\u00102\u001a\u000201¢\u0006\u0004\b2\u00103J\r\u00104\u001a\u000201¢\u0006\u0004\b4\u00103J\r\u00105\u001a\u00020\u0005¢\u0006\u0004\b5\u00106J\r\u0010\u0006\u001a\u00020\u0005¢\u0006\u0004\b\u0006\u00106J\u000f\u00107\u001a\u00020\u0013H\u0016¢\u0006\u0004\b7\u0010*J\u000f\u00108\u001a\u00020\u0013H\u0016¢\u0006\u0004\b8\u0010*J\u000f\u0010\u0004\u001a\u00020\u000eH\u0007¢\u0006\u0004\b9\u0010:J\u0017\u0010?\u001a\u00020\u00132\u0006\u0010<\u001a\u00020;H\u0000¢\u0006\u0004\b=\u0010>J\u000f\u0010A\u001a\u00020\u0013H\u0000¢\u0006\u0004\b@\u0010*J\r\u0010B\u001a\u000201¢\u0006\u0004\bB\u00103J\r\u0010C\u001a\u000201¢\u0006\u0004\bC\u00103J\r\u0010D\u001a\u000201¢\u0006\u0004\bD\u00103R\u001a\u0010E\u001a\u00020\u00118\u0000X\u0080\u0004¢\u0006\f\n\u0004\bE\u0010F\u001a\u0004\bG\u0010HR\"\u00104\u001a\u0002018\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b4\u0010I\u001a\u0004\bJ\u00103\"\u0004\bK\u0010LR\"\u00102\u001a\u0002018\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b2\u0010I\u001a\u0004\bM\u00103\"\u0004\bN\u0010LR\u0016\u0010B\u001a\u0002018\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bB\u0010IR\u0016\u0010C\u001a\u0002018\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bC\u0010IR\u0016\u0010D\u001a\u0002018\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bD\u0010IR\u0011\u0010P\u001a\u00020O8F¢\u0006\u0006\u001a\u0004\bP\u0010QR\u0011\u0010\u0004\u001a\u00020\u000e8G¢\u0006\u0006\u001a\u0004\b\u0004\u0010:R\u0011\u0010R\u001a\u00020\u00038G¢\u0006\u0006\u001a\u0004\bR\u0010S¨\u0006X"}, d2 = {"Lokhttp3/Cache;", "Ljava/io/Closeable;", "Ljava/io/Flushable;", "Lvu/h0;", "directory", "", "maxSize", "Lvu/l;", "fileSystem", "Lokhttp3/internal/concurrent/TaskRunner;", "taskRunner", "<init>", "(Lvu/h0;JLvu/l;Lokhttp3/internal/concurrent/TaskRunner;)V", "(Lvu/l;Lvu/h0;J)V", "Ljava/io/File;", "(Ljava/io/File;J)V", "Lokhttp3/internal/cache/DiskLruCache$Editor;", "Lokhttp3/internal/cache/DiskLruCache;", "editor", "", "abortQuietly", "(Lokhttp3/internal/cache/DiskLruCache$Editor;)V", "Lokhttp3/Request;", "request", "Lokhttp3/Response;", "get$okhttp", "(Lokhttp3/Request;)Lokhttp3/Response;", "get", Payload.RESPONSE, "Lokhttp3/internal/cache/CacheRequest;", "put$okhttp", "(Lokhttp3/Response;)Lokhttp3/internal/cache/CacheRequest;", "put", "remove$okhttp", "(Lokhttp3/Request;)V", "remove", "cached", "network", "update$okhttp", "(Lokhttp3/Response;Lokhttp3/Response;)V", "update", "initialize", "()V", "delete", "evictAll", "", "", "urls", "()Ljava/util/Iterator;", "", "writeAbortCount", "()I", "writeSuccessCount", "size", "()J", "flush", "close", "-deprecated_directory", "()Ljava/io/File;", "Lokhttp3/internal/cache/CacheStrategy;", "cacheStrategy", "trackResponse$okhttp", "(Lokhttp3/internal/cache/CacheStrategy;)V", "trackResponse", "trackConditionalCacheHit$okhttp", "trackConditionalCacheHit", "networkCount", "hitCount", "requestCount", "cache", "Lokhttp3/internal/cache/DiskLruCache;", "getCache$okhttp", "()Lokhttp3/internal/cache/DiskLruCache;", "I", "getWriteSuccessCount$okhttp", "setWriteSuccessCount$okhttp", "(I)V", "getWriteAbortCount$okhttp", "setWriteAbortCount$okhttp", "", "isClosed", "()Z", "directoryPath", "()Lvu/h0;", "Companion", "RealCacheRequest", "Entry", "CacheResponseBody", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class Cache implements Closeable, Flushable {
 
     /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
@@ -66,7 +66,7 @@ public final class Cache implements Closeable, Flushable {
     private int writeAbortCount;
     private int writeSuccessCount;
 
-    @Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\b\t\b\u0002\u0018\u00002\u00020\u0001B'\u0012\n\u0010\u0004\u001a\u00060\u0002R\u00020\u0003\u0012\b\u0010\u0006\u001a\u0004\u0018\u00010\u0005\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0005¢\u0006\u0004\b\b\u0010\tJ\u0011\u0010\u0006\u001a\u0004\u0018\u00010\nH\u0016¢\u0006\u0004\b\u0006\u0010\u000bJ\u000f\u0010\u0007\u001a\u00020\fH\u0016¢\u0006\u0004\b\u0007\u0010\rJ\u000f\u0010\u000f\u001a\u00020\u000eH\u0016¢\u0006\u0004\b\u000f\u0010\u0010R\u001b\u0010\u0004\u001a\u00060\u0002R\u00020\u00038\u0006¢\u0006\f\n\u0004\b\u0004\u0010\u0011\u001a\u0004\b\u0012\u0010\u0013R\u0016\u0010\u0006\u001a\u0004\u0018\u00010\u00058\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0006\u0010\u0014R\u0016\u0010\u0007\u001a\u0004\u0018\u00010\u00058\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0007\u0010\u0014R\u0014\u0010\u0015\u001a\u00020\u000e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010\u0016¨\u0006\u0017"}, d2 = {"Lokhttp3/Cache$CacheResponseBody;", "Lokhttp3/ResponseBody;", "Lokhttp3/internal/cache/DiskLruCache$Snapshot;", "Lokhttp3/internal/cache/DiskLruCache;", "snapshot", "", "contentType", "contentLength", "<init>", "(Lokhttp3/internal/cache/DiskLruCache$Snapshot;Ljava/lang/String;Ljava/lang/String;)V", "Lokhttp3/MediaType;", "()Lokhttp3/MediaType;", "", "()J", "Lxu/g;", Payload.SOURCE, "()Lxu/g;", "Lokhttp3/internal/cache/DiskLruCache$Snapshot;", "getSnapshot", "()Lokhttp3/internal/cache/DiskLruCache$Snapshot;", "Ljava/lang/String;", "bodySource", "Lxu/g;", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\b\t\b\u0002\u0018\u00002\u00020\u0001B'\u0012\n\u0010\u0004\u001a\u00060\u0002R\u00020\u0003\u0012\b\u0010\u0006\u001a\u0004\u0018\u00010\u0005\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0005¢\u0006\u0004\b\b\u0010\tJ\u0011\u0010\u0006\u001a\u0004\u0018\u00010\nH\u0016¢\u0006\u0004\b\u0006\u0010\u000bJ\u000f\u0010\u0007\u001a\u00020\fH\u0016¢\u0006\u0004\b\u0007\u0010\rJ\u000f\u0010\u000f\u001a\u00020\u000eH\u0016¢\u0006\u0004\b\u000f\u0010\u0010R\u001b\u0010\u0004\u001a\u00060\u0002R\u00020\u00038\u0006¢\u0006\f\n\u0004\b\u0004\u0010\u0011\u001a\u0004\b\u0012\u0010\u0013R\u0016\u0010\u0006\u001a\u0004\u0018\u00010\u00058\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0006\u0010\u0014R\u0016\u0010\u0007\u001a\u0004\u0018\u00010\u00058\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0007\u0010\u0014R\u0014\u0010\u0015\u001a\u00020\u000e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010\u0016¨\u0006\u0017"}, d2 = {"Lokhttp3/Cache$CacheResponseBody;", "Lokhttp3/ResponseBody;", "Lokhttp3/internal/cache/DiskLruCache$Snapshot;", "Lokhttp3/internal/cache/DiskLruCache;", "snapshot", "", "contentType", "contentLength", "<init>", "(Lokhttp3/internal/cache/DiskLruCache$Snapshot;Ljava/lang/String;Ljava/lang/String;)V", "Lokhttp3/MediaType;", "()Lokhttp3/MediaType;", "", "()J", "Lvu/g;", Payload.SOURCE, "()Lvu/g;", "Lokhttp3/internal/cache/DiskLruCache$Snapshot;", "getSnapshot", "()Lokhttp3/internal/cache/DiskLruCache$Snapshot;", "Ljava/lang/String;", "bodySource", "Lvu/g;", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class CacheResponseBody extends ResponseBody {
 
         @NotNull
@@ -87,7 +87,7 @@ public final class Cache implements Closeable, Flushable {
             this.contentType = str;
             this.contentLength = str2;
             this.bodySource = b0.c(new p(snapshot.getSource(1)) { // from class: okhttp3.Cache.CacheResponseBody.1
-                @Override // xu.p, xu.r0, java.io.Closeable, java.lang.AutoCloseable
+                @Override // vu.p, vu.r0, java.io.Closeable, java.lang.AutoCloseable
                 public void close() {
                     this.getSnapshot().close();
                     super.close();
@@ -129,7 +129,7 @@ public final class Cache implements Closeable, Flushable {
         }
     }
 
-    @Metadata(d1 = {"\u0000H\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\"\n\u0002\u0010\u000e\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u000b\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0019\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005*\u00020\u0004H\u0002¢\u0006\u0004\b\u0007\u0010\bJ\u001f\u0010\u000b\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u000b\u0010\fJ\u0017\u0010\u000f\u001a\u00020\u00062\u0006\u0010\u000e\u001a\u00020\rH\u0007¢\u0006\u0004\b\u000f\u0010\u0010J\u0017\u0010\u0016\u001a\u00020\u00132\u0006\u0010\u0012\u001a\u00020\u0011H\u0000¢\u0006\u0004\b\u0014\u0010\u0015J%\u0010\u001d\u001a\u00020\u001c2\u0006\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u0019\u001a\u00020\u00042\u0006\u0010\u001b\u001a\u00020\u001a¢\u0006\u0004\b\u001d\u0010\u001eJ\u0011\u0010\u001f\u001a\u00020\u001c*\u00020\u0017¢\u0006\u0004\b\u001f\u0010 J\u0011\u0010\u000b\u001a\u00020\u0004*\u00020\u0017¢\u0006\u0004\b\u000b\u0010!R\u0014\u0010\"\u001a\u00020\u00138\u0002X\u0082T¢\u0006\u0006\n\u0004\b\"\u0010#R\u0014\u0010$\u001a\u00020\u00138\u0002X\u0082T¢\u0006\u0006\n\u0004\b$\u0010#R\u0014\u0010%\u001a\u00020\u00138\u0002X\u0082T¢\u0006\u0006\n\u0004\b%\u0010#R\u0014\u0010&\u001a\u00020\u00138\u0002X\u0082T¢\u0006\u0006\n\u0004\b&\u0010#¨\u0006'"}, d2 = {"Lokhttp3/Cache$Companion;", "", "<init>", "()V", "Lokhttp3/Headers;", "", "", "varyFields", "(Lokhttp3/Headers;)Ljava/util/Set;", "requestHeaders", "responseHeaders", "varyHeaders", "(Lokhttp3/Headers;Lokhttp3/Headers;)Lokhttp3/Headers;", "Lokhttp3/HttpUrl;", "url", "key", "(Lokhttp3/HttpUrl;)Ljava/lang/String;", "Lxu/g;", Payload.SOURCE, "", "readInt$okhttp", "(Lxu/g;)I", "readInt", "Lokhttp3/Response;", "cachedResponse", "cachedRequest", "Lokhttp3/Request;", "newRequest", "", "varyMatches", "(Lokhttp3/Response;Lokhttp3/Headers;Lokhttp3/Request;)Z", "hasVaryAll", "(Lokhttp3/Response;)Z", "(Lokhttp3/Response;)Lokhttp3/Headers;", "VERSION", "I", "ENTRY_METADATA", "ENTRY_BODY", "ENTRY_COUNT", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000H\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\"\n\u0002\u0010\u000e\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u000b\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0019\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005*\u00020\u0004H\u0002¢\u0006\u0004\b\u0007\u0010\bJ\u001f\u0010\u000b\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u000b\u0010\fJ\u0017\u0010\u000f\u001a\u00020\u00062\u0006\u0010\u000e\u001a\u00020\rH\u0007¢\u0006\u0004\b\u000f\u0010\u0010J\u0017\u0010\u0016\u001a\u00020\u00132\u0006\u0010\u0012\u001a\u00020\u0011H\u0000¢\u0006\u0004\b\u0014\u0010\u0015J%\u0010\u001d\u001a\u00020\u001c2\u0006\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u0019\u001a\u00020\u00042\u0006\u0010\u001b\u001a\u00020\u001a¢\u0006\u0004\b\u001d\u0010\u001eJ\u0011\u0010\u001f\u001a\u00020\u001c*\u00020\u0017¢\u0006\u0004\b\u001f\u0010 J\u0011\u0010\u000b\u001a\u00020\u0004*\u00020\u0017¢\u0006\u0004\b\u000b\u0010!R\u0014\u0010\"\u001a\u00020\u00138\u0002X\u0082T¢\u0006\u0006\n\u0004\b\"\u0010#R\u0014\u0010$\u001a\u00020\u00138\u0002X\u0082T¢\u0006\u0006\n\u0004\b$\u0010#R\u0014\u0010%\u001a\u00020\u00138\u0002X\u0082T¢\u0006\u0006\n\u0004\b%\u0010#R\u0014\u0010&\u001a\u00020\u00138\u0002X\u0082T¢\u0006\u0006\n\u0004\b&\u0010#¨\u0006'"}, d2 = {"Lokhttp3/Cache$Companion;", "", "<init>", "()V", "Lokhttp3/Headers;", "", "", "varyFields", "(Lokhttp3/Headers;)Ljava/util/Set;", "requestHeaders", "responseHeaders", "varyHeaders", "(Lokhttp3/Headers;Lokhttp3/Headers;)Lokhttp3/Headers;", "Lokhttp3/HttpUrl;", "url", "key", "(Lokhttp3/HttpUrl;)Ljava/lang/String;", "Lvu/g;", Payload.SOURCE, "", "readInt$okhttp", "(Lvu/g;)I", "readInt", "Lokhttp3/Response;", "cachedResponse", "cachedRequest", "Lokhttp3/Request;", "newRequest", "", "varyMatches", "(Lokhttp3/Response;Lokhttp3/Headers;Lokhttp3/Request;)Z", "hasVaryAll", "(Lokhttp3/Response;)Z", "(Lokhttp3/Response;)Lokhttp3/Headers;", "VERSION", "I", "ENTRY_METADATA", "ENTRY_BODY", "ENTRY_COUNT", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class Companion {
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
             this();
@@ -142,7 +142,7 @@ public final class Cache implements Closeable, Flushable {
                 if (x.E("Vary", headers.name(i10), true)) {
                     String strValue = headers.value(i10);
                     if (treeSet == null) {
-                        treeSet = new TreeSet(x.G(g0.f22559a));
+                        treeSet = new TreeSet(x.G(g0.f23014a));
                     }
                     Iterator it = StringsKt.P0(strValue, new char[]{','}, false, 0, 6, null).iterator();
                     while (it.hasNext()) {
@@ -168,11 +168,11 @@ public final class Cache implements Closeable, Flushable {
             Intrinsics.checkNotNullParameter(source, "source");
             try {
                 long jI2 = source.i2();
-                String strB1 = source.b1();
-                if (jI2 >= 0 && jI2 <= 2147483647L && strB1.length() <= 0) {
+                String strX0 = source.X0();
+                if (jI2 >= 0 && jI2 <= 2147483647L && strX0.length() <= 0) {
                     return (int) jI2;
                 }
-                throw new IOException("expected an int but was \"" + jI2 + strB1 + '\"');
+                throw new IOException("expected an int but was \"" + jI2 + strX0 + '\"');
             } catch (NumberFormatException e10) {
                 throw new IOException(e10.getMessage());
             }
@@ -222,7 +222,7 @@ public final class Cache implements Closeable, Flushable {
         }
     }
 
-    @Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\u0007\b\u0082\u0004\u0018\u00002\u00020\u0001B\u0013\u0012\n\u0010\u0004\u001a\u00060\u0002R\u00020\u0003¢\u0006\u0004\b\u0005\u0010\u0006J\u000f\u0010\b\u001a\u00020\u0007H\u0016¢\u0006\u0004\b\b\u0010\tJ\u000f\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\u000b\u0010\fR\u0018\u0010\u0004\u001a\u00060\u0002R\u00020\u00038\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0004\u0010\rR\u0014\u0010\u000e\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000e\u0010\u000fR\u0014\u0010\u000b\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000b\u0010\u000fR\"\u0010\u0011\u001a\u00020\u00108\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b\u0011\u0010\u0012\u001a\u0004\b\u0013\u0010\u0014\"\u0004\b\u0015\u0010\u0016¨\u0006\u0017"}, d2 = {"Lokhttp3/Cache$RealCacheRequest;", "Lokhttp3/internal/cache/CacheRequest;", "Lokhttp3/internal/cache/DiskLruCache$Editor;", "Lokhttp3/internal/cache/DiskLruCache;", "editor", "<init>", "(Lokhttp3/Cache;Lokhttp3/internal/cache/DiskLruCache$Editor;)V", "", "abort", "()V", "Lxu/p0;", "body", "()Lxu/p0;", "Lokhttp3/internal/cache/DiskLruCache$Editor;", "cacheOut", "Lxu/p0;", "", "done", "Z", "getDone", "()Z", "setDone", "(Z)V", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\u0007\b\u0082\u0004\u0018\u00002\u00020\u0001B\u0013\u0012\n\u0010\u0004\u001a\u00060\u0002R\u00020\u0003¢\u0006\u0004\b\u0005\u0010\u0006J\u000f\u0010\b\u001a\u00020\u0007H\u0016¢\u0006\u0004\b\b\u0010\tJ\u000f\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\u000b\u0010\fR\u0018\u0010\u0004\u001a\u00060\u0002R\u00020\u00038\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0004\u0010\rR\u0014\u0010\u000e\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000e\u0010\u000fR\u0014\u0010\u000b\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000b\u0010\u000fR\"\u0010\u0011\u001a\u00020\u00108\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b\u0011\u0010\u0012\u001a\u0004\b\u0013\u0010\u0014\"\u0004\b\u0015\u0010\u0016¨\u0006\u0017"}, d2 = {"Lokhttp3/Cache$RealCacheRequest;", "Lokhttp3/internal/cache/CacheRequest;", "Lokhttp3/internal/cache/DiskLruCache$Editor;", "Lokhttp3/internal/cache/DiskLruCache;", "editor", "<init>", "(Lokhttp3/Cache;Lokhttp3/internal/cache/DiskLruCache$Editor;)V", "", "abort", "()V", "Lvu/p0;", "body", "()Lvu/p0;", "Lokhttp3/internal/cache/DiskLruCache$Editor;", "cacheOut", "Lvu/p0;", "", "done", "Z", "getDone", "()Z", "setDone", "(Z)V", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public final class RealCacheRequest implements CacheRequest {
 
         @NotNull
@@ -243,7 +243,7 @@ public final class Cache implements Closeable, Flushable {
             p0 p0VarNewSink = editor.newSink(1);
             this.cacheOut = p0VarNewSink;
             this.body = new o(p0VarNewSink) { // from class: okhttp3.Cache.RealCacheRequest.1
-                @Override // xu.o, xu.p0, java.io.Closeable, java.lang.AutoCloseable
+                @Override // vu.o, vu.p0, java.io.Closeable, java.lang.AutoCloseable
                 public void close() {
                     Cache cache2 = cache;
                     RealCacheRequest realCacheRequest = this;
@@ -295,7 +295,7 @@ public final class Cache implements Closeable, Flushable {
 
     /* JADX INFO: renamed from: okhttp3.Cache$urls$1, reason: invalid class name */
     @Metadata(d1 = {"\u0000)\n\u0000\n\u0002\u0010)\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000*\u0001\u0000\b\n\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001J\t\u0010\t\u001a\u00020\bH\u0096\u0002J\t\u0010\n\u001a\u00020\u0002H\u0096\u0002J\b\u0010\u000b\u001a\u00020\fH\u0016R\u0018\u0010\u0003\u001a\f\u0012\b\u0012\u00060\u0004R\u00020\u00050\u0001X\u0082\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u0006\u001a\u0004\u0018\u00010\u0002X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006\r"}, d2 = {"okhttp3/Cache$urls$1", "", "", "delegate", "Lokhttp3/internal/cache/DiskLruCache$Snapshot;", "Lokhttp3/internal/cache/DiskLruCache;", "nextUrl", "canRemove", "", "hasNext", "next", "remove", "", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    public static final class AnonymousClass1 implements Iterator<String>, au.a {
+    public static final class AnonymousClass1 implements Iterator<String>, yt.a {
         private boolean canRemove;
         private final Iterator<DiskLruCache.Snapshot> delegate;
         private String nextUrl;
@@ -315,15 +315,15 @@ public final class Cache implements Closeable, Flushable {
                     DiskLruCache.Snapshot next = this.delegate.next();
                     try {
                         continue;
-                        this.nextUrl = b0.c(next.getSource(0)).b1();
-                        ut.c.a(next, null);
+                        this.nextUrl = b0.c(next.getSource(0)).X0();
+                        st.c.a(next, null);
                         return true;
                     } catch (Throwable th2) {
                         try {
                             continue;
                             throw th2;
                         } catch (Throwable th3) {
-                            ut.c.a(next, th2);
+                            st.c.a(next, th2);
                             throw th3;
                         }
                     }
@@ -377,7 +377,7 @@ public final class Cache implements Closeable, Flushable {
 
     @NotNull
     /* JADX INFO: renamed from: -deprecated_directory, reason: not valid java name */
-    public final File m84deprecated_directory() {
+    public final File m85deprecated_directory() {
         return this.cache.getDirectory().toFile();
     }
 
@@ -594,7 +594,7 @@ public final class Cache implements Closeable, Flushable {
         Intrinsics.checkNotNullParameter(directory, "directory");
     }
 
-    @Metadata(d1 = {"\u0000\u0094\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0005\b\u0002\u0018\u0000 :2\u00020\u0001:\u0001:B\u0011\b\u0016\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005B\u0011\b\u0016\u0012\u0006\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\u0004\u0010\bJ\u001d\u0010\r\u001a\b\u0012\u0004\u0012\u00020\f0\u000b2\u0006\u0010\n\u001a\u00020\tH\u0002¢\u0006\u0004\b\r\u0010\u000eJ%\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0010\u001a\u00020\u000f2\f\u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\f0\u000bH\u0002¢\u0006\u0004\b\u0013\u0010\u0014J\u0019\u0010\u0018\u001a\u00020\u00122\n\u0010\u0017\u001a\u00060\u0015R\u00020\u0016¢\u0006\u0004\b\u0018\u0010\u0019J\u001d\u0010\u001d\u001a\u00020\u001c2\u0006\u0010\u001b\u001a\u00020\u001a2\u0006\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\u001d\u0010\u001eJ\u0019\u0010\u0007\u001a\u00020\u00062\n\u0010 \u001a\u00060\u001fR\u00020\u0016¢\u0006\u0004\b\u0007\u0010!R\u0014\u0010#\u001a\u00020\"8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b#\u0010$R\u0014\u0010&\u001a\u00020%8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b&\u0010'R\u0014\u0010)\u001a\u00020(8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b)\u0010*R\u0014\u0010,\u001a\u00020+8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b,\u0010-R\u0014\u0010/\u001a\u00020.8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b/\u00100R\u0014\u00101\u001a\u00020(8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b1\u0010*R\u0014\u00102\u001a\u00020%8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b2\u0010'R\u0016\u00104\u001a\u0004\u0018\u0001038\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b4\u00105R\u0014\u00107\u001a\u0002068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b7\u00108R\u0014\u00109\u001a\u0002068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b9\u00108¨\u0006;"}, d2 = {"Lokhttp3/Cache$Entry;", "", "Lxu/r0;", "rawSource", "<init>", "(Lxu/r0;)V", "Lokhttp3/Response;", Payload.RESPONSE, "(Lokhttp3/Response;)V", "Lxu/g;", Payload.SOURCE, "", "Ljava/security/cert/Certificate;", "readCertificateList", "(Lxu/g;)Ljava/util/List;", "Lxu/f;", "sink", "certificates", "", "writeCertList", "(Lxu/f;Ljava/util/List;)V", "Lokhttp3/internal/cache/DiskLruCache$Editor;", "Lokhttp3/internal/cache/DiskLruCache;", "editor", "writeTo", "(Lokhttp3/internal/cache/DiskLruCache$Editor;)V", "Lokhttp3/Request;", "request", "", "matches", "(Lokhttp3/Request;Lokhttp3/Response;)Z", "Lokhttp3/internal/cache/DiskLruCache$Snapshot;", "snapshot", "(Lokhttp3/internal/cache/DiskLruCache$Snapshot;)Lokhttp3/Response;", "Lokhttp3/HttpUrl;", "url", "Lokhttp3/HttpUrl;", "Lokhttp3/Headers;", "varyHeaders", "Lokhttp3/Headers;", "", "requestMethod", "Ljava/lang/String;", "Lokhttp3/Protocol;", "protocol", "Lokhttp3/Protocol;", "", "code", "I", "message", "responseHeaders", "Lokhttp3/Handshake;", "handshake", "Lokhttp3/Handshake;", "", "sentRequestMillis", "J", "receivedResponseMillis", "Companion", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000\u0094\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0005\b\u0002\u0018\u0000 :2\u00020\u0001:\u0001:B\u0011\b\u0016\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005B\u0011\b\u0016\u0012\u0006\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\u0004\u0010\bJ\u001d\u0010\r\u001a\b\u0012\u0004\u0012\u00020\f0\u000b2\u0006\u0010\n\u001a\u00020\tH\u0002¢\u0006\u0004\b\r\u0010\u000eJ%\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0010\u001a\u00020\u000f2\f\u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\f0\u000bH\u0002¢\u0006\u0004\b\u0013\u0010\u0014J\u0019\u0010\u0018\u001a\u00020\u00122\n\u0010\u0017\u001a\u00060\u0015R\u00020\u0016¢\u0006\u0004\b\u0018\u0010\u0019J\u001d\u0010\u001d\u001a\u00020\u001c2\u0006\u0010\u001b\u001a\u00020\u001a2\u0006\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\u001d\u0010\u001eJ\u0019\u0010\u0007\u001a\u00020\u00062\n\u0010 \u001a\u00060\u001fR\u00020\u0016¢\u0006\u0004\b\u0007\u0010!R\u0014\u0010#\u001a\u00020\"8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b#\u0010$R\u0014\u0010&\u001a\u00020%8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b&\u0010'R\u0014\u0010)\u001a\u00020(8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b)\u0010*R\u0014\u0010,\u001a\u00020+8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b,\u0010-R\u0014\u0010/\u001a\u00020.8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b/\u00100R\u0014\u00101\u001a\u00020(8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b1\u0010*R\u0014\u00102\u001a\u00020%8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b2\u0010'R\u0016\u00104\u001a\u0004\u0018\u0001038\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b4\u00105R\u0014\u00107\u001a\u0002068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b7\u00108R\u0014\u00109\u001a\u0002068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b9\u00108¨\u0006;"}, d2 = {"Lokhttp3/Cache$Entry;", "", "Lvu/r0;", "rawSource", "<init>", "(Lvu/r0;)V", "Lokhttp3/Response;", Payload.RESPONSE, "(Lokhttp3/Response;)V", "Lvu/g;", Payload.SOURCE, "", "Ljava/security/cert/Certificate;", "readCertificateList", "(Lvu/g;)Ljava/util/List;", "Lvu/f;", "sink", "certificates", "", "writeCertList", "(Lvu/f;Ljava/util/List;)V", "Lokhttp3/internal/cache/DiskLruCache$Editor;", "Lokhttp3/internal/cache/DiskLruCache;", "editor", "writeTo", "(Lokhttp3/internal/cache/DiskLruCache$Editor;)V", "Lokhttp3/Request;", "request", "", "matches", "(Lokhttp3/Request;Lokhttp3/Response;)Z", "Lokhttp3/internal/cache/DiskLruCache$Snapshot;", "snapshot", "(Lokhttp3/internal/cache/DiskLruCache$Snapshot;)Lokhttp3/Response;", "Lokhttp3/HttpUrl;", "url", "Lokhttp3/HttpUrl;", "Lokhttp3/Headers;", "varyHeaders", "Lokhttp3/Headers;", "", "requestMethod", "Ljava/lang/String;", "Lokhttp3/Protocol;", "protocol", "Lokhttp3/Protocol;", "", "code", "I", "message", "responseHeaders", "Lokhttp3/Handshake;", "handshake", "Lokhttp3/Handshake;", "", "sentRequestMillis", "J", "receivedResponseMillis", "Companion", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class Entry {
 
         @NotNull
@@ -640,29 +640,29 @@ public final class Cache implements Closeable, Flushable {
             Intrinsics.checkNotNullParameter(rawSource, "rawSource");
             try {
                 g gVarC = b0.c(rawSource);
-                String strB1 = gVarC.b1();
-                HttpUrl httpUrl = HttpUrl.INSTANCE.parse(strB1);
+                String strX0 = gVarC.X0();
+                HttpUrl httpUrl = HttpUrl.INSTANCE.parse(strX0);
                 if (httpUrl == null) {
-                    IOException iOException = new IOException("Cache corruption for " + strB1);
+                    IOException iOException = new IOException("Cache corruption for " + strX0);
                     Platform.INSTANCE.get().log("cache corruption", 5, iOException);
                     throw iOException;
                 }
                 this.url = httpUrl;
-                this.requestMethod = gVarC.b1();
+                this.requestMethod = gVarC.X0();
                 Headers.Builder builder = new Headers.Builder();
                 int int$okhttp = Cache.INSTANCE.readInt$okhttp(gVarC);
                 for (int i10 = 0; i10 < int$okhttp; i10++) {
-                    builder.addLenient$okhttp(gVarC.b1());
+                    builder.addLenient$okhttp(gVarC.X0());
                 }
                 this.varyHeaders = builder.build();
-                StatusLine statusLine = StatusLine.INSTANCE.parse(gVarC.b1());
+                StatusLine statusLine = StatusLine.INSTANCE.parse(gVarC.X0());
                 this.protocol = statusLine.protocol;
                 this.code = statusLine.code;
                 this.message = statusLine.message;
                 Headers.Builder builder2 = new Headers.Builder();
                 int int$okhttp2 = Cache.INSTANCE.readInt$okhttp(gVarC);
                 for (int i11 = 0; i11 < int$okhttp2; i11++) {
-                    builder2.addLenient$okhttp(gVarC.b1());
+                    builder2.addLenient$okhttp(gVarC.X0());
                 }
                 String str = SENT_MILLIS;
                 String str2 = builder2.get(str);
@@ -674,21 +674,21 @@ public final class Cache implements Closeable, Flushable {
                 this.receivedResponseMillis = str4 != null ? Long.parseLong(str4) : 0L;
                 this.responseHeaders = builder2.build();
                 if (this.url.isHttps()) {
-                    String strB2 = gVarC.b1();
-                    if (strB2.length() > 0) {
-                        throw new IOException("expected \"\" but was \"" + strB2 + '\"');
+                    String strX1 = gVarC.X0();
+                    if (strX1.length() > 0) {
+                        throw new IOException("expected \"\" but was \"" + strX1 + '\"');
                     }
-                    this.handshake = Handshake.INSTANCE.get(!gVarC.Z1() ? TlsVersion.INSTANCE.forJavaName(gVarC.b1()) : TlsVersion.SSL_3_0, CipherSuite.INSTANCE.forJavaName(gVarC.b1()), readCertificateList(gVarC), readCertificateList(gVarC));
+                    this.handshake = Handshake.INSTANCE.get(!gVarC.a2() ? TlsVersion.INSTANCE.forJavaName(gVarC.X0()) : TlsVersion.SSL_3_0, CipherSuite.INSTANCE.forJavaName(gVarC.X0()), readCertificateList(gVarC), readCertificateList(gVarC));
                 } else {
                     this.handshake = null;
                 }
-                Unit unit = Unit.f22483a;
-                ut.c.a(rawSource, null);
+                Unit unit = Unit.f22938a;
+                st.c.a(rawSource, null);
             } catch (Throwable th2) {
                 try {
                     throw th2;
                 } catch (Throwable th3) {
-                    ut.c.a(rawSource, th2);
+                    st.c.a(rawSource, th2);
                     throw th3;
                 }
             }
@@ -703,13 +703,13 @@ public final class Cache implements Closeable, Flushable {
                 CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");
                 ArrayList arrayList = new ArrayList(int$okhttp);
                 for (int i10 = 0; i10 < int$okhttp; i10++) {
-                    String strB1 = source.b1();
+                    String strX0 = source.X0();
                     e eVar = new e();
-                    h hVarA = h.INSTANCE.a(strB1);
+                    h hVarA = h.INSTANCE.a(strX0);
                     if (hVarA == null) {
                         throw new IOException("Corrupt certificate in cache entry");
                     }
-                    eVar.d0(hVarA);
+                    eVar.m2(hVarA);
                     arrayList.add(certificateFactory.generateCertificate(eVar.s3()));
                 }
                 return arrayList;
@@ -720,13 +720,13 @@ public final class Cache implements Closeable, Flushable {
 
         private final void writeCertList(f sink, List<? extends Certificate> certificates) throws IOException {
             try {
-                sink.z1(certificates.size()).writeByte(10);
+                sink.x1(certificates.size()).writeByte(10);
                 Iterator<? extends Certificate> it = certificates.iterator();
                 while (it.hasNext()) {
                     byte[] encoded = it.next().getEncoded();
                     h.Companion companion = h.INSTANCE;
                     Intrinsics.checkNotNull(encoded);
-                    sink.C0(h.Companion.g(companion, encoded, 0, 0, 3, null).a()).writeByte(10);
+                    sink.y0(h.Companion.g(companion, encoded, 0, 0, 3, null).a()).writeByte(10);
                 }
             } catch (CertificateEncodingException e10) {
                 throw new IOException(e10.getMessage());
@@ -751,37 +751,37 @@ public final class Cache implements Closeable, Flushable {
             Intrinsics.checkNotNullParameter(editor, "editor");
             f fVarB = b0.b(editor.newSink(0));
             try {
-                fVarB.C0(this.url.getUrl()).writeByte(10);
-                fVarB.C0(this.requestMethod).writeByte(10);
-                fVarB.z1(this.varyHeaders.size()).writeByte(10);
+                fVarB.y0(this.url.getUrl()).writeByte(10);
+                fVarB.y0(this.requestMethod).writeByte(10);
+                fVarB.x1(this.varyHeaders.size()).writeByte(10);
                 int size = this.varyHeaders.size();
                 for (int i10 = 0; i10 < size; i10++) {
-                    fVarB.C0(this.varyHeaders.name(i10)).C0(": ").C0(this.varyHeaders.value(i10)).writeByte(10);
+                    fVarB.y0(this.varyHeaders.name(i10)).y0(": ").y0(this.varyHeaders.value(i10)).writeByte(10);
                 }
-                fVarB.C0(new StatusLine(this.protocol, this.code, this.message).toString()).writeByte(10);
-                fVarB.z1(this.responseHeaders.size() + 2).writeByte(10);
+                fVarB.y0(new StatusLine(this.protocol, this.code, this.message).toString()).writeByte(10);
+                fVarB.x1(this.responseHeaders.size() + 2).writeByte(10);
                 int size2 = this.responseHeaders.size();
                 for (int i11 = 0; i11 < size2; i11++) {
-                    fVarB.C0(this.responseHeaders.name(i11)).C0(": ").C0(this.responseHeaders.value(i11)).writeByte(10);
+                    fVarB.y0(this.responseHeaders.name(i11)).y0(": ").y0(this.responseHeaders.value(i11)).writeByte(10);
                 }
-                fVarB.C0(SENT_MILLIS).C0(": ").z1(this.sentRequestMillis).writeByte(10);
-                fVarB.C0(RECEIVED_MILLIS).C0(": ").z1(this.receivedResponseMillis).writeByte(10);
+                fVarB.y0(SENT_MILLIS).y0(": ").x1(this.sentRequestMillis).writeByte(10);
+                fVarB.y0(RECEIVED_MILLIS).y0(": ").x1(this.receivedResponseMillis).writeByte(10);
                 if (this.url.isHttps()) {
                     fVarB.writeByte(10);
                     Handshake handshake = this.handshake;
                     Intrinsics.checkNotNull(handshake);
-                    fVarB.C0(handshake.cipherSuite().javaName()).writeByte(10);
+                    fVarB.y0(handshake.cipherSuite().javaName()).writeByte(10);
                     writeCertList(fVarB, this.handshake.peerCertificates());
                     writeCertList(fVarB, this.handshake.localCertificates());
-                    fVarB.C0(this.handshake.tlsVersion().javaName()).writeByte(10);
+                    fVarB.y0(this.handshake.tlsVersion().javaName()).writeByte(10);
                 }
-                Unit unit = Unit.f22483a;
-                ut.c.a(fVarB, null);
+                Unit unit = Unit.f22938a;
+                st.c.a(fVarB, null);
             } catch (Throwable th2) {
                 try {
                     throw th2;
                 } catch (Throwable th3) {
-                    ut.c.a(fVarB, th2);
+                    st.c.a(fVarB, th2);
                     throw th3;
                 }
             }

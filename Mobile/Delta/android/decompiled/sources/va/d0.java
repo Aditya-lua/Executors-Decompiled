@@ -4,9 +4,9 @@ package va;
 public class d0 extends b0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final l9.d f32883a;
+    public final l9.d f33451a;
 
     public d0(l9.d dVar) {
-        this.f32883a = dVar;
+        this.f33451a = dVar;
     }
 }

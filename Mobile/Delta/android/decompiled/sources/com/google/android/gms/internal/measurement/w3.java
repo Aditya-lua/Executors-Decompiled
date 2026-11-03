@@ -6,7 +6,7 @@ public final class w3 extends cb implements pc {
         throw null;
     }
 
-    public final w3 A(int i10, g4 g4Var) {
+    public final w3 B(int i10, g4 g4Var) {
         p();
         ((x3) this.b).P(i10, (h4) g4Var.t());
         return this;
@@ -26,7 +26,7 @@ public final class w3 extends cb implements pc {
         return this;
     }
 
-    public final int x() {
+    public final int y() {
         return ((x3) this.b).J();
     }
 

@@ -4,5 +4,5 @@ package h2;
 public final class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final int f18512a = 2130968917;
+    public static final int f18999a = 2130968917;
 }

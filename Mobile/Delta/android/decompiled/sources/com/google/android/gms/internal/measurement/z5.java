@@ -6,7 +6,7 @@ public final class z5 extends cb implements pc {
         throw null;
     }
 
-    public final z5 A(boolean z10) {
+    public final z5 B(boolean z10) {
         p();
         ((a6) this.b).S(z10);
         return this;
@@ -36,7 +36,7 @@ public final class z5 extends cb implements pc {
         return this;
     }
 
-    public final z5 x(boolean z10) {
+    public final z5 y(boolean z10) {
         p();
         ((a6) this.b).Q(z10);
         return this;

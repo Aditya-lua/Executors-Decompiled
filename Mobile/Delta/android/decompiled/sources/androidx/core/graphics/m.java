@@ -22,25 +22,25 @@ import java.util.Map;
 public class m extends l {
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final Class<?> f1803g;
+    public final Class<?> f1648g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final Constructor<?> f1804h;
+    public final Constructor<?> f1649h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final Method f1805i;
+    public final Method f1650i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final Method f1806j;
+    public final Method f1651j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final Method f1807k;
+    public final Method f1652k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final Method f1808l;
+    public final Method f1653l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final Method f1809m;
+    public final Method f1654m;
 
     public m() {
         Class<?> clsU;
@@ -68,13 +68,13 @@ public class m extends l {
             methodQ = null;
             methodT = null;
         }
-        this.f1803g = clsU;
-        this.f1804h = constructorV;
-        this.f1805i = methodR;
-        this.f1806j = methodS;
-        this.f1807k = methodW;
-        this.f1808l = methodQ;
-        this.f1809m = methodT;
+        this.f1648g = clsU;
+        this.f1649h = constructorV;
+        this.f1650i = methodR;
+        this.f1651j = methodS;
+        this.f1652k = methodW;
+        this.f1653l = methodQ;
+        this.f1654m = methodT;
     }
 
     @Override // androidx.core.graphics.l, androidx.core.graphics.q
@@ -202,9 +202,9 @@ public class m extends l {
 
     public Typeface i(Object obj) {
         try {
-            Object objNewInstance = Array.newInstance(this.f1803g, 1);
+            Object objNewInstance = Array.newInstance(this.f1648g, 1);
             Array.set(objNewInstance, 0, obj);
-            return (Typeface) this.f1809m.invoke(null, objNewInstance, -1, -1);
+            return (Typeface) this.f1654m.invoke(null, objNewInstance, -1, -1);
         } catch (IllegalAccessException | InvocationTargetException unused) {
             return null;
         }
@@ -212,7 +212,7 @@ public class m extends l {
 
     public final Object k() {
         try {
-            return this.f1804h.newInstance(null);
+            return this.f1649h.newInstance(null);
         } catch (IllegalAccessException | InstantiationException | InvocationTargetException unused) {
             return null;
         }
@@ -220,14 +220,14 @@ public class m extends l {
 
     public final void l(Object obj) {
         try {
-            this.f1808l.invoke(obj, null);
+            this.f1653l.invoke(obj, null);
         } catch (IllegalAccessException | InvocationTargetException unused) {
         }
     }
 
     public final boolean m(Context context, Object obj, String str, int i10, int i11, int i12, FontVariationAxis[] fontVariationAxisArr) {
         try {
-            return ((Boolean) this.f1805i.invoke(obj, context.getAssets(), str, 0, Boolean.FALSE, Integer.valueOf(i10), Integer.valueOf(i11), Integer.valueOf(i12), fontVariationAxisArr)).booleanValue();
+            return ((Boolean) this.f1650i.invoke(obj, context.getAssets(), str, 0, Boolean.FALSE, Integer.valueOf(i10), Integer.valueOf(i11), Integer.valueOf(i12), fontVariationAxisArr)).booleanValue();
         } catch (IllegalAccessException | InvocationTargetException unused) {
             return false;
         }
@@ -235,7 +235,7 @@ public class m extends l {
 
     public final boolean n(Object obj, ByteBuffer byteBuffer, int i10, int i11, int i12) {
         try {
-            return ((Boolean) this.f1806j.invoke(obj, byteBuffer, Integer.valueOf(i10), null, Integer.valueOf(i11), Integer.valueOf(i12))).booleanValue();
+            return ((Boolean) this.f1651j.invoke(obj, byteBuffer, Integer.valueOf(i10), null, Integer.valueOf(i11), Integer.valueOf(i12))).booleanValue();
         } catch (IllegalAccessException | InvocationTargetException unused) {
             return false;
         }
@@ -243,17 +243,17 @@ public class m extends l {
 
     public final boolean o(Object obj) {
         try {
-            return ((Boolean) this.f1807k.invoke(obj, null)).booleanValue();
+            return ((Boolean) this.f1652k.invoke(obj, null)).booleanValue();
         } catch (IllegalAccessException | InvocationTargetException unused) {
             return false;
         }
     }
 
     public final boolean p() {
-        if (this.f1805i == null) {
+        if (this.f1650i == null) {
             Log.w("TypefaceCompatApi26Impl", "Unable to collect necessary private methods. Fallback to legacy implementation.");
         }
-        return this.f1805i != null;
+        return this.f1650i != null;
     }
 
     public Method q(Class<?> cls) {

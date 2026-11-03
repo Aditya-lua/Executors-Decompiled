@@ -18,11 +18,11 @@ import java.util.Set;
 public final class r3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final a0.c0 f36793a;
+    public final a0.c0 f37488a;
     public final b0.e b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final boolean f36794c;
+    public final boolean f37489c;
 
     public static final class a {
         public static g0.k0 a(a0.c0 c0Var) {
@@ -35,7 +35,7 @@ public final class r3 {
     }
 
     public r3(a0.c0 c0Var) {
-        this.f36793a = c0Var;
+        this.f37488a = c0Var;
         this.b = b0.e.a(c0Var);
         int[] iArr = (int[]) c0Var.a(CameraCharacteristics.REQUEST_AVAILABLE_CAPABILITIES);
         boolean z10 = false;
@@ -47,7 +47,7 @@ public final class r3 {
                 }
             }
         }
-        this.f36794c = z10;
+        this.f37489c = z10;
     }
 
     public static boolean a(g0.k0 k0Var, g0.k0 k0Var2) {
@@ -85,7 +85,7 @@ public final class r3 {
     }
 
     public static boolean e(g0.k0 k0Var) {
-        return Objects.equals(k0Var, g0.k0.f17469c);
+        return Objects.equals(k0Var, g0.k0.f18008c);
     }
 
     public static boolean f(g0.k0 k0Var) {
@@ -112,7 +112,7 @@ public final class r3 {
     }
 
     public boolean d() {
-        return this.f36794c;
+        return this.f37489c;
     }
 
     public Map<n0.i4<?>, g0.k0> g(List<n0.g> list, List<n0.i4<?>> list2, List<Integer> list3) {
@@ -174,7 +174,7 @@ public final class r3 {
         int iB = k0Var.b();
         int iA = k0Var.a();
         if (iB == 1 && iA == 0) {
-            g0.k0 k0Var2 = g0.k0.f17470d;
+            g0.k0 k0Var2 = g0.k0.f18009d;
             if (set.contains(k0Var2)) {
                 return k0Var2;
             }
@@ -190,7 +190,7 @@ public final class r3 {
             g0.r1.a("DynamicRangeResolver", String.format("Resolved dynamic range for use case %s from concurrently bound use case.\n%s\n->\n%s", str, k0Var, k0VarC2));
             return k0VarC2;
         }
-        g0.k0 k0Var3 = g0.k0.f17470d;
+        g0.k0 k0Var3 = g0.k0.f18009d;
         if (b(k0Var, k0Var3, set)) {
             g0.r1.a("DynamicRangeResolver", String.format("Resolved dynamic range for use case %s to no compatible HDR dynamic ranges.\n%s\n->\n%s", str, k0Var, k0Var3));
             return k0Var3;
@@ -198,14 +198,14 @@ public final class r3 {
         if (iB == 2 && (iA == 10 || iA == 0)) {
             LinkedHashSet linkedHashSet = new LinkedHashSet();
             if (Build.VERSION.SDK_INT >= 33) {
-                k0VarA = a.a(this.f36793a);
+                k0VarA = a.a(this.f37488a);
                 if (k0VarA != null) {
                     linkedHashSet.add(k0VarA);
                 }
             } else {
                 k0VarA = null;
             }
-            linkedHashSet.add(g0.k0.f17472f);
+            linkedHashSet.add(g0.k0.f18011f);
             g0.k0 k0VarC3 = c(k0Var, linkedHashSet, set);
             if (k0VarC3 != null) {
                 g0.r1.a("DynamicRangeResolver", String.format("Resolved dynamic range for use case %s from %s 10-bit supported dynamic range.\n%s\n->\n%s", str, k0VarC3.equals(k0VarA) ? "recommended" : "required", k0Var, k0VarC3));
@@ -214,7 +214,7 @@ public final class r3 {
         }
         for (g0.k0 k0Var4 : set) {
             x2.g.j(k0Var4.e(), "Candidate dynamic range must be fully specified.");
-            if (!k0Var4.equals(g0.k0.f17470d) && a(k0Var, k0Var4)) {
+            if (!k0Var4.equals(g0.k0.f18009d) && a(k0Var, k0Var4)) {
                 g0.r1.a("DynamicRangeResolver", String.format("Resolved dynamic range for use case %s from validated dynamic range constraints or supported HDR dynamic ranges.\n%s\n->\n%s", str, k0Var, k0Var4));
                 return k0Var4;
             }

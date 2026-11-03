@@ -6,19 +6,19 @@ import androidx.annotation.NonNull;
 public class k {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final d f32075a;
+    public final d f32728a;
     public final int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final byte[] f32076c;
+    public final byte[] f32729c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final boolean f32077d;
+    public final boolean f32730d;
 
     public k(@NonNull d dVar, int i10, @NonNull byte[] bArr, boolean z10) {
-        this.f32075a = dVar;
+        this.f32728a = dVar;
         this.b = i10;
-        this.f32076c = bArr;
-        this.f32077d = z10;
+        this.f32729c = bArr;
+        this.f32730d = z10;
     }
 }

@@ -1,27 +1,41 @@
 package wk;
 
-import java.net.CookiePolicy;
+import ek.q;
+import okhttp3.Interceptor;
+import okhttp3.Request;
+import okhttp3.Response;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class b implements a {
-    public static final Object b = new Object();
+public class b implements Interceptor {
+    public static String b;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public j f34404a;
+    public final String f34529a = "rbx.platform";
 
-    @Override // wk.a
-    public j getInstance() {
-        j jVar;
-        synchronized (b) {
-            try {
-                if (this.f34404a == null) {
-                    this.f34404a = new j(CookiePolicy.ACCEPT_ALL);
-                }
-                jVar = this.f34404a;
-            } catch (Throwable th2) {
-                throw th2;
-            }
+    public static String a() {
+        return b;
+    }
+
+    public static void c(String str) {
+        b = str;
+    }
+
+    public final Request b(Request request, String str) {
+        if (str == null || !request.method().equals("POST")) {
+            return request;
         }
-        return jVar;
+        q.b("rbx.platform", "XSRFTokenInterceptor.putXSRFTokenInRequest() token:" + a());
+        return request.newBuilder().header("X-CSRF-TOKEN", str).build();
+    }
+
+    @Override // okhttp3.Interceptor
+    public Response intercept(Interceptor.Chain chain) {
+        String strHeader;
+        Response responseProceed = chain.proceed(b(chain.request(), a()));
+        if (responseProceed.code() == 403 && (strHeader = responseProceed.header("X-CSRF-TOKEN")) != null) {
+            q.b("rbx.platform", "XSRFTokenInterceptor.intercept() new token:" + strHeader);
+            c(strHeader);
+        }
+        return responseProceed;
     }
 }

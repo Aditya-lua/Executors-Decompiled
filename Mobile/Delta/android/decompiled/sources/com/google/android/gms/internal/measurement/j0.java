@@ -6,14 +6,14 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class j0 extends x {
     public j0() {
-        this.f6892a.add(n0.FOR_IN);
-        this.f6892a.add(n0.FOR_IN_CONST);
-        this.f6892a.add(n0.FOR_IN_LET);
-        this.f6892a.add(n0.FOR_LET);
-        this.f6892a.add(n0.FOR_OF);
-        this.f6892a.add(n0.FOR_OF_CONST);
-        this.f6892a.add(n0.FOR_OF_LET);
-        this.f6892a.add(n0.WHILE);
+        this.f6966a.add(n0.FOR_IN);
+        this.f6966a.add(n0.FOR_IN_CONST);
+        this.f6966a.add(n0.FOR_IN_LET);
+        this.f6966a.add(n0.FOR_LET);
+        this.f6966a.add(n0.FOR_OF);
+        this.f6966a.add(n0.FOR_OF_CONST);
+        this.f6966a.add(n0.FOR_OF_LET);
+        this.f6966a.add(n0.WHILE);
     }
 
     public static q c(h0 h0Var, q qVar, q qVar2) {
@@ -34,7 +34,7 @@ public final class j0 extends x {
                 if (qVarB instanceof h) {
                     h hVar = (h) qVarB;
                     if ("break".equals(hVar.c())) {
-                        return q.f6743zo;
+                        return q.f6816yo;
                     }
                     if ("return".equals(hVar.c())) {
                         return hVar;
@@ -42,7 +42,7 @@ public final class j0 extends x {
                 }
             }
         }
-        return q.f6743zo;
+        return q.f6816yo;
     }
 
     @Override // com.google.android.gms.internal.measurement.x
@@ -60,7 +60,7 @@ public final class j0 extends x {
                 if (qVarB instanceof h) {
                     h hVar = (h) qVarB;
                     if ("break".equals(hVar.c())) {
-                        return q.f6743zo;
+                        return q.f6816yo;
                     }
                     if ("return".equals(hVar.c())) {
                         return hVar;
@@ -72,7 +72,7 @@ public final class j0 extends x {
                 if (qVarB2 instanceof h) {
                     h hVar2 = (h) qVarB2;
                     if ("break".equals(hVar2.c())) {
-                        return q.f6743zo;
+                        return q.f6816yo;
                     }
                     if ("return".equals(hVar2.c())) {
                         return hVar2;
@@ -80,7 +80,7 @@ public final class j0 extends x {
                 }
                 u4Var.a(qVar2);
             }
-            return q.f6743zo;
+            return q.f6816yo;
         }
         switch (iOrdinal) {
             case 26:
@@ -121,7 +121,7 @@ public final class j0 extends x {
                     if (qVarB3 instanceof h) {
                         h hVar3 = (h) qVarB3;
                         if ("break".equals(hVar3.c())) {
-                            return q.f6743zo;
+                            return q.f6816yo;
                         }
                         if ("return".equals(hVar3.c())) {
                             return hVar3;
@@ -135,7 +135,7 @@ public final class j0 extends x {
                     u4VarC2.a(qVar5);
                     u4VarC = u4VarC2;
                 }
-                return q.f6743zo;
+                return q.f6816yo;
             case 30:
                 v5.a(n0.FOR_OF.name(), 3, list);
                 if (!(list.get(0) instanceof u)) {

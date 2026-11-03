@@ -20,13 +20,13 @@ public final class ReusePlan implements RoutePlanner.Plan {
 
     @Override // okhttp3.internal.connection.RoutePlanner.Plan
     /* JADX INFO: renamed from: connectTcp, reason: collision with other method in class */
-    public /* bridge */ /* synthetic */ RoutePlanner.ConnectResult mo221connectTcp() {
+    public /* bridge */ /* synthetic */ RoutePlanner.ConnectResult mo222connectTcp() {
         return (RoutePlanner.ConnectResult) connectTcp();
     }
 
     @Override // okhttp3.internal.connection.RoutePlanner.Plan
     /* JADX INFO: renamed from: connectTlsEtc, reason: collision with other method in class */
-    public /* bridge */ /* synthetic */ RoutePlanner.ConnectResult mo222connectTlsEtc() {
+    public /* bridge */ /* synthetic */ RoutePlanner.ConnectResult mo223connectTlsEtc() {
         return (RoutePlanner.ConnectResult) connectTlsEtc();
     }
 
@@ -38,7 +38,7 @@ public final class ReusePlan implements RoutePlanner.Plan {
     @Override // okhttp3.internal.connection.RoutePlanner.Plan
     @NotNull
     /* JADX INFO: renamed from: handleSuccess */
-    public RealConnection mo218handleSuccess() {
+    public RealConnection mo219handleSuccess() {
         return this.connection;
     }
 
@@ -50,14 +50,14 @@ public final class ReusePlan implements RoutePlanner.Plan {
 
     @Override // okhttp3.internal.connection.RoutePlanner.Plan
     /* JADX INFO: renamed from: retry */
-    public /* bridge */ /* synthetic */ RoutePlanner.Plan mo219retry() {
+    public /* bridge */ /* synthetic */ RoutePlanner.Plan mo220retry() {
         return (RoutePlanner.Plan) retry();
     }
 
     @Override // okhttp3.internal.connection.RoutePlanner.Plan, okhttp3.internal.http.ExchangeCodec.Carrier
     @NotNull
     /* JADX INFO: renamed from: cancel, reason: merged with bridge method [inline-methods] */
-    public Void mo217cancel() {
+    public Void mo218cancel() {
         throw new IllegalStateException("unexpected cancel");
     }
 

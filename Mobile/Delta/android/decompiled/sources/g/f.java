@@ -7,7 +7,7 @@ import androidx.activity.result.ActivityResult;
 import androidx.p000lifecycle.l;
 import androidx.p000lifecycle.p;
 import androidx.p000lifecycle.s;
-import iu.m;
+import gu.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -120,27 +120,27 @@ public abstract class f {
         public final /* synthetic */ String b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ h.a<I, O> f17313c;
+        public final /* synthetic */ h.a<I, O> f17852c;
 
         public d(String str, h.a<I, O> aVar) {
             this.b = str;
-            this.f17313c = aVar;
+            this.f17852c = aVar;
         }
 
         @Override // g.c
         public h.a<I, ?> a() {
-            return (h.a<I, ?>) this.f17313c;
+            return (h.a<I, ?>) this.f17852c;
         }
 
         @Override // g.c
         public void c(I input, k2.c options) throws Exception {
             Object obj = f.this.keyToRc.get(this.b);
-            Object obj2 = this.f17313c;
+            Object obj2 = this.f17852c;
             if (obj != null) {
                 int iIntValue = ((Number) obj).intValue();
                 f.this.launchedKeys.add(this.b);
                 try {
-                    f.this.k(iIntValue, this.f17313c, input, options);
+                    f.this.k(iIntValue, this.f17852c, input, options);
                     return;
                 } catch (Exception e10) {
                     f.this.launchedKeys.remove(this.b);
@@ -162,27 +162,27 @@ public abstract class f {
         public final /* synthetic */ String b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ h.a<I, O> f17315c;
+        public final /* synthetic */ h.a<I, O> f17854c;
 
         public e(String str, h.a<I, O> aVar) {
             this.b = str;
-            this.f17315c = aVar;
+            this.f17854c = aVar;
         }
 
         @Override // g.c
         public h.a<I, ?> a() {
-            return (h.a<I, ?>) this.f17315c;
+            return (h.a<I, ?>) this.f17854c;
         }
 
         @Override // g.c
         public void c(I input, k2.c options) throws Exception {
             Object obj = f.this.keyToRc.get(this.b);
-            Object obj2 = this.f17315c;
+            Object obj2 = this.f17854c;
             if (obj != null) {
                 int iIntValue = ((Number) obj).intValue();
                 f.this.launchedKeys.add(this.b);
                 try {
-                    f.this.k(iIntValue, this.f17315c, input, options);
+                    f.this.k(iIntValue, this.f17854c, input, options);
                     return;
                 } catch (Exception e10) {
                     f.this.launchedKeys.remove(this.b);
@@ -199,7 +199,7 @@ public abstract class f {
     }
 
     public static final Integer j() {
-        return Integer.valueOf(eu.d.INSTANCE.g(2147418112) + 65536);
+        return Integer.valueOf(cu.d.INSTANCE.g(2147418112) + 65536);
     }
 
     public static final void p(f fVar, String str, g.a aVar, h.a aVar2, s sVar, l.a event) {
@@ -350,8 +350,8 @@ public abstract class f {
         }
         cVar.a(new p() { // from class: g.d
             @Override // androidx.p000lifecycle.p
-            public final void g(s sVar, l.a aVar) {
-                f.p(this.f17300a, key, callback, contract, sVar, aVar);
+            public final void f(s sVar, l.a aVar) {
+                f.p(this.f17839a, key, callback, contract, sVar, aVar);
             }
         });
         this.keyToLifecycleContainers.put(key, cVar);

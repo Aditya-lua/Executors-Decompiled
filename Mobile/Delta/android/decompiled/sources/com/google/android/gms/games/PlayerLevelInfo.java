@@ -16,25 +16,25 @@ public final class PlayerLevelInfo extends zzg {
     public static final Parcelable.Creator<PlayerLevelInfo> CREATOR = new t();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final long f6095f;
+    public final long f6168f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final long f6096g;
+    public final long f6169g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final PlayerLevel f6097h;
+    public final PlayerLevel f6170h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final PlayerLevel f6098i;
+    public final PlayerLevel f6171i;
 
     public PlayerLevelInfo(long j10, long j11, @NonNull PlayerLevel playerLevel, @NonNull PlayerLevel playerLevel2) {
         m.p(j10 != -1);
         m.l(playerLevel);
         m.l(playerLevel2);
-        this.f6095f = j10;
-        this.f6096g = j11;
-        this.f6097h = playerLevel;
-        this.f6098i = playerLevel2;
+        this.f6168f = j10;
+        this.f6169g = j11;
+        this.f6170h = playerLevel;
+        this.f6171i = playerLevel2;
     }
 
     public boolean equals(Object obj) {
@@ -45,20 +45,20 @@ public final class PlayerLevelInfo extends zzg {
             return true;
         }
         PlayerLevelInfo playerLevelInfo = (PlayerLevelInfo) obj;
-        return k.b(Long.valueOf(this.f6095f), Long.valueOf(playerLevelInfo.f6095f)) && k.b(Long.valueOf(this.f6096g), Long.valueOf(playerLevelInfo.f6096g)) && k.b(this.f6097h, playerLevelInfo.f6097h) && k.b(this.f6098i, playerLevelInfo.f6098i);
+        return k.b(Long.valueOf(this.f6168f), Long.valueOf(playerLevelInfo.f6168f)) && k.b(Long.valueOf(this.f6169g), Long.valueOf(playerLevelInfo.f6169g)) && k.b(this.f6170h, playerLevelInfo.f6170h) && k.b(this.f6171i, playerLevelInfo.f6171i);
     }
 
     public int hashCode() {
-        return k.c(Long.valueOf(this.f6095f), Long.valueOf(this.f6096g), this.f6097h, this.f6098i);
+        return k.c(Long.valueOf(this.f6168f), Long.valueOf(this.f6169g), this.f6170h, this.f6171i);
     }
 
     @NonNull
     public PlayerLevel v3() {
-        return this.f6097h;
+        return this.f6170h;
     }
 
     public long w3() {
-        return this.f6095f;
+        return this.f6168f;
     }
 
     @Override // android.os.Parcelable
@@ -72,11 +72,11 @@ public final class PlayerLevelInfo extends zzg {
     }
 
     public long x3() {
-        return this.f6096g;
+        return this.f6169g;
     }
 
     @NonNull
     public PlayerLevel y3() {
-        return this.f6098i;
+        return this.f6171i;
     }
 }

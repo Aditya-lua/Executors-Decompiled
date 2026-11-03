@@ -38,40 +38,40 @@ import y5.x;
 public class ForceStopRunnable implements Runnable {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final String f3537e = w.i("ForceStopRunnable");
+    public static final String f3382e = w.i("ForceStopRunnable");
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final long f3538f = TimeUnit.DAYS.toMillis(3650);
+    public static final long f3383f = TimeUnit.DAYS.toMillis(3650);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f3539a;
+    public final Context f3384a;
     public final f1 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final g6.w f3540c;
+    public final g6.w f3385c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public int f3541d = 0;
+    public int f3386d = 0;
 
     public static class BroadcastReceiver extends android.content.BroadcastReceiver {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final String f3542a = w.i("ForceStopRunnable$Rcvr");
+        public static final String f3387a = w.i("ForceStopRunnable$Rcvr");
 
         @Override // android.content.BroadcastReceiver
         public void onReceive(Context context, Intent intent) {
             if (intent == null || !"ACTION_FORCE_STOP_RESCHEDULE".equals(intent.getAction())) {
                 return;
             }
-            w.e().j(f3542a, "Rescheduling alarm that keeps track of force-stops.");
+            w.e().j(f3387a, "Rescheduling alarm that keeps track of force-stops.");
             ForceStopRunnable.g(context);
         }
     }
 
     public ForceStopRunnable(Context context, f1 f1Var) {
-        this.f3539a = context.getApplicationContext();
+        this.f3384a = context.getApplicationContext();
         this.b = f1Var;
-        this.f3540c = f1Var.q();
+        this.f3385c = f1Var.q();
     }
 
     public static Intent c(Context context) {
@@ -88,14 +88,14 @@ public class ForceStopRunnable implements Runnable {
     public static void g(Context context) {
         AlarmManager alarmManager = (AlarmManager) context.getSystemService("alarm");
         PendingIntent pendingIntentD = d(context, Build.VERSION.SDK_INT >= 31 ? 167772160 : 134217728);
-        long jCurrentTimeMillis = System.currentTimeMillis() + f3538f;
+        long jCurrentTimeMillis = System.currentTimeMillis() + f3383f;
         if (alarmManager != null) {
             alarmManager.setExact(0, jCurrentTimeMillis, pendingIntentD);
         }
     }
 
     public boolean a() {
-        boolean zI = f.i(this.f3539a, this.b.u());
+        boolean zI = f.i(this.f3384a, this.b.u());
         WorkDatabase workDatabaseU = this.b.u();
         k0 k0VarC0 = workDatabaseU.c0();
         d0 d0VarB0 = workDatabaseU.b0();
@@ -123,15 +123,15 @@ public class ForceStopRunnable implements Runnable {
     public void b() {
         boolean zA = a();
         if (h()) {
-            w.e().a(f3537e, "Rescheduling Workers.");
+            w.e().a(f3382e, "Rescheduling Workers.");
             this.b.x();
             this.b.q().e(false);
         } else if (e()) {
-            w.e().a(f3537e, "Application was force-stopped, rescheduling.");
+            w.e().a(f3382e, "Application was force-stopped, rescheduling.");
             this.b.x();
-            this.f3540c.d(this.b.n().getClock().a());
+            this.f3385c.d(this.b.n().getClock().a());
         } else if (zA) {
-            w.e().a(f3537e, "Found unfinished work, scheduling it.");
+            w.e().a(f3382e, "Found unfinished work, scheduling it.");
             x.f(this.b.n(), this.b.u(), this.b.s());
         }
     }
@@ -139,14 +139,14 @@ public class ForceStopRunnable implements Runnable {
     public boolean e() {
         try {
             int i10 = Build.VERSION.SDK_INT;
-            PendingIntent pendingIntentD = d(this.f3539a, i10 >= 31 ? 570425344 : 536870912);
+            PendingIntent pendingIntentD = d(this.f3384a, i10 >= 31 ? 570425344 : 536870912);
             if (i10 >= 30) {
                 if (pendingIntentD != null) {
                     pendingIntentD.cancel();
                 }
-                List<ApplicationExitInfo> historicalProcessExitReasons = ((ActivityManager) this.f3539a.getSystemService("activity")).getHistoricalProcessExitReasons(null, 0, 0);
+                List<ApplicationExitInfo> historicalProcessExitReasons = ((ActivityManager) this.f3384a.getSystemService("activity")).getHistoricalProcessExitReasons(null, 0, 0);
                 if (historicalProcessExitReasons != null && !historicalProcessExitReasons.isEmpty()) {
-                    long jA = this.f3540c.a();
+                    long jA = this.f3385c.a();
                     for (int i11 = 0; i11 < historicalProcessExitReasons.size(); i11++) {
                         ApplicationExitInfo applicationExitInfoA = l.a(historicalProcessExitReasons.get(i11));
                         if (applicationExitInfoA.getReason() == 10 && applicationExitInfoA.getTimestamp() >= jA) {
@@ -155,17 +155,17 @@ public class ForceStopRunnable implements Runnable {
                     }
                 }
             } else if (pendingIntentD == null) {
-                g(this.f3539a);
+                g(this.f3384a);
                 return true;
             }
             return false;
         } catch (IllegalArgumentException e10) {
             e = e10;
-            w.e().l(f3537e, "Ignoring exception", e);
+            w.e().l(f3382e, "Ignoring exception", e);
             return true;
         } catch (SecurityException e11) {
             e = e11;
-            w.e().l(f3537e, "Ignoring exception", e);
+            w.e().l(f3382e, "Ignoring exception", e);
             return true;
         }
     }
@@ -173,11 +173,11 @@ public class ForceStopRunnable implements Runnable {
     public boolean f() {
         a aVarN = this.b.n();
         if (TextUtils.isEmpty(aVarN.getDefaultProcessName())) {
-            w.e().a(f3537e, "The default process name was not specified.");
+            w.e().a(f3382e, "The default process name was not specified.");
             return true;
         }
-        boolean zB = g6.x.b(this.f3539a, aVarN);
-        w.e().a(f3537e, "Is default app process = " + zB);
+        boolean zB = g6.x.b(this.f3384a, aVarN);
+        w.e().a(f3382e, "Is default app process = " + zB);
         return zB;
     }
 
@@ -199,18 +199,18 @@ public class ForceStopRunnable implements Runnable {
             if (f()) {
                 while (true) {
                     try {
-                        i0.c(this.f3539a);
-                        w.e().a(f3537e, "Performing cleanup operations.");
+                        i0.c(this.f3384a);
+                        w.e().a(f3382e, "Performing cleanup operations.");
                         try {
                             b();
                             break;
                         } catch (SQLiteAccessPermException | SQLiteCantOpenDatabaseException | SQLiteConstraintException | SQLiteDatabaseCorruptException | SQLiteDatabaseLockedException | SQLiteDiskIOException | SQLiteFullException | SQLiteTableLockedException e10) {
-                            i10 = this.f3541d + 1;
-                            this.f3541d = i10;
+                            i10 = this.f3386d + 1;
+                            this.f3386d = i10;
                             if (i10 >= 3) {
-                                String str = p.a(this.f3539a) ? "The file system on the device is in a bad state. WorkManager cannot access the app's internal data store." : "WorkManager can't be accessed from direct boot, because credential encrypted storage isn't accessible.\nDon't access or initialise WorkManager from directAware components. See https://developer.android.com/training/articles/direct-boot";
+                                String str = p.a(this.f3384a) ? "The file system on the device is in a bad state. WorkManager cannot access the app's internal data store." : "WorkManager can't be accessed from direct boot, because credential encrypted storage isn't accessible.\nDon't access or initialise WorkManager from directAware components. See https://developer.android.com/training/articles/direct-boot";
                                 w wVarE = w.e();
-                                String str2 = f3537e;
+                                String str2 = f3382e;
                                 wVarE.d(str2, str, e10);
                                 IllegalStateException illegalStateException = new IllegalStateException(str, e10);
                                 x2.a<Throwable> aVarE = this.b.n().e();
@@ -221,13 +221,13 @@ public class ForceStopRunnable implements Runnable {
                                 aVarE.accept(illegalStateException);
                                 break;
                             }
-                            w.e().b(f3537e, "Retrying after " + (((long) i10) * 300), e10);
-                            i(((long) this.f3541d) * 300);
+                            w.e().b(f3382e, "Retrying after " + (((long) i10) * 300), e10);
+                            i(((long) this.f3386d) * 300);
                         }
-                        w.e().b(f3537e, "Retrying after " + (((long) i10) * 300), e10);
-                        i(((long) this.f3541d) * 300);
+                        w.e().b(f3382e, "Retrying after " + (((long) i10) * 300), e10);
+                        i(((long) this.f3386d) * 300);
                     } catch (SQLiteException e11) {
-                        w.e().c(f3537e, "Unexpected SQLite exception during migrations");
+                        w.e().c(f3382e, "Unexpected SQLite exception during migrations");
                         IllegalStateException illegalStateException2 = new IllegalStateException("Unexpected SQLite exception during migrations", e11);
                         x2.a<Throwable> aVarE2 = this.b.n().e();
                         if (aVarE2 == null) {

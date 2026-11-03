@@ -4,35 +4,35 @@ package androidx.p000lifecycle;
 public abstract class a0<T> {
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final Object f2731k = new Object();
+    public static final Object f2576k = new Object();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object f2732a;
+    public final Object f2577a;
     public s.b<e0<? super T>, a0<T>.d> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f2733c;
+    public int f2578c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public boolean f2734d;
+    public boolean f2579d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public volatile Object f2735e;
+    public volatile Object f2580e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public volatile Object f2736f;
+    public volatile Object f2581f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public int f2737g;
+    public int f2582g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public boolean f2738h;
+    public boolean f2583h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public boolean f2739i;
+    public boolean f2584i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final Runnable f2740j;
+    public final Runnable f2585j;
 
     public class a implements Runnable {
         public a() {
@@ -42,9 +42,9 @@ public abstract class a0<T> {
         @Override // java.lang.Runnable
         public void run() {
             Object obj;
-            synchronized (a0.this.f2732a) {
-                obj = a0.this.f2736f;
-                a0.this.f2736f = a0.f2731k;
+            synchronized (a0.this.f2577a) {
+                obj = a0.this.f2581f;
+                a0.this.f2581f = a0.f2576k;
             }
             a0.this.o(obj);
         }
@@ -64,40 +64,40 @@ public abstract class a0<T> {
     public class c extends a0<T>.d implements p {
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final s f2743e;
+        public final s f2588e;
 
         public c(s sVar, e0<? super T> e0Var) {
             super(e0Var);
-            this.f2743e = sVar;
+            this.f2588e = sVar;
         }
 
         @Override // androidx.lifecycle.a0.d
         public void b() {
-            this.f2743e.a().d(this);
+            this.f2588e.a().d(this);
         }
 
         @Override // androidx.lifecycle.a0.d
         public boolean c(s sVar) {
-            return this.f2743e == sVar;
+            return this.f2588e == sVar;
         }
 
         @Override // androidx.lifecycle.a0.d
         public boolean d() {
-            return this.f2743e.a().b().b(l.b.STARTED);
+            return this.f2588e.a().b().b(l.b.STARTED);
         }
 
         @Override // androidx.p000lifecycle.p
-        public void g(s sVar, l.a aVar) {
-            l.b bVarB = this.f2743e.a().b();
+        public void f(s sVar, l.a aVar) {
+            l.b bVarB = this.f2588e.a().b();
             if (bVarB == l.b.DESTROYED) {
-                a0.this.n(this.f2745a);
+                a0.this.n(this.f2590a);
                 return;
             }
             l.b bVar = null;
             while (bVar != bVarB) {
                 a(d());
                 bVar = bVarB;
-                bVarB = this.f2743e.a().b();
+                bVarB = this.f2588e.a().b();
             }
         }
     }
@@ -105,14 +105,14 @@ public abstract class a0<T> {
     public abstract class d {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final e0<? super T> f2745a;
+        public final e0<? super T> f2590a;
         public boolean b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public int f2746c = -1;
+        public int f2591c = -1;
 
         public d(e0<? super T> e0Var) {
-            this.f2745a = e0Var;
+            this.f2590a = e0Var;
         }
 
         public void a(boolean z10) {
@@ -137,13 +137,13 @@ public abstract class a0<T> {
     }
 
     public a0(T t8) {
-        this.f2732a = new Object();
+        this.f2577a = new Object();
         this.b = new s.b<>();
-        this.f2733c = 0;
-        this.f2736f = f2731k;
-        this.f2740j = new a();
-        this.f2735e = t8;
-        this.f2737g = 0;
+        this.f2578c = 0;
+        this.f2581f = f2576k;
+        this.f2585j = new a();
+        this.f2580e = t8;
+        this.f2582g = 0;
     }
 
     public static void b(String str) {
@@ -154,17 +154,17 @@ public abstract class a0<T> {
     }
 
     public void c(int i10) {
-        int i11 = this.f2733c;
-        this.f2733c = i10 + i11;
-        if (this.f2734d) {
+        int i11 = this.f2578c;
+        this.f2578c = i10 + i11;
+        if (this.f2579d) {
             return;
         }
-        this.f2734d = true;
+        this.f2579d = true;
         while (true) {
             try {
-                int i12 = this.f2733c;
+                int i12 = this.f2578c;
                 if (i11 == i12) {
-                    this.f2734d = false;
+                    this.f2579d = false;
                     return;
                 }
                 boolean z10 = i11 == 0 && i12 > 0;
@@ -176,7 +176,7 @@ public abstract class a0<T> {
                 }
                 i11 = i12;
             } catch (Throwable th2) {
-                this.f2734d = false;
+                this.f2579d = false;
                 throw th2;
             }
         }
@@ -188,24 +188,24 @@ public abstract class a0<T> {
                 dVar.a(false);
                 return;
             }
-            int i10 = dVar.f2746c;
-            int i11 = this.f2737g;
+            int i10 = dVar.f2591c;
+            int i11 = this.f2582g;
             if (i10 >= i11) {
                 return;
             }
-            dVar.f2746c = i11;
-            dVar.f2745a.a((Object) this.f2735e);
+            dVar.f2591c = i11;
+            dVar.f2590a.a((Object) this.f2580e);
         }
     }
 
     public void e(a0<T>.d dVar) {
-        if (this.f2738h) {
-            this.f2739i = true;
+        if (this.f2583h) {
+            this.f2584i = true;
             return;
         }
-        this.f2738h = true;
+        this.f2583h = true;
         do {
-            this.f2739i = false;
+            this.f2584i = false;
             if (dVar != null) {
                 d(dVar);
                 dVar = null;
@@ -213,29 +213,29 @@ public abstract class a0<T> {
                 s.b<e0<? super T>, a0<T>.d>.d dVarC = this.b.c();
                 while (dVarC.hasNext()) {
                     d((d) dVarC.next().getValue());
-                    if (this.f2739i) {
+                    if (this.f2584i) {
                         break;
                     }
                 }
             }
-        } while (this.f2739i);
-        this.f2738h = false;
+        } while (this.f2584i);
+        this.f2583h = false;
     }
 
     public T f() {
-        T t8 = (T) this.f2735e;
-        if (t8 != f2731k) {
+        T t8 = (T) this.f2580e;
+        if (t8 != f2576k) {
             return t8;
         }
         return null;
     }
 
     public int g() {
-        return this.f2737g;
+        return this.f2582g;
     }
 
     public boolean h() {
-        return this.f2733c > 0;
+        return this.f2578c > 0;
     }
 
     public void i(s sVar, e0<? super T> e0Var) {
@@ -275,12 +275,12 @@ public abstract class a0<T> {
 
     public void m(T t8) {
         boolean z10;
-        synchronized (this.f2732a) {
-            z10 = this.f2736f == f2731k;
-            this.f2736f = t8;
+        synchronized (this.f2577a) {
+            z10 = this.f2581f == f2576k;
+            this.f2581f = t8;
         }
         if (z10) {
-            r.c.g().c(this.f2740j);
+            r.c.g().c(this.f2585j);
         }
     }
 
@@ -296,19 +296,19 @@ public abstract class a0<T> {
 
     public void o(T t8) {
         b("setValue");
-        this.f2737g++;
-        this.f2735e = t8;
+        this.f2582g++;
+        this.f2580e = t8;
         e(null);
     }
 
     public a0() {
-        this.f2732a = new Object();
+        this.f2577a = new Object();
         this.b = new s.b<>();
-        this.f2733c = 0;
-        Object obj = f2731k;
-        this.f2736f = obj;
-        this.f2740j = new a();
-        this.f2735e = obj;
-        this.f2737g = -1;
+        this.f2578c = 0;
+        Object obj = f2576k;
+        this.f2581f = obj;
+        this.f2585j = new a();
+        this.f2580e = obj;
+        this.f2582g = -1;
     }
 }

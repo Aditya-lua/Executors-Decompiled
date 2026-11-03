@@ -105,7 +105,7 @@ public final class AFf1qSDK extends AFf1tSDK {
         }
         AFb1lSDK aFb1lSDKH_ = AFb1iSDK.h_(p10);
         if (aFb1lSDKH_ != null) {
-            p8.AFKeystoreWrapper("amazon_aid", aFb1lSDKH_.f5235d);
+            p8.AFKeystoreWrapper("amazon_aid", aFb1lSDKH_.f5308d);
             p8.AFKeystoreWrapper("amazon_aid_limit", String.valueOf(aFb1lSDKH_.AFLogger));
             afDebugLog = (afInfoLog + 93) % 128;
         }
@@ -192,10 +192,10 @@ public final class AFf1qSDK extends AFf1tSDK {
     private final void i(AFh1pSDK p8) {
         afInfoLog = (afDebugLog + 105) % 128;
         AFg1rSDK w5 = getW();
-        Map<String, Object> map = p8.f5399d;
+        Map<String, Object> map = p8.f5472d;
         Intrinsics.checkNotNullExpressionValue(map, "");
         w5.AFLogger(map);
-        p8.f5399d.remove("ivc");
+        p8.f5472d.remove("ivc");
         String str = this.unregisterClient.valueOf;
         if (str == null) {
             afDebugLog = (afInfoLog + 39) % 128;
@@ -294,12 +294,12 @@ public final class AFf1qSDK extends AFf1tSDK {
         if (i10 % 2 != 0) {
             Intrinsics.checkNotNullParameter(p8, "");
             super.d(p8);
-            Context context = this.d.f5305d;
+            Context context = this.d.f5378d;
             throw null;
         }
         Intrinsics.checkNotNullParameter(p8, "");
         super.d(p8);
-        Context context2 = this.d.f5305d;
+        Context context2 = this.d.f5378d;
         if (context2 == null) {
             throw new IllegalStateException("Context is not provided, can't send register request");
         }

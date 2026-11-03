@@ -2,13 +2,13 @@ package com.google.android.gms.internal.mlkit_vision_face;
 
 import android.content.Context;
 import b8.t;
-import lf.x;
-import xf.b;
+import mf.x;
 import y7.c;
 import y7.d;
 import y7.g;
 import y7.h;
 import y7.i;
+import yf.b;
 import z7.a;
 
 /* JADX INFO: loaded from: classes.dex */
@@ -19,12 +19,12 @@ public final class zzok implements zzob {
 
     public zzok(Context context, zznt zzntVar) {
         this.zzc = zzntVar;
-        a aVar = a.f37333g;
+        a aVar = a.f38028g;
         t.f(context);
         final i iVarG = t.c().g(aVar);
         if (aVar.a().contains(c.b("json"))) {
             this.zza = new x(new b() { // from class: com.google.android.gms.internal.mlkit_vision_face.zzoh
-                @Override // xf.b
+                @Override // yf.b
                 public final Object get() {
                     return iVarG.a("FIREBASE_ML_SDK", byte[].class, c.b("json"), new g() { // from class: com.google.android.gms.internal.mlkit_vision_face.zzoj
                         @Override // y7.g
@@ -36,7 +36,7 @@ public final class zzok implements zzob {
             });
         }
         this.zzb = new x(new b() { // from class: com.google.android.gms.internal.mlkit_vision_face.zzoi
-            @Override // xf.b
+            @Override // yf.b
             public final Object get() {
                 return iVarG.a("FIREBASE_ML_SDK", byte[].class, c.b("proto"), new g() { // from class: com.google.android.gms.internal.mlkit_vision_face.zzog
                     @Override // y7.g

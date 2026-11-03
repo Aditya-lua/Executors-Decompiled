@@ -1,6 +1,7 @@
 package com.withpersona.sdk2.inquiry.network.core;
 
 import android.content.Context;
+import hv.y;
 import java.io.IOException;
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
@@ -10,7 +11,6 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-import jv.y;
 import kotlin.Unit;
 import kotlin.collections.q0;
 import kotlin.jvm.functions.Function1;
@@ -24,9 +24,9 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import um.h;
-import um.w;
-import yn.k;
+import sm.h;
+import sm.w;
+import wn.k;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class NetworkCoreModule {
@@ -111,7 +111,7 @@ public final class NetworkCoreModule {
     /* JADX INFO: Access modifiers changed from: private */
     public static final Unit okhttpClient$lambda$0(NetworkCoreModule networkCoreModule, String str) {
         networkCoreModule.certificateFingerprint = str;
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     @NotNull
@@ -168,11 +168,11 @@ public final class NetworkCoreModule {
     }
 
     @NotNull
-    public final OkHttpClient okhttpClient(@NotNull Set<Interceptor> set, @NotNull final Map<String, String> map, @NotNull final Context context, @NotNull final k kVar, @NotNull final yn.b bVar, @NotNull final np.e.a aVar, @NotNull final NetworkStateManager networkStateManager) {
+    public final OkHttpClient okhttpClient(@NotNull Set<Interceptor> set, @NotNull final Map<String, String> map, @NotNull final Context context, @NotNull final k kVar, @NotNull final wn.b bVar, @NotNull final lp.e.a aVar, @NotNull final NetworkStateManager networkStateManager) {
         OkHttpClient.Builder builderAddNetworkInterceptor = new OkHttpClient.Builder().eventListener(new b(new Function1() { // from class: com.withpersona.sdk2.inquiry.network.core.c
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return NetworkCoreModule.okhttpClient$lambda$0(this.f12172a, (String) obj);
+                return NetworkCoreModule.okhttpClient$lambda$0(this.f12253a, (String) obj);
             }
         })).addNetworkInterceptor(new Interceptor() { // from class: com.withpersona.sdk2.inquiry.network.core.NetworkCoreModule$okhttpClient$$inlined$-addNetworkInterceptor$1
             @Override // okhttp3.Interceptor
@@ -212,7 +212,7 @@ public final class NetworkCoreModule {
                 if (str3 != null) {
                     builderHeader3.header("BMRWJMTB", str3);
                 }
-                return chain.proceed(a.a(a.f12167a, builderHeader3.build(), aVar.create(NetworkUtilsKt.SUBSYSTEM), 0L, 2, (Object) null));
+                return chain.proceed(a.a(a.f12248a, builderHeader3.build(), aVar.create(NetworkUtilsKt.SUBSYSTEM), 0L, 2, (Object) null));
             }
         });
         TimeUnit timeUnit = TimeUnit.MINUTES;
@@ -236,7 +236,7 @@ public final class NetworkCoreModule {
 
     @NotNull
     public final y retrofit(@NotNull String str, @NotNull OkHttpClient okHttpClient, @NotNull w wVar) {
-        return new y.b().g(okHttpClient).c(str).b(lv.a.f(wVar)).e();
+        return new y.b().g(okHttpClient).c(str).b(jv.a.f(wVar)).e();
     }
 
     @NotNull

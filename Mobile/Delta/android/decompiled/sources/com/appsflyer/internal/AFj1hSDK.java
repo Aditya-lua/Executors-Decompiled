@@ -58,7 +58,7 @@ public final class AFj1hSDK implements OptionalFeaturesValidator {
             if (i10 == 3) {
                 return false;
             }
-            throw new jt.l();
+            throw new gt.l();
         }
         if (!OptionalFeaturesValidator.INSTANCE.getRegisteredFeatures().contains(supportedOptionalFeatures)) {
             this.registerClient.put(supportedOptionalFeatures, AFj1gSDK.NOT_PRESENT);

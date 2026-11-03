@@ -7,16 +7,16 @@ import com.google.android.gms.common.ConnectionResult;
 public final class a0 extends t1 {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final w1.b f22985f;
+    public final w1.b f23379f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final f f22986g;
+    public final f f23380g;
 
     public a0(j jVar, f fVar, j9.c cVar) {
         super(jVar, cVar);
-        this.f22985f = new w1.b();
-        this.f22986g = fVar;
-        this.f23031a.g("ConnectionlessLifecycleHelper", this);
+        this.f23379f = new w1.b();
+        this.f23380g = fVar;
+        this.f23425a.g("ConnectionlessLifecycleHelper", this);
     }
 
     public static void u(Activity activity, f fVar, b bVar) {
@@ -26,7 +26,7 @@ public final class a0 extends t1 {
             a0Var = new a0(jVarC, fVar, j9.c.o());
         }
         n9.m.m(bVar, "ApiKey cannot be null");
-        a0Var.f22985f.add(bVar);
+        a0Var.f23379f.add(bVar);
         fVar.b(a0Var);
     }
 
@@ -45,27 +45,27 @@ public final class a0 extends t1 {
     @Override // l9.t1, l9.i
     public final void k() {
         super.k();
-        this.f22986g.c(this);
+        this.f23380g.c(this);
     }
 
     @Override // l9.t1
     public final void m(ConnectionResult connectionResult, int i10) {
-        this.f22986g.H(connectionResult, i10);
+        this.f23380g.H(connectionResult, i10);
     }
 
     @Override // l9.t1
     public final void n() {
-        this.f22986g.I();
+        this.f23380g.I();
     }
 
     public final w1.b t() {
-        return this.f22985f;
+        return this.f23379f;
     }
 
     public final void v() {
-        if (this.f22985f.isEmpty()) {
+        if (this.f23379f.isEmpty()) {
             return;
         }
-        this.f22986g.b(this);
+        this.f23380g.b(this);
     }
 }

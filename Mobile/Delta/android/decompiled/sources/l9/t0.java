@@ -14,24 +14,24 @@ import com.google.android.gms.tasks.Task;
 public final class t0 implements OnCompleteListener {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final f f23081a;
+    public final f f23475a;
     public final int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final b f23082c;
+    public final b f23476c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final long f23083d;
+    public final long f23477d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final long f23084e;
+    public final long f23478e;
 
     public t0(f fVar, int i10, b bVar, long j10, long j11, String str, String str2) {
-        this.f23081a = fVar;
+        this.f23475a = fVar;
         this.b = i10;
-        this.f23082c = bVar;
-        this.f23083d = j10;
-        this.f23084e = j11;
+        this.f23476c = bVar;
+        this.f23477d = j10;
+        this.f23478e = j11;
     }
 
     public static t0 a(f fVar, int i10, b bVar) {
@@ -87,12 +87,12 @@ public final class t0 implements OnCompleteListener {
         int iW3;
         long j10;
         long j11;
-        if (this.f23081a.e()) {
+        if (this.f23475a.e()) {
             RootTelemetryConfiguration rootTelemetryConfigurationA = n9.n.b().a();
-            if ((rootTelemetryConfigurationA == null || rootTelemetryConfigurationA.x3()) && (j0VarT = this.f23081a.t(this.f23082c)) != null && (j0VarT.t() instanceof n9.c)) {
+            if ((rootTelemetryConfigurationA == null || rootTelemetryConfigurationA.x3()) && (j0VarT = this.f23475a.t(this.f23476c)) != null && (j0VarT.t() instanceof n9.c)) {
                 n9.c cVar = (n9.c) j0VarT.t();
                 int i12 = 0;
-                boolean zY3 = this.f23083d > 0;
+                boolean zY3 = this.f23477d > 0;
                 int gCoreServiceId = cVar.getGCoreServiceId();
                 int iX3 = 100;
                 if (rootTelemetryConfigurationA != null) {
@@ -105,7 +105,7 @@ public final class t0 implements OnCompleteListener {
                         if (connectionTelemetryConfigurationB == null) {
                             return;
                         }
-                        boolean z10 = connectionTelemetryConfigurationB.z3() && this.f23083d > 0;
+                        boolean z10 = connectionTelemetryConfigurationB.z3() && this.f23477d > 0;
                         iW4 = connectionTelemetryConfigurationB.v3();
                         zY3 = z10;
                     }
@@ -116,7 +116,7 @@ public final class t0 implements OnCompleteListener {
                     i10 = 100;
                     i11 = 5000;
                 }
-                f fVar = this.f23081a;
+                f fVar = this.f23475a;
                 int iElapsedRealtime = -1;
                 if (task.isSuccessful()) {
                     iW3 = 0;
@@ -142,8 +142,8 @@ public final class t0 implements OnCompleteListener {
                     }
                 }
                 if (zY3) {
-                    long j12 = this.f23083d;
-                    long j13 = this.f23084e;
+                    long j12 = this.f23477d;
+                    long j13 = this.f23478e;
                     long jCurrentTimeMillis = System.currentTimeMillis();
                     iElapsedRealtime = (int) (SystemClock.elapsedRealtime() - j13);
                     j11 = jCurrentTimeMillis;

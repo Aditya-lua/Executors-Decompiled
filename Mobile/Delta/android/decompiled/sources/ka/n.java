@@ -7,27 +7,27 @@ import android.content.Context;
 public final class n extends k9.e {
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final k9.a.g f22297k;
+    public static final k9.a.g f22521k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final k9.a.AbstractC0392a f22298l;
+    public static final k9.a.AbstractC0391a f22522l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public static final k9.a f22299m;
+    public static final k9.a f22523m;
 
     static {
         k9.a.g gVar = new k9.a.g();
-        f22297k = gVar;
+        f22521k = gVar;
         h hVar = new h();
-        f22298l = hVar;
-        f22299m = new k9.a("GamesAppShortcuts.API", hVar, gVar);
+        f22522l = hVar;
+        f22523m = new k9.a("GamesAppShortcuts.API", hVar, gVar);
     }
 
     public n(Activity activity) {
-        super(activity, (k9.a<k9.a.d.c>) f22299m, k9.a.d.Jo, k9.e.a.f22280c);
+        super(activity, (k9.a<k9.a.d.c>) f22523m, k9.a.d.Ko, k9.e.a.f22504c);
     }
 
     public n(Context context) {
-        super(context, (k9.a<k9.a.d.c>) f22299m, k9.a.d.Jo, k9.e.a.f22280c);
+        super(context, (k9.a<k9.a.d.c>) f22523m, k9.a.d.Ko, k9.e.a.f22504c);
     }
 }

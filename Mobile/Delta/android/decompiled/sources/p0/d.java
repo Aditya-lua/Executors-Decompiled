@@ -7,26 +7,26 @@ import android.util.CloseGuard;
 public final class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final b f28058a;
+    public final b f28277a;
 
     public static final class a implements b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final CloseGuard f28059a = new CloseGuard();
+        public final CloseGuard f28278a = new CloseGuard();
 
         @Override // p0.d.b
         public void a(String str) {
-            this.f28059a.open(str);
+            this.f28278a.open(str);
         }
 
         @Override // p0.d.b
         public void b() {
-            this.f28059a.warnIfOpen();
+            this.f28278a.warnIfOpen();
         }
 
         @Override // p0.d.b
         public void close() {
-            this.f28059a.close();
+            this.f28278a.close();
         }
     }
 
@@ -54,7 +54,7 @@ public final class d {
     }
 
     public d(b bVar) {
-        this.f28058a = bVar;
+        this.f28277a = bVar;
     }
 
     public static d b() {
@@ -62,14 +62,14 @@ public final class d {
     }
 
     public void a() {
-        this.f28058a.close();
+        this.f28277a.close();
     }
 
     public void c(String str) {
-        this.f28058a.a(str);
+        this.f28277a.a(str);
     }
 
     public void d() {
-        this.f28058a.b();
+        this.f28277a.b();
     }
 }

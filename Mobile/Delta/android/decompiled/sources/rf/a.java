@@ -1,8 +1,12 @@
 package rf;
 
 import androidx.annotation.NonNull;
+import java.io.Writer;
 
 /* JADX INFO: loaded from: classes2.dex */
 public interface a {
-    void configure(@NonNull b<?> bVar);
+    void a(@NonNull Object obj, @NonNull Writer writer);
+
+    @NonNull
+    String b(@NonNull Object obj);
 }

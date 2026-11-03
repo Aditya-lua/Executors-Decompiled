@@ -15,11 +15,11 @@ import java.util.TreeMap;
 public final class z5 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final char[] f7357a;
+    public static final char[] f7431a;
 
     static {
         char[] cArr = new char[80];
-        f7357a = cArr;
+        f7431a = cArr;
         Arrays.fill(cArr, ' ');
     }
 
@@ -130,7 +130,7 @@ public final class z5 {
             if (i10 <= 80) {
                 i11 = i10;
             }
-            sb2.append(f7357a, 0, i11);
+            sb2.append(f7431a, 0, i11);
             i10 -= i11;
         }
     }

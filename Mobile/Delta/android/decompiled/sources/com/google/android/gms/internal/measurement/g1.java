@@ -11,26 +11,26 @@ import java.util.Set;
 public final class g1 implements SharedPreferences.Editor {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f6452a;
+    public boolean f6525a;
     public final Set b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Map f6453c;
+    public final Map f6526c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final /* synthetic */ h1 f6454d;
+    public final /* synthetic */ h1 f6527d;
 
     public /* synthetic */ g1(h1 h1Var, byte[] bArr) {
         Objects.requireNonNull(h1Var);
-        this.f6454d = h1Var;
-        this.f6452a = false;
+        this.f6527d = h1Var;
+        this.f6525a = false;
         this.b = new HashSet();
-        this.f6453c = new HashMap();
+        this.f6526c = new HashMap();
     }
 
     public final void a(String str, Object obj) {
         if (obj != null) {
-            this.f6453c.put(str, obj);
+            this.f6526c.put(str, obj);
         } else {
             remove(str);
         }
@@ -43,30 +43,30 @@ public final class g1 implements SharedPreferences.Editor {
 
     @Override // android.content.SharedPreferences.Editor
     public final SharedPreferences.Editor clear() {
-        this.f6452a = true;
+        this.f6525a = true;
         return this;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // android.content.SharedPreferences.Editor
     public final boolean commit() {
-        if (this.f6452a) {
-            this.f6454d.a().clear();
+        if (this.f6525a) {
+            this.f6527d.a().clear();
         }
-        h1 h1Var = this.f6454d;
+        h1 h1Var = this.f6527d;
         Set set = this.b;
         h1Var.a().keySet().removeAll(set);
-        Map map = this.f6453c;
+        Map map = this.f6526c;
         for (Map.Entry entry : map.entrySet()) {
             h1Var.a().put((String) entry.getKey(), entry.getValue());
         }
         for (SharedPreferences.OnSharedPreferenceChangeListener onSharedPreferenceChangeListener : h1Var.b()) {
-            he.y0 it = he.t0.d(set, map.keySet()).iterator();
+            ie.y0 it = ie.t0.d(set, map.keySet()).iterator();
             while (it.hasNext()) {
                 onSharedPreferenceChangeListener.onSharedPreferenceChanged(h1Var, (String) it.next());
             }
         }
-        return (!this.f6452a && set.isEmpty() && map.isEmpty()) ? false : true;
+        return (!this.f6525a && set.isEmpty() && map.isEmpty()) ? false : true;
     }
 
     @Override // android.content.SharedPreferences.Editor

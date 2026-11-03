@@ -9,11 +9,11 @@ import java.util.Objects;
 public final class n implements Application.ActivityLifecycleCallbacks {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ o f17965a;
+    public final /* synthetic */ o f18504a;
 
     public /* synthetic */ n(o oVar, byte[] bArr) {
         Objects.requireNonNull(oVar);
-        this.f17965a = oVar;
+        this.f18504a = oVar;
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
@@ -22,7 +22,7 @@ public final class n implements Application.ActivityLifecycleCallbacks {
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivityDestroyed(Activity activity) {
-        this.f17965a.g(activity);
+        this.f18504a.g(activity);
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
@@ -31,7 +31,7 @@ public final class n implements Application.ActivityLifecycleCallbacks {
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivityResumed(Activity activity) {
-        this.f17965a.f(activity);
+        this.f18504a.f(activity);
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
@@ -40,7 +40,7 @@ public final class n implements Application.ActivityLifecycleCallbacks {
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivityStarted(Activity activity) {
-        this.f17965a.f(activity);
+        this.f18504a.f(activity);
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks

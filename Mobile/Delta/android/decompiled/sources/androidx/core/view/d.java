@@ -12,37 +12,37 @@ import java.util.Objects;
 public final class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final f f1819a;
+    public final f f1664a;
 
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final c f1820a;
+        public final c f1665a;
 
         public a(ClipData clipData, int i10) {
             if (Build.VERSION.SDK_INT >= 31) {
-                this.f1820a = new b(clipData, i10);
+                this.f1665a = new b(clipData, i10);
             } else {
-                this.f1820a = new C0028d(clipData, i10);
+                this.f1665a = new C0024d(clipData, i10);
             }
         }
 
         public d a() {
-            return this.f1820a.build();
+            return this.f1665a.build();
         }
 
         public a b(Bundle bundle) {
-            this.f1820a.setExtras(bundle);
+            this.f1665a.setExtras(bundle);
             return this;
         }
 
         public a c(int i10) {
-            this.f1820a.b(i10);
+            this.f1665a.b(i10);
             return this;
         }
 
         public a d(Uri uri) {
-            this.f1820a.a(uri);
+            this.f1665a.a(uri);
             return this;
         }
     }
@@ -50,30 +50,30 @@ public final class d {
     public static final class b implements c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final ContentInfo.Builder f1821a;
+        public final ContentInfo.Builder f1666a;
 
         public b(ClipData clipData, int i10) {
-            this.f1821a = androidx.core.view.e.a(clipData, i10);
+            this.f1666a = androidx.core.view.e.a(clipData, i10);
         }
 
         @Override // androidx.core.view.d.c
         public void a(Uri uri) {
-            this.f1821a.setLinkUri(uri);
+            this.f1666a.setLinkUri(uri);
         }
 
         @Override // androidx.core.view.d.c
         public void b(int i10) {
-            this.f1821a.setFlags(i10);
+            this.f1666a.setFlags(i10);
         }
 
         @Override // androidx.core.view.d.c
         public d build() {
-            return new d(new e(this.f1821a.build()));
+            return new d(new e(this.f1666a.build()));
         }
 
         @Override // androidx.core.view.d.c
         public void setExtras(Bundle bundle) {
-            this.f1821a.setExtras(bundle);
+            this.f1666a.setExtras(bundle);
         }
     }
 
@@ -88,34 +88,34 @@ public final class d {
     }
 
     /* JADX INFO: renamed from: androidx.core.view.d$d, reason: collision with other inner class name */
-    public static final class C0028d implements c {
+    public static final class C0024d implements c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public ClipData f1822a;
+        public ClipData f1667a;
         public int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public int f1823c;
+        public int f1668c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public Uri f1824d;
+        public Uri f1669d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public Bundle f1825e;
+        public Bundle f1670e;
 
-        public C0028d(ClipData clipData, int i10) {
-            this.f1822a = clipData;
+        public C0024d(ClipData clipData, int i10) {
+            this.f1667a = clipData;
             this.b = i10;
         }
 
         @Override // androidx.core.view.d.c
         public void a(Uri uri) {
-            this.f1824d = uri;
+            this.f1669d = uri;
         }
 
         @Override // androidx.core.view.d.c
         public void b(int i10) {
-            this.f1823c = i10;
+            this.f1668c = i10;
         }
 
         @Override // androidx.core.view.d.c
@@ -125,41 +125,41 @@ public final class d {
 
         @Override // androidx.core.view.d.c
         public void setExtras(Bundle bundle) {
-            this.f1825e = bundle;
+            this.f1670e = bundle;
         }
     }
 
     public static final class e implements f {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final ContentInfo f1826a;
+        public final ContentInfo f1671a;
 
         public e(ContentInfo contentInfo) {
-            this.f1826a = androidx.core.view.c.a(x2.g.g(contentInfo));
+            this.f1671a = androidx.core.view.c.a(x2.g.g(contentInfo));
         }
 
         @Override // androidx.core.view.d.f
         public ContentInfo a() {
-            return this.f1826a;
+            return this.f1671a;
         }
 
         @Override // androidx.core.view.d.f
         public ClipData b() {
-            return this.f1826a.getClip();
+            return this.f1671a.getClip();
         }
 
         @Override // androidx.core.view.d.f
         public int c() {
-            return this.f1826a.getFlags();
+            return this.f1671a.getFlags();
         }
 
         @Override // androidx.core.view.d.f
         public int getSource() {
-            return this.f1826a.getSource();
+            return this.f1671a.getSource();
         }
 
         public String toString() {
-            return "ContentInfoCompat{" + this.f1826a + "}";
+            return "ContentInfoCompat{" + this.f1671a + "}";
         }
     }
 
@@ -176,24 +176,24 @@ public final class d {
     public static final class g implements f {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final ClipData f1827a;
+        public final ClipData f1672a;
         public final int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final int f1828c;
+        public final int f1673c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final Uri f1829d;
+        public final Uri f1674d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final Bundle f1830e;
+        public final Bundle f1675e;
 
-        public g(C0028d c0028d) {
-            this.f1827a = (ClipData) x2.g.g(c0028d.f1822a);
-            this.b = x2.g.c(c0028d.b, 0, 5, Payload.SOURCE);
-            this.f1828c = x2.g.f(c0028d.f1823c, 1);
-            this.f1829d = c0028d.f1824d;
-            this.f1830e = c0028d.f1825e;
+        public g(C0024d c0024d) {
+            this.f1672a = (ClipData) x2.g.g(c0024d.f1667a);
+            this.b = x2.g.c(c0024d.b, 0, 5, Payload.SOURCE);
+            this.f1673c = x2.g.f(c0024d.f1668c, 1);
+            this.f1674d = c0024d.f1669d;
+            this.f1675e = c0024d.f1670e;
         }
 
         @Override // androidx.core.view.d.f
@@ -203,12 +203,12 @@ public final class d {
 
         @Override // androidx.core.view.d.f
         public ClipData b() {
-            return this.f1827a;
+            return this.f1672a;
         }
 
         @Override // androidx.core.view.d.f
         public int c() {
-            return this.f1828c;
+            return this.f1673c;
         }
 
         @Override // androidx.core.view.d.f
@@ -220,25 +220,25 @@ public final class d {
             String str;
             StringBuilder sb2 = new StringBuilder();
             sb2.append("ContentInfoCompat{clip=");
-            sb2.append(this.f1827a.getDescription());
+            sb2.append(this.f1672a.getDescription());
             sb2.append(", source=");
             sb2.append(d.e(this.b));
             sb2.append(", flags=");
-            sb2.append(d.a(this.f1828c));
-            if (this.f1829d == null) {
+            sb2.append(d.a(this.f1673c));
+            if (this.f1674d == null) {
                 str = "";
             } else {
-                str = ", hasLinkUri(" + this.f1829d.toString().length() + ")";
+                str = ", hasLinkUri(" + this.f1674d.toString().length() + ")";
             }
             sb2.append(str);
-            sb2.append(this.f1830e != null ? ", hasExtras" : "");
+            sb2.append(this.f1675e != null ? ", hasExtras" : "");
             sb2.append("}");
             return sb2.toString();
         }
     }
 
     public d(f fVar) {
-        this.f1819a = fVar;
+        this.f1664a = fVar;
     }
 
     public static String a(int i10) {
@@ -269,25 +269,25 @@ public final class d {
     }
 
     public ClipData b() {
-        return this.f1819a.b();
+        return this.f1664a.b();
     }
 
     public int c() {
-        return this.f1819a.c();
+        return this.f1664a.c();
     }
 
     public int d() {
-        return this.f1819a.getSource();
+        return this.f1664a.getSource();
     }
 
     public ContentInfo f() {
-        ContentInfo contentInfoA = this.f1819a.a();
+        ContentInfo contentInfoA = this.f1664a.a();
         Objects.requireNonNull(contentInfoA);
         androidx.core.view.c.a(contentInfoA);
         return contentInfoA;
     }
 
     public String toString() {
-        return this.f1819a.toString();
+        return this.f1664a.toString();
     }
 }

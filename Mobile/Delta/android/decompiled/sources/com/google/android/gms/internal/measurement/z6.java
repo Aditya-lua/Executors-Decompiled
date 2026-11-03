@@ -9,15 +9,15 @@ public final class z6 extends cb implements pc {
         throw null;
     }
 
-    public final z6 A(String str) {
-        p();
-        ((a7) this.b).G0("android");
-        return this;
-    }
-
     public final z6 A0(boolean z10) {
         p();
         ((a7) this.b).d2(z10);
+        return this;
+    }
+
+    public final z6 B(String str) {
+        p();
+        ((a7) this.b).G0("android");
         return this;
     }
 
@@ -509,15 +509,15 @@ public final class z6 extends cb implements pc {
         return this;
     }
 
-    public final z6 x(long j10) {
-        p();
-        ((a7) this.b).E0(j10);
-        return this;
-    }
-
     public final z6 x0() {
         p();
         ((a7) this.b).b2();
+        return this;
+    }
+
+    public final z6 y(long j10) {
+        p();
+        ((a7) this.b).E0(j10);
         return this;
     }
 

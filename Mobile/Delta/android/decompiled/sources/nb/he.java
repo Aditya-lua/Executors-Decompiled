@@ -8,20 +8,20 @@ import java.util.Objects;
 public final class he implements ue {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ me f25586a;
+    public final /* synthetic */ me f26407a;
 
     public he(me meVar) {
         Objects.requireNonNull(meVar);
-        this.f25586a = meVar;
+        this.f26407a = meVar;
     }
 
     @Override // nb.ue
     public final void a(String str, String str2, Bundle bundle) {
         if (!TextUtils.isEmpty(str)) {
-            this.f25586a.b().t(new ge(this, str, str2, bundle));
+            this.f26407a.b().t(new ge(this, str, str2, bundle));
             return;
         }
-        me meVar = this.f25586a;
+        me meVar = this.f26407a;
         if (meVar.x0() != null) {
             meVar.x0().a().o().b("AppId not known when logging event", str2);
         }

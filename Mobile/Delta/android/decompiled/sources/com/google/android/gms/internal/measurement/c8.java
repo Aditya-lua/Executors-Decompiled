@@ -16,7 +16,7 @@ public final class c8 extends gb implements pc {
     static {
         c8 c8Var = new c8();
         zzj = c8Var;
-        gb.u(c8.class, c8Var);
+        gb.t(c8.class, c8Var);
     }
 
     @Override // com.google.android.gms.internal.measurement.gb
@@ -26,7 +26,7 @@ public final class c8 extends gb implements pc {
             return (byte) 1;
         }
         if (i11 == 2) {
-            return gb.v(zzj, "\u0004\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0001\u0000\u0001᠌\u0000\u0002\u001b\u0003ဈ\u0001\u0004ဈ\u0002\u0005ဇ\u0003\u0006က\u0004", new Object[]{"zzb", "zzd", a8.f6372a, "zze", c8.class, "zzf", "zzg", "zzh", "zzi"});
+            return gb.v(zzj, "\u0004\u0006\u0000\u0001\u0001\u0006\u0006\u0000\u0001\u0000\u0001᠌\u0000\u0002\u001b\u0003ဈ\u0001\u0004ဈ\u0002\u0005ဇ\u0003\u0006က\u0004", new Object[]{"zzb", "zzd", a8.f6445a, "zze", c8.class, "zzf", "zzg", "zzh", "zzi"});
         }
         if (i11 == 3) {
             return new c8();

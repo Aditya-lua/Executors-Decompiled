@@ -4,11 +4,11 @@ package p0;
 public final class n {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final long f28107a;
+    public final long f28326a;
     public final long b;
 
     public n(long j10, long j11) {
-        this.f28107a = j10;
+        this.f28326a = j10;
         this.b = j11;
     }
 
@@ -17,11 +17,11 @@ public final class n {
     }
 
     public long b() {
-        return this.f28107a;
+        return this.f28326a;
     }
 
     public String toString() {
-        return this.f28107a + "/" + this.b;
+        return this.f28326a + "/" + this.b;
     }
 
     public n(double d10) {

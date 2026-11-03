@@ -13,38 +13,38 @@ import java.util.List;
 public class d extends FrameLayout {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final Object f3874c = new Object();
+    public static final Object f3772c = new Object();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final List<b> f3875a;
+    public final List<b> f3773a;
     public c b;
 
-    public class a implements b.a.InterfaceC0069a {
+    public class a implements b.a.InterfaceC0068a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ FrameLayout.LayoutParams f3876a;
+        public final /* synthetic */ FrameLayout.LayoutParams f3774a;
         public final /* synthetic */ View b;
 
         public a(FrameLayout.LayoutParams layoutParams, View view) {
-            this.f3876a = layoutParams;
+            this.f3774a = layoutParams;
             this.b = view;
         }
 
-        @Override // b3.b.a.InterfaceC0069a
+        @Override // b3.b.a.InterfaceC0068a
         public void a(int i10) {
-            FrameLayout.LayoutParams layoutParams = this.f3876a;
+            FrameLayout.LayoutParams layoutParams = this.f3774a;
             layoutParams.height = i10;
             this.b.setLayoutParams(layoutParams);
         }
 
-        @Override // b3.b.a.InterfaceC0069a
+        @Override // b3.b.a.InterfaceC0068a
         public void b(boolean z10) {
             this.b.setVisibility(z10 ? 0 : 4);
         }
 
-        @Override // b3.b.a.InterfaceC0069a
+        @Override // b3.b.a.InterfaceC0068a
         public void c(Insets insets) {
-            FrameLayout.LayoutParams layoutParams = this.f3876a;
+            FrameLayout.LayoutParams layoutParams = this.f3774a;
             layoutParams.leftMargin = insets.left;
             layoutParams.topMargin = insets.top;
             layoutParams.rightMargin = insets.right;
@@ -52,29 +52,29 @@ public class d extends FrameLayout {
             this.b.setLayoutParams(layoutParams);
         }
 
-        @Override // b3.b.a.InterfaceC0069a
+        @Override // b3.b.a.InterfaceC0068a
         public void d(float f10) {
             this.b.setAlpha(f10);
         }
 
-        @Override // b3.b.a.InterfaceC0069a
+        @Override // b3.b.a.InterfaceC0068a
         public void e(int i10) {
-            FrameLayout.LayoutParams layoutParams = this.f3876a;
+            FrameLayout.LayoutParams layoutParams = this.f3774a;
             layoutParams.width = i10;
             this.b.setLayoutParams(layoutParams);
         }
 
-        @Override // b3.b.a.InterfaceC0069a
+        @Override // b3.b.a.InterfaceC0068a
         public void f(float f10) {
             this.b.setTranslationX(f10);
         }
 
-        @Override // b3.b.a.InterfaceC0069a
+        @Override // b3.b.a.InterfaceC0068a
         public void g(float f10) {
             this.b.setTranslationY(f10);
         }
 
-        @Override // b3.b.a.InterfaceC0069a
+        @Override // b3.b.a.InterfaceC0068a
         public void h(Drawable drawable) {
             this.b.setBackground(drawable);
         }
@@ -82,7 +82,7 @@ public class d extends FrameLayout {
 
     public d(Context context, List<b> list) {
         super(context);
-        this.f3875a = new ArrayList();
+        this.f3773a = new ArrayList();
         setProtections(list);
     }
 
@@ -127,7 +127,7 @@ public class d extends FrameLayout {
             layoutParams.rightMargin = insetsN.right;
             layoutParams.bottomMargin = insetsN.bottom;
             View view = new View(context);
-            view.setTag(f3874c);
+            view.setTag(f3772c);
             view.setTranslationX(aVarC.o());
             view.setTranslationY(aVarC.p());
             view.setAlpha(aVarC.k());
@@ -147,7 +147,7 @@ public class d extends FrameLayout {
         layoutParams2.rightMargin = insetsN2.right;
         layoutParams2.bottomMargin = insetsN2.bottom;
         View view2 = new View(context);
-        view2.setTag(f3874c);
+        view2.setTag(f3772c);
         view2.setTranslationX(aVarC.o());
         view2.setTranslationY(aVarC.p());
         view2.setAlpha(aVarC.k());
@@ -159,7 +159,7 @@ public class d extends FrameLayout {
 
     @Override // android.view.ViewGroup
     public void addView(View view, int i10, ViewGroup.LayoutParams layoutParams) {
-        if (view != null && view.getTag() != f3874c) {
+        if (view != null && view.getTag() != f3772c) {
             c cVar = this.b;
             int childCount = getChildCount() - (cVar != null ? cVar.i() : 0);
             if (i10 > childCount || i10 < 0) {
@@ -170,10 +170,10 @@ public class d extends FrameLayout {
     }
 
     public final void b() {
-        if (this.f3875a.isEmpty()) {
+        if (this.f3773a.isEmpty()) {
             return;
         }
-        this.b = new c(getOrInstallSystemBarStateMonitor(), this.f3875a);
+        this.b = new c(getOrInstallSystemBarStateMonitor(), this.f3773a);
         int childCount = getChildCount();
         int i10 = this.b.i();
         for (int i11 = 0; i11 < i10; i11++) {
@@ -225,8 +225,8 @@ public class d extends FrameLayout {
     }
 
     public void setProtections(List<b> list) {
-        this.f3875a.clear();
-        this.f3875a.addAll(list);
+        this.f3773a.clear();
+        this.f3773a.addAll(list);
         if (isAttachedToWindow()) {
             d();
             b();

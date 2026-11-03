@@ -20,14 +20,14 @@ import java.util.Arrays;
 public class i {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static i f21195c;
+    public static i f21768c;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f21196a;
+    public final Context f21769a;
     public volatile String b;
 
     public i(@NonNull Context context) {
-        this.f21196a = context.getApplicationContext();
+        this.f21769a = context.getApplicationContext();
     }
 
     @NonNull
@@ -35,15 +35,15 @@ public class i {
         n9.m.l(context);
         synchronized (i.class) {
             try {
-                if (f21195c == null) {
+                if (f21768c == null) {
                     c0.a(context);
-                    f21195c = new i(context);
+                    f21768c = new i(context);
                 }
             } catch (Throwable th2) {
                 throw th2;
             }
         }
-        return f21195c;
+        return f21768c;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -58,8 +58,8 @@ public class i {
             z10 = (applicationInfo == null || (applicationInfo.flags & 129) == 0) ? false : true;
         }
         try {
-            db.i iVar = z10 ? b0.f21171c : b0.b;
-            Object obj = u9.a.f32092a;
+            db.i iVar = z10 ? b0.f21744c : b0.b;
+            Object obj = u9.a.f32745a;
             int i10 = Build.VERSION.SDK_INT;
             if (i10 < 28) {
                 Signature[] signatureArr = packageInfo.signatures;
@@ -102,7 +102,7 @@ public class i {
             return false;
         } catch (IllegalArgumentException unused) {
             Log.i("GoogleSignatureVerifier", "package info is not set correctly");
-            return (z10 ? f(packageInfo, b0.f21170a) : f(packageInfo, b0.f21170a[0])) != null;
+            return (z10 ? f(packageInfo, b0.f21743a) : f(packageInfo, b0.f21743a[0])) != null;
         }
     }
 
@@ -131,7 +131,7 @@ public class i {
             return true;
         }
         if (d(packageInfo, true)) {
-            if (h.e(this.f21196a)) {
+            if (h.e(this.f21769a)) {
                 return true;
             }
             Log.w("GoogleSignatureVerifier", "Test-keys aren't accepted on this build.");
@@ -141,20 +141,20 @@ public class i {
 
     public boolean c(int i10) {
         j0 j0VarC;
-        String[] packagesForUid = this.f21196a.getPackageManager().getPackagesForUid(i10);
+        String[] packagesForUid = this.f21769a.getPackageManager().getPackagesForUid(i10);
         if (packagesForUid == null || (packagesForUid.length) == 0) {
             j0VarC = j0.c("no pkgs");
         } else {
             j0VarC = null;
             for (String str : packagesForUid) {
                 j0VarC = e(str, false, false);
-                if (!j0VarC.f21200a) {
+                if (!j0VarC.f21773a) {
                 }
             }
             n9.m.l(j0VarC);
         }
         j0VarC.e();
-        return j0VarC.f21200a;
+        return j0VarC.f21773a;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -170,24 +170,24 @@ public class i {
         if (str.equals(this.b)) {
             return j0.b();
         }
-        a0 a0Var = c0.f21176a;
+        a0 a0Var = c0.f21749a;
         StrictMode.ThreadPolicy threadPolicyAllowThreadDiskReads = StrictMode.allowThreadDiskReads();
         try {
             try {
                 c0.b();
-                boolean zC = c0.f21181g.c();
+                boolean zC = c0.f21754g.c();
                 StrictMode.setThreadPolicy(threadPolicyAllowThreadDiskReads);
                 if (zC) {
                     g0 g0Var = new g0(null);
                     g0Var.a(str);
-                    g0Var.b(h.e(this.f21196a));
+                    g0Var.b(h.e(this.f21769a));
                     g0Var.c(true);
                     j0VarC = c0.c(g0Var.d());
                 } else {
                     threadPolicyAllowThreadDiskReads = Build.VERSION.SDK_INT;
                     try {
-                        PackageInfo packageInfo = this.f21196a.getPackageManager().getPackageInfo(str, threadPolicyAllowThreadDiskReads >= 28 ? 134217792 : 64);
-                        boolean zE = h.e(this.f21196a);
+                        PackageInfo packageInfo = this.f21769a.getPackageManager().getPackageInfo(str, threadPolicyAllowThreadDiskReads >= 28 ? 134217792 : 64);
+                        boolean zE = h.e(this.f21769a);
                         if (packageInfo == null) {
                             j0VarC = j0.c("null pkg");
                         } else {
@@ -198,7 +198,7 @@ public class i {
                                 y yVar = new y(packageInfo.signatures[0].toByteArray());
                                 String str2 = packageInfo.packageName;
                                 j0 j0VarD = c0.d(str2, yVar, zE, false);
-                                j0VarC = (!j0VarD.f21200a || (applicationInfo = packageInfo.applicationInfo) == null || (applicationInfo.flags & 2) == 0 || !c0.d(str2, yVar, false, true).f21200a) ? j0VarD : j0.c("debuggable release cert app rejected");
+                                j0VarC = (!j0VarD.f21773a || (applicationInfo = packageInfo.applicationInfo) == null || (applicationInfo.flags & 2) == 0 || !c0.d(str2, yVar, false, true).f21773a) ? j0VarD : j0.c("debuggable release cert app rejected");
                             }
                         }
                     } catch (PackageManager.NameNotFoundException e10) {
@@ -213,7 +213,7 @@ public class i {
             Log.e("GoogleCertificates", "Failed to get Google certificates from remote", e11);
             StrictMode.setThreadPolicy(threadPolicyAllowThreadDiskReads);
         }
-        if (j0VarC.f21200a) {
+        if (j0VarC.f21773a) {
             this.b = str;
         }
         return j0VarC;

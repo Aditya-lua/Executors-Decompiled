@@ -21,21 +21,21 @@ import androidx.annotation.NonNull;
 public class l extends EditText implements androidx.core.view.a0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final e f29012a;
+    public final e f29365a;
     public final a0 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final z f29013c;
+    public final z f29366c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final d3.j f29014d;
+    public final d3.j f29367d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
     @NonNull
-    public final m f29015e;
+    public final m f29368e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public a f29016f;
+    public a f29369f;
 
     public class a {
         public a() {
@@ -56,15 +56,15 @@ public class l extends EditText implements androidx.core.view.a0 {
 
     @NonNull
     private a getSuperCaller() {
-        if (this.f29016f == null) {
-            this.f29016f = new a();
+        if (this.f29369f == null) {
+            this.f29369f = new a();
         }
-        return this.f29016f;
+        return this.f29369f;
     }
 
     @Override // androidx.core.view.a0
     public androidx.core.view.d a(@NonNull androidx.core.view.d dVar) {
-        return this.f29014d.a(this, dVar);
+        return this.f29367d.a(this, dVar);
     }
 
     public void d(m mVar) {
@@ -89,7 +89,7 @@ public class l extends EditText implements androidx.core.view.a0 {
     @Override // android.widget.TextView, android.view.View
     public void drawableStateChanged() {
         super.drawableStateChanged();
-        e eVar = this.f29012a;
+        e eVar = this.f29365a;
         if (eVar != null) {
             eVar.b();
         }
@@ -105,7 +105,7 @@ public class l extends EditText implements androidx.core.view.a0 {
     }
 
     public ColorStateList getSupportBackgroundTintList() {
-        e eVar = this.f29012a;
+        e eVar = this.f29365a;
         if (eVar != null) {
             return eVar.c();
         }
@@ -113,7 +113,7 @@ public class l extends EditText implements androidx.core.view.a0 {
     }
 
     public PorterDuff.Mode getSupportBackgroundTintMode() {
-        e eVar = this.f29012a;
+        e eVar = this.f29365a;
         if (eVar != null) {
             return eVar.d();
         }
@@ -132,7 +132,7 @@ public class l extends EditText implements androidx.core.view.a0 {
     @NonNull
     public TextClassifier getTextClassifier() {
         z zVar;
-        return (Build.VERSION.SDK_INT >= 28 || (zVar = this.f29013c) == null) ? getSuperCaller().a() : zVar.a();
+        return (Build.VERSION.SDK_INT >= 28 || (zVar = this.f29366c) == null) ? getSuperCaller().a() : zVar.a();
     }
 
     @Override // android.widget.TextView, android.view.View
@@ -145,7 +145,7 @@ public class l extends EditText implements androidx.core.view.a0 {
             a3.a.c(editorInfo, strArrC);
             inputConnectionA = a3.c.c(this, inputConnectionA, editorInfo);
         }
-        return this.f29015e.d(inputConnectionA, editorInfo);
+        return this.f29368e.d(inputConnectionA, editorInfo);
     }
 
     @Override // android.view.View
@@ -177,7 +177,7 @@ public class l extends EditText implements androidx.core.view.a0 {
     @Override // android.view.View
     public void setBackgroundDrawable(Drawable drawable) {
         super.setBackgroundDrawable(drawable);
-        e eVar = this.f29012a;
+        e eVar = this.f29365a;
         if (eVar != null) {
             eVar.f(drawable);
         }
@@ -186,7 +186,7 @@ public class l extends EditText implements androidx.core.view.a0 {
     @Override // android.view.View
     public void setBackgroundResource(int i10) {
         super.setBackgroundResource(i10);
-        e eVar = this.f29012a;
+        e eVar = this.f29365a;
         if (eVar != null) {
             eVar.g(i10);
         }
@@ -216,23 +216,23 @@ public class l extends EditText implements androidx.core.view.a0 {
     }
 
     public void setEmojiCompatEnabled(boolean z10) {
-        this.f29015e.e(z10);
+        this.f29368e.e(z10);
     }
 
     @Override // android.widget.TextView
     public void setKeyListener(KeyListener keyListener) {
-        super.setKeyListener(this.f29015e.a(keyListener));
+        super.setKeyListener(this.f29368e.a(keyListener));
     }
 
     public void setSupportBackgroundTintList(ColorStateList colorStateList) {
-        e eVar = this.f29012a;
+        e eVar = this.f29365a;
         if (eVar != null) {
             eVar.i(colorStateList);
         }
     }
 
     public void setSupportBackgroundTintMode(PorterDuff.Mode mode) {
-        e eVar = this.f29012a;
+        e eVar = this.f29365a;
         if (eVar != null) {
             eVar.j(mode);
         }
@@ -260,7 +260,7 @@ public class l extends EditText implements androidx.core.view.a0 {
     @Override // android.widget.TextView
     public void setTextClassifier(TextClassifier textClassifier) {
         z zVar;
-        if (Build.VERSION.SDK_INT >= 28 || (zVar = this.f29013c) == null) {
+        if (Build.VERSION.SDK_INT >= 28 || (zVar = this.f29366c) == null) {
             getSuperCaller().b(textClassifier);
         } else {
             zVar.b(textClassifier);
@@ -271,16 +271,16 @@ public class l extends EditText implements androidx.core.view.a0 {
         super(x0.b(context), attributeSet, i10);
         v0.a(this, getContext());
         e eVar = new e(this);
-        this.f29012a = eVar;
+        this.f29365a = eVar;
         eVar.e(attributeSet, i10);
         a0 a0Var = new a0(this);
         this.b = a0Var;
         a0Var.m(attributeSet, i10);
         a0Var.b();
-        this.f29013c = new z(this);
-        this.f29014d = new d3.j();
+        this.f29366c = new z(this);
+        this.f29367d = new d3.j();
         m mVar = new m(this);
-        this.f29015e = mVar;
+        this.f29368e = mVar;
         mVar.c(attributeSet, i10);
         d(mVar);
     }

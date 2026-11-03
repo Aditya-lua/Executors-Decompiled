@@ -8,18 +8,18 @@ import n0.k3;
 public class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final IncorrectJpegMetadataQuirk f32680a;
+    public final IncorrectJpegMetadataQuirk f33248a;
 
     public d(k3 k3Var) {
-        this.f32680a = (IncorrectJpegMetadataQuirk) k3Var.b(IncorrectJpegMetadataQuirk.class);
+        this.f33248a = (IncorrectJpegMetadataQuirk) k3Var.b(IncorrectJpegMetadataQuirk.class);
     }
 
     public byte[] a(androidx.camera.core.d dVar) {
-        IncorrectJpegMetadataQuirk incorrectJpegMetadataQuirk = this.f32680a;
+        IncorrectJpegMetadataQuirk incorrectJpegMetadataQuirk = this.f33248a;
         if (incorrectJpegMetadataQuirk != null) {
             return incorrectJpegMetadataQuirk.j(dVar);
         }
-        ByteBuffer byteBufferK = dVar.H1()[0].k();
+        ByteBuffer byteBufferK = dVar.E1()[0].k();
         byte[] bArr = new byte[byteBufferK.capacity()];
         byteBufferK.rewind();
         byteBufferK.get(bArr);

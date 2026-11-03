@@ -12,27 +12,27 @@ import java.util.Map;
 public final class d {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static d f2764c = new d();
+    public static d f2609c = new d();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Map<Class<?>, a> f2765a = new HashMap();
+    public final Map<Class<?>, a> f2610a = new HashMap();
     public final Map<Class<?>, Boolean> b = new HashMap();
 
     @Deprecated
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Map<l.a, List<b>> f2766a = new HashMap();
+        public final Map<l.a, List<b>> f2611a = new HashMap();
         public final Map<b, l.a> b;
 
         public a(Map<b, l.a> map) {
             this.b = map;
             for (Map.Entry<b, l.a> entry : map.entrySet()) {
                 l.a value = entry.getValue();
-                List<b> arrayList = this.f2766a.get(value);
+                List<b> arrayList = this.f2611a.get(value);
                 if (arrayList == null) {
                     arrayList = new ArrayList<>();
-                    this.f2766a.put(value, arrayList);
+                    this.f2611a.put(value, arrayList);
                 }
                 arrayList.add(entry.getKey());
             }
@@ -47,8 +47,8 @@ public final class d {
         }
 
         public void a(s sVar, l.a aVar, Object obj) {
-            b(this.f2766a.get(aVar), sVar, aVar, obj);
-            b(this.f2766a.get(l.a.ON_ANY), sVar, aVar, obj);
+            b(this.f2611a.get(aVar), sVar, aVar, obj);
+            b(this.f2611a.get(l.a.ON_ANY), sVar, aVar, obj);
         }
     }
 
@@ -56,18 +56,18 @@ public final class d {
     public static final class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final int f2767a;
+        public final int f2612a;
         public final Method b;
 
         public b(int i10, Method method) {
-            this.f2767a = i10;
+            this.f2612a = i10;
             this.b = method;
             method.setAccessible(true);
         }
 
         public void a(s sVar, l.a aVar, Object obj) {
             try {
-                int i10 = this.f2767a;
+                int i10 = this.f2612a;
                 if (i10 == 0) {
                     this.b.invoke(obj, null);
                 } else if (i10 == 1) {
@@ -93,11 +93,11 @@ public final class d {
                 return false;
             }
             b bVar = (b) obj;
-            return this.f2767a == bVar.f2767a && this.b.getName().equals(bVar.b.getName());
+            return this.f2612a == bVar.f2612a && this.b.getName().equals(bVar.b.getName());
         }
 
         public int hashCode() {
-            return (this.f2767a * 31) + this.b.getName().hashCode();
+            return (this.f2612a * 31) + this.b.getName().hashCode();
         }
     }
 
@@ -148,7 +148,7 @@ public final class d {
             }
         }
         a aVar = new a(map);
-        this.f2765a.put(cls, aVar);
+        this.f2610a.put(cls, aVar);
         this.b.put(cls, Boolean.valueOf(z10));
         return aVar;
     }
@@ -162,7 +162,7 @@ public final class d {
     }
 
     public a c(Class<?> cls) {
-        a aVar = this.f2765a.get(cls);
+        a aVar = this.f2610a.get(cls);
         return aVar != null ? aVar : a(cls, null);
     }
 

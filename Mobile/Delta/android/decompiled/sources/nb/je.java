@@ -6,7 +6,7 @@ import java.util.Objects;
 public final class je {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f25645a;
+    public final String f26466a;
     public long b;
 
     public /* synthetic */ je(me meVar, String str, byte[] bArr) {
@@ -15,7 +15,7 @@ public final class je {
 
     public je(me meVar, String str) {
         Objects.requireNonNull(meVar);
-        this.f25645a = str;
+        this.f26466a = str;
         this.b = meVar.e().b();
     }
 

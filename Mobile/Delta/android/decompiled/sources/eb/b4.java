@@ -9,7 +9,7 @@ import java.util.Map;
 public final class b4 extends e4 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f15253a;
+    public final int f15867a;
     public final l1 b;
 
     public b4(l1 l1Var) throws u3 {
@@ -27,7 +27,7 @@ public final class b4 extends e4 {
             }
         }
         int i11 = i10 + 1;
-        this.f15253a = i11;
+        this.f15867a = i11;
         if (i11 > 8) {
             throw new u3("Exceeded cutoff limit for max depth of cbor value");
         }
@@ -35,7 +35,7 @@ public final class b4 extends e4 {
 
     @Override // eb.e4
     public final int a() {
-        return this.f15253a;
+        return this.f15867a;
     }
 
     @Override // java.lang.Comparable

@@ -23,11 +23,11 @@ import org.xmlpull.v1.XmlPullParserException;
 public final class h {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final ThreadLocal<TypedValue> f25007a = new ThreadLocal<>();
+    public static final ThreadLocal<TypedValue> f25828a = new ThreadLocal<>();
     public static final WeakHashMap<e, SparseArray<d>> b = new WeakHashMap<>(0);
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final Object f25008c = new Object();
+    public static final Object f25829c = new Object();
 
     public static class a {
         public static Drawable a(Resources resources, int i10, Resources.Theme theme) {
@@ -54,27 +54,27 @@ public final class h {
     public static class d {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final ColorStateList f25009a;
+        public final ColorStateList f25830a;
         public final Configuration b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final int f25010c;
+        public final int f25831c;
 
         public d(ColorStateList colorStateList, Configuration configuration, Resources.Theme theme) {
-            this.f25009a = colorStateList;
+            this.f25830a = colorStateList;
             this.b = configuration;
-            this.f25010c = theme == null ? 0 : theme.hashCode();
+            this.f25831c = theme == null ? 0 : theme.hashCode();
         }
     }
 
     public static final class e {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Resources f25011a;
+        public final Resources f25832a;
         public final Resources.Theme b;
 
         public e(Resources resources, Resources.Theme theme) {
-            this.f25011a = resources;
+            this.f25832a = resources;
             this.b = theme;
         }
 
@@ -84,7 +84,7 @@ public final class h {
             }
             if (obj != null && e.class == obj.getClass()) {
                 e eVar = (e) obj;
-                if (this.f25011a.equals(eVar.f25011a) && x2.b.a(this.b, eVar.b)) {
+                if (this.f25832a.equals(eVar.f25832a) && x2.b.a(this.b, eVar.b)) {
                     return true;
                 }
             }
@@ -92,7 +92,7 @@ public final class h {
         }
 
         public int hashCode() {
-            return x2.b.b(this.f25011a, this.b);
+            return x2.b.b(this.f25832a, this.b);
         }
     }
 
@@ -105,7 +105,7 @@ public final class h {
             e(handler).post(new Runnable() { // from class: n2.j
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f25015a.f(i10);
+                    this.f25836a.f(i10);
                 }
             });
         }
@@ -114,7 +114,7 @@ public final class h {
             e(handler).post(new Runnable() { // from class: n2.i
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f25014a.g(typeface);
+                    this.f25835a.g(typeface);
                 }
             });
         }
@@ -129,18 +129,18 @@ public final class h {
         public static class a {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public static final Object f25012a = new Object();
+            public static final Object f25833a = new Object();
             public static Method b;
 
             /* JADX INFO: renamed from: c, reason: collision with root package name */
-            public static boolean f25013c;
+            public static boolean f25834c;
 
             /* JADX WARN: Code duplicated, block: B:31:0x0027 A[EXC_TOP_SPLITTER, SYNTHETIC] */
             @SuppressLint({"BanUncheckedReflection"})
             public static void a(Resources.Theme theme) {
                 Method method;
-                synchronized (f25012a) {
-                    if (f25013c) {
+                synchronized (f25833a) {
+                    if (f25834c) {
                         method = b;
                         if (method != null) {
                             method.invoke(theme, null);
@@ -153,7 +153,7 @@ public final class h {
                         } catch (NoSuchMethodException e10) {
                             Log.i("ResourcesCompat", "Failed to retrieve rebase() method", e10);
                         }
-                        f25013c = true;
+                        f25834c = true;
                         method = b;
                         if (method != null) {
                             try {
@@ -185,7 +185,7 @@ public final class h {
     }
 
     public static void a(e eVar, int i10, ColorStateList colorStateList, Resources.Theme theme) {
-        synchronized (f25008c) {
+        synchronized (f25829c) {
             try {
                 WeakHashMap<e, SparseArray<d>> weakHashMap = b;
                 SparseArray<d> sparseArray = weakHashMap.get(eVar);
@@ -193,7 +193,7 @@ public final class h {
                     sparseArray = new SparseArray<>();
                     weakHashMap.put(eVar, sparseArray);
                 }
-                sparseArray.append(i10, new d(colorStateList, eVar.f25011a.getConfiguration(), theme));
+                sparseArray.append(i10, new d(colorStateList, eVar.f25832a.getConfiguration(), theme));
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -202,7 +202,7 @@ public final class h {
 
     /* JADX WARN: Code restructure failed: missing block: B:21:0x003c, code lost:
     
-        if (r2.f25010c == r5.hashCode()) goto L22;
+        if (r2.f25831c == r5.hashCode()) goto L22;
      */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
@@ -210,7 +210,7 @@ public final class h {
     */
     public static android.content.res.ColorStateList b(n2.h.e r5, int r6) {
         /*
-            java.lang.Object r0 = n2.h.f25008c
+            java.lang.Object r0 = n2.h.f25829c
             monitor-enter(r0)
             java.util.WeakHashMap<n2.h$e, android.util.SparseArray<n2.h$d>> r1 = n2.h.b     // Catch: java.lang.Throwable -> L32
             java.lang.Object r1 = r1.get(r5)     // Catch: java.lang.Throwable -> L32
@@ -222,13 +222,13 @@ public final class h {
             n2.h$d r2 = (n2.h.d) r2     // Catch: java.lang.Throwable -> L32
             if (r2 == 0) goto L45
             android.content.res.Configuration r3 = r2.b     // Catch: java.lang.Throwable -> L32
-            android.content.res.Resources r4 = r5.f25011a     // Catch: java.lang.Throwable -> L32
+            android.content.res.Resources r4 = r5.f25832a     // Catch: java.lang.Throwable -> L32
             android.content.res.Configuration r4 = r4.getConfiguration()     // Catch: java.lang.Throwable -> L32
             boolean r3 = r3.equals(r4)     // Catch: java.lang.Throwable -> L32
             if (r3 == 0) goto L42
             android.content.res.Resources$Theme r5 = r5.b     // Catch: java.lang.Throwable -> L32
             if (r5 != 0) goto L34
-            int r3 = r2.f25010c     // Catch: java.lang.Throwable -> L32
+            int r3 = r2.f25831c     // Catch: java.lang.Throwable -> L32
             if (r3 == 0) goto L3e
             goto L34
         L32:
@@ -236,11 +236,11 @@ public final class h {
             goto L48
         L34:
             if (r5 == 0) goto L42
-            int r3 = r2.f25010c     // Catch: java.lang.Throwable -> L32
+            int r3 = r2.f25831c     // Catch: java.lang.Throwable -> L32
             int r5 = r5.hashCode()     // Catch: java.lang.Throwable -> L32
             if (r3 != r5) goto L42
         L3e:
-            android.content.res.ColorStateList r5 = r2.f25009a     // Catch: java.lang.Throwable -> L32
+            android.content.res.ColorStateList r5 = r2.f25830a     // Catch: java.lang.Throwable -> L32
             monitor-exit(r0)     // Catch: java.lang.Throwable -> L32
             return r5
         L42:
@@ -321,7 +321,7 @@ public final class h {
     }
 
     public static TypedValue k() {
-        ThreadLocal<TypedValue> threadLocal = f25007a;
+        ThreadLocal<TypedValue> threadLocal = f25828a;
         TypedValue typedValue = threadLocal.get();
         if (typedValue != null) {
             return typedValue;

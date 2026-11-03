@@ -21,63 +21,63 @@ public class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final AssetManager f2870a;
+    public final AssetManager f2715a;
 
     @NonNull
     public final Executor b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NonNull
-    public final c.InterfaceC0051c f2871c;
+    public final c.InterfaceC0047c f2716c;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
     @NonNull
-    public final File f2873e;
+    public final File f2718e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NonNull
-    public final String f2874f;
+    public final String f2719f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
     @NonNull
-    public final String f2875g;
+    public final String f2720g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
     @NonNull
-    public final String f2876h;
+    public final String f2721h;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public u4.b[] f2878j;
+    public u4.b[] f2723j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public byte[] f2879k;
+    public byte[] f2724k;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public boolean f2877i = false;
+    public boolean f2722i = false;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final byte[] f2872d = d();
+    public final byte[] f2717d = d();
 
-    public b(@NonNull AssetManager assetManager, @NonNull Executor executor, @NonNull c.InterfaceC0051c interfaceC0051c, @NonNull String str, @NonNull String str2, @NonNull String str3, @NonNull File file) {
-        this.f2870a = assetManager;
+    public b(@NonNull AssetManager assetManager, @NonNull Executor executor, @NonNull c.InterfaceC0047c interfaceC0047c, @NonNull String str, @NonNull String str2, @NonNull String str3, @NonNull File file) {
+        this.f2715a = assetManager;
         this.b = executor;
-        this.f2871c = interfaceC0051c;
-        this.f2874f = str;
-        this.f2875g = str2;
-        this.f2876h = str3;
-        this.f2873e = file;
+        this.f2716c = interfaceC0047c;
+        this.f2719f = str;
+        this.f2720g = str2;
+        this.f2721h = str3;
+        this.f2718e = file;
     }
 
     public static byte[] d() {
         int i10 = Build.VERSION.SDK_INT;
         if (i10 >= 31) {
-            return j.f32069a;
+            return j.f32722a;
         }
         switch (i10) {
             case 26:
-                return j.f32071d;
+                return j.f32724d;
             case 27:
-                return j.f32070c;
+                return j.f32723c;
             case 28:
             case 29:
             case 30:
@@ -93,7 +93,7 @@ public class b {
 
     public final b b(u4.b[] bVarArr, byte[] bArr) {
         try {
-            InputStream inputStreamG = g(this.f2870a, this.f2876h);
+            InputStream inputStreamG = g(this.f2715a, this.f2721h);
             if (inputStreamG == null) {
                 if (inputStreamG != null) {
                     inputStreamG.close();
@@ -101,7 +101,7 @@ public class b {
                 return null;
             }
             try {
-                this.f2878j = i.r(inputStreamG, i.p(inputStreamG, i.b), bArr, bVarArr);
+                this.f2723j = i.r(inputStreamG, i.p(inputStreamG, i.b), bArr, bVarArr);
                 inputStreamG.close();
                 return this;
             } catch (Throwable th2) {
@@ -113,29 +113,29 @@ public class b {
                 throw th2;
             }
         } catch (FileNotFoundException e10) {
-            this.f2871c.a(9, e10);
+            this.f2716c.a(9, e10);
         } catch (IOException e11) {
-            this.f2871c.a(7, e11);
+            this.f2716c.a(7, e11);
         } catch (IllegalStateException e12) {
-            this.f2878j = null;
-            this.f2871c.a(8, e12);
+            this.f2723j = null;
+            this.f2716c.a(8, e12);
         }
     }
 
     public final void c() {
-        if (!this.f2877i) {
+        if (!this.f2722i) {
             throw new IllegalStateException("This device doesn't support aot. Did you call deviceSupportsAotProfile()?");
         }
     }
 
     public boolean e() {
-        if (this.f2872d == null) {
+        if (this.f2717d == null) {
             k(3, Integer.valueOf(Build.VERSION.SDK_INT));
             return false;
         }
-        if (!this.f2873e.exists()) {
+        if (!this.f2718e.exists()) {
             try {
-                if (!this.f2873e.createNewFile()) {
+                if (!this.f2718e.createNewFile()) {
                     k(4, null);
                     return false;
                 }
@@ -143,22 +143,22 @@ public class b {
                 k(4, null);
                 return false;
             }
-        } else if (!this.f2873e.canWrite()) {
+        } else if (!this.f2718e.canWrite()) {
             k(4, null);
             return false;
         }
-        this.f2877i = true;
+        this.f2722i = true;
         return true;
     }
 
     public final InputStream f(AssetManager assetManager) {
         try {
-            return g(assetManager, this.f2875g);
+            return g(assetManager, this.f2720g);
         } catch (FileNotFoundException e10) {
-            this.f2871c.a(6, e10);
+            this.f2716c.a(6, e10);
             return null;
         } catch (IOException e11) {
-            this.f2871c.a(7, e11);
+            this.f2716c.a(7, e11);
             return null;
         }
     }
@@ -169,7 +169,7 @@ public class b {
         } catch (FileNotFoundException e10) {
             String message = e10.getMessage();
             if (message != null && message.contains("compressed")) {
-                this.f2871c.b(5, null);
+                this.f2716c.b(5, null);
             }
             return null;
         }
@@ -179,13 +179,13 @@ public class b {
     public b h() {
         b bVarB;
         c();
-        if (this.f2872d != null) {
-            InputStream inputStreamF = f(this.f2870a);
+        if (this.f2717d != null) {
+            InputStream inputStreamF = f(this.f2715a);
             if (inputStreamF != null) {
-                this.f2878j = i(inputStreamF);
+                this.f2723j = i(inputStreamF);
             }
-            u4.b[] bVarArr = this.f2878j;
-            if (bVarArr != null && j() && (bVarB = b(bVarArr, this.f2872d)) != null) {
+            u4.b[] bVarArr = this.f2723j;
+            if (bVarArr != null && j() && (bVarB = b(bVarArr, this.f2717d)) != null) {
                 return bVarB;
             }
         }
@@ -196,25 +196,25 @@ public class b {
         try {
             try {
                 try {
-                    u4.b[] bVarArrX = i.x(inputStream, i.p(inputStream, i.f32068a), this.f2874f);
+                    u4.b[] bVarArrX = i.x(inputStream, i.p(inputStream, i.f32721a), this.f2719f);
                     try {
                         inputStream.close();
                         return bVarArrX;
                     } catch (IOException e10) {
-                        this.f2871c.a(7, e10);
+                        this.f2716c.a(7, e10);
                         return bVarArrX;
                     }
                 } catch (IllegalStateException e11) {
-                    this.f2871c.a(8, e11);
+                    this.f2716c.a(8, e11);
                     try {
                         inputStream.close();
                     } catch (IOException e12) {
-                        this.f2871c.a(7, e12);
+                        this.f2716c.a(7, e12);
                     }
                     return null;
                 }
             } catch (IOException e13) {
-                this.f2871c.a(7, e13);
+                this.f2716c.a(7, e13);
                 inputStream.close();
                 return null;
             }
@@ -222,7 +222,7 @@ public class b {
             try {
                 inputStream.close();
             } catch (IOException e14) {
-                this.f2871c.a(7, e14);
+                this.f2716c.a(7, e14);
             }
             throw th2;
         }
@@ -232,15 +232,15 @@ public class b {
         this.b.execute(new Runnable() { // from class: u4.a
             @Override // java.lang.Runnable
             public final void run() {
-                this.f32047a.f2871c.a(i10, obj);
+                this.f32700a.f2716c.a(i10, obj);
             }
         });
     }
 
     @NonNull
     public b l() {
-        u4.b[] bVarArr = this.f2878j;
-        byte[] bArr = this.f2872d;
+        u4.b[] bVarArr = this.f2723j;
+        byte[] bArr = this.f2717d;
         if (bVarArr != null && bArr != null) {
             c();
             try {
@@ -248,14 +248,14 @@ public class b {
                 try {
                     i.F(byteArrayOutputStream, bArr);
                     if (!i.C(byteArrayOutputStream, bArr, bVarArr)) {
-                        this.f2871c.a(5, null);
-                        this.f2878j = null;
+                        this.f2716c.a(5, null);
+                        this.f2723j = null;
                         byteArrayOutputStream.close();
                         return this;
                     }
-                    this.f2879k = byteArrayOutputStream.toByteArray();
+                    this.f2724k = byteArrayOutputStream.toByteArray();
                     byteArrayOutputStream.close();
-                    this.f2878j = null;
+                    this.f2723j = null;
                 } catch (Throwable th2) {
                     try {
                         byteArrayOutputStream.close();
@@ -265,16 +265,16 @@ public class b {
                     throw th2;
                 }
             } catch (IOException e10) {
-                this.f2871c.a(7, e10);
+                this.f2716c.a(7, e10);
             } catch (IllegalStateException e11) {
-                this.f2871c.a(8, e11);
+                this.f2716c.a(8, e11);
             }
         }
         return this;
     }
 
     public boolean m() {
-        byte[] bArr = this.f2879k;
+        byte[] bArr = this.f2724k;
         if (bArr == null) {
             return false;
         }
@@ -283,7 +283,7 @@ public class b {
             try {
                 ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(bArr);
                 try {
-                    FileOutputStream fileOutputStream = new FileOutputStream(this.f2873e);
+                    FileOutputStream fileOutputStream = new FileOutputStream(this.f2718e);
                     try {
                         FileChannel channel = fileOutputStream.getChannel();
                         try {
@@ -297,8 +297,8 @@ public class b {
                                 channel.close();
                                 fileOutputStream.close();
                                 byteArrayInputStream.close();
-                                this.f2879k = null;
-                                this.f2878j = null;
+                                this.f2724k = null;
+                                this.f2723j = null;
                                 return true;
                             } catch (Throwable th2) {
                                 if (fileLockTryLock != null) {
@@ -338,18 +338,18 @@ public class b {
                 }
             } catch (FileNotFoundException e10) {
                 k(6, e10);
-                this.f2879k = null;
-                this.f2878j = null;
+                this.f2724k = null;
+                this.f2723j = null;
                 return false;
             } catch (IOException e11) {
                 k(7, e11);
-                this.f2879k = null;
-                this.f2878j = null;
+                this.f2724k = null;
+                this.f2723j = null;
                 return false;
             }
         } catch (Throwable th10) {
-            this.f2879k = null;
-            this.f2878j = null;
+            this.f2724k = null;
+            this.f2723j = null;
             throw th10;
         }
     }

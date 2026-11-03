@@ -4,14 +4,14 @@ package com.google.crypto.tink.shaded.protobuf;
 public final class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static boolean f8415a;
+    public static boolean f8489a;
     public static final Class<?> b = a("libcore.io.Memory");
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final boolean f8416c;
+    public static final boolean f8490c;
 
     static {
-        f8416c = (f8415a || a("org.robolectric.Robolectric") == null) ? false : true;
+        f8490c = (f8489a || a("org.robolectric.Robolectric") == null) ? false : true;
     }
 
     public static <T> Class<T> a(String str) {
@@ -27,9 +27,9 @@ public final class d {
     }
 
     public static boolean c() {
-        if (f8415a) {
+        if (f8489a) {
             return true;
         }
-        return (b == null || f8416c) ? false : true;
+        return (b == null || f8490c) ? false : true;
     }
 }

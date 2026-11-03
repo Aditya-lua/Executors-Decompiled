@@ -18,30 +18,30 @@ import n0.v3;
 public class ExtraSupportedSurfaceCombinationsQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final v3 f1327a = g();
+    public static final v3 f1172a = g();
     public static final v3 b = h();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final Set<String> f1328c = new HashSet(Arrays.asList("PIXEL 6", "PIXEL 6 PRO", "PIXEL 7", "PIXEL 7 PRO", "PIXEL 8", "PIXEL 8 PRO", "PIXEL 9", "PIXEL 9 PRO", "PIXEL 9 PRO XL", "PIXEL 9 PRO FOLD"));
+    public static final Set<String> f1173c = new HashSet(Arrays.asList("PIXEL 6", "PIXEL 6 PRO", "PIXEL 7", "PIXEL 7 PRO", "PIXEL 8", "PIXEL 8 PRO", "PIXEL 9", "PIXEL 9 PRO", "PIXEL 9 PRO XL", "PIXEL 9 PRO FOLD"));
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final Set<String> f1329d = new HashSet(Arrays.asList("SM-S921", "SC-51E", "SCG25", "SM-S926", "SM-S928", "SC-52E", "SCG26", "SM-S931", "SM-S936", "SM-S937", "SM-S938", "SCG31", "SCG32", "SC-51F", "SC-52F"));
+    public static final Set<String> f1174d = new HashSet(Arrays.asList("SM-S921", "SC-51E", "SCG25", "SM-S926", "SM-S928", "SC-52E", "SCG26", "SM-S931", "SM-S936", "SM-S937", "SM-S938", "SCG31", "SCG32", "SC-51F", "SC-52F"));
 
     public static v3 g() {
         v3 v3Var = new v3();
         SurfaceConfig.d dVar = SurfaceConfig.d.YUV;
-        v3Var.a(SurfaceConfig.c(dVar, SurfaceConfig.b.f24908c));
-        v3Var.a(SurfaceConfig.c(SurfaceConfig.d.PRIV, SurfaceConfig.b.f24911f));
-        v3Var.a(SurfaceConfig.c(dVar, SurfaceConfig.b.f24918m));
+        v3Var.a(SurfaceConfig.c(dVar, SurfaceConfig.b.f25729c));
+        v3Var.a(SurfaceConfig.c(SurfaceConfig.d.PRIV, SurfaceConfig.b.f25732f));
+        v3Var.a(SurfaceConfig.c(dVar, SurfaceConfig.b.f25739m));
         return v3Var;
     }
 
     public static v3 h() {
         v3 v3Var = new v3();
         SurfaceConfig.d dVar = SurfaceConfig.d.PRIV;
-        v3Var.a(SurfaceConfig.c(dVar, SurfaceConfig.b.f24911f));
-        v3Var.a(SurfaceConfig.c(dVar, SurfaceConfig.b.f24908c));
-        v3Var.a(SurfaceConfig.c(SurfaceConfig.d.YUV, SurfaceConfig.b.f24918m));
+        v3Var.a(SurfaceConfig.c(dVar, SurfaceConfig.b.f25732f));
+        v3Var.a(SurfaceConfig.c(dVar, SurfaceConfig.b.f25729c));
+        v3Var.a(SurfaceConfig.c(SurfaceConfig.d.YUV, SurfaceConfig.b.f25739m));
         return v3Var;
     }
 
@@ -58,7 +58,7 @@ public class ExtraSupportedSurfaceCombinationsQuirk implements g3 {
         if (!"google".equalsIgnoreCase(Build.BRAND)) {
             return false;
         }
-        return f1328c.contains(Build.MODEL.toUpperCase(Locale.US));
+        return f1173c.contains(Build.MODEL.toUpperCase(Locale.US));
     }
 
     public static boolean n() {
@@ -66,7 +66,7 @@ public class ExtraSupportedSurfaceCombinationsQuirk implements g3 {
             return false;
         }
         String upperCase = Build.MODEL.toUpperCase(Locale.US);
-        Iterator<String> it = f1329d.iterator();
+        Iterator<String> it = f1174d.iterator();
         while (it.hasNext()) {
             if (upperCase.startsWith(it.next())) {
                 return true;
@@ -85,7 +85,7 @@ public class ExtraSupportedSurfaceCombinationsQuirk implements g3 {
     public final List<v3> j(String str) {
         ArrayList arrayList = new ArrayList();
         if (str.equals("1")) {
-            arrayList.add(f1327a);
+            arrayList.add(f1172a);
         }
         return arrayList;
     }

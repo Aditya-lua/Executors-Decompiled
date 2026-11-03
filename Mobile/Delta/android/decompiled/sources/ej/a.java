@@ -1,15 +1,13 @@
 package ej;
 
 import android.app.Activity;
+import cj.o;
 
 /* JADX INFO: loaded from: classes2.dex */
-public interface a {
-    void U(int i10);
+public class a {
+    public void a(Activity activity, String str, o oVar) {
+    }
 
-    void W(String str);
-
-    Activity f0();
-
-    @Deprecated
-    com.roblox.client.b q0();
+    public void b(Activity activity, String str, long j10, o oVar) {
+    }
 }

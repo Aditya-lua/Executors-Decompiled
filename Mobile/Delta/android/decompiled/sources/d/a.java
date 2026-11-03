@@ -11,36 +11,36 @@ import android.os.Parcelable;
 public interface a extends IInterface {
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public static final String f14243n = "android$support$v4$app$INotificationSideChannel".replace('$', '.');
+    public static final String f14223n = "android$support$v4$app$INotificationSideChannel".replace('$', '.');
 
     /* JADX INFO: renamed from: d.a$a, reason: collision with other inner class name */
-    public static abstract class AbstractBinderC0262a extends Binder implements a {
+    public static abstract class AbstractBinderC0274a extends Binder implements a {
 
         /* JADX INFO: renamed from: d.a$a$a, reason: collision with other inner class name */
-        public static class C0263a implements a {
+        public static class C0275a implements a {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public IBinder f14244a;
+            public IBinder f14224a;
 
-            public C0263a(IBinder iBinder) {
-                this.f14244a = iBinder;
+            public C0275a(IBinder iBinder) {
+                this.f14224a = iBinder;
             }
 
             @Override // android.os.IInterface
             public IBinder asBinder() {
-                return this.f14244a;
+                return this.f14224a;
             }
 
             @Override // d.a
             public void i2(String str, int i10, String str2, Notification notification) {
                 Parcel parcelObtain = Parcel.obtain();
                 try {
-                    parcelObtain.writeInterfaceToken(a.f14243n);
+                    parcelObtain.writeInterfaceToken(a.f14223n);
                     parcelObtain.writeString(str);
                     parcelObtain.writeInt(i10);
                     parcelObtain.writeString(str2);
                     b.b(parcelObtain, notification, 0);
-                    this.f14244a.transact(1, parcelObtain, null, 1);
+                    this.f14224a.transact(1, parcelObtain, null, 1);
                 } finally {
                     parcelObtain.recycle();
                 }
@@ -51,8 +51,8 @@ public interface a extends IInterface {
             if (iBinder == null) {
                 return null;
             }
-            IInterface iInterfaceQueryLocalInterface = iBinder.queryLocalInterface(a.f14243n);
-            return (iInterfaceQueryLocalInterface == null || !(iInterfaceQueryLocalInterface instanceof a)) ? new C0263a(iBinder) : (a) iInterfaceQueryLocalInterface;
+            IInterface iInterfaceQueryLocalInterface = iBinder.queryLocalInterface(a.f14223n);
+            return (iInterfaceQueryLocalInterface == null || !(iInterfaceQueryLocalInterface instanceof a)) ? new C0275a(iBinder) : (a) iInterfaceQueryLocalInterface;
         }
     }
 

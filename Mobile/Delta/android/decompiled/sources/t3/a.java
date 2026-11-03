@@ -14,7 +14,7 @@ public final class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final a f31345a = new a();
+    public static final a f31864a = new a();
 
     public final boolean a(@NotNull File srcFile, @NotNull File dstFile) {
         Intrinsics.checkNotNullParameter(srcFile, "srcFile");

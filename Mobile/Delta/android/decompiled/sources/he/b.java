@@ -1,35 +1,36 @@
 package he;
 
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /* JADX INFO: loaded from: classes2.dex */
-public abstract class b<T> extends y0<T> {
+public abstract class b<T> implements Iterator<T> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public EnumC0338b f19199a = EnumC0338b.NOT_READY;
+    public EnumC0341b f19394a = EnumC0341b.NOT_READY;
     public T b;
 
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f19200a;
+        public static final /* synthetic */ int[] f19395a;
 
         static {
-            int[] iArr = new int[EnumC0338b.values().length];
-            f19200a = iArr;
+            int[] iArr = new int[EnumC0341b.values().length];
+            f19395a = iArr;
             try {
-                iArr[EnumC0338b.DONE.ordinal()] = 1;
+                iArr[EnumC0341b.DONE.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f19200a[EnumC0338b.READY.ordinal()] = 2;
+                f19395a[EnumC0341b.READY.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
         }
     }
 
     /* JADX INFO: renamed from: he.b$b, reason: collision with other inner class name */
-    public enum EnumC0338b {
+    public enum EnumC0341b {
         READY,
         NOT_READY,
         DONE,
@@ -39,24 +40,24 @@ public abstract class b<T> extends y0<T> {
     public abstract T b();
 
     public final T d() {
-        this.f19199a = EnumC0338b.DONE;
+        this.f19394a = EnumC0341b.DONE;
         return null;
     }
 
     public final boolean e() {
-        this.f19199a = EnumC0338b.FAILED;
+        this.f19394a = EnumC0341b.FAILED;
         this.b = b();
-        if (this.f19199a == EnumC0338b.DONE) {
+        if (this.f19394a == EnumC0341b.DONE) {
             return false;
         }
-        this.f19199a = EnumC0338b.READY;
+        this.f19394a = EnumC0341b.READY;
         return true;
     }
 
     @Override // java.util.Iterator
     public final boolean hasNext() {
-        ge.n.r(this.f19199a != EnumC0338b.FAILED);
-        int i10 = a.f19200a[this.f19199a.ordinal()];
+        n.r(this.f19394a != EnumC0341b.FAILED);
+        int i10 = a.f19395a[this.f19394a.ordinal()];
         if (i10 == 1) {
             return false;
         }
@@ -71,9 +72,14 @@ public abstract class b<T> extends y0<T> {
         if (!hasNext()) {
             throw new NoSuchElementException();
         }
-        this.f19199a = EnumC0338b.NOT_READY;
-        T t8 = (T) k0.a(this.b);
+        this.f19394a = EnumC0341b.NOT_READY;
+        T t8 = (T) i.a(this.b);
         this.b = null;
         return t8;
+    }
+
+    @Override // java.util.Iterator
+    public final void remove() {
+        throw new UnsupportedOperationException();
     }
 }

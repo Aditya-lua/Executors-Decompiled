@@ -8,15 +8,15 @@ import java.util.RandomAccess;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class e1 extends z0 implements List, RandomAccess {
-    public static final d2 b = new a1(t1.f15397e, 0);
+    public static final d2 b = new a1(t1.f16011e, 0);
 
     public static e1 h(Object[] objArr, int i10) {
-        return i10 == 0 ? t1.f15397e : new t1(objArr, i10);
+        return i10 == 0 ? t1.f16011e : new t1(objArr, i10);
     }
 
     public static e1 i(Object[] objArr) {
         if (objArr.length == 0) {
-            return t1.f15397e;
+            return t1.f16011e;
         }
         Object[] objArr2 = (Object[]) objArr.clone();
         int length = objArr2.length;
@@ -104,7 +104,7 @@ public abstract class e1 extends z0 implements List, RandomAccess {
         if (i12 == size()) {
             return this;
         }
-        return i12 == 0 ? t1.f15397e : new d1(this, i10, i12);
+        return i12 == 0 ? t1.f16011e : new d1(this, i10, i12);
     }
 
     @Override // java.util.Collection, java.util.List

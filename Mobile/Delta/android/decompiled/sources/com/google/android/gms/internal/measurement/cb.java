@@ -8,15 +8,15 @@ import java.io.IOException;
 public class cb<MessageType extends gb<MessageType, BuilderType>, BuilderType extends cb<MessageType, BuilderType>> extends q9<MessageType, BuilderType> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final gb f6403a;
+    public final gb f6476a;
     public gb b;
 
     public cb(MessageType messagetype) {
-        this.f6403a = messagetype;
+        this.f6476a = messagetype;
         if (messagetype.k()) {
             throw new IllegalArgumentException("Default instance must be immutable.");
         }
-        this.b = messagetype.n();
+        this.b = messagetype.m();
     }
 
     public static void o(Object obj, Object obj2) {
@@ -31,8 +31,8 @@ public class cb<MessageType extends gb<MessageType, BuilderType>, BuilderType ex
     @Override // com.google.android.gms.internal.measurement.q9
     public final /* bridge */ /* synthetic */ q9 j(byte[] bArr, int i10, int i11) throws sb {
         ra raVar = ra.b;
-        wc wcVar = wc.f6869c;
-        w(bArr, 0, i11, ra.f6762c);
+        wc wcVar = wc.f6943c;
+        w(bArr, 0, i11, ra.f6836c);
         return this;
     }
 
@@ -50,14 +50,14 @@ public class cb<MessageType extends gb<MessageType, BuilderType>, BuilderType ex
     }
 
     public void q() {
-        gb gbVarN = this.f6403a.n();
-        o(gbVarN, this.b);
-        this.b = gbVarN;
+        gb gbVarM = this.f6476a.m();
+        o(gbVarM, this.b);
+        this.b = gbVarM;
     }
 
     /* JADX INFO: renamed from: r, reason: merged with bridge method [inline-methods] */
     public final cb clone() {
-        cb cbVar = (cb) this.f6403a.E(5, null, null);
+        cb cbVar = (cb) this.f6476a.E(5, null, null);
         cbVar.b = M();
         return cbVar;
     }
@@ -68,7 +68,7 @@ public class cb<MessageType extends gb<MessageType, BuilderType>, BuilderType ex
         if (!this.b.k()) {
             return (MessageType) this.b;
         }
-        this.b.p();
+        this.b.o();
         return (MessageType) this.b;
     }
 
@@ -81,7 +81,7 @@ public class cb<MessageType extends gb<MessageType, BuilderType>, BuilderType ex
     }
 
     public final cb v(gb gbVar) {
-        if (!this.f6403a.equals(gbVar)) {
+        if (!this.f6476a.equals(gbVar)) {
             if (!this.b.k()) {
                 q();
             }

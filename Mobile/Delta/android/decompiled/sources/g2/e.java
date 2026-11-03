@@ -9,6 +9,6 @@ import java.util.HashSet;
 public class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public SparseIntArray f17875a = new SparseIntArray();
+    public SparseIntArray f18414a = new SparseIntArray();
     public HashMap<Integer, HashSet<WeakReference<Object>>> b = new HashMap<>();
 }

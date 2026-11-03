@@ -10,28 +10,28 @@ public class d {
     public int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f4344c;
+    public boolean f4510c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final e f4345d;
+    public final e f4511d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final a f4346e;
+    public final a f4512e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public d f4347f;
+    public d f4513f;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public z1.i f4350i;
+    public z1.i f4516i;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public HashSet<d> f4343a = null;
+    public HashSet<d> f4509a = null;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public int f4348g = 0;
+    public int f4514g = 0;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public int f4349h = Integer.MIN_VALUE;
+    public int f4515h = Integer.MIN_VALUE;
 
     public enum a {
         NONE,
@@ -46,8 +46,8 @@ public class d {
     }
 
     public d(e eVar, a aVar) {
-        this.f4345d = eVar;
-        this.f4346e = aVar;
+        this.f4511d = eVar;
+        this.f4512e = aVar;
     }
 
     public boolean a(d dVar, int i10) {
@@ -62,35 +62,35 @@ public class d {
         if (!z10 && !p(dVar)) {
             return false;
         }
-        this.f4347f = dVar;
-        if (dVar.f4343a == null) {
-            dVar.f4343a = new HashSet<>();
+        this.f4513f = dVar;
+        if (dVar.f4509a == null) {
+            dVar.f4509a = new HashSet<>();
         }
-        HashSet<d> hashSet = this.f4347f.f4343a;
+        HashSet<d> hashSet = this.f4513f.f4509a;
         if (hashSet != null) {
             hashSet.add(this);
         }
-        this.f4348g = i10;
-        this.f4349h = i11;
+        this.f4514g = i10;
+        this.f4515h = i11;
         return true;
     }
 
     public void c(int i10, ArrayList<o> arrayList, o oVar) {
-        HashSet<d> hashSet = this.f4343a;
+        HashSet<d> hashSet = this.f4509a;
         if (hashSet != null) {
             Iterator<d> it = hashSet.iterator();
             while (it.hasNext()) {
-                d2.i.a(it.next().f4345d, i10, arrayList, oVar);
+                d2.i.a(it.next().f4511d, i10, arrayList, oVar);
             }
         }
     }
 
     public HashSet<d> d() {
-        return this.f4343a;
+        return this.f4509a;
     }
 
     public int e() {
-        if (this.f4344c) {
+        if (this.f4510c) {
             return this.b;
         }
         return 0;
@@ -98,14 +98,14 @@ public class d {
 
     public int f() {
         d dVar;
-        if (this.f4345d.V() == 8) {
+        if (this.f4511d.V() == 8) {
             return 0;
         }
-        return (this.f4349h == Integer.MIN_VALUE || (dVar = this.f4347f) == null || dVar.f4345d.V() != 8) ? this.f4348g : this.f4349h;
+        return (this.f4515h == Integer.MIN_VALUE || (dVar = this.f4513f) == null || dVar.f4511d.V() != 8) ? this.f4514g : this.f4515h;
     }
 
     public final d g() {
-        switch (this.f4346e) {
+        switch (this.f4512e) {
             case NONE:
             case BASELINE:
             case CENTER:
@@ -113,36 +113,36 @@ public class d {
             case CENTER_Y:
                 return null;
             case LEFT:
-                return this.f4345d.Q;
+                return this.f4511d.Q;
             case TOP:
-                return this.f4345d.R;
+                return this.f4511d.R;
             case RIGHT:
-                return this.f4345d.O;
+                return this.f4511d.O;
             case BOTTOM:
-                return this.f4345d.P;
+                return this.f4511d.P;
             default:
-                throw new AssertionError(this.f4346e.name());
+                throw new AssertionError(this.f4512e.name());
         }
     }
 
     public e h() {
-        return this.f4345d;
+        return this.f4511d;
     }
 
     public z1.i i() {
-        return this.f4350i;
+        return this.f4516i;
     }
 
     public d j() {
-        return this.f4347f;
+        return this.f4513f;
     }
 
     public a k() {
-        return this.f4346e;
+        return this.f4512e;
     }
 
     public boolean l() {
-        HashSet<d> hashSet = this.f4343a;
+        HashSet<d> hashSet = this.f4509a;
         if (hashSet == null) {
             return false;
         }
@@ -156,16 +156,16 @@ public class d {
     }
 
     public boolean m() {
-        HashSet<d> hashSet = this.f4343a;
+        HashSet<d> hashSet = this.f4509a;
         return hashSet != null && hashSet.size() > 0;
     }
 
     public boolean n() {
-        return this.f4344c;
+        return this.f4510c;
     }
 
     public boolean o() {
-        return this.f4347f != null;
+        return this.f4513f != null;
     }
 
     public boolean p(d dVar) {
@@ -173,7 +173,7 @@ public class d {
             return false;
         }
         a aVarK = dVar.k();
-        a aVar = this.f4346e;
+        a aVar = this.f4512e;
         if (aVarK == aVar) {
             return aVar != a.BASELINE || (dVar.h().Z() && h().Z());
         }
@@ -201,36 +201,36 @@ public class d {
             case CENTER:
                 return (aVarK == a.BASELINE || aVarK == a.CENTER_X || aVarK == a.CENTER_Y) ? false : true;
             default:
-                throw new AssertionError(this.f4346e.name());
+                throw new AssertionError(this.f4512e.name());
         }
     }
 
     public void q() {
         HashSet<d> hashSet;
-        d dVar = this.f4347f;
-        if (dVar != null && (hashSet = dVar.f4343a) != null) {
+        d dVar = this.f4513f;
+        if (dVar != null && (hashSet = dVar.f4509a) != null) {
             hashSet.remove(this);
-            if (this.f4347f.f4343a.size() == 0) {
-                this.f4347f.f4343a = null;
+            if (this.f4513f.f4509a.size() == 0) {
+                this.f4513f.f4509a = null;
             }
         }
-        this.f4343a = null;
-        this.f4347f = null;
-        this.f4348g = 0;
-        this.f4349h = Integer.MIN_VALUE;
-        this.f4344c = false;
+        this.f4509a = null;
+        this.f4513f = null;
+        this.f4514g = 0;
+        this.f4515h = Integer.MIN_VALUE;
+        this.f4510c = false;
         this.b = 0;
     }
 
     public void r() {
-        this.f4344c = false;
+        this.f4510c = false;
         this.b = 0;
     }
 
     public void s(z1.c cVar) {
-        z1.i iVar = this.f4350i;
+        z1.i iVar = this.f4516i;
         if (iVar == null) {
-            this.f4350i = new z1.i(z1.i.a.UNRESTRICTED, null);
+            this.f4516i = new z1.i(z1.i.a.UNRESTRICTED, null);
         } else {
             iVar.e();
         }
@@ -238,16 +238,16 @@ public class d {
 
     public void t(int i10) {
         this.b = i10;
-        this.f4344c = true;
+        this.f4510c = true;
     }
 
     public String toString() {
-        return this.f4345d.t() + ":" + this.f4346e.toString();
+        return this.f4511d.t() + ":" + this.f4512e.toString();
     }
 
     public void u(int i10) {
         if (o()) {
-            this.f4349h = i10;
+            this.f4515h = i10;
         }
     }
 }

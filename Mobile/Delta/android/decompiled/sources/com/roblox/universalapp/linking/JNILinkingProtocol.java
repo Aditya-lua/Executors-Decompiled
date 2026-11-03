@@ -36,6 +36,18 @@ public class JNILinkingProtocol {
 
     public static native String nativeCreateAtIngress(String str, String str2);
 
+    public static native String nativeCreateAtIngressWithOrigin(String str, String str2, boolean z10);
+
+    public static native String nativeCreateInternalDlic(String str, String str2);
+
+    public static native void nativeDetectDlic(String str);
+
+    public static native String nativeDlicGetUrl(String str);
+
+    public static native boolean nativeDlicSetTerminated(String str, String str2, String str3, String str4);
+
+    public static native boolean nativeEngineShouldHandleDlic(String str);
+
     public static native void nativeReportReceived(String str, String str2);
 
     public static native void nativeReportReceived(String str, String str2, boolean z10);

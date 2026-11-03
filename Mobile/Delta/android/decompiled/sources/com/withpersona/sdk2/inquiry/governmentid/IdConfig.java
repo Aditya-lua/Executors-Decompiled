@@ -5,7 +5,7 @@ import android.os.Parcelable;
 import com.appsflyer.sdk_base.referrer.Payload;
 import com.withpersona.sdk2.camera.AutoCaptureRuleSet;
 import com.withpersona.sdk2.inquiry.governmentid.IdConfig;
-import io.j2;
+import go.j2;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -21,7 +21,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000Z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0016\b\u0087\b\u0018\u00002\u00020\u0001:\u0004456'B;\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\f\u0010\b\u001a\b\u0012\u0004\u0012\u00020\u00070\u0006\u0012\f\u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\u0006\u0012\u0006\u0010\f\u001a\u00020\u000b¢\u0006\u0004\b\r\u0010\u000eJ\u0015\u0010\u0011\u001a\u00020\u00072\u0006\u0010\u0010\u001a\u00020\u000f¢\u0006\u0004\b\u0011\u0010\u0012J\r\u0010\u0014\u001a\u00020\u0013¢\u0006\u0004\b\u0014\u0010\u0015J\u001d\u0010\u001a\u001a\u00020\u00192\u0006\u0010\u0017\u001a\u00020\u00162\u0006\u0010\u0018\u001a\u00020\u0013¢\u0006\u0004\b\u001a\u0010\u001bJ\u0010\u0010\u001c\u001a\u00020\u0002HÖ\u0001¢\u0006\u0004\b\u001c\u0010\u001dJ\u0010\u0010\u001e\u001a\u00020\u0013HÖ\u0001¢\u0006\u0004\b\u001e\u0010\u0015J\u001a\u0010\"\u001a\u00020!2\b\u0010 \u001a\u0004\u0018\u00010\u001fHÖ\u0003¢\u0006\u0004\b\"\u0010#R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b$\u0010%\u001a\u0004\b&\u0010\u001dR\u0017\u0010\u0005\u001a\u00020\u00048\u0006¢\u0006\f\n\u0004\b'\u0010(\u001a\u0004\b$\u0010)R\u001d\u0010\b\u001a\b\u0012\u0004\u0012\u00020\u00070\u00068\u0006¢\u0006\f\n\u0004\b*\u0010+\u001a\u0004\b,\u0010-R\u001d\u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\u00068\u0006¢\u0006\f\n\u0004\b.\u0010+\u001a\u0004\b/\u0010-R\u0017\u0010\f\u001a\u00020\u000b8\u0006¢\u0006\f\n\u0004\b0\u00101\u001a\u0004\b2\u00103¨\u00067"}, d2 = {"Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig;", "Landroid/os/Parcelable;", "", "idClassKey", "Lio/j2;", "icon", "", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$IdSideConfig;", "sideConfigs", "Lcom/withpersona/sdk2/inquiry/governmentid/IdPart;", "parts", "Lpo/b;", Payload.TYPE, "<init>", "(Ljava/lang/String;Lio/j2;Ljava/util/List;Ljava/util/List;Lpo/b;)V", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;", "side", "g", "(Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;)Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$IdSideConfig;", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Ljava/lang/String;", "m2", "b", "Lio/j2;", "()Lio/j2;", "c", "Ljava/util/List;", "getSideConfigs", "()Ljava/util/List;", "d", "f", "e", "Lpo/b;", "i", "()Lpo/b;", "IdSideConfig", "AutoCaptureConfig", "ManualCaptureConfig", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000Z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0016\b\u0087\b\u0018\u00002\u00020\u0001:\u0004456'B;\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\f\u0010\b\u001a\b\u0012\u0004\u0012\u00020\u00070\u0006\u0012\f\u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\u0006\u0012\u0006\u0010\f\u001a\u00020\u000b¢\u0006\u0004\b\r\u0010\u000eJ\u0015\u0010\u0011\u001a\u00020\u00072\u0006\u0010\u0010\u001a\u00020\u000f¢\u0006\u0004\b\u0011\u0010\u0012J\r\u0010\u0014\u001a\u00020\u0013¢\u0006\u0004\b\u0014\u0010\u0015J\u001d\u0010\u001a\u001a\u00020\u00192\u0006\u0010\u0017\u001a\u00020\u00162\u0006\u0010\u0018\u001a\u00020\u0013¢\u0006\u0004\b\u001a\u0010\u001bJ\u0010\u0010\u001c\u001a\u00020\u0002HÖ\u0001¢\u0006\u0004\b\u001c\u0010\u001dJ\u0010\u0010\u001e\u001a\u00020\u0013HÖ\u0001¢\u0006\u0004\b\u001e\u0010\u0015J\u001a\u0010\"\u001a\u00020!2\b\u0010 \u001a\u0004\u0018\u00010\u001fHÖ\u0003¢\u0006\u0004\b\"\u0010#R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b$\u0010%\u001a\u0004\b&\u0010\u001dR\u0017\u0010\u0005\u001a\u00020\u00048\u0006¢\u0006\f\n\u0004\b'\u0010(\u001a\u0004\b$\u0010)R\u001d\u0010\b\u001a\b\u0012\u0004\u0012\u00020\u00070\u00068\u0006¢\u0006\f\n\u0004\b*\u0010+\u001a\u0004\b,\u0010-R\u001d\u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\u00068\u0006¢\u0006\f\n\u0004\b.\u0010+\u001a\u0004\b/\u0010-R\u0017\u0010\f\u001a\u00020\u000b8\u0006¢\u0006\f\n\u0004\b0\u00101\u001a\u0004\b2\u00103¨\u00067"}, d2 = {"Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig;", "Landroid/os/Parcelable;", "", "idClassKey", "Lgo/j2;", "icon", "", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$IdSideConfig;", "sideConfigs", "Lcom/withpersona/sdk2/inquiry/governmentid/IdPart;", "parts", "Lno/b;", Payload.TYPE, "<init>", "(Ljava/lang/String;Lgo/j2;Ljava/util/List;Ljava/util/List;Lno/b;)V", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;", "side", "g", "(Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;)Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$IdSideConfig;", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Ljava/lang/String;", "n2", "b", "Lgo/j2;", "()Lgo/j2;", "c", "Ljava/util/List;", "getSideConfigs", "()Ljava/util/List;", "d", "f", "e", "Lno/b;", "i", "()Lno/b;", "IdSideConfig", "AutoCaptureConfig", "ManualCaptureConfig", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final /* data */ class IdConfig implements Parcelable {
 
     @NotNull
@@ -45,7 +45,7 @@ public final /* data */ class IdConfig implements Parcelable {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata and from toString */
     @NotNull
-    public final po.b type;
+    public final no.b type;
 
     @Metadata(d1 = {"\u0000>\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0006\b\u0087\b\u0018\u00002\u00020\u0001B\u0011\u0012\b\b\u0002\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\r\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\u0007\u0010\bJ\u001d\u0010\r\u001a\u00020\f2\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\u000b\u001a\u00020\u0006¢\u0006\u0004\b\r\u0010\u000eJ\u0010\u0010\u0010\u001a\u00020\u000fHÖ\u0001¢\u0006\u0004\b\u0010\u0010\u0011J\u0010\u0010\u0012\u001a\u00020\u0006HÖ\u0001¢\u0006\u0004\b\u0012\u0010\bJ\u001a\u0010\u0016\u001a\u00020\u00152\b\u0010\u0014\u001a\u0004\u0018\u00010\u0013HÖ\u0003¢\u0006\u0004\b\u0016\u0010\u0017R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0018\u0010\u0019\u001a\u0004\b\u0018\u0010\u001a¨\u0006\u001b"}, d2 = {"Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$AutoCaptureConfig;", "Landroid/os/Parcelable;", "Lcom/withpersona/sdk2/camera/AutoCaptureRuleSet;", "ruleSet", "<init>", "(Lcom/withpersona/sdk2/camera/AutoCaptureRuleSet;)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Lcom/withpersona/sdk2/camera/AutoCaptureRuleSet;", "()Lcom/withpersona/sdk2/camera/AutoCaptureRuleSet;", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final /* data */ class AutoCaptureConfig implements Parcelable {
@@ -336,7 +336,7 @@ public final /* data */ class IdConfig implements Parcelable {
             for (int i13 = 0; i13 != i12; i13++) {
                 arrayList2.add(parcel.readParcelable(IdConfig.class.getClassLoader()));
             }
-            return new IdConfig(string, j2VarValueOf, arrayList, arrayList2, po.b.valueOf(parcel.readString()));
+            return new IdConfig(string, j2VarValueOf, arrayList, arrayList2, no.b.valueOf(parcel.readString()));
         }
 
         @Override // android.os.Parcelable.Creator
@@ -360,7 +360,7 @@ public final /* data */ class IdConfig implements Parcelable {
         public final String key;
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f10700j = qt.b.a(b());
+        public static final /* synthetic */ ot.a f10781j = ot.b.a(b());
 
         /* JADX INFO: renamed from: b, reason: from kotlin metadata */
         @NotNull
@@ -368,7 +368,7 @@ public final /* data */ class IdConfig implements Parcelable {
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
         @NotNull
-        public static final jt.h<Map<String, b>> f10693c = jt.i.b(new Function0() { // from class: io.i2
+        public static final gt.h<Map<String, b>> f10774c = gt.i.b(new Function0() { // from class: go.i2
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
                 return IdConfig.b.h();
@@ -376,7 +376,7 @@ public final /* data */ class IdConfig implements Parcelable {
         });
 
         /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.governmentid.IdConfig$b$a, reason: from kotlin metadata */
-        @Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010$\n\u0002\b\u0006\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u0004\u0018\u00010\u00062\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0007\u0010\bR'\u0010\u000e\u001a\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00060\t8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\n\u0010\u000b\u001a\u0004\b\f\u0010\r¨\u0006\u000f"}, d2 = {"Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b$a;", "", "<init>", "()V", "", "sideKey", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;", "a", "(Ljava/lang/String;)Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;", "", "sideKeyToSide$delegate", "Ljt/h;", "b", "()Ljava/util/Map;", "sideKeyToSide", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+        @Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010$\n\u0002\b\u0006\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u0004\u0018\u00010\u00062\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0007\u0010\bR'\u0010\u000e\u001a\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00060\t8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\n\u0010\u000b\u001a\u0004\b\f\u0010\r¨\u0006\u000f"}, d2 = {"Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b$a;", "", "<init>", "()V", "", "sideKey", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;", "a", "(Ljava/lang/String;)Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;", "", "sideKeyToSide$delegate", "Lgt/h;", "b", "()Ljava/util/Map;", "sideKeyToSide", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
         public static final class Companion {
             public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
                 this();
@@ -389,7 +389,7 @@ public final /* data */ class IdConfig implements Parcelable {
             }
 
             public final Map<String, b> b() {
-                return (Map) b.f10693c.getValue();
+                return (Map) b.f10774c.getValue();
             }
 
             public Companion() {
@@ -401,8 +401,8 @@ public final /* data */ class IdConfig implements Parcelable {
         }
 
         @NotNull
-        public static qt.a<b> d() {
-            return f10700j;
+        public static ot.a<b> d() {
+            return f10781j;
         }
 
         public static final Map h() {
@@ -422,7 +422,7 @@ public final /* data */ class IdConfig implements Parcelable {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public IdConfig(@NotNull String idClassKey, @NotNull j2 icon, @NotNull List<IdSideConfig> sideConfigs, @NotNull List<? extends IdPart> parts, @NotNull po.b type) {
+    public IdConfig(@NotNull String idClassKey, @NotNull j2 icon, @NotNull List<IdSideConfig> sideConfigs, @NotNull List<? extends IdPart> parts, @NotNull no.b type) {
         Intrinsics.checkNotNullParameter(idClassKey, "idClassKey");
         Intrinsics.checkNotNullParameter(icon, "icon");
         Intrinsics.checkNotNullParameter(sideConfigs, "sideConfigs");
@@ -479,12 +479,12 @@ public final /* data */ class IdConfig implements Parcelable {
 
     @NotNull
     /* JADX INFO: renamed from: i, reason: from getter */
-    public final po.b getType() {
+    public final no.b getType() {
         return this.type;
     }
 
     @NotNull
-    /* JADX INFO: renamed from: m2, reason: from getter */
+    /* JADX INFO: renamed from: n2, reason: from getter */
     public final String getIdClassKey() {
         return this.idClassKey;
     }

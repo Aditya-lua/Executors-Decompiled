@@ -4,10 +4,10 @@ package g0;
 public class h1 extends Exception {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f17446a;
+    public final int f17985a;
 
     public h1(int i10, String str, Throwable th2) {
         super(str, th2);
-        this.f17446a = i10;
+        this.f17985a = i10;
     }
 }

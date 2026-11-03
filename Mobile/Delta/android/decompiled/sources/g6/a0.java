@@ -12,12 +12,12 @@ public final class a0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final String f17896a;
+    public static final String f18435a;
 
     static {
         String strI = x5.w.i("WakeLocks");
         Intrinsics.checkNotNullExpressionValue(strI, "tagWithPrefix(...)");
-        f17896a = strI;
+        f18435a = strI;
     }
 
     @NotNull
@@ -28,7 +28,7 @@ public final class a0 {
         Intrinsics.d(systemService, "null cannot be cast to non-null type android.os.PowerManager");
         String str = "WorkManager: " + tag;
         PowerManager.WakeLock wakeLockNewWakeLock = ((PowerManager) systemService).newWakeLock(1, str);
-        b0 b0Var = b0.f17898a;
+        b0 b0Var = b0.f18437a;
         synchronized (b0Var) {
             b0Var.a().put(wakeLockNewWakeLock, str);
         }

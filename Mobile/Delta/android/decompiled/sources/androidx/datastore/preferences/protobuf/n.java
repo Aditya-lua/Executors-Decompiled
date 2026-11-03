@@ -4,15 +4,15 @@ package androidx.datastore.preferences.protobuf;
 public final class n {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Class<?> f2246a = c();
+    public static final Class<?> f2091a = c();
 
     public static o a() {
         o oVarB = b("getEmptyRegistry");
-        return oVarB != null ? oVarB : o.f2248c;
+        return oVarB != null ? oVarB : o.f2093c;
     }
 
     public static final o b(String str) {
-        Class<?> cls = f2246a;
+        Class<?> cls = f2091a;
         if (cls == null) {
             return null;
         }

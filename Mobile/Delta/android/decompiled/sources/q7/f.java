@@ -6,7 +6,7 @@ import android.graphics.PointF;
 public class f {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final r7.c.a f29238a = r7.c.a.a("nm", "p", "s", "hd", "d");
+    public static final r7.c.a f29591a = r7.c.a.a("nm", "p", "s", "hd", "d");
 
     public static n7.b a(r7.c cVar, f7.i iVar, int i10) {
         boolean z10 = i10 == 3;
@@ -15,7 +15,7 @@ public class f {
         m7.o<PointF, PointF> oVarB = null;
         m7.f fVarI = null;
         while (cVar.f()) {
-            int iR = cVar.r(f29238a);
+            int iR = cVar.r(f29591a);
             if (iR == 0) {
                 strM = cVar.m();
             } else if (iR == 1) {

@@ -16,60 +16,60 @@ import androidx.appcompat.widget.ActionMenuView;
 public abstract class a extends ViewGroup {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final C0508a f28895a;
+    public final C0507a f29248a;
     public final Context b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public ActionMenuView f28896c;
+    public ActionMenuView f29249c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public androidx.appcompat.widget.a f28897d;
+    public androidx.appcompat.widget.a f29250d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public int f28898e;
+    public int f29251e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public androidx.core.view.y0 f28899f;
+    public androidx.core.view.y0 f29252f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public boolean f28900g;
+    public boolean f29253g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public boolean f28901h;
+    public boolean f29254h;
 
     /* JADX INFO: renamed from: q.a$a, reason: collision with other inner class name */
-    public class C0508a implements androidx.core.view.z0 {
+    public class C0507a implements androidx.core.view.z0 {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public boolean f28902a = false;
+        public boolean f29255a = false;
         public int b;
 
-        public C0508a() {
+        public C0507a() {
         }
 
         @Override // androidx.core.view.z0
         public void a(View view) {
-            this.f28902a = true;
+            this.f29255a = true;
         }
 
         @Override // androidx.core.view.z0
         public void b(View view) {
-            if (this.f28902a) {
+            if (this.f29255a) {
                 return;
             }
             a aVar = a.this;
-            aVar.f28899f = null;
+            aVar.f29252f = null;
             a.super.setVisibility(this.b);
         }
 
         @Override // androidx.core.view.z0
         public void c(View view) {
             a.super.setVisibility(0);
-            this.f28902a = false;
+            this.f29255a = false;
         }
 
-        public C0508a d(androidx.core.view.y0 y0Var, int i10) {
-            a.this.f28899f = y0Var;
+        public C0507a d(androidx.core.view.y0 y0Var, int i10) {
+            a.this.f29252f = y0Var;
             this.b = i10;
             return this;
         }
@@ -101,14 +101,14 @@ public abstract class a extends ViewGroup {
     }
 
     public androidx.core.view.y0 f(int i10, long j10) {
-        androidx.core.view.y0 y0Var = this.f28899f;
+        androidx.core.view.y0 y0Var = this.f29252f;
         if (y0Var != null) {
             y0Var.c();
         }
         if (i10 != 0) {
             androidx.core.view.y0 y0VarB = androidx.core.view.o0.e(this).b(0.0f);
             y0VarB.e(j10);
-            y0VarB.g(this.f28895a.d(y0VarB, i10));
+            y0VarB.g(this.f29248a.d(y0VarB, i10));
             return y0VarB;
         }
         if (getVisibility() != 0) {
@@ -116,25 +116,25 @@ public abstract class a extends ViewGroup {
         }
         androidx.core.view.y0 y0VarB2 = androidx.core.view.o0.e(this).b(1.0f);
         y0VarB2.e(j10);
-        y0VarB2.g(this.f28895a.d(y0VarB2, i10));
+        y0VarB2.g(this.f29248a.d(y0VarB2, i10));
         return y0VarB2;
     }
 
     public int getAnimatedVisibility() {
-        return this.f28899f != null ? this.f28895a.b : getVisibility();
+        return this.f29252f != null ? this.f29248a.b : getVisibility();
     }
 
     public int getContentHeight() {
-        return this.f28898e;
+        return this.f29251e;
     }
 
     @Override // android.view.View
     public void onConfigurationChanged(Configuration configuration) {
         super.onConfigurationChanged(configuration);
-        TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(null, i.j.f20018a, i.a.f19887c, 0);
-        setContentHeight(typedArrayObtainStyledAttributes.getLayoutDimension(i.j.f20062j, 0));
+        TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(null, i.j.f20134a, i.a.f20003c, 0);
+        setContentHeight(typedArrayObtainStyledAttributes.getLayoutDimension(i.j.f20178j, 0));
         typedArrayObtainStyledAttributes.recycle();
-        androidx.appcompat.widget.a aVar = this.f28897d;
+        androidx.appcompat.widget.a aVar = this.f29250d;
         if (aVar != null) {
             aVar.G(configuration);
         }
@@ -144,16 +144,16 @@ public abstract class a extends ViewGroup {
     public boolean onHoverEvent(MotionEvent motionEvent) {
         int actionMasked = motionEvent.getActionMasked();
         if (actionMasked == 9) {
-            this.f28901h = false;
+            this.f29254h = false;
         }
-        if (!this.f28901h) {
+        if (!this.f29254h) {
             boolean zOnHoverEvent = super.onHoverEvent(motionEvent);
             if (actionMasked == 9 && !zOnHoverEvent) {
-                this.f28901h = true;
+                this.f29254h = true;
             }
         }
         if (actionMasked == 10 || actionMasked == 3) {
-            this.f28901h = false;
+            this.f29254h = false;
         }
         return true;
     }
@@ -162,29 +162,29 @@ public abstract class a extends ViewGroup {
     public boolean onTouchEvent(MotionEvent motionEvent) {
         int actionMasked = motionEvent.getActionMasked();
         if (actionMasked == 0) {
-            this.f28900g = false;
+            this.f29253g = false;
         }
-        if (!this.f28900g) {
+        if (!this.f29253g) {
             boolean zOnTouchEvent = super.onTouchEvent(motionEvent);
             if (actionMasked == 0 && !zOnTouchEvent) {
-                this.f28900g = true;
+                this.f29253g = true;
             }
         }
         if (actionMasked == 1 || actionMasked == 3) {
-            this.f28900g = false;
+            this.f29253g = false;
         }
         return true;
     }
 
     public void setContentHeight(int i10) {
-        this.f28898e = i10;
+        this.f29251e = i10;
         requestLayout();
     }
 
     @Override // android.view.View
     public void setVisibility(int i10) {
         if (i10 != getVisibility()) {
-            androidx.core.view.y0 y0Var = this.f28899f;
+            androidx.core.view.y0 y0Var = this.f29252f;
             if (y0Var != null) {
                 y0Var.c();
             }
@@ -194,9 +194,9 @@ public abstract class a extends ViewGroup {
 
     public a(@NonNull Context context, AttributeSet attributeSet, int i10) {
         super(context, attributeSet, i10);
-        this.f28895a = new C0508a();
+        this.f29248a = new C0507a();
         TypedValue typedValue = new TypedValue();
-        if (!context.getTheme().resolveAttribute(i.a.f19886a, typedValue, true) || typedValue.resourceId == 0) {
+        if (!context.getTheme().resolveAttribute(i.a.f20002a, typedValue, true) || typedValue.resourceId == 0) {
             this.b = context;
         } else {
             this.b = new ContextThemeWrapper(context, typedValue.resourceId);

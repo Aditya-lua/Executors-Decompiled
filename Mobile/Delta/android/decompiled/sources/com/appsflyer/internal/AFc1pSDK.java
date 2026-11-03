@@ -11,7 +11,7 @@ public final class AFc1pSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    final String f5261d;
+    final String f5334d;
 
     @NotNull
     final List<AFe1zSDK> unregisterClient;
@@ -20,7 +20,7 @@ public final class AFc1pSDK {
     public AFc1pSDK(@NotNull String str, @NotNull List<? extends AFe1zSDK> list, int i10) {
         Intrinsics.checkNotNullParameter(str, "");
         Intrinsics.checkNotNullParameter(list, "");
-        this.f5261d = str;
+        this.f5334d = str;
         this.unregisterClient = list;
         this.AFKeystoreWrapper = i10;
     }
@@ -33,15 +33,15 @@ public final class AFc1pSDK {
             return false;
         }
         AFc1pSDK aFc1pSDK = (AFc1pSDK) obj;
-        return Intrinsics.c(this.f5261d, aFc1pSDK.f5261d) && Intrinsics.c(this.unregisterClient, aFc1pSDK.unregisterClient) && this.AFKeystoreWrapper == aFc1pSDK.AFKeystoreWrapper;
+        return Intrinsics.c(this.f5334d, aFc1pSDK.f5334d) && Intrinsics.c(this.unregisterClient, aFc1pSDK.unregisterClient) && this.AFKeystoreWrapper == aFc1pSDK.AFKeystoreWrapper;
     }
 
     public final int hashCode() {
-        return (((this.f5261d.hashCode() * 31) + this.unregisterClient.hashCode()) * 31) + Integer.hashCode(this.AFKeystoreWrapper);
+        return (((this.f5334d.hashCode() * 31) + this.unregisterClient.hashCode()) * 31) + Integer.hashCode(this.AFKeystoreWrapper);
     }
 
     @NotNull
     public final String toString() {
-        return "StorageConfigTypeEntry(cacheDirName=" + this.f5261d + ", eventTypes=" + this.unregisterClient + ", maxCapacity=" + this.AFKeystoreWrapper + ")";
+        return "StorageConfigTypeEntry(cacheDirName=" + this.f5334d + ", eventTypes=" + this.unregisterClient + ", maxCapacity=" + this.AFKeystoreWrapper + ")";
     }
 }

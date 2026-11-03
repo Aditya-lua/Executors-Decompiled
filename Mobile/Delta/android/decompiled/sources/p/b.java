@@ -9,14 +9,14 @@ import w1.j;
 public abstract class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f28038a;
+    public final Context f28257a;
     public j<r2.b, MenuItem> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public j<r2.c, SubMenu> f28039c;
+    public j<r2.c, SubMenu> f28258c;
 
     public b(Context context) {
-        this.f28038a = context;
+        this.f28257a = context;
     }
 
     public final MenuItem c(MenuItem menuItem) {
@@ -31,7 +31,7 @@ public abstract class b {
         if (menuItem2 != null) {
             return menuItem2;
         }
-        c cVar = new c(this.f28038a, bVar);
+        c cVar = new c(this.f28257a, bVar);
         this.b.put(bVar, cVar);
         return cVar;
     }
@@ -41,15 +41,15 @@ public abstract class b {
             return subMenu;
         }
         r2.c cVar = (r2.c) subMenu;
-        if (this.f28039c == null) {
-            this.f28039c = new j<>();
+        if (this.f28258c == null) {
+            this.f28258c = new j<>();
         }
-        SubMenu subMenu2 = this.f28039c.get(cVar);
+        SubMenu subMenu2 = this.f28258c.get(cVar);
         if (subMenu2 != null) {
             return subMenu2;
         }
-        g gVar = new g(this.f28038a, cVar);
-        this.f28039c.put(cVar, gVar);
+        g gVar = new g(this.f28257a, cVar);
+        this.f28258c.put(cVar, gVar);
         return gVar;
     }
 
@@ -58,7 +58,7 @@ public abstract class b {
         if (jVar != null) {
             jVar.clear();
         }
-        j<r2.c, SubMenu> jVar2 = this.f28039c;
+        j<r2.c, SubMenu> jVar2 = this.f28258c;
         if (jVar2 != null) {
             jVar2.clear();
         }

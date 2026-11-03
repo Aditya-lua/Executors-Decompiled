@@ -1,93 +1,380 @@
 package ts;
 
+import android.text.Spannable;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import kotlin.Metadata;
-import kotlin.collections.CollectionsKt;
-import kotlin.collections.o;
-import kotlin.collections.q;
-import kotlin.jvm.internal.Intrinsics;
-import kotlin.text.w;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import on.a0;
+import on.b0;
+import on.c0;
+import on.q;
+import on.s;
+import on.v;
+import on.w;
+import on.x;
+import ss.r;
+import ss.t;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000,\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\b\u0003\n\u0002\u0010\u000f\n\u0002\b\u0006\n\u0002\u0010\u0006\n\u0002\b\u0005\u001a\u0013\u0010\u0002\u001a\u00020\u0001*\u0004\u0018\u00010\u0000¢\u0006\u0004\b\u0002\u0010\u0003\u001a\u0013\u0010\u0005\u001a\u00020\u0004*\u0004\u0018\u00010\u0000¢\u0006\u0004\b\u0005\u0010\u0006\u001a\u0013\u0010\u0007\u001a\u00020\u0004*\u0004\u0018\u00010\u0000¢\u0006\u0004\b\u0007\u0010\u0006\"\u001f\u0010\u000b\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00000\b*\u0004\u0018\u00010\u00008F¢\u0006\u0006\u001a\u0004\b\t\u0010\n\")\u0010\u000f\u001a\u000e\u0012\n\u0012\b\u0012\u0002\b\u0003\u0018\u00010\f0\b*\n\u0012\u0006\u0012\u0004\u0018\u00010\u00000\b8F¢\u0006\u0006\u001a\u0004\b\r\u0010\u000e\" \u0010\u0012\u001a\b\u0012\u0002\b\u0003\u0018\u00010\f*\u0004\u0018\u00010\u00008BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b\u0010\u0010\u0011\"\u001f\u0010\u0015\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00130\b*\u0004\u0018\u00010\u00008F¢\u0006\u0006\u001a\u0004\b\u0014\u0010\n\"(\u0010\u0017\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00130\b*\n\u0012\u0006\u0012\u0004\u0018\u00010\u00000\b8BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b\u0016\u0010\u000e¨\u0006\u0018"}, d2 = {"", "", "h", "(Ljava/lang/Object;)Ljava/lang/String;", "", "g", "(Ljava/lang/Object;)Z", "f", "", "c", "(Ljava/lang/Object;)Ljava/util/List;", "asList", "", "d", "(Ljava/util/List;)Ljava/util/List;", "comparableList", "a", "(Ljava/lang/Object;)Ljava/lang/Comparable;", "asComparable", "", "b", "asDoubleList", "e", "doubleList", "utils_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
-public final class a {
-    public static final Comparable<?> a(Object obj) {
-        if (obj instanceof Comparable) {
-            return (Comparable) obj;
+public class a extends ss.a {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final List<p> f32602a = new ArrayList(0);
+    public boolean b;
+
+    /* JADX INFO: renamed from: ts.a$a, reason: collision with other inner class name */
+    public class C0586a implements ss.m.c<c0> {
+        @Override // ss.m.c
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public void a(@NonNull ss.m mVar, @NonNull c0 c0Var) {
+            mVar.g(c0Var);
+            int length = mVar.length();
+            mVar.builder().append((char) 160);
+            mVar.p(c0Var, length);
+            mVar.s(c0Var);
         }
-        if (obj instanceof List) {
-            return new rs.a((List) obj);
+    }
+
+    public class b implements ss.m.c<on.j> {
+        @Override // ss.m.c
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public void a(@NonNull ss.m mVar, @NonNull on.j jVar) {
+            mVar.g(jVar);
+            int length = mVar.length();
+            mVar.a(jVar);
+            ts.b.f32606d.d(mVar.n(), Integer.valueOf(jVar.p()));
+            mVar.p(jVar, length);
+            mVar.s(jVar);
         }
-        return null;
     }
 
-    @NotNull
-    public static final List<Double> b(@Nullable Object obj) {
-        return e(c(obj));
-    }
-
-    @NotNull
-    public static final List<Object> c(@Nullable Object obj) {
-        List list = obj instanceof List ? (List) obj : null;
-        return list != null ? new rs.a(list) : new rs.a(o.d(obj));
-    }
-
-    @NotNull
-    public static final List<Comparable<?>> d(@NotNull List<? extends Object> list) {
-        Intrinsics.checkNotNullParameter(list, "<this>");
-        List<Object> listC = c(list);
-        ArrayList arrayList = new ArrayList(q.u(listC, 10));
-        Iterator<T> it = listC.iterator();
-        while (it.hasNext()) {
-            arrayList.add(a(it.next()));
+    public class c implements ss.m.c<x> {
+        @Override // ss.m.c
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public void a(@NonNull ss.m mVar, @NonNull x xVar) {
+            mVar.builder().append(' ');
         }
-        return arrayList;
     }
 
-    public static final List<Double> e(List<? extends Object> list) {
-        List<? extends Object> list2 = list;
-        ArrayList arrayList = new ArrayList(q.u(list2, 10));
-        for (Object obj : list2) {
-            arrayList.add(obj instanceof Number ? Double.valueOf(((Number) obj).doubleValue()) : obj instanceof String ? w.r((String) obj) : null);
+    public class d implements ss.m.c<on.i> {
+        @Override // ss.m.c
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public void a(@NonNull ss.m mVar, @NonNull on.i iVar) {
+            mVar.z();
         }
-        return arrayList;
     }
 
-    public static final boolean f(@Nullable Object obj) {
-        Map map = obj instanceof Map ? (Map) obj : null;
-        if (map != null && !map.isEmpty()) {
-            Set setKeySet = map.keySet();
-            if ((setKeySet instanceof Collection) && setKeySet.isEmpty()) {
-                return true;
+    public class e implements ss.m.c<w> {
+        @Override // ss.m.c
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public void a(@NonNull ss.m mVar, @NonNull w wVar) {
+            boolean zY = a.y(wVar);
+            if (!zY) {
+                mVar.g(wVar);
             }
-            Iterator it = setKeySet.iterator();
+            int length = mVar.length();
+            mVar.a(wVar);
+            ts.b.f32608f.d(mVar.n(), Boolean.valueOf(zY));
+            mVar.p(wVar, length);
+            if (zY) {
+                return;
+            }
+            mVar.s(wVar);
+        }
+    }
+
+    public class f implements ss.m.c<on.o> {
+        @Override // ss.m.c
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public void a(@NonNull ss.m mVar, @NonNull on.o oVar) {
+            int length = mVar.length();
+            mVar.a(oVar);
+            ts.b.f32607e.d(mVar.n(), oVar.o());
+            mVar.p(oVar, length);
+        }
+    }
+
+    public class g implements ss.m.c<b0> {
+        public g() {
+        }
+
+        @Override // ss.m.c
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public void a(@NonNull ss.m mVar, @NonNull b0 b0Var) {
+            String strO = b0Var.o();
+            mVar.builder().d(strO);
+            if (a.this.f32602a.isEmpty()) {
+                return;
+            }
+            int length = mVar.length() - strO.length();
+            Iterator it = a.this.f32602a.iterator();
             while (it.hasNext()) {
-                if (!(it.next() instanceof String)) {
-                }
+                ((p) it.next()).a(mVar, strO, length);
             }
-            return true;
+        }
+    }
+
+    public class h implements ss.m.c<a0> {
+        @Override // ss.m.c
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public void a(@NonNull ss.m mVar, @NonNull a0 a0Var) {
+            int length = mVar.length();
+            mVar.a(a0Var);
+            mVar.p(a0Var, length);
+        }
+    }
+
+    public class i implements ss.m.c<on.g> {
+        @Override // ss.m.c
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public void a(@NonNull ss.m mVar, @NonNull on.g gVar) {
+            int length = mVar.length();
+            mVar.a(gVar);
+            mVar.p(gVar, length);
+        }
+    }
+
+    public class j implements ss.m.c<on.b> {
+        @Override // ss.m.c
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public void a(@NonNull ss.m mVar, @NonNull on.b bVar) {
+            mVar.g(bVar);
+            int length = mVar.length();
+            mVar.a(bVar);
+            mVar.p(bVar, length);
+            mVar.s(bVar);
+        }
+    }
+
+    public class k implements ss.m.c<on.d> {
+        @Override // ss.m.c
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public void a(@NonNull ss.m mVar, @NonNull on.d dVar) {
+            int length = mVar.length();
+            mVar.builder().append((char) 160).d(dVar.o()).append((char) 160);
+            mVar.p(dVar, length);
+        }
+    }
+
+    public class l implements ss.m.c<on.h> {
+        @Override // ss.m.c
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public void a(@NonNull ss.m mVar, @NonNull on.h hVar) {
+            a.I(mVar, hVar.r(), hVar.s(), hVar);
+        }
+    }
+
+    public class m implements ss.m.c<on.n> {
+        @Override // ss.m.c
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public void a(@NonNull ss.m mVar, @NonNull on.n nVar) {
+            a.I(mVar, null, nVar.p(), nVar);
+        }
+    }
+
+    public class n implements ss.m.c<on.m> {
+        @Override // ss.m.c
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public void a(@NonNull ss.m mVar, @NonNull on.m mVar2) {
+            t tVarA = mVar.x().c().a(on.m.class);
+            if (tVarA == null) {
+                mVar.a(mVar2);
+                return;
+            }
+            int length = mVar.length();
+            mVar.a(mVar2);
+            if (length == mVar.length()) {
+                mVar.builder().append((char) 65532);
+            }
+            ss.g gVarX = mVar.x();
+            boolean z10 = mVar2.g() instanceof on.o;
+            String strB = gVarX.a().b(mVar2.o());
+            r rVarN = mVar.n();
+            ws.c.f34978a.d(rVarN, strB);
+            ws.c.b.d(rVarN, Boolean.valueOf(z10));
+            ws.c.f34979c.d(rVarN, null);
+            mVar.b(length, tVarA.a(gVarX, rVarN));
+        }
+    }
+
+    public class o implements ss.m.c<on.r> {
+        @Override // ss.m.c
+        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+        public void a(@NonNull ss.m mVar, @NonNull on.r rVar) {
+            int length = mVar.length();
+            mVar.a(rVar);
+            on.a aVarG = rVar.g();
+            if (aVarG instanceof v) {
+                v vVar = (v) aVarG;
+                int iT = vVar.t();
+                ts.b.f32604a.d(mVar.n(), ts.b.a.ORDERED);
+                ts.b.f32605c.d(mVar.n(), Integer.valueOf(iT));
+                vVar.w(vVar.t() + 1);
+            } else {
+                ts.b.f32604a.d(mVar.n(), ts.b.a.BULLET);
+                ts.b.b.d(mVar.n(), Integer.valueOf(a.B(rVar)));
+            }
+            mVar.p(rVar, length);
+            if (mVar.d(rVar)) {
+                mVar.z();
+            }
+        }
+    }
+
+    public interface p {
+        void a(@NonNull ss.m mVar, @NonNull String str, int i10);
+    }
+
+    public static void A(@NonNull ss.m.b bVar) {
+        bVar.b(on.r.class, new o());
+    }
+
+    public static int B(@NonNull s sVar) {
+        int i10 = 0;
+        for (s sVarG = sVar.g(); sVarG != null; sVarG = sVarG.g()) {
+            if (sVarG instanceof on.r) {
+                i10++;
+            }
+        }
+        return i10;
+    }
+
+    public static void C(@NonNull ss.m.b bVar) {
+        bVar.b(v.class, new ts.d());
+    }
+
+    public static void D(@NonNull ss.m.b bVar) {
+        bVar.b(w.class, new e());
+    }
+
+    public static void E(@NonNull ss.m.b bVar) {
+        bVar.b(x.class, new c());
+    }
+
+    public static void F(@NonNull ss.m.b bVar) {
+        bVar.b(a0.class, new h());
+    }
+
+    public static void H(@NonNull ss.m.b bVar) {
+        bVar.b(c0.class, new C0586a());
+    }
+
+    public static void I(@NonNull ss.m mVar, String str, @NonNull String str2, @NonNull s sVar) {
+        mVar.g(sVar);
+        int length = mVar.length();
+        mVar.builder().append((char) 160).append('\n').append(mVar.x().d().a(str, str2));
+        mVar.z();
+        mVar.builder().append((char) 160);
+        ts.b.f32609g.d(mVar.n(), str);
+        mVar.p(sVar, length);
+        mVar.s(sVar);
+    }
+
+    public static void o(@NonNull ss.m.b bVar) {
+        bVar.b(on.b.class, new j());
+    }
+
+    public static void p(@NonNull ss.m.b bVar) {
+        bVar.b(on.c.class, new ts.d());
+    }
+
+    public static void q(@NonNull ss.m.b bVar) {
+        bVar.b(on.d.class, new k());
+    }
+
+    @NonNull
+    public static a r() {
+        return new a();
+    }
+
+    public static void s(@NonNull ss.m.b bVar) {
+        bVar.b(on.g.class, new i());
+    }
+
+    public static void t(@NonNull ss.m.b bVar) {
+        bVar.b(on.h.class, new l());
+    }
+
+    public static void u(@NonNull ss.m.b bVar) {
+        bVar.b(on.i.class, new d());
+    }
+
+    public static void v(@NonNull ss.m.b bVar) {
+        bVar.b(on.j.class, new b());
+    }
+
+    public static void w(ss.m.b bVar) {
+        bVar.b(on.m.class, new n());
+    }
+
+    public static void x(@NonNull ss.m.b bVar) {
+        bVar.b(on.n.class, new m());
+    }
+
+    public static boolean y(@NonNull w wVar) {
+        on.a aVarG = wVar.g();
+        if (aVarG == null) {
+            return false;
+        }
+        s sVarG = aVarG.g();
+        if (sVarG instanceof q) {
+            return ((q) sVarG).p();
         }
         return false;
     }
 
-    public static final boolean g(@Nullable Object obj) {
-        if (!(obj instanceof List)) {
-            return false;
-        }
-        List list = (List) obj;
-        return list.size() == 1 && CollectionsKt.d0(list) == null;
+    public static void z(@NonNull ss.m.b bVar) {
+        bVar.b(on.o.class, new f());
     }
 
-    @NotNull
-    public static final String h(@Nullable Object obj) {
-        String string = obj != null ? obj.toString() : null;
-        return string == null ? "" : string;
+    public final void G(@NonNull ss.m.b bVar) {
+        bVar.b(b0.class, new g());
+    }
+
+    @Override // ss.j
+    public void a(@NonNull ss.m.b bVar) {
+        G(bVar);
+        F(bVar);
+        s(bVar);
+        o(bVar);
+        q(bVar);
+        t(bVar);
+        x(bVar);
+        w(bVar);
+        p(bVar);
+        C(bVar);
+        A(bVar);
+        H(bVar);
+        v(bVar);
+        E(bVar);
+        u(bVar);
+        D(bVar);
+        z(bVar);
+    }
+
+    @Override // ss.j
+    public void c(@NonNull TextView textView) {
+        if (this.b || textView.getMovementMethod() != null) {
+            return;
+        }
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
+    }
+
+    @Override // ss.j
+    public void f(@NonNull ss.k.a aVar) {
+        us.b bVar = new us.b();
+        aVar.a(a0.class, new us.h()).a(on.g.class, new us.d()).a(on.b.class, new us.a()).a(on.d.class, new us.c()).a(on.h.class, bVar).a(on.n.class, bVar).a(on.r.class, new us.g()).a(on.j.class, new us.e()).a(on.o.class, new us.f()).a(c0.class, new us.i());
+    }
+
+    @Override // ss.j
+    public void k(@NonNull TextView textView, @NonNull Spanned spanned) {
+        vs.h.a(textView, spanned);
+        if (spanned instanceof Spannable) {
+            vs.j.a((Spannable) spanned, textView);
+        }
     }
 }

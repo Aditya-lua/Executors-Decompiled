@@ -8,22 +8,22 @@ import n9.k;
 public final class g implements k9.a.d {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final g f35777d = new g(new f());
+    public static final g f36634d = new g(new f());
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f35778a = null;
+    public final String f36635a = null;
     public final boolean b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final String f35779c;
+    public final String f36636c;
 
     public g(f fVar) {
-        this.b = fVar.f35776a.booleanValue();
-        this.f35779c = fVar.b;
+        this.b = fVar.f36633a.booleanValue();
+        this.f36636c = fVar.b;
     }
 
     public static /* bridge */ /* synthetic */ String b(g gVar) {
-        String str = gVar.f35778a;
+        String str = gVar.f36635a;
         return null;
     }
 
@@ -31,7 +31,7 @@ public final class g implements k9.a.d {
         Bundle bundle = new Bundle();
         bundle.putString("consumer_package", null);
         bundle.putBoolean("force_save_dialog", this.b);
-        bundle.putString("log_session_id", this.f35779c);
+        bundle.putString("log_session_id", this.f36636c);
         return bundle;
     }
 
@@ -43,10 +43,10 @@ public final class g implements k9.a.d {
             return false;
         }
         g gVar = (g) obj;
-        return k.b(null, null) && this.b == gVar.b && k.b(this.f35779c, gVar.f35779c);
+        return k.b(null, null) && this.b == gVar.b && k.b(this.f36636c, gVar.f36636c);
     }
 
     public final int hashCode() {
-        return k.c(null, Boolean.valueOf(this.b), this.f35779c);
+        return k.c(null, Boolean.valueOf(this.b), this.f36636c);
     }
 }

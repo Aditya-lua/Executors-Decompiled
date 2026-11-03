@@ -4,6 +4,7 @@ import android.content.Context;
 import com.appsflyer.sdk_base.referrer.Payload;
 import com.google.mlkit.vision.barcode.common.Barcode;
 import e7.r;
+import iu.a2;
 import k6.n;
 import k6.v;
 import kotlin.Metadata;
@@ -11,7 +12,6 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
-import ku.a2;
 import m6.DecodeResult;
 import m6.s;
 import o6.SourceFetchResult;
@@ -20,12 +20,12 @@ import org.jetbrains.annotations.Nullable;
 import x6.Options;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0007\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0015\u0018\u0000 (2\u00020\u0001:\u0002\u0018\u0015BO\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\b\b\u0002\u0010\u0007\u001a\u00020\u0006\u0012\u0018\b\u0002\u0010\f\u001a\u0012\u0012\b\u0012\u00060\tj\u0002`\n\u0012\u0004\u0012\u00020\u000b0\b\u0012\b\b\u0002\u0010\u000e\u001a\u00020\r\u0012\b\b\u0002\u0010\u000f\u001a\u00020\r¢\u0006\u0004\b\u0010\u0010\u0011B7\b\u0016\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\b\b\u0002\u0010\u000e\u001a\u00020\r\u0012\b\b\u0002\u0010\u000f\u001a\u00020\r\u0012\b\b\u0002\u0010\u0012\u001a\u00020\r¢\u0006\u0004\b\u0010\u0010\u0013J\u0010\u0010\u0015\u001a\u00020\u0014H\u0096@¢\u0006\u0004\b\u0015\u0010\u0016R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010\u0017R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0018\u0010\u0019R\u0017\u0010\u0007\u001a\u00020\u00068\u0006¢\u0006\f\n\u0004\b\u001a\u0010\u001b\u001a\u0004\b\u001c\u0010\u001dR'\u0010\f\u001a\u0012\u0012\b\u0012\u00060\tj\u0002`\n\u0012\u0004\u0012\u00020\u000b0\b8\u0006¢\u0006\f\n\u0004\b\u001e\u0010\u001f\u001a\u0004\b \u0010!R\u0017\u0010\u000e\u001a\u00020\r8\u0006¢\u0006\f\n\u0004\b\"\u0010#\u001a\u0004\b$\u0010%R\u0017\u0010\u000f\u001a\u00020\r8\u0006¢\u0006\f\n\u0004\b&\u0010#\u001a\u0004\b'\u0010%¨\u0006)"}, d2 = {"Lz6/g;", "Lm6/i;", "Lm6/s;", Payload.SOURCE, "Lx6/p;", "options", "Lz6/c$a;", "parser", "Lkotlin/Function1;", "Landroid/content/Context;", "Lcoil3/PlatformContext;", "", "density", "", "useViewBoundsAsIntrinsicSize", "renderToBitmap", "<init>", "(Lm6/s;Lx6/p;Lz6/c$a;Lkotlin/jvm/functions/Function1;ZZ)V", "scaleToDensity", "(Lm6/s;Lx6/p;ZZZ)V", "Lm6/g;", "a", "(Lnt/b;)Ljava/lang/Object;", "Lm6/s;", "b", "Lx6/p;", "c", "Lz6/c$a;", "getParser", "()Lz6/c$a;", "d", "Lkotlin/jvm/functions/Function1;", "getDensity", "()Lkotlin/jvm/functions/Function1;", "e", "Z", "getUseViewBoundsAsIntrinsicSize", "()Z", "f", "getRenderToBitmap", "g", "coil-svg_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0007\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0015\u0018\u0000 (2\u00020\u0001:\u0002\u0018\u0015BO\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\b\b\u0002\u0010\u0007\u001a\u00020\u0006\u0012\u0018\b\u0002\u0010\f\u001a\u0012\u0012\b\u0012\u00060\tj\u0002`\n\u0012\u0004\u0012\u00020\u000b0\b\u0012\b\b\u0002\u0010\u000e\u001a\u00020\r\u0012\b\b\u0002\u0010\u000f\u001a\u00020\r¢\u0006\u0004\b\u0010\u0010\u0011B7\b\u0016\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\b\b\u0002\u0010\u000e\u001a\u00020\r\u0012\b\b\u0002\u0010\u000f\u001a\u00020\r\u0012\b\b\u0002\u0010\u0012\u001a\u00020\r¢\u0006\u0004\b\u0010\u0010\u0013J\u0010\u0010\u0015\u001a\u00020\u0014H\u0096@¢\u0006\u0004\b\u0015\u0010\u0016R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010\u0017R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0018\u0010\u0019R\u0017\u0010\u0007\u001a\u00020\u00068\u0006¢\u0006\f\n\u0004\b\u001a\u0010\u001b\u001a\u0004\b\u001c\u0010\u001dR'\u0010\f\u001a\u0012\u0012\b\u0012\u00060\tj\u0002`\n\u0012\u0004\u0012\u00020\u000b0\b8\u0006¢\u0006\f\n\u0004\b\u001e\u0010\u001f\u001a\u0004\b \u0010!R\u0017\u0010\u000e\u001a\u00020\r8\u0006¢\u0006\f\n\u0004\b\"\u0010#\u001a\u0004\b$\u0010%R\u0017\u0010\u000f\u001a\u00020\r8\u0006¢\u0006\f\n\u0004\b&\u0010#\u001a\u0004\b'\u0010%¨\u0006)"}, d2 = {"Lz6/g;", "Lm6/i;", "Lm6/s;", Payload.SOURCE, "Lx6/p;", "options", "Lz6/c$a;", "parser", "Lkotlin/Function1;", "Landroid/content/Context;", "Lcoil3/PlatformContext;", "", "density", "", "useViewBoundsAsIntrinsicSize", "renderToBitmap", "<init>", "(Lm6/s;Lx6/p;Lz6/c$a;Lkotlin/jvm/functions/Function1;ZZ)V", "scaleToDensity", "(Lm6/s;Lx6/p;ZZZ)V", "Lm6/g;", "a", "(Llt/b;)Ljava/lang/Object;", "Lm6/s;", "b", "Lx6/p;", "c", "Lz6/c$a;", "getParser", "()Lz6/c$a;", "d", "Lkotlin/jvm/functions/Function1;", "getDensity", "()Lkotlin/jvm/functions/Function1;", "e", "Z", "getUseViewBoundsAsIntrinsicSize", "()Z", "f", "getRenderToBitmap", "g", "coil-svg_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class g implements m6.i {
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
     @NotNull
-    public static final Function1<Context, Float> f37316h = new Function1() { // from class: z6.d
+    public static final Function1<Context, Float> f38011h = new Function1() { // from class: z6.d
         @Override // kotlin.jvm.functions.Function1
         public final Object invoke(Object obj) {
             return Float.valueOf(g.e((Context) obj));
@@ -34,7 +34,7 @@ public final class g implements m6.i {
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
     @NotNull
-    public static final Function1<Context, Float> f37317i = new Function1() { // from class: z6.e
+    public static final Function1<Context, Float> f38012i = new Function1() { // from class: z6.e
         @Override // kotlin.jvm.functions.Function1
         public final Object invoke(Object obj) {
             return Float.valueOf(g.f((Context) obj));
@@ -86,7 +86,7 @@ public final class g implements m6.i {
         c cVarA;
         float width;
         float height;
-        xu.g gVarSource = gVar.source.source();
+        vu.g gVarSource = gVar.source.source();
         try {
             cVarA = gVar.parser.a(gVarSource);
             if (gVarSource != null) {
@@ -102,7 +102,7 @@ public final class g implements m6.i {
                 try {
                     gVarSource.close();
                 } catch (Throwable th5) {
-                    jt.a.a(th4, th5);
+                    gt.a.a(th4, th5);
                 }
             }
             th2 = th4;
@@ -129,9 +129,9 @@ public final class g implements m6.i {
             }
         }
         int iD = Barcode.FORMAT_UPC_A;
-        int iD2 = width > 0.0f ? cu.b.d(width) : 512;
+        int iD2 = width > 0.0f ? au.b.d(width) : 512;
         if (height > 0.0f) {
-            iD = cu.b.d(height);
+            iD = au.b.d(height);
         }
         long jB = m6.h.b(iD2, iD, gVar.options.getSize(), gVar.options.getScale(), x6.i.g(gVar.options));
         int iC = r.c(jB);
@@ -156,11 +156,11 @@ public final class g implements m6.i {
 
     @Override // m6.i
     @Nullable
-    public Object a(@NotNull nt.b<? super DecodeResult> bVar) {
-        return a2.b(kotlin.coroutines.e.f22525a, new Function0() { // from class: z6.f
+    public Object a(@NotNull lt.b<? super DecodeResult> bVar) {
+        return a2.b(kotlin.coroutines.e.f22980a, new Function0() { // from class: z6.f
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return g.g(this.f37314a);
+                return g.g(this.f38009a);
             }
         }, bVar);
     }
@@ -200,7 +200,7 @@ public final class g implements m6.i {
         }
 
         public final boolean b(SourceFetchResult result) {
-            return Intrinsics.c(result.getMimeType(), "image/svg+xml") || a.a(m6.h.f23984a, result.getSource().source());
+            return Intrinsics.c(result.getMimeType(), "image/svg+xml") || a.a(m6.h.f24634a, result.getSource().source());
         }
 
         public /* synthetic */ b(boolean z10, boolean z11, boolean z12, int i10, DefaultConstructorMarker defaultConstructorMarker) {
@@ -208,7 +208,7 @@ public final class g implements m6.i {
         }
 
         public b(boolean z10, boolean z11, boolean z12) {
-            this(c.a.b, z12 ? g.f37317i : g.f37316h, z10, z11);
+            this(c.a.b, z12 ? g.f38012i : g.f38011h, z10, z11);
         }
     }
 
@@ -217,6 +217,6 @@ public final class g implements m6.i {
     }
 
     public g(@NotNull s sVar, @NotNull Options options, boolean z10, boolean z11, boolean z12) {
-        this(sVar, options, c.a.b, z12 ? f37317i : f37316h, z10, z11);
+        this(sVar, options, c.a.b, z12 ? f38012i : f38011h, z10, z11);
     }
 }

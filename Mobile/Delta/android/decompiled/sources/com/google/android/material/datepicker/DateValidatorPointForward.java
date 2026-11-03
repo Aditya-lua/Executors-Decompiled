@@ -10,7 +10,7 @@ public class DateValidatorPointForward implements CalendarConstraints.DateValida
     public static final Parcelable.Creator<DateValidatorPointForward> CREATOR = new a();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final long f7828a;
+    public final long f7902a;
 
     public class a implements Parcelable.Creator<DateValidatorPointForward> {
         @Override // android.os.Parcelable.Creator
@@ -38,8 +38,8 @@ public class DateValidatorPointForward implements CalendarConstraints.DateValida
     }
 
     @Override // com.google.android.material.datepicker.CalendarConstraints.DateValidator
-    public boolean X0(long j10) {
-        return j10 >= this.f7828a;
+    public boolean T0(long j10) {
+        return j10 >= this.f7902a;
     }
 
     @Override // android.os.Parcelable
@@ -51,19 +51,19 @@ public class DateValidatorPointForward implements CalendarConstraints.DateValida
         if (this == obj) {
             return true;
         }
-        return (obj instanceof DateValidatorPointForward) && this.f7828a == ((DateValidatorPointForward) obj).f7828a;
+        return (obj instanceof DateValidatorPointForward) && this.f7902a == ((DateValidatorPointForward) obj).f7902a;
     }
 
     public int hashCode() {
-        return Arrays.hashCode(new Object[]{Long.valueOf(this.f7828a)});
+        return Arrays.hashCode(new Object[]{Long.valueOf(this.f7902a)});
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
-        parcel.writeLong(this.f7828a);
+        parcel.writeLong(this.f7902a);
     }
 
     public DateValidatorPointForward(long j10) {
-        this.f7828a = j10;
+        this.f7902a = j10;
     }
 }

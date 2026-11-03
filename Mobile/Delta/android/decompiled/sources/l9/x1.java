@@ -15,7 +15,7 @@ public final class x1 extends Fragment implements j {
     public static final WeakHashMap b = new WeakHashMap();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final z1 f23104a = new z1();
+    public final z1 f23498a = new z1();
 
     public static x1 a(Activity activity) {
         x1 x1Var;
@@ -39,13 +39,13 @@ public final class x1 extends Fragment implements j {
 
     @Override // l9.j
     public final <T extends i> T d(String str, Class<T> cls) {
-        return (T) this.f23104a.a(str, cls);
+        return (T) this.f23498a.a(str, cls);
     }
 
     @Override // android.app.Fragment
     public final void dump(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
         super.dump(str, fileDescriptor, printWriter, strArr);
-        this.f23104a.j(str, fileDescriptor, printWriter, strArr);
+        this.f23498a.j(str, fileDescriptor, printWriter, strArr);
     }
 
     @Override // l9.j
@@ -55,48 +55,48 @@ public final class x1 extends Fragment implements j {
 
     @Override // l9.j
     public final void g(String str, @NonNull i iVar) {
-        this.f23104a.b(str, iVar);
+        this.f23498a.b(str, iVar);
     }
 
     @Override // android.app.Fragment
     public final void onActivityResult(int i10, int i11, Intent intent) {
         super.onActivityResult(i10, i11, intent);
-        this.f23104a.f(i10, i11, intent);
+        this.f23498a.f(i10, i11, intent);
     }
 
     @Override // android.app.Fragment
     public final void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        this.f23104a.c(bundle);
+        this.f23498a.c(bundle);
     }
 
     @Override // android.app.Fragment
     public final void onDestroy() {
         super.onDestroy();
-        this.f23104a.i();
+        this.f23498a.i();
     }
 
     @Override // android.app.Fragment
     public final void onResume() {
         super.onResume();
-        this.f23104a.e();
+        this.f23498a.e();
     }
 
     @Override // android.app.Fragment
     public final void onSaveInstanceState(Bundle bundle) {
         super.onSaveInstanceState(bundle);
-        this.f23104a.g(bundle);
+        this.f23498a.g(bundle);
     }
 
     @Override // android.app.Fragment
     public final void onStart() {
         super.onStart();
-        this.f23104a.d();
+        this.f23498a.d();
     }
 
     @Override // android.app.Fragment
     public final void onStop() {
         super.onStop();
-        this.f23104a.h();
+        this.f23498a.h();
     }
 }

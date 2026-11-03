@@ -6,14 +6,14 @@ import android.graphics.Bitmap;
 public final class a extends k.b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final x0.b0<Bitmap> f23564a;
+    public final x0.b0<Bitmap> f24214a;
     public final int b;
 
     public a(x0.b0<Bitmap> b0Var, int i10) {
         if (b0Var == null) {
             throw new NullPointerException("Null packet");
         }
-        this.f23564a = b0Var;
+        this.f24214a = b0Var;
         this.b = i10;
     }
 
@@ -24,7 +24,7 @@ public final class a extends k.b {
 
     @Override // m0.k.b
     public x0.b0<Bitmap> b() {
-        return this.f23564a;
+        return this.f24214a;
     }
 
     public boolean equals(Object obj) {
@@ -33,7 +33,7 @@ public final class a extends k.b {
         }
         if (obj instanceof k.b) {
             k.b bVar = (k.b) obj;
-            if (this.f23564a.equals(bVar.b()) && this.b == bVar.a()) {
+            if (this.f24214a.equals(bVar.b()) && this.b == bVar.a()) {
                 return true;
             }
         }
@@ -41,10 +41,10 @@ public final class a extends k.b {
     }
 
     public int hashCode() {
-        return ((this.f23564a.hashCode() ^ 1000003) * 1000003) ^ this.b;
+        return ((this.f24214a.hashCode() ^ 1000003) * 1000003) ^ this.b;
     }
 
     public String toString() {
-        return "In{packet=" + this.f23564a + ", jpegQuality=" + this.b + "}";
+        return "In{packet=" + this.f24214a + ", jpegQuality=" + this.b + "}";
     }
 }

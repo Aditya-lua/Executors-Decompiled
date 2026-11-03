@@ -64,7 +64,7 @@ final class zza implements zzb {
     }
 
     private final zzoy zzg(zzou zzouVar) {
-        return this.zzd ? zze(DynamiteModule.f5863c, "com.google.mlkit.dynamite.face", "com.google.mlkit.vision.face.bundled.internal.ThickFaceDetectorCreator", zzouVar) : zze(DynamiteModule.b, OptionalModuleUtils.FACE_MODULE_ID, "com.google.android.gms.vision.face.mlkit.FaceDetectorCreator", zzouVar);
+        return this.zzd ? zze(DynamiteModule.f5936c, "com.google.mlkit.dynamite.face", "com.google.mlkit.vision.face.bundled.internal.ThickFaceDetectorCreator", zzouVar) : zze(DynamiteModule.b, OptionalModuleUtils.FACE_MODULE_ID, "com.google.android.gms.vision.face.mlkit.FaceDetectorCreator", zzouVar);
     }
 
     private static List zzh(zzoy zzoyVar, InputImage inputImage) throws MlKitException {

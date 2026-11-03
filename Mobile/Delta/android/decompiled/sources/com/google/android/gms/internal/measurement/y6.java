@@ -14,17 +14,17 @@ public final class y6 extends gb implements pc {
     static {
         y6 y6Var = new y6();
         zzh = y6Var;
-        gb.u(y6.class, y6Var);
+        gb.t(y6.class, y6Var);
     }
 
     public static v6 O() {
-        return (v6) zzh.q();
+        return (v6) zzh.p();
     }
 
     public static v6 P(y6 y6Var) {
-        cb cbVarQ = zzh.q();
-        cbVarQ.v(y6Var);
-        return (v6) cbVarQ;
+        cb cbVarP = zzh.p();
+        cbVarP.v(y6Var);
+        return (v6) cbVarP;
     }
 
     @Override // com.google.android.gms.internal.measurement.gb
@@ -34,7 +34,7 @@ public final class y6 extends gb implements pc {
             return (byte) 1;
         }
         if (i11 == 2) {
-            return gb.v(zzh, "\u0004\u0004\u0000\u0001\u0001\t\u0004\u0000\u0001\u0000\u0001\u001b\u0007ဈ\u0000\bဈ\u0001\t᠌\u0002", new Object[]{"zzb", "zzd", a7.class, "zze", "zzf", "zzg", x6.f6896a});
+            return gb.v(zzh, "\u0004\u0004\u0000\u0001\u0001\t\u0004\u0000\u0001\u0000\u0001\u001b\u0007ဈ\u0000\bဈ\u0001\t᠌\u0002", new Object[]{"zzb", "zzd", a7.class, "zze", "zzf", "zzg", x6.f6970a});
         }
         if (i11 == 3) {
             return new y6();

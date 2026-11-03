@@ -25,10 +25,10 @@ public final class m1 implements i1 {
     public h8 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final o1 f32812c;
+    public final o1 f33380c;
 
     public m1(Context context, h8 h8Var) {
-        this.f32812c = new o1(context);
+        this.f33380c = new o1(context);
         this.b = h8Var;
     }
 
@@ -41,7 +41,7 @@ public final class m1 implements i1 {
             v8 v8VarD = x8.D();
             v8VarD.t(this.b);
             v8VarD.w(m9Var);
-            this.f32812c.a((x8) v8VarD.i());
+            this.f33380c.a((x8) v8VarD.i());
         } catch (Throwable th2) {
             com.google.android.gms.internal.play_billing.m0.n("BillingLogger", "Unable to log.", th2);
         }
@@ -91,7 +91,7 @@ public final class m1 implements i1 {
             a8VarB.s(2);
             a8VarB.r(e9Var);
             v8VarD.r(a8VarB);
-            this.f32812c.a((x8) v8VarD.i());
+            this.f33380c.a((x8) v8VarD.i());
         } catch (Throwable th2) {
             com.google.android.gms.internal.play_billing.m0.n("BillingLogger", "Unable to log.", th2);
         }
@@ -132,7 +132,7 @@ public final class m1 implements i1 {
             }
             v8VarD.t(h8Var);
             v8VarD.r(a8VarB);
-            this.f32812c.a((x8) v8VarD.i());
+            this.f33380c.a((x8) v8VarD.i());
         } catch (Throwable th2) {
             com.google.android.gms.internal.play_billing.m0.n("BillingLogger", "Unable to log.", th2);
         }
@@ -178,7 +178,7 @@ public final class m1 implements i1 {
             }
             v8VarD.t(h8Var);
             v8VarD.s(d8Var);
-            this.f32812c.a((x8) v8VarD.i());
+            this.f33380c.a((x8) v8VarD.i());
         } catch (Throwable th2) {
             com.google.android.gms.internal.play_billing.m0.n("BillingLogger", "Unable to log.", th2);
         }
@@ -187,7 +187,7 @@ public final class m1 implements i1 {
     @Override // v7.i1
     public final void i(i9 i9Var) {
         try {
-            o1 o1Var = this.f32812c;
+            o1 o1Var = this.f33380c;
             v8 v8VarD = x8.D();
             v8VarD.t(this.b);
             v8VarD.v(i9Var);
@@ -246,7 +246,7 @@ public final class m1 implements i1 {
             v8 v8VarD = x8.D();
             v8VarD.t(this.b);
             v8VarD.q(x7Var);
-            this.f32812c.a((x8) v8VarD.i());
+            this.f33380c.a((x8) v8VarD.i());
         } catch (Throwable th2) {
             com.google.android.gms.internal.play_billing.m0.n("BillingLogger", "Unable to log.", th2);
         }
@@ -278,7 +278,7 @@ public final class m1 implements i1 {
             v8 v8VarD = x8.D();
             v8VarD.t(h8Var);
             v8VarD.o(l7Var);
-            this.f32812c.a((x8) v8VarD.i());
+            this.f33380c.a((x8) v8VarD.i());
         } catch (Throwable th2) {
             com.google.android.gms.internal.play_billing.m0.n("BillingLogger", "Unable to log.", th2);
         }
@@ -292,7 +292,7 @@ public final class m1 implements i1 {
             v8 v8VarD = x8.D();
             v8VarD.t(h8Var);
             v8VarD.p(p7Var);
-            this.f32812c.a((x8) v8VarD.i());
+            this.f33380c.a((x8) v8VarD.i());
         } catch (Throwable th2) {
             com.google.android.gms.internal.play_billing.m0.n("BillingLogger", "Unable to log.", th2);
         }

@@ -12,11 +12,11 @@ import java.util.Objects;
 public final class bd {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f25373a;
+    public final Context f26194a;
 
     public bd(Context context) {
         n9.m.l(context);
-        this.f25373a = context;
+        this.f26194a = context;
     }
 
     public static final void i(Intent intent) {
@@ -37,11 +37,11 @@ public final class bd {
     }
 
     public final void a() {
-        Log.v("FA", this.f25373a.getClass().getSimpleName().concat(" is starting up."));
+        Log.v("FA", this.f26194a.getClass().getSimpleName().concat(" is starting up."));
     }
 
     public final void b() {
-        Log.v("FA", this.f25373a.getClass().getSimpleName().concat(" is shutting down."));
+        Log.v("FA", this.f26194a.getClass().getSimpleName().concat(" is shutting down."));
     }
 
     public final int c(final Intent intent, int i10, final int i11) {
@@ -49,7 +49,7 @@ public final class bd {
             Log.w("FA", "AppMeasurementService started with null intent");
             return 2;
         }
-        Context context = this.f25373a;
+        Context context = this.f26194a;
         g7 g7VarO = g7.O(context, null, null);
         final w5 w5VarA = g7VarO.a();
         String action = intent.getAction();
@@ -59,7 +59,7 @@ public final class bd {
             k(me.F(context), new Runnable() { // from class: nb.ad
                 @Override // java.lang.Runnable
                 public final /* synthetic */ void run() {
-                    this.f25339a.f(i11, w5VarA, intent);
+                    this.f26160a.f(i11, w5VarA, intent);
                 }
             });
         }
@@ -73,7 +73,7 @@ public final class bd {
         }
         String action = intent.getAction();
         if ("com.google.android.gms.measurement.START".equals(action)) {
-            return new i8(me.F(this.f25373a), null);
+            return new i8(me.F(this.f26194a), null);
         }
         Log.w("FA", "onBind received unknown action: ".concat(String.valueOf(action)));
         return null;
@@ -85,24 +85,24 @@ public final class bd {
         Log.v("FA", "onStartJob received action: ".concat(String.valueOf(string)));
         if (Objects.equals(string, "com.google.android.gms.measurement.UPLOAD")) {
             String str = (String) n9.m.l(string);
-            me meVarF = me.F(this.f25373a);
+            me meVarF = me.F(this.f26194a);
             final w5 w5VarA = meVarF.a();
             meVarF.c();
             w5VarA.w().b("Local AppMeasurementJobService called. action", str);
             k(meVarF, new Runnable() { // from class: nb.yc
                 @Override // java.lang.Runnable
                 public final /* synthetic */ void run() {
-                    this.f26137a.g(w5VarA, jobParameters);
+                    this.f26958a.g(w5VarA, jobParameters);
                 }
             });
         }
         if (!Objects.equals(string, "com.google.android.gms.measurement.SCION_UPLOAD")) {
             return true;
         }
-        com.google.android.gms.internal.measurement.v3.r(this.f25373a, null).G(new Runnable() { // from class: nb.zc
+        com.google.android.gms.internal.measurement.v3.r(this.f26194a, null).G(new Runnable() { // from class: nb.zc
             @Override // java.lang.Runnable
             public final /* synthetic */ void run() {
-                this.f26232a.h(jobParameters);
+                this.f27053a.h(jobParameters);
             }
         });
         return true;
@@ -110,7 +110,7 @@ public final class bd {
 
     /* JADX WARN: Multi-variable type inference failed */
     public final /* synthetic */ void f(int i10, w5 w5Var, Intent intent) {
-        Context context = this.f25373a;
+        Context context = this.f26194a;
         xc xcVar = (xc) context;
         if (xcVar.a(i10)) {
             w5Var.w().b("Local AppMeasurementService processed last upload request. StartId", Integer.valueOf(i10));
@@ -121,12 +121,12 @@ public final class bd {
 
     public final /* synthetic */ void g(w5 w5Var, JobParameters jobParameters) {
         w5Var.w().a("AppMeasurementJobService processed last upload request.");
-        ((xc) this.f25373a).b(jobParameters, false);
+        ((xc) this.f26194a).b(jobParameters, false);
     }
 
     public final /* synthetic */ void h(JobParameters jobParameters) {
         Log.v("FA", "[sgtm] AppMeasurementJobService processed last Scion upload request.");
-        ((xc) this.f25373a).b(jobParameters, false);
+        ((xc) this.f26194a).b(jobParameters, false);
     }
 
     public final void k(me meVar, Runnable runnable) {

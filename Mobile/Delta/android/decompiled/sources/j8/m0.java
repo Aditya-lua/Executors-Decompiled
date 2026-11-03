@@ -21,20 +21,20 @@ import java.util.Set;
 public class m0 implements j8.d, k8.b, j8.c {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final y7.c f21132f = y7.c.b("proto");
+    public static final y7.c f21705f = y7.c.b("proto");
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final t0 f21133a;
+    public final t0 f21706a;
     public final l8.a b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final l8.a f21134c;
+    public final l8.a f21707c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final e f21135d;
+    public final e f21708d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final ht.a<String> f21136e;
+    public final ft.a<String> f21709e;
 
     public interface b<T, U> {
         U apply(T t8);
@@ -43,11 +43,11 @@ public class m0 implements j8.d, k8.b, j8.c {
     public static class c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final String f21137a;
+        public final String f21710a;
         public final String b;
 
         public c(String str, String str2) {
-            this.f21137a = str;
+            this.f21710a = str;
             this.b = str2;
         }
     }
@@ -56,19 +56,19 @@ public class m0 implements j8.d, k8.b, j8.c {
         T a();
     }
 
-    public m0(l8.a aVar, l8.a aVar2, e eVar, t0 t0Var, ht.a<String> aVar3) {
-        this.f21133a = t0Var;
+    public m0(l8.a aVar, l8.a aVar2, e eVar, t0 t0Var, ft.a<String> aVar3) {
+        this.f21706a = t0Var;
         this.b = aVar;
-        this.f21134c = aVar2;
-        this.f21135d = eVar;
-        this.f21136e = aVar3;
+        this.f21707c = aVar2;
+        this.f21708d = eVar;
+        this.f21709e = aVar3;
     }
 
-    public static /* synthetic */ Object B(Throwable th2) {
+    public static /* synthetic */ Object A(Throwable th2) {
         throw new k8.a("Timed out while trying to acquire the lock.", th2);
     }
 
-    public static byte[] E0(String str) {
+    public static byte[] A0(String str) {
         if (str == null) {
             return null;
         }
@@ -76,7 +76,7 @@ public class m0 implements j8.d, k8.b, j8.c {
     }
 
     public static /* synthetic */ Object F(String str, e8.c.b bVar, long j10, SQLiteDatabase sQLiteDatabase) {
-        if (((Boolean) O0(sQLiteDatabase.rawQuery("SELECT 1 FROM log_event_dropped WHERE log_source = ? AND reason = ?", new String[]{str, Integer.toString(bVar.getNumber())}), new b() { // from class: j8.y
+        if (((Boolean) K0(sQLiteDatabase.rawQuery("SELECT 1 FROM log_event_dropped WHERE log_source = ? AND reason = ?", new String[]{str, Integer.toString(bVar.getNumber())}), new b() { // from class: j8.y
             @Override // j8.m0.b
             public final Object apply(Object obj) {
                 return Boolean.valueOf(((Cursor) obj).getCount() > 0);
@@ -108,49 +108,23 @@ public class m0 implements j8.d, k8.b, j8.c {
         }
     }
 
+    public static y7.c H0(String str) {
+        return str == null ? f21705f : y7.c.b(str);
+    }
+
     public static /* synthetic */ Integer I(final m0 m0Var, long j10, SQLiteDatabase sQLiteDatabase) {
         m0Var.getClass();
         String[] strArr = {String.valueOf(j10)};
-        O0(sQLiteDatabase.rawQuery("SELECT COUNT(*), transport_name FROM events WHERE timestamp_ms < ? GROUP BY transport_name", strArr), new b() { // from class: j8.s
+        K0(sQLiteDatabase.rawQuery("SELECT COUNT(*), transport_name FROM events WHERE timestamp_ms < ? GROUP BY transport_name", strArr), new b() { // from class: j8.s
             @Override // j8.m0.b
             public final Object apply(Object obj) {
-                return m0.l(this.f21147a, (Cursor) obj);
+                return m0.l(this.f21720a, (Cursor) obj);
             }
         });
         return Integer.valueOf(sQLiteDatabase.delete("events", "timestamp_ms < ?", strArr));
     }
 
-    public static /* synthetic */ Object L(m0 m0Var, List list, b8.o oVar, Cursor cursor) {
-        m0Var.getClass();
-        while (cursor.moveToNext()) {
-            long j10 = cursor.getLong(0);
-            boolean z10 = cursor.getInt(7) != 0;
-            b8.i.a aVarK = b8.i.a().j(cursor.getString(1)).i(cursor.getLong(2)).k(cursor.getLong(3));
-            if (z10) {
-                aVarK.h(new b8.h(L0(cursor.getString(4)), cursor.getBlob(5)));
-            } else {
-                aVarK.h(new b8.h(L0(cursor.getString(4)), m0Var.H0(j10)));
-            }
-            if (!cursor.isNull(6)) {
-                aVarK.g(Integer.valueOf(cursor.getInt(6)));
-            }
-            list.add(k.a(j10, oVar, aVarK.d()));
-        }
-        return null;
-    }
-
-    public static y7.c L0(String str) {
-        return str == null ? f21132f : y7.c.b(str);
-    }
-
-    public static /* synthetic */ Object M(m0 m0Var, SQLiteDatabase sQLiteDatabase) {
-        m0Var.getClass();
-        sQLiteDatabase.compileStatement("DELETE FROM log_event_dropped").execute();
-        sQLiteDatabase.compileStatement("UPDATE global_log_event_state SET last_metrics_upload_ms=" + m0Var.b.a()).execute();
-        return null;
-    }
-
-    public static String N0(Iterable<k> iterable) {
+    public static String J0(Iterable<k> iterable) {
         StringBuilder sb2 = new StringBuilder("(");
         Iterator<k> it = iterable.iterator();
         while (it.hasNext()) {
@@ -163,7 +137,7 @@ public class m0 implements j8.d, k8.b, j8.c {
         return sb2.toString();
     }
 
-    public static <T> T O0(Cursor cursor, b<Cursor, T> bVar) {
+    public static <T> T K0(Cursor cursor, b<Cursor, T> bVar) {
         try {
             return bVar.apply(cursor);
         } finally {
@@ -171,12 +145,38 @@ public class m0 implements j8.d, k8.b, j8.c {
         }
     }
 
-    public static /* synthetic */ e8.a P(final m0 m0Var, String str, final Map map, final e8.a.C0281a c0281a, SQLiteDatabase sQLiteDatabase) {
+    public static /* synthetic */ Object L(m0 m0Var, List list, b8.o oVar, Cursor cursor) {
         m0Var.getClass();
-        return (e8.a) O0(sQLiteDatabase.rawQuery(str, new String[0]), new b() { // from class: j8.a0
+        while (cursor.moveToNext()) {
+            long j10 = cursor.getLong(0);
+            boolean z10 = cursor.getInt(7) != 0;
+            b8.i.a aVarK = b8.i.a().j(cursor.getString(1)).i(cursor.getLong(2)).k(cursor.getLong(3));
+            if (z10) {
+                aVarK.h(new b8.h(H0(cursor.getString(4)), cursor.getBlob(5)));
+            } else {
+                aVarK.h(new b8.h(H0(cursor.getString(4)), m0Var.D0(j10)));
+            }
+            if (!cursor.isNull(6)) {
+                aVarK.g(Integer.valueOf(cursor.getInt(6)));
+            }
+            list.add(k.a(j10, oVar, aVarK.d()));
+        }
+        return null;
+    }
+
+    public static /* synthetic */ Object M(m0 m0Var, SQLiteDatabase sQLiteDatabase) {
+        m0Var.getClass();
+        sQLiteDatabase.compileStatement("DELETE FROM log_event_dropped").execute();
+        sQLiteDatabase.compileStatement("UPDATE global_log_event_state SET last_metrics_upload_ms=" + m0Var.b.a()).execute();
+        return null;
+    }
+
+    public static /* synthetic */ e8.a P(final m0 m0Var, String str, final Map map, final e8.a.C0295a c0295a, SQLiteDatabase sQLiteDatabase) {
+        m0Var.getClass();
+        return (e8.a) K0(sQLiteDatabase.rawQuery(str, new String[0]), new b() { // from class: j8.a0
             @Override // j8.m0.b
             public final Object apply(Object obj) {
-                return m0.s(this.f21113a, map, c0281a, (Cursor) obj);
+                return m0.s(this.f21686a, map, c0295a, (Cursor) obj);
             }
         });
     }
@@ -188,8 +188,8 @@ public class m0 implements j8.d, k8.b, j8.c {
         return 0L;
     }
 
-    public static /* synthetic */ e8.f X(final long j10, SQLiteDatabase sQLiteDatabase) {
-        return (e8.f) O0(sQLiteDatabase.rawQuery("SELECT last_metrics_upload_ms FROM global_log_event_state LIMIT 1", new String[0]), new b() { // from class: j8.d0
+    public static /* synthetic */ e8.f W(final long j10, SQLiteDatabase sQLiteDatabase) {
+        return (e8.f) K0(sQLiteDatabase.rawQuery("SELECT last_metrics_upload_ms FROM global_log_event_state LIMIT 1", new String[0]), new b() { // from class: j8.d0
             @Override // j8.m0.b
             public final Object apply(Object obj) {
                 return m0.e(j10, (Cursor) obj);
@@ -203,23 +203,23 @@ public class m0 implements j8.d, k8.b, j8.c {
     }
 
     public static /* synthetic */ List f(m0 m0Var, b8.o oVar, SQLiteDatabase sQLiteDatabase) {
-        List<k> listA0 = m0Var.A0(sQLiteDatabase, oVar, m0Var.f21135d.d());
+        List<k> listW0 = m0Var.w0(sQLiteDatabase, oVar, m0Var.f21708d.d());
         for (y7.e eVar : y7.e.values()) {
             if (eVar != oVar.d()) {
-                int iD = m0Var.f21135d.d() - listA0.size();
+                int iD = m0Var.f21708d.d() - listW0.size();
                 if (iD <= 0) {
                     break;
                 }
-                listA0.addAll(m0Var.A0(sQLiteDatabase, oVar.f(eVar), iD));
+                listW0.addAll(m0Var.w0(sQLiteDatabase, oVar.f(eVar), iD));
             }
         }
-        return m0Var.z0(listA0, m0Var.D0(sQLiteDatabase, listA0));
+        return m0Var.v0(listW0, m0Var.z0(sQLiteDatabase, listW0));
     }
 
     public static /* synthetic */ List g(Cursor cursor) {
         ArrayList arrayList = new ArrayList();
         while (cursor.moveToNext()) {
-            arrayList.add(b8.o.a().b(cursor.getString(1)).d(m8.a.b(cursor.getInt(2))).c(E0(cursor.getString(3))).a());
+            arrayList.add(b8.o.a().b(cursor.getString(1)).d(m8.a.b(cursor.getInt(2))).c(A0(cursor.getString(3))).a());
         }
         return arrayList;
     }
@@ -247,10 +247,10 @@ public class m0 implements j8.d, k8.b, j8.c {
     public static /* synthetic */ Object m(final m0 m0Var, String str, String str2, SQLiteDatabase sQLiteDatabase) {
         m0Var.getClass();
         sQLiteDatabase.compileStatement(str).execute();
-        O0(sQLiteDatabase.rawQuery(str2, null), new b() { // from class: j8.v
+        K0(sQLiteDatabase.rawQuery(str2, null), new b() { // from class: j8.v
             @Override // j8.m0.b
             public final Object apply(Object obj) {
-                return m0.h(this.f21162a, (Cursor) obj);
+                return m0.h(this.f21735a, (Cursor) obj);
             }
         });
         sQLiteDatabase.compileStatement("DELETE FROM events WHERE num_attempts >= 16").execute();
@@ -258,8 +258,8 @@ public class m0 implements j8.d, k8.b, j8.c {
     }
 
     public static /* synthetic */ Boolean n(m0 m0Var, b8.o oVar, SQLiteDatabase sQLiteDatabase) {
-        Long lT0 = m0Var.t0(sQLiteDatabase, oVar);
-        return lT0 == null ? Boolean.FALSE : (Boolean) O0(m0Var.e0().rawQuery("SELECT 1 FROM events WHERE context_id = ? LIMIT 1", new String[]{lT0.toString()}), new b() { // from class: j8.u
+        Long lP0 = m0Var.p0(sQLiteDatabase, oVar);
+        return lP0 == null ? Boolean.FALSE : (Boolean) K0(m0Var.c0().rawQuery("SELECT 1 FROM events WHERE context_id = ? LIMIT 1", new String[]{lP0.toString()}), new b() { // from class: j8.u
             @Override // j8.m0.b
             public final Object apply(Object obj) {
                 return Boolean.valueOf(((Cursor) obj).moveToNext());
@@ -297,7 +297,7 @@ public class m0 implements j8.d, k8.b, j8.c {
     }
 
     public static /* synthetic */ List r(SQLiteDatabase sQLiteDatabase) {
-        return (List) O0(sQLiteDatabase.rawQuery("SELECT distinct t._id, t.backend_name, t.priority, t.extras FROM transport_contexts AS t, events AS e WHERE e.context_id = t._id", new String[0]), new b() { // from class: j8.k0
+        return (List) K0(sQLiteDatabase.rawQuery("SELECT distinct t._id, t.backend_name, t.priority, t.extras FROM transport_contexts AS t, events AS e WHERE e.context_id = t._id", new String[0]), new b() { // from class: j8.k0
             @Override // j8.m0.b
             public final Object apply(Object obj) {
                 return m0.g((Cursor) obj);
@@ -305,35 +305,35 @@ public class m0 implements j8.d, k8.b, j8.c {
         });
     }
 
-    public static /* synthetic */ e8.a s(m0 m0Var, Map map, e8.a.C0281a c0281a, Cursor cursor) {
+    public static /* synthetic */ e8.a s(m0 m0Var, Map map, e8.a.C0295a c0295a, Cursor cursor) {
         m0Var.getClass();
         while (cursor.moveToNext()) {
             String string = cursor.getString(0);
-            e8.c.b bVarY = m0Var.Y(cursor.getInt(1));
+            e8.c.b bVarX = m0Var.X(cursor.getInt(1));
             long j10 = cursor.getLong(2);
             if (!map.containsKey(string)) {
                 map.put(string, new ArrayList());
             }
-            ((List) map.get(string)).add(e8.c.c().c(bVarY).b(j10).a());
+            ((List) map.get(string)).add(e8.c.c().c(bVarX).b(j10).a());
         }
-        m0Var.F0(c0281a, map);
-        c0281a.e(m0Var.r0());
-        c0281a.d(m0Var.f0());
-        c0281a.c(m0Var.f21136e.get());
-        return c0281a.b();
+        m0Var.B0(c0295a, map);
+        c0295a.e(m0Var.n0());
+        c0295a.d(m0Var.d0());
+        c0295a.c(m0Var.f21709e.get());
+        return c0295a.b();
     }
 
     public static /* synthetic */ Long v(m0 m0Var, b8.i iVar, b8.o oVar, SQLiteDatabase sQLiteDatabase) {
-        if (m0Var.y0()) {
+        if (m0Var.u0()) {
             m0Var.d(1L, e8.c.b.CACHE_FULL, iVar.j());
             return -1L;
         }
-        long jA0 = m0Var.a0(sQLiteDatabase, oVar);
-        int iE = m0Var.f21135d.e();
+        long jZ = m0Var.Z(sQLiteDatabase, oVar);
+        int iE = m0Var.f21708d.e();
         byte[] bArrA = iVar.e().a();
         boolean z10 = bArrA.length <= iE;
         ContentValues contentValues = new ContentValues();
-        contentValues.put("context_id", Long.valueOf(jA0));
+        contentValues.put("context_id", Long.valueOf(jZ));
         contentValues.put("transport_name", iVar.j());
         contentValues.put("timestamp_ms", Long.valueOf(iVar.f()));
         contentValues.put("uptime_ms", Long.valueOf(iVar.k()));
@@ -369,55 +369,21 @@ public class m0 implements j8.d, k8.b, j8.c {
         return null;
     }
 
-    public static /* synthetic */ Long y(Cursor cursor) {
+    public static /* synthetic */ Long x(Cursor cursor) {
         if (cursor.moveToNext()) {
             return Long.valueOf(cursor.getLong(0));
         }
         return null;
     }
 
-    public final List<k> A0(SQLiteDatabase sQLiteDatabase, final b8.o oVar, int i10) {
-        final ArrayList arrayList = new ArrayList();
-        Long lT0 = t0(sQLiteDatabase, oVar);
-        if (lT0 == null) {
-            return arrayList;
-        }
-        O0(sQLiteDatabase.query("events", new String[]{"_id", "transport_name", "timestamp_ms", "uptime_ms", "payload_encoding", "payload", "code", "inline"}, "context_id = ?", new String[]{lT0.toString()}, null, null, null, String.valueOf(i10)), new b() { // from class: j8.x
-            @Override // j8.m0.b
-            public final Object apply(Object obj) {
-                return m0.L(this.f21163a, arrayList, oVar, (Cursor) obj);
-            }
-        });
-        return arrayList;
-    }
-
-    public final Map<Long, Set<c>> D0(SQLiteDatabase sQLiteDatabase, List<k> list) {
-        final HashMap map = new HashMap();
-        StringBuilder sb2 = new StringBuilder("event_id IN (");
-        for (int i10 = 0; i10 < list.size(); i10++) {
-            sb2.append(list.get(i10).c());
-            if (i10 < list.size() - 1) {
-                sb2.append(',');
-            }
-        }
-        sb2.append(')');
-        O0(sQLiteDatabase.query("event_metadata", new String[]{"event_id", "name", "value"}, sb2.toString(), null, null, null, null), new b() { // from class: j8.z
-            @Override // j8.m0.b
-            public final Object apply(Object obj) {
-                return m0.H(map, (Cursor) obj);
-            }
-        });
-        return map;
-    }
-
-    public final void F0(e8.a.C0281a c0281a, Map<String, List<e8.c>> map) {
+    public final void B0(e8.a.C0295a c0295a, Map<String, List<e8.c>> map) {
         for (Map.Entry<String, List<e8.c>> entry : map.entrySet()) {
-            c0281a.a(e8.d.c().c(entry.getKey()).b(entry.getValue()).a());
+            c0295a.a(e8.d.c().c(entry.getKey()).b(entry.getValue()).a());
         }
     }
 
-    public final byte[] H0(long j10) {
-        return (byte[]) O0(e0().query("event_payloads", new String[]{"bytes"}, "event_id = ?", new String[]{String.valueOf(j10)}, null, null, "sequence_num"), new b() { // from class: j8.b0
+    public final byte[] D0(long j10) {
+        return (byte[]) K0(c0().query("event_payloads", new String[]{"bytes"}, "event_id = ?", new String[]{String.valueOf(j10)}, null, null, "sequence_num"), new b() { // from class: j8.b0
             @Override // j8.m0.b
             public final Object apply(Object obj) {
                 return m0.q((Cursor) obj);
@@ -425,20 +391,13 @@ public class m0 implements j8.d, k8.b, j8.c {
         });
     }
 
-    @Override // j8.d
-    public void J(Iterable<k> iterable) {
-        if (iterable.iterator().hasNext()) {
-            e0().compileStatement("DELETE FROM events WHERE _id in " + N0(iterable)).execute();
-        }
-    }
-
-    public final <T> T J0(d<T> dVar, b<Throwable, T> bVar) {
-        long jA = this.f21134c.a();
+    public final <T> T F0(d<T> dVar, b<Throwable, T> bVar) {
+        long jA = this.f21707c.a();
         while (true) {
             try {
                 return dVar.a();
             } catch (SQLiteDatabaseLockedException e10) {
-                if (this.f21134c.a() >= ((long) this.f21135d.b()) + jA) {
+                if (this.f21707c.a() >= ((long) this.f21708d.b()) + jA) {
                     return bVar.apply(e10);
                 }
                 SystemClock.sleep(50L);
@@ -447,22 +406,29 @@ public class m0 implements j8.d, k8.b, j8.c {
     }
 
     @Override // j8.d
+    public void J(Iterable<k> iterable) {
+        if (iterable.iterator().hasNext()) {
+            c0().compileStatement("DELETE FROM events WHERE _id in " + J0(iterable)).execute();
+        }
+    }
+
+    @Override // j8.d
     public boolean K(final b8.o oVar) {
-        return ((Boolean) x0(new b() { // from class: j8.o
+        return ((Boolean) t0(new b() { // from class: j8.o
             @Override // j8.m0.b
             public final Object apply(Object obj) {
-                return m0.n(this.f21142a, oVar, (SQLiteDatabase) obj);
+                return m0.n(this.f21715a, oVar, (SQLiteDatabase) obj);
             }
         })).booleanValue();
     }
 
     @Override // j8.d
-    public k U0(final b8.o oVar, final b8.i iVar) {
+    public k Q0(final b8.o oVar, final b8.i iVar) {
         f8.a.b("SQLiteEventStore", "Storing event with priority=%s, name=%s for destination %s", oVar.d(), iVar.j(), oVar.b());
-        long jLongValue = ((Long) x0(new b() { // from class: j8.i0
+        long jLongValue = ((Long) t0(new b() { // from class: j8.i0
             @Override // j8.m0.b
             public final Object apply(Object obj) {
-                return m0.v(this.f21124a, iVar, oVar, (SQLiteDatabase) obj);
+                return m0.v(this.f21697a, iVar, oVar, (SQLiteDatabase) obj);
             }
         })).longValue();
         if (jLongValue < 1) {
@@ -471,7 +437,7 @@ public class m0 implements j8.d, k8.b, j8.c {
         return k.a(jLongValue, oVar, iVar);
     }
 
-    public final e8.c.b Y(int i10) {
+    public final e8.c.b X(int i10) {
         e8.c.b bVar = e8.c.b.REASON_UNKNOWN;
         if (i10 == bVar.getNumber()) {
             return bVar;
@@ -504,8 +470,8 @@ public class m0 implements j8.d, k8.b, j8.c {
         return bVar;
     }
 
-    public final void Z(final SQLiteDatabase sQLiteDatabase) {
-        J0(new d() { // from class: j8.l
+    public final void Y(final SQLiteDatabase sQLiteDatabase) {
+        F0(new d() { // from class: j8.l
             @Override // j8.m0.d
             public final Object a() {
                 return m0.w(sQLiteDatabase);
@@ -513,25 +479,15 @@ public class m0 implements j8.d, k8.b, j8.c {
         }, new b() { // from class: j8.w
             @Override // j8.m0.b
             public final Object apply(Object obj) {
-                return m0.B((Throwable) obj);
+                return m0.A((Throwable) obj);
             }
         });
     }
 
-    @Override // j8.c
-    public void a() {
-        x0(new b() { // from class: j8.q
-            @Override // j8.m0.b
-            public final Object apply(Object obj) {
-                return m0.M(this.f21144a, (SQLiteDatabase) obj);
-            }
-        });
-    }
-
-    public final long a0(SQLiteDatabase sQLiteDatabase, b8.o oVar) {
-        Long lT0 = t0(sQLiteDatabase, oVar);
-        if (lT0 != null) {
-            return lT0.longValue();
+    public final long Z(SQLiteDatabase sQLiteDatabase, b8.o oVar) {
+        Long lP0 = p0(sQLiteDatabase, oVar);
+        if (lP0 != null) {
+            return lP0.longValue();
         }
         ContentValues contentValues = new ContentValues();
         contentValues.put("backend_name", oVar.b());
@@ -543,76 +499,60 @@ public class m0 implements j8.d, k8.b, j8.c {
         return sQLiteDatabase.insert("transport_contexts", null, contentValues);
     }
 
-    @Override // k8.b
-    public <T> T b(k8.b.a<T> aVar) {
-        SQLiteDatabase sQLiteDatabaseE0 = e0();
-        Z(sQLiteDatabaseE0);
-        try {
-            T tExecute = aVar.execute();
-            sQLiteDatabaseE0.setTransactionSuccessful();
-            return tExecute;
-        } finally {
-            sQLiteDatabaseE0.endTransaction();
-        }
+    @Override // j8.d
+    public Iterable<k> Z0(final b8.o oVar) {
+        return (Iterable) t0(new b() { // from class: j8.m
+            @Override // j8.m0.b
+            public final Object apply(Object obj) {
+                return m0.f(this.f21704a, oVar, (SQLiteDatabase) obj);
+            }
+        });
     }
 
-    public long b0() {
-        return i0() * l0();
+    @Override // j8.c
+    public void a() {
+        t0(new b() { // from class: j8.q
+            @Override // j8.m0.b
+            public final Object apply(Object obj) {
+                return m0.M(this.f21717a, (SQLiteDatabase) obj);
+            }
+        });
+    }
+
+    public long a0() {
+        return f0() * i0();
+    }
+
+    @Override // k8.b
+    public <T> T b(k8.b.a<T> aVar) {
+        SQLiteDatabase sQLiteDatabaseC0 = c0();
+        Y(sQLiteDatabaseC0);
+        try {
+            T tExecute = aVar.execute();
+            sQLiteDatabaseC0.setTransactionSuccessful();
+            return tExecute;
+        } finally {
+            sQLiteDatabaseC0.endTransaction();
+        }
     }
 
     @Override // j8.c
     public e8.a c() {
-        final e8.a.C0281a c0281aE = e8.a.e();
+        final e8.a.C0295a c0295aE = e8.a.e();
         final HashMap map = new HashMap();
         final String str = "SELECT log_source, reason, events_dropped_count FROM log_event_dropped";
-        return (e8.a) x0(new b() { // from class: j8.t
+        return (e8.a) t0(new b() { // from class: j8.t
             @Override // j8.m0.b
             public final Object apply(Object obj) {
-                return m0.P(this.f21148a, str, map, c0281aE, (SQLiteDatabase) obj);
+                return m0.P(this.f21721a, str, map, c0295aE, (SQLiteDatabase) obj);
             }
         });
     }
 
-    @Override // j8.d
-    public int cleanUp() {
-        final long jA = this.b.a() - this.f21135d.c();
-        return ((Integer) x0(new b() { // from class: j8.j0
-            @Override // j8.m0.b
-            public final Object apply(Object obj) {
-                return m0.I(this.f21127a, jA, (SQLiteDatabase) obj);
-            }
-        })).intValue();
-    }
-
-    @Override // java.io.Closeable, java.lang.AutoCloseable
-    public void close() {
-        this.f21133a.close();
-    }
-
-    @Override // j8.c
-    public void d(final long j10, final e8.c.b bVar, final String str) {
-        x0(new b() { // from class: j8.r
-            @Override // j8.m0.b
-            public final Object apply(Object obj) {
-                return m0.F(str, bVar, j10, (SQLiteDatabase) obj);
-            }
-        });
-    }
-
-    @Override // j8.d
-    public Iterable<k> d1(final b8.o oVar) {
-        return (Iterable) x0(new b() { // from class: j8.m
-            @Override // j8.m0.b
-            public final Object apply(Object obj) {
-                return m0.f(this.f21131a, oVar, (SQLiteDatabase) obj);
-            }
-        });
-    }
-
-    public SQLiteDatabase e0() {
-        final t0 t0Var = this.f21133a;
+    public SQLiteDatabase c0() {
+        final t0 t0Var = this.f21706a;
         Objects.requireNonNull(t0Var);
-        return (SQLiteDatabase) J0(new d() { // from class: j8.e0
+        return (SQLiteDatabase) F0(new d() { // from class: j8.e0
             @Override // j8.m0.d
             public final Object a() {
                 return t0Var.getWritableDatabase();
@@ -625,13 +565,39 @@ public class m0 implements j8.d, k8.b, j8.c {
         });
     }
 
-    public final e8.b f0() {
-        return e8.b.b().b(e8.e.c().b(b0()).c(e.f21119a.f()).a()).a();
+    @Override // j8.d
+    public int cleanUp() {
+        final long jA = this.b.a() - this.f21708d.c();
+        return ((Integer) t0(new b() { // from class: j8.j0
+            @Override // j8.m0.b
+            public final Object apply(Object obj) {
+                return m0.I(this.f21700a, jA, (SQLiteDatabase) obj);
+            }
+        })).intValue();
+    }
+
+    @Override // java.io.Closeable, java.lang.AutoCloseable
+    public void close() {
+        this.f21706a.close();
+    }
+
+    @Override // j8.c
+    public void d(final long j10, final e8.c.b bVar, final String str) {
+        t0(new b() { // from class: j8.r
+            @Override // j8.m0.b
+            public final Object apply(Object obj) {
+                return m0.F(str, bVar, j10, (SQLiteDatabase) obj);
+            }
+        });
+    }
+
+    public final e8.b d0() {
+        return e8.b.b().b(e8.e.c().b(a0()).c(e.f21692a.f()).a()).a();
     }
 
     @Override // j8.d
-    public Iterable<b8.o> g0() {
-        return (Iterable) x0(new b() { // from class: j8.g0
+    public Iterable<b8.o> e0() {
+        return (Iterable) t0(new b() { // from class: j8.g0
             @Override // j8.m0.b
             public final Object apply(Object obj) {
                 return m0.r((SQLiteDatabase) obj);
@@ -639,49 +605,25 @@ public class m0 implements j8.d, k8.b, j8.c {
         });
     }
 
+    public final long f0() {
+        return c0().compileStatement("PRAGMA page_count").simpleQueryForLong();
+    }
+
     public final long i0() {
-        return e0().compileStatement("PRAGMA page_count").simpleQueryForLong();
+        return c0().compileStatement("PRAGMA page_size").simpleQueryForLong();
     }
 
-    public final long l0() {
-        return e0().compileStatement("PRAGMA page_size").simpleQueryForLong();
-    }
-
-    @Override // j8.d
-    public void o2(final b8.o oVar, final long j10) {
-        x0(new b() { // from class: j8.p
-            @Override // j8.m0.b
-            public final Object apply(Object obj) {
-                return m0.o(j10, oVar, (SQLiteDatabase) obj);
-            }
-        });
-    }
-
-    public final e8.f r0() {
+    public final e8.f n0() {
         final long jA = this.b.a();
-        return (e8.f) x0(new b() { // from class: j8.c0
+        return (e8.f) t0(new b() { // from class: j8.c0
             @Override // j8.m0.b
             public final Object apply(Object obj) {
-                return m0.X(jA, (SQLiteDatabase) obj);
+                return m0.W(jA, (SQLiteDatabase) obj);
             }
         });
     }
 
-    @Override // j8.d
-    public void s1(Iterable<k> iterable) {
-        if (iterable.iterator().hasNext()) {
-            final String str = "UPDATE events SET num_attempts = num_attempts + 1 WHERE _id in " + N0(iterable);
-            final String str2 = "SELECT COUNT(*), transport_name FROM events WHERE num_attempts >= 16 GROUP BY transport_name";
-            x0(new b() { // from class: j8.l0
-                @Override // j8.m0.b
-                public final Object apply(Object obj) {
-                    return m0.m(this.f21129a, str, str2, (SQLiteDatabase) obj);
-                }
-            });
-        }
-    }
-
-    public final Long t0(SQLiteDatabase sQLiteDatabase, b8.o oVar) {
+    public final Long p0(SQLiteDatabase sQLiteDatabase, b8.o oVar) {
         StringBuilder sb2 = new StringBuilder("backend_name = ? and priority = ?");
         ArrayList arrayList = new ArrayList(Arrays.asList(oVar.b(), String.valueOf(m8.a.a(oVar.d()))));
         if (oVar.c() != null) {
@@ -690,17 +632,41 @@ public class m0 implements j8.d, k8.b, j8.c {
         } else {
             sb2.append(" and extras is null");
         }
-        return (Long) O0(sQLiteDatabase.query("transport_contexts", new String[]{"_id"}, sb2.toString(), (String[]) arrayList.toArray(new String[0]), null, null, null), new b() { // from class: j8.n
+        return (Long) K0(sQLiteDatabase.query("transport_contexts", new String[]{"_id"}, sb2.toString(), (String[]) arrayList.toArray(new String[0]), null, null, null), new b() { // from class: j8.n
             @Override // j8.m0.b
             public final Object apply(Object obj) {
-                return m0.y((Cursor) obj);
+                return m0.x((Cursor) obj);
             }
         });
     }
 
     @Override // j8.d
-    public long v0(b8.o oVar) {
-        return ((Long) O0(e0().rawQuery("SELECT next_request_ms FROM transport_contexts WHERE backend_name = ? and priority = ?", new String[]{oVar.b(), String.valueOf(m8.a.a(oVar.d()))}), new b() { // from class: j8.h0
+    public void p2(final b8.o oVar, final long j10) {
+        t0(new b() { // from class: j8.p
+            @Override // j8.m0.b
+            public final Object apply(Object obj) {
+                return m0.o(j10, oVar, (SQLiteDatabase) obj);
+            }
+        });
+    }
+
+    @Override // j8.d
+    public void q1(Iterable<k> iterable) {
+        if (iterable.iterator().hasNext()) {
+            final String str = "UPDATE events SET num_attempts = num_attempts + 1 WHERE _id in " + J0(iterable);
+            final String str2 = "SELECT COUNT(*), transport_name FROM events WHERE num_attempts >= 16 GROUP BY transport_name";
+            t0(new b() { // from class: j8.l0
+                @Override // j8.m0.b
+                public final Object apply(Object obj) {
+                    return m0.m(this.f21702a, str, str2, (SQLiteDatabase) obj);
+                }
+            });
+        }
+    }
+
+    @Override // j8.d
+    public long r0(b8.o oVar) {
+        return ((Long) K0(c0().rawQuery("SELECT next_request_ms FROM transport_contexts WHERE backend_name = ? and priority = ?", new String[]{oVar.b(), String.valueOf(m8.a.a(oVar.d()))}), new b() { // from class: j8.h0
             @Override // j8.m0.b
             public final Object apply(Object obj) {
                 return m0.U((Cursor) obj);
@@ -708,34 +674,68 @@ public class m0 implements j8.d, k8.b, j8.c {
         })).longValue();
     }
 
-    public <T> T x0(b<SQLiteDatabase, T> bVar) {
-        SQLiteDatabase sQLiteDatabaseE0 = e0();
-        sQLiteDatabaseE0.beginTransaction();
+    public <T> T t0(b<SQLiteDatabase, T> bVar) {
+        SQLiteDatabase sQLiteDatabaseC0 = c0();
+        sQLiteDatabaseC0.beginTransaction();
         try {
-            T tApply = bVar.apply(sQLiteDatabaseE0);
-            sQLiteDatabaseE0.setTransactionSuccessful();
+            T tApply = bVar.apply(sQLiteDatabaseC0);
+            sQLiteDatabaseC0.setTransactionSuccessful();
             return tApply;
         } finally {
-            sQLiteDatabaseE0.endTransaction();
+            sQLiteDatabaseC0.endTransaction();
         }
     }
 
-    public final boolean y0() {
-        return i0() * l0() >= this.f21135d.f();
+    public final boolean u0() {
+        return f0() * i0() >= this.f21708d.f();
     }
 
-    public final List<k> z0(List<k> list, Map<Long, Set<c>> map) {
+    public final List<k> v0(List<k> list, Map<Long, Set<c>> map) {
         ListIterator<k> listIterator = list.listIterator();
         while (listIterator.hasNext()) {
             k next = listIterator.next();
             if (map.containsKey(Long.valueOf(next.c()))) {
                 b8.i.a aVarL = next.b().l();
                 for (c cVar : map.get(Long.valueOf(next.c()))) {
-                    aVarL.c(cVar.f21137a, cVar.b);
+                    aVarL.c(cVar.f21710a, cVar.b);
                 }
                 listIterator.set(k.a(next.c(), next.d(), aVarL.d()));
             }
         }
         return list;
+    }
+
+    public final List<k> w0(SQLiteDatabase sQLiteDatabase, final b8.o oVar, int i10) {
+        final ArrayList arrayList = new ArrayList();
+        Long lP0 = p0(sQLiteDatabase, oVar);
+        if (lP0 == null) {
+            return arrayList;
+        }
+        K0(sQLiteDatabase.query("events", new String[]{"_id", "transport_name", "timestamp_ms", "uptime_ms", "payload_encoding", "payload", "code", "inline"}, "context_id = ?", new String[]{lP0.toString()}, null, null, null, String.valueOf(i10)), new b() { // from class: j8.x
+            @Override // j8.m0.b
+            public final Object apply(Object obj) {
+                return m0.L(this.f21736a, arrayList, oVar, (Cursor) obj);
+            }
+        });
+        return arrayList;
+    }
+
+    public final Map<Long, Set<c>> z0(SQLiteDatabase sQLiteDatabase, List<k> list) {
+        final HashMap map = new HashMap();
+        StringBuilder sb2 = new StringBuilder("event_id IN (");
+        for (int i10 = 0; i10 < list.size(); i10++) {
+            sb2.append(list.get(i10).c());
+            if (i10 < list.size() - 1) {
+                sb2.append(',');
+            }
+        }
+        sb2.append(')');
+        K0(sQLiteDatabase.query("event_metadata", new String[]{"event_id", "name", "value"}, sb2.toString(), null, null, null, null), new b() { // from class: j8.z
+            @Override // j8.m0.b
+            public final Object apply(Object obj) {
+                return m0.H(map, (Cursor) obj);
+            }
+        });
+        return map;
     }
 }

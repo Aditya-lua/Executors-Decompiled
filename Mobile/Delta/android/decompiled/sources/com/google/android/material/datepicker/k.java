@@ -17,33 +17,33 @@ public class k extends RecyclerView.h<b> {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NonNull
-    public final CalendarConstraints f7908d;
+    public final CalendarConstraints f7982d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final DateSelector<?> f7909e;
+    public final DateSelector<?> f7983e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final DayViewDecorator f7910f;
+    public final DayViewDecorator f7984f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final e.m f7911g;
+    public final e.m f7985g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final int f7912h;
+    public final int f7986h;
 
     public class a implements AdapterView.OnItemClickListener {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ MaterialCalendarGridView f7913a;
+        public final /* synthetic */ MaterialCalendarGridView f7987a;
 
         public a(MaterialCalendarGridView materialCalendarGridView) {
-            this.f7913a = materialCalendarGridView;
+            this.f7987a = materialCalendarGridView;
         }
 
         @Override // android.widget.AdapterView.OnItemClickListener
         public void onItemClick(AdapterView<?> adapterView, View view, int i10, long j10) {
-            if (this.f7913a.getAdapter().r(i10)) {
-                k.this.f7911g.a(this.f7913a.getAdapter().getItem(i10).longValue());
+            if (this.f7987a.getAdapter().r(i10)) {
+                k.this.f7985g.a(this.f7987a.getAdapter().getItem(i10).longValue());
             }
         }
     }
@@ -51,17 +51,17 @@ public class k extends RecyclerView.h<b> {
     public static class b extends RecyclerView.f0 {
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public final TextView f7914u;
+        public final TextView f7988u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final MaterialCalendarGridView f7915v;
+        public final MaterialCalendarGridView f7989v;
 
         public b(@NonNull LinearLayout linearLayout, boolean z10) {
             super(linearLayout);
-            TextView textView = (TextView) linearLayout.findViewById(hc.f.f18881w);
-            this.f7914u = textView;
+            TextView textView = (TextView) linearLayout.findViewById(ic.f.f20703w);
+            this.f7988u = textView;
             o0.n0(textView, true);
-            this.f7915v = (MaterialCalendarGridView) linearLayout.findViewById(hc.f.f18877s);
+            this.f7989v = (MaterialCalendarGridView) linearLayout.findViewById(ic.f.f20699s);
             if (z10) {
                 return;
             }
@@ -79,17 +79,17 @@ public class k extends RecyclerView.h<b> {
         if (monthQ.compareTo(monthN) > 0) {
             throw new IllegalArgumentException("currentPage cannot be after lastPage");
         }
-        this.f7912h = (j.f7901g * e.q2(context)) + (g.J2(context) ? e.q2(context) : 0);
-        this.f7908d = calendarConstraints;
-        this.f7909e = dateSelector;
-        this.f7910f = dayViewDecorator;
-        this.f7911g = mVar;
+        this.f7986h = (j.f7975g * e.q2(context)) + (g.J2(context) ? e.q2(context) : 0);
+        this.f7982d = calendarConstraints;
+        this.f7983e = dateSelector;
+        this.f7984f = dayViewDecorator;
+        this.f7985g = mVar;
         A(true);
     }
 
     @NonNull
     public Month D(int i10) {
-        return this.f7908d.r().w(i10);
+        return this.f7982d.r().w(i10);
     }
 
     @NonNull
@@ -98,18 +98,18 @@ public class k extends RecyclerView.h<b> {
     }
 
     public int F(@NonNull Month month) {
-        return this.f7908d.r().x(month);
+        return this.f7982d.r().y(month);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.h
     /* JADX INFO: renamed from: G, reason: merged with bridge method [inline-methods] */
     public void r(@NonNull b bVar, int i10) {
-        Month monthW = this.f7908d.r().w(i10);
-        bVar.f7914u.setText(monthW.u());
-        MaterialCalendarGridView materialCalendarGridView = (MaterialCalendarGridView) bVar.f7915v.findViewById(hc.f.f18877s);
-        if (materialCalendarGridView.getAdapter() == null || !monthW.equals(materialCalendarGridView.getAdapter().f7903a)) {
-            j jVar = new j(monthW, this.f7909e, this.f7908d, this.f7910f);
-            materialCalendarGridView.setNumColumns(monthW.f7833d);
+        Month monthW = this.f7982d.r().w(i10);
+        bVar.f7988u.setText(monthW.u());
+        MaterialCalendarGridView materialCalendarGridView = (MaterialCalendarGridView) bVar.f7989v.findViewById(ic.f.f20699s);
+        if (materialCalendarGridView.getAdapter() == null || !monthW.equals(materialCalendarGridView.getAdapter().f7977a)) {
+            j jVar = new j(monthW, this.f7983e, this.f7982d, this.f7984f);
+            materialCalendarGridView.setNumColumns(monthW.f7907d);
             materialCalendarGridView.setAdapter((ListAdapter) jVar);
         } else {
             materialCalendarGridView.invalidate();
@@ -122,21 +122,21 @@ public class k extends RecyclerView.h<b> {
     @NonNull
     /* JADX INFO: renamed from: H, reason: merged with bridge method [inline-methods] */
     public b t(@NonNull ViewGroup viewGroup, int i10) {
-        LinearLayout linearLayout = (LinearLayout) LayoutInflater.from(viewGroup.getContext()).inflate(hc.h.f18902q, viewGroup, false);
+        LinearLayout linearLayout = (LinearLayout) LayoutInflater.from(viewGroup.getContext()).inflate(ic.h.f20724q, viewGroup, false);
         if (!g.J2(viewGroup.getContext())) {
             return new b(linearLayout, false);
         }
-        linearLayout.setLayoutParams(new RecyclerView.r(-1, this.f7912h));
+        linearLayout.setLayoutParams(new RecyclerView.r(-1, this.f7986h));
         return new b(linearLayout, true);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.h
     public int e() {
-        return this.f7908d.p();
+        return this.f7982d.p();
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.h
     public long f(int i10) {
-        return this.f7908d.r().w(i10).v();
+        return this.f7982d.r().w(i10).v();
     }
 }

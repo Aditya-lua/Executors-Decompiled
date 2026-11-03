@@ -6,7 +6,7 @@ import java.util.Map;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface l3 {
-    me.x<Void> a(n0.o3 o3Var, CameraDevice cameraDevice, h5.a aVar);
+    ne.x<Void> a(n0.o3 o3Var, CameraDevice cameraDevice, h5.a aVar);
 
     void b(List<n0.l1> list);
 
@@ -18,7 +18,7 @@ public interface l3 {
 
     void e();
 
-    me.x<Void> f(boolean z10);
+    ne.x<Void> f(boolean z10);
 
     List<n0.l1> g();
 

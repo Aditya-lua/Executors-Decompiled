@@ -3,10 +3,10 @@ package i5;
 import android.database.Cursor;
 import g5.f;
 import g5.g;
+import gt.l;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Locale;
-import jt.l;
 import kotlin.Metadata;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
@@ -40,26 +40,26 @@ public abstract class c implements f5.d {
 
         /* JADX INFO: renamed from: i5.c$a$a, reason: collision with other inner class name */
         @Metadata(d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\b2\u0018\u00002\u00020\u0001:\u0001\u0004B\t\b\u0004¢\u0006\u0004\b\u0002\u0010\u0003\u0082\u0001\u0001\u0005¨\u0006\u0006"}, d2 = {"Li5/c$a$a;", "", "<init>", "()V", "a", "Li5/c$a$a$a;", "sqlite-framework"}, k = 1, mv = {2, 1, 0}, xi = 48)
-        public static abstract class AbstractC0358a {
+        public static abstract class AbstractC0356a {
 
             /* JADX INFO: renamed from: i5.c$a$a$a, reason: collision with other inner class name */
             @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"Li5/c$a$a$a;", "Li5/c$a$a;", "<init>", "()V", "sqlite-framework"}, k = 1, mv = {2, 1, 0}, xi = 48)
-            public static final class C0359a extends AbstractC0358a {
+            public static final class C0357a extends AbstractC0356a {
 
                 /* JADX INFO: renamed from: a, reason: collision with root package name */
                 @NotNull
-                public static final C0359a f20265a = new C0359a();
+                public static final C0357a f20381a = new C0357a();
 
-                public C0359a() {
+                public C0357a() {
                     super(null);
                 }
             }
 
-            public /* synthetic */ AbstractC0358a(DefaultConstructorMarker defaultConstructorMarker) {
+            public /* synthetic */ AbstractC0356a(DefaultConstructorMarker defaultConstructorMarker) {
                 this();
             }
 
-            public AbstractC0358a() {
+            public AbstractC0356a() {
             }
         }
 
@@ -74,7 +74,7 @@ public abstract class c implements f5.d {
 
 
             /* JADX INFO: renamed from: g, reason: collision with root package name */
-            public static final /* synthetic */ qt.a f20271g = qt.b.a(a());
+            public static final /* synthetic */ ot.a f20387g = ot.b.a(a());
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -89,24 +89,24 @@ public abstract class c implements f5.d {
             Intrinsics.checkNotNullExpressionValue(upperCase, "toUpperCase(...)");
             String strC = c(upperCase);
             if (strC == null) {
-                return new C0360c(db2, sql);
+                return new C0358c(db2, sql);
             }
             b bVarE = e(strC, upperCase);
             if (bVarE != null) {
                 return new e(db2, sql, bVarE);
             }
-            if (b(strC, upperCase) instanceof AbstractC0358a.C0359a) {
+            if (b(strC, upperCase) instanceof AbstractC0356a.C0357a) {
                 return new b(db2, sql, new d(db2, sql));
             }
-            return f(strC) ? new d(db2, sql) : new C0360c(db2, sql);
+            return f(strC) ? new d(db2, sql) : new C0358c(db2, sql);
         }
 
-        public final AbstractC0358a b(String prefix, String sql) {
+        public final AbstractC0356a b(String prefix, String sql) {
             if (Intrinsics.c(prefix, "PRA")) {
                 String lowerCase = sql.toLowerCase(Locale.ROOT);
                 Intrinsics.checkNotNullExpressionValue(lowerCase, "toLowerCase(...)");
                 if (StringsKt.a0(StringsKt.Z0(lowerCase, "journal_mode", ""), "=", false, 2, null)) {
-                    return AbstractC0358a.C0359a.f20265a;
+                    return AbstractC0356a.C0357a.f20381a;
                 }
             }
             return null;
@@ -187,7 +187,7 @@ public abstract class c implements f5.d {
          */
         /* JADX WARN: Code restructure failed: missing block: B:20:0x0034, code lost:
         
-            return i5.c.Companion.b.f20266a;
+            return i5.c.Companion.b.f20382a;
          */
         /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
         /*
@@ -276,7 +276,7 @@ public abstract class c implements f5.d {
         }
     }
 
-    @Metadata(d1 = {"\u0000>\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0019\b\u0002\u0018\u00002\u00020\u00012\u00020\u0002B\u001f\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\u0007\u001a\u00020\u0001¢\u0006\u0004\b\b\u0010\tJ\u000f\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\u000b\u0010\fJ\"\u0010\u0012\u001a\u00020\u00112\b\b\u0001\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\u000fH\u0096\u0001¢\u0006\u0004\b\u0012\u0010\u0013J\"\u0010\u0015\u001a\u00020\u00112\b\b\u0001\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\u0014H\u0096\u0001¢\u0006\u0004\b\u0015\u0010\u0016J\"\u0010\u0017\u001a\u00020\u00112\b\b\u0001\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\u0005H\u0096\u0001¢\u0006\u0004\b\u0017\u0010\u0018J\u001a\u0010\u0019\u001a\u00020\u00112\b\b\u0001\u0010\u000e\u001a\u00020\rH\u0096\u0001¢\u0006\u0004\b\u0019\u0010\u001aJ\u001a\u0010\u001b\u001a\u00020\u000f2\b\b\u0001\u0010\u000e\u001a\u00020\rH\u0096\u0001¢\u0006\u0004\b\u001b\u0010\u001cJ\u001a\u0010\u001d\u001a\u00020\u00142\b\b\u0001\u0010\u000e\u001a\u00020\rH\u0096\u0001¢\u0006\u0004\b\u001d\u0010\u001eJ\u001a\u0010\u001f\u001a\u00020\n2\b\b\u0001\u0010\u000e\u001a\u00020\rH\u0096\u0001¢\u0006\u0004\b\u001f\u0010 J\u001a\u0010!\u001a\u00020\u00052\b\b\u0001\u0010\u000e\u001a\u00020\rH\u0096\u0001¢\u0006\u0004\b!\u0010\"J\u001a\u0010#\u001a\u00020\n2\b\b\u0001\u0010\u000e\u001a\u00020\rH\u0096\u0001¢\u0006\u0004\b#\u0010 J\u0010\u0010$\u001a\u00020\rH\u0096\u0001¢\u0006\u0004\b$\u0010%J\u001a\u0010&\u001a\u00020\u00052\b\b\u0001\u0010\u000e\u001a\u00020\rH\u0096\u0001¢\u0006\u0004\b&\u0010\"J\u0010\u0010'\u001a\u00020\u0011H\u0096\u0001¢\u0006\u0004\b'\u0010(J\u0010\u0010)\u001a\u00020\u0011H\u0096\u0001¢\u0006\u0004\b)\u0010(J\u0010\u0010*\u001a\u00020\u0011H\u0096\u0001¢\u0006\u0004\b*\u0010(R\u0014\u0010\u0007\u001a\u00020\u00018\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b+\u0010,¨\u0006-"}, d2 = {"Li5/c$b;", "Li5/c;", "Lf5/d;", "Lg5/c;", "db", "", "sql", "delegate", "<init>", "(Lg5/c;Ljava/lang/String;Li5/c;)V", "", "g3", "()Z", "", "index", "", "value", "", "A", "(I[B)V", "", "z", "(IJ)V", "k0", "(ILjava/lang/String;)V", "C", "(I)V", "getBlob", "(I)[B", "getLong", "(I)J", "a2", "(I)Z", "E2", "(I)Ljava/lang/String;", "isNull", "getColumnCount", "()I", "getColumnName", "reset", "()V", "E", "close", "e", "Li5/c;", "sqlite-framework"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000>\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0019\b\u0002\u0018\u00002\u00020\u00012\u00020\u0002B\u001f\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\u0007\u001a\u00020\u0001¢\u0006\u0004\b\b\u0010\tJ\u000f\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\u000b\u0010\fJ\"\u0010\u0012\u001a\u00020\u00112\b\b\u0001\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\u000fH\u0096\u0001¢\u0006\u0004\b\u0012\u0010\u0013J\"\u0010\u0015\u001a\u00020\u00112\b\b\u0001\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\u0014H\u0096\u0001¢\u0006\u0004\b\u0015\u0010\u0016J\"\u0010\u0017\u001a\u00020\u00112\b\b\u0001\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\u0005H\u0096\u0001¢\u0006\u0004\b\u0017\u0010\u0018J\u001a\u0010\u0019\u001a\u00020\u00112\b\b\u0001\u0010\u000e\u001a\u00020\rH\u0096\u0001¢\u0006\u0004\b\u0019\u0010\u001aJ\u001a\u0010\u001b\u001a\u00020\u000f2\b\b\u0001\u0010\u000e\u001a\u00020\rH\u0096\u0001¢\u0006\u0004\b\u001b\u0010\u001cJ\u001a\u0010\u001d\u001a\u00020\u00142\b\b\u0001\u0010\u000e\u001a\u00020\rH\u0096\u0001¢\u0006\u0004\b\u001d\u0010\u001eJ\u001a\u0010\u001f\u001a\u00020\n2\b\b\u0001\u0010\u000e\u001a\u00020\rH\u0096\u0001¢\u0006\u0004\b\u001f\u0010 J\u001a\u0010!\u001a\u00020\u00052\b\b\u0001\u0010\u000e\u001a\u00020\rH\u0096\u0001¢\u0006\u0004\b!\u0010\"J\u001a\u0010#\u001a\u00020\n2\b\b\u0001\u0010\u000e\u001a\u00020\rH\u0096\u0001¢\u0006\u0004\b#\u0010 J\u0010\u0010$\u001a\u00020\rH\u0096\u0001¢\u0006\u0004\b$\u0010%J\u001a\u0010&\u001a\u00020\u00052\b\b\u0001\u0010\u000e\u001a\u00020\rH\u0096\u0001¢\u0006\u0004\b&\u0010\"J\u0010\u0010'\u001a\u00020\u0011H\u0096\u0001¢\u0006\u0004\b'\u0010(J\u0010\u0010)\u001a\u00020\u0011H\u0096\u0001¢\u0006\u0004\b)\u0010(J\u0010\u0010*\u001a\u00020\u0011H\u0096\u0001¢\u0006\u0004\b*\u0010(R\u0014\u0010\u0007\u001a\u00020\u00018\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b+\u0010,¨\u0006-"}, d2 = {"Li5/c$b;", "Li5/c;", "Lf5/d;", "Lg5/c;", "db", "", "sql", "delegate", "<init>", "(Lg5/c;Ljava/lang/String;Li5/c;)V", "", "i3", "()Z", "", "index", "", "value", "", "z", "(I[B)V", "", "y", "(IJ)V", "h0", "(ILjava/lang/String;)V", "B", "(I)V", "getBlob", "(I)[B", "getLong", "(I)J", "b2", "(I)Z", "F2", "(I)Ljava/lang/String;", "isNull", "getColumnCount", "()I", "getColumnName", "reset", "()V", "E", "close", "e", "Li5/c;", "sqlite-framework"}, k = 1, mv = {2, 1, 0}, xi = 48)
     public static final class b extends c implements f5.d {
 
         /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
@@ -293,14 +293,8 @@ public abstract class c implements f5.d {
         }
 
         @Override // f5.d
-        public void A(int index, @NotNull byte[] value) {
-            Intrinsics.checkNotNullParameter(value, "value");
-            this.delegate.A(index, value);
-        }
-
-        @Override // f5.d
-        public void C(int index) {
-            this.delegate.C(index);
+        public void B(int index) {
+            this.delegate.B(index);
         }
 
         @Override // f5.d
@@ -310,29 +304,18 @@ public abstract class c implements f5.d {
 
         @Override // f5.d
         @NotNull
-        public String E2(int index) {
-            return this.delegate.E2(index);
+        public String F2(int index) {
+            return this.delegate.F2(index);
         }
 
         @Override // f5.d
-        public boolean a2(int index) {
-            return this.delegate.a2(index);
+        public boolean b2(int index) {
+            return this.delegate.b2(index);
         }
 
         @Override // f5.d, java.lang.AutoCloseable
         public void close() {
             this.delegate.close();
-        }
-
-        @Override // f5.d
-        public boolean g3() {
-            boolean zG3 = this.delegate.g3();
-            if (x.E(E2(0), "wal", true)) {
-                getDb().p0();
-                return zG3;
-            }
-            getDb().Q();
-            return zG3;
         }
 
         @Override // f5.d
@@ -358,14 +341,25 @@ public abstract class c implements f5.d {
         }
 
         @Override // f5.d
-        public boolean isNull(int index) {
-            return this.delegate.isNull(index);
+        public void h0(int index, @NotNull String value) {
+            Intrinsics.checkNotNullParameter(value, "value");
+            this.delegate.h0(index, value);
         }
 
         @Override // f5.d
-        public void k0(int index, @NotNull String value) {
-            Intrinsics.checkNotNullParameter(value, "value");
-            this.delegate.k0(index, value);
+        public boolean i3() {
+            boolean zI3 = this.delegate.i3();
+            if (x.E(F2(0), "wal", true)) {
+                getDb().l0();
+                return zI3;
+            }
+            getDb().Q();
+            return zI3;
+        }
+
+        @Override // f5.d
+        public boolean isNull(int index) {
+            return this.delegate.isNull(index);
         }
 
         @Override // f5.d
@@ -374,21 +368,27 @@ public abstract class c implements f5.d {
         }
 
         @Override // f5.d
-        public void z(int index, long value) {
+        public void y(int index, long value) {
+            this.delegate.y(index, value);
+        }
+
+        @Override // f5.d
+        public void z(int index, @NotNull byte[] value) {
+            Intrinsics.checkNotNullParameter(value, "value");
             this.delegate.z(index, value);
         }
     }
 
     /* JADX INFO: renamed from: i5.c$c, reason: collision with other inner class name */
-    @Metadata(d1 = {"\u0000F\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\f\n\u0002\u0010\u000b\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0002\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u001f\u0010\r\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\r\u0010\u000eJ\u001f\u0010\u0010\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\u000fH\u0016¢\u0006\u0004\b\u0010\u0010\u0011J\u001f\u0010\u0012\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0012\u0010\u0013J\u0017\u0010\u0014\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u0014\u0010\u0015J\u0017\u0010\u0016\u001a\u00020\n2\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u0016\u0010\u0017J\u0017\u0010\u0018\u001a\u00020\u000f2\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u0018\u0010\u0019J\u0017\u0010\u001a\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u001a\u0010\u001bJ\u0017\u0010\u001d\u001a\u00020\u001c2\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u001d\u0010\u001eJ\u000f\u0010\u001f\u001a\u00020\bH\u0016¢\u0006\u0004\b\u001f\u0010 J\u0017\u0010!\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b!\u0010\u001bJ\u000f\u0010\"\u001a\u00020\u001cH\u0016¢\u0006\u0004\b\"\u0010#J\u000f\u0010$\u001a\u00020\fH\u0016¢\u0006\u0004\b$\u0010%J\u000f\u0010&\u001a\u00020\fH\u0016¢\u0006\u0004\b&\u0010%J\u000f\u0010'\u001a\u00020\fH\u0016¢\u0006\u0004\b'\u0010%R\u0018\u0010,\u001a\u00060(j\u0002`)8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b*\u0010+¨\u0006-"}, d2 = {"Li5/c$c;", "Li5/c;", "Lg5/c;", "db", "", "sql", "<init>", "(Lg5/c;Ljava/lang/String;)V", "", "index", "", "value", "", "A", "(I[B)V", "", "z", "(IJ)V", "k0", "(ILjava/lang/String;)V", "C", "(I)V", "getBlob", "(I)[B", "getLong", "(I)J", "E2", "(I)Ljava/lang/String;", "", "isNull", "(I)Z", "getColumnCount", "()I", "getColumnName", "g3", "()Z", "reset", "()V", "E", "close", "Lg5/g;", "Landroidx/sqlite/driver/SupportStatement;", "e", "Lg5/g;", "delegate", "sqlite-framework"}, k = 1, mv = {2, 1, 0}, xi = 48)
-    public static final class C0360c extends c {
+    @Metadata(d1 = {"\u0000F\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\f\n\u0002\u0010\u000b\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0002\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u001f\u0010\r\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\r\u0010\u000eJ\u001f\u0010\u0010\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\u000fH\u0016¢\u0006\u0004\b\u0010\u0010\u0011J\u001f\u0010\u0012\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0012\u0010\u0013J\u0017\u0010\u0014\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u0014\u0010\u0015J\u0017\u0010\u0016\u001a\u00020\n2\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u0016\u0010\u0017J\u0017\u0010\u0018\u001a\u00020\u000f2\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u0018\u0010\u0019J\u0017\u0010\u001a\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u001a\u0010\u001bJ\u0017\u0010\u001d\u001a\u00020\u001c2\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u001d\u0010\u001eJ\u000f\u0010\u001f\u001a\u00020\bH\u0016¢\u0006\u0004\b\u001f\u0010 J\u0017\u0010!\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b!\u0010\u001bJ\u000f\u0010\"\u001a\u00020\u001cH\u0016¢\u0006\u0004\b\"\u0010#J\u000f\u0010$\u001a\u00020\fH\u0016¢\u0006\u0004\b$\u0010%J\u000f\u0010&\u001a\u00020\fH\u0016¢\u0006\u0004\b&\u0010%J\u000f\u0010'\u001a\u00020\fH\u0016¢\u0006\u0004\b'\u0010%R\u0018\u0010,\u001a\u00060(j\u0002`)8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b*\u0010+¨\u0006-"}, d2 = {"Li5/c$c;", "Li5/c;", "Lg5/c;", "db", "", "sql", "<init>", "(Lg5/c;Ljava/lang/String;)V", "", "index", "", "value", "", "z", "(I[B)V", "", "y", "(IJ)V", "h0", "(ILjava/lang/String;)V", "B", "(I)V", "getBlob", "(I)[B", "getLong", "(I)J", "F2", "(I)Ljava/lang/String;", "", "isNull", "(I)Z", "getColumnCount", "()I", "getColumnName", "i3", "()Z", "reset", "()V", "E", "close", "Lg5/g;", "Landroidx/sqlite/driver/SupportStatement;", "e", "Lg5/g;", "delegate", "sqlite-framework"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    public static final class C0358c extends c {
 
         /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
         @NotNull
         public final g delegate;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C0360c(@NotNull g5.c db2, @NotNull String sql) {
+        public C0358c(@NotNull g5.c db2, @NotNull String sql) {
             super(db2, sql, null);
             Intrinsics.checkNotNullParameter(db2, "db");
             Intrinsics.checkNotNullParameter(sql, "sql");
@@ -396,16 +396,9 @@ public abstract class c implements f5.d {
         }
 
         @Override // f5.d
-        public void A(int index, @NotNull byte[] value) {
-            Intrinsics.checkNotNullParameter(value, "value");
+        public void B(int index) {
             d();
-            this.delegate.A(index, value);
-        }
-
-        @Override // f5.d
-        public void C(int index) {
-            d();
-            this.delegate.C(index);
+            this.delegate.B(index);
         }
 
         @Override // f5.d
@@ -416,10 +409,10 @@ public abstract class c implements f5.d {
 
         @Override // f5.d
         @NotNull
-        public String E2(int index) {
+        public String F2(int index) {
             d();
             f5.a.b(21, "no row");
-            throw new jt.d();
+            throw new gt.d();
         }
 
         @Override // f5.d, java.lang.AutoCloseable
@@ -429,18 +422,11 @@ public abstract class c implements f5.d {
         }
 
         @Override // f5.d
-        public boolean g3() {
-            d();
-            this.delegate.execute();
-            return false;
-        }
-
-        @Override // f5.d
         @NotNull
         public byte[] getBlob(int index) {
             d();
             f5.a.b(21, "no row");
-            throw new jt.d();
+            throw new gt.d();
         }
 
         @Override // f5.d
@@ -454,28 +440,35 @@ public abstract class c implements f5.d {
         public String getColumnName(int index) {
             d();
             f5.a.b(21, "no row");
-            throw new jt.d();
+            throw new gt.d();
         }
 
         @Override // f5.d
         public long getLong(int index) {
             d();
             f5.a.b(21, "no row");
-            throw new jt.d();
+            throw new gt.d();
+        }
+
+        @Override // f5.d
+        public void h0(int index, @NotNull String value) {
+            Intrinsics.checkNotNullParameter(value, "value");
+            d();
+            this.delegate.K1(index, value);
+        }
+
+        @Override // f5.d
+        public boolean i3() {
+            d();
+            this.delegate.execute();
+            return false;
         }
 
         @Override // f5.d
         public boolean isNull(int index) {
             d();
             f5.a.b(21, "no row");
-            throw new jt.d();
-        }
-
-        @Override // f5.d
-        public void k0(int index, @NotNull String value) {
-            Intrinsics.checkNotNullParameter(value, "value");
-            d();
-            this.delegate.L1(index, value);
+            throw new gt.d();
         }
 
         @Override // f5.d
@@ -484,13 +477,20 @@ public abstract class c implements f5.d {
         }
 
         @Override // f5.d
-        public void z(int index, long value) {
+        public void y(int index, long value) {
+            d();
+            this.delegate.y(index, value);
+        }
+
+        @Override // f5.d
+        public void z(int index, @NotNull byte[] value) {
+            Intrinsics.checkNotNullParameter(value, "value");
             d();
             this.delegate.z(index, value);
         }
     }
 
-    @Metadata(d1 = {"\u0000b\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\f\n\u0002\u0010\u000b\n\u0002\b\u000f\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0015\n\u0002\b\u0003\n\u0002\u0010\u0016\n\u0002\b\u0003\n\u0002\u0010\u0013\n\u0002\b\u0003\n\u0002\u0010\u0011\n\u0002\b\f\b\u0002\u0018\u0000 H2\u00020\u0001:\u0001IB\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u001f\u0010\r\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\r\u0010\u000eJ\u001f\u0010\u0010\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\u000fH\u0016¢\u0006\u0004\b\u0010\u0010\u0011J\u001f\u0010\u0012\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0012\u0010\u0013J\u0017\u0010\u0014\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u0014\u0010\u0015J\u0017\u0010\u0016\u001a\u00020\n2\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u0016\u0010\u0017J\u0017\u0010\u0018\u001a\u00020\u000f2\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u0018\u0010\u0019J\u0017\u0010\u001a\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u001a\u0010\u001bJ\u0017\u0010\u001d\u001a\u00020\u001c2\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u001d\u0010\u001eJ\u000f\u0010\u001f\u001a\u00020\bH\u0016¢\u0006\u0004\b\u001f\u0010 J\u0017\u0010!\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b!\u0010\u001bJ\u000f\u0010\"\u001a\u00020\u001cH\u0016¢\u0006\u0004\b\"\u0010#J\u000f\u0010$\u001a\u00020\fH\u0016¢\u0006\u0004\b$\u0010%J\u000f\u0010&\u001a\u00020\fH\u0016¢\u0006\u0004\b&\u0010%J\u000f\u0010'\u001a\u00020\fH\u0016¢\u0006\u0004\b'\u0010%J\u001f\u0010)\u001a\u00020\f2\u0006\u0010(\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\bH\u0002¢\u0006\u0004\b)\u0010*J\u000f\u0010+\u001a\u00020\fH\u0002¢\u0006\u0004\b+\u0010%J\u000f\u0010-\u001a\u00020,H\u0002¢\u0006\u0004\b-\u0010.J\u001f\u00100\u001a\u00020\f2\u0006\u0010/\u001a\u00020,2\u0006\u0010\t\u001a\u00020\bH\u0002¢\u0006\u0004\b0\u00101R\u0016\u00105\u001a\u0002028\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b3\u00104R\u0016\u00109\u001a\u0002068\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b7\u00108R\u0016\u0010=\u001a\u00020:8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b;\u0010<R\u001e\u0010A\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00040>8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b?\u0010@R\u001e\u0010D\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\n0>8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bB\u0010CR\u0018\u0010G\u001a\u0004\u0018\u00010,8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bE\u0010F¨\u0006J"}, d2 = {"Li5/c$d;", "Li5/c;", "Lg5/c;", "db", "", "sql", "<init>", "(Lg5/c;Ljava/lang/String;)V", "", "index", "", "value", "", "A", "(I[B)V", "", "z", "(IJ)V", "k0", "(ILjava/lang/String;)V", "C", "(I)V", "getBlob", "(I)[B", "getLong", "(I)J", "E2", "(I)Ljava/lang/String;", "", "isNull", "(I)Z", "getColumnCount", "()I", "getColumnName", "g3", "()Z", "reset", "()V", "E", "close", "columnType", "l", "(II)V", "m", "Landroid/database/Cursor;", "o", "()Landroid/database/Cursor;", "c", "n", "(Landroid/database/Cursor;I)V", "", "e", "[I", "bindingTypes", "", "f", "[J", "longBindings", "", "g", "[D", "doubleBindings", "", "h", "[Ljava/lang/String;", "stringBindings", "i", "[[B", "blobBindings", "j", "Landroid/database/Cursor;", "cursor", "k", "a", "sqlite-framework"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000b\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\f\n\u0002\u0010\u000b\n\u0002\b\u000f\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0015\n\u0002\b\u0003\n\u0002\u0010\u0016\n\u0002\b\u0003\n\u0002\u0010\u0013\n\u0002\b\u0003\n\u0002\u0010\u0011\n\u0002\b\f\b\u0002\u0018\u0000 H2\u00020\u0001:\u0001IB\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u001f\u0010\r\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\r\u0010\u000eJ\u001f\u0010\u0010\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\u000fH\u0016¢\u0006\u0004\b\u0010\u0010\u0011J\u001f\u0010\u0012\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0012\u0010\u0013J\u0017\u0010\u0014\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u0014\u0010\u0015J\u0017\u0010\u0016\u001a\u00020\n2\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u0016\u0010\u0017J\u0017\u0010\u0018\u001a\u00020\u000f2\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u0018\u0010\u0019J\u0017\u0010\u001a\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u001a\u0010\u001bJ\u0017\u0010\u001d\u001a\u00020\u001c2\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u001d\u0010\u001eJ\u000f\u0010\u001f\u001a\u00020\bH\u0016¢\u0006\u0004\b\u001f\u0010 J\u0017\u0010!\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b!\u0010\u001bJ\u000f\u0010\"\u001a\u00020\u001cH\u0016¢\u0006\u0004\b\"\u0010#J\u000f\u0010$\u001a\u00020\fH\u0016¢\u0006\u0004\b$\u0010%J\u000f\u0010&\u001a\u00020\fH\u0016¢\u0006\u0004\b&\u0010%J\u000f\u0010'\u001a\u00020\fH\u0016¢\u0006\u0004\b'\u0010%J\u001f\u0010)\u001a\u00020\f2\u0006\u0010(\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\bH\u0002¢\u0006\u0004\b)\u0010*J\u000f\u0010+\u001a\u00020\fH\u0002¢\u0006\u0004\b+\u0010%J\u000f\u0010-\u001a\u00020,H\u0002¢\u0006\u0004\b-\u0010.J\u001f\u00100\u001a\u00020\f2\u0006\u0010/\u001a\u00020,2\u0006\u0010\t\u001a\u00020\bH\u0002¢\u0006\u0004\b0\u00101R\u0016\u00105\u001a\u0002028\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b3\u00104R\u0016\u00109\u001a\u0002068\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b7\u00108R\u0016\u0010=\u001a\u00020:8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b;\u0010<R\u001e\u0010A\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00040>8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b?\u0010@R\u001e\u0010D\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\n0>8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bB\u0010CR\u0018\u0010G\u001a\u0004\u0018\u00010,8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bE\u0010F¨\u0006J"}, d2 = {"Li5/c$d;", "Li5/c;", "Lg5/c;", "db", "", "sql", "<init>", "(Lg5/c;Ljava/lang/String;)V", "", "index", "", "value", "", "z", "(I[B)V", "", "y", "(IJ)V", "h0", "(ILjava/lang/String;)V", "B", "(I)V", "getBlob", "(I)[B", "getLong", "(I)J", "F2", "(I)Ljava/lang/String;", "", "isNull", "(I)Z", "getColumnCount", "()I", "getColumnName", "i3", "()Z", "reset", "()V", "E", "close", "columnType", "l", "(II)V", "m", "Landroid/database/Cursor;", "o", "()Landroid/database/Cursor;", "c", "n", "(Landroid/database/Cursor;I)V", "", "e", "[I", "bindingTypes", "", "f", "[J", "longBindings", "", "g", "[D", "doubleBindings", "", "h", "[Ljava/lang/String;", "stringBindings", "i", "[[B", "blobBindings", "j", "Landroid/database/Cursor;", "cursor", "k", "a", "sqlite-framework"}, k = 1, mv = {2, 1, 0}, xi = 48)
     public static final class d extends c {
 
         /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
@@ -534,19 +534,19 @@ public abstract class c implements f5.d {
                 for (int i10 = 1; i10 < length; i10++) {
                     int i11 = d.this.bindingTypes[i10];
                     if (i11 == 1) {
-                        statement.z(i10, d.this.longBindings[i10]);
+                        statement.y(i10, d.this.longBindings[i10]);
                     } else if (i11 == 2) {
-                        statement.c0(i10, d.this.doubleBindings[i10]);
+                        statement.b0(i10, d.this.doubleBindings[i10]);
                     } else if (i11 == 3) {
                         String str = d.this.stringBindings[i10];
                         Intrinsics.checkNotNull(str);
-                        statement.L1(i10, str);
+                        statement.K1(i10, str);
                     } else if (i11 == 4) {
                         byte[] bArr = d.this.blobBindings[i10];
                         Intrinsics.checkNotNull(bArr);
-                        statement.A(i10, bArr);
+                        statement.z(i10, bArr);
                     } else if (i11 == 5) {
-                        statement.C(i10);
+                        statement.B(i10);
                     }
                 }
             }
@@ -565,16 +565,7 @@ public abstract class c implements f5.d {
         }
 
         @Override // f5.d
-        public void A(int index, @NotNull byte[] value) {
-            Intrinsics.checkNotNullParameter(value, "value");
-            d();
-            l(4, index);
-            this.bindingTypes[index] = 4;
-            this.blobBindings[index] = value;
-        }
-
-        @Override // f5.d
-        public void C(int index) {
+        public void B(int index) {
             d();
             l(5, index);
             this.bindingTypes[index] = 5;
@@ -592,7 +583,7 @@ public abstract class c implements f5.d {
 
         @Override // f5.d
         @NotNull
-        public String E2(int index) {
+        public String F2(int index) {
             d();
             Cursor cursorO = o();
             n(cursorO, index);
@@ -608,17 +599,6 @@ public abstract class c implements f5.d {
                 reset();
             }
             c(true);
-        }
-
-        @Override // f5.d
-        public boolean g3() {
-            d();
-            m();
-            Cursor cursor = this.cursor;
-            if (cursor != null) {
-                return cursor.moveToNext();
-            }
-            throw new IllegalStateException("Required value was null.");
         }
 
         @Override // f5.d
@@ -667,20 +647,31 @@ public abstract class c implements f5.d {
         }
 
         @Override // f5.d
-        public boolean isNull(int index) {
-            d();
-            Cursor cursorO = o();
-            n(cursorO, index);
-            return cursorO.isNull(index);
-        }
-
-        @Override // f5.d
-        public void k0(int index, @NotNull String value) {
+        public void h0(int index, @NotNull String value) {
             Intrinsics.checkNotNullParameter(value, "value");
             d();
             l(3, index);
             this.bindingTypes[index] = 3;
             this.stringBindings[index] = value;
+        }
+
+        @Override // f5.d
+        public boolean i3() {
+            d();
+            m();
+            Cursor cursor = this.cursor;
+            if (cursor != null) {
+                return cursor.moveToNext();
+            }
+            throw new IllegalStateException("Required value was null.");
+        }
+
+        @Override // f5.d
+        public boolean isNull(int index) {
+            d();
+            Cursor cursorO = o();
+            n(cursorO, index);
+            return cursorO.isNull(index);
         }
 
         public final void l(int columnType, int index) {
@@ -741,7 +732,7 @@ public abstract class c implements f5.d {
         public final void n(Cursor c10, int index) {
             if (index < 0 || index >= c10.getColumnCount()) {
                 f5.a.b(25, "column index out of range");
-                throw new jt.d();
+                throw new gt.d();
             }
         }
 
@@ -751,7 +742,7 @@ public abstract class c implements f5.d {
                 return cursor;
             }
             f5.a.b(21, "no row");
-            throw new jt.d();
+            throw new gt.d();
         }
 
         @Override // f5.d
@@ -765,15 +756,24 @@ public abstract class c implements f5.d {
         }
 
         @Override // f5.d
-        public void z(int index, long value) {
+        public void y(int index, long value) {
             d();
             l(1, index);
             this.bindingTypes[index] = 1;
             this.longBindings[index] = value;
         }
+
+        @Override // f5.d
+        public void z(int index, @NotNull byte[] value) {
+            Intrinsics.checkNotNullParameter(value, "value");
+            d();
+            l(4, index);
+            this.bindingTypes[index] = 4;
+            this.blobBindings[index] = value;
+        }
     }
 
-    @Metadata(d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\f\n\u0002\u0010\u000b\n\u0002\b\u0010\b\u0002\u0018\u00002\u00020\u0001B\u001f\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\b\u0010\tJ\u001f\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\fH\u0016¢\u0006\u0004\b\u000f\u0010\u0010J\u001f\u0010\u0012\u001a\u00020\u000e2\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\u0011H\u0016¢\u0006\u0004\b\u0012\u0010\u0013J\u001f\u0010\u0014\u001a\u00020\u000e2\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0014\u0010\u0015J\u0017\u0010\u0016\u001a\u00020\u000e2\u0006\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\u0016\u0010\u0017J\u0017\u0010\u0018\u001a\u00020\f2\u0006\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\u0018\u0010\u0019J\u0017\u0010\u001a\u001a\u00020\u00112\u0006\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\u001a\u0010\u001bJ\u0017\u0010\u001c\u001a\u00020\u00042\u0006\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\u001c\u0010\u001dJ\u0017\u0010\u001f\u001a\u00020\u001e2\u0006\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\u001f\u0010 J\u000f\u0010!\u001a\u00020\nH\u0016¢\u0006\u0004\b!\u0010\"J\u0017\u0010#\u001a\u00020\u00042\u0006\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b#\u0010\u001dJ\u000f\u0010$\u001a\u00020\u001eH\u0016¢\u0006\u0004\b$\u0010%J\u000f\u0010&\u001a\u00020\u000eH\u0016¢\u0006\u0004\b&\u0010'J\u000f\u0010(\u001a\u00020\u000eH\u0016¢\u0006\u0004\b(\u0010'J\u000f\u0010)\u001a\u00020\u000eH\u0016¢\u0006\u0004\b)\u0010'R\u0017\u0010\u0007\u001a\u00020\u00068\u0006¢\u0006\f\n\u0004\b*\u0010+\u001a\u0004\b,\u0010-¨\u0006."}, d2 = {"Li5/c$e;", "Li5/c;", "Lg5/c;", "db", "", "sql", "Li5/c$a$b;", "operation", "<init>", "(Lg5/c;Ljava/lang/String;Li5/c$a$b;)V", "", "index", "", "value", "", "A", "(I[B)V", "", "z", "(IJ)V", "k0", "(ILjava/lang/String;)V", "C", "(I)V", "getBlob", "(I)[B", "getLong", "(I)J", "E2", "(I)Ljava/lang/String;", "", "isNull", "(I)Z", "getColumnCount", "()I", "getColumnName", "g3", "()Z", "reset", "()V", "E", "close", "e", "Li5/c$a$b;", "getOperation", "()Li5/c$a$b;", "sqlite-framework"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\f\n\u0002\u0010\u000b\n\u0002\b\u0010\b\u0002\u0018\u00002\u00020\u0001B\u001f\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\b\u0010\tJ\u001f\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\fH\u0016¢\u0006\u0004\b\u000f\u0010\u0010J\u001f\u0010\u0012\u001a\u00020\u000e2\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\u0011H\u0016¢\u0006\u0004\b\u0012\u0010\u0013J\u001f\u0010\u0014\u001a\u00020\u000e2\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0014\u0010\u0015J\u0017\u0010\u0016\u001a\u00020\u000e2\u0006\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\u0016\u0010\u0017J\u0017\u0010\u0018\u001a\u00020\f2\u0006\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\u0018\u0010\u0019J\u0017\u0010\u001a\u001a\u00020\u00112\u0006\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\u001a\u0010\u001bJ\u0017\u0010\u001c\u001a\u00020\u00042\u0006\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\u001c\u0010\u001dJ\u0017\u0010\u001f\u001a\u00020\u001e2\u0006\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\u001f\u0010 J\u000f\u0010!\u001a\u00020\nH\u0016¢\u0006\u0004\b!\u0010\"J\u0017\u0010#\u001a\u00020\u00042\u0006\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b#\u0010\u001dJ\u000f\u0010$\u001a\u00020\u001eH\u0016¢\u0006\u0004\b$\u0010%J\u000f\u0010&\u001a\u00020\u000eH\u0016¢\u0006\u0004\b&\u0010'J\u000f\u0010(\u001a\u00020\u000eH\u0016¢\u0006\u0004\b(\u0010'J\u000f\u0010)\u001a\u00020\u000eH\u0016¢\u0006\u0004\b)\u0010'R\u0017\u0010\u0007\u001a\u00020\u00068\u0006¢\u0006\f\n\u0004\b*\u0010+\u001a\u0004\b,\u0010-¨\u0006."}, d2 = {"Li5/c$e;", "Li5/c;", "Lg5/c;", "db", "", "sql", "Li5/c$a$b;", "operation", "<init>", "(Lg5/c;Ljava/lang/String;Li5/c$a$b;)V", "", "index", "", "value", "", "z", "(I[B)V", "", "y", "(IJ)V", "h0", "(ILjava/lang/String;)V", "B", "(I)V", "getBlob", "(I)[B", "getLong", "(I)J", "F2", "(I)Ljava/lang/String;", "", "isNull", "(I)Z", "getColumnCount", "()I", "getColumnName", "i3", "()Z", "reset", "()V", "E", "close", "e", "Li5/c$a$b;", "getOperation", "()Li5/c$a$b;", "sqlite-framework"}, k = 1, mv = {2, 1, 0}, xi = 48)
     public static final class e extends c {
 
         /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
@@ -784,7 +784,7 @@ public abstract class c implements f5.d {
         public static final /* synthetic */ class a {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public static final /* synthetic */ int[] f20283a;
+            public static final /* synthetic */ int[] f20399a;
 
             static {
                 int[] iArr = new int[Companion.b.values().length];
@@ -808,7 +808,7 @@ public abstract class c implements f5.d {
                     iArr[Companion.b.BEGIN_DEFERRED.ordinal()] = 5;
                 } catch (NoSuchFieldError unused5) {
                 }
-                f20283a = iArr;
+                f20399a = iArr;
             }
         }
 
@@ -822,18 +822,10 @@ public abstract class c implements f5.d {
         }
 
         @Override // f5.d
-        public void A(int index, @NotNull byte[] value) {
-            Intrinsics.checkNotNullParameter(value, "value");
+        public void B(int index) {
             d();
             f5.a.b(25, "column index out of range");
-            throw new jt.d();
-        }
-
-        @Override // f5.d
-        public void C(int index) {
-            d();
-            f5.a.b(25, "column index out of range");
-            throw new jt.d();
+            throw new gt.d();
         }
 
         @Override // f5.d
@@ -843,10 +835,10 @@ public abstract class c implements f5.d {
 
         @Override // f5.d
         @NotNull
-        public String E2(int index) {
+        public String F2(int index) {
             d();
             f5.a.b(21, "no row");
-            throw new jt.d();
+            throw new gt.d();
         }
 
         @Override // f5.d, java.lang.AutoCloseable
@@ -855,38 +847,11 @@ public abstract class c implements f5.d {
         }
 
         @Override // f5.d
-        public boolean g3() {
-            int i10 = a.f20283a[this.operation.ordinal()];
-            if (i10 == 1) {
-                getDb().q0();
-                getDb().G0();
-                return false;
-            }
-            if (i10 == 2) {
-                getDb().G0();
-                return false;
-            }
-            if (i10 == 3) {
-                getDb().G();
-                return false;
-            }
-            if (i10 == 4) {
-                getDb().u0();
-                return false;
-            }
-            if (i10 != 5) {
-                throw new l();
-            }
-            getDb().Y1();
-            return false;
-        }
-
-        @Override // f5.d
         @NotNull
         public byte[] getBlob(int index) {
             d();
             f5.a.b(21, "no row");
-            throw new jt.d();
+            throw new gt.d();
         }
 
         @Override // f5.d
@@ -900,29 +865,56 @@ public abstract class c implements f5.d {
         public String getColumnName(int index) {
             d();
             f5.a.b(21, "no row");
-            throw new jt.d();
+            throw new gt.d();
         }
 
         @Override // f5.d
         public long getLong(int index) {
             d();
             f5.a.b(21, "no row");
-            throw new jt.d();
+            throw new gt.d();
+        }
+
+        @Override // f5.d
+        public void h0(int index, @NotNull String value) {
+            Intrinsics.checkNotNullParameter(value, "value");
+            d();
+            f5.a.b(25, "column index out of range");
+            throw new gt.d();
+        }
+
+        @Override // f5.d
+        public boolean i3() {
+            int i10 = a.f20399a[this.operation.ordinal()];
+            if (i10 == 1) {
+                getDb().m0();
+                getDb().C0();
+                return false;
+            }
+            if (i10 == 2) {
+                getDb().C0();
+                return false;
+            }
+            if (i10 == 3) {
+                getDb().G();
+                return false;
+            }
+            if (i10 == 4) {
+                getDb().q0();
+                return false;
+            }
+            if (i10 != 5) {
+                throw new l();
+            }
+            getDb().Z1();
+            return false;
         }
 
         @Override // f5.d
         public boolean isNull(int index) {
             d();
             f5.a.b(21, "no row");
-            throw new jt.d();
-        }
-
-        @Override // f5.d
-        public void k0(int index, @NotNull String value) {
-            Intrinsics.checkNotNullParameter(value, "value");
-            d();
-            f5.a.b(25, "column index out of range");
-            throw new jt.d();
+            throw new gt.d();
         }
 
         @Override // f5.d
@@ -931,10 +923,18 @@ public abstract class c implements f5.d {
         }
 
         @Override // f5.d
-        public void z(int index, long value) {
+        public void y(int index, long value) {
             d();
             f5.a.b(25, "column index out of range");
-            throw new jt.d();
+            throw new gt.d();
+        }
+
+        @Override // f5.d
+        public void z(int index, @NotNull byte[] value) {
+            Intrinsics.checkNotNullParameter(value, "value");
+            d();
+            f5.a.b(25, "column index out of range");
+            throw new gt.d();
         }
     }
 
@@ -961,7 +961,7 @@ public abstract class c implements f5.d {
     public final void d() {
         if (this.isClosed) {
             f5.a.b(21, "statement is closed");
-            throw new jt.d();
+            throw new gt.d();
         }
     }
 

@@ -4,7 +4,7 @@ package com.google.android.gms.internal.measurement;
 public final class j4 implements lb {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final lb f6555a = new j4();
+    public static final lb f6628a = new j4();
 
     @Override // com.google.android.gms.internal.measurement.lb
     public final boolean a(int i10) {

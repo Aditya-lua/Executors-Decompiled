@@ -4,30 +4,30 @@ import android.content.Context;
 import android.net.Uri;
 import androidx.work.CoroutineWorker;
 import androidx.work.WorkerParameters;
-import gk.p;
+import ek.q;
+import gt.n;
+import gt.o;
+import gt.s;
+import iu.g1;
+import iu.i;
+import iu.l0;
 import java.time.Duration;
-import jt.n;
-import jt.o;
-import jt.s;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
-import ku.g1;
-import ku.i;
-import ku.l0;
+import nt.f;
+import nt.m;
 import okhttp3.MediaType;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pt.f;
-import pt.m;
-import sg.a1;
-import vk.g;
+import rg.a1;
+import tk.g;
 import x5.d;
 import x5.j;
 import x5.p0;
@@ -35,7 +35,7 @@ import x5.x;
 import x5.z;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0006\u0018\u0000 \r2\u00020\u0001:\u0001\u000bB\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bH\u0096@¢\u0006\u0004\b\t\u0010\nR\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000b\u0010\f¨\u0006\u000e"}, d2 = {"Lcom/roblox/client/pushnotification/actions/NotificationActionEndpointWorker;", "Landroidx/work/CoroutineWorker;", "Landroid/content/Context;", "appContext", "Landroidx/work/WorkerParameters;", "params", "<init>", "(Landroid/content/Context;Landroidx/work/WorkerParameters;)V", "Landroidx/work/c$a;", "doWork", "(Lnt/b;)Ljava/lang/Object;", "a", "Landroidx/work/WorkerParameters;", "b", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0006\u0018\u0000 \r2\u00020\u0001:\u0001\u000bB\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bH\u0096@¢\u0006\u0004\b\t\u0010\nR\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000b\u0010\f¨\u0006\u000e"}, d2 = {"Lcom/roblox/client/pushnotification/actions/NotificationActionEndpointWorker;", "Landroidx/work/CoroutineWorker;", "Landroid/content/Context;", "appContext", "Landroidx/work/WorkerParameters;", "params", "<init>", "(Landroid/content/Context;Landroidx/work/WorkerParameters;)V", "Landroidx/work/c$a;", "doWork", "(Llt/b;)Ljava/lang/Object;", "a", "Landroidx/work/WorkerParameters;", "b", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class NotificationActionEndpointWorker extends CoroutineWorker {
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
@@ -82,54 +82,59 @@ public final class NotificationActionEndpointWorker extends CoroutineWorker {
 
     @f(c = "com.roblox.client.pushnotification.actions.NotificationActionEndpointWorker", f = "NotificationActionEndpointWorker.kt", l = {39}, m = "doWork", v = 1)
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final class b extends pt.d {
+    public static final class b extends nt.d {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public /* synthetic */ Object f9236t;
+        public /* synthetic */ Object f9312t;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public int f9238v;
+        public int f9314v;
 
-        public b(nt.b<? super b> bVar) {
+        public b(lt.b<? super b> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
-            this.f9236t = obj;
-            this.f9238v |= Integer.MIN_VALUE;
+            this.f9312t = obj;
+            this.f9314v |= Integer.MIN_VALUE;
             return NotificationActionEndpointWorker.this.doWork(this);
         }
     }
 
-    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00070\u0001¢\u0006\u0002\b\u0002*\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Lku/p0;", "Landroidx/work/c$a;", "Lkotlin/jvm/internal/EnhancedNullability;", "<anonymous>", "(Lku/p0;)Landroidx/work/c$a;"}, k = 3, mv = {2, 2, 0})
     @f(c = "com.roblox.client.pushnotification.actions.NotificationActionEndpointWorker$doWork$2", f = "NotificationActionEndpointWorker.kt", l = {}, m = "invokeSuspend", v = 1)
-    public static final class c extends m implements Function2<ku.p0, nt.b<? super androidx.work.c.a>, Object> {
+    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00070\u0001¢\u0006\u0002\b\u0002*\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Liu/p0;", "Landroidx/work/c$a;", "Lkotlin/jvm/internal/EnhancedNullability;", "<anonymous>", "(Liu/p0;)Landroidx/work/c$a;"}, k = 3, mv = {2, 2, 0})
+    public static final class c extends m implements Function2<iu.p0, lt.b<? super androidx.work.c.a>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f9239t;
+        public int f9315t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public /* synthetic */ Object f9240u;
+        public /* synthetic */ Object f9316u;
 
-        public c(nt.b<? super c> bVar) {
+        public c(lt.b<? super c> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             c cVar = NotificationActionEndpointWorker.this.new c(bVar);
-            cVar.f9240u = obj;
+            cVar.f9316u = obj;
             return cVar;
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(iu.p0 p0Var, lt.b<? super androidx.work.c.a> bVar) {
+            return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
             Object objB;
             androidx.work.c.a aVarA;
-            ot.c.e();
-            if (this.f9239t != 0) {
+            mt.c.e();
+            if (this.f9315t != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
             o.b(obj);
@@ -148,28 +153,28 @@ public final class NotificationActionEndpointWorker extends CoroutineWorker {
                 Uri uri = Uri.parse(strG);
                 String strO = a1.O();
                 Intrinsics.checkNotNull(strO);
-                if (!kj.a.a(uri, strO)) {
-                    p.d("NotificationActionEndpointWorker: URL rejected by domain check. host=" + uri.getHost() + " appDomain=" + strO);
+                if (!ij.a.a(uri, strO)) {
+                    q.d("NotificationActionEndpointWorker: URL rejected by domain check. host=" + uri.getHost() + " appDomain=" + strO);
                     return androidx.work.c.a.a();
                 }
-                p.a("NotificationActionEndpointWorker: calling " + strG);
+                q.a("NotificationActionEndpointWorker: calling " + strG);
                 Response responseExecute = g.b().newCall(new Request.Builder().url(strG).post(RequestBody.INSTANCE.create(strG2, MediaType.INSTANCE.get("application/json"))).build()).execute();
                 try {
-                    p.a("NotificationActionEndpointWorker: response " + responseExecute.code() + " for " + strG);
+                    q.a("NotificationActionEndpointWorker: response " + responseExecute.code() + " for " + strG);
                     int iCode = responseExecute.code();
                     if (200 > iCode || iCode >= 300) {
                         aVarA = (500 > iCode || iCode >= 600) ? androidx.work.c.a.a() : androidx.work.c.a.c();
                     } else {
                         aVarA = androidx.work.c.a.d();
                     }
-                    ut.c.a(responseExecute, null);
+                    st.c.a(responseExecute, null);
                     objB = n.b(aVarA);
                     return n.e(objB) == null ? (androidx.work.c.a) objB : androidx.work.c.a.c();
                 } catch (Throwable th2) {
                     try {
                         throw th2;
                     } catch (Throwable th3) {
-                        ut.c.a(responseExecute, th2);
+                        st.c.a(responseExecute, th2);
                         throw th3;
                     }
                 }
@@ -177,11 +182,6 @@ public final class NotificationActionEndpointWorker extends CoroutineWorker {
                 n.Companion companion2 = n.INSTANCE;
                 objB = n.b(o.a(th4));
             }
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(ku.p0 p0Var, nt.b<? super androidx.work.c.a> bVar) {
-            return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
         }
     }
 
@@ -196,27 +196,27 @@ public final class NotificationActionEndpointWorker extends CoroutineWorker {
     /* JADX WARN: Code duplicated, block: B:7:0x0013  */
     @Override // androidx.work.CoroutineWorker
     @Nullable
-    public Object doWork(@NotNull nt.b<? super androidx.work.c.a> bVar) {
+    public Object doWork(@NotNull lt.b<? super androidx.work.c.a> bVar) {
         b bVar2;
         if (bVar instanceof b) {
             bVar2 = (b) bVar;
-            int i10 = bVar2.f9238v;
+            int i10 = bVar2.f9314v;
             if ((i10 & Integer.MIN_VALUE) != 0) {
-                bVar2.f9238v = i10 - Integer.MIN_VALUE;
+                bVar2.f9314v = i10 - Integer.MIN_VALUE;
             } else {
                 bVar2 = new b(bVar);
             }
         } else {
             bVar2 = new b(bVar);
         }
-        Object objG = bVar2.f9236t;
-        Object objE = ot.c.e();
-        int i11 = bVar2.f9238v;
+        Object objG = bVar2.f9312t;
+        Object objE = mt.c.e();
+        int i11 = bVar2.f9314v;
         if (i11 == 0) {
             o.b(objG);
             l0 l0VarB = g1.b();
             c cVar = new c(null);
-            bVar2.f9238v = 1;
+            bVar2.f9314v = 1;
             objG = i.g(l0VarB, cVar, bVar2);
             if (objG == objE) {
                 return objE;

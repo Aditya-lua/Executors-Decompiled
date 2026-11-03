@@ -16,25 +16,25 @@ import java.util.HashMap;
 public final class x8 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static volatile ge.k f6898a;
+    public static volatile he.k f6972a;
 
     /* JADX WARN: Code duplicated, block: B:20:0x0036 A[Catch: all -> 0x0022, TryCatch #3 {all -> 0x0022, blocks: (B:6:0x0007, B:8:0x000b, B:10:0x0019, B:20:0x0036, B:76:0x017f, B:15:0x0025, B:17:0x002d, B:21:0x003c, B:23:0x0042, B:25:0x0048, B:27:0x0050, B:75:0x017c, B:77:0x0182, B:78:0x0185, B:79:0x0186, B:28:0x0054, B:30:0x0058, B:31:0x0065, B:33:0x006b, B:39:0x0084, B:41:0x008a, B:42:0x0096, B:62:0x015f, B:63:0x0162, B:71:0x0171, B:70:0x016e, B:72:0x0172, B:73:0x0177, B:74:0x0178, B:36:0x0073, B:38:0x0079), top: B:88:0x0007, inners: #0 }] */
-    public static ge.k a(Context context) {
-        ge.k kVarA;
-        ge.k kVarA2;
-        ge.k kVar = f6898a;
+    public static he.k a(Context context) {
+        he.k kVarA;
+        he.k kVarA2;
+        he.k kVar = f6972a;
         if (kVar != null) {
             return kVar;
         }
         synchronized (x8.class) {
             try {
-                kVarA = f6898a;
+                kVarA = f6972a;
                 if (kVarA == null) {
                     String str = Build.TYPE;
                     String str2 = Build.TAGS;
-                    w1.a aVar = a9.f6373a;
+                    w1.a aVar = a9.f6446a;
                     if (!str.equals("eng") && !str.equals("userdebug")) {
-                        kVarA = ge.k.a();
+                        kVarA = he.k.a();
                     } else if (str2.contains("dev-keys") || str2.contains("test-keys")) {
                         Context contextCreateDeviceProtectedStorageContext = (!k8.a() || context.isDeviceProtectedStorage()) ? context : context.createDeviceProtectedStorageContext();
                         StrictMode.ThreadPolicy threadPolicyAllowThreadDiskReads = StrictMode.allowThreadDiskReads();
@@ -43,10 +43,10 @@ public final class x8 {
                             char c10 = 0;
                             try {
                                 File file = new File(contextCreateDeviceProtectedStorageContext.getDir("phenotype_hermetic", 0), "overrides.txt");
-                                kVarA2 = file.exists() ? ge.k.d(file) : ge.k.a();
+                                kVarA2 = file.exists() ? he.k.d(file) : he.k.a();
                             } catch (RuntimeException e10) {
                                 Log.e("HermeticFileOverrides", "no data dir", e10);
-                                kVarA2 = ge.k.a();
+                                kVarA2 = he.k.a();
                             }
                             if (kVarA2.c()) {
                                 File file2 = (File) kVarA2.b();
@@ -96,7 +96,7 @@ public final class x8 {
                                         Log.w("HermeticFileOverrides", sb3.toString());
                                         r8 r8Var = new r8(jVar);
                                         bufferedReader.close();
-                                        kVarA = ge.k.d(r8Var);
+                                        kVarA = he.k.d(r8Var);
                                     } catch (Throwable th2) {
                                         try {
                                             bufferedReader.close();
@@ -110,7 +110,7 @@ public final class x8 {
                                     throw new RuntimeException(e11);
                                 }
                             } else {
-                                kVarA = ge.k.a();
+                                kVarA = he.k.a();
                             }
                             StrictMode.setThreadPolicy(threadPolicyAllowThreadDiskReads);
                         } catch (Throwable th4) {
@@ -118,9 +118,9 @@ public final class x8 {
                             throw th4;
                         }
                     } else {
-                        kVarA = ge.k.a();
+                        kVarA = he.k.a();
                     }
-                    f6898a = kVarA;
+                    f6972a = kVarA;
                 }
             } catch (Throwable th5) {
                 throw th5;

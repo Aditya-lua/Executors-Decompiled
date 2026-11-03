@@ -23,11 +23,11 @@ public class f extends g<Integer> {
         if (aVar.b == null) {
             throw new IllegalStateException("Missing values for keyframe.");
         }
-        int iH = aVar.f31671c == null ? aVar.h() : aVar.e();
-        t7.c<A> cVar = this.f20288e;
+        int iH = aVar.f32190c == null ? aVar.h() : aVar.e();
+        t7.c<A> cVar = this.f20404e;
         if (cVar != 0) {
             f11 = f10;
-            Integer num = (Integer) cVar.b(aVar.f31675g, aVar.f31676h.floatValue(), aVar.b, Integer.valueOf(iH), f11, e(), f());
+            Integer num = (Integer) cVar.b(aVar.f32194g, aVar.f32195h.floatValue(), aVar.b, Integer.valueOf(iH), f11, e(), f());
             if (num != null) {
                 return num.intValue();
             }

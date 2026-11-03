@@ -3,32 +3,32 @@ package com.withpersona.sdk2.inquiry.governmentid;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.GradientDrawable;
-import io.OverlayAssets;
-import io.m2;
-import io.p2;
-import jq.z;
+import go.OverlayAssets;
+import go.m2;
+import go.p2;
+import hq.z;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\u001a!\u0010\u0006\u001a\u00020\u0005*\u00020\u00002\u0006\u0010\u0002\u001a\u00020\u00012\u0006\u0010\u0004\u001a\u00020\u0003¢\u0006\u0004\b\u0006\u0010\u0007\u001a\u001b\u0010\u000b\u001a\u00020\n*\u00020\u00002\b\b\u0001\u0010\t\u001a\u00020\b¢\u0006\u0004\b\u000b\u0010\f¨\u0006\r"}, d2 = {"Landroid/content/Context;", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen$Overlay;", "overlay", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;", "captureSide", "Lio/k2;", "b", "(Landroid/content/Context;Lcom/withpersona/sdk2/inquiry/governmentid/Screen$Overlay;Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;)Lio/k2;", "", "attr", "Landroid/graphics/drawable/GradientDrawable;", "a", "(Landroid/content/Context;I)Landroid/graphics/drawable/GradientDrawable;", "government-id_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\u001a!\u0010\u0006\u001a\u00020\u0005*\u00020\u00002\u0006\u0010\u0002\u001a\u00020\u00012\u0006\u0010\u0004\u001a\u00020\u0003¢\u0006\u0004\b\u0006\u0010\u0007\u001a\u001b\u0010\u000b\u001a\u00020\n*\u00020\u00002\b\b\u0001\u0010\t\u001a\u00020\b¢\u0006\u0004\b\u000b\u0010\f¨\u0006\r"}, d2 = {"Landroid/content/Context;", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen$Overlay;", "overlay", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;", "captureSide", "Lgo/k2;", "b", "(Landroid/content/Context;Lcom/withpersona/sdk2/inquiry/governmentid/Screen$Overlay;Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;)Lgo/k2;", "", "attr", "Landroid/graphics/drawable/GradientDrawable;", "a", "(Landroid/content/Context;I)Landroid/graphics/drawable/GradientDrawable;", "government-id_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
 public final class o {
     @NotNull
     public static final GradientDrawable a(@NotNull Context context, int i10) {
         Intrinsics.checkNotNullParameter(context, "<this>");
-        float dimension = context.getResources().getDimension(vp.c.f33365c);
-        int dimensionPixelSize = context.getResources().getDimensionPixelSize(vp.c.f33366d);
-        int iC = l2.b.c(context, vp.b.f33363e);
+        float dimension = context.getResources().getDimension(tp.c.f32501c);
+        int dimensionPixelSize = context.getResources().getDimensionPixelSize(tp.c.f32502d);
+        int iC = l2.b.c(context, tp.b.f32499e);
         Integer numF = z.f(context, i10, null, false, 6, null);
         if (numF != null) {
             int iIntValue = numF.intValue();
-            int[] Pi2IdFrame = vp.i.f33414a;
+            int[] Pi2IdFrame = tp.i.f32550a;
             Intrinsics.checkNotNullExpressionValue(Pi2IdFrame, "Pi2IdFrame");
             TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(iIntValue, Pi2IdFrame);
-            dimension = typedArrayObtainStyledAttributes.getDimension(vp.i.b, dimension);
-            dimensionPixelSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(vp.i.f33416d, dimensionPixelSize);
-            iC = typedArrayObtainStyledAttributes.getColor(vp.i.f33415c, iC);
+            dimension = typedArrayObtainStyledAttributes.getDimension(tp.i.b, dimension);
+            dimensionPixelSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(tp.i.f32552d, dimensionPixelSize);
+            iC = typedArrayObtainStyledAttributes.getColor(tp.i.f32551c, iC);
             typedArrayObtainStyledAttributes.recycle();
         }
         GradientDrawable gradientDrawable = new GradientDrawable();
@@ -45,49 +45,49 @@ public final class o {
         Intrinsics.checkNotNullParameter(context, "<this>");
         Intrinsics.checkNotNullParameter(overlay, "overlay");
         Intrinsics.checkNotNullParameter(captureSide, "captureSide");
-        Screen.Overlay.Passport passport = Screen.Overlay.Passport.f10713a;
+        Screen.Overlay.Passport passport = Screen.Overlay.Passport.f10794a;
         if (Intrinsics.c(overlay, passport)) {
-            resourceId = p2.f20772c;
-        } else if (Intrinsics.c(overlay, Screen.Overlay.Barcode.f10709a)) {
-            resourceId = p2.f20771a;
+            resourceId = p2.f18829c;
+        } else if (Intrinsics.c(overlay, Screen.Overlay.Barcode.f10790a)) {
+            resourceId = p2.f18828a;
         } else {
-            if (!Intrinsics.c(overlay, Screen.Overlay.CornersOnly.f10710a) && !(overlay instanceof Screen.Overlay.Custom) && !Intrinsics.c(overlay, Screen.Overlay.GenericFront.f10712a) && !Intrinsics.c(overlay, Screen.Overlay.Rectangle.f10714a)) {
-                throw new jt.l();
+            if (!Intrinsics.c(overlay, Screen.Overlay.CornersOnly.f10791a) && !(overlay instanceof Screen.Overlay.Custom) && !Intrinsics.c(overlay, Screen.Overlay.GenericFront.f10793a) && !Intrinsics.c(overlay, Screen.Overlay.Rectangle.f10795a)) {
+                throw new gt.l();
             }
-            resourceId = captureSide == IdConfig.b.Back ? p2.f20771a : p2.b;
+            resourceId = captureSide == IdConfig.b.Back ? p2.f18828a : p2.b;
         }
         if (Intrinsics.c(overlay, passport)) {
-            resourceId2 = m2.f20698j;
-        } else if (Intrinsics.c(overlay, Screen.Overlay.Barcode.f10709a)) {
-            resourceId2 = m2.f20690a;
-        } else if (Intrinsics.c(overlay, Screen.Overlay.Rectangle.f10714a)) {
+            resourceId2 = m2.f18755j;
+        } else if (Intrinsics.c(overlay, Screen.Overlay.Barcode.f10790a)) {
+            resourceId2 = m2.f18747a;
+        } else if (Intrinsics.c(overlay, Screen.Overlay.Rectangle.f10795a)) {
             resourceId2 = m2.b;
-        } else if (Intrinsics.c(overlay, Screen.Overlay.CornersOnly.f10710a)) {
-            resourceId2 = m2.f20694f;
+        } else if (Intrinsics.c(overlay, Screen.Overlay.CornersOnly.f10791a)) {
+            resourceId2 = m2.f18751f;
         } else {
-            if (!(overlay instanceof Screen.Overlay.Custom) && !Intrinsics.c(overlay, Screen.Overlay.GenericFront.f10712a)) {
-                throw new jt.l();
+            if (!(overlay instanceof Screen.Overlay.Custom) && !Intrinsics.c(overlay, Screen.Overlay.GenericFront.f10793a)) {
+                throw new gt.l();
             }
-            resourceId2 = m2.f20695g;
+            resourceId2 = m2.f18752g;
         }
         if (Intrinsics.c(overlay, passport)) {
-            i10 = vp.a.f33349j;
-        } else if (Intrinsics.c(overlay, Screen.Overlay.Barcode.f10709a)) {
-            i10 = vp.a.f33345f;
+            i10 = tp.a.f32485j;
+        } else if (Intrinsics.c(overlay, Screen.Overlay.Barcode.f10790a)) {
+            i10 = tp.a.f32481f;
         } else {
-            if (!Intrinsics.c(overlay, Screen.Overlay.CornersOnly.f10710a) && !(overlay instanceof Screen.Overlay.Custom) && !Intrinsics.c(overlay, Screen.Overlay.GenericFront.f10712a) && !Intrinsics.c(overlay, Screen.Overlay.Rectangle.f10714a)) {
-                throw new jt.l();
+            if (!Intrinsics.c(overlay, Screen.Overlay.CornersOnly.f10791a) && !(overlay instanceof Screen.Overlay.Custom) && !Intrinsics.c(overlay, Screen.Overlay.GenericFront.f10793a) && !Intrinsics.c(overlay, Screen.Overlay.Rectangle.f10795a)) {
+                throw new gt.l();
             }
-            i10 = vp.a.f33348i;
+            i10 = tp.a.f32484i;
         }
         Integer numF = z.f(context, i10, null, false, 6, null);
         if (numF != null) {
             int iIntValue = numF.intValue();
-            int[] Pi2IdFrameGuideAssets = vp.i.f33417e;
+            int[] Pi2IdFrameGuideAssets = tp.i.f32553e;
             Intrinsics.checkNotNullExpressionValue(Pi2IdFrameGuideAssets, "Pi2IdFrameGuideAssets");
             TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(iIntValue, Pi2IdFrameGuideAssets);
-            resourceId = typedArrayObtainStyledAttributes.getResourceId(vp.i.f33418f, resourceId);
-            resourceId2 = typedArrayObtainStyledAttributes.getResourceId(vp.i.f33419g, resourceId2);
+            resourceId = typedArrayObtainStyledAttributes.getResourceId(tp.i.f32554f, resourceId);
+            resourceId2 = typedArrayObtainStyledAttributes.getResourceId(tp.i.f32555g, resourceId2);
             typedArrayObtainStyledAttributes.recycle();
         }
         return new OverlayAssets(resourceId, resourceId2);

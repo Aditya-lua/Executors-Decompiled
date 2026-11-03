@@ -4,9 +4,9 @@ import androidx.p000lifecycle.l0;
 import com.withpersona.sdk2.inquiry.internal.InquiryState;
 import com.withpersona.sdk2.inquiry.network.dto.NextStep;
 import com.withpersona.sdk2.inquiry.shared.inquiry_session.InquirySessionConfig;
+import gt.l;
 import java.util.List;
 import java.util.UUID;
-import jt.l;
 import kotlin.Metadata;
 import kotlin.collections.p;
 import kotlin.jvm.internal.Intrinsics;
@@ -56,22 +56,22 @@ public final class i {
     public final InquiryState a() {
         NextStep nextStepC = c();
         if (nextStepC instanceof NextStep.Ui) {
-            return gp.a.I((NextStep.Ui) nextStepC, this.authorization, this.inquiryId, "fake_status", null, InquirySessionConfig.INSTANCE.a(), null, null, 96, null);
+            return ep.a.I((NextStep.Ui) nextStepC, this.authorization, this.inquiryId, "fake_status", null, InquirySessionConfig.INSTANCE.a(), null, null, 96, null);
         }
         if (nextStepC instanceof NextStep.GovernmentId) {
-            return gp.a.F((NextStep.GovernmentId) nextStepC, this.authorization, this.inquiryId, null, InquirySessionConfig.INSTANCE.a(), null, null, 48, null);
+            return ep.a.F((NextStep.GovernmentId) nextStepC, this.authorization, this.inquiryId, null, InquirySessionConfig.INSTANCE.a(), null, null, 48, null);
         }
         if (nextStepC instanceof NextStep.Selfie) {
-            return gp.a.H((NextStep.Selfie) nextStepC, this.authorization, this.inquiryId, InquirySessionConfig.INSTANCE.a(), null, null, 24, null);
+            return ep.a.H((NextStep.Selfie) nextStepC, this.authorization, this.inquiryId, InquirySessionConfig.INSTANCE.a(), null, null, 24, null);
         }
         if (nextStepC instanceof NextStep.Document) {
-            return gp.a.E((NextStep.Document) nextStepC, this.authorization, this.inquiryId, InquirySessionConfig.INSTANCE.a(), null, null, 24, null);
+            return ep.a.E((NextStep.Document) nextStepC, this.authorization, this.inquiryId, InquirySessionConfig.INSTANCE.a(), null, null, 24, null);
         }
         if (nextStepC instanceof NextStep.Complete) {
-            return gp.a.D((NextStep.Complete) nextStepC, this.authorization, this.inquiryId, "fake_status", null, InquirySessionConfig.INSTANCE.a(), null, null, 32, null);
+            return ep.a.D((NextStep.Complete) nextStepC, this.authorization, this.inquiryId, "fake_status", null, InquirySessionConfig.INSTANCE.a(), null, null, 32, null);
         }
         if (nextStepC instanceof NextStep.Integration) {
-            return gp.a.G((NextStep.Integration) nextStepC, this.authorization, this.inquiryId, "fake_status", InquirySessionConfig.INSTANCE.a(), null, null, 48, null);
+            return ep.a.G((NextStep.Integration) nextStepC, this.authorization, this.inquiryId, "fake_status", InquirySessionConfig.INSTANCE.a(), null, null, 48, null);
         }
         if (!Intrinsics.c(nextStepC, NextStep.Unknown.INSTANCE)) {
             throw new l();

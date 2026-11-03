@@ -14,7 +14,7 @@ public class COSEAlgorithmIdentifier implements Parcelable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final com.google.android.gms.fido.fido2.api.common.a f5946a;
+    public final com.google.android.gms.fido.fido2.api.common.a f6019a;
 
     public static class a extends Exception {
         public a(int i10) {
@@ -23,7 +23,7 @@ public class COSEAlgorithmIdentifier implements Parcelable {
     }
 
     public COSEAlgorithmIdentifier(@NonNull com.google.android.gms.fido.fido2.api.common.a aVar) {
-        this.f5946a = (com.google.android.gms.fido.fido2.api.common.a) m.l(aVar);
+        this.f6019a = (com.google.android.gms.fido.fido2.api.common.a) m.l(aVar);
     }
 
     @NonNull
@@ -52,24 +52,24 @@ public class COSEAlgorithmIdentifier implements Parcelable {
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof COSEAlgorithmIdentifier) && this.f5946a.a() == ((COSEAlgorithmIdentifier) obj).f5946a.a();
+        return (obj instanceof COSEAlgorithmIdentifier) && this.f6019a.a() == ((COSEAlgorithmIdentifier) obj).f6019a.a();
     }
 
     public int f() {
-        return this.f5946a.a();
+        return this.f6019a.a();
     }
 
     public int hashCode() {
-        return k.c(this.f5946a);
+        return k.c(this.f6019a);
     }
 
     @NonNull
     public final String toString() {
-        return "COSEAlgorithmIdentifier{algorithm=" + String.valueOf(this.f5946a) + "}";
+        return "COSEAlgorithmIdentifier{algorithm=" + String.valueOf(this.f6019a) + "}";
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
-        parcel.writeInt(this.f5946a.a());
+        parcel.writeInt(this.f6019a.a());
     }
 }

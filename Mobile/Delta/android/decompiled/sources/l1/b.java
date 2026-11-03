@@ -101,7 +101,7 @@ public final class b {
     public static int h(int i10, int i11, int i12, int i13, int i14, Range<Integer> range) {
         int iDoubleValue = (int) (((double) i10) * new Rational(i11, i12).doubleValue() * new Rational(i13, i14).doubleValue());
         String str = r1.f("AudioConfigUtil") ? String.format("Base Bitrate(%dbps) * Channel Count Ratio(%d / %d) * Sample Rate Ratio(%d / %d) = %d", Integer.valueOf(i10), Integer.valueOf(i11), Integer.valueOf(i12), Integer.valueOf(i13), Integer.valueOf(i14), Integer.valueOf(iDoubleValue)) : "";
-        if (!f1.a.f15800a.equals(range)) {
+        if (!f1.a.f16396a.equals(range)) {
             Integer num = (Integer) range.clamp(Integer.valueOf(iDoubleValue));
             iDoubleValue = num.intValue();
             if (r1.f("AudioConfigUtil")) {
@@ -127,7 +127,7 @@ public final class b {
             }
             if (arrayList == null) {
                 r1.a("AudioConfigUtil", "Trying common sample rates in proximity order to target " + i12 + "Hz");
-                arrayList = new ArrayList(i1.a.f20154a);
+                arrayList = new ArrayList(i1.a.f20270a);
                 Collections.sort(arrayList, new Comparator() { // from class: l1.a
                     @Override // java.util.Comparator
                     public final int compare(Object obj, Object obj2) {

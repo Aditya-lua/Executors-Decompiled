@@ -11,7 +11,7 @@ import n0.g3;
 public class FlashAvailabilityBufferUnderflowQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Set<Pair<String, String>> f1330a = new HashSet();
+    public static final Set<Pair<String, String>> f1175a = new HashSet();
 
     static {
         g("sprd", "lemp");
@@ -19,13 +19,13 @@ public class FlashAvailabilityBufferUnderflowQuirk implements g3 {
     }
 
     public static void g(String str, String str2) {
-        Set<Pair<String, String>> set = f1330a;
+        Set<Pair<String, String>> set = f1175a;
         Locale locale = Locale.US;
         set.add(new Pair<>(str.toLowerCase(locale), str2.toLowerCase(locale)));
     }
 
     public static boolean h() {
-        Set<Pair<String, String>> set = f1330a;
+        Set<Pair<String, String>> set = f1175a;
         String str = Build.MANUFACTURER;
         Locale locale = Locale.US;
         return set.contains(new Pair(str.toLowerCase(locale), Build.MODEL.toLowerCase(locale)));

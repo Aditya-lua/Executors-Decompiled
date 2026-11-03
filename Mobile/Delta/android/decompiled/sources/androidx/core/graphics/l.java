@@ -15,21 +15,21 @@ public class l extends q {
     public static Class<?> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static Constructor<?> f1799c;
+    public static Constructor<?> f1644c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static Method f1800d;
+    public static Method f1645d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static Method f1801e;
+    public static Method f1646e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static boolean f1802f;
+    public static boolean f1647f;
 
     public static boolean h(Object obj, String str, int i10, boolean z10) throws NoSuchMethodException {
         j();
         try {
-            return ((Boolean) f1800d.invoke(obj, str, Integer.valueOf(i10), Boolean.valueOf(z10))).booleanValue();
+            return ((Boolean) f1645d.invoke(obj, str, Integer.valueOf(i10), Boolean.valueOf(z10))).booleanValue();
         } catch (IllegalAccessException | InvocationTargetException e10) {
             throw new RuntimeException(e10);
         }
@@ -40,7 +40,7 @@ public class l extends q {
         try {
             Object objNewInstance = Array.newInstance(b, 1);
             Array.set(objNewInstance, 0, obj);
-            return (Typeface) f1801e.invoke(null, objNewInstance);
+            return (Typeface) f1646e.invoke(null, objNewInstance);
         } catch (IllegalAccessException | InvocationTargetException e10) {
             throw new RuntimeException(e10);
         }
@@ -50,10 +50,10 @@ public class l extends q {
         Method method;
         Class<?> cls;
         Method method2;
-        if (f1802f) {
+        if (f1647f) {
             return;
         }
-        f1802f = true;
+        f1647f = true;
         Constructor<?> constructor = null;
         try {
             cls = Class.forName("android.graphics.FontFamily");
@@ -67,16 +67,16 @@ public class l extends q {
             cls = null;
             method2 = null;
         }
-        f1799c = constructor;
+        f1644c = constructor;
         b = cls;
-        f1800d = method2;
-        f1801e = method;
+        f1645d = method2;
+        f1646e = method;
     }
 
     private static Object k() throws NoSuchMethodException {
         j();
         try {
-            return f1799c.newInstance(null);
+            return f1644c.newInstance(null);
         } catch (IllegalAccessException | InstantiationException | InvocationTargetException e10) {
             throw new RuntimeException(e10);
         }

@@ -23,14 +23,14 @@ public class z2 extends z3 {
 
     public void f(z3 z3Var) {
         Map<String, Object> map;
-        Map<String, Object> map2 = this.f24976a;
-        if (map2 == null || (map = z3Var.f24976a) == null) {
+        Map<String, Object> map2 = this.f25797a;
+        if (map2 == null || (map = z3Var.f25797a) == null) {
             return;
         }
         map2.putAll(map);
     }
 
     public void i(String str, Object obj) {
-        this.f24976a.put(str, obj);
+        this.f25797a.put(str, obj);
     }
 }

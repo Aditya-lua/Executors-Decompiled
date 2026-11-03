@@ -4,11 +4,11 @@ package eb;
 public final class f {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Object f15265a = new Object();
+    public static final Object f15879a = new Object();
     public static final j b = new j();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final q0 f15266c = u0.a(new q0() { // from class: eb.e
+    public static final q0 f15880c = u0.a(new q0() { // from class: eb.e
         @Override // eb.q0
         public final Object zza() {
             throw null;

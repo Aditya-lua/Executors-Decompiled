@@ -21,22 +21,22 @@ public class AuthenticatorAssertionResponse extends AuthenticatorResponse {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NonNull
-    public final m3 f5928f;
+    public final m3 f6001f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
     @NonNull
-    public final m3 f5929g;
+    public final m3 f6002g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
     @NonNull
-    public final m3 f5930h;
+    public final m3 f6003h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
     @NonNull
-    public final m3 f5931i;
+    public final m3 f6004i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final m3 f5932j;
+    public final m3 f6005j;
 
     public AuthenticatorAssertionResponse(@NonNull byte[] bArr, @NonNull byte[] bArr2, @NonNull byte[] bArr3, @NonNull byte[] bArr4, byte[] bArr5) {
         byte[] bArr6 = (byte[]) m.l(bArr);
@@ -49,11 +49,11 @@ public class AuthenticatorAssertionResponse extends AuthenticatorResponse {
         byte[] bArr9 = (byte[]) m.l(bArr4);
         m3 m3VarM4 = m3.m(bArr9, 0, bArr9.length);
         m3 m3VarM5 = bArr5 == null ? null : m3.m(bArr5, 0, bArr5.length);
-        this.f5928f = (m3) m.l(m3VarM);
-        this.f5929g = (m3) m.l(m3VarM2);
-        this.f5930h = (m3) m.l(m3VarM3);
-        this.f5931i = (m3) m.l(m3VarM4);
-        this.f5932j = m3VarM5;
+        this.f6001f = (m3) m.l(m3VarM);
+        this.f6002g = (m3) m.l(m3VarM2);
+        this.f6003h = (m3) m.l(m3VarM3);
+        this.f6004i = (m3) m.l(m3VarM4);
+        this.f6005j = m3VarM5;
     }
 
     @NonNull
@@ -63,7 +63,7 @@ public class AuthenticatorAssertionResponse extends AuthenticatorResponse {
             jSONObject.put("clientDataJSON", u9.c.b(w3()));
             jSONObject.put("authenticatorData", u9.c.b(v3()));
             jSONObject.put("signature", u9.c.b(y3()));
-            if (this.f5932j == null) {
+            if (this.f6005j == null) {
                 return jSONObject;
             }
             jSONObject.put("userHandle", u9.c.b(z3()));
@@ -78,11 +78,11 @@ public class AuthenticatorAssertionResponse extends AuthenticatorResponse {
             return false;
         }
         AuthenticatorAssertionResponse authenticatorAssertionResponse = (AuthenticatorAssertionResponse) obj;
-        return k.b(this.f5928f, authenticatorAssertionResponse.f5928f) && k.b(this.f5929g, authenticatorAssertionResponse.f5929g) && k.b(this.f5930h, authenticatorAssertionResponse.f5930h) && k.b(this.f5931i, authenticatorAssertionResponse.f5931i) && k.b(this.f5932j, authenticatorAssertionResponse.f5932j);
+        return k.b(this.f6001f, authenticatorAssertionResponse.f6001f) && k.b(this.f6002g, authenticatorAssertionResponse.f6002g) && k.b(this.f6003h, authenticatorAssertionResponse.f6003h) && k.b(this.f6004i, authenticatorAssertionResponse.f6004i) && k.b(this.f6005j, authenticatorAssertionResponse.f6005j);
     }
 
     public int hashCode() {
-        return k.c(Integer.valueOf(k.c(this.f5928f)), Integer.valueOf(k.c(this.f5929g)), Integer.valueOf(k.c(this.f5930h)), Integer.valueOf(k.c(this.f5931i)), Integer.valueOf(k.c(this.f5932j)));
+        return k.c(Integer.valueOf(k.c(this.f6001f)), Integer.valueOf(k.c(this.f6002g)), Integer.valueOf(k.c(this.f6003h)), Integer.valueOf(k.c(this.f6004i)), Integer.valueOf(k.c(this.f6005j)));
     }
 
     @NonNull
@@ -109,12 +109,12 @@ public class AuthenticatorAssertionResponse extends AuthenticatorResponse {
 
     @NonNull
     public byte[] v3() {
-        return this.f5930h.p();
+        return this.f6003h.p();
     }
 
     @NonNull
     public byte[] w3() {
-        return this.f5929g.p();
+        return this.f6002g.p();
     }
 
     @Override // android.os.Parcelable
@@ -131,16 +131,16 @@ public class AuthenticatorAssertionResponse extends AuthenticatorResponse {
     @NonNull
     @Deprecated
     public byte[] x3() {
-        return this.f5928f.p();
+        return this.f6001f.p();
     }
 
     @NonNull
     public byte[] y3() {
-        return this.f5931i.p();
+        return this.f6004i.p();
     }
 
     public byte[] z3() {
-        m3 m3Var = this.f5932j;
+        m3 m3Var = this.f6005j;
         if (m3Var == null) {
             return null;
         }

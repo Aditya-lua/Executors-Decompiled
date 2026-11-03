@@ -3,9 +3,9 @@ package com.withpersona.sdk2.inquiry.jpmynumber;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import jp.j;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
-import lp.j;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import u2.c;
@@ -19,7 +19,7 @@ public final class a extends h.a<JpMyNumberNfcReaderConfig, JpMyNumberNfcReaderO
     public Intent createIntent(@NotNull Context context, @NotNull JpMyNumberNfcReaderConfig input) {
         Intrinsics.checkNotNullParameter(context, "context");
         Intrinsics.checkNotNullParameter(input, "input");
-        Intent intent = new Intent(context, j.f23505a.a());
+        Intent intent = new Intent(context, j.f22158a.a());
         intent.putExtra("EXTRA_JP_MY_NUMBER_NFC_READER_CONFIG", input);
         return intent;
     }
@@ -30,6 +30,6 @@ public final class a extends h.a<JpMyNumberNfcReaderConfig, JpMyNumberNfcReaderO
     public JpMyNumberNfcReaderOutput parseResult(int resultCode, @Nullable Intent intent) {
         Bundle extras;
         JpMyNumberNfcReaderOutput jpMyNumberNfcReaderOutput;
-        return (intent == null || (extras = intent.getExtras()) == null || (jpMyNumberNfcReaderOutput = (JpMyNumberNfcReaderOutput) c.a(extras, "EXTRA_JP_MY_NUMBER_NFC_RESULT", JpMyNumberNfcReaderOutput.class)) == null) ? JpMyNumberNfcReaderOutput.Cancel.f12147a : jpMyNumberNfcReaderOutput;
+        return (intent == null || (extras = intent.getExtras()) == null || (jpMyNumberNfcReaderOutput = (JpMyNumberNfcReaderOutput) c.a(extras, "EXTRA_JP_MY_NUMBER_NFC_RESULT", JpMyNumberNfcReaderOutput.class)) == null) ? JpMyNumberNfcReaderOutput.Cancel.f12228a : jpMyNumberNfcReaderOutput;
     }
 }

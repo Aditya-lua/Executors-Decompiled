@@ -4,17 +4,17 @@ package i1;
 public final class v extends p.c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f20241a;
+    public final int f20357a;
     public final long b;
 
     public v(int i10, long j10) {
-        this.f20241a = i10;
+        this.f20357a = i10;
         this.b = j10;
     }
 
     @Override // i1.p.c
     public int a() {
-        return this.f20241a;
+        return this.f20357a;
     }
 
     @Override // i1.p.c
@@ -28,7 +28,7 @@ public final class v extends p.c {
         }
         if (obj instanceof p.c) {
             p.c cVar = (p.c) obj;
-            if (this.f20241a == cVar.a() && this.b == cVar.b()) {
+            if (this.f20357a == cVar.a() && this.b == cVar.b()) {
                 return true;
             }
         }
@@ -36,12 +36,12 @@ public final class v extends p.c {
     }
 
     public int hashCode() {
-        int i10 = (this.f20241a ^ 1000003) * 1000003;
+        int i10 = (this.f20357a ^ 1000003) * 1000003;
         long j10 = this.b;
         return i10 ^ ((int) (j10 ^ (j10 >>> 32)));
     }
 
     public String toString() {
-        return "PacketInfo{sizeInBytes=" + this.f20241a + ", timestampNs=" + this.b + "}";
+        return "PacketInfo{sizeInBytes=" + this.f20357a + ", timestampNs=" + this.b + "}";
     }
 }

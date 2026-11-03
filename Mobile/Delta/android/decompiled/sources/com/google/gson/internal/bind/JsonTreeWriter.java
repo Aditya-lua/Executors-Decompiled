@@ -38,7 +38,7 @@ public final class JsonTreeWriter extends JsonWriter {
     public JsonTreeWriter() {
         super(UNWRITABLE_WRITER);
         this.stack = new ArrayList();
-        this.product = n.f21439a;
+        this.product = n.f21898a;
     }
 
     private l peek() {
@@ -146,7 +146,7 @@ public final class JsonTreeWriter extends JsonWriter {
 
     @Override // com.google.gson.stream.JsonWriter
     public JsonWriter nullValue() {
-        put(n.f21439a);
+        put(n.f21898a);
         return this;
     }
 

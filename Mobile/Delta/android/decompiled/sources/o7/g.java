@@ -41,7 +41,7 @@ public class g extends b {
         i7.c cVar5;
         i7.c cVar6;
         super.c(t8, cVar);
-        if (t8 == o0.f16423e && (cVar6 = this.G) != null) {
+        if (t8 == o0.f17019e && (cVar6 = this.G) != null) {
             cVar6.c(cVar);
             return;
         }
@@ -66,7 +66,7 @@ public class g extends b {
     @Override // o7.b, h7.e
     public void e(RectF rectF, Matrix matrix, boolean z10) {
         super.e(rectF, matrix, z10);
-        this.E.e(rectF, this.f27237o, z10);
+        this.E.e(rectF, this.f27802o, z10);
     }
 
     @Override // o7.b

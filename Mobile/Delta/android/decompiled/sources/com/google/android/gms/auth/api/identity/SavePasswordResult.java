@@ -17,26 +17,26 @@ public class SavePasswordResult extends AbstractSafeParcelable {
     public static final Parcelable.Creator<SavePasswordResult> CREATOR = new j();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final PendingIntent f5601f;
+    public final PendingIntent f5674f;
 
     public SavePasswordResult(@NonNull PendingIntent pendingIntent) {
-        this.f5601f = (PendingIntent) m.l(pendingIntent);
+        this.f5674f = (PendingIntent) m.l(pendingIntent);
     }
 
     public boolean equals(Object obj) {
         if (obj instanceof SavePasswordResult) {
-            return k.b(this.f5601f, ((SavePasswordResult) obj).f5601f);
+            return k.b(this.f5674f, ((SavePasswordResult) obj).f5674f);
         }
         return false;
     }
 
     public int hashCode() {
-        return k.c(this.f5601f);
+        return k.c(this.f5674f);
     }
 
     @NonNull
     public PendingIntent v3() {
-        return this.f5601f;
+        return this.f5674f;
     }
 
     @Override // android.os.Parcelable

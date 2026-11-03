@@ -5,7 +5,7 @@ public abstract class a4 extends i3 {
     public static final boolean b = a7.B();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Object f6983a;
+    public Object f7057a;
 
     public /* synthetic */ a4(z3 z3Var) {
     }

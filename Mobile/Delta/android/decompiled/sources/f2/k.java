@@ -9,84 +9,84 @@ import java.util.LinkedHashMap;
 public class k implements Comparable<k> {
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public static String[] f16157s = {"position", "x", "y", "width", "height", "pathRotate"};
+    public static String[] f16753s = {"position", "x", "y", "width", "height", "pathRotate"};
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public a2.b f16158a;
+    public a2.b f16754a;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public float f16159c;
+    public float f16755c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public float f16160d;
+    public float f16756d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public float f16161e;
+    public float f16757e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public float f16162f;
+    public float f16758f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public float f16163g;
+    public float f16759g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public float f16164h;
+    public float f16760h;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public int f16167k;
+    public int f16763k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public int f16168l;
+    public int f16764l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public float f16169m;
+    public float f16765m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public g f16170n;
+    public g f16766n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public LinkedHashMap<String, androidx.constraintlayout.widget.a> f16171o;
+    public LinkedHashMap<String, androidx.constraintlayout.widget.a> f16767o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public int f16172p;
+    public int f16768p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public double[] f16173q;
+    public double[] f16769q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public double[] f16174r;
+    public double[] f16770r;
     public int b = 0;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public float f16165i = Float.NaN;
+    public float f16761i = Float.NaN;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public float f16166j = Float.NaN;
+    public float f16762j = Float.NaN;
 
     public k() {
-        int i10 = d.f16091a;
-        this.f16167k = i10;
-        this.f16168l = i10;
-        this.f16169m = Float.NaN;
-        this.f16170n = null;
-        this.f16171o = new LinkedHashMap<>();
-        this.f16172p = 0;
-        this.f16173q = new double[18];
-        this.f16174r = new double[18];
+        int i10 = d.f16687a;
+        this.f16763k = i10;
+        this.f16764l = i10;
+        this.f16765m = Float.NaN;
+        this.f16766n = null;
+        this.f16767o = new LinkedHashMap<>();
+        this.f16768p = 0;
+        this.f16769q = new double[18];
+        this.f16770r = new double[18];
     }
 
     @Override // java.lang.Comparable
     /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
     public int compareTo(@NonNull k kVar) {
-        return Float.compare(this.f16160d, kVar.f16160d);
+        return Float.compare(this.f16756d, kVar.f16756d);
     }
 
     public void b(double d10, int[] iArr, double[] dArr, float[] fArr, double[] dArr2, float[] fArr2) {
         float f10;
-        float fSin = this.f16161e;
-        float fCos = this.f16162f;
-        float f11 = this.f16163g;
-        float f12 = this.f16164h;
+        float fSin = this.f16757e;
+        float fCos = this.f16758f;
+        float f11 = this.f16759g;
+        float f12 = this.f16760h;
         float f13 = 0.0f;
         float f14 = 0.0f;
         float f15 = 0.0f;
@@ -111,7 +111,7 @@ public class k implements Comparable<k> {
         }
         float f19 = (f14 / 2.0f) + f13;
         float fCos2 = (f16 / 2.0f) + f15;
-        g gVar = this.f16170n;
+        g gVar = this.f16766n;
         if (gVar != null) {
             float[] fArr3 = new float[2];
             float[] fArr4 = new float[2];
@@ -143,21 +143,21 @@ public class k implements Comparable<k> {
     /* JADX WARN: Multi-variable type inference failed */
     public void c(float f10, View view, int[] iArr, double[] dArr, double[] dArr2, double[] dArr3, boolean z10) {
         float f11;
-        float fSin = this.f16161e;
-        float fCos = this.f16162f;
-        float f12 = this.f16163g;
-        float f13 = this.f16164h;
-        if (iArr.length != 0 && this.f16173q.length <= iArr[iArr.length - 1]) {
+        float fSin = this.f16757e;
+        float fCos = this.f16758f;
+        float f12 = this.f16759g;
+        float f13 = this.f16760h;
+        if (iArr.length != 0 && this.f16769q.length <= iArr[iArr.length - 1]) {
             int i10 = iArr[iArr.length - 1] + 1;
-            this.f16173q = new double[i10];
-            this.f16174r = new double[i10];
+            this.f16769q = new double[i10];
+            this.f16770r = new double[i10];
         }
-        Arrays.fill(this.f16173q, Double.NaN);
+        Arrays.fill(this.f16769q, Double.NaN);
         for (int i11 = 0; i11 < iArr.length; i11++) {
-            double[] dArr4 = this.f16173q;
+            double[] dArr4 = this.f16769q;
             int i12 = iArr[i11];
             dArr4[i12] = dArr[i11];
-            this.f16174r[i12] = dArr2[i11];
+            this.f16770r[i12] = dArr2[i11];
         }
         float f14 = Float.NaN;
         int i13 = 0;
@@ -166,7 +166,7 @@ public class k implements Comparable<k> {
         float f17 = 0.0f;
         float f18 = 0.0f;
         while (true) {
-            double[] dArr5 = this.f16173q;
+            double[] dArr5 = this.f16769q;
             if (i13 >= dArr5.length) {
                 break;
             }
@@ -174,12 +174,12 @@ public class k implements Comparable<k> {
                 f11 = f14;
             } else {
                 double d10 = dArr3 != null ? dArr3[i13] : 0.0d;
-                if (!Double.isNaN(this.f16173q[i13])) {
-                    d10 = this.f16173q[i13] + d10;
+                if (!Double.isNaN(this.f16769q[i13])) {
+                    d10 = this.f16769q[i13] + d10;
                 }
                 f11 = f14;
                 float f19 = (float) d10;
-                float f20 = (float) this.f16174r[i13];
+                float f20 = (float) this.f16770r[i13];
                 if (i13 == 1) {
                     f14 = f11;
                     f15 = f20;
@@ -205,7 +205,7 @@ public class k implements Comparable<k> {
             i13++;
         }
         float f21 = f14;
-        g gVar = this.f16170n;
+        g gVar = this.f16766n;
         if (gVar != null) {
             float[] fArr = new float[2];
             float[] fArr2 = new float[2];

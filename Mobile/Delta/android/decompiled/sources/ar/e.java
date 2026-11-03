@@ -1,82 +1,53 @@
 package ar;
 
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import com.google.android.material.imageview.ShapeableImageView;
+import com.withpersona.sdk2.inquiry.steps.ui.components.BrandingComponent;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.internal.Intrinsics;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 /* JADX INFO: loaded from: classes3.dex */
+@Metadata(d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\u001a\u001b\u0010\u0004\u001a\u0004\u0018\u00010\u0003*\u00020\u00002\u0006\u0010\u0002\u001a\u00020\u0001¢\u0006\u0004\b\u0004\u0010\u0005¨\u0006\u0006"}, d2 = {"Lcom/withpersona/sdk2/inquiry/steps/ui/components/BrandingComponent;", "Lar/y4;", "uiComponentHelper", "Landroid/view/View;", "b", "(Lcom/withpersona/sdk2/inquiry/steps/ui/components/BrandingComponent;Lar/y4;)Landroid/view/View;", "ui-step-renderer_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
 public final class e {
-    public static final int A = -2029584305;
+    @Nullable
+    public static final View b(@NotNull BrandingComponent brandingComponent, @NotNull y4 uiComponentHelper) {
+        Intrinsics.checkNotNullParameter(brandingComponent, "<this>");
+        Intrinsics.checkNotNullParameter(uiComponentHelper, "uiComponentHelper");
+        Context context = uiComponentHelper.getContext();
+        if (!brandingComponent.getShowBranding()) {
+            return null;
+        }
+        final ShapeableImageView shapeableImageView = new ShapeableImageView(context);
+        shapeableImageView.setImageResource(tp.d.f32506c);
+        shapeableImageView.setAdjustViewBounds(true);
+        shapeableImageView.setContentDescription(brandingComponent.getContentDescription());
+        shapeableImageView.setPadding(shapeableImageView.getPaddingLeft(), (int) hq.j.a(16.0d), shapeableImageView.getPaddingRight(), shapeableImageView.getPaddingBottom());
+        uiComponentHelper.d(new Function0() { // from class: ar.d
+            @Override // kotlin.jvm.functions.Function0
+            public final Object invoke() {
+                return e.c(shapeableImageView);
+            }
+        });
+        return shapeableImageView;
+    }
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final int f3709a = -2029584356;
-    public static final int b = -2029584345;
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final int f3710c = -2029584333;
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final int f3711d = -2029584332;
-
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final int f3712e = -2029584330;
-
-    /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final int f3713f = -2029584329;
-
-    /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final int f3714g = -2029584328;
-
-    /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final int f3715h = -2029584327;
-
-    /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final int f3716i = -2029584325;
-
-    /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final int f3717j = -2029584322;
-
-    /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final int f3718k = -2029584321;
-
-    /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final int f3719l = -2029584320;
-
-    /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public static final int f3720m = -2029584319;
-
-    /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public static final int f3721n = -2029584318;
-
-    /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public static final int f3722o = -2029584317;
-
-    /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public static final int f3723p = -2029584316;
-
-    /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public static final int f3724q = -2029584315;
-
-    /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public static final int f3725r = -2029584314;
-
-    /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public static final int f3726s = -2029584313;
-
-    /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public static final int f3727t = -2029584312;
-
-    /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public static final int f3728u = -2029584311;
-
-    /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public static final int f3729v = -2029584310;
-
-    /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public static final int f3730w = -2029584309;
-
-    /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public static final int f3731x = -2029584308;
-
-    /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public static final int f3732y = -2029584307;
-
-    /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public static final int f3733z = -2029584306;
+    public static final Unit c(ShapeableImageView shapeableImageView) {
+        ViewGroup.LayoutParams layoutParams = shapeableImageView.getLayoutParams();
+        if (layoutParams == null) {
+            throw new NullPointerException("null cannot be cast to non-null type androidx.constraintlayout.widget.ConstraintLayout.LayoutParams");
+        }
+        ConstraintLayout.b bVar = (ConstraintLayout.b) layoutParams;
+        bVar.G = 1.0f;
+        ((ViewGroup.MarginLayoutParams) bVar).width = -2;
+        ((ViewGroup.MarginLayoutParams) bVar).height = -2;
+        shapeableImageView.setLayoutParams(bVar);
+        return Unit.f22938a;
+    }
 }

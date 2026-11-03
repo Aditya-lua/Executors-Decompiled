@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.List;
 import m2.b;
 import m2.c;
-import oe.p;
+import pe.p;
 import v8.g;
 import v8.h;
 
@@ -17,14 +17,14 @@ import v8.h;
 public class ShortcutInfoChangeListenerImpl extends b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f1752a;
+    public final Context f1597a;
     public final v8.b b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final h f1753c;
+    public final h f1598c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final p f1754d;
+    public final p f1599d;
 
     public static class a {
         @NonNull
@@ -50,10 +50,10 @@ public class ShortcutInfoChangeListenerImpl extends b {
     }
 
     public ShortcutInfoChangeListenerImpl(Context context, v8.b bVar, h hVar, p pVar) {
-        this.f1752a = context;
+        this.f1597a = context;
         this.b = bVar;
-        this.f1753c = hVar;
-        this.f1754d = pVar;
+        this.f1598c = hVar;
+        this.f1599d = pVar;
     }
 
     @NonNull
@@ -80,19 +80,19 @@ public class ShortcutInfoChangeListenerImpl extends b {
     public void c(@NonNull List<String> list) {
         Iterator<String> it = list.iterator();
         while (it.hasNext()) {
-            this.f1753c.a(d(p2.a.b(this.f1752a, it.next())));
+            this.f1598c.a(d(p2.a.b(this.f1597a, it.next())));
         }
     }
 
     @NonNull
     public final v8.a d(@NonNull String str) {
-        return new v8.a.C0596a("ViewAction").b("", str).a();
+        return new v8.a.C0609a("ViewAction").b("", str).a();
     }
 
     @NonNull
     public final o2.c e(@NonNull c cVar) {
-        String strB = p2.a.b(this.f1752a, cVar.f());
-        o2.c cVarO = new o2.c().e(cVar.f()).h(strB).n(cVar.m().toString()).o(p2.a.a(this.f1752a, cVar.g(), this.f1754d));
+        String strB = p2.a.b(this.f1597a, cVar.f());
+        o2.c cVarO = new o2.c().e(cVar.f()).h(strB).n(cVar.m().toString()).o(p2.a.a(this.f1597a, cVar.g(), this.f1599d));
         if (cVar.j() != null) {
             cVarO.m(cVar.j().toString());
         }

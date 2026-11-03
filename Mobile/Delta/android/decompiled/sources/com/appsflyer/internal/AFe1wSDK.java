@@ -34,18 +34,18 @@ public final class AFe1wSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    private final Set<AFe1zSDK> f5323d;
+    private final Set<AFe1zSDK> f5396d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
     @NotNull
-    private final NavigableSet<AFe1ySDK<?>> f5324e;
+    private final NavigableSet<AFe1ySDK<?>> f5397e;
 
     @NotNull
     private final Set<AFe1zSDK> force;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
     @NotNull
-    private final NavigableSet<AFe1ySDK<?>> f5325i;
+    private final NavigableSet<AFe1ySDK<?>> f5398i;
 
     @NotNull
     private Executor registerClient;
@@ -55,11 +55,11 @@ public final class AFe1wSDK {
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
     @NotNull
-    private final List<AFe1ySDK<?>> f5326v;
+    private final List<AFe1ySDK<?>> f5399v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
     @NotNull
-    private final Set<AFe1ySDK<?>> f5327w;
+    private final Set<AFe1ySDK<?>> f5400w;
 
     public /* synthetic */ class AFa1uSDK {
         public static final /* synthetic */ int[] AFKeystoreWrapper;
@@ -84,11 +84,11 @@ public final class AFe1wSDK {
 
     /* JADX WARN: Enum visitor error
     jadx.core.utils.exceptions.JadxRuntimeException: Can't remove SSA var: r0v1 com.appsflyer.internal.AFe1wSDK$AFa1ySDK[], still in use, count: 1, list:
-      (r0v1 com.appsflyer.internal.AFe1wSDK$AFa1ySDK[]) from 0x0024: INVOKE (r0v1 com.appsflyer.internal.AFe1wSDK$AFa1ySDK[]) STATIC call: qt.b.a(java.lang.Enum[]):qt.a A[MD:<E extends java.lang.Enum<E>>:(E extends java.lang.Enum<E>[]):qt.a<E extends java.lang.Enum<E>> (m)]
+      (r0v1 com.appsflyer.internal.AFe1wSDK$AFa1ySDK[]) from 0x0024: INVOKE (r0v1 com.appsflyer.internal.AFe1wSDK$AFa1ySDK[]) STATIC call: ot.b.a(java.lang.Enum[]):ot.a A[MD:<E extends java.lang.Enum<E>>:(E extends java.lang.Enum<E>[]):ot.a<E extends java.lang.Enum<E>> (m)]
     	at jadx.core.utils.InsnRemover.removeSsaVar(InsnRemover.java:164)
     	at jadx.core.utils.InsnRemover.unbindResult(InsnRemover.java:129)
     	at jadx.core.utils.InsnRemover.lambda$unbindInsns$1(InsnRemover.java:101)
-    	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+    	at java.base/java.util.ArrayList.forEach(Unknown Source)
     	at jadx.core.utils.InsnRemover.unbindInsns(InsnRemover.java:100)
     	at jadx.core.utils.InsnRemover.removeAllAndUnbind(InsnRemover.java:257)
     	at jadx.core.dex.visitors.EnumVisitor.convertToEnum(EnumVisitor.java:187)
@@ -102,7 +102,7 @@ public final class AFe1wSDK {
         Skipped;
 
         static {
-            qt.b.a(aFa1ySDKArr);
+            ot.b.a(aFa1ySDKArr);
         }
 
         private AFa1ySDK() {
@@ -126,16 +126,16 @@ public final class AFe1wSDK {
         this.registerClient = executorServiceNewSingleThreadExecutor;
         this.AFLogger = new Timer(true);
         this.unregisterClient = new CopyOnWriteArrayList();
-        this.f5323d = new CopyOnWriteArraySet();
+        this.f5396d = new CopyOnWriteArraySet();
         Set<AFe1zSDK> setNewSetFromMap = Collections.newSetFromMap(new ConcurrentHashMap());
         Intrinsics.checkNotNullExpressionValue(setNewSetFromMap, "");
         this.force = setNewSetFromMap;
-        this.f5325i = new ConcurrentSkipListSet();
-        this.f5324e = new ConcurrentSkipListSet();
-        this.f5326v = new ArrayList();
+        this.f5398i = new ConcurrentSkipListSet();
+        this.f5397e = new ConcurrentSkipListSet();
+        this.f5399v = new ArrayList();
         Set<AFe1ySDK<?>> setNewSetFromMap2 = Collections.newSetFromMap(new ConcurrentHashMap());
         Intrinsics.checkNotNullExpressionValue(setNewSetFromMap2, "");
-        this.f5327w = setNewSetFromMap2;
+        this.f5400w = setNewSetFromMap2;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -148,12 +148,12 @@ public final class AFe1wSDK {
 
     /* JADX INFO: Access modifiers changed from: private */
     public static final void AFLogger(final AFe1wSDK aFe1wSDK) {
-        synchronized (aFe1wSDK.f5325i) {
-            final AFe1ySDK<?> aFe1ySDKPollFirst = aFe1wSDK.f5325i.pollFirst();
+        synchronized (aFe1wSDK.f5398i) {
+            final AFe1ySDK<?> aFe1ySDKPollFirst = aFe1wSDK.f5398i.pollFirst();
             if (aFe1ySDKPollFirst == null) {
                 return;
             }
-            aFe1wSDK.f5327w.add(aFe1ySDKPollFirst);
+            aFe1wSDK.f5400w.add(aFe1ySDKPollFirst);
             long jD = aFe1ySDKPollFirst.d();
             Thread threadCurrentThread = Thread.currentThread();
             Intrinsics.checkNotNullExpressionValue(threadCurrentThread, "");
@@ -164,10 +164,10 @@ public final class AFe1wSDK {
             aFe1wSDK.registerClient.execute(new Runnable() { // from class: com.appsflyer.internal.k0
                 @Override // java.lang.Runnable
                 public final void run() {
-                    AFe1wSDK.AFKeystoreWrapper(this.f5499a, aFe1ySDKPollFirst);
+                    AFe1wSDK.AFKeystoreWrapper(this.f5572a, aFe1ySDKPollFirst);
                 }
             });
-            if (!aFe1wSDK.f5325i.isEmpty()) {
+            if (!aFe1wSDK.f5398i.isEmpty()) {
                 aFe1wSDK.AFKeystoreWrapper.submit(new i0(aFe1wSDK));
             }
             try {
@@ -216,30 +216,30 @@ public final class AFe1wSDK {
     private final AFa1ySDK registerClient(AFe1ySDK<?> aFe1ySDK) {
         boolean zAdd;
         AFa1ySDK aFa1ySDK;
-        synchronized (this.f5325i) {
-            if (this.f5327w.contains(aFe1ySDK)) {
+        synchronized (this.f5398i) {
+            if (this.f5400w.contains(aFe1ySDK)) {
                 AFLoggerBase.d$default(AFLogger.INSTANCE, LogTag.QUEUE, "tried to add already running task: " + aFe1ySDK, false, 4, null);
                 return AFa1ySDK.Duplicate;
             }
-            if (!this.f5325i.contains(aFe1ySDK) && !this.f5324e.contains(aFe1ySDK)) {
+            if (!this.f5398i.contains(aFe1ySDK) && !this.f5397e.contains(aFe1ySDK)) {
                 for (AFe1zSDK aFe1zSDK : aFe1ySDK.AFKeystoreWrapper) {
                     if (this.force.contains(aFe1zSDK)) {
                         Intrinsics.checkNotNullParameter(aFe1zSDK, "");
                         aFe1ySDK.AFLogger.add(aFe1zSDK);
                     }
                 }
-                if (this.f5323d.containsAll(aFe1ySDK.AFLogger)) {
-                    zAdd = this.f5325i.add(aFe1ySDK);
+                if (this.f5396d.containsAll(aFe1ySDK.AFLogger)) {
+                    zAdd = this.f5398i.add(aFe1ySDK);
                 } else {
-                    zAdd = this.f5324e.add(aFe1ySDK);
+                    zAdd = this.f5397e.add(aFe1ySDK);
                     if (zAdd) {
                         AFLoggerBase.d$default(AFLogger.INSTANCE, LogTag.QUEUE, "new task was blocked: " + aFe1ySDK, false, 4, null);
                         aFe1ySDK.w();
                     }
                 }
                 if (zAdd) {
-                    this.f5325i.addAll(this.f5326v);
-                    this.f5326v.clear();
+                    this.f5398i.addAll(this.f5399v);
+                    this.f5399v.clear();
                     aFa1ySDK = AFa1ySDK.Admitted;
                 } else {
                     AFLoggerBase.d$default(AFLogger.INSTANCE, LogTag.QUEUE, "task not added, it's already in the queue: " + aFe1ySDK, false, 4, null);
@@ -261,7 +261,7 @@ public final class AFe1wSDK {
                 return;
             }
             if (i10 != 3) {
-                throw new jt.l();
+                throw new gt.l();
             }
             aFe1wSDK.force.add(aFe1ySDK.unregisterClient);
             AFLoggerBase.d$default(AFLogger.INSTANCE, LogTag.QUEUE, "new task added: " + aFe1ySDK, false, 4, null);
@@ -270,27 +270,27 @@ public final class AFe1wSDK {
                 it.next().d(aFe1ySDK);
             }
             aFe1wSDK.AFKeystoreWrapper.submit(new i0(aFe1wSDK));
-            synchronized (aFe1wSDK.f5325i) {
+            synchronized (aFe1wSDK.f5398i) {
                 try {
-                    for (int size = (aFe1wSDK.f5325i.size() + aFe1wSDK.f5324e.size()) - 40; size > 0; size--) {
-                        boolean zIsEmpty = aFe1wSDK.f5324e.isEmpty();
-                        boolean zIsEmpty2 = aFe1wSDK.f5325i.isEmpty();
+                    for (int size = (aFe1wSDK.f5398i.size() + aFe1wSDK.f5397e.size()) - 40; size > 0; size--) {
+                        boolean zIsEmpty = aFe1wSDK.f5397e.isEmpty();
+                        boolean zIsEmpty2 = aFe1wSDK.f5398i.isEmpty();
                         if (!zIsEmpty2 && !zIsEmpty) {
-                            AFe1ySDK<?> aFe1ySDKFirst = aFe1wSDK.f5325i.first();
-                            AFe1ySDK<?> aFe1ySDKFirst2 = aFe1wSDK.f5324e.first();
+                            AFe1ySDK<?> aFe1ySDKFirst = aFe1wSDK.f5398i.first();
+                            AFe1ySDK<?> aFe1ySDKFirst2 = aFe1wSDK.f5397e.first();
                             Intrinsics.checkNotNull(aFe1ySDKFirst2);
                             if (aFe1ySDKFirst.compareTo(aFe1ySDKFirst2) > 0) {
-                                aFe1wSDK.d(aFe1wSDK.f5325i);
+                                aFe1wSDK.d(aFe1wSDK.f5398i);
                             } else {
-                                aFe1wSDK.d(aFe1wSDK.f5324e);
+                                aFe1wSDK.d(aFe1wSDK.f5397e);
                             }
                         } else if (!zIsEmpty2) {
-                            aFe1wSDK.d(aFe1wSDK.f5325i);
+                            aFe1wSDK.d(aFe1wSDK.f5398i);
                         } else if (!zIsEmpty) {
-                            aFe1wSDK.d(aFe1wSDK.f5324e);
+                            aFe1wSDK.d(aFe1wSDK.f5397e);
                         }
                     }
-                    Unit unit = Unit.f22483a;
+                    Unit unit = Unit.f22938a;
                 } catch (Throwable th2) {
                     throw th2;
                 }
@@ -303,7 +303,7 @@ public final class AFe1wSDK {
         this.registerClient.execute(new Runnable() { // from class: com.appsflyer.internal.j0
             @Override // java.lang.Runnable
             public final void run() {
-                AFe1wSDK.unregisterClient(this.f5496a, aFe1ySDK);
+                AFe1wSDK.unregisterClient(this.f5569a, aFe1ySDK);
             }
         });
     }
@@ -313,7 +313,7 @@ public final class AFe1wSDK {
         if (aFe1ySDKPollFirst == null) {
             return;
         }
-        this.f5323d.add(aFe1ySDKPollFirst.unregisterClient);
+        this.f5396d.add(aFe1ySDKPollFirst.unregisterClient);
         Iterator<AFe1vSDK> it = this.unregisterClient.iterator();
         while (it.hasNext()) {
             it.next().unregisterClient(aFe1ySDKPollFirst);
@@ -323,13 +323,13 @@ public final class AFe1wSDK {
     /* JADX INFO: Access modifiers changed from: private */
     public static final void unregisterClient(AFe1ySDK aFe1ySDK, AFd1cSDK aFd1cSDK, AFe1wSDK aFe1wSDK) {
         AFLoggerBase.d$default(AFLogger.INSTANCE, LogTag.QUEUE, "execution finished for " + aFe1ySDK + ", result: " + aFd1cSDK, false, 4, null);
-        aFe1wSDK.f5327w.remove(aFe1ySDK);
+        aFe1wSDK.f5400w.remove(aFe1ySDK);
         Iterator<AFe1vSDK> it = aFe1wSDK.unregisterClient.iterator();
         while (it.hasNext()) {
             it.next().AFKeystoreWrapper(aFe1ySDK, aFd1cSDK);
         }
         if (aFd1cSDK == AFd1cSDK.SUCCESS) {
-            aFe1wSDK.f5323d.add(aFe1ySDK.unregisterClient);
+            aFe1wSDK.f5396d.add(aFe1ySDK.unregisterClient);
             aFe1wSDK.unregisterClient();
             return;
         }
@@ -338,43 +338,43 @@ public final class AFe1wSDK {
             if ((aFe1ySDK instanceof AFf1sSDK) && ((AFf1sSDK) aFe1ySDK).unregisterClient == AFd1bSDK.ARS_VALIDATE) {
                 return;
             }
-            synchronized (aFe1wSDK.f5325i) {
+            synchronized (aFe1wSDK.f5398i) {
                 try {
-                    aFe1wSDK.f5326v.add(aFe1ySDK);
+                    aFe1wSDK.f5399v.add(aFe1ySDK);
                     Iterator<AFe1vSDK> it2 = aFe1wSDK.unregisterClient.iterator();
                     while (it2.hasNext()) {
                         it2.next().d(aFe1ySDK);
                     }
-                    Unit unit = Unit.f22483a;
+                    Unit unit = Unit.f22938a;
                 } catch (Throwable th2) {
                     throw th2;
                 }
             }
             return;
         }
-        aFe1wSDK.f5323d.add(aFe1ySDK.unregisterClient);
+        aFe1wSDK.f5396d.add(aFe1ySDK.unregisterClient);
         aFe1wSDK.unregisterClient();
     }
 
     private final void unregisterClient() {
-        synchronized (this.f5325i) {
+        synchronized (this.f5398i) {
             try {
-                Iterator<AFe1ySDK<?>> it = this.f5324e.iterator();
+                Iterator<AFe1ySDK<?>> it = this.f5397e.iterator();
                 Intrinsics.checkNotNullExpressionValue(it, "");
                 boolean z10 = false;
                 while (it.hasNext()) {
                     AFe1ySDK<?> next = it.next();
                     Intrinsics.checkNotNull(next);
-                    if (this.f5323d.containsAll(next.AFLogger)) {
+                    if (this.f5396d.containsAll(next.AFLogger)) {
                         it.remove();
-                        this.f5325i.add(next);
+                        this.f5398i.add(next);
                         z10 = true;
                     }
                 }
                 if (z10) {
                     this.AFKeystoreWrapper.submit(new i0(this));
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }

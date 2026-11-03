@@ -14,16 +14,16 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class d extends e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object f29690a = new Object();
+    public final Object f30092a = new Object();
     public final ExecutorService b = Executors.newFixedThreadPool(4, new a());
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public volatile Handler f29691c;
+    public volatile Handler f30093c;
 
     public class a implements ThreadFactory {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final AtomicInteger f29692a = new AtomicInteger(0);
+        public final AtomicInteger f30094a = new AtomicInteger(0);
 
         public a() {
         }
@@ -31,7 +31,7 @@ public class d extends e {
         @Override // java.util.concurrent.ThreadFactory
         public Thread newThread(Runnable runnable) {
             Thread thread = new Thread(runnable);
-            thread.setName("arch_disk_io_" + this.f29692a.getAndIncrement());
+            thread.setName("arch_disk_io_" + this.f30094a.getAndIncrement());
             return thread;
         }
     }
@@ -69,17 +69,17 @@ public class d extends e {
 
     @Override // r.e
     public void c(@NonNull Runnable runnable) {
-        if (this.f29691c == null) {
-            synchronized (this.f29690a) {
+        if (this.f30093c == null) {
+            synchronized (this.f30092a) {
                 try {
-                    if (this.f29691c == null) {
-                        this.f29691c = d(Looper.getMainLooper());
+                    if (this.f30093c == null) {
+                        this.f30093c = d(Looper.getMainLooper());
                     }
                 } catch (Throwable th2) {
                     throw th2;
                 }
             }
         }
-        this.f29691c.post(runnable);
+        this.f30093c.post(runnable);
     }
 }

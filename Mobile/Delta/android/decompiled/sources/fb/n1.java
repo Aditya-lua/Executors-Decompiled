@@ -8,14 +8,14 @@ import java.util.RandomAccess;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class n1 extends i1 implements List, RandomAccess {
-    public static final r1 b = new l1(o1.f16561e, 0);
+    public static final r1 b = new l1(o1.f17157e, 0);
 
     public static n1 f() {
-        return o1.f16561e;
+        return o1.f17157e;
     }
 
     public static n1 g(Object[] objArr, int i10) {
-        return i10 == 0 ? o1.f16561e : new o1(objArr, i10);
+        return i10 == 0 ? o1.f17157e : new o1(objArr, i10);
     }
 
     @Override // java.util.List
@@ -52,7 +52,7 @@ public abstract class n1 extends i1 implements List, RandomAccess {
         if (i12 == size()) {
             return this;
         }
-        return i12 == 0 ? o1.f16561e : new m1(this, i10, i12);
+        return i12 == 0 ? o1.f17157e : new m1(this, i10, i12);
     }
 
     @Override // java.util.Collection, java.util.List

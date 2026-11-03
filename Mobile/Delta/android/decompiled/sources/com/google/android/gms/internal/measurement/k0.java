@@ -5,16 +5,16 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class k0 extends x {
     public k0() {
-        this.f6892a.add(n0.ADD);
-        this.f6892a.add(n0.DIVIDE);
-        this.f6892a.add(n0.MODULUS);
-        this.f6892a.add(n0.MULTIPLY);
-        this.f6892a.add(n0.NEGATE);
-        this.f6892a.add(n0.POST_DECREMENT);
-        this.f6892a.add(n0.POST_INCREMENT);
-        this.f6892a.add(n0.PRE_DECREMENT);
-        this.f6892a.add(n0.PRE_INCREMENT);
-        this.f6892a.add(n0.SUBTRACT);
+        this.f6966a.add(n0.ADD);
+        this.f6966a.add(n0.DIVIDE);
+        this.f6966a.add(n0.MODULUS);
+        this.f6966a.add(n0.MULTIPLY);
+        this.f6966a.add(n0.NEGATE);
+        this.f6966a.add(n0.POST_DECREMENT);
+        this.f6966a.add(n0.POST_INCREMENT);
+        this.f6966a.add(n0.PRE_DECREMENT);
+        this.f6966a.add(n0.PRE_INCREMENT);
+        this.f6966a.add(n0.SUBTRACT);
     }
 
     @Override // com.google.android.gms.internal.measurement.x

@@ -2,23 +2,23 @@ package com.withpersona.sdk2.inquiry.internal.fallbackmode;
 
 import com.withpersona.sdk2.inquiry.network.dto.InquiryFieldMap;
 import com.withpersona.sdk2.inquiry.network.dto.NextStep;
+import hv.x;
 import java.util.List;
-import jv.x;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
-import mv.k;
-import mv.o;
-import mv.y;
+import kv.k;
+import kv.o;
+import kv.y;
 import okhttp3.RequestBody;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000L\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u000b\bf\u0018\u00002\u00020\u0001:\u0007\u001c\u001d\u001e\u001f !\"J,\u0010\b\u001a\b\u0012\u0004\u0012\u00020\u00070\u00062\n\b\u0001\u0010\u0003\u001a\u0004\u0018\u00010\u00022\b\b\u0001\u0010\u0005\u001a\u00020\u0004H§@¢\u0006\u0004\b\b\u0010\tJ \u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000b0\u00062\b\b\u0001\u0010\u0005\u001a\u00020\nH§@¢\u0006\u0004\b\f\u0010\rJ>\u0010\u0015\u001a\b\u0012\u0004\u0012\u00020\u00140\u00062\b\b\u0001\u0010\u000e\u001a\u00020\u00022\b\b\u0001\u0010\u0010\u001a\u00020\u000f2\b\b\u0001\u0010\u0012\u001a\u00020\u00112\b\b\u0001\u0010\u0005\u001a\u00020\u0013H§@¢\u0006\u0004\b\u0015\u0010\u0016J*\u0010\u001a\u001a\b\u0012\u0004\u0012\u00020\u00010\u00062\b\b\u0001\u0010\u0017\u001a\u00020\u00022\b\b\u0001\u0010\u0019\u001a\u00020\u0018H§@¢\u0006\u0004\b\u001a\u0010\u001b¨\u0006#À\u0006\u0003"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService;", "", "", "sessionToken", "Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$StatusRequest;", "request", "Ljv/x;", "Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$StatusResponse;", "b", "(Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$StatusRequest;Lnt/b;)Ljava/lang/Object;", "Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$SessionIdRequest;", "Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$SessionIdResponse;", "d", "(Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$SessionIdRequest;Lnt/b;)Ljava/lang/Object;", "authHeader", "Ldp/h;", "productionEndpoint", "", "requestCount", "Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$UploadUrlRequest;", "Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$UploadUrlResponse;", "c", "(Ljava/lang/String;Ldp/h;ILcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$UploadUrlRequest;Lnt/b;)Ljava/lang/Object;", "url", "Lokhttp3/RequestBody;", "body", "a", "(Ljava/lang/String;Lokhttp3/RequestBody;Lnt/b;)Ljava/lang/Object;", "UploadUrlResponse", "UploadUrlRequest", "StatusRequest", "StatusResponse", "StaticTemplate", "SessionIdRequest", "SessionIdResponse", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000L\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u000b\bf\u0018\u00002\u00020\u0001:\u0007\u001c\u001d\u001e\u001f !\"J,\u0010\b\u001a\b\u0012\u0004\u0012\u00020\u00070\u00062\n\b\u0001\u0010\u0003\u001a\u0004\u0018\u00010\u00022\b\b\u0001\u0010\u0005\u001a\u00020\u0004H§@¢\u0006\u0004\b\b\u0010\tJ \u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000b0\u00062\b\b\u0001\u0010\u0005\u001a\u00020\nH§@¢\u0006\u0004\b\f\u0010\rJ>\u0010\u0015\u001a\b\u0012\u0004\u0012\u00020\u00140\u00062\b\b\u0001\u0010\u000e\u001a\u00020\u00022\b\b\u0001\u0010\u0010\u001a\u00020\u000f2\b\b\u0001\u0010\u0012\u001a\u00020\u00112\b\b\u0001\u0010\u0005\u001a\u00020\u0013H§@¢\u0006\u0004\b\u0015\u0010\u0016J*\u0010\u001a\u001a\b\u0012\u0004\u0012\u00020\u00010\u00062\b\b\u0001\u0010\u0017\u001a\u00020\u00022\b\b\u0001\u0010\u0019\u001a\u00020\u0018H§@¢\u0006\u0004\b\u001a\u0010\u001b¨\u0006#À\u0006\u0003"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService;", "", "", "sessionToken", "Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$StatusRequest;", "request", "Lhv/x;", "Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$StatusResponse;", "c", "(Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$StatusRequest;Llt/b;)Ljava/lang/Object;", "Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$SessionIdRequest;", "Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$SessionIdResponse;", "b", "(Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$SessionIdRequest;Llt/b;)Ljava/lang/Object;", "authHeader", "Lbp/h;", "productionEndpoint", "", "requestCount", "Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$UploadUrlRequest;", "Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$UploadUrlResponse;", "d", "(Ljava/lang/String;Lbp/h;ILcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$UploadUrlRequest;Llt/b;)Ljava/lang/Object;", "url", "Lokhttp3/RequestBody;", "body", "a", "(Ljava/lang/String;Lokhttp3/RequestBody;Llt/b;)Ljava/lang/Object;", "UploadUrlResponse", "UploadUrlRequest", "StatusRequest", "StatusResponse", "StaticTemplate", "SessionIdRequest", "SessionIdResponse", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public interface FallbackModeService {
 
+    @sm.i(generateAdapter = true)
     @Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u000f\b\u0087\b\u0018\u00002\u00020\u0001Bm\u0012\b\b\u0001\u0010\u0003\u001a\u00020\u0002\u0012\n\b\u0001\u0010\u0004\u001a\u0004\u0018\u00010\u0002\u0012\n\b\u0001\u0010\u0005\u001a\u0004\u0018\u00010\u0002\u0012\n\b\u0001\u0010\u0006\u001a\u0004\u0018\u00010\u0002\u0012\n\b\u0001\u0010\u0007\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\b\u001a\u0004\u0018\u00010\u0002\u0012\n\b\u0001\u0010\t\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u000b\u001a\u0004\u0018\u00010\n\u0012\n\b\u0001\u0010\f\u001a\u0004\u0018\u00010\u0002¢\u0006\u0004\b\r\u0010\u000eJz\u0010\u000f\u001a\u00020\u00002\b\b\u0003\u0010\u0003\u001a\u00020\u00022\n\b\u0003\u0010\u0004\u001a\u0004\u0018\u00010\u00022\n\b\u0003\u0010\u0005\u001a\u0004\u0018\u00010\u00022\n\b\u0003\u0010\u0006\u001a\u0004\u0018\u00010\u00022\n\b\u0003\u0010\u0007\u001a\u0004\u0018\u00010\u00022\n\b\u0002\u0010\b\u001a\u0004\u0018\u00010\u00022\n\b\u0003\u0010\t\u001a\u0004\u0018\u00010\u00022\n\b\u0002\u0010\u000b\u001a\u0004\u0018\u00010\n2\n\b\u0003\u0010\f\u001a\u0004\u0018\u00010\u0002HÆ\u0001¢\u0006\u0004\b\u000f\u0010\u0010J\u0010\u0010\u0011\u001a\u00020\u0002HÖ\u0001¢\u0006\u0004\b\u0011\u0010\u0012J\u0010\u0010\u0014\u001a\u00020\u0013HÖ\u0001¢\u0006\u0004\b\u0014\u0010\u0015J\u001a\u0010\u0018\u001a\u00020\u00172\b\u0010\u0016\u001a\u0004\u0018\u00010\u0001HÖ\u0003¢\u0006\u0004\b\u0018\u0010\u0019R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u001a\u0010\u001b\u001a\u0004\b\u001c\u0010\u0012R\u0019\u0010\u0004\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u001d\u0010\u001b\u001a\u0004\b\u001e\u0010\u0012R\u0019\u0010\u0005\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u001f\u0010\u001b\u001a\u0004\b \u0010\u0012R\u0019\u0010\u0006\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b!\u0010\u001b\u001a\u0004\b\"\u0010\u0012R\u0019\u0010\u0007\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b \u0010\u001b\u001a\u0004\b\u001a\u0010\u0012R\u0019\u0010\b\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u001c\u0010\u001b\u001a\u0004\b\u001d\u0010\u0012R\u0019\u0010\t\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u001e\u0010\u001b\u001a\u0004\b\u001f\u0010\u0012R\u0019\u0010\u000b\u001a\u0004\u0018\u00010\n8\u0006¢\u0006\f\n\u0004\b\"\u0010#\u001a\u0004\b!\u0010$R\u0019\u0010\f\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b%\u0010\u001b\u001a\u0004\b%\u0010\u0012¨\u0006&"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$SessionIdRequest;", "", "", "inquiryTemplateId", "inquiryTemplateVersion", "inquiryId", "referenceId", "accountId", "environment", "environmentId", "Lcom/withpersona/sdk2/inquiry/network/dto/InquiryFieldMap;", "fields", "themeSetId", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/InquiryFieldMap;Ljava/lang/String;)V", "copy", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/InquiryFieldMap;Ljava/lang/String;)Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$SessionIdRequest;", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Ljava/lang/String;", "f", "b", "g", "c", "e", "d", "h", "Lcom/withpersona/sdk2/inquiry/network/dto/InquiryFieldMap;", "()Lcom/withpersona/sdk2/inquiry/network/dto/InquiryFieldMap;", "i", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    @um.i(generateAdapter = true)
     public static final /* data */ class SessionIdRequest {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
@@ -57,7 +57,7 @@ public interface FallbackModeService {
         @Nullable
         public final String themeSetId;
 
-        public SessionIdRequest(@um.g(name = "inquiry-template-id") @NotNull String inquiryTemplateId, @um.g(name = "inquiry-template-version-id") @Nullable String str, @um.g(name = "inquiry-id") @Nullable String str2, @um.g(name = "reference-id") @Nullable String str3, @um.g(name = "account-id") @Nullable String str4, @Nullable String str5, @um.g(name = "environment-id") @Nullable String str6, @Nullable InquiryFieldMap inquiryFieldMap, @um.g(name = "theme-set-id") @Nullable String str7) {
+        public SessionIdRequest(@sm.g(name = "inquiry-template-id") @NotNull String inquiryTemplateId, @sm.g(name = "inquiry-template-version-id") @Nullable String str, @sm.g(name = "inquiry-id") @Nullable String str2, @sm.g(name = "reference-id") @Nullable String str3, @sm.g(name = "account-id") @Nullable String str4, @Nullable String str5, @sm.g(name = "environment-id") @Nullable String str6, @Nullable InquiryFieldMap inquiryFieldMap, @sm.g(name = "theme-set-id") @Nullable String str7) {
             Intrinsics.checkNotNullParameter(inquiryTemplateId, "inquiryTemplateId");
             this.inquiryTemplateId = inquiryTemplateId;
             this.inquiryTemplateVersion = str;
@@ -89,7 +89,7 @@ public interface FallbackModeService {
         }
 
         @NotNull
-        public final SessionIdRequest copy(@um.g(name = "inquiry-template-id") @NotNull String inquiryTemplateId, @um.g(name = "inquiry-template-version-id") @Nullable String inquiryTemplateVersion, @um.g(name = "inquiry-id") @Nullable String inquiryId, @um.g(name = "reference-id") @Nullable String referenceId, @um.g(name = "account-id") @Nullable String accountId, @Nullable String environment, @um.g(name = "environment-id") @Nullable String environmentId, @Nullable InquiryFieldMap fields, @um.g(name = "theme-set-id") @Nullable String themeSetId) {
+        public final SessionIdRequest copy(@sm.g(name = "inquiry-template-id") @NotNull String inquiryTemplateId, @sm.g(name = "inquiry-template-version-id") @Nullable String inquiryTemplateVersion, @sm.g(name = "inquiry-id") @Nullable String inquiryId, @sm.g(name = "reference-id") @Nullable String referenceId, @sm.g(name = "account-id") @Nullable String accountId, @Nullable String environment, @sm.g(name = "environment-id") @Nullable String environmentId, @Nullable InquiryFieldMap fields, @sm.g(name = "theme-set-id") @Nullable String themeSetId) {
             Intrinsics.checkNotNullParameter(inquiryTemplateId, "inquiryTemplateId");
             return new SessionIdRequest(inquiryTemplateId, inquiryTemplateVersion, inquiryId, referenceId, accountId, environment, environmentId, fields, themeSetId);
         }
@@ -167,8 +167,8 @@ public interface FallbackModeService {
         }
     }
 
+    @sm.i(generateAdapter = true)
     @Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0005\b\u0087\b\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u0010\u0010\u0006\u001a\u00020\u0002HÖ\u0001¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bHÖ\u0001¢\u0006\u0004\b\t\u0010\nJ\u001a\u0010\r\u001a\u00020\f2\b\u0010\u000b\u001a\u0004\u0018\u00010\u0001HÖ\u0003¢\u0006\u0004\b\r\u0010\u000eR\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u000f\u0010\u0010\u001a\u0004\b\u000f\u0010\u0007¨\u0006\u0011"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$SessionIdResponse;", "", "", "token", "<init>", "(Ljava/lang/String;)V", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Ljava/lang/String;", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    @um.i(generateAdapter = true)
     public static final /* data */ class SessionIdResponse {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
@@ -203,8 +203,8 @@ public interface FallbackModeService {
         }
     }
 
+    @sm.i(generateAdapter = true)
     @Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0006\b\u0087\b\u0018\u00002\u00020\u0001B\u0015\u0012\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00030\u0002¢\u0006\u0004\b\u0005\u0010\u0006J\u0010\u0010\b\u001a\u00020\u0007HÖ\u0001¢\u0006\u0004\b\b\u0010\tJ\u0010\u0010\u000b\u001a\u00020\nHÖ\u0001¢\u0006\u0004\b\u000b\u0010\fJ\u001a\u0010\u000f\u001a\u00020\u000e2\b\u0010\r\u001a\u0004\u0018\u00010\u0001HÖ\u0003¢\u0006\u0004\b\u000f\u0010\u0010R\u001d\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00030\u00028\u0006¢\u0006\f\n\u0004\b\u0011\u0010\u0012\u001a\u0004\b\u0011\u0010\u0013¨\u0006\u0014"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$StaticTemplate;", "", "", "Lcom/withpersona/sdk2/inquiry/network/dto/NextStep;", "steps", "<init>", "(Ljava/util/List;)V", "", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Ljava/util/List;", "()Ljava/util/List;", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    @um.i(generateAdapter = true)
     public static final /* data */ class StaticTemplate {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
@@ -239,15 +239,15 @@ public interface FallbackModeService {
         }
     }
 
+    @sm.i(generateAdapter = true)
     @Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0002\b\u0007\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0005\b\u0087\b\u0018\u00002\u00020\u0001B\u0013\u0012\n\b\u0001\u0010\u0003\u001a\u0004\u0018\u00010\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u001c\u0010\u0006\u001a\u00020\u00002\n\b\u0003\u0010\u0003\u001a\u0004\u0018\u00010\u0002HÆ\u0001¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\b\u001a\u00020\u0002HÖ\u0001¢\u0006\u0004\b\b\u0010\tJ\u0010\u0010\u000b\u001a\u00020\nHÖ\u0001¢\u0006\u0004\b\u000b\u0010\fJ\u001a\u0010\u000f\u001a\u00020\u000e2\b\u0010\r\u001a\u0004\u0018\u00010\u0001HÖ\u0003¢\u0006\u0004\b\u000f\u0010\u0010R\u0019\u0010\u0003\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u0011\u0010\u0012\u001a\u0004\b\u0011\u0010\t¨\u0006\u0013"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$StatusRequest;", "", "", "inquiryTemplateId", "<init>", "(Ljava/lang/String;)V", "copy", "(Ljava/lang/String;)Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$StatusRequest;", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Ljava/lang/String;", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    @um.i(generateAdapter = true)
     public static final /* data */ class StatusRequest {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
         @Nullable
         public final String inquiryTemplateId;
 
-        public StatusRequest(@um.g(name = "inquiry-template-id") @Nullable String str) {
+        public StatusRequest(@sm.g(name = "inquiry-template-id") @Nullable String str) {
             this.inquiryTemplateId = str;
         }
 
@@ -258,7 +258,7 @@ public interface FallbackModeService {
         }
 
         @NotNull
-        public final StatusRequest copy(@um.g(name = "inquiry-template-id") @Nullable String inquiryTemplateId) {
+        public final StatusRequest copy(@sm.g(name = "inquiry-template-id") @Nullable String inquiryTemplateId) {
             return new StatusRequest(inquiryTemplateId);
         }
 
@@ -283,15 +283,15 @@ public interface FallbackModeService {
         }
     }
 
+    @sm.i(generateAdapter = true)
     @Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0006\b\u0087\b\u0018\u00002\u00020\u0001B\u0013\u0012\n\b\u0001\u0010\u0003\u001a\u0004\u0018\u00010\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u001c\u0010\u0006\u001a\u00020\u00002\n\b\u0003\u0010\u0003\u001a\u0004\u0018\u00010\u0002HÆ\u0001¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bHÖ\u0001¢\u0006\u0004\b\t\u0010\nJ\u0010\u0010\f\u001a\u00020\u000bHÖ\u0001¢\u0006\u0004\b\f\u0010\rJ\u001a\u0010\u0010\u001a\u00020\u000f2\b\u0010\u000e\u001a\u0004\u0018\u00010\u0001HÖ\u0003¢\u0006\u0004\b\u0010\u0010\u0011R\u0019\u0010\u0003\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u0012\u0010\u0013\u001a\u0004\b\u0012\u0010\u0014¨\u0006\u0015"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$StatusResponse;", "", "Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$StaticTemplate;", "staticInquiryTemplate", "<init>", "(Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$StaticTemplate;)V", "copy", "(Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$StaticTemplate;)Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$StatusResponse;", "", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$StaticTemplate;", "()Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$StaticTemplate;", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    @um.i(generateAdapter = true)
     public static final /* data */ class StatusResponse {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
         @Nullable
         public final StaticTemplate staticInquiryTemplate;
 
-        public StatusResponse(@um.g(name = "static-inquiry-template") @Nullable StaticTemplate staticTemplate) {
+        public StatusResponse(@sm.g(name = "static-inquiry-template") @Nullable StaticTemplate staticTemplate) {
             this.staticInquiryTemplate = staticTemplate;
         }
 
@@ -302,7 +302,7 @@ public interface FallbackModeService {
         }
 
         @NotNull
-        public final StatusResponse copy(@um.g(name = "static-inquiry-template") @Nullable StaticTemplate staticInquiryTemplate) {
+        public final StatusResponse copy(@sm.g(name = "static-inquiry-template") @Nullable StaticTemplate staticInquiryTemplate) {
             return new StatusResponse(staticInquiryTemplate);
         }
 
@@ -327,8 +327,8 @@ public interface FallbackModeService {
         }
     }
 
+    @sm.i(generateAdapter = true)
     @Metadata(d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0007\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\b\b\u0087\b\u0018\u00002\u00020\u0001B\u001b\u0012\b\b\u0001\u0010\u0003\u001a\u00020\u0002\u0012\b\b\u0001\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J$\u0010\b\u001a\u00020\u00002\b\b\u0003\u0010\u0003\u001a\u00020\u00022\b\b\u0003\u0010\u0005\u001a\u00020\u0004HÆ\u0001¢\u0006\u0004\b\b\u0010\tJ\u0010\u0010\n\u001a\u00020\u0004HÖ\u0001¢\u0006\u0004\b\n\u0010\u000bJ\u0010\u0010\r\u001a\u00020\fHÖ\u0001¢\u0006\u0004\b\r\u0010\u000eJ\u001a\u0010\u0011\u001a\u00020\u00102\b\u0010\u000f\u001a\u0004\u0018\u00010\u0001HÖ\u0003¢\u0006\u0004\b\u0011\u0010\u0012R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0013\u0010\u0014\u001a\u0004\b\u0013\u0010\u0015R\u0017\u0010\u0005\u001a\u00020\u00048\u0006¢\u0006\f\n\u0004\b\u0016\u0010\u0017\u001a\u0004\b\u0016\u0010\u000b¨\u0006\u0018"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$UploadUrlRequest;", "", "", "expectedContentLength", "", "expectedContentType", "<init>", "(JLjava/lang/String;)V", "copy", "(JLjava/lang/String;)Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$UploadUrlRequest;", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "J", "()J", "b", "Ljava/lang/String;", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    @um.i(generateAdapter = true)
     public static final /* data */ class UploadUrlRequest {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
@@ -338,7 +338,7 @@ public interface FallbackModeService {
         @NotNull
         public final String expectedContentType;
 
-        public UploadUrlRequest(@um.g(name = "expected-content-length") long j10, @um.g(name = "expected-content-type") @NotNull String expectedContentType) {
+        public UploadUrlRequest(@sm.g(name = "expected-content-length") long j10, @sm.g(name = "expected-content-type") @NotNull String expectedContentType) {
             Intrinsics.checkNotNullParameter(expectedContentType, "expectedContentType");
             this.expectedContentLength = j10;
             this.expectedContentType = expectedContentType;
@@ -356,7 +356,7 @@ public interface FallbackModeService {
         }
 
         @NotNull
-        public final UploadUrlRequest copy(@um.g(name = "expected-content-length") long expectedContentLength, @um.g(name = "expected-content-type") @NotNull String expectedContentType) {
+        public final UploadUrlRequest copy(@sm.g(name = "expected-content-length") long expectedContentLength, @sm.g(name = "expected-content-type") @NotNull String expectedContentType) {
             Intrinsics.checkNotNullParameter(expectedContentType, "expectedContentType");
             return new UploadUrlRequest(expectedContentLength, expectedContentType);
         }
@@ -382,8 +382,8 @@ public interface FallbackModeService {
         }
     }
 
+    @sm.i(generateAdapter = true)
     @Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0005\b\u0087\b\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u0010\u0010\u0006\u001a\u00020\u0002HÖ\u0001¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bHÖ\u0001¢\u0006\u0004\b\t\u0010\nJ\u001a\u0010\r\u001a\u00020\f2\b\u0010\u000b\u001a\u0004\u0018\u00010\u0001HÖ\u0003¢\u0006\u0004\b\r\u0010\u000eR\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u000f\u0010\u0010\u001a\u0004\b\u000f\u0010\u0007¨\u0006\u0011"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/fallbackmode/FallbackModeService$UploadUrlResponse;", "", "", "location", "<init>", "(Ljava/lang/String;)V", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Ljava/lang/String;", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    @um.i(generateAdapter = true)
     public static final /* data */ class UploadUrlResponse {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
@@ -420,20 +420,20 @@ public interface FallbackModeService {
 
     @o
     @Nullable
-    Object a(@y @NotNull String str, @mv.a @NotNull RequestBody requestBody, @NotNull nt.b<? super x<Object>> bVar);
-
-    @k({"Content-Type: application/json"})
-    @o("/template")
-    @Nullable
-    Object b(@mv.i("Authorization") @Nullable String str, @mv.a @NotNull StatusRequest statusRequest, @NotNull nt.b<? super x<StatusResponse>> bVar);
-
-    @k({"Content-Type: application/json"})
-    @o("/part")
-    @Nullable
-    Object c(@mv.i("Authorization") @NotNull String str, @mv.i("Persona-Fallback-Production-Endpoint") @NotNull dp.h hVar, @mv.i("Persona-Fallback-Request-Count") int i10, @mv.a @NotNull UploadUrlRequest uploadUrlRequest, @NotNull nt.b<? super x<UploadUrlResponse>> bVar);
+    Object a(@y @NotNull String str, @kv.a @NotNull RequestBody requestBody, @NotNull lt.b<? super x<Object>> bVar);
 
     @k({"Content-Type: application/json"})
     @o("/session")
     @Nullable
-    Object d(@mv.a @NotNull SessionIdRequest sessionIdRequest, @NotNull nt.b<? super x<SessionIdResponse>> bVar);
+    Object b(@kv.a @NotNull SessionIdRequest sessionIdRequest, @NotNull lt.b<? super x<SessionIdResponse>> bVar);
+
+    @k({"Content-Type: application/json"})
+    @o("/template")
+    @Nullable
+    Object c(@kv.i("Authorization") @Nullable String str, @kv.a @NotNull StatusRequest statusRequest, @NotNull lt.b<? super x<StatusResponse>> bVar);
+
+    @k({"Content-Type: application/json"})
+    @o("/part")
+    @Nullable
+    Object d(@kv.i("Authorization") @NotNull String str, @kv.i("Persona-Fallback-Production-Endpoint") @NotNull bp.h hVar, @kv.i("Persona-Fallback-Request-Count") int i10, @kv.a @NotNull UploadUrlRequest uploadUrlRequest, @NotNull lt.b<? super x<UploadUrlResponse>> bVar);
 }

@@ -11,9 +11,9 @@ import java.util.Locale;
 public class ImageCaptureWithFlashUnderexposureQuirk implements UseTorchAsFlashQuirk {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final List<String> f1337a = Arrays.asList("sm-a260f", "sm-j530f", "sm-j600g", "sm-j701f", "sm-g610f", "sm-j710mn");
+    public static final List<String> f1182a = Arrays.asList("sm-a260f", "sm-j530f", "sm-j600g", "sm-j701f", "sm-g610f", "sm-j710mn");
 
     public static boolean g(c0 c0Var) {
-        return f1337a.contains(Build.MODEL.toLowerCase(Locale.US)) && ((Integer) c0Var.a(CameraCharacteristics.LENS_FACING)).intValue() == 1;
+        return f1182a.contains(Build.MODEL.toLowerCase(Locale.US)) && ((Integer) c0Var.a(CameraCharacteristics.LENS_FACING)).intValue() == 1;
     }
 }

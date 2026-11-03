@@ -1,6 +1,5 @@
 package com.roblox.client.provider;
 
-import ak.x;
 import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.Context;
@@ -9,37 +8,38 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.util.SparseArray;
 import androidx.annotation.NonNull;
+import bj.d;
+import bj.e;
+import bj.f;
+import bj.g;
+import bj.h;
+import bj.i;
+import bj.j;
 import com.roblox.client.personasdk.BuildConfig;
-import dj.d;
-import dj.e;
-import dj.f;
-import dj.g;
-import dj.h;
-import dj.i;
-import dj.j;
-import gh.a;
-import gh.c;
-import gk.p;
+import ek.q;
+import fh.a;
+import fh.c;
 import java.util.Objects;
-import nh.b;
-import sg.a1;
-import sg.q0;
+import mh.b;
+import rg.a1;
+import rg.q0;
+import yj.x;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class ShellConfigurationContentProvider extends ContentProvider {
     public UriMatcher b;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public c f9180d;
+    public c f9253d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public c.a f9181e;
+    public c.a f9254e;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f9178a = "rbx.config";
+    public final String f9251a = "rbx.config";
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public SparseArray<i> f9179c = new SparseArray<>();
+    public SparseArray<i> f9252c = new SparseArray<>();
 
     public final boolean a() {
         if (b.a()) {
@@ -57,11 +57,11 @@ public class ShellConfigurationContentProvider extends ContentProvider {
     }
 
     public c.a c() {
-        return this.f9181e;
+        return this.f9254e;
     }
 
     public c d() {
-        return this.f9180d;
+        return this.f9253d;
     }
 
     @Override // android.content.ContentProvider
@@ -70,14 +70,14 @@ public class ShellConfigurationContentProvider extends ContentProvider {
     }
 
     public final void e(String str, i iVar) {
-        f(str, iVar, iVar.a(i.a.GET));
-        f(str, iVar, iVar.a(i.a.POST));
+        f(str, iVar, iVar.b(i.a.GET));
+        f(str, iVar, iVar.b(i.a.POST));
     }
 
     public final void f(String str, i iVar, a aVar) {
         if (aVar != null) {
-            this.b.addURI(str, aVar.f18218a, aVar.b);
-            this.f9179c.put(aVar.b, iVar);
+            this.b.addURI(str, aVar.f17277a, aVar.b);
+            this.f9252c.put(aVar.b, iVar);
         }
     }
 
@@ -102,13 +102,13 @@ public class ShellConfigurationContentProvider extends ContentProvider {
         if (!a()) {
             return null;
         }
-        p.h("rbx.config", "insert() called with uri: " + uri);
-        i iVar = this.f9179c.get(this.b.match(uri));
+        q.h("rbx.config", "insert() called with uri: " + uri);
+        i iVar = this.f9252c.get(this.b.match(uri));
         if (iVar != null) {
             iVar.c(uri, contentValues);
             return uri;
         }
-        p.k("rbx.config", "No handler found for insert");
+        q.k("rbx.config", "No handler found for insert");
         return uri;
     }
 
@@ -117,13 +117,13 @@ public class ShellConfigurationContentProvider extends ContentProvider {
         Context context = getContext();
         Objects.requireNonNull(context);
         Context applicationContext = context.getApplicationContext();
-        cj.c cVar = new cj.c(context);
-        this.f9181e = cVar;
+        aj.c cVar = new aj.c(context);
+        this.f9254e = cVar;
         c cVar2 = cVar.read();
-        this.f9180d = cVar2;
-        a1.K0(cVar2);
+        this.f9253d = cVar2;
+        a1.L0(cVar2);
         x.m().F(applicationContext);
-        th.f.f31815a.p(a1.U(applicationContext));
+        rh.f.f30722a.p(a1.U(applicationContext));
         x.m().E();
         g();
         return true;
@@ -134,12 +134,12 @@ public class ShellConfigurationContentProvider extends ContentProvider {
         if (!a()) {
             return null;
         }
-        p.h("rbx.config", "query() called with uri: " + uri);
-        i iVar = this.f9179c.get(this.b.match(uri));
+        q.h("rbx.config", "query() called with uri: " + uri);
+        i iVar = this.f9252c.get(this.b.match(uri));
         if (iVar != null) {
-            return iVar.b(uri);
+            return iVar.a(uri);
         }
-        p.k("rbx.config", "No handler found for query");
+        q.k("rbx.config", "No handler found for query");
         return null;
     }
 

@@ -14,9 +14,9 @@ public final class zd extends td {
     private final String k(String str) {
         String strX = this.b.D0().x(str);
         if (TextUtils.isEmpty(strX)) {
-            return (String) z4.f26194r.b(null);
+            return (String) z4.f27015r.b(null);
         }
-        Uri uri = Uri.parse((String) z4.f26194r.b(null));
+        Uri uri = Uri.parse((String) z4.f27015r.b(null));
         Uri.Builder builderBuildUpon = uri.buildUpon();
         String authority = uri.getAuthority();
         StringBuilder sb2 = new StringBuilder(String.valueOf(strX).length() + 1 + String.valueOf(authority).length());
@@ -28,7 +28,7 @@ public final class zd extends td {
     }
 
     public static final boolean l(String str) {
-        String str2 = (String) z4.f26198t.b(null);
+        String str2 = (String) z4.f27019t.b(null);
         if (TextUtils.isEmpty(str2)) {
             return false;
         }
@@ -50,19 +50,19 @@ public final class zd extends td {
         }
         com.google.android.gms.internal.measurement.i7 i7VarG = com.google.android.gms.internal.measurement.p7.G();
         i7VarG.z(2);
-        i7VarG.x((com.google.android.gms.internal.measurement.k7) n9.m.l(com.google.android.gms.internal.measurement.k7.a(c6VarJ1.M())));
+        i7VarG.y((com.google.android.gms.internal.measurement.k7) n9.m.l(com.google.android.gms.internal.measurement.k7.a(c6VarJ1.M())));
         String strP0 = c6VarJ1.p0();
         com.google.android.gms.internal.measurement.g5 g5VarW = meVar.D0().w(str);
-        if (g5VarW == null || (c6VarJ0 = meVar.F0().J0(str)) == null || ((!g5VarW.V() || g5VarW.W().H() != 100) && !this.f25625a.C().P(str, c6VarJ0.l0()) && (TextUtils.isEmpty(strP0) || Math.abs(strP0.hashCode() % 100) >= g5VarW.W().H()))) {
-            i7VarG.A(3);
+        if (g5VarW == null || (c6VarJ0 = meVar.F0().J0(str)) == null || ((!g5VarW.V() || g5VarW.W().H() != 100) && !this.f26446a.C().P(str, c6VarJ0.l0()) && (TextUtils.isEmpty(strP0) || Math.abs(strP0.hashCode() % 100) >= g5VarW.W().H()))) {
+            i7VarG.B(3);
             return new yd(k(str), Collections.EMPTY_MAP, za.GOOGLE_ANALYTICS, (com.google.android.gms.internal.measurement.p7) i7VarG.t());
         }
         String strO0 = c6VarJ1.o0();
         i7VarG.z(2);
         com.google.android.gms.internal.measurement.g5 g5VarW2 = meVar.D0().w(c6VarJ1.o0());
         if (g5VarW2 == null || !g5VarW2.V()) {
-            this.f25625a.a().w().b("[sgtm] Missing sgtm_setting in remote config. appId", strO0);
-            i7VarG.A(4);
+            this.f26446a.a().w().b("[sgtm] Missing sgtm_setting in remote config. appId", strO0);
+            i7VarG.B(4);
         } else {
             HashMap map = new HashMap();
             if (!TextUtils.isEmpty(c6VarJ1.l0())) {
@@ -71,28 +71,28 @@ public final class zd extends td {
             String strJ = g5VarW2.W().J();
             com.google.android.gms.internal.measurement.k7 k7VarA = com.google.android.gms.internal.measurement.k7.a(c6VarJ1.M());
             if (k7VarA != null && k7VarA != com.google.android.gms.internal.measurement.k7.CLIENT_UPLOAD_ELIGIBLE) {
-                i7VarG.x(k7VarA);
+                i7VarG.y(k7VarA);
             } else if (l(c6VarJ1.o0())) {
-                i7VarG.x(com.google.android.gms.internal.measurement.k7.PINNED_TO_SERVICE_UPLOAD);
+                i7VarG.y(com.google.android.gms.internal.measurement.k7.PINNED_TO_SERVICE_UPLOAD);
             } else if (TextUtils.isEmpty(strJ)) {
-                i7VarG.x(com.google.android.gms.internal.measurement.k7.MISSING_SGTM_SERVER_URL);
+                i7VarG.y(com.google.android.gms.internal.measurement.k7.MISSING_SGTM_SERVER_URL);
             } else {
-                this.f25625a.a().w().b("[sgtm] Eligible for client side upload. appId", strO0);
+                this.f26446a.a().w().b("[sgtm] Eligible for client side upload. appId", strO0);
                 i7VarG.z(3);
-                i7VarG.x(com.google.android.gms.internal.measurement.k7.CLIENT_UPLOAD_ELIGIBLE);
+                i7VarG.y(com.google.android.gms.internal.measurement.k7.CLIENT_UPLOAD_ELIGIBLE);
                 ydVar = new yd(strJ, map, za.SGTM_CLIENT, (com.google.android.gms.internal.measurement.p7) i7VarG.t());
             }
             g5VarW2.W().F();
             g5VarW2.W().G();
-            g7 g7Var = this.f25625a;
+            g7 g7Var = this.f26446a;
             g7Var.c();
             if (TextUtils.isEmpty(strJ)) {
-                i7VarG.A(6);
+                i7VarG.B(6);
                 g7Var.a().w().b("[sgtm] Local service, missing sgtm_server_url", c6VarJ1.o0());
             } else {
                 g7Var.a().w().b("[sgtm] Eligible for local service direct upload. appId", strO0);
                 i7VarG.z(5);
-                i7VarG.A(2);
+                i7VarG.B(2);
                 ydVar = new yd(strJ, map, za.SGTM, (com.google.android.gms.internal.measurement.p7) i7VarG.t());
             }
         }

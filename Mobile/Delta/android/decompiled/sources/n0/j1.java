@@ -8,7 +8,7 @@ import android.os.Build;
 public final class j1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final g0.v f24705a = new g0.v.a().b(2).a();
+    public static final g0.v f25526a = new g0.v.a().b(2).a();
 
     public static class a {
         public static int a(Context context) {
@@ -19,15 +19,15 @@ public final class j1 {
     public static class b extends Exception {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final int f24706a;
+        public final int f25527a;
 
         public b(String str, int i10, Throwable th2) {
             super(str, th2);
-            this.f24706a = i10;
+            this.f25527a = i10;
         }
 
         public int a() {
-            return this.f24706a;
+            return this.f25527a;
         }
     }
 
@@ -57,7 +57,7 @@ public final class j1 {
         int i10 = 0;
         try {
             if (packageManager.hasSystemFeature("android.hardware.camera") && (vVar == null || numD.intValue() == 1)) {
-                g0.v.f17534d.g(d1Var.m());
+                g0.v.f18073d.g(d1Var.m());
                 i10 = 1;
             }
         } catch (IllegalArgumentException e12) {
@@ -66,7 +66,7 @@ public final class j1 {
         }
         try {
             if (packageManager.hasSystemFeature("android.hardware.camera.front") && (vVar == null || numD.intValue() == 0)) {
-                g0.v.f17533c.g(d1Var.m());
+                g0.v.f18072c.g(d1Var.m());
                 i10++;
             }
         } catch (IllegalArgumentException e13) {
@@ -74,7 +74,7 @@ public final class j1 {
             g0.r1.m("CameraValidator", "Camera LENS_FACING_FRONT verification failed", e10);
         }
         try {
-            f24705a.g(d1Var.m());
+            f25526a.g(d1Var.m());
             g0.r1.a("CameraValidator", "Found a LENS_FACING_EXTERNAL camera");
             i10++;
         } catch (IllegalArgumentException unused) {

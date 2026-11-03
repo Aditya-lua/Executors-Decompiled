@@ -15,19 +15,19 @@ public abstract class s3<T> implements a3<T> {
     public final AtomicReference<Object> b;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object f24838a = new Object();
+    public final Object f25659a = new Object();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f24839c = 0;
+    public int f25660c = 0;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public boolean f24840d = false;
+    public boolean f25661d = false;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Map<a3.a<? super T>, b<T>> f24841e = new HashMap();
+    public final Map<a3.a<? super T>, b<T>> f25662e = new HashMap();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final CopyOnWriteArraySet<b<T>> f24842f = new CopyOnWriteArraySet<>();
+    public final CopyOnWriteArraySet<b<T>> f25663f = new CopyOnWriteArraySet<>();
 
     public static abstract class a {
         public static a b(Throwable th2) {
@@ -40,54 +40,54 @@ public abstract class s3<T> implements a3<T> {
     public static final class b<T> implements Runnable {
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public static final Object f24843h = new Object();
+        public static final Object f25664h = new Object();
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Executor f24844a;
+        public final Executor f25665a;
         public final a3.a<? super T> b;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final AtomicReference<Object> f24846d;
+        public final AtomicReference<Object> f25667d;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final AtomicBoolean f24845c = new AtomicBoolean(true);
+        public final AtomicBoolean f25666c = new AtomicBoolean(true);
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public Object f24847e = f24843h;
+        public Object f25668e = f25664h;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public int f24848f = -1;
+        public int f25669f = -1;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public boolean f24849g = false;
+        public boolean f25670g = false;
 
         public b(AtomicReference<Object> atomicReference, Executor executor, a3.a<? super T> aVar) {
-            this.f24846d = atomicReference;
-            this.f24844a = executor;
+            this.f25667d = atomicReference;
+            this.f25665a = executor;
             this.b = aVar;
         }
 
         public void a() {
-            this.f24845c.set(false);
+            this.f25666c.set(false);
         }
 
         public void b(int i10) {
             synchronized (this) {
                 try {
-                    if (this.f24845c.get()) {
-                        if (i10 <= this.f24848f) {
+                    if (this.f25666c.get()) {
+                        if (i10 <= this.f25669f) {
                             return;
                         }
-                        this.f24848f = i10;
-                        if (this.f24849g) {
+                        this.f25669f = i10;
+                        if (this.f25670g) {
                             return;
                         }
-                        this.f24849g = true;
+                        this.f25670g = true;
                         try {
-                            this.f24844a.execute(this);
+                            this.f25665a.execute(this);
                         } catch (Throwable unused) {
                             synchronized (this) {
-                                this.f24849g = false;
+                                this.f25670g = false;
                             }
                         }
                     }
@@ -101,15 +101,15 @@ public abstract class s3<T> implements a3<T> {
         public void run() {
             synchronized (this) {
                 try {
-                    if (!this.f24845c.get()) {
-                        this.f24849g = false;
+                    if (!this.f25666c.get()) {
+                        this.f25670g = false;
                         return;
                     }
-                    Object obj = this.f24846d.get();
-                    int i10 = this.f24848f;
+                    Object obj = this.f25667d.get();
+                    int i10 = this.f25669f;
                     while (true) {
-                        if (!Objects.equals(this.f24847e, obj)) {
-                            this.f24847e = obj;
+                        if (!Objects.equals(this.f25668e, obj)) {
+                            this.f25668e = obj;
                             if (obj instanceof a) {
                                 this.b.onError(((a) obj).a());
                             } else {
@@ -118,19 +118,19 @@ public abstract class s3<T> implements a3<T> {
                         }
                         synchronized (this) {
                             try {
-                                if (i10 == this.f24848f || !this.f24845c.get()) {
+                                if (i10 == this.f25669f || !this.f25666c.get()) {
                                     break;
                                     break;
                                 } else {
-                                    obj = this.f24846d.get();
-                                    i10 = this.f24848f;
+                                    obj = this.f25667d.get();
+                                    i10 = this.f25669f;
                                 }
                             } catch (Throwable th2) {
                                 throw th2;
                             }
                         }
                     }
-                    this.f24849g = false;
+                    this.f25670g = false;
                 } catch (Throwable th3) {
                     throw th3;
                 }
@@ -148,15 +148,15 @@ public abstract class s3<T> implements a3<T> {
     }
 
     public final void a(a3.a<? super T> aVar) {
-        b<T> bVarRemove = this.f24841e.remove(aVar);
+        b<T> bVarRemove = this.f25662e.remove(aVar);
         if (bVarRemove != null) {
             bVarRemove.a();
-            this.f24842f.remove(bVarRemove);
+            this.f25663f.remove(bVarRemove);
         }
     }
 
     @Override // n0.a3
-    public me.x<T> b() {
+    public ne.x<T> b() {
         Object obj = this.b.get();
         return obj instanceof a ? r0.n.n(((a) obj).a()) : r0.n.p(obj);
     }
@@ -164,26 +164,26 @@ public abstract class s3<T> implements a3<T> {
     @Override // n0.a3
     public void c(Executor executor, a3.a<? super T> aVar) {
         b<T> bVar;
-        synchronized (this.f24838a) {
+        synchronized (this.f25659a) {
             a(aVar);
             bVar = new b<>(this.b, executor, aVar);
-            this.f24841e.put(aVar, bVar);
-            this.f24842f.add(bVar);
+            this.f25662e.put(aVar, bVar);
+            this.f25663f.add(bVar);
         }
         bVar.b(0);
     }
 
     @Override // n0.a3
     public void d(a3.a<? super T> aVar) {
-        synchronized (this.f24838a) {
+        synchronized (this.f25659a) {
             a(aVar);
         }
     }
 
     public void f() {
-        synchronized (this.f24838a) {
+        synchronized (this.f25659a) {
             try {
-                Iterator it = new HashSet(this.f24841e.keySet()).iterator();
+                Iterator it = new HashSet(this.f25662e.keySet()).iterator();
                 while (it.hasNext()) {
                     a((a3.a) it.next());
                 }
@@ -204,30 +204,30 @@ public abstract class s3<T> implements a3<T> {
     public final void i(Object obj) {
         Iterator<b<T>> it;
         int i10;
-        synchronized (this.f24838a) {
+        synchronized (this.f25659a) {
             try {
                 if (Objects.equals(this.b.getAndSet(obj), obj)) {
                     return;
                 }
-                int i11 = this.f24839c + 1;
-                this.f24839c = i11;
-                if (this.f24840d) {
+                int i11 = this.f25660c + 1;
+                this.f25660c = i11;
+                if (this.f25661d) {
                     return;
                 }
-                this.f24840d = true;
-                Iterator<b<T>> it2 = this.f24842f.iterator();
+                this.f25661d = true;
+                Iterator<b<T>> it2 = this.f25663f.iterator();
                 while (true) {
                     if (it2.hasNext()) {
                         it2.next().b(i11);
                     } else {
-                        synchronized (this.f24838a) {
+                        synchronized (this.f25659a) {
                             try {
-                                if (this.f24839c == i11) {
-                                    this.f24840d = false;
+                                if (this.f25660c == i11) {
+                                    this.f25661d = false;
                                     return;
                                 } else {
-                                    it = this.f24842f.iterator();
-                                    i10 = this.f24839c;
+                                    it = this.f25663f.iterator();
+                                    i10 = this.f25660c;
                                 }
                             } catch (Throwable th2) {
                                 throw th2;

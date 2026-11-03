@@ -1,12 +1,13 @@
 package hi;
 
 /* JADX INFO: loaded from: classes2.dex */
-public interface d<T> {
-    boolean a();
+public class d extends rk.b {
+    public d() {
+        super("Dialogs");
+    }
 
-    int b();
-
-    boolean c(T t8);
-
-    void retry();
+    @Override // rk.b
+    public void a(rk.a aVar) {
+        aVar.a(false, null);
+    }
 }

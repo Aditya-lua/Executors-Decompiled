@@ -6,13 +6,13 @@ public final class i7 extends cb implements pc {
         throw null;
     }
 
-    public final i7 A(int i10) {
+    public final i7 B(int i10) {
         p();
         ((p7) this.b).P(i10);
         return this;
     }
 
-    public final i7 x(k7 k7Var) {
+    public final i7 y(k7 k7Var) {
         p();
         ((p7) this.b).J(k7Var);
         return this;

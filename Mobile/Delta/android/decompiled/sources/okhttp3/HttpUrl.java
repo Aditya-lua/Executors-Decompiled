@@ -169,7 +169,7 @@ public final class HttpUrl {
             List<String> list = this.encodedQueryNamesAndValues;
             Intrinsics.checkNotNull(list);
             int size = list.size() - 2;
-            int iC = rt.c.c(size, 0, -2);
+            int iC = pt.c.c(size, 0, -2);
             if (iC > size) {
                 return;
             }
@@ -909,14 +909,14 @@ public final class HttpUrl {
 
         @NotNull
         /* JADX INFO: renamed from: -deprecated_get, reason: not valid java name */
-        public final HttpUrl m146deprecated_get(@NotNull String url) {
+        public final HttpUrl m147deprecated_get(@NotNull String url) {
             Intrinsics.checkNotNullParameter(url, "url");
             return get(url);
         }
 
         @Nullable
         /* JADX INFO: renamed from: -deprecated_parse, reason: not valid java name */
-        public final HttpUrl m149deprecated_parse(@NotNull String url) {
+        public final HttpUrl m150deprecated_parse(@NotNull String url) {
             Intrinsics.checkNotNullParameter(url, "url");
             return parse(url);
         }
@@ -950,7 +950,7 @@ public final class HttpUrl {
 
         @Nullable
         /* JADX INFO: renamed from: -deprecated_get, reason: not valid java name */
-        public final HttpUrl m148deprecated_get(@NotNull URL url) {
+        public final HttpUrl m149deprecated_get(@NotNull URL url) {
             Intrinsics.checkNotNullParameter(url, "url");
             return get(url);
         }
@@ -965,7 +965,7 @@ public final class HttpUrl {
 
         @Nullable
         /* JADX INFO: renamed from: -deprecated_get, reason: not valid java name */
-        public final HttpUrl m147deprecated_get(@NotNull URI uri) {
+        public final HttpUrl m148deprecated_get(@NotNull URI uri) {
             Intrinsics.checkNotNullParameter(uri, "uri");
             return get(uri);
         }
@@ -999,37 +999,37 @@ public final class HttpUrl {
 
     @Nullable
     /* JADX INFO: renamed from: -deprecated_encodedFragment, reason: not valid java name */
-    public final String m127deprecated_encodedFragment() {
+    public final String m128deprecated_encodedFragment() {
         return encodedFragment();
     }
 
     @NotNull
     /* JADX INFO: renamed from: -deprecated_encodedPassword, reason: not valid java name */
-    public final String m128deprecated_encodedPassword() {
+    public final String m129deprecated_encodedPassword() {
         return encodedPassword();
     }
 
     @NotNull
     /* JADX INFO: renamed from: -deprecated_encodedPath, reason: not valid java name */
-    public final String m129deprecated_encodedPath() {
+    public final String m130deprecated_encodedPath() {
         return encodedPath();
     }
 
     @NotNull
     /* JADX INFO: renamed from: -deprecated_encodedPathSegments, reason: not valid java name */
-    public final List<String> m130deprecated_encodedPathSegments() {
+    public final List<String> m131deprecated_encodedPathSegments() {
         return encodedPathSegments();
     }
 
     @Nullable
     /* JADX INFO: renamed from: -deprecated_encodedQuery, reason: not valid java name */
-    public final String m131deprecated_encodedQuery() {
+    public final String m132deprecated_encodedQuery() {
         return encodedQuery();
     }
 
     @NotNull
     /* JADX INFO: renamed from: -deprecated_encodedUsername, reason: not valid java name */
-    public final String m132deprecated_encodedUsername() {
+    public final String m133deprecated_encodedUsername() {
         return encodedUsername();
     }
 
@@ -1053,12 +1053,12 @@ public final class HttpUrl {
 
     @NotNull
     /* JADX INFO: renamed from: -deprecated_pathSegments, reason: not valid java name */
-    public final List<String> m136deprecated_pathSegments() {
+    public final List<String> m137deprecated_pathSegments() {
         return this.pathSegments;
     }
 
     /* JADX INFO: renamed from: -deprecated_pathSize, reason: not valid java name */
-    public final int m137deprecated_pathSize() {
+    public final int m138deprecated_pathSize() {
         return pathSize();
     }
 
@@ -1069,18 +1069,18 @@ public final class HttpUrl {
 
     @Nullable
     /* JADX INFO: renamed from: -deprecated_query, reason: not valid java name */
-    public final String m139deprecated_query() {
+    public final String m140deprecated_query() {
         return query();
     }
 
     @NotNull
     /* JADX INFO: renamed from: -deprecated_queryParameterNames, reason: not valid java name */
-    public final Set<String> m140deprecated_queryParameterNames() {
+    public final Set<String> m141deprecated_queryParameterNames() {
         return queryParameterNames();
     }
 
     /* JADX INFO: renamed from: -deprecated_querySize, reason: not valid java name */
-    public final int m141deprecated_querySize() {
+    public final int m142deprecated_querySize() {
         return querySize();
     }
 
@@ -1092,13 +1092,13 @@ public final class HttpUrl {
 
     @NotNull
     /* JADX INFO: renamed from: -deprecated_uri, reason: not valid java name */
-    public final URI m143deprecated_uri() {
+    public final URI m144deprecated_uri() {
         return uri();
     }
 
     @NotNull
     /* JADX INFO: renamed from: -deprecated_url, reason: not valid java name */
-    public final URL m144deprecated_url() {
+    public final URL m145deprecated_url() {
         return url();
     }
 

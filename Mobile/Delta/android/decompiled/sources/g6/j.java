@@ -16,7 +16,7 @@ import y5.f1;
 public class j {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final String f17922a = x5.w.i("EnqueueRunnable");
+    public static final String f18461a = x5.w.i("EnqueueRunnable");
 
     public static boolean a(y5.f0 f0Var) {
         f1 f1VarH = f0Var.h();
@@ -67,7 +67,7 @@ public class j {
             for (String str2 : strArr2) {
                 j0 j0VarK = workDatabaseU.c0().k(str2);
                 if (j0VarK == null) {
-                    x5.w.e().c(f17922a, "Prerequisite " + str2 + " doesn't exist; not enqueuing");
+                    x5.w.e().c(f18461a, "Prerequisite " + str2 + " doesn't exist; not enqueuing");
                     return false;
                 }
                 o0.c cVar = j0VarK.state;
@@ -191,7 +191,7 @@ public class j {
         if (listF != null) {
             for (y5.f0 f0Var2 : listF) {
                 if (f0Var2.k()) {
-                    x5.w.e().k(f17922a, "Already enqueued work ids (" + TextUtils.join(", ", f0Var2.d()) + ")");
+                    x5.w.e().k(f18461a, "Already enqueued work ids (" + TextUtils.join(", ", f0Var2.d()) + ")");
                 } else {
                     zE |= e(f0Var2);
                 }

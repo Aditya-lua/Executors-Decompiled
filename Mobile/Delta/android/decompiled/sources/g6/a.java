@@ -11,7 +11,7 @@ public final class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final a f17895a = new a();
+    public static final a f18434a = new a();
 
     @NotNull
     public final String a() {

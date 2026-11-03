@@ -6,12 +6,12 @@ import java.util.NoSuchElementException;
 public abstract class v extends m {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f14549a;
+    public final int f14529a;
     public int b;
 
     public v(int i10, int i11) {
         s.c(i11, i10, "index");
-        this.f14549a = i10;
+        this.f14529a = i10;
         this.b = i11;
     }
 
@@ -19,7 +19,7 @@ public abstract class v extends m {
 
     @Override // java.util.Iterator, java.util.ListIterator
     public final boolean hasNext() {
-        return this.b < this.f14549a;
+        return this.b < this.f14529a;
     }
 
     @Override // java.util.ListIterator

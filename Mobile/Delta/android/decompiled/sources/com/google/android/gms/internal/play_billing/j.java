@@ -10,7 +10,7 @@ public final class j extends g implements m {
     }
 
     @Override // com.google.android.gms.internal.play_billing.m
-    public final void j1(String str, String str2, o oVar) {
+    public final void f1(String str, String str2, o oVar) {
         Parcel parcelR2 = r2();
         parcelR2.writeString(str);
         parcelR2.writeString(str2);

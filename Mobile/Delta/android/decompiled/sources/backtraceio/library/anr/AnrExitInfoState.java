@@ -15,7 +15,7 @@ public class AnrExitInfoState {
     }
 
     public long getLastTimestamp() {
-        return this.sharedPreferencesManager.readLongFromSharedPreferences(PREFS_NAME, TIMESTAMP_PREF_KEY, Long.valueOf(TIMESTAMP_DEFAULT)).longValue();
+        return this.sharedPreferencesManager.readLongFromSharedPreferences(PREFS_NAME, TIMESTAMP_PREF_KEY, 0L).longValue();
     }
 
     public void saveTimestamp(long j10) {

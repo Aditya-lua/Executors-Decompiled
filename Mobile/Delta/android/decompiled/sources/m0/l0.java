@@ -21,7 +21,7 @@ public final class l0 implements x0.a0<u0.b, x0.b0<androidx.camera.core.d>> {
     }
 
     public static n0.e0 d(androidx.camera.core.d dVar) {
-        return dVar.H2() instanceof s0.c ? ((s0.c) dVar.H2()).f() : n0.e0.a.k();
+        return dVar.I2() instanceof s0.c ? ((s0.c) dVar.I2()).f() : n0.e0.a.k();
     }
 
     public static Size e(int i10, Size size) {
@@ -52,14 +52,14 @@ public final class l0 implements x0.a0<u0.b, x0.b0<androidx.camera.core.d>> {
         if (w0.b.j(dVarA.getFormat())) {
             try {
                 gVarJ = p0.g.j(dVarA);
-                dVarA.H1()[0].k().rewind();
+                dVarA.E1()[0].k().rewind();
             } catch (IOException e10) {
                 throw new g0.h1(1, "Failed to extract EXIF data.", e10);
             }
         } else {
             gVarJ = null;
         }
-        if (!d0.f23579g.b(dVarA)) {
+        if (!d0.f24229g.b(dVarA)) {
             return b(v0VarB, gVarJ, dVarA);
         }
         x2.g.h(gVarJ, "JPEG image must have exif.");

@@ -7,14 +7,14 @@ import android.os.CancellationSignal;
 public final class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f32034a;
+    public boolean f32687a;
     public a b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public Object f32035c;
+    public Object f32688c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public boolean f32036d;
+    public boolean f32689d;
 
     public interface a {
         void onCancel();
@@ -23,19 +23,19 @@ public final class e {
     public void a() {
         synchronized (this) {
             try {
-                if (this.f32034a) {
+                if (this.f32687a) {
                     return;
                 }
-                this.f32034a = true;
-                this.f32036d = true;
+                this.f32687a = true;
+                this.f32689d = true;
                 a aVar = this.b;
-                Object obj = this.f32035c;
+                Object obj = this.f32688c;
                 if (aVar != null) {
                     try {
                         aVar.onCancel();
                     } catch (Throwable th2) {
                         synchronized (this) {
-                            this.f32036d = false;
+                            this.f32689d = false;
                             notifyAll();
                             throw th2;
                         }
@@ -45,7 +45,7 @@ public final class e {
                     ((CancellationSignal) obj).cancel();
                 }
                 synchronized (this) {
-                    this.f32036d = false;
+                    this.f32689d = false;
                     notifyAll();
                 }
             } catch (Throwable th3) {
@@ -62,7 +62,7 @@ public final class e {
                     return;
                 }
                 this.b = aVar;
-                if (this.f32034a && aVar != null) {
+                if (this.f32687a && aVar != null) {
                     aVar.onCancel();
                 }
             } catch (Throwable th2) {
@@ -72,7 +72,7 @@ public final class e {
     }
 
     public final void c() {
-        while (this.f32036d) {
+        while (this.f32689d) {
             try {
                 wait();
             } catch (InterruptedException unused) {

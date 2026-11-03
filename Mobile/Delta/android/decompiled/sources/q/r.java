@@ -16,18 +16,18 @@ import androidx.annotation.NonNull;
 public class r extends MultiAutoCompleteTextView {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final int[] f29089d = {R.attr.popupBackground};
+    public static final int[] f29442d = {R.attr.popupBackground};
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final e f29090a;
+    public final e f29443a;
     public final a0 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NonNull
-    public final m f29091c;
+    public final m f29444c;
 
     public r(@NonNull Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, i.a.f19901q);
+        this(context, attributeSet, i.a.f20017q);
     }
 
     public void a(m mVar) {
@@ -52,7 +52,7 @@ public class r extends MultiAutoCompleteTextView {
     @Override // android.widget.TextView, android.view.View
     public void drawableStateChanged() {
         super.drawableStateChanged();
-        e eVar = this.f29090a;
+        e eVar = this.f29443a;
         if (eVar != null) {
             eVar.b();
         }
@@ -63,7 +63,7 @@ public class r extends MultiAutoCompleteTextView {
     }
 
     public ColorStateList getSupportBackgroundTintList() {
-        e eVar = this.f29090a;
+        e eVar = this.f29443a;
         if (eVar != null) {
             return eVar.c();
         }
@@ -71,7 +71,7 @@ public class r extends MultiAutoCompleteTextView {
     }
 
     public PorterDuff.Mode getSupportBackgroundTintMode() {
-        e eVar = this.f29090a;
+        e eVar = this.f29443a;
         if (eVar != null) {
             return eVar.d();
         }
@@ -88,13 +88,13 @@ public class r extends MultiAutoCompleteTextView {
 
     @Override // android.widget.TextView, android.view.View
     public InputConnection onCreateInputConnection(EditorInfo editorInfo) {
-        return this.f29091c.d(o.a(super.onCreateInputConnection(editorInfo), editorInfo, this), editorInfo);
+        return this.f29444c.d(o.a(super.onCreateInputConnection(editorInfo), editorInfo, this), editorInfo);
     }
 
     @Override // android.view.View
     public void setBackgroundDrawable(Drawable drawable) {
         super.setBackgroundDrawable(drawable);
-        e eVar = this.f29090a;
+        e eVar = this.f29443a;
         if (eVar != null) {
             eVar.f(drawable);
         }
@@ -103,7 +103,7 @@ public class r extends MultiAutoCompleteTextView {
     @Override // android.view.View
     public void setBackgroundResource(int i10) {
         super.setBackgroundResource(i10);
-        e eVar = this.f29090a;
+        e eVar = this.f29443a;
         if (eVar != null) {
             eVar.g(i10);
         }
@@ -133,23 +133,23 @@ public class r extends MultiAutoCompleteTextView {
     }
 
     public void setEmojiCompatEnabled(boolean z10) {
-        this.f29091c.e(z10);
+        this.f29444c.e(z10);
     }
 
     @Override // android.widget.TextView
     public void setKeyListener(KeyListener keyListener) {
-        super.setKeyListener(this.f29091c.a(keyListener));
+        super.setKeyListener(this.f29444c.a(keyListener));
     }
 
     public void setSupportBackgroundTintList(ColorStateList colorStateList) {
-        e eVar = this.f29090a;
+        e eVar = this.f29443a;
         if (eVar != null) {
             eVar.i(colorStateList);
         }
     }
 
     public void setSupportBackgroundTintMode(PorterDuff.Mode mode) {
-        e eVar = this.f29090a;
+        e eVar = this.f29443a;
         if (eVar != null) {
             eVar.j(mode);
         }
@@ -177,20 +177,20 @@ public class r extends MultiAutoCompleteTextView {
     public r(@NonNull Context context, AttributeSet attributeSet, int i10) {
         super(x0.b(context), attributeSet, i10);
         v0.a(this, getContext());
-        a1 a1VarV = a1.v(getContext(), attributeSet, f29089d, i10, 0);
+        a1 a1VarV = a1.v(getContext(), attributeSet, f29442d, i10, 0);
         if (a1VarV.s(0)) {
             setDropDownBackgroundDrawable(a1VarV.g(0));
         }
         a1VarV.x();
         e eVar = new e(this);
-        this.f29090a = eVar;
+        this.f29443a = eVar;
         eVar.e(attributeSet, i10);
         a0 a0Var = new a0(this);
         this.b = a0Var;
         a0Var.m(attributeSet, i10);
         a0Var.b();
         m mVar = new m(this);
-        this.f29091c = mVar;
+        this.f29444c = mVar;
         mVar.c(attributeSet, i10);
         a(mVar);
     }

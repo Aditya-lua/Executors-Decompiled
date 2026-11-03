@@ -12,6 +12,7 @@ final class AutoValue_InitParams extends InitParams {
     private final boolean isPotato;
     private final boolean isTablet;
     private final boolean isVrDevice;
+    private final long pioneerPlaceId;
     private final PlatformParams platformParams;
     private final String userAgent;
     private final Activity vrContext;
@@ -23,6 +24,7 @@ final class AutoValue_InitParams extends InitParams {
         private boolean isPotato;
         private boolean isTablet;
         private boolean isVrDevice;
+        private long pioneerPlaceId;
         private PlatformParams platformParams;
         private byte set$0;
         private String userAgent;
@@ -34,8 +36,8 @@ final class AutoValue_InitParams extends InitParams {
             DeviceParams deviceParams;
             String str;
             String str2;
-            if (this.set$0 == 7 && (platformParams = this.platformParams) != null && (deviceParams = this.deviceParams) != null && (str = this.baseURL) != null && (str2 = this.userAgent) != null) {
-                return new AutoValue_InitParams(platformParams, deviceParams, str, str2, this.isTablet, this.isPotato, this.isVrDevice, this.buildVariant, this.vrContext);
+            if (this.set$0 == 15 && (platformParams = this.platformParams) != null && (deviceParams = this.deviceParams) != null && (str = this.baseURL) != null && (str2 = this.userAgent) != null) {
+                return new AutoValue_InitParams(platformParams, deviceParams, str, str2, this.isTablet, this.isPotato, this.isVrDevice, this.pioneerPlaceId, this.buildVariant, this.vrContext);
             }
             StringBuilder sb2 = new StringBuilder();
             if (this.platformParams == null) {
@@ -58,6 +60,9 @@ final class AutoValue_InitParams extends InitParams {
             }
             if ((this.set$0 & 4) == 0) {
                 sb2.append(" isVrDevice");
+            }
+            if ((this.set$0 & 8) == 0) {
+                sb2.append(" pioneerPlaceId");
             }
             throw new IllegalStateException("Missing required properties:" + ((Object) sb2));
         }
@@ -104,6 +109,13 @@ final class AutoValue_InitParams extends InitParams {
         public InitParams.Builder setIsVrDevice(boolean z10) {
             this.isVrDevice = z10;
             this.set$0 = (byte) (this.set$0 | 4);
+            return this;
+        }
+
+        @Override // com.roblox.engine.jni.autovalue.InitParams.Builder
+        public InitParams.Builder setPioneerPlaceId(long j10) {
+            this.pioneerPlaceId = j10;
+            this.set$0 = (byte) (this.set$0 | 8);
             return this;
         }
 
@@ -155,7 +167,7 @@ final class AutoValue_InitParams extends InitParams {
         }
         if (obj instanceof InitParams) {
             InitParams initParams = (InitParams) obj;
-            if (this.platformParams.equals(initParams.platformParams()) && this.deviceParams.equals(initParams.deviceParams()) && this.baseURL.equals(initParams.baseURL()) && this.userAgent.equals(initParams.userAgent()) && this.isTablet == initParams.isTablet() && this.isPotato == initParams.isPotato() && this.isVrDevice == initParams.isVrDevice() && ((str = this.buildVariant) != null ? str.equals(initParams.buildVariant()) : initParams.buildVariant() == null) && ((activity = this.vrContext) != null ? activity.equals(initParams.vrContext()) : initParams.vrContext() == null)) {
+            if (this.platformParams.equals(initParams.platformParams()) && this.deviceParams.equals(initParams.deviceParams()) && this.baseURL.equals(initParams.baseURL()) && this.userAgent.equals(initParams.userAgent()) && this.isTablet == initParams.isTablet() && this.isPotato == initParams.isPotato() && this.isVrDevice == initParams.isVrDevice() && this.pioneerPlaceId == initParams.pioneerPlaceId() && ((str = this.buildVariant) != null ? str.equals(initParams.buildVariant()) : initParams.buildVariant() == null) && ((activity = this.vrContext) != null ? activity.equals(initParams.vrContext()) : initParams.vrContext() == null)) {
                 return true;
             }
         }
@@ -163,9 +175,12 @@ final class AutoValue_InitParams extends InitParams {
     }
 
     public int hashCode() {
-        int iHashCode = (((((((((((((this.platformParams.hashCode() ^ 1000003) * 1000003) ^ this.deviceParams.hashCode()) * 1000003) ^ this.baseURL.hashCode()) * 1000003) ^ this.userAgent.hashCode()) * 1000003) ^ (this.isTablet ? 1231 : 1237)) * 1000003) ^ (this.isPotato ? 1231 : 1237)) * 1000003) ^ (this.isVrDevice ? 1231 : 1237)) * 1000003;
+        int iHashCode = (((((((((((this.platformParams.hashCode() ^ 1000003) * 1000003) ^ this.deviceParams.hashCode()) * 1000003) ^ this.baseURL.hashCode()) * 1000003) ^ this.userAgent.hashCode()) * 1000003) ^ (this.isTablet ? 1231 : 1237)) * 1000003) ^ (this.isPotato ? 1231 : 1237)) * 1000003;
+        int i10 = this.isVrDevice ? 1231 : 1237;
+        long j10 = this.pioneerPlaceId;
+        int i11 = (((iHashCode ^ i10) * 1000003) ^ ((int) (j10 ^ (j10 >>> 32)))) * 1000003;
         String str = this.buildVariant;
-        int iHashCode2 = (iHashCode ^ (str == null ? 0 : str.hashCode())) * 1000003;
+        int iHashCode2 = (i11 ^ (str == null ? 0 : str.hashCode())) * 1000003;
         Activity activity = this.vrContext;
         return iHashCode2 ^ (activity != null ? activity.hashCode() : 0);
     }
@@ -186,12 +201,17 @@ final class AutoValue_InitParams extends InitParams {
     }
 
     @Override // com.roblox.engine.jni.autovalue.InitParams
+    public long pioneerPlaceId() {
+        return this.pioneerPlaceId;
+    }
+
+    @Override // com.roblox.engine.jni.autovalue.InitParams
     public PlatformParams platformParams() {
         return this.platformParams;
     }
 
     public String toString() {
-        return "InitParams{platformParams=" + this.platformParams + ", deviceParams=" + this.deviceParams + ", baseURL=" + this.baseURL + ", userAgent=" + this.userAgent + ", isTablet=" + this.isTablet + ", isPotato=" + this.isPotato + ", isVrDevice=" + this.isVrDevice + ", buildVariant=" + this.buildVariant + ", vrContext=" + this.vrContext + "}";
+        return "InitParams{platformParams=" + this.platformParams + ", deviceParams=" + this.deviceParams + ", baseURL=" + this.baseURL + ", userAgent=" + this.userAgent + ", isTablet=" + this.isTablet + ", isPotato=" + this.isPotato + ", isVrDevice=" + this.isVrDevice + ", pioneerPlaceId=" + this.pioneerPlaceId + ", buildVariant=" + this.buildVariant + ", vrContext=" + this.vrContext + "}";
     }
 
     @Override // com.roblox.engine.jni.autovalue.InitParams
@@ -204,7 +224,7 @@ final class AutoValue_InitParams extends InitParams {
         return this.vrContext;
     }
 
-    private AutoValue_InitParams(PlatformParams platformParams, DeviceParams deviceParams, String str, String str2, boolean z10, boolean z11, boolean z12, String str3, Activity activity) {
+    private AutoValue_InitParams(PlatformParams platformParams, DeviceParams deviceParams, String str, String str2, boolean z10, boolean z11, boolean z12, long j10, String str3, Activity activity) {
         this.platformParams = platformParams;
         this.deviceParams = deviceParams;
         this.baseURL = str;
@@ -212,6 +232,7 @@ final class AutoValue_InitParams extends InitParams {
         this.isTablet = z10;
         this.isPotato = z11;
         this.isVrDevice = z12;
+        this.pioneerPlaceId = j10;
         this.buildVariant = str3;
         this.vrContext = activity;
     }

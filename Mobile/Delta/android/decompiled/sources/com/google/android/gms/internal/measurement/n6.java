@@ -9,7 +9,7 @@ public final class n6 extends cb implements pc {
         throw null;
     }
 
-    public final s6 A(int i10) {
+    public final s6 B(int i10) {
         return ((o6) this.b).H(i10);
     }
 
@@ -95,7 +95,7 @@ public final class n6 extends cb implements pc {
         return this;
     }
 
-    public final List x() {
+    public final List y() {
         return Collections.unmodifiableList(((o6) this.b).F());
     }
 

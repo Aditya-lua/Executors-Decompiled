@@ -13,14 +13,14 @@ public final class zzd implements Parcelable {
     public static final Parcelable.Creator<zzd> CREATOR = new i();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Messenger f5687a;
+    public Messenger f5760a;
 
     public zzd(IBinder iBinder) {
-        this.f5687a = new Messenger(iBinder);
+        this.f5760a = new Messenger(iBinder);
     }
 
     public final IBinder a() {
-        Messenger messenger = this.f5687a;
+        Messenger messenger = this.f5760a;
         messenger.getClass();
         return messenger.getBinder();
     }
@@ -42,7 +42,7 @@ public final class zzd implements Parcelable {
     }
 
     public final void f(Message message) throws RemoteException {
-        Messenger messenger = this.f5687a;
+        Messenger messenger = this.f5760a;
         messenger.getClass();
         messenger.send(message);
     }
@@ -53,7 +53,7 @@ public final class zzd implements Parcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i10) {
-        Messenger messenger = this.f5687a;
+        Messenger messenger = this.f5760a;
         messenger.getClass();
         parcel.writeStrongBinder(messenger.getBinder());
     }

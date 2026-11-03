@@ -22,7 +22,7 @@ public final class b6 extends xd {
 
     public final boolean m() {
         j();
-        ConnectivityManager connectivityManager = (ConnectivityManager) this.f25625a.d().getSystemService("connectivity");
+        ConnectivityManager connectivityManager = (ConnectivityManager) this.f26446a.d().getSystemService("connectivity");
         NetworkInfo activeNetworkInfo = null;
         if (connectivityManager != null) {
             try {
@@ -45,9 +45,9 @@ public final class b6 extends xd {
             b6Var = this;
             str2 = str;
             try {
-                this.f25625a.b().w(new a6(b6Var, str2, url, bArrD, ydVar.b(), y5Var));
+                this.f26446a.b().w(new a6(b6Var, str2, url, bArrD, ydVar.b(), y5Var));
             } catch (IllegalArgumentException | MalformedURLException | URISyntaxException unused) {
-                b6Var.f25625a.a().o().c("Failed to parse URL. Not uploading MeasurementBatch. appId", w5.x(str2), ydVar.a());
+                b6Var.f26446a.a().o().c("Failed to parse URL. Not uploading MeasurementBatch. appId", w5.x(str2), ydVar.a());
             }
         } catch (IllegalArgumentException | MalformedURLException | URISyntaxException unused2) {
             b6Var = this;
@@ -63,17 +63,17 @@ public final class b6 extends xd {
         n9.m.l(y5Var);
         zd zdVarC0 = this.b.C0();
         Uri.Builder builder = new Uri.Builder();
-        Uri.Builder builderAppendQueryParameter = builder.scheme((String) z4.f26163f.b(null)).encodedAuthority((String) z4.f26166g.b(null)).path("config/app/".concat(String.valueOf(c6Var.r0()))).appendQueryParameter("platform", "android");
-        zdVarC0.f25625a.w().A();
+        Uri.Builder builderAppendQueryParameter = builder.scheme((String) z4.f26984f.b(null)).encodedAuthority((String) z4.f26987g.b(null)).path("config/app/".concat(String.valueOf(c6Var.r0()))).appendQueryParameter("platform", "android");
+        zdVarC0.f26446a.w().A();
         builderAppendQueryParameter.appendQueryParameter("gmp_version", String.valueOf(133005L)).appendQueryParameter("runtime_version", "0");
         String string = builder.build().toString();
         try {
             URL url = new URI(string).toURL();
             b6Var = this;
             try {
-                this.f25625a.b().w(new a6(b6Var, c6Var.o0(), url, null, map, y5Var));
+                this.f26446a.b().w(new a6(b6Var, c6Var.o0(), url, null, map, y5Var));
             } catch (IllegalArgumentException | MalformedURLException | URISyntaxException unused) {
-                b6Var.f25625a.a().o().c("Failed to parse config URL. Not fetching. appId", w5.x(c6Var.o0()), string);
+                b6Var.f26446a.a().o().c("Failed to parse config URL. Not fetching. appId", w5.x(c6Var.o0()), string);
             }
         } catch (IllegalArgumentException | MalformedURLException | URISyntaxException unused2) {
             b6Var = this;

@@ -12,7 +12,7 @@ public final class b4 extends gb implements pc {
     static {
         b4 b4Var = new b4();
         zzh = b4Var;
-        gb.u(b4.class, b4Var);
+        gb.t(b4.class, b4Var);
     }
 
     public static b4 P() {

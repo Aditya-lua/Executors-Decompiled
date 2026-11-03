@@ -17,63 +17,63 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class AssertDialogUtil {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static WeakReference<Activity> f9676a;
+    public static WeakReference<Activity> f9756a;
 
     public class a implements Runnable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ Activity f9677a;
+        public final /* synthetic */ Activity f9757a;
         public final /* synthetic */ String b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ AtomicInteger f9678c;
+        public final /* synthetic */ AtomicInteger f9758c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final /* synthetic */ Semaphore f9679d;
+        public final /* synthetic */ Semaphore f9759d;
 
         /* JADX INFO: renamed from: com.roblox.engine.jni.util.AssertDialogUtil$a$a, reason: collision with other inner class name */
-        public class DialogInterfaceOnClickListenerC0152a implements DialogInterface.OnClickListener {
-            public DialogInterfaceOnClickListenerC0152a() {
+        public class DialogInterfaceOnClickListenerC0155a implements DialogInterface.OnClickListener {
+            public DialogInterfaceOnClickListenerC0155a() {
             }
 
             @Override // android.content.DialogInterface.OnClickListener
             public void onClick(DialogInterface dialogInterface, int i10) {
                 if (i10 == -3) {
-                    a.this.f9678c.set(1);
+                    a.this.f9758c.set(1);
                 } else if (i10 == -2) {
-                    a.this.f9678c.set(0);
+                    a.this.f9758c.set(0);
                 } else if (i10 != -1) {
-                    a.this.f9678c.set(-1);
+                    a.this.f9758c.set(-1);
                 } else {
-                    a.this.f9678c.set(2);
+                    a.this.f9758c.set(2);
                 }
-                a.this.f9679d.release();
+                a.this.f9759d.release();
             }
         }
 
         public a(Activity activity, String str, AtomicInteger atomicInteger, Semaphore semaphore) {
-            this.f9677a = activity;
+            this.f9757a = activity;
             this.b = str;
-            this.f9678c = atomicInteger;
-            this.f9679d = semaphore;
+            this.f9758c = atomicInteger;
+            this.f9759d = semaphore;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this.f9677a, 2);
+            AlertDialog.Builder builder = new AlertDialog.Builder(this.f9757a, 2);
             builder.setTitle("Assertion Failure");
             builder.setMessage(this.b);
-            DialogInterfaceOnClickListenerC0152a dialogInterfaceOnClickListenerC0152a = new DialogInterfaceOnClickListenerC0152a();
-            builder.setNegativeButton("Break", dialogInterfaceOnClickListenerC0152a);
-            builder.setNeutralButton("Ignore Once", dialogInterfaceOnClickListenerC0152a);
-            builder.setPositiveButton("Ignore for One Week", dialogInterfaceOnClickListenerC0152a);
+            DialogInterfaceOnClickListenerC0155a dialogInterfaceOnClickListenerC0155a = new DialogInterfaceOnClickListenerC0155a();
+            builder.setNegativeButton("Break", dialogInterfaceOnClickListenerC0155a);
+            builder.setNeutralButton("Ignore Once", dialogInterfaceOnClickListenerC0155a);
+            builder.setPositiveButton("Ignore for One Week", dialogInterfaceOnClickListenerC0155a);
             builder.setCancelable(false);
             builder.create().show();
         }
     }
 
     public static int a(String str) {
-        Activity activity = f9676a.get();
+        Activity activity = f9756a.get();
         if ((activity.getApplicationInfo().flags & 2) == 0 && Debug.isDebuggerConnected()) {
             return 0;
         }
@@ -90,11 +90,11 @@ public class AssertDialogUtil {
     }
 
     public static void c(Activity activity) {
-        f9676a = new WeakReference<>(activity);
+        f9756a = new WeakReference<>(activity);
     }
 
     public static int d(String str) {
-        Activity activity = f9676a.get();
+        Activity activity = f9756a.get();
         Semaphore semaphore = new Semaphore(0, true);
         AtomicInteger atomicInteger = new AtomicInteger(-1);
         activity.runOnUiThread(new a(activity, str, atomicInteger, semaphore));
@@ -107,7 +107,7 @@ public class AssertDialogUtil {
 
     @Keep
     public static int showAssertionPopup(String str) {
-        WeakReference<Activity> weakReference = f9676a;
+        WeakReference<Activity> weakReference = f9756a;
         if ((weakReference == null ? null : weakReference.get()) != null) {
             return Looper.myLooper() == Looper.getMainLooper() ? a(str) : d(str);
         }

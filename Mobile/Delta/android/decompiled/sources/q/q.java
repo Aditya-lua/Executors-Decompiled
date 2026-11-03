@@ -14,11 +14,11 @@ import androidx.annotation.NonNull;
 public class q extends ImageView {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final e f29083a;
+    public final e f29436a;
     public final p b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f29084c;
+    public boolean f29437c;
 
     public q(@NonNull Context context) {
         this(context, null);
@@ -27,7 +27,7 @@ public class q extends ImageView {
     @Override // android.widget.ImageView, android.view.View
     public void drawableStateChanged() {
         super.drawableStateChanged();
-        e eVar = this.f29083a;
+        e eVar = this.f29436a;
         if (eVar != null) {
             eVar.b();
         }
@@ -38,7 +38,7 @@ public class q extends ImageView {
     }
 
     public ColorStateList getSupportBackgroundTintList() {
-        e eVar = this.f29083a;
+        e eVar = this.f29436a;
         if (eVar != null) {
             return eVar.c();
         }
@@ -46,7 +46,7 @@ public class q extends ImageView {
     }
 
     public PorterDuff.Mode getSupportBackgroundTintMode() {
-        e eVar = this.f29083a;
+        e eVar = this.f29436a;
         if (eVar != null) {
             return eVar.d();
         }
@@ -77,7 +77,7 @@ public class q extends ImageView {
     @Override // android.view.View
     public void setBackgroundDrawable(Drawable drawable) {
         super.setBackgroundDrawable(drawable);
-        e eVar = this.f29083a;
+        e eVar = this.f29436a;
         if (eVar != null) {
             eVar.f(drawable);
         }
@@ -86,7 +86,7 @@ public class q extends ImageView {
     @Override // android.view.View
     public void setBackgroundResource(int i10) {
         super.setBackgroundResource(i10);
-        e eVar = this.f29083a;
+        e eVar = this.f29436a;
         if (eVar != null) {
             eVar.g(i10);
         }
@@ -104,14 +104,14 @@ public class q extends ImageView {
     @Override // android.widget.ImageView
     public void setImageDrawable(Drawable drawable) {
         p pVar = this.b;
-        if (pVar != null && drawable != null && !this.f29084c) {
+        if (pVar != null && drawable != null && !this.f29437c) {
             pVar.h(drawable);
         }
         super.setImageDrawable(drawable);
         p pVar2 = this.b;
         if (pVar2 != null) {
             pVar2.c();
-            if (this.f29084c) {
+            if (this.f29437c) {
                 return;
             }
             this.b.b();
@@ -121,7 +121,7 @@ public class q extends ImageView {
     @Override // android.widget.ImageView
     public void setImageLevel(int i10) {
         super.setImageLevel(i10);
-        this.f29084c = true;
+        this.f29437c = true;
     }
 
     @Override // android.widget.ImageView
@@ -142,14 +142,14 @@ public class q extends ImageView {
     }
 
     public void setSupportBackgroundTintList(ColorStateList colorStateList) {
-        e eVar = this.f29083a;
+        e eVar = this.f29436a;
         if (eVar != null) {
             eVar.i(colorStateList);
         }
     }
 
     public void setSupportBackgroundTintMode(PorterDuff.Mode mode) {
-        e eVar = this.f29083a;
+        e eVar = this.f29436a;
         if (eVar != null) {
             eVar.j(mode);
         }
@@ -175,10 +175,10 @@ public class q extends ImageView {
 
     public q(@NonNull Context context, AttributeSet attributeSet, int i10) {
         super(x0.b(context), attributeSet, i10);
-        this.f29084c = false;
+        this.f29437c = false;
         v0.a(this, getContext());
         e eVar = new e(this);
-        this.f29083a = eVar;
+        this.f29436a = eVar;
         eVar.e(attributeSet, i10);
         p pVar = new p(this);
         this.b = pVar;

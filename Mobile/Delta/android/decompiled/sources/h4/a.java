@@ -14,7 +14,7 @@ import okhttp3.internal.ws.RealWebSocket;
 public abstract class a extends BroadcastReceiver {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final SparseArray<PowerManager.WakeLock> f18540a = new SparseArray<>();
+    public static final SparseArray<PowerManager.WakeLock> f19027a = new SparseArray<>();
     public static int b = 1;
 
     public static boolean b(Intent intent) {
@@ -22,7 +22,7 @@ public abstract class a extends BroadcastReceiver {
         if (intExtra == 0) {
             return false;
         }
-        SparseArray<PowerManager.WakeLock> sparseArray = f18540a;
+        SparseArray<PowerManager.WakeLock> sparseArray = f19027a;
         synchronized (sparseArray) {
             try {
                 PowerManager.WakeLock wakeLock = sparseArray.get(intExtra);
@@ -40,7 +40,7 @@ public abstract class a extends BroadcastReceiver {
     }
 
     public static ComponentName c(Context context, Intent intent) {
-        SparseArray<PowerManager.WakeLock> sparseArray = f18540a;
+        SparseArray<PowerManager.WakeLock> sparseArray = f19027a;
         synchronized (sparseArray) {
             try {
                 int i10 = b;

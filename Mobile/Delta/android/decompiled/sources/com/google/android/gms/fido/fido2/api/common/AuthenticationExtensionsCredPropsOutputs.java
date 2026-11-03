@@ -16,29 +16,29 @@ public class AuthenticationExtensionsCredPropsOutputs extends AbstractSafeParcel
     public static final Parcelable.Creator<AuthenticationExtensionsCredPropsOutputs> CREATOR = new y();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final boolean f5927f;
+    public final boolean f6000f;
 
     public AuthenticationExtensionsCredPropsOutputs(boolean z10) {
-        this.f5927f = z10;
+        this.f6000f = z10;
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof AuthenticationExtensionsCredPropsOutputs) && this.f5927f == ((AuthenticationExtensionsCredPropsOutputs) obj).f5927f;
+        return (obj instanceof AuthenticationExtensionsCredPropsOutputs) && this.f6000f == ((AuthenticationExtensionsCredPropsOutputs) obj).f6000f;
     }
 
     public int hashCode() {
-        return k.c(Boolean.valueOf(this.f5927f));
+        return k.c(Boolean.valueOf(this.f6000f));
     }
 
     public boolean v3() {
-        return this.f5927f;
+        return this.f6000f;
     }
 
     @NonNull
     public final JSONObject w3() {
         try {
             JSONObject jSONObject = new JSONObject();
-            jSONObject.put("rk", this.f5927f);
+            jSONObject.put("rk", this.f6000f);
             return jSONObject;
         } catch (JSONException e10) {
             throw new RuntimeException("Error encoding AuthenticationExtensionsCredPropsOutputs to JSON object", e10);

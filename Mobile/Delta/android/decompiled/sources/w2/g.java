@@ -6,29 +6,29 @@ import java.util.Locale;
 public final class g {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final w2.f f33650a = new e(null, false);
+    public static final w2.f f33856a = new e(null, false);
     public static final w2.f b = new e(null, true);
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final w2.f f33651c;
+    public static final w2.f f33857c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final w2.f f33652d;
+    public static final w2.f f33858d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final w2.f f33653e;
+    public static final w2.f f33859e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final w2.f f33654f;
+    public static final w2.f f33860f;
 
     public static class a implements c {
         public static final a b = new a(true);
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final boolean f33655a;
+        public final boolean f33861a;
 
         public a(boolean z10) {
-            this.f33655a = z10;
+            this.f33861a = z10;
         }
 
         @Override // w2.g.c
@@ -40,12 +40,12 @@ public final class g {
                 if (iA != 0) {
                     if (iA != 1) {
                         continue;
-                    } else if (!this.f33655a) {
+                    } else if (!this.f33861a) {
                         return 1;
                     }
                     i10++;
                     z10 = z10;
-                } else if (this.f33655a) {
+                } else if (this.f33861a) {
                     return 0;
                 }
                 z10 = true;
@@ -53,7 +53,7 @@ public final class g {
                 z10 = z10;
             }
             if (z10) {
-                return this.f33655a ? 1 : 0;
+                return this.f33861a ? 1 : 0;
             }
             return 2;
         }
@@ -62,7 +62,7 @@ public final class g {
     public static class b implements c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final b f33656a = new b();
+        public static final b f33862a = new b();
 
         @Override // w2.g.c
         public int a(CharSequence charSequence, int i10, int i11) {
@@ -83,16 +83,16 @@ public final class g {
     public static abstract class d implements w2.f {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final c f33657a;
+        public final c f33863a;
 
         public d(c cVar) {
-            this.f33657a = cVar;
+            this.f33863a = cVar;
         }
 
         public abstract boolean a();
 
         public final boolean b(CharSequence charSequence, int i10, int i11) {
-            int iA = this.f33657a.a(charSequence, i10, i11);
+            int iA = this.f33863a.a(charSequence, i10, i11);
             if (iA == 0) {
                 return true;
             }
@@ -107,7 +107,7 @@ public final class g {
             if (charSequence == null || i10 < 0 || i11 < 0 || charSequence.length() - i11 < i10) {
                 throw new IllegalArgumentException();
             }
-            return this.f33657a == null ? a() : b(charSequence, i10, i11);
+            return this.f33863a == null ? a() : b(charSequence, i10, i11);
         }
     }
 
@@ -139,11 +139,11 @@ public final class g {
     }
 
     static {
-        b bVar = b.f33656a;
-        f33651c = new e(bVar, false);
-        f33652d = new e(bVar, true);
-        f33653e = new e(a.b, false);
-        f33654f = f.b;
+        b bVar = b.f33862a;
+        f33857c = new e(bVar, false);
+        f33858d = new e(bVar, true);
+        f33859e = new e(a.b, false);
+        f33860f = f.b;
     }
 
     public static int a(int i10) {

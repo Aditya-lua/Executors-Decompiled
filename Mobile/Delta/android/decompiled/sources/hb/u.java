@@ -4,13 +4,13 @@ package hb;
 public final class u implements r<f> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ v f18762a;
+    public final /* synthetic */ v f19249a;
 
     public u(v vVar) {
-        this.f18762a = vVar;
+        this.f19249a = vVar;
     }
 
     public final f a() {
-        return (f) this.f18762a.getService();
+        return (f) this.f19249a.getService();
     }
 }

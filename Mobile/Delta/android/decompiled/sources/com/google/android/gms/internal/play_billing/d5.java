@@ -4,25 +4,25 @@ package com.google.android.gms.internal.play_billing;
 public final class d5 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final x5 f7026a;
+    public final x5 f7100a;
     public volatile s3 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public volatile x5 f7027c;
+    public volatile x5 f7101c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public volatile boolean f7028d;
+    public volatile boolean f7102d;
 
     public d5(x5 x5Var) {
         if (x5Var == null) {
             throw new IllegalArgumentException("message cannot be null");
         }
-        this.f7027c = x5Var;
-        this.f7026a = x5Var.f();
+        this.f7101c = x5Var;
+        this.f7100a = x5Var.f();
         f4 f4Var = f4.b;
-        int i10 = e3.f7032a;
+        int i10 = e3.f7106a;
         this.b = null;
-        this.f7028d = false;
+        this.f7102d = false;
     }
 
     public final int a(int i10) {
@@ -40,7 +40,7 @@ public final class d5 {
     }
 
     public final int d() {
-        return this.b != null ? this.b.d() : this.f7027c.zzn();
+        return this.b != null ? this.b.d() : this.f7101c.zzn();
     }
 
     public final s3 e() {
@@ -52,7 +52,7 @@ public final class d5 {
                 if (this.b != null) {
                     return this.b;
                 }
-                this.b = this.f7027c.e();
+                this.b = this.f7101c.e();
                 return this.b;
             } catch (Throwable th2) {
                 throw th2;
@@ -66,10 +66,10 @@ public final class d5 {
 
     public final x5 f() {
         try {
-            return this.f7027c;
+            return this.f7101c;
         } catch (f5 unused) {
             f4.b();
-            return this.f7026a;
+            return this.f7100a;
         }
     }
 

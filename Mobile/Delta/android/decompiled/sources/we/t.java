@@ -1,104 +1,146 @@
 package we;
 
 import java.security.GeneralSecurityException;
-import java.util.Arrays;
-import ve.a0;
-import ve.h0;
-import ve.j0;
-import ve.k0;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Objects;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class t implements k0<oe.w, oe.w> {
+public final class t {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final t f34234a = new t();
-    public static final h0<ve.p, oe.w> b = h0.b(new h0.b() { // from class: we.s
-        @Override // ve.h0.b
-        public final Object a(oe.l lVar) {
-            return xe.n.c((ve.p) lVar);
-        }
-    }, ve.p.class, oe.w.class);
+    public final r f34467a;
+    public final List<c> b;
 
-    public static class b implements oe.w {
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public final Integer f34468c;
+
+    public static final class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final j0<oe.w> f34235a;
-        public final ve.s.a b;
+        public ArrayList<c> f34469a = new ArrayList<>();
+        public r b = r.b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final ve.s.a f34236c;
+        public Integer f34470c = null;
 
-        @Override // oe.w
-        public void a(byte[] bArr, byte[] bArr2) throws GeneralSecurityException {
-            if (bArr.length <= 5) {
-                this.f34236c.b();
-                throw new GeneralSecurityException("tag too short");
+        public b a(pe.n nVar, int i10, String str, String str2) {
+            ArrayList<c> arrayList = this.f34469a;
+            if (arrayList == null) {
+                throw new IllegalStateException("addEntry cannot be called after build()");
             }
-            for (j0.c<oe.w> cVar : this.f34235a.e(Arrays.copyOf(bArr, 5))) {
-                try {
-                    cVar.b().a(bArr, bArr2);
-                    this.f34236c.a(cVar.c(), bArr2.length);
-                    return;
-                } catch (GeneralSecurityException unused) {
+            arrayList.add(new c(nVar, i10, str, str2));
+            return this;
+        }
+
+        public t b() throws GeneralSecurityException {
+            if (this.f34469a == null) {
+                throw new IllegalStateException("cannot call build() twice");
+            }
+            Integer num = this.f34470c;
+            if (num != null && !c(num.intValue())) {
+                throw new GeneralSecurityException("primary key ID is not present in entries");
+            }
+            t tVar = new t(this.b, Collections.unmodifiableList(this.f34469a), this.f34470c);
+            this.f34469a = null;
+            return tVar;
+        }
+
+        public final boolean c(int i10) {
+            ArrayList<c> arrayList = this.f34469a;
+            int size = arrayList.size();
+            int i11 = 0;
+            while (i11 < size) {
+                c cVar = arrayList.get(i11);
+                i11++;
+                if (cVar.a() == i10) {
+                    return true;
                 }
             }
-            for (j0.c<oe.w> cVar2 : this.f34235a.g()) {
-                try {
-                    cVar2.b().a(bArr, bArr2);
-                    this.f34236c.a(cVar2.c(), bArr2.length);
-                    return;
-                } catch (GeneralSecurityException unused2) {
-                }
-            }
-            this.f34236c.b();
-            throw new GeneralSecurityException("invalid MAC");
+            return false;
         }
 
-        @Override // oe.w
-        public byte[] b(byte[] bArr) throws GeneralSecurityException {
-            try {
-                byte[] bArrB = this.f34235a.d().b().b(bArr);
-                this.b.a(this.f34235a.d().c(), bArr.length);
-                return bArrB;
-            } catch (GeneralSecurityException e10) {
-                this.b.b();
-                throw e10;
+        public b d(r rVar) {
+            if (this.f34469a == null) {
+                throw new IllegalStateException("setAnnotations cannot be called after build()");
             }
+            this.b = rVar;
+            return this;
         }
 
-        public b(j0<oe.w> j0Var) {
-            this.f34235a = j0Var;
-            if (!j0Var.h()) {
-                ve.s.a aVar = ve.u.f33020a;
-                this.b = aVar;
-                this.f34236c = aVar;
-            } else {
-                ve.s sVarA = ve.y.b().a();
-                ve.t tVarA = ve.u.a(j0Var);
-                this.b = sVarA.a(tVarA, "mac", "compute");
-                this.f34236c = sVarA.a(tVarA, "mac", "verify");
+        public b e(int i10) {
+            if (this.f34469a == null) {
+                throw new IllegalStateException("setPrimaryKeyId cannot be called after build()");
             }
+            this.f34470c = Integer.valueOf(i10);
+            return this;
         }
     }
 
-    public static void d() {
-        a0.c().e(f34234a);
-        a0.c().d(b);
+    public static final class c {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public final pe.n f34471a;
+        public final int b;
+
+        /* JADX INFO: renamed from: c, reason: collision with root package name */
+        public final String f34472c;
+
+        /* JADX INFO: renamed from: d, reason: collision with root package name */
+        public final String f34473d;
+
+        public int a() {
+            return this.b;
+        }
+
+        public boolean equals(Object obj) {
+            if (!(obj instanceof c)) {
+                return false;
+            }
+            c cVar = (c) obj;
+            return this.f34471a == cVar.f34471a && this.b == cVar.b && this.f34472c.equals(cVar.f34472c) && this.f34473d.equals(cVar.f34473d);
+        }
+
+        public int hashCode() {
+            return Objects.hash(this.f34471a, Integer.valueOf(this.b), this.f34472c, this.f34473d);
+        }
+
+        public String toString() {
+            return String.format("(status=%s, keyId=%s, keyType='%s', keyPrefix='%s')", this.f34471a, Integer.valueOf(this.b), this.f34472c, this.f34473d);
+        }
+
+        public c(pe.n nVar, int i10, String str, String str2) {
+            this.f34471a = nVar;
+            this.b = i10;
+            this.f34472c = str;
+            this.f34473d = str2;
+        }
     }
 
-    @Override // ve.k0
-    public Class<oe.w> a() {
-        return oe.w.class;
+    public static b a() {
+        return new b();
     }
 
-    @Override // ve.k0
-    public Class<oe.w> c() {
-        return oe.w.class;
+    public boolean equals(Object obj) {
+        if (!(obj instanceof t)) {
+            return false;
+        }
+        t tVar = (t) obj;
+        return this.f34467a.equals(tVar.f34467a) && this.b.equals(tVar.b) && Objects.equals(this.f34468c, tVar.f34468c);
     }
 
-    @Override // ve.k0
-    /* JADX INFO: renamed from: e, reason: merged with bridge method [inline-methods] */
-    public oe.w b(j0<oe.w> j0Var) {
-        return new b(j0Var);
+    public int hashCode() {
+        return Objects.hash(this.f34467a, this.b);
+    }
+
+    public String toString() {
+        return String.format("(annotations=%s, entries=%s, primaryKeyId=%s)", this.f34467a, this.b, this.f34468c);
+    }
+
+    public t(r rVar, List<c> list, Integer num) {
+        this.f34467a = rVar;
+        this.b = list;
+        this.f34468c = num;
     }
 }

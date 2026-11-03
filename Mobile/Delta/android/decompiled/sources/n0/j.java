@@ -4,32 +4,32 @@ package n0;
 public final class j<T> extends n1.a<T> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f24702a;
+    public final String f25523a;
     public final Class<T> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Object f24703c;
+    public final Object f25524c;
 
     public j(String str, Class<T> cls, Object obj) {
         if (str == null) {
             throw new NullPointerException("Null id");
         }
-        this.f24702a = str;
+        this.f25523a = str;
         if (cls == null) {
             throw new NullPointerException("Null valueClass");
         }
         this.b = cls;
-        this.f24703c = obj;
+        this.f25524c = obj;
     }
 
     @Override // n0.n1.a
     public String c() {
-        return this.f24702a;
+        return this.f25523a;
     }
 
     @Override // n0.n1.a
     public Object d() {
-        return this.f24703c;
+        return this.f25524c;
     }
 
     @Override // n0.n1.a
@@ -44,7 +44,7 @@ public final class j<T> extends n1.a<T> {
         }
         if (obj instanceof n1.a) {
             n1.a aVar = (n1.a) obj;
-            if (this.f24702a.equals(aVar.c()) && this.b.equals(aVar.e()) && ((obj2 = this.f24703c) != null ? obj2.equals(aVar.d()) : aVar.d() == null)) {
+            if (this.f25523a.equals(aVar.c()) && this.b.equals(aVar.e()) && ((obj2 = this.f25524c) != null ? obj2.equals(aVar.d()) : aVar.d() == null)) {
                 return true;
             }
         }
@@ -52,12 +52,12 @@ public final class j<T> extends n1.a<T> {
     }
 
     public int hashCode() {
-        int iHashCode = (((this.f24702a.hashCode() ^ 1000003) * 1000003) ^ this.b.hashCode()) * 1000003;
-        Object obj = this.f24703c;
+        int iHashCode = (((this.f25523a.hashCode() ^ 1000003) * 1000003) ^ this.b.hashCode()) * 1000003;
+        Object obj = this.f25524c;
         return iHashCode ^ (obj == null ? 0 : obj.hashCode());
     }
 
     public String toString() {
-        return "Option{id=" + this.f24702a + ", valueClass=" + this.b + ", token=" + this.f24703c + "}";
+        return "Option{id=" + this.f25523a + ", valueClass=" + this.b + ", token=" + this.f25524c + "}";
     }
 }

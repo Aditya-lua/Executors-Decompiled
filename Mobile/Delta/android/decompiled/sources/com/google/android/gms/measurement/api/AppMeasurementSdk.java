@@ -15,7 +15,7 @@ import nb.v8;
 public class AppMeasurementSdk {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final v3 f7404a;
+    public final v3 f7478a;
 
     public interface a extends u8 {
     }
@@ -24,7 +24,7 @@ public class AppMeasurementSdk {
     }
 
     public AppMeasurementSdk(v3 v3Var) {
-        this.f7404a = v3Var;
+        this.f7478a = v3Var;
     }
 
     @NonNull
@@ -33,77 +33,77 @@ public class AppMeasurementSdk {
     }
 
     public void beginAdUnitExposure(@NonNull String str) {
-        this.f7404a.E(str);
+        this.f7478a.E(str);
     }
 
     public void clearConditionalUserProperty(@NonNull String str, String str2, Bundle bundle) {
-        this.f7404a.B(str, str2, bundle);
+        this.f7478a.B(str, str2, bundle);
     }
 
     public void endAdUnitExposure(@NonNull String str) {
-        this.f7404a.F(str);
+        this.f7478a.F(str);
     }
 
     public long generateEventId() {
-        return this.f7404a.J();
+        return this.f7478a.J();
     }
 
     public String getAppIdOrigin() {
-        return this.f7404a.g();
+        return this.f7478a.g();
     }
 
     public String getAppInstanceId() {
-        return this.f7404a.I();
+        return this.f7478a.I();
     }
 
     @NonNull
     public List<Bundle> getConditionalUserProperties(String str, String str2) {
-        return this.f7404a.C(str, str2);
+        return this.f7478a.C(str, str2);
     }
 
     public String getCurrentScreenClass() {
-        return this.f7404a.b();
+        return this.f7478a.b();
     }
 
     public String getCurrentScreenName() {
-        return this.f7404a.a();
+        return this.f7478a.a();
     }
 
     public String getGmpAppId() {
-        return this.f7404a.H();
+        return this.f7478a.H();
     }
 
     public int getMaxUserProperties(@NonNull String str) {
-        return this.f7404a.f(str);
+        return this.f7478a.f(str);
     }
 
     @NonNull
     public Map<String, Object> getUserProperties(String str, String str2, boolean z10) {
-        return this.f7404a.c(str, str2, z10);
+        return this.f7478a.c(str, str2, z10);
     }
 
     public void logEvent(@NonNull String str, @NonNull String str2, Bundle bundle) {
-        this.f7404a.x(str, str2, bundle);
+        this.f7478a.x(str, str2, bundle);
     }
 
     public void logEventNoInterceptor(@NonNull String str, @NonNull String str2, Bundle bundle, long j10) {
-        this.f7404a.y(str, str2, bundle, j10);
+        this.f7478a.y(str, str2, bundle, j10);
     }
 
     public void performAction(@NonNull Bundle bundle) {
-        this.f7404a.e(bundle, false);
+        this.f7478a.e(bundle, false);
     }
 
     public Bundle performActionWithResponse(@NonNull Bundle bundle) {
-        return this.f7404a.e(bundle, true);
+        return this.f7478a.e(bundle, true);
     }
 
     public void registerOnMeasurementEventListener(@NonNull b bVar) {
-        this.f7404a.v(bVar);
+        this.f7478a.v(bVar);
     }
 
     public void setConditionalUserProperty(@NonNull Bundle bundle) {
-        this.f7404a.A(bundle);
+        this.f7478a.A(bundle);
     }
 
     @Deprecated
@@ -111,11 +111,11 @@ public class AppMeasurementSdk {
     }
 
     public void setCurrentScreen(@NonNull Activity activity, String str, String str2) {
-        this.f7404a.D(zzdf.a(activity), str, str2);
+        this.f7478a.D(zzdf.a(activity), str, str2);
     }
 
     public void setEventInterceptor(@NonNull a aVar) {
-        this.f7404a.u(aVar);
+        this.f7478a.u(aVar);
     }
 
     @Deprecated
@@ -123,15 +123,15 @@ public class AppMeasurementSdk {
     }
 
     public void setUserProperty(@NonNull String str, @NonNull String str2, @NonNull Object obj) {
-        this.f7404a.z(str, str2, obj, true);
+        this.f7478a.z(str, str2, obj, true);
     }
 
     public void unregisterOnMeasurementEventListener(@NonNull b bVar) {
-        this.f7404a.w(bVar);
+        this.f7478a.w(bVar);
     }
 
     public final void zza(boolean z10) {
-        this.f7404a.h(z10);
+        this.f7478a.h(z10);
     }
 
     @Deprecated

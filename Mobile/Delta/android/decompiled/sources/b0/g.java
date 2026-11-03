@@ -9,8 +9,8 @@ import java.util.Set;
 public class g implements e.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final e f3763a = new e(new g());
-    public static final Set<k0> b = Collections.singleton(k0.f17470d);
+    public static final e f3661a = new e(new g());
+    public static final Set<k0> b = Collections.singleton(k0.f18009d);
 
     @Override // b0.e.a
     public DynamicRangeProfiles a() {
@@ -24,7 +24,7 @@ public class g implements e.a {
 
     @Override // b0.e.a
     public Set<k0> d(k0 k0Var) {
-        x2.g.b(k0.f17470d.equals(k0Var), "DynamicRange is not supported: " + k0Var);
+        x2.g.b(k0.f18009d.equals(k0Var), "DynamicRange is not supported: " + k0Var);
         return b;
     }
 }

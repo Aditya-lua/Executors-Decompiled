@@ -6,9 +6,9 @@ import com.roblox.client.personasdk.R;
 public final class a0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final int[] f28119a = {R.attr.implementationMode, R.attr.scaleType};
+    public static final int[] f28338a = {R.attr.implementationMode, R.attr.scaleType};
     public static final int b = 0;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final int f28120c = 1;
+    public static final int f28339c = 1;
 }

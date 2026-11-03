@@ -17,13 +17,13 @@ import okhttp3.internal.concurrent.Lockable;
 import okhttp3.internal.http2.flowcontrol.WindowCounter;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import xu.p0;
-import xu.q0;
-import xu.r0;
-import xu.s0;
+import vu.p0;
+import vu.q0;
+import vu.r0;
+import vu.s0;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000\u008a\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0010\t\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0015\u0018\u0000 u2\u00020\u00012\u00020\u0002:\u0004vwuxB3\b\u0000\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\b\u001a\u00020\u0007\u0012\u0006\u0010\t\u001a\u00020\u0007\u0012\b\u0010\u000b\u001a\u0004\u0018\u00010\n¢\u0006\u0004\b\f\u0010\rJ!\u0010\u0012\u001a\u00020\u00072\u0006\u0010\u000f\u001a\u00020\u000e2\b\u0010\u0011\u001a\u0004\u0018\u00010\u0010H\u0002¢\u0006\u0004\b\u0012\u0010\u0013J\u000f\u0010\u0014\u001a\u00020\u0007H\u0002¢\u0006\u0004\b\u0014\u0010\u0015J\u0017\u0010\u0017\u001a\u00020\n2\b\b\u0002\u0010\u0016\u001a\u00020\u0007¢\u0006\u0004\b\u0017\u0010\u0018J\u000f\u0010\u0019\u001a\u0004\u0018\u00010\n¢\u0006\u0004\b\u0019\u0010\u001aJ+\u0010 \u001a\u00020\u001f2\f\u0010\u001d\u001a\b\u0012\u0004\u0012\u00020\u001c0\u001b2\u0006\u0010\b\u001a\u00020\u00072\u0006\u0010\u001e\u001a\u00020\u0007¢\u0006\u0004\b \u0010!J\u0015\u0010#\u001a\u00020\u001f2\u0006\u0010\"\u001a\u00020\n¢\u0006\u0004\b#\u0010$J\r\u0010&\u001a\u00020%¢\u0006\u0004\b&\u0010'J\r\u0010(\u001a\u00020%¢\u0006\u0004\b(\u0010'J\u001f\u0010*\u001a\u00020\u001f2\u0006\u0010)\u001a\u00020\u000e2\b\u0010\u0011\u001a\u0004\u0018\u00010\u0010¢\u0006\u0004\b*\u0010+J\u000f\u0010,\u001a\u00020\u001fH\u0016¢\u0006\u0004\b,\u0010-J\u0015\u0010.\u001a\u00020\u001f2\u0006\u0010\u000f\u001a\u00020\u000e¢\u0006\u0004\b.\u0010/J\u001d\u00103\u001a\u00020\u001f2\u0006\u00101\u001a\u0002002\u0006\u00102\u001a\u00020\u0003¢\u0006\u0004\b3\u00104J\u001d\u00105\u001a\u00020\u001f2\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\t\u001a\u00020\u0007¢\u0006\u0004\b5\u00106J\u0015\u00107\u001a\u00020\u001f2\u0006\u0010\u000f\u001a\u00020\u000e¢\u0006\u0004\b7\u0010/J\u000f\u00109\u001a\u00020\u001fH\u0000¢\u0006\u0004\b8\u0010-J\u0015\u0010<\u001a\u00020\u001f2\u0006\u0010;\u001a\u00020:¢\u0006\u0004\b<\u0010=J\u000f\u0010?\u001a\u00020\u001fH\u0000¢\u0006\u0004\b>\u0010-J\u000f\u0010A\u001a\u00020\u001fH\u0000¢\u0006\u0004\b@\u0010-R\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b\u0004\u0010B\u001a\u0004\bC\u0010DR\u0017\u0010\u0006\u001a\u00020\u00058\u0006¢\u0006\f\n\u0004\b\u0006\u0010E\u001a\u0004\bF\u0010GR\u0017\u0010I\u001a\u00020H8\u0006¢\u0006\f\n\u0004\bI\u0010J\u001a\u0004\bK\u0010LR*\u0010N\u001a\u00020:2\u0006\u0010M\u001a\u00020:8\u0006@@X\u0086\u000e¢\u0006\u0012\n\u0004\bN\u0010O\u001a\u0004\bP\u0010Q\"\u0004\bR\u0010=R*\u0010S\u001a\u00020:2\u0006\u0010M\u001a\u00020:8\u0006@@X\u0086\u000e¢\u0006\u0012\n\u0004\bS\u0010O\u001a\u0004\bT\u0010Q\"\u0004\bU\u0010=R\u001a\u0010W\u001a\b\u0012\u0004\u0012\u00020\n0V8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bW\u0010XR\u0016\u0010Y\u001a\u00020\u00078\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bY\u0010ZR\u001e\u00101\u001a\u00060[R\u00020\u00008\u0016X\u0096\u0004¢\u0006\f\n\u0004\b1\u0010\\\u001a\u0004\b]\u0010^R\u001e\u0010`\u001a\u00060_R\u00020\u00008\u0016X\u0096\u0004¢\u0006\f\n\u0004\b`\u0010a\u001a\u0004\bb\u0010cR\u001e\u0010&\u001a\u00060dR\u00020\u00008\u0000X\u0080\u0004¢\u0006\f\n\u0004\b&\u0010e\u001a\u0004\bf\u0010gR\u001e\u0010(\u001a\u00060dR\u00020\u00008\u0000X\u0080\u0004¢\u0006\f\n\u0004\b(\u0010e\u001a\u0004\bh\u0010gR$\u0010\u000f\u001a\u0004\u0018\u00010\u000e8@@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b\u000f\u0010i\u001a\u0004\bj\u0010k\"\u0004\bl\u0010/R$\u0010\u0011\u001a\u0004\u0018\u00010\u00108\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b\u0011\u0010m\u001a\u0004\bn\u0010o\"\u0004\bp\u0010qR\u0011\u0010r\u001a\u00020\u00078F¢\u0006\u0006\u001a\u0004\br\u0010\u0015R\u0011\u0010s\u001a\u00020\u00078F¢\u0006\u0006\u001a\u0004\bs\u0010\u0015R\u0011\u0010t\u001a\u00020\u00078F¢\u0006\u0006\u001a\u0004\bt\u0010\u0015¨\u0006y"}, d2 = {"Lokhttp3/internal/http2/Http2Stream;", "Lokhttp3/internal/concurrent/Lockable;", "Lxu/q0;", "", "id", "Lokhttp3/internal/http2/Http2Connection;", "connection", "", "outFinished", "inFinished", "Lokhttp3/Headers;", "headers", "<init>", "(ILokhttp3/internal/http2/Http2Connection;ZZLokhttp3/Headers;)V", "Lokhttp3/internal/http2/ErrorCode;", "errorCode", "Ljava/io/IOException;", "errorException", "closeInternal", "(Lokhttp3/internal/http2/ErrorCode;Ljava/io/IOException;)Z", "doReadTimeout", "()Z", "callerIsIdle", "takeHeaders", "(Z)Lokhttp3/Headers;", "peekTrailers", "()Lokhttp3/Headers;", "", "Lokhttp3/internal/http2/Header;", "responseHeaders", "flushHeaders", "", "writeHeaders", "(Ljava/util/List;ZZ)V", "trailers", "enqueueTrailers", "(Lokhttp3/Headers;)V", "Lxu/s0;", "readTimeout", "()Lxu/s0;", "writeTimeout", "rstStatusCode", "close", "(Lokhttp3/internal/http2/ErrorCode;Ljava/io/IOException;)V", "cancel", "()V", "closeLater", "(Lokhttp3/internal/http2/ErrorCode;)V", "Lxu/g;", Payload.SOURCE, "length", "receiveData", "(Lxu/g;I)V", "receiveHeaders", "(Lokhttp3/Headers;Z)V", "receiveRstStream", "cancelStreamIfNecessary$okhttp", "cancelStreamIfNecessary", "", "delta", "addBytesToWriteWindow", "(J)V", "checkOutNotClosed$okhttp", "checkOutNotClosed", "waitForIo$okhttp", "waitForIo", "I", "getId", "()I", "Lokhttp3/internal/http2/Http2Connection;", "getConnection", "()Lokhttp3/internal/http2/Http2Connection;", "Lokhttp3/internal/http2/flowcontrol/WindowCounter;", "readBytes", "Lokhttp3/internal/http2/flowcontrol/WindowCounter;", "getReadBytes", "()Lokhttp3/internal/http2/flowcontrol/WindowCounter;", "value", "writeBytesTotal", "J", "getWriteBytesTotal", "()J", "setWriteBytesTotal$okhttp", "writeBytesMaximum", "getWriteBytesMaximum", "setWriteBytesMaximum$okhttp", "Ljava/util/ArrayDeque;", "headersQueue", "Ljava/util/ArrayDeque;", "hasResponseHeaders", "Z", "Lokhttp3/internal/http2/Http2Stream$FramingSource;", "Lokhttp3/internal/http2/Http2Stream$FramingSource;", "getSource", "()Lokhttp3/internal/http2/Http2Stream$FramingSource;", "Lokhttp3/internal/http2/Http2Stream$FramingSink;", "sink", "Lokhttp3/internal/http2/Http2Stream$FramingSink;", "getSink", "()Lokhttp3/internal/http2/Http2Stream$FramingSink;", "Lokhttp3/internal/http2/Http2Stream$StreamTimeout;", "Lokhttp3/internal/http2/Http2Stream$StreamTimeout;", "getReadTimeout$okhttp", "()Lokhttp3/internal/http2/Http2Stream$StreamTimeout;", "getWriteTimeout$okhttp", "Lokhttp3/internal/http2/ErrorCode;", "getErrorCode$okhttp", "()Lokhttp3/internal/http2/ErrorCode;", "setErrorCode$okhttp", "Ljava/io/IOException;", "getErrorException$okhttp", "()Ljava/io/IOException;", "setErrorException$okhttp", "(Ljava/io/IOException;)V", "isOpen", "isLocallyInitiated", "isSourceComplete", "Companion", "FramingSource", "FramingSink", "StreamTimeout", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000\u008a\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0010\t\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0015\u0018\u0000 u2\u00020\u00012\u00020\u0002:\u0004vwuxB3\b\u0000\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\b\u001a\u00020\u0007\u0012\u0006\u0010\t\u001a\u00020\u0007\u0012\b\u0010\u000b\u001a\u0004\u0018\u00010\n¢\u0006\u0004\b\f\u0010\rJ!\u0010\u0012\u001a\u00020\u00072\u0006\u0010\u000f\u001a\u00020\u000e2\b\u0010\u0011\u001a\u0004\u0018\u00010\u0010H\u0002¢\u0006\u0004\b\u0012\u0010\u0013J\u000f\u0010\u0014\u001a\u00020\u0007H\u0002¢\u0006\u0004\b\u0014\u0010\u0015J\u0017\u0010\u0017\u001a\u00020\n2\b\b\u0002\u0010\u0016\u001a\u00020\u0007¢\u0006\u0004\b\u0017\u0010\u0018J\u000f\u0010\u0019\u001a\u0004\u0018\u00010\n¢\u0006\u0004\b\u0019\u0010\u001aJ+\u0010 \u001a\u00020\u001f2\f\u0010\u001d\u001a\b\u0012\u0004\u0012\u00020\u001c0\u001b2\u0006\u0010\b\u001a\u00020\u00072\u0006\u0010\u001e\u001a\u00020\u0007¢\u0006\u0004\b \u0010!J\u0015\u0010#\u001a\u00020\u001f2\u0006\u0010\"\u001a\u00020\n¢\u0006\u0004\b#\u0010$J\r\u0010&\u001a\u00020%¢\u0006\u0004\b&\u0010'J\r\u0010(\u001a\u00020%¢\u0006\u0004\b(\u0010'J\u001f\u0010*\u001a\u00020\u001f2\u0006\u0010)\u001a\u00020\u000e2\b\u0010\u0011\u001a\u0004\u0018\u00010\u0010¢\u0006\u0004\b*\u0010+J\u000f\u0010,\u001a\u00020\u001fH\u0016¢\u0006\u0004\b,\u0010-J\u0015\u0010.\u001a\u00020\u001f2\u0006\u0010\u000f\u001a\u00020\u000e¢\u0006\u0004\b.\u0010/J\u001d\u00103\u001a\u00020\u001f2\u0006\u00101\u001a\u0002002\u0006\u00102\u001a\u00020\u0003¢\u0006\u0004\b3\u00104J\u001d\u00105\u001a\u00020\u001f2\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\t\u001a\u00020\u0007¢\u0006\u0004\b5\u00106J\u0015\u00107\u001a\u00020\u001f2\u0006\u0010\u000f\u001a\u00020\u000e¢\u0006\u0004\b7\u0010/J\u000f\u00109\u001a\u00020\u001fH\u0000¢\u0006\u0004\b8\u0010-J\u0015\u0010<\u001a\u00020\u001f2\u0006\u0010;\u001a\u00020:¢\u0006\u0004\b<\u0010=J\u000f\u0010?\u001a\u00020\u001fH\u0000¢\u0006\u0004\b>\u0010-J\u000f\u0010A\u001a\u00020\u001fH\u0000¢\u0006\u0004\b@\u0010-R\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b\u0004\u0010B\u001a\u0004\bC\u0010DR\u0017\u0010\u0006\u001a\u00020\u00058\u0006¢\u0006\f\n\u0004\b\u0006\u0010E\u001a\u0004\bF\u0010GR\u0017\u0010I\u001a\u00020H8\u0006¢\u0006\f\n\u0004\bI\u0010J\u001a\u0004\bK\u0010LR*\u0010N\u001a\u00020:2\u0006\u0010M\u001a\u00020:8\u0006@@X\u0086\u000e¢\u0006\u0012\n\u0004\bN\u0010O\u001a\u0004\bP\u0010Q\"\u0004\bR\u0010=R*\u0010S\u001a\u00020:2\u0006\u0010M\u001a\u00020:8\u0006@@X\u0086\u000e¢\u0006\u0012\n\u0004\bS\u0010O\u001a\u0004\bT\u0010Q\"\u0004\bU\u0010=R\u001a\u0010W\u001a\b\u0012\u0004\u0012\u00020\n0V8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bW\u0010XR\u0016\u0010Y\u001a\u00020\u00078\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bY\u0010ZR\u001e\u00101\u001a\u00060[R\u00020\u00008\u0016X\u0096\u0004¢\u0006\f\n\u0004\b1\u0010\\\u001a\u0004\b]\u0010^R\u001e\u0010`\u001a\u00060_R\u00020\u00008\u0016X\u0096\u0004¢\u0006\f\n\u0004\b`\u0010a\u001a\u0004\bb\u0010cR\u001e\u0010&\u001a\u00060dR\u00020\u00008\u0000X\u0080\u0004¢\u0006\f\n\u0004\b&\u0010e\u001a\u0004\bf\u0010gR\u001e\u0010(\u001a\u00060dR\u00020\u00008\u0000X\u0080\u0004¢\u0006\f\n\u0004\b(\u0010e\u001a\u0004\bh\u0010gR$\u0010\u000f\u001a\u0004\u0018\u00010\u000e8@@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b\u000f\u0010i\u001a\u0004\bj\u0010k\"\u0004\bl\u0010/R$\u0010\u0011\u001a\u0004\u0018\u00010\u00108\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b\u0011\u0010m\u001a\u0004\bn\u0010o\"\u0004\bp\u0010qR\u0011\u0010r\u001a\u00020\u00078F¢\u0006\u0006\u001a\u0004\br\u0010\u0015R\u0011\u0010s\u001a\u00020\u00078F¢\u0006\u0006\u001a\u0004\bs\u0010\u0015R\u0011\u0010t\u001a\u00020\u00078F¢\u0006\u0006\u001a\u0004\bt\u0010\u0015¨\u0006y"}, d2 = {"Lokhttp3/internal/http2/Http2Stream;", "Lokhttp3/internal/concurrent/Lockable;", "Lvu/q0;", "", "id", "Lokhttp3/internal/http2/Http2Connection;", "connection", "", "outFinished", "inFinished", "Lokhttp3/Headers;", "headers", "<init>", "(ILokhttp3/internal/http2/Http2Connection;ZZLokhttp3/Headers;)V", "Lokhttp3/internal/http2/ErrorCode;", "errorCode", "Ljava/io/IOException;", "errorException", "closeInternal", "(Lokhttp3/internal/http2/ErrorCode;Ljava/io/IOException;)Z", "doReadTimeout", "()Z", "callerIsIdle", "takeHeaders", "(Z)Lokhttp3/Headers;", "peekTrailers", "()Lokhttp3/Headers;", "", "Lokhttp3/internal/http2/Header;", "responseHeaders", "flushHeaders", "", "writeHeaders", "(Ljava/util/List;ZZ)V", "trailers", "enqueueTrailers", "(Lokhttp3/Headers;)V", "Lvu/s0;", "readTimeout", "()Lvu/s0;", "writeTimeout", "rstStatusCode", "close", "(Lokhttp3/internal/http2/ErrorCode;Ljava/io/IOException;)V", "cancel", "()V", "closeLater", "(Lokhttp3/internal/http2/ErrorCode;)V", "Lvu/g;", Payload.SOURCE, "length", "receiveData", "(Lvu/g;I)V", "receiveHeaders", "(Lokhttp3/Headers;Z)V", "receiveRstStream", "cancelStreamIfNecessary$okhttp", "cancelStreamIfNecessary", "", "delta", "addBytesToWriteWindow", "(J)V", "checkOutNotClosed$okhttp", "checkOutNotClosed", "waitForIo$okhttp", "waitForIo", "I", "getId", "()I", "Lokhttp3/internal/http2/Http2Connection;", "getConnection", "()Lokhttp3/internal/http2/Http2Connection;", "Lokhttp3/internal/http2/flowcontrol/WindowCounter;", "readBytes", "Lokhttp3/internal/http2/flowcontrol/WindowCounter;", "getReadBytes", "()Lokhttp3/internal/http2/flowcontrol/WindowCounter;", "value", "writeBytesTotal", "J", "getWriteBytesTotal", "()J", "setWriteBytesTotal$okhttp", "writeBytesMaximum", "getWriteBytesMaximum", "setWriteBytesMaximum$okhttp", "Ljava/util/ArrayDeque;", "headersQueue", "Ljava/util/ArrayDeque;", "hasResponseHeaders", "Z", "Lokhttp3/internal/http2/Http2Stream$FramingSource;", "Lokhttp3/internal/http2/Http2Stream$FramingSource;", "getSource", "()Lokhttp3/internal/http2/Http2Stream$FramingSource;", "Lokhttp3/internal/http2/Http2Stream$FramingSink;", "sink", "Lokhttp3/internal/http2/Http2Stream$FramingSink;", "getSink", "()Lokhttp3/internal/http2/Http2Stream$FramingSink;", "Lokhttp3/internal/http2/Http2Stream$StreamTimeout;", "Lokhttp3/internal/http2/Http2Stream$StreamTimeout;", "getReadTimeout$okhttp", "()Lokhttp3/internal/http2/Http2Stream$StreamTimeout;", "getWriteTimeout$okhttp", "Lokhttp3/internal/http2/ErrorCode;", "getErrorCode$okhttp", "()Lokhttp3/internal/http2/ErrorCode;", "setErrorCode$okhttp", "Ljava/io/IOException;", "getErrorException$okhttp", "()Ljava/io/IOException;", "setErrorException$okhttp", "(Ljava/io/IOException;)V", "isOpen", "isLocallyInitiated", "isSourceComplete", "Companion", "FramingSource", "FramingSink", "StreamTimeout", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class Http2Stream implements Lockable, q0 {
     public static final long EMIT_BUFFER_SIZE = 16384;
 
@@ -58,7 +58,7 @@ public final class Http2Stream implements Lockable, q0 {
     @NotNull
     private final StreamTimeout writeTimeout;
 
-    @Metadata(d1 = {"\u0000>\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0010\n\u0002\u0018\u0002\n\u0002\b\n\b\u0086\u0004\u0018\u00002\u00020\u0001B\u0019\b\u0000\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0017\u0010\n\u001a\u00020\t2\u0006\u0010\b\u001a\u00020\u0002H\u0002¢\u0006\u0004\b\n\u0010\u000bJ\u001f\u0010\b\u001a\u00020\u00022\u0006\u0010\r\u001a\u00020\f2\u0006\u0010\u000e\u001a\u00020\u0002H\u0016¢\u0006\u0004\b\b\u0010\u000fJ\u001f\u0010\u0014\u001a\u00020\t2\u0006\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u000e\u001a\u00020\u0002H\u0000¢\u0006\u0004\b\u0012\u0010\u0013J\u000f\u0010\u0016\u001a\u00020\u0015H\u0016¢\u0006\u0004\b\u0016\u0010\u0017J\u000f\u0010\u0018\u001a\u00020\tH\u0016¢\u0006\u0004\b\u0018\u0010\u0019R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0003\u0010\u001aR\"\u0010\u0005\u001a\u00020\u00048\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b\u0005\u0010\u001b\u001a\u0004\b\u001c\u0010\u001d\"\u0004\b\u001e\u0010\u001fR\u0017\u0010 \u001a\u00020\f8\u0006¢\u0006\f\n\u0004\b \u0010!\u001a\u0004\b\"\u0010#R\u0017\u0010$\u001a\u00020\f8\u0006¢\u0006\f\n\u0004\b$\u0010!\u001a\u0004\b%\u0010#R$\u0010'\u001a\u0004\u0018\u00010&8\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b'\u0010(\u001a\u0004\b)\u0010*\"\u0004\b+\u0010,R\"\u0010-\u001a\u00020\u00048\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b-\u0010\u001b\u001a\u0004\b.\u0010\u001d\"\u0004\b/\u0010\u001f¨\u00060"}, d2 = {"Lokhttp3/internal/http2/Http2Stream$FramingSource;", "Lxu/r0;", "", "maxByteCount", "", "finished", "<init>", "(Lokhttp3/internal/http2/Http2Stream;JZ)V", "read", "", "updateConnectionFlowControl", "(J)V", "Lxu/e;", "sink", "byteCount", "(Lxu/e;J)J", "Lxu/g;", Payload.SOURCE, "receive$okhttp", "(Lxu/g;J)V", "receive", "Lxu/s0;", "timeout", "()Lxu/s0;", "close", "()V", "J", "Z", "getFinished$okhttp", "()Z", "setFinished$okhttp", "(Z)V", "receiveBuffer", "Lxu/e;", "getReceiveBuffer", "()Lxu/e;", "readBuffer", "getReadBuffer", "Lokhttp3/Headers;", "trailers", "Lokhttp3/Headers;", "getTrailers", "()Lokhttp3/Headers;", "setTrailers", "(Lokhttp3/Headers;)V", "closed", "getClosed$okhttp", "setClosed$okhttp", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000>\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0010\n\u0002\u0018\u0002\n\u0002\b\n\b\u0086\u0004\u0018\u00002\u00020\u0001B\u0019\b\u0000\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0017\u0010\n\u001a\u00020\t2\u0006\u0010\b\u001a\u00020\u0002H\u0002¢\u0006\u0004\b\n\u0010\u000bJ\u001f\u0010\b\u001a\u00020\u00022\u0006\u0010\r\u001a\u00020\f2\u0006\u0010\u000e\u001a\u00020\u0002H\u0016¢\u0006\u0004\b\b\u0010\u000fJ\u001f\u0010\u0014\u001a\u00020\t2\u0006\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u000e\u001a\u00020\u0002H\u0000¢\u0006\u0004\b\u0012\u0010\u0013J\u000f\u0010\u0016\u001a\u00020\u0015H\u0016¢\u0006\u0004\b\u0016\u0010\u0017J\u000f\u0010\u0018\u001a\u00020\tH\u0016¢\u0006\u0004\b\u0018\u0010\u0019R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0003\u0010\u001aR\"\u0010\u0005\u001a\u00020\u00048\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b\u0005\u0010\u001b\u001a\u0004\b\u001c\u0010\u001d\"\u0004\b\u001e\u0010\u001fR\u0017\u0010 \u001a\u00020\f8\u0006¢\u0006\f\n\u0004\b \u0010!\u001a\u0004\b\"\u0010#R\u0017\u0010$\u001a\u00020\f8\u0006¢\u0006\f\n\u0004\b$\u0010!\u001a\u0004\b%\u0010#R$\u0010'\u001a\u0004\u0018\u00010&8\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b'\u0010(\u001a\u0004\b)\u0010*\"\u0004\b+\u0010,R\"\u0010-\u001a\u00020\u00048\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b-\u0010\u001b\u001a\u0004\b.\u0010\u001d\"\u0004\b/\u0010\u001f¨\u00060"}, d2 = {"Lokhttp3/internal/http2/Http2Stream$FramingSource;", "Lvu/r0;", "", "maxByteCount", "", "finished", "<init>", "(Lokhttp3/internal/http2/Http2Stream;JZ)V", "read", "", "updateConnectionFlowControl", "(J)V", "Lvu/e;", "sink", "byteCount", "(Lvu/e;J)J", "Lvu/g;", Payload.SOURCE, "receive$okhttp", "(Lvu/g;J)V", "receive", "Lvu/s0;", "timeout", "()Lvu/s0;", "close", "()V", "J", "Z", "getFinished$okhttp", "()Z", "setFinished$okhttp", "(Z)V", "receiveBuffer", "Lvu/e;", "getReceiveBuffer", "()Lvu/e;", "readBuffer", "getReadBuffer", "Lokhttp3/Headers;", "trailers", "Lokhttp3/Headers;", "getTrailers", "()Lokhttp3/Headers;", "setTrailers", "(Lokhttp3/Headers;)V", "closed", "getClosed$okhttp", "setClosed$okhttp", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public final class FramingSource implements r0 {
         private boolean closed;
         private boolean finished;
@@ -68,10 +68,10 @@ public final class Http2Stream implements Lockable, q0 {
         private Headers trailers;
 
         @NotNull
-        private final xu.e receiveBuffer = new xu.e();
+        private final vu.e receiveBuffer = new vu.e();
 
         @NotNull
-        private final xu.e readBuffer = new xu.e();
+        private final vu.e readBuffer = new vu.e();
 
         public FramingSource(long j10, boolean z10) {
             this.maxByteCount = j10;
@@ -87,7 +87,7 @@ public final class Http2Stream implements Lockable, q0 {
             throw new AssertionError("Thread " + Thread.currentThread().getName() + " MUST NOT hold lock on " + http2Stream);
         }
 
-        @Override // xu.r0, java.io.Closeable, java.lang.AutoCloseable
+        @Override // vu.r0, java.io.Closeable, java.lang.AutoCloseable
         public void close() {
             long size;
             Http2Stream http2Stream = Http2Stream.this;
@@ -97,7 +97,7 @@ public final class Http2Stream implements Lockable, q0 {
                 this.readBuffer.a();
                 Intrinsics.d(http2Stream, "null cannot be cast to non-null type java.lang.Object");
                 http2Stream.notifyAll();
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             }
             if (size > 0) {
                 updateConnectionFlowControl(size);
@@ -116,12 +116,12 @@ public final class Http2Stream implements Lockable, q0 {
         }
 
         @NotNull
-        public final xu.e getReadBuffer() {
+        public final vu.e getReadBuffer() {
             return this.readBuffer;
         }
 
         @NotNull
-        public final xu.e getReceiveBuffer() {
+        public final vu.e getReceiveBuffer() {
             return this.receiveBuffer;
         }
 
@@ -130,8 +130,8 @@ public final class Http2Stream implements Lockable, q0 {
             return this.trailers;
         }
 
-        @Override // xu.r0
-        public long read(@NotNull xu.e sink, long byteCount) throws IOException {
+        @Override // vu.r0
+        public long read(@NotNull vu.e sink, long byteCount) throws IOException {
             IOException errorException;
             boolean z10;
             long j10;
@@ -163,7 +163,7 @@ public final class Http2Stream implements Lockable, q0 {
                         }
                         z10 = false;
                         if (this.readBuffer.getSize() > j11) {
-                            xu.e eVar = this.readBuffer;
+                            vu.e eVar = this.readBuffer;
                             j10 = eVar.read(sink, Math.min(byteCount, eVar.getSize()));
                             WindowCounter.update$default(http2Stream.getReadBytes(), j10, 0L, 2, null);
                             long unacknowledged = http2Stream.getReadBytes().getUnacknowledged();
@@ -181,7 +181,7 @@ public final class Http2Stream implements Lockable, q0 {
                         if (zDoReadTimeout) {
                             http2Stream.getReadTimeout().exitAndThrowIfTimedOut();
                         }
-                        Unit unit = Unit.f22483a;
+                        Unit unit = Unit.f22938a;
                     } catch (Throwable th2) {
                         if (zDoReadTimeout) {
                             http2Stream.getReadTimeout().exitAndThrowIfTimedOut();
@@ -204,7 +204,7 @@ public final class Http2Stream implements Lockable, q0 {
             }
         }
 
-        public final void receive$okhttp(@NotNull xu.g source, long byteCount) throws EOFException {
+        public final void receive$okhttp(@NotNull vu.g source, long byteCount) throws EOFException {
             boolean z10;
             boolean z11;
             Intrinsics.checkNotNullParameter(source, "source");
@@ -217,7 +217,7 @@ public final class Http2Stream implements Lockable, q0 {
                 synchronized (Http2Stream.this) {
                     z10 = this.finished;
                     z11 = this.readBuffer.getSize() + j10 > this.maxByteCount;
-                    Unit unit = Unit.f22483a;
+                    Unit unit = Unit.f22938a;
                 }
                 if (z11) {
                     source.skip(j10);
@@ -240,7 +240,7 @@ public final class Http2Stream implements Lockable, q0 {
                             this.receiveBuffer.a();
                         } else {
                             boolean z12 = this.readBuffer.getSize() == 0;
-                            this.readBuffer.g2(this.receiveBuffer);
+                            this.readBuffer.c3(this.receiveBuffer);
                             if (z12) {
                                 Intrinsics.d(http2Stream2, "null cannot be cast to non-null type java.lang.Object");
                                 http2Stream2.notifyAll();
@@ -267,7 +267,7 @@ public final class Http2Stream implements Lockable, q0 {
             this.trailers = headers;
         }
 
-        @Override // xu.r0
+        @Override // vu.r0
         @NotNull
         /* JADX INFO: renamed from: timeout */
         public s0 getTimeout() {
@@ -275,8 +275,8 @@ public final class Http2Stream implements Lockable, q0 {
         }
     }
 
-    @Metadata(d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0080\u0004\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0014¢\u0006\u0004\b\u0005\u0010\u0006J\u0019\u0010\t\u001a\u00020\u00072\b\u0010\b\u001a\u0004\u0018\u00010\u0007H\u0014¢\u0006\u0004\b\t\u0010\nJ\r\u0010\u000b\u001a\u00020\u0004¢\u0006\u0004\b\u000b\u0010\u0006¨\u0006\f"}, d2 = {"Lokhttp3/internal/http2/Http2Stream$StreamTimeout;", "Lxu/c;", "<init>", "(Lokhttp3/internal/http2/Http2Stream;)V", "", "timedOut", "()V", "Ljava/io/IOException;", "cause", "newTimeoutException", "(Ljava/io/IOException;)Ljava/io/IOException;", "exitAndThrowIfTimedOut", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    public final class StreamTimeout extends xu.c {
+    @Metadata(d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0080\u0004\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0014¢\u0006\u0004\b\u0005\u0010\u0006J\u0019\u0010\t\u001a\u00020\u00072\b\u0010\b\u001a\u0004\u0018\u00010\u0007H\u0014¢\u0006\u0004\b\t\u0010\nJ\r\u0010\u000b\u001a\u00020\u0004¢\u0006\u0004\b\u000b\u0010\u0006¨\u0006\f"}, d2 = {"Lokhttp3/internal/http2/Http2Stream$StreamTimeout;", "Lvu/c;", "<init>", "(Lokhttp3/internal/http2/Http2Stream;)V", "", "timedOut", "()V", "Ljava/io/IOException;", "cause", "newTimeoutException", "(Ljava/io/IOException;)Ljava/io/IOException;", "exitAndThrowIfTimedOut", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public final class StreamTimeout extends vu.c {
         public StreamTimeout() {
         }
 
@@ -286,7 +286,7 @@ public final class Http2Stream implements Lockable, q0 {
             }
         }
 
-        @Override // xu.c
+        @Override // vu.c
         @NotNull
         public IOException newTimeoutException(@Nullable IOException cause) {
             SocketTimeoutException socketTimeoutException = new SocketTimeoutException("timeout");
@@ -296,7 +296,7 @@ public final class Http2Stream implements Lockable, q0 {
             return socketTimeoutException;
         }
 
-        @Override // xu.c
+        @Override // vu.c
         public void timedOut() {
             Http2Stream.this.closeLater(ErrorCode.CANCEL);
             Http2Stream.this.getConnection().sendDegradedPingLater$okhttp();
@@ -342,7 +342,7 @@ public final class Http2Stream implements Lockable, q0 {
             if (getSource().getFinished() && getSink().getFinished()) {
                 return false;
             }
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
             this.connection.removeStream$okhttp(this.id);
             return true;
         }
@@ -368,7 +368,7 @@ public final class Http2Stream implements Lockable, q0 {
         }
     }
 
-    @Override // xu.q0
+    @Override // vu.q0
     public void cancel() {
         closeLater(ErrorCode.CANCEL);
     }
@@ -383,7 +383,7 @@ public final class Http2Stream implements Lockable, q0 {
             try {
                 z10 = !getSource().getFinished() && getSource().getClosed() && (getSink().getFinished() || getSink().getClosed());
                 zIsOpen = isOpen();
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -440,7 +440,7 @@ public final class Http2Stream implements Lockable, q0 {
                 throw new IllegalArgumentException("trailers.size() == 0");
             }
             getSink().setTrailers(trailers);
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
         }
     }
 
@@ -518,7 +518,7 @@ public final class Http2Stream implements Lockable, q0 {
     public final boolean isSourceComplete() {
         boolean z10;
         synchronized (this) {
-            z10 = getSource().getFinished() && getSource().getReadBuffer().Z1();
+            z10 = getSource().getFinished() && getSource().getReadBuffer().a2();
         }
         return z10;
     }
@@ -526,7 +526,7 @@ public final class Http2Stream implements Lockable, q0 {
     @Nullable
     public final Headers peekTrailers() throws IOException {
         synchronized (this) {
-            if (getSource().getFinished() && getSource().getReceiveBuffer().Z1() && getSource().getReadBuffer().Z1()) {
+            if (getSource().getFinished() && getSource().getReceiveBuffer().a2() && getSource().getReadBuffer().a2()) {
                 Headers trailers = getSource().getTrailers();
                 if (trailers == null) {
                     trailers = Headers.EMPTY;
@@ -551,7 +551,7 @@ public final class Http2Stream implements Lockable, q0 {
         return this.readTimeout;
     }
 
-    public final void receiveData(@NotNull xu.g source, int length) {
+    public final void receiveData(@NotNull vu.g source, int length) {
         Intrinsics.checkNotNullParameter(source, "source");
         if (!_UtilJvmKt.assertionsEnabled || !Thread.holdsLock(this)) {
             getSource().receive$okhttp(source, length);
@@ -580,7 +580,7 @@ public final class Http2Stream implements Lockable, q0 {
                 zIsOpen = isOpen();
                 Intrinsics.d(this, "null cannot be cast to non-null type java.lang.Object");
                 notifyAll();
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -600,7 +600,7 @@ public final class Http2Stream implements Lockable, q0 {
                     Intrinsics.d(this, "null cannot be cast to non-null type java.lang.Object");
                     notifyAll();
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -687,7 +687,7 @@ public final class Http2Stream implements Lockable, q0 {
                     Intrinsics.d(this, "null cannot be cast to non-null type java.lang.Object");
                     notifyAll();
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -708,32 +708,32 @@ public final class Http2Stream implements Lockable, q0 {
         return this.writeTimeout;
     }
 
-    @Override // xu.q0
+    @Override // vu.q0
     @NotNull
     public FramingSink getSink() {
         return this.sink;
     }
 
-    @Override // xu.q0
+    @Override // vu.q0
     @NotNull
     public FramingSource getSource() {
         return this.source;
     }
 
-    @Metadata(d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\n\b\u0086\u0004\u0018\u00002\u00020\u0001B\u0011\u0012\b\b\u0002\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u0017\u0010\b\u001a\u00020\u00072\u0006\u0010\u0006\u001a\u00020\u0002H\u0002¢\u0006\u0004\b\b\u0010\tJ\u001f\u0010\u000e\u001a\u00020\u00072\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\fH\u0016¢\u0006\u0004\b\u000e\u0010\u000fJ\u000f\u0010\u0010\u001a\u00020\u0007H\u0016¢\u0006\u0004\b\u0010\u0010\u0011J\u000f\u0010\u0013\u001a\u00020\u0012H\u0016¢\u0006\u0004\b\u0013\u0010\u0014J\u000f\u0010\u0015\u001a\u00020\u0007H\u0016¢\u0006\u0004\b\u0015\u0010\u0011R\"\u0010\u0003\u001a\u00020\u00028\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b\u0003\u0010\u0016\u001a\u0004\b\u0017\u0010\u0018\"\u0004\b\u0019\u0010\tR\u0014\u0010\u001a\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001a\u0010\u001bR$\u0010\u001d\u001a\u0004\u0018\u00010\u001c8\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b\u001d\u0010\u001e\u001a\u0004\b\u001f\u0010 \"\u0004\b!\u0010\"R\"\u0010#\u001a\u00020\u00028\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b#\u0010\u0016\u001a\u0004\b$\u0010\u0018\"\u0004\b%\u0010\t¨\u0006&"}, d2 = {"Lokhttp3/internal/http2/Http2Stream$FramingSink;", "Lxu/p0;", "", "finished", "<init>", "(Lokhttp3/internal/http2/Http2Stream;Z)V", "outFinishedOnLastFrame", "", "emitFrame", "(Z)V", "Lxu/e;", Payload.SOURCE, "", "byteCount", "write", "(Lxu/e;J)V", "flush", "()V", "Lxu/s0;", "timeout", "()Lxu/s0;", "close", "Z", "getFinished", "()Z", "setFinished", "sendBuffer", "Lxu/e;", "Lokhttp3/Headers;", "trailers", "Lokhttp3/Headers;", "getTrailers", "()Lokhttp3/Headers;", "setTrailers", "(Lokhttp3/Headers;)V", "closed", "getClosed", "setClosed", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\n\b\u0086\u0004\u0018\u00002\u00020\u0001B\u0011\u0012\b\b\u0002\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u0017\u0010\b\u001a\u00020\u00072\u0006\u0010\u0006\u001a\u00020\u0002H\u0002¢\u0006\u0004\b\b\u0010\tJ\u001f\u0010\u000e\u001a\u00020\u00072\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\fH\u0016¢\u0006\u0004\b\u000e\u0010\u000fJ\u000f\u0010\u0010\u001a\u00020\u0007H\u0016¢\u0006\u0004\b\u0010\u0010\u0011J\u000f\u0010\u0013\u001a\u00020\u0012H\u0016¢\u0006\u0004\b\u0013\u0010\u0014J\u000f\u0010\u0015\u001a\u00020\u0007H\u0016¢\u0006\u0004\b\u0015\u0010\u0011R\"\u0010\u0003\u001a\u00020\u00028\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b\u0003\u0010\u0016\u001a\u0004\b\u0017\u0010\u0018\"\u0004\b\u0019\u0010\tR\u0014\u0010\u001a\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001a\u0010\u001bR$\u0010\u001d\u001a\u0004\u0018\u00010\u001c8\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b\u001d\u0010\u001e\u001a\u0004\b\u001f\u0010 \"\u0004\b!\u0010\"R\"\u0010#\u001a\u00020\u00028\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b#\u0010\u0016\u001a\u0004\b$\u0010\u0018\"\u0004\b%\u0010\t¨\u0006&"}, d2 = {"Lokhttp3/internal/http2/Http2Stream$FramingSink;", "Lvu/p0;", "", "finished", "<init>", "(Lokhttp3/internal/http2/Http2Stream;Z)V", "outFinishedOnLastFrame", "", "emitFrame", "(Z)V", "Lvu/e;", Payload.SOURCE, "", "byteCount", "write", "(Lvu/e;J)V", "flush", "()V", "Lvu/s0;", "timeout", "()Lvu/s0;", "close", "Z", "getFinished", "()Z", "setFinished", "sendBuffer", "Lvu/e;", "Lokhttp3/Headers;", "trailers", "Lokhttp3/Headers;", "getTrailers", "()Lokhttp3/Headers;", "setTrailers", "(Lokhttp3/Headers;)V", "closed", "getClosed", "setClosed", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public final class FramingSink implements p0 {
         private boolean closed;
         private boolean finished;
 
         @NotNull
-        private final xu.e sendBuffer;
+        private final vu.e sendBuffer;
 
         @Nullable
         private Headers trailers;
 
         public FramingSink(boolean z10) {
             this.finished = z10;
-            this.sendBuffer = new xu.e();
+            this.sendBuffer = new vu.e();
         }
 
         private final void emitFrame(boolean outFinishedOnLastFrame) throws IOException {
@@ -756,7 +756,7 @@ public final class Http2Stream implements Lockable, q0 {
                     jMin = Math.min(http2Stream.getWriteBytesMaximum() - http2Stream.getWriteBytesTotal(), this.sendBuffer.getSize());
                     http2Stream.setWriteBytesTotal$okhttp(http2Stream.getWriteBytesTotal() + jMin);
                     z10 = outFinishedOnLastFrame && jMin == this.sendBuffer.getSize();
-                    Unit unit = Unit.f22483a;
+                    Unit unit = Unit.f22938a;
                 } catch (Throwable th3) {
                     throw th3;
                 }
@@ -769,7 +769,7 @@ public final class Http2Stream implements Lockable, q0 {
             }
         }
 
-        @Override // xu.p0, java.io.Closeable, java.lang.AutoCloseable
+        @Override // vu.p0, java.io.Closeable, java.lang.AutoCloseable
         public void close() {
             Http2Stream http2Stream = Http2Stream.this;
             if (_UtilJvmKt.assertionsEnabled && Thread.holdsLock(http2Stream)) {
@@ -781,7 +781,7 @@ public final class Http2Stream implements Lockable, q0 {
                     return;
                 }
                 boolean z10 = http2Stream2.getErrorCode$okhttp() == null;
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
                 if (!Http2Stream.this.getSink().finished) {
                     boolean z11 = this.sendBuffer.getSize() > 0;
                     if (this.trailers != null) {
@@ -806,14 +806,14 @@ public final class Http2Stream implements Lockable, q0 {
                     this.closed = true;
                     Intrinsics.d(http2Stream3, "null cannot be cast to non-null type java.lang.Object");
                     http2Stream3.notifyAll();
-                    Unit unit2 = Unit.f22483a;
+                    Unit unit2 = Unit.f22938a;
                 }
                 Http2Stream.this.getConnection().flush();
                 Http2Stream.this.cancelStreamIfNecessary$okhttp();
             }
         }
 
-        @Override // xu.p0, java.io.Flushable
+        @Override // vu.p0, java.io.Flushable
         public void flush() throws IOException {
             Http2Stream http2Stream = Http2Stream.this;
             if (_UtilJvmKt.assertionsEnabled && Thread.holdsLock(http2Stream)) {
@@ -822,7 +822,7 @@ public final class Http2Stream implements Lockable, q0 {
             Http2Stream http2Stream2 = Http2Stream.this;
             synchronized (http2Stream2) {
                 http2Stream2.checkOutNotClosed$okhttp();
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             }
             while (this.sendBuffer.getSize() > 0) {
                 emitFrame(false);
@@ -855,15 +855,15 @@ public final class Http2Stream implements Lockable, q0 {
             this.trailers = headers;
         }
 
-        @Override // xu.p0
+        @Override // vu.p0
         @NotNull
         /* JADX INFO: renamed from: timeout */
         public s0 getTimeout() {
             return Http2Stream.this.getWriteTimeout();
         }
 
-        @Override // xu.p0
-        public void write(@NotNull xu.e source, long byteCount) throws IOException {
+        @Override // vu.p0
+        public void write(@NotNull vu.e source, long byteCount) throws IOException {
             Intrinsics.checkNotNullParameter(source, "source");
             Http2Stream http2Stream = Http2Stream.this;
             if (!_UtilJvmKt.assertionsEnabled || !Thread.holdsLock(http2Stream)) {

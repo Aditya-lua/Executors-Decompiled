@@ -12,14 +12,14 @@ public final class zzq extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzq> CREATOR = new c2();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f6337f;
+    public final int f6410f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final zzx f6338g;
+    public final zzx f6411g;
 
     public zzq(int i10, zzx zzxVar) {
-        this.f6337f = i10;
-        this.f6338g = zzxVar;
+        this.f6410f = i10;
+        this.f6411g = zzxVar;
     }
 
     public static zzq v3(int i10) {
@@ -38,30 +38,30 @@ public final class zzq extends AbstractSafeParcelable {
             return false;
         }
         zzq zzqVar = (zzq) obj;
-        return this.f6337f == zzqVar.f6337f && k.b(this.f6338g, zzqVar.f6338g);
+        return this.f6410f == zzqVar.f6410f && k.b(this.f6411g, zzqVar.f6411g);
     }
 
     public final int hashCode() {
-        return k.c(Integer.valueOf(this.f6337f), this.f6338g);
+        return k.c(Integer.valueOf(this.f6410f), this.f6411g);
     }
 
     public final String toString() {
-        return k.d(this).a("signInType", Integer.valueOf(this.f6337f)).a("previousStepResolutionResult", this.f6338g).toString();
+        return k.d(this).a("signInType", Integer.valueOf(this.f6410f)).a("previousStepResolutionResult", this.f6411g).toString();
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i10) {
         int iA = b.a(parcel);
-        b.n(parcel, 1, this.f6337f);
-        b.t(parcel, 2, this.f6338g, i10, false);
+        b.n(parcel, 1, this.f6410f);
+        b.t(parcel, 2, this.f6411g, i10, false);
         b.b(parcel, iA);
     }
 
     public final int zzc() {
-        return this.f6337f;
+        return this.f6410f;
     }
 
     public final boolean zzd() {
-        return this.f6338g == null;
+        return this.f6411g == null;
     }
 }

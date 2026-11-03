@@ -4,7 +4,7 @@ package com.google.android.gms.internal.play_billing;
 public class w3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final /* synthetic */ int f7337a = 0;
+    public static final /* synthetic */ int f7411a = 0;
 
     public /* synthetic */ w3(v3 v3Var) {
     }

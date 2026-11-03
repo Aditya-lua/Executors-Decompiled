@@ -8,5 +8,5 @@ import kotlin.Metadata;
 public final class h0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final long f35631a = TimeUnit.DAYS.toMillis(1);
+    public static final long f36488a = TimeUnit.DAYS.toMillis(1);
 }

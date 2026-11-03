@@ -20,10 +20,10 @@ import backtraceio.library.services.BacktraceMetrics;
 public class t {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final int[] f29103c = {R.attr.indeterminateDrawable, R.attr.progressDrawable};
+    public static final int[] f29456c = {R.attr.indeterminateDrawable, R.attr.progressDrawable};
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ProgressBar f29104a;
+    public final ProgressBar f29457a;
     public Bitmap b;
 
     public static class a {
@@ -41,7 +41,7 @@ public class t {
     }
 
     public t(ProgressBar progressBar) {
-        this.f29104a = progressBar;
+        this.f29457a = progressBar;
     }
 
     public final Shape a() {
@@ -53,14 +53,14 @@ public class t {
     }
 
     public void c(AttributeSet attributeSet, int i10) {
-        a1 a1VarV = a1.v(this.f29104a.getContext(), attributeSet, f29103c, i10, 0);
+        a1 a1VarV = a1.v(this.f29457a.getContext(), attributeSet, f29456c, i10, 0);
         Drawable drawableH = a1VarV.h(0);
         if (drawableH != null) {
-            this.f29104a.setIndeterminateDrawable(e(drawableH));
+            this.f29457a.setIndeterminateDrawable(e(drawableH));
         }
         Drawable drawableH2 = a1VarV.h(1);
         if (drawableH2 != null) {
-            this.f29104a.setProgressDrawable(d(drawableH2, false));
+            this.f29457a.setProgressDrawable(d(drawableH2, false));
         }
         a1VarV.x();
     }

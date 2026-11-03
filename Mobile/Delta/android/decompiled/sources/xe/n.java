@@ -1,105 +1,96 @@
 package xe;
 
+import af.c0;
+import af.f0;
 import java.security.GeneralSecurityException;
-import java.util.Arrays;
-import oe.w;
-import ve.e0;
-import ve.l0;
-import ve.o0;
-import ve.p;
-import ze.f0;
-import ze.p0;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import we.a0;
+import we.h0;
+import we.r0;
 
 /* JADX INFO: loaded from: classes2.dex */
-public final class n implements w {
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final byte[] f35176d = {0};
+public final class n {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final w f35177a;
-    public final p0 b;
+    public static final h0<i, g> f35710a = h0.b(new h0.b() { // from class: xe.j
+        @Override // we.h0.b
+        public final Object a(pe.l lVar) {
+            return new ye.h((i) lVar);
+        }
+    }, i.class, g.class);
+    public static final h0<i, pe.w> b = h0.b(new h0.b() { // from class: xe.k
+        @Override // we.h0.b
+        public final Object a(pe.l lVar) {
+            return df.t.d((i) lVar);
+        }
+    }, i.class, pe.w.class);
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final byte[] f35178c;
+    public static final pe.m<pe.w> f35711c = we.o.e("type.googleapis.com/google.crypto.tink.HmacKey", pe.w.class, f0.c.SYMMETRIC, c0.i0());
 
-    public static /* synthetic */ class a {
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public static final we.x.a<o> f35712d = new qe.h();
 
-        /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f35179a;
-
-        static {
-            int[] iArr = new int[p0.values().length];
-            f35179a = iArr;
-            try {
-                iArr[p0.RAW.ordinal()] = 1;
-            } catch (NoSuchFieldError unused) {
-            }
-            try {
-                f35179a[p0.LEGACY.ordinal()] = 2;
-            } catch (NoSuchFieldError unused2) {
-            }
-            try {
-                f35179a[p0.CRUNCHY.ordinal()] = 3;
-            } catch (NoSuchFieldError unused3) {
-            }
-            try {
-                f35179a[p0.TINK.ordinal()] = 4;
-            } catch (NoSuchFieldError unused4) {
-            }
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public static final we.w.a<o> f35713e = new we.w.a() { // from class: xe.l
+        @Override // we.w.a
+        public final pe.l a(pe.x xVar, Integer num) {
+            return n.b((o) xVar, num);
         }
+    };
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    public static final ue.b.EnumC0590b f35714f = ue.b.EnumC0590b.b;
+
+    public static i b(o oVar, Integer num) {
+        return i.b().e(oVar).d(ef.c.b(oVar.e())).c(num).a();
     }
 
-    public n(w wVar, p0 p0Var, byte[] bArr) {
-        this.f35177a = wVar;
-        this.b = p0Var;
-        this.f35178c = bArr;
-    }
-
-    public static w c(p pVar) throws GeneralSecurityException {
-        byte[] bArrD;
-        l0 l0VarB = pVar.b(oe.j.a());
-        w wVar = (w) o0.d().e(f0.h0().D(l0VarB.f()).E(l0VarB.g()).C(l0VarB.d()).build(), w.class);
-        p0 p0VarE = l0VarB.e();
-        int i10 = a.f35179a[p0VarE.ordinal()];
-        if (i10 == 1) {
-            bArrD = e0.f32930a.d();
-        } else if (i10 == 2 || i10 == 3) {
-            bArrD = e0.a(pVar.a().intValue()).d();
-        } else {
-            if (i10 != 4) {
-                throw new GeneralSecurityException("unknown output prefix type");
+    public static final pe.o c() {
+        return (pe.o) r0.a(new r0.a() { // from class: xe.m
+            @Override // we.r0.a
+            public final Object get() {
+                return pe.o.a(o.b().c(32).d(16).b(o.c.f35722d).e(o.d.b).a());
             }
-            bArrD = e0.b(pVar.a().intValue()).d();
-        }
-        return new n(wVar, p0VarE, bArrD);
+        });
     }
 
-    @Override // oe.w
-    public void a(byte[] bArr, byte[] bArr2) throws GeneralSecurityException {
-        if (bArr.length < 10) {
-            throw new GeneralSecurityException("tag too short");
-        }
-        if (this.b.equals(p0.LEGACY)) {
-            bArr2 = cf.e.a(bArr2, f35176d);
-        }
-        byte[] bArr3 = new byte[0];
-        if (!this.b.equals(p0.RAW)) {
-            byte[] bArrCopyOf = Arrays.copyOf(bArr, 5);
-            bArr = Arrays.copyOfRange(bArr, 5, bArr.length);
-            bArr3 = bArrCopyOf;
-        }
-        if (!Arrays.equals(this.f35178c, bArr3)) {
-            throw new GeneralSecurityException("wrong prefix");
-        }
-        this.f35177a.a(bArr, bArr2);
+    public static Map<String, pe.x> d() {
+        HashMap map = new HashMap();
+        map.put("HMAC_SHA256_128BITTAG", z.f35736a);
+        o.b bVarD = o.b().c(32).d(16);
+        o.d dVar = o.d.f35728e;
+        o.b bVarE = bVarD.e(dVar);
+        o.c cVar = o.c.f35722d;
+        map.put("HMAC_SHA256_128BITTAG_RAW", bVarE.b(cVar).a());
+        o.b bVarD2 = o.b().c(32).d(32);
+        o.d dVar2 = o.d.b;
+        map.put("HMAC_SHA256_256BITTAG", bVarD2.e(dVar2).b(cVar).a());
+        map.put("HMAC_SHA256_256BITTAG_RAW", o.b().c(32).d(32).e(dVar).b(cVar).a());
+        o.b bVarE2 = o.b().c(64).d(16).e(dVar2);
+        o.c cVar2 = o.c.f35724f;
+        map.put("HMAC_SHA512_128BITTAG", bVarE2.b(cVar2).a());
+        map.put("HMAC_SHA512_128BITTAG_RAW", o.b().c(64).d(16).e(dVar).b(cVar2).a());
+        map.put("HMAC_SHA512_256BITTAG", o.b().c(64).d(32).e(dVar2).b(cVar2).a());
+        map.put("HMAC_SHA512_256BITTAG_RAW", o.b().c(64).d(32).e(dVar).b(cVar2).a());
+        map.put("HMAC_SHA512_512BITTAG", z.f35738d);
+        map.put("HMAC_SHA512_512BITTAG_RAW", o.b().c(64).d(64).e(dVar).b(cVar2).a());
+        return Collections.unmodifiableMap(map);
     }
 
-    @Override // oe.w
-    public byte[] b(byte[] bArr) throws GeneralSecurityException {
-        if (this.b.equals(p0.LEGACY)) {
-            bArr = cf.e.a(bArr, f35176d);
+    public static void e(boolean z10) throws GeneralSecurityException {
+        ue.b.EnumC0590b enumC0590b = f35714f;
+        if (!enumC0590b.a()) {
+            throw new GeneralSecurityException("Can not use HMAC in FIPS-mode, as BoringCrypto module is not available.");
         }
-        return cf.e.a(this.f35178c, this.f35177a.b(bArr));
+        ye.m.h();
+        a0.c().d(f35710a);
+        a0.c().d(b);
+        we.z.a().c(d());
+        we.w.f().b(f35713e, o.class);
+        we.x.b().a(f35712d, o.class);
+        we.l.d().h(f35711c, enumC0590b, z10);
     }
 }

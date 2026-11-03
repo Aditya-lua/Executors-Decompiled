@@ -13,7 +13,7 @@ import com.roblox.client.personasdk.BuildConfig;
 public class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final int f21184a = h.f21189a;
+    public static final int f21757a = h.f21762a;
     public static final d b = new d();
 
     @NonNull
@@ -42,7 +42,7 @@ public class d {
         }
         StringBuilder sb2 = new StringBuilder();
         sb2.append("gcore_");
-        sb2.append(f21184a);
+        sb2.append(f21757a);
         sb2.append("-");
         if (!TextUtils.isEmpty(str)) {
             sb2.append(str);
@@ -88,7 +88,7 @@ public class d {
     }
 
     public int g(@NonNull Context context) {
-        return h(context, f21184a);
+        return h(context, f21757a);
     }
 
     public int h(@NonNull Context context, int i10) {

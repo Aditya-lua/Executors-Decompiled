@@ -6,11 +6,11 @@ import java.util.Arrays;
 public class b extends c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Object[] f14536a = new Object[4];
+    public Object[] f14516a = new Object[4];
     public int b = 0;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f14537c;
+    public boolean f14517c;
 
     public b(int i10) {
     }
@@ -18,7 +18,7 @@ public class b extends c {
     public final b a(Object obj) {
         int i10;
         obj.getClass();
-        int length = this.f14536a.length;
+        int length = this.f14516a.length;
         int i11 = this.b;
         int i12 = i11 + 1;
         if (i12 < 0) {
@@ -36,11 +36,11 @@ public class b extends c {
                 i10 = Integer.MAX_VALUE;
             }
         }
-        if (i10 > length || this.f14537c) {
-            this.f14536a = Arrays.copyOf(this.f14536a, i10);
-            this.f14537c = false;
+        if (i10 > length || this.f14517c) {
+            this.f14516a = Arrays.copyOf(this.f14516a, i10);
+            this.f14517c = false;
         }
-        Object[] objArr = this.f14536a;
+        Object[] objArr = this.f14516a;
         int i13 = this.b;
         this.b = i13 + 1;
         objArr[i13] = obj;

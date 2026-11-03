@@ -4,15 +4,15 @@ package y7;
 public final class b extends f {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Integer f35758a;
+    public final Integer f36615a;
 
     public b(Integer num) {
-        this.f35758a = num;
+        this.f36615a = num;
     }
 
     @Override // y7.f
     public Integer a() {
-        return this.f35758a;
+        return this.f36615a;
     }
 
     public boolean equals(Object obj) {
@@ -22,7 +22,7 @@ public final class b extends f {
         if (!(obj instanceof f)) {
             return false;
         }
-        Integer num = this.f35758a;
+        Integer num = this.f36615a;
         Integer numA = ((f) obj).a();
         if (num == null) {
             return numA == null;
@@ -31,11 +31,11 @@ public final class b extends f {
     }
 
     public int hashCode() {
-        Integer num = this.f35758a;
+        Integer num = this.f36615a;
         return (num == null ? 0 : num.hashCode()) ^ 1000003;
     }
 
     public String toString() {
-        return "ProductData{productId=" + this.f35758a + "}";
+        return "ProductData{productId=" + this.f36615a + "}";
     }
 }

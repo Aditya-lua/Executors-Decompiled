@@ -15,21 +15,21 @@ public final class i0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final i0 f35634a = new i0();
+    public static final i0 f36491a = new i0();
 
     public static final void c(@NotNull Context context) {
         Intrinsics.checkNotNullParameter(context, "context");
-        i0 i0Var = f35634a;
+        i0 i0Var = f36491a;
         if (i0Var.b(context).exists()) {
-            x5.w.e().a(j0.f35638a, "Migrating WorkDatabase to the no-backup directory");
+            x5.w.e().a(j0.f36495a, "Migrating WorkDatabase to the no-backup directory");
             for (Map.Entry<File, File> entry : i0Var.d(context).entrySet()) {
                 File key = entry.getKey();
                 File value = entry.getValue();
                 if (key.exists()) {
                     if (value.exists()) {
-                        x5.w.e().k(j0.f35638a, "Over-writing contents of " + value);
+                        x5.w.e().k(j0.f36495a, "Over-writing contents of " + value);
                     }
-                    x5.w.e().a(j0.f35638a, key.renameTo(value) ? "Migrated " + key + "to " + value : "Renaming " + key + " to " + value + " failed");
+                    x5.w.e().a(j0.f36495a, key.renameTo(value) ? "Migrated " + key + "to " + value : "Renaming " + key + " to " + value + " failed");
                 }
             }
         }
@@ -59,9 +59,9 @@ public final class i0 {
         String[] strArr = j0.b;
         LinkedHashMap linkedHashMap = new LinkedHashMap(kotlin.ranges.d.c(kotlin.collections.j0.f(strArr.length), 16));
         for (String str : strArr) {
-            Pair pairA = jt.s.a(new File(fileB.getPath() + str), new File(fileA.getPath() + str));
+            Pair pairA = gt.s.a(new File(fileB.getPath() + str), new File(fileA.getPath() + str));
             linkedHashMap.put(pairA.c(), pairA.d());
         }
-        return kotlin.collections.k0.q(linkedHashMap, jt.s.a(fileB, fileA));
+        return kotlin.collections.k0.q(linkedHashMap, gt.s.a(fileB, fileA));
     }
 }

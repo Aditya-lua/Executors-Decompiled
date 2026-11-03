@@ -26,7 +26,7 @@ public final class AFb1tSDK implements AFa1aSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    private final AFd1zSDK f5238d;
+    private final AFd1zSDK f5311d;
 
     public static final class AFa1uSDK implements AFa1cSDK.AFa1tSDK {
         private /* synthetic */ long unregisterClient;
@@ -82,7 +82,7 @@ public final class AFb1tSDK implements AFa1aSDK {
 
     public AFb1tSDK(@NotNull AFd1zSDK aFd1zSDK) {
         Intrinsics.checkNotNullParameter(aFd1zSDK, "");
-        this.f5238d = aFd1zSDK;
+        this.f5311d = aFd1zSDK;
     }
 
     @Override // com.appsflyer.internal.AFa1aSDK
@@ -108,7 +108,7 @@ public final class AFb1tSDK implements AFa1aSDK {
     @Override // com.appsflyer.internal.AFa1aSDK
     public final void unregisterClient() {
         Context context;
-        if (this.AFKeystoreWrapper && (context = this.f5238d.f5305d) != null) {
+        if (this.AFKeystoreWrapper && (context = this.f5311d.f5378d) != null) {
             this.AFLogger = new LinkedHashMap();
             AFa1uSDK aFa1uSDK = new AFa1uSDK(System.currentTimeMillis());
             try {
@@ -119,7 +119,7 @@ public final class AFb1tSDK implements AFa1aSDK {
                 Object objNewProxyInstance = Proxy.newProxyInstance(cls2.getClassLoader(), new Class[]{cls2}, new InvocationHandler() { // from class: com.appsflyer.internal.AFa1cSDK.5
 
                     /* JADX INFO: renamed from: d */
-                    private /* synthetic */ AFa1tSDK f5215d;
+                    private /* synthetic */ AFa1tSDK f5288d;
                     private /* synthetic */ Class unregisterClient;
 
                     public AnonymousClass5() {

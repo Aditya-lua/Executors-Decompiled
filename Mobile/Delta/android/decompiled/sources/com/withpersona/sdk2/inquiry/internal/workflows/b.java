@@ -1,11 +1,11 @@
 package com.withpersona.sdk2.inquiry.internal.workflows;
 
-import hp.n0;
-import zo.s;
+import fp.n0;
+import xo.s;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class b {
-    public static void a(InquiryWorkflowFragment inquiryWorkflowFragment, go.e eVar) {
+    public static void a(InquiryWorkflowFragment inquiryWorkflowFragment, eo.e eVar) {
         inquiryWorkflowFragment.featureFlagManager = eVar;
     }
 
@@ -17,7 +17,7 @@ public final class b {
         inquiryWorkflowFragment.inquiryStateRenderer = n0Var;
     }
 
-    public static void d(InquiryWorkflowFragment inquiryWorkflowFragment, vq.a aVar) {
+    public static void d(InquiryWorkflowFragment inquiryWorkflowFragment, tq.a aVar) {
         inquiryWorkflowFragment.systemUiController = aVar;
     }
 

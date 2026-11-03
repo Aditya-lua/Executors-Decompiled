@@ -4,10 +4,10 @@ import com.withpersona.sdk2.inquiry.network.dto.ui.components.Title;
 import kotlin.collections.q0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import um.h;
-import um.m;
-import um.t;
-import um.w;
+import sm.h;
+import sm.m;
+import sm.t;
+import sm.w;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class ErrorResponse_Error_TransitionFromTerminalStateErrorJsonAdapter extends h<ErrorResponse.Error.TransitionFromTerminalStateError> {
@@ -30,7 +30,7 @@ public final class ErrorResponse_Error_TransitionFromTerminalStateErrorJsonAdapt
     }
 
     /* JADX WARN: Can't rename method to resolve collision */
-    @Override // um.h
+    @Override // sm.h
     @NotNull
     public ErrorResponse.Error.TransitionFromTerminalStateError fromJson(@NotNull m mVar) {
         mVar.b();
@@ -51,7 +51,7 @@ public final class ErrorResponse_Error_TransitionFromTerminalStateErrorJsonAdapt
         return new ErrorResponse.Error.TransitionFromTerminalStateError(strFromJson, strFromJson2);
     }
 
-    @Override // um.h
+    @Override // sm.h
     public void toJson(@NotNull t tVar, @Nullable ErrorResponse.Error.TransitionFromTerminalStateError transitionFromTerminalStateError) {
         if (transitionFromTerminalStateError == null) {
             throw new NullPointerException("value_ was null! Wrap in .nullSafe() to write nullable values.");

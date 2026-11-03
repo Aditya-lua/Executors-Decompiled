@@ -37,7 +37,7 @@ public abstract class gb<MessageType extends gb<MessageType, BuilderType>, Build
         return zA;
     }
 
-    public static gb t(Class cls) {
+    public static gb s(Class cls) {
         Map map = zzd;
         gb gbVar = (gb) map.get(cls);
         if (gbVar == null) {
@@ -59,7 +59,7 @@ public abstract class gb<MessageType extends gb<MessageType, BuilderType>, Build
         return gbVar2;
     }
 
-    public static void u(Class cls, gb gbVar) {
+    public static void t(Class cls, gb gbVar) {
         gbVar.l();
         zzd.put(cls, gbVar);
     }
@@ -186,15 +186,15 @@ public abstract class gb<MessageType extends gb<MessageType, BuilderType>, Build
 
     public final int hashCode() {
         if (k()) {
-            return o();
+            return n();
         }
         int i10 = this.zza;
         if (i10 != 0) {
             return i10;
         }
-        int iO = o();
-        this.zza = iO;
-        return iO;
+        int iN = n();
+        this.zza = iN;
+        return iN;
     }
 
     public final int j(zc zcVar) {
@@ -209,30 +209,30 @@ public abstract class gb<MessageType extends gb<MessageType, BuilderType>, Build
         this.zzb &= Integer.MAX_VALUE;
     }
 
-    public final gb n() {
+    public final gb m() {
         return (gb) E(4, null, null);
     }
 
-    public final int o() {
+    public final int n() {
         return wc.a().b(getClass()).zzc(this);
     }
 
-    public final void p() {
+    public final void o() {
         wc.a().b(getClass()).c(this);
         l();
     }
 
-    public final cb q() {
+    public final cb p() {
         return (cb) E(5, null, null);
     }
 
-    public final cb r() {
+    public final cb q() {
         cb cbVar = (cb) E(5, null, null);
         cbVar.v(this);
         return cbVar;
     }
 
-    public final void s(int i10) {
+    public final void r(int i10) {
         this.zzb = (this.zzb & Integer.MIN_VALUE) | Integer.MAX_VALUE;
     }
 

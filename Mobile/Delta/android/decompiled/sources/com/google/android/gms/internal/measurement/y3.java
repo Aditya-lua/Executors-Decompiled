@@ -6,7 +6,7 @@ public final class y3 extends cb implements pc {
         throw null;
     }
 
-    public final int A() {
+    public final int B() {
         return ((z3) this.b).K();
     }
 
@@ -20,7 +20,7 @@ public final class y3 extends cb implements pc {
         return this;
     }
 
-    public final String x() {
+    public final String y() {
         return ((z3) this.b).H();
     }
 

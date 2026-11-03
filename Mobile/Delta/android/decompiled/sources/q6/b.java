@@ -19,7 +19,7 @@ public final class b implements c<h0> {
         if (!e7.h0.n(data) || !i.d(options) || (strD = i0.d(data)) == null) {
             return null;
         }
-        Long lastModifiedAtMillis = options.getFileSystem().metadata(xu.h0.Companion.e(xu.h0.INSTANCE, strD, false, 1, null)).getLastModifiedAtMillis();
+        Long lastModifiedAtMillis = options.getFileSystem().metadata(vu.h0.Companion.e(vu.h0.INSTANCE, strD, false, 1, null)).getLastModifiedAtMillis();
         StringBuilder sb2 = new StringBuilder();
         sb2.append(data);
         sb2.append('-');

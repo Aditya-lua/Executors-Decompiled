@@ -11,7 +11,7 @@ public class c extends p<n7.d, n7.d> {
 
     public static t7.a<n7.d> d(t7.a<n7.d> aVar) {
         n7.d dVar = aVar.b;
-        n7.d dVar2 = aVar.f31671c;
+        n7.d dVar2 = aVar.f32190c;
         if (dVar == null || dVar2 == null || dVar.e().length == dVar2.e().length) {
             return aVar;
         }
@@ -47,7 +47,7 @@ public class c extends p<n7.d, n7.d> {
 
     @Override // m7.o
     public i7.a<n7.d, n7.d> a() {
-        return new i7.e(this.f24039a);
+        return new i7.e(this.f24689a);
     }
 
     @Override // m7.p, m7.o

@@ -7,16 +7,16 @@ import java.util.Objects;
 public abstract class v0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Object f25300a;
+    public Object f26121a;
     public boolean b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final /* synthetic */ c f25301c;
+    public final /* synthetic */ c f26122c;
 
     public v0(c cVar, Object obj) {
         Objects.requireNonNull(cVar);
-        this.f25301c = cVar;
-        this.f25300a = obj;
+        this.f26122c = cVar;
+        this.f26121a = obj;
         this.b = false;
     }
 
@@ -26,7 +26,7 @@ public abstract class v0 {
         Object obj;
         synchronized (this) {
             try {
-                obj = this.f25300a;
+                obj = this.f26121a;
                 if (this.b) {
                     String string = toString();
                     StringBuilder sb2 = new StringBuilder(string.length() + 47);
@@ -50,7 +50,7 @@ public abstract class v0 {
 
     public final void c() {
         d();
-        c cVar = this.f25301c;
+        c cVar = this.f26122c;
         synchronized (cVar.zzj()) {
             cVar.zzj().remove(this);
         }
@@ -58,7 +58,7 @@ public abstract class v0 {
 
     public final void d() {
         synchronized (this) {
-            this.f25300a = null;
+            this.f26121a = null;
         }
     }
 }

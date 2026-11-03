@@ -12,16 +12,11 @@ import ja.b;
 public final class zzc extends m implements CurrentPlayerInfo {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final b f6268d;
+    public final b f6341d;
 
     public zzc(DataHolder dataHolder, int i10, b bVar) {
         super(dataHolder, i10);
-        this.f6268d = bVar;
-    }
-
-    @Override // com.google.android.gms.games.CurrentPlayerInfo
-    public final int B1() {
-        return q(this.f6268d.L, 0);
+        this.f6341d = bVar;
     }
 
     @Override // android.os.Parcelable
@@ -51,8 +46,13 @@ public final class zzc extends m implements CurrentPlayerInfo {
         i.a(new zza(this), parcel, i10);
     }
 
+    @Override // com.google.android.gms.games.CurrentPlayerInfo
+    public final int z1() {
+        return q(this.f6341d.L, 0);
+    }
+
     public final boolean zza() {
-        String str = this.f6268d.L;
+        String str = this.f6341d.L;
         return k(str) && !m(str);
     }
 }

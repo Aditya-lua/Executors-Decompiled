@@ -38,7 +38,7 @@ public abstract class CreationExtras {
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
         @NotNull
-        public static final b f22169c = new b();
+        public static final b f22393c = new b();
 
         @Override // k4.CreationExtras
         @Nullable

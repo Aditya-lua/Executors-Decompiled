@@ -6,11 +6,11 @@ import java.util.Arrays;
 public class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final float[] f25119a;
+    public final float[] f25940a;
     public final int[] b;
 
     public d(float[] fArr, int[] iArr) {
-        this.f25119a = fArr;
+        this.f25940a = fArr;
         this.b = iArr;
     }
 
@@ -21,7 +21,7 @@ public class d {
             if (i10 >= iArr.length) {
                 return;
             }
-            this.f25119a[i10] = dVar.f25119a[i10];
+            this.f25940a[i10] = dVar.f25940a[i10];
             this.b[i10] = iArr[i10];
             i10++;
         }
@@ -36,7 +36,7 @@ public class d {
     }
 
     public final int c(float f10) {
-        int iBinarySearch = Arrays.binarySearch(this.f25119a, f10);
+        int iBinarySearch = Arrays.binarySearch(this.f25940a, f10);
         if (iBinarySearch >= 0) {
             return this.b[iBinarySearch];
         }
@@ -48,7 +48,7 @@ public class d {
         if (i10 == iArr.length - 1) {
             return iArr[iArr.length - 1];
         }
-        float[] fArr = this.f25119a;
+        float[] fArr = this.f25940a;
         int i11 = i10 - 1;
         float f11 = fArr[i11];
         return s7.c.c((f10 - f11) / (fArr[i10] - f11), iArr[i11], iArr[i10]);
@@ -59,7 +59,7 @@ public class d {
     }
 
     public float[] e() {
-        return this.f25119a;
+        return this.f25940a;
     }
 
     public boolean equals(Object obj) {
@@ -68,7 +68,7 @@ public class d {
         }
         if (obj != null && getClass() == obj.getClass()) {
             d dVar = (d) obj;
-            if (Arrays.equals(this.f25119a, dVar.f25119a) && Arrays.equals(this.b, dVar.b)) {
+            if (Arrays.equals(this.f25940a, dVar.f25940a) && Arrays.equals(this.b, dVar.b)) {
                 return true;
             }
         }
@@ -102,13 +102,13 @@ public class d {
             if (i10 >= iArr.length) {
                 break;
             }
-            this.f25119a[i10] = s7.j.i(dVar.f25119a[i10], dVar2.f25119a[i10], f10);
+            this.f25940a[i10] = s7.j.i(dVar.f25940a[i10], dVar2.f25940a[i10], f10);
             this.b[i10] = s7.c.c(f10, dVar.b[i10], dVar2.b[i10]);
             i10++;
         }
         int length = iArr.length;
         while (true) {
-            float[] fArr = this.f25119a;
+            float[] fArr = this.f25940a;
             if (length >= fArr.length) {
                 return;
             }
@@ -121,6 +121,6 @@ public class d {
     }
 
     public int hashCode() {
-        return (Arrays.hashCode(this.f25119a) * 31) + Arrays.hashCode(this.b);
+        return (Arrays.hashCode(this.f25940a) * 31) + Arrays.hashCode(this.b);
     }
 }

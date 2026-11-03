@@ -27,17 +27,17 @@ public class c extends b {
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f27250a;
+        public static final /* synthetic */ int[] f27815a;
 
         static {
             int[] iArr = new int[e.b.values().length];
-            f27250a = iArr;
+            f27815a = iArr;
             try {
                 iArr[e.b.ADD.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f27250a[e.b.INVERT.ordinal()] = 2;
+                f27815a[e.b.INVERT.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
         }
@@ -79,7 +79,7 @@ public class c extends b {
                     bVar2 = null;
                 } else {
                     this.F.add(0, bVarV2);
-                    int i11 = a.f27250a[eVar2.i().ordinal()];
+                    int i11 = a.f27815a[eVar2.i().ordinal()];
                     if (i11 == 1 || i11 == 2) {
                         bVar2 = bVarV2;
                     }
@@ -122,13 +122,13 @@ public class c extends b {
         this.L = f10;
         super.M(f10);
         if (this.E != null) {
-            f10 = ((this.E.h().floatValue() * this.f27239q.c().i()) - this.f27239q.c().p()) / (this.f27238p.J().e() + 0.01f);
+            f10 = ((this.E.h().floatValue() * this.f27804q.c().i()) - this.f27804q.c().p()) / (this.f27803p.J().e() + 0.01f);
         }
         if (this.E == null) {
-            f10 -= this.f27239q.s();
+            f10 -= this.f27804q.s();
         }
-        if (this.f27239q.w() != 0.0f && !"__container".equals(this.f27239q.j())) {
-            f10 /= this.f27239q.w();
+        if (this.f27804q.w() != 0.0f && !"__container".equals(this.f27804q.j())) {
+            f10 /= this.f27804q.w();
         }
         for (int size = this.F.size() - 1; size >= 0; size--) {
             this.F.get(size).M(f10);
@@ -169,7 +169,7 @@ public class c extends b {
             j(this.E);
             return;
         }
-        if (t8 == o0.f16423e && (cVar6 = this.N) != null) {
+        if (t8 == o0.f17019e && (cVar6 = this.N) != null) {
             cVar6.c(cVar);
             return;
         }
@@ -196,7 +196,7 @@ public class c extends b {
         super.e(rectF, matrix, z10);
         for (int size = this.F.size() - 1; size >= 0; size--) {
             this.G.set(0.0f, 0.0f, 0.0f, 0.0f);
-            this.F.get(size).e(this.G, this.f27237o, true);
+            this.F.get(size).e(this.G, this.f27802o, true);
             rectF.union(this.G);
         }
     }
@@ -209,7 +209,7 @@ public class c extends b {
         }
         boolean z10 = false;
         boolean z11 = (bVar == null && this.N == null) ? false : true;
-        if ((this.f27238p.f0() && this.F.size() > 1 && i10 != 255) || (z11 && this.f27238p.g0())) {
+        if ((this.f27803p.f0() && this.F.size() > 1 && i10 != 255) || (z11 && this.f27803p.g0())) {
             z10 = true;
         }
         int i11 = z10 ? 255 : i10;
@@ -217,8 +217,8 @@ public class c extends b {
         if (cVar != null) {
             bVar = cVar.b(matrix, i11);
         }
-        if (this.M || !"__container".equals(this.f27239q.j())) {
-            this.H.set(0.0f, 0.0f, this.f27239q.m(), this.f27239q.l());
+        if (this.M || !"__container".equals(this.f27804q.j())) {
+            this.H.set(0.0f, 0.0f, this.f27804q.m(), this.f27804q.l());
             matrix.mapRect(this.H);
         } else {
             this.H.setEmpty();
@@ -231,7 +231,7 @@ public class c extends b {
         if (z10) {
             this.K.f();
             l.a aVar = this.K;
-            aVar.f30540a = i10;
+            aVar.f31087a = i10;
             if (bVar != null) {
                 bVar.b(aVar);
                 bVar = null;

@@ -41,35 +41,35 @@ public class AppCompatSpinner extends Spinner {
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
     @SuppressLint({"ResourceType"})
-    public static final int[] f1100i = {R.attr.spinnerMode};
+    public static final int[] f945i = {R.attr.spinnerMode};
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final q.e f1101a;
+    public final q.e f946a;
     public final Context b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public n0 f1102c;
+    public n0 f947c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public SpinnerAdapter f1103d;
+    public SpinnerAdapter f948d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final boolean f1104e;
+    public final boolean f949e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public g f1105f;
+    public g f950f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public int f1106g;
+    public int f951g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final Rect f1107h;
+    public final Rect f952h;
 
     public static class SavedState extends View.BaseSavedState {
         public static final Parcelable.Creator<SavedState> CREATOR = new a();
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public boolean f1108a;
+        public boolean f953a;
 
         public class a implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
@@ -92,29 +92,29 @@ public class AppCompatSpinner extends Spinner {
         @Override // android.view.View.BaseSavedState, android.view.AbsSavedState, android.os.Parcelable
         public void writeToParcel(Parcel parcel, int i10) {
             super.writeToParcel(parcel, i10);
-            parcel.writeByte(this.f1108a ? (byte) 1 : (byte) 0);
+            parcel.writeByte(this.f953a ? (byte) 1 : (byte) 0);
         }
 
         public SavedState(Parcel parcel) {
             super(parcel);
-            this.f1108a = parcel.readByte() != 0;
+            this.f953a = parcel.readByte() != 0;
         }
     }
 
     public class a extends n0 {
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public final /* synthetic */ f f1109j;
+        public final /* synthetic */ f f954j;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public a(View view, f fVar) {
             super(view);
-            this.f1109j = fVar;
+            this.f954j = fVar;
         }
 
         @Override // q.n0
         public p.f b() {
-            return this.f1109j;
+            return this.f954j;
         }
 
         @Override // q.n0
@@ -155,18 +155,18 @@ public class AppCompatSpinner extends Spinner {
     public class d implements g, DialogInterface.OnClickListener {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public androidx.appcompat.app.a f1112a;
+        public androidx.appcompat.app.a f957a;
         public ListAdapter b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public CharSequence f1113c;
+        public CharSequence f958c;
 
         public d() {
         }
 
         @Override // androidx.appcompat.widget.AppCompatSpinner.g
         public boolean a() {
-            androidx.appcompat.app.a aVar = this.f1112a;
+            androidx.appcompat.app.a aVar = this.f957a;
             if (aVar != null) {
                 return aVar.isShowing();
             }
@@ -185,10 +185,10 @@ public class AppCompatSpinner extends Spinner {
 
         @Override // androidx.appcompat.widget.AppCompatSpinner.g
         public void dismiss() {
-            androidx.appcompat.app.a aVar = this.f1112a;
+            androidx.appcompat.app.a aVar = this.f957a;
             if (aVar != null) {
                 aVar.dismiss();
-                this.f1112a = null;
+                this.f957a = null;
             }
         }
 
@@ -199,7 +199,7 @@ public class AppCompatSpinner extends Spinner {
 
         @Override // androidx.appcompat.widget.AppCompatSpinner.g
         public CharSequence f() {
-            return this.f1113c;
+            return this.f958c;
         }
 
         @Override // androidx.appcompat.widget.AppCompatSpinner.g
@@ -209,7 +209,7 @@ public class AppCompatSpinner extends Spinner {
 
         @Override // androidx.appcompat.widget.AppCompatSpinner.g
         public void h(CharSequence charSequence) {
-            this.f1113c = charSequence;
+            this.f958c = charSequence;
         }
 
         @Override // androidx.appcompat.widget.AppCompatSpinner.g
@@ -227,17 +227,17 @@ public class AppCompatSpinner extends Spinner {
             if (this.b == null) {
                 return;
             }
-            androidx.appcompat.app.a.C0013a c0013a = new androidx.appcompat.app.a.C0013a(AppCompatSpinner.this.getPopupContext());
-            CharSequence charSequence = this.f1113c;
+            androidx.appcompat.app.a.C0009a c0009a = new androidx.appcompat.app.a.C0009a(AppCompatSpinner.this.getPopupContext());
+            CharSequence charSequence = this.f958c;
             if (charSequence != null) {
-                c0013a.q(charSequence);
+                c0009a.q(charSequence);
             }
-            androidx.appcompat.app.a aVarA = c0013a.o(this.b, AppCompatSpinner.this.getSelectedItemPosition(), this).a();
-            this.f1112a = aVarA;
+            androidx.appcompat.app.a aVarA = c0009a.o(this.b, AppCompatSpinner.this.getSelectedItemPosition(), this).a();
+            this.f957a = aVarA;
             ListView listViewQ = aVarA.q();
             listViewQ.setTextDirection(i10);
             listViewQ.setTextAlignment(i11);
-            this.f1112a.show();
+            this.f957a.show();
         }
 
         @Override // androidx.appcompat.widget.AppCompatSpinner.g
@@ -263,11 +263,11 @@ public class AppCompatSpinner extends Spinner {
     public static class e implements ListAdapter, SpinnerAdapter {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public SpinnerAdapter f1115a;
+        public SpinnerAdapter f960a;
         public ListAdapter b;
 
         public e(SpinnerAdapter spinnerAdapter, Resources.Theme theme) {
-            this.f1115a = spinnerAdapter;
+            this.f960a = spinnerAdapter;
             if (spinnerAdapter instanceof ListAdapter) {
                 this.b = (ListAdapter) spinnerAdapter;
             }
@@ -294,7 +294,7 @@ public class AppCompatSpinner extends Spinner {
 
         @Override // android.widget.Adapter
         public int getCount() {
-            SpinnerAdapter spinnerAdapter = this.f1115a;
+            SpinnerAdapter spinnerAdapter = this.f960a;
             if (spinnerAdapter == null) {
                 return 0;
             }
@@ -303,7 +303,7 @@ public class AppCompatSpinner extends Spinner {
 
         @Override // android.widget.SpinnerAdapter
         public View getDropDownView(int i10, View view, ViewGroup viewGroup) {
-            SpinnerAdapter spinnerAdapter = this.f1115a;
+            SpinnerAdapter spinnerAdapter = this.f960a;
             if (spinnerAdapter == null) {
                 return null;
             }
@@ -312,7 +312,7 @@ public class AppCompatSpinner extends Spinner {
 
         @Override // android.widget.Adapter
         public Object getItem(int i10) {
-            SpinnerAdapter spinnerAdapter = this.f1115a;
+            SpinnerAdapter spinnerAdapter = this.f960a;
             if (spinnerAdapter == null) {
                 return null;
             }
@@ -321,7 +321,7 @@ public class AppCompatSpinner extends Spinner {
 
         @Override // android.widget.Adapter
         public long getItemId(int i10) {
-            SpinnerAdapter spinnerAdapter = this.f1115a;
+            SpinnerAdapter spinnerAdapter = this.f960a;
             if (spinnerAdapter == null) {
                 return -1L;
             }
@@ -345,7 +345,7 @@ public class AppCompatSpinner extends Spinner {
 
         @Override // android.widget.Adapter
         public boolean hasStableIds() {
-            SpinnerAdapter spinnerAdapter = this.f1115a;
+            SpinnerAdapter spinnerAdapter = this.f960a;
             return spinnerAdapter != null && spinnerAdapter.hasStableIds();
         }
 
@@ -365,7 +365,7 @@ public class AppCompatSpinner extends Spinner {
 
         @Override // android.widget.Adapter
         public void registerDataSetObserver(DataSetObserver dataSetObserver) {
-            SpinnerAdapter spinnerAdapter = this.f1115a;
+            SpinnerAdapter spinnerAdapter = this.f960a;
             if (spinnerAdapter != null) {
                 spinnerAdapter.registerDataSetObserver(dataSetObserver);
             }
@@ -373,7 +373,7 @@ public class AppCompatSpinner extends Spinner {
 
         @Override // android.widget.Adapter
         public void unregisterDataSetObserver(DataSetObserver dataSetObserver) {
-            SpinnerAdapter spinnerAdapter = this.f1115a;
+            SpinnerAdapter spinnerAdapter = this.f960a;
             if (spinnerAdapter != null) {
                 spinnerAdapter.unregisterDataSetObserver(dataSetObserver);
             }
@@ -389,10 +389,10 @@ public class AppCompatSpinner extends Spinner {
         public class a implements AdapterView.OnItemClickListener {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ AppCompatSpinner f1116a;
+            public final /* synthetic */ AppCompatSpinner f961a;
 
             public a(AppCompatSpinner appCompatSpinner) {
-                this.f1116a = appCompatSpinner;
+                this.f961a = appCompatSpinner;
             }
 
             @Override // android.widget.AdapterView.OnItemClickListener
@@ -425,17 +425,17 @@ public class AppCompatSpinner extends Spinner {
         public class c implements PopupWindow.OnDismissListener {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ ViewTreeObserver.OnGlobalLayoutListener f1118a;
+            public final /* synthetic */ ViewTreeObserver.OnGlobalLayoutListener f963a;
 
             public c(ViewTreeObserver.OnGlobalLayoutListener onGlobalLayoutListener) {
-                this.f1118a = onGlobalLayoutListener;
+                this.f963a = onGlobalLayoutListener;
             }
 
             @Override // android.widget.PopupWindow.OnDismissListener
             public void onDismiss() {
                 ViewTreeObserver viewTreeObserver = AppCompatSpinner.this.getViewTreeObserver();
                 if (viewTreeObserver != null) {
-                    viewTreeObserver.removeGlobalOnLayoutListener(this.f1118a);
+                    viewTreeObserver.removeGlobalOnLayoutListener(this.f963a);
                 }
             }
         }
@@ -453,10 +453,10 @@ public class AppCompatSpinner extends Spinner {
             int i10;
             Drawable drawableG = g();
             if (drawableG != null) {
-                drawableG.getPadding(AppCompatSpinner.this.f1107h);
-                i10 = g1.b(AppCompatSpinner.this) ? AppCompatSpinner.this.f1107h.right : -AppCompatSpinner.this.f1107h.left;
+                drawableG.getPadding(AppCompatSpinner.this.f952h);
+                i10 = g1.b(AppCompatSpinner.this) ? AppCompatSpinner.this.f952h.right : -AppCompatSpinner.this.f952h.left;
             } else {
-                Rect rect = AppCompatSpinner.this.f1107h;
+                Rect rect = AppCompatSpinner.this.f952h;
                 rect.right = 0;
                 rect.left = 0;
                 i10 = 0;
@@ -465,11 +465,11 @@ public class AppCompatSpinner extends Spinner {
             int paddingRight = AppCompatSpinner.this.getPaddingRight();
             int width = AppCompatSpinner.this.getWidth();
             AppCompatSpinner appCompatSpinner = AppCompatSpinner.this;
-            int i11 = appCompatSpinner.f1106g;
+            int i11 = appCompatSpinner.f951g;
             if (i11 == -2) {
                 int iA = appCompatSpinner.a((SpinnerAdapter) this.J, g());
                 int i12 = AppCompatSpinner.this.getContext().getResources().getDisplayMetrics().widthPixels;
-                Rect rect2 = AppCompatSpinner.this.f1107h;
+                Rect rect2 = AppCompatSpinner.this.f952h;
                 int i13 = (i12 - rect2.left) - rect2.right;
                 if (iA > i13) {
                     iA = i13;
@@ -592,19 +592,19 @@ public class AppCompatSpinner extends Spinner {
         if (drawable == null) {
             return iMax2;
         }
-        drawable.getPadding(this.f1107h);
-        Rect rect = this.f1107h;
+        drawable.getPadding(this.f952h);
+        Rect rect = this.f952h;
         return iMax2 + rect.left + rect.right;
     }
 
     public void b() {
-        this.f1105f.k(getTextDirection(), getTextAlignment());
+        this.f950f.k(getTextDirection(), getTextAlignment());
     }
 
     @Override // android.view.ViewGroup, android.view.View
     public void drawableStateChanged() {
         super.drawableStateChanged();
-        q.e eVar = this.f1101a;
+        q.e eVar = this.f946a;
         if (eVar != null) {
             eVar.b();
         }
@@ -612,28 +612,28 @@ public class AppCompatSpinner extends Spinner {
 
     @Override // android.widget.Spinner
     public int getDropDownHorizontalOffset() {
-        g gVar = this.f1105f;
+        g gVar = this.f950f;
         return gVar != null ? gVar.c() : super.getDropDownHorizontalOffset();
     }
 
     @Override // android.widget.Spinner
     public int getDropDownVerticalOffset() {
-        g gVar = this.f1105f;
+        g gVar = this.f950f;
         return gVar != null ? gVar.l() : super.getDropDownVerticalOffset();
     }
 
     @Override // android.widget.Spinner
     public int getDropDownWidth() {
-        return this.f1105f != null ? this.f1106g : super.getDropDownWidth();
+        return this.f950f != null ? this.f951g : super.getDropDownWidth();
     }
 
     public final g getInternalPopup() {
-        return this.f1105f;
+        return this.f950f;
     }
 
     @Override // android.widget.Spinner
     public Drawable getPopupBackground() {
-        g gVar = this.f1105f;
+        g gVar = this.f950f;
         return gVar != null ? gVar.g() : super.getPopupBackground();
     }
 
@@ -644,12 +644,12 @@ public class AppCompatSpinner extends Spinner {
 
     @Override // android.widget.Spinner
     public CharSequence getPrompt() {
-        g gVar = this.f1105f;
+        g gVar = this.f950f;
         return gVar != null ? gVar.f() : super.getPrompt();
     }
 
     public ColorStateList getSupportBackgroundTintList() {
-        q.e eVar = this.f1101a;
+        q.e eVar = this.f946a;
         if (eVar != null) {
             return eVar.c();
         }
@@ -657,7 +657,7 @@ public class AppCompatSpinner extends Spinner {
     }
 
     public PorterDuff.Mode getSupportBackgroundTintMode() {
-        q.e eVar = this.f1101a;
+        q.e eVar = this.f946a;
         if (eVar != null) {
             return eVar.d();
         }
@@ -667,17 +667,17 @@ public class AppCompatSpinner extends Spinner {
     @Override // android.widget.Spinner, android.widget.AdapterView, android.view.ViewGroup, android.view.View
     public void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-        g gVar = this.f1105f;
+        g gVar = this.f950f;
         if (gVar == null || !gVar.a()) {
             return;
         }
-        this.f1105f.dismiss();
+        this.f950f.dismiss();
     }
 
     @Override // android.widget.Spinner, android.widget.AbsSpinner, android.view.View
     public void onMeasure(int i10, int i11) {
         super.onMeasure(i10, i11);
-        if (this.f1105f == null || View.MeasureSpec.getMode(i10) != Integer.MIN_VALUE) {
+        if (this.f950f == null || View.MeasureSpec.getMode(i10) != Integer.MIN_VALUE) {
             return;
         }
         setMeasuredDimension(Math.min(Math.max(getMeasuredWidth(), a(getAdapter(), getBackground())), View.MeasureSpec.getSize(i10)), getMeasuredHeight());
@@ -688,7 +688,7 @@ public class AppCompatSpinner extends Spinner {
         ViewTreeObserver viewTreeObserver;
         SavedState savedState = (SavedState) parcelable;
         super.onRestoreInstanceState(savedState.getSuperState());
-        if (!savedState.f1108a || (viewTreeObserver = getViewTreeObserver()) == null) {
+        if (!savedState.f953a || (viewTreeObserver = getViewTreeObserver()) == null) {
             return;
         }
         viewTreeObserver.addOnGlobalLayoutListener(new b());
@@ -697,14 +697,14 @@ public class AppCompatSpinner extends Spinner {
     @Override // android.widget.Spinner, android.widget.AbsSpinner, android.view.View
     public Parcelable onSaveInstanceState() {
         SavedState savedState = new SavedState(super.onSaveInstanceState());
-        g gVar = this.f1105f;
-        savedState.f1108a = gVar != null && gVar.a();
+        g gVar = this.f950f;
+        savedState.f953a = gVar != null && gVar.a();
         return savedState;
     }
 
     @Override // android.widget.Spinner, android.view.View
     public boolean onTouchEvent(MotionEvent motionEvent) {
-        n0 n0Var = this.f1102c;
+        n0 n0Var = this.f947c;
         if (n0Var == null || !n0Var.onTouch(this, motionEvent)) {
             return super.onTouchEvent(motionEvent);
         }
@@ -713,7 +713,7 @@ public class AppCompatSpinner extends Spinner {
 
     @Override // android.widget.Spinner, android.view.View
     public boolean performClick() {
-        g gVar = this.f1105f;
+        g gVar = this.f950f;
         if (gVar == null) {
             return super.performClick();
         }
@@ -727,7 +727,7 @@ public class AppCompatSpinner extends Spinner {
     @Override // android.view.View
     public void setBackgroundDrawable(Drawable drawable) {
         super.setBackgroundDrawable(drawable);
-        q.e eVar = this.f1101a;
+        q.e eVar = this.f946a;
         if (eVar != null) {
             eVar.f(drawable);
         }
@@ -736,7 +736,7 @@ public class AppCompatSpinner extends Spinner {
     @Override // android.view.View
     public void setBackgroundResource(int i10) {
         super.setBackgroundResource(i10);
-        q.e eVar = this.f1101a;
+        q.e eVar = this.f946a;
         if (eVar != null) {
             eVar.g(i10);
         }
@@ -744,18 +744,18 @@ public class AppCompatSpinner extends Spinner {
 
     @Override // android.widget.Spinner
     public void setDropDownHorizontalOffset(int i10) {
-        g gVar = this.f1105f;
+        g gVar = this.f950f;
         if (gVar == null) {
             super.setDropDownHorizontalOffset(i10);
         } else {
             gVar.j(i10);
-            this.f1105f.e(i10);
+            this.f950f.e(i10);
         }
     }
 
     @Override // android.widget.Spinner
     public void setDropDownVerticalOffset(int i10) {
-        g gVar = this.f1105f;
+        g gVar = this.f950f;
         if (gVar != null) {
             gVar.i(i10);
         } else {
@@ -765,8 +765,8 @@ public class AppCompatSpinner extends Spinner {
 
     @Override // android.widget.Spinner
     public void setDropDownWidth(int i10) {
-        if (this.f1105f != null) {
-            this.f1106g = i10;
+        if (this.f950f != null) {
+            this.f951g = i10;
         } else {
             super.setDropDownWidth(i10);
         }
@@ -774,7 +774,7 @@ public class AppCompatSpinner extends Spinner {
 
     @Override // android.widget.Spinner
     public void setPopupBackgroundDrawable(Drawable drawable) {
-        g gVar = this.f1105f;
+        g gVar = this.f950f;
         if (gVar != null) {
             gVar.b(drawable);
         } else {
@@ -789,7 +789,7 @@ public class AppCompatSpinner extends Spinner {
 
     @Override // android.widget.Spinner
     public void setPrompt(CharSequence charSequence) {
-        g gVar = this.f1105f;
+        g gVar = this.f950f;
         if (gVar != null) {
             gVar.h(charSequence);
         } else {
@@ -798,14 +798,14 @@ public class AppCompatSpinner extends Spinner {
     }
 
     public void setSupportBackgroundTintList(ColorStateList colorStateList) {
-        q.e eVar = this.f1101a;
+        q.e eVar = this.f946a;
         if (eVar != null) {
             eVar.i(colorStateList);
         }
     }
 
     public void setSupportBackgroundTintMode(PorterDuff.Mode mode) {
-        q.e eVar = this.f1101a;
+        q.e eVar = this.f946a;
         if (eVar != null) {
             eVar.j(mode);
         }
@@ -817,17 +817,17 @@ public class AppCompatSpinner extends Spinner {
 
     @Override // android.widget.AdapterView
     public void setAdapter(SpinnerAdapter spinnerAdapter) {
-        if (!this.f1104e) {
-            this.f1103d = spinnerAdapter;
+        if (!this.f949e) {
+            this.f948d = spinnerAdapter;
             return;
         }
         super.setAdapter(spinnerAdapter);
-        if (this.f1105f != null) {
+        if (this.f950f != null) {
             Context context = this.b;
             if (context == null) {
                 context = getContext();
             }
-            this.f1105f.m(new e(spinnerAdapter, context.getTheme()));
+            this.f950f.m(new e(spinnerAdapter, context.getTheme()));
         }
     }
 
@@ -856,10 +856,10 @@ public class AppCompatSpinner extends Spinner {
         CharSequence[] charSequenceArrQ;
         SpinnerAdapter spinnerAdapter;
         super(context, attributeSet, i10);
-        this.f1107h = new Rect();
+        this.f952h = new Rect();
         v0.a(this, getContext());
-        a1 a1VarV = a1.v(context, attributeSet, j.f20145z2, i10, 0);
-        this.f1101a = new q.e(this);
+        a1 a1VarV = a1.v(context, attributeSet, j.f20261z2, i10, 0);
+        this.f946a = new q.e(this);
         if (theme != null) {
             this.b = new o.d(context, theme);
         } else {
@@ -875,7 +875,7 @@ public class AppCompatSpinner extends Spinner {
         try {
             if (i11 == -1) {
                 try {
-                    typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, f1100i, i10, 0);
+                    typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, f945i, i10, 0);
                     try {
                         boolean zHasValue = typedArrayObtainStyledAttributes.hasValue(0);
                         r11 = typedArrayObtainStyledAttributes;
@@ -891,32 +891,32 @@ public class AppCompatSpinner extends Spinner {
                         }
                         if (i11 != 0) {
                             d dVar = new d();
-                            this.f1105f = dVar;
+                            this.f950f = dVar;
                             dVar.h(a1VarV.o(j.C2));
                         } else if (i11 == 1) {
                             f fVar = new f(this.b, attributeSet, i10);
-                            a1 a1VarV2 = a1.v(this.b, attributeSet, j.f20145z2, i10, 0);
-                            this.f1106g = a1VarV2.m(j.D2, -2);
+                            a1 a1VarV2 = a1.v(this.b, attributeSet, j.f20261z2, i10, 0);
+                            this.f951g = a1VarV2.m(j.D2, -2);
                             fVar.b(a1VarV2.g(j.B2));
                             fVar.h(a1VarV.o(j.C2));
                             a1VarV2.x();
-                            this.f1105f = fVar;
-                            this.f1102c = new a(this, fVar);
+                            this.f950f = fVar;
+                            this.f947c = new a(this, fVar);
                         }
                         charSequenceArrQ = a1VarV.q(j.A2);
                         if (charSequenceArrQ != null) {
                             ArrayAdapter arrayAdapter = new ArrayAdapter(context, R.layout.simple_spinner_item, charSequenceArrQ);
-                            arrayAdapter.setDropDownViewResource(i.g.f19998u);
+                            arrayAdapter.setDropDownViewResource(i.g.f20114u);
                             setAdapter(arrayAdapter);
                         }
                         a1VarV.x();
-                        this.f1104e = true;
-                        spinnerAdapter = this.f1103d;
+                        this.f949e = true;
+                        spinnerAdapter = this.f948d;
                         if (spinnerAdapter != null) {
                             setAdapter(spinnerAdapter);
-                            this.f1103d = null;
+                            this.f948d = null;
                         }
-                        this.f1101a.e(attributeSet, i10);
+                        this.f946a.e(attributeSet, i10);
                     }
                 } catch (Exception e11) {
                     e = e11;
@@ -932,32 +932,32 @@ public class AppCompatSpinner extends Spinner {
             }
             if (i11 != 0) {
                 d dVar2 = new d();
-                this.f1105f = dVar2;
+                this.f950f = dVar2;
                 dVar2.h(a1VarV.o(j.C2));
             } else if (i11 == 1) {
                 f fVar2 = new f(this.b, attributeSet, i10);
-                a1 a1VarV3 = a1.v(this.b, attributeSet, j.f20145z2, i10, 0);
-                this.f1106g = a1VarV3.m(j.D2, -2);
+                a1 a1VarV3 = a1.v(this.b, attributeSet, j.f20261z2, i10, 0);
+                this.f951g = a1VarV3.m(j.D2, -2);
                 fVar2.b(a1VarV3.g(j.B2));
                 fVar2.h(a1VarV.o(j.C2));
                 a1VarV3.x();
-                this.f1105f = fVar2;
-                this.f1102c = new a(this, fVar2);
+                this.f950f = fVar2;
+                this.f947c = new a(this, fVar2);
             }
             charSequenceArrQ = a1VarV.q(j.A2);
             if (charSequenceArrQ != null) {
                 ArrayAdapter arrayAdapter2 = new ArrayAdapter(context, R.layout.simple_spinner_item, charSequenceArrQ);
-                arrayAdapter2.setDropDownViewResource(i.g.f19998u);
+                arrayAdapter2.setDropDownViewResource(i.g.f20114u);
                 setAdapter(arrayAdapter2);
             }
             a1VarV.x();
-            this.f1104e = true;
-            spinnerAdapter = this.f1103d;
+            this.f949e = true;
+            spinnerAdapter = this.f948d;
             if (spinnerAdapter != null) {
                 setAdapter(spinnerAdapter);
-                this.f1103d = null;
+                this.f948d = null;
             }
-            this.f1101a.e(attributeSet, i10);
+            this.f946a.e(attributeSet, i10);
         } catch (Throwable th3) {
             th = th3;
             r8 = r11;

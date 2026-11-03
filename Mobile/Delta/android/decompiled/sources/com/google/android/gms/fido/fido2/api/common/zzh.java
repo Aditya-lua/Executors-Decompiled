@@ -17,14 +17,14 @@ public final class zzh extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzh> CREATOR = new a0();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final boolean f6046f;
+    public final boolean f6119f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final m3 f6047g;
+    public final m3 f6120g;
 
     public zzh(boolean z10, m3 m3Var) {
-        this.f6046f = z10;
-        this.f6047g = m3Var;
+        this.f6119f = z10;
+        this.f6120g = m3Var;
     }
 
     public final boolean equals(Object obj) {
@@ -32,11 +32,11 @@ public final class zzh extends AbstractSafeParcelable {
             return false;
         }
         zzh zzhVar = (zzh) obj;
-        return this.f6046f == zzhVar.f6046f && k.b(this.f6047g, zzhVar.f6047g);
+        return this.f6119f == zzhVar.f6119f && k.b(this.f6120g, zzhVar.f6120g);
     }
 
     public final int hashCode() {
-        return k.c(Boolean.valueOf(this.f6046f), this.f6047g);
+        return k.c(Boolean.valueOf(this.f6119f), this.f6120g);
     }
 
     public final String toString() {
@@ -46,7 +46,7 @@ public final class zzh extends AbstractSafeParcelable {
     public final JSONObject v3() {
         try {
             JSONObject jSONObject = new JSONObject();
-            if (this.f6046f) {
+            if (this.f6119f) {
                 jSONObject.put("enabled", true);
             }
             byte[] bArrW3 = w3();
@@ -65,7 +65,7 @@ public final class zzh extends AbstractSafeParcelable {
     }
 
     public final byte[] w3() {
-        m3 m3Var = this.f6047g;
+        m3 m3Var = this.f6120g;
         if (m3Var == null) {
             return null;
         }
@@ -74,7 +74,7 @@ public final class zzh extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(@NonNull Parcel parcel, int i10) {
-        boolean z10 = this.f6046f;
+        boolean z10 = this.f6119f;
         int iA = o9.b.a(parcel);
         o9.b.c(parcel, 1, z10);
         o9.b.g(parcel, 2, w3(), false);

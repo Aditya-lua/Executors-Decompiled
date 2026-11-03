@@ -22,207 +22,207 @@ import java.util.List;
 public class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final c.b f33533a;
+    public final c.b f33739a;
     public final ComponentName b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Context f33534c;
+    public final Context f33740c;
 
     public class a extends c.a.AbstractBinderC0091a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public Handler f33535a = new Handler(Looper.getMainLooper());
+        public Handler f33741a = new Handler(Looper.getMainLooper());
         public final /* synthetic */ w.b b;
 
         /* JADX INFO: renamed from: w.c$a$a, reason: collision with other inner class name */
-        public class RunnableC0610a implements Runnable {
+        public class RunnableC0620a implements Runnable {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ Bundle f33537a;
+            public final /* synthetic */ Bundle f33743a;
 
-            public RunnableC0610a(Bundle bundle) {
-                this.f33537a = bundle;
+            public RunnableC0620a(Bundle bundle) {
+                this.f33743a = bundle;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                a.this.b.onUnminimized(this.f33537a);
+                a.this.b.onUnminimized(this.f33743a);
             }
         }
 
         public class b implements Runnable {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ int f33538a;
+            public final /* synthetic */ int f33744a;
             public final /* synthetic */ Bundle b;
 
             public b(int i10, Bundle bundle) {
-                this.f33538a = i10;
+                this.f33744a = i10;
                 this.b = bundle;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                a.this.b.onNavigationEvent(this.f33538a, this.b);
+                a.this.b.onNavigationEvent(this.f33744a, this.b);
             }
         }
 
         /* JADX INFO: renamed from: w.c$a$c, reason: collision with other inner class name */
-        public class RunnableC0611c implements Runnable {
+        public class RunnableC0621c implements Runnable {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ String f33540a;
+            public final /* synthetic */ String f33746a;
             public final /* synthetic */ Bundle b;
 
-            public RunnableC0611c(String str, Bundle bundle) {
-                this.f33540a = str;
+            public RunnableC0621c(String str, Bundle bundle) {
+                this.f33746a = str;
                 this.b = bundle;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                a.this.b.extraCallback(this.f33540a, this.b);
+                a.this.b.extraCallback(this.f33746a, this.b);
             }
         }
 
         public class d implements Runnable {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ Bundle f33542a;
+            public final /* synthetic */ Bundle f33748a;
 
             public d(Bundle bundle) {
-                this.f33542a = bundle;
+                this.f33748a = bundle;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                a.this.b.onMessageChannelReady(this.f33542a);
+                a.this.b.onMessageChannelReady(this.f33748a);
             }
         }
 
         public class e implements Runnable {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ String f33543a;
+            public final /* synthetic */ String f33749a;
             public final /* synthetic */ Bundle b;
 
             public e(String str, Bundle bundle) {
-                this.f33543a = str;
+                this.f33749a = str;
                 this.b = bundle;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                a.this.b.onPostMessage(this.f33543a, this.b);
+                a.this.b.onPostMessage(this.f33749a, this.b);
             }
         }
 
         public class f implements Runnable {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ int f33545a;
+            public final /* synthetic */ int f33751a;
             public final /* synthetic */ Uri b;
 
             /* JADX INFO: renamed from: c, reason: collision with root package name */
-            public final /* synthetic */ boolean f33546c;
+            public final /* synthetic */ boolean f33752c;
 
             /* JADX INFO: renamed from: d, reason: collision with root package name */
-            public final /* synthetic */ Bundle f33547d;
+            public final /* synthetic */ Bundle f33753d;
 
             public f(int i10, Uri uri, boolean z10, Bundle bundle) {
-                this.f33545a = i10;
+                this.f33751a = i10;
                 this.b = uri;
-                this.f33546c = z10;
-                this.f33547d = bundle;
+                this.f33752c = z10;
+                this.f33753d = bundle;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                a.this.b.onRelationshipValidationResult(this.f33545a, this.b, this.f33546c, this.f33547d);
+                a.this.b.onRelationshipValidationResult(this.f33751a, this.b, this.f33752c, this.f33753d);
             }
         }
 
         public class g implements Runnable {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ int f33549a;
+            public final /* synthetic */ int f33755a;
             public final /* synthetic */ int b;
 
             /* JADX INFO: renamed from: c, reason: collision with root package name */
-            public final /* synthetic */ Bundle f33550c;
+            public final /* synthetic */ Bundle f33756c;
 
             public g(int i10, int i11, Bundle bundle) {
-                this.f33549a = i10;
+                this.f33755a = i10;
                 this.b = i11;
-                this.f33550c = bundle;
+                this.f33756c = bundle;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                a.this.b.onActivityResized(this.f33549a, this.b, this.f33550c);
+                a.this.b.onActivityResized(this.f33755a, this.b, this.f33756c);
             }
         }
 
         public class h implements Runnable {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ Bundle f33552a;
+            public final /* synthetic */ Bundle f33758a;
 
             public h(Bundle bundle) {
-                this.f33552a = bundle;
+                this.f33758a = bundle;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                a.this.b.onWarmupCompleted(this.f33552a);
+                a.this.b.onWarmupCompleted(this.f33758a);
             }
         }
 
         public class i implements Runnable {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ int f33553a;
+            public final /* synthetic */ int f33759a;
             public final /* synthetic */ int b;
 
             /* JADX INFO: renamed from: c, reason: collision with root package name */
-            public final /* synthetic */ int f33554c;
+            public final /* synthetic */ int f33760c;
 
             /* JADX INFO: renamed from: d, reason: collision with root package name */
-            public final /* synthetic */ int f33555d;
+            public final /* synthetic */ int f33761d;
 
             /* JADX INFO: renamed from: e, reason: collision with root package name */
-            public final /* synthetic */ int f33556e;
+            public final /* synthetic */ int f33762e;
 
             /* JADX INFO: renamed from: f, reason: collision with root package name */
-            public final /* synthetic */ Bundle f33557f;
+            public final /* synthetic */ Bundle f33763f;
 
             public i(int i10, int i11, int i12, int i13, int i14, Bundle bundle) {
-                this.f33553a = i10;
+                this.f33759a = i10;
                 this.b = i11;
-                this.f33554c = i12;
-                this.f33555d = i13;
-                this.f33556e = i14;
-                this.f33557f = bundle;
+                this.f33760c = i12;
+                this.f33761d = i13;
+                this.f33762e = i14;
+                this.f33763f = bundle;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                a.this.b.onActivityLayout(this.f33553a, this.b, this.f33554c, this.f33555d, this.f33556e, this.f33557f);
+                a.this.b.onActivityLayout(this.f33759a, this.b, this.f33760c, this.f33761d, this.f33762e, this.f33763f);
             }
         }
 
         public class j implements Runnable {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ Bundle f33559a;
+            public final /* synthetic */ Bundle f33765a;
 
             public j(Bundle bundle) {
-                this.f33559a = bundle;
+                this.f33765a = bundle;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                a.this.b.onMinimized(this.f33559a);
+                a.this.b.onMinimized(this.f33765a);
             }
         }
 
@@ -235,11 +235,11 @@ public class c {
             if (this.b == null) {
                 return;
             }
-            this.f33535a.post(new b(i10, bundle));
+            this.f33741a.post(new b(i10, bundle));
         }
 
         @Override // c.a
-        public Bundle O(String str, Bundle bundle) {
+        public Bundle M(String str, Bundle bundle) {
             w.b bVar = this.b;
             if (bVar == null) {
                 return null;
@@ -252,7 +252,7 @@ public class c {
             if (this.b == null) {
                 return;
             }
-            this.f33535a.post(new e(str, bundle));
+            this.f33741a.post(new e(str, bundle));
         }
 
         @Override // c.a
@@ -260,7 +260,7 @@ public class c {
             if (this.b == null) {
                 return;
             }
-            this.f33535a.post(new d(bundle));
+            this.f33741a.post(new d(bundle));
         }
 
         @Override // c.a
@@ -268,47 +268,47 @@ public class c {
             if (this.b == null) {
                 return;
             }
-            this.f33535a.post(new f(i10, uri, z10, bundle));
+            this.f33741a.post(new f(i10, uri, z10, bundle));
         }
 
         @Override // c.a
-        public void p0(String str, Bundle bundle) {
+        public void l1(Bundle bundle) {
             if (this.b == null) {
                 return;
             }
-            this.f33535a.post(new RunnableC0611c(str, bundle));
+            this.f33741a.post(new j(bundle));
         }
 
         @Override // c.a
-        public void p1(Bundle bundle) {
+        public void m0(String str, Bundle bundle) {
             if (this.b == null) {
                 return;
             }
-            this.f33535a.post(new j(bundle));
+            this.f33741a.post(new RunnableC0621c(str, bundle));
         }
 
         @Override // c.a
-        public void r0(Bundle bundle) {
+        public void p0(Bundle bundle) {
             if (this.b == null) {
                 return;
             }
-            this.f33535a.post(new h(bundle));
+            this.f33741a.post(new h(bundle));
         }
 
         @Override // c.a
-        public void t1(Bundle bundle) {
+        public void q1(Bundle bundle) {
             if (this.b == null) {
                 return;
             }
-            this.f33535a.post(new RunnableC0610a(bundle));
+            this.f33741a.post(new RunnableC0620a(bundle));
         }
 
         @Override // c.a
-        public void y1(int i10, int i11, Bundle bundle) {
+        public void w1(int i10, int i11, Bundle bundle) {
             if (this.b == null) {
                 return;
             }
-            this.f33535a.post(new g(i10, i11, bundle));
+            this.f33741a.post(new g(i10, i11, bundle));
         }
 
         @Override // c.a
@@ -316,14 +316,14 @@ public class c {
             if (this.b == null) {
                 return;
             }
-            this.f33535a.post(new i(i10, i11, i12, i13, i14, bundle));
+            this.f33741a.post(new i(i10, i11, i12, i13, i14, bundle));
         }
     }
 
     public c(c.b bVar, ComponentName componentName, Context context) {
-        this.f33533a = bVar;
+        this.f33739a = bVar;
         this.b = componentName;
-        this.f33534c = context;
+        this.f33740c = context;
     }
 
     public static boolean a(Context context, String str, e eVar) {
@@ -392,18 +392,18 @@ public class c {
     }
 
     public final f g(b bVar, PendingIntent pendingIntent) {
-        boolean zL;
+        boolean zJ;
         c.a.AbstractBinderC0091a abstractBinderC0091aB = b(bVar);
         try {
             if (pendingIntent != null) {
                 Bundle bundle = new Bundle();
                 bundle.putParcelable("android.support.customtabs.extra.SESSION_ID", pendingIntent);
-                zL = this.f33533a.m(abstractBinderC0091aB, bundle);
+                zJ = this.f33739a.m(abstractBinderC0091aB, bundle);
             } else {
-                zL = this.f33533a.L(abstractBinderC0091aB);
+                zJ = this.f33739a.J(abstractBinderC0091aB);
             }
-            if (zL) {
-                return new f(this.f33533a, abstractBinderC0091aB, this.b, pendingIntent);
+            if (zJ) {
+                return new f(this.f33739a, abstractBinderC0091aB, this.b, pendingIntent);
             }
             return null;
         } catch (RemoteException unused) {
@@ -413,7 +413,7 @@ public class c {
 
     public boolean i(long j10) {
         try {
-            return this.f33533a.l1(j10);
+            return this.f33739a.h1(j10);
         } catch (RemoteException unused) {
             return false;
         }

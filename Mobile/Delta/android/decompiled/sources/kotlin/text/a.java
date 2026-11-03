@@ -38,7 +38,7 @@ public enum a {
     INITIAL_QUOTE_PUNCTUATION(29, "Pi"),
     FINAL_QUOTE_PUNCTUATION(30, "Pf");
 
-    public static final /* synthetic */ qt.a I = qt.b.a(a());
+    public static final /* synthetic */ ot.a I = ot.b.a(a());
 
     /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -79,7 +79,7 @@ public enum a {
     }
 
     @NotNull
-    public static qt.a<a> b() {
+    public static ot.a<a> b() {
         return I;
     }
 }

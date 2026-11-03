@@ -10,23 +10,21 @@ import m9.e;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface SnapshotMetadata extends e<SnapshotMetadata>, Parcelable {
-    long A0();
+    @NonNull
+    String A1();
 
-    String B2();
+    String C2();
+
+    Uri O0();
+
+    boolean P2();
 
     @NonNull
-    String C1();
-
-    boolean Q2();
-
-    Uri S0();
+    Player V0();
 
     long V1();
 
-    @NonNull
-    Player Z0();
-
-    long f0();
+    long d0();
 
     @KeepName
     @Deprecated
@@ -35,13 +33,15 @@ public interface SnapshotMetadata extends e<SnapshotMetadata>, Parcelable {
     @NonNull
     String getDescription();
 
-    float h3();
+    float j3();
 
     @NonNull
     String q3();
 
     @NonNull
     Game u3();
+
+    long w0();
 
     @NonNull
     String zza();

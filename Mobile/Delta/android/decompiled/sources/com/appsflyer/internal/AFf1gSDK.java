@@ -14,12 +14,12 @@ public final class AFf1gSDK implements AFf1eSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    private final AFg1xSDK f5341d;
+    private final AFg1xSDK f5414d;
 
     public AFf1gSDK(@NotNull AFg1xSDK aFg1xSDK, @NotNull AFc1eSDK aFc1eSDK) {
         Intrinsics.checkNotNullParameter(aFg1xSDK, "");
         Intrinsics.checkNotNullParameter(aFc1eSDK, "");
-        this.f5341d = aFg1xSDK;
+        this.f5414d = aFg1xSDK;
         this.AFLogger = aFc1eSDK;
     }
 
@@ -27,7 +27,7 @@ public final class AFf1gSDK implements AFf1eSDK {
     public final void d(@NotNull Map<String, Object> map, @NotNull AFe1zSDK aFe1zSDK) {
         Intrinsics.checkNotNullParameter(map, "");
         Intrinsics.checkNotNullParameter(aFe1zSDK, "");
-        AFg1ySDK aFg1ySDKRegisterClient = this.f5341d.registerClient();
+        AFg1ySDK aFg1ySDKRegisterClient = this.f5414d.registerClient();
         AppsFlyerConsent appsFlyerConsent = this.AFLogger.setImeiData;
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         if (appsFlyerConsent != null) {
@@ -60,7 +60,7 @@ public final class AFf1gSDK implements AFf1eSDK {
                 linkedHashMap3.put("gdpr_applies", -1);
                 linkedHashMap3.put("tcstring", "");
             } else {
-                linkedHashMap3.put("gdpr_applies", Integer.valueOf(aFg1ySDKRegisterClient.f5387d));
+                linkedHashMap3.put("gdpr_applies", Integer.valueOf(aFg1ySDKRegisterClient.f5460d));
                 linkedHashMap3.put("tcstring", aFg1ySDKRegisterClient.AFKeystoreWrapper);
             }
             linkedHashMap.put("tcf", linkedHashMap3);
@@ -71,6 +71,6 @@ public final class AFf1gSDK implements AFf1eSDK {
         if (aFe1zSDK != AFd1bSDK.CONVERSION || this.AFLogger.afDebugLog == null) {
             return;
         }
-        AFj1iSDK.AFLogger(map).put("api", kotlin.collections.j0.g(jt.s.a("enableTCFDataCollection", this.AFLogger.afDebugLog)));
+        AFj1iSDK.AFLogger(map).put("api", kotlin.collections.j0.g(gt.s.a("enableTCFDataCollection", this.AFLogger.afDebugLog)));
     }
 }

@@ -10,11 +10,11 @@ public final class d7 extends gb implements pc {
     static {
         d7 d7Var = new d7();
         zzf = d7Var;
-        gb.u(d7.class, d7Var);
+        gb.t(d7.class, d7Var);
     }
 
     public static b7 F() {
-        return (b7) zzf.q();
+        return (b7) zzf.p();
     }
 
     @Override // com.google.android.gms.internal.measurement.gb
@@ -24,7 +24,7 @@ public final class d7 extends gb implements pc {
             return (byte) 1;
         }
         if (i11 == 2) {
-            return gb.v(zzf, "\u0004\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0001\u0000\u0001᠌\u0000\u0002\u001b", new Object[]{"zzb", "zzd", c7.f6401a, "zze", q6.class});
+            return gb.v(zzf, "\u0004\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0001\u0000\u0001᠌\u0000\u0002\u001b", new Object[]{"zzb", "zzd", c7.f6474a, "zze", q6.class});
         }
         if (i11 == 3) {
             return new d7();

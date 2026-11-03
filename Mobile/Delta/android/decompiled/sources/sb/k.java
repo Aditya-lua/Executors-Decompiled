@@ -7,30 +7,30 @@ import com.google.android.gms.tasks.Task;
 public class k<TResult> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final n0 f30588a = new n0();
+    public final n0 f31135a = new n0();
 
     public k() {
     }
 
     @NonNull
     public Task<TResult> a() {
-        return this.f30588a;
+        return this.f31135a;
     }
 
     public void b(@NonNull Exception exc) {
-        this.f30588a.p(exc);
+        this.f31135a.p(exc);
     }
 
     public void c(TResult tresult) {
-        this.f30588a.q(tresult);
+        this.f31135a.q(tresult);
     }
 
     public boolean d(@NonNull Exception exc) {
-        return this.f30588a.s(exc);
+        return this.f31135a.s(exc);
     }
 
     public boolean e(TResult tresult) {
-        return this.f30588a.t(tresult);
+        return this.f31135a.t(tresult);
     }
 
     public k(@NonNull a aVar) {

@@ -11,29 +11,29 @@ import java.util.Objects;
 public final class kb implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ String f25698a;
+    public final /* synthetic */ String f26519a;
     public final /* synthetic */ String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final /* synthetic */ zzr f25699c;
+    public final /* synthetic */ zzr f26520c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final /* synthetic */ boolean f25700d;
+    public final /* synthetic */ boolean f26521d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final /* synthetic */ com.google.android.gms.internal.measurement.x1 f25701e;
+    public final /* synthetic */ com.google.android.gms.internal.measurement.x1 f26522e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final /* synthetic */ tc f25702f;
+    public final /* synthetic */ tc f26523f;
 
     public kb(tc tcVar, String str, String str2, zzr zzrVar, boolean z10, com.google.android.gms.internal.measurement.x1 x1Var) {
-        this.f25698a = str;
+        this.f26519a = str;
         this.b = str2;
-        this.f25699c = zzrVar;
-        this.f25700d = z10;
-        this.f25701e = x1Var;
+        this.f26520c = zzrVar;
+        this.f26521d = z10;
+        this.f26522e = x1Var;
         Objects.requireNonNull(tcVar);
-        this.f25702f = tcVar;
+        this.f26523f = tcVar;
     }
 
     @Override // java.lang.Runnable
@@ -42,32 +42,32 @@ public final class kb implements Runnable {
         RemoteException e10;
         Bundle bundle2 = new Bundle();
         try {
-            tc tcVar = this.f25702f;
+            tc tcVar = this.f26523f;
             d5 d5VarN = tcVar.N();
             if (d5VarN == null) {
-                g7 g7Var = tcVar.f25625a;
-                g7Var.a().o().c("Failed to get user properties; not connected to service", this.f25698a, this.b);
-                g7Var.C().f0(this.f25701e, bundle2);
+                g7 g7Var = tcVar.f26446a;
+                g7Var.a().o().c("Failed to get user properties; not connected to service", this.f26519a, this.b);
+                g7Var.C().f0(this.f26522e, bundle2);
                 return;
             }
-            zzr zzrVar = this.f25699c;
+            zzr zzrVar = this.f26520c;
             n9.m.l(zzrVar);
-            List<zzpl> listY1 = d5VarN.Y1(this.f25698a, this.b, this.f25700d, zzrVar);
-            String[] strArr = ve.f26040i;
+            List<zzpl> listY1 = d5VarN.Y1(this.f26519a, this.b, this.f26521d, zzrVar);
+            String[] strArr = ve.f26861i;
             bundle = new Bundle();
             if (listY1 != null) {
                 for (zzpl zzplVar : listY1) {
-                    String str = zzplVar.f7442j;
+                    String str = zzplVar.f7516j;
                     if (str != null) {
-                        bundle.putString(zzplVar.f7439g, str);
+                        bundle.putString(zzplVar.f7513g, str);
                     } else {
-                        Long l10 = zzplVar.f7441i;
+                        Long l10 = zzplVar.f7515i;
                         if (l10 != null) {
-                            bundle.putLong(zzplVar.f7439g, l10.longValue());
+                            bundle.putLong(zzplVar.f7513g, l10.longValue());
                         } else {
-                            Double d10 = zzplVar.f7444l;
+                            Double d10 = zzplVar.f7518l;
                             if (d10 != null) {
-                                bundle.putDouble(zzplVar.f7439g, d10.doubleValue());
+                                bundle.putDouble(zzplVar.f7513g, d10.doubleValue());
                             }
                         }
                     }
@@ -76,19 +76,19 @@ public final class kb implements Runnable {
             try {
                 try {
                     tcVar.J();
-                    g7 g7Var2 = tcVar.f25625a;
-                    g7Var2.C().f0(this.f25701e, bundle);
+                    g7 g7Var2 = tcVar.f26446a;
+                    g7Var2.C().f0(this.f26522e, bundle);
                 } catch (RemoteException e11) {
                     e10 = e11;
-                    this.f25702f.f25625a.a().o().c("Failed to get user properties; remote exception", this.f25698a, e10);
-                    tc tcVar2 = this.f25702f;
-                    tcVar2.f25625a.C().f0(this.f25701e, bundle);
+                    this.f26523f.f26446a.a().o().c("Failed to get user properties; remote exception", this.f26519a, e10);
+                    tc tcVar2 = this.f26523f;
+                    tcVar2.f26446a.C().f0(this.f26522e, bundle);
                 }
             } catch (Throwable th2) {
                 th = th2;
                 bundle2 = bundle;
-                tc tcVar3 = this.f25702f;
-                tcVar3.f25625a.C().f0(this.f25701e, bundle2);
+                tc tcVar3 = this.f26523f;
+                tcVar3.f26446a.C().f0(this.f26522e, bundle2);
                 throw th;
             }
         } catch (RemoteException e12) {
@@ -96,8 +96,8 @@ public final class kb implements Runnable {
             e10 = e12;
         } catch (Throwable th3) {
             th = th3;
-            tc tcVar4 = this.f25702f;
-            tcVar4.f25625a.C().f0(this.f25701e, bundle2);
+            tc tcVar4 = this.f26523f;
+            tcVar4.f26446a.C().f0(this.f26522e, bundle2);
             throw th;
         }
     }

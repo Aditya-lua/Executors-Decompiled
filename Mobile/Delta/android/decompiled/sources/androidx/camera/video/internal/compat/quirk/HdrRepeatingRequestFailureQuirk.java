@@ -16,6 +16,6 @@ public class HdrRepeatingRequestFailureQuirk implements g3 {
     }
 
     public boolean i(k0 k0Var) {
-        return g() && (k0Var != k0.f17470d);
+        return g() && (k0Var != k0.f18009d);
     }
 }

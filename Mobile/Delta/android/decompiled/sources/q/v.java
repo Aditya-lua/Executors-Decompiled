@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 public class v extends RatingBar {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final t f29133a;
+    public final t f29486a;
 
     public v(@NonNull Context context, AttributeSet attributeSet) {
         this(context, attributeSet, i.a.J);
@@ -20,7 +20,7 @@ public class v extends RatingBar {
     @Override // android.widget.RatingBar, android.widget.AbsSeekBar, android.widget.ProgressBar, android.view.View
     public synchronized void onMeasure(int i10, int i11) {
         super.onMeasure(i10, i11);
-        Bitmap bitmapB = this.f29133a.b();
+        Bitmap bitmapB = this.f29486a.b();
         if (bitmapB != null) {
             setMeasuredDimension(View.resolveSizeAndState(bitmapB.getWidth() * getNumStars(), i10, 0), getMeasuredHeight());
         }
@@ -30,7 +30,7 @@ public class v extends RatingBar {
         super(context, attributeSet, i10);
         v0.a(this, getContext());
         t tVar = new t(this);
-        this.f29133a = tVar;
+        this.f29486a = tVar;
         tVar.c(attributeSet, i10);
     }
 }

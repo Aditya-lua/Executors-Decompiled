@@ -4,11 +4,11 @@ package l9;
 public final class b0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final b f22992a;
+    public final b f23386a;
     public final sb.k b;
 
     public final b a() {
-        return this.f22992a;
+        return this.f23386a;
     }
 
     public final sb.k b() {

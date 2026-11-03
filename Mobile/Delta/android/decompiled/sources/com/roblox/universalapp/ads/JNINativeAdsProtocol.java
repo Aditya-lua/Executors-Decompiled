@@ -14,9 +14,13 @@ public class JNINativeAdsProtocol {
 
     public static native String getExperimentVariantFieldName();
 
+    public static native boolean getFFlagEnableLoadInterstitialAd();
+
     public static native boolean getFFlagEnableNativeAdsProtocol();
 
     public static native String getGetQueryInfoMessageName();
+
+    public static native boolean getGmaSdkBackgroundInstallIxpEnabled();
 
     public static native String getInitWithCallbackMessageName();
 

@@ -16,7 +16,7 @@ import java.util.Map;
 public class b extends q {
     public static final String[] R = {"android:changeBounds:bounds", "android:changeBounds:clip", "android:changeBounds:parent", "android:changeBounds:windowX", "android:changeBounds:windowY"};
     public static final Property<i, PointF> S = new a(PointF.class, "topLeft");
-    public static final Property<i, PointF> T = new C0467b(PointF.class, "bottomRight");
+    public static final Property<i, PointF> T = new C0478b(PointF.class, "bottomRight");
     public static final Property<View, PointF> U = new c(PointF.class, "bottomRight");
     public static final Property<View, PointF> V = new d(PointF.class, "topLeft");
     public static final Property<View, PointF> W = new e(PointF.class, "position");
@@ -42,8 +42,8 @@ public class b extends q {
     }
 
     /* JADX INFO: renamed from: o5.b$b, reason: collision with other inner class name */
-    public class C0467b extends Property<i, PointF> {
-        public C0467b(Class cls, String str) {
+    public class C0478b extends Property<i, PointF> {
+        public C0478b(Class cls, String str) {
             super(cls, str);
         }
 
@@ -119,11 +119,11 @@ public class b extends q {
     public class f extends AnimatorListenerAdapter {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ i f27056a;
+        public final /* synthetic */ i f27621a;
         private final i mViewBounds;
 
         public f(i iVar) {
-            this.f27056a = iVar;
+            this.f27621a = iVar;
             this.mViewBounds = iVar;
         }
     }
@@ -131,79 +131,79 @@ public class b extends q {
     public static class g extends AnimatorListenerAdapter implements q.h {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final View f27057a;
+        public final View f27622a;
         public final Rect b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final boolean f27058c;
+        public final boolean f27623c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final Rect f27059d;
+        public final Rect f27624d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final boolean f27060e;
+        public final boolean f27625e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public final int f27061f;
+        public final int f27626f;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public final int f27062g;
+        public final int f27627g;
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public final int f27063h;
+        public final int f27628h;
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final int f27064i;
+        public final int f27629i;
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public final int f27065j;
+        public final int f27630j;
 
         /* JADX INFO: renamed from: k, reason: collision with root package name */
-        public final int f27066k;
+        public final int f27631k;
 
         /* JADX INFO: renamed from: l, reason: collision with root package name */
-        public final int f27067l;
+        public final int f27632l;
 
         /* JADX INFO: renamed from: m, reason: collision with root package name */
-        public final int f27068m;
+        public final int f27633m;
 
         /* JADX INFO: renamed from: n, reason: collision with root package name */
-        public boolean f27069n;
+        public boolean f27634n;
 
         public g(View view, Rect rect, boolean z10, Rect rect2, boolean z11, int i10, int i11, int i12, int i13, int i14, int i15, int i16, int i17) {
-            this.f27057a = view;
+            this.f27622a = view;
             this.b = rect;
-            this.f27058c = z10;
-            this.f27059d = rect2;
-            this.f27060e = z11;
-            this.f27061f = i10;
-            this.f27062g = i11;
-            this.f27063h = i12;
-            this.f27064i = i13;
-            this.f27065j = i14;
-            this.f27066k = i15;
-            this.f27067l = i16;
-            this.f27068m = i17;
+            this.f27623c = z10;
+            this.f27624d = rect2;
+            this.f27625e = z11;
+            this.f27626f = i10;
+            this.f27627g = i11;
+            this.f27628h = i12;
+            this.f27629i = i13;
+            this.f27630j = i14;
+            this.f27631k = i15;
+            this.f27632l = i16;
+            this.f27633m = i17;
         }
 
         @Override // o5.q.h
         public void a(@NonNull q qVar) {
-            this.f27069n = true;
+            this.f27634n = true;
         }
 
         @Override // o5.q.h
         public void b(@NonNull q qVar) {
-            View view = this.f27057a;
+            View view = this.f27622a;
             int i10 = l.b;
             Rect rect = (Rect) view.getTag(i10);
-            this.f27057a.setTag(i10, null);
-            this.f27057a.setClipBounds(rect);
+            this.f27622a.setTag(i10, null);
+            this.f27622a.setClipBounds(rect);
         }
 
         @Override // o5.q.h
         public void d(@NonNull q qVar) {
-            this.f27057a.setTag(l.b, this.f27057a.getClipBounds());
-            this.f27057a.setClipBounds(this.f27060e ? null : this.f27059d);
+            this.f27622a.setTag(l.b, this.f27622a.getClipBounds());
+            this.f27622a.setClipBounds(this.f27625e ? null : this.f27624d);
         }
 
         @Override // o5.q.h
@@ -226,40 +226,40 @@ public class b extends q {
 
         @Override // android.animation.Animator.AnimatorListener
         public void onAnimationEnd(Animator animator, boolean z10) {
-            if (this.f27069n) {
+            if (this.f27634n) {
                 return;
             }
             Rect rect = null;
             if (z10) {
-                if (!this.f27058c) {
+                if (!this.f27623c) {
                     rect = this.b;
                 }
-            } else if (!this.f27060e) {
-                rect = this.f27059d;
+            } else if (!this.f27625e) {
+                rect = this.f27624d;
             }
-            this.f27057a.setClipBounds(rect);
+            this.f27622a.setClipBounds(rect);
             if (z10) {
-                i0.d(this.f27057a, this.f27061f, this.f27062g, this.f27063h, this.f27064i);
+                i0.d(this.f27622a, this.f27626f, this.f27627g, this.f27628h, this.f27629i);
             } else {
-                i0.d(this.f27057a, this.f27065j, this.f27066k, this.f27067l, this.f27068m);
+                i0.d(this.f27622a, this.f27630j, this.f27631k, this.f27632l, this.f27633m);
             }
         }
 
         @Override // android.animation.Animator.AnimatorListener
         public void onAnimationStart(Animator animator, boolean z10) {
-            int iMax = Math.max(this.f27063h - this.f27061f, this.f27067l - this.f27065j);
-            int iMax2 = Math.max(this.f27064i - this.f27062g, this.f27068m - this.f27066k);
-            int i10 = z10 ? this.f27065j : this.f27061f;
-            int i11 = z10 ? this.f27066k : this.f27062g;
-            i0.d(this.f27057a, i10, i11, iMax + i10, iMax2 + i11);
-            this.f27057a.setClipBounds(z10 ? this.f27059d : this.b);
+            int iMax = Math.max(this.f27628h - this.f27626f, this.f27632l - this.f27630j);
+            int iMax2 = Math.max(this.f27629i - this.f27627g, this.f27633m - this.f27631k);
+            int i10 = z10 ? this.f27630j : this.f27626f;
+            int i11 = z10 ? this.f27631k : this.f27627g;
+            i0.d(this.f27622a, i10, i11, iMax + i10, iMax2 + i11);
+            this.f27622a.setClipBounds(z10 ? this.f27624d : this.b);
         }
     }
 
     public static class h extends x {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public boolean f27070a = false;
+        public boolean f27635a = false;
         public final ViewGroup b;
 
         public h(@NonNull ViewGroup viewGroup) {
@@ -269,7 +269,7 @@ public class b extends q {
         @Override // o5.x, o5.q.h
         public void a(@NonNull q qVar) {
             h0.b(this.b, false);
-            this.f27070a = true;
+            this.f27635a = true;
         }
 
         @Override // o5.x, o5.q.h
@@ -284,7 +284,7 @@ public class b extends q {
 
         @Override // o5.x, o5.q.h
         public void k(@NonNull q qVar) {
-            if (!this.f27070a) {
+            if (!this.f27635a) {
                 h0.b(this.b, false);
             }
             qVar.m0(this);
@@ -294,50 +294,50 @@ public class b extends q {
     public static class i {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public int f27071a;
+        public int f27636a;
         public int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public int f27072c;
+        public int f27637c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public int f27073d;
+        public int f27638d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final View f27074e;
+        public final View f27639e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public int f27075f;
+        public int f27640f;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public int f27076g;
+        public int f27641g;
 
         public i(View view) {
-            this.f27074e = view;
+            this.f27639e = view;
         }
 
         public void a(PointF pointF) {
-            this.f27072c = Math.round(pointF.x);
-            this.f27073d = Math.round(pointF.y);
-            int i10 = this.f27076g + 1;
-            this.f27076g = i10;
-            if (this.f27075f == i10) {
+            this.f27637c = Math.round(pointF.x);
+            this.f27638d = Math.round(pointF.y);
+            int i10 = this.f27641g + 1;
+            this.f27641g = i10;
+            if (this.f27640f == i10) {
                 b();
             }
         }
 
         public final void b() {
-            i0.d(this.f27074e, this.f27071a, this.b, this.f27072c, this.f27073d);
-            this.f27075f = 0;
-            this.f27076g = 0;
+            i0.d(this.f27639e, this.f27636a, this.b, this.f27637c, this.f27638d);
+            this.f27640f = 0;
+            this.f27641g = 0;
         }
 
         public void c(PointF pointF) {
-            this.f27071a = Math.round(pointF.x);
+            this.f27636a = Math.round(pointF.x);
             this.b = Math.round(pointF.y);
-            int i10 = this.f27075f + 1;
-            this.f27075f = i10;
-            if (i10 == this.f27076g) {
+            int i10 = this.f27640f + 1;
+            this.f27640f = i10;
+            if (i10 == this.f27641g) {
                 b();
             }
         }
@@ -348,10 +348,10 @@ public class b extends q {
         if (!view.isLaidOut() && view.getWidth() == 0 && view.getHeight() == 0) {
             return;
         }
-        d0Var.f27089a.put("android:changeBounds:bounds", new Rect(view.getLeft(), view.getTop(), view.getRight(), view.getBottom()));
-        d0Var.f27089a.put("android:changeBounds:parent", d0Var.b.getParent());
+        d0Var.f27654a.put("android:changeBounds:bounds", new Rect(view.getLeft(), view.getTop(), view.getRight(), view.getBottom()));
+        d0Var.f27654a.put("android:changeBounds:parent", d0Var.b.getParent());
         if (this.Q) {
-            d0Var.f27089a.put("android:changeBounds:clip", view.getClipBounds());
+            d0Var.f27654a.put("android:changeBounds:clip", view.getClipBounds());
         }
     }
 
@@ -378,7 +378,7 @@ public class b extends q {
         if (!this.Q || (rect = (Rect) d0Var.b.getTag(l.b)) == null) {
             return;
         }
-        d0Var.f27089a.put("android:changeBounds:clip", rect);
+        d0Var.f27654a.put("android:changeBounds:clip", rect);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -392,16 +392,16 @@ public class b extends q {
         if (d0Var == null || d0Var2 == null) {
             return null;
         }
-        Map<String, Object> map = d0Var.f27089a;
-        Map<String, Object> map2 = d0Var2.f27089a;
+        Map<String, Object> map = d0Var.f27654a;
+        Map<String, Object> map2 = d0Var2.f27654a;
         ViewGroup viewGroup2 = (ViewGroup) map.get("android:changeBounds:parent");
         ViewGroup viewGroup3 = (ViewGroup) map2.get("android:changeBounds:parent");
         if (viewGroup2 == null || viewGroup3 == null) {
             return null;
         }
         View view = d0Var2.b;
-        Rect rect2 = (Rect) d0Var.f27089a.get("android:changeBounds:bounds");
-        Rect rect3 = (Rect) d0Var2.f27089a.get("android:changeBounds:bounds");
+        Rect rect2 = (Rect) d0Var.f27654a.get("android:changeBounds:bounds");
+        Rect rect3 = (Rect) d0Var2.f27654a.get("android:changeBounds:bounds");
         int i12 = rect2.left;
         int i13 = rect3.left;
         int i14 = rect2.top;
@@ -414,8 +414,8 @@ public class b extends q {
         int i21 = i18 - i14;
         int i22 = i17 - i13;
         int i23 = i19 - i15;
-        Rect rect4 = (Rect) d0Var.f27089a.get("android:changeBounds:clip");
-        Rect rect5 = (Rect) d0Var2.f27089a.get("android:changeBounds:clip");
+        Rect rect4 = (Rect) d0Var.f27654a.get("android:changeBounds:clip");
+        Rect rect5 = (Rect) d0Var2.f27654a.get("android:changeBounds:clip");
         if ((i20 == 0 || i21 == 0) && (i22 == 0 || i23 == 0)) {
             i10 = 0;
         } else {

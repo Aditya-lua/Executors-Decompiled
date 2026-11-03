@@ -9,7 +9,7 @@ import android.view.View;
 public abstract class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Object f26925a;
+    public Object f27490a;
     public boolean b;
 
     public interface a {
@@ -33,7 +33,7 @@ public abstract class b {
     public abstract CharSequence g();
 
     public Object h() {
-        return this.f26925a;
+        return this.f27490a;
     }
 
     public abstract CharSequence i();
@@ -53,7 +53,7 @@ public abstract class b {
     public abstract void o(CharSequence charSequence);
 
     public void p(Object obj) {
-        this.f26925a = obj;
+        this.f27490a = obj;
     }
 
     public abstract void q(int i10);

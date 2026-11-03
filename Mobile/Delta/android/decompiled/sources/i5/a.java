@@ -43,6 +43,6 @@ public final class a implements f5.b {
             return c.INSTANCE.a(this.db, sql);
         }
         f5.a.b(21, "connection is closed");
-        throw new jt.d();
+        throw new gt.d();
     }
 }

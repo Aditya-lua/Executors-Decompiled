@@ -8,25 +8,25 @@ import android.view.View;
 public class f0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final d f1860a;
+    public final d f1705a;
 
     public static class b implements d {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final ScrollFeedbackProvider f1861a;
+        public final ScrollFeedbackProvider f1706a;
 
         public b(View view) {
-            this.f1861a = ScrollFeedbackProvider.createProvider(view);
+            this.f1706a = ScrollFeedbackProvider.createProvider(view);
         }
 
         @Override // androidx.core.view.f0.d
         public void onScrollLimit(int i10, int i11, int i12, boolean z10) {
-            this.f1861a.onScrollLimit(i10, i11, i12, z10);
+            this.f1706a.onScrollLimit(i10, i11, i12, z10);
         }
 
         @Override // androidx.core.view.f0.d
         public void onScrollProgress(int i10, int i11, int i12, int i13) {
-            this.f1861a.onScrollProgress(i10, i11, i12, i13);
+            this.f1706a.onScrollProgress(i10, i11, i12, i13);
         }
     }
 
@@ -51,9 +51,9 @@ public class f0 {
 
     public f0(View view) {
         if (Build.VERSION.SDK_INT >= 35) {
-            this.f1860a = new b(view);
+            this.f1705a = new b(view);
         } else {
-            this.f1860a = new c();
+            this.f1705a = new c();
         }
     }
 
@@ -62,10 +62,10 @@ public class f0 {
     }
 
     public void b(int i10, int i11, int i12, boolean z10) {
-        this.f1860a.onScrollLimit(i10, i11, i12, z10);
+        this.f1705a.onScrollLimit(i10, i11, i12, z10);
     }
 
     public void c(int i10, int i11, int i12, int i13) {
-        this.f1860a.onScrollProgress(i10, i11, i12, i13);
+        this.f1705a.onScrollProgress(i10, i11, i12, i13);
     }
 }

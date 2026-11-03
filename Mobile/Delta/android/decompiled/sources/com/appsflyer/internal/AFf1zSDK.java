@@ -112,7 +112,7 @@ public final class AFf1zSDK extends AFe1ySDK<Map<String, ? extends Object>> {
             string2 = str2;
             num = num4;
         }
-        Map<String, ? extends Object> mapN = kotlin.collections.k0.n(jt.s.a("res", string2 == null ? "" : string2), jt.s.a("status", Integer.valueOf(num != null ? num.intValue() : -1)), jt.s.a(Payload.LATENCY, Long.valueOf(System.currentTimeMillis() - jCurrentTimeMillis)));
+        Map<String, ? extends Object> mapN = kotlin.collections.k0.n(gt.s.a("res", string2 == null ? "" : string2), gt.s.a("status", Integer.valueOf(num != null ? num.intValue() : -1)), gt.s.a(Payload.LATENCY, Long.valueOf(System.currentTimeMillis() - jCurrentTimeMillis)));
         if (str != null) {
             mapN.put("error", str);
         }
@@ -122,7 +122,7 @@ public final class AFf1zSDK extends AFe1ySDK<Map<String, ? extends Object>> {
         synchronized (this.AFLogger) {
             this.AFLogger.unregisterClient("af_deeplink_r", mapN);
             this.AFLogger.unregisterClient("af_deeplink", this.unregisterClient.toString());
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
         }
         this.AFKeystoreWrapper.f_(this.AFLogger, string2 != null ? Uri.parse(string2) : this.unregisterClient, this.unregisterClient);
         this.e = mapN;

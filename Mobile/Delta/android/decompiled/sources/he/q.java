@@ -1,79 +1,60 @@
 package he;
 
-import java.util.Arrays;
-import java.util.Map;
-
 /* JADX INFO: loaded from: classes2.dex */
-public abstract class q<K, V> extends u<K, V> implements Map {
+public enum q {
+    JAVA_VERSION("java.version"),
+    JAVA_VENDOR("java.vendor"),
+    JAVA_VENDOR_URL("java.vendor.url"),
+    JAVA_HOME("java.home"),
+    JAVA_VM_SPECIFICATION_VERSION("java.vm.specification.version"),
+    JAVA_VM_SPECIFICATION_VENDOR("java.vm.specification.vendor"),
+    JAVA_VM_SPECIFICATION_NAME("java.vm.specification.name"),
+    JAVA_VM_VERSION("java.vm.version"),
+    JAVA_VM_VENDOR("java.vm.vendor"),
+    JAVA_VM_NAME("java.vm.name"),
+    JAVA_SPECIFICATION_VERSION("java.specification.version"),
+    JAVA_SPECIFICATION_VENDOR("java.specification.vendor"),
+    JAVA_SPECIFICATION_NAME("java.specification.name"),
+    JAVA_CLASS_VERSION("java.class.version"),
+    JAVA_CLASS_PATH("java.class.path"),
+    JAVA_LIBRARY_PATH("java.library.path"),
+    JAVA_IO_TMPDIR("java.io.tmpdir"),
+    JAVA_COMPILER("java.compiler"),
+    JAVA_EXT_DIRS("java.ext.dirs"),
+    OS_NAME("os.name"),
+    OS_ARCH("os.arch"),
+    OS_VERSION("os.version"),
+    FILE_SEPARATOR("file.separator"),
+    PATH_SEPARATOR("path.separator"),
+    LINE_SEPARATOR("line.separator"),
+    USER_NAME("user.name"),
+    USER_HOME("user.home"),
+    USER_DIR("user.dir");
 
-    public static final class a<K, V> extends u.a<K, V> {
-        @Override // he.u.a
-        /* JADX INFO: renamed from: k, reason: merged with bridge method [inline-methods] */
-        public q<K, V> a() {
-            return c();
-        }
 
-        @Override // he.u.a
-        /* JADX INFO: renamed from: l, reason: merged with bridge method [inline-methods] */
-        public q<K, V> c() {
-            int i10 = this.f19292c;
-            if (i10 == 0) {
-                return q.s();
-            }
-            if (this.f19291a != null) {
-                if (this.f19293d) {
-                    this.b = Arrays.copyOf(this.b, i10 * 2);
-                }
-                u.a.j(this.b, this.f19292c, this.f19291a);
-            }
-            this.f19293d = true;
-            return new o0(this.b, this.f19292c);
-        }
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final String f19448a;
 
-        @Override // he.u.a
-        /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
-        public a<K, V> f(K k10, V v5) {
-            super.f(k10, v5);
-            return this;
-        }
-
-        @Override // he.u.a
-        /* JADX INFO: renamed from: n, reason: merged with bridge method [inline-methods] */
-        public a<K, V> g(Map.Entry<? extends K, ? extends V> entry) {
-            super.g(entry);
-            return this;
-        }
-
-        @Override // he.u.a
-        /* JADX INFO: renamed from: o, reason: merged with bridge method [inline-methods] */
-        public a<K, V> h(Iterable<? extends Map.Entry<? extends K, ? extends V>> iterable) {
-            super.h(iterable);
-            return this;
-        }
-
-        @Override // he.u.a
-        /* JADX INFO: renamed from: p, reason: merged with bridge method [inline-methods] */
-        public a<K, V> i(Map<? extends K, ? extends V> map) {
-            super.i(map);
-            return this;
-        }
+    q(String str) {
+        this.f19448a = str;
     }
 
-    public static <K, V> q<K, V> s() {
-        return o0.f19243j;
+    public String b() {
+        return this.f19448a;
     }
 
-    @Override // he.u
-    /* JADX INFO: renamed from: q, reason: merged with bridge method [inline-methods] */
-    public final w<V> f() {
-        throw new AssertionError("should never be called");
+    public String c() {
+        return System.getProperty(this.f19448a);
     }
 
-    public abstract q<V, K> r();
-
-    @Override // he.u, java.util.Map
-    /* JADX INFO: renamed from: t, reason: merged with bridge method [inline-methods] */
-    public w<V> values() {
-        return r().keySet();
+    @Override // java.lang.Enum
+    public String toString() {
+        String strB = b();
+        String strC = c();
+        StringBuilder sb2 = new StringBuilder(String.valueOf(strB).length() + 1 + String.valueOf(strC).length());
+        sb2.append(strB);
+        sb2.append("=");
+        sb2.append(strC);
+        return sb2.toString();
     }
 }

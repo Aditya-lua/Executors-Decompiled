@@ -3,71 +3,71 @@ package com.withpersona.sdk2.inquiry.ui;
 import android.content.Context;
 import com.withpersona.sdk2.inquiry.permissions.PermissionRequestWorkflow;
 import com.withpersona.sdk2.inquiry.tracking.TrackingEventsLogger;
-import lp.n;
+import jp.n;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class j implements ft.d<UiWorkflow> {
+public final class j implements dt.d<UiWorkflow> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ft.i<Context> f13895a;
-    public final ft.i<com.withpersona.sdk2.inquiry.nfc.b.a> b;
+    public final dt.i<Context> f13976a;
+    public final dt.i<com.withpersona.sdk2.inquiry.nfc.b.a> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final ft.i<n.a> f13896c;
+    public final dt.i<n.a> f13977c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final ft.i<wp.c> f13897d;
+    public final dt.i<up.c> f13978d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final ft.i<d.a> f13898e;
+    public final dt.i<d.a> f13979e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final ft.i<k.a> f13899f;
+    public final dt.i<k.a> f13980f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final ft.i<uq.a> f13900g;
+    public final dt.i<sq.a> f13981g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final ft.i<PermissionRequestWorkflow> f13901h;
+    public final dt.i<PermissionRequestWorkflow> f13982h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final ft.i<a> f13902i;
+    public final dt.i<a> f13983i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final ft.i<pq.c> f13903j;
+    public final dt.i<nq.c> f13984j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final ft.i<go.e> f13904k;
+    public final dt.i<eo.e> f13985k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final ft.i<TrackingEventsLogger> f13905l;
+    public final dt.i<TrackingEventsLogger> f13986l;
 
-    public j(ft.i<Context> iVar, ft.i<com.withpersona.sdk2.inquiry.nfc.b.a> iVar2, ft.i<n.a> iVar3, ft.i<wp.c> iVar4, ft.i<d.a> iVar5, ft.i<k.a> iVar6, ft.i<uq.a> iVar7, ft.i<PermissionRequestWorkflow> iVar8, ft.i<a> iVar9, ft.i<pq.c> iVar10, ft.i<go.e> iVar11, ft.i<TrackingEventsLogger> iVar12) {
-        this.f13895a = iVar;
+    public j(dt.i<Context> iVar, dt.i<com.withpersona.sdk2.inquiry.nfc.b.a> iVar2, dt.i<n.a> iVar3, dt.i<up.c> iVar4, dt.i<d.a> iVar5, dt.i<k.a> iVar6, dt.i<sq.a> iVar7, dt.i<PermissionRequestWorkflow> iVar8, dt.i<a> iVar9, dt.i<nq.c> iVar10, dt.i<eo.e> iVar11, dt.i<TrackingEventsLogger> iVar12) {
+        this.f13976a = iVar;
         this.b = iVar2;
-        this.f13896c = iVar3;
-        this.f13897d = iVar4;
-        this.f13898e = iVar5;
-        this.f13899f = iVar6;
-        this.f13900g = iVar7;
-        this.f13901h = iVar8;
-        this.f13902i = iVar9;
-        this.f13903j = iVar10;
-        this.f13904k = iVar11;
-        this.f13905l = iVar12;
+        this.f13977c = iVar3;
+        this.f13978d = iVar4;
+        this.f13979e = iVar5;
+        this.f13980f = iVar6;
+        this.f13981g = iVar7;
+        this.f13982h = iVar8;
+        this.f13983i = iVar9;
+        this.f13984j = iVar10;
+        this.f13985k = iVar11;
+        this.f13986l = iVar12;
     }
 
-    public static j a(ft.i<Context> iVar, ft.i<com.withpersona.sdk2.inquiry.nfc.b.a> iVar2, ft.i<n.a> iVar3, ft.i<wp.c> iVar4, ft.i<d.a> iVar5, ft.i<k.a> iVar6, ft.i<uq.a> iVar7, ft.i<PermissionRequestWorkflow> iVar8, ft.i<a> iVar9, ft.i<pq.c> iVar10, ft.i<go.e> iVar11, ft.i<TrackingEventsLogger> iVar12) {
+    public static j a(dt.i<Context> iVar, dt.i<com.withpersona.sdk2.inquiry.nfc.b.a> iVar2, dt.i<n.a> iVar3, dt.i<up.c> iVar4, dt.i<d.a> iVar5, dt.i<k.a> iVar6, dt.i<sq.a> iVar7, dt.i<PermissionRequestWorkflow> iVar8, dt.i<a> iVar9, dt.i<nq.c> iVar10, dt.i<eo.e> iVar11, dt.i<TrackingEventsLogger> iVar12) {
         return new j(iVar, iVar2, iVar3, iVar4, iVar5, iVar6, iVar7, iVar8, iVar9, iVar10, iVar11, iVar12);
     }
 
-    public static UiWorkflow c(Context context, com.withpersona.sdk2.inquiry.nfc.b.a aVar, n.a aVar2, wp.c cVar, d.a aVar3, k.a aVar4, uq.a aVar5, PermissionRequestWorkflow permissionRequestWorkflow, a aVar6, pq.c cVar2, go.e eVar, TrackingEventsLogger trackingEventsLogger) {
+    public static UiWorkflow c(Context context, com.withpersona.sdk2.inquiry.nfc.b.a aVar, n.a aVar2, up.c cVar, d.a aVar3, k.a aVar4, sq.a aVar5, PermissionRequestWorkflow permissionRequestWorkflow, a aVar6, nq.c cVar2, eo.e eVar, TrackingEventsLogger trackingEventsLogger) {
         return new UiWorkflow(context, aVar, aVar2, cVar, aVar3, aVar4, aVar5, permissionRequestWorkflow, aVar6, cVar2, eVar, trackingEventsLogger);
     }
 
-    @Override // ht.a
+    @Override // ft.a
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
     public UiWorkflow get() {
-        return c(this.f13895a.get(), this.b.get(), this.f13896c.get(), this.f13897d.get(), this.f13898e.get(), this.f13899f.get(), this.f13900g.get(), this.f13901h.get(), this.f13902i.get(), this.f13903j.get(), this.f13904k.get(), this.f13905l.get());
+        return c(this.f13976a.get(), this.b.get(), this.f13977c.get(), this.f13978d.get(), this.f13979e.get(), this.f13980f.get(), this.f13981g.get(), this.f13982h.get(), this.f13983i.get(), this.f13984j.get(), this.f13985k.get(), this.f13986l.get());
     }
 }

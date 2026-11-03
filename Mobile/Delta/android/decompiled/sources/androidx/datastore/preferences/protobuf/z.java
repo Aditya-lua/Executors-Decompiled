@@ -9,20 +9,20 @@ import java.util.RandomAccess;
 public final class z {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Charset f2398a = Charset.forName("US-ASCII");
+    public static final Charset f2243a = Charset.forName("US-ASCII");
     public static final Charset b = Charset.forName("UTF-8");
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final Charset f2399c = Charset.forName("ISO-8859-1");
+    public static final Charset f2244c = Charset.forName("ISO-8859-1");
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final byte[] f2400d;
+    public static final byte[] f2245d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final ByteBuffer f2401e;
+    public static final ByteBuffer f2246e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final h f2402f;
+    public static final h f2247f;
 
     public interface a {
         int getNumber();
@@ -52,9 +52,9 @@ public final class z {
 
     static {
         byte[] bArr = new byte[0];
-        f2400d = bArr;
-        f2401e = ByteBuffer.wrap(bArr);
-        f2402f = h.i(bArr);
+        f2245d = bArr;
+        f2246e = ByteBuffer.wrap(bArr);
+        f2247f = h.i(bArr);
     }
 
     public static <T> T a(T t8) {

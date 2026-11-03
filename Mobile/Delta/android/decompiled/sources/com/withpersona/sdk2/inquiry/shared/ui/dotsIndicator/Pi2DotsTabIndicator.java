@@ -12,11 +12,11 @@ import android.widget.FrameLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 import com.withpersona.sdk2.inquiry.shared.ui.dotsIndicator.Pi2DotsTabIndicator;
+import hq.j;
+import hq.q;
+import hq.w;
 import java.util.ArrayList;
 import java.util.Iterator;
-import jq.j;
-import jq.q;
-import jq.w;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.collections.CollectionsKt;
@@ -26,11 +26,11 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import xq.a;
-import xq.b;
+import vq.a;
+import vq.b;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000\u008c\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u000e\n\u0002\u0010\u0007\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u0000 (2\u00020\u0001:\u0002AEB\u001b\b\u0016\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004¢\u0006\u0004\b\u0006\u0010\u0007B#\b\u0016\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004\u0012\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\u0006\u0010\nJ\u001f\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000b\u001a\u00020\b2\u0006\u0010\f\u001a\u00020\bH\u0014¢\u0006\u0004\b\u000e\u0010\u000fJ\u0017\u0010\u0012\u001a\u00020\r2\u0006\u0010\u0011\u001a\u00020\u0010H\u0014¢\u0006\u0004\b\u0012\u0010\u0013J\u000f\u0010\u0014\u001a\u00020\rH\u0014¢\u0006\u0004\b\u0014\u0010\u0015J\u0015\u0010\u0018\u001a\u00020\r2\u0006\u0010\u0017\u001a\u00020\u0016¢\u0006\u0004\b\u0018\u0010\u0019J7\u0010 \u001a\u00020\r2\u0006\u0010\u001b\u001a\u00020\u001a2\u0006\u0010\u001c\u001a\u00020\b2\u0006\u0010\u001d\u001a\u00020\b2\u0006\u0010\u001e\u001a\u00020\b2\u0006\u0010\u001f\u001a\u00020\bH\u0014¢\u0006\u0004\b \u0010!J\u0019\u0010$\u001a\u00020\r2\b\u0010#\u001a\u0004\u0018\u00010\"H\u0014¢\u0006\u0004\b$\u0010%J!\u0010&\u001a\u00020\r2\u0006\u0010\u0003\u001a\u00020\u00022\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0002¢\u0006\u0004\b&\u0010\u0007J\u000f\u0010'\u001a\u00020\rH\u0002¢\u0006\u0004\b'\u0010\u0015J\u000f\u0010(\u001a\u00020\rH\u0002¢\u0006\u0004\b(\u0010\u0015J\u000f\u0010)\u001a\u00020\rH\u0002¢\u0006\u0004\b)\u0010\u0015J\u000f\u0010+\u001a\u00020*H\u0002¢\u0006\u0004\b+\u0010,J\u0017\u0010.\u001a\u00020\r2\u0006\u0010-\u001a\u00020\bH\u0002¢\u0006\u0004\b.\u0010/J\u000f\u00100\u001a\u00020\rH\u0002¢\u0006\u0004\b0\u0010\u0015J\u000f\u00101\u001a\u00020\rH\u0002¢\u0006\u0004\b1\u0010\u0015J\u0017\u00103\u001a\u00020\r2\u0006\u00102\u001a\u00020\bH\u0002¢\u0006\u0004\b3\u0010/J\u0017\u00104\u001a\u00020\r2\u0006\u00102\u001a\u00020\bH\u0002¢\u0006\u0004\b4\u0010/J\u000f\u00105\u001a\u00020\rH\u0002¢\u0006\u0004\b5\u0010\u0015J\u000f\u00106\u001a\u00020\rH\u0002¢\u0006\u0004\b6\u0010\u0015J\u000f\u00107\u001a\u00020\rH\u0002¢\u0006\u0004\b7\u0010\u0015J)\u0010<\u001a\u00020\r2\n\u00109\u001a\u0006\u0012\u0002\b\u0003082\f\u0010;\u001a\b\u0012\u0004\u0012\u00020\r0:H\u0002¢\u0006\u0004\b<\u0010=R$\u0010C\u001a\u0012\u0012\u0004\u0012\u00020?0>j\b\u0012\u0004\u0012\u00020?`@8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bA\u0010BR*\u0010J\u001a\u00020\b2\u0006\u0010D\u001a\u00020\b8\u0006@FX\u0086\u000e¢\u0006\u0012\n\u0004\bE\u0010F\u001a\u0004\bG\u0010H\"\u0004\bI\u0010/R*\u0010N\u001a\u00020\b2\u0006\u0010D\u001a\u00020\b8\u0006@FX\u0086\u000e¢\u0006\u0012\n\u0004\bK\u0010F\u001a\u0004\bL\u0010H\"\u0004\bM\u0010/R\u0016\u0010R\u001a\u00020O8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bP\u0010QR\u0016\u0010T\u001a\u00020O8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bS\u0010QR\u0016\u0010V\u001a\u00020O8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bU\u0010QR\u0016\u0010X\u001a\u00020O8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bW\u0010QR\u0016\u0010Z\u001a\u00020O8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bY\u0010QR\u0018\u0010^\u001a\u0004\u0018\u00010[8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\\\u0010]R\u0014\u0010b\u001a\u00020_8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b`\u0010aR\u0014\u0010f\u001a\u00020c8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bd\u0010e¨\u0006g"}, d2 = {"Lcom/withpersona/sdk2/inquiry/shared/ui/dotsIndicator/Pi2DotsTabIndicator;", "Landroid/widget/FrameLayout;", "Landroid/content/Context;", "context", "Landroid/util/AttributeSet;", "attrs", "<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", "", "defStyleAttr", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "widthMeasureSpec", "heightMeasureSpec", "", "onMeasure", "(II)V", "Landroid/graphics/Canvas;", "canvas", "onDraw", "(Landroid/graphics/Canvas;)V", "onAttachedToWindow", "()V", "Landroidx/viewpager2/widget/ViewPager2;", "viewPager", "n", "(Landroidx/viewpager2/widget/ViewPager2;)V", "", "changed", "left", "top", "right", "bottom", "onLayout", "(ZIIII)V", "Landroid/os/Parcelable;", "state", "onRestoreInstanceState", "(Landroid/os/Parcelable;)V", "s", "r", "l", "D", "Lxq/a;", "q", "()Lxq/a;", "index", "v", "(I)V", "z", "y", "count", "m", "E", "w", "B", "A", "Landroidx/recyclerview/widget/RecyclerView$h;", "adapter", "Lkotlin/Function0;", "onChanged", "C", "(Landroidx/recyclerview/widget/RecyclerView$h;Lkotlin/jvm/functions/Function0;)V", "Ljava/util/ArrayList;", "Lcom/withpersona/sdk2/inquiry/shared/ui/dotsIndicator/Pi2DotsTabIndicator$b;", "Lkotlin/collections/ArrayList;", "a", "Ljava/util/ArrayList;", "dots", "value", "b", "I", "getDotsColor", "()I", "setDotsColor", "dotsColor", "c", "getSelectedDotColor", "setSelectedDotColor", "selectedDotColor", "", "d", "F", "dotsSize", "e", "dotsCornerRadius", "f", "spaceBetweenDots", "g", "selectedDotWidth", "h", "contentWidth", "Lxq/b;", "i", "Lxq/b;", "pager", "Landroid/graphics/Paint;", "j", "Landroid/graphics/Paint;", "paint", "Landroid/animation/ArgbEvaluator;", "k", "Landroid/animation/ArgbEvaluator;", "argbEvaluator", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000\u008c\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u000e\n\u0002\u0010\u0007\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u0000 (2\u00020\u0001:\u0002AEB\u001b\b\u0016\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004¢\u0006\u0004\b\u0006\u0010\u0007B#\b\u0016\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004\u0012\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\u0006\u0010\nJ\u001f\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000b\u001a\u00020\b2\u0006\u0010\f\u001a\u00020\bH\u0014¢\u0006\u0004\b\u000e\u0010\u000fJ\u0017\u0010\u0012\u001a\u00020\r2\u0006\u0010\u0011\u001a\u00020\u0010H\u0014¢\u0006\u0004\b\u0012\u0010\u0013J\u000f\u0010\u0014\u001a\u00020\rH\u0014¢\u0006\u0004\b\u0014\u0010\u0015J\u0015\u0010\u0018\u001a\u00020\r2\u0006\u0010\u0017\u001a\u00020\u0016¢\u0006\u0004\b\u0018\u0010\u0019J7\u0010 \u001a\u00020\r2\u0006\u0010\u001b\u001a\u00020\u001a2\u0006\u0010\u001c\u001a\u00020\b2\u0006\u0010\u001d\u001a\u00020\b2\u0006\u0010\u001e\u001a\u00020\b2\u0006\u0010\u001f\u001a\u00020\bH\u0014¢\u0006\u0004\b \u0010!J\u0019\u0010$\u001a\u00020\r2\b\u0010#\u001a\u0004\u0018\u00010\"H\u0014¢\u0006\u0004\b$\u0010%J!\u0010&\u001a\u00020\r2\u0006\u0010\u0003\u001a\u00020\u00022\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0002¢\u0006\u0004\b&\u0010\u0007J\u000f\u0010'\u001a\u00020\rH\u0002¢\u0006\u0004\b'\u0010\u0015J\u000f\u0010(\u001a\u00020\rH\u0002¢\u0006\u0004\b(\u0010\u0015J\u000f\u0010)\u001a\u00020\rH\u0002¢\u0006\u0004\b)\u0010\u0015J\u000f\u0010+\u001a\u00020*H\u0002¢\u0006\u0004\b+\u0010,J\u0017\u0010.\u001a\u00020\r2\u0006\u0010-\u001a\u00020\bH\u0002¢\u0006\u0004\b.\u0010/J\u000f\u00100\u001a\u00020\rH\u0002¢\u0006\u0004\b0\u0010\u0015J\u000f\u00101\u001a\u00020\rH\u0002¢\u0006\u0004\b1\u0010\u0015J\u0017\u00103\u001a\u00020\r2\u0006\u00102\u001a\u00020\bH\u0002¢\u0006\u0004\b3\u0010/J\u0017\u00104\u001a\u00020\r2\u0006\u00102\u001a\u00020\bH\u0002¢\u0006\u0004\b4\u0010/J\u000f\u00105\u001a\u00020\rH\u0002¢\u0006\u0004\b5\u0010\u0015J\u000f\u00106\u001a\u00020\rH\u0002¢\u0006\u0004\b6\u0010\u0015J\u000f\u00107\u001a\u00020\rH\u0002¢\u0006\u0004\b7\u0010\u0015J)\u0010<\u001a\u00020\r2\n\u00109\u001a\u0006\u0012\u0002\b\u0003082\f\u0010;\u001a\b\u0012\u0004\u0012\u00020\r0:H\u0002¢\u0006\u0004\b<\u0010=R$\u0010C\u001a\u0012\u0012\u0004\u0012\u00020?0>j\b\u0012\u0004\u0012\u00020?`@8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bA\u0010BR*\u0010J\u001a\u00020\b2\u0006\u0010D\u001a\u00020\b8\u0006@FX\u0086\u000e¢\u0006\u0012\n\u0004\bE\u0010F\u001a\u0004\bG\u0010H\"\u0004\bI\u0010/R*\u0010N\u001a\u00020\b2\u0006\u0010D\u001a\u00020\b8\u0006@FX\u0086\u000e¢\u0006\u0012\n\u0004\bK\u0010F\u001a\u0004\bL\u0010H\"\u0004\bM\u0010/R\u0016\u0010R\u001a\u00020O8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bP\u0010QR\u0016\u0010T\u001a\u00020O8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bS\u0010QR\u0016\u0010V\u001a\u00020O8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bU\u0010QR\u0016\u0010X\u001a\u00020O8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bW\u0010QR\u0016\u0010Z\u001a\u00020O8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bY\u0010QR\u0018\u0010^\u001a\u0004\u0018\u00010[8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\\\u0010]R\u0014\u0010b\u001a\u00020_8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b`\u0010aR\u0014\u0010f\u001a\u00020c8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bd\u0010e¨\u0006g"}, d2 = {"Lcom/withpersona/sdk2/inquiry/shared/ui/dotsIndicator/Pi2DotsTabIndicator;", "Landroid/widget/FrameLayout;", "Landroid/content/Context;", "context", "Landroid/util/AttributeSet;", "attrs", "<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", "", "defStyleAttr", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "widthMeasureSpec", "heightMeasureSpec", "", "onMeasure", "(II)V", "Landroid/graphics/Canvas;", "canvas", "onDraw", "(Landroid/graphics/Canvas;)V", "onAttachedToWindow", "()V", "Landroidx/viewpager2/widget/ViewPager2;", "viewPager", "n", "(Landroidx/viewpager2/widget/ViewPager2;)V", "", "changed", "left", "top", "right", "bottom", "onLayout", "(ZIIII)V", "Landroid/os/Parcelable;", "state", "onRestoreInstanceState", "(Landroid/os/Parcelable;)V", "s", "r", "l", "D", "Lvq/a;", "q", "()Lvq/a;", "index", "v", "(I)V", "z", "y", "count", "m", "E", "w", "B", "A", "Landroidx/recyclerview/widget/RecyclerView$h;", "adapter", "Lkotlin/Function0;", "onChanged", "C", "(Landroidx/recyclerview/widget/RecyclerView$h;Lkotlin/jvm/functions/Function0;)V", "Ljava/util/ArrayList;", "Lcom/withpersona/sdk2/inquiry/shared/ui/dotsIndicator/Pi2DotsTabIndicator$b;", "Lkotlin/collections/ArrayList;", "a", "Ljava/util/ArrayList;", "dots", "value", "b", "I", "getDotsColor", "()I", "setDotsColor", "dotsColor", "c", "getSelectedDotColor", "setSelectedDotColor", "selectedDotColor", "", "d", "F", "dotsSize", "e", "dotsCornerRadius", "f", "spaceBetweenDots", "g", "selectedDotWidth", "h", "contentWidth", "Lvq/b;", "i", "Lvq/b;", "pager", "Landroid/graphics/Paint;", "j", "Landroid/graphics/Paint;", "paint", "Landroid/animation/ArgbEvaluator;", "k", "Landroid/animation/ArgbEvaluator;", "argbEvaluator", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class Pi2DotsTabIndicator extends FrameLayout {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -70,17 +70,17 @@ public final class Pi2DotsTabIndicator extends FrameLayout {
     @NotNull
     public final ArgbEvaluator argbEvaluator;
 
-    @Metadata(d1 = {"\u0000\u001f\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0007\n\u0000\n\u0002\u0010\u0002\n\u0002\b\t*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J'\u0010\b\u001a\u00020\u00072\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0004\u001a\u00020\u00022\u0006\u0010\u0006\u001a\u00020\u0005H\u0010¢\u0006\u0004\b\b\u0010\tJ\u0017\u0010\u000b\u001a\u00020\u00072\u0006\u0010\n\u001a\u00020\u0002H\u0010¢\u0006\u0004\b\u000b\u0010\fR\u0014\u0010\u000f\u001a\u00020\u00028PX\u0090\u0004¢\u0006\u0006\u001a\u0004\b\r\u0010\u000e¨\u0006\u0010"}, d2 = {"com/withpersona/sdk2/inquiry/shared/ui/dotsIndicator/Pi2DotsTabIndicator$c", "Lxq/a;", "", "selectedPosition", "nextPosition", "", "positionOffset", "", "c", "(IIF)V", "position", "d", "(I)V", "a", "()I", "pageCount", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000\u001f\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0007\n\u0000\n\u0002\u0010\u0002\n\u0002\b\t*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J'\u0010\b\u001a\u00020\u00072\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0004\u001a\u00020\u00022\u0006\u0010\u0006\u001a\u00020\u0005H\u0010¢\u0006\u0004\b\b\u0010\tJ\u0017\u0010\u000b\u001a\u00020\u00072\u0006\u0010\n\u001a\u00020\u0002H\u0010¢\u0006\u0004\b\u000b\u0010\fR\u0014\u0010\u000f\u001a\u00020\u00028PX\u0090\u0004¢\u0006\u0006\u001a\u0004\b\r\u0010\u000e¨\u0006\u0010"}, d2 = {"com/withpersona/sdk2/inquiry/shared/ui/dotsIndicator/Pi2DotsTabIndicator$c", "Lvq/a;", "", "selectedPosition", "nextPosition", "", "positionOffset", "", "c", "(IIF)V", "position", "d", "(I)V", "a", "()I", "pageCount", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class c extends a {
         public c() {
         }
 
-        @Override // xq.a
+        @Override // vq.a
         public int a() {
             return Pi2DotsTabIndicator.this.dots.size();
         }
 
-        @Override // xq.a
+        @Override // vq.a
         public void c(int selectedPosition, int nextPosition, float positionOffset) {
             float f10;
             Dot dot = (Dot) CollectionsKt.f0(Pi2DotsTabIndicator.this.dots, selectedPosition);
@@ -124,7 +124,7 @@ public final class Pi2DotsTabIndicator extends FrameLayout {
             Pi2DotsTabIndicator.this.invalidate();
         }
 
-        @Override // xq.a
+        @Override // vq.a
         public void d(int position) {
             ((Dot) Pi2DotsTabIndicator.this.dots.get(position)).d((int) Pi2DotsTabIndicator.this.dotsSize);
             ((Dot) Pi2DotsTabIndicator.this.dots.get(position)).c(Pi2DotsTabIndicator.this.getDotsColor());
@@ -136,46 +136,46 @@ public final class Pi2DotsTabIndicator extends FrameLayout {
     public static final class d extends RecyclerView.j {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ Function0<Unit> f13262a;
+        public final /* synthetic */ Function0<Unit> f13343a;
 
         public d(Function0<Unit> function0) {
-            this.f13262a = function0;
+            this.f13343a = function0;
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.j
         public void a() {
             super.a();
-            this.f13262a.invoke();
+            this.f13343a.invoke();
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.j
         public void b(int positionStart, int itemCount) {
             super.b(positionStart, itemCount);
-            this.f13262a.invoke();
+            this.f13343a.invoke();
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.j
         public void c(int positionStart, int itemCount, Object payload) {
             super.c(positionStart, itemCount, payload);
-            this.f13262a.invoke();
+            this.f13343a.invoke();
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.j
         public void d(int positionStart, int itemCount) {
             super.d(positionStart, itemCount);
-            this.f13262a.invoke();
+            this.f13343a.invoke();
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.j
         public void e(int fromPosition, int toPosition, int itemCount) {
             super.e(fromPosition, toPosition, itemCount);
-            this.f13262a.invoke();
+            this.f13343a.invoke();
         }
 
         @Override // androidx.recyclerview.widget.RecyclerView.j
         public void f(int positionStart, int itemCount) {
             super.f(positionStart, itemCount);
-            this.f13262a.invoke();
+            this.f13343a.invoke();
         }
     }
 
@@ -186,13 +186,13 @@ public final class Pi2DotsTabIndicator extends FrameLayout {
     }
 
     public static final Unit o(final Pi2DotsTabIndicator pi2DotsTabIndicator) {
-        pi2DotsTabIndicator.post(new Runnable() { // from class: xq.g
+        pi2DotsTabIndicator.post(new Runnable() { // from class: vq.g
             @Override // java.lang.Runnable
             public final void run() {
-                Pi2DotsTabIndicator.p(this.f35289a);
+                Pi2DotsTabIndicator.p(this.f33611a);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final void p(Pi2DotsTabIndicator pi2DotsTabIndicator) {
@@ -274,10 +274,10 @@ public final class Pi2DotsTabIndicator extends FrameLayout {
         if (adapter == null) {
             throw new IllegalStateException("View pager has no adapter. Please set the adapter on the view pager before calling attach.");
         }
-        C(adapter, new Function0() { // from class: xq.f
+        C(adapter, new Function0() { // from class: vq.f
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return Pi2DotsTabIndicator.o(this.f35288a);
+                return Pi2DotsTabIndicator.o(this.f33610a);
             }
         });
         this.pager = new b(viewPager);
@@ -287,10 +287,10 @@ public final class Pi2DotsTabIndicator extends FrameLayout {
     @Override // android.view.ViewGroup, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        post(new Runnable() { // from class: xq.e
+        post(new Runnable() { // from class: vq.e
             @Override // java.lang.Runnable
             public final void run() {
-                Pi2DotsTabIndicator.t(this.f35287a);
+                Pi2DotsTabIndicator.t(this.f33609a);
             }
         });
     }
@@ -345,10 +345,10 @@ public final class Pi2DotsTabIndicator extends FrameLayout {
     @Override // android.view.View
     public void onRestoreInstanceState(@Nullable Parcelable state) {
         super.onRestoreInstanceState(state);
-        post(new Runnable() { // from class: xq.d
+        post(new Runnable() { // from class: vq.d
             @Override // java.lang.Runnable
             public final void run() {
-                Pi2DotsTabIndicator.u(this.f35286a);
+                Pi2DotsTabIndicator.u(this.f33608a);
             }
         });
     }
@@ -369,15 +369,15 @@ public final class Pi2DotsTabIndicator extends FrameLayout {
         if (attrs == null) {
             return;
         }
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attrs, w.f21711a);
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attrs, w.f19719a);
         Intrinsics.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "obtainStyledAttributes(...)");
         try {
-            if (typedArrayObtainStyledAttributes.getBoolean(w.f21712c, false)) {
+            if (typedArrayObtainStyledAttributes.getBoolean(w.f19720c, false)) {
                 this.selectedDotWidth = this.dotsSize;
             }
-            this.spaceBetweenDots = (float) j.a(typedArrayObtainStyledAttributes.getFloat(w.f21714e, 3.0f));
+            this.spaceBetweenDots = (float) j.a(typedArrayObtainStyledAttributes.getFloat(w.f19722e, 3.0f));
             setDotsColor(typedArrayObtainStyledAttributes.getColor(w.b, this.dotsColor));
-            setSelectedDotColor(typedArrayObtainStyledAttributes.getColor(w.f21713d, this.selectedDotColor));
+            setSelectedDotColor(typedArrayObtainStyledAttributes.getColor(w.f19721d, this.selectedDotColor));
         } finally {
             typedArrayObtainStyledAttributes.recycle();
         }
@@ -406,10 +406,10 @@ public final class Pi2DotsTabIndicator extends FrameLayout {
         if (this.pager == null) {
             return;
         }
-        post(new Runnable() { // from class: xq.c
+        post(new Runnable() { // from class: vq.c
             @Override // java.lang.Runnable
             public final void run() {
-                Pi2DotsTabIndicator.x(this.f35285a);
+                Pi2DotsTabIndicator.x(this.f33607a);
             }
         });
     }
@@ -439,7 +439,7 @@ public final class Pi2DotsTabIndicator extends FrameLayout {
         super(context, attributeSet, i10);
         Intrinsics.checkNotNullParameter(context, "context");
         this.dots = new ArrayList<>();
-        this.dotsColor = getContext().getColor(q.f21631a);
+        this.dotsColor = getContext().getColor(q.f19639a);
         this.selectedDotColor = getContext().getColor(q.b);
         float fA = (float) j.a(9.0d);
         this.dotsSize = fA;

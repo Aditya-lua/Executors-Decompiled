@@ -8,15 +8,15 @@ import java.util.List;
 public class k3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final List<g3> f24721a;
+    public final List<g3> f25542a;
 
     public k3(List<g3> list) {
-        this.f24721a = new ArrayList(list);
+        this.f25542a = new ArrayList(list);
     }
 
     public static String d(k3 k3Var) {
         ArrayList arrayList = new ArrayList();
-        Iterator<g3> it = k3Var.f24721a.iterator();
+        Iterator<g3> it = k3Var.f25542a.iterator();
         while (it.hasNext()) {
             arrayList.add(it.next().getClass().getSimpleName());
         }
@@ -24,7 +24,7 @@ public class k3 {
     }
 
     public boolean a(Class<? extends g3> cls) {
-        Iterator<g3> it = this.f24721a.iterator();
+        Iterator<g3> it = this.f25542a.iterator();
         while (it.hasNext()) {
             if (cls.isAssignableFrom(it.next().getClass())) {
                 return true;
@@ -34,7 +34,7 @@ public class k3 {
     }
 
     public <T extends g3> T b(Class<T> cls) {
-        Iterator<g3> it = this.f24721a.iterator();
+        Iterator<g3> it = this.f25542a.iterator();
         while (it.hasNext()) {
             T t8 = (T) it.next();
             if (t8.getClass() == cls) {
@@ -46,7 +46,7 @@ public class k3 {
 
     public <T extends g3> List<T> c(Class<T> cls) {
         ArrayList arrayList = new ArrayList();
-        for (g3 g3Var : this.f24721a) {
+        for (g3 g3Var : this.f25542a) {
             if (cls.isAssignableFrom(g3Var.getClass())) {
                 arrayList.add(g3Var);
             }

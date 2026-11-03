@@ -11,7 +11,7 @@ public final class q {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final q f17926a = new q();
+    public static final q f18465a = new q();
 
     @NotNull
     public static final NetworkRequest a(@NotNull int[] capabilities, @NotNull int[] transports) {
@@ -25,7 +25,7 @@ public final class q {
                 x5.w.e().l(NetworkRequestCompat.INSTANCE.a(), "Ignoring adding capability '" + i10 + '\'', e10);
             }
         }
-        for (int i11 : t.f17930a) {
+        for (int i11 : t.f18469a) {
             if (!kotlin.collections.m.E(capabilities, i11)) {
                 try {
                     builder.removeCapability(i11);

@@ -36,33 +36,33 @@ public final class e extends b<e> {
                 this.B = Float.MAX_VALUE;
             }
             this.b = this.A.a();
-            this.f35556a = 0.0f;
+            this.f36413a = 0.0f;
             this.C = false;
             return true;
         }
         if (this.B != Float.MAX_VALUE) {
             this.A.a();
             long j11 = j10 / 2;
-            b.p pVarH = this.A.h(this.b, this.f35556a, j11);
+            b.p pVarH = this.A.h(this.b, this.f36413a, j11);
             this.A.e(this.B);
             this.B = Float.MAX_VALUE;
-            b.p pVarH2 = this.A.h(pVarH.f35568a, pVarH.b, j11);
-            this.b = pVarH2.f35568a;
-            this.f35556a = pVarH2.b;
+            b.p pVarH2 = this.A.h(pVarH.f36425a, pVarH.b, j11);
+            this.b = pVarH2.f36425a;
+            this.f36413a = pVarH2.b;
         } else {
-            b.p pVarH3 = this.A.h(this.b, this.f35556a, j10);
-            this.b = pVarH3.f35568a;
-            this.f35556a = pVarH3.b;
+            b.p pVarH3 = this.A.h(this.b, this.f36413a, j10);
+            this.b = pVarH3.f36425a;
+            this.f36413a = pVarH3.b;
         }
-        float fMax = Math.max(this.b, this.f35562h);
+        float fMax = Math.max(this.b, this.f36419h);
         this.b = fMax;
-        float fMin = Math.min(fMax, this.f35561g);
+        float fMin = Math.min(fMax, this.f36418g);
         this.b = fMin;
-        if (!u(fMin, this.f35556a)) {
+        if (!u(fMin, this.f36413a)) {
             return false;
         }
         this.b = this.A.a();
-        this.f35556a = 0.0f;
+        this.f36413a = 0.0f;
         return true;
     }
 
@@ -92,10 +92,10 @@ public final class e extends b<e> {
             throw new UnsupportedOperationException("Incomplete SpringAnimation: Either final position or a spring force needs to be set.");
         }
         double dA = fVar.a();
-        if (dA > this.f35561g) {
+        if (dA > this.f36418g) {
             throw new UnsupportedOperationException("Final position of the spring cannot be greater than the max value.");
         }
-        if (dA < this.f35562h) {
+        if (dA < this.f36419h) {
             throw new UnsupportedOperationException("Final position of the spring cannot be less than the min value.");
         }
     }
@@ -112,7 +112,7 @@ public final class e extends b<e> {
         if (Looper.myLooper() != Looper.getMainLooper()) {
             throw new AndroidRuntimeException("Animations may only be started on the main thread");
         }
-        if (this.f35560f) {
+        if (this.f36417f) {
             this.C = true;
         }
     }

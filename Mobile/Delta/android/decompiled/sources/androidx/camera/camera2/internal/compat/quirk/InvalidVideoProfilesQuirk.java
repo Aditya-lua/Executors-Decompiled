@@ -11,11 +11,11 @@ import n0.g3;
 public class InvalidVideoProfilesQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final List<String> f1338a = Arrays.asList("pixel 4", "pixel 4a", "pixel 4a (5g)", "pixel 4 xl", "pixel 5", "pixel 5a", "pixel 6", "pixel 6a", "pixel 6 pro", "pixel 7", "pixel 7 pro");
+    public static final List<String> f1183a = Arrays.asList("pixel 4", "pixel 4a", "pixel 4a (5g)", "pixel 4 xl", "pixel 5", "pixel 5a", "pixel 6", "pixel 6a", "pixel 6 pro", "pixel 7", "pixel 7 pro");
     public static final List<String> b = Arrays.asList("cph2417", "cph2451");
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final List<String> f1339c = Arrays.asList("cph2437", "cph2525", "pht110");
+    public static final List<String> f1184c = Arrays.asList("cph2437", "cph2525", "pht110");
 
     public static boolean g() {
         return Build.VERSION.SDK_INT == 33;
@@ -34,7 +34,7 @@ public class InvalidVideoProfilesQuirk implements g3 {
     }
 
     public static boolean k() {
-        return f1339c.contains(Build.MODEL.toLowerCase(Locale.ROOT));
+        return f1184c.contains(Build.MODEL.toLowerCase(Locale.ROOT));
     }
 
     public static boolean l() {
@@ -46,7 +46,7 @@ public class InvalidVideoProfilesQuirk implements g3 {
     }
 
     public static boolean n() {
-        return f1338a.contains(Build.MODEL.toLowerCase(Locale.ROOT));
+        return f1183a.contains(Build.MODEL.toLowerCase(Locale.ROOT));
     }
 
     public static boolean o() {

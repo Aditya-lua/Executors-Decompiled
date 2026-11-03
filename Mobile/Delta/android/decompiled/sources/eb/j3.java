@@ -9,31 +9,31 @@ import java.nio.charset.Charset;
 public class j3 extends i3 {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final byte[] f15285e;
+    public final byte[] f15899e;
 
     public j3(byte[] bArr) {
         bArr.getClass();
-        this.f15285e = bArr;
+        this.f15899e = bArr;
     }
 
     @Override // eb.m3
     public byte b(int i10) {
-        return this.f15285e[i10];
+        return this.f15899e[i10];
     }
 
     @Override // eb.m3
     public byte c(int i10) {
-        return this.f15285e[i10];
+        return this.f15899e[i10];
     }
 
     @Override // eb.m3
     public int d() {
-        return this.f15285e.length;
+        return this.f15899e.length;
     }
 
     @Override // eb.m3
     public void e(byte[] bArr, int i10, int i11, int i12) {
-        System.arraycopy(this.f15285e, 0, bArr, 0, i12);
+        System.arraycopy(this.f15899e, 0, bArr, 0, i12);
     }
 
     @Override // eb.m3
@@ -63,8 +63,8 @@ public class j3 extends i3 {
         if (iD > j3Var.d()) {
             throw new IllegalArgumentException("Ran off end of other: 0, " + iD + ", " + j3Var.d());
         }
-        byte[] bArr = this.f15285e;
-        byte[] bArr2 = j3Var.f15285e;
+        byte[] bArr = this.f15899e;
+        byte[] bArr2 = j3Var.f15899e;
         int iT = t() + iD;
         int iT2 = t();
         int iT3 = j3Var.t();
@@ -81,9 +81,9 @@ public class j3 extends i3 {
     @Override // eb.m3
     public final int f(int i10, int i11, int i12) {
         int iT = t();
-        Charset charset = s3.f15390a;
+        Charset charset = s3.f16004a;
         for (int i13 = iT; i13 < iT + i12; i13++) {
-            i10 = (i10 * 31) + this.f15285e[i13];
+            i10 = (i10 * 31) + this.f15899e[i13];
         }
         return i10;
     }
@@ -91,17 +91,17 @@ public class j3 extends i3 {
     @Override // eb.m3
     public final m3 g(int i10, int i11) {
         int iK = m3.k(i10, i11, d());
-        return iK == 0 ? m3.b : new g3(this.f15285e, t() + i10, iK);
+        return iK == 0 ? m3.b : new g3(this.f15899e, t() + i10, iK);
     }
 
     @Override // eb.m3
     public final InputStream h() {
-        return new ByteArrayInputStream(this.f15285e, t(), d());
+        return new ByteArrayInputStream(this.f15899e, t(), d());
     }
 
     @Override // eb.m3
     public final ByteBuffer i() {
-        return ByteBuffer.wrap(this.f15285e, t(), d()).asReadOnlyBuffer();
+        return ByteBuffer.wrap(this.f15899e, t(), d()).asReadOnlyBuffer();
     }
 
     public int t() {

@@ -10,7 +10,7 @@ public final class n {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final String[] f4615a = new String[0];
+    public static final String[] f4781a = new String[0];
 
     public static final void a(@NotNull StringBuilder builder, int i10) {
         Intrinsics.checkNotNullParameter(builder, "builder");

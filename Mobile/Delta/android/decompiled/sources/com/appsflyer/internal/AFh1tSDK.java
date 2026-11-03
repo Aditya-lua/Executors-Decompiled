@@ -18,7 +18,7 @@ public final class AFh1tSDK implements AFh1wSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @Nullable
-    private AFh1zSDK f5408d;
+    private AFh1zSDK f5481d;
 
     @NotNull
     private final AFc1bSDK registerClient;
@@ -30,12 +30,12 @@ public final class AFh1tSDK implements AFh1wSDK {
 
     @Override // com.appsflyer.internal.AFh1wSDK
     public final void AFKeystoreWrapper() {
-        AFh1zSDK aFh1zSDK = this.f5408d;
+        AFh1zSDK aFh1zSDK = this.f5481d;
         if (aFh1zSDK != null) {
             AFLogger aFLogger = AFLogger.INSTANCE;
             AFLoggerBase.v$default(aFLogger, LogTag.RD, "Releasing Proxy Manager Client", false, 4, null);
             aFLogger.unregisterClient(aFh1zSDK);
-            this.f5408d = null;
+            this.f5481d = null;
         }
     }
 
@@ -64,12 +64,12 @@ public final class AFh1tSDK implements AFh1wSDK {
     @Override // com.appsflyer.internal.AFh1wSDK
     public final void e() {
         AFLogger aFLogger = AFLogger.INSTANCE;
-        if (this.f5408d == null) {
+        if (this.f5481d == null) {
             AFc1iSDK aFc1iSDKAFLogger = this.registerClient.AFLogger();
             Intrinsics.checkNotNullExpressionValue(aFc1iSDKAFLogger, "");
-            this.f5408d = new AFh1zSDK(aFc1iSDKAFLogger);
+            this.f5481d = new AFh1zSDK(aFc1iSDKAFLogger);
         }
-        AFh1zSDK aFh1zSDK = this.f5408d;
+        AFh1zSDK aFh1zSDK = this.f5481d;
         Intrinsics.checkNotNull(aFh1zSDK);
         aFLogger.registerClient(aFh1zSDK);
     }

@@ -2,7 +2,7 @@ package d7;
 
 import android.graphics.drawable.Drawable;
 import com.google.mlkit.common.MlKitException;
-import jt.l;
+import gt.l;
 import k6.n;
 import k6.v;
 import kotlin.Metadata;

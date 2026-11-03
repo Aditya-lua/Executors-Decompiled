@@ -1,29 +1,62 @@
 package lq;
 
-import ft.h;
-import ku.l0;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import com.withpersona.sdk2.inquiry.shared.ui.ThemeableLottieAnimationView;
+import hq.t;
+import hq.u;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class e implements ft.d<l0> {
+public final class e implements r5.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final c f23533a;
+    @NonNull
+    public final LinearLayout f23944a;
 
-    public e(c cVar) {
-        this.f23533a = cVar;
+    @NonNull
+    public final TextView b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    @NonNull
+    public final ThemeableLottieAnimationView f23945c;
+
+    public e(@NonNull LinearLayout linearLayout, @NonNull TextView textView, @NonNull ThemeableLottieAnimationView themeableLottieAnimationView) {
+        this.f23944a = linearLayout;
+        this.b = textView;
+        this.f23945c = themeableLottieAnimationView;
     }
 
-    public static e a(c cVar) {
-        return new e(cVar);
+    @NonNull
+    public static e a(@NonNull View view) {
+        int i10 = t.f19668h;
+        TextView textView = (TextView) r5.b.a(view, i10);
+        if (textView != null) {
+            i10 = t.f19672l;
+            ThemeableLottieAnimationView themeableLottieAnimationView = (ThemeableLottieAnimationView) r5.b.a(view, i10);
+            if (themeableLottieAnimationView != null) {
+                return new e((LinearLayout) view, textView, themeableLottieAnimationView);
+            }
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
     }
 
-    public static l0 c(c cVar) {
-        return (l0) h.e(cVar.b());
+    @NonNull
+    public static e c(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
+        View viewInflate = layoutInflater.inflate(u.f19690e, viewGroup, false);
+        if (z10) {
+            viewGroup.addView(viewInflate);
+        }
+        return a(viewInflate);
     }
 
-    @Override // ht.a
+    @Override // r5.a
+    @NonNull
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public l0 get() {
-        return c(this.f23533a);
+    public LinearLayout getRoot() {
+        return this.f23944a;
     }
 }

@@ -13,71 +13,71 @@ import sun.misc.Unsafe;
 public final class q1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Unsafe f8525a = D();
+    public static final Unsafe f8599a = D();
     public static final Class<?> b = com.google.crypto.tink.shaded.protobuf.d.b();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final boolean f8526c = o(Long.TYPE);
+    public static final boolean f8600c = o(Long.TYPE);
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final boolean f8527d = o(Integer.TYPE);
+    public static final boolean f8601d = o(Integer.TYPE);
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final e f8528e = B();
+    public static final e f8602e = B();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final boolean f8529f = T();
+    public static final boolean f8603f = T();
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final boolean f8530g = S();
+    public static final boolean f8604g = S();
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final long f8531h;
+    public static final long f8605h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final long f8532i;
+    public static final long f8606i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final long f8533j;
+    public static final long f8607j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final long f8534k;
+    public static final long f8608k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final long f8535l;
+    public static final long f8609l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public static final long f8536m;
+    public static final long f8610m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public static final long f8537n;
+    public static final long f8611n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public static final long f8538o;
+    public static final long f8612o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public static final long f8539p;
+    public static final long f8613p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public static final long f8540q;
+    public static final long f8614q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public static final long f8541r;
+    public static final long f8615r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public static final long f8542s;
+    public static final long f8616s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public static final long f8543t;
+    public static final long f8617t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public static final long f8544u;
+    public static final long f8618u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public static final int f8545v;
+    public static final int f8619v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public static final boolean f8546w;
+    public static final boolean f8620w;
 
     public class a implements PrivilegedExceptionAction<Unsafe> {
         @Override // java.security.PrivilegedExceptionAction
@@ -101,12 +101,12 @@ public final class q1 {
 
         @Override // com.google.crypto.tink.shaded.protobuf.q1.e
         public boolean c(Object obj, long j10) {
-            return q1.f8546w ? q1.s(obj, j10) : q1.t(obj, j10);
+            return q1.f8620w ? q1.s(obj, j10) : q1.t(obj, j10);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.q1.e
         public byte d(Object obj, long j10) {
-            return q1.f8546w ? q1.v(obj, j10) : q1.w(obj, j10);
+            return q1.f8620w ? q1.v(obj, j10) : q1.w(obj, j10);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.q1.e
@@ -121,7 +121,7 @@ public final class q1 {
 
         @Override // com.google.crypto.tink.shaded.protobuf.q1.e
         public void k(Object obj, long j10, boolean z10) {
-            if (q1.f8546w) {
+            if (q1.f8620w) {
                 q1.I(obj, j10, z10);
             } else {
                 q1.J(obj, j10, z10);
@@ -130,7 +130,7 @@ public final class q1 {
 
         @Override // com.google.crypto.tink.shaded.protobuf.q1.e
         public void l(Object obj, long j10, byte b) {
-            if (q1.f8546w) {
+            if (q1.f8620w) {
                 q1.L(obj, j10, b);
             } else {
                 q1.M(obj, j10, b);
@@ -160,12 +160,12 @@ public final class q1 {
 
         @Override // com.google.crypto.tink.shaded.protobuf.q1.e
         public boolean c(Object obj, long j10) {
-            return q1.f8546w ? q1.s(obj, j10) : q1.t(obj, j10);
+            return q1.f8620w ? q1.s(obj, j10) : q1.t(obj, j10);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.q1.e
         public byte d(Object obj, long j10) {
-            return q1.f8546w ? q1.v(obj, j10) : q1.w(obj, j10);
+            return q1.f8620w ? q1.v(obj, j10) : q1.w(obj, j10);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.q1.e
@@ -180,7 +180,7 @@ public final class q1 {
 
         @Override // com.google.crypto.tink.shaded.protobuf.q1.e
         public void k(Object obj, long j10, boolean z10) {
-            if (q1.f8546w) {
+            if (q1.f8620w) {
                 q1.I(obj, j10, z10);
             } else {
                 q1.J(obj, j10, z10);
@@ -189,7 +189,7 @@ public final class q1 {
 
         @Override // com.google.crypto.tink.shaded.protobuf.q1.e
         public void l(Object obj, long j10, byte b) {
-            if (q1.f8546w) {
+            if (q1.f8620w) {
                 q1.L(obj, j10, b);
             } else {
                 q1.M(obj, j10, b);
@@ -219,42 +219,42 @@ public final class q1 {
 
         @Override // com.google.crypto.tink.shaded.protobuf.q1.e
         public boolean c(Object obj, long j10) {
-            return this.f8547a.getBoolean(obj, j10);
+            return this.f8621a.getBoolean(obj, j10);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.q1.e
         public byte d(Object obj, long j10) {
-            return this.f8547a.getByte(obj, j10);
+            return this.f8621a.getByte(obj, j10);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.q1.e
         public double e(Object obj, long j10) {
-            return this.f8547a.getDouble(obj, j10);
+            return this.f8621a.getDouble(obj, j10);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.q1.e
         public float f(Object obj, long j10) {
-            return this.f8547a.getFloat(obj, j10);
+            return this.f8621a.getFloat(obj, j10);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.q1.e
         public void k(Object obj, long j10, boolean z10) {
-            this.f8547a.putBoolean(obj, j10, z10);
+            this.f8621a.putBoolean(obj, j10, z10);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.q1.e
         public void l(Object obj, long j10, byte b) {
-            this.f8547a.putByte(obj, j10, b);
+            this.f8621a.putByte(obj, j10, b);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.q1.e
         public void m(Object obj, long j10, double d10) {
-            this.f8547a.putDouble(obj, j10, d10);
+            this.f8621a.putDouble(obj, j10, d10);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.q1.e
         public void n(Object obj, long j10, float f10) {
-            this.f8547a.putFloat(obj, j10, f10);
+            this.f8621a.putFloat(obj, j10, f10);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.q1.e
@@ -263,7 +263,7 @@ public final class q1 {
                 return false;
             }
             try {
-                Class<?> cls = this.f8547a.getClass();
+                Class<?> cls = this.f8621a.getClass();
                 Class cls2 = Long.TYPE;
                 cls.getMethod("getByte", Object.class, cls2);
                 cls.getMethod("putByte", Object.class, cls2, Byte.TYPE);
@@ -286,7 +286,7 @@ public final class q1 {
                 return false;
             }
             try {
-                Class<?> cls = this.f8547a.getClass();
+                Class<?> cls = this.f8621a.getClass();
                 Class cls2 = Long.TYPE;
                 cls.getMethod("getByte", cls2);
                 cls.getMethod("putByte", cls2, Byte.TYPE);
@@ -307,18 +307,18 @@ public final class q1 {
     public static abstract class e {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public Unsafe f8547a;
+        public Unsafe f8621a;
 
         public e(Unsafe unsafe) {
-            this.f8547a = unsafe;
+            this.f8621a = unsafe;
         }
 
         public final int a(Class<?> cls) {
-            return this.f8547a.arrayBaseOffset(cls);
+            return this.f8621a.arrayBaseOffset(cls);
         }
 
         public final int b(Class<?> cls) {
-            return this.f8547a.arrayIndexScale(cls);
+            return this.f8621a.arrayIndexScale(cls);
         }
 
         public abstract boolean c(Object obj, long j10);
@@ -330,19 +330,19 @@ public final class q1 {
         public abstract float f(Object obj, long j10);
 
         public final int g(Object obj, long j10) {
-            return this.f8547a.getInt(obj, j10);
+            return this.f8621a.getInt(obj, j10);
         }
 
         public final long h(Object obj, long j10) {
-            return this.f8547a.getLong(obj, j10);
+            return this.f8621a.getLong(obj, j10);
         }
 
         public final Object i(Object obj, long j10) {
-            return this.f8547a.getObject(obj, j10);
+            return this.f8621a.getObject(obj, j10);
         }
 
         public final long j(Field field) {
-            return this.f8547a.objectFieldOffset(field);
+            return this.f8621a.objectFieldOffset(field);
         }
 
         public abstract void k(Object obj, long j10, boolean z10);
@@ -354,19 +354,19 @@ public final class q1 {
         public abstract void n(Object obj, long j10, float f10);
 
         public final void o(Object obj, long j10, int i10) {
-            this.f8547a.putInt(obj, j10, i10);
+            this.f8621a.putInt(obj, j10, i10);
         }
 
         public final void p(Object obj, long j10, long j11) {
-            this.f8547a.putLong(obj, j10, j11);
+            this.f8621a.putLong(obj, j10, j11);
         }
 
         public final void q(Object obj, long j10, Object obj2) {
-            this.f8547a.putObject(obj, j10, obj2);
+            this.f8621a.putObject(obj, j10, obj2);
         }
 
         public boolean r() {
-            Unsafe unsafe = this.f8547a;
+            Unsafe unsafe = this.f8621a;
             if (unsafe == null) {
                 return false;
             }
@@ -390,7 +390,7 @@ public final class q1 {
         }
 
         public boolean s() {
-            Unsafe unsafe = this.f8547a;
+            Unsafe unsafe = this.f8621a;
             if (unsafe == null) {
                 return false;
             }
@@ -408,47 +408,47 @@ public final class q1 {
 
     static {
         long jL = l(byte[].class);
-        f8531h = jL;
-        f8532i = l(boolean[].class);
-        f8533j = m(boolean[].class);
-        f8534k = l(int[].class);
-        f8535l = m(int[].class);
-        f8536m = l(long[].class);
-        f8537n = m(long[].class);
-        f8538o = l(float[].class);
-        f8539p = m(float[].class);
-        f8540q = l(double[].class);
-        f8541r = m(double[].class);
-        f8542s = l(Object[].class);
-        f8543t = m(Object[].class);
-        f8544u = q(n());
-        f8545v = (int) (jL & 7);
-        f8546w = ByteOrder.nativeOrder() == ByteOrder.BIG_ENDIAN;
+        f8605h = jL;
+        f8606i = l(boolean[].class);
+        f8607j = m(boolean[].class);
+        f8608k = l(int[].class);
+        f8609l = m(int[].class);
+        f8610m = l(long[].class);
+        f8611n = m(long[].class);
+        f8612o = l(float[].class);
+        f8613p = m(float[].class);
+        f8614q = l(double[].class);
+        f8615r = m(double[].class);
+        f8616s = l(Object[].class);
+        f8617t = m(Object[].class);
+        f8618u = q(n());
+        f8619v = (int) (jL & 7);
+        f8620w = ByteOrder.nativeOrder() == ByteOrder.BIG_ENDIAN;
     }
 
     public static long A(Object obj, long j10) {
-        return f8528e.h(obj, j10);
+        return f8602e.h(obj, j10);
     }
 
     public static e B() {
-        Unsafe unsafe = f8525a;
+        Unsafe unsafe = f8599a;
         if (unsafe == null) {
             return null;
         }
         if (!com.google.crypto.tink.shaded.protobuf.d.c()) {
             return new d(unsafe);
         }
-        if (f8526c) {
+        if (f8600c) {
             return new c(unsafe);
         }
-        if (f8527d) {
+        if (f8601d) {
             return new b(unsafe);
         }
         return null;
     }
 
     public static Object C(Object obj, long j10) {
-        return f8528e.i(obj, j10);
+        return f8602e.i(obj, j10);
     }
 
     public static Unsafe D() {
@@ -460,11 +460,11 @@ public final class q1 {
     }
 
     public static boolean E() {
-        return f8530g;
+        return f8604g;
     }
 
     public static boolean F() {
-        return f8529f;
+        return f8603f;
     }
 
     public static void G(Throwable th2) {
@@ -472,7 +472,7 @@ public final class q1 {
     }
 
     public static void H(Object obj, long j10, boolean z10) {
-        f8528e.k(obj, j10, z10);
+        f8602e.k(obj, j10, z10);
     }
 
     public static void I(Object obj, long j10, boolean z10) {
@@ -484,7 +484,7 @@ public final class q1 {
     }
 
     public static void K(byte[] bArr, long j10, byte b10) {
-        f8528e.l(bArr, f8531h + j10, b10);
+        f8602e.l(bArr, f8605h + j10, b10);
     }
 
     public static void L(Object obj, long j10, byte b10) {
@@ -501,27 +501,27 @@ public final class q1 {
     }
 
     public static void N(Object obj, long j10, double d10) {
-        f8528e.m(obj, j10, d10);
+        f8602e.m(obj, j10, d10);
     }
 
     public static void O(Object obj, long j10, float f10) {
-        f8528e.n(obj, j10, f10);
+        f8602e.n(obj, j10, f10);
     }
 
     public static void P(Object obj, long j10, int i10) {
-        f8528e.o(obj, j10, i10);
+        f8602e.o(obj, j10, i10);
     }
 
     public static void Q(Object obj, long j10, long j11) {
-        f8528e.p(obj, j10, j11);
+        f8602e.p(obj, j10, j11);
     }
 
     public static void R(Object obj, long j10, Object obj2) {
-        f8528e.q(obj, j10, obj2);
+        f8602e.q(obj, j10, obj2);
     }
 
     public static boolean S() {
-        e eVar = f8528e;
+        e eVar = f8602e;
         if (eVar == null) {
             return false;
         }
@@ -529,7 +529,7 @@ public final class q1 {
     }
 
     public static boolean T() {
-        e eVar = f8528e;
+        e eVar = f8602e;
         if (eVar == null) {
             return false;
         }
@@ -538,22 +538,22 @@ public final class q1 {
 
     public static <T> T k(Class<T> cls) {
         try {
-            return (T) f8525a.allocateInstance(cls);
+            return (T) f8599a.allocateInstance(cls);
         } catch (InstantiationException e10) {
             throw new IllegalStateException(e10);
         }
     }
 
     public static int l(Class<?> cls) {
-        if (f8530g) {
-            return f8528e.a(cls);
+        if (f8604g) {
+            return f8602e.a(cls);
         }
         return -1;
     }
 
     public static int m(Class<?> cls) {
-        if (f8530g) {
-            return f8528e.b(cls);
+        if (f8604g) {
+            return f8602e.b(cls);
         }
         return -1;
     }
@@ -602,14 +602,14 @@ public final class q1 {
 
     public static long q(Field field) {
         e eVar;
-        if (field == null || (eVar = f8528e) == null) {
+        if (field == null || (eVar = f8602e) == null) {
             return -1L;
         }
         return eVar.j(field);
     }
 
     public static boolean r(Object obj, long j10) {
-        return f8528e.c(obj, j10);
+        return f8602e.c(obj, j10);
     }
 
     public static boolean s(Object obj, long j10) {
@@ -621,7 +621,7 @@ public final class q1 {
     }
 
     public static byte u(byte[] bArr, long j10) {
-        return f8528e.d(bArr, f8531h + j10);
+        return f8602e.d(bArr, f8605h + j10);
     }
 
     public static byte v(Object obj, long j10) {
@@ -633,14 +633,14 @@ public final class q1 {
     }
 
     public static double x(Object obj, long j10) {
-        return f8528e.e(obj, j10);
+        return f8602e.e(obj, j10);
     }
 
     public static float y(Object obj, long j10) {
-        return f8528e.f(obj, j10);
+        return f8602e.f(obj, j10);
     }
 
     public static int z(Object obj, long j10) {
-        return f8528e.g(obj, j10);
+        return f8602e.g(obj, j10);
     }
 }

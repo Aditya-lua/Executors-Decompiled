@@ -6,11 +6,11 @@ import java.io.Serializable;
 public final class q1 extends s1 implements Serializable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final q1 f15359a = new q1();
+    public static final q1 f15973a = new q1();
 
     @Override // eb.s1
     public final s1 a() {
-        return w1.f15420a;
+        return w1.f16034a;
     }
 
     @Override // eb.s1, java.util.Comparator

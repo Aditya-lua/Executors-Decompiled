@@ -15,29 +15,29 @@ import java.lang.reflect.Method;
 public class k0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final int[] f29005a = {R.attr.state_checked};
+    public static final int[] f29358a = {R.attr.state_checked};
     public static final int[] b = new int[0];
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final Rect f29006c = new Rect();
+    public static final Rect f29359c = new Rect();
 
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final boolean f29007a;
+        public static final boolean f29360a;
         public static final Method b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static final Field f29008c;
+        public static final Field f29361c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final Field f29009d;
+        public static final Field f29362d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public static final Field f29010e;
+        public static final Field f29363e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public static final Field f29011f;
+        public static final Field f29364f;
 
         /* JADX WARN: Code duplicated, block: B:25:0x004a  */
         /* JADX WARN: Code duplicated, block: B:26:0x0057  */
@@ -74,19 +74,19 @@ public class k0 {
                         z10 = false;
                         if (z10) {
                             b = method;
-                            f29008c = field;
-                            f29009d = field2;
-                            f29010e = field3;
-                            f29011f = field4;
-                            f29007a = true;
+                            f29361c = field;
+                            f29362d = field2;
+                            f29363e = field3;
+                            f29364f = field4;
+                            f29360a = true;
                             return;
                         }
                         b = null;
-                        f29008c = null;
-                        f29009d = null;
-                        f29010e = null;
-                        f29011f = null;
-                        f29007a = false;
+                        f29361c = null;
+                        f29362d = null;
+                        f29363e = null;
+                        f29364f = null;
+                        f29360a = false;
                     } catch (NoSuchFieldException unused4) {
                         field2 = null;
                         field3 = field2;
@@ -94,19 +94,19 @@ public class k0 {
                         z10 = false;
                         if (z10) {
                             b = method;
-                            f29008c = field;
-                            f29009d = field2;
-                            f29010e = field3;
-                            f29011f = field4;
-                            f29007a = true;
+                            f29361c = field;
+                            f29362d = field2;
+                            f29363e = field3;
+                            f29364f = field4;
+                            f29360a = true;
                             return;
                         }
                         b = null;
-                        f29008c = null;
-                        f29009d = null;
-                        f29010e = null;
-                        f29011f = null;
-                        f29007a = false;
+                        f29361c = null;
+                        f29362d = null;
+                        f29363e = null;
+                        f29364f = null;
+                        f29360a = false;
                     } catch (NoSuchMethodException unused5) {
                         field2 = null;
                         field3 = field2;
@@ -114,19 +114,19 @@ public class k0 {
                         z10 = false;
                         if (z10) {
                             b = method;
-                            f29008c = field;
-                            f29009d = field2;
-                            f29010e = field3;
-                            f29011f = field4;
-                            f29007a = true;
+                            f29361c = field;
+                            f29362d = field2;
+                            f29363e = field3;
+                            f29364f = field4;
+                            f29360a = true;
                             return;
                         }
                         b = null;
-                        f29008c = null;
-                        f29009d = null;
-                        f29010e = null;
-                        f29011f = null;
-                        f29007a = false;
+                        f29361c = null;
+                        f29362d = null;
+                        f29363e = null;
+                        f29364f = null;
+                        f29360a = false;
                     }
                 } catch (ClassNotFoundException unused6) {
                     field = null;
@@ -136,19 +136,19 @@ public class k0 {
                     z10 = false;
                     if (z10) {
                         b = method;
-                        f29008c = field;
-                        f29009d = field2;
-                        f29010e = field3;
-                        f29011f = field4;
-                        f29007a = true;
+                        f29361c = field;
+                        f29362d = field2;
+                        f29363e = field3;
+                        f29364f = field4;
+                        f29360a = true;
                         return;
                     }
                     b = null;
-                    f29008c = null;
-                    f29009d = null;
-                    f29010e = null;
-                    f29011f = null;
-                    f29007a = false;
+                    f29361c = null;
+                    f29362d = null;
+                    f29363e = null;
+                    f29364f = null;
+                    f29360a = false;
                 } catch (NoSuchFieldException unused7) {
                     field = null;
                     field2 = field;
@@ -157,19 +157,19 @@ public class k0 {
                     z10 = false;
                     if (z10) {
                         b = method;
-                        f29008c = field;
-                        f29009d = field2;
-                        f29010e = field3;
-                        f29011f = field4;
-                        f29007a = true;
+                        f29361c = field;
+                        f29362d = field2;
+                        f29363e = field3;
+                        f29364f = field4;
+                        f29360a = true;
                         return;
                     }
                     b = null;
-                    f29008c = null;
-                    f29009d = null;
-                    f29010e = null;
-                    f29011f = null;
-                    f29007a = false;
+                    f29361c = null;
+                    f29362d = null;
+                    f29363e = null;
+                    f29364f = null;
+                    f29360a = false;
                 } catch (NoSuchMethodException unused8) {
                     field = null;
                     field2 = field;
@@ -178,19 +178,19 @@ public class k0 {
                     z10 = false;
                     if (z10) {
                         b = method;
-                        f29008c = field;
-                        f29009d = field2;
-                        f29010e = field3;
-                        f29011f = field4;
-                        f29007a = true;
+                        f29361c = field;
+                        f29362d = field2;
+                        f29363e = field3;
+                        f29364f = field4;
+                        f29360a = true;
                         return;
                     }
                     b = null;
-                    f29008c = null;
-                    f29009d = null;
-                    f29010e = null;
-                    f29011f = null;
-                    f29007a = false;
+                    f29361c = null;
+                    f29362d = null;
+                    f29363e = null;
+                    f29364f = null;
+                    f29360a = false;
                 }
             } catch (ClassNotFoundException unused9) {
                 method = null;
@@ -204,33 +204,33 @@ public class k0 {
             }
             if (z10) {
                 b = method;
-                f29008c = field;
-                f29009d = field2;
-                f29010e = field3;
-                f29011f = field4;
-                f29007a = true;
+                f29361c = field;
+                f29362d = field2;
+                f29363e = field3;
+                f29364f = field4;
+                f29360a = true;
                 return;
             }
             b = null;
-            f29008c = null;
-            f29009d = null;
-            f29010e = null;
-            f29011f = null;
-            f29007a = false;
+            f29361c = null;
+            f29362d = null;
+            f29363e = null;
+            f29364f = null;
+            f29360a = false;
         }
 
         @NonNull
         public static Rect a(@NonNull Drawable drawable) {
-            if (Build.VERSION.SDK_INT < 29 && f29007a) {
+            if (Build.VERSION.SDK_INT < 29 && f29360a) {
                 try {
                     Object objInvoke = b.invoke(drawable, null);
                     if (objInvoke != null) {
-                        return new Rect(f29008c.getInt(objInvoke), f29009d.getInt(objInvoke), f29010e.getInt(objInvoke), f29011f.getInt(objInvoke));
+                        return new Rect(f29361c.getInt(objInvoke), f29362d.getInt(objInvoke), f29363e.getInt(objInvoke), f29364f.getInt(objInvoke));
                     }
                 } catch (IllegalAccessException | InvocationTargetException unused) {
                 }
             }
-            return k0.f29006c;
+            return k0.f29359c;
         }
     }
 
@@ -257,7 +257,7 @@ public class k0 {
     public static void c(Drawable drawable) {
         int[] state = drawable.getState();
         if (state == null || state.length == 0) {
-            drawable.setState(f29005a);
+            drawable.setState(f29358a);
         } else {
             drawable.setState(b);
         }

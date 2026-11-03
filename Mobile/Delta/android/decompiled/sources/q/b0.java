@@ -24,24 +24,24 @@ import java.util.concurrent.Future;
 public class b0 extends TextView implements d3.b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final e f28925a;
+    public final e f29278a;
     public final a0 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final z f28926c;
+    public final z f29279c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NonNull
-    public n f28927d;
+    public n f29280d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public boolean f28928e;
+    public boolean f29281e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public a f28929f;
+    public a f29282f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public Future<w2.e> f28930g;
+    public Future<w2.e> f29283g;
 
     public interface a {
         void a(int[] iArr, int i10);
@@ -171,16 +171,16 @@ public class b0 extends TextView implements d3.b {
 
     @NonNull
     private n getEmojiTextViewHelper() {
-        if (this.f28927d == null) {
-            this.f28927d = new n(this);
+        if (this.f29280d == null) {
+            this.f29280d = new n(this);
         }
-        return this.f28927d;
+        return this.f29280d;
     }
 
     @Override // android.widget.TextView, android.view.View
     public void drawableStateChanged() {
         super.drawableStateChanged();
-        e eVar = this.f28925a;
+        e eVar = this.f29278a;
         if (eVar != null) {
             eVar.b();
         }
@@ -192,7 +192,7 @@ public class b0 extends TextView implements d3.b {
 
     @Override // android.widget.TextView
     public int getAutoSizeMaxTextSize() {
-        if (g1.f28984c) {
+        if (g1.f29337c) {
             return getSuperCaller().f();
         }
         a0 a0Var = this.b;
@@ -204,7 +204,7 @@ public class b0 extends TextView implements d3.b {
 
     @Override // android.widget.TextView, d3.b
     public int getAutoSizeMinTextSize() {
-        if (g1.f28984c) {
+        if (g1.f29337c) {
             return getSuperCaller().getAutoSizeMinTextSize();
         }
         a0 a0Var = this.b;
@@ -216,7 +216,7 @@ public class b0 extends TextView implements d3.b {
 
     @Override // android.widget.TextView, d3.b
     public int getAutoSizeStepGranularity() {
-        if (g1.f28984c) {
+        if (g1.f29337c) {
             return getSuperCaller().getAutoSizeStepGranularity();
         }
         a0 a0Var = this.b;
@@ -228,7 +228,7 @@ public class b0 extends TextView implements d3.b {
 
     @Override // android.widget.TextView
     public int[] getAutoSizeTextAvailableSizes() {
-        if (g1.f28984c) {
+        if (g1.f29337c) {
             return getSuperCaller().d();
         }
         a0 a0Var = this.b;
@@ -238,7 +238,7 @@ public class b0 extends TextView implements d3.b {
     @Override // android.widget.TextView, d3.b
     @SuppressLint({"WrongConstant"})
     public int getAutoSizeTextType() {
-        if (g1.f28984c) {
+        if (g1.f29337c) {
             return getSuperCaller().getAutoSizeTextType() == 1 ? 1 : 0;
         }
         a0 a0Var = this.b;
@@ -264,21 +264,21 @@ public class b0 extends TextView implements d3.b {
     }
 
     public a getSuperCaller() {
-        if (this.f28929f == null) {
+        if (this.f29282f == null) {
             int i10 = Build.VERSION.SDK_INT;
             if (i10 >= 34) {
-                this.f28929f = new d();
+                this.f29282f = new d();
             } else if (i10 >= 28) {
-                this.f28929f = new c();
+                this.f29282f = new c();
             } else {
-                this.f28929f = new b();
+                this.f29282f = new b();
             }
         }
-        return this.f28929f;
+        return this.f29282f;
     }
 
     public ColorStateList getSupportBackgroundTintList() {
-        e eVar = this.f28925a;
+        e eVar = this.f29278a;
         if (eVar != null) {
             return eVar.c();
         }
@@ -286,7 +286,7 @@ public class b0 extends TextView implements d3.b {
     }
 
     public PorterDuff.Mode getSupportBackgroundTintMode() {
-        e eVar = this.f28925a;
+        e eVar = this.f29278a;
         if (eVar != null) {
             return eVar.d();
         }
@@ -311,7 +311,7 @@ public class b0 extends TextView implements d3.b {
     @NonNull
     public TextClassifier getTextClassifier() {
         z zVar;
-        return (Build.VERSION.SDK_INT >= 28 || (zVar = this.f28926c) == null) ? getSuperCaller().e() : zVar.a();
+        return (Build.VERSION.SDK_INT >= 28 || (zVar = this.f29279c) == null) ? getSuperCaller().e() : zVar.a();
     }
 
     @NonNull
@@ -355,17 +355,17 @@ public class b0 extends TextView implements d3.b {
     public void onTextChanged(CharSequence charSequence, int i10, int i11, int i12) {
         super.onTextChanged(charSequence, i10, i11, i12);
         a0 a0Var = this.b;
-        if (a0Var == null || g1.f28984c || !a0Var.l()) {
+        if (a0Var == null || g1.f29337c || !a0Var.l()) {
             return;
         }
         this.b.c();
     }
 
     public final void r() {
-        Future<w2.e> future = this.f28930g;
+        Future<w2.e> future = this.f29283g;
         if (future != null) {
             try {
-                this.f28930g = null;
+                this.f29283g = null;
                 d3.i.r(this, future.get());
             } catch (InterruptedException | ExecutionException unused) {
             }
@@ -380,7 +380,7 @@ public class b0 extends TextView implements d3.b {
 
     @Override // android.widget.TextView, d3.b
     public void setAutoSizeTextTypeUniformWithConfiguration(int i10, int i11, int i12, int i13) {
-        if (g1.f28984c) {
+        if (g1.f29337c) {
             getSuperCaller().setAutoSizeTextTypeUniformWithConfiguration(i10, i11, i12, i13);
             return;
         }
@@ -392,7 +392,7 @@ public class b0 extends TextView implements d3.b {
 
     @Override // android.widget.TextView
     public void setAutoSizeTextTypeUniformWithPresetSizes(@NonNull int[] iArr, int i10) {
-        if (g1.f28984c) {
+        if (g1.f29337c) {
             getSuperCaller().a(iArr, i10);
             return;
         }
@@ -404,7 +404,7 @@ public class b0 extends TextView implements d3.b {
 
     @Override // android.widget.TextView
     public void setAutoSizeTextTypeWithDefaults(int i10) {
-        if (g1.f28984c) {
+        if (g1.f29337c) {
             getSuperCaller().i(i10);
             return;
         }
@@ -417,7 +417,7 @@ public class b0 extends TextView implements d3.b {
     @Override // android.view.View
     public void setBackgroundDrawable(Drawable drawable) {
         super.setBackgroundDrawable(drawable);
-        e eVar = this.f28925a;
+        e eVar = this.f29278a;
         if (eVar != null) {
             eVar.f(drawable);
         }
@@ -426,7 +426,7 @@ public class b0 extends TextView implements d3.b {
     @Override // android.view.View
     public void setBackgroundResource(int i10) {
         super.setBackgroundResource(i10);
-        e eVar = this.f28925a;
+        e eVar = this.f29278a;
         if (eVar != null) {
             eVar.g(i10);
         }
@@ -510,14 +510,14 @@ public class b0 extends TextView implements d3.b {
     }
 
     public void setSupportBackgroundTintList(ColorStateList colorStateList) {
-        e eVar = this.f28925a;
+        e eVar = this.f29278a;
         if (eVar != null) {
             eVar.i(colorStateList);
         }
     }
 
     public void setSupportBackgroundTintMode(PorterDuff.Mode mode) {
-        e eVar = this.f28925a;
+        e eVar = this.f29278a;
         if (eVar != null) {
             eVar.j(mode);
         }
@@ -545,7 +545,7 @@ public class b0 extends TextView implements d3.b {
     @Override // android.widget.TextView
     public void setTextClassifier(TextClassifier textClassifier) {
         z zVar;
-        if (Build.VERSION.SDK_INT >= 28 || (zVar = this.f28926c) == null) {
+        if (Build.VERSION.SDK_INT >= 28 || (zVar = this.f29279c) == null) {
             getSuperCaller().g(textClassifier);
         } else {
             zVar.b(textClassifier);
@@ -553,7 +553,7 @@ public class b0 extends TextView implements d3.b {
     }
 
     public void setTextFuture(Future<w2.e> future) {
-        this.f28930g = future;
+        this.f29283g = future;
         if (future != null) {
             requestLayout();
         }
@@ -565,7 +565,7 @@ public class b0 extends TextView implements d3.b {
 
     @Override // android.widget.TextView
     public void setTextSize(int i10, float f10) {
-        if (g1.f28984c) {
+        if (g1.f29337c) {
             super.setTextSize(i10, f10);
             return;
         }
@@ -577,18 +577,18 @@ public class b0 extends TextView implements d3.b {
 
     @Override // android.widget.TextView
     public void setTypeface(Typeface typeface, int i10) {
-        if (this.f28928e) {
+        if (this.f29281e) {
             return;
         }
         Typeface typefaceA = (typeface == null || i10 <= 0) ? null : androidx.core.graphics.k.a(getContext(), typeface, i10);
-        this.f28928e = true;
+        this.f29281e = true;
         if (typefaceA != null) {
             typeface = typefaceA;
         }
         try {
             super.setTypeface(typeface, i10);
         } finally {
-            this.f28928e = false;
+            this.f29281e = false;
         }
     }
 
@@ -607,17 +607,17 @@ public class b0 extends TextView implements d3.b {
 
     public b0(@NonNull Context context, AttributeSet attributeSet, int i10) {
         super(x0.b(context), attributeSet, i10);
-        this.f28928e = false;
-        this.f28929f = null;
+        this.f29281e = false;
+        this.f29282f = null;
         v0.a(this, getContext());
         e eVar = new e(this);
-        this.f28925a = eVar;
+        this.f29278a = eVar;
         eVar.e(attributeSet, i10);
         a0 a0Var = new a0(this);
         this.b = a0Var;
         a0Var.m(attributeSet, i10);
         a0Var.b();
-        this.f28926c = new z(this);
+        this.f29279c = new z(this);
         getEmojiTextViewHelper().c(attributeSet, i10);
     }
 

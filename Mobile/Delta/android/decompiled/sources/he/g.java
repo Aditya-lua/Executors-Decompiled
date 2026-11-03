@@ -1,38 +1,50 @@
 package he;
 
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.Objects;
+
 /* JADX INFO: loaded from: classes2.dex */
-public final class g {
-    public static void a(Object obj, Object obj2) {
-        if (obj == null) {
-            String strValueOf = String.valueOf(obj2);
-            StringBuilder sb2 = new StringBuilder(strValueOf.length() + 24);
-            sb2.append("null key in entry: null=");
-            sb2.append(strValueOf);
-            throw new NullPointerException(sb2.toString());
-        }
-        if (obj2 != null) {
-            return;
-        }
-        String strValueOf2 = String.valueOf(obj);
-        StringBuilder sb3 = new StringBuilder(strValueOf2.length() + 26);
-        sb3.append("null value in entry: ");
-        sb3.append(strValueOf2);
-        sb3.append("=null");
-        throw new NullPointerException(sb3.toString());
+public class g {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final String f19402a;
+
+    public g(String str) {
+        this.f19402a = (String) n.l(str);
     }
 
-    public static int b(int i10, String str) {
-        if (i10 >= 0) {
-            return i10;
-        }
-        StringBuilder sb2 = new StringBuilder(String.valueOf(str).length() + 40);
-        sb2.append(str);
-        sb2.append(" cannot be negative but was: ");
-        sb2.append(i10);
-        throw new IllegalArgumentException(sb2.toString());
+    public static g d(String str) {
+        return new g(str);
     }
 
-    public static void c(boolean z10) {
-        ge.n.s(z10, "no calls to next() since the last call to remove()");
+    public <A extends Appendable> A a(A a10, Iterator<? extends Object> it) throws IOException {
+        n.l(a10);
+        if (it.hasNext()) {
+            a10.append(e(it.next()));
+            while (it.hasNext()) {
+                a10.append(this.f19402a);
+                a10.append(e(it.next()));
+            }
+        }
+        return a10;
+    }
+
+    public final StringBuilder b(StringBuilder sb2, Iterable<? extends Object> iterable) {
+        return c(sb2, iterable.iterator());
+    }
+
+    public final StringBuilder c(StringBuilder sb2, Iterator<? extends Object> it) {
+        try {
+            a(sb2, it);
+            return sb2;
+        } catch (IOException e10) {
+            throw new AssertionError(e10);
+        }
+    }
+
+    public CharSequence e(Object obj) {
+        Objects.requireNonNull(obj);
+        return obj instanceof CharSequence ? (CharSequence) obj : obj.toString();
     }
 }

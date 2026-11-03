@@ -1,6 +1,6 @@
 package com.roblox.engine.jni.locale;
 
-import pk.a;
+import nk.a;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class NativeLocaleJavaInterface {

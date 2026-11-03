@@ -6,20 +6,20 @@ import java.util.Map;
 public final class a5 implements Map.Entry {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Map.Entry f6984a;
+    public final Map.Entry f7058a;
 
     public final d5 a() {
-        return (d5) this.f6984a.getValue();
+        return (d5) this.f7058a.getValue();
     }
 
     @Override // java.util.Map.Entry
     public final Object getKey() {
-        return this.f6984a.getKey();
+        return this.f7058a.getKey();
     }
 
     @Override // java.util.Map.Entry
     public final Object getValue() {
-        d5 d5Var = (d5) this.f6984a.getValue();
+        d5 d5Var = (d5) this.f7058a.getValue();
         if (d5Var == null) {
             return null;
         }
@@ -31,8 +31,8 @@ public final class a5 implements Map.Entry {
         if (!(obj instanceof x5)) {
             throw new IllegalArgumentException("Lazy field only supports MessageLite values.");
         }
-        Map.Entry entry = this.f6984a;
-        x5 x5Var = ((d5) entry.getValue()).f7027c;
+        Map.Entry entry = this.f7058a;
+        x5 x5Var = ((d5) entry.getValue()).f7101c;
         entry.setValue(new d5((x5) obj));
         return x5Var;
     }

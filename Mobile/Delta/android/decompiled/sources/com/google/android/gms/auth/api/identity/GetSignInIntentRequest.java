@@ -16,44 +16,44 @@ public class GetSignInIntentRequest extends AbstractSafeParcelable {
     public static final Parcelable.Creator<GetSignInIntentRequest> CREATOR = new h();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final String f5585f;
+    public final String f5658f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final String f5586g;
+    public final String f5659g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final String f5587h;
+    public final String f5660h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final String f5588i;
+    public final String f5661i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final boolean f5589j;
+    public final boolean f5662j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final int f5590k;
+    public final int f5663k;
 
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public String f5591a;
+        public String f5664a;
         public String b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public String f5592c;
+        public String f5665c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public String f5593d;
+        public String f5666d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public boolean f5594e;
+        public boolean f5667e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public int f5595f;
+        public int f5668f;
 
         @NonNull
         public GetSignInIntentRequest a() {
-            return new GetSignInIntentRequest(this.f5591a, this.b, this.f5592c, this.f5593d, this.f5594e, this.f5595f);
+            return new GetSignInIntentRequest(this.f5664a, this.b, this.f5665c, this.f5666d, this.f5667e, this.f5668f);
         }
 
         @NonNull
@@ -64,45 +64,45 @@ public class GetSignInIntentRequest extends AbstractSafeParcelable {
 
         @NonNull
         public a c(String str) {
-            this.f5593d = str;
+            this.f5666d = str;
             return this;
         }
 
         @NonNull
         @Deprecated
         public a d(boolean z10) {
-            this.f5594e = z10;
+            this.f5667e = z10;
             return this;
         }
 
         @NonNull
         public a e(@NonNull String str) {
             m.l(str);
-            this.f5591a = str;
+            this.f5664a = str;
             return this;
         }
 
         @NonNull
         public final a f(String str) {
-            this.f5592c = str;
+            this.f5665c = str;
             return this;
         }
 
         @NonNull
         public final a g(int i10) {
-            this.f5595f = i10;
+            this.f5668f = i10;
             return this;
         }
     }
 
     public GetSignInIntentRequest(String str, String str2, String str3, String str4, boolean z10, int i10) {
         m.l(str);
-        this.f5585f = str;
-        this.f5586g = str2;
-        this.f5587h = str3;
-        this.f5588i = str4;
-        this.f5589j = z10;
-        this.f5590k = i10;
+        this.f5658f = str;
+        this.f5659g = str2;
+        this.f5660h = str3;
+        this.f5661i = str4;
+        this.f5662j = z10;
+        this.f5663k = i10;
     }
 
     @NonNull
@@ -112,9 +112,9 @@ public class GetSignInIntentRequest extends AbstractSafeParcelable {
         aVarV3.e(getSignInIntentRequest.y3());
         aVarV3.c(getSignInIntentRequest.x3());
         aVarV3.b(getSignInIntentRequest.w3());
-        aVarV3.d(getSignInIntentRequest.f5589j);
-        aVarV3.g(getSignInIntentRequest.f5590k);
-        String str = getSignInIntentRequest.f5587h;
+        aVarV3.d(getSignInIntentRequest.f5662j);
+        aVarV3.g(getSignInIntentRequest.f5663k);
+        String str = getSignInIntentRequest.f5660h;
         if (str != null) {
             aVarV3.f(str);
         }
@@ -131,15 +131,15 @@ public class GetSignInIntentRequest extends AbstractSafeParcelable {
             return false;
         }
         GetSignInIntentRequest getSignInIntentRequest = (GetSignInIntentRequest) obj;
-        return k.b(this.f5585f, getSignInIntentRequest.f5585f) && k.b(this.f5588i, getSignInIntentRequest.f5588i) && k.b(this.f5586g, getSignInIntentRequest.f5586g) && k.b(Boolean.valueOf(this.f5589j), Boolean.valueOf(getSignInIntentRequest.f5589j)) && this.f5590k == getSignInIntentRequest.f5590k;
+        return k.b(this.f5658f, getSignInIntentRequest.f5658f) && k.b(this.f5661i, getSignInIntentRequest.f5661i) && k.b(this.f5659g, getSignInIntentRequest.f5659g) && k.b(Boolean.valueOf(this.f5662j), Boolean.valueOf(getSignInIntentRequest.f5662j)) && this.f5663k == getSignInIntentRequest.f5663k;
     }
 
     public int hashCode() {
-        return k.c(this.f5585f, this.f5586g, this.f5588i, Boolean.valueOf(this.f5589j), Integer.valueOf(this.f5590k));
+        return k.c(this.f5658f, this.f5659g, this.f5661i, Boolean.valueOf(this.f5662j), Integer.valueOf(this.f5663k));
     }
 
     public String w3() {
-        return this.f5586g;
+        return this.f5659g;
     }
 
     @Override // android.os.Parcelable
@@ -147,24 +147,24 @@ public class GetSignInIntentRequest extends AbstractSafeParcelable {
         int iA = o9.b.a(parcel);
         o9.b.v(parcel, 1, y3(), false);
         o9.b.v(parcel, 2, w3(), false);
-        o9.b.v(parcel, 3, this.f5587h, false);
+        o9.b.v(parcel, 3, this.f5660h, false);
         o9.b.v(parcel, 4, x3(), false);
         o9.b.c(parcel, 5, z3());
-        o9.b.n(parcel, 6, this.f5590k);
+        o9.b.n(parcel, 6, this.f5663k);
         o9.b.b(parcel, iA);
     }
 
     public String x3() {
-        return this.f5588i;
+        return this.f5661i;
     }
 
     @NonNull
     public String y3() {
-        return this.f5585f;
+        return this.f5658f;
     }
 
     @Deprecated
     public boolean z3() {
-        return this.f5589j;
+        return this.f5662j;
     }
 }

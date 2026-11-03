@@ -18,7 +18,7 @@ public final /* data */ class NetworkRequestCompat {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static final String f17928c;
+    public static final String f18467c;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
     @Nullable
@@ -33,7 +33,7 @@ public final /* data */ class NetworkRequestCompat {
 
         @NotNull
         public final String a() {
-            return NetworkRequestCompat.f17928c;
+            return NetworkRequestCompat.f18467c;
         }
 
         public Companion() {
@@ -43,7 +43,7 @@ public final /* data */ class NetworkRequestCompat {
     static {
         String strI = x5.w.i("NetworkRequestCompat");
         Intrinsics.checkNotNullExpressionValue(strI, "tagWithPrefix(...)");
-        f17928c = strI;
+        f18467c = strI;
     }
 
     public NetworkRequestCompat(@Nullable Object obj) {

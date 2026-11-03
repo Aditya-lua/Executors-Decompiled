@@ -12,7 +12,7 @@ public final class p implements Parcelable.Creator<zzba> {
     @Override // android.os.Parcelable.Creator
     public final /* bridge */ /* synthetic */ zzba createFromParcel(Parcel parcel) {
         int iD = o9.a.D(parcel);
-        List<ClientIdentity> listL = zzba.f6341q;
+        List<ClientIdentity> listL = zzba.f6414q;
         LocationRequest locationRequest = null;
         String strH = null;
         String strH2 = null;

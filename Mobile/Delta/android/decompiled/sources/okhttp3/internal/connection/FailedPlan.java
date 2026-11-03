@@ -27,7 +27,7 @@ public final class FailedPlan implements RoutePlanner.Plan {
     @Override // okhttp3.internal.connection.RoutePlanner.Plan
     @NotNull
     /* JADX INFO: renamed from: connectTlsEtc */
-    public RoutePlanner.ConnectResult mo222connectTlsEtc() {
+    public RoutePlanner.ConnectResult mo223connectTlsEtc() {
         return this.result;
     }
 
@@ -38,7 +38,7 @@ public final class FailedPlan implements RoutePlanner.Plan {
 
     @Override // okhttp3.internal.connection.RoutePlanner.Plan
     /* JADX INFO: renamed from: handleSuccess, reason: collision with other method in class */
-    public /* bridge */ /* synthetic */ RealConnection mo218handleSuccess() {
+    public /* bridge */ /* synthetic */ RealConnection mo219handleSuccess() {
         return (RealConnection) handleSuccess();
     }
 
@@ -50,14 +50,14 @@ public final class FailedPlan implements RoutePlanner.Plan {
 
     @Override // okhttp3.internal.connection.RoutePlanner.Plan
     /* JADX INFO: renamed from: retry, reason: collision with other method in class */
-    public /* bridge */ /* synthetic */ RoutePlanner.Plan mo219retry() {
+    public /* bridge */ /* synthetic */ RoutePlanner.Plan mo220retry() {
         return (RoutePlanner.Plan) retry();
     }
 
     @Override // okhttp3.internal.connection.RoutePlanner.Plan, okhttp3.internal.http.ExchangeCodec.Carrier
     @NotNull
     /* JADX INFO: renamed from: cancel, reason: merged with bridge method [inline-methods] */
-    public Void mo217cancel() {
+    public Void mo218cancel() {
         throw new IllegalStateException("unexpected cancel");
     }
 

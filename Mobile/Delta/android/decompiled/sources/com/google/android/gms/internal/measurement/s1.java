@@ -92,7 +92,7 @@ public final class s1 extends o0 implements u1 {
         Parcel parcelS2 = s2();
         parcelS2.writeString(str);
         parcelS2.writeString(str2);
-        ClassLoader classLoader = q0.f6744a;
+        ClassLoader classLoader = q0.f6818a;
         parcelS2.writeInt(z10 ? 1 : 0);
         q0.d(parcelS2, x1Var);
         t2(5, parcelS2);
@@ -232,7 +232,7 @@ public final class s1 extends o0 implements u1 {
     @Override // com.google.android.gms.internal.measurement.u1
     public final void setDataCollectionEnabled(boolean z10) {
         Parcel parcelS2 = s2();
-        ClassLoader classLoader = q0.f6744a;
+        ClassLoader classLoader = q0.f6818a;
         parcelS2.writeInt(z10 ? 1 : 0);
         t2(39, parcelS2);
     }

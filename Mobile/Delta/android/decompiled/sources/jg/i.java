@@ -7,20 +7,20 @@ import java.util.Iterator;
 public final class i extends l implements Iterable<l> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ArrayList<l> f21438a;
+    public final ArrayList<l> f21897a;
 
     public i() {
-        this.f21438a = new ArrayList<>();
+        this.f21897a = new ArrayList<>();
     }
 
     public l A(int i10) {
-        return this.f21438a.get(i10);
+        return this.f21897a.get(i10);
     }
 
     public final l B() {
-        int size = this.f21438a.size();
+        int size = this.f21897a.size();
         if (size == 1) {
-            return this.f21438a.get(0);
+            return this.f21897a.get(0);
         }
         throw new IllegalStateException("Array must have size 1, but has size " + size);
     }
@@ -47,13 +47,13 @@ public final class i extends l implements Iterable<l> {
 
     public boolean equals(Object obj) {
         if (obj != this) {
-            return (obj instanceof i) && ((i) obj).f21438a.equals(this.f21438a);
+            return (obj instanceof i) && ((i) obj).f21897a.equals(this.f21897a);
         }
         return true;
     }
 
     public int hashCode() {
-        return this.f21438a.hashCode();
+        return this.f21897a.hashCode();
     }
 
     @Override // jg.l
@@ -62,12 +62,12 @@ public final class i extends l implements Iterable<l> {
     }
 
     public boolean isEmpty() {
-        return this.f21438a.isEmpty();
+        return this.f21897a.isEmpty();
     }
 
     @Override // java.lang.Iterable
     public Iterator<l> iterator() {
-        return this.f21438a.iterator();
+        return this.f21897a.iterator();
     }
 
     @Override // jg.l
@@ -81,28 +81,28 @@ public final class i extends l implements Iterable<l> {
     }
 
     public int size() {
-        return this.f21438a.size();
+        return this.f21897a.size();
     }
 
     public void x(String str) {
-        this.f21438a.add(str == null ? n.f21439a : new r(str));
+        this.f21897a.add(str == null ? n.f21898a : new r(str));
     }
 
     public void y(l lVar) {
         if (lVar == null) {
-            lVar = n.f21439a;
+            lVar = n.f21898a;
         }
-        this.f21438a.add(lVar);
+        this.f21897a.add(lVar);
     }
 
     @Override // jg.l
     /* JADX INFO: renamed from: z, reason: merged with bridge method [inline-methods] */
     public i a() {
-        if (this.f21438a.isEmpty()) {
+        if (this.f21897a.isEmpty()) {
             return new i();
         }
-        i iVar = new i(this.f21438a.size());
-        ArrayList<l> arrayList = this.f21438a;
+        i iVar = new i(this.f21897a.size());
+        ArrayList<l> arrayList = this.f21897a;
         int size = arrayList.size();
         int i10 = 0;
         while (i10 < size) {
@@ -114,6 +114,6 @@ public final class i extends l implements Iterable<l> {
     }
 
     public i(int i10) {
-        this.f21438a = new ArrayList<>(i10);
+        this.f21897a = new ArrayList<>(i10);
     }
 }

@@ -6,14 +6,14 @@ import com.google.android.gms.common.api.Status;
 public final class k extends d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ l f14498a;
+    public final /* synthetic */ l f14478a;
 
     public k(l lVar) {
-        this.f14498a = lVar;
+        this.f14478a = lVar;
     }
 
     @Override // d9.d, d9.s
-    public final void r1(Status status) {
-        this.f14498a.h(status);
+    public final void o1(Status status) {
+        this.f14478a.h(status);
     }
 }

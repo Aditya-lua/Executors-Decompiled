@@ -5,13 +5,13 @@ public class d {
     public static final float[] b = {1.0f, 10.0f, 100.0f, 1000.0f, 10000.0f, 100000.0f, 1000000.0f, 1.0E7f, 1.0E8f, 1.0E9f, 1.0E10f, 1.0E11f, 1.0E12f, 1.0E13f, 1.0E14f, 1.0E15f, 1.0E16f, 1.0E17f, 1.0E18f, 1.0E19f, 1.0E20f, 1.0E21f, 1.0E22f, 1.0E23f, 1.0E24f, 1.0E25f, 1.0E26f, 1.0E27f, 1.0E28f, 1.0E29f, 1.0E30f, 1.0E31f, 1.0E32f, 1.0E33f, 1.0E34f, 1.0E35f, 1.0E36f, 1.0E37f, 1.0E38f};
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final float[] f33776c = {1.0f, 0.1f, 0.01f, 0.001f, 1.0E-4f, 1.0E-5f, 1.0E-6f, 1.0E-7f, 1.0E-8f, 1.0E-9f, 1.0E-10f, 1.0E-11f, 1.0E-12f, 1.0E-13f, 1.0E-14f, 1.0E-15f, 1.0E-16f, 1.0E-17f, 1.0E-18f, 1.0E-19f, 1.0E-20f, 1.0E-21f, 1.0E-22f, 1.0E-23f, 1.0E-24f, 1.0E-25f, 1.0E-26f, 1.0E-27f, 1.0E-28f, 1.0E-29f, 1.0E-30f, 1.0E-31f, 1.0E-32f, 1.0E-33f, 1.0E-34f, 1.0E-35f, 1.0E-36f, 1.0E-37f, 1.0E-38f};
+    public static final float[] f33982c = {1.0f, 0.1f, 0.01f, 0.001f, 1.0E-4f, 1.0E-5f, 1.0E-6f, 1.0E-7f, 1.0E-8f, 1.0E-9f, 1.0E-10f, 1.0E-11f, 1.0E-12f, 1.0E-13f, 1.0E-14f, 1.0E-15f, 1.0E-16f, 1.0E-17f, 1.0E-18f, 1.0E-19f, 1.0E-20f, 1.0E-21f, 1.0E-22f, 1.0E-23f, 1.0E-24f, 1.0E-25f, 1.0E-26f, 1.0E-27f, 1.0E-28f, 1.0E-29f, 1.0E-30f, 1.0E-31f, 1.0E-32f, 1.0E-33f, 1.0E-34f, 1.0E-35f, 1.0E-36f, 1.0E-37f, 1.0E-38f};
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f33777a;
+    public int f33983a;
 
     public int a() {
-        return this.f33777a;
+        return this.f33983a;
     }
 
     /* JADX WARN: Code duplicated, block: B:107:0x008a A[EDGE_INSN: B:107:0x008a->B:42:0x008a BREAK  A[LOOP:0: B:13:0x0034->B:41:0x0083], SYNTHETIC] */
@@ -60,7 +60,7 @@ public class d {
         int i22;
         char cCharAt3;
         char cCharAt4;
-        this.f33777a = i10;
+        this.f33983a = i10;
         if (i10 >= i11) {
             return Float.NaN;
         }
@@ -71,7 +71,7 @@ public class d {
             } else {
                 z10 = true;
             }
-            int i23 = this.f33777a;
+            int i23 = this.f33983a;
             long j10 = 0;
             i12 = 0;
             i13 = 0;
@@ -79,7 +79,7 @@ public class d {
             z11 = false;
             i15 = 0;
             while (true) {
-                i16 = this.f33777a;
+                i16 = this.f33983a;
                 if (i16 >= i11) {
                     break;
                 }
@@ -111,12 +111,12 @@ public class d {
                     if (cCharAt4 != '.' || z11) {
                         break;
                     }
-                    i15 = this.f33777a - i23;
+                    i15 = this.f33983a - i23;
                     z11 = true;
                 }
-                this.f33777a++;
+                this.f33983a++;
             }
-            if (!z11 && this.f33777a == i15 + 1) {
+            if (!z11 && this.f33983a == i15 + 1) {
                 return Float.NaN;
             }
             if (i12 == 0) {
@@ -128,10 +128,10 @@ public class d {
             if (z11) {
                 i13 = (i15 - i14) - i12;
             }
-            i17 = this.f33777a;
+            i17 = this.f33983a;
             if (i17 < i11 && ((cCharAt = str.charAt(i17)) == 'E' || cCharAt == 'e')) {
-                i19 = this.f33777a + 1;
-                this.f33777a = i19;
+                i19 = this.f33983a + 1;
+                this.f33983a = i19;
                 if (i19 == i11) {
                     return Float.NaN;
                 }
@@ -153,7 +153,7 @@ public class d {
                                 z13 = false;
                                 break;
                             default:
-                                this.f33777a--;
+                                this.f33983a--;
                                 z13 = true;
                                 z12 = false;
                                 break;
@@ -162,19 +162,19 @@ public class d {
                         z12 = true;
                     }
                     if (!z13) {
-                        i20 = this.f33777a;
+                        i20 = this.f33983a;
                         i21 = 0;
                         while (true) {
-                            i22 = this.f33777a;
+                            i22 = this.f33983a;
                             if (i22 >= i11 && (cCharAt3 = str.charAt(i22)) >= '0' && cCharAt3 <= '9') {
                                 if (i21 > 922337203685477580L) {
                                     return Float.NaN;
                                 }
                                 i21 = (i21 * 10) + (cCharAt3 - '0');
-                                this.f33777a++;
+                                this.f33983a++;
                             }
                         }
-                        if (this.f33777a == i20) {
+                        if (this.f33983a == i20) {
                             return Float.NaN;
                         }
                         if (z12) {
@@ -186,19 +186,19 @@ public class d {
                 } else {
                     z12 = false;
                 }
-                this.f33777a++;
+                this.f33983a++;
                 z13 = false;
                 if (!z13) {
-                    i20 = this.f33777a;
+                    i20 = this.f33983a;
                     i21 = 0;
                     while (true) {
-                        i22 = this.f33777a;
+                        i22 = this.f33983a;
                         if (i22 >= i11) {
                         }
                         i21 = (i21 * 10) + (cCharAt3 - '0');
-                        this.f33777a++;
+                        this.f33983a++;
                     }
-                    if (this.f33777a == i20) {
+                    if (this.f33983a == i20) {
                         return Float.NaN;
                     }
                     if (z12) {
@@ -221,15 +221,15 @@ public class d {
                         f11 = (float) (((double) f11) * 1.0E-20d);
                         i13 += 20;
                     }
-                    f10 = f33776c[-i13];
+                    f10 = f33982c[-i13];
                 }
                 f11 *= f10;
             }
             return z10 ? -f11 : f11;
         }
         z10 = false;
-        this.f33777a++;
-        int i25 = this.f33777a;
+        this.f33983a++;
+        int i25 = this.f33983a;
         long j11 = 0;
         i12 = 0;
         i13 = 0;
@@ -237,7 +237,7 @@ public class d {
         z11 = false;
         i15 = 0;
         while (true) {
-            i16 = this.f33777a;
+            i16 = this.f33983a;
             if (i16 >= i11) {
                 break;
                 break;
@@ -257,7 +257,7 @@ public class d {
             } else {
                 i13++;
             }
-            this.f33777a++;
+            this.f33983a++;
         }
         if (!z11) {
         }
@@ -270,10 +270,10 @@ public class d {
         if (z11) {
             i13 = (i15 - i14) - i12;
         }
-        i17 = this.f33777a;
+        i17 = this.f33983a;
         if (i17 < i11) {
-            i19 = this.f33777a + 1;
-            this.f33777a = i19;
+            i19 = this.f33983a + 1;
+            this.f33983a = i19;
             if (i19 == i11) {
                 return Float.NaN;
             }
@@ -295,7 +295,7 @@ public class d {
                             z13 = false;
                             break;
                         default:
-                            this.f33777a--;
+                            this.f33983a--;
                             z13 = true;
                             z12 = false;
                             break;
@@ -304,16 +304,16 @@ public class d {
                     z12 = true;
                 }
                 if (!z13) {
-                    i20 = this.f33777a;
+                    i20 = this.f33983a;
                     i21 = 0;
                     while (true) {
-                        i22 = this.f33777a;
+                        i22 = this.f33983a;
                         if (i22 >= i11) {
                         }
                         i21 = (i21 * 10) + (cCharAt3 - '0');
-                        this.f33777a++;
+                        this.f33983a++;
                     }
-                    if (this.f33777a == i20) {
+                    if (this.f33983a == i20) {
                         return Float.NaN;
                     }
                     if (z12) {
@@ -325,19 +325,19 @@ public class d {
             } else {
                 z12 = false;
             }
-            this.f33777a++;
+            this.f33983a++;
             z13 = false;
             if (!z13) {
-                i20 = this.f33777a;
+                i20 = this.f33983a;
                 i21 = 0;
                 while (true) {
-                    i22 = this.f33777a;
+                    i22 = this.f33983a;
                     if (i22 >= i11) {
                     }
                     i21 = (i21 * 10) + (cCharAt3 - '0');
-                    this.f33777a++;
+                    this.f33983a++;
                 }
-                if (this.f33777a == i20) {
+                if (this.f33983a == i20) {
                     return Float.NaN;
                 }
                 if (z12) {

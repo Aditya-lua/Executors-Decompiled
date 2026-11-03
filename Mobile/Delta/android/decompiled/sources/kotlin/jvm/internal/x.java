@@ -1,27 +1,27 @@
 package kotlin.jvm.internal;
 
 /* JADX INFO: loaded from: classes2.dex */
-public abstract class x extends d implements hu.l {
+public abstract class x extends d implements fu.l {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final boolean f22567a;
+    public final boolean f23022a;
 
     public x() {
-        this.f22567a = false;
+        this.f23022a = false;
     }
 
     @Override // kotlin.jvm.internal.d
-    public hu.b compute() {
-        return this.f22567a ? this : super.compute();
+    public fu.b compute() {
+        return this.f23022a ? this : super.compute();
     }
 
     @Override // kotlin.jvm.internal.d
     /* JADX INFO: renamed from: d, reason: merged with bridge method [inline-methods] */
-    public hu.l getReflected() {
-        if (this.f22567a) {
+    public fu.l getReflected() {
+        if (this.f23022a) {
             throw new UnsupportedOperationException("Kotlin reflection is not yet supported for synthetic Java properties. Please follow/upvote https://youtrack.jetbrains.com/issue/KT-55980");
         }
-        return (hu.l) super.getReflected();
+        return (fu.l) super.getReflected();
     }
 
     public boolean equals(Object obj) {
@@ -32,7 +32,7 @@ public abstract class x extends d implements hu.l {
             x xVar = (x) obj;
             return getOwner().equals(xVar.getOwner()) && getName().equals(xVar.getName()) && getSignature().equals(xVar.getSignature()) && Intrinsics.c(getBoundReceiver(), xVar.getBoundReceiver());
         }
-        if (obj instanceof hu.l) {
+        if (obj instanceof fu.l) {
             return obj.equals(compute());
         }
         return false;
@@ -43,7 +43,7 @@ public abstract class x extends d implements hu.l {
     }
 
     public String toString() {
-        hu.b bVarCompute = compute();
+        fu.b bVarCompute = compute();
         if (bVarCompute != this) {
             return bVarCompute.toString();
         }
@@ -52,6 +52,6 @@ public abstract class x extends d implements hu.l {
 
     public x(Object obj, Class cls, String str, String str2, int i10) {
         super(obj, cls, str, str2, (i10 & 1) == 1);
-        this.f22567a = (i10 & 2) == 2;
+        this.f23022a = (i10 & 2) == 2;
     }
 }

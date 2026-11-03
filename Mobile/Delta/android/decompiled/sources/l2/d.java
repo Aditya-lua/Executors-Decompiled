@@ -7,7 +7,7 @@ import android.os.Build;
 public final class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f22924a;
+    public final String f23318a;
     public final LocusId b;
 
     public static class a {
@@ -21,7 +21,7 @@ public final class d {
     }
 
     public d(String str) {
-        this.f22924a = (String) x2.g.k(str, "id cannot be empty");
+        this.f23318a = (String) x2.g.k(str, "id cannot be empty");
         if (Build.VERSION.SDK_INT >= 29) {
             this.b = a.a(str);
         } else {
@@ -35,11 +35,11 @@ public final class d {
     }
 
     public String a() {
-        return this.f22924a;
+        return this.f23318a;
     }
 
     public final String b() {
-        return this.f22924a.length() + "_chars";
+        return this.f23318a.length() + "_chars";
     }
 
     public LocusId c() {
@@ -54,15 +54,15 @@ public final class d {
             return false;
         }
         d dVar = (d) obj;
-        String str = this.f22924a;
+        String str = this.f23318a;
         if (str == null) {
-            return dVar.f22924a == null;
+            return dVar.f23318a == null;
         }
-        return str.equals(dVar.f22924a);
+        return str.equals(dVar.f23318a);
     }
 
     public int hashCode() {
-        String str = this.f22924a;
+        String str = this.f23318a;
         return 31 + (str == null ? 0 : str.hashCode());
     }
 

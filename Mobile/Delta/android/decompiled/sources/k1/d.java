@@ -98,7 +98,7 @@ public class d {
             arrayList.add(new PreviewBlackScreenQuirk());
         }
         if (h3Var.a(PrematureEndOfStreamVideoQuirk.class, PrematureEndOfStreamVideoQuirk.g())) {
-            arrayList.add(PrematureEndOfStreamVideoQuirk.f1402a);
+            arrayList.add(PrematureEndOfStreamVideoQuirk.f1247a);
         }
         if (h3Var.a(MediaCodecDefaultDataSpaceQuirk.class, MediaCodecDefaultDataSpaceQuirk.h())) {
             arrayList.add(new MediaCodecDefaultDataSpaceQuirk());
@@ -107,7 +107,7 @@ public class d {
             arrayList.add(new HdrRepeatingRequestFailureQuirk());
         }
         if (h3Var.a(PreviewFreezeAfterHighSpeedRecordingQuirk.class, PreviewFreezeAfterHighSpeedRecordingQuirk.g())) {
-            arrayList.add(PreviewFreezeAfterHighSpeedRecordingQuirk.f1405a);
+            arrayList.add(PreviewFreezeAfterHighSpeedRecordingQuirk.f1250a);
         }
         return arrayList;
     }

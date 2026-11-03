@@ -11,16 +11,16 @@ public final class AFj1oSDK implements AFj1tSDK {
     public final String registerClient() {
         Object objB;
         try {
-            jt.n.Companion companion = jt.n.INSTANCE;
+            gt.n.Companion companion = gt.n.INSTANCE;
             Field declaredField = u7.a.class.getDeclaredField("a");
             declaredField.setAccessible(true);
             Object obj = declaredField.get(null);
             Intrinsics.d(obj, "");
-            objB = jt.n.b((String) obj);
+            objB = gt.n.b((String) obj);
         } catch (Throwable th2) {
-            jt.n.Companion companion2 = jt.n.INSTANCE;
-            objB = jt.n.b(jt.o.a(th2));
+            gt.n.Companion companion2 = gt.n.INSTANCE;
+            objB = gt.n.b(gt.o.a(th2));
         }
-        return (String) (jt.n.g(objB) ? "" : objB);
+        return (String) (gt.n.g(objB) ? "" : objB);
     }
 }

@@ -7,16 +7,16 @@ import com.google.android.gms.measurement.internal.zzpl;
 /* JADX INFO: loaded from: classes.dex */
 public final class se implements Parcelable.Creator {
     public static void a(zzpl zzplVar, Parcel parcel, int i10) {
-        int i11 = zzplVar.f7438f;
+        int i11 = zzplVar.f7512f;
         int iA = o9.b.a(parcel);
         o9.b.n(parcel, 1, i11);
-        o9.b.v(parcel, 2, zzplVar.f7439g, false);
-        o9.b.r(parcel, 3, zzplVar.f7440h);
-        o9.b.s(parcel, 4, zzplVar.f7441i, false);
+        o9.b.v(parcel, 2, zzplVar.f7513g, false);
+        o9.b.r(parcel, 3, zzplVar.f7514h);
+        o9.b.s(parcel, 4, zzplVar.f7515i, false);
         o9.b.l(parcel, 5, null, false);
-        o9.b.v(parcel, 6, zzplVar.f7442j, false);
-        o9.b.v(parcel, 7, zzplVar.f7443k, false);
-        o9.b.j(parcel, 8, zzplVar.f7444l, false);
+        o9.b.v(parcel, 6, zzplVar.f7516j, false);
+        o9.b.v(parcel, 7, zzplVar.f7517k, false);
+        o9.b.j(parcel, 8, zzplVar.f7518l, false);
         o9.b.b(parcel, iA);
     }
 

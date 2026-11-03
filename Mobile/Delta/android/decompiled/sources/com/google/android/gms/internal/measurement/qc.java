@@ -14,11 +14,11 @@ import java.util.TreeMap;
 public final class qc {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final char[] f6751a;
+    public static final char[] f6825a;
 
     static {
         char[] cArr = new char[80];
-        f6751a = cArr;
+        f6825a = cArr;
         Arrays.fill(cArr, ' ');
     }
 
@@ -63,7 +63,7 @@ public final class qc {
         if (obj instanceof String) {
             sb2.append(": \"");
             ha haVar = ha.b;
-            sb2.append(jd.a(new ga(((String) obj).getBytes(qb.f6750a))));
+            sb2.append(jd.a(new ga(((String) obj).getBytes(qb.f6824a))));
             sb2.append('\"');
             return;
         }
@@ -194,7 +194,7 @@ public final class qc {
             if (i10 <= 80) {
                 i11 = i10;
             }
-            sb2.append(f6751a, 0, i11);
+            sb2.append(f6825a, 0, i11);
             i10 -= i11;
         }
     }

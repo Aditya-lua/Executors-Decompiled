@@ -1,11 +1,51 @@
 package ym;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
+import wm.Snapshot;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\bf\u0018\u0000*\u0006\b\u0000\u0010\u0001 \u0000*\u0006\b\u0001\u0010\u0002 \u0001*\u0006\b\u0002\u0010\u0003 \u00012\u00020\u0004J%\u0010\u0006\u001a\u0018\u0012\u0004\u0012\u00028\u0000\u0012\u0002\b\u0003\u0012\u0004\u0012\u00028\u0001\u0012\u0004\u0012\u00028\u00020\u0005H&¢\u0006\u0004\b\u0006\u0010\u0007¨\u0006\b"}, d2 = {"Lym/q;", "PropsT", "OutputT", "RenderingT", "", "Lym/k;", "b", "()Lym/k;", "wf1-workflow-core"}, k = 1, mv = {1, 6, 0}, xi = 48)
-public interface q<PropsT, OutputT, RenderingT> {
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u001a\u0011\u0010\u0002\u001a\u00020\u0001*\u00020\u0000¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"Landroid/os/Parcelable;", "Lwm/i;", "a", "(Landroid/os/Parcelable;)Lwm/i;", "wf1-core-android"}, k = 2, mv = {1, 6, 0}, xi = 48)
+public final class q {
+
+    @Metadata(d1 = {"\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Lvu/f;", "bufferedSink", "", "a", "(Lvu/f;)V"}, k = 3, mv = {1, 6, 0})
+    public static final class a extends kotlin.jvm.internal.m implements Function1<vu.f, Unit> {
+
+        /* JADX INFO: renamed from: i, reason: collision with root package name */
+        public final /* synthetic */ Parcelable f36879i;
+
+        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+        public a(Parcelable parcelable) {
+            super(1);
+            this.f36879i = parcelable;
+        }
+
+        public final void a(@NotNull vu.f bufferedSink) {
+            Intrinsics.checkNotNullParameter(bufferedSink, "bufferedSink");
+            Parcel parcelObtain = Parcel.obtain();
+            Intrinsics.checkNotNullExpressionValue(parcelObtain, "obtain()");
+            parcelObtain.writeParcelable(this.f36879i, 0);
+            byte[] byteArray = parcelObtain.marshall();
+            Intrinsics.checkNotNullExpressionValue(byteArray, "byteArray");
+            bufferedSink.write(byteArray);
+            parcelObtain.recycle();
+        }
+
+        @Override // kotlin.jvm.functions.Function1
+        public /* bridge */ /* synthetic */ Unit invoke(vu.f fVar) {
+            a(fVar);
+            return Unit.f22938a;
+        }
+    }
+
     @NotNull
-    k<PropsT, ?, OutputT, RenderingT> b();
+    public static final Snapshot a(@NotNull Parcelable parcelable) {
+        Intrinsics.checkNotNullParameter(parcelable, "<this>");
+        return Snapshot.INSTANCE.c(new a(parcelable));
+    }
 }

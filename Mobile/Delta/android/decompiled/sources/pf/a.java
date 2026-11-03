@@ -1,5 +1,9 @@
 package pf;
 
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Target;
+
 /* JADX INFO: loaded from: classes2.dex */
-public interface a {
+@Target({ElementType.PARAMETER, ElementType.METHOD, ElementType.FIELD})
+public @interface a {
 }

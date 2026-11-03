@@ -1,9 +1,5 @@
 package com.squareup.workflow1.ui.modal;
 
-import an.ViewEnvironment;
-import an.g;
-import an.g0;
-import an.h0;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
@@ -16,15 +12,14 @@ import android.view.Window;
 import android.widget.FrameLayout;
 import androidx.p000lifecycle.l;
 import androidx.p000lifecycle.s;
-import bn.f;
 import com.appsflyer.sdk_base.referrer.Payload;
 import com.squareup.workflow1.ui.WorkflowViewStub;
+import gt.h;
+import gt.i;
+import gt.k;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import jt.h;
-import jt.i;
-import jt.k;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.collections.CollectionsKt;
@@ -37,9 +32,14 @@ import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import ym.ViewEnvironment;
+import ym.g;
+import ym.g0;
+import ym.h0;
+import zm.f;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000f\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\b'\u0018\u0000*\b\b\u0000\u0010\u0002*\u00020\u00012\u00020\u0003:\u0003&45B1\b\u0007\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\n\b\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u0006\u0012\b\b\u0002\u0010\t\u001a\u00020\b\u0012\b\b\u0002\u0010\n\u001a\u00020\b¢\u0006\u0004\b\u000b\u0010\fJ)\u0010\u0012\u001a\u00020\u00112\u0010\u0010\u000e\u001a\f\u0012\u0002\b\u0003\u0012\u0004\u0012\u00028\u00000\r2\u0006\u0010\u0010\u001a\u00020\u000fH\u0004¢\u0006\u0004\b\u0012\u0010\u0013J%\u0010\u0017\u001a\b\u0012\u0004\u0012\u00028\u00000\u00162\u0006\u0010\u0014\u001a\u00028\u00002\u0006\u0010\u0015\u001a\u00020\u000fH$¢\u0006\u0004\b\u0017\u0010\u0018J\u001d\u0010\u001a\u001a\u00020\u00112\f\u0010\u0019\u001a\b\u0012\u0004\u0012\u00028\u00000\u0016H$¢\u0006\u0004\b\u001a\u0010\u001bJ\u000f\u0010\u001d\u001a\u00020\u001cH\u0014¢\u0006\u0004\b\u001d\u0010\u001eJ\u0017\u0010 \u001a\u00020\u00112\u0006\u0010\u001f\u001a\u00020\u001cH\u0014¢\u0006\u0004\b \u0010!J\u000f\u0010\"\u001a\u00020\u0011H\u0014¢\u0006\u0004\b\"\u0010#J\u000f\u0010$\u001a\u00020\u0011H\u0014¢\u0006\u0004\b$\u0010#R\u0014\u0010(\u001a\u00020%8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b&\u0010'R\"\u0010+\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00028\u00000\u00160)8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0017\u0010*R\u001b\u00100\u001a\u00020,8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\u0012\u0010-\u001a\u0004\b.\u0010/R\u0014\u00103\u001a\u0002018\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001a\u00102¨\u00066"}, d2 = {"Lcom/squareup/workflow1/ui/modal/ModalContainer;", "", "ModalRenderingT", "Landroid/widget/FrameLayout;", "Landroid/content/Context;", "context", "Landroid/util/AttributeSet;", "attributeSet", "", "defStyle", "defStyleRes", "<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;II)V", "Len/f;", "newScreen", "Lan/y;", "viewEnvironment", "", "c", "(Len/f;Lan/y;)V", "initialModalRendering", "initialViewEnvironment", "Lcom/squareup/workflow1/ui/modal/ModalContainer$a;", "b", "(Ljava/lang/Object;Lan/y;)Lcom/squareup/workflow1/ui/modal/ModalContainer$a;", "dialogRef", "d", "(Lcom/squareup/workflow1/ui/modal/ModalContainer$a;)V", "Landroid/os/Parcelable;", "onSaveInstanceState", "()Landroid/os/Parcelable;", "state", "onRestoreInstanceState", "(Landroid/os/Parcelable;)V", "onAttachedToWindow", "()V", "onDetachedFromWindow", "Lcom/squareup/workflow1/ui/WorkflowViewStub;", "a", "Lcom/squareup/workflow1/ui/WorkflowViewStub;", "baseViewStub", "", "Ljava/util/List;", "dialogs", "Lbn/d;", "Ljt/h;", "getParentLifecycleOwner", "()Lbn/d;", "parentLifecycleOwner", "Lbn/f;", "Lbn/f;", "stateRegistryAggregator", "KeyAndBundle", "SavedState", "wf1-container-android"}, k = 1, mv = {1, 6, 0}, xi = 48)
+@Metadata(d1 = {"\u0000f\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010 \n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\b'\u0018\u0000*\b\b\u0000\u0010\u0002*\u00020\u00012\u00020\u0003:\u0003&45B1\b\u0007\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\n\b\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u0006\u0012\b\b\u0002\u0010\t\u001a\u00020\b\u0012\b\b\u0002\u0010\n\u001a\u00020\b¢\u0006\u0004\b\u000b\u0010\fJ)\u0010\u0012\u001a\u00020\u00112\u0010\u0010\u000e\u001a\f\u0012\u0002\b\u0003\u0012\u0004\u0012\u00028\u00000\r2\u0006\u0010\u0010\u001a\u00020\u000fH\u0004¢\u0006\u0004\b\u0012\u0010\u0013J%\u0010\u0017\u001a\b\u0012\u0004\u0012\u00028\u00000\u00162\u0006\u0010\u0014\u001a\u00028\u00002\u0006\u0010\u0015\u001a\u00020\u000fH$¢\u0006\u0004\b\u0017\u0010\u0018J\u001d\u0010\u001a\u001a\u00020\u00112\f\u0010\u0019\u001a\b\u0012\u0004\u0012\u00028\u00000\u0016H$¢\u0006\u0004\b\u001a\u0010\u001bJ\u000f\u0010\u001d\u001a\u00020\u001cH\u0014¢\u0006\u0004\b\u001d\u0010\u001eJ\u0017\u0010 \u001a\u00020\u00112\u0006\u0010\u001f\u001a\u00020\u001cH\u0014¢\u0006\u0004\b \u0010!J\u000f\u0010\"\u001a\u00020\u0011H\u0014¢\u0006\u0004\b\"\u0010#J\u000f\u0010$\u001a\u00020\u0011H\u0014¢\u0006\u0004\b$\u0010#R\u0014\u0010(\u001a\u00020%8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b&\u0010'R\"\u0010+\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00028\u00000\u00160)8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0017\u0010*R\u001b\u00100\u001a\u00020,8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\u0012\u0010-\u001a\u0004\b.\u0010/R\u0014\u00103\u001a\u0002018\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001a\u00102¨\u00066"}, d2 = {"Lcom/squareup/workflow1/ui/modal/ModalContainer;", "", "ModalRenderingT", "Landroid/widget/FrameLayout;", "Landroid/content/Context;", "context", "Landroid/util/AttributeSet;", "attributeSet", "", "defStyle", "defStyleRes", "<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;II)V", "Lcn/f;", "newScreen", "Lym/y;", "viewEnvironment", "", "c", "(Lcn/f;Lym/y;)V", "initialModalRendering", "initialViewEnvironment", "Lcom/squareup/workflow1/ui/modal/ModalContainer$a;", "b", "(Ljava/lang/Object;Lym/y;)Lcom/squareup/workflow1/ui/modal/ModalContainer$a;", "dialogRef", "d", "(Lcom/squareup/workflow1/ui/modal/ModalContainer$a;)V", "Landroid/os/Parcelable;", "onSaveInstanceState", "()Landroid/os/Parcelable;", "state", "onRestoreInstanceState", "(Landroid/os/Parcelable;)V", "onAttachedToWindow", "()V", "onDetachedFromWindow", "Lcom/squareup/workflow1/ui/WorkflowViewStub;", "a", "Lcom/squareup/workflow1/ui/WorkflowViewStub;", "baseViewStub", "", "Ljava/util/List;", "dialogs", "Lzm/d;", "Lgt/h;", "getParentLifecycleOwner", "()Lzm/d;", "parentLifecycleOwner", "Lzm/f;", "Lzm/f;", "stateRegistryAggregator", "KeyAndBundle", "SavedState", "wf1-container-android"}, k = 1, mv = {1, 6, 0}, xi = 48)
 public abstract class ModalContainer<ModalRenderingT> extends FrameLayout {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -157,27 +157,27 @@ public abstract class ModalContainer<ModalRenderingT> extends FrameLayout {
         }
     }
 
-    @Metadata(d1 = {"\u0000\u000e\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u0002\"\b\b\u0000\u0010\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"", "ModalRenderingT", "Lbn/d;", "b", "()Lbn/d;"}, k = 3, mv = {1, 6, 0})
-    public static final class b extends m implements Function0<bn.d> {
+    @Metadata(d1 = {"\u0000\u000e\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u0002\"\b\b\u0000\u0010\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"", "ModalRenderingT", "Lzm/d;", "b", "()Lzm/d;"}, k = 3, mv = {1, 6, 0})
+    public static final class b extends m implements Function0<zm.d> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ ModalContainer<ModalRenderingT> f9892i;
+        public final /* synthetic */ ModalContainer<ModalRenderingT> f9973i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public b(ModalContainer<ModalRenderingT> modalContainer) {
             super(0);
-            this.f9892i = modalContainer;
+            this.f9973i = modalContainer;
         }
 
         @Override // kotlin.jvm.functions.Function0
         @NotNull
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-        public final bn.d invoke() {
-            bn.d dVarC = bn.d.INSTANCE.c(this.f9892i);
+        public final zm.d invoke() {
+            zm.d dVarC = zm.d.INSTANCE.c(this.f9973i);
             if (dVarC != null) {
                 return dVarC;
             }
-            throw new IllegalStateException(Intrinsics.l("Expected to find either a ViewTreeLifecycleOwner in the view tree, or for the context to be a LifecycleOwner, in ", this.f9892i).toString());
+            throw new IllegalStateException(Intrinsics.l("Expected to find either a ViewTreeLifecycleOwner in the view tree, or for the context to be a LifecycleOwner, in ", this.f9973i).toString());
         }
     }
 
@@ -185,12 +185,12 @@ public abstract class ModalContainer<ModalRenderingT> extends FrameLayout {
     public static final class c extends m implements Function1<View, l> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ ModalContainer<ModalRenderingT> f9893i;
+        public final /* synthetic */ ModalContainer<ModalRenderingT> f9974i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public c(ModalContainer<ModalRenderingT> modalContainer) {
             super(1);
-            this.f9893i = modalContainer;
+            this.f9974i = modalContainer;
         }
 
         @Override // kotlin.jvm.functions.Function1
@@ -198,7 +198,7 @@ public abstract class ModalContainer<ModalRenderingT> extends FrameLayout {
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public final l invoke(@NotNull View it) {
             Intrinsics.checkNotNullParameter(it, "it");
-            l lVarA = this.f9893i.getParentLifecycleOwner().a();
+            l lVarA = this.f9974i.getParentLifecycleOwner().a();
             Intrinsics.checkNotNullExpressionValue(lVarA, "parentLifecycleOwner.lifecycle");
             return lVarA;
         }
@@ -216,31 +216,31 @@ public abstract class ModalContainer<ModalRenderingT> extends FrameLayout {
         public l lifecycle;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ a<ModalRenderingT> f9895c;
+        public final /* synthetic */ a<ModalRenderingT> f9976c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final /* synthetic */ ModalContainer<ModalRenderingT> f9896d;
+        public final /* synthetic */ ModalContainer<ModalRenderingT> f9977d;
 
         @Metadata(d1 = {"\u0000\u0017\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J\u0017\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0016¢\u0006\u0004\b\u0005\u0010\u0006¨\u0006\u0007"}, d2 = {"com/squareup/workflow1/ui/modal/ModalContainer$d$a", "Landroidx/lifecycle/f;", "Landroidx/lifecycle/s;", "owner", "", "onDestroy", "(Landroidx/lifecycle/s;)V", "wf1-container-android"}, k = 1, mv = {1, 6, 0}, xi = 48)
         public static final class a implements androidx.p000lifecycle.f {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ a<ModalRenderingT> f9897a;
+            public final /* synthetic */ a<ModalRenderingT> f9978a;
 
             public a(a<ModalRenderingT> aVar) {
-                this.f9897a = aVar;
+                this.f9978a = aVar;
             }
 
             @Override // androidx.p000lifecycle.f
             public void onDestroy(@NotNull s owner) {
                 Intrinsics.checkNotNullParameter(owner, "owner");
-                this.f9897a.c();
+                this.f9978a.c();
             }
         }
 
         public d(a<ModalRenderingT> aVar, ModalContainer<ModalRenderingT> modalContainer) {
-            this.f9895c = aVar;
-            this.f9896d = modalContainer;
+            this.f9976c = aVar;
+            this.f9977d = modalContainer;
             this.dismissOnDestroy = new a(aVar);
         }
 
@@ -253,7 +253,7 @@ public abstract class ModalContainer<ModalRenderingT> extends FrameLayout {
         @Override // android.view.View.OnAttachStateChangeListener
         public void onViewAttachedToWindow(@NotNull View v5) {
             Intrinsics.checkNotNullParameter(v5, "v");
-            l lVarA = this.f9896d.getParentLifecycleOwner().a();
+            l lVarA = this.f9977d.getParentLifecycleOwner().a();
             lVarA.a(getDismissOnDestroy());
             this.lifecycle = lVarA;
         }
@@ -282,14 +282,14 @@ public abstract class ModalContainer<ModalRenderingT> extends FrameLayout {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public final bn.d getParentLifecycleOwner() {
-        return (bn.d) this.parentLifecycleOwner.getValue();
+    public final zm.d getParentLifecycleOwner() {
+        return (zm.d) this.parentLifecycleOwner.getValue();
     }
 
     @NotNull
     public abstract a<ModalRenderingT> b(@NotNull ModalRenderingT initialModalRendering, @NotNull ViewEnvironment initialViewEnvironment);
 
-    public final void c(@NotNull en.f<?, ? extends ModalRenderingT> newScreen, @NotNull ViewEnvironment viewEnvironment) {
+    public final void c(@NotNull cn.f<?, ? extends ModalRenderingT> newScreen, @NotNull ViewEnvironment viewEnvironment) {
         ViewEnvironment viewEnvironment2;
         a<ModalRenderingT> aVarB;
         Intrinsics.checkNotNullParameter(newScreen, "newScreen");
@@ -300,13 +300,13 @@ public abstract class ModalContainer<ModalRenderingT> extends FrameLayout {
         int i11 = 0;
         for (ModalRenderingT modalrenderingt : newScreen.a()) {
             int i12 = i11 + 1;
-            if (i11 >= this.dialogs.size() || !an.h.a(this.dialogs.get(i11).f(), modalrenderingt)) {
+            if (i11 >= this.dialogs.size() || !ym.h.a(this.dialogs.get(i11).f(), modalrenderingt)) {
                 viewEnvironment2 = viewEnvironment;
                 aVarB = b(modalrenderingt, viewEnvironment2);
                 aVarB.k(g.INSTANCE.a(modalrenderingt, String.valueOf(i11)));
-                View viewB = en.g.b(aVarB.getDialog());
+                View viewB = cn.g.b(aVarB.getDialog());
                 if (viewB != null) {
-                    bn.d.INSTANCE.d(viewB, new c(this));
+                    zm.d.INSTANCE.d(viewB, new c(this));
                     this.stateRegistryAggregator.h(viewB, aVarB.g());
                     viewB.addOnAttachStateChangeListener(new d(aVarB, this));
                 }
@@ -341,7 +341,7 @@ public abstract class ModalContainer<ModalRenderingT> extends FrameLayout {
     @Override // android.view.ViewGroup, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        d5.i iVarC = bn.c.f4262a.c(this);
+        d5.i iVarC = zm.c.f38190a.c(this);
         g.Companion companion = g.INSTANCE;
         g0<?> g0VarD = h0.d(this);
         Object objC = g0VarD == null ? null : g0VarD.c();
@@ -372,11 +372,11 @@ public abstract class ModalContainer<ModalRenderingT> extends FrameLayout {
                 ArrayList arrayList = new ArrayList(Math.min(q.u(listA, 10), q.u(list, 10)));
                 while (it.hasNext() && it2.hasNext()) {
                     ((a) it2.next()).i((KeyAndBundle) it.next());
-                    arrayList.add(Unit.f22483a);
+                    arrayList.add(Unit.f22938a);
                 }
             }
             super.onRestoreInstanceState(((SavedState) state).getSuperState());
-            unit = Unit.f22483a;
+            unit = Unit.f22938a;
         }
         if (unit == null) {
             super.onRestoreInstanceState(super.onSaveInstanceState());
@@ -463,7 +463,7 @@ public abstract class ModalContainer<ModalRenderingT> extends FrameLayout {
         }
     }
 
-    @Metadata(d1 = {"\u0000B\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\r\n\u0002\u0010\u000e\n\u0002\b\u0007\b\u0005\u0018\u0000*\b\b\u0001\u0010\u0002*\u00020\u00012\u00020\u0001B+\u0012\u0006\u0010\u0003\u001a\u00028\u0001\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\n\b\u0002\u0010\b\u001a\u0004\u0018\u00010\u0001¢\u0006\u0004\b\t\u0010\nJ=\u0010\u000b\u001a\b\u0012\u0004\u0012\u00028\u00010\u00002\b\b\u0002\u0010\u0003\u001a\u00028\u00012\b\b\u0002\u0010\u0005\u001a\u00020\u00042\b\b\u0002\u0010\u0007\u001a\u00020\u00062\n\b\u0002\u0010\b\u001a\u0004\u0018\u00010\u0001¢\u0006\u0004\b\u000b\u0010\fJ\u000f\u0010\u000e\u001a\u00020\rH\u0000¢\u0006\u0004\b\u000e\u0010\u000fJ\u0017\u0010\u0012\u001a\u00020\u00112\u0006\u0010\u0010\u001a\u00020\rH\u0000¢\u0006\u0004\b\u0012\u0010\u0013J\u000f\u0010\u0014\u001a\u00020\u0011H\u0000¢\u0006\u0004\b\u0014\u0010\u0015J\u001a\u0010\u0018\u001a\u00020\u00172\b\u0010\u0016\u001a\u0004\u0018\u00010\u0001H\u0096\u0002¢\u0006\u0004\b\u0018\u0010\u0019J\u000f\u0010\u001b\u001a\u00020\u001aH\u0016¢\u0006\u0004\b\u001b\u0010\u001cR\u0017\u0010\u0003\u001a\u00028\u00018\u0006¢\u0006\f\n\u0004\b\u000b\u0010\u001d\u001a\u0004\b\u001e\u0010\u001fR\u0017\u0010\u0005\u001a\u00020\u00048\u0006¢\u0006\f\n\u0004\b \u0010!\u001a\u0004\b\"\u0010#R\u0017\u0010\u0007\u001a\u00020\u00068\u0006¢\u0006\f\n\u0004\b\u0014\u0010$\u001a\u0004\b%\u0010&R\u0019\u0010\b\u001a\u0004\u0018\u00010\u00018\u0006¢\u0006\f\n\u0004\b%\u0010\u001d\u001a\u0004\b'\u0010\u001fR\"\u0010.\u001a\u00020(8\u0000@\u0000X\u0080.¢\u0006\u0012\n\u0004\b'\u0010)\u001a\u0004\b*\u0010+\"\u0004\b,\u0010-¨\u0006/"}, d2 = {"Lcom/squareup/workflow1/ui/modal/ModalContainer$a;", "", "ModalRenderingT", "modalRendering", "Lan/y;", "viewEnvironment", "Landroid/app/Dialog;", "dialog", "extra", "<init>", "(Ljava/lang/Object;Lan/y;Landroid/app/Dialog;Ljava/lang/Object;)V", "a", "(Ljava/lang/Object;Lan/y;Landroid/app/Dialog;Ljava/lang/Object;)Lcom/squareup/workflow1/ui/modal/ModalContainer$a;", "Lcom/squareup/workflow1/ui/modal/ModalContainer$KeyAndBundle;", "j", "()Lcom/squareup/workflow1/ui/modal/ModalContainer$KeyAndBundle;", "keyAndBundle", "", "i", "(Lcom/squareup/workflow1/ui/modal/ModalContainer$KeyAndBundle;)V", "c", "()V", "other", "", "equals", "(Ljava/lang/Object;)Z", "", "hashCode", "()I", "Ljava/lang/Object;", "f", "()Ljava/lang/Object;", "b", "Lan/y;", "h", "()Lan/y;", "Landroid/app/Dialog;", "d", "()Landroid/app/Dialog;", "e", "", "Ljava/lang/String;", "g", "()Ljava/lang/String;", "k", "(Ljava/lang/String;)V", "savedStateRegistryKey", "wf1-container-android"}, k = 1, mv = {1, 6, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000B\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\r\n\u0002\u0010\u000e\n\u0002\b\u0007\b\u0005\u0018\u0000*\b\b\u0001\u0010\u0002*\u00020\u00012\u00020\u0001B+\u0012\u0006\u0010\u0003\u001a\u00028\u0001\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\n\b\u0002\u0010\b\u001a\u0004\u0018\u00010\u0001¢\u0006\u0004\b\t\u0010\nJ=\u0010\u000b\u001a\b\u0012\u0004\u0012\u00028\u00010\u00002\b\b\u0002\u0010\u0003\u001a\u00028\u00012\b\b\u0002\u0010\u0005\u001a\u00020\u00042\b\b\u0002\u0010\u0007\u001a\u00020\u00062\n\b\u0002\u0010\b\u001a\u0004\u0018\u00010\u0001¢\u0006\u0004\b\u000b\u0010\fJ\u000f\u0010\u000e\u001a\u00020\rH\u0000¢\u0006\u0004\b\u000e\u0010\u000fJ\u0017\u0010\u0012\u001a\u00020\u00112\u0006\u0010\u0010\u001a\u00020\rH\u0000¢\u0006\u0004\b\u0012\u0010\u0013J\u000f\u0010\u0014\u001a\u00020\u0011H\u0000¢\u0006\u0004\b\u0014\u0010\u0015J\u001a\u0010\u0018\u001a\u00020\u00172\b\u0010\u0016\u001a\u0004\u0018\u00010\u0001H\u0096\u0002¢\u0006\u0004\b\u0018\u0010\u0019J\u000f\u0010\u001b\u001a\u00020\u001aH\u0016¢\u0006\u0004\b\u001b\u0010\u001cR\u0017\u0010\u0003\u001a\u00028\u00018\u0006¢\u0006\f\n\u0004\b\u000b\u0010\u001d\u001a\u0004\b\u001e\u0010\u001fR\u0017\u0010\u0005\u001a\u00020\u00048\u0006¢\u0006\f\n\u0004\b \u0010!\u001a\u0004\b\"\u0010#R\u0017\u0010\u0007\u001a\u00020\u00068\u0006¢\u0006\f\n\u0004\b\u0014\u0010$\u001a\u0004\b%\u0010&R\u0019\u0010\b\u001a\u0004\u0018\u00010\u00018\u0006¢\u0006\f\n\u0004\b%\u0010\u001d\u001a\u0004\b'\u0010\u001fR\"\u0010.\u001a\u00020(8\u0000@\u0000X\u0080.¢\u0006\u0012\n\u0004\b'\u0010)\u001a\u0004\b*\u0010+\"\u0004\b,\u0010-¨\u0006/"}, d2 = {"Lcom/squareup/workflow1/ui/modal/ModalContainer$a;", "", "ModalRenderingT", "modalRendering", "Lym/y;", "viewEnvironment", "Landroid/app/Dialog;", "dialog", "extra", "<init>", "(Ljava/lang/Object;Lym/y;Landroid/app/Dialog;Ljava/lang/Object;)V", "a", "(Ljava/lang/Object;Lym/y;Landroid/app/Dialog;Ljava/lang/Object;)Lcom/squareup/workflow1/ui/modal/ModalContainer$a;", "Lcom/squareup/workflow1/ui/modal/ModalContainer$KeyAndBundle;", "j", "()Lcom/squareup/workflow1/ui/modal/ModalContainer$KeyAndBundle;", "keyAndBundle", "", "i", "(Lcom/squareup/workflow1/ui/modal/ModalContainer$KeyAndBundle;)V", "c", "()V", "other", "", "equals", "(Ljava/lang/Object;)Z", "", "hashCode", "()I", "Ljava/lang/Object;", "f", "()Ljava/lang/Object;", "b", "Lym/y;", "h", "()Lym/y;", "Landroid/app/Dialog;", "d", "()Landroid/app/Dialog;", "e", "", "Ljava/lang/String;", "g", "()Ljava/lang/String;", "k", "(Ljava/lang/String;)V", "savedStateRegistryKey", "wf1-container-android"}, k = 1, mv = {1, 6, 0}, xi = 48)
     public static final class a<ModalRenderingT> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -523,10 +523,10 @@ public abstract class ModalContainer<ModalRenderingT> extends FrameLayout {
         }
 
         public final void c() {
-            bn.d dVarC;
-            View viewB = en.g.b(this.dialog);
-            if (viewB != null && (dVarC = bn.d.INSTANCE.c(viewB)) != null) {
-                dVarC.L();
+            zm.d dVarC;
+            View viewB = cn.g.b(this.dialog);
+            if (viewB != null && (dVarC = zm.d.INSTANCE.c(viewB)) != null) {
+                dVarC.K();
             }
             this.dialog.dismiss();
         }

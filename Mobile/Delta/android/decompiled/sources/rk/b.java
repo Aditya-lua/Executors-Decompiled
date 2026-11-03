@@ -1,32 +1,55 @@
 package rk;
 
+import android.util.Log;
+import java.util.HashMap;
+
 /* JADX INFO: loaded from: classes2.dex */
-public class b implements a {
-    @Override // rk.a
-    public String a() {
-        return "";
+public class b {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public String f30757a;
+    public HashMap<String, a> b = new HashMap<>();
+
+    public interface a {
+        void a(rk.a aVar);
     }
 
-    @Override // rk.a
-    public void b(String str, String str2) {
+    /* JADX INFO: renamed from: rk.b$b, reason: collision with other inner class name */
+    public class C0537b implements a {
+        @Override // rk.b.a
+        public void a(rk.a aVar) {
+            aVar.a(b.this.c(aVar.f().optString("functionName", "")), null);
+        }
+
+        public C0537b() {
+        }
     }
 
-    @Override // rk.a
-    public String c() {
-        return "";
+    public b(String str) {
+        this.f30757a = str;
+        d("supports", new C0537b());
     }
 
-    @Override // rk.a
-    public String d() {
-        return "";
+    public void a(rk.a aVar) {
+        String strD = aVar.d();
+        a aVar2 = this.b.get(strD);
+        if (aVar2 != null) {
+            aVar2.a(aVar);
+            return;
+        }
+        Log.e("RBHybridModule", "Cannot find function " + strD + " in module " + this.f30757a);
+        aVar.a(false, null);
     }
 
-    @Override // rk.a
-    public String e() {
-        return "";
+    public String b() {
+        return this.f30757a;
     }
 
-    @Override // rk.a
-    public void f(String str, String str2, String str3, long j10) {
+    public boolean c(String str) {
+        return this.b.containsKey(str);
+    }
+
+    public void d(String str, a aVar) {
+        this.b.put(str, aVar);
     }
 }

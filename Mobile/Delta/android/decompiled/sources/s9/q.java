@@ -7,14 +7,14 @@ import com.google.android.gms.common.moduleinstall.ModuleAvailabilityResponse;
 public final class q extends a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ sb.k f30563a;
+    public final /* synthetic */ sb.k f31110a;
 
     public q(u uVar, sb.k kVar) {
-        this.f30563a = kVar;
+        this.f31110a = kVar;
     }
 
     @Override // s9.a, s9.g
-    public final void x1(Status status, ModuleAvailabilityResponse moduleAvailabilityResponse) {
-        l9.v.c(status, moduleAvailabilityResponse, this.f30563a);
+    public final void v1(Status status, ModuleAvailabilityResponse moduleAvailabilityResponse) {
+        l9.v.c(status, moduleAvailabilityResponse, this.f31110a);
     }
 }

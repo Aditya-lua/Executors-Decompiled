@@ -75,7 +75,7 @@ public final class AFh1zSDK extends AFLoggerBase {
                 case 6:
                     return;
                 default:
-                    throw new jt.l();
+                    throw new gt.l();
             }
         }
     }

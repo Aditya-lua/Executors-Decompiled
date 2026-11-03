@@ -36,9 +36,9 @@ public final class a {
         Bundle credentialData = request.getCredentialData();
         Bundle bundleA = request.getDisplayInfo().a();
         if (request instanceof g) {
-            i10 = u0.f15069c;
+            i10 = u0.f15683c;
         } else {
-            i10 = request instanceof i ? u0.b : u0.f15068a;
+            i10 = request instanceof i ? u0.b : u0.f15682a;
         }
         bundleA.putParcelable("androidx.credentials.BUNDLE_KEY_CREDENTIAL_TYPE_ICON", Icon.createWithResource(context, i10));
         credentialData.putBundle("androidx.credentials.BUNDLE_KEY_REQUEST_DISPLAY_INFO", bundleA);

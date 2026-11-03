@@ -14,7 +14,7 @@ public class q {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @SuppressLint({"BanConcurrentHashMap"})
-    public ConcurrentHashMap<Long, n2.e.c> f1810a = new ConcurrentHashMap<>();
+    public ConcurrentHashMap<Long, n2.e.c> f1655a = new ConcurrentHashMap<>();
 
     public class a implements b<v2.g.b> {
         public a() {

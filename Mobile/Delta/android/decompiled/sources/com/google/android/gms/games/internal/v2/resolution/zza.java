@@ -12,15 +12,15 @@ import sb.k;
 final class zza extends ResultReceiver {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final k f6201a;
+    public final k f6274a;
 
     public zza() {
         super(new w0(Looper.getMainLooper()));
-        this.f6201a = new k();
+        this.f6274a = new k();
     }
 
     public final Task a() {
-        return this.f6201a.a();
+        return this.f6274a.a();
     }
 
     @Override // android.os.ResultReceiver
@@ -31,6 +31,6 @@ final class zza extends ResultReceiver {
         if (bundle == null || (intent = (Intent) bundle.getParcelable("resultData")) == null) {
             intent = new Intent();
         }
-        this.f6201a.e(z10 ? la.a.a(intent) : la.a.b(intent));
+        this.f6274a.e(z10 ? la.a.a(intent) : la.a.b(intent));
     }
 }

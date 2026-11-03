@@ -1,6 +1,6 @@
 package r0;
 
-import me.x;
+import ne.x;
 
 /* JADX INFO: loaded from: classes.dex */
 @FunctionalInterface

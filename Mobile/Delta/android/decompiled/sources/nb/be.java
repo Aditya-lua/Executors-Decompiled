@@ -8,21 +8,21 @@ import java.util.Objects;
 public final class be implements y5 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ String f25374a;
+    public final /* synthetic */ String f26195a;
     public final /* synthetic */ List b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final /* synthetic */ me f25375c;
+    public final /* synthetic */ me f26196c;
 
     public be(me meVar, String str, List list) {
-        this.f25374a = str;
+        this.f26195a = str;
         this.b = list;
         Objects.requireNonNull(meVar);
-        this.f25375c = meVar;
+        this.f26196c = meVar;
     }
 
     @Override // nb.y5
     public final void a(String str, int i10, Throwable th2, byte[] bArr, Map map) {
-        this.f25375c.A(true, i10, th2, bArr, this.f25374a, this.b);
+        this.f26196c.A(true, i10, th2, bArr, this.f26195a, this.b);
     }
 }

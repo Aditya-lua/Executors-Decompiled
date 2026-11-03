@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 public class x extends SeekBar {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final y f29143a;
+    public final y f29496a;
 
     public x(@NonNull Context context, AttributeSet attributeSet) {
         this(context, attributeSet, i.a.L);
@@ -19,26 +19,26 @@ public class x extends SeekBar {
     @Override // android.widget.AbsSeekBar, android.widget.ProgressBar, android.view.View
     public void drawableStateChanged() {
         super.drawableStateChanged();
-        this.f29143a.h();
+        this.f29496a.h();
     }
 
     @Override // android.widget.AbsSeekBar, android.widget.ProgressBar, android.view.View
     public void jumpDrawablesToCurrentState() {
         super.jumpDrawablesToCurrentState();
-        this.f29143a.i();
+        this.f29496a.i();
     }
 
     @Override // android.widget.AbsSeekBar, android.widget.ProgressBar, android.view.View
     public synchronized void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        this.f29143a.g(canvas);
+        this.f29496a.g(canvas);
     }
 
     public x(@NonNull Context context, AttributeSet attributeSet, int i10) {
         super(context, attributeSet, i10);
         v0.a(this, getContext());
         y yVar = new y(this);
-        this.f29143a = yVar;
+        this.f29496a = yVar;
         yVar.c(attributeSet, i10);
     }
 }

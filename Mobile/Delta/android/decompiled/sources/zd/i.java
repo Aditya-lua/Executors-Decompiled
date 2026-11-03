@@ -1,27 +1,31 @@
 package zd;
 
+import java.util.Set;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.zip.ZipFile;
+
 /* JADX INFO: loaded from: classes2.dex */
-public final class i implements ae.y0 {
+public final class i implements l {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ae.y0 f37484a;
-    public final ae.y0 b;
+    public final /* synthetic */ u f38078a;
+    public final /* synthetic */ Set b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final ae.y0 f37485c;
+    public final /* synthetic */ AtomicBoolean f38079c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final ae.y0 f37486d;
+    public final /* synthetic */ o f38080d;
 
-    public i(ae.y0 y0Var, ae.y0 y0Var2, ae.y0 y0Var3, ae.y0 y0Var4) {
-        this.f37484a = y0Var;
-        this.b = y0Var2;
-        this.f37485c = y0Var3;
-        this.f37486d = y0Var4;
+    public i(o oVar, u uVar, Set set, AtomicBoolean atomicBoolean) {
+        this.f38080d = oVar;
+        this.f38078a = uVar;
+        this.b = set;
+        this.f38079c = atomicBoolean;
     }
 
-    @Override // ae.y0, ae.u0
-    public final /* bridge */ /* synthetic */ Object zza() {
-        return new h((a0) this.f37484a.zza(), (a1) this.b.zza(), (v0) this.f37485c.zza(), (c0) this.f37486d.zza());
+    @Override // zd.l
+    public final void a(ZipFile zipFile, Set set) {
+        this.f38080d.f(this.f38078a, set, new h(this));
     }
 }

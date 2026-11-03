@@ -9,11 +9,11 @@ import java.nio.charset.Charset;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Map;
-import qf.c;
-import qf.d;
-import qf.e;
-import qf.f;
-import qf.g;
+import rf.c;
+import rf.d;
+import rf.e;
+import rf.f;
+import rf.g;
 
 /* JADX INFO: loaded from: classes.dex */
 final class zzcw implements f {
@@ -37,7 +37,7 @@ final class zzcw implements f {
         zzcqVar2.zza(2);
         zzc = bVarA2.b(zzcqVar2.zzb()).a();
         zzd = new e() { // from class: com.google.android.gms.internal.mlkit_vision_face.zzcv
-            @Override // qf.b
+            @Override // rf.b
             public final void encode(Object obj, f fVar) {
                 zzcw.zzg((Map.Entry) obj, fVar);
             }
@@ -315,21 +315,21 @@ final class zzcw implements f {
         return nested(d.d(str));
     }
 
-    @Override // qf.f
+    @Override // rf.f
     @NonNull
     public final /* synthetic */ f add(@NonNull d dVar, int i10) throws IOException {
         zzd(dVar, i10, true);
         return this;
     }
 
-    @Override // qf.f
+    @Override // rf.f
     @NonNull
     public final /* synthetic */ f add(@NonNull d dVar, long j10) throws IOException {
         zze(dVar, j10, true);
         return this;
     }
 
-    @Override // qf.f
+    @Override // rf.f
     @NonNull
     public final f add(@NonNull d dVar, Object obj) throws IOException {
         zzc(dVar, obj, true);

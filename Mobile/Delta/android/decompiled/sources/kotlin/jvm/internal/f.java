@@ -16,8 +16,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u000b\u0018\u0000 \n2\b\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u0003:\u0001\u0014B\u0013\u0012\n\u0010\u0005\u001a\u0006\u0012\u0002\b\u00030\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0019\u0010\n\u001a\u00020\t2\b\u0010\b\u001a\u0004\u0018\u00010\u0002H\u0017¢\u0006\u0004\b\n\u0010\u000bJ\u001a\u0010\r\u001a\u00020\t2\b\u0010\f\u001a\u0004\u0018\u00010\u0002H\u0096\u0002¢\u0006\u0004\b\r\u0010\u000bJ\u000f\u0010\u000f\u001a\u00020\u000eH\u0016¢\u0006\u0004\b\u000f\u0010\u0010J\u000f\u0010\u0012\u001a\u00020\u0011H\u0016¢\u0006\u0004\b\u0012\u0010\u0013R\u001e\u0010\u0005\u001a\u0006\u0012\u0002\b\u00030\u00048\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u0014\u0010\u0015\u001a\u0004\b\u0016\u0010\u0017R\u0016\u0010\u0019\u001a\u0004\u0018\u00010\u00118VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\u0018\u0010\u0013R\u0016\u0010\u001b\u001a\u0004\u0018\u00010\u00118VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\u001a\u0010\u0013¨\u0006\u001c"}, d2 = {"Lkotlin/jvm/internal/f;", "Lhu/c;", "", "Lkotlin/jvm/internal/e;", "Ljava/lang/Class;", "jClass", "<init>", "(Ljava/lang/Class;)V", "value", "", "b", "(Ljava/lang/Object;)Z", "other", "equals", "", "hashCode", "()I", "", "toString", "()Ljava/lang/String;", "a", "Ljava/lang/Class;", "d", "()Ljava/lang/Class;", "g", "simpleName", "f", "qualifiedName", "kotlin-stdlib"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class f implements hu.c<Object>, e {
+@Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u000b\u0018\u0000 \n2\b\u0012\u0004\u0012\u00020\u00020\u00012\u00020\u0003:\u0001\u0014B\u0013\u0012\n\u0010\u0005\u001a\u0006\u0012\u0002\b\u00030\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0019\u0010\n\u001a\u00020\t2\b\u0010\b\u001a\u0004\u0018\u00010\u0002H\u0017¢\u0006\u0004\b\n\u0010\u000bJ\u001a\u0010\r\u001a\u00020\t2\b\u0010\f\u001a\u0004\u0018\u00010\u0002H\u0096\u0002¢\u0006\u0004\b\r\u0010\u000bJ\u000f\u0010\u000f\u001a\u00020\u000eH\u0016¢\u0006\u0004\b\u000f\u0010\u0010J\u000f\u0010\u0012\u001a\u00020\u0011H\u0016¢\u0006\u0004\b\u0012\u0010\u0013R\u001e\u0010\u0005\u001a\u0006\u0012\u0002\b\u00030\u00048\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u0014\u0010\u0015\u001a\u0004\b\u0016\u0010\u0017R\u0016\u0010\u0019\u001a\u0004\u0018\u00010\u00118VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\u0018\u0010\u0013R\u0016\u0010\u001b\u001a\u0004\u0018\u00010\u00118VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\u001a\u0010\u0013¨\u0006\u001c"}, d2 = {"Lkotlin/jvm/internal/f;", "Lfu/c;", "", "Lkotlin/jvm/internal/e;", "Ljava/lang/Class;", "jClass", "<init>", "(Ljava/lang/Class;)V", "value", "", "b", "(Ljava/lang/Object;)Z", "other", "equals", "", "hashCode", "()I", "", "toString", "()Ljava/lang/String;", "a", "Ljava/lang/Class;", "d", "()Ljava/lang/Class;", "h", "simpleName", "f", "qualifiedName", "kotlin-stdlib"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class f implements fu.c<Object>, e {
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull
@@ -25,14 +25,14 @@ public final class f implements hu.c<Object>, e {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static final Map<Class<? extends jt.b<?>>, Integer> f22555c;
+    public static final Map<Class<? extends gt.b<?>>, Integer> f23010c;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     @NotNull
     public final Class<?> jClass;
 
     /* JADX INFO: renamed from: kotlin.jvm.internal.f$a, reason: from kotlin metadata */
-    @Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0006\n\u0002\u0010$\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\b\u0003\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u001b\u0010\u0007\u001a\u0004\u0018\u00010\u00062\n\u0010\u0005\u001a\u0006\u0012\u0002\b\u00030\u0004¢\u0006\u0004\b\u0007\u0010\bJ\u001b\u0010\t\u001a\u0004\u0018\u00010\u00062\n\u0010\u0005\u001a\u0006\u0012\u0002\b\u00030\u0004¢\u0006\u0004\b\t\u0010\bJ#\u0010\f\u001a\u00020\u000b2\b\u0010\n\u001a\u0004\u0018\u00010\u00012\n\u0010\u0005\u001a\u0006\u0012\u0002\b\u00030\u0004¢\u0006\u0004\b\f\u0010\rJ\u0019\u0010\u000f\u001a\u0004\u0018\u00010\u00062\u0006\u0010\u000e\u001a\u00020\u0006H\u0002¢\u0006\u0004\b\u000f\u0010\u0010J\u0019\u0010\u0011\u001a\u0004\u0018\u00010\u00062\u0006\u0010\u000e\u001a\u00020\u0006H\u0002¢\u0006\u0004\b\u0011\u0010\u0010R,\u0010\u0015\u001a\u001a\u0012\u0010\u0012\u000e\u0012\n\b\u0001\u0012\u0006\u0012\u0002\b\u00030\u00130\u0004\u0012\u0004\u0012\u00020\u00140\u00128\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010\u0016¨\u0006\u0017"}, d2 = {"Lkotlin/jvm/internal/f$a;", "", "<init>", "()V", "Ljava/lang/Class;", "jClass", "", "c", "(Ljava/lang/Class;)Ljava/lang/String;", "b", "value", "", "d", "(Ljava/lang/Object;Ljava/lang/Class;)Z", Payload.TYPE, "a", "(Ljava/lang/String;)Ljava/lang/String;", "e", "", "Ljt/b;", "", "FUNCTION_CLASSES", "Ljava/util/Map;", "kotlin-stdlib"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0006\n\u0002\u0010$\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\b\u0003\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u001b\u0010\u0007\u001a\u0004\u0018\u00010\u00062\n\u0010\u0005\u001a\u0006\u0012\u0002\b\u00030\u0004¢\u0006\u0004\b\u0007\u0010\bJ\u001b\u0010\t\u001a\u0004\u0018\u00010\u00062\n\u0010\u0005\u001a\u0006\u0012\u0002\b\u00030\u0004¢\u0006\u0004\b\t\u0010\bJ#\u0010\f\u001a\u00020\u000b2\b\u0010\n\u001a\u0004\u0018\u00010\u00012\n\u0010\u0005\u001a\u0006\u0012\u0002\b\u00030\u0004¢\u0006\u0004\b\f\u0010\rJ\u0019\u0010\u000f\u001a\u0004\u0018\u00010\u00062\u0006\u0010\u000e\u001a\u00020\u0006H\u0002¢\u0006\u0004\b\u000f\u0010\u0010J\u0019\u0010\u0011\u001a\u0004\u0018\u00010\u00062\u0006\u0010\u000e\u001a\u00020\u0006H\u0002¢\u0006\u0004\b\u0011\u0010\u0010R,\u0010\u0015\u001a\u001a\u0012\u0010\u0012\u000e\u0012\n\b\u0001\u0012\u0006\u0012\u0002\b\u00030\u00130\u0004\u0012\u0004\u0012\u00020\u00140\u00128\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010\u0016¨\u0006\u0017"}, d2 = {"Lkotlin/jvm/internal/f$a;", "", "<init>", "()V", "Ljava/lang/Class;", "jClass", "", "c", "(Ljava/lang/Class;)Ljava/lang/String;", "b", "value", "", "d", "(Ljava/lang/Object;Ljava/lang/Class;)Z", Payload.TYPE, "a", "(Ljava/lang/String;)Ljava/lang/String;", "e", "", "Lgt/b;", "", "FUNCTION_CLASSES", "Ljava/util/Map;", "kotlin-stdlib"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class Companion {
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
             this();
@@ -369,14 +369,14 @@ public final class f implements hu.c<Object>, e {
 
         public final boolean d(@Nullable Object value, @NotNull Class<?> jClass) {
             Intrinsics.checkNotNullParameter(jClass, "jClass");
-            Map map = f.f22555c;
+            Map map = f.f23010c;
             Intrinsics.d(map, "null cannot be cast to non-null type kotlin.collections.Map<K of kotlin.collections.MapsKt__MapsKt.get, V of kotlin.collections.MapsKt__MapsKt.get>");
             Integer num = (Integer) map.get(jClass);
             if (num != null) {
                 return h0.k(value, num.intValue());
             }
             if (jClass.isPrimitive()) {
-                jClass = yt.a.b(yt.a.c(jClass));
+                jClass = wt.a.b(wt.a.c(jClass));
             }
             return jClass.isInstance(value);
         }
@@ -647,7 +647,7 @@ public final class f implements hu.c<Object>, e {
     }
 
     static {
-        List listN = kotlin.collections.p.n(Function0.class, Function1.class, Function2.class, zt.n.class, zt.o.class, zt.p.class, zt.q.class, zt.r.class, zt.s.class, zt.t.class, zt.a.class, zt.b.class, zt.c.class, zt.d.class, zt.e.class, zt.f.class, zt.g.class, zt.h.class, zt.i.class, zt.j.class, zt.k.class, zt.l.class, zt.m.class);
+        List listN = kotlin.collections.p.n(Function0.class, Function1.class, Function2.class, xt.n.class, xt.o.class, xt.p.class, xt.q.class, xt.r.class, xt.s.class, xt.t.class, xt.a.class, xt.b.class, xt.c.class, xt.d.class, xt.e.class, xt.f.class, xt.g.class, xt.h.class, xt.i.class, xt.j.class, xt.k.class, xt.l.class, xt.m.class);
         ArrayList arrayList = new ArrayList(kotlin.collections.q.u(listN, 10));
         int i10 = 0;
         for (Object obj : listN) {
@@ -655,10 +655,10 @@ public final class f implements hu.c<Object>, e {
             if (i10 < 0) {
                 kotlin.collections.p.t();
             }
-            arrayList.add(jt.s.a((Class) obj, Integer.valueOf(i10)));
+            arrayList.add(gt.s.a((Class) obj, Integer.valueOf(i10)));
             i10 = i11;
         }
-        f22555c = k0.t(arrayList);
+        f23010c = k0.t(arrayList);
     }
 
     public f(@NotNull Class<?> jClass) {
@@ -666,7 +666,7 @@ public final class f implements hu.c<Object>, e {
         this.jClass = jClass;
     }
 
-    @Override // hu.c
+    @Override // fu.c
     public boolean b(@Nullable Object value) {
         return INSTANCE.d(value, d());
     }
@@ -678,24 +678,24 @@ public final class f implements hu.c<Object>, e {
     }
 
     public boolean equals(@Nullable Object other) {
-        return (other instanceof f) && Intrinsics.c(yt.a.b(this), yt.a.b((hu.c) other));
+        return (other instanceof f) && Intrinsics.c(wt.a.b(this), wt.a.b((fu.c) other));
     }
 
-    @Override // hu.c
+    @Override // fu.c
     @Nullable
     public String f() {
         return INSTANCE.b(d());
     }
 
-    @Override // hu.c
+    @Override // fu.c
     @Nullable
-    public String g() {
+    public String h() {
         return INSTANCE.c(d());
     }
 
-    @Override // hu.c
+    @Override // fu.c
     public int hashCode() {
-        return yt.a.b(this).hashCode();
+        return wt.a.b(this).hashCode();
     }
 
     @NotNull

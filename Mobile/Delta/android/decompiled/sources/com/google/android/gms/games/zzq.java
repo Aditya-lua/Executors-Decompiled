@@ -12,16 +12,16 @@ import ja.b;
 public final class zzq extends m implements PlayerRelationshipInfo {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final b f6273d;
+    public final b f6346d;
 
     public zzq(DataHolder dataHolder, int i10, b bVar) {
         super(dataHolder, i10);
-        this.f6273d = bVar;
+        this.f6346d = bVar;
     }
 
     @Override // com.google.android.gms.games.PlayerRelationshipInfo
-    public final int Y() {
-        return q(this.f6273d.H, -1);
+    public final int X() {
+        return q(this.f6346d.H, -1);
     }
 
     @Override // android.os.Parcelable
@@ -53,16 +53,16 @@ public final class zzq extends m implements PlayerRelationshipInfo {
 
     @Override // com.google.android.gms.games.PlayerRelationshipInfo
     public final String zza() {
-        return p(this.f6273d.I, null);
+        return p(this.f6346d.I, null);
     }
 
     @Override // com.google.android.gms.games.PlayerRelationshipInfo
     public final String zzb() {
-        return p(this.f6273d.J, null);
+        return p(this.f6346d.J, null);
     }
 
     @Override // com.google.android.gms.games.PlayerRelationshipInfo
     public final String zzc() {
-        return p(this.f6273d.K, null);
+        return p(this.f6346d.K, null);
     }
 }

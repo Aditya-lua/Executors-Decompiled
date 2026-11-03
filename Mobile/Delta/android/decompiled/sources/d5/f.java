@@ -16,7 +16,7 @@ public final class f {
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @Nullable
-    public d5.b.C0266b recreatorProvider;
+    public d5.b.C0278b recreatorProvider;
 
     @Metadata(d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003\bf\u0018\u00002\u00020\u0001J\u0017\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H&¢\u0006\u0004\b\u0005\u0010\u0006ø\u0001\u0000\u0082\u0002\u0006\n\u0004\b!0\u0001¨\u0006\u0007À\u0006\u0001"}, d2 = {"Ld5/f$a;", "", "Ld5/i;", "owner", "", "a", "(Ld5/i;)V", "savedstate"}, k = 1, mv = {2, 0, 0}, xi = 48)
     public interface a {
@@ -57,18 +57,18 @@ public final class f {
         if (!this.impl.getIsAllowingSavingState()) {
             throw new IllegalStateException("Can not perform this action after onSaveInstanceState");
         }
-        d5.b.C0266b c0266b = this.recreatorProvider;
-        if (c0266b == null) {
-            c0266b = new d5.b.C0266b(this);
+        d5.b.C0278b c0278b = this.recreatorProvider;
+        if (c0278b == null) {
+            c0278b = new d5.b.C0278b(this);
         }
-        this.recreatorProvider = c0266b;
+        this.recreatorProvider = c0278b;
         try {
             clazz.getDeclaredConstructor(null);
-            d5.b.C0266b c0266b2 = this.recreatorProvider;
-            if (c0266b2 != null) {
+            d5.b.C0278b c0278b2 = this.recreatorProvider;
+            if (c0278b2 != null) {
                 String name = clazz.getName();
                 Intrinsics.checkNotNullExpressionValue(name, "getName(...)");
-                c0266b2.b(name);
+                c0278b2.b(name);
             }
         } catch (NoSuchMethodException e10) {
             throw new IllegalArgumentException("Class " + clazz.getSimpleName() + " must have default constructor in order to be automatically recreated", e10);

@@ -13,17 +13,17 @@ import e.w;
 public class l extends w implements c {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public e f20960e;
+    public e f21533e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final androidx.core.view.l.a f20961f;
+    public final androidx.core.view.l.a f21534f;
 
     public l(@NonNull Context context, int i10) {
         super(context, m(context, i10));
-        this.f20961f = new androidx.core.view.l.a() { // from class: j.k
+        this.f21534f = new androidx.core.view.l.a() { // from class: j.k
             @Override // androidx.core.view.l.a
-            public final boolean D(KeyEvent keyEvent) {
-                return this.f20959a.n(keyEvent);
+            public final boolean C(KeyEvent keyEvent) {
+                return this.f21532a.n(keyEvent);
             }
         };
         e eVarL = l();
@@ -41,7 +41,7 @@ public class l extends w implements c {
     }
 
     @Override // j.c
-    public void M(o.b bVar) {
+    public void L(o.b bVar) {
     }
 
     @Override // e.w, android.app.Dialog
@@ -58,7 +58,7 @@ public class l extends w implements c {
 
     @Override // android.app.Dialog, android.view.Window.Callback
     public boolean dispatchKeyEvent(KeyEvent keyEvent) {
-        return androidx.core.view.l.e(this.f20961f, getWindow().getDecorView(), this, keyEvent);
+        return androidx.core.view.l.e(this.f21534f, getWindow().getDecorView(), this, keyEvent);
     }
 
     @Override // android.app.Dialog
@@ -73,10 +73,10 @@ public class l extends w implements c {
 
     @NonNull
     public e l() {
-        if (this.f20960e == null) {
-            this.f20960e = e.i(this, this);
+        if (this.f21533e == null) {
+            this.f21533e = e.i(this, this);
         }
-        return this.f20960e;
+        return this.f21533e;
     }
 
     public boolean n(KeyEvent keyEvent) {
@@ -118,7 +118,7 @@ public class l extends w implements c {
     }
 
     @Override // j.c
-    public void x(o.b bVar) {
+    public void w(o.b bVar) {
     }
 
     @Override // e.w, android.app.Dialog

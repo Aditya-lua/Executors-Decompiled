@@ -12,7 +12,7 @@ class BackStackState implements Parcelable {
     public static final Parcelable.Creator<BackStackState> CREATOR = new a();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final List<String> f2479a;
+    public final List<String> f2324a;
     public final List<BackStackRecordState> b;
 
     public class a implements Parcelable.Creator<BackStackState> {
@@ -30,7 +30,7 @@ class BackStackState implements Parcelable {
     }
 
     public BackStackState(@NonNull Parcel parcel) {
-        this.f2479a = parcel.createStringArrayList();
+        this.f2324a = parcel.createStringArrayList();
         this.b = parcel.createTypedArrayList(BackStackRecordState.CREATOR);
     }
 
@@ -41,7 +41,7 @@ class BackStackState implements Parcelable {
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
-        parcel.writeStringList(this.f2479a);
+        parcel.writeStringList(this.f2324a);
         parcel.writeTypedList(this.b);
     }
 }

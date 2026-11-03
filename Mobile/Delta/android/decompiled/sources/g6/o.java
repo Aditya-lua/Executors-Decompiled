@@ -20,12 +20,12 @@ public final class o {
             int i11 = sharedPreferences.getInt("next_alarm_manager_id", 0);
             sqLiteDatabase.G();
             try {
-                sqLiteDatabase.s0("INSERT OR REPLACE INTO `Preference` (`key`, `long_value`) VALUES (@key, @long_value)", new Object[]{"next_job_scheduler_id", Integer.valueOf(i10)});
-                sqLiteDatabase.s0("INSERT OR REPLACE INTO `Preference` (`key`, `long_value`) VALUES (@key, @long_value)", new Object[]{"next_alarm_manager_id", Integer.valueOf(i11)});
+                sqLiteDatabase.o0("INSERT OR REPLACE INTO `Preference` (`key`, `long_value`) VALUES (@key, @long_value)", new Object[]{"next_job_scheduler_id", Integer.valueOf(i10)});
+                sqLiteDatabase.o0("INSERT OR REPLACE INTO `Preference` (`key`, `long_value`) VALUES (@key, @long_value)", new Object[]{"next_alarm_manager_id", Integer.valueOf(i11)});
                 sharedPreferences.edit().clear().apply();
-                sqLiteDatabase.q0();
+                sqLiteDatabase.m0();
             } finally {
-                sqLiteDatabase.G0();
+                sqLiteDatabase.C0();
             }
         }
     }

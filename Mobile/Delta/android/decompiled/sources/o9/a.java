@@ -11,8 +11,8 @@ import java.util.ArrayList;
 public class a {
 
     /* JADX INFO: renamed from: o9.a$a, reason: collision with other inner class name */
-    public static class C0471a extends RuntimeException {
-        public C0471a(@NonNull String str, @NonNull Parcel parcel) {
+    public static class C0482a extends RuntimeException {
+        public C0482a(@NonNull String str, @NonNull Parcel parcel) {
             int iDataPosition = parcel.dataPosition();
             int iDataSize = parcel.dataSize();
             int length = String.valueOf(str).length();
@@ -45,7 +45,7 @@ public class a {
         int iN = n(iU);
         int iDataPosition = parcel.dataPosition();
         if (iN != 20293) {
-            throw new C0471a("Expected object header. Got 0x".concat(String.valueOf(Integer.toHexString(iU))), parcel);
+            throw new C0482a("Expected object header. Got 0x".concat(String.valueOf(Integer.toHexString(iU))), parcel);
         }
         int i10 = iB + iDataPosition;
         if (i10 >= iDataPosition && i10 <= parcel.dataSize()) {
@@ -56,7 +56,7 @@ public class a {
         sb2.append(iDataPosition);
         sb2.append(" end=");
         sb2.append(i10);
-        throw new C0471a(sb2.toString(), parcel);
+        throw new C0482a(sb2.toString(), parcel);
     }
 
     public static void E(Parcel parcel, int i10, int i11) {
@@ -74,7 +74,7 @@ public class a {
         sb2.append(" (0x");
         sb2.append(hexString);
         sb2.append(")");
-        throw new C0471a(sb2.toString(), parcel);
+        throw new C0482a(sb2.toString(), parcel);
     }
 
     public static void F(Parcel parcel, int i10, int i11, int i12) {
@@ -91,7 +91,7 @@ public class a {
         sb2.append(" (0x");
         sb2.append(hexString);
         sb2.append(")");
-        throw new C0471a(sb2.toString(), parcel);
+        throw new C0482a(sb2.toString(), parcel);
     }
 
     @NonNull
@@ -253,7 +253,7 @@ public class a {
         StringBuilder sb2 = new StringBuilder(String.valueOf(i10).length() + 26);
         sb2.append("Overread allowed size end=");
         sb2.append(i10);
-        throw new C0471a(sb2.toString(), parcel);
+        throw new C0482a(sb2.toString(), parcel);
     }
 
     public static int n(int i10) {

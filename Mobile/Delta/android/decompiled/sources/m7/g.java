@@ -10,7 +10,7 @@ public class g extends p<t7.d, t7.d> {
 
     @Override // m7.o
     public i7.a<t7.d, t7.d> a() {
-        return new i7.l(this.f24039a);
+        return new i7.l(this.f24689a);
     }
 
     @Override // m7.p, m7.o

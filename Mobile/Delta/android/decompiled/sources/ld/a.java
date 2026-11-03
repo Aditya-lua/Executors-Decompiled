@@ -2,46 +2,78 @@ package ld;
 
 import android.R;
 import android.content.Context;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import androidx.annotation.NonNull;
-import hc.b;
-import o.d;
+import ed.b;
+import ed.c;
+import ic.k;
+import q.b0;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class a {
-
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final int[] f23127a = {R.attr.theme, b.f18782h0};
-    public static final int[] b = {b.E};
-
-    public static int a(@NonNull Context context, AttributeSet attributeSet) {
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, f23127a);
-        int resourceId = typedArrayObtainStyledAttributes.getResourceId(0, 0);
-        int resourceId2 = typedArrayObtainStyledAttributes.getResourceId(1, 0);
-        typedArrayObtainStyledAttributes.recycle();
-        return resourceId != 0 ? resourceId : resourceId2;
+public class a extends b0 {
+    public a(@NonNull Context context, AttributeSet attributeSet) {
+        this(context, attributeSet, R.attr.textViewStyle);
     }
 
-    public static int b(@NonNull Context context, AttributeSet attributeSet, int i10, int i11) {
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, b, i10, i11);
-        int resourceId = typedArrayObtainStyledAttributes.getResourceId(0, 0);
+    public static boolean t(Context context) {
+        return b.b(context, ic.b.f20600f0, true);
+    }
+
+    public static int u(@NonNull Resources.Theme theme, AttributeSet attributeSet, int i10, int i11) {
+        TypedArray typedArrayObtainStyledAttributes = theme.obtainStyledAttributes(attributeSet, k.f20965u4, i10, i11);
+        int resourceId = typedArrayObtainStyledAttributes.getResourceId(k.f20974v4, -1);
         typedArrayObtainStyledAttributes.recycle();
         return resourceId;
     }
 
-    @NonNull
-    public static Context c(@NonNull Context context, AttributeSet attributeSet, int i10, int i11) {
-        int iB = b(context, attributeSet, i10, i11);
-        boolean z10 = (context instanceof d) && ((d) context).c() == iB;
-        if (iB == 0 || z10) {
-            return context;
+    public static int w(@NonNull Context context, @NonNull TypedArray typedArray, @NonNull int... iArr) {
+        int iC = -1;
+        for (int i10 = 0; i10 < iArr.length && iC < 0; i10++) {
+            iC = c.c(context, typedArray, iArr[i10], -1);
         }
-        d dVar = new d(context, iB);
-        int iA = a(context, attributeSet);
-        if (iA != 0) {
-            dVar.getTheme().applyStyle(iA, true);
+        return iC;
+    }
+
+    public static boolean x(@NonNull Context context, @NonNull Resources.Theme theme, AttributeSet attributeSet, int i10, int i11) {
+        TypedArray typedArrayObtainStyledAttributes = theme.obtainStyledAttributes(attributeSet, k.f20965u4, i10, i11);
+        int iW = w(context, typedArrayObtainStyledAttributes, k.f20982w4, k.f20990x4);
+        typedArrayObtainStyledAttributes.recycle();
+        return iW != -1;
+    }
+
+    public final void s(@NonNull Resources.Theme theme, int i10) {
+        TypedArray typedArrayObtainStyledAttributes = theme.obtainStyledAttributes(i10, k.f20929q4);
+        int iW = w(getContext(), typedArrayObtainStyledAttributes, k.f20947s4, k.f20956t4);
+        typedArrayObtainStyledAttributes.recycle();
+        if (iW >= 0) {
+            setLineHeight(iW);
         }
-        return dVar;
+    }
+
+    @Override // q.b0, android.widget.TextView
+    public void setTextAppearance(@NonNull Context context, int i10) {
+        super.setTextAppearance(context, i10);
+        if (t(context)) {
+            s(context.getTheme(), i10);
+        }
+    }
+
+    public final void v(AttributeSet attributeSet, int i10, int i11) {
+        int iU;
+        Context context = getContext();
+        if (t(context)) {
+            Resources.Theme theme = context.getTheme();
+            if (x(context, theme, attributeSet, i10, i11) || (iU = u(theme, attributeSet, i10, i11)) == -1) {
+                return;
+            }
+            s(theme, iU);
+        }
+    }
+
+    public a(@NonNull Context context, AttributeSet attributeSet, int i10) {
+        super(md.a.c(context, attributeSet, i10, 0), attributeSet, i10);
+        v(attributeSet, i10, 0);
     }
 }

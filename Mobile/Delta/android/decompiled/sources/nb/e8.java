@@ -8,25 +8,25 @@ import java.util.Objects;
 public final class e8 implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ com.google.android.gms.internal.measurement.x1 f25484a;
+    public final /* synthetic */ com.google.android.gms.internal.measurement.x1 f26305a;
     public final /* synthetic */ zzbg b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final /* synthetic */ String f25485c;
+    public final /* synthetic */ String f26306c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final /* synthetic */ AppMeasurementDynamiteService f25486d;
+    public final /* synthetic */ AppMeasurementDynamiteService f26307d;
 
     public e8(AppMeasurementDynamiteService appMeasurementDynamiteService, com.google.android.gms.internal.measurement.x1 x1Var, zzbg zzbgVar, String str) {
-        this.f25484a = x1Var;
+        this.f26305a = x1Var;
         this.b = zzbgVar;
-        this.f25485c = str;
+        this.f26306c = str;
         Objects.requireNonNull(appMeasurementDynamiteService);
-        this.f25486d = appMeasurementDynamiteService;
+        this.f26307d = appMeasurementDynamiteService;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        this.f25486d.f7405a.J().B(this.f25484a, this.b, this.f25485c);
+        this.f26307d.f7479a.J().B(this.f26305a, this.b, this.f26306c);
     }
 }

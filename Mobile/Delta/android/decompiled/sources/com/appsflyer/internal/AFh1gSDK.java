@@ -17,7 +17,7 @@ public final class AFh1gSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @Nullable
-    public ExceptionManagerConfiguration f5394d;
+    public ExceptionManagerConfiguration f5467d;
 
     @Nullable
     public AFh1cSDK unregisterClient;
@@ -25,7 +25,7 @@ public final class AFh1gSDK {
     public AFh1gSDK(@NotNull JSONObject jSONObject) {
         Intrinsics.checkNotNullParameter(jSONObject, "");
         this.unregisterClient = d(jSONObject);
-        this.f5394d = unregisterClient(jSONObject);
+        this.f5467d = unregisterClient(jSONObject);
         this.AFKeystoreWrapper = registerClient(jSONObject);
     }
 
@@ -34,7 +34,7 @@ public final class AFh1gSDK {
         AFh1cSDK aFh1cSDK;
         List listK;
         try {
-            jt.n.Companion companion = jt.n.INSTANCE;
+            gt.n.Companion companion = gt.n.INSTANCE;
             JSONObject jSONObjectUnregisterClient = unregisterClient(jSONObject, "r_debugger");
             if (jSONObjectUnregisterClient != null) {
                 long j10 = jSONObjectUnregisterClient.getLong("ttl");
@@ -61,32 +61,32 @@ public final class AFh1gSDK {
             } else {
                 aFh1cSDK = null;
             }
-            objB = jt.n.b(aFh1cSDK);
+            objB = gt.n.b(aFh1cSDK);
         } catch (Throwable th2) {
-            jt.n.Companion companion2 = jt.n.INSTANCE;
-            objB = jt.n.b(jt.o.a(th2));
+            gt.n.Companion companion2 = gt.n.INSTANCE;
+            objB = gt.n.b(gt.o.a(th2));
         }
-        return (AFh1cSDK) (jt.n.g(objB) ? null : objB);
+        return (AFh1cSDK) (gt.n.g(objB) ? null : objB);
     }
 
     private static AFi1zSDK registerClient(JSONObject jSONObject) {
         Object objB;
         try {
-            jt.n.Companion companion = jt.n.INSTANCE;
+            gt.n.Companion companion = gt.n.INSTANCE;
             JSONObject jSONObjectUnregisterClient = unregisterClient(jSONObject, "meta_data");
-            objB = jt.n.b(jSONObjectUnregisterClient != null ? new AFi1zSDK(jSONObjectUnregisterClient.optDouble("send_rate", 1.0d)) : null);
+            objB = gt.n.b(jSONObjectUnregisterClient != null ? new AFi1zSDK(jSONObjectUnregisterClient.optDouble("send_rate", 1.0d)) : null);
         } catch (Throwable th2) {
-            jt.n.Companion companion2 = jt.n.INSTANCE;
-            objB = jt.n.b(jt.o.a(th2));
+            gt.n.Companion companion2 = gt.n.INSTANCE;
+            objB = gt.n.b(gt.o.a(th2));
         }
-        return (AFi1zSDK) (jt.n.g(objB) ? null : objB);
+        return (AFi1zSDK) (gt.n.g(objB) ? null : objB);
     }
 
     private static ExceptionManagerConfiguration unregisterClient(JSONObject jSONObject) {
         Object objB;
         ExceptionManagerConfiguration exceptionManagerConfiguration;
         try {
-            jt.n.Companion companion = jt.n.INSTANCE;
+            gt.n.Companion companion = gt.n.INSTANCE;
             JSONObject jSONObjectUnregisterClient = unregisterClient(jSONObject, "exc_mngr");
             if (jSONObjectUnregisterClient != null) {
                 String string = jSONObjectUnregisterClient.getString("sdk_ver");
@@ -98,12 +98,12 @@ public final class AFh1gSDK {
             } else {
                 exceptionManagerConfiguration = null;
             }
-            objB = jt.n.b(exceptionManagerConfiguration);
+            objB = gt.n.b(exceptionManagerConfiguration);
         } catch (Throwable th2) {
-            jt.n.Companion companion2 = jt.n.INSTANCE;
-            objB = jt.n.b(jt.o.a(th2));
+            gt.n.Companion companion2 = gt.n.INSTANCE;
+            objB = gt.n.b(gt.o.a(th2));
         }
-        return (ExceptionManagerConfiguration) (jt.n.g(objB) ? null : objB);
+        return (ExceptionManagerConfiguration) (gt.n.g(objB) ? null : objB);
     }
 
     public final boolean equals(@Nullable Object obj) {
@@ -115,11 +115,11 @@ public final class AFh1gSDK {
         }
         Intrinsics.d(obj, "");
         AFh1gSDK aFh1gSDK = (AFh1gSDK) obj;
-        return Intrinsics.c(this.f5394d, aFh1gSDK.f5394d) && Intrinsics.c(this.AFKeystoreWrapper, aFh1gSDK.AFKeystoreWrapper) && Intrinsics.c(this.unregisterClient, aFh1gSDK.unregisterClient);
+        return Intrinsics.c(this.f5467d, aFh1gSDK.f5467d) && Intrinsics.c(this.AFKeystoreWrapper, aFh1gSDK.AFKeystoreWrapper) && Intrinsics.c(this.unregisterClient, aFh1gSDK.unregisterClient);
     }
 
     public final int hashCode() {
-        ExceptionManagerConfiguration exceptionManagerConfiguration = this.f5394d;
+        ExceptionManagerConfiguration exceptionManagerConfiguration = this.f5467d;
         int iHashCode = (exceptionManagerConfiguration != null ? exceptionManagerConfiguration.hashCode() : 0) * 31;
         AFi1zSDK aFi1zSDK = this.AFKeystoreWrapper;
         int iHashCode2 = (iHashCode + (aFi1zSDK != null ? aFi1zSDK.hashCode() : 0)) * 31;

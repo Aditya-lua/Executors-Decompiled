@@ -8,11 +8,11 @@ import java.util.Set;
 public abstract class q0 implements Map, Serializable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public transient s0 f7208a;
+    public transient s0 f7282a;
     public transient s0 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public transient j0 f7209c;
+    public transient j0 f7283c;
 
     public static q0 c(Object obj, Object obj2, Object obj3, Object obj4, Object obj5, Object obj6) {
         f0.a("com.android.vending.billing.PURCHASES_UPDATED", obj2);
@@ -26,12 +26,12 @@ public abstract class q0 implements Map, Serializable {
     @Override // java.util.Map
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
     public final j0 values() {
-        j0 j0Var = this.f7209c;
+        j0 j0Var = this.f7283c;
         if (j0Var != null) {
             return j0Var;
         }
         j0 j0VarA = a();
-        this.f7209c = j0VarA;
+        this.f7283c = j0VarA;
         return j0VarA;
     }
 
@@ -69,12 +69,12 @@ public abstract class q0 implements Map, Serializable {
     @Override // java.util.Map
     /* JADX INFO: renamed from: f, reason: merged with bridge method [inline-methods] */
     public final s0 entrySet() {
-        s0 s0Var = this.f7208a;
+        s0 s0Var = this.f7282a;
         if (s0Var != null) {
             return s0Var;
         }
         s0 s0VarD = d();
-        this.f7208a = s0VarD;
+        this.f7282a = s0VarD;
         return s0VarD;
     }
 

@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 public final class g {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f25267a;
+    public final String f26088a;
     public final String b;
 
     public g(@NonNull String str) {
@@ -15,7 +15,7 @@ public final class g {
     }
 
     public boolean a(int i10) {
-        return Log.isLoggable(this.f25267a, i10);
+        return Log.isLoggable(this.f26088a, i10);
     }
 
     public void b(@NonNull String str, @NonNull String str2) {
@@ -74,7 +74,7 @@ public final class g {
     public g(@NonNull String str, String str2) {
         m.m(str, "log tag cannot be null");
         m.c(str.length() <= 23, "tag \"%s\" is longer than the %d character maximum", str, 23);
-        this.f25267a = str;
+        this.f26088a = str;
         this.b = (str2 == null || str2.length() <= 0) ? null : str2;
     }
 }

@@ -7,29 +7,29 @@ import com.roblox.client.shortcuts.PinShortcutHandler;
 import com.roblox.platform.http.postbody.notifications.SearchResultRequestItem;
 import com.roblox.platform.http.postbody.notifications.SingleOSSearchResultPostBody;
 import com.roblox.platform.http.returntypes.ossearch.SearchResultIdentifier;
-import gk.p;
-import jt.o;
-import jt.s;
+import ek.q;
+import gt.o;
+import gt.s;
+import iu.g1;
+import iu.l0;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
-import ku.g1;
-import ku.l0;
 import m2.e;
+import nt.f;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pt.f;
-import pt.m;
 import x5.j;
 import x5.p0;
 import x5.x;
 import x5.z;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u000b\u0018\u0000 \u00182\u00020\u0001:\u0001\u000fB\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bH\u0096@¢\u0006\u0004\b\t\u0010\nJ\u0011\u0010\f\u001a\u0004\u0018\u00010\u000bH\u0002¢\u0006\u0004\b\f\u0010\rR(\u0010\u0017\u001a\u00020\u000e8\u0000@\u0000X\u0081\u000e¢\u0006\u0018\n\u0004\b\u000f\u0010\u0010\u0012\u0004\b\u0015\u0010\u0016\u001a\u0004\b\u0011\u0010\u0012\"\u0004\b\u0013\u0010\u0014¨\u0006\u0019"}, d2 = {"Lcom/roblox/client/ossearch/OSSearchSingleResultFetchWorker;", "Landroidx/work/CoroutineWorker;", "Landroid/content/Context;", "appContext", "Landroidx/work/WorkerParameters;", "params", "<init>", "(Landroid/content/Context;Landroidx/work/WorkerParameters;)V", "Landroidx/work/c$a;", "doWork", "(Lnt/b;)Ljava/lang/Object;", "Lcom/roblox/platform/http/postbody/notifications/SingleOSSearchResultPostBody;", "c", "()Lcom/roblox/platform/http/postbody/notifications/SingleOSSearchResultPostBody;", "Lku/l0;", "a", "Lku/l0;", "d", "()Lku/l0;", "setIoDispatcher$NativeShell_googleProdRelease", "(Lku/l0;)V", "getIoDispatcher$NativeShell_googleProdRelease$annotations", "()V", "ioDispatcher", "b", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u000b\u0018\u0000 \u00182\u00020\u0001:\u0001\u000fB\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bH\u0096@¢\u0006\u0004\b\t\u0010\nJ\u0011\u0010\f\u001a\u0004\u0018\u00010\u000bH\u0002¢\u0006\u0004\b\f\u0010\rR(\u0010\u0017\u001a\u00020\u000e8\u0000@\u0000X\u0081\u000e¢\u0006\u0018\n\u0004\b\u000f\u0010\u0010\u0012\u0004\b\u0015\u0010\u0016\u001a\u0004\b\u0011\u0010\u0012\"\u0004\b\u0013\u0010\u0014¨\u0006\u0019"}, d2 = {"Lcom/roblox/client/ossearch/OSSearchSingleResultFetchWorker;", "Landroidx/work/CoroutineWorker;", "Landroid/content/Context;", "appContext", "Landroidx/work/WorkerParameters;", "params", "<init>", "(Landroid/content/Context;Landroidx/work/WorkerParameters;)V", "Landroidx/work/c$a;", "doWork", "(Llt/b;)Ljava/lang/Object;", "Lcom/roblox/platform/http/postbody/notifications/SingleOSSearchResultPostBody;", "c", "()Lcom/roblox/platform/http/postbody/notifications/SingleOSSearchResultPostBody;", "Liu/l0;", "a", "Liu/l0;", "d", "()Liu/l0;", "setIoDispatcher$NativeShell_googleProdRelease", "(Liu/l0;)V", "getIoDispatcher$NativeShell_googleProdRelease$annotations", "()V", "ioDispatcher", "b", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class OSSearchSingleResultFetchWorker extends CoroutineWorker {
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
@@ -57,7 +57,7 @@ public final class OSSearchSingleResultFetchWorker extends CoroutineWorker {
 
         public final void b(@NotNull Context context, long placeId) {
             Intrinsics.checkNotNullParameter(context, "context");
-            p.h("OSSearchSingleResultFetchWorker", "Scheduling immediate OS search index sync");
+            q.h("OSSearchSingleResultFetchWorker", "Scheduling immediate OS search index sync");
             p0.Companion companion = p0.INSTANCE;
             Context applicationContext = context.getApplicationContext();
             Intrinsics.checkNotNullExpressionValue(applicationContext, "getApplicationContext(...)");
@@ -77,33 +77,33 @@ public final class OSSearchSingleResultFetchWorker extends CoroutineWorker {
 
     @f(c = "com.roblox.client.ossearch.OSSearchSingleResultFetchWorker", f = "OSSearchSingleResultFetchWorker.kt", l = {34, 37}, m = "doWork", v = 1)
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final class b extends pt.d {
+    public static final class b extends nt.d {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f9146t;
+        public Object f9219t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public /* synthetic */ Object f9147u;
+        public /* synthetic */ Object f9220u;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public int f9149w;
+        public int f9222w;
 
-        public b(nt.b<? super b> bVar) {
+        public b(lt.b<? super b> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
-            this.f9147u = obj;
-            this.f9149w |= Integer.MIN_VALUE;
+            this.f9220u = obj;
+            this.f9222w |= Integer.MIN_VALUE;
             return OSSearchSingleResultFetchWorker.this.doWork(this);
         }
     }
 
-    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00070\u0001¢\u0006\u0002\b\u0002*\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Lku/p0;", "Landroidx/work/c$a;", "Lkotlin/jvm/internal/EnhancedNullability;", "<anonymous>", "(Lku/p0;)Landroidx/work/c$a;"}, k = 3, mv = {2, 2, 0})
     @f(c = "com.roblox.client.ossearch.OSSearchSingleResultFetchWorker$doWork$2", f = "OSSearchSingleResultFetchWorker.kt", l = {44, 46, 48}, m = "invokeSuspend", v = 1)
-    public static final class c extends m implements Function2<ku.p0, nt.b<? super androidx.work.c.a>, Object> {
+    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00070\u0001¢\u0006\u0002\b\u0002*\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Liu/p0;", "Landroidx/work/c$a;", "Lkotlin/jvm/internal/EnhancedNullability;", "<anonymous>", "(Liu/p0;)Landroidx/work/c$a;"}, k = 3, mv = {2, 2, 0})
+    public static final class c extends m implements Function2<iu.p0, lt.b<? super androidx.work.c.a>, Object> {
         public Object A;
         public Object B;
         public Object C;
@@ -114,78 +114,83 @@ public final class OSSearchSingleResultFetchWorker extends CoroutineWorker {
         public final /* synthetic */ com.roblox.client.ossearch.c I;
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f9150t;
+        public Object f9223t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f9151u;
+        public Object f9224u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public Object f9152v;
+        public Object f9225v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public Object f9153w;
+        public Object f9226w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public Object f9154x;
+        public Object f9227x;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public Object f9155y;
+        public Object f9228y;
 
         /* JADX INFO: renamed from: z, reason: collision with root package name */
-        public Object f9156z;
+        public Object f9229z;
 
-        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)Z"}, k = 3, mv = {2, 2, 0})
         @f(c = "com.roblox.client.ossearch.OSSearchSingleResultFetchWorker$doWork$2$1$1", f = "OSSearchSingleResultFetchWorker.kt", l = {}, m = "invokeSuspend", v = 1)
-        public static final class a extends m implements Function2<ku.p0, nt.b<? super Boolean>, Object> {
+        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)Z"}, k = 3, mv = {2, 2, 0})
+        public static final class a extends m implements Function2<iu.p0, lt.b<? super Boolean>, Object> {
 
             /* JADX INFO: renamed from: t, reason: collision with root package name */
-            public int f9157t;
+            public int f9230t;
 
             /* JADX INFO: renamed from: u, reason: collision with root package name */
-            public final /* synthetic */ OSSearchSingleResultFetchWorker f9158u;
+            public final /* synthetic */ OSSearchSingleResultFetchWorker f9231u;
 
             /* JADX INFO: renamed from: v, reason: collision with root package name */
-            public final /* synthetic */ m2.c f9159v;
+            public final /* synthetic */ m2.c f9232v;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public a(OSSearchSingleResultFetchWorker oSSearchSingleResultFetchWorker, m2.c cVar, nt.b<? super a> bVar) {
+            public a(OSSearchSingleResultFetchWorker oSSearchSingleResultFetchWorker, m2.c cVar, lt.b<? super a> bVar) {
                 super(2, bVar);
-                this.f9158u = oSSearchSingleResultFetchWorker;
-                this.f9159v = cVar;
+                this.f9231u = oSSearchSingleResultFetchWorker;
+                this.f9232v = cVar;
             }
 
-            @Override // pt.a
-            public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-                return new a(this.f9158u, this.f9159v, bVar);
-            }
-
-            @Override // pt.a
-            public final Object invokeSuspend(Object obj) {
-                ot.c.e();
-                if (this.f9157t != 0) {
-                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-                }
-                o.b(obj);
-                return pt.b.a(e.h(this.f9158u.getApplicationContext(), this.f9159v));
+            @Override // nt.a
+            public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+                return new a(this.f9231u, this.f9232v, bVar);
             }
 
             @Override // kotlin.jvm.functions.Function2
-            public final Object invoke(ku.p0 p0Var, nt.b<? super Boolean> bVar) {
-                return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            public final Object invoke(iu.p0 p0Var, lt.b<? super Boolean> bVar) {
+                return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+            }
+
+            @Override // nt.a
+            public final Object invokeSuspend(Object obj) {
+                mt.c.e();
+                if (this.f9230t != 0) {
+                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                }
+                o.b(obj);
+                return nt.b.a(e.h(this.f9231u.getApplicationContext(), this.f9232v));
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public c(com.roblox.client.ossearch.c cVar, nt.b<? super c> bVar) {
+        public c(com.roblox.client.ossearch.c cVar, lt.b<? super c> bVar) {
             super(2, bVar);
             this.I = cVar;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             c cVar = OSSearchSingleResultFetchWorker.this.new c(this.I, bVar);
             cVar.G = obj;
             return cVar;
+        }
+
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(iu.p0 p0Var, lt.b<? super androidx.work.c.a> bVar) {
+            return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
         }
 
         /* JADX WARN: Code duplicated, block: B:37:0x013f A[Catch: all -> 0x005b, TryCatch #2 {all -> 0x005b, blocks: (B:8:0x0048, B:45:0x01e8, B:35:0x0139, B:37:0x013f, B:41:0x018d, B:46:0x01fd, B:29:0x00f1), top: B:119:0x0012 }] */
@@ -218,7 +223,7 @@ public final class OSSearchSingleResultFetchWorker extends CoroutineWorker {
             	at jadx.core.utils.ErrorsCounter.error(ErrorsCounter.java:31)
             	at jadx.core.dex.attributes.nodes.NotificationAttrNode.addError(NotificationAttrNode.java:19)
             */
-        @Override // pt.a
+        @Override // nt.a
         public final java.lang.Object invokeSuspend(java.lang.Object r27) {
             /*
                 Method dump skipped, instruction units count: 879
@@ -226,42 +231,37 @@ public final class OSSearchSingleResultFetchWorker extends CoroutineWorker {
             */
             throw new UnsupportedOperationException("Method not decompiled: com.roblox.client.ossearch.OSSearchSingleResultFetchWorker.c.invokeSuspend(java.lang.Object):java.lang.Object");
         }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(ku.p0 p0Var, nt.b<? super androidx.work.c.a> bVar) {
-            return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
-        }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "Lcom/roblox/client/ossearch/c;", "<anonymous>", "(Lku/p0;)Lcom/roblox/client/ossearch/c;"}, k = 3, mv = {2, 2, 0})
     @f(c = "com.roblox.client.ossearch.OSSearchSingleResultFetchWorker$doWork$thumbnailCache$1", f = "OSSearchSingleResultFetchWorker.kt", l = {}, m = "invokeSuspend", v = 1)
-    public static final class d extends m implements Function2<ku.p0, nt.b<? super com.roblox.client.ossearch.c>, Object> {
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "Lcom/roblox/client/ossearch/c;", "<anonymous>", "(Liu/p0;)Lcom/roblox/client/ossearch/c;"}, k = 3, mv = {2, 2, 0})
+    public static final class d extends m implements Function2<iu.p0, lt.b<? super com.roblox.client.ossearch.c>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f9160t;
+        public int f9233t;
 
-        public d(nt.b<? super d> bVar) {
+        public d(lt.b<? super d> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             return new d(bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(iu.p0 p0Var, lt.b<? super com.roblox.client.ossearch.c> bVar) {
+            return ((d) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            ot.c.e();
-            if (this.f9160t != 0) {
+            mt.c.e();
+            if (this.f9233t != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
             o.b(obj);
             return com.roblox.client.ossearch.c.INSTANCE.a();
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(ku.p0 p0Var, nt.b<? super com.roblox.client.ossearch.c> bVar) {
-            return ((d) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
         }
     }
 
@@ -301,36 +301,36 @@ public final class OSSearchSingleResultFetchWorker extends CoroutineWorker {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct add '--show-bad-code' argument
     */
-    public java.lang.Object doWork(@org.jetbrains.annotations.NotNull nt.b<? super androidx.work.c.a> r7) {
+    public java.lang.Object doWork(@org.jetbrains.annotations.NotNull lt.b<? super androidx.work.c.a> r7) {
         /*
             r6 = this;
             boolean r0 = r7 instanceof com.roblox.client.ossearch.OSSearchSingleResultFetchWorker.b
             if (r0 == 0) goto L13
             r0 = r7
             com.roblox.client.ossearch.OSSearchSingleResultFetchWorker$b r0 = (com.roblox.client.ossearch.OSSearchSingleResultFetchWorker.b) r0
-            int r1 = r0.f9149w
+            int r1 = r0.f9222w
             r2 = -2147483648(0xffffffff80000000, float:-0.0)
             r3 = r1 & r2
             if (r3 == 0) goto L13
             int r1 = r1 - r2
-            r0.f9149w = r1
+            r0.f9222w = r1
             goto L18
         L13:
             com.roblox.client.ossearch.OSSearchSingleResultFetchWorker$b r0 = new com.roblox.client.ossearch.OSSearchSingleResultFetchWorker$b
             r0.<init>(r7)
         L18:
-            java.lang.Object r7 = r0.f9147u
-            java.lang.Object r1 = ot.c.e()
-            int r2 = r0.f9149w
+            java.lang.Object r7 = r0.f9220u
+            java.lang.Object r1 = mt.c.e()
+            int r2 = r0.f9222w
             r3 = 0
             r4 = 2
             r5 = 1
             if (r2 == 0) goto L3d
             if (r2 == r5) goto L39
             if (r2 != r4) goto L31
-            java.lang.Object r0 = r0.f9146t
+            java.lang.Object r0 = r0.f9219t
             com.roblox.client.ossearch.c r0 = (com.roblox.client.ossearch.c) r0
-            jt.o.b(r7)
+            gt.o.b(r7)
             goto L6d
         L31:
             java.lang.IllegalStateException r7 = new java.lang.IllegalStateException
@@ -338,28 +338,28 @@ public final class OSSearchSingleResultFetchWorker extends CoroutineWorker {
             r7.<init>(r0)
             throw r7
         L39:
-            jt.o.b(r7)
+            gt.o.b(r7)
             goto L57
         L3d:
-            jt.o.b(r7)
+            gt.o.b(r7)
             java.lang.String r7 = "OSSearchSingleResultFetchWorker"
             java.lang.String r2 = "Starting OS search result fetch"
-            gk.p.h(r7, r2)
-            ku.l0 r7 = r6.ioDispatcher
+            ek.q.h(r7, r2)
+            iu.l0 r7 = r6.ioDispatcher
             com.roblox.client.ossearch.OSSearchSingleResultFetchWorker$d r2 = new com.roblox.client.ossearch.OSSearchSingleResultFetchWorker$d
             r2.<init>(r3)
-            r0.f9149w = r5
-            java.lang.Object r7 = ku.i.g(r7, r2, r0)
+            r0.f9222w = r5
+            java.lang.Object r7 = iu.i.g(r7, r2, r0)
             if (r7 != r1) goto L57
             goto L6c
         L57:
             com.roblox.client.ossearch.c r7 = (com.roblox.client.ossearch.c) r7
             com.roblox.client.ossearch.OSSearchSingleResultFetchWorker$c r2 = new com.roblox.client.ossearch.OSSearchSingleResultFetchWorker$c
             r2.<init>(r7, r3)
-            java.lang.Object r7 = pt.l.a(r7)
-            r0.f9146t = r7
-            r0.f9149w = r4
-            java.lang.Object r7 = ku.q0.g(r2, r0)
+            java.lang.Object r7 = nt.l.a(r7)
+            r0.f9219t = r7
+            r0.f9222w = r4
+            java.lang.Object r7 = iu.q0.g(r2, r0)
             if (r7 != r1) goto L6d
         L6c:
             return r1
@@ -368,6 +368,6 @@ public final class OSSearchSingleResultFetchWorker extends CoroutineWorker {
             kotlin.jvm.internal.Intrinsics.checkNotNullExpressionValue(r7, r0)
             return r7
         */
-        throw new UnsupportedOperationException("Method not decompiled: com.roblox.client.ossearch.OSSearchSingleResultFetchWorker.doWork(nt.b):java.lang.Object");
+        throw new UnsupportedOperationException("Method not decompiled: com.roblox.client.ossearch.OSSearchSingleResultFetchWorker.doWork(lt.b):java.lang.Object");
     }
 }

@@ -7,25 +7,25 @@ import backtraceio.library.logger.BacktraceLogger;
 public class b {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final transient String f21098e = "b";
+    public static final transient String f21671e = "b";
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f21099a = "json";
+    public final String f21672a = "json";
     public String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public String f21100c;
+    public String f21673c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public Uri f21101d;
+    public Uri f21674d;
 
     public b(String str, String str2) {
         this.b = str;
-        this.f21100c = str2;
+        this.f21673c = str2;
     }
 
     public final Uri a() {
-        return this.f21101d;
+        return this.f21674d;
     }
 
     public final String b() {
@@ -52,7 +52,7 @@ public class b {
     }
 
     public String e() {
-        String str = this.f21100c;
+        String str = this.f21673c;
         if (str != null) {
             return str;
         }
@@ -84,14 +84,14 @@ public class b {
             if (iIndexOf != -1) {
                 return string.substring(28, iIndexOf);
             }
-            BacktraceLogger.w(f21098e, "Missed universe in server URL: " + string);
+            BacktraceLogger.w(f21671e, "Missed universe in server URL: " + string);
             return null;
         }
         if (string.indexOf("backtrace.io") != -1) {
             Uri uri = Uri.parse(string);
             return uri.getHost().substring(0, uri.getHost().indexOf("."));
         }
-        BacktraceLogger.w(f21098e, "Missed universe in server URL: " + string);
+        BacktraceLogger.w(f21671e, "Missed universe in server URL: " + string);
         return null;
     }
 }

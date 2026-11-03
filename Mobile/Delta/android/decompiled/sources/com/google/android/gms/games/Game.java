@@ -9,31 +9,31 @@ import m9.e;
 /* JADX INFO: loaded from: classes.dex */
 public interface Game extends e<Game>, Parcelable {
     @NonNull
-    Uri B();
+    Uri A();
+
+    boolean B0();
 
     @NonNull
-    String D0();
+    Uri B1();
+
+    int L0();
 
     @NonNull
-    Uri D1();
-
-    boolean F0();
-
-    int P0();
+    String M0();
 
     @NonNull
-    String Q0();
+    String P1();
 
     @NonNull
-    String Q1();
-
-    @NonNull
-    String Z();
+    String Y();
 
     @Deprecated
     boolean c();
 
-    int e2();
+    @NonNull
+    String f0();
+
+    int f2();
 
     @NonNull
     String getDescription();
@@ -57,12 +57,12 @@ public interface Game extends e<Game>, Parcelable {
     Uri h();
 
     @NonNull
-    String i0();
-
-    @NonNull
     String l();
 
-    boolean t1();
+    boolean r1();
+
+    @NonNull
+    String z0();
 
     boolean zza();
 

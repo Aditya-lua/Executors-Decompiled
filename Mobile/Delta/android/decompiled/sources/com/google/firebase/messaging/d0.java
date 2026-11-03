@@ -18,14 +18,14 @@ import java.util.concurrent.Future;
 public class d0 implements Closeable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final URL f8760a;
+    public final URL f8834a;
     public volatile Future<?> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public Task<Bitmap> f8761c;
+    public Task<Bitmap> f8835c;
 
     public d0(URL url) {
-        this.f8760a = url;
+        this.f8834a = url;
     }
 
     public static /* synthetic */ void a(d0 d0Var, sb.k kVar) {
@@ -51,21 +51,21 @@ public class d0 implements Closeable {
 
     public Bitmap b() throws IOException {
         if (Log.isLoggable("FirebaseMessaging", 4)) {
-            Log.i("FirebaseMessaging", "Starting download of: " + this.f8760a);
+            Log.i("FirebaseMessaging", "Starting download of: " + this.f8834a);
         }
         byte[] bArrC = c();
         Bitmap bitmapDecodeByteArray = BitmapFactory.decodeByteArray(bArrC, 0, bArrC.length);
         if (bitmapDecodeByteArray == null) {
-            throw new IOException("Failed to decode image: " + this.f8760a);
+            throw new IOException("Failed to decode image: " + this.f8834a);
         }
         if (Log.isLoggable("FirebaseMessaging", 3)) {
-            Log.d("FirebaseMessaging", "Successfully downloaded image: " + this.f8760a);
+            Log.d("FirebaseMessaging", "Successfully downloaded image: " + this.f8834a);
         }
         return bitmapDecodeByteArray;
     }
 
     public final byte[] c() throws IOException {
-        URLConnection uRLConnectionOpenConnection = this.f8760a.openConnection();
+        URLConnection uRLConnectionOpenConnection = this.f8834a.openConnection();
         if (uRLConnectionOpenConnection.getContentLength() > 1048576) {
             throw new IOException("Content-Length exceeds max size of 1048576");
         }
@@ -76,7 +76,7 @@ public class d0 implements Closeable {
                 inputStream.close();
             }
             if (Log.isLoggable("FirebaseMessaging", 2)) {
-                Log.v("FirebaseMessaging", "Downloaded " + bArrD.length + " bytes from " + this.f8760a);
+                Log.v("FirebaseMessaging", "Downloaded " + bArrD.length + " bytes from " + this.f8834a);
             }
             if (bArrD.length <= 1048576) {
                 return bArrD;
@@ -100,7 +100,7 @@ public class d0 implements Closeable {
     }
 
     public Task<Bitmap> e() {
-        return (Task) n9.m.l(this.f8761c);
+        return (Task) n9.m.l(this.f8835c);
     }
 
     public void f(ExecutorService executorService) {
@@ -108,9 +108,9 @@ public class d0 implements Closeable {
         this.b = executorService.submit(new Runnable() { // from class: com.google.firebase.messaging.c0
             @Override // java.lang.Runnable
             public final void run() {
-                d0.a(this.f8756a, kVar);
+                d0.a(this.f8830a, kVar);
             }
         });
-        this.f8761c = kVar.a();
+        this.f8835c = kVar.a();
     }
 }

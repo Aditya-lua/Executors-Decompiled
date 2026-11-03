@@ -13,14 +13,14 @@ public interface z {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public static final Companion INSTANCE = Companion.f35732a;
+    public static final Companion INSTANCE = Companion.f36589a;
 
     /* JADX INFO: renamed from: y5.z$a, reason: from kotlin metadata */
     @Metadata(d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0019\u0010\u0007\u001a\u00020\u00062\b\b\u0002\u0010\u0005\u001a\u00020\u0004H\u0007¢\u0006\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"Ly5/z$a;", "", "<init>", "()V", "", "synchronized", "Ly5/z;", "b", "(Z)Ly5/z;", "work-runtime_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
     public static final class Companion {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ Companion f35732a = new Companion();
+        public static final /* synthetic */ Companion f36589a = new Companion();
 
         public static /* synthetic */ z c(Companion companion, boolean z10, int i10, Object obj) {
             if ((i10 & 1) != 0) {

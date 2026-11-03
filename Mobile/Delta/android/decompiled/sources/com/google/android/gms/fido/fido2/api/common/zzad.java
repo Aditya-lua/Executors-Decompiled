@@ -11,23 +11,23 @@ public final class zzad extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzad> CREATOR = new ca.e();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final boolean f6031f;
+    public final boolean f6104f;
 
     public zzad(boolean z10) {
-        this.f6031f = ((Boolean) m.l(Boolean.valueOf(z10))).booleanValue();
+        this.f6104f = ((Boolean) m.l(Boolean.valueOf(z10))).booleanValue();
     }
 
     public final boolean equals(Object obj) {
-        return (obj instanceof zzad) && this.f6031f == ((zzad) obj).f6031f;
+        return (obj instanceof zzad) && this.f6104f == ((zzad) obj).f6104f;
     }
 
     public final int hashCode() {
-        return k.c(Boolean.valueOf(this.f6031f));
+        return k.c(Boolean.valueOf(this.f6104f));
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i10) {
-        boolean z10 = this.f6031f;
+        boolean z10 = this.f6104f;
         int iA = o9.b.a(parcel);
         o9.b.c(parcel, 1, z10);
         o9.b.b(parcel, iA);

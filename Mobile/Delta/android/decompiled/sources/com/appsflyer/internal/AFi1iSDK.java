@@ -22,7 +22,7 @@ public final class AFi1iSDK extends Referrer {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    private final AFc1iSDK f5421d;
+    private final AFc1iSDK f5494d;
 
     @NotNull
     private final AFi1jSDK registerClient;
@@ -65,12 +65,12 @@ public final class AFi1iSDK extends Referrer {
             str = Payload.SOURCE_INSTAGRAM;
         } else {
             if (i10 != 3) {
-                throw new jt.l();
+                throw new gt.l();
             }
             str = Payload.SOURCE_FACEBOOK_LITE;
         }
         super(Payload.TYPE_APP, str, referrerProp);
-        this.f5421d = aFc1iSDK;
+        this.f5494d = aFc1iSDK;
         this.registerClient = aFi1jSDK;
         this.unregisterClient = runnable;
     }
@@ -101,7 +101,7 @@ public final class AFi1iSDK extends Referrer {
             if (i10 != 1) {
                 if (i10 != 2) {
                     if (i10 != 3) {
-                        throw new jt.l();
+                        throw new gt.l();
                     }
                     if (context.getPackageManager().resolveContentProvider("com.facebook.lite.provider.InstallReferrerProvider", 0) != null) {
                         AFLoggerBase.d$default(AFLogger.INSTANCE, LogTag.META_REFERRER, "Found Facebook Lite content provider", false, 4, null);
@@ -150,7 +150,7 @@ public final class AFi1iSDK extends Referrer {
                                     int columnIndex3 = cursorQuery.getColumnIndex(Payload.META_IS_CLICK_THROUGH_CUSTOM_KEY);
                                     Integer numValueOf = columnIndex3 != -1 ? Integer.valueOf(cursorQuery.getInt(columnIndex3)) : null;
                                     if (numValueOf != null) {
-                                        aFi1iSDK.map.put(Payload.META_CUSTOM, kotlin.collections.k0.n(jt.s.a(Payload.META_IS_CLICK_THROUGH_CUSTOM_KEY, Integer.valueOf(numValueOf.intValue()))));
+                                        aFi1iSDK.map.put(Payload.META_CUSTOM, kotlin.collections.k0.n(gt.s.a(Payload.META_IS_CLICK_THROUGH_CUSTOM_KEY, Integer.valueOf(numValueOf.intValue()))));
                                     }
                                     int i11 = iArr[aFi1iSDK.registerClient.ordinal()];
                                     if (i11 == 1) {
@@ -159,7 +159,7 @@ public final class AFi1iSDK extends Referrer {
                                         str = "com.instagram.android";
                                     } else {
                                         if (i11 != 3) {
-                                            throw new jt.l();
+                                            throw new gt.l();
                                         }
                                         str = "com.facebook.lite";
                                     }

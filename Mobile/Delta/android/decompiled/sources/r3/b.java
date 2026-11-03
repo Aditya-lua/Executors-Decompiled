@@ -14,7 +14,7 @@ public class b {
     }
 
     /* JADX INFO: renamed from: r3.b$b, reason: collision with other inner class name */
-    public interface InterfaceC0528b<T, V> {
+    public interface InterfaceC0530b<T, V> {
         V a(T t8, int i10);
 
         int b(T t8);
@@ -23,26 +23,26 @@ public class b {
     public static class c<T> implements Comparator<T> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Rect f29749a = new Rect();
+        public final Rect f30151a = new Rect();
         public final Rect b = new Rect();
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final boolean f29750c;
+        public final boolean f30152c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final a<T> f29751d;
+        public final a<T> f30153d;
 
         public c(boolean z10, a<T> aVar) {
-            this.f29750c = z10;
-            this.f29751d = aVar;
+            this.f30152c = z10;
+            this.f30153d = aVar;
         }
 
         @Override // java.util.Comparator
         public int compare(T t8, T t10) {
-            Rect rect = this.f29749a;
+            Rect rect = this.f30151a;
             Rect rect2 = this.b;
-            this.f29751d.a(t8, rect);
-            this.f29751d.a(t10, rect2);
+            this.f30153d.a(t8, rect);
+            this.f30153d.a(t10, rect2);
             int i10 = rect.top;
             int i11 = rect2.top;
             if (i10 < i11) {
@@ -54,10 +54,10 @@ public class b {
             int i12 = rect.left;
             int i13 = rect2.left;
             if (i12 < i13) {
-                return this.f29750c ? 1 : -1;
+                return this.f30152c ? 1 : -1;
             }
             if (i12 > i13) {
-                return this.f29750c ? -1 : 1;
+                return this.f30152c ? -1 : 1;
             }
             int i14 = rect.bottom;
             int i15 = rect2.bottom;
@@ -70,10 +70,10 @@ public class b {
             int i16 = rect.right;
             int i17 = rect2.right;
             if (i16 < i17) {
-                return this.f29750c ? 1 : -1;
+                return this.f30152c ? 1 : -1;
             }
             if (i16 > i17) {
-                return this.f29750c ? -1 : 1;
+                return this.f30152c ? -1 : 1;
             }
             return 0;
         }
@@ -101,7 +101,7 @@ public class b {
         return rect2.bottom >= rect.top && rect2.top <= rect.bottom;
     }
 
-    public static <L, T> T c(@NonNull L l10, @NonNull InterfaceC0528b<L, T> interfaceC0528b, @NonNull a<T> aVar, T t8, @NonNull Rect rect, int i10) {
+    public static <L, T> T c(@NonNull L l10, @NonNull InterfaceC0530b<L, T> interfaceC0530b, @NonNull a<T> aVar, T t8, @NonNull Rect rect, int i10) {
         Rect rect2 = new Rect(rect);
         if (i10 == 17) {
             rect2.offset(rect.width() + 1, 0);
@@ -115,11 +115,11 @@ public class b {
             }
             rect2.offset(0, -(rect.height() + 1));
         }
-        int iB = interfaceC0528b.b(l10);
+        int iB = interfaceC0530b.b(l10);
         Rect rect3 = new Rect();
         T t10 = null;
         for (int i11 = 0; i11 < iB; i11++) {
-            T tA = interfaceC0528b.a(l10, i11);
+            T tA = interfaceC0530b.a(l10, i11);
             if (tA != t8) {
                 aVar.a(tA, rect3);
                 if (h(i10, rect, rect3, rect2)) {
@@ -131,11 +131,11 @@ public class b {
         return t10;
     }
 
-    public static <L, T> T d(@NonNull L l10, @NonNull InterfaceC0528b<L, T> interfaceC0528b, @NonNull a<T> aVar, T t8, int i10, boolean z10, boolean z11) {
-        int iB = interfaceC0528b.b(l10);
+    public static <L, T> T d(@NonNull L l10, @NonNull InterfaceC0530b<L, T> interfaceC0530b, @NonNull a<T> aVar, T t8, int i10, boolean z10, boolean z11) {
+        int iB = interfaceC0530b.b(l10);
         ArrayList arrayList = new ArrayList(iB);
         for (int i11 = 0; i11 < iB; i11++) {
-            arrayList.add(interfaceC0528b.a(l10, i11));
+            arrayList.add(interfaceC0530b.a(l10, i11));
         }
         Collections.sort(arrayList, new c(z10, aVar));
         if (i10 == 1) {

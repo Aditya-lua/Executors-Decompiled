@@ -14,7 +14,7 @@ public final class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final b f28216a = new b();
+    public static final b f28435a = new b();
 
     @Nullable
     public final <T> T a(@NotNull Context context, @NotNull String tag, @NotNull Function1<? super Context, ? extends T> manager) {
@@ -24,7 +24,7 @@ public final class b {
         try {
             return manager.invoke(context);
         } catch (NoClassDefFoundError unused) {
-            Log.d(tag, "Unable to find adservices code, check manifest for uses-library tag, versionS=" + a.f28213a.b());
+            Log.d(tag, "Unable to find adservices code, check manifest for uses-library tag, versionS=" + a.f28432a.b());
             return null;
         }
     }

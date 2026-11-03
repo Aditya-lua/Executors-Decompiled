@@ -15,7 +15,7 @@ public final class a5 extends gb implements pc {
     static {
         a5 a5Var = new a5();
         zzi = a5Var;
-        gb.u(a5.class, a5Var);
+        gb.t(a5.class, a5Var);
     }
 
     public static a5 N() {

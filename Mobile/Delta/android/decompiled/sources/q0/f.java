@@ -10,7 +10,7 @@ public final class f implements Executor {
     public static volatile Executor b;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ExecutorService f29169a = Executors.newSingleThreadExecutor(new a());
+    public final ExecutorService f29522a = Executors.newSingleThreadExecutor(new a());
 
     public class a implements ThreadFactory {
         public a() {
@@ -43,6 +43,6 @@ public final class f implements Executor {
 
     @Override // java.util.concurrent.Executor
     public void execute(Runnable runnable) {
-        this.f29169a.execute(runnable);
+        this.f29522a.execute(runnable);
     }
 }

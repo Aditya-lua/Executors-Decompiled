@@ -13,7 +13,7 @@ public final class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final c f4313a = new c();
+    public static final c f4479a = new c();
 
     public static final boolean d() {
         if (Build.VERSION.SDK_INT < 31 || !x.E("Spreadtrum", Build.SOC_MANUFACTURER, true)) {
@@ -23,7 +23,7 @@ public final class c {
             String lowerCase = HARDWARE.toLowerCase(locale);
             Intrinsics.checkNotNullExpressionValue(lowerCase, "toLowerCase(...)");
             if (!x.T(lowerCase, "ums", false, 2, null)) {
-                if (f4313a.c()) {
+                if (f4479a.c()) {
                     Intrinsics.checkNotNullExpressionValue(HARDWARE, "HARDWARE");
                     String lowerCase2 = HARDWARE.toLowerCase(locale);
                     Intrinsics.checkNotNullExpressionValue(lowerCase2, "toLowerCase(...)");

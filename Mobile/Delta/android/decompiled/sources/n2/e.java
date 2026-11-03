@@ -27,58 +27,58 @@ public class e {
     public static final class c implements b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final d[] f24997a;
+        public final d[] f25818a;
 
         public c(d[] dVarArr) {
-            this.f24997a = dVarArr;
+            this.f25818a = dVarArr;
         }
 
         public d[] a() {
-            return this.f24997a;
+            return this.f25818a;
         }
     }
 
     public static final class d {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final String f24998a;
+        public final String f25819a;
         public final int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final boolean f24999c;
+        public final boolean f25820c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final String f25000d;
+        public final String f25821d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final int f25001e;
+        public final int f25822e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public final int f25002f;
+        public final int f25823f;
 
         public d(String str, int i10, boolean z10, String str2, int i11, int i12) {
-            this.f24998a = str;
+            this.f25819a = str;
             this.b = i10;
-            this.f24999c = z10;
-            this.f25000d = str2;
-            this.f25001e = i11;
-            this.f25002f = i12;
+            this.f25820c = z10;
+            this.f25821d = str2;
+            this.f25822e = i11;
+            this.f25823f = i12;
         }
 
         public String a() {
-            return this.f24998a;
+            return this.f25819a;
         }
 
         public int b() {
-            return this.f25002f;
+            return this.f25823f;
         }
 
         public int c() {
-            return this.f25001e;
+            return this.f25822e;
         }
 
         public String d() {
-            return this.f25000d;
+            return this.f25821d;
         }
 
         public int e() {
@@ -86,40 +86,40 @@ public class e {
         }
 
         public boolean f() {
-            return this.f24999c;
+            return this.f25820c;
         }
     }
 
     /* JADX INFO: renamed from: n2.e$e, reason: collision with other inner class name */
-    public static final class C0433e implements b {
+    public static final class C0454e implements b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final List<v2.e> f25003a;
+        public final List<v2.e> f25824a;
         public final int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final int f25004c;
+        public final int f25825c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final String f25005d;
+        public final String f25826d;
 
-        public C0433e(List<v2.e> list, int i10, int i11, String str) {
-            this.f25003a = list;
-            this.f25004c = i10;
+        public C0454e(List<v2.e> list, int i10, int i11, String str) {
+            this.f25824a = list;
+            this.f25825c = i10;
             this.b = i11;
-            this.f25005d = str;
+            this.f25826d = str;
         }
 
         public int a() {
-            return this.f25004c;
+            return this.f25825c;
         }
 
         public List<v2.e> b() {
-            return this.f25003a;
+            return this.f25824a;
         }
 
         public String c() {
-            return this.f25005d;
+            return this.f25826d;
         }
 
         public int d() {
@@ -210,15 +210,15 @@ public class e {
     }
 
     public static b f(XmlPullParser xmlPullParser, Resources resources) throws XmlPullParserException, IOException {
-        TypedArray typedArrayObtainAttributes = resources.obtainAttributes(Xml.asAttributeSet(xmlPullParser), j2.g.f21070h);
-        String string = typedArrayObtainAttributes.getString(j2.g.f21071i);
-        String string2 = typedArrayObtainAttributes.getString(j2.g.f21076n);
-        String string3 = typedArrayObtainAttributes.getString(j2.g.f21077o);
-        String string4 = typedArrayObtainAttributes.getString(j2.g.f21073k);
-        int resourceId = typedArrayObtainAttributes.getResourceId(j2.g.f21072j, 0);
-        int integer = typedArrayObtainAttributes.getInteger(j2.g.f21074l, 1);
-        int integer2 = typedArrayObtainAttributes.getInteger(j2.g.f21075m, 500);
-        String string5 = typedArrayObtainAttributes.getString(j2.g.f21078p);
+        TypedArray typedArrayObtainAttributes = resources.obtainAttributes(Xml.asAttributeSet(xmlPullParser), j2.g.f21643h);
+        String string = typedArrayObtainAttributes.getString(j2.g.f21644i);
+        String string2 = typedArrayObtainAttributes.getString(j2.g.f21649n);
+        String string3 = typedArrayObtainAttributes.getString(j2.g.f21650o);
+        String string4 = typedArrayObtainAttributes.getString(j2.g.f21646k);
+        int resourceId = typedArrayObtainAttributes.getResourceId(j2.g.f21645j, 0);
+        int integer = typedArrayObtainAttributes.getInteger(j2.g.f21647l, 1);
+        int integer2 = typedArrayObtainAttributes.getInteger(j2.g.f21648m, 500);
+        String string5 = typedArrayObtainAttributes.getString(j2.g.f21651p);
         typedArrayObtainAttributes.recycle();
         if (string == null || string2 == null) {
             ArrayList arrayList = new ArrayList();
@@ -248,7 +248,7 @@ public class e {
             }
         }
         if (!arrayList2.isEmpty()) {
-            return new C0433e(arrayList2, integer, integer2, string5);
+            return new C0454e(arrayList2, integer, integer2, string5);
         }
         if (string3 == null) {
             throw new IllegalArgumentException("The provider font XML requires query attribute or fallback children.");
@@ -257,34 +257,34 @@ public class e {
         if (string4 != null) {
             arrayList2.add(new v2.e(string, string2, string4, listC, null, null));
         }
-        return new C0433e(arrayList2, integer, integer2, string5);
+        return new C0454e(arrayList2, integer, integer2, string5);
     }
 
     public static d g(XmlPullParser xmlPullParser, Resources resources) throws XmlPullParserException, IOException {
-        TypedArray typedArrayObtainAttributes = resources.obtainAttributes(Xml.asAttributeSet(xmlPullParser), j2.g.f21079q);
-        int i10 = j2.g.f21088z;
+        TypedArray typedArrayObtainAttributes = resources.obtainAttributes(Xml.asAttributeSet(xmlPullParser), j2.g.f21652q);
+        int i10 = j2.g.f21661z;
         if (!typedArrayObtainAttributes.hasValue(i10)) {
-            i10 = j2.g.f21081s;
+            i10 = j2.g.f21654s;
         }
         int i11 = typedArrayObtainAttributes.getInt(i10, 400);
-        int i12 = j2.g.f21086x;
+        int i12 = j2.g.f21659x;
         if (!typedArrayObtainAttributes.hasValue(i12)) {
-            i12 = j2.g.f21082t;
+            i12 = j2.g.f21655t;
         }
         boolean z10 = 1 == typedArrayObtainAttributes.getInt(i12, 0);
         int i13 = j2.g.A;
         if (!typedArrayObtainAttributes.hasValue(i13)) {
-            i13 = j2.g.f21083u;
+            i13 = j2.g.f21656u;
         }
-        int i14 = j2.g.f21087y;
+        int i14 = j2.g.f21660y;
         if (!typedArrayObtainAttributes.hasValue(i14)) {
-            i14 = j2.g.f21084v;
+            i14 = j2.g.f21657v;
         }
         String string = typedArrayObtainAttributes.getString(i14);
         int i15 = typedArrayObtainAttributes.getInt(i13, 0);
-        int i16 = j2.g.f21085w;
+        int i16 = j2.g.f21658w;
         if (!typedArrayObtainAttributes.hasValue(i16)) {
-            i16 = j2.g.f21080r;
+            i16 = j2.g.f21653r;
         }
         int resourceId = typedArrayObtainAttributes.getResourceId(i16, 0);
         String string2 = typedArrayObtainAttributes.getString(i16);

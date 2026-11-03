@@ -15,6 +15,13 @@ import androidx.p000lifecycle.t;
 import com.roblox.protocols.mediapicker.MediaPickerProtocolV2;
 import g.a;
 import g.c;
+import gt.h;
+import gt.i;
+import gt.o;
+import gt.s;
+import iu.g1;
+import iu.k;
+import iu.p0;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
@@ -24,26 +31,19 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import java.util.concurrent.atomic.AtomicBoolean;
-import jt.h;
-import jt.i;
-import jt.o;
-import jt.s;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.Intrinsics;
-import ku.g1;
-import ku.k;
-import ku.p0;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pt.m;
 
 /* JADX INFO: loaded from: classes2.dex */
 @Keep
-@Metadata(d1 = {"\u0000\u008e\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0012\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\n\bÇ\u0002\u0018\u00002\u00020\u0001:\u0001EB\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u0007\u0010\bJ\u001f\u0010\u000b\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\tH\u0002¢\u0006\u0004\b\u000b\u0010\fJ\u0017\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u000e\u001a\u00020\rH\u0002¢\u0006\u0004\b\u0010\u0010\u0011J\u0019\u0010\u0014\u001a\u00020\u00062\b\u0010\u0013\u001a\u0004\u0018\u00010\u0012H\u0002¢\u0006\u0004\b\u0014\u0010\u0015J\u0017\u0010\u0016\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u0016\u0010\bJ'\u0010\u001c\u001a\u00020\u00062\u0006\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u0019\u001a\u00020\u00172\u0006\u0010\u001b\u001a\u00020\u001aH\u0007¢\u0006\u0004\b\u001c\u0010\u001dJ\u0017\u0010 \u001a\u00020\u00062\u0006\u0010\u001f\u001a\u00020\u001eH\u0016¢\u0006\u0004\b \u0010!J\u0017\u0010\"\u001a\u00020\u00062\u0006\u0010\u001f\u001a\u00020\u001eH\u0016¢\u0006\u0004\b\"\u0010!J\u0017\u0010#\u001a\u00020\u00062\u0006\u0010\u001f\u001a\u00020\u001eH\u0016¢\u0006\u0004\b#\u0010!R\u0014\u0010$\u001a\u00020\u00178\u0002X\u0082T¢\u0006\u0006\n\u0004\b$\u0010%R\u0014\u0010&\u001a\u00020\u000f8\u0002X\u0082T¢\u0006\u0006\n\u0004\b&\u0010'R\u001e\u0010)\u001a\n\u0012\u0004\u0012\u00020\u0004\u0018\u00010(8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b)\u0010*R\u0018\u0010,\u001a\u0004\u0018\u00010+8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b,\u0010-R\u0018\u0010/\u001a\u0004\u0018\u00010.8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b/\u00100R\u0016\u00102\u001a\u0002018\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b2\u00103R\u0016\u00105\u001a\u0002048\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b5\u00106R\u001c\u00108\u001a\b\u0012\u0004\u0012\u00020\u0017078\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\b8\u00109R\u001c\u0010;\u001a\b\u0012\u0004\u0012\u00020:078\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\b;\u00109R\u001b\u0010A\u001a\u00020<8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b=\u0010>\u001a\u0004\b?\u0010@R\u001a\u0010B\u001a\u0002018FX\u0087\u0004¢\u0006\f\u0012\u0004\bD\u0010\u0003\u001a\u0004\bB\u0010C¨\u0006F"}, d2 = {"Lcom/roblox/protocols/mediapicker/MediaPickerProtocolV2;", "Landroidx/lifecycle/f;", "<init>", "()V", "Landroid/content/Context;", "context", "", "launchCaptureImage", "(Landroid/content/Context;)V", "Landroidx/activity/result/ActivityResult;", "result", "onCaptureImageIntentResult", "(Landroid/content/Context;Landroidx/activity/result/ActivityResult;)V", "Landroid/graphics/BitmapFactory$Options;", "options", "", "calculateInSampleSize", "(Landroid/graphics/BitmapFactory$Options;)I", "", "byteArray", "onResponse", "([B)V", "onRequestCameraImage", "", "assetType", "sourceType", "", "nativeListenerPtr", "onMediaRequest", "(Ljava/lang/String;Ljava/lang/String;J)V", "Landroidx/lifecycle/s;", "owner", "onCreate", "(Landroidx/lifecycle/s;)V", "onResume", "onDestroy", "TAG", "Ljava/lang/String;", "IMAGE_SAMPLE_SIZE", "I", "Ljava/lang/ref/WeakReference;", "contextRef", "Ljava/lang/ref/WeakReference;", "Lcom/roblox/protocols/mediapicker/MediaPickerProtocolV2$a;", "mediaRequest", "Lcom/roblox/protocols/mediapicker/MediaPickerProtocolV2$a;", "Landroid/net/Uri;", "photoUri", "Landroid/net/Uri;", "", "initialized", "Z", "Ljava/util/concurrent/atomic/AtomicBoolean;", "_isCapturingMedia", "Ljava/util/concurrent/atomic/AtomicBoolean;", "Lg/c;", "requestPermissionLauncher", "Lg/c;", "Landroid/content/Intent;", "captureImageLauncher", "Ljava/text/SimpleDateFormat;", "dateFormater$delegate", "Ljt/h;", "getDateFormater", "()Ljava/text/SimpleDateFormat;", "dateFormater", "isCapturingMedia", "()Z", "isCapturingMedia$annotations", "a", "robloxengine_commonDefaultProtectionRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000\u008e\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0012\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\n\bÇ\u0002\u0018\u00002\u00020\u0001:\u0001EB\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u0007\u0010\bJ\u001f\u0010\u000b\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\tH\u0002¢\u0006\u0004\b\u000b\u0010\fJ\u0017\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u000e\u001a\u00020\rH\u0002¢\u0006\u0004\b\u0010\u0010\u0011J\u0019\u0010\u0014\u001a\u00020\u00062\b\u0010\u0013\u001a\u0004\u0018\u00010\u0012H\u0002¢\u0006\u0004\b\u0014\u0010\u0015J\u0017\u0010\u0016\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u0016\u0010\bJ'\u0010\u001c\u001a\u00020\u00062\u0006\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u0019\u001a\u00020\u00172\u0006\u0010\u001b\u001a\u00020\u001aH\u0007¢\u0006\u0004\b\u001c\u0010\u001dJ\u0017\u0010 \u001a\u00020\u00062\u0006\u0010\u001f\u001a\u00020\u001eH\u0016¢\u0006\u0004\b \u0010!J\u0017\u0010\"\u001a\u00020\u00062\u0006\u0010\u001f\u001a\u00020\u001eH\u0016¢\u0006\u0004\b\"\u0010!J\u0017\u0010#\u001a\u00020\u00062\u0006\u0010\u001f\u001a\u00020\u001eH\u0016¢\u0006\u0004\b#\u0010!R\u0014\u0010$\u001a\u00020\u00178\u0002X\u0082T¢\u0006\u0006\n\u0004\b$\u0010%R\u0014\u0010&\u001a\u00020\u000f8\u0002X\u0082T¢\u0006\u0006\n\u0004\b&\u0010'R\u001e\u0010)\u001a\n\u0012\u0004\u0012\u00020\u0004\u0018\u00010(8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b)\u0010*R\u0018\u0010,\u001a\u0004\u0018\u00010+8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b,\u0010-R\u0018\u0010/\u001a\u0004\u0018\u00010.8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b/\u00100R\u0016\u00102\u001a\u0002018\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b2\u00103R\u0016\u00105\u001a\u0002048\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b5\u00106R\u001c\u00108\u001a\b\u0012\u0004\u0012\u00020\u0017078\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\b8\u00109R\u001c\u0010;\u001a\b\u0012\u0004\u0012\u00020:078\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\b;\u00109R\u001b\u0010A\u001a\u00020<8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b=\u0010>\u001a\u0004\b?\u0010@R\u001a\u0010B\u001a\u0002018FX\u0087\u0004¢\u0006\f\u0012\u0004\bD\u0010\u0003\u001a\u0004\bB\u0010C¨\u0006F"}, d2 = {"Lcom/roblox/protocols/mediapicker/MediaPickerProtocolV2;", "Landroidx/lifecycle/f;", "<init>", "()V", "Landroid/content/Context;", "context", "", "launchCaptureImage", "(Landroid/content/Context;)V", "Landroidx/activity/result/ActivityResult;", "result", "onCaptureImageIntentResult", "(Landroid/content/Context;Landroidx/activity/result/ActivityResult;)V", "Landroid/graphics/BitmapFactory$Options;", "options", "", "calculateInSampleSize", "(Landroid/graphics/BitmapFactory$Options;)I", "", "byteArray", "onResponse", "([B)V", "onRequestCameraImage", "", "assetType", "sourceType", "", "nativeListenerPtr", "onMediaRequest", "(Ljava/lang/String;Ljava/lang/String;J)V", "Landroidx/lifecycle/s;", "owner", "onCreate", "(Landroidx/lifecycle/s;)V", "onResume", "onDestroy", "TAG", "Ljava/lang/String;", "IMAGE_SAMPLE_SIZE", "I", "Ljava/lang/ref/WeakReference;", "contextRef", "Ljava/lang/ref/WeakReference;", "Lcom/roblox/protocols/mediapicker/MediaPickerProtocolV2$a;", "mediaRequest", "Lcom/roblox/protocols/mediapicker/MediaPickerProtocolV2$a;", "Landroid/net/Uri;", "photoUri", "Landroid/net/Uri;", "", "initialized", "Z", "Ljava/util/concurrent/atomic/AtomicBoolean;", "_isCapturingMedia", "Ljava/util/concurrent/atomic/AtomicBoolean;", "Lg/c;", "requestPermissionLauncher", "Lg/c;", "Landroid/content/Intent;", "captureImageLauncher", "Ljava/text/SimpleDateFormat;", "dateFormater$delegate", "Lgt/h;", "getDateFormater", "()Ljava/text/SimpleDateFormat;", "dateFormater", "isCapturingMedia", "()Z", "isCapturingMedia$annotations", "a", "robloxengine_commonDefaultProtectionRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class MediaPickerProtocolV2 implements f {
     private static final int IMAGE_SAMPLE_SIZE = 640;
 
@@ -70,7 +70,7 @@ public final class MediaPickerProtocolV2 implements f {
 
     /* JADX INFO: renamed from: dateFormater$delegate, reason: from kotlin metadata */
     @NotNull
-    private static final h dateFormater = i.b(new Function0() { // from class: ll.e
+    private static final h dateFormater = i.b(new Function0() { // from class: jl.e
         @Override // kotlin.jvm.functions.Function0
         public final Object invoke() {
             return MediaPickerProtocolV2.dateFormater_delegate$lambda$0();
@@ -132,45 +132,45 @@ public final class MediaPickerProtocolV2 implements f {
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.roblox.protocols.mediapicker.MediaPickerProtocolV2$onCreate$2$1", f = "MediaPickerProtocolV2.kt", l = {}, m = "invokeSuspend", v = 1)
-    public static final class b extends m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.roblox.protocols.mediapicker.MediaPickerProtocolV2$onCreate$2$1", f = "MediaPickerProtocolV2.kt", l = {}, m = "invokeSuspend", v = 1)
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class b extends m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f9712t;
+        public int f9793t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public final /* synthetic */ j.b f9713u;
+        public final /* synthetic */ j.b f9794u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ ActivityResult f9714v;
+        public final /* synthetic */ ActivityResult f9795v;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public b(j.b bVar, ActivityResult activityResult, nt.b<? super b> bVar2) {
+        public b(j.b bVar, ActivityResult activityResult, lt.b<? super b> bVar2) {
             super(2, bVar2);
-            this.f9713u = bVar;
-            this.f9714v = activityResult;
+            this.f9794u = bVar;
+            this.f9795v = activityResult;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return new b(this.f9713u, this.f9714v, bVar);
-        }
-
-        @Override // pt.a
-        public final Object invokeSuspend(Object obj) {
-            ot.c.e();
-            if (this.f9712t != 0) {
-                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-            }
-            o.b(obj);
-            MediaPickerProtocolV2.INSTANCE.onCaptureImageIntentResult(this.f9713u, this.f9714v);
-            return Unit.f22483a;
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return new b(this.f9794u, this.f9795v, bVar);
         }
 
         @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((b) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((b) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
+        public final Object invokeSuspend(Object obj) {
+            mt.c.e();
+            if (this.f9793t != 0) {
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            }
+            o.b(obj);
+            MediaPickerProtocolV2.INSTANCE.onCaptureImageIntentResult(this.f9794u, this.f9795v);
+            return Unit.f22938a;
         }
     }
 
@@ -255,12 +255,12 @@ public final class MediaPickerProtocolV2 implements f {
                             try {
                                 BitmapFactory.decodeStream(inputStreamOpenInputStream, null, options);
                                 Log.d(TAG, "Captured image dimensions: " + options.outWidth + "x" + options.outHeight);
-                                ut.c.a(inputStreamOpenInputStream, null);
+                                st.c.a(inputStreamOpenInputStream, null);
                             } catch (Throwable th2) {
                                 try {
                                     throw th2;
                                 } catch (Throwable th3) {
-                                    ut.c.a(inputStreamOpenInputStream, th2);
+                                    st.c.a(inputStreamOpenInputStream, th2);
                                     throw th3;
                                 }
                             }
@@ -278,19 +278,19 @@ public final class MediaPickerProtocolV2 implements f {
                                     bitmapDecodeStream.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
                                     mediaPickerProtocolV2.onResponse(byteArrayOutputStream.toByteArray());
                                     try {
-                                        Unit unit = Unit.f22483a;
+                                        Unit unit = Unit.f22938a;
                                         z10 = true;
                                     } catch (Throwable th4) {
                                         th = th4;
                                         try {
                                             throw th;
                                         } catch (Throwable th5) {
-                                            ut.c.a(inputStreamOpenInputStream2, th);
+                                            st.c.a(inputStreamOpenInputStream2, th);
                                             throw th5;
                                         }
                                     }
                                 }
-                                ut.c.a(inputStreamOpenInputStream2, null);
+                                st.c.a(inputStreamOpenInputStream2, null);
                             } catch (Throwable th6) {
                                 th = th6;
                             }
@@ -366,13 +366,13 @@ public final class MediaPickerProtocolV2 implements f {
             return;
         }
         contextRef = new WeakReference<>(bVar);
-        requestPermissionLauncher = bVar.h(new h.h(), new a() { // from class: ll.c
+        requestPermissionLauncher = bVar.h(new h.h(), new a() { // from class: jl.c
             @Override // g.a
             public final void a(Object obj) throws IOException {
                 MediaPickerProtocolV2.onCreate$lambda$0(bVar, ((Boolean) obj).booleanValue());
             }
         });
-        captureImageLauncher = bVar.h(new h.i(), new a() { // from class: ll.d
+        captureImageLauncher = bVar.h(new h.i(), new a() { // from class: jl.d
             @Override // g.a
             public final void a(Object obj) {
                 MediaPickerProtocolV2.onCreate$lambda$1(bVar, (ActivityResult) obj);

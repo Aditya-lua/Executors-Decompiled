@@ -6,11 +6,11 @@ import android.content.Intent;
 public final class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final boolean f23112a;
+    public final boolean f23506a;
     public final Intent b;
 
     public a(boolean z10, Intent intent) {
-        this.f23112a = z10;
+        this.f23506a = z10;
         this.b = intent;
     }
 
@@ -23,7 +23,7 @@ public final class a {
     }
 
     public final boolean c() {
-        return this.f23112a;
+        return this.f23506a;
     }
 
     public final Intent d() {

@@ -18,11 +18,11 @@ public interface d extends AutoCloseable {
     }
 
     @SuppressLint({"ArrayReturn"})
-    a[] H1();
+    a[] E1();
 
-    i1 H2();
+    void I0(Rect rect);
 
-    void M0(Rect rect);
+    i1 I2();
 
     @Override // java.lang.AutoCloseable
     void close();

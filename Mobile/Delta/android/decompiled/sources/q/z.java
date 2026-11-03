@@ -10,7 +10,7 @@ public final class z {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public TextView f29156a;
+    public TextView f29509a;
     public TextClassifier b;
 
     public static final class a {
@@ -22,13 +22,13 @@ public final class z {
     }
 
     public z(@NonNull TextView textView) {
-        this.f29156a = (TextView) x2.g.g(textView);
+        this.f29509a = (TextView) x2.g.g(textView);
     }
 
     @NonNull
     public TextClassifier a() {
         TextClassifier textClassifier = this.b;
-        return textClassifier == null ? a.a(this.f29156a) : textClassifier;
+        return textClassifier == null ? a.a(this.f29509a) : textClassifier;
     }
 
     public void b(TextClassifier textClassifier) {

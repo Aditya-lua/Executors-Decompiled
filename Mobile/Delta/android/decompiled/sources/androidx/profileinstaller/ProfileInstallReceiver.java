@@ -11,29 +11,29 @@ import e3.n;
 /* JADX INFO: loaded from: classes.dex */
 public class ProfileInstallReceiver extends BroadcastReceiver {
 
-    public class a implements c.InterfaceC0051c {
+    public class a implements c.InterfaceC0047c {
         public a() {
         }
 
-        @Override // androidx.profileinstaller.c.InterfaceC0051c
+        @Override // androidx.profileinstaller.c.InterfaceC0047c
         public void a(int i10, Object obj) {
             c.b.a(i10, obj);
             ProfileInstallReceiver.this.setResultCode(i10);
         }
 
-        @Override // androidx.profileinstaller.c.InterfaceC0051c
+        @Override // androidx.profileinstaller.c.InterfaceC0047c
         public void b(int i10, Object obj) {
             c.b.b(i10, obj);
         }
     }
 
-    public static void a(int i10, @NonNull c.InterfaceC0051c interfaceC0051c) {
+    public static void a(int i10, @NonNull c.InterfaceC0047c interfaceC0047c) {
         Process.sendSignal(i10, 10);
-        interfaceC0051c.a(12, null);
+        interfaceC0047c.a(12, null);
     }
 
-    public static void b(@NonNull c.InterfaceC0051c interfaceC0051c) {
-        a(Process.myPid(), interfaceC0051c);
+    public static void b(@NonNull c.InterfaceC0047c interfaceC0047c) {
+        a(Process.myPid(), interfaceC0047c);
     }
 
     @Override // android.content.BroadcastReceiver

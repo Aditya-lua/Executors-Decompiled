@@ -73,7 +73,7 @@ public final class SignalCredentialStateController extends CredentialProviderCon
                     SignalCredentialStateController.invokePlayServices$lambda$2$lambda$0(pVar);
                 }
             });
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
         final x0 x0VarConvertResponseToCredentialManager = signalCredentialStateController.convertResponseToCredentialManager(signalCredentialStateResponse);
         executor.execute(new Runnable() { // from class: n3.f
@@ -82,7 +82,7 @@ public final class SignalCredentialStateController extends CredentialProviderCon
                 pVar.onResult(x0VarConvertResponseToCredentialManager);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */

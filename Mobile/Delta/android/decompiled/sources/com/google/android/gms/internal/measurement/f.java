@@ -11,22 +11,22 @@ import java.util.TreeMap;
 public final class f implements Iterable, q, m {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final SortedMap f6435a;
+    public final SortedMap f6508a;
     public final Map b;
 
     public f() {
-        this.f6435a = new TreeMap();
+        this.f6508a = new TreeMap();
         this.b = new TreeMap();
     }
 
     @Override // com.google.android.gms.internal.measurement.q
     public final q a() {
         f fVar = new f();
-        for (Map.Entry entry : this.f6435a.entrySet()) {
+        for (Map.Entry entry : this.f6508a.entrySet()) {
             if (entry.getValue() instanceof m) {
-                fVar.f6435a.put((Integer) entry.getKey(), (q) entry.getValue());
+                fVar.f6508a.put((Integer) entry.getKey(), (q) entry.getValue());
             } else {
-                fVar.f6435a.put((Integer) entry.getKey(), ((q) entry.getValue()).a());
+                fVar.f6508a.put((Integer) entry.getKey(), ((q) entry.getValue()).a());
             }
         }
         return fVar;
@@ -38,7 +38,7 @@ public final class f implements Iterable, q, m {
         if ("length".equals(str)) {
             return new j(Double.valueOf(k()));
         }
-        return (!g(str) || (qVar = (q) this.b.get(str)) == null) ? q.f6743zo : qVar;
+        return (!g(str) || (qVar = (q) this.b.get(str)) == null) ? q.f6816yo : qVar;
     }
 
     @Override // com.google.android.gms.internal.measurement.m
@@ -66,9 +66,9 @@ public final class f implements Iterable, q, m {
         if (k() != fVar.k()) {
             return false;
         }
-        SortedMap sortedMap = this.f6435a;
+        SortedMap sortedMap = this.f6508a;
         if (sortedMap.isEmpty()) {
-            return fVar.f6435a.isEmpty();
+            return fVar.f6508a.isEmpty();
         }
         for (int iIntValue = ((Integer) sortedMap.firstKey()).intValue(); iIntValue <= ((Integer) sortedMap.lastKey()).intValue(); iIntValue++) {
             if (!m(iIntValue).equals(fVar.m(iIntValue))) {
@@ -92,11 +92,11 @@ public final class f implements Iterable, q, m {
     }
 
     public final int hashCode() {
-        return this.f6435a.hashCode() * 31;
+        return this.f6508a.hashCode() * 31;
     }
 
     public final Iterator i() {
-        return this.f6435a.keySet().iterator();
+        return this.f6508a.keySet().iterator();
     }
 
     @Override // java.lang.Iterable
@@ -105,7 +105,7 @@ public final class f implements Iterable, q, m {
     }
 
     public final int k() {
-        SortedMap sortedMap = this.f6435a;
+        SortedMap sortedMap = this.f6508a;
         if (sortedMap.isEmpty()) {
             return 0;
         }
@@ -113,13 +113,13 @@ public final class f implements Iterable, q, m {
     }
 
     public final int l() {
-        return this.f6435a.size();
+        return this.f6508a.size();
     }
 
     public final q m(int i10) {
         q qVar;
         if (i10 < k()) {
-            return (!t(i10) || (qVar = (q) this.f6435a.get(Integer.valueOf(i10))) == null) ? q.f6743zo : qVar;
+            return (!t(i10) || (qVar = (q) this.f6508a.get(Integer.valueOf(i10))) == null) ? q.f6816yo : qVar;
         }
         throw new IndexOutOfBoundsException("Attempting to get element outside of current array");
     }
@@ -135,15 +135,15 @@ public final class f implements Iterable, q, m {
             throw new IndexOutOfBoundsException(sb2.toString());
         }
         if (qVar == null) {
-            this.f6435a.remove(Integer.valueOf(i10));
+            this.f6508a.remove(Integer.valueOf(i10));
         } else {
-            this.f6435a.put(Integer.valueOf(i10), qVar);
+            this.f6508a.put(Integer.valueOf(i10), qVar);
         }
     }
 
     public final boolean t(int i10) {
         if (i10 >= 0) {
-            SortedMap sortedMap = this.f6435a;
+            SortedMap sortedMap = this.f6508a;
             if (i10 <= ((Integer) sortedMap.lastKey()).intValue()) {
                 return sortedMap.containsKey(Integer.valueOf(i10));
             }
@@ -159,7 +159,7 @@ public final class f implements Iterable, q, m {
     }
 
     public final void u() {
-        this.f6435a.clear();
+        this.f6508a.clear();
     }
 
     public final void x(int i10, q qVar) {
@@ -173,7 +173,7 @@ public final class f implements Iterable, q, m {
             p(i10, qVar);
             return;
         }
-        SortedMap sortedMap = this.f6435a;
+        SortedMap sortedMap = this.f6508a;
         for (int iIntValue = ((Integer) sortedMap.lastKey()).intValue(); iIntValue >= i10; iIntValue--) {
             Integer numValueOf = Integer.valueOf(iIntValue);
             q qVar2 = (q) sortedMap.get(numValueOf);
@@ -186,7 +186,7 @@ public final class f implements Iterable, q, m {
     }
 
     public final void y(int i10) {
-        SortedMap sortedMap = this.f6435a;
+        SortedMap sortedMap = this.f6508a;
         int iIntValue = ((Integer) sortedMap.lastKey()).intValue();
         if (i10 > iIntValue || i10 < 0) {
             return;
@@ -198,7 +198,7 @@ public final class f implements Iterable, q, m {
             if (sortedMap.containsKey(numValueOf) || i11 < 0) {
                 return;
             }
-            sortedMap.put(numValueOf, q.f6743zo);
+            sortedMap.put(numValueOf, q.f6816yo);
             return;
         }
         while (true) {
@@ -218,7 +218,7 @@ public final class f implements Iterable, q, m {
     public final String z(String str) {
         String str2;
         StringBuilder sb2 = new StringBuilder();
-        if (!this.f6435a.isEmpty()) {
+        if (!this.f6508a.isEmpty()) {
             int i10 = 0;
             while (true) {
                 str2 = str == null ? "" : str;
@@ -244,7 +244,7 @@ public final class f implements Iterable, q, m {
 
     @Override // com.google.android.gms.internal.measurement.q
     public final Double zzd() {
-        SortedMap sortedMap = this.f6435a;
+        SortedMap sortedMap = this.f6508a;
         if (sortedMap.size() == 1) {
             return m(0).zzd();
         }
@@ -258,7 +258,7 @@ public final class f implements Iterable, q, m {
 
     @Override // com.google.android.gms.internal.measurement.q
     public final Iterator zzf() {
-        return new d(this, this.f6435a.keySet().iterator(), this.b.keySet().iterator());
+        return new d(this, this.f6508a.keySet().iterator(), this.b.keySet().iterator());
     }
 
     public f(List list) {

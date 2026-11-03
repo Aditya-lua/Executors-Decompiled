@@ -17,7 +17,7 @@ import android.widget.ImageView;
 public class c0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final boolean f27082a;
+    public static final boolean f27647a;
 
     public static class a {
         public static Bitmap a(Picture picture) {
@@ -28,30 +28,30 @@ public class c0 {
     public static class b implements TypeEvaluator<Matrix> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final float[] f27083a = new float[9];
+        public final float[] f27648a = new float[9];
         public final float[] b = new float[9];
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final Matrix f27084c = new Matrix();
+        public final Matrix f27649c = new Matrix();
 
         @Override // android.animation.TypeEvaluator
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public Matrix evaluate(float f10, Matrix matrix, Matrix matrix2) {
-            matrix.getValues(this.f27083a);
+            matrix.getValues(this.f27648a);
             matrix2.getValues(this.b);
             for (int i10 = 0; i10 < 9; i10++) {
                 float[] fArr = this.b;
                 float f11 = fArr[i10];
-                float f12 = this.f27083a[i10];
+                float f12 = this.f27648a[i10];
                 fArr[i10] = f12 + ((f11 - f12) * f10);
             }
-            this.f27084c.setValues(this.b);
-            return this.f27084c;
+            this.f27649c.setValues(this.b);
+            return this.f27649c;
         }
     }
 
     static {
-        f27082a = Build.VERSION.SDK_INT >= 28;
+        f27647a = Build.VERSION.SDK_INT >= 28;
     }
 
     public static View a(ViewGroup viewGroup, View view, View view2) {
@@ -101,7 +101,7 @@ public class c0 {
             int iRound4 = Math.round(iRound2 * fMin);
             matrix.postTranslate(-rectF.left, -rectF.top);
             matrix.postScale(fMin, fMin);
-            if (f27082a) {
+            if (f27647a) {
                 Picture picture = new Picture();
                 Canvas canvasBeginRecording = picture.beginRecording(iRound3, iRound4);
                 canvasBeginRecording.concat(matrix);

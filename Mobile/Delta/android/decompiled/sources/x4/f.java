@@ -25,17 +25,17 @@ public abstract class f<T> {
             for (T t8 : entities) {
                 if (t8 != null) {
                     a(dVarR3, t8);
-                    dVarR3.g3();
+                    dVarR3.i3();
                     dVarR3.reset();
                 }
             }
-            Unit unit = Unit.f22483a;
-            xt.a.a(dVarR3, null);
+            Unit unit = Unit.f22938a;
+            vt.a.a(dVarR3, null);
         } catch (Throwable th2) {
             try {
                 throw th2;
             } catch (Throwable th3) {
-                xt.a.a(dVarR3, th2);
+                vt.a.a(dVarR3, th2);
                 throw th3;
             }
         }
@@ -49,13 +49,13 @@ public abstract class f<T> {
         f5.d dVarR3 = connection.r3(b());
         try {
             a(dVarR3, entity);
-            dVarR3.g3();
-            xt.a.a(dVarR3, null);
+            dVarR3.i3();
+            vt.a.a(dVarR3, null);
         } catch (Throwable th2) {
             try {
                 throw th2;
             } catch (Throwable th3) {
-                xt.a.a(dVarR3, th2);
+                vt.a.a(dVarR3, th2);
                 throw th3;
             }
         }
@@ -74,17 +74,17 @@ public abstract class f<T> {
                 Object next = itA.next();
                 if (next != null) {
                     a(dVarR3, next);
-                    dVarR3.g3();
+                    dVarR3.i3();
                     dVarR3.reset();
                 }
             }
-            Unit unit = Unit.f22483a;
-            xt.a.a(dVarR3, null);
+            Unit unit = Unit.f22938a;
+            vt.a.a(dVarR3, null);
         } catch (Throwable th2) {
             try {
                 throw th2;
             } catch (Throwable th3) {
-                xt.a.a(dVarR3, th2);
+                vt.a.a(dVarR3, th2);
                 throw th3;
             }
         }
@@ -98,14 +98,14 @@ public abstract class f<T> {
         f5.d dVarR3 = connection.r3(b());
         try {
             a(dVarR3, entity);
-            dVarR3.g3();
-            xt.a.a(dVarR3, null);
+            dVarR3.i3();
+            vt.a.a(dVarR3, null);
             return c5.i.a(connection);
         } catch (Throwable th2) {
             try {
                 throw th2;
             } catch (Throwable th3) {
-                xt.a.a(dVarR3, th2);
+                vt.a.a(dVarR3, th2);
                 throw th3;
             }
         }

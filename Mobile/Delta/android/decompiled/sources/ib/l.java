@@ -13,9 +13,9 @@ public final class l extends e {
 
     @Override // ib.e
     public final void b() {
-        o oVar = this.b.f20456a;
+        o oVar = this.b.f20572a;
         o.s(oVar);
-        oVar.f20469m = null;
-        oVar.f20463g = false;
+        oVar.f20585m = null;
+        oVar.f20579g = false;
     }
 }

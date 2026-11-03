@@ -6,9 +6,9 @@ public enum i0 {
 
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f16405a;
+    public final int f17001a;
 
     i0(int i10) {
-        this.f16405a = i10;
+        this.f17001a = i10;
     }
 }

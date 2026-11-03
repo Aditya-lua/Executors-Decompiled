@@ -8,11 +8,11 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public class a extends d {
     @Override // ga.e
-    public void D0(DataHolder dataHolder) {
+    public void F0(DataHolder dataHolder) {
     }
 
     @Override // ga.e
-    public void I(DataHolder dataHolder) {
+    public void G(DataHolder dataHolder) {
     }
 
     @Override // ga.e
@@ -21,10 +21,6 @@ public class a extends d {
 
     @Override // ga.e
     public void K0(DataHolder dataHolder) {
-    }
-
-    @Override // ga.e
-    public void O0(DataHolder dataHolder) {
     }
 
     @Override // ga.e
@@ -40,27 +36,31 @@ public class a extends d {
     }
 
     @Override // ga.e
+    public void T0(int i10, String str) {
+    }
+
+    @Override // ga.e
+    public void U0(Status status, String str) {
+    }
+
+    @Override // ga.e
     public void U1(Status status, String str, List list) {
     }
 
     @Override // ga.e
-    public void W0(int i10, String str) {
+    public void X0(DataHolder dataHolder) {
     }
 
     @Override // ga.e
-    public void X0(Status status, String str) {
-    }
-
-    @Override // ga.e
-    public void a1(DataHolder dataHolder) {
-    }
-
-    @Override // ga.e
-    public void c0(DataHolder dataHolder, DataHolder dataHolder2) {
+    public void a0(DataHolder dataHolder, DataHolder dataHolder2) {
     }
 
     @Override // ga.e
     public void e() {
+    }
+
+    @Override // ga.e
+    public void k1(DataHolder dataHolder) {
     }
 
     @Override // ga.e
@@ -72,10 +72,10 @@ public class a extends d {
     }
 
     @Override // ga.e
-    public void o1(DataHolder dataHolder) {
+    public void r0(DataHolder dataHolder) {
     }
 
     @Override // ga.e
-    public void t0(DataHolder dataHolder) {
+    public void z0(DataHolder dataHolder) {
     }
 }

@@ -26,12 +26,12 @@ public final class AFa1qSDK {
     public String AFLogger;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public Map<String, String> f5224d;
+    public Map<String, String> f5297d;
     public String[] force;
     public DeepLinkListener unregisterClient;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    private final AFc1bSDK f5225v;
+    private final AFc1bSDK f5298v;
 
     @NonNull
     public List<List<String>> registerClient = new ArrayList();
@@ -39,10 +39,10 @@ public final class AFa1qSDK {
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
     @NonNull
-    public final List<String> f5226w = new ArrayList();
+    public final List<String> f5299w = new ArrayList();
 
     public AFa1qSDK(@NonNull AFc1bSDK aFc1bSDK) {
-        this.f5225v = aFc1bSDK;
+        this.f5298v = aFc1bSDK;
     }
 
     private Uri d_(Object obj, Iterator<String> it) {
@@ -124,9 +124,9 @@ public final class AFa1qSDK {
         boolean z10;
         String string;
         Uri uriD_;
-        AFc1aSDK aFc1aSDK = (AFc1aSDK) this.f5225v;
+        AFc1aSDK aFc1aSDK = (AFc1aSDK) this.f5298v;
         if (context != null) {
-            aFc1aSDK.f5240d.f5305d = context.getApplicationContext();
+            aFc1aSDK.f5313d.f5378d = context.getApplicationContext();
         }
         if (intent == null) {
             AFLogger.INSTANCE.d(LogTag.DDL, "Intent is null, skipping deeplink processing");
@@ -175,32 +175,32 @@ public final class AFa1qSDK {
                         AFLogger.INSTANCE.d(LogTag.DDL, "No deep link detected");
                     }
                 }
-                if (!z10 && this.unregisterClient != null && this.f5225v.AFLogger().AFKeystoreWrapper.AFLogger("appsFlyerCount", 0) == 0 && !this.f5225v.AFKeystoreWrapper().AFKeystoreWrapper("ddl_sent")) {
-                    this.f5225v.afWarnLog().d(new AFe1fSDK(this.f5225v));
+                if (!z10 && this.unregisterClient != null && this.f5298v.AFLogger().AFKeystoreWrapper.AFLogger("appsFlyerCount", 0) == 0 && !this.f5298v.AFKeystoreWrapper().AFKeystoreWrapper("ddl_sent")) {
+                    this.f5298v.afWarnLog().d(new AFe1fSDK(this.f5298v));
                 }
                 if (!z10) {
                     AFLogger();
                 }
-                this.f5225v.AFKeystoreWrapper().registerClient("ddl_sent", true);
+                this.f5298v.AFKeystoreWrapper().registerClient("ddl_sent", true);
             }
             AFLogger.INSTANCE.d(LogTag.DDL, "skipping re-use of previously consumed deeplink w/af_consumed");
         }
         z10 = false;
         if (!z10) {
-            this.f5225v.afWarnLog().d(new AFe1fSDK(this.f5225v));
+            this.f5298v.afWarnLog().d(new AFe1fSDK(this.f5298v));
         }
         if (!z10) {
             AFLogger();
         }
-        this.f5225v.AFKeystoreWrapper().registerClient("ddl_sent", true);
+        this.f5298v.AFKeystoreWrapper().registerClient("ddl_sent", true);
     }
 
     public final void c_(AFa1kSDK aFa1kSDK, Uri uri) {
-        if (this.f5225v.valueOf().f5305d != null) {
-            if (this.f5226w.isEmpty()) {
+        if (this.f5298v.valueOf().f5378d != null) {
+            if (this.f5299w.isEmpty()) {
                 f_(aFa1kSDK, uri, null);
             } else {
-                this.f5225v.afWarnLog().d(new AFf1zSDK(this, aFa1kSDK, uri, this.f5226w));
+                this.f5298v.afWarnLog().d(new AFf1zSDK(this, aFa1kSDK, uri, this.f5299w));
             }
         }
     }
@@ -224,10 +224,10 @@ public final class AFa1qSDK {
         if (!aFa1kSDK.d.containsKey("af_deeplink")) {
             String strRegisterClient = registerClient(uri.toString());
             String str = this.AFLogger;
-            if (str != null && this.f5224d != null && strRegisterClient.contains(str)) {
+            if (str != null && this.f5297d != null && strRegisterClient.contains(str)) {
                 Uri.Builder builderBuildUpon = Uri.parse(strRegisterClient).buildUpon();
                 Uri.Builder builderBuildUpon2 = Uri.EMPTY.buildUpon();
-                for (Map.Entry<String, String> entry : this.f5224d.entrySet()) {
+                for (Map.Entry<String, String> entry : this.f5297d.entrySet()) {
                     builderBuildUpon.appendQueryParameter(entry.getKey(), entry.getValue());
                     builderBuildUpon2.appendQueryParameter(entry.getKey(), entry.getValue());
                 }
@@ -253,9 +253,9 @@ public final class AFa1qSDK {
         if (uri2 != null) {
             map.put("original_link", uri2.toString());
         }
-        AFj1qSDK.W_(this.f5225v.AFLogger().r_(), map, uri);
-        AFe1aSDK aFe1aSDK = new AFe1aSDK(this.f5225v, UUID.randomUUID(), uri);
-        if (aFe1aSDK.f5306v) {
+        AFj1qSDK.W_(this.f5298v.AFLogger().r_(), map, uri);
+        AFe1aSDK aFe1aSDK = new AFe1aSDK(this.f5298v, UUID.randomUUID(), uri);
+        if (aFe1aSDK.f5379v) {
             Boolean bool = Boolean.TRUE;
             Intrinsics.checkNotNullParameter("isBrandedDomain", "");
             aFa1kSDK.d.put("isBrandedDomain", bool);
@@ -281,7 +281,7 @@ public final class AFa1qSDK {
                     AFa1qSDK.this.AFLogger(map);
                 }
             };
-            this.f5225v.afWarnLog().d(aFe1aSDK);
+            this.f5298v.afWarnLog().d(aFe1aSDK);
         }
     }
 
@@ -305,7 +305,7 @@ public final class AFa1qSDK {
 
     private void AFLogger() {
         try {
-            this.f5225v.setAppInviteOneLink().d();
+            this.f5298v.setAppInviteOneLink().d();
         } catch (Throwable th2) {
             AFLogger aFLogger = AFLogger.INSTANCE;
             LogTag logTag = LogTag.DDL;

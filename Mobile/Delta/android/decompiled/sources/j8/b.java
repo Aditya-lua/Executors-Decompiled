@@ -4,14 +4,14 @@ package j8;
 public final class b extends k {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final long f21115a;
+    public final long f21688a;
     public final b8.o b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final b8.i f21116c;
+    public final b8.i f21689c;
 
     public b(long j10, b8.o oVar, b8.i iVar) {
-        this.f21115a = j10;
+        this.f21688a = j10;
         if (oVar == null) {
             throw new NullPointerException("Null transportContext");
         }
@@ -19,17 +19,17 @@ public final class b extends k {
         if (iVar == null) {
             throw new NullPointerException("Null event");
         }
-        this.f21116c = iVar;
+        this.f21689c = iVar;
     }
 
     @Override // j8.k
     public b8.i b() {
-        return this.f21116c;
+        return this.f21689c;
     }
 
     @Override // j8.k
     public long c() {
-        return this.f21115a;
+        return this.f21688a;
     }
 
     @Override // j8.k
@@ -43,7 +43,7 @@ public final class b extends k {
         }
         if (obj instanceof k) {
             k kVar = (k) obj;
-            if (this.f21115a == kVar.c() && this.b.equals(kVar.d()) && this.f21116c.equals(kVar.b())) {
+            if (this.f21688a == kVar.c() && this.b.equals(kVar.d()) && this.f21689c.equals(kVar.b())) {
                 return true;
             }
         }
@@ -51,11 +51,11 @@ public final class b extends k {
     }
 
     public int hashCode() {
-        long j10 = this.f21115a;
-        return ((((((int) (j10 ^ (j10 >>> 32))) ^ 1000003) * 1000003) ^ this.b.hashCode()) * 1000003) ^ this.f21116c.hashCode();
+        long j10 = this.f21688a;
+        return ((((((int) (j10 ^ (j10 >>> 32))) ^ 1000003) * 1000003) ^ this.b.hashCode()) * 1000003) ^ this.f21689c.hashCode();
     }
 
     public String toString() {
-        return "PersistedEvent{id=" + this.f21115a + ", transportContext=" + this.b + ", event=" + this.f21116c + "}";
+        return "PersistedEvent{id=" + this.f21688a + ", transportContext=" + this.b + ", event=" + this.f21689c + "}";
     }
 }

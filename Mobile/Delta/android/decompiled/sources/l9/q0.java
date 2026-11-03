@@ -9,7 +9,7 @@ import android.net.Uri;
 public final class q0 extends BroadcastReceiver {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    Context f23076a;
+    Context f23470a;
     private final p0 b;
 
     public q0(p0 p0Var) {
@@ -17,16 +17,16 @@ public final class q0 extends BroadcastReceiver {
     }
 
     public final void a(Context context) {
-        this.f23076a = context;
+        this.f23470a = context;
     }
 
     public final synchronized void b() {
         try {
-            Context context = this.f23076a;
+            Context context = this.f23470a;
             if (context != null) {
                 context.unregisterReceiver(this);
             }
-            this.f23076a = null;
+            this.f23470a = null;
         } catch (Throwable th2) {
             throw th2;
         }

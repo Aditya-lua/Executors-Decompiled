@@ -6,13 +6,13 @@ import java.nio.ByteBuffer;
 public final class z4 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final byte[] f7356a;
+    public static final byte[] f7430a;
 
     static {
         byte[] bArr = new byte[0];
-        f7356a = bArr;
+        f7430a = bArr;
         ByteBuffer.wrap(bArr);
-        int i10 = w3.f7337a;
+        int i10 = w3.f7411a;
         try {
             new u3(bArr, 0, 0, false, null).c(0);
         } catch (f5 e10) {

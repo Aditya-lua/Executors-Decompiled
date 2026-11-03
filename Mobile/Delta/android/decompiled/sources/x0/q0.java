@@ -15,84 +15,84 @@ public final class q0 implements j2 {
     public final Surface b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final int f34619c;
+    public final int f35117c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final int f34620d;
+    public final int f35118d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Size f34621e;
+    public final Size f35119e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final j2.a f34622f;
+    public final j2.a f35120f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final j2.a f34623g;
+    public final j2.a f35121g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final float[] f34624h;
+    public final float[] f35122h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final float[] f34625i;
+    public final float[] f35123i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final float[] f34626j;
+    public final float[] f35124j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final float[] f34627k;
+    public final float[] f35125k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public x2.a<j2.b> f34628l;
+    public x2.a<j2.b> f35126l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public Executor f34629m;
+    public Executor f35127m;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public final me.x<Void> f34632p;
+    public final ne.x<Void> f35130p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public y1.c.a<Void> f34633q;
+    public y1.c.a<Void> f35131q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public Matrix f34634r;
+    public Matrix f35132r;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object f34618a = new Object();
+    public final Object f35116a = new Object();
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public boolean f34630n = false;
+    public boolean f35128n = false;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public boolean f34631o = false;
+    public boolean f35129o = false;
 
     public q0(Surface surface, int i10, int i11, Size size, j2.a aVar, j2.a aVar2, Matrix matrix) {
         float[] fArr = new float[16];
-        this.f34624h = fArr;
+        this.f35122h = fArr;
         float[] fArr2 = new float[16];
-        this.f34625i = fArr2;
+        this.f35123i = fArr2;
         float[] fArr3 = new float[16];
-        this.f34626j = fArr3;
+        this.f35124j = fArr3;
         float[] fArr4 = new float[16];
-        this.f34627k = fArr4;
+        this.f35125k = fArr4;
         this.b = surface;
-        this.f34619c = i10;
-        this.f34620d = i11;
-        this.f34621e = size;
-        this.f34622f = aVar;
-        this.f34623g = aVar2;
-        this.f34634r = matrix;
+        this.f35117c = i10;
+        this.f35118d = i11;
+        this.f35119e = size;
+        this.f35120f = aVar;
+        this.f35121g = aVar2;
+        this.f35132r = matrix;
         c(fArr, fArr3, aVar);
         c(fArr2, fArr4, aVar2);
-        this.f34632p = y1.c.a(new y1.c.InterfaceC0650c() { // from class: x0.o0
-            @Override // y1.c.InterfaceC0650c
+        this.f35130p = y1.c.a(new y1.c.InterfaceC0665c() { // from class: x0.o0
+            @Override // y1.c.InterfaceC0665c
             public final Object a(y1.c.a aVar3) {
-                return q0.a(this.f34614a, aVar3);
+                return q0.a(this.f35112a, aVar3);
             }
         });
     }
 
     public static /* synthetic */ Object a(q0 q0Var, y1.c.a aVar) {
-        q0Var.f34633q = aVar;
+        q0Var.f35131q = aVar;
         return "SurfaceOutputImpl close future complete";
     }
 
@@ -141,45 +141,45 @@ public final class q0 implements j2 {
     }
 
     @Override // g0.j2
-    public void N1(float[] fArr, float[] fArr2) {
+    public void M1(float[] fArr, float[] fArr2) {
         S(fArr, fArr2, true);
     }
 
     @Override // g0.j2
     public void S(float[] fArr, float[] fArr2, boolean z10) {
-        android.opengl.Matrix.multiplyMM(fArr, 0, fArr2, 0, z10 ? this.f34624h : this.f34625i, 0);
+        android.opengl.Matrix.multiplyMM(fArr, 0, fArr2, 0, z10 ? this.f35122h : this.f35123i, 0);
     }
 
     @Override // g0.j2, java.io.Closeable, java.lang.AutoCloseable
     public void close() {
-        synchronized (this.f34618a) {
+        synchronized (this.f35116a) {
             try {
-                if (!this.f34631o) {
-                    this.f34631o = true;
+                if (!this.f35129o) {
+                    this.f35129o = true;
                 }
             } catch (Throwable th2) {
                 throw th2;
             }
         }
-        this.f34633q.c(null);
+        this.f35131q.c(null);
     }
 
-    public me.x<Void> e() {
-        return this.f34632p;
+    public ne.x<Void> e() {
+        return this.f35130p;
     }
 
     public void f() {
         Executor executor;
         x2.a<j2.b> aVar;
         final AtomicReference atomicReference = new AtomicReference();
-        synchronized (this.f34618a) {
+        synchronized (this.f35116a) {
             try {
-                if (this.f34629m == null || (aVar = this.f34628l) == null) {
-                    this.f34630n = true;
-                } else if (!this.f34631o) {
+                if (this.f35127m == null || (aVar = this.f35126l) == null) {
+                    this.f35128n = true;
+                } else if (!this.f35129o) {
                     atomicReference.set(aVar);
-                    executor = this.f34629m;
-                    this.f34630n = false;
+                    executor = this.f35127m;
+                    this.f35128n = false;
                 }
                 executor = null;
             } catch (Throwable th2) {
@@ -191,7 +191,7 @@ public final class q0 implements j2 {
                 executor.execute(new Runnable() { // from class: x0.p0
                     @Override // java.lang.Runnable
                     public final void run() {
-                        q0.b(this.f34616a, atomicReference);
+                        q0.b(this.f35114a, atomicReference);
                     }
                 });
             } catch (RejectedExecutionException e10) {
@@ -202,21 +202,21 @@ public final class q0 implements j2 {
 
     @Override // g0.j2
     public int getFormat() {
-        return this.f34620d;
+        return this.f35118d;
     }
 
     @Override // g0.j2
     public Size i() {
-        return this.f34621e;
+        return this.f35119e;
     }
 
     @Override // g0.j2
-    public Surface q2(Executor executor, x2.a<j2.b> aVar) {
+    public Surface r2(Executor executor, x2.a<j2.b> aVar) {
         boolean z10;
-        synchronized (this.f34618a) {
-            this.f34629m = executor;
-            this.f34628l = aVar;
-            z10 = this.f34630n;
+        synchronized (this.f35116a) {
+            this.f35127m = executor;
+            this.f35126l = aVar;
+            z10 = this.f35128n;
         }
         if (z10) {
             f();

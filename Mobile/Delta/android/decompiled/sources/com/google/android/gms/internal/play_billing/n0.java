@@ -9,10 +9,10 @@ import java.util.RandomAccess;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class n0 extends j0 implements List, RandomAccess {
-    public static final g1 b = new k0(w0.f7334e, 0);
+    public static final g1 b = new k0(w0.f7408e, 0);
 
     public static n0 h(Object[] objArr, int i10) {
-        return i10 == 0 ? w0.f7334e : new w0(objArr, i10);
+        return i10 == 0 ? w0.f7408e : new w0(objArr, i10);
     }
 
     public static n0 i(Collection collection) {
@@ -31,7 +31,7 @@ public abstract class n0 extends j0 implements List, RandomAccess {
     }
 
     public static n0 k() {
-        return w0.f7334e;
+        return w0.f7408e;
     }
 
     public static n0 l(Object obj) {
@@ -117,7 +117,7 @@ public abstract class n0 extends j0 implements List, RandomAccess {
         if (i12 == size()) {
             return this;
         }
-        return i12 == 0 ? w0.f7334e : new l0(this, i10, i12);
+        return i12 == 0 ? w0.f7408e : new l0(this, i10, i12);
     }
 
     @Override // java.util.Collection, java.util.List

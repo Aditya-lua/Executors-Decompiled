@@ -47,16 +47,16 @@ public class i extends o7.b {
     public i7.a<Float, Float> Z;
 
     /* JADX INFO: renamed from: a0, reason: collision with root package name */
-    public i7.a<Typeface, Typeface> f27288a0;
+    public i7.a<Typeface, Typeface> f27853a0;
 
     /* JADX INFO: renamed from: b0, reason: collision with root package name */
-    public i7.a<Integer, Integer> f27289b0;
+    public i7.a<Integer, Integer> f27854b0;
 
     /* JADX INFO: renamed from: c0, reason: collision with root package name */
-    public i7.a<Integer, Integer> f27290c0;
+    public i7.a<Integer, Integer> f27855c0;
 
     /* JADX INFO: renamed from: d0, reason: collision with root package name */
-    public i7.a<Integer, Integer> f27291d0;
+    public i7.a<Integer, Integer> f27856d0;
 
     public class a extends Paint {
         public a(int i10) {
@@ -75,21 +75,21 @@ public class i extends o7.b {
     public static /* synthetic */ class c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f27294a;
+        public static final /* synthetic */ int[] f27859a;
 
         static {
             int[] iArr = new int[l7.b.a.values().length];
-            f27294a = iArr;
+            f27859a = iArr;
             try {
                 iArr[l7.b.a.LEFT_ALIGN.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f27294a[l7.b.a.RIGHT_ALIGN.ordinal()] = 2;
+                f27859a[l7.b.a.RIGHT_ALIGN.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f27294a[l7.b.a.CENTER.ordinal()] = 3;
+                f27859a[l7.b.a.CENTER.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
         }
@@ -130,58 +130,58 @@ public class i extends o7.b {
         oVarA.a(this);
         j(oVarA);
         k kVarU = eVar.u();
-        if (kVarU != null && (mVar5 = kVarU.f24022a) != null && (aVar2 = mVar5.f24026a) != null) {
+        if (kVarU != null && (mVar5 = kVarU.f24672a) != null && (aVar2 = mVar5.f24676a) != null) {
             i7.a<Integer, Integer> aVarA = aVar2.a();
             this.Q = aVarA;
             aVarA.a(this);
             j(this.Q);
         }
-        if (kVarU != null && (mVar4 = kVarU.f24022a) != null && (aVar = mVar4.b) != null) {
+        if (kVarU != null && (mVar4 = kVarU.f24672a) != null && (aVar = mVar4.b) != null) {
             i7.a<Integer, Integer> aVarA2 = aVar.a();
             this.S = aVarA2;
             aVarA2.a(this);
             j(this.S);
         }
-        if (kVarU != null && (mVar3 = kVarU.f24022a) != null && (bVar2 = mVar3.f24027c) != null) {
+        if (kVarU != null && (mVar3 = kVarU.f24672a) != null && (bVar2 = mVar3.f24677c) != null) {
             i7.d dVarA = bVar2.a();
             this.U = dVarA;
             dVarA.a(this);
             j(this.U);
         }
-        if (kVarU != null && (mVar2 = kVarU.f24022a) != null && (bVar = mVar2.f24028d) != null) {
+        if (kVarU != null && (mVar2 = kVarU.f24672a) != null && (bVar = mVar2.f24678d) != null) {
             i7.d dVarA2 = bVar.a();
             this.W = dVarA2;
             dVarA2.a(this);
             j(this.W);
         }
-        if (kVarU != null && (mVar = kVarU.f24022a) != null && (dVar4 = mVar.f24029e) != null) {
+        if (kVarU != null && (mVar = kVarU.f24672a) != null && (dVar4 = mVar.f24679e) != null) {
             i7.a<Integer, Integer> aVarA3 = dVar4.a();
             this.Y = aVarA3;
             aVarA3.a(this);
             j(this.Y);
         }
-        if (kVarU != null && (lVar4 = kVarU.b) != null && (dVar3 = lVar4.f24023a) != null) {
+        if (kVarU != null && (lVar4 = kVarU.b) != null && (dVar3 = lVar4.f24673a) != null) {
             i7.a<Integer, Integer> aVarA4 = dVar3.a();
-            this.f27289b0 = aVarA4;
+            this.f27854b0 = aVarA4;
             aVarA4.a(this);
-            j(this.f27289b0);
+            j(this.f27854b0);
         }
         if (kVarU != null && (lVar3 = kVarU.b) != null && (dVar2 = lVar3.b) != null) {
             i7.a<Integer, Integer> aVarA5 = dVar2.a();
-            this.f27290c0 = aVarA5;
+            this.f27855c0 = aVarA5;
             aVarA5.a(this);
-            j(this.f27290c0);
+            j(this.f27855c0);
         }
-        if (kVarU != null && (lVar2 = kVarU.b) != null && (dVar = lVar2.f24024c) != null) {
+        if (kVarU != null && (lVar2 = kVarU.b) != null && (dVar = lVar2.f24674c) != null) {
             i7.a<Integer, Integer> aVarA6 = dVar.a();
-            this.f27291d0 = aVarA6;
+            this.f27856d0 = aVarA6;
             aVarA6.a(this);
-            j(this.f27291d0);
+            j(this.f27856d0);
         }
         if (kVarU == null || (lVar = kVarU.b) == null) {
             return;
         }
-        this.P = lVar.f24025d;
+        this.P = lVar.f24675d;
     }
 
     public final String P(String str, int i10) {
@@ -215,7 +215,7 @@ public class i extends o7.b {
         if (aVar != null) {
             this.H.setColor(aVar.h().intValue());
         } else if (this.Q == null || !d0(i11)) {
-            this.H.setColor(bVar.f22959h);
+            this.H.setColor(bVar.f23353h);
         } else {
             this.H.setColor(this.Q.h().intValue());
         }
@@ -223,12 +223,12 @@ public class i extends o7.b {
         if (aVar2 != null) {
             this.I.setColor(aVar2.h().intValue());
         } else if (this.S == null || !d0(i11)) {
-            this.I.setColor(bVar.f22960i);
+            this.I.setColor(bVar.f23354i);
         } else {
             this.I.setColor(this.S.h().intValue());
         }
         int iIntValue = 100;
-        int iIntValue2 = this.f27246x.h() == null ? 100 : this.f27246x.h().h().intValue();
+        int iIntValue2 = this.f27811x.h() == null ? 100 : this.f27811x.h().h().intValue();
         if (this.Y != null && d0(i11)) {
             iIntValue = this.Y.h().intValue();
         }
@@ -239,7 +239,7 @@ public class i extends o7.b {
         if (aVar3 != null) {
             this.I.setStrokeWidth(aVar3.h().floatValue());
         } else if (this.U == null || !d0(i11)) {
-            this.I.setStrokeWidth(bVar.f22961j * s7.m.e());
+            this.I.setStrokeWidth(bVar.f23355j * s7.m.e());
         } else {
             this.I.setStrokeWidth(this.U.h().floatValue());
         }
@@ -262,10 +262,10 @@ public class i extends o7.b {
             Path path = listA0.get(i12).getPath();
             path.computeBounds(this.F, false);
             this.G.reset();
-            this.G.preTranslate(0.0f, (-bVar.f22958g) * s7.m.e());
+            this.G.preTranslate(0.0f, (-bVar.f23352g) * s7.m.e());
             this.G.preScale(f10, f10);
             path.transform(this.G);
-            if (bVar.f22962k) {
+            if (bVar.f23356k) {
                 V(path, this.H, canvas);
                 V(path, this.I, canvas);
             } else {
@@ -277,7 +277,7 @@ public class i extends o7.b {
 
     public final void T(String str, l7.b bVar, Canvas canvas, int i10, int i11) {
         Q(bVar, i11, i10);
-        if (bVar.f22962k) {
+        if (bVar.f23356k) {
             R(str, this.H, canvas);
             R(str, this.I, canvas);
         } else {
@@ -370,15 +370,15 @@ public class i extends o7.b {
         if (typefaceC0 == null) {
             return;
         }
-        String str = bVar2.f22953a;
+        String str = bVar2.f23347a;
         iVar.N.a0();
         iVar.H.setTypeface(typefaceC0);
         i7.a<Float, Float> aVar = iVar.Z;
-        float fFloatValue2 = aVar != null ? aVar.h().floatValue() : bVar2.f22954c;
+        float fFloatValue2 = aVar != null ? aVar.h().floatValue() : bVar2.f23348c;
         iVar.H.setTextSize(s7.m.e() * fFloatValue2);
         iVar.I.setTypeface(iVar.H.getTypeface());
         iVar.I.setTextSize(iVar.H.getTextSize());
-        float f13 = bVar2.f22956e / 10.0f;
+        float f13 = bVar2.f23350e / 10.0f;
         i7.a<Float, Float> aVar2 = iVar.X;
         if (aVar2 == null) {
             i7.a<Float, Float> aVar3 = iVar.W;
@@ -393,7 +393,7 @@ public class i extends o7.b {
             length = 0;
             while (i12 < size) {
                 String str2 = listB0.get(i12);
-                pointF = bVar2.f22964m;
+                pointF = bVar2.f23358m;
                 if (pointF == null) {
                     f10 = 0.0f;
                 } else {
@@ -409,17 +409,17 @@ public class i extends o7.b {
                     if (iVar.M != null && iVar.Z == null && iVar.X == null) {
                         fMeasureText = dVar.b;
                     } else {
-                        fMeasureText = iVar.H.measureText(dVar.f27295a);
+                        fMeasureText = iVar.H.measureText(dVar.f27860a);
                     }
                     if (iVar.f0(canvas, bVar2, i11, fMeasureText)) {
                         f12 = f11;
                         i14 = length;
-                        iVar.U(dVar.f27295a, bVar2, canvas, f12, i14, i10);
+                        iVar.U(dVar.f27860a, bVar2, canvas, f12, i14, i10);
                     } else {
                         f12 = f11;
                         i14 = length;
                     }
-                    length = i14 + dVar.f27295a.length();
+                    length = i14 + dVar.f27860a.length();
                     canvas.restore();
                     i13++;
                     iVar = this;
@@ -443,7 +443,7 @@ public class i extends o7.b {
         length = 0;
         while (i12 < size) {
             String str3 = listB0.get(i12);
-            pointF = bVar2.f22964m;
+            pointF = bVar2.f23358m;
             if (pointF == null) {
                 f10 = 0.0f;
             } else {
@@ -457,19 +457,19 @@ public class i extends o7.b {
                 i11++;
                 canvas.save();
                 if (iVar.M != null) {
-                    fMeasureText = iVar.H.measureText(dVar.f27295a);
+                    fMeasureText = iVar.H.measureText(dVar.f27860a);
                 } else {
-                    fMeasureText = iVar.H.measureText(dVar.f27295a);
+                    fMeasureText = iVar.H.measureText(dVar.f27860a);
                 }
                 if (iVar.f0(canvas, bVar2, i11, fMeasureText)) {
                     f12 = f11;
                     i14 = length;
-                    iVar.U(dVar.f27295a, bVar2, canvas, f12, i14, i10);
+                    iVar.U(dVar.f27860a, bVar2, canvas, f12, i14, i10);
                 } else {
                     f12 = f11;
                     i14 = length;
                 }
-                length = i14 + dVar.f27295a.length();
+                length = i14 + dVar.f27860a.length();
                 canvas.restore();
                 i13++;
                 iVar = this;
@@ -505,11 +505,11 @@ public class i extends o7.b {
         i iVar = this;
         l7.b bVar2 = bVar;
         i7.a<Float, Float> aVar = iVar.Z;
-        float fFloatValue2 = (aVar != null ? aVar.h().floatValue() : bVar2.f22954c) / 100.0f;
+        float fFloatValue2 = (aVar != null ? aVar.h().floatValue() : bVar2.f23348c) / 100.0f;
         float fG = s7.m.g(matrix);
-        List<String> listB0 = iVar.b0(bVar2.f22953a);
+        List<String> listB0 = iVar.b0(bVar2.f23347a);
         int size = listB0.size();
-        float f14 = bVar2.f22956e / 10.0f;
+        float f14 = bVar2.f23350e / 10.0f;
         i7.a<Float, Float> aVar2 = iVar.X;
         if (aVar2 == null) {
             i7.a<Float, Float> aVar3 = iVar.W;
@@ -521,7 +521,7 @@ public class i extends o7.b {
             i12 = 0;
             while (i12 < size) {
                 String str = listB0.get(i12);
-                pointF = bVar2.f22964m;
+                pointF = bVar2.f23358m;
                 if (pointF == null) {
                     f11 = 0.0f;
                 } else {
@@ -538,7 +538,7 @@ public class i extends o7.b {
                         l7.b bVar3 = bVar2;
                         f12 = f10;
                         f13 = fG;
-                        iVar.W(dVar.f27295a, bVar3, cVar, canvas, f13, f15, f12, i10);
+                        iVar.W(dVar.f27860a, bVar3, cVar, canvas, f13, f15, f12, i10);
                         fFloatValue2 = f15;
                     } else {
                         f12 = f10;
@@ -564,7 +564,7 @@ public class i extends o7.b {
         i12 = 0;
         while (i12 < size) {
             String str2 = listB0.get(i12);
-            pointF = bVar2.f22964m;
+            pointF = bVar2.f23358m;
             if (pointF == null) {
                 f11 = 0.0f;
             } else {
@@ -581,7 +581,7 @@ public class i extends o7.b {
                     l7.b bVar4 = bVar2;
                     f12 = f10;
                     f13 = fG;
-                    iVar.W(dVar.f27295a, bVar4, cVar, canvas, f13, f16, f12, i10);
+                    iVar.W(dVar.f27860a, bVar4, cVar, canvas, f13, f16, f12, i10);
                     fFloatValue2 = f16;
                 } else {
                     f12 = f10;
@@ -629,7 +629,7 @@ public class i extends o7.b {
     @Override // o7.b, l7.f
     public <T> void c(T t8, t7.c<T> cVar) {
         super.c(t8, cVar);
-        if (t8 == o0.f16420a) {
+        if (t8 == o0.f17016a) {
             i7.a<Integer, Integer> aVar = this.R;
             if (aVar != null) {
                 H(aVar);
@@ -659,7 +659,7 @@ public class i extends o7.b {
             j(this.T);
             return;
         }
-        if (t8 == o0.f16437s) {
+        if (t8 == o0.f17033s) {
             i7.a<Float, Float> aVar3 = this.V;
             if (aVar3 != null) {
                 H(aVar3);
@@ -674,7 +674,7 @@ public class i extends o7.b {
             j(this.V);
             return;
         }
-        if (t8 == o0.f16438t) {
+        if (t8 == o0.f17034t) {
             i7.a<Float, Float> aVar4 = this.X;
             if (aVar4 != null) {
                 H(aVar4);
@@ -711,23 +711,23 @@ public class i extends o7.b {
             }
             return;
         }
-        i7.a<Typeface, Typeface> aVar6 = this.f27288a0;
+        i7.a<Typeface, Typeface> aVar6 = this.f27853a0;
         if (aVar6 != null) {
             H(aVar6);
         }
         if (cVar == null) {
-            this.f27288a0 = null;
+            this.f27853a0 = null;
             return;
         }
         i7.q qVar6 = new i7.q(cVar);
-        this.f27288a0 = qVar6;
+        this.f27853a0 = qVar6;
         qVar6.a(this);
-        j(this.f27288a0);
+        j(this.f27853a0);
     }
 
     public final Typeface c0(l7.c cVar) {
         Typeface typefaceH;
-        i7.a<Typeface, Typeface> aVar = this.f27288a0;
+        i7.a<Typeface, Typeface> aVar = this.f27853a0;
         if (aVar != null && (typefaceH = aVar.h()) != null) {
             return typefaceH;
         }
@@ -736,14 +736,14 @@ public class i extends o7.b {
     }
 
     public final boolean d0(int i10) {
-        int length = this.M.h().f22953a.length();
-        i7.a<Integer, Integer> aVar = this.f27289b0;
-        if (aVar == null || this.f27290c0 == null) {
+        int length = this.M.h().f23347a.length();
+        i7.a<Integer, Integer> aVar = this.f27854b0;
+        if (aVar == null || this.f27855c0 == null) {
             return true;
         }
-        int iMin = Math.min(aVar.h().intValue(), this.f27290c0.h().intValue());
-        int iMax = Math.max(this.f27289b0.h().intValue(), this.f27290c0.h().intValue());
-        i7.a<Integer, Integer> aVar2 = this.f27291d0;
+        int iMin = Math.min(aVar.h().intValue(), this.f27855c0.h().intValue());
+        int iMax = Math.max(this.f27854b0.h().intValue(), this.f27855c0.h().intValue());
+        i7.a<Integer, Integer> aVar2 = this.f27856d0;
         if (aVar2 != null) {
             int iIntValue = aVar2.h().intValue();
             iMin += iIntValue;
@@ -767,16 +767,16 @@ public class i extends o7.b {
     }
 
     public final boolean f0(Canvas canvas, l7.b bVar, int i10, float f10) {
-        PointF pointF = bVar.f22963l;
-        PointF pointF2 = bVar.f22964m;
+        PointF pointF = bVar.f23357l;
+        PointF pointF2 = bVar.f23358m;
         float fE = s7.m.e();
-        float f11 = (i10 * bVar.f22957f * fE) + (pointF == null ? 0.0f : (bVar.f22957f * fE) + pointF.y);
-        if (this.N.H() && pointF2 != null && pointF != null && f11 >= pointF.y + pointF2.y + bVar.f22954c) {
+        float f11 = (i10 * bVar.f23351f * fE) + (pointF == null ? 0.0f : (bVar.f23351f * fE) + pointF.y);
+        if (this.N.H() && pointF2 != null && pointF != null && f11 >= pointF.y + pointF2.y + bVar.f23348c) {
             return false;
         }
         float f12 = pointF == null ? 0.0f : pointF.x;
         float f13 = pointF2 != null ? pointF2.x : 0.0f;
-        int i11 = c.f27294a[bVar.f22955d.ordinal()];
+        int i11 = c.f27859a[bVar.f23349d.ordinal()];
         if (i11 == 1) {
             canvas.translate(f12, f11);
         } else if (i11 == 2) {
@@ -869,16 +869,16 @@ public class i extends o7.b {
     public static class d {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public String f27295a;
+        public String f27860a;
         public float b;
 
         public d() {
-            this.f27295a = "";
+            this.f27860a = "";
             this.b = 0.0f;
         }
 
         public void c(String str, float f10) {
-            this.f27295a = str;
+            this.f27860a = str;
             this.b = f10;
         }
 

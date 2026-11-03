@@ -34,10 +34,10 @@ public final class o0<T> extends d<T> implements RandomAccess {
         public int index;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final /* synthetic */ o0<T> f22512e;
+        public final /* synthetic */ o0<T> f22967e;
 
         public a(o0<T> o0Var) {
-            this.f22512e = o0Var;
+            this.f22967e = o0Var;
             this.count = o0Var.size();
             this.index = o0Var.startIndex;
         }
@@ -49,8 +49,8 @@ public final class o0<T> extends d<T> implements RandomAccess {
                 d();
                 return;
             }
-            e(this.f22512e.buffer[this.index]);
-            this.index = (this.index + 1) % this.f22512e.capacity;
+            e(this.f22967e.buffer[this.index]);
+            this.index = (this.index + 1) % this.f22967e.capacity;
             this.count--;
         }
     }

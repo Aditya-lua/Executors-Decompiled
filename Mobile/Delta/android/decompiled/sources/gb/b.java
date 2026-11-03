@@ -30,7 +30,7 @@ public class b extends Binder implements IInterface {
     }
 
     public void s2(Parcel parcel) {
-        int i10 = c.f17982a;
+        int i10 = c.f18521a;
         int iDataAvail = parcel.dataAvail();
         if (iDataAvail <= 0) {
             return;

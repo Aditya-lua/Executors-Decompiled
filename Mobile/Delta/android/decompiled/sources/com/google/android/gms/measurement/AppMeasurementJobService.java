@@ -13,7 +13,7 @@ import nb.xc;
 public final class AppMeasurementJobService extends JobService implements xc {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public bd f7401a;
+    public bd f7475a;
 
     @Override // nb.xc
     public final boolean a(int i10) {
@@ -27,10 +27,10 @@ public final class AppMeasurementJobService extends JobService implements xc {
     }
 
     public final bd c() {
-        if (this.f7401a == null) {
-            this.f7401a = new bd(this);
+        if (this.f7475a == null) {
+            this.f7475a = new bd(this);
         }
-        return this.f7401a;
+        return this.f7475a;
     }
 
     @Override // nb.xc

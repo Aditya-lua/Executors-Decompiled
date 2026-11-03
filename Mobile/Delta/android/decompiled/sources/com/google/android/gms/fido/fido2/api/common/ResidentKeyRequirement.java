@@ -34,7 +34,7 @@ public enum ResidentKeyRequirement implements Parcelable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final String f6012a;
+    public final String f6085a;
 
     public static class a extends Exception {
         public a(@NonNull String str) {
@@ -43,13 +43,13 @@ public enum ResidentKeyRequirement implements Parcelable {
     }
 
     ResidentKeyRequirement(String str) {
-        this.f6012a = str;
+        this.f6085a = str;
     }
 
     @NonNull
     public static ResidentKeyRequirement a(@NonNull String str) throws a {
         for (ResidentKeyRequirement residentKeyRequirement : values()) {
-            if (str.equals(residentKeyRequirement.f6012a)) {
+            if (str.equals(residentKeyRequirement.f6085a)) {
                 return residentKeyRequirement;
             }
         }
@@ -64,11 +64,11 @@ public enum ResidentKeyRequirement implements Parcelable {
     @Override // java.lang.Enum
     @NonNull
     public String toString() {
-        return this.f6012a;
+        return this.f6085a;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
-        parcel.writeString(this.f6012a);
+        parcel.writeString(this.f6085a);
     }
 }

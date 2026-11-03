@@ -24,7 +24,7 @@ public final class b {
     public static final class a implements Function1<SubmitButtonComponent, Boolean> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final a f13825a = new a();
+        public static final a f13906a = new a();
 
         @Override // kotlin.jvm.functions.Function1
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
@@ -39,12 +39,12 @@ public final class b {
         AutoSubmitableComponent autoSubmitableComponent;
         Intrinsics.checkNotNullParameter(displaying, "<this>");
         if (str == null || str.length() == 0) {
-            autoSubmitableComponent = (SubmitButtonComponent) er.h.a(displaying.getComponents(), d0.b(SubmitButtonComponent.class), a.f13825a);
+            autoSubmitableComponent = (SubmitButtonComponent) cr.h.a(displaying.getComponents(), d0.b(SubmitButtonComponent.class), a.f13906a);
             if (autoSubmitableComponent == null) {
                 return displaying;
             }
         } else {
-            autoSubmitableComponent = (ButtonComponent) er.h.a(displaying.getComponents(), d0.b(ButtonComponent.class), new Function1() { // from class: or.k1
+            autoSubmitableComponent = (ButtonComponent) cr.h.a(displaying.getComponents(), d0.b(ButtonComponent.class), new Function1() { // from class: mr.k1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
                     return Boolean.valueOf(com.withpersona.sdk2.inquiry.ui.b.c(str, (ButtonComponent) obj));
@@ -67,20 +67,20 @@ public final class b {
     public static final List<UiComponent> d(@NotNull List<? extends UiComponent> list) {
         Intrinsics.checkNotNullParameter(list, "<this>");
         ArrayList arrayList = new ArrayList();
-        for (Parcelable parcelableQ1 : list) {
-            if (parcelableQ1 instanceof InputFileUploadComponent) {
-                parcelableQ1 = null;
-            } else if (parcelableQ1 instanceof UiComponentGroup) {
-                UiComponentGroup uiComponentGroup = (UiComponentGroup) parcelableQ1;
+        for (Parcelable parcelableP1 : list) {
+            if (parcelableP1 instanceof InputFileUploadComponent) {
+                parcelableP1 = null;
+            } else if (parcelableP1 instanceof UiComponentGroup) {
+                UiComponentGroup uiComponentGroup = (UiComponentGroup) parcelableP1;
                 List<UiComponent> listD = d(uiComponentGroup.getChildren());
                 if (listD.isEmpty()) {
-                    parcelableQ1 = null;
+                    parcelableP1 = null;
                 } else {
-                    parcelableQ1 = uiComponentGroup.q1(listD);
+                    parcelableP1 = uiComponentGroup.p1(listD);
                 }
             }
-            if (parcelableQ1 != null) {
-                arrayList.add(parcelableQ1);
+            if (parcelableP1 != null) {
+                arrayList.add(parcelableP1);
             }
         }
         return arrayList;

@@ -1,19 +1,13 @@
 package us;
 
 import androidx.annotation.NonNull;
+import ss.r;
+import ss.t;
 
 /* JADX INFO: loaded from: classes3.dex */
-public class b implements m.a {
-    @Override // us.m.a
-    public void a(@NonNull m mVar, @NonNull qn.s sVar) {
-        mVar.B();
-    }
-
-    @Override // us.m.a
-    public void b(@NonNull m mVar, @NonNull qn.s sVar) {
-        if (mVar.c(sVar)) {
-            mVar.B();
-            mVar.x();
-        }
+public class b implements t {
+    @Override // ss.t
+    public Object a(@NonNull ss.g gVar, @NonNull r rVar) {
+        return new vs.c(gVar.e());
     }
 }

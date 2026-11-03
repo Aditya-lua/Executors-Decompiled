@@ -63,7 +63,7 @@ public final class CredentialProviderCreateRestoreCredentialController extends C
                 }
             });
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -74,7 +74,7 @@ public final class CredentialProviderCreateRestoreCredentialController extends C
                 pVar.onResult(cVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -85,7 +85,7 @@ public final class CredentialProviderCreateRestoreCredentialController extends C
                 CredentialProviderCreateRestoreCredentialController.invokePlayServices$lambda$4$lambda$3$lambda$2(pVar, exc);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -102,21 +102,21 @@ public final class CredentialProviderCreateRestoreCredentialController extends C
     public static final void invokePlayServices$lambda$8(CancellationSignal cancellationSignal, final Executor executor, final p pVar, Exception e10) {
         Intrinsics.checkNotNullParameter(e10, "e");
         final c0 c0Var = new c0();
-        c0Var.f22552a = new j("Create restore credential failed for unknown reason, failure: " + e10.getMessage());
+        c0Var.f23007a = new j("Create restore credential failed for unknown reason, failure: " + e10.getMessage());
         if (e10 instanceof b) {
             b bVar = (b) e10;
             switch (bVar.b()) {
                 case 40201:
-                    c0Var.f22552a = new j("The restore credential internal service had a failure, failure: " + e10.getMessage());
+                    c0Var.f23007a = new j("The restore credential internal service had a failure, failure: " + e10.getMessage());
                     break;
                 case 40202:
-                    c0Var.f22552a = new a(new d(), "The request did not match the fido spec, failure: " + e10.getMessage());
+                    c0Var.f23007a = new a(new d(), "The request did not match the fido spec, failure: " + e10.getMessage());
                     break;
                 case 40203:
-                    c0Var.f22552a = new i3.b("E2ee is not available on the device. Check whether the backup and screen lock are enabled.");
+                    c0Var.f23007a = new i3.b("E2ee is not available on the device. Check whether the backup and screen lock are enabled.");
                     break;
                 default:
-                    c0Var.f22552a = new j("The restore credential service failed with unsupported status code, failure: " + e10.getMessage() + ", status code: " + bVar.b());
+                    c0Var.f23007a = new j("The restore credential service failed with unsupported status code, failure: " + e10.getMessage() + ", status code: " + bVar.b());
                     break;
             }
         }
@@ -136,12 +136,12 @@ public final class CredentialProviderCreateRestoreCredentialController extends C
                 CredentialProviderCreateRestoreCredentialController.invokePlayServices$lambda$8$lambda$7$lambda$6(pVar, c0Var);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public static final void invokePlayServices$lambda$8$lambda$7$lambda$6(p pVar, c0 c0Var) {
-        pVar.a(c0Var.f22552a);
+        pVar.a(c0Var.f23007a);
     }
 
     @Override // androidx.credentials.playservices.controllers.CredentialProviderController
@@ -170,7 +170,7 @@ public final class CredentialProviderCreateRestoreCredentialController extends C
         final Function1 function1 = new Function1() { // from class: l3.f
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return CredentialProviderCreateRestoreCredentialController.invokePlayServices$lambda$4(this.f22932a, cancellationSignal, executor, callback, (CreateRestoreCredentialResponse) obj);
+                return CredentialProviderCreateRestoreCredentialController.invokePlayServices$lambda$4(this.f23326a, cancellationSignal, executor, callback, (CreateRestoreCredentialResponse) obj);
             }
         };
         taskV.g(new g() { // from class: l3.g

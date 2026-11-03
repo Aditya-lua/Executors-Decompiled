@@ -19,19 +19,19 @@ import java.util.Set;
 public final class e extends xd {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public String f25472d;
+    public String f26293d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public Set f25473e;
+    public Set f26294e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public Map f25474f;
+    public Map f26295f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public Long f25475g;
+    public Long f26296g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public Long f25476h;
+    public Long f26297h;
 
     public e(me meVar) {
         super(meVar);
@@ -250,11 +250,11 @@ public final class e extends xd {
         n9.m.f(str);
         n9.m.l(list);
         n9.m.l(list2);
-        this.f25472d = str;
-        this.f25473e = new HashSet();
-        this.f25474f = new w1.a();
-        this.f25475g = l10;
-        this.f25476h = l11;
+        this.f26293d = str;
+        this.f26294e = new HashSet();
+        this.f26295f = new w1.a();
+        this.f26296g = l10;
+        this.f26297h = l11;
         Iterator it11 = list.iterator();
         while (true) {
             i10 = 0;
@@ -269,13 +269,13 @@ public final class e extends xd {
             }
         }
         com.google.android.gms.internal.measurement.ye.a();
-        g7 g7Var2 = this.f25625a;
-        boolean zH = g7Var2.w().H(this.f25472d, z4.G0);
+        g7 g7Var2 = this.f26446a;
+        boolean zH = g7Var2.w().H(this.f26293d, z4.G0);
         com.google.android.gms.internal.measurement.ye.a();
-        boolean zH2 = g7Var2.w().H(this.f25472d, z4.F0);
+        boolean zH2 = g7Var2.w().H(this.f26293d, z4.F0);
         if (z11) {
             t tVarF3 = this.b.F0();
-            String str12 = this.f25472d;
+            String str12 = this.f26293d;
             tVarF3.j();
             tVarF3.h();
             n9.m.f(str12);
@@ -284,7 +284,7 @@ public final class e extends xd {
             try {
                 tVarF3.u0().update("events", contentValues2, "app_id = ?", new String[]{str12});
             } catch (SQLiteException e10) {
-                tVarF3.f25625a.a().o().c("Error resetting session-scoped event counts. appId", w5.x(str12), e10);
+                tVarF3.f26446a.a().o().c("Error resetting session-scoped event counts. appId", w5.x(str12), e10);
             }
         }
         Map map9 = Collections.EMPTY_MAP;
@@ -292,7 +292,7 @@ public final class e extends xd {
         String str14 = "audience_id";
         if (zH2 && zH) {
             t tVarF4 = this.b.F0();
-            String str15 = this.f25472d;
+            String str15 = this.f26293d;
             n9.m.f(str15);
             w1.a aVar9 = new w1.a();
             try {
@@ -315,7 +315,7 @@ public final class e extends xd {
                                         arrayList5.add(z3Var);
                                     }
                                 } catch (IOException e11) {
-                                    tVarF4.f25625a.a().o().c("Failed to merge filter. appId", w5.x(str15), e11);
+                                    tVarF4.f26446a.a().o().c("Failed to merge filter. appId", w5.x(str15), e11);
                                 }
                                 if (!cursorQuery4.moveToNext()) {
                                     break;
@@ -331,13 +331,13 @@ public final class e extends xd {
                         }
                     } catch (SQLiteException e12) {
                         e = e12;
-                        tVarF4.f25625a.a().o().c("Database error querying filters. appId", w5.x(str15), e);
+                        tVarF4.f26446a.a().o().c("Database error querying filters. appId", w5.x(str15), e);
                         map9 = Collections.EMPTY_MAP;
                         if (cursorQuery4 != null) {
                         }
                         map = map9;
                         t tVarF5 = this.b.F0();
-                        String str16 = this.f25472d;
+                        String str16 = this.f26293d;
                         tVarF5.j();
                         tVarF5.h();
                         n9.m.f(str16);
@@ -356,11 +356,11 @@ public final class e extends xd {
                                             z12 = z11;
                                             str2 = str13;
                                             try {
-                                                tVarF5.f25625a.a().o().d("Failed to merge filter results. appId, audienceId, error", w5.x(str16), Integer.valueOf(i13), e13);
+                                                tVarF5.f26446a.a().o().d("Failed to merge filter results. appId, audienceId, error", w5.x(str16), Integer.valueOf(i13), e13);
                                             } catch (SQLiteException e14) {
                                                 e = e14;
                                                 str14 = str14;
-                                                tVarF5.f25625a.a().o().c("Database error querying filter results. appId", w5.x(str16), e);
+                                                tVarF5.f26446a.a().o().c("Database error querying filter results. appId", w5.x(str16), e);
                                                 Map map10 = Collections.EMPTY_MAP;
                                                 if (cursorQuery != null) {
                                                     cursorQuery.close();
@@ -369,9 +369,9 @@ public final class e extends xd {
                                                 if (!map2.isEmpty()) {
                                                     hashSet = new HashSet(map2.keySet());
                                                     if (z12) {
-                                                        String str17 = this.f25472d;
+                                                        String str17 = this.f26293d;
                                                         t tVarF6 = this.b.F0();
-                                                        str3 = this.f25472d;
+                                                        str3 = this.f26293d;
                                                         tVarF6.j();
                                                         tVarF6.h();
                                                         n9.m.f(str3);
@@ -396,7 +396,7 @@ public final class e extends xd {
                                                                     }
                                                                 } catch (SQLiteException e15) {
                                                                     e = e15;
-                                                                    tVarF6.f25625a.a().o().c("Database error querying scoped filters. appId", w5.x(str3), e);
+                                                                    tVarF6.f26446a.a().o().c("Database error querying scoped filters. appId", w5.x(str3), e);
                                                                     aVar2 = Collections.EMPTY_MAP;
                                                                     if (cursorRawQuery != null) {
                                                                     }
@@ -460,7 +460,7 @@ public final class e extends xd {
                                                                             while (i12 < f7Var2.G() * 64) {
                                                                                 if (re.P(f7Var2.F(), i12)) {
                                                                                     z13 = zH;
-                                                                                    this.f25625a.a().w().c("Filter already evaluated. audience ID, filter ID", num3, Integer.valueOf(i12));
+                                                                                    this.f26446a.a().w().c("Filter already evaluated. audience ID, filter ID", num3, Integer.valueOf(i12));
                                                                                     bitSet2.set(i12);
                                                                                     if (re.P(f7Var2.H(), i12)) {
                                                                                         bitSet.set(i12);
@@ -479,7 +479,7 @@ public final class e extends xd {
                                                                         com.google.android.gms.internal.measurement.f7 f7Var4 = (com.google.android.gms.internal.measurement.f7) map2.get(num3);
                                                                         if (!zH2) {
                                                                         }
-                                                                        this.f25474f.put(num3, new df(this, this.f25472d, f7Var4, bitSet, bitSet2, aVar, aVar10, null));
+                                                                        this.f26295f.put(num3, new df(this, this.f26293d, f7Var4, bitSet, bitSet2, aVar, aVar10, null));
                                                                         str2 = str2;
                                                                         map = map;
                                                                         str14 = str14;
@@ -496,20 +496,20 @@ public final class e extends xd {
                                                                         it7 = list.iterator();
                                                                         while (it7.hasNext()) {
                                                                             o6Var = (com.google.android.gms.internal.measurement.o6) it7.next();
-                                                                            o6VarA = efVar.a(this.f25472d, o6Var);
+                                                                            o6VarA = efVar.a(this.f26293d, o6Var);
                                                                             if (o6VarA != null) {
                                                                                 meVar = this.b;
-                                                                                b0VarZ = meVar.F0().Z(this.f25472d, o6Var, o6VarA.J());
+                                                                                b0VarZ = meVar.F0().Z(this.f26293d, o6Var, o6VarA.J());
                                                                                 meVar.F0().w0(b0VarZ);
                                                                                 if (z10) {
                                                                                     continue;
                                                                                 } else {
-                                                                                    j10 = b0VarZ.f25347c;
+                                                                                    j10 = b0VarZ.f26168c;
                                                                                     strJ = o6VarA.J();
                                                                                     map7 = (Map) aVar6.get(strJ);
                                                                                     if (map7 == null) {
                                                                                         tVarF2 = meVar.F0();
-                                                                                        str10 = this.f25472d;
+                                                                                        str10 = this.f26293d;
                                                                                         tVarF2.j();
                                                                                         tVarF2.h();
                                                                                         n9.m.f(str10);
@@ -539,7 +539,7 @@ public final class e extends xd {
                                                                                                                                     e = e16;
                                                                                                                                     cursor3 = cursor4;
                                                                                                                                     try {
-                                                                                                                                        tVarF2.f25625a.a().o().c("Database error querying filters. appId", w5.x(str11), e);
+                                                                                                                                        tVarF2.f26446a.a().o().c("Database error querying filters. appId", w5.x(str11), e);
                                                                                                                                         map7 = Collections.EMPTY_MAP;
                                                                                                                                         if (cursor3 != null) {
                                                                                                                                             cursor3.close();
@@ -566,7 +566,7 @@ public final class e extends xd {
                                                                                                                             arrayList4.add(z3Var2);
                                                                                                                         } catch (IOException e17) {
                                                                                                                             cursor4 = cursorQuery3;
-                                                                                                                            tVarF2.f25625a.a().o().c("Failed to merge filter. appId", w5.x(str11), e17);
+                                                                                                                            tVarF2.f26446a.a().o().c("Failed to merge filter. appId", w5.x(str11), e17);
                                                                                                                         }
                                                                                                                         if (!cursor4.moveToNext()) {
                                                                                                                             break;
@@ -597,7 +597,7 @@ public final class e extends xd {
                                                                                                     e = e20;
                                                                                                     b0Var = b0VarZ;
                                                                                                     cursor3 = null;
-                                                                                                    tVarF2.f25625a.a().o().c("Database error querying filters. appId", w5.x(str11), e);
+                                                                                                    tVarF2.f26446a.a().o().c("Database error querying filters. appId", w5.x(str11), e);
                                                                                                     map7 = Collections.EMPTY_MAP;
                                                                                                     if (cursor3 != null) {
                                                                                                         cursor3.close();
@@ -607,8 +607,8 @@ public final class e extends xd {
                                                                                                     while (it8.hasNext()) {
                                                                                                         num2 = (Integer) it8.next();
                                                                                                         iIntValue = num2.intValue();
-                                                                                                        if (this.f25473e.contains(num2)) {
-                                                                                                            this.f25625a.a().w().b("Skipping failed audience ID", num2);
+                                                                                                        if (this.f26294e.contains(num2)) {
+                                                                                                            this.f26446a.a().w().b("Skipping failed audience ID", num2);
                                                                                                         } else {
                                                                                                             it9 = ((List) map7.get(num2)).iterator();
                                                                                                             zK2 = true;
@@ -622,11 +622,11 @@ public final class e extends xd {
                                                                                                                 com.google.android.gms.internal.measurement.z3 z3Var3 = (com.google.android.gms.internal.measurement.z3) it9.next();
                                                                                                                 map8 = map7;
                                                                                                                 it10 = it8;
-                                                                                                                bVar = new b(this, this.f25472d, iIntValue, z3Var3);
+                                                                                                                bVar = new b(this, this.f26293d, iIntValue, z3Var3);
                                                                                                                 j11 = j10;
-                                                                                                                zK2 = bVar.k(this.f25475g, this.f25476h, o6VarA, j11, b0Var, o(iIntValue, z3Var3.G()));
+                                                                                                                zK2 = bVar.k(this.f26296g, this.f26297h, o6VarA, j11, b0Var, o(iIntValue, z3Var3.G()));
                                                                                                                 if (!zK2) {
-                                                                                                                    this.f25473e.add(num2);
+                                                                                                                    this.f26294e.add(num2);
                                                                                                                     break;
                                                                                                                 }
                                                                                                                 n(num2).a(bVar);
@@ -635,7 +635,7 @@ public final class e extends xd {
                                                                                                                 it8 = it10;
                                                                                                             }
                                                                                                             if (!zK2) {
-                                                                                                                this.f25473e.add(num2);
+                                                                                                                this.f26294e.add(num2);
                                                                                                             }
                                                                                                             j10 = j11;
                                                                                                             map7 = map8;
@@ -661,8 +661,8 @@ public final class e extends xd {
                                                                                     while (it8.hasNext()) {
                                                                                         num2 = (Integer) it8.next();
                                                                                         iIntValue = num2.intValue();
-                                                                                        if (this.f25473e.contains(num2)) {
-                                                                                            this.f25625a.a().w().b("Skipping failed audience ID", num2);
+                                                                                        if (this.f26294e.contains(num2)) {
+                                                                                            this.f26446a.a().w().b("Skipping failed audience ID", num2);
                                                                                         } else {
                                                                                             it9 = ((List) map7.get(num2)).iterator();
                                                                                             zK2 = true;
@@ -676,11 +676,11 @@ public final class e extends xd {
                                                                                                 com.google.android.gms.internal.measurement.z3 z3Var4 = (com.google.android.gms.internal.measurement.z3) it9.next();
                                                                                                 map8 = map7;
                                                                                                 it10 = it8;
-                                                                                                bVar = new b(this, this.f25472d, iIntValue, z3Var4);
+                                                                                                bVar = new b(this, this.f26293d, iIntValue, z3Var4);
                                                                                                 j11 = j10;
-                                                                                                zK2 = bVar.k(this.f25475g, this.f25476h, o6VarA, j11, b0Var, o(iIntValue, z3Var4.G()));
+                                                                                                zK2 = bVar.k(this.f26296g, this.f26297h, o6VarA, j11, b0Var, o(iIntValue, z3Var4.G()));
                                                                                                 if (!zK2) {
-                                                                                                    this.f25473e.add(num2);
+                                                                                                    this.f26294e.add(num2);
                                                                                                     break;
                                                                                                 }
                                                                                                 n(num2).a(bVar);
@@ -689,7 +689,7 @@ public final class e extends xd {
                                                                                                 it8 = it10;
                                                                                             }
                                                                                             if (!zK2) {
-                                                                                                this.f25473e.add(num2);
+                                                                                                this.f26294e.add(num2);
                                                                                             }
                                                                                             j10 = j11;
                                                                                             map7 = map8;
@@ -714,7 +714,7 @@ public final class e extends xd {
                                                                             map5 = (Map) aVar4.get(strH);
                                                                             if (map5 == null) {
                                                                                 tVarF1 = this.b.F0();
-                                                                                str8 = this.f25472d;
+                                                                                str8 = this.f26293d;
                                                                                 tVarF1.j();
                                                                                 tVarF1.h();
                                                                                 n9.m.f(str8);
@@ -738,7 +738,7 @@ public final class e extends xd {
                                                                                                             } catch (SQLiteException e22) {
                                                                                                                 e = e22;
                                                                                                                 str9 = str8;
-                                                                                                                tVarF1.f25625a.a().o().c("Database error querying filters. appId", w5.x(str9), e);
+                                                                                                                tVarF1.f26446a.a().o().c("Database error querying filters. appId", w5.x(str9), e);
                                                                                                                 map5 = Collections.EMPTY_MAP;
                                                                                                                 if (cursorQuery2 != null) {
                                                                                                                     cursorQuery2.close();
@@ -746,8 +746,8 @@ public final class e extends xd {
                                                                                                                 aVar4.put(strH, map5);
                                                                                                                 for (Integer num4 : map5.keySet()) {
                                                                                                                     int iIntValue2 = num4.intValue();
-                                                                                                                    if (this.f25473e.contains(num4)) {
-                                                                                                                        this.f25625a.a().w().b(str6, num4);
+                                                                                                                    if (this.f26294e.contains(num4)) {
+                                                                                                                        this.f26446a.a().w().b(str6, num4);
                                                                                                                         break;
                                                                                                                     }
                                                                                                                     it6 = ((List) map5.get(num4)).iterator();
@@ -755,7 +755,7 @@ public final class e extends xd {
                                                                                                                     while (true) {
                                                                                                                         if (it6.hasNext()) {
                                                                                                                             h4Var = (com.google.android.gms.internal.measurement.h4) it6.next();
-                                                                                                                            g7Var = this.f25625a;
+                                                                                                                            g7Var = this.f26446a;
                                                                                                                             map6 = map5;
                                                                                                                             if (Log.isLoggable(g7Var.a().z(), 2)) {
                                                                                                                                 u5 u5VarW = g7Var.a().w();
@@ -770,14 +770,14 @@ public final class e extends xd {
                                                                                                                             if (h4Var.F()) {
                                                                                                                             }
                                                                                                                             u5 u5VarR = g7Var.a().r();
-                                                                                                                            Object objX = w5.x(this.f25472d);
+                                                                                                                            Object objX = w5.x(this.f26293d);
                                                                                                                             if (h4Var.F()) {
                                                                                                                                 numValueOf2 = Integer.valueOf(h4Var.G());
                                                                                                                             } else {
                                                                                                                                 numValueOf2 = null;
                                                                                                                             }
                                                                                                                             u5VarR.c("Invalid property filter ID. appId, id", objX, String.valueOf(numValueOf2));
-                                                                                                                            this.f25473e.add(num4);
+                                                                                                                            this.f26294e.add(num4);
                                                                                                                             map5 = map6;
                                                                                                                             aVar4 = aVar4;
                                                                                                                             str6 = str6;
@@ -787,7 +787,7 @@ public final class e extends xd {
                                                                                                                             aVar4 = aVar4;
                                                                                                                         }
                                                                                                                         if (!zK) {
-                                                                                                                            this.f25473e.add(num4);
+                                                                                                                            this.f26294e.add(num4);
                                                                                                                         }
                                                                                                                         map5 = map6;
                                                                                                                         aVar4 = aVar4;
@@ -809,7 +809,7 @@ public final class e extends xd {
                                                                                                     } catch (IOException e23) {
                                                                                                         it5 = it4;
                                                                                                         str9 = str8;
-                                                                                                        tVarF1.f25625a.a().o().c("Failed to merge filter", w5.x(str9), e23);
+                                                                                                        tVarF1.f26446a.a().o().c("Failed to merge filter", w5.x(str9), e23);
                                                                                                     }
                                                                                                     try {
                                                                                                         if (!cursorQuery2.moveToNext()) {
@@ -819,7 +819,7 @@ public final class e extends xd {
                                                                                                         str8 = str9;
                                                                                                     } catch (SQLiteException e24) {
                                                                                                         e = e24;
-                                                                                                        tVarF1.f25625a.a().o().c("Database error querying filters. appId", w5.x(str9), e);
+                                                                                                        tVarF1.f26446a.a().o().c("Database error querying filters. appId", w5.x(str9), e);
                                                                                                         map5 = Collections.EMPTY_MAP;
                                                                                                         if (cursorQuery2 != null) {
                                                                                                             cursorQuery2.close();
@@ -860,8 +860,8 @@ public final class e extends xd {
                                                                             }
                                                                             while (r4.hasNext()) {
                                                                                 int iIntValue3 = num4.intValue();
-                                                                                if (this.f25473e.contains(num4)) {
-                                                                                    this.f25625a.a().w().b(str6, num4);
+                                                                                if (this.f26294e.contains(num4)) {
+                                                                                    this.f26446a.a().w().b(str6, num4);
                                                                                     break;
                                                                                     break;
                                                                                 }
@@ -870,7 +870,7 @@ public final class e extends xd {
                                                                                 while (true) {
                                                                                     if (it6.hasNext()) {
                                                                                         h4Var = (com.google.android.gms.internal.measurement.h4) it6.next();
-                                                                                        g7Var = this.f25625a;
+                                                                                        g7Var = this.f26446a;
                                                                                         map6 = map5;
                                                                                         if (Log.isLoggable(g7Var.a().z(), 2)) {
                                                                                             u5 u5VarW2 = g7Var.a().w();
@@ -885,14 +885,14 @@ public final class e extends xd {
                                                                                         if (h4Var.F()) {
                                                                                         }
                                                                                         u5 u5VarR2 = g7Var.a().r();
-                                                                                        Object objX2 = w5.x(this.f25472d);
+                                                                                        Object objX2 = w5.x(this.f26293d);
                                                                                         if (h4Var.F()) {
                                                                                             numValueOf2 = Integer.valueOf(h4Var.G());
                                                                                         } else {
                                                                                             numValueOf2 = null;
                                                                                         }
                                                                                         u5VarR2.c("Invalid property filter ID. appId, id", objX2, String.valueOf(numValueOf2));
-                                                                                        this.f25473e.add(num4);
+                                                                                        this.f26294e.add(num4);
                                                                                         map5 = map6;
                                                                                         aVar4 = aVar4;
                                                                                         str6 = str6;
@@ -902,7 +902,7 @@ public final class e extends xd {
                                                                                         aVar4 = aVar4;
                                                                                     }
                                                                                     if (!zK) {
-                                                                                        this.f25473e.add(num4);
+                                                                                        this.f26294e.add(num4);
                                                                                     }
                                                                                     map5 = map6;
                                                                                     aVar4 = aVar4;
@@ -917,16 +917,16 @@ public final class e extends xd {
                                                                         }
                                                                     }
                                                                     arrayList2 = new ArrayList();
-                                                                    Set<Integer> setKeySet = this.f25474f.keySet();
-                                                                    setKeySet.removeAll(this.f25473e);
+                                                                    Set<Integer> setKeySet = this.f26295f.keySet();
+                                                                    setKeySet.removeAll(this.f26294e);
                                                                     for (Integer num5 : setKeySet) {
                                                                         int iIntValue4 = num5.intValue();
-                                                                        df dfVar = (df) this.f25474f.get(num5);
+                                                                        df dfVar = (df) this.f26295f.get(num5);
                                                                         n9.m.l(dfVar);
                                                                         com.google.android.gms.internal.measurement.c6 c6VarB = dfVar.b(iIntValue4);
                                                                         arrayList2.add(c6VarB);
                                                                         tVarF0 = this.b.F0();
-                                                                        str7 = this.f25472d;
+                                                                        str7 = this.f26293d;
                                                                         com.google.android.gms.internal.measurement.f7 f7VarH = c6VarB.H();
                                                                         tVarF0.j();
                                                                         tVarF0.h();
@@ -940,11 +940,11 @@ public final class e extends xd {
                                                                         try {
                                                                             try {
                                                                                 if (tVarF0.u0().insertWithOnConflict("audience_filter_values", null, contentValues, 5) == -1) {
-                                                                                    tVarF0.f25625a.a().o().b("Failed to insert filter results (got -1). appId", w5.x(str7));
+                                                                                    tVarF0.f26446a.a().o().b("Failed to insert filter results (got -1). appId", w5.x(str7));
                                                                                 }
                                                                             } catch (SQLiteException e27) {
                                                                                 e = e27;
-                                                                                tVarF0.f25625a.a().o().c("Error storing filter results. appId", w5.x(str7), e);
+                                                                                tVarF0.f26446a.a().o().c("Error storing filter results. appId", w5.x(str7), e);
                                                                             }
                                                                         } catch (SQLiteException e28) {
                                                                             e = e28;
@@ -1036,7 +1036,7 @@ public final class e extends xd {
                                                             while (i12 < f7Var2.G() * 64) {
                                                                 if (re.P(f7Var2.F(), i12)) {
                                                                     z13 = zH;
-                                                                    this.f25625a.a().w().c("Filter already evaluated. audience ID, filter ID", num3, Integer.valueOf(i12));
+                                                                    this.f26446a.a().w().c("Filter already evaluated. audience ID, filter ID", num3, Integer.valueOf(i12));
                                                                     bitSet2.set(i12);
                                                                     if (re.P(f7Var2.H(), i12)) {
                                                                         bitSet.set(i12);
@@ -1055,7 +1055,7 @@ public final class e extends xd {
                                                         com.google.android.gms.internal.measurement.f7 f7Var5 = (com.google.android.gms.internal.measurement.f7) map2.get(num3);
                                                         if (!zH2) {
                                                         }
-                                                        this.f25474f.put(num3, new df(this, this.f25472d, f7Var5, bitSet, bitSet2, aVar, aVar11, null));
+                                                        this.f26295f.put(num3, new df(this, this.f26293d, f7Var5, bitSet, bitSet2, aVar, aVar11, null));
                                                         str2 = str2;
                                                         map = map;
                                                         str14 = str14;
@@ -1073,18 +1073,18 @@ public final class e extends xd {
                                                     it7 = list.iterator();
                                                     while (it7.hasNext()) {
                                                         o6Var = (com.google.android.gms.internal.measurement.o6) it7.next();
-                                                        o6VarA = efVar.a(this.f25472d, o6Var);
+                                                        o6VarA = efVar.a(this.f26293d, o6Var);
                                                         if (o6VarA != null) {
                                                             meVar = this.b;
-                                                            b0VarZ = meVar.F0().Z(this.f25472d, o6Var, o6VarA.J());
+                                                            b0VarZ = meVar.F0().Z(this.f26293d, o6Var, o6VarA.J());
                                                             meVar.F0().w0(b0VarZ);
                                                             if (z10) {
-                                                                j10 = b0VarZ.f25347c;
+                                                                j10 = b0VarZ.f26168c;
                                                                 strJ = o6VarA.J();
                                                                 map7 = (Map) aVar6.get(strJ);
                                                                 if (map7 == null) {
                                                                     tVarF2 = meVar.F0();
-                                                                    str10 = this.f25472d;
+                                                                    str10 = this.f26293d;
                                                                     tVarF2.j();
                                                                     tVarF2.h();
                                                                     n9.m.f(str10);
@@ -1128,8 +1128,8 @@ public final class e extends xd {
                                                                 while (it8.hasNext()) {
                                                                     num2 = (Integer) it8.next();
                                                                     iIntValue = num2.intValue();
-                                                                    if (this.f25473e.contains(num2)) {
-                                                                        this.f25625a.a().w().b("Skipping failed audience ID", num2);
+                                                                    if (this.f26294e.contains(num2)) {
+                                                                        this.f26446a.a().w().b("Skipping failed audience ID", num2);
                                                                     } else {
                                                                         it9 = ((List) map7.get(num2)).iterator();
                                                                         zK2 = true;
@@ -1143,11 +1143,11 @@ public final class e extends xd {
                                                                             com.google.android.gms.internal.measurement.z3 z3Var6 = (com.google.android.gms.internal.measurement.z3) it9.next();
                                                                             map8 = map7;
                                                                             it10 = it8;
-                                                                            bVar = new b(this, this.f25472d, iIntValue, z3Var6);
+                                                                            bVar = new b(this, this.f26293d, iIntValue, z3Var6);
                                                                             j11 = j10;
-                                                                            zK2 = bVar.k(this.f25475g, this.f25476h, o6VarA, j11, b0Var, o(iIntValue, z3Var6.G()));
+                                                                            zK2 = bVar.k(this.f26296g, this.f26297h, o6VarA, j11, b0Var, o(iIntValue, z3Var6.G()));
                                                                             if (!zK2) {
-                                                                                this.f25473e.add(num2);
+                                                                                this.f26294e.add(num2);
                                                                                 break;
                                                                             }
                                                                             n(num2).a(bVar);
@@ -1156,7 +1156,7 @@ public final class e extends xd {
                                                                             it8 = it10;
                                                                         }
                                                                         if (!zK2) {
-                                                                            this.f25473e.add(num2);
+                                                                            this.f26294e.add(num2);
                                                                         }
                                                                         j10 = j11;
                                                                         map7 = map8;
@@ -1183,7 +1183,7 @@ public final class e extends xd {
                                                         map5 = (Map) aVar4.get(strH);
                                                         if (map5 == null) {
                                                             tVarF1 = this.b.F0();
-                                                            str8 = this.f25472d;
+                                                            str8 = this.f26293d;
                                                             tVarF1.j();
                                                             tVarF1.h();
                                                             n9.m.f(str8);
@@ -1225,8 +1225,8 @@ public final class e extends xd {
                                                         }
                                                         while (r4.hasNext()) {
                                                             int iIntValue5 = num4.intValue();
-                                                            if (this.f25473e.contains(num4)) {
-                                                                this.f25625a.a().w().b(str6, num4);
+                                                            if (this.f26294e.contains(num4)) {
+                                                                this.f26446a.a().w().b(str6, num4);
                                                                 break;
                                                                 break;
                                                             }
@@ -1235,7 +1235,7 @@ public final class e extends xd {
                                                             while (true) {
                                                                 if (it6.hasNext()) {
                                                                     h4Var = (com.google.android.gms.internal.measurement.h4) it6.next();
-                                                                    g7Var = this.f25625a;
+                                                                    g7Var = this.f26446a;
                                                                     map6 = map5;
                                                                     if (Log.isLoggable(g7Var.a().z(), 2)) {
                                                                         u5 u5VarW3 = g7Var.a().w();
@@ -1250,14 +1250,14 @@ public final class e extends xd {
                                                                     if (h4Var.F()) {
                                                                     }
                                                                     u5 u5VarR3 = g7Var.a().r();
-                                                                    Object objX3 = w5.x(this.f25472d);
+                                                                    Object objX3 = w5.x(this.f26293d);
                                                                     if (h4Var.F()) {
                                                                         numValueOf2 = Integer.valueOf(h4Var.G());
                                                                     } else {
                                                                         numValueOf2 = null;
                                                                     }
                                                                     u5VarR3.c("Invalid property filter ID. appId, id", objX3, String.valueOf(numValueOf2));
-                                                                    this.f25473e.add(num4);
+                                                                    this.f26294e.add(num4);
                                                                     map5 = map6;
                                                                     aVar4 = aVar4;
                                                                     str6 = str6;
@@ -1267,7 +1267,7 @@ public final class e extends xd {
                                                                     aVar4 = aVar4;
                                                                 }
                                                                 if (!zK) {
-                                                                    this.f25473e.add(num4);
+                                                                    this.f26294e.add(num4);
                                                                 }
                                                                 map5 = map6;
                                                                 aVar4 = aVar4;
@@ -1282,16 +1282,16 @@ public final class e extends xd {
                                                     }
                                                 }
                                                 arrayList2 = new ArrayList();
-                                                Set<Integer> setKeySet2 = this.f25474f.keySet();
-                                                setKeySet2.removeAll(this.f25473e);
+                                                Set<Integer> setKeySet2 = this.f26295f.keySet();
+                                                setKeySet2.removeAll(this.f26294e);
                                                 while (r3.hasNext()) {
                                                     int iIntValue6 = num5.intValue();
-                                                    df dfVar2 = (df) this.f25474f.get(num5);
+                                                    df dfVar2 = (df) this.f26295f.get(num5);
                                                     n9.m.l(dfVar2);
                                                     com.google.android.gms.internal.measurement.c6 c6VarB2 = dfVar2.b(iIntValue6);
                                                     arrayList2.add(c6VarB2);
                                                     tVarF0 = this.b.F0();
-                                                    str7 = this.f25472d;
+                                                    str7 = this.f26293d;
                                                     com.google.android.gms.internal.measurement.f7 f7VarH2 = c6VarB2.H();
                                                     tVarF0.j();
                                                     tVarF0.h();
@@ -1303,7 +1303,7 @@ public final class e extends xd {
                                                     contentValues.put(str5, num5);
                                                     contentValues.put("current_results", bArrD2);
                                                     if (tVarF0.u0().insertWithOnConflict("audience_filter_values", null, contentValues, 5) == -1) {
-                                                        tVarF0.f25625a.a().o().b("Failed to insert filter results (got -1). appId", w5.x(str7));
+                                                        tVarF0.f26446a.a().o().b("Failed to insert filter results (got -1). appId", w5.x(str7));
                                                     }
                                                 }
                                                 return arrayList2;
@@ -1318,7 +1318,7 @@ public final class e extends xd {
                                             str14 = str14;
                                         } catch (SQLiteException e30) {
                                             e = e30;
-                                            tVarF5.f25625a.a().o().c("Database error querying filter results. appId", w5.x(str16), e);
+                                            tVarF5.f26446a.a().o().c("Database error querying filter results. appId", w5.x(str16), e);
                                             Map map15 = Collections.EMPTY_MAP;
                                             if (cursorQuery != null) {
                                                 cursorQuery.close();
@@ -1352,9 +1352,9 @@ public final class e extends xd {
                         if (!map2.isEmpty()) {
                             hashSet = new HashSet(map2.keySet());
                             if (z12) {
-                                String str18 = this.f25472d;
+                                String str18 = this.f26293d;
                                 t tVarF7 = this.b.F0();
-                                str3 = this.f25472d;
+                                str3 = this.f26293d;
                                 tVarF7.j();
                                 tVarF7.h();
                                 n9.m.f(str3);
@@ -1439,7 +1439,7 @@ public final class e extends xd {
                                     while (i12 < f7Var2.G() * 64) {
                                         if (re.P(f7Var2.F(), i12)) {
                                             z13 = zH;
-                                            this.f25625a.a().w().c("Filter already evaluated. audience ID, filter ID", num3, Integer.valueOf(i12));
+                                            this.f26446a.a().w().c("Filter already evaluated. audience ID, filter ID", num3, Integer.valueOf(i12));
                                             bitSet2.set(i12);
                                             if (re.P(f7Var2.H(), i12)) {
                                                 bitSet.set(i12);
@@ -1458,7 +1458,7 @@ public final class e extends xd {
                                 com.google.android.gms.internal.measurement.f7 f7Var6 = (com.google.android.gms.internal.measurement.f7) map2.get(num3);
                                 if (!zH2) {
                                 }
-                                this.f25474f.put(num3, new df(this, this.f25472d, f7Var6, bitSet, bitSet2, aVar, aVar12, null));
+                                this.f26295f.put(num3, new df(this, this.f26293d, f7Var6, bitSet, bitSet2, aVar, aVar12, null));
                                 str2 = str2;
                                 map = map;
                                 str14 = str14;
@@ -1476,18 +1476,18 @@ public final class e extends xd {
                             it7 = list.iterator();
                             while (it7.hasNext()) {
                                 o6Var = (com.google.android.gms.internal.measurement.o6) it7.next();
-                                o6VarA = efVar.a(this.f25472d, o6Var);
+                                o6VarA = efVar.a(this.f26293d, o6Var);
                                 if (o6VarA != null) {
                                     meVar = this.b;
-                                    b0VarZ = meVar.F0().Z(this.f25472d, o6Var, o6VarA.J());
+                                    b0VarZ = meVar.F0().Z(this.f26293d, o6Var, o6VarA.J());
                                     meVar.F0().w0(b0VarZ);
                                     if (z10) {
-                                        j10 = b0VarZ.f25347c;
+                                        j10 = b0VarZ.f26168c;
                                         strJ = o6VarA.J();
                                         map7 = (Map) aVar6.get(strJ);
                                         if (map7 == null) {
                                             tVarF2 = meVar.F0();
-                                            str10 = this.f25472d;
+                                            str10 = this.f26293d;
                                             tVarF2.j();
                                             tVarF2.h();
                                             n9.m.f(str10);
@@ -1531,8 +1531,8 @@ public final class e extends xd {
                                         while (it8.hasNext()) {
                                             num2 = (Integer) it8.next();
                                             iIntValue = num2.intValue();
-                                            if (this.f25473e.contains(num2)) {
-                                                this.f25625a.a().w().b("Skipping failed audience ID", num2);
+                                            if (this.f26294e.contains(num2)) {
+                                                this.f26446a.a().w().b("Skipping failed audience ID", num2);
                                             } else {
                                                 it9 = ((List) map7.get(num2)).iterator();
                                                 zK2 = true;
@@ -1546,11 +1546,11 @@ public final class e extends xd {
                                                     com.google.android.gms.internal.measurement.z3 z3Var8 = (com.google.android.gms.internal.measurement.z3) it9.next();
                                                     map8 = map7;
                                                     it10 = it8;
-                                                    bVar = new b(this, this.f25472d, iIntValue, z3Var8);
+                                                    bVar = new b(this, this.f26293d, iIntValue, z3Var8);
                                                     j11 = j10;
-                                                    zK2 = bVar.k(this.f25475g, this.f25476h, o6VarA, j11, b0Var, o(iIntValue, z3Var8.G()));
+                                                    zK2 = bVar.k(this.f26296g, this.f26297h, o6VarA, j11, b0Var, o(iIntValue, z3Var8.G()));
                                                     if (!zK2) {
-                                                        this.f25473e.add(num2);
+                                                        this.f26294e.add(num2);
                                                         break;
                                                     }
                                                     n(num2).a(bVar);
@@ -1559,7 +1559,7 @@ public final class e extends xd {
                                                     it8 = it10;
                                                 }
                                                 if (!zK2) {
-                                                    this.f25473e.add(num2);
+                                                    this.f26294e.add(num2);
                                                 }
                                                 j10 = j11;
                                                 map7 = map8;
@@ -1586,7 +1586,7 @@ public final class e extends xd {
                                 map5 = (Map) aVar4.get(strH);
                                 if (map5 == null) {
                                     tVarF1 = this.b.F0();
-                                    str8 = this.f25472d;
+                                    str8 = this.f26293d;
                                     tVarF1.j();
                                     tVarF1.h();
                                     n9.m.f(str8);
@@ -1628,8 +1628,8 @@ public final class e extends xd {
                                 }
                                 while (r4.hasNext()) {
                                     int iIntValue7 = num4.intValue();
-                                    if (this.f25473e.contains(num4)) {
-                                        this.f25625a.a().w().b(str6, num4);
+                                    if (this.f26294e.contains(num4)) {
+                                        this.f26446a.a().w().b(str6, num4);
                                         break;
                                         break;
                                     }
@@ -1638,7 +1638,7 @@ public final class e extends xd {
                                     while (true) {
                                         if (it6.hasNext()) {
                                             h4Var = (com.google.android.gms.internal.measurement.h4) it6.next();
-                                            g7Var = this.f25625a;
+                                            g7Var = this.f26446a;
                                             map6 = map5;
                                             if (Log.isLoggable(g7Var.a().z(), 2)) {
                                                 u5 u5VarW4 = g7Var.a().w();
@@ -1653,14 +1653,14 @@ public final class e extends xd {
                                             if (h4Var.F()) {
                                             }
                                             u5 u5VarR4 = g7Var.a().r();
-                                            Object objX4 = w5.x(this.f25472d);
+                                            Object objX4 = w5.x(this.f26293d);
                                             if (h4Var.F()) {
                                                 numValueOf2 = Integer.valueOf(h4Var.G());
                                             } else {
                                                 numValueOf2 = null;
                                             }
                                             u5VarR4.c("Invalid property filter ID. appId, id", objX4, String.valueOf(numValueOf2));
-                                            this.f25473e.add(num4);
+                                            this.f26294e.add(num4);
                                             map5 = map6;
                                             aVar4 = aVar4;
                                             str6 = str6;
@@ -1670,7 +1670,7 @@ public final class e extends xd {
                                             aVar4 = aVar4;
                                         }
                                         if (!zK) {
-                                            this.f25473e.add(num4);
+                                            this.f26294e.add(num4);
                                         }
                                         map5 = map6;
                                         aVar4 = aVar4;
@@ -1685,16 +1685,16 @@ public final class e extends xd {
                             }
                         }
                         arrayList2 = new ArrayList();
-                        Set<Integer> setKeySet3 = this.f25474f.keySet();
-                        setKeySet3.removeAll(this.f25473e);
+                        Set<Integer> setKeySet3 = this.f26295f.keySet();
+                        setKeySet3.removeAll(this.f26294e);
                         while (r3.hasNext()) {
                             int iIntValue8 = num5.intValue();
-                            df dfVar3 = (df) this.f25474f.get(num5);
+                            df dfVar3 = (df) this.f26295f.get(num5);
                             n9.m.l(dfVar3);
                             com.google.android.gms.internal.measurement.c6 c6VarB3 = dfVar3.b(iIntValue8);
                             arrayList2.add(c6VarB3);
                             tVarF0 = this.b.F0();
-                            str7 = this.f25472d;
+                            str7 = this.f26293d;
                             com.google.android.gms.internal.measurement.f7 f7VarH3 = c6VarB3.H();
                             tVarF0.j();
                             tVarF0.h();
@@ -1706,7 +1706,7 @@ public final class e extends xd {
                             contentValues.put(str5, num5);
                             contentValues.put("current_results", bArrD3);
                             if (tVarF0.u0().insertWithOnConflict("audience_filter_values", null, contentValues, 5) == -1) {
-                                tVarF0.f25625a.a().o().b("Failed to insert filter results (got -1). appId", w5.x(str7));
+                                tVarF0.f26446a.a().o().b("Failed to insert filter results (got -1). appId", w5.x(str7));
                             }
                         }
                         return arrayList2;
@@ -1733,7 +1733,7 @@ public final class e extends xd {
             map = map9;
         }
         t tVarF8 = this.b.F0();
-        String str19 = this.f25472d;
+        String str19 = this.f26293d;
         tVarF8.j();
         tVarF8.h();
         n9.m.f(str19);
@@ -1777,9 +1777,9 @@ public final class e extends xd {
         if (!map2.isEmpty()) {
             hashSet = new HashSet(map2.keySet());
             if (z12) {
-                String str110 = this.f25472d;
+                String str110 = this.f26293d;
                 t tVarF9 = this.b.F0();
-                str3 = this.f25472d;
+                str3 = this.f26293d;
                 tVarF9.j();
                 tVarF9.h();
                 n9.m.f(str3);
@@ -1827,12 +1827,12 @@ public final class e extends xd {
                                 aVar2 = map4;
                                 hashSet = hashSet3;
                             } else {
-                                com.google.android.gms.internal.measurement.e7 e7Var = (com.google.android.gms.internal.measurement.e7) f7Var3.r();
+                                com.google.android.gms.internal.measurement.e7 e7Var = (com.google.android.gms.internal.measurement.e7) f7Var3.q();
                                 e7Var.C();
-                                e7Var.A(listR);
+                                e7Var.B(listR);
                                 List listR2 = meVar2.K0().R(f7Var3.F(), list4);
                                 e7Var.z();
-                                e7Var.x(listR2);
+                                e7Var.y(listR2);
                                 ArrayList arrayList6 = new ArrayList();
                                 Iterator it12 = f7Var3.K().iterator();
                                 while (it12.hasNext()) {
@@ -1910,7 +1910,7 @@ public final class e extends xd {
                     while (i12 < f7Var2.G() * 64) {
                         if (re.P(f7Var2.F(), i12)) {
                             z13 = zH;
-                            this.f25625a.a().w().c("Filter already evaluated. audience ID, filter ID", num3, Integer.valueOf(i12));
+                            this.f26446a.a().w().c("Filter already evaluated. audience ID, filter ID", num3, Integer.valueOf(i12));
                             bitSet2.set(i12);
                             if (re.P(f7Var2.H(), i12)) {
                                 bitSet.set(i12);
@@ -1927,15 +1927,15 @@ public final class e extends xd {
                 }
                 boolean z17 = zH;
                 com.google.android.gms.internal.measurement.f7 f7Var7 = (com.google.android.gms.internal.measurement.f7) map2.get(num3);
-                if (!zH2 && z17 && (list3 = (List) map.get(num3)) != null && this.f25476h != null && this.f25475g != null) {
+                if (!zH2 && z17 && (list3 = (List) map.get(num3)) != null && this.f26297h != null && this.f26296g != null) {
                     Iterator it15 = list3.iterator();
                     while (it15.hasNext()) {
                         com.google.android.gms.internal.measurement.z3 z3Var9 = (com.google.android.gms.internal.measurement.z3) it15.next();
                         int iG = z3Var9.G();
                         Iterator it16 = it15;
-                        long jLongValue = this.f25476h.longValue() / 1000;
+                        long jLongValue = this.f26297h.longValue() / 1000;
                         if (z3Var9.Q()) {
-                            jLongValue = this.f25475g.longValue() / 1000;
+                            jLongValue = this.f26296g.longValue() / 1000;
                         }
                         Integer numValueOf11 = Integer.valueOf(iG);
                         if (aVar.containsKey(numValueOf11)) {
@@ -1947,7 +1947,7 @@ public final class e extends xd {
                         it15 = it16;
                     }
                 }
-                this.f25474f.put(num3, new df(this, this.f25472d, f7Var7, bitSet, bitSet2, aVar, aVar13, null));
+                this.f26295f.put(num3, new df(this, this.f26293d, f7Var7, bitSet, bitSet2, aVar, aVar13, null));
                 str2 = str2;
                 map = map;
                 str14 = str14;
@@ -1965,18 +1965,18 @@ public final class e extends xd {
             it7 = list.iterator();
             while (it7.hasNext()) {
                 o6Var = (com.google.android.gms.internal.measurement.o6) it7.next();
-                o6VarA = efVar.a(this.f25472d, o6Var);
+                o6VarA = efVar.a(this.f26293d, o6Var);
                 if (o6VarA != null) {
                     meVar = this.b;
-                    b0VarZ = meVar.F0().Z(this.f25472d, o6Var, o6VarA.J());
+                    b0VarZ = meVar.F0().Z(this.f26293d, o6Var, o6VarA.J());
                     meVar.F0().w0(b0VarZ);
                     if (z10) {
-                        j10 = b0VarZ.f25347c;
+                        j10 = b0VarZ.f26168c;
                         strJ = o6VarA.J();
                         map7 = (Map) aVar6.get(strJ);
                         if (map7 == null) {
                             tVarF2 = meVar.F0();
-                            str10 = this.f25472d;
+                            str10 = this.f26293d;
                             tVarF2.j();
                             tVarF2.h();
                             n9.m.f(str10);
@@ -2020,8 +2020,8 @@ public final class e extends xd {
                         while (it8.hasNext()) {
                             num2 = (Integer) it8.next();
                             iIntValue = num2.intValue();
-                            if (this.f25473e.contains(num2)) {
-                                this.f25625a.a().w().b("Skipping failed audience ID", num2);
+                            if (this.f26294e.contains(num2)) {
+                                this.f26446a.a().w().b("Skipping failed audience ID", num2);
                             } else {
                                 it9 = ((List) map7.get(num2)).iterator();
                                 zK2 = true;
@@ -2035,11 +2035,11 @@ public final class e extends xd {
                                     com.google.android.gms.internal.measurement.z3 z3Var11 = (com.google.android.gms.internal.measurement.z3) it9.next();
                                     map8 = map7;
                                     it10 = it8;
-                                    bVar = new b(this, this.f25472d, iIntValue, z3Var11);
+                                    bVar = new b(this, this.f26293d, iIntValue, z3Var11);
                                     j11 = j10;
-                                    zK2 = bVar.k(this.f25475g, this.f25476h, o6VarA, j11, b0Var, o(iIntValue, z3Var11.G()));
+                                    zK2 = bVar.k(this.f26296g, this.f26297h, o6VarA, j11, b0Var, o(iIntValue, z3Var11.G()));
                                     if (!zK2) {
-                                        this.f25473e.add(num2);
+                                        this.f26294e.add(num2);
                                         break;
                                     }
                                     n(num2).a(bVar);
@@ -2048,7 +2048,7 @@ public final class e extends xd {
                                     it8 = it10;
                                 }
                                 if (!zK2) {
-                                    this.f25473e.add(num2);
+                                    this.f26294e.add(num2);
                                 }
                                 j10 = j11;
                                 map7 = map8;
@@ -2075,7 +2075,7 @@ public final class e extends xd {
                 map5 = (Map) aVar4.get(strH);
                 if (map5 == null) {
                     tVarF1 = this.b.F0();
-                    str8 = this.f25472d;
+                    str8 = this.f26293d;
                     tVarF1.j();
                     tVarF1.h();
                     n9.m.f(str8);
@@ -2117,8 +2117,8 @@ public final class e extends xd {
                 }
                 while (r4.hasNext()) {
                     int iIntValue9 = num4.intValue();
-                    if (this.f25473e.contains(num4)) {
-                        this.f25625a.a().w().b(str6, num4);
+                    if (this.f26294e.contains(num4)) {
+                        this.f26446a.a().w().b(str6, num4);
                         break;
                         break;
                     }
@@ -2127,7 +2127,7 @@ public final class e extends xd {
                     while (true) {
                         if (it6.hasNext()) {
                             h4Var = (com.google.android.gms.internal.measurement.h4) it6.next();
-                            g7Var = this.f25625a;
+                            g7Var = this.f26446a;
                             map6 = map5;
                             if (Log.isLoggable(g7Var.a().z(), 2)) {
                                 u5 u5VarW5 = g7Var.a().w();
@@ -2141,27 +2141,27 @@ public final class e extends xd {
                             }
                             if (h4Var.F() || h4Var.G() > 256) {
                                 u5 u5VarR5 = g7Var.a().r();
-                                Object objX5 = w5.x(this.f25472d);
+                                Object objX5 = w5.x(this.f26293d);
                                 if (h4Var.F()) {
                                     numValueOf2 = Integer.valueOf(h4Var.G());
                                 } else {
                                     numValueOf2 = null;
                                 }
                                 u5VarR5.c("Invalid property filter ID. appId, id", objX5, String.valueOf(numValueOf2));
-                                this.f25473e.add(num4);
+                                this.f26294e.add(num4);
                                 map5 = map6;
                                 aVar4 = aVar4;
                                 str6 = str6;
                             } else {
-                                dVar = new d(this, this.f25472d, iIntValue9, h4Var);
-                                zK = dVar.k(this.f25475g, this.f25476h, r7Var4, o(iIntValue9, h4Var.G()));
+                                dVar = new d(this, this.f26293d, iIntValue9, h4Var);
+                                zK = dVar.k(this.f26296g, this.f26297h, r7Var4, o(iIntValue9, h4Var.G()));
                                 if (zK) {
                                     n(num4).a(dVar);
                                     map5 = map6;
                                     aVar4 = aVar4;
                                     str6 = str6;
                                 } else {
-                                    this.f25473e.add(num4);
+                                    this.f26294e.add(num4);
                                 }
                             }
                         } else {
@@ -2170,7 +2170,7 @@ public final class e extends xd {
                             aVar4 = aVar4;
                         }
                         if (!zK) {
-                            this.f25473e.add(num4);
+                            this.f26294e.add(num4);
                         }
                         map5 = map6;
                         aVar4 = aVar4;
@@ -2181,16 +2181,16 @@ public final class e extends xd {
             }
         }
         arrayList2 = new ArrayList();
-        Set<Integer> setKeySet4 = this.f25474f.keySet();
-        setKeySet4.removeAll(this.f25473e);
+        Set<Integer> setKeySet4 = this.f26295f.keySet();
+        setKeySet4.removeAll(this.f26294e);
         while (r3.hasNext()) {
             int iIntValue10 = num5.intValue();
-            df dfVar4 = (df) this.f25474f.get(num5);
+            df dfVar4 = (df) this.f26295f.get(num5);
             n9.m.l(dfVar4);
             com.google.android.gms.internal.measurement.c6 c6VarB4 = dfVar4.b(iIntValue10);
             arrayList2.add(c6VarB4);
             tVarF0 = this.b.F0();
-            str7 = this.f25472d;
+            str7 = this.f26293d;
             com.google.android.gms.internal.measurement.f7 f7VarH4 = c6VarB4.H();
             tVarF0.j();
             tVarF0.h();
@@ -2202,23 +2202,23 @@ public final class e extends xd {
             contentValues.put(str5, num5);
             contentValues.put("current_results", bArrD4);
             if (tVarF0.u0().insertWithOnConflict("audience_filter_values", null, contentValues, 5) == -1) {
-                tVarF0.f25625a.a().o().b("Failed to insert filter results (got -1). appId", w5.x(str7));
+                tVarF0.f26446a.a().o().b("Failed to insert filter results (got -1). appId", w5.x(str7));
             }
         }
         return arrayList2;
     }
 
     public final df n(Integer num) {
-        if (this.f25474f.containsKey(num)) {
-            return (df) this.f25474f.get(num);
+        if (this.f26295f.containsKey(num)) {
+            return (df) this.f26295f.get(num);
         }
-        df dfVar = new df(this, this.f25472d, null);
-        this.f25474f.put(num, dfVar);
+        df dfVar = new df(this, this.f26293d, null);
+        this.f26295f.put(num, dfVar);
         return dfVar;
     }
 
     public final boolean o(int i10, int i11) {
-        df dfVar = (df) this.f25474f.get(Integer.valueOf(i10));
+        df dfVar = (df) this.f26295f.get(Integer.valueOf(i10));
         if (dfVar == null) {
             return false;
         }

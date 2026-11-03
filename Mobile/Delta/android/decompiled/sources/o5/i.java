@@ -7,7 +7,7 @@ import android.graphics.RectF;
 public class i {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Matrix f27119a = new a();
+    public static final Matrix f27684a = new a();
 
     public class a extends Matrix {
         public void a() {

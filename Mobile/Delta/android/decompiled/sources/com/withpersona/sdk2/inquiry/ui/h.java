@@ -5,6 +5,8 @@ import android.database.Cursor;
 import android.net.Uri;
 import com.appsflyer.R;
 import com.withpersona.sdk2.inquiry.steps.ui.components.SelectedFile;
+import iu.g1;
+import iu.p0;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
@@ -14,16 +16,14 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
-import ku.g1;
-import ku.p0;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pt.m;
-import ym.o;
+import wm.o;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000V\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\f\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u00012\b\u0012\u0004\u0012\u00020\u00020\u0003:\u0002\u0016(Bo\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\f\u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\b\u0012\"\u0010\u0010\u001a\u001e\b\u0001\u0012\u0010\u0012\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u000e0\r0\f\u0012\u0006\u0012\u0004\u0018\u00010\u000f0\u000b\u0012$\u0010\u0011\u001a \b\u0001\u0012\u0012\u0012\u0010\u0012\f\u0012\n\u0012\u0004\u0012\u00020\u000e\u0018\u00010\r0\f\u0012\u0006\u0012\u0004\u0018\u00010\u000f0\u000b¢\u0006\u0004\b\u0012\u0010\u0013J\u001b\u0010\u0016\u001a\u00020\u00152\n\u0010\u0014\u001a\u0006\u0012\u0002\b\u00030\u0001H\u0016¢\u0006\u0004\b\u0016\u0010\u0017J\u001b\u0010\u0018\u001a\u00020\u00152\n\u0010\u0014\u001a\u0006\u0012\u0002\b\u00030\u0003H\u0016¢\u0006\u0004\b\u0018\u0010\u0019J\u0015\u0010\u001b\u001a\b\u0012\u0004\u0012\u00020\u00020\u001aH\u0016¢\u0006\u0004\b\u001b\u0010\u001cJ(\u0010\u001f\u001a\u00020\t*\b\u0012\u0004\u0012\u00020\u00020\u001d2\f\u0010\u001e\u001a\b\u0012\u0004\u0012\u00020\u000e0\rH\u0082@¢\u0006\u0004\b\u001f\u0010 R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0016\u0010!R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0018\u0010\"R\u001a\u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b#\u0010$R0\u0010\u0010\u001a\u001e\b\u0001\u0012\u0010\u0012\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u000e0\r0\f\u0012\u0006\u0012\u0004\u0018\u00010\u000f0\u000b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b%\u0010&R2\u0010\u0011\u001a \b\u0001\u0012\u0012\u0012\u0010\u0012\f\u0012\n\u0012\u0004\u0012\u00020\u000e\u0018\u00010\r0\f\u0012\u0006\u0012\u0004\u0018\u00010\u000f0\u000b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b'\u0010&¨\u0006)"}, d2 = {"Lcom/withpersona/sdk2/inquiry/ui/h;", "Lym/o;", "Lcom/withpersona/sdk2/inquiry/ui/h$b;", "Lvr/h;", "", "key", "Landroid/content/Context;", "context", "Lkotlin/Function0;", "", "launchPicker", "Lkotlin/Function1;", "Lnt/b;", "", "Landroid/net/Uri;", "", "collectResult", "checkPendingResult", "<init>", "(Ljava/lang/String;Landroid/content/Context;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)V", "otherWorker", "", "b", "(Lym/o;)Z", "c", "(Lvr/h;)Z", "Lnu/h;", "run", "()Lnu/h;", "Lnu/i;", "uris", "h", "(Lnu/i;Ljava/util/List;Lnt/b;)Ljava/lang/Object;", "Ljava/lang/String;", "Landroid/content/Context;", "d", "Lkotlin/jvm/functions/Function0;", "e", "Lkotlin/jvm/functions/Function1;", "f", "a", "ui_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class h implements o<b>, vr.h<b> {
+@Metadata(d1 = {"\u0000V\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\f\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u00012\b\u0012\u0004\u0012\u00020\u00020\u0003:\u0002!\u0018Bo\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\f\u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\b\u0012\"\u0010\u0010\u001a\u001e\b\u0001\u0012\u0010\u0012\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u000e0\r0\f\u0012\u0006\u0012\u0004\u0018\u00010\u000f0\u000b\u0012$\u0010\u0011\u001a \b\u0001\u0012\u0012\u0012\u0010\u0012\f\u0012\n\u0012\u0004\u0012\u00020\u000e\u0018\u00010\r0\f\u0012\u0006\u0012\u0004\u0018\u00010\u000f0\u000b¢\u0006\u0004\b\u0012\u0010\u0013J\u001b\u0010\u0016\u001a\u00020\u00152\n\u0010\u0014\u001a\u0006\u0012\u0002\b\u00030\u0001H\u0016¢\u0006\u0004\b\u0016\u0010\u0017J\u001b\u0010\u0018\u001a\u00020\u00152\n\u0010\u0014\u001a\u0006\u0012\u0002\b\u00030\u0003H\u0016¢\u0006\u0004\b\u0018\u0010\u0019J\u0015\u0010\u001b\u001a\b\u0012\u0004\u0012\u00020\u00020\u001aH\u0016¢\u0006\u0004\b\u001b\u0010\u001cJ(\u0010\u001f\u001a\u00020\t*\b\u0012\u0004\u0012\u00020\u00020\u001d2\f\u0010\u001e\u001a\b\u0012\u0004\u0012\u00020\u000e0\rH\u0082@¢\u0006\u0004\b\u001f\u0010 R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b!\u0010\"R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0016\u0010#R\u001a\u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b$\u0010%R0\u0010\u0010\u001a\u001e\b\u0001\u0012\u0010\u0012\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u000e0\r0\f\u0012\u0006\u0012\u0004\u0018\u00010\u000f0\u000b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b&\u0010'R2\u0010\u0011\u001a \b\u0001\u0012\u0012\u0012\u0010\u0012\f\u0012\n\u0012\u0004\u0012\u00020\u000e\u0018\u00010\r0\f\u0012\u0006\u0012\u0004\u0018\u00010\u000f0\u000b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b(\u0010'¨\u0006)"}, d2 = {"Lcom/withpersona/sdk2/inquiry/ui/h;", "Lwm/o;", "Lcom/withpersona/sdk2/inquiry/ui/h$b;", "Ltr/h;", "", "key", "Landroid/content/Context;", "context", "Lkotlin/Function0;", "", "launchPicker", "Lkotlin/Function1;", "Llt/b;", "", "Landroid/net/Uri;", "", "collectResult", "checkPendingResult", "<init>", "(Ljava/lang/String;Landroid/content/Context;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;)V", "otherWorker", "", "c", "(Lwm/o;)Z", "a", "(Ltr/h;)Z", "Llu/h;", "run", "()Llu/h;", "Llu/i;", "uris", "h", "(Llu/i;Ljava/util/List;Llt/b;)Ljava/lang/Object;", "b", "Ljava/lang/String;", "Landroid/content/Context;", "d", "Lkotlin/jvm/functions/Function0;", "e", "Lkotlin/jvm/functions/Function1;", "f", "ui_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class h implements o<b>, tr.h<b> {
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull
@@ -39,11 +39,11 @@ public final class h implements o<b>, vr.h<b> {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final Function1<nt.b<? super List<? extends Uri>>, Object> collectResult;
+    public final Function1<lt.b<? super List<? extends Uri>>, Object> collectResult;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final Function1<nt.b<? super List<? extends Uri>>, Object> checkPendingResult;
+    public final Function1<lt.b<? super List<? extends Uri>>, Object> checkPendingResult;
 
     @Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0011\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\u0018\u00002\u00020\u0001B=\b\u0007\u0012\u0014\b\u0001\u0010\u0005\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00040\u00030\u0002\u0012\u0014\b\u0001\u0010\u0006\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00040\u00030\u0002\u0012\u0006\u0010\b\u001a\u00020\u0007¢\u0006\u0004\b\t\u0010\nJ+\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u000b\u001a\u00020\u00042\f\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u00040\u00032\u0006\u0010\u000e\u001a\u00020\r¢\u0006\u0004\b\u0010\u0010\u0011R \u0010\u0005\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00040\u00030\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0012\u0010\u0013R \u0010\u0006\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00040\u00030\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0010\u0010\u0013R\u0014\u0010\b\u001a\u00020\u00078\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0014\u0010\u0015¨\u0006\u0016"}, d2 = {"Lcom/withpersona/sdk2/inquiry/ui/h$a;", "", "Lg/c;", "", "", "openMultipleDocumentsLauncher", "openSingleDocumentLauncher", "Landroid/content/Context;", "context", "<init>", "(Lg/c;Lg/c;Landroid/content/Context;)V", "componentName", "allowedFileTypes", "", "fileUploadLimit", "Lcom/withpersona/sdk2/inquiry/ui/h;", "b", "(Ljava/lang/String;[Ljava/lang/String;I)Lcom/withpersona/sdk2/inquiry/ui/h;", "a", "Lg/c;", "c", "Landroid/content/Context;", "ui_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class a {
@@ -61,25 +61,25 @@ public final class h implements o<b>, vr.h<b> {
         public final Context context;
 
         /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.ui.h$a$a, reason: collision with other inner class name */
+        @nt.f(c = "com.withpersona.sdk2.inquiry.ui.UiStepFileSelectWorker$Factory$create$2", f = "UiStepFileSelectWorker.kt", l = {116, 119}, m = "invokeSuspend")
         @Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\u0010\u0000\u001a\b\u0012\u0004\u0012\u00020\u00020\u0001H\n"}, d2 = {"<anonymous>", "", "Landroid/net/Uri;"}, k = 3, mv = {2, 2, 0}, xi = 48)
-        @pt.f(c = "com.withpersona.sdk2.inquiry.ui.UiStepFileSelectWorker$Factory$create$2", f = "UiStepFileSelectWorker.kt", l = {116, 119}, m = "invokeSuspend")
-        public static final class C0254a extends m implements Function1<nt.b<? super List<? extends Uri>>, Object> {
+        public static final class C0257a extends m implements Function1<lt.b<? super List<? extends Uri>>, Object> {
 
             /* JADX INFO: renamed from: t, reason: collision with root package name */
-            public int f13877t;
+            public int f13958t;
 
             /* JADX INFO: renamed from: u, reason: collision with root package name */
-            public final /* synthetic */ int f13878u;
+            public final /* synthetic */ int f13959u;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C0254a(int i10, nt.b<? super C0254a> bVar) {
+            public C0257a(int i10, lt.b<? super C0257a> bVar) {
                 super(1, bVar);
-                this.f13878u = i10;
+                this.f13959u = i10;
             }
 
-            @Override // pt.a
-            public final nt.b<Unit> create(nt.b<?> bVar) {
-                return new C0254a(this.f13878u, bVar);
+            @Override // nt.a
+            public final lt.b<Unit> create(lt.b<?> bVar) {
+                return new C0257a(this.f13959u, bVar);
             }
 
             /* JADX WARN: Code restructure failed: missing block: B:13:0x0030, code lost:
@@ -90,7 +90,7 @@ public final class h implements o<b>, vr.h<b> {
             
                 if (r5 == r0) goto L23;
              */
-            @Override // pt.a
+            @Override // nt.a
             /*
                 Code decompiled incorrectly, please refer to instructions dump.
                 To view partially-correct add '--show-bad-code' argument
@@ -98,14 +98,14 @@ public final class h implements o<b>, vr.h<b> {
             public final java.lang.Object invokeSuspend(java.lang.Object r5) {
                 /*
                     r4 = this;
-                    java.lang.Object r0 = ot.c.e()
-                    int r1 = r4.f13877t
+                    java.lang.Object r0 = mt.c.e()
+                    int r1 = r4.f13958t
                     r2 = 2
                     r3 = 1
                     if (r1 == 0) goto L1e
                     if (r1 == r3) goto L1a
                     if (r1 != r2) goto L12
-                    jt.o.b(r5)
+                    gt.o.b(r5)
                     goto L4f
                 L12:
                     java.lang.IllegalStateException r5 = new java.lang.IllegalStateException
@@ -113,16 +113,16 @@ public final class h implements o<b>, vr.h<b> {
                     r5.<init>(r0)
                     throw r5
                 L1a:
-                    jt.o.b(r5)
+                    gt.o.b(r5)
                     goto L33
                 L1e:
-                    jt.o.b(r5)
-                    int r5 = r4.f13878u
+                    gt.o.b(r5)
+                    int r5 = r4.f13959u
                     if (r5 != r3) goto L41
-                    mp.u r5 = new mp.u
+                    kp.u r5 = new kp.u
                     r5.<init>()
-                    r4.f13877t = r3
-                    java.lang.Object r5 = nu.j.u(r5, r4)
+                    r4.f13958t = r3
+                    java.lang.Object r5 = lu.j.u(r5, r4)
                     if (r5 != r0) goto L33
                     goto L4e
                 L33:
@@ -134,10 +134,10 @@ public final class h implements o<b>, vr.h<b> {
                     java.util.List r5 = kotlin.collections.p.k()
                     return r5
                 L41:
-                    mp.v r5 = new mp.v
+                    kp.v r5 = new kp.v
                     r5.<init>()
-                    r4.f13877t = r2
-                    java.lang.Object r5 = nu.j.u(r5, r4)
+                    r4.f13958t = r2
+                    java.lang.Object r5 = lu.j.u(r5, r4)
                     if (r5 != r0) goto L4f
                 L4e:
                     return r0
@@ -145,35 +145,35 @@ public final class h implements o<b>, vr.h<b> {
                     java.util.List r5 = (java.util.List) r5
                     return r5
                 */
-                throw new UnsupportedOperationException("Method not decompiled: com.withpersona.sdk2.inquiry.ui.h.a.C0254a.invokeSuspend(java.lang.Object):java.lang.Object");
+                throw new UnsupportedOperationException("Method not decompiled: com.withpersona.sdk2.inquiry.ui.h.a.C0257a.invokeSuspend(java.lang.Object):java.lang.Object");
             }
 
             @Override // kotlin.jvm.functions.Function1
-            /* JADX INFO: renamed from: q, reason: merged with bridge method [inline-methods] */
-            public final Object invoke(nt.b<? super List<? extends Uri>> bVar) {
-                return ((C0254a) create(bVar)).invokeSuspend(Unit.f22483a);
+            /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
+            public final Object invoke(lt.b<? super List<? extends Uri>> bVar) {
+                return ((C0257a) create(bVar)).invokeSuspend(Unit.f22938a);
             }
         }
 
+        @nt.f(c = "com.withpersona.sdk2.inquiry.ui.UiStepFileSelectWorker$Factory$create$3", f = "UiStepFileSelectWorker.kt", l = {R.styleable.AppCompatTheme_windowMinWidthMajor, 127}, m = "invokeSuspend")
         @Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\u0010\u0000\u001a\n\u0012\u0004\u0012\u00020\u0002\u0018\u00010\u0001H\n"}, d2 = {"<anonymous>", "", "Landroid/net/Uri;"}, k = 3, mv = {2, 2, 0}, xi = 48)
-        @pt.f(c = "com.withpersona.sdk2.inquiry.ui.UiStepFileSelectWorker$Factory$create$3", f = "UiStepFileSelectWorker.kt", l = {R.styleable.AppCompatTheme_windowMinWidthMajor, 127}, m = "invokeSuspend")
-        public static final class b extends m implements Function1<nt.b<? super List<? extends Uri>>, Object> {
+        public static final class b extends m implements Function1<lt.b<? super List<? extends Uri>>, Object> {
 
             /* JADX INFO: renamed from: t, reason: collision with root package name */
-            public int f13879t;
+            public int f13960t;
 
             /* JADX INFO: renamed from: u, reason: collision with root package name */
-            public final /* synthetic */ int f13880u;
+            public final /* synthetic */ int f13961u;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public b(int i10, nt.b<? super b> bVar) {
+            public b(int i10, lt.b<? super b> bVar) {
                 super(1, bVar);
-                this.f13880u = i10;
+                this.f13961u = i10;
             }
 
-            @Override // pt.a
-            public final nt.b<Unit> create(nt.b<?> bVar) {
-                return new b(this.f13880u, bVar);
+            @Override // nt.a
+            public final lt.b<Unit> create(lt.b<?> bVar) {
+                return new b(this.f13961u, bVar);
             }
 
             /* JADX WARN: Code restructure failed: missing block: B:13:0x0030, code lost:
@@ -184,7 +184,7 @@ public final class h implements o<b>, vr.h<b> {
             
                 if (r5 == r0) goto L23;
              */
-            @Override // pt.a
+            @Override // nt.a
             /*
                 Code decompiled incorrectly, please refer to instructions dump.
                 To view partially-correct add '--show-bad-code' argument
@@ -192,14 +192,14 @@ public final class h implements o<b>, vr.h<b> {
             public final java.lang.Object invokeSuspend(java.lang.Object r5) {
                 /*
                     r4 = this;
-                    java.lang.Object r0 = ot.c.e()
-                    int r1 = r4.f13879t
+                    java.lang.Object r0 = mt.c.e()
+                    int r1 = r4.f13960t
                     r2 = 2
                     r3 = 1
                     if (r1 == 0) goto L1e
                     if (r1 == r3) goto L1a
                     if (r1 != r2) goto L12
-                    jt.o.b(r5)
+                    gt.o.b(r5)
                     goto L4c
                 L12:
                     java.lang.IllegalStateException r5 = new java.lang.IllegalStateException
@@ -207,16 +207,16 @@ public final class h implements o<b>, vr.h<b> {
                     r5.<init>(r0)
                     throw r5
                 L1a:
-                    jt.o.b(r5)
+                    gt.o.b(r5)
                     goto L33
                 L1e:
-                    jt.o.b(r5)
-                    int r5 = r4.f13880u
+                    gt.o.b(r5)
+                    int r5 = r4.f13961u
                     if (r5 != r3) goto L3e
-                    mp.u r5 = new mp.u
+                    kp.u r5 = new kp.u
                     r5.<init>()
-                    r4.f13879t = r3
-                    java.lang.Object r5 = nu.j.v(r5, r4)
+                    r4.f13960t = r3
+                    java.lang.Object r5 = lu.j.v(r5, r4)
                     if (r5 != r0) goto L33
                     goto L4b
                 L33:
@@ -228,10 +228,10 @@ public final class h implements o<b>, vr.h<b> {
                     r5 = 0
                     return r5
                 L3e:
-                    mp.v r5 = new mp.v
+                    kp.v r5 = new kp.v
                     r5.<init>()
-                    r4.f13879t = r2
-                    java.lang.Object r5 = nu.j.v(r5, r4)
+                    r4.f13960t = r2
+                    java.lang.Object r5 = lu.j.v(r5, r4)
                     if (r5 != r0) goto L4c
                 L4b:
                     return r0
@@ -243,9 +243,9 @@ public final class h implements o<b>, vr.h<b> {
             }
 
             @Override // kotlin.jvm.functions.Function1
-            /* JADX INFO: renamed from: q, reason: merged with bridge method [inline-methods] */
-            public final Object invoke(nt.b<? super List<? extends Uri>> bVar) {
-                return ((b) create(bVar)).invokeSuspend(Unit.f22483a);
+            /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
+            public final Object invoke(lt.b<? super List<? extends Uri>> bVar) {
+                return ((b) create(bVar)).invokeSuspend(Unit.f22938a);
             }
         }
 
@@ -264,19 +264,19 @@ public final class h implements o<b>, vr.h<b> {
             } else {
                 aVar.openMultipleDocumentsLauncher.b(strArr);
             }
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
 
         @NotNull
         public final h b(@NotNull String componentName, @NotNull final String[] allowedFileTypes, final int fileUploadLimit) {
             Intrinsics.checkNotNullParameter(componentName, "componentName");
             Intrinsics.checkNotNullParameter(allowedFileTypes, "allowedFileTypes");
-            return new h("FileUploadPicker-" + componentName, this.context, new Function0() { // from class: or.a4
+            return new h("FileUploadPicker-" + componentName, this.context, new Function0() { // from class: mr.a4
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
                     return com.withpersona.sdk2.inquiry.ui.h.a.c(fileUploadLimit, this, allowedFileTypes);
                 }
-            }, new C0254a(fileUploadLimit, null), new b(fileUploadLimit, null));
+            }, new C0257a(fileUploadLimit, null), new b(fileUploadLimit, null));
         }
     }
 
@@ -288,7 +288,7 @@ public final class h implements o<b>, vr.h<b> {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final a f13881a = new a();
+            public static final a f13962a = new a();
 
             public a() {
                 super(null);
@@ -297,13 +297,13 @@ public final class h implements o<b>, vr.h<b> {
 
         /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.ui.h$b$b, reason: collision with other inner class name */
         @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"Lcom/withpersona/sdk2/inquiry/ui/h$b$b;", "Lcom/withpersona/sdk2/inquiry/ui/h$b;", "<init>", "()V", "ui_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-        public static final class C0255b extends b {
+        public static final class C0258b extends b {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final C0255b f13882a = new C0255b();
+            public static final C0258b f13963a = new C0258b();
 
-            public C0255b() {
+            public C0258b() {
                 super(null);
             }
         }
@@ -353,113 +353,113 @@ public final class h implements o<b>, vr.h<b> {
         }
     }
 
-    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u0002*\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Lnu/i;", "Lcom/withpersona/sdk2/inquiry/ui/h$b;", "", "<anonymous>", "(Lnu/i;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.ui.UiStepFileSelectWorker$run$1", f = "UiStepFileSelectWorker.kt", l = {42, 46, 50, 54, 55}, m = "invokeSuspend")
-    public static final class c extends m implements Function2<nu.i<? super b>, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.ui.UiStepFileSelectWorker$run$1", f = "UiStepFileSelectWorker.kt", l = {42, 46, 50, 54, 55}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u0002*\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Llu/i;", "Lcom/withpersona/sdk2/inquiry/ui/h$b;", "", "<anonymous>", "(Llu/i;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class c extends m implements Function2<lu.i<? super b>, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f13884t;
+        public Object f13965t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f13885u;
+        public Object f13966u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public int f13886v;
+        public int f13967v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public /* synthetic */ Object f13887w;
+        public /* synthetic */ Object f13968w;
 
-        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-        @pt.f(c = "com.withpersona.sdk2.inquiry.ui.UiStepFileSelectWorker$run$1$1", f = "UiStepFileSelectWorker.kt", l = {}, m = "invokeSuspend")
-        public static final class a extends m implements Function2<p0, nt.b<? super Unit>, Object> {
+        @nt.f(c = "com.withpersona.sdk2.inquiry.ui.UiStepFileSelectWorker$run$1$1", f = "UiStepFileSelectWorker.kt", l = {}, m = "invokeSuspend")
+        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+        public static final class a extends m implements Function2<p0, lt.b<? super Unit>, Object> {
 
             /* JADX INFO: renamed from: t, reason: collision with root package name */
-            public int f13889t;
+            public int f13970t;
 
             /* JADX INFO: renamed from: u, reason: collision with root package name */
-            public final /* synthetic */ h f13890u;
+            public final /* synthetic */ h f13971u;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public a(h hVar, nt.b<? super a> bVar) {
+            public a(h hVar, lt.b<? super a> bVar) {
                 super(2, bVar);
-                this.f13890u = hVar;
+                this.f13971u = hVar;
             }
 
-            @Override // pt.a
-            public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-                return new a(this.f13890u, bVar);
-            }
-
-            @Override // pt.a
-            public final Object invokeSuspend(Object obj) {
-                ot.c.e();
-                if (this.f13889t != 0) {
-                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-                }
-                jt.o.b(obj);
-                this.f13890u.launchPicker.invoke();
-                return Unit.f22483a;
+            @Override // nt.a
+            public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+                return new a(this.f13971u, bVar);
             }
 
             @Override // kotlin.jvm.functions.Function2
-            public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-                return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+                return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+            }
+
+            @Override // nt.a
+            public final Object invokeSuspend(Object obj) {
+                mt.c.e();
+                if (this.f13970t != 0) {
+                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                }
+                gt.o.b(obj);
+                this.f13971u.launchPicker.invoke();
+                return Unit.f22938a;
             }
         }
 
-        @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0003\u001a\n\u0012\u0004\u0012\u00020\u0002\u0018\u00010\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Lku/p0;", "", "Landroid/net/Uri;", "<anonymous>", "(Lku/p0;)Ljava/util/List;"}, k = 3, mv = {2, 2, 0})
-        @pt.f(c = "com.withpersona.sdk2.inquiry.ui.UiStepFileSelectWorker$run$1$pendingResult$1", f = "UiStepFileSelectWorker.kt", l = {43}, m = "invokeSuspend")
-        public static final class b extends m implements Function2<p0, nt.b<? super List<? extends Uri>>, Object> {
+        @nt.f(c = "com.withpersona.sdk2.inquiry.ui.UiStepFileSelectWorker$run$1$pendingResult$1", f = "UiStepFileSelectWorker.kt", l = {43}, m = "invokeSuspend")
+        @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0003\u001a\n\u0012\u0004\u0012\u00020\u0002\u0018\u00010\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Liu/p0;", "", "Landroid/net/Uri;", "<anonymous>", "(Liu/p0;)Ljava/util/List;"}, k = 3, mv = {2, 2, 0})
+        public static final class b extends m implements Function2<p0, lt.b<? super List<? extends Uri>>, Object> {
 
             /* JADX INFO: renamed from: t, reason: collision with root package name */
-            public int f13891t;
+            public int f13972t;
 
             /* JADX INFO: renamed from: u, reason: collision with root package name */
-            public final /* synthetic */ h f13892u;
+            public final /* synthetic */ h f13973u;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public b(h hVar, nt.b<? super b> bVar) {
+            public b(h hVar, lt.b<? super b> bVar) {
                 super(2, bVar);
-                this.f13892u = hVar;
+                this.f13973u = hVar;
             }
 
-            @Override // pt.a
-            public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-                return new b(this.f13892u, bVar);
+            @Override // nt.a
+            public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+                return new b(this.f13973u, bVar);
             }
 
-            @Override // pt.a
+            @Override // kotlin.jvm.functions.Function2
+            public final Object invoke(p0 p0Var, lt.b<? super List<? extends Uri>> bVar) {
+                return ((b) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+            }
+
+            @Override // nt.a
             public final Object invokeSuspend(Object obj) {
-                Object objE = ot.c.e();
-                int i10 = this.f13891t;
+                Object objE = mt.c.e();
+                int i10 = this.f13972t;
                 if (i10 != 0) {
                     if (i10 != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                     }
-                    jt.o.b(obj);
+                    gt.o.b(obj);
                     return obj;
                 }
-                jt.o.b(obj);
-                Function1 function1 = this.f13892u.checkPendingResult;
-                this.f13891t = 1;
+                gt.o.b(obj);
+                Function1 function1 = this.f13973u.checkPendingResult;
+                this.f13972t = 1;
                 Object objInvoke = function1.invoke(this);
                 return objInvoke == objE ? objE : objInvoke;
             }
-
-            @Override // kotlin.jvm.functions.Function2
-            public final Object invoke(p0 p0Var, nt.b<? super List<? extends Uri>> bVar) {
-                return ((b) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
-            }
         }
 
-        public c(nt.b<? super c> bVar) {
+        public c(lt.b<? super c> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             c cVar = h.this.new c(bVar);
-            cVar.f13887w = obj;
+            cVar.f13968w = obj;
             return cVar;
         }
 
@@ -474,7 +474,7 @@ public final class h implements o<b>, vr.h<b> {
         
             if (r3.h(r0, r11, r10) == r1) goto L35;
          */
-        @Override // pt.a
+        @Override // nt.a
         /*
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct add '--show-bad-code' argument
@@ -488,14 +488,14 @@ public final class h implements o<b>, vr.h<b> {
         }
 
         @Override // kotlin.jvm.functions.Function2
-        /* JADX INFO: renamed from: q, reason: merged with bridge method [inline-methods] */
-        public final Object invoke(nu.i<? super b> iVar, nt.b<? super Unit> bVar) {
-            return ((c) create(iVar, bVar)).invokeSuspend(Unit.f22483a);
+        /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
+        public final Object invoke(lu.i<? super b> iVar, lt.b<? super Unit> bVar) {
+            return ((c) create(iVar, bVar)).invokeSuspend(Unit.f22938a);
         }
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public h(@NotNull String key, @NotNull Context context, @NotNull Function0<Unit> launchPicker, @NotNull Function1<? super nt.b<? super List<? extends Uri>>, ? extends Object> collectResult, @NotNull Function1<? super nt.b<? super List<? extends Uri>>, ? extends Object> checkPendingResult) {
+    public h(@NotNull String key, @NotNull Context context, @NotNull Function0<Unit> launchPicker, @NotNull Function1<? super lt.b<? super List<? extends Uri>>, ? extends Object> collectResult, @NotNull Function1<? super lt.b<? super List<? extends Uri>>, ? extends Object> checkPendingResult) {
         Intrinsics.checkNotNullParameter(key, "key");
         Intrinsics.checkNotNullParameter(context, "context");
         Intrinsics.checkNotNullParameter(launchPicker, "launchPicker");
@@ -508,19 +508,19 @@ public final class h implements o<b>, vr.h<b> {
         this.checkPendingResult = checkPendingResult;
     }
 
-    @Override // vr.h
-    public boolean a(@NotNull vr.h<?> hVar) {
-        return super.a(hVar);
-    }
-
-    @Override // ym.o
-    public boolean b(@NotNull o<?> otherWorker) {
+    @Override // tr.h
+    public boolean a(@NotNull tr.h<?> otherWorker) {
         Intrinsics.checkNotNullParameter(otherWorker, "otherWorker");
         return (otherWorker instanceof h) && Intrinsics.c(this.key, ((h) otherWorker).key);
     }
 
-    @Override // vr.h
-    public boolean c(@NotNull vr.h<?> otherWorker) {
+    @Override // tr.h
+    public boolean b(@NotNull tr.h<?> hVar) {
+        return super.b(hVar);
+    }
+
+    @Override // wm.o
+    public boolean c(@NotNull o<?> otherWorker) {
         Intrinsics.checkNotNullParameter(otherWorker, "otherWorker");
         return (otherWorker instanceof h) && Intrinsics.c(this.key, ((h) otherWorker).key);
     }
@@ -528,12 +528,12 @@ public final class h implements o<b>, vr.h<b> {
     /* JADX WARN: Code duplicated, block: B:30:0x0063  */
     /* JADX WARN: Code duplicated, block: B:32:0x0069  */
     /* JADX WARN: Code duplicated, block: B:52:0x006b A[SYNTHETIC] */
-    public final Object h(nu.i<? super b> iVar, List<? extends Uri> list, nt.b<? super Unit> bVar) {
+    public final Object h(lu.i<? super b> iVar, List<? extends Uri> list, lt.b<? super Unit> bVar) {
         String string;
         int columnIndex;
         if (list.isEmpty()) {
-            Object objEmit = iVar.emit(b.a.f13881a, bVar);
-            return objEmit == ot.c.e() ? objEmit : Unit.f22483a;
+            Object objEmit = iVar.emit(b.a.f13962a, bVar);
+            return objEmit == mt.c.e() ? objEmit : Unit.f22938a;
         }
         ArrayList arrayList = new ArrayList();
         for (Uri uri : list) {
@@ -541,7 +541,7 @@ public final class h implements o<b>, vr.h<b> {
             if (cursorQuery != null) {
                 try {
                     string = (!cursorQuery.moveToFirst() || (columnIndex = cursorQuery.getColumnIndex("_display_name")) < 0) ? null : cursorQuery.getString(columnIndex);
-                    ut.c.a(cursorQuery, null);
+                    st.c.a(cursorQuery, null);
                     if (string == null) {
                         string = uri.getLastPathSegment();
                         if (string == null) {
@@ -552,7 +552,7 @@ public final class h implements o<b>, vr.h<b> {
                     try {
                         throw th2;
                     } catch (Throwable th3) {
-                        ut.c.a(cursorQuery, th2);
+                        st.c.a(cursorQuery, th2);
                         throw th3;
                     }
                 }
@@ -565,16 +565,16 @@ public final class h implements o<b>, vr.h<b> {
             arrayList.add(new SelectedFile(uri, string));
         }
         if (arrayList.isEmpty()) {
-            Object objEmit2 = iVar.emit(b.C0255b.f13882a, bVar);
-            return objEmit2 == ot.c.e() ? objEmit2 : Unit.f22483a;
+            Object objEmit2 = iVar.emit(b.C0258b.f13963a, bVar);
+            return objEmit2 == mt.c.e() ? objEmit2 : Unit.f22938a;
         }
         Object objEmit3 = iVar.emit(new b.Success(arrayList), bVar);
-        return objEmit3 == ot.c.e() ? objEmit3 : Unit.f22483a;
+        return objEmit3 == mt.c.e() ? objEmit3 : Unit.f22938a;
     }
 
-    @Override // ym.o, vr.h
+    @Override // wm.o, tr.h
     @NotNull
-    public nu.h<b> run() {
-        return nu.j.y(nu.j.w(new c(null)), g1.b());
+    public lu.h<b> run() {
+        return lu.j.y(lu.j.w(new c(null)), g1.b());
     }
 }

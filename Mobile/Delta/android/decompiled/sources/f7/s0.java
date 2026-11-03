@@ -15,26 +15,26 @@ import java.util.concurrent.FutureTask;
 public class s0<T> {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static Executor f16455e;
+    public static Executor f17051e;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Set<l0<T>> f16456a;
+    public final Set<l0<T>> f17052a;
     public final Set<l0<Throwable>> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Handler f16457c;
+    public final Handler f17053c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public volatile p0<T> f16458d;
+    public volatile p0<T> f17054d;
 
     public static class a<T> extends FutureTask<p0<T>> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public s0<T> f16459a;
+        public s0<T> f17055a;
 
         public a(s0<T> s0Var, Callable<p0<T>> callable) {
             super(callable);
-            this.f16459a = s0Var;
+            this.f17055a = s0Var;
         }
 
         @Override // java.util.concurrent.FutureTask
@@ -44,26 +44,26 @@ public class s0<T> {
                     return;
                 }
                 try {
-                    this.f16459a.l(get());
+                    this.f17055a.l(get());
                 } catch (InterruptedException | ExecutionException e10) {
-                    this.f16459a.l(new p0(e10));
+                    this.f17055a.l(new p0(e10));
                 }
             } finally {
-                this.f16459a = null;
+                this.f17055a = null;
             }
         }
     }
 
     static {
         if ("true".equals(System.getProperty("lottie.testing.directExecutor"))) {
-            f16455e = new Executor() { // from class: f7.q0
+            f17051e = new Executor() { // from class: f7.q0
                 @Override // java.util.concurrent.Executor
                 public final void execute(Runnable runnable) {
                     runnable.run();
                 }
             };
         } else {
-            f16455e = Executors.newCachedThreadPool(new s7.f());
+            f17051e = Executors.newCachedThreadPool(new s7.f());
         }
     }
 
@@ -73,7 +73,7 @@ public class s0<T> {
 
     public synchronized s0<T> c(l0<Throwable> l0Var) {
         try {
-            p0<T> p0Var = this.f16458d;
+            p0<T> p0Var = this.f17054d;
             if (p0Var != null && p0Var.a() != null) {
                 l0Var.onResult(p0Var.a());
             }
@@ -86,11 +86,11 @@ public class s0<T> {
 
     public synchronized s0<T> d(l0<T> l0Var) {
         try {
-            p0<T> p0Var = this.f16458d;
+            p0<T> p0Var = this.f17054d;
             if (p0Var != null && p0Var.b() != null) {
                 l0Var.onResult(p0Var.b());
             }
-            this.f16456a.add(l0Var);
+            this.f17052a.add(l0Var);
         } catch (Throwable th2) {
             throw th2;
         }
@@ -98,7 +98,7 @@ public class s0<T> {
     }
 
     public p0<T> e() {
-        return this.f16458d;
+        return this.f17054d;
     }
 
     public final synchronized void f(Throwable th2) {
@@ -120,17 +120,17 @@ public class s0<T> {
         if (Looper.myLooper() == Looper.getMainLooper()) {
             h();
         } else {
-            this.f16457c.post(new Runnable() { // from class: f7.r0
+            this.f17053c.post(new Runnable() { // from class: f7.r0
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f16453a.h();
+                    this.f17049a.h();
                 }
             });
         }
     }
 
     public final void h() {
-        p0<T> p0Var = this.f16458d;
+        p0<T> p0Var = this.f17054d;
         if (p0Var == null) {
             return;
         }
@@ -142,7 +142,7 @@ public class s0<T> {
     }
 
     public final synchronized void i(T t8) {
-        ArrayList arrayList = new ArrayList(this.f16456a);
+        ArrayList arrayList = new ArrayList(this.f17052a);
         int size = arrayList.size();
         int i10 = 0;
         while (i10 < size) {
@@ -158,31 +158,31 @@ public class s0<T> {
     }
 
     public synchronized s0<T> k(l0<T> l0Var) {
-        this.f16456a.remove(l0Var);
+        this.f17052a.remove(l0Var);
         return this;
     }
 
     public final void l(p0<T> p0Var) {
-        if (this.f16458d != null) {
+        if (this.f17054d != null) {
             throw new IllegalStateException("A task may only be set once.");
         }
-        this.f16458d = p0Var;
+        this.f17054d = p0Var;
         g();
     }
 
     public s0(T t8) {
-        this.f16456a = new LinkedHashSet(1);
+        this.f17052a = new LinkedHashSet(1);
         this.b = new LinkedHashSet(1);
-        this.f16457c = new Handler(Looper.getMainLooper());
-        this.f16458d = null;
+        this.f17053c = new Handler(Looper.getMainLooper());
+        this.f17054d = null;
         l(new p0<>(t8));
     }
 
     public s0(Callable<p0<T>> callable, boolean z10) {
-        this.f16456a = new LinkedHashSet(1);
+        this.f17052a = new LinkedHashSet(1);
         this.b = new LinkedHashSet(1);
-        this.f16457c = new Handler(Looper.getMainLooper());
-        this.f16458d = null;
+        this.f17053c = new Handler(Looper.getMainLooper());
+        this.f17054d = null;
         if (z10) {
             try {
                 l(callable.call());
@@ -192,6 +192,6 @@ public class s0<T> {
                 return;
             }
         }
-        f16455e.execute(new a(this, callable));
+        f17051e.execute(new a(this, callable));
     }
 }

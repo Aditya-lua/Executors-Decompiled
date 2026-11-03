@@ -4,7 +4,7 @@ package com.google.android.gms.internal.measurement;
 public abstract class e1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final e1 f6422a;
+    public static final e1 f6495a;
 
     static {
         w0 w0Var = new w0();
@@ -18,7 +18,7 @@ public abstract class e1 {
         w0Var2.a(false);
         w0Var2.c(4);
         w0Var2.d(1);
-        f6422a = w0Var2.b();
+        f6495a = w0Var2.b();
         w0 w0Var3 = new w0();
         w0Var3.e("");
         w0Var3.a(false);

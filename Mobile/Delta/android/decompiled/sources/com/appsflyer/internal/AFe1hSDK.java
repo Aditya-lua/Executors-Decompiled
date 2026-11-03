@@ -49,7 +49,7 @@ public final class AFe1hSDK {
         sb2.append("; httpLatencyMs=");
         sb2.append(p8.getMetrics().registerClient);
         if (p10 != null) {
-            AFi1ySDK aFi1ySDK = p10.f5429d;
+            AFi1ySDK aFi1ySDK = p10.f5502d;
             NetworkTroubleshootingData networkTroubleshootingDataAFKeystoreWrapper = aFi1ySDK != null ? aFi1ySDK.AFKeystoreWrapper() : null;
             if (networkTroubleshootingDataAFKeystoreWrapper != null) {
                 sb2.append("; networkType=");

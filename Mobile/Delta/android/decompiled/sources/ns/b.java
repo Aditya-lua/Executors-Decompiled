@@ -1,39 +1,44 @@
 package ns;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.Locale;
 import kotlin.Metadata;
-import kotlin.collections.CollectionsKt;
-import kotlin.collections.q;
-import kotlin.text.w;
+import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010 \n\u0002\b\u0006\b`\u0018\u00002\u00020\u0001J!\u0010\u0004\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00010\u00032\b\u0010\u0002\u001a\u0004\u0018\u00010\u0001H\u0016¢\u0006\u0004\b\u0004\u0010\u0005J\u001c\u0010\u0007\u001a\u0004\u0018\u00010\u00012\b\u0010\u0006\u001a\u0004\u0018\u00010\u0001H\u0082\u0010¢\u0006\u0004\b\u0007\u0010\b¨\u0006\tÀ\u0006\u0003"}, d2 = {"Lns/b;", "", "wrappedValue", "", "a", "(Ljava/lang/Object;)Ljava/util/List;", "value", "b", "(Ljava/lang/Object;)Ljava/lang/Object;", "core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public interface b {
+@Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0002\b\u0005\bÆ\u0002\u0018\u00002\u00020\u00012\u00020\u0002B\t\b\u0002¢\u0006\u0004\b\u0003\u0010\u0004J%\u0010\b\u001a\u0004\u0018\u00010\u00052\b\u0010\u0006\u001a\u0004\u0018\u00010\u00052\b\u0010\u0007\u001a\u0004\u0018\u00010\u0005H\u0016¢\u0006\u0004\b\b\u0010\t¨\u0006\n"}, d2 = {"Lns/b;", "Lzr/b;", "Lns/o;", "<init>", "()V", "", "expression", "data", "l", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", "operations-stdlib_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class b implements zr.b, o {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    default List<Object> a(@Nullable Object wrappedValue) {
-        List<Object> listC = ts.a.c(wrappedValue);
-        ArrayList arrayList = new ArrayList(q.u(listC, 10));
-        Iterator<T> it = listC.iterator();
-        while (it.hasNext()) {
-            arrayList.add(b(it.next()));
-        }
-        return arrayList;
+    public static final b f27458a = new b();
+
+    @Override // ns.o
+    @Nullable
+    public String a(@Nullable Object obj) {
+        return super.a(obj);
     }
 
-    default Object b(Object value) {
-        while (!(value instanceof Number)) {
-            if (value instanceof String) {
-                return w.r((String) value);
-            }
-            if (!(value instanceof List)) {
-                return null;
-            }
-            value = CollectionsKt.firstOrNull((List) value);
+    @Override // zr.b
+    @Nullable
+    public Object l(@Nullable Object expression, @Nullable Object data) {
+        String strA = a(expression);
+        if (strA == null) {
+            return null;
         }
-        return Double.valueOf(((Number) value).doubleValue());
+        if (strA.length() <= 0) {
+            return strA;
+        }
+        StringBuilder sb2 = new StringBuilder();
+        String strValueOf = String.valueOf(strA.charAt(0));
+        Intrinsics.d(strValueOf, "null cannot be cast to non-null type java.lang.String");
+        String upperCase = strValueOf.toUpperCase(Locale.ROOT);
+        Intrinsics.checkNotNullExpressionValue(upperCase, "toUpperCase(...)");
+        sb2.append((Object) upperCase);
+        String strSubstring = strA.substring(1);
+        Intrinsics.checkNotNullExpressionValue(strSubstring, "substring(...)");
+        sb2.append(strSubstring);
+        return sb2.toString();
     }
 }

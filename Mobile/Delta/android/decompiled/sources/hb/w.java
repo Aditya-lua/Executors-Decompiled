@@ -12,8 +12,8 @@ public final class w implements Parcelable.Creator<zzj> {
     @Override // android.os.Parcelable.Creator
     public final /* bridge */ /* synthetic */ zzj createFromParcel(Parcel parcel) {
         int iD = o9.a.D(parcel);
-        zzs zzsVar = zzj.f6360j;
-        List<ClientIdentity> listL = zzj.f6359i;
+        zzs zzsVar = zzj.f6433j;
+        List<ClientIdentity> listL = zzj.f6432i;
         String strH = null;
         while (parcel.dataPosition() < iD) {
             int iU = o9.a.u(parcel);

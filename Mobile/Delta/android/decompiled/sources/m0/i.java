@@ -4,11 +4,11 @@ package m0;
 public final class i extends b1.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f23600a;
+    public final int f24250a;
     public final g0.h1 b;
 
     public i(int i10, g0.h1 h1Var) {
-        this.f23600a = i10;
+        this.f24250a = i10;
         if (h1Var == null) {
             throw new NullPointerException("Null imageCaptureException");
         }
@@ -22,7 +22,7 @@ public final class i extends b1.a {
 
     @Override // m0.b1.a
     public int b() {
-        return this.f23600a;
+        return this.f24250a;
     }
 
     public boolean equals(Object obj) {
@@ -31,7 +31,7 @@ public final class i extends b1.a {
         }
         if (obj instanceof b1.a) {
             b1.a aVar = (b1.a) obj;
-            if (this.f23600a == aVar.b() && this.b.equals(aVar.a())) {
+            if (this.f24250a == aVar.b() && this.b.equals(aVar.a())) {
                 return true;
             }
         }
@@ -39,10 +39,10 @@ public final class i extends b1.a {
     }
 
     public int hashCode() {
-        return ((this.f23600a ^ 1000003) * 1000003) ^ this.b.hashCode();
+        return ((this.f24250a ^ 1000003) * 1000003) ^ this.b.hashCode();
     }
 
     public String toString() {
-        return "CaptureError{requestId=" + this.f23600a + ", imageCaptureException=" + this.b + "}";
+        return "CaptureError{requestId=" + this.f24250a + ", imageCaptureException=" + this.b + "}";
     }
 }

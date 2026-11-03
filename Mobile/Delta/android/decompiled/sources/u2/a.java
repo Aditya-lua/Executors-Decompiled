@@ -13,7 +13,7 @@ public final class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final a f32028a = new a();
+    public static final a f32681a = new a();
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public static final int R_EXTENSION_INT;
@@ -29,13 +29,13 @@ public final class a {
 
     /* JADX INFO: renamed from: u2.a$a, reason: collision with other inner class name */
     @Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0004\bÃ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0015\u0010\u0006\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007¨\u0006\b"}, d2 = {"Lu2/a$a;", "", "<init>", "()V", "", "extension", "a", "(I)I", "core_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
-    public static final class C0581a {
+    public static final class C0588a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NotNull
-        public static final C0581a f32032a = new C0581a();
+        public static final C0588a f32685a = new C0588a();
 
-        private C0581a() {
+        private C0588a() {
         }
 
         public final int a(int extension) {
@@ -45,10 +45,10 @@ public final class a {
 
     static {
         int i10 = Build.VERSION.SDK_INT;
-        R_EXTENSION_INT = i10 >= 30 ? C0581a.f32032a.a(30) : 0;
-        S_EXTENSION_INT = i10 >= 30 ? C0581a.f32032a.a(31) : 0;
-        T_EXTENSION_INT = i10 >= 30 ? C0581a.f32032a.a(33) : 0;
-        AD_SERVICES_EXTENSION_INT = i10 >= 30 ? C0581a.f32032a.a(1000000) : 0;
+        R_EXTENSION_INT = i10 >= 30 ? C0588a.f32685a.a(30) : 0;
+        S_EXTENSION_INT = i10 >= 30 ? C0588a.f32685a.a(31) : 0;
+        T_EXTENSION_INT = i10 >= 30 ? C0588a.f32685a.a(33) : 0;
+        AD_SERVICES_EXTENSION_INT = i10 >= 30 ? C0588a.f32685a.a(1000000) : 0;
     }
 
     private a() {

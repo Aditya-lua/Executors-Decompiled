@@ -4,11 +4,11 @@ package com.google.crypto.tink.shaded.protobuf;
 public final class i0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final g0 f8467a = c();
+    public static final g0 f8541a = c();
     public static final g0 b = new h0();
 
     public static g0 a() {
-        return f8467a;
+        return f8541a;
     }
 
     public static g0 b() {
@@ -16,7 +16,7 @@ public final class i0 {
     }
 
     public static g0 c() {
-        if (c1.f8413d) {
+        if (c1.f8487d) {
             return null;
         }
         try {

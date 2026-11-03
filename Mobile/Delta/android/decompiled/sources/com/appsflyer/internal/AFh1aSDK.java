@@ -15,7 +15,7 @@ public final class AFh1aSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NonNull
-    public final String f5388d;
+    public final String f5461d;
     public final AFh1gSDK registerClient;
 
     @NonNull
@@ -30,7 +30,7 @@ public final class AFh1aSDK {
             String string = jSONObject.getString("ver");
             this.AFKeystoreWrapper = string;
             this.AFLogger = jSONObject.optBoolean("test_mode");
-            this.f5388d = str;
+            this.f5461d = str;
             this.unregisterClient = string.startsWith("default") ? AFh1iSDK.DEFAULT : AFh1iSDK.CUSTOM;
             JSONObject jSONObjectOptJSONObject = jSONObject.optJSONObject("features");
             this.registerClient = jSONObjectOptJSONObject != null ? new AFh1gSDK(jSONObjectOptJSONObject) : null;
@@ -49,13 +49,13 @@ public final class AFh1aSDK {
         }
         AFh1aSDK aFh1aSDK = (AFh1aSDK) obj;
         if (this.AFLogger == aFh1aSDK.AFLogger && this.AFKeystoreWrapper.equals(aFh1aSDK.AFKeystoreWrapper)) {
-            return this.f5388d.equals(aFh1aSDK.f5388d);
+            return this.f5461d.equals(aFh1aSDK.f5461d);
         }
         return false;
     }
 
     public final int hashCode() {
-        int iHashCode = ((((this.AFLogger ? 1 : 0) * 31) + this.AFKeystoreWrapper.hashCode()) * 31) + this.f5388d.hashCode();
+        int iHashCode = ((((this.AFLogger ? 1 : 0) * 31) + this.AFKeystoreWrapper.hashCode()) * 31) + this.f5461d.hashCode();
         AFh1gSDK aFh1gSDK = this.registerClient;
         return aFh1gSDK != null ? (iHashCode * 31) + aFh1gSDK.hashCode() : iHashCode;
     }

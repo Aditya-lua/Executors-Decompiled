@@ -8,12 +8,12 @@ import com.google.android.gms.measurement.internal.zzbg;
 /* JADX INFO: loaded from: classes.dex */
 public final class e0 implements Parcelable.Creator {
     public static void a(zzbg zzbgVar, Parcel parcel, int i10) {
-        String str = zzbgVar.f7422f;
+        String str = zzbgVar.f7496f;
         int iA = o9.b.a(parcel);
         o9.b.v(parcel, 2, str, false);
-        o9.b.t(parcel, 3, zzbgVar.f7423g, i10, false);
-        o9.b.v(parcel, 4, zzbgVar.f7424h, false);
-        o9.b.r(parcel, 5, zzbgVar.f7425i);
+        o9.b.t(parcel, 3, zzbgVar.f7497g, i10, false);
+        o9.b.v(parcel, 4, zzbgVar.f7498h, false);
+        o9.b.r(parcel, 5, zzbgVar.f7499i);
         o9.b.b(parcel, iA);
     }
 

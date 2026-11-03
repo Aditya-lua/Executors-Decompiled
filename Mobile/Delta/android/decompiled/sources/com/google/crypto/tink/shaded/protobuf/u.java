@@ -11,132 +11,132 @@ import java.util.Map;
 public final class u<T extends b<T>> {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final u<?> f8586d = new u<>(true);
+    public static final u<?> f8660d = new u<>(true);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final j1<T, Object> f8587a;
+    public final j1<T, Object> f8661a;
     public boolean b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f8588c;
+    public boolean f8662c;
 
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f8589a;
+        public static final /* synthetic */ int[] f8663a;
         public static final /* synthetic */ int[] b;
 
         static {
             int[] iArr = new int[s1.b.values().length];
             b = iArr;
             try {
-                iArr[s1.b.f8554c.ordinal()] = 1;
+                iArr[s1.b.f8628c.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                b[s1.b.f8555d.ordinal()] = 2;
+                b[s1.b.f8629d.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                b[s1.b.f8556e.ordinal()] = 3;
+                b[s1.b.f8630e.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
             try {
-                b[s1.b.f8557f.ordinal()] = 4;
+                b[s1.b.f8631f.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
             try {
-                b[s1.b.f8558g.ordinal()] = 5;
+                b[s1.b.f8632g.ordinal()] = 5;
             } catch (NoSuchFieldError unused5) {
             }
             try {
-                b[s1.b.f8559h.ordinal()] = 6;
+                b[s1.b.f8633h.ordinal()] = 6;
             } catch (NoSuchFieldError unused6) {
             }
             try {
-                b[s1.b.f8560i.ordinal()] = 7;
+                b[s1.b.f8634i.ordinal()] = 7;
             } catch (NoSuchFieldError unused7) {
             }
             try {
-                b[s1.b.f8561j.ordinal()] = 8;
+                b[s1.b.f8635j.ordinal()] = 8;
             } catch (NoSuchFieldError unused8) {
             }
             try {
-                b[s1.b.f8563l.ordinal()] = 9;
+                b[s1.b.f8637l.ordinal()] = 9;
             } catch (NoSuchFieldError unused9) {
             }
             try {
-                b[s1.b.f8564m.ordinal()] = 10;
+                b[s1.b.f8638m.ordinal()] = 10;
             } catch (NoSuchFieldError unused10) {
             }
             try {
-                b[s1.b.f8562k.ordinal()] = 11;
+                b[s1.b.f8636k.ordinal()] = 11;
             } catch (NoSuchFieldError unused11) {
             }
             try {
-                b[s1.b.f8565n.ordinal()] = 12;
+                b[s1.b.f8639n.ordinal()] = 12;
             } catch (NoSuchFieldError unused12) {
             }
             try {
-                b[s1.b.f8566o.ordinal()] = 13;
+                b[s1.b.f8640o.ordinal()] = 13;
             } catch (NoSuchFieldError unused13) {
             }
             try {
-                b[s1.b.f8568q.ordinal()] = 14;
+                b[s1.b.f8642q.ordinal()] = 14;
             } catch (NoSuchFieldError unused14) {
             }
             try {
-                b[s1.b.f8569r.ordinal()] = 15;
+                b[s1.b.f8643r.ordinal()] = 15;
             } catch (NoSuchFieldError unused15) {
             }
             try {
-                b[s1.b.f8570s.ordinal()] = 16;
+                b[s1.b.f8644s.ordinal()] = 16;
             } catch (NoSuchFieldError unused16) {
             }
             try {
-                b[s1.b.f8571t.ordinal()] = 17;
+                b[s1.b.f8645t.ordinal()] = 17;
             } catch (NoSuchFieldError unused17) {
             }
             try {
-                b[s1.b.f8567p.ordinal()] = 18;
+                b[s1.b.f8641p.ordinal()] = 18;
             } catch (NoSuchFieldError unused18) {
             }
             int[] iArr2 = new int[s1.c.values().length];
-            f8589a = iArr2;
+            f8663a = iArr2;
             try {
                 iArr2[s1.c.INT.ordinal()] = 1;
             } catch (NoSuchFieldError unused19) {
             }
             try {
-                f8589a[s1.c.LONG.ordinal()] = 2;
+                f8663a[s1.c.LONG.ordinal()] = 2;
             } catch (NoSuchFieldError unused20) {
             }
             try {
-                f8589a[s1.c.FLOAT.ordinal()] = 3;
+                f8663a[s1.c.FLOAT.ordinal()] = 3;
             } catch (NoSuchFieldError unused21) {
             }
             try {
-                f8589a[s1.c.DOUBLE.ordinal()] = 4;
+                f8663a[s1.c.DOUBLE.ordinal()] = 4;
             } catch (NoSuchFieldError unused22) {
             }
             try {
-                f8589a[s1.c.BOOLEAN.ordinal()] = 5;
+                f8663a[s1.c.BOOLEAN.ordinal()] = 5;
             } catch (NoSuchFieldError unused23) {
             }
             try {
-                f8589a[s1.c.STRING.ordinal()] = 6;
+                f8663a[s1.c.STRING.ordinal()] = 6;
             } catch (NoSuchFieldError unused24) {
             }
             try {
-                f8589a[s1.c.BYTE_STRING.ordinal()] = 7;
+                f8663a[s1.c.BYTE_STRING.ordinal()] = 7;
             } catch (NoSuchFieldError unused25) {
             }
             try {
-                f8589a[s1.c.ENUM.ordinal()] = 8;
+                f8663a[s1.c.ENUM.ordinal()] = 8;
             } catch (NoSuchFieldError unused26) {
             }
             try {
-                f8589a[s1.c.MESSAGE.ordinal()] = 9;
+                f8663a[s1.c.MESSAGE.ordinal()] = 9;
             } catch (NoSuchFieldError unused27) {
             }
         }
@@ -157,7 +157,7 @@ public final class u<T extends b<T>> {
     }
 
     public u() {
-        this.f8587a = j1.r();
+        this.f8661a = j1.r();
     }
 
     public static Object c(Object obj) {
@@ -172,7 +172,7 @@ public final class u<T extends b<T>> {
 
     public static int d(s1.b bVar, int i10, Object obj) {
         int iU = k.U(i10);
-        if (bVar == s1.b.f8563l) {
+        if (bVar == s1.b.f8637l) {
             iU *= 2;
         }
         return iU + e(bVar, obj);
@@ -250,7 +250,7 @@ public final class u<T extends b<T>> {
     }
 
     public static <T extends b<T>> u<T> h() {
-        return (u<T>) f8586d;
+        return (u<T>) f8660d;
     }
 
     public static <T extends b<T>> boolean p(Map.Entry<T, Object> entry) {
@@ -283,7 +283,7 @@ public final class u<T extends b<T>> {
 
     public static boolean r(s1.b bVar, Object obj) {
         a0.a(obj);
-        switch (a.f8589a[bVar.a().ordinal()]) {
+        switch (a.f8663a[bVar.a().ordinal()]) {
             case 1:
                 return obj instanceof Integer;
             case 2:
@@ -320,7 +320,7 @@ public final class u<T extends b<T>> {
         Object objI = i(t8);
         if (objI == null) {
             arrayList = new ArrayList();
-            this.f8587a.s(t8, arrayList);
+            this.f8661a.s(t8, arrayList);
         } else {
             arrayList = (List) objI;
         }
@@ -330,17 +330,17 @@ public final class u<T extends b<T>> {
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
     public u<T> clone() {
         u<T> uVarW = w();
-        int iL = this.f8587a.l();
+        int iL = this.f8661a.l();
         for (int i10 = 0; i10 < iL; i10++) {
-            Map.Entry<K, Object> entryK = this.f8587a.k(i10);
+            Map.Entry<K, Object> entryK = this.f8661a.k(i10);
             uVarW.x((b) entryK.getKey(), entryK.getValue());
         }
-        Iterator it = this.f8587a.n().iterator();
+        Iterator it = this.f8661a.n().iterator();
         while (it.hasNext()) {
             Map.Entry entry = (Map.Entry) it.next();
             uVarW.x((b) entry.getKey(), entry.getValue());
         }
-        uVarW.f8588c = this.f8588c;
+        uVarW.f8662c = this.f8662c;
         return uVarW;
     }
 
@@ -349,7 +349,7 @@ public final class u<T extends b<T>> {
             return true;
         }
         if (obj instanceof u) {
-            return this.f8587a.equals(((u) obj).f8587a);
+            return this.f8661a.equals(((u) obj).f8661a);
         }
         return false;
     }
@@ -358,25 +358,25 @@ public final class u<T extends b<T>> {
         if (m()) {
             return Collections.emptyIterator();
         }
-        return this.f8588c ? new d0.c(this.f8587a.i().iterator()) : this.f8587a.i().iterator();
+        return this.f8662c ? new d0.c(this.f8661a.i().iterator()) : this.f8661a.i().iterator();
     }
 
     public int hashCode() {
-        return this.f8587a.hashCode();
+        return this.f8661a.hashCode();
     }
 
     public Object i(T t8) {
-        Object obj = this.f8587a.get(t8);
+        Object obj = this.f8661a.get(t8);
         return obj instanceof d0 ? ((d0) obj).f() : obj;
     }
 
     public int j() {
-        int iL = this.f8587a.l();
+        int iL = this.f8661a.l();
         int iK = 0;
         for (int i10 = 0; i10 < iL; i10++) {
-            iK += k(this.f8587a.k(i10));
+            iK += k(this.f8661a.k(i10));
         }
-        Iterator it = this.f8587a.n().iterator();
+        Iterator it = this.f8661a.n().iterator();
         while (it.hasNext()) {
             iK += k((Map.Entry) it.next());
         }
@@ -393,13 +393,13 @@ public final class u<T extends b<T>> {
     }
 
     public int l() {
-        int iL = this.f8587a.l();
+        int iL = this.f8661a.l();
         int iF = 0;
         for (int i10 = 0; i10 < iL; i10++) {
-            Map.Entry<K, Object> entryK = this.f8587a.k(i10);
+            Map.Entry<K, Object> entryK = this.f8661a.k(i10);
             iF += f((b) entryK.getKey(), entryK.getValue());
         }
-        Iterator it = this.f8587a.n().iterator();
+        Iterator it = this.f8661a.n().iterator();
         while (it.hasNext()) {
             Map.Entry entry = (Map.Entry) it.next();
             iF += f((b) entry.getKey(), entry.getValue());
@@ -408,7 +408,7 @@ public final class u<T extends b<T>> {
     }
 
     public boolean m() {
-        return this.f8587a.isEmpty();
+        return this.f8661a.isEmpty();
     }
 
     public boolean n() {
@@ -416,13 +416,13 @@ public final class u<T extends b<T>> {
     }
 
     public boolean o() {
-        int iL = this.f8587a.l();
+        int iL = this.f8661a.l();
         for (int i10 = 0; i10 < iL; i10++) {
-            if (!p(this.f8587a.k(i10))) {
+            if (!p(this.f8661a.k(i10))) {
                 return false;
             }
         }
-        Iterator it = this.f8587a.n().iterator();
+        Iterator it = this.f8661a.n().iterator();
         while (it.hasNext()) {
             if (!p((Map.Entry) it.next())) {
                 return false;
@@ -435,30 +435,30 @@ public final class u<T extends b<T>> {
         if (m()) {
             return Collections.emptyIterator();
         }
-        return this.f8588c ? new d0.c(this.f8587a.entrySet().iterator()) : this.f8587a.entrySet().iterator();
+        return this.f8662c ? new d0.c(this.f8661a.entrySet().iterator()) : this.f8661a.entrySet().iterator();
     }
 
     public void t() {
         if (this.b) {
             return;
         }
-        int iL = this.f8587a.l();
+        int iL = this.f8661a.l();
         for (int i10 = 0; i10 < iL; i10++) {
-            Map.Entry<K, Object> entryK = this.f8587a.k(i10);
+            Map.Entry<K, Object> entryK = this.f8661a.k(i10);
             if (entryK.getValue() instanceof y) {
                 ((y) entryK.getValue()).K();
             }
         }
-        this.f8587a.q();
+        this.f8661a.q();
         this.b = true;
     }
 
     public void u(u<T> uVar) {
-        int iL = uVar.f8587a.l();
+        int iL = uVar.f8661a.l();
         for (int i10 = 0; i10 < iL; i10++) {
-            v(uVar.f8587a.k(i10));
+            v(uVar.f8661a.k(i10));
         }
-        Iterator it = uVar.f8587a.n().iterator();
+        Iterator it = uVar.f8661a.n().iterator();
         while (it.hasNext()) {
             v((Map.Entry) it.next());
         }
@@ -480,21 +480,21 @@ public final class u<T extends b<T>> {
             while (it.hasNext()) {
                 ((List) objI).add(c(it.next()));
             }
-            this.f8587a.s(key, objI);
+            this.f8661a.s(key, objI);
             return;
         }
         if (key.k() != s1.c.MESSAGE) {
             if (z10) {
                 throw new IllegalStateException("Lazy fields must be message-valued");
             }
-            this.f8587a.s(key, c(value));
+            this.f8661a.s(key, c(value));
             return;
         }
         Object objI2 = i(key);
         if (objI2 == null) {
-            this.f8587a.s(key, c(value));
+            this.f8661a.s(key, c(value));
             if (z10) {
-                this.f8588c = true;
+                this.f8662c = true;
                 return;
             }
             return;
@@ -502,7 +502,7 @@ public final class u<T extends b<T>> {
         if (z10) {
             value = ((d0) value).f();
         }
-        this.f8587a.s(key, key.i(((s0) objI2).a(), (s0) value).build());
+        this.f8661a.s(key, key.i(((s0) objI2).a(), (s0) value).build());
     }
 
     public void x(T t8, Object obj) {
@@ -524,9 +524,9 @@ public final class u<T extends b<T>> {
             obj = arrayList;
         }
         if (obj instanceof d0) {
-            this.f8588c = true;
+            this.f8662c = true;
         }
-        this.f8587a.s(t8, obj);
+        this.f8661a.s(t8, obj);
     }
 
     public final void y(T t8, Object obj) {
@@ -541,7 +541,7 @@ public final class u<T extends b<T>> {
     }
 
     public u(j1<T, Object> j1Var) {
-        this.f8587a = j1Var;
+        this.f8661a = j1Var;
         t();
     }
 }

@@ -9,7 +9,7 @@ import java.util.Locale;
 public abstract class c implements jg.d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final c f21378a = new a("IDENTITY", 0);
+    public static final c f21837a = new a("IDENTITY", 0);
     public static final c b = new c("UPPER_CAMEL_CASE", 1) { // from class: jg.c.b
         {
             a aVar = null;
@@ -22,7 +22,7 @@ public abstract class c implements jg.d {
     };
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final c f21379c = new c("UPPER_CAMEL_CASE_WITH_SPACES", 2) { // from class: jg.c.c
+    public static final c f21838c = new c("UPPER_CAMEL_CASE_WITH_SPACES", 2) { // from class: jg.c.c
         {
             a aVar = null;
         }
@@ -34,7 +34,7 @@ public abstract class c implements jg.d {
     };
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final c f21380d = new c("UPPER_CASE_WITH_UNDERSCORES", 3) { // from class: jg.c.d
+    public static final c f21839d = new c("UPPER_CASE_WITH_UNDERSCORES", 3) { // from class: jg.c.d
         {
             a aVar = null;
         }
@@ -46,7 +46,7 @@ public abstract class c implements jg.d {
     };
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final c f21381e = new c("LOWER_CASE_WITH_UNDERSCORES", 4) { // from class: jg.c.e
+    public static final c f21840e = new c("LOWER_CASE_WITH_UNDERSCORES", 4) { // from class: jg.c.e
         {
             a aVar = null;
         }
@@ -58,7 +58,7 @@ public abstract class c implements jg.d {
     };
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final c f21382f = new c("LOWER_CASE_WITH_DASHES", 5) { // from class: jg.c.f
+    public static final c f21841f = new c("LOWER_CASE_WITH_DASHES", 5) { // from class: jg.c.f
         {
             a aVar = null;
         }
@@ -70,7 +70,7 @@ public abstract class c implements jg.d {
     };
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final c f21383g = new c("LOWER_CASE_WITH_DOTS", 6) { // from class: jg.c.g
+    public static final c f21842g = new c("LOWER_CASE_WITH_DOTS", 6) { // from class: jg.c.g
         {
             a aVar = null;
         }
@@ -82,7 +82,7 @@ public abstract class c implements jg.d {
     };
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final /* synthetic */ c[] f21384h = c();
+    public static final /* synthetic */ c[] f21843h = c();
 
     public final enum a extends c {
         public a(String str, int i10) {
@@ -100,7 +100,7 @@ public abstract class c implements jg.d {
     }
 
     public static /* synthetic */ c[] c() {
-        return new c[]{f21378a, b, f21379c, f21380d, f21381e, f21382f, f21383g};
+        return new c[]{f21837a, b, f21838c, f21839d, f21840e, f21841f, f21842g};
     }
 
     public static String d(String str, char c10) {
@@ -139,7 +139,7 @@ public abstract class c implements jg.d {
     }
 
     public static c[] values() {
-        return (c[]) f21384h.clone();
+        return (c[]) f21843h.clone();
     }
 
     public /* synthetic */ c(String str, int i10, a aVar) {

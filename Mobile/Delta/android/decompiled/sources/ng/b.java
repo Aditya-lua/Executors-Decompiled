@@ -4,14 +4,14 @@ package ng;
 public final class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final a f26275a;
+    public final a f27212a;
     public final int[] b;
 
     public b(a aVar, int[] iArr) {
         if (iArr.length == 0) {
             throw new IllegalArgumentException();
         }
-        this.f26275a = aVar;
+        this.f27212a = aVar;
         int length = iArr.length;
         int i10 = 1;
         if (length <= 1 || iArr[0] != 0) {
@@ -31,7 +31,7 @@ public final class b {
     }
 
     public b a(b bVar) {
-        if (!this.f26275a.equals(bVar.f26275a)) {
+        if (!this.f27212a.equals(bVar.f27212a)) {
             throw new IllegalArgumentException("GenericGFPolys do not have same GenericGF field");
         }
         if (f()) {
@@ -52,24 +52,24 @@ public final class b {
         for (int i10 = length; i10 < iArr.length; i10++) {
             iArr3[i10] = a.a(iArr2[i10 - length], iArr[i10]);
         }
-        return new b(this.f26275a, iArr3);
+        return new b(this.f27212a, iArr3);
     }
 
     public b[] b(b bVar) {
-        if (!this.f26275a.equals(bVar.f26275a)) {
+        if (!this.f27212a.equals(bVar.f27212a)) {
             throw new IllegalArgumentException("GenericGFPolys do not have same GenericGF field");
         }
         if (bVar.f()) {
             throw new IllegalArgumentException("Divide by 0");
         }
-        b bVarE = this.f26275a.e();
-        int iF = this.f26275a.f(bVar.c(bVar.e()));
+        b bVarE = this.f27212a.e();
+        int iF = this.f27212a.f(bVar.c(bVar.e()));
         b bVarA = this;
         while (bVarA.e() >= bVar.e() && !bVarA.f()) {
             int iE = bVarA.e() - bVar.e();
-            int iH = this.f26275a.h(bVarA.c(bVarA.e()), iF);
+            int iH = this.f27212a.h(bVarA.c(bVarA.e()), iF);
             b bVarH = bVar.h(iE, iH);
-            bVarE = bVarE.a(this.f26275a.b(iE, iH));
+            bVarE = bVarE.a(this.f27212a.b(iE, iH));
             bVarA = bVarA.a(bVarH);
         }
         return new b[]{bVarE, bVarA};
@@ -93,11 +93,11 @@ public final class b {
     }
 
     public b g(b bVar) {
-        if (!this.f26275a.equals(bVar.f26275a)) {
+        if (!this.f27212a.equals(bVar.f27212a)) {
             throw new IllegalArgumentException("GenericGFPolys do not have same GenericGF field");
         }
         if (f() || bVar.f()) {
-            return this.f26275a.e();
+            return this.f27212a.e();
         }
         int[] iArr = this.b;
         int length = iArr.length;
@@ -108,10 +108,10 @@ public final class b {
             int i11 = iArr[i10];
             for (int i12 = 0; i12 < length2; i12++) {
                 int i13 = i10 + i12;
-                iArr3[i13] = a.a(iArr3[i13], this.f26275a.h(i11, iArr2[i12]));
+                iArr3[i13] = a.a(iArr3[i13], this.f27212a.h(i11, iArr2[i12]));
             }
         }
-        return new b(this.f26275a, iArr3);
+        return new b(this.f27212a, iArr3);
     }
 
     public b h(int i10, int i11) {
@@ -119,14 +119,14 @@ public final class b {
             throw new IllegalArgumentException();
         }
         if (i11 == 0) {
-            return this.f26275a.e();
+            return this.f27212a.e();
         }
         int length = this.b.length;
         int[] iArr = new int[i10 + length];
         for (int i12 = 0; i12 < length; i12++) {
-            iArr[i12] = this.f26275a.h(this.b[i12], i11);
+            iArr[i12] = this.f27212a.h(this.b[i12], i11);
         }
-        return new b(this.f26275a, iArr);
+        return new b(this.f27212a, iArr);
     }
 
     public String toString() {
@@ -148,7 +148,7 @@ public final class b {
                     sb2.append(" + ");
                 }
                 if (iE == 0 || iC != 1) {
-                    int iG = this.f26275a.g(iC);
+                    int iG = this.f27212a.g(iC);
                     if (iG == 0) {
                         sb2.append('1');
                     } else if (iG == 1) {

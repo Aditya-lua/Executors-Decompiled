@@ -37,7 +37,7 @@ public final class AFg1mSDK extends AFe1kSDK<Map<String, ? extends Object>> {
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
     @NotNull
-    private final AFc1kSDK f5376v;
+    private final AFc1kSDK f5449v;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public AFg1mSDK(@NotNull AFc1bSDK aFc1bSDK) {
@@ -48,7 +48,7 @@ public final class AFg1mSDK extends AFe1kSDK<Map<String, ? extends Object>> {
         this.force = aFc1iSDKAFLogger;
         AFc1kSDK aFc1kSDKAFKeystoreWrapper = aFc1bSDK.AFKeystoreWrapper();
         Intrinsics.checkNotNullExpressionValue(aFc1kSDKAFKeystoreWrapper, "");
-        this.f5376v = aFc1kSDKAFKeystoreWrapper;
+        this.f5449v = aFc1kSDKAFKeystoreWrapper;
         AFh1xSDK aFh1xSDKE = aFc1bSDK.e();
         Intrinsics.checkNotNullExpressionValue(aFh1xSDKE, "");
         this.afDebugLog = aFh1xSDKE;
@@ -130,7 +130,7 @@ public final class AFg1mSDK extends AFe1kSDK<Map<String, ? extends Object>> {
                             Object obj = mapD.get("iscache");
                             Boolean bool = Boolean.FALSE;
                             if (Intrinsics.c(obj, bool)) {
-                                this.f5376v.AFLogger("appsflyerConversionDataCacheExpiration", System.currentTimeMillis());
+                                this.f5449v.AFLogger("appsflyerConversionDataCacheExpiration", System.currentTimeMillis());
                             }
                             if (mapD.containsKey("af_siteid")) {
                                 if (mapD.containsKey(AFInAppEventParameterName.AF_CHANNEL)) {
@@ -142,8 +142,8 @@ public final class AFg1mSDK extends AFe1kSDK<Map<String, ? extends Object>> {
                                 AFLoggerBase.d$default(AFLogger.INSTANCE, LogTag.GCD, str, false, 4, null);
                             }
                             mapD.put("is_first_launch", bool);
-                            this.f5376v.d("attributionId", new JSONObject(mapD).toString());
-                            if (!this.f5376v.AFKeystoreWrapper("sixtyDayConversionData")) {
+                            this.f5449v.d("attributionId", new JSONObject(mapD).toString());
+                            if (!this.f5449v.AFKeystoreWrapper("sixtyDayConversionData")) {
                                 mapD.put("is_first_launch", Boolean.TRUE);
                             }
                             this.afWarnLog = mapD;
@@ -203,7 +203,7 @@ public final class AFg1mSDK extends AFe1kSDK<Map<String, ? extends Object>> {
     public final AFd1pSDK<Map<String, ? extends Object>> AFLogger(@NotNull String str) {
         String str2 = "";
         Intrinsics.checkNotNullParameter(str, "");
-        AFc1kSDK aFc1kSDK = this.f5376v;
+        AFc1kSDK aFc1kSDK = this.f5449v;
         String strAFLogger = this.force.AFLogger("CHANNEL");
         if (strAFLogger != null && strAFLogger.equals("")) {
             strAFLogger = null;
@@ -222,7 +222,7 @@ public final class AFg1mSDK extends AFe1kSDK<Map<String, ? extends Object>> {
             }
         }
         AFd1pSDK<Map<String, ? extends Object>> aFd1pSDKAFKeystoreWrapper = getD().AFKeystoreWrapper(str2, str);
-        AFLoggerBase.d$default(AFLogger.INSTANCE, LogTag.GCD, "[GCD-B01] URL: " + aFd1pSDKAFKeystoreWrapper.unregisterClient.f5281d, false, 4, null);
+        AFLoggerBase.d$default(AFLogger.INSTANCE, LogTag.GCD, "[GCD-B01] URL: " + aFd1pSDKAFKeystoreWrapper.unregisterClient.f5354d, false, 4, null);
         Intrinsics.checkNotNull(aFd1pSDKAFKeystoreWrapper);
         return aFd1pSDKAFKeystoreWrapper;
     }

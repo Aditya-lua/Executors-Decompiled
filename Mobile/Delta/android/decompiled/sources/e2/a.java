@@ -11,40 +11,40 @@ import java.lang.reflect.Method;
 public class a {
 
     /* JADX INFO: renamed from: e2.a$a, reason: collision with other inner class name */
-    public static /* synthetic */ class C0278a {
+    public static /* synthetic */ class C0292a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f14988a;
+        public static final /* synthetic */ int[] f15602a;
 
         static {
-            int[] iArr = new int[androidx.constraintlayout.widget.a.EnumC0022a.values().length];
-            f14988a = iArr;
+            int[] iArr = new int[androidx.constraintlayout.widget.a.EnumC0018a.values().length];
+            f15602a = iArr;
             try {
-                iArr[androidx.constraintlayout.widget.a.EnumC0022a.INT_TYPE.ordinal()] = 1;
+                iArr[androidx.constraintlayout.widget.a.EnumC0018a.INT_TYPE.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f14988a[androidx.constraintlayout.widget.a.EnumC0022a.FLOAT_TYPE.ordinal()] = 2;
+                f15602a[androidx.constraintlayout.widget.a.EnumC0018a.FLOAT_TYPE.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f14988a[androidx.constraintlayout.widget.a.EnumC0022a.COLOR_DRAWABLE_TYPE.ordinal()] = 3;
+                f15602a[androidx.constraintlayout.widget.a.EnumC0018a.COLOR_DRAWABLE_TYPE.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
             try {
-                f14988a[androidx.constraintlayout.widget.a.EnumC0022a.COLOR_TYPE.ordinal()] = 4;
+                f15602a[androidx.constraintlayout.widget.a.EnumC0018a.COLOR_TYPE.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
             try {
-                f14988a[androidx.constraintlayout.widget.a.EnumC0022a.STRING_TYPE.ordinal()] = 5;
+                f15602a[androidx.constraintlayout.widget.a.EnumC0018a.STRING_TYPE.ordinal()] = 5;
             } catch (NoSuchFieldError unused5) {
             }
             try {
-                f14988a[androidx.constraintlayout.widget.a.EnumC0022a.BOOLEAN_TYPE.ordinal()] = 6;
+                f15602a[androidx.constraintlayout.widget.a.EnumC0018a.BOOLEAN_TYPE.ordinal()] = 6;
             } catch (NoSuchFieldError unused6) {
             }
             try {
-                f14988a[androidx.constraintlayout.widget.a.EnumC0022a.DIMENSION_TYPE.ordinal()] = 7;
+                f15602a[androidx.constraintlayout.widget.a.EnumC0018a.DIMENSION_TYPE.ordinal()] = 7;
             } catch (NoSuchFieldError unused7) {
             }
         }
@@ -59,7 +59,7 @@ public class a {
         Class<?> cls = view.getClass();
         String str = "set" + aVar.b();
         try {
-            int i10 = C0278a.f14988a[aVar.c().ordinal()];
+            int i10 = C0292a.f15602a[aVar.c().ordinal()];
             Class cls2 = Integer.TYPE;
             Class cls3 = Float.TYPE;
             boolean z10 = true;

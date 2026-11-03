@@ -9,13 +9,13 @@ public enum ya {
 
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f26135a;
+    public final int f26956a;
 
     ya(int i10) {
-        this.f26135a = i10;
+        this.f26956a = i10;
     }
 
     public final int zza() {
-        return this.f26135a;
+        return this.f26956a;
     }
 }

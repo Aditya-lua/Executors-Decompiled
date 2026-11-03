@@ -1,7 +1,7 @@
 package com.google.mlkit.vision.common.internal;
 
 import java.util.concurrent.Callable;
-import nd.a;
+import od.a;
 
 /* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class zzd implements Callable {

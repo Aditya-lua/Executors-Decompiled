@@ -5,9 +5,9 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class e0 extends x {
     public e0() {
-        this.f6892a.add(n0.AND);
-        this.f6892a.add(n0.NOT);
-        this.f6892a.add(n0.OR);
+        this.f6966a.add(n0.AND);
+        this.f6966a.add(n0.NOT);
+        this.f6966a.add(n0.OR);
     }
 
     @Override // com.google.android.gms.internal.measurement.x

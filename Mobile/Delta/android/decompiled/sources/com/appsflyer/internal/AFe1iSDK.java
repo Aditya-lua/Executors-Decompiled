@@ -18,16 +18,16 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000`\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\t\n\u0002\b\u0006\b\u0007\u0018\u0000 )2\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0002)*B\u000f\u0012\u0006\u0010\u0004\u001a\u00020\u0003¢\u0006\u0004\b\u0005\u0010\u0006J\u0017\u0010\t\u001a\u00020\b2\u0006\u0010\u0004\u001a\u00020\u0007H\u0002¢\u0006\u0004\b\t\u0010\nJ\u001f\u0010\t\u001a\u00020\r2\u0006\u0010\u0004\u001a\u00020\u00072\u0006\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\t\u0010\u000eJ\u001f\u0010\u000f\u001a\u00020\r2\u0006\u0010\u0004\u001a\u00020\u00072\u0006\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\u000f\u0010\u000eJ\u0017\u0010\u0010\u001a\u00020\r2\u0006\u0010\u0004\u001a\u00020\bH\u0003¢\u0006\u0004\b\u0010\u0010\u0011J\u001d\u0010\t\u001a\u00020\u0013*\u00020\u00022\b\u0010\u0004\u001a\u0004\u0018\u00010\u0012H\u0002¢\u0006\u0004\b\t\u0010\u0014J\u000f\u0010\u0010\u001a\u00020\rH\u0010¢\u0006\u0004\b\u0010\u0010\u0015J\u000f\u0010\u000f\u001a\u00020\u0016H\u0017¢\u0006\u0004\b\u000f\u0010\u0017R\u0014\u0010\u000f\u001a\u00020\u00188\u0002X\u0083\u0004¢\u0006\u0006\n\u0004\b\u0019\u0010\u001aR\u0014\u0010\u0010\u001a\u00020\u001b8\u0002X\u0083\u0004¢\u0006\u0006\n\u0004\b\u001c\u0010\u001dR\u0014\u0010\t\u001a\u00020\u001e8\u0002X\u0083\u0004¢\u0006\u0006\n\u0004\b\u001f\u0010 R\u0014\u0010#\u001a\u00020\u00028\u0002X\u0083\u0004¢\u0006\u0006\n\u0004\b!\u0010\"R\u0015\u0010'\u001a\u00020$8BX\u0083\u0084\u0002¢\u0006\u0006\n\u0004\b%\u0010&R\u0015\u0010\u0019\u001a\u00020\r8BX\u0083\u0084\u0002¢\u0006\u0006\n\u0004\b(\u0010&R\u0014\u0010\u001c\u001a\u00020\r8CX\u0082\u0004¢\u0006\u0006\u001a\u0004\b\u001f\u0010\u0015"}, d2 = {"Lcom/appsflyer/internal/AFe1iSDK;", "Lcom/appsflyer/internal/AFe1ySDK;", "Lcom/appsflyer/internal/AFh1qSDK;", "Lcom/appsflyer/internal/AFc1bSDK;", "p0", "<init>", "(Lcom/appsflyer/internal/AFc1bSDK;)V", "Landroid/content/Context;", "", "d", "(Landroid/content/Context;)I", "Lcom/appsflyer/internal/AFe1iSDK$AFa1tSDK;", "p1", "", "(Landroid/content/Context;Lcom/appsflyer/internal/AFe1iSDK$AFa1tSDK;)Z", "registerClient", "AFLogger", "(I)Z", "", "", "(Lcom/appsflyer/internal/AFh1qSDK;Ljava/lang/String;)V", "()Z", "Lcom/appsflyer/internal/AFd1cSDK;", "()Lcom/appsflyer/internal/AFd1cSDK;", "Lcom/appsflyer/internal/AFd1zSDK;", "i", "Lcom/appsflyer/internal/AFd1zSDK;", "Lcom/appsflyer/internal/AFc1iSDK;", "v", "Lcom/appsflyer/internal/AFc1iSDK;", "Lcom/appsflyer/internal/AFc1eSDK;", "e", "Lcom/appsflyer/internal/AFc1eSDK;", "force", "Lcom/appsflyer/internal/AFh1qSDK;", "unregisterClient", "", "afErrorLog", "Ljt/h;", "AFKeystoreWrapper", "afInfoLog", "AFa1vSDK", "AFa1tSDK"}, k = 1, mv = {2, 0, 0}, xi = 48)
+@Metadata(d1 = {"\u0000`\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\t\n\u0002\b\u0006\b\u0007\u0018\u0000 )2\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0002)*B\u000f\u0012\u0006\u0010\u0004\u001a\u00020\u0003¢\u0006\u0004\b\u0005\u0010\u0006J\u0017\u0010\t\u001a\u00020\b2\u0006\u0010\u0004\u001a\u00020\u0007H\u0002¢\u0006\u0004\b\t\u0010\nJ\u001f\u0010\t\u001a\u00020\r2\u0006\u0010\u0004\u001a\u00020\u00072\u0006\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\t\u0010\u000eJ\u001f\u0010\u000f\u001a\u00020\r2\u0006\u0010\u0004\u001a\u00020\u00072\u0006\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\u000f\u0010\u000eJ\u0017\u0010\u0010\u001a\u00020\r2\u0006\u0010\u0004\u001a\u00020\bH\u0003¢\u0006\u0004\b\u0010\u0010\u0011J\u001d\u0010\t\u001a\u00020\u0013*\u00020\u00022\b\u0010\u0004\u001a\u0004\u0018\u00010\u0012H\u0002¢\u0006\u0004\b\t\u0010\u0014J\u000f\u0010\u0010\u001a\u00020\rH\u0010¢\u0006\u0004\b\u0010\u0010\u0015J\u000f\u0010\u000f\u001a\u00020\u0016H\u0017¢\u0006\u0004\b\u000f\u0010\u0017R\u0014\u0010\u000f\u001a\u00020\u00188\u0002X\u0083\u0004¢\u0006\u0006\n\u0004\b\u0019\u0010\u001aR\u0014\u0010\u0010\u001a\u00020\u001b8\u0002X\u0083\u0004¢\u0006\u0006\n\u0004\b\u001c\u0010\u001dR\u0014\u0010\t\u001a\u00020\u001e8\u0002X\u0083\u0004¢\u0006\u0006\n\u0004\b\u001f\u0010 R\u0014\u0010#\u001a\u00020\u00028\u0002X\u0083\u0004¢\u0006\u0006\n\u0004\b!\u0010\"R\u0015\u0010'\u001a\u00020$8BX\u0083\u0084\u0002¢\u0006\u0006\n\u0004\b%\u0010&R\u0015\u0010\u0019\u001a\u00020\r8BX\u0083\u0084\u0002¢\u0006\u0006\n\u0004\b(\u0010&R\u0014\u0010\u001c\u001a\u00020\r8CX\u0082\u0004¢\u0006\u0006\u001a\u0004\b\u001f\u0010\u0015"}, d2 = {"Lcom/appsflyer/internal/AFe1iSDK;", "Lcom/appsflyer/internal/AFe1ySDK;", "Lcom/appsflyer/internal/AFh1qSDK;", "Lcom/appsflyer/internal/AFc1bSDK;", "p0", "<init>", "(Lcom/appsflyer/internal/AFc1bSDK;)V", "Landroid/content/Context;", "", "d", "(Landroid/content/Context;)I", "Lcom/appsflyer/internal/AFe1iSDK$AFa1tSDK;", "p1", "", "(Landroid/content/Context;Lcom/appsflyer/internal/AFe1iSDK$AFa1tSDK;)Z", "registerClient", "AFLogger", "(I)Z", "", "", "(Lcom/appsflyer/internal/AFh1qSDK;Ljava/lang/String;)V", "()Z", "Lcom/appsflyer/internal/AFd1cSDK;", "()Lcom/appsflyer/internal/AFd1cSDK;", "Lcom/appsflyer/internal/AFd1zSDK;", "i", "Lcom/appsflyer/internal/AFd1zSDK;", "Lcom/appsflyer/internal/AFc1iSDK;", "v", "Lcom/appsflyer/internal/AFc1iSDK;", "Lcom/appsflyer/internal/AFc1eSDK;", "e", "Lcom/appsflyer/internal/AFc1eSDK;", "force", "Lcom/appsflyer/internal/AFh1qSDK;", "unregisterClient", "", "afErrorLog", "Lgt/h;", "AFKeystoreWrapper", "afInfoLog", "AFa1vSDK", "AFa1tSDK"}, k = 1, mv = {2, 0, 0}, xi = 48)
 public final class AFe1iSDK extends AFe1ySDK<AdvertisingIdData> {
 
     /* JADX INFO: renamed from: afErrorLog, reason: from kotlin metadata */
     @NotNull
-    private final jt.h AFKeystoreWrapper;
+    private final gt.h AFKeystoreWrapper;
 
     /* JADX INFO: renamed from: afInfoLog, reason: from kotlin metadata */
     @NotNull
-    private final jt.h i;
+    private final gt.h i;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -216,16 +216,16 @@ public final class AFe1iSDK extends AFe1ySDK<AdvertisingIdData> {
         Intrinsics.checkNotNullExpressionValue(androidIdData, "");
         this.d = androidIdData;
         this.unregisterClient = new AdvertisingIdData(null, null, null, null, null, null, null, null, 255, null);
-        this.AFKeystoreWrapper = jt.i.b(new Function0() { // from class: com.appsflyer.internal.g0
+        this.AFKeystoreWrapper = gt.i.b(new Function0() { // from class: com.appsflyer.internal.g0
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return Long.valueOf(AFe1iSDK.registerClient(this.f5487a));
+                return Long.valueOf(AFe1iSDK.registerClient(this.f5560a));
             }
         });
-        this.i = jt.i.b(new Function0() { // from class: com.appsflyer.internal.h0
+        this.i = gt.i.b(new Function0() { // from class: com.appsflyer.internal.h0
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return Boolean.valueOf(AFe1iSDK.d(this.f5489a));
+                return Boolean.valueOf(AFe1iSDK.d(this.f5562a));
             }
         });
     }
@@ -273,14 +273,14 @@ public final class AFe1iSDK extends AFe1ySDK<AdvertisingIdData> {
         AFLoggerBase.i$default(aFLogger, logTag, "Trying to fetch GAID using Samsung Cloud Dev...", false, 4, null);
         if (e()) {
             CloudDevSdk cloudDevSdk = CloudDevSdk.INSTANCE;
-            Context context = this.registerClient.f5305d;
+            Context context = this.registerClient.f5378d;
             Intrinsics.checkNotNull(context);
             if (cloudDevSdk.isCloudEnvironment(context)) {
                 FetchGaidData fetchGaidData = new FetchGaidData(null, null, false, null, 15, null);
                 CountDownLatch countDownLatch = new CountDownLatch(1);
                 try {
                     CloudDevSdk cloudDevSdk2 = CloudDevSdk.INSTANCE;
-                    Context context2 = this.registerClient.f5305d;
+                    Context context2 = this.registerClient.f5378d;
                     Intrinsics.checkNotNull(context2);
                     cloudDevSdk2.request(context2, kotlin.collections.o.d("gaid"), new AFa1zSDK(fetchGaidData, countDownLatch));
                     countDownLatch.await(((Number) this.AFKeystoreWrapper.getValue()).longValue(), TimeUnit.MILLISECONDS);
@@ -368,10 +368,10 @@ public final class AFe1iSDK extends AFe1ySDK<AdvertisingIdData> {
                 LogTag logTag = LogTag.ADVERTISING_ID;
                 AFLoggerBase.i$default(aFLogger, logTag, "Trying to fetch GAID...", false, 4, null);
                 FetchGaidData fetchGaidData = new FetchGaidData(null, null, false, null, 15, null);
-                Context context = this.registerClient.f5305d;
+                Context context = this.registerClient.f5378d;
                 Intrinsics.checkNotNull(context);
                 int iD = d(context);
-                Context context2 = this.registerClient.f5305d;
+                Context context2 = this.registerClient.f5378d;
                 Intrinsics.checkNotNull(context2);
                 if (registerClient(context2, fetchGaidData)) {
                     AdvertisingIdData advertisingIdData = this.unregisterClient;
@@ -396,7 +396,7 @@ public final class AFe1iSDK extends AFe1ySDK<AdvertisingIdData> {
                 } else {
                     String strAFLogger = this.AFLogger.AFLogger("AF_ENABLE_GP_SERVICE_FALLBACK");
                     if (strAFLogger != null ? Boolean.parseBoolean(strAFLogger) : true) {
-                        Context context3 = this.registerClient.f5305d;
+                        Context context3 = this.registerClient.f5378d;
                         Intrinsics.checkNotNull(context3);
                         if (d(context3, fetchGaidData)) {
                             z12 = true;
@@ -465,7 +465,7 @@ public final class AFe1iSDK extends AFe1ySDK<AdvertisingIdData> {
     private static boolean d(Context p8, FetchGaidData p10) {
         try {
             AFb1kSDK.AFa1tSDK aFa1tSDKRegisterClient = AFb1kSDK.registerClient(p8);
-            p10.setAdvertisingId(aFa1tSDKRegisterClient.f5234d);
+            p10.setAdvertisingId(aFa1tSDKRegisterClient.f5307d);
             p10.setLimitAdTrackingEnabled(Boolean.valueOf(aFa1tSDKRegisterClient.AFLogger));
             String advertisingId = p10.getAdvertisingId();
             if (advertisingId != null && advertisingId.length() != 0) {
@@ -510,10 +510,10 @@ public final class AFe1iSDK extends AFe1ySDK<AdvertisingIdData> {
 
     private final boolean registerClient(Context p8, FetchGaidData p10) {
         try {
-            q8.a.C0515a c0515aA = q8.a.a(p8);
-            if (c0515aA != null) {
-                p10.setAdvertisingId(c0515aA.a());
-                p10.setLimitAdTrackingEnabled(Boolean.valueOf(c0515aA.b()));
+            q8.a.C0514a c0514aA = q8.a.a(p8);
+            if (c0514aA != null) {
+                p10.setAdvertisingId(c0514aA.a());
+                p10.setLimitAdTrackingEnabled(Boolean.valueOf(c0514aA.b()));
                 p10.setAdvertisingIdWithGps(true);
                 String advertisingId = p10.getAdvertisingId();
                 if (advertisingId == null || advertisingId.length() == 0) {

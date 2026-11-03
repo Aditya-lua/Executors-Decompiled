@@ -18,26 +18,26 @@ public class u2 extends CameraCaptureSession.CaptureCallback {
     public a b = null;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Map<CaptureRequest, List<CameraCaptureSession.CaptureCallback>> f36888a = new HashMap();
+    public final Map<CaptureRequest, List<CameraCaptureSession.CaptureCallback>> f37583a = new HashMap();
 
     public interface a {
         void a(CameraCaptureSession cameraCaptureSession, int i10, boolean z10);
     }
 
     public void a(CaptureRequest captureRequest, List<CameraCaptureSession.CaptureCallback> list) {
-        List<CameraCaptureSession.CaptureCallback> list2 = this.f36888a.get(captureRequest);
+        List<CameraCaptureSession.CaptureCallback> list2 = this.f37583a.get(captureRequest);
         if (list2 == null) {
-            this.f36888a.put(captureRequest, list);
+            this.f37583a.put(captureRequest, list);
             return;
         }
         ArrayList arrayList = new ArrayList(list.size() + list2.size());
         arrayList.addAll(list);
         arrayList.addAll(list2);
-        this.f36888a.put(captureRequest, arrayList);
+        this.f37583a.put(captureRequest, arrayList);
     }
 
     public final List<CameraCaptureSession.CaptureCallback> b(CaptureRequest captureRequest) {
-        List<CameraCaptureSession.CaptureCallback> list = this.f36888a.get(captureRequest);
+        List<CameraCaptureSession.CaptureCallback> list = this.f37583a.get(captureRequest);
         return list != null ? list : Collections.EMPTY_LIST;
     }
 
@@ -79,7 +79,7 @@ public class u2 extends CameraCaptureSession.CaptureCallback {
 
     @Override // android.hardware.camera2.CameraCaptureSession.CaptureCallback
     public void onCaptureSequenceAborted(CameraCaptureSession cameraCaptureSession, int i10) {
-        Iterator<List<CameraCaptureSession.CaptureCallback>> it = this.f36888a.values().iterator();
+        Iterator<List<CameraCaptureSession.CaptureCallback>> it = this.f37583a.values().iterator();
         while (it.hasNext()) {
             Iterator<CameraCaptureSession.CaptureCallback> it2 = it.next().iterator();
             while (it2.hasNext()) {
@@ -94,7 +94,7 @@ public class u2 extends CameraCaptureSession.CaptureCallback {
 
     @Override // android.hardware.camera2.CameraCaptureSession.CaptureCallback
     public void onCaptureSequenceCompleted(CameraCaptureSession cameraCaptureSession, int i10, long j10) {
-        Iterator<List<CameraCaptureSession.CaptureCallback>> it = this.f36888a.values().iterator();
+        Iterator<List<CameraCaptureSession.CaptureCallback>> it = this.f37583a.values().iterator();
         while (it.hasNext()) {
             Iterator<CameraCaptureSession.CaptureCallback> it2 = it.next().iterator();
             while (it2.hasNext()) {

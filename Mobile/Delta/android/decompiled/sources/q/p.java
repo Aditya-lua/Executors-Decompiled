@@ -14,53 +14,53 @@ public class p {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final ImageView f29079a;
+    public final ImageView f29432a;
     public y0 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public y0 f29080c;
+    public y0 f29433c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public y0 f29081d;
+    public y0 f29434d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public int f29082e = 0;
+    public int f29435e = 0;
 
     public p(@NonNull ImageView imageView) {
-        this.f29079a = imageView;
+        this.f29432a = imageView;
     }
 
     public final boolean a(@NonNull Drawable drawable) {
-        if (this.f29081d == null) {
-            this.f29081d = new y0();
+        if (this.f29434d == null) {
+            this.f29434d = new y0();
         }
-        y0 y0Var = this.f29081d;
+        y0 y0Var = this.f29434d;
         y0Var.a();
-        ColorStateList colorStateListA = d3.f.a(this.f29079a);
+        ColorStateList colorStateListA = d3.f.a(this.f29432a);
         if (colorStateListA != null) {
-            y0Var.f29155d = true;
-            y0Var.f29153a = colorStateListA;
+            y0Var.f29508d = true;
+            y0Var.f29506a = colorStateListA;
         }
-        PorterDuff.Mode modeB = d3.f.b(this.f29079a);
+        PorterDuff.Mode modeB = d3.f.b(this.f29432a);
         if (modeB != null) {
-            y0Var.f29154c = true;
+            y0Var.f29507c = true;
             y0Var.b = modeB;
         }
-        if (!y0Var.f29155d && !y0Var.f29154c) {
+        if (!y0Var.f29508d && !y0Var.f29507c) {
             return false;
         }
-        k.i(drawable, y0Var, this.f29079a.getDrawableState());
+        k.i(drawable, y0Var, this.f29432a.getDrawableState());
         return true;
     }
 
     public void b() {
-        if (this.f29079a.getDrawable() != null) {
-            this.f29079a.getDrawable().setLevel(this.f29082e);
+        if (this.f29432a.getDrawable() != null) {
+            this.f29432a.getDrawable().setLevel(this.f29435e);
         }
     }
 
     public void c() {
-        Drawable drawable = this.f29079a.getDrawable();
+        Drawable drawable = this.f29432a.getDrawable();
         if (drawable != null) {
             k0.b(drawable);
         }
@@ -68,28 +68,28 @@ public class p {
             if (l() && a(drawable)) {
                 return;
             }
-            y0 y0Var = this.f29080c;
+            y0 y0Var = this.f29433c;
             if (y0Var != null) {
-                k.i(drawable, y0Var, this.f29079a.getDrawableState());
+                k.i(drawable, y0Var, this.f29432a.getDrawableState());
                 return;
             }
             y0 y0Var2 = this.b;
             if (y0Var2 != null) {
-                k.i(drawable, y0Var2, this.f29079a.getDrawableState());
+                k.i(drawable, y0Var2, this.f29432a.getDrawableState());
             }
         }
     }
 
     public ColorStateList d() {
-        y0 y0Var = this.f29080c;
+        y0 y0Var = this.f29433c;
         if (y0Var != null) {
-            return y0Var.f29153a;
+            return y0Var.f29506a;
         }
         return null;
     }
 
     public PorterDuff.Mode e() {
-        y0 y0Var = this.f29080c;
+        y0 y0Var = this.f29433c;
         if (y0Var != null) {
             return y0Var.b;
         }
@@ -97,31 +97,31 @@ public class p {
     }
 
     public boolean f() {
-        return !(this.f29079a.getBackground() instanceof RippleDrawable);
+        return !(this.f29432a.getBackground() instanceof RippleDrawable);
     }
 
     public void g(AttributeSet attributeSet, int i10) {
         int iN;
-        Context context = this.f29079a.getContext();
+        Context context = this.f29432a.getContext();
         int[] iArr = i.j.R;
         a1 a1VarV = a1.v(context, attributeSet, iArr, i10, 0);
-        ImageView imageView = this.f29079a;
+        ImageView imageView = this.f29432a;
         androidx.core.view.o0.k0(imageView, imageView.getContext(), iArr, attributeSet, a1VarV.r(), i10, 0);
         try {
-            Drawable drawable = this.f29079a.getDrawable();
-            if (drawable == null && (iN = a1VarV.n(i.j.S, -1)) != -1 && (drawable = k.a.b(this.f29079a.getContext(), iN)) != null) {
-                this.f29079a.setImageDrawable(drawable);
+            Drawable drawable = this.f29432a.getDrawable();
+            if (drawable == null && (iN = a1VarV.n(i.j.S, -1)) != -1 && (drawable = k.a.b(this.f29432a.getContext(), iN)) != null) {
+                this.f29432a.setImageDrawable(drawable);
             }
             if (drawable != null) {
                 k0.b(drawable);
             }
             int i11 = i.j.T;
             if (a1VarV.s(i11)) {
-                d3.f.c(this.f29079a, a1VarV.c(i11));
+                d3.f.c(this.f29432a, a1VarV.c(i11));
             }
             int i12 = i.j.U;
             if (a1VarV.s(i12)) {
-                d3.f.d(this.f29079a, k0.e(a1VarV.k(i12, -1), null));
+                d3.f.d(this.f29432a, k0.e(a1VarV.k(i12, -1), null));
             }
         } finally {
             a1VarV.x();
@@ -129,39 +129,39 @@ public class p {
     }
 
     public void h(@NonNull Drawable drawable) {
-        this.f29082e = drawable.getLevel();
+        this.f29435e = drawable.getLevel();
     }
 
     public void i(int i10) {
         if (i10 != 0) {
-            Drawable drawableB = k.a.b(this.f29079a.getContext(), i10);
+            Drawable drawableB = k.a.b(this.f29432a.getContext(), i10);
             if (drawableB != null) {
                 k0.b(drawableB);
             }
-            this.f29079a.setImageDrawable(drawableB);
+            this.f29432a.setImageDrawable(drawableB);
         } else {
-            this.f29079a.setImageDrawable(null);
+            this.f29432a.setImageDrawable(null);
         }
         c();
     }
 
     public void j(ColorStateList colorStateList) {
-        if (this.f29080c == null) {
-            this.f29080c = new y0();
+        if (this.f29433c == null) {
+            this.f29433c = new y0();
         }
-        y0 y0Var = this.f29080c;
-        y0Var.f29153a = colorStateList;
-        y0Var.f29155d = true;
+        y0 y0Var = this.f29433c;
+        y0Var.f29506a = colorStateList;
+        y0Var.f29508d = true;
         c();
     }
 
     public void k(PorterDuff.Mode mode) {
-        if (this.f29080c == null) {
-            this.f29080c = new y0();
+        if (this.f29433c == null) {
+            this.f29433c = new y0();
         }
-        y0 y0Var = this.f29080c;
+        y0 y0Var = this.f29433c;
         y0Var.b = mode;
-        y0Var.f29154c = true;
+        y0Var.f29507c = true;
         c();
     }
 

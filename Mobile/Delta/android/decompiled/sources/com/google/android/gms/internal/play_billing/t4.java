@@ -83,7 +83,7 @@ public abstract class t4<MessageType extends t4<MessageType, BuilderType>, Build
     public static t4 v(t4 t4Var, byte[] bArr) throws f5 {
         int length = bArr.length;
         f4 f4Var = f4.b;
-        int i10 = e3.f7032a;
+        int i10 = e3.f7106a;
         t4 t4VarN = n(t4Var, bArr, 0, length, f4.b);
         if (t4VarN == null || o(t4VarN, true)) {
             return t4VarN;

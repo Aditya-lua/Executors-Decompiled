@@ -1,6 +1,5 @@
 package com.roblox.client;
 
-import ak.k0;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -10,21 +9,22 @@ import android.widget.Toast;
 import androidx.p000lifecycle.l;
 import com.roblox.engine.jni.locale.NativeLocaleJavaInterface;
 import com.roblox.engine.jni.reporter.SessionReporterJavaInterface;
-import gk.p;
-import gk.v;
+import ek.q;
+import ek.w;
 import java.util.Locale;
-import qi.f;
-import sg.a1;
-import sg.q0;
-import sh.i;
-import th.h;
-import wh.t0;
+import oi.f;
+import qh.i;
+import rg.a1;
+import rg.q0;
+import rh.h;
+import uh.u0;
+import yj.k0;
 
 /* JADX INFO: loaded from: classes2.dex */
 public abstract class b extends j.b {
     public static int G;
     public static int H;
-    public mi.a E = new mi.a();
+    public ki.a E = new ki.a();
     public boolean F;
 
     public void E1() {
@@ -42,7 +42,7 @@ public abstract class b extends j.b {
         I1(str, str2, null);
     }
 
-    public mi.a G1() {
+    public ki.a G1() {
         return this.E;
     }
 
@@ -50,27 +50,27 @@ public abstract class b extends j.b {
         if (isDestroyed()) {
             return;
         }
-        androidx.appcompat.app.a.C0013a c0013a = new androidx.appcompat.app.a.C0013a(this);
-        c0013a.j(q0.f30972u, null);
-        c0013a.h(str);
+        androidx.appcompat.app.a.C0009a c0009a = new androidx.appcompat.app.a.C0009a(this);
+        c0009a.j(q0.f30577u, null);
+        c0009a.h(str);
         if (onDismissListener != null) {
-            c0013a.k(onDismissListener);
+            c0009a.k(onDismissListener);
         }
-        c0013a.a().show();
+        c0009a.a().show();
     }
 
     public final void I1(String str, String str2, DialogInterface.OnDismissListener onDismissListener) {
         if (isDestroyed()) {
             return;
         }
-        androidx.appcompat.app.a.C0013a c0013a = new androidx.appcompat.app.a.C0013a(this);
-        c0013a.j(q0.f30972u, null);
-        c0013a.q(str2);
-        c0013a.h(str);
+        androidx.appcompat.app.a.C0009a c0009a = new androidx.appcompat.app.a.C0009a(this);
+        c0009a.j(q0.f30577u, null);
+        c0009a.q(str2);
+        c0009a.h(str);
         if (onDismissListener != null) {
-            c0013a.k(onDismissListener);
+            c0009a.k(onDismissListener);
         }
-        c0013a.a().show();
+        c0009a.a().show();
     }
 
     public boolean J1() {
@@ -85,19 +85,19 @@ public abstract class b extends j.b {
         Toast.makeText(this, str, i10).show();
     }
 
-    public void U(int i10) {
+    public void T(int i10) {
         H1(getString(i10), null);
     }
 
-    public void W(String str) {
+    public void V(String str) {
         H1(str, null);
     }
 
     @Override // j.b, android.app.Activity, android.view.ContextThemeWrapper, android.content.ContextWrapper
     public void attachBaseContext(Context context) {
         Configuration configuration = context.getResources().getConfiguration();
-        f fVarD = qi.b.f().d(context);
-        f fVarJ = qi.b.f().j();
+        f fVarD = oi.b.f().d(context);
+        f fVarJ = oi.b.f().j();
         StringBuilder sb2 = new StringBuilder();
         sb2.append(getClass().getSimpleName());
         sb2.append(" -> Locale: base = ");
@@ -106,8 +106,8 @@ public abstract class b extends j.b {
         sb2.append(fVarD.c());
         sb2.append("; user = ");
         sb2.append(fVarJ != null ? fVarJ.c() : "null");
-        p.b("rbx.locale", sb2.toString());
-        Locale localeB = qi.b.b(fVarJ != null ? fVarJ.c() : fVarD.c());
+        q.b("rbx.locale", sb2.toString());
+        Locale localeB = oi.b.b(fVarJ != null ? fVarJ.c() : fVarD.c());
         configuration.setLocale(localeB);
         configuration.setLayoutDirection(localeB);
         super.attachBaseContext(context.createConfigurationContext(configuration));
@@ -122,25 +122,25 @@ public abstract class b extends j.b {
     @Override // e4.q, e.p, k2.g, android.app.Activity
     public void onCreate(Bundle bundle) {
         if (k0.B()) {
-            p.h("RobloxBaseActivity", "onCreate: App was previously destroyed due to process death");
+            q.h("RobloxBaseActivity", "onCreate: App was previously destroyed due to process death");
             super.onCreate(bundle);
             finish();
         } else {
-            if (h.a().G1()) {
-                p.h("RobloxBaseActivity", "GameActivity = ON. Return!");
+            if (h.a().Q1()) {
+                q.h("RobloxBaseActivity", "GameActivity = ON. Return!");
                 super.onCreate(bundle);
                 return;
             }
-            a1.R0(this);
-            ei.c.e(this);
+            a1.S0(this);
+            ci.c.e(this);
             super.onCreate(bundle);
             int i10 = G;
             G = i10 + 1;
             if (i10 == 0) {
-                NativeLocaleJavaInterface.setImplementation(new ni.a());
-                SessionReporterJavaInterface.setImplementation(new ni.b(this));
+                NativeLocaleJavaInterface.setImplementation(new li.a());
+                SessionReporterJavaInterface.setImplementation(new li.b(this));
             }
-            fk.c.c().m();
+            dk.c.c().m();
         }
     }
 
@@ -151,12 +151,12 @@ public abstract class b extends j.b {
             G--;
             return;
         }
-        p.h("RobloxBaseActivity", "onDestroy: App was previously destroyed due to process death");
+        q.h("RobloxBaseActivity", "onDestroy: App was previously destroyed due to process death");
         super.onDestroy();
         if (h.a().c()) {
-            ei.c.a();
+            ci.c.a();
         }
-        v.c(this);
+        w.c(this);
     }
 
     @Override // e.p, android.app.Activity
@@ -167,7 +167,7 @@ public abstract class b extends j.b {
     @Override // e4.q, android.app.Activity
     public void onPause() {
         this.F = false;
-        ei.c.f(getCacheDir(), a1.f30731s.getString("webview_url", ""));
+        ci.c.f(getCacheDir(), a1.f30332s.getString("webview_url", ""));
         super.onPause();
     }
 
@@ -175,7 +175,7 @@ public abstract class b extends j.b {
     public void onResume() {
         super.onResume();
         this.F = true;
-        ei.c.g();
+        ci.c.g();
     }
 
     @Override // e.p, k2.g, android.app.Activity
@@ -192,15 +192,15 @@ public abstract class b extends j.b {
 
     @Override // j.b, e4.q, android.app.Activity
     public void onStop() {
-        ei.c.h();
+        ci.c.h();
         super.onStop();
         H--;
     }
 
     @Override // e.p, android.app.Activity, android.content.ComponentCallbacks2
     public void onTrimMemory(int i10) {
-        p.k("RobloxBaseActivity", "onTrimMemory: in " + getClass().getSimpleName() + ", level = " + i10);
+        q.k("RobloxBaseActivity", "onTrimMemory: in " + getClass().getSimpleName() + ", level = " + i10);
         super.onTrimMemory(i10);
-        RobloxApplication.g("RobloxBaseActivity", t0.EXPERIENCE, i10);
+        RobloxApplication.g("RobloxBaseActivity", u0.EXPERIENCE, i10);
     }
 }

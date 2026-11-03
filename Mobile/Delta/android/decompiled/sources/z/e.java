@@ -7,29 +7,29 @@ import java.util.List;
 public final class e extends g5.b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final List<Size> f36478a;
+    public final List<Size> f37173a;
     public final List<Size> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final int f36479c;
+    public final int f37174c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final int f36480d;
+    public final int f37175d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final int f36481e;
+    public final int f37176e;
 
     public e(List<Size> list, List<Size> list2, int i10, int i11, int i12) {
-        this.f36478a = list;
+        this.f37173a = list;
         this.b = list2;
-        this.f36479c = i10;
-        this.f36480d = i11;
-        this.f36481e = i12;
+        this.f37174c = i10;
+        this.f37175d = i11;
+        this.f37176e = i12;
     }
 
     @Override // z.g5.b
     public List<Size> a() {
-        return this.f36478a;
+        return this.f37173a;
     }
 
     @Override // z.g5.b
@@ -39,17 +39,17 @@ public final class e extends g5.b {
 
     @Override // z.g5.b
     public int c() {
-        return this.f36481e;
+        return this.f37176e;
     }
 
     @Override // z.g5.b
     public int d() {
-        return this.f36479c;
+        return this.f37174c;
     }
 
     @Override // z.g5.b
     public int e() {
-        return this.f36480d;
+        return this.f37175d;
     }
 
     public boolean equals(Object obj) {
@@ -58,11 +58,11 @@ public final class e extends g5.b {
         }
         if (obj instanceof g5.b) {
             g5.b bVar = (g5.b) obj;
-            List<Size> list = this.f36478a;
+            List<Size> list = this.f37173a;
             if (list != null ? list.equals(bVar.a()) : bVar.a() == null) {
                 List<Size> list2 = this.b;
                 if (list2 != null ? list2.equals(bVar.b()) : bVar.b() == null) {
-                    if (this.f36479c == bVar.d() && this.f36480d == bVar.e() && this.f36481e == bVar.c()) {
+                    if (this.f37174c == bVar.d() && this.f37175d == bVar.e() && this.f37176e == bVar.c()) {
                         return true;
                     }
                 }
@@ -72,13 +72,13 @@ public final class e extends g5.b {
     }
 
     public int hashCode() {
-        List<Size> list = this.f36478a;
+        List<Size> list = this.f37173a;
         int iHashCode = ((list == null ? 0 : list.hashCode()) ^ 1000003) * 1000003;
         List<Size> list2 = this.b;
-        return ((((((iHashCode ^ (list2 != null ? list2.hashCode() : 0)) * 1000003) ^ this.f36479c) * 1000003) ^ this.f36480d) * 1000003) ^ this.f36481e;
+        return ((((((iHashCode ^ (list2 != null ? list2.hashCode() : 0)) * 1000003) ^ this.f37174c) * 1000003) ^ this.f37175d) * 1000003) ^ this.f37176e;
     }
 
     public String toString() {
-        return "BestSizesAndMaxFpsForConfigs{bestSizes=" + this.f36478a + ", bestSizesForStreamUseCase=" + this.b + ", maxFpsForBestSizes=" + this.f36479c + ", maxFpsForStreamUseCase=" + this.f36480d + ", maxFpsForAllSizes=" + this.f36481e + "}";
+        return "BestSizesAndMaxFpsForConfigs{bestSizes=" + this.f37173a + ", bestSizesForStreamUseCase=" + this.b + ", maxFpsForBestSizes=" + this.f37174c + ", maxFpsForStreamUseCase=" + this.f37175d + ", maxFpsForAllSizes=" + this.f37176e + "}";
     }
 }

@@ -34,10 +34,10 @@ public class InputConnection extends BaseInputConnection implements View.OnKeyLi
     private static final int MAX_LENGTH_FOR_SINGLE_LINE_EDIT_TEXT = 5000;
     private static final String TAG = "gti.InputConnection";
     private final InputMethodManager imm;
-    private fe.a listener;
+    private ge.a listener;
     private final Editable mEditable;
     private boolean mSoftKeyboardActive;
-    private final fe.b settings;
+    private final ge.b settings;
     private final View targetView;
 
     public class b implements InputFilter {
@@ -68,8 +68,8 @@ public class InputConnection extends BaseInputConnection implements View.OnKeyLi
         }
     }
 
-    public InputConnection(Context context, View view, fe.b bVar) {
-        super(view, bVar.f16601a.inputType != 0);
+    public InputConnection(Context context, View view, ge.b bVar) {
+        super(view, bVar.f18548a.inputType != 0);
         Log.d(TAG, "InputConnection created");
         this.targetView = view;
         this.settings = bVar;
@@ -81,7 +81,7 @@ public class InputConnection extends BaseInputConnection implements View.OnKeyLi
         this.mEditable = new SpannableStringBuilder();
         c1.b(((Activity) view.getContext()).getWindow(), false);
         view.setOnKeyListener(this);
-        setEditorInfo(bVar.f16601a);
+        setEditorInfo(bVar.f18548a);
     }
 
     private static int findIndexBackward(CharSequence charSequence, int i10, int i11) {
@@ -157,24 +157,24 @@ public class InputConnection extends BaseInputConnection implements View.OnKeyLi
         }
     }
 
-    private com.google.androidgamesdk.gametextinput.a.C0125a getComposingRegion() {
-        return new com.google.androidgamesdk.gametextinput.a.C0125a(BaseInputConnection.getComposingSpanStart(this.mEditable), BaseInputConnection.getComposingSpanEnd(this.mEditable));
+    private com.google.androidgamesdk.gametextinput.a.C0129a getComposingRegion() {
+        return new com.google.androidgamesdk.gametextinput.a.C0129a(BaseInputConnection.getComposingSpanStart(this.mEditable), BaseInputConnection.getComposingSpanEnd(this.mEditable));
     }
 
-    private com.google.androidgamesdk.gametextinput.a.C0125a getSelection() {
-        return new com.google.androidgamesdk.gametextinput.a.C0125a(Selection.getSelectionStart(this.mEditable), Selection.getSelectionEnd(this.mEditable));
+    private com.google.androidgamesdk.gametextinput.a.C0129a getSelection() {
+        return new com.google.androidgamesdk.gametextinput.a.C0129a(Selection.getSelectionStart(this.mEditable), Selection.getSelectionEnd(this.mEditable));
     }
 
     private void immUpdateSelection() {
-        com.google.androidgamesdk.gametextinput.a.C0125a selection = getSelection();
-        com.google.androidgamesdk.gametextinput.a.C0125a composingRegion = getComposingRegion();
-        Log.d(TAG, "immUpdateSelection: " + selection.f8387a + "," + selection.b + ". " + composingRegion.f8387a + "," + composingRegion.b);
-        EditorInfo editorInfo = this.settings.f16601a;
-        int i10 = selection.f8387a;
+        com.google.androidgamesdk.gametextinput.a.C0129a selection = getSelection();
+        com.google.androidgamesdk.gametextinput.a.C0129a composingRegion = getComposingRegion();
+        Log.d(TAG, "immUpdateSelection: " + selection.f8461a + "," + selection.b + ". " + composingRegion.f8461a + "," + composingRegion.b);
+        EditorInfo editorInfo = this.settings.f18548a;
+        int i10 = selection.f8461a;
         editorInfo.initialSelStart = i10;
         int i11 = selection.b;
         editorInfo.initialSelEnd = i11;
-        this.imm.updateSelection(this.targetView, i10, i11, composingRegion.f8387a, composingRegion.b);
+        this.imm.updateSelection(this.targetView, i10, i11, composingRegion.f8461a, composingRegion.b);
     }
 
     private boolean processKeyEvent(KeyEvent keyEvent) {
@@ -183,20 +183,20 @@ public class InputConnection extends BaseInputConnection implements View.OnKeyLi
         }
         int keyCode = keyEvent.getKeyCode();
         Log.d(TAG, String.format("processKeyEvent(key=%d) text=%s", Integer.valueOf(keyCode), this.mEditable.toString()));
-        if ((this.settings.f16601a.inputType & 131072) == 0 && ((keyCode == 66 || keyCode == 160) && keyEvent.hasNoModifiers())) {
-            sendEditorAction(this.settings.f16601a.actionId);
+        if ((this.settings.f18548a.inputType & 131072) == 0 && ((keyCode == 66 || keyCode == 160) && keyEvent.hasNoModifiers())) {
+            sendEditorAction(this.settings.f18548a.actionId);
             return true;
         }
         if (keyEvent.getAction() != 0) {
             return false;
         }
-        com.google.androidgamesdk.gametextinput.a.C0125a selection = getSelection();
-        if (selection.f8387a == -1) {
-            selection.f8387a = this.mEditable.length();
+        com.google.androidgamesdk.gametextinput.a.C0129a selection = getSelection();
+        if (selection.f8461a == -1) {
+            selection.f8461a = this.mEditable.length();
             selection.b = this.mEditable.length();
         }
         if (keyCode == 21) {
-            int i10 = selection.f8387a;
+            int i10 = selection.f8461a;
             if (i10 == selection.b) {
                 int iFindIndexBackward = findIndexBackward(this.mEditable, i10, 1);
                 setSelection(iFindIndexBackward, iFindIndexBackward);
@@ -206,7 +206,7 @@ public class InputConnection extends BaseInputConnection implements View.OnKeyLi
             return true;
         }
         if (keyCode == 22) {
-            int i11 = selection.f8387a;
+            int i11 = selection.f8461a;
             int i12 = selection.b;
             if (i11 == i12) {
                 int iFindIndexForward = findIndexForward(this.mEditable, i12, 1);
@@ -225,7 +225,7 @@ public class InputConnection extends BaseInputConnection implements View.OnKeyLi
             return true;
         }
         if (keyCode == 67 || keyCode == 112) {
-            int i13 = selection.f8387a;
+            int i13 = selection.f8461a;
             int i14 = selection.b;
             if (i13 != i14) {
                 this.mEditable.delete(i13, i14);
@@ -246,49 +246,49 @@ public class InputConnection extends BaseInputConnection implements View.OnKeyLi
         if (keyEvent.getUnicodeChar() == 0) {
             return false;
         }
-        if (selection.f8387a != selection.b) {
+        if (selection.f8461a != selection.b) {
             Log.d(TAG, String.format("processKeyEvent: deleting selection", new Object[0]));
-            this.mEditable.delete(selection.f8387a, selection.b);
+            this.mEditable.delete(selection.f8461a, selection.b);
         }
         String string = Character.toString((char) keyEvent.getUnicodeChar());
-        this.mEditable.insert(selection.f8387a, string);
+        this.mEditable.insert(selection.f8461a, string);
         int length = this.mEditable.length();
-        com.google.androidgamesdk.gametextinput.a.C0125a composingRegion = getComposingRegion();
-        if (composingRegion.f8387a == -1) {
+        com.google.androidgamesdk.gametextinput.a.C0129a composingRegion = getComposingRegion();
+        if (composingRegion.f8461a == -1) {
             composingRegion = getSelection();
-            if (composingRegion.f8387a == -1) {
-                composingRegion = new com.google.androidgamesdk.gametextinput.a.C0125a(0, 0);
+            if (composingRegion.f8461a == -1) {
+                composingRegion = new com.google.androidgamesdk.gametextinput.a.C0129a(0, 0);
             }
         }
-        int i15 = composingRegion.f8387a;
+        int i15 = composingRegion.f8461a;
         int i16 = length + i15;
         composingRegion.b = i16;
         setComposingRegion(i15, i16);
-        int length2 = selection.f8387a + string.length();
+        int length2 = selection.f8461a + string.length();
         setSelection(length2, length2);
         Log.d(TAG, String.format("processKeyEvent: exit, text=%s", this.mEditable.toString()));
         return true;
     }
 
     private boolean sendEditorAction(int i10) {
-        fe.a aVar = this.listener;
+        ge.a aVar = this.listener;
         if (aVar == null) {
             return false;
         }
-        aVar.H(i10);
+        aVar.G(i10);
         return true;
     }
 
     private final void stateUpdated() {
-        com.google.androidgamesdk.gametextinput.a.C0125a selection = getSelection();
-        com.google.androidgamesdk.gametextinput.a.C0125a composingRegion = getComposingRegion();
-        State state = new State(this.mEditable.toString(), selection.f8387a, selection.b, composingRegion.f8387a, composingRegion.b);
-        EditorInfo editorInfo = this.settings.f16601a;
-        editorInfo.initialSelStart = selection.f8387a;
+        com.google.androidgamesdk.gametextinput.a.C0129a selection = getSelection();
+        com.google.androidgamesdk.gametextinput.a.C0129a composingRegion = getComposingRegion();
+        State state = new State(this.mEditable.toString(), selection.f8461a, selection.b, composingRegion.f8461a, composingRegion.b);
+        EditorInfo editorInfo = this.settings.f18548a;
+        editorInfo.initialSelStart = selection.f8461a;
         editorInfo.initialSelEnd = selection.b;
-        fe.a aVar = this.listener;
+        ge.a aVar = this.listener;
         if (aVar != null) {
-            aVar.B(state, false);
+            aVar.A(state, false);
         }
     }
 
@@ -348,7 +348,7 @@ public class InputConnection extends BaseInputConnection implements View.OnKeyLi
     }
 
     public final EditorInfo getEditorInfo() {
-        return this.settings.f16601a;
+        return this.settings.f18548a;
     }
 
     @Override // android.view.inputmethod.BaseInputConnection, android.view.inputmethod.InputConnection
@@ -366,7 +366,7 @@ public class InputConnection extends BaseInputConnection implements View.OnKeyLi
         return Insets.NONE;
     }
 
-    public final fe.a getListener() {
+    public final ge.a getListener() {
         return this.listener;
     }
 
@@ -470,7 +470,7 @@ public class InputConnection extends BaseInputConnection implements View.OnKeyLi
 
     public final void setEditorInfo(EditorInfo editorInfo) {
         Log.d(TAG, "setEditorInfo");
-        this.settings.f16601a = editorInfo;
+        this.settings.f18548a = editorInfo;
         if ((editorInfo.inputType & 131072) == 0) {
             this.mEditable.setFilters(new InputFilter[]{new InputFilter.LengthFilter(5000), new b()});
         } else {
@@ -487,7 +487,7 @@ public class InputConnection extends BaseInputConnection implements View.OnKeyLi
         return false;
     }
 
-    public final InputConnection setListener(fe.a aVar) {
+    public final InputConnection setListener(ge.a aVar) {
         this.listener = aVar;
         return this;
     }

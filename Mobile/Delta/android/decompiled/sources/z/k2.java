@@ -22,7 +22,7 @@ public class k2 {
 
     public static void a(n0.l1 l1Var, CaptureRequest.Builder builder) {
         Range<Integer> rangeE = l1Var.e();
-        if (!rangeE.equals(n0.t3.f24861a)) {
+        if (!rangeE.equals(n0.t3.f25682a)) {
             builder.set(CaptureRequest.CONTROL_AE_TARGET_FPS_RANGE, rangeE);
         }
         g0.r1.a("Camera2CaptureRequestBuilder", "applyAeFpsRange: expectedFrameRateRange = " + rangeE);
@@ -79,12 +79,12 @@ public class k2 {
         a(l1Var, builderCreateCaptureRequest);
         d(l1Var, builderCreateCaptureRequest);
         n0.n1 n1VarG = l1Var.g();
-        n0.n1.a<Integer> aVar = n0.l1.f24728i;
+        n0.n1.a<Integer> aVar = n0.l1.f25549i;
         if (n1VarG.a(aVar)) {
             builderCreateCaptureRequest.set(CaptureRequest.JPEG_ORIENTATION, (Integer) l1Var.g().e(aVar));
         }
         n0.n1 n1VarG2 = l1Var.g();
-        n0.n1.a<Integer> aVar2 = n0.l1.f24729j;
+        n0.n1.a<Integer> aVar2 = n0.l1.f25550j;
         if (n1VarG2.a(aVar2)) {
             builderCreateCaptureRequest.set(CaptureRequest.JPEG_QUALITY, Byte.valueOf(((Integer) l1Var.g().e(aVar2)).byteValue()));
         }

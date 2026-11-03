@@ -1,83 +1,58 @@
 package ff;
 
-import android.os.Bundle;
-import com.google.android.gms.internal.measurement.v3;
-import java.util.List;
-import java.util.Map;
-import nb.ra;
-
 /* JADX INFO: loaded from: classes2.dex */
-public final class a implements ra {
+public final class a extends l {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ v3 f16602a;
+    public final long f17200a;
+    public final long b;
 
-    public a(v3 v3Var) {
-        this.f16602a = v3Var;
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public final long f17201c;
+
+    public a(long j10, long j11, long j12) {
+        this.f17200a = j10;
+        this.b = j11;
+        this.f17201c = j12;
     }
 
-    @Override // nb.ra
-    public final void a(String str, String str2, Bundle bundle) {
-        this.f16602a.x(str, str2, bundle);
+    @Override // ff.l
+    public long b() {
+        return this.b;
     }
 
-    @Override // nb.ra
-    public final void b(Bundle bundle) {
-        this.f16602a.A(bundle);
+    @Override // ff.l
+    public long c() {
+        return this.f17200a;
     }
 
-    @Override // nb.ra
-    public final void c(String str) {
-        this.f16602a.F(str);
+    @Override // ff.l
+    public long d() {
+        return this.f17201c;
     }
 
-    @Override // nb.ra
-    public final String d() {
-        return this.f16602a.b();
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj instanceof l) {
+            l lVar = (l) obj;
+            if (this.f17200a == lVar.c() && this.b == lVar.b() && this.f17201c == lVar.d()) {
+                return true;
+            }
+        }
+        return false;
     }
 
-    @Override // nb.ra
-    public final String e() {
-        return this.f16602a.I();
+    public int hashCode() {
+        long j10 = this.f17200a;
+        long j11 = this.b;
+        int i10 = (((((int) (j10 ^ (j10 >>> 32))) ^ 1000003) * 1000003) ^ ((int) (j11 ^ (j11 >>> 32)))) * 1000003;
+        long j12 = this.f17201c;
+        return i10 ^ ((int) ((j12 >>> 32) ^ j12));
     }
 
-    @Override // nb.ra
-    public final long f() {
-        return this.f16602a.J();
-    }
-
-    @Override // nb.ra
-    public final String g() {
-        return this.f16602a.H();
-    }
-
-    @Override // nb.ra
-    public final void h(String str) {
-        this.f16602a.E(str);
-    }
-
-    @Override // nb.ra
-    public final int i(String str) {
-        return this.f16602a.f(str);
-    }
-
-    @Override // nb.ra
-    public final Map j(String str, String str2, boolean z10) {
-        return this.f16602a.c(str, str2, z10);
-    }
-
-    @Override // nb.ra
-    public final void k(String str, String str2, Bundle bundle) {
-        this.f16602a.B(str, str2, bundle);
-    }
-
-    @Override // nb.ra
-    public final List l(String str, String str2) {
-        return this.f16602a.C(str, str2);
-    }
-
-    @Override // nb.ra
-    public final String zzh() {
-        return this.f16602a.a();
+    public String toString() {
+        return "StartupTime{epochMillis=" + this.f17200a + ", elapsedRealtime=" + this.b + ", uptimeMillis=" + this.f17201c + "}";
     }
 }

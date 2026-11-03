@@ -1,89 +1,101 @@
 package el;
 
-import android.app.ActivityManager;
-import android.content.Context;
-import android.graphics.Point;
+import android.app.Activity;
+import android.app.Activity$ScreenCaptureCallback;
 import android.os.Build;
-import android.util.DisplayMetrics;
-import android.view.Display;
-import android.view.WindowManager;
+import android.util.Log;
+import androidx.annotation.NonNull;
+import com.roblox.protocols.bugreporterplatforminterface.generated.BugReporterTriggerType;
+import com.roblox.protocols.bugreporterplatforminterface.generated.IBugReporterCore;
+import com.roblox.protocols.bugreporterplatforminterface.generated.IPlatformBugReporter;
+import java.lang.ref.WeakReference;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class a {
-    public static float a(Display display) {
-        return display.getRefreshRate();
-    }
+public class a extends IPlatformBugReporter {
 
-    public static String b(boolean z10) {
-        String str = Build.MANUFACTURER;
-        String str2 = Build.MODEL;
-        if (z10) {
-            str2 = str + " " + str2 + Build.DEVICE;
-        } else if (!str2.startsWith(str)) {
-            str2 = str + " " + str2;
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public WeakReference<Activity> f16144a;
+    public final Executor b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public Activity$ScreenCaptureCallback f16145c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public boolean f16146d;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public IBugReporterCore f16147e;
+
+    /* JADX INFO: renamed from: el.a$a, reason: collision with other inner class name */
+    public class C0298a implements Activity$ScreenCaptureCallback {
+        public C0298a() {
         }
-        return Character.toUpperCase(str2.charAt(0)) + str2.substring(1, str2.length());
+
+        public void onScreenCaptured() {
+            a.this.c(BugReporterTriggerType.SCREENSHOT);
+        }
     }
 
-    public static int c(Context context) {
-        ActivityManager activityManager = (ActivityManager) context.getSystemService(ActivityManager.class);
-        ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();
-        activityManager.getMemoryInfo(memoryInfo);
-        return (int) (memoryInfo.totalMem / 1048576);
+    public static class b {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final a f16149a = new a();
     }
 
-    public static DisplayMetrics d(Context context) {
-        return b.b.a(context);
+    public static a b() {
+        return b.f16149a;
     }
 
-    public static float e(Context context) {
-        return d(context).density;
+    public final void c(BugReporterTriggerType bugReporterTriggerType) {
+        IBugReporterCore iBugReporterCore = this.f16147e;
+        if (iBugReporterCore != null) {
+            iBugReporterCore.requestBugReport(bugReporterTriggerType);
+        }
     }
 
-    public static Point f(Context context) {
-        DisplayMetrics displayMetricsD = d(context);
-        Point point = new Point();
-        float f10 = displayMetricsD.widthPixels;
-        float f11 = displayMetricsD.density;
-        point.x = (int) (f10 / f11);
-        point.y = (int) (displayMetricsD.heightPixels / f11);
-        return point;
+    public void d(@NonNull Activity activity) {
+        if (Build.VERSION.SDK_INT >= 34) {
+            if (this.f16146d) {
+                Log.w("BugReporterProtocolV2", "Unbalanced calls to start and stop. Already started.");
+                return;
+            }
+            this.f16144a = new WeakReference<>(activity);
+            C0298a c0298a = new C0298a();
+            this.f16145c = c0298a;
+            activity.registerScreenCaptureCallback(this.b, c0298a);
+            this.f16146d = true;
+        }
     }
 
-    public static Point g(Context context) {
-        DisplayMetrics displayMetricsD = d(context);
-        Point point = new Point();
-        point.x = (int) displayMetricsD.xdpi;
-        point.y = (int) displayMetricsD.ydpi;
-        return point;
+    public void e() {
+        if (Build.VERSION.SDK_INT >= 34) {
+            if (!this.f16146d) {
+                Log.w("BugReporterProtocolV2", "Unbalanced calls to start and stop. Not started.");
+                return;
+            }
+            this.f16146d = false;
+            Activity activity = this.f16144a.get();
+            if (activity != null) {
+                activity.unregisterScreenCaptureCallback(this.f16145c);
+            } else {
+                Log.w("BugReporterProtocolV2", "Could not stop listening. Activity is null");
+            }
+            this.f16145c = null;
+            this.f16144a = null;
+        }
     }
 
-    public static Point h(Context context) {
-        Display defaultDisplay = ((WindowManager) context.getSystemService("window")).getDefaultDisplay();
-        Point point = new Point();
-        point.x = defaultDisplay.getMode().getPhysicalWidth();
-        point.y = defaultDisplay.getMode().getPhysicalHeight();
-        return point;
+    @Override // com.roblox.protocols.bugreporterplatforminterface.generated.IPlatformBugReporter
+    public boolean isAvailable() {
+        return true;
     }
 
-    public static Point i(Context context) {
-        DisplayMetrics displayMetricsD = d(context);
-        float f10 = displayMetricsD.widthPixels / displayMetricsD.xdpi;
-        float f11 = displayMetricsD.heightPixels / displayMetricsD.ydpi;
-        Point point = new Point();
-        point.x = Math.round(f10 * 25.4f);
-        point.y = Math.round(f11 * 25.4f);
-        return point;
-    }
-
-    public static Point j(Context context) {
-        Display defaultDisplay = ((WindowManager) context.getSystemService("window")).getDefaultDisplay();
-        Point point = new Point();
-        defaultDisplay.getSize(point);
-        return point;
-    }
-
-    public static float[] k(Display display) {
-        return display.getSupportedRefreshRates();
+    public a() {
+        this.b = Executors.newSingleThreadExecutor();
+        this.f16146d = false;
+        this.f16147e = null;
+        this.f16147e = IBugReporterCore.setPlatformImpl(this);
     }
 }

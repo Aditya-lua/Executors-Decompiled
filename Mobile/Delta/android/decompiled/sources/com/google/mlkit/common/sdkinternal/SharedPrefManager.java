@@ -6,10 +6,10 @@ import android.os.SystemClock;
 import androidx.annotation.NonNull;
 import com.google.mlkit.common.model.RemoteModel;
 import java.util.UUID;
-import lf.c;
-import lf.d;
-import lf.g;
-import lf.r;
+import mf.c;
+import mf.d;
+import mf.g;
+import mf.r;
 import n9.m;
 
 /* JADX INFO: loaded from: classes2.dex */
@@ -17,7 +17,7 @@ public class SharedPrefManager {
 
     @NonNull
     public static final c<?> COMPONENT = c.c(SharedPrefManager.class).b(r.j(MlKitContext.class)).b(r.j(Context.class)).f(new g() { // from class: com.google.mlkit.common.sdkinternal.zzs
-        @Override // lf.g
+        @Override // mf.g
         public final Object create(d dVar) {
             return new SharedPrefManager((Context) dVar.a(Context.class));
         }

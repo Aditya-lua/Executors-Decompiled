@@ -4,15 +4,15 @@ package com.google.crypto.tink.shaded.protobuf;
 public final class o {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Class<?> f8515a = c();
+    public static final Class<?> f8589a = c();
 
     public static p a() {
         p pVarB = b("getEmptyRegistry");
-        return pVarB != null ? pVarB : p.f8521c;
+        return pVarB != null ? pVarB : p.f8595c;
     }
 
     public static final p b(String str) {
-        Class<?> cls = f8515a;
+        Class<?> cls = f8589a;
         if (cls == null) {
             return null;
         }

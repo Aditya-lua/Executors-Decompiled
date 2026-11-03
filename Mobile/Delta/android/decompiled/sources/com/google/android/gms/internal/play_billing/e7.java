@@ -4,10 +4,10 @@ package com.google.android.gms.internal.play_billing;
 public final class e7 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final /* synthetic */ int f7036a = 0;
+    public static final /* synthetic */ int f7110a = 0;
 
     static {
-        int i10 = e3.f7032a;
+        int i10 = e3.f7106a;
     }
 
     public static int a(String str, byte[] bArr, int i10, int i11) {

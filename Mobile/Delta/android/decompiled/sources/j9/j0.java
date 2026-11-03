@@ -7,28 +7,28 @@ import androidx.annotation.NonNull;
 public class j0 {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final j0 f21199e = new j0(true, 3, 1, null, null, -1);
+    public static final j0 f21772e = new j0(true, 3, 1, null, null, -1);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final boolean f21200a;
+    public final boolean f21773a;
     public final String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Throwable f21201c;
+    public final Throwable f21774c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final int f21202d;
+    public final int f21775d;
 
     public j0(boolean z10, int i10, int i11, String str, Throwable th2, long j10) {
-        this.f21200a = z10;
-        this.f21202d = i10;
+        this.f21773a = z10;
+        this.f21775d = i10;
         this.b = str;
-        this.f21201c = th2;
+        this.f21774c = th2;
     }
 
     @Deprecated
     public static j0 b() {
-        return f21199e;
+        return f21772e;
     }
 
     public static j0 c(@NonNull String str) {
@@ -52,10 +52,10 @@ public class j0 {
     }
 
     public final void e() {
-        if (this.f21200a || !Log.isLoggable("GoogleCertificatesRslt", 3)) {
+        if (this.f21773a || !Log.isLoggable("GoogleCertificatesRslt", 3)) {
             return;
         }
-        Throwable th2 = this.f21201c;
+        Throwable th2 = this.f21774c;
         if (th2 != null) {
             Log.d("GoogleCertificatesRslt", a(), th2);
         } else {

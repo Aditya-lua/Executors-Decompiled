@@ -4,5 +4,5 @@ package com.appsflyer.internal;
 public final class AFj1fSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static String f5438d = "https://%sapp.%s";
+    public static String f5511d = "https://%sapp.%s";
 }

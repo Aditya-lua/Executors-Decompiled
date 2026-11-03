@@ -24,12 +24,12 @@ public abstract class s0 extends j0 implements Set {
     }
 
     public static s0 k() {
-        return c1.f7015i;
+        return c1.f7089i;
     }
 
     public static s0 m(int i10, Object... objArr) {
         if (i10 == 0) {
-            return c1.f7015i;
+            return c1.f7089i;
         }
         if (i10 == 1) {
             Object obj = objArr[0];

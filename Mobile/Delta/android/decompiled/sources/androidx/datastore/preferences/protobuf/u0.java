@@ -13,78 +13,78 @@ import sun.misc.Unsafe;
 public final class u0<T> implements g1<T> {
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public static final int[] f2361r = new int[0];
+    public static final int[] f2206r = new int[0];
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public static final Unsafe f2362s = q1.A();
+    public static final Unsafe f2207s = q1.A();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int[] f2363a;
+    public final int[] f2208a;
     public final Object[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final int f2364c;
+    public final int f2209c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final int f2365d;
+    public final int f2210d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final r0 f2366e;
+    public final r0 f2211e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final boolean f2367f;
+    public final boolean f2212f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final boolean f2368g;
+    public final boolean f2213g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final b1 f2369h;
+    public final b1 f2214h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final boolean f2370i;
+    public final boolean f2215i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final int[] f2371j;
+    public final int[] f2216j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final int f2372k;
+    public final int f2217k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final int f2373l;
+    public final int f2218l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final w0 f2374m;
+    public final w0 f2219m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public final f0 f2375n;
+    public final f0 f2220n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public final n1<?, ?> f2376o;
+    public final n1<?, ?> f2221o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public final p<?> f2377p;
+    public final p<?> f2222p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public final m0 f2378q;
+    public final m0 f2223q;
 
     public u0(int[] iArr, Object[] objArr, int i10, int i11, r0 r0Var, b1 b1Var, boolean z10, int[] iArr2, int i12, int i13, w0 w0Var, f0 f0Var, n1<?, ?> n1Var, p<?> pVar, m0 m0Var) {
-        this.f2363a = iArr;
+        this.f2208a = iArr;
         this.b = objArr;
-        this.f2364c = i10;
-        this.f2365d = i11;
-        this.f2368g = r0Var instanceof x;
-        this.f2369h = b1Var;
-        this.f2367f = pVar != null && pVar.e(r0Var);
-        this.f2370i = z10;
-        this.f2371j = iArr2;
-        this.f2372k = i12;
-        this.f2373l = i13;
-        this.f2374m = w0Var;
-        this.f2375n = f0Var;
-        this.f2376o = n1Var;
-        this.f2377p = pVar;
-        this.f2366e = r0Var;
-        this.f2378q = m0Var;
+        this.f2209c = i10;
+        this.f2210d = i11;
+        this.f2213g = r0Var instanceof x;
+        this.f2214h = b1Var;
+        this.f2212f = pVar != null && pVar.e(r0Var);
+        this.f2215i = z10;
+        this.f2216j = iArr2;
+        this.f2217k = i12;
+        this.f2218l = i13;
+        this.f2219m = w0Var;
+        this.f2220n = f0Var;
+        this.f2221o = n1Var;
+        this.f2222p = pVar;
+        this.f2211e = r0Var;
+        this.f2223q = m0Var;
     }
 
     public static boolean C(Object obj) {
@@ -124,14 +124,14 @@ public final class u0<T> implements g1<T> {
         }
         int[] iArrD = k1Var.d();
         if (iArrD == null) {
-            iArrD = f2361r;
+            iArrD = f2206r;
         }
         if (sVarArrE.length > 0) {
             s sVar3 = sVarArrE[0];
             throw null;
         }
-        int[] iArr2 = f2361r;
-        int[] iArr3 = f2361r;
+        int[] iArr2 = f2206r;
+        int[] iArr3 = f2206r;
         int[] iArr4 = new int[iArrD.length + iArr2.length + iArr3.length];
         System.arraycopy(iArrD, 0, iArr4, 0, iArrD.length);
         System.arraycopy(iArr2, 0, iArr4, iArrD.length, iArr2.length);
@@ -240,7 +240,7 @@ public final class u0<T> implements g1<T> {
             i16 = 0;
             i11 = 0;
             i15 = 0;
-            iArr = f2361r;
+            iArr = f2206r;
             i14 = 0;
         } else {
             int i44 = i41 + 1;
@@ -398,7 +398,7 @@ public final class u0<T> implements g1<T> {
             i41 = i65;
             i16 = iCharAt6;
         }
-        Unsafe unsafe = f2362s;
+        Unsafe unsafe = f2207s;
         Object[] objArrD = e1Var.d();
         Class<?> cls = e1Var.b().getClass();
         int[] iArr3 = new int[iCharAt * 3];
@@ -792,11 +792,11 @@ public final class u0<T> implements g1<T> {
     /* JADX WARN: Type inference failed for: r5v7 */
     /* JADX WARN: Type inference failed for: r5v8, types: [androidx.datastore.preferences.protobuf.g1] */
     public final boolean B(T t8, int i10, int i11) {
-        Map<?, ?> mapE = this.f2378q.e(q1.z(t8, S(i10)));
+        Map<?, ?> mapE = this.f2223q.e(q1.z(t8, S(i10)));
         if (mapE.isEmpty()) {
             return true;
         }
-        if (this.f2378q.b(s(i11)).f2237c.a() != s1.c.MESSAGE) {
+        if (this.f2223q.b(s(i11)).f2082c.a() != s1.c.MESSAGE) {
             return true;
         }
         ?? C = 0;
@@ -841,22 +841,22 @@ public final class u0<T> implements g1<T> {
         long jS = S(l0(i10));
         Object objZ = q1.z(obj, jS);
         if (objZ == null) {
-            objZ = this.f2378q.d(obj2);
+            objZ = this.f2223q.d(obj2);
             q1.O(obj, jS, objZ);
-        } else if (this.f2378q.h(objZ)) {
-            Object objD = this.f2378q.d(obj2);
-            this.f2378q.a(objD, objZ);
+        } else if (this.f2223q.h(objZ)) {
+            Object objD = this.f2223q.d(obj2);
+            this.f2223q.a(objD, objZ);
             q1.O(obj, jS, objD);
             objZ = objD;
         }
-        f1Var.N(this.f2378q.c(objZ), this.f2378q.b(obj2), oVar);
+        f1Var.N(this.f2223q.c(objZ), this.f2223q.b(obj2), oVar);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public final void J(T t8, T t10, int i10) {
         if (x(t10, i10)) {
             long jS = S(l0(i10));
-            Unsafe unsafe = f2362s;
+            Unsafe unsafe = f2207s;
             Object object = unsafe.getObject(t10, jS);
             if (object == null) {
                 throw new IllegalStateException("Source subfield " + R(i10) + " is present but null: " + t10);
@@ -889,7 +889,7 @@ public final class u0<T> implements g1<T> {
         int iR = R(i10);
         if (E(t10, iR, i10)) {
             long jS = S(l0(i10));
-            Unsafe unsafe = f2362s;
+            Unsafe unsafe = f2207s;
             Object object = unsafe.getObject(t10, jS);
             if (object == null) {
                 throw new IllegalStateException("Source subfield " + R(i10) + " is present but null: " + t10);
@@ -1056,10 +1056,10 @@ public final class u0<T> implements g1<T> {
             case 47:
             case 48:
             case 49:
-                this.f2375n.b(t8, t10, jS);
+                this.f2220n.b(t8, t10, jS);
                 break;
             case 50:
-                i1.F(this.f2378q, t8, t10, jS);
+                i1.F(this.f2223q, t8, t10, jS);
                 break;
             case 51:
             case 52:
@@ -1103,7 +1103,7 @@ public final class u0<T> implements g1<T> {
         if (!x(t8, i10)) {
             return g1VarT.e();
         }
-        Object object = f2362s.getObject(t8, jS);
+        Object object = f2207s.getObject(t8, jS);
         if (C(object)) {
             return object;
         }
@@ -1120,7 +1120,7 @@ public final class u0<T> implements g1<T> {
         if (!E(t8, i10, i11)) {
             return g1VarT.e();
         }
-        Object object = f2362s.getObject(t8, S(l0(i11)));
+        Object object = f2207s.getObject(t8, S(l0(i11)));
         if (C(object)) {
             return object;
         }
@@ -1132,35 +1132,35 @@ public final class u0<T> implements g1<T> {
     }
 
     public final int R(int i10) {
-        return this.f2363a[i10];
+        return this.f2208a[i10];
     }
 
     public final int Y(int i10) {
-        if (i10 < this.f2364c || i10 > this.f2365d) {
+        if (i10 < this.f2209c || i10 > this.f2210d) {
             return -1;
         }
         return h0(i10, 0);
     }
 
     public final int Z(int i10) {
-        return this.f2363a[i10 + 2];
+        return this.f2208a[i10 + 2];
     }
 
     @Override // androidx.datastore.preferences.protobuf.g1
     public void a(T t8, T t10) {
         l(t8);
         t10.getClass();
-        for (int i10 = 0; i10 < this.f2363a.length; i10 += 3) {
+        for (int i10 = 0; i10 < this.f2208a.length; i10 += 3) {
             L(t8, t10, i10);
         }
-        i1.G(this.f2376o, t8, t10);
-        if (this.f2367f) {
-            i1.E(this.f2377p, t8, t10);
+        i1.G(this.f2221o, t8, t10);
+        if (this.f2212f) {
+            i1.E(this.f2222p, t8, t10);
         }
     }
 
     public final <E> void a0(Object obj, long j10, f1 f1Var, g1<E> g1Var, o oVar) {
-        f1Var.P(this.f2375n.c(obj, j10), g1Var, oVar);
+        f1Var.P(this.f2220n.c(obj, j10), g1Var, oVar);
     }
 
     /* JADX WARN: Code duplicated, block: B:25:0x006a  */
@@ -1176,7 +1176,7 @@ public final class u0<T> implements g1<T> {
                 xVar.s();
                 xVar.K();
             }
-            int length = this.f2363a.length;
+            int length = this.f2208a.length;
             for (int i10 = 0; i10 < length; i10 += 3) {
                 int iL0 = l0(i10);
                 long jS = S(iL0);
@@ -1186,7 +1186,7 @@ public final class u0<T> implements g1<T> {
                         switch (iK0) {
                             case 17:
                                 if (x(t8, i10)) {
-                                    t(i10).b(f2362s.getObject(t8, jS));
+                                    t(i10).b(f2207s.getObject(t8, jS));
                                 }
                                 break;
                             case 18:
@@ -1221,32 +1221,32 @@ public final class u0<T> implements g1<T> {
                             case 47:
                             case 48:
                             case 49:
-                                this.f2375n.a(t8, jS);
+                                this.f2220n.a(t8, jS);
                                 break;
                             case 50:
-                                Unsafe unsafe = f2362s;
+                                Unsafe unsafe = f2207s;
                                 Object object = unsafe.getObject(t8, jS);
                                 if (object != null) {
-                                    unsafe.putObject(t8, jS, this.f2378q.f(object));
+                                    unsafe.putObject(t8, jS, this.f2223q.f(object));
                                 }
                                 break;
                         }
                     } else if (E(t8, R(i10), i10)) {
-                        t(i10).b(f2362s.getObject(t8, jS));
+                        t(i10).b(f2207s.getObject(t8, jS));
                     }
                 } else if (x(t8, i10)) {
-                    t(i10).b(f2362s.getObject(t8, jS));
+                    t(i10).b(f2207s.getObject(t8, jS));
                 }
             }
-            this.f2376o.j(t8);
-            if (this.f2367f) {
-                this.f2377p.f(t8);
+            this.f2221o.j(t8);
+            if (this.f2212f) {
+                this.f2222p.f(t8);
             }
         }
     }
 
     public final <E> void b0(Object obj, int i10, f1 f1Var, g1<E> g1Var, o oVar) {
-        f1Var.K(this.f2375n.c(obj, S(i10)), g1Var, oVar);
+        f1Var.K(this.f2220n.c(obj, S(i10)), g1Var, oVar);
     }
 
     /* JADX WARN: Code duplicated, block: B:39:0x007c  */
@@ -1259,16 +1259,16 @@ public final class u0<T> implements g1<T> {
         int i12 = 1048575;
         int i13 = 0;
         int i14 = 0;
-        while (i13 < this.f2372k) {
-            int i15 = this.f2371j[i13];
+        while (i13 < this.f2217k) {
+            int i15 = this.f2216j[i13];
             int iR = R(i15);
             int iL0 = l0(i15);
-            int i16 = this.f2363a[i15 + 2];
+            int i16 = this.f2208a[i15 + 2];
             int i17 = i16 & 1048575;
             int i18 = 1 << (i16 >>> 20);
             if (i17 != i12) {
                 if (i17 != 1048575) {
-                    i14 = f2362s.getInt(t8, i17);
+                    i14 = f2207s.getInt(t8, i17);
                 }
                 i11 = i14;
                 i10 = i17;
@@ -1305,13 +1305,13 @@ public final class u0<T> implements g1<T> {
             i12 = i10;
             i14 = i11;
         }
-        return !this.f2367f || this.f2377p.c(t8).p();
+        return !this.f2212f || this.f2222p.c(t8).p();
     }
 
     public final void c0(Object obj, int i10, f1 f1Var) {
         if (w(i10)) {
             q1.O(obj, S(i10), f1Var.I());
-        } else if (this.f2368g) {
+        } else if (this.f2213g) {
             q1.O(obj, S(i10), f1Var.z());
         } else {
             q1.O(obj, S(i10), f1Var.o());
@@ -1411,17 +1411,17 @@ public final class u0<T> implements g1<T> {
         int iW;
         u0<T> u0Var = this;
         T t10 = t8;
-        Unsafe unsafe = f2362s;
+        Unsafe unsafe = f2207s;
         int i13 = 1048575;
         int i14 = 0;
         int i15 = 0;
         int i16 = 0;
         int i17 = 1048575;
-        while (i14 < u0Var.f2363a.length) {
+        while (i14 < u0Var.f2208a.length) {
             int iL0 = u0Var.l0(i14);
             int iK0 = k0(iL0);
             int iR = u0Var.R(i14);
-            int i18 = u0Var.f2363a[i14 + 2];
+            int i18 = u0Var.f2208a[i14 + 2];
             int i19 = i18 & i13;
             if (iK0 <= 17) {
                 if (i19 != i17) {
@@ -1434,7 +1434,7 @@ public final class u0<T> implements g1<T> {
             }
             int i20 = i16;
             long jS = S(iL0);
-            if (iK0 < u.O.a() || iK0 > u.f2324b0.a()) {
+            if (iK0 < u.O.a() || iK0 > u.f2169b0.a()) {
                 i19 = 0;
             }
             switch (iK0) {
@@ -1683,7 +1683,7 @@ public final class u0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (u0Var.f2370i) {
+                        if (u0Var.f2215i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = j.U(iR);
@@ -1696,7 +1696,7 @@ public final class u0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (u0Var.f2370i) {
+                        if (u0Var.f2215i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = j.U(iR);
@@ -1709,7 +1709,7 @@ public final class u0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (u0Var.f2370i) {
+                        if (u0Var.f2215i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = j.U(iR);
@@ -1722,7 +1722,7 @@ public final class u0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (u0Var.f2370i) {
+                        if (u0Var.f2215i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = j.U(iR);
@@ -1735,7 +1735,7 @@ public final class u0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (u0Var.f2370i) {
+                        if (u0Var.f2215i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = j.U(iR);
@@ -1748,7 +1748,7 @@ public final class u0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (u0Var.f2370i) {
+                        if (u0Var.f2215i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = j.U(iR);
@@ -1761,7 +1761,7 @@ public final class u0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (u0Var.f2370i) {
+                        if (u0Var.f2215i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = j.U(iR);
@@ -1774,7 +1774,7 @@ public final class u0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (u0Var.f2370i) {
+                        if (u0Var.f2215i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = j.U(iR);
@@ -1787,7 +1787,7 @@ public final class u0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (u0Var.f2370i) {
+                        if (u0Var.f2215i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = j.U(iR);
@@ -1800,7 +1800,7 @@ public final class u0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (u0Var.f2370i) {
+                        if (u0Var.f2215i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = j.U(iR);
@@ -1813,7 +1813,7 @@ public final class u0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (u0Var.f2370i) {
+                        if (u0Var.f2215i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = j.U(iR);
@@ -1826,7 +1826,7 @@ public final class u0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (u0Var.f2370i) {
+                        if (u0Var.f2215i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = j.U(iR);
@@ -1839,7 +1839,7 @@ public final class u0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (u0Var.f2370i) {
+                        if (u0Var.f2215i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = j.U(iR);
@@ -1852,7 +1852,7 @@ public final class u0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (u0Var.f2370i) {
+                        if (u0Var.f2215i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = j.U(iR);
@@ -1865,7 +1865,7 @@ public final class u0<T> implements g1<T> {
                     i16 = i20 + i11;
                     break;
                 case 50:
-                    i11 = u0Var.f2378q.g(iR, unsafe.getObject(t10, jS), u0Var.s(i14));
+                    i11 = u0Var.f2223q.g(iR, unsafe.getObject(t10, jS), u0Var.s(i14));
                     i16 = i20 + i11;
                     break;
                 case 51:
@@ -2020,28 +2020,28 @@ public final class u0<T> implements g1<T> {
             i14 += 3;
             i13 = 1048575;
         }
-        int iU2 = i16 + u0Var.u(u0Var.f2376o, t10);
-        return u0Var.f2367f ? iU2 + u0Var.f2377p.c(t10).l() : iU2;
+        int iU2 = i16 + u0Var.u(u0Var.f2221o, t10);
+        return u0Var.f2212f ? iU2 + u0Var.f2222p.c(t10).l() : iU2;
     }
 
     public final void d0(Object obj, int i10, f1 f1Var) {
         if (w(i10)) {
-            f1Var.n(this.f2375n.c(obj, S(i10)));
+            f1Var.n(this.f2220n.c(obj, S(i10)));
         } else {
-            f1Var.B(this.f2375n.c(obj, S(i10)));
+            f1Var.B(this.f2220n.c(obj, S(i10)));
         }
     }
 
     @Override // androidx.datastore.preferences.protobuf.g1
     public T e() {
-        return (T) this.f2374m.a(this.f2366e);
+        return (T) this.f2219m.a(this.f2211e);
     }
 
     @Override // androidx.datastore.preferences.protobuf.g1
     public int f(T t8) {
         int i10;
         int iF;
-        int length = this.f2363a.length;
+        int length = this.f2208a.length;
         int i11 = 0;
         for (int i12 = 0; i12 < length; i12 += 3) {
             int iL0 = l0(i12);
@@ -2312,8 +2312,8 @@ public final class u0<T> implements g1<T> {
                     break;
             }
         }
-        int iHashCode2 = (i11 * 53) + this.f2376o.g(t8).hashCode();
-        return this.f2367f ? (iHashCode2 * 53) + this.f2377p.c(t8).hashCode() : iHashCode2;
+        int iHashCode2 = (i11 * 53) + this.f2221o.g(t8).hashCode();
+        return this.f2212f ? (iHashCode2 * 53) + this.f2222p.c(t8).hashCode() : iHashCode2;
     }
 
     public final void f0(T t8, int i10) {
@@ -2327,17 +2327,17 @@ public final class u0<T> implements g1<T> {
 
     @Override // androidx.datastore.preferences.protobuf.g1
     public boolean g(T t8, T t10) {
-        int length = this.f2363a.length;
+        int length = this.f2208a.length;
         for (int i10 = 0; i10 < length; i10 += 3) {
             if (!n(t8, t10, i10)) {
                 return false;
             }
         }
-        if (!this.f2376o.g(t8).equals(this.f2376o.g(t10))) {
+        if (!this.f2221o.g(t8).equals(this.f2221o.g(t10))) {
             return false;
         }
-        if (this.f2367f) {
-            return this.f2377p.c(t8).equals(this.f2377p.c(t10));
+        if (this.f2212f) {
+            return this.f2222p.c(t8).equals(this.f2222p.c(t10));
         }
         return true;
     }
@@ -2350,11 +2350,11 @@ public final class u0<T> implements g1<T> {
     public void h(T t8, f1 f1Var, o oVar) {
         oVar.getClass();
         l(t8);
-        H(this.f2376o, this.f2377p, t8, f1Var, oVar);
+        H(this.f2221o, this.f2222p, t8, f1Var, oVar);
     }
 
     public final int h0(int i10, int i11) {
-        int length = (this.f2363a.length / 3) - 1;
+        int length = (this.f2208a.length / 3) - 1;
         while (i11 <= length) {
             int i12 = (length + i11) >>> 1;
             int i13 = i12 * 3;
@@ -2381,7 +2381,7 @@ public final class u0<T> implements g1<T> {
     }
 
     public final void i0(T t8, int i10, Object obj) {
-        f2362s.putObject(t8, S(l0(i10)), obj);
+        f2207s.putObject(t8, S(l0(i10)), obj);
         f0(t8, i10);
     }
 
@@ -2390,12 +2390,12 @@ public final class u0<T> implements g1<T> {
     }
 
     public final void j0(T t8, int i10, int i11, Object obj) {
-        f2362s.putObject(t8, S(l0(i11)), obj);
+        f2207s.putObject(t8, S(l0(i11)), obj);
         g0(t8, i10, i11);
     }
 
     public final int l0(int i10) {
-        return this.f2363a[i10 + 1];
+        return this.f2208a[i10 + 1];
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
@@ -2409,8 +2409,8 @@ public final class u0<T> implements g1<T> {
         int i12;
         boolean z11;
         u0<T> u0Var = this;
-        if (u0Var.f2367f) {
-            t<T> tVarC = u0Var.f2377p.c(t8);
+        if (u0Var.f2212f) {
+            t<T> tVarC = u0Var.f2222p.c(t8);
             if (tVarC.n()) {
                 entry = null;
                 it = null;
@@ -2423,8 +2423,8 @@ public final class u0<T> implements g1<T> {
             entry = null;
             it = null;
         }
-        int length = u0Var.f2363a.length;
-        Unsafe unsafe = f2362s;
+        int length = u0Var.f2208a.length;
+        Unsafe unsafe = f2207s;
         int i13 = 1048575;
         int i14 = 0;
         int i15 = 0;
@@ -2433,7 +2433,7 @@ public final class u0<T> implements g1<T> {
             int iR = u0Var.R(i14);
             int iK0 = k0(iL0);
             if (iK0 <= 17) {
-                int i16 = u0Var.f2363a[i14 + 2];
+                int i16 = u0Var.f2208a[i14 + 2];
                 z10 = true;
                 int i17 = i16 & 1048575;
                 if (i17 != i13) {
@@ -2449,8 +2449,8 @@ public final class u0<T> implements g1<T> {
                 i11 = i15;
                 i12 = 0;
             }
-            while (entry != null && u0Var.f2377p.a(entry) <= iR) {
-                u0Var.f2377p.j(t1Var, entry);
+            while (entry != null && u0Var.f2222p.a(entry) <= iR) {
+                u0Var.f2222p.j(t1Var, entry);
                 entry = it.hasNext() ? (Map.Entry) it.next() : null;
             }
             long jS = S(iL0);
@@ -2763,10 +2763,10 @@ public final class u0<T> implements g1<T> {
             entry = entry;
         }
         while (entry != null) {
-            u0Var.f2377p.j(t1Var, entry);
+            u0Var.f2222p.j(t1Var, entry);
             entry = it.hasNext() ? (Map.Entry) it.next() : null;
         }
-        u0Var.q0(u0Var.f2376o, t8, t1Var);
+        u0Var.q0(u0Var.f2221o, t8, t1Var);
     }
 
     public final boolean n(T t8, T t10, int i10) {
@@ -2872,9 +2872,9 @@ public final class u0<T> implements g1<T> {
     public final void n0(T t8, t1 t1Var) {
         Iterator itG;
         Map.Entry<?, ?> entry;
-        q0(this.f2376o, t8, t1Var);
-        if (this.f2367f) {
-            t<T> tVarC = this.f2377p.c(t8);
+        q0(this.f2221o, t8, t1Var);
+        if (this.f2212f) {
+            t<T> tVarC = this.f2222p.c(t8);
             if (tVarC.n()) {
                 itG = null;
                 entry = null;
@@ -2886,11 +2886,11 @@ public final class u0<T> implements g1<T> {
             itG = null;
             entry = null;
         }
-        for (int length = this.f2363a.length - 3; length >= 0; length -= 3) {
+        for (int length = this.f2208a.length - 3; length >= 0; length -= 3) {
             int iL0 = l0(length);
             int iR = R(length);
-            while (entry != null && this.f2377p.a(entry) > iR) {
-                this.f2377p.j(t1Var, entry);
+            while (entry != null && this.f2222p.a(entry) > iR) {
+                this.f2222p.j(t1Var, entry);
                 entry = itG.hasNext() ? (Map.Entry) itG.next() : null;
             }
             switch (k0(iL0)) {
@@ -3176,7 +3176,7 @@ public final class u0<T> implements g1<T> {
             }
         }
         while (entry != null) {
-            this.f2377p.j(t1Var, entry);
+            this.f2222p.j(t1Var, entry);
             entry = itG.hasNext() ? (Map.Entry) itG.next() : null;
         }
     }
@@ -3185,17 +3185,17 @@ public final class u0<T> implements g1<T> {
         z.c cVarR;
         int iR = R(i10);
         Object objZ = q1.z(obj, S(l0(i10)));
-        return (objZ == null || (cVarR = r(i10)) == null) ? ub : (UB) p(i10, iR, this.f2378q.c(objZ), cVarR, ub, n1Var, obj2);
+        return (objZ == null || (cVarR = r(i10)) == null) ? ub : (UB) p(i10, iR, this.f2223q.c(objZ), cVarR, ub, n1Var, obj2);
     }
 
     public final <K, V> void o0(t1 t1Var, int i10, Object obj, int i11) {
         if (obj != null) {
-            t1Var.M(i10, this.f2378q.b(s(i11)), this.f2378q.e(obj));
+            t1Var.M(i10, this.f2223q.b(s(i11)), this.f2223q.e(obj));
         }
     }
 
     public final <K, V, UT, UB> UB p(int i10, int i11, Map<K, V> map, z.c cVar, UB ub, n1<UT, UB> n1Var, Object obj) {
-        k0.a<?, ?> aVarB = this.f2378q.b(s(i10));
+        k0.a<?, ?> aVarB = this.f2223q.b(s(i10));
         Iterator<Map.Entry<K, V>> it = map.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry<K, V> next = it.next();

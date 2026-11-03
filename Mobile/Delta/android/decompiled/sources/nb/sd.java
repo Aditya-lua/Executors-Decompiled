@@ -14,37 +14,37 @@ import android.os.PersistableBundle;
 public final class sd extends xd {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final AlarmManager f25952d;
+    public final AlarmManager f26773d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public w f25953e;
+    public w f26774e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public Integer f25954f;
+    public Integer f26775f;
 
     public sd(me meVar) {
         super(meVar);
-        this.f25952d = (AlarmManager) this.f25625a.d().getSystemService("alarm");
+        this.f26773d = (AlarmManager) this.f26446a.d().getSystemService("alarm");
     }
 
     @TargetApi(24)
     private final void p() {
-        JobScheduler jobScheduler = (JobScheduler) this.f25625a.d().getSystemService("jobscheduler");
+        JobScheduler jobScheduler = (JobScheduler) this.f26446a.d().getSystemService("jobscheduler");
         if (jobScheduler != null) {
             jobScheduler.cancel(q());
         }
     }
 
     private final int q() {
-        if (this.f25954f == null) {
-            this.f25954f = Integer.valueOf("measurement".concat(String.valueOf(this.f25625a.d().getPackageName())).hashCode());
+        if (this.f26775f == null) {
+            this.f26775f = Integer.valueOf("measurement".concat(String.valueOf(this.f26446a.d().getPackageName())).hashCode());
         }
-        return this.f25954f.intValue();
+        return this.f26775f.intValue();
     }
 
     @Override // nb.xd
     public final boolean l() {
-        AlarmManager alarmManager = this.f25952d;
+        AlarmManager alarmManager = this.f26773d;
         if (alarmManager != null) {
             alarmManager.cancel(r());
         }
@@ -54,7 +54,7 @@ public final class sd extends xd {
 
     public final void m(long j10) {
         j();
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         g7Var.c();
         Context contextD = g7Var.d();
         if (!ve.j0(contextD)) {
@@ -81,8 +81,8 @@ public final class sd extends xd {
 
     public final void n() {
         j();
-        this.f25625a.a().w().a("Unscheduling upload");
-        AlarmManager alarmManager = this.f25952d;
+        this.f26446a.a().w().a("Unscheduling upload");
+        AlarmManager alarmManager = this.f26773d;
         if (alarmManager != null) {
             alarmManager.cancel(r());
         }
@@ -91,14 +91,14 @@ public final class sd extends xd {
     }
 
     public final w o() {
-        if (this.f25953e == null) {
-            this.f25953e = new rd(this, this.b.g0());
+        if (this.f26774e == null) {
+            this.f26774e = new rd(this, this.b.g0());
         }
-        return this.f25953e;
+        return this.f26774e;
     }
 
     public final PendingIntent r() {
-        Context contextD = this.f25625a.d();
-        return PendingIntent.getBroadcast(contextD, 0, new Intent().setClassName(contextD, "com.google.android.gms.measurement.AppMeasurementReceiver").setAction("com.google.android.gms.measurement.UPLOAD"), com.google.android.gms.internal.measurement.k1.f6570a);
+        Context contextD = this.f26446a.d();
+        return PendingIntent.getBroadcast(contextD, 0, new Intent().setClassName(contextD, "com.google.android.gms.measurement.AppMeasurementReceiver").setAction("com.google.android.gms.measurement.UPLOAD"), com.google.android.gms.internal.measurement.k1.f6643a);
     }
 }

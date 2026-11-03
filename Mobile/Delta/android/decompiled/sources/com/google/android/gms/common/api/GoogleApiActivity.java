@@ -22,7 +22,7 @@ import n9.m;
 public class GoogleApiActivity extends Activity implements DialogInterface.OnCancelListener {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f5714a = 0;
+    public int f5787a = 0;
 
     @NonNull
     public static Intent a(@NonNull Context context, @NonNull PendingIntent pendingIntent, int i10, boolean z10) {
@@ -50,14 +50,14 @@ public class GoogleApiActivity extends Activity implements DialogInterface.OnCan
         }
         if (pendingIntent == null) {
             c.o().p(this, ((Integer) m.l(num)).intValue(), 2, this);
-            this.f5714a = 1;
+            this.f5787a = 1;
             return;
         }
         try {
             googleApiActivity = this;
             try {
                 googleApiActivity.startIntentSenderForResult(pendingIntent.getIntentSender(), 1, null, 0, 0, 0);
-                googleApiActivity.f5714a = 1;
+                googleApiActivity.f5787a = 1;
             } catch (ActivityNotFoundException e10) {
                 e = e10;
                 if (extras.getBoolean("notify_manager", true)) {
@@ -69,7 +69,7 @@ public class GoogleApiActivity extends Activity implements DialogInterface.OnCan
                     }
                     Log.e("GoogleApiActivity", strConcat, e);
                 }
-                googleApiActivity.f5714a = 1;
+                googleApiActivity.f5787a = 1;
                 finish();
             } catch (IntentSender.SendIntentException e11) {
                 e = e11;
@@ -89,7 +89,7 @@ public class GoogleApiActivity extends Activity implements DialogInterface.OnCan
         super.onActivityResult(i10, i11, intent);
         if (i10 == 1) {
             boolean booleanExtra = getIntent().getBooleanExtra("notify_manager", true);
-            this.f5714a = 0;
+            this.f5787a = 0;
             setResult(i11, intent);
             if (booleanExtra) {
                 f fVarV = f.v(this);
@@ -100,7 +100,7 @@ public class GoogleApiActivity extends Activity implements DialogInterface.OnCan
                 }
             }
         } else if (i10 == 2) {
-            this.f5714a = 0;
+            this.f5787a = 0;
             setResult(i11, intent);
         }
         finish();
@@ -108,7 +108,7 @@ public class GoogleApiActivity extends Activity implements DialogInterface.OnCan
 
     @Override // android.content.DialogInterface.OnCancelListener
     public final void onCancel(@NonNull DialogInterface dialogInterface) {
-        this.f5714a = 0;
+        this.f5787a = 0;
         setResult(0);
         finish();
     }
@@ -117,16 +117,16 @@ public class GoogleApiActivity extends Activity implements DialogInterface.OnCan
     public final void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         if (bundle != null) {
-            this.f5714a = bundle.getInt("resolution");
+            this.f5787a = bundle.getInt("resolution");
         }
-        if (this.f5714a != 1) {
+        if (this.f5787a != 1) {
             b();
         }
     }
 
     @Override // android.app.Activity
     public final void onSaveInstanceState(@NonNull Bundle bundle) {
-        bundle.putInt("resolution", this.f5714a);
+        bundle.putInt("resolution", this.f5787a);
         super.onSaveInstanceState(bundle);
     }
 }

@@ -5,5 +5,5 @@ import java.util.UUID;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface l {
-    me.x<Void> a(Context context, UUID uuid, k kVar);
+    ne.x<Void> a(Context context, UUID uuid, k kVar);
 }

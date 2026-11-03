@@ -6,66 +6,66 @@ import java.util.List;
 public final class a extends NativeInitCrashpadParams {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f9657a;
+    public final String f9737a;
     public final String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final String f9658c;
+    public final String f9738c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final String f9659d;
+    public final String f9739d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final String f9660e;
+    public final String f9740e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final String f9661f;
+    public final String f9741f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final List<String> f9662g;
+    public final List<String> f9742g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final boolean f9663h;
+    public final boolean f9743h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final String f9664i;
+    public final String f9744i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final boolean f9665j;
+    public final boolean f9745j;
 
     /* JADX INFO: renamed from: com.roblox.engine.jni.model.a$a, reason: collision with other inner class name */
-    public static final class C0151a extends NativeInitCrashpadParams.Builder {
+    public static final class C0154a extends NativeInitCrashpadParams.Builder {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public String f9666a;
+        public String f9746a;
         public String b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public String f9667c;
+        public String f9747c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public String f9668d;
+        public String f9748d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public String f9669e;
+        public String f9749e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public String f9670f;
+        public String f9750f;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public List<String> f9671g;
+        public List<String> f9751g;
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public boolean f9672h;
+        public boolean f9752h;
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public String f9673i;
+        public String f9753i;
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public boolean f9674j;
+        public boolean f9754j;
 
         /* JADX INFO: renamed from: k, reason: collision with root package name */
-        public byte f9675k;
+        public byte f9755k;
 
         @Override // com.roblox.engine.jni.model.NativeInitCrashpadParams.Builder
         public NativeInitCrashpadParams a() {
@@ -77,38 +77,38 @@ public final class a extends NativeInitCrashpadParams {
             String str6;
             List<String> list;
             String str7;
-            if (this.f9675k == 3 && (str = this.f9666a) != null && (str2 = this.b) != null && (str3 = this.f9667c) != null && (str4 = this.f9668d) != null && (str5 = this.f9669e) != null && (str6 = this.f9670f) != null && (list = this.f9671g) != null && (str7 = this.f9673i) != null) {
-                return new a(str, str2, str3, str4, str5, str6, list, this.f9672h, str7, this.f9674j);
+            if (this.f9755k == 3 && (str = this.f9746a) != null && (str2 = this.b) != null && (str3 = this.f9747c) != null && (str4 = this.f9748d) != null && (str5 = this.f9749e) != null && (str6 = this.f9750f) != null && (list = this.f9751g) != null && (str7 = this.f9753i) != null) {
+                return new a(str, str2, str3, str4, str5, str6, list, this.f9752h, str7, this.f9754j);
             }
             StringBuilder sb2 = new StringBuilder();
-            if (this.f9666a == null) {
+            if (this.f9746a == null) {
                 sb2.append(" appVersion");
             }
             if (this.b == null) {
                 sb2.append(" baseUrl");
             }
-            if (this.f9667c == null) {
+            if (this.f9747c == null) {
                 sb2.append(" countName");
             }
-            if (this.f9668d == null) {
+            if (this.f9748d == null) {
                 sb2.append(" uploadUrl");
             }
-            if (this.f9669e == null) {
+            if (this.f9749e == null) {
                 sb2.append(" token");
             }
-            if (this.f9670f == null) {
+            if (this.f9750f == null) {
                 sb2.append(" handlerClassName");
             }
-            if (this.f9671g == null) {
+            if (this.f9751g == null) {
                 sb2.append(" envArgs");
             }
-            if ((this.f9675k & 1) == 0) {
+            if ((this.f9755k & 1) == 0) {
                 sb2.append(" isAtLeastQ");
             }
-            if (this.f9673i == null) {
+            if (this.f9753i == null) {
                 sb2.append(" buildVariant");
             }
-            if ((this.f9675k & 2) == 0) {
+            if ((this.f9755k & 2) == 0) {
                 sb2.append(" collectLogcat");
             }
             throw new IllegalStateException("Missing required properties:" + ((Object) sb2));
@@ -119,7 +119,7 @@ public final class a extends NativeInitCrashpadParams {
             if (str == null) {
                 throw new NullPointerException("Null appVersion");
             }
-            this.f9666a = str;
+            this.f9746a = str;
             return this;
         }
 
@@ -137,14 +137,14 @@ public final class a extends NativeInitCrashpadParams {
             if (str == null) {
                 throw new NullPointerException("Null buildVariant");
             }
-            this.f9673i = str;
+            this.f9753i = str;
             return this;
         }
 
         @Override // com.roblox.engine.jni.model.NativeInitCrashpadParams.Builder
         public NativeInitCrashpadParams.Builder f(boolean z10) {
-            this.f9674j = z10;
-            this.f9675k = (byte) (this.f9675k | 2);
+            this.f9754j = z10;
+            this.f9755k = (byte) (this.f9755k | 2);
             return this;
         }
 
@@ -153,7 +153,7 @@ public final class a extends NativeInitCrashpadParams {
             if (str == null) {
                 throw new NullPointerException("Null countName");
             }
-            this.f9667c = str;
+            this.f9747c = str;
             return this;
         }
 
@@ -162,7 +162,7 @@ public final class a extends NativeInitCrashpadParams {
             if (list == null) {
                 throw new NullPointerException("Null envArgs");
             }
-            this.f9671g = list;
+            this.f9751g = list;
             return this;
         }
 
@@ -171,14 +171,14 @@ public final class a extends NativeInitCrashpadParams {
             if (str == null) {
                 throw new NullPointerException("Null handlerClassName");
             }
-            this.f9670f = str;
+            this.f9750f = str;
             return this;
         }
 
         @Override // com.roblox.engine.jni.model.NativeInitCrashpadParams.Builder
         public NativeInitCrashpadParams.Builder j(boolean z10) {
-            this.f9672h = z10;
-            this.f9675k = (byte) (this.f9675k | 1);
+            this.f9752h = z10;
+            this.f9755k = (byte) (this.f9755k | 1);
             return this;
         }
 
@@ -187,7 +187,7 @@ public final class a extends NativeInitCrashpadParams {
             if (str == null) {
                 throw new NullPointerException("Null token");
             }
-            this.f9669e = str;
+            this.f9749e = str;
             return this;
         }
 
@@ -196,14 +196,14 @@ public final class a extends NativeInitCrashpadParams {
             if (str == null) {
                 throw new NullPointerException("Null uploadUrl");
             }
-            this.f9668d = str;
+            this.f9748d = str;
             return this;
         }
     }
 
     @Override // com.roblox.engine.jni.model.NativeInitCrashpadParams
     public String appVersion() {
-        return this.f9657a;
+        return this.f9737a;
     }
 
     @Override // com.roblox.engine.jni.model.NativeInitCrashpadParams
@@ -213,22 +213,22 @@ public final class a extends NativeInitCrashpadParams {
 
     @Override // com.roblox.engine.jni.model.NativeInitCrashpadParams
     public String buildVariant() {
-        return this.f9664i;
+        return this.f9744i;
     }
 
     @Override // com.roblox.engine.jni.model.NativeInitCrashpadParams
     public boolean collectLogcat() {
-        return this.f9665j;
+        return this.f9745j;
     }
 
     @Override // com.roblox.engine.jni.model.NativeInitCrashpadParams
     public String countName() {
-        return this.f9658c;
+        return this.f9738c;
     }
 
     @Override // com.roblox.engine.jni.model.NativeInitCrashpadParams
     public List<String> envArgs() {
-        return this.f9662g;
+        return this.f9742g;
     }
 
     public boolean equals(Object obj) {
@@ -237,7 +237,7 @@ public final class a extends NativeInitCrashpadParams {
         }
         if (obj instanceof NativeInitCrashpadParams) {
             NativeInitCrashpadParams nativeInitCrashpadParams = (NativeInitCrashpadParams) obj;
-            if (this.f9657a.equals(nativeInitCrashpadParams.appVersion()) && this.b.equals(nativeInitCrashpadParams.baseUrl()) && this.f9658c.equals(nativeInitCrashpadParams.countName()) && this.f9659d.equals(nativeInitCrashpadParams.uploadUrl()) && this.f9660e.equals(nativeInitCrashpadParams.token()) && this.f9661f.equals(nativeInitCrashpadParams.handlerClassName()) && this.f9662g.equals(nativeInitCrashpadParams.envArgs()) && this.f9663h == nativeInitCrashpadParams.isAtLeastQ() && this.f9664i.equals(nativeInitCrashpadParams.buildVariant()) && this.f9665j == nativeInitCrashpadParams.collectLogcat()) {
+            if (this.f9737a.equals(nativeInitCrashpadParams.appVersion()) && this.b.equals(nativeInitCrashpadParams.baseUrl()) && this.f9738c.equals(nativeInitCrashpadParams.countName()) && this.f9739d.equals(nativeInitCrashpadParams.uploadUrl()) && this.f9740e.equals(nativeInitCrashpadParams.token()) && this.f9741f.equals(nativeInitCrashpadParams.handlerClassName()) && this.f9742g.equals(nativeInitCrashpadParams.envArgs()) && this.f9743h == nativeInitCrashpadParams.isAtLeastQ() && this.f9744i.equals(nativeInitCrashpadParams.buildVariant()) && this.f9745j == nativeInitCrashpadParams.collectLogcat()) {
                 return true;
             }
         }
@@ -246,42 +246,42 @@ public final class a extends NativeInitCrashpadParams {
 
     @Override // com.roblox.engine.jni.model.NativeInitCrashpadParams
     public String handlerClassName() {
-        return this.f9661f;
+        return this.f9741f;
     }
 
     public int hashCode() {
-        return ((((((((((((((((((this.f9657a.hashCode() ^ 1000003) * 1000003) ^ this.b.hashCode()) * 1000003) ^ this.f9658c.hashCode()) * 1000003) ^ this.f9659d.hashCode()) * 1000003) ^ this.f9660e.hashCode()) * 1000003) ^ this.f9661f.hashCode()) * 1000003) ^ this.f9662g.hashCode()) * 1000003) ^ (this.f9663h ? 1231 : 1237)) * 1000003) ^ this.f9664i.hashCode()) * 1000003) ^ (this.f9665j ? 1231 : 1237);
+        return ((((((((((((((((((this.f9737a.hashCode() ^ 1000003) * 1000003) ^ this.b.hashCode()) * 1000003) ^ this.f9738c.hashCode()) * 1000003) ^ this.f9739d.hashCode()) * 1000003) ^ this.f9740e.hashCode()) * 1000003) ^ this.f9741f.hashCode()) * 1000003) ^ this.f9742g.hashCode()) * 1000003) ^ (this.f9743h ? 1231 : 1237)) * 1000003) ^ this.f9744i.hashCode()) * 1000003) ^ (this.f9745j ? 1231 : 1237);
     }
 
     @Override // com.roblox.engine.jni.model.NativeInitCrashpadParams
     public boolean isAtLeastQ() {
-        return this.f9663h;
+        return this.f9743h;
     }
 
     public String toString() {
-        return "NativeInitCrashpadParams{appVersion=" + this.f9657a + ", baseUrl=" + this.b + ", countName=" + this.f9658c + ", uploadUrl=" + this.f9659d + ", token=" + this.f9660e + ", handlerClassName=" + this.f9661f + ", envArgs=" + this.f9662g + ", isAtLeastQ=" + this.f9663h + ", buildVariant=" + this.f9664i + ", collectLogcat=" + this.f9665j + "}";
+        return "NativeInitCrashpadParams{appVersion=" + this.f9737a + ", baseUrl=" + this.b + ", countName=" + this.f9738c + ", uploadUrl=" + this.f9739d + ", token=" + this.f9740e + ", handlerClassName=" + this.f9741f + ", envArgs=" + this.f9742g + ", isAtLeastQ=" + this.f9743h + ", buildVariant=" + this.f9744i + ", collectLogcat=" + this.f9745j + "}";
     }
 
     @Override // com.roblox.engine.jni.model.NativeInitCrashpadParams
     public String token() {
-        return this.f9660e;
+        return this.f9740e;
     }
 
     @Override // com.roblox.engine.jni.model.NativeInitCrashpadParams
     public String uploadUrl() {
-        return this.f9659d;
+        return this.f9739d;
     }
 
     private a(String str, String str2, String str3, String str4, String str5, String str6, List<String> list, boolean z10, String str7, boolean z11) {
-        this.f9657a = str;
+        this.f9737a = str;
         this.b = str2;
-        this.f9658c = str3;
-        this.f9659d = str4;
-        this.f9660e = str5;
-        this.f9661f = str6;
-        this.f9662g = list;
-        this.f9663h = z10;
-        this.f9664i = str7;
-        this.f9665j = z11;
+        this.f9738c = str3;
+        this.f9739d = str4;
+        this.f9740e = str5;
+        this.f9741f = str6;
+        this.f9742g = list;
+        this.f9743h = z10;
+        this.f9744i = str7;
+        this.f9745j = z11;
     }
 }

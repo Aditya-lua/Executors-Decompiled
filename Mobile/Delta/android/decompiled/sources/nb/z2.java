@@ -6,10 +6,10 @@ import android.text.TextUtils;
 public final class z2 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final n8 f26147a;
+    public final n8 f26968a;
 
     public z2(n8 n8Var) {
-        this.f26147a = n8Var;
+        this.f26968a = n8Var;
     }
 
     public static z2 c(String str) {
@@ -17,10 +17,10 @@ public final class z2 {
     }
 
     public final n8 a() {
-        return this.f26147a;
+        return this.f26968a;
     }
 
     public final String b() {
-        return String.valueOf(q8.m(this.f26147a));
+        return String.valueOf(q8.m(this.f26968a));
     }
 }

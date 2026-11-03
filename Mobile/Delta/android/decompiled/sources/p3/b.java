@@ -7,7 +7,7 @@ import android.widget.Filter;
 public class b extends Filter {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public a f28209a;
+    public a f28428a;
 
     public interface a {
         void a(Cursor cursor);
@@ -20,17 +20,17 @@ public class b extends Filter {
     }
 
     public b(a aVar) {
-        this.f28209a = aVar;
+        this.f28428a = aVar;
     }
 
     @Override // android.widget.Filter
     public CharSequence convertResultToString(Object obj) {
-        return this.f28209a.convertToString((Cursor) obj);
+        return this.f28428a.convertToString((Cursor) obj);
     }
 
     @Override // android.widget.Filter
     public Filter.FilterResults performFiltering(CharSequence charSequence) {
-        Cursor cursorB = this.f28209a.b(charSequence);
+        Cursor cursorB = this.f28428a.b(charSequence);
         Filter.FilterResults filterResults = new Filter.FilterResults();
         if (cursorB != null) {
             filterResults.count = cursorB.getCount();
@@ -44,11 +44,11 @@ public class b extends Filter {
 
     @Override // android.widget.Filter
     public void publishResults(CharSequence charSequence, Filter.FilterResults filterResults) {
-        Cursor cursorC = this.f28209a.c();
+        Cursor cursorC = this.f28428a.c();
         Object obj = filterResults.values;
         if (obj == null || obj == cursorC) {
             return;
         }
-        this.f28209a.a((Cursor) obj);
+        this.f28428a.a((Cursor) obj);
     }
 }

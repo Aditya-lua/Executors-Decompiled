@@ -8,20 +8,20 @@ import android.util.Log;
 public final class n extends v {
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final m f18760g;
+    public final m f19247g;
 
     public n(Context context, Looper looper, k9.f.a aVar, k9.f.b bVar, String str, n9.d dVar) {
         super(context, looper, aVar, bVar, str, dVar);
-        this.f18760g = new m(context, this.f18764f);
+        this.f19247g = new m(context, this.f19251f);
     }
 
     @Override // n9.c, k9.a.f
     public final void disconnect() {
-        synchronized (this.f18760g) {
+        synchronized (this.f19247g) {
             if (isConnected()) {
                 try {
-                    this.f18760g.b();
-                    this.f18760g.c();
+                    this.f19247g.b();
+                    this.f19247g.c();
                 } catch (Exception e10) {
                     Log.e("LocationClientImpl", "Client disconnected before listeners could be cleaned up", e10);
                 }

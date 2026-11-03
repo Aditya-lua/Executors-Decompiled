@@ -4,5 +4,5 @@ package va;
 public final /* synthetic */ class i {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final /* synthetic */ i f32889a = new i();
+    public static final /* synthetic */ i f33457a = new i();
 }

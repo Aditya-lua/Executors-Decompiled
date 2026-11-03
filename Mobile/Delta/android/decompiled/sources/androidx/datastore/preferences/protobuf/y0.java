@@ -4,11 +4,11 @@ package androidx.datastore.preferences.protobuf;
 public final class y0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final w0 f2397a = c();
+    public static final w0 f2242a = c();
     public static final w0 b = new x0();
 
     public static w0 a() {
-        return f2397a;
+        return f2242a;
     }
 
     public static w0 b() {
@@ -16,7 +16,7 @@ public final class y0 {
     }
 
     public static w0 c() {
-        if (c1.f2152d) {
+        if (c1.f1997d) {
             return null;
         }
         try {

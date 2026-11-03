@@ -10,10 +10,10 @@ import m9.e;
 /* JADX INFO: loaded from: classes.dex */
 public interface Event extends e<Event>, Parcelable {
     @NonNull
-    Player O1();
+    Player N1();
 
     @NonNull
-    String V0();
+    String R0();
 
     @NonNull
     String getDescription();
@@ -31,8 +31,8 @@ public interface Event extends e<Event>, Parcelable {
     @NonNull
     Uri h();
 
-    @NonNull
-    String i3();
-
     boolean isVisible();
+
+    @NonNull
+    String k3();
 }

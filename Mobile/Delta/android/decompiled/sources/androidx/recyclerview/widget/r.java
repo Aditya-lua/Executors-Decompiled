@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 public abstract class r extends RecyclerView.n {
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public boolean f3288g = true;
+    public boolean f3133g = true;
 
     @SuppressLint({"UnknownNullness"})
     public final void A(RecyclerView.f0 f0Var) {
@@ -90,21 +90,21 @@ public abstract class r extends RecyclerView.n {
     public boolean a(@NonNull RecyclerView.f0 f0Var, RecyclerView.n.c cVar, @NonNull RecyclerView.n.c cVar2) {
         int i10;
         int i11;
-        return (cVar == null || ((i10 = cVar.f3045a) == (i11 = cVar2.f3045a) && cVar.b == cVar2.b)) ? w(f0Var) : y(f0Var, i10, cVar.b, i11, cVar2.b);
+        return (cVar == null || ((i10 = cVar.f2890a) == (i11 = cVar2.f2890a) && cVar.b == cVar2.b)) ? w(f0Var) : y(f0Var, i10, cVar.b, i11, cVar2.b);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.n
     public boolean b(@NonNull RecyclerView.f0 f0Var, @NonNull RecyclerView.f0 f0Var2, @NonNull RecyclerView.n.c cVar, @NonNull RecyclerView.n.c cVar2) {
         int i10;
         int i11;
-        int i12 = cVar.f3045a;
+        int i12 = cVar.f2890a;
         int i13 = cVar.b;
         if (f0Var2.K()) {
-            int i14 = cVar.f3045a;
+            int i14 = cVar.f2890a;
             i11 = cVar.b;
             i10 = i14;
         } else {
-            i10 = cVar2.f3045a;
+            i10 = cVar2.f2890a;
             i11 = cVar2.b;
         }
         return x(f0Var, f0Var2, i12, i13, i10, i11);
@@ -112,10 +112,10 @@ public abstract class r extends RecyclerView.n {
 
     @Override // androidx.recyclerview.widget.RecyclerView.n
     public boolean c(@NonNull RecyclerView.f0 f0Var, @NonNull RecyclerView.n.c cVar, RecyclerView.n.c cVar2) {
-        int i10 = cVar.f3045a;
+        int i10 = cVar.f2890a;
         int i11 = cVar.b;
-        View view = f0Var.f3016a;
-        int left = cVar2 == null ? view.getLeft() : cVar2.f3045a;
+        View view = f0Var.f2861a;
+        int left = cVar2 == null ? view.getLeft() : cVar2.f2890a;
         int top = cVar2 == null ? view.getTop() : cVar2.b;
         if (f0Var.w() || (i10 == left && i11 == top)) {
             return z(f0Var);
@@ -126,8 +126,8 @@ public abstract class r extends RecyclerView.n {
 
     @Override // androidx.recyclerview.widget.RecyclerView.n
     public boolean d(@NonNull RecyclerView.f0 f0Var, @NonNull RecyclerView.n.c cVar, @NonNull RecyclerView.n.c cVar2) {
-        int i10 = cVar.f3045a;
-        int i11 = cVar2.f3045a;
+        int i10 = cVar.f2890a;
+        int i11 = cVar2.f2890a;
         if (i10 != i11 || cVar.b != cVar2.b) {
             return y(f0Var, i10, cVar.b, i11, cVar2.b);
         }
@@ -137,7 +137,7 @@ public abstract class r extends RecyclerView.n {
 
     @Override // androidx.recyclerview.widget.RecyclerView.n
     public boolean f(@NonNull RecyclerView.f0 f0Var) {
-        return !this.f3288g || f0Var.u();
+        return !this.f3133g || f0Var.u();
     }
 
     @SuppressLint({"UnknownNullness"})

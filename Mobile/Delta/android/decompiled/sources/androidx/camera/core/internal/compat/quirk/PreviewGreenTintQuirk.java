@@ -21,19 +21,19 @@ public final class PreviewGreenTintQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final PreviewGreenTintQuirk f1396a = new PreviewGreenTintQuirk();
+    public static final PreviewGreenTintQuirk f1241a = new PreviewGreenTintQuirk();
 
     private PreviewGreenTintQuirk() {
     }
 
     public static final boolean h() {
-        return f1396a.g();
+        return f1241a.g();
     }
 
     public static final boolean i(@NotNull String cameraId, @NotNull Collection<? extends w2> appUseCases) {
         Intrinsics.checkNotNullParameter(cameraId, "cameraId");
         Intrinsics.checkNotNullParameter(appUseCases, "appUseCases");
-        PreviewGreenTintQuirk previewGreenTintQuirk = f1396a;
+        PreviewGreenTintQuirk previewGreenTintQuirk = f1241a;
         if (previewGreenTintQuirk.g()) {
             return previewGreenTintQuirk.j(cameraId, appUseCases);
         }

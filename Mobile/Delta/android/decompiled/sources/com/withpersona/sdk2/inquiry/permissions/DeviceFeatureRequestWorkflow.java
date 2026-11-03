@@ -1,14 +1,14 @@
 package com.withpersona.sdk2.inquiry.permissions;
 
-import an.q;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Parcel;
 import android.os.Parcelable;
 import com.withpersona.sdk2.inquiry.network.dto.ui.styling.StepStyle;
 import com.withpersona.sdk2.inquiry.permissions.DeviceFeatureRequestWorkflow;
-import jt.l;
-import jt.o;
+import gt.l;
+import gt.o;
+import iu.p0;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -17,22 +17,22 @@ import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.d0;
-import ku.p0;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pt.m;
-import rp.g0;
-import rp.u;
-import rp.v;
-import ym.Snapshot;
-import ym.h;
-import ym.k;
-import ym.r;
-import ym.w;
-import ym.z;
+import pp.g0;
+import pp.u;
+import pp.v;
+import wm.Snapshot;
+import wm.h;
+import wm.k;
+import wm.r;
+import wm.w;
+import wm.z;
+import ym.q;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000L\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\n\u0018\u00002\u001c\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0006\u0012\u0004\u0018\u00010\u00050\u0001:\u0003%#'B\u0019\b\u0001\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\n\u0010\u000bJ!\u0010\u000f\u001a\u00020\u00032\u0006\u0010\f\u001a\u00020\u00022\b\u0010\u000e\u001a\u0004\u0018\u00010\rH\u0016¢\u0006\u0004\b\u000f\u0010\u0010JG\u0010\u0015\u001a\u0004\u0018\u00010\u00052\u0006\u0010\u0011\u001a\u00020\u00022\u0006\u0010\u0012\u001a\u00020\u00032$\u0010\u0014\u001a 0\u0013R\u001c\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0006\u0012\u0004\u0018\u00010\u00050\u0001H\u0016¢\u0006\u0004\b\u0015\u0010\u0016J\u0017\u0010\u0018\u001a\u00020\r2\u0006\u0010\u0017\u001a\u00020\u0003H\u0016¢\u0006\u0004\b\u0018\u0010\u0019J1\u0010\u001f\u001a\u00020\u001e*\u00180\u001aR\u0014\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u001b2\u0006\u0010\u001d\u001a\u00020\u001cH\u0002¢\u0006\u0004\b\u001f\u0010 J\u000f\u0010!\u001a\u00020\u001eH\u0002¢\u0006\u0004\b!\u0010\"R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b#\u0010$R\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b%\u0010&¨\u0006("}, d2 = {"Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow;", "Lym/k;", "Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$b;", "Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$DeviceFeatureRequestState;", "Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$a;", "", "Landroid/content/Context;", "applicationContext", "Lcom/withpersona/sdk2/inquiry/permissions/a$a;", "deviceFeatureRequestWorkerFactory", "<init>", "(Landroid/content/Context;Lcom/withpersona/sdk2/inquiry/permissions/a$a;)V", "props", "Lym/i;", "snapshot", "t", "(Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$b;Lym/i;)Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$DeviceFeatureRequestState;", "renderProps", "renderState", "Lym/k$a;", "context", "u", "(Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$b;Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$DeviceFeatureRequestState;Lym/k$a;)Ljava/lang/Object;", "state", "D", "(Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$DeviceFeatureRequestState;)Lym/i;", "Lym/r$c;", "Lym/r;", "Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureState;", "output", "", "r", "(Lym/r$c;Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureState;)V", "s", "()V", "a", "Landroid/content/Context;", "b", "Lcom/withpersona/sdk2/inquiry/permissions/a$a;", "DeviceFeatureRequestState", "permissions_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000L\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\n\u0018\u00002\u001c\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0006\u0012\u0004\u0018\u00010\u00050\u0001:\u0003%#'B\u0019\b\u0001\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\n\u0010\u000bJ!\u0010\u000f\u001a\u00020\u00032\u0006\u0010\f\u001a\u00020\u00022\b\u0010\u000e\u001a\u0004\u0018\u00010\rH\u0016¢\u0006\u0004\b\u000f\u0010\u0010JG\u0010\u0015\u001a\u0004\u0018\u00010\u00052\u0006\u0010\u0011\u001a\u00020\u00022\u0006\u0010\u0012\u001a\u00020\u00032$\u0010\u0014\u001a 0\u0013R\u001c\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0006\u0012\u0004\u0018\u00010\u00050\u0001H\u0016¢\u0006\u0004\b\u0015\u0010\u0016J\u0017\u0010\u0018\u001a\u00020\r2\u0006\u0010\u0017\u001a\u00020\u0003H\u0016¢\u0006\u0004\b\u0018\u0010\u0019J1\u0010\u001f\u001a\u00020\u001e*\u00180\u001aR\u0014\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u001b2\u0006\u0010\u001d\u001a\u00020\u001cH\u0002¢\u0006\u0004\b\u001f\u0010 J\u000f\u0010!\u001a\u00020\u001eH\u0002¢\u0006\u0004\b!\u0010\"R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b#\u0010$R\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b%\u0010&¨\u0006("}, d2 = {"Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow;", "Lwm/k;", "Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$b;", "Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$DeviceFeatureRequestState;", "Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$a;", "", "Landroid/content/Context;", "applicationContext", "Lcom/withpersona/sdk2/inquiry/permissions/a$a;", "deviceFeatureRequestWorkerFactory", "<init>", "(Landroid/content/Context;Lcom/withpersona/sdk2/inquiry/permissions/a$a;)V", "props", "Lwm/i;", "snapshot", "t", "(Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$b;Lwm/i;)Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$DeviceFeatureRequestState;", "renderProps", "renderState", "Lwm/k$a;", "context", "u", "(Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$b;Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$DeviceFeatureRequestState;Lwm/k$a;)Ljava/lang/Object;", "state", "D", "(Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$DeviceFeatureRequestState;)Lwm/i;", "Lwm/r$c;", "Lwm/r;", "Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureState;", "output", "", "r", "(Lwm/r$c;Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureState;)V", "s", "()V", "a", "Landroid/content/Context;", "b", "Lcom/withpersona/sdk2/inquiry/permissions/a$a;", "DeviceFeatureRequestState", "permissions_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class DeviceFeatureRequestWorkflow extends k<Props, DeviceFeatureRequestState, Output, Object> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -41,7 +41,7 @@ public final class DeviceFeatureRequestWorkflow extends k<Props, DeviceFeatureRe
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull
-    public final a.InterfaceC0225a deviceFeatureRequestWorkerFactory;
+    public final a.InterfaceC0228a deviceFeatureRequestWorkerFactory;
 
     @Metadata(d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b6\u0018\u00002\u00020\u0001:\u0004\u0004\u0005\u0006\u0007B\t\b\u0004¢\u0006\u0004\b\u0002\u0010\u0003\u0082\u0001\u0004\b\t\n\u000b¨\u0006\f"}, d2 = {"Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$DeviceFeatureRequestState;", "Landroid/os/Parcelable;", "<init>", "()V", "CheckDeviceFeatureState", "ShowDeviceFeaturePrompt", "RequestDeviceFeature", "Complete", "Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$DeviceFeatureRequestState$CheckDeviceFeatureState;", "Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$DeviceFeatureRequestState$Complete;", "Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$DeviceFeatureRequestState$RequestDeviceFeature;", "Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$DeviceFeatureRequestState$ShowDeviceFeaturePrompt;", "permissions_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static abstract class DeviceFeatureRequestState implements Parcelable {
@@ -51,7 +51,7 @@ public final class DeviceFeatureRequestWorkflow extends k<Props, DeviceFeatureRe
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final CheckDeviceFeatureState f12246a = new CheckDeviceFeatureState();
+            public static final CheckDeviceFeatureState f12327a = new CheckDeviceFeatureState();
 
             @NotNull
             public static final Parcelable.Creator<CheckDeviceFeatureState> CREATOR = new a();
@@ -63,7 +63,7 @@ public final class DeviceFeatureRequestWorkflow extends k<Props, DeviceFeatureRe
                 public final CheckDeviceFeatureState createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return CheckDeviceFeatureState.f12246a;
+                    return CheckDeviceFeatureState.f12327a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -107,7 +107,7 @@ public final class DeviceFeatureRequestWorkflow extends k<Props, DeviceFeatureRe
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final Complete f12247a = new Complete();
+            public static final Complete f12328a = new Complete();
 
             @NotNull
             public static final Parcelable.Creator<Complete> CREATOR = new a();
@@ -119,7 +119,7 @@ public final class DeviceFeatureRequestWorkflow extends k<Props, DeviceFeatureRe
                 public final Complete createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return Complete.f12247a;
+                    return Complete.f12328a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -163,7 +163,7 @@ public final class DeviceFeatureRequestWorkflow extends k<Props, DeviceFeatureRe
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final RequestDeviceFeature f12248a = new RequestDeviceFeature();
+            public static final RequestDeviceFeature f12329a = new RequestDeviceFeature();
 
             @NotNull
             public static final Parcelable.Creator<RequestDeviceFeature> CREATOR = new a();
@@ -175,7 +175,7 @@ public final class DeviceFeatureRequestWorkflow extends k<Props, DeviceFeatureRe
                 public final RequestDeviceFeature createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return RequestDeviceFeature.f12248a;
+                    return RequestDeviceFeature.f12329a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -219,7 +219,7 @@ public final class DeviceFeatureRequestWorkflow extends k<Props, DeviceFeatureRe
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final ShowDeviceFeaturePrompt f12249a = new ShowDeviceFeaturePrompt();
+            public static final ShowDeviceFeaturePrompt f12330a = new ShowDeviceFeaturePrompt();
 
             @NotNull
             public static final Parcelable.Creator<ShowDeviceFeaturePrompt> CREATOR = new a();
@@ -231,7 +231,7 @@ public final class DeviceFeatureRequestWorkflow extends k<Props, DeviceFeatureRe
                 public final ShowDeviceFeaturePrompt createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return ShowDeviceFeaturePrompt.f12249a;
+                    return ShowDeviceFeaturePrompt.f12330a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -315,7 +315,7 @@ public final class DeviceFeatureRequestWorkflow extends k<Props, DeviceFeatureRe
     }
 
     /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.permissions.DeviceFeatureRequestWorkflow$b, reason: from toString */
-    @Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u000e\b\u0086\b\u0018\u00002\u00020\u0001BA\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004\u0012\b\u0010\u0006\u001a\u0004\u0018\u00010\u0004\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0004\u0012\b\u0010\b\u001a\u0004\u0018\u00010\u0004\u0012\b\u0010\n\u001a\u0004\u0018\u00010\t¢\u0006\u0004\b\u000b\u0010\fJ\u0010\u0010\r\u001a\u00020\u0004HÖ\u0001¢\u0006\u0004\b\r\u0010\u000eJ\u0010\u0010\u0010\u001a\u00020\u000fHÖ\u0001¢\u0006\u0004\b\u0010\u0010\u0011J\u001a\u0010\u0014\u001a\u00020\u00132\b\u0010\u0012\u001a\u0004\u0018\u00010\u0001HÖ\u0003¢\u0006\u0004\b\u0014\u0010\u0015R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0016\u0010\u0017\u001a\u0004\b\u0016\u0010\u0018R\u0019\u0010\u0005\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\b\u0019\u0010\u001a\u001a\u0004\b\u001b\u0010\u000eR\u0019\u0010\u0006\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\b\u001c\u0010\u001a\u001a\u0004\b\u001d\u0010\u000eR\u0019\u0010\u0007\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\b\u001d\u0010\u001a\u001a\u0004\b\u001c\u0010\u000eR\u0019\u0010\b\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\b\u001b\u0010\u001a\u001a\u0004\b\u0019\u0010\u000eR\u0019\u0010\n\u001a\u0004\u0018\u00010\t8\u0006¢\u0006\f\n\u0004\b\u001e\u0010\u001f\u001a\u0004\b\u001e\u0010 ¨\u0006!"}, d2 = {"Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$b;", "", "Lrp/u;", "feature", "", "requestFeatureTitle", "requestFeatureRationale", "requestFeatureModalPositiveButton", "requestFeatureModalNegativeButton", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyle;", "styles", "<init>", "(Lrp/u;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyle;)V", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Lrp/u;", "()Lrp/u;", "b", "Ljava/lang/String;", "e", "c", "d", "f", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyle;", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyle;", "permissions_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u000e\b\u0086\b\u0018\u00002\u00020\u0001BA\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004\u0012\b\u0010\u0006\u001a\u0004\u0018\u00010\u0004\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0004\u0012\b\u0010\b\u001a\u0004\u0018\u00010\u0004\u0012\b\u0010\n\u001a\u0004\u0018\u00010\t¢\u0006\u0004\b\u000b\u0010\fJ\u0010\u0010\r\u001a\u00020\u0004HÖ\u0001¢\u0006\u0004\b\r\u0010\u000eJ\u0010\u0010\u0010\u001a\u00020\u000fHÖ\u0001¢\u0006\u0004\b\u0010\u0010\u0011J\u001a\u0010\u0014\u001a\u00020\u00132\b\u0010\u0012\u001a\u0004\u0018\u00010\u0001HÖ\u0003¢\u0006\u0004\b\u0014\u0010\u0015R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0016\u0010\u0017\u001a\u0004\b\u0016\u0010\u0018R\u0019\u0010\u0005\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\b\u0019\u0010\u001a\u001a\u0004\b\u001b\u0010\u000eR\u0019\u0010\u0006\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\b\u001c\u0010\u001a\u001a\u0004\b\u001d\u0010\u000eR\u0019\u0010\u0007\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\b\u001d\u0010\u001a\u001a\u0004\b\u001c\u0010\u000eR\u0019\u0010\b\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\b\u001b\u0010\u001a\u001a\u0004\b\u0019\u0010\u000eR\u0019\u0010\n\u001a\u0004\u0018\u00010\t8\u0006¢\u0006\f\n\u0004\b\u001e\u0010\u001f\u001a\u0004\b\u001e\u0010 ¨\u0006!"}, d2 = {"Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow$b;", "", "Lpp/u;", "feature", "", "requestFeatureTitle", "requestFeatureRationale", "requestFeatureModalPositiveButton", "requestFeatureModalNegativeButton", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyle;", "styles", "<init>", "(Lpp/u;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyle;)V", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Lpp/u;", "()Lpp/u;", "b", "Ljava/lang/String;", "e", "c", "d", "f", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyle;", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyle;", "permissions_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final /* data */ class Props {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
@@ -419,77 +419,77 @@ public final class DeviceFeatureRequestWorkflow extends k<Props, DeviceFeatureRe
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.permissions.DeviceFeatureRequestWorkflow$render$1", f = "DeviceFeatureRequestWorkflow.kt", l = {}, m = "invokeSuspend")
-    public static final class c extends m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.permissions.DeviceFeatureRequestWorkflow$render$1", f = "DeviceFeatureRequestWorkflow.kt", l = {}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class c extends m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f12256t;
+        public int f12337t;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ k<Props, DeviceFeatureRequestState, Output, Object>.a f12258v;
+        public final /* synthetic */ k<Props, DeviceFeatureRequestState, Output, Object>.a f12339v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public final /* synthetic */ Props f12259w;
+        public final /* synthetic */ Props f12340w;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         /* JADX WARN: Multi-variable type inference failed */
-        public c(k<? super Props, DeviceFeatureRequestState, Output, ? extends Object>.a aVar, Props props, nt.b<? super c> bVar) {
+        public c(k<? super Props, DeviceFeatureRequestState, Output, ? extends Object>.a aVar, Props props, lt.b<? super c> bVar) {
             super(2, bVar);
-            this.f12258v = aVar;
-            this.f12259w = props;
+            this.f12339v = aVar;
+            this.f12340w = props;
         }
 
-        public static final Unit s(DeviceFeatureRequestWorkflow deviceFeatureRequestWorkflow, Props props, r.c cVar) {
+        public static final Unit q(DeviceFeatureRequestWorkflow deviceFeatureRequestWorkflow, Props props, r.c cVar) {
             deviceFeatureRequestWorkflow.r(cVar, new DeviceFeatureState(props.getFeature(), v.Success));
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
 
-        public static final Unit t(r.c cVar) {
-            cVar.e(DeviceFeatureRequestState.ShowDeviceFeaturePrompt.f12249a);
-            return Unit.f22483a;
+        public static final Unit s(r.c cVar) {
+            cVar.e(DeviceFeatureRequestState.ShowDeviceFeaturePrompt.f12330a);
+            return Unit.f22938a;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return DeviceFeatureRequestWorkflow.this.new c(this.f12258v, this.f12259w, bVar);
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return DeviceFeatureRequestWorkflow.this.new c(this.f12339v, this.f12340w, bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            ot.c.e();
-            if (this.f12256t != 0) {
+            mt.c.e();
+            if (this.f12337t != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
             o.b(obj);
             if (com.withpersona.sdk2.inquiry.shared.inquiry_session.a.b(DeviceFeatureRequestWorkflow.this.applicationContext)) {
-                h<r<? super Props, DeviceFeatureRequestState, ? extends Output>> hVarD = this.f12258v.d();
+                h<r<? super Props, DeviceFeatureRequestState, ? extends Output>> hVarD = this.f12339v.d();
                 final DeviceFeatureRequestWorkflow deviceFeatureRequestWorkflow = DeviceFeatureRequestWorkflow.this;
-                final Props props = this.f12259w;
-                hVarD.a(z.d(deviceFeatureRequestWorkflow, null, new Function1() { // from class: rp.s
+                final Props props = this.f12340w;
+                hVarD.a(z.d(deviceFeatureRequestWorkflow, null, new Function1() { // from class: pp.s
                     @Override // kotlin.jvm.functions.Function1
                     public final Object invoke(Object obj2) {
-                        return DeviceFeatureRequestWorkflow.c.s(deviceFeatureRequestWorkflow, props, (ym.r.c) obj2);
+                        return DeviceFeatureRequestWorkflow.c.q(deviceFeatureRequestWorkflow, props, (wm.r.c) obj2);
                     }
                 }, 1, null));
             } else {
-                this.f12258v.d().a(z.d(DeviceFeatureRequestWorkflow.this, null, new Function1() { // from class: rp.t
+                this.f12339v.d().a(z.d(DeviceFeatureRequestWorkflow.this, null, new Function1() { // from class: pp.t
                     @Override // kotlin.jvm.functions.Function1
                     public final Object invoke(Object obj2) {
-                        return DeviceFeatureRequestWorkflow.c.t((ym.r.c) obj2);
+                        return DeviceFeatureRequestWorkflow.c.s((wm.r.c) obj2);
                     }
                 }, 1, null));
             }
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            return Unit.f22938a;
         }
     }
 
-    public DeviceFeatureRequestWorkflow(@NotNull Context applicationContext, @NotNull a.InterfaceC0225a deviceFeatureRequestWorkerFactory) {
+    public DeviceFeatureRequestWorkflow(@NotNull Context applicationContext, @NotNull a.InterfaceC0228a deviceFeatureRequestWorkerFactory) {
         Intrinsics.checkNotNullParameter(applicationContext, "applicationContext");
         Intrinsics.checkNotNullParameter(deviceFeatureRequestWorkerFactory, "deviceFeatureRequestWorkerFactory");
         this.applicationContext = applicationContext;
@@ -499,84 +499,84 @@ public final class DeviceFeatureRequestWorkflow extends k<Props, DeviceFeatureRe
     public static final Unit A(DeviceFeatureRequestWorkflow deviceFeatureRequestWorkflow, Props props, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         deviceFeatureRequestWorkflow.r(action, new DeviceFeatureState(props.getFeature(), v.Success));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit B(DeviceFeatureRequestWorkflow deviceFeatureRequestWorkflow, Props props, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         deviceFeatureRequestWorkflow.r(action, new DeviceFeatureState(props.getFeature(), v.Failure));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit C(DeviceFeatureRequestWorkflow deviceFeatureRequestWorkflow, Props props, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         deviceFeatureRequestWorkflow.r(action, new DeviceFeatureState(props.getFeature(), v.SettingsLaunched));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit v(k.a aVar, DeviceFeatureRequestWorkflow deviceFeatureRequestWorkflow) {
-        aVar.d().a(z.d(deviceFeatureRequestWorkflow, null, new Function1() { // from class: rp.r
+        aVar.d().a(z.d(deviceFeatureRequestWorkflow, null, new Function1() { // from class: pp.r
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return DeviceFeatureRequestWorkflow.w((ym.r.c) obj);
+                return DeviceFeatureRequestWorkflow.w((wm.r.c) obj);
             }
         }, 1, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit w(r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
-        action.e(DeviceFeatureRequestState.RequestDeviceFeature.f12248a);
-        return Unit.f22483a;
+        action.e(DeviceFeatureRequestState.RequestDeviceFeature.f12329a);
+        return Unit.f22938a;
     }
 
     public static final Unit x(k.a aVar, final DeviceFeatureRequestWorkflow deviceFeatureRequestWorkflow, final Props props) {
-        aVar.d().a(z.d(deviceFeatureRequestWorkflow, null, new Function1() { // from class: rp.q
+        aVar.d().a(z.d(deviceFeatureRequestWorkflow, null, new Function1() { // from class: pp.q
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return DeviceFeatureRequestWorkflow.y(this.f30174a, props, (ym.r.c) obj);
+                return DeviceFeatureRequestWorkflow.y(this.f29034a, props, (wm.r.c) obj);
             }
         }, 1, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit y(DeviceFeatureRequestWorkflow deviceFeatureRequestWorkflow, Props props, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         deviceFeatureRequestWorkflow.r(action, new DeviceFeatureState(props.getFeature(), v.Failure));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final r z(final DeviceFeatureRequestWorkflow deviceFeatureRequestWorkflow, final Props props, a.b it) {
         Intrinsics.checkNotNullParameter(it, "it");
         if (it instanceof a.b.c) {
-            return z.d(deviceFeatureRequestWorkflow, null, new Function1() { // from class: rp.n
+            return z.d(deviceFeatureRequestWorkflow, null, new Function1() { // from class: pp.n
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DeviceFeatureRequestWorkflow.A(this.f30155a, props, (ym.r.c) obj);
+                    return DeviceFeatureRequestWorkflow.A(this.f29015a, props, (wm.r.c) obj);
                 }
             }, 1, null);
         }
-        if (it instanceof a.b.C0226a) {
-            return z.d(deviceFeatureRequestWorkflow, null, new Function1() { // from class: rp.o
+        if (it instanceof a.b.C0229a) {
+            return z.d(deviceFeatureRequestWorkflow, null, new Function1() { // from class: pp.o
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DeviceFeatureRequestWorkflow.B(this.f30158a, props, (ym.r.c) obj);
+                    return DeviceFeatureRequestWorkflow.B(this.f29018a, props, (wm.r.c) obj);
                 }
             }, 1, null);
         }
-        if (!(it instanceof a.b.C0227b)) {
+        if (!(it instanceof a.b.C0230b)) {
             throw new l();
         }
         deviceFeatureRequestWorkflow.s();
-        return z.d(deviceFeatureRequestWorkflow, null, new Function1() { // from class: rp.p
+        return z.d(deviceFeatureRequestWorkflow, null, new Function1() { // from class: pp.p
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return DeviceFeatureRequestWorkflow.C(this.f30170a, props, (ym.r.c) obj);
+                return DeviceFeatureRequestWorkflow.C(this.f29030a, props, (wm.r.c) obj);
             }
         }, 1, null);
     }
 
-    @Override // ym.k
+    @Override // wm.k
     @NotNull
     /* JADX INFO: renamed from: D, reason: merged with bridge method [inline-methods] */
     public Snapshot g(@NotNull DeviceFeatureRequestState state) {
@@ -594,13 +594,13 @@ public final class DeviceFeatureRequestWorkflow extends k<Props, DeviceFeatureRe
         this.applicationContext.startActivity(intent);
     }
 
-    @Override // ym.k
+    @Override // wm.k
     @NotNull
     /* JADX INFO: renamed from: t, reason: merged with bridge method [inline-methods] */
     public DeviceFeatureRequestState d(@NotNull Props props, @Nullable Snapshot snapshot) {
         Intrinsics.checkNotNullParameter(props, "props");
         if (snapshot != null) {
-            xu.h hVarB = snapshot.b();
+            vu.h hVarB = snapshot.b();
             Parcelable parcelable = null;
             if (hVarB.I() <= 0) {
                 hVarB = null;
@@ -621,31 +621,31 @@ public final class DeviceFeatureRequestWorkflow extends k<Props, DeviceFeatureRe
                 return deviceFeatureRequestState;
             }
         }
-        return DeviceFeatureRequestState.CheckDeviceFeatureState.f12246a;
+        return DeviceFeatureRequestState.CheckDeviceFeatureState.f12327a;
     }
 
-    @Override // ym.k
+    @Override // wm.k
     @Nullable
     /* JADX INFO: renamed from: u, reason: merged with bridge method [inline-methods] */
     public Object f(@NotNull final Props renderProps, @NotNull DeviceFeatureRequestState renderState, @NotNull final k<? super Props, DeviceFeatureRequestState, Output, ? extends Object>.a context) {
         Intrinsics.checkNotNullParameter(renderProps, "renderProps");
         Intrinsics.checkNotNullParameter(renderState, "renderState");
         Intrinsics.checkNotNullParameter(context, "context");
-        if (Intrinsics.c(renderState, DeviceFeatureRequestState.CheckDeviceFeatureState.f12246a)) {
+        if (Intrinsics.c(renderState, DeviceFeatureRequestState.CheckDeviceFeatureState.f12327a)) {
             context.b("check_device_feature_state", new c(context, renderProps, null));
             return null;
         }
-        if (!Intrinsics.c(renderState, DeviceFeatureRequestState.ShowDeviceFeaturePrompt.f12249a)) {
-            if (!Intrinsics.c(renderState, DeviceFeatureRequestState.RequestDeviceFeature.f12248a)) {
-                if (Intrinsics.c(renderState, DeviceFeatureRequestState.Complete.f12247a)) {
+        if (!Intrinsics.c(renderState, DeviceFeatureRequestState.ShowDeviceFeaturePrompt.f12330a)) {
+            if (!Intrinsics.c(renderState, DeviceFeatureRequestState.RequestDeviceFeature.f12329a)) {
+                if (Intrinsics.c(renderState, DeviceFeatureRequestState.Complete.f12328a)) {
                     return null;
                 }
                 throw new l();
             }
-            w.l(context, this.deviceFeatureRequestWorkerFactory.a(), d0.k(a.class), "", new Function1() { // from class: rp.m
+            w.l(context, this.deviceFeatureRequestWorkerFactory.a(), d0.k(a.class), "", new Function1() { // from class: pp.m
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DeviceFeatureRequestWorkflow.z(this.f30150a, renderProps, (com.withpersona.sdk2.inquiry.permissions.a.b) obj);
+                    return DeviceFeatureRequestWorkflow.z(this.f29010a, renderProps, (com.withpersona.sdk2.inquiry.permissions.a.b) obj);
                 }
             });
             return null;
@@ -663,7 +663,7 @@ public final class DeviceFeatureRequestWorkflow extends k<Props, DeviceFeatureRe
             requestFeatureModalPositiveButton = "Allow";
         }
         StepStyle styles = renderProps.getStyles();
-        Function0 function0 = new Function0() { // from class: rp.k
+        Function0 function0 = new Function0() { // from class: pp.k
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
                 return DeviceFeatureRequestWorkflow.v(context, this);
@@ -673,11 +673,11 @@ public final class DeviceFeatureRequestWorkflow extends k<Props, DeviceFeatureRe
         if (requestFeatureModalNegativeButton == null) {
             requestFeatureModalNegativeButton = "Cancel";
         }
-        return new wq.m(new g0(requestFeatureTitle, requestFeatureRationale, requestFeatureModalPositiveButton, styles, function0, requestFeatureModalNegativeButton, new Function0() { // from class: rp.l
+        return new uq.m(new g0(requestFeatureTitle, requestFeatureRationale, requestFeatureModalPositiveButton, styles, function0, requestFeatureModalNegativeButton, new Function0() { // from class: pp.l
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
                 return DeviceFeatureRequestWorkflow.x(context, this, renderProps);
             }
-        }), wq.l.NONE);
+        }), uq.l.NONE);
     }
 }

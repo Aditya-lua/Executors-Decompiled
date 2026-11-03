@@ -12,7 +12,7 @@ import com.google.android.gms.internal.play_billing.z7;
 public interface i1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final /* synthetic */ int f32800a = 0;
+    public static final /* synthetic */ int f33368a = 0;
 
     static {
         com.google.android.gms.internal.play_billing.q0.c("com.android.vending.billing.PURCHASES_UPDATED", z7.PURCHASES_UPDATED_ACTION, "com.android.vending.billing.LOCAL_BROADCAST_PURCHASES_UPDATED", z7.LOCAL_PURCHASES_UPDATED_ACTION, "com.android.vending.billing.ALTERNATIVE_BILLING", z7.ALTERNATIVE_BILLING_ACTION);

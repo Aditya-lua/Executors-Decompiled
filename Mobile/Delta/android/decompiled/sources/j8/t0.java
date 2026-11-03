@@ -10,31 +10,31 @@ import java.util.List;
 public final class t0 extends SQLiteOpenHelper {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final String f21151c = "INSERT INTO global_log_event_state VALUES (" + System.currentTimeMillis() + ")";
+    public static final String f21724c = "INSERT INTO global_log_event_state VALUES (" + System.currentTimeMillis() + ")";
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static int f21152d = 5;
+    public static int f21725d = 5;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final a f21153e;
+    public static final a f21726e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final a f21154f;
+    public static final a f21727f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final a f21155g;
+    public static final a f21728g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final a f21156h;
+    public static final a f21729h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final a f21157i;
+    public static final a f21730i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final List<a> f21158j;
+    public static final List<a> f21731j;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f21159a;
+    public final int f21732a;
     public boolean b;
 
     public interface a {
@@ -48,42 +48,42 @@ public final class t0 extends SQLiteOpenHelper {
                 t0.a(sQLiteDatabase);
             }
         };
-        f21153e = aVar;
+        f21726e = aVar;
         a aVar2 = new a() { // from class: j8.p0
             @Override // j8.t0.a
             public final void a(SQLiteDatabase sQLiteDatabase) {
                 t0.d(sQLiteDatabase);
             }
         };
-        f21154f = aVar2;
+        f21727f = aVar2;
         a aVar3 = new a() { // from class: j8.q0
             @Override // j8.t0.a
             public final void a(SQLiteDatabase sQLiteDatabase) {
                 sQLiteDatabase.execSQL("ALTER TABLE events ADD COLUMN payload_encoding TEXT");
             }
         };
-        f21155g = aVar3;
+        f21728g = aVar3;
         a aVar4 = new a() { // from class: j8.r0
             @Override // j8.t0.a
             public final void a(SQLiteDatabase sQLiteDatabase) {
                 t0.e(sQLiteDatabase);
             }
         };
-        f21156h = aVar4;
+        f21729h = aVar4;
         a aVar5 = new a() { // from class: j8.s0
             @Override // j8.t0.a
             public final void a(SQLiteDatabase sQLiteDatabase) {
                 t0.c(sQLiteDatabase);
             }
         };
-        f21157i = aVar5;
-        f21158j = Arrays.asList(aVar, aVar2, aVar3, aVar4, aVar5);
+        f21730i = aVar5;
+        f21731j = Arrays.asList(aVar, aVar2, aVar3, aVar4, aVar5);
     }
 
     public t0(Context context, String str, int i10) {
         super(context, str, (SQLiteDatabase.CursorFactory) null, i10);
         this.b = false;
-        this.f21159a = i10;
+        this.f21732a = i10;
     }
 
     public static /* synthetic */ void a(SQLiteDatabase sQLiteDatabase) {
@@ -99,7 +99,7 @@ public final class t0 extends SQLiteOpenHelper {
         sQLiteDatabase.execSQL("DROP TABLE IF EXISTS global_log_event_state");
         sQLiteDatabase.execSQL("CREATE TABLE log_event_dropped (log_source VARCHAR(45) NOT NULL,reason INTEGER NOT NULL,events_dropped_count BIGINT NOT NULL,PRIMARY KEY(log_source, reason))");
         sQLiteDatabase.execSQL("CREATE TABLE global_log_event_state (last_metrics_upload_ms BIGINT PRIMARY KEY)");
-        sQLiteDatabase.execSQL(f21151c);
+        sQLiteDatabase.execSQL(f21724c);
     }
 
     public static /* synthetic */ void d(SQLiteDatabase sQLiteDatabase) {
@@ -127,10 +127,10 @@ public final class t0 extends SQLiteOpenHelper {
     }
 
     public final void h(SQLiteDatabase sQLiteDatabase, int i10, int i11) {
-        List<a> list = f21158j;
+        List<a> list = f21731j;
         if (i11 <= list.size()) {
             while (i10 < i11) {
-                f21158j.get(i10).a(sQLiteDatabase);
+                f21731j.get(i10).a(sQLiteDatabase);
                 i10++;
             }
             return;
@@ -147,7 +147,7 @@ public final class t0 extends SQLiteOpenHelper {
 
     @Override // android.database.sqlite.SQLiteOpenHelper
     public void onCreate(SQLiteDatabase sQLiteDatabase) {
-        g(sQLiteDatabase, this.f21159a);
+        g(sQLiteDatabase, this.f21732a);
     }
 
     @Override // android.database.sqlite.SQLiteOpenHelper

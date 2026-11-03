@@ -10,10 +10,10 @@ public enum GovIdCaptureMethod {
     AUTO,
     VIDEO_UPLOAD;
 
-    private static final /* synthetic */ qt.a $ENTRIES = qt.b.a(values());
+    private static final /* synthetic */ ot.a $ENTRIES = ot.b.a(values());
 
     @NotNull
-    public static qt.a<GovIdCaptureMethod> getEntries() {
+    public static ot.a<GovIdCaptureMethod> getEntries() {
         return $ENTRIES;
     }
 }

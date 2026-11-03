@@ -17,11 +17,11 @@ public final class c implements Comparable<c>, Serializable {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    public static final c f22684d = new c(-31557014167219200L, 0);
+    public static final c f23139d = new c(-31557014167219200L, 0);
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
     @NotNull
-    public static final c f22685e = new c(31556889864403199L, 999999999);
+    public static final c f23140e = new c(31556889864403199L, 999999999);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     public final long epochSeconds;
@@ -63,12 +63,12 @@ public final class c implements Comparable<c>, Serializable {
 
         @NotNull
         public final c c() {
-            return c.f22685e;
+            return c.f23140e;
         }
 
         @NotNull
         public final c d() {
-            return c.f22684d;
+            return c.f23139d;
         }
 
         @NotNull

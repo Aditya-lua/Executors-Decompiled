@@ -7,35 +7,35 @@ import f7.h0;
 public class k implements c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f25175a;
+    public final String f25996a;
     public final a b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final m7.b f25176c;
+    public final m7.b f25997c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final m7.o<PointF, PointF> f25177d;
+    public final m7.o<PointF, PointF> f25998d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final m7.b f25178e;
+    public final m7.b f25999e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final m7.b f25179f;
+    public final m7.b f26000f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final m7.b f25180g;
+    public final m7.b f26001g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final m7.b f25181h;
+    public final m7.b f26002h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final m7.b f25182i;
+    public final m7.b f26003i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final boolean f25183j;
+    public final boolean f26004j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final boolean f25184k;
+    public final boolean f26005k;
 
     public enum a {
         STAR(1),
@@ -43,15 +43,15 @@ public class k implements c {
 
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final int f25187a;
+        public final int f26008a;
 
         a(int i10) {
-            this.f25187a = i10;
+            this.f26008a = i10;
         }
 
         public static a b(int i10) {
             for (a aVar : values()) {
-                if (aVar.f25187a == i10) {
+                if (aVar.f26008a == i10) {
                     return aVar;
                 }
             }
@@ -60,17 +60,17 @@ public class k implements c {
     }
 
     public k(String str, a aVar, m7.b bVar, m7.o<PointF, PointF> oVar, m7.b bVar2, m7.b bVar3, m7.b bVar4, m7.b bVar5, m7.b bVar6, boolean z10, boolean z11) {
-        this.f25175a = str;
+        this.f25996a = str;
         this.b = aVar;
-        this.f25176c = bVar;
-        this.f25177d = oVar;
-        this.f25178e = bVar2;
-        this.f25179f = bVar3;
-        this.f25180g = bVar4;
-        this.f25181h = bVar5;
-        this.f25182i = bVar6;
-        this.f25183j = z10;
-        this.f25184k = z11;
+        this.f25997c = bVar;
+        this.f25998d = oVar;
+        this.f25999e = bVar2;
+        this.f26000f = bVar3;
+        this.f26001g = bVar4;
+        this.f26002h = bVar5;
+        this.f26003i = bVar6;
+        this.f26004j = z10;
+        this.f26005k = z11;
     }
 
     @Override // n7.c
@@ -79,35 +79,35 @@ public class k implements c {
     }
 
     public m7.b b() {
-        return this.f25179f;
+        return this.f26000f;
     }
 
     public m7.b c() {
-        return this.f25181h;
+        return this.f26002h;
     }
 
     public String d() {
-        return this.f25175a;
+        return this.f25996a;
     }
 
     public m7.b e() {
-        return this.f25180g;
+        return this.f26001g;
     }
 
     public m7.b f() {
-        return this.f25182i;
+        return this.f26003i;
     }
 
     public m7.b g() {
-        return this.f25176c;
+        return this.f25997c;
     }
 
     public m7.o<PointF, PointF> h() {
-        return this.f25177d;
+        return this.f25998d;
     }
 
     public m7.b i() {
-        return this.f25178e;
+        return this.f25999e;
     }
 
     public a j() {
@@ -115,10 +115,10 @@ public class k implements c {
     }
 
     public boolean k() {
-        return this.f25183j;
+        return this.f26004j;
     }
 
     public boolean l() {
-        return this.f25184k;
+        return this.f26005k;
     }
 }

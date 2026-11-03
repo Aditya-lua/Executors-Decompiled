@@ -14,16 +14,16 @@ import org.xmlpull.v1.XmlPullParserException;
 public final class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Shader f24995a;
+    public final Shader f25816a;
     public final ColorStateList b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f24996c;
+    public int f25817c;
 
     public d(Shader shader, ColorStateList colorStateList, int i10) {
-        this.f24995a = shader;
+        this.f25816a = shader;
         this.b = colorStateList;
-        this.f24996c = i10;
+        this.f25817c = i10;
     }
 
     public static d a(Resources resources, int i10, Resources.Theme theme) throws XmlPullParserException, IOException {
@@ -72,20 +72,20 @@ public final class d {
     }
 
     public int e() {
-        return this.f24996c;
+        return this.f25817c;
     }
 
     public Shader f() {
-        return this.f24995a;
+        return this.f25816a;
     }
 
     public boolean h() {
-        return this.f24995a != null;
+        return this.f25816a != null;
     }
 
     public boolean i() {
         ColorStateList colorStateList;
-        return this.f24995a == null && (colorStateList = this.b) != null && colorStateList.isStateful();
+        return this.f25816a == null && (colorStateList = this.b) != null && colorStateList.isStateful();
     }
 
     public boolean j(int[] iArr) {
@@ -94,18 +94,18 @@ public final class d {
         }
         ColorStateList colorStateList = this.b;
         int colorForState = colorStateList.getColorForState(iArr, colorStateList.getDefaultColor());
-        if (colorForState == this.f24996c) {
+        if (colorForState == this.f25817c) {
             return false;
         }
-        this.f24996c = colorForState;
+        this.f25817c = colorForState;
         return true;
     }
 
     public void k(int i10) {
-        this.f24996c = i10;
+        this.f25817c = i10;
     }
 
     public boolean l() {
-        return h() || this.f24996c != 0;
+        return h() || this.f25817c != 0;
     }
 }

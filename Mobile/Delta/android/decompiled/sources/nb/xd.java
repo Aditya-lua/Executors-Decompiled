@@ -4,7 +4,7 @@ package nb;
 public abstract class xd extends td {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f26113c;
+    public boolean f26934c;
 
     public xd(me meVar) {
         super(meVar);
@@ -12,7 +12,7 @@ public abstract class xd extends td {
     }
 
     public final boolean i() {
-        return this.f26113c;
+        return this.f26934c;
     }
 
     public final void j() {
@@ -22,12 +22,12 @@ public abstract class xd extends td {
     }
 
     public final void k() {
-        if (this.f26113c) {
+        if (this.f26934c) {
             throw new IllegalStateException("Can't initialize twice");
         }
         l();
         this.b.f0();
-        this.f26113c = true;
+        this.f26934c = true;
     }
 
     public abstract boolean l();

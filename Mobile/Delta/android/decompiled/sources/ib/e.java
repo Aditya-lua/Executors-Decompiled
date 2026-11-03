@@ -4,14 +4,14 @@ package ib;
 public abstract class e implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final sb.k f20450a;
+    public final sb.k f20566a;
 
     public e() {
-        this.f20450a = null;
+        this.f20566a = null;
     }
 
     public void a(Exception exc) {
-        sb.k kVar = this.f20450a;
+        sb.k kVar = this.f20566a;
         if (kVar != null) {
             kVar.d(exc);
         }
@@ -20,7 +20,7 @@ public abstract class e implements Runnable {
     public abstract void b();
 
     public final sb.k c() {
-        return this.f20450a;
+        return this.f20566a;
     }
 
     @Override // java.lang.Runnable
@@ -33,6 +33,6 @@ public abstract class e implements Runnable {
     }
 
     public e(sb.k kVar) {
-        this.f20450a = kVar;
+        this.f20566a = kVar;
     }
 }

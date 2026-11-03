@@ -9,7 +9,7 @@ public final class JNIWidgetDataProtocol {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final JNIWidgetDataProtocol f9851a = new JNIWidgetDataProtocol();
+    public static final JNIWidgetDataProtocol f9932a = new JNIWidgetDataProtocol();
 
     @NotNull
     public final native String getProtocolName();

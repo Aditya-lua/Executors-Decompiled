@@ -15,10 +15,10 @@ public final class BinderWrapper implements Parcelable {
     public static final Parcelable.Creator<BinderWrapper> CREATOR = new a1();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final IBinder f5763a;
+    public final IBinder f5836a;
 
     public BinderWrapper(@NonNull IBinder iBinder) {
-        this.f5763a = iBinder;
+        this.f5836a = iBinder;
     }
 
     @Override // android.os.Parcelable
@@ -28,6 +28,6 @@ public final class BinderWrapper implements Parcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(@NonNull Parcel parcel, int i10) {
-        parcel.writeStrongBinder(this.f5763a);
+        parcel.writeStrongBinder(this.f5836a);
     }
 }

@@ -16,7 +16,7 @@ public final class i {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final i f15192a = new i();
+    public static final i f15806a = new i();
 
     @NotNull
     public final Bitmap a(@NotNull Drawable drawable, @NotNull Bitmap.Config config, @NotNull Size size, @NotNull y6.f scale, boolean allowInexactSize) {
@@ -36,10 +36,10 @@ public final class i {
         if (iB > 0) {
             i10 = iB;
         }
-        long jB = m6.h.b(iG, i10, size, scale, Size.f35746d);
+        long jB = m6.h.b(iG, i10, size, scale, Size.f36603d);
         double d10 = m6.h.d(iG, i10, r.c(jB), r.d(jB), scale);
-        int iC = cu.b.c(((double) iG) * d10);
-        int iC2 = cu.b.c(d10 * ((double) i10));
+        int iC = au.b.c(((double) iG) * d10);
+        int iC2 = au.b.c(d10 * ((double) i10));
         Bitmap bitmapCreateBitmap = Bitmap.createBitmap(iC, iC2, b.e(config));
         Rect bounds = drawableMutate.getBounds();
         int i11 = bounds.left;
@@ -60,7 +60,7 @@ public final class i {
         if (allowInexactSize) {
             return true;
         }
-        long jB = m6.h.b(bitmap.getWidth(), bitmap.getHeight(), size, scale, Size.f35746d);
+        long jB = m6.h.b(bitmap.getWidth(), bitmap.getHeight(), size, scale, Size.f36603d);
         return m6.h.d(bitmap.getWidth(), bitmap.getHeight(), r.c(jB), r.d(jB), scale) == 1.0d;
     }
 }

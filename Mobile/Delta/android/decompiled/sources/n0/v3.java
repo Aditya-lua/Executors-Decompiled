@@ -10,10 +10,10 @@ import java.util.List;
 public final class v3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final List<SurfaceConfig> f24895a;
+    public final List<SurfaceConfig> f25716a;
 
     public v3() {
-        this.f24895a = new ArrayList();
+        this.f25716a = new ArrayList();
     }
 
     public static void b(List<int[]> list, int i10, int[] iArr, int i11) {
@@ -38,7 +38,7 @@ public final class v3 {
     }
 
     public boolean a(SurfaceConfig surfaceConfig) {
-        return this.f24895a.add(surfaceConfig);
+        return this.f25716a.add(surfaceConfig);
     }
 
     public final List<int[]> c(int i10) {
@@ -55,10 +55,10 @@ public final class v3 {
         if (list.isEmpty()) {
             return new ArrayList();
         }
-        if (list.size() != this.f24895a.size()) {
+        if (list.size() != this.f25716a.size()) {
             return null;
         }
-        List<int[]> listC = c(this.f24895a.size());
+        List<int[]> listC = c(this.f25716a.size());
         SurfaceConfig[] surfaceConfigArr = new SurfaceConfig[list.size()];
         Iterator<int[]> it = listC.iterator();
         do {
@@ -66,13 +66,13 @@ public final class v3 {
             if (it.hasNext()) {
                 int[] next = it.next();
                 zJ = true;
-                while (i10 < this.f24895a.size()) {
+                while (i10 < this.f25716a.size()) {
                     if (next[i10] < list.size()) {
-                        zJ &= this.f24895a.get(i10).j(list.get(next[i10]));
+                        zJ &= this.f25716a.get(i10).j(list.get(next[i10]));
                         if (!zJ) {
                             break;
                         }
-                        surfaceConfigArr[next[i10]] = this.f24895a.get(i10);
+                        surfaceConfigArr[next[i10]] = this.f25716a.get(i10);
                     }
                     i10++;
                 }
@@ -91,7 +91,7 @@ public final class v3 {
 
     public v3(SurfaceConfig... surfaceConfigArr) {
         ArrayList arrayList = new ArrayList();
-        this.f24895a = arrayList;
+        this.f25716a = arrayList;
         Collections.addAll(arrayList, surfaceConfigArr);
     }
 }

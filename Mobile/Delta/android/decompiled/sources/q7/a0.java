@@ -6,7 +6,7 @@ import android.graphics.PointF;
 public class a0 implements n0<PointF> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final a0 f29229a = new a0();
+    public static final a0 f29582a = new a0();
 
     @Override // q7.n0
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */

@@ -33,7 +33,7 @@ public final class c extends f {
     public static final class a extends m implements Function1<Map.Entry<f.a<?>, Object>, CharSequence> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public static final a f34686i = new a();
+        public static final a f35184i = new a();
 
         public a() {
             super(1);
@@ -195,7 +195,7 @@ public final class c extends f {
 
     @NotNull
     public String toString() {
-        return CollectionsKt.m0(this.preferencesMap.entrySet(), ",\n", "{\n", "\n}", 0, null, a.f34686i, 24, null);
+        return CollectionsKt.m0(this.preferencesMap.entrySet(), ",\n", "{\n", "\n}", 0, null, a.f35184i, 24, null);
     }
 
     public /* synthetic */ c(Map map, boolean z10, int i10, DefaultConstructorMarker defaultConstructorMarker) {

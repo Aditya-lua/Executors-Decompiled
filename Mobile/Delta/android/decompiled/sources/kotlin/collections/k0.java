@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
 public class k0 extends j0 {
     @NotNull
     public static <K, V> Map<K, V> j() {
-        a0 a0Var = a0.f22487a;
+        a0 a0Var = a0.f22942a;
         Intrinsics.d(a0Var, "null cannot be cast to non-null type kotlin.collections.Map<K of kotlin.collections.MapsKt__MapsKt.emptyMap, V of kotlin.collections.MapsKt__MapsKt.emptyMap>");
         return a0Var;
     }

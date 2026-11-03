@@ -17,18 +17,18 @@ public final class i {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final Extras.c<List<c7.c>> f35117a = new Extras.c<>(kotlin.collections.p.k());
+    public static final Extras.c<List<c7.c>> f35615a = new Extras.c<>(kotlin.collections.p.k());
 
     @NotNull
     public static final Extras.c<Size> b = new Extras.c<>(y6.h.a(Barcode.FORMAT_AZTEC, Barcode.FORMAT_AZTEC));
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static final Extras.c<Boolean> f35118c = new Extras.c<>(Boolean.FALSE);
+    public static final Extras.c<Boolean> f35616c = new Extras.c<>(Boolean.FALSE);
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    public static final Extras.c<Boolean> f35119d = new Extras.c<>(Boolean.TRUE);
+    public static final Extras.c<Boolean> f35617d = new Extras.c<>(Boolean.TRUE);
 
     @NotNull
     public static final k6.s.a b(@NotNull k6.s.a aVar, boolean z10) {
@@ -41,11 +41,11 @@ public final class i {
     }
 
     public static final boolean d(@NotNull Options options) {
-        return ((Boolean) k6.m.b(options, f35118c)).booleanValue();
+        return ((Boolean) k6.m.b(options, f35616c)).booleanValue();
     }
 
     public static final boolean e(@NotNull ImageRequest imageRequest) {
-        return ((Boolean) k6.m.a(imageRequest, f35119d)).booleanValue();
+        return ((Boolean) k6.m.a(imageRequest, f35617d)).booleanValue();
     }
 
     @NotNull
@@ -60,12 +60,12 @@ public final class i {
 
     @NotNull
     public static final List<c7.c> h(@NotNull ImageRequest imageRequest) {
-        return (List) k6.m.a(imageRequest, f35117a);
+        return (List) k6.m.a(imageRequest, f35615a);
     }
 
     @NotNull
     public static final ImageRequest.a i(@NotNull ImageRequest.a aVar, @NotNull List<? extends c7.c> list) {
-        aVar.h().b(f35117a, e7.d.c(list));
+        aVar.h().b(f35615a, e7.d.c(list));
         final a0 a0Var = new a0();
         aVar.k("coil#transformations", CollectionsKt.m0(list, null, null, null, 0, null, new Function1() { // from class: x6.h
             @Override // kotlin.jvm.functions.Function1
@@ -83,8 +83,8 @@ public final class i {
 
     public static final CharSequence k(a0 a0Var, c7.c cVar) {
         StringBuilder sb2 = new StringBuilder();
-        int i10 = a0Var.f22549a;
-        a0Var.f22549a = i10 + 1;
+        int i10 = a0Var.f23004a;
+        a0Var.f23004a = i10 + 1;
         sb2.append(i10);
         sb2.append(':');
         sb2.append(cVar.getCacheKey());

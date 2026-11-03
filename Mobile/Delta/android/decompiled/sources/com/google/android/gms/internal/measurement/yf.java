@@ -1,19 +1,19 @@
 package com.google.android.gms.internal.measurement;
 
 /* JADX INFO: loaded from: classes.dex */
-public final class yf implements ge.s {
+public final class yf implements he.s {
     public static final yf b = new yf();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ge.s f6962a = ge.t.b(new ag());
+    public final he.s f7036a = he.t.b(new ag());
 
     public static boolean a() {
         return b.get().zza();
     }
 
-    @Override // ge.s
+    @Override // he.s
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
     public final zf get() {
-        return (zf) this.f6962a.get();
+        return (zf) this.f7036a.get();
     }
 }

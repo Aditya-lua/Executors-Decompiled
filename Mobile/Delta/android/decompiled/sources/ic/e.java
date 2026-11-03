@@ -1,31 +1,42 @@
 package ic;
 
-import android.graphics.drawable.Drawable;
-import android.util.Property;
-import androidx.annotation.NonNull;
-import java.util.WeakHashMap;
-
 /* JADX INFO: loaded from: classes2.dex */
-public class e extends Property<Drawable, Integer> {
-    public static final Property<Drawable, Integer> b = new e();
+public final class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final WeakHashMap<Drawable, Integer> f20477a;
+    public static final int f20670a = 2131230889;
+    public static final int b = 2131230898;
 
-    public e() {
-        super(Integer.class, "drawableAlphaCompat");
-        this.f20477a = new WeakHashMap<>();
-    }
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public static final int f20671c = 2131230924;
 
-    @Override // android.util.Property
-    /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
-    public Integer get(@NonNull Drawable drawable) {
-        return Integer.valueOf(drawable.getAlpha());
-    }
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public static final int f20672d = 2131230945;
 
-    @Override // android.util.Property
-    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public void set(@NonNull Drawable drawable, @NonNull Integer num) {
-        drawable.setAlpha(num.intValue());
-    }
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public static final int f20673e = 2131230958;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    public static final int f20674f = 2131230960;
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name */
+    public static final int f20675g = 2131230968;
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name */
+    public static final int f20676h = 2131230969;
+
+    /* JADX INFO: renamed from: i, reason: collision with root package name */
+    public static final int f20677i = 2131230970;
+
+    /* JADX INFO: renamed from: j, reason: collision with root package name */
+    public static final int f20678j = 2131230979;
+
+    /* JADX INFO: renamed from: k, reason: collision with root package name */
+    public static final int f20679k = 2131230980;
+
+    /* JADX INFO: renamed from: l, reason: collision with root package name */
+    public static final int f20680l = 2131230982;
+
+    /* JADX INFO: renamed from: m, reason: collision with root package name */
+    public static final int f20681m = 2131231004;
 }

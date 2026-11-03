@@ -22,13 +22,13 @@ public class q extends e.p implements k2.b.d {
     public boolean A;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public boolean f15155z;
+    public boolean f15769z;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public final s f15153x = s.b(new a());
+    public final s f15767x = s.b(new a());
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public final androidx.p000lifecycle.u f15154y = new androidx.p000lifecycle.u(this);
+    public final androidx.p000lifecycle.u f15768y = new androidx.p000lifecycle.u(this);
     public boolean B = true;
 
     public class a extends t<q> implements l2.e, l2.f, k2.o, k2.p, c1, r0, g.g, d5.i, e0, androidx.core.view.o {
@@ -36,27 +36,21 @@ public class q extends e.p implements k2.b.d {
             super(q.this);
         }
 
-        @Override // d5.i
-        @NonNull
-        public d5.f A() {
-            return q.this.A();
-        }
-
         @Override // e.r0
         @NonNull
-        public e.p0 Q() {
-            return q.this.Q();
+        public e.p0 P() {
+            return q.this.P();
         }
 
         @Override // androidx.core.view.o
-        public void R(@NonNull androidx.core.view.r rVar) {
-            q.this.R(rVar);
+        public void Q(@NonNull androidx.core.view.r rVar) {
+            q.this.Q(rVar);
         }
 
         @Override // androidx.p000lifecycle.s
         @NonNull
         public androidx.p000lifecycle.l a() {
-            return q.this.f15154y;
+            return q.this.f15768y;
         }
 
         @Override // e4.e0
@@ -145,18 +139,24 @@ public class q extends e.p implements k2.b.d {
 
         @Override // androidx.p000lifecycle.c1
         @NonNull
-        public b1 w() {
-            return q.this.w();
+        public b1 v() {
+            return q.this.v();
         }
 
         @Override // k2.o
-        public void y(@NonNull x2.a<k2.h> aVar) {
-            q.this.y(aVar);
+        public void x(@NonNull x2.a<k2.h> aVar) {
+            q.this.x(aVar);
         }
 
         @Override // k2.p
-        public void z(@NonNull x2.a<k2.s> aVar) {
-            q.this.z(aVar);
+        public void y(@NonNull x2.a<k2.s> aVar) {
+            q.this.y(aVar);
+        }
+
+        @Override // d5.i
+        @NonNull
+        public d5.f z() {
+            return q.this.z();
         }
     }
 
@@ -166,33 +166,33 @@ public class q extends e.p implements k2.b.d {
 
     public static /* synthetic */ Bundle i1(q qVar) {
         qVar.o1();
-        qVar.f15154y.j(androidx.lifecycle.l.a.ON_STOP);
+        qVar.f15768y.j(androidx.lifecycle.l.a.ON_STOP);
         return new Bundle();
     }
 
     private void n1() {
-        A().c("android:support:lifecycle", new d5.f.b() { // from class: e4.m
+        z().c("android:support:lifecycle", new d5.f.b() { // from class: e4.m
             @Override // d5.f.b
             public final Bundle a() {
-                return q.i1(this.f15146a);
+                return q.i1(this.f15760a);
             }
         });
         g0(new x2.a() { // from class: e4.n
             @Override // x2.a
             public final void accept(Object obj) {
-                this.f15148a.f15153x.m();
+                this.f15762a.f15767x.m();
             }
         });
         O0(new x2.a() { // from class: e4.o
             @Override // x2.a
             public final void accept(Object obj) {
-                this.f15150a.f15153x.m();
+                this.f15764a.f15767x.m();
             }
         });
         N0(new f.b() { // from class: e4.p
             @Override // f.b
             public final void a(Context context) {
-                this.f15152a.f15153x.a(null);
+                this.f15766a.f15767x.a(null);
             }
         });
     }
@@ -201,8 +201,8 @@ public class q extends e.p implements k2.b.d {
         boolean zP1 = false;
         for (androidx.fragment.app.c cVar : fragmentManager.z0()) {
             if (cVar != null) {
-                if (cVar.G() != null) {
-                    zP1 |= p1(cVar.v(), bVar);
+                if (cVar.F() != null) {
+                    zP1 |= p1(cVar.u(), bVar);
                 }
                 k0 k0Var = cVar.W;
                 if (k0Var != null && k0Var.a().getState().b(androidx.lifecycle.l.b.STARTED)) {
@@ -220,7 +220,7 @@ public class q extends e.p implements k2.b.d {
 
     @Override // k2.b.d
     @Deprecated
-    public final void P(int i10) {
+    public final void O(int i10) {
     }
 
     @Override // android.app.Activity
@@ -234,7 +234,7 @@ public class q extends e.p implements k2.b.d {
             String str2 = str + "  ";
             printWriter.print(str2);
             printWriter.print("mCreated=");
-            printWriter.print(this.f15155z);
+            printWriter.print(this.f15769z);
             printWriter.print(" mResumed=");
             printWriter.print(this.A);
             printWriter.print(" mStopped=");
@@ -242,17 +242,17 @@ public class q extends e.p implements k2.b.d {
             if (getApplication() != null) {
                 m4.a.b(this).a(str2, fileDescriptor, printWriter, strArr);
             }
-            this.f15153x.l().b0(str, fileDescriptor, printWriter, strArr);
+            this.f15767x.l().b0(str, fileDescriptor, printWriter, strArr);
         }
     }
 
     public final View k1(View view, @NonNull String str, @NonNull Context context, @NonNull AttributeSet attributeSet) {
-        return this.f15153x.n(view, str, context, attributeSet);
+        return this.f15767x.n(view, str, context, attributeSet);
     }
 
     @NonNull
     public FragmentManager l1() {
-        return this.f15153x.l();
+        return this.f15767x.l();
     }
 
     @NonNull
@@ -268,15 +268,15 @@ public class q extends e.p implements k2.b.d {
 
     @Override // e.p, android.app.Activity
     public void onActivityResult(int i10, int i11, Intent intent) {
-        this.f15153x.m();
+        this.f15767x.m();
         super.onActivityResult(i10, i11, intent);
     }
 
     @Override // e.p, k2.g, android.app.Activity
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        this.f15154y.j(androidx.lifecycle.l.a.ON_CREATE);
-        this.f15153x.e();
+        this.f15768y.j(androidx.lifecycle.l.a.ON_CREATE);
+        this.f15767x.e();
     }
 
     @Override // android.app.Activity, android.view.LayoutInflater.Factory2
@@ -288,8 +288,8 @@ public class q extends e.p implements k2.b.d {
     @Override // android.app.Activity
     public void onDestroy() {
         super.onDestroy();
-        this.f15153x.f();
-        this.f15154y.j(androidx.lifecycle.l.a.ON_DESTROY);
+        this.f15767x.f();
+        this.f15768y.j(androidx.lifecycle.l.a.ON_DESTROY);
     }
 
     @Override // e.p, android.app.Activity, android.view.Window.Callback
@@ -298,7 +298,7 @@ public class q extends e.p implements k2.b.d {
             return true;
         }
         if (i10 == 6) {
-            return this.f15153x.d(menuItem);
+            return this.f15767x.d(menuItem);
         }
         return false;
     }
@@ -307,8 +307,8 @@ public class q extends e.p implements k2.b.d {
     public void onPause() {
         super.onPause();
         this.A = false;
-        this.f15153x.g();
-        this.f15154y.j(androidx.lifecycle.l.a.ON_PAUSE);
+        this.f15767x.g();
+        this.f15768y.j(androidx.lifecycle.l.a.ON_PAUSE);
     }
 
     @Override // android.app.Activity
@@ -319,35 +319,35 @@ public class q extends e.p implements k2.b.d {
 
     @Override // e.p, android.app.Activity
     public void onRequestPermissionsResult(int i10, @NonNull String[] strArr, @NonNull int[] iArr) {
-        this.f15153x.m();
+        this.f15767x.m();
         super.onRequestPermissionsResult(i10, strArr, iArr);
     }
 
     @Override // android.app.Activity
     public void onResume() {
-        this.f15153x.m();
+        this.f15767x.m();
         super.onResume();
         this.A = true;
-        this.f15153x.k();
+        this.f15767x.k();
     }
 
     @Override // android.app.Activity
     public void onStart() {
-        this.f15153x.m();
+        this.f15767x.m();
         super.onStart();
         this.B = false;
-        if (!this.f15155z) {
-            this.f15155z = true;
-            this.f15153x.c();
+        if (!this.f15769z) {
+            this.f15769z = true;
+            this.f15767x.c();
         }
-        this.f15153x.k();
-        this.f15154y.j(androidx.lifecycle.l.a.ON_START);
-        this.f15153x.i();
+        this.f15767x.k();
+        this.f15768y.j(androidx.lifecycle.l.a.ON_START);
+        this.f15767x.i();
     }
 
     @Override // android.app.Activity
     public void onStateNotSaved() {
-        this.f15153x.m();
+        this.f15767x.m();
     }
 
     @Override // android.app.Activity
@@ -355,8 +355,8 @@ public class q extends e.p implements k2.b.d {
         super.onStop();
         this.B = true;
         o1();
-        this.f15153x.j();
-        this.f15154y.j(androidx.lifecycle.l.a.ON_STOP);
+        this.f15767x.j();
+        this.f15768y.j(androidx.lifecycle.l.a.ON_STOP);
     }
 
     @Deprecated
@@ -364,8 +364,8 @@ public class q extends e.p implements k2.b.d {
     }
 
     public void r1() {
-        this.f15154y.j(androidx.lifecycle.l.a.ON_RESUME);
-        this.f15153x.h();
+        this.f15768y.j(androidx.lifecycle.l.a.ON_RESUME);
+        this.f15767x.h();
     }
 
     @Override // android.app.Activity, android.view.LayoutInflater.Factory

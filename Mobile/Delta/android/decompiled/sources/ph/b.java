@@ -1,20 +1,26 @@
 package ph;
 
-import androidx.annotation.NonNull;
-import java.util.ArrayList;
+import android.content.Context;
+import rg.q0;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class b {
-
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public ArrayList<Long> f28610a;
-
-    public b(@NonNull ArrayList<Long> arrayList) {
-        this.f28610a = arrayList;
-    }
-
-    @NonNull
-    public ArrayList<Long> a() {
-        return this.f28610a;
+    public static String a(Context context, String str) {
+        if (context == null) {
+            return null;
+        }
+        str.getClass();
+        switch (str) {
+            case "SETTINGS_TAG":
+                return context.getString(q0.L);
+            case "FRIENDS_TAG":
+                return context.getString(q0.C);
+            case "MESSAGES_TAG":
+                return context.getString(q0.F);
+            case "CATALOG_TAG":
+                return context.getString(q0.A);
+            default:
+                return null;
+        }
     }
 }

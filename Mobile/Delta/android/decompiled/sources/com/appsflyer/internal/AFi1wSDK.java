@@ -40,10 +40,10 @@ public final class AFi1wSDK extends AFi1ySDK {
         Object next;
         NetworkInfo networkInfo;
         ConnectivityManager unregisterClient = getUnregisterClient();
-        if (unregisterClient != null && (allNetworks = unregisterClient.getAllNetworks()) != null && (sequenceB = kotlin.collections.m.B(allNetworks)) != null && (sequenceY = iu.p.y(sequenceB, new Function1() { // from class: com.appsflyer.internal.f1
+        if (unregisterClient != null && (allNetworks = unregisterClient.getAllNetworks()) != null && (sequenceB = kotlin.collections.m.B(allNetworks)) != null && (sequenceY = gu.p.y(sequenceB, new Function1() { // from class: com.appsflyer.internal.f1
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return AFi1wSDK.J_(this.f5485a, (Network) obj);
+                return AFi1wSDK.J_(this.f5558a, (Network) obj);
             }
         })) != null) {
             Iterator it = sequenceY.iterator();

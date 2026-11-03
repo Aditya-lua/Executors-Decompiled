@@ -12,7 +12,7 @@ import java.util.Set;
 public class m {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Object f22110a = new Object();
+    public static final Object f22334a = new Object();
     public static final Object b = new Object();
 
     public static Bundle a(k.a aVar) {

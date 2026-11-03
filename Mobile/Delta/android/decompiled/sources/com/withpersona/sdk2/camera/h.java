@@ -2,31 +2,31 @@ package com.withpersona.sdk2.camera;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import dn.d0;
+import dn.h0;
+import dn.v;
 import f1.b2;
 import f1.e1;
 import f1.r;
 import f1.r0;
 import f1.w;
-import fn.d0;
-import fn.h0;
-import fn.v;
+import gt.n;
+import gt.o;
 import java.io.File;
 import java.util.concurrent.Executor;
-import jt.n;
-import jt.o;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
-import nu.c0;
-import nu.j;
+import lu.c0;
+import lu.j;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pt.m;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000R\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u0000 &2\u00020\u0001:\u0003\u0013\u0011\u0015B)\b\u0000\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\n\u0010\u000bJ\u0016\u0010\u000e\u001a\b\u0012\u0004\u0012\u00020\r0\fH\u0086@¢\u0006\u0004\b\u000e\u0010\u000fJ\u000f\u0010\u0011\u001a\u00020\u0010H\u0003¢\u0006\u0004\b\u0011\u0010\u0012R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0013\u0010\u0014R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010\u0016R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0011\u0010\u0017R\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0018\u0010\u0019R\u0014\u0010\u001c\u001a\u00020\u001a8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000e\u0010\u001bR\u001a\u0010!\u001a\b\u0012\u0004\u0012\u00020\u001e0\u001d8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001f\u0010 R\u0018\u0010%\u001a\u0004\u0018\u00010\"8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b#\u0010$¨\u0006'"}, d2 = {"Lcom/withpersona/sdk2/camera/h;", "", "Landroid/content/Context;", "context", "Lf1/r0;", "recorder", "Lqq/c;", "sdkFilesManager", "", "isAudioRequired", "<init>", "(Landroid/content/Context;Lf1/r0;Lqq/c;Z)V", "Ljt/n;", "Ljava/io/File;", "e", "(Lnt/b;)Ljava/lang/Object;", "", "c", "()V", "a", "Landroid/content/Context;", "b", "Lf1/r0;", "Lqq/c;", "d", "Z", "Ljava/util/concurrent/Executor;", "Ljava/util/concurrent/Executor;", "recordingExecutor", "Lnu/c0;", "Lcom/withpersona/sdk2/camera/h$c;", "f", "Lnu/c0;", "videoStateFlow", "Lcom/withpersona/sdk2/camera/h$b;", "g", "Lcom/withpersona/sdk2/camera/h$b;", "currentSession", "h", "camera_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000R\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u0000 &2\u00020\u0001:\u0003\u0013\u0011\u0015B)\b\u0000\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\n\u0010\u000bJ\u0016\u0010\u000e\u001a\b\u0012\u0004\u0012\u00020\r0\fH\u0086@¢\u0006\u0004\b\u000e\u0010\u000fJ\u000f\u0010\u0011\u001a\u00020\u0010H\u0003¢\u0006\u0004\b\u0011\u0010\u0012R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0013\u0010\u0014R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010\u0016R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0011\u0010\u0017R\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0018\u0010\u0019R\u0014\u0010\u001c\u001a\u00020\u001a8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000e\u0010\u001bR\u001a\u0010!\u001a\b\u0012\u0004\u0012\u00020\u001e0\u001d8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001f\u0010 R\u0018\u0010%\u001a\u0004\u0018\u00010\"8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b#\u0010$¨\u0006'"}, d2 = {"Lcom/withpersona/sdk2/camera/h;", "", "Landroid/content/Context;", "context", "Lf1/r0;", "recorder", "Loq/c;", "sdkFilesManager", "", "isAudioRequired", "<init>", "(Landroid/content/Context;Lf1/r0;Loq/c;Z)V", "Lgt/n;", "Ljava/io/File;", "e", "(Llt/b;)Ljava/lang/Object;", "", "c", "()V", "a", "Landroid/content/Context;", "b", "Lf1/r0;", "Loq/c;", "d", "Z", "Ljava/util/concurrent/Executor;", "Ljava/util/concurrent/Executor;", "recordingExecutor", "Llu/c0;", "Lcom/withpersona/sdk2/camera/h$c;", "f", "Llu/c0;", "videoStateFlow", "Lcom/withpersona/sdk2/camera/h$b;", "g", "Lcom/withpersona/sdk2/camera/h$b;", "currentSession", "h", "camera_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class h {
 
     /* JADX INFO: renamed from: h, reason: collision with root package name and from kotlin metadata */
@@ -43,7 +43,7 @@ public final class h {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final qq.c sdkFilesManager;
+    public final oq.c sdkFilesManager;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
     public final boolean isAudioRequired;
@@ -61,14 +61,14 @@ public final class h {
     public b currentSession;
 
     /* JADX INFO: renamed from: com.withpersona.sdk2.camera.h$a, reason: from kotlin metadata */
-    @Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J)\u0010\f\u001a\u00020\u000b*\u00020\u00042\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\b\u001a\u00020\u00072\u0006\u0010\n\u001a\u00020\t¢\u0006\u0004\b\f\u0010\r¨\u0006\u000e"}, d2 = {"Lcom/withpersona/sdk2/camera/h$a;", "", "<init>", "()V", "Lf1/r0;", "Landroid/content/Context;", "context", "Lqq/c;", "sdkFilesManager", "", "isAudioRequired", "Lcom/withpersona/sdk2/camera/h;", "a", "(Lf1/r0;Landroid/content/Context;Lqq/c;Z)Lcom/withpersona/sdk2/camera/h;", "camera_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J)\u0010\f\u001a\u00020\u000b*\u00020\u00042\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\b\u001a\u00020\u00072\u0006\u0010\n\u001a\u00020\t¢\u0006\u0004\b\f\u0010\r¨\u0006\u000e"}, d2 = {"Lcom/withpersona/sdk2/camera/h$a;", "", "<init>", "()V", "Lf1/r0;", "Landroid/content/Context;", "context", "Loq/c;", "sdkFilesManager", "", "isAudioRequired", "Lcom/withpersona/sdk2/camera/h;", "a", "(Lf1/r0;Landroid/content/Context;Loq/c;Z)Lcom/withpersona/sdk2/camera/h;", "camera_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class Companion {
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
             this();
         }
 
         @NotNull
-        public final h a(@NotNull r0 r0Var, @NotNull Context context, @NotNull qq.c sdkFilesManager, boolean z10) throws d0 {
+        public final h a(@NotNull r0 r0Var, @NotNull Context context, @NotNull oq.c sdkFilesManager, boolean z10) throws d0 {
             Intrinsics.checkNotNullParameter(r0Var, "<this>");
             Intrinsics.checkNotNullParameter(context, "context");
             Intrinsics.checkNotNullParameter(sdkFilesManager, "sdkFilesManager");
@@ -136,79 +136,79 @@ public final class h {
 
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f9975e = qt.b.a(a());
+        public static final /* synthetic */ ot.a f10056e = ot.b.a(a());
     }
 
-    @pt.f(c = "com.withpersona.sdk2.camera.RecordingHelper", f = "RecordingHelper.kt", l = {87}, m = "stop-IoAF18A")
+    @nt.f(c = "com.withpersona.sdk2.camera.RecordingHelper", f = "RecordingHelper.kt", l = {87}, m = "stop-IoAF18A")
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final class d extends pt.d {
+    public static final class d extends nt.d {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f9976t;
+        public Object f10057t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f9977u;
+        public Object f10058u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public /* synthetic */ Object f9978v;
+        public /* synthetic */ Object f10059v;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public int f9980x;
+        public int f10061x;
 
-        public d(nt.b<? super d> bVar) {
+        public d(lt.b<? super d> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
-            this.f9978v = obj;
-            this.f9980x |= Integer.MIN_VALUE;
+            this.f10059v = obj;
+            this.f10061x |= Integer.MIN_VALUE;
             Object objE = h.this.e(this);
-            return objE == ot.c.e() ? objE : n.a(objE);
+            return objE == mt.c.e() ? objE : n.a(objE);
         }
     }
 
+    @nt.f(c = "com.withpersona.sdk2.camera.RecordingHelper$stop$2", f = "RecordingHelper.kt", l = {}, m = "invokeSuspend")
     @Metadata(d1 = {"\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Lcom/withpersona/sdk2/camera/h$c;", "it", "", "<anonymous>", "(Lcom/withpersona/sdk2/camera/h$c;)Z"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.camera.RecordingHelper$stop$2", f = "RecordingHelper.kt", l = {}, m = "invokeSuspend")
-    public static final class e extends m implements Function2<c, nt.b<? super Boolean>, Object> {
+    public static final class e extends m implements Function2<c, lt.b<? super Boolean>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f9981t;
+        public int f10062t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public /* synthetic */ Object f9982u;
+        public /* synthetic */ Object f10063u;
 
-        public e(nt.b<? super e> bVar) {
+        public e(lt.b<? super e> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             e eVar = new e(bVar);
-            eVar.f9982u = obj;
+            eVar.f10063u = obj;
             return eVar;
         }
 
-        @Override // pt.a
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            c cVar = (c) this.f9982u;
-            ot.c.e();
-            if (this.f9981t != 0) {
+            c cVar = (c) this.f10063u;
+            mt.c.e();
+            if (this.f10062t != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
             o.b(obj);
-            return pt.b.a(cVar != c.Finalized);
+            return nt.b.a(cVar != c.Finalized);
         }
 
         @Override // kotlin.jvm.functions.Function2
-        /* JADX INFO: renamed from: q, reason: merged with bridge method [inline-methods] */
-        public final Object invoke(c cVar, nt.b<? super Boolean> bVar) {
-            return ((e) create(cVar, bVar)).invokeSuspend(Unit.f22483a);
+        /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
+        public final Object invoke(c cVar, lt.b<? super Boolean> bVar) {
+            return ((e) create(cVar, bVar)).invokeSuspend(Unit.f22938a);
         }
     }
 
-    public h(@NotNull Context context, @NotNull r0 recorder, @NotNull qq.c sdkFilesManager, boolean z10) {
+    public h(@NotNull Context context, @NotNull r0 recorder, @NotNull oq.c sdkFilesManager, boolean z10) {
         Intrinsics.checkNotNullParameter(context, "context");
         Intrinsics.checkNotNullParameter(recorder, "recorder");
         Intrinsics.checkNotNullParameter(sdkFilesManager, "sdkFilesManager");
@@ -219,7 +219,7 @@ public final class h {
         Executor executorI = l2.b.i(context);
         Intrinsics.checkNotNullExpressionValue(executorI, "getMainExecutor(...)");
         this.recordingExecutor = executorI;
-        this.videoStateFlow = nu.r0.a(c.NotStarted);
+        this.videoStateFlow = lu.r0.a(c.NotStarted);
     }
 
     public static final void d(h hVar, b2 event) {
@@ -263,10 +263,10 @@ public final class h {
             wVarD0.j();
         }
         Intrinsics.checkNotNullExpressionValue(wVarD0, "apply(...)");
-        e1 e1VarI = wVarD0.i(this.recordingExecutor, new x2.a() { // from class: fn.k0
+        e1 e1VarI = wVarD0.i(this.recordingExecutor, new x2.a() { // from class: dn.k0
             @Override // x2.a
             public final void accept(Object obj) {
-                com.withpersona.sdk2.camera.h.d(this.f16935a, (b2) obj);
+                com.withpersona.sdk2.camera.h.d(this.f15131a, (b2) obj);
             }
         });
         Intrinsics.checkNotNullExpressionValue(e1VarI, "start(...)");
@@ -275,24 +275,24 @@ public final class h {
 
     /* JADX WARN: Code duplicated, block: B:7:0x0013  */
     @Nullable
-    public final Object e(@NotNull nt.b<? super n<? extends File>> bVar) {
+    public final Object e(@NotNull lt.b<? super n<? extends File>> bVar) {
         d dVar;
         b bVar2;
         File file;
         if (bVar instanceof d) {
             dVar = (d) bVar;
-            int i10 = dVar.f9980x;
+            int i10 = dVar.f10061x;
             if ((i10 & Integer.MIN_VALUE) != 0) {
-                dVar.f9980x = i10 - Integer.MIN_VALUE;
+                dVar.f10061x = i10 - Integer.MIN_VALUE;
             } else {
                 dVar = new d(bVar);
             }
         } else {
             dVar = new d(bVar);
         }
-        Object obj = dVar.f9978v;
-        Object objE = ot.c.e();
-        int i11 = dVar.f9980x;
+        Object obj = dVar.f10059v;
+        Object objE = mt.c.e();
+        int i11 = dVar.f10061x;
         if (i11 == 0) {
             o.b(obj);
             b bVar3 = this.currentSession;
@@ -302,10 +302,10 @@ public final class h {
             }
             File outputFile = bVar3.getOutputFile();
             bVar3.e();
-            nu.h hVarN = j.N(this.videoStateFlow, new e(null));
-            dVar.f9976t = bVar3;
-            dVar.f9977u = outputFile;
-            dVar.f9980x = 1;
+            lu.h hVarN = j.N(this.videoStateFlow, new e(null));
+            dVar.f10057t = bVar3;
+            dVar.f10058u = outputFile;
+            dVar.f10061x = 1;
             if (j.i(hVarN, dVar) == objE) {
                 return objE;
             }
@@ -315,8 +315,8 @@ public final class h {
             if (i11 != 1) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            file = (File) dVar.f9977u;
-            bVar2 = (b) dVar.f9976t;
+            file = (File) dVar.f10058u;
+            bVar2 = (b) dVar.f10057t;
             o.b(obj);
         }
         Throwable error = bVar2.getError();

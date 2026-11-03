@@ -14,37 +14,37 @@ import java.util.Objects;
 public final class da implements Application.ActivityLifecycleCallbacks, ba {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ qa f25454a;
+    public final /* synthetic */ qa f26275a;
 
     public da(qa qaVar) {
         Objects.requireNonNull(qaVar);
-        this.f25454a = qaVar;
+        this.f26275a = qaVar;
     }
 
     @Override // nb.ba
     public final void a(zzdf zzdfVar) {
-        g7 g7Var = this.f25454a.f25625a;
+        g7 g7Var = this.f26275a.f26446a;
         g7Var.I().x(zzdfVar);
         ld ldVarZ = g7Var.z();
-        g7 g7Var2 = ldVarZ.f25625a;
+        g7 g7Var2 = ldVarZ.f26446a;
         g7Var2.b().t(new dd(ldVarZ, g7Var2.e().b()));
     }
 
     @Override // nb.ba
     public final void b(zzdf zzdfVar) {
-        this.f25454a.f25625a.I().z(zzdfVar);
+        this.f26275a.f26446a.I().z(zzdfVar);
     }
 
     @Override // nb.ba
     public final void c(zzdf zzdfVar, Bundle bundle) {
-        this.f25454a.f25625a.I().y(zzdfVar, bundle);
+        this.f26275a.f26446a.I().y(zzdfVar, bundle);
     }
 
     @Override // nb.ba
     public final void d(zzdf zzdfVar) {
-        g7 g7Var = this.f25454a.f25625a;
+        g7 g7Var = this.f26275a.f26446a;
         ld ldVarZ = g7Var.z();
-        g7 g7Var2 = ldVarZ.f25625a;
+        g7 g7Var2 = ldVarZ.f26446a;
         g7Var2.b().t(new cd(ldVarZ, g7Var2.e().b()));
         g7Var.I().w(zzdfVar);
     }
@@ -56,10 +56,10 @@ public final class da implements Application.ActivityLifecycleCallbacks, ba {
         Uri uri;
         try {
             try {
-                qa qaVar = this.f25454a;
-                g7 g7Var2 = qaVar.f25625a;
+                qa qaVar = this.f26275a;
+                g7 g7Var2 = qaVar.f26446a;
                 g7Var2.a().w().a("onActivityCreated");
-                Intent intent = zzdfVar.f6978h;
+                Intent intent = zzdfVar.f7052h;
                 if (intent != null) {
                     Uri data = intent.getData();
                     if (data == null || !data.isHierarchical()) {
@@ -85,16 +85,16 @@ public final class da implements Application.ActivityLifecycleCallbacks, ba {
                             g7Var2.b().t(new ca(daVar, bundle == null, uri, str, queryParameter));
                         } catch (RuntimeException e10) {
                             e = e10;
-                            daVar.f25454a.f25625a.a().o().b("Throwable caught in onActivityCreated", e);
+                            daVar.f26275a.f26446a.a().o().b("Throwable caught in onActivityCreated", e);
                         }
-                        g7Var = daVar.f25454a.f25625a;
+                        g7Var = daVar.f26275a.f26446a;
                     }
                     g7Var.I().v(zzdfVar, bundle);
                 }
-                g7Var = qaVar.f25625a;
+                g7Var = qaVar.f26446a;
             } catch (Throwable th2) {
                 th = th2;
-                daVar.f25454a.f25625a.I().v(zzdfVar, bundle);
+                daVar.f26275a.f26446a.I().v(zzdfVar, bundle);
                 throw th;
             }
         } catch (RuntimeException e11) {
@@ -103,7 +103,7 @@ public final class da implements Application.ActivityLifecycleCallbacks, ba {
         } catch (Throwable th3) {
             th = th3;
             daVar = this;
-            daVar.f25454a.f25625a.I().v(zzdfVar, bundle);
+            daVar.f26275a.f26446a.I().v(zzdfVar, bundle);
             throw th;
         }
         g7Var.I().v(zzdfVar, bundle);

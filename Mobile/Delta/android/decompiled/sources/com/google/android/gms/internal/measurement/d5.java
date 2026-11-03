@@ -6,7 +6,7 @@ public final class d5 extends cb implements pc {
         throw null;
     }
 
-    public final boolean A() {
+    public final boolean B() {
         return ((e5) this.b).G();
     }
 
@@ -30,7 +30,7 @@ public final class d5 extends cb implements pc {
         return ((e5) this.b).N();
     }
 
-    public final String x() {
+    public final String y() {
         return ((e5) this.b).F();
     }
 

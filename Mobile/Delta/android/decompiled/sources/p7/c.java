@@ -8,18 +8,18 @@ public enum c {
 
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f28380a;
+    public final String f28599a;
 
     c(String str) {
-        this.f28380a = str;
+        this.f28599a = str;
     }
 
     public String b() {
-        return ".temp" + this.f28380a;
+        return ".temp" + this.f28599a;
     }
 
     @Override // java.lang.Enum
     public String toString() {
-        return this.f28380a;
+        return this.f28599a;
     }
 }

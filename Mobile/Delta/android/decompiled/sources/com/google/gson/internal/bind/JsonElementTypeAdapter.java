@@ -69,7 +69,7 @@ class JsonElementTypeAdapter extends a0<l> {
         }
         if (i10 == 6) {
             jsonReader.nextNull();
-            return n.f21439a;
+            return n.f21898a;
         }
         throw new IllegalStateException("Unexpected token: " + jsonToken);
     }

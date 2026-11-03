@@ -10,20 +10,20 @@ import java.util.List;
 public class q {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object f35529a;
+    public final Object f36386a;
 
     public static class a extends AccessibilityNodeProvider {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final q f35530a;
+        public final q f36387a;
 
         public a(q qVar) {
-            this.f35530a = qVar;
+            this.f36387a = qVar;
         }
 
         @Override // android.view.accessibility.AccessibilityNodeProvider
         public AccessibilityNodeInfo createAccessibilityNodeInfo(int i10) {
-            p pVarB = this.f35530a.b(i10);
+            p pVarB = this.f36387a.b(i10);
             if (pVarB == null) {
                 return null;
             }
@@ -32,7 +32,7 @@ public class q {
 
         @Override // android.view.accessibility.AccessibilityNodeProvider
         public List<AccessibilityNodeInfo> findAccessibilityNodeInfosByText(String str, int i10) {
-            List<p> listC = this.f35530a.c(str, i10);
+            List<p> listC = this.f36387a.c(str, i10);
             if (listC == null) {
                 return null;
             }
@@ -46,7 +46,7 @@ public class q {
 
         @Override // android.view.accessibility.AccessibilityNodeProvider
         public AccessibilityNodeInfo findFocus(int i10) {
-            p pVarD = this.f35530a.d(i10);
+            p pVarD = this.f36387a.d(i10);
             if (pVarD == null) {
                 return null;
             }
@@ -55,7 +55,7 @@ public class q {
 
         @Override // android.view.accessibility.AccessibilityNodeProvider
         public boolean performAction(int i10, int i11, Bundle bundle) {
-            return this.f35530a.f(i10, i11, bundle);
+            return this.f36387a.f(i10, i11, bundle);
         }
     }
 
@@ -66,12 +66,12 @@ public class q {
 
         @Override // android.view.accessibility.AccessibilityNodeProvider
         public void addExtraDataToAccessibilityNodeInfo(int i10, AccessibilityNodeInfo accessibilityNodeInfo, String str, Bundle bundle) {
-            this.f35530a.a(i10, p.O0(accessibilityNodeInfo), str, bundle);
+            this.f36387a.a(i10, p.O0(accessibilityNodeInfo), str, bundle);
         }
     }
 
     public q() {
-        this.f35529a = new b(this);
+        this.f36386a = new b(this);
     }
 
     public void a(int i10, p pVar, String str, Bundle bundle) {
@@ -90,7 +90,7 @@ public class q {
     }
 
     public Object e() {
-        return this.f35529a;
+        return this.f36386a;
     }
 
     public boolean f(int i10, int i11, Bundle bundle) {
@@ -98,6 +98,6 @@ public class q {
     }
 
     public q(Object obj) {
-        this.f35529a = obj;
+        this.f36386a = obj;
     }
 }

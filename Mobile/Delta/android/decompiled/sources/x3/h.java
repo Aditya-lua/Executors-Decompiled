@@ -1,11 +1,11 @@
 package x3;
 
+import gt.l;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import jt.l;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.collections.CollectionsKt;
@@ -15,18 +15,18 @@ import org.jetbrains.annotations.Nullable;
 import t3.a0;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000B\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\bÀ\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0003\u0010\u0004J\u0018\u0010\u0007\u001a\u00020\u00022\u0006\u0010\u0006\u001a\u00020\u0005H\u0096@¢\u0006\u0004\b\u0007\u0010\bJ \u0010\r\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\u00022\u0006\u0010\u000b\u001a\u00020\nH\u0096@¢\u0006\u0004\b\r\u0010\u000eJ\u0017\u0010\u0012\u001a\u00020\u00112\u0006\u0010\u0010\u001a\u00020\u000fH\u0002¢\u0006\u0004\b\u0012\u0010\u0013J'\u0010\u0018\u001a\u00020\f2\u0006\u0010\u0015\u001a\u00020\u00142\u0006\u0010\u0010\u001a\u00020\u00112\u0006\u0010\u0017\u001a\u00020\u0016H\u0002¢\u0006\u0004\b\u0018\u0010\u0019R\u0014\u0010\u001c\u001a\u00020\u00028VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\u001a\u0010\u001b¨\u0006\u001d"}, d2 = {"Lx3/h;", "Lt3/a0;", "Lx3/f;", "<init>", "()V", "Ljava/io/InputStream;", "input", "readFrom", "(Ljava/io/InputStream;Lnt/b;)Ljava/lang/Object;", "t", "Ljava/io/OutputStream;", "output", "", "d", "(Lx3/f;Ljava/io/OutputStream;Lnt/b;)Ljava/lang/Object;", "", "value", "Lw3/h;", "c", "(Ljava/lang/Object;)Lw3/h;", "", "name", "Lx3/c;", "mutablePreferences", "a", "(Ljava/lang/String;Lw3/h;Lx3/c;)V", "b", "()Lx3/f;", "defaultValue", "datastore-preferences-core_release"}, k = 1, mv = {1, 8, 0}, xi = 48)
+@Metadata(d1 = {"\u0000B\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\bÀ\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0003\u0010\u0004J\u0018\u0010\u0007\u001a\u00020\u00022\u0006\u0010\u0006\u001a\u00020\u0005H\u0096@¢\u0006\u0004\b\u0007\u0010\bJ \u0010\r\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\u00022\u0006\u0010\u000b\u001a\u00020\nH\u0096@¢\u0006\u0004\b\r\u0010\u000eJ\u0017\u0010\u0012\u001a\u00020\u00112\u0006\u0010\u0010\u001a\u00020\u000fH\u0002¢\u0006\u0004\b\u0012\u0010\u0013J'\u0010\u0018\u001a\u00020\f2\u0006\u0010\u0015\u001a\u00020\u00142\u0006\u0010\u0010\u001a\u00020\u00112\u0006\u0010\u0017\u001a\u00020\u0016H\u0002¢\u0006\u0004\b\u0018\u0010\u0019R\u0014\u0010\u001c\u001a\u00020\u00028VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\u001a\u0010\u001b¨\u0006\u001d"}, d2 = {"Lx3/h;", "Lt3/a0;", "Lx3/f;", "<init>", "()V", "Ljava/io/InputStream;", "input", "readFrom", "(Ljava/io/InputStream;Llt/b;)Ljava/lang/Object;", "t", "Ljava/io/OutputStream;", "output", "", "d", "(Lx3/f;Ljava/io/OutputStream;Llt/b;)Ljava/lang/Object;", "", "value", "Lw3/h;", "c", "(Ljava/lang/Object;)Lw3/h;", "", "name", "Lx3/c;", "mutablePreferences", "a", "(Ljava/lang/String;Lw3/h;Lx3/c;)V", "b", "()Lx3/f;", "defaultValue", "datastore-preferences-core_release"}, k = 1, mv = {1, 8, 0}, xi = 48)
 public final class h implements a0<f> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final h f34695a = new h();
+    public static final h f35193a = new h();
 
     @Metadata(k = 3, mv = {1, 8, 0}, xi = 48)
     public /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f34696a;
+        public static final /* synthetic */ int[] f35194a;
 
         static {
             int[] iArr = new int[w3.h.b.values().length];
@@ -66,13 +66,13 @@ public final class h implements a0<f> {
                 iArr[w3.h.b.VALUE_NOT_SET.ordinal()] = 9;
             } catch (NoSuchFieldError unused9) {
             }
-            f34696a = iArr;
+            f35194a = iArr;
         }
     }
 
     public final void a(String name, w3.h value, c mutablePreferences) throws t3.d {
         w3.h.b bVarM0 = value.m0();
-        switch (bVarM0 == null ? -1 : a.f34696a[bVarM0.ordinal()]) {
+        switch (bVarM0 == null ? -1 : a.f35194a[bVarM0.ordinal()]) {
             case -1:
                 throw new t3.d("Value case is null.", null, 2, null);
             case 0:
@@ -173,19 +173,19 @@ public final class h implements a0<f> {
     @Override // t3.a0
     @Nullable
     /* JADX INFO: renamed from: d, reason: merged with bridge method [inline-methods] */
-    public Object writeTo(@NotNull f fVar, @NotNull OutputStream outputStream, @NotNull nt.b<? super Unit> bVar) {
+    public Object writeTo(@NotNull f fVar, @NotNull OutputStream outputStream, @NotNull lt.b<? super Unit> bVar) {
         Map<f.a<?>, Object> mapA = fVar.a();
         w3.f.a aVarA0 = w3.f.a0();
         for (Map.Entry<f.a<?>, Object> entry : mapA.entrySet()) {
             aVarA0.E(entry.getKey().getName(), c(entry.getValue()));
         }
         aVarA0.build().p(outputStream);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     @Override // t3.a0
     @Nullable
-    public Object readFrom(@NotNull InputStream inputStream, @NotNull nt.b<? super f> bVar) throws t3.d {
+    public Object readFrom(@NotNull InputStream inputStream, @NotNull lt.b<? super f> bVar) throws t3.d {
         w3.f fVarA = w3.d.INSTANCE.a(inputStream);
         c cVarB = g.b(new f.b[0]);
         Map<String, w3.h> mapX = fVarA.X();
@@ -193,7 +193,7 @@ public final class h implements a0<f> {
         for (Map.Entry<String, w3.h> entry : mapX.entrySet()) {
             String name = entry.getKey();
             w3.h value = entry.getValue();
-            h hVar = f34695a;
+            h hVar = f35193a;
             Intrinsics.checkNotNullExpressionValue(name, "name");
             Intrinsics.checkNotNullExpressionValue(value, "value");
             hVar.a(name, value, cVarB);

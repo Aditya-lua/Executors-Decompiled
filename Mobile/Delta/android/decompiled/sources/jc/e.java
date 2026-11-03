@@ -1,25 +1,31 @@
 package jc;
 
-import android.R;
-import android.animation.ObjectAnimator;
-import android.animation.StateListAnimator;
-import android.view.View;
+import android.graphics.drawable.Drawable;
+import android.util.Property;
 import androidx.annotation.NonNull;
-import hc.g;
+import java.util.WeakHashMap;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class e {
+public class e extends Property<Drawable, Integer> {
+    public static final Property<Drawable, Integer> b = new e();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final int[] f21260a = {R.attr.stateListAnimator};
+    public final WeakHashMap<Drawable, Integer> f21818a;
 
-    public static void a(@NonNull View view, float f10) {
-        int integer = view.getResources().getInteger(g.f18885a);
-        StateListAnimator stateListAnimator = new StateListAnimator();
-        long j10 = integer;
-        stateListAnimator.addState(new int[]{R.attr.state_enabled, hc.b.f18772c0, -hc.b.f18774d0}, ObjectAnimator.ofFloat(view, "elevation", 0.0f).setDuration(j10));
-        stateListAnimator.addState(new int[]{R.attr.state_enabled}, ObjectAnimator.ofFloat(view, "elevation", f10).setDuration(j10));
-        stateListAnimator.addState(new int[0], ObjectAnimator.ofFloat(view, "elevation", 0.0f).setDuration(0L));
-        view.setStateListAnimator(stateListAnimator);
+    public e() {
+        super(Integer.class, "drawableAlphaCompat");
+        this.f21818a = new WeakHashMap<>();
+    }
+
+    @Override // android.util.Property
+    /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
+    public Integer get(@NonNull Drawable drawable) {
+        return Integer.valueOf(drawable.getAlpha());
+    }
+
+    @Override // android.util.Property
+    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+    public void set(@NonNull Drawable drawable, @NonNull Integer num) {
+        drawable.setAlpha(num.intValue());
     }
 }

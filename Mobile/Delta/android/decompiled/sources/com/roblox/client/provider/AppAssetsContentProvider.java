@@ -9,21 +9,21 @@ import android.net.Uri;
 import android.os.ParcelFileDescriptor;
 import android.webkit.MimeTypeMap;
 import com.roblox.client.personasdk.BuildConfig;
-import gk.p;
+import ek.q;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import th.h;
+import rh.h;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class AppAssetsContentProvider extends ContentProvider {
     public static final String[] b = {"_display_name", "_size"};
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f9177a = "AppAssetsContentProvider";
+    public final String f9250a = "AppAssetsContentProvider";
 
     public final boolean a() {
-        if (!h.a().D1()) {
+        if (!h.a().N1()) {
             return true;
         }
         String callingPackage = getCallingPackage();
@@ -40,7 +40,7 @@ public class AppAssetsContentProvider extends ContentProvider {
 
     @Override // android.content.ContentProvider
     public String getType(Uri uri) {
-        p.b("AppAssetsContentProvider", "getType: " + uri.toString());
+        q.b("AppAssetsContentProvider", "getType: " + uri.toString());
         String mimeTypeFromExtension = MimeTypeMap.getSingleton().getMimeTypeFromExtension(MimeTypeMap.getFileExtensionFromUrl(uri.toString()));
         return mimeTypeFromExtension != null ? mimeTypeFromExtension : "application/octet-stream";
     }
@@ -57,7 +57,7 @@ public class AppAssetsContentProvider extends ContentProvider {
 
     @Override // android.content.ContentProvider
     public AssetFileDescriptor openAssetFile(Uri uri, String str) throws FileNotFoundException {
-        p.b("AppAssetsContentProvider", "openAssetFile: " + uri.toString());
+        q.b("AppAssetsContentProvider", "openAssetFile: " + uri.toString());
         if (!a()) {
             return null;
         }
@@ -78,7 +78,7 @@ public class AppAssetsContentProvider extends ContentProvider {
     @Override // android.content.ContentProvider
     public Cursor query(Uri uri, String[] strArr, String str, String[] strArr2, String str2) {
         int i10;
-        p.b("AppAssetsContentProvider", "query: " + uri.toString());
+        q.b("AppAssetsContentProvider", "query: " + uri.toString());
         if (!a()) {
             return null;
         }

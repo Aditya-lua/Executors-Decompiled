@@ -17,37 +17,37 @@ import java.util.concurrent.TimeoutException;
 public class z0 {
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final long f8837i = TimeUnit.HOURS.toSeconds(8);
+    public static final long f8911i = TimeUnit.HOURS.toSeconds(8);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f8838a;
+    public final Context f8912a;
     public final g0 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final b0 f8839c;
+    public final b0 f8913c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final FirebaseMessaging f8840d;
+    public final FirebaseMessaging f8914d;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final ScheduledExecutorService f8842f;
+    public final ScheduledExecutorService f8916f;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final x0 f8844h;
+    public final x0 f8918h;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Map<String, ArrayDeque<sb.k<Void>>> f8841e = new w1.a();
+    public final Map<String, ArrayDeque<sb.k<Void>>> f8915e = new w1.a();
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public boolean f8843g = false;
+    public boolean f8917g = false;
 
     public z0(FirebaseMessaging firebaseMessaging, g0 g0Var, x0 x0Var, b0 b0Var, Context context, @NonNull ScheduledExecutorService scheduledExecutorService) {
-        this.f8840d = firebaseMessaging;
+        this.f8914d = firebaseMessaging;
         this.b = g0Var;
-        this.f8844h = x0Var;
-        this.f8839c = b0Var;
-        this.f8838a = context;
-        this.f8842f = scheduledExecutorService;
+        this.f8918h = x0Var;
+        this.f8913c = b0Var;
+        this.f8912a = context;
+        this.f8916f = scheduledExecutorService;
     }
 
     public static /* synthetic */ z0 a(Context context, ScheduledExecutorService scheduledExecutorService, FirebaseMessaging firebaseMessaging, g0 g0Var, b0 b0Var) {
@@ -85,33 +85,33 @@ public class z0 {
     }
 
     public final void c(String str) throws IOException {
-        b(this.f8839c.l(this.f8840d.k(), str));
+        b(this.f8913c.l(this.f8914d.k(), str));
     }
 
     public final void d(String str) throws IOException {
-        b(this.f8839c.m(this.f8840d.k(), str));
+        b(this.f8913c.m(this.f8914d.k(), str));
     }
 
     public boolean f() {
-        return this.f8844h.b() != null;
+        return this.f8918h.b() != null;
     }
 
     public synchronized boolean h() {
-        return this.f8843g;
+        return this.f8917g;
     }
 
     public final void i(w0 w0Var) {
-        synchronized (this.f8841e) {
+        synchronized (this.f8915e) {
             try {
                 String strE = w0Var.e();
-                if (this.f8841e.containsKey(strE)) {
-                    ArrayDeque<sb.k<Void>> arrayDeque = this.f8841e.get(strE);
+                if (this.f8915e.containsKey(strE)) {
+                    ArrayDeque<sb.k<Void>> arrayDeque = this.f8915e.get(strE);
                     sb.k<Void> kVarPoll = arrayDeque.poll();
                     if (kVarPoll != null) {
                         kVarPoll.c(null);
                     }
                     if (arrayDeque.isEmpty()) {
-                        this.f8841e.remove(strE);
+                        this.f8915e.remove(strE);
                     }
                 }
             } catch (Throwable th2) {
@@ -160,11 +160,11 @@ public class z0 {
     }
 
     public void k(Runnable runnable, long j10) {
-        this.f8842f.schedule(runnable, j10, TimeUnit.SECONDS);
+        this.f8916f.schedule(runnable, j10, TimeUnit.SECONDS);
     }
 
     public synchronized void l(boolean z10) {
-        this.f8843g = z10;
+        this.f8917g = z10;
     }
 
     public final void m() {
@@ -184,7 +184,7 @@ public class z0 {
         while (true) {
             synchronized (this) {
                 try {
-                    w0 w0VarB = this.f8844h.b();
+                    w0 w0VarB = this.f8918h.b();
                     if (w0VarB == null) {
                         if (g()) {
                             Log.d("FirebaseMessaging", "topic sync succeeded");
@@ -194,7 +194,7 @@ public class z0 {
                     if (!j(w0VarB)) {
                         return false;
                     }
-                    this.f8844h.d(w0VarB);
+                    this.f8918h.d(w0VarB);
                     i(w0VarB);
                 } catch (Throwable th2) {
                     throw th2;
@@ -204,7 +204,7 @@ public class z0 {
     }
 
     public void p(long j10) {
-        k(new a1(this, this.f8838a, this.b, Math.min(Math.max(30L, 2 * j10), f8837i)), j10);
+        k(new a1(this, this.f8912a, this.b, Math.min(Math.max(30L, 2 * j10), f8911i)), j10);
         l(true);
     }
 }

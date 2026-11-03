@@ -14,7 +14,7 @@ public abstract class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NotNull
-        public static final a f3950a = new a();
+        public static final a f3848a = new a();
 
         public a() {
             super(null);

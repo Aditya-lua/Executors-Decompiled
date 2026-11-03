@@ -1,8 +1,8 @@
 package com.withpersona.sdk2.inquiry.tracking;
 
 import android.content.Context;
-import ft.d;
-import ft.i;
+import dt.d;
+import dt.i;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class TrackingMetadataProvider_Factory implements d<TrackingMetadataProvider> {
@@ -20,7 +20,7 @@ public final class TrackingMetadataProvider_Factory implements d<TrackingMetadat
         return new TrackingMetadataProvider(context);
     }
 
-    @Override // ht.a
+    @Override // ft.a
     public TrackingMetadataProvider get() {
         return newInstance(this.contextProvider.get());
     }

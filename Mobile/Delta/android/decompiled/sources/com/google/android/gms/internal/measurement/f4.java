@@ -13,7 +13,7 @@ public final class f4 extends gb implements pc {
     static {
         f4 f4Var = new f4();
         zzi = f4Var;
-        gb.u(f4.class, f4Var);
+        gb.t(f4.class, f4Var);
     }
 
     public static f4 Q() {
@@ -27,7 +27,7 @@ public final class f4 extends gb implements pc {
             return (byte) 1;
         }
         if (i11 == 2) {
-            return gb.v(zzi, "\u0004\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001᠌\u0000\u0002ဇ\u0001\u0003ဈ\u0002\u0004ဈ\u0003\u0005ဈ\u0004", new Object[]{"zzb", "zzd", d4.f6416a, "zze", "zzf", "zzg", "zzh"});
+            return gb.v(zzi, "\u0004\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001᠌\u0000\u0002ဇ\u0001\u0003ဈ\u0002\u0004ဈ\u0003\u0005ဈ\u0004", new Object[]{"zzb", "zzd", d4.f6489a, "zze", "zzf", "zzg", "zzh"});
         }
         if (i11 == 3) {
             return new f4();

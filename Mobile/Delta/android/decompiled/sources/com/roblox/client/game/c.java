@@ -9,52 +9,51 @@ import androidx.fragment.app.h;
 import com.roblox.client.ActivityNativeMain;
 import com.roblox.client.d;
 import e4.q;
-import gk.p;
 import java.util.concurrent.Executors;
-import sg.a1;
-import wh.j0;
-import wh.t0;
+import rg.a1;
+import uh.k0;
+import uh.u0;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class c {
     public ExperienceSession b;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public b f9107a = b.GAME_STATE_NONE;
+    public b f9180a = b.GAME_STATE_NONE;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public long f9108c = 0;
+    public long f9181c = 0;
 
     public class a implements Runnable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ Activity f9109a;
-        public final /* synthetic */ j0 b;
+        public final /* synthetic */ Activity f9182a;
+        public final /* synthetic */ k0 b;
 
-        public a(Activity activity, j0 j0Var) {
-            this.f9109a = activity;
-            this.b = j0Var;
+        public a(Activity activity, k0 k0Var) {
+            this.f9182a = activity;
+            this.b = k0Var;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            FragmentManager fragmentManagerL1 = ((q) this.f9109a).l1();
-            androidx.fragment.app.c cVarN0 = ((q) this.f9109a).l1().n0(rh.a.class.getName());
+            FragmentManager fragmentManagerL1 = ((q) this.f9182a).l1();
+            androidx.fragment.app.c cVarN0 = ((q) this.f9182a).l1().n0(ph.a.class.getName());
             if (cVarN0 == null || fragmentManagerL1.U0()) {
-                p.e("GameManager", "Gaming protocol is trying to send launch request when game is running.");
+                ek.q.e("GameManager", "Gaming protocol is trying to send launch request when game is running.");
             } else {
                 h hVarR = fragmentManagerL1.r();
                 hVarR.m(cVarN0);
                 hVarR.g();
             }
             if (c.this.b != null || fragmentManagerL1.U0()) {
-                p.e("GameManager", "Gaming protocol is trying to send launch request when game is running.");
+                ek.q.e("GameManager", "Gaming protocol is trying to send launch request when game is running.");
                 return;
             }
-            ExperienceSession experienceSessionE = c.this.e(this.f9109a, this.b);
+            ExperienceSession experienceSessionE = c.this.e(this.f9182a, this.b);
             c.this.b = experienceSessionE;
-            experienceSessionE.i0((ExperienceSession.d) this.f9109a);
-            experienceSessionE.l0();
+            experienceSessionE.k0((ExperienceSession.d) this.f9182a);
+            experienceSessionE.o0();
         }
     }
 
@@ -64,29 +63,29 @@ public class c {
         GAME_STATE_ENDED
     }
 
-    public final ExperienceSession e(Context context, j0 j0Var) {
+    public final ExperienceSession e(Context context, k0 k0Var) {
         Bundle bundle = new Bundle();
-        bundle.putLong("roblox_placeId", j0Var.p());
-        bundle.putLong("roblox_userId", j0Var.u());
-        bundle.putLong("roblox_conversationId", j0Var.f());
-        bundle.putString("roblox_accessCode", j0Var.d());
-        bundle.putString("roblox_linkCode", j0Var.o());
-        bundle.putString("roblox_gameId", j0Var.h());
-        bundle.putString("roblox_reservedServerAccessCode", j0Var.t());
-        bundle.putString("roblox_callId", j0Var.e());
-        bundle.putInt("roblox_joinRequestType", j0Var.s());
-        bundle.putString("roblox_referralPage", j0Var.q());
-        bundle.putString("roblox_launchData", j0Var.n());
-        bundle.putString("roblox_joinAttemptId", j0Var.l());
-        bundle.putString("roblox_joinAttemptOrigin", j0Var.m());
-        bundle.putString("roblox_isoContext", j0Var.k());
-        if (th.h.a().R2()) {
-            bundle.putLong("roblox_referredByPlayerId", j0Var.r());
+        bundle.putLong("roblox_placeId", k0Var.p());
+        bundle.putLong("roblox_userId", k0Var.u());
+        bundle.putLong("roblox_conversationId", k0Var.f());
+        bundle.putString("roblox_accessCode", k0Var.d());
+        bundle.putString("roblox_linkCode", k0Var.o());
+        bundle.putString("roblox_gameId", k0Var.h());
+        bundle.putString("roblox_reservedServerAccessCode", k0Var.t());
+        bundle.putString("roblox_callId", k0Var.e());
+        bundle.putInt("roblox_joinRequestType", k0Var.s());
+        bundle.putString("roblox_referralPage", k0Var.q());
+        bundle.putString("roblox_launchData", k0Var.n());
+        bundle.putString("roblox_joinAttemptId", k0Var.l());
+        bundle.putString("roblox_joinAttemptOrigin", k0Var.m());
+        bundle.putString("roblox_isoContext", k0Var.k());
+        if (rh.h.a().c3()) {
+            bundle.putLong("roblox_referredByPlayerId", k0Var.r());
         }
-        bundle.putString("roblox_gameJoinContext", j0Var.j());
-        bundle.putString("roblox_event_id", j0Var.g());
-        if (th.h.a().r3()) {
-            bundle.putString("game_id_to_exclude", j0Var.i());
+        bundle.putString("roblox_gameJoinContext", k0Var.j());
+        bundle.putString("roblox_event_id", k0Var.g());
+        if (rh.h.a().D3()) {
+            bundle.putString("game_id_to_exclude", k0Var.i());
         }
         return new ExperienceSession(bundle);
     }
@@ -95,96 +94,96 @@ public class c {
         if (!d.e().f()) {
             return true;
         }
-        p.h("GameManager", "canStartGame = false: Upgrade required");
+        ek.q.h("GameManager", "canStartGame = false: Upgrade required");
         return false;
     }
 
     public void g(boolean z10) {
-        p.b("GameManager", "endGameSession");
+        ek.q.b("GameManager", "endGameSession");
         ExperienceSession experienceSession = this.b;
         if (experienceSession != null) {
-            experienceSession.D(true);
+            experienceSession.F(true);
         } else {
-            p.e("GameManager", "Error: Try to end but no game session exists.");
+            ek.q.e("GameManager", "Error: Try to end but no game session exists.");
         }
     }
 
     public boolean h() {
-        return this.f9107a == b.GAME_STATE_ENDED;
+        return this.f9180a == b.GAME_STATE_ENDED;
     }
 
     public boolean i() {
-        return this.f9107a == b.GAME_STATE_STARTED;
+        return this.f9180a == b.GAME_STATE_STARTED;
     }
 
     /* JADX INFO: renamed from: k, reason: merged with bridge method [inline-methods] */
-    public final void j(Activity activity, j0 j0Var) {
-        if (j0Var == null) {
-            p.k("GameManager", "launchGameWithParams: game-params is null. Just close this activity!");
+    public final void j(Activity activity, k0 k0Var) {
+        if (k0Var == null) {
+            ek.q.k("GameManager", "launchGameWithParams: game-params is null. Just close this activity!");
             return;
         }
-        p.h("GameManager", "launchGameWithParams: Start game activity for placeId = " + j0Var.p());
+        ek.q.h("GameManager", "launchGameWithParams: Start game activity for placeId = " + k0Var.p());
         a1.U(activity).edit().remove("ROBLOXCrash").apply();
-        activity.runOnUiThread(new a(activity, j0Var));
-        this.f9108c = System.currentTimeMillis();
+        activity.runOnUiThread(new a(activity, k0Var));
+        this.f9181c = System.currentTimeMillis();
         m();
     }
 
     public void l(Context context) {
-        p.b("GameManager", "onGameEnded:");
-        this.f9107a = b.GAME_STATE_ENDED;
+        ek.q.b("GameManager", "onGameEnded:");
+        this.f9180a = b.GAME_STATE_ENDED;
         this.b = null;
         o();
     }
 
     public void m() {
-        p.b("GameManager", "onGameStarted:");
-        this.f9108c = System.currentTimeMillis();
-        this.f9107a = b.GAME_STATE_STARTED;
+        ek.q.b("GameManager", "onGameStarted:");
+        this.f9181c = System.currentTimeMillis();
+        this.f9180a = b.GAME_STATE_STARTED;
     }
 
     public void n() {
-        p.b("GameManager", "pauseGameSession");
+        ek.q.b("GameManager", "pauseGameSession");
         ExperienceSession experienceSession = this.b;
         if (experienceSession != null) {
-            experienceSession.Z();
+            experienceSession.b0();
         } else {
-            p.e("GameManager", "Error: Try to pause but no game session exists.");
+            ek.q.e("GameManager", "Error: Try to pause but no game session exists.");
         }
     }
 
     public void o() {
-        long jCurrentTimeMillis = System.currentTimeMillis() - this.f9108c;
-        p.h("GameManager", "Game duration: " + jCurrentTimeMillis + "ms.");
-        xg.a.e().m(jCurrentTimeMillis);
+        long jCurrentTimeMillis = System.currentTimeMillis() - this.f9181c;
+        ek.q.h("GameManager", "Game duration: " + jCurrentTimeMillis + "ms.");
+        wg.a.e().m(jCurrentTimeMillis);
     }
 
     public void p() {
-        p.b("GameManager", "resumeGameSession");
+        ek.q.b("GameManager", "resumeGameSession");
         ExperienceSession experienceSession = this.b;
         if (experienceSession != null) {
-            experienceSession.d0();
+            experienceSession.g0();
         } else {
-            p.e("GameManager", "Error: Try to resume but no game session exists.");
+            ek.q.e("GameManager", "Error: Try to resume but no game session exists.");
         }
     }
 
-    public void q(final Activity activity, final j0 j0Var, int i10) {
+    public void q(final Activity activity, final k0 k0Var, int i10) {
         if (!f()) {
-            p.h("GameManager", "Game launch halted - Can't start game.");
+            ek.q.h("GameManager", "Game launch halted - Can't start game.");
             return;
         }
-        p.b("GameManager", "startGameForResult: requestCode = " + i10);
-        ((ActivityNativeMain) activity).r3(t0.EXPERIENCE);
+        ek.q.b("GameManager", "startGameForResult: requestCode = " + i10);
+        ((ActivityNativeMain) activity).r3(u0.EXPERIENCE);
         if (Looper.getMainLooper().getThread() == Thread.currentThread()) {
-            Executors.newSingleThreadExecutor().submit(new Runnable() { // from class: wh.k0
+            Executors.newSingleThreadExecutor().submit(new Runnable() { // from class: uh.l0
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f34334a.j(activity, j0Var);
+                    this.f33013a.j(activity, k0Var);
                 }
             });
         } else {
-            j(activity, j0Var);
+            j(activity, k0Var);
         }
     }
 }

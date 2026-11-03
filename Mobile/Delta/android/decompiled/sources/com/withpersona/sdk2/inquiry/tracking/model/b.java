@@ -1,8 +1,8 @@
 package com.withpersona.sdk2.inquiry.tracking.model;
 
 import kotlin.collections.q0;
-import um.h;
-import um.w;
+import sm.h;
+import sm.w;
 
 /* JADX INFO: loaded from: classes3.dex */
 public abstract /* synthetic */ class b {

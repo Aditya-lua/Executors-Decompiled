@@ -128,6 +128,6 @@ public final class NetworkResponse {
     }
 
     public /* synthetic */ NetworkResponse(int i10, long j10, long j11, NetworkHeaders networkHeaders, r rVar, Object obj, int i11, DefaultConstructorMarker defaultConstructorMarker) {
-        this((i11 & 1) != 0 ? MlKitException.CODE_SCANNER_UNAVAILABLE : i10, (i11 & 2) != 0 ? 0L : j10, (i11 & 4) != 0 ? 0L : j11, (i11 & 8) != 0 ? NetworkHeaders.f31657c : networkHeaders, (i11 & 16) != 0 ? null : rVar, (i11 & 32) != 0 ? null : obj);
+        this((i11 & 1) != 0 ? MlKitException.CODE_SCANNER_UNAVAILABLE : i10, (i11 & 2) != 0 ? 0L : j10, (i11 & 4) != 0 ? 0L : j11, (i11 & 8) != 0 ? NetworkHeaders.f32176c : networkHeaders, (i11 & 16) != 0 ? null : rVar, (i11 & 32) != 0 ? null : obj);
     }
 }

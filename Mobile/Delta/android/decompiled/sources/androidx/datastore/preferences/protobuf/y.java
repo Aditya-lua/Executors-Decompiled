@@ -9,24 +9,24 @@ import java.util.RandomAccess;
 public final class y extends c<Integer> implements z.d, RandomAccess, a1 {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final y f2395d = new y(new int[0], 0, false);
+    public static final y f2240d = new y(new int[0], 0, false);
     public int[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f2396c;
+    public int f2241c;
 
     public y() {
         this(new int[10], 0, true);
     }
 
     private void f(int i10) {
-        if (i10 < 0 || i10 >= this.f2396c) {
+        if (i10 < 0 || i10 >= this.f2241c) {
             throw new IndexOutOfBoundsException(i(i10));
         }
     }
 
     private String i(int i10) {
-        return "Index:" + i10 + ", Size:" + this.f2396c;
+        return "Index:" + i10 + ", Size:" + this.f2241c;
     }
 
     @Override // androidx.datastore.preferences.protobuf.c, java.util.AbstractCollection, java.util.Collection, java.util.List
@@ -37,11 +37,11 @@ public final class y extends c<Integer> implements z.d, RandomAccess, a1 {
             return super.addAll(collection);
         }
         y yVar = (y) collection;
-        int i10 = yVar.f2396c;
+        int i10 = yVar.f2241c;
         if (i10 == 0) {
             return false;
         }
-        int i11 = this.f2396c;
+        int i11 = this.f2241c;
         if (Integer.MAX_VALUE - i11 < i10) {
             throw new OutOfMemoryError();
         }
@@ -50,8 +50,8 @@ public final class y extends c<Integer> implements z.d, RandomAccess, a1 {
         if (i12 > iArr.length) {
             this.b = Arrays.copyOf(iArr, i12);
         }
-        System.arraycopy(yVar.b, 0, this.b, this.f2396c, yVar.f2396c);
-        this.f2396c = i12;
+        System.arraycopy(yVar.b, 0, this.b, this.f2241c, yVar.f2241c);
+        this.f2241c = i12;
         ((AbstractList) this).modCount++;
         return true;
     }
@@ -76,7 +76,7 @@ public final class y extends c<Integer> implements z.d, RandomAccess, a1 {
 
     public void d(int i10) {
         a();
-        int i11 = this.f2396c;
+        int i11 = this.f2241c;
         int[] iArr = this.b;
         if (i11 == iArr.length) {
             int[] iArr2 = new int[((i11 * 3) / 2) + 1];
@@ -84,15 +84,15 @@ public final class y extends c<Integer> implements z.d, RandomAccess, a1 {
             this.b = iArr2;
         }
         int[] iArr3 = this.b;
-        int i12 = this.f2396c;
-        this.f2396c = i12 + 1;
+        int i12 = this.f2241c;
+        this.f2241c = i12 + 1;
         iArr3[i12] = i10;
     }
 
     public final void e(int i10, int i11) {
         int i12;
         a();
-        if (i10 < 0 || i10 > (i12 = this.f2396c)) {
+        if (i10 < 0 || i10 > (i12 = this.f2241c)) {
             throw new IndexOutOfBoundsException(i(i10));
         }
         int[] iArr = this.b;
@@ -101,11 +101,11 @@ public final class y extends c<Integer> implements z.d, RandomAccess, a1 {
         } else {
             int[] iArr2 = new int[((i12 * 3) / 2) + 1];
             System.arraycopy(iArr, 0, iArr2, 0, i10);
-            System.arraycopy(this.b, i10, iArr2, i10 + 1, this.f2396c - i10);
+            System.arraycopy(this.b, i10, iArr2, i10 + 1, this.f2241c - i10);
             this.b = iArr2;
         }
         this.b[i10] = i11;
-        this.f2396c++;
+        this.f2241c++;
         ((AbstractList) this).modCount++;
     }
 
@@ -118,11 +118,11 @@ public final class y extends c<Integer> implements z.d, RandomAccess, a1 {
             return super.equals(obj);
         }
         y yVar = (y) obj;
-        if (this.f2396c != yVar.f2396c) {
+        if (this.f2241c != yVar.f2241c) {
             return false;
         }
         int[] iArr = yVar.b;
-        for (int i10 = 0; i10 < this.f2396c; i10++) {
+        for (int i10 = 0; i10 < this.f2241c; i10++) {
             if (this.b[i10] != iArr[i10]) {
                 return false;
             }
@@ -144,7 +144,7 @@ public final class y extends c<Integer> implements z.d, RandomAccess, a1 {
     @Override // androidx.datastore.preferences.protobuf.c, java.util.AbstractList, java.util.Collection, java.util.List
     public int hashCode() {
         int i10 = 1;
-        for (int i11 = 0; i11 < this.f2396c; i11++) {
+        for (int i11 = 0; i11 < this.f2241c; i11++) {
             i10 = (i10 * 31) + this.b[i11];
         }
         return i10;
@@ -168,8 +168,8 @@ public final class y extends c<Integer> implements z.d, RandomAccess, a1 {
     @Override // androidx.datastore.preferences.protobuf.z.f
     /* JADX INFO: renamed from: k, reason: merged with bridge method [inline-methods] */
     public z.d o(int i10) {
-        if (i10 >= this.f2396c) {
-            return new y(Arrays.copyOf(this.b, i10), this.f2396c, true);
+        if (i10 >= this.f2241c) {
+            return new y(Arrays.copyOf(this.b, i10), this.f2241c, true);
         }
         throw new IllegalArgumentException();
     }
@@ -181,11 +181,11 @@ public final class y extends c<Integer> implements z.d, RandomAccess, a1 {
         f(i10);
         int[] iArr = this.b;
         int i11 = iArr[i10];
-        int i12 = this.f2396c;
+        int i12 = this.f2241c;
         if (i10 < i12 - 1) {
             System.arraycopy(iArr, i10 + 1, iArr, i10, (i12 - i10) - 1);
         }
-        this.f2396c--;
+        this.f2241c--;
         ((AbstractList) this).modCount++;
         return Integer.valueOf(i11);
     }
@@ -212,19 +212,19 @@ public final class y extends c<Integer> implements z.d, RandomAccess, a1 {
             throw new IndexOutOfBoundsException("toIndex < fromIndex");
         }
         int[] iArr = this.b;
-        System.arraycopy(iArr, i11, iArr, i10, this.f2396c - i11);
-        this.f2396c -= i11 - i10;
+        System.arraycopy(iArr, i11, iArr, i10, this.f2241c - i11);
+        this.f2241c -= i11 - i10;
         ((AbstractList) this).modCount++;
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public int size() {
-        return this.f2396c;
+        return this.f2241c;
     }
 
     public y(int[] iArr, int i10, boolean z10) {
         super(z10);
         this.b = iArr;
-        this.f2396c = i10;
+        this.f2241c = i10;
     }
 }

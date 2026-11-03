@@ -12,18 +12,18 @@ public final class h {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final Extras.c<String> f31614a = new Extras.c<>("GET");
+    public static final Extras.c<String> f32133a = new Extras.c<>("GET");
 
     @NotNull
-    public static final Extras.c<NetworkHeaders> b = new Extras.c<>(NetworkHeaders.f31657c);
+    public static final Extras.c<NetworkHeaders> b = new Extras.c<>(NetworkHeaders.f32176c);
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static final Extras.c<p> f31615c = new Extras.c<>(null);
+    public static final Extras.c<p> f32134c = new Extras.c<>(null);
 
     @Nullable
     public static final p a(@NotNull Options options) {
-        return (p) k6.m.b(options, f31615c);
+        return (p) k6.m.b(options, f32134c);
     }
 
     @NotNull
@@ -33,6 +33,6 @@ public final class h {
 
     @NotNull
     public static final String c(@NotNull Options options) {
-        return (String) k6.m.b(options, f31614a);
+        return (String) k6.m.b(options, f32133a);
     }
 }

@@ -7,14 +7,14 @@ import android.view.ViewGroup;
 public class x {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f1925a;
+    public int f1770a;
     public int b;
 
     public x(ViewGroup viewGroup) {
     }
 
     public int a() {
-        return this.f1925a | this.b;
+        return this.f1770a | this.b;
     }
 
     public void b(View view, View view2, int i10) {
@@ -25,7 +25,7 @@ public class x {
         if (i11 == 1) {
             this.b = i10;
         } else {
-            this.f1925a = i10;
+            this.f1770a = i10;
         }
     }
 
@@ -37,7 +37,7 @@ public class x {
         if (i10 == 1) {
             this.b = 0;
         } else {
-            this.f1925a = 0;
+            this.f1770a = 0;
         }
     }
 }

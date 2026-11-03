@@ -7,15 +7,15 @@ import android.os.Looper;
 public class j extends Handler {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Looper f4085a;
+    public final Looper f3983a;
 
     public j(Looper looper) {
         super(looper);
-        this.f4085a = Looper.getMainLooper();
+        this.f3983a = Looper.getMainLooper();
     }
 
     public j(Looper looper, Handler.Callback callback) {
         super(looper, callback);
-        this.f4085a = Looper.getMainLooper();
+        this.f3983a = Looper.getMainLooper();
     }
 }

@@ -6,15 +6,15 @@ import android.location.Location;
 public abstract class u {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final b f16035a;
+    public final b f16631a;
 
     public static abstract class a<T extends u, B> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final b.a<?> f16036a;
+        public final b.a<?> f16632a;
 
         public a(b.a<?> aVar) {
-            this.f16036a = aVar;
+            this.f16632a = aVar;
             aVar.b(0L);
             aVar.a(0L);
         }
@@ -36,18 +36,18 @@ public abstract class u {
     }
 
     public u(b bVar) {
-        this.f16035a = bVar;
+        this.f16631a = bVar;
     }
 
     public long a() {
-        return this.f16035a.a();
+        return this.f16631a.a();
     }
 
     public long b() {
-        return this.f16035a.b();
+        return this.f16631a.b();
     }
 
     public Location c() {
-        return this.f16035a.c();
+        return this.f16631a.c();
     }
 }

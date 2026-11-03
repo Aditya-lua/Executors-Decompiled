@@ -1,45 +1,38 @@
 package we;
 
-import ve.r0;
+import java.security.GeneralSecurityException;
+import java.util.HashMap;
+import java.util.Map;
 
 /* JADX INFO: loaded from: classes2.dex */
 public final class z {
+    public static final z b = new z();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final o f34237a = (o) r0.a(new r0.a() { // from class: we.u
-        @Override // ve.r0.a
-        public final Object get() {
-            return o.b().c(32).d(16).e(o.d.b).b(o.c.f34223d).a();
-        }
-    });
-    public static final o b = (o) r0.a(new r0.a() { // from class: we.v
-        @Override // ve.r0.a
-        public final Object get() {
-            return o.b().c(32).d(32).e(o.d.b).b(o.c.f34223d).a();
-        }
-    });
+    public final Map<String, pe.x> f34481a = new HashMap();
 
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final o f34238c = (o) r0.a(new r0.a() { // from class: we.w
-        @Override // ve.r0.a
-        public final Object get() {
-            return o.b().c(64).d(32).e(o.d.b).b(o.c.f34225f).a();
-        }
-    });
+    public static z a() {
+        return b;
+    }
 
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final o f34239d = (o) r0.a(new r0.a() { // from class: we.x
-        @Override // ve.r0.a
-        public final Object get() {
-            return o.b().c(64).d(64).e(o.d.b).b(o.c.f34225f).a();
+    public synchronized void b(String str, pe.x xVar) {
+        try {
+            if (!this.f34481a.containsKey(str)) {
+                this.f34481a.put(str, xVar);
+                return;
+            }
+            if (this.f34481a.get(str).equals(xVar)) {
+                return;
+            }
+            throw new GeneralSecurityException("Parameters object with name " + str + " already exists (" + this.f34481a.get(str) + "), cannot insert " + xVar);
+        } catch (Throwable th2) {
+            throw th2;
         }
-    });
+    }
 
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final f f34240e = (f) r0.a(new r0.a() { // from class: we.y
-        @Override // ve.r0.a
-        public final Object get() {
-            return f.b().b(32).c(16).d(f.c.b).a();
+    public synchronized void c(Map<String, pe.x> map) {
+        for (Map.Entry<String, pe.x> entry : map.entrySet()) {
+            b(entry.getKey(), entry.getValue());
         }
-    });
+    }
 }

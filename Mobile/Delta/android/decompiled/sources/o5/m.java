@@ -7,7 +7,7 @@ import android.graphics.Rect;
 public class m implements TypeEvaluator<Rect> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Rect f27132a;
+    public Rect f27697a;
 
     public m() {
     }
@@ -23,15 +23,15 @@ public class m implements TypeEvaluator<Rect> {
         int i15 = i14 + ((int) ((rect2.right - i14) * f10));
         int i16 = rect.bottom;
         int i17 = i16 + ((int) ((rect2.bottom - i16) * f10));
-        Rect rect3 = this.f27132a;
+        Rect rect3 = this.f27697a;
         if (rect3 == null) {
             return new Rect(i11, i13, i15, i17);
         }
         rect3.set(i11, i13, i15, i17);
-        return this.f27132a;
+        return this.f27697a;
     }
 
     public m(Rect rect) {
-        this.f27132a = rect;
+        this.f27697a = rect;
     }
 }

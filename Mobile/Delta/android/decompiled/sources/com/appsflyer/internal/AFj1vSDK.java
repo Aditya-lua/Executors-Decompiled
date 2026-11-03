@@ -22,30 +22,30 @@ import java.util.concurrent.ExecutorService;
 public final class AFj1vSDK implements AFj1ySDK {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    private static final BitSet f5445e;
+    private static final BitSet f5518e;
     boolean AFKeystoreWrapper;
     final Runnable AFLogger;
     private final Runnable AFLoggerLogLevel;
     private boolean afDebugLog;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    final Runnable f5446d;
+    final Runnable f5519d;
     private final Map<AFi1dSDK, AFi1dSDK> force;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    private final Map<AFi1dSDK, Map<String, Object>> f5447i;
+    private final Map<AFi1dSDK, Map<String, Object>> f5520i;
     final Object registerClient;
     final Handler unregisterClient;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    private final SensorManager f5448v;
+    private final SensorManager f5521v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    private final ExecutorService f5449w;
+    private final ExecutorService f5522w;
 
     static {
         BitSet bitSet = new BitSet(6);
-        f5445e = bitSet;
+        f5518e = bitSet;
         bitSet.set(1);
         bitSet.set(2);
         bitSet.set(4);
@@ -53,24 +53,24 @@ public final class AFj1vSDK implements AFj1ySDK {
 
     private AFj1vSDK(@NonNull SensorManager sensorManager, Handler handler, ExecutorService executorService) {
         this.registerClient = new Object();
-        BitSet bitSet = f5445e;
+        BitSet bitSet = f5518e;
         this.force = new HashMap(bitSet.size());
-        this.f5447i = new ConcurrentHashMap(bitSet.size());
+        this.f5520i = new ConcurrentHashMap(bitSet.size());
         this.AFLogger = new Runnable() { // from class: com.appsflyer.internal.AFj1vSDK.1
             @Override // java.lang.Runnable
             public final void run() {
                 synchronized (AFj1vSDK.this.registerClient) {
                     AFj1vSDK.this.d();
                     AFj1vSDK aFj1vSDK = AFj1vSDK.this;
-                    aFj1vSDK.unregisterClient.postDelayed(aFj1vSDK.f5446d, 150L);
+                    aFj1vSDK.unregisterClient.postDelayed(aFj1vSDK.f5519d, 150L);
                     AFj1vSDK.this.AFKeystoreWrapper = true;
                 }
             }
         };
-        this.f5446d = new Runnable() { // from class: com.appsflyer.internal.n1
+        this.f5519d = new Runnable() { // from class: com.appsflyer.internal.n1
             @Override // java.lang.Runnable
             public final void run() {
-                this.f5510a.force();
+                this.f5583a.force();
             }
         };
         this.AFLoggerLogLevel = new Runnable() { // from class: com.appsflyer.internal.AFj1vSDK.3
@@ -82,7 +82,7 @@ public final class AFj1vSDK implements AFj1ySDK {
                         if (aFj1vSDK.AFKeystoreWrapper) {
                             aFj1vSDK.unregisterClient.removeCallbacks(aFj1vSDK.AFLogger);
                             AFj1vSDK aFj1vSDK2 = AFj1vSDK.this;
-                            aFj1vSDK2.unregisterClient.removeCallbacks(aFj1vSDK2.f5446d);
+                            aFj1vSDK2.unregisterClient.removeCallbacks(aFj1vSDK2.f5519d);
                             AFj1vSDK.this.unregisterClient();
                             AFj1vSDK.this.AFKeystoreWrapper = false;
                         }
@@ -92,9 +92,9 @@ public final class AFj1vSDK implements AFj1ySDK {
                 }
             }
         };
-        this.f5448v = sensorManager;
+        this.f5521v = sensorManager;
         this.unregisterClient = handler;
-        this.f5449w = executorService;
+        this.f5522w = executorService;
     }
 
     @NonNull
@@ -104,13 +104,13 @@ public final class AFj1vSDK implements AFj1ySDK {
                 if (!this.force.isEmpty() && this.afDebugLog) {
                     Iterator<AFi1dSDK> it = this.force.values().iterator();
                     while (it.hasNext()) {
-                        it.next().AFLogger(this.f5447i, false);
+                        it.next().AFLogger(this.f5520i, false);
                     }
                 }
-                if (this.f5447i.isEmpty()) {
+                if (this.f5520i.isEmpty()) {
                     return new CopyOnWriteArrayList(Collections.EMPTY_LIST);
                 }
-                return new CopyOnWriteArrayList(this.f5447i.values());
+                return new CopyOnWriteArrayList(this.f5520i.values());
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -130,12 +130,12 @@ public final class AFj1vSDK implements AFj1ySDK {
             try {
                 Iterator<AFi1dSDK> it = this.force.values().iterator();
                 while (it.hasNext()) {
-                    it.next().AFLogger(this.f5447i, true);
+                    it.next().AFLogger(this.f5520i, true);
                 }
-                if (this.f5447i.isEmpty()) {
+                if (this.f5520i.isEmpty()) {
                     return new CopyOnWriteArrayList(Collections.EMPTY_LIST);
                 }
-                return new CopyOnWriteArrayList(this.f5447i.values());
+                return new CopyOnWriteArrayList(this.f5520i.values());
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -145,14 +145,14 @@ public final class AFj1vSDK implements AFj1ySDK {
     /* JADX INFO: Access modifiers changed from: private */
     public /* synthetic */ void v() {
         try {
-            for (Sensor sensor : this.f5448v.getSensorList(-1)) {
+            for (Sensor sensor : this.f5521v.getSensorList(-1)) {
                 int type = sensor.getType();
-                if (type >= 0 && f5445e.get(type)) {
-                    AFi1dSDK aFi1dSDK = new AFi1dSDK(sensor, this.f5449w);
+                if (type >= 0 && f5518e.get(type)) {
+                    AFi1dSDK aFi1dSDK = new AFi1dSDK(sensor, this.f5522w);
                     if (!this.force.containsKey(aFi1dSDK)) {
                         this.force.put(aFi1dSDK, aFi1dSDK);
                     }
-                    this.f5448v.registerListener(this.force.get(aFi1dSDK), sensor, 1, this.unregisterClient);
+                    this.f5521v.registerListener(this.force.get(aFi1dSDK), sensor, 1, this.unregisterClient);
                 }
             }
         } catch (Throwable th2) {
@@ -166,8 +166,8 @@ public final class AFj1vSDK implements AFj1ySDK {
         try {
             if (!this.force.isEmpty()) {
                 for (AFi1dSDK aFi1dSDK : this.force.values()) {
-                    this.f5448v.unregisterListener(aFi1dSDK);
-                    aFi1dSDK.AFLogger(this.f5447i, true);
+                    this.f5521v.unregisterListener(aFi1dSDK);
+                    aFi1dSDK.AFLogger(this.f5520i, true);
                 }
             }
         } catch (Throwable th2) {
@@ -201,7 +201,7 @@ public final class AFj1vSDK implements AFj1ySDK {
         this.unregisterClient.post(new Runnable() { // from class: com.appsflyer.internal.m1
             @Override // java.lang.Runnable
             public final void run() {
-                this.f5507a.v();
+                this.f5580a.v();
             }
         });
     }

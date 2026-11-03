@@ -38,7 +38,7 @@ public final class f extends x<f, a> implements s0 {
     public static final class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final k0<String, h> f33668a = k0.d(s1.b.f2294k, "", s1.b.f2296m, h.f0());
+        public static final k0<String, h> f33874a = k0.d(s1.b.f2139k, "", s1.b.f2141m, h.f0());
     }
 
     static {
@@ -48,7 +48,7 @@ public final class f extends x<f, a> implements s0 {
     }
 
     public static a a0() {
-        return DEFAULT_INSTANCE.x();
+        return DEFAULT_INSTANCE.w();
     }
 
     public static f b0(InputStream inputStream) {
@@ -59,13 +59,13 @@ public final class f extends x<f, a> implements s0 {
     public final Object A(x.f fVar, Object obj, Object obj2) {
         z0 bVar;
         e eVar = null;
-        switch (e.f33667a[fVar.ordinal()]) {
+        switch (e.f33873a[fVar.ordinal()]) {
             case 1:
                 return new f();
             case 2:
                 return new a(eVar);
             case 3:
-                return x.N(DEFAULT_INSTANCE, "\u0001\u0001\u0000\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u00012", new Object[]{"preferences_", b.f33668a});
+                return x.N(DEFAULT_INSTANCE, "\u0001\u0001\u0000\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u00012", new Object[]{"preferences_", b.f33874a});
             case 4:
                 return DEFAULT_INSTANCE;
             case 5:

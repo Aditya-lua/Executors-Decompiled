@@ -15,17 +15,17 @@ public class j0 extends i0 {
     @NotNull
     public static <K, V> Map<K, V> c(@NotNull Map<K, V> builder) {
         Intrinsics.checkNotNullParameter(builder, "builder");
-        return ((kt.d) builder).l();
+        return ((ht.d) builder).l();
     }
 
     @NotNull
     public static <K, V> Map<K, V> d() {
-        return new kt.d();
+        return new ht.d();
     }
 
     @NotNull
     public static <K, V> Map<K, V> e(int i10) {
-        return new kt.d(i10);
+        return new ht.d(i10);
     }
 
     public static int f(int i10) {

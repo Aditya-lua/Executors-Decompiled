@@ -10,13 +10,13 @@ import java.util.Objects;
 public final class l5 extends com.google.android.gms.internal.measurement.b1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ n5 f25723a;
+    public final /* synthetic */ n5 f26544a;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public l5(n5 n5Var, Context context, String str) {
         super(context, "google_app_measurement_local.db", null, 1);
         Objects.requireNonNull(n5Var);
-        this.f25723a = n5Var;
+        this.f26544a = n5Var;
     }
 
     @Override // android.database.sqlite.SQLiteOpenHelper
@@ -26,7 +26,7 @@ public final class l5 extends com.google.android.gms.internal.measurement.b1 {
         } catch (SQLiteDatabaseLockedException e10) {
             throw e10;
         } catch (SQLiteException unused) {
-            g7 g7Var = this.f25723a.f25625a;
+            g7 g7Var = this.f26544a.f26446a;
             g7Var.a().o().a("Opening the local database failed, dropping and recreating it");
             g7Var.w();
             if (!g7Var.d().getDatabasePath("google_app_measurement_local.db").delete()) {
@@ -35,7 +35,7 @@ public final class l5 extends com.google.android.gms.internal.measurement.b1 {
             try {
                 return super.getWritableDatabase();
             } catch (SQLiteException e11) {
-                this.f25723a.f25625a.a().o().b("Failed to open local database. Events will bypass local storage", e11);
+                this.f26544a.f26446a.a().o().b("Failed to open local database. Events will bypass local storage", e11);
                 return null;
             }
         }
@@ -43,7 +43,7 @@ public final class l5 extends com.google.android.gms.internal.measurement.b1 {
 
     @Override // android.database.sqlite.SQLiteOpenHelper
     public final void onCreate(SQLiteDatabase sQLiteDatabase) {
-        u.b(this.f25723a.f25625a.a(), sQLiteDatabase);
+        u.b(this.f26544a.f26446a.a(), sQLiteDatabase);
     }
 
     @Override // android.database.sqlite.SQLiteOpenHelper
@@ -52,7 +52,7 @@ public final class l5 extends com.google.android.gms.internal.measurement.b1 {
 
     @Override // android.database.sqlite.SQLiteOpenHelper
     public final void onOpen(SQLiteDatabase sQLiteDatabase) throws Throwable {
-        u.a(this.f25723a.f25625a.a(), sQLiteDatabase, "messages", "create table if not exists messages ( type INTEGER NOT NULL, entry BLOB NOT NULL)", "type,entry", n5.f25783e);
+        u.a(this.f26544a.f26446a.a(), sQLiteDatabase, "messages", "create table if not exists messages ( type INTEGER NOT NULL, entry BLOB NOT NULL)", "type,entry", n5.f26604e);
     }
 
     @Override // android.database.sqlite.SQLiteOpenHelper

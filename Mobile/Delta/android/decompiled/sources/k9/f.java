@@ -12,7 +12,7 @@ import java.util.WeakHashMap;
 public abstract class f {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Set f22283a = Collections.newSetFromMap(new WeakHashMap());
+    public static final Set f22507a = Collections.newSetFromMap(new WeakHashMap());
 
     @Deprecated
     public interface a extends l9.e {
@@ -24,7 +24,7 @@ public abstract class f {
 
     @NonNull
     public static Set<f> b() {
-        Set<f> set = f22283a;
+        Set<f> set = f22507a;
         synchronized (set) {
         }
         return set;

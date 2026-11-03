@@ -10,11 +10,11 @@ public final class k6 extends gb implements pc {
     static {
         k6 k6Var = new k6();
         zzd = k6Var;
-        gb.u(k6.class, k6Var);
+        gb.t(k6.class, k6Var);
     }
 
     public static d6 G() {
-        return (d6) zzd.q();
+        return (d6) zzd.p();
     }
 
     public static k6 H() {

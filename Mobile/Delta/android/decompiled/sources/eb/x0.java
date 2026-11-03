@@ -7,16 +7,16 @@ import java.util.Comparator;
 public final class x0 extends s1 implements Serializable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Comparator f15422a;
+    public final Comparator f16036a;
 
     public x0(Comparator comparator) {
         comparator.getClass();
-        this.f15422a = comparator;
+        this.f16036a = comparator;
     }
 
     @Override // eb.s1, java.util.Comparator
     public final int compare(Object obj, Object obj2) {
-        return this.f15422a.compare(obj, obj2);
+        return this.f16036a.compare(obj, obj2);
     }
 
     @Override // java.util.Comparator
@@ -25,16 +25,16 @@ public final class x0 extends s1 implements Serializable {
             return true;
         }
         if (obj instanceof x0) {
-            return this.f15422a.equals(((x0) obj).f15422a);
+            return this.f16036a.equals(((x0) obj).f16036a);
         }
         return false;
     }
 
     public final int hashCode() {
-        return this.f15422a.hashCode();
+        return this.f16036a.hashCode();
     }
 
     public final String toString() {
-        return this.f15422a.toString();
+        return this.f16036a.toString();
     }
 }

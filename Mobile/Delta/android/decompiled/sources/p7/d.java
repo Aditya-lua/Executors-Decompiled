@@ -6,12 +6,12 @@ import java.io.InputStream;
 
 /* JADX INFO: loaded from: classes3.dex */
 public interface d extends Closeable {
-    String B0();
-
     @NonNull
-    InputStream I0();
+    InputStream E0();
 
     boolean isSuccessful();
 
-    String u2();
+    String v2();
+
+    String x0();
 }

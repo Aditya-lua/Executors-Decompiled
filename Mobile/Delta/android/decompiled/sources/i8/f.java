@@ -14,7 +14,7 @@ public abstract class f {
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public l8.a f20355a;
+        public l8.a f20471a;
         public Map<y7.e, b> b = new HashMap();
 
         public a a(y7.e eVar, b bVar) {
@@ -23,7 +23,7 @@ public abstract class f {
         }
 
         public f b() {
-            if (this.f20355a == null) {
+            if (this.f20471a == null) {
                 throw new NullPointerException("missing required property: clock");
             }
             if (this.b.keySet().size() < y7.e.values().length) {
@@ -31,11 +31,11 @@ public abstract class f {
             }
             Map<y7.e, b> map = this.b;
             this.b = new HashMap();
-            return f.d(this.f20355a, map);
+            return f.d(this.f20471a, map);
         }
 
         public a c(l8.a aVar) {
-            this.f20355a = aVar;
+            this.f20471a = aVar;
             return this;
         }
     }

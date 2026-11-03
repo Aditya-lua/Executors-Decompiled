@@ -18,7 +18,7 @@ public final class AFd1eSDK implements AFe1vSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    private final AFc1bSDK f5275d;
+    private final AFc1bSDK f5348d;
 
     @NotNull
     private final AFc1kSDK registerClient;
@@ -31,7 +31,7 @@ public final class AFd1eSDK implements AFe1vSDK {
         this.registerClient = aFc1kSDK;
         this.AFKeystoreWrapper = appsFlyerProperties;
         this.AFLogger = aFe1wSDK;
-        this.f5275d = aFc1bSDK;
+        this.f5348d = aFc1bSDK;
     }
 
     @Override // com.appsflyer.internal.AFe1vSDK
@@ -43,7 +43,7 @@ public final class AFd1eSDK implements AFe1vSDK {
             if (!(aFe1ySDK instanceof AFg1lSDK) || aFd1cSDK == AFd1cSDK.SUCCESS) {
                 return;
             }
-            this.AFLogger.d(new AFg1mSDK(this.f5275d));
+            this.AFLogger.d(new AFg1mSDK(this.f5348d));
             return;
         }
         AFf1tSDK aFf1tSDK = (AFf1tSDK) aFe1ySDK;

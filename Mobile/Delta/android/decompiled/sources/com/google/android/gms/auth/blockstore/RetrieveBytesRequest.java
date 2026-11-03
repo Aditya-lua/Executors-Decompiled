@@ -18,26 +18,26 @@ public class RetrieveBytesRequest extends AbstractSafeParcelable {
     public static final Parcelable.Creator<RetrieveBytesRequest> CREATOR = new d();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final List f5665f;
+    public final List f5738f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final boolean f5666g;
+    public final boolean f5739g;
 
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public List f5667a = new ArrayList();
+        public List f5740a = new ArrayList();
         public boolean b = false;
 
         @NonNull
         public RetrieveBytesRequest a() {
-            return new RetrieveBytesRequest(this.f5667a, this.b);
+            return new RetrieveBytesRequest(this.f5740a, this.b);
         }
 
         @NonNull
         public a b(@NonNull List<String> list) {
             m.m(list, "Keys cannot be set to null");
-            this.f5667a = list;
+            this.f5740a = list;
             return this;
         }
     }
@@ -50,25 +50,25 @@ public class RetrieveBytesRequest extends AbstractSafeParcelable {
             }
             m.q(z11, "retrieveAll was set to true but other constraint(s) was also provided: keys");
         }
-        this.f5666g = z10;
-        this.f5665f = new ArrayList();
+        this.f5739g = z10;
+        this.f5738f = new ArrayList();
         if (list != null) {
             Iterator it = list.iterator();
             while (it.hasNext()) {
                 String str = (String) it.next();
                 m.g(str, "Element in keys cannot be null or empty");
-                this.f5665f.add(str);
+                this.f5738f.add(str);
             }
         }
     }
 
     @NonNull
     public List<String> v3() {
-        return Collections.unmodifiableList(this.f5665f);
+        return Collections.unmodifiableList(this.f5738f);
     }
 
     public boolean w3() {
-        return this.f5666g;
+        return this.f5739g;
     }
 
     @Override // android.os.Parcelable

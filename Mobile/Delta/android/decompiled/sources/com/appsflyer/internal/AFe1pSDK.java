@@ -29,7 +29,7 @@ public final class AFe1pSDK extends AFe1kSDK<String> {
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
     @NotNull
-    private final String f5321v;
+    private final String f5394v;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public AFe1pSDK(@NotNull AFc1bSDK aFc1bSDK, @NotNull UUID uuid, @NotNull String str, @NotNull Map<String, String> map, @Nullable String str2, @Nullable LinkGenerator.ResponseListener responseListener, @NotNull LinkGenerator linkGenerator) {
@@ -40,7 +40,7 @@ public final class AFe1pSDK extends AFe1kSDK<String> {
         Intrinsics.checkNotNullParameter(map, "");
         Intrinsics.checkNotNullParameter(linkGenerator, "");
         this.force = uuid;
-        this.f5321v = str;
+        this.f5394v = str;
         this.AFLoggerLogLevel = str2;
         this.afErrorLog = responseListener;
         this.afDebugLog = linkGenerator;
@@ -51,7 +51,7 @@ public final class AFe1pSDK extends AFe1kSDK<String> {
     @NotNull
     public final AFd1pSDK<String> AFLogger(@NotNull String str) {
         Intrinsics.checkNotNullParameter(str, "");
-        AFd1pSDK<String> aFd1pSDKUnregisterClient = getD().unregisterClient(this.f5321v, this.afInfoLog, this.AFLoggerLogLevel, this.force, str);
+        AFd1pSDK<String> aFd1pSDKUnregisterClient = getD().unregisterClient(this.f5394v, this.afInfoLog, this.AFLoggerLogLevel, this.force, str);
         Intrinsics.checkNotNullExpressionValue(aFd1pSDKUnregisterClient, "");
         return aFd1pSDKUnregisterClient;
     }

@@ -271,7 +271,7 @@ public final /* data */ class j0 {
 
         @NotNull
         public final x5.o0 e() {
-            androidx.work.b bVar = !this.progress.isEmpty() ? this.progress.get(0) : androidx.work.b.f3500c;
+            androidx.work.b bVar = !this.progress.isEmpty() ? this.progress.get(0) : androidx.work.b.f3345c;
             UUID uuidFromString = UUID.fromString(this.id);
             Intrinsics.checkNotNullExpressionValue(uuidFromString, "fromString(...)");
             return new x5.o0(uuidFromString, this.state, new HashSet(this.tags), this.output, bVar, this.runAttemptCount, this.generation, this.constraints, this.initialDelay, b(), a(), this.stopReason);
@@ -478,7 +478,7 @@ public final /* data */ class j0 {
     }
 
     public final boolean m() {
-        return !Intrinsics.c(x5.d.f34916k, this.constraints);
+        return !Intrinsics.c(x5.d.f35414k, this.constraints);
     }
 
     public final boolean n() {
@@ -548,7 +548,7 @@ public final /* data */ class j0 {
         } else {
             str5 = str3;
         }
-        this(str, cVar2, str2, str5, (i15 & 16) != 0 ? androidx.work.b.f3500c : bVar, (i15 & 32) != 0 ? androidx.work.b.f3500c : bVar2, (i15 & 64) != 0 ? 0L : j10, (i15 & 128) != 0 ? 0L : j11, (i15 & Barcode.FORMAT_QR_CODE) != 0 ? 0L : j12, (i15 & Barcode.FORMAT_UPC_A) != 0 ? x5.d.f34916k : dVar, (i15 & Barcode.FORMAT_UPC_E) != 0 ? 0 : i10, (i15 & Barcode.FORMAT_PDF417) != 0 ? x5.a.EXPONENTIAL : aVar, (i15 & Barcode.FORMAT_AZTEC) != 0 ? 30000L : j13, (i15 & 8192) != 0 ? -1L : j14, (i15 & Http2.INITIAL_MAX_FRAME_SIZE) == 0 ? j15 : 0L, (32768 & i15) != 0 ? -1L : j16, (65536 & i15) != 0 ? false : z10, (131072 & i15) != 0 ? x5.f0.RUN_AS_NON_EXPEDITED_WORK_REQUEST : f0Var, (262144 & i15) != 0 ? 0 : i11, (524288 & i15) != 0 ? 0 : i12, (1048576 & i15) != 0 ? Long.MAX_VALUE : j17, (2097152 & i15) != 0 ? 0 : i13, (4194304 & i15) != 0 ? -256 : i14, (8388608 & i15) != 0 ? null : str4, (i15 & Http2Connection.OKHTTP_CLIENT_WINDOW_SIZE) != 0 ? Boolean.FALSE : bool);
+        this(str, cVar2, str2, str5, (i15 & 16) != 0 ? androidx.work.b.f3345c : bVar, (i15 & 32) != 0 ? androidx.work.b.f3345c : bVar2, (i15 & 64) != 0 ? 0L : j10, (i15 & 128) != 0 ? 0L : j11, (i15 & Barcode.FORMAT_QR_CODE) != 0 ? 0L : j12, (i15 & Barcode.FORMAT_UPC_A) != 0 ? x5.d.f35414k : dVar, (i15 & Barcode.FORMAT_UPC_E) != 0 ? 0 : i10, (i15 & Barcode.FORMAT_PDF417) != 0 ? x5.a.EXPONENTIAL : aVar, (i15 & Barcode.FORMAT_AZTEC) != 0 ? 30000L : j13, (i15 & 8192) != 0 ? -1L : j14, (i15 & Http2.INITIAL_MAX_FRAME_SIZE) == 0 ? j15 : 0L, (32768 & i15) != 0 ? -1L : j16, (65536 & i15) != 0 ? false : z10, (131072 & i15) != 0 ? x5.f0.RUN_AS_NON_EXPEDITED_WORK_REQUEST : f0Var, (262144 & i15) != 0 ? 0 : i11, (524288 & i15) != 0 ? 0 : i12, (1048576 & i15) != 0 ? Long.MAX_VALUE : j17, (2097152 & i15) != 0 ? 0 : i13, (4194304 & i15) != 0 ? -256 : i14, (8388608 & i15) != 0 ? null : str4, (i15 & Http2Connection.OKHTTP_CLIENT_WINDOW_SIZE) != 0 ? Boolean.FALSE : bool);
     }
 
     /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */

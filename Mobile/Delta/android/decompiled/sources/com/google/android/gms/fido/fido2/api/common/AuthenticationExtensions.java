@@ -19,91 +19,91 @@ public class AuthenticationExtensions extends AbstractSafeParcelable {
     public static final Parcelable.Creator<AuthenticationExtensions> CREATOR = new x();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final FidoAppIdExtension f5899f;
+    public final FidoAppIdExtension f5972f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final zzs f5900g;
+    public final zzs f5973g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final UserVerificationMethodExtension f5901h;
+    public final UserVerificationMethodExtension f5974h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final zzz f5902i;
+    public final zzz f5975i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final zzab f5903j;
+    public final zzab f5976j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final zzad f5904k;
+    public final zzad f5977k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final zzu f5905l;
+    public final zzu f5978l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final zzag f5906m;
+    public final zzag f5979m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public final GoogleThirdPartyPaymentExtension f5907n;
+    public final GoogleThirdPartyPaymentExtension f5980n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public final zzak f5908o;
+    public final zzak f5981o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public final zzaw f5909p;
+    public final zzaw f5982p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public final zzai f5910q;
+    public final zzai f5983q;
 
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public FidoAppIdExtension f5911a;
+        public FidoAppIdExtension f5984a;
         public UserVerificationMethodExtension b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public zzs f5912c;
+        public zzs f5985c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public zzz f5913d;
+        public zzz f5986d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public zzab f5914e;
+        public zzab f5987e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public zzad f5915f;
+        public zzad f5988f;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public zzu f5916g;
+        public zzu f5989g;
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public zzag f5917h;
+        public zzag f5990h;
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public GoogleThirdPartyPaymentExtension f5918i;
+        public GoogleThirdPartyPaymentExtension f5991i;
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public zzak f5919j;
+        public zzak f5992j;
 
         /* JADX INFO: renamed from: k, reason: collision with root package name */
-        public zzaw f5920k;
+        public zzaw f5993k;
 
         /* JADX INFO: renamed from: l, reason: collision with root package name */
-        public zzai f5921l;
+        public zzai f5994l;
 
         @NonNull
         public AuthenticationExtensions a() {
-            return new AuthenticationExtensions(this.f5911a, this.f5912c, this.b, this.f5913d, this.f5914e, this.f5915f, this.f5916g, this.f5917h, this.f5918i, this.f5919j, this.f5920k, this.f5921l);
+            return new AuthenticationExtensions(this.f5984a, this.f5985c, this.b, this.f5986d, this.f5987e, this.f5988f, this.f5989g, this.f5990h, this.f5991i, this.f5992j, this.f5993k, this.f5994l);
         }
 
         @NonNull
         public a b(FidoAppIdExtension fidoAppIdExtension) {
-            this.f5911a = fidoAppIdExtension;
+            this.f5984a = fidoAppIdExtension;
             return this;
         }
 
         @NonNull
         public a c(GoogleThirdPartyPaymentExtension googleThirdPartyPaymentExtension) {
-            this.f5918i = googleThirdPartyPaymentExtension;
+            this.f5991i = googleThirdPartyPaymentExtension;
             return this;
         }
 
@@ -114,59 +114,59 @@ public class AuthenticationExtensions extends AbstractSafeParcelable {
         }
 
         public final a e(zzs zzsVar) {
-            this.f5912c = zzsVar;
+            this.f5985c = zzsVar;
             return this;
         }
 
         public final a f(zzu zzuVar) {
-            this.f5916g = zzuVar;
+            this.f5989g = zzuVar;
             return this;
         }
 
         public final a g(zzz zzzVar) {
-            this.f5913d = zzzVar;
+            this.f5986d = zzzVar;
             return this;
         }
 
         public final a h(zzab zzabVar) {
-            this.f5914e = zzabVar;
+            this.f5987e = zzabVar;
             return this;
         }
 
         public final a i(zzad zzadVar) {
-            this.f5915f = zzadVar;
+            this.f5988f = zzadVar;
             return this;
         }
 
         public final a j(zzag zzagVar) {
-            this.f5917h = zzagVar;
+            this.f5990h = zzagVar;
             return this;
         }
 
         public final a k(zzak zzakVar) {
-            this.f5919j = zzakVar;
+            this.f5992j = zzakVar;
             return this;
         }
 
         public final a l(zzaw zzawVar) {
-            this.f5920k = zzawVar;
+            this.f5993k = zzawVar;
             return this;
         }
     }
 
     public AuthenticationExtensions(FidoAppIdExtension fidoAppIdExtension, zzs zzsVar, UserVerificationMethodExtension userVerificationMethodExtension, zzz zzzVar, zzab zzabVar, zzad zzadVar, zzu zzuVar, zzag zzagVar, GoogleThirdPartyPaymentExtension googleThirdPartyPaymentExtension, zzak zzakVar, zzaw zzawVar, zzai zzaiVar) {
-        this.f5899f = fidoAppIdExtension;
-        this.f5901h = userVerificationMethodExtension;
-        this.f5900g = zzsVar;
-        this.f5902i = zzzVar;
-        this.f5903j = zzabVar;
-        this.f5904k = zzadVar;
-        this.f5905l = zzuVar;
-        this.f5906m = zzagVar;
-        this.f5907n = googleThirdPartyPaymentExtension;
-        this.f5908o = zzakVar;
-        this.f5909p = zzawVar;
-        this.f5910q = zzaiVar;
+        this.f5972f = fidoAppIdExtension;
+        this.f5974h = userVerificationMethodExtension;
+        this.f5973g = zzsVar;
+        this.f5975i = zzzVar;
+        this.f5976j = zzabVar;
+        this.f5977k = zzadVar;
+        this.f5978l = zzuVar;
+        this.f5979m = zzagVar;
+        this.f5980n = googleThirdPartyPaymentExtension;
+        this.f5981o = zzakVar;
+        this.f5982p = zzawVar;
+        this.f5983q = zzaiVar;
     }
 
     @NonNull
@@ -227,51 +227,51 @@ public class AuthenticationExtensions extends AbstractSafeParcelable {
             return false;
         }
         AuthenticationExtensions authenticationExtensions = (AuthenticationExtensions) obj;
-        return k.b(this.f5899f, authenticationExtensions.f5899f) && k.b(this.f5900g, authenticationExtensions.f5900g) && k.b(this.f5901h, authenticationExtensions.f5901h) && k.b(this.f5902i, authenticationExtensions.f5902i) && k.b(this.f5903j, authenticationExtensions.f5903j) && k.b(this.f5904k, authenticationExtensions.f5904k) && k.b(this.f5905l, authenticationExtensions.f5905l) && k.b(this.f5906m, authenticationExtensions.f5906m) && k.b(this.f5907n, authenticationExtensions.f5907n) && k.b(this.f5908o, authenticationExtensions.f5908o) && k.b(this.f5909p, authenticationExtensions.f5909p) && k.b(this.f5910q, authenticationExtensions.f5910q);
+        return k.b(this.f5972f, authenticationExtensions.f5972f) && k.b(this.f5973g, authenticationExtensions.f5973g) && k.b(this.f5974h, authenticationExtensions.f5974h) && k.b(this.f5975i, authenticationExtensions.f5975i) && k.b(this.f5976j, authenticationExtensions.f5976j) && k.b(this.f5977k, authenticationExtensions.f5977k) && k.b(this.f5978l, authenticationExtensions.f5978l) && k.b(this.f5979m, authenticationExtensions.f5979m) && k.b(this.f5980n, authenticationExtensions.f5980n) && k.b(this.f5981o, authenticationExtensions.f5981o) && k.b(this.f5982p, authenticationExtensions.f5982p) && k.b(this.f5983q, authenticationExtensions.f5983q);
     }
 
     public int hashCode() {
-        return k.c(this.f5899f, this.f5900g, this.f5901h, this.f5902i, this.f5903j, this.f5904k, this.f5905l, this.f5906m, this.f5907n, this.f5908o, this.f5909p, this.f5910q);
+        return k.c(this.f5972f, this.f5973g, this.f5974h, this.f5975i, this.f5976j, this.f5977k, this.f5978l, this.f5979m, this.f5980n, this.f5981o, this.f5982p, this.f5983q);
     }
 
     @NonNull
     public final String toString() {
-        zzaw zzawVar = this.f5909p;
-        zzak zzakVar = this.f5908o;
-        GoogleThirdPartyPaymentExtension googleThirdPartyPaymentExtension = this.f5907n;
-        zzag zzagVar = this.f5906m;
-        zzu zzuVar = this.f5905l;
-        zzad zzadVar = this.f5904k;
-        zzab zzabVar = this.f5903j;
-        zzz zzzVar = this.f5902i;
-        UserVerificationMethodExtension userVerificationMethodExtension = this.f5901h;
-        zzs zzsVar = this.f5900g;
-        return "AuthenticationExtensions{\n fidoAppIdExtension=" + String.valueOf(this.f5899f) + ", \n cableAuthenticationExtension=" + String.valueOf(zzsVar) + ", \n userVerificationMethodExtension=" + String.valueOf(userVerificationMethodExtension) + ", \n googleMultiAssertionExtension=" + String.valueOf(zzzVar) + ", \n googleSessionIdExtension=" + String.valueOf(zzabVar) + ", \n googleSilentVerificationExtension=" + String.valueOf(zzadVar) + ", \n devicePublicKeyExtension=" + String.valueOf(zzuVar) + ", \n googleTunnelServerIdExtension=" + String.valueOf(zzagVar) + ", \n googleThirdPartyPaymentExtension=" + String.valueOf(googleThirdPartyPaymentExtension) + ", \n prfExtension=" + String.valueOf(zzakVar) + ", \n simpleTransactionAuthorizationExtension=" + String.valueOf(zzawVar) + "}";
+        zzaw zzawVar = this.f5982p;
+        zzak zzakVar = this.f5981o;
+        GoogleThirdPartyPaymentExtension googleThirdPartyPaymentExtension = this.f5980n;
+        zzag zzagVar = this.f5979m;
+        zzu zzuVar = this.f5978l;
+        zzad zzadVar = this.f5977k;
+        zzab zzabVar = this.f5976j;
+        zzz zzzVar = this.f5975i;
+        UserVerificationMethodExtension userVerificationMethodExtension = this.f5974h;
+        zzs zzsVar = this.f5973g;
+        return "AuthenticationExtensions{\n fidoAppIdExtension=" + String.valueOf(this.f5972f) + ", \n cableAuthenticationExtension=" + String.valueOf(zzsVar) + ", \n userVerificationMethodExtension=" + String.valueOf(userVerificationMethodExtension) + ", \n googleMultiAssertionExtension=" + String.valueOf(zzzVar) + ", \n googleSessionIdExtension=" + String.valueOf(zzabVar) + ", \n googleSilentVerificationExtension=" + String.valueOf(zzadVar) + ", \n devicePublicKeyExtension=" + String.valueOf(zzuVar) + ", \n googleTunnelServerIdExtension=" + String.valueOf(zzagVar) + ", \n googleThirdPartyPaymentExtension=" + String.valueOf(googleThirdPartyPaymentExtension) + ", \n prfExtension=" + String.valueOf(zzakVar) + ", \n simpleTransactionAuthorizationExtension=" + String.valueOf(zzawVar) + "}";
     }
 
     public FidoAppIdExtension v3() {
-        return this.f5899f;
+        return this.f5972f;
     }
 
     public UserVerificationMethodExtension w3() {
-        return this.f5901h;
+        return this.f5974h;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
         int iA = o9.b.a(parcel);
         o9.b.t(parcel, 2, v3(), i10, false);
-        o9.b.t(parcel, 3, this.f5900g, i10, false);
+        o9.b.t(parcel, 3, this.f5973g, i10, false);
         o9.b.t(parcel, 4, w3(), i10, false);
-        o9.b.t(parcel, 5, this.f5902i, i10, false);
-        o9.b.t(parcel, 6, this.f5903j, i10, false);
-        o9.b.t(parcel, 7, this.f5904k, i10, false);
-        o9.b.t(parcel, 8, this.f5905l, i10, false);
-        o9.b.t(parcel, 9, this.f5906m, i10, false);
-        o9.b.t(parcel, 10, this.f5907n, i10, false);
-        o9.b.t(parcel, 11, this.f5908o, i10, false);
-        o9.b.t(parcel, 12, this.f5909p, i10, false);
-        o9.b.t(parcel, 13, this.f5910q, i10, false);
+        o9.b.t(parcel, 5, this.f5975i, i10, false);
+        o9.b.t(parcel, 6, this.f5976j, i10, false);
+        o9.b.t(parcel, 7, this.f5977k, i10, false);
+        o9.b.t(parcel, 8, this.f5978l, i10, false);
+        o9.b.t(parcel, 9, this.f5979m, i10, false);
+        o9.b.t(parcel, 10, this.f5980n, i10, false);
+        o9.b.t(parcel, 11, this.f5981o, i10, false);
+        o9.b.t(parcel, 12, this.f5982p, i10, false);
+        o9.b.t(parcel, 13, this.f5983q, i10, false);
         o9.b.b(parcel, iA);
     }
 }

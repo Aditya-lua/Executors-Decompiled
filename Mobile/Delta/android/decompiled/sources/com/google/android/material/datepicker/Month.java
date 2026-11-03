@@ -13,23 +13,23 @@ final class Month implements Comparable<Month>, Parcelable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final Calendar f7831a;
+    public final Calendar f7905a;
     public final int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final int f7832c;
+    public final int f7906c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final int f7833d;
+    public final int f7907d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final int f7834e;
+    public final int f7908e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final long f7835f;
+    public final long f7909f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public String f7836g;
+    public String f7910g;
 
     public class a implements Parcelable.Creator<Month> {
         @Override // android.os.Parcelable.Creator
@@ -50,12 +50,12 @@ final class Month implements Comparable<Month>, Parcelable {
     public Month(@NonNull Calendar calendar) {
         calendar.set(5, 1);
         Calendar calendarC = p.c(calendar);
-        this.f7831a = calendarC;
+        this.f7905a = calendarC;
         this.b = calendarC.get(2);
-        this.f7832c = calendarC.get(1);
-        this.f7833d = calendarC.getMaximum(7);
-        this.f7834e = calendarC.getActualMaximum(5);
-        this.f7835f = calendarC.getTimeInMillis();
+        this.f7906c = calendarC.get(1);
+        this.f7907d = calendarC.getMaximum(7);
+        this.f7908e = calendarC.getActualMaximum(5);
+        this.f7909f = calendarC.getTimeInMillis();
     }
 
     @NonNull
@@ -81,7 +81,7 @@ final class Month implements Comparable<Month>, Parcelable {
     @Override // java.lang.Comparable
     /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
     public int compareTo(@NonNull Month month) {
-        return this.f7831a.compareTo(month.f7831a);
+        return this.f7905a.compareTo(month.f7905a);
     }
 
     @Override // android.os.Parcelable
@@ -97,62 +97,62 @@ final class Month implements Comparable<Month>, Parcelable {
             return false;
         }
         Month month = (Month) obj;
-        return this.b == month.b && this.f7832c == month.f7832c;
+        return this.b == month.b && this.f7906c == month.f7906c;
     }
 
     public int hashCode() {
-        return Arrays.hashCode(new Object[]{Integer.valueOf(this.b), Integer.valueOf(this.f7832c)});
+        return Arrays.hashCode(new Object[]{Integer.valueOf(this.b), Integer.valueOf(this.f7906c)});
     }
 
     public int q(int i10) {
-        int i11 = this.f7831a.get(7);
+        int i11 = this.f7905a.get(7);
         if (i10 <= 0) {
-            i10 = this.f7831a.getFirstDayOfWeek();
+            i10 = this.f7905a.getFirstDayOfWeek();
         }
         int i12 = i11 - i10;
-        return i12 < 0 ? i12 + this.f7833d : i12;
+        return i12 < 0 ? i12 + this.f7907d : i12;
     }
 
     public long r(int i10) {
-        Calendar calendarC = p.c(this.f7831a);
+        Calendar calendarC = p.c(this.f7905a);
         calendarC.set(5, i10);
         return calendarC.getTimeInMillis();
     }
 
     public int s(long j10) {
-        Calendar calendarC = p.c(this.f7831a);
+        Calendar calendarC = p.c(this.f7905a);
         calendarC.setTimeInMillis(j10);
         return calendarC.get(5);
     }
 
     @NonNull
     public String u() {
-        if (this.f7836g == null) {
-            this.f7836g = c.f(this.f7831a.getTimeInMillis());
+        if (this.f7910g == null) {
+            this.f7910g = c.f(this.f7905a.getTimeInMillis());
         }
-        return this.f7836g;
+        return this.f7910g;
     }
 
     public long v() {
-        return this.f7831a.getTimeInMillis();
+        return this.f7905a.getTimeInMillis();
     }
 
     @NonNull
     public Month w(int i10) {
-        Calendar calendarC = p.c(this.f7831a);
+        Calendar calendarC = p.c(this.f7905a);
         calendarC.add(2, i10);
         return new Month(calendarC);
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
-        parcel.writeInt(this.f7832c);
+        parcel.writeInt(this.f7906c);
         parcel.writeInt(this.b);
     }
 
-    public int x(@NonNull Month month) {
-        if (this.f7831a instanceof GregorianCalendar) {
-            return ((month.f7832c - this.f7832c) * 12) + (month.b - this.b);
+    public int y(@NonNull Month month) {
+        if (this.f7905a instanceof GregorianCalendar) {
+            return ((month.f7906c - this.f7906c) * 12) + (month.b - this.b);
         }
         throw new IllegalArgumentException("Only Gregorian calendars are supported.");
     }

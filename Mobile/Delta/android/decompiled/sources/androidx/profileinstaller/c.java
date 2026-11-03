@@ -20,23 +20,23 @@ import java.util.concurrent.Executor;
 public class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final InterfaceC0051c f2880a = new a();
+    public static final InterfaceC0047c f2725a = new a();
 
     @NonNull
-    public static final InterfaceC0051c b = new b();
+    public static final InterfaceC0047c b = new b();
 
-    public class a implements InterfaceC0051c {
-        @Override // androidx.profileinstaller.c.InterfaceC0051c
+    public class a implements InterfaceC0047c {
+        @Override // androidx.profileinstaller.c.InterfaceC0047c
         public void a(int i10, Object obj) {
         }
 
-        @Override // androidx.profileinstaller.c.InterfaceC0051c
+        @Override // androidx.profileinstaller.c.InterfaceC0047c
         public void b(int i10, Object obj) {
         }
     }
 
-    public class b implements InterfaceC0051c {
-        @Override // androidx.profileinstaller.c.InterfaceC0051c
+    public class b implements InterfaceC0047c {
+        @Override // androidx.profileinstaller.c.InterfaceC0047c
         public void a(int i10, Object obj) {
             String str;
             switch (i10) {
@@ -82,7 +82,7 @@ public class c {
             }
         }
 
-        @Override // androidx.profileinstaller.c.InterfaceC0051c
+        @Override // androidx.profileinstaller.c.InterfaceC0047c
         public void b(int i10, Object obj) {
             String str;
             if (i10 == 1) {
@@ -101,7 +101,7 @@ public class c {
     }
 
     /* JADX INFO: renamed from: androidx.profileinstaller.c$c, reason: collision with other inner class name */
-    public interface InterfaceC0051c {
+    public interface InterfaceC0047c {
         void a(int i10, Object obj);
 
         void b(int i10, Object obj);
@@ -111,12 +111,12 @@ public class c {
         return new File(file, "profileinstaller_profileWrittenFor_lastUpdateTime.dat").delete();
     }
 
-    public static void c(@NonNull Context context, @NonNull Executor executor, @NonNull InterfaceC0051c interfaceC0051c) {
+    public static void c(@NonNull Context context, @NonNull Executor executor, @NonNull InterfaceC0047c interfaceC0047c) {
         b(context.getFilesDir());
-        f(executor, interfaceC0051c, 11, null);
+        f(executor, interfaceC0047c, 11, null);
     }
 
-    public static boolean d(PackageInfo packageInfo, File file, InterfaceC0051c interfaceC0051c) {
+    public static boolean d(PackageInfo packageInfo, File file, InterfaceC0047c interfaceC0047c) {
         File file2 = new File(file, "profileinstaller_profileWrittenFor_lastUpdateTime.dat");
         if (!file2.exists()) {
             return false;
@@ -128,7 +128,7 @@ public class c {
                 dataInputStream.close();
                 boolean z10 = j10 == packageInfo.lastUpdateTime;
                 if (z10) {
-                    interfaceC0051c.a(2, null);
+                    interfaceC0047c.a(2, null);
                 }
                 return z10;
             } catch (Throwable th2) {
@@ -162,17 +162,17 @@ public class c {
         }
     }
 
-    public static void f(@NonNull Executor executor, @NonNull final InterfaceC0051c interfaceC0051c, final int i10, final Object obj) {
+    public static void f(@NonNull Executor executor, @NonNull final InterfaceC0047c interfaceC0047c, final int i10, final Object obj) {
         executor.execute(new Runnable() { // from class: u4.e
             @Override // java.lang.Runnable
             public final void run() {
-                interfaceC0051c.a(i10, obj);
+                interfaceC0047c.a(i10, obj);
             }
         });
     }
 
-    public static boolean g(@NonNull AssetManager assetManager, @NonNull String str, @NonNull PackageInfo packageInfo, @NonNull File file, @NonNull String str2, @NonNull Executor executor, @NonNull InterfaceC0051c interfaceC0051c) {
-        androidx.profileinstaller.b bVar = new androidx.profileinstaller.b(assetManager, executor, interfaceC0051c, str2, "dexopt/baseline.prof", "dexopt/baseline.profm", new File(new File("/data/misc/profiles/cur/0", str), "primary.prof"));
+    public static boolean g(@NonNull AssetManager assetManager, @NonNull String str, @NonNull PackageInfo packageInfo, @NonNull File file, @NonNull String str2, @NonNull Executor executor, @NonNull InterfaceC0047c interfaceC0047c) {
+        androidx.profileinstaller.b bVar = new androidx.profileinstaller.b(assetManager, executor, interfaceC0047c, str2, "dexopt/baseline.prof", "dexopt/baseline.profm", new File(new File("/data/misc/profiles/cur/0", str), "primary.prof"));
         if (!bVar.e()) {
             return false;
         }
@@ -184,14 +184,14 @@ public class c {
     }
 
     public static void h(@NonNull Context context) {
-        i(context, new n(), f2880a);
+        i(context, new n(), f2725a);
     }
 
-    public static void i(@NonNull Context context, @NonNull Executor executor, @NonNull InterfaceC0051c interfaceC0051c) {
-        j(context, executor, interfaceC0051c, false);
+    public static void i(@NonNull Context context, @NonNull Executor executor, @NonNull InterfaceC0047c interfaceC0047c) {
+        j(context, executor, interfaceC0047c, false);
     }
 
-    public static void j(@NonNull Context context, @NonNull Executor executor, @NonNull InterfaceC0051c interfaceC0051c, boolean z10) {
+    public static void j(@NonNull Context context, @NonNull Executor executor, @NonNull InterfaceC0047c interfaceC0047c, boolean z10) {
         Context applicationContext = context.getApplicationContext();
         String packageName = applicationContext.getPackageName();
         ApplicationInfo applicationInfo = applicationContext.getApplicationInfo();
@@ -201,28 +201,28 @@ public class c {
         try {
             PackageInfo packageInfo = context.getPackageManager().getPackageInfo(packageName, 0);
             File filesDir = context.getFilesDir();
-            if (!z10 && d(packageInfo, filesDir, interfaceC0051c)) {
+            if (!z10 && d(packageInfo, filesDir, interfaceC0047c)) {
                 Log.d("ProfileInstaller", "Skipping profile installation for " + context.getPackageName());
                 d.d(context, false);
                 return;
             }
             Log.d("ProfileInstaller", "Installing profile for " + context.getPackageName());
-            if (g(assets, packageName, packageInfo, filesDir, name, executor, interfaceC0051c) && z10) {
+            if (g(assets, packageName, packageInfo, filesDir, name, executor, interfaceC0047c) && z10) {
                 z11 = true;
             }
             d.d(context, z11);
         } catch (PackageManager.NameNotFoundException e10) {
-            interfaceC0051c.a(7, e10);
+            interfaceC0047c.a(7, e10);
             d.d(context, false);
         }
     }
 
-    public static void k(@NonNull Context context, @NonNull Executor executor, @NonNull InterfaceC0051c interfaceC0051c) {
+    public static void k(@NonNull Context context, @NonNull Executor executor, @NonNull InterfaceC0047c interfaceC0047c) {
         try {
             e(context.getPackageManager().getPackageInfo(context.getApplicationContext().getPackageName(), 0), context.getFilesDir());
-            f(executor, interfaceC0051c, 10, null);
+            f(executor, interfaceC0047c, 10, null);
         } catch (PackageManager.NameNotFoundException e10) {
-            f(executor, interfaceC0051c, 7, e10);
+            f(executor, interfaceC0047c, 7, e10);
         }
     }
 }

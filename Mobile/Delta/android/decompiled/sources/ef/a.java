@@ -1,58 +1,60 @@
 package ef;
 
+import df.p;
+import java.util.Arrays;
+
 /* JADX INFO: loaded from: classes2.dex */
-public final class a extends l {
+public final class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final long f15446a;
-    public final long b;
+    public final byte[] f16109a;
 
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final long f15447c;
-
-    public a(long j10, long j11, long j12) {
-        this.f15446a = j10;
-        this.b = j11;
-        this.f15447c = j12;
+    public a(byte[] bArr, int i10, int i11) {
+        byte[] bArr2 = new byte[i11];
+        this.f16109a = bArr2;
+        System.arraycopy(bArr, i10, bArr2, 0, i11);
     }
 
-    @Override // ef.l
-    public long b() {
-        return this.b;
+    public static a a(byte[] bArr) {
+        if (bArr != null) {
+            return b(bArr, 0, bArr.length);
+        }
+        throw new NullPointerException("data must be non-null");
     }
 
-    @Override // ef.l
-    public long c() {
-        return this.f15446a;
+    public static a b(byte[] bArr, int i10, int i11) {
+        if (bArr == null) {
+            throw new NullPointerException("data must be non-null");
+        }
+        if (i10 + i11 > bArr.length) {
+            i11 = bArr.length - i10;
+        }
+        return new a(bArr, i10, i11);
     }
 
-    @Override // ef.l
-    public long d() {
-        return this.f15447c;
+    public int c() {
+        return this.f16109a.length;
+    }
+
+    public byte[] d() {
+        byte[] bArr = this.f16109a;
+        byte[] bArr2 = new byte[bArr.length];
+        System.arraycopy(bArr, 0, bArr2, 0, bArr.length);
+        return bArr2;
     }
 
     public boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
-        }
-        if (obj instanceof l) {
-            l lVar = (l) obj;
-            if (this.f15446a == lVar.c() && this.b == lVar.b() && this.f15447c == lVar.d()) {
-                return true;
-            }
+        if (obj instanceof a) {
+            return Arrays.equals(((a) obj).f16109a, this.f16109a);
         }
         return false;
     }
 
     public int hashCode() {
-        long j10 = this.f15446a;
-        long j11 = this.b;
-        int i10 = (((((int) (j10 ^ (j10 >>> 32))) ^ 1000003) * 1000003) ^ ((int) (j11 ^ (j11 >>> 32)))) * 1000003;
-        long j12 = this.f15447c;
-        return i10 ^ ((int) ((j12 >>> 32) ^ j12));
+        return Arrays.hashCode(this.f16109a);
     }
 
     public String toString() {
-        return "StartupTime{epochMillis=" + this.f15446a + ", elapsedRealtime=" + this.b + ", uptimeMillis=" + this.f15447c + "}";
+        return "Bytes(" + p.b(this.f16109a) + ")";
     }
 }

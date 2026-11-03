@@ -1,71 +1,80 @@
 package vr;
 
-import androidx.p000lifecycle.l0;
-import com.withpersona.sdk2.inquiry.workflows.WorkflowState;
+import gt.n;
+import gt.o;
+import java.util.List;
 import kotlin.Metadata;
+import kotlin.collections.CollectionsKt;
 import kotlin.jvm.internal.Intrinsics;
-import ku.p0;
-import nu.c0;
-import nu.r0;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000:\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0007\b&\u0018\u0000*\u0004\b\u0000\u0010\u0001*\n\b\u0001\u0010\u0003*\u0004\u0018\u00010\u0002*\u0004\b\u0002\u0010\u0004*\u0004\b\u0003\u0010\u00052\u00020\u0006B\u001f\u0012\u0006\u0010\u0007\u001a\u00028\u0000\u0012\u0006\u0010\t\u001a\u00020\b\u0012\u0006\u0010\u000b\u001a\u00020\n¢\u0006\u0004\b\f\u0010\rJ\u0017\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u000e\u001a\u00028\u0002H\u0014¢\u0006\u0004\b\u0010\u0010\u0011J\u0017\u0010\u0013\u001a\u00020\u000f2\u0006\u0010\u0012\u001a\u00028\u0001H\u0004¢\u0006\u0004\b\u0013\u0010\u0014R\u001d\u0010\u001a\u001a\b\u0012\u0004\u0012\u00028\u00000\u00158\u0006¢\u0006\f\n\u0004\b\u0016\u0010\u0017\u001a\u0004\b\u0018\u0010\u0019R\u001d\u0010\u001f\u001a\b\u0012\u0004\u0012\u00028\u00010\u001b8\u0006¢\u0006\f\n\u0004\b\u0018\u0010\u001c\u001a\u0004\b\u001d\u0010\u001eR\u001f\u0010\u000e\u001a\n\u0012\u0006\u0012\u0004\u0018\u00018\u00020\u00158\u0006¢\u0006\f\n\u0004\b \u0010\u0017\u001a\u0004\b\u0016\u0010\u0019R\u001f\u0010!\u001a\n\u0012\u0006\u0012\u0004\u0018\u00018\u00030\u00158\u0006¢\u0006\f\n\u0004\b\u001d\u0010\u0017\u001a\u0004\b \u0010\u0019¨\u0006\""}, d2 = {"Lvr/c;", "PropsT", "Lcom/withpersona/sdk2/inquiry/workflows/WorkflowState;", "StateT", "OutputT", "RenderingT", "", "initialProp", "Landroidx/lifecycle/l0;", "savedStateHandle", "Lku/p0;", "baseScope", "<init>", "(Ljava/lang/Object;Landroidx/lifecycle/l0;Lku/p0;)V", "output", "", "e", "(Ljava/lang/Object;)V", "newState", "f", "(Lcom/withpersona/sdk2/inquiry/workflows/WorkflowState;)V", "Lnu/c0;", "a", "Lnu/c0;", "b", "()Lnu/c0;", "props", "Lvr/f;", "Lvr/f;", "d", "()Lvr/f;", "workflowContext", "c", "rendering", "workflows_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public abstract class c<PropsT, StateT extends WorkflowState, OutputT, RenderingT> {
+@Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0002\b\u0004\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0003\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J%\u0010\u0007\u001a\u0004\u0018\u00010\u00042\b\u0010\u0005\u001a\u0004\u0018\u00010\u00042\b\u0010\u0006\u001a\u0004\u0018\u00010\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\bJ\u001d\u0010\u000b\u001a\u0004\u0018\u00010\n*\n\u0012\u0006\u0012\u0004\u0018\u00010\u00040\tH\u0002¢\u0006\u0004\b\u000b\u0010\fJ\u001d\u0010\u000e\u001a\u0004\u0018\u00010\r*\n\u0012\u0006\u0012\u0004\u0018\u00010\u00040\tH\u0002¢\u0006\u0004\b\u000e\u0010\u000fJ\u0013\u0010\u0011\u001a\u00020\u0010*\u00020\nH\u0002¢\u0006\u0004\b\u0011\u0010\u0012¨\u0006\u0013"}, d2 = {"Lvr/c;", "Lzr/b;", "<init>", "()V", "", "expression", "data", "l", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", "", "Lvr/d;", "c", "(Ljava/util/List;)Lvr/d;", "", "a", "(Ljava/util/List;)Ljava/lang/Integer;", "", "b", "(Lvr/d;)Ljava/lang/String;", "operations-stdlib_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class c implements zr.b {
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public final c0<PropsT> props;
+    public static final c f33614a = new c();
 
-    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
-    @NotNull
-    public final f<StateT> workflowContext;
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
-    @NotNull
-    public final c0<OutputT> output;
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
-    @NotNull
-    public final c0<RenderingT> rendering;
-
-    public c(PropsT propst, @NotNull l0 savedStateHandle, @NotNull p0 baseScope) {
-        Intrinsics.checkNotNullParameter(savedStateHandle, "savedStateHandle");
-        Intrinsics.checkNotNullParameter(baseScope, "baseScope");
-        this.props = r0.a(propst);
-        this.workflowContext = new f<>(savedStateHandle, baseScope);
-        this.output = r0.a(null);
-        this.rendering = r0.a(null);
-    }
-
-    @NotNull
-    public final c0<OutputT> a() {
-        return this.output;
-    }
-
-    @NotNull
-    public final c0<PropsT> b() {
-        return this.props;
-    }
-
-    @NotNull
-    public final c0<RenderingT> c() {
-        return this.rendering;
-    }
-
-    @NotNull
-    public final f<StateT> d() {
-        return this.workflowContext;
-    }
-
-    public void e(OutputT output) {
-        if (this.output.getValue() != null) {
-            return;
+    public final Integer a(List<? extends Object> list) {
+        Object obj = list.get(4);
+        Intrinsics.d(obj, "null cannot be cast to non-null type kotlin.Number");
+        Number number = (Number) obj;
+        if (number.doubleValue() != number.intValue()) {
+            number = null;
         }
-        this.output.setValue(output);
+        if (number != null) {
+            return Integer.valueOf(number.intValue());
+        }
+        return null;
     }
 
-    public final void f(StateT newState) {
-        this.workflowContext.p(newState);
+    public final String b(JoinToStringArguments joinToStringArguments) {
+        return CollectionsKt.m0(joinToStringArguments.a(), joinToStringArguments.getSeparator(), joinToStringArguments.getPrefix(), joinToStringArguments.getPostfix(), joinToStringArguments.getLimit(), joinToStringArguments.getTruncated(), null, 32, null);
+    }
+
+    public final JoinToStringArguments c(List<? extends Object> list) {
+        Object objB;
+        JoinToStringArguments joinToStringArguments;
+        try {
+            n.Companion companion = n.INSTANCE;
+            Integer numA = f33614a.a(list);
+            if (numA != null) {
+                int iIntValue = numA.intValue();
+                List<Object> listC = rs.a.c(list.get(0));
+                Object obj = list.get(1);
+                Intrinsics.d(obj, "null cannot be cast to non-null type kotlin.String");
+                String str = (String) obj;
+                Object obj2 = list.get(2);
+                Intrinsics.d(obj2, "null cannot be cast to non-null type kotlin.String");
+                String str2 = (String) obj2;
+                Object obj3 = list.get(3);
+                Intrinsics.d(obj3, "null cannot be cast to non-null type kotlin.String");
+                Object obj4 = list.get(5);
+                Intrinsics.d(obj4, "null cannot be cast to non-null type kotlin.String");
+                joinToStringArguments = new JoinToStringArguments(listC, str, str2, (String) obj3, iIntValue, (String) obj4);
+            } else {
+                joinToStringArguments = null;
+            }
+            objB = n.b(joinToStringArguments);
+        } catch (Throwable th2) {
+            n.Companion companion2 = n.INSTANCE;
+            objB = n.b(o.a(th2));
+        }
+        if (n.e(objB) == null) {
+            return (JoinToStringArguments) objB;
+        }
+        return null;
+    }
+
+    @Override // zr.b
+    @Nullable
+    public Object l(@Nullable Object expression, @Nullable Object data) {
+        JoinToStringArguments joinToStringArgumentsC = c(rs.a.c(expression));
+        if (joinToStringArgumentsC != null) {
+            return b(joinToStringArgumentsC);
+        }
+        return null;
     }
 }

@@ -26,13 +26,13 @@ public final class m {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final String[] f4614a = {"tokenize=", "compress=", "content=", "languageid=", "matchinfo=", "notindexed=", "order=", "prefix=", "uncompress="};
+    public static final String[] f4780a = {"tokenize=", "compress=", "content=", "languageid=", "matchinfo=", "notindexed=", "order=", "prefix=", "uncompress="};
 
     @Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
     public static final class a<T> implements Comparator {
         @Override // java.util.Comparator
         public final int compare(T t8, T t10) {
-            return mt.a.a((Integer) ((Map.Entry) t8).getKey(), (Integer) ((Map.Entry) t10).getKey());
+            return kt.a.a((Integer) ((Map.Entry) t8).getKey(), (Integer) ((Map.Entry) t10).getKey());
         }
     }
 
@@ -40,7 +40,7 @@ public final class m {
     public static final class b<T> implements Comparator {
         @Override // java.util.Comparator
         public final int compare(T t8, T t10) {
-            return mt.a.a((Integer) ((Map.Entry) t8).getKey(), (Integer) ((Map.Entry) t10).getKey());
+            return kt.a.a((Integer) ((Map.Entry) t8).getKey(), (Integer) ((Map.Entry) t10).getKey());
         }
     }
 
@@ -65,9 +65,9 @@ public final class m {
     public static final Map<String, o.a> b(f5.b bVar, String str) throws Exception {
         f5.d dVarR3 = bVar.r3("PRAGMA table_info(`" + str + "`)");
         try {
-            if (!dVarR3.g3()) {
+            if (!dVarR3.i3()) {
                 Map<String, o.a> mapJ = k0.j();
-                xt.a.a(dVarR3, null);
+                vt.a.a(dVarR3, null);
                 return mapJ;
             }
             int iA = j.a(dVarR3, "name");
@@ -77,17 +77,17 @@ public final class m {
             int iA5 = j.a(dVarR3, "dflt_value");
             Map mapD = j0.d();
             do {
-                String strE2 = dVarR3.E2(iA);
-                mapD.put(strE2, new o.a(strE2, dVarR3.E2(iA2), dVarR3.getLong(iA3) != 0, (int) dVarR3.getLong(iA4), dVarR3.isNull(iA5) ? null : dVarR3.E2(iA5), 2));
-            } while (dVarR3.g3());
+                String strF2 = dVarR3.F2(iA);
+                mapD.put(strF2, new o.a(strF2, dVarR3.F2(iA2), dVarR3.getLong(iA3) != 0, (int) dVarR3.getLong(iA4), dVarR3.isNull(iA5) ? null : dVarR3.F2(iA5), 2));
+            } while (dVarR3.i3());
             Map<String, o.a> mapC = j0.c(mapD);
-            xt.a.a(dVarR3, null);
+            vt.a.a(dVarR3, null);
             return mapC;
         } catch (Throwable th2) {
             try {
                 throw th2;
             } catch (Throwable th3) {
-                xt.a.a(dVarR3, th2);
+                vt.a.a(dVarR3, th2);
                 throw th3;
             }
         }
@@ -99,8 +99,8 @@ public final class m {
         int iA3 = j.a(dVar, "from");
         int iA4 = j.a(dVar, "to");
         List listC = kotlin.collections.o.c();
-        while (dVar.g3()) {
-            listC.add(new e((int) dVar.getLong(iA), (int) dVar.getLong(iA2), dVar.E2(iA3), dVar.E2(iA4)));
+        while (dVar.i3()) {
+            listC.add(new e((int) dVar.getLong(iA), (int) dVar.getLong(iA2), dVar.F2(iA3), dVar.F2(iA4)));
         }
         return CollectionsKt.D0(kotlin.collections.o.a(listC));
     }
@@ -116,7 +116,7 @@ public final class m {
             List<e> listC = c(dVarR3);
             dVarR3.reset();
             Set setB = p0.b();
-            while (dVarR3.g3()) {
+            while (dVarR3.i3()) {
                 if (dVarR3.getLong(iA2) == 0) {
                     int i10 = (int) dVarR3.getLong(iA);
                     ArrayList arrayList = new ArrayList();
@@ -136,17 +136,17 @@ public final class m {
                         arrayList.add(eVar.getFrom());
                         arrayList2.add(eVar.getTo());
                     }
-                    setB.add(new o.c(dVarR3.E2(iA3), dVarR3.E2(iA4), dVarR3.E2(iA5), arrayList, arrayList2));
+                    setB.add(new o.c(dVarR3.F2(iA3), dVarR3.F2(iA4), dVarR3.F2(iA5), arrayList, arrayList2));
                 }
             }
             Set<o.c> setA = p0.a(setB);
-            xt.a.a(dVarR3, null);
+            vt.a.a(dVarR3, null);
             return setA;
         } catch (Throwable th2) {
             try {
                 throw th2;
             } catch (Throwable th3) {
-                xt.a.a(dVarR3, th2);
+                vt.a.a(dVarR3, th2);
                 throw th3;
             }
         }
@@ -162,12 +162,12 @@ public final class m {
             if (iA != -1 && iA2 != -1 && iA3 != -1 && iA4 != -1) {
                 LinkedHashMap linkedHashMap = new LinkedHashMap();
                 LinkedHashMap linkedHashMap2 = new LinkedHashMap();
-                while (dVarR3.g3()) {
+                while (dVarR3.i3()) {
                     if (((int) dVarR3.getLong(iA2)) >= 0) {
                         int i10 = (int) dVarR3.getLong(iA);
-                        String strE2 = dVarR3.E2(iA3);
+                        String strF2 = dVarR3.F2(iA3);
                         String str2 = dVarR3.getLong(iA4) > 0 ? "DESC" : "ASC";
-                        linkedHashMap.put(Integer.valueOf(i10), strE2);
+                        linkedHashMap.put(Integer.valueOf(i10), strF2);
                         linkedHashMap2.put(Integer.valueOf(i10), str2);
                     }
                 }
@@ -185,16 +185,16 @@ public final class m {
                     arrayList2.add((String) ((Map.Entry) it2.next()).getValue());
                 }
                 o.d dVar = new o.d(str, z10, listM0, CollectionsKt.M0(arrayList2));
-                xt.a.a(dVarR3, null);
+                vt.a.a(dVarR3, null);
                 return dVar;
             }
-            xt.a.a(dVarR3, null);
+            vt.a.a(dVarR3, null);
             return null;
         } catch (Throwable th2) {
             try {
                 throw th2;
             } catch (Throwable th3) {
-                xt.a.a(dVarR3, th2);
+                vt.a.a(dVarR3, th2);
                 throw th3;
             }
         }
@@ -208,27 +208,27 @@ public final class m {
             int iA3 = j.a(dVarR3, "unique");
             if (iA != -1 && iA2 != -1 && iA3 != -1) {
                 Set setB = p0.b();
-                while (dVarR3.g3()) {
-                    if (Intrinsics.c("c", dVarR3.E2(iA2))) {
-                        o.d dVarE = e(bVar, dVarR3.E2(iA), dVarR3.getLong(iA3) == 1);
+                while (dVarR3.i3()) {
+                    if (Intrinsics.c("c", dVarR3.F2(iA2))) {
+                        o.d dVarE = e(bVar, dVarR3.F2(iA), dVarR3.getLong(iA3) == 1);
                         if (dVarE == null) {
-                            xt.a.a(dVarR3, null);
+                            vt.a.a(dVarR3, null);
                             return null;
                         }
                         setB.add(dVarE);
                     }
                 }
                 Set<o.d> setA = p0.a(setB);
-                xt.a.a(dVarR3, null);
+                vt.a.a(dVarR3, null);
                 return setA;
             }
-            xt.a.a(dVarR3, null);
+            vt.a.a(dVarR3, null);
             return null;
         } catch (Throwable th2) {
             try {
                 throw th2;
             } catch (Throwable th3) {
-                xt.a.a(dVarR3, th2);
+                vt.a.a(dVarR3, th2);
                 throw th3;
             }
         }

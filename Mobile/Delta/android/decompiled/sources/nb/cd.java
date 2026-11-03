@@ -6,17 +6,17 @@ import java.util.Objects;
 public final class cd implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ long f25438a;
+    public final /* synthetic */ long f26259a;
     public final /* synthetic */ ld b;
 
     public cd(ld ldVar, long j10) {
-        this.f25438a = j10;
+        this.f26259a = j10;
         Objects.requireNonNull(ldVar);
         this.b = ldVar;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        this.b.r(this.f25438a);
+        this.b.r(this.f26259a);
     }
 }

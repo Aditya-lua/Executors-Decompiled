@@ -1,90 +1,198 @@
 package af;
 
-import java.security.GeneralSecurityException;
-import java.security.KeyPair;
-import java.security.interfaces.ECPrivateKey;
-import java.security.interfaces.ECPublicKey;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-
 /* JADX INFO: loaded from: classes2.dex */
-public final class g {
+public final class g extends com.google.crypto.tink.shaded.protobuf.y<g, b> implements com.google.crypto.tink.shaded.protobuf.t0 {
+    private static final g DEFAULT_INSTANCE;
+    public static final int KEY_SIZE_FIELD_NUMBER = 2;
+    public static final int PARAMS_FIELD_NUMBER = 1;
+    private static volatile com.google.crypto.tink.shaded.protobuf.a1<g> PARSER;
+    private int bitField0_;
+    private int keySize_;
+    private h params_;
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final ve.h0<b, oe.z> f410a = ve.h0.b(new ve.h0.b() { // from class: af.d
-        @Override // ve.h0.b
-        public final Object a(oe.l lVar) {
-            return cf.g.b((b) lVar);
+    public static /* synthetic */ class a {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final /* synthetic */ int[] f510a;
+
+        static {
+            int[] iArr = new int[com.google.crypto.tink.shaded.protobuf.y.f.values().length];
+            f510a = iArr;
+            try {
+                iArr[com.google.crypto.tink.shaded.protobuf.y.f.NEW_MUTABLE_INSTANCE.ordinal()] = 1;
+            } catch (NoSuchFieldError unused) {
+            }
+            try {
+                f510a[com.google.crypto.tink.shaded.protobuf.y.f.NEW_BUILDER.ordinal()] = 2;
+            } catch (NoSuchFieldError unused2) {
+            }
+            try {
+                f510a[com.google.crypto.tink.shaded.protobuf.y.f.BUILD_MESSAGE_INFO.ordinal()] = 3;
+            } catch (NoSuchFieldError unused3) {
+            }
+            try {
+                f510a[com.google.crypto.tink.shaded.protobuf.y.f.GET_DEFAULT_INSTANCE.ordinal()] = 4;
+            } catch (NoSuchFieldError unused4) {
+            }
+            try {
+                f510a[com.google.crypto.tink.shaded.protobuf.y.f.GET_PARSER.ordinal()] = 5;
+            } catch (NoSuchFieldError unused5) {
+            }
+            try {
+                f510a[com.google.crypto.tink.shaded.protobuf.y.f.GET_MEMOIZED_IS_INITIALIZED.ordinal()] = 6;
+            } catch (NoSuchFieldError unused6) {
+            }
+            try {
+                f510a[com.google.crypto.tink.shaded.protobuf.y.f.SET_MEMOIZED_IS_INITIALIZED.ordinal()] = 7;
+            } catch (NoSuchFieldError unused7) {
+            }
         }
-    }, b.class, oe.z.class);
-    public static final ve.h0<c, oe.a0> b = ve.h0.b(new ve.h0.b() { // from class: af.e
-        @Override // ve.h0.b
-        public final Object a(oe.l lVar) {
-            return cf.h.b((c) lVar);
-        }
-    }, c.class, oe.a0.class);
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final oe.y<oe.z> f411c = ve.o.f(c(), oe.z.class, ze.t.h0());
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final oe.m<oe.a0> f412d = ve.o.e(h.a(), oe.a0.class, ze.f0.c.ASYMMETRIC_PUBLIC, ze.u.k0());
-
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final ve.w.a<a> f413e = new ve.w.a() { // from class: af.f
-        @Override // ve.w.a
-        public final oe.l a(oe.x xVar, Integer num) {
-            return g.b((a) xVar, num);
-        }
-    };
-
-    /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final te.b.EnumC0569b f414f = te.b.EnumC0569b.b;
-
-    public static b b(a aVar, Integer num) throws GeneralSecurityException {
-        KeyPair keyPairF = cf.k.f(aVar.c().a());
-        ECPublicKey eCPublicKey = (ECPublicKey) keyPairF.getPublic();
-        ECPrivateKey eCPrivateKey = (ECPrivateKey) keyPairF.getPrivate();
-        return b.d().c(c.c().d(aVar).c(num).e(eCPublicKey.getW()).a()).b(df.b.a(eCPrivateKey.getS(), oe.j.a())).a();
     }
 
-    public static String c() {
-        return "type.googleapis.com/google.crypto.tink.EcdsaPrivateKey";
-    }
-
-    public static Map<String, oe.x> d() {
-        HashMap map = new HashMap();
-        map.put("ECDSA_P256", e0.f397a);
-        map.put("ECDSA_P256_IEEE_P1363", e0.f399d);
-        map.put("ECDSA_P256_RAW", a.b().c(a.d.b).b(a.c.f377c).d(a.e.b).e(a.f.f388e).a());
-        map.put("ECDSA_P256_IEEE_P1363_WITHOUT_PREFIX", e0.f401f);
-        map.put("ECDSA_P384", e0.b);
-        map.put("ECDSA_P384_IEEE_P1363", e0.f400e);
-        a.b bVarC = a.b().c(a.d.f382d);
-        a.c cVar = a.c.f378d;
-        a.b bVarB = bVarC.b(cVar);
-        a.e eVar = a.e.f384c;
-        a.b bVarD = bVarB.d(eVar);
-        a.f fVar = a.f.b;
-        map.put("ECDSA_P384_SHA512", bVarD.e(fVar).a());
-        map.put("ECDSA_P384_SHA384", a.b().c(a.d.f381c).b(cVar).d(eVar).e(fVar).a());
-        map.put("ECDSA_P521", e0.f398c);
-        map.put("ECDSA_P521_IEEE_P1363", e0.f402g);
-        return Collections.unmodifiableMap(map);
-    }
-
-    public static void e(boolean z10) throws GeneralSecurityException {
-        te.b.EnumC0569b enumC0569b = f414f;
-        if (!enumC0569b.a()) {
-            throw new GeneralSecurityException("Can not use ECDSA in FIPS-mode, as BoringCrypto module is not available.");
+    public static final class b extends com.google.crypto.tink.shaded.protobuf.y.a<g, b> implements com.google.crypto.tink.shaded.protobuf.t0 {
+        public /* synthetic */ b(a aVar) {
+            this();
         }
-        bf.g.m();
-        ve.z.a().c(d());
-        ve.a0.c().d(f410a);
-        ve.a0.c().d(b);
-        ve.w.f().b(f413e, a.class);
-        ve.l.d().h(f411c, enumC0569b, z10);
-        ve.l.d().h(f412d, enumC0569b, false);
+
+        public b C(int i10) {
+            r();
+            ((g) this.b).g0(i10);
+            return this;
+        }
+
+        public b D(h hVar) {
+            r();
+            ((g) this.b).h0(hVar);
+            return this;
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.y.a, com.google.crypto.tink.shaded.protobuf.s0.a
+        public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0.a F(com.google.crypto.tink.shaded.protobuf.i iVar, com.google.crypto.tink.shaded.protobuf.p pVar) {
+            return super.F(iVar, pVar);
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.a.AbstractC0130a, com.google.crypto.tink.shaded.protobuf.s0.a
+        public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0.a H(com.google.crypto.tink.shaded.protobuf.s0 s0Var) {
+            return super.H(s0Var);
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.y.a, com.google.crypto.tink.shaded.protobuf.s0.a
+        public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0 build() {
+            return super.build();
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.y.a
+        public /* bridge */ /* synthetic */ Object clone() {
+            return super.clone();
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.y.a, com.google.crypto.tink.shaded.protobuf.s0.a
+        public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0 d() {
+            return super.d();
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.y.a, com.google.crypto.tink.shaded.protobuf.t0
+        public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0 f() {
+            return super.f();
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.y.a, com.google.crypto.tink.shaded.protobuf.a.AbstractC0130a
+        public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.a.AbstractC0130a j(com.google.crypto.tink.shaded.protobuf.a aVar) {
+            return super.j((com.google.crypto.tink.shaded.protobuf.y) aVar);
+        }
+
+        public b() {
+            super(g.DEFAULT_INSTANCE);
+        }
+    }
+
+    static {
+        g gVar = new g();
+        DEFAULT_INSTANCE = gVar;
+        com.google.crypto.tink.shaded.protobuf.y.W(g.class, gVar);
+    }
+
+    public static g c0() {
+        return DEFAULT_INSTANCE;
+    }
+
+    public static b f0() {
+        return DEFAULT_INSTANCE.v();
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void g0(int i10) {
+        this.keySize_ = i10;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void h0(h hVar) {
+        hVar.getClass();
+        this.params_ = hVar;
+        this.bitField0_ |= 1;
+    }
+
+    @Override // com.google.crypto.tink.shaded.protobuf.y, com.google.crypto.tink.shaded.protobuf.s0
+    public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0.a a() {
+        return super.a();
+    }
+
+    public int d0() {
+        return this.keySize_;
+    }
+
+    @Override // com.google.crypto.tink.shaded.protobuf.y, com.google.crypto.tink.shaded.protobuf.s0
+    public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0.a e() {
+        return super.e();
+    }
+
+    public h e0() {
+        h hVar = this.params_;
+        return hVar == null ? h.b0() : hVar;
+    }
+
+    @Override // com.google.crypto.tink.shaded.protobuf.y, com.google.crypto.tink.shaded.protobuf.t0
+    public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0 f() {
+        return super.f();
+    }
+
+    @Override // com.google.crypto.tink.shaded.protobuf.y
+    public final Object z(com.google.crypto.tink.shaded.protobuf.y.f fVar, Object obj, Object obj2) {
+        com.google.crypto.tink.shaded.protobuf.a1 bVar;
+        a aVar = null;
+        switch (a.f510a[fVar.ordinal()]) {
+            case 1:
+                return new g();
+            case 2:
+                return new b(aVar);
+            case 3:
+                return com.google.crypto.tink.shaded.protobuf.y.O(DEFAULT_INSTANCE, "\u0000\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001ဉ\u0000\u0002\u000b", new Object[]{"bitField0_", "params_", "keySize_"});
+            case 4:
+                return DEFAULT_INSTANCE;
+            case 5:
+                com.google.crypto.tink.shaded.protobuf.a1<g> a1Var = PARSER;
+                if (a1Var != null) {
+                    return a1Var;
+                }
+                synchronized (g.class) {
+                    try {
+                        bVar = PARSER;
+                        if (bVar == null) {
+                            bVar = new com.google.crypto.tink.shaded.protobuf.y.b(DEFAULT_INSTANCE);
+                            PARSER = bVar;
+                        }
+                    } catch (Throwable th2) {
+                        throw th2;
+                    }
+                    break;
+                }
+                return bVar;
+            case 6:
+                return (byte) 1;
+            case 7:
+                return null;
+            default:
+                throw new UnsupportedOperationException();
+        }
     }
 }

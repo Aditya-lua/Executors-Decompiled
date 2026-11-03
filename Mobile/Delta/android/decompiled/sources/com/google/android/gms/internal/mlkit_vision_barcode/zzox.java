@@ -1,15 +1,15 @@
 package com.google.android.gms.internal.mlkit_vision_barcode;
 
-import rf.b;
+import sf.b;
 
 /* JADX INFO: loaded from: classes.dex */
-public final class zzox implements rf.a {
-    public static final rf.a zza = new zzox();
+public final class zzox implements sf.a {
+    public static final sf.a zza = new zzox();
 
     private zzox() {
     }
 
-    @Override // rf.a
+    @Override // sf.a
     public final void configure(b bVar) {
         bVar.registerEncoder(zzrf.class, zzkv.zza);
         bVar.registerEncoder(zzvd.class, zzon.zza);

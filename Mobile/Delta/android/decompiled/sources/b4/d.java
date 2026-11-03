@@ -13,17 +13,17 @@ import java.lang.ref.WeakReference;
 public final class d implements InputFilter {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final TextView f3893a;
+    public final TextView f3791a;
     public androidx.emoji2.text.c.f b;
 
     public static class a extends androidx.emoji2.text.c.f {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Reference<TextView> f3894a;
+        public final Reference<TextView> f3792a;
         public final Reference<d> b;
 
         public a(TextView textView, d dVar) {
-            this.f3894a = new WeakReference(textView);
+            this.f3792a = new WeakReference(textView);
             this.b = new WeakReference(dVar);
         }
 
@@ -32,7 +32,7 @@ public final class d implements InputFilter {
             CharSequence text;
             CharSequence charSequenceP;
             super.b();
-            TextView textView = this.f3894a.get();
+            TextView textView = this.f3792a.get();
             if (c(textView, this.b.get()) && textView.isAttachedToWindow() && text != (charSequenceP = androidx.emoji2.text.c.c().p((text = textView.getText())))) {
                 int selectionStart = Selection.getSelectionStart(charSequenceP);
                 int selectionEnd = Selection.getSelectionEnd(charSequenceP);
@@ -58,7 +58,7 @@ public final class d implements InputFilter {
     }
 
     public d(@NonNull TextView textView) {
-        this.f3893a = textView;
+        this.f3791a = textView;
     }
 
     public static void b(Spannable spannable, int i10, int i11) {
@@ -73,20 +73,20 @@ public final class d implements InputFilter {
 
     public final androidx.emoji2.text.c.f a() {
         if (this.b == null) {
-            this.b = new a(this.f3893a, this);
+            this.b = new a(this.f3791a, this);
         }
         return this.b;
     }
 
     @Override // android.text.InputFilter
     public CharSequence filter(CharSequence charSequence, int i10, int i11, Spanned spanned, int i12, int i13) {
-        if (this.f3893a.isInEditMode()) {
+        if (this.f3791a.isInEditMode()) {
             return charSequence;
         }
         int iE = androidx.emoji2.text.c.c().e();
         if (iE != 0) {
             if (iE == 1) {
-                if ((i13 == 0 && i12 == 0 && spanned.length() == 0 && charSequence == this.f3893a.getText()) || charSequence == null) {
+                if ((i13 == 0 && i12 == 0 && spanned.length() == 0 && charSequence == this.f3791a.getText()) || charSequence == null) {
                     return charSequence;
                 }
                 if (i10 != 0 || i11 != charSequence.length()) {

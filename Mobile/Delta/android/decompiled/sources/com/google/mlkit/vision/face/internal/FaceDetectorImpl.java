@@ -19,7 +19,7 @@ import com.google.mlkit.vision.face.FaceDetector;
 import com.google.mlkit.vision.face.FaceDetectorOptions;
 import java.util.List;
 import java.util.concurrent.Executor;
-import nd.a;
+import od.a;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class FaceDetectorImpl extends MobileVisionBase<List<Face>> implements FaceDetector {

@@ -1,10 +1,11 @@
 package gj;
 
-import android.app.Activity;
-import ej.j;
+import android.content.Context;
+import cj.s;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class a {
-    public void a(Activity activity, String str, long j10, j jVar) {
+public class a extends s {
+    public static a a(Context context) {
+        return null;
     }
 }

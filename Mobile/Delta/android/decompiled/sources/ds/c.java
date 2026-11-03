@@ -1,95 +1,76 @@
 package ds;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import kotlin.Metadata;
-import kotlin.collections.p;
-import kotlin.jvm.functions.Function2;
+import kotlin.collections.CollectionsKt;
 import kotlin.jvm.internal.Intrinsics;
-import kotlin.jvm.internal.k;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import wr.l;
+import rs.d;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000F\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\b\u0003\n\u0002\u0010$\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\bÀ\u0002\u0018\u00002\u00020\u00012\u00020\u00022\u00020\u0003B\t\b\u0002¢\u0006\u0004\b\u0004\u0010\u0005J-\u0010\u000b\u001a\u0004\u0018\u00010\u00062\b\u0010\u0007\u001a\u0004\u0018\u00010\u00062\b\u0010\b\u001a\u0004\u0018\u00010\u00062\u0006\u0010\n\u001a\u00020\tH\u0016¢\u0006\u0004\b\u000b\u0010\fJ'\u0010\u0010\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00060\u000f2\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\n\u001a\u00020\tH\u0002¢\u0006\u0004\b\u0010\u0010\u0011J=\u0010\u0018\u001a\u00020\u0017*\u00020\t2\b\u0010\u0012\u001a\u0004\u0018\u00010\u00062\u0014\u0010\u0015\u001a\u0010\u0012\u0004\u0012\u00020\u0014\u0012\u0004\u0012\u00020\u0006\u0018\u00010\u00132\b\u0010\u0016\u001a\u0004\u0018\u00010\u0006H\u0002¢\u0006\u0004\b\u0018\u0010\u0019¨\u0006\u001a"}, d2 = {"Lds/c;", "Lbs/a;", "Lds/f;", "Lks/d;", "<init>", "()V", "", "expression", "data", "Lwr/l;", "evaluator", "c", "(Ljava/lang/Object;Ljava/lang/Object;Lwr/l;)Ljava/lang/Object;", "Lds/b;", "operationInput", "", "o", "(Lds/b;Lwr/l;)Ljava/util/List;", "evaluatedValue", "", "", "mappingOperation", "operationDefault", "", "p", "(Lwr/l;Ljava/lang/Object;Ljava/util/Map;Ljava/lang/Object;)Z", "core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class c implements bs.a, f, ks.d {
+@Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0002\b\u0004\n\u0002\u0010 \n\u0002\u0010\u000e\n\u0002\b\u0006\n\u0002\u0010\u000b\n\u0002\b\u0006\bÀ\u0002\u0018\u00002\u00020\u00012\u00020\u0002B\t\b\u0002¢\u0006\u0004\b\u0003\u0010\u0004J%\u0010\b\u001a\u0004\u0018\u00010\u00052\b\u0010\u0006\u001a\u0004\u0018\u00010\u00052\b\u0010\u0007\u001a\u0004\u0018\u00010\u0005H\u0016¢\u0006\u0004\b\b\u0010\tJ/\u0010\f\u001a\u0004\u0018\u00010\u0005*\b\u0012\u0004\u0012\u00020\u000b0\n2\b\u0010\u0006\u001a\u0004\u0018\u00010\u00052\b\u0010\u0007\u001a\u0004\u0018\u00010\u0005H\u0002¢\u0006\u0004\b\f\u0010\rJ)\u0010\u0010\u001a\u0004\u0018\u00010\u00052\b\u0010\u000e\u001a\u0004\u0018\u00010\u00052\f\u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\u000b0\nH\u0002¢\u0006\u0004\b\u0010\u0010\u0011J#\u0010\u0013\u001a\u00020\u00122\b\u0010\u000e\u001a\u0004\u0018\u00010\u00052\b\u0010\u0006\u001a\u0004\u0018\u00010\u0005H\u0002¢\u0006\u0004\b\u0013\u0010\u0014J/\u0010\u0016\u001a\u0004\u0018\u00010\u00052\f\u0010\u0015\u001a\b\u0012\u0004\u0012\u00020\u000b0\n2\u000e\u0010\u0007\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00050\nH\u0002¢\u0006\u0004\b\u0016\u0010\u0017¨\u0006\u0018"}, d2 = {"Lds/c;", "Lzr/b;", "Les/a;", "<init>", "()V", "", "expression", "data", "l", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", "", "", "e", "(Ljava/util/List;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", "value", "indexParts", "f", "(Ljava/lang/Object;Ljava/util/List;)Ljava/lang/Object;", "", "h", "(Ljava/lang/Object;Ljava/lang/Object;)Z", "indexes", "g", "(Ljava/util/List;Ljava/util/List;)Ljava/lang/Object;", "core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class c implements zr.b, es.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final c f14877a = new c();
+    public static final c f15419a = new c();
 
-    @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final /* synthetic */ class a extends k implements Function2<ArrayOperationInputData, l, List<? extends Object>> {
-        public a(Object obj) {
-            super(2, obj, c.class, "filterOrEmptyList", "filterOrEmptyList(Lcom/withpersona/sdk2/jsonlogic/operations/array/ArrayOperationInputData;Lcom/withpersona/sdk2/jsonlogic/LogicEvaluator;)Ljava/util/List;", 0);
+    @Override // es.a
+    @Nullable
+    public List<String> d(@Nullable Object obj) {
+        return super.d(obj);
+    }
+
+    public final Object e(List<String> list, Object obj, Object obj2) {
+        if (!list.isEmpty()) {
+            obj2 = f(obj2, list);
         }
-
-        @Override // kotlin.jvm.functions.Function2
-        /* JADX INFO: renamed from: d, reason: merged with bridge method [inline-methods] */
-        public final List<Object> invoke(ArrayOperationInputData p8, l p10) {
-            Intrinsics.checkNotNullParameter(p8, "p0");
-            Intrinsics.checkNotNullParameter(p10, "p1");
-            return ((c) this.receiver).o(p8, p10);
-        }
-    }
-
-    @Override // ds.a
-    @Nullable
-    public Object a(@Nullable Map<String, ? extends Object> map, @NotNull List<? extends Object> list) {
-        return super.a(map, list);
-    }
-
-    @Override // ks.d
-    public boolean b(@Nullable Object obj) {
-        return super.b(obj);
-    }
-
-    @Override // bs.a
-    @Nullable
-    public Object c(@Nullable Object expression, @Nullable Object data, @NotNull l evaluator) {
-        Intrinsics.checkNotNullParameter(evaluator, "evaluator");
-        return h(expression, data, evaluator, new a(this));
-    }
-
-    @Override // ds.f
-    @Nullable
-    public Object h(@Nullable Object obj, @Nullable Object obj2, @NotNull l lVar, @NotNull Function2<? super ArrayOperationInputData, ? super l, ? extends Object> function2) {
-        return super.h(obj, obj2, lVar, function2);
-    }
-
-    @Override // ds.a
-    @NotNull
-    public ArrayOperationInputData l(@NotNull List<? extends Object> list, @Nullable Object obj, @NotNull l lVar) {
-        return super.l(list, obj, lVar);
-    }
-
-    @Override // ss.a
-    @Nullable
-    public List<Object> m(@NotNull List<? extends Object> list, @Nullable Object obj, @NotNull l lVar) {
-        return super.m(list, obj, lVar);
-    }
-
-    public final List<Object> o(ArrayOperationInputData operationInput, l evaluator) {
-        List<Object> listB = operationInput.b();
-        if (listB == null) {
-            listB = p.k();
-        }
-        ArrayList arrayList = new ArrayList();
-        for (Object obj : listB) {
-            if (f14877a.p(evaluator, obj, operationInput.a(), operationInput.getOperationDefault())) {
-                arrayList.add(obj);
+        if (h(obj2, obj)) {
+            obj2 = null;
+            List list2 = obj instanceof List ? (List) obj : null;
+            if (list2 != null) {
+                return rs.c.b(list2);
             }
         }
-        return arrayList;
+        return obj2;
     }
 
-    public final boolean p(l lVar, Object obj, Map<String, ? extends Object> map, Object obj2) {
-        Object objA;
-        if (map != null && (objA = lVar.a(map, obj)) != null) {
-            obj2 = objA;
+    public final Object f(Object value, List<String> indexParts) {
+        if (value instanceof List) {
+            return indexParts.size() == 1 ? ((List) value).get(d.b((String) CollectionsKt.d0(indexParts))) : g(indexParts, (List) value);
         }
-        return b(obj2);
+        if (value instanceof Map) {
+            value = ((Map) value).get(CollectionsKt.d0(indexParts));
+            for (String str : CollectionsKt.Y(indexParts, 1)) {
+                Map map = value instanceof Map ? (Map) value : null;
+                value = map != null ? map.get(str) : null;
+            }
+        }
+        return value;
+    }
+
+    public final Object g(List<String> indexes, List<? extends Object> data) {
+        String str = (String) CollectionsKt.firstOrNull(indexes);
+        if (str == null) {
+            return null;
+        }
+        Object objF0 = CollectionsKt.f0(data, d.b(str));
+        return objF0 instanceof List ? f15419a.g(indexes.subList(1, indexes.size()), (List) objF0) : CollectionsKt.f0(data, d.b(str));
+    }
+
+    public final boolean h(Object value, Object expression) {
+        return (Intrinsics.c(value, expression) || value == null) && (expression instanceof List) && ((List) expression).size() > 1;
+    }
+
+    @Override // zr.b
+    @Nullable
+    public Object l(@Nullable Object expression, @Nullable Object data) {
+        List<String> listD = d(rs.a.c(expression));
+        if (listD != null) {
+            return e(listD, expression, data);
+        }
+        return null;
     }
 }

@@ -63,7 +63,7 @@ public class BacktraceDatabaseFileContext implements DatabaseFileContext {
         ArrayList arrayList = new ArrayList();
         Iterator<BacktraceDatabaseRecord> it = iterable.iterator();
         while (it.hasNext()) {
-            arrayList.add(it.next().f4079id.toString());
+            arrayList.add(it.next().f3977id.toString());
         }
         for (File file : getAll()) {
             if (!file.isDirectory() || !file.getName().endsWith("crashpad")) {

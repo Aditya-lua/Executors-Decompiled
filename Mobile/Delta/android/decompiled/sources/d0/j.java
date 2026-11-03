@@ -7,17 +7,17 @@ import androidx.camera.camera2.internal.compat.quirk.ImageCapturePixelHDRPlusQui
 /* JADX INFO: loaded from: classes.dex */
 public class j {
     @SuppressLint({"NewApi"})
-    public void a(int i10, y.a.C0647a c0647a) {
+    public void a(int i10, y.a.C0662a c0662a) {
         if (((ImageCapturePixelHDRPlusQuirk) c0.e.b(ImageCapturePixelHDRPlusQuirk.class)) == null) {
             return;
         }
         if (i10 == 0) {
-            c0647a.f(CaptureRequest.CONTROL_ENABLE_ZSL, Boolean.TRUE);
+            c0662a.f(CaptureRequest.CONTROL_ENABLE_ZSL, Boolean.TRUE);
         } else {
             if (i10 != 1) {
                 return;
             }
-            c0647a.f(CaptureRequest.CONTROL_ENABLE_ZSL, Boolean.FALSE);
+            c0662a.f(CaptureRequest.CONTROL_ENABLE_ZSL, Boolean.FALSE);
         }
     }
 }

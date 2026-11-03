@@ -8,14 +8,14 @@ import com.google.android.gms.common.internal.GetServiceRequest;
 public final class m0 implements i {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final IBinder f25289a;
+    public final IBinder f26110a;
 
     public m0(IBinder iBinder) {
-        this.f25289a = iBinder;
+        this.f26110a = iBinder;
     }
 
     @Override // n9.i
-    public final void T(h hVar, GetServiceRequest getServiceRequest) {
+    public final void R(h hVar, GetServiceRequest getServiceRequest) {
         Parcel parcelObtain = Parcel.obtain();
         Parcel parcelObtain2 = Parcel.obtain();
         try {
@@ -27,7 +27,7 @@ public final class m0 implements i {
             } else {
                 parcelObtain.writeInt(0);
             }
-            this.f25289a.transact(46, parcelObtain, parcelObtain2, 0);
+            this.f26110a.transact(46, parcelObtain, parcelObtain2, 0);
             parcelObtain2.readException();
         } finally {
             parcelObtain2.recycle();
@@ -37,6 +37,6 @@ public final class m0 implements i {
 
     @Override // android.os.IInterface
     public final IBinder asBinder() {
-        return this.f25289a;
+        return this.f26110a;
     }
 }

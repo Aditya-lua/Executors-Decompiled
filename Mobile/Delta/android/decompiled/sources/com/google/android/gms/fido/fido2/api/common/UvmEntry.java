@@ -14,18 +14,18 @@ public class UvmEntry extends AbstractSafeParcelable {
     public static final Parcelable.Creator<UvmEntry> CREATOR = new v();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f6027f;
+    public final int f6100f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final short f6028g;
+    public final short f6101g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final short f6029h;
+    public final short f6102h;
 
     public UvmEntry(int i10, short s8, short s10) {
-        this.f6027f = i10;
-        this.f6028g = s8;
-        this.f6029h = s10;
+        this.f6100f = i10;
+        this.f6101g = s8;
+        this.f6102h = s10;
     }
 
     public boolean equals(Object obj) {
@@ -33,19 +33,19 @@ public class UvmEntry extends AbstractSafeParcelable {
             return false;
         }
         UvmEntry uvmEntry = (UvmEntry) obj;
-        return this.f6027f == uvmEntry.f6027f && this.f6028g == uvmEntry.f6028g && this.f6029h == uvmEntry.f6029h;
+        return this.f6100f == uvmEntry.f6100f && this.f6101g == uvmEntry.f6101g && this.f6102h == uvmEntry.f6102h;
     }
 
     public int hashCode() {
-        return k.c(Integer.valueOf(this.f6027f), Short.valueOf(this.f6028g), Short.valueOf(this.f6029h));
+        return k.c(Integer.valueOf(this.f6100f), Short.valueOf(this.f6101g), Short.valueOf(this.f6102h));
     }
 
     public short v3() {
-        return this.f6028g;
+        return this.f6101g;
     }
 
     public short w3() {
-        return this.f6029h;
+        return this.f6102h;
     }
 
     @Override // android.os.Parcelable
@@ -58,6 +58,6 @@ public class UvmEntry extends AbstractSafeParcelable {
     }
 
     public int x3() {
-        return this.f6027f;
+        return this.f6100f;
     }
 }

@@ -15,10 +15,10 @@ public final class c9 extends l9 {
         }
         if (obj instanceof String) {
             String str = (String) obj;
-            if (e8.f6427c.matcher(str).matches()) {
+            if (e8.f6500c.matcher(str).matches()) {
                 return Boolean.TRUE;
             }
-            if (e8.f6428d.matcher(str).matches()) {
+            if (e8.f6501d.matcher(str).matches()) {
                 return Boolean.FALSE;
             }
         }

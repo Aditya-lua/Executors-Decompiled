@@ -109,7 +109,7 @@ public final class AFg1cSDK {
             return this;
         }
         AFLogger();
-        if (obj == null || (obj instanceof Boolean) || obj == AFg1gSDK.f5372d) {
+        if (obj == null || (obj instanceof Boolean) || obj == AFg1gSDK.f5445d) {
             this.AFLogger.append(obj);
             return this;
         }

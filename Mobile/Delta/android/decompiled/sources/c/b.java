@@ -12,7 +12,7 @@ import android.os.Parcelable;
 public interface b extends IInterface {
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public static final String f4311m = "android$support$customtabs$ICustomTabsService".replace('$', '.');
+    public static final String f4477m = "android$support$customtabs$ICustomTabsService".replace('$', '.');
 
     public static abstract class a extends Binder implements b {
 
@@ -20,38 +20,20 @@ public interface b extends IInterface {
         public static class C0092a implements b {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public IBinder f4312a;
+            public IBinder f4478a;
 
             public C0092a(IBinder iBinder) {
-                this.f4312a = iBinder;
+                this.f4478a = iBinder;
             }
 
             @Override // c.b
-            public int A0(c.a aVar, String str, Bundle bundle) {
+            public boolean J(c.a aVar) {
                 Parcel parcelObtain = Parcel.obtain();
                 Parcel parcelObtain2 = Parcel.obtain();
                 try {
-                    parcelObtain.writeInterfaceToken(b.f4311m);
+                    parcelObtain.writeInterfaceToken(b.f4477m);
                     parcelObtain.writeStrongInterface(aVar);
-                    parcelObtain.writeString(str);
-                    C0093b.b(parcelObtain, bundle, 0);
-                    this.f4312a.transact(8, parcelObtain, parcelObtain2, 0);
-                    parcelObtain2.readException();
-                    return parcelObtain2.readInt();
-                } finally {
-                    parcelObtain2.recycle();
-                    parcelObtain.recycle();
-                }
-            }
-
-            @Override // c.b
-            public boolean L(c.a aVar) {
-                Parcel parcelObtain = Parcel.obtain();
-                Parcel parcelObtain2 = Parcel.obtain();
-                try {
-                    parcelObtain.writeInterfaceToken(b.f4311m);
-                    parcelObtain.writeStrongInterface(aVar);
-                    this.f4312a.transact(3, parcelObtain, parcelObtain2, 0);
+                    this.f4478a.transact(3, parcelObtain, parcelObtain2, 0);
                     parcelObtain2.readException();
                     return parcelObtain2.readInt() != 0;
                 } finally {
@@ -62,17 +44,34 @@ public interface b extends IInterface {
 
             @Override // android.os.IInterface
             public IBinder asBinder() {
-                return this.f4312a;
+                return this.f4478a;
             }
 
             @Override // c.b
-            public boolean l1(long j10) {
+            public boolean h1(long j10) {
                 Parcel parcelObtain = Parcel.obtain();
                 Parcel parcelObtain2 = Parcel.obtain();
                 try {
-                    parcelObtain.writeInterfaceToken(b.f4311m);
+                    parcelObtain.writeInterfaceToken(b.f4477m);
                     parcelObtain.writeLong(j10);
-                    this.f4312a.transact(2, parcelObtain, parcelObtain2, 0);
+                    this.f4478a.transact(2, parcelObtain, parcelObtain2, 0);
+                    parcelObtain2.readException();
+                    return parcelObtain2.readInt() != 0;
+                } finally {
+                    parcelObtain2.recycle();
+                    parcelObtain.recycle();
+                }
+            }
+
+            @Override // c.b
+            public boolean j1(c.a aVar, Uri uri) {
+                Parcel parcelObtain = Parcel.obtain();
+                Parcel parcelObtain2 = Parcel.obtain();
+                try {
+                    parcelObtain.writeInterfaceToken(b.f4477m);
+                    parcelObtain.writeStrongInterface(aVar);
+                    C0093b.b(parcelObtain, uri, 0);
+                    this.f4478a.transact(7, parcelObtain, parcelObtain2, 0);
                     parcelObtain2.readException();
                     return parcelObtain2.readInt() != 0;
                 } finally {
@@ -86,11 +85,11 @@ public interface b extends IInterface {
                 Parcel parcelObtain = Parcel.obtain();
                 Parcel parcelObtain2 = Parcel.obtain();
                 try {
-                    parcelObtain.writeInterfaceToken(b.f4311m);
+                    parcelObtain.writeInterfaceToken(b.f4477m);
                     parcelObtain.writeStrongInterface(aVar);
                     C0093b.b(parcelObtain, uri, 0);
                     C0093b.b(parcelObtain, bundle, 0);
-                    this.f4312a.transact(11, parcelObtain, parcelObtain2, 0);
+                    this.f4478a.transact(11, parcelObtain, parcelObtain2, 0);
                     parcelObtain2.readException();
                     return parcelObtain2.readInt() != 0;
                 } finally {
@@ -104,10 +103,10 @@ public interface b extends IInterface {
                 Parcel parcelObtain = Parcel.obtain();
                 Parcel parcelObtain2 = Parcel.obtain();
                 try {
-                    parcelObtain.writeInterfaceToken(b.f4311m);
+                    parcelObtain.writeInterfaceToken(b.f4477m);
                     parcelObtain.writeStrongInterface(aVar);
                     C0093b.b(parcelObtain, bundle, 0);
-                    this.f4312a.transact(10, parcelObtain, parcelObtain2, 0);
+                    this.f4478a.transact(10, parcelObtain, parcelObtain2, 0);
                     parcelObtain2.readException();
                     return parcelObtain2.readInt() != 0;
                 } finally {
@@ -117,16 +116,17 @@ public interface b extends IInterface {
             }
 
             @Override // c.b
-            public boolean n1(c.a aVar, Uri uri) {
+            public int w0(c.a aVar, String str, Bundle bundle) {
                 Parcel parcelObtain = Parcel.obtain();
                 Parcel parcelObtain2 = Parcel.obtain();
                 try {
-                    parcelObtain.writeInterfaceToken(b.f4311m);
+                    parcelObtain.writeInterfaceToken(b.f4477m);
                     parcelObtain.writeStrongInterface(aVar);
-                    C0093b.b(parcelObtain, uri, 0);
-                    this.f4312a.transact(7, parcelObtain, parcelObtain2, 0);
+                    parcelObtain.writeString(str);
+                    C0093b.b(parcelObtain, bundle, 0);
+                    this.f4478a.transact(8, parcelObtain, parcelObtain2, 0);
                     parcelObtain2.readException();
-                    return parcelObtain2.readInt() != 0;
+                    return parcelObtain2.readInt();
                 } finally {
                     parcelObtain2.recycle();
                     parcelObtain.recycle();
@@ -138,7 +138,7 @@ public interface b extends IInterface {
             if (iBinder == null) {
                 return null;
             }
-            IInterface iInterfaceQueryLocalInterface = iBinder.queryLocalInterface(b.f4311m);
+            IInterface iInterfaceQueryLocalInterface = iBinder.queryLocalInterface(b.f4477m);
             return (iInterfaceQueryLocalInterface == null || !(iInterfaceQueryLocalInterface instanceof b)) ? new C0092a(iBinder) : (b) iInterfaceQueryLocalInterface;
         }
     }
@@ -155,15 +155,15 @@ public interface b extends IInterface {
         }
     }
 
-    int A0(c.a aVar, String str, Bundle bundle);
+    boolean J(c.a aVar);
 
-    boolean L(c.a aVar);
+    boolean h1(long j10);
 
-    boolean l1(long j10);
+    boolean j1(c.a aVar, Uri uri);
 
     boolean l2(c.a aVar, Uri uri, Bundle bundle);
 
     boolean m(c.a aVar, Bundle bundle);
 
-    boolean n1(c.a aVar, Uri uri);
+    int w0(c.a aVar, String str, Bundle bundle);
 }

@@ -6,33 +6,33 @@ import java.util.concurrent.Executor;
 public final class k extends r0.j {
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final u f15870h;
+    public final u f16466h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final Executor f15871i;
+    public final Executor f16467i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final x2.a<b2> f15872j;
+    public final x2.a<b2> f16468j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final boolean f15873k;
+    public final boolean f16469k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final boolean f15874l;
+    public final boolean f16470l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final long f15875m;
+    public final long f16471m;
 
     public k(u uVar, Executor executor, x2.a<b2> aVar, boolean z10, boolean z11, long j10) {
         if (uVar == null) {
             throw new NullPointerException("Null getOutputOptions");
         }
-        this.f15870h = uVar;
-        this.f15871i = executor;
-        this.f15872j = aVar;
-        this.f15873k = z10;
-        this.f15874l = z11;
-        this.f15875m = j10;
+        this.f16466h = uVar;
+        this.f16467i = executor;
+        this.f16468j = aVar;
+        this.f16469k = z10;
+        this.f16470l = z11;
+        this.f16471m = j10;
     }
 
     public boolean equals(Object obj) {
@@ -43,7 +43,7 @@ public final class k extends r0.j {
         }
         if (obj instanceof r0.j) {
             r0.j jVar = (r0.j) obj;
-            if (this.f15870h.equals(jVar.o()) && ((executor = this.f15871i) != null ? executor.equals(jVar.m()) : jVar.m() == null) && ((aVar = this.f15872j) != null ? aVar.equals(jVar.n()) : jVar.n() == null) && this.f15873k == jVar.s() && this.f15874l == jVar.w() && this.f15875m == jVar.q()) {
+            if (this.f16466h.equals(jVar.o()) && ((executor = this.f16467i) != null ? executor.equals(jVar.m()) : jVar.m() == null) && ((aVar = this.f16468j) != null ? aVar.equals(jVar.n()) : jVar.n() == null) && this.f16469k == jVar.s() && this.f16470l == jVar.w() && this.f16471m == jVar.q()) {
                 return true;
             }
         }
@@ -51,47 +51,47 @@ public final class k extends r0.j {
     }
 
     public int hashCode() {
-        int iHashCode = (this.f15870h.hashCode() ^ 1000003) * 1000003;
-        Executor executor = this.f15871i;
+        int iHashCode = (this.f16466h.hashCode() ^ 1000003) * 1000003;
+        Executor executor = this.f16467i;
         int iHashCode2 = (iHashCode ^ (executor == null ? 0 : executor.hashCode())) * 1000003;
-        x2.a<b2> aVar = this.f15872j;
-        int iHashCode3 = (((iHashCode2 ^ (aVar != null ? aVar.hashCode() : 0)) * 1000003) ^ (this.f15873k ? 1231 : 1237)) * 1000003;
-        int i10 = this.f15874l ? 1231 : 1237;
-        long j10 = this.f15875m;
+        x2.a<b2> aVar = this.f16468j;
+        int iHashCode3 = (((iHashCode2 ^ (aVar != null ? aVar.hashCode() : 0)) * 1000003) ^ (this.f16469k ? 1231 : 1237)) * 1000003;
+        int i10 = this.f16470l ? 1231 : 1237;
+        long j10 = this.f16471m;
         return ((iHashCode3 ^ i10) * 1000003) ^ ((int) (j10 ^ (j10 >>> 32)));
     }
 
     @Override // f1.r0.j
     public Executor m() {
-        return this.f15871i;
+        return this.f16467i;
     }
 
     @Override // f1.r0.j
     public x2.a<b2> n() {
-        return this.f15872j;
+        return this.f16468j;
     }
 
     @Override // f1.r0.j
     public u o() {
-        return this.f15870h;
+        return this.f16466h;
     }
 
     @Override // f1.r0.j
     public long q() {
-        return this.f15875m;
+        return this.f16471m;
     }
 
     @Override // f1.r0.j
     public boolean s() {
-        return this.f15873k;
+        return this.f16469k;
     }
 
     public String toString() {
-        return "RecordingRecord{getOutputOptions=" + this.f15870h + ", getCallbackExecutor=" + this.f15871i + ", getEventListener=" + this.f15872j + ", hasAudioEnabled=" + this.f15873k + ", isPersistent=" + this.f15874l + ", getRecordingId=" + this.f15875m + "}";
+        return "RecordingRecord{getOutputOptions=" + this.f16466h + ", getCallbackExecutor=" + this.f16467i + ", getEventListener=" + this.f16468j + ", hasAudioEnabled=" + this.f16469k + ", isPersistent=" + this.f16470l + ", getRecordingId=" + this.f16471m + "}";
     }
 
     @Override // f1.r0.j
     public boolean w() {
-        return this.f15874l;
+        return this.f16470l;
     }
 }

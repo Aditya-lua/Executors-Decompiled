@@ -10,7 +10,7 @@ public final class j extends a5.b {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static final j f35637c = new j();
+    public static final j f36494c = new j();
 
     public j() {
         super(1, 2);

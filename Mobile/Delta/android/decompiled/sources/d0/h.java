@@ -12,7 +12,7 @@ import z.h5;
 public class h {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final CaptureSessionOnClosedNotCalledQuirk f14251a;
+    public final CaptureSessionOnClosedNotCalledQuirk f14231a;
 
     @FunctionalInterface
     public interface a {
@@ -20,7 +20,7 @@ public class h {
     }
 
     public h(k3 k3Var) {
-        this.f14251a = (CaptureSessionOnClosedNotCalledQuirk) k3Var.b(CaptureSessionOnClosedNotCalledQuirk.class);
+        this.f14231a = (CaptureSessionOnClosedNotCalledQuirk) k3Var.b(CaptureSessionOnClosedNotCalledQuirk.class);
     }
 
     public final void a(Set<h5> set) {
@@ -58,6 +58,6 @@ public class h {
     }
 
     public boolean d() {
-        return this.f14251a != null;
+        return this.f14231a != null;
     }
 }

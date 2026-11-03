@@ -47,8 +47,8 @@ public final class AFd1qSDK extends AFd1oSDK {
         Intrinsics.checkNotNullParameter(str4, "");
         Intrinsics.checkNotNullParameter(str5, "");
         String strValueOf = String.valueOf(System.currentTimeMillis());
-        AFd1qSDK aFd1qSDK = new AFd1qSDK(str, kotlin.collections.k0.m(jt.s.a("Connection", "close"), jt.s.a("af_request_epoch_ms", strValueOf), jt.s.a("af_sig", Companion.unregisterClient(str2, str4, str3, str5, strValueOf))), null, null, false, 28, null);
-        aFd1qSDK.f5284v = BacktraceMetrics.defaultTimeBetweenRetriesMs;
+        AFd1qSDK aFd1qSDK = new AFd1qSDK(str, kotlin.collections.k0.m(gt.s.a("Connection", "close"), gt.s.a("af_request_epoch_ms", strValueOf), gt.s.a("af_sig", Companion.unregisterClient(str2, str4, str3, str5, strValueOf))), null, null, false, 28, null);
+        aFd1qSDK.f5357v = BacktraceMetrics.defaultTimeBetweenRetriesMs;
         return aFd1qSDK;
     }
 

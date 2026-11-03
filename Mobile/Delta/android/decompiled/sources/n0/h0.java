@@ -7,29 +7,29 @@ import java.util.List;
 public interface h0 extends l3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final n1.a<j4> f24662a = n1.a.a("camerax.core.camera.useCaseConfigFactory", j4.class);
+    public static final n1.a<j4> f25483a = n1.a.a("camerax.core.camera.useCaseConfigFactory", j4.class);
     public static final n1.a<e2> b = n1.a.a("camerax.core.camera.compatibilityId", e2.class);
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final n1.a<Integer> f24663c = n1.a.a("camerax.core.camera.useCaseCombinationRequiredRule", Integer.class);
+    public static final n1.a<Integer> f25484c = n1.a.a("camerax.core.camera.useCaseCombinationRequiredRule", Integer.class);
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final n1.a<q3> f24664d = n1.a.a("camerax.core.camera.SessionProcessor", q3.class);
+    public static final n1.a<q3> f25485d = n1.a.a("camerax.core.camera.SessionProcessor", q3.class);
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final n1.a<Boolean> f24665e = n1.a.a("camerax.core.camera.isZslDisabled", Boolean.class);
+    public static final n1.a<Boolean> f25486e = n1.a.a("camerax.core.camera.isZslDisabled", Boolean.class);
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final n1.a<Boolean> f24666f = n1.a.a("camerax.core.camera.isPostviewSupported", Boolean.class);
+    public static final n1.a<Boolean> f25487f = n1.a.a("camerax.core.camera.isPostviewSupported", Boolean.class);
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final n1.a<a> f24667g = n1.a.a("camerax.core.camera.PostviewFormatSelector", a.class);
+    public static final n1.a<a> f25488g = n1.a.a("camerax.core.camera.PostviewFormatSelector", a.class);
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final n1.a<Boolean> f24668h = n1.a.a("camerax.core.camera.isCaptureProcessProgressSupported", Boolean.class);
+    public static final n1.a<Boolean> f25489h = n1.a.a("camerax.core.camera.isCaptureProcessProgressSupported", Boolean.class);
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final a f24669i = new a() { // from class: n0.g0
+    public static final a f25490i = new a() { // from class: n0.g0
         @Override // n0.h0.a
         public final int a(int i10, List list) {
             return h0.O(i10, list);
@@ -51,28 +51,28 @@ public interface h0 extends l3 {
     }
 
     default a I() {
-        return (a) h(f24667g, f24669i);
+        return (a) h(f25488g, f25490i);
     }
 
     default boolean U() {
-        return ((Boolean) h(f24666f, Boolean.FALSE)).booleanValue();
+        return ((Boolean) h(f25487f, Boolean.FALSE)).booleanValue();
     }
 
     e2 b0();
 
     default boolean c0() {
-        return ((Boolean) h(f24668h, Boolean.FALSE)).booleanValue();
+        return ((Boolean) h(f25489h, Boolean.FALSE)).booleanValue();
     }
 
     default j4 k() {
-        return (j4) h(f24662a, j4.f24707a);
+        return (j4) h(f25483a, j4.f25528a);
     }
 
     default int v() {
-        return ((Integer) h(f24663c, 0)).intValue();
+        return ((Integer) h(f25484c, 0)).intValue();
     }
 
     default q3 w(q3 q3Var) {
-        return (q3) h(f24664d, q3Var);
+        return (q3) h(f25485d, q3Var);
     }
 }

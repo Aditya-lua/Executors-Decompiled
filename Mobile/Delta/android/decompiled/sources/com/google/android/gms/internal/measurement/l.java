@@ -6,19 +6,19 @@ import java.util.Iterator;
 public final class l implements Iterator {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ Iterator f6594a;
+    public final /* synthetic */ Iterator f6667a;
 
     public l(Iterator it) {
-        this.f6594a = it;
+        this.f6667a = it;
     }
 
     @Override // java.util.Iterator
     public final boolean hasNext() {
-        return this.f6594a.hasNext();
+        return this.f6667a.hasNext();
     }
 
     @Override // java.util.Iterator
     public final /* bridge */ /* synthetic */ Object next() {
-        return new u((String) this.f6594a.next());
+        return new u((String) this.f6667a.next());
     }
 }

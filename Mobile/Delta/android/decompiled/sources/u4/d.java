@@ -10,13 +10,13 @@ public enum d {
 
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final long f32062a;
+    public final long f32715a;
 
     d(long j10) {
-        this.f32062a = j10;
+        this.f32715a = j10;
     }
 
     public long b() {
-        return this.f32062a;
+        return this.f32715a;
     }
 }

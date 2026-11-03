@@ -1,5 +1,6 @@
 package com.google.android.material.datepicker;
 
+import ad.r;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Rect;
@@ -11,13 +12,12 @@ import android.widget.ListAdapter;
 import androidx.annotation.NonNull;
 import androidx.core.view.o0;
 import java.util.Calendar;
-import zc.r;
 
 /* JADX INFO: loaded from: classes2.dex */
 final class MaterialCalendarGridView extends GridView {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Calendar f7829a;
+    public final Calendar f7903a;
     public final boolean b;
 
     public class a extends androidx.core.view.a {
@@ -82,13 +82,13 @@ final class MaterialCalendarGridView extends GridView {
         super.onDraw(canvas);
         j adapter = materialCalendarGridView.getAdapter();
         DateSelector<?> dateSelector = adapter.b;
-        b bVar = adapter.f7905d;
+        b bVar = adapter.f7979d;
         int iMax = Math.max(adapter.b(), materialCalendarGridView.getFirstVisiblePosition());
         int iMin = Math.min(adapter.m(), materialCalendarGridView.getLastVisiblePosition());
         Long item = adapter.getItem(iMax);
         Long item2 = adapter.getItem(iMin);
-        for (x2.c<Long, Long> cVar : dateSelector.R1()) {
-            Long l10 = cVar.f34681a;
+        for (x2.c<Long, Long> cVar : dateSelector.Q1()) {
+            Long l10 = cVar.f35179a;
             if (l10 == null) {
                 materialCalendarGridView = this;
             } else if (cVar.b != null) {
@@ -102,16 +102,16 @@ final class MaterialCalendarGridView extends GridView {
                         iD = adapter.h(iMax) ? 0 : !zH ? materialCalendarGridView.c(iMax - 1).getRight() : materialCalendarGridView.c(iMax - 1).getLeft();
                         iA = iMax;
                     } else {
-                        materialCalendarGridView.f7829a.setTimeInMillis(jLongValue);
-                        iA = adapter.a(materialCalendarGridView.f7829a.get(5));
+                        materialCalendarGridView.f7903a.setTimeInMillis(jLongValue);
+                        iA = adapter.a(materialCalendarGridView.f7903a.get(5));
                         iD = d(materialCalendarGridView.c(iA));
                     }
                     if (jLongValue2 > item2.longValue()) {
                         iD2 = adapter.i(iMin) ? materialCalendarGridView.getWidth() : !zH ? materialCalendarGridView.c(iMin).getRight() : materialCalendarGridView.c(iMin).getLeft();
                         iA2 = iMin;
                     } else {
-                        materialCalendarGridView.f7829a.setTimeInMillis(jLongValue2);
-                        iA2 = adapter.a(materialCalendarGridView.f7829a.get(5));
+                        materialCalendarGridView.f7903a.setTimeInMillis(jLongValue2);
+                        iA2 = adapter.a(materialCalendarGridView.f7903a.get(5));
                         iD2 = d(materialCalendarGridView.c(iA2));
                     }
                     int itemId = (int) adapter.getItemId(iA);
@@ -122,9 +122,9 @@ final class MaterialCalendarGridView extends GridView {
                         int numColumns = materialCalendarGridView.getNumColumns() * itemId;
                         int numColumns2 = (numColumns + materialCalendarGridView.getNumColumns()) - 1;
                         View viewC = materialCalendarGridView.c(numColumns);
-                        int top = viewC.getTop() + bVar.f7842a.c();
+                        int top = viewC.getTop() + bVar.f7916a.c();
                         j jVar = adapter;
-                        int bottom = viewC.getBottom() - bVar.f7842a.b();
+                        int bottom = viewC.getBottom() - bVar.f7916a.b();
                         if (zH) {
                             int i13 = iA2 > numColumns2 ? 0 : iD2;
                             width = numColumns > iA ? getWidth() : iD;
@@ -133,7 +133,7 @@ final class MaterialCalendarGridView extends GridView {
                             i10 = numColumns > iA ? 0 : iD;
                             width = iA2 > numColumns2 ? getWidth() : iD2;
                         }
-                        canvas.drawRect(i10, top, width, bottom, bVar.f7848h);
+                        canvas.drawRect(i10, top, width, bottom, bVar.f7922h);
                         itemId++;
                         materialCalendarGridView = this;
                         adapter = jVar;
@@ -191,10 +191,10 @@ final class MaterialCalendarGridView extends GridView {
 
     public MaterialCalendarGridView(Context context, AttributeSet attributeSet, int i10) {
         super(context, attributeSet, i10);
-        this.f7829a = p.i();
+        this.f7903a = p.i();
         if (g.J2(getContext())) {
-            setNextFocusLeftId(hc.f.f18860a);
-            setNextFocusRightId(hc.f.f18862d);
+            setNextFocusLeftId(ic.f.f20682a);
+            setNextFocusRightId(ic.f.f20684d);
         }
         this.b = g.L2(getContext());
         o0.m0(this, new a());

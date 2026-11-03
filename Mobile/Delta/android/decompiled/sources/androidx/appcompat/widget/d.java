@@ -25,78 +25,78 @@ import q.f0;
 public class d implements f0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Toolbar f1301a;
+    public Toolbar f1146a;
     public int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public View f1302c;
+    public View f1147c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public View f1303d;
+    public View f1148d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public Drawable f1304e;
+    public Drawable f1149e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public Drawable f1305f;
+    public Drawable f1150f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public Drawable f1306g;
+    public Drawable f1151g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public boolean f1307h;
+    public boolean f1152h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public CharSequence f1308i;
+    public CharSequence f1153i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public CharSequence f1309j;
+    public CharSequence f1154j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public CharSequence f1310k;
+    public CharSequence f1155k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public Window.Callback f1311l;
+    public Window.Callback f1156l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public boolean f1312m;
+    public boolean f1157m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public androidx.appcompat.widget.a f1313n;
+    public androidx.appcompat.widget.a f1158n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public int f1314o;
+    public int f1159o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public int f1315p;
+    public int f1160p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public Drawable f1316q;
+    public Drawable f1161q;
 
     public class a implements View.OnClickListener {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final p.a f1317a;
+        public final p.a f1162a;
 
         public a() {
-            this.f1317a = new p.a(d.this.f1301a.getContext(), 0, R.id.home, 0, 0, d.this.f1308i);
+            this.f1162a = new p.a(d.this.f1146a.getContext(), 0, R.id.home, 0, 0, d.this.f1153i);
         }
 
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
             d dVar = d.this;
-            Window.Callback callback = dVar.f1311l;
-            if (callback == null || !dVar.f1312m) {
+            Window.Callback callback = dVar.f1156l;
+            if (callback == null || !dVar.f1157m) {
                 return;
             }
-            callback.onMenuItemSelected(0, this.f1317a);
+            callback.onMenuItemSelected(0, this.f1162a);
         }
     }
 
     public class b extends a1 {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public boolean f1318a = false;
+        public boolean f1163a = false;
         public final /* synthetic */ int b;
 
         public b(int i10) {
@@ -105,73 +105,73 @@ public class d implements f0 {
 
         @Override // androidx.core.view.a1, androidx.core.view.z0
         public void a(View view) {
-            this.f1318a = true;
+            this.f1163a = true;
         }
 
         @Override // androidx.core.view.z0
         public void b(View view) {
-            if (this.f1318a) {
+            if (this.f1163a) {
                 return;
             }
-            d.this.f1301a.setVisibility(this.b);
+            d.this.f1146a.setVisibility(this.b);
         }
 
         @Override // androidx.core.view.a1, androidx.core.view.z0
         public void c(View view) {
-            d.this.f1301a.setVisibility(0);
+            d.this.f1146a.setVisibility(0);
         }
     }
 
     public d(Toolbar toolbar, boolean z10) {
-        this(toolbar, z10, h.f19999a, e.f19941n);
+        this(toolbar, z10, h.f20115a, e.f20057n);
     }
 
     public void A(Drawable drawable) {
-        this.f1306g = drawable;
+        this.f1151g = drawable;
         F();
     }
 
     public void B(CharSequence charSequence) {
-        this.f1309j = charSequence;
+        this.f1154j = charSequence;
         if ((this.b & 8) != 0) {
-            this.f1301a.setSubtitle(charSequence);
+            this.f1146a.setSubtitle(charSequence);
         }
     }
 
     public void C(CharSequence charSequence) {
-        this.f1307h = true;
+        this.f1152h = true;
         D(charSequence);
     }
 
     public final void D(CharSequence charSequence) {
-        this.f1308i = charSequence;
+        this.f1153i = charSequence;
         if ((this.b & 8) != 0) {
-            this.f1301a.setTitle(charSequence);
-            if (this.f1307h) {
-                o0.p0(this.f1301a.getRootView(), charSequence);
+            this.f1146a.setTitle(charSequence);
+            if (this.f1152h) {
+                o0.p0(this.f1146a.getRootView(), charSequence);
             }
         }
     }
 
     public final void E() {
         if ((this.b & 4) != 0) {
-            if (TextUtils.isEmpty(this.f1310k)) {
-                this.f1301a.setNavigationContentDescription(this.f1315p);
+            if (TextUtils.isEmpty(this.f1155k)) {
+                this.f1146a.setNavigationContentDescription(this.f1160p);
             } else {
-                this.f1301a.setNavigationContentDescription(this.f1310k);
+                this.f1146a.setNavigationContentDescription(this.f1155k);
             }
         }
     }
 
     public final void F() {
         if ((this.b & 4) == 0) {
-            this.f1301a.setNavigationIcon((Drawable) null);
+            this.f1146a.setNavigationIcon((Drawable) null);
             return;
         }
-        Toolbar toolbar = this.f1301a;
-        Drawable drawable = this.f1306g;
+        Toolbar toolbar = this.f1146a;
+        Drawable drawable = this.f1151g;
         if (drawable == null) {
-            drawable = this.f1316q;
+            drawable = this.f1161q;
         }
         toolbar.setNavigationIcon(drawable);
     }
@@ -181,71 +181,71 @@ public class d implements f0 {
         int i10 = this.b;
         if ((i10 & 2) == 0) {
             drawable = null;
-        } else if ((i10 & 1) == 0 || (drawable = this.f1305f) == null) {
-            drawable = this.f1304e;
+        } else if ((i10 & 1) == 0 || (drawable = this.f1150f) == null) {
+            drawable = this.f1149e;
         }
-        this.f1301a.setLogo(drawable);
+        this.f1146a.setLogo(drawable);
     }
 
     @Override // q.f0
     public boolean a() {
-        return this.f1301a.d();
+        return this.f1146a.d();
     }
 
     @Override // q.f0
     public boolean b() {
-        return this.f1301a.x();
+        return this.f1146a.w();
     }
 
     @Override // q.f0
     public boolean c() {
-        return this.f1301a.S();
+        return this.f1146a.R();
     }
 
     @Override // q.f0
     public void collapseActionView() {
-        this.f1301a.e();
+        this.f1146a.e();
     }
 
     @Override // q.f0
     public void d(Menu menu, i.a aVar) {
-        if (this.f1313n == null) {
-            androidx.appcompat.widget.a aVar2 = new androidx.appcompat.widget.a(this.f1301a.getContext());
-            this.f1313n = aVar2;
-            aVar2.q(f.f19959g);
+        if (this.f1158n == null) {
+            androidx.appcompat.widget.a aVar2 = new androidx.appcompat.widget.a(this.f1146a.getContext());
+            this.f1158n = aVar2;
+            aVar2.q(f.f20075g);
         }
-        this.f1313n.d(aVar);
-        this.f1301a.M((androidx.appcompat.view.menu.e) menu, this.f1313n);
+        this.f1158n.d(aVar);
+        this.f1146a.L((androidx.appcompat.view.menu.e) menu, this.f1158n);
     }
 
     @Override // q.f0
     public boolean e() {
-        return this.f1301a.C();
+        return this.f1146a.B();
     }
 
     @Override // q.f0
     public void f() {
-        this.f1312m = true;
+        this.f1157m = true;
     }
 
     @Override // q.f0
     public boolean g() {
-        return this.f1301a.B();
+        return this.f1146a.A();
     }
 
     @Override // q.f0
     public Context getContext() {
-        return this.f1301a.getContext();
+        return this.f1146a.getContext();
     }
 
     @Override // q.f0
     public CharSequence getTitle() {
-        return this.f1301a.getTitle();
+        return this.f1146a.getTitle();
     }
 
     @Override // q.f0
     public boolean h() {
-        return this.f1301a.w();
+        return this.f1146a.v();
     }
 
     @Override // q.f0
@@ -265,32 +265,32 @@ public class d implements f0 {
             }
             if ((i11 & 8) != 0) {
                 if ((i10 & 8) != 0) {
-                    this.f1301a.setTitle(this.f1308i);
-                    this.f1301a.setSubtitle(this.f1309j);
+                    this.f1146a.setTitle(this.f1153i);
+                    this.f1146a.setSubtitle(this.f1154j);
                 } else {
-                    this.f1301a.setTitle((CharSequence) null);
-                    this.f1301a.setSubtitle((CharSequence) null);
+                    this.f1146a.setTitle((CharSequence) null);
+                    this.f1146a.setSubtitle((CharSequence) null);
                 }
             }
-            if ((i11 & 16) == 0 || (view = this.f1303d) == null) {
+            if ((i11 & 16) == 0 || (view = this.f1148d) == null) {
                 return;
             }
             if ((i10 & 16) != 0) {
-                this.f1301a.addView(view);
+                this.f1146a.addView(view);
             } else {
-                this.f1301a.removeView(view);
+                this.f1146a.removeView(view);
             }
         }
     }
 
     @Override // q.f0
     public int j() {
-        return this.f1314o;
+        return this.f1159o;
     }
 
     @Override // q.f0
     public y0 k(int i10, long j10) {
-        return o0.e(this.f1301a).b(i10 == 0 ? 1.0f : 0.0f).e(j10).g(new b(i10));
+        return o0.e(this.f1146a).b(i10 == 0 ? 1.0f : 0.0f).e(j10).g(new b(i10));
     }
 
     @Override // q.f0
@@ -304,33 +304,33 @@ public class d implements f0 {
 
     @Override // q.f0
     public void n(boolean z10) {
-        this.f1301a.setCollapsible(z10);
+        this.f1146a.setCollapsible(z10);
     }
 
     @Override // q.f0
     public void o() {
-        this.f1301a.f();
+        this.f1146a.f();
     }
 
     @Override // q.f0
     public void p(c cVar) {
-        View view = this.f1302c;
+        View view = this.f1147c;
         if (view != null) {
             ViewParent parent = view.getParent();
-            Toolbar toolbar = this.f1301a;
+            Toolbar toolbar = this.f1146a;
             if (parent == toolbar) {
-                toolbar.removeView(this.f1302c);
+                toolbar.removeView(this.f1147c);
             }
         }
-        this.f1302c = cVar;
-        if (cVar == null || this.f1314o != 2) {
+        this.f1147c = cVar;
+        if (cVar == null || this.f1159o != 2) {
             return;
         }
-        this.f1301a.addView(cVar, 0);
-        Toolbar.g gVar = (Toolbar.g) this.f1302c.getLayoutParams();
+        this.f1146a.addView(cVar, 0);
+        Toolbar.g gVar = (Toolbar.g) this.f1147c.getLayoutParams();
         ((ViewGroup.MarginLayoutParams) gVar).width = -2;
         ((ViewGroup.MarginLayoutParams) gVar).height = -2;
-        gVar.f20874a = 8388691;
+        gVar.f21447a = 8388691;
         cVar.setAllowCollapse(true);
     }
 
@@ -341,7 +341,7 @@ public class d implements f0 {
 
     @Override // q.f0
     public void r(int i10) {
-        this.f1301a.setVisibility(i10);
+        this.f1146a.setVisibility(i10);
     }
 
     @Override // q.f0
@@ -356,12 +356,12 @@ public class d implements f0 {
 
     @Override // q.f0
     public void setWindowCallback(Window.Callback callback) {
-        this.f1311l = callback;
+        this.f1156l = callback;
     }
 
     @Override // q.f0
     public void setWindowTitle(CharSequence charSequence) {
-        if (this.f1307h) {
+        if (this.f1152h) {
             return;
         }
         D(charSequence);
@@ -373,37 +373,37 @@ public class d implements f0 {
     }
 
     public final int u() {
-        if (this.f1301a.getNavigationIcon() == null) {
+        if (this.f1146a.getNavigationIcon() == null) {
             return 11;
         }
-        this.f1316q = this.f1301a.getNavigationIcon();
+        this.f1161q = this.f1146a.getNavigationIcon();
         return 15;
     }
 
     public void v(View view) {
-        View view2 = this.f1303d;
+        View view2 = this.f1148d;
         if (view2 != null && (this.b & 16) != 0) {
-            this.f1301a.removeView(view2);
+            this.f1146a.removeView(view2);
         }
-        this.f1303d = view;
+        this.f1148d = view;
         if (view == null || (this.b & 16) == 0) {
             return;
         }
-        this.f1301a.addView(view);
+        this.f1146a.addView(view);
     }
 
     public void w(int i10) {
-        if (i10 == this.f1315p) {
+        if (i10 == this.f1160p) {
             return;
         }
-        this.f1315p = i10;
-        if (TextUtils.isEmpty(this.f1301a.getNavigationContentDescription())) {
-            y(this.f1315p);
+        this.f1160p = i10;
+        if (TextUtils.isEmpty(this.f1146a.getNavigationContentDescription())) {
+            y(this.f1160p);
         }
     }
 
     public void x(Drawable drawable) {
-        this.f1305f = drawable;
+        this.f1150f = drawable;
         G();
     }
 
@@ -412,84 +412,84 @@ public class d implements f0 {
     }
 
     public void z(CharSequence charSequence) {
-        this.f1310k = charSequence;
+        this.f1155k = charSequence;
         E();
     }
 
     public d(Toolbar toolbar, boolean z10, int i10, int i11) {
         Drawable drawable;
-        this.f1314o = 0;
-        this.f1315p = 0;
-        this.f1301a = toolbar;
-        this.f1308i = toolbar.getTitle();
-        this.f1309j = toolbar.getSubtitle();
-        this.f1307h = this.f1308i != null;
-        this.f1306g = toolbar.getNavigationIcon();
-        q.a1 a1VarV = q.a1.v(toolbar.getContext(), null, j.f20018a, i.a.f19887c, 0);
-        this.f1316q = a1VarV.g(j.f20072l);
+        this.f1159o = 0;
+        this.f1160p = 0;
+        this.f1146a = toolbar;
+        this.f1153i = toolbar.getTitle();
+        this.f1154j = toolbar.getSubtitle();
+        this.f1152h = this.f1153i != null;
+        this.f1151g = toolbar.getNavigationIcon();
+        q.a1 a1VarV = q.a1.v(toolbar.getContext(), null, j.f20134a, i.a.f20003c, 0);
+        this.f1161q = a1VarV.g(j.f20188l);
         if (z10) {
-            CharSequence charSequenceP = a1VarV.p(j.f20102r);
+            CharSequence charSequenceP = a1VarV.p(j.f20218r);
             if (!TextUtils.isEmpty(charSequenceP)) {
                 C(charSequenceP);
             }
-            CharSequence charSequenceP2 = a1VarV.p(j.f20092p);
+            CharSequence charSequenceP2 = a1VarV.p(j.f20208p);
             if (!TextUtils.isEmpty(charSequenceP2)) {
                 B(charSequenceP2);
             }
-            Drawable drawableG = a1VarV.g(j.f20082n);
+            Drawable drawableG = a1VarV.g(j.f20198n);
             if (drawableG != null) {
                 x(drawableG);
             }
-            Drawable drawableG2 = a1VarV.g(j.f20077m);
+            Drawable drawableG2 = a1VarV.g(j.f20193m);
             if (drawableG2 != null) {
                 setIcon(drawableG2);
             }
-            if (this.f1306g == null && (drawable = this.f1316q) != null) {
+            if (this.f1151g == null && (drawable = this.f1161q) != null) {
                 A(drawable);
             }
-            i(a1VarV.k(j.f20052h, 0));
-            int iN = a1VarV.n(j.f20047g, 0);
+            i(a1VarV.k(j.f20168h, 0));
+            int iN = a1VarV.n(j.f20163g, 0);
             if (iN != 0) {
-                v(LayoutInflater.from(this.f1301a.getContext()).inflate(iN, (ViewGroup) this.f1301a, false));
+                v(LayoutInflater.from(this.f1146a.getContext()).inflate(iN, (ViewGroup) this.f1146a, false));
                 i(this.b | 16);
             }
-            int iM = a1VarV.m(j.f20062j, 0);
+            int iM = a1VarV.m(j.f20178j, 0);
             if (iM > 0) {
-                ViewGroup.LayoutParams layoutParams = this.f1301a.getLayoutParams();
+                ViewGroup.LayoutParams layoutParams = this.f1146a.getLayoutParams();
                 layoutParams.height = iM;
-                this.f1301a.setLayoutParams(layoutParams);
+                this.f1146a.setLayoutParams(layoutParams);
             }
-            int iE = a1VarV.e(j.f20042f, -1);
-            int iE2 = a1VarV.e(j.f20037e, -1);
+            int iE = a1VarV.e(j.f20158f, -1);
+            int iE2 = a1VarV.e(j.f20153e, -1);
             if (iE >= 0 || iE2 >= 0) {
-                this.f1301a.L(Math.max(iE, 0), Math.max(iE2, 0));
+                this.f1146a.K(Math.max(iE, 0), Math.max(iE2, 0));
             }
-            int iN2 = a1VarV.n(j.f20107s, 0);
+            int iN2 = a1VarV.n(j.f20223s, 0);
             if (iN2 != 0) {
-                Toolbar toolbar2 = this.f1301a;
-                toolbar2.O(toolbar2.getContext(), iN2);
+                Toolbar toolbar2 = this.f1146a;
+                toolbar2.N(toolbar2.getContext(), iN2);
             }
-            int iN3 = a1VarV.n(j.f20097q, 0);
+            int iN3 = a1VarV.n(j.f20213q, 0);
             if (iN3 != 0) {
-                Toolbar toolbar3 = this.f1301a;
-                toolbar3.N(toolbar3.getContext(), iN3);
+                Toolbar toolbar3 = this.f1146a;
+                toolbar3.M(toolbar3.getContext(), iN3);
             }
-            int iN4 = a1VarV.n(j.f20087o, 0);
+            int iN4 = a1VarV.n(j.f20203o, 0);
             if (iN4 != 0) {
-                this.f1301a.setPopupTheme(iN4);
+                this.f1146a.setPopupTheme(iN4);
             }
         } else {
             this.b = u();
         }
         a1VarV.x();
         w(i10);
-        this.f1310k = this.f1301a.getNavigationContentDescription();
-        this.f1301a.setNavigationOnClickListener(new a());
+        this.f1155k = this.f1146a.getNavigationContentDescription();
+        this.f1146a.setNavigationOnClickListener(new a());
     }
 
     @Override // q.f0
     public void setIcon(Drawable drawable) {
-        this.f1304e = drawable;
+        this.f1149e = drawable;
         G();
     }
 }

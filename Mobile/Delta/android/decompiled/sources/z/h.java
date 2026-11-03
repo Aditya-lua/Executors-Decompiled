@@ -8,11 +8,11 @@ import java.nio.BufferUnderflowException;
 public class h implements n0.e0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final n0.z3 f36587a;
+    public final n0.z3 f37282a;
     public final CaptureResult b;
 
     public h(n0.z3 z3Var, CaptureResult captureResult) {
-        this.f36587a = z3Var;
+        this.f37282a = z3Var;
         this.b = captureResult;
     }
 
@@ -79,7 +79,7 @@ public class h implements n0.e0 {
 
     @Override // n0.e0
     public n0.z3 c() {
-        return this.f36587a;
+        return this.f37282a;
     }
 
     @Override // n0.e0

@@ -7,16 +7,16 @@ import java.util.List;
 public final class dh extends k {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final hh f6420c;
+    public final hh f6493c;
 
     public dh(hh hhVar) {
         super("internal.registerCallback");
-        this.f6420c = hhVar;
+        this.f6493c = hhVar;
     }
 
     @Override // com.google.android.gms.internal.measurement.k
     public final q h(u4 u4Var, List list) {
-        v5.a(this.f6569a, 3, list);
+        v5.a(this.f6642a, 3, list);
         String strZzc = u4Var.a((q) list.get(0)).zzc();
         q qVarA = u4Var.a((q) list.get(1));
         if (!(qVarA instanceof p)) {
@@ -30,7 +30,7 @@ public final class dh extends k {
         if (!nVar.g(Payload.TYPE)) {
             throw new IllegalArgumentException("Undefined rule type");
         }
-        this.f6420c.a(strZzc, nVar.g("priority") ? v5.g(nVar.c("priority").zzd().doubleValue()) : 1000, (p) qVarA, nVar.c(Payload.TYPE).zzc());
-        return q.f6743zo;
+        this.f6493c.a(strZzc, nVar.g("priority") ? v5.g(nVar.c("priority").zzd().doubleValue()) : 1000, (p) qVarA, nVar.c(Payload.TYPE).zzc());
+        return q.f6816yo;
     }
 }

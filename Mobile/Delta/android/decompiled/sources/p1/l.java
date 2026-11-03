@@ -19,7 +19,7 @@ public final class l extends i {
             Log.d("CamLifecycleController", "Lifecycle is not set.");
             return null;
         }
-        if (this.f28163v == null) {
+        if (this.f28382v == null) {
             Log.d("CamLifecycleController", "CameraProvider is not ready.");
             return null;
         }
@@ -28,7 +28,7 @@ public final class l extends i {
             return null;
         }
         try {
-            return this.f28163v.b(this.R, this.f28143a, x2VarJ);
+            return this.f28382v.b(this.R, this.f28362a, x2VarJ);
         } catch (IllegalArgumentException e10) {
             throw new IllegalStateException("The selected camera does not support the enabled use cases. Please disable use case and/or select a different camera. e.g. #setVideoCaptureEnabled(false)", e10);
         }

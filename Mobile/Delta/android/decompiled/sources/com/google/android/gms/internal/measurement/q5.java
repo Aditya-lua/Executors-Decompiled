@@ -13,7 +13,7 @@ public final class q5 extends gb implements pc {
     static {
         q5 q5Var = new q5();
         zzi = q5Var;
-        gb.u(q5.class, q5Var);
+        gb.t(q5.class, q5Var);
     }
 
     public static q5 K() {

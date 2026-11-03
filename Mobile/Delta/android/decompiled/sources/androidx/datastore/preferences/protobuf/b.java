@@ -6,7 +6,7 @@ import androidx.datastore.preferences.protobuf.r0;
 public abstract class b<MessageType extends r0> implements z0<MessageType> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final o f2130a = o.b();
+    public static final o f1975a = o.b();
 
     public final MessageType c(MessageType messagetype) throws a0 {
         if (messagetype == null || messagetype.isInitialized()) {

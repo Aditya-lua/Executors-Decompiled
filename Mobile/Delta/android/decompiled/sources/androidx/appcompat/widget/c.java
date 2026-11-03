@@ -30,46 +30,46 @@ import q.q;
 public class c extends HorizontalScrollView implements AdapterView.OnItemSelectedListener {
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final Interpolator f1284j = new DecelerateInterpolator();
+    public static final Interpolator f1129j = new DecelerateInterpolator();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Runnable f1285a;
-    public ViewOnClickListenerC0017c b;
+    public Runnable f1130a;
+    public ViewOnClickListenerC0013c b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public androidx.appcompat.widget.b f1286c;
+    public androidx.appcompat.widget.b f1131c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public Spinner f1287d;
+    public Spinner f1132d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public boolean f1288e;
+    public boolean f1133e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public int f1289f;
+    public int f1134f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public int f1290g;
+    public int f1135g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public int f1291h;
+    public int f1136h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public int f1292i;
+    public int f1137i;
 
     public class a implements Runnable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ View f1293a;
+        public final /* synthetic */ View f1138a;
 
         public a(View view) {
-            this.f1293a = view;
+            this.f1138a = view;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            c.this.smoothScrollTo(this.f1293a.getLeft() - ((c.this.getWidth() - this.f1293a.getWidth()) / 2), 0);
-            c.this.f1285a = null;
+            c.this.smoothScrollTo(this.f1138a.getLeft() - ((c.this.getWidth() - this.f1138a.getWidth()) / 2), 0);
+            c.this.f1130a = null;
         }
     }
 
@@ -79,12 +79,12 @@ public class c extends HorizontalScrollView implements AdapterView.OnItemSelecte
 
         @Override // android.widget.Adapter
         public int getCount() {
-            return c.this.f1286c.getChildCount();
+            return c.this.f1131c.getChildCount();
         }
 
         @Override // android.widget.Adapter
         public Object getItem(int i10) {
-            return ((d) c.this.f1286c.getChildAt(i10)).b();
+            return ((d) c.this.f1131c.getChildAt(i10)).b();
         }
 
         @Override // android.widget.Adapter
@@ -103,16 +103,16 @@ public class c extends HorizontalScrollView implements AdapterView.OnItemSelecte
     }
 
     /* JADX INFO: renamed from: androidx.appcompat.widget.c$c, reason: collision with other inner class name */
-    public class ViewOnClickListenerC0017c implements View.OnClickListener {
-        public ViewOnClickListenerC0017c() {
+    public class ViewOnClickListenerC0013c implements View.OnClickListener {
+        public ViewOnClickListenerC0013c() {
         }
 
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
             ((d) view).b().e();
-            int childCount = c.this.f1286c.getChildCount();
+            int childCount = c.this.f1131c.getChildCount();
             for (int i10 = 0; i10 < childCount; i10++) {
-                View childAt = c.this.f1286c.getChildAt(i10);
+                View childAt = c.this.f1131c.getChildAt(i10);
                 childAt.setSelected(childAt == view);
             }
         }
@@ -121,24 +121,24 @@ public class c extends HorizontalScrollView implements AdapterView.OnItemSelecte
     public class d extends LinearLayout {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final int[] f1296a;
+        public final int[] f1141a;
         public j.a.c b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public TextView f1297c;
+        public TextView f1142c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public ImageView f1298d;
+        public ImageView f1143d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public View f1299e;
+        public View f1144e;
 
         /* JADX WARN: Illegal instructions before constructor call */
         public d(Context context, j.a.c cVar, boolean z10) {
-            int i10 = i.a.f19888d;
+            int i10 = i.a.f20004d;
             super(context, null, i10);
             int[] iArr = {R.attr.background};
-            this.f1296a = iArr;
+            this.f1141a = iArr;
             this.b = cVar;
             a1 a1VarV = a1.v(context, null, iArr, i10, 0);
             if (a1VarV.s(0)) {
@@ -171,65 +171,65 @@ public class c extends HorizontalScrollView implements AdapterView.OnItemSelecte
                     }
                     addView(viewB);
                 }
-                this.f1299e = viewB;
-                TextView textView = this.f1297c;
+                this.f1144e = viewB;
+                TextView textView = this.f1142c;
                 if (textView != null) {
                     textView.setVisibility(8);
                 }
-                ImageView imageView = this.f1298d;
+                ImageView imageView = this.f1143d;
                 if (imageView != null) {
                     imageView.setVisibility(8);
-                    this.f1298d.setImageDrawable(null);
+                    this.f1143d.setImageDrawable(null);
                     return;
                 }
                 return;
             }
-            View view = this.f1299e;
+            View view = this.f1144e;
             if (view != null) {
                 removeView(view);
-                this.f1299e = null;
+                this.f1144e = null;
             }
             Drawable drawableC = cVar.c();
             CharSequence charSequenceD = cVar.d();
             if (drawableC != null) {
-                if (this.f1298d == null) {
+                if (this.f1143d == null) {
                     q qVar = new q(getContext());
                     LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(-2, -2);
                     layoutParams.gravity = 16;
                     qVar.setLayoutParams(layoutParams);
                     addView(qVar, 0);
-                    this.f1298d = qVar;
+                    this.f1143d = qVar;
                 }
-                this.f1298d.setImageDrawable(drawableC);
-                this.f1298d.setVisibility(0);
+                this.f1143d.setImageDrawable(drawableC);
+                this.f1143d.setVisibility(0);
             } else {
-                ImageView imageView2 = this.f1298d;
+                ImageView imageView2 = this.f1143d;
                 if (imageView2 != null) {
                     imageView2.setVisibility(8);
-                    this.f1298d.setImageDrawable(null);
+                    this.f1143d.setImageDrawable(null);
                 }
             }
             boolean zIsEmpty = TextUtils.isEmpty(charSequenceD);
             if (zIsEmpty) {
-                TextView textView2 = this.f1297c;
+                TextView textView2 = this.f1142c;
                 if (textView2 != null) {
                     textView2.setVisibility(8);
-                    this.f1297c.setText((CharSequence) null);
+                    this.f1142c.setText((CharSequence) null);
                 }
             } else {
-                if (this.f1297c == null) {
-                    b0 b0Var = new b0(getContext(), null, i.a.f19889e);
+                if (this.f1142c == null) {
+                    b0 b0Var = new b0(getContext(), null, i.a.f20005e);
                     b0Var.setEllipsize(TextUtils.TruncateAt.END);
                     LinearLayout.LayoutParams layoutParams2 = new LinearLayout.LayoutParams(-2, -2);
                     layoutParams2.gravity = 16;
                     b0Var.setLayoutParams(layoutParams2);
                     addView(b0Var);
-                    this.f1297c = b0Var;
+                    this.f1142c = b0Var;
                 }
-                this.f1297c.setText(charSequenceD);
-                this.f1297c.setVisibility(0);
+                this.f1142c.setText(charSequenceD);
+                this.f1142c.setVisibility(0);
             }
-            ImageView imageView3 = this.f1298d;
+            ImageView imageView3 = this.f1143d;
             if (imageView3 != null) {
                 imageView3.setContentDescription(cVar.a());
             }
@@ -251,9 +251,9 @@ public class c extends HorizontalScrollView implements AdapterView.OnItemSelecte
         @Override // android.widget.LinearLayout, android.view.View
         public void onMeasure(int i10, int i11) {
             super.onMeasure(i10, i11);
-            if (c.this.f1289f > 0) {
+            if (c.this.f1134f > 0) {
                 int measuredWidth = getMeasuredWidth();
-                int i12 = c.this.f1289f;
+                int i12 = c.this.f1134f;
                 if (measuredWidth > i12) {
                     super.onMeasure(View.MeasureSpec.makeMeasureSpec(i12, 1073741824), i11);
                 }
@@ -271,18 +271,18 @@ public class c extends HorizontalScrollView implements AdapterView.OnItemSelecte
     }
 
     public void a(int i10) {
-        View childAt = this.f1286c.getChildAt(i10);
-        Runnable runnable = this.f1285a;
+        View childAt = this.f1131c.getChildAt(i10);
+        Runnable runnable = this.f1130a;
         if (runnable != null) {
             removeCallbacks(runnable);
         }
         a aVar = new a(childAt);
-        this.f1285a = aVar;
+        this.f1130a = aVar;
         post(aVar);
     }
 
     public final Spinner b() {
-        AppCompatSpinner appCompatSpinner = new AppCompatSpinner(getContext(), null, i.a.f19892h);
+        AppCompatSpinner appCompatSpinner = new AppCompatSpinner(getContext(), null, i.a.f20008h);
         appCompatSpinner.setLayoutParams(new androidx.appcompat.widget.b.a(-2, -1));
         appCompatSpinner.setOnItemSelectedListener(this);
         return appCompatSpinner;
@@ -292,19 +292,19 @@ public class c extends HorizontalScrollView implements AdapterView.OnItemSelecte
         d dVar = new d(getContext(), cVar, z10);
         if (z10) {
             dVar.setBackgroundDrawable(null);
-            dVar.setLayoutParams(new AbsListView.LayoutParams(-1, this.f1291h));
+            dVar.setLayoutParams(new AbsListView.LayoutParams(-1, this.f1136h));
             return dVar;
         }
         dVar.setFocusable(true);
         if (this.b == null) {
-            this.b = new ViewOnClickListenerC0017c();
+            this.b = new ViewOnClickListenerC0013c();
         }
         dVar.setOnClickListener(this.b);
         return dVar;
     }
 
     public final boolean d() {
-        Spinner spinner = this.f1287d;
+        Spinner spinner = this.f1132d;
         return spinner != null && spinner.getParent() == this;
     }
 
@@ -312,36 +312,36 @@ public class c extends HorizontalScrollView implements AdapterView.OnItemSelecte
         if (d()) {
             return;
         }
-        if (this.f1287d == null) {
-            this.f1287d = b();
+        if (this.f1132d == null) {
+            this.f1132d = b();
         }
-        removeView(this.f1286c);
-        addView(this.f1287d, new ViewGroup.LayoutParams(-2, -1));
-        if (this.f1287d.getAdapter() == null) {
-            this.f1287d.setAdapter((SpinnerAdapter) new b());
+        removeView(this.f1131c);
+        addView(this.f1132d, new ViewGroup.LayoutParams(-2, -1));
+        if (this.f1132d.getAdapter() == null) {
+            this.f1132d.setAdapter((SpinnerAdapter) new b());
         }
-        Runnable runnable = this.f1285a;
+        Runnable runnable = this.f1130a;
         if (runnable != null) {
             removeCallbacks(runnable);
-            this.f1285a = null;
+            this.f1130a = null;
         }
-        this.f1287d.setSelection(this.f1292i);
+        this.f1132d.setSelection(this.f1137i);
     }
 
     public final boolean f() {
         if (!d()) {
             return false;
         }
-        removeView(this.f1287d);
-        addView(this.f1286c, new ViewGroup.LayoutParams(-2, -1));
-        setTabSelected(this.f1287d.getSelectedItemPosition());
+        removeView(this.f1132d);
+        addView(this.f1131c, new ViewGroup.LayoutParams(-2, -1));
+        setTabSelected(this.f1132d.getSelectedItemPosition());
         return false;
     }
 
     @Override // android.view.ViewGroup, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        Runnable runnable = this.f1285a;
+        Runnable runnable = this.f1130a;
         if (runnable != null) {
             post(runnable);
         }
@@ -352,13 +352,13 @@ public class c extends HorizontalScrollView implements AdapterView.OnItemSelecte
         super.onConfigurationChanged(configuration);
         o.a aVarB = o.a.b(getContext());
         setContentHeight(aVarB.f());
-        this.f1290g = aVarB.e();
+        this.f1135g = aVarB.e();
     }
 
     @Override // android.view.ViewGroup, android.view.View
     public void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-        Runnable runnable = this.f1285a;
+        Runnable runnable = this.f1130a;
         if (runnable != null) {
             removeCallbacks(runnable);
         }
@@ -374,23 +374,23 @@ public class c extends HorizontalScrollView implements AdapterView.OnItemSelecte
         int mode = View.MeasureSpec.getMode(i10);
         boolean z10 = mode == 1073741824;
         setFillViewport(z10);
-        int childCount = this.f1286c.getChildCount();
+        int childCount = this.f1131c.getChildCount();
         if (childCount <= 1 || !(mode == 1073741824 || mode == Integer.MIN_VALUE)) {
-            this.f1289f = -1;
+            this.f1134f = -1;
         } else {
             if (childCount > 2) {
-                this.f1289f = (int) (View.MeasureSpec.getSize(i10) * 0.4f);
+                this.f1134f = (int) (View.MeasureSpec.getSize(i10) * 0.4f);
             } else {
-                this.f1289f = View.MeasureSpec.getSize(i10) / 2;
+                this.f1134f = View.MeasureSpec.getSize(i10) / 2;
             }
-            this.f1289f = Math.min(this.f1289f, this.f1290g);
+            this.f1134f = Math.min(this.f1134f, this.f1135g);
         }
-        int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(this.f1291h, 1073741824);
-        if (z10 || !this.f1288e) {
+        int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(this.f1136h, 1073741824);
+        if (z10 || !this.f1133e) {
             f();
         } else {
-            this.f1286c.measure(0, iMakeMeasureSpec);
-            if (this.f1286c.getMeasuredWidth() > View.MeasureSpec.getSize(i10)) {
+            this.f1131c.measure(0, iMakeMeasureSpec);
+            if (this.f1131c.getMeasuredWidth() > View.MeasureSpec.getSize(i10)) {
                 e();
             } else {
                 f();
@@ -402,7 +402,7 @@ public class c extends HorizontalScrollView implements AdapterView.OnItemSelecte
         if (!z10 || measuredWidth == measuredWidth2) {
             return;
         }
-        setTabSelected(this.f1292i);
+        setTabSelected(this.f1137i);
     }
 
     @Override // android.widget.AdapterView.OnItemSelectedListener
@@ -410,20 +410,20 @@ public class c extends HorizontalScrollView implements AdapterView.OnItemSelecte
     }
 
     public void setAllowCollapse(boolean z10) {
-        this.f1288e = z10;
+        this.f1133e = z10;
     }
 
     public void setContentHeight(int i10) {
-        this.f1291h = i10;
+        this.f1136h = i10;
         requestLayout();
     }
 
     public void setTabSelected(int i10) {
-        this.f1292i = i10;
-        int childCount = this.f1286c.getChildCount();
+        this.f1137i = i10;
+        int childCount = this.f1131c.getChildCount();
         int i11 = 0;
         while (i11 < childCount) {
-            View childAt = this.f1286c.getChildAt(i11);
+            View childAt = this.f1131c.getChildAt(i11);
             boolean z10 = i11 == i10;
             childAt.setSelected(z10);
             if (z10) {
@@ -431,7 +431,7 @@ public class c extends HorizontalScrollView implements AdapterView.OnItemSelecte
             }
             i11++;
         }
-        Spinner spinner = this.f1287d;
+        Spinner spinner = this.f1132d;
         if (spinner == null || i10 < 0) {
             return;
         }

@@ -13,13 +13,13 @@ public final class k {
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final List f25284a;
+        public final List f26105a;
         public final Object b;
 
         public /* synthetic */ a(Object obj, byte[] bArr) {
             m.l(obj);
             this.b = obj;
-            this.f25284a = new ArrayList();
+            this.f26105a = new ArrayList();
         }
 
         @NonNull
@@ -31,7 +31,7 @@ public final class k {
             sb2.append(str);
             sb2.append("=");
             sb2.append(strValueOf);
-            this.f25284a.add(sb2.toString());
+            this.f26105a.add(sb2.toString());
             return this;
         }
 
@@ -40,7 +40,7 @@ public final class k {
             StringBuilder sb2 = new StringBuilder(100);
             sb2.append(this.b.getClass().getSimpleName());
             sb2.append('{');
-            List list = this.f25284a;
+            List list = this.f26105a;
             int size = list.size();
             for (int i10 = 0; i10 < size; i10++) {
                 sb2.append((String) list.get(i10));

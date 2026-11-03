@@ -1,63 +1,43 @@
 package cr;
 
-import android.text.InputFilter;
-import android.text.Spanned;
-import com.appsflyer.sdk_base.referrer.Payload;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.Set;
 import kotlin.Metadata;
-import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.Intrinsics;
+import lu.c0;
+import lu.r0;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\r\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005JA\u0010\u000e\u001a\u0004\u0018\u00010\u00062\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u00022\u0006\u0010\t\u001a\u00020\u00022\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\f\u001a\u00020\u00022\u0006\u0010\r\u001a\u00020\u0002H\u0016¢\u0006\u0004\b\u000e\u0010\u000fR\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0010\u0010\u0011R\u001b\u0010\u0016\u001a\u00020\u00128BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\u0013\u0010\u0014\u001a\u0004\b\u0013\u0010\u0015¨\u0006\u0017"}, d2 = {"Lcr/n;", "Landroid/text/InputFilter;", "", "precision", "<init>", "(I)V", "", Payload.SOURCE, "start", "end", "Landroid/text/Spanned;", "dest", "dstart", "dend", "filter", "(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;", "a", "I", "Ljava/util/regex/Pattern;", "b", "Ljt/h;", "()Ljava/util/regex/Pattern;", "pattern", "ui-step-renderer_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class n implements InputFilter {
+@Metadata(d1 = {"\u0000$\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\"\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\b\u0018\u00002\u00020\u0001B\u0015\u0012\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00030\u0002¢\u0006\u0004\b\u0005\u0010\u0006R \u0010\n\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00030\u00020\u00078\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\b\u0010\tR#\u0010\u000f\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00030\u00020\u000b8\u0006¢\u0006\f\n\u0004\b\f\u0010\r\u001a\u0004\b\b\u0010\u000eR0\u0010\u0010\u001a\b\u0012\u0004\u0012\u00020\u00030\u00022\f\u0010\u0010\u001a\b\u0012\u0004\u0012\u00020\u00030\u00028F@FX\u0086\u000e¢\u0006\f\u001a\u0004\b\f\u0010\u0011\"\u0004\b\u0012\u0010\u0006¨\u0006\u0013"}, d2 = {"Lcr/n;", "", "", "", "initialValue", "<init>", "(Ljava/util/Set;)V", "Llu/c0;", "a", "Llu/c0;", "_stringSetValue", "Llu/h;", "b", "Llu/h;", "()Llu/h;", "onChanged", "value", "()Ljava/util/Set;", "c", "ui-step-renderer_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class n {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
-    public final int precision;
+    @NotNull
+    public final c0<Set<String>> _stringSetValue;
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull
-    public final jt.h pattern = jt.i.b(new Function0() { // from class: cr.m
-        @Override // kotlin.jvm.functions.Function0
-        public final Object invoke() {
-            return n.c(this.f14152a);
-        }
-    });
+    public final lu.h<Set<String>> onChanged;
 
-    public n(int i10) {
-        this.precision = i10;
+    public n(@NotNull Set<String> initialValue) {
+        Intrinsics.checkNotNullParameter(initialValue, "initialValue");
+        c0<Set<String>> c0VarA = r0.a(initialValue);
+        this._stringSetValue = c0VarA;
+        this.onChanged = lu.j.n(c0VarA, 1);
     }
 
-    public static final Pattern c(n nVar) {
-        return Pattern.compile("-?[0-9]*+((\\.[0-9]{0," + nVar.precision + "})?)||(\\.)?");
+    @NotNull
+    public final lu.h<Set<String>> a() {
+        return this.onChanged;
     }
 
-    public final Pattern b() {
-        Object value = this.pattern.getValue();
-        Intrinsics.checkNotNullExpressionValue(value, "getValue(...)");
-        return (Pattern) value;
+    @NotNull
+    public final Set<String> b() {
+        return this._stringSetValue.getValue();
     }
 
-    @Override // android.text.InputFilter
-    @Nullable
-    public CharSequence filter(@NotNull CharSequence source, int start, int end, @NotNull Spanned dest, int dstart, int dend) {
-        Intrinsics.checkNotNullParameter(source, "source");
-        Intrinsics.checkNotNullParameter(dest, "dest");
-        CharSequence charSequenceSubSequence = source.subSequence(start, end);
-        CharSequence charSequenceSubSequence2 = dest.subSequence(0, dstart);
-        CharSequence charSequenceSubSequence3 = dest.subSequence(dend, dest.length());
-        StringBuilder sb2 = new StringBuilder();
-        sb2.append((Object) charSequenceSubSequence2);
-        sb2.append((Object) charSequenceSubSequence);
-        sb2.append((Object) charSequenceSubSequence3);
-        Matcher matcher = b().matcher(kotlin.text.x.M(sb2.toString(), ',', '.', false, 4, null));
-        Intrinsics.checkNotNullExpressionValue(matcher, "matcher(...)");
-        if (matcher.matches()) {
-            return null;
-        }
-        return source.length() == 0 ? dest.subSequence(dstart, dend) : "";
+    public final void c(@NotNull Set<String> value) {
+        Intrinsics.checkNotNullParameter(value, "value");
+        this._stringSetValue.setValue(value);
     }
 }

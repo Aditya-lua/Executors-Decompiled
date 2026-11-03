@@ -52,33 +52,33 @@ import okhttp3.internal.ws.RealWebSocket;
 public final class ve extends k8 {
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final String[] f26040i = {"firebase_", "google_", "ga_"};
+    public static final String[] f26861i = {"firebase_", "google_", "ga_"};
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final String[] f26041j = {"_err"};
+    public static final String[] f26862j = {"_err"};
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public SecureRandom f26042c;
+    public SecureRandom f26863c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final AtomicLong f26043d;
+    public final AtomicLong f26864d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public int f26044e;
+    public int f26865e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public r4.a f26045f;
+    public r4.a f26866f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public Boolean f26046g;
+    public Boolean f26867g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public Integer f26047h;
+    public Integer f26868h;
 
     public ve(g7 g7Var) {
         super(g7Var);
-        this.f26047h = null;
-        this.f26043d = new AtomicLong(0L);
+        this.f26868h = null;
+        this.f26864d = new AtomicLong(0L);
     }
 
     public static MessageDigest C() {
@@ -136,7 +136,7 @@ public final class ve extends k8 {
     }
 
     public static boolean U(String str) {
-        return !f26041j[0].equals(str);
+        return !f26862j[0].equals(str);
     }
 
     public static ArrayList h0(List list) {
@@ -148,39 +148,39 @@ public final class ve extends k8 {
         while (it.hasNext()) {
             zzah zzahVar = (zzah) it.next();
             Bundle bundle = new Bundle();
-            bundle.putString("app_id", zzahVar.f7409f);
-            bundle.putString("origin", zzahVar.f7410g);
-            bundle.putLong("creation_timestamp", zzahVar.f7412i);
-            bundle.putString("name", zzahVar.f7411h.f7439g);
-            m8.a(bundle, n9.m.l(zzahVar.f7411h.zza()));
-            bundle.putBoolean("active", zzahVar.f7413j);
-            String str = zzahVar.f7414k;
+            bundle.putString("app_id", zzahVar.f7483f);
+            bundle.putString("origin", zzahVar.f7484g);
+            bundle.putLong("creation_timestamp", zzahVar.f7486i);
+            bundle.putString("name", zzahVar.f7485h.f7513g);
+            m8.a(bundle, n9.m.l(zzahVar.f7485h.zza()));
+            bundle.putBoolean("active", zzahVar.f7487j);
+            String str = zzahVar.f7488k;
             if (str != null) {
                 bundle.putString("trigger_event_name", str);
             }
-            zzbg zzbgVar = zzahVar.f7415l;
+            zzbg zzbgVar = zzahVar.f7489l;
             if (zzbgVar != null) {
-                bundle.putString("timed_out_event_name", zzbgVar.f7422f);
-                zzbe zzbeVar = zzbgVar.f7423g;
+                bundle.putString("timed_out_event_name", zzbgVar.f7496f);
+                zzbe zzbeVar = zzbgVar.f7497g;
                 if (zzbeVar != null) {
                     bundle.putBundle("timed_out_event_params", zzbeVar.y3());
                 }
             }
-            bundle.putLong("trigger_timeout", zzahVar.f7416m);
-            zzbg zzbgVar2 = zzahVar.f7417n;
+            bundle.putLong("trigger_timeout", zzahVar.f7490m);
+            zzbg zzbgVar2 = zzahVar.f7491n;
             if (zzbgVar2 != null) {
-                bundle.putString("triggered_event_name", zzbgVar2.f7422f);
-                zzbe zzbeVar2 = zzbgVar2.f7423g;
+                bundle.putString("triggered_event_name", zzbgVar2.f7496f);
+                zzbe zzbeVar2 = zzbgVar2.f7497g;
                 if (zzbeVar2 != null) {
                     bundle.putBundle("triggered_event_params", zzbeVar2.y3());
                 }
             }
-            bundle.putLong("triggered_timestamp", zzahVar.f7411h.f7440h);
-            bundle.putLong("time_to_live", zzahVar.f7418o);
-            zzbg zzbgVar3 = zzahVar.f7419p;
+            bundle.putLong("triggered_timestamp", zzahVar.f7485h.f7514h);
+            bundle.putLong("time_to_live", zzahVar.f7492o);
+            zzbg zzbgVar3 = zzahVar.f7493p;
             if (zzbgVar3 != null) {
-                bundle.putString("expired_event_name", zzbgVar3.f7422f);
-                zzbe zzbeVar3 = zzbgVar3.f7423g;
+                bundle.putString("expired_event_name", zzbgVar3.f7496f);
+                zzbe zzbeVar3 = zzbgVar3.f7497g;
                 if (zzbeVar3 != null) {
                     bundle.putBundle("expired_event_params", zzbeVar3.y3());
                 }
@@ -203,7 +203,7 @@ public final class ve extends k8 {
     public static void k0(bb bbVar, Bundle bundle, boolean z10) {
         if (bundle != null && bbVar != null) {
             if (!bundle.containsKey("_sc") || z10) {
-                String str = bbVar.f25365a;
+                String str = bbVar.f26186a;
                 if (str != null) {
                     bundle.putString("_sn", str);
                 } else {
@@ -215,7 +215,7 @@ public final class ve extends k8 {
                 } else {
                     bundle.remove("_sc");
                 }
-                bundle.putLong("_si", bbVar.f25366c);
+                bundle.putLong("_si", bbVar.f26187c);
                 return;
             }
             z10 = false;
@@ -260,7 +260,7 @@ public final class ve extends k8 {
             bundle.putParcelableArray(str, (Bundle[]) obj);
         } else if (str != null) {
             String simpleName = obj != null ? obj.getClass().getSimpleName() : null;
-            g7 g7Var = this.f25625a;
+            g7 g7Var = this.f26446a;
             g7Var.a().t().c("Not putting event parameter. Invalid value type. name, type", g7Var.D().b(str), simpleName);
         }
     }
@@ -272,7 +272,7 @@ public final class ve extends k8 {
         if (!v0("event param", null, null, str)) {
             return 14;
         }
-        this.f25625a.w();
+        this.f26446a.w();
         return !w0("event param", 40, str) ? 3 : 0;
     }
 
@@ -299,7 +299,7 @@ public final class ve extends k8 {
             }
             String string = obj.toString();
             if (string.codePointCount(0, string.length()) > i10) {
-                this.f25625a.a().t().d("Value is too long; discarded. Value kind, name, value length", str, str2, Integer.valueOf(string.length()));
+                this.f26446a.a().t().d("Value is too long; discarded. Value kind, name, value length", str, str2, Integer.valueOf(string.length()));
                 return false;
             }
         }
@@ -314,8 +314,8 @@ public final class ve extends k8 {
         if (bundle == null) {
             return;
         }
-        g7 g7Var = this.f25625a;
-        int i10 = true != g7Var.w().f25625a.C().V(231100000, true) ? 0 : 35;
+        g7 g7Var = this.f26446a;
+        int i10 = true != g7Var.w().f26446a.C().V(231100000, true) ? 0 : 35;
         int i11 = 0;
         boolean z11 = false;
         for (String str5 : new TreeSet(bundle.keySet())) {
@@ -342,14 +342,14 @@ public final class ve extends k8 {
                 if (iR != 0 && !"_ev".equals(str5)) {
                     x(bundle, iR, str5, bundle.get(str5));
                     bundle.remove(str5);
-                } else if (r0(str5) && !O(str5, s8.f25948d)) {
+                } else if (r0(str5) && !O(str5, s8.f26769d)) {
                     i11++;
                     if (!V(231100000, true)) {
                         g7Var.a().q().c("Item array not supported on client's version of Google Play Services (Android Only)", g7Var.D().a(str2), g7Var.D().e(bundle));
                         m0(bundle, 23);
                         bundle.remove(str5);
                     } else if (i11 > i10) {
-                        if (!g7Var.w().H(str4, z4.f26165f1) || !z11) {
+                        if (!g7Var.w().H(str4, z4.f26986f1) || !z11) {
                             u5 u5VarQ = g7Var.a().q();
                             StringBuilder sb2 = new StringBuilder(String.valueOf(i10).length() + 55);
                             sb2.append("Item can't contain more than ");
@@ -372,10 +372,10 @@ public final class ve extends k8 {
     }
 
     public final r4.a H() {
-        if (this.f26045f == null) {
-            this.f26045f = r4.a.a(this.f25625a.d());
+        if (this.f26866f == null) {
+            this.f26866f = r4.a.a(this.f26446a.d());
         }
-        return this.f26045f;
+        return this.f26866f;
     }
 
     public final int I() {
@@ -388,7 +388,7 @@ public final class ve extends k8 {
     public final long J() {
         long j10;
         h();
-        if (!L(this.f25625a.L().q())) {
+        if (!L(this.f26446a.L().q())) {
             return 0L;
         }
         if (Build.VERSION.SDK_INT < 30) {
@@ -396,10 +396,10 @@ public final class ve extends k8 {
         } else if (SdkExtensions.getExtensionVersion(30) < 4) {
             j10 = 8;
         } else {
-            g7 g7Var = this.f25625a;
+            g7 g7Var = this.f26446a;
             int I = I();
             g7Var.w();
-            j10 = I < ((Integer) z4.f26185m0.b(null)).intValue() ? 16L : 0L;
+            j10 = I < ((Integer) z4.f27006m0.b(null)).intValue() ? 16L : 0L;
         }
         if (!M("android.permission.ACCESS_ADSERVICES_ATTRIBUTION")) {
             j10 |= 2;
@@ -417,7 +417,7 @@ public final class ve extends k8 {
     public final boolean K() {
         Object e10;
         Integer num;
-        if (this.f26046g == null) {
+        if (this.f26867g == null) {
             r4.a aVarH = H();
             boolean z10 = false;
             if (aVarH == null) {
@@ -432,40 +432,40 @@ public final class ve extends k8 {
                         }
                     } catch (InterruptedException e11) {
                         e10 = e11;
-                        this.f25625a.a().r().b("Measurement manager api exception", e10);
-                        this.f26046g = Boolean.FALSE;
+                        this.f26446a.a().r().b("Measurement manager api exception", e10);
+                        this.f26867g = Boolean.FALSE;
                     } catch (CancellationException e12) {
                         e10 = e12;
-                        this.f25625a.a().r().b("Measurement manager api exception", e10);
-                        this.f26046g = Boolean.FALSE;
+                        this.f26446a.a().r().b("Measurement manager api exception", e10);
+                        this.f26867g = Boolean.FALSE;
                     } catch (ExecutionException e13) {
                         e10 = e13;
-                        this.f25625a.a().r().b("Measurement manager api exception", e10);
-                        this.f26046g = Boolean.FALSE;
+                        this.f26446a.a().r().b("Measurement manager api exception", e10);
+                        this.f26867g = Boolean.FALSE;
                     } catch (TimeoutException e14) {
                         e10 = e14;
-                        this.f25625a.a().r().b("Measurement manager api exception", e10);
-                        this.f26046g = Boolean.FALSE;
+                        this.f26446a.a().r().b("Measurement manager api exception", e10);
+                        this.f26867g = Boolean.FALSE;
                     }
                 }
-                this.f26046g = Boolean.valueOf(z10);
+                this.f26867g = Boolean.valueOf(z10);
             } catch (InterruptedException | CancellationException | ExecutionException | TimeoutException e15) {
                 e10 = e15;
                 num = null;
             }
-            this.f25625a.a().w().b("Measurement manager api status result", num);
+            this.f26446a.a().w().b("Measurement manager api status result", num);
         }
-        return this.f26046g.booleanValue();
+        return this.f26867g.booleanValue();
     }
 
     public final boolean L(String str) {
-        String str2 = (String) z4.f26197s0.b(null);
+        String str2 = (String) z4.f27018s0.b(null);
         return str2.equals("*") || Arrays.asList(str2.split(",")).contains(str);
     }
 
     public final boolean M(String str) {
         h();
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         if (w9.c.a(g7Var.d()).a(str) == 0) {
             return true;
         }
@@ -480,7 +480,7 @@ public final class ve extends k8 {
         if (TextUtils.isEmpty(str)) {
             return false;
         }
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         String strI = g7Var.w().i();
         g7Var.c();
         return strI.equals(str);
@@ -492,7 +492,7 @@ public final class ve extends k8 {
             for (String str2 : bundle.keySet()) {
                 Object objS = s(str2, bundle.get(str2));
                 if (objS == null) {
-                    g7 g7Var = this.f25625a;
+                    g7 g7Var = this.f26446a;
                     g7Var.a().t().b("Param value can't be null", g7Var.D().b(str2));
                 } else {
                     A(bundle2, str2, objS);
@@ -507,7 +507,7 @@ public final class ve extends k8 {
             return null;
         }
         if (x0(str2) != 0) {
-            g7 g7Var = this.f25625a;
+            g7 g7Var = this.f26446a;
             g7Var.a().o().b("Invalid conditional property event name", g7Var.D().c(str2));
             throw new IllegalArgumentException();
         }
@@ -531,10 +531,10 @@ public final class ve extends k8 {
             }
             return ((X509Certificate) CertificateFactory.getInstance("X.509").generateCertificate(new ByteArrayInputStream(signatureArr[0].toByteArray()))).getSubjectX500Principal().equals(x500Principal);
         } catch (PackageManager.NameNotFoundException e10) {
-            this.f25625a.a().o().b("Package name not found", e10);
+            this.f26446a.a().o().b("Package name not found", e10);
             return true;
         } catch (CertificateException e11) {
-            this.f25625a.a().o().b("Error obtaining certificate", e11);
+            this.f26446a.a().o().b("Error obtaining certificate", e11);
             return true;
         }
     }
@@ -553,7 +553,7 @@ public final class ve extends k8 {
     }
 
     public final boolean V(int i10, boolean z10) {
-        Boolean boolX = this.f25625a.J().x();
+        Boolean boolX = this.f26446a.J().x();
         if (W() < i10 / 1000) {
             return (boolX == null || boolX.booleanValue()) ? false : true;
         }
@@ -561,14 +561,14 @@ public final class ve extends k8 {
     }
 
     public final int W() {
-        if (this.f26047h == null) {
-            this.f26047h = Integer.valueOf(j9.d.f().a(this.f25625a.d()) / 1000);
+        if (this.f26868h == null) {
+            this.f26868h = Integer.valueOf(j9.d.f().a(this.f26446a.d()) / 1000);
         }
-        return this.f26047h.intValue();
+        return this.f26868h.intValue();
     }
 
     public final int X(int i10) {
-        return j9.d.f().h(this.f25625a.d(), 12451000);
+        return j9.d.f().h(this.f26446a.d(), 12451000);
     }
 
     public final long Y(long j10, long j11) {
@@ -578,7 +578,7 @@ public final class ve extends k8 {
     public final void Z(Bundle bundle, long j10) {
         long j11 = bundle.getLong("_et");
         if (j11 != 0) {
-            this.f25625a.a().r().b("Params already contained engagement", Long.valueOf(j11));
+            this.f26446a.a().r().b("Params already contained engagement", Long.valueOf(j11));
         } else {
             j11 = 0;
         }
@@ -591,7 +591,7 @@ public final class ve extends k8 {
         try {
             x1Var.l(bundle);
         } catch (RemoteException e10) {
-            this.f25625a.a().r().b("Error returning string value to wrapper", e10);
+            this.f26446a.a().r().b("Error returning string value to wrapper", e10);
         }
     }
 
@@ -601,7 +601,7 @@ public final class ve extends k8 {
         try {
             x1Var.l(bundle);
         } catch (RemoteException e10) {
-            this.f25625a.a().r().b("Error returning long value to wrapper", e10);
+            this.f26446a.a().r().b("Error returning long value to wrapper", e10);
         }
     }
 
@@ -611,7 +611,7 @@ public final class ve extends k8 {
         try {
             x1Var.l(bundle);
         } catch (RemoteException e10) {
-            this.f25625a.a().r().b("Error returning int value to wrapper", e10);
+            this.f26446a.a().r().b("Error returning int value to wrapper", e10);
         }
     }
 
@@ -621,7 +621,7 @@ public final class ve extends k8 {
         try {
             x1Var.l(bundle);
         } catch (RemoteException e10) {
-            this.f25625a.a().r().b("Error returning byte array to wrapper", e10);
+            this.f26446a.a().r().b("Error returning byte array to wrapper", e10);
         }
     }
 
@@ -631,7 +631,7 @@ public final class ve extends k8 {
         try {
             x1Var.l(bundle);
         } catch (RemoteException e10) {
-            this.f25625a.a().r().b("Error returning boolean value to wrapper", e10);
+            this.f26446a.a().r().b("Error returning boolean value to wrapper", e10);
         }
     }
 
@@ -639,7 +639,7 @@ public final class ve extends k8 {
         try {
             x1Var.l(bundle);
         } catch (RemoteException e10) {
-            this.f25625a.a().r().b("Error returning bundle value to wrapper", e10);
+            this.f26446a.a().r().b("Error returning bundle value to wrapper", e10);
         }
     }
 
@@ -649,7 +649,7 @@ public final class ve extends k8 {
         try {
             x1Var.l(bundle);
         } catch (RemoteException e10) {
-            this.f25625a.a().r().b("Error returning bundle list to wrapper", e10);
+            this.f26446a.a().r().b("Error returning bundle list to wrapper", e10);
         }
     }
 
@@ -663,7 +663,7 @@ public final class ve extends k8 {
             n9.m.f(str2);
             n9.m.f(str);
             String strConcat = String.format("https://www.googleadservices.com/pagead/conversion/app/deeplink?id_type=adid&sdk_version=%s&rdid=%s&bundleid=%s&retry=%s", String.format("v%s.%s", 133005L, Integer.valueOf(W())), str2, str, Long.valueOf(j11));
-            if (str.equals(this.f25625a.w().j())) {
+            if (str.equals(this.f26446a.w().j())) {
                 strConcat = strConcat.concat("&ddl_test=1");
             }
             if (!str3.isEmpty()) {
@@ -675,11 +675,11 @@ public final class ve extends k8 {
             return new URL(strConcat);
         } catch (IllegalArgumentException e10) {
             e = e10;
-            this.f25625a.a().o().b("Failed to create BOW URL for Deferred Deep Link. exception", e.getMessage());
+            this.f26446a.a().o().b("Failed to create BOW URL for Deferred Deep Link. exception", e.getMessage());
             return null;
         } catch (MalformedURLException e11) {
             e = e11;
-            this.f25625a.a().o().b("Failed to create BOW URL for Deferred Deep Link. exception", e.getMessage());
+            this.f26446a.a().o().b("Failed to create BOW URL for Deferred Deep Link. exception", e.getMessage());
             return null;
         }
     }
@@ -692,10 +692,10 @@ public final class ve extends k8 {
         if (jNextLong == 0) {
             jNextLong = secureRandom.nextLong();
             if (jNextLong == 0) {
-                this.f25625a.a().r().a("Utils falling back to Random for random id");
+                this.f26446a.a().r().a("Utils falling back to Random for random id");
             }
         }
-        this.f26043d.set(jNextLong);
+        this.f26864d.set(jNextLong);
     }
 
     public final String l0() {
@@ -746,31 +746,31 @@ public final class ve extends k8 {
 
     public final boolean o(String str) {
         if (TextUtils.isEmpty(str)) {
-            this.f25625a.a().q().a("Missing google_app_id. Firebase Analytics disabled. See https://goo.gl/NAOOOI");
+            this.f26446a.a().q().a("Missing google_app_id. Firebase Analytics disabled. See https://goo.gl/NAOOOI");
             return false;
         }
         n9.m.l(str);
         if (str.matches("^1:\\d+:android:[a-f0-9]+$")) {
             return true;
         }
-        this.f25625a.a().q().b("Invalid google_app_id. Firebase Analytics disabled. See https://goo.gl/NAOOOI. provided id", w5.x(str));
+        this.f26446a.a().q().b("Invalid google_app_id. Firebase Analytics disabled. See https://goo.gl/NAOOOI. provided id", w5.x(str));
         return false;
     }
 
     public final int o0(String str) {
         if ("_ldl".equals(str)) {
-            this.f25625a.w();
+            this.f26446a.w();
             return Barcode.FORMAT_PDF417;
         }
         if ("_id".equals(str)) {
-            this.f25625a.w();
+            this.f26446a.w();
             return Barcode.FORMAT_QR_CODE;
         }
         if ("_lgclid".equals(str)) {
-            this.f25625a.w();
+            this.f26446a.w();
             return 100;
         }
-        this.f25625a.w();
+        this.f26446a.w();
         return 36;
     }
 
@@ -789,9 +789,9 @@ public final class ve extends k8 {
     public final long p0() {
         long andIncrement;
         long j10;
-        AtomicLong atomicLong = this.f26043d;
+        AtomicLong atomicLong = this.f26864d;
         if (atomicLong.get() != 0) {
-            AtomicLong atomicLong2 = this.f26043d;
+            AtomicLong atomicLong2 = this.f26864d;
             synchronized (atomicLong2) {
                 atomicLong2.compareAndSet(-1L, 1L);
                 andIncrement = atomicLong2.getAndIncrement();
@@ -799,9 +799,9 @@ public final class ve extends k8 {
             return andIncrement;
         }
         synchronized (atomicLong) {
-            long jNextLong = new Random(System.nanoTime() ^ this.f25625a.e().a()).nextLong();
-            int i10 = this.f26044e + 1;
-            this.f26044e = i10;
+            long jNextLong = new Random(System.nanoTime() ^ this.f26446a.e().a()).nextLong();
+            int i10 = this.f26865e + 1;
+            this.f26865e = i10;
             j10 = jNextLong + ((long) i10);
         }
         return j10;
@@ -822,10 +822,10 @@ public final class ve extends k8 {
 
     public final SecureRandom q0() {
         h();
-        if (this.f26042c == null) {
-            this.f26042c = new SecureRandom();
+        if (this.f26863c == null) {
+            this.f26863c = new SecureRandom();
         }
-        return this.f26042c;
+        return this.f26863c;
     }
 
     /* JADX WARN: Code duplicated, block: B:35:0x00a2  */
@@ -839,16 +839,16 @@ public final class ve extends k8 {
             if (!z11) {
                 return 21;
             }
-            if (!O(str3, s8.f25947c)) {
+            if (!O(str3, s8.f26768c)) {
                 return 20;
             }
-            tc tcVarJ = this.f25625a.J();
+            tc tcVarJ = this.f26446a.J();
             tcVarJ.h();
             tcVarJ.j();
-            if (tcVarJ.y() && tcVarJ.f25625a.C().W() < 200900) {
+            if (tcVarJ.y() && tcVarJ.f26446a.C().W() < 200900) {
                 return 25;
             }
-            g7 g7Var = this.f25625a;
+            g7 g7Var = this.f26446a;
             g7Var.w();
             boolean z12 = obj instanceof Parcelable[];
             if (z12) {
@@ -877,7 +877,7 @@ public final class ve extends k8 {
                 i10 = 0;
             }
         }
-        if (!C0("param", str3, (N(str2) || N(str3)) ? this.f25625a.w().y(null, false) : this.f25625a.w().x(null, false), obj)) {
+        if (!C0("param", str3, (N(str2) || N(str3)) ? this.f26446a.w().y(null, false) : this.f26446a.w().x(null, false), obj)) {
             if (!z11) {
                 return 4;
             }
@@ -888,7 +888,7 @@ public final class ve extends k8 {
             if (obj instanceof Parcelable[]) {
                 for (Parcelable parcelable : (Parcelable[]) obj) {
                     if (!(parcelable instanceof Bundle)) {
-                        this.f25625a.a().t().c("All Parcelable[] elements must be of type Bundle. Value type, name", parcelable.getClass(), str3);
+                        this.f26446a.a().t().c("All Parcelable[] elements must be of type Bundle. Value type, name", parcelable.getClass(), str3);
                         return 4;
                     }
                     D0(str, str2, str3, (Bundle) parcelable, list, z10);
@@ -902,7 +902,7 @@ public final class ve extends k8 {
                 for (int i11 = 0; i11 < size2; i11++) {
                     Object obj2 = arrayList2.get(i11);
                     if (!(obj2 instanceof Bundle)) {
-                        this.f25625a.a().t().c("All ArrayList elements must be of type Bundle. Value type, name", obj2 != null ? obj2.getClass() : "null", str3);
+                        this.f26446a.a().t().c("All ArrayList elements must be of type Bundle. Value type, name", obj2 != null ? obj2.getClass() : "null", str3);
                         return 4;
                     }
                     D0(str, str2, str3, (Bundle) obj2, list, z10);
@@ -914,9 +914,9 @@ public final class ve extends k8 {
 
     public final Object s(String str, Object obj) {
         if ("_ev".equals(str)) {
-            return n0(this.f25625a.w().y(null, false), obj, true, true, null);
+            return n0(this.f26446a.w().y(null, false), obj, true, true, null);
         }
-        return n0(N(str) ? this.f25625a.w().y(null, false) : this.f25625a.w().x(null, false), obj, false, true, null);
+        return n0(N(str) ? this.f26446a.w().y(null, false) : this.f26446a.w().x(null, false), obj, false, true, null);
     }
 
     public final Bundle s0(Uri uri) {
@@ -1031,19 +1031,19 @@ public final class ve extends k8 {
             }
             return bundle;
         } catch (UnsupportedOperationException e10) {
-            this.f25625a.a().r().b("Install referrer url isn't a hierarchical URI", e10);
+            this.f26446a.a().r().b("Install referrer url isn't a hierarchical URI", e10);
             return null;
         }
     }
 
     public final Bundle t(String str, String str2, Bundle bundle, List list, boolean z10) {
         int iZ0;
-        boolean zO = O(str2, r8.f25929d);
+        boolean zO = O(str2, r8.f26750d);
         if (bundle == null) {
             return null;
         }
         Bundle bundle2 = new Bundle(bundle);
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         int iV = g7Var.w().v();
         int i10 = 0;
         boolean z11 = false;
@@ -1068,7 +1068,7 @@ public final class ve extends k8 {
                     bundle2.remove(str3);
                 }
                 if (r0(str3) && (i10 = i10 + 1) > iV) {
-                    if (!g7Var.w().H(null, z4.f26165f1) || !z11) {
+                    if (!g7Var.w().H(null, z4.f26986f1) || !z11) {
                         StringBuilder sb2 = new StringBuilder(String.valueOf(iV).length() + 37);
                         sb2.append("Event can't contain more than ");
                         sb2.append(iV);
@@ -1086,16 +1086,16 @@ public final class ve extends k8 {
 
     public final boolean t0(String str, String str2) {
         if (str2 == null) {
-            this.f25625a.a().q().b("Name is required and can't be null. Type", str);
+            this.f26446a.a().q().b("Name is required and can't be null. Type", str);
             return false;
         }
         if (str2.length() == 0) {
-            this.f25625a.a().q().b("Name is required and can't be empty. Type", str);
+            this.f26446a.a().q().b("Name is required and can't be empty. Type", str);
             return false;
         }
         int iCodePointAt = str2.codePointAt(0);
         if (!Character.isLetter(iCodePointAt)) {
-            this.f25625a.a().q().c("Name must start with a letter. Type, name", str, str2);
+            this.f26446a.a().q().c("Name must start with a letter. Type, name", str, str2);
             return false;
         }
         int length = str2.length();
@@ -1103,7 +1103,7 @@ public final class ve extends k8 {
         while (iCharCount < length) {
             int iCodePointAt2 = str2.codePointAt(iCharCount);
             if (iCodePointAt2 != 95 && !Character.isLetterOrDigit(iCodePointAt2)) {
-                this.f25625a.a().q().c("Name must consist of letters, digits or _ (underscores). Type, name", str, str2);
+                this.f26446a.a().q().c("Name must consist of letters, digits or _ (underscores). Type, name", str, str2);
                 return false;
             }
             iCharCount += Character.charCount(iCodePointAt2);
@@ -1112,18 +1112,18 @@ public final class ve extends k8 {
     }
 
     public final void u(x5 x5Var, int i10) {
-        Bundle bundle = x5Var.f26090d;
+        Bundle bundle = x5Var.f26911d;
         int i11 = 0;
         boolean z10 = false;
         for (String str : new TreeSet(bundle.keySet())) {
             if (r0(str) && (i11 = i11 + 1) > i10) {
-                g7 g7Var = this.f25625a;
-                if (!g7Var.w().H(null, z4.f26165f1) || !z10) {
+                g7 g7Var = this.f26446a;
+                if (!g7Var.w().H(null, z4.f26986f1) || !z10) {
                     StringBuilder sb2 = new StringBuilder(String.valueOf(i10).length() + 37);
                     sb2.append("Event can't contain more than ");
                     sb2.append(i10);
                     sb2.append(" params");
-                    g7Var.a().q().c(sb2.toString(), g7Var.D().a(x5Var.f26088a), g7Var.D().e(bundle));
+                    g7Var.a().q().c(sb2.toString(), g7Var.D().a(x5Var.f26909a), g7Var.D().e(bundle));
                     m0(bundle, 5);
                 }
                 bundle.remove(str);
@@ -1134,17 +1134,17 @@ public final class ve extends k8 {
 
     public final boolean u0(String str, String str2) {
         if (str2 == null) {
-            this.f25625a.a().q().b("Name is required and can't be null. Type", str);
+            this.f26446a.a().q().b("Name is required and can't be null. Type", str);
             return false;
         }
         if (str2.length() == 0) {
-            this.f25625a.a().q().b("Name is required and can't be empty. Type", str);
+            this.f26446a.a().q().b("Name is required and can't be empty. Type", str);
             return false;
         }
         int iCodePointAt = str2.codePointAt(0);
         if (!Character.isLetter(iCodePointAt)) {
             if (iCodePointAt != 95) {
-                this.f25625a.a().q().c("Name must start with a letter or _ (underscore). Type, name", str, str2);
+                this.f26446a.a().q().c("Name must start with a letter or _ (underscore). Type, name", str, str2);
                 return false;
             }
             iCodePointAt = 95;
@@ -1154,7 +1154,7 @@ public final class ve extends k8 {
         while (iCharCount < length) {
             int iCodePointAt2 = str2.codePointAt(iCharCount);
             if (iCodePointAt2 != 95 && !Character.isLetterOrDigit(iCodePointAt2)) {
-                this.f25625a.a().q().c("Name must consist of letters, digits or _ (underscores). Type, name", str, str2);
+                this.f26446a.a().q().c("Name must consist of letters, digits or _ (underscores). Type, name", str, str2);
                 return false;
             }
             iCharCount += Character.charCount(iCodePointAt2);
@@ -1169,9 +1169,9 @@ public final class ve extends k8 {
             int i11 = 0;
             boolean z10 = false;
             for (String str : new TreeSet(bundle.keySet())) {
-                if (r0(str) && !O(str, s8.f25948d) && (i11 = i11 + 1) > i10) {
-                    g7 g7Var = this.f25625a;
-                    if (!g7Var.w().H(null, z4.f26165f1) || !z10) {
+                if (r0(str) && !O(str, s8.f26769d) && (i11 = i11 + 1) > i10) {
+                    g7 g7Var = this.f26446a;
+                    if (!g7Var.w().H(null, z4.f26986f1) || !z10) {
                         u5 u5VarQ = g7Var.a().q();
                         StringBuilder sb2 = new StringBuilder(String.valueOf(i10).length() + 60);
                         sb2.append("Param can't contain more than ");
@@ -1189,14 +1189,14 @@ public final class ve extends k8 {
 
     public final boolean v0(String str, String[] strArr, String[] strArr2, String str2) {
         if (str2 == null) {
-            this.f25625a.a().q().b("Name is required and can't be null. Type", str);
+            this.f26446a.a().q().b("Name is required and can't be null. Type", str);
             return false;
         }
         n9.m.l(str2);
-        String[] strArr3 = f26040i;
+        String[] strArr3 = f26861i;
         for (int i10 = 0; i10 < 3; i10++) {
             if (str2.startsWith(strArr3[i10])) {
-                this.f25625a.a().q().c("Name starts with reserved prefix. Type, name", str, str2);
+                this.f26446a.a().q().c("Name starts with reserved prefix. Type, name", str, str2);
                 return false;
             }
         }
@@ -1206,7 +1206,7 @@ public final class ve extends k8 {
         if (strArr2 != null && O(str2, strArr2)) {
             return true;
         }
-        this.f25625a.a().q().c("Name is reserved. Type, name", str, str2);
+        this.f26446a.a().q().c("Name is reserved. Type, name", str, str2);
         return false;
     }
 
@@ -1216,26 +1216,26 @@ public final class ve extends k8 {
         }
         for (String str : bundle2.keySet()) {
             if (!bundle.containsKey(str)) {
-                this.f25625a.C().A(bundle, str, bundle2.get(str));
+                this.f26446a.C().A(bundle, str, bundle2.get(str));
             }
         }
     }
 
     public final boolean w0(String str, int i10, String str2) {
         if (str2 == null) {
-            this.f25625a.a().q().b("Name is required and can't be null. Type", str);
+            this.f26446a.a().q().b("Name is required and can't be null. Type", str);
             return false;
         }
         if (str2.codePointCount(0, str2.length()) <= i10) {
             return true;
         }
-        this.f25625a.a().q().d("Name is too long. Type, maximum supported length, name", str, Integer.valueOf(i10), str2);
+        this.f26446a.a().q().d("Name is too long. Type, maximum supported length, name", str, Integer.valueOf(i10), str2);
         return false;
     }
 
     public final void x(Bundle bundle, int i10, String str, Object obj) {
         if (m0(bundle, i10)) {
-            this.f25625a.w();
+            this.f26446a.w();
             bundle.putString("_ev", q(str, 40, true));
             if (obj != null) {
                 n9.m.l(bundle);
@@ -1250,10 +1250,10 @@ public final class ve extends k8 {
         if (!u0("event", str)) {
             return 2;
         }
-        if (!v0("event", r8.f25927a, r8.b, str)) {
+        if (!v0("event", r8.f26748a, r8.b, str)) {
             return 13;
         }
-        this.f25625a.w();
+        this.f26446a.w();
         return !w0("event", 40, str) ? 2 : 0;
     }
 
@@ -1265,10 +1265,10 @@ public final class ve extends k8 {
         if (!u0("user property", str)) {
             return 6;
         }
-        if (!v0("user property", t8.f25980a, null, str)) {
+        if (!v0("user property", t8.f26801a, null, str)) {
             return 15;
         }
-        this.f25625a.w();
+        this.f26446a.w();
         return !w0("user property", 24, str) ? 6 : 0;
     }
 
@@ -1283,7 +1283,7 @@ public final class ve extends k8 {
         if (!v0("event param", null, null, str)) {
             return 14;
         }
-        this.f25625a.w();
+        this.f26446a.w();
         return !w0("event param", 40, str) ? 3 : 0;
     }
 }

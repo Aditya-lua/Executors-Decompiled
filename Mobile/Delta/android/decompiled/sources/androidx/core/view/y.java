@@ -4,5 +4,5 @@ import android.view.View;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface y {
-    WindowInsetsCompat K(View view, WindowInsetsCompat windowInsetsCompat);
+    WindowInsetsCompat J(View view, WindowInsetsCompat windowInsetsCompat);
 }

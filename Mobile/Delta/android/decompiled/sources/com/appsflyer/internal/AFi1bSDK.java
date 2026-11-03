@@ -169,7 +169,7 @@ public final class AFi1bSDK extends Referrer {
             getProp().getBackgroundExecutor().execute(new Runnable() { // from class: com.appsflyer.internal.a1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    AFi1bSDK.AFKeystoreWrapper(this.f5473a, context);
+                    AFi1bSDK.AFKeystoreWrapper(this.f5546a, context);
                 }
             });
         } else {

@@ -7,14 +7,14 @@ import java.util.Objects;
 public final class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Field f21377a;
+    public final Field f21836a;
 
     public b(Field field) {
         Objects.requireNonNull(field);
-        this.f21377a = field;
+        this.f21836a = field;
     }
 
     public String toString() {
-        return this.f21377a.toString();
+        return this.f21836a.toString();
     }
 }

@@ -40,147 +40,147 @@ public final class xa {
     public static final xa Z;
 
     /* JADX INFO: renamed from: a0, reason: collision with root package name */
-    public static final xa[] f6901a0;
+    public static final xa[] f6975a0;
     public static final xa b;
 
     /* JADX INFO: renamed from: b0, reason: collision with root package name */
-    public static final /* synthetic */ xa[] f6902b0;
+    public static final /* synthetic */ xa[] f6976b0;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final xa f6903c;
+    public static final xa f6977c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final xa f6904d;
+    public static final xa f6978d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final xa f6905e;
+    public static final xa f6979e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final xa f6906f;
+    public static final xa f6980f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final xa f6907g;
+    public static final xa f6981g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final xa f6908h;
+    public static final xa f6982h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final xa f6909i;
+    public static final xa f6983i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final xa f6910j;
+    public static final xa f6984j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final xa f6911k;
+    public static final xa f6985k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final xa f6912l;
+    public static final xa f6986l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public static final xa f6913m;
+    public static final xa f6987m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public static final xa f6914n;
+    public static final xa f6988n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public static final xa f6915o;
+    public static final xa f6989o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public static final xa f6916p;
+    public static final xa f6990p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public static final xa f6917q;
+    public static final xa f6991q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public static final xa f6918r;
+    public static final xa f6992r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public static final xa f6919s;
+    public static final xa f6993s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public static final xa f6920t;
+    public static final xa f6994t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public static final xa f6921u;
+    public static final xa f6995u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public static final xa f6922v;
+    public static final xa f6996v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public static final xa f6923w;
+    public static final xa f6997w;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public static final xa f6924x;
+    public static final xa f6998x;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public static final xa f6925y;
+    public static final xa f6999y;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public static final xa f6926z;
+    public static final xa f7000z;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f6927a;
+    public final int f7001a;
 
     static {
-        tb tbVar = tb.f6809f;
+        tb tbVar = tb.f6883f;
         xa xaVar = new xa("DOUBLE", 0, 0, 1, tbVar);
         b = xaVar;
-        tb tbVar2 = tb.f6808e;
+        tb tbVar2 = tb.f6882e;
         xa xaVar2 = new xa("FLOAT", 1, 1, 1, tbVar2);
-        f6903c = xaVar2;
-        tb tbVar3 = tb.f6807d;
+        f6977c = xaVar2;
+        tb tbVar3 = tb.f6881d;
         xa xaVar3 = new xa("INT64", 2, 2, 1, tbVar3);
-        f6904d = xaVar3;
+        f6978d = xaVar3;
         xa xaVar4 = new xa("UINT64", 3, 3, 1, tbVar3);
-        f6905e = xaVar4;
-        tb tbVar4 = tb.f6806c;
+        f6979e = xaVar4;
+        tb tbVar4 = tb.f6880c;
         xa xaVar5 = new xa("INT32", 4, 4, 1, tbVar4);
-        f6906f = xaVar5;
+        f6980f = xaVar5;
         xa xaVar6 = new xa("FIXED64", 5, 5, 1, tbVar3);
-        f6907g = xaVar6;
+        f6981g = xaVar6;
         xa xaVar7 = new xa("FIXED32", 6, 6, 1, tbVar4);
-        f6908h = xaVar7;
-        tb tbVar5 = tb.f6810g;
+        f6982h = xaVar7;
+        tb tbVar5 = tb.f6884g;
         xa xaVar8 = new xa("BOOL", 7, 7, 1, tbVar5);
-        f6909i = xaVar8;
-        tb tbVar6 = tb.f6811h;
+        f6983i = xaVar8;
+        tb tbVar6 = tb.f6885h;
         xa xaVar9 = new xa("STRING", 8, 8, 1, tbVar6);
-        f6910j = xaVar9;
-        tb tbVar7 = tb.f6814k;
+        f6984j = xaVar9;
+        tb tbVar7 = tb.f6888k;
         xa xaVar10 = new xa("MESSAGE", 9, 9, 1, tbVar7);
-        f6911k = xaVar10;
-        tb tbVar8 = tb.f6812i;
+        f6985k = xaVar10;
+        tb tbVar8 = tb.f6886i;
         xa xaVar11 = new xa("BYTES", 10, 10, 1, tbVar8);
-        f6912l = xaVar11;
+        f6986l = xaVar11;
         xa xaVar12 = new xa("UINT32", 11, 11, 1, tbVar4);
-        f6913m = xaVar12;
-        tb tbVar9 = tb.f6813j;
+        f6987m = xaVar12;
+        tb tbVar9 = tb.f6887j;
         xa xaVar13 = new xa("ENUM", 12, 12, 1, tbVar9);
-        f6914n = xaVar13;
+        f6988n = xaVar13;
         xa xaVar14 = new xa("SFIXED32", 13, 13, 1, tbVar4);
-        f6915o = xaVar14;
+        f6989o = xaVar14;
         xa xaVar15 = new xa("SFIXED64", 14, 14, 1, tbVar3);
-        f6916p = xaVar15;
+        f6990p = xaVar15;
         xa xaVar16 = new xa("SINT32", 15, 15, 1, tbVar4);
-        f6917q = xaVar16;
+        f6991q = xaVar16;
         xa xaVar17 = new xa("SINT64", 16, 16, 1, tbVar3);
-        f6918r = xaVar17;
+        f6992r = xaVar17;
         xa xaVar18 = new xa("GROUP", 17, 17, 1, tbVar7);
-        f6919s = xaVar18;
+        f6993s = xaVar18;
         xa xaVar19 = new xa("DOUBLE_LIST", 18, 18, 2, tbVar);
-        f6920t = xaVar19;
+        f6994t = xaVar19;
         xa xaVar20 = new xa("FLOAT_LIST", 19, 19, 2, tbVar2);
-        f6921u = xaVar20;
+        f6995u = xaVar20;
         xa xaVar21 = new xa("INT64_LIST", 20, 20, 2, tbVar3);
-        f6922v = xaVar21;
+        f6996v = xaVar21;
         xa xaVar22 = new xa("UINT64_LIST", 21, 21, 2, tbVar3);
-        f6923w = xaVar22;
+        f6997w = xaVar22;
         xa xaVar23 = new xa("INT32_LIST", 22, 22, 2, tbVar4);
-        f6924x = xaVar23;
+        f6998x = xaVar23;
         xa xaVar24 = new xa("FIXED64_LIST", 23, 23, 2, tbVar3);
-        f6925y = xaVar24;
+        f6999y = xaVar24;
         xa xaVar25 = new xa("FIXED32_LIST", 24, 24, 2, tbVar4);
-        f6926z = xaVar25;
+        f7000z = xaVar25;
         xa xaVar26 = new xa("BOOL_LIST", 25, 25, 2, tbVar5);
         A = xaVar26;
         xa xaVar27 = new xa("STRING_LIST", 26, 26, 2, tbVar6);
@@ -233,17 +233,17 @@ public final class xa {
         Y = xaVar50;
         xa xaVar51 = new xa("MAP", 50, 50, 4, tb.b);
         Z = xaVar51;
-        f6902b0 = new xa[]{xaVar, xaVar2, xaVar3, xaVar4, xaVar5, xaVar6, xaVar7, xaVar8, xaVar9, xaVar10, xaVar11, xaVar12, xaVar13, xaVar14, xaVar15, xaVar16, xaVar17, xaVar18, xaVar19, xaVar20, xaVar21, xaVar22, xaVar23, xaVar24, xaVar25, xaVar26, xaVar27, xaVar28, xaVar29, xaVar30, xaVar31, xaVar32, xaVar33, xaVar34, xaVar35, xaVar36, xaVar37, xaVar38, xaVar39, xaVar40, xaVar41, xaVar42, xaVar43, xaVar44, xaVar45, xaVar46, xaVar47, xaVar48, xaVar49, xaVar50, xaVar51};
+        f6976b0 = new xa[]{xaVar, xaVar2, xaVar3, xaVar4, xaVar5, xaVar6, xaVar7, xaVar8, xaVar9, xaVar10, xaVar11, xaVar12, xaVar13, xaVar14, xaVar15, xaVar16, xaVar17, xaVar18, xaVar19, xaVar20, xaVar21, xaVar22, xaVar23, xaVar24, xaVar25, xaVar26, xaVar27, xaVar28, xaVar29, xaVar30, xaVar31, xaVar32, xaVar33, xaVar34, xaVar35, xaVar36, xaVar37, xaVar38, xaVar39, xaVar40, xaVar41, xaVar42, xaVar43, xaVar44, xaVar45, xaVar46, xaVar47, xaVar48, xaVar49, xaVar50, xaVar51};
         xa[] xaVarArrValues = values();
-        f6901a0 = new xa[xaVarArrValues.length];
+        f6975a0 = new xa[xaVarArrValues.length];
         for (xa xaVar52 : xaVarArrValues) {
-            f6901a0[xaVar52.f6927a] = xaVar52;
+            f6975a0[xaVar52.f7001a] = xaVar52;
         }
     }
 
     public xa(String str, int i10, int i11, int i12, tb tbVar) {
         super(str, i10);
-        this.f6927a = i11;
+        this.f7001a = i11;
         int i13 = i12 - 1;
         if (i13 == 1 || i13 == 3) {
             tbVar.a();
@@ -255,10 +255,10 @@ public final class xa {
     }
 
     public static xa[] values() {
-        return (xa[]) f6902b0.clone();
+        return (xa[]) f6976b0.clone();
     }
 
     public final int zza() {
-        return this.f6927a;
+        return this.f7001a;
     }
 }

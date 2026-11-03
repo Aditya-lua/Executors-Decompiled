@@ -28,7 +28,7 @@ public enum PublicKeyCredentialType implements Parcelable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final String f6004a = "public-key";
+    public final String f6077a = "public-key";
 
     public static class a extends Exception {
         public a(@NonNull String str) {
@@ -42,7 +42,7 @@ public enum PublicKeyCredentialType implements Parcelable {
     @NonNull
     public static PublicKeyCredentialType a(@NonNull String str) throws a {
         for (PublicKeyCredentialType publicKeyCredentialType : values()) {
-            if (str.equals(publicKeyCredentialType.f6004a)) {
+            if (str.equals(publicKeyCredentialType.f6077a)) {
                 return publicKeyCredentialType;
             }
         }
@@ -57,11 +57,11 @@ public enum PublicKeyCredentialType implements Parcelable {
     @Override // java.lang.Enum
     @NonNull
     public String toString() {
-        return this.f6004a;
+        return this.f6077a;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
-        parcel.writeString(this.f6004a);
+        parcel.writeString(this.f6077a);
     }
 }

@@ -10,8 +10,8 @@ import android.graphics.PorterDuffXfermode;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewPropertyAnimator;
+import au.b;
 import com.withpersona.sdk2.inquiry.selfie.view.Pi2CircleMaskView;
-import cu.b;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -19,7 +19,7 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import yp.u;
+import wp.u;
 
 /* JADX INFO: loaded from: classes3.dex */
 @Metadata(d1 = {"\u0000V\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0007\n\u0000\n\u0002\u0010\t\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0006\u0018\u0000 .2\u00020\u0001:\u0001\"B'\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0004\u0012\b\b\u0002\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\b\u0010\tJ\u0017\u0010\r\u001a\u00020\f2\u0006\u0010\u000b\u001a\u00020\nH\u0014¢\u0006\u0004\b\r\u0010\u000eJ\r\u0010\u000f\u001a\u00020\f¢\u0006\u0004\b\u000f\u0010\u0010J)\u0010\u0015\u001a\u00020\f2\b\b\u0002\u0010\u0012\u001a\u00020\u00112\u0010\b\u0002\u0010\u0014\u001a\n\u0012\u0004\u0012\u00020\f\u0018\u00010\u0013¢\u0006\u0004\b\u0015\u0010\u0016J\r\u0010\u0017\u001a\u00020\u0011¢\u0006\u0004\b\u0017\u0010\u0018J\u000f\u0010\u0019\u001a\u00020\fH\u0014¢\u0006\u0004\b\u0019\u0010\u0010J\u000f\u0010\u001b\u001a\u00020\u001aH\u0002¢\u0006\u0004\b\u001b\u0010\u001cJ\u0017\u0010 \u001a\u00020\u001f2\u0006\u0010\u001e\u001a\u00020\u001dH\u0002¢\u0006\u0004\b \u0010!R\u0014\u0010$\u001a\u00020\u001d8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\"\u0010#R\u0014\u0010&\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b \u0010%R\u0018\u0010(\u001a\u0004\u0018\u00010\u001a8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u001b\u0010'R\u0016\u0010+\u001a\u00020)8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0015\u0010*R\u0016\u0010-\u001a\u00020)8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b,\u0010*¨\u0006/"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/view/Pi2CircleMaskView;", "Landroid/view/View;", "Landroid/content/Context;", "context", "Landroid/util/AttributeSet;", "attrs", "", "defStyleAttr", "<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "Landroid/graphics/Canvas;", "canvas", "", "onDraw", "(Landroid/graphics/Canvas;)V", "h", "()V", "", "animated", "Lkotlin/Function0;", "onComplete", "d", "(ZLkotlin/jvm/functions/Function0;)V", "g", "()Z", "onDetachedFromWindow", "Landroid/graphics/Bitmap;", "c", "()Landroid/graphics/Bitmap;", "", "targetScaleX", "", "b", "(F)J", "a", "F", "size", "I", "maskColor", "Landroid/graphics/Bitmap;", "mask", "Landroid/graphics/Paint;", "Landroid/graphics/Paint;", "paint", "e", "clearPaint", "f", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
@@ -95,7 +95,7 @@ public final class Pi2CircleMaskView extends View {
             viewPropertyAnimatorAnimate.setDuration(b(1.0f));
             viewPropertyAnimatorAnimate.scaleX(1.0f);
             viewPropertyAnimatorAnimate.scaleY(1.0f);
-            viewPropertyAnimatorAnimate.withEndAction(new Runnable() { // from class: iq.n
+            viewPropertyAnimatorAnimate.withEndAction(new Runnable() { // from class: gq.n
                 @Override // java.lang.Runnable
                 public final void run() {
                     Pi2CircleMaskView.f(onComplete);
@@ -157,11 +157,11 @@ public final class Pi2CircleMaskView extends View {
         paint.setColor(0);
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
         this.clearPaint = paint;
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, u.f36280a, i10, 0);
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, u.f34909a, i10, 0);
         Intrinsics.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "obtainStyledAttributes(...)");
         try {
             this.size = typedArrayObtainStyledAttributes.getFloat(u.b, 0.4f);
-            this.maskColor = typedArrayObtainStyledAttributes.getColor(u.f36281c, -16777216);
+            this.maskColor = typedArrayObtainStyledAttributes.getColor(u.f34910c, -16777216);
             typedArrayObtainStyledAttributes.recycle();
             setWillNotDraw(false);
         } catch (Throwable th2) {

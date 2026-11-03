@@ -6,18 +6,18 @@ import android.net.Uri;
 public final class h extends v {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Uri f15860a;
+    public final Uri f16456a;
 
     public h(Uri uri) {
         if (uri == null) {
             throw new NullPointerException("Null outputUri");
         }
-        this.f15860a = uri;
+        this.f16456a = uri;
     }
 
     @Override // f1.v
     public Uri a() {
-        return this.f15860a;
+        return this.f16456a;
     }
 
     public boolean equals(Object obj) {
@@ -25,16 +25,16 @@ public final class h extends v {
             return true;
         }
         if (obj instanceof v) {
-            return this.f15860a.equals(((v) obj).a());
+            return this.f16456a.equals(((v) obj).a());
         }
         return false;
     }
 
     public int hashCode() {
-        return this.f15860a.hashCode() ^ 1000003;
+        return this.f16456a.hashCode() ^ 1000003;
     }
 
     public String toString() {
-        return "OutputResults{outputUri=" + this.f15860a + "}";
+        return "OutputResults{outputUri=" + this.f16456a + "}";
     }
 }

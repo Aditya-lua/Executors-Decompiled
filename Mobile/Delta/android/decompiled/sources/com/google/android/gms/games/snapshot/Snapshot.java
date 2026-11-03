@@ -10,5 +10,5 @@ public interface Snapshot extends e<Snapshot>, Parcelable {
     SnapshotMetadata getMetadata();
 
     @NonNull
-    SnapshotContents m3();
+    SnapshotContents n3();
 }

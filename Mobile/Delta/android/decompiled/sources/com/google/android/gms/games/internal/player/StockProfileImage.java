@@ -8,7 +8,7 @@ import m9.e;
 /* JADX INFO: loaded from: classes.dex */
 public interface StockProfileImage extends e<StockProfileImage>, Parcelable {
     @NonNull
-    String E0();
+    String A0();
 
     @NonNull
     Uri zza();

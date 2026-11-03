@@ -7,16 +7,16 @@ import java.io.Writer;
 public final class m0 extends Writer {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f15147a;
+    public final String f15761a;
     public StringBuilder b = new StringBuilder(128);
 
     public m0(String str) {
-        this.f15147a = str;
+        this.f15761a = str;
     }
 
     public final void a() {
         if (this.b.length() > 0) {
-            Log.d(this.f15147a, this.b.toString());
+            Log.d(this.f15761a, this.b.toString());
             StringBuilder sb2 = this.b;
             sb2.delete(0, sb2.length());
         }

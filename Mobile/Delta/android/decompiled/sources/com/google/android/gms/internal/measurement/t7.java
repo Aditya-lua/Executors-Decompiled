@@ -10,7 +10,7 @@ public final class t7 extends gb implements pc {
     static {
         t7 t7Var = new t7();
         zzd = t7Var;
-        gb.u(t7.class, t7Var);
+        gb.t(t7.class, t7Var);
     }
 
     public static t7 H() {

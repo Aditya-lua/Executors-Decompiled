@@ -6,7 +6,7 @@ import androidx.camera.core.internal.compat.quirk.LargeJpegImageQuirk;
 public class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final LargeJpegImageQuirk f32679a = (LargeJpegImageQuirk) u0.b.b(LargeJpegImageQuirk.class);
+    public final LargeJpegImageQuirk f33247a = (LargeJpegImageQuirk) u0.b.b(LargeJpegImageQuirk.class);
 
     public static int a(byte[] bArr) {
         byte b;
@@ -33,7 +33,7 @@ public class c {
     }
 
     public int b(byte[] bArr) {
-        LargeJpegImageQuirk largeJpegImageQuirk = this.f32679a;
+        LargeJpegImageQuirk largeJpegImageQuirk = this.f33247a;
         if (largeJpegImageQuirk == null || !largeJpegImageQuirk.k(bArr)) {
             return bArr.length;
         }

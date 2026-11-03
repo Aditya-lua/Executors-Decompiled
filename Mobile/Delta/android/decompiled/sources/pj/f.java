@@ -1,80 +1,96 @@
 package pj;
 
-import android.app.PendingIntent;
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
-import com.roblox.client.datastructures.NameValuePair;
-import com.roblox.client.pushnotification.v2.model.NotificationAction;
-import com.roblox.client.pushnotification.v2.richpushnotifications.RichPushNotificationMedia;
-import java.util.List;
-import java.util.Map;
+import android.text.TextUtils;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
+import com.google.mlkit.common.sdkinternal.MlKitContext;
+import com.roblox.engine.jni.NativeGLInterface;
+import e.m0;
+import e4.f0;
+import e4.q;
+import rh.h;
 
 /* JADX INFO: loaded from: classes2.dex */
-public interface f {
-    String A();
+public class f {
 
-    long B();
+    public class a extends m0 {
+        public final /* synthetic */ q X;
 
-    String a();
+        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+        public a(boolean z10, q qVar) {
+            super(z10);
+            this.X = qVar;
+        }
 
-    List<NameValuePair> b();
+        @Override // e.m0
+        public void handleOnBackPressed() {
+            ek.q.b("QrCodeScanner", "handleOnBackPressed (Dispatcher): Return 'Cancel' using an empty Url.");
+            this.X.l1().a1();
+            f.e("");
+        }
+    }
 
-    String c();
+    public static /* synthetic */ void a(FragmentManager fragmentManager, String str, Bundle bundle) {
+        boolean z10 = bundle.getBoolean("BundleKey_success");
+        String string = bundle.getString("BundleKey_urlString");
+        ek.q.b("QrCodeScanner", "... (callback): success = " + z10 + ", urlString = " + string);
+        fragmentManager.a1();
+        if (h.a().g1()) {
+            im.f.F().h(string, "android_qr_scanner", false);
+        } else {
+            im.f.F().f(string, "android_qr_scanner", false);
+        }
+        e(string);
+    }
 
-    int d();
+    public static /* synthetic */ void b(String str, boolean z10) {
+        if (z10) {
+            im.f.F().k(str);
+        } else {
+            NativeGLInterface.nativeBroadcastEventWithNamespace("QrCodeScanResult", str, "InvalidQr");
+        }
+    }
 
-    boolean e();
+    public static boolean d(@NonNull q qVar) {
+        FragmentManager fragmentManagerL1 = qVar.l1();
+        if (!(fragmentManagerL1.n0("CustomCaptureFragment") instanceof c)) {
+            return false;
+        }
+        ek.q.b("QrCodeScanner", "handleOnBackPressed: Return 'Cancel' using an empty Url.");
+        fragmentManagerL1.a1();
+        e("");
+        return true;
+    }
 
-    int f();
+    public static void e(final String str) {
+        ek.q.b("QrCodeScanner", "handleUrlString: " + str);
+        if (TextUtils.isEmpty(str)) {
+            NativeGLInterface.nativeBroadcastEventWithNamespace("QrCodeScanResult", str, "Cancelled");
+        } else {
+            im.f.F().r(str, new im.f.k() { // from class: pj.e
+                @Override // im.f.k
+                public final void a(boolean z10) {
+                    f.b(str, z10);
+                }
+            });
+        }
+    }
 
-    PendingIntent g(Context context);
-
-    String getBody();
-
-    String getGroupId();
-
-    String getId();
-
-    String getTitle();
-
-    int getVisibility();
-
-    Bundle h();
-
-    int i(Context context);
-
-    boolean j();
-
-    boolean k();
-
-    String l();
-
-    PendingIntent m(Context context);
-
-    String n();
-
-    long o();
-
-    e p();
-
-    String q();
-
-    String r();
-
-    int s();
-
-    List<NotificationAction> t();
-
-    RichPushNotificationMedia u();
-
-    boolean v();
-
-    Uri w(Context context);
-
-    Map<String, f> x();
-
-    String y();
-
-    String z();
+    public static void f(@NonNull q qVar, int i10) {
+        ek.q.h("QrCodeScanner", "showFragmentInActivity: containerViewId = " + i10);
+        MlKitContext.initializeIfNeeded(qVar.getApplicationContext());
+        c cVarD2 = c.d2("content/fonts/BuilderSans-Medium.otf");
+        if (h.a().Q1()) {
+            qVar.P().d(cVarD2, new a(true, qVar));
+        }
+        final FragmentManager fragmentManagerL1 = qVar.l1();
+        fragmentManagerL1.r().b(i10, cVarD2, "CustomCaptureFragment").f(null).g();
+        fragmentManagerL1.t1("QrCode_requestKey", qVar, new f0() { // from class: pj.d
+            @Override // e4.f0
+            public final void a(String str, Bundle bundle) {
+                f.a(fragmentManagerL1, str, bundle);
+            }
+        });
+    }
 }

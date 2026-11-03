@@ -7,27 +7,27 @@ import java.util.List;
 public abstract class p<V, O> implements o<V, O> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final List<t7.a<V>> f24039a;
+    public final List<t7.a<V>> f24689a;
 
     public p(List<t7.a<V>> list) {
-        this.f24039a = list;
+        this.f24689a = list;
     }
 
     @Override // m7.o
     public List<t7.a<V>> b() {
-        return this.f24039a;
+        return this.f24689a;
     }
 
     @Override // m7.o
     public boolean c() {
-        return this.f24039a.isEmpty() || (this.f24039a.size() == 1 && this.f24039a.get(0).i());
+        return this.f24689a.isEmpty() || (this.f24689a.size() == 1 && this.f24689a.get(0).i());
     }
 
     public String toString() {
         StringBuilder sb2 = new StringBuilder();
-        if (!this.f24039a.isEmpty()) {
+        if (!this.f24689a.isEmpty()) {
             sb2.append("values=");
-            sb2.append(Arrays.toString(this.f24039a.toArray()));
+            sb2.append(Arrays.toString(this.f24689a.toArray()));
         }
         return sb2.toString();
     }

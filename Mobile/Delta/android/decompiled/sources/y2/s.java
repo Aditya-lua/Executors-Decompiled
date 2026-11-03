@@ -9,10 +9,10 @@ public interface s {
     public static abstract class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public Bundle f35531a;
+        public Bundle f36388a;
 
         public void a(Bundle bundle) {
-            this.f35531a = bundle;
+            this.f36388a = bundle;
         }
     }
 

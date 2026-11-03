@@ -9,11 +9,11 @@ import kotlin.text.StringsKt;
 import m6.t;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import vu.b0;
 import x6.Options;
-import xu.b0;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0006\b\u0000\u0018\u00002\u00020\u0001:\u0001\tB\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bH\u0096@¢\u0006\u0004\b\t\u0010\nR\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\t\u0010\u000bR\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\f\u0010\r¨\u0006\u000e"}, d2 = {"Lo6/m;", "Lo6/j;", "Lk6/h0;", "uri", "Lx6/p;", "options", "<init>", "(Lk6/h0;Lx6/p;)V", "Lo6/i;", "a", "(Lnt/b;)Ljava/lang/Object;", "Lk6/h0;", "b", "Lx6/p;", "coil-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0006\b\u0000\u0018\u00002\u00020\u0001:\u0001\tB\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bH\u0096@¢\u0006\u0004\b\t\u0010\nR\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\t\u0010\u000bR\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\f\u0010\r¨\u0006\u000e"}, d2 = {"Lo6/m;", "Lo6/j;", "Lk6/h0;", "uri", "Lx6/p;", "options", "<init>", "(Lk6/h0;Lx6/p;)V", "Lo6/i;", "a", "(Llt/b;)Ljava/lang/Object;", "Lk6/h0;", "b", "Lx6/p;", "coil-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class m implements j {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -48,7 +48,7 @@ public final class m implements j {
 
     @Override // o6.j
     @Nullable
-    public Object a(@NotNull nt.b<? super i> bVar) {
+    public Object a(@NotNull lt.b<? super i> bVar) {
         String path = this.uri.getPath();
         if (path == null) {
             path = "";
@@ -58,13 +58,13 @@ public final class m implements j {
         if (iM0 == -1) {
             throw new IllegalStateException(("Invalid jar:file URI: " + this.uri).toString());
         }
-        xu.h0.Companion companion = xu.h0.INSTANCE;
+        vu.h0.Companion companion = vu.h0.INSTANCE;
         String strSubstring = str.substring(0, iM0);
         Intrinsics.checkNotNullExpressionValue(strSubstring, "substring(...)");
-        xu.h0 h0VarE = xu.h0.Companion.e(companion, strSubstring, false, 1, null);
+        vu.h0 h0VarE = vu.h0.Companion.e(companion, strSubstring, false, 1, null);
         String strSubstring2 = str.substring(iM0 + 1, str.length());
         Intrinsics.checkNotNullExpressionValue(strSubstring2, "substring(...)");
-        xu.h0 h0VarE2 = xu.h0.Companion.e(companion, strSubstring2, false, 1, null);
-        return new SourceFetchResult(t.d(h0VarE2, b0.d(this.options.getFileSystem(), h0VarE), null, null, null, 28, null), x.f15217a.a(e7.l.d(h0VarE2)), m6.f.DISK);
+        vu.h0 h0VarE2 = vu.h0.Companion.e(companion, strSubstring2, false, 1, null);
+        return new SourceFetchResult(t.d(h0VarE2, b0.d(this.options.getFileSystem(), h0VarE), null, null, null, 28, null), x.f15831a.a(e7.l.d(h0VarE2)), m6.f.DISK);
     }
 }

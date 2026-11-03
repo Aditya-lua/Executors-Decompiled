@@ -8,22 +8,22 @@ import com.google.android.gms.games.internal.v2.appshortcuts.zzg;
 public class k extends s {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final sb.k f22291a;
+    public final sb.k f22515a;
 
     public k(sb.k kVar) {
-        this.f22291a = kVar;
+        this.f22515a = kVar;
     }
 
-    public void B1(zzg zzgVar) {
-        N0(new Status(10));
+    public void A1(zzg zzgVar) {
+        J0(new Status(10));
     }
 
     @Override // ka.t
-    public final void N0(Status status) {
-        this.f22291a.d(n9.a.a(status));
+    public final void J0(Status status) {
+        this.f22515a.d(n9.a.a(status));
     }
 
     public void g(Intent intent) {
-        N0(new Status(10));
+        J0(new Status(10));
     }
 }

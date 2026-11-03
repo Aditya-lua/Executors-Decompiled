@@ -6,7 +6,7 @@ import android.os.SystemClock;
 public final class r {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final c0 f7220a;
+    public static final c0 f7294a;
 
     static {
         c0 qVar;
@@ -17,10 +17,10 @@ public final class r {
             SystemClock.elapsedRealtime();
             qVar = new q();
         }
-        f7220a = qVar;
+        f7294a = qVar;
     }
 
     public static c0 a() {
-        return f7220a;
+        return f7294a;
     }
 }

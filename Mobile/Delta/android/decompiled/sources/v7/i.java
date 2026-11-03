@@ -6,13 +6,13 @@ import androidx.annotation.NonNull;
 public final class i {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final boolean f32797a;
+    public final boolean f33365a;
     public final boolean b;
 
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public boolean f32798a;
+        public boolean f33366a;
         public boolean b;
 
         public a() {
@@ -20,7 +20,7 @@ public final class i {
 
         @NonNull
         public i a() {
-            if (!this.f32798a) {
+            if (!this.f33366a) {
                 throw new IllegalArgumentException("Pending purchases for one-time products must be supported.");
             }
             return new i(true, this.b);
@@ -28,7 +28,7 @@ public final class i {
 
         @NonNull
         public a b() {
-            this.f32798a = true;
+            this.f33366a = true;
             return this;
         }
 
@@ -40,7 +40,7 @@ public final class i {
     }
 
     public i(boolean z10, boolean z11) {
-        this.f32797a = z10;
+        this.f33365a = z10;
         this.b = z11;
     }
 
@@ -50,7 +50,7 @@ public final class i {
     }
 
     public boolean a() {
-        return this.f32797a;
+        return this.f33365a;
     }
 
     public boolean b() {

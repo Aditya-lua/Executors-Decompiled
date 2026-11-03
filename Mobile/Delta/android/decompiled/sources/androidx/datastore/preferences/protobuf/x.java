@@ -19,14 +19,14 @@ public abstract class x<MessageType extends x<MessageType, BuilderType>, Builder
     private int memoizedSerializedSize = -1;
     protected o1 unknownFields = o1.c();
 
-    public static abstract class a<MessageType extends x<MessageType, BuilderType>, BuilderType extends a<MessageType, BuilderType>> extends androidx.datastore.preferences.protobuf.a.AbstractC0031a<MessageType, BuilderType> {
+    public static abstract class a<MessageType extends x<MessageType, BuilderType>, BuilderType extends a<MessageType, BuilderType>> extends androidx.datastore.preferences.protobuf.a.AbstractC0027a<MessageType, BuilderType> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final MessageType f2383a;
+        public final MessageType f2228a;
         public MessageType b;
 
         public a(MessageType messagetype) {
-            this.f2383a = messagetype;
+            this.f2228a = messagetype;
             if (messagetype.I()) {
                 throw new IllegalArgumentException("Default instance must be immutable.");
             }
@@ -38,10 +38,10 @@ public abstract class x<MessageType extends x<MessageType, BuilderType>, Builder
         }
 
         private MessageType D() {
-            return (MessageType) this.f2383a.O();
+            return (MessageType) this.f2228a.O();
         }
 
-        public BuilderType A(MessageType messagetype) {
+        public BuilderType B(MessageType messagetype) {
             if (f().equals(messagetype)) {
                 return this;
             }
@@ -62,7 +62,7 @@ public abstract class x<MessageType extends x<MessageType, BuilderType>, Builder
             if (messagetype.isInitialized()) {
                 return messagetype;
             }
-            throw androidx.datastore.preferences.protobuf.a.AbstractC0031a.p(messagetype);
+            throw androidx.datastore.preferences.protobuf.a.AbstractC0027a.p(messagetype);
         }
 
         @Override // androidx.datastore.preferences.protobuf.r0.a
@@ -98,18 +98,18 @@ public abstract class x<MessageType extends x<MessageType, BuilderType>, Builder
         @Override // androidx.datastore.preferences.protobuf.s0
         /* JADX INFO: renamed from: w, reason: merged with bridge method [inline-methods] */
         public MessageType f() {
-            return this.f2383a;
+            return this.f2228a;
         }
 
-        @Override // androidx.datastore.preferences.protobuf.a.AbstractC0031a
-        /* JADX INFO: renamed from: x, reason: merged with bridge method [inline-methods] */
+        @Override // androidx.datastore.preferences.protobuf.a.AbstractC0027a
+        /* JADX INFO: renamed from: y, reason: merged with bridge method [inline-methods] */
         public BuilderType n(MessageType messagetype) {
-            return (BuilderType) A(messagetype);
+            return (BuilderType) B(messagetype);
         }
 
         @Override // androidx.datastore.preferences.protobuf.r0.a
         /* JADX INFO: renamed from: z, reason: merged with bridge method [inline-methods] */
-        public BuilderType u(h hVar, o oVar) throws IOException {
+        public BuilderType x(h hVar, o oVar) throws IOException {
             t();
             try {
                 c1.a().d(this.b).h(this.b, i.Q(hVar), oVar);
@@ -166,19 +166,19 @@ public abstract class x<MessageType extends x<MessageType, BuilderType>, Builder
     public static final class d implements t.b<d> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final int f2384a;
+        public final int f2229a;
         public final s1.b b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final boolean f2385c;
+        public final boolean f2230c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final boolean f2386d;
+        public final boolean f2231d;
 
         @Override // java.lang.Comparable
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public int compareTo(d dVar) {
-            return this.f2384a - dVar.f2384a;
+            return this.f2229a - dVar.f2229a;
         }
 
         public z.b<?> b() {
@@ -187,7 +187,7 @@ public abstract class x<MessageType extends x<MessageType, BuilderType>, Builder
 
         @Override // androidx.datastore.preferences.protobuf.t.b
         public boolean f() {
-            return this.f2385c;
+            return this.f2230c;
         }
 
         @Override // androidx.datastore.preferences.protobuf.t.b
@@ -197,7 +197,7 @@ public abstract class x<MessageType extends x<MessageType, BuilderType>, Builder
 
         @Override // androidx.datastore.preferences.protobuf.t.b
         public int getNumber() {
-            return this.f2384a;
+            return this.f2229a;
         }
 
         @Override // androidx.datastore.preferences.protobuf.t.b
@@ -207,20 +207,20 @@ public abstract class x<MessageType extends x<MessageType, BuilderType>, Builder
 
         @Override // androidx.datastore.preferences.protobuf.t.b
         public boolean m() {
-            return this.f2386d;
+            return this.f2231d;
         }
 
         /* JADX WARN: Multi-variable type inference failed */
         @Override // androidx.datastore.preferences.protobuf.t.b
         public r0.a t(r0.a aVar, r0 r0Var) {
-            return ((a) aVar).A((x) r0Var);
+            return ((a) aVar).B((x) r0Var);
         }
     }
 
     public static class e<ContainingType extends r0, Type> extends m<ContainingType, Type> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final r0 f2387a;
+        public final r0 f2232a;
         public final d b;
 
         public s1.b a() {
@@ -228,7 +228,7 @@ public abstract class x<MessageType extends x<MessageType, BuilderType>, Builder
         }
 
         public r0 b() {
-            return this.f2387a;
+            return this.f2232a;
         }
 
         public int c() {
@@ -236,7 +236,7 @@ public abstract class x<MessageType extends x<MessageType, BuilderType>, Builder
         }
 
         public boolean d() {
-            return this.b.f2385c;
+            return this.b.f2230c;
         }
     }
 
@@ -406,7 +406,7 @@ public abstract class x<MessageType extends x<MessageType, BuilderType>, Builder
     @Override // androidx.datastore.preferences.protobuf.r0
     /* JADX INFO: renamed from: T, reason: merged with bridge method [inline-methods] */
     public final BuilderType a() {
-        return (BuilderType) ((a) y(f.NEW_BUILDER)).A(this);
+        return (BuilderType) ((a) y(f.NEW_BUILDER)).B(this);
     }
 
     @Override // androidx.datastore.preferences.protobuf.r0
@@ -431,10 +431,10 @@ public abstract class x<MessageType extends x<MessageType, BuilderType>, Builder
 
     public int hashCode() {
         if (I()) {
-            return v();
+            return u();
         }
         if (F()) {
-            S(v());
+            S(u());
         }
         return E();
     }
@@ -460,15 +460,15 @@ public abstract class x<MessageType extends x<MessageType, BuilderType>, Builder
             if (j() != Integer.MAX_VALUE) {
                 return j();
             }
-            int iW = w(g1Var);
-            o(iW);
-            return iW;
+            int iV = v(g1Var);
+            o(iV);
+            return iV;
         }
-        int iW2 = w(g1Var);
-        if (iW2 >= 0) {
-            return iW2;
+        int iV2 = v(g1Var);
+        if (iV2 >= 0) {
+            return iV2;
         }
-        throw new IllegalStateException("serialized size must be non-negative, was " + iW2);
+        throw new IllegalStateException("serialized size must be non-negative, was " + iV2);
     }
 
     @Override // androidx.datastore.preferences.protobuf.a
@@ -496,15 +496,15 @@ public abstract class x<MessageType extends x<MessageType, BuilderType>, Builder
         return t0.f(this, super.toString());
     }
 
-    public int v() {
+    public int u() {
         return c1.a().d(this).f(this);
     }
 
-    public final int w(g1<?> g1Var) {
+    public final int v(g1<?> g1Var) {
         return g1Var == null ? c1.a().d(this).d(this) : g1Var.d(this);
     }
 
-    public final <MessageType extends x<MessageType, BuilderType>, BuilderType extends a<MessageType, BuilderType>> BuilderType x() {
+    public final <MessageType extends x<MessageType, BuilderType>, BuilderType extends a<MessageType, BuilderType>> BuilderType w() {
         return (BuilderType) y(f.NEW_BUILDER);
     }
 

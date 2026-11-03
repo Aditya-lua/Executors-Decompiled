@@ -35,7 +35,7 @@ public final class i extends b {
             this();
         }
 
-        public static /* synthetic */ b.C0279b b(Companion companion, String str, String str2, int i10, Object obj) {
+        public static /* synthetic */ b.C0293b b(Companion companion, String str, String str2, int i10, Object obj) {
             if ((i10 & 2) != 0) {
                 str2 = null;
             }
@@ -43,14 +43,14 @@ public final class i extends b {
         }
 
         @NotNull
-        public final b.C0279b a(@NotNull String requestJson, @Nullable String defaultProvider) {
+        public final b.C0293b a(@NotNull String requestJson, @Nullable String defaultProvider) {
             Intrinsics.checkNotNullParameter(requestJson, "requestJson");
             try {
                 JSONObject jSONObject = new JSONObject(requestJson).getJSONObject("user");
                 String string = jSONObject.getString("name");
                 String string2 = jSONObject.isNull("displayName") ? null : jSONObject.getString("displayName");
                 Intrinsics.checkNotNull(string);
-                return new b.C0279b(string, string2, null, defaultProvider);
+                return new b.C0293b(string, string2, null, defaultProvider);
             } catch (Exception unused) {
                 throw new IllegalArgumentException("user.name must be defined in requestJson");
             }
@@ -97,12 +97,12 @@ public final class i extends b {
         return this.isConditional;
     }
 
-    public /* synthetic */ i(String str, byte[] bArr, boolean z10, boolean z11, b.C0279b c0279b, String str2, Bundle bundle, Bundle bundle2, boolean z12, int i10, DefaultConstructorMarker defaultConstructorMarker) {
-        this(str, bArr, z10, z11, c0279b, (i10 & 32) != 0 ? null : str2, (i10 & 64) != 0 ? INSTANCE.d(str, bArr) : bundle, (i10 & 128) != 0 ? INSTANCE.c(str, bArr) : bundle2, (i10 & Barcode.FORMAT_QR_CODE) != 0 ? false : z12);
+    public /* synthetic */ i(String str, byte[] bArr, boolean z10, boolean z11, b.C0293b c0293b, String str2, Bundle bundle, Bundle bundle2, boolean z12, int i10, DefaultConstructorMarker defaultConstructorMarker) {
+        this(str, bArr, z10, z11, c0293b, (i10 & 32) != 0 ? null : str2, (i10 & 64) != 0 ? INSTANCE.d(str, bArr) : bundle, (i10 & 128) != 0 ? INSTANCE.c(str, bArr) : bundle2, (i10 & Barcode.FORMAT_QR_CODE) != 0 ? false : z12);
     }
 
-    public i(String str, byte[] bArr, boolean z10, boolean z11, b.C0279b c0279b, String str2, Bundle bundle, Bundle bundle2, boolean z12) {
-        super("androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL", bundle, bundle2, false, z10, c0279b, str2, z11);
+    public i(String str, byte[] bArr, boolean z10, boolean z11, b.C0293b c0293b, String str2, Bundle bundle, Bundle bundle2, boolean z12) {
+        super("androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL", bundle, bundle2, false, z10, c0293b, str2, z11);
         this.requestJson = str;
         this.clientDataHash = bArr;
         this.isConditional = z12;

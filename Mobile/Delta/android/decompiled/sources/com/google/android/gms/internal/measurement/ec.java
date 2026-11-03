@@ -4,16 +4,16 @@ package com.google.android.gms.internal.measurement;
 public final class ec implements mc {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final mc[] f6429a;
+    public final mc[] f6502a;
 
     public ec(mc... mcVarArr) {
-        this.f6429a = mcVarArr;
+        this.f6502a = mcVarArr;
     }
 
     @Override // com.google.android.gms.internal.measurement.mc
     public final boolean a(Class cls) {
         for (int i10 = 0; i10 < 2; i10++) {
-            if (this.f6429a[i10].a(cls)) {
+            if (this.f6502a[i10].a(cls)) {
                 return true;
             }
         }
@@ -23,7 +23,7 @@ public final class ec implements mc {
     @Override // com.google.android.gms.internal.measurement.mc
     public final lc b(Class cls) {
         for (int i10 = 0; i10 < 2; i10++) {
-            mc mcVar = this.f6429a[i10];
+            mc mcVar = this.f6502a[i10];
             if (mcVar.a(cls)) {
                 return mcVar.b(cls);
             }

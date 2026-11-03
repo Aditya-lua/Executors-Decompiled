@@ -14,11 +14,11 @@ public final class r7 extends gb implements pc {
     static {
         r7 r7Var = new r7();
         zzj = r7Var;
-        gb.u(r7.class, r7Var);
+        gb.t(r7.class, r7Var);
     }
 
     public static q7 S() {
-        return (q7) zzj.q();
+        return (q7) zzj.p();
     }
 
     @Override // com.google.android.gms.internal.measurement.gb

@@ -15,7 +15,7 @@ public final class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final e f24982a = new e();
+    public static final e f25803a = new e();
 
     @NotNull
     public static final String a(long bytes) {

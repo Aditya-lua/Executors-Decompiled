@@ -11,10 +11,17 @@ import com.roblox.universalapp.messagebus.Callback;
 import com.roblox.universalapp.messagebus.Connection;
 import com.roblox.universalapp.messagebus.MessageBus;
 import com.roblox.universalapp.systemtheme.SystemThemeProtocol;
+import gt.h;
+import gt.i;
+import gt.o;
+import iu.a0;
+import iu.d2;
+import iu.g1;
+import iu.h2;
+import iu.k;
+import iu.p0;
+import iu.q0;
 import java.lang.ref.WeakReference;
-import jt.h;
-import jt.i;
-import jt.o;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -22,27 +29,20 @@ import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.text.StringsKt;
-import ku.a0;
-import ku.d2;
-import ku.g1;
-import ku.h2;
-import ku.k;
-import ku.p0;
-import ku.q0;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONObject;
-import pt.m;
-import vk.g;
-import wk.j;
+import tk.g;
+import uk.j;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000\u0096\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0015\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0010\n\u0002\u0018\u0002\n\u0002\b\u000b\bÆ\u0002\u0018\u00002\u00020\u0001:\u00048;3uB\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\bJ\u0017\u0010\t\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\t\u0010\bJ\r\u0010\n\u001a\u00020\u0006¢\u0006\u0004\b\n\u0010\u0003J\u0017\u0010\u000b\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u000b\u0010\bJ\u0015\u0010\u000e\u001a\u00020\u00062\u0006\u0010\r\u001a\u00020\f¢\u0006\u0004\b\u000e\u0010\u000fJ\u0015\u0010\u0011\u001a\u00020\u00062\u0006\u0010\r\u001a\u00020\u0010¢\u0006\u0004\b\u0011\u0010\u0012J\u0015\u0010\u0014\u001a\u00020\u00062\u0006\u0010\r\u001a\u00020\u0013¢\u0006\u0004\b\u0014\u0010\u0015J\u0017\u0010\u0018\u001a\u00020\u00062\u0006\u0010\u0017\u001a\u00020\u0016H\u0002¢\u0006\u0004\b\u0018\u0010\u0019J\u0017\u0010\u001a\u001a\u00020\u00062\u0006\u0010\u0017\u001a\u00020\u0016H\u0002¢\u0006\u0004\b\u001a\u0010\u0019J\u000f\u0010\u001c\u001a\u00020\u001bH\u0007¢\u0006\u0004\b\u001c\u0010\u001dJ\u000f\u0010\u001f\u001a\u00020\u001eH\u0007¢\u0006\u0004\b\u001f\u0010 J\u0017\u0010!\u001a\u00020\u00062\u0006\u0010\u0017\u001a\u00020\u0016H\u0002¢\u0006\u0004\b!\u0010\u0019J\u000f\u0010\"\u001a\u00020\u0006H\u0003¢\u0006\u0004\b\"\u0010\u0003J\u0017\u0010%\u001a\u00020\u00062\u0006\u0010$\u001a\u00020#H\u0002¢\u0006\u0004\b%\u0010&J\u0017\u0010)\u001a\u00020\u00062\u0006\u0010(\u001a\u00020'H\u0002¢\u0006\u0004\b)\u0010*J\u0019\u0010,\u001a\u0004\u0018\u00010'2\u0006\u0010+\u001a\u00020'H\u0003¢\u0006\u0004\b,\u0010-J'\u00100\u001a\u00020'2\u0006\u0010.\u001a\u00020'2\u0006\u0010/\u001a\u00020'2\u0006\u0010+\u001a\u00020'H\u0003¢\u0006\u0004\b0\u00101R\u0014\u00105\u001a\u0002028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b3\u00104R\u001c\u0010:\u001a\n 7*\u0004\u0018\u000106068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b8\u00109R#\u0010?\u001a\n 7*\u0004\u0018\u00010'0'8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b;\u0010<\u001a\u0004\b=\u0010>R#\u0010B\u001a\n 7*\u0004\u0018\u00010'0'8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b@\u0010<\u001a\u0004\bA\u0010>R#\u0010E\u001a\n 7*\u0004\u0018\u00010'0'8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\bC\u0010<\u001a\u0004\bD\u0010>R#\u0010H\u001a\n 7*\u0004\u0018\u00010'0'8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\bF\u0010<\u001a\u0004\bG\u0010>R#\u0010K\u001a\n 7*\u0004\u0018\u00010'0'8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\bI\u0010<\u001a\u0004\bJ\u0010>R\u0014\u0010O\u001a\u00020L8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bM\u0010NR\u0014\u0010S\u001a\u00020P8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bQ\u0010RR$\u0010Y\u001a\n\u0012\u0004\u0012\u00020U\u0018\u00010T8\u0002@\u0002X\u0083\u000e¢\u0006\f\n\u0004\bV\u0010W\u0012\u0004\bX\u0010\u0003R\u0018\u0010]\u001a\u0004\u0018\u00010Z8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b[\u0010\\R\u0018\u0010`\u001a\u0004\u0018\u00010\f8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b^\u0010_R\u0018\u0010b\u001a\u0004\u0018\u00010Z8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\ba\u0010\\R\u0018\u0010e\u001a\u0004\u0018\u00010\u00108\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bc\u0010dR\u0018\u0010g\u001a\u0004\u0018\u00010Z8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bf\u0010\\R\u0018\u0010j\u001a\u0004\u0018\u00010\u00138\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bh\u0010iR\u0018\u0010n\u001a\u0004\u0018\u00010k8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bl\u0010mR\u0018\u0010q\u001a\u0004\u0018\u00010\u001e8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bo\u0010pR\u0018\u0010t\u001a\u0004\u0018\u00010#8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\br\u0010s¨\u0006v"}, d2 = {"Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol;", "Landroidx/lifecycle/f;", "<init>", "()V", "Landroidx/lifecycle/s;", "owner", "", "onCreate", "(Landroidx/lifecycle/s;)V", "onResume", "C", "onDestroy", "Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$d;", "listener", "O", "(Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$d;)V", "Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$b;", "K", "(Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$b;)V", "Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$a;", "H", "(Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$a;)V", "Lorg/json/JSONObject;", "jsonObject", "E", "(Lorg/json/JSONObject;)V", "D", "", "isSystemThemeAvailable", "()Z", "", "getSystemTheme", "()I", "F", "G", "Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$c;", "themeValue", "Q", "(Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$c;)V", "", "shouldHide", "L", "(Ljava/lang/String;)V", "path", "w", "(Ljava/lang/String;)Ljava/lang/String;", "cookieName", "cookieValue", "v", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", "Lku/p0;", "b", "Lku/p0;", "handlerScope", "Lcom/roblox/universalapp/messagebus/MessageBus;", "kotlin.jvm.PlatformType", "c", "Lcom/roblox/universalapp/messagebus/MessageBus;", "messageBus", "d", "Ljt/h;", "B", "()Ljava/lang/String;", "themeUpdatedMessageId", "e", "z", "setThemeMessageId", "f", "A", "themeParamKey", "g", "y", "setClassicThemeActiveMessageId", "h", "x", "setAppIconMessageId", "Landroid/os/HandlerThread;", "i", "Landroid/os/HandlerThread;", "cookieHandlerThread", "Landroid/os/Handler;", "j", "Landroid/os/Handler;", "cookieHandler", "Ljava/lang/ref/WeakReference;", "Landroid/content/Context;", "k", "Ljava/lang/ref/WeakReference;", "getContextRef$annotations", "contextRef", "Lcom/roblox/universalapp/messagebus/Connection;", "l", "Lcom/roblox/universalapp/messagebus/Connection;", "setThemeConn", "m", "Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$d;", "themeListener", "n", "setClassicThemeConn", "o", "Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$b;", "classicThemeListener", "p", "setAppIconConn", "q", "Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$a;", "appIconListener", "Lku/d2;", "r", "Lku/d2;", "handlerJob", "s", "Ljava/lang/Integer;", "lastPublishedSystemTheme", "t", "Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$c;", "lastSetTheme", "a", "universalapp_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000\u0096\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0015\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0010\n\u0002\u0018\u0002\n\u0002\b\u000b\bÆ\u0002\u0018\u00002\u00020\u0001:\u00048;3uB\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\bJ\u0017\u0010\t\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\t\u0010\bJ\r\u0010\n\u001a\u00020\u0006¢\u0006\u0004\b\n\u0010\u0003J\u0017\u0010\u000b\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u000b\u0010\bJ\u0015\u0010\u000e\u001a\u00020\u00062\u0006\u0010\r\u001a\u00020\f¢\u0006\u0004\b\u000e\u0010\u000fJ\u0015\u0010\u0011\u001a\u00020\u00062\u0006\u0010\r\u001a\u00020\u0010¢\u0006\u0004\b\u0011\u0010\u0012J\u0015\u0010\u0014\u001a\u00020\u00062\u0006\u0010\r\u001a\u00020\u0013¢\u0006\u0004\b\u0014\u0010\u0015J\u0017\u0010\u0018\u001a\u00020\u00062\u0006\u0010\u0017\u001a\u00020\u0016H\u0002¢\u0006\u0004\b\u0018\u0010\u0019J\u0017\u0010\u001a\u001a\u00020\u00062\u0006\u0010\u0017\u001a\u00020\u0016H\u0002¢\u0006\u0004\b\u001a\u0010\u0019J\u000f\u0010\u001c\u001a\u00020\u001bH\u0007¢\u0006\u0004\b\u001c\u0010\u001dJ\u000f\u0010\u001f\u001a\u00020\u001eH\u0007¢\u0006\u0004\b\u001f\u0010 J\u0017\u0010!\u001a\u00020\u00062\u0006\u0010\u0017\u001a\u00020\u0016H\u0002¢\u0006\u0004\b!\u0010\u0019J\u000f\u0010\"\u001a\u00020\u0006H\u0003¢\u0006\u0004\b\"\u0010\u0003J\u0017\u0010%\u001a\u00020\u00062\u0006\u0010$\u001a\u00020#H\u0002¢\u0006\u0004\b%\u0010&J\u0017\u0010)\u001a\u00020\u00062\u0006\u0010(\u001a\u00020'H\u0002¢\u0006\u0004\b)\u0010*J\u0019\u0010,\u001a\u0004\u0018\u00010'2\u0006\u0010+\u001a\u00020'H\u0003¢\u0006\u0004\b,\u0010-J'\u00100\u001a\u00020'2\u0006\u0010.\u001a\u00020'2\u0006\u0010/\u001a\u00020'2\u0006\u0010+\u001a\u00020'H\u0003¢\u0006\u0004\b0\u00101R\u0014\u00105\u001a\u0002028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b3\u00104R\u001c\u0010:\u001a\n 7*\u0004\u0018\u000106068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b8\u00109R#\u0010?\u001a\n 7*\u0004\u0018\u00010'0'8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b;\u0010<\u001a\u0004\b=\u0010>R#\u0010B\u001a\n 7*\u0004\u0018\u00010'0'8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b@\u0010<\u001a\u0004\bA\u0010>R#\u0010E\u001a\n 7*\u0004\u0018\u00010'0'8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\bC\u0010<\u001a\u0004\bD\u0010>R#\u0010H\u001a\n 7*\u0004\u0018\u00010'0'8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\bF\u0010<\u001a\u0004\bG\u0010>R#\u0010K\u001a\n 7*\u0004\u0018\u00010'0'8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\bI\u0010<\u001a\u0004\bJ\u0010>R\u0014\u0010O\u001a\u00020L8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bM\u0010NR\u0014\u0010S\u001a\u00020P8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bQ\u0010RR$\u0010Y\u001a\n\u0012\u0004\u0012\u00020U\u0018\u00010T8\u0002@\u0002X\u0083\u000e¢\u0006\f\n\u0004\bV\u0010W\u0012\u0004\bX\u0010\u0003R\u0018\u0010]\u001a\u0004\u0018\u00010Z8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b[\u0010\\R\u0018\u0010`\u001a\u0004\u0018\u00010\f8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b^\u0010_R\u0018\u0010b\u001a\u0004\u0018\u00010Z8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\ba\u0010\\R\u0018\u0010e\u001a\u0004\u0018\u00010\u00108\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bc\u0010dR\u0018\u0010g\u001a\u0004\u0018\u00010Z8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bf\u0010\\R\u0018\u0010j\u001a\u0004\u0018\u00010\u00138\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bh\u0010iR\u0018\u0010n\u001a\u0004\u0018\u00010k8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bl\u0010mR\u0018\u0010q\u001a\u0004\u0018\u00010\u001e8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bo\u0010pR\u0018\u0010t\u001a\u0004\u0018\u00010#8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\br\u0010s¨\u0006v"}, d2 = {"Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol;", "Landroidx/lifecycle/f;", "<init>", "()V", "Landroidx/lifecycle/s;", "owner", "", "onCreate", "(Landroidx/lifecycle/s;)V", "onResume", "C", "onDestroy", "Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$d;", "listener", "O", "(Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$d;)V", "Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$b;", "K", "(Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$b;)V", "Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$a;", "H", "(Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$a;)V", "Lorg/json/JSONObject;", "jsonObject", "E", "(Lorg/json/JSONObject;)V", "D", "", "isSystemThemeAvailable", "()Z", "", "getSystemTheme", "()I", "F", "G", "Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$c;", "themeValue", "Q", "(Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$c;)V", "", "shouldHide", "L", "(Ljava/lang/String;)V", "path", "w", "(Ljava/lang/String;)Ljava/lang/String;", "cookieName", "cookieValue", "v", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", "Liu/p0;", "b", "Liu/p0;", "handlerScope", "Lcom/roblox/universalapp/messagebus/MessageBus;", "kotlin.jvm.PlatformType", "c", "Lcom/roblox/universalapp/messagebus/MessageBus;", "messageBus", "d", "Lgt/h;", "B", "()Ljava/lang/String;", "themeUpdatedMessageId", "e", "z", "setThemeMessageId", "f", "A", "themeParamKey", "g", "y", "setClassicThemeActiveMessageId", "h", "x", "setAppIconMessageId", "Landroid/os/HandlerThread;", "i", "Landroid/os/HandlerThread;", "cookieHandlerThread", "Landroid/os/Handler;", "j", "Landroid/os/Handler;", "cookieHandler", "Ljava/lang/ref/WeakReference;", "Landroid/content/Context;", "k", "Ljava/lang/ref/WeakReference;", "getContextRef$annotations", "contextRef", "Lcom/roblox/universalapp/messagebus/Connection;", "l", "Lcom/roblox/universalapp/messagebus/Connection;", "setThemeConn", "m", "Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$d;", "themeListener", "n", "setClassicThemeConn", "o", "Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$b;", "classicThemeListener", "p", "setAppIconConn", "q", "Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$a;", "appIconListener", "Liu/d2;", "r", "Liu/d2;", "handlerJob", "s", "Ljava/lang/Integer;", "lastPublishedSystemTheme", "t", "Lcom/roblox/universalapp/systemtheme/SystemThemeProtocol$c;", "lastSetTheme", "a", "universalapp_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class SystemThemeProtocol implements androidx.p000lifecycle.f {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final SystemThemeProtocol f9821a = new SystemThemeProtocol();
+    public static final SystemThemeProtocol f9902a = new SystemThemeProtocol();
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull
@@ -53,7 +53,7 @@ public final class SystemThemeProtocol implements androidx.p000lifecycle.f {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public static final h themeUpdatedMessageId = i.b(new Function0() { // from class: rm.a
+    public static final h themeUpdatedMessageId = i.b(new Function0() { // from class: pm.a
         @Override // kotlin.jvm.functions.Function0
         public final Object invoke() {
             return SystemThemeProtocol.U();
@@ -62,7 +62,7 @@ public final class SystemThemeProtocol implements androidx.p000lifecycle.f {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public static final h setThemeMessageId = i.b(new Function0() { // from class: rm.b
+    public static final h setThemeMessageId = i.b(new Function0() { // from class: pm.b
         @Override // kotlin.jvm.functions.Function0
         public final Object invoke() {
             return SystemThemeProtocol.P();
@@ -71,7 +71,7 @@ public final class SystemThemeProtocol implements androidx.p000lifecycle.f {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public static final h themeParamKey = i.b(new Function0() { // from class: rm.c
+    public static final h themeParamKey = i.b(new Function0() { // from class: pm.c
         @Override // kotlin.jvm.functions.Function0
         public final Object invoke() {
             return SystemThemeProtocol.T();
@@ -80,7 +80,7 @@ public final class SystemThemeProtocol implements androidx.p000lifecycle.f {
 
     /* JADX INFO: renamed from: g, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public static final h setClassicThemeActiveMessageId = i.b(new Function0() { // from class: rm.d
+    public static final h setClassicThemeActiveMessageId = i.b(new Function0() { // from class: pm.d
         @Override // kotlin.jvm.functions.Function0
         public final Object invoke() {
             return SystemThemeProtocol.J();
@@ -89,7 +89,7 @@ public final class SystemThemeProtocol implements androidx.p000lifecycle.f {
 
     /* JADX INFO: renamed from: h, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public static final h setAppIconMessageId = i.b(new Function0() { // from class: rm.e
+    public static final h setAppIconMessageId = i.b(new Function0() { // from class: pm.e
         @Override // kotlin.jvm.functions.Function0
         public final Object invoke() {
             return SystemThemeProtocol.I();
@@ -171,7 +171,7 @@ public final class SystemThemeProtocol implements androidx.p000lifecycle.f {
         public final String themeName;
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f9847j = qt.b.a(a());
+        public static final /* synthetic */ ot.a f9928j = ot.b.a(a());
 
         /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
         @NotNull
@@ -233,88 +233,88 @@ public final class SystemThemeProtocol implements androidx.p000lifecycle.f {
         void a(@NotNull String themeName);
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.roblox.universalapp.systemtheme.SystemThemeProtocol$onCreate$2", f = "SystemThemeProtocol.kt", l = {}, m = "invokeSuspend", v = 1)
-    public static final class e extends m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.roblox.universalapp.systemtheme.SystemThemeProtocol$onCreate$2", f = "SystemThemeProtocol.kt", l = {}, m = "invokeSuspend", v = 1)
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class e extends m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f9849t;
+        public int f9930t;
 
-        public e(nt.b<? super e> bVar) {
+        public e(lt.b<? super e> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             return new e(bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((e) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            ot.c.e();
-            if (this.f9849t != 0) {
+            mt.c.e();
+            if (this.f9930t != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
             o.b(obj);
             MessageBus messageBus = SystemThemeProtocol.messageBus;
-            final SystemThemeProtocol systemThemeProtocol = SystemThemeProtocol.f9821a;
-            SystemThemeProtocol.setThemeConn = messageBus.t(systemThemeProtocol.z(), new Callback() { // from class: rm.j
+            final SystemThemeProtocol systemThemeProtocol = SystemThemeProtocol.f9902a;
+            SystemThemeProtocol.setThemeConn = messageBus.t(systemThemeProtocol.z(), new Callback() { // from class: pm.j
                 @Override // com.roblox.universalapp.messagebus.Callback
                 public final void a(JSONObject jSONObject) {
                     systemThemeProtocol.F(jSONObject);
                 }
             });
-            SystemThemeProtocol.setClassicThemeConn = SystemThemeProtocol.messageBus.t(systemThemeProtocol.y(), new Callback() { // from class: rm.k
+            SystemThemeProtocol.setClassicThemeConn = SystemThemeProtocol.messageBus.t(systemThemeProtocol.y(), new Callback() { // from class: pm.k
                 @Override // com.roblox.universalapp.messagebus.Callback
                 public final void a(JSONObject jSONObject) {
                     systemThemeProtocol.E(jSONObject);
                 }
             });
-            SystemThemeProtocol.setAppIconConn = SystemThemeProtocol.messageBus.t(systemThemeProtocol.x(), new Callback() { // from class: rm.l
+            SystemThemeProtocol.setAppIconConn = SystemThemeProtocol.messageBus.t(systemThemeProtocol.x(), new Callback() { // from class: pm.l
                 @Override // com.roblox.universalapp.messagebus.Callback
                 public final void a(JSONObject jSONObject) {
                     systemThemeProtocol.D(jSONObject);
                 }
             });
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((e) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            return Unit.f22938a;
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.roblox.universalapp.systemtheme.SystemThemeProtocol$publishSystemThemeUpdatedMessage$1$1", f = "SystemThemeProtocol.kt", l = {}, m = "invokeSuspend", v = 1)
-    public static final class f extends m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.roblox.universalapp.systemtheme.SystemThemeProtocol$publishSystemThemeUpdatedMessage$1$1", f = "SystemThemeProtocol.kt", l = {}, m = "invokeSuspend", v = 1)
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class f extends m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f9850t;
+        public int f9931t;
 
-        public f(nt.b<? super f> bVar) {
+        public f(lt.b<? super f> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             return new f(bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((f) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            ot.c.e();
-            if (this.f9850t != 0) {
+            mt.c.e();
+            if (this.f9931t != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
             o.b(obj);
-            SystemThemeProtocol.messageBus.l(SystemThemeProtocol.f9821a.B(), new JSONObject());
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((f) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            SystemThemeProtocol.messageBus.l(SystemThemeProtocol.f9902a.B(), new JSONObject());
+            return Unit.f22938a;
         }
     }
 
@@ -334,7 +334,7 @@ public final class SystemThemeProtocol implements androidx.p000lifecycle.f {
     }
 
     public static final void M(String str, String str2) {
-        j.c().g(str, str2, new ValueCallback() { // from class: rm.h
+        j.c().g(str, str2, new ValueCallback() { // from class: pm.h
             @Override // android.webkit.ValueCallback
             public final void onReceiveValue(Object obj) {
                 SystemThemeProtocol.N((Boolean) obj);
@@ -350,7 +350,7 @@ public final class SystemThemeProtocol implements androidx.p000lifecycle.f {
     }
 
     public static final void R(String str, String str2) {
-        j.c().g(str, str2, new ValueCallback() { // from class: rm.i
+        j.c().g(str, str2, new ValueCallback() { // from class: pm.i
             @Override // android.webkit.ValueCallback
             public final void onReceiveValue(Object obj) {
                 SystemThemeProtocol.S((Boolean) obj);
@@ -400,8 +400,8 @@ public final class SystemThemeProtocol implements androidx.p000lifecycle.f {
 
     public static final String w(String path) {
         String str;
-        vk.b bVarC = g.c();
-        if (bVarC == null || (str = bVarC.f33272a) == null) {
+        tk.b bVarC = g.c();
+        if (bVarC == null || (str = bVarC.f32407a) == null) {
             return null;
         }
         return "www." + str + path;
@@ -445,7 +445,7 @@ public final class SystemThemeProtocol implements androidx.p000lifecycle.f {
             c cVarA = c.INSTANCE.a(intOrNull.intValue());
             if (cVarA != null) {
                 lastSetTheme = cVarA;
-                SystemThemeProtocol systemThemeProtocol = f9821a;
+                SystemThemeProtocol systemThemeProtocol = f9902a;
                 systemThemeProtocol.Q(cVarA);
                 systemThemeProtocol.L("True");
                 d dVar = themeListener;
@@ -488,7 +488,7 @@ public final class SystemThemeProtocol implements androidx.p000lifecycle.f {
             return;
         }
         final String strV = v("RBXHideThemeSetting", shouldHide, "/my/account");
-        cookieHandler.post(new Runnable() { // from class: rm.g
+        cookieHandler.post(new Runnable() { // from class: pm.g
             @Override // java.lang.Runnable
             public final void run() {
                 SystemThemeProtocol.M(strW, strV);
@@ -507,7 +507,7 @@ public final class SystemThemeProtocol implements androidx.p000lifecycle.f {
             return;
         }
         final String strV = v("RBXThemeOverride", themeValue.getThemeName(), "/");
-        cookieHandler.post(new Runnable() { // from class: rm.f
+        cookieHandler.post(new Runnable() { // from class: pm.f
             @Override // java.lang.Runnable
             public final void run() {
                 SystemThemeProtocol.R(strW, strV);

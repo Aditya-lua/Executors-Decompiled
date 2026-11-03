@@ -1,7 +1,7 @@
 package com.google.android.gms.internal.mlkit_vision_common;
 
-import rf.a;
-import rf.b;
+import sf.a;
+import sf.b;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class zzhe implements a {
@@ -10,7 +10,7 @@ public final class zzhe implements a {
     private zzhe() {
     }
 
-    @Override // rf.a
+    @Override // sf.a
     public final void configure(b bVar) {
         bVar.registerEncoder(zziy.class, zzeo.zza);
         bVar.registerEncoder(zzla.class, zzgu.zza);

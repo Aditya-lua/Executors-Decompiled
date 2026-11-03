@@ -22,7 +22,7 @@ public class BacktraceDatabaseRecord {
 
     /* JADX INFO: renamed from: id, reason: collision with root package name */
     @SerializedName("Id")
-    public UUID f4079id;
+    public UUID f3977id;
     public transient boolean locked;
     private final transient String path;
     private transient BacktraceData record;
@@ -39,7 +39,7 @@ public class BacktraceDatabaseRecord {
 
     public BacktraceDatabaseRecord(BacktraceData backtraceData, String str) {
         this.locked = false;
-        this.f4079id = UUID.fromString(backtraceData.getUuid());
+        this.f3977id = UUID.fromString(backtraceData.getUuid());
         this.record = backtraceData;
         this.path = str;
         this.recordWriter = new BacktraceDatabaseRecordWriter(str);
@@ -102,11 +102,11 @@ public class BacktraceDatabaseRecord {
         try {
             String str = LOG_TAG;
             BacktraceLogger.d(str, "Trying saving data to internal app storage");
-            this.diagnosticDataPath = save(this.record, String.format("%s-attachment", this.f4079id));
-            this.reportPath = save(this.record.getReport(), String.format("%s-report", this.f4079id));
-            this.recordPath = new File(this.path, String.format("%s-record.json", this.f4079id)).getAbsolutePath();
+            this.diagnosticDataPath = save(this.record, String.format("%s-attachment", this.f3977id));
+            this.reportPath = save(this.record.getReport(), String.format("%s-report", this.f3977id));
+            this.recordPath = new File(this.path, String.format("%s-record.json", this.f3977id)).getAbsolutePath();
             this.size += (long) BacktraceSerializeHelper.toJson(this).getBytes(StandardCharsets.UTF_8).length;
-            this.recordWriter.write(this, String.format("%s-record", this.f4079id));
+            this.recordWriter.write(this, String.format("%s-record", this.f3977id));
             BacktraceLogger.d(str, "Saving data to internal app storage successful");
             return true;
         } catch (Exception e10) {
@@ -154,7 +154,7 @@ public class BacktraceDatabaseRecord {
 
     public BacktraceDatabaseRecord(String str, String str2, String str3, String str4, String str5, long j10) {
         this.locked = false;
-        this.f4079id = UUID.fromString(str);
+        this.f3977id = UUID.fromString(str);
         this.recordPath = str3;
         this.diagnosticDataPath = str4;
         this.reportPath = str5;

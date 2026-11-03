@@ -6,30 +6,30 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public final class e1 implements AutoCloseable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final AtomicBoolean f15839a;
+    public final AtomicBoolean f16435a;
     public final r0 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final long f15840c;
+    public final long f16436c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final u f15841d;
+    public final u f16437d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final boolean f15842e;
+    public final boolean f16438e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final p0.d f15843f;
+    public final p0.d f16439f;
 
     public e1(r0 r0Var, long j10, u uVar, boolean z10, boolean z11) {
         AtomicBoolean atomicBoolean = new AtomicBoolean(false);
-        this.f15839a = atomicBoolean;
+        this.f16435a = atomicBoolean;
         p0.d dVarB = p0.d.b();
-        this.f15843f = dVarB;
+        this.f16439f = dVarB;
         this.b = r0Var;
-        this.f15840c = j10;
-        this.f15841d = uVar;
-        this.f15842e = z10;
+        this.f16436c = j10;
+        this.f16437d = uVar;
+        this.f16438e = z10;
         if (z11) {
             atomicBoolean.set(true);
         } else {
@@ -48,7 +48,7 @@ public final class e1 implements AutoCloseable {
     }
 
     public u c() {
-        return this.f15841d;
+        return this.f16437d;
     }
 
     @Override // java.lang.AutoCloseable
@@ -57,7 +57,7 @@ public final class e1 implements AutoCloseable {
     }
 
     public long d() {
-        return this.f15840c;
+        return this.f16436c;
     }
 
     public void e() {
@@ -65,8 +65,8 @@ public final class e1 implements AutoCloseable {
     }
 
     public final void f(int i10, Throwable th2) throws Throwable {
-        this.f15843f.a();
-        if (this.f15839a.getAndSet(true)) {
+        this.f16439f.a();
+        if (this.f16435a.getAndSet(true)) {
             return;
         }
         this.b.x0(this, i10, th2);
@@ -74,7 +74,7 @@ public final class e1 implements AutoCloseable {
 
     public void finalize() throws Throwable {
         try {
-            this.f15843f.d();
+            this.f16439f.d();
             f(10, new RuntimeException("Recording stopped due to being garbage collected."));
         } finally {
             super.finalize();

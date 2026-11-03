@@ -6,7 +6,7 @@ import com.google.android.gms.location.LocationResult;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface o extends IInterface {
-    void P(LocationAvailability locationAvailability);
+    void N(LocationAvailability locationAvailability);
 
-    void S0(LocationResult locationResult);
+    void P0(LocationResult locationResult);
 }

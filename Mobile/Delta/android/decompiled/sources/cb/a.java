@@ -6,9 +6,9 @@ import android.os.Build;
 public final class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final int f4689a;
+    public static final int f4855a;
 
     static {
-        f4689a = Build.VERSION.SDK_INT >= 31 ? 33554432 : 0;
+        f4855a = Build.VERSION.SDK_INT >= 31 ? 33554432 : 0;
     }
 }

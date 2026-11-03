@@ -7,13 +7,13 @@ import n0.k3;
 public class u {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final boolean f14266a;
+    public final boolean f14246a;
 
     public u(k3 k3Var) {
-        this.f14266a = k3Var.a(Preview3AThreadCrashQuirk.class);
+        this.f14246a = k3Var.a(Preview3AThreadCrashQuirk.class);
     }
 
     public boolean a() {
-        return this.f14266a;
+        return this.f14246a;
     }
 }

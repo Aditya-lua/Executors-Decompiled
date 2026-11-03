@@ -15,9 +15,9 @@ public final class j extends k {
     @Override // ka.k, ka.t
     public final void g(Intent intent) {
         if (intent == null) {
-            N0(new Status(17));
+            J0(new Status(17));
         } else {
-            this.f22291a.e(intent);
+            this.f22515a.e(intent);
         }
     }
 }

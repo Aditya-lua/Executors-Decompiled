@@ -11,10 +11,10 @@ import n0.u1;
 public class z {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final boolean f14271a;
+    public final boolean f14251a;
 
     public z() {
-        this.f14271a = c0.e.b(TorchIsClosedAfterImageCapturingQuirk.class) != null;
+        this.f14251a = c0.e.b(TorchIsClosedAfterImageCapturingQuirk.class) != null;
     }
 
     public l1 a(l1 l1Var) {
@@ -25,14 +25,14 @@ public class z {
             aVar.f(it.next());
         }
         aVar.e(l1Var.g());
-        y.a.C0647a c0647a = new y.a.C0647a();
-        c0647a.f(CaptureRequest.FLASH_MODE, 0);
-        aVar.e(c0647a.b());
+        y.a.C0662a c0662a = new y.a.C0662a();
+        c0662a.f(CaptureRequest.FLASH_MODE, 0);
+        aVar.e(c0662a.b());
         return aVar.h();
     }
 
     public boolean b(List<CaptureRequest> list, boolean z10) {
-        if (!this.f14271a || !z10) {
+        if (!this.f14251a || !z10) {
             return false;
         }
         Iterator<CaptureRequest> it = list.iterator();

@@ -2,16 +2,16 @@ package com.withpersona.sdk2.inquiry.steps.ui.components;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import ar.o;
+import ar.w1;
+import ar.w3;
+import ar.x;
 import com.google.mlkit.vision.barcode.common.Barcode;
 import com.withpersona.sdk2.inquiry.network.dto.JsonLogicBoolean;
 import com.withpersona.sdk2.inquiry.network.dto.ui.components.InputMultiSelect;
 import com.withpersona.sdk2.inquiry.network.dto.ui.components.RemoteImage;
 import com.withpersona.sdk2.inquiry.network.dto.ui.styling.InputSelectComponentStyle;
-import cr.o;
-import cr.w1;
-import cr.w3;
-import cr.x;
-import er.m;
+import cr.m;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -27,7 +27,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000x\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\t\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0007\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u001b\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\b\b\u0087\b\u0018\u0000 52\u00020\u00012\b\u0012\u0004\u0012\u00020\u00000\u00022\u00020\u00032\u00020\u00042\u00020\u0005:\u0001,Bg\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\b\u0010\t\u001a\u0004\u0018\u00010\b\u0012\f\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000b0\n\u0012\b\u0010\u000e\u001a\u0004\u0018\u00010\r\u0012\b\u0010\u000f\u001a\u0004\u0018\u00010\r\u0012\b\u0010\u0010\u001a\u0004\u0018\u00010\u0006\u0012\b\u0010\u0011\u001a\u0004\u0018\u00010\u0006\u0012\f\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u000b0\n\u0012\b\b\u0002\u0010\u0014\u001a\u00020\u0013¢\u0006\u0004\b\u0015\u0010\u0016J\u001d\u0010\u0017\u001a\u00020\u00002\f\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000b0\nH\u0016¢\u0006\u0004\b\u0017\u0010\u0018J\r\u0010\u001a\u001a\u00020\u0019¢\u0006\u0004\b\u001a\u0010\u001bJ\u001d\u0010 \u001a\u00020\u001f2\u0006\u0010\u001d\u001a\u00020\u001c2\u0006\u0010\u001e\u001a\u00020\u0019¢\u0006\u0004\b \u0010!J\u0080\u0001\u0010\"\u001a\u00020\u00002\b\b\u0002\u0010\u0007\u001a\u00020\u00062\n\b\u0002\u0010\t\u001a\u0004\u0018\u00010\b2\u000e\b\u0002\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000b0\n2\n\b\u0002\u0010\u000e\u001a\u0004\u0018\u00010\r2\n\b\u0002\u0010\u000f\u001a\u0004\u0018\u00010\r2\n\b\u0002\u0010\u0010\u001a\u0004\u0018\u00010\u00062\n\b\u0002\u0010\u0011\u001a\u0004\u0018\u00010\u00062\u000e\b\u0002\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u000b0\n2\b\b\u0002\u0010\u0014\u001a\u00020\u0013HÆ\u0001¢\u0006\u0004\b\"\u0010#J\u0010\u0010$\u001a\u00020\u0006HÖ\u0001¢\u0006\u0004\b$\u0010%J\u0010\u0010&\u001a\u00020\u0019HÖ\u0001¢\u0006\u0004\b&\u0010\u001bJ\u001a\u0010*\u001a\u00020)2\b\u0010(\u001a\u0004\u0018\u00010'HÖ\u0003¢\u0006\u0004\b*\u0010+R\u001a\u0010\u0007\u001a\u00020\u00068\u0016X\u0096\u0004¢\u0006\f\n\u0004\b,\u0010-\u001a\u0004\b.\u0010%R\u001c\u0010\t\u001a\u0004\u0018\u00010\b8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b/\u00100\u001a\u0004\b1\u00102R \u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000b0\n8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b3\u00104\u001a\u0004\b5\u00106R\u001c\u0010\u000e\u001a\u0004\u0018\u00010\r8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b7\u00108\u001a\u0004\b9\u0010:R\u001c\u0010\u000f\u001a\u0004\u0018\u00010\r8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b;\u00108\u001a\u0004\b<\u0010:R\u001c\u0010\u0010\u001a\u0004\u0018\u00010\u00068\u0016X\u0096\u0004¢\u0006\f\n\u0004\b=\u0010-\u001a\u0004\b=\u0010%R\u001c\u0010\u0011\u001a\u0004\u0018\u00010\u00068\u0016X\u0096\u0004¢\u0006\f\n\u0004\b>\u0010-\u001a\u0004\b?\u0010%R \u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u000b0\n8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b@\u00104\u001a\u0004\b>\u00106R\u001a\u0010\u0014\u001a\u00020\u00138\u0016X\u0096\u0004¢\u0006\f\n\u0004\bA\u0010B\u001a\u0004\bC\u0010DR&\u0010J\u001a\b\u0012\u0004\u0012\u00020F0E8\u0016X\u0096\u0004¢\u0006\u0012\n\u0004\bG\u00104\u0012\u0004\bH\u0010I\u001a\u0004\bA\u00106R \u0010O\u001a\u00020)8\u0016X\u0096D¢\u0006\u0012\n\u0004\bK\u0010L\u0012\u0004\bN\u0010I\u001a\u0004\bG\u0010MR(\u0010W\u001a\u00020P8\u0016@\u0016X\u0096\u000e¢\u0006\u0018\n\u0004\bQ\u0010R\u0012\u0004\bV\u0010I\u001a\u0004\b,\u0010S\"\u0004\bT\u0010U¨\u0006X"}, d2 = {"Lcom/withpersona/sdk2/inquiry/steps/ui/components/InputMultiSelectComponent;", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;", "Lcr/w3;", "Lcr/w1;", "Lcr/o;", "Lcr/x;", "", "name", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/InputSelectComponentStyle;", "styles", "", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/Option;", "selectedOptions", "Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;", "hidden", "disabled", "label", "placeholder", "options", "", "lastValueUpdateTs", "<init>", "(Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/InputSelectComponentStyle;Ljava/util/List;Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;J)V", "s", "(Ljava/util/List;)Lcom/withpersona/sdk2/inquiry/steps/ui/components/InputMultiSelectComponent;", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "o", "(Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/InputSelectComponentStyle;Ljava/util/List;Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;J)Lcom/withpersona/sdk2/inquiry/steps/ui/components/InputMultiSelectComponent;", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Ljava/lang/String;", "getName", "b", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/InputSelectComponentStyle;", "q", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/InputSelectComponentStyle;", "c", "Ljava/util/List;", "m", "()Ljava/util/List;", "d", "Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;", "getHidden", "()Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;", "e", "getDisabled", "f", "g", "getPlaceholder", "h", "i", "J", "R0", "()J", "", "Lmr/a;", "j", "getAssociatedViews$annotations", "()V", "associatedViews", "k", "Z", "()Z", "getCanSelectMultipleValues$annotations", "canSelectMultipleValues", "Ler/m;", "l", "Ler/m;", "()Ler/m;", "r", "(Ler/m;)V", "getSelectedOptionsController$annotations", "selectedOptionsController", "ui-step-renderer_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000x\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\t\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0007\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u001b\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\b\b\u0087\b\u0018\u0000 52\u00020\u00012\b\u0012\u0004\u0012\u00020\u00000\u00022\u00020\u00032\u00020\u00042\u00020\u0005:\u0001,Bg\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\b\u0010\t\u001a\u0004\u0018\u00010\b\u0012\f\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000b0\n\u0012\b\u0010\u000e\u001a\u0004\u0018\u00010\r\u0012\b\u0010\u000f\u001a\u0004\u0018\u00010\r\u0012\b\u0010\u0010\u001a\u0004\u0018\u00010\u0006\u0012\b\u0010\u0011\u001a\u0004\u0018\u00010\u0006\u0012\f\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u000b0\n\u0012\b\b\u0002\u0010\u0014\u001a\u00020\u0013¢\u0006\u0004\b\u0015\u0010\u0016J\u001d\u0010\u0017\u001a\u00020\u00002\f\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000b0\nH\u0016¢\u0006\u0004\b\u0017\u0010\u0018J\r\u0010\u001a\u001a\u00020\u0019¢\u0006\u0004\b\u001a\u0010\u001bJ\u001d\u0010 \u001a\u00020\u001f2\u0006\u0010\u001d\u001a\u00020\u001c2\u0006\u0010\u001e\u001a\u00020\u0019¢\u0006\u0004\b \u0010!J\u0080\u0001\u0010\"\u001a\u00020\u00002\b\b\u0002\u0010\u0007\u001a\u00020\u00062\n\b\u0002\u0010\t\u001a\u0004\u0018\u00010\b2\u000e\b\u0002\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000b0\n2\n\b\u0002\u0010\u000e\u001a\u0004\u0018\u00010\r2\n\b\u0002\u0010\u000f\u001a\u0004\u0018\u00010\r2\n\b\u0002\u0010\u0010\u001a\u0004\u0018\u00010\u00062\n\b\u0002\u0010\u0011\u001a\u0004\u0018\u00010\u00062\u000e\b\u0002\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u000b0\n2\b\b\u0002\u0010\u0014\u001a\u00020\u0013HÆ\u0001¢\u0006\u0004\b\"\u0010#J\u0010\u0010$\u001a\u00020\u0006HÖ\u0001¢\u0006\u0004\b$\u0010%J\u0010\u0010&\u001a\u00020\u0019HÖ\u0001¢\u0006\u0004\b&\u0010\u001bJ\u001a\u0010*\u001a\u00020)2\b\u0010(\u001a\u0004\u0018\u00010'HÖ\u0003¢\u0006\u0004\b*\u0010+R\u001a\u0010\u0007\u001a\u00020\u00068\u0016X\u0096\u0004¢\u0006\f\n\u0004\b,\u0010-\u001a\u0004\b.\u0010%R\u001c\u0010\t\u001a\u0004\u0018\u00010\b8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b/\u00100\u001a\u0004\b1\u00102R \u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000b0\n8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b3\u00104\u001a\u0004\b5\u00106R\u001c\u0010\u000e\u001a\u0004\u0018\u00010\r8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b7\u00108\u001a\u0004\b9\u0010:R\u001c\u0010\u000f\u001a\u0004\u0018\u00010\r8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b;\u00108\u001a\u0004\b<\u0010:R\u001c\u0010\u0010\u001a\u0004\u0018\u00010\u00068\u0016X\u0096\u0004¢\u0006\f\n\u0004\b=\u0010-\u001a\u0004\b=\u0010%R\u001c\u0010\u0011\u001a\u0004\u0018\u00010\u00068\u0016X\u0096\u0004¢\u0006\f\n\u0004\b>\u0010-\u001a\u0004\b?\u0010%R \u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u000b0\n8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b@\u00104\u001a\u0004\b>\u00106R\u001a\u0010\u0014\u001a\u00020\u00138\u0016X\u0096\u0004¢\u0006\f\n\u0004\bA\u0010B\u001a\u0004\bC\u0010DR&\u0010J\u001a\b\u0012\u0004\u0012\u00020F0E8\u0016X\u0096\u0004¢\u0006\u0012\n\u0004\bG\u00104\u0012\u0004\bH\u0010I\u001a\u0004\bA\u00106R \u0010O\u001a\u00020)8\u0016X\u0096D¢\u0006\u0012\n\u0004\bK\u0010L\u0012\u0004\bN\u0010I\u001a\u0004\bG\u0010MR(\u0010W\u001a\u00020P8\u0016@\u0016X\u0096\u000e¢\u0006\u0018\n\u0004\bQ\u0010R\u0012\u0004\bV\u0010I\u001a\u0004\b,\u0010S\"\u0004\bT\u0010U¨\u0006X"}, d2 = {"Lcom/withpersona/sdk2/inquiry/steps/ui/components/InputMultiSelectComponent;", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;", "Lar/w3;", "Lar/w1;", "Lar/o;", "Lar/x;", "", "name", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/InputSelectComponentStyle;", "styles", "", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/Option;", "selectedOptions", "Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;", "hidden", "disabled", "label", "placeholder", "options", "", "lastValueUpdateTs", "<init>", "(Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/InputSelectComponentStyle;Ljava/util/List;Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;J)V", "s", "(Ljava/util/List;)Lcom/withpersona/sdk2/inquiry/steps/ui/components/InputMultiSelectComponent;", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "o", "(Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/InputSelectComponentStyle;Ljava/util/List;Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;J)Lcom/withpersona/sdk2/inquiry/steps/ui/components/InputMultiSelectComponent;", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Ljava/lang/String;", "getName", "b", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/InputSelectComponentStyle;", "q", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/InputSelectComponentStyle;", "c", "Ljava/util/List;", "m", "()Ljava/util/List;", "d", "Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;", "getHidden", "()Lcom/withpersona/sdk2/inquiry/network/dto/JsonLogicBoolean;", "e", "getDisabled", "f", "g", "getPlaceholder", "h", "i", "J", "N0", "()J", "", "Lkr/a;", "j", "getAssociatedViews$annotations", "()V", "associatedViews", "k", "Z", "()Z", "getCanSelectMultipleValues$annotations", "canSelectMultipleValues", "Lcr/m;", "l", "Lcr/m;", "()Lcr/m;", "r", "(Lcr/m;)V", "getSelectedOptionsController$annotations", "selectedOptionsController", "ui-step-renderer_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final /* data */ class InputMultiSelectComponent implements UiComponent, w3<InputMultiSelectComponent>, w1, o, x {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
@@ -67,7 +67,7 @@ public final /* data */ class InputMultiSelectComponent implements UiComponent, 
 
     /* JADX INFO: renamed from: j, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final List<mr.a> associatedViews;
+    public final List<kr.a> associatedViews;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name and from kotlin metadata */
     public final boolean canSelectMultipleValues;
@@ -239,12 +239,12 @@ public final /* data */ class InputMultiSelectComponent implements UiComponent, 
     }
 
     @Override // com.withpersona.sdk2.inquiry.steps.ui.components.UiComponent
-    /* JADX INFO: renamed from: R0, reason: from getter */
+    /* JADX INFO: renamed from: N0, reason: from getter */
     public long getLastValueUpdateTs() {
         return this.lastValueUpdateTs;
     }
 
-    @Override // cr.w3
+    @Override // ar.w3
     @NotNull
     /* JADX INFO: renamed from: a, reason: from getter */
     public m getSelectedOptionsController() {
@@ -267,26 +267,26 @@ public final /* data */ class InputMultiSelectComponent implements UiComponent, 
         return Intrinsics.c(this.name, inputMultiSelectComponent.name) && Intrinsics.c(this.styles, inputMultiSelectComponent.styles) && Intrinsics.c(this.selectedOptions, inputMultiSelectComponent.selectedOptions) && Intrinsics.c(this.hidden, inputMultiSelectComponent.hidden) && Intrinsics.c(this.disabled, inputMultiSelectComponent.disabled) && Intrinsics.c(this.label, inputMultiSelectComponent.label) && Intrinsics.c(this.placeholder, inputMultiSelectComponent.placeholder) && Intrinsics.c(this.options, inputMultiSelectComponent.options) && this.lastValueUpdateTs == inputMultiSelectComponent.lastValueUpdateTs;
     }
 
-    @Override // cr.w1
+    @Override // ar.w1
     @Nullable
     /* JADX INFO: renamed from: f, reason: from getter */
     public String getLabel() {
         return this.label;
     }
 
-    @Override // cr.w1
+    @Override // ar.w1
     @NotNull
     public List<Option> g() {
         return this.options;
     }
 
-    @Override // cr.o
+    @Override // ar.o
     @Nullable
     public JsonLogicBoolean getDisabled() {
         return this.disabled;
     }
 
-    @Override // cr.x
+    @Override // ar.x
     @Nullable
     public JsonLogicBoolean getHidden() {
         return this.hidden;
@@ -312,25 +312,25 @@ public final /* data */ class InputMultiSelectComponent implements UiComponent, 
         return ((((iHashCode5 + (str2 != null ? str2.hashCode() : 0)) * 31) + this.options.hashCode()) * 31) + Long.hashCode(this.lastValueUpdateTs);
     }
 
-    @Override // cr.x
+    @Override // ar.x
     @NotNull
-    public List<mr.a> i() {
+    public List<kr.a> i() {
         return this.associatedViews;
     }
 
-    @Override // cr.w1
+    @Override // ar.w1
     /* JADX INFO: renamed from: j, reason: from getter */
     public boolean getCanSelectMultipleValues() {
         return this.canSelectMultipleValues;
     }
 
-    @Override // cr.w1
+    @Override // ar.w1
     @NotNull
     public List<Option> m() {
         return this.selectedOptions;
     }
 
-    @Override // cr.w1
+    @Override // ar.w1
     @Nullable
     /* JADX INFO: renamed from: n */
     public RemoteImage getLeadingImageTemplate() {
@@ -345,7 +345,7 @@ public final /* data */ class InputMultiSelectComponent implements UiComponent, 
         return new InputMultiSelectComponent(name, styles, selectedOptions, hidden, disabled, label, placeholder, options, lastValueUpdateTs);
     }
 
-    @Override // cr.w1
+    @Override // ar.w1
     @Nullable
     /* JADX INFO: renamed from: q, reason: from getter */
     public InputSelectComponentStyle getStyles() {
@@ -357,7 +357,7 @@ public final /* data */ class InputMultiSelectComponent implements UiComponent, 
         this.selectedOptionsController = mVar;
     }
 
-    @Override // cr.w3
+    @Override // ar.w3
     @NotNull
     /* JADX INFO: renamed from: s, reason: merged with bridge method [inline-methods] */
     public InputMultiSelectComponent k(@NotNull List<Option> selectedOptions) {

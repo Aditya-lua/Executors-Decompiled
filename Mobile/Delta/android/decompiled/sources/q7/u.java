@@ -7,7 +7,7 @@ import java.util.List;
 public class u {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static r7.c.a f29273a = r7.c.a.a("k");
+    public static r7.c.a f29626a = r7.c.a.a("k");
 
     public static <T> List<t7.a<T>> a(r7.c cVar, f7.i iVar, float f10, n0<T> n0Var, boolean z10) {
         r7.c cVar2;
@@ -22,7 +22,7 @@ public class u {
         }
         cVar.c();
         while (cVar.f()) {
-            if (cVar.r(f29273a) != 0) {
+            if (cVar.r(f29626a) != 0) {
                 cVar.u();
             } else if (cVar.o() == r7.c.b.BEGIN_ARRAY) {
                 cVar.b();
@@ -79,16 +79,16 @@ public class u {
             t7.a<T> aVar = list.get(i11);
             i11++;
             t7.a<T> aVar2 = list.get(i11);
-            aVar.f31676h = Float.valueOf(aVar2.f31675g);
-            if (aVar.f31671c == null && (t8 = aVar2.b) != null) {
-                aVar.f31671c = t8;
+            aVar.f32195h = Float.valueOf(aVar2.f32194g);
+            if (aVar.f32190c == null && (t8 = aVar2.b) != null) {
+                aVar.f32190c = t8;
                 if (aVar instanceof i7.i) {
                     ((i7.i) aVar).j();
                 }
             }
         }
         t7.a<T> aVar3 = list.get(i10);
-        if ((aVar3.b == null || aVar3.f31671c == null) && list.size() > 1) {
+        if ((aVar3.b == null || aVar3.f32190c == null) && list.size() > 1) {
             list.remove(aVar3);
         }
     }

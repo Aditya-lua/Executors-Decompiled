@@ -9,25 +9,25 @@ import n0.z3;
 public final class c implements i1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final e0 f30410a;
+    public final e0 f30957a;
 
     public c(e0 e0Var) {
-        this.f30410a = e0Var;
+        this.f30957a = e0Var;
     }
 
     @Override // g0.i1
     public void a(p0.i.b bVar) {
-        this.f30410a.a(bVar);
+        this.f30957a.a(bVar);
     }
 
     @Override // g0.i1
     public int b() {
-        return this.f30410a.b().b();
+        return this.f30957a.b().b();
     }
 
     @Override // g0.i1
     public z3 c() {
-        return this.f30410a.c();
+        return this.f30957a.c();
     }
 
     @Override // g0.i1
@@ -41,11 +41,11 @@ public final class c implements i1 {
     }
 
     public e0 f() {
-        return this.f30410a;
+        return this.f30957a;
     }
 
     @Override // g0.i1
     public long getTimestamp() {
-        return this.f30410a.getTimestamp();
+        return this.f30957a.getTimestamp();
     }
 }

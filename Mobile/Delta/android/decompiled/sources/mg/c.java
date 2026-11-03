@@ -38,13 +38,13 @@ public enum c {
     public static final Map<String, c> E = new HashMap();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int[] f24219a;
+    public final int[] f24788a;
     public final String[] b;
 
     static {
         for (c cVar : values()) {
             if (Charset.isSupported(cVar.name())) {
-                for (int i10 : cVar.f24219a) {
+                for (int i10 : cVar.f24788a) {
                     D.put(Integer.valueOf(i10), cVar);
                 }
                 E.put(cVar.name(), cVar);
@@ -68,16 +68,16 @@ public enum c {
     }
 
     public int c() {
-        return this.f24219a[0];
+        return this.f24788a[0];
     }
 
     c(int i10, String... strArr) {
-        this.f24219a = new int[]{i10};
+        this.f24788a = new int[]{i10};
         this.b = strArr;
     }
 
     c(int[] iArr, String... strArr) {
-        this.f24219a = iArr;
+        this.f24788a = iArr;
         this.b = strArr;
     }
 }

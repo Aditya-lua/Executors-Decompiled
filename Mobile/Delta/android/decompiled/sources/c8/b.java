@@ -4,14 +4,14 @@ package c8;
 public final class b extends g {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final g.a f4652a;
+    public final g.a f4818a;
     public final long b;
 
     public b(g.a aVar, long j10) {
         if (aVar == null) {
             throw new NullPointerException("Null status");
         }
-        this.f4652a = aVar;
+        this.f4818a = aVar;
         this.b = j10;
     }
 
@@ -22,7 +22,7 @@ public final class b extends g {
 
     @Override // c8.g
     public g.a c() {
-        return this.f4652a;
+        return this.f4818a;
     }
 
     public boolean equals(Object obj) {
@@ -31,7 +31,7 @@ public final class b extends g {
         }
         if (obj instanceof g) {
             g gVar = (g) obj;
-            if (this.f4652a.equals(gVar.c()) && this.b == gVar.b()) {
+            if (this.f4818a.equals(gVar.c()) && this.b == gVar.b()) {
                 return true;
             }
         }
@@ -39,12 +39,12 @@ public final class b extends g {
     }
 
     public int hashCode() {
-        int iHashCode = (this.f4652a.hashCode() ^ 1000003) * 1000003;
+        int iHashCode = (this.f4818a.hashCode() ^ 1000003) * 1000003;
         long j10 = this.b;
         return iHashCode ^ ((int) (j10 ^ (j10 >>> 32)));
     }
 
     public String toString() {
-        return "BackendResponse{status=" + this.f4652a + ", nextRequestWaitMillis=" + this.b + "}";
+        return "BackendResponse{status=" + this.f4818a + ", nextRequestWaitMillis=" + this.b + "}";
     }
 }

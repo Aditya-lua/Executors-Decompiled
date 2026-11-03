@@ -10,23 +10,23 @@ import android.view.View;
 public abstract class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f1815a;
+    public final Context f1660a;
     public a b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public InterfaceC0027b f1816c;
+    public InterfaceC0023b f1661c;
 
     public interface a {
         void a(boolean z10);
     }
 
     /* JADX INFO: renamed from: androidx.core.view.b$b, reason: collision with other inner class name */
-    public interface InterfaceC0027b {
+    public interface InterfaceC0023b {
         void onActionProviderVisibilityChanged(boolean z10);
     }
 
     public b(Context context) {
-        this.f1815a = context;
+        this.f1660a = context;
     }
 
     public boolean a() {
@@ -55,7 +55,7 @@ public abstract class b {
     }
 
     public void h() {
-        this.f1816c = null;
+        this.f1661c = null;
         this.b = null;
     }
 
@@ -63,11 +63,11 @@ public abstract class b {
         this.b = aVar;
     }
 
-    public void j(InterfaceC0027b interfaceC0027b) {
-        if (this.f1816c != null && interfaceC0027b != null) {
+    public void j(InterfaceC0023b interfaceC0023b) {
+        if (this.f1661c != null && interfaceC0023b != null) {
             Log.w("ActionProvider(support)", "setVisibilityListener: Setting a new ActionProvider.VisibilityListener when one is already set. Are you reusing this " + getClass().getSimpleName() + " instance while it is still in use somewhere else?");
         }
-        this.f1816c = interfaceC0027b;
+        this.f1661c = interfaceC0023b;
     }
 
     public void k(boolean z10) {

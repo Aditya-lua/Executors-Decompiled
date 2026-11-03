@@ -11,16 +11,16 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 public class h extends androidx.constraintlayout.widget.b implements j.c {
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public boolean f16117j;
+    public boolean f16713j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public boolean f16118k;
+    public boolean f16714k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public float f16119l;
+    public float f16715l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public View[] f16120m;
+    public View[] f16716m;
 
     @Override // f2.j.c
     public void a(j jVar, int i10, int i11) {
@@ -35,7 +35,7 @@ public class h extends androidx.constraintlayout.widget.b implements j.c {
     }
 
     public float getProgress() {
-        return this.f16119l;
+        return this.f16715l;
     }
 
     @Override // androidx.constraintlayout.widget.b
@@ -47,9 +47,9 @@ public class h extends androidx.constraintlayout.widget.b implements j.c {
             for (int i10 = 0; i10 < indexCount; i10++) {
                 int index = typedArrayObtainStyledAttributes.getIndex(i10);
                 if (index == g2.d.D6) {
-                    this.f16117j = typedArrayObtainStyledAttributes.getBoolean(index, this.f16117j);
+                    this.f16713j = typedArrayObtainStyledAttributes.getBoolean(index, this.f16713j);
                 } else if (index == g2.d.C6) {
-                    this.f16118k = typedArrayObtainStyledAttributes.getBoolean(index, this.f16118k);
+                    this.f16714k = typedArrayObtainStyledAttributes.getBoolean(index, this.f16714k);
                 }
             }
             typedArrayObtainStyledAttributes.recycle();
@@ -57,12 +57,12 @@ public class h extends androidx.constraintlayout.widget.b implements j.c {
     }
 
     public void setProgress(float f10) {
-        this.f16119l = f10;
+        this.f16715l = f10;
         int i10 = 0;
         if (this.b > 0) {
-            this.f16120m = l((ConstraintLayout) getParent());
+            this.f16716m = l((ConstraintLayout) getParent());
             while (i10 < this.b) {
-                x(this.f16120m[i10], f10);
+                x(this.f16716m[i10], f10);
                 i10++;
             }
             return;
@@ -83,11 +83,11 @@ public class h extends androidx.constraintlayout.widget.b implements j.c {
     }
 
     public boolean u() {
-        return this.f16118k;
+        return this.f16714k;
     }
 
     public boolean v() {
-        return this.f16117j;
+        return this.f16713j;
     }
 
     public void w(Canvas canvas) {

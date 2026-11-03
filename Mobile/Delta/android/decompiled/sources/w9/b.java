@@ -14,44 +14,44 @@ public class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final Context f34140a;
+    public final Context f34346a;
 
     public b(@NonNull Context context) {
-        this.f34140a = context;
+        this.f34346a = context;
     }
 
     public int a(@NonNull String str) {
-        return this.f34140a.checkCallingOrSelfPermission(str);
+        return this.f34346a.checkCallingOrSelfPermission(str);
     }
 
     public int b(@NonNull String str, @NonNull String str2) {
-        return this.f34140a.getPackageManager().checkPermission(str, str2);
+        return this.f34346a.getPackageManager().checkPermission(str, str2);
     }
 
     @NonNull
     public ApplicationInfo c(@NonNull String str, int i10) {
-        return this.f34140a.getPackageManager().getApplicationInfo(str, i10);
+        return this.f34346a.getPackageManager().getApplicationInfo(str, i10);
     }
 
     @NonNull
     public CharSequence d(@NonNull String str) {
-        Context context = this.f34140a;
+        Context context = this.f34346a;
         return context.getPackageManager().getApplicationLabel(context.getPackageManager().getApplicationInfo(str, 0));
     }
 
     @NonNull
     public PackageInfo e(@NonNull String str, int i10) {
-        return this.f34140a.getPackageManager().getPackageInfo(str, i10);
+        return this.f34346a.getPackageManager().getPackageInfo(str, i10);
     }
 
     public boolean f() {
         if (Binder.getCallingUid() == Process.myUid()) {
-            return a.a(this.f34140a);
+            return a.a(this.f34346a);
         }
         if (!m.g()) {
             return false;
         }
-        Context context = this.f34140a;
+        Context context = this.f34346a;
         String nameForUid = context.getPackageManager().getNameForUid(Binder.getCallingUid());
         if (nameForUid != null) {
             return context.getPackageManager().isInstantApp(nameForUid);
@@ -61,7 +61,7 @@ public class b {
 
     public final boolean g(int i10, @NonNull String str) {
         try {
-            AppOpsManager appOpsManager = (AppOpsManager) this.f34140a.getSystemService("appops");
+            AppOpsManager appOpsManager = (AppOpsManager) this.f34346a.getSystemService("appops");
             if (appOpsManager == null) {
                 throw new NullPointerException("context.getSystemService(Context.APP_OPS_SERVICE) is null");
             }

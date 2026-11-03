@@ -7,10 +7,10 @@ import androidx.annotation.NonNull;
 public class l extends Exception {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Intent f21206a;
+    public final Intent f21779a;
 
     public l(@NonNull String str, @NonNull Intent intent) {
         super(str);
-        this.f21206a = intent;
+        this.f21779a = intent;
     }
 }

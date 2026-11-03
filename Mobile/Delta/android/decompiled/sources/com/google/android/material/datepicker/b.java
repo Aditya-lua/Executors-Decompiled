@@ -11,47 +11,47 @@ public final class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final a f7842a;
+    public final a f7916a;
 
     @NonNull
     public final a b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NonNull
-    public final a f7843c;
+    public final a f7917c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NonNull
-    public final a f7844d;
+    public final a f7918d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
     @NonNull
-    public final a f7845e;
+    public final a f7919e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NonNull
-    public final a f7846f;
+    public final a f7920f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
     @NonNull
-    public final a f7847g;
+    public final a f7921g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
     @NonNull
-    public final Paint f7848h;
+    public final Paint f7922h;
 
     public b(@NonNull Context context) {
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(dd.b.d(context, hc.b.f18801z, e.class.getCanonicalName()), hc.k.f19007f3);
-        this.f7842a = a.a(context, typedArrayObtainStyledAttributes.getResourceId(hc.k.f19043j3, 0));
-        this.f7847g = a.a(context, typedArrayObtainStyledAttributes.getResourceId(hc.k.f19025h3, 0));
-        this.b = a.a(context, typedArrayObtainStyledAttributes.getResourceId(hc.k.f19034i3, 0));
-        this.f7843c = a.a(context, typedArrayObtainStyledAttributes.getResourceId(hc.k.f19052k3, 0));
-        ColorStateList colorStateListA = dd.c.a(context, typedArrayObtainStyledAttributes, hc.k.f19061l3);
-        this.f7844d = a.a(context, typedArrayObtainStyledAttributes.getResourceId(hc.k.f19079n3, 0));
-        this.f7845e = a.a(context, typedArrayObtainStyledAttributes.getResourceId(hc.k.f19070m3, 0));
-        this.f7846f = a.a(context, typedArrayObtainStyledAttributes.getResourceId(hc.k.f19088o3, 0));
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(ed.b.d(context, ic.b.f20623z, e.class.getCanonicalName()), ic.k.f20829f3);
+        this.f7916a = a.a(context, typedArrayObtainStyledAttributes.getResourceId(ic.k.f20865j3, 0));
+        this.f7921g = a.a(context, typedArrayObtainStyledAttributes.getResourceId(ic.k.f20847h3, 0));
+        this.b = a.a(context, typedArrayObtainStyledAttributes.getResourceId(ic.k.f20856i3, 0));
+        this.f7917c = a.a(context, typedArrayObtainStyledAttributes.getResourceId(ic.k.f20874k3, 0));
+        ColorStateList colorStateListA = ed.c.a(context, typedArrayObtainStyledAttributes, ic.k.f20883l3);
+        this.f7918d = a.a(context, typedArrayObtainStyledAttributes.getResourceId(ic.k.f20901n3, 0));
+        this.f7919e = a.a(context, typedArrayObtainStyledAttributes.getResourceId(ic.k.f20892m3, 0));
+        this.f7920f = a.a(context, typedArrayObtainStyledAttributes.getResourceId(ic.k.f20910o3, 0));
         Paint paint = new Paint();
-        this.f7848h = paint;
+        this.f7922h = paint;
         paint.setColor(colorStateListA.getDefaultColor());
         typedArrayObtainStyledAttributes.recycle();
     }

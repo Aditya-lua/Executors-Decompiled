@@ -14,11 +14,11 @@ import n0.z3;
 public class l implements e0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final e0 f3818a;
+    public final e0 f3716a;
     public final z3 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final long f3819c;
+    public final long f3717c;
 
     public l(z3 z3Var, e0 e0Var) {
         this(e0Var, z3Var, -1L);
@@ -26,7 +26,7 @@ public class l implements e0 {
 
     @Override // n0.e0
     public d0 b() {
-        e0 e0Var = this.f3818a;
+        e0 e0Var = this.f3716a;
         return e0Var != null ? e0Var.b() : d0.UNKNOWN;
     }
 
@@ -37,29 +37,29 @@ public class l implements e0 {
 
     @Override // n0.e0
     public b0 d() {
-        e0 e0Var = this.f3818a;
+        e0 e0Var = this.f3716a;
         return e0Var != null ? e0Var.d() : b0.UNKNOWN;
     }
 
     @Override // n0.e0
     public x f() {
-        e0 e0Var = this.f3818a;
+        e0 e0Var = this.f3716a;
         return e0Var != null ? e0Var.f() : x.UNKNOWN;
     }
 
     @Override // n0.e0
     public a0 g() {
-        e0 e0Var = this.f3818a;
+        e0 e0Var = this.f3716a;
         return e0Var != null ? e0Var.g() : a0.UNKNOWN;
     }
 
     @Override // n0.e0
     public long getTimestamp() {
-        e0 e0Var = this.f3818a;
+        e0 e0Var = this.f3716a;
         if (e0Var != null) {
             return e0Var.getTimestamp();
         }
-        long j10 = this.f3819c;
+        long j10 = this.f3717c;
         if (j10 != -1) {
             return j10;
         }
@@ -68,19 +68,19 @@ public class l implements e0 {
 
     @Override // n0.e0
     public c0 h() {
-        e0 e0Var = this.f3818a;
+        e0 e0Var = this.f3716a;
         return e0Var != null ? e0Var.h() : c0.UNKNOWN;
     }
 
     @Override // n0.e0
     public z i() {
-        e0 e0Var = this.f3818a;
+        e0 e0Var = this.f3716a;
         return e0Var != null ? e0Var.i() : z.UNKNOWN;
     }
 
     @Override // n0.e0
     public y j() {
-        e0 e0Var = this.f3818a;
+        e0 e0Var = this.f3716a;
         return e0Var != null ? e0Var.j() : y.UNKNOWN;
     }
 
@@ -89,8 +89,8 @@ public class l implements e0 {
     }
 
     public l(e0 e0Var, z3 z3Var, long j10) {
-        this.f3818a = e0Var;
+        this.f3716a = e0Var;
         this.b = z3Var;
-        this.f3819c = j10;
+        this.f3717c = j10;
     }
 }

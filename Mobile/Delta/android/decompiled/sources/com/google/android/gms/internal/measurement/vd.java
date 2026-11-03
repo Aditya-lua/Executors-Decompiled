@@ -4,11 +4,11 @@ package com.google.android.gms.internal.measurement;
 public final class vd {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final /* synthetic */ int f6854a = 0;
+    public static final /* synthetic */ int f6928a = 0;
 
     static {
         if (sd.f() && sd.g()) {
-            int i10 = u9.f6826a;
+            int i10 = u9.f6900a;
         }
     }
 

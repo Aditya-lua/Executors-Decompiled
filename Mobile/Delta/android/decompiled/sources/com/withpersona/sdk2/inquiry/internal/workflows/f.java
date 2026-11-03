@@ -1,24 +1,24 @@
 package com.withpersona.sdk2.inquiry.internal.workflows;
 
 import androidx.p000lifecycle.l0;
-import ft.i;
+import dt.i;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class f implements e.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final kp.d f12140a;
+    public final ip.d f12221a;
 
-    public f(kp.d dVar) {
-        this.f12140a = dVar;
+    public f(ip.d dVar) {
+        this.f12221a = dVar;
     }
 
-    public static i<e.a> b(kp.d dVar) {
-        return ft.e.a(new f(dVar));
+    public static i<e.a> b(ip.d dVar) {
+        return dt.e.a(new f(dVar));
     }
 
     @Override // com.withpersona.sdk2.inquiry.internal.workflows.e.a
     public e a(l0 l0Var) {
-        return this.f12140a.b(l0Var);
+        return this.f12221a.b(l0Var);
     }
 }

@@ -12,14 +12,14 @@ import java.util.TreeMap;
 public class o {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Map<x, h1.i> f15900a = new LinkedHashMap();
+    public final Map<x, h1.i> f16496a = new LinkedHashMap();
     public final TreeMap<Size, x> b = new TreeMap<>(new p0.e());
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final h1.i f15901c;
+    public final h1.i f16497c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final h1.i f15902d;
+    public final h1.i f16498d;
 
     public o(n0.z1 z1Var, int i10) {
         for (x xVar : x.b()) {
@@ -31,18 +31,18 @@ public class o {
                     g0.r1.l("CapabilitiesByQuality", "EncoderProfiles of quality " + xVar + " has no video validated profiles.");
                 } else {
                     this.b.put(iVarH.k().k(), xVar);
-                    this.f15900a.put(xVar, iVarH);
+                    this.f16496a.put(xVar, iVarH);
                 }
             }
         }
-        if (this.f15900a.isEmpty()) {
+        if (this.f16496a.isEmpty()) {
             g0.r1.c("CapabilitiesByQuality", "No supported EncoderProfiles");
-            this.f15902d = null;
-            this.f15901c = null;
+            this.f16498d = null;
+            this.f16497c = null;
         } else {
-            ArrayDeque arrayDeque = new ArrayDeque(this.f15900a.values());
-            this.f15901c = (h1.i) arrayDeque.peekFirst();
-            this.f15902d = (h1.i) arrayDeque.peekLast();
+            ArrayDeque arrayDeque = new ArrayDeque(this.f16496a.values());
+            this.f16497c = (h1.i) arrayDeque.peekFirst();
+            this.f16498d = (h1.i) arrayDeque.peekLast();
         }
     }
 
@@ -57,7 +57,7 @@ public class o {
     public h1.i c(Size size) {
         x xVarD = d(size);
         g0.r1.a("CapabilitiesByQuality", "Using supported quality of " + xVarD + " for size " + size);
-        if (xVarD == x.f16055g) {
+        if (xVarD == x.f16651g) {
             return null;
         }
         h1.i iVarF = f(xVarD);
@@ -69,7 +69,7 @@ public class o {
 
     public x d(Size size) {
         x xVar = (x) w0.d.a(size, this.b);
-        return xVar != null ? xVar : x.f16055g;
+        return xVar != null ? xVar : x.f16651g;
     }
 
     public final n0.a2 e(x xVar, n0.z1 z1Var, int i10) {
@@ -79,14 +79,14 @@ public class o {
 
     public h1.i f(x xVar) {
         a(xVar);
-        if (xVar == x.f16054f) {
-            return this.f15901c;
+        if (xVar == x.f16650f) {
+            return this.f16497c;
         }
-        return xVar == x.f16053e ? this.f15902d : this.f15900a.get(xVar);
+        return xVar == x.f16649e ? this.f16498d : this.f16496a.get(xVar);
     }
 
     public List<x> g() {
-        return new ArrayList(this.f15900a.keySet());
+        return new ArrayList(this.f16496a.keySet());
     }
 
     public final h1.i h(n0.a2 a2Var) {

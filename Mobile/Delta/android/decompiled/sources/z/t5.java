@@ -8,36 +8,36 @@ public class t5 {
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f36831a;
+        public static final /* synthetic */ int[] f37526a;
 
         static {
             int[] iArr = new int[n0.j4.b.values().length];
-            f36831a = iArr;
+            f37526a = iArr;
             try {
                 iArr[n0.j4.b.IMAGE_CAPTURE.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f36831a[n0.j4.b.VIDEO_CAPTURE.ordinal()] = 2;
+                f37526a[n0.j4.b.VIDEO_CAPTURE.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f36831a[n0.j4.b.STREAM_SHARING.ordinal()] = 3;
+                f37526a[n0.j4.b.STREAM_SHARING.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
             try {
-                f36831a[n0.j4.b.PREVIEW.ordinal()] = 4;
+                f37526a[n0.j4.b.PREVIEW.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
             try {
-                f36831a[n0.j4.b.IMAGE_ANALYSIS.ordinal()] = 5;
+                f37526a[n0.j4.b.IMAGE_ANALYSIS.ordinal()] = 5;
             } catch (NoSuchFieldError unused5) {
             }
         }
     }
 
     public static int a(n0.j4.b bVar, int i10) {
-        int i11 = a.f36831a[bVar.ordinal()];
+        int i11 = a.f37526a[bVar.ordinal()];
         if (i11 != 1) {
             return (i11 == 2 && c0.e.b(PreviewUnderExposureQuirk.class) == null) ? 3 : 1;
         }
@@ -45,7 +45,7 @@ public class t5 {
     }
 
     public static int b(n0.j4.b bVar, int i10) {
-        int i11 = a.f36831a[bVar.ordinal()];
+        int i11 = a.f37526a[bVar.ordinal()];
         if (i11 != 1) {
             return (i11 == 2 && c0.e.b(PreviewUnderExposureQuirk.class) == null) ? 3 : 1;
         }

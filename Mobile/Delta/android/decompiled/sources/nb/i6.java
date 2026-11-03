@@ -8,31 +8,31 @@ import java.util.Objects;
 public final class i6 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f25593a;
+    public final String f26414a;
     public final String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final String f25594c;
+    public final String f26415c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final long f25595d;
+    public final long f26416d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final /* synthetic */ k6 f25596e;
+    public final /* synthetic */ k6 f26417e;
 
     public /* synthetic */ i6(k6 k6Var, String str, long j10, byte[] bArr) {
         Objects.requireNonNull(k6Var);
-        this.f25596e = k6Var;
+        this.f26417e = k6Var;
         n9.m.f("health_monitor");
         n9.m.a(j10 > 0);
-        this.f25593a = "health_monitor:start";
+        this.f26414a = "health_monitor:start";
         this.b = "health_monitor:count";
-        this.f25594c = "health_monitor:value";
-        this.f25595d = j10;
+        this.f26415c = "health_monitor:value";
+        this.f26416d = j10;
     }
 
     public final void a(String str, long j10) {
-        k6 k6Var = this.f25596e;
+        k6 k6Var = this.f26417e;
         k6Var.h();
         if (d() == 0) {
             c();
@@ -45,17 +45,17 @@ public final class i6 {
         long j11 = sharedPreferencesP.getLong(str2, 0L);
         if (j11 <= 0) {
             SharedPreferences.Editor editorEdit = k6Var.p().edit();
-            editorEdit.putString(this.f25594c, str);
+            editorEdit.putString(this.f26415c, str);
             editorEdit.putLong(str2, 1L);
             editorEdit.apply();
             return;
         }
-        long jNextLong = k6Var.f25625a.C().q0().nextLong() & Long.MAX_VALUE;
+        long jNextLong = k6Var.f26446a.C().q0().nextLong() & Long.MAX_VALUE;
         long j12 = j11 + 1;
         long j13 = Long.MAX_VALUE / j12;
         SharedPreferences.Editor editorEdit2 = k6Var.p().edit();
         if (jNextLong < j13) {
-            editorEdit2.putString(this.f25594c, str);
+            editorEdit2.putString(this.f26415c, str);
         }
         editorEdit2.putLong(str2, j12);
         editorEdit2.apply();
@@ -63,7 +63,7 @@ public final class i6 {
 
     public final Pair b() {
         long jAbs;
-        k6 k6Var = this.f25596e;
+        k6 k6Var = this.f26417e;
         k6Var.h();
         k6Var.h();
         long jD = d();
@@ -71,9 +71,9 @@ public final class i6 {
             c();
             jAbs = 0;
         } else {
-            jAbs = Math.abs(jD - k6Var.f25625a.e().a());
+            jAbs = Math.abs(jD - k6Var.f26446a.e().a());
         }
-        long j10 = this.f25595d;
+        long j10 = this.f26416d;
         if (jAbs < j10) {
             return null;
         }
@@ -81,24 +81,24 @@ public final class i6 {
             c();
             return null;
         }
-        String string = k6Var.p().getString(this.f25594c, null);
+        String string = k6Var.p().getString(this.f26415c, null);
         long j11 = k6Var.p().getLong(this.b, 0L);
         c();
         return (string == null || j11 <= 0) ? k6.A : new Pair(string, Long.valueOf(j11));
     }
 
     public final void c() {
-        k6 k6Var = this.f25596e;
+        k6 k6Var = this.f26417e;
         k6Var.h();
-        long jA = k6Var.f25625a.e().a();
+        long jA = k6Var.f26446a.e().a();
         SharedPreferences.Editor editorEdit = k6Var.p().edit();
         editorEdit.remove(this.b);
-        editorEdit.remove(this.f25594c);
-        editorEdit.putLong(this.f25593a, jA);
+        editorEdit.remove(this.f26415c);
+        editorEdit.putLong(this.f26414a, jA);
         editorEdit.apply();
     }
 
     public final long d() {
-        return this.f25596e.p().getLong(this.f25593a, 0L);
+        return this.f26417e.p().getLong(this.f26414a, 0L);
     }
 }

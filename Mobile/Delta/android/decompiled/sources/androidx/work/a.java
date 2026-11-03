@@ -1,11 +1,11 @@
 package androidx.work;
 
+import iu.g1;
+import iu.v1;
 import java.util.concurrent.Executor;
 import kotlin.Metadata;
 import kotlin.coroutines.CoroutineContext;
 import kotlin.jvm.internal.Intrinsics;
-import ku.g1;
-import ku.v1;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import x5.g;
@@ -100,7 +100,7 @@ public final class a {
 
     /* JADX INFO: renamed from: androidx.work.a$a, reason: collision with other inner class name */
     @Metadata(d1 = {"\u0000\u0080\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0010\u0003\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0010\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0010\u000e\n\u0002\b\u0006\n\u0002\u0010\t\n\u0002\b\u0013\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0006\u0018\u00002\u00020\u0001B\t\b\u0016¢\u0006\u0004\b\u0002\u0010\u0003J\u0015\u0010\u0006\u001a\u00020\u00002\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u001b\u0010\u000b\u001a\u00020\u00002\f\u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\b¢\u0006\u0004\b\u000b\u0010\fJ\r\u0010\u000e\u001a\u00020\r¢\u0006\u0004\b\u000e\u0010\u000fR$\u0010\u0016\u001a\u0004\u0018\u00010\u00108\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b\u000e\u0010\u0011\u001a\u0004\b\u0012\u0010\u0013\"\u0004\b\u0014\u0010\u0015R$\u0010\u001e\u001a\u0004\u0018\u00010\u00178\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b\u0018\u0010\u0019\u001a\u0004\b\u001a\u0010\u001b\"\u0004\b\u001c\u0010\u001dR$\u0010&\u001a\u0004\u0018\u00010\u001f8\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b \u0010!\u001a\u0004\b\"\u0010#\"\u0004\b$\u0010%R$\u0010.\u001a\u0004\u0018\u00010'8\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b(\u0010)\u001a\u0004\b*\u0010+\"\u0004\b,\u0010-R$\u00101\u001a\u0004\u0018\u00010\u00108\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b\u0012\u0010\u0011\u001a\u0004\b/\u0010\u0013\"\u0004\b0\u0010\u0015R$\u00108\u001a\u0004\u0018\u0001028\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b3\u00104\u001a\u0004\b\u0018\u00105\"\u0004\b6\u00107R$\u0010?\u001a\u0004\u0018\u0001098\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b*\u0010:\u001a\u0004\b;\u0010<\"\u0004\b=\u0010>R*\u0010E\u001a\n\u0012\u0004\u0012\u00020\t\u0018\u00010\b8\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b@\u0010A\u001a\u0004\b3\u0010B\"\u0004\bC\u0010DR*\u0010I\u001a\n\u0012\u0004\u0012\u00020\t\u0018\u00010\b8\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\bF\u0010A\u001a\u0004\bG\u0010B\"\u0004\bH\u0010DR*\u0010N\u001a\n\u0012\u0004\u0012\u00020J\u0018\u00010\b8\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\bK\u0010A\u001a\u0004\bL\u0010B\"\u0004\bM\u0010DR*\u0010R\u001a\n\u0012\u0004\u0012\u00020J\u0018\u00010\b8\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\bO\u0010A\u001a\u0004\bP\u0010B\"\u0004\bQ\u0010DR$\u0010Y\u001a\u0004\u0018\u00010S8\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\bT\u0010U\u001a\u0004\b(\u0010V\"\u0004\bW\u0010XR\"\u0010`\u001a\u00020Z8\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b[\u0010\\\u001a\u0004\b[\u0010]\"\u0004\b^\u0010_R\"\u0010\u0005\u001a\u00020\u00048\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b;\u0010a\u001a\u0004\b@\u0010b\"\u0004\bc\u0010dR\"\u0010f\u001a\u00020\u00048\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\bG\u0010a\u001a\u0004\bT\u0010b\"\u0004\be\u0010dR\"\u0010h\u001a\u00020\u00048\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b/\u0010a\u001a\u0004\bK\u0010b\"\u0004\bg\u0010dR\"\u0010k\u001a\u00020\u00048\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\bi\u0010a\u001a\u0004\bO\u0010b\"\u0004\bj\u0010dR\"\u0010m\u001a\u00020\u00048\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b\u001a\u0010a\u001a\u0004\b \u0010b\"\u0004\bl\u0010dR\"\u0010s\u001a\u00020n8\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\bP\u0010o\u001a\u0004\bF\u0010p\"\u0004\bq\u0010rR$\u0010y\u001a\u0004\u0018\u00010t8\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b\"\u0010u\u001a\u0004\bi\u0010v\"\u0004\bw\u0010x¨\u0006z"}, d2 = {"Landroidx/work/a$a;", "", "<init>", "()V", "", "loggingLevel", "w", "(I)Landroidx/work/a$a;", "Lx2/a;", "", "exceptionHandler", "v", "(Lx2/a;)Landroidx/work/a$a;", "Landroidx/work/a;", "a", "()Landroidx/work/a;", "Ljava/util/concurrent/Executor;", "Ljava/util/concurrent/Executor;", "e", "()Ljava/util/concurrent/Executor;", "setExecutor$work_runtime_release", "(Ljava/util/concurrent/Executor;)V", "executor", "Lkotlin/coroutines/CoroutineContext;", "b", "Lkotlin/coroutines/CoroutineContext;", "r", "()Lkotlin/coroutines/CoroutineContext;", "setWorkerContext$work_runtime_release", "(Lkotlin/coroutines/CoroutineContext;)V", "workerContext", "Lx5/u0;", "c", "Lx5/u0;", "t", "()Lx5/u0;", "setWorkerFactory$work_runtime_release", "(Lx5/u0;)V", "workerFactory", "Lx5/n;", "d", "Lx5/n;", "g", "()Lx5/n;", "setInputMergerFactory$work_runtime_release", "(Lx5/n;)V", "inputMergerFactory", "p", "setTaskExecutor$work_runtime_release", "taskExecutor", "Lx5/b;", "f", "Lx5/b;", "()Lx5/b;", "setClock$work_runtime_release", "(Lx5/b;)V", "clock", "Lx5/j0;", "Lx5/j0;", "n", "()Lx5/j0;", "setRunnableScheduler$work_runtime_release", "(Lx5/j0;)V", "runnableScheduler", "h", "Lx2/a;", "()Lx2/a;", "setInitializationExceptionHandler$work_runtime_release", "(Lx2/a;)V", "initializationExceptionHandler", "i", "o", "setSchedulingExceptionHandler$work_runtime_release", "schedulingExceptionHandler", "Lx5/t0;", "j", "u", "setWorkerInitializationExceptionHandler$work_runtime_release", "workerInitializationExceptionHandler", "k", "s", "setWorkerExecutionExceptionHandler$work_runtime_release", "workerExecutionExceptionHandler", "", "l", "Ljava/lang/String;", "()Ljava/lang/String;", "setDefaultProcessName$work_runtime_release", "(Ljava/lang/String;)V", "defaultProcessName", "", "m", "J", "()J", "setRemoteSessionTimeoutMillis$work_runtime_release", "(J)V", "remoteSessionTimeoutMillis", "I", "()I", "setLoggingLevel$work_runtime_release", "(I)V", "setMinJobSchedulerId$work_runtime_release", "minJobSchedulerId", "setMaxJobSchedulerId$work_runtime_release", "maxJobSchedulerId", "q", "setMaxSchedulerLimit$work_runtime_release", "maxSchedulerLimit", "setContentUriTriggerWorkersLimit$work_runtime_release", "contentUriTriggerWorkersLimit", "", "Z", "()Z", "setMarkJobsAsImportantWhileForeground$work_runtime_release", "(Z)V", "markJobsAsImportantWhileForeground", "Lx5/l0;", "Lx5/l0;", "()Lx5/l0;", "setTracer$work_runtime_release", "(Lx5/l0;)V", "tracer", "work-runtime_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
-    public static final class C0063a {
+    public static final class C0059a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         @Nullable
@@ -290,14 +290,14 @@ public final class a {
         }
 
         @NotNull
-        public final C0063a v(@NotNull x2.a<Throwable> exceptionHandler) {
+        public final C0059a v(@NotNull x2.a<Throwable> exceptionHandler) {
             Intrinsics.checkNotNullParameter(exceptionHandler, "exceptionHandler");
             this.initializationExceptionHandler = exceptionHandler;
             return this;
         }
 
         @NotNull
-        public final C0063a w(int loggingLevel) {
+        public final C0059a w(int loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
@@ -309,7 +309,7 @@ public final class a {
         a b();
     }
 
-    public a(@NotNull C0063a builder) {
+    public a(@NotNull C0059a builder) {
         Intrinsics.checkNotNullParameter(builder, "builder");
         CoroutineContext workerContext = builder.getWorkerContext();
         Executor executor = builder.getExecutor();
@@ -330,9 +330,9 @@ public final class a {
         x5.b clock = builder.getClock();
         this.clock = clock == null ? new k0() : clock;
         u0 workerFactory = builder.getWorkerFactory();
-        this.workerFactory = workerFactory == null ? g.f34942a : workerFactory;
+        this.workerFactory = workerFactory == null ? g.f35440a : workerFactory;
         n inputMergerFactory = builder.getInputMergerFactory();
-        this.inputMergerFactory = inputMergerFactory == null ? y.f35021a : inputMergerFactory;
+        this.inputMergerFactory = inputMergerFactory == null ? y.f35519a : inputMergerFactory;
         j0 runnableScheduler = builder.getRunnableScheduler();
         this.runnableScheduler = runnableScheduler == null ? new d() : runnableScheduler;
         this.minimumLoggingLevel = builder.getLoggingLevel();

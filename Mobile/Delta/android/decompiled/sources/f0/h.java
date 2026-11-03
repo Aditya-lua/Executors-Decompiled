@@ -13,14 +13,14 @@ import z.z0;
 public final class h {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public z0 f15795a;
+    public z0 f16391a;
     public n2 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public List<Pair<CameraCharacteristics.Key, Object>> f15796c;
+    public List<Pair<CameraCharacteristics.Key, Object>> f16392c;
 
     public h(z0 z0Var) {
-        this.f15795a = z0Var;
+        this.f16391a = z0Var;
     }
 
     public static h a(t tVar) {
@@ -31,11 +31,11 @@ public final class h {
         o0 o0VarQ = ((o0) tVar).q();
         x2.g.b(o0VarQ instanceof z0, "CameraInfo doesn't contain Camera2 implementation.");
         h hVarB = ((z0) o0VarQ).B();
-        return (!(tVar instanceof n0.e) || (q3VarE = ((n0.e) tVar).E()) == null) ? hVarB : new h(hVarB.f15795a, q3VarE.h());
+        return (!(tVar instanceof n0.e) || (q3VarE = ((n0.e) tVar).E()) == null) ? hVarB : new h(hVarB.f16391a, q3VarE.h());
     }
 
     public <T> T b(CameraCharacteristics.Key<T> key) {
-        List<Pair<CameraCharacteristics.Key, Object>> list = this.f15796c;
+        List<Pair<CameraCharacteristics.Key, Object>> list = this.f16392c;
         if (list != null) {
             for (Pair<CameraCharacteristics.Key, Object> pair : list) {
                 if (((CameraCharacteristics.Key) pair.first).equals(key)) {
@@ -43,15 +43,15 @@ public final class h {
                 }
             }
         }
-        return (T) this.f15795a.C().a(key);
+        return (T) this.f16391a.C().a(key);
     }
 
     public String c() {
-        return this.f15795a.e();
+        return this.f16391a.e();
     }
 
     public h(z0 z0Var, List<Pair<CameraCharacteristics.Key, Object>> list) {
-        this.f15795a = z0Var;
-        this.f15796c = list;
+        this.f16391a = z0Var;
+        this.f16392c = list;
     }
 }

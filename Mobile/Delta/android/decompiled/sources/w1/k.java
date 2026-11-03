@@ -104,7 +104,7 @@ public class k<E> implements Cloneable {
             return;
         }
         int i10 = ~iA;
-        if (i10 < this.size && this.values[i10] == l.f33625a) {
+        if (i10 < this.size && this.values[i10] == l.f33831a) {
             this.keys[i10] = key;
             this.values[i10] = value;
             return;
@@ -151,7 +151,7 @@ public class k<E> implements Cloneable {
         if (index < objArr.length) {
             return (E) objArr[index];
         }
-        e eVar = e.f33605a;
+        e eVar = e.f33811a;
         throw new ArrayIndexOutOfBoundsException();
     }
 
@@ -184,8 +184,8 @@ public class k<E> implements Cloneable {
 
     public k(int i10) {
         if (i10 == 0) {
-            this.keys = x1.a.f34678a;
-            this.values = x1.a.f34679c;
+            this.keys = x1.a.f35176a;
+            this.values = x1.a.f35177c;
         } else {
             int iE = x1.a.e(i10);
             this.keys = new int[iE];

@@ -1,6 +1,5 @@
 package com.roblox.client.scheduledwork;
 
-import ak.FetchFlagResult;
 import android.content.Context;
 import android.os.SystemClock;
 import android.util.Log;
@@ -9,23 +8,24 @@ import androidx.work.WorkerParameters;
 import androidx.work.c;
 import com.roblox.client.startup.FlagCacheUtils;
 import com.roblox.universalapp.logging.LoggingProtocol;
-import gk.v;
+import ek.w;
+import gt.o;
 import java.util.Locale;
 import java.util.concurrent.CancellationException;
 import java.util.concurrent.TimeUnit;
-import jt.o;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
+import nt.d;
+import nt.f;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pt.d;
-import pt.f;
-import sg.a1;
-import th.h;
+import rg.a1;
+import rh.h;
 import x5.p0;
+import yj.FetchFlagResult;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0005\u0018\u0000 \u000f2\u00020\u0001:\u0001\u0011B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bH\u0096@¢\u0006\u0004\b\t\u0010\nJ\u000f\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\f\u0010\rJ\u000f\u0010\u000f\u001a\u00020\u000eH\u0002¢\u0006\u0004\b\u000f\u0010\u0010R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0011\u0010\u0012¨\u0006\u0013"}, d2 = {"Lcom/roblox/client/scheduledwork/FlagFetchWorker;", "Landroidx/work/CoroutineWorker;", "Landroid/content/Context;", "context", "Landroidx/work/WorkerParameters;", "params", "<init>", "(Landroid/content/Context;Landroidx/work/WorkerParameters;)V", "Landroidx/work/c$a;", "doWork", "(Lnt/b;)Ljava/lang/Object;", "", "c", "()Z", "", "b", "()V", "a", "Landroid/content/Context;", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0005\u0018\u0000 \u000f2\u00020\u0001:\u0001\u0011B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bH\u0096@¢\u0006\u0004\b\t\u0010\nJ\u000f\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\f\u0010\rJ\u000f\u0010\u000f\u001a\u00020\u000eH\u0002¢\u0006\u0004\b\u000f\u0010\u0010R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0011\u0010\u0012¨\u0006\u0013"}, d2 = {"Lcom/roblox/client/scheduledwork/FlagFetchWorker;", "Landroidx/work/CoroutineWorker;", "Landroid/content/Context;", "context", "Landroidx/work/WorkerParameters;", "params", "<init>", "(Landroid/content/Context;Landroidx/work/WorkerParameters;)V", "Landroidx/work/c$a;", "doWork", "(Llt/b;)Ljava/lang/Object;", "", "c", "()Z", "", "b", "()V", "a", "Landroid/content/Context;", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class FlagFetchWorker extends CoroutineWorker {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -37,26 +37,26 @@ public final class FlagFetchWorker extends CoroutineWorker {
     public static final class b extends d {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public boolean f9336t;
+        public boolean f9413t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public int f9337u;
+        public int f9414u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public /* synthetic */ Object f9338v;
+        public /* synthetic */ Object f9415v;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public int f9340x;
+        public int f9417x;
 
-        public b(nt.b<? super b> bVar) {
+        public b(lt.b<? super b> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
-            this.f9338v = obj;
-            this.f9340x |= Integer.MIN_VALUE;
+            this.f9415v = obj;
+            this.f9417x |= Integer.MIN_VALUE;
             return FlagFetchWorker.this.doWork(this);
         }
     }
@@ -108,7 +108,7 @@ public final class FlagFetchWorker extends CoroutineWorker {
      */
     @Override // androidx.work.CoroutineWorker
     @Nullable
-    public Object doWork(@NotNull nt.b<? super c.a> bVar) throws Throwable {
+    public Object doWork(@NotNull lt.b<? super c.a> bVar) throws Throwable {
         b bVar2;
         ?? r8;
         boolean z10;
@@ -122,9 +122,9 @@ public final class FlagFetchWorker extends CoroutineWorker {
         String lowerCase;
         if (bVar instanceof b) {
             b bVar3 = (b) bVar;
-            int i11 = bVar3.f9340x;
+            int i11 = bVar3.f9417x;
             if ((i11 & Integer.MIN_VALUE) != 0) {
-                bVar3.f9340x = i11 - Integer.MIN_VALUE;
+                bVar3.f9417x = i11 - Integer.MIN_VALUE;
                 bVar2 = bVar3;
             } else {
                 bVar2 = new b(bVar);
@@ -132,52 +132,52 @@ public final class FlagFetchWorker extends CoroutineWorker {
         } else {
             bVar2 = new b(bVar);
         }
-        Object obj = bVar2.f9338v;
-        Object objE = ot.c.e();
-        int i12 = bVar2.f9340x;
+        Object obj = bVar2.f9415v;
+        Object objE = mt.c.e();
+        int i12 = bVar2.f9417x;
         int i13 = 1;
         try {
             if (i12 == 0) {
                 o.b(obj);
                 Log.i("FlagCacheFetchWorker", "Scheduled FlagFetchWorker started");
-                if (h.a().G() && v.a(this.context).equals("foreground")) {
+                if (h.a().I() && w.a(this.context).equals("foreground")) {
                     Log.i("FlagCacheFetchWorker", "FlagFetchWorker skipped for foreground app");
                     LoggingProtocol.m("skip_flag_fetch_worker_app_foreground", null, 2, null);
                     c.a aVarD = c.a.d();
                     Intrinsics.checkNotNullExpressionValue(aVarD, "success(...)");
                     return aVarD;
                 }
-                boolean zN5 = h.a().N5();
-                if (zN5) {
+                boolean zX5 = h.a().X5();
+                if (zX5) {
                     LoggingProtocol.m("flag_fetch_worker_start", null, 2, null);
                 } else {
-                    LoggingProtocol.l("flag_fetch_worker_start_origin", pt.b.e(SystemClock.elapsedRealtime()));
+                    LoggingProtocol.l("flag_fetch_worker_start_origin", nt.b.e(SystemClock.elapsedRealtime()));
                 }
-                LoggingProtocol.l("flag_fetch_worker_start", pt.b.e(SystemClock.elapsedRealtime()));
+                LoggingProtocol.l("flag_fetch_worker_start", nt.b.e(SystemClock.elapsedRealtime()));
                 try {
                     if (!c()) {
                         Log.i("FlagCacheFetchWorker", "FlagFetchWorker: Inactivity detected, cancelling work");
                         b();
                         c.a aVarA = c.a.a();
                         Intrinsics.checkNotNullExpressionValue(aVarA, "failure(...)");
-                        if (zN5) {
+                        if (zX5) {
                             LoggingProtocol.m("flag_fetch_worker_error", null, 2, null);
                             return aVarA;
                         }
-                        LoggingProtocol.l("flag_fetch_worker_end_origin", pt.b.e(SystemClock.elapsedRealtime()));
+                        LoggingProtocol.l("flag_fetch_worker_end_origin", nt.b.e(SystemClock.elapsedRealtime()));
                         return aVarA;
                     }
                     try {
                         FlagCacheUtils flagCacheUtils = FlagCacheUtils.INSTANCE;
                         Context context = this.context;
-                        bVar2.f9336t = zN5;
-                        bVar2.f9337u = 0;
-                        bVar2.f9340x = 1;
+                        bVar2.f9413t = zX5;
+                        bVar2.f9414u = 0;
+                        bVar2.f9417x = 1;
                         Object objScheduledFetchFlag = flagCacheUtils.scheduledFetchFlag(context, bVar2);
                         if (objScheduledFetchFlag == objE) {
                             return objE;
                         }
-                        z11 = zN5;
+                        z11 = zX5;
                         obj = objScheduledFetchFlag;
                         i10 = 0;
                         fetchFlagResult = (FetchFlagResult) obj;
@@ -209,7 +209,7 @@ public final class FlagFetchWorker extends CoroutineWorker {
                         Log.i("FlagCacheFetchWorker", "FlagFetchWorker was cancelled.");
                         throw e11;
                     } catch (Exception e13) {
-                        z10 = zN5;
+                        z10 = zX5;
                         e10 = e13;
                         i13 = 0;
                         Log.e("FlagCacheFetchWorker", "FlagFetchWorker encountered an unexpected error, retrying.", e10);
@@ -219,18 +219,18 @@ public final class FlagFetchWorker extends CoroutineWorker {
                         if (z12) {
                             LoggingProtocol.m(i13 == 0 ? "flag_fetch_worker_error" : "flag_fetch_worker_end", null, 2, null);
                         } else {
-                            LoggingProtocol.l("flag_fetch_worker_end_origin", pt.b.e(SystemClock.elapsedRealtime()));
+                            LoggingProtocol.l("flag_fetch_worker_end_origin", nt.b.e(SystemClock.elapsedRealtime()));
                         }
                         return aVarC;
                     }
                 } catch (Throwable th2) {
-                    r8 = zN5;
+                    r8 = zX5;
                     th = th2;
                     i13 = 0;
                     if (r8 != 0) {
                         LoggingProtocol.m(i13 == 0 ? "flag_fetch_worker_error" : "flag_fetch_worker_end", null, 2, null);
                     } else {
-                        LoggingProtocol.l("flag_fetch_worker_end_origin", pt.b.e(SystemClock.elapsedRealtime()));
+                        LoggingProtocol.l("flag_fetch_worker_end_origin", nt.b.e(SystemClock.elapsedRealtime()));
                     }
                     throw th;
                 }
@@ -238,8 +238,8 @@ public final class FlagFetchWorker extends CoroutineWorker {
                 if (i12 != 1) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                 }
-                i10 = bVar2.f9337u;
-                boolean z13 = bVar2.f9336t;
+                i10 = bVar2.f9414u;
+                boolean z13 = bVar2.f9413t;
                 try {
                     o.b(obj);
                     z11 = z13;
@@ -295,7 +295,7 @@ public final class FlagFetchWorker extends CoroutineWorker {
                     if (z12) {
                         LoggingProtocol.m(i13 == 0 ? "flag_fetch_worker_error" : "flag_fetch_worker_end", null, 2, null);
                     } else {
-                        LoggingProtocol.l("flag_fetch_worker_end_origin", pt.b.e(SystemClock.elapsedRealtime()));
+                        LoggingProtocol.l("flag_fetch_worker_end_origin", nt.b.e(SystemClock.elapsedRealtime()));
                     }
                     return aVarC;
                 } catch (Throwable th3) {
@@ -305,7 +305,7 @@ public final class FlagFetchWorker extends CoroutineWorker {
                     if (r8 != 0) {
                         LoggingProtocol.m(i13 == 0 ? "flag_fetch_worker_error" : "flag_fetch_worker_end", null, 2, null);
                     } else {
-                        LoggingProtocol.l("flag_fetch_worker_end_origin", pt.b.e(SystemClock.elapsedRealtime()));
+                        LoggingProtocol.l("flag_fetch_worker_end_origin", nt.b.e(SystemClock.elapsedRealtime()));
                     }
                     throw th;
                 }
@@ -313,7 +313,7 @@ public final class FlagFetchWorker extends CoroutineWorker {
             if (z12) {
                 LoggingProtocol.m(i13 == 0 ? "flag_fetch_worker_error" : "flag_fetch_worker_end", null, 2, null);
             } else {
-                LoggingProtocol.l("flag_fetch_worker_end_origin", pt.b.e(SystemClock.elapsedRealtime()));
+                LoggingProtocol.l("flag_fetch_worker_end_origin", nt.b.e(SystemClock.elapsedRealtime()));
             }
             return aVarC;
         } catch (Throwable th4) {

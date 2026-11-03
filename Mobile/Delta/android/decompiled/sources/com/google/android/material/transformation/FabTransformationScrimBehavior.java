@@ -12,35 +12,35 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import ic.b;
-import ic.i;
 import java.util.ArrayList;
 import java.util.List;
+import jc.b;
+import jc.i;
 
 /* JADX INFO: loaded from: classes2.dex */
 @Deprecated
 public class FabTransformationScrimBehavior extends ExpandableTransformationBehavior {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final i f8371c;
+    public final i f8445c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final i f8372d;
+    public final i f8446d;
 
     public class a extends AnimatorListenerAdapter {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ boolean f8373a;
+        public final /* synthetic */ boolean f8447a;
         public final /* synthetic */ View b;
 
         public a(boolean z10, View view) {
-            this.f8373a = z10;
+            this.f8447a = z10;
             this.b = view;
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationEnd(Animator animator) {
-            if (this.f8373a) {
+            if (this.f8447a) {
                 return;
             }
             this.b.setVisibility(4);
@@ -48,15 +48,15 @@ public class FabTransformationScrimBehavior extends ExpandableTransformationBeha
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationStart(Animator animator) {
-            if (this.f8373a) {
+            if (this.f8447a) {
                 this.b.setVisibility(0);
             }
         }
     }
 
     public FabTransformationScrimBehavior() {
-        this.f8371c = new i(75L, 150L);
-        this.f8372d = new i(0L, 150L);
+        this.f8445c = new i(75L, 150L);
+        this.f8446d = new i(0L, 150L);
     }
 
     @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
@@ -77,7 +77,7 @@ public class FabTransformationScrimBehavior extends ExpandableTransformationBeha
 
     public final void O(@NonNull View view, boolean z10, boolean z11, @NonNull List<Animator> list, List<Animator.AnimatorListener> list2) {
         ObjectAnimator objectAnimatorOfFloat;
-        i iVar = z10 ? this.f8371c : this.f8372d;
+        i iVar = z10 ? this.f8445c : this.f8446d;
         if (z10) {
             if (!z11) {
                 view.setAlpha(0.0f);
@@ -97,7 +97,7 @@ public class FabTransformationScrimBehavior extends ExpandableTransformationBeha
 
     public FabTransformationScrimBehavior(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.f8371c = new i(75L, 150L);
-        this.f8372d = new i(0L, 150L);
+        this.f8445c = new i(75L, 150L);
+        this.f8446d = new i(0L, 150L);
     }
 }

@@ -21,14 +21,14 @@ public final class AFi1aSDK {
     public final AFc1bSDK AFKeystoreWrapper;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final AFi1hSDK f5415d;
+    public final AFi1hSDK f5488d;
     public volatile boolean AFLogger = false;
     private final AtomicBoolean registerClient = new AtomicBoolean(false);
     public final CopyOnWriteArrayList<Referrer> unregisterClient = new CopyOnWriteArrayList<>();
 
     public AFi1aSDK(AFc1bSDK aFc1bSDK, AFi1hSDK aFi1hSDK) {
         this.AFKeystoreWrapper = aFc1bSDK;
-        this.f5415d = aFi1hSDK;
+        this.f5488d = aFi1hSDK;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -62,7 +62,7 @@ public final class AFi1aSDK {
         while (i10 < size) {
             Object obj = arrayList.get(i10);
             i10++;
-            ((Referrer) obj).start(aFc1bSDK.valueOf().f5305d);
+            ((Referrer) obj).start(aFc1bSDK.valueOf().f5378d);
         }
     }
 
@@ -85,11 +85,11 @@ public final class AFi1aSDK {
         AFi1iSDK aFi1iSDK = new AFi1iSDK(this.AFKeystoreWrapper.AFLogger(), AFi1jSDK.INSTAGRAM, referrerProp, new Runnable() { // from class: com.appsflyer.internal.u0
             @Override // java.lang.Runnable
             public final void run() {
-                this.f5523a.AFLogger(referrerProp);
+                this.f5596a.AFLogger(referrerProp);
             }
         });
         this.unregisterClient.add(aFi1iSDK);
-        aFi1iSDK.start(this.AFKeystoreWrapper.valueOf().f5305d);
+        aFi1iSDK.start(this.AFKeystoreWrapper.valueOf().f5378d);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -101,7 +101,7 @@ public final class AFi1aSDK {
         return new AFi1gSDK(new ReferrerProp(new Runnable() { // from class: com.appsflyer.internal.t0
             @Override // java.lang.Runnable
             public final void run() {
-                this.f5521a.d(executorServiceD, runnable);
+                this.f5594a.d(executorServiceD, runnable);
             }
         }, this.AFKeystoreWrapper.afErrorLog(), executorServiceD));
     }
@@ -113,7 +113,7 @@ public final class AFi1aSDK {
             aFc1bSDK.d().execute(new Runnable() { // from class: com.appsflyer.internal.w0
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f5526a.AFKeystoreWrapper(context, referrerProp, aFc1bSDK);
+                    this.f5599a.AFKeystoreWrapper(context, referrerProp, aFc1bSDK);
                 }
             });
         }
@@ -124,7 +124,7 @@ public final class AFi1aSDK {
         executorService.execute(new Runnable() { // from class: com.appsflyer.internal.x0
             @Override // java.lang.Runnable
             public final void run() {
-                this.f5529a.AFKeystoreWrapper(runnable);
+                this.f5602a.AFKeystoreWrapper(runnable);
             }
         });
     }
@@ -133,7 +133,7 @@ public final class AFi1aSDK {
         this.unregisterClient.add(new AFi1iSDK(this.AFKeystoreWrapper.AFLogger(), AFi1jSDK.FACEBOOK, referrerProp, new Runnable() { // from class: com.appsflyer.internal.v0
             @Override // java.lang.Runnable
             public final void run() {
-                this.f5524a.registerClient(referrerProp);
+                this.f5597a.registerClient(referrerProp);
             }
         }));
     }
@@ -142,7 +142,7 @@ public final class AFi1aSDK {
         return new Runnable() { // from class: com.appsflyer.internal.z0
             @Override // java.lang.Runnable
             public final void run() {
-                this.f5531a.AFLogger(aFi1gSDK, runnable);
+                this.f5604a.AFLogger(aFi1gSDK, runnable);
             }
         };
     }
@@ -156,7 +156,7 @@ public final class AFi1aSDK {
             }
         });
         this.unregisterClient.add(aFi1iSDK);
-        aFi1iSDK.start(this.AFKeystoreWrapper.valueOf().f5305d);
+        aFi1iSDK.start(this.AFKeystoreWrapper.valueOf().f5378d);
     }
 
     /* JADX INFO: Access modifiers changed from: private */

@@ -7,11 +7,11 @@ import java.security.SecureRandom;
 public final class r {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final SecureRandom f35809a = new SecureRandom();
+    public static final SecureRandom f36666a = new SecureRandom();
 
     public static String a() {
         byte[] bArr = new byte[16];
-        f35809a.nextBytes(bArr);
+        f36666a.nextBytes(bArr);
         return Base64.encodeToString(bArr, 11);
     }
 }

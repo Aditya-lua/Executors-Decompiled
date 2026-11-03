@@ -12,21 +12,16 @@ public class a implements d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final HttpURLConnection f28376a;
+    public final HttpURLConnection f28595a;
 
     public a(@NonNull HttpURLConnection httpURLConnection) {
-        this.f28376a = httpURLConnection;
-    }
-
-    @Override // p7.d
-    public String B0() {
-        return this.f28376a.getContentType();
+        this.f28595a = httpURLConnection;
     }
 
     @Override // p7.d
     @NonNull
-    public InputStream I0() {
-        return this.f28376a.getInputStream();
+    public InputStream E0() {
+        return this.f28595a.getInputStream();
     }
 
     public final String a(HttpURLConnection httpURLConnection) {
@@ -58,28 +53,33 @@ public class a implements d {
 
     @Override // java.io.Closeable, java.lang.AutoCloseable
     public void close() {
-        this.f28376a.disconnect();
+        this.f28595a.disconnect();
     }
 
     @Override // p7.d
     public boolean isSuccessful() {
         try {
-            return this.f28376a.getResponseCode() / 100 == 2;
+            return this.f28595a.getResponseCode() / 100 == 2;
         } catch (IOException unused) {
             return false;
         }
     }
 
     @Override // p7.d
-    public String u2() {
+    public String v2() {
         try {
             if (isSuccessful()) {
                 return null;
             }
-            return "Unable to fetch " + this.f28376a.getURL() + ". Failed with " + this.f28376a.getResponseCode() + "\n" + a(this.f28376a);
+            return "Unable to fetch " + this.f28595a.getURL() + ". Failed with " + this.f28595a.getResponseCode() + "\n" + a(this.f28595a);
         } catch (IOException e10) {
             s7.e.d("get error failed ", e10);
             return e10.getMessage();
         }
+    }
+
+    @Override // p7.d
+    public String x0() {
+        return this.f28595a.getContentType();
     }
 }

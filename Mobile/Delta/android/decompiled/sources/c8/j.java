@@ -6,19 +6,19 @@ import android.content.Context;
 public final class j implements d8.b<i> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ht.a<Context> f4662a;
-    public final ht.a<l8.a> b;
+    public final ft.a<Context> f4828a;
+    public final ft.a<l8.a> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final ht.a<l8.a> f4663c;
+    public final ft.a<l8.a> f4829c;
 
-    public j(ht.a<Context> aVar, ht.a<l8.a> aVar2, ht.a<l8.a> aVar3) {
-        this.f4662a = aVar;
+    public j(ft.a<Context> aVar, ft.a<l8.a> aVar2, ft.a<l8.a> aVar3) {
+        this.f4828a = aVar;
         this.b = aVar2;
-        this.f4663c = aVar3;
+        this.f4829c = aVar3;
     }
 
-    public static j a(ht.a<Context> aVar, ht.a<l8.a> aVar2, ht.a<l8.a> aVar3) {
+    public static j a(ft.a<Context> aVar, ft.a<l8.a> aVar2, ft.a<l8.a> aVar3) {
         return new j(aVar, aVar2, aVar3);
     }
 
@@ -26,9 +26,9 @@ public final class j implements d8.b<i> {
         return new i(context, aVar, aVar2);
     }
 
-    @Override // ht.a
+    @Override // ft.a
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
     public i get() {
-        return c(this.f4662a.get(), this.b.get(), this.f4663c.get());
+        return c(this.f4828a.get(), this.b.get(), this.f4829c.get());
     }
 }

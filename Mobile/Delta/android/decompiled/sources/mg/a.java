@@ -6,15 +6,15 @@ import java.util.Arrays;
 public final class a implements Cloneable {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final int[] f24190c = new int[0];
+    public static final int[] f24759c = new int[0];
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int[] f24191a;
+    public int[] f24760a;
     public int b;
 
     public a() {
         this.b = 0;
-        this.f24191a = f24190c;
+        this.f24760a = f24759c;
     }
 
     public static int[] k(int i10) {
@@ -24,7 +24,7 @@ public final class a implements Cloneable {
     public void a(boolean z10) {
         f(this.b + 1);
         if (z10) {
-            int[] iArr = this.f24191a;
+            int[] iArr = this.f24760a;
             int i10 = this.b;
             int i11 = i10 / 32;
             iArr[i11] = (1 << (i10 & 31)) | iArr[i11];
@@ -48,7 +48,7 @@ public final class a implements Cloneable {
         f(i12 + i11);
         for (int i13 = i11 - 1; i13 >= 0; i13--) {
             if (((1 << i13) & i10) != 0) {
-                int[] iArr = this.f24191a;
+                int[] iArr = this.f24760a;
                 int i14 = i12 / 32;
                 iArr[i14] = iArr[i14] | (1 << (i12 & 31));
             }
@@ -59,7 +59,7 @@ public final class a implements Cloneable {
 
     /* JADX INFO: renamed from: e, reason: merged with bridge method [inline-methods] */
     public a clone() {
-        return new a((int[]) this.f24191a.clone(), this.b);
+        return new a((int[]) this.f24760a.clone(), this.b);
     }
 
     public boolean equals(Object obj) {
@@ -67,24 +67,24 @@ public final class a implements Cloneable {
             return false;
         }
         a aVar = (a) obj;
-        return this.b == aVar.b && Arrays.equals(this.f24191a, aVar.f24191a);
+        return this.b == aVar.b && Arrays.equals(this.f24760a, aVar.f24760a);
     }
 
     public final void f(int i10) {
-        if (i10 > this.f24191a.length * 32) {
+        if (i10 > this.f24760a.length * 32) {
             int[] iArrK = k((int) Math.ceil(i10 / 0.75f));
-            int[] iArr = this.f24191a;
+            int[] iArr = this.f24760a;
             System.arraycopy(iArr, 0, iArrK, 0, iArr.length);
-            this.f24191a = iArrK;
+            this.f24760a = iArrK;
         }
     }
 
     public boolean h(int i10) {
-        return ((1 << (i10 & 31)) & this.f24191a[i10 / 32]) != 0;
+        return ((1 << (i10 & 31)) & this.f24760a[i10 / 32]) != 0;
     }
 
     public int hashCode() {
-        return (this.b * 31) + Arrays.hashCode(this.f24191a);
+        return (this.b * 31) + Arrays.hashCode(this.f24760a);
     }
 
     public int i() {
@@ -114,11 +114,11 @@ public final class a implements Cloneable {
         }
         int i10 = 0;
         while (true) {
-            int[] iArr = this.f24191a;
+            int[] iArr = this.f24760a;
             if (i10 >= iArr.length) {
                 return;
             }
-            iArr[i10] = iArr[i10] ^ aVar.f24191a[i10];
+            iArr[i10] = iArr[i10] ^ aVar.f24760a[i10];
             i10++;
         }
     }
@@ -136,7 +136,7 @@ public final class a implements Cloneable {
     }
 
     public a(int[] iArr, int i10) {
-        this.f24191a = iArr;
+        this.f24760a = iArr;
         this.b = i10;
     }
 }

@@ -6,7 +6,7 @@ public final class b6 extends cb implements pc {
         throw null;
     }
 
-    public final b6 A(f7 f7Var) {
+    public final b6 B(f7 f7Var) {
         p();
         ((c6) this.b).R(f7Var);
         return this;
@@ -18,7 +18,7 @@ public final class b6 extends cb implements pc {
         return this;
     }
 
-    public final b6 x(int i10) {
+    public final b6 y(int i10) {
         p();
         ((c6) this.b).P(i10);
         return this;

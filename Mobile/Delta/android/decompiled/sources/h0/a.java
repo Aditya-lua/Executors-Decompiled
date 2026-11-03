@@ -7,14 +7,14 @@ import n0.l2;
 public interface a extends l2 {
 
     /* JADX INFO: renamed from: h0.a$a, reason: collision with other inner class name */
-    public interface InterfaceC0334a {
+    public interface InterfaceC0336a {
         void a(int i10, int i11);
     }
 
     default void a(d1 d1Var) {
     }
 
-    void c(InterfaceC0334a interfaceC0334a);
+    void c(InterfaceC0336a interfaceC0336a);
 
     String d(String str);
 

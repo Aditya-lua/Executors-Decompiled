@@ -33,7 +33,7 @@ public final class c extends e<Boolean> {
         if (intent.getAction() == null) {
             return;
         }
-        w.e().a(d.f14444a, "Received " + intent.getAction());
+        w.e().a(d.f14424a, "Received " + intent.getAction());
         String action = intent.getAction();
         if (action != null) {
             int iHashCode = action.hashCode();
@@ -53,7 +53,7 @@ public final class c extends e<Boolean> {
     public Boolean f() {
         Intent intentRegisterReceiver = getAppContext().registerReceiver(null, new IntentFilter("android.intent.action.BATTERY_CHANGED"));
         if (intentRegisterReceiver == null) {
-            w.e().c(d.f14444a, "getInitialState - null intent received");
+            w.e().c(d.f14424a, "getInitialState - null intent received");
             return Boolean.FALSE;
         }
         int intExtra = intentRegisterReceiver.getIntExtra("status", -1);

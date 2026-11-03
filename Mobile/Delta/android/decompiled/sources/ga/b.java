@@ -4,13 +4,13 @@ package ga;
 public class b extends a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final l9.d f17951a;
+    public final l9.d f18490a;
 
     public b(l9.d dVar) {
-        this.f17951a = (l9.d) n9.m.m(dVar, "Holder must not be null");
+        this.f18490a = (l9.d) n9.m.m(dVar, "Holder must not be null");
     }
 
     public final void s2(Object obj) {
-        this.f17951a.a(obj);
+        this.f18490a.a(obj);
     }
 }

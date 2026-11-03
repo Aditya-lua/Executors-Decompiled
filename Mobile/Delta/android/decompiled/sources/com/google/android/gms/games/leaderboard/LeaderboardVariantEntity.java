@@ -2,6 +2,7 @@ package com.google.android.gms.games.leaderboard;
 
 import androidx.annotation.NonNull;
 import com.google.android.apps.common.proguard.UsedByReflection;
+import com.roblox.client.pushnotification.v2.model.PayloadNotificationChannel;
 import fb.i2;
 import ma.c;
 import n9.k;
@@ -11,38 +12,38 @@ import n9.k;
 public final class LeaderboardVariantEntity implements c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f6218a;
+    public final int f6291a;
     public final int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final boolean f6219c;
+    public final boolean f6292c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final long f6220d;
+    public final long f6293d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final String f6221e;
+    public final String f6294e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final long f6222f;
+    public final long f6295f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final String f6223g;
+    public final String f6296g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final long f6224h;
+    public final long f6297h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final String f6225i;
+    public final String f6298i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final String f6226j;
+    public final String f6299j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final String f6227k;
+    public final String f6300k;
 
     public static int a(c cVar) {
-        return k.c(Integer.valueOf(cVar.U2()), Integer.valueOf(cVar.A1()), Boolean.valueOf(cVar.P()), Long.valueOf(cVar.l1()), cVar.I(), Long.valueOf(cVar.N2()), cVar.n1(), Long.valueOf(cVar.y2()), cVar.zza(), cVar.zzc(), cVar.zzb());
+        return k.c(Integer.valueOf(cVar.T2()), Integer.valueOf(cVar.y1()), Boolean.valueOf(cVar.P()), Long.valueOf(cVar.i1()), cVar.I(), Long.valueOf(cVar.M2()), cVar.k1(), Long.valueOf(cVar.z2()), cVar.zza(), cVar.zzc(), cVar.zzb());
     }
 
     public static boolean b(c cVar, Object obj) {
@@ -53,59 +54,61 @@ public final class LeaderboardVariantEntity implements c {
             return true;
         }
         c cVar2 = (c) obj;
-        return k.b(Integer.valueOf(cVar2.U2()), Integer.valueOf(cVar.U2())) && k.b(Integer.valueOf(cVar2.A1()), Integer.valueOf(cVar.A1())) && k.b(Boolean.valueOf(cVar2.P()), Boolean.valueOf(cVar.P())) && k.b(Long.valueOf(cVar2.l1()), Long.valueOf(cVar.l1())) && k.b(cVar2.I(), cVar.I()) && k.b(Long.valueOf(cVar2.N2()), Long.valueOf(cVar.N2())) && k.b(cVar2.n1(), cVar.n1()) && k.b(Long.valueOf(cVar2.y2()), Long.valueOf(cVar.y2())) && k.b(cVar2.zza(), cVar.zza()) && k.b(cVar2.zzc(), cVar.zzc()) && k.b(cVar2.zzb(), cVar.zzb());
+        return k.b(Integer.valueOf(cVar2.T2()), Integer.valueOf(cVar.T2())) && k.b(Integer.valueOf(cVar2.y1()), Integer.valueOf(cVar.y1())) && k.b(Boolean.valueOf(cVar2.P()), Boolean.valueOf(cVar.P())) && k.b(Long.valueOf(cVar2.i1()), Long.valueOf(cVar.i1())) && k.b(cVar2.I(), cVar.I()) && k.b(Long.valueOf(cVar2.M2()), Long.valueOf(cVar.M2())) && k.b(cVar2.k1(), cVar.k1()) && k.b(Long.valueOf(cVar2.z2()), Long.valueOf(cVar.z2())) && k.b(cVar2.zza(), cVar.zza()) && k.b(cVar2.zzc(), cVar.zzc()) && k.b(cVar2.zzb(), cVar.zzb());
     }
 
     public static String f(c cVar) {
         String str;
-        k.a aVarA = k.d(cVar).a("TimeSpan", i2.a(cVar.U2()));
-        int iA1 = cVar.A1();
-        if (iA1 == -1) {
+        k.a aVarA = k.d(cVar).a("TimeSpan", i2.a(cVar.T2()));
+        int iY1 = cVar.y1();
+        if (iY1 == -1) {
             str = "UNKNOWN";
-        } else if (iA1 == 0) {
+        } else if (iY1 == 0) {
             str = "PUBLIC";
-        } else if (iA1 != 1) {
+        } else if (iY1 != 1) {
             str = "SOCIAL_1P";
-            if (iA1 != 2) {
-                if (iA1 == 3) {
+            if (iY1 != 2) {
+                if (iY1 == 3) {
                     str = "FRIENDS";
-                } else if (iA1 != 4) {
-                    StringBuilder sb2 = new StringBuilder(String.valueOf(iA1).length() + 32);
+                } else if (iY1 != 4) {
+                    StringBuilder sb2 = new StringBuilder(String.valueOf(iY1).length() + 32);
                     sb2.append("Unknown leaderboard collection: ");
-                    sb2.append(iA1);
+                    sb2.append(iY1);
                     throw new IllegalArgumentException(sb2.toString());
                 }
             }
         } else {
             str = "SOCIAL";
         }
-        return aVarA.a("Collection", str).a("RawPlayerScore", cVar.P() ? Long.valueOf(cVar.l1()) : "none").a("DisplayPlayerScore", cVar.P() ? cVar.I() : "none").a("PlayerRank", cVar.P() ? Long.valueOf(cVar.N2()) : "none").a("DisplayPlayerRank", cVar.P() ? cVar.n1() : "none").a("NumScores", Long.valueOf(cVar.y2())).a("TopPageNextToken", cVar.zza()).a("WindowPageNextToken", cVar.zzc()).a("WindowPagePrevToken", cVar.zzb()).toString();
-    }
-
-    @Override // ma.c
-    public final int A1() {
-        return this.b;
+        k.a aVarA2 = aVarA.a("Collection", str);
+        boolean zP = cVar.P();
+        String strK1 = PayloadNotificationChannel.SOUND_NONE;
+        k.a aVarA3 = aVarA2.a("RawPlayerScore", zP ? Long.valueOf(cVar.i1()) : PayloadNotificationChannel.SOUND_NONE).a("DisplayPlayerScore", cVar.P() ? cVar.I() : PayloadNotificationChannel.SOUND_NONE).a("PlayerRank", cVar.P() ? Long.valueOf(cVar.M2()) : PayloadNotificationChannel.SOUND_NONE);
+        if (cVar.P()) {
+            strK1 = cVar.k1();
+        }
+        return aVarA3.a("DisplayPlayerRank", strK1).a("NumScores", Long.valueOf(cVar.z2())).a("TopPageNextToken", cVar.zza()).a("WindowPageNextToken", cVar.zzc()).a("WindowPagePrevToken", cVar.zzb()).toString();
     }
 
     @Override // ma.c
     @NonNull
     public final String I() {
-        return this.f6221e;
+        return this.f6294e;
     }
 
     @Override // ma.c
-    public final long N2() {
-        return this.f6222f;
+    public final long M2() {
+        return this.f6295f;
     }
 
     @Override // ma.c
     public final boolean P() {
-        return this.f6219c;
+        return this.f6292c;
     }
 
     @Override // ma.c
-    public final int U2() {
-        return this.f6218a;
+    public final int T2() {
+        return this.f6291a;
     }
 
     public final boolean equals(Object obj) {
@@ -117,14 +120,14 @@ public final class LeaderboardVariantEntity implements c {
     }
 
     @Override // ma.c
-    public final long l1() {
-        return this.f6220d;
+    public final long i1() {
+        return this.f6293d;
     }
 
     @Override // ma.c
     @NonNull
-    public final String n1() {
-        return this.f6223g;
+    public final String k1() {
+        return this.f6296g;
     }
 
     @NonNull
@@ -133,25 +136,30 @@ public final class LeaderboardVariantEntity implements c {
     }
 
     @Override // ma.c
-    public final long y2() {
-        return this.f6224h;
+    public final int y1() {
+        return this.b;
+    }
+
+    @Override // ma.c
+    public final long z2() {
+        return this.f6297h;
     }
 
     @Override // ma.c
     @NonNull
     public final String zza() {
-        return this.f6225i;
+        return this.f6298i;
     }
 
     @Override // ma.c
     @NonNull
     public final String zzb() {
-        return this.f6226j;
+        return this.f6299j;
     }
 
     @Override // ma.c
     @NonNull
     public final String zzc() {
-        return this.f6227k;
+        return this.f6300k;
     }
 }

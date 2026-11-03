@@ -22,6 +22,8 @@ public abstract class InitParams {
 
         public abstract Builder setIsVrDevice(boolean z10);
 
+        public abstract Builder setPioneerPlaceId(long j10);
+
         public abstract Builder setPlatformParams(PlatformParams platformParams);
 
         public abstract Builder setUserAgent(String str);
@@ -30,7 +32,7 @@ public abstract class InitParams {
     }
 
     public static Builder builder() {
-        return new AutoValue_InitParams.Builder().setIsVrDevice(false);
+        return new AutoValue_InitParams.Builder().setIsVrDevice(false).setPioneerPlaceId(0L);
     }
 
     public abstract String baseURL();
@@ -44,6 +46,8 @@ public abstract class InitParams {
     public abstract boolean isTablet();
 
     public abstract boolean isVrDevice();
+
+    public abstract long pioneerPlaceId();
 
     public abstract PlatformParams platformParams();
 

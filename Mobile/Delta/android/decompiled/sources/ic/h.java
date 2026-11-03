@@ -1,115 +1,72 @@
 package ic;
 
-import android.animation.Animator;
-import android.animation.AnimatorInflater;
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
-import android.animation.PropertyValuesHolder;
-import android.content.Context;
-import android.content.res.TypedArray;
-import android.util.Log;
-import androidx.annotation.NonNull;
-import java.util.ArrayList;
-import java.util.List;
-
 /* JADX INFO: loaded from: classes2.dex */
-public class h {
+public final class h {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final w1.j<String, i> f20481a = new w1.j<>();
-    public final w1.j<String, PropertyValuesHolder[]> b = new w1.j<>();
+    public static final int f20709a = 2131492913;
+    public static final int b = 2131492914;
 
-    public static void a(@NonNull h hVar, Animator animator) {
-        if (animator instanceof ObjectAnimator) {
-            ObjectAnimator objectAnimator = (ObjectAnimator) animator;
-            hVar.h(objectAnimator.getPropertyName(), objectAnimator.getValues());
-            hVar.i(objectAnimator.getPropertyName(), i.b(objectAnimator));
-        } else {
-            throw new IllegalArgumentException("Animator must be an ObjectAnimator: " + animator);
-        }
-    }
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public static final int f20710c = 2131492915;
 
-    public static h b(@NonNull Context context, @NonNull TypedArray typedArray, int i10) {
-        int resourceId;
-        if (!typedArray.hasValue(i10) || (resourceId = typedArray.getResourceId(i10, 0)) == 0) {
-            return null;
-        }
-        return c(context, resourceId);
-    }
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public static final int f20711d = 2131492924;
 
-    public static h c(@NonNull Context context, int i10) {
-        try {
-            Animator animatorLoadAnimator = AnimatorInflater.loadAnimator(context, i10);
-            if (animatorLoadAnimator instanceof AnimatorSet) {
-                return d(((AnimatorSet) animatorLoadAnimator).getChildAnimations());
-            }
-            if (animatorLoadAnimator == null) {
-                return null;
-            }
-            ArrayList arrayList = new ArrayList();
-            arrayList.add(animatorLoadAnimator);
-            return d(arrayList);
-        } catch (Exception e10) {
-            Log.w("MotionSpec", "Can't load animation resource ID #0x" + Integer.toHexString(i10), e10);
-            return null;
-        }
-    }
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public static final int f20712e = 2131492925;
 
-    @NonNull
-    public static h d(@NonNull List<Animator> list) {
-        h hVar = new h();
-        int size = list.size();
-        for (int i10 = 0; i10 < size; i10++) {
-            a(hVar, list.get(i10));
-        }
-        return hVar;
-    }
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    public static final int f20713f = 2131492926;
 
-    public i e(String str) {
-        if (g(str)) {
-            return this.f20481a.get(str);
-        }
-        throw new IllegalArgumentException();
-    }
+    /* JADX INFO: renamed from: g, reason: collision with root package name */
+    public static final int f20714g = 2131492960;
 
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj instanceof h) {
-            return this.f20481a.equals(((h) obj).f20481a);
-        }
-        return false;
-    }
+    /* JADX INFO: renamed from: h, reason: collision with root package name */
+    public static final int f20715h = 2131492961;
 
-    public long f() {
-        int size = this.f20481a.getSize();
-        long jMax = 0;
-        for (int i10 = 0; i10 < size; i10++) {
-            i iVarK = this.f20481a.k(i10);
-            jMax = Math.max(jMax, iVarK.c() + iVarK.d());
-        }
-        return jMax;
-    }
+    /* JADX INFO: renamed from: i, reason: collision with root package name */
+    public static final int f20716i = 2131492962;
 
-    public boolean g(String str) {
-        return this.f20481a.get(str) != null;
-    }
+    /* JADX INFO: renamed from: j, reason: collision with root package name */
+    public static final int f20717j = 2131492964;
 
-    public void h(String str, PropertyValuesHolder[] propertyValuesHolderArr) {
-        this.b.put(str, propertyValuesHolderArr);
-    }
+    /* JADX INFO: renamed from: k, reason: collision with root package name */
+    public static final int f20718k = 2131492965;
 
-    public int hashCode() {
-        return this.f20481a.hashCode();
-    }
+    /* JADX INFO: renamed from: l, reason: collision with root package name */
+    public static final int f20719l = 2131492966;
 
-    public void i(String str, i iVar) {
-        this.f20481a.put(str, iVar);
-    }
+    /* JADX INFO: renamed from: m, reason: collision with root package name */
+    public static final int f20720m = 2131492975;
 
-    @NonNull
-    public String toString() {
-        return '\n' + getClass().getName() + '{' + Integer.toHexString(System.identityHashCode(this)) + " timings: " + this.f20481a + "}\n";
-    }
+    /* JADX INFO: renamed from: n, reason: collision with root package name */
+    public static final int f20721n = 2131492976;
+
+    /* JADX INFO: renamed from: o, reason: collision with root package name */
+    public static final int f20722o = 2131492977;
+
+    /* JADX INFO: renamed from: p, reason: collision with root package name */
+    public static final int f20723p = 2131492979;
+
+    /* JADX INFO: renamed from: q, reason: collision with root package name */
+    public static final int f20724q = 2131492981;
+
+    /* JADX INFO: renamed from: r, reason: collision with root package name */
+    public static final int f20725r = 2131492984;
+
+    /* JADX INFO: renamed from: s, reason: collision with root package name */
+    public static final int f20726s = 2131492985;
+
+    /* JADX INFO: renamed from: t, reason: collision with root package name */
+    public static final int f20727t = 2131492986;
+
+    /* JADX INFO: renamed from: u, reason: collision with root package name */
+    public static final int f20728u = 2131492987;
+
+    /* JADX INFO: renamed from: v, reason: collision with root package name */
+    public static final int f20729v = 2131492990;
+
+    /* JADX INFO: renamed from: w, reason: collision with root package name */
+    public static final int f20730w = 2131492991;
 }

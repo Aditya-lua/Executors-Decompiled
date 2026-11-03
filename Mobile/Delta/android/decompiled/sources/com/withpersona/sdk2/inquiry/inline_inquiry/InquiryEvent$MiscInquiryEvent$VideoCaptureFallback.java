@@ -13,7 +13,7 @@ public final /* data */ class InquiryEvent$MiscInquiryEvent$VideoCaptureFallback
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final InquiryEvent$MiscInquiryEvent$VideoCaptureFallback f11086a = new InquiryEvent$MiscInquiryEvent$VideoCaptureFallback();
+    public static final InquiryEvent$MiscInquiryEvent$VideoCaptureFallback f11167a = new InquiryEvent$MiscInquiryEvent$VideoCaptureFallback();
 
     @NotNull
     public static final Parcelable.Creator<InquiryEvent$MiscInquiryEvent$VideoCaptureFallback> CREATOR = new a();
@@ -25,7 +25,7 @@ public final /* data */ class InquiryEvent$MiscInquiryEvent$VideoCaptureFallback
         public final InquiryEvent$MiscInquiryEvent$VideoCaptureFallback createFromParcel(Parcel parcel) {
             Intrinsics.checkNotNullParameter(parcel, "parcel");
             parcel.readInt();
-            return InquiryEvent$MiscInquiryEvent$VideoCaptureFallback.f11086a;
+            return InquiryEvent$MiscInquiryEvent$VideoCaptureFallback.f11167a;
         }
 
         @Override // android.os.Parcelable.Creator

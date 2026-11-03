@@ -8,7 +8,7 @@ import com.google.android.gms.common.moduleinstall.ModuleInstallResponse;
 /* JADX INFO: loaded from: classes.dex */
 public class a extends f {
     @Override // s9.g
-    public void K(Status status, ModuleInstallIntentResponse moduleInstallIntentResponse) {
+    public void I(Status status, ModuleInstallIntentResponse moduleInstallIntentResponse) {
         throw new UnsupportedOperationException();
     }
 
@@ -18,12 +18,12 @@ public class a extends f {
     }
 
     @Override // s9.g
-    public void u1(Status status, ModuleInstallResponse moduleInstallResponse) {
+    public void s1(Status status, ModuleInstallResponse moduleInstallResponse) {
         throw new UnsupportedOperationException();
     }
 
     @Override // s9.g
-    public void x1(Status status, ModuleAvailabilityResponse moduleAvailabilityResponse) {
+    public void v1(Status status, ModuleAvailabilityResponse moduleAvailabilityResponse) {
         throw new UnsupportedOperationException();
     }
 }

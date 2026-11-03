@@ -2,13 +2,13 @@ package com.google.android.gms.internal.mlkit_vision_barcode;
 
 import android.content.Context;
 import b8.t;
-import lf.x;
-import xf.b;
+import mf.x;
 import y7.c;
 import y7.d;
 import y7.g;
 import y7.h;
 import y7.i;
+import yf.b;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class zzwx implements zzwf {
@@ -18,12 +18,12 @@ public final class zzwx implements zzwf {
 
     public zzwx(Context context, zzwh zzwhVar) {
         this.zzc = zzwhVar;
-        z7.a aVar = z7.a.f37333g;
+        z7.a aVar = z7.a.f38028g;
         t.f(context);
         final i iVarG = t.c().g(aVar);
         if (aVar.a().contains(c.b("json"))) {
             this.zza = new x(new b() { // from class: com.google.android.gms.internal.mlkit_vision_barcode.zzwu
-                @Override // xf.b
+                @Override // yf.b
                 public final Object get() {
                     return iVarG.a("FIREBASE_ML_SDK", byte[].class, c.b("json"), new g() { // from class: com.google.android.gms.internal.mlkit_vision_barcode.zzww
                         @Override // y7.g
@@ -35,7 +35,7 @@ public final class zzwx implements zzwf {
             });
         }
         this.zzb = new x(new b() { // from class: com.google.android.gms.internal.mlkit_vision_barcode.zzwv
-            @Override // xf.b
+            @Override // yf.b
             public final Object get() {
                 return iVarG.a("FIREBASE_ML_SDK", byte[].class, c.b("proto"), new g() { // from class: com.google.android.gms.internal.mlkit_vision_barcode.zzwt
                     @Override // y7.g

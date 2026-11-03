@@ -1,7 +1,7 @@
 package com.withpersona.sdk2.inquiry.tracking.network;
 
-import ft.d;
-import ft.h;
+import dt.d;
+import dt.h;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class TrackingEventsServiceModule_ServerEndpointFactory implements d<String> {
@@ -19,7 +19,7 @@ public final class TrackingEventsServiceModule_ServerEndpointFactory implements 
         return (String) h.e(trackingEventsServiceModule.getTrackingEventsServiceServerEndpoint());
     }
 
-    @Override // ht.a
+    @Override // ft.a
     public String get() {
         return serverEndpoint(this.module);
     }

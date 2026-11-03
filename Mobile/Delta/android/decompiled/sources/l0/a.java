@@ -5,13 +5,13 @@ import g0.f1;
 import g0.g2;
 import g0.r1;
 import g0.w2;
+import gt.l;
 import j0.ResolvedFeatureGroup;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import jt.l;
 import kotlin.Metadata;
 import kotlin.collections.CollectionsKt;
 import kotlin.collections.p;
@@ -33,7 +33,7 @@ public final class a implements c {
     public /* synthetic */ class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f22883a;
+        public static final /* synthetic */ int[] f23277a;
 
         static {
             int[] iArr = new int[k0.b.values().length];
@@ -53,7 +53,7 @@ public final class a implements c {
                 iArr[k0.b.VIDEO_STABILIZATION.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
-            f22883a = iArr;
+            f23277a = iArr;
         }
     }
 
@@ -119,7 +119,7 @@ public final class a implements c {
         }
         Set setI = r0.i(sessionConfig.h(), currentOptionalFeatures);
         r1.a("DefaultFeatureGroupResolver", "getFeatureListResolvedByPriority: features = " + setI + ", useCases = " + sessionConfig.k());
-        return this.cameraInfoInternal.A(new ResolvedFeatureGroup(setI), sessionConfig) ? new l0.b.Supported(new ResolvedFeatureGroup(setI)) : l0.b.C0408b.f22885a;
+        return this.cameraInfoInternal.A(new ResolvedFeatureGroup(setI), sessionConfig) ? new l0.b.Supported(new ResolvedFeatureGroup(setI)) : l0.b.C0408b.f23279a;
     }
 
     /* JADX WARN: Code duplicated, block: B:39:0x0089  */
@@ -153,7 +153,7 @@ public final class a implements c {
                 }
             }
         }
-        int i10 = b.f22883a[bVar.getFeatureTypeInternal().ordinal()];
+        int i10 = b.f23277a[bVar.getFeatureTypeInternal().ordinal()];
         if (i10 == 1) {
             string = j0.c.IMAGE_CAPTURE.toString();
             if (z10) {

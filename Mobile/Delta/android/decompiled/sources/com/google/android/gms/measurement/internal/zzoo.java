@@ -14,10 +14,10 @@ public final class zzoo extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzoo> CREATOR = new vd();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final List f7436f;
+    public final List f7510f;
 
     public zzoo(List list) {
-        this.f7436f = list;
+        this.f7510f = list;
     }
 
     public static zzoo a(za... zaVarArr) {
@@ -28,7 +28,7 @@ public final class zzoo extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i10) {
-        List list = this.f7436f;
+        List list = this.f7510f;
         int iA = b.a(parcel);
         b.p(parcel, 1, list, false);
         b.b(parcel, iA);

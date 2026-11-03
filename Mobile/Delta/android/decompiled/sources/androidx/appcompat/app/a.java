@@ -18,30 +18,30 @@ import j.l;
 public class a extends l implements DialogInterface {
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final AlertController f827g;
+    public final AlertController f672g;
 
     /* JADX INFO: renamed from: androidx.appcompat.app.a$a, reason: collision with other inner class name */
-    public static class C0013a {
+    public static class C0009a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final AlertController.b f828a;
+        public final AlertController.b f673a;
         public final int b;
 
-        public C0013a(@NonNull Context context) {
+        public C0009a(@NonNull Context context) {
             this(context, a.r(context, 0));
         }
 
         @NonNull
         public a a() {
-            a aVar = new a(this.f828a.f793a, this.b);
-            this.f828a.a(aVar.f827g);
-            aVar.setCancelable(this.f828a.f809r);
-            if (this.f828a.f809r) {
+            a aVar = new a(this.f673a.f638a, this.b);
+            this.f673a.a(aVar.f672g);
+            aVar.setCancelable(this.f673a.f654r);
+            if (this.f673a.f654r) {
                 aVar.setCanceledOnTouchOutside(true);
             }
-            aVar.setOnCancelListener(this.f828a.f810s);
-            aVar.setOnDismissListener(this.f828a.f811t);
-            DialogInterface.OnKeyListener onKeyListener = this.f828a.f812u;
+            aVar.setOnCancelListener(this.f673a.f655s);
+            aVar.setOnDismissListener(this.f673a.f656t);
+            DialogInterface.OnKeyListener onKeyListener = this.f673a.f657u;
             if (onKeyListener != null) {
                 aVar.setOnKeyListener(onKeyListener);
             }
@@ -50,97 +50,97 @@ public class a extends l implements DialogInterface {
 
         @NonNull
         public Context b() {
-            return this.f828a.f793a;
+            return this.f673a.f638a;
         }
 
-        public C0013a c(ListAdapter listAdapter, DialogInterface.OnClickListener onClickListener) {
-            AlertController.b bVar = this.f828a;
-            bVar.f814w = listAdapter;
-            bVar.f815x = onClickListener;
+        public C0009a c(ListAdapter listAdapter, DialogInterface.OnClickListener onClickListener) {
+            AlertController.b bVar = this.f673a;
+            bVar.f659w = listAdapter;
+            bVar.f660x = onClickListener;
             return this;
         }
 
-        public C0013a d(boolean z10) {
-            this.f828a.f809r = z10;
+        public C0009a d(boolean z10) {
+            this.f673a.f654r = z10;
             return this;
         }
 
-        public C0013a e(View view) {
-            this.f828a.f798g = view;
+        public C0009a e(View view) {
+            this.f673a.f643g = view;
             return this;
         }
 
-        public C0013a f(Drawable drawable) {
-            this.f828a.f795d = drawable;
+        public C0009a f(Drawable drawable) {
+            this.f673a.f640d = drawable;
             return this;
         }
 
-        public C0013a g(int i10) {
-            AlertController.b bVar = this.f828a;
-            bVar.f799h = bVar.f793a.getText(i10);
+        public C0009a g(int i10) {
+            AlertController.b bVar = this.f673a;
+            bVar.f644h = bVar.f638a.getText(i10);
             return this;
         }
 
-        public C0013a h(CharSequence charSequence) {
-            this.f828a.f799h = charSequence;
+        public C0009a h(CharSequence charSequence) {
+            this.f673a.f644h = charSequence;
             return this;
         }
 
-        public C0013a i(int i10, DialogInterface.OnClickListener onClickListener) {
-            AlertController.b bVar = this.f828a;
-            bVar.f803l = bVar.f793a.getText(i10);
-            this.f828a.f805n = onClickListener;
+        public C0009a i(int i10, DialogInterface.OnClickListener onClickListener) {
+            AlertController.b bVar = this.f673a;
+            bVar.f648l = bVar.f638a.getText(i10);
+            this.f673a.f650n = onClickListener;
             return this;
         }
 
-        public C0013a j(int i10, DialogInterface.OnClickListener onClickListener) {
-            AlertController.b bVar = this.f828a;
-            bVar.f806o = bVar.f793a.getText(i10);
-            this.f828a.f808q = onClickListener;
+        public C0009a j(int i10, DialogInterface.OnClickListener onClickListener) {
+            AlertController.b bVar = this.f673a;
+            bVar.f651o = bVar.f638a.getText(i10);
+            this.f673a.f653q = onClickListener;
             return this;
         }
 
-        public C0013a k(DialogInterface.OnDismissListener onDismissListener) {
-            this.f828a.f811t = onDismissListener;
+        public C0009a k(DialogInterface.OnDismissListener onDismissListener) {
+            this.f673a.f656t = onDismissListener;
             return this;
         }
 
-        public C0013a l(DialogInterface.OnKeyListener onKeyListener) {
-            this.f828a.f812u = onKeyListener;
+        public C0009a l(DialogInterface.OnKeyListener onKeyListener) {
+            this.f673a.f657u = onKeyListener;
             return this;
         }
 
-        public C0013a m(int i10, DialogInterface.OnClickListener onClickListener) {
-            AlertController.b bVar = this.f828a;
-            bVar.f800i = bVar.f793a.getText(i10);
-            this.f828a.f802k = onClickListener;
+        public C0009a m(int i10, DialogInterface.OnClickListener onClickListener) {
+            AlertController.b bVar = this.f673a;
+            bVar.f645i = bVar.f638a.getText(i10);
+            this.f673a.f647k = onClickListener;
             return this;
         }
 
-        public C0013a n(CharSequence charSequence, DialogInterface.OnClickListener onClickListener) {
-            AlertController.b bVar = this.f828a;
-            bVar.f800i = charSequence;
-            bVar.f802k = onClickListener;
+        public C0009a n(CharSequence charSequence, DialogInterface.OnClickListener onClickListener) {
+            AlertController.b bVar = this.f673a;
+            bVar.f645i = charSequence;
+            bVar.f647k = onClickListener;
             return this;
         }
 
-        public C0013a o(ListAdapter listAdapter, int i10, DialogInterface.OnClickListener onClickListener) {
-            AlertController.b bVar = this.f828a;
-            bVar.f814w = listAdapter;
-            bVar.f815x = onClickListener;
+        public C0009a o(ListAdapter listAdapter, int i10, DialogInterface.OnClickListener onClickListener) {
+            AlertController.b bVar = this.f673a;
+            bVar.f659w = listAdapter;
+            bVar.f660x = onClickListener;
             bVar.I = i10;
             bVar.H = true;
             return this;
         }
 
-        public C0013a p(int i10) {
-            AlertController.b bVar = this.f828a;
-            bVar.f797f = bVar.f793a.getText(i10);
+        public C0009a p(int i10) {
+            AlertController.b bVar = this.f673a;
+            bVar.f642f = bVar.f638a.getText(i10);
             return this;
         }
 
-        public C0013a q(CharSequence charSequence) {
-            this.f828a.f797f = charSequence;
+        public C0009a q(CharSequence charSequence) {
+            this.f673a.f642f = charSequence;
             return this;
         }
 
@@ -150,15 +150,15 @@ public class a extends l implements DialogInterface {
             return aVarA;
         }
 
-        public C0013a(@NonNull Context context, int i10) {
-            this.f828a = new AlertController.b(new ContextThemeWrapper(context, a.r(context, i10)));
+        public C0009a(@NonNull Context context, int i10) {
+            this.f673a = new AlertController.b(new ContextThemeWrapper(context, a.r(context, i10)));
             this.b = i10;
         }
     }
 
     public a(@NonNull Context context, int i10) {
         super(context, r(context, i10));
-        this.f827g = new AlertController(getContext(), this, getWindow());
+        this.f672g = new AlertController(getContext(), this, getWindow());
     }
 
     public static int r(@NonNull Context context, int i10) {
@@ -166,19 +166,19 @@ public class a extends l implements DialogInterface {
             return i10;
         }
         TypedValue typedValue = new TypedValue();
-        context.getTheme().resolveAttribute(i.a.f19900p, typedValue, true);
+        context.getTheme().resolveAttribute(i.a.f20016p, typedValue, true);
         return typedValue.resourceId;
     }
 
     @Override // j.l, e.w, android.app.Dialog
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        this.f827g.f();
+        this.f672g.f();
     }
 
     @Override // android.app.Dialog, android.view.KeyEvent.Callback
     public boolean onKeyDown(int i10, KeyEvent keyEvent) {
-        if (this.f827g.g(i10, keyEvent)) {
+        if (this.f672g.g(i10, keyEvent)) {
             return true;
         }
         return super.onKeyDown(i10, keyEvent);
@@ -186,39 +186,39 @@ public class a extends l implements DialogInterface {
 
     @Override // android.app.Dialog, android.view.KeyEvent.Callback
     public boolean onKeyUp(int i10, KeyEvent keyEvent) {
-        if (this.f827g.h(i10, keyEvent)) {
+        if (this.f672g.h(i10, keyEvent)) {
             return true;
         }
         return super.onKeyUp(i10, keyEvent);
     }
 
     public Button p(int i10) {
-        return this.f827g.c(i10);
+        return this.f672g.c(i10);
     }
 
     public ListView q() {
-        return this.f827g.e();
+        return this.f672g.e();
     }
 
     @Override // j.l, android.app.Dialog
     public void setTitle(CharSequence charSequence) {
         super.setTitle(charSequence);
-        this.f827g.q(charSequence);
+        this.f672g.q(charSequence);
     }
 
     public void t(int i10, CharSequence charSequence, DialogInterface.OnClickListener onClickListener) {
-        this.f827g.k(i10, charSequence, onClickListener, null, null);
+        this.f672g.k(i10, charSequence, onClickListener, null, null);
     }
 
     public void u(CharSequence charSequence) {
-        this.f827g.o(charSequence);
+        this.f672g.o(charSequence);
     }
 
     public void v(View view) {
-        this.f827g.s(view);
+        this.f672g.s(view);
     }
 
-    public void w(View view, int i10, int i11, int i12, int i13) {
-        this.f827g.t(view, i10, i11, i12, i13);
+    public void x(View view, int i10, int i11, int i12, int i13) {
+        this.f672g.t(view, i10, i11, i12, i13);
     }
 }

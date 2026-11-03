@@ -1,7 +1,7 @@
 package com.withpersona.sdk2.inquiry.network.core;
 
 import org.jetbrains.annotations.NotNull;
-import um.h;
+import sm.h;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class JsonAdapterBinding<T> {

@@ -22,10 +22,10 @@ public interface b extends IInterface {
             Status status = (Status) ab.e.a(parcel, Status.CREATOR);
             GetRestoreCredentialResponse getRestoreCredentialResponse = (GetRestoreCredentialResponse) ab.e.a(parcel, GetRestoreCredentialResponse.CREATOR);
             s2(parcel);
-            S(status, getRestoreCredentialResponse);
+            Q(status, getRestoreCredentialResponse);
             return true;
         }
     }
 
-    void S(@NonNull Status status, @NonNull GetRestoreCredentialResponse getRestoreCredentialResponse);
+    void Q(@NonNull Status status, @NonNull GetRestoreCredentialResponse getRestoreCredentialResponse);
 }

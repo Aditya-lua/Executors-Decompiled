@@ -1,11 +1,24 @@
 package fn;
 
-import kotlin.Metadata;
+import com.withpersona.sdk2.camera.camera2.Camera2PreviewView;
+import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"Lfn/d0;", "Lfn/h;", "<init>", "()V", "camera_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class d0 extends h {
-    public d0() {
-        super(null);
+public final class d0 implements b0.a {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final c0 f17370a;
+
+    public d0(c0 c0Var) {
+        this.f17370a = c0Var;
+    }
+
+    public static dt.i<b0.a> b(c0 c0Var) {
+        return dt.e.a(new d0(c0Var));
+    }
+
+    @Override // fn.b0.a
+    public b0 a(CameraChoices cameraChoices, Camera2PreviewView camera2PreviewView, g gVar, kn.a aVar, @Nullable sr.a aVar2, boolean z10) {
+        return this.f17370a.b(cameraChoices, camera2PreviewView, gVar, aVar, aVar2, z10);
     }
 }

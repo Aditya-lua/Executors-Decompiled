@@ -111,7 +111,7 @@ public final class CredentialProviderPlayServicesImpl implements e3.s {
             Intrinsics.checkNotNullParameter(request, "request");
             Iterator<e3.r> it = request.a().iterator();
             while (it.hasNext()) {
-                if (it.next() instanceof gc.c) {
+                if (it.next() instanceof hc.c) {
                     return true;
                 }
             }
@@ -145,7 +145,7 @@ public final class CredentialProviderPlayServicesImpl implements e3.s {
                 return CredentialProviderPlayServicesImpl.onClearCredential$lambda$10$lambda$9(executor, pVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -157,7 +157,7 @@ public final class CredentialProviderPlayServicesImpl implements e3.s {
                 pVar.onResult(null);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -167,9 +167,9 @@ public final class CredentialProviderPlayServicesImpl implements e3.s {
         Intrinsics.checkNotNullParameter(e10, "e");
         Log.w(TAG, "Clearing restore credential failed", e10);
         final c0 c0Var = new c0();
-        c0Var.f22552a = new f3.c("Clear restore credential failed for unknown reason.");
+        c0Var.f23007a = new f3.c("Clear restore credential failed for unknown reason.");
         if ((e10 instanceof k9.b) && ((k9.b) e10).b() == 40201) {
-            c0Var.f22552a = new f3.c("The restore credential internal service had a failure.");
+            c0Var.f23007a = new f3.c("The restore credential internal service had a failure.");
         }
         INSTANCE.cancellationReviewerWithCallback$credentials_play_services_auth_release(cancellationSignal, new Function0() { // from class: androidx.credentials.playservices.p
             @Override // kotlin.jvm.functions.Function0
@@ -187,12 +187,12 @@ public final class CredentialProviderPlayServicesImpl implements e3.s {
                 CredentialProviderPlayServicesImpl.onClearCredential$lambda$14$lambda$13$lambda$12(pVar, c0Var);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public static final void onClearCredential$lambda$14$lambda$13$lambda$12(e3.p pVar, c0 c0Var) {
-        pVar.a(c0Var.f22552a);
+        pVar.a(c0Var.f23007a);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -203,7 +203,7 @@ public final class CredentialProviderPlayServicesImpl implements e3.s {
                 return CredentialProviderPlayServicesImpl.onClearCredential$lambda$17$lambda$16(executor, pVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -215,7 +215,7 @@ public final class CredentialProviderPlayServicesImpl implements e3.s {
                 pVar.onResult(null);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -233,7 +233,7 @@ public final class CredentialProviderPlayServicesImpl implements e3.s {
                 CredentialProviderPlayServicesImpl.onClearCredential$lambda$7$lambda$6(pVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -249,7 +249,7 @@ public final class CredentialProviderPlayServicesImpl implements e3.s {
                 CredentialProviderPlayServicesImpl.onCreateCredential$lambda$5$lambda$4(pVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -265,7 +265,7 @@ public final class CredentialProviderPlayServicesImpl implements e3.s {
                 CredentialProviderPlayServicesImpl.onGetCredential$lambda$1$lambda$0(pVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -281,7 +281,7 @@ public final class CredentialProviderPlayServicesImpl implements e3.s {
                 CredentialProviderPlayServicesImpl.onGetCredential$lambda$3$lambda$2(pVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -305,7 +305,7 @@ public final class CredentialProviderPlayServicesImpl implements e3.s {
         }).e(new sb.f() { // from class: androidx.credentials.playservices.j
             @Override // sb.f
             public final void onFailure(Exception exc) {
-                CredentialProviderPlayServicesImpl.runFallbackClearCredFlow$lambda$27(this.f2114a, cancellationSignal, executor, callback, exc);
+                CredentialProviderPlayServicesImpl.runFallbackClearCredFlow$lambda$27(this.f1959a, cancellationSignal, executor, callback, exc);
             }
         });
     }
@@ -318,7 +318,7 @@ public final class CredentialProviderPlayServicesImpl implements e3.s {
                 return CredentialProviderPlayServicesImpl.runFallbackClearCredFlow$lambda$22$lambda$21(executor, pVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -330,7 +330,7 @@ public final class CredentialProviderPlayServicesImpl implements e3.s {
                 pVar.onResult(null);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -353,7 +353,7 @@ public final class CredentialProviderPlayServicesImpl implements e3.s {
                 CredentialProviderPlayServicesImpl.runFallbackClearCredFlow$lambda$27$lambda$26$lambda$25$lambda$24(pVar, exc);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */

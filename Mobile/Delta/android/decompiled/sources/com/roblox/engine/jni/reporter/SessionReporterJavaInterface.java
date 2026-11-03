@@ -1,7 +1,7 @@
 package com.roblox.engine.jni.reporter;
 
-import rk.a;
-import rk.b;
+import pk.a;
+import pk.b;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class SessionReporterJavaInterface {

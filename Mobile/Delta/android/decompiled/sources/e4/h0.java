@@ -18,7 +18,7 @@ public final class h0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final h0 f15098a;
+    public static final h0 f15712a;
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @Nullable
@@ -30,7 +30,7 @@ public final class h0 {
 
     static {
         h0 h0Var = new h0();
-        f15098a = h0Var;
+        f15712a = h0Var;
         PLATFORM_IMPL = new i0();
         SUPPORT_IMPL = h0Var.c();
     }
@@ -39,8 +39,8 @@ public final class h0 {
         Intrinsics.checkNotNullParameter(inFragment, "inFragment");
         Intrinsics.checkNotNullParameter(outFragment, "outFragment");
         Intrinsics.checkNotNullParameter(sharedElements, "sharedElements");
-        k2.u uVarB = isPop ? outFragment.B() : inFragment.B();
-        if (uVarB != null) {
+        k2.u uVarA = isPop ? outFragment.A() : inFragment.A();
+        if (uVarA != null) {
             ArrayList arrayList = new ArrayList(sharedElements.size());
             Iterator<Map.Entry<String, View>> it = sharedElements.entrySet().iterator();
             while (it.hasNext()) {
@@ -52,9 +52,9 @@ public final class h0 {
                 arrayList2.add(it2.next().getKey());
             }
             if (isStart) {
-                uVarB.c(arrayList2, arrayList, null);
+                uVarA.c(arrayList2, arrayList, null);
             } else {
-                uVarB.b(arrayList2, arrayList, null);
+                uVarA.b(arrayList2, arrayList, null);
             }
         }
     }

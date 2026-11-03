@@ -13,16 +13,16 @@ import java.util.concurrent.TimeoutException;
 public class a implements ServiceConnection {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f21166a = false;
+    public boolean f21739a = false;
     public final BlockingQueue b = new LinkedBlockingQueue();
 
     @NonNull
     public IBinder a(long j10, @NonNull TimeUnit timeUnit) throws TimeoutException {
         n9.m.k("BlockingServiceConnection.getServiceWithTimeout() called on main thread");
-        if (this.f21166a) {
+        if (this.f21739a) {
             throw new IllegalStateException("Cannot call get on this connection more than once");
         }
-        this.f21166a = true;
+        this.f21739a = true;
         IBinder iBinder = (IBinder) this.b.poll(j10, timeUnit);
         if (iBinder != null) {
             return iBinder;

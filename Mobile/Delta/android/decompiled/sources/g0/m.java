@@ -9,11 +9,11 @@ public interface m {
         }
     }
 
-    me.x<Void> c(boolean z10);
+    ne.x<Void> c(boolean z10);
 
-    me.x<Void> e(float f10);
+    ne.x<Void> e(float f10);
 
-    me.x<Void> g(float f10);
+    ne.x<Void> g(float f10);
 
-    me.x<n0> o(m0 m0Var);
+    ne.x<n0> o(m0 m0Var);
 }

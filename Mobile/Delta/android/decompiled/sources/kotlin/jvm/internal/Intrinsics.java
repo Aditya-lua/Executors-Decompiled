@@ -116,7 +116,7 @@ public class Intrinsics {
     }
 
     public static void o() {
-        throw ((jt.e) j(new jt.e()));
+        throw ((gt.e) j(new gt.e()));
     }
 
     public static void p(String str) {
@@ -136,7 +136,7 @@ public class Intrinsics {
     }
 
     public static void t(String str) {
-        throw ((jt.d0) j(new jt.d0(str)));
+        throw ((gt.d0) j(new gt.d0(str)));
     }
 
     public static void u(String str) {

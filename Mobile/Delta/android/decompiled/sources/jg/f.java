@@ -45,87 +45,87 @@ import java.util.concurrent.atomic.AtomicLongArray;
 
 /* JADX INFO: loaded from: classes2.dex */
 public final class f {
-    public static final jg.e A = jg.e.f21385d;
+    public static final jg.e A = jg.e.f21844d;
     public static final String B = null;
-    public static final jg.d C = jg.c.f21378a;
-    public static final z D = y.f21451a;
+    public static final jg.d C = jg.c.f21837a;
+    public static final z D = y.f21910a;
     public static final z E = y.b;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public static final x f21389z = null;
+    public static final x f21848z = null;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ThreadLocal<Map<TypeToken<?>, a0<?>>> f21390a;
+    public final ThreadLocal<Map<TypeToken<?>, a0<?>>> f21849a;
     public final ConcurrentMap<TypeToken<?>, a0<?>> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final ConstructorConstructor f21391c;
+    public final ConstructorConstructor f21850c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final JsonAdapterAnnotationTypeAdapterFactory f21392d;
+    public final JsonAdapterAnnotationTypeAdapterFactory f21851d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final List<b0> f21393e;
+    public final List<b0> f21852e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final Excluder f21394f;
+    public final Excluder f21853f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final jg.d f21395g;
+    public final jg.d f21854g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final Map<Type, h<?>> f21396h;
+    public final Map<Type, h<?>> f21855h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final boolean f21397i;
+    public final boolean f21856i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final boolean f21398j;
+    public final boolean f21857j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final boolean f21399k;
+    public final boolean f21858k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final boolean f21400l;
+    public final boolean f21859l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final jg.e f21401m;
+    public final jg.e f21860m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public final x f21402n;
+    public final x f21861n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public final boolean f21403o;
+    public final boolean f21862o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public final boolean f21404p;
+    public final boolean f21863p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public final String f21405q;
+    public final String f21864q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public final int f21406r;
+    public final int f21865r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public final int f21407s;
+    public final int f21866s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public final v f21408t;
+    public final v f21867t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public final List<b0> f21409u;
+    public final List<b0> f21868u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public final List<b0> f21410v;
+    public final List<b0> f21869v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public final z f21411w;
+    public final z f21870w;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public final z f21412x;
+    public final z f21871x;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public final List<w> f21413y;
+    public final List<w> f21872y;
 
     public class a extends a0<Number> {
         public a() {
@@ -206,32 +206,32 @@ public final class f {
     public class d extends a0<AtomicLong> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ a0 f21416a;
+        public final /* synthetic */ a0 f21875a;
 
         public d(a0 a0Var) {
-            this.f21416a = a0Var;
+            this.f21875a = a0Var;
         }
 
         @Override // jg.a0
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public AtomicLong read(JsonReader jsonReader) {
-            return new AtomicLong(((Number) this.f21416a.read(jsonReader)).longValue());
+            return new AtomicLong(((Number) this.f21875a.read(jsonReader)).longValue());
         }
 
         @Override // jg.a0
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public void write(JsonWriter jsonWriter, AtomicLong atomicLong) {
-            this.f21416a.write(jsonWriter, Long.valueOf(atomicLong.get()));
+            this.f21875a.write(jsonWriter, Long.valueOf(atomicLong.get()));
         }
     }
 
     public class e extends a0<AtomicLongArray> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ a0 f21417a;
+        public final /* synthetic */ a0 f21876a;
 
         public e(a0 a0Var) {
-            this.f21417a = a0Var;
+            this.f21876a = a0Var;
         }
 
         @Override // jg.a0
@@ -240,7 +240,7 @@ public final class f {
             ArrayList arrayList = new ArrayList();
             jsonReader.beginArray();
             while (jsonReader.hasNext()) {
-                arrayList.add(Long.valueOf(((Number) this.f21417a.read(jsonReader)).longValue()));
+                arrayList.add(Long.valueOf(((Number) this.f21876a.read(jsonReader)).longValue()));
             }
             jsonReader.endArray();
             int size = arrayList.size();
@@ -257,27 +257,27 @@ public final class f {
             jsonWriter.beginArray();
             int length = atomicLongArray.length();
             for (int i10 = 0; i10 < length; i10++) {
-                this.f21417a.write(jsonWriter, Long.valueOf(atomicLongArray.get(i10)));
+                this.f21876a.write(jsonWriter, Long.valueOf(atomicLongArray.get(i10)));
             }
             jsonWriter.endArray();
         }
     }
 
     /* JADX INFO: renamed from: jg.f$f, reason: collision with other inner class name */
-    public static class C0379f<T> extends SerializationDelegatingTypeAdapter<T> {
+    public static class C0378f<T> extends SerializationDelegatingTypeAdapter<T> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public a0<T> f21418a = null;
+        public a0<T> f21877a = null;
 
         public void a(a0<T> a0Var) {
-            if (this.f21418a != null) {
+            if (this.f21877a != null) {
                 throw new AssertionError("Delegate is already set");
             }
-            this.f21418a = a0Var;
+            this.f21877a = a0Var;
         }
 
         public final a0<T> delegate() {
-            a0<T> a0Var = this.f21418a;
+            a0<T> a0Var = this.f21877a;
             if (a0Var != null) {
                 return a0Var;
             }
@@ -306,8 +306,8 @@ public final class f {
         jg.d dVar = C;
         Map map = Collections.EMPTY_MAP;
         jg.e eVar = A;
-        x xVar = f21389z;
-        v vVar = v.f21442a;
+        x xVar = f21848z;
+        v vVar = v.f21901a;
         String str = B;
         List list = Collections.EMPTY_LIST;
         this(excluder, dVar, map, false, false, false, true, eVar, xVar, false, true, vVar, str, 2, 2, list, list, list, D, E, list);
@@ -343,11 +343,11 @@ public final class f {
     }
 
     public static a0<Number> q(v vVar) {
-        return vVar == v.f21442a ? TypeAdapters.LONG : new c();
+        return vVar == v.f21901a ? TypeAdapters.LONG : new c();
     }
 
     public l A(Object obj) {
-        return obj == null ? n.f21439a : B(obj, obj.getClass());
+        return obj == null ? n.f21898a : B(obj, obj.getClass());
     }
 
     public l B(Object obj, Type type) {
@@ -367,7 +367,7 @@ public final class f {
     public <T> T g(JsonReader jsonReader, TypeToken<T> typeToken) {
         boolean z10;
         x strictness = jsonReader.getStrictness();
-        x xVar = this.f21402n;
+        x xVar = this.f21861n;
         if (xVar != null) {
             jsonReader.setStrictness(xVar);
         } else if (jsonReader.getStrictness() == x.LEGACY_STRICT) {
@@ -454,10 +454,10 @@ public final class f {
         if (a0Var != null) {
             return a0Var;
         }
-        Map<? extends TypeToken<?>, ? extends a0<?>> map = this.f21390a.get();
+        Map<? extends TypeToken<?>, ? extends a0<?>> map = this.f21849a.get();
         if (map == null) {
             map = new HashMap<>();
-            this.f21390a.set((Map<TypeToken<?>, a0<?>>) map);
+            this.f21849a.set((Map<TypeToken<?>, a0<?>>) map);
             z10 = true;
         } else {
             a0<T> a0Var2 = (a0) map.get(typeToken);
@@ -467,20 +467,20 @@ public final class f {
             z10 = false;
         }
         try {
-            C0379f c0379f = new C0379f();
-            map.put(typeToken, c0379f);
-            Iterator<b0> it = this.f21393e.iterator();
+            C0378f c0378f = new C0378f();
+            map.put(typeToken, c0378f);
+            Iterator<b0> it = this.f21852e.iterator();
             a0<T> a0VarCreate = null;
             while (it.hasNext()) {
                 a0VarCreate = it.next().create(this, typeToken);
                 if (a0VarCreate != null) {
-                    c0379f.a(a0VarCreate);
+                    c0378f.a(a0VarCreate);
                     map.put(typeToken, a0VarCreate);
                     break;
                 }
             }
             if (z10) {
-                this.f21390a.remove();
+                this.f21849a.remove();
             }
             if (a0VarCreate != null) {
                 if (z10) {
@@ -491,7 +491,7 @@ public final class f {
             throw new IllegalArgumentException("GSON (2.13.2) cannot handle " + typeToken);
         } catch (Throwable th2) {
             if (z10) {
-                this.f21390a.remove();
+                this.f21849a.remove();
             }
             throw th2;
         }
@@ -504,11 +504,11 @@ public final class f {
     public <T> a0<T> p(b0 b0Var, TypeToken<T> typeToken) {
         Objects.requireNonNull(b0Var, "skipPast must not be null");
         Objects.requireNonNull(typeToken, "type must not be null");
-        if (this.f21392d.isClassJsonAdapterFactory(typeToken, b0Var)) {
-            b0Var = this.f21392d;
+        if (this.f21851d.isClassJsonAdapterFactory(typeToken, b0Var)) {
+            b0Var = this.f21851d;
         }
         boolean z10 = false;
-        for (b0 b0Var2 : this.f21393e) {
+        for (b0 b0Var2 : this.f21852e) {
             if (z10) {
                 a0<T> a0VarCreate = b0Var2.create(this, typeToken);
                 if (a0VarCreate != null) {
@@ -526,7 +526,7 @@ public final class f {
 
     public JsonReader r(Reader reader) {
         JsonReader jsonReader = new JsonReader(reader);
-        x xVar = this.f21402n;
+        x xVar = this.f21861n;
         if (xVar == null) {
             xVar = x.LEGACY_STRICT;
         }
@@ -535,27 +535,27 @@ public final class f {
     }
 
     public JsonWriter s(Writer writer) throws IOException {
-        if (this.f21399k) {
+        if (this.f21858k) {
             writer.write(")]}'\n");
         }
         JsonWriter jsonWriter = new JsonWriter(writer);
-        jsonWriter.setFormattingStyle(this.f21401m);
-        jsonWriter.setHtmlSafe(this.f21400l);
-        x xVar = this.f21402n;
+        jsonWriter.setFormattingStyle(this.f21860m);
+        jsonWriter.setHtmlSafe(this.f21859l);
+        x xVar = this.f21861n;
         if (xVar == null) {
             xVar = x.LEGACY_STRICT;
         }
         jsonWriter.setStrictness(xVar);
-        jsonWriter.setSerializeNulls(this.f21397i);
+        jsonWriter.setSerializeNulls(this.f21856i);
         return jsonWriter;
     }
 
     public String t(Object obj) {
-        return obj == null ? v(n.f21439a) : u(obj, obj.getClass());
+        return obj == null ? v(n.f21898a) : u(obj, obj.getClass());
     }
 
     public String toString() {
-        return "{serializeNulls:" + this.f21397i + ",factories:" + this.f21393e + ",instanceCreators:" + this.f21391c + "}";
+        return "{serializeNulls:" + this.f21856i + ",factories:" + this.f21852e + ",instanceCreators:" + this.f21850c + "}";
     }
 
     public String u(Object obj, Type type) {
@@ -573,7 +573,7 @@ public final class f {
     public void w(Object obj, Type type, JsonWriter jsonWriter) {
         a0 a0VarN = n(TypeToken.get(type));
         x strictness = jsonWriter.getStrictness();
-        x xVar = this.f21402n;
+        x xVar = this.f21861n;
         if (xVar != null) {
             jsonWriter.setStrictness(xVar);
         } else if (jsonWriter.getStrictness() == x.LEGACY_STRICT) {
@@ -581,8 +581,8 @@ public final class f {
         }
         boolean zIsHtmlSafe = jsonWriter.isHtmlSafe();
         boolean serializeNulls = jsonWriter.getSerializeNulls();
-        jsonWriter.setHtmlSafe(this.f21400l);
-        jsonWriter.setSerializeNulls(this.f21397i);
+        jsonWriter.setHtmlSafe(this.f21859l);
+        jsonWriter.setSerializeNulls(this.f21856i);
         try {
             try {
                 try {
@@ -616,9 +616,9 @@ public final class f {
         x strictness = jsonWriter.getStrictness();
         boolean zIsHtmlSafe = jsonWriter.isHtmlSafe();
         boolean serializeNulls = jsonWriter.getSerializeNulls();
-        jsonWriter.setHtmlSafe(this.f21400l);
-        jsonWriter.setSerializeNulls(this.f21397i);
-        x xVar = this.f21402n;
+        jsonWriter.setHtmlSafe(this.f21859l);
+        jsonWriter.setSerializeNulls(this.f21856i);
+        x xVar = this.f21861n;
         if (xVar != null) {
             jsonWriter.setStrictness(xVar);
         } else if (jsonWriter.getStrictness() == x.LEGACY_STRICT) {
@@ -652,30 +652,30 @@ public final class f {
     }
 
     public f(Excluder excluder, jg.d dVar, Map<Type, h<?>> map, boolean z10, boolean z11, boolean z12, boolean z13, jg.e eVar, x xVar, boolean z14, boolean z15, v vVar, String str, int i10, int i11, List<b0> list, List<b0> list2, List<b0> list3, z zVar, z zVar2, List<w> list4) {
-        this.f21390a = new ThreadLocal<>();
+        this.f21849a = new ThreadLocal<>();
         this.b = new ConcurrentHashMap();
-        this.f21394f = excluder;
-        this.f21395g = dVar;
-        this.f21396h = map;
+        this.f21853f = excluder;
+        this.f21854g = dVar;
+        this.f21855h = map;
         ConstructorConstructor constructorConstructor = new ConstructorConstructor(map, z15, list4);
-        this.f21391c = constructorConstructor;
-        this.f21397i = z10;
-        this.f21398j = z11;
-        this.f21399k = z12;
-        this.f21400l = z13;
-        this.f21401m = eVar;
-        this.f21402n = xVar;
-        this.f21403o = z14;
-        this.f21404p = z15;
-        this.f21408t = vVar;
-        this.f21405q = str;
-        this.f21406r = i10;
-        this.f21407s = i11;
-        this.f21409u = list;
-        this.f21410v = list2;
-        this.f21411w = zVar;
-        this.f21412x = zVar2;
-        this.f21413y = list4;
+        this.f21850c = constructorConstructor;
+        this.f21856i = z10;
+        this.f21857j = z11;
+        this.f21858k = z12;
+        this.f21859l = z13;
+        this.f21860m = eVar;
+        this.f21861n = xVar;
+        this.f21862o = z14;
+        this.f21863p = z15;
+        this.f21867t = vVar;
+        this.f21864q = str;
+        this.f21865r = i10;
+        this.f21866s = i11;
+        this.f21868u = list;
+        this.f21869v = list2;
+        this.f21870w = zVar;
+        this.f21871x = zVar2;
+        this.f21872y = list4;
         ArrayList arrayList = new ArrayList();
         arrayList.add(TypeAdapters.JSON_ELEMENT_FACTORY);
         arrayList.add(ObjectTypeAdapter.getFactory(zVar));
@@ -721,10 +721,10 @@ public final class f {
         arrayList.add(new CollectionTypeAdapterFactory(constructorConstructor));
         arrayList.add(new MapTypeAdapterFactory(constructorConstructor, z11));
         JsonAdapterAnnotationTypeAdapterFactory jsonAdapterAnnotationTypeAdapterFactory = new JsonAdapterAnnotationTypeAdapterFactory(constructorConstructor);
-        this.f21392d = jsonAdapterAnnotationTypeAdapterFactory;
+        this.f21851d = jsonAdapterAnnotationTypeAdapterFactory;
         arrayList.add(jsonAdapterAnnotationTypeAdapterFactory);
         arrayList.add(TypeAdapters.ENUM_FACTORY);
         arrayList.add(new ReflectiveTypeAdapterFactory(constructorConstructor, dVar, excluder, jsonAdapterAnnotationTypeAdapterFactory, list4));
-        this.f21393e = Collections.unmodifiableList(arrayList);
+        this.f21852e = Collections.unmodifiableList(arrayList);
     }
 }

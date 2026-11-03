@@ -9,15 +9,15 @@ import java.util.Map;
 public final class q8 {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final q8 f25885c = new q8(null, null, 100);
+    public static final q8 f26706c = new q8(null, null, 100);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final EnumMap f25886a;
+    public final EnumMap f26707a;
     public final int b;
 
     public q8(Boolean bool, Boolean bool2, int i10) {
         EnumMap enumMap = new EnumMap(p8.class);
-        this.f25886a = enumMap;
+        this.f26707a = enumMap;
         enumMap.put(p8.AD_STORAGE, h(null));
         enumMap.put(p8.ANALYTICS_STORAGE, h(null));
         this.b = i10;
@@ -58,7 +58,7 @@ public final class q8 {
         }
         EnumMap enumMap = new EnumMap(p8.class);
         for (p8 p8Var : o8.STORAGE.b()) {
-            enumMap.put(p8Var, g(bundle.getString(p8Var.f25855a)));
+            enumMap.put(p8Var, g(bundle.getString(p8Var.f26676a)));
         }
         return new q8(enumMap, i10);
     }
@@ -152,7 +152,7 @@ public final class q8 {
     }
 
     public final boolean c() {
-        Iterator it = this.f25886a.values().iterator();
+        Iterator it = this.f26707a.values().iterator();
         while (it.hasNext()) {
             if (((n8) it.next()) != n8.UNINITIALIZED) {
                 return true;
@@ -167,7 +167,7 @@ public final class q8 {
         }
         q8 q8Var = (q8) obj;
         for (p8 p8Var : o8.STORAGE.b()) {
-            if (this.f25886a.get(p8Var) != q8Var.f25886a.get(p8Var)) {
+            if (this.f26707a.get(p8Var) != q8Var.f26707a.get(p8Var)) {
                 return false;
             }
         }
@@ -175,7 +175,7 @@ public final class q8 {
     }
 
     public final int hashCode() {
-        Iterator it = this.f25886a.values().iterator();
+        Iterator it = this.f26707a.values().iterator();
         int iHashCode = this.b * 17;
         while (it.hasNext()) {
             iHashCode = (iHashCode * 31) + ((n8) it.next()).hashCode();
@@ -188,7 +188,7 @@ public final class q8 {
         int iOrdinal;
         StringBuilder sb2 = new StringBuilder("G1");
         for (p8 p8Var : o8.STORAGE.a()) {
-            n8 n8Var = (n8) this.f25886a.get(p8Var);
+            n8 n8Var = (n8) this.f26707a.get(p8Var);
             char c10 = '-';
             if (n8Var != null && (iOrdinal = n8Var.ordinal()) != 0) {
                 if (iOrdinal == 1) {
@@ -207,41 +207,41 @@ public final class q8 {
     public final String l() {
         StringBuilder sb2 = new StringBuilder("G1");
         for (p8 p8Var : o8.STORAGE.a()) {
-            sb2.append(m((n8) this.f25886a.get(p8Var)));
+            sb2.append(m((n8) this.f26707a.get(p8Var)));
         }
         return sb2.toString();
     }
 
     public final Bundle n() {
         Bundle bundle = new Bundle();
-        for (Map.Entry entry : this.f25886a.entrySet()) {
+        for (Map.Entry entry : this.f26707a.entrySet()) {
             String strI = i((n8) entry.getValue());
             if (strI != null) {
-                bundle.putString(((p8) entry.getKey()).f25855a, strI);
+                bundle.putString(((p8) entry.getKey()).f26676a, strI);
             }
         }
         return bundle;
     }
 
     public final boolean o(p8 p8Var) {
-        return ((n8) this.f25886a.get(p8Var)) != n8.DENIED;
+        return ((n8) this.f26707a.get(p8Var)) != n8.DENIED;
     }
 
     public final n8 p() {
-        n8 n8Var = (n8) this.f25886a.get(p8.AD_STORAGE);
+        n8 n8Var = (n8) this.f26707a.get(p8.AD_STORAGE);
         return n8Var == null ? n8.UNINITIALIZED : n8Var;
     }
 
     public final n8 q() {
-        n8 n8Var = (n8) this.f25886a.get(p8.ANALYTICS_STORAGE);
+        n8 n8Var = (n8) this.f26707a.get(p8.ANALYTICS_STORAGE);
         return n8Var == null ? n8.UNINITIALIZED : n8Var;
     }
 
     public final boolean r(q8 q8Var) {
-        EnumMap enumMap = this.f25886a;
+        EnumMap enumMap = this.f26707a;
         for (p8 p8Var : (p8[]) enumMap.keySet().toArray(new p8[0])) {
             n8 n8Var = (n8) enumMap.get(p8Var);
-            n8 n8Var2 = (n8) q8Var.f25886a.get(p8Var);
+            n8 n8Var2 = (n8) q8Var.f26707a.get(p8Var);
             n8 n8Var3 = n8.DENIED;
             if (n8Var == n8Var3 && n8Var2 != n8Var3) {
                 return true;
@@ -254,8 +254,8 @@ public final class q8 {
     public final q8 s(q8 q8Var) {
         EnumMap enumMap = new EnumMap(p8.class);
         for (p8 p8Var : o8.STORAGE.b()) {
-            n8 n8Var = (n8) this.f25886a.get(p8Var);
-            n8 n8Var2 = (n8) q8Var.f25886a.get(p8Var);
+            n8 n8Var = (n8) this.f26707a.get(p8Var);
+            n8 n8Var2 = (n8) q8Var.f26707a.get(p8Var);
             if (n8Var == null) {
                 n8Var = n8Var2;
             } else if (n8Var2 != null) {
@@ -282,9 +282,9 @@ public final class q8 {
     public final q8 t(q8 q8Var) {
         EnumMap enumMap = new EnumMap(p8.class);
         for (p8 p8Var : o8.STORAGE.b()) {
-            n8 n8Var = (n8) this.f25886a.get(p8Var);
+            n8 n8Var = (n8) this.f26707a.get(p8Var);
             if (n8Var == n8.UNINITIALIZED) {
-                n8Var = (n8) q8Var.f25886a.get(p8Var);
+                n8Var = (n8) q8Var.f26707a.get(p8Var);
             }
             if (n8Var != null) {
                 enumMap.put(p8Var, n8Var);
@@ -298,9 +298,9 @@ public final class q8 {
         sb2.append(d(this.b));
         for (p8 p8Var : o8.STORAGE.b()) {
             sb2.append(",");
-            sb2.append(p8Var.f25855a);
+            sb2.append(p8Var.f26676a);
             sb2.append("=");
-            n8 n8Var = (n8) this.f25886a.get(p8Var);
+            n8 n8Var = (n8) this.f26707a.get(p8Var);
             if (n8Var == null) {
                 n8Var = n8.UNINITIALIZED;
             }
@@ -311,7 +311,7 @@ public final class q8 {
 
     public q8(EnumMap enumMap, int i10) {
         EnumMap enumMap2 = new EnumMap(p8.class);
-        this.f25886a = enumMap2;
+        this.f26707a = enumMap2;
         enumMap2.putAll(enumMap);
         this.b = i10;
     }

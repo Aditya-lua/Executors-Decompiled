@@ -37,7 +37,7 @@ public abstract class c<T extends IInterface> {
     final Handler zzb;
 
     @NonNull
-    protected InterfaceC0440c zzc;
+    protected InterfaceC0461c zzc;
 
     @NonNull
     protected AtomicInteger zzd;
@@ -78,27 +78,27 @@ public abstract class c<T extends IInterface> {
     }
 
     /* JADX INFO: renamed from: n9.c$c, reason: collision with other inner class name */
-    public interface InterfaceC0440c {
+    public interface InterfaceC0461c {
         void a(@NonNull ConnectionResult connectionResult);
     }
 
-    public class d implements InterfaceC0440c {
+    public class d implements InterfaceC0461c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ c f25234a;
+        public final /* synthetic */ c f26055a;
 
         public d(c cVar) {
             Objects.requireNonNull(cVar);
-            this.f25234a = cVar;
+            this.f26055a = cVar;
         }
 
-        @Override // n9.c.InterfaceC0440c
+        @Override // n9.c.InterfaceC0461c
         public final void a(@NonNull ConnectionResult connectionResult) {
             if (connectionResult.A3()) {
-                c cVar = this.f25234a;
+                c cVar = this.f26055a;
                 cVar.getRemoteService(null, cVar.getScopes());
             } else {
-                c cVar2 = this.f25234a;
+                c cVar2 = this.f26055a;
                 if (cVar2.zzl() != null) {
                     cVar2.zzl().onConnectionFailed(connectionResult);
                 }
@@ -206,9 +206,9 @@ public abstract class c<T extends IInterface> {
         }
     }
 
-    public void connect(@NonNull InterfaceC0440c interfaceC0440c) {
-        m.m(interfaceC0440c, "Connection progress callbacks cannot be null.");
-        this.zzc = interfaceC0440c;
+    public void connect(@NonNull InterfaceC0461c interfaceC0461c) {
+        m.m(interfaceC0461c, "Connection progress callbacks cannot be null.");
+        this.zzc = interfaceC0461c;
         zzp(2, null);
     }
 
@@ -252,7 +252,7 @@ public abstract class c<T extends IInterface> {
         if (zzjVar == null) {
             return null;
         }
-        return zzjVar.f5816g;
+        return zzjVar.f5889g;
     }
 
     public Executor getBindServiceExecutor() {
@@ -295,46 +295,46 @@ public abstract class c<T extends IInterface> {
     }
 
     public int getMinApkVersion() {
-        return j9.d.f21184a;
+        return j9.d.f21757a;
     }
 
     public void getRemoteService(com.google.android.gms.common.internal.b bVar, @NonNull Set<Scope> set) {
         Bundle getServiceRequestExtraArgs = getGetServiceRequestExtraArgs();
         String str = Build.VERSION.SDK_INT < 31 ? this.zzA : this.zzA;
         int i10 = this.zzy;
-        int i11 = j9.d.f21184a;
-        Scope[] scopeArr = GetServiceRequest.f5774t;
+        int i11 = j9.d.f21757a;
+        Scope[] scopeArr = GetServiceRequest.f5847t;
         Bundle bundle = new Bundle();
-        Feature[] featureArr = GetServiceRequest.f5775u;
+        Feature[] featureArr = GetServiceRequest.f5848u;
         GetServiceRequest getServiceRequest = new GetServiceRequest(6, i10, i11, null, null, scopeArr, bundle, null, featureArr, featureArr, true, 0, false, str);
-        getServiceRequest.f5779i = this.zzl.getPackageName();
-        getServiceRequest.f5782l = getServiceRequestExtraArgs;
+        getServiceRequest.f5852i = this.zzl.getPackageName();
+        getServiceRequest.f5855l = getServiceRequestExtraArgs;
         if (set != null) {
-            getServiceRequest.f5781k = (Scope[]) set.toArray(new Scope[0]);
+            getServiceRequest.f5854k = (Scope[]) set.toArray(new Scope[0]);
         }
         if (requiresSignIn()) {
             Account account = getAccount();
             if (account == null) {
                 account = new Account("<<default account>>", "com.google");
             }
-            getServiceRequest.f5783m = account;
+            getServiceRequest.f5856m = account;
             if (bVar != null) {
-                getServiceRequest.f5780j = bVar.asBinder();
+                getServiceRequest.f5853j = bVar.asBinder();
             }
         } else if (requiresAccount()) {
-            getServiceRequest.f5783m = getAccount();
+            getServiceRequest.f5856m = getAccount();
         }
-        getServiceRequest.f5784n = zze;
-        getServiceRequest.f5785o = getApiFeatures();
+        getServiceRequest.f5857n = zze;
+        getServiceRequest.f5858o = getApiFeatures();
         if (usesClientTelemetry()) {
-            getServiceRequest.f5788r = true;
+            getServiceRequest.f5861r = true;
         }
         try {
             synchronized (this.zzq) {
                 try {
                     i iVar = this.zzr;
                     if (iVar != null) {
-                        iVar.T(new w0(this, this.zzd.get()), getServiceRequest);
+                        iVar.R(new w0(this, this.zzd.get()), getServiceRequest);
                     } else {
                         Log.w("GmsClient", "mServiceBroker is null, client disconnected");
                     }
@@ -398,7 +398,7 @@ public abstract class c<T extends IInterface> {
         if (zzjVar == null) {
             return null;
         }
-        return zzjVar.f5818i;
+        return zzjVar.f5891i;
     }
 
     public boolean getUseDynamicLookup() {
@@ -475,9 +475,9 @@ public abstract class c<T extends IInterface> {
         handler.sendMessage(handler.obtainMessage(6, i11, i10));
     }
 
-    public void triggerNotAvailable(@NonNull InterfaceC0440c interfaceC0440c, int i10, PendingIntent pendingIntent) {
-        m.m(interfaceC0440c, "Connection progress callbacks cannot be null.");
-        this.zzc = interfaceC0440c;
+    public void triggerNotAvailable(@NonNull InterfaceC0461c interfaceC0461c, int i10, PendingIntent pendingIntent) {
+        m.m(interfaceC0461c, "Connection progress callbacks cannot be null.");
+        this.zzc = interfaceC0461c;
         int i11 = this.zzd.get();
         Handler handler = this.zzb;
         handler.sendMessage(handler.obtainMessage(3, i11, i10, pendingIntent));
@@ -502,7 +502,7 @@ public abstract class c<T extends IInterface> {
     public final /* synthetic */ void zzc(zzj zzjVar) {
         this.zzE = zzjVar;
         if (usesClientTelemetry()) {
-            ConnectionTelemetryConfiguration connectionTelemetryConfiguration = zzjVar.f5818i;
+            ConnectionTelemetryConfiguration connectionTelemetryConfiguration = zzjVar.f5891i;
             n.b().c(connectionTelemetryConfiguration == null ? null : connectionTelemetryConfiguration.A3());
         }
     }

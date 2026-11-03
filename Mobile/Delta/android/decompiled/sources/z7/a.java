@@ -13,42 +13,42 @@ import java.util.regex.Pattern;
 public final class a implements g {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final String f37329c;
+    public static final String f38024c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final String f37330d;
+    public static final String f38025d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final String f37331e;
+    public static final String f38026e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final Set<y7.c> f37332f;
+    public static final Set<y7.c> f38027f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final a f37333g;
+    public static final a f38028g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final a f37334h;
+    public static final a f38029h;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final String f37335a;
+    public final String f38030a;
     public final String b;
 
     static {
         String strA = e.a("hts/frbslgiggolai.o/0clgbthfra=snpoo", "tp:/ieaeogn.ogepscmvc/o/ac?omtjo_rt3");
-        f37329c = strA;
+        f38024c = strA;
         String strA2 = e.a("hts/frbslgigp.ogepscmv/ieo/eaybtho", "tp:/ieaeogn-agolai.o/1frlglgc/aclg");
-        f37330d = strA2;
+        f38025d = strA2;
         String strA3 = e.a("AzSCki82AwsLzKd5O8zo", "IayckHiZRO1EFl1aGoK");
-        f37331e = strA3;
-        f37332f = Collections.unmodifiableSet(new HashSet(Arrays.asList(y7.c.b("proto"), y7.c.b("json"))));
-        f37333g = new a(strA, null);
-        f37334h = new a(strA2, strA3);
+        f38026e = strA3;
+        f38027f = Collections.unmodifiableSet(new HashSet(Arrays.asList(y7.c.b("proto"), y7.c.b("json"))));
+        f38028g = new a(strA, null);
+        f38029h = new a(strA2, strA3);
     }
 
     public a(@NonNull String str, String str2) {
-        this.f37335a = str;
+        this.f38030a = str;
         this.b = str2;
     }
 
@@ -75,15 +75,15 @@ public final class a implements g {
 
     @Override // b8.g
     public Set<y7.c> a() {
-        return f37332f;
+        return f38027f;
     }
 
     public byte[] b() {
         String str = this.b;
-        if (str == null && this.f37335a == null) {
+        if (str == null && this.f38030a == null) {
             return null;
         }
-        String str2 = this.f37335a;
+        String str2 = this.f38030a;
         if (str == null) {
             str = "";
         }
@@ -96,7 +96,7 @@ public final class a implements g {
 
     @NonNull
     public String e() {
-        return this.f37335a;
+        return this.f38030a;
     }
 
     @Override // b8.f

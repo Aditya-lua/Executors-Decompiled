@@ -11,11 +11,11 @@ import n0.g3;
 public class SmallDisplaySizeQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Map<String, Size> f1345a;
+    public static final Map<String, Size> f1190a;
 
     static {
         HashMap map = new HashMap();
-        f1345a = map;
+        f1190a = map;
         map.put("REDMI NOTE 8", new Size(1080, 2340));
         map.put("REDMI NOTE 7", new Size(1080, 2340));
         map.put("SM-A207M", new Size(720, 1560));
@@ -44,10 +44,10 @@ public class SmallDisplaySizeQuirk implements g3 {
     }
 
     public static boolean h() {
-        return f1345a.containsKey(Build.MODEL.toUpperCase(Locale.US));
+        return f1190a.containsKey(Build.MODEL.toUpperCase(Locale.US));
     }
 
     public Size g() {
-        return f1345a.get(Build.MODEL.toUpperCase(Locale.US));
+        return f1190a.get(Build.MODEL.toUpperCase(Locale.US));
     }
 }

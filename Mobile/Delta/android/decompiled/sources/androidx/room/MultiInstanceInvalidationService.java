@@ -32,54 +32,50 @@ public final class MultiInstanceInvalidationService extends Service {
     @NotNull
     public final androidx.room.b.a binder = new a();
 
-    @Metadata(d1 = {"\u0000-\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u0011\n\u0002\b\u0004*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J!\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\bJ\u001f\u0010\u000b\u001a\u00020\n2\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\t\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\u000b\u0010\fJ'\u0010\u000f\u001a\u00020\n2\u0006\u0010\t\u001a\u00020\u00062\u000e\u0010\u000e\u001a\n\u0012\u0006\b\u0001\u0012\u00020\u00040\rH\u0016¢\u0006\u0004\b\u000f\u0010\u0010¨\u0006\u0011"}, d2 = {"androidx/room/MultiInstanceInvalidationService$a", "Landroidx/room/b$a;", "Landroidx/room/a;", "callback", "", "name", "", "b1", "(Landroidx/room/a;Ljava/lang/String;)I", "clientId", "", "n2", "(Landroidx/room/a;I)V", "", "tables", "F0", "(I[Ljava/lang/String;)V", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000-\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u0011\n\u0002\b\u0004*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J!\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\bJ\u001f\u0010\u000b\u001a\u00020\n2\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\t\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\u000b\u0010\fJ'\u0010\u000f\u001a\u00020\n2\u0006\u0010\t\u001a\u00020\u00062\u000e\u0010\u000e\u001a\n\u0012\u0006\b\u0001\u0012\u00020\u00040\rH\u0016¢\u0006\u0004\b\u000f\u0010\u0010¨\u0006\u0011"}, d2 = {"androidx/room/MultiInstanceInvalidationService$a", "Landroidx/room/b$a;", "Landroidx/room/a;", "callback", "", "name", "", "Y0", "(Landroidx/room/a;Ljava/lang/String;)I", "clientId", "", "n2", "(Landroidx/room/a;I)V", "", "tables", "B0", "(I[Ljava/lang/String;)V", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
     public static final class a extends androidx.room.b.a {
         public a() {
         }
 
         @Override // androidx.room.b
-        public void F0(int clientId, String[] tables) {
+        public void B0(int clientId, String[] tables) {
             Intrinsics.checkNotNullParameter(tables, "tables");
             RemoteCallbackList<androidx.room.a> remoteCallbackListA = MultiInstanceInvalidationService.this.a();
             MultiInstanceInvalidationService multiInstanceInvalidationService = MultiInstanceInvalidationService.this;
             synchronized (remoteCallbackListA) {
-                try {
-                    String str = multiInstanceInvalidationService.b().get(Integer.valueOf(clientId));
-                    if (str == null) {
-                        Log.w("ROOM", "Remote invalidation client ID not registered");
-                        return;
-                    }
-                    int iBeginBroadcast = multiInstanceInvalidationService.a().beginBroadcast();
-                    for (int i10 = 0; i10 < iBeginBroadcast; i10++) {
-                        try {
-                            Object broadcastCookie = multiInstanceInvalidationService.a().getBroadcastCookie(i10);
-                            Intrinsics.d(broadcastCookie, "null cannot be cast to non-null type kotlin.Int");
-                            Integer num = (Integer) broadcastCookie;
-                            int iIntValue = num.intValue();
-                            String str2 = multiInstanceInvalidationService.b().get(num);
-                            if (clientId != iIntValue && Intrinsics.c(str, str2)) {
-                                try {
-                                    ((androidx.room.a) multiInstanceInvalidationService.a().getBroadcastItem(i10)).A(tables);
-                                    Unit unit = Unit.f22483a;
-                                } catch (RemoteException e10) {
-                                    Log.w("ROOM", "Error invoking a remote callback", e10);
-                                }
-                            }
-                        } catch (Throwable th2) {
-                            multiInstanceInvalidationService.a().finishBroadcast();
-                            throw th2;
-                        }
-                    }
-                    multiInstanceInvalidationService.a().finishBroadcast();
-                    Unit unit2 = Unit.f22483a;
-                } catch (Throwable th3) {
-                    throw th3;
+                String str = multiInstanceInvalidationService.b().get(Integer.valueOf(clientId));
+                if (str == null) {
+                    Log.w("ROOM", "Remote invalidation client ID not registered");
+                    return;
                 }
+                int iBeginBroadcast = multiInstanceInvalidationService.a().beginBroadcast();
+                for (int i10 = 0; i10 < iBeginBroadcast; i10++) {
+                    try {
+                        Object broadcastCookie = multiInstanceInvalidationService.a().getBroadcastCookie(i10);
+                        Intrinsics.d(broadcastCookie, "null cannot be cast to non-null type kotlin.Int");
+                        Integer num = (Integer) broadcastCookie;
+                        int iIntValue = num.intValue();
+                        String str2 = multiInstanceInvalidationService.b().get(num);
+                        if (clientId != iIntValue && Intrinsics.c(str, str2)) {
+                            try {
+                                ((androidx.room.a) multiInstanceInvalidationService.a().getBroadcastItem(i10)).A(tables);
+                                Unit unit = Unit.f22938a;
+                            } catch (RemoteException e10) {
+                                Log.w("ROOM", "Error invoking a remote callback", e10);
+                            }
+                        }
+                    } catch (Throwable th2) {
+                        multiInstanceInvalidationService.a().finishBroadcast();
+                        throw th2;
+                    }
+                }
+                multiInstanceInvalidationService.a().finishBroadcast();
+                Unit unit2 = Unit.f22938a;
             }
         }
 
         @Override // androidx.room.b
-        public int b1(androidx.room.a callback, String name) {
+        public int Y0(androidx.room.a callback, String name) {
             Intrinsics.checkNotNullParameter(callback, "callback");
             int i10 = 0;
             if (name == null) {

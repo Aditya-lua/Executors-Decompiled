@@ -15,10 +15,10 @@ public class TorchFlashRequiredFor3aUpdateQuirk implements g3 {
     public static final List<String> b = Arrays.asList("PIXEL 6A", "PIXEL 6 PRO", "PIXEL 7", "PIXEL 7A", "PIXEL 7 PRO", "PIXEL 8", "PIXEL 8 PRO");
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final c0 f1346a;
+    public final c0 f1191a;
 
     public TorchFlashRequiredFor3aUpdateQuirk(c0 c0Var) {
-        this.f1346a = c0Var;
+        this.f1191a = c0Var;
     }
 
     public static boolean g(c0 c0Var) {
@@ -48,6 +48,6 @@ public class TorchFlashRequiredFor3aUpdateQuirk implements g3 {
     }
 
     public boolean j() {
-        return !i(this.f1346a);
+        return !i(this.f1191a);
     }
 }

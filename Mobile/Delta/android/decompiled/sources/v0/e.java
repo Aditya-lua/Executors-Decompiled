@@ -9,11 +9,11 @@ import java.util.Collection;
 public class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ImageCaptureFailedForSpecificCombinationQuirk f32681a = (ImageCaptureFailedForSpecificCombinationQuirk) u0.b.b(ImageCaptureFailedForSpecificCombinationQuirk.class);
+    public final ImageCaptureFailedForSpecificCombinationQuirk f33249a = (ImageCaptureFailedForSpecificCombinationQuirk) u0.b.b(ImageCaptureFailedForSpecificCombinationQuirk.class);
     public final PreviewGreenTintQuirk b = (PreviewGreenTintQuirk) u0.b.b(PreviewGreenTintQuirk.class);
 
     public boolean a(String str, Collection<w2> collection) {
-        ImageCaptureFailedForSpecificCombinationQuirk imageCaptureFailedForSpecificCombinationQuirk = this.f32681a;
+        ImageCaptureFailedForSpecificCombinationQuirk imageCaptureFailedForSpecificCombinationQuirk = this.f33249a;
         if (imageCaptureFailedForSpecificCombinationQuirk != null) {
             return imageCaptureFailedForSpecificCombinationQuirk.k(str, collection);
         }

@@ -11,14 +11,14 @@ import com.google.android.gms.tasks.Task;
 public class e1 extends Binder {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final a f8765a;
+    public final a f8839a;
 
     public interface a {
         Task<Void> a(Intent intent);
     }
 
     public e1(a aVar) {
-        this.f8765a = aVar;
+        this.f8839a = aVar;
     }
 
     public void b(final h1.a aVar) {
@@ -28,7 +28,7 @@ public class e1 extends Binder {
         if (Log.isLoggable("FirebaseMessaging", 3)) {
             Log.d("FirebaseMessaging", "service received new intent via bind strategy");
         }
-        this.f8765a.a(aVar.f8782a).c(new e3.n(), new OnCompleteListener() { // from class: com.google.firebase.messaging.d1
+        this.f8839a.a(aVar.f8856a).c(new e3.n(), new OnCompleteListener() { // from class: com.google.firebase.messaging.d1
             @Override // com.google.android.gms.tasks.OnCompleteListener
             public final void onComplete(Task task) {
                 aVar.d();

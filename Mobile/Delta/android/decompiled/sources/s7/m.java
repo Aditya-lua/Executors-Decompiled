@@ -26,20 +26,20 @@ import javax.net.ssl.SSLException;
 public final class m {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Matrix f30547a = new Matrix();
+    public static final Matrix f31094a = new Matrix();
     public static final ThreadLocal<PathMeasure> b = new a();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final ThreadLocal<Path> f30548c = new b();
+    public static final ThreadLocal<Path> f31095c = new b();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final ThreadLocal<Path> f30549d = new c();
+    public static final ThreadLocal<Path> f31096d = new c();
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final ThreadLocal<float[]> f30550e = new d();
+    public static final ThreadLocal<float[]> f31097e = new d();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final float f30551f = (float) (Math.sqrt(2.0d) / 2.0d);
+    public static final float f31098f = (float) (Math.sqrt(2.0d) / 2.0d);
 
     public class a extends ThreadLocal<PathMeasure> {
         @Override // java.lang.ThreadLocal
@@ -78,8 +78,8 @@ public final class m {
             f7.e.b("applyTrimPathIfNeeded");
         }
         PathMeasure pathMeasure = b.get();
-        Path path2 = f30548c.get();
-        Path path3 = f30549d.get();
+        Path path2 = f31095c.get();
+        Path path3 = f31096d.get();
         pathMeasure.setPath(path, false);
         float length = pathMeasure.getLength();
         if (f10 == 1.0f && f11 == 0.0f) {
@@ -182,10 +182,10 @@ public final class m {
     }
 
     public static float g(Matrix matrix) {
-        float[] fArr = f30550e.get();
+        float[] fArr = f31097e.get();
         fArr[0] = 0.0f;
         fArr[1] = 0.0f;
-        float f10 = f30551f;
+        float f10 = f31098f;
         fArr[2] = f10;
         fArr[3] = f10;
         matrix.mapPoints(fArr);
@@ -193,7 +193,7 @@ public final class m {
     }
 
     public static boolean h(Matrix matrix) {
-        float[] fArr = f30550e.get();
+        float[] fArr = f31097e.get();
         fArr[0] = 0.0f;
         fArr[1] = 0.0f;
         fArr[2] = 37394.73f;

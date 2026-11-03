@@ -13,10 +13,10 @@ import com.google.android.gms.internal.play_billing.z7;
 public final /* synthetic */ class h1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final /* synthetic */ int f32789a = 0;
+    public static final /* synthetic */ int f33357a = 0;
 
     static {
-        int i10 = i1.f32800a;
+        int i10 = i1.f33368a;
     }
 
     public static String a(Exception exc) {
@@ -25,7 +25,7 @@ public final /* synthetic */ class h1 {
         }
         try {
             String str = exc.getClass().getSimpleName() + ":" + com.google.android.gms.internal.play_billing.a0.c(exc.getMessage());
-            int i10 = com.google.android.gms.internal.play_billing.m0.f7176a;
+            int i10 = com.google.android.gms.internal.play_billing.m0.f7250a;
             return str.length() > 40 ? str.substring(0, 40) : str;
         } catch (Throwable th2) {
             com.google.android.gms.internal.play_billing.m0.n("BillingLogger", "Unable to get truncated exception info", th2);

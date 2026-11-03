@@ -17,7 +17,7 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import yp.u;
+import wp.u;
 
 /* JADX INFO: loaded from: classes3.dex */
 @Metadata(d1 = {"\u0000L\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u0007\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\b\u0018\u0000 /2\u00020\u0001:\u0001 B'\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0004\u0012\b\b\u0002\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\b\u0010\tJ\u0015\u0010\f\u001a\u00020\u000b2\u0006\u0010\n\u001a\u00020\u0006¢\u0006\u0004\b\f\u0010\rJ\u0015\u0010\u0010\u001a\u00020\u000b2\u0006\u0010\u000f\u001a\u00020\u000e¢\u0006\u0004\b\u0010\u0010\u0011J'\u0010\u0015\u001a\u00020\u000b2\u0006\u0010\u0012\u001a\u00020\u000e2\u0010\b\u0002\u0010\u0014\u001a\n\u0012\u0004\u0012\u00020\u000b\u0018\u00010\u0013¢\u0006\u0004\b\u0015\u0010\u0016J\r\u0010\u0017\u001a\u00020\u000b¢\u0006\u0004\b\u0017\u0010\u0018J\u0017\u0010\u001b\u001a\u00020\u000b2\u0006\u0010\u001a\u001a\u00020\u0019H\u0014¢\u0006\u0004\b\u001b\u0010\u001cJ'\u0010\u001d\u001a\u00020\u000b2\u0006\u0010\u0012\u001a\u00020\u000e2\u000e\u0010\u0014\u001a\n\u0012\u0004\u0012\u00020\u000b\u0018\u00010\u0013H\u0002¢\u0006\u0004\b\u001d\u0010\u0016J\u000f\u0010\u001e\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\u001e\u0010\u0018R\u0014\u0010\"\u001a\u00020\u001f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b \u0010!R\u0014\u0010%\u001a\u00020\u000e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b#\u0010$R\u0014\u0010'\u001a\u00020\u000e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b&\u0010$R\u0016\u0010\u0012\u001a\u00020\u000e8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u001e\u0010$R\u0018\u0010*\u001a\u0004\u0018\u00010(8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0017\u0010)R\u0018\u0010+\u001a\u0004\u0018\u00010(8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0015\u0010)R\u0018\u0010-\u001a\u0004\u0018\u00010(8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b,\u0010)R\u0016\u0010.\u001a\u00020\u000e8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u001d\u0010$¨\u00060"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/view/Pi2ProgressArcView;", "Landroid/view/View;", "Landroid/content/Context;", "context", "Landroid/util/AttributeSet;", "attrs", "", "defStyleAttr", "<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "newColor", "", "setStrokeColor", "(I)V", "", "newWidth", "setStrokeWidth", "(F)V", "progress", "Lkotlin/Function0;", "onAnimationEnd", "f", "(FLkotlin/jvm/functions/Function0;)V", "e", "()V", "Landroid/graphics/Canvas;", "canvas", "onDraw", "(Landroid/graphics/Canvas;)V", "h", "d", "Landroid/graphics/Paint;", "a", "Landroid/graphics/Paint;", "paint", "b", "F", "size", "c", "startAngle", "Landroid/animation/ValueAnimator;", "Landroid/animation/ValueAnimator;", "animator", "indeterminateAnimator", "g", "rotateToZeroAnimator", "_rotation", "i", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
@@ -59,11 +59,11 @@ public final class Pi2ProgressArcView extends View {
         public final /* synthetic */ ValueAnimator b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ Pi2ProgressArcView f13109c;
+        public final /* synthetic */ Pi2ProgressArcView f13190c;
 
         public b(ValueAnimator valueAnimator, Pi2ProgressArcView pi2ProgressArcView) {
             this.b = valueAnimator;
-            this.f13109c = pi2ProgressArcView;
+            this.f13190c = pi2ProgressArcView;
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -73,15 +73,15 @@ public final class Pi2ProgressArcView extends View {
             Intrinsics.d(animatedValue, "null cannot be cast to non-null type kotlin.Float");
             float fFloatValue = ((Float) animatedValue).floatValue();
             float fAbs = Math.abs(fFloatValue - this.lastProgress);
-            float f10 = this.f13109c._rotation;
-            Pi2ProgressArcView pi2ProgressArcView = this.f13109c;
+            float f10 = this.f13190c._rotation;
+            Pi2ProgressArcView pi2ProgressArcView = this.f13190c;
             pi2ProgressArcView._rotation = (pi2ProgressArcView._rotation + fAbs) % 360;
-            if (f10 > this.f13109c._rotation) {
-                this.f13109c._rotation = 0.0f;
+            if (f10 > this.f13190c._rotation) {
+                this.f13190c._rotation = 0.0f;
                 animator.cancel();
             }
             this.lastProgress = fFloatValue;
-            this.f13109c.invalidate();
+            this.f13190c.invalidate();
         }
     }
 
@@ -89,16 +89,16 @@ public final class Pi2ProgressArcView extends View {
     public static final class c implements Runnable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ Function0 f13110a;
+        public final /* synthetic */ Function0 f13191a;
 
         public c(Function0 function) {
             Intrinsics.checkNotNullParameter(function, "function");
-            this.f13110a = function;
+            this.f13191a = function;
         }
 
         @Override // java.lang.Runnable
         public final /* synthetic */ void run() {
-            this.f13110a.invoke();
+            this.f13191a.invoke();
         }
     }
 
@@ -110,11 +110,11 @@ public final class Pi2ProgressArcView extends View {
         public final /* synthetic */ ValueAnimator b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ Pi2ProgressArcView f13112c;
+        public final /* synthetic */ Pi2ProgressArcView f13193c;
 
         public d(ValueAnimator valueAnimator, Pi2ProgressArcView pi2ProgressArcView) {
             this.b = valueAnimator;
-            this.f13112c = pi2ProgressArcView;
+            this.f13193c = pi2ProgressArcView;
         }
 
         @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -124,10 +124,10 @@ public final class Pi2ProgressArcView extends View {
             Intrinsics.d(animatedValue, "null cannot be cast to non-null type kotlin.Float");
             float fFloatValue = ((Float) animatedValue).floatValue();
             float fAbs = Math.abs(fFloatValue - this.lastProgress);
-            Pi2ProgressArcView pi2ProgressArcView = this.f13112c;
+            Pi2ProgressArcView pi2ProgressArcView = this.f13193c;
             pi2ProgressArcView._rotation = (pi2ProgressArcView._rotation + fAbs) % 360;
             this.lastProgress = fFloatValue;
-            this.f13112c.invalidate();
+            this.f13193c.invalidate();
         }
     }
 
@@ -135,11 +135,11 @@ public final class Pi2ProgressArcView extends View {
     public static final class e implements Animator.AnimatorListener {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ Function0 f13113a;
+        public final /* synthetic */ Function0 f13194a;
         public final /* synthetic */ Pi2ProgressArcView b;
 
         public e(Function0 function0, Pi2ProgressArcView pi2ProgressArcView) {
-            this.f13113a = function0;
+            this.f13194a = function0;
             this.b = pi2ProgressArcView;
         }
 
@@ -151,7 +151,7 @@ public final class Pi2ProgressArcView extends View {
         @Override // android.animation.Animator.AnimatorListener
         public void onAnimationEnd(@NotNull Animator animator) {
             Intrinsics.e(animator, "animator");
-            Function0 function0 = this.f13113a;
+            Function0 function0 = this.f13194a;
             if (function0 != null) {
                 this.b.postDelayed(new c(function0), 100L);
             }
@@ -248,10 +248,10 @@ public final class Pi2ProgressArcView extends View {
         float f10 = this.progress;
         final ValueAnimator valueAnimatorOfFloat = ValueAnimator.ofFloat(f10, progress);
         valueAnimatorOfFloat.setDuration((long) (1000 * (Math.abs(progress - f10) / 100.0f)));
-        valueAnimatorOfFloat.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: iq.o
+        valueAnimatorOfFloat.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: gq.o
             @Override // android.animation.ValueAnimator.AnimatorUpdateListener
             public final void onAnimationUpdate(ValueAnimator valueAnimator2) {
-                Pi2ProgressArcView.i(this.f20837a, valueAnimatorOfFloat, valueAnimator2);
+                Pi2ProgressArcView.i(this.f18894a, valueAnimatorOfFloat, valueAnimator2);
             }
         });
         Intrinsics.checkNotNull(valueAnimatorOfFloat);
@@ -289,14 +289,14 @@ public final class Pi2ProgressArcView extends View {
         Intrinsics.checkNotNullParameter(context, "context");
         Paint paint = new Paint(1);
         this.paint = paint;
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, u.f36282d, i10, 0);
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, u.f34911d, i10, 0);
         Intrinsics.checkNotNullExpressionValue(typedArrayObtainStyledAttributes, "obtainStyledAttributes(...)");
         try {
-            this.size = typedArrayObtainStyledAttributes.getFloat(u.f36283e, 0.4f);
-            this.startAngle = typedArrayObtainStyledAttributes.getFloat(u.f36285g, 270.0f);
-            this.progress = typedArrayObtainStyledAttributes.getFloat(u.f36284f, 0.0f);
-            paint.setColor(typedArrayObtainStyledAttributes.getColor(u.f36286h, -1));
-            paint.setStrokeWidth(typedArrayObtainStyledAttributes.getDimensionPixelSize(u.f36287i, 4));
+            this.size = typedArrayObtainStyledAttributes.getFloat(u.f34912e, 0.4f);
+            this.startAngle = typedArrayObtainStyledAttributes.getFloat(u.f34914g, 270.0f);
+            this.progress = typedArrayObtainStyledAttributes.getFloat(u.f34913f, 0.0f);
+            paint.setColor(typedArrayObtainStyledAttributes.getColor(u.f34915h, -1));
+            paint.setStrokeWidth(typedArrayObtainStyledAttributes.getDimensionPixelSize(u.f34916i, 4));
             paint.setStyle(Paint.Style.STROKE);
             paint.setStrokeCap(Paint.Cap.BUTT);
             typedArrayObtainStyledAttributes.recycle();

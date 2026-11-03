@@ -12,7 +12,7 @@ public final class AFf1jSDK {
     public long unregisterClient;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public AFh1aSDK f5350d = null;
+    public AFh1aSDK f5423d = null;
     public AFh1aSDK AFLogger = unregisterClient();
 
     public AFf1jSDK(AFc1kSDK aFc1kSDK) {

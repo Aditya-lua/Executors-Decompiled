@@ -1,45 +1,179 @@
 package pj;
 
+import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Typeface;
+import android.os.Bundle;
+import android.util.Log;
+import android.util.Size;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import androidx.camera.view.PreviewView;
+import androidx.fragment.app.FragmentManager;
+import com.google.mlkit.vision.barcode.BarcodeScanner;
+import com.google.mlkit.vision.barcode.BarcodeScannerOptions;
+import com.google.mlkit.vision.barcode.BarcodeScanning;
+import com.google.mlkit.vision.barcode.common.Barcode;
+import gt.n;
+import gt.o;
+import iu.g1;
+import iu.l0;
+import iu.v1;
+import java.util.List;
 import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.collections.CollectionsKt;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
-import sg.q0;
+import org.jetbrains.annotations.Nullable;
+import p1.l;
+import rg.m0;
+import rg.n0;
+import rh.h;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0002\b\u000f\b\u0086\u0081\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001B\u001b\b\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\b\u0001\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\b\u0010\t\u001a\u0004\b\n\u0010\u000bR\u0017\u0010\u0005\u001a\u00020\u00048\u0006¢\u0006\f\n\u0004\b\f\u0010\r\u001a\u0004\b\u000e\u0010\u000fj\u0002\b\u000ej\u0002\b\u0010j\u0002\b\u0011j\u0002\b\u0012¨\u0006\u0013"}, d2 = {"Lpj/c;", "", "", "id", "", "nameId", "<init>", "(Ljava/lang/String;ILjava/lang/String;I)V", "a", "Ljava/lang/String;", "getId", "()Ljava/lang/String;", "b", "I", "c", "()I", "d", "e", "f", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public enum c {
-    SOCIAL("channel_group_social", q0.f30915a1),
-    EXPERIENCES("channel_group_experiences", q0.Z),
-    COMMUNITIES("channel_group_communities", q0.Y),
-    PLATFORM_NEWS("channel_group_platform_news", q0.f30914a0);
+@Metadata(d1 = {"\u0000P\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0006\u0018\u0000 \u001e2\u00020\u0001:\u0001\u001fB\u0007¢\u0006\u0004\b\u0002\u0010\u0003J+\u0010\u000b\u001a\u00020\n2\u0006\u0010\u0005\u001a\u00020\u00042\b\u0010\u0007\u001a\u0004\u0018\u00010\u00062\b\u0010\t\u001a\u0004\u0018\u00010\bH\u0016¢\u0006\u0004\b\u000b\u0010\fJ!\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\r\u001a\u00020\n2\b\u0010\t\u001a\u0004\u0018\u00010\bH\u0016¢\u0006\u0004\b\u000f\u0010\u0010J+\u0010\u0017\u001a\u00020\u00162\u0006\u0010\u0012\u001a\u00020\u00112\b\b\u0002\u0010\u0014\u001a\u00020\u00132\b\b\u0002\u0010\u0015\u001a\u00020\u0013H\u0002¢\u0006\u0004\b\u0017\u0010\u0018J\u001d\u0010\u001c\u001a\u00020\u000e2\f\u0010\u001b\u001a\b\u0012\u0004\u0012\u00020\u001a0\u0019H\u0002¢\u0006\u0004\b\u001c\u0010\u001d¨\u0006 "}, d2 = {"Lpj/c;", "Landroidx/fragment/app/c;", "<init>", "()V", "Landroid/view/LayoutInflater;", "inflater", "Landroid/view/ViewGroup;", "container", "Landroid/os/Bundle;", "savedInstanceState", "Landroid/view/View;", "J0", "(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;", "view", "", "e1", "(Landroid/view/View;Landroid/os/Bundle;)V", "Landroid/content/Context;", "context", "Liu/l0;", "mainDispatcher", "workerDispatcher", "Lp1/l;", "g2", "(Landroid/content/Context;Liu/l0;Liu/l0;)Lp1/l;", "Lgt/n;", "", "result", "f2", "(Ljava/lang/Object;)V", "f0", "a", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class c extends androidx.fragment.app.c {
 
-
-    /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final /* synthetic */ qt.a f28697h = qt.b.a(a());
-
-    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
+    /* JADX INFO: renamed from: f0, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final String id;
+    public static final Companion INSTANCE = new Companion(null);
 
-    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
-    public final int nameId;
+    /* JADX INFO: renamed from: pj.c$a, reason: from kotlin metadata */
+    @Metadata(d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\t\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0007¢\u0006\u0004\b\u0007\u0010\bR\u0014\u0010\t\u001a\u00020\u00048\u0002X\u0082T¢\u0006\u0006\n\u0004\b\t\u0010\nR\u0014\u0010\u000b\u001a\u00020\u00048\u0002X\u0082T¢\u0006\u0006\n\u0004\b\u000b\u0010\nR\u0014\u0010\f\u001a\u00020\u00048\u0006X\u0086T¢\u0006\u0006\n\u0004\b\f\u0010\nR\u0014\u0010\r\u001a\u00020\u00048\u0006X\u0086T¢\u0006\u0006\n\u0004\b\r\u0010\nR\u0014\u0010\u000e\u001a\u00020\u00048\u0006X\u0086T¢\u0006\u0006\n\u0004\b\u000e\u0010\n¨\u0006\u000f"}, d2 = {"Lpj/c$a;", "", "<init>", "()V", "", "fontPath", "Lpj/c;", "a", "(Ljava/lang/String;)Lpj/c;", "TAG", "Ljava/lang/String;", "FONT_PATH_MESSAGE", "RESULT_REQUEST_KEY", "BUNDLE_KEY_SUCCESS", "BUNDLE_KEY_URL_STRING", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final class Companion {
+        public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
+            this();
+        }
 
-    c(String str, int i10) {
-        this.id = str;
-        this.nameId = i10;
+        @NotNull
+        public final c a(@NotNull String fontPath) {
+            Intrinsics.checkNotNullParameter(fontPath, "fontPath");
+            c cVar = new c();
+            Bundle bundle = new Bundle();
+            bundle.putString("FONT_PATH_MESSAGE", fontPath);
+            cVar.O1(bundle);
+            return cVar;
+        }
+
+        public Companion() {
+        }
     }
 
     @NotNull
-    public static qt.a<c> b() {
-        return f28697h;
+    public static final c d2(@NotNull String str) {
+        return INSTANCE.a(str);
     }
 
-    /* JADX INFO: renamed from: c, reason: from getter */
-    public final int getNameId() {
-        return this.nameId;
+    public static final void e2(c cVar, View view) {
+        n.Companion companion = n.INSTANCE;
+        cVar.f2(n.b(o.a(new Exception())));
     }
 
+    public static /* synthetic */ l h2(c cVar, Context context, l0 l0Var, l0 l0Var2, int i10, Object obj) {
+        if ((i10 & 2) != 0) {
+            l0Var = g1.c();
+        }
+        if ((i10 & 4) != 0) {
+            l0Var2 = l0.U(g1.b(), 1, null, 2, null);
+        }
+        return cVar.g2(context, l0Var, l0Var2);
+    }
+
+    public static final void i2(BarcodeScanner barcodeScanner, c cVar, e1.c.a aVar) {
+        List list = (List) aVar.c(barcodeScanner);
+        Barcode barcode = list != null ? (Barcode) CollectionsKt.firstOrNull(list) : null;
+        Throwable thB = aVar.b(barcodeScanner);
+        if (barcode != null) {
+            Log.d("CustomCaptureFrag", "Barcode scanning succeeded.");
+            n.Companion companion = n.INSTANCE;
+            String rawValue = barcode.getRawValue();
+            if (rawValue == null) {
+                rawValue = "";
+            }
+            cVar.f2(n.b(rawValue));
+            return;
+        }
+        if (thB == null) {
+            Log.d("CustomCaptureFrag", "No barcode detected.");
+            return;
+        }
+        Log.w("CustomCaptureFrag", "Barcode scanning failed: " + thB.getMessage(), thB);
+        n.Companion companion2 = n.INSTANCE;
+        cVar.f2(n.b(o.a(thB)));
+    }
+
+    @Override // androidx.fragment.app.c
     @NotNull
-    public final String getId() {
-        return this.id;
+    public View J0(@NotNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        Intrinsics.checkNotNullParameter(inflater, "inflater");
+        View viewInflate = inflater.inflate(n0.f30487h, container, false);
+        Intrinsics.checkNotNullExpressionValue(viewInflate, "inflate(...)");
+        return viewInflate;
+    }
+
+    @Override // androidx.fragment.app.c
+    public void e1(@NotNull View view, @Nullable Bundle savedInstanceState) {
+        Intrinsics.checkNotNullParameter(view, "view");
+        view.findViewById(m0.f30437f).setOnClickListener(new View.OnClickListener() { // from class: pj.a
+            @Override // android.view.View.OnClickListener
+            public final void onClick(View view2) {
+                c.e2(this.f28725a, view2);
+            }
+        });
+        AssetManager assets = view.getContext().getApplicationContext().getAssets();
+        Bundle bundleT = t();
+        String string = bundleT != null ? bundleT.getString("FONT_PATH_MESSAGE") : null;
+        if (string == null) {
+            throw new IllegalStateException("FONT_PATH_MESSAGE not set");
+        }
+        if (h.a().h1()) {
+            ek.d.a("FONT_PATH_MESSAGE");
+        }
+        Typeface typefaceCreateFromAsset = Typeface.createFromAsset(assets, string);
+        TextView textView = (TextView) view.findViewById(m0.Z);
+        TextView textView2 = (TextView) view.findViewById(m0.f30442h0);
+        textView.setTypeface(typefaceCreateFromAsset);
+        textView2.setTypeface(typefaceCreateFromAsset);
+        PreviewView previewView = (PreviewView) view.findViewById(m0.f30429a0);
+        Context context = view.getContext();
+        Intrinsics.checkNotNullExpressionValue(context, "getContext(...)");
+        l lVarH2 = h2(this, context, null, null, 6, null);
+        lVarH2.X(k0());
+        previewView.setController(lVarH2);
+    }
+
+    public final void f2(Object result) {
+        if (p0()) {
+            FragmentManager fragmentManagerL = L();
+            Bundle bundle = new Bundle();
+            bundle.putBoolean("BundleKey_success", n.h(result));
+            if (n.g(result)) {
+                result = null;
+            }
+            bundle.putString("BundleKey_urlString", (String) result);
+            Unit unit = Unit.f22938a;
+            fragmentManagerL.s1("QrCode_requestKey", bundle);
+        }
+    }
+
+    public final l g2(Context context, l0 mainDispatcher, l0 workerDispatcher) {
+        l lVar = new l(context);
+        final BarcodeScanner client = BarcodeScanning.getClient(new BarcodeScannerOptions.Builder().setBarcodeFormats(Barcode.FORMAT_QR_CODE, new int[0]).build());
+        androidx.p000lifecycle.l lVarA = a();
+        Intrinsics.checkNotNull(client);
+        lVarA.a(client);
+        Intrinsics.checkNotNullExpressionValue(client, "also(...)");
+        lVar.D(v1.a(workerDispatcher), new e1.c(kotlin.collections.o.d(client), 1, v1.a(mainDispatcher), new x2.a() { // from class: pj.b
+            @Override // x2.a
+            public final void accept(Object obj) {
+                c.i2(client, this, (e1.c.a) obj);
+            }
+        }));
+        lVar.E(new a1.c.a().f(new a1.d(new Size(1280, 720), 0)).a());
+        return lVar;
     }
 }

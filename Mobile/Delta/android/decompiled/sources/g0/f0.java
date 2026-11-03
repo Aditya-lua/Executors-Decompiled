@@ -22,62 +22,62 @@ import n0.j4;
 public final class f0 {
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public static final Object f17373s = new Object();
+    public static final Object f17912s = new Object();
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public static final SparseArray<Integer> f17374t = new SparseArray<>();
+    public static final SparseArray<Integer> f17913t = new SparseArray<>();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final n0.d1 f17375a;
+    public final n0.d1 f17914a;
     public final Object b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final g0 f17376c;
+    public final g0 f17915c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Executor f17377d;
+    public final Executor f17916d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Handler f17378e;
+    public final Handler f17917e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final HandlerThread f17379f;
+    public final HandlerThread f17918f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public n0.n0 f17380g;
+    public n0.n0 f17919g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public n0.m0 f17381h;
+    public n0.m0 f17920h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public j4 f17382i;
+    public j4 f17921i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public s0.m f17383j;
+    public s0.m f17922j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public y f17384k;
+    public y f17923k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final c2 f17385l;
+    public final c2 f17924l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final me.x<Void> f17386m;
+    public final ne.x<Void> f17925m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public final n0.y0 f17387n;
+    public final n0.y0 f17926n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public a f17388o;
+    public a f17927o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public me.x<Void> f17389p;
+    public ne.x<Void> f17928p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public final Integer f17390q;
+    public final Integer f17929q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public final int f17391r;
+    public final int f17930r;
 
     public enum a {
         UNINITIALIZED,
@@ -108,43 +108,43 @@ public final class f0 {
         final Context contextA = p0.f.a(context);
         try {
             try {
-                n0.n0.a aVarJ0 = f0Var.f17376c.j0(null);
+                n0.n0.a aVarJ0 = f0Var.f17915c.j0(null);
                 if (aVarJ0 == null) {
                     throw new p1(new IllegalArgumentException("Invalid app configuration provided. Missing CameraFactory."));
                 }
-                n0.h1 h1VarA = n0.h1.a(f0Var.f17377d, f0Var.f17378e);
-                v vVarH0 = f0Var.f17376c.h0(null);
-                long jK0 = f0Var.f17376c.k0();
-                j4.c cVarQ0 = f0Var.f17376c.q0(null);
+                n0.h1 h1VarA = n0.h1.a(f0Var.f17916d, f0Var.f17917e);
+                v vVarH0 = f0Var.f17915c.h0(null);
+                long jK0 = f0Var.f17915c.k0();
+                j4.c cVarQ0 = f0Var.f17915c.q0(null);
                 if (cVarQ0 == null) {
                     throw new p1(new IllegalArgumentException("Invalid app configuration provided. Missing UseCaseConfigFactory."));
                 }
-                f0Var.f17382i = cVarQ0.a(contextA);
-                s0.n nVar = new s0.n(f0Var.f17382i, null);
-                f0Var.f17383j = nVar;
-                f0Var.f17380g = aVarJ0.a(contextA, h1VarA, vVarH0, jK0, f0Var.f17376c, nVar);
-                n0.m0.a aVarN0 = f0Var.f17376c.n0(null);
+                f0Var.f17921i = cVarQ0.a(contextA);
+                s0.n nVar = new s0.n(f0Var.f17921i, null);
+                f0Var.f17922j = nVar;
+                f0Var.f17919g = aVarJ0.a(contextA, h1VarA, vVarH0, jK0, f0Var.f17915c, nVar);
+                n0.m0.a aVarN0 = f0Var.f17915c.n0(null);
                 if (aVarN0 == null) {
                     throw new p1(new IllegalArgumentException("Invalid app configuration provided. Missing CameraDeviceSurfaceManager."));
                 }
-                n0.m0 m0VarA = aVarN0.a(contextA, f0Var.f17380g.a(), f0Var.f17380g.d());
-                f0Var.f17381h = m0VarA;
-                f0Var.f17383j.b(m0VarA);
+                n0.m0 m0VarA = aVarN0.a(contextA, f0Var.f17919g.a(), f0Var.f17919g.d());
+                f0Var.f17920h = m0VarA;
+                f0Var.f17922j.b(m0VarA);
                 if (executor instanceof q) {
-                    ((q) executor).e(f0Var.f17380g);
+                    ((q) executor).e(f0Var.f17919g);
                 }
-                f0Var.f17375a.n(f0Var.f17380g);
-                h0.a aVarF = f0Var.f17380g.f();
-                aVarF.a(f0Var.f17375a);
-                f0Var.f17384k = new z(f0Var.f17375a, aVarF, f0Var.f17382i, f0Var.f17383j);
-                Iterator<n0.p0> it = f0Var.f17375a.m().iterator();
+                f0Var.f17914a.n(f0Var.f17919g);
+                h0.a aVarF = f0Var.f17919g.f();
+                aVarF.a(f0Var.f17914a);
+                f0Var.f17923k = new z(f0Var.f17914a, aVarF, f0Var.f17921i, f0Var.f17922j);
+                Iterator<n0.p0> it = f0Var.f17914a.m().iterator();
                 while (it.hasNext()) {
-                    it.next().k().g(f0Var.f17384k);
+                    it.next().k().g(f0Var.f17923k);
                 }
-                f0Var.f17387n.A(f0Var.f17380g, f0Var.f17375a);
-                f0Var.f17387n.k(f0Var.f17381h);
-                f0Var.f17387n.k(f0Var.f17380g.f());
-                n0.j1.a(contextA, f0Var.f17375a, vVarH0);
+                f0Var.f17926n.A(f0Var.f17919g, f0Var.f17914a);
+                f0Var.f17926n.k(f0Var.f17920h);
+                f0Var.f17926n.k(f0Var.f17919g.f());
+                n0.j1.a(contextA, f0Var.f17914a, vVarH0);
                 if (i10 > 1) {
                     f0Var.s(null);
                 }
@@ -158,12 +158,12 @@ public final class f0 {
         } catch (p1 e10) {
             e = e10;
             n0.z0 z0Var = new n0.z0(j10, i10, e);
-            cVarE = f0Var.f17385l.e(z0Var);
+            cVarE = f0Var.f17924l.e(z0Var);
             f0Var.s(z0Var);
-            f0Var.f17387n.z();
+            f0Var.f17926n.z();
             if (cVarE.d() || i10 >= Integer.MAX_VALUE) {
                 synchronized (f0Var.b) {
-                    f0Var.f17388o = a.INITIALIZING_ERROR;
+                    f0Var.f17927o = a.INITIALIZING_ERROR;
                 }
                 if (cVarE.c()) {
                     f0Var.p();
@@ -179,10 +179,10 @@ public final class f0 {
                 }
             } else {
                 r1.m("CameraX", "Retry init. Start time " + j10 + " current time " + SystemClock.elapsedRealtime(), e);
-                u2.i.b(f0Var.f17378e, new Runnable() { // from class: g0.e0
+                u2.i.b(f0Var.f17917e, new Runnable() { // from class: g0.e0
                     @Override // java.lang.Runnable
                     public final void run() {
-                        this.f17363a.n(executor, j10, i10 + 1, contextA, aVar);
+                        this.f17902a.n(executor, j10, i10 + 1, contextA, aVar);
                     }
                 }, "retry_token", cVarE.b());
             }
@@ -190,12 +190,12 @@ public final class f0 {
         } catch (RuntimeException e11) {
             e = e11;
             n0.z0 z0Var2 = new n0.z0(j10, i10, e);
-            cVarE = f0Var.f17385l.e(z0Var2);
+            cVarE = f0Var.f17924l.e(z0Var2);
             f0Var.s(z0Var2);
-            f0Var.f17387n.z();
+            f0Var.f17926n.z();
             if (cVarE.d()) {
                 synchronized (f0Var.b) {
-                    f0Var.f17388o = a.INITIALIZING_ERROR;
+                    f0Var.f17927o = a.INITIALIZING_ERROR;
                     if (cVarE.c()) {
                         f0Var.p();
                         aVar.c(null);
@@ -211,7 +211,7 @@ public final class f0 {
                 }
             } else {
                 synchronized (f0Var.b) {
-                    f0Var.f17388o = a.INITIALIZING_ERROR;
+                    f0Var.f17927o = a.INITIALIZING_ERROR;
                     if (cVarE.c()) {
                         f0Var.p();
                         aVar.c(null);
@@ -230,12 +230,12 @@ public final class f0 {
         } catch (n0.j1.b e12) {
             e = e12;
             n0.z0 z0Var3 = new n0.z0(j10, i10, e);
-            cVarE = f0Var.f17385l.e(z0Var3);
+            cVarE = f0Var.f17924l.e(z0Var3);
             f0Var.s(z0Var3);
-            f0Var.f17387n.z();
+            f0Var.f17926n.z();
             if (cVarE.d()) {
                 synchronized (f0Var.b) {
-                    f0Var.f17388o = a.INITIALIZING_ERROR;
+                    f0Var.f17927o = a.INITIALIZING_ERROR;
                     if (cVarE.c()) {
                         f0Var.p();
                         aVar.c(null);
@@ -251,7 +251,7 @@ public final class f0 {
                 }
             } else {
                 synchronized (f0Var.b) {
-                    f0Var.f17388o = a.INITIALIZING_ERROR;
+                    f0Var.f17927o = a.INITIALIZING_ERROR;
                     if (cVarE.c()) {
                         f0Var.p();
                         aVar.c(null);
@@ -271,40 +271,40 @@ public final class f0 {
     }
 
     public static /* synthetic */ void b(f0 f0Var, y1.c.a aVar) {
-        f0Var.f17380g.shutdown();
-        if (f0Var.f17379f != null) {
-            Executor executor = f0Var.f17377d;
+        f0Var.f17919g.shutdown();
+        if (f0Var.f17918f != null) {
+            Executor executor = f0Var.f17916d;
             if (executor instanceof q) {
                 ((q) executor).d();
             }
-            f0Var.f17379f.quit();
+            f0Var.f17918f.quit();
         }
         aVar.c(null);
     }
 
     public static /* synthetic */ Object c(f0 f0Var, Context context, y1.c.a aVar) {
-        f0Var.n(f0Var.f17377d, SystemClock.elapsedRealtime(), 1, context, aVar);
+        f0Var.n(f0Var.f17916d, SystemClock.elapsedRealtime(), 1, context, aVar);
         return "CameraX initInternal";
     }
 
     public static /* synthetic */ Object d(final f0 f0Var, final y1.c.a aVar) {
-        f0Var.f17387n.z();
-        f0Var.f17375a.k().a(new Runnable() { // from class: g0.d0
+        f0Var.f17926n.z();
+        f0Var.f17914a.k().a(new Runnable() { // from class: g0.d0
             @Override // java.lang.Runnable
             public final void run() {
-                f0.b(this.f17360a, aVar);
+                f0.b(this.f17899a, aVar);
             }
-        }, f0Var.f17377d);
+        }, f0Var.f17916d);
         return "CameraX shutdownInternal";
     }
 
     public static void f(Integer num) {
-        synchronized (f17373s) {
+        synchronized (f17912s) {
             try {
                 if (num == null) {
                     return;
                 }
-                SparseArray<Integer> sparseArray = f17374t;
+                SparseArray<Integer> sparseArray = f17913t;
                 int iIntValue = sparseArray.get(num.intValue()).intValue() - 1;
                 if (iIntValue == 0) {
                     sparseArray.remove(num.intValue());
@@ -364,13 +364,13 @@ public final class f0 {
     }
 
     public static void m(Integer num) {
-        synchronized (f17373s) {
+        synchronized (f17912s) {
             try {
                 if (num == null) {
                     return;
                 }
                 x2.g.c(num.intValue(), 3, 6, "minLogLevel");
-                SparseArray<Integer> sparseArray = f17374t;
+                SparseArray<Integer> sparseArray = f17913t;
                 sparseArray.put(num.intValue(), Integer.valueOf(sparseArray.get(num.intValue()) != null ? 1 + sparseArray.get(num.intValue()).intValue() : 1));
                 t();
             } catch (Throwable th2) {
@@ -380,7 +380,7 @@ public final class f0 {
     }
 
     public static void t() {
-        SparseArray<Integer> sparseArray = f17374t;
+        SparseArray<Integer> sparseArray = f17913t;
         if (sparseArray.size() == 0) {
             r1.i();
             return;
@@ -413,7 +413,7 @@ public final class f0 {
     }
 
     public n0.n0 g() {
-        n0.n0 n0Var = this.f17380g;
+        n0.n0 n0Var = this.f17919g;
         if (n0Var != null) {
             return n0Var;
         }
@@ -421,11 +421,11 @@ public final class f0 {
     }
 
     public n0.d1 h() {
-        return this.f17375a;
+        return this.f17914a;
     }
 
     public y i() {
-        y yVar = this.f17384k;
+        y yVar = this.f17923k;
         if (yVar != null) {
             return yVar;
         }
@@ -433,31 +433,31 @@ public final class f0 {
     }
 
     public int j() {
-        return this.f17391r;
+        return this.f17930r;
     }
 
-    public me.x<Void> l() {
-        return this.f17386m;
+    public ne.x<Void> l() {
+        return this.f17925m;
     }
 
     public final void n(final Executor executor, final long j10, final int i10, final Context context, final y1.c.a<Void> aVar) {
         executor.execute(new Runnable() { // from class: g0.b0
             @Override // java.lang.Runnable
             public final void run() {
-                f0.a(this.f17342a, context, executor, i10, aVar, j10);
+                f0.a(this.f17881a, context, executor, i10, aVar, j10);
             }
         });
     }
 
-    public final me.x<Void> o(final Context context) {
-        me.x<Void> xVarA;
+    public final ne.x<Void> o(final Context context) {
+        ne.x<Void> xVarA;
         synchronized (this.b) {
-            x2.g.j(this.f17388o == a.UNINITIALIZED, "CameraX.initInternal() should only be called once per instance");
-            this.f17388o = a.INITIALIZING;
-            xVarA = y1.c.a(new y1.c.InterfaceC0650c() { // from class: g0.a0
-                @Override // y1.c.InterfaceC0650c
+            x2.g.j(this.f17927o == a.UNINITIALIZED, "CameraX.initInternal() should only be called once per instance");
+            this.f17927o = a.INITIALIZING;
+            xVarA = y1.c.a(new y1.c.InterfaceC0665c() { // from class: g0.a0
+                @Override // y1.c.InterfaceC0665c
                 public final Object a(y1.c.a aVar) {
-                    return f0.c(this.f17328a, context, aVar);
+                    return f0.c(this.f17867a, context, aVar);
                 }
             });
         }
@@ -466,37 +466,37 @@ public final class f0 {
 
     public final void p() {
         synchronized (this.b) {
-            this.f17388o = a.INITIALIZED;
+            this.f17927o = a.INITIALIZED;
         }
     }
 
-    public me.x<Void> q() {
+    public ne.x<Void> q() {
         return r();
     }
 
-    public final me.x<Void> r() {
+    public final ne.x<Void> r() {
         synchronized (this.b) {
             try {
-                this.f17378e.removeCallbacksAndMessages("retry_token");
-                int iOrdinal = this.f17388o.ordinal();
+                this.f17917e.removeCallbacksAndMessages("retry_token");
+                int iOrdinal = this.f17927o.ordinal();
                 if (iOrdinal == 0) {
-                    this.f17388o = a.SHUTDOWN;
+                    this.f17927o = a.SHUTDOWN;
                     return r0.n.p(null);
                 }
                 if (iOrdinal == 1) {
                     throw new IllegalStateException("CameraX could not be shutdown when it is initializing.");
                 }
                 if (iOrdinal == 2 || iOrdinal == 3) {
-                    this.f17388o = a.SHUTDOWN;
-                    f(this.f17390q);
-                    this.f17389p = y1.c.a(new y1.c.InterfaceC0650c() { // from class: g0.c0
-                        @Override // y1.c.InterfaceC0650c
+                    this.f17927o = a.SHUTDOWN;
+                    f(this.f17929q);
+                    this.f17928p = y1.c.a(new y1.c.InterfaceC0665c() { // from class: g0.c0
+                        @Override // y1.c.InterfaceC0665c
                         public final Object a(y1.c.a aVar) {
-                            return f0.d(this.f17350a, aVar);
+                            return f0.d(this.f17889a, aVar);
                         }
                     });
                 }
-                return this.f17389p;
+                return this.f17928p;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -510,39 +510,39 @@ public final class f0 {
     }
 
     public f0(Context context, g0.b bVar, t.a<Context, h3> aVar) {
-        this.f17375a = new n0.d1();
+        this.f17914a = new n0.d1();
         this.b = new Object();
-        this.f17388o = a.UNINITIALIZED;
-        this.f17389p = r0.n.p(null);
+        this.f17927o = a.UNINITIALIZED;
+        this.f17928p = r0.n.p(null);
         if (bVar != null) {
-            this.f17376c = bVar.getCameraXConfig();
+            this.f17915c = bVar.getCameraXConfig();
         } else {
             g0.b bVarK = k(context);
             if (bVarK == null) {
                 throw new IllegalStateException("CameraX is not configured properly. The most likely cause is you did not include a default implementation in your build such as 'camera-camera2'.");
             }
-            this.f17376c = bVarK.getCameraXConfig();
+            this.f17915c = bVarK.getCameraXConfig();
         }
-        u(context, this.f17376c.o0(), aVar);
-        this.f17391r = this.f17376c.m0();
-        Executor executorI0 = this.f17376c.i0(null);
-        Handler handlerP0 = this.f17376c.p0(null);
+        u(context, this.f17915c.o0(), aVar);
+        this.f17930r = this.f17915c.m0();
+        Executor executorI0 = this.f17915c.i0(null);
+        Handler handlerP0 = this.f17915c.p0(null);
         executorI0 = executorI0 == null ? new q() : executorI0;
-        this.f17377d = executorI0;
+        this.f17916d = executorI0;
         if (handlerP0 == null) {
             HandlerThread handlerThread = new HandlerThread("CameraX-scheduler", 10);
-            this.f17379f = handlerThread;
+            this.f17918f = handlerThread;
             handlerThread.start();
-            this.f17378e = u2.i.a(handlerThread.getLooper());
+            this.f17917e = u2.i.a(handlerThread.getLooper());
         } else {
-            this.f17379f = null;
-            this.f17378e = handlerP0;
+            this.f17918f = null;
+            this.f17917e = handlerP0;
         }
-        Integer num = (Integer) this.f17376c.h(g0.V, null);
-        this.f17390q = num;
+        Integer num = (Integer) this.f17915c.h(g0.V, null);
+        this.f17929q = num;
         m(num);
-        this.f17385l = new c2.a(this.f17376c.l0()).a();
-        this.f17387n = new n0.y0(executorI0);
-        this.f17386m = o(context);
+        this.f17924l = new c2.a(this.f17915c.l0()).a();
+        this.f17926n = new n0.y0(executorI0);
+        this.f17925m = o(context);
     }
 }

@@ -90,10 +90,10 @@ public final class h extends x<h, a> implements s0 {
 
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final int f33678a;
+        public final int f33884a;
 
         b(int i10) {
-            this.f33678a = i10;
+            this.f33884a = i10;
         }
 
         public static b b(int i10) {
@@ -133,14 +133,14 @@ public final class h extends x<h, a> implements s0 {
     }
 
     public static a n0() {
-        return DEFAULT_INSTANCE.x();
+        return DEFAULT_INSTANCE.w();
     }
 
     @Override // androidx.datastore.preferences.protobuf.x
     public final Object A(x.f fVar, Object obj, Object obj2) {
         z0 bVar;
         e eVar = null;
-        switch (e.f33667a[fVar.ordinal()]) {
+        switch (e.f33873a[fVar.ordinal()]) {
             case 1:
                 return new h();
             case 2:

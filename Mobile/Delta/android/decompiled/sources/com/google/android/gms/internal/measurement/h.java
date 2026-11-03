@@ -7,21 +7,21 @@ import java.util.List;
 public final class h implements q {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final q f6464a;
+    public final q f6537a;
     public final String b;
 
     public h(String str) {
-        this.f6464a = q.f6743zo;
+        this.f6537a = q.f6816yo;
         this.b = str;
     }
 
     @Override // com.google.android.gms.internal.measurement.q
     public final q a() {
-        return new h(this.b, this.f6464a.a());
+        return new h(this.b, this.f6537a.a());
     }
 
     public final q b() {
-        return this.f6464a;
+        return this.f6537a;
     }
 
     public final String c() {
@@ -41,11 +41,11 @@ public final class h implements q {
             return false;
         }
         h hVar = (h) obj;
-        return this.b.equals(hVar.b) && this.f6464a.equals(hVar.f6464a);
+        return this.b.equals(hVar.b) && this.f6537a.equals(hVar.f6537a);
     }
 
     public final int hashCode() {
-        return (this.b.hashCode() * 31) + this.f6464a.hashCode();
+        return (this.b.hashCode() * 31) + this.f6537a.hashCode();
     }
 
     @Override // com.google.android.gms.internal.measurement.q
@@ -69,7 +69,7 @@ public final class h implements q {
     }
 
     public h(String str, q qVar) {
-        this.f6464a = qVar;
+        this.f6537a = qVar;
         this.b = str;
     }
 }

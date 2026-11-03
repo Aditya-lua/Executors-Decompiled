@@ -17,7 +17,7 @@ import java.util.zip.ZipInputStream;
 public class h {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final g f28382a;
+    public final g f28601a;
 
     @NonNull
     public final f b;
@@ -25,24 +25,24 @@ public class h {
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f28383a;
+        public static final /* synthetic */ int[] f28602a;
 
         static {
             int[] iArr = new int[c.values().length];
-            f28383a = iArr;
+            f28602a = iArr;
             try {
                 iArr[c.ZIP.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f28383a[c.GZIP.ordinal()] = 2;
+                f28602a[c.GZIP.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
         }
     }
 
     public h(g gVar, @NonNull f fVar) {
-        this.f28382a = gVar;
+        this.f28601a = gVar;
         this.b = fVar;
     }
 
@@ -50,12 +50,12 @@ public class h {
         g gVar;
         Pair<c, InputStream> pairA;
         p0<i> p0VarB;
-        if (str2 == null || (gVar = this.f28382a) == null || (pairA = gVar.a(str)) == null) {
+        if (str2 == null || (gVar = this.f28601a) == null || (pairA = gVar.a(str)) == null) {
             return null;
         }
         c cVar = (c) pairA.first;
         InputStream inputStream = (InputStream) pairA.second;
-        int i10 = a.f28383a[cVar.ordinal()];
+        int i10 = a.f28602a[cVar.ordinal()];
         if (i10 == 1) {
             p0VarB = q.B(context, new ZipInputStream(inputStream), str2);
         } else if (i10 != 2) {
@@ -82,13 +82,13 @@ public class h {
             try {
                 d dVarA = this.b.a(str);
                 if (dVarA.isSuccessful()) {
-                    p0Var = e(context, str, dVarA.I0(), dVarA.B0(), str2);
+                    p0Var = e(context, str, dVarA.E0(), dVarA.x0(), str2);
                     StringBuilder sb2 = new StringBuilder();
                     sb2.append("Completed fetch from network. Success: ");
                     sb2.append(p0Var.b() != null);
                     s7.e.a(sb2.toString());
                 } else {
-                    p0Var = new p0<>(new IllegalArgumentException(dVarA.u2()));
+                    p0Var = new p0<>(new IllegalArgumentException(dVarA.v2()));
                 }
                 try {
                     dVarA.close();
@@ -135,7 +135,7 @@ public class h {
     @NonNull
     public final p0<i> d(@NonNull String str, @NonNull InputStream inputStream, String str2) {
         g gVar;
-        return (str2 == null || (gVar = this.f28382a) == null) ? q.p(new GZIPInputStream(inputStream), null) : q.p(new GZIPInputStream(new FileInputStream(gVar.g(str, inputStream, c.GZIP))), str);
+        return (str2 == null || (gVar = this.f28601a) == null) ? q.p(new GZIPInputStream(inputStream), null) : q.p(new GZIPInputStream(new FileInputStream(gVar.g(str, inputStream, c.GZIP))), str);
     }
 
     @NonNull
@@ -160,7 +160,7 @@ public class h {
             cVar = c.JSON;
             p0VarG = f(str, inputStream, str3);
         }
-        if (str3 != null && p0VarG.b() != null && (gVar = this.f28382a) != null) {
+        if (str3 != null && p0VarG.b() != null && (gVar = this.f28601a) != null) {
             gVar.f(str, cVar);
         }
         return p0VarG;
@@ -169,12 +169,12 @@ public class h {
     @NonNull
     public final p0<i> f(@NonNull String str, @NonNull InputStream inputStream, String str2) {
         g gVar;
-        return (str2 == null || (gVar = this.f28382a) == null) ? q.p(inputStream, null) : q.p(new FileInputStream(gVar.g(str, inputStream, c.JSON).getAbsolutePath()), str);
+        return (str2 == null || (gVar = this.f28601a) == null) ? q.p(inputStream, null) : q.p(new FileInputStream(gVar.g(str, inputStream, c.JSON).getAbsolutePath()), str);
     }
 
     @NonNull
     public final p0<i> g(Context context, @NonNull String str, @NonNull InputStream inputStream, String str2) {
         g gVar;
-        return (str2 == null || (gVar = this.f28382a) == null) ? q.B(context, new ZipInputStream(inputStream), null) : q.B(context, new ZipInputStream(new FileInputStream(gVar.g(str, inputStream, c.ZIP))), str);
+        return (str2 == null || (gVar = this.f28601a) == null) ? q.B(context, new ZipInputStream(inputStream), null) : q.B(context, new ZipInputStream(new FileInputStream(gVar.g(str, inputStream, c.ZIP))), str);
     }
 }

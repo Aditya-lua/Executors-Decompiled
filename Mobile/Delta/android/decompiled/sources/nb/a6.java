@@ -16,32 +16,32 @@ import java.util.Objects;
 public final class a6 implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final URL f25322a;
+    public final URL f26143a;
     public final byte[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final y5 f25323c;
+    public final y5 f26144c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final String f25324d;
+    public final String f26145d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Map f25325e;
+    public final Map f26146e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final /* synthetic */ b6 f25326f;
+    public final /* synthetic */ b6 f26147f;
 
     public a6(b6 b6Var, String str, URL url, byte[] bArr, Map map, y5 y5Var) {
         Objects.requireNonNull(b6Var);
-        this.f25326f = b6Var;
+        this.f26147f = b6Var;
         n9.m.f(str);
         n9.m.l(url);
         n9.m.l(y5Var);
-        this.f25322a = url;
+        this.f26143a = url;
         this.b = bArr;
-        this.f25323c = y5Var;
-        this.f25324d = str;
-        this.f25325e = map;
+        this.f26144c = y5Var;
+        this.f26145d = str;
+        this.f26146e = map;
     }
 
     /* JADX WARN: Code duplicated, block: B:73:0x0143  */
@@ -61,20 +61,20 @@ public final class a6 implements Runnable {
         Map map3;
         Map map4;
         InputStream inputStream;
-        b6 b6Var = this.f25326f;
+        b6 b6Var = this.f26147f;
         b6Var.g();
         int i10 = 0;
         OutputStream outputStream = null;
         try {
-            URL url = this.f25322a;
-            int i11 = com.google.android.gms.internal.measurement.m1.f6614a;
+            URL url = this.f26143a;
+            int i11 = com.google.android.gms.internal.measurement.m1.f6687a;
             URLConnection uRLConnectionOpenConnection = url.openConnection();
             if (!(uRLConnectionOpenConnection instanceof HttpURLConnection)) {
                 throw new IOException("Failed to obtain HTTP connection");
             }
             httpURLConnection = (HttpURLConnection) uRLConnectionOpenConnection;
             httpURLConnection.setDefaultUseCaches(false);
-            g7 g7Var = b6Var.f25625a;
+            g7 g7Var = b6Var.f26446a;
             g7Var.w();
             httpURLConnection.setConnectTimeout(60000);
             g7Var.w();
@@ -82,7 +82,7 @@ public final class a6 implements Runnable {
             httpURLConnection.setInstanceFollowRedirects(false);
             httpURLConnection.setDoInput(true);
             try {
-                Map map5 = this.f25325e;
+                Map map5 = this.f26146e;
                 if (map5 != null) {
                     for (Map.Entry entry : map5.entrySet()) {
                         httpURLConnection.addRequestProperty((String) entry.getKey(), (String) entry.getValue());
@@ -111,13 +111,13 @@ public final class a6 implements Runnable {
                             try {
                                 outputStream.close();
                             } catch (IOException e11) {
-                                this.f25326f.f25625a.a().o().c("Error closing HTTP compressed POST connection output stream. appId", w5.x(this.f25324d), e11);
+                                this.f26147f.f26446a.a().o().c("Error closing HTTP compressed POST connection output stream. appId", w5.x(this.f26145d), e11);
                             }
                         }
                         if (httpURLConnection != null) {
                             httpURLConnection.disconnect();
                         }
-                        this.f25326f.f25625a.b().t(new z5(this.f25324d, this.f25323c, responseCode, iOException, null, map2, null));
+                        this.f26147f.f26446a.b().t(new z5(this.f26145d, this.f26144c, responseCode, iOException, null, map2, null));
                     } catch (Throwable th3) {
                         th = th3;
                         map = null;
@@ -127,13 +127,13 @@ public final class a6 implements Runnable {
                             try {
                                 outputStream.close();
                             } catch (IOException e12) {
-                                this.f25326f.f25625a.a().o().c("Error closing HTTP compressed POST connection output stream. appId", w5.x(this.f25324d), e12);
+                                this.f26147f.f26446a.a().o().c("Error closing HTTP compressed POST connection output stream. appId", w5.x(this.f26145d), e12);
                             }
                         }
                         if (httpURLConnection != null) {
                             httpURLConnection.disconnect();
                         }
-                        this.f25326f.f25625a.b().t(new z5(this.f25324d, this.f25323c, i10, null, null, map, null));
+                        this.f26147f.f26446a.b().t(new z5(this.f26145d, this.f26144c, i10, null, null, map, null));
                         throw th2;
                     }
                 }
@@ -152,7 +152,7 @@ public final class a6 implements Runnable {
                                         byte[] byteArray = byteArrayOutputStream.toByteArray();
                                         inputStream.close();
                                         httpURLConnection.disconnect();
-                                        this.f25326f.f25625a.b().t(new z5(this.f25324d, this.f25323c, responseCode, null, byteArray, headerFields, null));
+                                        this.f26147f.f26446a.b().t(new z5(this.f26145d, this.f26144c, responseCode, null, byteArray, headerFields, null));
                                         return;
                                     }
                                     byteArrayOutputStream.write(bArr2, 0, i12);
@@ -178,7 +178,7 @@ public final class a6 implements Runnable {
                         if (httpURLConnection != null) {
                             httpURLConnection.disconnect();
                         }
-                        this.f25326f.f25625a.b().t(new z5(this.f25324d, this.f25323c, responseCode, iOException, null, map2, null));
+                        this.f26147f.f26446a.b().t(new z5(this.f26145d, this.f26144c, responseCode, iOException, null, map2, null));
                     } catch (Throwable th6) {
                         th2 = th6;
                         map = null;
@@ -189,7 +189,7 @@ public final class a6 implements Runnable {
                         if (httpURLConnection != null) {
                             httpURLConnection.disconnect();
                         }
-                        this.f25326f.f25625a.b().t(new z5(this.f25324d, this.f25323c, i10, null, null, map, null));
+                        this.f26147f.f26446a.b().t(new z5(this.f26145d, this.f26144c, i10, null, null, map, null));
                         throw th2;
                     }
                 } catch (IOException e14) {
@@ -202,7 +202,7 @@ public final class a6 implements Runnable {
                     if (httpURLConnection != null) {
                         httpURLConnection.disconnect();
                     }
-                    this.f25326f.f25625a.b().t(new z5(this.f25324d, this.f25323c, responseCode, iOException, null, map2, null));
+                    this.f26147f.f26446a.b().t(new z5(this.f26145d, this.f26144c, responseCode, iOException, null, map2, null));
                 } catch (Throwable th7) {
                     th2 = th7;
                     i10 = responseCode;
@@ -213,7 +213,7 @@ public final class a6 implements Runnable {
                     if (httpURLConnection != null) {
                         httpURLConnection.disconnect();
                     }
-                    this.f25326f.f25625a.b().t(new z5(this.f25324d, this.f25323c, i10, null, null, map, null));
+                    this.f26147f.f26446a.b().t(new z5(this.f26145d, this.f26144c, i10, null, null, map, null));
                     throw th2;
                 }
             } catch (IOException e15) {

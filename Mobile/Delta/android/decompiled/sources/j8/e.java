@@ -7,7 +7,7 @@ import com.google.mlkit.common.MlKitException;
 public abstract class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final e f21119a = a().f(10485760).d(MlKitException.CODE_SCANNER_UNAVAILABLE).b(BacktraceMetrics.defaultTimeBetweenRetriesMs).c(604800000).e(81920).a();
+    public static final e f21692a = a().f(10485760).d(MlKitException.CODE_SCANNER_UNAVAILABLE).b(BacktraceMetrics.defaultTimeBetweenRetriesMs).c(604800000).e(81920).a();
 
     public static abstract class a {
         public abstract e a();

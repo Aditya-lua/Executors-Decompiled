@@ -10,7 +10,7 @@ import org.jetbrains.annotations.Nullable;
 @Metadata(d1 = {"x4/w", "x4/x"}, d2 = {}, k = 4, mv = {2, 1, 0}, xi = 48)
 public final class v {
     @Nullable
-    public static final <R> Object a(@NotNull u uVar, @NotNull Function1<? super nt.b<? super R>, ? extends Object> function1, @NotNull nt.b<? super R> bVar) {
+    public static final <R> Object a(@NotNull u uVar, @NotNull Function1<? super lt.b<? super R>, ? extends Object> function1, @NotNull lt.b<? super R> bVar) {
         return x.b(uVar, function1, bVar);
     }
 
@@ -27,7 +27,7 @@ public final class v {
     }
 
     @Nullable
-    public static final <R> Object e(@NotNull u uVar, @NotNull Function1<? super nt.b<? super R>, ? extends Object> function1, @NotNull nt.b<? super R> bVar) {
+    public static final <R> Object e(@NotNull u uVar, @NotNull Function1<? super lt.b<? super R>, ? extends Object> function1, @NotNull lt.b<? super R> bVar) {
         return x.e(uVar, function1, bVar);
     }
 }

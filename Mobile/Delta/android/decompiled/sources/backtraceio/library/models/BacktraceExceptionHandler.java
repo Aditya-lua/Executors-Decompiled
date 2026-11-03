@@ -40,7 +40,7 @@ public class BacktraceExceptionHandler implements Thread.UncaughtExceptionHandle
         return new OnServerResponseEventListener() { // from class: backtraceio.library.models.a
             @Override // backtraceio.library.events.OnServerResponseEventListener
             public final void onEvent(BacktraceResult backtraceResult) {
-                BacktraceExceptionHandler.a(this.f4077a, thread, th2, backtraceResult);
+                BacktraceExceptionHandler.a(this.f3975a, thread, th2, backtraceResult);
             }
         };
     }

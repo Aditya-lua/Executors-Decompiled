@@ -12,13 +12,13 @@ import nb.qa;
 public final class a extends c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final g7 f24045a;
+    public final g7 f24695a;
     public final qa b;
 
     public a(@NonNull g7 g7Var) {
         super(null);
         m.l(g7Var);
-        this.f24045a = g7Var;
+        this.f24695a = g7Var;
         this.b = g7Var.B();
     }
 
@@ -34,7 +34,7 @@ public final class a extends c {
 
     @Override // nb.ra
     public final void c(String str) {
-        g7 g7Var = this.f24045a;
+        g7 g7Var = this.f24695a;
         g7Var.M().j(str, g7Var.e().b());
     }
 
@@ -50,7 +50,7 @@ public final class a extends c {
 
     @Override // nb.ra
     public final long f() {
-        return this.f24045a.C().p0();
+        return this.f24695a.C().p0();
     }
 
     @Override // nb.ra
@@ -60,7 +60,7 @@ public final class a extends c {
 
     @Override // nb.ra
     public final void h(String str) {
-        g7 g7Var = this.f24045a;
+        g7 g7Var = this.f24695a;
         g7Var.M().i(str, g7Var.e().b());
     }
 
@@ -77,7 +77,7 @@ public final class a extends c {
 
     @Override // nb.ra
     public final void k(String str, String str2, Bundle bundle) {
-        this.f24045a.B().O(str, str2, bundle);
+        this.f24695a.B().O(str, str2, bundle);
     }
 
     @Override // nb.ra

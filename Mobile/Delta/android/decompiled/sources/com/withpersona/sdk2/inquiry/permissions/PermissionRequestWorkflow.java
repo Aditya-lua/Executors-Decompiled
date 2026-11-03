@@ -1,6 +1,5 @@
 package com.withpersona.sdk2.inquiry.permissions;
 
-import an.q;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -13,8 +12,9 @@ import com.withpersona.sdk2.inquiry.permissions.DeviceFeatureRequestWorkflow;
 import com.withpersona.sdk2.inquiry.permissions.PermissionRequestWorkflow;
 import com.withpersona.sdk2.inquiry.tracking.TrackingEventsLogger;
 import com.withpersona.sdk2.inquiry.tracking.model.PermissionTrackingEventData;
-import jt.l;
-import jt.o;
+import gt.l;
+import gt.o;
+import iu.p0;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -23,25 +23,25 @@ import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.d0;
-import ku.p0;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pt.m;
-import rp.OldCheckRequestPermissionRationaleStateView;
-import rp.g0;
-import rp.i0;
-import rp.j1;
-import rp.n1;
-import rp.v;
-import ym.Snapshot;
-import ym.h;
-import ym.k;
-import ym.r;
-import ym.w;
-import ym.z;
+import pp.OldCheckRequestPermissionRationaleStateView;
+import pp.g0;
+import pp.i0;
+import pp.j1;
+import pp.n1;
+import pp.v;
+import wm.Snapshot;
+import wm.h;
+import wm.k;
+import wm.r;
+import wm.w;
+import wm.z;
+import ym.q;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000Z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0012\u0018\u00002\u001c\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0006\u0012\u0004\u0018\u00010\u00050\u0001:\u0003/01B)\b\u0001\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b\u0012\u0006\u0010\u000b\u001a\u00020\n\u0012\u0006\u0010\r\u001a\u00020\f¢\u0006\u0004\b\u000e\u0010\u000fJ\u000f\u0010\u0011\u001a\u00020\u0010H\u0002¢\u0006\u0004\b\u0011\u0010\u0012J1\u0010\u0017\u001a\u00020\u0010*\u00180\u0013R\u0014\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u00142\u0006\u0010\u0016\u001a\u00020\u0015H\u0002¢\u0006\u0004\b\u0017\u0010\u0018J!\u0010\u001c\u001a\u00020\u00032\u0006\u0010\u0019\u001a\u00020\u00022\b\u0010\u001b\u001a\u0004\u0018\u00010\u001aH\u0016¢\u0006\u0004\b\u001c\u0010\u001dJG\u0010\"\u001a\u0004\u0018\u00010\u00052\u0006\u0010\u001e\u001a\u00020\u00022\u0006\u0010\u001f\u001a\u00020\u00032$\u0010!\u001a 0 R\u001c\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0006\u0012\u0004\u0018\u00010\u00050\u0001H\u0016¢\u0006\u0004\b\"\u0010#J\u0017\u0010%\u001a\u00020\u001a2\u0006\u0010$\u001a\u00020\u0003H\u0016¢\u0006\u0004\b%\u0010&R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b'\u0010(R\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b)\u0010*R\u0014\u0010\u000b\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b+\u0010,R\u0014\u0010\r\u001a\u00020\f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b-\u0010.¨\u00062"}, d2 = {"Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow;", "Lym/k;", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$PermissionRequestState;", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Output;", "", "Landroid/content/Context;", "applicationContext", "Lcom/withpersona/sdk2/inquiry/permissions/d$a;", "permissionRequestDialogWorkerFactory", "Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow;", "deviceFeatureRequestWorkflow", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "trackingEventsLogger", "<init>", "(Landroid/content/Context;Lcom/withpersona/sdk2/inquiry/permissions/d$a;Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow;Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;)V", "", "I", "()V", "Lym/r$c;", "Lym/r;", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionState;", "output", "G", "(Lym/r$c;Lcom/withpersona/sdk2/inquiry/permissions/PermissionState;)V", "props", "Lym/i;", "snapshot", "H", "(Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;Lym/i;)Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$PermissionRequestState;", "renderProps", "renderState", "Lym/k$a;", "context", "J", "(Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$PermissionRequestState;Lym/k$a;)Ljava/lang/Object;", "state", "h0", "(Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$PermissionRequestState;)Lym/i;", "a", "Landroid/content/Context;", "b", "Lcom/withpersona/sdk2/inquiry/permissions/d$a;", "c", "Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow;", "d", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "Props", "Output", "PermissionRequestState", "permissions_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000Z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0012\u0018\u00002\u001c\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0006\u0012\u0004\u0018\u00010\u00050\u0001:\u0003/01B)\b\u0001\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b\u0012\u0006\u0010\u000b\u001a\u00020\n\u0012\u0006\u0010\r\u001a\u00020\f¢\u0006\u0004\b\u000e\u0010\u000fJ\u000f\u0010\u0011\u001a\u00020\u0010H\u0002¢\u0006\u0004\b\u0011\u0010\u0012J1\u0010\u0017\u001a\u00020\u0010*\u00180\u0013R\u0014\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u00142\u0006\u0010\u0016\u001a\u00020\u0015H\u0002¢\u0006\u0004\b\u0017\u0010\u0018J!\u0010\u001c\u001a\u00020\u00032\u0006\u0010\u0019\u001a\u00020\u00022\b\u0010\u001b\u001a\u0004\u0018\u00010\u001aH\u0016¢\u0006\u0004\b\u001c\u0010\u001dJG\u0010\"\u001a\u0004\u0018\u00010\u00052\u0006\u0010\u001e\u001a\u00020\u00022\u0006\u0010\u001f\u001a\u00020\u00032$\u0010!\u001a 0 R\u001c\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0006\u0012\u0004\u0018\u00010\u00050\u0001H\u0016¢\u0006\u0004\b\"\u0010#J\u0017\u0010%\u001a\u00020\u001a2\u0006\u0010$\u001a\u00020\u0003H\u0016¢\u0006\u0004\b%\u0010&R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b'\u0010(R\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b)\u0010*R\u0014\u0010\u000b\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b+\u0010,R\u0014\u0010\r\u001a\u00020\f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b-\u0010.¨\u00062"}, d2 = {"Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow;", "Lwm/k;", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$PermissionRequestState;", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Output;", "", "Landroid/content/Context;", "applicationContext", "Lcom/withpersona/sdk2/inquiry/permissions/d$a;", "permissionRequestDialogWorkerFactory", "Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow;", "deviceFeatureRequestWorkflow", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "trackingEventsLogger", "<init>", "(Landroid/content/Context;Lcom/withpersona/sdk2/inquiry/permissions/d$a;Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow;Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;)V", "", "I", "()V", "Lwm/r$c;", "Lwm/r;", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionState;", "output", "G", "(Lwm/r$c;Lcom/withpersona/sdk2/inquiry/permissions/PermissionState;)V", "props", "Lwm/i;", "snapshot", "H", "(Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;Lwm/i;)Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$PermissionRequestState;", "renderProps", "renderState", "Lwm/k$a;", "context", "J", "(Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$PermissionRequestState;Lwm/k$a;)Ljava/lang/Object;", "state", "h0", "(Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$PermissionRequestState;)Lwm/i;", "a", "Landroid/content/Context;", "b", "Lcom/withpersona/sdk2/inquiry/permissions/d$a;", "c", "Lcom/withpersona/sdk2/inquiry/permissions/DeviceFeatureRequestWorkflow;", "d", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "Props", "Output", "PermissionRequestState", "permissions_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class PermissionRequestWorkflow extends k<Props, PermissionRequestState, Output, Object> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -133,7 +133,7 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final CheckPermissionPermanentlyDenied f12265a = new CheckPermissionPermanentlyDenied();
+            public static final CheckPermissionPermanentlyDenied f12346a = new CheckPermissionPermanentlyDenied();
 
             @NotNull
             public static final Parcelable.Creator<CheckPermissionPermanentlyDenied> CREATOR = new a();
@@ -145,7 +145,7 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
                 public final CheckPermissionPermanentlyDenied createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return CheckPermissionPermanentlyDenied.f12265a;
+                    return CheckPermissionPermanentlyDenied.f12346a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -185,7 +185,7 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final CheckPermissionRationaleState f12266a = new CheckPermissionRationaleState();
+            public static final CheckPermissionRationaleState f12347a = new CheckPermissionRationaleState();
 
             @NotNull
             public static final Parcelable.Creator<CheckPermissionRationaleState> CREATOR = new a();
@@ -197,7 +197,7 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
                 public final CheckPermissionRationaleState createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return CheckPermissionRationaleState.f12266a;
+                    return CheckPermissionRationaleState.f12347a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -237,7 +237,7 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final CheckPermissionState f12267a = new CheckPermissionState();
+            public static final CheckPermissionState f12348a = new CheckPermissionState();
 
             @NotNull
             public static final Parcelable.Creator<CheckPermissionState> CREATOR = new a();
@@ -249,7 +249,7 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
                 public final CheckPermissionState createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return CheckPermissionState.f12267a;
+                    return CheckPermissionState.f12348a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -289,7 +289,7 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final Complete f12268a = new Complete();
+            public static final Complete f12349a = new Complete();
 
             @NotNull
             public static final Parcelable.Creator<Complete> CREATOR = new a();
@@ -301,7 +301,7 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
                 public final Complete createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return Complete.f12268a;
+                    return Complete.f12349a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -341,7 +341,7 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final RequestDeviceFeature f12269a = new RequestDeviceFeature();
+            public static final RequestDeviceFeature f12350a = new RequestDeviceFeature();
 
             @NotNull
             public static final Parcelable.Creator<RequestDeviceFeature> CREATOR = new a();
@@ -353,7 +353,7 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
                 public final RequestDeviceFeature createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return RequestDeviceFeature.f12269a;
+                    return RequestDeviceFeature.f12350a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -393,7 +393,7 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final RequestPermission f12270a = new RequestPermission();
+            public static final RequestPermission f12351a = new RequestPermission();
 
             @NotNull
             public static final Parcelable.Creator<RequestPermission> CREATOR = new a();
@@ -405,7 +405,7 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
                 public final RequestPermission createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return RequestPermission.f12270a;
+                    return RequestPermission.f12351a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -445,7 +445,7 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final ShowPermissionPermanentlyDeniedMessage f12271a = new ShowPermissionPermanentlyDeniedMessage();
+            public static final ShowPermissionPermanentlyDeniedMessage f12352a = new ShowPermissionPermanentlyDeniedMessage();
 
             @NotNull
             public static final Parcelable.Creator<ShowPermissionPermanentlyDeniedMessage> CREATOR = new a();
@@ -457,7 +457,7 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
                 public final ShowPermissionPermanentlyDeniedMessage createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return ShowPermissionPermanentlyDeniedMessage.f12271a;
+                    return ShowPermissionPermanentlyDeniedMessage.f12352a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -497,7 +497,7 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final ShowRequestPermissionRationale f12272a = new ShowRequestPermissionRationale();
+            public static final ShowRequestPermissionRationale f12353a = new ShowRequestPermissionRationale();
 
             @NotNull
             public static final Parcelable.Creator<ShowRequestPermissionRationale> CREATOR = new a();
@@ -509,7 +509,7 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
                 public final ShowRequestPermissionRationale createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return ShowRequestPermissionRationale.f12272a;
+                    return ShowRequestPermissionRationale.f12353a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -549,7 +549,7 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
     public static final /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f12283a;
+        public static final /* synthetic */ int[] f12364a;
 
         static {
             int[] iArr = new int[v.values().length];
@@ -565,136 +565,136 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
                 iArr[v.SettingsLaunched.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
-            f12283a = iArr;
+            f12364a = iArr;
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.permissions.PermissionRequestWorkflow$render$1", f = "PermissionRequestWorkflow.kt", l = {}, m = "invokeSuspend")
-    public static final class b extends m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.permissions.PermissionRequestWorkflow$render$1", f = "PermissionRequestWorkflow.kt", l = {}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class b extends m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f12284t;
+        public int f12365t;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ Props f12286v;
+        public final /* synthetic */ Props f12367v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public final /* synthetic */ k<Props, PermissionRequestState, Output, Object>.a f12287w;
+        public final /* synthetic */ k<Props, PermissionRequestState, Output, Object>.a f12368w;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         /* JADX WARN: Multi-variable type inference failed */
-        public b(Props props, k<? super Props, PermissionRequestState, Output, ? extends Object>.a aVar, nt.b<? super b> bVar) {
+        public b(Props props, k<? super Props, PermissionRequestState, Output, ? extends Object>.a aVar, lt.b<? super b> bVar) {
             super(2, bVar);
-            this.f12286v = props;
-            this.f12287w = aVar;
+            this.f12367v = props;
+            this.f12368w = aVar;
+        }
+
+        /* JADX INFO: Access modifiers changed from: private */
+        public static final Unit q(r.c cVar) {
+            cVar.e(PermissionRequestState.RequestDeviceFeature.f12350a);
+            return Unit.f22938a;
         }
 
         /* JADX INFO: Access modifiers changed from: private */
         public static final Unit s(r.c cVar) {
-            cVar.e(PermissionRequestState.RequestDeviceFeature.f12269a);
-            return Unit.f22483a;
+            cVar.e(PermissionRequestState.CheckPermissionRationaleState.f12347a);
+            return Unit.f22938a;
         }
 
-        /* JADX INFO: Access modifiers changed from: private */
-        public static final Unit t(r.c cVar) {
-            cVar.e(PermissionRequestState.CheckPermissionRationaleState.f12266a);
-            return Unit.f22483a;
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return PermissionRequestWorkflow.this.new b(this.f12367v, this.f12368w, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return PermissionRequestWorkflow.this.new b(this.f12286v, this.f12287w, bVar);
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((b) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            ot.c.e();
-            if (this.f12284t != 0) {
+            mt.c.e();
+            if (this.f12365t != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
             o.b(obj);
-            if (g.b(PermissionRequestWorkflow.this.applicationContext, this.f12286v.getPermission())) {
-                this.f12287w.d().a(z.d(PermissionRequestWorkflow.this, null, new Function1() { // from class: rp.g1
+            if (g.b(PermissionRequestWorkflow.this.applicationContext, this.f12367v.getPermission())) {
+                this.f12368w.d().a(z.d(PermissionRequestWorkflow.this, null, new Function1() { // from class: pp.g1
                     @Override // kotlin.jvm.functions.Function1
                     public final Object invoke(Object obj2) {
-                        return PermissionRequestWorkflow.b.s((ym.r.c) obj2);
+                        return PermissionRequestWorkflow.b.q((wm.r.c) obj2);
                     }
                 }, 1, null));
             } else {
-                this.f12287w.d().a(z.d(PermissionRequestWorkflow.this, null, new Function1() { // from class: rp.h1
+                this.f12368w.d().a(z.d(PermissionRequestWorkflow.this, null, new Function1() { // from class: pp.h1
                     @Override // kotlin.jvm.functions.Function1
                     public final Object invoke(Object obj2) {
-                        return PermissionRequestWorkflow.b.t((ym.r.c) obj2);
+                        return PermissionRequestWorkflow.b.s((wm.r.c) obj2);
                     }
                 }, 1, null));
             }
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((b) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            return Unit.f22938a;
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.permissions.PermissionRequestWorkflow$render$7", f = "PermissionRequestWorkflow.kt", l = {}, m = "invokeSuspend")
-    public static final class c extends m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.permissions.PermissionRequestWorkflow$render$7", f = "PermissionRequestWorkflow.kt", l = {}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class c extends m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f12288t;
+        public int f12369t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public final /* synthetic */ k<Props, PermissionRequestState, Output, Object>.a f12289u;
+        public final /* synthetic */ k<Props, PermissionRequestState, Output, Object>.a f12370u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ PermissionRequestWorkflow f12290v;
+        public final /* synthetic */ PermissionRequestWorkflow f12371v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public final /* synthetic */ Props f12291w;
+        public final /* synthetic */ Props f12372w;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         /* JADX WARN: Multi-variable type inference failed */
-        public c(k<? super Props, PermissionRequestState, Output, ? extends Object>.a aVar, PermissionRequestWorkflow permissionRequestWorkflow, Props props, nt.b<? super c> bVar) {
+        public c(k<? super Props, PermissionRequestState, Output, ? extends Object>.a aVar, PermissionRequestWorkflow permissionRequestWorkflow, Props props, lt.b<? super c> bVar) {
             super(2, bVar);
-            this.f12289u = aVar;
-            this.f12290v = permissionRequestWorkflow;
-            this.f12291w = props;
+            this.f12370u = aVar;
+            this.f12371v = permissionRequestWorkflow;
+            this.f12372w = props;
         }
 
-        public static final Unit r(PermissionRequestWorkflow permissionRequestWorkflow, Props props, r.c cVar) {
+        public static final Unit n(PermissionRequestWorkflow permissionRequestWorkflow, Props props, r.c cVar) {
             permissionRequestWorkflow.G(cVar, new PermissionState(props.getPermission(), j1.PermissionGranted));
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return new c(this.f12289u, this.f12290v, this.f12291w, bVar);
-        }
-
-        @Override // pt.a
-        public final Object invokeSuspend(Object obj) {
-            ot.c.e();
-            if (this.f12288t != 0) {
-                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-            }
-            o.b(obj);
-            h<r<? super Props, PermissionRequestState, ? extends Output>> hVarD = this.f12289u.d();
-            final PermissionRequestWorkflow permissionRequestWorkflow = this.f12290v;
-            final Props props = this.f12291w;
-            hVarD.a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: rp.i1
-                @Override // kotlin.jvm.functions.Function1
-                public final Object invoke(Object obj2) {
-                    return PermissionRequestWorkflow.c.r(permissionRequestWorkflow, props, (ym.r.c) obj2);
-                }
-            }, 1, null));
-            return Unit.f22483a;
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return new c(this.f12370u, this.f12371v, this.f12372w, bVar);
         }
 
         @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
+        public final Object invokeSuspend(Object obj) {
+            mt.c.e();
+            if (this.f12369t != 0) {
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            }
+            o.b(obj);
+            h<r<? super Props, PermissionRequestState, ? extends Output>> hVarD = this.f12370u.d();
+            final PermissionRequestWorkflow permissionRequestWorkflow = this.f12371v;
+            final Props props = this.f12372w;
+            hVarD.a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: pp.i1
+                @Override // kotlin.jvm.functions.Function1
+                public final Object invoke(Object obj2) {
+                    return PermissionRequestWorkflow.c.n(permissionRequestWorkflow, props, (wm.r.c) obj2);
+                }
+            }, 1, null));
+            return Unit.f22938a;
         }
     }
 
@@ -710,40 +710,40 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
     }
 
     public static final Unit K(k.a aVar, PermissionRequestWorkflow permissionRequestWorkflow, final boolean z10) {
-        aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: rp.e1
+        aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: pp.e1
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return PermissionRequestWorkflow.L(z10, (ym.r.c) obj);
+                return PermissionRequestWorkflow.L(z10, (wm.r.c) obj);
             }
         }, 1, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit L(boolean z10, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         if (z10) {
-            action.e(PermissionRequestState.ShowRequestPermissionRationale.f12272a);
+            action.e(PermissionRequestState.ShowRequestPermissionRationale.f12353a);
         } else {
-            action.e(PermissionRequestState.RequestPermission.f12270a);
+            action.e(PermissionRequestState.RequestPermission.f12351a);
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final r M(final PermissionRequestWorkflow permissionRequestWorkflow, final k.a aVar, final Props props, d.b it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        if (Intrinsics.c(it, d.b.C0230b.f12316a)) {
-            return z.d(permissionRequestWorkflow, null, new Function1() { // from class: rp.p0
+        if (Intrinsics.c(it, d.b.C0233b.f12397a)) {
+            return z.d(permissionRequestWorkflow, null, new Function1() { // from class: pp.p0
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return PermissionRequestWorkflow.Q(aVar, permissionRequestWorkflow, (ym.r.c) obj);
+                    return PermissionRequestWorkflow.Q(aVar, permissionRequestWorkflow, (wm.r.c) obj);
                 }
             }, 1, null);
         }
-        if (Intrinsics.c(it, d.b.a.f12315a)) {
-            return z.d(permissionRequestWorkflow, null, new Function1() { // from class: rp.q0
+        if (Intrinsics.c(it, d.b.a.f12396a)) {
+            return z.d(permissionRequestWorkflow, null, new Function1() { // from class: pp.q0
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return PermissionRequestWorkflow.N(aVar, permissionRequestWorkflow, props, (ym.r.c) obj);
+                    return PermissionRequestWorkflow.N(aVar, permissionRequestWorkflow, props, (wm.r.c) obj);
                 }
             }, 1, null);
         }
@@ -753,70 +753,70 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
     public static final Unit N(k.a aVar, final PermissionRequestWorkflow permissionRequestWorkflow, final Props props, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         if (((Props) action.b()).getOptional()) {
-            aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: rp.s0
+            aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: pp.s0
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return PermissionRequestWorkflow.O(this.f30178a, props, (ym.r.c) obj);
+                    return PermissionRequestWorkflow.O(this.f29038a, props, (wm.r.c) obj);
                 }
             }, 1, null));
         } else {
-            aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: rp.t0
+            aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: pp.t0
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return PermissionRequestWorkflow.P((ym.r.c) obj);
+                    return PermissionRequestWorkflow.P((wm.r.c) obj);
                 }
             }, 1, null));
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit O(PermissionRequestWorkflow permissionRequestWorkflow, Props props, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         permissionRequestWorkflow.G(action, new PermissionState(props.getPermission(), j1.PermissionRejected));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit P(r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
-        action.e(PermissionRequestState.CheckPermissionPermanentlyDenied.f12265a);
-        return Unit.f22483a;
+        action.e(PermissionRequestState.CheckPermissionPermanentlyDenied.f12346a);
+        return Unit.f22938a;
     }
 
     public static final Unit Q(k.a aVar, PermissionRequestWorkflow permissionRequestWorkflow, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
-        aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: rp.r0
+        aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: pp.r0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return PermissionRequestWorkflow.R((ym.r.c) obj);
+                return PermissionRequestWorkflow.R((wm.r.c) obj);
             }
         }, 1, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit R(r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
-        action.e(PermissionRequestState.RequestDeviceFeature.f12269a);
-        return Unit.f22483a;
+        action.e(PermissionRequestState.RequestDeviceFeature.f12350a);
+        return Unit.f22938a;
     }
 
     public static final r S(final PermissionRequestWorkflow permissionRequestWorkflow, final k.a aVar, final Props props, final DeviceFeatureRequestWorkflow.Output it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        return z.d(permissionRequestWorkflow, null, new Function1() { // from class: rp.o0
+        return z.d(permissionRequestWorkflow, null, new Function1() { // from class: pp.o0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return PermissionRequestWorkflow.T(it, aVar, permissionRequestWorkflow, props, (ym.r.c) obj);
+                return PermissionRequestWorkflow.T(it, aVar, permissionRequestWorkflow, props, (wm.r.c) obj);
             }
         }, 1, null);
     }
 
     public static final Unit T(DeviceFeatureRequestWorkflow.Output aVar, k.a aVar2, final PermissionRequestWorkflow permissionRequestWorkflow, final Props props, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
-        int i10 = a.f12283a[aVar.getDeviceFeatureState().getResult().ordinal()];
+        int i10 = a.f12364a[aVar.getDeviceFeatureState().getResult().ordinal()];
         if (i10 == 1) {
-            aVar2.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: rp.w0
+            aVar2.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: pp.w0
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return PermissionRequestWorkflow.U(this.f30190a, props, (ym.r.c) obj);
+                    return PermissionRequestWorkflow.U(this.f29050a, props, (wm.r.c) obj);
                 }
             }, 1, null));
         } else if (i10 == 2) {
@@ -825,36 +825,36 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
             if (i10 != 3) {
                 throw new l();
             }
-            aVar2.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: rp.x0
+            aVar2.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: pp.x0
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return PermissionRequestWorkflow.V(this.f30192a, props, (ym.r.c) obj);
+                    return PermissionRequestWorkflow.V(this.f29052a, props, (wm.r.c) obj);
                 }
             }, 1, null));
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit U(PermissionRequestWorkflow permissionRequestWorkflow, Props props, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         permissionRequestWorkflow.G(action, new PermissionState(props.getPermission(), j1.PermissionGranted));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit V(PermissionRequestWorkflow permissionRequestWorkflow, Props props, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         permissionRequestWorkflow.G(action, new PermissionState(props.getPermission(), j1.SettingsLaunched));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit W(final k.a aVar, final PermissionRequestWorkflow permissionRequestWorkflow, final Props props, final boolean z10) {
-        aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: rp.m0
+        aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: pp.m0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return PermissionRequestWorkflow.X(z10, permissionRequestWorkflow, props, aVar, (ym.r.c) obj);
+                return PermissionRequestWorkflow.X(z10, permissionRequestWorkflow, props, aVar, (wm.r.c) obj);
             }
         }, 1, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit X(boolean z10, PermissionRequestWorkflow permissionRequestWorkflow, Props props, k.a aVar, r.c action) {
@@ -862,85 +862,85 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
         if (z10) {
             permissionRequestWorkflow.G(action, new PermissionState(props.getPermission(), j1.PermissionRejected));
         } else {
-            aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: rp.v0
+            aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: pp.v0
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return PermissionRequestWorkflow.Y((ym.r.c) obj);
+                    return PermissionRequestWorkflow.Y((wm.r.c) obj);
                 }
             }, 1, null));
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit Y(r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
-        action.e(PermissionRequestState.ShowPermissionPermanentlyDeniedMessage.f12271a);
-        return Unit.f22483a;
+        action.e(PermissionRequestState.ShowPermissionPermanentlyDeniedMessage.f12352a);
+        return Unit.f22938a;
     }
 
     public static final Unit Z(final PermissionRequestWorkflow permissionRequestWorkflow, k.a aVar, final Props props) {
         permissionRequestWorkflow.I();
-        aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: rp.n0
+        aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: pp.n0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return PermissionRequestWorkflow.a0(this.f30156a, props, (ym.r.c) obj);
+                return PermissionRequestWorkflow.a0(this.f29016a, props, (wm.r.c) obj);
             }
         }, 1, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit a0(PermissionRequestWorkflow permissionRequestWorkflow, Props props, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         permissionRequestWorkflow.G(action, new PermissionState(props.getPermission(), j1.SettingsLaunched));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit b0(k.a aVar, final PermissionRequestWorkflow permissionRequestWorkflow, final Props props) {
-        aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: rp.f1
+        aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: pp.f1
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return PermissionRequestWorkflow.c0(this.f30104a, props, (ym.r.c) obj);
+                return PermissionRequestWorkflow.c0(this.f28964a, props, (wm.r.c) obj);
             }
         }, 1, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit c0(PermissionRequestWorkflow permissionRequestWorkflow, Props props, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         permissionRequestWorkflow.G(action, new PermissionState(props.getPermission(), j1.PermissionRejected));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit d0(k.a aVar, PermissionRequestWorkflow permissionRequestWorkflow) {
-        aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: rp.l0
+        aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: pp.l0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return PermissionRequestWorkflow.e0((ym.r.c) obj);
+                return PermissionRequestWorkflow.e0((wm.r.c) obj);
             }
         }, 1, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit e0(r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
-        action.e(PermissionRequestState.RequestPermission.f12270a);
-        return Unit.f22483a;
+        action.e(PermissionRequestState.RequestPermission.f12351a);
+        return Unit.f22938a;
     }
 
     public static final Unit f0(k.a aVar, final PermissionRequestWorkflow permissionRequestWorkflow, final Props props) {
-        aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: rp.k0
+        aVar.d().a(z.d(permissionRequestWorkflow, null, new Function1() { // from class: pp.k0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return PermissionRequestWorkflow.g0(this.f30145a, props, (ym.r.c) obj);
+                return PermissionRequestWorkflow.g0(this.f29005a, props, (wm.r.c) obj);
             }
         }, 1, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit g0(PermissionRequestWorkflow permissionRequestWorkflow, Props props, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         permissionRequestWorkflow.G(action, new PermissionState(props.getPermission(), j1.PermissionRejected));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public final void G(r<? super Props, PermissionRequestState, Output>.c cVar, PermissionState permissionState) {
@@ -948,13 +948,13 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
         cVar.d(new Output(permissionState));
     }
 
-    @Override // ym.k
+    @Override // wm.k
     @NotNull
     /* JADX INFO: renamed from: H, reason: merged with bridge method [inline-methods] */
     public PermissionRequestState d(@NotNull Props props, @Nullable Snapshot snapshot) {
         Intrinsics.checkNotNullParameter(props, "props");
         if (snapshot != null) {
-            xu.h hVarB = snapshot.b();
+            vu.h hVarB = snapshot.b();
             Parcelable parcelable = null;
             if (hVarB.I() <= 0) {
                 hVarB = null;
@@ -975,7 +975,7 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
                 return permissionRequestState;
             }
         }
-        return PermissionRequestState.CheckPermissionState.f12267a;
+        return PermissionRequestState.CheckPermissionState.f12348a;
     }
 
     public final void I() {
@@ -985,37 +985,37 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
         this.applicationContext.startActivity(intent);
     }
 
-    @Override // ym.k
+    @Override // wm.k
     @Nullable
     /* JADX INFO: renamed from: J, reason: merged with bridge method [inline-methods] */
     public Object f(@NotNull final Props renderProps, @NotNull PermissionRequestState renderState, @NotNull final k<? super Props, PermissionRequestState, Output, ? extends Object>.a context) {
         Intrinsics.checkNotNullParameter(renderProps, "renderProps");
         Intrinsics.checkNotNullParameter(renderState, "renderState");
         Intrinsics.checkNotNullParameter(context, "context");
-        if (Intrinsics.c(renderState, PermissionRequestState.CheckPermissionState.f12267a)) {
+        if (Intrinsics.c(renderState, PermissionRequestState.CheckPermissionState.f12348a)) {
             context.b("check_permission_state", new b(renderProps, context, null));
             return null;
         }
-        if (Intrinsics.c(renderState, PermissionRequestState.CheckPermissionRationaleState.f12266a)) {
-            return new wq.m(new OldCheckRequestPermissionRationaleStateView(renderProps.getPermission(), false, new Function1() { // from class: rp.j0
+        if (Intrinsics.c(renderState, PermissionRequestState.CheckPermissionRationaleState.f12347a)) {
+            return new uq.m(new OldCheckRequestPermissionRationaleStateView(renderProps.getPermission(), false, new Function1() { // from class: pp.j0
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
                     return PermissionRequestWorkflow.K(context, this, ((Boolean) obj).booleanValue());
                 }
-            }), wq.l.NONE);
+            }), uq.l.NONE);
         }
-        if (Intrinsics.c(renderState, PermissionRequestState.ShowRequestPermissionRationale.f12272a)) {
+        if (Intrinsics.c(renderState, PermissionRequestState.ShowRequestPermissionRationale.f12353a)) {
             TrackingEventsLogger.logPermissionEvent$default(this.trackingEventsLogger, new PermissionTrackingEventData(n1.c(renderProps.getPermission()), "permission_sheet_presented", null, 4, null), false, 2, null);
             String title = renderProps.getTitle();
             String rationale = renderProps.getRationale();
             String positiveButtonText = renderProps.getPositiveButtonText();
             if (positiveButtonText == null) {
-                positiveButtonText = this.applicationContext.getString(vp.g.D);
+                positiveButtonText = this.applicationContext.getString(tp.g.D);
                 Intrinsics.checkNotNullExpressionValue(positiveButtonText, "getString(...)");
             }
             String str = positiveButtonText;
             StepStyle styles = renderProps.getStyles();
-            Function0 function0 = new Function0() { // from class: rp.u0
+            Function0 function0 = new Function0() { // from class: pp.u0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
                     return PermissionRequestWorkflow.d0(context, this);
@@ -1023,47 +1023,47 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
             };
             String negativeButtonText = renderProps.getNegativeButtonText();
             if (negativeButtonText == null) {
-                negativeButtonText = this.applicationContext.getString(vp.g.C);
+                negativeButtonText = this.applicationContext.getString(tp.g.C);
                 Intrinsics.checkNotNullExpressionValue(negativeButtonText, "getString(...)");
             }
-            return new wq.m(new g0(title, rationale, str, styles, function0, negativeButtonText, new Function0() { // from class: rp.y0
+            return new uq.m(new g0(title, rationale, str, styles, function0, negativeButtonText, new Function0() { // from class: pp.y0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
                     return PermissionRequestWorkflow.f0(context, this, renderProps);
                 }
-            }), wq.l.NONE);
+            }), uq.l.NONE);
         }
-        if (Intrinsics.c(renderState, PermissionRequestState.RequestPermission.f12270a)) {
-            w.l(context, this.permissionRequestDialogWorkerFactory.a(renderProps.getPermission()), d0.k(d.class), "", new Function1() { // from class: rp.z0
+        if (Intrinsics.c(renderState, PermissionRequestState.RequestPermission.f12351a)) {
+            w.l(context, this.permissionRequestDialogWorkerFactory.a(renderProps.getPermission()), d0.k(d.class), "", new Function1() { // from class: pp.z0
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return PermissionRequestWorkflow.M(this.f30197a, context, renderProps, (com.withpersona.sdk2.inquiry.permissions.d.b) obj);
+                    return PermissionRequestWorkflow.M(this.f29057a, context, renderProps, (com.withpersona.sdk2.inquiry.permissions.d.b) obj);
                 }
             });
             return null;
         }
-        if (Intrinsics.c(renderState, PermissionRequestState.RequestDeviceFeature.f12269a)) {
+        if (Intrinsics.c(renderState, PermissionRequestState.RequestDeviceFeature.f12350a)) {
             if (renderProps.q()) {
-                return ym.a.C0661a.a(context, this.deviceFeatureRequestWorkflow, new DeviceFeatureRequestWorkflow.Props(n1.a(renderProps.getPermission()), renderProps.getGpsFeatureTitle(), renderProps.getGpsFeatureRationale(), renderProps.getPositiveButtonText(), renderProps.getGpsFeatureModalNegativeButton(), renderProps.getStyles()), null, new Function1() { // from class: rp.a1
+                return wm.a.C0636a.a(context, this.deviceFeatureRequestWorkflow, new DeviceFeatureRequestWorkflow.Props(n1.a(renderProps.getPermission()), renderProps.getGpsFeatureTitle(), renderProps.getGpsFeatureRationale(), renderProps.getPositiveButtonText(), renderProps.getGpsFeatureModalNegativeButton(), renderProps.getStyles()), null, new Function1() { // from class: pp.a1
                     @Override // kotlin.jvm.functions.Function1
                     public final Object invoke(Object obj) {
-                        return PermissionRequestWorkflow.S(this.f30087a, context, renderProps, (DeviceFeatureRequestWorkflow.Output) obj);
+                        return PermissionRequestWorkflow.S(this.f28947a, context, renderProps, (DeviceFeatureRequestWorkflow.Output) obj);
                     }
                 }, 4, null);
             }
             context.b("request_device_feature", new c(context, this, renderProps, null));
             return null;
         }
-        if (Intrinsics.c(renderState, PermissionRequestState.CheckPermissionPermanentlyDenied.f12265a)) {
-            return new wq.m(new OldCheckRequestPermissionRationaleStateView(renderProps.getPermission(), true, new Function1() { // from class: rp.b1
+        if (Intrinsics.c(renderState, PermissionRequestState.CheckPermissionPermanentlyDenied.f12346a)) {
+            return new uq.m(new OldCheckRequestPermissionRationaleStateView(renderProps.getPermission(), true, new Function1() { // from class: pp.b1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
                     return PermissionRequestWorkflow.W(context, this, renderProps, ((Boolean) obj).booleanValue());
                 }
-            }), wq.l.NONE);
+            }), uq.l.NONE);
         }
-        if (!Intrinsics.c(renderState, PermissionRequestState.ShowPermissionPermanentlyDeniedMessage.f12271a)) {
-            if (Intrinsics.c(renderState, PermissionRequestState.Complete.f12268a)) {
+        if (!Intrinsics.c(renderState, PermissionRequestState.ShowPermissionPermanentlyDeniedMessage.f12352a)) {
+            if (Intrinsics.c(renderState, PermissionRequestState.Complete.f12349a)) {
                 return null;
             }
             throw new l();
@@ -1072,31 +1072,31 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
         String rationaleWhenPermanentlyDenied = renderProps.getRationaleWhenPermanentlyDenied();
         String positiveButtonText2 = renderProps.getPositiveButtonText();
         if (positiveButtonText2 == null) {
-            positiveButtonText2 = this.applicationContext.getString(vp.g.E);
+            positiveButtonText2 = this.applicationContext.getString(tp.g.E);
             Intrinsics.checkNotNullExpressionValue(positiveButtonText2, "getString(...)");
         }
         String str2 = positiveButtonText2;
         StepStyle styles2 = renderProps.getStyles();
-        Function0 function1 = new Function0() { // from class: rp.c1
+        Function0 function1 = new Function0() { // from class: pp.c1
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return PermissionRequestWorkflow.Z(this.f30095a, context, renderProps);
+                return PermissionRequestWorkflow.Z(this.f28955a, context, renderProps);
             }
         };
         String negativeButtonText2 = renderProps.getNegativeButtonText();
         if (negativeButtonText2 == null) {
-            negativeButtonText2 = this.applicationContext.getString(vp.g.C);
+            negativeButtonText2 = this.applicationContext.getString(tp.g.C);
             Intrinsics.checkNotNullExpressionValue(negativeButtonText2, "getString(...)");
         }
-        return new wq.m(new g0(title2, rationaleWhenPermanentlyDenied, str2, styles2, function1, negativeButtonText2, new Function0() { // from class: rp.d1
+        return new uq.m(new g0(title2, rationaleWhenPermanentlyDenied, str2, styles2, function1, negativeButtonText2, new Function0() { // from class: pp.d1
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
                 return PermissionRequestWorkflow.b0(context, this, renderProps);
             }
-        }), wq.l.NONE);
+        }), uq.l.NONE);
     }
 
-    @Override // ym.k
+    @Override // wm.k
     @NotNull
     /* JADX INFO: renamed from: h0, reason: merged with bridge method [inline-methods] */
     public Snapshot g(@NotNull PermissionRequestState state) {
@@ -1104,7 +1104,7 @@ public final class PermissionRequestWorkflow extends k<Props, PermissionRequestS
         return q.a(state);
     }
 
-    @Metadata(d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u000e\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0010\u0000\n\u0002\b\u001d\b\u0087\b\u0018\u00002\u00020\u0001Bs\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\b\u0002\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\b\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\u0006\u0012\b\u0010\n\u001a\u0004\u0018\u00010\u0006\u0012\b\u0010\u000b\u001a\u0004\u0018\u00010\u0006\u0012\n\b\u0002\u0010\f\u001a\u0004\u0018\u00010\u0006\u0012\n\b\u0002\u0010\r\u001a\u0004\u0018\u00010\u0006\u0012\n\b\u0002\u0010\u000e\u001a\u0004\u0018\u00010\u0006\u0012\b\u0010\u0010\u001a\u0004\u0018\u00010\u000f¢\u0006\u0004\b\u0011\u0010\u0012J\r\u0010\u0014\u001a\u00020\u0013¢\u0006\u0004\b\u0014\u0010\u0015J\u001d\u0010\u001a\u001a\u00020\u00192\u0006\u0010\u0017\u001a\u00020\u00162\u0006\u0010\u0018\u001a\u00020\u0013¢\u0006\u0004\b\u001a\u0010\u001bJ\u0010\u0010\u001c\u001a\u00020\u0006HÖ\u0001¢\u0006\u0004\b\u001c\u0010\u001dJ\u0010\u0010\u001e\u001a\u00020\u0013HÖ\u0001¢\u0006\u0004\b\u001e\u0010\u0015J\u001a\u0010!\u001a\u00020\u00042\b\u0010 \u001a\u0004\u0018\u00010\u001fHÖ\u0003¢\u0006\u0004\b!\u0010\"R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b#\u0010$\u001a\u0004\b%\u0010&R\u0017\u0010\u0005\u001a\u00020\u00048\u0006¢\u0006\f\n\u0004\b'\u0010(\u001a\u0004\b)\u0010*R\u0017\u0010\u0007\u001a\u00020\u00068\u0006¢\u0006\f\n\u0004\b+\u0010,\u001a\u0004\b-\u0010\u001dR\u0017\u0010\b\u001a\u00020\u00068\u0006¢\u0006\f\n\u0004\b.\u0010,\u001a\u0004\b/\u0010\u001dR\u0017\u0010\t\u001a\u00020\u00068\u0006¢\u0006\f\n\u0004\b0\u0010,\u001a\u0004\b1\u0010\u001dR\u0019\u0010\n\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\b2\u0010,\u001a\u0004\b3\u0010\u001dR\u0019\u0010\u000b\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\b4\u0010,\u001a\u0004\b5\u0010\u001dR\u0019\u0010\f\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\b6\u0010,\u001a\u0004\b4\u0010\u001dR\u0019\u0010\r\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\b5\u0010,\u001a\u0004\b2\u0010\u001dR\u0019\u0010\u000e\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\b)\u0010,\u001a\u0004\b#\u0010\u001dR\u0019\u0010\u0010\u001a\u0004\u0018\u00010\u000f8\u0006¢\u0006\f\n\u0004\b%\u00107\u001a\u0004\b8\u00109R\u0011\u0010;\u001a\u00020\u00048F¢\u0006\u0006\u001a\u0004\b:\u0010*¨\u0006<"}, d2 = {"Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;", "Landroid/os/Parcelable;", "Lrp/i0;", "permission", "", "optional", "", Title.type, "rationale", "rationaleWhenPermanentlyDenied", "positiveButtonText", "negativeButtonText", "gpsFeatureTitle", "gpsFeatureRationale", "gpsFeatureModalNegativeButton", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyle;", "styles", "<init>", "(Lrp/i0;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyle;)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "equals", "(Ljava/lang/Object;)Z", "a", "Lrp/i0;", "k", "()Lrp/i0;", "b", "Z", "j", "()Z", "c", "Ljava/lang/String;", "getTitle", "d", "n", "e", "o", "f", "m", "g", "i", "h", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyle;", "p", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyle;", "q", "isPermissionLocation", "permissions_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u000e\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0010\u0000\n\u0002\b\u001d\b\u0087\b\u0018\u00002\u00020\u0001Bs\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\b\u0002\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\b\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\u0006\u0012\b\u0010\n\u001a\u0004\u0018\u00010\u0006\u0012\b\u0010\u000b\u001a\u0004\u0018\u00010\u0006\u0012\n\b\u0002\u0010\f\u001a\u0004\u0018\u00010\u0006\u0012\n\b\u0002\u0010\r\u001a\u0004\u0018\u00010\u0006\u0012\n\b\u0002\u0010\u000e\u001a\u0004\u0018\u00010\u0006\u0012\b\u0010\u0010\u001a\u0004\u0018\u00010\u000f¢\u0006\u0004\b\u0011\u0010\u0012J\r\u0010\u0014\u001a\u00020\u0013¢\u0006\u0004\b\u0014\u0010\u0015J\u001d\u0010\u001a\u001a\u00020\u00192\u0006\u0010\u0017\u001a\u00020\u00162\u0006\u0010\u0018\u001a\u00020\u0013¢\u0006\u0004\b\u001a\u0010\u001bJ\u0010\u0010\u001c\u001a\u00020\u0006HÖ\u0001¢\u0006\u0004\b\u001c\u0010\u001dJ\u0010\u0010\u001e\u001a\u00020\u0013HÖ\u0001¢\u0006\u0004\b\u001e\u0010\u0015J\u001a\u0010!\u001a\u00020\u00042\b\u0010 \u001a\u0004\u0018\u00010\u001fHÖ\u0003¢\u0006\u0004\b!\u0010\"R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b#\u0010$\u001a\u0004\b%\u0010&R\u0017\u0010\u0005\u001a\u00020\u00048\u0006¢\u0006\f\n\u0004\b'\u0010(\u001a\u0004\b)\u0010*R\u0017\u0010\u0007\u001a\u00020\u00068\u0006¢\u0006\f\n\u0004\b+\u0010,\u001a\u0004\b-\u0010\u001dR\u0017\u0010\b\u001a\u00020\u00068\u0006¢\u0006\f\n\u0004\b.\u0010,\u001a\u0004\b/\u0010\u001dR\u0017\u0010\t\u001a\u00020\u00068\u0006¢\u0006\f\n\u0004\b0\u0010,\u001a\u0004\b1\u0010\u001dR\u0019\u0010\n\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\b2\u0010,\u001a\u0004\b3\u0010\u001dR\u0019\u0010\u000b\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\b4\u0010,\u001a\u0004\b5\u0010\u001dR\u0019\u0010\f\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\b6\u0010,\u001a\u0004\b4\u0010\u001dR\u0019\u0010\r\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\b5\u0010,\u001a\u0004\b2\u0010\u001dR\u0019\u0010\u000e\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\b)\u0010,\u001a\u0004\b#\u0010\u001dR\u0019\u0010\u0010\u001a\u0004\u0018\u00010\u000f8\u0006¢\u0006\f\n\u0004\b%\u00107\u001a\u0004\b8\u00109R\u0011\u0010;\u001a\u00020\u00048F¢\u0006\u0006\u001a\u0004\b:\u0010*¨\u0006<"}, d2 = {"Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;", "Landroid/os/Parcelable;", "Lpp/i0;", "permission", "", "optional", "", Title.type, "rationale", "rationaleWhenPermanentlyDenied", "positiveButtonText", "negativeButtonText", "gpsFeatureTitle", "gpsFeatureRationale", "gpsFeatureModalNegativeButton", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyle;", "styles", "<init>", "(Lpp/i0;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyle;)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "equals", "(Ljava/lang/Object;)Z", "a", "Lpp/i0;", "k", "()Lpp/i0;", "b", "Z", "j", "()Z", "c", "Ljava/lang/String;", "getTitle", "d", "n", "e", "o", "f", "m", "g", "i", "h", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyle;", "p", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyle;", "q", "isPermissionLocation", "permissions_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final /* data */ class Props implements Parcelable {
 
         @NotNull

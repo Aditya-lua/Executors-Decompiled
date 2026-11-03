@@ -19,55 +19,55 @@ import java.util.concurrent.ExecutionException;
 public class s implements e6.a {
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final String f35703l = x5.w.i("Processor");
+    public static final String f36560l = x5.w.i("Processor");
     public Context b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public androidx.work.a f35705c;
+    public androidx.work.a f36562c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public h6.b f35706d;
+    public h6.b f36563d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public WorkDatabase f35707e;
+    public WorkDatabase f36564e;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public Map<String, q1> f35709g = new HashMap();
+    public Map<String, q1> f36566g = new HashMap();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public Map<String, q1> f35708f = new HashMap();
+    public Map<String, q1> f36565f = new HashMap();
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public Set<String> f35711i = new HashSet();
+    public Set<String> f36568i = new HashSet();
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final List<e> f35712j = new ArrayList();
+    public final List<e> f36569j = new ArrayList();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public PowerManager.WakeLock f35704a = null;
+    public PowerManager.WakeLock f36561a = null;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final Object f35713k = new Object();
+    public final Object f36570k = new Object();
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public Map<String, Set<y>> f35710h = new HashMap();
+    public Map<String, Set<y>> f36567h = new HashMap();
 
     public s(Context context, androidx.work.a aVar, h6.b bVar, WorkDatabase workDatabase) {
         this.b = context;
-        this.f35705c = aVar;
-        this.f35706d = bVar;
-        this.f35707e = workDatabase;
+        this.f36562c = aVar;
+        this.f36563d = bVar;
+        this.f36564e = workDatabase;
     }
 
     public static /* synthetic */ f6.j0 b(s sVar, ArrayList arrayList, String str) {
-        arrayList.addAll(sVar.f35707e.d0().a(str));
-        return sVar.f35707e.c0().k(str);
+        arrayList.addAll(sVar.f36564e.d0().a(str));
+        return sVar.f36564e.c0().k(str);
     }
 
     public static /* synthetic */ void c(s sVar, WorkGenerationalId workGenerationalId, boolean z10) {
-        synchronized (sVar.f35713k) {
+        synchronized (sVar.f36570k) {
             try {
-                Iterator<e> it = sVar.f35712j.iterator();
+                Iterator<e> it = sVar.f36569j.iterator();
                 while (it.hasNext()) {
                     it.next().d(workGenerationalId, z10);
                 }
@@ -78,7 +78,7 @@ public class s implements e6.a {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public static /* synthetic */ void d(s sVar, me.x xVar, q1 q1Var) {
+    public static /* synthetic */ void d(s sVar, ne.x xVar, q1 q1Var) {
         boolean zBooleanValue;
         sVar.getClass();
         try {
@@ -91,27 +91,27 @@ public class s implements e6.a {
 
     public static boolean i(String str, q1 q1Var, int i10) {
         if (q1Var == null) {
-            x5.w.e().a(f35703l, "WorkerWrapper could not be found for " + str);
+            x5.w.e().a(f36560l, "WorkerWrapper could not be found for " + str);
             return false;
         }
         q1Var.p(i10);
-        x5.w.e().a(f35703l, "WorkerWrapper interrupted for " + str);
+        x5.w.e().a(f36560l, "WorkerWrapper interrupted for " + str);
         return true;
     }
 
     @Override // e6.a
     public void a(String str, x5.k kVar) {
-        synchronized (this.f35713k) {
+        synchronized (this.f36570k) {
             try {
-                x5.w.e().f(f35703l, "Moving WorkSpec (" + str + ") to the foreground");
-                q1 q1VarRemove = this.f35709g.remove(str);
+                x5.w.e().f(f36560l, "Moving WorkSpec (" + str + ") to the foreground");
+                q1 q1VarRemove = this.f36566g.remove(str);
                 if (q1VarRemove != null) {
-                    if (this.f35704a == null) {
+                    if (this.f36561a == null) {
                         PowerManager.WakeLock wakeLockA = g6.a0.a(this.b, "ProcessorForegroundLck");
-                        this.f35704a = wakeLockA;
+                        this.f36561a = wakeLockA;
                         wakeLockA.acquire();
                     }
-                    this.f35708f.put(str, q1VarRemove);
+                    this.f36565f.put(str, q1VarRemove);
                     l2.b.q(this.b, androidx.work.impl.foreground.a.f(this.b, q1VarRemove.m(), kVar));
                 }
             } catch (Throwable th2) {
@@ -121,18 +121,18 @@ public class s implements e6.a {
     }
 
     public void e(e eVar) {
-        synchronized (this.f35713k) {
-            this.f35712j.add(eVar);
+        synchronized (this.f36570k) {
+            this.f36569j.add(eVar);
         }
     }
 
     public final q1 f(String str) {
-        q1 q1VarRemove = this.f35708f.remove(str);
+        q1 q1VarRemove = this.f36565f.remove(str);
         boolean z10 = q1VarRemove != null;
         if (!z10) {
-            q1VarRemove = this.f35709g.remove(str);
+            q1VarRemove = this.f36566g.remove(str);
         }
-        this.f35710h.remove(str);
+        this.f36567h.remove(str);
         if (z10) {
             q();
         }
@@ -140,7 +140,7 @@ public class s implements e6.a {
     }
 
     public f6.j0 g(String str) {
-        synchronized (this.f35713k) {
+        synchronized (this.f36570k) {
             try {
                 q1 q1VarH = h(str);
                 if (q1VarH == null) {
@@ -154,36 +154,36 @@ public class s implements e6.a {
     }
 
     public final q1 h(String str) {
-        q1 q1Var = this.f35708f.get(str);
-        return q1Var == null ? this.f35709g.get(str) : q1Var;
+        q1 q1Var = this.f36565f.get(str);
+        return q1Var == null ? this.f36566g.get(str) : q1Var;
     }
 
     public boolean j(String str) {
         boolean zContains;
-        synchronized (this.f35713k) {
-            zContains = this.f35711i.contains(str);
+        synchronized (this.f36570k) {
+            zContains = this.f36568i.contains(str);
         }
         return zContains;
     }
 
     public boolean k(String str) {
         boolean z10;
-        synchronized (this.f35713k) {
+        synchronized (this.f36570k) {
             z10 = h(str) != null;
         }
         return z10;
     }
 
     public final void l(q1 q1Var, boolean z10) {
-        synchronized (this.f35713k) {
+        synchronized (this.f36570k) {
             try {
                 WorkGenerationalId workGenerationalIdM = q1Var.m();
                 String workSpecId = workGenerationalIdM.getWorkSpecId();
                 if (h(workSpecId) == q1Var) {
                     f(workSpecId);
                 }
-                x5.w.e().a(f35703l, getClass().getSimpleName() + " " + workSpecId + " executed; reschedule = " + z10);
-                Iterator<e> it = this.f35712j.iterator();
+                x5.w.e().a(f36560l, getClass().getSimpleName() + " " + workSpecId + " executed; reschedule = " + z10);
+                Iterator<e> it = this.f36569j.iterator();
                 while (it.hasNext()) {
                     it.next().d(workGenerationalIdM, z10);
                 }
@@ -194,16 +194,16 @@ public class s implements e6.a {
     }
 
     public void m(e eVar) {
-        synchronized (this.f35713k) {
-            this.f35712j.remove(eVar);
+        synchronized (this.f36570k) {
+            this.f36569j.remove(eVar);
         }
     }
 
     public final void n(final WorkGenerationalId workGenerationalId, final boolean z10) {
-        this.f35706d.a().execute(new Runnable() { // from class: y5.r
+        this.f36563d.a().execute(new Runnable() { // from class: y5.r
             @Override // java.lang.Runnable
             public final void run() {
-                s.c(this.f35700a, workGenerationalId, z10);
+                s.c(this.f36557a, workGenerationalId, z10);
             }
         });
     }
@@ -213,26 +213,26 @@ public class s implements e6.a {
         WorkGenerationalId id2 = yVar.getId();
         final String workSpecId = id2.getWorkSpecId();
         final ArrayList arrayList = new ArrayList();
-        f6.j0 j0Var = (f6.j0) this.f35707e.P(new Callable() { // from class: y5.p
+        f6.j0 j0Var = (f6.j0) this.f36564e.P(new Callable() { // from class: y5.p
             @Override // java.util.concurrent.Callable
             public final Object call() {
-                return s.b(this.f35657a, arrayList, workSpecId);
+                return s.b(this.f36514a, arrayList, workSpecId);
             }
         });
         if (j0Var == null) {
-            x5.w.e().k(f35703l, "Didn't find WorkSpec for id " + id2);
+            x5.w.e().k(f36560l, "Didn't find WorkSpec for id " + id2);
             n(id2, false);
             return false;
         }
-        synchronized (this.f35713k) {
+        synchronized (this.f36570k) {
             try {
                 try {
                     try {
                         if (k(workSpecId)) {
-                            Set<y> set = this.f35710h.get(workSpecId);
+                            Set<y> set = this.f36567h.get(workSpecId);
                             if (set.iterator().next().getId().getGeneration() == id2.getGeneration()) {
                                 set.add(yVar);
-                                x5.w.e().a(f35703l, "Work " + id2 + " is already enqueued for processing");
+                                x5.w.e().a(f36560l, "Work " + id2 + " is already enqueued for processing");
                             } else {
                                 n(id2, false);
                             }
@@ -242,19 +242,19 @@ public class s implements e6.a {
                             n(id2, false);
                             return false;
                         }
-                        final q1 q1VarA = new q1.a(this.b, this.f35705c, this.f35706d, this, this.f35707e, j0Var, arrayList).k(aVar).a();
-                        final me.x<Boolean> xVarR = q1VarA.r();
+                        final q1 q1VarA = new q1.a(this.b, this.f36562c, this.f36563d, this, this.f36564e, j0Var, arrayList).k(aVar).a();
+                        final ne.x<Boolean> xVarR = q1VarA.r();
                         xVarR.a(new Runnable() { // from class: y5.q
                             @Override // java.lang.Runnable
                             public final void run() {
-                                s.d(this.f35661a, xVarR, q1VarA);
+                                s.d(this.f36518a, xVarR, q1VarA);
                             }
-                        }, this.f35706d.a());
-                        this.f35709g.put(workSpecId, q1VarA);
+                        }, this.f36563d.a());
+                        this.f36566g.put(workSpecId, q1VarA);
                         HashSet hashSet = new HashSet();
                         hashSet.add(yVar);
-                        this.f35710h.put(workSpecId, hashSet);
-                        x5.w.e().a(f35703l, getClass().getSimpleName() + ": processing " + id2);
+                        this.f36567h.put(workSpecId, hashSet);
+                        x5.w.e().a(f36560l, getClass().getSimpleName() + ": processing " + id2);
                         return true;
                     } catch (Throwable th3) {
                         th2 = th3;
@@ -273,27 +273,27 @@ public class s implements e6.a {
 
     public boolean p(String str, int i10) {
         q1 q1VarF;
-        synchronized (this.f35713k) {
-            x5.w.e().a(f35703l, "Processor cancelling " + str);
-            this.f35711i.add(str);
+        synchronized (this.f36570k) {
+            x5.w.e().a(f36560l, "Processor cancelling " + str);
+            this.f36568i.add(str);
             q1VarF = f(str);
         }
         return i(str, q1VarF, i10);
     }
 
     public final void q() {
-        synchronized (this.f35713k) {
+        synchronized (this.f36570k) {
             try {
-                if (this.f35708f.isEmpty()) {
+                if (this.f36565f.isEmpty()) {
                     try {
                         this.b.startService(androidx.work.impl.foreground.a.g(this.b));
                     } catch (Throwable th2) {
-                        x5.w.e().d(f35703l, "Unable to stop foreground service", th2);
+                        x5.w.e().d(f36560l, "Unable to stop foreground service", th2);
                     }
-                    PowerManager.WakeLock wakeLock = this.f35704a;
+                    PowerManager.WakeLock wakeLock = this.f36561a;
                     if (wakeLock != null) {
                         wakeLock.release();
-                        this.f35704a = null;
+                        this.f36561a = null;
                     }
                 }
             } catch (Throwable th3) {
@@ -305,7 +305,7 @@ public class s implements e6.a {
     public boolean r(y yVar, int i10) {
         q1 q1VarF;
         String workSpecId = yVar.getId().getWorkSpecId();
-        synchronized (this.f35713k) {
+        synchronized (this.f36570k) {
             q1VarF = f(workSpecId);
         }
         return i(workSpecId, q1VarF, i10);
@@ -313,16 +313,16 @@ public class s implements e6.a {
 
     public boolean s(y yVar, int i10) {
         String workSpecId = yVar.getId().getWorkSpecId();
-        synchronized (this.f35713k) {
+        synchronized (this.f36570k) {
             try {
-                if (this.f35708f.get(workSpecId) == null) {
-                    Set<y> set = this.f35710h.get(workSpecId);
+                if (this.f36565f.get(workSpecId) == null) {
+                    Set<y> set = this.f36567h.get(workSpecId);
                     if (set != null && set.contains(yVar)) {
                         return i(workSpecId, f(workSpecId), i10);
                     }
                     return false;
                 }
-                x5.w.e().a(f35703l, "Ignored stopWork. WorkerWrapper " + workSpecId + " is in foreground");
+                x5.w.e().a(f36560l, "Ignored stopWork. WorkerWrapper " + workSpecId + " is in foreground");
                 return false;
             } catch (Throwable th2) {
                 throw th2;

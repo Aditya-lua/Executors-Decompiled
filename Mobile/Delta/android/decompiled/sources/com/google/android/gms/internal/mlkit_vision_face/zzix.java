@@ -1,7 +1,7 @@
 package com.google.android.gms.internal.mlkit_vision_face;
 
-import rf.a;
-import rf.b;
+import sf.a;
+import sf.b;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class zzix implements a {
@@ -10,7 +10,7 @@ public final class zzix implements a {
     private zzix() {
     }
 
-    @Override // rf.a
+    @Override // sf.a
     public final void configure(b bVar) {
         bVar.registerEncoder(zzkw.class, zzgq.zza);
         bVar.registerEncoder(zzmv.class, zzip.zza);

@@ -9,9 +9,9 @@ import n0.g3;
 public class ImageCapturePixelHDRPlusQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final List<String> f1335a = Arrays.asList("Pixel 2", "Pixel 2 XL", "Pixel 3", "Pixel 3 XL");
+    public static final List<String> f1180a = Arrays.asList("Pixel 2", "Pixel 2 XL", "Pixel 3", "Pixel 3 XL");
 
     public static boolean g() {
-        return f1335a.contains(Build.MODEL) && "Google".equals(Build.MANUFACTURER);
+        return f1180a.contains(Build.MODEL) && "Google".equals(Build.MANUFACTURER);
     }
 }

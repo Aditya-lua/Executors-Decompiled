@@ -4,74 +4,74 @@ import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
 import com.appsflyer.sdk_base.referrer.Payload;
+import gt.l;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import jt.l;
 import kotlin.Unit;
 import kotlin.collections.j0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import um.f;
-import um.h;
-import um.m;
-import um.t;
-import um.z;
+import sm.f;
+import sm.h;
+import sm.m;
+import sm.t;
+import sm.z;
 
 /* JADX INFO: loaded from: classes3.dex */
 @kotlin.Metadata(d1 = {"\u0000:\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u000e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b6\u0018\u00002\u00020\u0001:\f\u0004\u0005\u0006\u0007\b\t\n\u000b\f\r\u000e\u000fB\t\b\u0004¢\u0006\u0004\b\u0002\u0010\u0003\u0082\u0001\u000b\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a¨\u0006\u001b"}, d2 = {"Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam;", "Landroid/os/Parcelable;", "<init>", "()V", "Adapter", "ComponentString", "ComponentStringList", "ComponentBoolean", "ComponentNumber", "Address", "ESignature", "GovernmentIdNfcScan", "JpMyNumberNfcScanParams", "InternationalDbParams", "PhoneNumberSnaParams", "FileUpload", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$Address;", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$ComponentBoolean;", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$ComponentNumber;", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$ComponentString;", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$ComponentStringList;", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$ESignature;", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$FileUpload;", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$GovernmentIdNfcScan;", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$InternationalDbParams;", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$JpMyNumberNfcScanParams;", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$PhoneNumberSnaParams;", "ui_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public abstract class ComponentParam implements Parcelable {
 
-    @kotlin.Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0003\bÆ\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0003\u0010\u0004J\u0019\u0010\u0007\u001a\u0004\u0018\u00010\u00022\u0006\u0010\u0006\u001a\u00020\u0005H\u0017¢\u0006\u0004\b\u0007\u0010\bJ!\u0010\r\u001a\u00020\f2\u0006\u0010\n\u001a\u00020\t2\b\u0010\u000b\u001a\u0004\u0018\u00010\u0002H\u0017¢\u0006\u0004\b\r\u0010\u000e¨\u0006\u000f"}, d2 = {"Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$Adapter;", "Lum/h;", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam;", "<init>", "()V", "Lum/m;", "reader", "fromJson", "(Lum/m;)Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam;", "Lum/t;", "writer", "value", "", "toJson", "(Lum/t;Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam;)V", "ui_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @kotlin.Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0003\bÆ\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0003\u0010\u0004J\u0019\u0010\u0007\u001a\u0004\u0018\u00010\u00022\u0006\u0010\u0006\u001a\u00020\u0005H\u0017¢\u0006\u0004\b\u0007\u0010\bJ!\u0010\r\u001a\u00020\f2\u0006\u0010\n\u001a\u00020\t2\b\u0010\u000b\u001a\u0004\u0018\u00010\u0002H\u0017¢\u0006\u0004\b\r\u0010\u000e¨\u0006\u000f"}, d2 = {"Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$Adapter;", "Lsm/h;", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam;", "<init>", "()V", "Lsm/m;", "reader", "fromJson", "(Lsm/m;)Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam;", "Lsm/t;", "writer", "value", "", "toJson", "(Lsm/t;Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam;)V", "ui_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class Adapter extends h<ComponentParam> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NotNull
-        public static final Adapter f13930a = new Adapter();
+        public static final Adapter f14011a = new Adapter();
 
         @kotlin.Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
         public static final /* synthetic */ class a {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public static final /* synthetic */ int[] f13931a;
+            public static final /* synthetic */ int[] f14012a;
 
             static {
-                int[] iArr = new int[qp.a.values().length];
+                int[] iArr = new int[op.a.values().length];
                 try {
-                    iArr[qp.a.NotRequested.ordinal()] = 1;
+                    iArr[op.a.NotRequested.ordinal()] = 1;
                 } catch (NoSuchFieldError unused) {
                 }
                 try {
-                    iArr[qp.a.NotSupported.ordinal()] = 2;
+                    iArr[op.a.NotSupported.ordinal()] = 2;
                 } catch (NoSuchFieldError unused2) {
                 }
                 try {
-                    iArr[qp.a.Failed.ordinal()] = 3;
+                    iArr[op.a.Failed.ordinal()] = 3;
                 } catch (NoSuchFieldError unused3) {
                 }
                 try {
-                    iArr[qp.a.Success.ordinal()] = 4;
+                    iArr[op.a.Success.ordinal()] = 4;
                 } catch (NoSuchFieldError unused4) {
                 }
-                f13931a = iArr;
+                f14012a = iArr;
             }
         }
 
         /* JADX WARN: Can't rename method to resolve collision */
-        @Override // um.h
-        @Nullable
+        @Override // sm.h
         @f
+        @Nullable
         public ComponentParam fromJson(@NotNull m reader) {
             Intrinsics.checkNotNullParameter(reader, "reader");
             return null;
         }
 
-        @Override // um.h
+        @Override // sm.h
         @z
         public void toJson(@NotNull t writer, @Nullable ComponentParam value) {
             String str;
@@ -135,10 +135,10 @@ public abstract class ComponentParam implements Parcelable {
             if (value instanceof GovernmentIdNfcScan) {
                 writer.c();
                 GovernmentIdNfcScan governmentIdNfcScan = (GovernmentIdNfcScan) value;
-                qp.a chipAuthenticationStatus = governmentIdNfcScan.getChipAuthenticationStatus();
+                op.a chipAuthenticationStatus = governmentIdNfcScan.getChipAuthenticationStatus();
                 if (chipAuthenticationStatus != null) {
                     writer.n("caFlag");
-                    int i10 = a.f13931a[chipAuthenticationStatus.ordinal()];
+                    int i10 = a.f14012a[chipAuthenticationStatus.ordinal()];
                     if (i10 == 1) {
                         str = "notRequested";
                     } else if (i10 == 2) {
@@ -236,7 +236,7 @@ public abstract class ComponentParam implements Parcelable {
                 if (value != null) {
                     throw new l();
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
                 return;
             }
             FileUpload fileUpload = (FileUpload) value;
@@ -679,7 +679,7 @@ public abstract class ComponentParam implements Parcelable {
         }
     }
 
-    @kotlin.Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u000e\b\u0007\u0018\u00002\u00020\u0001B/\u0012\b\u0010\u0003\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u0004\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0006¢\u0006\u0004\b\b\u0010\tJ\r\u0010\u000b\u001a\u00020\n¢\u0006\u0004\b\u000b\u0010\fJ\u001d\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000f\u001a\u00020\n¢\u0006\u0004\b\u0011\u0010\u0012R\u0019\u0010\u0003\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u0013\u0010\u0014\u001a\u0004\b\u0015\u0010\u0016R\u0019\u0010\u0004\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u0017\u0010\u0014\u001a\u0004\b\u0018\u0010\u0016R\u0019\u0010\u0005\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u0019\u0010\u0014\u001a\u0004\b\u001a\u0010\u0016R\u0019\u0010\u0007\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\b\u001b\u0010\u001c\u001a\u0004\b\u0013\u0010\u001d¨\u0006\u001e"}, d2 = {"Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$GovernmentIdNfcScan;", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam;", "", "dg1", "dg2", "sod", "Lqp/a;", "chipAuthenticationStatus", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqp/a;)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "a", "Ljava/lang/String;", "f", "()Ljava/lang/String;", "b", "g", "c", "i", "d", "Lqp/a;", "()Lqp/a;", "ui_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @kotlin.Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u000e\b\u0007\u0018\u00002\u00020\u0001B/\u0012\b\u0010\u0003\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u0004\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0006¢\u0006\u0004\b\b\u0010\tJ\r\u0010\u000b\u001a\u00020\n¢\u0006\u0004\b\u000b\u0010\fJ\u001d\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000f\u001a\u00020\n¢\u0006\u0004\b\u0011\u0010\u0012R\u0019\u0010\u0003\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u0013\u0010\u0014\u001a\u0004\b\u0015\u0010\u0016R\u0019\u0010\u0004\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u0017\u0010\u0014\u001a\u0004\b\u0018\u0010\u0016R\u0019\u0010\u0005\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u0019\u0010\u0014\u001a\u0004\b\u001a\u0010\u0016R\u0019\u0010\u0007\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\b\u001b\u0010\u001c\u001a\u0004\b\u0013\u0010\u001d¨\u0006\u001e"}, d2 = {"Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$GovernmentIdNfcScan;", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam;", "", "dg1", "dg2", "sod", "Lop/a;", "chipAuthenticationStatus", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lop/a;)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "a", "Ljava/lang/String;", "f", "()Ljava/lang/String;", "b", "g", "c", "i", "d", "Lop/a;", "()Lop/a;", "ui_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class GovernmentIdNfcScan extends ComponentParam {
 
         @NotNull
@@ -699,7 +699,7 @@ public abstract class ComponentParam implements Parcelable {
 
         /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
         @Nullable
-        public final qp.a chipAuthenticationStatus;
+        public final op.a chipAuthenticationStatus;
 
         @kotlin.Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
         public static final class a implements Parcelable.Creator<GovernmentIdNfcScan> {
@@ -707,7 +707,7 @@ public abstract class ComponentParam implements Parcelable {
             /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
             public final GovernmentIdNfcScan createFromParcel(Parcel parcel) {
                 Intrinsics.checkNotNullParameter(parcel, "parcel");
-                return new GovernmentIdNfcScan(parcel.readString(), parcel.readString(), parcel.readString(), parcel.readInt() == 0 ? null : qp.a.valueOf(parcel.readString()));
+                return new GovernmentIdNfcScan(parcel.readString(), parcel.readString(), parcel.readString(), parcel.readInt() == 0 ? null : op.a.valueOf(parcel.readString()));
             }
 
             @Override // android.os.Parcelable.Creator
@@ -717,7 +717,7 @@ public abstract class ComponentParam implements Parcelable {
             }
         }
 
-        public GovernmentIdNfcScan(@Nullable String str, @Nullable String str2, @Nullable String str3, @Nullable qp.a aVar) {
+        public GovernmentIdNfcScan(@Nullable String str, @Nullable String str2, @Nullable String str3, @Nullable op.a aVar) {
             super(null);
             this.dg1 = str;
             this.dg2 = str2;
@@ -727,7 +727,7 @@ public abstract class ComponentParam implements Parcelable {
 
         @Nullable
         /* JADX INFO: renamed from: a, reason: from getter */
-        public final qp.a getChipAuthenticationStatus() {
+        public final op.a getChipAuthenticationStatus() {
             return this.chipAuthenticationStatus;
         }
 
@@ -760,7 +760,7 @@ public abstract class ComponentParam implements Parcelable {
             dest.writeString(this.dg1);
             dest.writeString(this.dg2);
             dest.writeString(this.sod);
-            qp.a aVar = this.chipAuthenticationStatus;
+            op.a aVar = this.chipAuthenticationStatus;
             if (aVar == null) {
                 dest.writeInt(0);
             } else {

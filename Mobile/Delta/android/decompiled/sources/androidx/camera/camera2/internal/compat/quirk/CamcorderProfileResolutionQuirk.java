@@ -15,11 +15,11 @@ import n0.g3;
 public class CamcorderProfileResolutionQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final u0 f1322a;
+    public final u0 f1167a;
     public List<Size> b = null;
 
     public CamcorderProfileResolutionQuirk(c0 c0Var) {
-        this.f1322a = c0Var.e();
+        this.f1167a = c0Var.e();
     }
 
     public static boolean h(c0 c0Var) {
@@ -29,7 +29,7 @@ public class CamcorderProfileResolutionQuirk implements g3 {
 
     public List<Size> g() {
         if (this.b == null) {
-            Size[] sizeArrG = this.f1322a.g(34);
+            Size[] sizeArrG = this.f1167a.g(34);
             this.b = sizeArrG != null ? Arrays.asList((Size[]) sizeArrG.clone()) : Collections.EMPTY_LIST;
             r1.a("CamcorderProfileResolutionQuirk", "mSupportedResolutions = " + this.b);
         }

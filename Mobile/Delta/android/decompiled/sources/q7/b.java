@@ -6,18 +6,18 @@ import java.util.Collections;
 public class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final r7.c.a f29230a = r7.c.a.a("s", "a");
+    public static final r7.c.a f29583a = r7.c.a.a("s", "a");
     public static final r7.c.a b = r7.c.a.a("s", "e", "o", "r");
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final r7.c.a f29231c = r7.c.a.a("fc", "sc", "sw", "t", "o");
+    public static final r7.c.a f29584c = r7.c.a.a("fc", "sc", "sw", "t", "o");
 
     public static m7.k a(r7.c cVar, f7.i iVar) {
         cVar.c();
         m7.m mVarC = null;
         m7.l lVarB = null;
         while (cVar.f()) {
-            int iR = cVar.r(f29230a);
+            int iR = cVar.r(f29583a);
             if (iR == 0) {
                 lVarB = b(cVar, iVar);
             } else if (iR != 1) {
@@ -73,7 +73,7 @@ public class b {
         m7.b bVarE2 = null;
         m7.d dVarH = null;
         while (cVar.f()) {
-            int iR = cVar.r(f29231c);
+            int iR = cVar.r(f29584c);
             if (iR == 0) {
                 aVarC = d.c(cVar, iVar);
             } else if (iR == 1) {

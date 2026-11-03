@@ -15,7 +15,7 @@ public final class i<E> extends f<E> {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
     @NotNull
-    public static final Object[] f22500e = new Object[0];
+    public static final Object[] f22955e = new Object[0];
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     public int head;
@@ -30,7 +30,7 @@ public final class i<E> extends f<E> {
     public i(int i10) {
         Object[] objArr;
         if (i10 == 0) {
-            objArr = f22500e;
+            objArr = f22955e;
         } else {
             if (i10 <= 0) {
                 throw new IllegalArgumentException("Illegal Capacity: " + i10);
@@ -48,7 +48,7 @@ public final class i<E> extends f<E> {
         if (minCapacity <= objArr.length) {
             return;
         }
-        if (objArr == f22500e) {
+        if (objArr == f22955e) {
             this.elementData = new Object[kotlin.ranges.d.c(minCapacity, 10)];
         } else {
             d(d.INSTANCE.e(objArr.length, minCapacity));
@@ -711,7 +711,7 @@ public final class i<E> extends f<E> {
     }
 
     public i() {
-        this.elementData = f22500e;
+        this.elementData = f22955e;
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List

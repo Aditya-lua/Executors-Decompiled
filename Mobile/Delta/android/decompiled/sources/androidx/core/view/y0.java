@@ -11,41 +11,41 @@ import java.lang.ref.WeakReference;
 public final class y0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final WeakReference<View> f1927a;
+    public final WeakReference<View> f1772a;
 
     public class a extends AnimatorListenerAdapter {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ z0 f1928a;
+        public final /* synthetic */ z0 f1773a;
         public final /* synthetic */ View b;
 
         public a(z0 z0Var, View view) {
-            this.f1928a = z0Var;
+            this.f1773a = z0Var;
             this.b = view;
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationCancel(Animator animator) {
-            this.f1928a.a(this.b);
+            this.f1773a.a(this.b);
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationEnd(Animator animator) {
-            this.f1928a.b(this.b);
+            this.f1773a.b(this.b);
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationStart(Animator animator) {
-            this.f1928a.c(this.b);
+            this.f1773a.c(this.b);
         }
     }
 
     public y0(View view) {
-        this.f1927a = new WeakReference<>(view);
+        this.f1772a = new WeakReference<>(view);
     }
 
     public y0 b(float f10) {
-        View view = this.f1927a.get();
+        View view = this.f1772a.get();
         if (view != null) {
             view.animate().alpha(f10);
         }
@@ -53,14 +53,14 @@ public final class y0 {
     }
 
     public void c() {
-        View view = this.f1927a.get();
+        View view = this.f1772a.get();
         if (view != null) {
             view.animate().cancel();
         }
     }
 
     public long d() {
-        View view = this.f1927a.get();
+        View view = this.f1772a.get();
         if (view != null) {
             return view.animate().getDuration();
         }
@@ -68,7 +68,7 @@ public final class y0 {
     }
 
     public y0 e(long j10) {
-        View view = this.f1927a.get();
+        View view = this.f1772a.get();
         if (view != null) {
             view.animate().setDuration(j10);
         }
@@ -76,7 +76,7 @@ public final class y0 {
     }
 
     public y0 f(Interpolator interpolator) {
-        View view = this.f1927a.get();
+        View view = this.f1772a.get();
         if (view != null) {
             view.animate().setInterpolator(interpolator);
         }
@@ -84,7 +84,7 @@ public final class y0 {
     }
 
     public y0 g(z0 z0Var) {
-        View view = this.f1927a.get();
+        View view = this.f1772a.get();
         if (view != null) {
             h(view, z0Var);
         }
@@ -100,7 +100,7 @@ public final class y0 {
     }
 
     public y0 i(long j10) {
-        View view = this.f1927a.get();
+        View view = this.f1772a.get();
         if (view != null) {
             view.animate().setStartDelay(j10);
         }
@@ -108,7 +108,7 @@ public final class y0 {
     }
 
     public y0 j(final b1 b1Var) {
-        final View view = this.f1927a.get();
+        final View view = this.f1772a.get();
         if (view != null) {
             view.animate().setUpdateListener(b1Var != null ? new ValueAnimator.AnimatorUpdateListener() { // from class: androidx.core.view.x0
                 @Override // android.animation.ValueAnimator.AnimatorUpdateListener
@@ -121,14 +121,14 @@ public final class y0 {
     }
 
     public void k() {
-        View view = this.f1927a.get();
+        View view = this.f1772a.get();
         if (view != null) {
             view.animate().start();
         }
     }
 
     public y0 l(float f10) {
-        View view = this.f1927a.get();
+        View view = this.f1772a.get();
         if (view != null) {
             view.animate().translationY(f10);
         }

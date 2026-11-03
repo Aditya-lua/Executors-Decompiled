@@ -9,14 +9,14 @@ import java.util.List;
 public class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f14249a;
+    public final String f14229a;
 
     public e(String str) {
-        this.f14249a = str;
+        this.f14229a = str;
     }
 
     public List<Size> a(int i10) {
         ExcludedSupportedSizesQuirk excludedSupportedSizesQuirk = (ExcludedSupportedSizesQuirk) c0.e.b(ExcludedSupportedSizesQuirk.class);
-        return excludedSupportedSizesQuirk == null ? new ArrayList() : excludedSupportedSizesQuirk.g(this.f14249a, i10);
+        return excludedSupportedSizesQuirk == null ? new ArrayList() : excludedSupportedSizesQuirk.g(this.f14229a, i10);
     }
 }

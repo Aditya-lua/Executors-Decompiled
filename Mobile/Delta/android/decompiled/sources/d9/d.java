@@ -6,17 +6,17 @@ import com.google.android.gms.common.api.Status;
 /* JADX INFO: loaded from: classes.dex */
 public class d extends r {
     @Override // d9.s
-    public void A1(Status status) {
+    public void X(GoogleSignInAccount googleSignInAccount, Status status) {
         throw new UnsupportedOperationException();
     }
 
     @Override // d9.s
-    public void Z(GoogleSignInAccount googleSignInAccount, Status status) {
+    public void o1(Status status) {
         throw new UnsupportedOperationException();
     }
 
     @Override // d9.s
-    public void r1(Status status) {
+    public void z1(Status status) {
         throw new UnsupportedOperationException();
     }
 }

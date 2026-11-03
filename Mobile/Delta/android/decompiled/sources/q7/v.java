@@ -10,26 +10,26 @@ import java.util.List;
 public class v {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final r7.c.a f29274a = r7.c.a.a("nm", "ind", "refId", "ty", "parent", "sw", "sh", "sc", "ks", "tt", "masksProperties", "shapes", "t", "ef", "sr", "st", "w", "h", "ip", "op", "tm", "cl", "hd", "ao", "bm");
+    public static final r7.c.a f29627a = r7.c.a.a("nm", "ind", "refId", "ty", "parent", "sw", "sh", "sc", "ks", "tt", "masksProperties", "shapes", "t", "ef", "sr", "st", "w", "h", "ip", "op", "tm", "cl", "hd", "ao", "bm");
     public static final r7.c.a b = r7.c.a.a("d", "a");
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final r7.c.a f29275c = r7.c.a.a("ty", "nm");
+    public static final r7.c.a f29628c = r7.c.a.a("ty", "nm");
 
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f29276a;
+        public static final /* synthetic */ int[] f29629a;
 
         static {
             int[] iArr = new int[o7.e.b.values().length];
-            f29276a = iArr;
+            f29629a = iArr;
             try {
                 iArr[o7.e.b.LUMA.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f29276a[o7.e.b.LUMA_INVERTED.ordinal()] = 2;
+                f29629a[o7.e.b.LUMA_INVERTED.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
         }
@@ -77,7 +77,7 @@ public class v {
         o7.e.a aVar = null;
         boolean z11 = false;
         while (cVar.f()) {
-            switch (cVar.r(f29274a)) {
+            switch (cVar.r(f29627a)) {
                 case 0:
                     strM2 = cVar.m();
                     z10 = false;
@@ -127,7 +127,7 @@ public class v {
                         iVar.a("Unsupported matte type: " + iJ4);
                     } else {
                         bVar2 = o7.e.b.values()[iJ4];
-                        int i10 = a.f29276a[bVar2.ordinal()];
+                        int i10 = a.f29629a[bVar2.ordinal()];
                         if (i10 == 1) {
                             iVar.a("Unsupported matte type: Luma");
                         } else if (i10 == 2) {
@@ -194,7 +194,7 @@ public class v {
                     while (cVar.f()) {
                         cVar.c();
                         while (cVar.f()) {
-                            int iR2 = cVar.r(f29275c);
+                            int iR2 = cVar.r(f29628c);
                             if (iR2 == 0) {
                                 int iJ5 = cVar.j();
                                 if (iJ5 == 29) {

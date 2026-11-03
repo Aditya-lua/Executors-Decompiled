@@ -9,20 +9,20 @@ public final class k {
     public static volatile j b;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Object f32891a = new Object();
+    public static final Object f33459a = new Object();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final AtomicReference f32892c = new AtomicReference();
+    public static final AtomicReference f33460c = new AtomicReference();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final m f32893d = new m(i.f32889a, null);
+    public static final m f33461d = new m(i.f33457a, null);
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final AtomicInteger f32894e = new AtomicInteger();
+    public static final AtomicInteger f33462e = new AtomicInteger();
 
     public static void a(final Context context) {
         if (b == null) {
-            Object obj = f32891a;
+            Object obj = f33459a;
             synchronized (obj) {
                 try {
                     if (b == null) {
@@ -38,7 +38,7 @@ public final class k {
                                     l.a();
                                     b = new f(context, t.a(new r() { // from class: va.h
                                     }));
-                                    f32894e.incrementAndGet();
+                                    f33462e.incrementAndGet();
                                 }
                             } catch (Throwable th2) {
                                 throw th2;

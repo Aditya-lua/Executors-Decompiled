@@ -9,7 +9,7 @@ public class b extends Exception {
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
     @Deprecated
-    public final Status f22269a;
+    public final Status f22493a;
 
     public b(@NonNull Status status) {
         int iX3 = status.x3();
@@ -19,15 +19,15 @@ public class b extends Exception {
         sb2.append(": ");
         sb2.append(strY3);
         super(sb2.toString());
-        this.f22269a = status;
+        this.f22493a = status;
     }
 
     @NonNull
     public Status a() {
-        return this.f22269a;
+        return this.f22493a;
     }
 
     public int b() {
-        return this.f22269a.x3();
+        return this.f22493a.x3();
     }
 }

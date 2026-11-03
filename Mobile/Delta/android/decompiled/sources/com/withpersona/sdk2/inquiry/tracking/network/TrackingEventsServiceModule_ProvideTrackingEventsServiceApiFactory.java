@@ -1,9 +1,9 @@
 package com.withpersona.sdk2.inquiry.tracking.network;
 
-import ft.d;
-import ft.h;
-import ft.i;
-import jv.y;
+import dt.d;
+import dt.h;
+import dt.i;
+import hv.y;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class TrackingEventsServiceModule_ProvideTrackingEventsServiceApiFactory implements d<TrackingEventsServiceApi> {
@@ -23,7 +23,7 @@ public final class TrackingEventsServiceModule_ProvideTrackingEventsServiceApiFa
         return (TrackingEventsServiceApi) h.e(trackingEventsServiceModule.provideTrackingEventsServiceApi(yVar));
     }
 
-    @Override // ht.a
+    @Override // ft.a
     public TrackingEventsServiceApi get() {
         return provideTrackingEventsServiceApi(this.module, this.retrofitProvider.get());
     }

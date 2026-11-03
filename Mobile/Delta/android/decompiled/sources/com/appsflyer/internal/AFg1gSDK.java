@@ -23,7 +23,7 @@ public final class AFg1gSDK {
     private final LinkedHashMap<String, Object> unregisterClient;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final Object f5372d = new Object() { // from class: com.appsflyer.internal.AFg1gSDK.4
+    public static final Object f5445d = new Object() { // from class: com.appsflyer.internal.AFg1gSDK.4
         public final boolean equals(Object obj) {
             return obj == this || obj == null;
         }
@@ -72,7 +72,7 @@ public final class AFg1gSDK {
 
     public static Object registerClient(Object obj) throws Throwable {
         if (obj == null) {
-            return f5372d;
+            return f5445d;
         }
         if (((Class) AFa1bSDK.AFLogger((char) Color.green(0), (CdmaCellLocation.convertQuartSecToDecDegrees(0) > 0.0d ? 1 : (CdmaCellLocation.convertQuartSecToDecDegrees(0) == 0.0d ? 0 : -1)) + 318, 37 - View.resolveSizeAndState(0, 0, 0))).isInstance(obj) || (obj instanceof AFg1gSDK)) {
             return obj;
@@ -100,7 +100,7 @@ public final class AFg1gSDK {
             if (obj instanceof JSONObject) {
                 return new AFg1gSDK(obj.toString());
             }
-            if (obj.equals(f5372d)) {
+            if (obj.equals(f5445d)) {
                 return obj;
             }
             try {

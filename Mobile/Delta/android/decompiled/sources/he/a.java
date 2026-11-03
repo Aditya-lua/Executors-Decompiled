@@ -1,59 +1,34 @@
 package he;
 
-import java.util.NoSuchElementException;
-
 /* JADX INFO: loaded from: classes2.dex */
-public abstract class a<E> extends z0<E> {
+public final class a<T> extends k<T> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f19198a;
-    public int b;
+    public static final a<Object> f19393a = new a<>();
 
-    public a(int i10, int i11) {
-        ge.n.o(i11, i10);
-        this.f19198a = i10;
-        this.b = i11;
+    public static <T> k<T> e() {
+        return f19393a;
     }
 
-    public abstract E a(int i10);
-
-    @Override // java.util.Iterator, java.util.ListIterator
-    public final boolean hasNext() {
-        return this.b < this.f19198a;
+    @Override // he.k
+    public T b() {
+        throw new IllegalStateException("Optional.get() cannot be called on an absent value");
     }
 
-    @Override // java.util.ListIterator
-    public final boolean hasPrevious() {
-        return this.b > 0;
+    @Override // he.k
+    public boolean c() {
+        return false;
     }
 
-    @Override // java.util.Iterator, java.util.ListIterator
-    public final E next() {
-        if (!hasNext()) {
-            throw new NoSuchElementException();
-        }
-        int i10 = this.b;
-        this.b = i10 + 1;
-        return a(i10);
+    public boolean equals(Object obj) {
+        return obj == this;
     }
 
-    @Override // java.util.ListIterator
-    public final int nextIndex() {
-        return this.b;
+    public int hashCode() {
+        return 2040732332;
     }
 
-    @Override // java.util.ListIterator
-    public final E previous() {
-        if (!hasPrevious()) {
-            throw new NoSuchElementException();
-        }
-        int i10 = this.b - 1;
-        this.b = i10;
-        return a(i10);
-    }
-
-    @Override // java.util.ListIterator
-    public final int previousIndex() {
-        return this.b - 1;
+    public String toString() {
+        return "Optional.absent()";
     }
 }

@@ -13,17 +13,17 @@ public final class j {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final n1.a<i> f15797a;
+    public static final n1.a<i> f16393a;
 
     static {
         n1.a<i> aVarA = n1.a.a("camerax.core.appConfig.captureRequestConfigurator", i.class);
         Intrinsics.checkNotNullExpressionValue(aVarA, "create(...)");
-        f15797a = aVarA;
+        f16393a = aVarA;
     }
 
     @Nullable
     public static final i a(@NotNull g0 g0Var) {
         Intrinsics.checkNotNullParameter(g0Var, "<this>");
-        return (i) g0Var.n().h(f15797a, null);
+        return (i) g0Var.n().h(f16393a, null);
     }
 }

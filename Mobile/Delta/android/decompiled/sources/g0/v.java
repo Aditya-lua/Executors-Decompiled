@@ -11,34 +11,34 @@ import java.util.Set;
 public final class v {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final v f17533c = new a().b(0).a();
+    public static final v f18072c = new a().b(0).a();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final v f17534d = new a().b(1).a();
+    public static final v f18073d = new a().b(1).a();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final LinkedHashSet<r> f17535a;
+    public final LinkedHashSet<r> f18074a;
     public final String b;
 
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final LinkedHashSet<r> f17536a = new LinkedHashSet<>();
+        public final LinkedHashSet<r> f18075a = new LinkedHashSet<>();
         public String b;
 
         public v a() {
-            return new v(this.f17536a, this.b);
+            return new v(this.f18075a, this.b);
         }
 
         public a b(int i10) {
             x2.g.j(i10 != -1, "The specified lens facing is invalid.");
-            this.f17536a.add(new n0.m2(i10));
+            this.f18075a.add(new n0.m2(i10));
             return this;
         }
     }
 
     public v(LinkedHashSet<r> linkedHashSet, String str) {
-        this.f17535a = linkedHashSet;
+        this.f18074a = linkedHashSet;
         this.b = str;
     }
 
@@ -60,7 +60,7 @@ public final class v {
 
     public List<t> b(List<t> list) {
         List<t> arrayList = new ArrayList<>(list);
-        Iterator<r> it = this.f17535a.iterator();
+        Iterator<r> it = this.f18074a.iterator();
         while (it.hasNext()) {
             arrayList = it.next().b(Collections.unmodifiableList(arrayList));
         }
@@ -69,12 +69,12 @@ public final class v {
     }
 
     public LinkedHashSet<r> c() {
-        return this.f17535a;
+        return this.f18074a;
     }
 
     public Integer d() {
         Integer num = null;
-        for (r rVar : this.f17535a) {
+        for (r rVar : this.f18074a) {
             if (rVar instanceof n0.m2) {
                 Integer numValueOf = Integer.valueOf(((n0.m2) rVar).c());
                 if (num == null) {
@@ -101,8 +101,8 @@ public final class v {
 
     public final String f() {
         StringBuilder sb2 = new StringBuilder();
-        sb2.append(String.format("PhyId:%s  Filters:%s", this.b, Integer.valueOf(this.f17535a.size())));
-        for (r rVar : this.f17535a) {
+        sb2.append(String.format("PhyId:%s  Filters:%s", this.b, Integer.valueOf(this.f18074a.size())));
+        for (r rVar : this.f18074a) {
             sb2.append(" Id:");
             sb2.append(rVar.a());
             if (rVar instanceof n0.m2) {

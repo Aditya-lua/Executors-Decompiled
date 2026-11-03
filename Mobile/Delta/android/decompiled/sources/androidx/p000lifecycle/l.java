@@ -24,7 +24,7 @@ public abstract class l {
         ON_DESTROY,
         ON_ANY;
 
-        private static final /* synthetic */ qt.a $ENTRIES = qt.b.a(a());
+        private static final /* synthetic */ ot.a $ENTRIES = ot.b.a(a());
 
         /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
         @NotNull
@@ -36,10 +36,10 @@ public abstract class l {
 
             /* JADX INFO: renamed from: androidx.lifecycle.l$a$a$a, reason: collision with other inner class name */
             @Metadata(k = 3, mv = {2, 0, 0}, xi = 48)
-            public static final /* synthetic */ class C0049a {
+            public static final /* synthetic */ class C0045a {
 
                 /* JADX INFO: renamed from: a, reason: collision with root package name */
-                public static final /* synthetic */ int[] f2814a;
+                public static final /* synthetic */ int[] f2659a;
 
                 static {
                     int[] iArr = new int[b.values().length];
@@ -63,7 +63,7 @@ public abstract class l {
                         iArr[b.INITIALIZED.ordinal()] = 5;
                     } catch (NoSuchFieldError unused5) {
                     }
-                    f2814a = iArr;
+                    f2659a = iArr;
                 }
             }
 
@@ -74,7 +74,7 @@ public abstract class l {
             @Nullable
             public final a a(@NotNull b state) {
                 Intrinsics.checkNotNullParameter(state, "state");
-                int i10 = C0049a.f2814a[state.ordinal()];
+                int i10 = C0045a.f2659a[state.ordinal()];
                 if (i10 == 1) {
                     return a.ON_DESTROY;
                 }
@@ -90,7 +90,7 @@ public abstract class l {
             @Nullable
             public final a b(@NotNull b state) {
                 Intrinsics.checkNotNullParameter(state, "state");
-                int i10 = C0049a.f2814a[state.ordinal()];
+                int i10 = C0045a.f2659a[state.ordinal()];
                 if (i10 == 1) {
                     return a.ON_START;
                 }
@@ -106,7 +106,7 @@ public abstract class l {
             @Nullable
             public final a c(@NotNull b state) {
                 Intrinsics.checkNotNullParameter(state, "state");
-                int i10 = C0049a.f2814a[state.ordinal()];
+                int i10 = C0045a.f2659a[state.ordinal()];
                 if (i10 == 1) {
                     return a.ON_CREATE;
                 }
@@ -127,7 +127,7 @@ public abstract class l {
         public static final /* synthetic */ class b {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public static final /* synthetic */ int[] f2815a;
+            public static final /* synthetic */ int[] f2660a;
 
             static {
                 int[] iArr = new int[a.values().length];
@@ -159,13 +159,13 @@ public abstract class l {
                     iArr[a.ON_ANY.ordinal()] = 7;
                 } catch (NoSuchFieldError unused7) {
                 }
-                f2815a = iArr;
+                f2660a = iArr;
             }
         }
 
         @NotNull
         public final b b() {
-            switch (b.f2815a[ordinal()]) {
+            switch (b.f2660a[ordinal()]) {
                 case 1:
                 case 2:
                     return b.CREATED;
@@ -179,7 +179,7 @@ public abstract class l {
                 case 7:
                     throw new IllegalArgumentException(this + " has no target state");
                 default:
-                    throw new jt.l();
+                    throw new gt.l();
             }
         }
     }
@@ -194,7 +194,7 @@ public abstract class l {
 
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f2821g = qt.b.a(a());
+        public static final /* synthetic */ ot.a f2666g = ot.b.a(a());
 
         public final boolean b(@NotNull b state) {
             Intrinsics.checkNotNullParameter(state, "state");

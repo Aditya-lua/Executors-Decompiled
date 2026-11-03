@@ -21,31 +21,31 @@ import java.util.concurrent.atomic.AtomicReference;
 public final class b0 implements m {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final AtomicReference f16508a = new AtomicReference(r.UNINITIALIZED);
+    public final AtomicReference f17104a = new AtomicReference(r.UNINITIALIZED);
     public final AtomicReference b = new AtomicReference(p.AUTOMATIC);
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Queue f16509c = new ArrayDeque();
+    public final Queue f17105c = new ArrayDeque();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final AtomicReference f16510d = new AtomicReference();
+    public final AtomicReference f17106d = new AtomicReference();
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final AtomicReference f16511e = new AtomicReference();
+    public final AtomicReference f17107e = new AtomicReference();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final Application f16512f;
+    public final Application f17108f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final ga.o f16513g;
+    public final ga.o f17109g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final c0 f16514h;
+    public final c0 f17110h;
 
     public b0(Application application, ga.o oVar, com.google.android.gms.games.internal.v2.resolution.a aVar, c0 c0Var) {
-        this.f16512f = application;
-        this.f16513g = oVar;
-        this.f16514h = c0Var;
+        this.f17108f = application;
+        this.f17109g = oVar;
+        this.f17110h = c0Var;
     }
 
     public static boolean i() {
@@ -57,7 +57,7 @@ public final class b0 implements m {
             return (Task) u1Var.zza();
         }
         final sb.k kVar = new sb.k();
-        sb.l.f30589a.execute(new Runnable() { // from class: fb.x
+        sb.l.f31136a.execute(new Runnable() { // from class: fb.x
             @Override // java.lang.Runnable
             public final /* synthetic */ void run() {
                 Task task = (Task) u1Var.zza();
@@ -95,7 +95,7 @@ public final class b0 implements m {
         if (iOrdinal != 3 && kVar != null) {
             Task taskA = kVar.a();
             if (taskA.isSuccessful()) {
-                return ((Boolean) taskA.getResult()).booleanValue() ? sb.m.f(da.c.b) : sb.m.f(da.c.f14506c);
+                return ((Boolean) taskA.getResult()).booleanValue() ? sb.m.f(da.c.b) : sb.m.f(da.c.f14486c);
             }
             final sb.k kVar2 = new sb.k();
             taskA.c(t1.a(), new OnCompleteListener() { // from class: fb.y
@@ -105,21 +105,21 @@ public final class b0 implements m {
                     if (task.isSuccessful() && ((Boolean) task.getResult()).booleanValue()) {
                         kVar3.e(da.c.b);
                     } else {
-                        kVar3.e(da.c.f14506c);
+                        kVar3.e(da.c.f14486c);
                     }
                 }
             });
             return kVar2.a();
         }
-        return sb.m.f(da.c.f14506c);
+        return sb.m.f(da.c.f14486c);
     }
 
     @Override // fb.m
     public final Task a(l lVar) {
-        r rVar = (r) this.f16508a.get();
+        r rVar = (r) this.f17104a.get();
         s0.c("GamesApiManager", "Executing API call with authentication state: ".concat(String.valueOf(rVar)));
         if (rVar == r.AUTHENTICATED) {
-            return lVar.a((k9.e) this.f16511e.get());
+            return lVar.a((k9.e) this.f17107e.get());
         }
         if (rVar == r.AUTHENTICATION_FAILED) {
             return sb.m.e(k());
@@ -132,32 +132,32 @@ public final class b0 implements m {
         Runnable runnable = new Runnable() { // from class: fb.a0
             @Override // java.lang.Runnable
             public final /* synthetic */ void run() {
-                this.f16503a.b(tVar);
+                this.f17099a.b(tVar);
             }
         };
         if (i()) {
             runnable.run();
         } else {
-            sb.l.f30589a.execute(runnable);
+            sb.l.f31136a.execute(runnable);
         }
         return kVar.a();
     }
 
     public final /* synthetic */ void b(t tVar) {
         n9.m.e("Must be called on the main thread.");
-        r rVar = (r) this.f16508a.get();
+        r rVar = (r) this.f17104a.get();
         if (rVar == r.AUTHENTICATED) {
-            tVar.a((k9.e) this.f16511e.get());
+            tVar.a((k9.e) this.f17107e.get());
         } else if (rVar == r.AUTHENTICATION_FAILED) {
             tVar.b(k());
         } else {
-            this.f16509c.add(tVar);
+            this.f17105c.add(tVar);
         }
     }
 
     public final /* synthetic */ Task c() {
         f(1);
-        return l(this.f16508a, (sb.k) this.f16510d.get());
+        return l(this.f17104a, (sb.k) this.f17106d.get());
     }
 
     public final /* synthetic */ void d(sb.k kVar, zzq zzqVar, Task task) {
@@ -190,11 +190,11 @@ public final class b0 implements m {
         pVarD.b(true);
         pVarD.c(true);
         nVarA.c(pVarD.d());
-        r0 r0Var = new r0(this.f16512f, nVarA.d());
-        this.f16511e.set(r0Var);
-        this.f16508a.set(r.AUTHENTICATED);
+        r0 r0Var = new r0(this.f17108f, nVarA.d());
+        this.f17107e.set(r0Var);
+        this.f17104a.set(r.AUTHENTICATED);
         kVar.e(Boolean.TRUE);
-        Iterator it = this.f16509c.iterator();
+        Iterator it = this.f17105c.iterator();
         while (it.hasNext()) {
             ((t) it.next()).a(r0Var);
             it.remove();
@@ -226,7 +226,7 @@ public final class b0 implements m {
         sb2.append(i10);
         s0.a("GamesApiManager", sb2.toString());
         n9.m.e("Must be called on the main thread.");
-        AtomicReference atomicReference = this.f16508a;
+        AtomicReference atomicReference = this.f17104a;
         r rVar = r.UNINITIALIZED;
         r rVar2 = r.AUTHENTICATING;
         int i11 = 0;
@@ -245,7 +245,7 @@ public final class b0 implements m {
             s0.a("GamesApiManager", "Authentication attempt skipped. Already authenticated or authenticating. State: ".concat(String.valueOf(atomicReference.get())));
             return;
         }
-        AtomicReference atomicReference2 = this.f16510d;
+        AtomicReference atomicReference2 = this.f17106d;
         sb.k kVar = (sb.k) atomicReference2.get();
         if (kVar != null) {
             kVar.d(new IllegalStateException("New authentication attempt in progress"));
@@ -265,10 +265,10 @@ public final class b0 implements m {
 
     public final void g(final sb.k kVar, final zzq zzqVar) {
         s0.a("GamesApiManager", "Attempting authentication: ".concat(zzqVar.toString()));
-        this.f16514h.a(zzqVar).c(sb.l.f30589a, new OnCompleteListener() { // from class: fb.v
+        this.f17110h.a(zzqVar).c(sb.l.f31136a, new OnCompleteListener() { // from class: fb.v
             @Override // com.google.android.gms.tasks.OnCompleteListener
             public final /* synthetic */ void onComplete(Task task) {
-                this.f16580a.d(kVar, zzqVar, task);
+                this.f17176a.d(kVar, zzqVar, task);
             }
         });
     }
@@ -276,7 +276,7 @@ public final class b0 implements m {
     public final void h(final sb.k kVar, final int i10, PendingIntent pendingIntent, boolean z10, boolean z11) {
         Activity activityD;
         n9.m.e("Must be called on the main thread.");
-        Application application = this.f16512f;
+        Application application = this.f17108f;
         int iA = u9.d.a(application, "com.google.android.gms");
         Locale locale = Locale.US;
         s0.a("GamesApiManager", String.format(locale, "GmsCore version is %d", Integer.valueOf(iA)));
@@ -294,14 +294,14 @@ public final class b0 implements m {
             }
             s0.d("GamesApiManager", "PlayStore is too old or not available and the version of GmsCore would attempt PGA installation on automatic sign-in. Skipping it.");
             kVar.e(Boolean.FALSE);
-            this.f16508a.set(r.AUTHENTICATION_FAILED);
+            this.f17104a.set(r.AUTHENTICATION_FAILED);
             return;
         }
-        if (z10 && pendingIntent != null && (activityD = this.f16513g.d()) != null) {
-            com.google.android.gms.games.internal.v2.resolution.a.b(activityD, pendingIntent).c(sb.l.f30589a, new OnCompleteListener() { // from class: fb.w
+        if (z10 && pendingIntent != null && (activityD = this.f17109g.d()) != null) {
+            com.google.android.gms.games.internal.v2.resolution.a.b(activityD, pendingIntent).c(sb.l.f31136a, new OnCompleteListener() { // from class: fb.w
                 @Override // com.google.android.gms.tasks.OnCompleteListener
                 public final /* synthetic */ void onComplete(Task task) {
-                    this.f16583a.e(kVar, i10, task);
+                    this.f17179a.e(kVar, i10, task);
                 }
             });
             s0.a("GamesApiManager", "Resolution triggered");
@@ -314,8 +314,8 @@ public final class b0 implements m {
             return;
         }
         kVar.e(Boolean.FALSE);
-        this.f16508a.set(r.AUTHENTICATION_FAILED);
-        Iterator it = this.f16509c.iterator();
+        this.f17104a.set(r.AUTHENTICATION_FAILED);
+        Iterator it = this.f17105c.iterator();
         while (it.hasNext()) {
             ((t) it.next()).b(k());
             it.remove();
@@ -324,7 +324,7 @@ public final class b0 implements m {
 
     @Override // fb.m
     public final Task zzc() {
-        return l(this.f16508a, (sb.k) this.f16510d.get());
+        return l(this.f17104a, (sb.k) this.f17106d.get());
     }
 
     @Override // fb.m
@@ -332,7 +332,7 @@ public final class b0 implements m {
         return j(new u1() { // from class: fb.u
             @Override // fb.u1
             public final /* synthetic */ Object zza() {
-                return this.f16579a.c();
+                return this.f17175a.c();
             }
         });
     }

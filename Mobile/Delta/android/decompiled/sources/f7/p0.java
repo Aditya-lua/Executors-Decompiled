@@ -6,11 +6,11 @@ import java.util.Arrays;
 public final class p0<V> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final V f16448a;
+    public final V f17044a;
     public final Throwable b;
 
     public p0(V v5) {
-        this.f16448a = v5;
+        this.f17044a = v5;
         this.b = null;
     }
 
@@ -19,7 +19,7 @@ public final class p0<V> {
     }
 
     public V b() {
-        return this.f16448a;
+        return this.f17044a;
     }
 
     public boolean equals(Object obj) {
@@ -45,6 +45,6 @@ public final class p0<V> {
 
     public p0(Throwable th2) {
         this.b = th2;
-        this.f16448a = null;
+        this.f17044a = null;
     }
 }

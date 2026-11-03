@@ -4,29 +4,29 @@ package x0;
 public final class a extends t.b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f34554a;
+    public final int f35052a;
     public final int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final y1.c.a<Void> f34555c;
+    public final y1.c.a<Void> f35053c;
 
     public a(int i10, int i11, y1.c.a<Void> aVar) {
-        this.f34554a = i10;
+        this.f35052a = i10;
         this.b = i11;
         if (aVar == null) {
             throw new NullPointerException("Null completer");
         }
-        this.f34555c = aVar;
+        this.f35053c = aVar;
     }
 
     @Override // x0.t.b
     public y1.c.a<Void> a() {
-        return this.f34555c;
+        return this.f35053c;
     }
 
     @Override // x0.t.b
     public int b() {
-        return this.f34554a;
+        return this.f35052a;
     }
 
     @Override // x0.t.b
@@ -40,7 +40,7 @@ public final class a extends t.b {
         }
         if (obj instanceof t.b) {
             t.b bVar = (t.b) obj;
-            if (this.f34554a == bVar.b() && this.b == bVar.c() && this.f34555c.equals(bVar.a())) {
+            if (this.f35052a == bVar.b() && this.b == bVar.c() && this.f35053c.equals(bVar.a())) {
                 return true;
             }
         }
@@ -48,10 +48,10 @@ public final class a extends t.b {
     }
 
     public int hashCode() {
-        return ((((this.f34554a ^ 1000003) * 1000003) ^ this.b) * 1000003) ^ this.f34555c.hashCode();
+        return ((((this.f35052a ^ 1000003) * 1000003) ^ this.b) * 1000003) ^ this.f35053c.hashCode();
     }
 
     public String toString() {
-        return "PendingSnapshot{jpegQuality=" + this.f34554a + ", rotationDegrees=" + this.b + ", completer=" + this.f34555c + "}";
+        return "PendingSnapshot{jpegQuality=" + this.f35052a + ", rotationDegrees=" + this.b + ", completer=" + this.f35053c + "}";
     }
 }

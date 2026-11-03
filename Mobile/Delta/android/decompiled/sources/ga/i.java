@@ -16,17 +16,17 @@ import java.lang.ref.WeakReference;
 public final class i implements View.OnAttachStateChangeListener, ViewTreeObserver.OnGlobalLayoutListener, l {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final c f17960a;
+    public final c f18499a;
     public final fb.d b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public WeakReference f17961c;
+    public WeakReference f18500c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public boolean f17962d = false;
+    public boolean f18501d = false;
 
     public i(c cVar, int i10) {
-        this.f17960a = cVar;
+        this.f18499a = cVar;
         this.b = new fb.d(i10, null);
     }
 
@@ -55,7 +55,7 @@ public final class i implements View.OnAttachStateChangeListener, ViewTreeObserv
     }
 
     public final IBinder d() {
-        return this.b.f16517a;
+        return this.b.f17113a;
     }
 
     public final fb.d e() {
@@ -64,9 +64,9 @@ public final class i implements View.OnAttachStateChangeListener, ViewTreeObserv
 
     @TargetApi(16)
     public final void f(View view) {
-        c cVar = this.f17960a;
+        c cVar = this.f18499a;
         cVar.j();
-        WeakReference weakReference = this.f17961c;
+        WeakReference weakReference = this.f18500c;
         if (weakReference != null) {
             View decorView = (View) weakReference.get();
             Context context = cVar.getContext();
@@ -83,7 +83,7 @@ public final class i implements View.OnAttachStateChangeListener, ViewTreeObserv
                 }
             }
         }
-        this.f17961c = null;
+        this.f18500c = null;
         Context context2 = cVar.getContext();
         if (view == null && (context2 instanceof Activity)) {
             Activity activity = (Activity) context2;
@@ -101,7 +101,7 @@ public final class i implements View.OnAttachStateChangeListener, ViewTreeObserv
             return;
         }
         h(view);
-        this.f17961c = new WeakReference(view);
+        this.f18500c = new WeakReference(view);
         view.addOnAttachStateChangeListener(this);
         view.getViewTreeObserver().addOnGlobalLayoutListener(this);
     }
@@ -109,14 +109,14 @@ public final class i implements View.OnAttachStateChangeListener, ViewTreeObserv
     public final void g() {
         boolean z10;
         fb.d dVar = this.b;
-        IBinder iBinder = dVar.f16517a;
+        IBinder iBinder = dVar.f17113a;
         if (iBinder != null) {
-            this.f17960a.i(iBinder, dVar.a());
+            this.f18499a.i(iBinder, dVar.a());
             z10 = false;
         } else {
             z10 = true;
         }
-        this.f17962d = z10;
+        this.f18501d = z10;
     }
 
     @TargetApi(17)
@@ -132,15 +132,15 @@ public final class i implements View.OnAttachStateChangeListener, ViewTreeObserv
         int width = view.getWidth();
         int height = view.getHeight();
         fb.d dVar = this.b;
-        dVar.f16518c = displayId;
-        dVar.f16517a = windowToken;
+        dVar.f17114c = displayId;
+        dVar.f17113a = windowToken;
         int i10 = iArr[0];
-        dVar.f16519d = i10;
+        dVar.f17115d = i10;
         int i11 = iArr[1];
-        dVar.f16520e = i11;
-        dVar.f16521f = i10 + width;
-        dVar.f16522g = i11 + height;
-        if (this.f17962d) {
+        dVar.f17116e = i11;
+        dVar.f17117f = i10 + width;
+        dVar.f17118g = i11 + height;
+        if (this.f18501d) {
             g();
         }
     }
@@ -148,7 +148,7 @@ public final class i implements View.OnAttachStateChangeListener, ViewTreeObserv
     @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
     public final void onGlobalLayout() {
         View view;
-        WeakReference weakReference = this.f17961c;
+        WeakReference weakReference = this.f18500c;
         if (weakReference == null || (view = (View) weakReference.get()) == null) {
             return;
         }
@@ -162,7 +162,7 @@ public final class i implements View.OnAttachStateChangeListener, ViewTreeObserv
 
     @Override // android.view.View.OnAttachStateChangeListener
     public final void onViewDetachedFromWindow(View view) {
-        this.f17960a.j();
+        this.f18499a.j();
         view.removeOnAttachStateChangeListener(this);
     }
 }

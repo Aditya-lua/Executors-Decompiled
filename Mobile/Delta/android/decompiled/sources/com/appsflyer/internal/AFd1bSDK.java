@@ -9,11 +9,11 @@ import org.jetbrains.annotations.Nullable;
 
 /* JADX WARN: Enum visitor error
 jadx.core.utils.exceptions.JadxRuntimeException: Can't remove SSA var: r0v10 com.appsflyer.internal.AFd1bSDK[], still in use, count: 1, list:
-  (r0v10 com.appsflyer.internal.AFd1bSDK[]) from 0x00f0: INVOKE (r0v10 com.appsflyer.internal.AFd1bSDK[]) STATIC call: qt.b.a(java.lang.Enum[]):qt.a A[MD:<E extends java.lang.Enum<E>>:(E extends java.lang.Enum<E>[]):qt.a<E extends java.lang.Enum<E>> (m), WRAPPED]
+  (r0v10 com.appsflyer.internal.AFd1bSDK[]) from 0x00f0: INVOKE (r0v10 com.appsflyer.internal.AFd1bSDK[]) STATIC call: ot.b.a(java.lang.Enum[]):ot.a A[MD:<E extends java.lang.Enum<E>>:(E extends java.lang.Enum<E>[]):ot.a<E extends java.lang.Enum<E>> (m), WRAPPED]
 	at jadx.core.utils.InsnRemover.removeSsaVar(InsnRemover.java:164)
 	at jadx.core.utils.InsnRemover.unbindResult(InsnRemover.java:129)
 	at jadx.core.utils.InsnRemover.lambda$unbindInsns$1(InsnRemover.java:101)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
 	at jadx.core.utils.InsnRemover.unbindInsns(InsnRemover.java:100)
 	at jadx.core.utils.InsnRemover.removeAllAndUnbind(InsnRemover.java:257)
 	at jadx.core.dex.visitors.EnumVisitor.convertToEnum(EnumVisitor.java:187)
@@ -47,7 +47,7 @@ public final class AFd1bSDK implements AFe1zSDK {
     /* JADX INFO: renamed from: AFa1vSDK, reason: from kotlin metadata */
     @NotNull
     public static final Companion INSTANCE = new Companion(null);
-    private static final /* synthetic */ qt.a getInstance;
+    private static final /* synthetic */ ot.a getInstance;
 
     /* JADX INFO: renamed from: getEntries, reason: from kotlin metadata */
     private final int unregisterClient;
@@ -79,7 +79,7 @@ public final class AFd1bSDK implements AFe1zSDK {
     }
 
     static {
-        getInstance = qt.b.a(new AFd1bSDK[]{r1, r2, r3, r0, r5, r7, r7, r10, r9, r10, r11, r12, r13, r14, r15, r0, r1, r0, r1});
+        getInstance = ot.b.a(new AFd1bSDK[]{r1, r2, r3, r0, r5, r7, r7, r10, r9, r10, r11, r12, r13, r14, r15, r0, r1, r0, r1});
     }
 
     private AFd1bSDK(int i10) {
@@ -112,7 +112,7 @@ public final class AFd1bSDK implements AFe1zSDK {
     }
 
     @NotNull
-    public static qt.a<AFd1bSDK> registerClient() {
+    public static ot.a<AFd1bSDK> registerClient() {
         return getInstance;
     }
 }

@@ -12,19 +12,19 @@ public final class v2 {
     public static final class a extends CameraCaptureSession.StateCallback {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final List<CameraCaptureSession.StateCallback> f36899a = new ArrayList();
+        public final List<CameraCaptureSession.StateCallback> f37594a = new ArrayList();
 
         public a(List<CameraCaptureSession.StateCallback> list) {
             for (CameraCaptureSession.StateCallback stateCallback : list) {
                 if (!(stateCallback instanceof b)) {
-                    this.f36899a.add(stateCallback);
+                    this.f37594a.add(stateCallback);
                 }
             }
         }
 
         @Override // android.hardware.camera2.CameraCaptureSession.StateCallback
         public void onActive(CameraCaptureSession cameraCaptureSession) {
-            Iterator<CameraCaptureSession.StateCallback> it = this.f36899a.iterator();
+            Iterator<CameraCaptureSession.StateCallback> it = this.f37594a.iterator();
             while (it.hasNext()) {
                 it.next().onActive(cameraCaptureSession);
             }
@@ -32,7 +32,7 @@ public final class v2 {
 
         @Override // android.hardware.camera2.CameraCaptureSession.StateCallback
         public void onCaptureQueueEmpty(CameraCaptureSession cameraCaptureSession) {
-            Iterator<CameraCaptureSession.StateCallback> it = this.f36899a.iterator();
+            Iterator<CameraCaptureSession.StateCallback> it = this.f37594a.iterator();
             while (it.hasNext()) {
                 a0.d.a(it.next(), cameraCaptureSession);
             }
@@ -40,7 +40,7 @@ public final class v2 {
 
         @Override // android.hardware.camera2.CameraCaptureSession.StateCallback
         public void onClosed(CameraCaptureSession cameraCaptureSession) {
-            Iterator<CameraCaptureSession.StateCallback> it = this.f36899a.iterator();
+            Iterator<CameraCaptureSession.StateCallback> it = this.f37594a.iterator();
             while (it.hasNext()) {
                 it.next().onClosed(cameraCaptureSession);
             }
@@ -48,7 +48,7 @@ public final class v2 {
 
         @Override // android.hardware.camera2.CameraCaptureSession.StateCallback
         public void onConfigureFailed(CameraCaptureSession cameraCaptureSession) {
-            Iterator<CameraCaptureSession.StateCallback> it = this.f36899a.iterator();
+            Iterator<CameraCaptureSession.StateCallback> it = this.f37594a.iterator();
             while (it.hasNext()) {
                 it.next().onConfigureFailed(cameraCaptureSession);
             }
@@ -56,7 +56,7 @@ public final class v2 {
 
         @Override // android.hardware.camera2.CameraCaptureSession.StateCallback
         public void onConfigured(CameraCaptureSession cameraCaptureSession) {
-            Iterator<CameraCaptureSession.StateCallback> it = this.f36899a.iterator();
+            Iterator<CameraCaptureSession.StateCallback> it = this.f37594a.iterator();
             while (it.hasNext()) {
                 it.next().onConfigured(cameraCaptureSession);
             }
@@ -64,7 +64,7 @@ public final class v2 {
 
         @Override // android.hardware.camera2.CameraCaptureSession.StateCallback
         public void onReady(CameraCaptureSession cameraCaptureSession) {
-            Iterator<CameraCaptureSession.StateCallback> it = this.f36899a.iterator();
+            Iterator<CameraCaptureSession.StateCallback> it = this.f37594a.iterator();
             while (it.hasNext()) {
                 it.next().onReady(cameraCaptureSession);
             }
@@ -72,7 +72,7 @@ public final class v2 {
 
         @Override // android.hardware.camera2.CameraCaptureSession.StateCallback
         public void onSurfacePrepared(CameraCaptureSession cameraCaptureSession, Surface surface) {
-            Iterator<CameraCaptureSession.StateCallback> it = this.f36899a.iterator();
+            Iterator<CameraCaptureSession.StateCallback> it = this.f37594a.iterator();
             while (it.hasNext()) {
                 a0.b.a(it.next(), cameraCaptureSession, surface);
             }

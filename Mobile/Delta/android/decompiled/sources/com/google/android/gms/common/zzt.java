@@ -18,42 +18,42 @@ public final class zzt extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzt> CREATOR = new f0();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final String f5848f;
+    public final String f5921f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final x f5849g;
+    public final x f5922g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final boolean f5850h;
+    public final boolean f5923h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final boolean f5851i;
+    public final boolean f5924i;
 
     public zzt(String str, x xVar, boolean z10, boolean z11) {
-        this.f5848f = str;
-        this.f5849g = xVar;
-        this.f5850h = z10;
-        this.f5851i = z11;
+        this.f5921f = str;
+        this.f5922g = xVar;
+        this.f5923h = z10;
+        this.f5924i = z11;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i10) {
-        String str = this.f5848f;
+        String str = this.f5921f;
         int iA = b.a(parcel);
         b.v(parcel, 1, str, false);
-        x xVar = this.f5849g;
+        x xVar = this.f5922g;
         if (xVar == null) {
             Log.w("GoogleCertificatesQuery", "certificate binder is null");
             xVar = null;
         }
         b.m(parcel, 2, xVar, false);
-        b.c(parcel, 3, this.f5850h);
-        b.c(parcel, 4, this.f5851i);
+        b.c(parcel, 3, this.f5923h);
+        b.c(parcel, 4, this.f5924i);
         b.b(parcel, iA);
     }
 
     public zzt(String str, IBinder iBinder, boolean z10, boolean z11) {
-        this.f5848f = str;
+        this.f5921f = str;
         y yVar = null;
         if (iBinder != null) {
             try {
@@ -68,8 +68,8 @@ public final class zzt extends AbstractSafeParcelable {
                 Log.e("GoogleCertificatesQuery", "Could not unwrap certificate", e10);
             }
         }
-        this.f5849g = yVar;
-        this.f5850h = z10;
-        this.f5851i = z11;
+        this.f5922g = yVar;
+        this.f5923h = z10;
+        this.f5924i = z11;
     }
 }

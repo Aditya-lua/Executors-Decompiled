@@ -16,24 +16,24 @@ import n0.o0;
 public class p {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f30448a;
+    public final int f30995a;
     public final int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Rational f30449c;
+    public final Rational f30996c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final boolean f30450d;
+    public final boolean f30997d;
 
     public p(o0 o0Var, Rational rational) {
-        this.f30448a = o0Var.d();
+        this.f30995a = o0Var.d();
         this.b = o0Var.i();
-        this.f30449c = rational;
+        this.f30996c = rational;
         boolean z10 = true;
         if (rational != null && rational.getNumerator() < rational.getDenominator()) {
             z10 = false;
         }
-        this.f30450d = z10;
+        this.f30997d = z10;
     }
 
     public static Size a(Size size, int i10, int i11, int i12) {
@@ -59,7 +59,7 @@ public class p {
 
     public final Rational c(i2 i2Var, List<Size> list) {
         if (i2Var.A()) {
-            return o.n(i2Var.C(), this.f30450d);
+            return o.n(i2Var.C(), this.f30997d);
         }
         Size sizeD = d(i2Var);
         if (sizeD != null) {
@@ -69,7 +69,7 @@ public class p {
     }
 
     public final Size d(i2 i2Var) {
-        return a(i2Var.V(null), i2Var.J(0), this.b, this.f30448a);
+        return a(i2Var.V(null), i2Var.J(0), this.b, this.f30995a);
     }
 
     public List<Size> f(List<Size> list, i4<?> i4Var) {
@@ -87,10 +87,10 @@ public class p {
             sizeI = size;
         }
         Size sizeD = d(i2Var);
-        Size size2 = w0.d.f33584c;
+        Size size2 = w0.d.f33790c;
         int iC = w0.d.c(size2);
         if (w0.d.c(sizeI) < iC) {
-            size2 = w0.d.f33583a;
+            size2 = w0.d.f33789a;
         } else if (sizeD != null && w0.d.c(sizeD) < iC) {
             size2 = sizeD;
         }
@@ -128,7 +128,7 @@ public class p {
                 }
             }
             ArrayList arrayList4 = new ArrayList(mapO.keySet());
-            Collections.sort(arrayList4, new p0.a.C0489a(rationalC, this.f30449c));
+            Collections.sort(arrayList4, new p0.a.C0495a(rationalC, this.f30996c));
             int size5 = arrayList4.size();
             while (i10 < size5) {
                 Object obj2 = arrayList4.get(i10);

@@ -8,19 +8,19 @@ public abstract class f1 implements Map, Serializable {
     public static final Map.Entry[] b = new Map.Entry[0];
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public transient h1 f15267a;
+    public transient h1 f15881a;
 
     public abstract z0 a();
 
     public abstract h1 b();
 
     public final h1 c() {
-        h1 h1Var = this.f15267a;
+        h1 h1Var = this.f15881a;
         if (h1Var != null) {
             return h1Var;
         }
         h1 h1VarB = b();
-        this.f15267a = h1VarB;
+        this.f15881a = h1VarB;
         return h1VarB;
     }
 

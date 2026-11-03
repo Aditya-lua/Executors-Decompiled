@@ -8,15 +8,15 @@ import java.util.Iterator;
 public abstract class a<T> implements b<T> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final DataHolder f24041a;
+    public final DataHolder f24691a;
 
     public a(DataHolder dataHolder) {
-        this.f24041a = dataHolder;
+        this.f24691a = dataHolder;
     }
 
     @Override // k9.k
     public void a() {
-        DataHolder dataHolder = this.f24041a;
+        DataHolder dataHolder = this.f24691a;
         if (dataHolder != null) {
             dataHolder.close();
         }
@@ -29,7 +29,7 @@ public abstract class a<T> implements b<T> {
 
     @Override // m9.b
     public int getCount() {
-        DataHolder dataHolder = this.f24041a;
+        DataHolder dataHolder = this.f24691a;
         if (dataHolder == null) {
             return 0;
         }

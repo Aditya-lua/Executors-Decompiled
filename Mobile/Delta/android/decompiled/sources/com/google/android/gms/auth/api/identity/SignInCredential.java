@@ -17,55 +17,55 @@ public final class SignInCredential extends AbstractSafeParcelable {
     public static final Parcelable.Creator<SignInCredential> CREATOR = new k();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final String f5602f;
+    public final String f5675f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final String f5603g;
+    public final String f5676g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final String f5604h;
+    public final String f5677h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final String f5605i;
+    public final String f5678i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final Uri f5606j;
+    public final Uri f5679j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final String f5607k;
+    public final String f5680k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final String f5608l;
+    public final String f5681l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final String f5609m;
+    public final String f5682m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public final PublicKeyCredential f5610n;
+    public final PublicKeyCredential f5683n;
 
     public SignInCredential(String str, String str2, String str3, String str4, Uri uri, String str5, String str6, String str7, PublicKeyCredential publicKeyCredential) {
-        this.f5602f = (String) m.l(str);
-        this.f5603g = str2;
-        this.f5604h = str3;
-        this.f5605i = str4;
-        this.f5606j = uri;
-        this.f5607k = str5;
-        this.f5608l = str6;
-        this.f5609m = str7;
-        this.f5610n = publicKeyCredential;
+        this.f5675f = (String) m.l(str);
+        this.f5676g = str2;
+        this.f5677h = str3;
+        this.f5678i = str4;
+        this.f5679j = uri;
+        this.f5680k = str5;
+        this.f5681l = str6;
+        this.f5682m = str7;
+        this.f5683n = publicKeyCredential;
     }
 
     @Deprecated
     public String A3() {
-        return this.f5609m;
+        return this.f5682m;
     }
 
     public Uri B3() {
-        return this.f5606j;
+        return this.f5679j;
     }
 
     public PublicKeyCredential C3() {
-        return this.f5610n;
+        return this.f5683n;
     }
 
     public boolean equals(Object obj) {
@@ -73,23 +73,23 @@ public final class SignInCredential extends AbstractSafeParcelable {
             return false;
         }
         SignInCredential signInCredential = (SignInCredential) obj;
-        return n9.k.b(this.f5602f, signInCredential.f5602f) && n9.k.b(this.f5603g, signInCredential.f5603g) && n9.k.b(this.f5604h, signInCredential.f5604h) && n9.k.b(this.f5605i, signInCredential.f5605i) && n9.k.b(this.f5606j, signInCredential.f5606j) && n9.k.b(this.f5607k, signInCredential.f5607k) && n9.k.b(this.f5608l, signInCredential.f5608l) && n9.k.b(this.f5609m, signInCredential.f5609m) && n9.k.b(this.f5610n, signInCredential.f5610n);
+        return n9.k.b(this.f5675f, signInCredential.f5675f) && n9.k.b(this.f5676g, signInCredential.f5676g) && n9.k.b(this.f5677h, signInCredential.f5677h) && n9.k.b(this.f5678i, signInCredential.f5678i) && n9.k.b(this.f5679j, signInCredential.f5679j) && n9.k.b(this.f5680k, signInCredential.f5680k) && n9.k.b(this.f5681l, signInCredential.f5681l) && n9.k.b(this.f5682m, signInCredential.f5682m) && n9.k.b(this.f5683n, signInCredential.f5683n);
     }
 
     public int hashCode() {
-        return n9.k.c(this.f5602f, this.f5603g, this.f5604h, this.f5605i, this.f5606j, this.f5607k, this.f5608l, this.f5609m, this.f5610n);
+        return n9.k.c(this.f5675f, this.f5676g, this.f5677h, this.f5678i, this.f5679j, this.f5680k, this.f5681l, this.f5682m, this.f5683n);
     }
 
     public String l() {
-        return this.f5603g;
+        return this.f5676g;
     }
 
     public String v3() {
-        return this.f5605i;
+        return this.f5678i;
     }
 
     public String w3() {
-        return this.f5604h;
+        return this.f5677h;
     }
 
     @Override // android.os.Parcelable
@@ -108,15 +108,15 @@ public final class SignInCredential extends AbstractSafeParcelable {
     }
 
     public String x3() {
-        return this.f5608l;
+        return this.f5681l;
     }
 
     @NonNull
     public String y3() {
-        return this.f5602f;
+        return this.f5675f;
     }
 
     public String z3() {
-        return this.f5607k;
+        return this.f5680k;
     }
 }

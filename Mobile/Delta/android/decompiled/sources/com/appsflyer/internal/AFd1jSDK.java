@@ -20,16 +20,16 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0004\b\u0007\u0018\u0000 \u00172\u00020\u0001:\u0001\u0017B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007R\u0014\u0010\n\u001a\u00020\u00028\u0002X\u0083\u0004¢\u0006\u0006\n\u0004\b\b\u0010\tR\u0014\u0010\r\u001a\u00020\u00048\u0002X\u0083\u0004¢\u0006\u0006\n\u0004\b\u000b\u0010\fR\u0015\u0010\u0011\u001a\u00020\u000e8BX\u0083\u0084\u0002¢\u0006\u0006\n\u0004\b\u000f\u0010\u0010R\u0015\u0010\u000f\u001a\u00020\u000e8BX\u0083\u0084\u0002¢\u0006\u0006\n\u0004\b\u0012\u0010\u0010R\u0011\u0010\u000b\u001a\u00020\u00138G¢\u0006\u0006\u001a\u0004\b\u0012\u0010\u0014R\u0011\u0010\u0016\u001a\u00020\u000e8G¢\u0006\u0006\u001a\u0004\b\n\u0010\u0015R\u0011\u0010\u0012\u001a\u00020\u000e8G¢\u0006\u0006\u001a\u0004\b\r\u0010\u0015"}, d2 = {"Lcom/appsflyer/internal/AFd1jSDK;", "", "Lcom/appsflyer/internal/AFc1iSDK;", "p0", "Lcom/appsflyer/internal/AFc1kSDK;", "p1", "<init>", "(Lcom/appsflyer/internal/AFc1iSDK;Lcom/appsflyer/internal/AFc1kSDK;)V", "i", "Lcom/appsflyer/internal/AFc1iSDK;", "registerClient", "v", "Lcom/appsflyer/internal/AFc1kSDK;", "d", "", "w", "Ljt/h;", "unregisterClient", "AFKeystoreWrapper", "", "()Z", "()Ljava/lang/String;", "AFLogger", "AFa1tSDK"}, k = 1, mv = {2, 0, 0}, xi = 48)
+@Metadata(d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0004\b\u0007\u0018\u0000 \u00172\u00020\u0001:\u0001\u0017B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007R\u0014\u0010\n\u001a\u00020\u00028\u0002X\u0083\u0004¢\u0006\u0006\n\u0004\b\b\u0010\tR\u0014\u0010\r\u001a\u00020\u00048\u0002X\u0083\u0004¢\u0006\u0006\n\u0004\b\u000b\u0010\fR\u0015\u0010\u0011\u001a\u00020\u000e8BX\u0083\u0084\u0002¢\u0006\u0006\n\u0004\b\u000f\u0010\u0010R\u0015\u0010\u000f\u001a\u00020\u000e8BX\u0083\u0084\u0002¢\u0006\u0006\n\u0004\b\u0012\u0010\u0010R\u0011\u0010\u000b\u001a\u00020\u00138G¢\u0006\u0006\u001a\u0004\b\u0012\u0010\u0014R\u0011\u0010\u0016\u001a\u00020\u000e8G¢\u0006\u0006\u001a\u0004\b\n\u0010\u0015R\u0011\u0010\u0012\u001a\u00020\u000e8G¢\u0006\u0006\u001a\u0004\b\r\u0010\u0015"}, d2 = {"Lcom/appsflyer/internal/AFd1jSDK;", "", "Lcom/appsflyer/internal/AFc1iSDK;", "p0", "Lcom/appsflyer/internal/AFc1kSDK;", "p1", "<init>", "(Lcom/appsflyer/internal/AFc1iSDK;Lcom/appsflyer/internal/AFc1kSDK;)V", "i", "Lcom/appsflyer/internal/AFc1iSDK;", "registerClient", "v", "Lcom/appsflyer/internal/AFc1kSDK;", "d", "", "w", "Lgt/h;", "unregisterClient", "AFKeystoreWrapper", "", "()Z", "()Ljava/lang/String;", "AFLogger", "AFa1tSDK"}, k = 1, mv = {2, 0, 0}, xi = 48)
 public final class AFd1jSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @Nullable
-    public static AFd1gSDK f5277d;
+    public static AFd1gSDK f5350d;
 
     /* JADX INFO: renamed from: AFKeystoreWrapper, reason: from kotlin metadata */
     @NotNull
-    public final jt.h w;
+    public final gt.h w;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -41,7 +41,7 @@ public final class AFd1jSDK {
 
     /* JADX INFO: renamed from: w, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    private final jt.h unregisterClient;
+    private final gt.h unregisterClient;
 
     /* JADX INFO: renamed from: AFa1tSDK, reason: from kotlin metadata */
     @NotNull
@@ -63,7 +63,7 @@ public final class AFd1jSDK {
         }
 
         public static void unregisterClient(@Nullable AFd1gSDK aFd1gSDK) {
-            AFd1jSDK.f5277d = aFd1gSDK;
+            AFd1jSDK.f5350d = aFd1gSDK;
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -97,23 +97,23 @@ public final class AFd1jSDK {
         Intrinsics.checkNotNullParameter(aFc1kSDK, "");
         this.registerClient = aFc1iSDK;
         this.d = aFc1kSDK;
-        this.unregisterClient = jt.i.b(new Function0() { // from class: com.appsflyer.internal.c0
+        this.unregisterClient = gt.i.b(new Function0() { // from class: com.appsflyer.internal.c0
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return AFd1jSDK.d(this.f5476a);
+                return AFd1jSDK.d(this.f5549a);
             }
         });
-        this.w = jt.i.b(new Function0() { // from class: com.appsflyer.internal.d0
+        this.w = gt.i.b(new Function0() { // from class: com.appsflyer.internal.d0
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return AFd1jSDK.AFKeystoreWrapper(this.f5478a);
+                return AFd1jSDK.AFKeystoreWrapper(this.f5551a);
             }
         });
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public static final String AFKeystoreWrapper(AFd1jSDK aFd1jSDK) throws NoSuchAlgorithmException {
-        String packageName = aFd1jSDK.registerClient.f5258d.f5305d.getPackageName();
+        String packageName = aFd1jSDK.registerClient.f5331d.f5378d.getPackageName();
         Intrinsics.checkNotNullExpressionValue(packageName, "");
         String str = packageName + ((String) aFd1jSDK.unregisterClient.getValue());
         Intrinsics.checkNotNullParameter(str, "");
@@ -155,7 +155,7 @@ public final class AFd1jSDK {
             if (list.contains(lowerCase)) {
                 AFLogger aFLogger = AFLogger.INSTANCE;
                 LogTag logTag = LogTag.GENERAL;
-                kotlin.jvm.internal.g0 g0Var = kotlin.jvm.internal.g0.f22559a;
+                kotlin.jvm.internal.g0 g0Var = kotlin.jvm.internal.g0.f23014a;
                 String str = String.format(Locale.US, "AF detected using redundant Google-Play channel for attribution - %s. Using without channel postfix.", Arrays.copyOf(new Object[]{string}, 1));
                 Intrinsics.checkNotNullExpressionValue(str, "");
                 AFLoggerBase.w$default(aFLogger, logTag, str, false, 4, null);
@@ -169,7 +169,7 @@ public final class AFd1jSDK {
 
     @NotNull
     public final String registerClient() {
-        int i10 = AFa1ySDK.AFKeystoreWrapper[(f5277d == null ? AFd1dSDK.DEFAULT : AFd1dSDK.API).ordinal()];
+        int i10 = AFa1ySDK.AFKeystoreWrapper[(f5350d == null ? AFd1dSDK.DEFAULT : AFd1dSDK.API).ordinal()];
         if (i10 == 1) {
             return (String) this.w.getValue();
         }
@@ -177,21 +177,21 @@ public final class AFd1jSDK {
             if (i10 == 3) {
                 return "";
             }
-            throw new jt.l();
+            throw new gt.l();
         }
-        AFd1gSDK aFd1gSDK = f5277d;
+        AFd1gSDK aFd1gSDK = f5350d;
         String str = aFd1gSDK != null ? aFd1gSDK.registerClient : null;
         return str == null ? "" : str;
     }
 
     public static boolean AFKeystoreWrapper() {
-        return f5277d == null;
+        return f5350d == null;
     }
 
     @NotNull
     public final String d() {
         AFd1dSDK aFd1dSDK;
-        if (f5277d == null) {
+        if (f5350d == null) {
             aFd1dSDK = AFd1dSDK.DEFAULT;
         } else {
             aFd1dSDK = AFd1dSDK.API;
@@ -204,9 +204,9 @@ public final class AFd1jSDK {
             if (i10 == 3) {
                 return "";
             }
-            throw new jt.l();
+            throw new gt.l();
         }
-        AFd1gSDK aFd1gSDK = f5277d;
+        AFd1gSDK aFd1gSDK = f5350d;
         String str = aFd1gSDK != null ? aFd1gSDK.AFLogger : null;
         return str == null ? "" : str;
     }

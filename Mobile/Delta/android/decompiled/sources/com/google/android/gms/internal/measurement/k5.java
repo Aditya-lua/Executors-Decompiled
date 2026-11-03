@@ -13,7 +13,7 @@ public final class k5 extends gb implements pc {
     static {
         k5 k5Var = new k5();
         zzi = k5Var;
-        gb.u(k5.class, k5Var);
+        gb.t(k5.class, k5Var);
     }
 
     @Override // com.google.android.gms.internal.measurement.gb

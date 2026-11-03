@@ -36,21 +36,21 @@ public final class AFd1sSDK {
     private static char force = 61826;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    private static int f5287i = -234967815;
+    private static int f5360i = -234967815;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    private static long f5288v = -6857616994649640574L;
+    private static long f5361v = -6857616994649640574L;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    private static int f5289w;
+    private static int f5362w;
     private final AFj1mSDK AFKeystoreWrapper;
     private final AFd1xSDK AFLogger;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    private final AFj1cSDK f5290d;
+    private final AFj1cSDK f5363d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    private final AFf1fSDK f5291e;
+    private final AFf1fSDK f5364e;
     private final AFc1iSDK registerClient;
     private final AFd1jSDK unregisterClient;
 
@@ -59,8 +59,8 @@ public final class AFd1sSDK {
         this.registerClient = aFc1iSDK;
         this.unregisterClient = aFd1jSDK;
         this.AFKeystoreWrapper = aFj1mSDK;
-        this.f5290d = aFj1cSDK;
-        this.f5291e = aFf1fSDK;
+        this.f5363d = aFj1cSDK;
+        this.f5364e = aFf1fSDK;
     }
 
     private static void a(String str, char c10, int i10, String str2, String str3, Object[] objArr) {
@@ -106,7 +106,7 @@ public final class AFd1sSDK {
             aFk1pSDK.AFLogger = c12;
             cArr3[i13] = (char) (((cArr2[i13] * 32718) + c11) / Settings.DEFAULT_INITIAL_WINDOW_SIZE);
             cArr2[i13] = c12;
-            cArr4[i12] = (char) (((((long) (cArr[i12] ^ c12)) ^ (f5288v ^ (-6857616994649640574L))) ^ ((long) ((int) (((long) f5287i) ^ (-6857616994649640574L))))) ^ ((long) ((char) (((long) force) ^ (-6857616994649640574L)))));
+            cArr4[i12] = (char) (((((long) (cArr[i12] ^ c12)) ^ (f5361v ^ (-6857616994649640574L))) ^ ((long) ((int) (((long) f5360i) ^ (-6857616994649640574L))))) ^ ((long) ((char) (((long) force) ^ (-6857616994649640574L)))));
             aFk1pSDK.AFKeystoreWrapper = i12 + 1;
         }
     }
@@ -122,7 +122,7 @@ public final class AFd1sSDK {
     public final AFd1pSDK<String> AFKeystoreWrapper(Map<String, Object> map, String str) {
         byte[] bArr;
         int i10 = afErrorLog + 65;
-        f5289w = i10 % 128;
+        f5362w = i10 % 128;
         try {
             if (i10 % 2 != 0) {
                 try {
@@ -163,7 +163,7 @@ public final class AFd1sSDK {
             byte[] bArr2 = bArr;
             AFj1mSDK aFj1mSDK = this.AFKeystoreWrapper;
             AFd1pSDK<String> aFd1pSDK = (AFd1pSDK) d(new Object[]{this, new AFd1oSDK(aFj1mSDK.d(aFj1mSDK.unregisterClient(AFj1mSDK.i()), false), bArr2, "POST", Collections.EMPTY_MAP, true), new AFd1kSDK()}, -1128782579, 1128782579, System.identityHashCode(this));
-            afErrorLog = (f5289w + 71) % 128;
+            afErrorLog = (f5362w + 71) % 128;
             return aFd1pSDK;
         } catch (Throwable th4) {
             AFLogger.INSTANCE.e(LogTag.PURCHASE_VALIDATION, "AFFinalizer: reflection init failed.", th4, false, false);
@@ -173,7 +173,7 @@ public final class AFd1sSDK {
 
     public final AFd1pSDK<String> AFLogger(Map<String, Object> map, String str) {
         int i10 = afErrorLog + 77;
-        f5289w = i10 % 128;
+        f5362w = i10 % 128;
         try {
             if (i10 % 2 == 0) {
                 try {
@@ -218,7 +218,7 @@ public final class AFd1sSDK {
     }
 
     public final AFd1pSDK<String> registerClient(Map<String, Object> map, String str) {
-        f5289w = (afErrorLog + 73) % 128;
+        f5362w = (afErrorLog + 73) % 128;
         try {
             Object[] objArr = {map, str};
             Map map2 = AFa1bSDK.getInstance;
@@ -228,7 +228,7 @@ public final class AFd1sSDK {
                 map2.put(1360275338, method);
             }
             byte[] bArr = (byte[]) ((Method) method).invoke(null, objArr);
-            f5289w = (afErrorLog + 79) % 128;
+            f5362w = (afErrorLog + 79) % 128;
             return (AFd1pSDK) d(new Object[]{this, new AFd1oSDK(this.AFKeystoreWrapper.unregisterClient(AFj1mSDK.e()), bArr, "POST", Collections.EMPTY_MAP, true), new AFd1kSDK()}, -1128782579, 1128782579, System.identityHashCode(this));
         } catch (Throwable th2) {
             try {
@@ -245,7 +245,7 @@ public final class AFd1sSDK {
     }
 
     public final AFd1pSDK<String> unregisterClient(Map<String, Object> map, String str) {
-        afErrorLog = (f5289w + 61) % 128;
+        afErrorLog = (f5362w + 61) % 128;
         try {
             Object[] objArr = {map, str};
             Map map2 = AFa1bSDK.getInstance;
@@ -255,7 +255,7 @@ public final class AFd1sSDK {
                 map2.put(1360275338, method);
             }
             byte[] bArr = (byte[]) ((Method) method).invoke(null, objArr);
-            afErrorLog = (f5289w + 93) % 128;
+            afErrorLog = (f5362w + 93) % 128;
             AFj1mSDK aFj1mSDK = this.AFKeystoreWrapper;
             return (AFd1pSDK) d(new Object[]{this, new AFd1oSDK(aFj1mSDK.d(aFj1mSDK.unregisterClient(AFj1mSDK.v()), false), bArr, "POST", Collections.EMPTY_MAP, true), new AFd1kSDK()}, -1128782579, 1128782579, System.identityHashCode(this));
         } catch (Throwable th2) {
@@ -288,7 +288,7 @@ public final class AFd1sSDK {
         map.put(((String) objArr[0]).intern(), AFKeystoreWrapper(str3, string, "GET", string, str, str2, strValueOf));
         AFd1pSDK<Map<String, String>> aFd1pSDK = (AFd1pSDK) d(new Object[]{this, new AFd1oSDK(AFj1mSDK.AFKeystoreWrapper(str, str2), null, "GET", map, false), new AFd1hSDK()}, -1128782579, 1128782579, System.identityHashCode(this));
         int i10 = afErrorLog + 57;
-        f5289w = i10 % 128;
+        f5362w = i10 % 128;
         if (i10 % 2 == 0) {
             return aFd1pSDK;
         }
@@ -299,10 +299,10 @@ public final class AFd1sSDK {
         AFd1sSDK aFd1sSDK = (AFd1sSDK) objArr[0];
         AFd1oSDK aFd1oSDK = (AFd1oSDK) objArr[1];
         AFd1iSDK aFd1iSDK = (AFd1iSDK) objArr[2];
-        f5289w = (afErrorLog + 33) % 128;
+        f5362w = (afErrorLog + 33) % 128;
         AFd1pSDK aFd1pSDKD = aFd1sSDK.d(aFd1oSDK, aFd1iSDK, aFd1sSDK.AFLogger());
         int i10 = afErrorLog + 49;
-        f5289w = i10 % 128;
+        f5362w = i10 % 128;
         if (i10 % 2 != 0) {
             int i11 = 16 / 0;
         }
@@ -322,7 +322,7 @@ public final class AFd1sSDK {
         Intrinsics.checkNotNullParameter(str4, "");
         if (zBooleanValue) {
             int i10 = afErrorLog + 113;
-            f5289w = i10 % 128;
+            f5362w = i10 % 128;
             if (i10 % 2 == 0) {
                 str = AFd1jSDK.unregisterClient;
             } else {
@@ -333,20 +333,20 @@ public final class AFd1sSDK {
             str = AFd1jSDK.AFLogger;
         }
         if (zBooleanValue2) {
-            int i11 = f5289w + 13;
+            int i11 = f5362w + 13;
             afErrorLog = i11 % 128;
             if (i11 % 2 == 0) {
                 throw null;
             }
             str2 = "stg";
         } else {
-            afErrorLog = (f5289w + 77) % 128;
+            afErrorLog = (f5362w + 77) % 128;
             str2 = "";
         }
-        kotlin.jvm.internal.g0 g0Var = kotlin.jvm.internal.g0.f22559a;
+        kotlin.jvm.internal.g0 g0Var = kotlin.jvm.internal.g0.f23014a;
         Locale locale = Locale.US;
         if (AFd1jSDK.AFKeystoreWrapper()) {
-            f5289w = (afErrorLog + 3) % 128;
+            f5362w = (afErrorLog + 3) % 128;
             str3 = (String) aFd1jSDK.w.getValue();
         } else {
             str3 = "";
@@ -354,7 +354,7 @@ public final class AFd1sSDK {
         String str5 = String.format(locale, str, Arrays.copyOf(new Object[]{str3, str2, aFd1jSDK.d(), str4}, 4));
         Intrinsics.checkNotNullExpressionValue(str5, "");
         AFd1oSDK aFd1oSDK = new AFd1oSDK(str5, "GET");
-        aFd1oSDK.f5284v = 1500;
+        aFd1oSDK.f5357v = 1500;
         return (AFd1pSDK) d(new Object[]{aFd1sSDK, aFd1oSDK, new AFd1lSDK()}, -1128782579, 1128782579, System.identityHashCode(aFd1sSDK));
     }
 
@@ -380,7 +380,7 @@ public final class AFd1sSDK {
         boolean z12;
         String strD;
         int i10;
-        f5289w = (afErrorLog + 107) % 128;
+        f5362w = (afErrorLog + 107) % 128;
         try {
             try {
                 Object[] objArr = {aFh1pSDK, str, aFd1zSDK};
@@ -393,27 +393,27 @@ public final class AFd1sSDK {
                 }
                 byte[] bArr = (byte[]) ((Method) method).invoke(null, objArr);
                 AFLogger(aFh1pSDK, bArr);
-                int i11 = f5289w + 95;
+                int i11 = f5362w + 95;
                 afErrorLog = i11 % 128;
                 if (i11 % 2 == 0) {
                     aFj1mSDK = this.AFKeystoreWrapper;
                     Intrinsics.checkNotNullParameter(aFh1pSDK, "");
                     int i12 = 81 / 0;
-                    if (aFh1pSDK.f5402v == null) {
-                        if (aFh1pSDK.f5403w != null) {
+                    if (aFh1pSDK.f5475v == null) {
+                        if (aFh1pSDK.f5476w != null) {
                         }
                     }
                     z10 = aFh1pSDK instanceof AFh1lSDK;
                     z11 = aFh1pSDK instanceof AFh1kSDK;
                     z12 = aFh1pSDK instanceof AFg1uSDK;
                     if (aFh1pSDK instanceof AFh1hSDK) {
-                        afErrorLog = (f5289w + 117) % 128;
+                        afErrorLog = (f5362w + 117) % 128;
                         strD = AFj1mSDK.afInfoLog();
                     } else if (z11) {
                         strD = AFj1mSDK.registerClient();
                     } else if (z10) {
                         strD = AFj1mSDK.AFLogger();
-                        afErrorLog = (f5289w + 113) % 128;
+                        afErrorLog = (f5362w + 113) % 128;
                     } else if (z12) {
                         strD = AFj1mSDK.w();
                     } else if (z13) {
@@ -426,7 +426,7 @@ public final class AFd1sSDK {
                         strD = AFj1mSDK.d();
                     }
                     AFd1pSDK<String> aFd1pSDK = (AFd1pSDK) d(new Object[]{this, new AFd1oSDK(aFj1mSDK.d(AFj1mSDK.AFKeystoreWrapper(aFj1mSDK.unregisterClient(strD), z10), z12), bArr, "POST", aFh1pSDK.registerClient, aFh1pSDK.unregisterClient), new AFd1kSDK()}, -1128782579, 1128782579, System.identityHashCode(this));
-                    i10 = f5289w + 13;
+                    i10 = f5362w + 13;
                     afErrorLog = i10 % 128;
                     if (i10 % 2 == 0) {
                         int i13 = 65 / 0;
@@ -435,21 +435,21 @@ public final class AFd1sSDK {
                 }
                 aFj1mSDK = this.AFKeystoreWrapper;
                 Intrinsics.checkNotNullParameter(aFh1pSDK, "");
-                if (aFh1pSDK.f5402v == null) {
-                    if (aFh1pSDK.f5403w != null) {
+                if (aFh1pSDK.f5475v == null) {
+                    if (aFh1pSDK.f5476w != null) {
                     }
                 }
                 z10 = aFh1pSDK instanceof AFh1lSDK;
                 z11 = aFh1pSDK instanceof AFh1kSDK;
                 z12 = aFh1pSDK instanceof AFg1uSDK;
                 if (aFh1pSDK instanceof AFh1hSDK) {
-                    afErrorLog = (f5289w + 117) % 128;
+                    afErrorLog = (f5362w + 117) % 128;
                     strD = AFj1mSDK.afInfoLog();
                 } else if (z11) {
                     strD = AFj1mSDK.registerClient();
                 } else if (z10) {
                     strD = AFj1mSDK.AFLogger();
-                    afErrorLog = (f5289w + 113) % 128;
+                    afErrorLog = (f5362w + 113) % 128;
                 } else if (z12) {
                     strD = AFj1mSDK.w();
                 } else if (z13) {
@@ -462,7 +462,7 @@ public final class AFd1sSDK {
                     strD = AFj1mSDK.d();
                 }
                 AFd1pSDK<String> aFd1pSDK2 = (AFd1pSDK) d(new Object[]{this, new AFd1oSDK(aFj1mSDK.d(AFj1mSDK.AFKeystoreWrapper(aFj1mSDK.unregisterClient(strD), z10), z12), bArr, "POST", aFh1pSDK.registerClient, aFh1pSDK.unregisterClient), new AFd1kSDK()}, -1128782579, 1128782579, System.identityHashCode(this));
-                i10 = f5289w + 13;
+                i10 = f5362w + 13;
                 afErrorLog = i10 % 128;
                 if (i10 % 2 == 0) {
                     int i14 = 65 / 0;
@@ -473,13 +473,13 @@ public final class AFd1sSDK {
                 z11 = aFh1pSDK instanceof AFh1kSDK;
                 z12 = aFh1pSDK instanceof AFg1uSDK;
                 if (aFh1pSDK instanceof AFh1hSDK) {
-                    afErrorLog = (f5289w + 117) % 128;
+                    afErrorLog = (f5362w + 117) % 128;
                     strD = AFj1mSDK.afInfoLog();
                 } else if (z11) {
                     strD = AFj1mSDK.registerClient();
                 } else if (z10) {
                     strD = AFj1mSDK.AFLogger();
-                    afErrorLog = (f5289w + 113) % 128;
+                    afErrorLog = (f5362w + 113) % 128;
                 } else if (z12) {
                     strD = AFj1mSDK.w();
                 } else if (z13) {
@@ -492,7 +492,7 @@ public final class AFd1sSDK {
                     strD = AFj1mSDK.d();
                 }
                 AFd1pSDK<String> aFd1pSDK3 = (AFd1pSDK) d(new Object[]{this, new AFd1oSDK(aFj1mSDK.d(AFj1mSDK.AFKeystoreWrapper(aFj1mSDK.unregisterClient(strD), z10), z12), bArr, "POST", aFh1pSDK.registerClient, aFh1pSDK.unregisterClient), new AFd1kSDK()}, -1128782579, 1128782579, System.identityHashCode(this));
-                i10 = f5289w + 13;
+                i10 = f5362w + 13;
                 afErrorLog = i10 % 128;
                 if (i10 % 2 == 0) {
                     int i15 = 65 / 0;
@@ -521,9 +521,9 @@ public final class AFd1sSDK {
         map.put(((String) objArr[0]).intern(), Build.BRAND);
         map.put("sdk", Integer.toString(Build.VERSION.SDK_INT));
         map.put("app_version_name", this.registerClient.r_().versionName);
-        map.put("app_id", this.registerClient.f5258d.f5305d.getPackageName());
-        map.put("platformextension", this.f5290d.unregisterClient());
-        int i10 = f5289w + 17;
+        map.put("app_id", this.registerClient.f5331d.f5378d.getPackageName());
+        map.put("platformextension", this.f5363d.unregisterClient());
+        int i10 = f5362w + 17;
         afErrorLog = i10 % 128;
         if (i10 % 2 != 0) {
             return map;
@@ -532,10 +532,10 @@ public final class AFd1sSDK {
     }
 
     public final AFd1pSDK<Map<String, Object>> AFKeystoreWrapper(String str, String str2) {
-        f5289w = (afErrorLog + 7) % 128;
-        AFd1pSDK<Map<String, Object>> aFd1pSDK = (AFd1pSDK) d(new Object[]{this, AFd1qSDK.unregisterClient(this.AFKeystoreWrapper.AFKeystoreWrapper(str), this.registerClient.f5258d.f5305d.getPackageName(), AFb1jSDK.AFLogger(this.registerClient.AFKeystoreWrapper), str, str2), AFd1rSDK.INSTANCE}, -1128782579, 1128782579, System.identityHashCode(this));
+        f5362w = (afErrorLog + 7) % 128;
+        AFd1pSDK<Map<String, Object>> aFd1pSDK = (AFd1pSDK) d(new Object[]{this, AFd1qSDK.unregisterClient(this.AFKeystoreWrapper.AFKeystoreWrapper(str), this.registerClient.f5331d.f5378d.getPackageName(), AFb1jSDK.AFLogger(this.registerClient.AFKeystoreWrapper), str, str2), AFd1rSDK.INSTANCE}, -1128782579, 1128782579, System.identityHashCode(this));
         int i10 = afErrorLog + 57;
-        f5289w = i10 % 128;
+        f5362w = i10 % 128;
         if (i10 % 2 == 0) {
             return aFd1pSDK;
         }
@@ -544,15 +544,15 @@ public final class AFd1sSDK {
 
     public final AFd1pSDK<String> d(@NonNull String str) {
         AFd1oSDK aFd1oSDK = new AFd1oSDK(str, null, "GET", Collections.EMPTY_MAP, false);
-        aFd1oSDK.f5284v = BacktraceMetrics.defaultTimeBetweenRetriesMs;
-        aFd1oSDK.f5285w = false;
+        aFd1oSDK.f5357v = BacktraceMetrics.defaultTimeBetweenRetriesMs;
+        aFd1oSDK.f5358w = false;
         AFd1pSDK<String> aFd1pSDK = (AFd1pSDK) d(new Object[]{this, aFd1oSDK, new AFd1kSDK()}, -1128782579, 1128782579, System.identityHashCode(this));
-        f5289w = (afErrorLog + 45) % 128;
+        f5362w = (afErrorLog + 45) % 128;
         return aFd1pSDK;
     }
 
     public final AFd1vSDK d(Map<String, Object> map, String str) {
-        afErrorLog = (f5289w + 31) % 128;
+        afErrorLog = (f5362w + 31) % 128;
         try {
             try {
                 Object[] objArr = {map, str};
@@ -567,7 +567,7 @@ public final class AFd1sSDK {
                     return new AFd1vSDK(this.registerClient, bArr);
                 }
                 AFLogger.INSTANCE.e(LogTag.GENERAL, "AFFinalizer: failed to create bytes.", new IllegalArgumentException("Failed to create bytes from proxyData, bytes are null"), false, false);
-                f5289w = (afErrorLog + 61) % 128;
+                f5362w = (afErrorLog + 61) % 128;
                 return null;
             } catch (Throwable th2) {
                 Throwable cause = th2.getCause();
@@ -591,7 +591,7 @@ public final class AFd1sSDK {
         sb2.append(str2);
         sb2.append("v2");
         String strD = AFj1nSDK.d(strJoin, sb2.toString());
-        int i10 = f5289w + 109;
+        int i10 = f5362w + 109;
         afErrorLog = i10 % 128;
         if (i10 % 2 == 0) {
             int i11 = 82 / 0;
@@ -602,17 +602,17 @@ public final class AFd1sSDK {
     private <T> AFd1pSDK<T> d(AFd1oSDK aFd1oSDK, AFd1iSDK<T> aFd1iSDK, boolean z10) {
         aFd1oSDK.force = z10;
         AFd1xSDK aFd1xSDK = this.AFLogger;
-        AFd1pSDK<T> aFd1pSDK = new AFd1pSDK<>(aFd1oSDK, aFd1xSDK.f5304d, aFd1xSDK.AFLogger, aFd1iSDK);
-        afErrorLog = (f5289w + 11) % 128;
+        AFd1pSDK<T> aFd1pSDK = new AFd1pSDK<>(aFd1oSDK, aFd1xSDK.f5377d, aFd1xSDK.AFLogger, aFd1iSDK);
+        afErrorLog = (f5362w + 11) % 128;
         return aFd1pSDK;
     }
 
     private static /* synthetic */ Object AFKeystoreWrapper(Object[] objArr) {
         AFd1sSDK aFd1sSDK = (AFd1sSDK) objArr[0];
         AFa1oSDK aFa1oSDK = (AFa1oSDK) objArr[1];
-        AFd1pSDK aFd1pSDK = (AFd1pSDK) d(new Object[]{aFd1sSDK, new AFd1oSDK(aFa1oSDK.f5401i, AFg1dSDK.d(aFa1oSDK.f5399d).toString().getBytes(Charset.defaultCharset()), "POST", Collections.EMPTY_MAP, aFa1oSDK.unregisterClient), new AFa1jSDK()}, -1128782579, 1128782579, System.identityHashCode(aFd1sSDK));
+        AFd1pSDK aFd1pSDK = (AFd1pSDK) d(new Object[]{aFd1sSDK, new AFd1oSDK(aFa1oSDK.f5474i, AFg1dSDK.d(aFa1oSDK.f5472d).toString().getBytes(Charset.defaultCharset()), "POST", Collections.EMPTY_MAP, aFa1oSDK.unregisterClient), new AFa1jSDK()}, -1128782579, 1128782579, System.identityHashCode(aFd1sSDK));
         int i10 = afErrorLog + 11;
-        f5289w = i10 % 128;
+        f5362w = i10 % 128;
         if (i10 % 2 == 0) {
             return aFd1pSDK;
         }
@@ -627,9 +627,9 @@ public final class AFd1sSDK {
         map2.put("data", map);
         map2.put("meta", registerClient());
         if (str2 != null) {
-            f5289w = (afErrorLog + 5) % 128;
+            f5362w = (afErrorLog + 5) % 128;
             map2.put("brand_domain", str2);
-            f5289w = (afErrorLog + 87) % 128;
+            f5362w = (afErrorLog + 87) % 128;
         }
         String string2 = AFg1dSDK.d(map2).toString();
         HashMap map3 = new HashMap();
@@ -655,7 +655,7 @@ public final class AFd1sSDK {
         boolean z10;
         String strAFLogger = this.registerClient.AFLogger("AF_ENABLE_HTTP_CACHE");
         if (strAFLogger != null) {
-            afErrorLog = (f5289w + 1) % 128;
+            afErrorLog = (f5362w + 1) % 128;
             z10 = Boolean.parseBoolean(strAFLogger);
         } else {
             z10 = true;
@@ -664,14 +664,14 @@ public final class AFd1sSDK {
             return false;
         }
         int i10 = afErrorLog + 15;
-        f5289w = i10 % 128;
+        f5362w = i10 % 128;
         return i10 % 2 == 0;
     }
 
     public final AFd1pSDK<String> unregisterClient(AFh1nSDK aFh1nSDK) {
-        AFd1pSDK<String> aFd1pSDK = (AFd1pSDK) d(new Object[]{this, new AFd1oSDK(aFh1nSDK.f5401i, aFh1nSDK.force, "POST", aFh1nSDK.registerClient, true), new AFd1kSDK()}, -1128782579, 1128782579, System.identityHashCode(this));
+        AFd1pSDK<String> aFd1pSDK = (AFd1pSDK) d(new Object[]{this, new AFd1oSDK(aFh1nSDK.f5474i, aFh1nSDK.force, "POST", aFh1nSDK.registerClient, true), new AFd1kSDK()}, -1128782579, 1128782579, System.identityHashCode(this));
         int i10 = afErrorLog + 111;
-        f5289w = i10 % 128;
+        f5362w = i10 % 128;
         if (i10 % 2 != 0) {
             int i11 = 67 / 0;
         }
@@ -680,18 +680,18 @@ public final class AFd1sSDK {
 
     private void AFLogger(AFh1pSDK aFh1pSDK, byte[] bArr) throws Throwable {
         boolean z10;
-        int i10 = f5289w + 95;
+        int i10 = f5362w + 95;
         afErrorLog = i10 % 128;
         if (i10 % 2 != 0) {
             String strAFLogger = this.registerClient.AFLogger("com.appsflyer.security.enable");
             if (strAFLogger != null) {
                 z10 = Boolean.parseBoolean(strAFLogger);
-                f5289w = (afErrorLog + 85) % 128;
+                f5362w = (afErrorLog + 85) % 128;
             } else {
                 z10 = false;
             }
             if (aFh1pSDK.d() && z10) {
-                int i11 = f5289w + 109;
+                int i11 = f5362w + 109;
                 afErrorLog = i11 % 128;
                 if (i11 % 2 != 0) {
                     if (AFf1fSDK.d(aFh1pSDK, this.registerClient)) {

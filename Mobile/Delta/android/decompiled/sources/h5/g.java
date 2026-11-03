@@ -6,9 +6,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import gt.l;
 import java.io.File;
 import java.util.UUID;
-import jt.l;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
@@ -17,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000>\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\t\b\u0000\u0018\u0000 .2\u00020\u0001:\u0003\u0017\u0013\u0015B7\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\b\b\u0002\u0010\t\u001a\u00020\b\u0012\b\b\u0002\u0010\n\u001a\u00020\b¢\u0006\u0004\b\u000b\u0010\fJ\u0017\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\r\u001a\u00020\bH\u0016¢\u0006\u0004\b\u000f\u0010\u0010J\u000f\u0010\u0011\u001a\u00020\u000eH\u0016¢\u0006\u0004\b\u0011\u0010\u0012R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0013\u0010\u0014R\u0016\u0010\u0005\u001a\u0004\u0018\u00010\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010\u0016R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0017\u0010\u0018R\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0019\u0010\u001aR\u0014\u0010\n\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001b\u0010\u001aR\u001a\u0010 \u001a\b\u0012\u0004\u0012\u00020\u001d0\u001c8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001e\u0010\u001fR\u0016\u0010\"\u001a\u00020\b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b!\u0010\u001aR\u0016\u0010%\u001a\u0004\u0018\u00010\u00048VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b#\u0010$R\u0014\u0010)\u001a\u00020&8VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b'\u0010(R\u001b\u0010-\u001a\u00020\u001d8BX\u0082\u0084\u0002¢\u0006\f\u001a\u0004\b\u0015\u0010**\u0004\b+\u0010,¨\u0006/"}, d2 = {"Lh5/g;", "Lg5/d;", "Landroid/content/Context;", "context", "", "name", "Lg5/d$a;", "callback", "", "useNoBackupDirectory", "allowDataLossOnRecovery", "<init>", "(Landroid/content/Context;Ljava/lang/String;Lg5/d$a;ZZ)V", "enabled", "", "setWriteAheadLoggingEnabled", "(Z)V", "close", "()V", "a", "Landroid/content/Context;", "b", "Ljava/lang/String;", "c", "Lg5/d$a;", "d", "Z", "e", "Ljt/h;", "Lh5/g$c;", "f", "Ljt/h;", "lazyDelegate", "g", "writeAheadLoggingEnabled", "getDatabaseName", "()Ljava/lang/String;", "databaseName", "Lg5/c;", "t2", "()Lg5/c;", "writableDatabase", "()Lh5/g$c;", "getDelegate$delegate", "(Lh5/g;)Ljava/lang/Object;", "delegate", "h", "sqlite-framework"}, k = 1, mv = {2, 1, 0}, xi = 48)
+@Metadata(d1 = {"\u0000>\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\t\b\u0000\u0018\u0000 .2\u00020\u0001:\u0003\u0017\u0013\u0015B7\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\b\b\u0002\u0010\t\u001a\u00020\b\u0012\b\b\u0002\u0010\n\u001a\u00020\b¢\u0006\u0004\b\u000b\u0010\fJ\u0017\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\r\u001a\u00020\bH\u0016¢\u0006\u0004\b\u000f\u0010\u0010J\u000f\u0010\u0011\u001a\u00020\u000eH\u0016¢\u0006\u0004\b\u0011\u0010\u0012R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0013\u0010\u0014R\u0016\u0010\u0005\u001a\u0004\u0018\u00010\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010\u0016R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0017\u0010\u0018R\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0019\u0010\u001aR\u0014\u0010\n\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001b\u0010\u001aR\u001a\u0010 \u001a\b\u0012\u0004\u0012\u00020\u001d0\u001c8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001e\u0010\u001fR\u0016\u0010\"\u001a\u00020\b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b!\u0010\u001aR\u0016\u0010%\u001a\u0004\u0018\u00010\u00048VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b#\u0010$R\u0014\u0010)\u001a\u00020&8VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b'\u0010(R\u001b\u0010-\u001a\u00020\u001d8BX\u0082\u0084\u0002¢\u0006\f\u001a\u0004\b\u0015\u0010**\u0004\b+\u0010,¨\u0006/"}, d2 = {"Lh5/g;", "Lg5/d;", "Landroid/content/Context;", "context", "", "name", "Lg5/d$a;", "callback", "", "useNoBackupDirectory", "allowDataLossOnRecovery", "<init>", "(Landroid/content/Context;Ljava/lang/String;Lg5/d$a;ZZ)V", "enabled", "", "setWriteAheadLoggingEnabled", "(Z)V", "close", "()V", "a", "Landroid/content/Context;", "b", "Ljava/lang/String;", "c", "Lg5/d$a;", "d", "Z", "e", "Lgt/h;", "Lh5/g$c;", "f", "Lgt/h;", "lazyDelegate", "g", "writeAheadLoggingEnabled", "getDatabaseName", "()Ljava/lang/String;", "databaseName", "Lg5/c;", "u2", "()Lg5/c;", "writableDatabase", "()Lh5/g$c;", "getDelegate$delegate", "(Lh5/g;)Ljava/lang/Object;", "delegate", "h", "sqlite-framework"}, k = 1, mv = {2, 1, 0}, xi = 48)
 public final class g implements g5.d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -40,7 +40,7 @@ public final class g implements g5.d {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final jt.h<c> lazyDelegate;
+    public final gt.h<c> lazyDelegate;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name and from kotlin metadata */
     public boolean writeAheadLoggingEnabled;
@@ -142,7 +142,7 @@ public final class g implements g5.d {
 
 
             /* JADX INFO: renamed from: g, reason: collision with root package name */
-            public static final /* synthetic */ qt.a f18570g = qt.b.a(a());
+            public static final /* synthetic */ ot.a f19057g = ot.b.a(a());
         }
 
         /* JADX INFO: renamed from: h5.g$c$c, reason: collision with other inner class name and from kotlin metadata */
@@ -173,7 +173,7 @@ public final class g implements g5.d {
         public static final /* synthetic */ class d {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public static final /* synthetic */ int[] f18571a;
+            public static final /* synthetic */ int[] f19058a;
 
             static {
                 int[] iArr = new int[b.values().length];
@@ -197,7 +197,7 @@ public final class g implements g5.d {
                     iArr[b.ON_OPEN.ordinal()] = 5;
                 } catch (NoSuchFieldError unused5) {
                 }
-                f18571a = iArr;
+                f19058a = iArr;
             }
         }
 
@@ -304,7 +304,7 @@ public final class g implements g5.d {
                     if (th instanceof a) {
                         a aVar = (a) th;
                         Throwable cause = aVar.getCause();
-                        int i10 = d.f18571a[aVar.getCallbackName().ordinal()];
+                        int i10 = d.f19058a[aVar.getCallbackName().ordinal()];
                         if (i10 == 1 || i10 == 2 || i10 == 3 || i10 == 4) {
                             throw cause;
                         }
@@ -396,10 +396,10 @@ public final class g implements g5.d {
         this.callback = callback;
         this.useNoBackupDirectory = z10;
         this.allowDataLossOnRecovery = z11;
-        this.lazyDelegate = jt.i.b(new Function0() { // from class: h5.f
+        this.lazyDelegate = gt.i.b(new Function0() { // from class: h5.f
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return g.c(this.f18548a);
+                return g.c(this.f19035a);
             }
         });
     }
@@ -443,7 +443,7 @@ public final class g implements g5.d {
 
     @Override // g5.d
     @NotNull
-    public g5.c t2() {
+    public g5.c u2() {
         return b().c(true);
     }
 }

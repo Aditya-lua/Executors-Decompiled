@@ -11,7 +11,7 @@ import m1.n;
 public final class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final LruCache<String, MediaCodecInfo> f24977a = new LruCache<>(10);
+    public static final LruCache<String, MediaCodecInfo> f25798a = new LruCache<>(10);
 
     public static MediaCodec a(String str) throws k1 {
         try {
@@ -28,7 +28,7 @@ public final class a {
     public static MediaCodecInfo c(String str) throws Throwable {
         MediaCodecInfo mediaCodecInfo;
         MediaCodec mediaCodecA;
-        LruCache<String, MediaCodecInfo> lruCache = f24977a;
+        LruCache<String, MediaCodecInfo> lruCache = f25798a;
         synchronized (lruCache) {
             mediaCodecInfo = lruCache.get(str);
         }

@@ -7,13 +7,17 @@ import android.util.Log;
 import androidx.annotation.Keep;
 import com.roblox.client.RobloxApplication;
 import com.roblox.client.datastructures.NameValuePair;
+import gt.n;
+import gt.o;
+import iu.g1;
+import iu.k;
+import iu.p0;
+import iu.q0;
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import jt.n;
-import jt.o;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.collections.CollectionsKt;
@@ -22,25 +26,21 @@ import kotlin.collections.r0;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.text.StringsKt;
-import ku.g1;
-import ku.k;
-import ku.p0;
-import ku.q0;
-import nt.b;
+import lt.b;
+import mt.c;
+import nt.f;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import ot.c;
-import pt.f;
-import pt.m;
-import th.h;
-import ut.i;
+import rh.h;
+import st.i;
 
 /* JADX INFO: loaded from: classes2.dex */
 @Keep
-@Metadata(d1 = {"\u0000^\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0007\n\u0002\u0010\t\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\"\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0016\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0013\bÇ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0007¢\u0006\u0004\b\u0007\u0010\bJ7\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\u000b\u001a\u00020\t2\u0006\u0010\f\u001a\u00020\t2\u0006\u0010\r\u001a\u00020\t2\u0006\u0010\u000e\u001a\u00020\tH\u0007¢\u0006\u0004\b\u0010\u0010\u0011J\u0017\u0010\u0012\u001a\u00020\u000f2\u0006\u0010\n\u001a\u00020\tH\u0007¢\u0006\u0004\b\u0012\u0010\u0013J\u001f\u0010\u0014\u001a\u00020\u000f2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\tH\u0007¢\u0006\u0004\b\u0014\u0010\u0015J0\u0010\u001b\u001a\u00020\u001a2\u0006\u0010\u0016\u001a\u00020\t2\u0006\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u0019\u001a\u00020\u00172\u0006\u0010\n\u001a\u00020\tH\u0083 ¢\u0006\u0004\b\u001b\u0010\u001cJ\u0019\u0010\u001e\u001a\b\u0012\u0004\u0012\u00020\t0\u001d*\u00020\u0006H\u0007¢\u0006\u0004\b\u001e\u0010\u001fJ \u0010!\u001a\u00020\u001a2\u0006\u0010\f\u001a\u00020\t2\u0006\u0010 \u001a\u00020\tH\u0083 ¢\u0006\u0004\b!\u0010\"J\u0017\u0010%\u001a\u00020#2\u0006\u0010$\u001a\u00020#H\u0002¢\u0006\u0004\b%\u0010&J\u001f\u0010(\u001a\u0004\u0018\u00010\u00172\u0006\u0010'\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\t¢\u0006\u0004\b(\u0010)J\u001d\u0010*\u001a\u00020\u000f2\u0006\u0010'\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\t¢\u0006\u0004\b*\u0010+J\u001b\u0010,\u001a\u0004\u0018\u00010\t*\u00020\u00062\u0006\u0010\n\u001a\u00020\t¢\u0006\u0004\b,\u0010-J\u001b\u0010.\u001a\u0004\u0018\u00010\t*\u00020\u00062\u0006\u0010\n\u001a\u00020\t¢\u0006\u0004\b.\u0010-J\u001b\u0010/\u001a\u0004\u0018\u00010\t*\u00020\u00062\u0006\u0010\n\u001a\u00020\t¢\u0006\u0004\b/\u0010-J\u001b\u00100\u001a\u0004\u0018\u00010#*\u00020\u00062\u0006\u0010\n\u001a\u00020\t¢\u0006\u0004\b0\u00101J\u0013\u00102\u001a\u0004\u0018\u00010\t*\u00020\u0006¢\u0006\u0004\b2\u00103J'\u00104\u001a\u0004\u0018\u00010\u00172\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\f\u001a\u00020\t2\u0006\u0010\r\u001a\u00020\t¢\u0006\u0004\b4\u00105J\u0015\u00107\u001a\u00020#2\u0006\u00106\u001a\u00020#¢\u0006\u0004\b7\u0010&J=\u0010=\u001a\b\u0012\u0004\u0012\u00020\u000f0:2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\f\u001a\u00020\t2\u0006\u0010\r\u001a\u00020\t2\u0006\u00108\u001a\u00020#2\b\b\u0002\u00109\u001a\u00020\t¢\u0006\u0004\b;\u0010<J/\u0010E\u001a\u00020\u000f2\u0006\u0010>\u001a\u00020\t2\u0006\u0010?\u001a\u00020\t2\u000e\b\u0002\u0010B\u001a\b\u0012\u0004\u0012\u00020A0@H\u0000¢\u0006\u0004\bC\u0010DR\u0014\u0010F\u001a\u00020\t8\u0002X\u0082T¢\u0006\u0006\n\u0004\bF\u0010GR\u0014\u0010H\u001a\u00020\t8\u0006X\u0086T¢\u0006\u0006\n\u0004\bH\u0010GR\u0014\u0010I\u001a\u00020\t8\u0006X\u0086T¢\u0006\u0006\n\u0004\bI\u0010GR\u0014\u0010J\u001a\u00020\t8\u0006X\u0086T¢\u0006\u0006\n\u0004\bJ\u0010GR\u0014\u0010K\u001a\u00020\t8\u0006X\u0086T¢\u0006\u0006\n\u0004\bK\u0010GR\u0014\u0010L\u001a\u00020\t8\u0006X\u0086T¢\u0006\u0006\n\u0004\bL\u0010GR\u0014\u0010M\u001a\u00020\t8\u0006X\u0086T¢\u0006\u0006\n\u0004\bM\u0010GR\u0014\u0010N\u001a\u00020\t8\u0006X\u0086T¢\u0006\u0006\n\u0004\bN\u0010GR\u0014\u0010O\u001a\u00020\t8\u0002X\u0082T¢\u0006\u0006\n\u0004\bO\u0010GR\u0014\u0010P\u001a\u00020\t8\u0002X\u0082T¢\u0006\u0006\n\u0004\bP\u0010GR\u0014\u0010Q\u001a\u00020\t8\u0002X\u0082T¢\u0006\u0006\n\u0004\bQ\u0010GR\u0014\u0010R\u001a\u00020#8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bR\u0010S¨\u0006T"}, d2 = {"Lcom/roblox/client/scheduledwork/OtaConfigHandler;", "", "<init>", "()V", "Landroid/content/Context;", "context", "Landroid/content/SharedPreferences;", "getOtaPrefs", "(Landroid/content/Context;)Landroid/content/SharedPreferences;", "", "behaviorName", "url", "patchStorageKey", "perUserPatchKey", "baseUrl", "", "saveOtaConfigState", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", "clearPendingWorkerBlobFromNative", "(Ljava/lang/String;)V", "checkAndPromoteWorkerBlob", "(Landroid/content/Context;Ljava/lang/String;)V", "blobPath", "", "assetId", "assetVersion", "", "nativeVerifyAndPromoteBlob", "(Ljava/lang/String;JJLjava/lang/String;)Z", "", "getActiveBehaviorNames", "(Landroid/content/SharedPreferences;)Ljava/util/Set;", "perUserKeyJson", "nativeCommitOtaConfig", "(Ljava/lang/String;Ljava/lang/String;)Z", "Lorg/json/JSONObject;", "patchJson", "normalizePatchConfigForStorage", "(Lorg/json/JSONObject;)Lorg/json/JSONObject;", "prefs", "getPendingWorkerBlobVersion", "(Landroid/content/SharedPreferences;Ljava/lang/String;)Ljava/lang/Long;", "clearPendingWorkerBlob", "(Landroid/content/SharedPreferences;Ljava/lang/String;)V", "getConfigUrl", "(Landroid/content/SharedPreferences;Ljava/lang/String;)Ljava/lang/String;", "getPatchStorageKey", "getPerUserPatchKey", "getStoredConfigJson", "(Landroid/content/SharedPreferences;Ljava/lang/String;)Lorg/json/JSONObject;", "getBaseUrl", "(Landroid/content/SharedPreferences;)Ljava/lang/String;", "getCachedAssetVersionFromAppStorage", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Long;", "serverConfig", "buildStorageConfig", "patchConfigJson", "workerId", "Ljt/n;", "writeConfigToAppStorage-yxL6bBk", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/Object;", "writeConfigToAppStorage", "eventName", "ctx", "", "Lcom/roblox/client/datastructures/NameValuePair;", "extraParams", "logEvent$NativeShell_googleProdRelease", "(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V", "logEvent", "TAG", "Ljava/lang/String;", "KEY_ACTIVE_BEHAVIORS", "KEY_CONFIG_URL_PREFIX", "KEY_PATCH_STORAGE_KEY_PREFIX", "KEY_PER_USER_PATCH_KEY_PREFIX", "KEY_BASE_URL", "KEY_WORKER_PENDING_PREFIX", "KEY_CONFIG_JSON_PREFIX", "OTA_PREFS_FILE", "APP_STORAGE_RELATIVE_PATH", "LEGACY_PATCH_CONFIG_KEY", "PATCH_CONFIG_DEFAULTS", "Lorg/json/JSONObject;", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000^\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0007\n\u0002\u0010\t\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\"\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0016\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0013\bÇ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0007¢\u0006\u0004\b\u0007\u0010\bJ7\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\u000b\u001a\u00020\t2\u0006\u0010\f\u001a\u00020\t2\u0006\u0010\r\u001a\u00020\t2\u0006\u0010\u000e\u001a\u00020\tH\u0007¢\u0006\u0004\b\u0010\u0010\u0011J\u0017\u0010\u0012\u001a\u00020\u000f2\u0006\u0010\n\u001a\u00020\tH\u0007¢\u0006\u0004\b\u0012\u0010\u0013J\u001f\u0010\u0014\u001a\u00020\u000f2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\tH\u0007¢\u0006\u0004\b\u0014\u0010\u0015J0\u0010\u001b\u001a\u00020\u001a2\u0006\u0010\u0016\u001a\u00020\t2\u0006\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u0019\u001a\u00020\u00172\u0006\u0010\n\u001a\u00020\tH\u0083 ¢\u0006\u0004\b\u001b\u0010\u001cJ\u0019\u0010\u001e\u001a\b\u0012\u0004\u0012\u00020\t0\u001d*\u00020\u0006H\u0007¢\u0006\u0004\b\u001e\u0010\u001fJ\u0012\u0010 \u001a\u0004\u0018\u00010\tH\u0083 ¢\u0006\u0004\b \u0010!J \u0010#\u001a\u00020\u001a2\u0006\u0010\f\u001a\u00020\t2\u0006\u0010\"\u001a\u00020\tH\u0083 ¢\u0006\u0004\b#\u0010$J\u0017\u0010'\u001a\u00020%2\u0006\u0010&\u001a\u00020%H\u0002¢\u0006\u0004\b'\u0010(J\u001f\u0010*\u001a\u0004\u0018\u00010\u00172\u0006\u0010)\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\t¢\u0006\u0004\b*\u0010+J\u001d\u0010,\u001a\u00020\u000f2\u0006\u0010)\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\t¢\u0006\u0004\b,\u0010-J\u001b\u0010.\u001a\u0004\u0018\u00010\t*\u00020\u00062\u0006\u0010\n\u001a\u00020\t¢\u0006\u0004\b.\u0010/J\u001b\u00100\u001a\u0004\u0018\u00010\t*\u00020\u00062\u0006\u0010\n\u001a\u00020\t¢\u0006\u0004\b0\u0010/J\u001b\u00101\u001a\u0004\u0018\u00010\t*\u00020\u00062\u0006\u0010\n\u001a\u00020\t¢\u0006\u0004\b1\u0010/J\u001b\u00102\u001a\u0004\u0018\u00010%*\u00020\u00062\u0006\u0010\n\u001a\u00020\t¢\u0006\u0004\b2\u00103J\u0013\u00104\u001a\u0004\u0018\u00010\t*\u00020\u0006¢\u0006\u0004\b4\u00105J'\u00106\u001a\u0004\u0018\u00010\u00172\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\f\u001a\u00020\t2\u0006\u0010\r\u001a\u00020\t¢\u0006\u0004\b6\u00107J\u0015\u00109\u001a\u00020%2\u0006\u00108\u001a\u00020%¢\u0006\u0004\b9\u0010(J=\u0010?\u001a\b\u0012\u0004\u0012\u00020\u000f0<2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\f\u001a\u00020\t2\u0006\u0010\r\u001a\u00020\t2\u0006\u0010:\u001a\u00020%2\b\b\u0002\u0010;\u001a\u00020\t¢\u0006\u0004\b=\u0010>J\u000f\u0010@\u001a\u0004\u0018\u00010\t¢\u0006\u0004\b@\u0010!J/\u0010H\u001a\u00020\u000f2\u0006\u0010A\u001a\u00020\t2\u0006\u0010B\u001a\u00020\t2\u000e\b\u0002\u0010E\u001a\b\u0012\u0004\u0012\u00020D0CH\u0000¢\u0006\u0004\bF\u0010GR\u0014\u0010I\u001a\u00020\t8\u0002X\u0082T¢\u0006\u0006\n\u0004\bI\u0010JR\u0014\u0010K\u001a\u00020\t8\u0006X\u0086T¢\u0006\u0006\n\u0004\bK\u0010JR\u0014\u0010L\u001a\u00020\t8\u0006X\u0086T¢\u0006\u0006\n\u0004\bL\u0010JR\u0014\u0010M\u001a\u00020\t8\u0006X\u0086T¢\u0006\u0006\n\u0004\bM\u0010JR\u0014\u0010N\u001a\u00020\t8\u0006X\u0086T¢\u0006\u0006\n\u0004\bN\u0010JR\u0014\u0010O\u001a\u00020\t8\u0006X\u0086T¢\u0006\u0006\n\u0004\bO\u0010JR\u0014\u0010P\u001a\u00020\t8\u0006X\u0086T¢\u0006\u0006\n\u0004\bP\u0010JR\u0014\u0010Q\u001a\u00020\t8\u0006X\u0086T¢\u0006\u0006\n\u0004\bQ\u0010JR\u0014\u0010R\u001a\u00020\t8\u0002X\u0082T¢\u0006\u0006\n\u0004\bR\u0010JR\u0014\u0010S\u001a\u00020\t8\u0002X\u0082T¢\u0006\u0006\n\u0004\bS\u0010JR\u0014\u0010T\u001a\u00020\t8\u0002X\u0082T¢\u0006\u0006\n\u0004\bT\u0010JR\u0014\u0010U\u001a\u00020%8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bU\u0010V¨\u0006W"}, d2 = {"Lcom/roblox/client/scheduledwork/OtaConfigHandler;", "", "<init>", "()V", "Landroid/content/Context;", "context", "Landroid/content/SharedPreferences;", "getOtaPrefs", "(Landroid/content/Context;)Landroid/content/SharedPreferences;", "", "behaviorName", "url", "patchStorageKey", "perUserPatchKey", "baseUrl", "", "saveOtaConfigState", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", "clearPendingWorkerBlobFromNative", "(Ljava/lang/String;)V", "checkAndPromoteWorkerBlob", "(Landroid/content/Context;Ljava/lang/String;)V", "blobPath", "", "assetId", "assetVersion", "", "nativeVerifyAndPromoteBlob", "(Ljava/lang/String;JJLjava/lang/String;)Z", "", "getActiveBehaviorNames", "(Landroid/content/SharedPreferences;)Ljava/util/Set;", "nativeGetEngineVersion", "()Ljava/lang/String;", "perUserKeyJson", "nativeCommitOtaConfig", "(Ljava/lang/String;Ljava/lang/String;)Z", "Lorg/json/JSONObject;", "patchJson", "normalizePatchConfigForStorage", "(Lorg/json/JSONObject;)Lorg/json/JSONObject;", "prefs", "getPendingWorkerBlobVersion", "(Landroid/content/SharedPreferences;Ljava/lang/String;)Ljava/lang/Long;", "clearPendingWorkerBlob", "(Landroid/content/SharedPreferences;Ljava/lang/String;)V", "getConfigUrl", "(Landroid/content/SharedPreferences;Ljava/lang/String;)Ljava/lang/String;", "getPatchStorageKey", "getPerUserPatchKey", "getStoredConfigJson", "(Landroid/content/SharedPreferences;Ljava/lang/String;)Lorg/json/JSONObject;", "getBaseUrl", "(Landroid/content/SharedPreferences;)Ljava/lang/String;", "getCachedAssetVersionFromAppStorage", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Long;", "serverConfig", "buildStorageConfig", "patchConfigJson", "workerId", "Lgt/n;", "writeConfigToAppStorage-yxL6bBk", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/Object;", "writeConfigToAppStorage", "getEngineVersion", "eventName", "ctx", "", "Lcom/roblox/client/datastructures/NameValuePair;", "extraParams", "logEvent$NativeShell_googleProdRelease", "(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V", "logEvent", "TAG", "Ljava/lang/String;", "KEY_ACTIVE_BEHAVIORS", "KEY_CONFIG_URL_PREFIX", "KEY_PATCH_STORAGE_KEY_PREFIX", "KEY_PER_USER_PATCH_KEY_PREFIX", "KEY_BASE_URL", "KEY_WORKER_PENDING_PREFIX", "KEY_CONFIG_JSON_PREFIX", "OTA_PREFS_FILE", "APP_STORAGE_RELATIVE_PATH", "LEGACY_PATCH_CONFIG_KEY", "PATCH_CONFIG_DEFAULTS", "Lorg/json/JSONObject;", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class OtaConfigHandler {
 
     @NotNull
@@ -82,82 +82,82 @@ public final class OtaConfigHandler {
     @NotNull
     private static final String TAG = "OtaConfigHandler";
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
     @f(c = "com.roblox.client.scheduledwork.OtaConfigHandler$checkAndPromoteWorkerBlob$1", f = "OtaConfigHandler.kt", l = {}, m = "invokeSuspend", v = 1)
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
     public static final class a extends m implements Function2<p0, b<? super Unit>, Object> {
         public final /* synthetic */ Context A;
         public final /* synthetic */ String B;
         public final /* synthetic */ JSONObject C;
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f9341t;
+        public int f9418t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public final /* synthetic */ File f9342u;
+        public final /* synthetic */ File f9419u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ long f9343v;
+        public final /* synthetic */ long f9420v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public final /* synthetic */ long f9344w;
+        public final /* synthetic */ long f9421w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public final /* synthetic */ String f9345x;
+        public final /* synthetic */ String f9422x;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public final /* synthetic */ String f9346y;
+        public final /* synthetic */ String f9423y;
 
         /* JADX INFO: renamed from: z, reason: collision with root package name */
-        public final /* synthetic */ String f9347z;
+        public final /* synthetic */ String f9424z;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public a(File file, long j10, long j11, String str, String str2, String str3, Context context, String str4, JSONObject jSONObject, b<? super a> bVar) {
             super(2, bVar);
-            this.f9342u = file;
-            this.f9343v = j10;
-            this.f9344w = j11;
-            this.f9345x = str;
-            this.f9346y = str2;
-            this.f9347z = str3;
+            this.f9419u = file;
+            this.f9420v = j10;
+            this.f9421w = j11;
+            this.f9422x = str;
+            this.f9423y = str2;
+            this.f9424z = str3;
             this.A = context;
             this.B = str4;
             this.C = jSONObject;
         }
 
-        @Override // pt.a
+        @Override // nt.a
         public final b<Unit> create(Object obj, b<?> bVar) {
-            return new a(this.f9342u, this.f9343v, this.f9344w, this.f9345x, this.f9346y, this.f9347z, this.A, this.B, this.C, bVar);
+            return new a(this.f9419u, this.f9420v, this.f9421w, this.f9422x, this.f9423y, this.f9424z, this.A, this.B, this.C, bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, b<? super Unit> bVar) {
+            return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
             c.e();
-            if (this.f9341t != 0) {
+            if (this.f9418t != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
             o.b(obj);
-            String absolutePath = this.f9342u.getAbsolutePath();
+            String absolutePath = this.f9419u.getAbsolutePath();
             Intrinsics.checkNotNullExpressionValue(absolutePath, "getAbsolutePath(...)");
-            boolean zNativeVerifyAndPromoteBlob = OtaConfigHandler.nativeVerifyAndPromoteBlob(absolutePath, this.f9343v, this.f9344w, this.f9345x);
-            OtaConfigHandler.INSTANCE.logEvent$NativeShell_googleProdRelease(zNativeVerifyAndPromoteBlob ? "ota_promote_success" : "ota_promote_failed", "background_ota_worker", p.n(new NameValuePair("behavior_name", this.f9345x), new NameValuePair("asset_id", String.valueOf(this.f9343v)), new NameValuePair("asset_version", String.valueOf(this.f9344w))));
+            boolean zNativeVerifyAndPromoteBlob = OtaConfigHandler.nativeVerifyAndPromoteBlob(absolutePath, this.f9420v, this.f9421w, this.f9422x);
+            OtaConfigHandler.INSTANCE.logEvent$NativeShell_googleProdRelease(zNativeVerifyAndPromoteBlob ? "ota_promote_success" : "ota_promote_failed", "background_ota_worker", p.n(new NameValuePair("behavior_name", this.f9422x), new NameValuePair("asset_id", String.valueOf(this.f9420v)), new NameValuePair("asset_version", String.valueOf(this.f9421w))));
             if (zNativeVerifyAndPromoteBlob) {
                 try {
-                    OtaConfigHandler.nativeCommitOtaConfig(this.f9346y, this.f9347z);
+                    OtaConfigHandler.nativeCommitOtaConfig(this.f9423y, this.f9424z);
                 } catch (UnsatisfiedLinkError unused) {
                 }
-                Object objM65writeConfigToAppStorageyxL6bBk$default = OtaConfigHandler.m65writeConfigToAppStorageyxL6bBk$default(OtaConfigHandler.INSTANCE, this.A, this.f9346y, this.B, this.C, null, 16, null);
-                String str = this.f9345x;
+                Object objM65writeConfigToAppStorageyxL6bBk$default = OtaConfigHandler.m65writeConfigToAppStorageyxL6bBk$default(OtaConfigHandler.INSTANCE, this.A, this.f9423y, this.B, this.C, null, 16, null);
+                String str = this.f9422x;
                 Throwable thE = n.e(objM65writeConfigToAppStorageyxL6bBk$default);
                 if (thE != null) {
                     Log.w(OtaConfigHandler.TAG, "checkAndPromoteWorkerBlob: writeConfigToAppStorage failed for " + str + ": " + thE);
                 }
             }
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, b<? super Unit> bVar) {
-            return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            return Unit.f22938a;
         }
     }
 
@@ -254,6 +254,8 @@ public final class OtaConfigHandler {
     /* JADX INFO: Access modifiers changed from: private */
     public static final native boolean nativeCommitOtaConfig(String patchStorageKey, String perUserKeyJson);
 
+    private static final native String nativeGetEngineVersion();
+
     /* JADX INFO: Access modifiers changed from: private */
     public static final native boolean nativeVerifyAndPromoteBlob(String blobPath, long assetId, long assetVersion, String behaviorName);
 
@@ -277,7 +279,7 @@ public final class OtaConfigHandler {
         Intrinsics.checkNotNullParameter(baseUrl, "baseUrl");
         try {
             n.Companion companion = n.INSTANCE;
-            objB = n.b(Boolean.valueOf(h.a().G5()));
+            objB = n.b(Boolean.valueOf(h.a().Q5()));
         } catch (Throwable th2) {
             n.Companion companion2 = n.INSTANCE;
             objB = n.b(o.a(th2));
@@ -406,6 +408,26 @@ public final class OtaConfigHandler {
     }
 
     @Nullable
+    public final String getEngineVersion() {
+        Object objB;
+        try {
+            n.Companion companion = n.INSTANCE;
+            objB = n.b(nativeGetEngineVersion());
+        } catch (Throwable th2) {
+            n.Companion companion2 = n.INSTANCE;
+            objB = n.b(o.a(th2));
+        }
+        if (n.g(objB)) {
+            objB = null;
+        }
+        String str = (String) objB;
+        if (str == null || str.length() <= 0) {
+            return null;
+        }
+        return str;
+    }
+
+    @Nullable
     public final String getPatchStorageKey(@NotNull SharedPreferences sharedPreferences, @NotNull String behaviorName) {
         Intrinsics.checkNotNullParameter(sharedPreferences, "<this>");
         Intrinsics.checkNotNullParameter(behaviorName, "behaviorName");
@@ -470,8 +492,8 @@ public final class OtaConfigHandler {
         Intrinsics.checkNotNullParameter(extraParams, "extraParams");
         try {
             n.Companion companion = n.INSTANCE;
-            vg.m.c(eventName, ctx, CollectionsKt.w0(kotlin.collections.o.d(new NameValuePair("elapsed_realtime_ms", String.valueOf(SystemClock.elapsedRealtime()))), extraParams), false);
-            n.b(Unit.f22483a);
+            ug.m.c(eventName, ctx, CollectionsKt.w0(kotlin.collections.o.d(new NameValuePair("elapsed_realtime_ms", String.valueOf(SystemClock.elapsedRealtime()))), extraParams), false);
+            n.b(Unit.f22938a);
         } catch (Throwable th2) {
             n.Companion companion2 = n.INSTANCE;
             n.b(o.a(th2));
@@ -496,7 +518,7 @@ public final class OtaConfigHandler {
             File file = new File(context.getFilesDir(), APP_STORAGE_RELATIVE_PATH);
             try {
                 n.Companion companion = n.INSTANCE;
-                objB = n.b(Boolean.valueOf(h.a().G5()));
+                objB = n.b(Boolean.valueOf(h.a().Q5()));
             } catch (Throwable th2) {
                 n.Companion companion2 = n.INSTANCE;
                 objB = n.b(o.a(th2));
@@ -510,7 +532,7 @@ public final class OtaConfigHandler {
             }
             if (!file.exists()) {
                 Log.w(TAG, "writeConfigToAppStorage: AppStorage.json not found — config not written");
-                return n.b(Unit.f22483a);
+                return n.b(Unit.f22938a);
             }
             try {
                 JSONObject jSONObject2 = new JSONObject(i.i(file, null, 1, null));
@@ -531,11 +553,11 @@ public final class OtaConfigHandler {
                 if (jLongValue2 >= 0 && jLongValue >= 0 && jLongValue > jLongValue2) {
                     Log.i(TAG, "writeConfigToAppStorage: skipping — stored v" + jLongValue + " > candidate v" + jLongValue2 + " key=" + patchStorageKey);
                     n.Companion companion3 = n.INSTANCE;
-                    return n.b(Unit.f22483a);
+                    return n.b(Unit.f22938a);
                 }
                 JSONArray jSONArray = new JSONArray();
                 jSONArray.put(INSTANCE.normalizePatchConfigForStorage(patchConfigJson));
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
                 jSONObject.put(perUserPatchKey, jSONArray);
                 jSONObject2.put(patchStorageKey, jSONObject.toString());
                 jSONObject2.put(LEGACY_PATCH_CONFIG_KEY, "");
@@ -552,7 +574,7 @@ public final class OtaConfigHandler {
                     if (file2.renameTo(file)) {
                         Log.i(TAG, "writeConfigToAppStorage: wrote directly to AppStorage.json patchStorageKey=" + patchStorageKey);
                         n.Companion companion4 = n.INSTANCE;
-                        return n.b(Unit.f22483a);
+                        return n.b(Unit.f22938a);
                     }
                     file2.delete();
                     n.Companion companion5 = n.INSTANCE;

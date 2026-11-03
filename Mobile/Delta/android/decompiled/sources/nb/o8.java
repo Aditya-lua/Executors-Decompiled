@@ -7,17 +7,17 @@ public enum o8 {
 
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final p8[] f25819a;
+    public final p8[] f26640a;
 
     o8(p8... p8VarArr) {
-        this.f25819a = p8VarArr;
+        this.f26640a = p8VarArr;
     }
 
     public final p8[] a() {
-        return this.f25819a;
+        return this.f26640a;
     }
 
     public final /* synthetic */ p8[] b() {
-        return this.f25819a;
+        return this.f26640a;
     }
 }

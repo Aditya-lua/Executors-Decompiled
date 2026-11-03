@@ -6,7 +6,7 @@ import java.io.IOException;
 public class b0 extends IOException {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public s0 f8394a;
+    public s0 f8468a;
     public boolean b;
 
     public static class a extends b0 {
@@ -17,7 +17,7 @@ public class b0 extends IOException {
 
     public b0(String str) {
         super(str);
-        this.f8394a = null;
+        this.f8468a = null;
     }
 
     public static b0 b() {
@@ -69,12 +69,12 @@ public class b0 extends IOException {
     }
 
     public b0 k(s0 s0Var) {
-        this.f8394a = s0Var;
+        this.f8468a = s0Var;
         return this;
     }
 
     public b0(IOException iOException) {
         super(iOException.getMessage(), iOException);
-        this.f8394a = null;
+        this.f8468a = null;
     }
 }

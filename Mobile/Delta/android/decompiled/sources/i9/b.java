@@ -30,13 +30,13 @@ import java.util.regex.Pattern;
 public class b {
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static int f20401h;
+    public static int f20517h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static PendingIntent f20402i;
+    public static PendingIntent f20518i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final Executor f20403j = new Executor() { // from class: i9.e0
+    public static final Executor f20519j = new Executor() { // from class: i9.e0
         @Override // java.util.concurrent.Executor
         public final void execute(Runnable runnable) {
             runnable.run();
@@ -44,34 +44,34 @@ public class b {
     };
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final Pattern f20404k = Pattern.compile("\\|ID\\|([^|]+)\\|:?+(.*)");
+    public static final Pattern f20520k = Pattern.compile("\\|ID\\|([^|]+)\\|:?+(.*)");
     public final Context b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final c0 f20406c;
+    public final c0 f20522c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final ScheduledExecutorService f20407d;
+    public final ScheduledExecutorService f20523d;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public Messenger f20409f;
+    public Messenger f20525f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public zzd f20410g;
+    public zzd f20526g;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final w1.j f20405a = new w1.j();
+    public final w1.j f20521a = new w1.j();
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Messenger f20408e = new Messenger(new h(this, Looper.getMainLooper()));
+    public final Messenger f20524e = new Messenger(new h(this, Looper.getMainLooper()));
 
     public b(@NonNull Context context) {
         this.b = context;
-        this.f20406c = new c0(context);
+        this.f20522c = new c0(context);
         ScheduledThreadPoolExecutor scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1);
         scheduledThreadPoolExecutor.setKeepAliveTime(60L, TimeUnit.SECONDS);
         scheduledThreadPoolExecutor.allowCoreThreadTimeOut(true);
-        this.f20407d = scheduledThreadPoolExecutor;
+        this.f20523d = scheduledThreadPoolExecutor;
     }
 
     public static /* synthetic */ Task e(Bundle bundle) {
@@ -87,10 +87,10 @@ public class b {
                 if (intent.hasExtra("google.messenger")) {
                     Parcelable parcelableExtra = intent.getParcelableExtra("google.messenger");
                     if (parcelableExtra instanceof zzd) {
-                        bVar.f20410g = (zzd) parcelableExtra;
+                        bVar.f20526g = (zzd) parcelableExtra;
                     }
                     if (parcelableExtra instanceof Messenger) {
-                        bVar.f20409f = (Messenger) parcelableExtra;
+                        bVar.f20525f = (Messenger) parcelableExtra;
                     }
                 }
                 Intent intent2 = (Intent) message.obj;
@@ -107,7 +107,7 @@ public class b {
                     stringExtra = intent2.getStringExtra("unregistered");
                 }
                 if (stringExtra != null) {
-                    Matcher matcher = f20404k.matcher(stringExtra);
+                    Matcher matcher = f20520k.matcher(stringExtra);
                     if (!matcher.matches()) {
                         if (Log.isLoggable("Rpc", 3)) {
                             Log.d("Rpc", "Unexpected response string: ".concat(stringExtra));
@@ -134,10 +134,10 @@ public class b {
                     Log.d("Rpc", "Received InstanceID error ".concat(stringExtra2));
                 }
                 if (!stringExtra2.startsWith("|")) {
-                    synchronized (bVar.f20405a) {
-                        for (int i10 = 0; i10 < bVar.f20405a.getSize(); i10++) {
+                    synchronized (bVar.f20521a) {
+                        for (int i10 = 0; i10 < bVar.f20521a.getSize(); i10++) {
                             try {
-                                bVar.l((String) bVar.f20405a.f(i10), intent2.getExtras());
+                                bVar.l((String) bVar.f20521a.f(i10), intent2.getExtras());
                             } catch (Throwable th2) {
                                 throw th2;
                             }
@@ -164,19 +164,19 @@ public class b {
 
     public static synchronized String j() {
         int i10;
-        i10 = f20401h;
-        f20401h = i10 + 1;
+        i10 = f20517h;
+        f20517h = i10 + 1;
         return Integer.toString(i10);
     }
 
     public static synchronized void k(Context context, Intent intent) {
         try {
-            if (f20402i == null) {
+            if (f20518i == null) {
                 Intent intent2 = new Intent();
                 intent2.setPackage("com.google.example.invalidpackage");
-                f20402i = PendingIntent.getBroadcast(context, 0, intent2, cb.a.f4689a);
+                f20518i = PendingIntent.getBroadcast(context, 0, intent2, cb.a.f4855a);
             }
-            intent.putExtra(Payload.TYPE_APP, f20402i);
+            intent.putExtra(Payload.TYPE_APP, f20518i);
         } catch (Throwable th2) {
             throw th2;
         }
@@ -188,7 +188,7 @@ public class b {
 
     @NonNull
     public Task<CloudMessage> a() {
-        return this.f20406c.a() >= 241100000 ? b0.b(this.b).d(5, Bundle.EMPTY).h(f20403j, new sb.c() { // from class: i9.e
+        return this.f20522c.a() >= 241100000 ? b0.b(this.b).d(5, Bundle.EMPTY).h(f20519j, new sb.c() { // from class: i9.e
             @Override // sb.c
             public final Object then(Task task) {
                 Intent intent = (Intent) ((Bundle) task.getResult()).getParcelable("notification_data");
@@ -202,7 +202,7 @@ public class b {
 
     @NonNull
     public Task<Void> b(@NonNull CloudMessage cloudMessage) {
-        if (this.f20406c.a() < 233700000) {
+        if (this.f20522c.a() < 233700000) {
             return sb.m.e(new IOException("SERVICE_NOT_AVAILABLE"));
         }
         Bundle bundle = new Bundle();
@@ -216,15 +216,15 @@ public class b {
 
     @NonNull
     public Task<Bundle> c(@NonNull final Bundle bundle) {
-        if (this.f20406c.a() < 12000000) {
-            return this.f20406c.b() != 0 ? i(bundle).i(f20403j, new sb.c() { // from class: i9.f0
+        if (this.f20522c.a() < 12000000) {
+            return this.f20522c.b() != 0 ? i(bundle).i(f20519j, new sb.c() { // from class: i9.f0
                 @Override // sb.c
                 public final Object then(Task task) {
-                    return this.f20422a.f(bundle, task);
+                    return this.f20538a.f(bundle, task);
                 }
             }) : sb.m.e(new IOException("MISSING_INSTANCEID_SERVICE"));
         }
-        return b0.b(this.b).d(1, bundle).h(f20403j, new sb.c() { // from class: i9.d
+        return b0.b(this.b).d(1, bundle).h(f20519j, new sb.c() { // from class: i9.d
             @Override // sb.c
             public final Object then(Task task) throws IOException {
                 if (task.isSuccessful()) {
@@ -240,7 +240,7 @@ public class b {
 
     @NonNull
     public Task<Void> d(boolean z10) {
-        if (this.f20406c.a() < 241100000) {
+        if (this.f20522c.a() < 241100000) {
             return sb.m.e(new IOException("SERVICE_NOT_AVAILABLE"));
         }
         Bundle bundle = new Bundle();
@@ -249,7 +249,7 @@ public class b {
     }
 
     public final /* synthetic */ Task f(Bundle bundle, Task task) {
-        return (task.isSuccessful() && m((Bundle) task.getResult())) ? i(bundle).n(f20403j, new sb.j() { // from class: i9.d0
+        return (task.isSuccessful() && m((Bundle) task.getResult())) ? i(bundle).n(f20519j, new sb.j() { // from class: i9.d0
             @Override // sb.j
             public final Task then(Object obj) {
                 return b.e((Bundle) obj);
@@ -258,8 +258,8 @@ public class b {
     }
 
     public final /* synthetic */ void h(String str, ScheduledFuture scheduledFuture, Task task) {
-        synchronized (this.f20405a) {
-            this.f20405a.remove(str);
+        synchronized (this.f20521a) {
+            this.f20521a.remove(str);
         }
         scheduledFuture.cancel(false);
     }
@@ -269,12 +269,12 @@ public class b {
     public final Task i(Bundle bundle) {
         final String strJ = j();
         final sb.k kVar = new sb.k();
-        synchronized (this.f20405a) {
-            this.f20405a.put(strJ, kVar);
+        synchronized (this.f20521a) {
+            this.f20521a.put(strJ, kVar);
         }
         Intent intent = new Intent();
         intent.setPackage("com.google.android.gms");
-        if (this.f20406c.b() == 2) {
+        if (this.f20522c.b() == 2) {
             intent.setAction("com.google.iid.TOKEN_REQUEST");
         } else {
             intent.setAction("com.google.android.c2dm.intent.REGISTER");
@@ -285,33 +285,33 @@ public class b {
         if (Log.isLoggable("Rpc", 3)) {
             Log.d("Rpc", "Sending ".concat(String.valueOf(intent.getExtras())));
         }
-        intent.putExtra("google.messenger", this.f20408e);
-        if (this.f20409f != null || this.f20410g != null) {
+        intent.putExtra("google.messenger", this.f20524e);
+        if (this.f20525f != null || this.f20526g != null) {
             Message messageObtain = Message.obtain();
             messageObtain.obj = intent;
             try {
-                Messenger messenger = this.f20409f;
+                Messenger messenger = this.f20525f;
                 if (messenger != null) {
                     messenger.send(messageObtain);
                 } else {
-                    this.f20410g.f(messageObtain);
+                    this.f20526g.f(messageObtain);
                 }
             } catch (RemoteException unused) {
                 if (Log.isLoggable("Rpc", 3)) {
                     Log.d("Rpc", "Messenger failed, fallback to startService");
                 }
-                if (this.f20406c.b() == 2) {
+                if (this.f20522c.b() == 2) {
                     this.b.sendBroadcast(intent);
                 } else {
                     this.b.startService(intent);
                 }
             }
-        } else if (this.f20406c.b() == 2) {
+        } else if (this.f20522c.b() == 2) {
             this.b.sendBroadcast(intent);
         } else {
             this.b.startService(intent);
         }
-        final ScheduledFuture<?> scheduledFutureSchedule = this.f20407d.schedule(new Runnable() { // from class: i9.f
+        final ScheduledFuture<?> scheduledFutureSchedule = this.f20523d.schedule(new Runnable() { // from class: i9.f
             @Override // java.lang.Runnable
             public final void run() {
                 if (kVar.d(new IOException(Payload.RESPONSE_TIMEOUT))) {
@@ -319,19 +319,19 @@ public class b {
                 }
             }
         }, 30L, TimeUnit.SECONDS);
-        kVar.a().c(f20403j, new OnCompleteListener() { // from class: i9.g
+        kVar.a().c(f20519j, new OnCompleteListener() { // from class: i9.g
             @Override // com.google.android.gms.tasks.OnCompleteListener
             public final void onComplete(Task task) {
-                this.f20423a.h(strJ, scheduledFutureSchedule, task);
+                this.f20539a.h(strJ, scheduledFutureSchedule, task);
             }
         });
         return kVar.a();
     }
 
     public final void l(String str, Bundle bundle) {
-        synchronized (this.f20405a) {
+        synchronized (this.f20521a) {
             try {
-                sb.k kVar = (sb.k) this.f20405a.remove(str);
+                sb.k kVar = (sb.k) this.f20521a.remove(str);
                 if (kVar != null) {
                     kVar.c(bundle);
                     return;

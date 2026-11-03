@@ -3,52 +3,52 @@ package r7;
 import java.io.Closeable;
 import java.io.IOException;
 import java.util.Arrays;
-import xu.f;
-import xu.f0;
-import xu.g;
-import xu.h;
+import vu.f;
+import vu.f0;
+import vu.g;
+import vu.h;
 
 /* JADX INFO: loaded from: classes3.dex */
 public abstract class c implements Closeable {
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final String[] f29795g = new String[128];
+    public static final String[] f30197g = new String[128];
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f29796a;
+    public int f30198a;
     public int[] b = new int[32];
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public String[] f29797c = new String[32];
+    public String[] f30199c = new String[32];
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public int[] f29798d = new int[32];
+    public int[] f30200d = new int[32];
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public boolean f29799e;
+    public boolean f30201e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public boolean f29800f;
+    public boolean f30202f;
 
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final String[] f29801a;
+        public final String[] f30203a;
         public final f0 b;
 
         public a(String[] strArr, f0 f0Var) {
-            this.f29801a = strArr;
+            this.f30203a = strArr;
             this.b = f0Var;
         }
 
         public static a a(String... strArr) {
             try {
                 h[] hVarArr = new h[strArr.length];
-                xu.e eVar = new xu.e();
+                vu.e eVar = new vu.e();
                 for (int i10 = 0; i10 < strArr.length; i10++) {
                     c.v(eVar, strArr[i10]);
                     eVar.readByte();
-                    hVarArr[i10] = eVar.F2();
+                    hVarArr[i10] = eVar.G2();
                 }
                 return new a((String[]) strArr.clone(), f0.l(hVarArr));
             } catch (IOException e10) {
@@ -72,9 +72,9 @@ public abstract class c implements Closeable {
 
     static {
         for (int i10 = 0; i10 <= 31; i10++) {
-            f29795g[i10] = String.format("\\u%04x", Integer.valueOf(i10));
+            f30197g[i10] = String.format("\\u%04x", Integer.valueOf(i10));
         }
-        String[] strArr = f29795g;
+        String[] strArr = f30197g;
         strArr[34] = "\\\"";
         strArr[92] = "\\\\";
         strArr[9] = "\\t";
@@ -91,7 +91,7 @@ public abstract class c implements Closeable {
     /* JADX WARN: Code duplicated, block: B:16:0x002b  */
     public static void v(f fVar, String str) {
         String str2;
-        String[] strArr = f29795g;
+        String[] strArr = f30197g;
         fVar.writeByte(34);
         int length = str.length();
         int i10 = 0;
@@ -101,9 +101,9 @@ public abstract class c implements Closeable {
                 str2 = strArr[cCharAt];
                 if (str2 != null) {
                     if (i10 < i11) {
-                        fVar.K0(str, i10, i11);
+                        fVar.G0(str, i10, i11);
                     }
-                    fVar.C0(str2);
+                    fVar.y0(str2);
                     i10 = i11 + 1;
                 }
             } else {
@@ -113,14 +113,14 @@ public abstract class c implements Closeable {
                     str2 = "\\u2029";
                 }
                 if (i10 < i11) {
-                    fVar.K0(str, i10, i11);
+                    fVar.G0(str, i10, i11);
                 }
-                fVar.C0(str2);
+                fVar.y0(str2);
                 i10 = i11 + 1;
             }
         }
         if (i10 < length) {
-            fVar.K0(str, i10, length);
+            fVar.G0(str, i10, length);
         }
         fVar.writeByte(34);
     }
@@ -138,7 +138,7 @@ public abstract class c implements Closeable {
     public abstract boolean g();
 
     public final String getPath() {
-        return d.a(this.f29796a, this.b, this.f29797c, this.f29798d);
+        return d.a(this.f30198a, this.b, this.f30199c, this.f30200d);
     }
 
     public abstract double h();
@@ -152,21 +152,21 @@ public abstract class c implements Closeable {
     public abstract b o();
 
     public final void q(int i10) {
-        int i11 = this.f29796a;
+        int i11 = this.f30198a;
         int[] iArr = this.b;
         if (i11 == iArr.length) {
             if (i11 == 256) {
                 throw new r7.a("Nesting too deep at " + getPath());
             }
             this.b = Arrays.copyOf(iArr, iArr.length * 2);
-            String[] strArr = this.f29797c;
-            this.f29797c = (String[]) Arrays.copyOf(strArr, strArr.length * 2);
-            int[] iArr2 = this.f29798d;
-            this.f29798d = Arrays.copyOf(iArr2, iArr2.length * 2);
+            String[] strArr = this.f30199c;
+            this.f30199c = (String[]) Arrays.copyOf(strArr, strArr.length * 2);
+            int[] iArr2 = this.f30200d;
+            this.f30200d = Arrays.copyOf(iArr2, iArr2.length * 2);
         }
         int[] iArr3 = this.b;
-        int i12 = this.f29796a;
-        this.f29796a = i12 + 1;
+        int i12 = this.f30198a;
+        this.f30198a = i12 + 1;
         iArr3[i12] = i10;
     }
 

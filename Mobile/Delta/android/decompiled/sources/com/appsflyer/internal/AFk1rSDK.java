@@ -6,6 +6,6 @@ public final class AFk1rSDK {
     public int AFLogger;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public int f5456d;
+    public int f5529d;
     public char registerClient;
 }

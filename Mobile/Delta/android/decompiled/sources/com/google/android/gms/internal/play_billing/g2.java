@@ -9,10 +9,10 @@ public final class g2 implements i2 {
     public static final h2 b = new h2(g2.class);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object f7050a;
+    public final Object f7124a;
 
     public g2(Object obj) {
-        this.f7050a = obj;
+        this.f7124a = obj;
     }
 
     @Override // com.google.android.gms.internal.play_billing.i2
@@ -32,7 +32,7 @@ public final class g2 implements i2 {
 
     @Override // java.util.concurrent.Future
     public final Object get() {
-        return this.f7050a;
+        return this.f7124a;
     }
 
     @Override // java.util.concurrent.Future
@@ -46,13 +46,13 @@ public final class g2 implements i2 {
     }
 
     public final String toString() {
-        Object obj = this.f7050a;
+        Object obj = this.f7124a;
         return super.toString() + "[status=SUCCESS, result=[" + obj.toString() + "]]";
     }
 
     @Override // java.util.concurrent.Future
     public final Object get(long j10, TimeUnit timeUnit) {
         timeUnit.getClass();
-        return this.f7050a;
+        return this.f7124a;
     }
 }

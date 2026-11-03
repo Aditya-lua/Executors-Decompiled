@@ -74,31 +74,31 @@ public enum n0 {
 
 
     /* JADX INFO: renamed from: p0, reason: collision with root package name */
-    public static final Map f6663p0 = new HashMap();
+    public static final Map f6736p0 = new HashMap();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f6675a;
+    public final int f6748a;
 
     static {
         for (n0 n0Var : values()) {
-            f6663p0.put(Integer.valueOf(n0Var.f6675a), n0Var);
+            f6736p0.put(Integer.valueOf(n0Var.f6748a), n0Var);
         }
     }
 
     n0(int i10) {
-        this.f6675a = i10;
+        this.f6748a = i10;
     }
 
     public static n0 a(int i10) {
-        return (n0) f6663p0.get(Integer.valueOf(i10));
+        return (n0) f6736p0.get(Integer.valueOf(i10));
     }
 
     public final Integer b() {
-        return Integer.valueOf(this.f6675a);
+        return Integer.valueOf(this.f6748a);
     }
 
     @Override // java.lang.Enum
     public final String toString() {
-        return Integer.valueOf(this.f6675a).toString();
+        return Integer.valueOf(this.f6748a).toString();
     }
 }

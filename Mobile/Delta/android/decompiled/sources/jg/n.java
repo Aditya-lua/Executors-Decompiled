@@ -4,7 +4,7 @@ package jg;
 public final class n extends l {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final n f21439a = new n();
+    public static final n f21898a = new n();
 
     @Deprecated
     public n() {
@@ -21,6 +21,6 @@ public final class n extends l {
     @Override // jg.l
     /* JADX INFO: renamed from: x, reason: merged with bridge method [inline-methods] */
     public n a() {
-        return f21439a;
+        return f21898a;
     }
 }

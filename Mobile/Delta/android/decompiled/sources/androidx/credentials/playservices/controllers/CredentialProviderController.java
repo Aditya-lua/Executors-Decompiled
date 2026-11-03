@@ -47,14 +47,14 @@ public abstract class CredentialProviderController<T1, T2, R2, R1, E1> extends C
 
         /* JADX INFO: Access modifiers changed from: private */
         public static final Unit maybeReportErrorResultCodeCreate$lambda$0(Function1 function1, c0 c0Var) {
-            function1.invoke(c0Var.f22552a);
-            return Unit.f22483a;
+            function1.invoke(c0Var.f23007a);
+            return Unit.f22938a;
         }
 
         /* JADX INFO: Access modifiers changed from: private */
         public static final Unit maybeReportErrorResultCodeGet$lambda$1(Function1 function1, c0 c0Var) {
-            function1.invoke(c0Var.f22552a);
-            return Unit.f22483a;
+            function1.invoke(c0Var.f23007a);
+            return Unit.f22938a;
         }
 
         public final void cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(@Nullable CancellationSignal cancellationSignal, @NotNull Function0<Unit> onResultOrException) {
@@ -84,9 +84,9 @@ public abstract class CredentialProviderController<T1, T2, R2, R1, E1> extends C
                 return false;
             }
             final c0 c0Var = new c0();
-            c0Var.f22552a = new j(generateErrorStringUnknown$credentials_play_services_auth_release(resultCode));
+            c0Var.f23007a = new j(generateErrorStringUnknown$credentials_play_services_auth_release(resultCode));
             if (resultCode == 0) {
-                c0Var.f22552a = new d(generateErrorStringCanceled$credentials_play_services_auth_release());
+                c0Var.f23007a = new d(generateErrorStringCanceled$credentials_play_services_auth_release());
             }
             cancelOnError.invoke(cancellationSignal, new Function0() { // from class: k3.c
                 @Override // kotlin.jvm.functions.Function0
@@ -106,9 +106,9 @@ public abstract class CredentialProviderController<T1, T2, R2, R1, E1> extends C
                 return false;
             }
             final c0 c0Var = new c0();
-            c0Var.f22552a = new q(generateErrorStringUnknown$credentials_play_services_auth_release(resultCode));
+            c0Var.f23007a = new q(generateErrorStringUnknown$credentials_play_services_auth_release(resultCode));
             if (resultCode == 0) {
-                c0Var.f22552a = new l(generateErrorStringCanceled$credentials_play_services_auth_release());
+                c0Var.f23007a = new l(generateErrorStringCanceled$credentials_play_services_auth_release());
             }
             cancelOnError.invoke(cancellationSignal, new Function0() { // from class: k3.d
                 @Override // kotlin.jvm.functions.Function0
@@ -148,7 +148,7 @@ public abstract class CredentialProviderController<T1, T2, R2, R1, E1> extends C
                 pVar.a(obj);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final boolean maybeReportErrorResultCodeCreate(int i10, @NotNull Function2<? super CancellationSignal, ? super Function0<Unit>, Unit> function2, @NotNull Function1<? super f, Unit> function1, @Nullable CancellationSignal cancellationSignal) {

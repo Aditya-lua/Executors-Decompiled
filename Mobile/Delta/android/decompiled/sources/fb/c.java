@@ -6,10 +6,10 @@ import java.util.concurrent.atomic.AtomicReference;
 public abstract class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final AtomicReference f16516a = new AtomicReference();
+    public final AtomicReference f17112a = new AtomicReference();
 
     public final void a() {
-        b bVar = (b) this.f16516a.get();
+        b bVar = (b) this.f17112a.get();
         if (bVar != null) {
             bVar.b();
         }

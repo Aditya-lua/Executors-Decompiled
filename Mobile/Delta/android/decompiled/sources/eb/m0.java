@@ -5,7 +5,7 @@ import java.io.Serializable;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class m0 implements Serializable {
     public static m0 c() {
-        return z.f15427a;
+        return z.f16041a;
     }
 
     public static m0 d(Object obj) {

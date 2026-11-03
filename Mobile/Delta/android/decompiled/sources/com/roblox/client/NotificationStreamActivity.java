@@ -5,16 +5,16 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import dk.f;
-import fv.j;
+import bk.f;
+import dv.j;
+import oh.g;
 import org.greenrobot.eventbus.ThreadMode;
-import ph.g;
-import sg.a1;
-import sg.l0;
-import sg.m0;
-import sg.o0;
-import sg.q0;
-import vg.c0;
+import rg.a1;
+import rg.l0;
+import rg.m0;
+import rg.o0;
+import rg.q0;
+import ug.c0;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class NotificationStreamActivity extends RobloxWebActivity {
@@ -33,21 +33,21 @@ public class NotificationStreamActivity extends RobloxWebActivity {
     public static /* synthetic */ class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f8902a;
+        public static final /* synthetic */ int[] f8970a;
 
         static {
-            int[] iArr = new int[ol.a.values().length];
-            f8902a = iArr;
+            int[] iArr = new int[ml.a.values().length];
+            f8970a = iArr;
             try {
-                iArr[ol.a.LIGHT.ordinal()] = 1;
+                iArr[ml.a.LIGHT.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f8902a[ol.a.CLASSIC.ordinal()] = 2;
+                f8970a[ml.a.CLASSIC.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f8902a[ol.a.DARK.ordinal()] = 3;
+                f8970a[ml.a.DARK.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
         }
@@ -55,16 +55,24 @@ public class NotificationStreamActivity extends RobloxWebActivity {
 
     private void o2(Menu menu, MenuInflater menuInflater) {
         int i10;
-        menuInflater.inflate(o0.f30907d, menu);
-        MenuItem menuItemFindItem = menu.findItem(m0.f30830d);
-        int i11 = b.f8902a[new f().getTheme().ordinal()];
+        menuInflater.inflate(o0.f30512d, menu);
+        MenuItem menuItemFindItem = menu.findItem(m0.f30433d);
+        int i11 = b.f8970a[new f().getTheme().ordinal()];
         if (i11 != 1) {
-            i10 = i11 != 2 ? l0.f30817u : l0.f30816t;
+            i10 = i11 != 2 ? l0.f30420u : l0.f30419t;
         } else {
-            i10 = l0.f30818v;
+            i10 = l0.f30421v;
         }
         menuItemFindItem.setIcon(i10);
         menuItemFindItem.setOnMenuItemClickListener(new a());
+    }
+
+    @Override // com.roblox.client.RobloxWebActivity, com.roblox.client.a, bk.e.b
+    public void a0(ml.a aVar) {
+        Menu menu = this.U.getMenu();
+        menu.clear();
+        o2(menu, getMenuInflater());
+        super.a0(aVar);
     }
 
     @Override // com.roblox.client.RobloxWebActivity
@@ -94,14 +102,6 @@ public class NotificationStreamActivity extends RobloxWebActivity {
     @Override // com.roblox.client.RobloxWebActivity
     @j(threadMode = ThreadMode.MAIN)
     public void onNavigateToFeatureEvent(g gVar) {
-        n2(gVar.f28613a, gVar.b);
-    }
-
-    @Override // com.roblox.client.RobloxWebActivity, com.roblox.client.a, dk.e.b
-    public void u(ol.a aVar) {
-        Menu menu = this.U.getMenu();
-        menu.clear();
-        o2(menu, getMenuInflater());
-        super.u(aVar);
+        n2(gVar.f27892a, gVar.b);
     }
 }

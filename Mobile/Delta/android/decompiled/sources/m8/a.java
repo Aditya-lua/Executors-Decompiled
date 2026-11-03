@@ -9,7 +9,7 @@ import y7.e;
 public final class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static SparseArray<e> f24040a = new SparseArray<>();
+    public static SparseArray<e> f24690a = new SparseArray<>();
     public static HashMap<e, Integer> b;
 
     static {
@@ -19,7 +19,7 @@ public final class a {
         b.put(e.VERY_LOW, 1);
         b.put(e.HIGHEST, 2);
         for (e eVar : b.keySet()) {
-            f24040a.append(b.get(eVar).intValue(), eVar);
+            f24690a.append(b.get(eVar).intValue(), eVar);
         }
     }
 
@@ -33,7 +33,7 @@ public final class a {
 
     @NonNull
     public static e b(int i10) {
-        e eVar = f24040a.get(i10);
+        e eVar = f24690a.get(i10);
         if (eVar != null) {
             return eVar;
         }

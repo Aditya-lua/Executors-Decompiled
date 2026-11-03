@@ -1,16 +1,52 @@
 package qp;
 
-import kotlin.Metadata;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import pp.o1;
+import pp.p1;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\b\u0007\b\u0086\u0081\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003j\u0002\b\u0004j\u0002\b\u0005j\u0002\b\u0006j\u0002\b\u0007¨\u0006\b"}, d2 = {"Lqp/b;", "", "<init>", "(Ljava/lang/String;I)V", "a", "b", "c", "d", "nfc_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public enum b {
-    Dg1,
-    Dg2,
-    Dg14,
-    Sod;
+public final class b implements r5.a {
 
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    @NonNull
+    public final ConstraintLayout f30027a;
 
-    /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final /* synthetic */ qt.a f29589f = qt.b.a(a());
+    @NonNull
+    public final FrameLayout b;
+
+    public b(@NonNull ConstraintLayout constraintLayout, @NonNull FrameLayout frameLayout) {
+        this.f30027a = constraintLayout;
+        this.b = frameLayout;
+    }
+
+    @NonNull
+    public static b a(@NonNull View view) {
+        int i10 = o1.f29023c;
+        FrameLayout frameLayout = (FrameLayout) r5.b.a(view, i10);
+        if (frameLayout != null) {
+            return new b((ConstraintLayout) view, frameLayout);
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
+    }
+
+    @NonNull
+    public static b c(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
+        View viewInflate = layoutInflater.inflate(p1.b, viewGroup, false);
+        if (z10) {
+            viewGroup.addView(viewInflate);
+        }
+        return a(viewInflate);
+    }
+
+    @Override // r5.a
+    @NonNull
+    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+    public ConstraintLayout getRoot() {
+        return this.f30027a;
+    }
 }

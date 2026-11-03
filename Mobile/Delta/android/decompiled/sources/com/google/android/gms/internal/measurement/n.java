@@ -10,16 +10,16 @@ import java.util.Map;
 public class n implements q, m {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Map f6633a = new HashMap();
+    public final Map f6706a = new HashMap();
 
     @Override // com.google.android.gms.internal.measurement.q
     public final q a() {
         n nVar = new n();
-        for (Map.Entry entry : this.f6633a.entrySet()) {
+        for (Map.Entry entry : this.f6706a.entrySet()) {
             if (entry.getValue() instanceof m) {
-                nVar.f6633a.put((String) entry.getKey(), (q) entry.getValue());
+                nVar.f6706a.put((String) entry.getKey(), (q) entry.getValue());
             } else {
-                nVar.f6633a.put((String) entry.getKey(), ((q) entry.getValue()).a());
+                nVar.f6706a.put((String) entry.getKey(), ((q) entry.getValue()).a());
             }
         }
         return nVar;
@@ -27,16 +27,16 @@ public class n implements q, m {
 
     @Override // com.google.android.gms.internal.measurement.m
     public final q c(String str) {
-        Map map = this.f6633a;
-        return map.containsKey(str) ? (q) map.get(str) : q.f6743zo;
+        Map map = this.f6706a;
+        return map.containsKey(str) ? (q) map.get(str) : q.f6816yo;
     }
 
     @Override // com.google.android.gms.internal.measurement.m
     public final void d(String str, q qVar) {
         if (qVar == null) {
-            this.f6633a.remove(str);
+            this.f6706a.remove(str);
         } else {
-            this.f6633a.put(str, qVar);
+            this.f6706a.put(str, qVar);
         }
     }
 
@@ -50,27 +50,27 @@ public class n implements q, m {
             return true;
         }
         if (obj instanceof n) {
-            return this.f6633a.equals(((n) obj).f6633a);
+            return this.f6706a.equals(((n) obj).f6706a);
         }
         return false;
     }
 
     @Override // com.google.android.gms.internal.measurement.m
     public final boolean g(String str) {
-        return this.f6633a.containsKey(str);
+        return this.f6706a.containsKey(str);
     }
 
     public final List h() {
-        return new ArrayList(this.f6633a.keySet());
+        return new ArrayList(this.f6706a.keySet());
     }
 
     public final int hashCode() {
-        return this.f6633a.hashCode();
+        return this.f6706a.hashCode();
     }
 
     public final String toString() {
         StringBuilder sb2 = new StringBuilder("{");
-        Map map = this.f6633a;
+        Map map = this.f6706a;
         if (!map.isEmpty()) {
             for (String str : map.keySet()) {
                 sb2.append(String.format("%s: %s,", str, map.get(str)));
@@ -98,6 +98,6 @@ public class n implements q, m {
 
     @Override // com.google.android.gms.internal.measurement.q
     public final Iterator zzf() {
-        return m.f(this.f6633a);
+        return m.f(this.f6706a);
     }
 }

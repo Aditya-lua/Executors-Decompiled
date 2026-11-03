@@ -6,20 +6,20 @@ import java.util.ArrayList;
 public class b implements d.a {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public a f37057e;
+    public a f37752e;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public i f37054a = null;
+    public i f37749a = null;
     public float b = 0.0f;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f37055c = false;
+    public boolean f37750c = false;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public ArrayList<i> f37056d = new ArrayList<>();
+    public ArrayList<i> f37751d = new ArrayList<>();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public boolean f37058f = false;
+    public boolean f37753f = false;
 
     public interface a {
         float a(i iVar);
@@ -51,80 +51,80 @@ public class b implements d.a {
     }
 
     public void A(d dVar, i iVar, boolean z10) {
-        if (iVar == null || !iVar.f37102g) {
+        if (iVar == null || !iVar.f37797g) {
             return;
         }
-        this.b += iVar.f37101f * this.f37057e.a(iVar);
-        this.f37057e.j(iVar, z10);
+        this.b += iVar.f37796f * this.f37752e.a(iVar);
+        this.f37752e.j(iVar, z10);
         if (z10) {
             iVar.d(this);
         }
-        if (d.f37064u && this.f37057e.h() == 0) {
-            this.f37058f = true;
+        if (d.f37759u && this.f37752e.h() == 0) {
+            this.f37753f = true;
             dVar.b = true;
         }
     }
 
     public void B(d dVar, b bVar, boolean z10) {
-        this.b += bVar.b * this.f37057e.e(bVar, z10);
+        this.b += bVar.b * this.f37752e.e(bVar, z10);
         if (z10) {
-            bVar.f37054a.d(this);
+            bVar.f37749a.d(this);
         }
-        if (d.f37064u && this.f37054a != null && this.f37057e.h() == 0) {
-            this.f37058f = true;
+        if (d.f37759u && this.f37749a != null && this.f37752e.h() == 0) {
+            this.f37753f = true;
             dVar.b = true;
         }
     }
 
     public void C(d dVar, i iVar, boolean z10) {
-        if (iVar == null || !iVar.f37109n) {
+        if (iVar == null || !iVar.f37804n) {
             return;
         }
-        float fA = this.f37057e.a(iVar);
-        this.b += iVar.f37111p * fA;
-        this.f37057e.j(iVar, z10);
+        float fA = this.f37752e.a(iVar);
+        this.b += iVar.f37806p * fA;
+        this.f37752e.j(iVar, z10);
         if (z10) {
             iVar.d(this);
         }
-        this.f37057e.f(dVar.f37082o.f37061d[iVar.f37110o], fA, z10);
-        if (d.f37064u && this.f37057e.h() == 0) {
-            this.f37058f = true;
+        this.f37752e.f(dVar.f37777o.f37756d[iVar.f37805o], fA, z10);
+        if (d.f37759u && this.f37752e.h() == 0) {
+            this.f37753f = true;
             dVar.b = true;
         }
     }
 
     public void D(d dVar) {
-        if (dVar.f37075h.length == 0) {
+        if (dVar.f37770h.length == 0) {
             return;
         }
         boolean z10 = false;
         while (!z10) {
-            int iH = this.f37057e.h();
+            int iH = this.f37752e.h();
             for (int i10 = 0; i10 < iH; i10++) {
-                i iVarB = this.f37057e.b(i10);
-                if (iVarB.f37099d != -1 || iVarB.f37102g || iVarB.f37109n) {
-                    this.f37056d.add(iVarB);
+                i iVarB = this.f37752e.b(i10);
+                if (iVarB.f37794d != -1 || iVarB.f37797g || iVarB.f37804n) {
+                    this.f37751d.add(iVarB);
                 }
             }
-            int size = this.f37056d.size();
+            int size = this.f37751d.size();
             if (size > 0) {
                 for (int i11 = 0; i11 < size; i11++) {
-                    i iVar = this.f37056d.get(i11);
-                    if (iVar.f37102g) {
+                    i iVar = this.f37751d.get(i11);
+                    if (iVar.f37797g) {
                         A(dVar, iVar, true);
-                    } else if (iVar.f37109n) {
+                    } else if (iVar.f37804n) {
                         C(dVar, iVar, true);
                     } else {
-                        B(dVar, dVar.f37075h[iVar.f37099d], true);
+                        B(dVar, dVar.f37770h[iVar.f37794d], true);
                     }
                 }
-                this.f37056d.clear();
+                this.f37751d.clear();
             } else {
                 z10 = true;
             }
         }
-        if (d.f37064u && this.f37054a != null && this.f37057e.h() == 0) {
-            this.f37058f = true;
+        if (d.f37759u && this.f37749a != null && this.f37752e.h() == 0) {
+            this.f37753f = true;
             dVar.b = true;
         }
     }
@@ -136,7 +136,7 @@ public class b implements d.a {
 
     @Override // z1.d.a
     public void b(i iVar) {
-        int i10 = iVar.f37100e;
+        int i10 = iVar.f37795e;
         float f10 = 1.0f;
         if (i10 != 1) {
             if (i10 == 2) {
@@ -149,36 +149,36 @@ public class b implements d.a {
                 f10 = 1.0E12f;
             }
         }
-        this.f37057e.c(iVar, f10);
+        this.f37752e.c(iVar, f10);
     }
 
     @Override // z1.d.a
     public void c(d.a aVar) {
         if (aVar instanceof b) {
             b bVar = (b) aVar;
-            this.f37054a = null;
-            this.f37057e.clear();
-            for (int i10 = 0; i10 < bVar.f37057e.h(); i10++) {
-                this.f37057e.f(bVar.f37057e.b(i10), bVar.f37057e.i(i10), true);
+            this.f37749a = null;
+            this.f37752e.clear();
+            for (int i10 = 0; i10 < bVar.f37752e.h(); i10++) {
+                this.f37752e.f(bVar.f37752e.b(i10), bVar.f37752e.i(i10), true);
             }
         }
     }
 
     @Override // z1.d.a
     public void clear() {
-        this.f37057e.clear();
-        this.f37054a = null;
+        this.f37752e.clear();
+        this.f37749a = null;
         this.b = 0.0f;
     }
 
     public b d(d dVar, int i10) {
-        this.f37057e.c(dVar.o(i10, "ep"), 1.0f);
-        this.f37057e.c(dVar.o(i10, "em"), -1.0f);
+        this.f37752e.c(dVar.o(i10, "ep"), 1.0f);
+        this.f37752e.c(dVar.o(i10, "em"), -1.0f);
         return this;
     }
 
     public b e(i iVar, int i10) {
-        this.f37057e.c(iVar, i10);
+        this.f37752e.c(iVar, i10);
         return this;
     }
 
@@ -191,14 +191,14 @@ public class b implements d.a {
             x(iVarG);
             z10 = false;
         }
-        if (this.f37057e.h() == 0) {
-            this.f37058f = true;
+        if (this.f37752e.h() == 0) {
+            this.f37753f = true;
         }
         return z10;
     }
 
     public i g(d dVar) {
-        int iH = this.f37057e.h();
+        int iH = this.f37752e.h();
         i iVar = null;
         float f10 = 0.0f;
         float f11 = 0.0f;
@@ -206,9 +206,9 @@ public class b implements d.a {
         boolean z11 = false;
         i iVar2 = null;
         for (int i10 = 0; i10 < iH; i10++) {
-            float fI = this.f37057e.i(i10);
-            i iVarB = this.f37057e.b(i10);
-            if (iVarB.f37105j == i.a.UNRESTRICTED) {
+            float fI = this.f37752e.i(i10);
+            i iVarB = this.f37752e.b(i10);
+            if (iVarB.f37800j == i.a.UNRESTRICTED) {
                 if (iVar == null || f10 > fI) {
                     boolean zU = u(iVarB, dVar);
                     z10 = zU;
@@ -237,43 +237,43 @@ public class b implements d.a {
 
     @Override // z1.d.a
     public i getKey() {
-        return this.f37054a;
+        return this.f37749a;
     }
 
     public b h(i iVar, i iVar2, int i10, float f10, i iVar3, i iVar4, int i11) {
         if (iVar2 == iVar3) {
-            this.f37057e.c(iVar, 1.0f);
-            this.f37057e.c(iVar4, 1.0f);
-            this.f37057e.c(iVar2, -2.0f);
+            this.f37752e.c(iVar, 1.0f);
+            this.f37752e.c(iVar4, 1.0f);
+            this.f37752e.c(iVar2, -2.0f);
             return this;
         }
         if (f10 == 0.5f) {
-            this.f37057e.c(iVar, 1.0f);
-            this.f37057e.c(iVar2, -1.0f);
-            this.f37057e.c(iVar3, -1.0f);
-            this.f37057e.c(iVar4, 1.0f);
+            this.f37752e.c(iVar, 1.0f);
+            this.f37752e.c(iVar2, -1.0f);
+            this.f37752e.c(iVar3, -1.0f);
+            this.f37752e.c(iVar4, 1.0f);
             if (i10 > 0 || i11 > 0) {
                 this.b = (-i10) + i11;
                 return this;
             }
         } else {
             if (f10 <= 0.0f) {
-                this.f37057e.c(iVar, -1.0f);
-                this.f37057e.c(iVar2, 1.0f);
+                this.f37752e.c(iVar, -1.0f);
+                this.f37752e.c(iVar2, 1.0f);
                 this.b = i10;
                 return this;
             }
             if (f10 >= 1.0f) {
-                this.f37057e.c(iVar4, -1.0f);
-                this.f37057e.c(iVar3, 1.0f);
+                this.f37752e.c(iVar4, -1.0f);
+                this.f37752e.c(iVar3, 1.0f);
                 this.b = -i11;
                 return this;
             }
             float f11 = 1.0f - f10;
-            this.f37057e.c(iVar, f11 * 1.0f);
-            this.f37057e.c(iVar2, f11 * (-1.0f));
-            this.f37057e.c(iVar3, (-1.0f) * f10);
-            this.f37057e.c(iVar4, 1.0f * f10);
+            this.f37752e.c(iVar, f11 * 1.0f);
+            this.f37752e.c(iVar2, f11 * (-1.0f));
+            this.f37752e.c(iVar3, (-1.0f) * f10);
+            this.f37752e.c(iVar4, 1.0f * f10);
             if (i10 > 0 || i11 > 0) {
                 this.b = ((-i10) * f11) + (i11 * f10);
                 return this;
@@ -283,68 +283,68 @@ public class b implements d.a {
     }
 
     public b i(i iVar, int i10) {
-        this.f37054a = iVar;
+        this.f37749a = iVar;
         float f10 = i10;
-        iVar.f37101f = f10;
+        iVar.f37796f = f10;
         this.b = f10;
-        this.f37058f = true;
+        this.f37753f = true;
         return this;
     }
 
     @Override // z1.d.a
     public boolean isEmpty() {
-        return this.f37054a == null && this.b == 0.0f && this.f37057e.h() == 0;
+        return this.f37749a == null && this.b == 0.0f && this.f37752e.h() == 0;
     }
 
     public b j(i iVar, i iVar2, float f10) {
-        this.f37057e.c(iVar, -1.0f);
-        this.f37057e.c(iVar2, f10);
+        this.f37752e.c(iVar, -1.0f);
+        this.f37752e.c(iVar2, f10);
         return this;
     }
 
     public b k(i iVar, i iVar2, i iVar3, i iVar4, float f10) {
-        this.f37057e.c(iVar, -1.0f);
-        this.f37057e.c(iVar2, 1.0f);
-        this.f37057e.c(iVar3, f10);
-        this.f37057e.c(iVar4, -f10);
+        this.f37752e.c(iVar, -1.0f);
+        this.f37752e.c(iVar2, 1.0f);
+        this.f37752e.c(iVar3, f10);
+        this.f37752e.c(iVar4, -f10);
         return this;
     }
 
     public b l(float f10, float f11, float f12, i iVar, i iVar2, i iVar3, i iVar4) {
         this.b = 0.0f;
         if (f11 == 0.0f || f10 == f12) {
-            this.f37057e.c(iVar, 1.0f);
-            this.f37057e.c(iVar2, -1.0f);
-            this.f37057e.c(iVar4, 1.0f);
-            this.f37057e.c(iVar3, -1.0f);
+            this.f37752e.c(iVar, 1.0f);
+            this.f37752e.c(iVar2, -1.0f);
+            this.f37752e.c(iVar4, 1.0f);
+            this.f37752e.c(iVar3, -1.0f);
             return this;
         }
         if (f10 == 0.0f) {
-            this.f37057e.c(iVar, 1.0f);
-            this.f37057e.c(iVar2, -1.0f);
+            this.f37752e.c(iVar, 1.0f);
+            this.f37752e.c(iVar2, -1.0f);
             return this;
         }
         if (f12 == 0.0f) {
-            this.f37057e.c(iVar3, 1.0f);
-            this.f37057e.c(iVar4, -1.0f);
+            this.f37752e.c(iVar3, 1.0f);
+            this.f37752e.c(iVar4, -1.0f);
             return this;
         }
         float f13 = (f10 / f11) / (f12 / f11);
-        this.f37057e.c(iVar, 1.0f);
-        this.f37057e.c(iVar2, -1.0f);
-        this.f37057e.c(iVar4, f13);
-        this.f37057e.c(iVar3, -f13);
+        this.f37752e.c(iVar, 1.0f);
+        this.f37752e.c(iVar2, -1.0f);
+        this.f37752e.c(iVar4, f13);
+        this.f37752e.c(iVar3, -f13);
         return this;
     }
 
     public b m(i iVar, int i10) {
         if (i10 < 0) {
             this.b = i10 * (-1);
-            this.f37057e.c(iVar, 1.0f);
+            this.f37752e.c(iVar, 1.0f);
             return this;
         }
         this.b = i10;
-        this.f37057e.c(iVar, -1.0f);
+        this.f37752e.c(iVar, -1.0f);
         return this;
     }
 
@@ -358,12 +358,12 @@ public class b implements d.a {
             this.b = i10;
         }
         if (z10) {
-            this.f37057e.c(iVar, 1.0f);
-            this.f37057e.c(iVar2, -1.0f);
+            this.f37752e.c(iVar, 1.0f);
+            this.f37752e.c(iVar2, -1.0f);
             return this;
         }
-        this.f37057e.c(iVar, -1.0f);
-        this.f37057e.c(iVar2, 1.0f);
+        this.f37752e.c(iVar, -1.0f);
+        this.f37752e.c(iVar2, 1.0f);
         return this;
     }
 
@@ -377,14 +377,14 @@ public class b implements d.a {
             this.b = i10;
         }
         if (z10) {
-            this.f37057e.c(iVar, 1.0f);
-            this.f37057e.c(iVar2, -1.0f);
-            this.f37057e.c(iVar3, -1.0f);
+            this.f37752e.c(iVar, 1.0f);
+            this.f37752e.c(iVar2, -1.0f);
+            this.f37752e.c(iVar3, -1.0f);
             return this;
         }
-        this.f37057e.c(iVar, -1.0f);
-        this.f37057e.c(iVar2, 1.0f);
-        this.f37057e.c(iVar3, 1.0f);
+        this.f37752e.c(iVar, -1.0f);
+        this.f37752e.c(iVar2, 1.0f);
+        this.f37752e.c(iVar3, 1.0f);
         return this;
     }
 
@@ -398,22 +398,22 @@ public class b implements d.a {
             this.b = i10;
         }
         if (z10) {
-            this.f37057e.c(iVar, 1.0f);
-            this.f37057e.c(iVar2, -1.0f);
-            this.f37057e.c(iVar3, 1.0f);
+            this.f37752e.c(iVar, 1.0f);
+            this.f37752e.c(iVar2, -1.0f);
+            this.f37752e.c(iVar3, 1.0f);
             return this;
         }
-        this.f37057e.c(iVar, -1.0f);
-        this.f37057e.c(iVar2, 1.0f);
-        this.f37057e.c(iVar3, -1.0f);
+        this.f37752e.c(iVar, -1.0f);
+        this.f37752e.c(iVar2, 1.0f);
+        this.f37752e.c(iVar3, -1.0f);
         return this;
     }
 
     public b q(i iVar, i iVar2, i iVar3, i iVar4, float f10) {
-        this.f37057e.c(iVar3, 0.5f);
-        this.f37057e.c(iVar4, 0.5f);
-        this.f37057e.c(iVar, -0.5f);
-        this.f37057e.c(iVar2, -0.5f);
+        this.f37752e.c(iVar3, 0.5f);
+        this.f37752e.c(iVar4, 0.5f);
+        this.f37752e.c(iVar, -0.5f);
+        this.f37752e.c(iVar2, -0.5f);
         this.b = -f10;
         return this;
     }
@@ -422,20 +422,20 @@ public class b implements d.a {
         float f10 = this.b;
         if (f10 < 0.0f) {
             this.b = f10 * (-1.0f);
-            this.f37057e.d();
+            this.f37752e.d();
         }
     }
 
     public boolean s() {
-        i iVar = this.f37054a;
+        i iVar = this.f37749a;
         if (iVar != null) {
-            return iVar.f37105j == i.a.UNRESTRICTED || this.b >= 0.0f;
+            return iVar.f37800j == i.a.UNRESTRICTED || this.b >= 0.0f;
         }
         return false;
     }
 
     public boolean t(i iVar) {
-        return this.f37057e.g(iVar);
+        return this.f37752e.g(iVar);
     }
 
     public String toString() {
@@ -443,7 +443,7 @@ public class b implements d.a {
     }
 
     public final boolean u(i iVar, d dVar) {
-        return iVar.f37108m <= 1;
+        return iVar.f37803m <= 1;
     }
 
     public i v(i iVar) {
@@ -452,14 +452,14 @@ public class b implements d.a {
 
     public final i w(boolean[] zArr, i iVar) {
         i.a aVar;
-        int iH = this.f37057e.h();
+        int iH = this.f37752e.h();
         i iVar2 = null;
         float f10 = 0.0f;
         for (int i10 = 0; i10 < iH; i10++) {
-            float fI = this.f37057e.i(i10);
+            float fI = this.f37752e.i(i10);
             if (fI < 0.0f) {
-                i iVarB = this.f37057e.b(i10);
-                if ((zArr == null || !zArr[iVarB.f37098c]) && iVarB != iVar && (((aVar = iVarB.f37105j) == i.a.SLACK || aVar == i.a.ERROR) && fI < f10)) {
+                i iVarB = this.f37752e.b(i10);
+                if ((zArr == null || !zArr[iVarB.f37793c]) && iVarB != iVar && (((aVar = iVarB.f37800j) == i.a.SLACK || aVar == i.a.ERROR) && fI < f10)) {
                     f10 = fI;
                     iVar2 = iVarB;
                 }
@@ -469,42 +469,42 @@ public class b implements d.a {
     }
 
     public void x(i iVar) {
-        i iVar2 = this.f37054a;
+        i iVar2 = this.f37749a;
         if (iVar2 != null) {
-            this.f37057e.c(iVar2, -1.0f);
-            this.f37054a.f37099d = -1;
-            this.f37054a = null;
+            this.f37752e.c(iVar2, -1.0f);
+            this.f37749a.f37794d = -1;
+            this.f37749a = null;
         }
-        float fJ = this.f37057e.j(iVar, true) * (-1.0f);
-        this.f37054a = iVar;
+        float fJ = this.f37752e.j(iVar, true) * (-1.0f);
+        this.f37749a = iVar;
         if (fJ == 1.0f) {
             return;
         }
         this.b /= fJ;
-        this.f37057e.k(fJ);
+        this.f37752e.k(fJ);
     }
 
     public void y() {
-        this.f37054a = null;
-        this.f37057e.clear();
+        this.f37749a = null;
+        this.f37752e.clear();
         this.b = 0.0f;
-        this.f37058f = false;
+        this.f37753f = false;
     }
 
     public String z() {
         boolean z10;
-        String str = (this.f37054a == null ? "0" : "" + this.f37054a) + " = ";
+        String str = (this.f37749a == null ? "0" : "" + this.f37749a) + " = ";
         if (this.b != 0.0f) {
             str = str + this.b;
             z10 = true;
         } else {
             z10 = false;
         }
-        int iH = this.f37057e.h();
+        int iH = this.f37752e.h();
         for (int i10 = 0; i10 < iH; i10++) {
-            i iVarB = this.f37057e.b(i10);
+            i iVarB = this.f37752e.b(i10);
             if (iVarB != null) {
-                float fI = this.f37057e.i(i10);
+                float fI = this.f37752e.i(i10);
                 if (fI != 0.0f) {
                     String string = iVarB.toString();
                     if (z10) {
@@ -530,6 +530,6 @@ public class b implements d.a {
     }
 
     public b(c cVar) {
-        this.f37057e = new z1.a(this, cVar);
+        this.f37752e = new z1.a(this, cVar);
     }
 }

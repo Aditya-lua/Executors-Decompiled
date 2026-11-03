@@ -2,10 +2,10 @@ package h;
 
 import android.content.Context;
 import android.content.Intent;
+import gt.s;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import jt.s;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.collections.CollectionsKt;
@@ -56,11 +56,11 @@ public final class g extends a<String[], Map<String, Boolean>> {
     @Override // h.a
     @Nullable
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public a.C0332a<Map<String, Boolean>> getSynchronousResult(@NotNull Context context, @NotNull String[] input) {
+    public a.C0334a<Map<String, Boolean>> getSynchronousResult(@NotNull Context context, @NotNull String[] input) {
         Intrinsics.checkNotNullParameter(context, "context");
         Intrinsics.checkNotNullParameter(input, "input");
         if (input.length == 0) {
-            return new a.C0332a<>(k0.j());
+            return new a.C0334a<>(k0.j());
         }
         for (String str : input) {
             if (l2.b.a(context, str) != 0) {
@@ -72,7 +72,7 @@ public final class g extends a<String[], Map<String, Boolean>> {
             Pair pairA = s.a(str2, Boolean.TRUE);
             linkedHashMap.put(pairA.c(), pairA.d());
         }
-        return new a.C0332a<>(linkedHashMap);
+        return new a.C0334a<>(linkedHashMap);
     }
 
     @Override // h.a

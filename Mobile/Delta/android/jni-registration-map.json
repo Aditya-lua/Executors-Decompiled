@@ -3,24 +3,24 @@
     "java_class": "com/roblox/gloop/Loader",
     "name": "nativeStart",
     "signature": "(Landroid/app/Activity;Lcom/roblox/gloop/Loader;)I",
-    "address": "0x601084"
+    "address": "0x62851c"
   },
   {
     "java_class": "com/roblox/gloop/Loader",
     "name": "nativeResize",
     "signature": "(II)V",
-    "address": "0x6186a8"
+    "address": "0x61bb3c"
   },
   {
     "java_class": "com/roblox/engine/jni/NativeQuoteInterface",
     "name": "requestResponseContinue",
     "signature": "([B)[B",
-    "address": "0x5f8224"
+    "address": "0x5f66c8"
   },
   {
-    "java_class": "gk/z",
+    "java_class": "ek/a0",
     "name": "a",
     "signature": "(Landroid/content/Context;Ljava/lang/String;)Z",
-    "address": "0x729fa0"
+    "address": "0x72aa20"
   }
 ]

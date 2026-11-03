@@ -14,11 +14,11 @@ import androidx.annotation.NonNull;
 public class d0 extends ToggleButton {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final e f28969a;
+    public final e f29322a;
     public final a0 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public n f28970c;
+    public n f29323c;
 
     public d0(@NonNull Context context, AttributeSet attributeSet) {
         this(context, attributeSet, R.attr.buttonStyleToggle);
@@ -26,16 +26,16 @@ public class d0 extends ToggleButton {
 
     @NonNull
     private n getEmojiTextViewHelper() {
-        if (this.f28970c == null) {
-            this.f28970c = new n(this);
+        if (this.f29323c == null) {
+            this.f29323c = new n(this);
         }
-        return this.f28970c;
+        return this.f29323c;
     }
 
     @Override // android.widget.ToggleButton, android.widget.CompoundButton, android.widget.TextView, android.view.View
     public void drawableStateChanged() {
         super.drawableStateChanged();
-        e eVar = this.f28969a;
+        e eVar = this.f29322a;
         if (eVar != null) {
             eVar.b();
         }
@@ -46,7 +46,7 @@ public class d0 extends ToggleButton {
     }
 
     public ColorStateList getSupportBackgroundTintList() {
-        e eVar = this.f28969a;
+        e eVar = this.f29322a;
         if (eVar != null) {
             return eVar.c();
         }
@@ -54,7 +54,7 @@ public class d0 extends ToggleButton {
     }
 
     public PorterDuff.Mode getSupportBackgroundTintMode() {
-        e eVar = this.f28969a;
+        e eVar = this.f29322a;
         if (eVar != null) {
             return eVar.d();
         }
@@ -78,7 +78,7 @@ public class d0 extends ToggleButton {
     @Override // android.widget.ToggleButton, android.view.View
     public void setBackgroundDrawable(Drawable drawable) {
         super.setBackgroundDrawable(drawable);
-        e eVar = this.f28969a;
+        e eVar = this.f29322a;
         if (eVar != null) {
             eVar.f(drawable);
         }
@@ -87,7 +87,7 @@ public class d0 extends ToggleButton {
     @Override // android.view.View
     public void setBackgroundResource(int i10) {
         super.setBackgroundResource(i10);
-        e eVar = this.f28969a;
+        e eVar = this.f29322a;
         if (eVar != null) {
             eVar.g(i10);
         }
@@ -121,14 +121,14 @@ public class d0 extends ToggleButton {
     }
 
     public void setSupportBackgroundTintList(ColorStateList colorStateList) {
-        e eVar = this.f28969a;
+        e eVar = this.f29322a;
         if (eVar != null) {
             eVar.i(colorStateList);
         }
     }
 
     public void setSupportBackgroundTintMode(PorterDuff.Mode mode) {
-        e eVar = this.f28969a;
+        e eVar = this.f29322a;
         if (eVar != null) {
             eVar.j(mode);
         }
@@ -148,7 +148,7 @@ public class d0 extends ToggleButton {
         super(context, attributeSet, i10);
         v0.a(this, getContext());
         e eVar = new e(this);
-        this.f28969a = eVar;
+        this.f29322a = eVar;
         eVar.e(attributeSet, i10);
         a0 a0Var = new a0(this);
         this.b = a0Var;

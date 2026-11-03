@@ -15,47 +15,47 @@ import kotlin.jvm.functions.Function0;
 public class f1 extends x5.p0 {
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public static final String f35613m = x5.w.i("WorkManagerImpl");
+    public static final String f36470m = x5.w.i("WorkManagerImpl");
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public static f1 f35614n = null;
+    public static f1 f36471n = null;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public static f1 f35615o = null;
+    public static f1 f36472o = null;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public static final Object f35616p = new Object();
+    public static final Object f36473p = new Object();
     public Context b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public androidx.work.a f35617c;
+    public androidx.work.a f36474c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public WorkDatabase f35618d;
+    public WorkDatabase f36475d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public h6.b f35619e;
+    public h6.b f36476e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public List<u> f35620f;
+    public List<u> f36477f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public s f35621g;
+    public s f36478g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public g6.w f35622h;
+    public g6.w f36479h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public boolean f35623i = false;
+    public boolean f36480i = false;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public BroadcastReceiver.PendingResult f35624j;
+    public BroadcastReceiver.PendingResult f36481j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final d6.n f35625k;
+    public final d6.n f36482k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final ku.p0 f35626l;
+    public final iu.p0 f36483l;
 
     public static class a {
         public static boolean a(Context context) {
@@ -70,33 +70,33 @@ public class f1 extends x5.p0 {
         }
         x5.w.h(new x5.w.a(aVar.getMinimumLoggingLevel()));
         this.b = applicationContext;
-        this.f35619e = bVar;
-        this.f35618d = workDatabase;
-        this.f35621g = sVar;
-        this.f35625k = nVar;
-        this.f35617c = aVar;
-        this.f35620f = list;
-        ku.p0 p0VarF = androidx.work.impl.a.f(bVar);
-        this.f35626l = p0VarF;
-        this.f35622h = new g6.w(this.f35618d);
-        x.e(list, this.f35621g, bVar.c(), this.f35618d, aVar);
-        this.f35619e.d(new ForceStopRunnable(applicationContext, this));
+        this.f36476e = bVar;
+        this.f36475d = workDatabase;
+        this.f36478g = sVar;
+        this.f36482k = nVar;
+        this.f36474c = aVar;
+        this.f36477f = list;
+        iu.p0 p0VarF = androidx.work.impl.a.f(bVar);
+        this.f36483l = p0VarF;
+        this.f36479h = new g6.w(this.f36475d);
+        x.e(list, this.f36478g, bVar.c(), this.f36475d, aVar);
+        this.f36476e.d(new ForceStopRunnable(applicationContext, this));
         d0.c(p0VarF, this.b, aVar, workDatabase);
     }
 
     public static void i(Context context, androidx.work.a aVar) {
-        synchronized (f35616p) {
+        synchronized (f36473p) {
             try {
-                f1 f1Var = f35614n;
-                if (f1Var != null && f35615o != null) {
+                f1 f1Var = f36471n;
+                if (f1Var != null && f36472o != null) {
                     throw new IllegalStateException("WorkManager is already initialized.  Did you try to initialize it manually without disabling WorkManagerInitializer? See WorkManager#initialize(Context, Configuration) or the class level Javadoc for more information.");
                 }
                 if (f1Var == null) {
                     Context applicationContext = context.getApplicationContext();
-                    if (f35615o == null) {
-                        f35615o = androidx.work.impl.a.c(applicationContext, aVar);
+                    if (f36472o == null) {
+                        f36472o = androidx.work.impl.a.c(applicationContext, aVar);
                     }
-                    f35614n = f35615o;
+                    f36471n = f36472o;
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -108,18 +108,18 @@ public class f1 extends x5.p0 {
         a6.f.d(f1Var.m());
         f1Var.u().c0().p();
         x.f(f1Var.n(), f1Var.u(), f1Var.s());
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     @Deprecated
     public static f1 o() {
-        synchronized (f35616p) {
+        synchronized (f36473p) {
             try {
-                f1 f1Var = f35614n;
+                f1 f1Var = f36471n;
                 if (f1Var != null) {
                     return f1Var;
                 }
-                return f35615o;
+                return f36472o;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -129,7 +129,7 @@ public class f1 extends x5.p0 {
     /* JADX WARN: Multi-variable type inference failed */
     public static f1 p(Context context) {
         f1 f1VarO;
-        synchronized (f35616p) {
+        synchronized (f36473p) {
             try {
                 f1VarO = o();
                 if (f1VarO == null) {
@@ -188,41 +188,41 @@ public class f1 extends x5.p0 {
     }
 
     public androidx.work.a n() {
-        return this.f35617c;
+        return this.f36474c;
     }
 
     public g6.w q() {
-        return this.f35622h;
+        return this.f36479h;
     }
 
     public s r() {
-        return this.f35621g;
+        return this.f36478g;
     }
 
     public List<u> s() {
-        return this.f35620f;
+        return this.f36477f;
     }
 
     public d6.n t() {
-        return this.f35625k;
+        return this.f36482k;
     }
 
     public WorkDatabase u() {
-        return this.f35618d;
+        return this.f36475d;
     }
 
     public h6.b v() {
-        return this.f35619e;
+        return this.f36476e;
     }
 
     public void w() {
-        synchronized (f35616p) {
+        synchronized (f36473p) {
             try {
-                this.f35623i = true;
-                BroadcastReceiver.PendingResult pendingResult = this.f35624j;
+                this.f36480i = true;
+                BroadcastReceiver.PendingResult pendingResult = this.f36481j;
                 if (pendingResult != null) {
                     pendingResult.finish();
-                    this.f35624j = null;
+                    this.f36481j = null;
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -234,22 +234,22 @@ public class f1 extends x5.p0 {
         x5.m0.a(n().getTracer(), "ReschedulingWork", new Function0() { // from class: y5.e1
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return f1.j(this.f35602a);
+                return f1.j(this.f36459a);
             }
         });
     }
 
     public void y(BroadcastReceiver.PendingResult pendingResult) {
-        synchronized (f35616p) {
+        synchronized (f36473p) {
             try {
-                BroadcastReceiver.PendingResult pendingResult2 = this.f35624j;
+                BroadcastReceiver.PendingResult pendingResult2 = this.f36481j;
                 if (pendingResult2 != null) {
                     pendingResult2.finish();
                 }
-                this.f35624j = pendingResult;
-                if (this.f35623i) {
+                this.f36481j = pendingResult;
+                if (this.f36480i) {
                     pendingResult.finish();
-                    this.f35624j = null;
+                    this.f36481j = null;
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -258,6 +258,6 @@ public class f1 extends x5.p0 {
     }
 
     public void z(WorkGenerationalId workGenerationalId, int i10) {
-        this.f35619e.d(new g6.z(this.f35621g, new y(workGenerationalId), true, i10));
+        this.f36476e.d(new g6.z(this.f36478g, new y(workGenerationalId), true, i10));
     }
 }

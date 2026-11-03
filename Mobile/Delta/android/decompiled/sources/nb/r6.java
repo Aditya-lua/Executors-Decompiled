@@ -8,11 +8,11 @@ import java.util.Objects;
 public final class r6 implements gg {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ x6 f25925a;
+    public final /* synthetic */ x6 f26746a;
 
     public r6(x6 x6Var) {
         Objects.requireNonNull(x6Var);
-        this.f25925a = x6Var;
+        this.f26746a = x6Var;
     }
 
     @Override // com.google.android.gms.internal.measurement.gg
@@ -20,21 +20,21 @@ public final class r6 implements gg {
         u5 u5VarV;
         int i11 = i10 - 1;
         if (i11 == 0) {
-            u5VarV = this.f25925a.f25625a.a().v();
+            u5VarV = this.f26746a.f26446a.a().v();
         } else if (i11 != 1) {
             if (i11 == 3) {
-                u5VarV = this.f25925a.f25625a.a().w();
+                u5VarV = this.f26746a.f26446a.a().w();
             } else if (i11 != 4) {
-                u5VarV = this.f25925a.f25625a.a().u();
+                u5VarV = this.f26746a.f26446a.a().u();
             } else if (z10) {
-                u5VarV = this.f25925a.f25625a.a().s();
+                u5VarV = this.f26746a.f26446a.a().s();
             } else {
-                u5VarV = !z11 ? this.f25925a.f25625a.a().t() : this.f25925a.f25625a.a().r();
+                u5VarV = !z11 ? this.f26746a.f26446a.a().t() : this.f26746a.f26446a.a().r();
             }
         } else if (z10) {
-            u5VarV = this.f25925a.f25625a.a().p();
+            u5VarV = this.f26746a.f26446a.a().p();
         } else {
-            u5VarV = !z11 ? this.f25925a.f25625a.a().q() : this.f25925a.f25625a.a().o();
+            u5VarV = !z11 ? this.f26746a.f26446a.a().q() : this.f26746a.f26446a.a().o();
         }
         int size = list.size();
         if (size == 1) {

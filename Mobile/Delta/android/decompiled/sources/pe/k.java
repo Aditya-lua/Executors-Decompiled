@@ -1,256 +1,206 @@
 package pe;
 
-import java.security.GeneralSecurityException;
-import java.security.InvalidAlgorithmParameterException;
-import java.util.Objects;
+import af.j0;
+import af.k0;
+import af.p0;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.Charset;
 
 /* JADX INFO: loaded from: classes2.dex */
-public final class k extends pe.c {
-
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f28469a;
-    public final int b;
+public final class k implements r {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final int f28470c;
+    public static final Charset f28675c = Charset.forName("UTF-8");
 
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final int f28471d;
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final InputStream f28676a;
+    public boolean b = false;
 
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final d f28472e;
+    public k(InputStream inputStream) {
+        this.f28676a = inputStream;
+    }
 
-    /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final c f28473f;
+    public static int c(jg.l lVar) throws IOException {
+        if (!lVar.u()) {
+            throw new IOException("invalid key id: not a JSON primitive");
+        }
+        if (!lVar.h().C()) {
+            throw new IOException("invalid key id: not a JSON number");
+        }
+        try {
+            long jA = we.k.a(lVar.h().k());
+            if (jA > 4294967295L || jA < -2147483648L) {
+                throw new IOException("invalid key id");
+            }
+            return (int) jA;
+        } catch (NumberFormatException e10) {
+            throw new IOException(e10);
+        }
+    }
 
-    public static final class b {
+    public static af.f0.c d(String str) {
+        str.getClass();
+        switch (str) {
+            case "REMOTE":
+                return af.f0.c.REMOTE;
+            case "SYMMETRIC":
+                return af.f0.c.SYMMETRIC;
+            case "ASYMMETRIC_PRIVATE":
+                return af.f0.c.ASYMMETRIC_PRIVATE;
+            case "ASYMMETRIC_PUBLIC":
+                return af.f0.c.ASYMMETRIC_PUBLIC;
+            default:
+                throw new jg.p("unknown key material type: " + str);
+        }
+    }
 
-        /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public Integer f28474a;
-        public Integer b;
+    public static p0 e(String str) {
+        str.getClass();
+        switch (str) {
+            case "LEGACY":
+                return p0.LEGACY;
+            case "RAW":
+                return p0.RAW;
+            case "TINK":
+                return p0.TINK;
+            case "CRUNCHY":
+                return p0.CRUNCHY;
+            default:
+                throw new jg.p("unknown output prefix type: " + str);
+        }
+    }
 
-        /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public Integer f28475c;
+    public static af.g0 f(String str) {
+        str.getClass();
+        switch (str) {
+            case "ENABLED":
+                return af.g0.ENABLED;
+            case "DESTROYED":
+                return af.g0.DESTROYED;
+            case "DISABLED":
+                return af.g0.DISABLED;
+            default:
+                throw new jg.p("unknown status: " + str);
+        }
+    }
 
-        /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public Integer f28476d;
+    public static k0.c i(jg.o oVar) {
+        return k0.c.e0().E(f(oVar.E("status").l())).C(c(oVar.E("keyId"))).D(e(oVar.E("outputPrefixType").l())).G(oVar.E("typeUrl").l()).build();
+    }
 
-        /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public c f28477e;
+    public static k0 k(jg.o oVar) {
+        k0.b bVarE0 = k0.e0();
+        if (oVar.H("primaryKeyId")) {
+            bVarE0.D(c(oVar.E("primaryKeyId")));
+        }
+        if (oVar.H("keyInfo")) {
+            jg.i iVarF = oVar.F("keyInfo");
+            for (int i10 = 0; i10 < iVarF.size(); i10++) {
+                bVarE0.C(i(iVarF.A(i10).g()));
+            }
+        }
+        return bVarE0.build();
+    }
 
-        /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public d f28478f;
+    public static void l(jg.o oVar) {
+        if (!oVar.H("encryptedKeyset")) {
+            throw new jg.p("invalid encrypted keyset");
+        }
+    }
 
-        public static void h(int i10, c cVar) throws GeneralSecurityException {
-            if (cVar == c.b) {
-                if (i10 > 20) {
-                    throw new GeneralSecurityException(String.format("Invalid tag size in bytes %d; can be at most 20 bytes for SHA1", Integer.valueOf(i10)));
+    public static k m(String str) {
+        return new k(new ByteArrayInputStream(str.getBytes(f28675c)));
+    }
+
+    @Override // pe.r
+    public af.a0 a() throws IOException {
+        try {
+            try {
+                af.a0 a0VarB = b(we.k.c(new String(i0.c(this.f28676a), f28675c)).g());
+                InputStream inputStream = this.f28676a;
+                if (inputStream != null) {
+                    inputStream.close();
                 }
-                return;
-            }
-            if (cVar == c.f28479c) {
-                if (i10 > 28) {
-                    throw new GeneralSecurityException(String.format("Invalid tag size in bytes %d; can be at most 28 bytes for SHA224", Integer.valueOf(i10)));
+                return a0VarB;
+            } catch (Throwable th2) {
+                InputStream inputStream2 = this.f28676a;
+                if (inputStream2 != null) {
+                    inputStream2.close();
                 }
-                return;
+                throw th2;
             }
-            if (cVar == c.f28480d) {
-                if (i10 > 32) {
-                    throw new GeneralSecurityException(String.format("Invalid tag size in bytes %d; can be at most 32 bytes for SHA256", Integer.valueOf(i10)));
+        } catch (IllegalStateException | jg.p e10) {
+            throw new IOException(e10);
+        }
+    }
+
+    public final af.a0 b(jg.o oVar) {
+        l(oVar);
+        byte[] bArrE = this.b ? df.d.e(oVar.E("encryptedKeyset").l()) : df.d.a(oVar.E("encryptedKeyset").l());
+        return oVar.H("keysetInfo") ? af.a0.f0().D(com.google.crypto.tink.shaded.protobuf.h.e(bArrE)).E(k(oVar.G("keysetInfo"))).build() : af.a0.f0().D(com.google.crypto.tink.shaded.protobuf.h.e(bArrE)).build();
+    }
+
+    public final af.f0 g(jg.o oVar) {
+        if (oVar.H("typeUrl") && oVar.H("value") && oVar.H("keyMaterialType")) {
+            return af.f0.h0().D(oVar.E("typeUrl").l()).E(com.google.crypto.tink.shaded.protobuf.h.e(this.b ? df.d.e(oVar.E("value").l()) : df.d.a(oVar.E("value").l()))).C(d(oVar.E("keyMaterialType").l())).build();
+        }
+        throw new jg.p("invalid keyData");
+    }
+
+    public final j0.c h(jg.o oVar) {
+        if (!oVar.H("keyData") || !oVar.H("status") || !oVar.H("keyId") || !oVar.H("outputPrefixType")) {
+            throw new jg.p("invalid key");
+        }
+        jg.l lVarE = oVar.E("keyData");
+        if (lVarE.t()) {
+            return j0.c.j0().J(f(oVar.E("status").l())).E(c(oVar.E("keyId"))).G(e(oVar.E("outputPrefixType").l())).D(g(lVarE.g())).build();
+        }
+        throw new jg.p("invalid key: keyData must be an object");
+    }
+
+    public final j0 j(jg.o oVar) {
+        if (!oVar.H("key")) {
+            throw new jg.p("invalid keyset: no key");
+        }
+        jg.l lVarE = oVar.E("key");
+        if (!lVarE.m()) {
+            throw new jg.p("invalid keyset: key must be an array");
+        }
+        jg.i iVarF = lVarE.f();
+        if (iVarF.size() == 0) {
+            throw new jg.p("invalid keyset: key is empty");
+        }
+        j0.b bVarI0 = j0.i0();
+        if (oVar.H("primaryKeyId")) {
+            bVarI0.D(c(oVar.E("primaryKeyId")));
+        }
+        for (int i10 = 0; i10 < iVarF.size(); i10++) {
+            bVarI0.C(h(iVarF.A(i10).g()));
+        }
+        return bVarI0.build();
+    }
+
+    @Override // pe.r
+    public j0 read() throws IOException {
+        try {
+            try {
+                j0 j0VarJ = j(we.k.c(new String(i0.c(this.f28676a), f28675c)).g());
+                InputStream inputStream = this.f28676a;
+                if (inputStream != null) {
+                    inputStream.close();
                 }
-            } else if (cVar == c.f28481e) {
-                if (i10 > 48) {
-                    throw new GeneralSecurityException(String.format("Invalid tag size in bytes %d; can be at most 48 bytes for SHA384", Integer.valueOf(i10)));
+                return j0VarJ;
+            } catch (Throwable th2) {
+                InputStream inputStream2 = this.f28676a;
+                if (inputStream2 != null) {
+                    inputStream2.close();
                 }
-            } else {
-                if (cVar != c.f28482f) {
-                    throw new GeneralSecurityException("unknown hash type; must be SHA1, SHA224, SHA256, SHA384 or SHA512");
-                }
-                if (i10 > 64) {
-                    throw new GeneralSecurityException(String.format("Invalid tag size in bytes %d; can be at most 64 bytes for SHA512", Integer.valueOf(i10)));
-                }
+                throw th2;
             }
+        } catch (IllegalStateException | jg.p e10) {
+            throw new IOException(e10);
         }
-
-        public k a() throws GeneralSecurityException {
-            if (this.f28474a == null) {
-                throw new GeneralSecurityException("AES key size is not set");
-            }
-            if (this.b == null) {
-                throw new GeneralSecurityException("HMAC key size is not set");
-            }
-            if (this.f28475c == null) {
-                throw new GeneralSecurityException("iv size is not set");
-            }
-            Integer num = this.f28476d;
-            if (num == null) {
-                throw new GeneralSecurityException("tag size is not set");
-            }
-            if (this.f28477e == null) {
-                throw new GeneralSecurityException("hash type is not set");
-            }
-            if (this.f28478f == null) {
-                throw new GeneralSecurityException("variant is not set");
-            }
-            h(num.intValue(), this.f28477e);
-            return new k(this.f28474a.intValue(), this.b.intValue(), this.f28475c.intValue(), this.f28476d.intValue(), this.f28478f, this.f28477e);
-        }
-
-        public b b(int i10) throws InvalidAlgorithmParameterException {
-            if (i10 != 16 && i10 != 24 && i10 != 32) {
-                throw new InvalidAlgorithmParameterException(String.format("Invalid key size %d; only 16-byte, 24-byte and 32-byte AES keys are supported", Integer.valueOf(i10)));
-            }
-            this.f28474a = Integer.valueOf(i10);
-            return this;
-        }
-
-        public b c(c cVar) {
-            this.f28477e = cVar;
-            return this;
-        }
-
-        public b d(int i10) throws InvalidAlgorithmParameterException {
-            if (i10 < 16) {
-                throw new InvalidAlgorithmParameterException(String.format("Invalid key size in bytes %d; HMAC key must be at least 16 bytes", Integer.valueOf(i10)));
-            }
-            this.b = Integer.valueOf(i10);
-            return this;
-        }
-
-        public b e(int i10) throws GeneralSecurityException {
-            if (i10 < 12 || i10 > 16) {
-                throw new GeneralSecurityException(String.format("Invalid IV size in bytes %d; IV size must be between 12 and 16 bytes", Integer.valueOf(i10)));
-            }
-            this.f28475c = Integer.valueOf(i10);
-            return this;
-        }
-
-        public b f(int i10) throws GeneralSecurityException {
-            if (i10 < 10) {
-                throw new GeneralSecurityException(String.format("Invalid tag size in bytes %d; must be at least 10 bytes", Integer.valueOf(i10)));
-            }
-            this.f28476d = Integer.valueOf(i10);
-            return this;
-        }
-
-        public b g(d dVar) {
-            this.f28478f = dVar;
-            return this;
-        }
-
-        public b() {
-            this.f28474a = null;
-            this.b = null;
-            this.f28475c = null;
-            this.f28476d = null;
-            this.f28477e = null;
-            this.f28478f = d.f28485d;
-        }
-    }
-
-    public static final class c {
-        public static final c b = new c("SHA1");
-
-        /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static final c f28479c = new c("SHA224");
-
-        /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final c f28480d = new c("SHA256");
-
-        /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public static final c f28481e = new c("SHA384");
-
-        /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public static final c f28482f = new c("SHA512");
-
-        /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final String f28483a;
-
-        public c(String str) {
-            this.f28483a = str;
-        }
-
-        public String toString() {
-            return this.f28483a;
-        }
-    }
-
-    public static final class d {
-        public static final d b = new d("TINK");
-
-        /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static final d f28484c = new d("CRUNCHY");
-
-        /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final d f28485d = new d("NO_PREFIX");
-
-        /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final String f28486a;
-
-        public d(String str) {
-            this.f28486a = str;
-        }
-
-        public String toString() {
-            return this.f28486a;
-        }
-    }
-
-    public static b b() {
-        return new b();
-    }
-
-    @Override // oe.x
-    public boolean a() {
-        return this.f28472e != d.f28485d;
-    }
-
-    public int c() {
-        return this.f28469a;
-    }
-
-    public c d() {
-        return this.f28473f;
-    }
-
-    public int e() {
-        return this.b;
-    }
-
-    public boolean equals(Object obj) {
-        if (!(obj instanceof k)) {
-            return false;
-        }
-        k kVar = (k) obj;
-        return kVar.c() == c() && kVar.e() == e() && kVar.f() == f() && kVar.g() == g() && kVar.h() == h() && kVar.d() == d();
-    }
-
-    public int f() {
-        return this.f28470c;
-    }
-
-    public int g() {
-        return this.f28471d;
-    }
-
-    public d h() {
-        return this.f28472e;
-    }
-
-    public int hashCode() {
-        return Objects.hash(k.class, Integer.valueOf(this.f28469a), Integer.valueOf(this.b), Integer.valueOf(this.f28470c), Integer.valueOf(this.f28471d), this.f28472e, this.f28473f);
-    }
-
-    public String toString() {
-        return "AesCtrHmacAead Parameters (variant: " + this.f28472e + ", hashType: " + this.f28473f + ", " + this.f28470c + "-byte IV, and " + this.f28471d + "-byte tags, and " + this.f28469a + "-byte AES key, and " + this.b + "-byte HMAC key)";
-    }
-
-    public k(int i10, int i11, int i12, int i13, d dVar, c cVar) {
-        this.f28469a = i10;
-        this.b = i11;
-        this.f28470c = i12;
-        this.f28471d = i13;
-        this.f28472e = dVar;
-        this.f28473f = cVar;
     }
 }

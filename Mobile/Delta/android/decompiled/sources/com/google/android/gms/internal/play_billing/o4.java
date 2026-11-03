@@ -4,10 +4,10 @@ package com.google.android.gms.internal.play_billing;
 public final class o4 implements v5 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final o4 f7198a = new o4();
+    public static final o4 f7272a = new o4();
 
     public static o4 c() {
-        return f7198a;
+        return f7272a;
     }
 
     @Override // com.google.android.gms.internal.play_billing.v5

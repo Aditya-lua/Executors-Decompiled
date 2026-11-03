@@ -4,14 +4,14 @@ package androidx.datastore.preferences.protobuf;
 public final class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static boolean f2154a;
+    public static boolean f1999a;
     public static final Class<?> b = a("libcore.io.Memory");
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final boolean f2155c;
+    public static final boolean f2000c;
 
     static {
-        f2155c = (f2154a || a("org.robolectric.Robolectric") == null) ? false : true;
+        f2000c = (f1999a || a("org.robolectric.Robolectric") == null) ? false : true;
     }
 
     public static <T> Class<T> a(String str) {
@@ -27,9 +27,9 @@ public final class d {
     }
 
     public static boolean c() {
-        if (f2154a) {
+        if (f1999a) {
             return true;
         }
-        return (b == null || f2155c) ? false : true;
+        return (b == null || f2000c) ? false : true;
     }
 }

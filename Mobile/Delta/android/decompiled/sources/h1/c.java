@@ -1,7 +1,7 @@
 package h1;
 
-import me.x;
 import n0.a3;
+import ne.x;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface c<T> extends a3<a> {

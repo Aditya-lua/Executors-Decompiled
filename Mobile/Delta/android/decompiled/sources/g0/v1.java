@@ -7,7 +7,7 @@ import android.util.Rational;
 public abstract class v1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Rational f17543a;
+    public Rational f18082a;
 
     public v1() {
         this(null);
@@ -25,14 +25,14 @@ public abstract class v1 {
 
     public final u1 c(float f10, float f11, float f12) {
         PointF pointFA = a(f10, f11);
-        return new u1(pointFA.x, pointFA.y, f12, this.f17543a);
+        return new u1(pointFA.x, pointFA.y, f12, this.f18082a);
     }
 
     public void e(Rational rational) {
-        this.f17543a = rational;
+        this.f18082a = rational;
     }
 
     public v1(Rational rational) {
-        this.f17543a = rational;
+        this.f18082a = rational;
     }
 }

@@ -21,7 +21,7 @@ public final class NetworkHeaders {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static final NetworkHeaders f31657c = new a().b();
+    public static final NetworkHeaders f32176c = new a().b();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
     @NotNull

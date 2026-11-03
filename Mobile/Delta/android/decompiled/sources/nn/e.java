@@ -1,48 +1,185 @@
 package nn;
 
+import com.appsflyer.R;
+import qn.i;
+
 /* JADX INFO: loaded from: classes3.dex */
 public class e {
-
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final qn.b0 f26374a;
-    public final sn.h b;
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final qn.b0 f26375c;
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final sn.h f26376d;
-
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final sn.h f26377e;
-
-    /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final e f26378f;
-
-    /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final g f26379g;
-
-    /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public boolean f26380h = true;
-
-    /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public boolean f26381i = false;
-
-    public e(qn.b0 b0Var, sn.h hVar, qn.b0 b0Var2, sn.h hVar2, sn.h hVar3, e eVar, g gVar) {
-        this.f26374a = b0Var;
-        this.b = hVar;
-        this.f26375c = b0Var2;
-        this.f26376d = hVar2;
-        this.f26377e = hVar3;
-        this.f26378f = eVar;
-        this.f26379g = gVar;
+    public static boolean a(char c10) {
+        switch (c10) {
+            case '!':
+            case '\"':
+            case '#':
+            case '$':
+            case '%':
+            case '&':
+            case '\'':
+            case '(':
+            case ')':
+            case '*':
+            case '+':
+            case ',':
+            case '-':
+            case '.':
+            case '/':
+                return true;
+            default:
+                switch (c10) {
+                    case ':':
+                    case ';':
+                    case '<':
+                    case '=':
+                    case '>':
+                    case '?':
+                    case '@':
+                        return true;
+                    default:
+                        switch (c10) {
+                            case '[':
+                            case '\\':
+                            case ']':
+                            case '^':
+                            case '_':
+                            case '`':
+                                return true;
+                            default:
+                                switch (c10) {
+                                    case '{':
+                                    case R.styleable.AppCompatTheme_windowMinWidthMajor /* 124 */:
+                                    case R.styleable.AppCompatTheme_windowMinWidthMinor /* 125 */:
+                                    case '~':
+                                        return true;
+                                    default:
+                                        return false;
+                                }
+                        }
+                }
+        }
     }
 
-    public static e a(qn.b0 b0Var, sn.h hVar, sn.h hVar2, e eVar, g gVar) {
-        return new e(null, null, b0Var, hVar, hVar2, eVar, gVar);
+    public static boolean b(i iVar) {
+        char cL;
+        if (!iVar.e()) {
+            return false;
+        }
+        if (!iVar.i('<')) {
+            return c(iVar);
+        }
+        while (iVar.e() && (cL = iVar.l()) != '\n' && cL != '<') {
+            if (cL == '>') {
+                iVar.h();
+                return true;
+            }
+            if (cL != '\\') {
+                iVar.h();
+            } else {
+                iVar.h();
+                if (a(iVar.l())) {
+                    iVar.h();
+                }
+            }
+        }
+        return false;
     }
 
-    public static e b(qn.b0 b0Var, sn.h hVar, qn.b0 b0Var2, sn.h hVar2, sn.h hVar3, e eVar, g gVar) {
-        return new e(b0Var, hVar, b0Var2, hVar2, hVar3, eVar, gVar);
+    public static boolean c(i iVar) {
+        int i10 = 0;
+        boolean z10 = true;
+        while (iVar.e()) {
+            char cL = iVar.l();
+            if (cL == ' ') {
+                return !z10;
+            }
+            if (cL == '\\') {
+                iVar.h();
+                if (a(iVar.l())) {
+                    iVar.h();
+                }
+            } else if (cL == '(') {
+                i10++;
+                if (i10 > 32) {
+                    return false;
+                }
+                iVar.h();
+            } else if (cL != ')') {
+                if (Character.isISOControl(cL)) {
+                    return !z10;
+                }
+                iVar.h();
+            } else {
+                if (i10 == 0) {
+                    return true;
+                }
+                i10--;
+                iVar.h();
+            }
+            z10 = false;
+        }
+        return true;
+    }
+
+    public static boolean d(i iVar) {
+        while (iVar.e()) {
+            switch (iVar.l()) {
+                case '[':
+                    return false;
+                case '\\':
+                    iVar.h();
+                    if (a(iVar.l())) {
+                        iVar.h();
+                    }
+                    break;
+                case ']':
+                    return true;
+                default:
+                    iVar.h();
+                    break;
+            }
+        }
+        return true;
+    }
+
+    public static boolean e(i iVar) {
+        if (!iVar.e()) {
+            return false;
+        }
+        char cL = iVar.l();
+        char c10 = '\"';
+        if (cL != '\"') {
+            c10 = '\'';
+            if (cL != '\'') {
+                if (cL != '(') {
+                    return false;
+                }
+                c10 = ')';
+            }
+        }
+        iVar.h();
+        if (!f(iVar, c10) || !iVar.e()) {
+            return false;
+        }
+        iVar.h();
+        return true;
+    }
+
+    public static boolean f(i iVar, char c10) {
+        while (iVar.e()) {
+            char cL = iVar.l();
+            if (cL == '\\') {
+                iVar.h();
+                if (a(iVar.l())) {
+                    iVar.h();
+                }
+            } else {
+                if (cL == c10) {
+                    return true;
+                }
+                if (c10 == ')' && cL == '(') {
+                    return false;
+                }
+                iVar.h();
+            }
+        }
+        return true;
     }
 }

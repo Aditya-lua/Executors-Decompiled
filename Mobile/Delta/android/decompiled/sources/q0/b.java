@@ -13,12 +13,12 @@ public class b implements Executor {
     public static volatile Executor b;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ExecutorService f29158a = Executors.newFixedThreadPool(2, new a());
+    public final ExecutorService f29511a = Executors.newFixedThreadPool(2, new a());
 
     public class a implements ThreadFactory {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final AtomicInteger f29159a = new AtomicInteger(0);
+        public final AtomicInteger f29512a = new AtomicInteger(0);
 
         public a() {
         }
@@ -36,7 +36,7 @@ public class b implements Executor {
                     b.a.a(runnable);
                 }
             });
-            thread.setName(String.format(Locale.US, "CameraX-camerax_audio_%d", Integer.valueOf(this.f29159a.getAndIncrement())));
+            thread.setName(String.format(Locale.US, "CameraX-camerax_audio_%d", Integer.valueOf(this.f29512a.getAndIncrement())));
             return thread;
         }
     }
@@ -59,6 +59,6 @@ public class b implements Executor {
 
     @Override // java.util.concurrent.Executor
     public void execute(Runnable runnable) {
-        this.f29158a.execute(runnable);
+        this.f29511a.execute(runnable);
     }
 }

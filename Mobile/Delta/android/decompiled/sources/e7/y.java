@@ -11,7 +11,7 @@ public final class y {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final Map<String, String> f15218a;
+    public static final Map<String, String> f15832a;
 
     static {
         Map mapD = j0.d();
@@ -149,6 +149,6 @@ public final class y {
         mapD.put("wvx", "video/x-ms-wvx");
         mapD.put("avi", "video/x-msvideo");
         mapD.put("movie", "video/x-sgi-movie");
-        f15218a = j0.c(mapD);
+        f15832a = j0.c(mapD);
     }
 }

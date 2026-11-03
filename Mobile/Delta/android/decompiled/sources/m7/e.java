@@ -7,24 +7,24 @@ import java.util.List;
 public class e implements o<PointF, PointF> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final List<t7.a<PointF>> f24020a;
+    public final List<t7.a<PointF>> f24670a;
 
     public e(List<t7.a<PointF>> list) {
-        this.f24020a = list;
+        this.f24670a = list;
     }
 
     @Override // m7.o
     public i7.a<PointF, PointF> a() {
-        return this.f24020a.get(0).i() ? new i7.k(this.f24020a) : new i7.j(this.f24020a);
+        return this.f24670a.get(0).i() ? new i7.k(this.f24670a) : new i7.j(this.f24670a);
     }
 
     @Override // m7.o
     public List<t7.a<PointF>> b() {
-        return this.f24020a;
+        return this.f24670a;
     }
 
     @Override // m7.o
     public boolean c() {
-        return this.f24020a.size() == 1 && this.f24020a.get(0).i();
+        return this.f24670a.size() == 1 && this.f24670a.get(0).i();
     }
 }

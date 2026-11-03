@@ -15,22 +15,22 @@ public final class AFh1xSDK {
     public final AFc1iSDK unregisterClient;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Map<String, Object> f5409d = new ConcurrentHashMap();
+    public final Map<String, Object> f5482d = new ConcurrentHashMap();
     public final Map<String, Object> registerClient = new ConcurrentHashMap();
     public final Map<String, Object> AFLogger = new ConcurrentHashMap();
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public long f5411i = 0;
+    public long f5484i = 0;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public long f5410e = 0;
+    public long f5483e = 0;
     public final long[] force = new long[2];
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public final long[] f5412v = new long[2];
+    public final long[] f5485v = new long[2];
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public final long[] f5413w = new long[2];
+    public final long[] f5486w = new long[2];
     public long afErrorLog = 0;
     public long afDebugLog = 0;
 
@@ -40,15 +40,15 @@ public final class AFh1xSDK {
     }
 
     public final void AFLogger() {
-        this.f5410e = System.currentTimeMillis();
+        this.f5483e = System.currentTimeMillis();
         if (this.unregisterClient.AFKeystoreWrapper.AFLogger("appsFlyerCount", 0) == 0) {
-            long j10 = this.f5411i;
+            long j10 = this.f5484i;
             if (j10 == 0) {
                 AFLogger.INSTANCE.i(LogTag.GENERAL, "Metrics collection skipped: initialization timestamp not recorded");
                 return;
             }
-            this.f5409d.put("init_to_fg", Long.valueOf(this.f5410e - j10));
-            this.AFKeystoreWrapper.d("first_launch", new JSONObject(this.f5409d).toString());
+            this.f5482d.put("init_to_fg", Long.valueOf(this.f5483e - j10));
+            this.AFKeystoreWrapper.d("first_launch", new JSONObject(this.f5482d).toString());
         }
     }
 
@@ -59,8 +59,8 @@ public final class AFh1xSDK {
 
     public final void unregisterClient(AFh1uSDK aFh1uSDK) {
         if (this.unregisterClient.AFKeystoreWrapper.AFLogger("appsFlyerCount", 0) == 0) {
-            this.f5409d.put("api_name", aFh1uSDK.toString());
-            this.AFKeystoreWrapper.d("first_launch", new JSONObject(this.f5409d).toString());
+            this.f5482d.put("api_name", aFh1uSDK.toString());
+            this.AFKeystoreWrapper.d("first_launch", new JSONObject(this.f5482d).toString());
         }
     }
 

@@ -7,10 +7,10 @@ import java.util.concurrent.atomic.AtomicReference;
 public final class o {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final AtomicReference f16559a = new AtomicReference();
+    public static final AtomicReference f17155a = new AtomicReference();
 
     public static m a(Application application) {
-        AtomicReference atomicReference = f16559a;
+        AtomicReference atomicReference = f17155a;
         m mVar = (m) atomicReference.get();
         if (mVar != null) {
             return mVar;

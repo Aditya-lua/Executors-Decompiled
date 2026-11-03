@@ -35,65 +35,65 @@ import y2.p;
 public class ActivityChooserView extends ViewGroup {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final f f1069a;
+    public final f f914a;
     public final g b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final View f1070c;
+    public final View f915c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Drawable f1071d;
+    public final Drawable f916d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final FrameLayout f1072e;
+    public final FrameLayout f917e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final ImageView f1073f;
+    public final ImageView f918f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final FrameLayout f1074g;
+    public final FrameLayout f919g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final ImageView f1075h;
+    public final ImageView f920h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final int f1076i;
+    public final int f921i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public androidx.core.view.b f1077j;
+    public androidx.core.view.b f922j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final DataSetObserver f1078k;
+    public final DataSetObserver f923k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final ViewTreeObserver.OnGlobalLayoutListener f1079l;
+    public final ViewTreeObserver.OnGlobalLayoutListener f924l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public o0 f1080m;
+    public o0 f925m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public PopupWindow.OnDismissListener f1081n;
+    public PopupWindow.OnDismissListener f926n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public boolean f1082o;
+    public boolean f927o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public int f1083p;
+    public int f928p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public boolean f1084q;
+    public boolean f929q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public int f1085r;
+    public int f930r;
 
     public static class InnerLayout extends LinearLayout {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final int[] f1086a = {R.attr.background};
+        public static final int[] f931a = {R.attr.background};
 
         public InnerLayout(Context context, AttributeSet attributeSet) {
             super(context, attributeSet);
-            a1 a1VarU = a1.u(context, attributeSet, f1086a);
+            a1 a1VarU = a1.u(context, attributeSet, f931a);
             setBackgroundDrawable(a1VarU.g(0));
             a1VarU.x();
         }
@@ -106,13 +106,13 @@ public class ActivityChooserView extends ViewGroup {
         @Override // android.database.DataSetObserver
         public void onChanged() {
             super.onChanged();
-            ActivityChooserView.this.f1069a.notifyDataSetChanged();
+            ActivityChooserView.this.f914a.notifyDataSetChanged();
         }
 
         @Override // android.database.DataSetObserver
         public void onInvalidated() {
             super.onInvalidated();
-            ActivityChooserView.this.f1069a.notifyDataSetInvalidated();
+            ActivityChooserView.this.f914a.notifyDataSetInvalidated();
         }
     }
 
@@ -128,7 +128,7 @@ public class ActivityChooserView extends ViewGroup {
                     return;
                 }
                 ActivityChooserView.this.getListPopupWindow().show();
-                androidx.core.view.b bVar = ActivityChooserView.this.f1077j;
+                androidx.core.view.b bVar = ActivityChooserView.this.f922j;
                 if (bVar != null) {
                     bVar.k(true);
                 }
@@ -184,39 +184,39 @@ public class ActivityChooserView extends ViewGroup {
     public class f extends BaseAdapter {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public q.c f1092a;
+        public q.c f937a;
         public int b = 4;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public boolean f1093c;
+        public boolean f938c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public boolean f1094d;
+        public boolean f939d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public boolean f1095e;
+        public boolean f940e;
 
         public f() {
         }
 
         public int a() {
-            return this.f1092a.f();
+            return this.f937a.f();
         }
 
         public q.c b() {
-            return this.f1092a;
+            return this.f937a;
         }
 
         public ResolveInfo c() {
-            return this.f1092a.h();
+            return this.f937a.h();
         }
 
         public int d() {
-            return this.f1092a.i();
+            return this.f937a.i();
         }
 
         public boolean e() {
-            return this.f1093c;
+            return this.f938c;
         }
 
         public int f() {
@@ -237,25 +237,25 @@ public class ActivityChooserView extends ViewGroup {
         }
 
         public void g(q.c cVar) {
-            q.c cVarB = ActivityChooserView.this.f1069a.b();
+            q.c cVarB = ActivityChooserView.this.f914a.b();
             if (cVarB != null && ActivityChooserView.this.isShown()) {
-                cVarB.unregisterObserver(ActivityChooserView.this.f1078k);
+                cVarB.unregisterObserver(ActivityChooserView.this.f923k);
             }
-            this.f1092a = cVar;
+            this.f937a = cVar;
             if (cVar != null && ActivityChooserView.this.isShown()) {
-                cVar.registerObserver(ActivityChooserView.this.f1078k);
+                cVar.registerObserver(ActivityChooserView.this.f923k);
             }
             notifyDataSetChanged();
         }
 
         @Override // android.widget.Adapter
         public int getCount() {
-            int iF = this.f1092a.f();
-            if (!this.f1093c && this.f1092a.h() != null) {
+            int iF = this.f937a.f();
+            if (!this.f938c && this.f937a.h() != null) {
                 iF--;
             }
             int iMin = Math.min(iF, this.b);
-            return this.f1095e ? iMin + 1 : iMin;
+            return this.f940e ? iMin + 1 : iMin;
         }
 
         @Override // android.widget.Adapter
@@ -267,10 +267,10 @@ public class ActivityChooserView extends ViewGroup {
                 }
                 throw new IllegalArgumentException();
             }
-            if (!this.f1093c && this.f1092a.h() != null) {
+            if (!this.f938c && this.f937a.h() != null) {
                 i10++;
             }
-            return this.f1092a.e(i10);
+            return this.f937a.e(i10);
         }
 
         @Override // android.widget.Adapter
@@ -280,7 +280,7 @@ public class ActivityChooserView extends ViewGroup {
 
         @Override // android.widget.BaseAdapter, android.widget.Adapter
         public int getItemViewType(int i10) {
-            return (this.f1095e && i10 == getCount() - 1) ? 1 : 0;
+            return (this.f940e && i10 == getCount() - 1) ? 1 : 0;
         }
 
         @Override // android.widget.Adapter
@@ -293,20 +293,20 @@ public class ActivityChooserView extends ViewGroup {
                 if (view != null && view.getId() == 1) {
                     return view;
                 }
-                View viewInflate = LayoutInflater.from(ActivityChooserView.this.getContext()).inflate(i.g.f19983f, viewGroup, false);
+                View viewInflate = LayoutInflater.from(ActivityChooserView.this.getContext()).inflate(i.g.f20099f, viewGroup, false);
                 viewInflate.setId(1);
                 ((TextView) viewInflate.findViewById(i.f.R)).setText(ActivityChooserView.this.getContext().getString(h.b));
                 return viewInflate;
             }
-            if (view == null || view.getId() != i.f.f19976x) {
-                view = LayoutInflater.from(ActivityChooserView.this.getContext()).inflate(i.g.f19983f, viewGroup, false);
+            if (view == null || view.getId() != i.f.f20092x) {
+                view = LayoutInflater.from(ActivityChooserView.this.getContext()).inflate(i.g.f20099f, viewGroup, false);
             }
             PackageManager packageManager = ActivityChooserView.this.getContext().getPackageManager();
-            ImageView imageView = (ImageView) view.findViewById(i.f.f19974v);
+            ImageView imageView = (ImageView) view.findViewById(i.f.f20090v);
             ResolveInfo resolveInfo = (ResolveInfo) getItem(i10);
             imageView.setImageDrawable(resolveInfo.loadIcon(packageManager));
             ((TextView) view.findViewById(i.f.R)).setText(resolveInfo.loadLabel(packageManager));
-            if (this.f1093c && i10 == 0 && this.f1094d) {
+            if (this.f938c && i10 == 0 && this.f939d) {
                 view.setActivated(true);
                 return view;
             }
@@ -327,17 +327,17 @@ public class ActivityChooserView extends ViewGroup {
         }
 
         public void i(boolean z10, boolean z11) {
-            if (this.f1093c == z10 && this.f1094d == z11) {
+            if (this.f938c == z10 && this.f939d == z11) {
                 return;
             }
-            this.f1093c = z10;
-            this.f1094d = z11;
+            this.f938c = z10;
+            this.f939d = z11;
             notifyDataSetChanged();
         }
 
         public void j(boolean z10) {
-            if (this.f1095e != z10) {
-                this.f1095e = z10;
+            if (this.f940e != z10) {
+                this.f940e = z10;
                 notifyDataSetChanged();
             }
         }
@@ -348,7 +348,7 @@ public class ActivityChooserView extends ViewGroup {
         }
 
         public final void a() {
-            PopupWindow.OnDismissListener onDismissListener = ActivityChooserView.this.f1081n;
+            PopupWindow.OnDismissListener onDismissListener = ActivityChooserView.this.f926n;
             if (onDismissListener != null) {
                 onDismissListener.onDismiss();
             }
@@ -357,16 +357,16 @@ public class ActivityChooserView extends ViewGroup {
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
             ActivityChooserView activityChooserView = ActivityChooserView.this;
-            if (view != activityChooserView.f1074g) {
-                if (view != activityChooserView.f1072e) {
+            if (view != activityChooserView.f919g) {
+                if (view != activityChooserView.f917e) {
                     throw new IllegalArgumentException();
                 }
-                activityChooserView.f1082o = false;
-                activityChooserView.d(activityChooserView.f1083p);
+                activityChooserView.f927o = false;
+                activityChooserView.d(activityChooserView.f928p);
                 return;
             }
             activityChooserView.a();
-            Intent intentB = ActivityChooserView.this.f1069a.b().b(ActivityChooserView.this.f1069a.b().g(ActivityChooserView.this.f1069a.c()));
+            Intent intentB = ActivityChooserView.this.f914a.b().b(ActivityChooserView.this.f914a.b().g(ActivityChooserView.this.f914a.c()));
             if (intentB != null) {
                 intentB.addFlags(524288);
                 ActivityChooserView.this.getContext().startActivity(intentB);
@@ -376,7 +376,7 @@ public class ActivityChooserView extends ViewGroup {
         @Override // android.widget.PopupWindow.OnDismissListener
         public void onDismiss() {
             a();
-            androidx.core.view.b bVar = ActivityChooserView.this.f1077j;
+            androidx.core.view.b bVar = ActivityChooserView.this.f922j;
             if (bVar != null) {
                 bVar.k(false);
             }
@@ -394,17 +394,17 @@ public class ActivityChooserView extends ViewGroup {
             }
             ActivityChooserView.this.a();
             ActivityChooserView activityChooserView = ActivityChooserView.this;
-            if (activityChooserView.f1082o) {
+            if (activityChooserView.f927o) {
                 if (i10 > 0) {
-                    activityChooserView.f1069a.b().o(i10);
+                    activityChooserView.f914a.b().o(i10);
                     return;
                 }
                 return;
             }
-            if (!activityChooserView.f1069a.e()) {
+            if (!activityChooserView.f914a.e()) {
                 i10++;
             }
-            Intent intentB = ActivityChooserView.this.f1069a.b().b(i10);
+            Intent intentB = ActivityChooserView.this.f914a.b().b(i10);
             if (intentB != null) {
                 intentB.addFlags(524288);
                 ActivityChooserView.this.getContext().startActivity(intentB);
@@ -414,13 +414,13 @@ public class ActivityChooserView extends ViewGroup {
         @Override // android.view.View.OnLongClickListener
         public boolean onLongClick(View view) {
             ActivityChooserView activityChooserView = ActivityChooserView.this;
-            if (view != activityChooserView.f1074g) {
+            if (view != activityChooserView.f919g) {
                 throw new IllegalArgumentException();
             }
-            if (activityChooserView.f1069a.getCount() > 0) {
+            if (activityChooserView.f914a.getCount() > 0) {
                 ActivityChooserView activityChooserView2 = ActivityChooserView.this;
-                activityChooserView2.f1082o = true;
-                activityChooserView2.d(activityChooserView2.f1083p);
+                activityChooserView2.f927o = true;
+                activityChooserView2.d(activityChooserView2.f928p);
             }
             return true;
         }
@@ -439,7 +439,7 @@ public class ActivityChooserView extends ViewGroup {
         if (!viewTreeObserver.isAlive()) {
             return true;
         }
-        viewTreeObserver.removeGlobalOnLayoutListener(this.f1079l);
+        viewTreeObserver.removeGlobalOnLayoutListener(this.f924l);
         return true;
     }
 
@@ -448,11 +448,11 @@ public class ActivityChooserView extends ViewGroup {
     }
 
     public boolean c() {
-        if (b() || !this.f1084q) {
+        if (b() || !this.f929q) {
             return false;
         }
-        this.f1082o = false;
-        d(this.f1083p);
+        this.f927o = false;
+        d(this.f928p);
         return true;
     }
 
@@ -471,111 +471,111 @@ public class ActivityChooserView extends ViewGroup {
     	at jadx.core.dex.visitors.typeinference.FixTypesVisitor.visit(FixTypesVisitor.java:94)
      */
     public void d(int i10) {
-        if (this.f1069a.b() == null) {
+        if (this.f914a.b() == null) {
             throw new IllegalStateException("No data model. Did you call #setDataModel?");
         }
-        getViewTreeObserver().addOnGlobalLayoutListener(this.f1079l);
-        ?? r8 = this.f1074g.getVisibility() == 0 ? 1 : 0;
-        int iA = this.f1069a.a();
+        getViewTreeObserver().addOnGlobalLayoutListener(this.f924l);
+        ?? r8 = this.f919g.getVisibility() == 0 ? 1 : 0;
+        int iA = this.f914a.a();
         if (i10 == Integer.MAX_VALUE || iA <= i10 + r8) {
-            this.f1069a.j(false);
-            this.f1069a.h(i10);
+            this.f914a.j(false);
+            this.f914a.h(i10);
         } else {
-            this.f1069a.j(true);
-            this.f1069a.h(i10 - 1);
+            this.f914a.j(true);
+            this.f914a.h(i10 - 1);
         }
         o0 listPopupWindow = getListPopupWindow();
         if (listPopupWindow.a()) {
             return;
         }
-        if (this.f1082o || r8 == 0) {
-            this.f1069a.i(true, r8);
+        if (this.f927o || r8 == 0) {
+            this.f914a.i(true, r8);
         } else {
-            this.f1069a.i(false, false);
+            this.f914a.i(false, false);
         }
-        listPopupWindow.E(Math.min(this.f1069a.f(), this.f1076i));
+        listPopupWindow.E(Math.min(this.f914a.f(), this.f921i));
         listPopupWindow.show();
-        androidx.core.view.b bVar = this.f1077j;
+        androidx.core.view.b bVar = this.f922j;
         if (bVar != null) {
             bVar.k(true);
         }
-        listPopupWindow.o().setContentDescription(getContext().getString(h.f20000c));
+        listPopupWindow.o().setContentDescription(getContext().getString(h.f20116c));
         listPopupWindow.o().setSelector(new ColorDrawable(0));
     }
 
     public void e() {
-        if (this.f1069a.getCount() > 0) {
-            this.f1072e.setEnabled(true);
+        if (this.f914a.getCount() > 0) {
+            this.f917e.setEnabled(true);
         } else {
-            this.f1072e.setEnabled(false);
+            this.f917e.setEnabled(false);
         }
-        int iA = this.f1069a.a();
-        int iD = this.f1069a.d();
+        int iA = this.f914a.a();
+        int iD = this.f914a.d();
         if (iA == 1 || (iA > 1 && iD > 0)) {
-            this.f1074g.setVisibility(0);
-            ResolveInfo resolveInfoC = this.f1069a.c();
+            this.f919g.setVisibility(0);
+            ResolveInfo resolveInfoC = this.f914a.c();
             PackageManager packageManager = getContext().getPackageManager();
-            this.f1075h.setImageDrawable(resolveInfoC.loadIcon(packageManager));
-            if (this.f1085r != 0) {
-                this.f1074g.setContentDescription(getContext().getString(this.f1085r, resolveInfoC.loadLabel(packageManager)));
+            this.f920h.setImageDrawable(resolveInfoC.loadIcon(packageManager));
+            if (this.f930r != 0) {
+                this.f919g.setContentDescription(getContext().getString(this.f930r, resolveInfoC.loadLabel(packageManager)));
             }
         } else {
-            this.f1074g.setVisibility(8);
+            this.f919g.setVisibility(8);
         }
-        if (this.f1074g.getVisibility() == 0) {
-            this.f1070c.setBackgroundDrawable(this.f1071d);
+        if (this.f919g.getVisibility() == 0) {
+            this.f915c.setBackgroundDrawable(this.f916d);
         } else {
-            this.f1070c.setBackgroundDrawable(null);
+            this.f915c.setBackgroundDrawable(null);
         }
     }
 
     public q.c getDataModel() {
-        return this.f1069a.b();
+        return this.f914a.b();
     }
 
     public o0 getListPopupWindow() {
-        if (this.f1080m == null) {
+        if (this.f925m == null) {
             o0 o0Var = new o0(getContext());
-            this.f1080m = o0Var;
-            o0Var.m(this.f1069a);
-            this.f1080m.C(this);
-            this.f1080m.I(true);
-            this.f1080m.K(this.b);
-            this.f1080m.J(this.b);
+            this.f925m = o0Var;
+            o0Var.m(this.f914a);
+            this.f925m.C(this);
+            this.f925m.I(true);
+            this.f925m.K(this.b);
+            this.f925m.J(this.b);
         }
-        return this.f1080m;
+        return this.f925m;
     }
 
     @Override // android.view.ViewGroup, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        q.c cVarB = this.f1069a.b();
+        q.c cVarB = this.f914a.b();
         if (cVarB != null) {
-            cVarB.registerObserver(this.f1078k);
+            cVarB.registerObserver(this.f923k);
         }
-        this.f1084q = true;
+        this.f929q = true;
     }
 
     @Override // android.view.ViewGroup, android.view.View
     public void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-        q.c cVarB = this.f1069a.b();
+        q.c cVarB = this.f914a.b();
         if (cVarB != null) {
-            cVarB.unregisterObserver(this.f1078k);
+            cVarB.unregisterObserver(this.f923k);
         }
         ViewTreeObserver viewTreeObserver = getViewTreeObserver();
         if (viewTreeObserver.isAlive()) {
-            viewTreeObserver.removeGlobalOnLayoutListener(this.f1079l);
+            viewTreeObserver.removeGlobalOnLayoutListener(this.f924l);
         }
         if (b()) {
             a();
         }
-        this.f1084q = false;
+        this.f929q = false;
     }
 
     @Override // android.view.ViewGroup, android.view.View
     public void onLayout(boolean z10, int i10, int i11, int i12, int i13) {
-        this.f1070c.layout(0, 0, i12 - i10, i13 - i11);
+        this.f915c.layout(0, 0, i12 - i10, i13 - i11);
         if (b()) {
             return;
         }
@@ -584,8 +584,8 @@ public class ActivityChooserView extends ViewGroup {
 
     @Override // android.view.View
     public void onMeasure(int i10, int i11) {
-        View view = this.f1070c;
-        if (this.f1074g.getVisibility() != 0) {
+        View view = this.f915c;
+        if (this.f919g.getVisibility() != 0) {
             i11 = View.MeasureSpec.makeMeasureSpec(View.MeasureSpec.getSize(i11), 1073741824);
         }
         measureChild(view, i10, i11);
@@ -593,7 +593,7 @@ public class ActivityChooserView extends ViewGroup {
     }
 
     public void setActivityChooserModel(q.c cVar) {
-        this.f1069a.g(cVar);
+        this.f914a.g(cVar);
         if (b()) {
             a();
             c();
@@ -601,27 +601,27 @@ public class ActivityChooserView extends ViewGroup {
     }
 
     public void setDefaultActionButtonContentDescription(int i10) {
-        this.f1085r = i10;
+        this.f930r = i10;
     }
 
     public void setExpandActivityOverflowButtonContentDescription(int i10) {
-        this.f1073f.setContentDescription(getContext().getString(i10));
+        this.f918f.setContentDescription(getContext().getString(i10));
     }
 
     public void setExpandActivityOverflowButtonDrawable(Drawable drawable) {
-        this.f1073f.setImageDrawable(drawable);
+        this.f918f.setImageDrawable(drawable);
     }
 
     public void setInitialActivityCount(int i10) {
-        this.f1083p = i10;
+        this.f928p = i10;
     }
 
     public void setOnDismissListener(PopupWindow.OnDismissListener onDismissListener) {
-        this.f1081n = onDismissListener;
+        this.f926n = onDismissListener;
     }
 
     public void setProvider(androidx.core.view.b bVar) {
-        this.f1077j = bVar;
+        this.f922j = bVar;
     }
 
     public ActivityChooserView(@NonNull Context context, AttributeSet attributeSet) {
@@ -630,39 +630,39 @@ public class ActivityChooserView extends ViewGroup {
 
     public ActivityChooserView(@NonNull Context context, AttributeSet attributeSet, int i10) {
         super(context, attributeSet, i10);
-        this.f1078k = new a();
-        this.f1079l = new b();
-        this.f1083p = 4;
+        this.f923k = new a();
+        this.f924l = new b();
+        this.f928p = 4;
         int[] iArr = j.E;
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr, i10, 0);
         androidx.core.view.o0.k0(this, context, iArr, attributeSet, typedArrayObtainStyledAttributes, i10, 0);
-        this.f1083p = typedArrayObtainStyledAttributes.getInt(j.G, 4);
+        this.f928p = typedArrayObtainStyledAttributes.getInt(j.G, 4);
         Drawable drawable = typedArrayObtainStyledAttributes.getDrawable(j.F);
         typedArrayObtainStyledAttributes.recycle();
-        LayoutInflater.from(getContext()).inflate(i.g.f19982e, (ViewGroup) this, true);
+        LayoutInflater.from(getContext()).inflate(i.g.f20098e, (ViewGroup) this, true);
         g gVar = new g();
         this.b = gVar;
-        View viewFindViewById = findViewById(i.f.f19962j);
-        this.f1070c = viewFindViewById;
-        this.f1071d = viewFindViewById.getBackground();
-        FrameLayout frameLayout = (FrameLayout) findViewById(i.f.f19970r);
-        this.f1074g = frameLayout;
+        View viewFindViewById = findViewById(i.f.f20078j);
+        this.f915c = viewFindViewById;
+        this.f916d = viewFindViewById.getBackground();
+        FrameLayout frameLayout = (FrameLayout) findViewById(i.f.f20086r);
+        this.f919g = frameLayout;
         frameLayout.setOnClickListener(gVar);
         frameLayout.setOnLongClickListener(gVar);
-        int i11 = i.f.f19975w;
-        this.f1075h = (ImageView) frameLayout.findViewById(i11);
-        FrameLayout frameLayout2 = (FrameLayout) findViewById(i.f.f19972t);
+        int i11 = i.f.f20091w;
+        this.f920h = (ImageView) frameLayout.findViewById(i11);
+        FrameLayout frameLayout2 = (FrameLayout) findViewById(i.f.f20088t);
         frameLayout2.setOnClickListener(gVar);
         frameLayout2.setAccessibilityDelegate(new c());
         frameLayout2.setOnTouchListener(new d(frameLayout2));
-        this.f1072e = frameLayout2;
+        this.f917e = frameLayout2;
         ImageView imageView = (ImageView) frameLayout2.findViewById(i11);
-        this.f1073f = imageView;
+        this.f918f = imageView;
         imageView.setImageDrawable(drawable);
         f fVar = new f();
-        this.f1069a = fVar;
+        this.f914a = fVar;
         fVar.registerDataSetObserver(new e());
         Resources resources = context.getResources();
-        this.f1076i = Math.max(resources.getDisplayMetrics().widthPixels / 2, resources.getDimensionPixelSize(i.d.f19921d));
+        this.f921i = Math.max(resources.getDisplayMetrics().widthPixels / 2, resources.getDimensionPixelSize(i.d.f20037d));
     }
 }

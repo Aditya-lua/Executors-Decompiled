@@ -10,20 +10,20 @@ import java.util.RandomAccess;
 public final class x9 extends t9 implements RandomAccess, ib, vc {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final boolean[] f6899d;
+    public static final boolean[] f6973d;
     public boolean[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f6900c;
+    public int f6974c;
 
     static {
         boolean[] zArr = new boolean[0];
-        f6899d = zArr;
+        f6973d = zArr;
         new x9(zArr, 0, false);
     }
 
     public x9() {
-        this(f6899d, 0, true);
+        this(f6973d, 0, true);
     }
 
     public static int e(int i10) {
@@ -31,7 +31,7 @@ public final class x9 extends t9 implements RandomAccess, ib, vc {
     }
 
     private final void f(int i10) {
-        if (i10 < 0 || i10 >= this.f6900c) {
+        if (i10 < 0 || i10 >= this.f6974c) {
             throw new IndexOutOfBoundsException(g(i10));
         }
     }
@@ -41,7 +41,7 @@ public final class x9 extends t9 implements RandomAccess, ib, vc {
         int i11;
         boolean zBooleanValue = ((Boolean) obj).booleanValue();
         a();
-        if (i10 < 0 || i10 > (i11 = this.f6900c)) {
+        if (i10 < 0 || i10 > (i11 = this.f6974c)) {
             throw new IndexOutOfBoundsException(g(i10));
         }
         int i12 = i10 + 1;
@@ -52,28 +52,28 @@ public final class x9 extends t9 implements RandomAccess, ib, vc {
         } else {
             boolean[] zArr2 = new boolean[e(length)];
             System.arraycopy(this.b, 0, zArr2, 0, i10);
-            System.arraycopy(this.b, i10, zArr2, i12, this.f6900c - i10);
+            System.arraycopy(this.b, i10, zArr2, i12, this.f6974c - i10);
             this.b = zArr2;
         }
         this.b[i10] = zBooleanValue;
-        this.f6900c++;
+        this.f6974c++;
         ((AbstractList) this).modCount++;
     }
 
     @Override // com.google.android.gms.internal.measurement.t9, java.util.AbstractCollection, java.util.Collection, java.util.List
     public final boolean addAll(Collection collection) {
         a();
-        Charset charset = qb.f6750a;
+        Charset charset = qb.f6824a;
         collection.getClass();
         if (!(collection instanceof x9)) {
             return super.addAll(collection);
         }
         x9 x9Var = (x9) collection;
-        int i10 = x9Var.f6900c;
+        int i10 = x9Var.f6974c;
         if (i10 == 0) {
             return false;
         }
-        int i11 = this.f6900c;
+        int i11 = this.f6974c;
         if (Integer.MAX_VALUE - i11 < i10) {
             throw new OutOfMemoryError();
         }
@@ -82,8 +82,8 @@ public final class x9 extends t9 implements RandomAccess, ib, vc {
         if (i12 > zArr.length) {
             this.b = Arrays.copyOf(zArr, i12);
         }
-        System.arraycopy(x9Var.b, 0, this.b, this.f6900c, x9Var.f6900c);
-        this.f6900c = i12;
+        System.arraycopy(x9Var.b, 0, this.b, this.f6974c, x9Var.f6974c);
+        this.f6974c = i12;
         ((AbstractList) this).modCount++;
         return true;
     }
@@ -91,8 +91,8 @@ public final class x9 extends t9 implements RandomAccess, ib, vc {
     @Override // com.google.android.gms.internal.measurement.pb
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
     public final ib v(int i10) {
-        if (i10 >= this.f6900c) {
-            return new x9(i10 == 0 ? f6899d : Arrays.copyOf(this.b, i10), this.f6900c, true);
+        if (i10 >= this.f6974c) {
+            return new x9(i10 == 0 ? f6973d : Arrays.copyOf(this.b, i10), this.f6974c, true);
         }
         throw new IllegalArgumentException();
     }
@@ -109,16 +109,16 @@ public final class x9 extends t9 implements RandomAccess, ib, vc {
 
     public final void d(boolean z10) {
         a();
-        int i10 = this.f6900c;
+        int i10 = this.f6974c;
         int length = this.b.length;
         if (i10 == length) {
             boolean[] zArr = new boolean[e(length)];
-            System.arraycopy(this.b, 0, zArr, 0, this.f6900c);
+            System.arraycopy(this.b, 0, zArr, 0, this.f6974c);
             this.b = zArr;
         }
         boolean[] zArr2 = this.b;
-        int i11 = this.f6900c;
-        this.f6900c = i11 + 1;
+        int i11 = this.f6974c;
+        this.f6974c = i11 + 1;
         zArr2[i11] = z10;
     }
 
@@ -131,11 +131,11 @@ public final class x9 extends t9 implements RandomAccess, ib, vc {
             return super.equals(obj);
         }
         x9 x9Var = (x9) obj;
-        if (this.f6900c != x9Var.f6900c) {
+        if (this.f6974c != x9Var.f6974c) {
             return false;
         }
         boolean[] zArr = x9Var.b;
-        for (int i10 = 0; i10 < this.f6900c; i10++) {
+        for (int i10 = 0; i10 < this.f6974c; i10++) {
             if (this.b[i10] != zArr[i10]) {
                 return false;
             }
@@ -144,7 +144,7 @@ public final class x9 extends t9 implements RandomAccess, ib, vc {
     }
 
     public final String g(int i10) {
-        return v9.a(this.f6900c, i10, (byte) 13, "Index:", ", Size:");
+        return v9.a(this.f6974c, i10, (byte) 13, "Index:", ", Size:");
     }
 
     @Override // java.util.AbstractList, java.util.List
@@ -156,7 +156,7 @@ public final class x9 extends t9 implements RandomAccess, ib, vc {
     @Override // com.google.android.gms.internal.measurement.t9, java.util.AbstractList, java.util.Collection, java.util.List
     public final int hashCode() {
         int iB = 1;
-        for (int i10 = 0; i10 < this.f6900c; i10++) {
+        for (int i10 = 0; i10 < this.f6974c; i10++) {
             iB = (iB * 31) + qb.b(this.b[i10]);
         }
         return iB;
@@ -168,7 +168,7 @@ public final class x9 extends t9 implements RandomAccess, ib, vc {
             return -1;
         }
         boolean zBooleanValue = ((Boolean) obj).booleanValue();
-        int i10 = this.f6900c;
+        int i10 = this.f6974c;
         for (int i11 = 0; i11 < i10; i11++) {
             if (this.b[i11] == zBooleanValue) {
                 return i11;
@@ -183,11 +183,11 @@ public final class x9 extends t9 implements RandomAccess, ib, vc {
         f(i10);
         boolean[] zArr = this.b;
         boolean z10 = zArr[i10];
-        int i11 = this.f6900c;
+        int i11 = this.f6974c;
         if (i10 < i11 - 1) {
             System.arraycopy(zArr, i10 + 1, zArr, i10, (i11 - i10) - 1);
         }
-        this.f6900c--;
+        this.f6974c--;
         ((AbstractList) this).modCount++;
         return Boolean.valueOf(z10);
     }
@@ -199,8 +199,8 @@ public final class x9 extends t9 implements RandomAccess, ib, vc {
             throw new IndexOutOfBoundsException("toIndex < fromIndex");
         }
         boolean[] zArr = this.b;
-        System.arraycopy(zArr, i11, zArr, i10, this.f6900c - i11);
-        this.f6900c -= i11 - i10;
+        System.arraycopy(zArr, i11, zArr, i10, this.f6974c - i11);
+        this.f6974c -= i11 - i10;
         ((AbstractList) this).modCount++;
     }
 
@@ -217,13 +217,13 @@ public final class x9 extends t9 implements RandomAccess, ib, vc {
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final int size() {
-        return this.f6900c;
+        return this.f6974c;
     }
 
     public x9(boolean[] zArr, int i10, boolean z10) {
         super(z10);
         this.b = zArr;
-        this.f6900c = i10;
+        this.f6974c = i10;
     }
 
     @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection, java.util.List

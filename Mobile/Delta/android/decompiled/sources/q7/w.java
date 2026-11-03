@@ -10,14 +10,14 @@ import java.util.Map;
 public class w {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final r7.c.a f29277a = r7.c.a.a("w", "h", "ip", "op", "fr", "v", "layers", "assets", "fonts", "chars", "markers");
+    public static final r7.c.a f29630a = r7.c.a.a("w", "h", "ip", "op", "fr", "v", "layers", "assets", "fonts", "chars", "markers");
     public static r7.c.a b = r7.c.a.a("id", "layers", "w", "h", "p", "u");
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final r7.c.a f29278c = r7.c.a.a("list");
+    public static final r7.c.a f29631c = r7.c.a.a("list");
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final r7.c.a f29279d = r7.c.a.a("cm", "tm", "dr");
+    public static final r7.c.a f29632d = r7.c.a.a("cm", "tm", "dr");
 
     /* JADX WARN: Failed to find 'out' block for switch in B:6:0x0044. Please report as an issue. */
     public static f7.i a(r7.c cVar) {
@@ -38,7 +38,7 @@ public class w {
         int iH = 0;
         int iH2 = 0;
         while (cVar.f()) {
-            switch (cVar.r(f29277a)) {
+            switch (cVar.r(f29630a)) {
                 case 0:
                     iH2 = (int) cVar.h();
                     fE = fE;
@@ -150,7 +150,7 @@ public class w {
     public static void d(r7.c cVar, Map<String, l7.c> map) {
         cVar.c();
         while (cVar.f()) {
-            if (cVar.r(f29278c) != 0) {
+            if (cVar.r(f29631c) != 0) {
                 cVar.s();
                 cVar.u();
             } else {
@@ -190,7 +190,7 @@ public class w {
             String strM = null;
             float fH2 = 0.0f;
             while (cVar.f()) {
-                int iR = cVar.r(f29279d);
+                int iR = cVar.r(f29632d);
                 if (iR == 0) {
                     strM = cVar.m();
                 } else if (iR == 1) {

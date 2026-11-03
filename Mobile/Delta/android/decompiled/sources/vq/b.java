@@ -1,25 +1,74 @@
 package vq;
 
-import an.ViewEnvironmentKey;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 import kotlin.Metadata;
-import kotlin.jvm.internal.d0;
+import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\bÇ\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0003\u0010\u0004R\u0014\u0010\u0007\u001a\u00020\u00028VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\u0005\u0010\u0006¨\u0006\b"}, d2 = {"Lvq/b;", "Lan/z;", "Lvq/a;", "<init>", "()V", "b", "()Lvq/a;", "default", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class b extends ViewEnvironmentKey<a> {
+@Metadata(d1 = {"\u00008\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0005\b\u0002\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\r\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\u0007\u0010\bJ\u0015\u0010\u000b\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\t¢\u0006\u0004\b\u000b\u0010\fR\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000b\u0010\rR$\u0010\u0015\u001a\u0004\u0018\u00010\u000e8\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b\u000f\u0010\u0010\u001a\u0004\b\u0011\u0010\u0012\"\u0004\b\u0013\u0010\u0014R\u0011\u0010\u0019\u001a\u00020\u00168F¢\u0006\u0006\u001a\u0004\b\u0017\u0010\u0018R\u0011\u0010\u001d\u001a\u00020\u001a8F¢\u0006\u0006\u001a\u0004\b\u001b\u0010\u001cR\u0011\u0010\u001e\u001a\u00020\u001a8F¢\u0006\u0006\u001a\u0004\b\u000f\u0010\u001c¨\u0006\u001f"}, d2 = {"Lvq/b;", "", "Landroidx/viewpager2/widget/ViewPager2;", "viewPager", "<init>", "(Landroidx/viewpager2/widget/ViewPager2;)V", "", "e", "()V", "Lvq/a;", "onPageChangeListenerHelper", "a", "(Lvq/a;)V", "Landroidx/viewpager2/widget/ViewPager2;", "Landroidx/viewpager2/widget/ViewPager2$i;", "b", "Landroidx/viewpager2/widget/ViewPager2$i;", "getOnPageChangeCallback", "()Landroidx/viewpager2/widget/ViewPager2$i;", "setOnPageChangeCallback", "(Landroidx/viewpager2/widget/ViewPager2$i;)V", "onPageChangeCallback", "", "d", "()Z", "isNotEmpty", "", "c", "()I", "currentItem", "count", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class b {
 
+    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public static final b b = new b();
+    public final ViewPager2 viewPager;
 
-    public b() {
-        super(d0.b(a.class));
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
+    @Nullable
+    public ViewPager2.i onPageChangeCallback;
+
+    @Metadata(d1 = {"\u0000\u001f\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0007\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J'\u0010\b\u001a\u00020\u00072\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0006\u001a\u00020\u0002H\u0016¢\u0006\u0004\b\b\u0010\t¨\u0006\n"}, d2 = {"vq/b$a", "Landroidx/viewpager2/widget/ViewPager2$i;", "", "position", "", "positionOffset", "positionOffsetPixels", "", "b", "(IFI)V", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final class a extends ViewPager2.i {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public final /* synthetic */ vq.a f33606a;
+
+        public a(vq.a aVar) {
+            this.f33606a = aVar;
+        }
+
+        @Override // androidx.viewpager2.widget.ViewPager2.i
+        public void b(int position, float positionOffset, int positionOffsetPixels) {
+            super.b(position, positionOffset, positionOffsetPixels);
+            this.f33606a.b(position, positionOffset);
+        }
     }
 
-    @Override // an.ViewEnvironmentKey
-    @NotNull
-    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public a a() {
-        throw new IllegalStateException("Unset");
+    public b(@NotNull ViewPager2 viewPager) {
+        Intrinsics.checkNotNullParameter(viewPager, "viewPager");
+        this.viewPager = viewPager;
+    }
+
+    public final void a(@NotNull vq.a onPageChangeListenerHelper) {
+        Intrinsics.checkNotNullParameter(onPageChangeListenerHelper, "onPageChangeListenerHelper");
+        a aVar = new a(onPageChangeListenerHelper);
+        this.onPageChangeCallback = aVar;
+        this.viewPager.g(aVar);
+    }
+
+    public final int b() {
+        RecyclerView.h adapter = this.viewPager.getAdapter();
+        if (adapter != null) {
+            return adapter.e();
+        }
+        return 0;
+    }
+
+    public final int c() {
+        return this.viewPager.getCurrentItem();
+    }
+
+    public final boolean d() {
+        RecyclerView.h adapter = this.viewPager.getAdapter();
+        return (adapter != null ? adapter.e() : 0) > 0;
+    }
+
+    public final void e() {
+        ViewPager2.i iVar = this.onPageChangeCallback;
+        if (iVar != null) {
+            this.viewPager.n(iVar);
+        }
     }
 }

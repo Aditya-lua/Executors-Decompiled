@@ -11,7 +11,7 @@ public final class m0<K, V> extends LinkedHashMap<K, V> {
     public static final m0<?, ?> b;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f8512a;
+    public boolean f8586a;
 
     static {
         m0<?, ?> m0Var = new m0<>();
@@ -20,7 +20,7 @@ public final class m0<K, V> extends LinkedHashMap<K, V> {
     }
 
     public m0() {
-        this.f8512a = true;
+        this.f8586a = true;
     }
 
     public static <K, V> int a(Map<K, V> map) {
@@ -99,11 +99,11 @@ public final class m0<K, V> extends LinkedHashMap<K, V> {
     }
 
     public boolean k() {
-        return this.f8512a;
+        return this.f8586a;
     }
 
     public void n() {
-        this.f8512a = false;
+        this.f8586a = false;
     }
 
     public void o(m0<K, V> m0Var) {
@@ -141,6 +141,6 @@ public final class m0<K, V> extends LinkedHashMap<K, V> {
 
     public m0(Map<K, V> map) {
         super(map);
-        this.f8512a = true;
+        this.f8586a = true;
     }
 }

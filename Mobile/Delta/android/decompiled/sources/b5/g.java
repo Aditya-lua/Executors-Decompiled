@@ -20,7 +20,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000>\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0004\b\u0000\u0018\u00002\u00020\u00012\u00020\u0002:\u0003\u000f\u0016\u0012B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0001\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u000f\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\t\u0010\nJ\u0018\u0010\r\u001a\u00020\b2\u0006\u0010\f\u001a\u00020\u000bH\u0096\u0001¢\u0006\u0004\b\r\u0010\u000eR\u001a\u0010\u0003\u001a\u00020\u00018\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u000f\u0010\u0010\u001a\u0004\b\u000f\u0010\u0011R\u001a\u0010\u0005\u001a\u00020\u00048\u0000X\u0080\u0004¢\u0006\f\n\u0004\b\u0012\u0010\u0013\u001a\u0004\b\u0012\u0010\u0014R\u0014\u0010\u0018\u001a\u00020\u00158\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0016\u0010\u0017R\u0014\u0010\u001c\u001a\u00020\u00198VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\u001a\u0010\u001bR\u0016\u0010 \u001a\u0004\u0018\u00010\u001d8\u0016X\u0096\u0005¢\u0006\u0006\u001a\u0004\b\u001e\u0010\u001f¨\u0006!"}, d2 = {"Lb5/g;", "Lg5/d;", "Lx4/d;", "delegate", "Lb5/b;", "autoCloser", "<init>", "(Lg5/d;Lb5/b;)V", "", "close", "()V", "", "enabled", "setWriteAheadLoggingEnabled", "(Z)V", "a", "Lg5/d;", "()Lg5/d;", "b", "Lb5/b;", "()Lb5/b;", "Lb5/g$a;", "c", "Lb5/g$a;", "autoClosingDb", "Lg5/c;", "t2", "()Lg5/c;", "writableDatabase", "", "getDatabaseName", "()Ljava/lang/String;", "databaseName", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
+@Metadata(d1 = {"\u0000>\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0004\b\u0000\u0018\u00002\u00020\u00012\u00020\u0002:\u0003\u000f\u0016\u0012B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0001\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u000f\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\t\u0010\nJ\u0018\u0010\r\u001a\u00020\b2\u0006\u0010\f\u001a\u00020\u000bH\u0096\u0001¢\u0006\u0004\b\r\u0010\u000eR\u001a\u0010\u0003\u001a\u00020\u00018\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u000f\u0010\u0010\u001a\u0004\b\u000f\u0010\u0011R\u001a\u0010\u0005\u001a\u00020\u00048\u0000X\u0080\u0004¢\u0006\f\n\u0004\b\u0012\u0010\u0013\u001a\u0004\b\u0012\u0010\u0014R\u0014\u0010\u0018\u001a\u00020\u00158\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0016\u0010\u0017R\u0014\u0010\u001c\u001a\u00020\u00198VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\u001a\u0010\u001bR\u0016\u0010 \u001a\u0004\u0018\u00010\u001d8\u0016X\u0096\u0005¢\u0006\u0006\u001a\u0004\b\u001e\u0010\u001f¨\u0006!"}, d2 = {"Lb5/g;", "Lg5/d;", "Lx4/d;", "delegate", "Lb5/b;", "autoCloser", "<init>", "(Lg5/d;Lb5/b;)V", "", "close", "()V", "", "enabled", "setWriteAheadLoggingEnabled", "(Z)V", "a", "Lg5/d;", "()Lg5/d;", "b", "Lb5/b;", "()Lb5/b;", "Lb5/g$a;", "c", "Lb5/g$a;", "autoClosingDb", "Lg5/c;", "u2", "()Lg5/c;", "writableDatabase", "", "getDatabaseName", "()Ljava/lang/String;", "databaseName", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
 public final class g implements g5.d, x4.d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -35,7 +35,7 @@ public final class g implements g5.d, x4.d {
     @NotNull
     public final a autoClosingDb;
 
-    @Metadata(d1 = {"\u0000b\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0011\n\u0002\u0010\u0000\n\u0002\b\u0013\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0000\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\r\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\u0007\u0010\bJ\u0017\u0010\f\u001a\u00020\u000b2\u0006\u0010\n\u001a\u00020\tH\u0016¢\u0006\u0004\b\f\u0010\rJ\u000f\u0010\u000e\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\u000e\u0010\bJ\u000f\u0010\u000f\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\u000f\u0010\bJ\u000f\u0010\u0010\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\u0010\u0010\bJ\u000f\u0010\u0011\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\u0011\u0010\bJ\u000f\u0010\u0013\u001a\u00020\u0012H\u0016¢\u0006\u0004\b\u0013\u0010\u0014J\u0017\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u0016\u001a\u00020\u0015H\u0016¢\u0006\u0004\b\u0018\u0010\u0019JE\u0010#\u001a\u00020\u001b2\u0006\u0010\u001a\u001a\u00020\t2\u0006\u0010\u001c\u001a\u00020\u001b2\u0006\u0010\u001e\u001a\u00020\u001d2\b\u0010\u001f\u001a\u0004\u0018\u00010\t2\u0012\u0010\"\u001a\u000e\u0012\b\b\u0001\u0012\u0004\u0018\u00010!\u0018\u00010 H\u0016¢\u0006\u0004\b#\u0010$J\u0017\u0010%\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\tH\u0016¢\u0006\u0004\b%\u0010&J)\u0010(\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\t2\u0010\u0010'\u001a\f\u0012\b\b\u0001\u0012\u0004\u0018\u00010!0 H\u0016¢\u0006\u0004\b(\u0010)J\u000f\u0010*\u001a\u00020\u0012H\u0016¢\u0006\u0004\b*\u0010\u0014J\u000f\u0010+\u001a\u00020\u0006H\u0016¢\u0006\u0004\b+\u0010\bJ\u000f\u0010,\u001a\u00020\u0006H\u0016¢\u0006\u0004\b,\u0010\bR\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b-\u0010.R\u0014\u0010/\u001a\u00020\u00128VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b/\u0010\u0014R\u0016\u00102\u001a\u0004\u0018\u00010\t8VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b0\u00101R\u0014\u00104\u001a\u00020\u00128VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b3\u0010\u0014R(\u00109\u001a\u0016\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\t\u0012\u0004\u0012\u00020\t06\u0018\u0001058VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b7\u00108¨\u0006:"}, d2 = {"Lb5/g$a;", "Lg5/c;", "Lb5/b;", "autoCloser", "<init>", "(Lb5/b;)V", "", "g", "()V", "", "sql", "Lg5/g;", "T1", "(Ljava/lang/String;)Lg5/g;", "G", "u0", "G0", "q0", "", "D", "()Z", "Lg5/f;", "query", "Landroid/database/Cursor;", "U1", "(Lg5/f;)Landroid/database/Cursor;", "table", "", "conflictAlgorithm", "Landroid/content/ContentValues;", "values", "whereClause", "", "", "whereArgs", "r2", "(Ljava/lang/String;ILandroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/Object;)I", "R", "(Ljava/lang/String;)V", "bindArgs", "s0", "(Ljava/lang/String;[Ljava/lang/Object;)V", "p0", "Q", "close", "a", "Lb5/b;", "isOpen", "getPath", "()Ljava/lang/String;", "path", "b3", "isWriteAheadLoggingEnabled", "", "Landroid/util/Pair;", "N", "()Ljava/util/List;", "attachedDbs", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000b\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0011\n\u0002\u0010\u0000\n\u0002\b\u0013\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0000\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\r\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\u0007\u0010\bJ\u0017\u0010\f\u001a\u00020\u000b2\u0006\u0010\n\u001a\u00020\tH\u0016¢\u0006\u0004\b\f\u0010\rJ\u000f\u0010\u000e\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\u000e\u0010\bJ\u000f\u0010\u000f\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\u000f\u0010\bJ\u000f\u0010\u0010\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\u0010\u0010\bJ\u000f\u0010\u0011\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\u0011\u0010\bJ\u000f\u0010\u0013\u001a\u00020\u0012H\u0016¢\u0006\u0004\b\u0013\u0010\u0014J\u0017\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u0016\u001a\u00020\u0015H\u0016¢\u0006\u0004\b\u0018\u0010\u0019JE\u0010#\u001a\u00020\u001b2\u0006\u0010\u001a\u001a\u00020\t2\u0006\u0010\u001c\u001a\u00020\u001b2\u0006\u0010\u001e\u001a\u00020\u001d2\b\u0010\u001f\u001a\u0004\u0018\u00010\t2\u0012\u0010\"\u001a\u000e\u0012\b\b\u0001\u0012\u0004\u0018\u00010!\u0018\u00010 H\u0016¢\u0006\u0004\b#\u0010$J\u0017\u0010%\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\tH\u0016¢\u0006\u0004\b%\u0010&J)\u0010(\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\t2\u0010\u0010'\u001a\f\u0012\b\b\u0001\u0012\u0004\u0018\u00010!0 H\u0016¢\u0006\u0004\b(\u0010)J\u000f\u0010*\u001a\u00020\u0012H\u0016¢\u0006\u0004\b*\u0010\u0014J\u000f\u0010+\u001a\u00020\u0006H\u0016¢\u0006\u0004\b+\u0010\bJ\u000f\u0010,\u001a\u00020\u0006H\u0016¢\u0006\u0004\b,\u0010\bR\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b-\u0010.R\u0014\u0010/\u001a\u00020\u00128VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b/\u0010\u0014R\u0016\u00102\u001a\u0004\u0018\u00010\t8VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b0\u00101R\u0014\u00104\u001a\u00020\u00128VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b3\u0010\u0014R(\u00109\u001a\u0016\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\t\u0012\u0004\u0012\u00020\t06\u0018\u0001058VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b7\u00108¨\u0006:"}, d2 = {"Lb5/g$a;", "Lg5/c;", "Lb5/b;", "autoCloser", "<init>", "(Lb5/b;)V", "", "g", "()V", "", "sql", "Lg5/g;", "T1", "(Ljava/lang/String;)Lg5/g;", "G", "q0", "C0", "m0", "", "D", "()Z", "Lg5/f;", "query", "Landroid/database/Cursor;", "U1", "(Lg5/f;)Landroid/database/Cursor;", "table", "", "conflictAlgorithm", "Landroid/content/ContentValues;", "values", "whereClause", "", "", "whereArgs", "s2", "(Ljava/lang/String;ILandroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/Object;)I", "R", "(Ljava/lang/String;)V", "bindArgs", "o0", "(Ljava/lang/String;[Ljava/lang/Object;)V", "l0", "Q", "close", "a", "Lb5/b;", "isOpen", "getPath", "()Ljava/lang/String;", "path", "b3", "isWriteAheadLoggingEnabled", "", "Landroid/util/Pair;", "N", "()Ljava/util/List;", "attachedDbs", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
     public static final class a implements g5.c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -46,7 +46,7 @@ public final class g implements g5.d, x4.d {
         public static final /* synthetic */ class b extends kotlin.jvm.internal.k implements Function1<g5.c, Boolean> {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public static final b f3929a = new b();
+            public static final b f3827a = new b();
 
             public b() {
                 super(1, g5.c.class, "inTransaction", "inTransaction()Z", 0);
@@ -68,13 +68,13 @@ public final class g implements g5.d, x4.d {
         public static final Unit e(String str, g5.c db2) {
             Intrinsics.checkNotNullParameter(db2, "db");
             db2.R(str);
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
 
         public static final Unit f(String str, Object[] objArr, g5.c db2) {
             Intrinsics.checkNotNullParameter(db2, "db");
-            db2.s0(str, objArr);
-            return Unit.f22483a;
+            db2.o0(str, objArr);
+            return Unit.f22938a;
         }
 
         public static final Object h(g5.c it) {
@@ -84,7 +84,18 @@ public final class g implements g5.d, x4.d {
 
         public static final int j(String str, int i10, ContentValues contentValues, String str2, Object[] objArr, g5.c db2) {
             Intrinsics.checkNotNullParameter(db2, "db");
-            return db2.r2(str, i10, contentValues, str2, objArr);
+            return db2.s2(str, i10, contentValues, str2, objArr);
+        }
+
+        @Override // g5.c
+        public void C0() {
+            try {
+                g5.c delegateDatabase = this.autoCloser.getDelegateDatabase();
+                Intrinsics.checkNotNull(delegateDatabase);
+                delegateDatabase.C0();
+            } finally {
+                this.autoCloser.g();
+            }
         }
 
         @Override // g5.c
@@ -92,7 +103,7 @@ public final class g implements g5.d, x4.d {
             if (this.autoCloser.getDelegateDatabase() == null) {
                 return false;
             }
-            return ((Boolean) this.autoCloser.h(b.f3929a)).booleanValue();
+            return ((Boolean) this.autoCloser.h(b.f3827a)).booleanValue();
         }
 
         @Override // g5.c
@@ -106,21 +117,10 @@ public final class g implements g5.d, x4.d {
         }
 
         @Override // g5.c
-        public void G0() {
-            try {
-                g5.c delegateDatabase = this.autoCloser.getDelegateDatabase();
-                Intrinsics.checkNotNull(delegateDatabase);
-                delegateDatabase.G0();
-            } finally {
-                this.autoCloser.g();
-            }
-        }
-
-        @Override // g5.c
         @Nullable
         public List<Pair<String, String>> N() {
             return (List) this.autoCloser.h(new u() { // from class: b5.g.a.a
-                @Override // kotlin.jvm.internal.u, hu.j
+                @Override // kotlin.jvm.internal.u, fu.j
                 public Object get(Object obj) {
                     return ((g5.c) obj).N();
                 }
@@ -165,7 +165,7 @@ public final class g implements g5.d, x4.d {
         @Override // g5.c
         public boolean b3() {
             return ((Boolean) this.autoCloser.h(new u() { // from class: b5.g.a.c
-                @Override // kotlin.jvm.internal.u, hu.j
+                @Override // kotlin.jvm.internal.u, fu.j
                 public Object get(Object obj) {
                     return Boolean.valueOf(((g5.c) obj).b3());
                 }
@@ -190,7 +190,7 @@ public final class g implements g5.d, x4.d {
         @Nullable
         public String getPath() {
             return (String) this.autoCloser.h(new u() { // from class: b5.g.a.d
-                @Override // kotlin.jvm.internal.u, hu.j
+                @Override // kotlin.jvm.internal.u, fu.j
                 public Object get(Object obj) {
                     return ((g5.c) obj).getPath();
                 }
@@ -203,31 +203,19 @@ public final class g implements g5.d, x4.d {
         }
 
         @Override // g5.c
-        public boolean p0() {
+        public boolean l0() {
             throw new UnsupportedOperationException("Enable/disable write ahead logging on the OpenHelper instead of on the database directly.");
         }
 
         @Override // g5.c
-        public void q0() {
+        public void m0() {
             g5.c delegateDatabase = this.autoCloser.getDelegateDatabase();
             Intrinsics.checkNotNull(delegateDatabase);
-            delegateDatabase.q0();
+            delegateDatabase.m0();
         }
 
         @Override // g5.c
-        public int r2(@NotNull final String table, final int conflictAlgorithm, @NotNull final ContentValues values, @Nullable final String whereClause, @Nullable final Object[] whereArgs) {
-            Intrinsics.checkNotNullParameter(table, "table");
-            Intrinsics.checkNotNullParameter(values, "values");
-            return ((Number) this.autoCloser.h(new Function1() { // from class: b5.c
-                @Override // kotlin.jvm.functions.Function1
-                public final Object invoke(Object obj) {
-                    return Integer.valueOf(g.a.j(table, conflictAlgorithm, values, whereClause, whereArgs, (g5.c) obj));
-                }
-            })).intValue();
-        }
-
-        @Override // g5.c
-        public void s0(@NotNull final String sql, @NotNull final Object[] bindArgs) {
+        public void o0(@NotNull final String sql, @NotNull final Object[] bindArgs) {
             Intrinsics.checkNotNullParameter(sql, "sql");
             Intrinsics.checkNotNullParameter(bindArgs, "bindArgs");
             this.autoCloser.h(new Function1() { // from class: b5.e
@@ -239,17 +227,29 @@ public final class g implements g5.d, x4.d {
         }
 
         @Override // g5.c
-        public void u0() {
+        public void q0() {
             try {
-                this.autoCloser.j().u0();
+                this.autoCloser.j().q0();
             } catch (Throwable th2) {
                 this.autoCloser.g();
                 throw th2;
             }
         }
+
+        @Override // g5.c
+        public int s2(@NotNull final String table, final int conflictAlgorithm, @NotNull final ContentValues values, @Nullable final String whereClause, @Nullable final Object[] whereArgs) {
+            Intrinsics.checkNotNullParameter(table, "table");
+            Intrinsics.checkNotNullParameter(values, "values");
+            return ((Number) this.autoCloser.h(new Function1() { // from class: b5.c
+                @Override // kotlin.jvm.functions.Function1
+                public final Object invoke(Object obj) {
+                    return Integer.valueOf(g.a.j(table, conflictAlgorithm, values, whereClause, whereArgs, (g5.c) obj));
+                }
+            })).intValue();
+        }
     }
 
-    @Metadata(d1 = {"\u0000n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0005\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0010\u0006\n\u0002\b\u0004\n\u0002\u0010\u0012\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u0015\n\u0002\b\u0003\n\u0002\u0010\u0016\n\u0002\b\u0002\n\u0002\u0010\u0013\n\u0002\b\u0002\n\u0002\u0010\u0011\n\u0002\b\u0007\b\u0002\u0018\u0000 \"2\u00020\u0001:\u0001+B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u000f\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\t\u0010\nJ\u000f\u0010\u000b\u001a\u00020\bH\u0016¢\u0006\u0004\b\u000b\u0010\nJ\u000f\u0010\r\u001a\u00020\fH\u0016¢\u0006\u0004\b\r\u0010\u000eJ\u0017\u0010\u0010\u001a\u00020\b2\u0006\u0010\u000f\u001a\u00020\fH\u0016¢\u0006\u0004\b\u0010\u0010\u0011J\u001f\u0010\u0014\u001a\u00020\b2\u0006\u0010\u000f\u001a\u00020\f2\u0006\u0010\u0013\u001a\u00020\u0012H\u0016¢\u0006\u0004\b\u0014\u0010\u0015J\u001f\u0010\u0017\u001a\u00020\b2\u0006\u0010\u000f\u001a\u00020\f2\u0006\u0010\u0013\u001a\u00020\u0016H\u0016¢\u0006\u0004\b\u0017\u0010\u0018J\u001f\u0010\u0019\u001a\u00020\b2\u0006\u0010\u000f\u001a\u00020\f2\u0006\u0010\u0013\u001a\u00020\u0002H\u0016¢\u0006\u0004\b\u0019\u0010\u001aJ\u001f\u0010\u001c\u001a\u00020\b2\u0006\u0010\u000f\u001a\u00020\f2\u0006\u0010\u0013\u001a\u00020\u001bH\u0016¢\u0006\u0004\b\u001c\u0010\u001dJ\u000f\u0010\u001e\u001a\u00020\bH\u0016¢\u0006\u0004\b\u001e\u0010\nJ)\u0010\"\u001a\u00028\u0000\"\u0004\b\u0000\u0010\u001f2\u0012\u0010!\u001a\u000e\u0012\u0004\u0012\u00020\u0001\u0012\u0004\u0012\u00028\u00000 H\u0002¢\u0006\u0004\b\"\u0010#J\u001f\u0010%\u001a\u00020\b2\u0006\u0010$\u001a\u00020\f2\u0006\u0010\u000f\u001a\u00020\fH\u0002¢\u0006\u0004\b%\u0010&J\u0017\u0010)\u001a\u00020\b2\u0006\u0010(\u001a\u00020'H\u0002¢\u0006\u0004\b)\u0010*R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b+\u0010,R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b-\u0010.R\u0016\u00102\u001a\u00020/8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b0\u00101R\u0016\u00105\u001a\u0002038\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b)\u00104R\u0016\u00108\u001a\u0002068\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b%\u00107R\u001e\u0010<\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u0002098\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b:\u0010;R\u001e\u0010?\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u001b098\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b=\u0010>¨\u0006@"}, d2 = {"Lb5/g$b;", "Lg5/g;", "", "sql", "Lb5/b;", "autoCloser", "<init>", "(Ljava/lang/String;Lb5/b;)V", "", "close", "()V", "execute", "", "W", "()I", "index", "C", "(I)V", "", "value", "z", "(IJ)V", "", "c0", "(ID)V", "L1", "(ILjava/lang/String;)V", "", "A", "(I[B)V", "E", "T", "Lkotlin/Function1;", "block", "h", "(Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;", "columnType", "e", "(II)V", "Lg5/e;", "query", "d", "(Lg5/e;)V", "a", "Ljava/lang/String;", "b", "Lb5/b;", "", "c", "[I", "bindingTypes", "", "[J", "longBindings", "", "[D", "doubleBindings", "", "f", "[Ljava/lang/String;", "stringBindings", "g", "[[B", "blobBindings", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0005\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0010\u0006\n\u0002\b\u0004\n\u0002\u0010\u0012\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u0015\n\u0002\b\u0003\n\u0002\u0010\u0016\n\u0002\b\u0002\n\u0002\u0010\u0013\n\u0002\b\u0002\n\u0002\u0010\u0011\n\u0002\b\u0007\b\u0002\u0018\u0000 \"2\u00020\u0001:\u0001+B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u000f\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\t\u0010\nJ\u000f\u0010\u000b\u001a\u00020\bH\u0016¢\u0006\u0004\b\u000b\u0010\nJ\u000f\u0010\r\u001a\u00020\fH\u0016¢\u0006\u0004\b\r\u0010\u000eJ\u0017\u0010\u0010\u001a\u00020\b2\u0006\u0010\u000f\u001a\u00020\fH\u0016¢\u0006\u0004\b\u0010\u0010\u0011J\u001f\u0010\u0014\u001a\u00020\b2\u0006\u0010\u000f\u001a\u00020\f2\u0006\u0010\u0013\u001a\u00020\u0012H\u0016¢\u0006\u0004\b\u0014\u0010\u0015J\u001f\u0010\u0017\u001a\u00020\b2\u0006\u0010\u000f\u001a\u00020\f2\u0006\u0010\u0013\u001a\u00020\u0016H\u0016¢\u0006\u0004\b\u0017\u0010\u0018J\u001f\u0010\u0019\u001a\u00020\b2\u0006\u0010\u000f\u001a\u00020\f2\u0006\u0010\u0013\u001a\u00020\u0002H\u0016¢\u0006\u0004\b\u0019\u0010\u001aJ\u001f\u0010\u001c\u001a\u00020\b2\u0006\u0010\u000f\u001a\u00020\f2\u0006\u0010\u0013\u001a\u00020\u001bH\u0016¢\u0006\u0004\b\u001c\u0010\u001dJ\u000f\u0010\u001e\u001a\u00020\bH\u0016¢\u0006\u0004\b\u001e\u0010\nJ)\u0010\"\u001a\u00028\u0000\"\u0004\b\u0000\u0010\u001f2\u0012\u0010!\u001a\u000e\u0012\u0004\u0012\u00020\u0001\u0012\u0004\u0012\u00028\u00000 H\u0002¢\u0006\u0004\b\"\u0010#J\u001f\u0010%\u001a\u00020\b2\u0006\u0010$\u001a\u00020\f2\u0006\u0010\u000f\u001a\u00020\fH\u0002¢\u0006\u0004\b%\u0010&J\u0017\u0010)\u001a\u00020\b2\u0006\u0010(\u001a\u00020'H\u0002¢\u0006\u0004\b)\u0010*R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b+\u0010,R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b-\u0010.R\u0016\u00102\u001a\u00020/8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b0\u00101R\u0016\u00105\u001a\u0002038\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b)\u00104R\u0016\u00108\u001a\u0002068\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b%\u00107R\u001e\u0010<\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u0002098\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b:\u0010;R\u001e\u0010?\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u001b098\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b=\u0010>¨\u0006@"}, d2 = {"Lb5/g$b;", "Lg5/g;", "", "sql", "Lb5/b;", "autoCloser", "<init>", "(Ljava/lang/String;Lb5/b;)V", "", "close", "()V", "execute", "", "V", "()I", "index", "B", "(I)V", "", "value", "y", "(IJ)V", "", "b0", "(ID)V", "K1", "(ILjava/lang/String;)V", "", "z", "(I[B)V", "E", "T", "Lkotlin/Function1;", "block", "h", "(Lkotlin/jvm/functions/Function1;)Ljava/lang/Object;", "columnType", "e", "(II)V", "Lg5/e;", "query", "d", "(Lg5/e;)V", "a", "Ljava/lang/String;", "b", "Lb5/b;", "", "c", "[I", "bindingTypes", "", "[J", "longBindings", "", "[D", "doubleBindings", "", "f", "[Ljava/lang/String;", "stringBindings", "g", "[[B", "blobBindings", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
     public static final class b implements g5.g {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -295,12 +295,12 @@ public final class g implements g5.d, x4.d {
         public static final Unit f(g5.g statement) {
             Intrinsics.checkNotNullParameter(statement, "statement");
             statement.execute();
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
 
         public static final int g(g5.g obj) {
             Intrinsics.checkNotNullParameter(obj, "obj");
-            return obj.W();
+            return obj.V();
         }
 
         public static final Object j(b bVar, Function1 function1, g5.c db2) {
@@ -311,15 +311,7 @@ public final class g implements g5.d, x4.d {
         }
 
         @Override // g5.e
-        public void A(int index, @NotNull byte[] value) {
-            Intrinsics.checkNotNullParameter(value, "value");
-            e(4, index);
-            this.bindingTypes[index] = 4;
-            this.blobBindings[index] = value;
-        }
-
-        @Override // g5.e
-        public void C(int index) {
+        public void B(int index) {
             e(5, index);
             this.bindingTypes[index] = 5;
         }
@@ -334,7 +326,7 @@ public final class g implements g5.d, x4.d {
         }
 
         @Override // g5.e
-        public void L1(int index, @NotNull String value) {
+        public void K1(int index, @NotNull String value) {
             Intrinsics.checkNotNullParameter(value, "value");
             e(3, index);
             this.bindingTypes[index] = 3;
@@ -342,7 +334,7 @@ public final class g implements g5.d, x4.d {
         }
 
         @Override // g5.g
-        public int W() {
+        public int V() {
             return ((Number) h(new Function1() { // from class: b5.h
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
@@ -352,7 +344,7 @@ public final class g implements g5.d, x4.d {
         }
 
         @Override // g5.e
-        public void c0(int index, double value) {
+        public void b0(int index, double value) {
             e(2, index);
             this.bindingTypes[index] = 2;
             this.doubleBindings[index] = value;
@@ -368,19 +360,19 @@ public final class g implements g5.d, x4.d {
             for (int i10 = 1; i10 < length; i10++) {
                 int i11 = this.bindingTypes[i10];
                 if (i11 == 1) {
-                    query.z(i10, this.longBindings[i10]);
+                    query.y(i10, this.longBindings[i10]);
                 } else if (i11 == 2) {
-                    query.c0(i10, this.doubleBindings[i10]);
+                    query.b0(i10, this.doubleBindings[i10]);
                 } else if (i11 == 3) {
                     String str = this.stringBindings[i10];
                     Intrinsics.checkNotNull(str);
-                    query.L1(i10, str);
+                    query.K1(i10, str);
                 } else if (i11 == 4) {
                     byte[] bArr = this.blobBindings[i10];
                     Intrinsics.checkNotNull(bArr);
-                    query.A(i10, bArr);
+                    query.z(i10, bArr);
                 } else if (i11 == 5) {
-                    query.C(i10);
+                    query.B(i10);
                 }
             }
         }
@@ -448,16 +440,24 @@ public final class g implements g5.d, x4.d {
             return (T) this.autoCloser.h(new Function1() { // from class: b5.j
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return g.b.j(this.f3938a, block, (g5.c) obj);
+                    return g.b.j(this.f3836a, block, (g5.c) obj);
                 }
             });
         }
 
         @Override // g5.e
-        public void z(int index, long value) {
+        public void y(int index, long value) {
             e(1, index);
             this.bindingTypes[index] = 1;
             this.longBindings[index] = value;
+        }
+
+        @Override // g5.e
+        public void z(int index, @NotNull byte[] value) {
+            Intrinsics.checkNotNullParameter(value, "value");
+            e(4, index);
+            this.bindingTypes[index] = 4;
+            this.blobBindings[index] = value;
         }
     }
 
@@ -727,7 +727,7 @@ public final class g implements g5.d, x4.d {
 
     @Override // g5.d
     @NotNull
-    public g5.c t2() {
+    public g5.c u2() {
         this.autoClosingDb.g();
         return this.autoClosingDb;
     }

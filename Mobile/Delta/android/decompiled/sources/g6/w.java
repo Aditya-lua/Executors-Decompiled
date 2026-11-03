@@ -9,10 +9,10 @@ import f6.Preference;
 public class w {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final WorkDatabase f17933a;
+    public final WorkDatabase f18472a;
 
     public w(WorkDatabase workDatabase) {
-        this.f17933a = workDatabase;
+        this.f18472a = workDatabase;
     }
 
     public static void c(Context context, g5.c cVar) {
@@ -22,18 +22,18 @@ public class w {
             long j11 = sharedPreferences.getBoolean("reschedule_needed", false) ? 1L : 0L;
             cVar.G();
             try {
-                cVar.s0("INSERT OR REPLACE INTO `Preference` (`key`, `long_value`) VALUES (@key, @long_value)", new Object[]{"last_cancel_all_time_ms", Long.valueOf(j10)});
-                cVar.s0("INSERT OR REPLACE INTO `Preference` (`key`, `long_value`) VALUES (@key, @long_value)", new Object[]{"reschedule_needed", Long.valueOf(j11)});
+                cVar.o0("INSERT OR REPLACE INTO `Preference` (`key`, `long_value`) VALUES (@key, @long_value)", new Object[]{"last_cancel_all_time_ms", Long.valueOf(j10)});
+                cVar.o0("INSERT OR REPLACE INTO `Preference` (`key`, `long_value`) VALUES (@key, @long_value)", new Object[]{"reschedule_needed", Long.valueOf(j11)});
                 sharedPreferences.edit().clear().apply();
-                cVar.q0();
+                cVar.m0();
             } finally {
-                cVar.G0();
+                cVar.C0();
             }
         }
     }
 
     public long a() {
-        Long lB = this.f17933a.Y().b("last_force_stop_ms");
+        Long lB = this.f18472a.Y().b("last_force_stop_ms");
         if (lB != null) {
             return lB.longValue();
         }
@@ -41,15 +41,15 @@ public class w {
     }
 
     public boolean b() {
-        Long lB = this.f17933a.Y().b("reschedule_needed");
+        Long lB = this.f18472a.Y().b("reschedule_needed");
         return lB != null && lB.longValue() == 1;
     }
 
     public void d(long j10) {
-        this.f17933a.Y().a(new Preference("last_force_stop_ms", Long.valueOf(j10)));
+        this.f18472a.Y().a(new Preference("last_force_stop_ms", Long.valueOf(j10)));
     }
 
     public void e(boolean z10) {
-        this.f17933a.Y().a(new Preference("reschedule_needed", z10));
+        this.f18472a.Y().a(new Preference("reschedule_needed", z10));
     }
 }

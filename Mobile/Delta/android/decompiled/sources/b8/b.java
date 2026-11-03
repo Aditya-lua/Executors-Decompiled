@@ -6,67 +6,67 @@ import java.util.Map;
 public final class b extends i {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f4003a;
+    public final String f3901a;
     public final Integer b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final h f4004c;
+    public final h f3902c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final long f4005d;
+    public final long f3903d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final long f4006e;
+    public final long f3904e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final Map<String, String> f4007f;
+    public final Map<String, String> f3905f;
 
     /* JADX INFO: renamed from: b8.b$b, reason: collision with other inner class name */
-    public static final class C0078b extends i.a {
+    public static final class C0077b extends i.a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public String f4008a;
+        public String f3906a;
         public Integer b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public h f4009c;
+        public h f3907c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public Long f4010d;
+        public Long f3908d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public Long f4011e;
+        public Long f3909e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public Map<String, String> f4012f;
+        public Map<String, String> f3910f;
 
         @Override // b8.i.a
         public i d() {
             String str = "";
-            if (this.f4008a == null) {
+            if (this.f3906a == null) {
                 str = " transportName";
             }
-            if (this.f4009c == null) {
+            if (this.f3907c == null) {
                 str = str + " encodedPayload";
             }
-            if (this.f4010d == null) {
+            if (this.f3908d == null) {
                 str = str + " eventMillis";
             }
-            if (this.f4011e == null) {
+            if (this.f3909e == null) {
                 str = str + " uptimeMillis";
             }
-            if (this.f4012f == null) {
+            if (this.f3910f == null) {
                 str = str + " autoMetadata";
             }
             if (str.isEmpty()) {
-                return new b(this.f4008a, this.b, this.f4009c, this.f4010d.longValue(), this.f4011e.longValue(), this.f4012f);
+                return new b(this.f3906a, this.b, this.f3907c, this.f3908d.longValue(), this.f3909e.longValue(), this.f3910f);
             }
             throw new IllegalStateException("Missing required properties:" + str);
         }
 
         @Override // b8.i.a
         public Map<String, String> e() {
-            Map<String, String> map = this.f4012f;
+            Map<String, String> map = this.f3910f;
             if (map != null) {
                 return map;
             }
@@ -78,7 +78,7 @@ public final class b extends i {
             if (map == null) {
                 throw new NullPointerException("Null autoMetadata");
             }
-            this.f4012f = map;
+            this.f3910f = map;
             return this;
         }
 
@@ -93,13 +93,13 @@ public final class b extends i {
             if (hVar == null) {
                 throw new NullPointerException("Null encodedPayload");
             }
-            this.f4009c = hVar;
+            this.f3907c = hVar;
             return this;
         }
 
         @Override // b8.i.a
         public i.a i(long j10) {
-            this.f4010d = Long.valueOf(j10);
+            this.f3908d = Long.valueOf(j10);
             return this;
         }
 
@@ -108,20 +108,20 @@ public final class b extends i {
             if (str == null) {
                 throw new NullPointerException("Null transportName");
             }
-            this.f4008a = str;
+            this.f3906a = str;
             return this;
         }
 
         @Override // b8.i.a
         public i.a k(long j10) {
-            this.f4011e = Long.valueOf(j10);
+            this.f3909e = Long.valueOf(j10);
             return this;
         }
     }
 
     @Override // b8.i
     public Map<String, String> c() {
-        return this.f4007f;
+        return this.f3905f;
     }
 
     @Override // b8.i
@@ -131,7 +131,7 @@ public final class b extends i {
 
     @Override // b8.i
     public h e() {
-        return this.f4004c;
+        return this.f3902c;
     }
 
     public boolean equals(Object obj) {
@@ -141,7 +141,7 @@ public final class b extends i {
         }
         if (obj instanceof i) {
             i iVar = (i) obj;
-            if (this.f4003a.equals(iVar.j()) && ((num = this.b) != null ? num.equals(iVar.d()) : iVar.d() == null) && this.f4004c.equals(iVar.e()) && this.f4005d == iVar.f() && this.f4006e == iVar.k() && this.f4007f.equals(iVar.c())) {
+            if (this.f3901a.equals(iVar.j()) && ((num = this.b) != null ? num.equals(iVar.d()) : iVar.d() == null) && this.f3902c.equals(iVar.e()) && this.f3903d == iVar.f() && this.f3904e == iVar.k() && this.f3905f.equals(iVar.c())) {
                 return true;
             }
         }
@@ -150,39 +150,39 @@ public final class b extends i {
 
     @Override // b8.i
     public long f() {
-        return this.f4005d;
+        return this.f3903d;
     }
 
     public int hashCode() {
-        int iHashCode = (this.f4003a.hashCode() ^ 1000003) * 1000003;
+        int iHashCode = (this.f3901a.hashCode() ^ 1000003) * 1000003;
         Integer num = this.b;
-        int iHashCode2 = (((iHashCode ^ (num == null ? 0 : num.hashCode())) * 1000003) ^ this.f4004c.hashCode()) * 1000003;
-        long j10 = this.f4005d;
+        int iHashCode2 = (((iHashCode ^ (num == null ? 0 : num.hashCode())) * 1000003) ^ this.f3902c.hashCode()) * 1000003;
+        long j10 = this.f3903d;
         int i10 = (iHashCode2 ^ ((int) (j10 ^ (j10 >>> 32)))) * 1000003;
-        long j11 = this.f4006e;
-        return ((i10 ^ ((int) (j11 ^ (j11 >>> 32)))) * 1000003) ^ this.f4007f.hashCode();
+        long j11 = this.f3904e;
+        return ((i10 ^ ((int) (j11 ^ (j11 >>> 32)))) * 1000003) ^ this.f3905f.hashCode();
     }
 
     @Override // b8.i
     public String j() {
-        return this.f4003a;
+        return this.f3901a;
     }
 
     @Override // b8.i
     public long k() {
-        return this.f4006e;
+        return this.f3904e;
     }
 
     public String toString() {
-        return "EventInternal{transportName=" + this.f4003a + ", code=" + this.b + ", encodedPayload=" + this.f4004c + ", eventMillis=" + this.f4005d + ", uptimeMillis=" + this.f4006e + ", autoMetadata=" + this.f4007f + "}";
+        return "EventInternal{transportName=" + this.f3901a + ", code=" + this.b + ", encodedPayload=" + this.f3902c + ", eventMillis=" + this.f3903d + ", uptimeMillis=" + this.f3904e + ", autoMetadata=" + this.f3905f + "}";
     }
 
     public b(String str, Integer num, h hVar, long j10, long j11, Map<String, String> map) {
-        this.f4003a = str;
+        this.f3901a = str;
         this.b = num;
-        this.f4004c = hVar;
-        this.f4005d = j10;
-        this.f4006e = j11;
-        this.f4007f = map;
+        this.f3902c = hVar;
+        this.f3903d = j10;
+        this.f3904e = j11;
+        this.f3905f = map;
     }
 }

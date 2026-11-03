@@ -15,8 +15,8 @@ public interface b extends IInterface {
     public static abstract class a extends gb.b implements b {
 
         /* JADX INFO: renamed from: ta.b$a$a, reason: collision with other inner class name */
-        public static class C0567a extends gb.a implements b {
-            public C0567a(IBinder iBinder) {
+        public static class C0575a extends gb.a implements b {
+            public C0575a(IBinder iBinder) {
                 super(iBinder, "com.google.android.gms.identitycredentials.internal.IIdentityCredentialService");
             }
 
@@ -54,7 +54,7 @@ public interface b extends IInterface {
                 return null;
             }
             IInterface iInterfaceQueryLocalInterface = iBinder.queryLocalInterface("com.google.android.gms.identitycredentials.internal.IIdentityCredentialService");
-            return iInterfaceQueryLocalInterface instanceof b ? (b) iInterfaceQueryLocalInterface : new C0567a(iBinder);
+            return iInterfaceQueryLocalInterface instanceof b ? (b) iInterfaceQueryLocalInterface : new C0575a(iBinder);
         }
     }
 

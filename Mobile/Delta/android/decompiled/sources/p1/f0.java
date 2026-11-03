@@ -15,16 +15,16 @@ import java.util.Objects;
 public final class f0 extends View {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public i f28133a;
+    public i f28352a;
     public Window b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public f1.j f28134c;
+    public f1.j f28353c;
 
     public class a implements f1.j {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public float f28135a;
+        public float f28354a;
         public ValueAnimator b;
 
         public a() {
@@ -33,7 +33,7 @@ public final class f0 extends View {
         @Override // g0.f1.j
         public void a(long j10, final f1.k kVar) {
             r1.a("ScreenFlashView", "ScreenFlash#apply");
-            this.f28135a = f0.this.getBrightness();
+            this.f28354a = f0.this.getBrightness();
             f0.this.setBrightness(1.0f);
             ValueAnimator valueAnimator = this.b;
             if (valueAnimator != null) {
@@ -58,17 +58,17 @@ public final class f0 extends View {
                 this.b = null;
             }
             f0.this.setAlpha(0.0f);
-            f0.this.setBrightness(this.f28135a);
+            f0.this.setBrightness(this.f28354a);
         }
     }
 
     public class b implements Animator.AnimatorListener {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ Runnable f28137a;
+        public final /* synthetic */ Runnable f28356a;
 
         public b(Runnable runnable) {
-            this.f28137a = runnable;
+            this.f28356a = runnable;
         }
 
         @Override // android.animation.Animator.AnimatorListener
@@ -78,7 +78,7 @@ public final class f0 extends View {
         @Override // android.animation.Animator.AnimatorListener
         public void onAnimationEnd(Animator animator) {
             r1.a("ScreenFlashView", "ScreenFlash#apply: onAnimationEnd");
-            Runnable runnable = this.f28137a;
+            Runnable runnable = this.f28356a;
             if (runnable != null) {
                 runnable.run();
             }
@@ -130,11 +130,11 @@ public final class f0 extends View {
     }
 
     private void setScreenFlashUiInfo(f1.j jVar) {
-        i iVar = this.f28133a;
+        i iVar = this.f28352a;
         if (iVar == null) {
             r1.a("ScreenFlashView", "setScreenFlashUiInfo: mCameraController is null!");
         } else {
-            iVar.H(new r1.a(r1.a.EnumC0526a.SCREEN_FLASH_VIEW, jVar));
+            iVar.H(new r1.a(r1.a.EnumC0528a.SCREEN_FLASH_VIEW, jVar));
         }
     }
 
@@ -145,7 +145,7 @@ public final class f0 extends View {
         valueAnimatorOfFloat.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: p1.d0
             @Override // android.animation.ValueAnimator.AnimatorUpdateListener
             public final void onAnimationUpdate(ValueAnimator valueAnimator) {
-                f0.a(this.f28131a, valueAnimator);
+                f0.a(this.f28350a, valueAnimator);
             }
         });
         valueAnimatorOfFloat.addListener(new b(runnable));
@@ -161,12 +161,12 @@ public final class f0 extends View {
         sb2.append(window == this.b);
         r1.a("ScreenFlashView", sb2.toString());
         if (this.b != window) {
-            this.f28134c = window == null ? null : new a();
+            this.f28353c = window == null ? null : new a();
         }
     }
 
     public f1.j getScreenFlash() {
-        return this.f28134c;
+        return this.f28353c;
     }
 
     public long getVisibilityRampUpAnimationDurationMillis() {
@@ -175,11 +175,11 @@ public final class f0 extends View {
 
     public void setController(i iVar) {
         p0.z.b();
-        i iVar2 = this.f28133a;
+        i iVar2 = this.f28352a;
         if (iVar2 != null && iVar2 != iVar) {
             setScreenFlashUiInfo(null);
         }
-        this.f28133a = iVar;
+        this.f28352a = iVar;
         if (iVar == null) {
             return;
         }

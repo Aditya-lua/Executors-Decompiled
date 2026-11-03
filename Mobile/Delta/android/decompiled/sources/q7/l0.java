@@ -7,7 +7,7 @@ import java.util.Collections;
 public class l0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final r7.c.a f29259a = r7.c.a.a("nm", "c", "w", "o", "lc", "lj", "ml", "hd", "d");
+    public static final r7.c.a f29612a = r7.c.a.a("nm", "c", "w", "o", "lc", "lj", "ml", "hd", "d");
     public static final r7.c.a b = r7.c.a.a("n", "v");
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -24,7 +24,7 @@ public class l0 {
         boolean zG = false;
         m7.d dVar = null;
         while (cVar.f()) {
-            switch (cVar.r(f29259a)) {
+            switch (cVar.r(f29612a)) {
                 case 0:
                     strM = cVar.m();
                     break;

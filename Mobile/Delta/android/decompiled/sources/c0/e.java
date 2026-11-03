@@ -10,7 +10,7 @@ import n0.k3;
 public class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static volatile k3 f4314a;
+    public static volatile k3 f4480a;
 
     static {
         i3.b().c(q0.c.b(), new x2.a() { // from class: c0.d
@@ -22,15 +22,15 @@ public class e {
     }
 
     public static /* synthetic */ void a(h3 h3Var) {
-        f4314a = new k3(f.a(h3Var));
-        r1.a("DeviceQuirks", "camera2 DeviceQuirks = " + k3.d(f4314a));
+        f4480a = new k3(f.a(h3Var));
+        r1.a("DeviceQuirks", "camera2 DeviceQuirks = " + k3.d(f4480a));
     }
 
     public static <T extends g3> T b(Class<T> cls) {
-        return (T) f4314a.b(cls);
+        return (T) f4480a.b(cls);
     }
 
     public static k3 c() {
-        return f4314a;
+        return f4480a;
     }
 }

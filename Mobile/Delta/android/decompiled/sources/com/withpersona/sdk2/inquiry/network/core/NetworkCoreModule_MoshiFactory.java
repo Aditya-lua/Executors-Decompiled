@@ -1,12 +1,12 @@
 package com.withpersona.sdk2.inquiry.network.core;
 
-import ft.i;
+import dt.i;
 import java.util.Set;
-import um.h;
-import um.w;
+import sm.h;
+import sm.w;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class NetworkCoreModule_MoshiFactory implements ft.d<w> {
+public final class NetworkCoreModule_MoshiFactory implements dt.d<w> {
     private final i<Set<JsonAdapterBinding<?>>> jsonAdapterBindingsProvider;
     private final i<Set<h.e>> jsonAdapterFactoryProvider;
     private final i<Set<Object>> jsonAdaptersProvider;
@@ -24,10 +24,10 @@ public final class NetworkCoreModule_MoshiFactory implements ft.d<w> {
     }
 
     public static w moshi(NetworkCoreModule networkCoreModule, Set<Object> set, Set<JsonAdapterBinding<?>> set2, Set<h.e> set3) {
-        return (w) ft.h.e(networkCoreModule.moshi(set, set2, set3));
+        return (w) dt.h.e(networkCoreModule.moshi(set, set2, set3));
     }
 
-    @Override // ht.a
+    @Override // ft.a
     public w get() {
         return moshi(this.module, this.jsonAdaptersProvider.get(), this.jsonAdapterBindingsProvider.get(), this.jsonAdapterFactoryProvider.get());
     }

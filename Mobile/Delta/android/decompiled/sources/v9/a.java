@@ -10,14 +10,14 @@ import java.util.concurrent.Executor;
 public class a implements Executor {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Handler f32878a;
+    public final Handler f33446a;
 
     public a(@NonNull Looper looper) {
-        this.f32878a = new p(looper);
+        this.f33446a = new p(looper);
     }
 
     @Override // java.util.concurrent.Executor
     public final void execute(@NonNull Runnable runnable) {
-        this.f32878a.post(runnable);
+        this.f33446a.post(runnable);
     }
 }

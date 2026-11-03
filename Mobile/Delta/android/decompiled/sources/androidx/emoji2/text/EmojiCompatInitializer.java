@@ -16,20 +16,20 @@ public class EmojiCompatInitializer implements k5.b<Boolean> {
     public class a implements androidx.p000lifecycle.f {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ l f2403a;
+        public final /* synthetic */ l f2248a;
 
         public a(l lVar) {
-            this.f2403a = lVar;
+            this.f2248a = lVar;
         }
 
         @Override // androidx.p000lifecycle.f
         public void onResume(@NonNull s sVar) {
             EmojiCompatInitializer.this.c();
-            this.f2403a.d(this);
+            this.f2248a.d(this);
         }
     }
 
-    public static class b extends androidx.emoji2.text.c.AbstractC0036c {
+    public static class b extends androidx.emoji2.text.c.AbstractC0032c {
         public b(Context context) {
             super(new c(context));
             b(1);
@@ -39,23 +39,23 @@ public class EmojiCompatInitializer implements k5.b<Boolean> {
     public static class c implements androidx.emoji2.text.c.h {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Context f2404a;
+        public final Context f2249a;
 
         public class a extends androidx.emoji2.text.c.i {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ androidx.emoji2.text.c.i f2405a;
+            public final /* synthetic */ androidx.emoji2.text.c.i f2250a;
             public final /* synthetic */ ThreadPoolExecutor b;
 
             public a(androidx.emoji2.text.c.i iVar, ThreadPoolExecutor threadPoolExecutor) {
-                this.f2405a = iVar;
+                this.f2250a = iVar;
                 this.b = threadPoolExecutor;
             }
 
             @Override // androidx.emoji2.text.c.i
             public void a(Throwable th2) {
                 try {
-                    this.f2405a.a(th2);
+                    this.f2250a.a(th2);
                 } finally {
                     this.b.shutdown();
                 }
@@ -64,7 +64,7 @@ public class EmojiCompatInitializer implements k5.b<Boolean> {
             @Override // androidx.emoji2.text.c.i
             public void b(@NonNull f fVar) {
                 try {
-                    this.f2405a.b(fVar);
+                    this.f2250a.b(fVar);
                 } finally {
                     this.b.shutdown();
                 }
@@ -72,7 +72,7 @@ public class EmojiCompatInitializer implements k5.b<Boolean> {
         }
 
         public c(Context context) {
-            this.f2404a = context.getApplicationContext();
+            this.f2249a = context.getApplicationContext();
         }
 
         @Override // androidx.emoji2.text.c.h
@@ -81,14 +81,14 @@ public class EmojiCompatInitializer implements k5.b<Boolean> {
             threadPoolExecutorB.execute(new Runnable() { // from class: z3.c
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f37132a.c(iVar, threadPoolExecutorB);
+                    this.f37827a.c(iVar, threadPoolExecutorB);
                 }
             });
         }
 
         public void c(@NonNull androidx.emoji2.text.c.i iVar, @NonNull ThreadPoolExecutor threadPoolExecutor) {
             try {
-                e eVarA = androidx.emoji2.text.a.a(this.f2404a);
+                e eVarA = androidx.emoji2.text.a.a(this.f2249a);
                 if (eVarA == null) {
                     throw new RuntimeException("EmojiCompat font provider not available on this device.");
                 }

@@ -15,11 +15,11 @@ public final class LocalStorageManager {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final LocalStorageManager f8900a = new LocalStorageManager();
+    public static final LocalStorageManager f8968a = new LocalStorageManager();
 
     public static final void a(@NotNull Context context) {
         Intrinsics.checkNotNullParameter(context, "context");
-        LocalStorageManager localStorageManager = f8900a;
+        LocalStorageManager localStorageManager = f8968a;
         AssetManager assets = context.getAssets();
         Intrinsics.checkNotNullExpressionValue(assets, "getAssets(...)");
         String absolutePath = context.getFilesDir().getAbsolutePath();

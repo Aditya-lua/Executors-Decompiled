@@ -6,81 +6,81 @@ import android.util.Log;
 public abstract class w {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Object f35009a = new Object();
+    public static final Object f35507a = new Object();
     public static volatile w b = null;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final int f35010c = 20;
+    public static final int f35508c = 20;
 
     public static class a extends w {
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final int f35011d;
+        public final int f35509d;
 
         public a(int i10) {
             super(i10);
-            this.f35011d = i10;
+            this.f35509d = i10;
         }
 
         @Override // x5.w
         public void a(String str, String str2) {
-            if (this.f35011d <= 3) {
+            if (this.f35509d <= 3) {
                 Log.d(str, str2);
             }
         }
 
         @Override // x5.w
         public void b(String str, String str2, Throwable th2) {
-            if (this.f35011d <= 3) {
+            if (this.f35509d <= 3) {
                 Log.d(str, str2, th2);
             }
         }
 
         @Override // x5.w
         public void c(String str, String str2) {
-            if (this.f35011d <= 6) {
+            if (this.f35509d <= 6) {
                 Log.e(str, str2);
             }
         }
 
         @Override // x5.w
         public void d(String str, String str2, Throwable th2) {
-            if (this.f35011d <= 6) {
+            if (this.f35509d <= 6) {
                 Log.e(str, str2, th2);
             }
         }
 
         @Override // x5.w
         public void f(String str, String str2) {
-            if (this.f35011d <= 4) {
+            if (this.f35509d <= 4) {
                 Log.i(str, str2);
             }
         }
 
         @Override // x5.w
         public void g(String str, String str2, Throwable th2) {
-            if (this.f35011d <= 4) {
+            if (this.f35509d <= 4) {
                 Log.i(str, str2, th2);
             }
         }
 
         @Override // x5.w
         public void j(String str, String str2) {
-            if (this.f35011d <= 2) {
+            if (this.f35509d <= 2) {
                 Log.v(str, str2);
             }
         }
 
         @Override // x5.w
         public void k(String str, String str2) {
-            if (this.f35011d <= 5) {
+            if (this.f35509d <= 5) {
                 Log.w(str, str2);
             }
         }
 
         @Override // x5.w
         public void l(String str, String str2, Throwable th2) {
-            if (this.f35011d <= 5) {
+            if (this.f35509d <= 5) {
                 Log.w(str, str2, th2);
             }
         }
@@ -91,7 +91,7 @@ public abstract class w {
 
     public static w e() {
         w wVar;
-        synchronized (f35009a) {
+        synchronized (f35507a) {
             try {
                 if (b == null) {
                     b = new a(3);
@@ -105,7 +105,7 @@ public abstract class w {
     }
 
     public static void h(w wVar) {
-        synchronized (f35009a) {
+        synchronized (f35507a) {
             try {
                 if (b == null) {
                     b = wVar;
@@ -120,7 +120,7 @@ public abstract class w {
         int length = str.length();
         StringBuilder sb2 = new StringBuilder(23);
         sb2.append("WM-");
-        int i10 = f35010c;
+        int i10 = f35508c;
         if (length >= i10) {
             sb2.append(str.substring(0, i10));
         } else {

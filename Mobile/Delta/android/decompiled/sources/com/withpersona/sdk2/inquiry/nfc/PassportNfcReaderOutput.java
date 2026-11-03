@@ -18,7 +18,7 @@ public abstract class PassportNfcReaderOutput implements Parcelable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NotNull
-        public static final Cancel f12191a = new Cancel();
+        public static final Cancel f12272a = new Cancel();
 
         @NotNull
         public static final Parcelable.Creator<Cancel> CREATOR = new a();
@@ -30,7 +30,7 @@ public abstract class PassportNfcReaderOutput implements Parcelable {
             public final Cancel createFromParcel(Parcel parcel) {
                 Intrinsics.checkNotNullParameter(parcel, "parcel");
                 parcel.readInt();
-                return Cancel.f12191a;
+                return Cancel.f12272a;
             }
 
             @Override // android.os.Parcelable.Creator
@@ -192,7 +192,7 @@ public abstract class PassportNfcReaderOutput implements Parcelable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NotNull
-        public static final ShowTroubleshootingTips f12194a = new ShowTroubleshootingTips();
+        public static final ShowTroubleshootingTips f12275a = new ShowTroubleshootingTips();
 
         @NotNull
         public static final Parcelable.Creator<ShowTroubleshootingTips> CREATOR = new a();
@@ -204,7 +204,7 @@ public abstract class PassportNfcReaderOutput implements Parcelable {
             public final ShowTroubleshootingTips createFromParcel(Parcel parcel) {
                 Intrinsics.checkNotNullParameter(parcel, "parcel");
                 parcel.readInt();
-                return ShowTroubleshootingTips.f12194a;
+                return ShowTroubleshootingTips.f12275a;
             }
 
             @Override // android.os.Parcelable.Creator
@@ -243,7 +243,7 @@ public abstract class PassportNfcReaderOutput implements Parcelable {
         }
     }
 
-    @Metadata(d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0012\b\u0007\u0018\u00002\u00020\u0001B5\u0012\b\u0010\u0003\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u0004\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0002\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\n\u0010\u000bJ\r\u0010\r\u001a\u00020\f¢\u0006\u0004\b\r\u0010\u000eJ\u001d\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u0011\u001a\u00020\f¢\u0006\u0004\b\u0013\u0010\u0014R\u0019\u0010\u0003\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u0015\u0010\u0016\u001a\u0004\b\u0017\u0010\u0018R\u0019\u0010\u0004\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u0019\u0010\u0016\u001a\u0004\b\u001a\u0010\u0018R\u0019\u0010\u0005\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u001b\u0010\u0016\u001a\u0004\b\u001c\u0010\u0018R\u0017\u0010\u0007\u001a\u00020\u00068\u0006¢\u0006\f\n\u0004\b\u001d\u0010\u001e\u001a\u0004\b\u0015\u0010\u001fR\u0017\u0010\t\u001a\u00020\b8\u0006¢\u0006\f\n\u0004\b \u0010!\u001a\u0004\b\"\u0010#¨\u0006$"}, d2 = {"Lcom/withpersona/sdk2/inquiry/nfc/PassportNfcReaderOutput$Success;", "Lcom/withpersona/sdk2/inquiry/nfc/PassportNfcReaderOutput;", "Landroid/net/Uri;", "dg1Uri", "dg2Uri", "sodUri", "Lqp/a;", "chipAuthenticationStatus", "", "submitButtonComponentName", "<init>", "(Landroid/net/Uri;Landroid/net/Uri;Landroid/net/Uri;Lqp/a;Ljava/lang/String;)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "a", "Landroid/net/Uri;", "f", "()Landroid/net/Uri;", "b", "g", "c", "i", "d", "Lqp/a;", "()Lqp/a;", "e", "Ljava/lang/String;", "j", "()Ljava/lang/String;", "nfc_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0012\b\u0007\u0018\u00002\u00020\u0001B5\u0012\b\u0010\u0003\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u0004\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0002\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\n\u0010\u000bJ\r\u0010\r\u001a\u00020\f¢\u0006\u0004\b\r\u0010\u000eJ\u001d\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u0011\u001a\u00020\f¢\u0006\u0004\b\u0013\u0010\u0014R\u0019\u0010\u0003\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u0015\u0010\u0016\u001a\u0004\b\u0017\u0010\u0018R\u0019\u0010\u0004\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u0019\u0010\u0016\u001a\u0004\b\u001a\u0010\u0018R\u0019\u0010\u0005\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u001b\u0010\u0016\u001a\u0004\b\u001c\u0010\u0018R\u0017\u0010\u0007\u001a\u00020\u00068\u0006¢\u0006\f\n\u0004\b\u001d\u0010\u001e\u001a\u0004\b\u0015\u0010\u001fR\u0017\u0010\t\u001a\u00020\b8\u0006¢\u0006\f\n\u0004\b \u0010!\u001a\u0004\b\"\u0010#¨\u0006$"}, d2 = {"Lcom/withpersona/sdk2/inquiry/nfc/PassportNfcReaderOutput$Success;", "Lcom/withpersona/sdk2/inquiry/nfc/PassportNfcReaderOutput;", "Landroid/net/Uri;", "dg1Uri", "dg2Uri", "sodUri", "Lop/a;", "chipAuthenticationStatus", "", "submitButtonComponentName", "<init>", "(Landroid/net/Uri;Landroid/net/Uri;Landroid/net/Uri;Lop/a;Ljava/lang/String;)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "a", "Landroid/net/Uri;", "f", "()Landroid/net/Uri;", "b", "g", "c", "i", "d", "Lop/a;", "()Lop/a;", "e", "Ljava/lang/String;", "j", "()Ljava/lang/String;", "nfc_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class Success extends PassportNfcReaderOutput {
 
         @NotNull
@@ -263,7 +263,7 @@ public abstract class PassportNfcReaderOutput implements Parcelable {
 
         /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
         @NotNull
-        public final qp.a chipAuthenticationStatus;
+        public final op.a chipAuthenticationStatus;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
         @NotNull
@@ -275,7 +275,7 @@ public abstract class PassportNfcReaderOutput implements Parcelable {
             /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
             public final Success createFromParcel(Parcel parcel) {
                 Intrinsics.checkNotNullParameter(parcel, "parcel");
-                return new Success((Uri) parcel.readParcelable(Success.class.getClassLoader()), (Uri) parcel.readParcelable(Success.class.getClassLoader()), (Uri) parcel.readParcelable(Success.class.getClassLoader()), qp.a.valueOf(parcel.readString()), parcel.readString());
+                return new Success((Uri) parcel.readParcelable(Success.class.getClassLoader()), (Uri) parcel.readParcelable(Success.class.getClassLoader()), (Uri) parcel.readParcelable(Success.class.getClassLoader()), op.a.valueOf(parcel.readString()), parcel.readString());
             }
 
             @Override // android.os.Parcelable.Creator
@@ -286,7 +286,7 @@ public abstract class PassportNfcReaderOutput implements Parcelable {
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public Success(@Nullable Uri uri, @Nullable Uri uri2, @Nullable Uri uri3, @NotNull qp.a chipAuthenticationStatus, @NotNull String submitButtonComponentName) {
+        public Success(@Nullable Uri uri, @Nullable Uri uri2, @Nullable Uri uri3, @NotNull op.a chipAuthenticationStatus, @NotNull String submitButtonComponentName) {
             super(null);
             Intrinsics.checkNotNullParameter(chipAuthenticationStatus, "chipAuthenticationStatus");
             Intrinsics.checkNotNullParameter(submitButtonComponentName, "submitButtonComponentName");
@@ -299,7 +299,7 @@ public abstract class PassportNfcReaderOutput implements Parcelable {
 
         @NotNull
         /* JADX INFO: renamed from: a, reason: from getter */
-        public final qp.a getChipAuthenticationStatus() {
+        public final op.a getChipAuthenticationStatus() {
             return this.chipAuthenticationStatus;
         }
 
@@ -350,7 +350,7 @@ public abstract class PassportNfcReaderOutput implements Parcelable {
 
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f12201d = qt.b.a(a());
+        public static final /* synthetic */ ot.a f12282d = ot.b.a(a());
     }
 
     public /* synthetic */ PassportNfcReaderOutput(DefaultConstructorMarker defaultConstructorMarker) {

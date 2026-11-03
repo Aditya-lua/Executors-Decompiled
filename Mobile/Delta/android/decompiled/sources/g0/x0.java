@@ -12,74 +12,74 @@ import java.util.concurrent.Executor;
 public abstract class x0 implements n0.j2.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public u0.a f17602a;
+    public u0.a f18141a;
     public volatile int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public volatile int f17603c;
+    public volatile int f18142c;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public volatile boolean f17605e;
+    public volatile boolean f18144e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public volatile boolean f17606f;
+    public volatile boolean f18145f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public Executor f17607g;
+    public Executor f18146g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public androidx.camera.core.f f17608h;
+    public androidx.camera.core.f f18147h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public ImageWriter f17609i;
+    public ImageWriter f18148i;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public ByteBuffer f17614n;
+    public ByteBuffer f18153n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public ByteBuffer f17615o;
+    public ByteBuffer f18154o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public ByteBuffer f17616p;
+    public ByteBuffer f18155p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public ByteBuffer f17617q;
+    public ByteBuffer f18156q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public ByteBuffer f17618r;
+    public ByteBuffer f18157r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public ByteBuffer f17619s;
+    public ByteBuffer f18158s;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public volatile int f17604d = 1;
+    public volatile int f18143d = 1;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public Rect f17610j = new Rect();
+    public Rect f18149j = new Rect();
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public Rect f17611k = new Rect();
+    public Rect f18150k = new Rect();
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public Matrix f17612l = new Matrix();
+    public Matrix f18151l = new Matrix();
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public Matrix f17613m = new Matrix();
+    public Matrix f18152m = new Matrix();
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public final Object f17620t = new Object();
+    public final Object f18159t = new Object();
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public boolean f17621u = true;
+    public boolean f18160u = true;
 
     public static /* synthetic */ void b(x0 x0Var, androidx.camera.core.d dVar, Matrix matrix, androidx.camera.core.d dVar2, Rect rect, u0.a aVar, y1.c.a aVar2) {
-        if (!x0Var.f17621u) {
+        if (!x0Var.f18160u) {
             aVar2.f(new u2.m("ImageAnalysis is detached"));
             return;
         }
-        h2 h2Var = new h2(dVar2, o1.f(dVar.H2().c(), dVar.H2().getTimestamp(), x0Var.f17605e ? 0 : x0Var.b, matrix, dVar.H2().b()));
+        h2 h2Var = new h2(dVar2, o1.f(dVar.I2().c(), dVar.I2().getTimestamp(), x0Var.f18144e ? 0 : x0Var.b, matrix, dVar.I2().b()));
         if (!rect.isEmpty()) {
-            h2Var.M0(rect);
+            h2Var.I0(rect);
         }
         aVar.k(h2Var);
         aVar2.c(null);
@@ -90,7 +90,7 @@ public abstract class x0 implements n0.j2.a {
         executor.execute(new Runnable() { // from class: g0.w0
             @Override // java.lang.Runnable
             public final void run() {
-                x0.b(this.f17574a, dVar, matrix, dVar2, rect, aVar, aVar2);
+                x0.b(this.f18113a, dVar, matrix, dVar2, rect, aVar, aVar2);
             }
         });
         return "analyzeImage";
@@ -108,7 +108,7 @@ public abstract class x0 implements n0.j2.a {
     public static Matrix j(int i10, int i11, int i12, int i13, int i14) {
         Matrix matrix = new Matrix();
         if (i14 > 0) {
-            matrix.setRectToRect(new RectF(0.0f, 0.0f, i10, i11), p0.a0.f28056a, Matrix.ScaleToFit.FILL);
+            matrix.setRectToRect(new RectF(0.0f, 0.0f, i10, i11), p0.a0.f28275a, Matrix.ScaleToFit.FILL);
             matrix.postRotate(i14);
             matrix.postConcat(p0.a0.c(new RectF(0.0f, 0.0f, i12, i13)));
         }
@@ -137,7 +137,7 @@ public abstract class x0 implements n0.j2.a {
 
     public abstract androidx.camera.core.d d(n0.j2 j2Var);
 
-    public me.x<Void> e(final androidx.camera.core.d dVar) throws Throwable {
+    public ne.x<Void> e(final androidx.camera.core.d dVar) throws Throwable {
         Object obj;
         final Executor executor;
         final u0.a aVar;
@@ -152,30 +152,30 @@ public abstract class x0 implements n0.j2.a {
         ByteBuffer byteBuffer6;
         androidx.camera.core.d dVarO;
         androidx.camera.core.d dVar2;
-        int i10 = this.f17605e ? this.b : 0;
-        Object obj2 = this.f17620t;
+        int i10 = this.f18144e ? this.b : 0;
+        Object obj2 = this.f18159t;
         synchronized (obj2) {
             try {
                 try {
-                    executor = this.f17607g;
-                    aVar = this.f17602a;
-                    z10 = this.f17605e && i10 != this.f17603c;
+                    executor = this.f18146g;
+                    aVar = this.f18141a;
+                    z10 = this.f18144e && i10 != this.f18142c;
                     if (z10) {
                         n(dVar, i10);
                     }
-                    if (this.f17605e || this.f17604d == 3) {
+                    if (this.f18144e || this.f18143d == 3) {
                         g(dVar);
                     }
                     try {
-                        fVar = this.f17608h;
+                        fVar = this.f18147h;
                         try {
-                            imageWriter = this.f17609i;
-                            byteBuffer = this.f17614n;
-                            byteBuffer2 = this.f17615o;
-                            byteBuffer3 = this.f17616p;
-                            byteBuffer4 = this.f17617q;
-                            byteBuffer5 = this.f17618r;
-                            byteBuffer6 = this.f17619s;
+                            imageWriter = this.f18148i;
+                            byteBuffer = this.f18153n;
+                            byteBuffer2 = this.f18154o;
+                            byteBuffer3 = this.f18155p;
+                            byteBuffer4 = this.f18156q;
+                            byteBuffer5 = this.f18157r;
+                            byteBuffer6 = this.f18158s;
                         } catch (Throwable th2) {
                             th = th2;
                             obj = obj2;
@@ -193,15 +193,15 @@ public abstract class x0 implements n0.j2.a {
                 obj = obj2;
             }
         }
-        if (aVar == null || executor == null || !this.f17621u) {
+        if (aVar == null || executor == null || !this.f18160u) {
             return r0.n.n(new u2.m("No analyzer or executor currently set."));
         }
         if (fVar != null) {
-            if (this.f17604d == 2) {
-                dVarO = ImageProcessingUtil.g(dVar, fVar, byteBuffer, i10, this.f17606f);
+            if (this.f18143d == 2) {
+                dVarO = ImageProcessingUtil.g(dVar, fVar, byteBuffer, i10, this.f18145f);
             } else {
-                if (this.f17604d == 1) {
-                    if (this.f17606f) {
+                if (this.f18143d == 1) {
+                    if (this.f18145f) {
                         ImageProcessingUtil.c(dVar);
                     }
                     if (imageWriter != null && byteBuffer2 != null && byteBuffer3 != null && byteBuffer4 != null) {
@@ -212,8 +212,8 @@ public abstract class x0 implements n0.j2.a {
             }
             dVar2 = dVarO;
         } else {
-            if (this.f17604d == 3) {
-                if (this.f17606f) {
+            if (this.f18143d == 3) {
+                if (this.f18145f) {
                     ImageProcessingUtil.c(dVar);
                 }
                 if (byteBuffer2 != null && byteBuffer3 != null && byteBuffer4 != null && byteBuffer5 != null && byteBuffer6 != null) {
@@ -227,7 +227,7 @@ public abstract class x0 implements n0.j2.a {
         final androidx.camera.core.d dVar3 = z11 ? dVar : dVar2;
         final Rect rect = new Rect();
         final Matrix matrix = new Matrix();
-        synchronized (this.f17620t) {
+        synchronized (this.f18159t) {
             if (z10 && !z11) {
                 try {
                     m(dVar.getWidth(), dVar.getHeight(), dVar3.getWidth(), dVar3.getHeight());
@@ -235,14 +235,14 @@ public abstract class x0 implements n0.j2.a {
                     throw th6;
                 }
             }
-            this.f17603c = i10;
-            rect.set(this.f17611k);
-            matrix.set(this.f17613m);
+            this.f18142c = i10;
+            rect.set(this.f18150k);
+            matrix.set(this.f18152m);
         }
-        return y1.c.a(new y1.c.InterfaceC0650c() { // from class: g0.v0
-            @Override // y1.c.InterfaceC0650c
+        return y1.c.a(new y1.c.InterfaceC0665c() { // from class: g0.v0
+            @Override // y1.c.InterfaceC0665c
             public final Object a(y1.c.a aVar2) {
-                return x0.c(this.f17537a, executor, dVar, matrix, dVar3, rect, aVar, aVar2);
+                return x0.c(this.f18076a, executor, dVar, matrix, dVar3, rect, aVar, aVar2);
             }
         });
     }
@@ -250,39 +250,39 @@ public abstract class x0 implements n0.j2.a {
     public abstract void f();
 
     public final void g(androidx.camera.core.d dVar) {
-        if (this.f17604d != 1 && this.f17604d != 3) {
-            if (this.f17604d == 2 && this.f17614n == null) {
-                this.f17614n = ByteBuffer.allocateDirect(dVar.getWidth() * dVar.getHeight() * 4);
+        if (this.f18143d != 1 && this.f18143d != 3) {
+            if (this.f18143d == 2 && this.f18153n == null) {
+                this.f18153n = ByteBuffer.allocateDirect(dVar.getWidth() * dVar.getHeight() * 4);
                 return;
             }
             return;
         }
-        if (this.f17615o == null) {
-            this.f17615o = ByteBuffer.allocateDirect(dVar.getWidth() * dVar.getHeight());
+        if (this.f18154o == null) {
+            this.f18154o = ByteBuffer.allocateDirect(dVar.getWidth() * dVar.getHeight());
         }
-        this.f17615o.position(0);
-        if (this.f17616p == null) {
-            this.f17616p = ByteBuffer.allocateDirect((dVar.getWidth() * dVar.getHeight()) / 4);
+        this.f18154o.position(0);
+        if (this.f18155p == null) {
+            this.f18155p = ByteBuffer.allocateDirect((dVar.getWidth() * dVar.getHeight()) / 4);
         }
-        this.f17616p.position(0);
-        if (this.f17617q == null) {
-            this.f17617q = ByteBuffer.allocateDirect((dVar.getWidth() * dVar.getHeight()) / 4);
+        this.f18155p.position(0);
+        if (this.f18156q == null) {
+            this.f18156q = ByteBuffer.allocateDirect((dVar.getWidth() * dVar.getHeight()) / 4);
         }
-        this.f17617q.position(0);
-        if (this.f17604d == 3) {
-            if (this.f17618r == null) {
-                this.f17618r = ByteBuffer.allocateDirect(dVar.getWidth() * dVar.getHeight());
+        this.f18156q.position(0);
+        if (this.f18143d == 3) {
+            if (this.f18157r == null) {
+                this.f18157r = ByteBuffer.allocateDirect(dVar.getWidth() * dVar.getHeight());
             }
-            this.f17618r.position(0);
-            if (this.f17619s == null) {
-                this.f17619s = ByteBuffer.allocateDirect((dVar.getWidth() * dVar.getHeight()) / 2);
+            this.f18157r.position(0);
+            if (this.f18158s == null) {
+                this.f18158s = ByteBuffer.allocateDirect((dVar.getWidth() * dVar.getHeight()) / 2);
             }
-            this.f17619s.position(0);
+            this.f18158s.position(0);
         }
     }
 
     public void i() {
-        this.f17621u = false;
+        this.f18160u = false;
         f();
     }
 
@@ -290,23 +290,23 @@ public abstract class x0 implements n0.j2.a {
 
     public final void m(int i10, int i11, int i12, int i13) {
         Matrix matrixJ = j(i10, i11, i12, i13, this.b);
-        this.f17611k = k(this.f17610j, matrixJ);
-        this.f17613m.setConcat(this.f17612l, matrixJ);
+        this.f18150k = k(this.f18149j, matrixJ);
+        this.f18152m.setConcat(this.f18151l, matrixJ);
     }
 
     public final void n(androidx.camera.core.d dVar, int i10) {
-        androidx.camera.core.f fVar = this.f17608h;
+        androidx.camera.core.f fVar = this.f18147h;
         if (fVar == null) {
             return;
         }
         fVar.j();
-        this.f17608h = h(dVar.getWidth(), dVar.getHeight(), i10, this.f17608h.c(), this.f17608h.e());
-        if (this.f17604d == 1) {
-            ImageWriter imageWriter = this.f17609i;
+        this.f18147h = h(dVar.getWidth(), dVar.getHeight(), i10, this.f18147h.c(), this.f18147h.e());
+        if (this.f18143d == 1) {
+            ImageWriter imageWriter = this.f18148i;
             if (imageWriter != null) {
                 t0.a.a(imageWriter);
             }
-            this.f17609i = t0.a.c(this.f17608h.getSurface(), this.f17608h.e());
+            this.f18148i = t0.a.c(this.f18147h.getSurface(), this.f18147h.e());
         }
     }
 
@@ -314,27 +314,27 @@ public abstract class x0 implements n0.j2.a {
         if (aVar == null) {
             f();
         }
-        synchronized (this.f17620t) {
-            this.f17602a = aVar;
-            this.f17607g = executor;
+        synchronized (this.f18159t) {
+            this.f18141a = aVar;
+            this.f18146g = executor;
         }
     }
 
     public void p(boolean z10) {
-        this.f17606f = z10;
+        this.f18145f = z10;
     }
 
     public void q(int i10) {
-        this.f17604d = i10;
+        this.f18143d = i10;
     }
 
     public void r(boolean z10) {
-        this.f17605e = z10;
+        this.f18144e = z10;
     }
 
     public void s(androidx.camera.core.f fVar) {
-        synchronized (this.f17620t) {
-            this.f17608h = fVar;
+        synchronized (this.f18159t) {
+            this.f18147h = fVar;
         }
     }
 
@@ -343,16 +343,16 @@ public abstract class x0 implements n0.j2.a {
     }
 
     public void u(Matrix matrix) {
-        synchronized (this.f17620t) {
-            this.f17612l = matrix;
-            this.f17613m = new Matrix(this.f17612l);
+        synchronized (this.f18159t) {
+            this.f18151l = matrix;
+            this.f18152m = new Matrix(this.f18151l);
         }
     }
 
     public void v(Rect rect) {
-        synchronized (this.f17620t) {
-            this.f17610j = rect;
-            this.f17611k = new Rect(this.f17610j);
+        synchronized (this.f18159t) {
+            this.f18149j = rect;
+            this.f18150k = new Rect(this.f18149j);
         }
     }
 }

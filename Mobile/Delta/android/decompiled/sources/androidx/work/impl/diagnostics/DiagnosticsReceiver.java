@@ -12,18 +12,18 @@ import x5.z;
 public class DiagnosticsReceiver extends BroadcastReceiver {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final String f3521a = w.i("DiagnosticsRcvr");
+    public static final String f3366a = w.i("DiagnosticsRcvr");
 
     @Override // android.content.BroadcastReceiver
     public void onReceive(Context context, Intent intent) {
         if (intent == null) {
             return;
         }
-        w.e().a(f3521a, "Requesting diagnostics");
+        w.e().a(f3366a, "Requesting diagnostics");
         try {
             p0.h(context).d(z.e(DiagnosticsWorker.class));
         } catch (IllegalStateException e10) {
-            w.e().d(f3521a, "WorkManager is not initialized", e10);
+            w.e().d(f3366a, "WorkManager is not initialized", e10);
         }
     }
 }

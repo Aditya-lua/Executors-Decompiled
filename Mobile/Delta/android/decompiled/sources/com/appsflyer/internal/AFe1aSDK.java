@@ -43,7 +43,7 @@ public final class AFe1aSDK extends AFe1kSDK<Map<String, ? extends String>> {
     public AFa1ySDK force;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public final boolean f5306v;
+    public final boolean f5379v;
 
     public interface AFa1ySDK {
         void d(@NotNull String str);
@@ -131,7 +131,7 @@ public final class AFe1aSDK extends AFe1kSDK<Map<String, ? extends String>> {
         } catch (Exception e10) {
             AFLoggerBase.e$default(AFLogger.INSTANCE, LogTag.DDL, "OneLinkValidator: reflection init failed", e10, false, false, false, false, 96, null);
         }
-        this.f5306v = zBooleanValue;
+        this.f5379v = zBooleanValue;
     }
 
     @Override // com.appsflyer.internal.AFe1kSDK, com.appsflyer.internal.AFe1ySDK

@@ -1,70 +1,48 @@
 package ed;
 
-import android.R;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
-import android.os.Build;
-import android.util.Log;
+import android.content.Context;
+import android.util.TypedValue;
+import android.view.View;
 import androidx.annotation.NonNull;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class b {
-
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final boolean f15434a = true;
-    public static final int[] b = {R.attr.state_pressed};
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final int[] f15435c = {R.attr.state_hovered, R.attr.state_focused};
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final int[] f15436d = {R.attr.state_focused};
-
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final int[] f15437e = {R.attr.state_hovered};
-
-    /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final int[] f15438f = {R.attr.state_selected, R.attr.state_pressed};
-
-    /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final int[] f15439g = {R.attr.state_selected, R.attr.state_hovered, R.attr.state_focused};
-
-    /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final int[] f15440h = {R.attr.state_selected, R.attr.state_focused};
-
-    /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final int[] f15441i = {R.attr.state_selected, R.attr.state_hovered};
-
-    /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final int[] f15442j = {R.attr.state_selected};
-
-    /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final int[] f15443k = {R.attr.state_enabled, R.attr.state_pressed};
-
-    /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final String f15444l = b.class.getSimpleName();
-
-    @NonNull
-    public static ColorStateList a(ColorStateList colorStateList) {
-        if (colorStateList == null) {
-            return ColorStateList.valueOf(0);
+    public static TypedValue a(@NonNull Context context, int i10) {
+        TypedValue typedValue = new TypedValue();
+        if (context.getTheme().resolveAttribute(i10, typedValue, true)) {
+            return typedValue;
         }
-        if (Build.VERSION.SDK_INT <= 27 && Color.alpha(colorStateList.getDefaultColor()) == 0 && Color.alpha(colorStateList.getColorForState(f15443k, 0)) != 0) {
-            Log.w(f15444l, "Use a non-transparent color for the default color as it will be used to finish ripple animations.");
-        }
-        return colorStateList;
+        return null;
     }
 
-    public static boolean b(@NonNull int[] iArr) {
-        boolean z10 = false;
-        boolean z11 = false;
-        for (int i10 : iArr) {
-            if (i10 == 16842910) {
-                z10 = true;
-            } else if (i10 == 16842908 || i10 == 16842919 || i10 == 16843623) {
-                z11 = true;
-            }
+    public static boolean b(@NonNull Context context, int i10, boolean z10) {
+        TypedValue typedValueA = a(context, i10);
+        if (typedValueA == null || typedValueA.type != 18) {
+            return z10;
         }
-        return z10 && z11;
+        return typedValueA.data != 0;
+    }
+
+    public static int c(@NonNull Context context, int i10, int i11) {
+        TypedValue typedValueA = a(context, i10);
+        return (typedValueA == null || typedValueA.type != 16) ? i11 : typedValueA.data;
+    }
+
+    public static int d(@NonNull Context context, int i10, @NonNull String str) {
+        return e(context, i10, str).data;
+    }
+
+    @NonNull
+    public static TypedValue e(@NonNull Context context, int i10, @NonNull String str) {
+        TypedValue typedValueA = a(context, i10);
+        if (typedValueA != null) {
+            return typedValueA;
+        }
+        throw new IllegalArgumentException(String.format("%1$s requires a value for the %2$s attribute to be set in your app theme. You can either set the attribute in your theme or update your theme to inherit from Theme.MaterialComponents (or a descendant).", str, context.getResources().getResourceName(i10)));
+    }
+
+    @NonNull
+    public static TypedValue f(@NonNull View view, int i10) {
+        return e(view.getContext(), i10, view.getClass().getCanonicalName());
     }
 }

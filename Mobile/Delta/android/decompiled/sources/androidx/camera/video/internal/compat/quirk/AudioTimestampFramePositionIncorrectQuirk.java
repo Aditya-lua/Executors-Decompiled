@@ -11,10 +11,10 @@ import n0.g3;
 public class AudioTimestampFramePositionIncorrectQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final List<String> f1397a = Arrays.asList("cph1920", "cph1923", "cph2015", "cph2083");
+    public static final List<String> f1242a = Arrays.asList("cph1920", "cph1923", "cph2015", "cph2083");
 
     private static boolean g() {
-        return "oppo".equalsIgnoreCase(Build.BRAND) && f1397a.contains(Build.MODEL.toLowerCase(Locale.ROOT));
+        return "oppo".equalsIgnoreCase(Build.BRAND) && f1242a.contains(Build.MODEL.toLowerCase(Locale.ROOT));
     }
 
     public static boolean h() {

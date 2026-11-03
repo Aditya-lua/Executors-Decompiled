@@ -7,56 +7,56 @@ import java.util.List;
 public class f implements c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f25129a;
+    public final String f25950a;
     public final g b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final m7.c f25130c;
+    public final m7.c f25951c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final m7.d f25131d;
+    public final m7.d f25952d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final m7.f f25132e;
+    public final m7.f f25953e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final m7.f f25133f;
+    public final m7.f f25954f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final m7.b f25134g;
+    public final m7.b f25955g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final s.a f25135h;
+    public final s.a f25956h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final s.b f25136i;
+    public final s.b f25957i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final float f25137j;
+    public final float f25958j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final List<m7.b> f25138k;
+    public final List<m7.b> f25959k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final m7.b f25139l;
+    public final m7.b f25960l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final boolean f25140m;
+    public final boolean f25961m;
 
     public f(String str, g gVar, m7.c cVar, m7.d dVar, m7.f fVar, m7.f fVar2, m7.b bVar, s.a aVar, s.b bVar2, float f10, List<m7.b> list, m7.b bVar3, boolean z10) {
-        this.f25129a = str;
+        this.f25950a = str;
         this.b = gVar;
-        this.f25130c = cVar;
-        this.f25131d = dVar;
-        this.f25132e = fVar;
-        this.f25133f = fVar2;
-        this.f25134g = bVar;
-        this.f25135h = aVar;
-        this.f25136i = bVar2;
-        this.f25137j = f10;
-        this.f25138k = list;
-        this.f25139l = bVar3;
-        this.f25140m = z10;
+        this.f25951c = cVar;
+        this.f25952d = dVar;
+        this.f25953e = fVar;
+        this.f25954f = fVar2;
+        this.f25955g = bVar;
+        this.f25956h = aVar;
+        this.f25957i = bVar2;
+        this.f25958j = f10;
+        this.f25959k = list;
+        this.f25960l = bVar3;
+        this.f25961m = z10;
     }
 
     @Override // n7.c
@@ -65,19 +65,19 @@ public class f implements c {
     }
 
     public s.a b() {
-        return this.f25135h;
+        return this.f25956h;
     }
 
     public m7.b c() {
-        return this.f25139l;
+        return this.f25960l;
     }
 
     public m7.f d() {
-        return this.f25133f;
+        return this.f25954f;
     }
 
     public m7.c e() {
-        return this.f25130c;
+        return this.f25951c;
     }
 
     public g f() {
@@ -85,34 +85,34 @@ public class f implements c {
     }
 
     public s.b g() {
-        return this.f25136i;
+        return this.f25957i;
     }
 
     public List<m7.b> h() {
-        return this.f25138k;
+        return this.f25959k;
     }
 
     public float i() {
-        return this.f25137j;
+        return this.f25958j;
     }
 
     public String j() {
-        return this.f25129a;
+        return this.f25950a;
     }
 
     public m7.d k() {
-        return this.f25131d;
+        return this.f25952d;
     }
 
     public m7.f l() {
-        return this.f25132e;
+        return this.f25953e;
     }
 
     public m7.b m() {
-        return this.f25134g;
+        return this.f25955g;
     }
 
     public boolean n() {
-        return this.f25140m;
+        return this.f25961m;
     }
 }

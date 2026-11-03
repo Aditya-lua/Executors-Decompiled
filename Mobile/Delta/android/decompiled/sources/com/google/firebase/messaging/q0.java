@@ -6,11 +6,11 @@ import java.util.Locale;
 public final class q0 extends Exception {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f8797a;
+    public final int f8871a;
 
     public q0(String str) {
         super(str);
-        this.f8797a = a(str);
+        this.f8871a = a(str);
     }
 
     public final int a(String str) {

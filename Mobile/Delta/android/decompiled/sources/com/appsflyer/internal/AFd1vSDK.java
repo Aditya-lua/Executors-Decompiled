@@ -45,7 +45,7 @@ public final class AFd1vSDK extends AFc1cSDK {
     @NotNull
     public final String registerClient() {
         AFj1mSDK aFj1mSDK = new AFj1mSDK(this.AFLogger);
-        String str = String.format(Locale.US, AFj1mSDK.f5442i, AppsFlyerLib.getInstance().getHostPrefix(), AFa1tSDK.d().getHostName());
+        String str = String.format(Locale.US, AFj1mSDK.f5515i, AppsFlyerLib.getInstance().getHostPrefix(), AFa1tSDK.d().getHostName());
         Intrinsics.checkNotNull(str);
         return aFj1mSDK.unregisterClient(str);
     }

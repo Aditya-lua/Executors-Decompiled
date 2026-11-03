@@ -2,7 +2,7 @@ package com.roblox.client.captcha;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import sg.a1;
+import rg.a1;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class SignUpCaptchaConfig implements CaptchaConfig {

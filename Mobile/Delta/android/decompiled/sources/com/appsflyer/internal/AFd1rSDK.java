@@ -37,7 +37,7 @@ public final class AFd1rSDK implements AFd1iSDK<Map<String, Object>> {
             return map;
         } catch (JSONException e10) {
             AFLoggerBase.e$default(AFLogger.INSTANCE, LogTag.GCD, "Error while parsing GCD response", e10, false, false, false, false, 96, null);
-            return kotlin.collections.k0.n(jt.s.a("string_response", p8));
+            return kotlin.collections.k0.n(gt.s.a("string_response", p8));
         }
     }
 

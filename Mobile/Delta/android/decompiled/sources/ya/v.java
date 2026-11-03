@@ -10,13 +10,13 @@ import android.os.Looper;
 public final class v extends n9.e {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final y8.g f35811e;
+    public final y8.g f36668e;
 
     public v(Context context, Looper looper, n9.d dVar, y8.g gVar, k9.f.a aVar, k9.f.b bVar) {
         super(context, looper, 68, dVar, aVar, bVar);
-        y8.f fVar = new y8.f(gVar == null ? y8.g.f35777d : gVar);
+        y8.f fVar = new y8.f(gVar == null ? y8.g.f36634d : gVar);
         fVar.a(r.a());
-        this.f35811e = new y8.g(fVar);
+        this.f36668e = new y8.g(fVar);
     }
 
     @Override // n9.c
@@ -30,7 +30,7 @@ public final class v extends n9.e {
 
     @Override // n9.c
     public final Bundle getGetServiceRequestExtraArgs() {
-        return this.f35811e.a();
+        return this.f36668e.a();
     }
 
     @Override // n9.c, k9.a.f

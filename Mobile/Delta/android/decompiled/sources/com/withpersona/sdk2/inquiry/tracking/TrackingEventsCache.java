@@ -1,12 +1,12 @@
 package com.withpersona.sdk2.inquiry.tracking;
 
 import com.withpersona.sdk2.inquiry.tracking.model.TrackingEvent;
+import gt.o;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
-import jt.o;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.collections.p;
@@ -14,15 +14,15 @@ import kotlin.collections.u;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
+import mt.c;
+import nt.d;
+import nt.f;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import ot.c;
-import pt.d;
-import pt.f;
-import uu.g;
+import su.g;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000L\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0001\u0018\u0000 \u001d2\u00020\u0001:\u0002\u001e\u001dB\t\b\u0007¢\u0006\u0004\b\u0002\u0010\u0003J \u0010\t\u001a\u00020\b2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u0006H\u0086@¢\u0006\u0004\b\t\u0010\nJ\u0010\u0010\f\u001a\u00020\u000bH\u0086@¢\u0006\u0004\b\f\u0010\rJ\u0018\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0005\u001a\u00020\u0004H\u0086@¢\u0006\u0004\b\u000f\u0010\u0010J \u0010\u0014\u001a\u00020\b2\u0006\u0010\u0011\u001a\u00020\u00042\u0006\u0010\u0013\u001a\u00020\u0012H\u0086@¢\u0006\u0004\b\u0014\u0010\u0015R\u0014\u0010\u0017\u001a\u00020\u00168\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0017\u0010\u0018R\u001a\u0010\u001b\u001a\b\u0012\u0004\u0012\u00020\u001a0\u00198\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001b\u0010\u001c¨\u0006\u001f"}, d2 = {"Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsCache;", "", "<init>", "()V", "", "loggerId", "Lcom/withpersona/sdk2/inquiry/tracking/model/TrackingEvent;", "event", "", "add", "(Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/tracking/model/TrackingEvent;Lnt/b;)Ljava/lang/Object;", "", "currentCount", "(Lnt/b;)Ljava/lang/Object;", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventFlushSession;", "beginFlush", "(Ljava/lang/String;Lnt/b;)Ljava/lang/Object;", "flushToken", "", "isSuccess", "onFlushFinished", "(Ljava/lang/String;ZLnt/b;)Ljava/lang/Object;", "Luu/a;", "mutex", "Luu/a;", "", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsCache$TrackingEventData;", "events", "Ljava/util/List;", "Companion", "TrackingEventData", "tracking-events_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000L\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0001\u0018\u0000 \u001d2\u00020\u0001:\u0002\u001e\u001dB\t\b\u0007¢\u0006\u0004\b\u0002\u0010\u0003J \u0010\t\u001a\u00020\b2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u0006H\u0086@¢\u0006\u0004\b\t\u0010\nJ\u0010\u0010\f\u001a\u00020\u000bH\u0086@¢\u0006\u0004\b\f\u0010\rJ\u0018\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0005\u001a\u00020\u0004H\u0086@¢\u0006\u0004\b\u000f\u0010\u0010J \u0010\u0014\u001a\u00020\b2\u0006\u0010\u0011\u001a\u00020\u00042\u0006\u0010\u0013\u001a\u00020\u0012H\u0086@¢\u0006\u0004\b\u0014\u0010\u0015R\u0014\u0010\u0017\u001a\u00020\u00168\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0017\u0010\u0018R\u001a\u0010\u001b\u001a\b\u0012\u0004\u0012\u00020\u001a0\u00198\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001b\u0010\u001c¨\u0006\u001f"}, d2 = {"Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsCache;", "", "<init>", "()V", "", "loggerId", "Lcom/withpersona/sdk2/inquiry/tracking/model/TrackingEvent;", "event", "", "add", "(Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/tracking/model/TrackingEvent;Llt/b;)Ljava/lang/Object;", "", "currentCount", "(Llt/b;)Ljava/lang/Object;", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventFlushSession;", "beginFlush", "(Ljava/lang/String;Llt/b;)Ljava/lang/Object;", "flushToken", "", "isSuccess", "onFlushFinished", "(Ljava/lang/String;ZLlt/b;)Ljava/lang/Object;", "Lsu/a;", "mutex", "Lsu/a;", "", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsCache$TrackingEventData;", "events", "Ljava/util/List;", "Companion", "TrackingEventData", "tracking-events_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class TrackingEventsCache {
 
     /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
@@ -34,7 +34,7 @@ public final class TrackingEventsCache {
     public static final int NO_FLUSH_TOKEN = 0;
 
     @NotNull
-    private final uu.a mutex = g.b(false, 1, null);
+    private final su.a mutex = g.b(false, 1, null);
 
     @NotNull
     private final List<TrackingEventData> events = new ArrayList();
@@ -70,11 +70,11 @@ public final class TrackingEventsCache {
         int label;
         /* synthetic */ Object result;
 
-        public AnonymousClass1(nt.b<? super AnonymousClass1> bVar) {
+        public AnonymousClass1(lt.b<? super AnonymousClass1> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
             this.result = obj;
@@ -86,18 +86,18 @@ public final class TrackingEventsCache {
     /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.tracking.TrackingEventsCache$beginFlush$1, reason: invalid class name and case insensitive filesystem */
     @f(c = "com.withpersona.sdk2.inquiry.tracking.TrackingEventsCache", f = "TrackingEventsCache.kt", l = {94}, m = "beginFlush")
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final class C06971 extends d {
+    public static final class C07021 extends d {
         int I$0;
         Object L$0;
         Object L$1;
         int label;
         /* synthetic */ Object result;
 
-        public C06971(nt.b<? super C06971> bVar) {
+        public C07021(lt.b<? super C07021> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
             this.result = obj;
@@ -109,17 +109,17 @@ public final class TrackingEventsCache {
     /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.tracking.TrackingEventsCache$currentCount$1, reason: invalid class name and case insensitive filesystem */
     @f(c = "com.withpersona.sdk2.inquiry.tracking.TrackingEventsCache", f = "TrackingEventsCache.kt", l = {94}, m = "currentCount")
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final class C06981 extends d {
+    public static final class C07031 extends d {
         int I$0;
         Object L$0;
         int label;
         /* synthetic */ Object result;
 
-        public C06981(nt.b<? super C06981> bVar) {
+        public C07031(lt.b<? super C07031> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
             this.result = obj;
@@ -131,7 +131,7 @@ public final class TrackingEventsCache {
     /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.tracking.TrackingEventsCache$onFlushFinished$1, reason: invalid class name and case insensitive filesystem */
     @f(c = "com.withpersona.sdk2.inquiry.tracking.TrackingEventsCache", f = "TrackingEventsCache.kt", l = {94}, m = "onFlushFinished")
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final class C06991 extends d {
+    public static final class C07041 extends d {
         int I$0;
         Object L$0;
         Object L$1;
@@ -139,11 +139,11 @@ public final class TrackingEventsCache {
         int label;
         /* synthetic */ Object result;
 
-        public C06991(nt.b<? super C06991> bVar) {
+        public C07041(lt.b<? super C07041> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
             this.result = obj;
@@ -160,10 +160,10 @@ public final class TrackingEventsCache {
 
     /* JADX WARN: Code duplicated, block: B:7:0x0013  */
     @Nullable
-    public final Object add(@NotNull String str, @NotNull TrackingEvent trackingEvent, @NotNull nt.b<? super Unit> bVar) {
+    public final Object add(@NotNull String str, @NotNull TrackingEvent trackingEvent, @NotNull lt.b<? super Unit> bVar) {
         AnonymousClass1 anonymousClass1;
         String str2;
-        uu.a aVar;
+        su.a aVar;
         if (bVar instanceof AnonymousClass1) {
             anonymousClass1 = (AnonymousClass1) bVar;
             int i10 = anonymousClass1.label;
@@ -180,13 +180,13 @@ public final class TrackingEventsCache {
         int i11 = anonymousClass1.label;
         if (i11 == 0) {
             o.b(obj);
-            uu.a aVar2 = this.mutex;
+            su.a aVar2 = this.mutex;
             anonymousClass1.L$0 = str;
             anonymousClass1.L$1 = trackingEvent;
             anonymousClass1.L$2 = aVar2;
             anonymousClass1.I$0 = 0;
             anonymousClass1.label = 1;
-            if (aVar2.f(null, anonymousClass1) == objE) {
+            if (aVar2.b(null, anonymousClass1) == objE) {
                 return objE;
             }
             str2 = str;
@@ -195,7 +195,7 @@ public final class TrackingEventsCache {
             if (i11 != 1) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            aVar = (uu.a) anonymousClass1.L$2;
+            aVar = (su.a) anonymousClass1.L$2;
             trackingEvent = (TrackingEvent) anonymousClass1.L$1;
             String str3 = (String) anonymousClass1.L$0;
             o.b(obj);
@@ -203,40 +203,40 @@ public final class TrackingEventsCache {
         }
         try {
             this.events.add(new TrackingEventData(str2, trackingEvent, null, 4, null));
-            return Unit.f22483a;
+            return Unit.f22938a;
         } finally {
-            aVar.e(null);
+            aVar.f(null);
         }
     }
 
     /* JADX WARN: Code duplicated, block: B:7:0x0013  */
     @Nullable
-    public final Object beginFlush(@NotNull String str, @NotNull nt.b<? super TrackingEventFlushSession> bVar) {
-        C06971 c06971;
+    public final Object beginFlush(@NotNull String str, @NotNull lt.b<? super TrackingEventFlushSession> bVar) {
+        C07021 c07021;
         String str2;
-        uu.a aVar;
-        if (bVar instanceof C06971) {
-            c06971 = (C06971) bVar;
-            int i10 = c06971.label;
+        su.a aVar;
+        if (bVar instanceof C07021) {
+            c07021 = (C07021) bVar;
+            int i10 = c07021.label;
             if ((i10 & Integer.MIN_VALUE) != 0) {
-                c06971.label = i10 - Integer.MIN_VALUE;
+                c07021.label = i10 - Integer.MIN_VALUE;
             } else {
-                c06971 = new C06971(bVar);
+                c07021 = new C07021(bVar);
             }
         } else {
-            c06971 = new C06971(bVar);
+            c07021 = new C07021(bVar);
         }
-        Object obj = c06971.result;
+        Object obj = c07021.result;
         Object objE = c.e();
-        int i11 = c06971.label;
+        int i11 = c07021.label;
         if (i11 == 0) {
             o.b(obj);
-            uu.a aVar2 = this.mutex;
-            c06971.L$0 = str;
-            c06971.L$1 = aVar2;
-            c06971.I$0 = 0;
-            c06971.label = 1;
-            if (aVar2.f(null, c06971) == objE) {
+            su.a aVar2 = this.mutex;
+            c07021.L$0 = str;
+            c07021.L$1 = aVar2;
+            c07021.I$0 = 0;
+            c07021.label = 1;
+            if (aVar2.b(null, c07021) == objE) {
                 return objE;
             }
             str2 = str;
@@ -245,8 +245,8 @@ public final class TrackingEventsCache {
             if (i11 != 1) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            aVar = (uu.a) c06971.L$1;
-            str2 = (String) c06971.L$0;
+            aVar = (su.a) c07021.L$1;
+            str2 = (String) c07021.L$0;
             o.b(obj);
         }
         try {
@@ -261,37 +261,37 @@ public final class TrackingEventsCache {
             }
             return new TrackingEventFlushSession(kotlin.collections.o.a(listC), string);
         } finally {
-            aVar.e(null);
+            aVar.f(null);
         }
     }
 
     /* JADX WARN: Code duplicated, block: B:7:0x0013  */
     @Nullable
-    public final Object currentCount(@NotNull nt.b<? super Integer> bVar) {
-        C06981 c06981;
-        uu.a aVar;
-        if (bVar instanceof C06981) {
-            c06981 = (C06981) bVar;
-            int i10 = c06981.label;
+    public final Object currentCount(@NotNull lt.b<? super Integer> bVar) {
+        C07031 c07031;
+        su.a aVar;
+        if (bVar instanceof C07031) {
+            c07031 = (C07031) bVar;
+            int i10 = c07031.label;
             if ((i10 & Integer.MIN_VALUE) != 0) {
-                c06981.label = i10 - Integer.MIN_VALUE;
+                c07031.label = i10 - Integer.MIN_VALUE;
             } else {
-                c06981 = new C06981(bVar);
+                c07031 = new C07031(bVar);
             }
         } else {
-            c06981 = new C06981(bVar);
+            c07031 = new C07031(bVar);
         }
-        Object obj = c06981.result;
+        Object obj = c07031.result;
         Object objE = c.e();
-        int i11 = c06981.label;
+        int i11 = c07031.label;
         int i12 = 0;
         if (i11 == 0) {
             o.b(obj);
-            uu.a aVar2 = this.mutex;
-            c06981.L$0 = aVar2;
-            c06981.I$0 = 0;
-            c06981.label = 1;
-            if (aVar2.f(null, c06981) == objE) {
+            su.a aVar2 = this.mutex;
+            c07031.L$0 = aVar2;
+            c07031.I$0 = 0;
+            c07031.label = 1;
+            if (aVar2.b(null, c07031) == objE) {
                 return objE;
             }
             aVar = aVar2;
@@ -299,7 +299,7 @@ public final class TrackingEventsCache {
             if (i11 != 1) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            aVar = (uu.a) c06981.L$0;
+            aVar = (su.a) c07031.L$0;
             o.b(obj);
         }
         try {
@@ -312,49 +312,49 @@ public final class TrackingEventsCache {
                     }
                 }
             }
-            return pt.b.d(i12);
+            return nt.b.d(i12);
         } finally {
-            aVar.e(null);
+            aVar.f(null);
         }
     }
 
     /* JADX WARN: Code duplicated, block: B:7:0x0013  */
     @Nullable
-    public final Object onFlushFinished(@NotNull final String str, boolean z10, @NotNull nt.b<? super Unit> bVar) {
-        C06991 c06991;
-        uu.a aVar;
-        if (bVar instanceof C06991) {
-            c06991 = (C06991) bVar;
-            int i10 = c06991.label;
+    public final Object onFlushFinished(@NotNull final String str, boolean z10, @NotNull lt.b<? super Unit> bVar) {
+        C07041 c07041;
+        su.a aVar;
+        if (bVar instanceof C07041) {
+            c07041 = (C07041) bVar;
+            int i10 = c07041.label;
             if ((i10 & Integer.MIN_VALUE) != 0) {
-                c06991.label = i10 - Integer.MIN_VALUE;
+                c07041.label = i10 - Integer.MIN_VALUE;
             } else {
-                c06991 = new C06991(bVar);
+                c07041 = new C07041(bVar);
             }
         } else {
-            c06991 = new C06991(bVar);
+            c07041 = new C07041(bVar);
         }
-        Object obj = c06991.result;
+        Object obj = c07041.result;
         Object objE = c.e();
-        int i11 = c06991.label;
+        int i11 = c07041.label;
         if (i11 == 0) {
             o.b(obj);
             aVar = this.mutex;
-            c06991.L$0 = str;
-            c06991.L$1 = aVar;
-            c06991.Z$0 = z10;
-            c06991.I$0 = 0;
-            c06991.label = 1;
-            if (aVar.f(null, c06991) == objE) {
+            c07041.L$0 = str;
+            c07041.L$1 = aVar;
+            c07041.Z$0 = z10;
+            c07041.I$0 = 0;
+            c07041.label = 1;
+            if (aVar.b(null, c07041) == objE) {
                 return objE;
             }
         } else {
             if (i11 != 1) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            z10 = c06991.Z$0;
-            uu.a aVar2 = (uu.a) c06991.L$1;
-            String str2 = (String) c06991.L$0;
+            z10 = c07041.Z$0;
+            su.a aVar2 = (su.a) c07041.L$1;
+            String str2 = (String) c07041.L$0;
             o.b(obj);
             aVar = aVar2;
             str = str2;
@@ -362,7 +362,7 @@ public final class TrackingEventsCache {
         List<TrackingEventData> list = this.events;
         try {
             if (z10) {
-                pt.b.a(u.F(list, new Function1() { // from class: com.withpersona.sdk2.inquiry.tracking.b
+                nt.b.a(u.F(list, new Function1() { // from class: com.withpersona.sdk2.inquiry.tracking.b
                     @Override // kotlin.jvm.functions.Function1
                     public final Object invoke(Object obj2) {
                         return Boolean.valueOf(TrackingEventsCache.onFlushFinished$lambda$7$lambda$5(str, (TrackingEventsCache.TrackingEventData) obj2));
@@ -374,12 +374,12 @@ public final class TrackingEventsCache {
                         trackingEventData.setFlushToken(null);
                     }
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             }
-            aVar.e(null);
-            return Unit.f22483a;
+            aVar.f(null);
+            return Unit.f22938a;
         } catch (Throwable th2) {
-            aVar.e(null);
+            aVar.f(null);
             throw th2;
         }
     }

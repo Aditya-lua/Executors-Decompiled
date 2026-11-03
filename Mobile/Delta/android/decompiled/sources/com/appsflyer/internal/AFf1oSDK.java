@@ -40,7 +40,7 @@ public final class AFf1oSDK extends AFe1ySDK<AFf1pSDK> {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
     @Nullable
-    public AFh1bSDK f5354e;
+    public AFh1bSDK f5427e;
 
     @Nullable
     public final AFf1mSDK force;
@@ -50,11 +50,11 @@ public final class AFf1oSDK extends AFe1ySDK<AFf1pSDK> {
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
     @Nullable
-    public AFf1pSDK f5355i;
+    public AFf1pSDK f5428i;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
     @NotNull
-    private final AFf1nSDK f5356v;
+    private final AFf1nSDK f5429v;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public AFf1oSDK(@NotNull AFf1nSDK aFf1nSDK, @NotNull AFc1iSDK aFc1iSDK, @NotNull AFf1fSDK aFf1fSDK, @NotNull AFf1jSDK aFf1jSDK, @NotNull AFd1sSDK aFd1sSDK, @NotNull AFf1kSDK aFf1kSDK, @NotNull AFc1eSDK aFc1eSDK, @NotNull String str, @Nullable AFf1mSDK aFf1mSDK) {
@@ -67,7 +67,7 @@ public final class AFf1oSDK extends AFe1ySDK<AFf1pSDK> {
         Intrinsics.checkNotNullParameter(aFf1kSDK, "");
         Intrinsics.checkNotNullParameter(aFc1eSDK, "");
         Intrinsics.checkNotNullParameter(str, "");
-        this.f5356v = aFf1nSDK;
+        this.f5429v = aFf1nSDK;
         this.AFLoggerLogLevel = aFc1iSDK;
         this.afInfoLog = aFf1fSDK;
         this.afDebugLog = aFf1jSDK;
@@ -83,7 +83,7 @@ public final class AFf1oSDK extends AFe1ySDK<AFf1pSDK> {
         int statusCode;
         Throwable cause;
         long j11;
-        AFd1fSDK<?> aFd1fSDK = aFf1xSDK.f5363d;
+        AFd1fSDK<?> aFd1fSDK = aFf1xSDK.f5436d;
         if (aFd1fSDK != null) {
             j10 = aFd1fSDK.AFKeystoreWrapper.registerClient;
             statusCode = aFd1fSDK.getStatusCode();
@@ -92,7 +92,7 @@ public final class AFf1oSDK extends AFe1ySDK<AFf1pSDK> {
             statusCode = 0;
         }
         int i10 = statusCode;
-        Throwable th2 = aFf1xSDK.f5365v;
+        Throwable th2 = aFf1xSDK.f5438v;
         if (th2 instanceof HttpException) {
             HttpException httpException = (HttpException) th2;
             cause = httpException.getCause();
@@ -102,7 +102,7 @@ public final class AFf1oSDK extends AFe1ySDK<AFf1pSDK> {
             j11 = j10;
         }
         AFh1aSDK aFh1aSDK = aFf1xSDK.unregisterClient;
-        this.f5354e = new AFh1bSDK(aFh1aSDK != null ? aFh1aSDK.AFKeystoreWrapper : null, aFf1xSDK.AFLogger, j11, System.currentTimeMillis() - aFf1xSDK.registerClient, i10, aFf1xSDK.AFKeystoreWrapper, aFf1xSDK.f5364e, cause);
+        this.f5427e = new AFh1bSDK(aFh1aSDK != null ? aFh1aSDK.AFKeystoreWrapper : null, aFf1xSDK.AFLogger, j11, System.currentTimeMillis() - aFf1xSDK.registerClient, i10, aFf1xSDK.AFKeystoreWrapper, aFf1xSDK.f5437e, cause);
     }
 
     /* JADX WARN: Code duplicated, block: B:89:0x031d  */
@@ -124,7 +124,7 @@ public final class AFf1oSDK extends AFe1ySDK<AFf1pSDK> {
         } else if (str == null) {
             AFLoggerBase.w$default(AFLogger.INSTANCE, LogTag.REMOTE_CONTROL, "Can't create CDN token, domain or version is not provided.", false, 4, null);
         } else {
-            strD = AFj1nSDK.d(TextUtils.join("\u2063", new String[]{"appsflyersdk.com", str, this.AFLoggerLogLevel.f5258d.f5305d.getPackageName()}), str2);
+            strD = AFj1nSDK.d(TextUtils.join("\u2063", new String[]{"appsflyersdk.com", str, this.AFLoggerLogLevel.f5331d.f5378d.getPackageName()}), str2);
         }
         String str3 = strD;
         if (str3 == null) {
@@ -187,7 +187,7 @@ public final class AFf1oSDK extends AFe1ySDK<AFf1pSDK> {
                 AFLoggerBase.w$default(aFLogger, logTag, "Dev key is not set, SDK is not started.", false, 4, null);
                 return AFf1pSDK.FAILURE;
             }
-            AFi1uSDK aFi1uSDKAFKeystoreWrapper = this.f5356v.AFKeystoreWrapper(aFh1aSDK2, strAFKeystoreWrapper, str3, str4);
+            AFi1uSDK aFi1uSDKAFKeystoreWrapper = this.f5429v.AFKeystoreWrapper(aFh1aSDK2, strAFKeystoreWrapper, str3, str4);
             Intrinsics.checkNotNullExpressionValue(aFi1uSDKAFKeystoreWrapper, "");
             if (!aFi1uSDKAFKeystoreWrapper.AFKeystoreWrapper) {
                 AFKeystoreWrapper(new AFf1xSDK(str3, jCurrentTimeMillis, aFd1fSDKAFKeystoreWrapper, (AFh1aSDK) aFd1fSDKAFKeystoreWrapper.getBody(), aFi1uSDKAFKeystoreWrapper.AFLogger, strAFKeystoreWrapper2, null));
@@ -201,8 +201,8 @@ public final class AFf1oSDK extends AFe1ySDK<AFf1pSDK> {
             try {
                 j10 = jCurrentTimeMillis;
                 try {
-                    aFf1jSDK2.AFKeystoreWrapper.d("af_remote_config", Base64.encodeToString(aFh1aSDK2.f5388d.getBytes(Charset.defaultCharset()), 2));
-                    aFf1jSDK2.f5350d = aFf1jSDK2.AFLogger;
+                    aFf1jSDK2.AFKeystoreWrapper.d("af_remote_config", Base64.encodeToString(aFh1aSDK2.f5461d.getBytes(Charset.defaultCharset()), 2));
+                    aFf1jSDK2.f5423d = aFf1jSDK2.AFLogger;
                     aFf1jSDK2.AFKeystoreWrapper.AFLogger("af_rc_timestamp", jCurrentTimeMillis3);
                     aFf1jSDK2.AFKeystoreWrapper.AFLogger("af_rc_max_age", jAFKeystoreWrapper);
                     aFf1jSDK2.AFLogger = aFh1aSDK2;
@@ -294,18 +294,18 @@ public final class AFf1oSDK extends AFe1ySDK<AFf1pSDK> {
     public final AFd1cSDK registerClient() throws Throwable {
         try {
             AFf1pSDK aFf1pSDKE = e();
-            this.f5355i = aFf1pSDKE;
+            this.f5428i = aFf1pSDKE;
             return aFf1pSDKE == AFf1pSDK.FAILURE ? AFd1cSDK.FAILURE : AFd1cSDK.SUCCESS;
         } catch (InterruptedIOException e10) {
             AFLoggerBase.e$default(AFLogger.INSTANCE, LogTag.REMOTE_CONTROL, "RC update config failed", e10, false, false, false, false, 64, null);
-            this.f5355i = AFf1pSDK.FAILURE;
+            this.f5428i = AFf1pSDK.FAILURE;
             return AFd1cSDK.TIMEOUT;
         } catch (InterruptedException e11) {
             AFLoggerBase.e$default(AFLogger.INSTANCE, LogTag.REMOTE_CONTROL, "RC update config failed", e11, false, false, false, false, 64, null);
-            this.f5355i = AFf1pSDK.FAILURE;
+            this.f5428i = AFf1pSDK.FAILURE;
             return AFd1cSDK.TIMEOUT;
         } catch (SocketTimeoutException unused) {
-            this.f5355i = AFf1pSDK.FAILURE;
+            this.f5428i = AFf1pSDK.FAILURE;
             return AFd1cSDK.TIMEOUT;
         }
     }

@@ -9,7 +9,7 @@ public class FeatureState implements Parcelable {
     public static final Parcelable.Creator<FeatureState> CREATOR = new a();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public String f9032a;
+    public String f9105a;
     public Bundle b;
 
     public class a implements Parcelable.Creator<FeatureState> {
@@ -47,12 +47,12 @@ public class FeatureState implements Parcelable {
     }
 
     public String getName() {
-        return this.f9032a;
+        return this.f9105a;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(Parcel parcel, int i10) {
-        parcel.writeString(this.f9032a);
+        parcel.writeString(this.f9105a);
         parcel.writeBundle(this.b);
     }
 
@@ -61,12 +61,12 @@ public class FeatureState implements Parcelable {
     }
 
     public FeatureState(String str, Bundle bundle) {
-        this.f9032a = str;
+        this.f9105a = str;
         this.b = bundle;
     }
 
     public FeatureState(Parcel parcel) {
-        this.f9032a = parcel.readString();
+        this.f9105a = parcel.readString();
         this.b = parcel.readBundle();
     }
 }

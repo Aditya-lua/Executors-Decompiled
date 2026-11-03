@@ -114,7 +114,7 @@ public class BacktraceAppExitInfoSenderHandler extends Thread implements Backtra
             this.backtraceClient.send(backtraceReportGenerateBacktraceReport, new OnServerResponseEventListener() { // from class: backtraceio.library.anr.a
                 @Override // backtraceio.library.events.OnServerResponseEventListener
                 public final void onEvent(BacktraceResult backtraceResult) {
-                    BacktraceAppExitInfoSenderHandler.a(this.f4076a, exitInfo, backtraceResult);
+                    BacktraceAppExitInfoSenderHandler.a(this.f3974a, exitInfo, backtraceResult);
                 }
             });
         }

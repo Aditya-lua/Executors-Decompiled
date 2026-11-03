@@ -16,22 +16,22 @@ import java.util.concurrent.ExecutionException;
 public class b0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ef.e f8747a;
+    public final ff.e f8821a;
     public final g0 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final i9.b f8748c;
+    public final i9.b f8822c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final xf.b<gg.i> f8749d;
+    public final yf.b<hg.i> f8823d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final xf.b<vf.j> f8750e;
+    public final yf.b<wf.j> f8824e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final yf.h f8751f;
+    public final zf.h f8825f;
 
-    public b0(ef.e eVar, g0 g0Var, xf.b<gg.i> bVar, xf.b<vf.j> bVar2, yf.h hVar) {
+    public b0(ff.e eVar, g0 g0Var, yf.b<hg.i> bVar, yf.b<wf.j> bVar2, zf.h hVar) {
         this(eVar, g0Var, new i9.b(eVar.j()), bVar, bVar2, hVar);
     }
 
@@ -52,25 +52,25 @@ public class b0 {
         return task.h(new e3.n(), new sb.c() { // from class: com.google.firebase.messaging.a0
             @Override // sb.c
             public final Object then(Task task2) {
-                return b0.a(this.f8737a, task2);
+                return b0.a(this.f8811a, task2);
             }
         });
     }
 
     public final String d() {
         try {
-            return b(MessageDigest.getInstance("SHA-1").digest(this.f8747a.m().getBytes()));
+            return b(MessageDigest.getInstance("SHA-1").digest(this.f8821a.l().getBytes()));
         } catch (NoSuchAlgorithmException unused) {
             return "[HASH-ERROR]";
         }
     }
 
     public Task<CloudMessage> e() {
-        return this.f8748c.a();
+        return this.f8822c.a();
     }
 
     public Task<String> f() {
-        return c(k(g0.c(this.f8747a), "*", new Bundle()));
+        return c(k(g0.c(this.f8821a), "*", new Bundle()));
     }
 
     public final String g(Bundle bundle) throws IOException {
@@ -97,18 +97,18 @@ public class b0 {
     }
 
     public final void i(String str, String str2, Bundle bundle) {
-        vf.j.a aVarB;
+        wf.j.a aVarB;
         bundle.putString("scope", str2);
         bundle.putString("sender", str);
         bundle.putString("subtype", str);
-        bundle.putString("gmp_app_id", this.f8747a.n().c());
+        bundle.putString("gmp_app_id", this.f8821a.m().c());
         bundle.putString("gmsv", Integer.toString(this.b.d()));
         bundle.putString("osv", Integer.toString(Build.VERSION.SDK_INT));
         bundle.putString("app_ver", this.b.a());
         bundle.putString("app_ver_name", this.b.b());
         bundle.putString("firebase-app-name-hash", d());
         try {
-            String strB = ((yf.m) sb.m.a(this.f8751f.a(false))).b();
+            String strB = ((zf.m) sb.m.a(this.f8825f.a(false))).b();
             if (TextUtils.isEmpty(strB)) {
                 Log.w("FirebaseMessaging", "FIS auth token is empty");
             } else {
@@ -121,11 +121,11 @@ public class b0 {
             e = e11;
             Log.e("FirebaseMessaging", "Failed to get FIS auth token", e);
         }
-        bundle.putString("appid", (String) sb.m.a(this.f8751f.getId()));
+        bundle.putString("appid", (String) sb.m.a(this.f8825f.getId()));
         bundle.putString("cliv", "fcm-25.0.1");
-        vf.j jVar = this.f8750e.get();
-        gg.i iVar = this.f8749d.get();
-        if (jVar == null || iVar == null || (aVarB = jVar.b("fire-iid")) == vf.j.a.NONE) {
+        wf.j jVar = this.f8824e.get();
+        hg.i iVar = this.f8823d.get();
+        if (jVar == null || iVar == null || (aVarB = jVar.b("fire-iid")) == wf.j.a.NONE) {
             return;
         }
         bundle.putString("Firebase-Client-Log-Type", Integer.toString(aVarB.b()));
@@ -133,13 +133,13 @@ public class b0 {
     }
 
     public Task<Void> j(boolean z10) {
-        return this.f8748c.d(z10);
+        return this.f8822c.d(z10);
     }
 
     public final Task<Bundle> k(String str, String str2, Bundle bundle) {
         try {
             i(str, str2, bundle);
-            return this.f8748c.c(bundle);
+            return this.f8822c.c(bundle);
         } catch (InterruptedException | ExecutionException e10) {
             return sb.m.e(e10);
         }
@@ -158,12 +158,12 @@ public class b0 {
         return c(k(str, "/topics/" + str2, bundle));
     }
 
-    public b0(ef.e eVar, g0 g0Var, i9.b bVar, xf.b<gg.i> bVar2, xf.b<vf.j> bVar3, yf.h hVar) {
-        this.f8747a = eVar;
+    public b0(ff.e eVar, g0 g0Var, i9.b bVar, yf.b<hg.i> bVar2, yf.b<wf.j> bVar3, zf.h hVar) {
+        this.f8821a = eVar;
         this.b = g0Var;
-        this.f8748c = bVar;
-        this.f8749d = bVar2;
-        this.f8750e = bVar3;
-        this.f8751f = hVar;
+        this.f8822c = bVar;
+        this.f8823d = bVar2;
+        this.f8824e = bVar3;
+        this.f8825f = hVar;
     }
 }

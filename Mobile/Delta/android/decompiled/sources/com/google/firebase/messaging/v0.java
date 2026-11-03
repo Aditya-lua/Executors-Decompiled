@@ -19,24 +19,24 @@ import java.util.concurrent.TimeUnit;
 public class v0 implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final long f8817a;
+    public final long f8891a;
     public final PowerManager.WakeLock b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final FirebaseMessaging f8818c;
+    public final FirebaseMessaging f8892c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @SuppressLint({"ThreadPoolCreation"})
-    public ExecutorService f8819d = new ThreadPoolExecutor(0, 1, 30, TimeUnit.SECONDS, new LinkedBlockingQueue(), new v9.b("firebase-iid-executor"));
+    public ExecutorService f8893d = new ThreadPoolExecutor(0, 1, 30, TimeUnit.SECONDS, new LinkedBlockingQueue(), new v9.b("firebase-iid-executor"));
 
     public static class a extends BroadcastReceiver {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public v0 f8820a;
+        public v0 f8894a;
         public Context b;
 
         public a(v0 v0Var) {
-            this.f8820a = v0Var;
+            this.f8894a = v0Var;
         }
 
         public void a() {
@@ -44,7 +44,7 @@ public class v0 implements Runnable {
                 Log.d("FirebaseMessaging", "Connectivity change received registered");
             }
             IntentFilter intentFilter = new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE");
-            v0 v0Var = this.f8820a;
+            v0 v0Var = this.f8894a;
             if (v0Var != null) {
                 Context contextB = v0Var.b();
                 this.b = contextB;
@@ -54,25 +54,25 @@ public class v0 implements Runnable {
 
         @Override // android.content.BroadcastReceiver
         public void onReceive(Context context, Intent intent) {
-            v0 v0Var = this.f8820a;
+            v0 v0Var = this.f8894a;
             if (v0Var != null && v0Var.d()) {
                 if (v0.c()) {
                     Log.d("FirebaseMessaging", "Connectivity changed. Starting background sync.");
                 }
-                this.f8820a.f8818c.l(this.f8820a, 0L);
+                this.f8894a.f8892c.l(this.f8894a, 0L);
                 Context context2 = this.b;
                 if (context2 != null) {
                     context2.unregisterReceiver(this);
                 }
-                this.f8820a = null;
+                this.f8894a = null;
             }
         }
     }
 
     @SuppressLint({"InvalidWakeLockTag"})
     public v0(FirebaseMessaging firebaseMessaging, long j10) {
-        this.f8818c = firebaseMessaging;
-        this.f8817a = j10;
+        this.f8892c = firebaseMessaging;
+        this.f8891a = j10;
         PowerManager.WakeLock wakeLockNewWakeLock = ((PowerManager) b().getSystemService("power")).newWakeLock(1, "fiid-sync");
         this.b = wakeLockNewWakeLock;
         wakeLockNewWakeLock.setReferenceCounted(false);
@@ -83,7 +83,7 @@ public class v0 implements Runnable {
     }
 
     public Context b() {
-        return this.f8818c.m();
+        return this.f8892c.m();
     }
 
     public boolean d() {
@@ -94,7 +94,7 @@ public class v0 implements Runnable {
 
     public boolean e() throws IOException {
         try {
-            if (this.f8818c.k() == null) {
+            if (this.f8892c.k() == null) {
                 Log.e("FirebaseMessaging", "Token retrieval failed: null");
                 return false;
             }
@@ -126,21 +126,21 @@ public class v0 implements Runnable {
             this.b.acquire();
         }
         try {
-            this.f8818c.z(true);
-            if (!this.f8818c.x()) {
-                this.f8818c.z(false);
+            this.f8892c.y(true);
+            if (!this.f8892c.x()) {
+                this.f8892c.y(false);
             } else if (!r0.b().d(b()) || d()) {
                 if (e()) {
-                    this.f8818c.z(false);
+                    this.f8892c.y(false);
                 } else {
-                    this.f8818c.D(this.f8817a);
+                    this.f8892c.C(this.f8891a);
                 }
             } else {
                 new a(this).a();
             }
         } catch (IOException e10) {
             Log.e("FirebaseMessaging", "Topic sync or token retrieval failed on hard failure exceptions: " + e10.getMessage() + ". Won't retry the operation.");
-            this.f8818c.z(false);
+            this.f8892c.y(false);
         } finally {
             if (r0.b().e(b())) {
                 this.b.release();

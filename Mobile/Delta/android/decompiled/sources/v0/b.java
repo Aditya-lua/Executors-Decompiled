@@ -7,7 +7,7 @@ import n0.l1;
 public class b {
     public boolean a() {
         ImageCaptureRotationOptionQuirk imageCaptureRotationOptionQuirk = (ImageCaptureRotationOptionQuirk) u0.b.b(ImageCaptureRotationOptionQuirk.class);
-        return imageCaptureRotationOptionQuirk == null || imageCaptureRotationOptionQuirk.k(l1.f24728i);
+        return imageCaptureRotationOptionQuirk == null || imageCaptureRotationOptionQuirk.k(l1.f25549i);
     }
 
     public boolean b(androidx.camera.core.d dVar) {

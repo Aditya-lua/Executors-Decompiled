@@ -18,7 +18,13 @@ public final class AchievementRef extends d implements Achievement {
 
     @Override // com.google.android.gms.games.achievement.Achievement
     @NonNull
-    public final Uri C2() {
+    public final String D0() {
+        return j("external_achievement_id");
+    }
+
+    @Override // com.google.android.gms.games.achievement.Achievement
+    @NonNull
+    public final Uri D2() {
         return n("revealed_icon_image_uri");
     }
 
@@ -30,13 +36,7 @@ public final class AchievementRef extends d implements Achievement {
 
     @Override // com.google.android.gms.games.achievement.Achievement
     @NonNull
-    public final String H0() {
-        return j("external_achievement_id");
-    }
-
-    @Override // com.google.android.gms.games.achievement.Achievement
-    @NonNull
-    public final String J1() {
+    public final String H1() {
         b.b(g(Payload.TYPE) == 1);
         return j("formatted_total_steps");
     }
@@ -52,6 +52,11 @@ public final class AchievementRef extends d implements Achievement {
     public final String W1() {
         b.b(g(Payload.TYPE) == 1);
         return j("formatted_current_steps");
+    }
+
+    @Override // com.google.android.gms.games.achievement.Achievement
+    public final long d1() {
+        return i("last_updated_timestamp");
     }
 
     @Override // android.os.Parcelable
@@ -97,24 +102,19 @@ public final class AchievementRef extends d implements Achievement {
         return j("unlocked_icon_image_url");
     }
 
-    @Override // com.google.android.gms.games.achievement.Achievement
-    public final long h1() {
-        return i("last_updated_timestamp");
-    }
-
     public final int hashCode() {
         return AchievementEntity.a(this);
     }
 
     @Override // com.google.android.gms.games.achievement.Achievement
-    public final long n2() {
-        return (!k("instance_xp_value") || m("instance_xp_value")) ? i("definition_xp_value") : i("instance_xp_value");
+    public final int n1() {
+        b.b(g(Payload.TYPE) == 1);
+        return g("total_steps");
     }
 
     @Override // com.google.android.gms.games.achievement.Achievement
-    public final int p1() {
-        b.b(g(Payload.TYPE) == 1);
-        return g("total_steps");
+    public final long o2() {
+        return (!k("instance_xp_value") || m("instance_xp_value")) ? i("definition_xp_value") : i("instance_xp_value");
     }
 
     @NonNull
@@ -138,7 +138,7 @@ public final class AchievementRef extends d implements Achievement {
         if (m("external_player_id")) {
             return null;
         }
-        return new PlayerRef(this.f24043a, this.b, null);
+        return new PlayerRef(this.f24693a, this.b, null);
     }
 
     @Override // com.google.android.gms.games.achievement.Achievement

@@ -6,9 +6,9 @@ import java.io.Serializable;
 public final class y implements Serializable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f22568a;
+    public boolean f23023a;
 
     public String toString() {
-        return String.valueOf(this.f22568a);
+        return String.valueOf(this.f23023a);
     }
 }

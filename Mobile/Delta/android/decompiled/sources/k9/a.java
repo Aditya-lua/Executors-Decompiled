@@ -14,14 +14,14 @@ import k9.a.d;
 public final class a<O extends d> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final AbstractC0392a f22267a;
+    public final AbstractC0391a f22491a;
     public final g b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final String f22268c;
+    public final String f22492c;
 
     /* JADX INFO: renamed from: k9.a$a, reason: collision with other inner class name */
-    public static abstract class AbstractC0392a<T extends f, O> extends e<T, O> {
+    public static abstract class AbstractC0391a<T extends f, O> extends e<T, O> {
         @NonNull
         @Deprecated
         public T a(@NonNull Context context, @NonNull Looper looper, @NonNull n9.d dVar, @NonNull O o8, @NonNull k9.f.a aVar, @NonNull k9.f.b bVar) {
@@ -43,16 +43,16 @@ public final class a<O extends d> {
     public interface d {
 
         @NonNull
-        public static final c Jo = new c(null);
+        public static final c Ko = new c(null);
 
         /* JADX INFO: renamed from: k9.a$d$a, reason: collision with other inner class name */
-        public interface InterfaceC0393a extends d {
+        public interface InterfaceC0392a extends d {
             @NonNull
-            Account G2();
+            Account H2();
         }
 
         public interface b extends d {
-            GoogleSignInAccount w2();
+            GoogleSignInAccount x2();
         }
 
         public static final class c implements d {
@@ -71,7 +71,7 @@ public final class a<O extends d> {
         @NonNull
         Set<Scope> b();
 
-        void connect(@NonNull n9.c.InterfaceC0440c interfaceC0440c);
+        void connect(@NonNull n9.c.InterfaceC0461c interfaceC0461c);
 
         void disconnect();
 
@@ -103,17 +103,17 @@ public final class a<O extends d> {
     public static final class g<C extends f> extends c<C> {
     }
 
-    public <C extends f> a(@NonNull String str, @NonNull AbstractC0392a<C, O> abstractC0392a, @NonNull g<C> gVar) {
-        n9.m.m(abstractC0392a, "Cannot construct an Api with a null ClientBuilder");
+    public <C extends f> a(@NonNull String str, @NonNull AbstractC0391a<C, O> abstractC0391a, @NonNull g<C> gVar) {
+        n9.m.m(abstractC0391a, "Cannot construct an Api with a null ClientBuilder");
         n9.m.m(gVar, "Cannot construct an Api with a null ClientKey");
-        this.f22268c = str;
-        this.f22267a = abstractC0392a;
+        this.f22492c = str;
+        this.f22491a = abstractC0391a;
         this.b = gVar;
     }
 
     @NonNull
-    public final AbstractC0392a a() {
-        return this.f22267a;
+    public final AbstractC0391a a() {
+        return this.f22491a;
     }
 
     @NonNull
@@ -123,6 +123,6 @@ public final class a<O extends d> {
 
     @NonNull
     public final String c() {
-        return this.f22268c;
+        return this.f22492c;
     }
 }

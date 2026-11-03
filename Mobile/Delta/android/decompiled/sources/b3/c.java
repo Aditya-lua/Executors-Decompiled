@@ -9,25 +9,25 @@ import java.util.List;
 public class c implements g.c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ArrayList<b> f3869a = new ArrayList<>();
+    public final ArrayList<b> f3767a = new ArrayList<>();
     public final g b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public Insets f3870c;
+    public Insets f3768c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public Insets f3871d;
+    public Insets f3769d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public int f3872e;
+    public int f3770e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public boolean f3873f;
+    public boolean f3771f;
 
     public c(g gVar, List<b> list) {
         Insets insets = Insets.NONE;
-        this.f3870c = insets;
-        this.f3871d = insets;
+        this.f3768c = insets;
+        this.f3769d = insets;
         f(list, false);
         f(list, true);
         gVar.g(this);
@@ -36,9 +36,9 @@ public class c implements g.c {
 
     @Override // b3.g.c
     public void a(int i10, Insets insets, RectF rectF) {
-        Insets insets2 = this.f3871d;
-        for (int size = this.f3869a.size() - 1; size >= 0; size--) {
-            b bVar = this.f3869a.get(size);
+        Insets insets2 = this.f3769d;
+        for (int size = this.f3767a.size() - 1; size >= 0; size--) {
+            b bVar = this.f3767a.get(size);
             int iE = bVar.e();
             if ((iE & i10) != 0) {
                 bVar.l(true);
@@ -73,22 +73,22 @@ public class c implements g.c {
 
     @Override // b3.g.c
     public void b(Insets insets, Insets insets2) {
-        this.f3870c = insets;
-        this.f3871d = insets2;
+        this.f3768c = insets;
+        this.f3769d = insets2;
         j();
     }
 
     @Override // b3.g.c
     public void c() {
-        this.f3872e++;
+        this.f3770e++;
     }
 
     @Override // b3.g.c
     public void d() {
-        int i10 = this.f3872e;
+        int i10 = this.f3770e;
         boolean z10 = i10 > 0;
         int i11 = i10 - 1;
-        this.f3872e = i11;
+        this.f3770e = i11;
         if (z10 && i11 == 0) {
             j();
         }
@@ -96,8 +96,8 @@ public class c implements g.c {
 
     @Override // b3.g.c
     public void e(int i10) {
-        for (int size = this.f3869a.size() - 1; size >= 0; size--) {
-            this.f3869a.get(size).a(i10);
+        for (int size = this.f3767a.size() - 1; size >= 0; size--) {
+            this.f3767a.get(size).a(i10);
         }
     }
 
@@ -111,35 +111,35 @@ public class c implements g.c {
                     throw new IllegalStateException(bVar + " is already controlled by " + objD);
                 }
                 bVar.h(this);
-                this.f3869a.add(bVar);
+                this.f3767a.add(bVar);
             }
         }
     }
 
     public void g() {
-        if (this.f3873f) {
+        if (this.f3771f) {
             return;
         }
-        this.f3873f = true;
+        this.f3771f = true;
         this.b.l(this);
-        for (int size = this.f3869a.size() - 1; size >= 0; size--) {
-            this.f3869a.get(size).h(null);
+        for (int size = this.f3767a.size() - 1; size >= 0; size--) {
+            this.f3767a.get(size).h(null);
         }
-        this.f3869a.clear();
+        this.f3767a.clear();
     }
 
     public b h(int i10) {
-        return this.f3869a.get(i10);
+        return this.f3767a.get(i10);
     }
 
     public int i() {
-        return this.f3869a.size();
+        return this.f3767a.size();
     }
 
     public final void j() {
         Insets insetsMax = Insets.NONE;
-        for (int size = this.f3869a.size() - 1; size >= 0; size--) {
-            insetsMax = Insets.max(insetsMax, this.f3869a.get(size).b(this.f3870c, this.f3871d, insetsMax));
+        for (int size = this.f3767a.size() - 1; size >= 0; size--) {
+            insetsMax = Insets.max(insetsMax, this.f3767a.get(size).b(this.f3768c, this.f3769d, insetsMax));
         }
     }
 }

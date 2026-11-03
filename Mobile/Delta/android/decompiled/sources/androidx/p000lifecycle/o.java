@@ -16,7 +16,7 @@ public final class o {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final o f2833a = new o();
+    public static final o f2678a = new o();
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull

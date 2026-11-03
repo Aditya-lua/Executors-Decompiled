@@ -10,7 +10,7 @@ public final class m5 extends gb implements pc {
     static {
         m5 m5Var = new m5();
         zzf = m5Var;
-        gb.u(m5.class, m5Var);
+        gb.t(m5.class, m5Var);
     }
 
     @Override // com.google.android.gms.internal.measurement.gb

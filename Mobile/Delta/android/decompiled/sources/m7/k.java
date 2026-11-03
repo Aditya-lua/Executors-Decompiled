@@ -4,11 +4,11 @@ package m7;
 public class k {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final m f24022a;
+    public final m f24672a;
     public final l b;
 
     public k(m mVar, l lVar) {
-        this.f24022a = mVar;
+        this.f24672a = mVar;
         this.b = lVar;
     }
 }

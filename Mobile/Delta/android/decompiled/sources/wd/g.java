@@ -1,29 +1,46 @@
 package wd;
 
-import android.os.BadParcelableException;
-import android.os.Bundle;
-import android.os.Parcel;
-import android.os.Parcelable;
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
+import com.google.android.gms.tasks.Task;
+import com.roblox.client.personasdk.BuildConfig;
+import sb.k;
+import sb.m;
+import xd.i;
+import xd.t;
+import xd.w;
 
 /* JADX INFO: loaded from: classes2.dex */
-public abstract class g extends b implements h {
-    public g() {
-        super("com.google.android.play.core.inappreview.protocol.IInAppReviewServiceCallback");
+@SuppressLint({"RestrictedApi"})
+public final class g {
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public static final i f34368c = new i("ReviewService");
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public t f34369a;
+    public final String b;
+
+    /* JADX WARN: Type inference failed for: r7v0, types: [wd.d] */
+    public g(Context context) {
+        this.b = context.getPackageName();
+        if (w.a(context)) {
+            this.f34369a = new t(context, f34368c, "com.google.android.finsky.inappreviewservice.InAppReviewService", new Intent("com.google.android.finsky.BIND_IN_APP_REVIEW_SERVICE").setPackage(BuildConfig.STORE_PACKAGE), new Object() { // from class: wd.d
+            }, null);
+        }
     }
 
-    @Override // wd.b
-    public final boolean r2(int i10, Parcel parcel, Parcel parcel2, int i11) {
-        if (i10 != 2) {
-            return false;
+    public final Task a() {
+        String str = this.b;
+        i iVar = f34368c;
+        iVar.c("requestInAppReview (%s)", str);
+        if (this.f34369a == null) {
+            iVar.a("Play Store app is either not installed or not the official version", new Object[0]);
+            return m.e(new a(-1));
         }
-        Parcelable.Creator creator = Bundle.CREATOR;
-        int i12 = c.f34165a;
-        Bundle bundle = (Bundle) (parcel.readInt() == 0 ? null : (Parcelable) creator.createFromParcel(parcel));
-        int iDataAvail = parcel.dataAvail();
-        if (iDataAvail <= 0) {
-            l(bundle);
-            return true;
-        }
-        throw new BadParcelableException("Parcel data not fully consumed, unread size: " + iDataAvail);
+        k kVar = new k();
+        this.f34369a.s(new e(this, kVar, kVar), kVar);
+        return kVar.a();
     }
 }

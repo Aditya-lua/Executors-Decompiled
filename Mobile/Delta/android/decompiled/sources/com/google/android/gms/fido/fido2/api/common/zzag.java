@@ -13,26 +13,26 @@ public final class zzag extends AbstractSafeParcelable {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NonNull
-    public final String f6032f;
+    public final String f6105f;
 
     public zzag(@NonNull String str) {
-        this.f6032f = (String) m.l(str);
+        this.f6105f = (String) m.l(str);
     }
 
     public final boolean equals(Object obj) {
         if (obj instanceof zzag) {
-            return this.f6032f.equals(((zzag) obj).f6032f);
+            return this.f6105f.equals(((zzag) obj).f6105f);
         }
         return false;
     }
 
     public final int hashCode() {
-        return k.c(this.f6032f);
+        return k.c(this.f6105f);
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i10) {
-        String str = this.f6032f;
+        String str = this.f6105f;
         int iA = o9.b.a(parcel);
         o9.b.v(parcel, 1, str, false);
         o9.b.b(parcel, iA);

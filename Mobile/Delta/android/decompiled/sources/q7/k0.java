@@ -4,7 +4,7 @@ package q7;
 public class k0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static r7.c.a f29257a = r7.c.a.a("nm", "ind", "ks", "hd");
+    public static r7.c.a f29610a = r7.c.a.a("nm", "ind", "ks", "hd");
 
     public static n7.r a(r7.c cVar, f7.i iVar) {
         String strM = null;
@@ -12,7 +12,7 @@ public class k0 {
         boolean zG = false;
         m7.h hVarK = null;
         while (cVar.f()) {
-            int iR = cVar.r(f29257a);
+            int iR = cVar.r(f29610a);
             if (iR == 0) {
                 strM = cVar.m();
             } else if (iR == 1) {

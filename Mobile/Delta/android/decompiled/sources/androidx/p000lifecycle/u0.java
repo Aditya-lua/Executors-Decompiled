@@ -19,7 +19,7 @@ public final class u0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final List<Class<?>> f2854a = p.n(Application.class, l0.class);
+    public static final List<Class<?>> f2699a = p.n(Application.class, l0.class);
 
     @NotNull
     public static final List<Class<?>> b = o.d(l0.class);

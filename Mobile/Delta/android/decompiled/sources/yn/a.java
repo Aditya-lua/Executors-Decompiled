@@ -1,13 +1,99 @@
 package yn;
 
-import kotlin.Metadata;
-import org.jetbrains.annotations.Nullable;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import com.withpersona.sdk2.inquiry.shared.ui.Pi2NavigationBar;
+import com.withpersona.sdk2.inquiry.shared.ui.ThemeableLottieAnimationView;
+import xn.n2;
+import xn.o2;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0002\b\u0006\bf\u0018\u00002\u00020\u0001R\u001e\u0010\u0007\u001a\u0004\u0018\u00010\u00028&@&X¦\u000e¢\u0006\f\u001a\u0004\b\u0003\u0010\u0004\"\u0004\b\u0005\u0010\u0006¨\u0006\bÀ\u0006\u0003"}, d2 = {"Lyn/a;", "", "", "b", "()Ljava/lang/String;", "a", "(Ljava/lang/String;)V", "deviceId", "device_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public interface a {
-    void a(@Nullable String str);
+public final class a implements r5.a {
 
-    @Nullable
-    String b();
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    @NonNull
+    public final ConstraintLayout f36902a;
+
+    @NonNull
+    public final ConstraintLayout b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    @NonNull
+    public final TextView f36903c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    @NonNull
+    public final ConstraintLayout f36904d;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    @NonNull
+    public final Pi2NavigationBar f36905e;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    @NonNull
+    public final ThemeableLottieAnimationView f36906f;
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name */
+    @NonNull
+    public final TextView f36907g;
+
+    public a(@NonNull ConstraintLayout constraintLayout, @NonNull ConstraintLayout constraintLayout2, @NonNull TextView textView, @NonNull ConstraintLayout constraintLayout3, @NonNull Pi2NavigationBar pi2NavigationBar, @NonNull ThemeableLottieAnimationView themeableLottieAnimationView, @NonNull TextView textView2) {
+        this.f36902a = constraintLayout;
+        this.b = constraintLayout2;
+        this.f36903c = textView;
+        this.f36904d = constraintLayout3;
+        this.f36905e = pi2NavigationBar;
+        this.f36906f = themeableLottieAnimationView;
+        this.f36907g = textView2;
+    }
+
+    @NonNull
+    public static a a(@NonNull View view) {
+        int i10 = n2.b;
+        ConstraintLayout constraintLayout = (ConstraintLayout) r5.b.a(view, i10);
+        if (constraintLayout != null) {
+            i10 = n2.f35896c;
+            TextView textView = (TextView) r5.b.a(view, i10);
+            if (textView != null) {
+                i10 = n2.f35901h;
+                ConstraintLayout constraintLayout2 = (ConstraintLayout) r5.b.a(view, i10);
+                if (constraintLayout2 != null) {
+                    i10 = n2.f35908o;
+                    Pi2NavigationBar pi2NavigationBar = (Pi2NavigationBar) r5.b.a(view, i10);
+                    if (pi2NavigationBar != null) {
+                        i10 = n2.f35909p;
+                        ThemeableLottieAnimationView themeableLottieAnimationView = (ThemeableLottieAnimationView) r5.b.a(view, i10);
+                        if (themeableLottieAnimationView != null) {
+                            i10 = n2.f35914u;
+                            TextView textView2 = (TextView) r5.b.a(view, i10);
+                            if (textView2 != null) {
+                                return new a((ConstraintLayout) view, constraintLayout, textView, constraintLayout2, pi2NavigationBar, themeableLottieAnimationView, textView2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
+    }
+
+    @NonNull
+    public static a c(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
+        View viewInflate = layoutInflater.inflate(o2.f35917a, viewGroup, false);
+        if (z10) {
+            viewGroup.addView(viewInflate);
+        }
+        return a(viewInflate);
+    }
+
+    @Override // r5.a
+    @NonNull
+    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+    public ConstraintLayout getRoot() {
+        return this.f36902a;
+    }
 }

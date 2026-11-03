@@ -18,7 +18,7 @@ public final class k {
             return i10;
         }
         if (!a(rational)) {
-            return cu.b.d(i10 * rational.floatValue());
+            return au.b.d(i10 * rational.floatValue());
         }
         r1.l("CaptureEncodeRates", "Invalid capture-to-encode ratio: " + rational);
         return i10;
@@ -29,7 +29,7 @@ public final class k {
             return i10;
         }
         if (!a(rational)) {
-            return cu.b.d(i10 / rational.floatValue());
+            return au.b.d(i10 / rational.floatValue());
         }
         r1.l("CaptureEncodeRates", "Invalid capture-to-encode ratio: " + rational);
         return i10;

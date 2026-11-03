@@ -6,10 +6,10 @@ import android.hardware.camera2.CameraCharacteristics;
 public final /* synthetic */ class d1 implements d0.b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ a0.c0 f36473a;
+    public final /* synthetic */ a0.c0 f37168a;
 
     @Override // d0.b
     public final Object b(CameraCharacteristics.Key key) {
-        return this.f36473a.a(key);
+        return this.f37168a.a(key);
     }
 }

@@ -17,11 +17,11 @@ public abstract class s extends fb.q implements t {
         if (i10 == 1) {
             Status status = (Status) k0.b(parcel, Status.CREATOR);
             k0.e(parcel);
-            N0(status);
+            J0(status);
         } else if (i10 == 2) {
             zzg zzgVar = (zzg) k0.b(parcel, zzg.CREATOR);
             k0.e(parcel);
-            B1(zzgVar);
+            A1(zzgVar);
         } else {
             if (i10 != 3) {
                 return false;

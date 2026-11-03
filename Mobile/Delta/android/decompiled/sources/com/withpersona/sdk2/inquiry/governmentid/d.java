@@ -9,8 +9,8 @@ import com.withpersona.sdk2.inquiry.network.dto.NextStep;
 import com.withpersona.sdk2.inquiry.network.dto.government_id.CapturePageConfig;
 import com.withpersona.sdk2.inquiry.network.dto.government_id.Id;
 import com.withpersona.sdk2.inquiry.network.dto.ui.components.RemoteImage;
-import fn.AamvaExtraction;
-import io.j2;
+import dn.AamvaExtraction;
+import go.j2;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
@@ -23,21 +23,21 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000¢\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u001a#\u0010\u0006\u001a\u0004\u0018\u00010\u0005*\u00020\u00002\u0006\u0010\u0002\u001a\u00020\u00012\u0006\u0010\u0004\u001a\u00020\u0003¢\u0006\u0004\b\u0006\u0010\u0007\u001a5\u0010\u000e\u001a\u0004\u0018\u00010\r*\u0004\u0018\u00010\b2\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\f\u001a\u00020\u000b2\u0006\u0010\u0002\u001a\u00020\u00012\u0006\u0010\u0004\u001a\u00020\u0003¢\u0006\u0004\b\u000e\u0010\u000f\u001a\u0015\u0010\u0012\u001a\u0004\u0018\u00010\u0011*\u00020\u0010H\u0001¢\u0006\u0004\b\u0012\u0010\u0013\u001a\u001b\u0010\u0017\u001a\u00020\u0016*\u00020\u00142\u0006\u0010\u0015\u001a\u00020\u0003H\u0001¢\u0006\u0004\b\u0017\u0010\u0018\u001a\u0017\u0010\u0019\u001a\u00020\u00162\u0006\u0010\u0015\u001a\u00020\u0003H\u0002¢\u0006\u0004\b\u0019\u0010\u001a\u001a\u0013\u0010\u001d\u001a\u00020\u001c*\u00020\u001bH\u0002¢\u0006\u0004\b\u001d\u0010\u001e\u001a\u0013\u0010 \u001a\u00020\u001f*\u00020\u001bH\u0002¢\u0006\u0004\b \u0010!\u001a\u0015\u0010$\u001a\u0004\u0018\u00010#*\u00020\"H\u0002¢\u0006\u0004\b$\u0010%\u001a\u0013\u0010(\u001a\u00020'*\u00020&H\u0002¢\u0006\u0004\b(\u0010)\u001a\u0015\u0010,\u001a\u00020+*\u0004\u0018\u00010*H\u0002¢\u0006\u0004\b,\u0010-\u001a\u0017\u0010.\u001a\u00020\u00112\u0006\u0010\n\u001a\u00020\tH\u0002¢\u0006\u0004\b.\u0010/\u001a)\u00101\u001a\u00020'2\u0006\u0010\f\u001a\u00020\u000b2\b\u00100\u001a\u0004\u0018\u00010\t2\u0006\u0010\u0002\u001a\u00020\u0001H\u0002¢\u0006\u0004\b1\u00102\u001a\u0011\u00105\u001a\u000204*\u000203¢\u0006\u0004\b5\u00106\u001a\u0011\u00108\u001a\u000204*\u000207¢\u0006\u0004\b8\u00109\u001a\u001b\u0010<\u001a\u00020;*\u0004\u0018\u00010:2\u0006\u0010\u0004\u001a\u00020\u0003¢\u0006\u0004\b<\u0010=¨\u0006>"}, d2 = {"Lcom/withpersona/sdk2/inquiry/network/dto/government_id/Id;", "", "countryCode", "", "defaultManualCaptureDelayMs", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig;", "o", "(Lcom/withpersona/sdk2/inquiry/network/dto/government_id/Id;Ljava/lang/String;J)Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig;", "Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig;", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;", "side", "Lpo/b;", Payload.TYPE, "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$IdSideConfig;", "h", "(Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig;Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;Lpo/b;Ljava/lang/String;J)Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$IdSideConfig;", "Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$AutoCaptureConfig;", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$AutoCaptureConfig;", "g", "(Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$AutoCaptureConfig;)Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$AutoCaptureConfig;", "Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$ManualCaptureConfig;", "defaultManualCaptureDelay", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$ManualCaptureConfig;", "i", "(Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$ManualCaptureConfig;J)Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$ManualCaptureConfig;", "b", "(J)Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$ManualCaptureConfig;", "Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$RuleSet;", "Lcom/withpersona/sdk2/camera/AutoCaptureRuleSet;", "f", "(Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$RuleSet;)Lcom/withpersona/sdk2/camera/AutoCaptureRuleSet;", "", "d", "(Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$RuleSet;)Z", "Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$Rule;", "Lcom/withpersona/sdk2/camera/AutoCaptureRule;", "e", "(Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$Rule;)Lcom/withpersona/sdk2/camera/AutoCaptureRule;", "Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$OverlayConfig;", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen$Overlay;", "j", "(Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$OverlayConfig;)Lcom/withpersona/sdk2/inquiry/governmentid/Screen$Overlay;", "Lcom/withpersona/sdk2/inquiry/network/dto/government_id/Id$IdLocalIcon;", "Lio/j2;", "n", "(Lcom/withpersona/sdk2/inquiry/network/dto/government_id/Id$IdLocalIcon;)Lio/j2;", "a", "(Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;)Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$AutoCaptureConfig;", "currentSide", "c", "(Lpo/b;Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;Ljava/lang/String;)Lcom/withpersona/sdk2/inquiry/governmentid/Screen$Overlay;", "Lcom/withpersona/sdk2/camera/ExtractedTexts;", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdDetails;", "l", "(Lcom/withpersona/sdk2/camera/ExtractedTexts;)Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdDetails;", "Lfn/e;", "m", "(Lfn/e;)Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdDetails;", "Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$GovernmentId$AutoClassificationConfig;", "Lcom/withpersona/sdk2/inquiry/governmentid/autoClassification/AutoClassificationConfig;", "k", "(Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$GovernmentId$AutoClassificationConfig;J)Lcom/withpersona/sdk2/inquiry/governmentid/autoClassification/AutoClassificationConfig;", "government-id_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000¢\u0001\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u001a#\u0010\u0006\u001a\u0004\u0018\u00010\u0005*\u00020\u00002\u0006\u0010\u0002\u001a\u00020\u00012\u0006\u0010\u0004\u001a\u00020\u0003¢\u0006\u0004\b\u0006\u0010\u0007\u001a5\u0010\u000e\u001a\u0004\u0018\u00010\r*\u0004\u0018\u00010\b2\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\f\u001a\u00020\u000b2\u0006\u0010\u0002\u001a\u00020\u00012\u0006\u0010\u0004\u001a\u00020\u0003¢\u0006\u0004\b\u000e\u0010\u000f\u001a\u0015\u0010\u0012\u001a\u0004\u0018\u00010\u0011*\u00020\u0010H\u0001¢\u0006\u0004\b\u0012\u0010\u0013\u001a\u001b\u0010\u0017\u001a\u00020\u0016*\u00020\u00142\u0006\u0010\u0015\u001a\u00020\u0003H\u0001¢\u0006\u0004\b\u0017\u0010\u0018\u001a\u0017\u0010\u0019\u001a\u00020\u00162\u0006\u0010\u0015\u001a\u00020\u0003H\u0002¢\u0006\u0004\b\u0019\u0010\u001a\u001a\u0013\u0010\u001d\u001a\u00020\u001c*\u00020\u001bH\u0002¢\u0006\u0004\b\u001d\u0010\u001e\u001a\u0013\u0010 \u001a\u00020\u001f*\u00020\u001bH\u0002¢\u0006\u0004\b \u0010!\u001a\u0015\u0010$\u001a\u0004\u0018\u00010#*\u00020\"H\u0002¢\u0006\u0004\b$\u0010%\u001a\u0013\u0010(\u001a\u00020'*\u00020&H\u0002¢\u0006\u0004\b(\u0010)\u001a\u0015\u0010,\u001a\u00020+*\u0004\u0018\u00010*H\u0002¢\u0006\u0004\b,\u0010-\u001a\u0017\u0010.\u001a\u00020\u00112\u0006\u0010\n\u001a\u00020\tH\u0002¢\u0006\u0004\b.\u0010/\u001a)\u00101\u001a\u00020'2\u0006\u0010\f\u001a\u00020\u000b2\b\u00100\u001a\u0004\u0018\u00010\t2\u0006\u0010\u0002\u001a\u00020\u0001H\u0002¢\u0006\u0004\b1\u00102\u001a\u0011\u00105\u001a\u000204*\u000203¢\u0006\u0004\b5\u00106\u001a\u0011\u00108\u001a\u000204*\u000207¢\u0006\u0004\b8\u00109\u001a\u001b\u0010<\u001a\u00020;*\u0004\u0018\u00010:2\u0006\u0010\u0004\u001a\u00020\u0003¢\u0006\u0004\b<\u0010=¨\u0006>"}, d2 = {"Lcom/withpersona/sdk2/inquiry/network/dto/government_id/Id;", "", "countryCode", "", "defaultManualCaptureDelayMs", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig;", "o", "(Lcom/withpersona/sdk2/inquiry/network/dto/government_id/Id;Ljava/lang/String;J)Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig;", "Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig;", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;", "side", "Lno/b;", Payload.TYPE, "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$IdSideConfig;", "h", "(Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig;Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;Lno/b;Ljava/lang/String;J)Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$IdSideConfig;", "Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$AutoCaptureConfig;", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$AutoCaptureConfig;", "g", "(Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$AutoCaptureConfig;)Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$AutoCaptureConfig;", "Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$ManualCaptureConfig;", "defaultManualCaptureDelay", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$ManualCaptureConfig;", "i", "(Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$ManualCaptureConfig;J)Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$ManualCaptureConfig;", "b", "(J)Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$ManualCaptureConfig;", "Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$RuleSet;", "Lcom/withpersona/sdk2/camera/AutoCaptureRuleSet;", "f", "(Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$RuleSet;)Lcom/withpersona/sdk2/camera/AutoCaptureRuleSet;", "", "d", "(Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$RuleSet;)Z", "Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$Rule;", "Lcom/withpersona/sdk2/camera/AutoCaptureRule;", "e", "(Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$Rule;)Lcom/withpersona/sdk2/camera/AutoCaptureRule;", "Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$OverlayConfig;", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen$Overlay;", "j", "(Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CapturePageConfig$OverlayConfig;)Lcom/withpersona/sdk2/inquiry/governmentid/Screen$Overlay;", "Lcom/withpersona/sdk2/inquiry/network/dto/government_id/Id$IdLocalIcon;", "Lgo/j2;", "n", "(Lcom/withpersona/sdk2/inquiry/network/dto/government_id/Id$IdLocalIcon;)Lgo/j2;", "a", "(Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;)Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$AutoCaptureConfig;", "currentSide", "c", "(Lno/b;Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;Ljava/lang/String;)Lcom/withpersona/sdk2/inquiry/governmentid/Screen$Overlay;", "Lcom/withpersona/sdk2/camera/ExtractedTexts;", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdDetails;", "l", "(Lcom/withpersona/sdk2/camera/ExtractedTexts;)Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdDetails;", "Ldn/e;", "m", "(Ldn/e;)Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdDetails;", "Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$GovernmentId$AutoClassificationConfig;", "Lcom/withpersona/sdk2/inquiry/governmentid/autoClassification/AutoClassificationConfig;", "k", "(Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$GovernmentId$AutoClassificationConfig;J)Lcom/withpersona/sdk2/inquiry/governmentid/autoClassification/AutoClassificationConfig;", "government-id_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
 public final class d {
 
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
     public static final /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f10875a;
+        public static final /* synthetic */ int[] f10956a;
         public static final /* synthetic */ int[] b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static final /* synthetic */ int[] f10876c;
+        public static final /* synthetic */ int[] f10957c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final /* synthetic */ int[] f10877d;
+        public static final /* synthetic */ int[] f10958d;
 
         static {
             int[] iArr = new int[CapturePageConfig.RuleType.values().length];
@@ -61,7 +61,7 @@ public final class d {
                 iArr[CapturePageConfig.RuleType.TEXT_EXTRACTION.ordinal()] = 5;
             } catch (NoSuchFieldError unused5) {
             }
-            f10875a = iArr;
+            f10956a = iArr;
             int[] iArr2 = new int[CapturePageConfig.OverlayLocalIcon.values().length];
             try {
                 iArr2[CapturePageConfig.OverlayLocalIcon.BARCODE.ordinal()] = 1;
@@ -105,7 +105,7 @@ public final class d {
                 iArr3[Id.IdLocalIcon.HOUSE.ordinal()] = 4;
             } catch (NoSuchFieldError unused15) {
             }
-            f10876c = iArr3;
+            f10957c = iArr3;
             int[] iArr4 = new int[IdConfig.b.values().length];
             try {
                 iArr4[IdConfig.b.Front.ordinal()] = 1;
@@ -127,12 +127,12 @@ public final class d {
                 iArr4[IdConfig.b.PassportSignature.ordinal()] = 5;
             } catch (NoSuchFieldError unused20) {
             }
-            f10877d = iArr4;
+            f10958d = iArr4;
         }
     }
 
     public static final IdConfig.AutoCaptureConfig a(IdConfig.b bVar) {
-        int i10 = a.f10877d[bVar.ordinal()];
+        int i10 = a.f10958d[bVar.ordinal()];
         if (i10 == 1) {
             return new IdConfig.AutoCaptureConfig(new AutoCaptureRuleSet(kotlin.collections.o.d(new AutoCaptureRule.FrontRule(false, 1, null))));
         }
@@ -143,7 +143,7 @@ public final class d {
             if (i10 == 5) {
                 return new IdConfig.AutoCaptureConfig(null, 1, null);
             }
-            throw new jt.l();
+            throw new gt.l();
         }
         return new IdConfig.AutoCaptureConfig(new AutoCaptureRuleSet(kotlin.collections.o.d(new AutoCaptureRule.BarcodePdf417Rule(false, 1, null))));
     }
@@ -152,24 +152,24 @@ public final class d {
         return new IdConfig.ManualCaptureConfig(true, j10);
     }
 
-    public static final Screen.Overlay c(po.b bVar, IdConfig.b bVar2, String str) {
+    public static final Screen.Overlay c(no.b bVar, IdConfig.b bVar2, String str) {
         if (bVar2 == IdConfig.b.BarcodePdf417) {
-            return Screen.Overlay.Barcode.f10709a;
+            return Screen.Overlay.Barcode.f10790a;
         }
         if (bVar2 == IdConfig.b.PassportSignature) {
-            return Screen.Overlay.Rectangle.f10714a;
+            return Screen.Overlay.Rectangle.f10795a;
         }
-        po.b bVar3 = po.b.DriverLicense;
+        no.b bVar3 = no.b.DriverLicense;
         if (bVar == bVar3 && bVar2 == IdConfig.b.Back && Intrinsics.c(str, "US")) {
-            return Screen.Overlay.Barcode.f10709a;
+            return Screen.Overlay.Barcode.f10790a;
         }
-        if (bVar != po.b.Passport && bVar != po.b.Visa) {
-            if (bVar != bVar3 && bVar != po.b.StateID && bVar != po.b.ResidencyPermit) {
-                return Screen.Overlay.Rectangle.f10714a;
+        if (bVar != no.b.Passport && bVar != no.b.Visa) {
+            if (bVar != bVar3 && bVar != no.b.StateID && bVar != no.b.ResidencyPermit) {
+                return Screen.Overlay.Rectangle.f10795a;
             }
-            return Screen.Overlay.GenericFront.f10712a;
+            return Screen.Overlay.GenericFront.f10793a;
         }
-        return Screen.Overlay.Passport.f10713a;
+        return Screen.Overlay.Passport.f10794a;
     }
 
     public static final boolean d(CapturePageConfig.RuleSet ruleSet) {
@@ -195,7 +195,7 @@ public final class d {
 
     public static final AutoCaptureRule e(CapturePageConfig.Rule rule) {
         CapturePageConfig.RuleType type = rule.getType();
-        int i10 = type == null ? -1 : a.f10875a[type.ordinal()];
+        int i10 = type == null ? -1 : a.f10956a[type.ordinal()];
         if (i10 == -1) {
             return null;
         }
@@ -214,7 +214,7 @@ public final class d {
         if (i10 == 5) {
             return new AutoCaptureRule.TextExtractionRule(Intrinsics.c(rule.isRequired(), Boolean.TRUE));
         }
-        throw new jt.l();
+        throw new gt.l();
     }
 
     public static final AutoCaptureRuleSet f(CapturePageConfig.RuleSet ruleSet) {
@@ -259,7 +259,7 @@ public final class d {
     }
 
     @Nullable
-    public static final IdConfig.IdSideConfig h(@Nullable CapturePageConfig capturePageConfig, @NotNull IdConfig.b side, @NotNull po.b type, @NotNull String countryCode, long j10) {
+    public static final IdConfig.IdSideConfig h(@Nullable CapturePageConfig capturePageConfig, @NotNull IdConfig.b side, @NotNull no.b type, @NotNull String countryCode, long j10) {
         IdConfig.AutoCaptureConfig autoCaptureConfigA;
         IdConfig.ManualCaptureConfig manualCaptureConfigB;
         Screen.Overlay overlayC;
@@ -306,22 +306,22 @@ public final class d {
         CapturePageConfig.OverlayLocalIcon overlayFallback = overlayConfig.getOverlayFallback();
         switch (overlayFallback == null ? -1 : a.b[overlayFallback.ordinal()]) {
             case -1:
-                return Screen.Overlay.Rectangle.f10714a;
+                return Screen.Overlay.Rectangle.f10795a;
             case 0:
             default:
-                throw new jt.l();
+                throw new gt.l();
             case 1:
-                return Screen.Overlay.Barcode.f10709a;
+                return Screen.Overlay.Barcode.f10790a;
             case 2:
-                return Screen.Overlay.Passport.f10713a;
+                return Screen.Overlay.Passport.f10794a;
             case 3:
-                return Screen.Overlay.GenericFront.f10712a;
+                return Screen.Overlay.GenericFront.f10793a;
             case 4:
-                return Screen.Overlay.Barcode.f10709a;
+                return Screen.Overlay.Barcode.f10790a;
             case 5:
-                return Screen.Overlay.CornersOnly.f10710a;
+                return Screen.Overlay.CornersOnly.f10791a;
             case 6:
-                return Screen.Overlay.Rectangle.f10714a;
+                return Screen.Overlay.Rectangle.f10795a;
         }
     }
 
@@ -333,7 +333,7 @@ public final class d {
         Boolean boolIsEnabled = autoClassificationConfig != null ? autoClassificationConfig.isEnabled() : null;
         Boolean extractTextFromImage = autoClassificationConfig != null ? autoClassificationConfig.getExtractTextFromImage() : null;
         if (autoClassificationConfig != null && (capturePageConfig = autoClassificationConfig.getCapturePageConfig()) != null) {
-            idSideConfigH = h(capturePageConfig, IdConfig.b.Front, po.b.Unknown, "", j10);
+            idSideConfigH = h(capturePageConfig, IdConfig.b.Front, no.b.Unknown, "", j10);
         }
         return companion.b(boolIsEnabled, extractTextFromImage, idSideConfigH);
     }
@@ -345,16 +345,16 @@ public final class d {
     }
 
     @NotNull
-    public static final GovernmentIdDetails m(@NotNull fn.e eVar) {
+    public static final GovernmentIdDetails m(@NotNull dn.e eVar) {
         Intrinsics.checkNotNullParameter(eVar, "<this>");
-        if (eVar instanceof fn.e.MrzBarcodeInfo) {
-            fn.e.MrzBarcodeInfo mrzBarcodeInfo = (fn.e.MrzBarcodeInfo) eVar;
+        if (eVar instanceof dn.e.MrzBarcodeInfo) {
+            dn.e.MrzBarcodeInfo mrzBarcodeInfo = (dn.e.MrzBarcodeInfo) eVar;
             return new GovernmentIdDetails(mrzBarcodeInfo.getBirthdate(), mrzBarcodeInfo.getExpirationDate());
         }
-        if (!(eVar instanceof fn.e.Pdf417BarcodeInfo)) {
-            throw new jt.l();
+        if (!(eVar instanceof dn.e.Pdf417BarcodeInfo)) {
+            throw new gt.l();
         }
-        fn.e.Pdf417BarcodeInfo pdf417BarcodeInfo = (fn.e.Pdf417BarcodeInfo) eVar;
+        dn.e.Pdf417BarcodeInfo pdf417BarcodeInfo = (dn.e.Pdf417BarcodeInfo) eVar;
         AamvaExtraction aamvaExtractionB = pdf417BarcodeInfo.b();
         Date birthdate = aamvaExtractionB != null ? aamvaExtractionB.getBirthdate() : null;
         AamvaExtraction aamvaExtractionB2 = pdf417BarcodeInfo.b();
@@ -362,7 +362,7 @@ public final class d {
     }
 
     public static final j2 n(Id.IdLocalIcon idLocalIcon) {
-        int i10 = idLocalIcon == null ? -1 : a.f10876c[idLocalIcon.ordinal()];
+        int i10 = idLocalIcon == null ? -1 : a.f10957c[idLocalIcon.ordinal()];
         if (i10 == -1) {
             return j2.Card;
         }
@@ -378,7 +378,7 @@ public final class d {
         if (i10 == 4) {
             return j2.House;
         }
-        throw new jt.l();
+        throw new gt.l();
     }
 
     @Nullable
@@ -389,8 +389,8 @@ public final class d {
         IdConfig.IdSideConfig idSideConfigH;
         Intrinsics.checkNotNullParameter(id2, "<this>");
         Intrinsics.checkNotNullParameter(countryCode, "countryCode");
-        po.b bVarA = po.b.INSTANCE.a(id2.getClass());
-        if (bVarA == po.b.Unknown && !id2.isDynamicGovId()) {
+        no.b bVarA = no.b.INSTANCE.a(id2.getClass());
+        if (bVarA == no.b.Unknown && !id2.isDynamicGovId()) {
             return null;
         }
         LinkedHashMap linkedHashMap = new LinkedHashMap();

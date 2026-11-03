@@ -11,86 +11,86 @@ import java.util.Iterator;
 public class g {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f16093a;
+    public boolean f16689a;
     public k b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public k f16094c;
+    public k f16690c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public f f16095d;
+    public f f16691d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public f f16096e;
+    public f f16692e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public a2.a[] f16097f;
+    public a2.a[] f16693f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public a2.a f16098g;
+    public a2.a f16694g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public float f16099h;
+    public float f16695h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public float f16100i;
+    public float f16696i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public int[] f16101j;
+    public int[] f16697j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public double[] f16102k;
+    public double[] f16698k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public double[] f16103l;
+    public double[] f16699l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public String[] f16104m;
+    public String[] f16700m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public float[] f16105n;
+    public float[] f16701n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public ArrayList<k> f16106o;
+    public ArrayList<k> f16702o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public HashMap<String, e2.d> f16107p;
+    public HashMap<String, e2.d> f16703p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public HashMap<String, e2.c> f16108q;
+    public HashMap<String, e2.c> f16704q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public HashMap<String, e2.b> f16109r;
+    public HashMap<String, e2.b> f16705r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public e[] f16110s;
+    public e[] f16706s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public int f16111t;
+    public int f16707t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public View f16112u;
+    public View f16708u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public int f16113v;
+    public int f16709v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public float f16114w;
+    public float f16710w;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public Interpolator f16115x;
+    public Interpolator f16711x;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public boolean f16116y;
+    public boolean f16712y;
 
     public final float a(float f10, float[] fArr) {
         float f11 = 0.0f;
         if (fArr != null) {
             fArr[0] = 1.0f;
         } else {
-            float f12 = this.f16100i;
+            float f12 = this.f16696i;
             if (f12 != 1.0d) {
-                float f13 = this.f16099h;
+                float f13 = this.f16695h;
                 if (f10 < f13) {
                     f10 = 0.0f;
                 }
@@ -99,8 +99,8 @@ public class g {
                 }
             }
         }
-        a2.b bVar = this.b.f16158a;
-        ArrayList<k> arrayList = this.f16106o;
+        a2.b bVar = this.b.f16754a;
+        ArrayList<k> arrayList = this.f16702o;
         int size = arrayList.size();
         float f14 = Float.NaN;
         int i10 = 0;
@@ -108,14 +108,14 @@ public class g {
             k kVar = arrayList.get(i10);
             i10++;
             k kVar2 = kVar;
-            a2.b bVar2 = kVar2.f16158a;
+            a2.b bVar2 = kVar2.f16754a;
             if (bVar2 != null) {
-                float f15 = kVar2.f16159c;
+                float f15 = kVar2.f16755c;
                 if (f15 < f10) {
                     bVar = bVar2;
                     f11 = f15;
                 } else if (Float.isNaN(f14)) {
-                    f14 = kVar2.f16159c;
+                    f14 = kVar2.f16755c;
                 }
             }
         }
@@ -133,10 +133,10 @@ public class g {
     public void b(double d10, float[] fArr, float[] fArr2) {
         double[] dArr = new double[4];
         double[] dArr2 = new double[4];
-        this.f16097f[0].a(d10, dArr);
-        this.f16097f[0].c(d10, dArr2);
+        this.f16693f[0].a(d10, dArr);
+        this.f16693f[0].c(d10, dArr2);
         Arrays.fill(fArr2, 0.0f);
-        this.b.b(d10, this.f16101j, dArr, fArr, dArr2, fArr2);
+        this.b.b(d10, this.f16697j, dArr, fArr, dArr2, fArr2);
     }
 
     public boolean c(View view, float f10, long j10, a2.c cVar) {
@@ -144,26 +144,26 @@ public class g {
         View view2;
         View view3 = view;
         float fA = a(f10, null);
-        int i10 = this.f16113v;
-        if (i10 != d.f16091a) {
+        int i10 = this.f16709v;
+        if (i10 != d.f16687a) {
             float f11 = 1.0f / i10;
             float fFloor = ((float) Math.floor(fA / f11)) * f11;
             float f12 = (fA % f11) / f11;
-            if (!Float.isNaN(this.f16114w)) {
-                f12 = (f12 + this.f16114w) % 1.0f;
+            if (!Float.isNaN(this.f16710w)) {
+                f12 = (f12 + this.f16710w) % 1.0f;
             }
-            Interpolator interpolator = this.f16115x;
+            Interpolator interpolator = this.f16711x;
             fA = ((interpolator != null ? interpolator.getInterpolation(f12) : ((double) f12) > 0.5d ? 1.0f : 0.0f) * f11) + fFloor;
         }
         float f13 = fA;
-        HashMap<String, e2.c> map = this.f16108q;
+        HashMap<String, e2.c> map = this.f16704q;
         if (map != null) {
             Iterator<e2.c> it = map.values().iterator();
             while (it.hasNext()) {
                 it.next().a(view3, f13);
             }
         }
-        HashMap<String, e2.d> map2 = this.f16107p;
+        HashMap<String, e2.d> map2 = this.f16703p;
         if (map2 != null) {
             boolean zA = false;
             for (e2.d dVar : map2.values()) {
@@ -176,27 +176,27 @@ public class g {
         } else {
             z10 = false;
         }
-        a2.a[] aVarArr = this.f16097f;
+        a2.a[] aVarArr = this.f16693f;
         if (aVarArr != null) {
             double d10 = f13;
-            aVarArr[0].a(d10, this.f16102k);
-            this.f16097f[0].c(d10, this.f16103l);
-            if (this.f16116y) {
+            aVarArr[0].a(d10, this.f16698k);
+            this.f16693f[0].c(d10, this.f16699l);
+            if (this.f16712y) {
                 view2 = view;
             } else {
-                this.b.c(f13, view, this.f16101j, this.f16102k, this.f16103l, null, this.f16093a);
+                this.b.c(f13, view, this.f16697j, this.f16698k, this.f16699l, null, this.f16689a);
                 f13 = f13;
                 view2 = view;
-                this.f16093a = false;
+                this.f16689a = false;
             }
-            if (this.f16111t != d.f16091a) {
-                if (this.f16112u == null) {
-                    this.f16112u = ((View) view2.getParent()).findViewById(this.f16111t);
+            if (this.f16707t != d.f16687a) {
+                if (this.f16708u == null) {
+                    this.f16708u = ((View) view2.getParent()).findViewById(this.f16707t);
                 }
-                View view4 = this.f16112u;
+                View view4 = this.f16708u;
                 if (view4 != null) {
-                    float top = (view4.getTop() + this.f16112u.getBottom()) / 2.0f;
-                    float left = (this.f16112u.getLeft() + this.f16112u.getRight()) / 2.0f;
+                    float top = (view4.getTop() + this.f16708u.getBottom()) / 2.0f;
+                    float left = (this.f16708u.getLeft() + this.f16708u.getRight()) / 2.0f;
                     if (view2.getRight() - view2.getLeft() > 0 && view2.getBottom() - view2.getTop() > 0) {
                         float left2 = left - view2.getLeft();
                         float top2 = top - view2.getTop();
@@ -205,11 +205,11 @@ public class g {
                     }
                 }
             }
-            HashMap<String, e2.c> map3 = this.f16108q;
+            HashMap<String, e2.c> map3 = this.f16704q;
             if (map3 != null) {
                 for (e2.c cVar2 : map3.values()) {
                     if (cVar2 instanceof e2.c.a) {
-                        double[] dArr = this.f16103l;
+                        double[] dArr = this.f16699l;
                         if (dArr.length > 1) {
                             ((e2.c.a) cVar2).b(view2, f13, dArr[0], dArr[1]);
                         }
@@ -218,28 +218,28 @@ public class g {
             }
             int i11 = 1;
             while (true) {
-                a2.a[] aVarArr2 = this.f16097f;
+                a2.a[] aVarArr2 = this.f16693f;
                 if (i11 >= aVarArr2.length) {
                     break;
                 }
-                aVarArr2[i11].b(d10, this.f16105n);
-                e2.a.b(this.b.f16171o.get(this.f16104m[i11 - 1]), view2, this.f16105n);
+                aVarArr2[i11].b(d10, this.f16701n);
+                e2.a.b(this.b.f16767o.get(this.f16700m[i11 - 1]), view2, this.f16701n);
                 i11++;
             }
-            f fVar = this.f16095d;
-            if (fVar.f16092a == 0) {
+            f fVar = this.f16691d;
+            if (fVar.f16688a == 0) {
                 if (f13 <= 0.0f) {
                     view2.setVisibility(fVar.b);
                 } else if (f13 >= 1.0f) {
-                    view2.setVisibility(this.f16096e.b);
-                } else if (this.f16096e.b != fVar.b) {
+                    view2.setVisibility(this.f16692e.b);
+                } else if (this.f16692e.b != fVar.b) {
                     view2.setVisibility(0);
                 }
             }
-            if (this.f16110s != null) {
+            if (this.f16706s != null) {
                 int i12 = 0;
                 while (true) {
-                    e[] eVarArr = this.f16110s;
+                    e[] eVarArr = this.f16706s;
                     if (i12 >= eVarArr.length) {
                         break;
                     }
@@ -250,15 +250,15 @@ public class g {
         } else {
             view2 = view;
             k kVar = this.b;
-            float f14 = kVar.f16161e;
-            k kVar2 = this.f16094c;
-            float f15 = f14 + ((kVar2.f16161e - f14) * f13);
-            float f16 = kVar.f16162f;
-            float f17 = f16 + ((kVar2.f16162f - f16) * f13);
-            float f18 = kVar.f16163g;
-            float f19 = kVar2.f16163g;
-            float f20 = kVar.f16164h;
-            float f21 = kVar2.f16164h;
+            float f14 = kVar.f16757e;
+            k kVar2 = this.f16690c;
+            float f15 = f14 + ((kVar2.f16757e - f14) * f13);
+            float f16 = kVar.f16758f;
+            float f17 = f16 + ((kVar2.f16758f - f16) * f13);
+            float f18 = kVar.f16759g;
+            float f19 = kVar2.f16759g;
+            float f20 = kVar.f16760h;
+            float f21 = kVar2.f16760h;
             float f22 = f15 + 0.5f;
             int i13 = (int) f22;
             float f23 = f17 + 0.5f;
@@ -267,17 +267,17 @@ public class g {
             int i16 = (int) (f23 + ((f21 - f20) * f13) + f20);
             int i17 = i15 - i13;
             int i18 = i16 - i14;
-            if (f19 != f18 || f21 != f20 || this.f16093a) {
+            if (f19 != f18 || f21 != f20 || this.f16689a) {
                 view2.measure(View.MeasureSpec.makeMeasureSpec(i17, 1073741824), View.MeasureSpec.makeMeasureSpec(i18, 1073741824));
-                this.f16093a = false;
+                this.f16689a = false;
             }
             view2.layout(i13, i14, i15, i16);
         }
-        HashMap<String, e2.b> map4 = this.f16109r;
+        HashMap<String, e2.b> map4 = this.f16705r;
         if (map4 != null) {
             for (e2.b bVar : map4.values()) {
                 if (bVar instanceof e2.b.a) {
-                    double[] dArr2 = this.f16103l;
+                    double[] dArr2 = this.f16699l;
                     ((e2.b.a) bVar).b(view2, f13, dArr2[0], dArr2[1]);
                 } else {
                     bVar.a(view2, f13);
@@ -288,6 +288,6 @@ public class g {
     }
 
     public String toString() {
-        return " start: x: " + this.b.f16161e + " y: " + this.b.f16162f + " end: x: " + this.f16094c.f16161e + " y: " + this.f16094c.f16162f;
+        return " start: x: " + this.b.f16757e + " y: " + this.b.f16758f + " end: x: " + this.f16690c.f16757e + " y: " + this.f16690c.f16758f;
     }
 }

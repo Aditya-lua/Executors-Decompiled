@@ -34,7 +34,7 @@ public class s<I, O> extends b0<O> {
         final Function1 function1 = new Function1() { // from class: p0.q
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return s.w(this.f28110a, obj);
+                return s.w(this.f28329a, obj);
             }
         };
         super.p(a0Var, new e0() { // from class: p0.r
@@ -47,7 +47,7 @@ public class s<I, O> extends b0<O> {
 
     public static final Unit w(s sVar, Object obj) {
         sVar.o(sVar.mapFunction.apply(obj));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final void x(Function1 function1, Object obj) {
@@ -72,7 +72,7 @@ public class s<I, O> extends b0<O> {
         z.e(new Runnable() { // from class: p0.p
             @Override // java.lang.Runnable
             public final void run() {
-                s.v(this.f28109a, liveDataSource);
+                s.v(this.f28328a, liveDataSource);
             }
         });
     }

@@ -8,7 +8,7 @@ import java.util.Objects;
 public class t1 extends g1 implements r1 {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final r1.a f23853d = new r1.a() { // from class: m1.s1
+    public static final r1.a f24503d = new r1.a() { // from class: m1.s1
         @Override // m1.r1.a
         public final r1 a(String str) {
             return t1.k(str);
@@ -16,13 +16,13 @@ public class t1 extends g1 implements r1 {
     };
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final MediaCodecInfo.VideoCapabilities f23854c;
+    public final MediaCodecInfo.VideoCapabilities f24504c;
 
     public t1(MediaCodecInfo mediaCodecInfo, String str) {
         super(mediaCodecInfo, str);
         MediaCodecInfo.VideoCapabilities videoCapabilities = this.b.getVideoCapabilities();
         Objects.requireNonNull(videoCapabilities);
-        this.f23854c = videoCapabilities;
+        this.f24504c = videoCapabilities;
     }
 
     public static /* synthetic */ r1 k(String str) {
@@ -46,7 +46,7 @@ public class t1 extends g1 implements r1 {
     @Override // m1.r1
     public Range<Integer> b(int i10) {
         try {
-            return this.f23854c.getSupportedWidthsFor(i10);
+            return this.f24504c.getSupportedWidthsFor(i10);
         } catch (Throwable th2) {
             throw l(th2);
         }
@@ -54,28 +54,28 @@ public class t1 extends g1 implements r1 {
 
     @Override // m1.r1
     public int c() {
-        return this.f23854c.getHeightAlignment();
+        return this.f24504c.getHeightAlignment();
     }
 
     @Override // m1.r1
     public boolean d(int i10, int i11) {
-        return this.f23854c.isSizeSupported(i10, i11);
+        return this.f24504c.isSizeSupported(i10, i11);
     }
 
     @Override // m1.r1
     public int f() {
-        return this.f23854c.getWidthAlignment();
+        return this.f24504c.getWidthAlignment();
     }
 
     @Override // m1.r1
     public Range<Integer> g() {
-        return this.f23854c.getBitrateRange();
+        return this.f24504c.getBitrateRange();
     }
 
     @Override // m1.r1
     public Range<Integer> h(int i10) {
         try {
-            return this.f23854c.getSupportedHeightsFor(i10);
+            return this.f24504c.getSupportedHeightsFor(i10);
         } catch (Throwable th2) {
             throw l(th2);
         }
@@ -83,11 +83,11 @@ public class t1 extends g1 implements r1 {
 
     @Override // m1.r1
     public Range<Integer> i() {
-        return this.f23854c.getSupportedWidths();
+        return this.f24504c.getSupportedWidths();
     }
 
     @Override // m1.r1
     public Range<Integer> j() {
-        return this.f23854c.getSupportedHeights();
+        return this.f24504c.getSupportedHeights();
     }
 }

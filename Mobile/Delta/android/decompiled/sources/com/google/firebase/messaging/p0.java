@@ -9,7 +9,7 @@ import java.util.concurrent.Executor;
 public class p0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Executor f8795a;
+    public final Executor f8869a;
     public final Map<String, Task<String>> b = new w1.a();
 
     public interface a {
@@ -17,7 +17,7 @@ public class p0 {
     }
 
     public p0(Executor executor) {
-        this.f8795a = executor;
+        this.f8869a = executor;
     }
 
     public static /* synthetic */ Task a(p0 p0Var, String str, Task task) {
@@ -38,10 +38,10 @@ public class p0 {
         if (Log.isLoggable("FirebaseMessaging", 3)) {
             Log.d("FirebaseMessaging", "Making new request for: " + str);
         }
-        Task taskI = aVar.start().i(this.f8795a, new sb.c() { // from class: com.google.firebase.messaging.o0
+        Task taskI = aVar.start().i(this.f8869a, new sb.c() { // from class: com.google.firebase.messaging.o0
             @Override // sb.c
             public final Object then(Task task2) {
-                return p0.a(this.f8794a, str, task2);
+                return p0.a(this.f8868a, str, task2);
             }
         });
         this.b.put(str, (Task<String>) taskI);

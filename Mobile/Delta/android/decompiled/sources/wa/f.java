@@ -6,5 +6,5 @@ import com.google.android.gms.common.api.Status;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface f extends IInterface {
-    void j0(Status status, zzc zzcVar);
+    void g0(Status status, zzc zzcVar);
 }

@@ -125,7 +125,7 @@ public final class AFe1cSDK {
                             }
                             AFg1bSDK.registerClient(str + ": preparing data: ", jSONObject3);
                             if (aFd1pSDK != null) {
-                                str5 = aFd1oSDK.f5281d;
+                                str5 = aFd1oSDK.f5354d;
                             }
                             this.registerClient.AFKeystoreWrapper(str5, strAFLogger);
                         } catch (Exception e15) {
@@ -144,7 +144,7 @@ public final class AFe1cSDK {
                             }
                             AFg1bSDK.registerClient(str + ": preparing data: ", jSONObject3);
                             if (aFd1pSDK != null) {
-                                str5 = aFd1oSDK.f5281d;
+                                str5 = aFd1oSDK.f5354d;
                             }
                             this.registerClient.AFKeystoreWrapper(str5, strAFLogger);
                         } catch (Throwable th6) {
@@ -163,7 +163,7 @@ public final class AFe1cSDK {
                             }
                             AFg1bSDK.registerClient(str + ": preparing data: ", jSONObject3);
                             if (aFd1pSDK != null) {
-                                str5 = aFd1oSDK.f5281d;
+                                str5 = aFd1oSDK.f5354d;
                             }
                             this.registerClient.AFKeystoreWrapper(str5, strAFLogger);
                         }
@@ -205,7 +205,7 @@ public final class AFe1cSDK {
         }
         AFg1bSDK.registerClient(str + ": preparing data: ", jSONObject3);
         if (aFd1pSDK != null && (aFd1oSDK = aFd1pSDK.unregisterClient) != null) {
-            str5 = aFd1oSDK.f5281d;
+            str5 = aFd1oSDK.f5354d;
         }
         this.registerClient.AFKeystoreWrapper(str5, strAFLogger);
     }

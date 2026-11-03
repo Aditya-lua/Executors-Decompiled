@@ -19,6 +19,14 @@ repository is mutable and `Delta.lua` was not itself recovered as an APK
 asset, so its key flow is strong source evidence for the runtime UI rather than
 an immutable snapshot embedded in this APK.
 
+The `2.745.1142` update was checked independently against the new protected
+native payload. Its recovered startup memory contains the same exact
+`env-additions.lua` reference, CDN prefixes, and loader/module names. The
+`com.roblox.gloop.Loader` Java source is also byte-identical to the
+`2.743.1136` recovery. This confirms that the source relationship and request
+map below still apply to the current analyzed build; it does not turn the
+mutable public repository into an APK-embedded snapshot.
+
 ## Request flow
 
 The Android configuration uses PlatoBoost service ID `6`. The primary host is

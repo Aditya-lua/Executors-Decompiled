@@ -11,100 +11,100 @@ import java.util.List;
 public class n implements m, i7.a.b, k {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final String f18662e;
+    public final String f19149e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final h0 f18663f;
+    public final h0 f19150f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final n7.k.a f18664g;
+    public final n7.k.a f19151g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final boolean f18665h;
+    public final boolean f19152h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final boolean f18666i;
+    public final boolean f19153i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final i7.a<?, Float> f18667j;
+    public final i7.a<?, Float> f19154j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final i7.a<?, PointF> f18668k;
+    public final i7.a<?, PointF> f19155k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final i7.a<?, Float> f18669l;
+    public final i7.a<?, Float> f19156l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final i7.a<?, Float> f18670m;
+    public final i7.a<?, Float> f19157m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public final i7.a<?, Float> f18671n;
+    public final i7.a<?, Float> f19158n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public final i7.a<?, Float> f18672o;
+    public final i7.a<?, Float> f19159o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public final i7.a<?, Float> f18673p;
+    public final i7.a<?, Float> f19160p;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public boolean f18675r;
+    public boolean f19162r;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Path f18659a = new Path();
+    public final Path f19146a = new Path();
     public final Path b = new Path();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final PathMeasure f18660c = new PathMeasure();
+    public final PathMeasure f19147c = new PathMeasure();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final float[] f18661d = new float[2];
+    public final float[] f19148d = new float[2];
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public final b f18674q = new b();
+    public final b f19161q = new b();
 
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f18676a;
+        public static final /* synthetic */ int[] f19163a;
 
         static {
             int[] iArr = new int[n7.k.a.values().length];
-            f18676a = iArr;
+            f19163a = iArr;
             try {
                 iArr[n7.k.a.STAR.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f18676a[n7.k.a.POLYGON.ordinal()] = 2;
+                f19163a[n7.k.a.POLYGON.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
         }
     }
 
     public n(h0 h0Var, o7.b bVar, n7.k kVar) {
-        this.f18663f = h0Var;
-        this.f18662e = kVar.d();
+        this.f19150f = h0Var;
+        this.f19149e = kVar.d();
         n7.k.a aVarJ = kVar.j();
-        this.f18664g = aVarJ;
-        this.f18665h = kVar.k();
-        this.f18666i = kVar.l();
+        this.f19151g = aVarJ;
+        this.f19152h = kVar.k();
+        this.f19153i = kVar.l();
         i7.d dVarA = kVar.g().a();
-        this.f18667j = dVarA;
+        this.f19154j = dVarA;
         i7.a<PointF, PointF> aVarA = kVar.h().a();
-        this.f18668k = aVarA;
+        this.f19155k = aVarA;
         i7.d dVarA2 = kVar.i().a();
-        this.f18669l = dVarA2;
+        this.f19156l = dVarA2;
         i7.d dVarA3 = kVar.e().a();
-        this.f18671n = dVarA3;
+        this.f19158n = dVarA3;
         i7.d dVarA4 = kVar.f().a();
-        this.f18673p = dVarA4;
+        this.f19160p = dVarA4;
         n7.k.a aVar = n7.k.a.STAR;
         if (aVarJ == aVar) {
-            this.f18670m = kVar.b().a();
-            this.f18672o = kVar.c().a();
+            this.f19157m = kVar.b().a();
+            this.f19159o = kVar.c().a();
         } else {
-            this.f18670m = null;
-            this.f18672o = null;
+            this.f19157m = null;
+            this.f19159o = null;
         }
         bVar.j(dVarA);
         bVar.j(aVarA);
@@ -112,8 +112,8 @@ public class n implements m, i7.a.b, k {
         bVar.j(dVarA3);
         bVar.j(dVarA4);
         if (aVarJ == aVar) {
-            bVar.j(this.f18670m);
-            bVar.j(this.f18672o);
+            bVar.j(this.f19157m);
+            bVar.j(this.f19159o);
         }
         dVarA.a(this);
         aVarA.a(this);
@@ -121,14 +121,14 @@ public class n implements m, i7.a.b, k {
         dVarA3.a(this);
         dVarA4.a(this);
         if (aVarJ == aVar) {
-            this.f18670m.a(this);
-            this.f18672o.a(this);
+            this.f19157m.a(this);
+            this.f19159o.a(this);
         }
     }
 
     private void k() {
-        this.f18675r = false;
-        this.f18663f.invalidateSelf();
+        this.f19162r = false;
+        this.f19150f.invalidateSelf();
     }
 
     @Override // i7.a.b
@@ -143,7 +143,7 @@ public class n implements m, i7.a.b, k {
             if (cVar instanceof u) {
                 u uVar = (u) cVar;
                 if (uVar.k() == n7.t.a.SIMULTANEOUSLY) {
-                    this.f18674q.a(uVar);
+                    this.f19161q.a(uVar);
                     uVar.c(this);
                 }
             }
@@ -154,30 +154,30 @@ public class n implements m, i7.a.b, k {
     public <T> void c(T t8, t7.c<T> cVar) {
         i7.a<?, Float> aVar;
         i7.a<?, Float> aVar2;
-        if (t8 == o0.f16441w) {
-            this.f18667j.o(cVar);
+        if (t8 == o0.f17037w) {
+            this.f19154j.o(cVar);
             return;
         }
-        if (t8 == o0.f16442x) {
-            this.f18669l.o(cVar);
+        if (t8 == o0.f17038x) {
+            this.f19156l.o(cVar);
             return;
         }
-        if (t8 == o0.f16432n) {
-            this.f18668k.o(cVar);
+        if (t8 == o0.f17028n) {
+            this.f19155k.o(cVar);
             return;
         }
-        if (t8 == o0.f16443y && (aVar2 = this.f18670m) != null) {
+        if (t8 == o0.f17039y && (aVar2 = this.f19157m) != null) {
             aVar2.o(cVar);
             return;
         }
-        if (t8 == o0.f16444z) {
-            this.f18671n.o(cVar);
+        if (t8 == o0.f17040z) {
+            this.f19158n.o(cVar);
             return;
         }
-        if (t8 == o0.A && (aVar = this.f18672o) != null) {
+        if (t8 == o0.A && (aVar = this.f19159o) != null) {
             aVar.o(cVar);
         } else if (t8 == o0.B) {
-            this.f18673p.o(cVar);
+            this.f19160p.o(cVar);
         }
     }
 
@@ -186,16 +186,16 @@ public class n implements m, i7.a.b, k {
         float f10;
         float f11;
         float f12;
-        int iFloor = (int) Math.floor(this.f18667j.h().floatValue());
-        i7.a<?, Float> aVar = this.f18669l;
+        int iFloor = (int) Math.floor(this.f19154j.h().floatValue());
+        i7.a<?, Float> aVar = this.f19156l;
         double radians = Math.toRadians((aVar == null ? 0.0d : aVar.h().floatValue()) - 90.0d);
         double d11 = iFloor;
-        float fFloatValue = this.f18673p.h().floatValue() / 100.0f;
-        float fFloatValue2 = this.f18671n.h().floatValue();
+        float fFloatValue = this.f19160p.h().floatValue() / 100.0f;
+        float fFloatValue2 = this.f19158n.h().floatValue();
         double d12 = fFloatValue2;
         float fCos = (float) (Math.cos(radians) * d12);
         float fSin = (float) (Math.sin(radians) * d12);
-        this.f18659a.moveTo(fCos, fSin);
+        this.f19146a.moveTo(fCos, fSin);
         double d13 = (float) (6.283185307179586d / d11);
         double dCeil = Math.ceil(d11);
         double d14 = radians + d13;
@@ -203,9 +203,9 @@ public class n implements m, i7.a.b, k {
         while (true) {
             double d15 = i10;
             if (d15 >= dCeil) {
-                PointF pointFH = this.f18668k.h();
-                this.f18659a.offset(pointFH.x, pointFH.y);
-                this.f18659a.close();
+                PointF pointFH = this.f19155k.h();
+                this.f19146a.offset(pointFH.x, pointFH.y);
+                this.f19146a.close();
                 return;
             }
             float fCos2 = (float) (d12 * Math.cos(d14));
@@ -232,16 +232,16 @@ public class n implements m, i7.a.b, k {
                     f11 = fCos2;
                     f12 = fSin2;
                     this.b.cubicTo(f16, f17, f18, f19, f11, f12);
-                    this.f18660c.setPath(this.b, false);
-                    PathMeasure pathMeasure = this.f18660c;
-                    pathMeasure.getPosTan(pathMeasure.getLength() * 0.9999f, this.f18661d, null);
-                    Path path = this.f18659a;
-                    float[] fArr = this.f18661d;
+                    this.f19147c.setPath(this.b, false);
+                    PathMeasure pathMeasure = this.f19147c;
+                    pathMeasure.getPosTan(pathMeasure.getLength() * 0.9999f, this.f19148d, null);
+                    Path path = this.f19146a;
+                    float[] fArr = this.f19148d;
                     path.cubicTo(f16, f17, f18, f19, fArr[0], fArr[1]);
                 } else {
                     f11 = fCos2;
                     f12 = fSin2;
-                    this.f18659a.cubicTo(fCos - f14, fSin - f15, f11 + fCos4, f12 + fSin4, f11, f12);
+                    this.f19146a.cubicTo(fCos - f14, fSin - f15, f11 + fCos4, f12 + fSin4, f11, f12);
                 }
                 fCos = f11;
                 fSin = f12;
@@ -251,7 +251,7 @@ public class n implements m, i7.a.b, k {
                 d10 = dCeil;
                 f10 = fFloatValue;
                 if (d15 != d10 - 1.0d) {
-                    this.f18659a.lineTo(fCos, fSin);
+                    this.f19146a.lineTo(fCos, fSin);
                 }
                 i10++;
                 dCeil = d10;
@@ -266,29 +266,29 @@ public class n implements m, i7.a.b, k {
 
     @Override // h7.c
     public String getName() {
-        return this.f18662e;
+        return this.f19149e;
     }
 
     @Override // h7.m
     public Path getPath() {
-        if (this.f18675r) {
-            return this.f18659a;
+        if (this.f19162r) {
+            return this.f19146a;
         }
-        this.f18659a.reset();
-        if (this.f18665h) {
-            this.f18675r = true;
-            return this.f18659a;
+        this.f19146a.reset();
+        if (this.f19152h) {
+            this.f19162r = true;
+            return this.f19146a;
         }
-        int i10 = a.f18676a[this.f18664g.ordinal()];
+        int i10 = a.f19163a[this.f19151g.ordinal()];
         if (i10 == 1) {
             j();
         } else if (i10 == 2) {
             f();
         }
-        this.f18659a.close();
-        this.f18674q.b(this.f18659a);
-        this.f18675r = true;
-        return this.f18659a;
+        this.f19146a.close();
+        this.f19161q.b(this.f19146a);
+        this.f19162r = true;
+        return this.f19146a;
     }
 
     @Override // l7.f
@@ -306,12 +306,12 @@ public class n implements m, i7.a.b, k {
         float f13;
         float f14;
         float f15;
-        float fFloatValue = this.f18667j.h().floatValue();
-        i7.a<?, Float> aVar = this.f18669l;
+        float fFloatValue = this.f19154j.h().floatValue();
+        i7.a<?, Float> aVar = this.f19156l;
         double radians = Math.toRadians((aVar == null ? 0.0d : aVar.h().floatValue()) - 90.0d);
         double d11 = fFloatValue;
         float f16 = (float) (6.283185307179586d / d11);
-        if (this.f18666i) {
+        if (this.f19153i) {
             f16 *= -1.0f;
         }
         float f17 = f16 / 2.0f;
@@ -319,11 +319,11 @@ public class n implements m, i7.a.b, k {
         if (f18 != 0.0f) {
             radians += (double) ((1.0f - f18) * f17);
         }
-        float fFloatValue2 = this.f18671n.h().floatValue();
-        float fFloatValue3 = this.f18670m.h().floatValue();
-        i7.a<?, Float> aVar2 = this.f18672o;
+        float fFloatValue2 = this.f19158n.h().floatValue();
+        float fFloatValue3 = this.f19157m.h().floatValue();
+        i7.a<?, Float> aVar2 = this.f19159o;
         float fFloatValue4 = aVar2 != null ? aVar2.h().floatValue() / 100.0f : 0.0f;
-        i7.a<?, Float> aVar3 = this.f18673p;
+        i7.a<?, Float> aVar3 = this.f19160p;
         float fFloatValue5 = aVar3 != null ? aVar3.h().floatValue() / 100.0f : 0.0f;
         if (f18 != 0.0f) {
             f13 = ((fFloatValue2 - fFloatValue3) * f18) + fFloatValue3;
@@ -332,7 +332,7 @@ public class n implements m, i7.a.b, k {
             f10 = 2.0f;
             float fCos2 = (float) (d12 * Math.cos(radians));
             fSin = (float) (d12 * Math.sin(radians));
-            this.f18659a.moveTo(fCos2, fSin);
+            this.f19146a.moveTo(fCos2, fSin);
             d10 = radians + ((double) ((f16 * f18) / 2.0f));
             fCos = fCos2;
             f12 = f17;
@@ -342,7 +342,7 @@ public class n implements m, i7.a.b, k {
             double d13 = fFloatValue2;
             fCos = (float) (Math.cos(radians) * d13);
             fSin = (float) (d13 * Math.sin(radians));
-            this.f18659a.moveTo(fCos, fSin);
+            this.f19146a.moveTo(fCos, fSin);
             f12 = f17;
             d10 = radians + ((double) f12);
             f13 = 0.0f;
@@ -357,9 +357,9 @@ public class n implements m, i7.a.b, k {
         while (true) {
             double d16 = i10;
             if (d16 >= dCeil) {
-                PointF pointFH = this.f18668k.h();
-                this.f18659a.offset(pointFH.x, pointFH.y);
-                this.f18659a.close();
+                PointF pointFH = this.f19155k.h();
+                this.f19146a.offset(pointFH.x, pointFH.y);
+                this.f19146a.close();
                 return;
             }
             float f21 = z10 ? fFloatValue2 : fFloatValue3;
@@ -369,7 +369,7 @@ public class n implements m, i7.a.b, k {
             float f23 = f16;
             float fSin2 = (float) (d17 * Math.sin(d15));
             if (fFloatValue4 == f11 && fFloatValue5 == f11) {
-                this.f18659a.lineTo(fCos3, fSin2);
+                this.f19146a.lineTo(fCos3, fSin2);
                 f15 = fCos3;
                 f14 = fSin2;
             } else {
@@ -400,7 +400,7 @@ public class n implements m, i7.a.b, k {
                     }
                 }
                 f15 = fCos3;
-                this.f18659a.cubicTo(f24 - f29, f25 - f30, fCos3 + f32, f14 + f33, f15, f14);
+                this.f19146a.cubicTo(f24 - f29, f25 - f30, fCos3 + f32, f14 + f33, f15, f14);
             }
             d15 += (double) f22;
             z10 = !z10;

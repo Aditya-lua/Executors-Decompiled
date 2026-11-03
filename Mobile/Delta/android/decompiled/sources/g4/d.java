@@ -6,11 +6,11 @@ import android.view.animation.Interpolator;
 public abstract class d implements Interpolator {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final float[] f17882a;
+    public final float[] f18421a;
     public final float b;
 
     public d(float[] fArr) {
-        this.f17882a = fArr;
+        this.f18421a = fArr;
         this.b = 1.0f / (fArr.length - 1);
     }
 
@@ -22,11 +22,11 @@ public abstract class d implements Interpolator {
         if (f10 <= 0.0f) {
             return 0.0f;
         }
-        float[] fArr = this.f17882a;
+        float[] fArr = this.f18421a;
         int iMin = Math.min((int) ((fArr.length - 1) * f10), fArr.length - 2);
         float f11 = this.b;
         float f12 = (f10 - (iMin * f11)) / f11;
-        float[] fArr2 = this.f17882a;
+        float[] fArr2 = this.f18421a;
         float f13 = fArr2[iMin];
         return f13 + (f12 * (fArr2[iMin + 1] - f13));
     }

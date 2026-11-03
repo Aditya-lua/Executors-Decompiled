@@ -16,7 +16,7 @@ import java.util.concurrent.Executor;
 public abstract class l1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f23619a = new v0.a().a();
+    public int f24269a = new v0.a().a();
     public final Map<Integer, Boolean> b = new HashMap();
 
     public interface a {
@@ -77,18 +77,18 @@ public abstract class l1 {
         g().execute(new Runnable() { // from class: m0.j1
             @Override // java.lang.Runnable
             public final void run() {
-                l1.b(this.f23616a, iVar);
+                l1.b(this.f24266a, iVar);
             }
         });
     }
 
     public boolean f() {
         p0.z.b();
-        int i10 = this.f23619a;
+        int i10 = this.f24269a;
         if (i10 <= 0) {
             return false;
         }
-        this.f23619a = i10 - 1;
+        this.f24269a = i10 - 1;
         return true;
     }
 
@@ -145,7 +145,7 @@ public abstract class l1 {
         g().execute(new Runnable() { // from class: m0.k1
             @Override // java.lang.Runnable
             public final void run() {
-                l1.e(this.f23617a, i10);
+                l1.e(this.f24267a, i10);
             }
         });
     }
@@ -154,7 +154,7 @@ public abstract class l1 {
         g().execute(new Runnable() { // from class: m0.g1
             @Override // java.lang.Runnable
             public final void run() {
-                l1.a(this.f23597a, h1Var);
+                l1.a(this.f24247a, h1Var);
             }
         });
     }
@@ -163,7 +163,7 @@ public abstract class l1 {
         g().execute(new Runnable() { // from class: m0.i1
             @Override // java.lang.Runnable
             public final void run() {
-                l1.d(this.f23602a, bitmap);
+                l1.d(this.f24252a, bitmap);
             }
         });
     }
@@ -172,7 +172,7 @@ public abstract class l1 {
         g().execute(new Runnable() { // from class: m0.h1
             @Override // java.lang.Runnable
             public final void run() {
-                l1.c(this.f23599a, dVar);
+                l1.c(this.f24249a, dVar);
             }
         });
     }

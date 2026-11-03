@@ -26,7 +26,7 @@ public abstract class ContentProviderFetcher<T> {
     private final FutureTask<T> task = new FutureTask<>(new Callable() { // from class: com.appsflyer.sdk_base.util.c
         @Override // java.util.concurrent.Callable
         public final Object call() {
-            return this.f5535a.lambda$new$0();
+            return this.f5608a.lambda$new$0();
         }
     });
 

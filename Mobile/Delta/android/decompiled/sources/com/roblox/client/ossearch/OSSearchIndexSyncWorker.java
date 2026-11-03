@@ -6,44 +6,44 @@ import androidx.work.CoroutineWorker;
 import androidx.work.WorkerParameters;
 import com.roblox.platform.http.returntypes.ossearch.SearchIndexItem;
 import com.roblox.platform.http.returntypes.ossearch.SearchIndexItemsResult;
-import gk.p;
+import ek.q;
+import gt.n;
+import gt.o;
+import gt.s;
+import iu.g1;
+import iu.l0;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.CancellationException;
-import jt.n;
-import jt.o;
-import jt.s;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.Unit;
 import kotlin.collections.CollectionsKt;
-import kotlin.collections.q;
+import kotlin.collections.p;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.k;
-import ku.g1;
-import ku.l0;
+import nt.l;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pt.l;
-import pt.m;
-import th.h;
-import vk.g;
+import rh.h;
+import tk.g;
 import x5.g0;
 import x5.i;
 import x5.j;
 import x5.p0;
 import x5.x;
 import x5.z;
-import zi.ThumbnailResult;
+import xi.ThumbnailResult;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0002\b\b\u0018\u0000 \u000e2\u00020\u0001:\u0001\fB\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bH\u0096@¢\u0006\u0004\b\t\u0010\nR(\u0010\u0014\u001a\u00020\u000b8\u0000@\u0000X\u0081\u000e¢\u0006\u0018\n\u0004\b\f\u0010\r\u0012\u0004\b\u0012\u0010\u0013\u001a\u0004\b\u000e\u0010\u000f\"\u0004\b\u0010\u0010\u0011R.\u0010\u001d\u001a\b\u0012\u0004\u0012\u00020\u00160\u00158\u0000@\u0000X\u0081\u000e¢\u0006\u0018\n\u0004\b\u0017\u0010\u0018\u0012\u0004\b\u001c\u0010\u0013\u001a\u0004\b\u0017\u0010\u0019\"\u0004\b\u001a\u0010\u001b¨\u0006\u001e"}, d2 = {"Lcom/roblox/client/ossearch/OSSearchIndexSyncWorker;", "Landroidx/work/CoroutineWorker;", "Landroid/content/Context;", "appContext", "Landroidx/work/WorkerParameters;", "params", "<init>", "(Landroid/content/Context;Landroidx/work/WorkerParameters;)V", "Landroidx/work/c$a;", "doWork", "(Lnt/b;)Ljava/lang/Object;", "Lku/l0;", "a", "Lku/l0;", "c", "()Lku/l0;", "setIoDispatcher$NativeShell_googleProdRelease", "(Lku/l0;)V", "getIoDispatcher$NativeShell_googleProdRelease$annotations", "()V", "ioDispatcher", "Lkotlin/Function0;", "", "b", "Lkotlin/jvm/functions/Function0;", "()Lkotlin/jvm/functions/Function0;", "setClock$NativeShell_googleProdRelease", "(Lkotlin/jvm/functions/Function0;)V", "getClock$NativeShell_googleProdRelease$annotations", "clock", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0002\b\b\u0018\u0000 \u000e2\u00020\u0001:\u0001\fB\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bH\u0096@¢\u0006\u0004\b\t\u0010\nR(\u0010\u0014\u001a\u00020\u000b8\u0000@\u0000X\u0081\u000e¢\u0006\u0018\n\u0004\b\f\u0010\r\u0012\u0004\b\u0012\u0010\u0013\u001a\u0004\b\u000e\u0010\u000f\"\u0004\b\u0010\u0010\u0011R.\u0010\u001d\u001a\b\u0012\u0004\u0012\u00020\u00160\u00158\u0000@\u0000X\u0081\u000e¢\u0006\u0018\n\u0004\b\u0017\u0010\u0018\u0012\u0004\b\u001c\u0010\u0013\u001a\u0004\b\u0017\u0010\u0019\"\u0004\b\u001a\u0010\u001b¨\u0006\u001e"}, d2 = {"Lcom/roblox/client/ossearch/OSSearchIndexSyncWorker;", "Landroidx/work/CoroutineWorker;", "Landroid/content/Context;", "appContext", "Landroidx/work/WorkerParameters;", "params", "<init>", "(Landroid/content/Context;Landroidx/work/WorkerParameters;)V", "Landroidx/work/c$a;", "doWork", "(Llt/b;)Ljava/lang/Object;", "Liu/l0;", "a", "Liu/l0;", "c", "()Liu/l0;", "setIoDispatcher$NativeShell_googleProdRelease", "(Liu/l0;)V", "getIoDispatcher$NativeShell_googleProdRelease$annotations", "()V", "ioDispatcher", "Lkotlin/Function0;", "", "b", "Lkotlin/jvm/functions/Function0;", "()Lkotlin/jvm/functions/Function0;", "setClock$NativeShell_googleProdRelease", "(Lkotlin/jvm/functions/Function0;)V", "getClock$NativeShell_googleProdRelease$annotations", "clock", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class OSSearchIndexSyncWorker extends CoroutineWorker {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
@@ -83,7 +83,7 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
 
         public final void c(@NotNull Context context) {
             Intrinsics.checkNotNullParameter(context, "context");
-            p.h("OSSearchIndexSyncWorker", "Scheduling immediate OS search index sync");
+            q.h("OSSearchIndexSyncWorker", "Scheduling immediate OS search index sync");
             p0.Companion companion = p0.INSTANCE;
             Context applicationContext = context.getApplicationContext();
             Intrinsics.checkNotNullExpressionValue(applicationContext, "getApplicationContext(...)");
@@ -92,7 +92,7 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
 
         public final void d(@NotNull Context context) {
             Intrinsics.checkNotNullParameter(context, "context");
-            p.h("OSSearchIndexSyncWorker", "Scheduling periodic OS search index sync");
+            q.h("OSSearchIndexSyncWorker", "Scheduling periodic OS search index sync");
             Duration durationOfDays = Duration.ofDays(1L);
             p0.Companion companion = p0.INSTANCE;
             Context applicationContext = context.getApplicationContext();
@@ -111,7 +111,7 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
     public static final /* synthetic */ class b extends k implements Function0<Long> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final b f9117a = new b();
+        public static final b f9190a = new b();
 
         public b() {
             super(0, System.class, "currentTimeMillis", "currentTimeMillis()J", 0);
@@ -124,245 +124,245 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
         }
     }
 
-    @pt.f(c = "com.roblox.client.ossearch.OSSearchIndexSyncWorker", f = "OSSearchIndexSyncWorker.kt", l = {36, 44, 47}, m = "doWork", v = 1)
+    @nt.f(c = "com.roblox.client.ossearch.OSSearchIndexSyncWorker", f = "OSSearchIndexSyncWorker.kt", l = {36, 44, 47}, m = "doWork", v = 1)
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final class c extends pt.d {
+    public static final class c extends nt.d {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public long f9118t;
+        public long f9191t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f9119u;
+        public Object f9192u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public /* synthetic */ Object f9120v;
+        public /* synthetic */ Object f9193v;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public int f9122x;
+        public int f9195x;
 
-        public c(nt.b<? super c> bVar) {
+        public c(lt.b<? super c> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
-            this.f9120v = obj;
-            this.f9122x |= Integer.MIN_VALUE;
+            this.f9193v = obj;
+            this.f9195x |= Integer.MIN_VALUE;
             return OSSearchIndexSyncWorker.this.doWork(this);
         }
     }
 
-    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00070\u0001¢\u0006\u0002\b\u0002*\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Lku/p0;", "Landroidx/work/c$a;", "Lkotlin/jvm/internal/EnhancedNullability;", "<anonymous>", "(Lku/p0;)Landroidx/work/c$a;"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.roblox.client.ossearch.OSSearchIndexSyncWorker$doWork$2", f = "OSSearchIndexSyncWorker.kt", l = {50, 51, 54, 68, 69}, m = "invokeSuspend", v = 1)
-    public static final class d extends m implements Function2<ku.p0, nt.b<? super androidx.work.c.a>, Object> {
+    @nt.f(c = "com.roblox.client.ossearch.OSSearchIndexSyncWorker$doWork$2", f = "OSSearchIndexSyncWorker.kt", l = {50, 51, 54, 68, 69}, m = "invokeSuspend", v = 1)
+    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00070\u0001¢\u0006\u0002\b\u0002*\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Liu/p0;", "Landroidx/work/c$a;", "Lkotlin/jvm/internal/EnhancedNullability;", "<anonymous>", "(Liu/p0;)Landroidx/work/c$a;"}, k = 3, mv = {2, 2, 0})
+    public static final class d extends m implements Function2<iu.p0, lt.b<? super androidx.work.c.a>, Object> {
         public /* synthetic */ Object A;
         public final /* synthetic */ com.roblox.client.ossearch.c C;
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f9123t;
+        public Object f9196t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f9124u;
+        public Object f9197u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public Object f9125v;
+        public Object f9198v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public Object f9126w;
+        public Object f9199w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public int f9127x;
+        public int f9200x;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public int f9128y;
+        public int f9201y;
 
         /* JADX INFO: renamed from: z, reason: collision with root package name */
-        public int f9129z;
+        public int f9202z;
 
-        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-        @pt.f(c = "com.roblox.client.ossearch.OSSearchIndexSyncWorker$doWork$2$1$1", f = "OSSearchIndexSyncWorker.kt", l = {}, m = "invokeSuspend", v = 1)
-        public static final class a extends m implements Function2<ku.p0, nt.b<? super Unit>, Object> {
+        @nt.f(c = "com.roblox.client.ossearch.OSSearchIndexSyncWorker$doWork$2$1$1", f = "OSSearchIndexSyncWorker.kt", l = {}, m = "invokeSuspend", v = 1)
+        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+        public static final class a extends m implements Function2<iu.p0, lt.b<? super Unit>, Object> {
 
             /* JADX INFO: renamed from: t, reason: collision with root package name */
-            public int f9130t;
+            public int f9203t;
 
             /* JADX INFO: renamed from: u, reason: collision with root package name */
-            public final /* synthetic */ OSSearchIndexSyncWorker f9131u;
+            public final /* synthetic */ OSSearchIndexSyncWorker f9204u;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public a(OSSearchIndexSyncWorker oSSearchIndexSyncWorker, nt.b<? super a> bVar) {
+            public a(OSSearchIndexSyncWorker oSSearchIndexSyncWorker, lt.b<? super a> bVar) {
                 super(2, bVar);
-                this.f9131u = oSSearchIndexSyncWorker;
+                this.f9204u = oSSearchIndexSyncWorker;
             }
 
-            @Override // pt.a
-            public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-                return new a(this.f9131u, bVar);
-            }
-
-            @Override // pt.a
-            public final Object invokeSuspend(Object obj) {
-                ot.c.e();
-                if (this.f9130t != 0) {
-                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-                }
-                o.b(obj);
-                m2.e.i(this.f9131u.getApplicationContext());
-                return Unit.f22483a;
+            @Override // nt.a
+            public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+                return new a(this.f9204u, bVar);
             }
 
             @Override // kotlin.jvm.functions.Function2
-            public final Object invoke(ku.p0 p0Var, nt.b<? super Unit> bVar) {
-                return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
-            }
-        }
-
-        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-        @pt.f(c = "com.roblox.client.ossearch.OSSearchIndexSyncWorker$doWork$2$1$2", f = "OSSearchIndexSyncWorker.kt", l = {}, m = "invokeSuspend", v = 1)
-        public static final class b extends m implements Function2<ku.p0, nt.b<? super Unit>, Object> {
-
-            /* JADX INFO: renamed from: t, reason: collision with root package name */
-            public int f9132t;
-
-            /* JADX INFO: renamed from: u, reason: collision with root package name */
-            public final /* synthetic */ OSSearchIndexSyncWorker f9133u;
-
-            /* JADX INFO: renamed from: v, reason: collision with root package name */
-            public final /* synthetic */ List<Pair<m2.c, ThumbnailResult>> f9134v;
-
-            /* JADX INFO: renamed from: w, reason: collision with root package name */
-            public final /* synthetic */ SearchIndexItemsResult f9135w;
-
-            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            /* JADX WARN: Multi-variable type inference failed */
-            public b(OSSearchIndexSyncWorker oSSearchIndexSyncWorker, List<? extends Pair<? extends m2.c, ThumbnailResult>> list, SearchIndexItemsResult searchIndexItemsResult, nt.b<? super b> bVar) {
-                super(2, bVar);
-                this.f9133u = oSSearchIndexSyncWorker;
-                this.f9134v = list;
-                this.f9135w = searchIndexItemsResult;
+            public final Object invoke(iu.p0 p0Var, lt.b<? super Unit> bVar) {
+                return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
             }
 
-            @Override // pt.a
-            public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-                return new b(this.f9133u, this.f9134v, this.f9135w, bVar);
-            }
-
-            @Override // pt.a
+            @Override // nt.a
             public final Object invokeSuspend(Object obj) {
-                ot.c.e();
-                if (this.f9132t != 0) {
+                mt.c.e();
+                if (this.f9203t != 0) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                 }
                 o.b(obj);
-                Context applicationContext = this.f9133u.getApplicationContext();
-                List<Pair<m2.c, ThumbnailResult>> list = this.f9134v;
-                ArrayList arrayList = new ArrayList(q.u(list, 10));
+                m2.e.i(this.f9204u.getApplicationContext());
+                return Unit.f22938a;
+            }
+        }
+
+        @nt.f(c = "com.roblox.client.ossearch.OSSearchIndexSyncWorker$doWork$2$1$2", f = "OSSearchIndexSyncWorker.kt", l = {}, m = "invokeSuspend", v = 1)
+        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+        public static final class b extends m implements Function2<iu.p0, lt.b<? super Unit>, Object> {
+
+            /* JADX INFO: renamed from: t, reason: collision with root package name */
+            public int f9205t;
+
+            /* JADX INFO: renamed from: u, reason: collision with root package name */
+            public final /* synthetic */ OSSearchIndexSyncWorker f9206u;
+
+            /* JADX INFO: renamed from: v, reason: collision with root package name */
+            public final /* synthetic */ List<Pair<m2.c, ThumbnailResult>> f9207v;
+
+            /* JADX INFO: renamed from: w, reason: collision with root package name */
+            public final /* synthetic */ SearchIndexItemsResult f9208w;
+
+            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+            /* JADX WARN: Multi-variable type inference failed */
+            public b(OSSearchIndexSyncWorker oSSearchIndexSyncWorker, List<? extends Pair<? extends m2.c, ThumbnailResult>> list, SearchIndexItemsResult searchIndexItemsResult, lt.b<? super b> bVar) {
+                super(2, bVar);
+                this.f9206u = oSSearchIndexSyncWorker;
+                this.f9207v = list;
+                this.f9208w = searchIndexItemsResult;
+            }
+
+            @Override // nt.a
+            public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+                return new b(this.f9206u, this.f9207v, this.f9208w, bVar);
+            }
+
+            @Override // kotlin.jvm.functions.Function2
+            public final Object invoke(iu.p0 p0Var, lt.b<? super Unit> bVar) {
+                return ((b) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+            }
+
+            @Override // nt.a
+            public final Object invokeSuspend(Object obj) {
+                mt.c.e();
+                if (this.f9205t != 0) {
+                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                }
+                o.b(obj);
+                Context applicationContext = this.f9206u.getApplicationContext();
+                List<Pair<m2.c, ThumbnailResult>> list = this.f9207v;
+                ArrayList arrayList = new ArrayList(kotlin.collections.q.u(list, 10));
                 Iterator<T> it = list.iterator();
                 while (it.hasNext()) {
                     arrayList.add((m2.c) ((Pair) it.next()).c());
                 }
                 m2.e.m(applicationContext, arrayList);
-                com.roblox.client.ossearch.b bVar = com.roblox.client.ossearch.b.f9167a;
-                Context applicationContext2 = this.f9133u.getApplicationContext();
+                com.roblox.client.ossearch.b bVar = com.roblox.client.ossearch.b.f9240a;
+                Context applicationContext2 = this.f9206u.getApplicationContext();
                 Intrinsics.checkNotNullExpressionValue(applicationContext2, "getApplicationContext(...)");
-                bVar.d(applicationContext2, this.f9133u.b().invoke().longValue() + (((long) this.f9135w.getRefreshIntervalSeconds()) * 1000));
-                return Unit.f22483a;
-            }
-
-            @Override // kotlin.jvm.functions.Function2
-            public final Object invoke(ku.p0 p0Var, nt.b<? super Unit> bVar) {
-                return ((b) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+                bVar.d(applicationContext2, this.f9206u.b().invoke().longValue() + (((long) this.f9208w.getRefreshIntervalSeconds()) * 1000));
+                return Unit.f22938a;
             }
         }
 
-        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)I"}, k = 3, mv = {2, 2, 0})
-        @pt.f(c = "com.roblox.client.ossearch.OSSearchIndexSyncWorker$doWork$2$1$availableShortcuts$1", f = "OSSearchIndexSyncWorker.kt", l = {}, m = "invokeSuspend", v = 1)
-        public static final class c extends m implements Function2<ku.p0, nt.b<? super Integer>, Object> {
+        @nt.f(c = "com.roblox.client.ossearch.OSSearchIndexSyncWorker$doWork$2$1$availableShortcuts$1", f = "OSSearchIndexSyncWorker.kt", l = {}, m = "invokeSuspend", v = 1)
+        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)I"}, k = 3, mv = {2, 2, 0})
+        public static final class c extends m implements Function2<iu.p0, lt.b<? super Integer>, Object> {
 
             /* JADX INFO: renamed from: t, reason: collision with root package name */
-            public int f9136t;
+            public int f9209t;
 
             /* JADX INFO: renamed from: u, reason: collision with root package name */
-            public final /* synthetic */ OSSearchIndexSyncWorker f9137u;
+            public final /* synthetic */ OSSearchIndexSyncWorker f9210u;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public c(OSSearchIndexSyncWorker oSSearchIndexSyncWorker, nt.b<? super c> bVar) {
+            public c(OSSearchIndexSyncWorker oSSearchIndexSyncWorker, lt.b<? super c> bVar) {
                 super(2, bVar);
-                this.f9137u = oSSearchIndexSyncWorker;
+                this.f9210u = oSSearchIndexSyncWorker;
             }
 
-            @Override // pt.a
-            public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-                return new c(this.f9137u, bVar);
-            }
-
-            @Override // pt.a
-            public final Object invokeSuspend(Object obj) {
-                ot.c.e();
-                if (this.f9136t != 0) {
-                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-                }
-                o.b(obj);
-                Context applicationContext = this.f9137u.getApplicationContext();
-                Intrinsics.checkNotNullExpressionValue(applicationContext, "getApplicationContext(...)");
-                return pt.b.d(zi.a.a(applicationContext));
+            @Override // nt.a
+            public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+                return new c(this.f9210u, bVar);
             }
 
             @Override // kotlin.jvm.functions.Function2
-            public final Object invoke(ku.p0 p0Var, nt.b<? super Integer> bVar) {
-                return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            public final Object invoke(iu.p0 p0Var, lt.b<? super Integer> bVar) {
+                return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+            }
+
+            @Override // nt.a
+            public final Object invokeSuspend(Object obj) {
+                mt.c.e();
+                if (this.f9209t != 0) {
+                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                }
+                o.b(obj);
+                Context applicationContext = this.f9210u.getApplicationContext();
+                Intrinsics.checkNotNullExpressionValue(applicationContext, "getApplicationContext(...)");
+                return nt.b.d(xi.a.a(applicationContext));
             }
         }
 
         /* JADX INFO: renamed from: com.roblox.client.ossearch.OSSearchIndexSyncWorker$d$d, reason: collision with other inner class name */
-        @Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0004\u001a\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0004\u0010\u0005"}, d2 = {"Lku/p0;", "Lkotlin/Pair;", "Lm2/c;", "Lzi/e;", "<anonymous>", "(Lku/p0;)Lkotlin/Pair;"}, k = 3, mv = {2, 2, 0})
-        @pt.f(c = "com.roblox.client.ossearch.OSSearchIndexSyncWorker$doWork$2$1$indexResults$1$1", f = "OSSearchIndexSyncWorker.kt", l = {61}, m = "invokeSuspend", v = 1)
-        public static final class C0141d extends m implements Function2<ku.p0, nt.b<? super Pair<? extends m2.c, ? extends ThumbnailResult>>, Object> {
+        @nt.f(c = "com.roblox.client.ossearch.OSSearchIndexSyncWorker$doWork$2$1$indexResults$1$1", f = "OSSearchIndexSyncWorker.kt", l = {61}, m = "invokeSuspend", v = 1)
+        @Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0004\u001a\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0004\u0010\u0005"}, d2 = {"Liu/p0;", "Lkotlin/Pair;", "Lm2/c;", "Lxi/e;", "<anonymous>", "(Liu/p0;)Lkotlin/Pair;"}, k = 3, mv = {2, 2, 0})
+        public static final class C0144d extends m implements Function2<iu.p0, lt.b<? super Pair<? extends m2.c, ? extends ThumbnailResult>>, Object> {
 
             /* JADX INFO: renamed from: t, reason: collision with root package name */
-            public int f9138t;
+            public int f9211t;
 
             /* JADX INFO: renamed from: u, reason: collision with root package name */
-            public final /* synthetic */ SearchIndexItem f9139u;
+            public final /* synthetic */ SearchIndexItem f9212u;
 
             /* JADX INFO: renamed from: v, reason: collision with root package name */
-            public final /* synthetic */ com.roblox.client.ossearch.c f9140v;
+            public final /* synthetic */ com.roblox.client.ossearch.c f9213v;
 
             /* JADX INFO: renamed from: w, reason: collision with root package name */
-            public final /* synthetic */ OSSearchIndexSyncWorker f9141w;
+            public final /* synthetic */ OSSearchIndexSyncWorker f9214w;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C0141d(SearchIndexItem searchIndexItem, com.roblox.client.ossearch.c cVar, OSSearchIndexSyncWorker oSSearchIndexSyncWorker, nt.b<? super C0141d> bVar) {
+            public C0144d(SearchIndexItem searchIndexItem, com.roblox.client.ossearch.c cVar, OSSearchIndexSyncWorker oSSearchIndexSyncWorker, lt.b<? super C0144d> bVar) {
                 super(2, bVar);
-                this.f9139u = searchIndexItem;
-                this.f9140v = cVar;
-                this.f9141w = oSSearchIndexSyncWorker;
+                this.f9212u = searchIndexItem;
+                this.f9213v = cVar;
+                this.f9214w = oSSearchIndexSyncWorker;
             }
 
-            @Override // pt.a
-            public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-                return new C0141d(this.f9139u, this.f9140v, this.f9141w, bVar);
+            @Override // nt.a
+            public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+                return new C0144d(this.f9212u, this.f9213v, this.f9214w, bVar);
             }
 
-            @Override // kotlin.jvm.functions.Function2
-            public /* bridge */ /* synthetic */ Object invoke(ku.p0 p0Var, nt.b<? super Pair<? extends m2.c, ? extends ThumbnailResult>> bVar) {
-                return invoke2(p0Var, (nt.b<? super Pair<? extends m2.c, ThumbnailResult>>) bVar);
+            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
+            public final Object invoke2(iu.p0 p0Var, lt.b<? super Pair<? extends m2.c, ThumbnailResult>> bVar) {
+                return ((C0144d) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
             }
 
-            @Override // pt.a
+            @Override // nt.a
             public final Object invokeSuspend(Object obj) {
-                Object objE = ot.c.e();
-                int i10 = this.f9138t;
+                Object objE = mt.c.e();
+                int i10 = this.f9211t;
                 if (i10 == 0) {
                     o.b(obj);
-                    SearchIndexItem searchIndexItem = this.f9139u;
-                    com.roblox.client.ossearch.c cVar = this.f9140v;
-                    l0 ioDispatcher = this.f9141w.getIoDispatcher();
-                    Context applicationContext = this.f9141w.getApplicationContext();
+                    SearchIndexItem searchIndexItem = this.f9212u;
+                    com.roblox.client.ossearch.c cVar = this.f9213v;
+                    l0 ioDispatcher = this.f9214w.getIoDispatcher();
+                    Context applicationContext = this.f9214w.getApplicationContext();
                     Intrinsics.checkNotNullExpressionValue(applicationContext, "getApplicationContext(...)");
-                    this.f9138t = 1;
-                    obj = zi.a.c(searchIndexItem, cVar, ioDispatcher, applicationContext, this);
+                    this.f9211t = 1;
+                    obj = xi.a.c(searchIndexItem, cVar, ioDispatcher, applicationContext, this);
                     if (obj == objE) {
                         return objE;
                     }
@@ -373,30 +373,35 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
                     o.b(obj);
                 }
                 ThumbnailResult thumbnailResult = (ThumbnailResult) obj;
-                SearchIndexItem searchIndexItem2 = this.f9139u;
+                SearchIndexItem searchIndexItem2 = this.f9212u;
                 Bitmap bitmap = thumbnailResult.getBitmap();
-                Context applicationContext2 = this.f9141w.getApplicationContext();
+                Context applicationContext2 = this.f9214w.getApplicationContext();
                 Intrinsics.checkNotNullExpressionValue(applicationContext2, "getApplicationContext(...)");
-                return s.a(zi.a.d(searchIndexItem2, bitmap, applicationContext2), thumbnailResult);
+                return s.a(xi.a.d(searchIndexItem2, bitmap, applicationContext2), thumbnailResult);
             }
 
-            /* JADX INFO: renamed from: invoke, reason: avoid collision after fix types in other method */
-            public final Object invoke2(ku.p0 p0Var, nt.b<? super Pair<? extends m2.c, ThumbnailResult>> bVar) {
-                return ((C0141d) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            @Override // kotlin.jvm.functions.Function2
+            public /* bridge */ /* synthetic */ Object invoke(iu.p0 p0Var, lt.b<? super Pair<? extends m2.c, ? extends ThumbnailResult>> bVar) {
+                return invoke2(p0Var, (lt.b<? super Pair<? extends m2.c, ThumbnailResult>>) bVar);
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public d(com.roblox.client.ossearch.c cVar, nt.b<? super d> bVar) {
+        public d(com.roblox.client.ossearch.c cVar, lt.b<? super d> bVar) {
             super(2, bVar);
             this.C = cVar;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             d dVar = OSSearchIndexSyncWorker.this.new d(this.C, bVar);
             dVar.A = obj;
             return dVar;
+        }
+
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(iu.p0 p0Var, lt.b<? super androidx.work.c.a> bVar) {
+            return ((d) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
         }
 
         /* JADX WARN: Code duplicated, block: B:106:0x02e0  */
@@ -428,7 +433,7 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
         /* JADX WARN: Code duplicated, block: B:96:0x02b5  */
         /* JADX WARN: Instruction removed from duplicated block: B:119:0x0334, please report this as an issue */
         /* JADX WARN: Instruction removed from duplicated block: B:58:0x01d2, please report this as an issue */
-        @Override // pt.a
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
             Object objB;
             Throwable thE;
@@ -443,13 +448,13 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
             int i12;
             Iterator it3;
             int i13;
-            Object objF;
+            Object objA;
             OSSearchIndexSyncWorker oSSearchIndexSyncWorker;
             int i14;
             com.roblox.client.ossearch.c cVar;
-            ku.p0 p0Var;
+            iu.p0 p0Var;
             SearchIndexItemsResult searchIndexItemsResult;
-            ku.p0 p0Var2;
+            iu.p0 p0Var2;
             com.roblox.client.ossearch.c cVar2;
             OSSearchIndexSyncWorker oSSearchIndexSyncWorker2;
             Object objG;
@@ -458,36 +463,36 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
             int iIntValue;
             ArrayList arrayList;
             Iterator it4;
-            Object objA;
+            Object objA2;
             int i15;
             int i16;
             SearchIndexItemsResult searchIndexItemsResult2;
-            ku.p0 p0Var3;
+            iu.p0 p0Var3;
             OSSearchIndexSyncWorker oSSearchIndexSyncWorker4;
             List list2;
             l0 ioDispatcher;
             b bVar;
             List list3;
             SearchIndexItemsResult searchIndexItemsResult3;
-            ku.p0 p0Var4 = (ku.p0) this.A;
-            Object objE = ot.c.e();
-            int i17 = this.f9129z;
+            iu.p0 p0Var4 = (iu.p0) this.A;
+            Object objE = mt.c.e();
+            int i17 = this.f9202z;
             try {
                 if (i17 == 0) {
                     o.b(obj);
-                    com.roblox.client.ossearch.a.f9161a.e();
+                    com.roblox.client.ossearch.a.f9234a.e();
                     OSSearchIndexSyncWorker oSSearchIndexSyncWorker5 = OSSearchIndexSyncWorker.this;
                     com.roblox.client.ossearch.c cVar4 = this.C;
                     n.Companion companion = n.INSTANCE;
-                    zk.j jVarG = g.d().g();
+                    xk.j jVarF = g.d().f();
                     this.A = l.a(p0Var4);
-                    this.f9123t = oSSearchIndexSyncWorker5;
-                    this.f9124u = cVar4;
-                    this.f9125v = p0Var4;
-                    this.f9127x = 0;
-                    this.f9129z = 1;
-                    objF = jVarG.f(this);
-                    if (objF != objE) {
+                    this.f9196t = oSSearchIndexSyncWorker5;
+                    this.f9197u = cVar4;
+                    this.f9198v = p0Var4;
+                    this.f9200x = 0;
+                    this.f9202z = 1;
+                    objA = jVarF.a(this);
+                    if (objA != objE) {
                         oSSearchIndexSyncWorker = oSSearchIndexSyncWorker5;
                         i14 = 0;
                         cVar = cVar4;
@@ -496,72 +501,72 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
                     return objE;
                 }
                 if (i17 == 1) {
-                    i14 = this.f9127x;
-                    ku.p0 p0Var5 = (ku.p0) this.f9125v;
-                    com.roblox.client.ossearch.c cVar5 = (com.roblox.client.ossearch.c) this.f9124u;
-                    OSSearchIndexSyncWorker oSSearchIndexSyncWorker6 = (OSSearchIndexSyncWorker) this.f9123t;
+                    i14 = this.f9200x;
+                    iu.p0 p0Var5 = (iu.p0) this.f9198v;
+                    com.roblox.client.ossearch.c cVar5 = (com.roblox.client.ossearch.c) this.f9197u;
+                    OSSearchIndexSyncWorker oSSearchIndexSyncWorker6 = (OSSearchIndexSyncWorker) this.f9196t;
                     o.b(obj);
                     oSSearchIndexSyncWorker = oSSearchIndexSyncWorker6;
                     cVar = cVar5;
                     p0Var = p0Var5;
-                    objF = obj;
+                    objA = obj;
                 } else {
                     if (i17 == 2) {
-                        i14 = this.f9127x;
-                        searchIndexItemsResult = (SearchIndexItemsResult) this.f9126w;
-                        p0Var2 = (ku.p0) this.f9125v;
-                        cVar2 = (com.roblox.client.ossearch.c) this.f9124u;
-                        oSSearchIndexSyncWorker2 = (OSSearchIndexSyncWorker) this.f9123t;
+                        i14 = this.f9200x;
+                        searchIndexItemsResult = (SearchIndexItemsResult) this.f9199w;
+                        p0Var2 = (iu.p0) this.f9198v;
+                        cVar2 = (com.roblox.client.ossearch.c) this.f9197u;
+                        oSSearchIndexSyncWorker2 = (OSSearchIndexSyncWorker) this.f9196t;
                         o.b(obj);
                         l0 ioDispatcher2 = oSSearchIndexSyncWorker2.getIoDispatcher();
                         c cVar6 = new c(oSSearchIndexSyncWorker2, null);
                         this.A = l.a(p0Var4);
-                        this.f9123t = oSSearchIndexSyncWorker2;
-                        this.f9124u = cVar2;
-                        this.f9125v = p0Var2;
-                        this.f9126w = searchIndexItemsResult;
-                        this.f9127x = i14;
-                        this.f9129z = 3;
-                        objG = ku.i.g(ioDispatcher2, cVar6, this);
+                        this.f9196t = oSSearchIndexSyncWorker2;
+                        this.f9197u = cVar2;
+                        this.f9198v = p0Var2;
+                        this.f9199w = searchIndexItemsResult;
+                        this.f9200x = i14;
+                        this.f9202z = 3;
+                        objG = iu.i.g(ioDispatcher2, cVar6, this);
                         if (objG == objE) {
                             cVar3 = cVar2;
                             oSSearchIndexSyncWorker3 = oSSearchIndexSyncWorker2;
                             iIntValue = ((Number) objG).intValue();
                             List listH0 = CollectionsKt.H0(searchIndexItemsResult.getSearchIndexItems(), iIntValue);
-                            arrayList = new ArrayList(q.u(listH0, 10));
+                            arrayList = new ArrayList(kotlin.collections.q.u(listH0, 10));
                             it4 = listH0.iterator();
                             while (it4.hasNext()) {
                                 ArrayList arrayList2 = arrayList;
-                                arrayList2.add(ku.k.b(p0Var2, null, null, new C0141d((SearchIndexItem) it4.next(), cVar3, oSSearchIndexSyncWorker3, null), 3, null));
+                                arrayList2.add(iu.k.b(p0Var2, null, null, new C0144d((SearchIndexItem) it4.next(), cVar3, oSSearchIndexSyncWorker3, null), 3, null));
                                 arrayList = arrayList2;
                                 cVar3 = cVar3;
                             }
                             this.A = l.a(p0Var4);
-                            this.f9123t = oSSearchIndexSyncWorker3;
-                            this.f9124u = l.a(p0Var2);
-                            this.f9125v = searchIndexItemsResult;
-                            this.f9126w = null;
-                            this.f9127x = i14;
-                            this.f9128y = iIntValue;
-                            this.f9129z = 4;
-                            objA = ku.f.a(arrayList, this);
-                            if (objA != objE) {
+                            this.f9196t = oSSearchIndexSyncWorker3;
+                            this.f9197u = l.a(p0Var2);
+                            this.f9198v = searchIndexItemsResult;
+                            this.f9199w = null;
+                            this.f9200x = i14;
+                            this.f9201y = iIntValue;
+                            this.f9202z = 4;
+                            objA2 = iu.f.a(arrayList, this);
+                            if (objA2 != objE) {
                                 i15 = i14;
                                 i16 = iIntValue;
                                 searchIndexItemsResult2 = searchIndexItemsResult;
                                 p0Var3 = p0Var2;
                                 oSSearchIndexSyncWorker4 = oSSearchIndexSyncWorker3;
-                                list2 = (List) objA;
+                                list2 = (List) objA2;
                                 ioDispatcher = oSSearchIndexSyncWorker4.getIoDispatcher();
                                 bVar = new b(oSSearchIndexSyncWorker4, list2, searchIndexItemsResult2, null);
                                 this.A = l.a(p0Var4);
-                                this.f9123t = l.a(p0Var3);
-                                this.f9124u = searchIndexItemsResult2;
-                                this.f9125v = list2;
-                                this.f9127x = i15;
-                                this.f9128y = i16;
-                                this.f9129z = 5;
-                                if (ku.i.g(ioDispatcher, bVar, this) != objE) {
+                                this.f9196t = l.a(p0Var3);
+                                this.f9197u = searchIndexItemsResult2;
+                                this.f9198v = list2;
+                                this.f9200x = i15;
+                                this.f9201y = i16;
+                                this.f9202z = 5;
+                                if (iu.i.g(ioDispatcher, bVar, this) != objE) {
                                     list3 = list2;
                                     searchIndexItemsResult3 = searchIndexItemsResult2;
                                 }
@@ -570,11 +575,11 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
                         return objE;
                     }
                     if (i17 == 3) {
-                        i14 = this.f9127x;
-                        SearchIndexItemsResult searchIndexItemsResult4 = (SearchIndexItemsResult) this.f9126w;
-                        ku.p0 p0Var6 = (ku.p0) this.f9125v;
-                        com.roblox.client.ossearch.c cVar7 = (com.roblox.client.ossearch.c) this.f9124u;
-                        OSSearchIndexSyncWorker oSSearchIndexSyncWorker7 = (OSSearchIndexSyncWorker) this.f9123t;
+                        i14 = this.f9200x;
+                        SearchIndexItemsResult searchIndexItemsResult4 = (SearchIndexItemsResult) this.f9199w;
+                        iu.p0 p0Var6 = (iu.p0) this.f9198v;
+                        com.roblox.client.ossearch.c cVar7 = (com.roblox.client.ossearch.c) this.f9197u;
+                        OSSearchIndexSyncWorker oSSearchIndexSyncWorker7 = (OSSearchIndexSyncWorker) this.f9196t;
                         o.b(obj);
                         cVar3 = cVar7;
                         oSSearchIndexSyncWorker3 = oSSearchIndexSyncWorker7;
@@ -583,40 +588,40 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
                         objG = obj;
                         iIntValue = ((Number) objG).intValue();
                         List listH1 = CollectionsKt.H0(searchIndexItemsResult.getSearchIndexItems(), iIntValue);
-                        arrayList = new ArrayList(q.u(listH1, 10));
+                        arrayList = new ArrayList(kotlin.collections.q.u(listH1, 10));
                         it4 = listH1.iterator();
                         while (it4.hasNext()) {
                             ArrayList arrayList3 = arrayList;
-                            arrayList3.add(ku.k.b(p0Var2, null, null, new C0141d((SearchIndexItem) it4.next(), cVar3, oSSearchIndexSyncWorker3, null), 3, null));
+                            arrayList3.add(iu.k.b(p0Var2, null, null, new C0144d((SearchIndexItem) it4.next(), cVar3, oSSearchIndexSyncWorker3, null), 3, null));
                             arrayList = arrayList3;
                             cVar3 = cVar3;
                         }
                         this.A = l.a(p0Var4);
-                        this.f9123t = oSSearchIndexSyncWorker3;
-                        this.f9124u = l.a(p0Var2);
-                        this.f9125v = searchIndexItemsResult;
-                        this.f9126w = null;
-                        this.f9127x = i14;
-                        this.f9128y = iIntValue;
-                        this.f9129z = 4;
-                        objA = ku.f.a(arrayList, this);
-                        if (objA != objE) {
+                        this.f9196t = oSSearchIndexSyncWorker3;
+                        this.f9197u = l.a(p0Var2);
+                        this.f9198v = searchIndexItemsResult;
+                        this.f9199w = null;
+                        this.f9200x = i14;
+                        this.f9201y = iIntValue;
+                        this.f9202z = 4;
+                        objA2 = iu.f.a(arrayList, this);
+                        if (objA2 != objE) {
                             i15 = i14;
                             i16 = iIntValue;
                             searchIndexItemsResult2 = searchIndexItemsResult;
                             p0Var3 = p0Var2;
                             oSSearchIndexSyncWorker4 = oSSearchIndexSyncWorker3;
-                            list2 = (List) objA;
+                            list2 = (List) objA2;
                             ioDispatcher = oSSearchIndexSyncWorker4.getIoDispatcher();
                             bVar = new b(oSSearchIndexSyncWorker4, list2, searchIndexItemsResult2, null);
                             this.A = l.a(p0Var4);
-                            this.f9123t = l.a(p0Var3);
-                            this.f9124u = searchIndexItemsResult2;
-                            this.f9125v = list2;
-                            this.f9127x = i15;
-                            this.f9128y = i16;
-                            this.f9129z = 5;
-                            if (ku.i.g(ioDispatcher, bVar, this) != objE) {
+                            this.f9196t = l.a(p0Var3);
+                            this.f9197u = searchIndexItemsResult2;
+                            this.f9198v = list2;
+                            this.f9200x = i15;
+                            this.f9201y = i16;
+                            this.f9202z = 5;
+                            if (iu.i.g(ioDispatcher, bVar, this) != objE) {
                                 list3 = list2;
                                 searchIndexItemsResult3 = searchIndexItemsResult2;
                             }
@@ -624,24 +629,24 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
                         return objE;
                     }
                     if (i17 == 4) {
-                        i16 = this.f9128y;
-                        i15 = this.f9127x;
-                        searchIndexItemsResult2 = (SearchIndexItemsResult) this.f9125v;
-                        p0Var3 = (ku.p0) this.f9124u;
-                        oSSearchIndexSyncWorker4 = (OSSearchIndexSyncWorker) this.f9123t;
+                        i16 = this.f9201y;
+                        i15 = this.f9200x;
+                        searchIndexItemsResult2 = (SearchIndexItemsResult) this.f9198v;
+                        p0Var3 = (iu.p0) this.f9197u;
+                        oSSearchIndexSyncWorker4 = (OSSearchIndexSyncWorker) this.f9196t;
                         o.b(obj);
-                        objA = obj;
-                        list2 = (List) objA;
+                        objA2 = obj;
+                        list2 = (List) objA2;
                         ioDispatcher = oSSearchIndexSyncWorker4.getIoDispatcher();
                         bVar = new b(oSSearchIndexSyncWorker4, list2, searchIndexItemsResult2, null);
                         this.A = l.a(p0Var4);
-                        this.f9123t = l.a(p0Var3);
-                        this.f9124u = searchIndexItemsResult2;
-                        this.f9125v = list2;
-                        this.f9127x = i15;
-                        this.f9128y = i16;
-                        this.f9129z = 5;
-                        if (ku.i.g(ioDispatcher, bVar, this) != objE) {
+                        this.f9196t = l.a(p0Var3);
+                        this.f9197u = searchIndexItemsResult2;
+                        this.f9198v = list2;
+                        this.f9200x = i15;
+                        this.f9201y = i16;
+                        this.f9202z = 5;
+                        if (iu.i.g(ioDispatcher, bVar, this) != objE) {
                             list3 = list2;
                             searchIndexItemsResult3 = searchIndexItemsResult2;
                         }
@@ -650,8 +655,8 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
                     if (i17 != 5) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                     }
-                    list3 = (List) this.f9125v;
-                    searchIndexItemsResult3 = (SearchIndexItemsResult) this.f9124u;
+                    list3 = (List) this.f9198v;
+                    searchIndexItemsResult3 = (SearchIndexItemsResult) this.f9197u;
                     o.b(obj);
                 }
                 objB = n.b(s.a(searchIndexItemsResult3, list3));
@@ -662,7 +667,7 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
                         Intrinsics.checkNotNullExpressionValue(aVarA, "failure(...)");
                         return aVarA;
                     }
-                    p.e("OSSearchIndexSyncWorker", "Error syncing OS search results: " + thE.getMessage());
+                    q.e("OSSearchIndexSyncWorker", "Error syncing OS search results: " + thE.getMessage());
                     androidx.work.c.a aVarC = androidx.work.c.a.c();
                     Intrinsics.checkNotNullExpressionValue(aVarC, "retry(...)");
                     return aVarC;
@@ -670,8 +675,8 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
                 Pair pair = (Pair) objB;
                 SearchIndexItemsResult searchIndexItemsResult5 = (SearchIndexItemsResult) pair.a();
                 List list4 = (List) pair.b();
-                p.h("OSSearchIndexSyncWorker", "OS search index sync completed. Set " + list4.size() + " shortcuts.");
-                com.roblox.client.ossearch.a aVar = com.roblox.client.ossearch.a.f9161a;
+                q.h("OSSearchIndexSyncWorker", "OS search index sync completed. Set " + list4.size() + " shortcuts.");
+                com.roblox.client.ossearch.a aVar = com.roblox.client.ossearch.a.f9234a;
                 int size = searchIndexItemsResult5.getSearchIndexItems().size();
                 searchIndexItems = searchIndexItemsResult5.getSearchIndexItems();
                 if ((searchIndexItems instanceof Collection) || !searchIndexItems.isEmpty()) {
@@ -679,7 +684,7 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
                     int i18 = 0;
                     while (it.hasNext()) {
                         if (((SearchIndexItem) it.next()).getThumbnailUrl().length() <= 0 && (i18 = i18 + 1) < 0) {
-                            kotlin.collections.p.s();
+                            p.s();
                         }
                     }
                     i10 = i18;
@@ -692,54 +697,54 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
                     i11 = 0;
                     for (Pair pair2 : list) {
                         if (((ThumbnailResult) pair2.d()).getFromCache() && ((ThumbnailResult) pair2.d()).getBitmap() != null && (i11 = i11 + 1) < 0) {
-                            kotlin.collections.p.s();
+                            p.s();
                         }
                     }
                 } else {
                     i11 = 0;
                 }
                 syncMetrics = new com.roblox.client.ossearch.a.SyncMetrics(size, i10, i11, null, null, list4.size(), 24, null);
-                if (h.a().e0()) {
+                if (h.a().j0()) {
                     if (z10 || !list.isEmpty()) {
                         it2 = list.iterator();
                         i12 = 0;
                         while (it2.hasNext()) {
                             if (!((ThumbnailResult) ((Pair) it2.next()).d()).getFromCache() && (i12 = i12 + 1) < 0) {
-                                kotlin.collections.p.s();
+                                p.s();
                             }
                         }
                     } else {
                         i12 = 0;
                     }
-                    Integer numD = pt.b.d(i12);
+                    Integer numD = nt.b.d(i12);
                     if (z10 || !list.isEmpty()) {
                         it3 = list.iterator();
                         i13 = 0;
                         while (it3.hasNext()) {
                             if (((ThumbnailResult) ((Pair) it3.next()).d()).getBitmap() != null && (i13 = i13 + 1) < 0) {
-                                kotlin.collections.p.s();
+                                p.s();
                             }
                         }
                     } else {
                         i13 = 0;
                     }
-                    syncMetrics = com.roblox.client.ossearch.a.SyncMetrics.b(syncMetrics, 0, 0, 0, numD, pt.b.d(i13), 0, 39, null);
+                    syncMetrics = com.roblox.client.ossearch.a.SyncMetrics.b(syncMetrics, 0, 0, 0, numD, nt.b.d(i13), 0, 39, null);
                 }
                 aVar.d(syncMetrics);
                 androidx.work.c.a aVarD = androidx.work.c.a.d();
                 Intrinsics.checkNotNull(aVarD);
                 return aVarD;
-                SearchIndexItemsResult searchIndexItemsResult6 = (SearchIndexItemsResult) objF;
+                SearchIndexItemsResult searchIndexItemsResult6 = (SearchIndexItemsResult) objA;
                 l0 ioDispatcher3 = oSSearchIndexSyncWorker.getIoDispatcher();
                 a aVar2 = new a(oSSearchIndexSyncWorker, null);
                 this.A = l.a(p0Var4);
-                this.f9123t = oSSearchIndexSyncWorker;
-                this.f9124u = cVar;
-                this.f9125v = p0Var;
-                this.f9126w = searchIndexItemsResult6;
-                this.f9127x = i14;
-                this.f9129z = 2;
-                if (ku.i.g(ioDispatcher3, aVar2, this) != objE) {
+                this.f9196t = oSSearchIndexSyncWorker;
+                this.f9197u = cVar;
+                this.f9198v = p0Var;
+                this.f9199w = searchIndexItemsResult6;
+                this.f9200x = i14;
+                this.f9202z = 2;
+                if (iu.i.g(ioDispatcher3, aVar2, this) != objE) {
                     searchIndexItemsResult = searchIndexItemsResult6;
                     p0Var2 = p0Var;
                     cVar2 = cVar;
@@ -747,52 +752,52 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
                     l0 ioDispatcher4 = oSSearchIndexSyncWorker2.getIoDispatcher();
                     c cVar8 = new c(oSSearchIndexSyncWorker2, null);
                     this.A = l.a(p0Var4);
-                    this.f9123t = oSSearchIndexSyncWorker2;
-                    this.f9124u = cVar2;
-                    this.f9125v = p0Var2;
-                    this.f9126w = searchIndexItemsResult;
-                    this.f9127x = i14;
-                    this.f9129z = 3;
-                    objG = ku.i.g(ioDispatcher4, cVar8, this);
+                    this.f9196t = oSSearchIndexSyncWorker2;
+                    this.f9197u = cVar2;
+                    this.f9198v = p0Var2;
+                    this.f9199w = searchIndexItemsResult;
+                    this.f9200x = i14;
+                    this.f9202z = 3;
+                    objG = iu.i.g(ioDispatcher4, cVar8, this);
                     if (objG == objE) {
                         cVar3 = cVar2;
                         oSSearchIndexSyncWorker3 = oSSearchIndexSyncWorker2;
                         iIntValue = ((Number) objG).intValue();
                         List listH2 = CollectionsKt.H0(searchIndexItemsResult.getSearchIndexItems(), iIntValue);
-                        arrayList = new ArrayList(q.u(listH2, 10));
+                        arrayList = new ArrayList(kotlin.collections.q.u(listH2, 10));
                         it4 = listH2.iterator();
                         while (it4.hasNext()) {
                             ArrayList arrayList4 = arrayList;
-                            arrayList4.add(ku.k.b(p0Var2, null, null, new C0141d((SearchIndexItem) it4.next(), cVar3, oSSearchIndexSyncWorker3, null), 3, null));
+                            arrayList4.add(iu.k.b(p0Var2, null, null, new C0144d((SearchIndexItem) it4.next(), cVar3, oSSearchIndexSyncWorker3, null), 3, null));
                             arrayList = arrayList4;
                             cVar3 = cVar3;
                         }
                         this.A = l.a(p0Var4);
-                        this.f9123t = oSSearchIndexSyncWorker3;
-                        this.f9124u = l.a(p0Var2);
-                        this.f9125v = searchIndexItemsResult;
-                        this.f9126w = null;
-                        this.f9127x = i14;
-                        this.f9128y = iIntValue;
-                        this.f9129z = 4;
-                        objA = ku.f.a(arrayList, this);
-                        if (objA != objE) {
+                        this.f9196t = oSSearchIndexSyncWorker3;
+                        this.f9197u = l.a(p0Var2);
+                        this.f9198v = searchIndexItemsResult;
+                        this.f9199w = null;
+                        this.f9200x = i14;
+                        this.f9201y = iIntValue;
+                        this.f9202z = 4;
+                        objA2 = iu.f.a(arrayList, this);
+                        if (objA2 != objE) {
                             i15 = i14;
                             i16 = iIntValue;
                             searchIndexItemsResult2 = searchIndexItemsResult;
                             p0Var3 = p0Var2;
                             oSSearchIndexSyncWorker4 = oSSearchIndexSyncWorker3;
-                            list2 = (List) objA;
+                            list2 = (List) objA2;
                             ioDispatcher = oSSearchIndexSyncWorker4.getIoDispatcher();
                             bVar = new b(oSSearchIndexSyncWorker4, list2, searchIndexItemsResult2, null);
                             this.A = l.a(p0Var4);
-                            this.f9123t = l.a(p0Var3);
-                            this.f9124u = searchIndexItemsResult2;
-                            this.f9125v = list2;
-                            this.f9127x = i15;
-                            this.f9128y = i16;
-                            this.f9129z = 5;
-                            if (ku.i.g(ioDispatcher, bVar, this) != objE) {
+                            this.f9196t = l.a(p0Var3);
+                            this.f9197u = searchIndexItemsResult2;
+                            this.f9198v = list2;
+                            this.f9200x = i15;
+                            this.f9201y = i16;
+                            this.f9202z = 5;
+                            if (iu.i.g(ioDispatcher, bVar, this) != objE) {
                                 list3 = list2;
                                 searchIndexItemsResult3 = searchIndexItemsResult2;
                                 objB = n.b(s.a(searchIndexItemsResult3, list3));
@@ -803,7 +808,7 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
                                         Intrinsics.checkNotNullExpressionValue(aVarA2, "failure(...)");
                                         return aVarA2;
                                     }
-                                    p.e("OSSearchIndexSyncWorker", "Error syncing OS search results: " + thE.getMessage());
+                                    q.e("OSSearchIndexSyncWorker", "Error syncing OS search results: " + thE.getMessage());
                                     androidx.work.c.a aVarC2 = androidx.work.c.a.c();
                                     Intrinsics.checkNotNullExpressionValue(aVarC2, "retry(...)");
                                     return aVarC2;
@@ -811,8 +816,8 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
                                 Pair pair3 = (Pair) objB;
                                 SearchIndexItemsResult searchIndexItemsResult7 = (SearchIndexItemsResult) pair3.a();
                                 List list5 = (List) pair3.b();
-                                p.h("OSSearchIndexSyncWorker", "OS search index sync completed. Set " + list5.size() + " shortcuts.");
-                                com.roblox.client.ossearch.a aVar3 = com.roblox.client.ossearch.a.f9161a;
+                                q.h("OSSearchIndexSyncWorker", "OS search index sync completed. Set " + list5.size() + " shortcuts.");
+                                com.roblox.client.ossearch.a aVar3 = com.roblox.client.ossearch.a.f9234a;
                                 int size2 = searchIndexItemsResult7.getSearchIndexItems().size();
                                 searchIndexItems = searchIndexItemsResult7.getSearchIndexItems();
                                 if (searchIndexItems instanceof Collection) {
@@ -848,7 +853,7 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
                                     }
                                 }
                                 syncMetrics = new com.roblox.client.ossearch.a.SyncMetrics(size2, i10, i11, null, null, list5.size(), 24, null);
-                                if (h.a().e0()) {
+                                if (h.a().j0()) {
                                     if (z10) {
                                         it2 = list.iterator();
                                         i12 = 0;
@@ -864,7 +869,7 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
                                             }
                                         }
                                     }
-                                    Integer numD2 = pt.b.d(i12);
+                                    Integer numD2 = nt.b.d(i12);
                                     if (z10) {
                                         it3 = list.iterator();
                                         i13 = 0;
@@ -880,7 +885,7 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
                                             }
                                         }
                                     }
-                                    syncMetrics = com.roblox.client.ossearch.a.SyncMetrics.b(syncMetrics, 0, 0, 0, numD2, pt.b.d(i13), 0, 39, null);
+                                    syncMetrics = com.roblox.client.ossearch.a.SyncMetrics.b(syncMetrics, 0, 0, 0, numD2, nt.b.d(i13), 0, 39, null);
                                 }
                                 aVar3.d(syncMetrics);
                                 androidx.work.c.a aVarD2 = androidx.work.c.a.d();
@@ -896,77 +901,72 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
                 objB = n.b(o.a(th2));
             }
         }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(ku.p0 p0Var, nt.b<? super androidx.work.c.a> bVar) {
-            return ((d) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
-        }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)J"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.roblox.client.ossearch.OSSearchIndexSyncWorker$doWork$nextAllowedSync$1", f = "OSSearchIndexSyncWorker.kt", l = {}, m = "invokeSuspend", v = 1)
-    public static final class e extends m implements Function2<ku.p0, nt.b<? super Long>, Object> {
+    @nt.f(c = "com.roblox.client.ossearch.OSSearchIndexSyncWorker$doWork$nextAllowedSync$1", f = "OSSearchIndexSyncWorker.kt", l = {}, m = "invokeSuspend", v = 1)
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)J"}, k = 3, mv = {2, 2, 0})
+    public static final class e extends m implements Function2<iu.p0, lt.b<? super Long>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f9142t;
+        public int f9215t;
 
-        public e(nt.b<? super e> bVar) {
+        public e(lt.b<? super e> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             return OSSearchIndexSyncWorker.this.new e(bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(iu.p0 p0Var, lt.b<? super Long> bVar) {
+            return ((e) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            ot.c.e();
-            if (this.f9142t != 0) {
+            mt.c.e();
+            if (this.f9215t != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
             o.b(obj);
-            com.roblox.client.ossearch.b bVar = com.roblox.client.ossearch.b.f9167a;
+            com.roblox.client.ossearch.b bVar = com.roblox.client.ossearch.b.f9240a;
             Context applicationContext = OSSearchIndexSyncWorker.this.getApplicationContext();
             Intrinsics.checkNotNullExpressionValue(applicationContext, "getApplicationContext(...)");
-            return pt.b.e(bVar.c(applicationContext));
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(ku.p0 p0Var, nt.b<? super Long> bVar) {
-            return ((e) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            return nt.b.e(bVar.c(applicationContext));
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "Lcom/roblox/client/ossearch/c;", "<anonymous>", "(Lku/p0;)Lcom/roblox/client/ossearch/c;"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.roblox.client.ossearch.OSSearchIndexSyncWorker$doWork$thumbnailCache$1", f = "OSSearchIndexSyncWorker.kt", l = {}, m = "invokeSuspend", v = 1)
-    public static final class f extends m implements Function2<ku.p0, nt.b<? super com.roblox.client.ossearch.c>, Object> {
+    @nt.f(c = "com.roblox.client.ossearch.OSSearchIndexSyncWorker$doWork$thumbnailCache$1", f = "OSSearchIndexSyncWorker.kt", l = {}, m = "invokeSuspend", v = 1)
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "Lcom/roblox/client/ossearch/c;", "<anonymous>", "(Liu/p0;)Lcom/roblox/client/ossearch/c;"}, k = 3, mv = {2, 2, 0})
+    public static final class f extends m implements Function2<iu.p0, lt.b<? super com.roblox.client.ossearch.c>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f9144t;
+        public int f9217t;
 
-        public f(nt.b<? super f> bVar) {
+        public f(lt.b<? super f> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             return new f(bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(iu.p0 p0Var, lt.b<? super com.roblox.client.ossearch.c> bVar) {
+            return ((f) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            ot.c.e();
-            if (this.f9144t != 0) {
+            mt.c.e();
+            if (this.f9217t != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
             o.b(obj);
             return com.roblox.client.ossearch.c.INSTANCE.a();
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(ku.p0 p0Var, nt.b<? super com.roblox.client.ossearch.c> bVar) {
-            return ((f) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
         }
     }
 
@@ -976,7 +976,7 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
         Intrinsics.checkNotNullParameter(appContext, "appContext");
         Intrinsics.checkNotNullParameter(params, "params");
         this.ioDispatcher = g1.b();
-        this.clock = b.f9117a;
+        this.clock = b.f9190a;
     }
 
     @NotNull
@@ -1001,27 +1001,27 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct add '--show-bad-code' argument
     */
-    public java.lang.Object doWork(@org.jetbrains.annotations.NotNull nt.b<? super androidx.work.c.a> r12) {
+    public java.lang.Object doWork(@org.jetbrains.annotations.NotNull lt.b<? super androidx.work.c.a> r12) {
         /*
             r11 = this;
             boolean r0 = r12 instanceof com.roblox.client.ossearch.OSSearchIndexSyncWorker.c
             if (r0 == 0) goto L13
             r0 = r12
             com.roblox.client.ossearch.OSSearchIndexSyncWorker$c r0 = (com.roblox.client.ossearch.OSSearchIndexSyncWorker.c) r0
-            int r1 = r0.f9122x
+            int r1 = r0.f9195x
             r2 = -2147483648(0xffffffff80000000, float:-0.0)
             r3 = r1 & r2
             if (r3 == 0) goto L13
             int r1 = r1 - r2
-            r0.f9122x = r1
+            r0.f9195x = r1
             goto L18
         L13:
             com.roblox.client.ossearch.OSSearchIndexSyncWorker$c r0 = new com.roblox.client.ossearch.OSSearchIndexSyncWorker$c
             r0.<init>(r12)
         L18:
-            java.lang.Object r12 = r0.f9120v
-            java.lang.Object r1 = ot.c.e()
-            int r2 = r0.f9122x
+            java.lang.Object r12 = r0.f9193v
+            java.lang.Object r1 = mt.c.e()
+            int r2 = r0.f9195x
             r3 = 3
             r4 = 2
             r5 = 1
@@ -1030,9 +1030,9 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
             if (r2 == r5) goto L43
             if (r2 == r4) goto L3d
             if (r2 != r3) goto L35
-            java.lang.Object r0 = r0.f9119u
+            java.lang.Object r0 = r0.f9192u
             com.roblox.client.ossearch.c r0 = (com.roblox.client.ossearch.c) r0
-            jt.o.b(r12)
+            gt.o.b(r12)
             goto Lb1
         L35:
             java.lang.IllegalStateException r12 = new java.lang.IllegalStateException
@@ -1040,19 +1040,19 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
             r12.<init>(r0)
             throw r12
         L3d:
-            long r4 = r0.f9118t
-            jt.o.b(r12)
+            long r4 = r0.f9191t
+            gt.o.b(r12)
             goto L99
         L43:
-            jt.o.b(r12)
+            gt.o.b(r12)
             goto L5a
         L47:
-            jt.o.b(r12)
-            ku.l0 r12 = r11.ioDispatcher
+            gt.o.b(r12)
+            iu.l0 r12 = r11.ioDispatcher
             com.roblox.client.ossearch.OSSearchIndexSyncWorker$e r2 = new com.roblox.client.ossearch.OSSearchIndexSyncWorker$e
             r2.<init>(r6)
-            r0.f9122x = r5
-            java.lang.Object r12 = ku.i.g(r12, r2, r0)
+            r0.f9195x = r5
+            java.lang.Object r12 = iu.i.g(r12, r2, r0)
             if (r12 != r1) goto L5a
             goto Lb0
         L5a:
@@ -1066,20 +1066,20 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
             java.lang.String r2 = "OSSearchIndexSyncWorker"
             if (r12 >= 0) goto L81
             java.lang.String r12 = "Skipping OS search sync, not yet due"
-            gk.p.h(r2, r12)
+            ek.q.h(r2, r12)
             androidx.work.c$a r12 = androidx.work.c.a.d()
             java.lang.String r0 = "success(...)"
             kotlin.jvm.internal.Intrinsics.checkNotNullExpressionValue(r12, r0)
             return r12
         L81:
             java.lang.String r12 = "Starting OS search index sync"
-            gk.p.h(r2, r12)
-            ku.l0 r12 = r11.ioDispatcher
+            ek.q.h(r2, r12)
+            iu.l0 r12 = r11.ioDispatcher
             com.roblox.client.ossearch.OSSearchIndexSyncWorker$f r2 = new com.roblox.client.ossearch.OSSearchIndexSyncWorker$f
             r2.<init>(r6)
-            r0.f9118t = r7
-            r0.f9122x = r4
-            java.lang.Object r12 = ku.i.g(r12, r2, r0)
+            r0.f9191t = r7
+            r0.f9195x = r4
+            java.lang.Object r12 = iu.i.g(r12, r2, r0)
             if (r12 != r1) goto L98
             goto Lb0
         L98:
@@ -1088,11 +1088,11 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
             com.roblox.client.ossearch.c r12 = (com.roblox.client.ossearch.c) r12
             com.roblox.client.ossearch.OSSearchIndexSyncWorker$d r2 = new com.roblox.client.ossearch.OSSearchIndexSyncWorker$d
             r2.<init>(r12, r6)
-            java.lang.Object r12 = pt.l.a(r12)
-            r0.f9119u = r12
-            r0.f9118t = r4
-            r0.f9122x = r3
-            java.lang.Object r12 = ku.q0.g(r2, r0)
+            java.lang.Object r12 = nt.l.a(r12)
+            r0.f9192u = r12
+            r0.f9191t = r4
+            r0.f9195x = r3
+            java.lang.Object r12 = iu.q0.g(r2, r0)
             if (r12 != r1) goto Lb1
         Lb0:
             return r1
@@ -1101,6 +1101,6 @@ public final class OSSearchIndexSyncWorker extends CoroutineWorker {
             kotlin.jvm.internal.Intrinsics.checkNotNullExpressionValue(r12, r0)
             return r12
         */
-        throw new UnsupportedOperationException("Method not decompiled: com.roblox.client.ossearch.OSSearchIndexSyncWorker.doWork(nt.b):java.lang.Object");
+        throw new UnsupportedOperationException("Method not decompiled: com.roblox.client.ossearch.OSSearchIndexSyncWorker.doWork(lt.b):java.lang.Object");
     }
 }

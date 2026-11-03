@@ -15,20 +15,20 @@ import androidx.annotation.NonNull;
 public class h extends RecyclerView.p {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final int[] f3218d = {R.attr.listDivider};
+    public static final int[] f3063d = {R.attr.listDivider};
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Drawable f3219a;
+    public Drawable f3064a;
     public int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Rect f3220c = new Rect();
+    public final Rect f3065c = new Rect();
 
     @SuppressLint({"UnknownNullness"})
     public h(Context context, int i10) {
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(f3218d);
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(f3063d);
         Drawable drawable = typedArrayObtainStyledAttributes.getDrawable(0);
-        this.f3219a = drawable;
+        this.f3064a = drawable;
         if (drawable == null) {
             Log.w("DividerItem", "@android:attr/listDivider was not set in the theme used for this DividerItemDecoration. Please set that attribute all call setDrawable()");
         }
@@ -39,7 +39,7 @@ public class h extends RecyclerView.p {
     @Override // androidx.recyclerview.widget.RecyclerView.p
     @SuppressLint({"UnknownNullness"})
     public void e(Rect rect, View view, RecyclerView recyclerView, RecyclerView.b0 b0Var) {
-        Drawable drawable = this.f3219a;
+        Drawable drawable = this.f3064a;
         if (drawable == null) {
             rect.set(0, 0, 0, 0);
         } else if (this.b == 1) {
@@ -52,7 +52,7 @@ public class h extends RecyclerView.p {
     @Override // androidx.recyclerview.widget.RecyclerView.p
     @SuppressLint({"UnknownNullness"})
     public void g(Canvas canvas, RecyclerView recyclerView, RecyclerView.b0 b0Var) {
-        if (recyclerView.getLayoutManager() == null || this.f3219a == null) {
+        if (recyclerView.getLayoutManager() == null || this.f3064a == null) {
             return;
         }
         if (this.b == 1) {
@@ -77,10 +77,10 @@ public class h extends RecyclerView.p {
         int childCount = recyclerView.getChildCount();
         for (int i10 = 0; i10 < childCount; i10++) {
             View childAt = recyclerView.getChildAt(i10);
-            recyclerView.getLayoutManager().U(childAt, this.f3220c);
-            int iRound = this.f3220c.right + Math.round(childAt.getTranslationX());
-            this.f3219a.setBounds(iRound - this.f3219a.getIntrinsicWidth(), paddingTop, iRound, height);
-            this.f3219a.draw(canvas);
+            recyclerView.getLayoutManager().U(childAt, this.f3065c);
+            int iRound = this.f3065c.right + Math.round(childAt.getTranslationX());
+            this.f3064a.setBounds(iRound - this.f3064a.getIntrinsicWidth(), paddingTop, iRound, height);
+            this.f3064a.draw(canvas);
         }
         canvas.restore();
     }
@@ -100,23 +100,23 @@ public class h extends RecyclerView.p {
         int childCount = recyclerView.getChildCount();
         for (int i10 = 0; i10 < childCount; i10++) {
             View childAt = recyclerView.getChildAt(i10);
-            recyclerView.o0(childAt, this.f3220c);
-            int iRound = this.f3220c.bottom + Math.round(childAt.getTranslationY());
-            this.f3219a.setBounds(paddingLeft, iRound - this.f3219a.getIntrinsicHeight(), width, iRound);
-            this.f3219a.draw(canvas);
+            recyclerView.o0(childAt, this.f3065c);
+            int iRound = this.f3065c.bottom + Math.round(childAt.getTranslationY());
+            this.f3064a.setBounds(paddingLeft, iRound - this.f3064a.getIntrinsicHeight(), width, iRound);
+            this.f3064a.draw(canvas);
         }
         canvas.restore();
     }
 
     public Drawable l() {
-        return this.f3219a;
+        return this.f3064a;
     }
 
     public void m(@NonNull Drawable drawable) {
         if (drawable == null) {
             throw new IllegalArgumentException("Drawable cannot be null.");
         }
-        this.f3219a = drawable;
+        this.f3064a = drawable;
     }
 
     public void n(int i10) {

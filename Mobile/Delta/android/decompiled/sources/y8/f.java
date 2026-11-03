@@ -5,11 +5,11 @@ package y8;
 public final class f {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Boolean f35776a;
+    public Boolean f36633a;
     public String b;
 
     public f() {
-        this.f35776a = Boolean.FALSE;
+        this.f36633a = Boolean.FALSE;
     }
 
     public final f a(String str) {
@@ -18,9 +18,9 @@ public final class f {
     }
 
     public f(g gVar) {
-        this.f35776a = Boolean.FALSE;
+        this.f36633a = Boolean.FALSE;
         g.b(gVar);
-        this.f35776a = Boolean.valueOf(gVar.b);
-        this.b = gVar.f35779c;
+        this.f36633a = Boolean.valueOf(gVar.b);
+        this.b = gVar.f36636c;
     }
 }

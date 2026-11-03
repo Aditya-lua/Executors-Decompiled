@@ -10,7 +10,9 @@ import android.os.Bundle;
 import android.widget.RemoteViews;
 import com.google.mlkit.common.MlKitException;
 import com.roblox.client.shortcuts.PinShortcutHandler;
-import jt.o;
+import gt.o;
+import iu.g1;
+import iu.p0;
 import k6.d0;
 import k6.s;
 import k6.v;
@@ -18,20 +20,18 @@ import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.Intrinsics;
-import ku.g1;
-import ku.p0;
+import nt.l;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import pt.l;
-import pt.m;
-import qt.b;
-import sg.k0;
-import sg.m0;
-import sg.n0;
-import sg.q0;
+import ot.b;
+import rg.k0;
+import rg.m0;
+import rg.n0;
+import rg.q0;
 import x6.ErrorResult;
 import x6.ImageRequest;
 import x6.SuccessResult;
@@ -40,19 +40,19 @@ import x6.j;
 import x6.k;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000l\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\bÆ\u0002\u0018\u00002\u00020\u0001:\u000245B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J%\u0010\u000b\u001a\u00020\n2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\u000b\u0010\fJ0\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u0011\u001a\u00020\nH\u0086@¢\u0006\u0004\b\u0013\u0010\u0014J'\u0010\u0017\u001a\u00020\b2\u0006\u0010\u0015\u001a\u00020\b2\u0006\u0010\u0016\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\bH\u0000¢\u0006\u0004\b\u0017\u0010\u0018J8\u0010\u001a\u001a\u00020\u00122\u0006\u0010\u0019\u001a\u00020\b2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0011\u001a\u00020\n2\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\u000fH\u0082@¢\u0006\u0004\b\u001a\u0010\u001bJ/\u0010\u001c\u001a\u00020\u00122\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0011\u001a\u00020\n2\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\u000fH\u0002¢\u0006\u0004\b\u001c\u0010\u001dJ0\u0010\"\u001a\u00020\u00122\u0006\u0010\u001f\u001a\u00020\u001e2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010!\u001a\u00020 2\u0006\u0010\u0011\u001a\u00020\nH\u0082@¢\u0006\u0004\b\"\u0010#J0\u0010&\u001a\u00020 2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010!\u001a\u00020 2\u0006\u0010\u0011\u001a\u00020\n2\u0006\u0010%\u001a\u00020$H\u0082@¢\u0006\u0004\b&\u0010'J)\u0010+\u001a\u00020*2\u0006\u0010\u0005\u001a\u00020\u00042\b\u0010\u0015\u001a\u0004\u0018\u00010(2\u0006\u0010)\u001a\u00020\bH\u0002¢\u0006\u0004\b+\u0010,J'\u0010.\u001a\u00020*2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010-\u001a\u00020\b2\u0006\u0010)\u001a\u00020\bH\u0002¢\u0006\u0004\b.\u0010/J,\u00102\u001a\u000600j\u0002`12\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0015\u001a\u00020(2\u0006\u0010\u0016\u001a\u00020\bH\u0082@¢\u0006\u0004\b2\u00103¨\u00066"}, d2 = {"Lcom/roblox/client/widgets/a;", "", "<init>", "()V", "Landroid/content/Context;", "context", "Landroid/os/Bundle;", "options", "", "variant", "Lcom/roblox/client/widgets/a$b;", "i", "(Landroid/content/Context;Landroid/os/Bundle;Ljava/lang/String;)Lcom/roblox/client/widgets/a$b;", "Landroid/appwidget/AppWidgetManager;", "appWidgetManager", "", "appWidgetId", "config", "", "o", "(Landroid/appwidget/AppWidgetManager;Landroid/content/Context;ILcom/roblox/client/widgets/a$b;Lnt/b;)Ljava/lang/Object;", PinShortcutHandler.EXTRA_PLACE_ID, "thumbnailUrl", "j", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", "recentlyPlayedData", "m", "(Ljava/lang/String;Landroid/content/Context;Lcom/roblox/client/widgets/a$b;Landroid/appwidget/AppWidgetManager;ILnt/b;)Ljava/lang/Object;", "k", "(Landroid/content/Context;Lcom/roblox/client/widgets/a$b;Landroid/appwidget/AppWidgetManager;I)V", "Lorg/json/JSONObject;", "experience", "Landroid/widget/RemoteViews;", "remoteViews", "n", "(Lorg/json/JSONObject;Landroid/content/Context;Landroid/widget/RemoteViews;Lcom/roblox/client/widgets/a$b;Lnt/b;)Ljava/lang/Object;", "Lorg/json/JSONArray;", "jsonArray", "l", "(Landroid/content/Context;Landroid/widget/RemoteViews;Lcom/roblox/client/widgets/a$b;Lorg/json/JSONArray;Lnt/b;)Ljava/lang/Object;", "", "sizeName", "Landroid/app/PendingIntent;", "h", "(Landroid/content/Context;Ljava/lang/Long;Ljava/lang/String;)Landroid/app/PendingIntent;", "entryPoint", "g", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/app/PendingIntent;", "Landroid/graphics/Bitmap;", "Lcoil3/Bitmap;", "f", "(Landroid/content/Context;JLjava/lang/String;Lnt/b;)Ljava/lang/Object;", "b", "c", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000l\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\bÆ\u0002\u0018\u00002\u00020\u0001:\u000245B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J%\u0010\u000b\u001a\u00020\n2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\u000b\u0010\fJ0\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u0011\u001a\u00020\nH\u0086@¢\u0006\u0004\b\u0013\u0010\u0014J'\u0010\u0017\u001a\u00020\b2\u0006\u0010\u0015\u001a\u00020\b2\u0006\u0010\u0016\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\bH\u0000¢\u0006\u0004\b\u0017\u0010\u0018J8\u0010\u001a\u001a\u00020\u00122\u0006\u0010\u0019\u001a\u00020\b2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0011\u001a\u00020\n2\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\u000fH\u0082@¢\u0006\u0004\b\u001a\u0010\u001bJ/\u0010\u001c\u001a\u00020\u00122\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0011\u001a\u00020\n2\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\u000fH\u0002¢\u0006\u0004\b\u001c\u0010\u001dJ0\u0010\"\u001a\u00020\u00122\u0006\u0010\u001f\u001a\u00020\u001e2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010!\u001a\u00020 2\u0006\u0010\u0011\u001a\u00020\nH\u0082@¢\u0006\u0004\b\"\u0010#J0\u0010&\u001a\u00020 2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010!\u001a\u00020 2\u0006\u0010\u0011\u001a\u00020\n2\u0006\u0010%\u001a\u00020$H\u0082@¢\u0006\u0004\b&\u0010'J)\u0010+\u001a\u00020*2\u0006\u0010\u0005\u001a\u00020\u00042\b\u0010\u0015\u001a\u0004\u0018\u00010(2\u0006\u0010)\u001a\u00020\bH\u0002¢\u0006\u0004\b+\u0010,J'\u0010.\u001a\u00020*2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010-\u001a\u00020\b2\u0006\u0010)\u001a\u00020\bH\u0002¢\u0006\u0004\b.\u0010/J,\u00102\u001a\u000600j\u0002`12\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0015\u001a\u00020(2\u0006\u0010\u0016\u001a\u00020\bH\u0082@¢\u0006\u0004\b2\u00103¨\u00066"}, d2 = {"Lcom/roblox/client/widgets/a;", "", "<init>", "()V", "Landroid/content/Context;", "context", "Landroid/os/Bundle;", "options", "", "variant", "Lcom/roblox/client/widgets/a$b;", "i", "(Landroid/content/Context;Landroid/os/Bundle;Ljava/lang/String;)Lcom/roblox/client/widgets/a$b;", "Landroid/appwidget/AppWidgetManager;", "appWidgetManager", "", "appWidgetId", "config", "", "o", "(Landroid/appwidget/AppWidgetManager;Landroid/content/Context;ILcom/roblox/client/widgets/a$b;Llt/b;)Ljava/lang/Object;", PinShortcutHandler.EXTRA_PLACE_ID, "thumbnailUrl", "j", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", "recentlyPlayedData", "m", "(Ljava/lang/String;Landroid/content/Context;Lcom/roblox/client/widgets/a$b;Landroid/appwidget/AppWidgetManager;ILlt/b;)Ljava/lang/Object;", "k", "(Landroid/content/Context;Lcom/roblox/client/widgets/a$b;Landroid/appwidget/AppWidgetManager;I)V", "Lorg/json/JSONObject;", "experience", "Landroid/widget/RemoteViews;", "remoteViews", "n", "(Lorg/json/JSONObject;Landroid/content/Context;Landroid/widget/RemoteViews;Lcom/roblox/client/widgets/a$b;Llt/b;)Ljava/lang/Object;", "Lorg/json/JSONArray;", "jsonArray", "l", "(Landroid/content/Context;Landroid/widget/RemoteViews;Lcom/roblox/client/widgets/a$b;Lorg/json/JSONArray;Llt/b;)Ljava/lang/Object;", "", "sizeName", "Landroid/app/PendingIntent;", "h", "(Landroid/content/Context;Ljava/lang/Long;Ljava/lang/String;)Landroid/app/PendingIntent;", "entryPoint", "g", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/app/PendingIntent;", "Landroid/graphics/Bitmap;", "Lcoil3/Bitmap;", "f", "(Landroid/content/Context;JLjava/lang/String;Llt/b;)Ljava/lang/Object;", "b", "c", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final a f9563a = new a();
+    public static final a f9640a = new a();
 
     /* JADX INFO: renamed from: com.roblox.client.widgets.a$a, reason: collision with other inner class name */
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final /* synthetic */ class C0150a {
+    public static final /* synthetic */ class C0153a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f9564a;
+        public static final /* synthetic */ int[] f9641a;
 
         static {
             int[] iArr = new int[c.values().length];
@@ -68,7 +68,7 @@ public final class a {
                 iArr[c.SMALL.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
-            f9564a = iArr;
+            f9641a = iArr;
         }
     }
 
@@ -177,41 +177,41 @@ public final class a {
 
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f9574e = b.a(a());
+        public static final /* synthetic */ ot.a f9651e = b.a(a());
     }
 
-    @pt.f(c = "com.roblox.client.widgets.RecentlyPlayedWidgetUpdater", f = "RecentlyPlayedWidgetUpdater.kt", l = {431}, m = "fetchThumbnail", v = 1)
+    @nt.f(c = "com.roblox.client.widgets.RecentlyPlayedWidgetUpdater", f = "RecentlyPlayedWidgetUpdater.kt", l = {431}, m = "fetchThumbnail", v = 1)
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final class d extends pt.d {
+    public static final class d extends nt.d {
         public /* synthetic */ Object A;
         public int C;
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f9575t;
+        public Object f9652t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f9576u;
+        public Object f9653u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public Object f9577v;
+        public Object f9654v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public Object f9578w;
+        public Object f9655w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public Object f9579x;
+        public Object f9656x;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public Object f9580y;
+        public Object f9657y;
 
         /* JADX INFO: renamed from: z, reason: collision with root package name */
-        public long f9581z;
+        public long f9658z;
 
-        public d(nt.b<? super d> bVar) {
+        public d(lt.b<? super d> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
             this.A = obj;
@@ -220,37 +220,37 @@ public final class a {
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "Landroid/widget/RemoteViews;", "<anonymous>", "(Lku/p0;)Landroid/widget/RemoteViews;"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.roblox.client.widgets.RecentlyPlayedWidgetUpdater$renderMedLargeLayout$2", f = "RecentlyPlayedWidgetUpdater.kt", l = {290}, m = "invokeSuspend", v = 1)
-    public static final class e extends m implements Function2<p0, nt.b<? super RemoteViews>, Object> {
+    @nt.f(c = "com.roblox.client.widgets.RecentlyPlayedWidgetUpdater$renderMedLargeLayout$2", f = "RecentlyPlayedWidgetUpdater.kt", l = {290}, m = "invokeSuspend", v = 1)
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "Landroid/widget/RemoteViews;", "<anonymous>", "(Liu/p0;)Landroid/widget/RemoteViews;"}, k = 3, mv = {2, 2, 0})
+    public static final class e extends m implements Function2<p0, lt.b<? super RemoteViews>, Object> {
         public final /* synthetic */ RemoteViews A;
         public final /* synthetic */ JSONArray B;
         public final /* synthetic */ WidgetLayoutConfig C;
         public final /* synthetic */ Context D;
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f9582t;
+        public int f9659t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public int f9583u;
+        public int f9660u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public Object f9584v;
+        public Object f9661v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public Object f9585w;
+        public Object f9662w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public Object f9586x;
+        public Object f9663x;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public long f9587y;
+        public long f9664y;
 
         /* JADX INFO: renamed from: z, reason: collision with root package name */
-        public int f9588z;
+        public int f9665z;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public e(RemoteViews remoteViews, JSONArray jSONArray, WidgetLayoutConfig widgetLayoutConfig, Context context, nt.b<? super e> bVar) {
+        public e(RemoteViews remoteViews, JSONArray jSONArray, WidgetLayoutConfig widgetLayoutConfig, Context context, lt.b<? super e> bVar) {
             super(2, bVar);
             this.A = remoteViews;
             this.B = jSONArray;
@@ -258,9 +258,14 @@ public final class a {
             this.D = context;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             return new e(this.A, this.B, this.C, this.D, bVar);
+        }
+
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super RemoteViews> bVar) {
+            return ((e) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
         }
 
         /* JADX WARN: Code duplicated, block: B:10:0x0048  */
@@ -274,7 +279,7 @@ public final class a {
             	at jadx.core.utils.ErrorsCounter.error(ErrorsCounter.java:31)
             	at jadx.core.dex.attributes.nodes.NotificationAttrNode.addError(NotificationAttrNode.java:19)
             */
-        @Override // pt.a
+        @Override // nt.a
         public final java.lang.Object invokeSuspend(java.lang.Object r15) {
             /*
                 Method dump skipped, instruction units count: 266
@@ -282,45 +287,40 @@ public final class a {
             */
             throw new UnsupportedOperationException("Method not decompiled: com.roblox.client.widgets.a.e.invokeSuspend(java.lang.Object):java.lang.Object");
         }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super RemoteViews> bVar) {
-            return ((e) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
-        }
     }
 
-    @pt.f(c = "com.roblox.client.widgets.RecentlyPlayedWidgetUpdater", f = "RecentlyPlayedWidgetUpdater.kt", l = {MlKitException.CODE_SCANNER_CAMERA_PERMISSION_NOT_GRANTED, 209}, m = "renderRecentlyPlayed", v = 1)
+    @nt.f(c = "com.roblox.client.widgets.RecentlyPlayedWidgetUpdater", f = "RecentlyPlayedWidgetUpdater.kt", l = {MlKitException.CODE_SCANNER_CAMERA_PERMISSION_NOT_GRANTED, 209}, m = "renderRecentlyPlayed", v = 1)
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final class f extends pt.d {
+    public static final class f extends nt.d {
         public /* synthetic */ Object A;
         public int C;
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f9589t;
+        public Object f9666t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f9590u;
+        public Object f9667u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public Object f9591v;
+        public Object f9668v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public Object f9592w;
+        public Object f9669w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public Object f9593x;
+        public Object f9670x;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public Object f9594y;
+        public Object f9671y;
 
         /* JADX INFO: renamed from: z, reason: collision with root package name */
-        public int f9595z;
+        public int f9672z;
 
-        public f(nt.b<? super f> bVar) {
+        public f(lt.b<? super f> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
             this.A = obj;
@@ -329,38 +329,38 @@ public final class a {
         }
     }
 
-    @pt.f(c = "com.roblox.client.widgets.RecentlyPlayedWidgetUpdater", f = "RecentlyPlayedWidgetUpdater.kt", l = {251}, m = "renderSmallLayout", v = 1)
+    @nt.f(c = "com.roblox.client.widgets.RecentlyPlayedWidgetUpdater", f = "RecentlyPlayedWidgetUpdater.kt", l = {251}, m = "renderSmallLayout", v = 1)
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final class g extends pt.d {
+    public static final class g extends nt.d {
         public /* synthetic */ Object A;
         public int C;
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f9596t;
+        public Object f9673t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f9597u;
+        public Object f9674u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public Object f9598v;
+        public Object f9675v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public Object f9599w;
+        public Object f9676w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public Object f9600x;
+        public Object f9677x;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public Object f9601y;
+        public Object f9678y;
 
         /* JADX INFO: renamed from: z, reason: collision with root package name */
-        public long f9602z;
+        public long f9679z;
 
-        public g(nt.b<? super g> bVar) {
+        public g(lt.b<? super g> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
             this.A = obj;
@@ -369,47 +369,47 @@ public final class a {
         }
     }
 
-    @pt.f(c = "com.roblox.client.widgets.RecentlyPlayedWidgetUpdater", f = "RecentlyPlayedWidgetUpdater.kt", l = {147, 165}, m = "updateRecentlyPlayedWidget", v = 1)
+    @nt.f(c = "com.roblox.client.widgets.RecentlyPlayedWidgetUpdater", f = "RecentlyPlayedWidgetUpdater.kt", l = {147, 165}, m = "updateRecentlyPlayedWidget", v = 1)
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final class h extends pt.d {
+    public static final class h extends nt.d {
         public int B;
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f9603t;
+        public Object f9680t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f9604u;
+        public Object f9681u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public Object f9605v;
+        public Object f9682v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public Object f9606w;
+        public Object f9683w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public int f9607x;
+        public int f9684x;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public int f9608y;
+        public int f9685y;
 
         /* JADX INFO: renamed from: z, reason: collision with root package name */
-        public /* synthetic */ Object f9609z;
+        public /* synthetic */ Object f9686z;
 
-        public h(nt.b<? super h> bVar) {
+        public h(lt.b<? super h> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
-            this.f9609z = obj;
+            this.f9686z = obj;
             this.B |= Integer.MIN_VALUE;
             return a.this.o(null, null, 0, null, this);
         }
     }
 
     /* JADX WARN: Code duplicated, block: B:7:0x0013  */
-    public final Object f(Context context, long j10, String str, nt.b<? super Bitmap> bVar) throws Throwable {
+    public final Object f(Context context, long j10, String str, lt.b<? super Bitmap> bVar) throws Throwable {
         d dVar;
         if (bVar instanceof d) {
             dVar = (d) bVar;
@@ -422,11 +422,11 @@ public final class a {
         } else {
             dVar = new d(bVar);
         }
-        Object objD = dVar.A;
-        Object objE = ot.c.e();
+        Object objA = dVar.A;
+        Object objE = mt.c.e();
         int i11 = dVar.C;
         if (i11 == 0) {
-            o.b(objD);
+            o.b(objA);
             s sVarA = d0.a(context);
             RecentlyPlayedWidgetHandler recentlyPlayedWidgetHandler = RecentlyPlayedWidgetHandler.INSTANCE;
             Context applicationContext = context.getApplicationContext();
@@ -436,25 +436,25 @@ public final class a {
             ImageRequest.a aVarJ = new ImageRequest.a(context).c(str).f(strJ).j(strJ);
             x6.c cVar = x6.c.READ_ONLY;
             ImageRequest imageRequestB = i.j(j.a(j.b(aVarJ.l(cVar).g(cVar).m(x6.c.DISABLED), Bitmap.Config.RGB_565), false), new c7.b(16.0f)).b();
-            dVar.f9575t = l.a(context);
-            dVar.f9576u = l.a(str);
-            dVar.f9577v = l.a(sVarA);
-            dVar.f9578w = l.a(cachedWidgetVariant);
-            dVar.f9579x = l.a(strJ);
-            dVar.f9580y = l.a(imageRequestB);
-            dVar.f9581z = j10;
+            dVar.f9652t = l.a(context);
+            dVar.f9653u = l.a(str);
+            dVar.f9654v = l.a(sVarA);
+            dVar.f9655w = l.a(cachedWidgetVariant);
+            dVar.f9656x = l.a(strJ);
+            dVar.f9657y = l.a(imageRequestB);
+            dVar.f9658z = j10;
             dVar.C = 1;
-            objD = sVarA.d(imageRequestB, dVar);
-            if (objD == objE) {
+            objA = sVarA.a(imageRequestB, dVar);
+            if (objA == objE) {
                 return objE;
             }
         } else {
             if (i11 != 1) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            o.b(objD);
+            o.b(objA);
         }
-        k kVar = (k) objD;
+        k kVar = (k) objA;
         if (kVar instanceof ErrorResult) {
             throw ((ErrorResult) kVar).getThrowable();
         }
@@ -492,18 +492,18 @@ public final class a {
         Intrinsics.checkNotNullParameter(variant, "variant");
         float f10 = options.getInt("appWidgetMinWidth") * context.getResources().getDisplayMetrics().density;
         float f11 = options.getInt("appWidgetMinHeight") * context.getResources().getDisplayMetrics().density;
-        float dimension = context.getResources().getDimension(k0.f30794e);
-        float dimension2 = context.getResources().getDimension(k0.f30793d);
+        float dimension = context.getResources().getDimension(k0.f30397e);
+        float dimension2 = context.getResources().getDimension(k0.f30396d);
         RecentlyPlayedWidgetHandler.a aVar = RecentlyPlayedWidgetHandler.a.V2;
         if (Intrinsics.c(variant, aVar.getValue())) {
             int i10 = n0.D;
-            widgetLayoutConfig = new WidgetLayoutConfig(i10, i10, n0.f30894t, 1, true, "Small_V2", c.SMALL);
+            widgetLayoutConfig = new WidgetLayoutConfig(i10, i10, n0.f30499t, 1, true, "Small_V2", c.SMALL);
         } else {
             int i11 = n0.C;
-            widgetLayoutConfig = new WidgetLayoutConfig(i11, i11, n0.f30894t, 1, true, "Small_V1", c.SMALL);
+            widgetLayoutConfig = new WidgetLayoutConfig(i11, i11, n0.f30499t, 1, true, "Small_V1", c.SMALL);
         }
-        WidgetLayoutConfig widgetLayoutConfig2 = Intrinsics.c(variant, aVar.getValue()) ? new WidgetLayoutConfig(n0.B, n0.A, n0.f30893s, 4, true, "Medium_V2", c.MEDIUM) : new WidgetLayoutConfig(n0.f30899y, n0.f30900z, n0.f30893s, 3, true, "Medium_V1", c.MEDIUM);
-        WidgetLayoutConfig widgetLayoutConfig3 = Intrinsics.c(variant, aVar.getValue()) ? new WidgetLayoutConfig(n0.f30898x, n0.f30897w, n0.f30893s, 12, false, "Large_V2", c.LARGE) : new WidgetLayoutConfig(n0.f30895u, n0.f30896v, n0.f30893s, 5, true, "Large_V1", c.LARGE);
+        WidgetLayoutConfig widgetLayoutConfig2 = Intrinsics.c(variant, aVar.getValue()) ? new WidgetLayoutConfig(n0.B, n0.A, n0.f30498s, 4, true, "Medium_V2", c.MEDIUM) : new WidgetLayoutConfig(n0.f30504y, n0.f30505z, n0.f30498s, 3, true, "Medium_V1", c.MEDIUM);
+        WidgetLayoutConfig widgetLayoutConfig3 = Intrinsics.c(variant, aVar.getValue()) ? new WidgetLayoutConfig(n0.f30503x, n0.f30502w, n0.f30498s, 12, false, "Large_V2", c.LARGE) : new WidgetLayoutConfig(n0.f30500u, n0.f30501v, n0.f30498s, 5, true, "Large_V1", c.LARGE);
         if (f10 <= dimension || f11 <= dimension2) {
             return f10 > dimension ? widgetLayoutConfig2 : widgetLayoutConfig;
         }
@@ -523,24 +523,24 @@ public final class a {
 
     public final void k(Context context, WidgetLayoutConfig config, AppWidgetManager appWidgetManager, int appWidgetId) {
         RemoteViews remoteViews = new RemoteViews(context.getPackageName(), config.getEmptyLayoutId());
-        remoteViews.setOnClickPendingIntent(m0.f30869x, th.h.a().x() ? f9563a.g(context, "empty", config.getTypeName()) : f9563a.h(context, null, config.getTypeName()));
-        int i10 = C0150a.f9564a[config.getSize().ordinal()];
+        remoteViews.setOnClickPendingIntent(m0.f30473x, rh.h.a().y() ? f9640a.g(context, "empty", config.getTypeName()) : f9640a.h(context, null, config.getTypeName()));
+        int i10 = C0153a.f9641a[config.getSize().ordinal()];
         if (i10 == 1) {
-            remoteViews.setViewVisibility(m0.f30868w, 0);
+            remoteViews.setViewVisibility(m0.f30471w, 0);
         } else if (i10 == 2) {
-            remoteViews.setViewVisibility(m0.f30868w, 8);
+            remoteViews.setViewVisibility(m0.f30471w, 8);
         } else if (i10 != 3) {
-            throw new jt.l();
+            throw new gt.l();
         }
         appWidgetManager.updateAppWidget(appWidgetId, remoteViews);
     }
 
-    public final Object l(Context context, RemoteViews remoteViews, WidgetLayoutConfig widgetLayoutConfig, JSONArray jSONArray, nt.b<? super RemoteViews> bVar) {
-        return ku.i.g(g1.b(), new e(remoteViews, jSONArray, widgetLayoutConfig, context, null), bVar);
+    public final Object l(Context context, RemoteViews remoteViews, WidgetLayoutConfig widgetLayoutConfig, JSONArray jSONArray, lt.b<? super RemoteViews> bVar) {
+        return iu.i.g(g1.b(), new e(remoteViews, jSONArray, widgetLayoutConfig, context, null), bVar);
     }
 
     /* JADX WARN: Code duplicated, block: B:8:0x0014  */
-    public final Object m(String str, Context context, WidgetLayoutConfig widgetLayoutConfig, AppWidgetManager appWidgetManager, int i10, nt.b<? super Unit> bVar) throws JSONException {
+    public final Object m(String str, Context context, WidgetLayoutConfig widgetLayoutConfig, AppWidgetManager appWidgetManager, int i10, lt.b<? super Unit> bVar) throws JSONException {
         f fVar;
         RemoteViews remoteViews;
         if (bVar instanceof f) {
@@ -556,7 +556,7 @@ public final class a {
         }
         f fVar2 = fVar;
         Object obj = fVar2.A;
-        Object objE = ot.c.e();
+        Object objE = mt.c.e();
         int i12 = fVar2.C;
         if (i12 == 0) {
             o.b(obj);
@@ -565,26 +565,26 @@ public final class a {
             if (widgetLayoutConfig.getSize() == c.SMALL) {
                 JSONObject jSONObject = jSONArray.getJSONObject(0);
                 Intrinsics.checkNotNullExpressionValue(jSONObject, "getJSONObject(...)");
-                fVar2.f9589t = l.a(str);
-                fVar2.f9590u = l.a(context);
-                fVar2.f9591v = l.a(widgetLayoutConfig);
-                fVar2.f9592w = appWidgetManager;
-                fVar2.f9593x = remoteViews2;
-                fVar2.f9594y = l.a(jSONArray);
-                fVar2.f9595z = i10;
+                fVar2.f9666t = l.a(str);
+                fVar2.f9667u = l.a(context);
+                fVar2.f9668v = l.a(widgetLayoutConfig);
+                fVar2.f9669w = appWidgetManager;
+                fVar2.f9670x = remoteViews2;
+                fVar2.f9671y = l.a(jSONArray);
+                fVar2.f9672z = i10;
                 fVar2.C = 1;
                 if (n(jSONObject, context, remoteViews2, widgetLayoutConfig, fVar2) != objE) {
                     remoteViews = remoteViews2;
-                    Unit unit = Unit.f22483a;
+                    Unit unit = Unit.f22938a;
                 }
             } else {
-                fVar2.f9589t = l.a(str);
-                fVar2.f9590u = l.a(context);
-                fVar2.f9591v = l.a(widgetLayoutConfig);
-                fVar2.f9592w = appWidgetManager;
-                fVar2.f9593x = remoteViews2;
-                fVar2.f9594y = l.a(jSONArray);
-                fVar2.f9595z = i10;
+                fVar2.f9666t = l.a(str);
+                fVar2.f9667u = l.a(context);
+                fVar2.f9668v = l.a(widgetLayoutConfig);
+                fVar2.f9669w = appWidgetManager;
+                fVar2.f9670x = remoteViews2;
+                fVar2.f9671y = l.a(jSONArray);
+                fVar2.f9672z = i10;
                 fVar2.C = 2;
                 if (l(context, remoteViews2, widgetLayoutConfig, jSONArray, fVar2) != objE) {
                     remoteViews = remoteViews2;
@@ -593,26 +593,26 @@ public final class a {
             return objE;
         }
         if (i12 == 1) {
-            i10 = fVar2.f9595z;
-            remoteViews = (RemoteViews) fVar2.f9593x;
-            appWidgetManager = (AppWidgetManager) fVar2.f9592w;
+            i10 = fVar2.f9672z;
+            remoteViews = (RemoteViews) fVar2.f9670x;
+            appWidgetManager = (AppWidgetManager) fVar2.f9669w;
             o.b(obj);
-            Unit unit2 = Unit.f22483a;
+            Unit unit2 = Unit.f22938a;
         } else {
             if (i12 != 2) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            i10 = fVar2.f9595z;
-            remoteViews = (RemoteViews) fVar2.f9593x;
-            appWidgetManager = (AppWidgetManager) fVar2.f9592w;
+            i10 = fVar2.f9672z;
+            remoteViews = (RemoteViews) fVar2.f9670x;
+            appWidgetManager = (AppWidgetManager) fVar2.f9669w;
             o.b(obj);
         }
         appWidgetManager.updateAppWidget(i10, remoteViews);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX WARN: Code duplicated, block: B:8:0x0014  */
-    public final Object n(JSONObject jSONObject, Context context, RemoteViews remoteViews, WidgetLayoutConfig widgetLayoutConfig, nt.b<? super Unit> bVar) throws Throwable {
+    public final Object n(JSONObject jSONObject, Context context, RemoteViews remoteViews, WidgetLayoutConfig widgetLayoutConfig, lt.b<? super Unit> bVar) throws Throwable {
         g gVar;
         String strOptString;
         Object obj;
@@ -632,7 +632,7 @@ public final class a {
         }
         g gVar2 = gVar;
         Object obj2 = gVar2.A;
-        Object objE = ot.c.e();
+        Object objE = mt.c.e();
         int i11 = gVar2.C;
         if (i11 == 0) {
             o.b(obj2);
@@ -640,13 +640,13 @@ public final class a {
             String strOptString2 = jSONObject.optString("thumbnailUrl");
             strOptString = jSONObject.optString("name");
             Intrinsics.checkNotNull(strOptString2);
-            gVar2.f9596t = jSONObject;
-            gVar2.f9597u = context;
-            gVar2.f9598v = remoteViews;
-            gVar2.f9599w = widgetLayoutConfig;
-            gVar2.f9600x = l.a(strOptString2);
-            gVar2.f9601y = strOptString;
-            gVar2.f9602z = jOptLong;
+            gVar2.f9673t = jSONObject;
+            gVar2.f9674u = context;
+            gVar2.f9675v = remoteViews;
+            gVar2.f9676w = widgetLayoutConfig;
+            gVar2.f9677x = l.a(strOptString2);
+            gVar2.f9678y = strOptString;
+            gVar2.f9679z = jOptLong;
             gVar2.C = 1;
             Object objF = f(context, jOptLong, strOptString2, gVar2);
             if (objF == objE) {
@@ -660,24 +660,24 @@ public final class a {
             if (i11 != 1) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            j10 = gVar2.f9602z;
-            String str = (String) gVar2.f9601y;
-            widgetLayoutConfig = (WidgetLayoutConfig) gVar2.f9599w;
-            RemoteViews remoteViews2 = (RemoteViews) gVar2.f9598v;
-            context2 = (Context) gVar2.f9597u;
-            jSONObject2 = (JSONObject) gVar2.f9596t;
+            j10 = gVar2.f9679z;
+            String str = (String) gVar2.f9678y;
+            widgetLayoutConfig = (WidgetLayoutConfig) gVar2.f9676w;
+            RemoteViews remoteViews2 = (RemoteViews) gVar2.f9675v;
+            context2 = (Context) gVar2.f9674u;
+            jSONObject2 = (JSONObject) gVar2.f9673t;
             o.b(obj2);
             strOptString = str;
             remoteViews = remoteViews2;
             obj = obj2;
         }
         remoteViews.setTextViewText(m0.A, strOptString);
-        remoteViews.setImageViewBitmap(m0.f30870y, (Bitmap) obj);
-        remoteViews.setOnClickPendingIntent(m0.f30871z, f9563a.h(context2, pt.b.e(j10), widgetLayoutConfig.getTypeName()));
+        remoteViews.setImageViewBitmap(m0.f30474y, (Bitmap) obj);
+        remoteViews.setOnClickPendingIntent(m0.f30475z, f9640a.h(context2, nt.b.e(j10), widgetLayoutConfig.getTypeName()));
         if (widgetLayoutConfig.getShowRating()) {
             remoteViews.setTextViewText(m0.B, context2.getString(q0.D1, jSONObject2.optString("rating")));
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX WARN: Code duplicated, block: B:51:0x00f9  */
@@ -693,11 +693,11 @@ public final class a {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct add '--show-bad-code' argument
     */
-    public final java.lang.Object o(@org.jetbrains.annotations.NotNull android.appwidget.AppWidgetManager r10, @org.jetbrains.annotations.NotNull android.content.Context r11, int r12, @org.jetbrains.annotations.NotNull com.roblox.client.widgets.a.WidgetLayoutConfig r13, @org.jetbrains.annotations.NotNull nt.b<? super kotlin.Unit> r14) throws java.lang.Throwable {
+    public final java.lang.Object o(@org.jetbrains.annotations.NotNull android.appwidget.AppWidgetManager r10, @org.jetbrains.annotations.NotNull android.content.Context r11, int r12, @org.jetbrains.annotations.NotNull com.roblox.client.widgets.a.WidgetLayoutConfig r13, @org.jetbrains.annotations.NotNull lt.b<? super kotlin.Unit> r14) throws java.lang.Throwable {
         /*
             Method dump skipped, instruction units count: 274
             To view this dump add '--comments-level debug' option
         */
-        throw new UnsupportedOperationException("Method not decompiled: com.roblox.client.widgets.a.o(android.appwidget.AppWidgetManager, android.content.Context, int, com.roblox.client.widgets.a$b, nt.b):java.lang.Object");
+        throw new UnsupportedOperationException("Method not decompiled: com.roblox.client.widgets.a.o(android.appwidget.AppWidgetManager, android.content.Context, int, com.roblox.client.widgets.a$b, lt.b):java.lang.Object");
     }
 }

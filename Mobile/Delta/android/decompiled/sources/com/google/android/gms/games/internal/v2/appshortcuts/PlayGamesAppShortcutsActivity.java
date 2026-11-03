@@ -28,10 +28,10 @@ import l9.u;
 public final class PlayGamesAppShortcutsActivity extends Activity {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Intent f6186a;
+    public Intent f6259a;
 
     public final /* synthetic */ void a() {
-        startActivityForResult(this.f6186a, 1005000001);
+        startActivityForResult(this.f6259a, 1005000001);
         finish();
         System.exit(0);
     }
@@ -48,7 +48,7 @@ public final class PlayGamesAppShortcutsActivity extends Activity {
             new w0(Looper.getMainLooper()).postDelayed(new Runnable() { // from class: ka.u
                 @Override // java.lang.Runnable
                 public final /* synthetic */ void run() {
-                    this.f22300a.a();
+                    this.f22524a.a();
                 }
             }, 50L);
         }
@@ -113,11 +113,11 @@ public final class PlayGamesAppShortcutsActivity extends Activity {
             finish();
             return;
         }
-        this.f6186a = intentAddFlags;
+        this.f6259a = intentAddFlags;
         final n nVar = new n((Activity) this);
         Intent intent = getIntent();
         final zzi zziVar = new zzi(intent.getStringExtra("com.google.android.gms.games.EXTRA_APP_SHORTCUT_ID"), (PersistableBundle) intent.getParcelableExtra("com.google.android.gms.games.EXTRA_APP_SHORTCUT_EXTRAS"), null, Boolean.TRUE);
-        nVar.z(u.c().e(6745).d(j.f14513g).c(false).b(new q() { // from class: ka.l
+        nVar.z(u.c().e(6745).d(j.f14493g).c(false).b(new q() { // from class: ka.l
             /* JADX WARN: Multi-variable type inference failed */
             @Override // l9.q
             public final /* synthetic */ void accept(Object obj, Object obj2) {
@@ -126,7 +126,7 @@ public final class PlayGamesAppShortcutsActivity extends Activity {
         }).a()).b(this, new OnCompleteListener() { // from class: ka.v
             @Override // com.google.android.gms.tasks.OnCompleteListener
             public final /* synthetic */ void onComplete(Task task) {
-                PlayGamesAppShortcutsActivity playGamesAppShortcutsActivity = this.f22301a;
+                PlayGamesAppShortcutsActivity playGamesAppShortcutsActivity = this.f22525a;
                 if (task.isSuccessful()) {
                     playGamesAppShortcutsActivity.startActivityForResult((Intent) task.getResult(), 1005000000);
                 } else {

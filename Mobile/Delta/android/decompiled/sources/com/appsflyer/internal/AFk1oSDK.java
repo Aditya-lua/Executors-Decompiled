@@ -6,10 +6,10 @@ public final class AFk1oSDK {
     public int AFLogger;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public int f5455d;
+    public int f5528d;
 
     public static int d(int i10) {
-        int[][] iArr = AFj1dSDK.f5437d.registerClient;
+        int[][] iArr = AFj1dSDK.f5510d.registerClient;
         return ((iArr[0][(i10 >>> 24) & 255] + iArr[1][(i10 >>> 16) & 255]) ^ iArr[2][(i10 >>> 8) & 255]) + iArr[3][i10 & 255];
     }
 

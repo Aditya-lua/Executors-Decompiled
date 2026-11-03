@@ -27,18 +27,18 @@ public final class AFj1mSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    public static String f5440d;
+    public static String f5513d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
     @NotNull
-    public static String f5441e;
+    public static String f5514e;
 
     @NotNull
     public static String force;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
     @NotNull
-    public static final String f5442i;
+    public static final String f5515i;
 
     @NotNull
     public static final AFa1ySDK registerClient = new AFa1ySDK(null);
@@ -48,11 +48,11 @@ public final class AFj1mSDK {
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
     @NotNull
-    public static String f5443v;
+    public static String f5516v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
     @NotNull
-    private final AFc1iSDK f5444w;
+    private final AFc1iSDK f5517w;
 
     @Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\f\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003R\u0014\u0010\u0007\u001a\u00020\u00048\u0002X\u0083\u0004¢\u0006\u0006\n\u0004\b\u0005\u0010\u0006R\u0014\u0010\t\u001a\u00020\u00048\u0006X\u0087\u0004¢\u0006\u0006\n\u0004\b\b\u0010\u0006R\u0014\u0010\b\u001a\u00020\u00048\u0006X\u0087\u0004¢\u0006\u0006\n\u0004\b\t\u0010\u0006R\u0014\u0010\n\u001a\u00020\u00048\u0006X\u0087\u0004¢\u0006\u0006\n\u0004\b\n\u0010\u0006R\u0014\u0010\u000b\u001a\u00020\u00048\u0006X\u0087\u0004¢\u0006\u0006\n\u0004\b\u000b\u0010\u0006R\u0014\u0010\r\u001a\u00020\u00048\u0006X\u0087\u0004¢\u0006\u0006\n\u0004\b\f\u0010\u0006R\u0014\u0010\u000e\u001a\u00020\u00048\u0006X\u0087\u0004¢\u0006\u0006\n\u0004\b\r\u0010\u0006R\u0016\u0010\u000f\u001a\u00020\u00048\u0006@\u0006X\u0087\u000e¢\u0006\u0006\n\u0004\b\u000e\u0010\u0006R\u0014\u0010\u0010\u001a\u00020\u00048\u0006X\u0087D¢\u0006\u0006\n\u0004\b\u000f\u0010\u0006"}, d2 = {"Lcom/appsflyer/internal/AFj1mSDK$AFa1ySDK;", "", "<init>", "()V", "", "afErrorLog", "Ljava/lang/String;", "registerClient", "unregisterClient", "d", "AFLogger", "AFKeystoreWrapper", "force", "v", "e", "i", "w"}, k = 1, mv = {2, 0, 0}, xi = 48)
     public static final class AFa1ySDK {
@@ -68,18 +68,18 @@ public final class AFj1mSDK {
         String str = AFa1tSDK.registerClient + "/androidevent?app_id=";
         afErrorLog = str;
         unregisterClient = "https://%sattr.%s/api/v" + str;
-        f5440d = "https://%sadrevenue.%s/api/v2/generic/v7.0.1/android?app_id=";
+        f5513d = "https://%sadrevenue.%s/api/v2/generic/v7.0.1/android?app_id=";
         AFLogger = "https://%sconversions.%s/api/v" + str;
         AFKeystoreWrapper = "https://%slaunches.%s/api/v" + str;
         force = "https://%sinapps.%s/api/v" + str;
-        f5443v = "https://%sregister.%s/api/v" + str;
-        f5441e = "https://%smonitorsdk.%s/remote-debug/exception-manager";
-        f5442i = "https://%smonitorsdk.%s/api/remote-debug/v2.0?app_id=";
+        f5516v = "https://%sregister.%s/api/v" + str;
+        f5514e = "https://%smonitorsdk.%s/remote-debug/exception-manager";
+        f5515i = "https://%smonitorsdk.%s/api/remote-debug/v2.0?app_id=";
     }
 
     public AFj1mSDK(@NotNull AFc1iSDK aFc1iSDK) {
         Intrinsics.checkNotNullParameter(aFc1iSDK, "");
-        this.f5444w = aFc1iSDK;
+        this.f5517w = aFc1iSDK;
     }
 
     public static String AFKeystoreWrapper(String str, boolean z10) {
@@ -117,16 +117,16 @@ public final class AFj1mSDK {
     }
 
     public static String w() {
-        String str = String.format(Locale.US, f5443v, AppsFlyerLib.getInstance().getHostPrefix(), AFa1tSDK.d().getHostName());
+        String str = String.format(Locale.US, f5516v, AppsFlyerLib.getInstance().getHostPrefix(), AFa1tSDK.d().getHostName());
         Intrinsics.checkNotNullExpressionValue(str, "");
         return str;
     }
 
     @NotNull
     public final String AFLogger(@Nullable String str, @Nullable String str2) {
-        String packageName = this.f5444w.f5258d.f5305d.getPackageName();
+        String packageName = this.f5517w.f5331d.f5378d.getPackageName();
         Intrinsics.checkNotNullExpressionValue(packageName, "");
-        String strAFLogger = this.f5444w.AFLogger("CHANNEL");
+        String strAFLogger = this.f5517w.AFLogger("CHANNEL");
         if (strAFLogger != null && strAFLogger.equals("")) {
             strAFLogger = null;
         }
@@ -153,7 +153,7 @@ public final class AFj1mSDK {
     }
 
     public final String unregisterClient(String str) {
-        return str + this.f5444w.f5258d.f5305d.getPackageName();
+        return str + this.f5517w.f5331d.f5378d.getPackageName();
     }
 
     public static String AFKeystoreWrapper() {
@@ -172,7 +172,7 @@ public final class AFj1mSDK {
         if (z10) {
             return str;
         }
-        String strAFLogger = this.f5444w.AFLogger("CHANNEL");
+        String strAFLogger = this.f5517w.AFLogger("CHANNEL");
         String str2 = null;
         if (strAFLogger != null && strAFLogger.equals("")) {
             strAFLogger = null;
@@ -212,11 +212,11 @@ public final class AFj1mSDK {
         Intrinsics.checkNotNullParameter(str, "");
         String str2 = String.format(Locale.US, "https://%sgcdsdk.%s/install_data/v5.0/", AppsFlyerLib.getInstance().getHostPrefix(), AFa1tSDK.d().getHostName());
         Intrinsics.checkNotNullExpressionValue(str2, "");
-        return str2 + this.f5444w.f5258d.f5305d.getPackageName() + str + "?device_id=" + AFb1jSDK.AFLogger(this.f5444w.AFKeystoreWrapper);
+        return str2 + this.f5517w.f5331d.f5378d.getPackageName() + str + "?device_id=" + AFb1jSDK.AFLogger(this.f5517w.AFKeystoreWrapper);
     }
 
     public static String AFLogger() {
-        String str = String.format(Locale.US, f5440d, AppsFlyerLib.getInstance().getHostPrefix(), AFa1tSDK.d().getHostName());
+        String str = String.format(Locale.US, f5513d, AppsFlyerLib.getInstance().getHostPrefix(), AFa1tSDK.d().getHostName());
         Intrinsics.checkNotNullExpressionValue(str, "");
         return str;
     }

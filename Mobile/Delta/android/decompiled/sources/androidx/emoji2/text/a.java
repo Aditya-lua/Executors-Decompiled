@@ -20,13 +20,13 @@ import x2.g;
 public final class a {
 
     /* JADX INFO: renamed from: androidx.emoji2.text.a$a, reason: collision with other inner class name */
-    public static class C0034a {
+    public static class C0030a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final b f2407a;
+        public final b f2252a;
 
-        public C0034a(b bVar) {
-            this.f2407a = bVar == null ? e() : bVar;
+        public C0030a(b bVar) {
+            this.f2252a = bVar == null ? e() : bVar;
         }
 
         @NonNull
@@ -34,7 +34,7 @@ public final class a {
             return Build.VERSION.SDK_INT >= 28 ? new d() : new c();
         }
 
-        public final androidx.emoji2.text.c.AbstractC0036c a(@NonNull Context context, v2.e eVar) {
+        public final androidx.emoji2.text.c.AbstractC0032c a(@NonNull Context context, v2.e eVar) {
             if (eVar == null) {
                 return null;
             }
@@ -50,7 +50,7 @@ public final class a {
             return Collections.singletonList(arrayList);
         }
 
-        public androidx.emoji2.text.c.AbstractC0036c c(@NonNull Context context) {
+        public androidx.emoji2.text.c.AbstractC0032c c(@NonNull Context context) {
             return a(context, h(context));
         }
 
@@ -58,7 +58,7 @@ public final class a {
         public final v2.e d(@NonNull ProviderInfo providerInfo, @NonNull PackageManager packageManager) {
             String str = providerInfo.authority;
             String str2 = providerInfo.packageName;
-            return new v2.e(str, str2, "emojicompat-emoji-font", b(this.f2407a.b(packageManager, str2)));
+            return new v2.e(str, str2, "emojicompat-emoji-font", b(this.f2252a.b(packageManager, str2)));
         }
 
         public final boolean f(ProviderInfo providerInfo) {
@@ -67,9 +67,9 @@ public final class a {
         }
 
         public final ProviderInfo g(@NonNull PackageManager packageManager) {
-            Iterator<ResolveInfo> it = this.f2407a.c(packageManager, new Intent("androidx.content.action.LOAD_EMOJI_FONT"), 0).iterator();
+            Iterator<ResolveInfo> it = this.f2252a.c(packageManager, new Intent("androidx.content.action.LOAD_EMOJI_FONT"), 0).iterator();
             while (it.hasNext()) {
-                ProviderInfo providerInfoA = this.f2407a.a(it.next());
+                ProviderInfo providerInfoA = this.f2252a.a(it.next());
                 if (f(providerInfoA)) {
                     return providerInfoA;
                 }
@@ -131,6 +131,6 @@ public final class a {
     }
 
     public static e a(@NonNull Context context) {
-        return (e) new C0034a(null).c(context);
+        return (e) new C0030a(null).c(context);
     }
 }

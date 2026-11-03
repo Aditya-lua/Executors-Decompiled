@@ -11,7 +11,7 @@ import n0.x2;
 public class h implements i4.b<g, i, h> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final x2 f3802a;
+    public final x2 f3700a;
 
     public h() {
         this(x2.k0());
@@ -19,13 +19,13 @@ public class h implements i4.b<g, i, h> {
 
     @Override // g0.l0
     public w2 a() {
-        return this.f3802a;
+        return this.f3700a;
     }
 
     @Override // n0.i4.b
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
     public i e() {
-        return new i(c3.j0(this.f3802a));
+        return new i(c3.j0(this.f3700a));
     }
 
     public h c(j4.b bVar) {
@@ -47,7 +47,7 @@ public class h implements i4.b<g, i, h> {
     }
 
     public h(x2 x2Var) {
-        this.f3802a = x2Var;
+        this.f3700a = x2Var;
         Class cls = (Class) x2Var.h(s0.q.N, null);
         if (cls == null || cls.equals(g.class)) {
             c(j4.b.STREAM_SHARING);

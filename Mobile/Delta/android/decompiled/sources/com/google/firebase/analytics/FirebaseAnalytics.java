@@ -7,24 +7,24 @@ import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import com.google.android.gms.internal.measurement.v3;
 import com.google.android.gms.internal.measurement.zzdf;
-import ff.a;
+import gf.a;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import n9.m;
 import nb.ra;
-import yf.g;
+import zf.g;
 
 /* JADX INFO: loaded from: classes2.dex */
 public final class FirebaseAnalytics {
     public static volatile FirebaseAnalytics b;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final v3 f8673a;
+    public final v3 f8747a;
 
     public FirebaseAnalytics(v3 v3Var) {
         m.l(v3Var);
-        this.f8673a = v3Var;
+        this.f8747a = v3Var;
     }
 
     @NonNull
@@ -70,6 +70,6 @@ public final class FirebaseAnalytics {
     @Keep
     @Deprecated
     public void setCurrentScreen(@NonNull Activity activity, String str, String str2) {
-        this.f8673a.D(zzdf.a(activity), str, str2);
+        this.f8747a.D(zzdf.a(activity), str, str2);
     }
 }

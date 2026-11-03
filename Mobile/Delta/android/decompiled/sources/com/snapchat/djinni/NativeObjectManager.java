@@ -44,23 +44,23 @@ public class NativeObjectManager {
     public static class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final NativeObjectManager f9853a = new NativeObjectManager();
+        public static final NativeObjectManager f9934a = new NativeObjectManager();
     }
 
     public static class c extends PhantomReference<Object> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final long f9854a;
+        public final long f9935a;
         public final Method b;
 
         public c(Object obj, Class<?> cls, long j10, ReferenceQueue<? super Object> referenceQueue) {
             super(obj, referenceQueue);
-            this.f9854a = j10;
+            this.f9935a = j10;
             this.b = cls.getMethod("nativeDestroy", Long.TYPE);
         }
 
         public void a() throws IllegalAccessException, InvocationTargetException {
-            this.b.invoke(null, Long.valueOf(this.f9854a));
+            this.b.invoke(null, Long.valueOf(this.f9935a));
         }
     }
 
@@ -69,7 +69,7 @@ public class NativeObjectManager {
     }
 
     public static void stop() {
-        b.f9853a.mThread.interrupt();
+        b.f9934a.mThread.interrupt();
     }
 
     private NativeObjectManager() {
@@ -84,7 +84,7 @@ public class NativeObjectManager {
     public static void register(Object obj, Class<?> cls, long j10) {
         Object obj2;
         try {
-            NativeObjectManager nativeObjectManager = b.f9853a;
+            NativeObjectManager nativeObjectManager = b.f9934a;
             obj2 = obj;
             try {
                 nativeObjectManager.mReferences.put(new c(obj2, cls, j10, nativeObjectManager.mReferenceQueue), Boolean.TRUE);

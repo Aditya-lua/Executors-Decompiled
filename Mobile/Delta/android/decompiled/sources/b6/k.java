@@ -4,11 +4,11 @@ import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkCapabilities;
 import android.net.NetworkRequest;
+import gt.s;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import jt.s;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.Unit;
@@ -25,7 +25,7 @@ public final class k extends ConnectivityManager.NetworkCallback {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final k f3970a = new k();
+    public static final k f3868a = new k();
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull
@@ -51,14 +51,14 @@ public final class k extends ConnectivityManager.NetworkCallback {
             Map<Function1<b, Unit>, NetworkRequest> map = requests;
             map.remove(function1);
             if (map.isEmpty()) {
-                w.e().a(m.f3981a, "NetworkRequestConstraintController unregister shared callback");
-                connectivityManager.unregisterNetworkCallback(f3970a);
+                w.e().a(m.f3879a, "NetworkRequestConstraintController unregister shared callback");
+                connectivityManager.unregisterNetworkCallback(f3868a);
                 isBlocked = null;
                 cachedCapabilities = null;
                 capabilitiesInitialized = false;
             }
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     @NotNull
@@ -72,13 +72,13 @@ public final class k extends ConnectivityManager.NetworkCallback {
                 boolean zIsEmpty = map.isEmpty();
                 map.put(onConstraintState, networkRequest);
                 if (zIsEmpty) {
-                    w.e().a(m.f3981a, "NetworkRequestConstraintController register shared callback");
-                    connManager.registerDefaultNetworkCallback(f3970a);
+                    w.e().a(m.f3879a, "NetworkRequestConstraintController register shared callback");
+                    connManager.registerDefaultNetworkCallback(f3868a);
                 } else if (capabilitiesInitialized && isBlocked != null) {
-                    w.e().a(m.f3981a, "NetworkRequestConstraintController send initial capabilities");
-                    onConstraintState.invoke(f3970a.d(networkRequest, cachedCapabilities) ? b.a.f3950a : new b.ConstraintsNotMet(7));
+                    w.e().a(m.f3879a, "NetworkRequestConstraintController send initial capabilities");
+                    onConstraintState.invoke(f3868a.d(networkRequest, cachedCapabilities) ? b.a.f3848a : new b.ConstraintsNotMet(7));
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -105,9 +105,9 @@ public final class k extends ConnectivityManager.NetworkCallback {
                     Iterator<T> it = requests.entrySet().iterator();
                     while (it.hasNext()) {
                         Map.Entry entry = (Map.Entry) it.next();
-                        arrayList.add(s.a((Function1) entry.getKey(), f3970a.d((NetworkRequest) entry.getValue(), cachedCapabilities) ? b.a.f3950a : new b.ConstraintsNotMet(7)));
+                        arrayList.add(s.a((Function1) entry.getKey(), f3868a.d((NetworkRequest) entry.getValue(), cachedCapabilities) ? b.a.f3848a : new b.ConstraintsNotMet(7)));
                     }
-                    Unit unit = Unit.f22483a;
+                    Unit unit = Unit.f22938a;
                     int size = arrayList.size();
                     int i10 = 0;
                     while (i10 < size) {
@@ -118,7 +118,7 @@ public final class k extends ConnectivityManager.NetworkCallback {
                     }
                     return;
                 }
-                w.e().a(m.f3981a, "Not dispatching constraint state yet: isBlocked=" + isBlocked + ", capabilitiesInitialized=" + capabilitiesInitialized);
+                w.e().a(m.f3879a, "Not dispatching constraint state yet: isBlocked=" + isBlocked + ", capabilitiesInitialized=" + capabilitiesInitialized);
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -128,13 +128,13 @@ public final class k extends ConnectivityManager.NetworkCallback {
     @Override // android.net.ConnectivityManager.NetworkCallback
     public void onBlockedStatusChanged(@NotNull Network network, boolean blocked) {
         Intrinsics.checkNotNullParameter(network, "network");
-        w.e().a(m.f3981a, "NetworkRequestConstraintController onBlockedStatusChanged callback " + blocked);
+        w.e().a(m.f3879a, "NetworkRequestConstraintController onBlockedStatusChanged callback " + blocked);
         synchronized (requestsLock) {
             if (Intrinsics.c(isBlocked, Boolean.valueOf(blocked))) {
                 return;
             }
             isBlocked = Boolean.valueOf(blocked);
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
             e();
         }
     }
@@ -143,11 +143,11 @@ public final class k extends ConnectivityManager.NetworkCallback {
     public void onCapabilitiesChanged(@NotNull Network network, @NotNull NetworkCapabilities networkCapabilities) {
         Intrinsics.checkNotNullParameter(network, "network");
         Intrinsics.checkNotNullParameter(networkCapabilities, "networkCapabilities");
-        w.e().a(m.f3981a, "NetworkRequestConstraintController onCapabilitiesChanged callback");
+        w.e().a(m.f3879a, "NetworkRequestConstraintController onCapabilitiesChanged callback");
         synchronized (requestsLock) {
             cachedCapabilities = networkCapabilities;
             capabilitiesInitialized = true;
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
         }
         e();
     }
@@ -155,7 +155,7 @@ public final class k extends ConnectivityManager.NetworkCallback {
     @Override // android.net.ConnectivityManager.NetworkCallback
     public void onLost(@NotNull Network network) {
         Intrinsics.checkNotNullParameter(network, "network");
-        w.e().a(m.f3981a, "NetworkRequestConstraintController onLost callback");
+        w.e().a(m.f3879a, "NetworkRequestConstraintController onLost callback");
         synchronized (requestsLock) {
             try {
                 cachedCapabilities = null;
@@ -163,7 +163,7 @@ public final class k extends ConnectivityManager.NetworkCallback {
                 while (it.hasNext()) {
                     ((Function1) it.next()).invoke(new b.ConstraintsNotMet(7));
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }

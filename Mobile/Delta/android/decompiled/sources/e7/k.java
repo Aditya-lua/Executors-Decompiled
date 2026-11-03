@@ -12,7 +12,7 @@ public final class k {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final k f15196a = new k();
+    public static final k f15810a = new k();
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull

@@ -9,17 +9,17 @@ import android.hardware.camera2.TotalCaptureResult;
 public final class p3 implements g6.b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final a0.c0 f36748a;
+    public final a0.c0 f37443a;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public y1.c.a<Void> f36749c;
+    public y1.c.a<Void> f37444c;
     public Rect b = null;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public Rect f36750d = null;
+    public Rect f37445d = null;
 
     public p3(a0.c0 c0Var) {
-        this.f36748a = c0Var;
+        this.f37443a = c0Var;
     }
 
     public static Rect h(Rect rect, float f10) {
@@ -32,16 +32,16 @@ public final class p3 implements g6.b {
 
     @Override // z.g6.b
     public void a(TotalCaptureResult totalCaptureResult) {
-        if (this.f36749c != null) {
+        if (this.f37444c != null) {
             CaptureRequest request = totalCaptureResult.getRequest();
             Rect rect = request == null ? null : (Rect) request.get(CaptureRequest.SCALER_CROP_REGION);
-            Rect rect2 = this.f36750d;
+            Rect rect2 = this.f37445d;
             if (rect2 == null || !rect2.equals(rect)) {
                 return;
             }
-            this.f36749c.c(null);
-            this.f36749c = null;
-            this.f36750d = null;
+            this.f37444c.c(null);
+            this.f37444c = null;
+            this.f37445d = null;
         }
     }
 
@@ -52,18 +52,18 @@ public final class p3 implements g6.b {
 
     @Override // z.g6.b
     public void c() {
-        this.f36750d = null;
+        this.f37445d = null;
         this.b = null;
-        y1.c.a<Void> aVar = this.f36749c;
+        y1.c.a<Void> aVar = this.f37444c;
         if (aVar != null) {
             aVar.f(new g0.m.a("Camera is not active."));
-            this.f36749c = null;
+            this.f37444c = null;
         }
     }
 
     @Override // z.g6.b
     public float d() {
-        Float f10 = (Float) this.f36748a.a(CameraCharacteristics.SCALER_AVAILABLE_MAX_DIGITAL_ZOOM);
+        Float f10 = (Float) this.f37443a.a(CameraCharacteristics.SCALER_AVAILABLE_MAX_DIGITAL_ZOOM);
         if (f10 == null) {
             return 1.0f;
         }
@@ -73,12 +73,12 @@ public final class p3 implements g6.b {
     @Override // z.g6.b
     public void e(float f10, y1.c.a<Void> aVar) {
         this.b = h(i(), f10);
-        y1.c.a<Void> aVar2 = this.f36749c;
+        y1.c.a<Void> aVar2 = this.f37444c;
         if (aVar2 != null) {
             aVar2.f(new g0.m.a("There is a new zoomRatio being set"));
         }
-        this.f36750d = this.b;
-        this.f36749c = aVar;
+        this.f37445d = this.b;
+        this.f37444c = aVar;
     }
 
     @Override // z.g6.b
@@ -88,14 +88,14 @@ public final class p3 implements g6.b {
     }
 
     @Override // z.g6.b
-    public void g(y.a.C0647a c0647a) {
+    public void g(y.a.C0662a c0662a) {
         Rect rect = this.b;
         if (rect != null) {
-            c0647a.g(CaptureRequest.SCALER_CROP_REGION, rect, n0.n1.c.REQUIRED);
+            c0662a.g(CaptureRequest.SCALER_CROP_REGION, rect, n0.n1.c.REQUIRED);
         }
     }
 
     public final Rect i() {
-        return (Rect) x2.g.g((Rect) this.f36748a.a(CameraCharacteristics.SENSOR_INFO_ACTIVE_ARRAY_SIZE));
+        return (Rect) x2.g.g((Rect) this.f37443a.a(CameraCharacteristics.SENSOR_INFO_ACTIVE_ARRAY_SIZE));
     }
 }

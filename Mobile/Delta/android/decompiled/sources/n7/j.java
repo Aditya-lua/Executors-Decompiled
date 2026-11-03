@@ -7,11 +7,11 @@ import f7.i0;
 public class j implements c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f25168a;
+    public final String f25989a;
     public final a b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final boolean f25169c;
+    public final boolean f25990c;
 
     public enum a {
         MERGE,
@@ -38,9 +38,9 @@ public class j implements c {
     }
 
     public j(String str, a aVar, boolean z10) {
-        this.f25168a = str;
+        this.f25989a = str;
         this.b = aVar;
-        this.f25169c = z10;
+        this.f25990c = z10;
     }
 
     @Override // n7.c
@@ -57,11 +57,11 @@ public class j implements c {
     }
 
     public String c() {
-        return this.f25168a;
+        return this.f25989a;
     }
 
     public boolean d() {
-        return this.f25169c;
+        return this.f25990c;
     }
 
     public String toString() {

@@ -7,27 +7,27 @@ import java.util.concurrent.Executor;
 public final class d implements d8.b<c> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ht.a<Executor> f18726a;
-    public final ht.a<c8.e> b;
+    public final ft.a<Executor> f19213a;
+    public final ft.a<c8.e> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final ht.a<x> f18727c;
+    public final ft.a<x> f19214c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final ht.a<j8.d> f18728d;
+    public final ft.a<j8.d> f19215d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final ht.a<k8.b> f18729e;
+    public final ft.a<k8.b> f19216e;
 
-    public d(ht.a<Executor> aVar, ht.a<c8.e> aVar2, ht.a<x> aVar3, ht.a<j8.d> aVar4, ht.a<k8.b> aVar5) {
-        this.f18726a = aVar;
+    public d(ft.a<Executor> aVar, ft.a<c8.e> aVar2, ft.a<x> aVar3, ft.a<j8.d> aVar4, ft.a<k8.b> aVar5) {
+        this.f19213a = aVar;
         this.b = aVar2;
-        this.f18727c = aVar3;
-        this.f18728d = aVar4;
-        this.f18729e = aVar5;
+        this.f19214c = aVar3;
+        this.f19215d = aVar4;
+        this.f19216e = aVar5;
     }
 
-    public static d a(ht.a<Executor> aVar, ht.a<c8.e> aVar2, ht.a<x> aVar3, ht.a<j8.d> aVar4, ht.a<k8.b> aVar5) {
+    public static d a(ft.a<Executor> aVar, ft.a<c8.e> aVar2, ft.a<x> aVar3, ft.a<j8.d> aVar4, ft.a<k8.b> aVar5) {
         return new d(aVar, aVar2, aVar3, aVar4, aVar5);
     }
 
@@ -35,9 +35,9 @@ public final class d implements d8.b<c> {
         return new c(executor, eVar, xVar, dVar, bVar);
     }
 
-    @Override // ht.a
+    @Override // ft.a
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
     public c get() {
-        return c(this.f18726a.get(), this.b.get(), this.f18727c.get(), this.f18728d.get(), this.f18729e.get());
+        return c(this.f19213a.get(), this.b.get(), this.f19214c.get(), this.f19215d.get(), this.f19216e.get());
     }
 }

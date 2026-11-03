@@ -25,6 +25,8 @@ public final class BuildConfig {
     public static final boolean HAS_TRAIT_PLAY_SERVICES_BARCODE_SCANNING = true;
     public static final boolean HAS_TRAIT_SAMSUNG_IN_APP_PURCHASING = false;
     public static final boolean IS_DEV = false;
+    public static final boolean IS_PIONEER_APP = false;
+    public static final long PIONEER_PLACE_ID = 0;
     public static final String STORE_PACKAGE = "com.android.vending";
     public static final String STORE_RATING_DEEPLINK_FORMAT = "market://details?id=%s";
     public static final String STORE_RATING_WEBLINK_FORMAT = "https://play.google.com/store/apps/details?id=%s";

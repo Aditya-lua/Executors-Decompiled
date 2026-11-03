@@ -1,17 +1,16 @@
 package ae;
 
-import android.util.Log;
-import java.io.File;
+import android.os.Bundle;
 
 /* JADX INFO: loaded from: classes2.dex */
-public final class y implements q {
-    @Override // ae.q
-    public final boolean a(Object obj, File file, File file2) {
-        try {
-            return !((Boolean) g0.f(Class.forName("dalvik.system.DexFile"), "isDexOptNeeded", Boolean.class, String.class, file.getPath())).booleanValue();
-        } catch (ClassNotFoundException unused) {
-            Log.e("SplitCompat", "Unexpected missing dalvik.system.DexFile.");
-            return false;
-        }
+public final class y extends z {
+    public y(a0 a0Var, sb.k kVar) {
+        super(a0Var, kVar);
+    }
+
+    @Override // ae.z, be.m0
+    public final void k0(int i10, Bundle bundle) {
+        super.k0(i10, bundle);
+        this.f474a.e(Integer.valueOf(i10));
     }
 }

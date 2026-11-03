@@ -14,7 +14,7 @@ public final class c4 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final c4 f24622a = new c4();
+    public static final c4 f25443a = new c4();
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public static g0.y cameraUseCaseAdapterProvider;

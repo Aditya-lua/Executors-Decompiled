@@ -10,7 +10,7 @@ public final /* data */ class m {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final m f35127a = new m();
+    public static final m f35625a = new m();
 
     public boolean equals(@Nullable Object other) {
         return this == other || (other instanceof m);

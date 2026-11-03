@@ -10,5 +10,6 @@ public enum InitializeSdkFailureReason {
     NOTINSTALLED,
     ALREADYINITIALIZING,
     TIMEDOUT,
+    NATIVESHUTTINGDOWN,
     SHUTTINGDOWN
 }

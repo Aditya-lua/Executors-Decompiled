@@ -13,11 +13,11 @@ public final class i extends k {
     }
 
     @Override // ka.k, ka.t
-    public final void B1(zzg zzgVar) {
+    public final void A1(zzg zzgVar) {
         if (zzgVar == null) {
-            N0(new Status(17));
+            J0(new Status(17));
         } else {
-            this.f22291a.e(zzgVar);
+            this.f22515a.e(zzgVar);
         }
     }
 }

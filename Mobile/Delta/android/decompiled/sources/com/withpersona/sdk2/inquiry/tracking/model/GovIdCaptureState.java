@@ -14,10 +14,10 @@ public enum GovIdCaptureState {
     CAPTURED_PHOTO,
     RECORDING_TIMED_OUT;
 
-    private static final /* synthetic */ qt.a $ENTRIES = qt.b.a(values());
+    private static final /* synthetic */ ot.a $ENTRIES = ot.b.a(values());
 
     @NotNull
-    public static qt.a<GovIdCaptureState> getEntries() {
+    public static ot.a<GovIdCaptureState> getEntries() {
         return $ENTRIES;
     }
 }

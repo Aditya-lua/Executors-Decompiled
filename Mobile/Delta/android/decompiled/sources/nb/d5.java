@@ -13,49 +13,49 @@ import java.util.List;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface d5 extends IInterface {
-    zzao D1(zzr zzrVar);
+    String A0(zzr zzrVar);
 
-    String E0(zzr zzrVar);
+    zzao C1(zzr zzrVar);
 
-    void F1(Bundle bundle, zzr zzrVar);
+    void E1(Bundle bundle, zzr zzrVar);
 
-    void J(zzr zzrVar, zzoo zzooVar, j5 j5Var);
+    List G0(zzr zzrVar, boolean z10);
+
+    void H(zzr zzrVar, zzoo zzooVar, j5 j5Var);
+
+    List K(String str, String str2, String str3);
 
     void K1(zzr zzrVar);
 
-    List L0(zzr zzrVar, boolean z10);
+    void P(zzr zzrVar);
 
-    List M(String str, String str2, String str3);
+    void Q0(zzbg zzbgVar, String str, String str2);
 
-    void R(zzr zzrVar);
+    List S(zzr zzrVar, Bundle bundle);
 
     void S1(zzr zzrVar);
 
-    void T0(zzbg zzbgVar, String str, String str2);
+    void V(zzbg zzbgVar, zzr zzrVar);
 
-    List U(zzr zzrVar, Bundle bundle);
+    void V0(long j10, String str, String str2, String str3);
 
-    void X(zzbg zzbgVar, zzr zzrVar);
+    void W(zzr zzrVar);
 
-    void Y(zzr zzrVar);
-
-    void Y0(long j10, String str, String str2, String str3);
+    void W0(zzr zzrVar);
 
     List Y1(String str, String str2, boolean z10, zzr zzrVar);
 
-    void Z0(zzr zzrVar);
+    void c0(zzr zzrVar);
 
-    void e0(zzr zzrVar);
+    byte[] e0(zzbg zzbgVar, String str);
 
     List e2(String str, String str2, zzr zzrVar);
 
-    byte[] h0(zzbg zzbgVar, String str);
+    void f0(zzah zzahVar);
 
-    void i0(zzah zzahVar);
+    void g1(zzr zzrVar, Bundle bundle, g5 g5Var);
 
-    void k1(zzr zzrVar, Bundle bundle, g5 g5Var);
-
-    void m0(zzpl zzplVar, zzr zzrVar);
+    void j0(zzpl zzplVar, zzr zzrVar);
 
     List o(String str, String str2, String str3, boolean z10);
 
@@ -63,5 +63,5 @@ public interface d5 extends IInterface {
 
     void q(zzah zzahVar, zzr zzrVar);
 
-    void w1(zzr zzrVar, zzaf zzafVar);
+    void u1(zzr zzrVar, zzaf zzafVar);
 }

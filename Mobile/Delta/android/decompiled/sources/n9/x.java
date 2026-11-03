@@ -14,7 +14,7 @@ import java.util.Locale;
 public final class x {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final w1.j f25304a = new w1.j();
+    public static final w1.j f26125a = new w1.j();
     public static Locale b;
 
     public static String a(Context context) {
@@ -31,12 +31,12 @@ public final class x {
     public static String b(Context context, int i10) {
         Resources resources = context.getResources();
         if (i10 == 1) {
-            return resources.getString(h9.b.f18737d);
+            return resources.getString(h9.b.f19224d);
         }
         if (i10 != 2) {
-            return i10 != 3 ? resources.getString(R.string.ok) : resources.getString(h9.b.f18735a);
+            return i10 != 3 ? resources.getString(R.string.ok) : resources.getString(h9.b.f19222a);
         }
-        return resources.getString(h9.b.f18743j);
+        return resources.getString(h9.b.f19230j);
     }
 
     @NonNull
@@ -44,10 +44,10 @@ public final class x {
         Resources resources = context.getResources();
         String strA = a(context);
         if (i10 == 1) {
-            return resources.getString(h9.b.f18738e, strA);
+            return resources.getString(h9.b.f19225e, strA);
         }
         if (i10 == 2) {
-            return u9.i.d(context) ? resources.getString(h9.b.f18747n) : resources.getString(h9.b.f18744k, strA);
+            return u9.i.d(context) ? resources.getString(h9.b.f19234n) : resources.getString(h9.b.f19231k, strA);
         }
         if (i10 == 3) {
             return resources.getString(h9.b.b, strA);
@@ -59,7 +59,7 @@ public final class x {
             return g(context, "common_google_play_services_network_error_text", strA);
         }
         if (i10 == 9) {
-            return resources.getString(h9.b.f18742i, strA);
+            return resources.getString(h9.b.f19229i, strA);
         }
         if (i10 == 20) {
             return g(context, "common_google_play_services_restricted_profile_text", strA);
@@ -70,9 +70,9 @@ public final class x {
             case 17:
                 return g(context, "common_google_play_services_sign_in_failed_text", strA);
             case 18:
-                return resources.getString(h9.b.f18746m, strA);
+                return resources.getString(h9.b.f19233m, strA);
             default:
-                return resources.getString(j9.j.f21198a, strA);
+                return resources.getString(j9.j.f21771a, strA);
         }
     }
 
@@ -84,18 +84,18 @@ public final class x {
     @NonNull
     public static String e(Context context, int i10) {
         String strH = i10 == 6 ? h(context, "common_google_play_services_resolution_required_title") : f(context, i10);
-        return strH == null ? context.getResources().getString(h9.b.f18741h) : strH;
+        return strH == null ? context.getResources().getString(h9.b.f19228h) : strH;
     }
 
     public static String f(Context context, int i10) {
         Resources resources = context.getResources();
         switch (i10) {
             case 1:
-                return resources.getString(h9.b.f18739f);
+                return resources.getString(h9.b.f19226f);
             case 2:
-                return resources.getString(h9.b.f18745l);
+                return resources.getString(h9.b.f19232l);
             case 3:
-                return resources.getString(h9.b.f18736c);
+                return resources.getString(h9.b.f19223c);
             case 4:
             case 6:
             case 18:
@@ -142,13 +142,13 @@ public final class x {
         Resources resources = context.getResources();
         String strH = h(context, str);
         if (strH == null) {
-            strH = resources.getString(j9.j.f21198a);
+            strH = resources.getString(j9.j.f21771a);
         }
         return String.format(resources.getConfiguration().locale, strH, str2);
     }
 
     public static String h(Context context, String str) {
-        w1.j jVar = f25304a;
+        w1.j jVar = f26125a;
         synchronized (jVar) {
             try {
                 Locale localeC = u2.f.a(context.getResources().getConfiguration()).c(0);

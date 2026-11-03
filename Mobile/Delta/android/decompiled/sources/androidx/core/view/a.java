@@ -16,30 +16,30 @@ import java.util.List;
 public class a {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final View.AccessibilityDelegate f1812c = new View.AccessibilityDelegate();
+    public static final View.AccessibilityDelegate f1657c = new View.AccessibilityDelegate();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final View.AccessibilityDelegate f1813a;
+    public final View.AccessibilityDelegate f1658a;
     public final View.AccessibilityDelegate b;
 
     /* JADX INFO: renamed from: androidx.core.view.a$a, reason: collision with other inner class name */
-    public static final class C0026a extends View.AccessibilityDelegate {
+    public static final class C0022a extends View.AccessibilityDelegate {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final a f1814a;
+        public final a f1659a;
 
-        public C0026a(a aVar) {
-            this.f1814a = aVar;
+        public C0022a(a aVar) {
+            this.f1659a = aVar;
         }
 
         @Override // android.view.View.AccessibilityDelegate
         public boolean dispatchPopulateAccessibilityEvent(View view, AccessibilityEvent accessibilityEvent) {
-            return this.f1814a.a(view, accessibilityEvent);
+            return this.f1659a.a(view, accessibilityEvent);
         }
 
         @Override // android.view.View.AccessibilityDelegate
         public AccessibilityNodeProvider getAccessibilityNodeProvider(View view) {
-            y2.q qVarB = this.f1814a.b(view);
+            y2.q qVarB = this.f1659a.b(view);
             if (qVarB != null) {
                 return (AccessibilityNodeProvider) qVarB.e();
             }
@@ -48,7 +48,7 @@ public class a {
 
         @Override // android.view.View.AccessibilityDelegate
         public void onInitializeAccessibilityEvent(View view, AccessibilityEvent accessibilityEvent) {
-            this.f1814a.f(view, accessibilityEvent);
+            this.f1659a.f(view, accessibilityEvent);
         }
 
         @Override // android.view.View.AccessibilityDelegate
@@ -58,7 +58,7 @@ public class a {
             pVarO0.w0(o0.P(view));
             pVarO0.B0(o0.o(view));
             pVarO0.J0(o0.G(view));
-            this.f1814a.g(view, pVarO0);
+            this.f1659a.g(view, pVarO0);
             pVarO0.d(accessibilityNodeInfo.getText(), view);
             List<y2.p.a> listC = a.c(view);
             for (int i10 = 0; i10 < listC.size(); i10++) {
@@ -68,32 +68,32 @@ public class a {
 
         @Override // android.view.View.AccessibilityDelegate
         public void onPopulateAccessibilityEvent(View view, AccessibilityEvent accessibilityEvent) {
-            this.f1814a.h(view, accessibilityEvent);
+            this.f1659a.h(view, accessibilityEvent);
         }
 
         @Override // android.view.View.AccessibilityDelegate
         public boolean onRequestSendAccessibilityEvent(ViewGroup viewGroup, View view, AccessibilityEvent accessibilityEvent) {
-            return this.f1814a.i(viewGroup, view, accessibilityEvent);
+            return this.f1659a.i(viewGroup, view, accessibilityEvent);
         }
 
         @Override // android.view.View.AccessibilityDelegate
         public boolean performAccessibilityAction(View view, int i10, Bundle bundle) {
-            return this.f1814a.j(view, i10, bundle);
+            return this.f1659a.j(view, i10, bundle);
         }
 
         @Override // android.view.View.AccessibilityDelegate
         public void sendAccessibilityEvent(View view, int i10) {
-            this.f1814a.l(view, i10);
+            this.f1659a.l(view, i10);
         }
 
         @Override // android.view.View.AccessibilityDelegate
         public void sendAccessibilityEventUnchecked(View view, AccessibilityEvent accessibilityEvent) {
-            this.f1814a.m(view, accessibilityEvent);
+            this.f1659a.m(view, accessibilityEvent);
         }
     }
 
     public a() {
-        this(f1812c);
+        this(f1657c);
     }
 
     public static List<y2.p.a> c(View view) {
@@ -102,11 +102,11 @@ public class a {
     }
 
     public boolean a(View view, AccessibilityEvent accessibilityEvent) {
-        return this.f1813a.dispatchPopulateAccessibilityEvent(view, accessibilityEvent);
+        return this.f1658a.dispatchPopulateAccessibilityEvent(view, accessibilityEvent);
     }
 
     public y2.q b(View view) {
-        AccessibilityNodeProvider accessibilityNodeProvider = this.f1813a.getAccessibilityNodeProvider(view);
+        AccessibilityNodeProvider accessibilityNodeProvider = this.f1658a.getAccessibilityNodeProvider(view);
         if (accessibilityNodeProvider != null) {
             return new y2.q(accessibilityNodeProvider);
         }
@@ -130,19 +130,19 @@ public class a {
     }
 
     public void f(View view, AccessibilityEvent accessibilityEvent) {
-        this.f1813a.onInitializeAccessibilityEvent(view, accessibilityEvent);
+        this.f1658a.onInitializeAccessibilityEvent(view, accessibilityEvent);
     }
 
     public void g(View view, y2.p pVar) {
-        this.f1813a.onInitializeAccessibilityNodeInfo(view, pVar.N0());
+        this.f1658a.onInitializeAccessibilityNodeInfo(view, pVar.N0());
     }
 
     public void h(View view, AccessibilityEvent accessibilityEvent) {
-        this.f1813a.onPopulateAccessibilityEvent(view, accessibilityEvent);
+        this.f1658a.onPopulateAccessibilityEvent(view, accessibilityEvent);
     }
 
     public boolean i(ViewGroup viewGroup, View view, AccessibilityEvent accessibilityEvent) {
-        return this.f1813a.onRequestSendAccessibilityEvent(viewGroup, view, accessibilityEvent);
+        return this.f1658a.onRequestSendAccessibilityEvent(viewGroup, view, accessibilityEvent);
     }
 
     public boolean j(View view, int i10, Bundle bundle) {
@@ -156,9 +156,9 @@ public class a {
             }
         }
         if (!zPerformAccessibilityAction) {
-            zPerformAccessibilityAction = this.f1813a.performAccessibilityAction(view, i10, bundle);
+            zPerformAccessibilityAction = this.f1658a.performAccessibilityAction(view, i10, bundle);
         }
-        return (zPerformAccessibilityAction || i10 != j2.e.f21033a || bundle == null) ? zPerformAccessibilityAction : k(bundle.getInt("ACCESSIBILITY_CLICKABLE_SPAN_ID", -1), view);
+        return (zPerformAccessibilityAction || i10 != j2.e.f21606a || bundle == null) ? zPerformAccessibilityAction : k(bundle.getInt("ACCESSIBILITY_CLICKABLE_SPAN_ID", -1), view);
     }
 
     public final boolean k(int i10, View view) {
@@ -176,15 +176,15 @@ public class a {
     }
 
     public void l(View view, int i10) {
-        this.f1813a.sendAccessibilityEvent(view, i10);
+        this.f1658a.sendAccessibilityEvent(view, i10);
     }
 
     public void m(View view, AccessibilityEvent accessibilityEvent) {
-        this.f1813a.sendAccessibilityEventUnchecked(view, accessibilityEvent);
+        this.f1658a.sendAccessibilityEventUnchecked(view, accessibilityEvent);
     }
 
     public a(View.AccessibilityDelegate accessibilityDelegate) {
-        this.f1813a = accessibilityDelegate;
-        this.b = new C0026a(this);
+        this.f1658a = accessibilityDelegate;
+        this.b = new C0022a(this);
     }
 }

@@ -11,11 +11,11 @@ import j.m;
 public class b extends m {
 
     /* JADX INFO: renamed from: v0, reason: collision with root package name */
-    public boolean f7658v0;
+    public boolean f7732v0;
 
     /* JADX INFO: renamed from: com.google.android.material.bottomsheet.b$b, reason: collision with other inner class name */
-    public class C0117b extends BottomSheetBehavior.g {
-        public C0117b() {
+    public class C0121b extends BottomSheetBehavior.g {
+        public C0121b() {
         }
 
         @Override // com.google.android.material.bottomsheet.BottomSheetBehavior.g
@@ -41,11 +41,11 @@ public class b extends m {
     @Override // j.m, e4.k
     @NonNull
     public Dialog k2(Bundle bundle) {
-        return new com.google.android.material.bottomsheet.a(x(), j2());
+        return new com.google.android.material.bottomsheet.a(w(), j2());
     }
 
     public final void v2() {
-        if (this.f7658v0) {
+        if (this.f7732v0) {
             super.f2();
         } else {
             super.e2();
@@ -53,7 +53,7 @@ public class b extends m {
     }
 
     public final void w2(@NonNull BottomSheetBehavior<?> bottomSheetBehavior, boolean z10) {
-        this.f7658v0 = z10;
+        this.f7732v0 = z10;
         if (bottomSheetBehavior.v0() == 5) {
             v2();
             return;
@@ -61,7 +61,7 @@ public class b extends m {
         if (h2() instanceof com.google.android.material.bottomsheet.a) {
             ((com.google.android.material.bottomsheet.a) h2()).y();
         }
-        bottomSheetBehavior.c0(new C0117b());
+        bottomSheetBehavior.c0(new C0121b());
         bottomSheetBehavior.X0(5);
     }
 
@@ -72,7 +72,7 @@ public class b extends m {
         }
         com.google.android.material.bottomsheet.a aVar = (com.google.android.material.bottomsheet.a) dialogH2;
         BottomSheetBehavior<FrameLayout> bottomSheetBehaviorV = aVar.v();
-        if (!bottomSheetBehaviorV.B0() || !aVar.w()) {
+        if (!bottomSheetBehaviorV.B0() || !aVar.x()) {
             return false;
         }
         w2(bottomSheetBehaviorV, z10);

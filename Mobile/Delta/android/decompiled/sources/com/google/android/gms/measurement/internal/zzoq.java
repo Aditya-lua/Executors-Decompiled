@@ -12,15 +12,15 @@ public final class zzoq extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzoq> CREATOR = new wd();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final List f7437f;
+    public final List f7511f;
 
     public zzoq(List list) {
-        this.f7437f = list;
+        this.f7511f = list;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i10) {
-        List list = this.f7437f;
+        List list = this.f7511f;
         int iA = b.a(parcel);
         b.z(parcel, 1, list, false);
         b.b(parcel, iA);

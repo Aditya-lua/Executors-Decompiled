@@ -28,7 +28,7 @@ public abstract class q9<MessageType extends r9<MessageType, BuilderType>, Build
     }
 
     public static void n(Iterable iterable, List list) {
-        Charset charset = qb.f6750a;
+        Charset charset = qb.f6824a;
         iterable.getClass();
         if (iterable instanceof yb) {
             List listZza = ((yb) iterable).zza();
@@ -105,7 +105,7 @@ public abstract class q9<MessageType extends r9<MessageType, BuilderType>, Build
     public abstract q9 k(byte[] bArr, int i10, int i11, ra raVar);
 
     @Override // com.google.android.gms.internal.measurement.nc
-    public final /* synthetic */ nc m(byte[] bArr) {
+    public final /* synthetic */ nc u(byte[] bArr) {
         return j(bArr, 0, bArr.length);
     }
 }

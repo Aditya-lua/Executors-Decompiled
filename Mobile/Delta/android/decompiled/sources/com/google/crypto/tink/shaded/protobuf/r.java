@@ -10,81 +10,81 @@ public final class r extends q<y.d> {
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f8548a;
+        public static final /* synthetic */ int[] f8622a;
 
         static {
             int[] iArr = new int[s1.b.values().length];
-            f8548a = iArr;
+            f8622a = iArr;
             try {
-                iArr[s1.b.f8554c.ordinal()] = 1;
+                iArr[s1.b.f8628c.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f8548a[s1.b.f8555d.ordinal()] = 2;
+                f8622a[s1.b.f8629d.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f8548a[s1.b.f8556e.ordinal()] = 3;
+                f8622a[s1.b.f8630e.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
             try {
-                f8548a[s1.b.f8557f.ordinal()] = 4;
+                f8622a[s1.b.f8631f.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
             try {
-                f8548a[s1.b.f8558g.ordinal()] = 5;
+                f8622a[s1.b.f8632g.ordinal()] = 5;
             } catch (NoSuchFieldError unused5) {
             }
             try {
-                f8548a[s1.b.f8559h.ordinal()] = 6;
+                f8622a[s1.b.f8633h.ordinal()] = 6;
             } catch (NoSuchFieldError unused6) {
             }
             try {
-                f8548a[s1.b.f8560i.ordinal()] = 7;
+                f8622a[s1.b.f8634i.ordinal()] = 7;
             } catch (NoSuchFieldError unused7) {
             }
             try {
-                f8548a[s1.b.f8561j.ordinal()] = 8;
+                f8622a[s1.b.f8635j.ordinal()] = 8;
             } catch (NoSuchFieldError unused8) {
             }
             try {
-                f8548a[s1.b.f8566o.ordinal()] = 9;
+                f8622a[s1.b.f8640o.ordinal()] = 9;
             } catch (NoSuchFieldError unused9) {
             }
             try {
-                f8548a[s1.b.f8568q.ordinal()] = 10;
+                f8622a[s1.b.f8642q.ordinal()] = 10;
             } catch (NoSuchFieldError unused10) {
             }
             try {
-                f8548a[s1.b.f8569r.ordinal()] = 11;
+                f8622a[s1.b.f8643r.ordinal()] = 11;
             } catch (NoSuchFieldError unused11) {
             }
             try {
-                f8548a[s1.b.f8570s.ordinal()] = 12;
+                f8622a[s1.b.f8644s.ordinal()] = 12;
             } catch (NoSuchFieldError unused12) {
             }
             try {
-                f8548a[s1.b.f8571t.ordinal()] = 13;
+                f8622a[s1.b.f8645t.ordinal()] = 13;
             } catch (NoSuchFieldError unused13) {
             }
             try {
-                f8548a[s1.b.f8567p.ordinal()] = 14;
+                f8622a[s1.b.f8641p.ordinal()] = 14;
             } catch (NoSuchFieldError unused14) {
             }
             try {
-                f8548a[s1.b.f8565n.ordinal()] = 15;
+                f8622a[s1.b.f8639n.ordinal()] = 15;
             } catch (NoSuchFieldError unused15) {
             }
             try {
-                f8548a[s1.b.f8562k.ordinal()] = 16;
+                f8622a[s1.b.f8636k.ordinal()] = 16;
             } catch (NoSuchFieldError unused16) {
             }
             try {
-                f8548a[s1.b.f8563l.ordinal()] = 17;
+                f8622a[s1.b.f8637l.ordinal()] = 17;
             } catch (NoSuchFieldError unused17) {
             }
             try {
-                f8548a[s1.b.f8564m.ordinal()] = 18;
+                f8622a[s1.b.f8638m.ordinal()] = 18;
             } catch (NoSuchFieldError unused18) {
             }
         }
@@ -128,7 +128,7 @@ public final class r extends q<y.d> {
         y.e eVar = (y.e) obj2;
         int iC = eVar.c();
         if (eVar.b.f() && eVar.b.m()) {
-            switch (a.f8548a[eVar.a().ordinal()]) {
+            switch (a.f8622a[eVar.a().ordinal()]) {
                 case 1:
                     arrayList = new ArrayList();
                     f1Var.G(arrayList);
@@ -192,8 +192,8 @@ public final class r extends q<y.d> {
             uVar.x(eVar.b, arrayList);
             return ub;
         }
-        if (eVar.a() != s1.b.f8567p) {
-            switch (a.f8548a[eVar.a().ordinal()]) {
+        if (eVar.a() != s1.b.f8641p) {
+            switch (a.f8622a[eVar.a().ordinal()]) {
                 case 1:
                     objValueOf = Double.valueOf(f1Var.readDouble());
                     break;
@@ -290,7 +290,7 @@ public final class r extends q<y.d> {
             uVar.a(eVar.b, objValueOf);
             return ub;
         }
-        int i10 = a.f8548a[eVar.a().ordinal()];
+        int i10 = a.f8622a[eVar.a().ordinal()];
         if ((i10 == 17 || i10 == 18) && (objI = uVar.i(eVar.b)) != null) {
             objValueOf = a0.g(objI, objValueOf);
         }
@@ -318,7 +318,7 @@ public final class r extends q<y.d> {
     public void j(t1 t1Var, Map.Entry<?, ?> entry) {
         y.d dVar = (y.d) entry.getKey();
         if (!dVar.f()) {
-            switch (a.f8548a[dVar.g().ordinal()]) {
+            switch (a.f8622a[dVar.g().ordinal()]) {
                 case 1:
                     t1Var.p(dVar.getNumber(), ((Double) entry.getValue()).doubleValue());
                     break;
@@ -375,7 +375,7 @@ public final class r extends q<y.d> {
                     break;
             }
         }
-        switch (a.f8548a[dVar.g().ordinal()]) {
+        switch (a.f8622a[dVar.g().ordinal()]) {
             case 1:
                 i1.O(dVar.getNumber(), (List) entry.getValue(), t1Var, dVar.m());
                 break;

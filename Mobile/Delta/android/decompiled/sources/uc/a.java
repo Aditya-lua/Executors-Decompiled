@@ -1,55 +1,79 @@
 package uc;
 
-import android.R;
-import android.app.Dialog;
-import android.graphics.Rect;
-import android.graphics.RectF;
-import android.os.Build;
-import android.view.MotionEvent;
+import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.util.TypedValue;
 import android.view.View;
-import android.view.ViewConfiguration;
 import androidx.annotation.NonNull;
+import androidx.core.graphics.c;
+import ed.b;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class a implements View.OnTouchListener {
-
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    @NonNull
-    public final Dialog f32114a;
-    public final int b;
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final int f32115c;
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final int f32116d;
-
-    public a(@NonNull Dialog dialog, @NonNull Rect rect) {
-        this.f32114a = dialog;
-        this.b = rect.left;
-        this.f32115c = rect.top;
-        this.f32116d = ViewConfiguration.get(dialog.getContext()).getScaledWindowTouchSlop();
+public class a {
+    public static int a(int i10, int i11) {
+        return c.l(i10, (Color.alpha(i10) * i11) / 255);
     }
 
-    @Override // android.view.View.OnTouchListener
-    public boolean onTouch(@NonNull View view, @NonNull MotionEvent motionEvent) {
-        View viewFindViewById = view.findViewById(R.id.content);
-        int left = this.b + viewFindViewById.getLeft();
-        int width = viewFindViewById.getWidth() + left;
-        int top = this.f32115c + viewFindViewById.getTop();
-        if (new RectF(left, top, width, viewFindViewById.getHeight() + top).contains(motionEvent.getX(), motionEvent.getY())) {
-            return false;
+    public static int b(@NonNull Context context, int i10, int i11) {
+        Integer numF = f(context, i10);
+        return numF != null ? numF.intValue() : i11;
+    }
+
+    public static int c(Context context, int i10, String str) {
+        return l(context, b.e(context, i10, str));
+    }
+
+    public static int d(@NonNull View view, int i10) {
+        return l(view.getContext(), b.f(view, i10));
+    }
+
+    public static int e(@NonNull View view, int i10, int i11) {
+        return b(view.getContext(), i10, i11);
+    }
+
+    public static Integer f(@NonNull Context context, int i10) {
+        TypedValue typedValueA = b.a(context, i10);
+        if (typedValueA != null) {
+            return Integer.valueOf(l(context, typedValueA));
         }
-        MotionEvent motionEventObtain = MotionEvent.obtain(motionEvent);
-        if (motionEvent.getAction() == 1) {
-            motionEventObtain.setAction(4);
+        return null;
+    }
+
+    public static ColorStateList g(@NonNull Context context, int i10) {
+        TypedValue typedValueA = b.a(context, i10);
+        if (typedValueA == null) {
+            return null;
         }
-        if (Build.VERSION.SDK_INT < 28) {
-            motionEventObtain.setAction(0);
-            int i10 = this.f32116d;
-            motionEventObtain.setLocation((-i10) - 1, (-i10) - 1);
+        int i11 = typedValueA.resourceId;
+        if (i11 != 0) {
+            return l2.b.d(context, i11);
         }
-        view.performClick();
-        return this.f32114a.onTouchEvent(motionEventObtain);
+        int i12 = typedValueA.data;
+        if (i12 != 0) {
+            return ColorStateList.valueOf(i12);
+        }
+        return null;
+    }
+
+    public static boolean h(int i10) {
+        return i10 != 0 && c.e(i10) > 0.5d;
+    }
+
+    public static int i(int i10, int i11) {
+        return c.h(i11, i10);
+    }
+
+    public static int j(int i10, int i11, float f10) {
+        return i(i10, c.l(i11, Math.round(Color.alpha(i11) * f10)));
+    }
+
+    public static int k(@NonNull View view, int i10, int i11, float f10) {
+        return j(d(view, i10), d(view, i11), f10);
+    }
+
+    public static int l(@NonNull Context context, @NonNull TypedValue typedValue) {
+        int i10 = typedValue.resourceId;
+        return i10 != 0 ? l2.b.c(context, i10) : typedValue.data;
     }
 }

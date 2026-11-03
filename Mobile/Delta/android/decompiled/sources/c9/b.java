@@ -13,13 +13,13 @@ import n9.l;
 public class b extends k9.e<GoogleSignInOptions> {
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final j f4668k = new j(null);
+    public static final j f4834k = new j(null);
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static int f4669l = 1;
+    public static int f4835l = 1;
 
     public b(@NonNull Context context, GoogleSignInOptions googleSignInOptions) {
-        super(context, y8.a.b, googleSignInOptions, new k9.e.a.C0394a().b(new l9.a()).a());
+        super(context, y8.a.b, googleSignInOptions, new k9.e.a.C0393a().b(new l9.a()).a());
     }
 
     @NonNull
@@ -30,20 +30,20 @@ public class b extends k9.e<GoogleSignInOptions> {
     public final synchronized int Q() {
         int i10;
         try {
-            i10 = f4669l;
+            i10 = f4835l;
             if (i10 == 1) {
                 Context contextG = G();
                 j9.c cVarO = j9.c.o();
                 int iH = cVarO.h(contextG, 12451000);
                 if (iH == 0) {
                     i10 = 4;
-                    f4669l = 4;
+                    f4835l = 4;
                 } else if (cVarO.b(contextG, iH, null) != null || DynamiteModule.a(contextG, "com.google.android.gms.auth.api.fallback") == 0) {
                     i10 = 2;
-                    f4669l = 2;
+                    f4835l = 2;
                 } else {
                     i10 = 3;
-                    f4669l = 3;
+                    f4835l = 3;
                 }
             }
         } catch (Throwable th2) {

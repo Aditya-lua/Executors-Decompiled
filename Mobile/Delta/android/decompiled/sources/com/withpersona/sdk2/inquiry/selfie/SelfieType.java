@@ -16,7 +16,7 @@ public interface SelfieType extends Parcelable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NotNull
-        public static final CenterOnly f12562a = new CenterOnly();
+        public static final CenterOnly f12643a = new CenterOnly();
 
         @NotNull
         public static final Parcelable.Creator<CenterOnly> CREATOR = new a();
@@ -28,7 +28,7 @@ public interface SelfieType extends Parcelable {
             public final CenterOnly createFromParcel(Parcel parcel) {
                 Intrinsics.checkNotNullParameter(parcel, "parcel");
                 parcel.readInt();
-                return CenterOnly.f12562a;
+                return CenterOnly.f12643a;
             }
 
             @Override // android.os.Parcelable.Creator
@@ -68,7 +68,7 @@ public interface SelfieType extends Parcelable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NotNull
-        public static final ConfigurablePoses f12563a = new ConfigurablePoses();
+        public static final ConfigurablePoses f12644a = new ConfigurablePoses();
 
         @NotNull
         public static final Parcelable.Creator<ConfigurablePoses> CREATOR = new a();
@@ -80,7 +80,7 @@ public interface SelfieType extends Parcelable {
             public final ConfigurablePoses createFromParcel(Parcel parcel) {
                 Intrinsics.checkNotNullParameter(parcel, "parcel");
                 parcel.readInt();
-                return ConfigurablePoses.f12563a;
+                return ConfigurablePoses.f12644a;
             }
 
             @Override // android.os.Parcelable.Creator
@@ -120,7 +120,7 @@ public interface SelfieType extends Parcelable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NotNull
-        public static final ThreePhotos f12564a = new ThreePhotos();
+        public static final ThreePhotos f12645a = new ThreePhotos();
 
         @NotNull
         public static final Parcelable.Creator<ThreePhotos> CREATOR = new a();
@@ -132,7 +132,7 @@ public interface SelfieType extends Parcelable {
             public final ThreePhotos createFromParcel(Parcel parcel) {
                 Intrinsics.checkNotNullParameter(parcel, "parcel");
                 parcel.readInt();
-                return ThreePhotos.f12564a;
+                return ThreePhotos.f12645a;
             }
 
             @Override // android.os.Parcelable.Creator

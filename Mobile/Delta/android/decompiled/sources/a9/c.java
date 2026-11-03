@@ -8,8 +8,8 @@ import n9.d;
 import za.i;
 
 /* JADX INFO: loaded from: classes.dex */
-public final class c extends k9.a.AbstractC0392a {
-    @Override // k9.a.AbstractC0392a
+public final class c extends k9.a.AbstractC0391a {
+    @Override // k9.a.AbstractC0391a
     public final /* synthetic */ k9.a.f b(Context context, Looper looper, d dVar, Object obj, e eVar, n nVar) {
         return new i(context, looper, dVar, eVar, nVar);
     }

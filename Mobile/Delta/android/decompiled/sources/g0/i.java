@@ -4,11 +4,11 @@ package g0;
 public final class i extends j2.b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f17452a;
+    public final int f17991a;
     public final j2 b;
 
     public i(int i10, j2 j2Var) {
-        this.f17452a = i10;
+        this.f17991a = i10;
         if (j2Var == null) {
             throw new NullPointerException("Null surfaceOutput");
         }
@@ -17,7 +17,7 @@ public final class i extends j2.b {
 
     @Override // g0.j2.b
     public int a() {
-        return this.f17452a;
+        return this.f17991a;
     }
 
     @Override // g0.j2.b
@@ -31,7 +31,7 @@ public final class i extends j2.b {
         }
         if (obj instanceof j2.b) {
             j2.b bVar = (j2.b) obj;
-            if (this.f17452a == bVar.a() && this.b.equals(bVar.b())) {
+            if (this.f17991a == bVar.a() && this.b.equals(bVar.b())) {
                 return true;
             }
         }
@@ -39,10 +39,10 @@ public final class i extends j2.b {
     }
 
     public int hashCode() {
-        return ((this.f17452a ^ 1000003) * 1000003) ^ this.b.hashCode();
+        return ((this.f17991a ^ 1000003) * 1000003) ^ this.b.hashCode();
     }
 
     public String toString() {
-        return "Event{eventCode=" + this.f17452a + ", surfaceOutput=" + this.b + "}";
+        return "Event{eventCode=" + this.f17991a + ", surfaceOutput=" + this.b + "}";
     }
 }

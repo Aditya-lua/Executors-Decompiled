@@ -5,10 +5,10 @@ import java.lang.reflect.Constructor;
 import kotlin.collections.q0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import um.h;
-import um.m;
-import um.t;
-import um.w;
+import sm.h;
+import sm.m;
+import sm.t;
+import sm.w;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class GenericFileUploadErrorResponse_DocumentErrorResponse_UnknownErrorJsonAdapter extends h<GenericFileUploadErrorResponse.DocumentErrorResponse.UnknownError> {
@@ -42,7 +42,7 @@ public final class GenericFileUploadErrorResponse_DocumentErrorResponse_UnknownE
     }
 
     /* JADX WARN: Can't rename method to resolve collision */
-    @Override // um.h
+    @Override // sm.h
     @NotNull
     public GenericFileUploadErrorResponse.DocumentErrorResponse.UnknownError fromJson(@NotNull m mVar) throws NoSuchMethodException {
         mVar.b();
@@ -58,7 +58,7 @@ public final class GenericFileUploadErrorResponse_DocumentErrorResponse_UnknownE
             } else if (iF == 0) {
                 strFromJson = this.stringAdapter.fromJson(mVar);
                 if (strFromJson == null) {
-                    throw wm.c.x(Title.type, Title.type, mVar);
+                    throw um.c.x(Title.type, Title.type, mVar);
                 }
                 i10 &= -2;
             } else if (iF == 1) {
@@ -75,13 +75,13 @@ public final class GenericFileUploadErrorResponse_DocumentErrorResponse_UnknownE
         }
         Constructor<GenericFileUploadErrorResponse.DocumentErrorResponse.UnknownError> declaredConstructor = this.constructorRef;
         if (declaredConstructor == null) {
-            declaredConstructor = GenericFileUploadErrorResponse.DocumentErrorResponse.UnknownError.class.getDeclaredConstructor(String.class, String.class, ErrorDetails.class, Integer.TYPE, wm.c.f34445c);
+            declaredConstructor = GenericFileUploadErrorResponse.DocumentErrorResponse.UnknownError.class.getDeclaredConstructor(String.class, String.class, ErrorDetails.class, Integer.TYPE, um.c.f33129c);
             this.constructorRef = declaredConstructor;
         }
         return declaredConstructor.newInstance(strFromJson, strFromJson2, errorDetailsFromJson, Integer.valueOf(i10), null);
     }
 
-    @Override // um.h
+    @Override // sm.h
     public void toJson(@NotNull t tVar, @Nullable GenericFileUploadErrorResponse.DocumentErrorResponse.UnknownError unknownError) {
         if (unknownError == null) {
             throw new NullPointerException("value_ was null! Wrap in .nullSafe() to write nullable values.");

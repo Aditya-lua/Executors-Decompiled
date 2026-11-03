@@ -1,45 +1,58 @@
 package as;
 
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
-import jt.n;
-import jt.o;
 import kotlin.Metadata;
 import kotlin.collections.CollectionsKt;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.Intrinsics;
-import kotlin.text.Regex;
-import kotlin.text.w;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0010\u0006\n\u0002\b\u0007\b`\u0018\u00002\u00020\u0001J?\u0010\b\u001a\u0004\u0018\u00010\u00052\b\u0010\u0002\u001a\u0004\u0018\u00010\u00012\b\u0010\u0003\u001a\u0004\u0018\u00010\u00012\u0018\u0010\u0007\u001a\u0014\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\u0006\u0012\u0004\u0012\u00020\u00050\u0004H\u0016¢\u0006\u0004\b\b\u0010\tJ7\u0010\u000b\u001a\u0004\u0018\u00010\u0005*\u00020\u00052\u0006\u0010\n\u001a\u00020\u00052\u0018\u0010\u0007\u001a\u0014\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\u0006\u0012\u0004\u0012\u00020\u00050\u0004H\u0002¢\u0006\u0004\b\u000b\u0010\f¨\u0006\rÀ\u0006\u0003"}, d2 = {"Las/c;", "", "expression", "data", "Lkotlin/Function2;", "", "", "formatFloatingPoint", "a", "(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/jvm/functions/Function2;)Ljava/lang/String;", "formattedArgument", "b", "(Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/functions/Function2;)Ljava/lang/String;", "operations-stdlib_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public interface c {
-    @Nullable
-    default String a(@Nullable Object expression, @Nullable Object data, @NotNull Function2<? super String, ? super Double, String> formatFloatingPoint) {
-        Object objB;
-        Intrinsics.checkNotNullParameter(formatFloatingPoint, "formatFloatingPoint");
-        List<Object> listC = ts.a.c(expression);
-        String strValueOf = String.valueOf(CollectionsKt.firstOrNull(listC));
-        String strValueOf2 = String.valueOf(ts.c.b(listC));
-        try {
-            n.Companion companion = n.INSTANCE;
-            objB = n.b(b(strValueOf, strValueOf2, formatFloatingPoint));
-        } catch (Throwable th2) {
-            n.Companion companion2 = n.INSTANCE;
-            objB = n.b(o.a(th2));
+@Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\u000f\n\u0002\b\u0006\b`\u0018\u00002\u00020\u0001J;\u0010\t\u001a\u00020\u00072\u0010\u0010\u0004\u001a\f\u0012\u0006\u0012\u0004\u0018\u00010\u0003\u0018\u00010\u00022\u0018\u0010\b\u001a\u0014\u0012\u0004\u0012\u00020\u0006\u0012\u0004\u0012\u00020\u0006\u0012\u0004\u0012\u00020\u00070\u0005H\u0016¢\u0006\u0004\b\t\u0010\nJ=\u0010\f\u001a\u00020\u00072\u0012\u0010\u0004\u001a\u000e\u0012\n\u0012\b\u0012\u0002\b\u0003\u0018\u00010\u000b0\u00022\u0018\u0010\b\u001a\u0014\u0012\u0004\u0012\u00020\u0006\u0012\u0004\u0012\u00020\u0006\u0012\u0004\u0012\u00020\u00070\u0005H\u0002¢\u0006\u0004\b\f\u0010\nJ-\u0010\u000f\u001a\u0004\u0018\u00010\u00062\f\u0010\r\u001a\b\u0012\u0002\b\u0003\u0018\u00010\u000b2\f\u0010\u000e\u001a\b\u0012\u0002\b\u0003\u0018\u00010\u000bH\u0002¢\u0006\u0004\b\u000f\u0010\u0010¨\u0006\u0011À\u0006\u0003"}, d2 = {"Las/c;", "Las/b;", "", "", "values", "Lkotlin/Function2;", "", "", "operator", "e", "(Ljava/util/List;Lkotlin/jvm/functions/Function2;)Z", "", "m", "first", "second", "j", "(Ljava/lang/Comparable;Ljava/lang/Comparable;)Ljava/lang/Integer;", "core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public interface c extends b {
+    default boolean e(@Nullable List<? extends Object> values, @NotNull Function2<? super Integer, ? super Integer, Boolean> operator) {
+        List<Comparable<?>> listD;
+        Intrinsics.checkNotNullParameter(operator, "operator");
+        if (values == null || (listD = rs.a.d(values)) == null) {
+            return false;
         }
-        if (n.e(objB) == null) {
-            return (String) objB;
-        }
-        return null;
+        return m(listD, operator);
     }
 
-    default String b(String str, String str2, Function2<? super String, ? super Double, String> function2) {
-        Double dR;
-        if (!new Regex("%[\\d|.]*[f]").f(str) || (dR = w.r(str2)) == null) {
+    default Integer j(Comparable<?> first, Comparable<?> second) {
+        List<Comparable<?>> listD = d(first, second);
+        if (listD == null) {
             return null;
         }
-        return function2.invoke(str, Double.valueOf(dR.doubleValue()));
+        List<Comparable<?>> list = listD;
+        boolean z10 = list instanceof Collection;
+        if (!z10 || !list.isEmpty()) {
+            Iterator<T> it = list.iterator();
+            while (it.hasNext()) {
+                if (((Comparable) it.next()) != null) {
+                    if (!z10 || !list.isEmpty()) {
+                        Iterator<T> it2 = list.iterator();
+                        while (it2.hasNext()) {
+                            if (((Comparable) it2.next()) == null) {
+                                return null;
+                            }
+                        }
+                    }
+                    return Integer.valueOf(kt.a.a((Comparable) CollectionsKt.firstOrNull(listD), (Comparable) rs.c.b(listD)));
+                }
+            }
+        }
+        return Integer.valueOf(kt.a.a((Comparable) CollectionsKt.firstOrNull(listD), (Comparable) rs.c.b(listD)));
+    }
+
+    default boolean m(List<? extends Comparable<?>> values, Function2<? super Integer, ? super Integer, Boolean> operator) {
+        Integer numJ = j((Comparable) CollectionsKt.firstOrNull(values), (Comparable) rs.c.b(values));
+        if (numJ != null) {
+            return operator.invoke(Integer.valueOf(numJ.intValue()), 0).booleanValue();
+        }
+        return false;
     }
 }

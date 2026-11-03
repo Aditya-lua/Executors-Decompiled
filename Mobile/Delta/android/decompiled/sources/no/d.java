@@ -1,135 +1,53 @@
 package no;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import com.withpersona.sdk2.inquiry.shared.ui.PersonaMaterialButton;
-import com.withpersona.sdk2.inquiry.shared.ui.Pi2NavigationBar;
-import com.withpersona.sdk2.inquiry.shared.ui.ThemeableLottieAnimationView;
-import io.n2;
-import io.o2;
+import android.content.Context;
+import com.withpersona.sdk2.camera.CameraProperties;
+import com.withpersona.sdk2.inquiry.governmentid.network.GovernmentIdRequestArguments;
+import com.withpersona.sdk2.inquiry.tracking.TrackingEventsLogger;
+import dt.i;
+import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class d implements r5.a {
+public final class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    @NonNull
-    public final CoordinatorLayout f26514a;
-
-    @NonNull
-    public final TextView b;
+    public final i<Context> f27394a;
+    public final i<com.withpersona.sdk2.inquiry.governmentid.network.b> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    @NonNull
-    public final PersonaMaterialButton f26515c;
+    public final i<kq.a> f27395c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    @NonNull
-    public final ConstraintLayout f26516d;
+    public final i<co.a> f27396d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    @NonNull
-    public final ThemeableLottieAnimationView f26517e;
+    public final i<pq.a> f27397e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    @NonNull
-    public final View f26518f;
+    public final i<jn.a> f27398f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    @NonNull
-    public final ConstraintLayout f26519g;
+    public final i<TrackingEventsLogger> f27399g;
 
-    /* JADX INFO: renamed from: h, reason: collision with root package name */
-    @NonNull
-    public final CardView f26520h;
-
-    /* JADX INFO: renamed from: i, reason: collision with root package name */
-    @NonNull
-    public final Pi2NavigationBar f26521i;
-
-    /* JADX INFO: renamed from: j, reason: collision with root package name */
-    @NonNull
-    public final TextView f26522j;
-
-    /* JADX INFO: renamed from: k, reason: collision with root package name */
-    @NonNull
-    public final PersonaMaterialButton f26523k;
-
-    public d(@NonNull CoordinatorLayout coordinatorLayout, @NonNull TextView textView, @NonNull PersonaMaterialButton personaMaterialButton, @NonNull ConstraintLayout constraintLayout, @NonNull ThemeableLottieAnimationView themeableLottieAnimationView, @NonNull View view, @NonNull ConstraintLayout constraintLayout2, @NonNull CardView cardView, @NonNull Pi2NavigationBar pi2NavigationBar, @NonNull TextView textView2, @NonNull PersonaMaterialButton personaMaterialButton2) {
-        this.f26514a = coordinatorLayout;
-        this.b = textView;
-        this.f26515c = personaMaterialButton;
-        this.f26516d = constraintLayout;
-        this.f26517e = themeableLottieAnimationView;
-        this.f26518f = view;
-        this.f26519g = constraintLayout2;
-        this.f26520h = cardView;
-        this.f26521i = pi2NavigationBar;
-        this.f26522j = textView2;
-        this.f26523k = personaMaterialButton2;
+    public d(i<Context> iVar, i<com.withpersona.sdk2.inquiry.governmentid.network.b> iVar2, i<kq.a> iVar3, i<co.a> iVar4, i<pq.a> iVar5, i<jn.a> iVar6, i<TrackingEventsLogger> iVar7) {
+        this.f27394a = iVar;
+        this.b = iVar2;
+        this.f27395c = iVar3;
+        this.f27396d = iVar4;
+        this.f27397e = iVar5;
+        this.f27398f = iVar6;
+        this.f27399g = iVar7;
     }
 
-    @NonNull
-    public static d a(@NonNull View view) {
-        View viewA;
-        int i10 = n2.f20708d;
-        TextView textView = (TextView) r5.b.a(view, i10);
-        if (textView != null) {
-            i10 = n2.f20720j;
-            PersonaMaterialButton personaMaterialButton = (PersonaMaterialButton) r5.b.a(view, i10);
-            if (personaMaterialButton != null) {
-                i10 = n2.f20738s;
-                ConstraintLayout constraintLayout = (ConstraintLayout) r5.b.a(view, i10);
-                if (constraintLayout != null) {
-                    i10 = n2.R;
-                    ThemeableLottieAnimationView themeableLottieAnimationView = (ThemeableLottieAnimationView) r5.b.a(view, i10);
-                    if (themeableLottieAnimationView != null && (viewA = r5.b.a(view, (i10 = n2.S))) != null) {
-                        i10 = n2.W;
-                        ConstraintLayout constraintLayout2 = (ConstraintLayout) r5.b.a(view, i10);
-                        if (constraintLayout2 != null) {
-                            i10 = n2.f20707c0;
-                            CardView cardView = (CardView) r5.b.a(view, i10);
-                            if (cardView != null) {
-                                i10 = n2.f20709d0;
-                                Pi2NavigationBar pi2NavigationBar = (Pi2NavigationBar) r5.b.a(view, i10);
-                                if (pi2NavigationBar != null) {
-                                    i10 = n2.L0;
-                                    TextView textView2 = (TextView) r5.b.a(view, i10);
-                                    if (textView2 != null) {
-                                        i10 = n2.N0;
-                                        PersonaMaterialButton personaMaterialButton2 = (PersonaMaterialButton) r5.b.a(view, i10);
-                                        if (personaMaterialButton2 != null) {
-                                            return new d((CoordinatorLayout) view, textView, personaMaterialButton, constraintLayout, themeableLottieAnimationView, viewA, constraintLayout2, cardView, pi2NavigationBar, textView2, personaMaterialButton2);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
+    public static d a(i<Context> iVar, i<com.withpersona.sdk2.inquiry.governmentid.network.b> iVar2, i<kq.a> iVar3, i<co.a> iVar4, i<pq.a> iVar5, i<jn.a> iVar6, i<TrackingEventsLogger> iVar7) {
+        return new d(iVar, iVar2, iVar3, iVar4, iVar5, iVar6, iVar7);
     }
 
-    @NonNull
-    public static d c(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
-        View viewInflate = layoutInflater.inflate(o2.f20758d, viewGroup, false);
-        if (z10) {
-            viewGroup.addView(viewInflate);
-        }
-        return a(viewInflate);
+    public static c c(Context context, String str, String str2, String str3, String str4, com.withpersona.sdk2.inquiry.governmentid.network.b bVar, @Nullable GovernmentIdRequestArguments governmentIdRequestArguments, kq.a aVar, co.a aVar2, pq.a aVar3, @Nullable String str5, CameraProperties cameraProperties, jn.a aVar4, TrackingEventsLogger trackingEventsLogger) {
+        return new c(context, str, str2, str3, str4, bVar, governmentIdRequestArguments, aVar, aVar2, aVar3, str5, cameraProperties, aVar4, trackingEventsLogger);
     }
 
-    @Override // r5.a
-    @NonNull
-    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public CoordinatorLayout getRoot() {
-        return this.f26514a;
+    public c b(String str, String str2, String str3, String str4, @Nullable GovernmentIdRequestArguments governmentIdRequestArguments, @Nullable String str5, CameraProperties cameraProperties) {
+        return c(this.f27394a.get(), str, str2, str3, str4, this.b.get(), governmentIdRequestArguments, this.f27395c.get(), this.f27396d.get(), this.f27397e.get(), str5, cameraProperties, this.f27398f.get(), this.f27399g.get());
     }
 }

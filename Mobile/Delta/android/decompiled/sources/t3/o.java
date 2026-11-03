@@ -22,11 +22,11 @@ public final class o<T> implements e0<T> {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
     @NotNull
-    public static final Set<String> f31550e = new LinkedHashSet();
+    public static final Set<String> f32069e = new LinkedHashSet();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NotNull
-    public static final Object f31551f = new Object();
+    public static final Object f32070f = new Object();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -44,7 +44,7 @@ public final class o<T> implements e0<T> {
     public static final class a extends kotlin.jvm.internal.m implements Function1<File, t> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public static final a f31554i = new a();
+        public static final a f32073i = new a();
 
         public a() {
             super(1);
@@ -68,12 +68,12 @@ public final class o<T> implements e0<T> {
 
         @NotNull
         public final Set<String> a() {
-            return o.f31550e;
+            return o.f32069e;
         }
 
         @NotNull
         public final Object b() {
-            return o.f31551f;
+            return o.f32070f;
         }
 
         public Companion() {
@@ -84,28 +84,28 @@ public final class o<T> implements e0<T> {
     public static final class c extends kotlin.jvm.internal.m implements Function0<Unit> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ File f31555i;
+        public final /* synthetic */ File f32074i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public c(File file) {
             super(0);
-            this.f31555i = file;
+            this.f32074i = file;
         }
 
         public final void b() {
             Companion companion = o.INSTANCE;
             Object objB = companion.b();
-            File file = this.f31555i;
+            File file = this.f32074i;
             synchronized (objB) {
                 companion.a().remove(file.getAbsolutePath());
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             }
         }
 
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() {
             b();
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
     }
 
@@ -123,9 +123,9 @@ public final class o<T> implements e0<T> {
     @NotNull
     public f0<T> a() throws IOException {
         File file = this.produceFile.invoke().getCanonicalFile();
-        synchronized (f31551f) {
+        synchronized (f32070f) {
             String path = file.getAbsolutePath();
-            Set<String> set = f31550e;
+            Set<String> set = f32069e;
             if (set.contains(path)) {
                 throw new IllegalStateException(("There are multiple DataStores active for the same file: " + path + ". You should either maintain your DataStore as a singleton or confirm that there is no two DataStore's active on the same file (by confirming that the scope is cancelled).").toString());
             }
@@ -137,6 +137,6 @@ public final class o<T> implements e0<T> {
     }
 
     public /* synthetic */ o(a0 a0Var, Function1 function1, Function0 function0, int i10, DefaultConstructorMarker defaultConstructorMarker) {
-        this(a0Var, (i10 & 2) != 0 ? a.f31554i : function1, function0);
+        this(a0Var, (i10 & 2) != 0 ? a.f32073i : function1, function0);
     }
 }

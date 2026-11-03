@@ -6,13 +6,13 @@ import java.util.Locale;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class s3 implements Iterable, Serializable {
-    public static final s3 b = new q3(z4.f7356a);
+    public static final s3 b = new q3(z4.f7430a);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f7233a = 0;
+    public int f7307a = 0;
 
     static {
-        int i10 = e3.f7032a;
+        int i10 = e3.f7106a;
     }
 
     public static int i(int i10, int i11, int i12) {
@@ -77,8 +77,8 @@ public abstract class s3 implements Iterable, Serializable {
         if (iD == 0) {
             return true;
         }
-        int i10 = this.f7233a;
-        int i11 = s3Var.f7233a;
+        int i10 = this.f7307a;
+        int i11 = s3Var.f7307a;
         if (i10 == 0 || i11 == 0 || i10 == i11) {
             return h(s3Var);
         }
@@ -92,14 +92,14 @@ public abstract class s3 implements Iterable, Serializable {
     public abstract boolean h(s3 s3Var);
 
     public final int hashCode() {
-        int iC = this.f7233a;
+        int iC = this.f7307a;
         if (iC == 0) {
             int iD = d();
             iC = c(iD, 0, iD);
             if (iC == 0) {
                 iC = 1;
             }
-            this.f7233a = iC;
+            this.f7307a = iC;
         }
         return iC;
     }
@@ -112,7 +112,7 @@ public abstract class s3 implements Iterable, Serializable {
     public final byte[] m() {
         int iD = d();
         if (iD == 0) {
-            return z4.f7356a;
+            return z4.f7430a;
         }
         byte[] bArr = new byte[iD];
         f(bArr, 0, 0, iD);

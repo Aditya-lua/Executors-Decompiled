@@ -6,15 +6,15 @@ import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
 public final class m5 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final AbstractSafeParcelable f25744a;
+    public final AbstractSafeParcelable f26565a;
     public final String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final long f25745c;
+    public final long f26566c;
 
     public m5(AbstractSafeParcelable abstractSafeParcelable, String str, long j10) {
-        this.f25744a = abstractSafeParcelable;
+        this.f26565a = abstractSafeParcelable;
         this.b = str;
-        this.f25745c = j10;
+        this.f26566c = j10;
     }
 }

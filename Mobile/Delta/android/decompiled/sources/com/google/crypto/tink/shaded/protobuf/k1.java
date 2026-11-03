@@ -4,17 +4,17 @@ package com.google.crypto.tink.shaded.protobuf;
 public final class k1 implements q0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final b1 f8503a;
+    public final b1 f8577a;
     public final boolean b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final int[] f8504c;
+    public final int[] f8578c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final t[] f8505d;
+    public final t[] f8579d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final s0 f8506e;
+    public final s0 f8580e;
 
     @Override // com.google.crypto.tink.shaded.protobuf.q0
     public boolean a() {
@@ -23,19 +23,19 @@ public final class k1 implements q0 {
 
     @Override // com.google.crypto.tink.shaded.protobuf.q0
     public s0 b() {
-        return this.f8506e;
+        return this.f8580e;
     }
 
     @Override // com.google.crypto.tink.shaded.protobuf.q0
     public b1 c() {
-        return this.f8503a;
+        return this.f8577a;
     }
 
     public int[] d() {
-        return this.f8504c;
+        return this.f8578c;
     }
 
     public t[] e() {
-        return this.f8505d;
+        return this.f8579d;
     }
 }

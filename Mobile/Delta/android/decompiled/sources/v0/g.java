@@ -13,10 +13,10 @@ import n0.u1;
 public class g {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final boolean f32683a;
+    public final boolean f33251a;
 
     public g() {
-        this.f32683a = u0.b.b(SurfaceOrderQuirk.class) != null;
+        this.f33251a = u0.b.b(SurfaceOrderQuirk.class) != null;
     }
 
     public static /* synthetic */ int a(g gVar, o3.f fVar, o3.f fVar2) {
@@ -32,11 +32,11 @@ public class g {
     }
 
     public void c(List<o3.f> list) {
-        if (this.f32683a) {
+        if (this.f33251a) {
             Collections.sort(list, new Comparator() { // from class: v0.f
                 @Override // java.util.Comparator
                 public final int compare(Object obj, Object obj2) {
-                    return g.a(this.f32682a, (o3.f) obj, (o3.f) obj2);
+                    return g.a(this.f33250a, (o3.f) obj, (o3.f) obj2);
                 }
             });
         }

@@ -12,16 +12,16 @@ public final class r5 extends LinkedHashMap {
     public static final r5 b;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f7223a;
+    public boolean f7297a;
 
     static {
         r5 r5Var = new r5();
         b = r5Var;
-        r5Var.f7223a = false;
+        r5Var.f7297a = false;
     }
 
     public r5() {
-        this.f7223a = true;
+        this.f7297a = true;
     }
 
     public static r5 a() {
@@ -49,7 +49,7 @@ public final class r5 extends LinkedHashMap {
     }
 
     public final void c() {
-        this.f7223a = false;
+        this.f7297a = false;
     }
 
     @Override // java.util.LinkedHashMap, java.util.HashMap, java.util.AbstractMap, java.util.Map
@@ -99,7 +99,7 @@ public final class r5 extends LinkedHashMap {
     }
 
     public final boolean f() {
-        return this.f7223a;
+        return this.f7297a;
     }
 
     @Override // java.util.AbstractMap, java.util.Map
@@ -114,7 +114,7 @@ public final class r5 extends LinkedHashMap {
     }
 
     public final void j() {
-        if (!this.f7223a) {
+        if (!this.f7297a) {
             throw new UnsupportedOperationException();
         }
     }
@@ -145,6 +145,6 @@ public final class r5 extends LinkedHashMap {
 
     public r5(Map map) {
         super(map);
-        this.f7223a = true;
+        this.f7297a = true;
     }
 }

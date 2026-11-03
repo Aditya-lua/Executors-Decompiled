@@ -8,13 +8,13 @@ import u9.m;
 public class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static Context f34139a;
+    public static Context f34345a;
     public static Boolean b;
 
     public static synchronized boolean a(@NonNull Context context) {
         Boolean bool;
         Context applicationContext = context.getApplicationContext();
-        Context context2 = f34139a;
+        Context context2 = f34345a;
         if (context2 != null && (bool = b) != null && context2 == applicationContext) {
             return bool.booleanValue();
         }
@@ -29,7 +29,7 @@ public class a {
                 b = Boolean.FALSE;
             }
         }
-        f34139a = applicationContext;
+        f34345a = applicationContext;
         return b.booleanValue();
     }
 }

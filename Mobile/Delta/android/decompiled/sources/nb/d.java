@@ -6,22 +6,22 @@ import java.util.Objects;
 public final class d extends c {
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final com.google.android.gms.internal.measurement.h4 f25442g;
+    public final com.google.android.gms.internal.measurement.h4 f26263g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final /* synthetic */ e f25443h;
+    public final /* synthetic */ e f26264h;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public d(e eVar, String str, int i10, com.google.android.gms.internal.measurement.h4 h4Var) {
         super(str, i10);
         Objects.requireNonNull(eVar);
-        this.f25443h = eVar;
-        this.f25442g = h4Var;
+        this.f26264h = eVar;
+        this.f26263g = h4Var;
     }
 
     @Override // nb.c
     public final int a() {
-        return this.f25442g.G();
+        return this.f26263g.G();
     }
 
     @Override // nb.c
@@ -37,9 +37,9 @@ public final class d extends c {
     /* JADX WARN: Multi-variable type inference failed */
     public final boolean k(Long l10, Long l11, com.google.android.gms.internal.measurement.r7 r7Var, boolean z10) {
         com.google.android.gms.internal.measurement.ye.a();
-        g7 g7Var = this.f25443h.f25625a;
-        boolean zH = g7Var.w().H(this.f25377a, z4.E0);
-        com.google.android.gms.internal.measurement.h4 h4Var = this.f25442g;
+        g7 g7Var = this.f26264h.f26446a;
+        boolean zH = g7Var.w().H(this.f26198a, z4.E0);
+        com.google.android.gms.internal.measurement.h4 h4Var = this.f26263g;
         boolean zK = h4Var.K();
         boolean zL = h4Var.L();
         boolean zO = h4Var.O();
@@ -82,12 +82,12 @@ public final class d extends c {
         if (boolE == null) {
             return false;
         }
-        this.f25378c = Boolean.TRUE;
+        this.f26199c = Boolean.TRUE;
         if (zO && !boolE.booleanValue()) {
             return true;
         }
         if (!z10 || h4Var.K()) {
-            this.f25379d = boolE;
+            this.f26200d = boolE;
         }
         if (boolE.booleanValue() && objArr != false && r7Var.F()) {
             long jG = r7Var.G();
@@ -98,9 +98,9 @@ public final class d extends c {
                 jG = l11.longValue();
             }
             if (h4Var.L()) {
-                this.f25381f = Long.valueOf(jG);
+                this.f26202f = Long.valueOf(jG);
             } else {
-                this.f25380e = Long.valueOf(jG);
+                this.f26201e = Long.valueOf(jG);
             }
         }
         return true;

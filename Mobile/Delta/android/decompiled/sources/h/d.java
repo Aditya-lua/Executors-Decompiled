@@ -27,7 +27,7 @@ public class d extends a<String[], List<Uri>> {
     @Override // h.a
     @Nullable
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public final a.C0332a<List<Uri>> getSynchronousResult(@NotNull Context context, @NotNull String[] input) {
+    public final a.C0334a<List<Uri>> getSynchronousResult(@NotNull Context context, @NotNull String[] input) {
         Intrinsics.checkNotNullParameter(context, "context");
         Intrinsics.checkNotNullParameter(input, "input");
         return null;

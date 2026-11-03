@@ -13,32 +13,32 @@ import java.lang.reflect.Method;
 public class q {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final int f32102a;
+    public static final int f32755a;
     public static final Method b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final Method f32103c;
+    public static final Method f32756c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final Method f32104d;
+    public static final Method f32757d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final Method f32105e;
+    public static final Method f32758e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final Method f32106f;
+    public static final Method f32759f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final Method f32107g;
+    public static final Method f32760g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final Method f32108h;
+    public static final Method f32761h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final Method f32109i;
+    public static final Method f32762i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static Boolean f32110j;
+    public static Boolean f32763j;
 
     static {
         Method method;
@@ -50,7 +50,7 @@ public class q {
         Method method7;
         Method method8;
         Class cls = Integer.TYPE;
-        f32102a = Process.myUid();
+        f32755a = Process.myUid();
         try {
             method = WorkSource.class.getMethod("add", cls);
         } catch (Exception unused) {
@@ -62,25 +62,25 @@ public class q {
         } catch (Exception unused2) {
             method2 = null;
         }
-        f32103c = method2;
+        f32756c = method2;
         try {
             method3 = WorkSource.class.getMethod("size", null);
         } catch (Exception unused3) {
             method3 = null;
         }
-        f32104d = method3;
+        f32757d = method3;
         try {
             method4 = WorkSource.class.getMethod("get", cls);
         } catch (Exception unused4) {
             method4 = null;
         }
-        f32105e = method4;
+        f32758e = method4;
         try {
             method5 = WorkSource.class.getMethod("getName", cls);
         } catch (Exception unused5) {
             method5 = null;
         }
-        f32106f = method5;
+        f32759f = method5;
         if (m.h()) {
             try {
                 method6 = WorkSource.class.getMethod("createWorkChain", null);
@@ -91,7 +91,7 @@ public class q {
         } else {
             method6 = null;
         }
-        f32107g = method6;
+        f32760g = method6;
         if (m.h()) {
             try {
                 method7 = Class.forName("android.os.WorkSource$WorkChain").getMethod("addNode", cls, String.class);
@@ -102,7 +102,7 @@ public class q {
         } else {
             method7 = null;
         }
-        f32108h = method7;
+        f32761h = method7;
         if (m.h()) {
             try {
                 method8 = WorkSource.class.getMethod("isEmpty", null);
@@ -116,12 +116,12 @@ public class q {
         } else {
             method8 = null;
         }
-        f32109i = method8;
-        f32110j = null;
+        f32762i = method8;
+        f32763j = null;
     }
 
     public static void a(@NonNull WorkSource workSource, int i10, @NonNull String str) {
-        Method method = f32103c;
+        Method method = f32756c;
         if (method != null) {
             if (str == null) {
                 str = "";
@@ -165,7 +165,7 @@ public class q {
     }
 
     public static synchronized boolean c(@NonNull Context context) {
-        Boolean bool = f32110j;
+        Boolean bool = f32763j;
         if (bool != null) {
             return bool.booleanValue();
         }
@@ -173,7 +173,7 @@ public class q {
             return false;
         }
         boolean z10 = l2.b.a(context, "android.permission.UPDATE_DEVICE_STATS") == 0;
-        f32110j = Boolean.valueOf(z10);
+        f32763j = Boolean.valueOf(z10);
         return z10;
     }
 }

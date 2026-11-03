@@ -25,7 +25,7 @@ public class k extends a<Uri, Boolean> {
     @Override // h.a
     @Nullable
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public final a.C0332a<Boolean> getSynchronousResult(@NotNull Context context, @NotNull Uri input) {
+    public final a.C0334a<Boolean> getSynchronousResult(@NotNull Context context, @NotNull Uri input) {
         Intrinsics.checkNotNullParameter(context, "context");
         Intrinsics.checkNotNullParameter(input, "input");
         return null;

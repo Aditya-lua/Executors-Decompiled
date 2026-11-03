@@ -10,8 +10,8 @@ import com.google.android.gms.common.api.Status;
 public interface a extends IInterface {
 
     /* JADX INFO: renamed from: g9.a$a, reason: collision with other inner class name */
-    public static abstract class AbstractBinderC0321a extends ab.d implements a {
-        public AbstractBinderC0321a() {
+    public static abstract class AbstractBinderC0325a extends ab.d implements a {
+        public AbstractBinderC0325a() {
             super("com.google.android.gms.auth.blockstore.restorecredential.internal.ICreateRestoreCredentialCallback");
         }
 
@@ -23,10 +23,10 @@ public interface a extends IInterface {
             Status status = (Status) ab.e.a(parcel, Status.CREATOR);
             CreateRestoreCredentialResponse createRestoreCredentialResponse = (CreateRestoreCredentialResponse) ab.e.a(parcel, CreateRestoreCredentialResponse.CREATOR);
             s2(parcel);
-            P0(status, createRestoreCredentialResponse);
+            M0(status, createRestoreCredentialResponse);
             return true;
         }
     }
 
-    void P0(@NonNull Status status, @NonNull CreateRestoreCredentialResponse createRestoreCredentialResponse);
+    void M0(@NonNull Status status, @NonNull CreateRestoreCredentialResponse createRestoreCredentialResponse);
 }

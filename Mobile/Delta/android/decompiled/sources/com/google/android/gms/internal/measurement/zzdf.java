@@ -13,18 +13,18 @@ public final class zzdf extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzdf> CREATOR = new i2();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f6976f;
+    public final int f7050f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final String f6977g;
+    public final String f7051g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final Intent f6978h;
+    public final Intent f7052h;
 
     public zzdf(int i10, String str, Intent intent) {
-        this.f6976f = i10;
-        this.f6977g = str;
-        this.f6978h = intent;
+        this.f7050f = i10;
+        this.f7051g = str;
+        this.f7052h = intent;
     }
 
     public static zzdf a(Activity activity) {
@@ -39,20 +39,20 @@ public final class zzdf extends AbstractSafeParcelable {
             return false;
         }
         zzdf zzdfVar = (zzdf) obj;
-        return this.f6976f == zzdfVar.f6976f && Objects.equals(this.f6977g, zzdfVar.f6977g) && Objects.equals(this.f6978h, zzdfVar.f6978h);
+        return this.f7050f == zzdfVar.f7050f && Objects.equals(this.f7051g, zzdfVar.f7051g) && Objects.equals(this.f7052h, zzdfVar.f7052h);
     }
 
     public final int hashCode() {
-        return this.f6976f;
+        return this.f7050f;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(@NonNull Parcel parcel, int i10) {
-        int i11 = this.f6976f;
+        int i11 = this.f7050f;
         int iA = o9.b.a(parcel);
         o9.b.n(parcel, 1, i11);
-        o9.b.v(parcel, 2, this.f6977g, false);
-        o9.b.t(parcel, 3, this.f6978h, i10, false);
+        o9.b.v(parcel, 2, this.f7051g, false);
+        o9.b.t(parcel, 3, this.f7052h, i10, false);
         o9.b.b(parcel, iA);
     }
 }

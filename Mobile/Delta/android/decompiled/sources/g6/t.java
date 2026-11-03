@@ -14,19 +14,19 @@ public final class t {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final int[] f17930a = {13, 15, 14};
+    public static final int[] f18469a = {13, 15, 14};
 
     @NotNull
     public static final int[] b(@NotNull NetworkRequest networkRequest) {
         Intrinsics.checkNotNullParameter(networkRequest, "<this>");
         if (Build.VERSION.SDK_INT >= 31) {
-            return r.f17927a.a(networkRequest);
+            return r.f18466a.a(networkRequest);
         }
         int[] iArr = {17, 5, 2, 10, 29, 19, 3, 32, 7, 4, 12, 36, 23, 0, 33, 20, 11, 13, 18, 21, 15, 35, 34, 8, 1, 25, 14, 16, 6, 9};
         ArrayList arrayList = new ArrayList();
         for (int i10 = 0; i10 < 30; i10++) {
             int i11 = iArr[i10];
-            if (q.f17926a.c(networkRequest, i11)) {
+            if (q.f18465a.c(networkRequest, i11)) {
                 arrayList.add(Integer.valueOf(i11));
             }
         }
@@ -37,13 +37,13 @@ public final class t {
     public static final int[] c(@NotNull NetworkRequest networkRequest) {
         Intrinsics.checkNotNullParameter(networkRequest, "<this>");
         if (Build.VERSION.SDK_INT >= 31) {
-            return r.f17927a.b(networkRequest);
+            return r.f18466a.b(networkRequest);
         }
         int[] iArr = {2, 0, 3, 6, 10, 9, 8, 4, 1, 5};
         ArrayList arrayList = new ArrayList();
         for (int i10 = 0; i10 < 10; i10++) {
             int i11 = iArr[i10];
-            if (q.f17926a.d(networkRequest, i11)) {
+            if (q.f18465a.d(networkRequest, i11)) {
                 arrayList.add(Integer.valueOf(i11));
             }
         }

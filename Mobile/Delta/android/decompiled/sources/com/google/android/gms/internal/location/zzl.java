@@ -17,37 +17,37 @@ public final class zzl extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzl> CREATOR = new x();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f6364f;
+    public final int f6437f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final zzj f6365g;
+    public final zzj f6438g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final l f6366h;
+    public final l f6439h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final d f6367i;
+    public final d f6440i;
 
     public zzl(int i10, zzj zzjVar, IBinder iBinder, IBinder iBinder2) {
-        this.f6364f = i10;
-        this.f6365g = zzjVar;
+        this.f6437f = i10;
+        this.f6438g = zzjVar;
         d cVar = null;
-        this.f6366h = iBinder == null ? null : k.s2(iBinder);
+        this.f6439h = iBinder == null ? null : k.s2(iBinder);
         if (iBinder2 != null) {
             IInterface iInterfaceQueryLocalInterface = iBinder2.queryLocalInterface("com.google.android.gms.location.internal.IFusedLocationProviderCallback");
             cVar = iInterfaceQueryLocalInterface instanceof d ? (d) iInterfaceQueryLocalInterface : new c(iBinder2);
         }
-        this.f6367i = cVar;
+        this.f6440i = cVar;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i10) {
         int iA = b.a(parcel);
-        b.n(parcel, 1, this.f6364f);
-        b.t(parcel, 2, this.f6365g, i10, false);
-        l lVar = this.f6366h;
+        b.n(parcel, 1, this.f6437f);
+        b.t(parcel, 2, this.f6438g, i10, false);
+        l lVar = this.f6439h;
         b.m(parcel, 3, lVar == null ? null : lVar.asBinder(), false);
-        d dVar = this.f6367i;
+        d dVar = this.f6440i;
         b.m(parcel, 4, dVar != null ? dVar.asBinder() : null, false);
         b.b(parcel, iA);
     }

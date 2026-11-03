@@ -16,7 +16,7 @@ public final class Extras {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static final Extras f22205c = new a().a();
+    public static final Extras f22429c = new a().a();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
     @NotNull

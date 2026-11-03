@@ -4,7 +4,7 @@ package q7;
 public class l implements n0<Float> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final l f29258a = new l();
+    public static final l f29611a = new l();
 
     @Override // q7.n0
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */

@@ -14,7 +14,7 @@ import org.xmlpull.v1.XmlPullParserException;
 public final class a {
 
     /* JADX INFO: renamed from: q2.a$a, reason: collision with other inner class name */
-    public static class C0514a {
+    public static class C0513a {
         public static void a(Drawable drawable, Resources.Theme theme) {
             drawable.applyTheme(theme);
         }
@@ -63,11 +63,11 @@ public final class a {
     }
 
     public static void a(Drawable drawable, Resources.Theme theme) {
-        C0514a.a(drawable, theme);
+        C0513a.a(drawable, theme);
     }
 
     public static boolean b(Drawable drawable) {
-        return C0514a.b(drawable);
+        return C0513a.b(drawable);
     }
 
     public static void c(Drawable drawable) {
@@ -80,7 +80,7 @@ public final class a {
     }
 
     public static ColorFilter e(Drawable drawable) {
-        return C0514a.c(drawable);
+        return C0513a.c(drawable);
     }
 
     public static int f(Drawable drawable) {
@@ -88,7 +88,7 @@ public final class a {
     }
 
     public static void g(Drawable drawable, Resources resources, XmlPullParser xmlPullParser, AttributeSet attributeSet, Resources.Theme theme) throws XmlPullParserException, IOException {
-        C0514a.d(drawable, resources, xmlPullParser, attributeSet, theme);
+        C0513a.d(drawable, resources, xmlPullParser, attributeSet, theme);
     }
 
     @Deprecated
@@ -107,11 +107,11 @@ public final class a {
     }
 
     public static void k(Drawable drawable, float f10, float f11) {
-        C0514a.e(drawable, f10, f11);
+        C0513a.e(drawable, f10, f11);
     }
 
     public static void l(Drawable drawable, int i10, int i11, int i12, int i13) {
-        C0514a.f(drawable, i10, i11, i12, i13);
+        C0513a.f(drawable, i10, i11, i12, i13);
     }
 
     public static boolean m(Drawable drawable, int i10) {
@@ -119,15 +119,15 @@ public final class a {
     }
 
     public static void n(Drawable drawable, int i10) {
-        C0514a.g(drawable, i10);
+        C0513a.g(drawable, i10);
     }
 
     public static void o(Drawable drawable, ColorStateList colorStateList) {
-        C0514a.h(drawable, colorStateList);
+        C0513a.h(drawable, colorStateList);
     }
 
     public static void p(Drawable drawable, PorterDuff.Mode mode) {
-        C0514a.i(drawable, mode);
+        C0513a.i(drawable, mode);
     }
 
     /* JADX WARN: Multi-variable type inference failed */

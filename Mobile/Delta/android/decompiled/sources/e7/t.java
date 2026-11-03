@@ -20,16 +20,16 @@ public final class t implements o {
     @Override // e7.o
     /* JADX INFO: renamed from: a */
     public boolean getAllowHardware() {
-        return k.f15196a.b(this.logger);
+        return k.f15810a.b(this.logger);
     }
 
     @Override // e7.o
     public boolean b(@NotNull Size size) {
         y6.a aVarD = size.d();
-        if ((aVarD instanceof y6.a.C0655a ? ((y6.a.C0655a) aVarD).getPx() : Integer.MAX_VALUE) <= 100) {
+        if ((aVarD instanceof y6.a.C0670a ? ((y6.a.C0670a) aVarD).getPx() : Integer.MAX_VALUE) <= 100) {
             return false;
         }
         y6.a aVarC = size.c();
-        return (aVarC instanceof y6.a.C0655a ? ((y6.a.C0655a) aVarC).getPx() : Integer.MAX_VALUE) > 100;
+        return (aVarC instanceof y6.a.C0670a ? ((y6.a.C0670a) aVarC).getPx() : Integer.MAX_VALUE) > 100;
     }
 }

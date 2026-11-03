@@ -9,7 +9,7 @@ import com.google.errorprone.annotations.ResultIgnorabilityUnspecified;
 public final class d0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final SparseIntArray f25249a = new SparseIntArray();
+    public final SparseIntArray f26070a = new SparseIntArray();
     public j9.d b;
 
     public d0(@NonNull j9.d dVar) {
@@ -18,7 +18,7 @@ public final class d0 {
     }
 
     public final int a(Context context, int i10) {
-        return this.f25249a.get(i10, -1);
+        return this.f26070a.get(i10, -1);
     }
 
     @ResultIgnorabilityUnspecified
@@ -36,12 +36,12 @@ public final class d0 {
         }
         int i10 = 0;
         while (true) {
-            if (i10 >= this.f25249a.size()) {
+            if (i10 >= this.f26070a.size()) {
                 iH = -1;
                 break;
             }
-            int iKeyAt = this.f25249a.keyAt(i10);
-            if (iKeyAt > minApkVersion && this.f25249a.get(iKeyAt) == 0) {
+            int iKeyAt = this.f26070a.keyAt(i10);
+            if (iKeyAt > minApkVersion && this.f26070a.get(iKeyAt) == 0) {
                 break;
             }
             i10++;
@@ -49,11 +49,11 @@ public final class d0 {
         if (iH == -1) {
             iH = this.b.h(context, minApkVersion);
         }
-        this.f25249a.put(minApkVersion, iH);
+        this.f26070a.put(minApkVersion, iH);
         return iH;
     }
 
     public final void c() {
-        this.f25249a.clear();
+        this.f26070a.clear();
     }
 }

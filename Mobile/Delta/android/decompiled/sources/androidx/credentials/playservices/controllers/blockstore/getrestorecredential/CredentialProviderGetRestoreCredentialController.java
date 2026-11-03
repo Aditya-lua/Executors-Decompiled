@@ -66,7 +66,7 @@ public final class CredentialProviderGetRestoreCredentialController extends Cred
                 }
             });
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -77,7 +77,7 @@ public final class CredentialProviderGetRestoreCredentialController extends Cred
                 pVar.onResult(l0Var);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -88,7 +88,7 @@ public final class CredentialProviderGetRestoreCredentialController extends Cred
                 CredentialProviderGetRestoreCredentialController.invokePlayServices$lambda$4$lambda$3$lambda$2(pVar, exc);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -103,13 +103,13 @@ public final class CredentialProviderGetRestoreCredentialController extends Cred
     public static final void invokePlayServices$lambda$8(CancellationSignal cancellationSignal, final Executor executor, final p pVar, Exception e10) {
         Intrinsics.checkNotNullParameter(e10, "e");
         final c0 c0Var = new c0();
-        c0Var.f22552a = new q("Get restore credential failed for unknown reason, failure: " + e10.getMessage());
+        c0Var.f23007a = new q("Get restore credential failed for unknown reason, failure: " + e10.getMessage());
         if (e10 instanceof b) {
             b bVar = (b) e10;
             if (bVar.b() == 40201) {
-                c0Var.f22552a = new q("The restore credential internal service had a failure, failure: " + e10.getMessage());
+                c0Var.f23007a = new q("The restore credential internal service had a failure, failure: " + e10.getMessage());
             } else {
-                c0Var.f22552a = new q("The restore credential service failed with unsupported status code, failure: " + e10.getMessage() + ", status code: " + bVar.b());
+                c0Var.f23007a = new q("The restore credential service failed with unsupported status code, failure: " + e10.getMessage() + ", status code: " + bVar.b());
             }
         }
         CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(cancellationSignal, new Function0() { // from class: m3.f
@@ -128,12 +128,12 @@ public final class CredentialProviderGetRestoreCredentialController extends Cred
                 CredentialProviderGetRestoreCredentialController.invokePlayServices$lambda$8$lambda$7$lambda$6(pVar, c0Var);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public static final void invokePlayServices$lambda$8$lambda$7$lambda$6(p pVar, c0 c0Var) {
-        pVar.a(c0Var.f22552a);
+        pVar.a(c0Var.f23007a);
     }
 
     @Override // androidx.credentials.playservices.controllers.CredentialProviderController
@@ -171,7 +171,7 @@ public final class CredentialProviderGetRestoreCredentialController extends Cred
         final Function1 function1 = new Function1() { // from class: m3.a
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return CredentialProviderGetRestoreCredentialController.invokePlayServices$lambda$4(this.f23900a, cancellationSignal, executor, callback, (GetRestoreCredentialResponse) obj);
+                return CredentialProviderGetRestoreCredentialController.invokePlayServices$lambda$4(this.f24550a, cancellationSignal, executor, callback, (GetRestoreCredentialResponse) obj);
             }
         };
         taskG.g(new g() { // from class: m3.b

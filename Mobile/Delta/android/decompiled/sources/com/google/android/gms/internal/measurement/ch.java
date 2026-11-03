@@ -7,19 +7,19 @@ import java.util.concurrent.Callable;
 public final class ch extends k {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Callable f6408c;
+    public final Callable f6481c;
 
     public ch(String str, Callable callable) {
         super("internal.appMetadata");
-        this.f6408c = callable;
+        this.f6481c = callable;
     }
 
     @Override // com.google.android.gms.internal.measurement.k
     public final q h(u4 u4Var, List list) {
         try {
-            return w6.a(this.f6408c.call());
+            return w6.a(this.f6481c.call());
         } catch (Exception unused) {
-            return q.f6743zo;
+            return q.f6816yo;
         }
     }
 }

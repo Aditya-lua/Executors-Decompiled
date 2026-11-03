@@ -24,19 +24,19 @@ public final /* data */ class SurfaceConfig {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NotNull
-    public static final u3 f24901f = u3.DEFAULT;
+    public static final u3 f25722f = u3.DEFAULT;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
     @NotNull
-    public static final b[] f24902g = {b.f24910e, b.f24912g, b.f24913h, b.f24915j, b.f24916k, b.f24909d};
+    public static final b[] f25723g = {b.f25731e, b.f25733g, b.f25734h, b.f25736j, b.f25737k, b.f25730d};
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
     @NotNull
-    public static final Map<d, Integer> f24903h;
+    public static final Map<d, Integer> f25724h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
     @NotNull
-    public static final Map<Integer, d> f24904i;
+    public static final Map<Integer, d> f25725i;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
     @NotNull
@@ -62,7 +62,7 @@ public final /* data */ class SurfaceConfig {
 
         public static /* synthetic */ SurfaceConfig c(Companion companion, d dVar, b bVar, u3 u3Var, int i10, Object obj) {
             if ((i10 & 4) != 0) {
-                u3Var = SurfaceConfig.f24901f;
+                u3Var = SurfaceConfig.f25722f;
             }
             return companion.b(dVar, bVar, u3Var);
         }
@@ -77,7 +77,7 @@ public final /* data */ class SurfaceConfig {
             }
             c cVar2 = cVar;
             if ((i12 & 32) != 0) {
-                u3Var = SurfaceConfig.f24901f;
+                u3Var = SurfaceConfig.f25722f;
             }
             return companion.f(i10, size, x3Var, i13, cVar2, u3Var);
         }
@@ -99,7 +99,7 @@ public final /* data */ class SurfaceConfig {
 
         @NotNull
         public final d d(int imageFormat) {
-            d dVar = (d) SurfaceConfig.f24904i.get(Integer.valueOf(imageFormat));
+            d dVar = (d) SurfaceConfig.f25725i.get(Integer.valueOf(imageFormat));
             return dVar == null ? d.PRIV : dVar;
         }
 
@@ -117,38 +117,38 @@ public final /* data */ class SurfaceConfig {
             Intrinsics.checkNotNullParameter(configSource, "configSource");
             Intrinsics.checkNotNullParameter(streamUseCase, "streamUseCase");
             d dVarD = d(imageFormat);
-            b bVar = b.f24922q;
+            b bVar = b.f25743q;
             int iC = w0.d.c(size);
             if (cameraMode == 1) {
                 if (iC <= w0.d.c(surfaceSizeDefinition.m(imageFormat))) {
-                    bVar = b.f24910e;
+                    bVar = b.f25731e;
                 } else if (iC <= w0.d.c(surfaceSizeDefinition.k(imageFormat))) {
-                    bVar = b.f24914i;
+                    bVar = b.f25735i;
                 }
             } else if (configSource == c.FEATURE_COMBINATION_TABLE) {
                 Size sizeG = surfaceSizeDefinition.g(imageFormat);
-                for (b bVar2 : SurfaceConfig.f24902g) {
+                for (b bVar2 : SurfaceConfig.f25723g) {
                     if (Intrinsics.c(size, bVar2.getRelatedFixedSize())) {
                         bVar = bVar2;
                         break;
                     }
                 }
-                if (bVar == b.f24922q && Intrinsics.c(size, sizeG)) {
-                    bVar = b.f24918m;
+                if (bVar == b.f25743q && Intrinsics.c(size, sizeG)) {
+                    bVar = b.f25739m;
                 }
             } else if (iC <= w0.d.c(surfaceSizeDefinition.b())) {
-                bVar = b.f24908c;
+                bVar = b.f25729c;
             } else if (iC <= w0.d.c(surfaceSizeDefinition.i())) {
-                bVar = b.f24911f;
+                bVar = b.f25732f;
             } else if (iC <= w0.d.c(surfaceSizeDefinition.j())) {
-                bVar = b.f24917l;
+                bVar = b.f25738l;
             } else {
                 Size sizeG2 = surfaceSizeDefinition.g(imageFormat);
                 Size sizeO = surfaceSizeDefinition.o(imageFormat);
                 if ((sizeG2 == null || iC <= w0.d.c(sizeG2)) && cameraMode != 2) {
-                    bVar = b.f24918m;
+                    bVar = b.f25739m;
                 } else if (sizeO != null && iC <= w0.d.c(sizeO)) {
-                    bVar = b.f24921p;
+                    bVar = b.f25742p;
                 }
             }
             return b(dVarD, bVar, streamUseCase);
@@ -176,16 +176,16 @@ public final /* data */ class SurfaceConfig {
     public static final class b {
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public static final b f24911f;
+        public static final b f25732f;
 
         /* JADX INFO: renamed from: l, reason: collision with root package name */
-        public static final b f24917l;
+        public static final b f25738l;
 
         /* JADX INFO: renamed from: r, reason: collision with root package name */
-        public static final /* synthetic */ b[] f24923r;
+        public static final /* synthetic */ b[] f25744r;
 
         /* JADX INFO: renamed from: s, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f24924s;
+        public static final /* synthetic */ ot.a f25745s;
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         public final int id;
@@ -195,53 +195,53 @@ public final /* data */ class SurfaceConfig {
         public final Size relatedFixedSize;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static final b f24908c = new b("VGA", 0, 0, new Size(640, 480));
+        public static final b f25729c = new b("VGA", 0, 0, new Size(640, 480));
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final b f24909d = new b("X_VGA", 1, 1, new Size(Barcode.FORMAT_UPC_E, 768));
+        public static final b f25730d = new b("X_VGA", 1, 1, new Size(Barcode.FORMAT_UPC_E, 768));
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public static final b f24910e = new b("S720P_16_9", 2, 2, new Size(1280, 720));
+        public static final b f25731e = new b("S720P_16_9", 2, 2, new Size(1280, 720));
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public static final b f24912g = new b("S1080P_4_3", 4, 4, new Size(1440, 1080));
+        public static final b f25733g = new b("S1080P_4_3", 4, 4, new Size(1440, 1080));
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public static final b f24913h = new b("S1080P_16_9", 5, 5, new Size(1920, 1080));
+        public static final b f25734h = new b("S1080P_16_9", 5, 5, new Size(1920, 1080));
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public static final b f24914i = new b("S1440P_4_3", 6, 6, new Size(1920, 1440));
+        public static final b f25735i = new b("S1440P_4_3", 6, 6, new Size(1920, 1440));
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public static final b f24915j = new b("S1440P_16_9", 7, 7, new Size(2560, 1440));
+        public static final b f25736j = new b("S1440P_16_9", 7, 7, new Size(2560, 1440));
 
         /* JADX INFO: renamed from: k, reason: collision with root package name */
-        public static final b f24916k = new b("UHD", 8, 8, new Size(3840, 2160));
+        public static final b f25737k = new b("UHD", 8, 8, new Size(3840, 2160));
 
         /* JADX INFO: renamed from: m, reason: collision with root package name */
-        public static final b f24918m = new b("MAXIMUM", 10, 10, null, 2, null);
+        public static final b f25739m = new b("MAXIMUM", 10, 10, null, 2, null);
 
         /* JADX INFO: renamed from: n, reason: collision with root package name */
-        public static final b f24919n = new b("MAXIMUM_4_3", 11, 11, null, 2, null);
+        public static final b f25740n = new b("MAXIMUM_4_3", 11, 11, null, 2, null);
 
         /* JADX INFO: renamed from: o, reason: collision with root package name */
-        public static final b f24920o = new b("MAXIMUM_16_9", 12, 12, null, 2, null);
+        public static final b f25741o = new b("MAXIMUM_16_9", 12, 12, null, 2, null);
 
         /* JADX INFO: renamed from: p, reason: collision with root package name */
-        public static final b f24921p = new b("ULTRA_MAXIMUM", 13, 13, null, 2, null);
+        public static final b f25742p = new b("ULTRA_MAXIMUM", 13, 13, null, 2, null);
 
         /* JADX INFO: renamed from: q, reason: collision with root package name */
-        public static final b f24922q = new b("NOT_SUPPORT", 14, 14, null, 2, null);
+        public static final b f25743q = new b("NOT_SUPPORT", 14, 14, null, 2, null);
 
         static {
             int i10 = 2;
             DefaultConstructorMarker defaultConstructorMarker = null;
             Size size = null;
-            f24911f = new b("PREVIEW", 3, 3, size, i10, defaultConstructorMarker);
-            f24917l = new b("RECORD", 9, 9, size, i10, defaultConstructorMarker);
+            f25732f = new b("PREVIEW", 3, 3, size, i10, defaultConstructorMarker);
+            f25738l = new b("RECORD", 9, 9, size, i10, defaultConstructorMarker);
             b[] bVarArrA = a();
-            f24923r = bVarArrA;
-            f24924s = qt.b.a(bVarArrA);
+            f25744r = bVarArrA;
+            f25745s = ot.b.a(bVarArrA);
         }
 
         public b(String str, int i10, int i11, Size size) {
@@ -251,7 +251,7 @@ public final /* data */ class SurfaceConfig {
         }
 
         public static final /* synthetic */ b[] a() {
-            return new b[]{f24908c, f24909d, f24910e, f24911f, f24912g, f24913h, f24914i, f24915j, f24916k, f24917l, f24918m, f24919n, f24920o, f24921p, f24922q};
+            return new b[]{f25729c, f25730d, f25731e, f25732f, f25733g, f25734h, f25735i, f25736j, f25737k, f25738l, f25739m, f25740n, f25741o, f25742p, f25743q};
         }
 
         public static b valueOf(String str) {
@@ -259,7 +259,7 @@ public final /* data */ class SurfaceConfig {
         }
 
         public static b[] values() {
-            return (b[]) f24923r.clone();
+            return (b[]) f25744r.clone();
         }
 
         /* JADX INFO: renamed from: b, reason: from getter */
@@ -286,7 +286,7 @@ public final /* data */ class SurfaceConfig {
 
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f24928d = qt.b.a(a());
+        public static final /* synthetic */ ot.a f25749d = ot.b.a(a());
     }
 
     /* JADX INFO: renamed from: n0.w3$d */
@@ -300,7 +300,7 @@ public final /* data */ class SurfaceConfig {
 
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f24934g = qt.b.a(a());
+        public static final /* synthetic */ ot.a f25755g = ot.b.a(a());
     }
 
     /* JADX INFO: renamed from: n0.w3$e */
@@ -308,45 +308,45 @@ public final /* data */ class SurfaceConfig {
     public /* synthetic */ class e {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f24935a;
+        public static final /* synthetic */ int[] f25756a;
 
         static {
             int[] iArr = new int[b.values().length];
             try {
-                iArr[b.f24911f.ordinal()] = 1;
+                iArr[b.f25732f.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                iArr[b.f24917l.ordinal()] = 2;
+                iArr[b.f25738l.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                iArr[b.f24918m.ordinal()] = 3;
+                iArr[b.f25739m.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
             try {
-                iArr[b.f24919n.ordinal()] = 4;
+                iArr[b.f25740n.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
             try {
-                iArr[b.f24920o.ordinal()] = 5;
+                iArr[b.f25741o.ordinal()] = 5;
             } catch (NoSuchFieldError unused5) {
             }
             try {
-                iArr[b.f24921p.ordinal()] = 6;
+                iArr[b.f25742p.ordinal()] = 6;
             } catch (NoSuchFieldError unused6) {
             }
             try {
-                iArr[b.f24922q.ordinal()] = 7;
+                iArr[b.f25743q.ordinal()] = 7;
             } catch (NoSuchFieldError unused7) {
             }
-            f24935a = iArr;
+            f25756a = iArr;
         }
     }
 
     static {
-        Map<d, Integer> mapM = kotlin.collections.k0.m(jt.s.a(d.YUV, 35), jt.s.a(d.JPEG, Integer.valueOf(Barcode.FORMAT_QR_CODE)), jt.s.a(d.JPEG_R, 4101), jt.s.a(d.RAW, 32), jt.s.a(d.PRIV, 34));
-        f24903h = mapM;
+        Map<d, Integer> mapM = kotlin.collections.k0.m(gt.s.a(d.YUV, 35), gt.s.a(d.JPEG, Integer.valueOf(Barcode.FORMAT_QR_CODE)), gt.s.a(d.JPEG_R, 4101), gt.s.a(d.RAW, 32), gt.s.a(d.PRIV, 34));
+        f25724h = mapM;
         Set<Map.Entry<d, Integer>> setEntrySet = mapM.entrySet();
         LinkedHashMap linkedHashMap = new LinkedHashMap(kotlin.ranges.d.c(kotlin.collections.j0.f(kotlin.collections.q.u(setEntrySet, 10)), 16));
         Iterator<T> it = setEntrySet.iterator();
@@ -354,7 +354,7 @@ public final /* data */ class SurfaceConfig {
             Map.Entry entry = (Map.Entry) it.next();
             linkedHashMap.put(Integer.valueOf(((Number) entry.getValue()).intValue()), (d) entry.getKey());
         }
-        f24904i = linkedHashMap;
+        f25725i = linkedHashMap;
     }
 
     public SurfaceConfig(@NotNull d configType, @NotNull b configSize, @NotNull u3 streamUseCase) {
@@ -364,7 +364,7 @@ public final /* data */ class SurfaceConfig {
         this.configType = configType;
         this.configSize = configSize;
         this.streamUseCase = streamUseCase;
-        Integer num = f24903h.get(configType);
+        Integer num = f25724h.get(configType);
         this.imageFormat = num != null ? num.intValue() : 0;
     }
 
@@ -419,7 +419,7 @@ public final /* data */ class SurfaceConfig {
     public final Size h(@NotNull x3 definition) {
         Size sizeI;
         Intrinsics.checkNotNullParameter(definition, "definition");
-        switch (e.f24935a[this.configSize.ordinal()]) {
+        switch (e.f25756a[this.configSize.ordinal()]) {
             case 1:
                 sizeI = definition.i();
                 break;

@@ -6,7 +6,7 @@ public final class e8 extends p4 implements y5 {
         throw null;
     }
 
-    public final e8 A(String str) {
+    public final e8 B(String str) {
         k();
         h8.G((h8) this.b, str);
         return this;
@@ -84,7 +84,7 @@ public final class e8 extends p4 implements y5 {
         return this;
     }
 
-    public final e8 x(String str) {
+    public final e8 y(String str) {
         k();
         h8.E((h8) this.b, str);
         return this;

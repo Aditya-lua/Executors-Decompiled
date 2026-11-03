@@ -9,7 +9,7 @@ import java.util.Map;
 public final class w6 {
     public static q a(Object obj) {
         if (obj == null) {
-            return q.Ao;
+            return q.f6817zo;
         }
         if (obj instanceof String) {
             return new u((String) obj);
@@ -53,11 +53,11 @@ public final class w6 {
 
     public static q b(c8 c8Var) {
         if (c8Var == null) {
-            return q.f6743zo;
+            return q.f6816yo;
         }
         int iQ = c8Var.Q() - 1;
         if (iQ == 1) {
-            return c8Var.H() ? new u(c8Var.J()) : q.Go;
+            return c8Var.H() ? new u(c8Var.J()) : q.Fo;
         }
         if (iQ == 2) {
             return c8Var.N() ? new j(Double.valueOf(c8Var.O())) : new j(null);

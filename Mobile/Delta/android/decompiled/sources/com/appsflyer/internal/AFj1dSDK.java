@@ -4,7 +4,7 @@ package com.appsflyer.internal;
 public final class AFj1dSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final AFj1dSDK f5437d = new AFj1dSDK(new int[2], 16, false, false);
+    public static final AFj1dSDK f5510d = new AFj1dSDK(new int[2], 16, false, false);
     public int[] AFKeystoreWrapper;
     public final int[][] registerClient;
     private int unregisterClient;

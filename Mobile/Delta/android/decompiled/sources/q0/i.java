@@ -10,29 +10,29 @@ public final class i implements Executor {
     public final Executor b;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Deque<Runnable> f29174a = new ArrayDeque();
+    public final Deque<Runnable> f29527a = new ArrayDeque();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final b f29175c = new b();
+    public final b f29528c = new b();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public c f29176d = c.IDLE;
+    public c f29529d = c.IDLE;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public long f29177e = 0;
+    public long f29530e = 0;
 
     public class a implements Runnable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ Runnable f29178a;
+        public final /* synthetic */ Runnable f29531a;
 
         public a(Runnable runnable) {
-            this.f29178a = runnable;
+            this.f29531a = runnable;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            this.f29178a.run();
+            this.f29531a.run();
         }
     }
 
@@ -76,11 +76,11 @@ public final class i implements Executor {
                 r1 = r0
             L2:
                 q0.i r2 = q0.i.this     // Catch: java.lang.Throwable -> L49
-                java.util.Deque<java.lang.Runnable> r2 = r2.f29174a     // Catch: java.lang.Throwable -> L49
+                java.util.Deque<java.lang.Runnable> r2 = r2.f29527a     // Catch: java.lang.Throwable -> L49
                 monitor-enter(r2)     // Catch: java.lang.Throwable -> L49
                 if (r0 != 0) goto L28
                 q0.i r0 = q0.i.this     // Catch: java.lang.Throwable -> L1c
-                q0.i$c r3 = r0.f29176d     // Catch: java.lang.Throwable -> L1c
+                q0.i$c r3 = r0.f29529d     // Catch: java.lang.Throwable -> L1c
                 q0.i$c r4 = q0.i.c.RUNNING     // Catch: java.lang.Throwable -> L1c
                 if (r3 != r4) goto L1e
                 monitor-exit(r2)     // Catch: java.lang.Throwable -> L1c
@@ -93,21 +93,21 @@ public final class i implements Executor {
                 r0 = move-exception
                 goto L63
             L1e:
-                long r5 = r0.f29177e     // Catch: java.lang.Throwable -> L1c
+                long r5 = r0.f29530e     // Catch: java.lang.Throwable -> L1c
                 r7 = 1
                 long r5 = r5 + r7
-                r0.f29177e = r5     // Catch: java.lang.Throwable -> L1c
-                r0.f29176d = r4     // Catch: java.lang.Throwable -> L1c
+                r0.f29530e = r5     // Catch: java.lang.Throwable -> L1c
+                r0.f29529d = r4     // Catch: java.lang.Throwable -> L1c
                 r0 = 1
             L28:
                 q0.i r3 = q0.i.this     // Catch: java.lang.Throwable -> L1c
-                java.util.Deque<java.lang.Runnable> r3 = r3.f29174a     // Catch: java.lang.Throwable -> L1c
+                java.util.Deque<java.lang.Runnable> r3 = r3.f29527a     // Catch: java.lang.Throwable -> L1c
                 java.lang.Object r3 = r3.poll()     // Catch: java.lang.Throwable -> L1c
                 java.lang.Runnable r3 = (java.lang.Runnable) r3     // Catch: java.lang.Throwable -> L1c
                 if (r3 != 0) goto L3f
                 q0.i r0 = q0.i.this     // Catch: java.lang.Throwable -> L1c
                 q0.i$c r3 = q0.i.c.IDLE     // Catch: java.lang.Throwable -> L1c
-                r0.f29176d = r3     // Catch: java.lang.Throwable -> L1c
+                r0.f29529d = r3     // Catch: java.lang.Throwable -> L1c
                 monitor-exit(r2)     // Catch: java.lang.Throwable -> L1c
                 if (r1 == 0) goto L3e
                 goto L14
@@ -151,8 +151,8 @@ public final class i implements Executor {
             try {
                 a();
             } catch (Error e10) {
-                synchronized (i.this.f29174a) {
-                    i.this.f29176d = c.IDLE;
+                synchronized (i.this.f29527a) {
+                    i.this.f29529d = c.IDLE;
                     throw e10;
                 }
             }
@@ -176,23 +176,23 @@ public final class i implements Executor {
         c cVar;
         boolean z10;
         x2.g.g(runnable);
-        synchronized (this.f29174a) {
-            c cVar2 = this.f29176d;
+        synchronized (this.f29527a) {
+            c cVar2 = this.f29529d;
             if (cVar2 != c.RUNNING && cVar2 != (cVar = c.QUEUED)) {
-                long j10 = this.f29177e;
+                long j10 = this.f29530e;
                 a aVar = new a(runnable);
-                this.f29174a.add(aVar);
+                this.f29527a.add(aVar);
                 c cVar3 = c.QUEUING;
-                this.f29176d = cVar3;
+                this.f29529d = cVar3;
                 try {
-                    this.b.execute(this.f29175c);
-                    if (this.f29176d != cVar3) {
+                    this.b.execute(this.f29528c);
+                    if (this.f29529d != cVar3) {
                         return;
                     }
-                    synchronized (this.f29174a) {
+                    synchronized (this.f29527a) {
                         try {
-                            if (this.f29177e == j10 && this.f29176d == cVar3) {
-                                this.f29176d = cVar;
+                            if (this.f29530e == j10 && this.f29529d == cVar3) {
+                                this.f29529d = cVar;
                             }
                         } catch (Throwable th2) {
                             throw th2;
@@ -200,12 +200,12 @@ public final class i implements Executor {
                     }
                     return;
                 } catch (Error | RuntimeException e10) {
-                    synchronized (this.f29174a) {
+                    synchronized (this.f29527a) {
                         try {
-                            c cVar4 = this.f29176d;
+                            c cVar4 = this.f29529d;
                             if (cVar4 != c.IDLE && cVar4 != c.QUEUING) {
                                 z10 = false;
-                            } else if (this.f29174a.removeLastOccurrence(aVar)) {
+                            } else if (this.f29527a.removeLastOccurrence(aVar)) {
                                 z10 = true;
                             } else {
                                 z10 = false;
@@ -220,7 +220,7 @@ public final class i implements Executor {
                     return;
                 }
             }
-            this.f29174a.add(runnable);
+            this.f29527a.add(runnable);
         }
     }
 }

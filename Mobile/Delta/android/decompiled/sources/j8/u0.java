@@ -6,19 +6,19 @@ import android.content.Context;
 public final class u0 implements d8.b<t0> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ht.a<Context> f21160a;
-    public final ht.a<String> b;
+    public final ft.a<Context> f21733a;
+    public final ft.a<String> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final ht.a<Integer> f21161c;
+    public final ft.a<Integer> f21734c;
 
-    public u0(ht.a<Context> aVar, ht.a<String> aVar2, ht.a<Integer> aVar3) {
-        this.f21160a = aVar;
+    public u0(ft.a<Context> aVar, ft.a<String> aVar2, ft.a<Integer> aVar3) {
+        this.f21733a = aVar;
         this.b = aVar2;
-        this.f21161c = aVar3;
+        this.f21734c = aVar3;
     }
 
-    public static u0 a(ht.a<Context> aVar, ht.a<String> aVar2, ht.a<Integer> aVar3) {
+    public static u0 a(ft.a<Context> aVar, ft.a<String> aVar2, ft.a<Integer> aVar3) {
         return new u0(aVar, aVar2, aVar3);
     }
 
@@ -26,9 +26,9 @@ public final class u0 implements d8.b<t0> {
         return new t0(context, str, i10);
     }
 
-    @Override // ht.a
+    @Override // ft.a
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
     public t0 get() {
-        return c(this.f21160a.get(), this.b.get(), this.f21161c.get().intValue());
+        return c(this.f21733a.get(), this.b.get(), this.f21734c.get().intValue());
     }
 }

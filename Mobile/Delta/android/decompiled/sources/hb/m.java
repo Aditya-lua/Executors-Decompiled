@@ -10,65 +10,65 @@ import java.util.Map;
 public final class m {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final r<f> f18755a;
+    public final r<f> f19242a;
     public final Context b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f18756c = false;
+    public boolean f19243c = false;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Map<l9.k.a<lb.e>, l> f18757d = new HashMap();
+    public final Map<l9.k.a<lb.e>, l> f19244d = new HashMap();
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Map<l9.k.a, j> f18758e = new HashMap();
+    public final Map<l9.k.a, j> f19245e = new HashMap();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final Map<l9.k.a<lb.d>, i> f18759f = new HashMap();
+    public final Map<l9.k.a<lb.d>, i> f19246f = new HashMap();
 
     public m(Context context, r<f> rVar) {
         this.b = context;
-        this.f18755a = rVar;
+        this.f19242a = rVar;
     }
 
     public final void a(boolean z10) {
-        ((u) this.f18755a).f18762a.checkConnected();
-        ((u) this.f18755a).a().q2(z10);
-        this.f18756c = z10;
+        ((u) this.f19242a).f19249a.checkConnected();
+        ((u) this.f19242a).a().q2(z10);
+        this.f19243c = z10;
     }
 
     public final void b() {
-        synchronized (this.f18757d) {
+        synchronized (this.f19244d) {
             try {
-                for (l lVar : this.f18757d.values()) {
+                for (l lVar : this.f19244d.values()) {
                     if (lVar != null) {
-                        ((u) this.f18755a).a().w(zzbc.a(lVar, null));
+                        ((u) this.f19242a).a().w(zzbc.a(lVar, null));
                     }
                 }
-                this.f18757d.clear();
+                this.f19244d.clear();
             } catch (Throwable th2) {
                 throw th2;
             }
         }
-        synchronized (this.f18759f) {
+        synchronized (this.f19246f) {
             try {
-                for (i iVar : this.f18759f.values()) {
+                for (i iVar : this.f19246f.values()) {
                     if (iVar != null) {
-                        ((u) this.f18755a).a().w(zzbc.v3(iVar, null));
+                        ((u) this.f19242a).a().w(zzbc.v3(iVar, null));
                     }
                 }
-                this.f18759f.clear();
+                this.f19246f.clear();
             } catch (Throwable th3) {
                 throw th3;
             }
         }
-        synchronized (this.f18758e) {
+        synchronized (this.f19245e) {
             try {
-                for (j jVar : this.f18758e.values()) {
+                for (j jVar : this.f19245e.values()) {
                     if (jVar != null) {
-                        ((u) this.f18755a).a().W(new zzl(2, null, jVar, null));
+                        ((u) this.f19242a).a().U(new zzl(2, null, jVar, null));
                     }
                 }
-                this.f18758e.clear();
+                this.f19245e.clear();
             } catch (Throwable th4) {
                 throw th4;
             }
@@ -76,7 +76,7 @@ public final class m {
     }
 
     public final void c() {
-        if (this.f18756c) {
+        if (this.f19243c) {
             a(false);
         }
     }

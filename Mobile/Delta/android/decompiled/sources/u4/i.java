@@ -17,11 +17,11 @@ import java.util.TreeMap;
 public class i {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final byte[] f32068a = {112, 114, 111, 0};
+    public static final byte[] f32721a = {112, 114, 111, 0};
     public static final byte[] b = {112, 114, 109, 0};
 
     public static void A(@NonNull byte[] bArr, int i10, int i11, @NonNull b bVar) {
-        int iM = m(i10, i11, bVar.f32054g);
+        int iM = m(i10, i11, bVar.f32707g);
         int i12 = iM / 8;
         bArr[i12] = (byte) ((1 << (iM % 8)) | bArr[i12]);
     }
@@ -42,7 +42,7 @@ public class i {
     }
 
     public static boolean C(@NonNull OutputStream outputStream, @NonNull byte[] bArr, @NonNull b[] bVarArr) throws IOException {
-        if (Arrays.equals(bArr, j.f32069a)) {
+        if (Arrays.equals(bArr, j.f32722a)) {
             P(outputStream, bVarArr);
             return true;
         }
@@ -50,15 +50,15 @@ public class i {
             O(outputStream, bVarArr);
             return true;
         }
-        if (Arrays.equals(bArr, j.f32071d)) {
+        if (Arrays.equals(bArr, j.f32724d)) {
             M(outputStream, bVarArr);
             return true;
         }
-        if (Arrays.equals(bArr, j.f32070c)) {
+        if (Arrays.equals(bArr, j.f32723c)) {
             N(outputStream, bVarArr);
             return true;
         }
-        if (!Arrays.equals(bArr, j.f32072e)) {
+        if (!Arrays.equals(bArr, j.f32725e)) {
             return false;
         }
         L(outputStream, bVarArr);
@@ -66,7 +66,7 @@ public class i {
     }
 
     public static void D(@NonNull OutputStream outputStream, @NonNull b bVar) throws IOException {
-        int[] iArr = bVar.f32055h;
+        int[] iArr = bVar.f32708h;
         int length = iArr.length;
         int i10 = 0;
         int i11 = 0;
@@ -84,10 +84,10 @@ public class i {
             c.p(byteArrayOutputStream, bVarArr.length);
             int i10 = 2;
             for (b bVar : bVarArr) {
-                c.q(byteArrayOutputStream, bVar.f32050c);
-                c.q(byteArrayOutputStream, bVar.f32051d);
-                c.q(byteArrayOutputStream, bVar.f32054g);
-                String strJ = j(bVar.f32049a, bVar.b, j.f32069a);
+                c.q(byteArrayOutputStream, bVar.f32703c);
+                c.q(byteArrayOutputStream, bVar.f32704d);
+                c.q(byteArrayOutputStream, bVar.f32707g);
+                String strJ = j(bVar.f32702a, bVar.b, j.f32722a);
                 int iK = c.k(strJ);
                 c.p(byteArrayOutputStream, iK);
                 i10 = i10 + 14 + iK;
@@ -111,7 +111,7 @@ public class i {
     }
 
     public static void F(@NonNull OutputStream outputStream, byte[] bArr) throws IOException {
-        outputStream.write(f32068a);
+        outputStream.write(f32721a);
         outputStream.write(bArr);
     }
 
@@ -123,16 +123,16 @@ public class i {
 
     public static void H(@NonNull OutputStream outputStream, @NonNull b bVar, @NonNull String str) throws IOException {
         c.p(outputStream, c.k(str));
-        c.p(outputStream, bVar.f32052e);
-        c.q(outputStream, bVar.f32053f);
-        c.q(outputStream, bVar.f32050c);
-        c.q(outputStream, bVar.f32054g);
+        c.p(outputStream, bVar.f32705e);
+        c.q(outputStream, bVar.f32706f);
+        c.q(outputStream, bVar.f32703c);
+        c.q(outputStream, bVar.f32707g);
         c.n(outputStream, str);
     }
 
     public static void I(@NonNull OutputStream outputStream, @NonNull b bVar) throws IOException {
-        byte[] bArr = new byte[k(bVar.f32054g)];
-        for (Map.Entry<Integer, Integer> entry : bVar.f32056i.entrySet()) {
+        byte[] bArr = new byte[k(bVar.f32707g)];
+        for (Map.Entry<Integer, Integer> entry : bVar.f32709i.entrySet()) {
             int iIntValue = entry.getKey().intValue();
             int iIntValue2 = entry.getValue().intValue();
             if ((iIntValue2 & 2) != 0) {
@@ -146,15 +146,15 @@ public class i {
     }
 
     public static void J(@NonNull OutputStream outputStream, int i10, @NonNull b bVar) throws IOException {
-        byte[] bArr = new byte[l(i10, bVar.f32054g)];
-        for (Map.Entry<Integer, Integer> entry : bVar.f32056i.entrySet()) {
+        byte[] bArr = new byte[l(i10, bVar.f32707g)];
+        for (Map.Entry<Integer, Integer> entry : bVar.f32709i.entrySet()) {
             int iIntValue = entry.getKey().intValue();
             int iIntValue2 = entry.getValue().intValue();
             int i11 = 0;
             for (int i12 = 1; i12 <= 4; i12 <<= 1) {
                 if (i12 != 1 && (i12 & i10) != 0) {
                     if ((i12 & iIntValue2) == i12) {
-                        int i13 = (bVar.f32054g * i11) + iIntValue;
+                        int i13 = (bVar.f32707g * i11) + iIntValue;
                         int i14 = i13 / 8;
                         bArr[i14] = (byte) ((1 << (i13 % 8)) | bArr[i14]);
                     }
@@ -167,7 +167,7 @@ public class i {
 
     public static void K(@NonNull OutputStream outputStream, @NonNull b bVar) throws IOException {
         int i10 = 0;
-        for (Map.Entry<Integer, Integer> entry : bVar.f32056i.entrySet()) {
+        for (Map.Entry<Integer, Integer> entry : bVar.f32709i.entrySet()) {
             int iIntValue = entry.getKey().intValue();
             if ((entry.getValue().intValue() & 1) != 0) {
                 c.p(outputStream, iIntValue - i10);
@@ -180,17 +180,17 @@ public class i {
     public static void L(@NonNull OutputStream outputStream, @NonNull b[] bVarArr) throws IOException {
         c.p(outputStream, bVarArr.length);
         for (b bVar : bVarArr) {
-            String strJ = j(bVar.f32049a, bVar.b, j.f32072e);
+            String strJ = j(bVar.f32702a, bVar.b, j.f32725e);
             c.p(outputStream, c.k(strJ));
-            c.p(outputStream, bVar.f32056i.size());
-            c.p(outputStream, bVar.f32055h.length);
-            c.q(outputStream, bVar.f32050c);
+            c.p(outputStream, bVar.f32709i.size());
+            c.p(outputStream, bVar.f32708h.length);
+            c.q(outputStream, bVar.f32703c);
             c.n(outputStream, strJ);
-            Iterator<Integer> it = bVar.f32056i.keySet().iterator();
+            Iterator<Integer> it = bVar.f32709i.keySet().iterator();
             while (it.hasNext()) {
                 c.p(outputStream, it.next().intValue());
             }
-            for (int i10 : bVar.f32055h) {
+            for (int i10 : bVar.f32708h) {
                 c.p(outputStream, i10);
             }
         }
@@ -199,26 +199,26 @@ public class i {
     public static void M(@NonNull OutputStream outputStream, @NonNull b[] bVarArr) throws IOException {
         c.r(outputStream, bVarArr.length);
         for (b bVar : bVarArr) {
-            int size = bVar.f32056i.size() * 4;
-            String strJ = j(bVar.f32049a, bVar.b, j.f32071d);
+            int size = bVar.f32709i.size() * 4;
+            String strJ = j(bVar.f32702a, bVar.b, j.f32724d);
             c.p(outputStream, c.k(strJ));
-            c.p(outputStream, bVar.f32055h.length);
+            c.p(outputStream, bVar.f32708h.length);
             c.q(outputStream, size);
-            c.q(outputStream, bVar.f32050c);
+            c.q(outputStream, bVar.f32703c);
             c.n(outputStream, strJ);
-            Iterator<Integer> it = bVar.f32056i.keySet().iterator();
+            Iterator<Integer> it = bVar.f32709i.keySet().iterator();
             while (it.hasNext()) {
                 c.p(outputStream, it.next().intValue());
                 c.p(outputStream, 0);
             }
-            for (int i10 : bVar.f32055h) {
+            for (int i10 : bVar.f32708h) {
                 c.p(outputStream, i10);
             }
         }
     }
 
     public static void N(@NonNull OutputStream outputStream, @NonNull b[] bVarArr) throws IOException {
-        byte[] bArrB = b(bVarArr, j.f32070c);
+        byte[] bArrB = b(bVarArr, j.f32723c);
         c.r(outputStream, bVarArr.length);
         c.m(outputStream, bArrB);
     }
@@ -240,14 +240,14 @@ public class i {
         arrayList.add(E(bVarArr));
         arrayList.add(c(bVarArr));
         arrayList.add(d(bVarArr));
-        long length2 = ((long) j.f32069a.length) + ((long) f32068a.length) + 4 + ((long) (arrayList.size() * 16));
+        long length2 = ((long) j.f32722a.length) + ((long) f32721a.length) + 4 + ((long) (arrayList.size() * 16));
         c.q(outputStream, arrayList.size());
         for (int i10 = 0; i10 < arrayList.size(); i10++) {
             k kVar = (k) arrayList.get(i10);
-            c.q(outputStream, kVar.f32075a.b());
+            c.q(outputStream, kVar.f32728a.b());
             c.q(outputStream, length2);
-            if (kVar.f32077d) {
-                byte[] bArr = kVar.f32076c;
+            if (kVar.f32730d) {
+                byte[] bArr = kVar.f32729c;
                 long length3 = bArr.length;
                 byte[] bArrB = c.b(bArr);
                 arrayList2.add(bArrB);
@@ -255,10 +255,10 @@ public class i {
                 c.q(outputStream, length3);
                 length = bArrB.length;
             } else {
-                arrayList2.add(kVar.f32076c);
-                c.q(outputStream, kVar.f32076c.length);
+                arrayList2.add(kVar.f32729c);
+                c.q(outputStream, kVar.f32729c.length);
                 c.q(outputStream, 0L);
-                length = kVar.f32076c.length;
+                length = kVar.f32729c.length;
             }
             length2 += (long) length;
         }
@@ -268,7 +268,7 @@ public class i {
     }
 
     public static int a(@NonNull b bVar) {
-        Iterator<Map.Entry<Integer, Integer>> it = bVar.f32056i.entrySet().iterator();
+        Iterator<Map.Entry<Integer, Integer>> it = bVar.f32709i.entrySet().iterator();
         int iIntValue = 0;
         while (it.hasNext()) {
             iIntValue |= it.next().getValue().intValue();
@@ -281,20 +281,20 @@ public class i {
         int i10 = 0;
         int iK = 0;
         for (b bVar : bVarArr) {
-            iK += c.k(j(bVar.f32049a, bVar.b, bArr)) + 16 + (bVar.f32052e * 2) + bVar.f32053f + k(bVar.f32054g);
+            iK += c.k(j(bVar.f32702a, bVar.b, bArr)) + 16 + (bVar.f32705e * 2) + bVar.f32706f + k(bVar.f32707g);
         }
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(iK);
-        if (Arrays.equals(bArr, j.f32070c)) {
+        if (Arrays.equals(bArr, j.f32723c)) {
             int length = bVarArr.length;
             while (i10 < length) {
                 b bVar2 = bVarArr[i10];
-                H(byteArrayOutputStream, bVar2, j(bVar2.f32049a, bVar2.b, bArr));
+                H(byteArrayOutputStream, bVar2, j(bVar2.f32702a, bVar2.b, bArr));
                 G(byteArrayOutputStream, bVar2);
                 i10++;
             }
         } else {
             for (b bVar3 : bVarArr) {
-                H(byteArrayOutputStream, bVar3, j(bVar3.f32049a, bVar3.b, bArr));
+                H(byteArrayOutputStream, bVar3, j(bVar3.f32702a, bVar3.b, bArr));
             }
             int length2 = bVarArr.length;
             while (i10 < length2) {
@@ -315,8 +315,8 @@ public class i {
             try {
                 b bVar = bVarArr[i11];
                 c.p(byteArrayOutputStream, i11);
-                c.p(byteArrayOutputStream, bVar.f32052e);
-                i10 = i10 + 4 + (bVar.f32052e * 2);
+                c.p(byteArrayOutputStream, bVar.f32705e);
+                i10 = i10 + 4 + (bVar.f32705e * 2);
                 D(byteArrayOutputStream, bVar);
             } catch (Throwable th2) {
                 try {
@@ -496,11 +496,11 @@ public class i {
     }
 
     public static void q(@NonNull InputStream inputStream, @NonNull b bVar) {
-        int iAvailable = inputStream.available() - bVar.f32053f;
+        int iAvailable = inputStream.available() - bVar.f32706f;
         int iH = 0;
         while (inputStream.available() > iAvailable) {
             iH += c.h(inputStream);
-            bVar.f32056i.put(Integer.valueOf(iH), 1);
+            bVar.f32709i.put(Integer.valueOf(iH), 1);
             for (int iH2 = c.h(inputStream); iH2 > 0; iH2--) {
                 B(inputStream);
             }
@@ -512,13 +512,13 @@ public class i {
 
     @NonNull
     public static b[] r(@NonNull InputStream inputStream, @NonNull byte[] bArr, @NonNull byte[] bArr2, b[] bVarArr) {
-        if (Arrays.equals(bArr, j.f32073f)) {
-            if (Arrays.equals(j.f32069a, bArr2)) {
+        if (Arrays.equals(bArr, j.f32726f)) {
+            if (Arrays.equals(j.f32722a, bArr2)) {
                 throw c.c("Requires new Baseline Profile Metadata. Please rebuild the APK with Android Gradle Plugin 7.2 Canary 7 or higher");
             }
             return s(inputStream, bArr, bVarArr);
         }
-        if (Arrays.equals(bArr, j.f32074g)) {
+        if (Arrays.equals(bArr, j.f32727g)) {
             return u(inputStream, bArr2, bVarArr);
         }
         throw c.c("Unsupported meta version");
@@ -526,7 +526,7 @@ public class i {
 
     @NonNull
     public static b[] s(@NonNull InputStream inputStream, @NonNull byte[] bArr, b[] bVarArr) throws IOException {
-        if (!Arrays.equals(bArr, j.f32073f)) {
+        if (!Arrays.equals(bArr, j.f32726f)) {
             throw c.c("Unsupported meta version");
         }
         int iJ = c.j(inputStream);
@@ -570,8 +570,8 @@ public class i {
                 throw c.c("Order of dexfiles in metadata did not match baseline");
             }
             int i13 = iArr[i12];
-            bVar.f32052e = i13;
-            bVar.f32055h = n(inputStream, i13);
+            bVar.f32705e = i13;
+            bVar.f32708h = n(inputStream, i13);
         }
         return bVarArr;
     }
@@ -615,31 +615,31 @@ public class i {
             if (bVarI == null) {
                 throw c.c("Missing profile key: " + strF);
             }
-            bVarI.f32051d = jI;
+            bVarI.f32704d = jI;
             int[] iArrN = n(inputStream, iH);
-            if (Arrays.equals(bArr, j.f32072e)) {
-                bVarI.f32052e = iH;
-                bVarI.f32055h = iArrN;
+            if (Arrays.equals(bArr, j.f32725e)) {
+                bVarI.f32705e = iH;
+                bVarI.f32708h = iArrN;
             }
         }
         return bVarArr;
     }
 
     public static void w(@NonNull InputStream inputStream, @NonNull b bVar) {
-        BitSet bitSetValueOf = BitSet.valueOf(c.d(inputStream, c.a(bVar.f32054g * 2)));
+        BitSet bitSetValueOf = BitSet.valueOf(c.d(inputStream, c.a(bVar.f32707g * 2)));
         int i10 = 0;
         while (true) {
-            int i11 = bVar.f32054g;
+            int i11 = bVar.f32707g;
             if (i10 >= i11) {
                 return;
             }
             int iO = o(bitSetValueOf, i10, i11);
             if (iO != 0) {
-                Integer num = bVar.f32056i.get(Integer.valueOf(i10));
+                Integer num = bVar.f32709i.get(Integer.valueOf(i10));
                 if (num == null) {
                     num = 0;
                 }
-                bVar.f32056i.put(Integer.valueOf(i10), Integer.valueOf(iO | num.intValue()));
+                bVar.f32709i.put(Integer.valueOf(i10), Integer.valueOf(iO | num.intValue()));
             }
             i10++;
         }
@@ -684,7 +684,7 @@ public class i {
         for (int i12 = 0; i12 < i10; i12++) {
             b bVar = bVarArr[i12];
             q(inputStream, bVar);
-            bVar.f32055h = n(inputStream, bVar.f32052e);
+            bVar.f32708h = n(inputStream, bVar.f32705e);
             w(inputStream, bVar);
         }
         return bVarArr;

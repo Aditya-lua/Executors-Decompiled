@@ -6,11 +6,11 @@ import java.util.List;
 public class l extends g<t7.d> {
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final t7.d f20316i;
+    public final t7.d f20432i;
 
     public l(List<t7.a<t7.d>> list) {
         super(list);
-        this.f20316i = new t7.d();
+        this.f20432i = new t7.d();
     }
 
     /* JADX WARN: Type inference fix 'apply assigned field type' failed
@@ -29,22 +29,22 @@ public class l extends g<t7.d> {
         t7.d dVar;
         float f11;
         t7.d dVar2 = aVar.b;
-        if (dVar2 == null || (dVar = aVar.f31671c) == null) {
+        if (dVar2 == null || (dVar = aVar.f32190c) == null) {
             throw new IllegalStateException("Missing values for keyframe.");
         }
         t7.d dVar3 = dVar2;
         t7.d dVar4 = dVar;
-        t7.c<A> cVar = this.f20288e;
+        t7.c<A> cVar = this.f20404e;
         if (cVar != 0) {
             f11 = f10;
-            t7.d dVar5 = (t7.d) cVar.b(aVar.f31675g, aVar.f31676h.floatValue(), dVar3, dVar4, f11, e(), f());
+            t7.d dVar5 = (t7.d) cVar.b(aVar.f32194g, aVar.f32195h.floatValue(), dVar3, dVar4, f11, e(), f());
             if (dVar5 != null) {
                 return dVar5;
             }
         } else {
             f11 = f10;
         }
-        this.f20316i.d(s7.j.i(dVar3.b(), dVar4.b(), f11), s7.j.i(dVar3.c(), dVar4.c(), f11));
-        return this.f20316i;
+        this.f20432i.d(s7.j.i(dVar3.b(), dVar4.b(), f11), s7.j.i(dVar3.c(), dVar4.c(), f11));
+        return this.f20432i;
     }
 }

@@ -16,11 +16,11 @@ public final class s6 extends gb implements pc {
     static {
         s6 s6Var = new s6();
         zzj = s6Var;
-        gb.u(s6.class, s6Var);
+        gb.t(s6.class, s6Var);
     }
 
     public static r6 T() {
-        return (r6) zzj.q();
+        return (r6) zzj.p();
     }
 
     @Override // com.google.android.gms.internal.measurement.gb

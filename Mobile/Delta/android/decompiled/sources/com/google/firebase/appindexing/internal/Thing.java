@@ -13,7 +13,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Set;
-import kf.h;
+import lf.h;
 import n9.k;
 import o9.b;
 import v8.g;
@@ -26,26 +26,26 @@ public final class Thing extends AbstractSafeParcelable implements g, ReflectedP
     public static final Parcelable.Creator<Thing> CREATOR = new h();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f8674f;
+    public final int f8748f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final Bundle f8675g;
+    public final Bundle f8749g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final zzj f8676h;
+    public final zzj f8750h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final String f8677i;
+    public final String f8751i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final String f8678j;
+    public final String f8752j;
 
     public Thing(int i10, Bundle bundle, zzj zzjVar, String str, String str2) {
-        this.f8674f = i10;
-        this.f8675g = bundle;
-        this.f8676h = zzjVar;
-        this.f8677i = str;
-        this.f8678j = str2;
+        this.f8748f = i10;
+        this.f8749g = bundle;
+        this.f8750h = zzjVar;
+        this.f8751i = str;
+        this.f8752j = str2;
         ClassLoader classLoader = Thing.class.getClassLoader();
         u.a(classLoader);
         bundle.setClassLoader(classLoader);
@@ -79,7 +79,7 @@ public final class Thing extends AbstractSafeParcelable implements g, ReflectedP
         try {
             Set<String> setKeySet = bundle.keySet();
             String[] strArr = (String[]) setKeySet.toArray(new String[setKeySet.size()]);
-            Arrays.sort(strArr, new Comparator() { // from class: kf.g
+            Arrays.sort(strArr, new Comparator() { // from class: lf.g
                 @Override // java.util.Comparator
                 public final int compare(Object obj, Object obj2) {
                     String str = (String) obj;
@@ -166,29 +166,29 @@ public final class Thing extends AbstractSafeParcelable implements g, ReflectedP
             return false;
         }
         Thing thing = (Thing) obj;
-        return k.b(Integer.valueOf(this.f8674f), Integer.valueOf(thing.f8674f)) && k.b(this.f8677i, thing.f8677i) && k.b(this.f8678j, thing.f8678j) && k.b(this.f8676h, thing.f8676h) && z3(this.f8675g, thing.f8675g);
+        return k.b(Integer.valueOf(this.f8748f), Integer.valueOf(thing.f8748f)) && k.b(this.f8751i, thing.f8751i) && k.b(this.f8752j, thing.f8752j) && k.b(this.f8750h, thing.f8750h) && z3(this.f8749g, thing.f8749g);
     }
 
     public final int hashCode() {
-        return k.c(Integer.valueOf(this.f8674f), this.f8677i, this.f8678j, Integer.valueOf(this.f8676h.hashCode()), Integer.valueOf(x3(this.f8675g)));
+        return k.c(Integer.valueOf(this.f8748f), this.f8751i, this.f8752j, Integer.valueOf(this.f8750h.hashCode()), Integer.valueOf(x3(this.f8749g)));
     }
 
     @NonNull
     public final String toString() {
         StringBuilder sb2 = new StringBuilder();
-        sb2.append(this.f8678j.equals("Thing") ? "Indexable" : this.f8678j);
+        sb2.append(this.f8752j.equals("Thing") ? "Indexable" : this.f8752j);
         sb2.append(" { { id: ");
-        if (this.f8677i == null) {
+        if (this.f8751i == null) {
             sb2.append("<null>");
         } else {
             sb2.append("'");
-            sb2.append(this.f8677i);
+            sb2.append(this.f8751i);
             sb2.append("'");
         }
         sb2.append(" } Properties { ");
-        y3(this.f8675g, sb2);
+        y3(this.f8749g, sb2);
         sb2.append("} Metadata { ");
-        sb2.append(this.f8676h);
+        sb2.append(this.f8750h);
         sb2.append(" } }");
         return sb2.toString();
     }
@@ -196,19 +196,19 @@ public final class Thing extends AbstractSafeParcelable implements g, ReflectedP
     @Override // android.os.Parcelable
     public final void writeToParcel(@NonNull Parcel parcel, int i10) {
         int iA = b.a(parcel);
-        b.f(parcel, 1, this.f8675g, false);
-        b.t(parcel, 2, this.f8676h, i10, false);
-        b.v(parcel, 3, this.f8677i, false);
-        b.v(parcel, 4, this.f8678j, false);
-        b.n(parcel, 1000, this.f8674f);
+        b.f(parcel, 1, this.f8749g, false);
+        b.t(parcel, 2, this.f8750h, i10, false);
+        b.v(parcel, 3, this.f8751i, false);
+        b.v(parcel, 4, this.f8752j, false);
+        b.n(parcel, 1000, this.f8748f);
         b.b(parcel, iA);
     }
 
     public Thing(@NonNull Bundle bundle, @NonNull zzj zzjVar, String str, @NonNull String str2) {
-        this.f8674f = 10;
-        this.f8675g = bundle;
-        this.f8676h = zzjVar;
-        this.f8677i = str;
-        this.f8678j = str2;
+        this.f8748f = 10;
+        this.f8749g = bundle;
+        this.f8750h = zzjVar;
+        this.f8751i = str;
+        this.f8752j = str2;
     }
 }

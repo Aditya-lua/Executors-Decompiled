@@ -7,15 +7,15 @@ import com.google.android.gms.location.LocationResult;
 public final class i extends lb.n {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final l9.k<lb.d> f18752a;
+    public final l9.k<lb.d> f19239a;
 
     @Override // lb.o
-    public final void P(LocationAvailability locationAvailability) {
-        this.f18752a.c(new h(this, locationAvailability));
+    public final void N(LocationAvailability locationAvailability) {
+        this.f19239a.c(new h(this, locationAvailability));
     }
 
     @Override // lb.o
-    public final void S0(LocationResult locationResult) {
-        this.f18752a.c(new g(this, locationResult));
+    public final void P0(LocationResult locationResult) {
+        this.f19239a.c(new g(this, locationResult));
     }
 }

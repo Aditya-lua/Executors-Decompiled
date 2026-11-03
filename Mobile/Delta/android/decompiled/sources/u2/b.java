@@ -13,7 +13,7 @@ public final class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final b f32033a = new b();
+    public static final b f32686a = new b();
 
     private b() {
     }

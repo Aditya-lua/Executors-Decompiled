@@ -1,28 +1,11 @@
 package fn;
 
+import kotlin.Metadata;
+
 /* JADX INFO: loaded from: classes3.dex */
-public final class o0 implements ft.d<n0> {
-
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ft.i<r0> f16953a;
-    public final ft.i<nu.b0<kn.c>> b;
-
-    public o0(ft.i<r0> iVar, ft.i<nu.b0<kn.c>> iVar2) {
-        this.f16953a = iVar;
-        this.b = iVar2;
-    }
-
-    public static o0 a(ft.i<r0> iVar, ft.i<nu.b0<kn.c>> iVar2) {
-        return new o0(iVar, iVar2);
-    }
-
-    public static n0 c(r0 r0Var, nu.b0<kn.c> b0Var) {
-        return new n0(r0Var, b0Var);
-    }
-
-    @Override // ht.a
-    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public n0 get() {
-        return c(this.f16953a.get(), this.b.get());
+@Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00060\u0001j\u0002`\u0002B\u0007¢\u0006\u0004\b\u0003\u0010\u0004¨\u0006\u0005"}, d2 = {"Lfn/o0;", "Ljava/lang/RuntimeException;", "Lkotlin/RuntimeException;", "<init>", "()V", "camera_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class o0 extends RuntimeException {
+    public o0() {
+        super("Image capture already requested.");
     }
 }

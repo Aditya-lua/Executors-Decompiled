@@ -12,7 +12,7 @@ import okhttp3.internal.idn.IdnaMappingTableInstanceKt;
 import okhttp3.internal.idn.Punycode;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import xu.e;
+import vu.e;
 
 /* JADX INFO: loaded from: classes2.dex */
 @Metadata(d1 = {"\u0000$\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\u0012\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\f\u001a\n\u0010\u0002\u001a\u00020\u0003*\u00020\u0004\u001a\f\u0010\u0005\u001a\u00020\u0003*\u00020\u0004H\u0000\u001a\f\u0010\u0006\u001a\u00020\u0003*\u00020\u0004H\u0000\u001a\"\u0010\u0007\u001a\u0004\u0018\u00010\b2\u0006\u0010\t\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\u000b2\u0006\u0010\f\u001a\u00020\u000bH\u0000\u001a0\u0010\r\u001a\u00020\u00032\u0006\u0010\t\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\u000b2\u0006\u0010\f\u001a\u00020\u000b2\u0006\u0010\u000e\u001a\u00020\b2\u0006\u0010\u000f\u001a\u00020\u000bH\u0000\u001a\u0010\u0010\u0010\u001a\u00020\u00042\u0006\u0010\u000e\u001a\u00020\bH\u0000\u001a\u0010\u0010\u0011\u001a\u00020\b2\u0006\u0010\u000e\u001a\u00020\bH\u0000\u001a\u0010\u0010\u0012\u001a\u00020\u00032\u0006\u0010\u000e\u001a\u00020\bH\u0002\u001a\u0010\u0010\u0013\u001a\u00020\u00042\u0006\u0010\u000e\u001a\u00020\bH\u0000\u001a\u000e\u0010\u0014\u001a\u0004\u0018\u00010\u0004*\u00020\u0004H\u0000\u001a\u0012\u0010\u0015\u001a\u0004\u0018\u00010\u00042\u0006\u0010\u0016\u001a\u00020\u0004H\u0000\"\u000e\u0010\u0000\u001a\u00020\u0001X\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006\u0017"}, d2 = {"VERIFY_AS_IP_ADDRESS", "Lkotlin/text/Regex;", "canParseAsIpAddress", "", "", "containsInvalidLabelLengths", "containsInvalidHostnameAsciiCodes", "decodeIpv6", "", "input", "pos", "", "limit", "decodeIpv4Suffix", "address", "addressOffset", "inet6AddressToAscii", "canonicalizeInetAddress", "isMappedIpv4Address", "inet4AddressToAscii", "toCanonicalHost", "idnToAscii", "host", "okhttp"}, k = 2, mv = {2, 2, 0}, xi = 48)
@@ -192,16 +192,16 @@ public final class _HostnamesCommonKt {
     @Nullable
     public static final String idnToAscii(@NotNull String host) throws EOFException {
         Intrinsics.checkNotNullParameter(host, "host");
-        e eVarC0 = new e().C0(host);
+        e eVarY0 = new e().y0(host);
         e eVar = new e();
-        while (!eVarC0.Z1()) {
-            if (!IdnaMappingTableInstanceKt.getIDNA_MAPPING_TABLE().map(eVarC0.A2(), eVar)) {
+        while (!eVarY0.a2()) {
+            if (!IdnaMappingTableInstanceKt.getIDNA_MAPPING_TABLE().map(eVarY0.B2(), eVar)) {
                 return null;
             }
         }
-        eVarC0.C0(_NormalizeJvmKt.normalizeNfc(eVar.R2()));
+        eVarY0.y0(_NormalizeJvmKt.normalizeNfc(eVar.Q2()));
         Punycode punycode = Punycode.INSTANCE;
-        String strDecode = punycode.decode(eVarC0.R2());
+        String strDecode = punycode.decode(eVarY0.Q2());
         if (strDecode != null && Intrinsics.c(strDecode, _NormalizeJvmKt.normalizeNfc(strDecode))) {
             return punycode.encode(strDecode);
         }
@@ -212,7 +212,7 @@ public final class _HostnamesCommonKt {
     public static final String inet4AddressToAscii(@NotNull byte[] address) {
         Intrinsics.checkNotNullParameter(address, "address");
         if (address.length == 4) {
-            return new e().z1(_UtilCommonKt.and(address[0], 255)).writeByte(46).z1(_UtilCommonKt.and(address[1], 255)).writeByte(46).z1(_UtilCommonKt.and(address[2], 255)).writeByte(46).z1(_UtilCommonKt.and(address[3], 255)).R2();
+            return new e().x1(_UtilCommonKt.and(address[0], 255)).writeByte(46).x1(_UtilCommonKt.and(address[1], 255)).writeByte(46).x1(_UtilCommonKt.and(address[2], 255)).writeByte(46).x1(_UtilCommonKt.and(address[3], 255)).Q2();
         }
         throw new IllegalArgumentException("Failed requirement.");
     }
@@ -248,11 +248,11 @@ public final class _HostnamesCommonKt {
                 if (i11 > 0) {
                     eVar.writeByte(58);
                 }
-                eVar.D2((_UtilCommonKt.and(address[i11], 255) << 8) | _UtilCommonKt.and(address[i11 + 1], 255));
+                eVar.E2((_UtilCommonKt.and(address[i11], 255) << 8) | _UtilCommonKt.and(address[i11 + 1], 255));
                 i11 += 2;
             }
         }
-        return eVar.R2();
+        return eVar.Q2();
     }
 
     private static final boolean isMappedIpv4Address(byte[] bArr) {

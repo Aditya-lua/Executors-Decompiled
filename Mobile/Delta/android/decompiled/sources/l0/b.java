@@ -53,7 +53,7 @@ public interface b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NotNull
-        public static final C0408b f22885a = new C0408b();
+        public static final C0408b f23279a = new C0408b();
     }
 
     /* JADX INFO: renamed from: l0.b$c, reason: from toString */

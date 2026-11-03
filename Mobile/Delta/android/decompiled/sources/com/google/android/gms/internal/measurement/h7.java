@@ -12,11 +12,11 @@ public final class h7 extends gb implements pc {
     static {
         h7 h7Var = new h7();
         zzf = h7Var;
-        gb.u(h7.class, h7Var);
+        gb.t(h7.class, h7Var);
     }
 
     public static g7 L() {
-        return (g7) zzf.q();
+        return (g7) zzf.p();
     }
 
     @Override // com.google.android.gms.internal.measurement.gb
@@ -58,7 +58,7 @@ public final class h7 extends gb implements pc {
     }
 
     public final long K(int i10) {
-        return this.zze.x0(i10);
+        return this.zze.t0(i10);
     }
 
     public final /* synthetic */ void N(int i10) {

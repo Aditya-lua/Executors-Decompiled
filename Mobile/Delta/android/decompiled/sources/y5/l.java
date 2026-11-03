@@ -10,7 +10,7 @@ public final class l extends a5.b {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static final l f35642c = new l();
+    public static final l f36499c = new l();
 
     public l() {
         super(4, 5);

@@ -26,11 +26,11 @@ public final class AFj1xSDK implements AFj1wSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @Nullable
-    private volatile SessionReadyListener f5450d;
+    private volatile SessionReadyListener f5523d;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
     @NotNull
-    private final AtomicBoolean f5451i;
+    private final AtomicBoolean f5524i;
 
     @NotNull
     private final AFj1zSDK registerClient;
@@ -40,7 +40,7 @@ public final class AFj1xSDK implements AFj1wSDK {
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
     @NotNull
-    private final AtomicBoolean f5452w;
+    private final AtomicBoolean f5525w;
 
     public AFj1xSDK(@NotNull AFc1dSDK<AFc1iSDK> aFc1dSDK, @NotNull AFc1dSDK<AFa1qSDK> aFc1dSDK2) {
         Intrinsics.checkNotNullParameter(aFc1dSDK, "");
@@ -49,12 +49,12 @@ public final class AFj1xSDK implements AFj1wSDK {
         this.AFKeystoreWrapper = aFc1dSDK2;
         this.registerClient = new AFj1zSDK();
         this.unregisterClient = new ArrayList();
-        this.f5452w = new AtomicBoolean(false);
-        this.f5451i = new AtomicBoolean(false);
+        this.f5525w = new AtomicBoolean(false);
+        this.f5524i = new AtomicBoolean(false);
     }
 
     private final void e() {
-        SessionReadyListener sessionReadyListener = this.f5450d;
+        SessionReadyListener sessionReadyListener = this.f5523d;
         if (sessionReadyListener != null) {
             try {
                 sessionReadyListener.onSessionReady();
@@ -66,7 +66,7 @@ public final class AFj1xSDK implements AFj1wSDK {
 
     private final void unregisterClient() {
         Object next;
-        if (this.f5451i.get()) {
+        if (this.f5524i.get()) {
             return;
         }
         List<AFj1uSDK> list = this.unregisterClient;
@@ -91,9 +91,9 @@ public final class AFj1xSDK implements AFj1wSDK {
                 }
             }
         }
-        if (this.f5450d == null) {
+        if (this.f5523d == null) {
             AFLoggerBase.d$default(AFLogger.INSTANCE, LogTag.SDK_LIFECYCLE, "All conditions satisfied but no listener registered yet", false, 4, null);
-        } else if (this.f5451i.compareAndSet(false, true)) {
+        } else if (this.f5524i.compareAndSet(false, true)) {
             AFLoggerBase.i$default(AFLogger.INSTANCE, LogTag.SDK_LIFECYCLE, "All session readiness conditions satisfied, triggering callback", false, 4, null);
             e();
         }
@@ -104,7 +104,7 @@ public final class AFj1xSDK implements AFj1wSDK {
         synchronized (this.unregisterClient) {
             try {
                 boolean z10 = false;
-                if (!this.f5452w.get()) {
+                if (!this.f5525w.get()) {
                     return false;
                 }
                 List<AFj1uSDK> list = this.unregisterClient;
@@ -127,7 +127,7 @@ public final class AFj1xSDK implements AFj1wSDK {
 
     @Override // com.appsflyer.internal.AFj1wSDK
     public final boolean AFLogger() {
-        return this.f5450d != null;
+        return this.f5523d != null;
     }
 
     @Override // com.appsflyer.internal.AFj1wSDK
@@ -135,8 +135,8 @@ public final class AFj1xSDK implements AFj1wSDK {
         Intrinsics.checkNotNullParameter(intent, "");
         synchronized (this.unregisterClient) {
             try {
-                this.f5452w.set(true);
-                this.f5451i.set(false);
+                this.f5525w.set(true);
+                this.f5524i.set(false);
                 int iAFLogger = this.AFLogger.AFKeystoreWrapper.invoke().AFKeystoreWrapper.AFLogger("appsFlyerCount", 0);
                 AFLogger aFLogger = AFLogger.INSTANCE;
                 LogTag logTag = LogTag.SDK_LIFECYCLE;
@@ -150,7 +150,7 @@ public final class AFj1xSDK implements AFj1wSDK {
                     AFLoggerBase.d$default(aFLogger, logTag, "Deeplink condition not needed for launch event (no deeplink)", false, 4, null);
                 }
                 unregisterClient();
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -161,16 +161,16 @@ public final class AFj1xSDK implements AFj1wSDK {
     public final void d(@Nullable SessionReadyListener sessionReadyListener) {
         synchronized (this.unregisterClient) {
             try {
-                this.f5450d = sessionReadyListener;
+                this.f5523d = sessionReadyListener;
                 if (sessionReadyListener == null) {
                     AFLoggerBase.d$default(AFLogger.INSTANCE, LogTag.SDK_LIFECYCLE, "Session ready listener unregistered", false, 4, null);
                 } else {
                     AFLoggerBase.d$default(AFLogger.INSTANCE, LogTag.SDK_LIFECYCLE, "Session ready listener registered", false, 4, null);
-                    if (this.f5452w.get() && !this.f5451i.get()) {
+                    if (this.f5525w.get() && !this.f5524i.get()) {
                         unregisterClient();
                     }
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -187,10 +187,10 @@ public final class AFj1xSDK implements AFj1wSDK {
                     ((AFj1uSDK) it.next()).registerClient();
                 }
                 this.unregisterClient.clear();
-                this.f5452w.set(false);
-                this.f5451i.set(false);
+                this.f5525w.set(false);
+                this.f5524i.set(false);
                 AFLoggerBase.d$default(AFLogger.INSTANCE, LogTag.SDK_LIFECYCLE, "Session readiness evaluation finished", false, 4, null);
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -212,14 +212,14 @@ public final class AFj1xSDK implements AFj1wSDK {
                 AFLogger aFLogger = AFLogger.INSTANCE;
                 LogTag logTag = LogTag.SDK_LIFECYCLE;
                 AFLoggerBase.d$default(aFLogger, logTag, "Deeplink condition satisfied", false, 4, null);
-                if (this.f5452w.get()) {
+                if (this.f5525w.get()) {
                     if (this.unregisterClient.contains(this.registerClient)) {
                         unregisterClient();
                     }
                 } else {
                     AFLoggerBase.d$default(aFLogger, logTag, "Evaluation not started yet, condition will be checked when evaluation begins", false, 4, null);
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }

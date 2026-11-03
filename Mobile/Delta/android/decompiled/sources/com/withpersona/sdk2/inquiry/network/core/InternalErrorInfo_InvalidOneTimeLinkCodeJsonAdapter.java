@@ -3,10 +3,10 @@ package com.withpersona.sdk2.inquiry.network.core;
 import kotlin.collections.q0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import um.h;
-import um.m;
-import um.t;
-import um.w;
+import sm.h;
+import sm.m;
+import sm.t;
+import sm.w;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class InternalErrorInfo_InvalidOneTimeLinkCodeJsonAdapter extends h<InternalErrorInfo.InvalidOneTimeLinkCode> {
@@ -29,7 +29,7 @@ public final class InternalErrorInfo_InvalidOneTimeLinkCodeJsonAdapter extends h
     }
 
     /* JADX WARN: Can't rename method to resolve collision */
-    @Override // um.h
+    @Override // sm.h
     @NotNull
     public InternalErrorInfo.InvalidOneTimeLinkCode fromJson(@NotNull m mVar) {
         mVar.b();
@@ -40,17 +40,17 @@ public final class InternalErrorInfo_InvalidOneTimeLinkCodeJsonAdapter extends h
                 mVar.M();
                 mVar.P();
             } else if (iF == 0 && (strFromJson = this.stringAdapter.fromJson(mVar)) == null) {
-                throw wm.c.x("oneTimeLinkCode", "oneTimeLinkCode", mVar);
+                throw um.c.x("oneTimeLinkCode", "oneTimeLinkCode", mVar);
             }
         }
         mVar.d();
         if (strFromJson != null) {
             return new InternalErrorInfo.InvalidOneTimeLinkCode(strFromJson);
         }
-        throw wm.c.o("oneTimeLinkCode", "oneTimeLinkCode", mVar);
+        throw um.c.o("oneTimeLinkCode", "oneTimeLinkCode", mVar);
     }
 
-    @Override // um.h
+    @Override // sm.h
     public void toJson(@NotNull t tVar, @Nullable InternalErrorInfo.InvalidOneTimeLinkCode invalidOneTimeLinkCode) {
         if (invalidOneTimeLinkCode == null) {
             throw new NullPointerException("value_ was null! Wrap in .nullSafe() to write nullable values.");

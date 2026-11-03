@@ -22,41 +22,41 @@ import java.util.concurrent.atomic.AtomicReference;
 public class s implements p {
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public static final long f20220m = TimeUnit.MILLISECONDS.toNanos(500);
+    public static final long f20336m = TimeUnit.MILLISECONDS.toNanos(500);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public AudioRecord f20221a;
+    public AudioRecord f20337a;
     public final i1.a b;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f20225f;
+    public final int f20341f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final int f20226g;
+    public final int f20342g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public p.a f20227h;
+    public p.a f20343h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public Executor f20228i;
+    public Executor f20344i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public long f20229j;
+    public long f20345j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public AudioManager.AudioRecordingCallback f20230k;
+    public AudioManager.AudioRecordingCallback f20346k;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final AtomicBoolean f20222c = new AtomicBoolean(false);
+    public final AtomicBoolean f20338c = new AtomicBoolean(false);
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final AtomicBoolean f20223d = new AtomicBoolean(false);
+    public final AtomicBoolean f20339d = new AtomicBoolean(false);
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final AtomicReference<Boolean> f20224e = new AtomicReference<>(null);
+    public final AtomicReference<Boolean> f20340e = new AtomicReference<>(null);
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public boolean f20231l = false;
+    public boolean f20347l = false;
 
     public class a extends AudioManager.AudioRecordingCallback {
         public a() {
@@ -65,7 +65,7 @@ public class s implements p {
         @Override // android.media.AudioManager.AudioRecordingCallback
         public void onRecordingConfigChanged(List<AudioRecordingConfiguration> list) {
             for (AudioRecordingConfiguration audioRecordingConfiguration : list) {
-                if (j1.b.a(audioRecordingConfiguration) == s.this.f20221a.getAudioSessionId()) {
+                if (j1.b.a(audioRecordingConfiguration) == s.this.f20337a.getAudioSessionId()) {
                     s.this.o(j1.d.b(audioRecordingConfiguration));
                     return;
                 }
@@ -78,13 +78,13 @@ public class s implements p {
             throw new UnsupportedOperationException(String.format("The combination of sample rate %d, channel count %d and audio format %d is not supported.", Integer.valueOf(aVar.e()), Integer.valueOf(aVar.f()), Integer.valueOf(aVar.b())));
         }
         this.b = aVar;
-        this.f20226g = aVar.d();
+        this.f20342g = aVar.d();
         int iL = l(aVar.e(), aVar.f(), aVar.b());
         x2.g.i(iL > 0);
         int i10 = iL * 2;
-        this.f20225f = i10;
+        this.f20341f = i10;
         AudioRecord audioRecordJ = j(i10, aVar, context);
-        this.f20221a = audioRecordJ;
+        this.f20337a = audioRecordJ;
         e(audioRecordJ);
     }
 
@@ -144,59 +144,59 @@ public class s implements p {
     @Override // i1.p
     public void a() {
         AudioManager.AudioRecordingCallback audioRecordingCallback;
-        if (this.f20222c.getAndSet(true)) {
+        if (this.f20338c.getAndSet(true)) {
             return;
         }
-        if (Build.VERSION.SDK_INT >= 29 && (audioRecordingCallback = this.f20230k) != null) {
-            j1.d.d(this.f20221a, audioRecordingCallback);
+        if (Build.VERSION.SDK_INT >= 29 && (audioRecordingCallback = this.f20346k) != null) {
+            j1.d.d(this.f20337a, audioRecordingCallback);
         }
-        this.f20221a.release();
+        this.f20337a.release();
     }
 
     @Override // i1.p
     public void b(p.a aVar, Executor executor) {
         boolean z10 = true;
-        x2.g.j(!this.f20223d.get(), "AudioStream can not be started when setCallback.");
+        x2.g.j(!this.f20339d.get(), "AudioStream can not be started when setCallback.");
         f();
         if (aVar != null && executor == null) {
             z10 = false;
         }
         x2.g.b(z10, "executor can't be null with non-null callback.");
-        this.f20227h = aVar;
-        this.f20228i = executor;
+        this.f20343h = aVar;
+        this.f20344i = executor;
         if (Build.VERSION.SDK_INT >= 29) {
-            AudioManager.AudioRecordingCallback audioRecordingCallback = this.f20230k;
+            AudioManager.AudioRecordingCallback audioRecordingCallback = this.f20346k;
             if (audioRecordingCallback != null) {
-                j1.d.d(this.f20221a, audioRecordingCallback);
+                j1.d.d(this.f20337a, audioRecordingCallback);
             }
             if (aVar == null) {
                 return;
             }
-            if (this.f20230k == null) {
-                this.f20230k = new a();
+            if (this.f20346k == null) {
+                this.f20346k = new a();
             }
-            j1.d.c(this.f20221a, executor, this.f20230k);
+            j1.d.c(this.f20337a, executor, this.f20346k);
         }
     }
 
     public final void f() {
-        x2.g.j(!this.f20222c.get(), "AudioStream has been released.");
+        x2.g.j(!this.f20338c.get(), "AudioStream has been released.");
     }
 
     public final void g() {
-        x2.g.j(this.f20223d.get(), "AudioStream has not been started.");
+        x2.g.j(this.f20339d.get(), "AudioStream has not been started.");
     }
 
     public final long k() {
         long jC;
-        if (this.f20231l) {
+        if (this.f20347l) {
             jC = -1;
         } else {
             AudioTimestamp audioTimestamp = new AudioTimestamp();
-            if (j1.b.b(this.f20221a, audioTimestamp, 0) == 0) {
-                jC = t.c(this.b.e(), this.f20229j, audioTimestamp);
-                if (Math.abs(jC - System.nanoTime()) > f20220m) {
-                    this.f20231l = true;
+            if (j1.b.b(this.f20337a, audioTimestamp, 0) == 0) {
+                jC = t.c(this.b.e(), this.f20345j, audioTimestamp);
+                if (Math.abs(jC - System.nanoTime()) > f20336m) {
+                    this.f20347l = true;
                 }
             } else {
                 r1.l("AudioStreamImpl", "Unable to get audio timestamp");
@@ -207,9 +207,9 @@ public class s implements p {
     }
 
     public void o(final boolean z10) {
-        Executor executor = this.f20228i;
-        final p.a aVar = this.f20227h;
-        if (executor == null || aVar == null || Objects.equals(this.f20224e.getAndSet(Boolean.valueOf(z10)), Boolean.valueOf(z10))) {
+        Executor executor = this.f20344i;
+        final p.a aVar = this.f20343h;
+        if (executor == null || aVar == null || Objects.equals(this.f20340e.getAndSet(Boolean.valueOf(z10)), Boolean.valueOf(z10))) {
             return;
         }
         executor.execute(new Runnable() { // from class: i1.r
@@ -225,11 +225,11 @@ public class s implements p {
         long jK;
         f();
         g();
-        int i10 = this.f20221a.read(byteBuffer, this.f20225f);
+        int i10 = this.f20337a.read(byteBuffer, this.f20341f);
         if (i10 > 0) {
             byteBuffer.limit(i10);
             jK = k();
-            this.f20229j += t.g(i10, this.f20226g);
+            this.f20345j += t.g(i10, this.f20342g);
         } else {
             jK = 0;
         }
@@ -239,23 +239,23 @@ public class s implements p {
     @Override // i1.p
     public void start() throws p.b {
         f();
-        if (this.f20223d.getAndSet(true)) {
+        if (this.f20339d.getAndSet(true)) {
             return;
         }
         if (m()) {
-            e(this.f20221a);
+            e(this.f20337a);
         }
-        this.f20221a.startRecording();
+        this.f20337a.startRecording();
         boolean z10 = false;
-        if (this.f20221a.getRecordingState() != 3) {
-            this.f20223d.set(false);
-            throw new p.b("Unable to start AudioRecord with state: " + this.f20221a.getRecordingState());
+        if (this.f20337a.getRecordingState() != 3) {
+            this.f20339d.set(false);
+            throw new p.b("Unable to start AudioRecord with state: " + this.f20337a.getRecordingState());
         }
-        this.f20229j = 0L;
-        this.f20231l = false;
-        this.f20224e.set(null);
+        this.f20345j = 0L;
+        this.f20347l = false;
+        this.f20340e.set(null);
         if (Build.VERSION.SDK_INT >= 29) {
-            AudioRecordingConfiguration audioRecordingConfigurationA = j1.d.a(this.f20221a);
+            AudioRecordingConfiguration audioRecordingConfigurationA = j1.d.a(this.f20337a);
             z10 = audioRecordingConfigurationA != null && j1.d.b(audioRecordingConfigurationA);
         }
         o(z10);
@@ -265,14 +265,14 @@ public class s implements p {
     @SuppressLint({"MissingPermission"})
     public void stop() {
         f();
-        if (this.f20223d.getAndSet(false)) {
-            this.f20221a.stop();
-            if (this.f20221a.getRecordingState() != 1) {
-                r1.l("AudioStreamImpl", "Failed to stop AudioRecord with state: " + this.f20221a.getRecordingState());
+        if (this.f20339d.getAndSet(false)) {
+            this.f20337a.stop();
+            if (this.f20337a.getRecordingState() != 1) {
+                r1.l("AudioStreamImpl", "Failed to stop AudioRecord with state: " + this.f20337a.getRecordingState());
             }
             if (m()) {
-                this.f20221a.release();
-                this.f20221a = j(this.f20225f, this.b, null);
+                this.f20337a.release();
+                this.f20337a = j(this.f20341f, this.b, null);
             }
         }
     }

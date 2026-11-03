@@ -8,7 +8,7 @@ import com.google.android.gms.games.zzo;
 public final class u implements Parcelable.Creator {
     public static void a(zzo zzoVar, Parcel parcel, int i10) {
         int iA = o9.b.a(parcel);
-        o9.b.n(parcel, 1, zzoVar.Y());
+        o9.b.n(parcel, 1, zzoVar.X());
         o9.b.v(parcel, 2, zzoVar.zza(), false);
         o9.b.v(parcel, 3, zzoVar.zzb(), false);
         o9.b.v(parcel, 4, zzoVar.zzc(), false);

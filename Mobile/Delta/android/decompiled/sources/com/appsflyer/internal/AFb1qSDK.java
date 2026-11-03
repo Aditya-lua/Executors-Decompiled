@@ -7,12 +7,12 @@ import java.util.Map;
 public final class AFb1qSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Map<String, Object> f5236d = new HashMap();
+    public final Map<String, Object> f5309d = new HashMap();
     public Map<String, Object> AFKeystoreWrapper = new HashMap();
 
     public final void AFLogger(Map<String, Object> map) {
-        if (!this.f5236d.isEmpty()) {
-            map.put("partner_data", this.f5236d);
+        if (!this.f5309d.isEmpty()) {
+            map.put("partner_data", this.f5309d);
         }
         if (this.AFKeystoreWrapper.isEmpty()) {
             return;

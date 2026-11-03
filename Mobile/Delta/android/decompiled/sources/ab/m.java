@@ -16,7 +16,7 @@ public abstract class m extends d implements n {
             Status status = (Status) e.a(parcel, Status.CREATOR);
             byte[] bArrCreateByteArray = parcel.createByteArray();
             s2(parcel);
-            u0(status, bArrCreateByteArray);
+            s0(status, bArrCreateByteArray);
         } else {
             if (i10 != 2) {
                 return false;
@@ -24,7 +24,7 @@ public abstract class m extends d implements n {
             Status status2 = (Status) e.a(parcel, Status.CREATOR);
             RetrieveBytesResponse retrieveBytesResponse = (RetrieveBytesResponse) e.a(parcel, RetrieveBytesResponse.CREATOR);
             s2(parcel);
-            d1(status2, retrieveBytesResponse);
+            a1(status2, retrieveBytesResponse);
         }
         return true;
     }

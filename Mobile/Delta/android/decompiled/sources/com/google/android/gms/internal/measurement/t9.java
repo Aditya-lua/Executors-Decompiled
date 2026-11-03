@@ -9,14 +9,14 @@ import java.util.RandomAccess;
 public abstract class t9 extends AbstractList implements pb {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f6805a;
+    public boolean f6879a;
 
     public t9(boolean z10) {
-        this.f6805a = z10;
+        this.f6879a = z10;
     }
 
     public final void a() {
-        if (!this.f6805a) {
+        if (!this.f6879a) {
             throw new UnsupportedOperationException();
         }
     }
@@ -95,13 +95,13 @@ public abstract class t9 extends AbstractList implements pb {
 
     @Override // com.google.android.gms.internal.measurement.pb
     public final boolean zza() {
-        return this.f6805a;
+        return this.f6879a;
     }
 
     @Override // com.google.android.gms.internal.measurement.pb
     public final void zzb() {
-        if (this.f6805a) {
-            this.f6805a = false;
+        if (this.f6879a) {
+            this.f6879a = false;
         }
     }
 

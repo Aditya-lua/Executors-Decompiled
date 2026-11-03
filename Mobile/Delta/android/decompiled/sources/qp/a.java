@@ -1,16 +1,42 @@
 package qp;
 
-import kotlin.Metadata;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import androidx.annotation.NonNull;
+import pp.p1;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\b\u0007\b\u0086\u0081\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003j\u0002\b\u0004j\u0002\b\u0005j\u0002\b\u0006j\u0002\b\u0007¨\u0006\b"}, d2 = {"Lqp/a;", "", "<init>", "(Ljava/lang/String;I)V", "a", "b", "c", "d", "nfc_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public enum a {
-    NotRequested,
-    NotSupported,
-    Failed,
-    Success;
+public final class a implements r5.a {
 
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    @NonNull
+    public final View f30026a;
 
-    /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final /* synthetic */ qt.a f29584f = qt.b.a(a());
+    public a(@NonNull View view) {
+        this.f30026a = view;
+    }
+
+    @NonNull
+    public static a a(@NonNull View view) {
+        if (view != null) {
+            return new a(view);
+        }
+        throw new NullPointerException("rootView");
+    }
+
+    @NonNull
+    public static a b(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
+        View viewInflate = layoutInflater.inflate(p1.f29032a, viewGroup, false);
+        if (z10) {
+            viewGroup.addView(viewInflate);
+        }
+        return a(viewInflate);
+    }
+
+    @Override // r5.a
+    @NonNull
+    public View getRoot() {
+        return this.f30026a;
+    }
 }

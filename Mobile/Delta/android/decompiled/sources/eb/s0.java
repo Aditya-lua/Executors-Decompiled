@@ -10,14 +10,14 @@ public final class s0 implements q0 {
     };
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public volatile q0 f15389a;
+    public volatile q0 f16003a;
 
     public s0(q0 q0Var) {
-        this.f15389a = q0Var;
+        this.f16003a = q0Var;
     }
 
     public final String toString() {
-        Object obj = this.f15389a;
+        Object obj = this.f16003a;
         if (obj == b) {
             obj = "<supplier that returned null>";
         }

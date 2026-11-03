@@ -58,7 +58,7 @@ import org.json.JSONObject;
 public final class AFa1tSDK extends AppsFlyerLib {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    private static AFa1tSDK f5227d = new AFa1tSDK();
+    private static AFa1tSDK f5300d = new AFa1tSDK();
     public static final String registerClient = "7.0";
     public static final String unregisterClient = "386";
 
@@ -67,10 +67,10 @@ public final class AFa1tSDK extends AppsFlyerLib {
     private AFb1hSDK AFLogger;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    private AFf1mSDK f5228e;
+    private AFf1mSDK f5301e;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    private Map<Long, String> f5229w;
+    private Map<Long, String> f5302w;
 
     public AFa1tSDK() {
         AFc1aSDK aFc1aSDK = new AFc1aSDK();
@@ -81,18 +81,18 @@ public final class AFa1tSDK extends AppsFlyerLib {
 
     private synchronized AFf1mSDK AFKeystoreWrapper() {
         try {
-            if (this.f5228e == null) {
-                this.f5228e = new AFf1mSDK() { // from class: com.appsflyer.internal.m
+            if (this.f5301e == null) {
+                this.f5301e = new AFf1mSDK() { // from class: com.appsflyer.internal.m
                     @Override // com.appsflyer.internal.AFf1mSDK
                     public final void onRemoteConfigUpdateFinished(AFf1pSDK aFf1pSDK) {
-                        this.f5505a.AFLogger(aFf1pSDK);
+                        this.f5578a.AFLogger(aFf1pSDK);
                     }
                 };
             }
         } catch (Throwable th2) {
             throw th2;
         }
-        return this.f5228e;
+        return this.f5301e;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -104,7 +104,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
     }
 
     public static AFa1tSDK d() {
-        return f5227d;
+        return f5300d;
     }
 
     private static String registerClient(Activity activity) {
@@ -167,13 +167,13 @@ public final class AFa1tSDK extends AppsFlyerLib {
             this.AFKeystoreWrapper.setUserEmail().unregisterClient();
         }
         AFi1vSDK aFc1bSDK = this.AFKeystoreWrapper.getInstance();
-        aFc1bSDK.f5429d = Build.VERSION.SDK_INT >= 31 ? new AFi1sSDK(aFc1bSDK.AFLogger) : new AFi1wSDK(aFc1bSDK.AFLogger);
+        aFc1bSDK.f5502d = Build.VERSION.SDK_INT >= 31 ? new AFi1sSDK(aFc1bSDK.AFLogger) : new AFi1wSDK(aFc1bSDK.AFLogger);
         this.AFKeystoreWrapper.AppsFlyerLib().d(this.AFKeystoreWrapper.AFLogger());
         AFh1xSDK aFh1xSDKE = this.AFKeystoreWrapper.e();
-        aFh1xSDKE.f5411i = System.currentTimeMillis();
+        aFh1xSDKE.f5484i = System.currentTimeMillis();
         int iAFLogger = aFh1xSDKE.unregisterClient.AFKeystoreWrapper.AFLogger("appsFlyerCount", 0);
         if (iAFLogger == 1 && aFh1xSDKE.AFKeystoreWrapper.registerClient("first_launch")) {
-            aFh1xSDKE.f5409d.putAll(aFh1xSDKE.AFLogger("first_launch"));
+            aFh1xSDKE.f5482d.putAll(aFh1xSDKE.AFLogger("first_launch"));
         }
         if (iAFLogger > 0 && aFh1xSDKE.AFKeystoreWrapper.registerClient("gcd")) {
             aFh1xSDKE.AFLogger.putAll(aFh1xSDKE.AFLogger("gcd"));
@@ -203,7 +203,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
     public final void appendParametersToDeepLinkingURL(String str, Map<String, String> map) {
         AFa1qSDK aFa1qSDKEnableTCFDataCollection = this.AFKeystoreWrapper.enableTCFDataCollection();
         aFa1qSDKEnableTCFDataCollection.AFLogger = str;
-        aFa1qSDKEnableTCFDataCollection.f5224d = map;
+        aFa1qSDKEnableTCFDataCollection.f5297d = map;
     }
 
     @Override // com.appsflyer.AppsFlyerLib
@@ -212,11 +212,11 @@ public final class AFa1tSDK extends AppsFlyerLib {
         AFLogger.INSTANCE.i(LogTag.GENERAL, "clearUserPii");
         AFc1eSDK androidIdData = this.AFKeystoreWrapper.setAndroidIdData();
         androidIdData.AFLogger = null;
-        androidIdData.f5247d = null;
+        androidIdData.f5320d = null;
         androidIdData.registerClient = null;
         androidIdData.AFKeystoreWrapper = null;
-        androidIdData.f5248e = null;
-        androidIdData.f5249i = null;
+        androidIdData.f5321e = null;
+        androidIdData.f5322i = null;
     }
 
     @Override // com.appsflyer.AppsFlyerLib
@@ -247,7 +247,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
         if (context == null) {
             return null;
         }
-        this.AFKeystoreWrapper.f5240d.f5305d = context.getApplicationContext();
+        this.AFKeystoreWrapper.f5313d.f5378d = context.getApplicationContext();
         return AFb1jSDK.AFLogger(this.AFKeystoreWrapper.AFLogger().AFKeystoreWrapper);
     }
 
@@ -255,7 +255,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
     public final String getAttributionId(Context context) {
         AFc1aSDK aFc1aSDK = this.AFKeystoreWrapper;
         if (context != null) {
-            aFc1aSDK.f5240d.f5305d = context.getApplicationContext();
+            aFc1aSDK.f5313d.f5378d = context.getApplicationContext();
         }
         return this.AFKeystoreWrapper.AFLogger().registerClient(context);
     }
@@ -280,7 +280,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
         if (context == null) {
             strAFLogger = null;
         } else {
-            this.AFKeystoreWrapper.f5240d.f5305d = context.getApplicationContext();
+            this.AFKeystoreWrapper.f5313d.f5378d = context.getApplicationContext();
             strAFLogger = this.AFKeystoreWrapper.AFLogger().AFLogger("AF_STORE");
         }
         if (strAFLogger != null) {
@@ -308,7 +308,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
                 return this;
             }
             this.AFKeystoreWrapper.AppsFlyerLib().d(str);
-            this.AFKeystoreWrapper.f5240d.f5305d = context.getApplicationContext();
+            this.AFKeystoreWrapper.f5313d.f5378d = context.getApplicationContext();
             this.AFKeystoreWrapper.setAndroidIdData().setUserFirstName = true;
             Application applicationX_ = AFj1qSDK.X_(context);
             if (applicationX_ != null) {
@@ -316,7 +316,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
                 this.AFKeystoreWrapper.d().execute(new Runnable() { // from class: com.appsflyer.internal.g
                     @Override // java.lang.Runnable
                     public final void run() {
-                        this.f5486a.v();
+                        this.f5559a.v();
                     }
                 });
                 AFc1iSDK aFc1iSDKAFLogger = this.AFKeystoreWrapper.AFLogger();
@@ -327,7 +327,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
                     this.AFKeystoreWrapper.d().execute(new Runnable() { // from class: com.appsflyer.internal.h
                         @Override // java.lang.Runnable
                         public final void run() {
-                            this.f5488a.AFLogger();
+                            this.f5561a.AFLogger();
                         }
                     });
                 }
@@ -344,7 +344,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
                 Runnable runnable = new Runnable() { // from class: com.appsflyer.internal.j
                     @Override // java.lang.Runnable
                     public final void run() {
-                        this.f5495a.unregisterClient();
+                        this.f5568a.unregisterClient();
                     }
                 };
                 if (aFi1aSDKAfDebugLog.AFKeystoreWrapper.AFLogger().AFKeystoreWrapper.AFLogger("appsFlyerCount", 0) > 0) {
@@ -355,24 +355,24 @@ public final class AFa1tSDK extends AppsFlyerLib {
                     aFi1aSDKAfDebugLog.unregisterClient.add(aFi1gSDKD);
                     aFi1aSDKAfDebugLog.unregisterClient.add(new AFi1bSDK(referrerProp));
                     aFi1aSDKAfDebugLog.unregisterClient(referrerProp);
-                    aFi1aSDKAfDebugLog.unregisterClient.addAll(aFi1aSDKAfDebugLog.f5415d.AFKeystoreWrapper(referrerProp));
+                    aFi1aSDKAfDebugLog.unregisterClient.addAll(aFi1aSDKAfDebugLog.f5488d.AFKeystoreWrapper(referrerProp));
                     Iterator<Pair<ReferrerCreator<Referrer>, Class<? extends BaseReferrerInitProvider>>> it = Referrer.getExternalReferrers().iterator();
                     while (it.hasNext()) {
-                        ReferrerKt.disableInitProvider(it.next().d(), aFi1aSDKAfDebugLog.AFKeystoreWrapper.valueOf().f5305d, aFi1aSDKAfDebugLog.AFKeystoreWrapper.afErrorLog());
+                        ReferrerKt.disableInitProvider(it.next().d(), aFi1aSDKAfDebugLog.AFKeystoreWrapper.valueOf().f5378d, aFi1aSDKAfDebugLog.AFKeystoreWrapper.afErrorLog());
                     }
                     for (Referrer referrer : (Referrer[]) aFi1aSDKAfDebugLog.unregisterClient.toArray(new Referrer[0])) {
-                        referrer.start(aFi1aSDKAfDebugLog.AFKeystoreWrapper.valueOf().f5305d);
+                        referrer.start(aFi1aSDKAfDebugLog.AFKeystoreWrapper.valueOf().f5378d);
                     }
                     String strAFLogger = aFi1aSDKAfDebugLog.AFKeystoreWrapper.AFLogger().AFLogger("AF_PREINSTALL_DISABLED");
                     if (!(strAFLogger != null ? Boolean.parseBoolean(strAFLogger) : false)) {
-                        aFi1aSDKAfDebugLog.unregisterClient(aFi1aSDKAfDebugLog.AFKeystoreWrapper.valueOf().f5305d, referrerProp, aFi1aSDKAfDebugLog.AFKeystoreWrapper);
+                        aFi1aSDKAfDebugLog.unregisterClient(aFi1aSDKAfDebugLog.AFKeystoreWrapper.valueOf().f5378d, referrerProp, aFi1aSDKAfDebugLog.AFKeystoreWrapper);
                     }
                 }
                 if (this.AFLogger == null) {
                     this.AFLogger = new AFb1hSDK(this.AFKeystoreWrapper, new Function0() { // from class: com.appsflyer.internal.k
                         @Override // kotlin.jvm.functions.Function0
                         public final Object invoke() {
-                            return this.f5498a.registerClient();
+                            return this.f5571a.registerClient();
                         }
                     }, AFKeystoreWrapper(), this.AFKeystoreWrapper.setUserLastName());
                     this.AFKeystoreWrapper.updateServerUninstallToken().unregisterClient(context, this.AFLogger);
@@ -410,7 +410,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
     public final boolean isPreInstalledApp(Context context) {
         AFc1aSDK aFc1aSDK = this.AFKeystoreWrapper;
         if (context != null) {
-            aFc1aSDK.f5240d.f5305d = context.getApplicationContext();
+            aFc1aSDK.f5313d.f5378d = context.getApplicationContext();
         }
         return this.AFKeystoreWrapper.AFLogger().AFKeystoreWrapper(context);
     }
@@ -462,7 +462,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
         map.put(AFInAppEventParameterName.LONGITUDE, Double.toString(d11));
         map.put(AFInAppEventParameterName.LATITUDE, Double.toString(d10));
         AFh1jSDK aFh1jSDK = new AFh1jSDK();
-        aFh1jSDK.f5402v = AFInAppEventType.LOCATION_COORDINATES;
+        aFh1jSDK.f5475v = AFInAppEventType.LOCATION_COORDINATES;
         aFh1jSDK.AFKeystoreWrapper = map;
         this.AFKeystoreWrapper.w().d(aFh1jSDK);
     }
@@ -474,13 +474,13 @@ public final class AFa1tSDK extends AppsFlyerLib {
         AFh1uSDK aFh1uSDK = AFh1uSDK.logSession;
         AFc1aSDK aFc1aSDK = this.AFKeystoreWrapper;
         if (context != null) {
-            aFc1aSDK.f5240d.f5305d = context.getApplicationContext();
+            aFc1aSDK.f5313d.f5378d = context.getApplicationContext();
         }
         AFh1xSDK aFh1xSDKE = this.AFKeystoreWrapper.e();
         aFh1xSDKE.unregisterClient(aFh1uSDK);
         aFh1xSDKE.AFLogger();
         AFh1jSDK aFh1jSDK = new AFh1jSDK();
-        aFh1jSDK.f5402v = null;
+        aFh1jSDK.f5475v = null;
         aFh1jSDK.AFKeystoreWrapper = null;
         this.AFKeystoreWrapper.w().d(aFh1jSDK);
     }
@@ -529,7 +529,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
     public final void sendInAppPurchaseData(Context context, Map<String, Object> map, PurchaseHandler.PurchaseValidationCallback purchaseValidationCallback) {
         AFc1aSDK aFc1aSDK = this.AFKeystoreWrapper;
         if (context != null) {
-            aFc1aSDK.f5240d.f5305d = context.getApplicationContext();
+            aFc1aSDK.f5313d.f5378d = context.getApplicationContext();
         }
         PurchaseHandler purchaseHandlerV = this.AFKeystoreWrapper.v();
         if (purchaseHandlerV.registerClient(map, purchaseValidationCallback, "purchases")) {
@@ -541,7 +541,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
     public final void sendPurchaseData(Context context, Map<String, Object> map, PurchaseHandler.PurchaseValidationCallback purchaseValidationCallback) {
         AFc1aSDK aFc1aSDK = this.AFKeystoreWrapper;
         if (context != null) {
-            aFc1aSDK.f5240d.f5305d = context.getApplicationContext();
+            aFc1aSDK.f5313d.f5378d = context.getApplicationContext();
         }
         PurchaseHandler purchaseHandlerV = this.AFKeystoreWrapper.v();
         if (purchaseHandlerV.registerClient(map, purchaseValidationCallback, "subscriptions")) {
@@ -570,19 +570,19 @@ public final class AFa1tSDK extends AppsFlyerLib {
         androidIdData.unregisterClient = strRegisterClient;
         if (strRegisterClient != null) {
             long jCurrentTimeMillis = System.currentTimeMillis();
-            if (this.f5229w == null) {
+            if (this.f5302w == null) {
                 AFLogger.INSTANCE.i(LogTag.ENGAGEMENT, "Initializing push notification history cache");
-                this.f5229w = new ConcurrentHashMap();
+                this.f5302w = new ConcurrentHashMap();
                 jLongValue = jCurrentTimeMillis;
                 j10 = jLongValue;
             } else {
                 try {
                     long jUnregisterClient = this.AFKeystoreWrapper.AFLogger().unregisterClient("AF_PUSH_PAYLOAD_MAX_AGING_MILLIS", BacktraceMetrics.defaultTimeIntervalMs);
                     jLongValue = jCurrentTimeMillis;
-                    for (Long l10 : this.f5229w.keySet()) {
+                    for (Long l10 : this.f5302w.keySet()) {
                         try {
                             JSONObject jSONObject = new JSONObject(androidIdData.unregisterClient);
-                            JSONObject jSONObject2 = new JSONObject(this.f5229w.get(l10));
+                            JSONObject jSONObject2 = new JSONObject(this.f5302w.get(l10));
                             j10 = jCurrentTimeMillis;
                             try {
                                 if (jSONObject.opt("pid").equals(jSONObject2.opt("pid")) && jSONObject.opt("c").equals(jSONObject2.opt("c"))) {
@@ -598,7 +598,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
                                     return;
                                 }
                                 if (j10 - l10.longValue() > jUnregisterClient) {
-                                    this.f5229w.remove(l10);
+                                    this.f5302w.remove(l10);
                                 }
                                 if (l10.longValue() <= jLongValue) {
                                     jLongValue = l10.longValue();
@@ -611,16 +611,16 @@ public final class AFa1tSDK extends AppsFlyerLib {
                                 StringBuilder sb4 = new StringBuilder("Error while handling push notification measurement: ");
                                 sb4.append(th.getClass().getSimpleName());
                                 aFLogger2.e(logTag2, sb4.toString(), th);
-                                if (this.f5229w.size() == this.AFKeystoreWrapper.AFLogger().unregisterClient("AF_PUSH_PAYLOAD_HISTORY_SIZE", 2L)) {
+                                if (this.f5302w.size() == this.AFKeystoreWrapper.AFLogger().unregisterClient("AF_PUSH_PAYLOAD_HISTORY_SIZE", 2L)) {
                                     AFLogger aFLogger3 = AFLogger.INSTANCE;
                                     LogTag logTag3 = LogTag.ENGAGEMENT;
                                     StringBuilder sb5 = new StringBuilder("Push history limit reached, removing oldest entry (timestamp: ");
                                     sb5.append(jLongValue);
                                     sb5.append(")");
                                     aFLogger3.i(logTag3, sb5.toString());
-                                    this.f5229w.remove(Long.valueOf(jLongValue));
+                                    this.f5302w.remove(Long.valueOf(jLongValue));
                                 }
-                                this.f5229w.put(Long.valueOf(j10), androidIdData.unregisterClient);
+                                this.f5302w.put(Long.valueOf(j10), androidIdData.unregisterClient);
                                 start();
                             }
                         } catch (Throwable th3) {
@@ -635,16 +635,16 @@ public final class AFa1tSDK extends AppsFlyerLib {
                     jLongValue = j10;
                 }
             }
-            if (this.f5229w.size() == this.AFKeystoreWrapper.AFLogger().unregisterClient("AF_PUSH_PAYLOAD_HISTORY_SIZE", 2L)) {
+            if (this.f5302w.size() == this.AFKeystoreWrapper.AFLogger().unregisterClient("AF_PUSH_PAYLOAD_HISTORY_SIZE", 2L)) {
                 AFLogger aFLogger4 = AFLogger.INSTANCE;
                 LogTag logTag4 = LogTag.ENGAGEMENT;
                 StringBuilder sb6 = new StringBuilder("Push history limit reached, removing oldest entry (timestamp: ");
                 sb6.append(jLongValue);
                 sb6.append(")");
                 aFLogger4.i(logTag4, sb6.toString());
-                this.f5229w.remove(Long.valueOf(jLongValue));
+                this.f5302w.remove(Long.valueOf(jLongValue));
             }
-            this.f5229w.put(Long.valueOf(j10), androidIdData.unregisterClient);
+            this.f5302w.put(Long.valueOf(j10), androidIdData.unregisterClient);
             start();
         }
     }
@@ -830,16 +830,16 @@ public final class AFa1tSDK extends AppsFlyerLib {
     @Override // com.appsflyer.AppsFlyerLib
     public final void setPartnerData(@NonNull String str, Map<String, Object> map) {
         AFc1eSDK androidIdData = this.AFKeystoreWrapper.setAndroidIdData();
-        if (androidIdData.f5250v == null) {
-            androidIdData.f5250v = new AFb1qSDK();
+        if (androidIdData.f5323v == null) {
+            androidIdData.f5323v = new AFb1qSDK();
         }
-        AFb1qSDK aFb1qSDK = androidIdData.f5250v;
+        AFb1qSDK aFb1qSDK = androidIdData.f5323v;
         if (str == null || str.isEmpty()) {
             AFLogger.INSTANCE.w(LogTag.PUBLIC_API, "Partner ID is missing or null");
             return;
         }
         if (map == null || map.isEmpty()) {
-            AFLogger.INSTANCE.w(LogTag.PUBLIC_API, aFb1qSDK.f5236d.remove(str) == null ? "Partner data is missing or null" : "Cleared partner data for ".concat(str));
+            AFLogger.INSTANCE.w(LogTag.PUBLIC_API, aFb1qSDK.f5309d.remove(str) == null ? "Partner data is missing or null" : "Cleared partner data for ".concat(str));
             return;
         }
         AFLogger aFLogger = AFLogger.INSTANCE;
@@ -851,7 +851,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
         aFLogger.d(logTag, sb2.toString());
         int length = new JSONObject(map).toString().length();
         if (length <= 1000) {
-            aFb1qSDK.f5236d.put(str, map);
+            aFb1qSDK.f5309d.put(str, map);
             aFb1qSDK.AFKeystoreWrapper.remove(str);
         } else {
             aFLogger.w(logTag, "Partner data 1000 characters limit exceeded");
@@ -904,13 +904,13 @@ public final class AFa1tSDK extends AppsFlyerLib {
     public final void setResolveDeepLinkURLs(String... strArr) {
         AFLogger.INSTANCE.d(LogTag.DDL, String.format(Locale.US, "setResolveDeepLinkURLs %s", Arrays.toString(strArr)));
         AFa1qSDK aFa1qSDKEnableTCFDataCollection = this.AFKeystoreWrapper.enableTCFDataCollection();
-        aFa1qSDKEnableTCFDataCollection.f5226w.clear();
-        aFa1qSDKEnableTCFDataCollection.f5226w.addAll(Arrays.asList(strArr));
+        aFa1qSDKEnableTCFDataCollection.f5299w.clear();
+        aFa1qSDKEnableTCFDataCollection.f5299w.addAll(Arrays.asList(strArr));
     }
 
     @Override // com.appsflyer.AppsFlyerLib
     public final void setSharingFilterForPartners(String... strArr) {
-        this.AFKeystoreWrapper.setAndroidIdData().f5251w = new AFb1rSDK(strArr);
+        this.AFKeystoreWrapper.setAndroidIdData().f5324w = new AFb1rSDK(strArr);
     }
 
     @Override // com.appsflyer.AppsFlyerLib
@@ -929,7 +929,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
     public final void setUserFbLoginId(long j10) {
         this.AFKeystoreWrapper.AFLoggerLogLevel().d("setUserFbLoginId", new String[0]);
         AFLogger.INSTANCE.i(LogTag.GENERAL, "setUserFbLoginId");
-        this.AFKeystoreWrapper.setAndroidIdData().f5249i = Long.valueOf(j10);
+        this.AFKeystoreWrapper.setAndroidIdData().f5322i = Long.valueOf(j10);
     }
 
     @Override // com.appsflyer.AppsFlyerLib
@@ -953,7 +953,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
         this.AFKeystoreWrapper.AFLoggerLogLevel().d("setUserLastName", new String[0]);
         AFLogger.INSTANCE.i(LogTag.GENERAL, "setUserLastName");
         String strAFLogger = AFj1jSDK.AFLogger(str);
-        this.AFKeystoreWrapper.setAndroidIdData().f5248e = AFj1nSDK.AFLogger(strAFLogger);
+        this.AFKeystoreWrapper.setAndroidIdData().f5321e = AFj1nSDK.AFLogger(strAFLogger);
     }
 
     @Override // com.appsflyer.AppsFlyerLib
@@ -970,7 +970,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
         String strS1 = StringsKt.s1(AFj1jSDK.AFKeystoreWrapper(str, str2), '0');
         String strUnregisterClient = AFj1jSDK.unregisterClient(str, str2);
         AFc1eSDK androidIdData = this.AFKeystoreWrapper.setAndroidIdData();
-        androidIdData.f5247d = AFj1nSDK.AFLogger(strS1);
+        androidIdData.f5320d = AFj1nSDK.AFLogger(strS1);
         androidIdData.registerClient = AFj1nSDK.AFLogger(strUnregisterClient);
     }
 
@@ -983,7 +983,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
     public final void stop(boolean z10, Context context) {
         AFc1aSDK aFc1aSDK = this.AFKeystoreWrapper;
         if (context != null) {
-            aFc1aSDK.f5240d.f5305d = context.getApplicationContext();
+            aFc1aSDK.f5313d.f5378d = context.getApplicationContext();
         }
         final AFc1aSDK aFc1aSDK2 = this.AFKeystoreWrapper;
         aFc1aSDK2.AppsFlyerLib().AFLogger(z10);
@@ -1019,7 +1019,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
     public final void updateServerUninstallToken(Context context, String str) {
         AFc1aSDK aFc1aSDK = this.AFKeystoreWrapper;
         if (context != null) {
-            aFc1aSDK.f5240d.f5305d = context.getApplicationContext();
+            aFc1aSDK.f5313d.f5378d = context.getApplicationContext();
         }
         AFg1vSDK aFg1vSDK = new AFg1vSDK();
         if (str == null || str.trim().isEmpty()) {
@@ -1036,7 +1036,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
             aFg1vSDK.registerClient.AFLogger("afUninstallToken_received_time", aFg1sSDK.unregisterClient);
             aFg1vSDK.registerClient.registerClient("afUninstallToken_queued", aFg1sSDK.AFLogger);
             if (z10) {
-                AFc1aSDK aFc1aSDK2 = f5227d.AFKeystoreWrapper;
+                AFc1aSDK aFc1aSDK2 = f5300d.AFKeystoreWrapper;
                 aFc1aSDK2.afWarnLog().d(new AFf1qSDK(str, aFc1aSDK2));
             }
         }
@@ -1057,10 +1057,10 @@ public final class AFa1tSDK extends AppsFlyerLib {
         HashMap map2 = map == null ? null : new HashMap(map);
         AFc1aSDK aFc1aSDK = this.AFKeystoreWrapper;
         if (context != null) {
-            aFc1aSDK.f5240d.f5305d = context.getApplicationContext();
+            aFc1aSDK.f5313d.f5378d = context.getApplicationContext();
         }
         AFh1jSDK aFh1jSDK = new AFh1jSDK();
-        aFh1jSDK.f5402v = str;
+        aFh1jSDK.f5475v = str;
         aFh1jSDK.AFLogger = appsFlyerRequestListener;
         if (map2 != null && map2.containsKey(AFInAppEventParameterName.TOUCH_OBJ)) {
             HashMap map3 = new HashMap();
@@ -1092,7 +1092,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
             AFh1uSDK aFh1uSDK = AFh1uSDK.logEvent;
             AFc1aSDK aFc1aSDK2 = this.AFKeystoreWrapper;
             if (context != null) {
-                aFc1aSDK2.f5240d.f5305d = context.getApplicationContext();
+                aFc1aSDK2.f5313d.f5378d = context.getApplicationContext();
             }
             AFh1xSDK aFh1xSDKE = this.AFKeystoreWrapper.e();
             aFh1xSDKE.unregisterClient(aFh1uSDK);
@@ -1109,7 +1109,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
     private void AFKeystoreWrapper(AppsFlyerRequestListener appsFlyerRequestListener) {
         AFh1fSDK aFh1fSDK = new AFh1fSDK();
         AFc1eSDK androidIdData = this.AFKeystoreWrapper.setAndroidIdData();
-        aFh1fSDK.f5400e = androidIdData.setUserLastName;
+        aFh1fSDK.f5473e = androidIdData.setUserLastName;
         aFh1fSDK.afInfoLog = androidIdData.clearUserPii;
         aFh1fSDK.AFLogger = appsFlyerRequestListener;
         this.AFKeystoreWrapper.w().d(aFh1fSDK);
@@ -1151,7 +1151,7 @@ public final class AFa1tSDK extends AppsFlyerLib {
             }
             if (this.AFKeystoreWrapper.AFLoggerLogLevel().i()) {
                 this.AFKeystoreWrapper.AFLoggerLogLevel().d();
-                Context context = this.AFKeystoreWrapper.valueOf().f5305d;
+                Context context = this.AFKeystoreWrapper.valueOf().f5378d;
                 if (context != null && !AppsFlyerLib.getInstance().isStopped()) {
                     this.AFKeystoreWrapper.AFLoggerLogLevel().v_(context.getPackageName(), context.getPackageManager());
                 }
@@ -1165,21 +1165,21 @@ public final class AFa1tSDK extends AppsFlyerLib {
             }
             this.AFKeystoreWrapper.setAndroidIdData().setUserPhone = false;
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public void AFLogger() {
         AFi1oSDK imeiData;
         try {
-            Context context = this.AFKeystoreWrapper.valueOf().f5305d;
+            Context context = this.AFKeystoreWrapper.valueOf().f5378d;
             if (AFj1qSDK.AFLogger(context) && AFj1qSDK.unregisterClient(context)) {
                 final AFi1oSDK imeiData2 = this.AFKeystoreWrapper.setImeiData();
                 if (imeiData2 != null) {
                     imeiData2.AFKeystoreWrapper(new AFi1kSDK() { // from class: com.appsflyer.internal.l
                         @Override // com.appsflyer.internal.AFi1kSDK
                         public final void onRequestFinished() {
-                            this.f5501a.d(imeiData2);
+                            this.f5574a.d(imeiData2);
                         }
                     });
                     return;

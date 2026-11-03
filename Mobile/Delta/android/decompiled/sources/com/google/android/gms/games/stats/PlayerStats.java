@@ -8,24 +8,24 @@ public interface PlayerStats extends e<PlayerStats>, Parcelable {
     @Deprecated
     float F();
 
-    float J0();
+    float F0();
 
     @Deprecated
-    float L0();
+    float H0();
 
-    int O0();
+    int K0();
 
     int S1();
 
-    float X();
+    float W();
 
     @Deprecated
-    float c2();
+    float d2();
 
     @Deprecated
-    float e3();
+    float g3();
+
+    int t1();
 
     float t3();
-
-    int v1();
 }

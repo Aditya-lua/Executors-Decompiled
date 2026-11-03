@@ -10,19 +10,19 @@ import java.util.List;
 public final class j implements q {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Double f6545a;
+    public final Double f6618a;
 
     public j(Double d10) {
         if (d10 == null) {
-            this.f6545a = Double.valueOf(Double.NaN);
+            this.f6618a = Double.valueOf(Double.NaN);
         } else {
-            this.f6545a = d10;
+            this.f6618a = d10;
         }
     }
 
     @Override // com.google.android.gms.internal.measurement.q
     public final q a() {
-        return new j(this.f6545a);
+        return new j(this.f6618a);
     }
 
     @Override // com.google.android.gms.internal.measurement.q
@@ -38,13 +38,13 @@ public final class j implements q {
             return true;
         }
         if (obj instanceof j) {
-            return this.f6545a.equals(((j) obj).f6545a);
+            return this.f6618a.equals(((j) obj).f6618a);
         }
         return false;
     }
 
     public final int hashCode() {
-        return this.f6545a.hashCode();
+        return this.f6618a.hashCode();
     }
 
     public final String toString() {
@@ -53,7 +53,7 @@ public final class j implements q {
 
     @Override // com.google.android.gms.internal.measurement.q
     public final String zzc() {
-        Double d10 = this.f6545a;
+        Double d10 = this.f6618a;
         if (Double.isNaN(d10.doubleValue())) {
             return "NaN";
         }
@@ -75,12 +75,12 @@ public final class j implements q {
 
     @Override // com.google.android.gms.internal.measurement.q
     public final Double zzd() {
-        return this.f6545a;
+        return this.f6618a;
     }
 
     @Override // com.google.android.gms.internal.measurement.q
     public final Boolean zze() {
-        Double d10 = this.f6545a;
+        Double d10 = this.f6618a;
         boolean z10 = false;
         if (!Double.isNaN(d10.doubleValue()) && d10.doubleValue() != 0.0d) {
             z10 = true;

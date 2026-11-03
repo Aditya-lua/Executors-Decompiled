@@ -179,7 +179,7 @@ public final class Dispatcher {
 
     @NotNull
     /* JADX INFO: renamed from: -deprecated_executorService, reason: not valid java name */
-    public final ExecutorService m115deprecated_executorService() {
+    public final ExecutorService m116deprecated_executorService() {
         return executorService();
     }
 
@@ -303,7 +303,7 @@ public final class Dispatcher {
         }
         synchronized (this) {
             this.maxRequests = i10;
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
         }
         promoteAndExecute$default(this, null, null, null, 7, null);
     }
@@ -314,7 +314,7 @@ public final class Dispatcher {
         }
         synchronized (this) {
             this.maxRequestsPerHost = i10;
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
         }
         promoteAndExecute$default(this, null, null, null, 7, null);
     }

@@ -12,7 +12,7 @@ public final class d0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final d0 f22180a = new d0();
+    public static final d0 f22404a = new d0();
     public static final /* synthetic */ AtomicReference b = new AtomicReference(null);
 
     @Metadata(d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\bæ\u0080\u0001\u0018\u00002\u00020\u0001J\u001b\u0010\u0006\u001a\u00020\u00052\n\u0010\u0004\u001a\u00060\u0002j\u0002`\u0003H&¢\u0006\u0004\b\u0006\u0010\u0007ø\u0001\u0000\u0082\u0002\u0006\n\u0004\b!0\u0001¨\u0006\bÀ\u0006\u0001"}, d2 = {"Lk6/d0$a;", "", "Landroid/content/Context;", "Lcoil3/PlatformContext;", "context", "Lk6/s;", "a", "(Landroid/content/Context;)Lk6/s;", "coil_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
@@ -23,7 +23,7 @@ public final class d0 {
 
     @NotNull
     public static final s a(@NotNull Context context) {
-        d0 d0Var = f22180a;
+        d0 d0Var = f22404a;
         Object obj = d0Var.b().get();
         s sVar = obj instanceof s ? (s) obj : null;
         return sVar == null ? d0Var.c(context) : sVar;
@@ -47,7 +47,7 @@ public final class d0 {
                     a aVar = obj instanceof a ? (a) obj : null;
                     if (aVar == null || (sVarA = aVar.a(context)) == null) {
                         a aVarA = g0.a(context);
-                        sVarA = aVarA != null ? aVarA.a(context) : f0.f22183a.a(context);
+                        sVarA = aVarA != null ? aVarA.a(context) : f0.f22407a.a(context);
                     }
                 }
                 sVar = sVarA;

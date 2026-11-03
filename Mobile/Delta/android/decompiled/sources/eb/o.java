@@ -4,5 +4,5 @@ package eb;
 public final class o {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final n f15311a = new n(null);
+    public static final n f15925a = new n(null);
 }

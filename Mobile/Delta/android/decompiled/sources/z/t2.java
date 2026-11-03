@@ -15,16 +15,16 @@ public final class t2 implements n0.j4 {
         n0.x2 x2VarK0 = n0.x2.k0();
         n0.o3.b bVar2 = new n0.o3.b();
         bVar2.B(t5.b(bVar, i10));
-        x2VarK0.G(n0.i4.f24697w, bVar2.p());
-        x2VarK0.G(n0.i4.f24699y, s2.f36808a);
+        x2VarK0.G(n0.i4.f25518w, bVar2.p());
+        x2VarK0.G(n0.i4.f25520y, s2.f37503a);
         n0.l1.a aVar = new n0.l1.a();
         aVar.v(t5.a(bVar, i10));
-        x2VarK0.G(n0.i4.f24698x, aVar.h());
-        x2VarK0.G(n0.i4.f24700z, bVar == n0.j4.b.IMAGE_CAPTURE ? n4.f36718c : b1.f36442a);
+        x2VarK0.G(n0.i4.f25519x, aVar.h());
+        x2VarK0.G(n0.i4.f25521z, bVar == n0.j4.b.IMAGE_CAPTURE ? n4.f37413c : b1.f37137a);
         if (bVar == n0.j4.b.PREVIEW) {
-            x2VarK0.G(n0.i2.f24690s, this.b.f());
+            x2VarK0.G(n0.i2.f25511s, this.b.f());
         }
-        x2VarK0.G(n0.i2.f24685n, Integer.valueOf(this.b.d(true).getRotation()));
+        x2VarK0.G(n0.i2.f25506n, Integer.valueOf(this.b.d(true).getRotation()));
         if (bVar == n0.j4.b.VIDEO_CAPTURE || bVar == n0.j4.b.STREAM_SHARING) {
             x2VarK0.G(n0.i4.E, Boolean.TRUE);
         }

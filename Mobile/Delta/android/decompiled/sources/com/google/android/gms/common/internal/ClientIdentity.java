@@ -14,14 +14,14 @@ public class ClientIdentity extends AbstractSafeParcelable {
     public static final Parcelable.Creator<ClientIdentity> CREATOR = new s();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f5764f;
+    public final int f5837f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final String f5765g;
+    public final String f5838g;
 
     public ClientIdentity(int i10, String str) {
-        this.f5764f = i10;
-        this.f5765g = str;
+        this.f5837f = i10;
+        this.f5838g = str;
     }
 
     public final boolean equals(Object obj) {
@@ -32,24 +32,24 @@ public class ClientIdentity extends AbstractSafeParcelable {
             return false;
         }
         ClientIdentity clientIdentity = (ClientIdentity) obj;
-        return clientIdentity.f5764f == this.f5764f && k.b(clientIdentity.f5765g, this.f5765g);
+        return clientIdentity.f5837f == this.f5837f && k.b(clientIdentity.f5838g, this.f5838g);
     }
 
     public final int hashCode() {
-        return this.f5764f;
+        return this.f5837f;
     }
 
     @NonNull
     public final String toString() {
-        return this.f5764f + ":" + this.f5765g;
+        return this.f5837f + ":" + this.f5838g;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(@NonNull Parcel parcel, int i10) {
-        int i11 = this.f5764f;
+        int i11 = this.f5837f;
         int iA = o9.b.a(parcel);
         o9.b.n(parcel, 1, i11);
-        o9.b.v(parcel, 2, this.f5765g, false);
+        o9.b.v(parcel, 2, this.f5838g, false);
         o9.b.b(parcel, iA);
     }
 }

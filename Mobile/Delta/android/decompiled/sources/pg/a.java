@@ -9,23 +9,23 @@ public enum a {
 
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final a[] f28587f;
+    public static final a[] f28701f;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f28589a;
+    public final int f28703a;
 
     static {
         a aVar = L;
         a aVar2 = M;
         a aVar3 = Q;
-        f28587f = new a[]{aVar2, aVar, H, aVar3};
+        f28701f = new a[]{aVar2, aVar, H, aVar3};
     }
 
     a(int i10) {
-        this.f28589a = i10;
+        this.f28703a = i10;
     }
 
     public int a() {
-        return this.f28589a;
+        return this.f28703a;
     }
 }

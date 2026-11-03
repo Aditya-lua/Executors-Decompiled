@@ -9,9 +9,9 @@ import n0.g3;
 public class EncoderNotUsePersistentInputSurfaceQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final List<String> f1400a = Arrays.asList("SM-N9208", "SM-G920V");
+    public static final List<String> f1245a = Arrays.asList("SM-N9208", "SM-G920V");
 
     public static boolean g() {
-        return f1400a.contains(Build.MODEL.toUpperCase());
+        return f1245a.contains(Build.MODEL.toUpperCase());
     }
 }

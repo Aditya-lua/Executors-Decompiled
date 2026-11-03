@@ -12,11 +12,11 @@ import com.google.android.gms.common.Feature;
 public final class p extends n9.e {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Bundle f35800e;
+    public final Bundle f36657e;
 
     public p(Context context, Looper looper, z8.l lVar, n9.d dVar, l9.e eVar, l9.n nVar) {
         super(context, looper, 212, dVar, eVar, nVar);
-        this.f35800e = new Bundle();
+        this.f36657e = new Bundle();
     }
 
     @Override // n9.c
@@ -30,12 +30,12 @@ public final class p extends n9.e {
 
     @Override // n9.c
     public final Feature[] getApiFeatures() {
-        return q.f35808i;
+        return q.f36665i;
     }
 
     @Override // n9.c
     public final Bundle getGetServiceRequestExtraArgs() {
-        return this.f35800e;
+        return this.f36657e;
     }
 
     @Override // n9.c, k9.a.f

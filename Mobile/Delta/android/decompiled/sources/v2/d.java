@@ -27,7 +27,7 @@ import w1.i;
 public class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final i<c, ProviderInfo> f32700a = new i<>(2);
+    public static final i<c, ProviderInfo> f33268a = new i<>(2);
     public static final Comparator<byte[]> b = new Comparator() { // from class: v2.c
         @Override // java.util.Comparator
         public final int compare(Object obj, Object obj2) {
@@ -48,15 +48,15 @@ public class d {
     public static class b implements a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final ContentProviderClient f32701a;
+        public final ContentProviderClient f33269a;
 
         public b(Context context, Uri uri) {
-            this.f32701a = context.getContentResolver().acquireUnstableContentProviderClient(uri);
+            this.f33269a = context.getContentResolver().acquireUnstableContentProviderClient(uri);
         }
 
         @Override // v2.d.a
         public Cursor b(Uri uri, String[] strArr, String str, String[] strArr2, String str2, CancellationSignal cancellationSignal) {
-            ContentProviderClient contentProviderClient = this.f32701a;
+            ContentProviderClient contentProviderClient = this.f33269a;
             if (contentProviderClient == null) {
                 return null;
             }
@@ -70,7 +70,7 @@ public class d {
 
         @Override // v2.d.a
         public void close() {
-            ContentProviderClient contentProviderClient = this.f32701a;
+            ContentProviderClient contentProviderClient = this.f33269a;
             if (contentProviderClient != null) {
                 contentProviderClient.close();
             }
@@ -80,16 +80,16 @@ public class d {
     public static class c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public String f32702a;
+        public String f33270a;
         public String b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public List<List<byte[]>> f32703c;
+        public List<List<byte[]>> f33271c;
 
         public c(String str, String str2, List<List<byte[]>> list) {
-            this.f32702a = str;
+            this.f33270a = str;
             this.b = str2;
-            this.f32703c = list;
+            this.f33271c = list;
         }
 
         public boolean equals(Object obj) {
@@ -100,11 +100,11 @@ public class d {
                 return false;
             }
             c cVar = (c) obj;
-            return Objects.equals(this.f32702a, cVar.f32702a) && Objects.equals(this.b, cVar.b) && Objects.equals(this.f32703c, cVar.f32703c);
+            return Objects.equals(this.f33270a, cVar.f33270a) && Objects.equals(this.b, cVar.b) && Objects.equals(this.f33271c, cVar.f33271c);
         }
 
         public int hashCode() {
-            return Objects.hash(this.f32702a, this.b, this.f32703c);
+            return Objects.hash(this.f33270a, this.b, this.f33271c);
         }
     }
 
@@ -175,7 +175,7 @@ public class d {
         try {
             List<List<byte[]>> listD = d(eVar, resources);
             c cVar = new c(eVar.e(), eVar.f(), listD);
-            ProviderInfo providerInfoD = f32700a.d(cVar);
+            ProviderInfo providerInfoD = f33268a.d(cVar);
             if (providerInfoD != null) {
                 n5.a.f();
                 return providerInfoD;
@@ -194,7 +194,7 @@ public class d {
                 ArrayList arrayList = new ArrayList(listD.get(i10));
                 Collections.sort(arrayList, b);
                 if (c(listB, arrayList)) {
-                    f32700a.e(cVar, providerInfoResolveContentProvider);
+                    f33268a.e(cVar, providerInfoResolveContentProvider);
                     n5.a.f();
                     return providerInfoResolveContentProvider;
                 }

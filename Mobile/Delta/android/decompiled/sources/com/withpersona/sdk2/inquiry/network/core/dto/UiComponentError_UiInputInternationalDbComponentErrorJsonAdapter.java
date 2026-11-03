@@ -5,12 +5,12 @@ import java.util.Map;
 import kotlin.collections.q0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import um.a0;
-import um.h;
-import um.m;
-import um.t;
-import um.w;
-import wm.c;
+import sm.a0;
+import sm.h;
+import sm.m;
+import sm.t;
+import sm.w;
+import um.c;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class UiComponentError_UiInputInternationalDbComponentErrorJsonAdapter extends h<UiComponentError.UiInputInternationalDbComponentError> {
@@ -37,7 +37,7 @@ public final class UiComponentError_UiInputInternationalDbComponentErrorJsonAdap
     }
 
     /* JADX WARN: Can't rename method to resolve collision */
-    @Override // um.h
+    @Override // sm.h
     @NotNull
     public UiComponentError.UiInputInternationalDbComponentError fromJson(@NotNull m mVar) {
         mVar.b();
@@ -76,7 +76,7 @@ public final class UiComponentError_UiInputInternationalDbComponentErrorJsonAdap
         throw c.o("message", "message", mVar);
     }
 
-    @Override // um.h
+    @Override // sm.h
     public void toJson(@NotNull t tVar, @Nullable UiComponentError.UiInputInternationalDbComponentError uiInputInternationalDbComponentError) {
         if (uiInputInternationalDbComponentError == null) {
             throw new NullPointerException("value_ was null! Wrap in .nullSafe() to write nullable values.");

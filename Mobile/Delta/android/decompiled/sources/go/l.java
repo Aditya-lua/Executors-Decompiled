@@ -1,26 +1,27 @@
 package go;
 
+import java.util.Set;
+
 /* JADX INFO: loaded from: classes3.dex */
-public final class l implements ft.d<d> {
+public final class l implements dt.d<Set<sm.h.e>> {
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final g f18304a;
+    public static final class a {
 
-    public l(g gVar) {
-        this.f18304a = gVar;
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final l f18738a = new l();
     }
 
-    public static l a(g gVar) {
-        return new l(gVar);
+    public static l a() {
+        return a.f18738a;
     }
 
-    public static d b(g gVar) {
-        return (d) ft.h.e(gVar.e());
+    public static Set<sm.h.e> c() {
+        return (Set) dt.h.e(com.withpersona.sdk2.inquiry.governmentid.k.a());
     }
 
-    @Override // ht.a
-    /* JADX INFO: renamed from: c, reason: merged with bridge method [inline-methods] */
-    public d get() {
-        return b(this.f18304a);
+    @Override // ft.a
+    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+    public Set<sm.h.e> get() {
+        return c();
     }
 }

@@ -9,30 +9,30 @@ import java.util.Iterator;
 public final class a0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f25314a;
+    public final String f26135a;
     public final String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final String f25315c;
+    public final String f26136c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final long f25316d;
+    public final long f26137d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final long f25317e;
+    public final long f26138e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final zzbe f25318f;
+    public final zzbe f26139f;
 
     public a0(g7 g7Var, String str, String str2, String str3, long j10, long j11, Bundle bundle) {
         zzbe zzbeVar;
         n9.m.f(str2);
         n9.m.f(str3);
-        this.f25314a = str2;
+        this.f26135a = str2;
         this.b = str3;
-        this.f25315c = true == TextUtils.isEmpty(str) ? null : str;
-        this.f25316d = j10;
-        this.f25317e = j11;
+        this.f26136c = true == TextUtils.isEmpty(str) ? null : str;
+        this.f26137d = j10;
+        this.f26138e = j11;
         if (j11 != 0 && j11 > j10) {
             g7Var.a().r().b("Event created with reverse previous/current timestamps. appId", w5.x(str2));
         }
@@ -58,16 +58,16 @@ public final class a0 {
             }
             zzbeVar = new zzbe(bundle2);
         }
-        this.f25318f = zzbeVar;
+        this.f26139f = zzbeVar;
     }
 
     public final a0 a(g7 g7Var, long j10) {
-        return new a0(g7Var, this.f25315c, this.f25314a, this.b, this.f25316d, j10, this.f25318f);
+        return new a0(g7Var, this.f26136c, this.f26135a, this.b, this.f26137d, j10, this.f26139f);
     }
 
     public final String toString() {
-        String string = this.f25318f.toString();
-        String str = this.f25314a;
+        String string = this.f26139f.toString();
+        String str = this.f26135a;
         int length = String.valueOf(str).length();
         String str2 = this.b;
         StringBuilder sb2 = new StringBuilder(length + 22 + String.valueOf(str2).length() + 10 + string.length() + 1);
@@ -85,14 +85,14 @@ public final class a0 {
         n9.m.f(str2);
         n9.m.f(str3);
         n9.m.l(zzbeVar);
-        this.f25314a = str2;
+        this.f26135a = str2;
         this.b = str3;
-        this.f25315c = true == TextUtils.isEmpty(str) ? null : str;
-        this.f25316d = j10;
-        this.f25317e = j11;
+        this.f26136c = true == TextUtils.isEmpty(str) ? null : str;
+        this.f26137d = j10;
+        this.f26138e = j11;
         if (j11 != 0 && j11 > j10) {
             g7Var.a().r().c("Event created with reverse previous/current timestamps. appId, name", w5.x(str2), w5.x(str3));
         }
-        this.f25318f = zzbeVar;
+        this.f26139f = zzbeVar;
     }
 }

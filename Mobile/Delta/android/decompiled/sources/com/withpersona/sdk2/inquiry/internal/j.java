@@ -52,7 +52,7 @@ public final class j {
             return new InquiryConfigData(null, null, lowerCase3, null, null, uiFramework, null, null, null, null, bool2, null, null, bool2, Boolean.valueOf(z16), 7131, null);
         }
         if (!(inquiryWorkflow$Props instanceof InquiryWorkflow$Props.RelaySessionProps)) {
-            throw new jt.l();
+            throw new gt.l();
         }
         InquiryWorkflow$Props.RelaySessionProps relaySessionProps = (InquiryWorkflow$Props.RelaySessionProps) inquiryWorkflow$Props;
         String lowerCase4 = relaySessionProps.getEnvironment().name().toLowerCase(Locale.ROOT);

@@ -13,39 +13,39 @@ import java.util.UUID;
 public class t4 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public n0.u1 f36823a;
+    public n0.u1 f37518a;
     public n0.o3 b;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Size f36825d;
+    public final Size f37520d;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final c f36827f;
+    public final c f37522f;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final d0.w f36826e = new d0.w();
+    public final d0.w f37521e = new d0.w();
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public n0.o3.c f36828g = null;
+    public n0.o3.c f37523g = null;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final b f36824c = new b();
+    public final b f37519c = new b();
 
     public class a implements r0.c<Void> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ Surface f36829a;
+        public final /* synthetic */ Surface f37524a;
         public final /* synthetic */ SurfaceTexture b;
 
         public a(Surface surface, SurfaceTexture surfaceTexture) {
-            this.f36829a = surface;
+            this.f37524a = surface;
             this.b = surfaceTexture;
         }
 
         @Override // r0.c
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public void onSuccess(Void r8) {
-            this.f36829a.release();
+            this.f37524a.release();
             this.b.release();
         }
 
@@ -60,8 +60,8 @@ public class t4 {
 
         public b() {
             n0.x2 x2VarK0 = n0.x2.k0();
-            x2VarK0.G(n0.i4.f24699y, new s2());
-            x2VarK0.G(n0.h2.f24670j, 34);
+            x2VarK0.G(n0.i4.f25520y, new s2());
+            x2VarK0.G(n0.h2.f25491j, 34);
             h0(x2VarK0);
             this.P = x2VarK0;
         }
@@ -87,16 +87,16 @@ public class t4 {
     }
 
     public t4(a0.c0 c0Var, q3 q3Var, c cVar) {
-        this.f36827f = cVar;
+        this.f37522f = cVar;
         Size sizeG = g(c0Var, q3Var);
-        this.f36825d = sizeG;
+        this.f37520d = sizeG;
         g0.r1.a("MeteringRepeating", "MeteringSession SurfaceTexture size: " + sizeG);
         this.b = d();
     }
 
     public static /* synthetic */ void a(t4 t4Var, n0.o3 o3Var, n0.o3.g gVar) {
         t4Var.b = t4Var.d();
-        c cVar = t4Var.f36827f;
+        c cVar = t4Var.f37522f;
         if (cVar != null) {
             cVar.a();
         }
@@ -104,40 +104,40 @@ public class t4 {
 
     public void c() {
         g0.r1.a("MeteringRepeating", "MeteringRepeating clear!");
-        n0.u1 u1Var = this.f36823a;
+        n0.u1 u1Var = this.f37518a;
         if (u1Var != null) {
             u1Var.d();
         }
-        this.f36823a = null;
+        this.f37518a = null;
     }
 
     public n0.o3 d() {
         SurfaceTexture surfaceTexture = new SurfaceTexture(0);
-        surfaceTexture.setDefaultBufferSize(this.f36825d.getWidth(), this.f36825d.getHeight());
+        surfaceTexture.setDefaultBufferSize(this.f37520d.getWidth(), this.f37520d.getHeight());
         Surface surface = new Surface(surfaceTexture);
-        n0.o3.b bVarR = n0.o3.b.r(this.f36824c, this.f36825d);
+        n0.o3.b bVarR = n0.o3.b.r(this.f37519c, this.f37520d);
         bVarR.B(1);
         n0.k2 k2Var = new n0.k2(surface);
-        this.f36823a = k2Var;
+        this.f37518a = k2Var;
         r0.n.j(k2Var.k(), new a(surface, surfaceTexture), q0.c.b());
-        bVarR.l(this.f36823a);
-        n0.o3.c cVar = this.f36828g;
+        bVarR.l(this.f37518a);
+        n0.o3.c cVar = this.f37523g;
         if (cVar != null) {
             cVar.b();
         }
         n0.o3.c cVar2 = new n0.o3.c(new n0.o3.d() { // from class: z.r4
             @Override // n0.o3.d
             public final void a(n0.o3 o3Var, n0.o3.g gVar) {
-                t4.a(this.f36795a, o3Var, gVar);
+                t4.a(this.f37490a, o3Var, gVar);
             }
         });
-        this.f36828g = cVar2;
+        this.f37523g = cVar2;
         bVarR.u(cVar2);
         return bVarR.p();
     }
 
     public Size e() {
-        return this.f36825d;
+        return this.f37520d;
     }
 
     public String f() {
@@ -150,7 +150,7 @@ public class t4 {
             g0.r1.c("MeteringRepeating", "Can not get output size list.");
             return new Size(0, 0);
         }
-        Size[] sizeArrA = this.f36826e.a(sizeArrG);
+        Size[] sizeArrA = this.f37521e.a(sizeArrG);
         List listAsList = Arrays.asList(sizeArrA);
         Collections.sort(listAsList, new Comparator() { // from class: z.s4
             @Override // java.util.Comparator
@@ -188,6 +188,6 @@ public class t4 {
     }
 
     public n0.i4<?> i() {
-        return this.f36824c;
+        return this.f37519c;
     }
 }

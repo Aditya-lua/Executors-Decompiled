@@ -4,7 +4,7 @@ package q7;
 public class r implements n0<Integer> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final r f29267a = new r();
+    public static final r f29620a = new r();
 
     @Override // q7.n0
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */

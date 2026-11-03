@@ -22,7 +22,7 @@ public final class AFb1hSDK implements AFb1bSDK.AFa1zSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    private final AFf1mSDK f5233d;
+    private final AFf1mSDK f5306d;
 
     @Nullable
     private final AFh1sSDK registerClient;
@@ -33,7 +33,7 @@ public final class AFb1hSDK implements AFb1bSDK.AFa1zSDK {
         Intrinsics.checkNotNullParameter(aFf1mSDK, "");
         this.AFLogger = aFc1bSDK;
         this.AFKeystoreWrapper = function0;
-        this.f5233d = aFf1mSDK;
+        this.f5306d = aFf1mSDK;
         this.registerClient = aFh1sSDK;
     }
 
@@ -45,7 +45,7 @@ public final class AFb1hSDK implements AFb1bSDK.AFa1zSDK {
         AFa1kSDK.Companion companion = AFa1kSDK.INSTANCE;
         AFa1lSDK userPhone = this.AFLogger.setUserPhone();
         Intrinsics.checkNotNullExpressionValue(userPhone, "");
-        aFa1qSDKEnableTCFDataCollection.b_(AFa1kSDK.Companion.d(userPhone), intent, this.AFLogger.valueOf().f5305d);
+        aFa1qSDKEnableTCFDataCollection.b_(AFa1kSDK.Companion.d(userPhone), intent, this.AFLogger.valueOf().f5378d);
     }
 
     @Override // com.appsflyer.internal.AFb1bSDK.AFa1zSDK
@@ -58,8 +58,8 @@ public final class AFb1hSDK implements AFb1bSDK.AFa1zSDK {
         AFa1kSDK.Companion companion = AFa1kSDK.INSTANCE;
         AFa1lSDK userPhone = this.AFLogger.setUserPhone();
         Intrinsics.checkNotNullExpressionValue(userPhone, "");
-        aFa1qSDKEnableTCFDataCollection.b_(AFa1kSDK.Companion.d(userPhone), intent, this.AFLogger.valueOf().f5305d);
-        this.AFLogger.i().AFKeystoreWrapper(this.f5233d);
+        aFa1qSDKEnableTCFDataCollection.b_(AFa1kSDK.Companion.d(userPhone), intent, this.AFLogger.valueOf().f5378d);
+        this.AFLogger.i().AFKeystoreWrapper(this.f5306d);
         if (!AFe1jSDK.force) {
             this.AFLogger.afWarnLog().d(new AFe1jSDK(this.AFLogger));
         }
@@ -81,7 +81,7 @@ public final class AFb1hSDK implements AFb1bSDK.AFa1zSDK {
         AFLoggerBase.i$default(aFLogger, logTag, "onBecameBackground", false, 4, null);
         AFh1xSDK aFh1xSDKE = this.AFLogger.e();
         long jCurrentTimeMillis = System.currentTimeMillis();
-        long j10 = aFh1xSDKE.f5410e;
+        long j10 = aFh1xSDKE.f5483e;
         if (j10 != 0) {
             long j11 = jCurrentTimeMillis - j10;
             if (j11 > 0 && j11 < 1000) {

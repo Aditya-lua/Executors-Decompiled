@@ -12,10 +12,10 @@ public enum GovIdCaptureButtonType {
     CONTINUE,
     CAPTURE_TIPS;
 
-    private static final /* synthetic */ qt.a $ENTRIES = qt.b.a(values());
+    private static final /* synthetic */ ot.a $ENTRIES = ot.b.a(values());
 
     @NotNull
-    public static qt.a<GovIdCaptureButtonType> getEntries() {
+    public static ot.a<GovIdCaptureButtonType> getEntries() {
         return $ENTRIES;
     }
 }

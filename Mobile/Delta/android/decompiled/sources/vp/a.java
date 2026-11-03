@@ -1,63 +1,65 @@
 package vp;
 
-/* JADX INFO: loaded from: classes2.dex */
-public final class a {
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.materialswitch.MaterialSwitch;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class a implements r5.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final int f33341a = 2130969346;
-    public static final int b = 2130969506;
+    @NonNull
+    public final ConstraintLayout f33600a;
+
+    @NonNull
+    public final MaterialSwitch b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final int f33342c = 2130969510;
+    @NonNull
+    public final MaterialToolbar f33601c;
 
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final int f33343d = 2130969511;
+    public a(@NonNull ConstraintLayout constraintLayout, @NonNull MaterialSwitch materialSwitch, @NonNull MaterialToolbar materialToolbar) {
+        this.f33600a = constraintLayout;
+        this.b = materialSwitch;
+        this.f33601c = materialToolbar;
+    }
 
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final int f33344e = 2130969512;
+    @NonNull
+    public static a a(@NonNull View view) {
+        int i10 = up.a.f33152c;
+        MaterialSwitch materialSwitch = (MaterialSwitch) r5.b.a(view, i10);
+        if (materialSwitch != null) {
+            i10 = up.a.f33153d;
+            MaterialToolbar materialToolbar = (MaterialToolbar) r5.b.a(view, i10);
+            if (materialToolbar != null) {
+                return new a((ConstraintLayout) view, materialSwitch, materialToolbar);
+            }
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
+    }
 
-    /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final int f33345f = 2130969513;
+    @NonNull
+    public static a c(@NonNull LayoutInflater layoutInflater) {
+        return d(layoutInflater, null, false);
+    }
 
-    /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final int f33346g = 2130969514;
+    @NonNull
+    public static a d(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
+        View viewInflate = layoutInflater.inflate(up.b.f33154a, viewGroup, false);
+        if (z10) {
+            viewGroup.addView(viewInflate);
+        }
+        return a(viewInflate);
+    }
 
-    /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final int f33347h = 2130969515;
-
-    /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final int f33348i = 2130969516;
-
-    /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final int f33349j = 2130969517;
-
-    /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final int f33350k = 2130969518;
-
-    /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final int f33351l = 2130969519;
-
-    /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public static final int f33352m = 2130969520;
-
-    /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public static final int f33353n = 2130969523;
-
-    /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public static final int f33354o = 2130969525;
-
-    /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public static final int f33355p = 2130969527;
-
-    /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public static final int f33356q = 2130969529;
-
-    /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public static final int f33357r = 2130969530;
-
-    /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public static final int f33358s = 2130969531;
-
-    /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public static final int f33359t = 2130969533;
+    @Override // r5.a
+    @NonNull
+    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+    public ConstraintLayout getRoot() {
+        return this.f33600a;
+    }
 }

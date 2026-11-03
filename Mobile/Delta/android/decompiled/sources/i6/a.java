@@ -19,12 +19,12 @@ public final class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final String f20284a;
+    public static final String f20400a;
 
     static {
         String strI = w.i("DiagnosticsWrkr");
         Intrinsics.checkNotNullExpressionValue(strI, "tagWithPrefix(...)");
-        f20284a = strI;
+        f20400a = strI;
     }
 
     public static final String c(j0 j0Var, String str, Integer num, String str2) {

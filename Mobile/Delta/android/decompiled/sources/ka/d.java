@@ -20,11 +20,11 @@ import java.util.List;
 public final class d extends e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f22290a;
+    public final Context f22514a;
 
     public d(Context context) {
         super(null);
-        this.f22290a = context.getApplicationContext();
+        this.f22514a = context.getApplicationContext();
     }
 
     public static /* synthetic */ zzg d(n1 n1Var, n1 n1Var2, Task task) {
@@ -67,14 +67,14 @@ public final class d extends e {
         new Thread(new Runnable() { // from class: ka.c
             @Override // java.lang.Runnable
             public final /* synthetic */ void run() {
-                this.f22289a.c();
+                this.f22513a.c();
             }
         }, "initialize-shortcuts").start();
     }
 
     public final /* synthetic */ void c() {
         Task taskF;
-        Context context = this.f22290a;
+        Context context = this.f22514a;
         final ShortcutManager shortcutManager = (ShortcutManager) context.getSystemService(ShortcutManager.class);
         if (shortcutManager == null) {
             return;
@@ -86,7 +86,7 @@ public final class d extends e {
             taskF = sb.m.f(e(n1VarG, n1VarG2));
         } else {
             final n nVar = new n(context);
-            taskF = nVar.z(l9.u.c().e(6744).d(da.j.f14513g).c(false).b(new l9.q() { // from class: ka.m
+            taskF = nVar.z(l9.u.c().e(6744).d(da.j.f14493g).c(false).b(new l9.q() { // from class: ka.m
                 /* JADX WARN: Multi-variable type inference failed */
                 @Override // l9.q
                 public final /* synthetic */ void accept(Object obj, Object obj2) {

@@ -8,7 +8,7 @@ import java.util.Deque;
 public final class i4 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Deque f15281a = new ArrayDeque(16);
+    public final Deque f15895a = new ArrayDeque(16);
 
     public i4(boolean z10) {
     }
@@ -18,8 +18,8 @@ public final class i4 {
     }
 
     public final void b() throws IOException {
-        if (!this.f15281a.isEmpty()) {
-            throw new IOException(String.format("data item not completed, stackSize: %s scope: %s", Integer.valueOf(this.f15281a.size()), Long.valueOf(h())));
+        if (!this.f15895a.isEmpty()) {
+            throw new IOException(String.format("data item not completed, stackSize: %s scope: %s", Integer.valueOf(this.f15895a.size()), Long.valueOf(h())));
         }
     }
 
@@ -31,7 +31,7 @@ public final class i4 {
         if (jH == -5) {
             throw new IOException("expected a value for dangling key in indefinite-length map");
         }
-        this.f15281a.pop();
+        this.f15895a.pop();
     }
 
     public final void d() throws IOException {
@@ -63,7 +63,7 @@ public final class i4 {
     public final void f() {
         long jH = h();
         if (jH == 1) {
-            this.f15281a.pop();
+            this.f15895a.pop();
             return;
         }
         if (jH > 1) {
@@ -76,18 +76,18 @@ public final class i4 {
     }
 
     public final void g(long j10) {
-        this.f15281a.push(Long.valueOf(j10));
+        this.f15895a.push(Long.valueOf(j10));
     }
 
     public final long h() {
-        if (this.f15281a.isEmpty()) {
+        if (this.f15895a.isEmpty()) {
             return 0L;
         }
-        return ((Long) this.f15281a.peek()).longValue();
+        return ((Long) this.f15895a.peek()).longValue();
     }
 
     public final void i(long j10) {
-        this.f15281a.pop();
-        this.f15281a.push(Long.valueOf(j10));
+        this.f15895a.pop();
+        this.f15895a.push(Long.valueOf(j10));
     }
 }

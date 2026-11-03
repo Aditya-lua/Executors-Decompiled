@@ -4,7 +4,7 @@ package com.google.android.gms.internal.measurement;
 public final class ue implements te {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final l9 f6830a = new f9(a9.a("com.google.android.gms.measurement")).a().b().d("measurement.edpb.service", false);
+    public static final l9 f6904a = new f9(a9.a("com.google.android.gms.measurement")).a().b().d("measurement.edpb.service", false);
 
     @Override // com.google.android.gms.internal.measurement.te
     public final boolean zza() {
@@ -13,6 +13,6 @@ public final class ue implements te {
 
     @Override // com.google.android.gms.internal.measurement.te
     public final boolean zzb() {
-        return ((Boolean) f6830a.d()).booleanValue();
+        return ((Boolean) f6904a.d()).booleanValue();
     }
 }

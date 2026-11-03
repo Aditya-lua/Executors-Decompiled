@@ -9,10 +9,10 @@ import m9.e;
 /* JADX INFO: loaded from: classes.dex */
 public interface a extends e<a> {
     @NonNull
-    String T2();
+    String S2();
 
     @NonNull
-    ArrayList<c> b2();
+    ArrayList<c> c2();
 
     @NonNull
     @KeepName
@@ -25,5 +25,5 @@ public interface a extends e<a> {
     @NonNull
     String l();
 
-    int y0();
+    int u0();
 }

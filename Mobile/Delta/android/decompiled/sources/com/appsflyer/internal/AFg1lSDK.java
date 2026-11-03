@@ -16,7 +16,7 @@ import org.json.JSONException;
 public final class AFg1lSDK extends AFe1ySDK<Void> {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static long f5373e;
+    public static long f5446e;
 
     /* JADX INFO: renamed from: afErrorLog, reason: from kotlin metadata */
     @Nullable
@@ -36,7 +36,7 @@ public final class AFg1lSDK extends AFe1ySDK<Void> {
 
     static {
         kotlin.time.a.Companion companion = kotlin.time.a.INSTANCE;
-        f5373e = kotlin.time.a.w(kotlin.time.b.p(60, ju.b.DAYS));
+        f5446e = kotlin.time.a.w(kotlin.time.b.p(60, hu.b.DAYS));
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -136,7 +136,7 @@ public final class AFg1lSDK extends AFe1ySDK<Void> {
         LogTag logTag = LogTag.GCD;
         AFLoggerBase.d$default(aFLogger, logTag, "[GCD-A01] Loading conversion data", false, 4, null);
         long jUnregisterClient = this.AFLogger.unregisterClient("appsflyerConversionDataCacheExpiration", 0L);
-        if (jUnregisterClient != 0 && System.currentTimeMillis() - jUnregisterClient > f5373e) {
+        if (jUnregisterClient != 0 && System.currentTimeMillis() - jUnregisterClient > f5446e) {
             AFLoggerBase.d$default(aFLogger, logTag, "[GCD-E02] Cached conversion data expired", false, 4, null);
             this.AFLogger.registerClient("sixtyDayConversionData", true);
             this.AFLogger.AFLogger("appsflyerConversionDataCacheExpiration", 0L);

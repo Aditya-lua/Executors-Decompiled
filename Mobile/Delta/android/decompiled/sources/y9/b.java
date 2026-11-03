@@ -6,19 +6,19 @@ import java.lang.reflect.Field;
 import n9.m;
 
 /* JADX INFO: loaded from: classes.dex */
-public final class b<T> extends a.AbstractBinderC0656a {
+public final class b<T> extends a.AbstractBinderC0671a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object f35780a;
+    public final Object f36637a;
 
     public b(Object obj) {
-        this.f35780a = obj;
+        this.f36637a = obj;
     }
 
     @NonNull
     public static <T> T t2(@NonNull a aVar) {
         if (aVar instanceof b) {
-            return (T) ((b) aVar).f35780a;
+            return (T) ((b) aVar).f36637a;
         }
         IBinder iBinderAsBinder = aVar.asBinder();
         Field[] declaredFields = iBinderAsBinder.getClass().getDeclaredFields();

@@ -17,31 +17,31 @@ import java.util.List;
 public class g0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ArrayList<androidx.fragment.app.c> f15094a = new ArrayList<>();
+    public final ArrayList<androidx.fragment.app.c> f15708a = new ArrayList<>();
     public final HashMap<String, androidx.fragment.app.g> b = new HashMap<>();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final HashMap<String, Bundle> f15095c = new HashMap<>();
+    public final HashMap<String, Bundle> f15709c = new HashMap<>();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public d0 f15096d;
+    public d0 f15710d;
 
     public void A(@NonNull d0 d0Var) {
-        this.f15096d = d0Var;
+        this.f15710d = d0Var;
     }
 
     public Bundle B(@NonNull String str, Bundle bundle) {
-        return bundle != null ? this.f15095c.put(str, bundle) : this.f15095c.remove(str);
+        return bundle != null ? this.f15709c.put(str, bundle) : this.f15709c.remove(str);
     }
 
     public void a(@NonNull androidx.fragment.app.c cVar) {
-        if (this.f15094a.contains(cVar)) {
+        if (this.f15708a.contains(cVar)) {
             throw new IllegalStateException("Fragment already added: " + cVar);
         }
-        synchronized (this.f15094a) {
-            this.f15094a.add(cVar);
+        synchronized (this.f15708a) {
+            this.f15708a.add(cVar);
         }
-        cVar.f2610l = true;
+        cVar.f2455l = true;
     }
 
     public void b() {
@@ -76,12 +76,12 @@ public class g0 {
                 }
             }
         }
-        int size = this.f15094a.size();
+        int size = this.f15708a.size();
         if (size > 0) {
             printWriter.print(str);
             printWriter.println("Added Fragments:");
             for (int i10 = 0; i10 < size; i10++) {
-                androidx.fragment.app.c cVar = this.f15094a.get(i10);
+                androidx.fragment.app.c cVar = this.f15708a.get(i10);
                 printWriter.print(str);
                 printWriter.print("  #");
                 printWriter.print(i10);
@@ -100,16 +100,16 @@ public class g0 {
     }
 
     public androidx.fragment.app.c g(int i10) {
-        for (int size = this.f15094a.size() - 1; size >= 0; size--) {
-            androidx.fragment.app.c cVar = this.f15094a.get(size);
-            if (cVar != null && cVar.f2624z == i10) {
+        for (int size = this.f15708a.size() - 1; size >= 0; size--) {
+            androidx.fragment.app.c cVar = this.f15708a.get(size);
+            if (cVar != null && cVar.f2469z == i10) {
                 return cVar;
             }
         }
         for (androidx.fragment.app.g gVar : this.b.values()) {
             if (gVar != null) {
                 androidx.fragment.app.c cVarK = gVar.k();
-                if (cVarK.f2624z == i10) {
+                if (cVarK.f2469z == i10) {
                     return cVarK;
                 }
             }
@@ -119,8 +119,8 @@ public class g0 {
 
     public androidx.fragment.app.c h(String str) {
         if (str != null) {
-            for (int size = this.f15094a.size() - 1; size >= 0; size--) {
-                androidx.fragment.app.c cVar = this.f15094a.get(size);
+            for (int size = this.f15708a.size() - 1; size >= 0; size--) {
+                androidx.fragment.app.c cVar = this.f15708a.get(size);
                 if (cVar != null && str.equals(cVar.B)) {
                     return cVar;
                 }
@@ -157,19 +157,19 @@ public class g0 {
         if (viewGroup == null) {
             return -1;
         }
-        int iIndexOf = this.f15094a.indexOf(cVar);
+        int iIndexOf = this.f15708a.indexOf(cVar);
         for (int i10 = iIndexOf - 1; i10 >= 0; i10--) {
-            androidx.fragment.app.c cVar2 = this.f15094a.get(i10);
+            androidx.fragment.app.c cVar2 = this.f15708a.get(i10);
             if (cVar2.J == viewGroup && (view2 = cVar2.K) != null) {
                 return viewGroup.indexOfChild(view2) + 1;
             }
         }
         while (true) {
             iIndexOf++;
-            if (iIndexOf >= this.f15094a.size()) {
+            if (iIndexOf >= this.f15708a.size()) {
                 return -1;
             }
-            androidx.fragment.app.c cVar3 = this.f15094a.get(iIndexOf);
+            androidx.fragment.app.c cVar3 = this.f15708a.get(iIndexOf);
             if (cVar3.J == viewGroup && (view = cVar3.K) != null) {
                 return viewGroup.indexOfChild(view);
             }
@@ -202,7 +202,7 @@ public class g0 {
 
     @NonNull
     public HashMap<String, Bundle> m() {
-        return this.f15095c;
+        return this.f15709c;
     }
 
     public androidx.fragment.app.g n(@NonNull String str) {
@@ -212,34 +212,34 @@ public class g0 {
     @NonNull
     public List<androidx.fragment.app.c> o() {
         ArrayList arrayList;
-        if (this.f15094a.isEmpty()) {
+        if (this.f15708a.isEmpty()) {
             return Collections.EMPTY_LIST;
         }
-        synchronized (this.f15094a) {
-            arrayList = new ArrayList(this.f15094a);
+        synchronized (this.f15708a) {
+            arrayList = new ArrayList(this.f15708a);
         }
         return arrayList;
     }
 
     public d0 p() {
-        return this.f15096d;
+        return this.f15710d;
     }
 
     public Bundle q(@NonNull String str) {
-        return this.f15095c.get(str);
+        return this.f15709c.get(str);
     }
 
     public void r(@NonNull androidx.fragment.app.g gVar) {
         androidx.fragment.app.c cVarK = gVar.k();
-        if (c(cVarK.f2604f)) {
+        if (c(cVarK.f2449f)) {
             return;
         }
-        this.b.put(cVarK.f2604f, gVar);
+        this.b.put(cVarK.f2449f, gVar);
         if (cVarK.F) {
             if (cVarK.E) {
-                this.f15096d.e(cVarK);
+                this.f15710d.e(cVarK);
             } else {
-                this.f15096d.o(cVarK);
+                this.f15710d.o(cVarK);
             }
             cVarK.F = false;
         }
@@ -251,21 +251,21 @@ public class g0 {
     public void s(@NonNull androidx.fragment.app.g gVar) {
         androidx.fragment.app.c cVarK = gVar.k();
         if (cVarK.E) {
-            this.f15096d.o(cVarK);
+            this.f15710d.o(cVarK);
         }
-        if (this.b.get(cVarK.f2604f) == gVar && this.b.put(cVarK.f2604f, null) != null && FragmentManager.N0(2)) {
+        if (this.b.get(cVarK.f2449f) == gVar && this.b.put(cVarK.f2449f, null) != null && FragmentManager.N0(2)) {
             Log.v("FragmentManager", "Removed fragment from active set " + cVarK);
         }
     }
 
     public void t() {
-        ArrayList<androidx.fragment.app.c> arrayList = this.f15094a;
+        ArrayList<androidx.fragment.app.c> arrayList = this.f15708a;
         int size = arrayList.size();
         int i10 = 0;
         while (i10 < size) {
             androidx.fragment.app.c cVar = arrayList.get(i10);
             i10++;
-            androidx.fragment.app.g gVar = this.b.get(cVar.f2604f);
+            androidx.fragment.app.g gVar = this.b.get(cVar.f2449f);
             if (gVar != null) {
                 gVar.m();
             }
@@ -274,9 +274,9 @@ public class g0 {
             if (gVar2 != null) {
                 gVar2.m();
                 androidx.fragment.app.c cVarK = gVar2.k();
-                if (cVarK.f2611m && !cVarK.s0()) {
-                    if (cVarK.f2613o && !this.f15095c.containsKey(cVarK.f2604f)) {
-                        B(cVarK.f2604f, gVar2.q());
+                if (cVarK.f2456m && !cVarK.s0()) {
+                    if (cVarK.f2458o && !this.f15709c.containsKey(cVarK.f2449f)) {
+                        B(cVarK.f2449f, gVar2.q());
                     }
                     s(gVar2);
                 }
@@ -285,10 +285,10 @@ public class g0 {
     }
 
     public void u(@NonNull androidx.fragment.app.c cVar) {
-        synchronized (this.f15094a) {
-            this.f15094a.remove(cVar);
+        synchronized (this.f15708a) {
+            this.f15708a.remove(cVar);
         }
-        cVar.f2610l = false;
+        cVar.f2455l = false;
     }
 
     public void v() {
@@ -296,7 +296,7 @@ public class g0 {
     }
 
     public void w(List<String> list) {
-        this.f15094a.clear();
+        this.f15708a.clear();
         if (list != null) {
             for (String str : list) {
                 androidx.fragment.app.c cVarF = f(str);
@@ -312,8 +312,8 @@ public class g0 {
     }
 
     public void x(@NonNull HashMap<String, Bundle> map) {
-        this.f15095c.clear();
-        this.f15095c.putAll(map);
+        this.f15709c.clear();
+        this.f15709c.putAll(map);
     }
 
     @NonNull
@@ -322,8 +322,8 @@ public class g0 {
         for (androidx.fragment.app.g gVar : this.b.values()) {
             if (gVar != null) {
                 androidx.fragment.app.c cVarK = gVar.k();
-                B(cVarK.f2604f, gVar.q());
-                arrayList.add(cVarK.f2604f);
+                B(cVarK.f2449f, gVar.q());
+                arrayList.add(cVarK.f2449f);
                 if (FragmentManager.N0(2)) {
                     Log.v("FragmentManager", "Saved state of " + cVarK + ": " + cVarK.b);
                 }
@@ -333,22 +333,22 @@ public class g0 {
     }
 
     public ArrayList<String> z() {
-        synchronized (this.f15094a) {
+        synchronized (this.f15708a) {
             try {
-                if (this.f15094a.isEmpty()) {
+                if (this.f15708a.isEmpty()) {
                     return null;
                 }
-                ArrayList<String> arrayList = new ArrayList<>(this.f15094a.size());
-                ArrayList<androidx.fragment.app.c> arrayList2 = this.f15094a;
+                ArrayList<String> arrayList = new ArrayList<>(this.f15708a.size());
+                ArrayList<androidx.fragment.app.c> arrayList2 = this.f15708a;
                 int size = arrayList2.size();
                 int i10 = 0;
                 while (i10 < size) {
                     androidx.fragment.app.c cVar = arrayList2.get(i10);
                     i10++;
                     androidx.fragment.app.c cVar2 = cVar;
-                    arrayList.add(cVar2.f2604f);
+                    arrayList.add(cVar2.f2449f);
                     if (FragmentManager.N0(2)) {
-                        Log.v("FragmentManager", "saveAllState: adding fragment (" + cVar2.f2604f + "): " + cVar2);
+                        Log.v("FragmentManager", "saveAllState: adding fragment (" + cVar2.f2449f + "): " + cVar2);
                     }
                 }
                 return arrayList;

@@ -13,17 +13,17 @@ import java.util.Set;
 public class a<K, V> extends j<K, V> implements Map<K, V> {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public a<K, V>.C0614a f33591d;
+    public a<K, V>.C0624a f33797d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public a<K, V>.c f33592e;
+    public a<K, V>.c f33798e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public a<K, V>.e f33593f;
+    public a<K, V>.e f33799f;
 
     /* JADX INFO: renamed from: w1.a$a, reason: collision with other inner class name */
-    public final class C0614a extends AbstractSet<Map.Entry<K, V>> {
-        public C0614a() {
+    public final class C0624a extends AbstractSet<Map.Entry<K, V>> {
+        public C0624a() {
         }
 
         @Override // java.util.AbstractCollection, java.util.Collection, java.lang.Iterable, java.util.Set
@@ -57,14 +57,14 @@ public class a<K, V> extends j<K, V> implements Map<K, V> {
     public final class d implements Iterator<Map.Entry<K, V>>, Map.Entry<K, V> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public int f33597a;
+        public int f33803a;
         public int b = -1;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public boolean f33598c;
+        public boolean f33804c;
 
         public d() {
-            this.f33597a = a.this.getSize() - 1;
+            this.f33803a = a.this.getSize() - 1;
         }
 
         @Override // java.util.Iterator
@@ -74,13 +74,13 @@ public class a<K, V> extends j<K, V> implements Map<K, V> {
                 throw new NoSuchElementException();
             }
             this.b++;
-            this.f33598c = true;
+            this.f33804c = true;
             return this;
         }
 
         @Override // java.util.Map.Entry
         public boolean equals(Object obj) {
-            if (!this.f33598c) {
+            if (!this.f33804c) {
                 throw new IllegalStateException("This container does not support retaining Map.Entry objects");
             }
             if (!(obj instanceof Map.Entry)) {
@@ -92,7 +92,7 @@ public class a<K, V> extends j<K, V> implements Map<K, V> {
 
         @Override // java.util.Map.Entry
         public K getKey() {
-            if (this.f33598c) {
+            if (this.f33804c) {
                 return a.this.f(this.b);
             }
             throw new IllegalStateException("This container does not support retaining Map.Entry objects");
@@ -100,7 +100,7 @@ public class a<K, V> extends j<K, V> implements Map<K, V> {
 
         @Override // java.util.Map.Entry
         public V getValue() {
-            if (this.f33598c) {
+            if (this.f33804c) {
                 return a.this.k(this.b);
             }
             throw new IllegalStateException("This container does not support retaining Map.Entry objects");
@@ -108,12 +108,12 @@ public class a<K, V> extends j<K, V> implements Map<K, V> {
 
         @Override // java.util.Iterator
         public boolean hasNext() {
-            return this.b < this.f33597a;
+            return this.b < this.f33803a;
         }
 
         @Override // java.util.Map.Entry
         public int hashCode() {
-            if (!this.f33598c) {
+            if (!this.f33804c) {
                 throw new IllegalStateException("This container does not support retaining Map.Entry objects");
             }
             K kF = a.this.f(this.b);
@@ -123,18 +123,18 @@ public class a<K, V> extends j<K, V> implements Map<K, V> {
 
         @Override // java.util.Iterator
         public void remove() {
-            if (!this.f33598c) {
+            if (!this.f33804c) {
                 throw new IllegalStateException();
             }
             a.this.i(this.b);
             this.b--;
-            this.f33597a--;
-            this.f33598c = false;
+            this.f33803a--;
+            this.f33804c = false;
         }
 
         @Override // java.util.Map.Entry
         public V setValue(V v5) {
-            if (this.f33598c) {
+            if (this.f33804c) {
                 return a.this.j(this.b, v5);
             }
             throw new IllegalStateException("This container does not support retaining Map.Entry objects");
@@ -195,13 +195,13 @@ public class a<K, V> extends j<K, V> implements Map<K, V> {
     @Override // java.util.Map
     @NonNull
     public Set<Map.Entry<K, V>> entrySet() {
-        a<K, V>.C0614a c0614a = this.f33591d;
-        if (c0614a != null) {
-            return c0614a;
+        a<K, V>.C0624a c0624a = this.f33797d;
+        if (c0624a != null) {
+            return c0624a;
         }
-        a<K, V>.C0614a c0614a2 = new C0614a();
-        this.f33591d = c0614a2;
-        return c0614a2;
+        a<K, V>.C0624a c0624a2 = new C0624a();
+        this.f33797d = c0624a2;
+        return c0624a2;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -213,12 +213,12 @@ public class a<K, V> extends j<K, V> implements Map<K, V> {
     @Override // java.util.Map
     @NonNull
     public Set<K> keySet() {
-        a<K, V>.c cVar = this.f33592e;
+        a<K, V>.c cVar = this.f33798e;
         if (cVar != null) {
             return cVar;
         }
         a<K, V>.c cVar2 = new c();
-        this.f33592e = cVar2;
+        this.f33798e = cVar2;
         return cVar2;
     }
 
@@ -268,12 +268,12 @@ public class a<K, V> extends j<K, V> implements Map<K, V> {
     @Override // java.util.Map
     @NonNull
     public Collection<V> values() {
-        a<K, V>.e eVar = this.f33593f;
+        a<K, V>.e eVar = this.f33799f;
         if (eVar != null) {
             return eVar;
         }
         a<K, V>.e eVar2 = new e();
-        this.f33593f = eVar2;
+        this.f33799f = eVar2;
         return eVar2;
     }
 

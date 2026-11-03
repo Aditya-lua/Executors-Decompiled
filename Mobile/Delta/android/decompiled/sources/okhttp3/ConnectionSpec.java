@@ -87,7 +87,7 @@ public final class ConnectionSpec {
         if (this.tlsVersionsAsString != null) {
             String[] enabledProtocols2 = sslSocket.getEnabledProtocols();
             Intrinsics.checkNotNullExpressionValue(enabledProtocols2, "getEnabledProtocols(...)");
-            enabledProtocols = _UtilCommonKt.intersect(enabledProtocols2, this.tlsVersionsAsString, mt.a.b());
+            enabledProtocols = _UtilCommonKt.intersect(enabledProtocols2, this.tlsVersionsAsString, kt.a.b());
         } else {
             enabledProtocols = sslSocket.getEnabledProtocols();
         }
@@ -104,7 +104,7 @@ public final class ConnectionSpec {
 
     @Nullable
     /* JADX INFO: renamed from: -deprecated_cipherSuites, reason: not valid java name */
-    public final List<CipherSuite> m103deprecated_cipherSuites() {
+    public final List<CipherSuite> m104deprecated_cipherSuites() {
         return cipherSuites();
     }
 
@@ -115,7 +115,7 @@ public final class ConnectionSpec {
 
     @Nullable
     /* JADX INFO: renamed from: -deprecated_tlsVersions, reason: not valid java name */
-    public final List<TlsVersion> m105deprecated_tlsVersions() {
+    public final List<TlsVersion> m106deprecated_tlsVersions() {
         return tlsVersions();
     }
 
@@ -180,7 +180,7 @@ public final class ConnectionSpec {
             return false;
         }
         String[] strArr = this.tlsVersionsAsString;
-        if (strArr != null && !_UtilCommonKt.hasIntersection(strArr, socket.getEnabledProtocols(), mt.a.b())) {
+        if (strArr != null && !_UtilCommonKt.hasIntersection(strArr, socket.getEnabledProtocols(), kt.a.b())) {
             return false;
         }
         String[] strArr2 = this.cipherSuitesAsString;

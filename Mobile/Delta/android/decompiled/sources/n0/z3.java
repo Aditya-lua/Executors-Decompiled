@@ -10,10 +10,10 @@ public class z3 {
     public static final z3 b = new z3(new ArrayMap());
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Map<String, Object> f24976a;
+    public final Map<String, Object> f25797a;
 
     public z3(Map<String, Object> map) {
-        this.f24976a = map;
+        this.f25797a = map;
     }
 
     public static z3 a(Pair<String, Object> pair) {
@@ -35,11 +35,11 @@ public class z3 {
     }
 
     public Object d(String str) {
-        return this.f24976a.get(str);
+        return this.f25797a.get(str);
     }
 
     public Set<String> e() {
-        return this.f24976a.keySet();
+        return this.f25797a.keySet();
     }
 
     public final String toString() {

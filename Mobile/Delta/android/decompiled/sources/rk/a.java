@@ -1,16 +1,57 @@
 package rk;
 
+import android.content.Context;
+import org.json.JSONObject;
+
 /* JADX INFO: loaded from: classes2.dex */
-public interface a {
-    String a();
+public abstract class a {
 
-    void b(String str, String str2);
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public String f30754a;
+    public String b;
 
-    String c();
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public JSONObject f30755c;
 
-    String d();
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public String f30756d;
 
-    String e();
+    public abstract void a(boolean z10, JSONObject jSONObject);
 
-    void f(String str, String str2, String str3, long j10);
+    public String b() {
+        return this.f30756d;
+    }
+
+    public abstract Context c();
+
+    public String d() {
+        return this.b;
+    }
+
+    public String e() {
+        return this.f30754a;
+    }
+
+    public JSONObject f() {
+        if (this.f30755c == null) {
+            this.f30755c = new JSONObject();
+        }
+        return this.f30755c;
+    }
+
+    public void g(String str) {
+        this.f30756d = str;
+    }
+
+    public void h(String str) {
+        this.b = str;
+    }
+
+    public void i(String str) {
+        this.f30754a = str;
+    }
+
+    public void j(JSONObject jSONObject) {
+        this.f30755c = jSONObject;
+    }
 }

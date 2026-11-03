@@ -10,7 +10,7 @@ import java.util.stream.IntStream;
 public class k implements Spannable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f37148a = false;
+    public boolean f37843a = false;
 
     @NonNull
     public Spannable b;
@@ -48,10 +48,10 @@ public class k implements Spannable {
 
     public final void a() {
         Spannable spannable = this.b;
-        if (!this.f37148a && c().a(spannable)) {
+        if (!this.f37843a && c().a(spannable)) {
             this.b = new SpannableString(spannable);
         }
-        this.f37148a = true;
+        this.f37843a = true;
     }
 
     public Spannable b() {

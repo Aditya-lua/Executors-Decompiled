@@ -36,20 +36,20 @@ public final class h0 implements d0 {
         public void a(f5.d statement, c0 entity) {
             Intrinsics.checkNotNullParameter(statement, "statement");
             Intrinsics.checkNotNullParameter(entity, "entity");
-            statement.k0(1, entity.getWorkSpecId());
-            statement.A(2, androidx.work.b.INSTANCE.e(entity.getProgress()));
+            statement.h0(1, entity.getWorkSpecId());
+            statement.z(2, androidx.work.b.INSTANCE.e(entity.getProgress()));
         }
     }
 
     /* JADX INFO: renamed from: f6.h0$b, reason: from kotlin metadata */
-    @Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0006\u001a\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u00050\u0004¢\u0006\u0004\b\u0006\u0010\u0007¨\u0006\b"}, d2 = {"Lf6/h0$b;", "", "<init>", "()V", "", "Lhu/c;", "a", "()Ljava/util/List;", "work-runtime_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0006\u001a\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u00050\u0004¢\u0006\u0004\b\u0006\u0010\u0007¨\u0006\b"}, d2 = {"Lf6/h0$b;", "", "<init>", "()V", "", "Lfu/c;", "a", "()Ljava/util/List;", "work-runtime_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
     public static final class Companion {
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
             this();
         }
 
         @NotNull
-        public final List<hu.c<?>> a() {
+        public final List<fu.c<?>> a() {
             return kotlin.collections.p.k();
         }
 
@@ -67,9 +67,9 @@ public final class h0 implements d0 {
         Intrinsics.checkNotNullParameter(_connection, "_connection");
         f5.d dVarR3 = _connection.r3(str);
         try {
-            dVarR3.k0(1, str2);
-            dVarR3.g3();
-            return Unit.f22483a;
+            dVarR3.h0(1, str2);
+            dVarR3.i3();
+            return Unit.f22938a;
         } finally {
             dVarR3.close();
         }
@@ -79,8 +79,8 @@ public final class h0 implements d0 {
         Intrinsics.checkNotNullParameter(_connection, "_connection");
         f5.d dVarR3 = _connection.r3(str);
         try {
-            dVarR3.g3();
-            return Unit.f22483a;
+            dVarR3.i3();
+            return Unit.f22938a;
         } finally {
             dVarR3.close();
         }
@@ -89,7 +89,7 @@ public final class h0 implements d0 {
     public static final Unit i(h0 h0Var, c0 c0Var, f5.b _connection) throws Exception {
         Intrinsics.checkNotNullParameter(_connection, "_connection");
         h0Var.__insertAdapterOfWorkProgress.d(_connection, c0Var);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     @Override // f6.d0
@@ -110,7 +110,7 @@ public final class h0 implements d0 {
         c5.a.c(this.__db, false, true, new Function1() { // from class: f6.g0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return h0.i(this.f16232a, progress, (f5.b) obj);
+                return h0.i(this.f16828a, progress, (f5.b) obj);
             }
         });
     }

@@ -14,26 +14,26 @@ public abstract class o0 extends q {
     public static class a extends AnimatorListenerAdapter implements q.h {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final View f27140a;
+        public final View f27705a;
         public final int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final ViewGroup f27141c;
+        public final ViewGroup f27706c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final boolean f27142d;
+        public final boolean f27707d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public boolean f27143e;
+        public boolean f27708e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public boolean f27144f = false;
+        public boolean f27709f = false;
 
         public a(View view, int i10, boolean z10) {
-            this.f27140a = view;
+            this.f27705a = view;
             this.b = i10;
-            this.f27141c = (ViewGroup) view.getParent();
-            this.f27142d = z10;
+            this.f27706c = (ViewGroup) view.getParent();
+            this.f27707d = z10;
             e(true);
         }
 
@@ -44,16 +44,16 @@ public abstract class o0 extends q {
         @Override // o5.q.h
         public void b(@NonNull q qVar) {
             e(true);
-            if (this.f27144f) {
+            if (this.f27709f) {
                 return;
             }
-            i0.f(this.f27140a, 0);
+            i0.f(this.f27705a, 0);
         }
 
         public final void c() {
-            if (!this.f27144f) {
-                i0.f(this.f27140a, this.b);
-                ViewGroup viewGroup = this.f27141c;
+            if (!this.f27709f) {
+                i0.f(this.f27705a, this.b);
+                ViewGroup viewGroup = this.f27706c;
                 if (viewGroup != null) {
                     viewGroup.invalidate();
                 }
@@ -64,18 +64,18 @@ public abstract class o0 extends q {
         @Override // o5.q.h
         public void d(@NonNull q qVar) {
             e(false);
-            if (this.f27144f) {
+            if (this.f27709f) {
                 return;
             }
-            i0.f(this.f27140a, this.b);
+            i0.f(this.f27705a, this.b);
         }
 
         public final void e(boolean z10) {
             ViewGroup viewGroup;
-            if (!this.f27142d || this.f27143e == z10 || (viewGroup = this.f27141c) == null) {
+            if (!this.f27707d || this.f27708e == z10 || (viewGroup = this.f27706c) == null) {
                 return;
             }
-            this.f27143e = z10;
+            this.f27708e = z10;
             h0.b(viewGroup, z10);
         }
 
@@ -90,7 +90,7 @@ public abstract class o0 extends q {
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationCancel(Animator animator) {
-            this.f27144f = true;
+            this.f27709f = true;
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
@@ -117,8 +117,8 @@ public abstract class o0 extends q {
         @Override // android.animation.Animator.AnimatorListener
         public void onAnimationStart(@NonNull Animator animator, boolean z10) {
             if (z10) {
-                i0.f(this.f27140a, 0);
-                ViewGroup viewGroup = this.f27141c;
+                i0.f(this.f27705a, 0);
+                ViewGroup viewGroup = this.f27706c;
                 if (viewGroup != null) {
                     viewGroup.invalidate();
                 }
@@ -129,24 +129,24 @@ public abstract class o0 extends q {
     public class b extends AnimatorListenerAdapter implements q.h {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final ViewGroup f27145a;
+        public final ViewGroup f27710a;
         public final View b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final View f27146c;
+        public final View f27711c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public boolean f27147d = true;
+        public boolean f27712d = true;
 
         public b(ViewGroup viewGroup, View view, View view2) {
-            this.f27145a = viewGroup;
+            this.f27710a = viewGroup;
             this.b = view;
-            this.f27146c = view2;
+            this.f27711c = view2;
         }
 
         @Override // o5.q.h
         public void a(@NonNull q qVar) {
-            if (this.f27147d) {
+            if (this.f27712d) {
                 c();
             }
         }
@@ -156,9 +156,9 @@ public abstract class o0 extends q {
         }
 
         public final void c() {
-            this.f27146c.setTag(l.f27126a, null);
-            this.f27145a.getOverlay().remove(this.b);
-            this.f27147d = false;
+            this.f27711c.setTag(l.f27691a, null);
+            this.f27710a.getOverlay().remove(this.b);
+            this.f27712d = false;
         }
 
         @Override // o5.q.h
@@ -181,13 +181,13 @@ public abstract class o0 extends q {
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorPauseListener
         public void onAnimationPause(Animator animator) {
-            this.f27145a.getOverlay().remove(this.b);
+            this.f27710a.getOverlay().remove(this.b);
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorPauseListener
         public void onAnimationResume(Animator animator) {
             if (this.b.getParent() == null) {
-                this.f27145a.getOverlay().add(this.b);
+                this.f27710a.getOverlay().add(this.b);
             } else {
                 o0.this.cancel();
             }
@@ -196,9 +196,9 @@ public abstract class o0 extends q {
         @Override // android.animation.Animator.AnimatorListener
         public void onAnimationStart(@NonNull Animator animator, boolean z10) {
             if (z10) {
-                this.f27146c.setTag(l.f27126a, this.b);
-                this.f27145a.getOverlay().add(this.b);
-                this.f27147d = true;
+                this.f27711c.setTag(l.f27691a, this.b);
+                this.f27710a.getOverlay().add(this.b);
+                this.f27712d = true;
             }
         }
 
@@ -214,85 +214,85 @@ public abstract class o0 extends q {
     public static class c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public boolean f27149a;
+        public boolean f27714a;
         public boolean b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public int f27150c;
+        public int f27715c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public int f27151d;
+        public int f27716d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public ViewGroup f27152e;
+        public ViewGroup f27717e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public ViewGroup f27153f;
+        public ViewGroup f27718f;
     }
 
     private void B0(d0 d0Var) {
-        d0Var.f27089a.put("android:visibility:visibility", Integer.valueOf(d0Var.b.getVisibility()));
-        d0Var.f27089a.put("android:visibility:parent", d0Var.b.getParent());
+        d0Var.f27654a.put("android:visibility:visibility", Integer.valueOf(d0Var.b.getVisibility()));
+        d0Var.f27654a.put("android:visibility:parent", d0Var.b.getParent());
         int[] iArr = new int[2];
         d0Var.b.getLocationOnScreen(iArr);
-        d0Var.f27089a.put("android:visibility:screenLocation", iArr);
+        d0Var.f27654a.put("android:visibility:screenLocation", iArr);
     }
 
     public final c C0(d0 d0Var, d0 d0Var2) {
         c cVar = new c();
-        cVar.f27149a = false;
+        cVar.f27714a = false;
         cVar.b = false;
-        if (d0Var == null || !d0Var.f27089a.containsKey("android:visibility:visibility")) {
-            cVar.f27150c = -1;
-            cVar.f27152e = null;
+        if (d0Var == null || !d0Var.f27654a.containsKey("android:visibility:visibility")) {
+            cVar.f27715c = -1;
+            cVar.f27717e = null;
         } else {
-            cVar.f27150c = ((Integer) d0Var.f27089a.get("android:visibility:visibility")).intValue();
-            cVar.f27152e = (ViewGroup) d0Var.f27089a.get("android:visibility:parent");
+            cVar.f27715c = ((Integer) d0Var.f27654a.get("android:visibility:visibility")).intValue();
+            cVar.f27717e = (ViewGroup) d0Var.f27654a.get("android:visibility:parent");
         }
-        if (d0Var2 == null || !d0Var2.f27089a.containsKey("android:visibility:visibility")) {
-            cVar.f27151d = -1;
-            cVar.f27153f = null;
+        if (d0Var2 == null || !d0Var2.f27654a.containsKey("android:visibility:visibility")) {
+            cVar.f27716d = -1;
+            cVar.f27718f = null;
         } else {
-            cVar.f27151d = ((Integer) d0Var2.f27089a.get("android:visibility:visibility")).intValue();
-            cVar.f27153f = (ViewGroup) d0Var2.f27089a.get("android:visibility:parent");
+            cVar.f27716d = ((Integer) d0Var2.f27654a.get("android:visibility:visibility")).intValue();
+            cVar.f27718f = (ViewGroup) d0Var2.f27654a.get("android:visibility:parent");
         }
         if (d0Var != null && d0Var2 != null) {
-            int i10 = cVar.f27150c;
-            int i11 = cVar.f27151d;
-            if (i10 != i11 || cVar.f27152e != cVar.f27153f) {
+            int i10 = cVar.f27715c;
+            int i11 = cVar.f27716d;
+            if (i10 != i11 || cVar.f27717e != cVar.f27718f) {
                 if (i10 != i11) {
                     if (i10 == 0) {
                         cVar.b = false;
-                        cVar.f27149a = true;
+                        cVar.f27714a = true;
                         return cVar;
                     }
                     if (i11 == 0) {
                         cVar.b = true;
-                        cVar.f27149a = true;
+                        cVar.f27714a = true;
                         return cVar;
                     }
                 } else {
-                    if (cVar.f27153f == null) {
+                    if (cVar.f27718f == null) {
                         cVar.b = false;
-                        cVar.f27149a = true;
+                        cVar.f27714a = true;
                         return cVar;
                     }
-                    if (cVar.f27152e == null) {
+                    if (cVar.f27717e == null) {
                         cVar.b = true;
-                        cVar.f27149a = true;
+                        cVar.f27714a = true;
                         return cVar;
                     }
                 }
             }
         } else {
-            if (d0Var == null && cVar.f27151d == 0) {
+            if (d0Var == null && cVar.f27716d == 0) {
                 cVar.b = true;
-                cVar.f27149a = true;
+                cVar.f27714a = true;
                 return cVar;
             }
-            if (d0Var2 == null && cVar.f27150c == 0) {
+            if (d0Var2 == null && cVar.f27715c == 0) {
                 cVar.b = false;
-                cVar.f27149a = true;
+                cVar.f27714a = true;
             }
         }
         return cVar;
@@ -306,7 +306,7 @@ public abstract class o0 extends q {
         }
         if (d0Var == null) {
             View view = (View) d0Var2.b.getParent();
-            if (C0(E(view, false), W(view, false)).f27149a) {
+            if (C0(E(view, false), W(view, false)).f27714a) {
                 return null;
             }
         }
@@ -326,7 +326,7 @@ public abstract class o0 extends q {
         }
         View view3 = d0Var.b;
         View viewA = d0Var2 != null ? d0Var2.b : null;
-        int i12 = l.f27126a;
+        int i12 = l.f27691a;
         View view4 = (View) view3.getTag(i12);
         if (view4 != null) {
             view2 = null;
@@ -354,9 +354,9 @@ public abstract class o0 extends q {
                 if (view3.getParent() != null) {
                     if (view3.getParent() instanceof View) {
                         View view5 = (View) view3.getParent();
-                        if (C0(W(view5, true), E(view5, true)).f27149a) {
+                        if (C0(W(view5, true), E(view5, true)).f27714a) {
                             int id2 = view5.getId();
-                            if (view5.getParent() != null || id2 == -1 || viewGroup.findViewById(id2) == null || !this.f27178w) {
+                            if (view5.getParent() != null || id2 == -1 || viewGroup.findViewById(id2) == null || !this.f27743w) {
                             }
                         } else {
                             viewA = c0.a(viewGroup, view3, view5);
@@ -394,7 +394,7 @@ public abstract class o0 extends q {
             return animatorF0;
         }
         if (!z11) {
-            int[] iArr = (int[]) d0Var.f27089a.get("android:visibility:screenLocation");
+            int[] iArr = (int[]) d0Var.f27654a.get("android:visibility:screenLocation");
             int i13 = iArr[0];
             int i14 = iArr[1];
             int[] iArr2 = new int[2];
@@ -435,11 +435,11 @@ public abstract class o0 extends q {
         if (d0Var == null && d0Var2 == null) {
             return false;
         }
-        if (d0Var != null && d0Var2 != null && d0Var2.f27089a.containsKey("android:visibility:visibility") != d0Var.f27089a.containsKey("android:visibility:visibility")) {
+        if (d0Var != null && d0Var2 != null && d0Var2.f27654a.containsKey("android:visibility:visibility") != d0Var.f27654a.containsKey("android:visibility:visibility")) {
             return false;
         }
         c cVarC0 = C0(d0Var, d0Var2);
-        return cVarC0.f27149a && (cVarC0.f27150c == 0 || cVarC0.f27151d == 0);
+        return cVarC0.f27714a && (cVarC0.f27715c == 0 || cVarC0.f27716d == 0);
     }
 
     @Override // o5.q
@@ -455,12 +455,12 @@ public abstract class o0 extends q {
     @Override // o5.q
     public Animator s(@NonNull ViewGroup viewGroup, d0 d0Var, d0 d0Var2) {
         c cVarC0 = C0(d0Var, d0Var2);
-        if (!cVarC0.f27149a) {
+        if (!cVarC0.f27714a) {
             return null;
         }
-        if (cVarC0.f27152e == null && cVarC0.f27153f == null) {
+        if (cVarC0.f27717e == null && cVarC0.f27718f == null) {
             return null;
         }
-        return cVarC0.b ? E0(viewGroup, d0Var, cVarC0.f27150c, d0Var2, cVarC0.f27151d) : G0(viewGroup, d0Var, cVarC0.f27150c, d0Var2, cVarC0.f27151d);
+        return cVarC0.b ? E0(viewGroup, d0Var, cVarC0.f27715c, d0Var2, cVarC0.f27716d) : G0(viewGroup, d0Var, cVarC0.f27715c, d0Var2, cVarC0.f27716d);
     }
 }

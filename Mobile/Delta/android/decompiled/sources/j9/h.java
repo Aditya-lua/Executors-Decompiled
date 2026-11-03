@@ -25,19 +25,19 @@ public class h {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @Deprecated
-    public static final int f21189a = 12451000;
+    public static final int f21762a = 12451000;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static boolean f21190c;
+    public static boolean f21763c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static boolean f21191d;
+    public static boolean f21764d;
 
     @Deprecated
     public static final AtomicBoolean b = new AtomicBoolean();
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final AtomicBoolean f21192e = new AtomicBoolean();
+    public static final AtomicBoolean f21765e = new AtomicBoolean();
 
     @Deprecated
     public static void a(@NonNull Context context, int i10) throws f, e {
@@ -81,21 +81,21 @@ public class h {
 
     public static boolean e(@NonNull Context context) {
         try {
-            if (!f21191d) {
+            if (!f21764d) {
                 PackageInfo packageInfoE = w9.c.a(context).e("com.google.android.gms", Build.VERSION.SDK_INT >= 28 ? 134217792 : 64);
                 i.a(context);
                 if (packageInfoE == null || i.d(packageInfoE, false) || !i.d(packageInfoE, true)) {
-                    f21190c = false;
+                    f21763c = false;
                 } else {
-                    f21190c = true;
+                    f21763c = true;
                 }
             }
         } catch (PackageManager.NameNotFoundException e10) {
             Log.w("GooglePlayServicesUtil", "Cannot find Google Play services package name.", e10);
         } finally {
-            f21191d = true;
+            f21764d = true;
         }
-        return f21190c || !u9.i.b();
+        return f21763c || !u9.i.b();
     }
 
     /* JADX WARN: Code duplicated, block: B:52:0x00c4  */
@@ -109,16 +109,16 @@ public class h {
         PackageInfo packageInfo;
         ApplicationInfo applicationInfo;
         try {
-            context.getResources().getString(j.f21198a);
+            context.getResources().getString(j.f21771a);
         } catch (Throwable unused) {
             Log.e("GooglePlayServicesUtil", "The Google Play services resources were not found. Check your project configuration to ensure that the resources are included.");
         }
-        if (!"com.google.android.gms".equals(context.getPackageName()) && !f21192e.get()) {
+        if (!"com.google.android.gms".equals(context.getPackageName()) && !f21765e.get()) {
             int iA = q0.a(context);
             if (iA == 0) {
                 throw new GooglePlayServicesMissingManifestValueException();
             }
-            if (iA != f21189a) {
+            if (iA != f21762a) {
                 throw new GooglePlayServicesIncorrectManifestValueException(iA);
             }
         }

@@ -17,18 +17,18 @@ public class TokenBinding extends AbstractSafeParcelable {
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
     @NonNull
-    public static final TokenBinding f6013h = new TokenBinding(TokenBindingStatus.SUPPORTED.toString(), null);
+    public static final TokenBinding f6086h = new TokenBinding(TokenBindingStatus.SUPPORTED.toString(), null);
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
     @NonNull
-    public static final TokenBinding f6014i = new TokenBinding(TokenBindingStatus.NOT_SUPPORTED.toString(), null);
+    public static final TokenBinding f6087i = new TokenBinding(TokenBindingStatus.NOT_SUPPORTED.toString(), null);
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NonNull
-    public final TokenBindingStatus f6015f;
+    public final TokenBindingStatus f6088f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final String f6016g;
+    public final String f6089g;
 
     public enum TokenBindingStatus implements Parcelable {
         PRESENT("present"),
@@ -41,16 +41,16 @@ public class TokenBinding extends AbstractSafeParcelable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NonNull
-        public final String f6020a;
+        public final String f6093a;
 
         TokenBindingStatus(String str) {
-            this.f6020a = str;
+            this.f6093a = str;
         }
 
         @NonNull
         public static TokenBindingStatus a(@NonNull String str) throws a {
             for (TokenBindingStatus tokenBindingStatus : values()) {
-                if (str.equals(tokenBindingStatus.f6020a)) {
+                if (str.equals(tokenBindingStatus.f6093a)) {
                     return tokenBindingStatus;
                 }
             }
@@ -65,12 +65,12 @@ public class TokenBinding extends AbstractSafeParcelable {
         @Override // java.lang.Enum
         @NonNull
         public String toString() {
-            return this.f6020a;
+            return this.f6093a;
         }
 
         @Override // android.os.Parcelable
         public void writeToParcel(@NonNull Parcel parcel, int i10) {
-            parcel.writeString(this.f6020a);
+            parcel.writeString(this.f6093a);
         }
     }
 
@@ -83,8 +83,8 @@ public class TokenBinding extends AbstractSafeParcelable {
     public TokenBinding(@NonNull String str, String str2) {
         m.l(str);
         try {
-            this.f6015f = TokenBindingStatus.a(str);
-            this.f6016g = str2;
+            this.f6088f = TokenBindingStatus.a(str);
+            this.f6089g = str2;
         } catch (a e10) {
             throw new IllegalArgumentException(e10);
         }
@@ -95,20 +95,20 @@ public class TokenBinding extends AbstractSafeParcelable {
             return false;
         }
         TokenBinding tokenBinding = (TokenBinding) obj;
-        return l0.a(this.f6015f, tokenBinding.f6015f) && l0.a(this.f6016g, tokenBinding.f6016g);
+        return l0.a(this.f6088f, tokenBinding.f6088f) && l0.a(this.f6089g, tokenBinding.f6089g);
     }
 
     public int hashCode() {
-        return Arrays.hashCode(new Object[]{this.f6015f, this.f6016g});
+        return Arrays.hashCode(new Object[]{this.f6088f, this.f6089g});
     }
 
     public String v3() {
-        return this.f6016g;
+        return this.f6089g;
     }
 
     @NonNull
     public String w3() {
-        return this.f6015f.toString();
+        return this.f6088f.toString();
     }
 
     @Override // android.os.Parcelable

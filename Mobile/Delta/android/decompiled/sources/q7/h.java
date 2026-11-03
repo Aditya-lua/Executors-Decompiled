@@ -4,7 +4,7 @@ package q7;
 public class h {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final r7.c.a f29242a = r7.c.a.a("ty", "d");
+    public static final r7.c.a f29595a = r7.c.a.a("ty", "d");
 
     public static n7.c a(r7.c cVar, f7.i iVar) {
         n7.c cVarA;
@@ -18,7 +18,7 @@ public class h {
                 strM = null;
                 break;
             }
-            int iR = cVar.r(f29242a);
+            int iR = cVar.r(f29595a);
             if (iR == 0) {
                 strM = cVar.m();
                 break;

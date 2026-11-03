@@ -11,7 +11,7 @@ public final class f0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final d0.a f22183a = new d0.a() { // from class: k6.e0
+    public static final d0.a f22407a = new d0.a() { // from class: k6.e0
         @Override // k6.d0.a
         public final s a(Context context) {
             return f0.b(context);
@@ -19,11 +19,11 @@ public final class f0 {
     };
 
     @NotNull
-    public static final Extras.c<Unit> b = new Extras.c<>(Unit.f22483a);
+    public static final Extras.c<Unit> b = new Extras.c<>(Unit.f22938a);
 
     public static final s b(Context context) {
         s.a aVar = new s.a(context);
-        aVar.getExtras().b(b, Unit.f22483a);
+        aVar.getExtras().b(b, Unit.f22938a);
         return aVar.d();
     }
 }

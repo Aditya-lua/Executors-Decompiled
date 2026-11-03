@@ -6,7 +6,7 @@ import android.annotation.TargetApi;
 public final class i {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static volatile h f32113a = new g();
+    public static volatile h f32766a = new g();
 
     @TargetApi(28)
     public static void a() {

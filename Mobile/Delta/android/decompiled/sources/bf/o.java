@@ -1,34 +1,70 @@
 package bf;
 
 import java.security.GeneralSecurityException;
-import ve.l0;
 
 /* JADX INFO: loaded from: classes2.dex */
-public final class o implements oe.z {
+public final class o extends c1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final oe.z f4150a;
-    public final byte[] b;
+    public final i f4135a;
+    public final ef.a b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final byte[] f4151c;
+    public final ef.a f4136c;
 
-    public o(oe.z zVar, byte[] bArr, byte[] bArr2) {
-        this.f4150a = zVar;
-        this.b = bArr;
-        this.f4151c = bArr2;
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public final Integer f4137d;
+
+    public o(i iVar, ef.a aVar, ef.a aVar2, Integer num) {
+        this.f4135a = iVar;
+        this.b = aVar;
+        this.f4136c = aVar2;
+        this.f4137d = num;
     }
 
-    public static oe.z b(ve.p pVar) throws GeneralSecurityException {
-        l0 l0VarB = pVar.b(oe.j.a());
-        return new o((oe.z) oe.b0.d(ze.f0.h0().D(l0VarB.f()).E(l0VarB.g()).C(l0VarB.d()).build(), oe.z.class), p.d(l0VarB), p.c(l0VarB));
+    public static o c(i.a aVar, ef.a aVar2, Integer num) throws GeneralSecurityException {
+        i iVarB = i.b(aVar);
+        i.a aVar3 = i.a.f4092e;
+        if (!aVar.equals(aVar3) && num == null) {
+            throw new GeneralSecurityException("For given Variant " + aVar + " the value of idRequirement must be non-null");
+        }
+        if (aVar.equals(aVar3) && num != null) {
+            throw new GeneralSecurityException("For given Variant NO_PREFIX the value of idRequirement must be null");
+        }
+        if (aVar2.c() == 32) {
+            return new o(iVarB, aVar2, d(iVarB, num), num);
+        }
+        throw new GeneralSecurityException("Ed25519 key must be constructed with key of length 32 bytes, not " + aVar2.c());
     }
 
-    @Override // oe.z
-    public byte[] a(byte[] bArr) {
-        byte[] bArr2 = this.f4151c;
-        byte[] bArrA = bArr2.length == 0 ? this.f4150a.a(bArr) : this.f4150a.a(cf.e.a(bArr, bArr2));
-        byte[] bArr3 = this.b;
-        return bArr3.length == 0 ? bArrA : cf.e.a(bArr3, bArrA);
+    public static ef.a d(i iVar, Integer num) {
+        if (iVar.c() == i.a.f4092e) {
+            return we.e0.f34384a;
+        }
+        if (iVar.c() == i.a.f4090c || iVar.c() == i.a.f4091d) {
+            return we.e0.a(num.intValue());
+        }
+        if (iVar.c() == i.a.b) {
+            return we.e0.b(num.intValue());
+        }
+        throw new IllegalStateException("Unknown Variant: " + iVar.c());
+    }
+
+    @Override // pe.l
+    public Integer a() {
+        return this.f4137d;
+    }
+
+    @Override // bf.c1
+    public ef.a b() {
+        return this.f4136c;
+    }
+
+    public i e() {
+        return this.f4135a;
+    }
+
+    public ef.a f() {
+        return this.b;
     }
 }

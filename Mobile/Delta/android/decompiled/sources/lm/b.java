@@ -1,36 +1,50 @@
 package lm;
 
-import com.roblox.engine.jni.autovalue.RobloxTelemetryEvent;
-import com.roblox.engine.jni.autovalue.RobloxTelemetryEventConfig;
-import com.roblox.engine.jni.autovalue.RobloxTelemetryEventData;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import com.roblox.universalapp.cookie.JNICookieProtocol;
 import kotlin.Metadata;
-import kotlin.Pair;
-import kotlin.collections.o;
-import kotlin.collections.q;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
+import kotlin.jvm.internal.k;
 import org.jetbrains.annotations.NotNull;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000\u001e\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\u001a7\u0010\b\u001a\u00020\u00072\u0006\u0010\u0001\u001a\u00020\u00002\u0018\u0010\u0004\u001a\u0014\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u0000\u0012\u0004\u0012\u00020\u00000\u00030\u00022\u0006\u0010\u0006\u001a\u00020\u0005¢\u0006\u0004\b\b\u0010\t¨\u0006\n"}, d2 = {"", "eventName", "", "Lkotlin/Pair;", "customFields", "", "throttlingHundredthPercentage", "Lcom/roblox/engine/jni/autovalue/RobloxTelemetryEvent;", "a", "(Ljava/lang/String;Ljava/util/List;I)Lcom/roblox/engine/jni/autovalue/RobloxTelemetryEvent;", "universalapp_googleProdRelease"}, k = 2, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\b\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0007¢\u0006\u0004\b\u0007\u0010\bR.\u0010\u0010\u001a\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00060\t8\u0006@\u0007X\u0086\u000e¢\u0006\u0012\n\u0004\b\n\u0010\u000b\u001a\u0004\b\f\u0010\r\"\u0004\b\u000e\u0010\u000f¨\u0006\u0011"}, d2 = {"Llm/b;", "", "<init>", "()V", "Lcom/roblox/universalapp/cookie/JNICookieProtocol$OnSetCookieHandler;", "onSetCookieHandler", "", "a", "(Lcom/roblox/universalapp/cookie/JNICookieProtocol$OnSetCookieHandler;)V", "Lkotlin/Function1;", "b", "Lkotlin/jvm/functions/Function1;", "getUpdateOnSetCookieHandlerDelegate", "()Lkotlin/jvm/functions/Function1;", "setUpdateOnSetCookieHandlerDelegate", "(Lkotlin/jvm/functions/Function1;)V", "updateOnSetCookieHandlerDelegate", "universalapp_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class b {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final RobloxTelemetryEvent a(@NotNull String eventName, @NotNull List<Pair<String, String>> customFields, int i10) {
-        Intrinsics.checkNotNullParameter(eventName, "eventName");
-        Intrinsics.checkNotNullParameter(customFields, "customFields");
-        List<String> listD = o.d(RobloxTelemetryEventConfig.EVENT_INGEST_BACKEND);
-        List<String> listD2 = o.d(RobloxTelemetryEventData.STANDARDIZED_FIELD_KEY_ADD_OS_INFO);
-        List<Pair<String, String>> list = customFields;
-        ArrayList arrayList = new ArrayList(q.u(list, 10));
-        Iterator<T> it = list.iterator();
-        while (it.hasNext()) {
-            Pair pair = (Pair) it.next();
-            arrayList.add(android.util.Pair.create((String) pair.a(), (String) pair.b()));
+    public static final b f23643a = new b();
+
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
+    @NotNull
+    public static Function1<? super JNICookieProtocol.OnSetCookieHandler, Unit> updateOnSetCookieHandlerDelegate;
+
+    @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
+    public static final /* synthetic */ class a extends k implements Function1<JNICookieProtocol.OnSetCookieHandler, Unit> {
+        public a(Object obj) {
+            super(1, obj, JNICookieProtocol.class, "updateOnSetCookieHandler", "updateOnSetCookieHandler(Lcom/roblox/universalapp/cookie/JNICookieProtocol$OnSetCookieHandler;)V", 0);
         }
-        RobloxTelemetryEvent robloxTelemetryEventBuild = RobloxTelemetryEvent.builder().setEventType(RobloxTelemetryEvent.ROBLOX_TELEMETRY_EVENT_TYPE).setConfig(RobloxTelemetryEventConfig.builder().setBackEnds(listD).setThrottlingHundredthPercentage(i10).setEventName(eventName).build()).setData(RobloxTelemetryEventData.builder().setStandardizedFields(listD2).setCustomStringFields(arrayList).build()).build();
-        Intrinsics.checkNotNullExpressionValue(robloxTelemetryEventBuild, "build(...)");
-        return robloxTelemetryEventBuild;
+
+        public final void d(JNICookieProtocol.OnSetCookieHandler onSetCookieHandler) {
+            ((JNICookieProtocol) this.receiver).updateOnSetCookieHandler(onSetCookieHandler);
+        }
+
+        @Override // kotlin.jvm.functions.Function1
+        public /* bridge */ /* synthetic */ Unit invoke(JNICookieProtocol.OnSetCookieHandler onSetCookieHandler) {
+            d(onSetCookieHandler);
+            return Unit.f22938a;
+        }
+    }
+
+    static {
+        JNICookieProtocol jNICookieProtocolA = JNICookieProtocol.a();
+        Intrinsics.checkNotNullExpressionValue(jNICookieProtocolA, "sharedInstance(...)");
+        updateOnSetCookieHandlerDelegate = new a(jNICookieProtocolA);
+    }
+
+    public static final void a(@NotNull JNICookieProtocol.OnSetCookieHandler onSetCookieHandler) {
+        Intrinsics.checkNotNullParameter(onSetCookieHandler, "onSetCookieHandler");
+        updateOnSetCookieHandlerDelegate.invoke(onSetCookieHandler);
     }
 }

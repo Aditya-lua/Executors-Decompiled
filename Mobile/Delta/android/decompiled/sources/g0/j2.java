@@ -35,7 +35,7 @@ public interface j2 extends Closeable {
         public abstract j2 b();
     }
 
-    void N1(float[] fArr, float[] fArr2);
+    void M1(float[] fArr, float[] fArr2);
 
     default void S(float[] fArr, float[] fArr2, boolean z10) {
     }
@@ -49,5 +49,5 @@ public interface j2 extends Closeable {
 
     Size i();
 
-    Surface q2(Executor executor, x2.a<b> aVar);
+    Surface r2(Executor executor, x2.a<b> aVar);
 }

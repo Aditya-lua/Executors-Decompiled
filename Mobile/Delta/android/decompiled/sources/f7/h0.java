@@ -60,80 +60,80 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     public float S;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public i f16359a;
+    public i f16955a;
     public final s7.h b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f16360c;
+    public boolean f16956c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public boolean f16361d;
+    public boolean f16957d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public boolean f16362e;
+    public boolean f16958e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public b f16363f;
+    public b f16959f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final ArrayList<a> f16364g;
+    public final ArrayList<a> f16960g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public k7.b f16365h;
+    public k7.b f16961h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public String f16366i;
+    public String f16962i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public k7.a f16367j;
+    public k7.a f16963j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public Map<String, Typeface> f16368k;
+    public Map<String, Typeface> f16964k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public String f16369l;
+    public String f16965l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final j0 f16370m;
+    public final j0 f16966m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public boolean f16371n;
+    public boolean f16967n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public boolean f16372o;
+    public boolean f16968o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public o7.c f16373p;
+    public o7.c f16969p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public int f16374q;
+    public int f16970q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public boolean f16375r;
+    public boolean f16971r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public boolean f16376s;
+    public boolean f16972s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public boolean f16377t;
+    public boolean f16973t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public boolean f16378u;
+    public boolean f16974u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public boolean f16379v;
+    public boolean f16975v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public x0 f16380w;
+    public x0 f16976w;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public boolean f16381x;
+    public boolean f16977x;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public final Matrix f16382y;
+    public final Matrix f16978y;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public Bitmap f16383z;
+    public Bitmap f16979z;
 
     public interface a {
         void a(i iVar);
@@ -148,25 +148,25 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     public h0() {
         s7.h hVar = new s7.h();
         this.b = hVar;
-        this.f16360c = true;
-        this.f16361d = false;
-        this.f16362e = false;
-        this.f16363f = b.NONE;
-        this.f16364g = new ArrayList<>();
-        this.f16370m = new j0();
-        this.f16371n = false;
-        this.f16372o = true;
-        this.f16374q = 255;
-        this.f16379v = false;
-        this.f16380w = x0.AUTOMATIC;
-        this.f16381x = false;
-        this.f16382y = new Matrix();
+        this.f16956c = true;
+        this.f16957d = false;
+        this.f16958e = false;
+        this.f16959f = b.NONE;
+        this.f16960g = new ArrayList<>();
+        this.f16966m = new j0();
+        this.f16967n = false;
+        this.f16968o = true;
+        this.f16970q = 255;
+        this.f16975v = false;
+        this.f16976w = x0.AUTOMATIC;
+        this.f16977x = false;
+        this.f16978y = new Matrix();
         this.J = new float[9];
         this.L = false;
         ValueAnimator.AnimatorUpdateListener animatorUpdateListener = new ValueAnimator.AnimatorUpdateListener() { // from class: f7.b0
             @Override // android.animation.ValueAnimator.AnimatorUpdateListener
             public final void onAnimationUpdate(ValueAnimator valueAnimator) {
-                h0.g(this.f16340a, valueAnimator);
+                h0.g(this.f16936a, valueAnimator);
             }
         };
         this.N = animatorUpdateListener;
@@ -174,7 +174,7 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
         this.R = new Runnable() { // from class: f7.c0
             @Override // java.lang.Runnable
             public final void run() {
-                h0.k(this.f16341a);
+                h0.k(this.f16937a);
             }
         };
         this.S = -3.4028235E38f;
@@ -186,14 +186,14 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
             h0Var.invalidateSelf();
             return;
         }
-        o7.c cVar = h0Var.f16373p;
+        o7.c cVar = h0Var.f16969p;
         if (cVar != null) {
             cVar.M(h0Var.b.o());
         }
     }
 
     public static /* synthetic */ void k(final h0 h0Var) {
-        o7.c cVar = h0Var.f16373p;
+        o7.c cVar = h0Var.f16969p;
         if (cVar == null) {
             return;
         }
@@ -206,7 +206,7 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
                     h0Var.Q = new Runnable() { // from class: f7.x
                         @Override // java.lang.Runnable
                         public final void run() {
-                            h0.n(this.f16495a);
+                            h0.n(this.f17091a);
                         }
                     };
                 }
@@ -226,8 +226,8 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public void A(i0 i0Var, boolean z10) {
-        boolean zA = this.f16370m.a(i0Var, z10);
-        if (this.f16359a == null || !zA) {
+        boolean zA = this.f16966m.a(i0Var, z10);
+        if (this.f16955a == null || !zA) {
             return;
         }
         t();
@@ -235,44 +235,44 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
 
     @Deprecated
     public void A0(boolean z10) {
-        this.f16361d = z10;
+        this.f16957d = z10;
     }
 
     public void B() {
-        this.f16364g.clear();
+        this.f16960g.clear();
         this.b.n();
         if (isVisible()) {
             return;
         }
-        this.f16363f = b.NONE;
+        this.f16959f = b.NONE;
     }
 
     public void B0(c cVar) {
-        k7.b bVar = this.f16365h;
+        k7.b bVar = this.f16961h;
         if (bVar != null) {
             bVar.d(cVar);
         }
     }
 
     public final void C(int i10, int i11) {
-        Bitmap bitmap = this.f16383z;
-        if (bitmap == null || bitmap.getWidth() < i10 || this.f16383z.getHeight() < i11) {
+        Bitmap bitmap = this.f16979z;
+        if (bitmap == null || bitmap.getWidth() < i10 || this.f16979z.getHeight() < i11) {
             Bitmap bitmapCreateBitmap = Bitmap.createBitmap(i10, i11, Bitmap.Config.ARGB_8888);
-            this.f16383z = bitmapCreateBitmap;
+            this.f16979z = bitmapCreateBitmap;
             this.A.setBitmap(bitmapCreateBitmap);
             this.L = true;
             return;
         }
-        if (this.f16383z.getWidth() > i10 || this.f16383z.getHeight() > i11) {
-            Bitmap bitmapCreateBitmap2 = Bitmap.createBitmap(this.f16383z, 0, 0, i10, i11);
-            this.f16383z = bitmapCreateBitmap2;
+        if (this.f16979z.getWidth() > i10 || this.f16979z.getHeight() > i11) {
+            Bitmap bitmapCreateBitmap2 = Bitmap.createBitmap(this.f16979z, 0, 0, i10, i11);
+            this.f16979z = bitmapCreateBitmap2;
             this.A.setBitmap(bitmapCreateBitmap2);
             this.L = true;
         }
     }
 
     public void C0(String str) {
-        this.f16366i = str;
+        this.f16962i = str;
     }
 
     public final void D() {
@@ -292,7 +292,7 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public void D0(boolean z10) {
-        this.f16371n = z10;
+        this.f16967n = z10;
     }
 
     public f7.a E() {
@@ -301,11 +301,11 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public void E0(final int i10) {
-        if (this.f16359a == null) {
-            this.f16364g.add(new a() { // from class: f7.s
+        if (this.f16955a == null) {
+            this.f16960g.add(new a() { // from class: f7.s
                 @Override // f7.h0.a
                 public final void a(i iVar) {
-                    this.f16454a.E0(i10);
+                    this.f17050a.E0(i10);
                 }
             });
         } else {
@@ -318,19 +318,19 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public void F0(final String str) {
-        i iVar = this.f16359a;
+        i iVar = this.f16955a;
         if (iVar == null) {
-            this.f16364g.add(new a() { // from class: f7.z
+            this.f16960g.add(new a() { // from class: f7.z
                 @Override // f7.h0.a
                 public final void a(i iVar2) {
-                    this.f16500a.F0(str);
+                    this.f17096a.F0(str);
                 }
             });
             return;
         }
         l7.h hVarL = iVar.l(str);
         if (hVarL != null) {
-            E0((int) (hVarL.b + hVarL.f22981c));
+            E0((int) (hVarL.b + hVarL.f23375c));
             return;
         }
         throw new IllegalArgumentException("Cannot find marker with name " + str + ".");
@@ -345,29 +345,29 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public void G0(final float f10) {
-        i iVar = this.f16359a;
+        i iVar = this.f16955a;
         if (iVar == null) {
-            this.f16364g.add(new a() { // from class: f7.v
+            this.f16960g.add(new a() { // from class: f7.v
                 @Override // f7.h0.a
                 public final void a(i iVar2) {
-                    this.f16468a.G0(f10);
+                    this.f17064a.G0(f10);
                 }
             });
         } else {
-            this.b.K(s7.j.i(iVar.p(), this.f16359a.f(), f10));
+            this.b.K(s7.j.i(iVar.p(), this.f16955a.f(), f10));
         }
     }
 
     public boolean H() {
-        return this.f16379v;
+        return this.f16975v;
     }
 
     public void H0(final int i10, final int i11) {
-        if (this.f16359a == null) {
-            this.f16364g.add(new a() { // from class: f7.w
+        if (this.f16955a == null) {
+            this.f16960g.add(new a() { // from class: f7.w
                 @Override // f7.h0.a
                 public final void a(i iVar) {
-                    this.f16470a.H0(i10, i11);
+                    this.f17066a.H0(i10, i11);
                 }
             });
         } else {
@@ -376,16 +376,16 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public boolean I() {
-        return this.f16372o;
+        return this.f16968o;
     }
 
     public void I0(final String str) {
-        i iVar = this.f16359a;
+        i iVar = this.f16955a;
         if (iVar == null) {
-            this.f16364g.add(new a() { // from class: f7.r
+            this.f16960g.add(new a() { // from class: f7.r
                 @Override // f7.h0.a
                 public final void a(i iVar2) {
-                    this.f16452a.I0(str);
+                    this.f17048a.I0(str);
                 }
             });
             return;
@@ -393,22 +393,22 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
         l7.h hVarL = iVar.l(str);
         if (hVarL != null) {
             int i10 = (int) hVarL.b;
-            H0(i10, ((int) hVarL.f22981c) + i10);
+            H0(i10, ((int) hVarL.f23375c) + i10);
         } else {
             throw new IllegalArgumentException("Cannot find marker with name " + str + ".");
         }
     }
 
     public i J() {
-        return this.f16359a;
+        return this.f16955a;
     }
 
     public void J0(final int i10) {
-        if (this.f16359a == null) {
-            this.f16364g.add(new a() { // from class: f7.t
+        if (this.f16955a == null) {
+            this.f16960g.add(new a() { // from class: f7.t
                 @Override // f7.h0.a
                 public final void a(i iVar) {
-                    this.f16460a.J0(i10);
+                    this.f17056a.J0(i10);
                 }
             });
         } else {
@@ -425,12 +425,12 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public void K0(final String str) {
-        i iVar = this.f16359a;
+        i iVar = this.f16955a;
         if (iVar == null) {
-            this.f16364g.add(new a() { // from class: f7.a0
+            this.f16960g.add(new a() { // from class: f7.a0
                 @Override // f7.h0.a
                 public final void a(i iVar2) {
-                    this.f16339a.K0(str);
+                    this.f16935a.K0(str);
                 }
             });
             return;
@@ -447,28 +447,28 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
         if (getCallback() == null) {
             return null;
         }
-        if (this.f16367j == null) {
+        if (this.f16963j == null) {
             k7.a aVar = new k7.a(getCallback(), null);
-            this.f16367j = aVar;
-            String str = this.f16369l;
+            this.f16963j = aVar;
+            String str = this.f16965l;
             if (str != null) {
                 aVar.c(str);
             }
         }
-        return this.f16367j;
+        return this.f16963j;
     }
 
     public void L0(final float f10) {
-        i iVar = this.f16359a;
+        i iVar = this.f16955a;
         if (iVar == null) {
-            this.f16364g.add(new a() { // from class: f7.e0
+            this.f16960g.add(new a() { // from class: f7.e0
                 @Override // f7.h0.a
                 public final void a(i iVar2) {
-                    this.f16354a.L0(f10);
+                    this.f16950a.L0(f10);
                 }
             });
         } else {
-            J0((int) s7.j.i(iVar.p(), this.f16359a.f(), f10));
+            J0((int) s7.j.i(iVar.p(), this.f16955a.f(), f10));
         }
     }
 
@@ -477,45 +477,45 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public void M0(boolean z10) {
-        if (this.f16376s == z10) {
+        if (this.f16972s == z10) {
             return;
         }
-        this.f16376s = z10;
-        o7.c cVar = this.f16373p;
+        this.f16972s = z10;
+        o7.c cVar = this.f16969p;
         if (cVar != null) {
             cVar.K(z10);
         }
     }
 
     public final k7.b N() {
-        k7.b bVar = this.f16365h;
+        k7.b bVar = this.f16961h;
         if (bVar != null && !bVar.b(K())) {
-            this.f16365h = null;
+            this.f16961h = null;
         }
-        if (this.f16365h == null) {
-            this.f16365h = new k7.b(getCallback(), this.f16366i, null, this.f16359a.j());
+        if (this.f16961h == null) {
+            this.f16961h = new k7.b(getCallback(), this.f16962i, null, this.f16955a.j());
         }
-        return this.f16365h;
+        return this.f16961h;
     }
 
     public void N0(boolean z10) {
-        this.f16375r = z10;
-        i iVar = this.f16359a;
+        this.f16971r = z10;
+        i iVar = this.f16955a;
         if (iVar != null) {
             iVar.v(z10);
         }
     }
 
     public String O() {
-        return this.f16366i;
+        return this.f16962i;
     }
 
     public void O0(final float f10) {
-        if (this.f16359a == null) {
-            this.f16364g.add(new a() { // from class: f7.f0
+        if (this.f16955a == null) {
+            this.f16960g.add(new a() { // from class: f7.f0
                 @Override // f7.h0.a
                 public final void a(i iVar) {
-                    this.f16356a.O0(f10);
+                    this.f16952a.O0(f10);
                 }
             });
             return;
@@ -523,14 +523,14 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
         if (e.h()) {
             e.b("Drawable#setProgress");
         }
-        this.b.J(this.f16359a.h(f10));
+        this.b.J(this.f16955a.h(f10));
         if (e.h()) {
             e.c("Drawable#setProgress");
         }
     }
 
     public k0 P(String str) {
-        i iVar = this.f16359a;
+        i iVar = this.f16955a;
         if (iVar == null) {
             return null;
         }
@@ -538,12 +538,12 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public void P0(x0 x0Var) {
-        this.f16380w = x0Var;
+        this.f16976w = x0Var;
         w();
     }
 
     public boolean Q() {
-        return this.f16371n;
+        return this.f16967n;
     }
 
     public void Q0(int i10) {
@@ -554,7 +554,7 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
         Iterator<String> it = U.iterator();
         l7.h hVarL = null;
         while (it.hasNext()) {
-            hVarL = this.f16359a.l(it.next());
+            hVarL = this.f16955a.l(it.next());
             if (hVarL != null) {
                 break;
             }
@@ -571,7 +571,7 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public void S0(boolean z10) {
-        this.f16362e = z10;
+        this.f16958e = z10;
     }
 
     public float T() {
@@ -583,7 +583,7 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public u0 U() {
-        i iVar = this.f16359a;
+        i iVar = this.f16955a;
         if (iVar != null) {
             return iVar.n();
         }
@@ -602,11 +602,11 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public x0 W() {
-        return this.f16381x ? x0.SOFTWARE : x0.HARDWARE;
+        return this.f16977x ? x0.SOFTWARE : x0.HARDWARE;
     }
 
     public final boolean W0() {
-        i iVar = this.f16359a;
+        i iVar = this.f16955a;
         if (iVar == null) {
             return false;
         }
@@ -621,7 +621,7 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public boolean X0() {
-        return this.f16368k == null && this.f16359a.c().j() > 0;
+        return this.f16964k == null && this.f16955a.c().j() > 0;
     }
 
     @SuppressLint({"WrongConstant"})
@@ -638,7 +638,7 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public Typeface b0(l7.c cVar) {
-        Map<String, Typeface> map = this.f16368k;
+        Map<String, Typeface> map = this.f16964k;
         if (map != null) {
             String strA = cVar.a();
             if (map.containsKey(strA)) {
@@ -684,7 +684,7 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     public void draw(@NonNull Canvas canvas) {
         float fP;
         float fO;
-        o7.c cVar = this.f16373p;
+        o7.c cVar = this.f16969p;
         if (cVar == null) {
             return;
         }
@@ -718,9 +718,9 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
         if (zF && W0()) {
             O0(this.b.o());
         }
-        if (this.f16362e) {
+        if (this.f16958e) {
             try {
-                if (this.f16381x) {
+                if (this.f16977x) {
                     m0(canvas, cVar);
                 } else {
                     z(canvas);
@@ -728,7 +728,7 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
             } catch (Throwable th2) {
                 s7.e.b("Lottie crashed in draw!", th2);
             }
-        } else if (this.f16381x) {
+        } else if (this.f16977x) {
             m0(canvas, cVar);
         } else {
             z(canvas);
@@ -740,26 +740,26 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
         if (isVisible()) {
             return this.b.isRunning();
         }
-        b bVar = this.f16363f;
+        b bVar = this.f16959f;
         return bVar == b.PLAY || bVar == b.RESUME;
     }
 
     public boolean f0() {
-        return this.f16377t;
+        return this.f16973t;
     }
 
     public boolean g0() {
-        return this.f16378u;
+        return this.f16974u;
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getAlpha() {
-        return this.f16374q;
+        return this.f16970q;
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getIntrinsicHeight() {
-        i iVar = this.f16359a;
+        i iVar = this.f16955a;
         if (iVar == null) {
             return -1;
         }
@@ -768,7 +768,7 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
 
     @Override // android.graphics.drawable.Drawable
     public int getIntrinsicWidth() {
-        i iVar = this.f16359a;
+        i iVar = this.f16955a;
         if (iVar == null) {
             return -1;
         }
@@ -781,16 +781,16 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public boolean h0(i0 i0Var) {
-        return this.f16370m.b(i0Var);
+        return this.f16966m.b(i0Var);
     }
 
     public void i0() {
-        this.f16364g.clear();
+        this.f16960g.clear();
         this.b.w();
         if (isVisible()) {
             return;
         }
-        this.f16363f = b.NONE;
+        this.f16959f = b.NONE;
     }
 
     @Override // android.graphics.drawable.Drawable.Callback
@@ -820,11 +820,11 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public void j0() {
-        if (this.f16373p == null) {
-            this.f16364g.add(new a() { // from class: f7.d0
+        if (this.f16969p == null) {
+            this.f16960g.add(new a() { // from class: f7.d0
                 @Override // f7.h0.a
                 public final void a(i iVar) {
-                    this.f16343a.j0();
+                    this.f16939a.j0();
                 }
             });
             return;
@@ -832,10 +832,10 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
         w();
         if (s(K()) || X() == 0) {
             if (isVisible()) {
-                this.b.x();
-                this.f16363f = b.NONE;
+                this.b.y();
+                this.f16959f = b.NONE;
             } else {
-                this.f16363f = b.PLAY;
+                this.f16959f = b.PLAY;
             }
         }
         if (s(K())) {
@@ -851,7 +851,7 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
         if (isVisible()) {
             return;
         }
-        this.f16363f = b.NONE;
+        this.f16959f = b.NONE;
     }
 
     public void k0() {
@@ -864,7 +864,7 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public final void m0(Canvas canvas, o7.c cVar) {
-        if (this.f16359a == null || cVar == null) {
+        if (this.f16955a == null || cVar == null) {
             return;
         }
         D();
@@ -873,7 +873,7 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
         x(this.B, this.C);
         this.I.mapRect(this.C);
         y(this.C, this.B);
-        if (this.f16372o) {
+        if (this.f16968o) {
             this.H.set(0.0f, 0.0f, getIntrinsicWidth(), getIntrinsicHeight());
         } else {
             cVar.e(this.H, null, false);
@@ -899,40 +899,40 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
             float[] fArr = this.J;
             float f10 = fArr[0];
             float f11 = fArr[4];
-            this.f16382y.set(this.I);
-            this.f16382y.preScale(fWidth, fHeight);
-            Matrix matrix = this.f16382y;
+            this.f16978y.set(this.I);
+            this.f16978y.preScale(fWidth, fHeight);
+            Matrix matrix = this.f16978y;
             RectF rectF2 = this.H;
             matrix.postTranslate(-rectF2.left, -rectF2.top);
-            this.f16382y.postScale(1.0f / f10, 1.0f / f11);
-            this.f16383z.eraseColor(0);
-            this.A.setMatrix(s7.m.f30547a);
+            this.f16978y.postScale(1.0f / f10, 1.0f / f11);
+            this.f16979z.eraseColor(0);
+            this.A.setMatrix(s7.m.f31094a);
             this.A.scale(f10, f11);
-            cVar.i(this.A, this.f16382y, this.f16374q, null);
+            cVar.i(this.A, this.f16978y, this.f16970q, null);
             this.I.invert(this.K);
             this.K.mapRect(this.G, this.H);
             y(this.G, this.F);
         }
         this.E.set(0, 0, iCeil, iCeil2);
-        canvas.drawBitmap(this.f16383z, this.E, this.F, this.D);
+        canvas.drawBitmap(this.f16979z, this.E, this.F, this.D);
     }
 
     public List<l7.e> n0(l7.e eVar) {
-        if (this.f16373p == null) {
+        if (this.f16969p == null) {
             s7.e.c("Cannot resolve KeyPath. Composition is not set yet.");
             return Collections.EMPTY_LIST;
         }
         ArrayList arrayList = new ArrayList();
-        this.f16373p.h(eVar, 0, arrayList, new l7.e(new String[0]));
+        this.f16969p.h(eVar, 0, arrayList, new l7.e(new String[0]));
         return arrayList;
     }
 
     public void o0() {
-        if (this.f16373p == null) {
-            this.f16364g.add(new a() { // from class: f7.y
+        if (this.f16969p == null) {
+            this.f16960g.add(new a() { // from class: f7.y
                 @Override // f7.h0.a
                 public final void a(i iVar) {
-                    this.f16499a.o0();
+                    this.f17095a.o0();
                 }
             });
             return;
@@ -941,9 +941,9 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
         if (s(K()) || X() == 0) {
             if (isVisible()) {
                 this.b.D();
-                this.f16363f = b.NONE;
+                this.f16959f = b.NONE;
             } else {
-                this.f16363f = b.RESUME;
+                this.f16959f = b.RESUME;
             }
         }
         if (s(K())) {
@@ -954,7 +954,7 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
         if (isVisible()) {
             return;
         }
-        this.f16363f = b.NONE;
+        this.f16959f = b.NONE;
     }
 
     public final void p0(RectF rectF, float f10, float f11) {
@@ -966,22 +966,22 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public void q0(boolean z10) {
-        this.f16377t = z10;
+        this.f16973t = z10;
     }
 
     public <T> void r(final l7.e eVar, final T t8, final t7.c<T> cVar) {
-        o7.c cVar2 = this.f16373p;
+        o7.c cVar2 = this.f16969p;
         if (cVar2 == null) {
-            this.f16364g.add(new a() { // from class: f7.u
+            this.f16960g.add(new a() { // from class: f7.u
                 @Override // f7.h0.a
                 public final void a(i iVar) {
-                    this.f16461a.r(eVar, t8, cVar);
+                    this.f17057a.r(eVar, t8, cVar);
                 }
             });
             return;
         }
         boolean zIsEmpty = true;
-        if (eVar == l7.e.f22977c) {
+        if (eVar == l7.e.f23371c) {
             cVar2.c(t8, cVar);
         } else if (eVar.d() != null) {
             eVar.d().c(t8, cVar);
@@ -1001,14 +1001,14 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public void r0(boolean z10) {
-        this.f16378u = z10;
+        this.f16974u = z10;
     }
 
     public boolean s(Context context) {
-        if (this.f16361d) {
+        if (this.f16957d) {
             return true;
         }
-        return this.f16360c && e.f().a(context) == j7.a.STANDARD_MOTION;
+        return this.f16956c && e.f().a(context) == j7.a.STANDARD_MOTION;
     }
 
     public void s0(f7.a aVar) {
@@ -1026,7 +1026,7 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
 
     @Override // android.graphics.drawable.Drawable
     public void setAlpha(int i10) {
-        this.f16374q = i10;
+        this.f16970q = i10;
         invalidateSelf();
     }
 
@@ -1040,7 +1040,7 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
         boolean zIsVisible = isVisible();
         boolean visible = super.setVisible(z10, z11);
         if (z10) {
-            b bVar = this.f16363f;
+            b bVar = this.f16959f;
             if (bVar == b.PLAY) {
                 j0();
                 return visible;
@@ -1052,11 +1052,11 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
         } else {
             if (this.b.isRunning()) {
                 i0();
-                this.f16363f = b.RESUME;
+                this.f16959f = b.RESUME;
                 return visible;
             }
             if (zIsVisible) {
-                this.f16363f = b.NONE;
+                this.f16959f = b.NONE;
             }
         }
         return visible;
@@ -1077,38 +1077,38 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public final void t() {
-        i iVar = this.f16359a;
+        i iVar = this.f16955a;
         if (iVar == null) {
             return;
         }
         o7.c cVar = new o7.c(this, q7.v.a(iVar), iVar.k(), iVar);
-        this.f16373p = cVar;
-        if (this.f16376s) {
+        this.f16969p = cVar;
+        if (this.f16972s) {
             cVar.K(true);
         }
-        this.f16373p.Q(this.f16372o);
+        this.f16969p.Q(this.f16968o);
     }
 
     public void t0(boolean z10) {
-        if (z10 != this.f16379v) {
-            this.f16379v = z10;
+        if (z10 != this.f16975v) {
+            this.f16975v = z10;
             invalidateSelf();
         }
     }
 
     public void u() {
-        this.f16364g.clear();
+        this.f16960g.clear();
         this.b.cancel();
         if (isVisible()) {
             return;
         }
-        this.f16363f = b.NONE;
+        this.f16959f = b.NONE;
     }
 
     public void u0(boolean z10) {
-        if (z10 != this.f16372o) {
-            this.f16372o = z10;
-            o7.c cVar = this.f16373p;
+        if (z10 != this.f16968o) {
+            this.f16968o = z10;
+            o7.c cVar = this.f16969p;
             if (cVar != null) {
                 cVar.Q(z10);
             }
@@ -1129,28 +1129,28 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
         if (this.b.isRunning()) {
             this.b.cancel();
             if (!isVisible()) {
-                this.f16363f = b.NONE;
+                this.f16959f = b.NONE;
             }
         }
-        this.f16359a = null;
-        this.f16373p = null;
-        this.f16365h = null;
+        this.f16955a = null;
+        this.f16969p = null;
+        this.f16961h = null;
         this.S = -3.4028235E38f;
         this.b.k();
         invalidateSelf();
     }
 
     public boolean v0(i iVar) {
-        if (this.f16359a == iVar) {
+        if (this.f16955a == iVar) {
             return false;
         }
         this.L = true;
         v();
-        this.f16359a = iVar;
+        this.f16955a = iVar;
         t();
         this.b.G(iVar);
         O0(this.b.getAnimatedFraction());
-        Iterator it = new ArrayList(this.f16364g).iterator();
+        Iterator it = new ArrayList(this.f16960g).iterator();
         while (it.hasNext()) {
             a aVar = (a) it.next();
             if (aVar != null) {
@@ -1158,8 +1158,8 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
             }
             it.remove();
         }
-        this.f16364g.clear();
-        iVar.v(this.f16375r);
+        this.f16960g.clear();
+        iVar.v(this.f16971r);
         w();
         Drawable.Callback callback = getCallback();
         if (callback instanceof ImageView) {
@@ -1171,15 +1171,15 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public final void w() {
-        i iVar = this.f16359a;
+        i iVar = this.f16955a;
         if (iVar == null) {
             return;
         }
-        this.f16381x = this.f16380w.b(Build.VERSION.SDK_INT, iVar.q(), iVar.m());
+        this.f16977x = this.f16976w.b(Build.VERSION.SDK_INT, iVar.q(), iVar.m());
     }
 
     public void w0(String str) {
-        this.f16369l = str;
+        this.f16965l = str;
         k7.a aVarL = L();
         if (aVarL != null) {
             aVarL.c(str);
@@ -1191,7 +1191,7 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public void x0(f7.b bVar) {
-        k7.a aVar = this.f16367j;
+        k7.a aVar = this.f16963j;
         if (aVar != null) {
             aVar.d(bVar);
         }
@@ -1202,36 +1202,36 @@ public class h0 extends Drawable implements Drawable.Callback, Animatable {
     }
 
     public void y0(Map<String, Typeface> map) {
-        if (map == this.f16368k) {
+        if (map == this.f16964k) {
             return;
         }
-        this.f16368k = map;
+        this.f16964k = map;
         invalidateSelf();
     }
 
     public final void z(Canvas canvas) {
-        o7.c cVar = this.f16373p;
-        i iVar = this.f16359a;
+        o7.c cVar = this.f16969p;
+        i iVar = this.f16955a;
         if (cVar == null || iVar == null) {
             return;
         }
-        this.f16382y.reset();
+        this.f16978y.reset();
         Rect bounds = getBounds();
         if (!bounds.isEmpty()) {
             float fWidth = bounds.width() / iVar.b().width();
             float fHeight = bounds.height() / iVar.b().height();
-            this.f16382y.preTranslate(bounds.left, bounds.top);
-            this.f16382y.preScale(fWidth, fHeight);
+            this.f16978y.preTranslate(bounds.left, bounds.top);
+            this.f16978y.preScale(fWidth, fHeight);
         }
-        cVar.i(canvas, this.f16382y, this.f16374q, null);
+        cVar.i(canvas, this.f16978y, this.f16970q, null);
     }
 
     public void z0(final int i10) {
-        if (this.f16359a == null) {
-            this.f16364g.add(new a() { // from class: f7.g0
+        if (this.f16955a == null) {
+            this.f16960g.add(new a() { // from class: f7.g0
                 @Override // f7.h0.a
                 public final void a(i iVar) {
-                    this.f16357a.z0(i10);
+                    this.f16953a.z0(i10);
                 }
             });
         } else {

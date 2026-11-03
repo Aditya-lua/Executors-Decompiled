@@ -11,11 +11,11 @@ import java.lang.reflect.Field;
 public class j0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static boolean f27122a = true;
+    public static boolean f27687a = true;
     public static Field b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static boolean f27123c;
+    public static boolean f27688c;
 
     public static class a {
         public static float a(View view) {
@@ -32,11 +32,11 @@ public class j0 {
 
     @SuppressLint({"NewApi"})
     public float b(@NonNull View view) {
-        if (f27122a) {
+        if (f27687a) {
             try {
                 return a.a(view);
             } catch (NoSuchMethodError unused) {
-                f27122a = false;
+                f27687a = false;
             }
         }
         return view.getAlpha();
@@ -52,12 +52,12 @@ public class j0 {
 
     @SuppressLint({"NewApi"})
     public void e(@NonNull View view, float f10) {
-        if (f27122a) {
+        if (f27687a) {
             try {
                 a.b(view, f10);
                 return;
             } catch (NoSuchMethodError unused) {
-                f27122a = false;
+                f27687a = false;
             }
         }
         view.setAlpha(f10);
@@ -65,7 +65,7 @@ public class j0 {
 
     @SuppressLint({"SoonBlockedPrivateApi"})
     public void f(@NonNull View view, int i10) {
-        if (!f27123c) {
+        if (!f27688c) {
             try {
                 Field declaredField = View.class.getDeclaredField("mViewFlags");
                 b = declaredField;
@@ -73,7 +73,7 @@ public class j0 {
             } catch (NoSuchFieldException unused) {
                 Log.i("ViewUtilsApi19", "fetchViewFlagsField: ");
             }
-            f27123c = true;
+            f27688c = true;
         }
         Field field = b;
         if (field != null) {

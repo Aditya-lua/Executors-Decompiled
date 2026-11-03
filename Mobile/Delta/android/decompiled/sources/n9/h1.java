@@ -12,50 +12,50 @@ import java.util.concurrent.Executor;
 public final class h1 extends f {
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final HashMap f25272g = new HashMap();
+    public final HashMap f26093g = new HashMap();
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final Context f25273h;
+    public final Context f26094h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public volatile Handler f25274i;
+    public volatile Handler f26095i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final g1 f25275j;
+    public final g1 f26096j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final t9.a f25276k;
+    public final t9.a f26097k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final long f25277l;
+    public final long f26098l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final long f25278m;
+    public final long f26099m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public volatile Executor f25279n;
+    public volatile Executor f26100n;
 
     public h1(Context context, Looper looper, Executor executor) {
         g1 g1Var = new g1(this, null);
-        this.f25275j = g1Var;
-        this.f25273h = context.getApplicationContext();
-        this.f25274i = new db.p(looper, g1Var);
-        this.f25276k = t9.a.b();
-        this.f25277l = 5000L;
-        this.f25278m = 300000L;
-        this.f25279n = executor;
+        this.f26096j = g1Var;
+        this.f26094h = context.getApplicationContext();
+        this.f26095i = new db.p(looper, g1Var);
+        this.f26097k = t9.a.b();
+        this.f26098l = 5000L;
+        this.f26099m = 300000L;
+        this.f26100n = executor;
     }
 
     @Override // n9.f
     public final ConnectionResult c(e1 e1Var, ServiceConnection serviceConnection, String str, Executor executor) {
         ConnectionResult connectionResultJ;
         m.m(serviceConnection, "ServiceConnection must not be null");
-        HashMap map = this.f25272g;
+        HashMap map = this.f26093g;
         synchronized (map) {
             try {
                 f1 f1Var = (f1) map.get(e1Var);
                 if (executor == null) {
-                    executor = this.f25279n;
+                    executor = this.f26100n;
                 }
                 if (f1Var == null) {
                     f1Var = new f1(this, e1Var);
@@ -63,7 +63,7 @@ public final class h1 extends f {
                     connectionResultJ = f1Var.j(str, executor);
                     map.put(e1Var, f1Var);
                 } else {
-                    this.f25274i.removeMessages(0, e1Var);
+                    this.f26095i.removeMessages(0, e1Var);
                     if (f1Var.f(serviceConnection)) {
                         String string = e1Var.toString();
                         StringBuilder sb2 = new StringBuilder(string.length() + 81);
@@ -81,7 +81,7 @@ public final class h1 extends f {
                     connectionResultJ = null;
                 }
                 if (f1Var.d()) {
-                    return ConnectionResult.f5688k;
+                    return ConnectionResult.f5761k;
                 }
                 if (connectionResultJ == null) {
                     connectionResultJ = new ConnectionResult(-1);
@@ -96,7 +96,7 @@ public final class h1 extends f {
     @Override // n9.f
     public final void e(e1 e1Var, ServiceConnection serviceConnection, String str) {
         m.m(serviceConnection, "ServiceConnection must not be null");
-        HashMap map = this.f25272g;
+        HashMap map = this.f26093g;
         synchronized (map) {
             try {
                 f1 f1Var = (f1) map.get(e1Var);
@@ -116,7 +116,7 @@ public final class h1 extends f {
                 }
                 f1Var.c(serviceConnection, str);
                 if (f1Var.g()) {
-                    this.f25274i.sendMessageDelayed(this.f25274i.obtainMessage(0, e1Var), this.f25277l);
+                    this.f26095i.sendMessageDelayed(this.f26095i.obtainMessage(0, e1Var), this.f26098l);
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -125,22 +125,22 @@ public final class h1 extends f {
     }
 
     public final /* synthetic */ HashMap f() {
-        return this.f25272g;
+        return this.f26093g;
     }
 
     public final /* synthetic */ Context g() {
-        return this.f25273h;
+        return this.f26094h;
     }
 
     public final /* synthetic */ Handler h() {
-        return this.f25274i;
+        return this.f26095i;
     }
 
     public final /* synthetic */ t9.a i() {
-        return this.f25276k;
+        return this.f26097k;
     }
 
     public final /* synthetic */ long j() {
-        return this.f25278m;
+        return this.f26099m;
     }
 }

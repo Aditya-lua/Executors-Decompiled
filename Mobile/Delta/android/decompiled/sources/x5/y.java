@@ -11,7 +11,7 @@ public final class y extends n {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final y f35021a = new y();
+    public static final y f35519a = new y();
 
     @Override // x5.n
     public /* bridge */ /* synthetic */ m a(String str) {

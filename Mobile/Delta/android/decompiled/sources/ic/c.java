@@ -1,33 +1,33 @@
 package ic;
 
-import android.animation.TypeEvaluator;
-import androidx.annotation.NonNull;
-
 /* JADX INFO: loaded from: classes2.dex */
-public class c implements TypeEvaluator<Integer> {
+public final class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final c f20475a = new c();
+    public static final int f20624a = 2131099807;
+    public static final int b = 2131099811;
 
-    @NonNull
-    public static c b() {
-        return f20475a;
-    }
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public static final int f20625c = 2131099812;
 
-    @Override // android.animation.TypeEvaluator
-    @NonNull
-    /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
-    public Integer evaluate(float f10, Integer num, Integer num2) {
-        int iIntValue = num.intValue();
-        float f11 = ((iIntValue >> 24) & 255) / 255.0f;
-        int iIntValue2 = num2.intValue();
-        float fPow = (float) Math.pow(((iIntValue >> 16) & 255) / 255.0f, 2.2d);
-        float fPow2 = (float) Math.pow(((iIntValue >> 8) & 255) / 255.0f, 2.2d);
-        float fPow3 = (float) Math.pow((iIntValue & 255) / 255.0f, 2.2d);
-        float fPow4 = (float) Math.pow(((iIntValue2 >> 16) & 255) / 255.0f, 2.2d);
-        float f12 = f11 + (((((iIntValue2 >> 24) & 255) / 255.0f) - f11) * f10);
-        float fPow5 = fPow2 + ((((float) Math.pow(((iIntValue2 >> 8) & 255) / 255.0f, 2.2d)) - fPow2) * f10);
-        float fPow6 = fPow3 + (f10 * (((float) Math.pow((iIntValue2 & 255) / 255.0f, 2.2d)) - fPow3));
-        return Integer.valueOf((Math.round(((float) Math.pow(fPow + ((fPow4 - fPow) * f10), 0.45454545454545453d)) * 255.0f) << 16) | (Math.round(f12 * 255.0f) << 24) | (Math.round(((float) Math.pow(fPow5, 0.45454545454545453d)) * 255.0f) << 8) | Math.round(((float) Math.pow(fPow6, 0.45454545454545453d)) * 255.0f));
-    }
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public static final int f20626d = 2131099813;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public static final int f20627e = 2131099814;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    public static final int f20628f = 2131100444;
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name */
+    public static final int f20629g = 2131100470;
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name */
+    public static final int f20630h = 2131100497;
+
+    /* JADX INFO: renamed from: i, reason: collision with root package name */
+    public static final int f20631i = 2131100498;
+
+    /* JADX INFO: renamed from: j, reason: collision with root package name */
+    public static final int f20632j = 2131100501;
 }

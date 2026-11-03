@@ -13,43 +13,43 @@ import n0.a4;
 public class o implements x2.h<p1> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f22917a;
+    public final String f23311a;
     public final a4 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final c2 f22918c;
+    public final c2 f23312c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Size f22919d;
+    public final Size f23313d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final a2.c f22920e;
+    public final a2.c f23314e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final k0 f22921f;
+    public final k0 f23315f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final Range<Integer> f22922g;
+    public final Range<Integer> f23316g;
 
     public o(String str, a4 a4Var, c2 c2Var, Size size, a2.c cVar, k0 k0Var, Range<Integer> range) {
-        this.f22917a = str;
+        this.f23311a = str;
         this.b = a4Var;
-        this.f22918c = c2Var;
-        this.f22919d = size;
-        this.f22920e = cVar;
-        this.f22921f = k0Var;
-        this.f22922g = range;
+        this.f23312c = c2Var;
+        this.f23313d = size;
+        this.f23314e = cVar;
+        this.f23315f = k0Var;
+        this.f23316g = range;
     }
 
     @Override // x2.h
     /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
     public p1 get() {
-        CaptureEncodeRates captureEncodeRatesC = m.c(this.f22918c, this.f22922g);
+        CaptureEncodeRates captureEncodeRatesC = m.c(this.f23312c, this.f23316g);
         r1.a("VidEncVdPrflRslvr", "Resolved VIDEO frame rates: Capture frame rate = " + captureEncodeRatesC.getCaptureRate() + "fps. Encode frame rate = " + captureEncodeRatesC.getEncodeRate() + "fps.");
-        Range<Integer> rangeC = this.f22918c.c();
+        Range<Integer> rangeC = this.f23312c.c();
         r1.a("VidEncVdPrflRslvr", "Using resolved VIDEO bitrate from EncoderProfiles");
-        int iF = m.f(this.f22920e.c(), this.f22921f.a(), this.f22920e.b(), captureEncodeRatesC.getEncodeRate(), this.f22920e.f(), this.f22919d.getWidth(), this.f22920e.l(), this.f22919d.getHeight(), this.f22920e.h(), rangeC);
-        int iJ = this.f22920e.j();
-        return p1.d().i(this.f22917a).h(this.b).k(this.f22919d).b(iF).c(captureEncodeRatesC.getCaptureRate()).f(captureEncodeRatesC.getEncodeRate()).j(iJ).e(m.b(this.f22917a, iJ)).a();
+        int iF = m.f(this.f23314e.c(), this.f23315f.a(), this.f23314e.b(), captureEncodeRatesC.getEncodeRate(), this.f23314e.f(), this.f23313d.getWidth(), this.f23314e.l(), this.f23313d.getHeight(), this.f23314e.h(), rangeC);
+        int iJ = this.f23314e.j();
+        return p1.d().i(this.f23311a).h(this.b).k(this.f23313d).b(iF).c(captureEncodeRatesC.getCaptureRate()).f(captureEncodeRatesC.getEncodeRate()).j(iJ).e(m.b(this.f23311a, iJ)).a();
     }
 }

@@ -10,12 +10,12 @@ public final class f {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final String f34938a;
+    public static final String f35436a;
 
     static {
         String strI = w.i("Data");
         Intrinsics.checkNotNullExpressionValue(strI, "tagWithPrefix(...)");
-        f34938a = strI;
+        f35436a = strI;
     }
 
     public static final Boolean[] h(boolean[] zArr) {

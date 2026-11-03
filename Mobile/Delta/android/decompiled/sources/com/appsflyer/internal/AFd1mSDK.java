@@ -102,10 +102,10 @@ public final class AFd1mSDK {
             StringBuilder sb2 = new StringBuilder();
             sb2.append(aFd1oSDK.AFKeystoreWrapper);
             sb2.append(":");
-            sb2.append(aFd1oSDK.f5281d);
+            sb2.append(aFd1oSDK.f5354d);
             StringBuilder sb3 = new StringBuilder(sb2.toString());
             byte[] bArr2 = aFd1oSDK.unregisterClient;
-            if (aFd1oSDK.f5282e && bArr2 != null) {
+            if (aFd1oSDK.f5355e && bArr2 != null) {
                 try {
                     String str = aFd1oSDK.registerClient ? "<encrypted>" : new String(bArr2, Charset.defaultCharset());
                     sb3.append("\n payload: ");
@@ -148,18 +148,18 @@ public final class AFd1mSDK {
             sb6.append("] ");
             sb6.append((Object) sb3);
             AFLogger.INSTANCE.d(LogTag.HTTP_CLIENT, sb6.toString());
-            HttpURLConnection httpURLConnection2 = (HttpURLConnection) new URL(aFd1oSDK.f5281d).openConnection();
+            HttpURLConnection httpURLConnection2 = (HttpURLConnection) new URL(aFd1oSDK.f5354d).openConnection();
             try {
                 httpURLConnection2.setRequestMethod(aFd1oSDK.AFKeystoreWrapper);
                 if (aFd1oSDK.force) {
                     httpURLConnection2.setUseCaches(false);
                 }
-                if (!aFd1oSDK.f5285w) {
+                if (!aFd1oSDK.f5358w) {
                     httpURLConnection2.setInstanceFollowRedirects(false);
                 }
                 try {
                     int i10 = this.AFKeystoreWrapper;
-                    int i11 = aFd1oSDK.f5284v;
+                    int i11 = aFd1oSDK.f5357v;
                     if (i11 != -1) {
                         i10 = i11;
                     }
@@ -193,7 +193,7 @@ public final class AFd1mSDK {
                         }
                     }
                     boolean z10 = httpURLConnection2.getResponseCode() / 100 == 2;
-                    String strAFLogger = aFd1oSDK.f5283i ? AFLogger(httpURLConnection2) : "";
+                    String strAFLogger = aFd1oSDK.f5356i ? AFLogger(httpURLConnection2) : "";
                     AFd1nSDK aFd1nSDK2 = new AFd1nSDK(System.currentTimeMillis() - jCurrentTimeMillis);
                     StringBuilder sb8 = new StringBuilder("response code:");
                     sb8.append(httpURLConnection2.getResponseCode());

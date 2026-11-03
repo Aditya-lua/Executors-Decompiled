@@ -1,364 +1,274 @@
 package no;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
-import android.widget.Space;
-import android.widget.TextView;
-import android.widget.ToggleButton;
-import androidx.annotation.NonNull;
-import androidx.camera.view.PreviewView;
-import androidx.constraintlayout.widget.Barrier;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.constraintlayout.widget.Guideline;
-import com.airbnb.lottie.LottieAnimationView;
-import com.withpersona.sdk2.camera.camera2.Camera2PreviewView;
-import com.withpersona.sdk2.inquiry.governmentid.captureTips.StaticCaptureTipsView;
-import com.withpersona.sdk2.inquiry.governmentid.view.ScanningView;
-import com.withpersona.sdk2.inquiry.shared.ui.Pi2NavigationBar;
-import com.withpersona.sdk2.inquiry.shared.ui.SpotlightView;
-import com.withpersona.sdk2.inquiry.shared.ui.ThemeableLottieAnimationView;
-import io.n2;
-import io.o2;
+import go.j2;
+import gt.l;
+import gt.s;
+import java.util.Map;
+import kotlin.Metadata;
+import kotlin.collections.k0;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.jvm.internal.Intrinsics;
+import org.jetbrains.annotations.NotNull;
 
+/* JADX WARN: Enum visitor error
+jadx.core.utils.exceptions.JadxRuntimeException: Can't remove SSA var: r0v0 no.b, still in use, count: 1, list:
+  (r0v0 no.b) from 0x0144: INVOKE ("dl"), (r0v0 no.b) STATIC call: gt.s.a(java.lang.Object, java.lang.Object):kotlin.Pair A[MD:<A, B>:(A, B):kotlin.Pair<A, B> (m), WRAPPED]
+	at jadx.core.utils.InsnRemover.removeSsaVar(InsnRemover.java:164)
+	at jadx.core.utils.InsnRemover.unbindResult(InsnRemover.java:129)
+	at jadx.core.utils.InsnRemover.lambda$unbindInsns$1(InsnRemover.java:101)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	at jadx.core.utils.InsnRemover.unbindInsns(InsnRemover.java:100)
+	at jadx.core.utils.InsnRemover.removeAllAndUnbind(InsnRemover.java:257)
+	at jadx.core.dex.visitors.EnumVisitor.convertToEnum(EnumVisitor.java:187)
+	at jadx.core.dex.visitors.EnumVisitor.visit(EnumVisitor.java:102)
+ */
+/* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
 /* JADX INFO: loaded from: classes3.dex */
-public final class b implements r5.a {
+@Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u001d\b\u0086\u0081\u0002\u0018\u0000 \u00072\b\u0012\u0004\u0012\u00020\u00000\u0001:\u0001\u0007B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\r\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0005\u0010\u0006j\u0002\b\u0005j\u0002\b\bj\u0002\b\tj\u0002\b\nj\u0002\b\u000bj\u0002\b\fj\u0002\b\rj\u0002\b\u000ej\u0002\b\u000fj\u0002\b\u0010j\u0002\b\u0011j\u0002\b\u0012j\u0002\b\u0013j\u0002\b\u0014j\u0002\b\u0015j\u0002\b\u0016j\u0002\b\u0017j\u0002\b\u0018j\u0002\b\u0019j\u0002\b\u001aj\u0002\b\u001bj\u0002\b\u001cj\u0002\b\u001dj\u0002\b\u001ej\u0002\b\u001fj\u0002\b ¨\u0006!"}, d2 = {"Lno/b;", "", "<init>", "(Ljava/lang/String;I)V", "Lgo/j2;", "c", "()Lgo/j2;", "a", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class b {
+    DriverLicense,
+    StateID,
+    Keypass,
+    MilitaryID,
+    MyNumberCard,
+    NRIC,
+    OFWID,
+    Passport,
+    PermanentResidentCard,
+    ResidencyPermit,
+    StudentPermit,
+    SocialSecurityID,
+    UMID,
+    VoterID,
+    PassportCard,
+    PostalID,
+    Visa,
+    WorkPermit,
+    CitizenshipCertificate,
+    ConsularID,
+    ForeignerID,
+    HealthInsuranceCard,
+    LongTermPass,
+    NBICertificate,
+    PermanentAccountNumber,
+    Unknown;
 
-    @NonNull
-    public final PreviewView A;
+    public static final /* synthetic */ ot.a D = ot.b.a(a());
 
-    @NonNull
-    public final ProgressBar B;
+    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
+    @NotNull
+    public static final Companion INSTANCE = new Companion(null);
 
-    @NonNull
-    public final LottieAnimationView C;
+    @NotNull
+    public static final Map<String, b> b = k0.m(s.a("dl", new b()), s.a("id", new b()), s.a("keyp", new b()), s.a("mid", new b()), s.a("myn", new b()), s.a("nric", new b()), s.a("ofw", new b()), s.a("pp", new b()), s.a("pr", new b()), s.a("rp", new b()), s.a("sp", new b()), s.a("sss", new b()), s.a("umid", new b()), s.a("vid", new b()), s.a("ppc", new b()), s.a("pid", new b()), s.a("visa", new b()), s.a("wp", new b()), s.a("cct", new b()), s.a("cid", new b()), s.a("foid", new b()), s.a("hic", new b()), s.a("ltpass", new b()), s.a("nbi", new b()), s.a("pan", new b()));
 
-    @NonNull
-    public final ScanningView D;
+    /* JADX INFO: renamed from: no.b$a, reason: from kotlin metadata */
+    @Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010$\n\u0002\b\u0003\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0015\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0007\u0010\bR\u0014\u0010\t\u001a\u00020\u00048\u0006X\u0086T¢\u0006\u0006\n\u0004\b\t\u0010\nR \u0010\f\u001a\u000e\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00060\u000b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\f\u0010\r¨\u0006\u000e"}, d2 = {"Lno/b$a;", "", "<init>", "()V", "", "abbr", "Lno/b;", "a", "(Ljava/lang/String;)Lno/b;", "KeyAutoClassification", "Ljava/lang/String;", "", "codes", "Ljava/util/Map;", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final class Companion {
+        public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
+            this();
+        }
 
-    @NonNull
-    public final SpotlightView E;
+        @NotNull
+        public final b a(@NotNull String abbr) {
+            Intrinsics.checkNotNullParameter(abbr, "abbr");
+            b bVar = (b) b.b.get(abbr);
+            return bVar == null ? b.Unknown : bVar;
+        }
 
-    @NonNull
-    public final Guideline F;
-
-    @NonNull
-    public final StaticCaptureTipsView G;
-
-    @NonNull
-    public final TextView H;
-
-    @NonNull
-    public final Space I;
-
-    @NonNull
-    public final TextView J;
-
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    @NonNull
-    public final FrameLayout f26478a;
-
-    @NonNull
-    public final Space b;
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    @NonNull
-    public final Camera2PreviewView f26479c;
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    @NonNull
-    public final ProgressBar f26480d;
-
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    @NonNull
-    public final ConstraintLayout f26481e;
-
-    /* JADX INFO: renamed from: f, reason: collision with root package name */
-    @NonNull
-    public final Button f26482f;
-
-    /* JADX INFO: renamed from: g, reason: collision with root package name */
-    @NonNull
-    public final Space f26483g;
-
-    /* JADX INFO: renamed from: h, reason: collision with root package name */
-    @NonNull
-    public final TextView f26484h;
-
-    /* JADX INFO: renamed from: i, reason: collision with root package name */
-    @NonNull
-    public final TextView f26485i;
-
-    /* JADX INFO: renamed from: j, reason: collision with root package name */
-    @NonNull
-    public final TextView f26486j;
-
-    /* JADX INFO: renamed from: k, reason: collision with root package name */
-    @NonNull
-    public final LinearLayout f26487k;
-
-    /* JADX INFO: renamed from: l, reason: collision with root package name */
-    @NonNull
-    public final Guideline f26488l;
-
-    /* JADX INFO: renamed from: m, reason: collision with root package name */
-    @NonNull
-    public final ToggleButton f26489m;
-
-    /* JADX INFO: renamed from: n, reason: collision with root package name */
-    @NonNull
-    public final TextView f26490n;
-
-    /* JADX INFO: renamed from: o, reason: collision with root package name */
-    @NonNull
-    public final FrameLayout f26491o;
-
-    /* JADX INFO: renamed from: p, reason: collision with root package name */
-    @NonNull
-    public final Pi2NavigationBar f26492p;
-
-    /* JADX INFO: renamed from: q, reason: collision with root package name */
-    @NonNull
-    public final View f26493q;
-
-    /* JADX INFO: renamed from: r, reason: collision with root package name */
-    @NonNull
-    public final ImageView f26494r;
-
-    /* JADX INFO: renamed from: s, reason: collision with root package name */
-    @NonNull
-    public final ConstraintLayout f26495s;
-
-    /* JADX INFO: renamed from: t, reason: collision with root package name */
-    @NonNull
-    public final ThemeableLottieAnimationView f26496t;
-
-    /* JADX INFO: renamed from: u, reason: collision with root package name */
-    @NonNull
-    public final ConstraintLayout f26497u;
-
-    /* JADX INFO: renamed from: v, reason: collision with root package name */
-    @NonNull
-    public final TextView f26498v;
-
-    /* JADX INFO: renamed from: w, reason: collision with root package name */
-    @NonNull
-    public final Barrier f26499w;
-
-    /* JADX INFO: renamed from: x, reason: collision with root package name */
-    @NonNull
-    public final FrameLayout f26500x;
-
-    /* JADX INFO: renamed from: y, reason: collision with root package name */
-    @NonNull
-    public final View f26501y;
-
-    /* JADX INFO: renamed from: z, reason: collision with root package name */
-    @NonNull
-    public final Barrier f26502z;
-
-    public b(@NonNull FrameLayout frameLayout, @NonNull Space space, @NonNull Camera2PreviewView camera2PreviewView, @NonNull ProgressBar progressBar, @NonNull ConstraintLayout constraintLayout, @NonNull Button button, @NonNull Space space2, @NonNull TextView textView, @NonNull TextView textView2, @NonNull TextView textView3, @NonNull LinearLayout linearLayout, @NonNull Guideline guideline, @NonNull ToggleButton toggleButton, @NonNull TextView textView4, @NonNull FrameLayout frameLayout2, @NonNull Pi2NavigationBar pi2NavigationBar, @NonNull View view, @NonNull ImageView imageView, @NonNull ConstraintLayout constraintLayout2, @NonNull ThemeableLottieAnimationView themeableLottieAnimationView, @NonNull ConstraintLayout constraintLayout3, @NonNull TextView textView5, @NonNull Barrier barrier, @NonNull FrameLayout frameLayout3, @NonNull View view2, @NonNull Barrier barrier2, @NonNull PreviewView previewView, @NonNull ProgressBar progressBar2, @NonNull LottieAnimationView lottieAnimationView, @NonNull ScanningView scanningView, @NonNull SpotlightView spotlightView, @NonNull Guideline guideline2, @NonNull StaticCaptureTipsView staticCaptureTipsView, @NonNull TextView textView6, @NonNull Space space3, @NonNull TextView textView7) {
-        this.f26478a = frameLayout;
-        this.b = space;
-        this.f26479c = camera2PreviewView;
-        this.f26480d = progressBar;
-        this.f26481e = constraintLayout;
-        this.f26482f = button;
-        this.f26483g = space2;
-        this.f26484h = textView;
-        this.f26485i = textView2;
-        this.f26486j = textView3;
-        this.f26487k = linearLayout;
-        this.f26488l = guideline;
-        this.f26489m = toggleButton;
-        this.f26490n = textView4;
-        this.f26491o = frameLayout2;
-        this.f26492p = pi2NavigationBar;
-        this.f26493q = view;
-        this.f26494r = imageView;
-        this.f26495s = constraintLayout2;
-        this.f26496t = themeableLottieAnimationView;
-        this.f26497u = constraintLayout3;
-        this.f26498v = textView5;
-        this.f26499w = barrier;
-        this.f26500x = frameLayout3;
-        this.f26501y = view2;
-        this.f26502z = barrier2;
-        this.A = previewView;
-        this.B = progressBar2;
-        this.C = lottieAnimationView;
-        this.D = scanningView;
-        this.E = spotlightView;
-        this.F = guideline2;
-        this.G = staticCaptureTipsView;
-        this.H = textView6;
-        this.I = space3;
-        this.J = textView7;
+        public Companion() {
+        }
     }
 
-    @NonNull
-    public static b a(@NonNull View view) {
-        View viewA;
-        View viewA2;
-        int i10 = n2.f20716h;
-        Space space = (Space) r5.b.a(view, i10);
-        if (space != null) {
-            i10 = n2.f20718i;
-            Camera2PreviewView camera2PreviewView = (Camera2PreviewView) r5.b.a(view, i10);
-            if (camera2PreviewView != null) {
-                i10 = n2.f20722k;
-                ProgressBar progressBar = (ProgressBar) r5.b.a(view, i10);
-                if (progressBar != null) {
-                    i10 = n2.f20726m;
-                    ConstraintLayout constraintLayout = (ConstraintLayout) r5.b.a(view, i10);
-                    if (constraintLayout != null) {
-                        i10 = n2.f20728n;
-                        Button button = (Button) r5.b.a(view, i10);
-                        if (button != null) {
-                            i10 = n2.f20730o;
-                            Space space2 = (Space) r5.b.a(view, i10);
-                            if (space2 != null) {
-                                i10 = n2.f20732p;
-                                TextView textView = (TextView) r5.b.a(view, i10);
-                                if (textView != null) {
-                                    i10 = n2.f20750y;
-                                    TextView textView2 = (TextView) r5.b.a(view, i10);
-                                    if (textView2 != null) {
-                                        i10 = n2.f20752z;
-                                        TextView textView3 = (TextView) r5.b.a(view, i10);
-                                        if (textView3 != null) {
-                                            i10 = n2.B;
-                                            LinearLayout linearLayout = (LinearLayout) r5.b.a(view, i10);
-                                            if (linearLayout != null) {
-                                                i10 = n2.D;
-                                                Guideline guideline = (Guideline) r5.b.a(view, i10);
-                                                if (guideline != null) {
-                                                    i10 = n2.H;
-                                                    ToggleButton toggleButton = (ToggleButton) r5.b.a(view, i10);
-                                                    if (toggleButton != null) {
-                                                        i10 = n2.M;
-                                                        TextView textView4 = (TextView) r5.b.a(view, i10);
-                                                        if (textView4 != null) {
-                                                            i10 = n2.Z;
-                                                            FrameLayout frameLayout = (FrameLayout) r5.b.a(view, i10);
-                                                            if (frameLayout != null) {
-                                                                i10 = n2.f20709d0;
-                                                                Pi2NavigationBar pi2NavigationBar = (Pi2NavigationBar) r5.b.a(view, i10);
-                                                                if (pi2NavigationBar != null && (viewA = r5.b.a(view, (i10 = n2.f20711e0))) != null) {
-                                                                    i10 = n2.f20713f0;
-                                                                    ImageView imageView = (ImageView) r5.b.a(view, i10);
-                                                                    if (imageView != null) {
-                                                                        i10 = n2.f20715g0;
-                                                                        ConstraintLayout constraintLayout2 = (ConstraintLayout) r5.b.a(view, i10);
-                                                                        if (constraintLayout2 != null) {
-                                                                            i10 = n2.f20717h0;
-                                                                            ThemeableLottieAnimationView themeableLottieAnimationView = (ThemeableLottieAnimationView) r5.b.a(view, i10);
-                                                                            if (themeableLottieAnimationView != null) {
-                                                                                i10 = n2.f20719i0;
-                                                                                ConstraintLayout constraintLayout3 = (ConstraintLayout) r5.b.a(view, i10);
-                                                                                if (constraintLayout3 != null) {
-                                                                                    i10 = n2.f20721j0;
-                                                                                    TextView textView5 = (TextView) r5.b.a(view, i10);
-                                                                                    if (textView5 != null) {
-                                                                                        i10 = n2.f20729n0;
-                                                                                        Barrier barrier = (Barrier) r5.b.a(view, i10);
-                                                                                        if (barrier != null) {
-                                                                                            i10 = n2.f20731o0;
-                                                                                            FrameLayout frameLayout2 = (FrameLayout) r5.b.a(view, i10);
-                                                                                            if (frameLayout2 != null && (viewA2 = r5.b.a(view, (i10 = n2.f20733p0))) != null) {
-                                                                                                i10 = n2.f20735q0;
-                                                                                                Barrier barrier2 = (Barrier) r5.b.a(view, i10);
-                                                                                                if (barrier2 != null) {
-                                                                                                    i10 = n2.f20737r0;
-                                                                                                    PreviewView previewView = (PreviewView) r5.b.a(view, i10);
-                                                                                                    if (previewView != null) {
-                                                                                                        i10 = n2.f20741t0;
-                                                                                                        ProgressBar progressBar2 = (ProgressBar) r5.b.a(view, i10);
-                                                                                                        if (progressBar2 != null) {
-                                                                                                            i10 = n2.f20751y0;
-                                                                                                            LottieAnimationView lottieAnimationView = (LottieAnimationView) r5.b.a(view, i10);
-                                                                                                            if (lottieAnimationView != null) {
-                                                                                                                i10 = n2.f20753z0;
-                                                                                                                ScanningView scanningView = (ScanningView) r5.b.a(view, i10);
-                                                                                                                if (scanningView != null) {
-                                                                                                                    i10 = n2.B0;
-                                                                                                                    SpotlightView spotlightView = (SpotlightView) r5.b.a(view, i10);
-                                                                                                                    if (spotlightView != null) {
-                                                                                                                        i10 = n2.D0;
-                                                                                                                        Guideline guideline2 = (Guideline) r5.b.a(view, i10);
-                                                                                                                        if (guideline2 != null) {
-                                                                                                                            i10 = n2.E0;
-                                                                                                                            StaticCaptureTipsView staticCaptureTipsView = (StaticCaptureTipsView) r5.b.a(view, i10);
-                                                                                                                            if (staticCaptureTipsView != null) {
-                                                                                                                                i10 = n2.L0;
-                                                                                                                                TextView textView6 = (TextView) r5.b.a(view, i10);
-                                                                                                                                if (textView6 != null) {
-                                                                                                                                    i10 = n2.M0;
-                                                                                                                                    Space space3 = (Space) r5.b.a(view, i10);
-                                                                                                                                    if (space3 != null) {
-                                                                                                                                        i10 = n2.P0;
-                                                                                                                                        TextView textView7 = (TextView) r5.b.a(view, i10);
-                                                                                                                                        if (textView7 != null) {
-                                                                                                                                            return new b((FrameLayout) view, space, camera2PreviewView, progressBar, constraintLayout, button, space2, textView, textView2, textView3, linearLayout, guideline, toggleButton, textView4, frameLayout, pi2NavigationBar, viewA, imageView, constraintLayout2, themeableLottieAnimationView, constraintLayout3, textView5, barrier, frameLayout2, viewA2, barrier2, previewView, progressBar2, lottieAnimationView, scanningView, spotlightView, guideline2, staticCaptureTipsView, textView6, space3, textView7);
-                                                                                                                                        }
-                                                                                                                                    }
-                                                                                                                                }
-                                                                                                                            }
-                                                                                                                        }
-                                                                                                                    }
-                                                                                                                }
-                                                                                                            }
-                                                                                                        }
-                                                                                                    }
-                                                                                                }
-                                                                                            }
-                                                                                        }
-                                                                                    }
-                                                                                }
-                                                                            }
-                                                                        }
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+    /* JADX INFO: renamed from: no.b$b, reason: collision with other inner class name */
+    @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
+    public static final /* synthetic */ class C0467b {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final /* synthetic */ int[] f27359a;
+
+        static {
+            int[] iArr = new int[b.values().length];
+            try {
+                iArr[b.DriverLicense.ordinal()] = 1;
+            } catch (NoSuchFieldError unused) {
             }
+            try {
+                iArr[b.StateID.ordinal()] = 2;
+            } catch (NoSuchFieldError unused2) {
+            }
+            try {
+                iArr[b.Keypass.ordinal()] = 3;
+            } catch (NoSuchFieldError unused3) {
+            }
+            try {
+                iArr[b.MilitaryID.ordinal()] = 4;
+            } catch (NoSuchFieldError unused4) {
+            }
+            try {
+                iArr[b.MyNumberCard.ordinal()] = 5;
+            } catch (NoSuchFieldError unused5) {
+            }
+            try {
+                iArr[b.NRIC.ordinal()] = 6;
+            } catch (NoSuchFieldError unused6) {
+            }
+            try {
+                iArr[b.OFWID.ordinal()] = 7;
+            } catch (NoSuchFieldError unused7) {
+            }
+            try {
+                iArr[b.Passport.ordinal()] = 8;
+            } catch (NoSuchFieldError unused8) {
+            }
+            try {
+                iArr[b.PermanentResidentCard.ordinal()] = 9;
+            } catch (NoSuchFieldError unused9) {
+            }
+            try {
+                iArr[b.ResidencyPermit.ordinal()] = 10;
+            } catch (NoSuchFieldError unused10) {
+            }
+            try {
+                iArr[b.StudentPermit.ordinal()] = 11;
+            } catch (NoSuchFieldError unused11) {
+            }
+            try {
+                iArr[b.SocialSecurityID.ordinal()] = 12;
+            } catch (NoSuchFieldError unused12) {
+            }
+            try {
+                iArr[b.UMID.ordinal()] = 13;
+            } catch (NoSuchFieldError unused13) {
+            }
+            try {
+                iArr[b.VoterID.ordinal()] = 14;
+            } catch (NoSuchFieldError unused14) {
+            }
+            try {
+                iArr[b.PassportCard.ordinal()] = 15;
+            } catch (NoSuchFieldError unused15) {
+            }
+            try {
+                iArr[b.PostalID.ordinal()] = 16;
+            } catch (NoSuchFieldError unused16) {
+            }
+            try {
+                iArr[b.Visa.ordinal()] = 17;
+            } catch (NoSuchFieldError unused17) {
+            }
+            try {
+                iArr[b.WorkPermit.ordinal()] = 18;
+            } catch (NoSuchFieldError unused18) {
+            }
+            try {
+                iArr[b.CitizenshipCertificate.ordinal()] = 19;
+            } catch (NoSuchFieldError unused19) {
+            }
+            try {
+                iArr[b.ConsularID.ordinal()] = 20;
+            } catch (NoSuchFieldError unused20) {
+            }
+            try {
+                iArr[b.ForeignerID.ordinal()] = 21;
+            } catch (NoSuchFieldError unused21) {
+            }
+            try {
+                iArr[b.HealthInsuranceCard.ordinal()] = 22;
+            } catch (NoSuchFieldError unused22) {
+            }
+            try {
+                iArr[b.LongTermPass.ordinal()] = 23;
+            } catch (NoSuchFieldError unused23) {
+            }
+            try {
+                iArr[b.NBICertificate.ordinal()] = 24;
+            } catch (NoSuchFieldError unused24) {
+            }
+            try {
+                iArr[b.PermanentAccountNumber.ordinal()] = 25;
+            } catch (NoSuchFieldError unused25) {
+            }
+            try {
+                iArr[b.Unknown.ordinal()] = 26;
+            } catch (NoSuchFieldError unused26) {
+            }
+            f27359a = iArr;
         }
-        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
     }
 
-    @NonNull
-    public static b c(@NonNull LayoutInflater layoutInflater) {
-        return d(layoutInflater, null, false);
+    static {
     }
 
-    @NonNull
-    public static b d(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
-        View viewInflate = layoutInflater.inflate(o2.b, viewGroup, false);
-        if (z10) {
-            viewGroup.addView(viewInflate);
+    public b() {
+        super(str, i);
+    }
+
+    public static b valueOf(String str) {
+        return (b) Enum.valueOf(b.class, str);
+    }
+
+    public static b[] values() {
+        return (b[]) C.clone();
+    }
+
+    @NotNull
+    public final j2 c() {
+        switch (C0467b.f27359a[ordinal()]) {
+            case 1:
+                return j2.Card;
+            case 2:
+                return j2.Flag;
+            case 3:
+                return j2.Card;
+            case 4:
+                return j2.Card;
+            case 5:
+                return j2.Card;
+            case 6:
+                return j2.Card;
+            case 7:
+                return j2.Card;
+            case 8:
+                return j2.World;
+            case 9:
+                return j2.House;
+            case 10:
+                return j2.House;
+            case 11:
+                return j2.Card;
+            case 12:
+                return j2.Card;
+            case 13:
+                return j2.Card;
+            case 14:
+                return j2.Card;
+            case 15:
+                return j2.World;
+            case 16:
+                return j2.Card;
+            case 17:
+                return j2.World;
+            case 18:
+                return j2.Card;
+            case 19:
+                return j2.Card;
+            case 20:
+                return j2.Card;
+            case 21:
+                return j2.Card;
+            case 22:
+                return j2.Card;
+            case 23:
+                return j2.Card;
+            case 24:
+                return j2.Card;
+            case 25:
+                return j2.Card;
+            case 26:
+                throw new RuntimeException("IdClass is 'UNKNOWN'.");
+            default:
+                throw new l();
         }
-        return a(viewInflate);
-    }
-
-    @Override // r5.a
-    @NonNull
-    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public FrameLayout getRoot() {
-        return this.f26478a;
     }
 }

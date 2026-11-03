@@ -15,11 +15,11 @@ import n9.r;
 public final class e extends n9.e {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final r f28388e;
+    public final r f28607e;
 
     public e(Context context, Looper looper, n9.d dVar, r rVar, l9.e eVar, n nVar) {
         super(context, looper, 270, dVar, eVar, nVar);
-        this.f28388e = rVar;
+        this.f28607e = rVar;
     }
 
     @Override // n9.c
@@ -38,7 +38,7 @@ public final class e extends n9.e {
 
     @Override // n9.c
     public final Bundle getGetServiceRequestExtraArgs() {
-        return this.f28388e.b();
+        return this.f28607e.b();
     }
 
     @Override // n9.c, k9.a.f

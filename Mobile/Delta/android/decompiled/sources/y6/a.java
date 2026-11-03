@@ -10,17 +10,17 @@ public interface a {
 
     /* JADX INFO: renamed from: y6.a$a, reason: collision with other inner class name */
     @Metadata(d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0006\b\u0087@\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u0010\u0010\u0007\u001a\u00020\u0006HÖ\u0001¢\u0006\u0004\b\u0007\u0010\bJ\u0010\u0010\t\u001a\u00020\u0002HÖ\u0001¢\u0006\u0004\b\t\u0010\nJ\u001a\u0010\u000e\u001a\u00020\r2\b\u0010\f\u001a\u0004\u0018\u00010\u000bHÖ\u0003¢\u0006\u0004\b\u000e\u0010\u000fR\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0010\u0010\u0011\u001a\u0004\b\u0012\u0010\n\u0088\u0001\u0003\u0092\u0001\u00020\u0002¨\u0006\u0013"}, d2 = {"Ly6/a$a;", "Ly6/a;", "", "px", "b", "(I)I", "", "toString", "()Ljava/lang/String;", "hashCode", "()I", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "I", "getPx", "coil-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    public static final class C0655a implements a {
+    public static final class C0670a implements a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         public final int px;
 
-        public /* synthetic */ C0655a(int i10) {
+        public /* synthetic */ C0670a(int i10) {
             this.px = i10;
         }
 
-        public static final /* synthetic */ C0655a a(int i10) {
-            return new C0655a(i10);
+        public static final /* synthetic */ C0670a a(int i10) {
+            return new C0670a(i10);
         }
 
         public static int b(int i10) {
@@ -31,7 +31,7 @@ public interface a {
         }
 
         public static boolean c(int i10, Object obj) {
-            return (obj instanceof C0655a) && i10 == ((C0655a) obj).getPx();
+            return (obj instanceof C0670a) && i10 == ((C0670a) obj).getPx();
         }
 
         public static int d(int i10) {
@@ -65,7 +65,7 @@ public interface a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NotNull
-        public static final b f35735a = new b();
+        public static final b f36592a = new b();
 
         public boolean equals(@Nullable Object other) {
             return this == other || (other instanceof b);

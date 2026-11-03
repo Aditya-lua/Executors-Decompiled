@@ -6,7 +6,7 @@ import com.google.crypto.tink.shaded.protobuf.s0;
 public abstract class b<MessageType extends s0> implements a1<MessageType> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final p f8393a = p.b();
+    public static final p f8467a = p.b();
 
     public final MessageType c(MessageType messagetype) throws b0 {
         if (messagetype == null || messagetype.isInitialized()) {

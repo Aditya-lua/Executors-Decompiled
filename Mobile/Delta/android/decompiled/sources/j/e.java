@@ -26,29 +26,29 @@ import java.util.concurrent.Executor;
 public abstract class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static c f20878a = new c(new d());
+    public static c f21451a = new c(new d());
     public static int b = -100;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static u2.j f20879c = null;
+    public static u2.j f21452c = null;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static u2.j f20880d = null;
+    public static u2.j f21453d = null;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static Boolean f20881e = null;
+    public static Boolean f21454e = null;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static boolean f20882f = false;
+    public static boolean f21455f = false;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final w1.b<WeakReference<e>> f20883g = new w1.b<>();
+    public static final w1.b<WeakReference<e>> f21456g = new w1.b<>();
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final Object f20884h = new Object();
+    public static final Object f21457h = new Object();
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final Object f20885i = new Object();
+    public static final Object f21458i = new Object();
 
     public static class a {
         public static LocaleList a(String str) {
@@ -69,17 +69,17 @@ public abstract class e {
     public static class c implements Executor {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Object f20886a = new Object();
+        public final Object f21459a = new Object();
         public final Queue<Runnable> b = new ArrayDeque();
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final Executor f20887c;
+        public final Executor f21460c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public Runnable f20888d;
+        public Runnable f21461d;
 
         public c(Executor executor) {
-            this.f20887c = executor;
+            this.f21460c = executor;
         }
 
         public static /* synthetic */ void b(c cVar, Runnable runnable) {
@@ -92,12 +92,12 @@ public abstract class e {
         }
 
         public void c() {
-            synchronized (this.f20886a) {
+            synchronized (this.f21459a) {
                 try {
                     Runnable runnablePoll = this.b.poll();
-                    this.f20888d = runnablePoll;
+                    this.f21461d = runnablePoll;
                     if (runnablePoll != null) {
-                        this.f20887c.execute(runnablePoll);
+                        this.f21460c.execute(runnablePoll);
                     }
                 } catch (Throwable th2) {
                     throw th2;
@@ -107,15 +107,15 @@ public abstract class e {
 
         @Override // java.util.concurrent.Executor
         public void execute(final Runnable runnable) {
-            synchronized (this.f20886a) {
+            synchronized (this.f21459a) {
                 try {
                     this.b.add(new Runnable() { // from class: j.f
                         @Override // java.lang.Runnable
                         public final void run() {
-                            e.c.b(this.f20889a, runnable);
+                            e.c.b(this.f21462a, runnable);
                         }
                     });
-                    if (this.f20888d == null) {
+                    if (this.f21461d == null) {
                         c();
                     }
                 } catch (Throwable th2) {
@@ -133,15 +133,15 @@ public abstract class e {
     }
 
     public static void D(@NonNull e eVar) {
-        synchronized (f20884h) {
+        synchronized (f21457h) {
             E(eVar);
         }
     }
 
     public static void E(@NonNull e eVar) {
-        synchronized (f20884h) {
+        synchronized (f21457h) {
             try {
-                Iterator<WeakReference<e>> it = f20883g.iterator();
+                Iterator<WeakReference<e>> it = f21456g.iterator();
                 while (it.hasNext()) {
                     e eVar2 = it.next().get();
                     if (eVar2 == eVar || eVar2 == null) {
@@ -173,10 +173,10 @@ public abstract class e {
     public static void N(final Context context) {
         if (u(context)) {
             if (Build.VERSION.SDK_INT >= 33) {
-                if (f20882f) {
+                if (f21455f) {
                     return;
                 }
-                f20878a.execute(new Runnable() { // from class: j.d
+                f21451a.execute(new Runnable() { // from class: j.d
                     @Override // java.lang.Runnable
                     public final void run() {
                         e.c(context);
@@ -184,20 +184,20 @@ public abstract class e {
                 });
                 return;
             }
-            synchronized (f20885i) {
+            synchronized (f21458i) {
                 try {
-                    u2.j jVar = f20879c;
+                    u2.j jVar = f21452c;
                     if (jVar == null) {
-                        if (f20880d == null) {
-                            f20880d = u2.j.b(k2.e.b(context));
+                        if (f21453d == null) {
+                            f21453d = u2.j.b(k2.e.b(context));
                         }
-                        if (f20880d.e()) {
+                        if (f21453d.e()) {
                         } else {
-                            f20879c = f20880d;
+                            f21452c = f21453d;
                         }
-                    } else if (!jVar.equals(f20880d)) {
-                        u2.j jVar2 = f20879c;
-                        f20880d = jVar2;
+                    } else if (!jVar.equals(f21453d)) {
+                        u2.j jVar2 = f21452c;
+                        f21453d = jVar2;
                         k2.e.a(context, jVar2.g());
                     }
                 } catch (Throwable th2) {
@@ -209,13 +209,13 @@ public abstract class e {
 
     public static /* synthetic */ void c(Context context) {
         M(context);
-        f20882f = true;
+        f21455f = true;
     }
 
     public static void d(@NonNull e eVar) {
-        synchronized (f20884h) {
+        synchronized (f21457h) {
             E(eVar);
-            f20883g.add(new WeakReference<>(eVar));
+            f21456g.add(new WeakReference<>(eVar));
         }
     }
 
@@ -237,7 +237,7 @@ public abstract class e {
                 return u2.j.h(b.a(objO));
             }
         } else {
-            u2.j jVar = f20879c;
+            u2.j jVar = f21452c;
             if (jVar != null) {
                 return jVar;
             }
@@ -251,7 +251,7 @@ public abstract class e {
 
     public static Object o() {
         Context contextL;
-        Iterator<WeakReference<e>> it = f20883g.iterator();
+        Iterator<WeakReference<e>> it = f21456g.iterator();
         while (it.hasNext()) {
             e eVar = it.next().get();
             if (eVar != null && (contextL = eVar.l()) != null) {
@@ -262,22 +262,22 @@ public abstract class e {
     }
 
     public static u2.j q() {
-        return f20879c;
+        return f21452c;
     }
 
     public static boolean u(Context context) {
-        if (f20881e == null) {
+        if (f21454e == null) {
             try {
                 Bundle bundle = o.a(context).metaData;
                 if (bundle != null) {
-                    f20881e = Boolean.valueOf(bundle.getBoolean("autoStoreLocales"));
+                    f21454e = Boolean.valueOf(bundle.getBoolean("autoStoreLocales"));
                 }
             } catch (PackageManager.NameNotFoundException unused) {
                 Log.d("AppCompatDelegate", "Checking for metadata for AppLocalesMetadataHolderService : Service not found");
-                f20881e = Boolean.FALSE;
+                f21454e = Boolean.FALSE;
             }
         }
-        return f20881e.booleanValue();
+        return f21454e.booleanValue();
     }
 
     public abstract void A(Bundle bundle);

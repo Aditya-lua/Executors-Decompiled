@@ -4,19 +4,19 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import com.appsflyer.sdk_base.referrer.Payload;
+import iu.a2;
 import kotlin.Metadata;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.Intrinsics;
-import ku.a2;
 import o6.SourceFetchResult;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import vu.b0;
+import vu.r0;
 import x6.Options;
-import xu.b0;
-import xu.r0;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\t\u0018\u0000 \u00102\u00020\u0001:\u0003\u0015\u0019\rB+\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\b\b\u0002\u0010\u0007\u001a\u00020\u0006\u0012\b\b\u0002\u0010\t\u001a\u00020\b¢\u0006\u0004\b\n\u0010\u000bJ\u0010\u0010\r\u001a\u00020\fH\u0096@¢\u0006\u0004\b\r\u0010\u000eJ\u0013\u0010\u0010\u001a\u00020\f*\u00020\u000fH\u0002¢\u0006\u0004\b\u0010\u0010\u0011J\u001b\u0010\u0015\u001a\u00020\u0014*\u00020\u000f2\u0006\u0010\u0013\u001a\u00020\u0012H\u0002¢\u0006\u0004\b\u0015\u0010\u0016J\u001b\u0010\u0017\u001a\u00020\u0014*\u00020\u000f2\u0006\u0010\u0013\u001a\u00020\u0012H\u0002¢\u0006\u0004\b\u0017\u0010\u0016R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\r\u0010\u0018R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0019\u0010\u001aR\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010\u001bR\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0017\u0010\u001c¨\u0006\u001d"}, d2 = {"Lm6/c;", "Lm6/i;", "Lm6/s;", Payload.SOURCE, "Lx6/p;", "options", "Luu/h;", "parallelismLock", "Lm6/o;", "exifOrientationStrategy", "<init>", "(Lm6/s;Lx6/p;Luu/h;Lm6/o;)V", "Lm6/g;", "a", "(Lnt/b;)Ljava/lang/Object;", "Landroid/graphics/BitmapFactory$Options;", "e", "(Landroid/graphics/BitmapFactory$Options;)Lm6/g;", "Lm6/j;", "exifData", "", "c", "(Landroid/graphics/BitmapFactory$Options;Lm6/j;)V", "d", "Lm6/s;", "b", "Lx6/p;", "Luu/h;", "Lm6/o;", "coil-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\t\u0018\u0000 \u00102\u00020\u0001:\u0003\u0015\u0019\rB+\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\b\b\u0002\u0010\u0007\u001a\u00020\u0006\u0012\b\b\u0002\u0010\t\u001a\u00020\b¢\u0006\u0004\b\n\u0010\u000bJ\u0010\u0010\r\u001a\u00020\fH\u0096@¢\u0006\u0004\b\r\u0010\u000eJ\u0013\u0010\u0010\u001a\u00020\f*\u00020\u000fH\u0002¢\u0006\u0004\b\u0010\u0010\u0011J\u001b\u0010\u0015\u001a\u00020\u0014*\u00020\u000f2\u0006\u0010\u0013\u001a\u00020\u0012H\u0002¢\u0006\u0004\b\u0015\u0010\u0016J\u001b\u0010\u0017\u001a\u00020\u0014*\u00020\u000f2\u0006\u0010\u0013\u001a\u00020\u0012H\u0002¢\u0006\u0004\b\u0017\u0010\u0016R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\r\u0010\u0018R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0019\u0010\u001aR\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010\u001bR\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0017\u0010\u001c¨\u0006\u001d"}, d2 = {"Lm6/c;", "Lm6/i;", "Lm6/s;", Payload.SOURCE, "Lx6/p;", "options", "Lsu/h;", "parallelismLock", "Lm6/o;", "exifOrientationStrategy", "<init>", "(Lm6/s;Lx6/p;Lsu/h;Lm6/o;)V", "Lm6/g;", "a", "(Llt/b;)Ljava/lang/Object;", "Landroid/graphics/BitmapFactory$Options;", "e", "(Landroid/graphics/BitmapFactory$Options;)Lm6/g;", "Lm6/j;", "exifData", "", "c", "(Landroid/graphics/BitmapFactory$Options;Lm6/j;)V", "d", "Lm6/s;", "b", "Lx6/p;", "Lsu/h;", "Lm6/o;", "coil-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class c implements i {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -29,14 +29,14 @@ public final class c implements i {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final uu.h parallelismLock;
+    public final su.h parallelismLock;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
     @NotNull
     public final o exifOrientationStrategy;
 
-    @Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\b\u0002\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u001f\u0010\n\u001a\u00020\b2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\n\u0010\u000bR4\u0010\u0012\u001a\n\u0018\u00010\fj\u0004\u0018\u0001`\r2\u000e\u0010\u000e\u001a\n\u0018\u00010\fj\u0004\u0018\u0001`\r8\u0006@BX\u0086\u000e¢\u0006\f\n\u0004\b\u000f\u0010\u0010\u001a\u0004\b\u000f\u0010\u0011¨\u0006\u0013"}, d2 = {"Lm6/c$b;", "Lxu/p;", "Lxu/r0;", "delegate", "<init>", "(Lxu/r0;)V", "Lxu/e;", "sink", "", "byteCount", "read", "(Lxu/e;J)J", "Ljava/lang/Exception;", "Lkotlin/Exception;", "value", "a", "Ljava/lang/Exception;", "()Ljava/lang/Exception;", "exception", "coil-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    public static final class b extends xu.p {
+    @Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\b\u0002\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u001f\u0010\n\u001a\u00020\b2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\n\u0010\u000bR4\u0010\u0012\u001a\n\u0018\u00010\fj\u0004\u0018\u0001`\r2\u000e\u0010\u000e\u001a\n\u0018\u00010\fj\u0004\u0018\u0001`\r8\u0006@BX\u0086\u000e¢\u0006\f\n\u0004\b\u000f\u0010\u0010\u001a\u0004\b\u000f\u0010\u0011¨\u0006\u0013"}, d2 = {"Lm6/c$b;", "Lvu/p;", "Lvu/r0;", "delegate", "<init>", "(Lvu/r0;)V", "Lvu/e;", "sink", "", "byteCount", "read", "(Lvu/e;J)J", "Ljava/lang/Exception;", "Lkotlin/Exception;", "value", "a", "Ljava/lang/Exception;", "()Ljava/lang/Exception;", "exception", "coil-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final class b extends vu.p {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         @Nullable
@@ -52,8 +52,8 @@ public final class c implements i {
             return this.exception;
         }
 
-        @Override // xu.p, xu.r0
-        public long read(@NotNull xu.e sink, long byteCount) throws Exception {
+        @Override // vu.p, vu.r0
+        public long read(@NotNull vu.e sink, long byteCount) throws Exception {
             try {
                 return super.read(sink, byteCount);
             } catch (Exception e10) {
@@ -64,18 +64,18 @@ public final class c implements i {
     }
 
     /* JADX INFO: renamed from: m6.c$c, reason: collision with other inner class name */
-    @Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\u0018\u00002\u00020\u0001B\u001b\u0012\b\b\u0002\u0010\u0003\u001a\u00020\u0002\u0012\b\b\u0002\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J'\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\fH\u0016¢\u0006\u0004\b\u000f\u0010\u0010R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000f\u0010\u0011R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0012\u0010\u0013¨\u0006\u0014"}, d2 = {"Lm6/c$c;", "Lm6/i$a;", "Luu/h;", "parallelismLock", "Lm6/o;", "exifOrientationStrategy", "<init>", "(Luu/h;Lm6/o;)V", "Lo6/o;", "result", "Lx6/p;", "options", "Lk6/s;", "imageLoader", "Lm6/i;", "a", "(Lo6/o;Lx6/p;Lk6/s;)Lm6/i;", "Luu/h;", "b", "Lm6/o;", "coil-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    public static final class C0425c implements i.a {
+    @Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\u0018\u00002\u00020\u0001B\u001b\u0012\b\b\u0002\u0010\u0003\u001a\u00020\u0002\u0012\b\b\u0002\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J'\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\fH\u0016¢\u0006\u0004\b\u000f\u0010\u0010R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000f\u0010\u0011R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0012\u0010\u0013¨\u0006\u0014"}, d2 = {"Lm6/c$c;", "Lm6/i$a;", "Lsu/h;", "parallelismLock", "Lm6/o;", "exifOrientationStrategy", "<init>", "(Lsu/h;Lm6/o;)V", "Lo6/o;", "result", "Lx6/p;", "options", "Lk6/s;", "imageLoader", "Lm6/i;", "a", "(Lo6/o;Lx6/p;Lk6/s;)Lm6/i;", "Lsu/h;", "b", "Lm6/o;", "coil-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final class C0439c implements i.a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         @NotNull
-        public final uu.h parallelismLock;
+        public final su.h parallelismLock;
 
         /* JADX INFO: renamed from: b, reason: from kotlin metadata */
         @NotNull
         public final o exifOrientationStrategy;
 
-        public C0425c(@NotNull uu.h hVar, @NotNull o oVar) {
+        public C0439c(@NotNull su.h hVar, @NotNull o oVar) {
             this.parallelismLock = hVar;
             this.exifOrientationStrategy = oVar;
         }
@@ -87,39 +87,39 @@ public final class c implements i {
         }
     }
 
-    @pt.f(c = "coil3.decode.BitmapFactoryDecoder", f = "BitmapFactoryDecoder.kt", l = {212, 40}, m = "decode")
+    @nt.f(c = "coil3.decode.BitmapFactoryDecoder", f = "BitmapFactoryDecoder.kt", l = {212, 40}, m = "decode")
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final class d extends pt.d {
+    public static final class d extends nt.d {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f23970t;
+        public Object f24620t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public int f23971u;
+        public int f24621u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public int f23972v;
+        public int f24622v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public /* synthetic */ Object f23973w;
+        public /* synthetic */ Object f24623w;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public int f23975y;
+        public int f24625y;
 
-        public d(nt.b<? super d> bVar) {
+        public d(lt.b<? super d> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
-            this.f23973w = obj;
-            this.f23975y |= Integer.MIN_VALUE;
+            this.f24623w = obj;
+            this.f24625y |= Integer.MIN_VALUE;
             return c.this.a(this);
         }
     }
 
-    public c(@NotNull s sVar, @NotNull Options options, @NotNull uu.h hVar, @NotNull o oVar) {
+    public c(@NotNull s sVar, @NotNull Options options, @NotNull su.h hVar, @NotNull o oVar) {
         this.source = sVar;
         this.options = options;
         this.parallelismLock = hVar;
@@ -133,34 +133,34 @@ public final class c implements i {
     /* JADX WARN: Code duplicated, block: B:7:0x0013  */
     @Override // m6.i
     @Nullable
-    public Object a(@NotNull nt.b<? super DecodeResult> bVar) throws Throwable {
+    public Object a(@NotNull lt.b<? super DecodeResult> bVar) throws Throwable {
         d dVar;
-        uu.h hVar;
+        su.h hVar;
         int i10;
-        uu.h hVar2;
+        su.h hVar2;
         Throwable th2;
         if (bVar instanceof d) {
             dVar = (d) bVar;
-            int i11 = dVar.f23975y;
+            int i11 = dVar.f24625y;
             if ((i11 & Integer.MIN_VALUE) != 0) {
-                dVar.f23975y = i11 - Integer.MIN_VALUE;
+                dVar.f24625y = i11 - Integer.MIN_VALUE;
             } else {
                 dVar = new d(bVar);
             }
         } else {
             dVar = new d(bVar);
         }
-        Object obj = dVar.f23973w;
-        Object objE = ot.c.e();
-        int i12 = dVar.f23975y;
+        Object obj = dVar.f24623w;
+        Object objE = mt.c.e();
+        int i12 = dVar.f24625y;
         try {
             if (i12 == 0) {
-                jt.o.b(obj);
+                gt.o.b(obj);
                 hVar = this.parallelismLock;
-                dVar.f23970t = hVar;
-                dVar.f23971u = 0;
-                dVar.f23975y = 1;
-                if (hVar.b(dVar) != objE) {
+                dVar.f24620t = hVar;
+                dVar.f24621u = 0;
+                dVar.f24625y = 1;
+                if (hVar.e(dVar) != objE) {
                     i10 = 0;
                 }
                 return objE;
@@ -169,9 +169,9 @@ public final class c implements i {
                 if (i12 != 2) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                 }
-                hVar2 = (uu.h) dVar.f23970t;
+                hVar2 = (su.h) dVar.f24620t;
                 try {
-                    jt.o.b(obj);
+                    gt.o.b(obj);
                     DecodeResult decodeResult = (DecodeResult) obj;
                     hVar2.a();
                     return decodeResult;
@@ -181,20 +181,20 @@ public final class c implements i {
                     throw th2;
                 }
             }
-            i10 = dVar.f23971u;
-            uu.h hVar3 = (uu.h) dVar.f23970t;
-            jt.o.b(obj);
+            i10 = dVar.f24621u;
+            su.h hVar3 = (su.h) dVar.f24620t;
+            gt.o.b(obj);
             hVar = hVar3;
             Function0 function0 = new Function0() { // from class: m6.b
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return c.f(this.f23963a);
+                    return c.f(this.f24613a);
                 }
             };
-            dVar.f23970t = hVar;
-            dVar.f23971u = i10;
-            dVar.f23972v = 0;
-            dVar.f23975y = 2;
+            dVar.f24620t = hVar;
+            dVar.f24621u = i10;
+            dVar.f24622v = 0;
+            dVar.f24625y = 2;
             Object objC = a2.c(null, function0, dVar, 1, null);
             if (objC != objE) {
                 hVar2 = hVar;
@@ -251,17 +251,17 @@ public final class c implements i {
             return;
         }
         if (dC > 1.0d) {
-            options.inDensity = cu.b.c(((double) Integer.MAX_VALUE) / dC);
+            options.inDensity = au.b.c(((double) Integer.MAX_VALUE) / dC);
             options.inTargetDensity = Integer.MAX_VALUE;
         } else {
             options.inDensity = Integer.MAX_VALUE;
-            options.inTargetDensity = cu.b.c(((double) Integer.MAX_VALUE) * dC);
+            options.inTargetDensity = au.b.c(((double) Integer.MAX_VALUE) * dC);
         }
     }
 
     public final DecodeResult e(BitmapFactory.Options options) throws Exception {
         b bVar = new b(this.source.source());
-        xu.g gVarC = b0.c(bVar);
+        vu.g gVarC = b0.c(bVar);
         boolean z10 = true;
         options.inJustDecodeBounds = true;
         BitmapFactory.decodeStream(gVarC.peek().s3(), null, options);
@@ -270,7 +270,7 @@ public final class c implements i {
             throw exception;
         }
         options.inJustDecodeBounds = false;
-        p pVar = p.f23994a;
+        p pVar = p.f24644a;
         j jVarA = pVar.a(options.outMimeType, gVarC, this.exifOrientationStrategy);
         Exception exception2 = bVar.getException();
         if (exception2 != null) {
@@ -285,7 +285,7 @@ public final class c implements i {
         d(options, jVarA);
         try {
             Bitmap bitmapDecodeStream = BitmapFactory.decodeStream(gVarC.s3(), null, options);
-            ut.c.a(gVarC, null);
+            st.c.a(gVarC, null);
             Exception exception3 = bVar.getException();
             if (exception3 != null) {
                 throw exception3;
@@ -303,7 +303,7 @@ public final class c implements i {
             try {
                 throw th2;
             } catch (Throwable th3) {
-                ut.c.a(gVarC, th2);
+                st.c.a(gVarC, th2);
                 throw th3;
             }
         }

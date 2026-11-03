@@ -3,13 +3,13 @@ package ig;
 import com.google.firebase.components.ComponentRegistrar;
 import java.util.ArrayList;
 import java.util.List;
-import lf.d;
-import lf.g;
-import lf.i;
+import mf.d;
+import mf.g;
+import mf.i;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class b implements i {
-    public static /* synthetic */ Object b(String str, lf.c cVar, d dVar) {
+    public static /* synthetic */ Object b(String str, mf.c cVar, d dVar) {
         try {
             c.b(str);
             return cVar.h().create(dVar);
@@ -18,14 +18,14 @@ public class b implements i {
         }
     }
 
-    @Override // lf.i
-    public List<lf.c<?>> a(ComponentRegistrar componentRegistrar) {
+    @Override // mf.i
+    public List<mf.c<?>> a(ComponentRegistrar componentRegistrar) {
         ArrayList arrayList = new ArrayList();
-        for (final lf.c<?> cVarR : componentRegistrar.getComponents()) {
+        for (final mf.c<?> cVarR : componentRegistrar.getComponents()) {
             final String strI = cVarR.i();
             if (strI != null) {
                 cVarR = cVarR.r(new g() { // from class: ig.a
-                    @Override // lf.g
+                    @Override // mf.g
                     public final Object create(d dVar) {
                         return b.b(strI, cVarR, dVar);
                     }

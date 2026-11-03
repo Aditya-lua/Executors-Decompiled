@@ -12,14 +12,14 @@ import android.util.TypedValue;
 public class a1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f28922a;
+    public final Context f29275a;
     public final TypedArray b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public TypedValue f28923c;
+    public TypedValue f29276c;
 
     public a1(Context context, TypedArray typedArray) {
-        this.f28922a = context;
+        this.f29275a = context;
         this.b = typedArray;
     }
 
@@ -46,7 +46,7 @@ public class a1 {
     public ColorStateList c(int i10) {
         int resourceId;
         ColorStateList colorStateListA;
-        return (!this.b.hasValue(i10) || (resourceId = this.b.getResourceId(i10, 0)) == 0 || (colorStateListA = k.a.a(this.f28922a, resourceId)) == null) ? this.b.getColorStateList(i10) : colorStateListA;
+        return (!this.b.hasValue(i10) || (resourceId = this.b.getResourceId(i10, 0)) == 0 || (colorStateListA = k.a.a(this.f29275a, resourceId)) == null) ? this.b.getColorStateList(i10) : colorStateListA;
     }
 
     public float d(int i10, float f10) {
@@ -63,7 +63,7 @@ public class a1 {
 
     public Drawable g(int i10) {
         int resourceId;
-        return (!this.b.hasValue(i10) || (resourceId = this.b.getResourceId(i10, 0)) == 0) ? this.b.getDrawable(i10) : k.a.b(this.f28922a, resourceId);
+        return (!this.b.hasValue(i10) || (resourceId = this.b.getResourceId(i10, 0)) == 0) ? this.b.getDrawable(i10) : k.a.b(this.f29275a, resourceId);
     }
 
     public Drawable h(int i10) {
@@ -71,7 +71,7 @@ public class a1 {
         if (!this.b.hasValue(i10) || (resourceId = this.b.getResourceId(i10, 0)) == 0) {
             return null;
         }
-        return k.b().d(this.f28922a, resourceId, true);
+        return k.b().d(this.f29275a, resourceId, true);
     }
 
     public float i(int i10, float f10) {
@@ -83,10 +83,10 @@ public class a1 {
         if (resourceId == 0) {
             return null;
         }
-        if (this.f28923c == null) {
-            this.f28923c = new TypedValue();
+        if (this.f29276c == null) {
+            this.f29276c = new TypedValue();
         }
-        return n2.h.i(this.f28922a, resourceId, this.f28923c, i11, fVar);
+        return n2.h.i(this.f29275a, resourceId, this.f29276c, i11, fVar);
     }
 
     public int k(int i10, int i11) {

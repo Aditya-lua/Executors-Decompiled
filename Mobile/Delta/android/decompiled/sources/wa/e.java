@@ -15,7 +15,7 @@ public abstract class e extends b implements f {
         if (i10 != 1) {
             return false;
         }
-        j0((Status) c.a(parcel, Status.CREATOR), (zzc) c.a(parcel, zzc.CREATOR));
+        g0((Status) c.a(parcel, Status.CREATOR), (zzc) c.a(parcel, zzc.CREATOR));
         return true;
     }
 }

@@ -6,7 +6,7 @@ public final class p6 extends cb implements pc {
         throw null;
     }
 
-    public final p6 x(String str) {
+    public final p6 y(String str) {
         p();
         ((q6) this.b).G(str);
         return this;

@@ -12,10 +12,10 @@ import java.util.Set;
 public class f implements e.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final DynamicRangeProfiles f3762a;
+    public final DynamicRangeProfiles f3660a;
 
     public f(Object obj) {
-        this.f3762a = (DynamicRangeProfiles) obj;
+        this.f3660a = (DynamicRangeProfiles) obj;
     }
 
     public static Set<k0> e(Set<Long> set) {
@@ -43,22 +43,22 @@ public class f implements e.a {
 
     @Override // b0.e.a
     public DynamicRangeProfiles a() {
-        return this.f3762a;
+        return this.f3660a;
     }
 
     public final Long b(k0 k0Var) {
-        return c.a(k0Var, this.f3762a);
+        return c.a(k0Var, this.f3660a);
     }
 
     @Override // b0.e.a
     public Set<k0> c() {
-        return e(this.f3762a.getSupportedProfiles());
+        return e(this.f3660a.getSupportedProfiles());
     }
 
     @Override // b0.e.a
     public Set<k0> d(k0 k0Var) {
         Long lB = b(k0Var);
         x2.g.b(lB != null, "DynamicRange is not supported: " + k0Var);
-        return e(this.f3762a.getProfileCaptureRequestConstraints(lB.longValue()));
+        return e(this.f3660a.getProfileCaptureRequestConstraints(lB.longValue()));
     }
 }

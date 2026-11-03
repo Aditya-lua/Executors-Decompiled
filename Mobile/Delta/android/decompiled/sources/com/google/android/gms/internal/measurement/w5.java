@@ -20,11 +20,11 @@ public final class w5 extends gb implements pc {
     static {
         w5 w5Var = new w5();
         zzn = w5Var;
-        gb.u(w5.class, w5Var);
+        gb.t(w5.class, w5Var);
     }
 
     public static s5 h0() {
-        return (s5) zzn.q();
+        return (s5) zzn.p();
     }
 
     public static w5 i0() {
@@ -38,7 +38,7 @@ public final class w5 extends gb implements pc {
             return (byte) 1;
         }
         if (i11 == 2) {
-            return gb.v(zzn, "\u0004\n\u0000\u0001\u0001\n\n\u0002\u0000\u0000\u0001ဈ\u0000\u0002ဈ\u0001\u0003ဈ\u0002\u0004ဂ\u0003\u0005ဈ\u0004\u0006ဈ\u0005\u0007ဈ\u0006\bဂ\u0007\t2\n2", new Object[]{"zzb", "zzd", "zze", "zzf", "zzg", "zzh", "zzi", "zzj", "zzk", "zzl", t5.f6804a, "zzm", u5.f6825a});
+            return gb.v(zzn, "\u0004\n\u0000\u0001\u0001\n\n\u0002\u0000\u0000\u0001ဈ\u0000\u0002ဈ\u0001\u0003ဈ\u0002\u0004ဂ\u0003\u0005ဈ\u0004\u0006ဈ\u0005\u0007ဈ\u0006\bဂ\u0007\t2\n2", new Object[]{"zzb", "zzd", "zze", "zzf", "zzg", "zzh", "zzi", "zzj", "zzk", "zzl", t5.f6878a, "zzm", u5.f6899a});
         }
         if (i11 == 3) {
             return new w5();

@@ -7,7 +7,7 @@ import j9.d;
 @KeepName
 public final class GooglePlayServicesIncorrectManifestValueException extends GooglePlayServicesManifestException {
     public GooglePlayServicesIncorrectManifestValueException(int i10) {
-        int i11 = d.f21184a;
+        int i11 = d.f21757a;
         StringBuilder sb2 = new StringBuilder(String.valueOf(i11).length() + 104 + String.valueOf(i10).length() + 194);
         sb2.append("The meta-data tag in your app's AndroidManifest.xml does not have the right value.  Expected ");
         sb2.append(i11);

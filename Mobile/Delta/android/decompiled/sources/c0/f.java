@@ -84,7 +84,7 @@ public class f {
             arrayList.add(new SmallDisplaySizeQuirk());
         }
         if (h3Var.a(PreviewUnderExposureQuirk.class, PreviewUnderExposureQuirk.g())) {
-            arrayList.add(PreviewUnderExposureQuirk.f1344a);
+            arrayList.add(PreviewUnderExposureQuirk.f1189a);
         }
         if (h3Var.a(CaptureSessionShouldUseMrirQuirk.class, CaptureSessionShouldUseMrirQuirk.g())) {
             arrayList.add(new CaptureSessionShouldUseMrirQuirk());

@@ -55,7 +55,7 @@ public class g<E> implements Cloneable {
     @Nullable
     public E e(long key) {
         int iB = x1.a.b(this.keys, this.size, key);
-        if (iB < 0 || this.values[iB] == h.f33611a) {
+        if (iB < 0 || this.values[iB] == h.f33817a) {
             return null;
         }
         return (E) this.values[iB];
@@ -69,7 +69,7 @@ public class g<E> implements Cloneable {
             int i11 = 0;
             for (int i12 = 0; i12 < i10; i12++) {
                 Object obj = objArr[i12];
-                if (obj != h.f33611a) {
+                if (obj != h.f33817a) {
                     if (i12 != i11) {
                         jArr[i11] = jArr[i12];
                         objArr[i11] = obj;
@@ -95,7 +95,7 @@ public class g<E> implements Cloneable {
             int i11 = 0;
             for (int i12 = 0; i12 < i10; i12++) {
                 Object obj = objArr[i12];
-                if (obj != h.f33611a) {
+                if (obj != h.f33817a) {
                     if (i12 != i11) {
                         jArr[i11] = jArr[i12];
                         objArr[i11] = obj;
@@ -117,7 +117,7 @@ public class g<E> implements Cloneable {
             return;
         }
         int i10 = ~iB;
-        if (i10 < this.size && this.values[i10] == h.f33611a) {
+        if (i10 < this.size && this.values[i10] == h.f33817a) {
             this.keys[i10] = key;
             this.values[i10] = value;
             return;
@@ -130,7 +130,7 @@ public class g<E> implements Cloneable {
                 int i12 = 0;
                 for (int i13 = 0; i13 < i11; i13++) {
                     Object obj = objArr[i13];
-                    if (obj != h.f33611a) {
+                    if (obj != h.f33817a) {
                         if (i13 != i12) {
                             jArr[i12] = jArr[i13];
                             objArr[i12] = obj;
@@ -169,16 +169,16 @@ public class g<E> implements Cloneable {
 
     public void j(long key) {
         int iB = x1.a.b(this.keys, this.size, key);
-        if (iB < 0 || this.values[iB] == h.f33611a) {
+        if (iB < 0 || this.values[iB] == h.f33817a) {
             return;
         }
-        this.values[iB] = h.f33611a;
+        this.values[iB] = h.f33817a;
         this.garbage = true;
     }
 
     public void k(int index) {
-        if (this.values[index] != h.f33611a) {
-            this.values[index] = h.f33611a;
+        if (this.values[index] != h.f33817a) {
+            this.values[index] = h.f33817a;
             this.garbage = true;
         }
     }
@@ -191,7 +191,7 @@ public class g<E> implements Cloneable {
             int i11 = 0;
             for (int i12 = 0; i12 < i10; i12++) {
                 Object obj = objArr[i12];
-                if (obj != h.f33611a) {
+                if (obj != h.f33817a) {
                     if (i12 != i11) {
                         jArr[i11] = jArr[i12];
                         objArr[i11] = obj;
@@ -217,7 +217,7 @@ public class g<E> implements Cloneable {
             int i11 = 0;
             for (int i12 = 0; i12 < i10; i12++) {
                 Object obj = objArr[i12];
-                if (obj != h.f33611a) {
+                if (obj != h.f33817a) {
                     if (i12 != i11) {
                         jArr[i11] = jArr[i12];
                         objArr[i11] = obj;
@@ -262,7 +262,7 @@ public class g<E> implements Cloneable {
     public g(int i10) {
         if (i10 == 0) {
             this.keys = x1.a.b;
-            this.values = x1.a.f34679c;
+            this.values = x1.a.f35177c;
         } else {
             int iF = x1.a.f(i10);
             this.keys = new long[iF];

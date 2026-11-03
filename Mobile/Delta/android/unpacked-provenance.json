@@ -1,25 +1,26 @@
 {
-  "original_sha256": "372b1d66047b259de4ffac7822a46491fe1b411a44b51011ba427718650b4bee",
-  "derived_sha256": "ce887d2fd059d27ccfd8476c53636e94a4ccdcacb01f9af0631b1e19945b93d6",
+  "original_sha256": "fc3fd01754502ee1f001e190e7af2b760378bd20493c370a70f395d67484b554",
+  "derived_sha256": "cf32c479f0580e245138d9e73b9c5eee024c6a4fd7a8dff74d0bef06d8b87244",
+  "initializer_address": "0x105cac8",
   "patches": [
     {
       "section": ".data",
       "file_offset": 5917568,
       "address": 5917568,
-      "bytes": 11279368,
+      "bytes": 11196008,
       "analysis_flags": "ALLOC|EXECINSTR"
     },
     {
       "section": ".rhash",
-      "file_offset": 17942844,
-      "address": 17942844,
+      "file_offset": 17859740,
+      "address": 17859740,
       "bytes": 88,
       "analysis_flags": "ALLOC|EXECINSTR"
     },
     {
       "section": ".stack",
-      "file_offset": 17942932,
-      "address": 17942932,
+      "file_offset": 17859828,
+      "address": 17859828,
       "bytes": 88,
       "analysis_flags": "ALLOC|EXECINSTR"
     }

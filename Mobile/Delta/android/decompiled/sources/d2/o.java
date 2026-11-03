@@ -8,78 +8,78 @@ import java.util.Arrays;
 public class o {
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static int f14363g;
+    public static int f14343g;
     public int b;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public int f14366d;
+    public int f14346d;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public ArrayList<c2.e> f14364a = new ArrayList<>();
+    public ArrayList<c2.e> f14344a = new ArrayList<>();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f14365c = false;
+    public boolean f14345c = false;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public ArrayList<a> f14367e = null;
+    public ArrayList<a> f14347e = null;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public int f14368f = -1;
+    public int f14348f = -1;
 
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public WeakReference<c2.e> f14369a;
+        public WeakReference<c2.e> f14349a;
         public int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public int f14370c;
+        public int f14350c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public int f14371d;
+        public int f14351d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public int f14372e;
+        public int f14352e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public int f14373f;
+        public int f14353f;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public int f14374g;
+        public int f14354g;
 
         public a(c2.e eVar, z1.d dVar, int i10) {
-            this.f14369a = new WeakReference<>(eVar);
+            this.f14349a = new WeakReference<>(eVar);
             this.b = dVar.y(eVar.O);
-            this.f14370c = dVar.y(eVar.P);
-            this.f14371d = dVar.y(eVar.Q);
-            this.f14372e = dVar.y(eVar.R);
-            this.f14373f = dVar.y(eVar.S);
-            this.f14374g = i10;
+            this.f14350c = dVar.y(eVar.P);
+            this.f14351d = dVar.y(eVar.Q);
+            this.f14352e = dVar.y(eVar.R);
+            this.f14353f = dVar.y(eVar.S);
+            this.f14354g = i10;
         }
     }
 
     public o(int i10) {
-        int i11 = f14363g;
-        f14363g = i11 + 1;
+        int i11 = f14343g;
+        f14343g = i11 + 1;
         this.b = i11;
-        this.f14366d = i10;
+        this.f14346d = i10;
     }
 
     public boolean a(c2.e eVar) {
-        if (this.f14364a.contains(eVar)) {
+        if (this.f14344a.contains(eVar)) {
             return false;
         }
-        this.f14364a.add(eVar);
+        this.f14344a.add(eVar);
         return true;
     }
 
     public void b(ArrayList<o> arrayList) {
-        int size = this.f14364a.size();
-        if (this.f14368f != -1 && size > 0) {
+        int size = this.f14344a.size();
+        if (this.f14348f != -1 && size > 0) {
             for (int i10 = 0; i10 < arrayList.size(); i10++) {
                 o oVar = arrayList.get(i10);
-                if (this.f14368f == oVar.b) {
-                    g(this.f14366d, oVar);
+                if (this.f14348f == oVar.b) {
+                    g(this.f14346d, oVar);
                 }
             }
         }
@@ -93,11 +93,11 @@ public class o {
     }
 
     public int d() {
-        return this.f14366d;
+        return this.f14346d;
     }
 
     public final String e() {
-        int i10 = this.f14366d;
+        int i10 = this.f14346d;
         if (i10 == 0) {
             return "Horizontal";
         }
@@ -108,14 +108,14 @@ public class o {
     }
 
     public int f(z1.d dVar, int i10) {
-        if (this.f14364a.size() == 0) {
+        if (this.f14344a.size() == 0) {
             return 0;
         }
-        return j(dVar, this.f14364a, i10);
+        return j(dVar, this.f14344a, i10);
     }
 
     public void g(int i10, o oVar) {
-        ArrayList<c2.e> arrayList = this.f14364a;
+        ArrayList<c2.e> arrayList = this.f14344a;
         int size = arrayList.size();
         int i11 = 0;
         while (i11 < size) {
@@ -129,15 +129,15 @@ public class o {
                 eVar2.J0 = oVar.c();
             }
         }
-        this.f14368f = oVar.b;
+        this.f14348f = oVar.b;
     }
 
     public void h(boolean z10) {
-        this.f14365c = z10;
+        this.f14345c = z10;
     }
 
     public void i(int i10) {
-        this.f14366d = i10;
+        this.f14346d = i10;
     }
 
     public final int j(z1.d dVar, ArrayList<c2.e> arrayList, int i10) {
@@ -160,9 +160,9 @@ public class o {
         } catch (Exception e10) {
             System.err.println(e10.toString() + "\n" + Arrays.toString(e10.getStackTrace()).replace("[", "   at ").replace(",", "\n   at").replace("]", ""));
         }
-        this.f14367e = new ArrayList<>();
+        this.f14347e = new ArrayList<>();
         for (int i12 = 0; i12 < arrayList.size(); i12++) {
-            this.f14367e.add(new a(arrayList.get(i12), dVar, i10));
+            this.f14347e.add(new a(arrayList.get(i12), dVar, i10));
         }
         if (i10 == 0) {
             iY = dVar.y(fVar.O);
@@ -178,7 +178,7 @@ public class o {
 
     public String toString() {
         String str = e() + " [" + this.b + "] <";
-        ArrayList<c2.e> arrayList = this.f14364a;
+        ArrayList<c2.e> arrayList = this.f14344a;
         int size = arrayList.size();
         int i10 = 0;
         while (i10 < size) {

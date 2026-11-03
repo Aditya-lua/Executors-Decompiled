@@ -14,24 +14,24 @@ import java.util.concurrent.atomic.AtomicReference;
 public final class u extends k9.e implements r9.c {
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final k9.a.g f30569k;
+    public static final k9.a.g f31116k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final k9.a.AbstractC0392a f30570l;
+    public static final k9.a.AbstractC0391a f31117l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public static final k9.a f30571m;
+    public static final k9.a f31118m;
 
     static {
         k9.a.g gVar = new k9.a.g();
-        f30569k = gVar;
+        f31116k = gVar;
         p pVar = new p();
-        f30570l = pVar;
-        f30571m = new k9.a("ModuleInstall.API", pVar, gVar);
+        f31117l = pVar;
+        f31118m = new k9.a("ModuleInstall.API", pVar, gVar);
     }
 
     public u(Context context) {
-        super(context, (k9.a<k9.a.d.c>) f30571m, k9.a.d.Jo, k9.e.a.f22280c);
+        super(context, (k9.a<k9.a.d.c>) f31118m, k9.a.d.Ko, k9.e.a.f22504c);
     }
 
     public static final ApiFeatureRequest P(boolean z10, k9.h... hVarArr) {
@@ -53,14 +53,14 @@ public final class u extends k9.e implements r9.c {
         }
         if (aVarB == null) {
             l9.u.a aVarC = l9.u.c();
-            aVarC.d(bb.k.f4086a);
+            aVarC.d(bb.k.f3984a);
             aVarC.c(true);
             aVarC.e(27304);
             aVarC.b(new l9.q() { // from class: s9.o
                 /* JADX WARN: Multi-variable type inference failed */
                 @Override // l9.q
                 public final void accept(Object obj, Object obj2) {
-                    ((h) ((v) obj).getService()).v2(new r(this.f30562a, (sb.k) obj2), apiFeatureRequestA, null);
+                    ((h) ((v) obj).getService()).v2(new r(this.f31109a, (sb.k) obj2), apiFeatureRequestA, null);
                 }
             });
             return z(aVarC.a());
@@ -73,19 +73,19 @@ public final class u extends k9.e implements r9.c {
             /* JADX WARN: Multi-variable type inference failed */
             @Override // l9.q
             public final void accept(Object obj, Object obj2) {
-                ((h) ((v) obj).getService()).v2(new s(this.f30555a, atomicReference, (sb.k) obj2, aVarB), apiFeatureRequestA, cVar);
+                ((h) ((v) obj).getService()).v2(new s(this.f31102a, atomicReference, (sb.k) obj2, aVarB), apiFeatureRequestA, cVar);
             }
         };
         l9.q qVar2 = new l9.q() { // from class: s9.l
             /* JADX WARN: Multi-variable type inference failed */
             @Override // l9.q
             public final void accept(Object obj, Object obj2) {
-                ((h) ((v) obj).getService()).w2(new t(this.f30559a, (sb.k) obj2), cVar);
+                ((h) ((v) obj).getService()).w2(new t(this.f31106a, (sb.k) obj2), cVar);
             }
         };
         l9.p.a aVarA = l9.p.a();
         aVarA.g(kVarJ);
-        aVarA.d(bb.k.f4086a);
+        aVarA.d(bb.k.f3984a);
         aVarA.c(true);
         aVarA.b(qVar);
         aVarA.f(qVar2);
@@ -93,9 +93,9 @@ public final class u extends k9.e implements r9.c {
         return A(aVarA.a()).o(new sb.j() { // from class: s9.m
             @Override // sb.j
             public final Task then(Object obj) {
-                k9.a.g gVar = u.f30569k;
+                k9.a.g gVar = u.f31116k;
                 AtomicReference atomicReference2 = atomicReference;
-                return atomicReference2.get() != null ? sb.m.f((ModuleInstallResponse) atomicReference2.get()) : sb.m.e(new k9.b(Status.f5720m));
+                return atomicReference2.get() != null ? sb.m.f((ModuleInstallResponse) atomicReference2.get()) : sb.m.e(new k9.b(Status.f5793m));
             }
         });
     }
@@ -107,14 +107,14 @@ public final class u extends k9.e implements r9.c {
             return sb.m.f(new ModuleAvailabilityResponse(true, 0));
         }
         l9.u.a aVarC = l9.u.c();
-        aVarC.d(bb.k.f4086a);
+        aVarC.d(bb.k.f3984a);
         aVarC.e(27301);
         aVarC.c(false);
         aVarC.b(new l9.q() { // from class: s9.n
             /* JADX WARN: Multi-variable type inference failed */
             @Override // l9.q
             public final void accept(Object obj, Object obj2) {
-                ((h) ((v) obj).getService()).u2(new q(this.f30561a, (sb.k) obj2), apiFeatureRequestP);
+                ((h) ((v) obj).getService()).u2(new q(this.f31108a, (sb.k) obj2), apiFeatureRequestP);
             }
         });
         return z(aVarC.a());

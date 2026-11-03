@@ -14,11 +14,11 @@ public final class h4 extends gb implements pc {
     static {
         h4 h4Var = new h4();
         zzj = h4Var;
-        gb.u(h4.class, h4Var);
+        gb.t(h4.class, h4Var);
     }
 
     public static g4 P() {
-        return (g4) zzj.q();
+        return (g4) zzj.p();
     }
 
     @Override // com.google.android.gms.internal.measurement.gb

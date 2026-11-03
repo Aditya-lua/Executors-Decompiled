@@ -14,11 +14,11 @@ public final class a {
     public static final ViewGroup.MarginLayoutParams b;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public LinearLayoutManager f32078a;
+    public LinearLayoutManager f32731a;
 
     /* JADX INFO: renamed from: u5.a$a, reason: collision with other inner class name */
-    public class C0582a implements Comparator<int[]> {
-        public C0582a() {
+    public class C0589a implements Comparator<int[]> {
+        public C0589a() {
         }
 
         @Override // java.util.Comparator
@@ -35,7 +35,7 @@ public final class a {
     }
 
     public a(@NonNull LinearLayoutManager linearLayoutManager) {
-        this.f32078a = linearLayoutManager;
+        this.f32731a = linearLayoutManager;
     }
 
     public static boolean c(View view) {
@@ -60,14 +60,14 @@ public final class a {
         int i10;
         int bottom;
         int i11;
-        int iO = this.f32078a.O();
+        int iO = this.f32731a.O();
         if (iO == 0) {
             return true;
         }
-        boolean z10 = this.f32078a.q2() == 0;
+        boolean z10 = this.f32731a.q2() == 0;
         int[][] iArr = (int[][]) Array.newInstance((Class<?>) Integer.TYPE, iO, 2);
         for (int i12 = 0; i12 < iO; i12++) {
-            View viewN = this.f32078a.N(i12);
+            View viewN = this.f32731a.N(i12);
             if (viewN == null) {
                 throw new IllegalStateException("null view contained in the view hierarchy");
             }
@@ -92,7 +92,7 @@ public final class a {
             }
             iArr3[1] = bottom + i11;
         }
-        Arrays.sort(iArr, new C0582a());
+        Arrays.sort(iArr, new C0589a());
         for (int i13 = 1; i13 < iO; i13++) {
             if (iArr[i13 - 1][1] != iArr[i13][0]) {
                 return false;
@@ -105,9 +105,9 @@ public final class a {
     }
 
     public final boolean b() {
-        int iO = this.f32078a.O();
+        int iO = this.f32731a.O();
         for (int i10 = 0; i10 < iO; i10++) {
-            if (c(this.f32078a.N(i10))) {
+            if (c(this.f32731a.N(i10))) {
                 return true;
             }
         }
@@ -115,6 +115,6 @@ public final class a {
     }
 
     public boolean d() {
-        return (!a() || this.f32078a.O() <= 1) && b();
+        return (!a() || this.f32731a.O() <= 1) && b();
     }
 }

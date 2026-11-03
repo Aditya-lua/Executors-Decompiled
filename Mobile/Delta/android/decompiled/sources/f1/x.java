@@ -12,29 +12,29 @@ import java.util.Set;
 public class x {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final x f16050a;
+    public static final x f16646a;
     public static final x b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final x f16051c;
+    public static final x f16647c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final x f16052d;
+    public static final x f16648d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final x f16053e;
+    public static final x f16649e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final x f16054f;
+    public static final x f16650f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final x f16055g;
+    public static final x f16651g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final Set<x> f16056h;
+    public static final Set<x> f16652h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final List<x> f16057i;
+    public static final List<x> f16653i;
 
     public static abstract class b extends x {
         public b() {
@@ -66,29 +66,29 @@ public class x {
 
     static {
         b bVarH = b.h(4, 2002, "SD", Collections.unmodifiableList(Arrays.asList(new Size(720, 480), new Size(640, 480))));
-        f16050a = bVarH;
+        f16646a = bVarH;
         b bVarH2 = b.h(5, 2003, "HD", Collections.singletonList(new Size(1280, 720)));
         b = bVarH2;
         b bVarH3 = b.h(6, 2004, "FHD", Collections.singletonList(new Size(1920, 1080)));
-        f16051c = bVarH3;
+        f16647c = bVarH3;
         b bVarH4 = b.h(8, 2005, "UHD", Collections.singletonList(new Size(3840, 2160)));
-        f16052d = bVarH4;
+        f16648d = bVarH4;
         List list = Collections.EMPTY_LIST;
         b bVarH5 = b.h(0, 2000, "LOWEST", list);
-        f16053e = bVarH5;
+        f16649e = bVarH5;
         b bVarH6 = b.h(1, 2001, "HIGHEST", list);
-        f16054f = bVarH6;
-        f16055g = b.h(-1, -1, "NONE", list);
-        f16056h = new HashSet(Arrays.asList(bVarH5, bVarH6, bVarH, bVarH2, bVarH3, bVarH4));
-        f16057i = Arrays.asList(bVarH4, bVarH3, bVarH2, bVarH);
+        f16650f = bVarH6;
+        f16651g = b.h(-1, -1, "NONE", list);
+        f16652h = new HashSet(Arrays.asList(bVarH5, bVarH6, bVarH, bVarH2, bVarH3, bVarH4));
+        f16653i = Arrays.asList(bVarH4, bVarH3, bVarH2, bVarH);
     }
 
     public static boolean a(x xVar) {
-        return f16056h.contains(xVar);
+        return f16652h.contains(xVar);
     }
 
     public static List<x> b() {
-        return new ArrayList(f16057i);
+        return new ArrayList(f16653i);
     }
 
     public x() {

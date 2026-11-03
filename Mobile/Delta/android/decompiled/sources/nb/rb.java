@@ -8,11 +8,11 @@ import java.util.Objects;
 public final class rb implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ zzr f25931a;
+    public final /* synthetic */ zzr f26752a;
     public final /* synthetic */ tc b;
 
     public rb(tc tcVar, zzr zzrVar, boolean z10) {
-        this.f25931a = zzrVar;
+        this.f26752a = zzrVar;
         Objects.requireNonNull(tcVar);
         this.b = tcVar;
     }
@@ -22,25 +22,25 @@ public final class rb implements Runnable {
         tc tcVar = this.b;
         d5 d5VarN = tcVar.N();
         if (d5VarN == null) {
-            tcVar.f25625a.a().o().a("Discarding data. Failed to send app launch");
+            tcVar.f26446a.a().o().a("Discarding data. Failed to send app launch");
             return;
         }
         try {
-            zzr zzrVar = this.f25931a;
+            zzr zzrVar = this.f26752a;
             n9.m.l(zzrVar);
-            g7 g7Var = tcVar.f25625a;
+            g7 g7Var = tcVar.f26446a;
             k kVarW = g7Var.w();
-            y4 y4Var = z4.f26156c1;
+            y4 y4Var = z4.f26977c1;
             if (kVarW.H(null, y4Var)) {
                 tcVar.b0(d5VarN, null, zzrVar);
             }
             d5VarN.K1(zzrVar);
-            tcVar.f25625a.E().v();
+            tcVar.f26446a.E().v();
             g7Var.w().H(null, y4Var);
             tcVar.b0(d5VarN, null, zzrVar);
             tcVar.J();
         } catch (RemoteException e10) {
-            this.b.f25625a.a().o().b("Failed to send app launch to the service", e10);
+            this.b.f26446a.a().o().b("Failed to send app launch to the service", e10);
         }
     }
 }

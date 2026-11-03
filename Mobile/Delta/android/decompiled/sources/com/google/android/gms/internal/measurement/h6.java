@@ -10,11 +10,11 @@ public final class h6 extends gb implements pc {
     static {
         h6 h6Var = new h6();
         zzf = h6Var;
-        gb.u(h6.class, h6Var);
+        gb.t(h6.class, h6Var);
     }
 
     public static g6 F() {
-        return (g6) zzf.q();
+        return (g6) zzf.p();
     }
 
     @Override // com.google.android.gms.internal.measurement.gb
@@ -24,7 +24,7 @@ public final class h6 extends gb implements pc {
             return (byte) 1;
         }
         if (i11 == 2) {
-            return gb.v(zzf, "\u0004\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001᠌\u0000\u0002᠌\u0001", new Object[]{"zzb", "zzd", e6.f6425a, "zze", i6.f6491a});
+            return gb.v(zzf, "\u0004\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001᠌\u0000\u0002᠌\u0001", new Object[]{"zzb", "zzd", e6.f6498a, "zze", i6.f6564a});
         }
         if (i11 == 3) {
             return new h6();

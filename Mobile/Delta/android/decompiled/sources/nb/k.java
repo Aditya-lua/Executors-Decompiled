@@ -15,17 +15,17 @@ public final class k extends j8 {
     public Boolean b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public String f25646c;
+    public String f26467c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public j f25647d;
+    public j f26468d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public Boolean f25648e;
+    public Boolean f26469e;
 
     public k(g7 g7Var) {
         super(g7Var);
-        this.f25647d = new j() { // from class: nb.i
+        this.f26468d = new j() { // from class: nb.i
             @Override // nb.j
             public final /* synthetic */ String f(String str, String str2) {
                 return null;
@@ -34,15 +34,15 @@ public final class k extends j8 {
     }
 
     public static final long n() {
-        return ((Long) z4.f26160e.b(null)).longValue();
+        return ((Long) z4.f26981e.b(null)).longValue();
     }
 
     public static final int o() {
-        return Math.max(0, ((Integer) z4.f26175j.b(null)).intValue());
+        return Math.max(0, ((Integer) z4.f26996j.b(null)).intValue());
     }
 
     public static final long p() {
-        return ((Integer) z4.f26181l.b(null)).intValue();
+        return ((Integer) z4.f27002l.b(null)).intValue();
     }
 
     public static final long q() {
@@ -54,16 +54,16 @@ public final class k extends j8 {
     }
 
     public final long A() {
-        this.f25625a.c();
+        this.f26446a.c();
         return 133005L;
     }
 
     public final boolean B() {
-        if (this.f25648e == null) {
+        if (this.f26469e == null) {
             synchronized (this) {
                 try {
-                    if (this.f25648e == null) {
-                        g7 g7Var = this.f25625a;
+                    if (this.f26469e == null) {
+                        g7 g7Var = this.f26446a;
                         ApplicationInfo applicationInfo = g7Var.d().getApplicationInfo();
                         String strA = u9.n.a();
                         if (applicationInfo != null) {
@@ -72,10 +72,10 @@ public final class k extends j8 {
                             if (str != null && str.equals(strA)) {
                                 z10 = true;
                             }
-                            this.f25648e = Boolean.valueOf(z10);
+                            this.f26469e = Boolean.valueOf(z10);
                         }
-                        if (this.f25648e == null) {
-                            this.f25648e = Boolean.TRUE;
+                        if (this.f26469e == null) {
+                            this.f26469e = Boolean.TRUE;
                             g7Var.a().o().a("My process not in the list of running processes");
                         }
                     }
@@ -84,18 +84,18 @@ public final class k extends j8 {
                 }
             }
         }
-        return this.f25648e.booleanValue();
+        return this.f26469e.booleanValue();
     }
 
     public final String C(String str, y4 y4Var) {
-        return TextUtils.isEmpty(str) ? (String) y4Var.b(null) : (String) y4Var.b(this.f25647d.f(str, y4Var.a()));
+        return TextUtils.isEmpty(str) ? (String) y4Var.b(null) : (String) y4Var.b(this.f26468d.f(str, y4Var.a()));
     }
 
     public final long D(String str, y4 y4Var) {
         if (TextUtils.isEmpty(str)) {
             return ((Long) y4Var.b(null)).longValue();
         }
-        String strF = this.f25647d.f(str, y4Var.a());
+        String strF = this.f26468d.f(str, y4Var.a());
         if (TextUtils.isEmpty(strF)) {
             return ((Long) y4Var.b(null)).longValue();
         }
@@ -110,7 +110,7 @@ public final class k extends j8 {
         if (TextUtils.isEmpty(str)) {
             return ((Integer) y4Var.b(null)).intValue();
         }
-        String strF = this.f25647d.f(str, y4Var.a());
+        String strF = this.f26468d.f(str, y4Var.a());
         if (TextUtils.isEmpty(strF)) {
             return ((Integer) y4Var.b(null)).intValue();
         }
@@ -129,7 +129,7 @@ public final class k extends j8 {
         if (TextUtils.isEmpty(str)) {
             return ((Double) y4Var.b(null)).doubleValue();
         }
-        String strF = this.f25647d.f(str, y4Var.a());
+        String strF = this.f26468d.f(str, y4Var.a());
         if (TextUtils.isEmpty(strF)) {
             return ((Double) y4Var.b(null)).doubleValue();
         }
@@ -144,13 +144,13 @@ public final class k extends j8 {
         if (TextUtils.isEmpty(str)) {
             return ((Boolean) y4Var.b(null)).booleanValue();
         }
-        String strF = this.f25647d.f(str, y4Var.a());
+        String strF = this.f26468d.f(str, y4Var.a());
         return TextUtils.isEmpty(strF) ? ((Boolean) y4Var.b(null)).booleanValue() : ((Boolean) y4Var.b(Boolean.valueOf("1".equals(strF)))).booleanValue();
     }
 
     public final Bundle I() {
         try {
-            g7 g7Var = this.f25625a;
+            g7 g7Var = this.f26446a;
             if (g7Var.d().getPackageManager() == null) {
                 g7Var.a().o().a("Failed to load metadata: PackageManager is null");
                 return null;
@@ -162,7 +162,7 @@ public final class k extends j8 {
             g7Var.a().o().a("Failed to load metadata: ApplicationInfo is null");
             return null;
         } catch (PackageManager.NameNotFoundException e10) {
-            this.f25625a.a().o().b("Failed to load metadata: Package name not found", e10);
+            this.f26446a.a().o().b("Failed to load metadata: Package name not found", e10);
             return null;
         }
     }
@@ -171,7 +171,7 @@ public final class k extends j8 {
         n9.m.f(str);
         Bundle bundleI = I();
         if (bundleI == null) {
-            this.f25625a.a().o().a("Failed to load metadata: Metadata bundle is null");
+            this.f26446a.a().o().a("Failed to load metadata: Metadata bundle is null");
             return null;
         }
         if (bundleI.containsKey(str)) {
@@ -194,21 +194,21 @@ public final class k extends j8 {
             }
             if (numValueOf != null) {
                 try {
-                    stringArray = this.f25625a.d().getResources().getStringArray(numValueOf.intValue());
+                    stringArray = this.f26446a.d().getResources().getStringArray(numValueOf.intValue());
                     if (stringArray == null) {
                         return null;
                     }
                     return Arrays.asList(stringArray);
                 } catch (Resources.NotFoundException e10) {
-                    this.f25625a.a().o().b("Failed to load string array from metadata: resource not found", e10);
+                    this.f26446a.a().o().b("Failed to load string array from metadata: resource not found", e10);
                 }
             }
             return null;
         }
-        this.f25625a.a().o().a("Failed to load metadata: Metadata bundle is null");
+        this.f26446a.a().o().a("Failed to load metadata: Metadata bundle is null");
         numValueOf = null;
         if (numValueOf != null) {
-            stringArray = this.f25625a.d().getResources().getStringArray(numValueOf.intValue());
+            stringArray = this.f26446a.d().getResources().getStringArray(numValueOf.intValue());
             if (stringArray == null) {
                 return null;
             }
@@ -218,7 +218,7 @@ public final class k extends j8 {
     }
 
     public final boolean L() {
-        this.f25625a.c();
+        this.f26446a.c();
         Boolean boolJ = J("firebase_analytics_collection_deactivated");
         return boolJ != null && boolJ.booleanValue();
     }
@@ -236,7 +236,7 @@ public final class k extends j8 {
     public final n8 O(String str, boolean z10) {
         Object obj;
         n9.m.f(str);
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         Bundle bundleI = I();
         if (bundleI == null) {
             g7Var.a().o().a("Failed to load metadata: Metadata bundle is null");
@@ -269,11 +269,11 @@ public final class k extends j8 {
     }
 
     public final void Q(String str) {
-        this.f25646c = str;
+        this.f26467c = str;
     }
 
     public final String R() {
-        return this.f25646c;
+        return this.f26467c;
     }
 
     public final String i() {
@@ -285,11 +285,11 @@ public final class k extends j8 {
     }
 
     public final boolean k(String str) {
-        return "1".equals(this.f25647d.f(str, "gaia_collection_enabled"));
+        return "1".equals(this.f26468d.f(str, "gaia_collection_enabled"));
     }
 
     public final boolean l(String str) {
-        return "1".equals(this.f25647d.f(str, "measurement.event_sampling_enabled"));
+        return "1".equals(this.f26468d.f(str, "measurement.event_sampling_enabled"));
     }
 
     public final boolean m() {
@@ -300,7 +300,7 @@ public final class k extends j8 {
                 this.b = Boolean.FALSE;
             }
         }
-        return this.b.booleanValue() || !this.f25625a.G();
+        return this.b.booleanValue() || !this.f26446a.G();
     }
 
     public final String s(String str, String str2) {
@@ -309,31 +309,31 @@ public final class k extends j8 {
             n9.m.l(str3);
             return str3;
         } catch (ClassNotFoundException e10) {
-            this.f25625a.a().o().b("Could not find SystemProperties class", e10);
+            this.f26446a.a().o().b("Could not find SystemProperties class", e10);
             return "";
         } catch (IllegalAccessException e11) {
-            this.f25625a.a().o().b("Could not access SystemProperties.get()", e11);
+            this.f26446a.a().o().b("Could not access SystemProperties.get()", e11);
             return "";
         } catch (NoSuchMethodException e12) {
-            this.f25625a.a().o().b("Could not find SystemProperties.get() method", e12);
+            this.f26446a.a().o().b("Could not find SystemProperties.get() method", e12);
             return "";
         } catch (InvocationTargetException e13) {
-            this.f25625a.a().o().b("SystemProperties.get() threw an exception", e13);
+            this.f26446a.a().o().b("SystemProperties.get() threw an exception", e13);
             return "";
         }
     }
 
     public final void t(j jVar) {
-        this.f25647d = jVar;
+        this.f26468d = jVar;
     }
 
     public final String u() {
-        this.f25625a.c();
+        this.f26446a.c();
         return "FA";
     }
 
     public final int v() {
-        return this.f25625a.C().V(201500000, true) ? 100 : 25;
+        return this.f26446a.C().V(201500000, true) ? 100 : 25;
     }
 
     public final int w(String str) {
@@ -342,7 +342,7 @@ public final class k extends j8 {
 
     public final int x(String str, boolean z10) {
         if (z10) {
-            return F(str, z4.f26173i0, 100, 500);
+            return F(str, z4.f26994i0, 100, 500);
         }
         return 500;
     }

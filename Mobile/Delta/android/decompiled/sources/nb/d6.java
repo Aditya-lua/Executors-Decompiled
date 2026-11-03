@@ -6,17 +6,17 @@ import java.util.Objects;
 public final class d6 implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ boolean f25448a;
+    public final /* synthetic */ boolean f26269a;
     public final /* synthetic */ e6 b;
 
     public d6(e6 e6Var, boolean z10) {
-        this.f25448a = z10;
+        this.f26269a = z10;
         Objects.requireNonNull(e6Var);
         this.b = e6Var;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        this.b.c().s0(this.f25448a);
+        this.b.c().s0(this.f26269a);
     }
 }

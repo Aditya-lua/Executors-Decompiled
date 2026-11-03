@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 public class h0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static boolean f27118a = true;
+    public static boolean f27683a = true;
 
     public static class a {
         public static int a(ViewGroup viewGroup, int i10) {
@@ -23,11 +23,11 @@ public class h0 {
 
     @SuppressLint({"NewApi"})
     public static void a(@NonNull ViewGroup viewGroup, boolean z10) {
-        if (f27118a) {
+        if (f27683a) {
             try {
                 a.b(viewGroup, z10);
             } catch (NoSuchMethodError unused) {
-                f27118a = false;
+                f27683a = false;
             }
         }
     }

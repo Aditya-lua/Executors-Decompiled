@@ -14,7 +14,7 @@ public final class PrematureEndOfStreamVideoQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final PrematureEndOfStreamVideoQuirk f1402a = new PrematureEndOfStreamVideoQuirk();
+    public static final PrematureEndOfStreamVideoQuirk f1247a = new PrematureEndOfStreamVideoQuirk();
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public static final boolean isCph1931;

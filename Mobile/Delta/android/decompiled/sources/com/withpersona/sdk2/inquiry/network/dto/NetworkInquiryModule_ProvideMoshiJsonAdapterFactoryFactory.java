@@ -1,8 +1,8 @@
 package com.withpersona.sdk2.inquiry.network.dto;
 
-import ft.d;
+import dt.d;
 import java.util.Set;
-import um.h;
+import sm.h;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class NetworkInquiryModule_ProvideMoshiJsonAdapterFactoryFactory implements d<Set<h.e>> {
@@ -19,10 +19,10 @@ public final class NetworkInquiryModule_ProvideMoshiJsonAdapterFactoryFactory im
     }
 
     public static Set<h.e> provideMoshiJsonAdapterFactory() {
-        return (Set) ft.h.e(NetworkInquiryModule.provideMoshiJsonAdapterFactory());
+        return (Set) dt.h.e(NetworkInquiryModule.provideMoshiJsonAdapterFactory());
     }
 
-    @Override // ht.a
+    @Override // ft.a
     public Set<h.e> get() {
         return provideMoshiJsonAdapterFactory();
     }

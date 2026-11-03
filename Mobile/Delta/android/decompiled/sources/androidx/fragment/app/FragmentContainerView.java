@@ -44,7 +44,7 @@ public final class FragmentContainerView extends FrameLayout {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NotNull
-        public static final a f2483a = new a();
+        public static final a f2328a = new a();
 
         @NotNull
         public final WindowInsets a(@NotNull View.OnApplyWindowInsetsListener onApplyWindowInsetsListener, @NotNull View v5, @NotNull WindowInsets insets) {
@@ -88,7 +88,7 @@ public final class FragmentContainerView extends FrameLayout {
         Intrinsics.checkNotNullExpressionValue(windowInsetsCompat, "toWindowInsetsCompat(insets)");
         View.OnApplyWindowInsetsListener onApplyWindowInsetsListener = this.applyWindowInsetsListener;
         if (onApplyWindowInsetsListener != null) {
-            a aVar = a.f2483a;
+            a aVar = a.f2328a;
             Intrinsics.checkNotNull(onApplyWindowInsetsListener);
             windowInsetsCompatY = WindowInsetsCompat.toWindowInsetsCompat(aVar.a(onApplyWindowInsetsListener, this, insets));
         } else {
@@ -244,11 +244,11 @@ public final class FragmentContainerView extends FrameLayout {
         this.drawDisappearingViewsFirst = true;
         if (attributeSet != null) {
             String classAttribute = attributeSet.getClassAttribute();
-            int[] FragmentContainerView = d4.c.f14433e;
+            int[] FragmentContainerView = d4.c.f14413e;
             Intrinsics.checkNotNullExpressionValue(FragmentContainerView, "FragmentContainerView");
             TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, FragmentContainerView, 0, 0);
             if (classAttribute == null) {
-                classAttribute = typedArrayObtainStyledAttributes.getString(d4.c.f14434f);
+                classAttribute = typedArrayObtainStyledAttributes.getString(d4.c.f14414f);
                 str = "android:name";
             } else {
                 str = "class";
@@ -272,11 +272,11 @@ public final class FragmentContainerView extends FrameLayout {
         this.transitioningFragmentViews = new ArrayList();
         this.drawDisappearingViewsFirst = true;
         String classAttribute = attrs.getClassAttribute();
-        int[] FragmentContainerView = d4.c.f14433e;
+        int[] FragmentContainerView = d4.c.f14413e;
         Intrinsics.checkNotNullExpressionValue(FragmentContainerView, "FragmentContainerView");
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attrs, FragmentContainerView, 0, 0);
-        classAttribute = classAttribute == null ? typedArrayObtainStyledAttributes.getString(d4.c.f14434f) : classAttribute;
-        String string = typedArrayObtainStyledAttributes.getString(d4.c.f14435g);
+        classAttribute = classAttribute == null ? typedArrayObtainStyledAttributes.getString(d4.c.f14414f) : classAttribute;
+        String string = typedArrayObtainStyledAttributes.getString(d4.c.f14415g);
         typedArrayObtainStyledAttributes.recycle();
         int id2 = getId();
         c cVarM0 = fm2.m0(id2);
@@ -291,11 +291,11 @@ public final class FragmentContainerView extends FrameLayout {
             }
             c cVarA = fm2.y0().a(context.getClassLoader(), classAttribute);
             Intrinsics.checkNotNullExpressionValue(cVarA, "fm.fragmentFactory.insta…ontext.classLoader, name)");
-            cVarA.f2624z = id2;
+            cVarA.f2469z = id2;
             cVarA.A = id2;
             cVarA.B = string;
-            cVarA.f2620v = fm2;
-            cVarA.f2621w = fm2.A0();
+            cVarA.f2465v = fm2;
+            cVarA.f2466w = fm2.A0();
             cVarA.R0(context, attrs, null);
             fm2.r().s(true).c(this, cVarA, string).j();
         }

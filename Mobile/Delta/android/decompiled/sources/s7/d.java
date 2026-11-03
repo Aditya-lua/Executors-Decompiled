@@ -9,7 +9,7 @@ import java.util.Set;
 public class d implements m0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Set<String> f30494a = new HashSet();
+    public static final Set<String> f31041a = new HashSet();
 
     @Override // f7.m0
     public void a(String str) {
@@ -18,7 +18,7 @@ public class d implements m0 {
 
     @Override // f7.m0
     public void b(String str, Throwable th2) {
-        if (f7.e.f16344a) {
+        if (f7.e.f16940a) {
             Log.d("LOTTIE", str, th2);
         }
     }
@@ -30,7 +30,7 @@ public class d implements m0 {
 
     @Override // f7.m0
     public void d(String str, Throwable th2) {
-        Set<String> set = f30494a;
+        Set<String> set = f31041a;
         if (set.contains(str)) {
             return;
         }
@@ -39,7 +39,7 @@ public class d implements m0 {
     }
 
     public void e(String str, Throwable th2) {
-        if (f7.e.f16344a) {
+        if (f7.e.f16940a) {
             Log.d("LOTTIE", str, th2);
         }
     }

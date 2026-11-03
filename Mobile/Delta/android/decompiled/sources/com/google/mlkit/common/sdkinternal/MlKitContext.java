@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.Executor;
-import lf.c;
-import lf.f;
-import lf.o;
+import mf.c;
+import mf.f;
+import mf.o;
 import n9.m;
 import sb.l;
 
@@ -46,7 +46,7 @@ public class MlKitContext {
                 for (ComponentRegistrar componentRegistrar : list) {
                     map.put(componentRegistrar.getClass(), componentRegistrar);
                 }
-                o oVar = new o(l.f30589a, new ArrayList(map.values()), c.q(contextZzc, Context.class, new Class[0]), c.q(mlKitContext2, MlKitContext.class, new Class[0]));
+                o oVar = new o(l.f31136a, new ArrayList(map.values()), c.q(contextZzc, Context.class, new Class[0]), c.q(mlKitContext2, MlKitContext.class, new Class[0]));
                 mlKitContext2.zzc = oVar;
                 oVar.o(true);
                 mlKitContext = zzb;
@@ -73,7 +73,7 @@ public class MlKitContext {
     public static MlKitContext zza(@NonNull Context context) {
         MlKitContext mlKitContextZzb;
         synchronized (zza) {
-            mlKitContextZzb = zzb(context, l.f30589a);
+            mlKitContextZzb = zzb(context, l.f31136a);
         }
         return mlKitContextZzb;
     }

@@ -55,14 +55,14 @@ public final class MediaType {
 
         @NotNull
         /* JADX INFO: renamed from: -deprecated_get, reason: not valid java name */
-        public final MediaType m152deprecated_get(@NotNull String mediaType) {
+        public final MediaType m153deprecated_get(@NotNull String mediaType) {
             Intrinsics.checkNotNullParameter(mediaType, "mediaType");
             return get(mediaType);
         }
 
         @Nullable
         /* JADX INFO: renamed from: -deprecated_parse, reason: not valid java name */
-        public final MediaType m153deprecated_parse(@NotNull String mediaType) {
+        public final MediaType m154deprecated_parse(@NotNull String mediaType) {
             Intrinsics.checkNotNullParameter(mediaType, "mediaType");
             return parse(mediaType);
         }
@@ -198,7 +198,7 @@ public final class MediaType {
     public final String parameter(@NotNull String name) {
         Intrinsics.checkNotNullParameter(name, "name");
         int i10 = 0;
-        int iC = rt.c.c(0, this.parameterNamesAndValues.length - 1, 2);
+        int iC = pt.c.c(0, this.parameterNamesAndValues.length - 1, 2);
         if (iC < 0) {
             return null;
         }

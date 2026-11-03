@@ -15,42 +15,42 @@ import java.util.Iterator;
 public final class d0 extends x0 {
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final a1.c f15082i = new a();
+    public static final a1.c f15696i = new a();
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final boolean f15085e;
+    public final boolean f15699e;
     public final HashMap<String, androidx.fragment.app.c> b = new HashMap<>();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final HashMap<String, d0> f15083c = new HashMap<>();
+    public final HashMap<String, d0> f15697c = new HashMap<>();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final HashMap<String, b1> f15084d = new HashMap<>();
+    public final HashMap<String, b1> f15698d = new HashMap<>();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public boolean f15086f = false;
+    public boolean f15700f = false;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public boolean f15087g = false;
+    public boolean f15701g = false;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public boolean f15088h = false;
+    public boolean f15702h = false;
 
     public class a implements a1.c {
         @Override // androidx.lifecycle.a1.c
         @NonNull
-        public <T extends x0> T b(@NonNull Class<T> cls) {
+        public <T extends x0> T c(@NonNull Class<T> cls) {
             return new d0(true);
         }
     }
 
     public d0(boolean z10) {
-        this.f15085e = z10;
+        this.f15699e = z10;
     }
 
     @NonNull
     public static d0 k(b1 b1Var) {
-        return (d0) new a1(b1Var, f15082i).b(d0.class);
+        return (d0) new a1(b1Var, f15696i).b(d0.class);
     }
 
     @Override // androidx.p000lifecycle.x0
@@ -58,19 +58,19 @@ public final class d0 extends x0 {
         if (FragmentManager.N0(3)) {
             Log.d("FragmentManager", "onCleared called for " + this);
         }
-        this.f15086f = true;
+        this.f15700f = true;
     }
 
     public void e(@NonNull androidx.fragment.app.c cVar) {
-        if (this.f15088h) {
+        if (this.f15702h) {
             if (FragmentManager.N0(2)) {
                 Log.v("FragmentManager", "Ignoring addRetainedFragment as the state is already saved");
             }
         } else {
-            if (this.b.containsKey(cVar.f2604f)) {
+            if (this.b.containsKey(cVar.f2449f)) {
                 return;
             }
-            this.b.put(cVar.f2604f, cVar);
+            this.b.put(cVar.f2449f, cVar);
             if (FragmentManager.N0(2)) {
                 Log.v("FragmentManager", "Updating retained Fragments: Added " + cVar);
             }
@@ -83,7 +83,7 @@ public final class d0 extends x0 {
         }
         if (obj != null && d0.class == obj.getClass()) {
             d0 d0Var = (d0) obj;
-            if (this.b.equals(d0Var.b) && this.f15083c.equals(d0Var.f15083c) && this.f15084d.equals(d0Var.f15084d)) {
+            if (this.b.equals(d0Var.b) && this.f15697c.equals(d0Var.f15697c) && this.f15698d.equals(d0Var.f15698d)) {
                 return true;
             }
         }
@@ -94,7 +94,7 @@ public final class d0 extends x0 {
         if (FragmentManager.N0(3)) {
             Log.d("FragmentManager", "Clearing non-config state for " + cVar);
         }
-        h(cVar.f2604f, z10);
+        h(cVar.f2449f, z10);
     }
 
     public void g(@NonNull String str, boolean z10) {
@@ -105,11 +105,11 @@ public final class d0 extends x0 {
     }
 
     public final void h(@NonNull String str, boolean z10) {
-        d0 d0Var = this.f15083c.get(str);
+        d0 d0Var = this.f15697c.get(str);
         if (d0Var != null) {
             if (z10) {
                 ArrayList arrayList = new ArrayList();
-                arrayList.addAll(d0Var.f15083c.keySet());
+                arrayList.addAll(d0Var.f15697c.keySet());
                 int size = arrayList.size();
                 int i10 = 0;
                 while (i10 < size) {
@@ -119,17 +119,17 @@ public final class d0 extends x0 {
                 }
             }
             d0Var.d();
-            this.f15083c.remove(str);
+            this.f15697c.remove(str);
         }
-        b1 b1Var = this.f15084d.get(str);
+        b1 b1Var = this.f15698d.get(str);
         if (b1Var != null) {
             b1Var.a();
-            this.f15084d.remove(str);
+            this.f15698d.remove(str);
         }
     }
 
     public int hashCode() {
-        return (((this.b.hashCode() * 31) + this.f15083c.hashCode()) * 31) + this.f15084d.hashCode();
+        return (((this.b.hashCode() * 31) + this.f15697c.hashCode()) * 31) + this.f15698d.hashCode();
     }
 
     public androidx.fragment.app.c i(String str) {
@@ -138,12 +138,12 @@ public final class d0 extends x0 {
 
     @NonNull
     public d0 j(@NonNull androidx.fragment.app.c cVar) {
-        d0 d0Var = this.f15083c.get(cVar.f2604f);
+        d0 d0Var = this.f15697c.get(cVar.f2449f);
         if (d0Var != null) {
             return d0Var;
         }
-        d0 d0Var2 = new d0(this.f15085e);
-        this.f15083c.put(cVar.f2604f, d0Var2);
+        d0 d0Var2 = new d0(this.f15699e);
+        this.f15697c.put(cVar.f2449f, d0Var2);
         return d0Var2;
     }
 
@@ -154,26 +154,26 @@ public final class d0 extends x0 {
 
     @NonNull
     public b1 m(@NonNull androidx.fragment.app.c cVar) {
-        b1 b1Var = this.f15084d.get(cVar.f2604f);
+        b1 b1Var = this.f15698d.get(cVar.f2449f);
         if (b1Var != null) {
             return b1Var;
         }
         b1 b1Var2 = new b1();
-        this.f15084d.put(cVar.f2604f, b1Var2);
+        this.f15698d.put(cVar.f2449f, b1Var2);
         return b1Var2;
     }
 
     public boolean n() {
-        return this.f15086f;
+        return this.f15700f;
     }
 
     public void o(@NonNull androidx.fragment.app.c cVar) {
-        if (this.f15088h) {
+        if (this.f15702h) {
             if (FragmentManager.N0(2)) {
                 Log.v("FragmentManager", "Ignoring removeRetainedFragment as the state is already saved");
             }
         } else {
-            if (this.b.remove(cVar.f2604f) == null || !FragmentManager.N0(2)) {
+            if (this.b.remove(cVar.f2449f) == null || !FragmentManager.N0(2)) {
                 return;
             }
             Log.v("FragmentManager", "Updating retained Fragments: Removed " + cVar);
@@ -181,12 +181,12 @@ public final class d0 extends x0 {
     }
 
     public void p(boolean z10) {
-        this.f15088h = z10;
+        this.f15702h = z10;
     }
 
     public boolean q(@NonNull androidx.fragment.app.c cVar) {
-        if (this.b.containsKey(cVar.f2604f)) {
-            return this.f15085e ? this.f15086f : !this.f15087g;
+        if (this.b.containsKey(cVar.f2449f)) {
+            return this.f15699e ? this.f15700f : !this.f15701g;
         }
         return true;
     }
@@ -204,7 +204,7 @@ public final class d0 extends x0 {
             }
         }
         sb2.append(") Child Non Config (");
-        Iterator<String> it2 = this.f15083c.keySet().iterator();
+        Iterator<String> it2 = this.f15697c.keySet().iterator();
         while (it2.hasNext()) {
             sb2.append(it2.next());
             if (it2.hasNext()) {
@@ -212,7 +212,7 @@ public final class d0 extends x0 {
             }
         }
         sb2.append(") ViewModelStores (");
-        Iterator<String> it3 = this.f15084d.keySet().iterator();
+        Iterator<String> it3 = this.f15698d.keySet().iterator();
         while (it3.hasNext()) {
             sb2.append(it3.next());
             if (it3.hasNext()) {

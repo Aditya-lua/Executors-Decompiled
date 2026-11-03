@@ -58,7 +58,7 @@ public class JsonWriter implements Closeable, Flushable {
         this.serializeNulls = true;
         Objects.requireNonNull(writer, "out == null");
         this.out = writer;
-        setFormattingStyle(e.f21385d);
+        setFormattingStyle(e.f21844d);
     }
 
     private static boolean alwaysCreatesValidJsonNumber(Class<? extends Number> cls) {
@@ -319,9 +319,9 @@ public class JsonWriter implements Closeable, Flushable {
 
     public final void setIndent(String str) {
         if (str.isEmpty()) {
-            setFormattingStyle(e.f21385d);
+            setFormattingStyle(e.f21844d);
         } else {
-            setFormattingStyle(e.f21386e.d(str));
+            setFormattingStyle(e.f21845e.d(str));
         }
     }
 

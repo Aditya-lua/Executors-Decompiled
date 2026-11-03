@@ -12,17 +12,17 @@ import java.io.IOException;
 public class n {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static String f32099a;
+    public static String f32752a;
     public static int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static Boolean f32100c;
+    public static Boolean f32753c;
 
     public static String a() throws Throwable {
         BufferedReader bufferedReader;
-        if (f32099a == null) {
+        if (f32752a == null) {
             if (Build.VERSION.SDK_INT >= 28) {
-                f32099a = Application.getProcessName();
+                f32752a = Application.getProcessName();
             } else {
                 int iMyPid = b;
                 if (iMyPid == 0) {
@@ -66,14 +66,14 @@ public class n {
                     }
                     l.a(bufferedReader);
                 }
-                f32099a = strTrim;
+                f32752a = strTrim;
             }
         }
-        return f32099a;
+        return f32752a;
     }
 
     public static boolean b() {
-        Boolean boolValueOf = f32100c;
+        Boolean boolValueOf = f32753c;
         if (boolValueOf == null) {
             if (m.h()) {
                 boolValueOf = Boolean.valueOf(Process.isIsolated());
@@ -89,7 +89,7 @@ public class n {
                     boolValueOf = Boolean.FALSE;
                 }
             }
-            f32100c = boolValueOf;
+            f32753c = boolValueOf;
         }
         return boolValueOf.booleanValue();
     }

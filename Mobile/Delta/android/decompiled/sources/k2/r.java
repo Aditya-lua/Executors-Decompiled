@@ -10,20 +10,20 @@ import java.util.Objects;
 public class r {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public CharSequence f22129a;
+    public CharSequence f22353a;
     public IconCompat b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public String f22130c;
+    public String f22354c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public String f22131d;
+    public String f22355d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public boolean f22132e;
+    public boolean f22356e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public boolean f22133f;
+    public boolean f22357f;
 
     public static class a {
         public static r a(PersistableBundle persistableBundle) {
@@ -32,12 +32,12 @@ public class r {
 
         public static PersistableBundle b(r rVar) {
             PersistableBundle persistableBundle = new PersistableBundle();
-            CharSequence charSequence = rVar.f22129a;
+            CharSequence charSequence = rVar.f22353a;
             persistableBundle.putString("name", charSequence != null ? charSequence.toString() : null);
-            persistableBundle.putString("uri", rVar.f22130c);
-            persistableBundle.putString("key", rVar.f22131d);
-            persistableBundle.putBoolean("isBot", rVar.f22132e);
-            persistableBundle.putBoolean("isImportant", rVar.f22133f);
+            persistableBundle.putString("uri", rVar.f22354c);
+            persistableBundle.putString("key", rVar.f22355d);
+            persistableBundle.putBoolean("isBot", rVar.f22356e);
+            persistableBundle.putBoolean("isImportant", rVar.f22357f);
             return persistableBundle;
         }
     }
@@ -51,58 +51,58 @@ public class r {
     public static class c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public CharSequence f22134a;
+        public CharSequence f22358a;
         public IconCompat b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public String f22135c;
+        public String f22359c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public String f22136d;
+        public String f22360d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public boolean f22137e;
+        public boolean f22361e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public boolean f22138f;
+        public boolean f22362f;
 
         public r a() {
             return new r(this);
         }
 
         public c b(boolean z10) {
-            this.f22137e = z10;
+            this.f22361e = z10;
             return this;
         }
 
         public c c(boolean z10) {
-            this.f22138f = z10;
+            this.f22362f = z10;
             return this;
         }
 
         public c d(String str) {
-            this.f22136d = str;
+            this.f22360d = str;
             return this;
         }
 
         public c e(CharSequence charSequence) {
-            this.f22134a = charSequence;
+            this.f22358a = charSequence;
             return this;
         }
 
         public c f(String str) {
-            this.f22135c = str;
+            this.f22359c = str;
             return this;
         }
     }
 
     public r(c cVar) {
-        this.f22129a = cVar.f22134a;
+        this.f22353a = cVar.f22358a;
         this.b = cVar.b;
-        this.f22130c = cVar.f22135c;
-        this.f22131d = cVar.f22136d;
-        this.f22132e = cVar.f22137e;
-        this.f22133f = cVar.f22138f;
+        this.f22354c = cVar.f22359c;
+        this.f22355d = cVar.f22360d;
+        this.f22356e = cVar.f22361e;
+        this.f22357f = cVar.f22362f;
     }
 
     public static r a(PersistableBundle persistableBundle) {
@@ -114,15 +114,15 @@ public class r {
     }
 
     public String c() {
-        return this.f22131d;
+        return this.f22355d;
     }
 
     public CharSequence d() {
-        return this.f22129a;
+        return this.f22353a;
     }
 
     public String e() {
-        return this.f22130c;
+        return this.f22354c;
     }
 
     public boolean equals(Object obj) {
@@ -139,22 +139,22 @@ public class r {
     }
 
     public boolean f() {
-        return this.f22132e;
+        return this.f22356e;
     }
 
     public boolean g() {
-        return this.f22133f;
+        return this.f22357f;
     }
 
     public String h() {
-        String str = this.f22130c;
+        String str = this.f22354c;
         if (str != null) {
             return str;
         }
-        if (this.f22129a == null) {
+        if (this.f22353a == null) {
             return "";
         }
-        return "name:" + ((Object) this.f22129a);
+        return "name:" + ((Object) this.f22353a);
     }
 
     public int hashCode() {
@@ -168,13 +168,13 @@ public class r {
 
     public Bundle j() {
         Bundle bundle = new Bundle();
-        bundle.putCharSequence("name", this.f22129a);
+        bundle.putCharSequence("name", this.f22353a);
         IconCompat iconCompat = this.b;
         bundle.putBundle("icon", iconCompat != null ? iconCompat.n() : null);
-        bundle.putString("uri", this.f22130c);
-        bundle.putString("key", this.f22131d);
-        bundle.putBoolean("isBot", this.f22132e);
-        bundle.putBoolean("isImportant", this.f22133f);
+        bundle.putString("uri", this.f22354c);
+        bundle.putString("key", this.f22355d);
+        bundle.putBoolean("isBot", this.f22356e);
+        bundle.putBoolean("isImportant", this.f22357f);
         return bundle;
     }
 

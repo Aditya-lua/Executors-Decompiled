@@ -11,7 +11,7 @@ import y6.Size;
 
 /* JADX INFO: renamed from: x6.p, reason: from toString */
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000P\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u001f\u0018\u00002\u00020\u0001Bo\u0012\n\u0010\u0004\u001a\u00060\u0002j\u0002`\u0003\u0012\b\b\u0002\u0010\u0006\u001a\u00020\u0005\u0012\b\b\u0002\u0010\b\u001a\u00020\u0007\u0012\b\b\u0002\u0010\n\u001a\u00020\t\u0012\n\b\u0002\u0010\f\u001a\u0004\u0018\u00010\u000b\u0012\b\b\u0002\u0010\u000e\u001a\u00020\r\u0012\b\b\u0002\u0010\u0010\u001a\u00020\u000f\u0012\b\b\u0002\u0010\u0011\u001a\u00020\u000f\u0012\b\b\u0002\u0010\u0012\u001a\u00020\u000f\u0012\b\b\u0002\u0010\u0014\u001a\u00020\u0013¢\u0006\u0004\b\u0015\u0010\u0016Jw\u0010\u0017\u001a\u00020\u00002\f\b\u0002\u0010\u0004\u001a\u00060\u0002j\u0002`\u00032\b\b\u0002\u0010\u0006\u001a\u00020\u00052\b\b\u0002\u0010\b\u001a\u00020\u00072\b\b\u0002\u0010\n\u001a\u00020\t2\n\b\u0002\u0010\f\u001a\u0004\u0018\u00010\u000b2\b\b\u0002\u0010\u000e\u001a\u00020\r2\b\b\u0002\u0010\u0010\u001a\u00020\u000f2\b\b\u0002\u0010\u0011\u001a\u00020\u000f2\b\b\u0002\u0010\u0012\u001a\u00020\u000f2\b\b\u0002\u0010\u0014\u001a\u00020\u0013¢\u0006\u0004\b\u0017\u0010\u0018J\u001a\u0010\u001b\u001a\u00020\u001a2\b\u0010\u0019\u001a\u0004\u0018\u00010\u0001H\u0096\u0002¢\u0006\u0004\b\u001b\u0010\u001cJ\u000f\u0010\u001e\u001a\u00020\u001dH\u0016¢\u0006\u0004\b\u001e\u0010\u001fJ\u000f\u0010 \u001a\u00020\u000bH\u0016¢\u0006\u0004\b \u0010!R\u001b\u0010\u0004\u001a\u00060\u0002j\u0002`\u00038\u0006¢\u0006\f\n\u0004\b\u0017\u0010\"\u001a\u0004\b#\u0010$R\u0017\u0010\u0006\u001a\u00020\u00058\u0006¢\u0006\f\n\u0004\b%\u0010&\u001a\u0004\b'\u0010(R\u0017\u0010\b\u001a\u00020\u00078\u0006¢\u0006\f\n\u0004\b#\u0010)\u001a\u0004\b*\u0010+R\u0017\u0010\n\u001a\u00020\t8\u0006¢\u0006\f\n\u0004\b,\u0010-\u001a\u0004\b.\u0010/R\u0019\u0010\f\u001a\u0004\u0018\u00010\u000b8\u0006¢\u0006\f\n\u0004\b0\u00101\u001a\u0004\b,\u0010!R\u0017\u0010\u000e\u001a\u00020\r8\u0006¢\u0006\f\n\u0004\b2\u00103\u001a\u0004\b4\u00105R\u0017\u0010\u0010\u001a\u00020\u000f8\u0006¢\u0006\f\n\u0004\b4\u00106\u001a\u0004\b7\u00108R\u0017\u0010\u0011\u001a\u00020\u000f8\u0006¢\u0006\f\n\u0004\b9\u00106\u001a\u0004\b0\u00108R\u0017\u0010\u0012\u001a\u00020\u000f8\u0006¢\u0006\f\n\u0004\b.\u00106\u001a\u0004\b9\u00108R\u0017\u0010\u0014\u001a\u00020\u00138\u0006¢\u0006\f\n\u0004\b*\u0010:\u001a\u0004\b2\u0010;¨\u0006<"}, d2 = {"Lx6/p;", "", "Landroid/content/Context;", "Lcoil3/PlatformContext;", "context", "Ly6/g;", "size", "Ly6/f;", "scale", "Ly6/c;", "precision", "", "diskCacheKey", "Lxu/l;", "fileSystem", "Lx6/c;", "memoryCachePolicy", "diskCachePolicy", "networkCachePolicy", "Lk6/l;", "extras", "<init>", "(Landroid/content/Context;Ly6/g;Ly6/f;Ly6/c;Ljava/lang/String;Lxu/l;Lx6/c;Lx6/c;Lx6/c;Lk6/l;)V", "a", "(Landroid/content/Context;Ly6/g;Ly6/f;Ly6/c;Ljava/lang/String;Lxu/l;Lx6/c;Lx6/c;Lx6/c;Lk6/l;)Lx6/p;", "other", "", "equals", "(Ljava/lang/Object;)Z", "", "hashCode", "()I", "toString", "()Ljava/lang/String;", "Landroid/content/Context;", "c", "()Landroid/content/Context;", "b", "Ly6/g;", "k", "()Ly6/g;", "Ly6/f;", "j", "()Ly6/f;", "d", "Ly6/c;", "i", "()Ly6/c;", "e", "Ljava/lang/String;", "f", "Lxu/l;", "g", "()Lxu/l;", "Lx6/c;", "getMemoryCachePolicy", "()Lx6/c;", "h", "Lk6/l;", "()Lk6/l;", "coil-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000P\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u001f\u0018\u00002\u00020\u0001Bo\u0012\n\u0010\u0004\u001a\u00060\u0002j\u0002`\u0003\u0012\b\b\u0002\u0010\u0006\u001a\u00020\u0005\u0012\b\b\u0002\u0010\b\u001a\u00020\u0007\u0012\b\b\u0002\u0010\n\u001a\u00020\t\u0012\n\b\u0002\u0010\f\u001a\u0004\u0018\u00010\u000b\u0012\b\b\u0002\u0010\u000e\u001a\u00020\r\u0012\b\b\u0002\u0010\u0010\u001a\u00020\u000f\u0012\b\b\u0002\u0010\u0011\u001a\u00020\u000f\u0012\b\b\u0002\u0010\u0012\u001a\u00020\u000f\u0012\b\b\u0002\u0010\u0014\u001a\u00020\u0013¢\u0006\u0004\b\u0015\u0010\u0016Jw\u0010\u0017\u001a\u00020\u00002\f\b\u0002\u0010\u0004\u001a\u00060\u0002j\u0002`\u00032\b\b\u0002\u0010\u0006\u001a\u00020\u00052\b\b\u0002\u0010\b\u001a\u00020\u00072\b\b\u0002\u0010\n\u001a\u00020\t2\n\b\u0002\u0010\f\u001a\u0004\u0018\u00010\u000b2\b\b\u0002\u0010\u000e\u001a\u00020\r2\b\b\u0002\u0010\u0010\u001a\u00020\u000f2\b\b\u0002\u0010\u0011\u001a\u00020\u000f2\b\b\u0002\u0010\u0012\u001a\u00020\u000f2\b\b\u0002\u0010\u0014\u001a\u00020\u0013¢\u0006\u0004\b\u0017\u0010\u0018J\u001a\u0010\u001b\u001a\u00020\u001a2\b\u0010\u0019\u001a\u0004\u0018\u00010\u0001H\u0096\u0002¢\u0006\u0004\b\u001b\u0010\u001cJ\u000f\u0010\u001e\u001a\u00020\u001dH\u0016¢\u0006\u0004\b\u001e\u0010\u001fJ\u000f\u0010 \u001a\u00020\u000bH\u0016¢\u0006\u0004\b \u0010!R\u001b\u0010\u0004\u001a\u00060\u0002j\u0002`\u00038\u0006¢\u0006\f\n\u0004\b\u0017\u0010\"\u001a\u0004\b#\u0010$R\u0017\u0010\u0006\u001a\u00020\u00058\u0006¢\u0006\f\n\u0004\b%\u0010&\u001a\u0004\b'\u0010(R\u0017\u0010\b\u001a\u00020\u00078\u0006¢\u0006\f\n\u0004\b#\u0010)\u001a\u0004\b*\u0010+R\u0017\u0010\n\u001a\u00020\t8\u0006¢\u0006\f\n\u0004\b,\u0010-\u001a\u0004\b.\u0010/R\u0019\u0010\f\u001a\u0004\u0018\u00010\u000b8\u0006¢\u0006\f\n\u0004\b0\u00101\u001a\u0004\b,\u0010!R\u0017\u0010\u000e\u001a\u00020\r8\u0006¢\u0006\f\n\u0004\b2\u00103\u001a\u0004\b4\u00105R\u0017\u0010\u0010\u001a\u00020\u000f8\u0006¢\u0006\f\n\u0004\b4\u00106\u001a\u0004\b7\u00108R\u0017\u0010\u0011\u001a\u00020\u000f8\u0006¢\u0006\f\n\u0004\b9\u00106\u001a\u0004\b0\u00108R\u0017\u0010\u0012\u001a\u00020\u000f8\u0006¢\u0006\f\n\u0004\b.\u00106\u001a\u0004\b9\u00108R\u0017\u0010\u0014\u001a\u00020\u00138\u0006¢\u0006\f\n\u0004\b*\u0010:\u001a\u0004\b2\u0010;¨\u0006<"}, d2 = {"Lx6/p;", "", "Landroid/content/Context;", "Lcoil3/PlatformContext;", "context", "Ly6/g;", "size", "Ly6/f;", "scale", "Ly6/c;", "precision", "", "diskCacheKey", "Lvu/l;", "fileSystem", "Lx6/c;", "memoryCachePolicy", "diskCachePolicy", "networkCachePolicy", "Lk6/l;", "extras", "<init>", "(Landroid/content/Context;Ly6/g;Ly6/f;Ly6/c;Ljava/lang/String;Lvu/l;Lx6/c;Lx6/c;Lx6/c;Lk6/l;)V", "a", "(Landroid/content/Context;Ly6/g;Ly6/f;Ly6/c;Ljava/lang/String;Lvu/l;Lx6/c;Lx6/c;Lx6/c;Lk6/l;)Lx6/p;", "other", "", "equals", "(Ljava/lang/Object;)Z", "", "hashCode", "()I", "toString", "()Ljava/lang/String;", "Landroid/content/Context;", "c", "()Landroid/content/Context;", "b", "Ly6/g;", "k", "()Ly6/g;", "Ly6/f;", "j", "()Ly6/f;", "d", "Ly6/c;", "i", "()Ly6/c;", "e", "Ljava/lang/String;", "f", "Lvu/l;", "g", "()Lvu/l;", "Lx6/c;", "getMemoryCachePolicy", "()Lx6/c;", "h", "Lk6/l;", "()Lk6/l;", "coil-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class Options {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
@@ -36,7 +36,7 @@ public final class Options {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name and from kotlin metadata and from toString */
     @NotNull
-    public final xu.l fileSystem;
+    public final vu.l fileSystem;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name and from kotlin metadata and from toString */
     @NotNull
@@ -54,7 +54,7 @@ public final class Options {
     @NotNull
     public final Extras extras;
 
-    public Options(@NotNull Context context, @NotNull Size size, @NotNull y6.f fVar, @NotNull y6.c cVar, @Nullable String str, @NotNull xu.l lVar, @NotNull c cVar2, @NotNull c cVar3, @NotNull c cVar4, @NotNull Extras lVar2) {
+    public Options(@NotNull Context context, @NotNull Size size, @NotNull y6.f fVar, @NotNull y6.c cVar, @Nullable String str, @NotNull vu.l lVar, @NotNull c cVar2, @NotNull c cVar3, @NotNull c cVar4, @NotNull Extras lVar2) {
         this.context = context;
         this.size = size;
         this.scale = fVar;
@@ -67,7 +67,7 @@ public final class Options {
         this.extras = lVar2;
     }
 
-    public static /* synthetic */ Options b(Options options, Context context, Size size, y6.f fVar, y6.c cVar, String str, xu.l lVar, c cVar2, c cVar3, c cVar4, Extras lVar2, int i10, Object obj) {
+    public static /* synthetic */ Options b(Options options, Context context, Size size, y6.f fVar, y6.c cVar, String str, vu.l lVar, c cVar2, c cVar3, c cVar4, Extras lVar2, int i10, Object obj) {
         if ((i10 & 1) != 0) {
             context = options.context;
         }
@@ -103,12 +103,12 @@ public final class Options {
         c cVar6 = cVar2;
         c cVar7 = cVar3;
         String str2 = str;
-        xu.l lVar4 = lVar;
+        vu.l lVar4 = lVar;
         return options.a(context, size, fVar, cVar, str2, lVar4, cVar6, cVar7, cVar5, lVar3);
     }
 
     @NotNull
-    public final Options a(@NotNull Context context, @NotNull Size size, @NotNull y6.f scale, @NotNull y6.c precision, @Nullable String diskCacheKey, @NotNull xu.l fileSystem, @NotNull c memoryCachePolicy, @NotNull c diskCachePolicy, @NotNull c networkCachePolicy, @NotNull Extras extras) {
+    public final Options a(@NotNull Context context, @NotNull Size size, @NotNull y6.f scale, @NotNull y6.c precision, @Nullable String diskCacheKey, @NotNull vu.l fileSystem, @NotNull c memoryCachePolicy, @NotNull c diskCachePolicy, @NotNull c networkCachePolicy, @NotNull Extras extras) {
         return new Options(context, size, scale, precision, diskCacheKey, fileSystem, memoryCachePolicy, diskCachePolicy, networkCachePolicy, extras);
     }
 
@@ -149,7 +149,7 @@ public final class Options {
 
     @NotNull
     /* JADX INFO: renamed from: g, reason: from getter */
-    public final xu.l getFileSystem() {
+    public final vu.l getFileSystem() {
         return this.fileSystem;
     }
 

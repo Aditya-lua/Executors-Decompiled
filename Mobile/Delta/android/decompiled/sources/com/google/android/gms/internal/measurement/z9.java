@@ -57,7 +57,7 @@ public final class z9 extends n {
                 if (str.equals("setEventName")) {
                     v5.a("setEventName", 1, list);
                     q qVarA2 = u4Var.a((q) list.get(0));
-                    if (q.f6743zo.equals(qVarA2) || q.Ao.equals(qVarA2)) {
+                    if (q.f6816yo.equals(qVarA2) || q.f6817zo.equals(qVarA2)) {
                         throw new IllegalArgumentException("Illegal event name");
                     }
                     this.b.c().c(qVarA2.zzc());

@@ -8,29 +8,29 @@ import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import java.util.ArrayList;
-import sg.m0;
-import sg.n0;
+import rg.m0;
+import rg.n0;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class LoadingBar extends LinearLayout {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ArrayList<ImageView> f8986a;
+    public final ArrayList<ImageView> f9060a;
     public boolean b;
 
     public class a implements Animation.AnimationListener {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public ImageView f8987a;
+        public ImageView f9061a;
         public b b;
 
         public void a(ImageView imageView) {
-            this.f8987a = imageView;
+            this.f9061a = imageView;
         }
 
         @Override // android.view.animation.Animation.AnimationListener
         public void onAnimationEnd(Animation animation) {
-            this.f8987a.startAnimation(LoadingBar.this.d(this.b));
+            this.f9061a.startAnimation(LoadingBar.this.d(this.b));
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -48,16 +48,16 @@ public class LoadingBar extends LinearLayout {
     public class b implements Animation.AnimationListener {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public ImageView f8989a;
+        public ImageView f9063a;
         public a b;
 
         public void a(ImageView imageView) {
-            this.f8989a = imageView;
+            this.f9063a = imageView;
         }
 
         @Override // android.view.animation.Animation.AnimationListener
         public void onAnimationEnd(Animation animation) {
-            this.f8989a.startAnimation(LoadingBar.this.c(this.b));
+            this.f9063a.startAnimation(LoadingBar.this.c(this.b));
         }
 
         @Override // android.view.animation.Animation.AnimationListener
@@ -74,7 +74,7 @@ public class LoadingBar extends LinearLayout {
 
     public LoadingBar(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.f8986a = new ArrayList<>(3);
+        this.f9060a = new ArrayList<>(3);
         e();
     }
 
@@ -93,16 +93,16 @@ public class LoadingBar extends LinearLayout {
     }
 
     public final void e() {
-        View.inflate(getContext(), n0.f30891q, this);
-        this.f8986a.add((ImageView) findViewById(m0.f30862t));
-        this.f8986a.add((ImageView) findViewById(m0.f30864u));
-        this.f8986a.add((ImageView) findViewById(m0.f30866v));
+        View.inflate(getContext(), n0.f30496q, this);
+        this.f9060a.add((ImageView) findViewById(m0.f30465t));
+        this.f9060a.add((ImageView) findViewById(m0.f30467u));
+        this.f9060a.add((ImageView) findViewById(m0.f30469v));
     }
 
     public final void f() {
-        int size = this.f8986a.size();
+        int size = this.f9060a.size();
         for (int i10 = 0; i10 < size; i10++) {
-            ImageView imageView = this.f8986a.get(i10);
+            ImageView imageView = this.f9060a.get(i10);
             b bVar = new b();
             a aVar = new a();
             aVar.a(imageView);

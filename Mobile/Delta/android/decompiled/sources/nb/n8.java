@@ -9,14 +9,14 @@ public enum n8 {
 
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f25794a;
+    public final String f26615a;
 
     n8(String str) {
-        this.f25794a = str;
+        this.f26615a = str;
     }
 
     @Override // java.lang.Enum
     public final String toString() {
-        return this.f25794a;
+        return this.f26615a;
     }
 }

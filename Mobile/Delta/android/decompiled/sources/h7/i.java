@@ -15,54 +15,54 @@ public class i extends a {
     public i7.q A;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public final String f18643q;
+    public final String f19130q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public final boolean f18644r;
+    public final boolean f19131r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public final w1.g<LinearGradient> f18645s;
+    public final w1.g<LinearGradient> f19132s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public final w1.g<RadialGradient> f18646t;
+    public final w1.g<RadialGradient> f19133t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public final RectF f18647u;
+    public final RectF f19134u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public final n7.g f18648v;
+    public final n7.g f19135v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public final int f18649w;
+    public final int f19136w;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public final i7.a<n7.d, n7.d> f18650x;
+    public final i7.a<n7.d, n7.d> f19137x;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public final i7.a<PointF, PointF> f18651y;
+    public final i7.a<PointF, PointF> f19138y;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public final i7.a<PointF, PointF> f18652z;
+    public final i7.a<PointF, PointF> f19139z;
 
     public i(h0 h0Var, o7.b bVar, n7.f fVar) {
         super(h0Var, bVar, fVar.b().b(), fVar.g().b(), fVar.i(), fVar.k(), fVar.m(), fVar.h(), fVar.c());
-        this.f18645s = new w1.g<>();
-        this.f18646t = new w1.g<>();
-        this.f18647u = new RectF();
-        this.f18643q = fVar.j();
-        this.f18648v = fVar.f();
-        this.f18644r = fVar.n();
-        this.f18649w = (int) (h0Var.J().d() / 32.0f);
+        this.f19132s = new w1.g<>();
+        this.f19133t = new w1.g<>();
+        this.f19134u = new RectF();
+        this.f19130q = fVar.j();
+        this.f19135v = fVar.f();
+        this.f19131r = fVar.n();
+        this.f19136w = (int) (h0Var.J().d() / 32.0f);
         i7.a<n7.d, n7.d> aVarA = fVar.e().a();
-        this.f18650x = aVarA;
+        this.f19137x = aVarA;
         aVarA.a(this);
         bVar.j(aVarA);
         i7.a<PointF, PointF> aVarA2 = fVar.l().a();
-        this.f18651y = aVarA2;
+        this.f19138y = aVarA2;
         aVarA2.a(this);
         bVar.j(aVarA2);
         i7.a<PointF, PointF> aVarA3 = fVar.d().a();
-        this.f18652z = aVarA3;
+        this.f19139z = aVarA3;
         aVarA3.a(this);
         bVar.j(aVarA3);
     }
@@ -74,7 +74,7 @@ public class i extends a {
         if (t8 == o0.L) {
             i7.q qVar = this.A;
             if (qVar != null) {
-                this.f18582f.H(qVar);
+                this.f19069f.H(qVar);
             }
             if (cVar == null) {
                 this.A = null;
@@ -83,22 +83,22 @@ public class i extends a {
             i7.q qVar2 = new i7.q(cVar);
             this.A = qVar2;
             qVar2.a(this);
-            this.f18582f.j(this.A);
+            this.f19069f.j(this.A);
         }
     }
 
     @Override // h7.c
     public String getName() {
-        return this.f18643q;
+        return this.f19130q;
     }
 
     @Override // h7.a, h7.e
     public void i(Canvas canvas, Matrix matrix, int i10, s7.b bVar) {
-        if (this.f18644r) {
+        if (this.f19131r) {
             return;
         }
-        e(this.f18647u, matrix, false);
-        this.f18585i.setShader(this.f18648v == n7.g.LINEAR ? m() : n());
+        e(this.f19134u, matrix, false);
+        this.f19072i.setShader(this.f19135v == n7.g.LINEAR ? m() : n());
         super.i(canvas, matrix, i10, bVar);
     }
 
@@ -124,9 +124,9 @@ public class i extends a {
     }
 
     public final int l() {
-        int iRound = Math.round(this.f18651y.f() * this.f18649w);
-        int iRound2 = Math.round(this.f18652z.f() * this.f18649w);
-        int iRound3 = Math.round(this.f18650x.f() * this.f18649w);
+        int iRound = Math.round(this.f19138y.f() * this.f19136w);
+        int iRound2 = Math.round(this.f19139z.f() * this.f19136w);
+        int iRound3 = Math.round(this.f19137x.f() * this.f19136w);
         int i10 = iRound != 0 ? 527 * iRound : 17;
         if (iRound2 != 0) {
             i10 = i10 * 31 * iRound2;
@@ -136,33 +136,33 @@ public class i extends a {
 
     public final LinearGradient m() {
         long jL = l();
-        LinearGradient linearGradientE = this.f18645s.e(jL);
+        LinearGradient linearGradientE = this.f19132s.e(jL);
         if (linearGradientE != null) {
             return linearGradientE;
         }
-        PointF pointFH = this.f18651y.h();
-        PointF pointFH2 = this.f18652z.h();
-        n7.d dVarH = this.f18650x.h();
+        PointF pointFH = this.f19138y.h();
+        PointF pointFH2 = this.f19139z.h();
+        n7.d dVarH = this.f19137x.h();
         LinearGradient linearGradient = new LinearGradient(pointFH.x, pointFH.y, pointFH2.x, pointFH2.y, k(dVarH.d()), dVarH.e(), Shader.TileMode.CLAMP);
-        this.f18645s.i(jL, linearGradient);
+        this.f19132s.i(jL, linearGradient);
         return linearGradient;
     }
 
     public final RadialGradient n() {
         long jL = l();
-        RadialGradient radialGradientE = this.f18646t.e(jL);
+        RadialGradient radialGradientE = this.f19133t.e(jL);
         if (radialGradientE != null) {
             return radialGradientE;
         }
-        PointF pointFH = this.f18651y.h();
-        PointF pointFH2 = this.f18652z.h();
-        n7.d dVarH = this.f18650x.h();
+        PointF pointFH = this.f19138y.h();
+        PointF pointFH2 = this.f19139z.h();
+        n7.d dVarH = this.f19137x.h();
         int[] iArrK = k(dVarH.d());
         float[] fArrE = dVarH.e();
         float f10 = pointFH.x;
         float f11 = pointFH.y;
         RadialGradient radialGradient = new RadialGradient(f10, f11, (float) Math.hypot(pointFH2.x - f10, pointFH2.y - f11), iArrK, fArrE, Shader.TileMode.CLAMP);
-        this.f18646t.i(jL, radialGradient);
+        this.f19133t.i(jL, radialGradient);
         return radialGradient;
     }
 }

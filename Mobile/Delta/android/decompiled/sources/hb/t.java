@@ -7,7 +7,7 @@ import android.os.Parcelable;
 public final class t {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final ClassLoader f18761a = t.class.getClassLoader();
+    public static final ClassLoader f19248a = t.class.getClassLoader();
 
     public static void a(Parcel parcel, boolean z10) {
         parcel.writeInt(z10 ? 1 : 0);

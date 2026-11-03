@@ -26,7 +26,7 @@ final class AFb1gSDK implements Application.ActivityLifecycleCallbacks {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    private final AFa1qSDK f5231d;
+    private final AFa1qSDK f5304d;
 
     @NotNull
     private final ScheduledExecutorService registerClient;
@@ -34,7 +34,7 @@ final class AFb1gSDK implements Application.ActivityLifecycleCallbacks {
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
     @NotNull
-    private final Runnable f5232v;
+    private final Runnable f5305v;
 
     public AFb1gSDK(@NotNull ScheduledExecutorService scheduledExecutorService, @NotNull AFb1bSDK.AFa1zSDK aFa1zSDK, @NotNull AFa1qSDK aFa1qSDK) {
         Intrinsics.checkNotNullParameter(scheduledExecutorService, "");
@@ -42,11 +42,11 @@ final class AFb1gSDK implements Application.ActivityLifecycleCallbacks {
         Intrinsics.checkNotNullParameter(aFa1qSDK, "");
         this.registerClient = scheduledExecutorService;
         this.AFLogger = aFa1zSDK;
-        this.f5231d = aFa1qSDK;
-        this.f5232v = new Runnable() { // from class: com.appsflyer.internal.o
+        this.f5304d = aFa1qSDK;
+        this.f5305v = new Runnable() { // from class: com.appsflyer.internal.o
             @Override // java.lang.Runnable
             public final void run() {
-                AFb1gSDK.registerClient(this.f5511a);
+                AFb1gSDK.registerClient(this.f5584a);
             }
         };
     }
@@ -55,16 +55,16 @@ final class AFb1gSDK implements Application.ActivityLifecycleCallbacks {
     public static final void i_(AFb1gSDK aFb1gSDK, Intent intent) {
         Object objB;
         try {
-            jt.n.Companion companion = jt.n.INSTANCE;
+            gt.n.Companion companion = gt.n.INSTANCE;
             AFb1bSDK.AFa1zSDK aFa1zSDK = aFb1gSDK.AFLogger;
             Intrinsics.checkNotNull(intent);
             aFa1zSDK.m_(intent);
-            objB = jt.n.b(Unit.f22483a);
+            objB = gt.n.b(Unit.f22938a);
         } catch (Throwable th2) {
-            jt.n.Companion companion2 = jt.n.INSTANCE;
-            objB = jt.n.b(jt.o.a(th2));
+            gt.n.Companion companion2 = gt.n.INSTANCE;
+            objB = gt.n.b(gt.o.a(th2));
         }
-        Throwable thE = jt.n.e(objB);
+        Throwable thE = gt.n.e(objB);
         if (thE != null) {
             AFLoggerBase.e$default(AFLogger.INSTANCE, LogTag.DDL, "onActivityCreatedWithDeeplink failed with a throwable", thE, false, false, false, false, 120, null);
         }
@@ -74,16 +74,16 @@ final class AFb1gSDK implements Application.ActivityLifecycleCallbacks {
     public static final void j_(AFb1gSDK aFb1gSDK, Intent intent) {
         Object objB;
         try {
-            jt.n.Companion companion = jt.n.INSTANCE;
+            gt.n.Companion companion = gt.n.INSTANCE;
             AFb1bSDK.AFa1zSDK aFa1zSDK = aFb1gSDK.AFLogger;
             Intrinsics.checkNotNull(intent);
             aFa1zSDK.n_(intent);
-            objB = jt.n.b(Unit.f22483a);
+            objB = gt.n.b(Unit.f22938a);
         } catch (Throwable th2) {
-            jt.n.Companion companion2 = jt.n.INSTANCE;
-            objB = jt.n.b(jt.o.a(th2));
+            gt.n.Companion companion2 = gt.n.INSTANCE;
+            objB = gt.n.b(gt.o.a(th2));
         }
-        Throwable thE = jt.n.e(objB);
+        Throwable thE = gt.n.e(objB);
         if (thE != null) {
             AFLoggerBase.e$default(AFLogger.INSTANCE, LogTag.SDK_LIFECYCLE, "Listener threw an exception", thE, false, false, false, false, 120, null);
         }
@@ -94,14 +94,14 @@ final class AFb1gSDK implements Application.ActivityLifecycleCallbacks {
         Object objB;
         aFb1gSDK.unregisterClient = false;
         try {
-            jt.n.Companion companion = jt.n.INSTANCE;
+            gt.n.Companion companion = gt.n.INSTANCE;
             aFb1gSDK.AFLogger.registerClient();
-            objB = jt.n.b(Unit.f22483a);
+            objB = gt.n.b(Unit.f22938a);
         } catch (Throwable th2) {
-            jt.n.Companion companion2 = jt.n.INSTANCE;
-            objB = jt.n.b(jt.o.a(th2));
+            gt.n.Companion companion2 = gt.n.INSTANCE;
+            objB = gt.n.b(gt.o.a(th2));
         }
-        Throwable thE = jt.n.e(objB);
+        Throwable thE = gt.n.e(objB);
         if (thE != null) {
             AFLoggerBase.e$default(AFLogger.INSTANCE, LogTag.SDK_LIFECYCLE, "Background task failed with a throwable", thE, false, false, false, false, 120, null);
         }
@@ -114,11 +114,11 @@ final class AFb1gSDK implements Application.ActivityLifecycleCallbacks {
             return;
         }
         final Intent intent = activity.getIntent();
-        if (this.f5231d.e_(intent)) {
+        if (this.f5304d.e_(intent)) {
             this.registerClient.execute(new Runnable() { // from class: com.appsflyer.internal.p
                 @Override // java.lang.Runnable
                 public final void run() {
-                    AFb1gSDK.i_(this.f5513a, intent);
+                    AFb1gSDK.i_(this.f5586a, intent);
                 }
             });
         }
@@ -134,7 +134,7 @@ final class AFb1gSDK implements Application.ActivityLifecycleCallbacks {
         Intrinsics.checkNotNullParameter(activity, "");
         if (this.unregisterClient) {
             ScheduledExecutorService scheduledExecutorService = this.registerClient;
-            Runnable runnable = this.f5232v;
+            Runnable runnable = this.f5305v;
             AFb1bSDK.Companion companion = AFb1bSDK.INSTANCE;
             this.AFKeystoreWrapper = scheduledExecutorService.schedule(runnable, AFb1bSDK.Companion.unregisterClient(), TimeUnit.MILLISECONDS);
         }
@@ -149,7 +149,7 @@ final class AFb1gSDK implements Application.ActivityLifecycleCallbacks {
             this.registerClient.execute(new Runnable() { // from class: com.appsflyer.internal.q
                 @Override // java.lang.Runnable
                 public final void run() {
-                    AFb1gSDK.j_(this.f5515a, intent);
+                    AFb1gSDK.j_(this.f5588a, intent);
                 }
             });
         } else {

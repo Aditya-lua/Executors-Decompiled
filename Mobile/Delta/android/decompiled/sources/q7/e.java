@@ -4,7 +4,7 @@ package q7;
 public class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final r7.c.a f29236a = r7.c.a.a("ef");
+    public static final r7.c.a f29589a = r7.c.a.a("ef");
     public static final r7.c.a b = r7.c.a.a("ty", "v");
 
     public static n7.a a(r7.c cVar, f7.i iVar) {
@@ -37,7 +37,7 @@ public class e {
     public static n7.a b(r7.c cVar, f7.i iVar) {
         n7.a aVar = null;
         while (cVar.f()) {
-            if (cVar.r(f29236a) != 0) {
+            if (cVar.r(f29589a) != 0) {
                 cVar.s();
                 cVar.u();
             } else {

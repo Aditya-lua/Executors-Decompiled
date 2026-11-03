@@ -27,9 +27,9 @@ public final class p1 extends n1 {
         r1 r1Var2;
         synchronized (s1Var) {
             try {
-                r1Var2 = s1Var.f7232c;
+                r1Var2 = s1Var.f7306c;
                 if (r1Var2 != r1Var) {
-                    s1Var.f7232c = r1Var;
+                    s1Var.f7306c = r1Var;
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -45,7 +45,7 @@ public final class p1 extends n1 {
 
     @Override // com.google.android.gms.internal.play_billing.n1
     public final void d(r1 r1Var, Thread thread) {
-        r1Var.f7222a = thread;
+        r1Var.f7296a = thread;
     }
 
     @Override // com.google.android.gms.internal.play_billing.n1
@@ -67,10 +67,10 @@ public final class p1 extends n1 {
     public final boolean f(s1 s1Var, Object obj, Object obj2) {
         synchronized (s1Var) {
             try {
-                if (s1Var.f7231a != obj) {
+                if (s1Var.f7305a != obj) {
                     return false;
                 }
-                s1Var.f7231a = obj2;
+                s1Var.f7305a = obj2;
                 return true;
             } catch (Throwable th2) {
                 throw th2;
@@ -82,10 +82,10 @@ public final class p1 extends n1 {
     public final boolean g(s1 s1Var, r1 r1Var, r1 r1Var2) {
         synchronized (s1Var) {
             try {
-                if (s1Var.f7232c != r1Var) {
+                if (s1Var.f7306c != r1Var) {
                     return false;
                 }
-                s1Var.f7232c = r1Var2;
+                s1Var.f7306c = r1Var2;
                 return true;
             } catch (Throwable th2) {
                 throw th2;

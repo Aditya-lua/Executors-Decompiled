@@ -11,30 +11,30 @@ public final class zzbg extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzbg> CREATOR = new e0();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final String f7422f;
+    public final String f7496f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final zzbe f7423g;
+    public final zzbe f7497g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final String f7424h;
+    public final String f7498h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final long f7425i;
+    public final long f7499i;
 
     public zzbg(zzbg zzbgVar, long j10) {
         m.l(zzbgVar);
-        this.f7422f = zzbgVar.f7422f;
-        this.f7423g = zzbgVar.f7423g;
-        this.f7424h = zzbgVar.f7424h;
-        this.f7425i = j10;
+        this.f7496f = zzbgVar.f7496f;
+        this.f7497g = zzbgVar.f7497g;
+        this.f7498h = zzbgVar.f7498h;
+        this.f7499i = j10;
     }
 
     public final String toString() {
-        String strValueOf = String.valueOf(this.f7423g);
-        String str = this.f7424h;
+        String strValueOf = String.valueOf(this.f7497g);
+        String str = this.f7498h;
         int length = String.valueOf(str).length();
-        String str2 = this.f7422f;
+        String str2 = this.f7496f;
         StringBuilder sb2 = new StringBuilder(length + 13 + String.valueOf(str2).length() + 8 + strValueOf.length());
         sb2.append("origin=");
         sb2.append(str);
@@ -51,9 +51,9 @@ public final class zzbg extends AbstractSafeParcelable {
     }
 
     public zzbg(String str, zzbe zzbeVar, String str2, long j10) {
-        this.f7422f = str;
-        this.f7423g = zzbeVar;
-        this.f7424h = str2;
-        this.f7425i = j10;
+        this.f7496f = str;
+        this.f7497g = zzbeVar;
+        this.f7498h = str2;
+        this.f7499i = j10;
     }
 }

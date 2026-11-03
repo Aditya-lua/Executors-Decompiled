@@ -35,11 +35,11 @@ public final class d extends ConnectivityManager.NetworkCallback {
         }
 
         public static final Unit c(y yVar, ConnectivityManager connectivityManager, d dVar) {
-            if (yVar.f22568a) {
-                w.e().a(m.f3981a, "NetworkRequestConstraintController unregister callback");
+            if (yVar.f23023a) {
+                w.e().a(m.f3879a, "NetworkRequestConstraintController unregister callback");
                 connectivityManager.unregisterNetworkCallback(dVar);
             }
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
 
         @NotNull
@@ -50,16 +50,16 @@ public final class d extends ConnectivityManager.NetworkCallback {
             final d dVar = new d(onConstraintState, null);
             final y yVar = new y();
             try {
-                w.e().a(m.f3981a, "NetworkRequestConstraintController register callback");
+                w.e().a(m.f3879a, "NetworkRequestConstraintController register callback");
                 connManager.registerNetworkCallback(networkRequest, dVar);
-                yVar.f22568a = true;
+                yVar.f23023a = true;
             } catch (RuntimeException e10) {
                 String name = e10.getClass().getName();
                 Intrinsics.checkNotNullExpressionValue(name, "getName(...)");
                 if (!x.D(name, "TooManyRequestsException", false, 2, null)) {
                     throw e10;
                 }
-                w.e().b(m.f3981a, "NetworkRequestConstraintController couldn't register callback", e10);
+                w.e().b(m.f3879a, "NetworkRequestConstraintController couldn't register callback", e10);
                 onConstraintState.invoke(new b.ConstraintsNotMet(7));
             }
             return new Function0() { // from class: b6.c
@@ -82,14 +82,14 @@ public final class d extends ConnectivityManager.NetworkCallback {
     public void onCapabilitiesChanged(@NotNull Network network, @NotNull NetworkCapabilities networkCapabilities) {
         Intrinsics.checkNotNullParameter(network, "network");
         Intrinsics.checkNotNullParameter(networkCapabilities, "networkCapabilities");
-        w.e().a(m.f3981a, "NetworkRequestConstraintController onCapabilitiesChanged callback");
-        this.onConstraintState.invoke(b.a.f3950a);
+        w.e().a(m.f3879a, "NetworkRequestConstraintController onCapabilitiesChanged callback");
+        this.onConstraintState.invoke(b.a.f3848a);
     }
 
     @Override // android.net.ConnectivityManager.NetworkCallback
     public void onLost(@NotNull Network network) {
         Intrinsics.checkNotNullParameter(network, "network");
-        w.e().a(m.f3981a, "NetworkRequestConstraintController onLost callback");
+        w.e().a(m.f3879a, "NetworkRequestConstraintController onLost callback");
         this.onConstraintState.invoke(new b.ConstraintsNotMet(7));
     }
 

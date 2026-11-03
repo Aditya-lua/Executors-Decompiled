@@ -39,7 +39,7 @@ public final class AutoClassificationConfig implements Parcelable {
         }
 
         public final IdConfig.IdSideConfig a() {
-            return new IdConfig.IdSideConfig("unknown", IdConfig.b.Front, Screen.Overlay.CornersOnly.f10710a, new IdConfig.AutoCaptureConfig(null, 1, null), new IdConfig.ManualCaptureConfig(true, 0L));
+            return new IdConfig.IdSideConfig("unknown", IdConfig.b.Front, Screen.Overlay.CornersOnly.f10791a, new IdConfig.AutoCaptureConfig(null, 1, null), new IdConfig.ManualCaptureConfig(true, 0L));
         }
 
         @NotNull

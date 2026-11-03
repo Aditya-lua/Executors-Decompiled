@@ -1,75 +1,38 @@
 package ni;
 
-import android.content.Context;
-import gk.p;
-import jv.d;
-import jv.f;
-import jv.x;
-import okhttp3.ResponseBody;
-import vi.h;
-import vk.g;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import org.jetbrains.annotations.NotNull;
+import rg.p0;
+import rg.q0;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class b implements rk.a {
+@Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u001d\u0010\t\u001a\u00020\b2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\t\u0010\n¨\u0006\u000b"}, d2 = {"Lni/b;", "", "<init>", "()V", "Landroid/app/Activity;", "activity", "", "active", "", "b", "(Landroid/app/Activity;Z)V", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static String f26282a;
+    @NotNull
+    public static final b f27216a = new b();
 
-    public class a implements f<ResponseBody> {
-        public a() {
+    public static final void c(Activity activity, boolean z10) {
+        if (activity.isFinishing() || activity.isDestroyed()) {
+            return;
         }
-
-        @Override // jv.f
-        public void a(d<ResponseBody> dVar, x<ResponseBody> xVar) {
-            p.b("rbx.jni", "sendSessionReport() success:" + xVar.g());
-        }
-
-        @Override // jv.f
-        public void b(d<ResponseBody> dVar, Throwable th2) {
-        }
+        new AlertDialog.Builder(activity).setIcon(z10 ? p0.b : p0.f30516a).setTitle(q0.f30589y).setPositiveButton(q0.f30577u, (DialogInterface.OnClickListener) null).show();
     }
 
-    public b(Context context) {
-        f26282a = context.getFilesDir().getAbsolutePath();
-    }
-
-    @Override // rk.a
-    public String a() {
-        return f26282a;
-    }
-
-    @Override // rk.a
-    public void b(String str, String str2) {
-        long j10;
-        try {
-            j10 = Long.parseLong(str2);
-        } catch (NumberFormatException unused) {
-            p.k("rbx.jni", "sendSessionReport() could not parse placeId");
-            j10 = -1;
-        }
-        g.d().a().a(j10, str).B(new a());
-    }
-
-    @Override // rk.a
-    public String c() {
-        return Long.toString(h.e().g());
-    }
-
-    @Override // rk.a
-    public String d() {
-        return fk.c.c().k();
-    }
-
-    @Override // rk.a
-    public String e() {
-        return "2.743.1136";
-    }
-
-    @Override // rk.a
-    public void f(String str, String str2, String str3, long j10) {
-        try {
-            Long.parseLong(str3);
-        } catch (NumberFormatException unused) {
+    public final void b(@NotNull final Activity activity, final boolean active) {
+        Intrinsics.checkNotNullParameter(activity, "activity");
+        if (rh.h.a().I1()) {
+            activity.runOnUiThread(new Runnable() { // from class: ni.a
+                @Override // java.lang.Runnable
+                public final void run() {
+                    b.c(activity, active);
+                }
+            });
         }
     }
 }

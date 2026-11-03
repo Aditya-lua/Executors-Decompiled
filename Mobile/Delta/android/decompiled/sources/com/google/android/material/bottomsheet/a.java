@@ -1,5 +1,6 @@
 package com.google.android.material.bottomsheet;
 
+import ad.r;
 import android.R;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -18,68 +19,67 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.c1;
 import androidx.core.view.o0;
 import androidx.core.view.y;
-import gd.g;
-import hc.h;
-import hc.j;
+import hd.g;
+import ic.h;
+import ic.j;
 import j.l;
 import y2.p;
-import zc.r;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class a extends l {
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public BottomSheetBehavior<FrameLayout> f7638g;
+    public BottomSheetBehavior<FrameLayout> f7712g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public FrameLayout f7639h;
+    public FrameLayout f7713h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public CoordinatorLayout f7640i;
+    public CoordinatorLayout f7714i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public FrameLayout f7641j;
+    public FrameLayout f7715j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public boolean f7642k;
+    public boolean f7716k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public boolean f7643l;
+    public boolean f7717l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public boolean f7644m;
+    public boolean f7718m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public boolean f7645n;
+    public boolean f7719n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public f f7646o;
+    public f f7720o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public boolean f7647p;
+    public boolean f7721p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public bd.c f7648q;
+    public cd.c f7722q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
     @NonNull
-    public BottomSheetBehavior.g f7649r;
+    public BottomSheetBehavior.g f7723r;
 
     /* JADX INFO: renamed from: com.google.android.material.bottomsheet.a$a, reason: collision with other inner class name */
-    public class C0116a implements y {
-        public C0116a() {
+    public class C0120a implements y {
+        public C0120a() {
         }
 
         @Override // androidx.core.view.y
-        public WindowInsetsCompat K(View view, WindowInsetsCompat windowInsetsCompat) {
-            if (a.this.f7646o != null) {
-                a.this.f7638g.F0(a.this.f7646o);
+        public WindowInsetsCompat J(View view, WindowInsetsCompat windowInsetsCompat) {
+            if (a.this.f7720o != null) {
+                a.this.f7712g.F0(a.this.f7720o);
             }
             if (windowInsetsCompat != null) {
                 a aVar = a.this;
-                aVar.f7646o = new f(aVar.f7641j, windowInsetsCompat, null);
-                a.this.f7646o.e(a.this.getWindow());
-                a.this.f7638g.c0(a.this.f7646o);
+                aVar.f7720o = new f(aVar.f7715j, windowInsetsCompat, null);
+                a.this.f7720o.e(a.this.getWindow());
+                a.this.f7712g.c0(a.this.f7720o);
             }
             return windowInsetsCompat;
         }
@@ -92,7 +92,7 @@ public class a extends l {
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
             a aVar = a.this;
-            if (aVar.f7643l && aVar.isShowing() && a.this.z()) {
+            if (aVar.f7717l && aVar.isShowing() && a.this.A()) {
                 a.this.cancel();
             }
         }
@@ -105,7 +105,7 @@ public class a extends l {
         @Override // androidx.core.view.a
         public void g(View view, @NonNull p pVar) {
             super.g(view, pVar);
-            if (!a.this.f7643l) {
+            if (!a.this.f7717l) {
                 pVar.q0(false);
             } else {
                 pVar.a(1048576);
@@ -117,7 +117,7 @@ public class a extends l {
         public boolean j(View view, int i10, Bundle bundle) {
             if (i10 == 1048576) {
                 a aVar = a.this;
-                if (aVar.f7643l) {
+                if (aVar.f7717l) {
                     aVar.cancel();
                     return true;
                 }
@@ -155,18 +155,18 @@ public class a extends l {
     public static class f extends BottomSheetBehavior.g {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Boolean f7655a;
+        public final Boolean f7729a;
 
         @NonNull
         public final WindowInsetsCompat b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public Window f7656c;
+        public Window f7730c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public boolean f7657d;
+        public boolean f7731d;
 
-        public /* synthetic */ f(View view, WindowInsetsCompat windowInsetsCompat, C0116a c0116a) {
+        public /* synthetic */ f(View view, WindowInsetsCompat windowInsetsCompat, C0120a c0120a) {
             this(view, windowInsetsCompat);
         }
 
@@ -187,30 +187,30 @@ public class a extends l {
 
         public final void d(View view) {
             if (view.getTop() < this.b.getSystemWindowInsetTop()) {
-                Window window = this.f7656c;
+                Window window = this.f7730c;
                 if (window != null) {
-                    Boolean bool = this.f7655a;
-                    zc.d.f(window, bool == null ? this.f7657d : bool.booleanValue());
+                    Boolean bool = this.f7729a;
+                    ad.d.f(window, bool == null ? this.f7731d : bool.booleanValue());
                 }
                 view.setPadding(view.getPaddingLeft(), this.b.getSystemWindowInsetTop() - view.getTop(), view.getPaddingRight(), view.getPaddingBottom());
                 return;
             }
             if (view.getTop() != 0) {
-                Window window2 = this.f7656c;
+                Window window2 = this.f7730c;
                 if (window2 != null) {
-                    zc.d.f(window2, this.f7657d);
+                    ad.d.f(window2, this.f7731d);
                 }
                 view.setPadding(view.getPaddingLeft(), 0, view.getPaddingRight(), view.getPaddingBottom());
             }
         }
 
         public void e(Window window) {
-            if (this.f7656c == window) {
+            if (this.f7730c == window) {
                 return;
             }
-            this.f7656c = window;
+            this.f7730c = window;
             if (window != null) {
-                this.f7657d = c1.a(window, window.getDecorView()).b();
+                this.f7731d = c1.a(window, window.getDecorView()).b();
             }
         }
 
@@ -219,25 +219,25 @@ public class a extends l {
             g gVarT0 = BottomSheetBehavior.q0(view).t0();
             ColorStateList colorStateListX = gVarT0 != null ? gVarT0.x() : o0.r(view);
             if (colorStateListX != null) {
-                this.f7655a = Boolean.valueOf(tc.a.h(colorStateListX.getDefaultColor()));
+                this.f7729a = Boolean.valueOf(uc.a.h(colorStateListX.getDefaultColor()));
                 return;
             }
             Integer numE = r.e(view);
             if (numE != null) {
-                this.f7655a = Boolean.valueOf(tc.a.h(numE.intValue()));
+                this.f7729a = Boolean.valueOf(uc.a.h(numE.intValue()));
             } else {
-                this.f7655a = null;
+                this.f7729a = null;
             }
         }
     }
 
     public a(@NonNull Context context, int i10) {
         super(context, m(context, i10));
-        this.f7643l = true;
-        this.f7644m = true;
-        this.f7649r = new e();
+        this.f7717l = true;
+        this.f7718m = true;
+        this.f7723r = new e();
         o(1);
-        this.f7647p = getContext().getTheme().obtainStyledAttributes(new int[]{hc.b.f18795t}).getBoolean(0, false);
+        this.f7721p = getContext().getTheme().obtainStyledAttributes(new int[]{ic.b.f20617t}).getBoolean(0, false);
     }
 
     public static int m(@NonNull Context context, int i10) {
@@ -245,15 +245,25 @@ public class a extends l {
             return i10;
         }
         TypedValue typedValue = new TypedValue();
-        return context.getTheme().resolveAttribute(hc.b.b, typedValue, true) ? typedValue.resourceId : j.f18932c;
+        return context.getTheme().resolveAttribute(ic.b.b, typedValue, true) ? typedValue.resourceId : j.f20754c;
+    }
+
+    public boolean A() {
+        if (!this.f7719n) {
+            TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(new int[]{R.attr.windowCloseOnTouchOutside});
+            this.f7718m = typedArrayObtainStyledAttributes.getBoolean(0, true);
+            typedArrayObtainStyledAttributes.recycle();
+            this.f7719n = true;
+        }
+        return this.f7718m;
     }
 
     public final void B() {
-        bd.c cVar = this.f7648q;
+        cd.c cVar = this.f7722q;
         if (cVar == null) {
             return;
         }
-        if (this.f7643l) {
+        if (this.f7717l) {
             cVar.b();
         } else {
             cVar.d();
@@ -262,29 +272,29 @@ public class a extends l {
 
     public final View C(int i10, View view, ViewGroup.LayoutParams layoutParams) {
         u();
-        CoordinatorLayout coordinatorLayout = (CoordinatorLayout) this.f7639h.findViewById(hc.f.f18863e);
+        CoordinatorLayout coordinatorLayout = (CoordinatorLayout) this.f7713h.findViewById(ic.f.f20685e);
         if (i10 != 0 && view == null) {
             view = getLayoutInflater().inflate(i10, (ViewGroup) coordinatorLayout, false);
         }
-        if (this.f7647p) {
-            o0.A0(this.f7641j, new C0116a());
+        if (this.f7721p) {
+            o0.A0(this.f7715j, new C0120a());
         }
-        this.f7641j.removeAllViews();
+        this.f7715j.removeAllViews();
         if (layoutParams == null) {
-            this.f7641j.addView(view);
+            this.f7715j.addView(view);
         } else {
-            this.f7641j.addView(view, layoutParams);
+            this.f7715j.addView(view, layoutParams);
         }
-        coordinatorLayout.findViewById(hc.f.V).setOnClickListener(new b());
-        o0.m0(this.f7641j, new c());
-        this.f7641j.setOnTouchListener(new d());
-        return this.f7639h;
+        coordinatorLayout.findViewById(ic.f.V).setOnClickListener(new b());
+        o0.m0(this.f7715j, new c());
+        this.f7715j.setOnTouchListener(new d());
+        return this.f7713h;
     }
 
     @Override // android.app.Dialog, android.content.DialogInterface
     public void cancel() {
         BottomSheetBehavior<FrameLayout> bottomSheetBehaviorV = v();
-        if (!this.f7642k || bottomSheetBehaviorV.v0() == 5) {
+        if (!this.f7716k || bottomSheetBehaviorV.v0() == 5) {
             super.cancel();
         } else {
             bottomSheetBehaviorV.X0(5);
@@ -296,17 +306,17 @@ public class a extends l {
         super.onAttachedToWindow();
         Window window = getWindow();
         if (window != null) {
-            boolean z10 = this.f7647p && Color.alpha(window.getNavigationBarColor()) < 255;
-            FrameLayout frameLayout = this.f7639h;
+            boolean z10 = this.f7721p && Color.alpha(window.getNavigationBarColor()) < 255;
+            FrameLayout frameLayout = this.f7713h;
             if (frameLayout != null) {
                 frameLayout.setFitsSystemWindows(!z10);
             }
-            CoordinatorLayout coordinatorLayout = this.f7640i;
+            CoordinatorLayout coordinatorLayout = this.f7714i;
             if (coordinatorLayout != null) {
                 coordinatorLayout.setFitsSystemWindows(!z10);
             }
             c1.b(window, !z10);
-            f fVar = this.f7646o;
+            f fVar = this.f7720o;
             if (fVar != null) {
                 fVar.e(window);
             }
@@ -327,11 +337,11 @@ public class a extends l {
 
     @Override // android.app.Dialog, android.view.Window.Callback
     public void onDetachedFromWindow() {
-        f fVar = this.f7646o;
+        f fVar = this.f7720o;
         if (fVar != null) {
             fVar.e(null);
         }
-        bd.c cVar = this.f7648q;
+        cd.c cVar = this.f7722q;
         if (cVar != null) {
             cVar.d();
         }
@@ -340,19 +350,19 @@ public class a extends l {
     @Override // e.w, android.app.Dialog
     public void onStart() {
         super.onStart();
-        BottomSheetBehavior<FrameLayout> bottomSheetBehavior = this.f7638g;
+        BottomSheetBehavior<FrameLayout> bottomSheetBehavior = this.f7712g;
         if (bottomSheetBehavior == null || bottomSheetBehavior.v0() != 5) {
             return;
         }
-        this.f7638g.X0(4);
+        this.f7712g.X0(4);
     }
 
     @Override // android.app.Dialog
     public void setCancelable(boolean z10) {
         super.setCancelable(z10);
-        if (this.f7643l != z10) {
-            this.f7643l = z10;
-            BottomSheetBehavior<FrameLayout> bottomSheetBehavior = this.f7638g;
+        if (this.f7717l != z10) {
+            this.f7717l = z10;
+            BottomSheetBehavior<FrameLayout> bottomSheetBehavior = this.f7712g;
             if (bottomSheetBehavior != null) {
                 bottomSheetBehavior.P0(z10);
             }
@@ -365,11 +375,11 @@ public class a extends l {
     @Override // android.app.Dialog
     public void setCanceledOnTouchOutside(boolean z10) {
         super.setCanceledOnTouchOutside(z10);
-        if (z10 && !this.f7643l) {
-            this.f7643l = true;
+        if (z10 && !this.f7717l) {
+            this.f7717l = true;
         }
-        this.f7644m = z10;
-        this.f7645n = true;
+        this.f7718m = z10;
+        this.f7719n = true;
     }
 
     @Override // j.l, e.w, android.app.Dialog
@@ -378,45 +388,35 @@ public class a extends l {
     }
 
     public final FrameLayout u() {
-        if (this.f7639h == null) {
-            FrameLayout frameLayout = (FrameLayout) View.inflate(getContext(), h.f18887a, null);
-            this.f7639h = frameLayout;
-            this.f7640i = (CoordinatorLayout) frameLayout.findViewById(hc.f.f18863e);
-            FrameLayout frameLayout2 = (FrameLayout) this.f7639h.findViewById(hc.f.f18864f);
-            this.f7641j = frameLayout2;
+        if (this.f7713h == null) {
+            FrameLayout frameLayout = (FrameLayout) View.inflate(getContext(), h.f20709a, null);
+            this.f7713h = frameLayout;
+            this.f7714i = (CoordinatorLayout) frameLayout.findViewById(ic.f.f20685e);
+            FrameLayout frameLayout2 = (FrameLayout) this.f7713h.findViewById(ic.f.f20686f);
+            this.f7715j = frameLayout2;
             BottomSheetBehavior<FrameLayout> bottomSheetBehaviorQ0 = BottomSheetBehavior.q0(frameLayout2);
-            this.f7638g = bottomSheetBehaviorQ0;
-            bottomSheetBehaviorQ0.c0(this.f7649r);
-            this.f7638g.P0(this.f7643l);
-            this.f7648q = new bd.c(this.f7638g, this.f7641j);
+            this.f7712g = bottomSheetBehaviorQ0;
+            bottomSheetBehaviorQ0.c0(this.f7723r);
+            this.f7712g.P0(this.f7717l);
+            this.f7722q = new cd.c(this.f7712g, this.f7715j);
         }
-        return this.f7639h;
+        return this.f7713h;
     }
 
     @NonNull
     public BottomSheetBehavior<FrameLayout> v() {
-        if (this.f7638g == null) {
+        if (this.f7712g == null) {
             u();
         }
-        return this.f7638g;
+        return this.f7712g;
     }
 
-    public boolean w() {
-        return this.f7642k;
+    public boolean x() {
+        return this.f7716k;
     }
 
     public void y() {
-        this.f7638g.F0(this.f7649r);
-    }
-
-    public boolean z() {
-        if (!this.f7645n) {
-            TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(new int[]{R.attr.windowCloseOnTouchOutside});
-            this.f7644m = typedArrayObtainStyledAttributes.getBoolean(0, true);
-            typedArrayObtainStyledAttributes.recycle();
-            this.f7645n = true;
-        }
-        return this.f7644m;
+        this.f7712g.F0(this.f7723r);
     }
 
     @Override // j.l, e.w, android.app.Dialog

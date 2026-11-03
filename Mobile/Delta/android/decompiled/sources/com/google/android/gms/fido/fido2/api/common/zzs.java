@@ -16,10 +16,10 @@ public final class zzs extends AbstractSafeParcelable {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NonNull
-    public final List f6052f;
+    public final List f6125f;
 
     public zzs(@NonNull List list) {
-        this.f6052f = (List) m.l(list);
+        this.f6125f = (List) m.l(list);
     }
 
     public final boolean equals(Object obj) {
@@ -27,16 +27,16 @@ public final class zzs extends AbstractSafeParcelable {
             return false;
         }
         zzs zzsVar = (zzs) obj;
-        return this.f6052f.containsAll(zzsVar.f6052f) && zzsVar.f6052f.containsAll(this.f6052f);
+        return this.f6125f.containsAll(zzsVar.f6125f) && zzsVar.f6125f.containsAll(this.f6125f);
     }
 
     public final int hashCode() {
-        return k.c(new HashSet(this.f6052f));
+        return k.c(new HashSet(this.f6125f));
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i10) {
-        List list = this.f6052f;
+        List list = this.f6125f;
         int iA = o9.b.a(parcel);
         o9.b.z(parcel, 1, list, false);
         o9.b.b(parcel, iA);

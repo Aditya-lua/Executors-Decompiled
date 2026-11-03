@@ -6,14 +6,14 @@ import java.util.ArrayList;
 public class j0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final r7.c.a f29250a = r7.c.a.a("nm", "hd", "it");
+    public static final r7.c.a f29603a = r7.c.a.a("nm", "hd", "it");
 
     public static n7.q a(r7.c cVar, f7.i iVar) {
         ArrayList arrayList = new ArrayList();
         String strM = null;
         boolean zG = false;
         while (cVar.f()) {
-            int iR = cVar.r(f29250a);
+            int iR = cVar.r(f29603a);
             if (iR == 0) {
                 strM = cVar.m();
             } else if (iR == 1) {

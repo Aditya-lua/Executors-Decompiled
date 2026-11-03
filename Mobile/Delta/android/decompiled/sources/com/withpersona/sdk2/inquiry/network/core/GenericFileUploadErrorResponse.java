@@ -8,10 +8,10 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import um.h;
-import um.i;
-import um.m;
-import um.t;
+import sm.h;
+import sm.i;
+import sm.m;
+import sm.t;
 
 /* JADX INFO: loaded from: classes3.dex */
 @i(generateAdapter = true)
@@ -30,7 +30,7 @@ public final class GenericFileUploadErrorResponse {
 
         @NotNull
         public final h.e getAdapter() {
-            return vm.b.b(DocumentErrorResponse.class, "code").e(DocumentErrorResponse.DisabledFileTypeError.class, "document-generic-disabled-file-type-error").e(DocumentErrorResponse.FileLimitExceededError.class, "document-generic-file-limit-exceeded-error").e(DocumentErrorResponse.PageLimitExceededError.class, "document-generic-page-limit-exceeded-error").e(DocumentErrorResponse.MalformedFileError.class, "document-generic-malformed-file-error").e(DocumentErrorResponse.MalformedImageError.class, "document-generic-malformed-image-error").e(DocumentErrorResponse.MalformedPdfError.class, "document-generic-malformed-pdf-error").e(DocumentErrorResponse.GovernmentIdDimensionSizeError.class, "document-government-id-dimension-size-error").e(DocumentErrorResponse.FileSizeExceededError.class, "document-generic-file-size-exceeded-error").d(UnknownErrorAdapter.INSTANCE);
+            return tm.b.b(DocumentErrorResponse.class, "code").e(DocumentErrorResponse.DisabledFileTypeError.class, "document-generic-disabled-file-type-error").e(DocumentErrorResponse.FileLimitExceededError.class, "document-generic-file-limit-exceeded-error").e(DocumentErrorResponse.PageLimitExceededError.class, "document-generic-page-limit-exceeded-error").e(DocumentErrorResponse.MalformedFileError.class, "document-generic-malformed-file-error").e(DocumentErrorResponse.MalformedImageError.class, "document-generic-malformed-image-error").e(DocumentErrorResponse.MalformedPdfError.class, "document-generic-malformed-pdf-error").e(DocumentErrorResponse.GovernmentIdDimensionSizeError.class, "document-government-id-dimension-size-error").e(DocumentErrorResponse.FileSizeExceededError.class, "document-generic-file-size-exceeded-error").d(UnknownErrorAdapter.INSTANCE);
         }
 
         private Companion() {
@@ -94,7 +94,7 @@ public final class GenericFileUploadErrorResponse {
                     }
                 }
 
-                public Details(@um.g(name = "uploaded_file_type") @NotNull String str, @um.g(name = "enabled_file_types") @NotNull List<String> list) {
+                public Details(@sm.g(name = "uploaded_file_type") @NotNull String str, @sm.g(name = "enabled_file_types") @NotNull List<String> list) {
                     this.uploadedFileType = str;
                     this.enabledFileTypes = list;
                 }
@@ -310,7 +310,7 @@ public final class GenericFileUploadErrorResponse {
                     }
                 }
 
-                public Details(@um.g(name = "file_size_limit") @Nullable Long l10) {
+                public Details(@sm.g(name = "file_size_limit") @Nullable Long l10) {
                     this.fileSizeLimit = l10;
                 }
 
@@ -425,7 +425,7 @@ public final class GenericFileUploadErrorResponse {
                     }
                 }
 
-                public Details(@um.g(name = "min_dimension_size") int i10, @um.g(name = "max_dimension_size") int i11) {
+                public Details(@sm.g(name = "min_dimension_size") int i10, @sm.g(name = "max_dimension_size") int i11) {
                     this.minDimensionSize = i10;
                     this.maxDimensionSize = i11;
                 }
@@ -835,7 +835,7 @@ public final class GenericFileUploadErrorResponse {
                     }
                 }
 
-                public Details(@um.g(name = "page_limit") int i10) {
+                public Details(@sm.g(name = "page_limit") int i10) {
                     this.pageLimit = i10;
                 }
 
@@ -993,7 +993,7 @@ public final class GenericFileUploadErrorResponse {
         }
 
         /* JADX WARN: Can't rename method to resolve collision */
-        @Override // um.h
+        @Override // sm.h
         @NotNull
         public DocumentErrorResponse.UnknownError fromJson(@NotNull m mVar) {
             mVar.b();
@@ -1016,7 +1016,7 @@ public final class GenericFileUploadErrorResponse {
             return new DocumentErrorResponse.UnknownError(strNextStringOrNull, strNextStringOrNull2, null, 4, null);
         }
 
-        @Override // um.h
+        @Override // sm.h
         public void toJson(@NotNull t tVar, @Nullable DocumentErrorResponse.UnknownError unknownError) {
             tVar.c();
             tVar.n(Title.type);

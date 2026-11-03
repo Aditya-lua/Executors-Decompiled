@@ -17,14 +17,14 @@ public class g {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final e f28381a;
+    public final e f28600a;
 
     public g(@NonNull e eVar) {
-        this.f28381a = eVar;
+        this.f28600a = eVar;
     }
 
     public static String b(String str, c cVar, boolean z10) {
-        String strB = z10 ? cVar.b() : cVar.f28380a;
+        String strB = z10 ? cVar.b() : cVar.f28599a;
         String strReplaceAll = str.replaceAll("\\W+", "");
         int length = 242 - strB.length();
         if (strReplaceAll.length() > length) {
@@ -83,7 +83,7 @@ public class g {
     }
 
     public final File e() {
-        File fileA = this.f28381a.a();
+        File fileA = this.f28600a.a();
         if (fileA.isFile()) {
             fileA.delete();
         }

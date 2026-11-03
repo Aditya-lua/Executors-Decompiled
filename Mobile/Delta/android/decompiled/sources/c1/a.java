@@ -8,15 +8,15 @@ import java.util.List;
 public final class a implements d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final List<d> f4315a;
+    public final List<d> f4481a;
 
     public a(List<d> list) {
-        this.f4315a = list;
+        this.f4481a = list;
     }
 
     @Override // c1.d
     public d.a a(SessionConfiguration sessionConfiguration) {
-        Iterator<d> it = this.f4315a.iterator();
+        Iterator<d> it = this.f4481a.iterator();
         while (it.hasNext()) {
             d.a aVarA = it.next().a(sessionConfiguration);
             if (aVarA.a() != 0) {

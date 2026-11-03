@@ -8,16 +8,16 @@ import java.lang.reflect.Method;
 public abstract class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final w1.a<String, Method> f29218a;
+    public final w1.a<String, Method> f29571a;
     public final w1.a<String, Method> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final w1.a<String, Class> f29219c;
+    public final w1.a<String, Class> f29572c;
 
     public a(w1.a<String, Method> aVar, w1.a<String, Method> aVar2, w1.a<String, Class> aVar3) {
-        this.f29218a = aVar;
+        this.f29571a = aVar;
         this.b = aVar2;
-        this.f29219c = aVar3;
+        this.f29572c = aVar3;
     }
 
     public abstract void A(byte[] bArr);
@@ -102,23 +102,23 @@ public abstract class a {
     public abstract a b();
 
     public final Class c(Class<? extends c> cls) throws ClassNotFoundException {
-        Class cls2 = this.f29219c.get(cls.getName());
+        Class cls2 = this.f29572c.get(cls.getName());
         if (cls2 != null) {
             return cls2;
         }
         Class<?> cls3 = Class.forName(String.format("%s.%sParcelizer", cls.getPackage().getName(), cls.getSimpleName()), false, cls.getClassLoader());
-        this.f29219c.put(cls.getName(), cls3);
+        this.f29572c.put(cls.getName(), cls3);
         return cls3;
     }
 
     public final Method d(String str) throws NoSuchMethodException {
-        Method method = this.f29218a.get(str);
+        Method method = this.f29571a.get(str);
         if (method != null) {
             return method;
         }
         System.currentTimeMillis();
         Method declaredMethod = Class.forName(str, true, a.class.getClassLoader()).getDeclaredMethod("read", a.class);
-        this.f29218a.put(str, declaredMethod);
+        this.f29571a.put(str, declaredMethod);
         return declaredMethod;
     }
 

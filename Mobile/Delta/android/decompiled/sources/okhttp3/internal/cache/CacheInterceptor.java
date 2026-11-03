@@ -24,13 +24,13 @@ import okhttp3.internal.http.HttpMethod;
 import okhttp3.internal.http.RealResponseBody;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import xu.b0;
-import xu.e;
-import xu.f;
-import xu.g;
-import xu.p0;
-import xu.r0;
-import xu.s0;
+import vu.b0;
+import vu.e;
+import vu.f;
+import vu.g;
+import vu.p0;
+import vu.r0;
+import vu.s0;
 
 /* JADX INFO: loaded from: classes2.dex */
 @Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u0000 \u00102\u00020\u0001:\u0001\u0010B\u0011\u0012\b\u0010\u0002\u001a\u0004\u0018\u00010\u0003¢\u0006\u0004\b\u0004\u0010\u0005J\u0010\u0010\b\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\u000bH\u0016J\u001a\u0010\f\u001a\u00020\t2\b\u0010\r\u001a\u0004\u0018\u00010\u000e2\u0006\u0010\u000f\u001a\u00020\tH\u0002R\u0016\u0010\u0002\u001a\u0004\u0018\u00010\u0003X\u0080\u0004¢\u0006\b\n\u0000\u001a\u0004\b\u0006\u0010\u0007¨\u0006\u0011"}, d2 = {"Lokhttp3/internal/cache/CacheInterceptor;", "Lokhttp3/Interceptor;", "cache", "Lokhttp3/Cache;", "<init>", "(Lokhttp3/Cache;)V", "getCache$okhttp", "()Lokhttp3/Cache;", "intercept", "Lokhttp3/Response;", "chain", "Lokhttp3/Interceptor$Chain;", "cacheWritingResponse", "cacheRequest", "Lokhttp3/internal/cache/CacheRequest;", Payload.RESPONSE, "Companion", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
@@ -96,7 +96,7 @@ public final class CacheInterceptor implements Interceptor {
         r0 r0Var = new r0() { // from class: okhttp3.internal.cache.CacheInterceptor$cacheWritingResponse$cacheWritingSource$1
             private boolean cacheRequestClosed;
 
-            @Override // xu.r0, java.io.Closeable, java.lang.AutoCloseable
+            @Override // vu.r0, java.io.Closeable, java.lang.AutoCloseable
             public void close() {
                 if (!this.cacheRequestClosed && !_UtilJvmKt.discard(this, 100, TimeUnit.MILLISECONDS)) {
                     this.cacheRequestClosed = true;
@@ -105,14 +105,14 @@ public final class CacheInterceptor implements Interceptor {
                 source.close();
             }
 
-            @Override // xu.r0
+            @Override // vu.r0
             public long read(e sink, long byteCount) throws IOException {
                 Intrinsics.checkNotNullParameter(sink, "sink");
                 try {
                     long j10 = source.read(sink, byteCount);
                     if (j10 != -1) {
                         sink.f(fVarB.getBufferField(), sink.getSize() - j10, j10);
-                        fVarB.j0();
+                        fVarB.g0();
                         return j10;
                     }
                     if (!this.cacheRequestClosed) {
@@ -130,7 +130,7 @@ public final class CacheInterceptor implements Interceptor {
                 }
             }
 
-            @Override // xu.r0
+            @Override // vu.r0
             /* JADX INFO: renamed from: timeout */
             public s0 getTimeout() {
                 return source.getTimeout();

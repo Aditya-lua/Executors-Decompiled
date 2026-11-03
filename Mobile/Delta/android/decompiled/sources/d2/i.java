@@ -70,7 +70,7 @@ public class i {
     }
 
     /* JADX WARN: Code duplicated, block: B:165:0x0341  */
-    public static boolean c(c2.f fVar, b.InterfaceC0264b interfaceC0264b) {
+    public static boolean c(c2.f fVar, b.InterfaceC0276b interfaceC0276b) {
         o oVar;
         boolean z10;
         o oVar2;
@@ -93,7 +93,7 @@ public class i {
         while (i12 < size) {
             c2.e eVar2 = arrayListS1.get(i12);
             if (!d(fVar.A(), fVar.T(), eVar2.A(), eVar2.T())) {
-                c2.f.U1(i10, eVar2, interfaceC0264b, fVar.f4431p1, b.a.f14307k);
+                c2.f.U1(i10, eVar2, interfaceC0276b, fVar.f4597p1, b.a.f14287k);
             }
             boolean z11 = eVar2 instanceof c2.h;
             if (z11) {
@@ -138,13 +138,13 @@ public class i {
                     arrayList4.add(jVar);
                 }
             }
-            if (eVar2.O.f4347f == null && eVar2.Q.f4347f == null && !z11 && !(eVar2 instanceof c2.a)) {
+            if (eVar2.O.f4513f == null && eVar2.Q.f4513f == null && !z11 && !(eVar2 instanceof c2.a)) {
                 if (arrayList5 == null) {
                     arrayList5 = new ArrayList();
                 }
                 arrayList5.add(eVar2);
             }
-            if (eVar2.P.f4347f == null && eVar2.R.f4347f == null && eVar2.S.f4347f == null && !z11 && !(eVar2 instanceof c2.a)) {
+            if (eVar2.P.f4513f == null && eVar2.R.f4513f == null && eVar2.S.f4513f == null && !z11 && !(eVar2 instanceof c2.a)) {
                 if (arrayList6 == null) {
                     arrayList6 = new ArrayList();
                 }
@@ -179,21 +179,21 @@ public class i {
         if (dVarO.d() != null) {
             Iterator<c2.d> it = dVarO.d().iterator();
             while (it.hasNext()) {
-                a(it.next().f4345d, 0, arrayList7, null);
+                a(it.next().f4511d, 0, arrayList7, null);
             }
         }
         c2.d dVarO2 = fVar.o(c2.d.a.RIGHT);
         if (dVarO2.d() != null) {
             Iterator<c2.d> it2 = dVarO2.d().iterator();
             while (it2.hasNext()) {
-                a(it2.next().f4345d, 0, arrayList7, null);
+                a(it2.next().f4511d, 0, arrayList7, null);
             }
         }
         c2.d dVarO3 = fVar.o(c2.d.a.CENTER);
         if (dVarO3.d() != null) {
             Iterator<c2.d> it3 = dVarO3.d().iterator();
             while (it3.hasNext()) {
-                a(it3.next().f4345d, 0, arrayList7, null);
+                a(it3.next().f4511d, 0, arrayList7, null);
             }
         }
         if (arrayList5 != null) {
@@ -230,28 +230,28 @@ public class i {
         if (dVarO4.d() != null) {
             Iterator<c2.d> it4 = dVarO4.d().iterator();
             while (it4.hasNext()) {
-                a(it4.next().f4345d, 1, arrayList7, null);
+                a(it4.next().f4511d, 1, arrayList7, null);
             }
         }
         c2.d dVarO5 = fVar.o(c2.d.a.BASELINE);
         if (dVarO5.d() != null) {
             Iterator<c2.d> it5 = dVarO5.d().iterator();
             while (it5.hasNext()) {
-                a(it5.next().f4345d, 1, arrayList7, null);
+                a(it5.next().f4511d, 1, arrayList7, null);
             }
         }
         c2.d dVarO6 = fVar.o(c2.d.a.BOTTOM);
         if (dVarO6.d() != null) {
             Iterator<c2.d> it6 = dVarO6.d().iterator();
             while (it6.hasNext()) {
-                a(it6.next().f4345d, 1, arrayList7, null);
+                a(it6.next().f4511d, 1, arrayList7, null);
             }
         }
         c2.d dVarO7 = fVar.o(c2.d.a.CENTER);
         if (dVarO7.d() != null) {
             Iterator<c2.d> it7 = dVarO7.d().iterator();
             while (it7.hasNext()) {
-                a(it7.next().f4345d, 1, arrayList7, null);
+                a(it7.next().f4511d, 1, arrayList7, null);
             }
         }
         if (arrayList6 != null) {

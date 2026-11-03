@@ -11,11 +11,11 @@ import java.util.WeakHashMap;
 public final class z {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Map f23109a = Collections.synchronizedMap(new WeakHashMap());
+    public final Map f23503a = Collections.synchronizedMap(new WeakHashMap());
     public final Map b = Collections.synchronizedMap(new WeakHashMap());
 
     public final void c(BasePendingResult basePendingResult, boolean z10) {
-        this.f23109a.put(basePendingResult, Boolean.valueOf(z10));
+        this.f23503a.put(basePendingResult, Boolean.valueOf(z10));
         basePendingResult.c(new x(this, basePendingResult));
     }
 
@@ -39,18 +39,18 @@ public final class z {
     }
 
     public final void f() {
-        h(false, f.f23001u);
+        h(false, f.f23395u);
     }
 
     public final boolean g() {
-        return (this.f23109a.isEmpty() && this.b.isEmpty()) ? false : true;
+        return (this.f23503a.isEmpty() && this.b.isEmpty()) ? false : true;
     }
 
     public final void h(boolean z10, Status status) {
         HashMap map;
         HashMap map2;
-        synchronized (this.f23109a) {
-            map = new HashMap(this.f23109a);
+        synchronized (this.f23503a) {
+            map = new HashMap(this.f23503a);
         }
         synchronized (this.b) {
             map2 = new HashMap(this.b);

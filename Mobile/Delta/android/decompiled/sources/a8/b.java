@@ -1,53 +1,53 @@
 package a8;
 
 /* JADX INFO: loaded from: classes.dex */
-public final class b implements rf.a {
+public final class b implements sf.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final rf.a f120a = new b();
+    public static final sf.a f120a = new b();
 
-    public static final class a implements qf.e<a8.a> {
+    public static final class a implements rf.e<a8.a> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         public static final a f121a = new a();
-        public static final qf.d b = qf.d.d("sdkVersion");
+        public static final rf.d b = rf.d.d("sdkVersion");
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static final qf.d f122c = qf.d.d("model");
+        public static final rf.d f122c = rf.d.d("model");
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final qf.d f123d = qf.d.d("hardware");
+        public static final rf.d f123d = rf.d.d("hardware");
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public static final qf.d f124e = qf.d.d("device");
+        public static final rf.d f124e = rf.d.d("device");
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public static final qf.d f125f = qf.d.d("product");
+        public static final rf.d f125f = rf.d.d("product");
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public static final qf.d f126g = qf.d.d("osBuild");
+        public static final rf.d f126g = rf.d.d("osBuild");
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public static final qf.d f127h = qf.d.d("manufacturer");
+        public static final rf.d f127h = rf.d.d("manufacturer");
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public static final qf.d f128i = qf.d.d("fingerprint");
+        public static final rf.d f128i = rf.d.d("fingerprint");
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public static final qf.d f129j = qf.d.d("locale");
+        public static final rf.d f129j = rf.d.d("locale");
 
         /* JADX INFO: renamed from: k, reason: collision with root package name */
-        public static final qf.d f130k = qf.d.d("country");
+        public static final rf.d f130k = rf.d.d("country");
 
         /* JADX INFO: renamed from: l, reason: collision with root package name */
-        public static final qf.d f131l = qf.d.d("mccMnc");
+        public static final rf.d f131l = rf.d.d("mccMnc");
 
         /* JADX INFO: renamed from: m, reason: collision with root package name */
-        public static final qf.d f132m = qf.d.d("applicationBuild");
+        public static final rf.d f132m = rf.d.d("applicationBuild");
 
-        @Override // qf.b
+        @Override // rf.b
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
-        public void encode(a8.a aVar, qf.f fVar) {
+        public void encode(a8.a aVar, rf.f fVar) {
             fVar.add(b, aVar.m());
             fVar.add(f122c, aVar.j());
             fVar.add(f123d, aVar.f());
@@ -64,63 +64,63 @@ public final class b implements rf.a {
     }
 
     /* JADX INFO: renamed from: a8.b$b, reason: collision with other inner class name */
-    public static final class C0002b implements qf.e<j> {
+    public static final class C0002b implements rf.e<j> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         public static final C0002b f133a = new C0002b();
-        public static final qf.d b = qf.d.d("logRequest");
+        public static final rf.d b = rf.d.d("logRequest");
 
-        @Override // qf.b
+        @Override // rf.b
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
-        public void encode(j jVar, qf.f fVar) {
+        public void encode(j jVar, rf.f fVar) {
             fVar.add(b, jVar.c());
         }
     }
 
-    public static final class c implements qf.e<k> {
+    public static final class c implements rf.e<k> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         public static final c f134a = new c();
-        public static final qf.d b = qf.d.d("clientType");
+        public static final rf.d b = rf.d.d("clientType");
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static final qf.d f135c = qf.d.d("androidClientInfo");
+        public static final rf.d f135c = rf.d.d("androidClientInfo");
 
-        @Override // qf.b
+        @Override // rf.b
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
-        public void encode(k kVar, qf.f fVar) {
+        public void encode(k kVar, rf.f fVar) {
             fVar.add(b, kVar.c());
             fVar.add(f135c, kVar.b());
         }
     }
 
-    public static final class d implements qf.e<l> {
+    public static final class d implements rf.e<l> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         public static final d f136a = new d();
-        public static final qf.d b = qf.d.d("eventTimeMs");
+        public static final rf.d b = rf.d.d("eventTimeMs");
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static final qf.d f137c = qf.d.d("eventCode");
+        public static final rf.d f137c = rf.d.d("eventCode");
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final qf.d f138d = qf.d.d("eventUptimeMs");
+        public static final rf.d f138d = rf.d.d("eventUptimeMs");
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public static final qf.d f139e = qf.d.d("sourceExtension");
+        public static final rf.d f139e = rf.d.d("sourceExtension");
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public static final qf.d f140f = qf.d.d("sourceExtensionJsonProto3");
+        public static final rf.d f140f = rf.d.d("sourceExtensionJsonProto3");
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public static final qf.d f141g = qf.d.d("timezoneOffsetSeconds");
+        public static final rf.d f141g = rf.d.d("timezoneOffsetSeconds");
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public static final qf.d f142h = qf.d.d("networkConnectionInfo");
+        public static final rf.d f142h = rf.d.d("networkConnectionInfo");
 
-        @Override // qf.b
+        @Override // rf.b
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
-        public void encode(l lVar, qf.f fVar) {
+        public void encode(l lVar, rf.f fVar) {
             fVar.add(b, lVar.c());
             fVar.add(f137c, lVar.b());
             fVar.add(f138d, lVar.d());
@@ -131,33 +131,33 @@ public final class b implements rf.a {
         }
     }
 
-    public static final class e implements qf.e<m> {
+    public static final class e implements rf.e<m> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         public static final e f143a = new e();
-        public static final qf.d b = qf.d.d("requestTimeMs");
+        public static final rf.d b = rf.d.d("requestTimeMs");
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static final qf.d f144c = qf.d.d("requestUptimeMs");
+        public static final rf.d f144c = rf.d.d("requestUptimeMs");
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final qf.d f145d = qf.d.d("clientInfo");
+        public static final rf.d f145d = rf.d.d("clientInfo");
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public static final qf.d f146e = qf.d.d("logSource");
+        public static final rf.d f146e = rf.d.d("logSource");
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public static final qf.d f147f = qf.d.d("logSourceName");
+        public static final rf.d f147f = rf.d.d("logSourceName");
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public static final qf.d f148g = qf.d.d("logEvent");
+        public static final rf.d f148g = rf.d.d("logEvent");
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public static final qf.d f149h = qf.d.d("qosTier");
+        public static final rf.d f149h = rf.d.d("qosTier");
 
-        @Override // qf.b
+        @Override // rf.b
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
-        public void encode(m mVar, qf.f fVar) {
+        public void encode(m mVar, rf.f fVar) {
             fVar.add(b, mVar.g());
             fVar.add(f144c, mVar.h());
             fVar.add(f145d, mVar.b());
@@ -168,25 +168,25 @@ public final class b implements rf.a {
         }
     }
 
-    public static final class f implements qf.e<o> {
+    public static final class f implements rf.e<o> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         public static final f f150a = new f();
-        public static final qf.d b = qf.d.d("networkType");
+        public static final rf.d b = rf.d.d("networkType");
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static final qf.d f151c = qf.d.d("mobileSubtype");
+        public static final rf.d f151c = rf.d.d("mobileSubtype");
 
-        @Override // qf.b
+        @Override // rf.b
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
-        public void encode(o oVar, qf.f fVar) {
+        public void encode(o oVar, rf.f fVar) {
             fVar.add(b, oVar.c());
             fVar.add(f151c, oVar.b());
         }
     }
 
-    @Override // rf.a
-    public void configure(rf.b<?> bVar) {
+    @Override // sf.a
+    public void configure(sf.b<?> bVar) {
         C0002b c0002b = C0002b.f133a;
         bVar.registerEncoder(j.class, c0002b);
         bVar.registerEncoder(a8.d.class, c0002b);

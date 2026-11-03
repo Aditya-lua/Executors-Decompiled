@@ -8,11 +8,11 @@ import java.util.List;
 public final class r implements q {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f6753a;
+    public final String f6827a;
     public final ArrayList b;
 
     public r(String str, List list) {
-        this.f6753a = str;
+        this.f6827a = str;
         ArrayList arrayList = new ArrayList();
         this.b = arrayList;
         arrayList.addAll(list);
@@ -24,7 +24,7 @@ public final class r implements q {
     }
 
     public final String b() {
-        return this.f6753a;
+        return this.f6827a;
     }
 
     public final ArrayList c() {
@@ -44,15 +44,15 @@ public final class r implements q {
             return false;
         }
         r rVar = (r) obj;
-        String str = this.f6753a;
-        if (str == null ? rVar.f6753a == null : str.equals(rVar.f6753a)) {
+        String str = this.f6827a;
+        if (str == null ? rVar.f6827a == null : str.equals(rVar.f6827a)) {
             return this.b.equals(rVar.b);
         }
         return false;
     }
 
     public final int hashCode() {
-        String str = this.f6753a;
+        String str = this.f6827a;
         return ((str != null ? str.hashCode() : 0) * 31) + this.b.hashCode();
     }
 

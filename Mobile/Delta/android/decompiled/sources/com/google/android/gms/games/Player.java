@@ -8,21 +8,21 @@ import m9.e;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface Player extends e<Player>, Parcelable {
-    Uri B();
+    Uri A();
 
-    Uri I1();
+    Uri G1();
 
-    long a0();
+    PlayerRelationshipInfo Y0();
+
+    long Z();
 
     boolean c();
 
-    PlayerRelationshipInfo c1();
+    Uri c0();
 
     long d();
 
-    CurrentPlayerInfo d2();
-
-    Uri e0();
+    CurrentPlayerInfo e2();
 
     @KeepName
     @Deprecated
@@ -45,15 +45,15 @@ public interface Player extends e<Player>, Parcelable {
     Uri h();
 
     @NonNull
-    String k3();
-
-    @NonNull
     String l();
 
-    @Deprecated
-    long r0();
+    @NonNull
+    String m3();
 
-    PlayerLevelInfo z0();
+    @Deprecated
+    long n0();
+
+    PlayerLevelInfo v0();
 
     String zza();
 

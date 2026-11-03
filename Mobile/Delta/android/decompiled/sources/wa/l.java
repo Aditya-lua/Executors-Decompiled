@@ -15,24 +15,24 @@ import java.util.concurrent.TimeUnit;
 public final class l implements x8.b {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static x8.b f34146e;
+    public static x8.b f34352e;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f34147a;
+    public final Context f34353a;
     public boolean b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final ScheduledExecutorService f34148c;
+    public final ScheduledExecutorService f34354c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final ExecutorService f34149d;
+    public final ExecutorService f34355d;
 
     public l(Context context) {
         this.b = false;
         ScheduledExecutorService scheduledExecutorServiceNewSingleThreadScheduledExecutor = Executors.newSingleThreadScheduledExecutor();
-        this.f34148c = scheduledExecutorServiceNewSingleThreadScheduledExecutor;
-        this.f34149d = Executors.newSingleThreadExecutor();
-        this.f34147a = context;
+        this.f34354c = scheduledExecutorServiceNewSingleThreadScheduledExecutor;
+        this.f34355d = Executors.newSingleThreadExecutor();
+        this.f34353a = context;
         if (this.b) {
             return;
         }
@@ -44,13 +44,13 @@ public final class l implements x8.b {
     public static synchronized x8.b c(@NonNull Context context) {
         try {
             n9.m.m(context, "Context must not be null");
-            if (f34146e == null) {
-                f34146e = new l(context.getApplicationContext());
+            if (f34352e == null) {
+                f34352e = new l(context.getApplicationContext());
             }
         } catch (Throwable th2) {
             throw th2;
         }
-        return f34146e;
+        return f34352e;
     }
 
     public static final void e(Context context) {
@@ -79,7 +79,7 @@ public final class l implements x8.b {
     }
 
     public final long a() {
-        long j10 = f(this.f34147a).getLong("app_set_id_last_used_time", -1L);
+        long j10 = f(this.f34353a).getLong("app_set_id_last_used_time", -1L);
         if (j10 != -1) {
             return j10 + 33696000000L;
         }
@@ -87,19 +87,19 @@ public final class l implements x8.b {
     }
 
     public final /* synthetic */ void d(sb.k kVar) {
-        String string = f(this.f34147a).getString("app_set_id", null);
+        String string = f(this.f34353a).getString("app_set_id", null);
         long jA = a();
         if (string == null || u9.h.c().a() > jA) {
             string = UUID.randomUUID().toString();
             try {
-                Context context = this.f34147a;
+                Context context = this.f34353a;
                 if (!f(context).edit().putString("app_set_id", string).commit()) {
                     String strValueOf = String.valueOf(context.getPackageName());
                     Log.e("AppSet", strValueOf.length() != 0 ? "Failed to store app set ID generated for App ".concat(strValueOf) : new String("Failed to store app set ID generated for App "));
                     throw new k("Failed to store the app set ID.");
                 }
                 g(context);
-                Context context2 = this.f34147a;
+                Context context2 = this.f34353a;
                 if (!f(context2).edit().putLong("app_set_id_creation_time", u9.h.c().a()).commit()) {
                     String strValueOf2 = String.valueOf(context2.getPackageName());
                     Log.e("AppSet", strValueOf2.length() != 0 ? "Failed to store app set ID creation time for App ".concat(strValueOf2) : new String("Failed to store app set ID creation time for App "));
@@ -111,7 +111,7 @@ public final class l implements x8.b {
             }
         } else {
             try {
-                g(this.f34147a);
+                g(this.f34353a);
             } catch (k e11) {
                 kVar.b(e11);
                 return;
@@ -123,10 +123,10 @@ public final class l implements x8.b {
     @Override // x8.b
     public final Task<x8.c> j() {
         final sb.k kVar = new sb.k();
-        this.f34149d.execute(new Runnable() { // from class: wa.h
+        this.f34355d.execute(new Runnable() { // from class: wa.h
             @Override // java.lang.Runnable
             public final void run() {
-                this.f34144a.d(kVar);
+                this.f34350a.d(kVar);
             }
         });
         return kVar.a();

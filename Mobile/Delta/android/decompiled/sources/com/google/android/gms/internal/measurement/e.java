@@ -8,29 +8,29 @@ import java.util.Objects;
 public final class e implements Iterator {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f6421a;
+    public int f6494a;
     public final /* synthetic */ f b;
 
     public e(f fVar) {
         Objects.requireNonNull(fVar);
         this.b = fVar;
-        this.f6421a = 0;
+        this.f6494a = 0;
     }
 
     @Override // java.util.Iterator
     public final boolean hasNext() {
-        return this.f6421a < this.b.k();
+        return this.f6494a < this.b.k();
     }
 
     @Override // java.util.Iterator
     public final /* bridge */ /* synthetic */ Object next() {
         f fVar = this.b;
-        if (this.f6421a < fVar.k()) {
-            int i10 = this.f6421a;
-            this.f6421a = i10 + 1;
+        if (this.f6494a < fVar.k()) {
+            int i10 = this.f6494a;
+            this.f6494a = i10 + 1;
             return fVar.m(i10);
         }
-        int i11 = this.f6421a;
+        int i11 = this.f6494a;
         StringBuilder sb2 = new StringBuilder(String.valueOf(i11).length() + 21);
         sb2.append("Out of bounds index: ");
         sb2.append(i11);

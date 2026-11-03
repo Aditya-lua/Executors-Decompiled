@@ -16,11 +16,11 @@ public final class o6 extends gb implements pc {
     static {
         o6 o6Var = new o6();
         zzj = o6Var;
-        gb.u(o6.class, o6Var);
+        gb.t(o6.class, o6Var);
     }
 
     public static n6 R() {
-        return (n6) zzj.q();
+        return (n6) zzj.p();
     }
 
     private final void c0() {

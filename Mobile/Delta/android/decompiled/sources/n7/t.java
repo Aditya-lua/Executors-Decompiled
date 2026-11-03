@@ -6,20 +6,20 @@ import f7.h0;
 public class t implements c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f25224a;
+    public final String f26045a;
     public final a b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final m7.b f25225c;
+    public final m7.b f26046c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final m7.b f25226d;
+    public final m7.b f26047d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final m7.b f25227e;
+    public final m7.b f26048e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final boolean f25228f;
+    public final boolean f26049f;
 
     public enum a {
         SIMULTANEOUSLY,
@@ -37,12 +37,12 @@ public class t implements c {
     }
 
     public t(String str, a aVar, m7.b bVar, m7.b bVar2, m7.b bVar3, boolean z10) {
-        this.f25224a = str;
+        this.f26045a = str;
         this.b = aVar;
-        this.f25225c = bVar;
-        this.f25226d = bVar2;
-        this.f25227e = bVar3;
-        this.f25228f = z10;
+        this.f26046c = bVar;
+        this.f26047d = bVar2;
+        this.f26048e = bVar3;
+        this.f26049f = z10;
     }
 
     @Override // n7.c
@@ -51,19 +51,19 @@ public class t implements c {
     }
 
     public m7.b b() {
-        return this.f25226d;
+        return this.f26047d;
     }
 
     public String c() {
-        return this.f25224a;
+        return this.f26045a;
     }
 
     public m7.b d() {
-        return this.f25227e;
+        return this.f26048e;
     }
 
     public m7.b e() {
-        return this.f25225c;
+        return this.f26046c;
     }
 
     public a f() {
@@ -71,10 +71,10 @@ public class t implements c {
     }
 
     public boolean g() {
-        return this.f25228f;
+        return this.f26049f;
     }
 
     public String toString() {
-        return "Trim Path: {start: " + this.f25225c + ", end: " + this.f25226d + ", offset: " + this.f25227e + "}";
+        return "Trim Path: {start: " + this.f26046c + ", end: " + this.f26047d + ", offset: " + this.f26048e + "}";
     }
 }

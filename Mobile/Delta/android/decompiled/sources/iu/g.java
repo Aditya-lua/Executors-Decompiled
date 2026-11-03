@@ -1,149 +1,87 @@
 package iu;
 
-import java.util.Iterator;
-import java.util.NoSuchElementException;
+import java.util.concurrent.locks.LockSupport;
 import kotlin.Metadata;
-import kotlin.Unit;
 import kotlin.coroutines.CoroutineContext;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000F\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010(\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0003\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\u0018\u0002\n\u0002\b\u000f\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0002\u0018\u0000*\u0004\b\u0000\u0010\u00012\b\u0012\u0004\u0012\u00028\u00000\u00022\b\u0012\u0004\u0012\u00028\u00000\u00032\b\u0012\u0004\u0012\u00020\u00050\u0004B\u0007¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bH\u0096\u0002¢\u0006\u0004\b\t\u0010\nJ\u0010\u0010\u000b\u001a\u00028\u0000H\u0096\u0002¢\u0006\u0004\b\u000b\u0010\fJ\u0018\u0010\u000e\u001a\u00020\u00052\u0006\u0010\r\u001a\u00028\u0000H\u0096@¢\u0006\u0004\b\u000e\u0010\u000fJ\u001e\u0010\u0011\u001a\u00020\u00052\f\u0010\u0010\u001a\b\u0012\u0004\u0012\u00028\u00000\u0003H\u0096@¢\u0006\u0004\b\u0011\u0010\u0012J\u001d\u0010\u0015\u001a\u00020\u00052\f\u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\u00050\u0013H\u0016¢\u0006\u0004\b\u0015\u0010\u0016J\u000f\u0010\u0017\u001a\u00028\u0000H\u0002¢\u0006\u0004\b\u0017\u0010\fJ\u000f\u0010\u0019\u001a\u00020\u0018H\u0002¢\u0006\u0004\b\u0019\u0010\u001aR\u001a\u0010\u001e\u001a\u00060\u001bj\u0002`\u001c8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u000e\u0010\u001dR\u0018\u0010!\u001a\u0004\u0018\u00018\u00008\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u001f\u0010 R\u001e\u0010$\u001a\n\u0012\u0004\u0012\u00028\u0000\u0018\u00010\u00038\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\"\u0010#R*\u0010+\u001a\n\u0012\u0004\u0012\u00020\u0005\u0018\u00010\u00048\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b%\u0010&\u001a\u0004\b'\u0010(\"\u0004\b)\u0010*R\u0014\u0010/\u001a\u00020,8VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b-\u0010.¨\u00060"}, d2 = {"Liu/g;", "T", "Liu/h;", "", "Lnt/b;", "", "<init>", "()V", "", "hasNext", "()Z", "next", "()Ljava/lang/Object;", "value", "a", "(Ljava/lang/Object;Lnt/b;)Ljava/lang/Object;", "iterator", "e", "(Ljava/util/Iterator;Lnt/b;)Ljava/lang/Object;", "Ljt/n;", "result", "resumeWith", "(Ljava/lang/Object;)V", "j", "", "i", "()Ljava/lang/Throwable;", "", "Lkotlin/sequences/State;", "I", "state", "b", "Ljava/lang/Object;", "nextValue", "c", "Ljava/util/Iterator;", "nextIterator", "d", "Lnt/b;", "getNextStep", "()Lnt/b;", "l", "(Lnt/b;)V", "nextStep", "Lkotlin/coroutines/CoroutineContext;", "getContext", "()Lkotlin/coroutines/CoroutineContext;", "context", "kotlin-stdlib"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class g<T> extends h<T> implements Iterator<T>, nt.b<Unit>, au.a {
-
-    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
-    public int state;
-
-    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
-    @Nullable
-    public T nextValue;
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
-    @Nullable
-    public Iterator<? extends T> nextIterator;
+@Metadata(d1 = {"\u00004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0002\n\u0002\b\b\n\u0002\u0010\u000b\n\u0002\b\u0004\b\u0002\u0018\u0000*\u0004\b\u0000\u0010\u00012\b\u0012\u0004\u0012\u00028\u00000\u0002B!\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\b\u0010\b\u001a\u0004\u0018\u00010\u0007¢\u0006\u0004\b\t\u0010\nJ\u0019\u0010\u000e\u001a\u00020\r2\b\u0010\f\u001a\u0004\u0018\u00010\u000bH\u0014¢\u0006\u0004\b\u000e\u0010\u000fJ\r\u0010\u0010\u001a\u00028\u0000¢\u0006\u0004\b\u0010\u0010\u0011R\u0014\u0010\u0006\u001a\u00020\u00058\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0012\u0010\u0013R\u0016\u0010\b\u001a\u0004\u0018\u00010\u00078\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0014\u0010\u0015R\u0014\u0010\u0019\u001a\u00020\u00168TX\u0094\u0004¢\u0006\u0006\u001a\u0004\b\u0017\u0010\u0018¨\u0006\u001a"}, d2 = {"Liu/g;", "T", "Liu/a;", "Lkotlin/coroutines/CoroutineContext;", "parentContext", "Ljava/lang/Thread;", "blockedThread", "Liu/m1;", "eventLoop", "<init>", "(Lkotlin/coroutines/CoroutineContext;Ljava/lang/Thread;Liu/m1;)V", "", "state", "", "P", "(Ljava/lang/Object;)V", "X0", "()Ljava/lang/Object;", "d", "Ljava/lang/Thread;", "e", "Liu/m1;", "", "s0", "()Z", "isScopedCoroutine", "kotlinx-coroutines-core"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class g<T> extends a<T> {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
-    @Nullable
-    public nt.b<? super Unit> nextStep;
-
-    @Override // iu.h
-    @Nullable
-    public Object a(T t8, @NotNull nt.b<? super Unit> bVar) {
-        this.nextValue = t8;
-        this.state = 3;
-        this.nextStep = bVar;
-        Object objE = ot.c.e();
-        if (objE == ot.c.e()) {
-            pt.h.c(bVar);
-        }
-        return objE == ot.c.e() ? objE : Unit.f22483a;
-    }
-
-    @Override // iu.h
-    @Nullable
-    public Object e(@NotNull Iterator<? extends T> it, @NotNull nt.b<? super Unit> bVar) {
-        if (!it.hasNext()) {
-            return Unit.f22483a;
-        }
-        this.nextIterator = it;
-        this.state = 2;
-        this.nextStep = bVar;
-        Object objE = ot.c.e();
-        if (objE == ot.c.e()) {
-            pt.h.c(bVar);
-        }
-        return objE == ot.c.e() ? objE : Unit.f22483a;
-    }
-
-    @Override // nt.b
     @NotNull
-    public CoroutineContext getContext() {
-        return kotlin.coroutines.e.f22525a;
+    public final Thread blockedThread;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
+    @Nullable
+    public final m1 eventLoop;
+
+    public g(@NotNull CoroutineContext coroutineContext, @NotNull Thread thread, @Nullable m1 m1Var) {
+        super(coroutineContext, true, true);
+        this.blockedThread = thread;
+        this.eventLoop = m1Var;
     }
 
-    @Override // java.util.Iterator
-    public boolean hasNext() throws Throwable {
-        while (true) {
-            int i10 = this.state;
-            if (i10 != 0) {
-                if (i10 != 1) {
-                    if (i10 == 2 || i10 == 3) {
-                        return true;
-                    }
-                    if (i10 == 4) {
-                        return false;
-                    }
-                    throw i();
-                }
-                Iterator<? extends T> it = this.nextIterator;
-                Intrinsics.checkNotNull(it);
-                if (it.hasNext()) {
-                    this.state = 2;
-                    return true;
-                }
-                this.nextIterator = null;
+    @Override // iu.j2
+    public void P(@Nullable Object state) {
+        if (Intrinsics.c(Thread.currentThread(), this.blockedThread)) {
+            return;
+        }
+        Thread thread = this.blockedThread;
+        c.a();
+        LockSupport.unpark(thread);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public final T X0() throws Throwable {
+        c.a();
+        try {
+            m1 m1Var = this.eventLoop;
+            if (m1Var != null) {
+                m1.d0(m1Var, false, 1, null);
             }
-            this.state = 5;
-            nt.b<? super Unit> bVar = this.nextStep;
-            Intrinsics.checkNotNull(bVar);
-            this.nextStep = null;
-            bVar.resumeWith(jt.n.b(Unit.f22483a));
+            while (true) {
+                try {
+                    m1 m1Var2 = this.eventLoop;
+                    long jN0 = m1Var2 != null ? m1Var2.n0() : Long.MAX_VALUE;
+                    if (d()) {
+                        break;
+                    }
+                    c.a();
+                    LockSupport.parkNanos(this, jN0);
+                    if (Thread.interrupted()) {
+                        S(new InterruptedException());
+                    }
+                } catch (Throwable th2) {
+                    m1 m1Var3 = this.eventLoop;
+                    if (m1Var3 != null) {
+                        m1.X(m1Var3, false, 1, null);
+                    }
+                    throw th2;
+                }
+            }
+            m1 m1Var4 = this.eventLoop;
+            if (m1Var4 != null) {
+                m1.X(m1Var4, false, 1, null);
+            }
+            c.a();
+            T t8 = (T) k2.h(l0());
+            c0 c0Var = t8 instanceof c0 ? (c0) t8 : null;
+            if (c0Var == null) {
+                return t8;
+            }
+            throw c0Var.cause;
+        } catch (Throwable th3) {
+            c.a();
+            throw th3;
         }
     }
 
-    public final Throwable i() {
-        int i10 = this.state;
-        if (i10 == 4) {
-            return new NoSuchElementException();
-        }
-        if (i10 == 5) {
-            return new IllegalStateException("Iterator has failed.");
-        }
-        return new IllegalStateException("Unexpected state of the iterator: " + this.state);
-    }
-
-    public final T j() {
-        if (hasNext()) {
-            return next();
-        }
-        throw new NoSuchElementException();
-    }
-
-    public final void l(@Nullable nt.b<? super Unit> bVar) {
-        this.nextStep = bVar;
-    }
-
-    @Override // java.util.Iterator
-    public T next() throws Throwable {
-        int i10 = this.state;
-        if (i10 == 0 || i10 == 1) {
-            return j();
-        }
-        if (i10 == 2) {
-            this.state = 1;
-            Iterator<? extends T> it = this.nextIterator;
-            Intrinsics.checkNotNull(it);
-            return it.next();
-        }
-        if (i10 != 3) {
-            throw i();
-        }
-        this.state = 0;
-        T t8 = this.nextValue;
-        this.nextValue = null;
-        return t8;
-    }
-
-    @Override // java.util.Iterator
-    public void remove() {
-        throw new UnsupportedOperationException("Operation is not supported for read-only collection");
-    }
-
-    @Override // nt.b
-    public void resumeWith(@NotNull Object result) {
-        jt.o.b(result);
-        this.state = 4;
+    @Override // iu.j2
+    public boolean s0() {
+        return true;
     }
 }

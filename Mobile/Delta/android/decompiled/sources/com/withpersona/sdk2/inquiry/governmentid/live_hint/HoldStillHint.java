@@ -13,7 +13,7 @@ public final /* data */ class HoldStillHint implements Hint {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final HoldStillHint f10924a = new HoldStillHint();
+    public static final HoldStillHint f11005a = new HoldStillHint();
 
     @NotNull
     public static final Parcelable.Creator<HoldStillHint> CREATOR = new a();
@@ -25,7 +25,7 @@ public final /* data */ class HoldStillHint implements Hint {
         public final HoldStillHint createFromParcel(Parcel parcel) {
             Intrinsics.checkNotNullParameter(parcel, "parcel");
             parcel.readInt();
-            return HoldStillHint.f10924a;
+            return HoldStillHint.f11005a;
         }
 
         @Override // android.os.Parcelable.Creator

@@ -23,43 +23,43 @@ public final class a implements f {
 
         public final void a(e statement, int index, Object arg) {
             if (arg == null) {
-                statement.C(index);
+                statement.B(index);
                 return;
             }
             if (arg instanceof byte[]) {
-                statement.A(index, (byte[]) arg);
+                statement.z(index, (byte[]) arg);
                 return;
             }
             if (arg instanceof Float) {
-                statement.c0(index, ((Number) arg).floatValue());
+                statement.b0(index, ((Number) arg).floatValue());
                 return;
             }
             if (arg instanceof Double) {
-                statement.c0(index, ((Number) arg).doubleValue());
+                statement.b0(index, ((Number) arg).doubleValue());
                 return;
             }
             if (arg instanceof Long) {
-                statement.z(index, ((Number) arg).longValue());
+                statement.y(index, ((Number) arg).longValue());
                 return;
             }
             if (arg instanceof Integer) {
-                statement.z(index, ((Number) arg).intValue());
+                statement.y(index, ((Number) arg).intValue());
                 return;
             }
             if (arg instanceof Short) {
-                statement.z(index, ((Number) arg).shortValue());
+                statement.y(index, ((Number) arg).shortValue());
                 return;
             }
             if (arg instanceof Byte) {
-                statement.z(index, ((Number) arg).byteValue());
+                statement.y(index, ((Number) arg).byteValue());
                 return;
             }
             if (arg instanceof String) {
-                statement.L1(index, (String) arg);
+                statement.K1(index, (String) arg);
                 return;
             }
             if (arg instanceof Boolean) {
-                statement.z(index, ((Boolean) arg).booleanValue() ? 1L : 0L);
+                statement.y(index, ((Boolean) arg).booleanValue() ? 1L : 0L);
                 return;
             }
             throw new IllegalArgumentException("Cannot bind " + arg + " at index " + index + " Supported types: Null, ByteArray, Float, Double, Long, Int, Short, Byte, String");

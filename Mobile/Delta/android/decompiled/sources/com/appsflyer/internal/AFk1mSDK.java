@@ -4,5 +4,5 @@ package com.appsflyer.internal;
 public final class AFk1mSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public int f5454d;
+    public int f5527d;
 }

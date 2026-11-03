@@ -49,7 +49,7 @@ public final class AFc1aSDK implements AFc1bSDK {
     private AFf1eSDK clearUserPii;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    private AFd1xSDK f5241e;
+    private AFd1xSDK f5314e;
     private LoggerDelegate enableTCFDataCollection;
     private PurchaseHandler force;
     private AFi1aSDK getEntries;
@@ -59,7 +59,7 @@ public final class AFc1aSDK implements AFc1bSDK {
     private AFf1fSDK getSdkVersion;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    private AFc1gSDK f5242i;
+    private AFc1gSDK f5315i;
     private AFc1vSDK onPause;
     private AFf1bSDK sendPushNotificationData;
     private AFd1eSDK setAdditionalData;
@@ -82,22 +82,22 @@ public final class AFc1aSDK implements AFc1bSDK {
     private AFi1vSDK updateServerUninstallToken;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    private AFf1hSDK f5243v;
+    private AFf1hSDK f5316v;
     private AFj1ySDK valueOf;
     private AFd1uSDK values;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    private AFc1iSDK f5244w;
+    private AFc1iSDK f5317w;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final AFd1zSDK f5240d = new AFd1zSDK();
+    public final AFd1zSDK f5313d = new AFd1zSDK();
     private volatile AppsFlyerConversionListener setOneLinkCustomDomain = null;
 
     public static class AFa1tSDK implements ThreadFactory {
         private static final AtomicInteger AFLogger = new AtomicInteger();
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        private final AtomicInteger f5245d = new AtomicInteger();
+        private final AtomicInteger f5318d = new AtomicInteger();
 
         public AFa1tSDK() {
             AFLogger.incrementAndGet();
@@ -106,7 +106,7 @@ public final class AFc1aSDK implements AFc1bSDK {
         @Override // java.util.concurrent.ThreadFactory
         public final Thread newThread(Runnable runnable) {
             int i10 = AFLogger.get();
-            int iIncrementAndGet = this.f5245d.incrementAndGet();
+            int iIncrementAndGet = this.f5318d.incrementAndGet();
             StringBuilder sb2 = new StringBuilder("queue-");
             sb2.append(i10);
             sb2.append("-");
@@ -130,13 +130,13 @@ public final class AFc1aSDK implements AFc1bSDK {
     @NonNull
     private synchronized AFd1xSDK getOutOfStore() {
         try {
-            if (this.f5241e == null) {
-                this.f5241e = new AFd1xSDK(new AFd1mSDK(registerClient), d());
+            if (this.f5314e == null) {
+                this.f5314e = new AFd1xSDK(new AFd1mSDK(registerClient), d());
             }
         } catch (Throwable th2) {
             throw th2;
         }
-        return this.f5241e;
+        return this.f5314e;
     }
 
     private SharedPreferences s_(Context context) {
@@ -170,7 +170,7 @@ public final class AFc1aSDK implements AFc1bSDK {
         if (aFh1aSDK == null || (aFh1gSDK = aFh1aSDK.registerClient) == null) {
             return null;
         }
-        return aFh1gSDK.f5394d;
+        return aFh1gSDK.f5467d;
     }
 
     @NonNull
@@ -199,7 +199,7 @@ public final class AFc1aSDK implements AFc1bSDK {
 
     /* JADX INFO: Access modifiers changed from: private */
     public static /* synthetic */ String setResolveDeepLinkURLs() {
-        return String.format(Locale.US, AFj1mSDK.f5441e, AppsFlyerLib.getInstance().getHostPrefix(), com.appsflyer.internal.AFa1tSDK.d().getHostName());
+        return String.format(Locale.US, AFj1mSDK.f5514e, AppsFlyerLib.getInstance().getHostPrefix(), com.appsflyer.internal.AFa1tSDK.d().getHostName());
     }
 
     @NonNull
@@ -216,7 +216,7 @@ public final class AFc1aSDK implements AFc1bSDK {
 
     /* JADX INFO: Access modifiers changed from: private */
     public /* synthetic */ SharedPreferences t_() {
-        Context context = this.f5240d.f5305d;
+        Context context = this.f5313d.f5378d;
         if (context != null) {
             return s_(context);
         }
@@ -226,33 +226,33 @@ public final class AFc1aSDK implements AFc1bSDK {
     @Override // com.appsflyer.internal.AFc1bSDK
     @NonNull
     public final AFc1kSDK AFKeystoreWrapper() {
-        if (this.f5242i == null) {
-            this.f5242i = new AFc1gSDK(new AFc1dSDK(new Function0() { // from class: com.appsflyer.internal.r
+        if (this.f5315i == null) {
+            this.f5315i = new AFc1gSDK(new AFc1dSDK(new Function0() { // from class: com.appsflyer.internal.r
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return this.f5516a.t_();
+                    return this.f5589a.t_();
                 }
             }));
         }
-        return this.f5242i;
+        return this.f5315i;
     }
 
     @Override // com.appsflyer.internal.AFc1bSDK
     @NonNull
     public final synchronized AFc1iSDK AFLogger() {
         try {
-            if (this.f5244w == null) {
+            if (this.f5317w == null) {
                 AFd1zSDK aFd1zSDKValueOf = valueOf();
                 AFc1kSDK aFc1kSDKAFKeystoreWrapper = AFKeystoreWrapper();
                 if (this.setCollectAndroidID == null) {
                     this.setCollectAndroidID = new AFc1eSDK();
                 }
-                this.f5244w = new AFc1iSDK(aFd1zSDKValueOf, aFc1kSDKAFKeystoreWrapper, this.setCollectAndroidID, d());
+                this.f5317w = new AFc1iSDK(aFd1zSDKValueOf, aFc1kSDKAFKeystoreWrapper, this.setCollectAndroidID, d());
             }
         } catch (Throwable th2) {
             throw th2;
         }
-        return this.f5244w;
+        return this.f5317w;
     }
 
     @Override // com.appsflyer.internal.AFc1bSDK
@@ -314,7 +314,7 @@ public final class AFc1aSDK implements AFc1bSDK {
     @NonNull
     public final AFj1ySDK afInfoLog() {
         if (this.valueOf == null) {
-            Context context = this.f5240d.f5305d;
+            Context context = this.f5313d.f5378d;
             if (context == null) {
                 throw new IllegalStateException("Context must be set via setContext method before calling this dependency.");
             }
@@ -395,7 +395,7 @@ public final class AFc1aSDK implements AFc1bSDK {
     @NonNull
     public final AFg1rSDK force() {
         if (this.afDebugLog == null) {
-            Context context = this.f5240d.f5305d;
+            Context context = this.f5313d.f5378d;
             if (context == null) {
                 throw new IllegalStateException("Context must be set via setContext method before calling this dependency.");
             }
@@ -408,7 +408,7 @@ public final class AFc1aSDK implements AFc1bSDK {
             }
             AFg1wSDK aFg1wSDK = this.setOaidData;
             if (this.valueOf == null) {
-                Context context2 = this.f5240d.f5305d;
+                Context context2 = this.f5313d.f5378d;
                 if (context2 == null) {
                     throw new IllegalStateException("Context must be set via setContext method before calling this dependency.");
                 }
@@ -423,7 +423,7 @@ public final class AFc1aSDK implements AFc1bSDK {
             AFc1kSDK aFc1kSDKAFKeystoreWrapper = AFKeystoreWrapper();
             AFc1iSDK aFc1iSDKAFLogger = AFLogger();
             if (this.updateServerUninstallToken == null) {
-                Context context3 = this.f5240d.f5305d;
+                Context context3 = this.f5313d.f5378d;
                 if (context3 == null) {
                     throw new IllegalStateException("Context must be set via setContext method before calling this dependency.");
                 }
@@ -459,19 +459,19 @@ public final class AFc1aSDK implements AFc1bSDK {
                 AFLogger();
                 String strUnregisterClient = AFc1iSDK.unregisterClient();
                 String strAFLogger = AFb1jSDK.AFLogger(AFLogger().AFKeystoreWrapper);
-                String packageName = AFLogger().f5258d.f5305d.getPackageName();
+                String packageName = AFLogger().f5331d.f5378d.getPackageName();
                 if (this.setDebugLog == null) {
                     this.setDebugLog = new AFj1eSDK();
                 }
                 SdkData sdkData = new SdkData(str, function0, strUnregisterClient, strAFLogger, packageName, this.setDebugLog.unregisterClient());
-                Context context = this.f5240d.f5305d;
+                Context context = this.f5313d.f5378d;
                 if (context == null) {
                     throw new IllegalStateException("Context must be set via setContext method before calling this dependency.");
                 }
                 this.stop = new ExceptionManagerImpl(sdkData, context, d(), AFKeystoreWrapper().p_(), new Function0() { // from class: com.appsflyer.internal.w
                     @Override // kotlin.jvm.functions.Function0
                     public final Object invoke() {
-                        return this.f5525a.setAdditionalData();
+                        return this.f5598a.setAdditionalData();
                     }
                 }, new Function1() { // from class: com.appsflyer.internal.x
                     @Override // kotlin.jvm.functions.Function1
@@ -490,7 +490,7 @@ public final class AFc1aSDK implements AFc1bSDK {
     @NonNull
     public final AFi1vSDK getInstance() {
         if (this.updateServerUninstallToken == null) {
-            Context context = this.f5240d.f5305d;
+            Context context = this.f5313d.f5378d;
             if (context == null) {
                 throw new IllegalStateException("Context must be set via setContext method before calling this dependency.");
             }
@@ -529,7 +529,7 @@ public final class AFc1aSDK implements AFc1bSDK {
     @NonNull
     public final synchronized AFf1hSDK i() {
         try {
-            if (this.f5243v == null) {
+            if (this.f5316v == null) {
                 AFf1jSDK aFf1jSDK = new AFf1jSDK(AFKeystoreWrapper());
                 AFc1iSDK aFc1iSDKAFLogger = AFLogger();
                 if (this.setCollectAndroidID == null) {
@@ -543,12 +543,12 @@ public final class AFc1aSDK implements AFc1bSDK {
                 if (this.setCollectAndroidID == null) {
                     this.setCollectAndroidID = new AFc1eSDK();
                 }
-                this.f5243v = new AFf1hSDK(aFf1nSDK, aFc1iSDKAFLogger2, aFf1fSDKAppsFlyerLib, aFf1jSDK, aFd1sSDKUnregisterClient, aFf1kSDK, this.setCollectAndroidID, afWarnLog());
+                this.f5316v = new AFf1hSDK(aFf1nSDK, aFc1iSDKAFLogger2, aFf1fSDKAppsFlyerLib, aFf1jSDK, aFd1sSDKUnregisterClient, aFf1kSDK, this.setCollectAndroidID, afWarnLog());
             }
         } catch (Throwable th2) {
             throw th2;
         }
-        return this.f5243v;
+        return this.f5316v;
     }
 
     @Override // com.appsflyer.internal.AFc1bSDK
@@ -590,12 +590,12 @@ public final class AFc1aSDK implements AFc1bSDK {
                 this.setResolveDeepLinkURLs = new AFj1xSDK(new AFc1dSDK(new Function0() { // from class: com.appsflyer.internal.s
                     @Override // kotlin.jvm.functions.Function0
                     public final Object invoke() {
-                        return this.f5517a.AFLogger();
+                        return this.f5590a.AFLogger();
                     }
                 }), new AFc1dSDK(new Function0() { // from class: com.appsflyer.internal.t
                     @Override // kotlin.jvm.functions.Function0
                     public final Object invoke() {
-                        return this.f5520a.enableTCFDataCollection();
+                        return this.f5593a.enableTCFDataCollection();
                     }
                 }));
             }
@@ -658,7 +658,7 @@ public final class AFc1aSDK implements AFc1bSDK {
     @NonNull
     public final AFf1eSDK setOaidData() {
         if (this.clearUserPii == null) {
-            Context context = this.f5240d.f5305d;
+            Context context = this.f5313d.f5378d;
             if (context == null) {
                 throw new IllegalStateException("Context must be set via setContext method before calling this dependency.");
             }
@@ -752,7 +752,7 @@ public final class AFc1aSDK implements AFc1bSDK {
     @Override // com.appsflyer.internal.AFc1bSDK
     @NonNull
     public final synchronized AFd1zSDK valueOf() {
-        return this.f5240d;
+        return this.f5313d;
     }
 
     @Override // com.appsflyer.internal.AFc1bSDK
@@ -795,7 +795,7 @@ public final class AFc1aSDK implements AFc1bSDK {
     /* JADX INFO: Access modifiers changed from: private */
     public static /* synthetic */ Unit AFKeystoreWrapper(String str) {
         AFLogger.INSTANCE.d(LogTag.EXCEPTION_MANAGER, str);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */

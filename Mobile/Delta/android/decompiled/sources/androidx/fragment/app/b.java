@@ -17,6 +17,7 @@ import androidx.core.view.t0;
 import e.BackEventCompat;
 import e4.h0;
 import e4.j0;
+import gt.s;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -24,7 +25,6 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Map;
 import java.util.Set;
-import jt.s;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.Unit;
@@ -48,27 +48,27 @@ public final class b extends androidx.fragment.app.i {
 
         /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
         @NotNull
-        public final C0039b animationInfo;
+        public final C0035b animationInfo;
 
         /* JADX INFO: renamed from: androidx.fragment.app.b$a$a, reason: collision with other inner class name */
         @Metadata(d1 = {"\u0000\u0017\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J\u0017\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0016¢\u0006\u0004\b\u0005\u0010\u0006J\u0017\u0010\u0007\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0016¢\u0006\u0004\b\u0007\u0010\u0006J\u0017\u0010\b\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0016¢\u0006\u0004\b\b\u0010\u0006¨\u0006\t"}, d2 = {"androidx/fragment/app/b$a$a", "Landroid/view/animation/Animation$AnimationListener;", "Landroid/view/animation/Animation;", "animation", "", "onAnimationStart", "(Landroid/view/animation/Animation;)V", "onAnimationEnd", "onAnimationRepeat", "fragment_release"}, k = 1, mv = {1, 8, 0}, xi = 48)
-        public static final class AnimationAnimationListenerC0038a implements Animation.AnimationListener {
+        public static final class AnimationAnimationListenerC0034a implements Animation.AnimationListener {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ androidx.fragment.app.i.d f2552a;
+            public final /* synthetic */ androidx.fragment.app.i.d f2397a;
             public final /* synthetic */ ViewGroup b;
 
             /* JADX INFO: renamed from: c, reason: collision with root package name */
-            public final /* synthetic */ View f2553c;
+            public final /* synthetic */ View f2398c;
 
             /* JADX INFO: renamed from: d, reason: collision with root package name */
-            public final /* synthetic */ a f2554d;
+            public final /* synthetic */ a f2399d;
 
-            public AnimationAnimationListenerC0038a(androidx.fragment.app.i.d dVar, ViewGroup viewGroup, View view, a aVar) {
-                this.f2552a = dVar;
+            public AnimationAnimationListenerC0034a(androidx.fragment.app.i.d dVar, ViewGroup viewGroup, View view, a aVar) {
+                this.f2397a = dVar;
                 this.b = viewGroup;
-                this.f2553c = view;
-                this.f2554d = aVar;
+                this.f2398c = view;
+                this.f2399d = aVar;
             }
 
             public static final void b(ViewGroup container, View view, a this$0) {
@@ -82,16 +82,16 @@ public final class b extends androidx.fragment.app.i {
             public void onAnimationEnd(@NotNull Animation animation) {
                 Intrinsics.checkNotNullParameter(animation, "animation");
                 final ViewGroup viewGroup = this.b;
-                final View view = this.f2553c;
-                final a aVar = this.f2554d;
+                final View view = this.f2398c;
+                final a aVar = this.f2399d;
                 viewGroup.post(new Runnable() { // from class: e4.b
                     @Override // java.lang.Runnable
                     public final void run() {
-                        androidx.fragment.app.b.a.AnimationAnimationListenerC0038a.b(viewGroup, view, aVar);
+                        androidx.fragment.app.b.a.AnimationAnimationListenerC0034a.b(viewGroup, view, aVar);
                     }
                 });
                 if (FragmentManager.N0(2)) {
-                    Log.v("FragmentManager", "Animation from operation " + this.f2552a + " has ended.");
+                    Log.v("FragmentManager", "Animation from operation " + this.f2397a + " has ended.");
                 }
             }
 
@@ -104,12 +104,12 @@ public final class b extends androidx.fragment.app.i {
             public void onAnimationStart(@NotNull Animation animation) {
                 Intrinsics.checkNotNullParameter(animation, "animation");
                 if (FragmentManager.N0(2)) {
-                    Log.v("FragmentManager", "Animation from operation " + this.f2552a + " has reached onAnimationStart.");
+                    Log.v("FragmentManager", "Animation from operation " + this.f2397a + " has reached onAnimationStart.");
                 }
             }
         }
 
-        public a(@NotNull C0039b animationInfo) {
+        public a(@NotNull C0035b animationInfo) {
             Intrinsics.checkNotNullParameter(animationInfo, "animationInfo");
             this.animationInfo = animationInfo;
         }
@@ -137,13 +137,13 @@ public final class b extends androidx.fragment.app.i {
             Context context = container.getContext();
             androidx.fragment.app.i.d operation = this.animationInfo.getOperation();
             View view = operation.getFragment().K;
-            C0039b c0039b = this.animationInfo;
+            C0035b c0035b = this.animationInfo;
             Intrinsics.checkNotNullExpressionValue(context, "context");
-            androidx.fragment.app.d.a aVarC = c0039b.c(context);
+            androidx.fragment.app.d.a aVarC = c0035b.c(context);
             if (aVarC == null) {
                 throw new IllegalStateException("Required value was null.");
             }
-            Animation animation = aVarC.f2659a;
+            Animation animation = aVarC.f2504a;
             if (animation == null) {
                 throw new IllegalStateException("Required value was null.");
             }
@@ -154,7 +154,7 @@ public final class b extends androidx.fragment.app.i {
             }
             container.startViewTransition(view);
             androidx.fragment.app.d.b bVar = new androidx.fragment.app.d.b(animation, container, view);
-            bVar.setAnimationListener(new AnimationAnimationListenerC0038a(operation, container, view, this));
+            bVar.setAnimationListener(new AnimationAnimationListenerC0034a(operation, container, view, this));
             view.startAnimation(bVar);
             if (FragmentManager.N0(2)) {
                 Log.v("FragmentManager", "Animation from operation " + operation + " has started.");
@@ -163,14 +163,14 @@ public final class b extends androidx.fragment.app.i {
 
         @NotNull
         /* JADX INFO: renamed from: h, reason: from getter */
-        public final C0039b getAnimationInfo() {
+        public final C0035b getAnimationInfo() {
             return this.animationInfo;
         }
     }
 
     /* JADX INFO: renamed from: androidx.fragment.app.b$b, reason: collision with other inner class name */
     @Metadata(d1 = {"\u0000$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\t\b\u0002\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0017\u0010\u000b\u001a\u0004\u0018\u00010\n2\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\u000b\u0010\fR\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\r\u0010\u000eR\u0016\u0010\u000f\u001a\u00020\u00048\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u000b\u0010\u000eR\u0018\u0010\u0012\u001a\u0004\u0018\u00010\n8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0010\u0010\u0011¨\u0006\u0013"}, d2 = {"Landroidx/fragment/app/b$b;", "Landroidx/fragment/app/b$f;", "Landroidx/fragment/app/i$d;", "operation", "", "isPop", "<init>", "(Landroidx/fragment/app/i$d;Z)V", "Landroid/content/Context;", "context", "Landroidx/fragment/app/d$a;", "c", "(Landroid/content/Context;)Landroidx/fragment/app/d$a;", "b", "Z", "isAnimLoaded", "d", "Landroidx/fragment/app/d$a;", "animation", "fragment_release"}, k = 1, mv = {1, 8, 0}, xi = 48)
-    public static final class C0039b extends f {
+    public static final class C0035b extends f {
 
         /* JADX INFO: renamed from: b, reason: from kotlin metadata */
         public final boolean isPop;
@@ -183,7 +183,7 @@ public final class b extends androidx.fragment.app.i {
         public androidx.fragment.app.d.a animation;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public C0039b(@NotNull androidx.fragment.app.i.d operation, boolean z10) {
+        public C0035b(@NotNull androidx.fragment.app.i.d operation, boolean z10) {
             super(operation);
             Intrinsics.checkNotNullParameter(operation, "operation");
             this.isPop = z10;
@@ -207,7 +207,7 @@ public final class b extends androidx.fragment.app.i {
 
         /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
         @NotNull
-        public final C0039b animatorInfo;
+        public final C0035b animatorInfo;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
         @Nullable
@@ -217,44 +217,44 @@ public final class b extends androidx.fragment.app.i {
         public static final class a extends AnimatorListenerAdapter {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ ViewGroup f2559a;
+            public final /* synthetic */ ViewGroup f2404a;
             public final /* synthetic */ View b;
 
             /* JADX INFO: renamed from: c, reason: collision with root package name */
-            public final /* synthetic */ boolean f2560c;
+            public final /* synthetic */ boolean f2405c;
 
             /* JADX INFO: renamed from: d, reason: collision with root package name */
-            public final /* synthetic */ androidx.fragment.app.i.d f2561d;
+            public final /* synthetic */ androidx.fragment.app.i.d f2406d;
 
             /* JADX INFO: renamed from: e, reason: collision with root package name */
-            public final /* synthetic */ c f2562e;
+            public final /* synthetic */ c f2407e;
 
             public a(ViewGroup viewGroup, View view, boolean z10, androidx.fragment.app.i.d dVar, c cVar) {
-                this.f2559a = viewGroup;
+                this.f2404a = viewGroup;
                 this.b = view;
-                this.f2560c = z10;
-                this.f2561d = dVar;
-                this.f2562e = cVar;
+                this.f2405c = z10;
+                this.f2406d = dVar;
+                this.f2407e = cVar;
             }
 
             @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
             public void onAnimationEnd(@NotNull Animator anim) {
                 Intrinsics.checkNotNullParameter(anim, "anim");
-                this.f2559a.endViewTransition(this.b);
-                if (this.f2560c || this.f2561d.getFinalState() == androidx.fragment.app.i.d.b.GONE) {
-                    androidx.fragment.app.i.d.b finalState = this.f2561d.getFinalState();
+                this.f2404a.endViewTransition(this.b);
+                if (this.f2405c || this.f2406d.getFinalState() == androidx.fragment.app.i.d.b.GONE) {
+                    androidx.fragment.app.i.d.b finalState = this.f2406d.getFinalState();
                     View viewToAnimate = this.b;
                     Intrinsics.checkNotNullExpressionValue(viewToAnimate, "viewToAnimate");
-                    finalState.b(viewToAnimate, this.f2559a);
+                    finalState.b(viewToAnimate, this.f2404a);
                 }
-                this.f2562e.getAnimatorInfo().getOperation().e(this.f2562e);
+                this.f2407e.getAnimatorInfo().getOperation().e(this.f2407e);
                 if (FragmentManager.N0(2)) {
-                    Log.v("FragmentManager", "Animator from operation " + this.f2561d + " has ended.");
+                    Log.v("FragmentManager", "Animator from operation " + this.f2406d + " has ended.");
                 }
             }
         }
 
-        public c(@NotNull C0039b animatorInfo) {
+        public c(@NotNull C0035b animatorInfo) {
             Intrinsics.checkNotNullParameter(animatorInfo, "animatorInfo");
             this.animatorInfo = animatorInfo;
         }
@@ -275,7 +275,7 @@ public final class b extends androidx.fragment.app.i {
             }
             androidx.fragment.app.i.d operation = this.animatorInfo.getOperation();
             if (operation.getIsSeeking()) {
-                e.f2564a.a(animatorSet);
+                e.f2409a.a(animatorSet);
             } else {
                 animatorSet.end();
             }
@@ -315,13 +315,13 @@ public final class b extends androidx.fragment.app.i {
                 this.animatorInfo.getOperation().e(this);
                 return;
             }
-            if (Build.VERSION.SDK_INT < 34 || !operation.getFragment().f2612n) {
+            if (Build.VERSION.SDK_INT < 34 || !operation.getFragment().f2457n) {
                 return;
             }
             if (FragmentManager.N0(2)) {
                 Log.v("FragmentManager", "Adding BackProgressCallbacks for Animators to operation " + operation);
             }
-            long jA = d.f2563a.a(animatorSet);
+            long jA = d.f2408a.a(animatorSet);
             long progress = (long) (backEvent.getProgress() * jA);
             if (progress == 0) {
                 progress = 1;
@@ -332,7 +332,7 @@ public final class b extends androidx.fragment.app.i {
             if (FragmentManager.N0(2)) {
                 Log.v("FragmentManager", "Setting currentPlayTime to " + progress + " for Animator " + animatorSet + " on operation " + operation);
             }
-            e.f2564a.b(animatorSet, progress);
+            e.f2409a.b(animatorSet, progress);
         }
 
         @Override // androidx.fragment.app.i.b
@@ -343,9 +343,9 @@ public final class b extends androidx.fragment.app.i {
                 return;
             }
             Context context = container.getContext();
-            C0039b c0039b = this.animatorInfo;
+            C0035b c0035b = this.animatorInfo;
             Intrinsics.checkNotNullExpressionValue(context, "context");
-            androidx.fragment.app.d.a aVarC = c0039b.c(context);
+            androidx.fragment.app.d.a aVarC = c0035b.c(context);
             this.animator = aVarC != null ? aVarC.b : null;
             androidx.fragment.app.i.d operation = this.animatorInfo.getOperation();
             androidx.fragment.app.c fragment = operation.getFragment();
@@ -367,7 +367,7 @@ public final class b extends androidx.fragment.app.i {
 
         @NotNull
         /* JADX INFO: renamed from: h, reason: from getter */
-        public final C0039b getAnimatorInfo() {
+        public final C0035b getAnimatorInfo() {
             return this.animatorInfo;
         }
     }
@@ -377,7 +377,7 @@ public final class b extends androidx.fragment.app.i {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NotNull
-        public static final d f2563a = new d();
+        public static final d f2408a = new d();
 
         public final long a(@NotNull AnimatorSet animatorSet) {
             Intrinsics.checkNotNullParameter(animatorSet, "animatorSet");
@@ -390,7 +390,7 @@ public final class b extends androidx.fragment.app.i {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NotNull
-        public static final e f2564a = new e();
+        public static final e f2409a = new e();
 
         public final void a(@NotNull AnimatorSet animatorSet) {
             Intrinsics.checkNotNullParameter(animatorSet, "animatorSet");
@@ -502,61 +502,61 @@ public final class b extends androidx.fragment.app.i {
         public static final class a extends m implements Function0<Unit> {
 
             /* JADX INFO: renamed from: j, reason: collision with root package name */
-            public final /* synthetic */ ViewGroup f2583j;
+            public final /* synthetic */ ViewGroup f2428j;
 
             /* JADX INFO: renamed from: k, reason: collision with root package name */
-            public final /* synthetic */ Object f2584k;
+            public final /* synthetic */ Object f2429k;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public a(ViewGroup viewGroup, Object obj) {
                 super(0);
-                this.f2583j = viewGroup;
-                this.f2584k = obj;
+                this.f2428j = viewGroup;
+                this.f2429k = obj;
             }
 
             public final void b() {
-                g.this.getTransitionImpl().e(this.f2583j, this.f2584k);
+                g.this.getTransitionImpl().e(this.f2428j, this.f2429k);
             }
 
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 b();
-                return Unit.f22483a;
+                return Unit.f22938a;
             }
         }
 
         /* JADX INFO: renamed from: androidx.fragment.app.b$g$b, reason: collision with other inner class name */
         @Metadata(d1 = {"\u0000\b\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0001\u001a\u00020\u0000H\n¢\u0006\u0004\b\u0001\u0010\u0002"}, d2 = {"", "b", "()V"}, k = 3, mv = {1, 8, 0})
-        public static final class C0040b extends m implements Function0<Unit> {
+        public static final class C0036b extends m implements Function0<Unit> {
 
             /* JADX INFO: renamed from: j, reason: collision with root package name */
-            public final /* synthetic */ ViewGroup f2586j;
+            public final /* synthetic */ ViewGroup f2431j;
 
             /* JADX INFO: renamed from: k, reason: collision with root package name */
-            public final /* synthetic */ Object f2587k;
+            public final /* synthetic */ Object f2432k;
 
             /* JADX INFO: renamed from: l, reason: collision with root package name */
-            public final /* synthetic */ c0<Function0<Unit>> f2588l;
+            public final /* synthetic */ c0<Function0<Unit>> f2433l;
 
             /* JADX INFO: renamed from: androidx.fragment.app.b$g$b$a */
             @Metadata(d1 = {"\u0000\b\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0001\u001a\u00020\u0000H\n¢\u0006\u0004\b\u0001\u0010\u0002"}, d2 = {"", "d", "()V"}, k = 3, mv = {1, 8, 0})
             public static final class a extends m implements Function0<Unit> {
 
                 /* JADX INFO: renamed from: i, reason: collision with root package name */
-                public final /* synthetic */ g f2589i;
+                public final /* synthetic */ g f2434i;
 
                 /* JADX INFO: renamed from: j, reason: collision with root package name */
-                public final /* synthetic */ Object f2590j;
+                public final /* synthetic */ Object f2435j;
 
                 /* JADX INFO: renamed from: k, reason: collision with root package name */
-                public final /* synthetic */ ViewGroup f2591k;
+                public final /* synthetic */ ViewGroup f2436k;
 
                 /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
                 public a(g gVar, Object obj, ViewGroup viewGroup) {
                     super(0);
-                    this.f2589i = gVar;
-                    this.f2590j = obj;
-                    this.f2591k = viewGroup;
+                    this.f2434i = gVar;
+                    this.f2435j = obj;
+                    this.f2436k = viewGroup;
                 }
 
                 public static final void f(g this$0, ViewGroup container) {
@@ -572,7 +572,7 @@ public final class b extends androidx.fragment.app.i {
                     }
                 }
 
-                public static final void g(g this$0) {
+                public static final void h(g this$0) {
                     Intrinsics.checkNotNullParameter(this$0, "this$0");
                     if (FragmentManager.N0(2)) {
                         Log.v("FragmentManager", "Transition for all operations has completed");
@@ -584,7 +584,7 @@ public final class b extends androidx.fragment.app.i {
                 }
 
                 public final void d() {
-                    List<h> listW = this.f2589i.w();
+                    List<h> listW = this.f2434i.w();
                     if (!(listW instanceof Collection) || !listW.isEmpty()) {
                         Iterator<T> it = listW.iterator();
                         while (it.hasNext()) {
@@ -593,14 +593,14 @@ public final class b extends androidx.fragment.app.i {
                                     Log.v("FragmentManager", "Completing animating immediately");
                                 }
                                 u2.e eVar = new u2.e();
-                                j0 transitionImpl = this.f2589i.getTransitionImpl();
-                                androidx.fragment.app.c fragment = this.f2589i.w().get(0).getOperation().getFragment();
-                                Object obj = this.f2590j;
-                                final g gVar = this.f2589i;
+                                j0 transitionImpl = this.f2434i.getTransitionImpl();
+                                androidx.fragment.app.c fragment = this.f2434i.w().get(0).getOperation().getFragment();
+                                Object obj = this.f2435j;
+                                final g gVar = this.f2434i;
                                 transitionImpl.w(fragment, obj, eVar, new Runnable() { // from class: e4.j
                                     @Override // java.lang.Runnable
                                     public final void run() {
-                                        androidx.fragment.app.b.g.C0040b.a.g(gVar);
+                                        androidx.fragment.app.b.g.C0036b.a.h(gVar);
                                     }
                                 });
                                 eVar.a();
@@ -611,15 +611,15 @@ public final class b extends androidx.fragment.app.i {
                     if (FragmentManager.N0(2)) {
                         Log.v("FragmentManager", "Animating to start");
                     }
-                    j0 transitionImpl2 = this.f2589i.getTransitionImpl();
-                    Object controller = this.f2589i.getController();
+                    j0 transitionImpl2 = this.f2434i.getTransitionImpl();
+                    Object controller = this.f2434i.getController();
                     Intrinsics.checkNotNull(controller);
-                    final g gVar2 = this.f2589i;
-                    final ViewGroup viewGroup = this.f2591k;
+                    final g gVar2 = this.f2434i;
+                    final ViewGroup viewGroup = this.f2436k;
                     transitionImpl2.d(controller, new Runnable() { // from class: e4.i
                         @Override // java.lang.Runnable
                         public final void run() {
-                            androidx.fragment.app.b.g.C0040b.a.f(gVar2, viewGroup);
+                            androidx.fragment.app.b.g.C0036b.a.f(gVar2, viewGroup);
                         }
                     });
                 }
@@ -627,16 +627,16 @@ public final class b extends androidx.fragment.app.i {
                 @Override // kotlin.jvm.functions.Function0
                 public /* bridge */ /* synthetic */ Unit invoke() {
                     d();
-                    return Unit.f22483a;
+                    return Unit.f22938a;
                 }
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C0040b(ViewGroup viewGroup, Object obj, c0<Function0<Unit>> c0Var) {
+            public C0036b(ViewGroup viewGroup, Object obj, c0<Function0<Unit>> c0Var) {
                 super(0);
-                this.f2586j = viewGroup;
-                this.f2587k = obj;
-                this.f2588l = c0Var;
+                this.f2431j = viewGroup;
+                this.f2432k = obj;
+                this.f2433l = c0Var;
             }
 
             /* JADX WARN: Type inference failed for: r3v2, types: [T, androidx.fragment.app.b$g$b$a] */
@@ -645,7 +645,7 @@ public final class b extends androidx.fragment.app.i {
                     Log.v("FragmentManager", "Attempting to create TransitionSeekController");
                 }
                 g gVar = g.this;
-                gVar.C(gVar.getTransitionImpl().j(this.f2586j, this.f2587k));
+                gVar.C(gVar.getTransitionImpl().j(this.f2431j, this.f2432k));
                 if (g.this.getController() == null) {
                     if (FragmentManager.N0(2)) {
                         Log.v("FragmentManager", "TransitionSeekController was not created.");
@@ -653,7 +653,7 @@ public final class b extends androidx.fragment.app.i {
                     g.this.D(true);
                     return;
                 }
-                this.f2588l.f22552a = new a(g.this, this.f2587k, this.f2586j);
+                this.f2433l.f23007a = new a(g.this, this.f2432k, this.f2431j);
                 if (FragmentManager.N0(2)) {
                     Log.v("FragmentManager", "Started executing operations from " + g.this.getFirstOut() + " to " + g.this.getLastIn());
                 }
@@ -662,7 +662,7 @@ public final class b extends androidx.fragment.app.i {
             @Override // kotlin.jvm.functions.Function0
             public /* bridge */ /* synthetic */ Unit invoke() {
                 b();
-                return Unit.f22483a;
+                return Unit.f22938a;
             }
         }
 
@@ -728,7 +728,7 @@ public final class b extends androidx.fragment.app.i {
 
         public static final void z(c0 seekCancelLambda) {
             Intrinsics.checkNotNullParameter(seekCancelLambda, "$seekCancelLambda");
-            Function0 function0 = (Function0) seekCancelLambda.f22552a;
+            Function0 function0 = (Function0) seekCancelLambda.f23007a;
             if (function0 != null) {
                 function0.invoke();
             }
@@ -909,7 +909,7 @@ public final class b extends androidx.fragment.app.i {
                         }
                     });
                 }
-                B(arrayListA, container, new C0040b(container, objB, c0Var));
+                B(arrayListA, container, new C0036b(container, objB, c0Var));
             }
         }
 
@@ -1109,7 +1109,7 @@ public final class b extends androidx.fragment.app.i {
             }
             Iterator<T> it = list.iterator();
             while (it.hasNext()) {
-                if (!((h) it.next()).getOperation().getFragment().f2612n) {
+                if (!((h) it.next()).getOperation().getFragment().f2457n) {
                     return false;
                 }
             }
@@ -1133,21 +1133,21 @@ public final class b extends androidx.fragment.app.i {
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public h(@NotNull androidx.fragment.app.i.d operation, boolean z10, boolean z11) {
-            Object objY;
+            Object objX;
             super(operation);
             Intrinsics.checkNotNullParameter(operation, "operation");
             androidx.fragment.app.i.d.b finalState = operation.getFinalState();
             androidx.fragment.app.i.d.b bVar = androidx.fragment.app.i.d.b.VISIBLE;
             if (finalState == bVar) {
                 androidx.fragment.app.c fragment = operation.getFragment();
-                objY = z10 ? fragment.S() : fragment.z();
+                objX = z10 ? fragment.R() : fragment.y();
             } else {
                 androidx.fragment.app.c fragment2 = operation.getFragment();
-                objY = z10 ? fragment2.Y() : fragment2.D();
+                objX = z10 ? fragment2.X() : fragment2.C();
             }
-            this.transition = objY;
+            this.transition = objX;
             this.isOverlapAllowed = operation.getFinalState() == bVar ? z10 ? operation.getFragment().r() : operation.getFragment().q() : true;
-            this.sharedElementTransition = z11 ? z10 ? operation.getFragment().b0() : operation.getFragment().a0() : null;
+            this.sharedElementTransition = z11 ? z10 ? operation.getFragment().b0() : operation.getFragment().Z() : null;
         }
 
         @Nullable
@@ -1201,12 +1201,12 @@ public final class b extends androidx.fragment.app.i {
     public static final class i extends m implements Function1<Map.Entry<String, View>, Boolean> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ Collection<String> f2594i;
+        public final /* synthetic */ Collection<String> f2439i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public i(Collection<String> collection) {
             super(1);
-            this.f2594i = collection;
+            this.f2439i = collection;
         }
 
         @Override // kotlin.jvm.functions.Function1
@@ -1214,7 +1214,7 @@ public final class b extends androidx.fragment.app.i {
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final Boolean invoke(@NotNull Map.Entry<String, View> entry) {
             Intrinsics.checkNotNullParameter(entry, "entry");
-            return Boolean.valueOf(CollectionsKt.W(this.f2594i, o0.H(entry.getValue())));
+            return Boolean.valueOf(CollectionsKt.W(this.f2439i, o0.H(entry.getValue())));
         }
     }
 
@@ -1231,31 +1231,31 @@ public final class b extends androidx.fragment.app.i {
     }
 
     @SuppressLint({"NewApi", "PrereleaseSdkCoreDependency"})
-    public final void F(List<C0039b> animationInfos) {
+    public final void F(List<C0035b> animationInfos) {
         ArrayList arrayList = new ArrayList();
         ArrayList arrayList2 = new ArrayList();
         Iterator<T> it = animationInfos.iterator();
         while (it.hasNext()) {
-            u.z(arrayList2, ((C0039b) it.next()).getOperation().f());
+            u.z(arrayList2, ((C0035b) it.next()).getOperation().f());
         }
         boolean zIsEmpty = arrayList2.isEmpty();
         int i10 = 0;
         boolean z10 = false;
-        for (C0039b c0039b : animationInfos) {
+        for (C0035b c0035b : animationInfos) {
             Context context = getContainer().getContext();
-            androidx.fragment.app.i.d operation = c0039b.getOperation();
+            androidx.fragment.app.i.d operation = c0035b.getOperation();
             Intrinsics.checkNotNullExpressionValue(context, "context");
-            androidx.fragment.app.d.a aVarC = c0039b.c(context);
+            androidx.fragment.app.d.a aVarC = c0035b.c(context);
             if (aVarC != null) {
                 if (aVarC.b == null) {
-                    arrayList.add(c0039b);
+                    arrayList.add(c0035b);
                 } else {
                     androidx.fragment.app.c fragment = operation.getFragment();
                     if (operation.f().isEmpty()) {
                         if (operation.getFinalState() == androidx.fragment.app.i.d.b.GONE) {
                             operation.q(false);
                         }
-                        operation.b(new c(c0039b));
+                        operation.b(new c(c0035b));
                         z10 = true;
                     } else if (FragmentManager.N0(2)) {
                         Log.v("FragmentManager", "Ignoring Animator set on " + fragment + " as this Fragment was involved in a Transition.");
@@ -1267,12 +1267,12 @@ public final class b extends androidx.fragment.app.i {
         while (i10 < size) {
             Object obj = arrayList.get(i10);
             i10++;
-            C0039b c0039b2 = (C0039b) obj;
-            androidx.fragment.app.i.d operation2 = c0039b2.getOperation();
+            C0035b c0035b2 = (C0035b) obj;
+            androidx.fragment.app.i.d operation2 = c0035b2.getOperation();
             androidx.fragment.app.c fragment2 = operation2.getFragment();
             if (zIsEmpty) {
                 if (!z10) {
-                    operation2.b(new a(c0039b2));
+                    operation2.b(new a(c0035b2));
                 } else if (FragmentManager.N0(2)) {
                     Log.v("FragmentManager", "Ignoring Animation set on " + fragment2 + " as Animations cannot run alongside Animators.");
                 }
@@ -1375,7 +1375,7 @@ public final class b extends androidx.fragment.app.i {
                 }
                 arrayListD0 = lastIn.getFragment().d0();
                 Intrinsics.checkNotNullExpressionValue(arrayListD0, "lastIn.fragment.sharedElementTargetNames");
-                Pair pairA = !isPop ? s.a(firstOut.getFragment().E(), lastIn.getFragment().B()) : s.a(firstOut.getFragment().B(), lastIn.getFragment().E());
+                Pair pairA = !isPop ? s.a(firstOut.getFragment().D(), lastIn.getFragment().A()) : s.a(firstOut.getFragment().A(), lastIn.getFragment().D());
                 k2.u uVar = (k2.u) pairA.a();
                 k2.u uVar2 = (k2.u) pairA.b();
                 int size5 = arrayListC0.size();
@@ -1571,10 +1571,10 @@ public final class b extends androidx.fragment.app.i {
     public final void K(List<? extends androidx.fragment.app.i.d> operations) {
         androidx.fragment.app.c fragment = ((androidx.fragment.app.i.d) CollectionsKt.o0(operations)).getFragment();
         for (androidx.fragment.app.i.d dVar : operations) {
-            dVar.getFragment().N.f2639c = fragment.N.f2639c;
-            dVar.getFragment().N.f2640d = fragment.N.f2640d;
-            dVar.getFragment().N.f2641e = fragment.N.f2641e;
-            dVar.getFragment().N.f2642f = fragment.N.f2642f;
+            dVar.getFragment().N.f2484c = fragment.N.f2484c;
+            dVar.getFragment().N.f2485d = fragment.N.f2485d;
+            dVar.getFragment().N.f2486e = fragment.N.f2486e;
+            dVar.getFragment().N.f2487f = fragment.N.f2487f;
         }
     }
 
@@ -1628,7 +1628,7 @@ public final class b extends androidx.fragment.app.i {
         ArrayList arrayList2 = new ArrayList();
         K(operations);
         for (final androidx.fragment.app.i.d dVar6 : operations) {
-            arrayList.add(new C0039b(dVar6, isPop));
+            arrayList.add(new C0035b(dVar6, isPop));
             boolean z10 = false;
             if (isPop) {
                 if (dVar6 == dVar3) {
@@ -1641,7 +1641,7 @@ public final class b extends androidx.fragment.app.i {
             dVar6.a(new Runnable() { // from class: e4.a
                 @Override // java.lang.Runnable
                 public final void run() {
-                    androidx.fragment.app.b.G(this.f15075a, dVar6);
+                    androidx.fragment.app.b.G(this.f15689a, dVar6);
                 }
             });
         }

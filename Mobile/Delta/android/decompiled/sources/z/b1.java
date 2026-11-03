@@ -4,7 +4,7 @@ package z;
 public class b1 implements n0.l1.b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final b1 f36442a = new b1();
+    public static final b1 f37137a = new b1();
 
     @Override // n0.l1.b
     public void a(n0.i4<?> i4Var, n0.l1.a aVar) {

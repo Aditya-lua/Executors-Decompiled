@@ -16,20 +16,20 @@ import java.util.Map;
 public class k implements e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final a f4664a;
+    public final a f4830a;
     public final i b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Map<String, m> f4665c;
+    public final Map<String, m> f4831c;
 
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Context f4666a;
+        public final Context f4832a;
         public Map<String, String> b = null;
 
         public a(Context context) {
-            this.f4666a = context;
+            this.f4832a = context;
         }
 
         public static Bundle d(Context context) {
@@ -99,7 +99,7 @@ public class k implements e {
 
         public final Map<String, String> c() {
             if (this.b == null) {
-                this.b = a(this.f4666a);
+                this.b = a(this.f4832a);
             }
             return this.b;
         }
@@ -111,21 +111,21 @@ public class k implements e {
 
     @Override // c8.e
     public synchronized m a(String str) {
-        if (this.f4665c.containsKey(str)) {
-            return this.f4665c.get(str);
+        if (this.f4831c.containsKey(str)) {
+            return this.f4831c.get(str);
         }
-        d dVarB = this.f4664a.b(str);
+        d dVarB = this.f4830a.b(str);
         if (dVarB == null) {
             return null;
         }
         m mVarCreate = dVarB.create(this.b.a(str));
-        this.f4665c.put(str, mVarCreate);
+        this.f4831c.put(str, mVarCreate);
         return mVarCreate;
     }
 
     public k(a aVar, i iVar) {
-        this.f4665c = new HashMap();
-        this.f4664a = aVar;
+        this.f4831c = new HashMap();
+        this.f4830a = aVar;
         this.b = iVar;
     }
 }

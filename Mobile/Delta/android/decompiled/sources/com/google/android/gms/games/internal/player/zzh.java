@@ -12,10 +12,10 @@ public final class zzh extends zzg {
     public static final Parcelable.Creator<zzh> CREATOR = new e();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final String f6185f;
+    public final String f6258f;
 
     public zzh(String str) {
-        this.f6185f = str;
+        this.f6258f = str;
     }
 
     public final boolean equals(Object obj) {
@@ -25,16 +25,16 @@ public final class zzh extends zzg {
         if (obj == this) {
             return true;
         }
-        return k.b(this.f6185f, ((zzh) obj).f6185f);
+        return k.b(this.f6258f, ((zzh) obj).f6258f);
     }
 
     public final int hashCode() {
-        return k.c(this.f6185f);
+        return k.c(this.f6258f);
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i10) {
-        String str = this.f6185f;
+        String str = this.f6258f;
         int iA = b.a(parcel);
         b.v(parcel, 1, str, false);
         b.b(parcel, iA);

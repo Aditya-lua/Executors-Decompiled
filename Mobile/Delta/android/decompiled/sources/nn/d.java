@@ -1,63 +1,78 @@
 package nn;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
+import java.util.Map;
+
 /* JADX INFO: loaded from: classes3.dex */
-public class d extends tn.f {
+public class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final tn.d[] f26370a;
-    public int b = -1;
+    public static final Map<String, String> f27332a = b();
 
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f26371c = -1;
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public boolean f26372d = false;
-
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public int f26373e = 0;
-
-    public d(tn.d... dVarArr) {
-        this.f26370a = dVarArr;
-    }
-
-    @Override // tn.f
-    public tn.f a(int i10) {
-        this.f26371c = i10;
-        return this;
-    }
-
-    @Override // tn.f
-    public tn.f b(int i10) {
-        this.b = i10;
-        return this;
-    }
-
-    @Override // tn.f
-    public tn.f e(int i10) {
-        if (i10 < 1) {
-            throw new IllegalArgumentException("Lines must be >= 1");
+    public static String a(String str) {
+        int i10;
+        if (str.startsWith("&") && str.endsWith(";")) {
+            String strSubstring = str.substring(1, str.length() - 1);
+            if (strSubstring.startsWith("#")) {
+                String strSubstring2 = strSubstring.substring(1);
+                if (strSubstring2.startsWith("x") || strSubstring2.startsWith("X")) {
+                    strSubstring2 = strSubstring2.substring(1);
+                    i10 = 16;
+                } else {
+                    i10 = 10;
+                }
+                try {
+                    int i11 = Integer.parseInt(strSubstring2, i10);
+                    return i11 == 0 ? "�" : new String(Character.toChars(i11));
+                } catch (IllegalArgumentException unused) {
+                    return "�";
+                }
+            }
+            String str2 = f27332a.get(strSubstring);
+            if (str2 != null) {
+                return str2;
+            }
         }
-        this.f26373e = i10;
-        return this;
+        return str;
     }
 
-    public tn.d[] f() {
-        return this.f26370a;
-    }
-
-    public int g() {
-        return this.f26371c;
-    }
-
-    public int h() {
-        return this.b;
-    }
-
-    public int i() {
-        return this.f26373e;
-    }
-
-    public boolean j() {
-        return this.f26372d;
+    public static Map<String, String> b() {
+        HashMap map = new HashMap();
+        InputStream resourceAsStream = d.class.getResourceAsStream("/com/withpersona/sdk2/commonmark/internal/util/entities.txt");
+        if (resourceAsStream != null) {
+            try {
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(resourceAsStream, StandardCharsets.UTF_8));
+                while (true) {
+                    try {
+                        String line = bufferedReader.readLine();
+                        if (line == null) {
+                            break;
+                        }
+                        if (!line.isEmpty()) {
+                            int iIndexOf = line.indexOf("=");
+                            map.put(line.substring(0, iIndexOf), line.substring(iIndexOf + 1));
+                        }
+                    } catch (Throwable th2) {
+                        try {
+                            bufferedReader.close();
+                        } catch (Throwable th3) {
+                            th2.addSuppressed(th3);
+                        }
+                        throw th2;
+                    }
+                    throw new IllegalStateException("Failed reading data for HTML named character references", e);
+                }
+                bufferedReader.close();
+            } catch (IOException e10) {
+                throw new IllegalStateException("Failed reading data for HTML named character references", e10);
+            }
+        }
+        map.put("NewLine", "\n");
+        return map;
     }
 }

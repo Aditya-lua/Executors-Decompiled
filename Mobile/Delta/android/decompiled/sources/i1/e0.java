@@ -10,30 +10,30 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class e0 implements p {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final AtomicBoolean f20176a = new AtomicBoolean(false);
+    public final AtomicBoolean f20292a = new AtomicBoolean(false);
     public final AtomicBoolean b = new AtomicBoolean(false);
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final int f20177c;
+    public final int f20293c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final int f20178d;
+    public final int f20294d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public byte[] f20179e;
+    public byte[] f20295e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public long f20180f;
+    public long f20296f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public p.a f20181g;
+    public p.a f20297g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public Executor f20182h;
+    public Executor f20298h;
 
     public e0(a aVar) {
-        this.f20177c = aVar.d();
-        this.f20178d = aVar.e();
+        this.f20293c = aVar.d();
+        this.f20294d = aVar.e();
     }
 
     public static void d(long j10) {
@@ -52,7 +52,7 @@ public class e0 implements p {
     }
 
     private void f() {
-        x2.g.j(this.f20176a.get(), "AudioStream has not been started.");
+        x2.g.j(this.f20292a.get(), "AudioStream has not been started.");
     }
 
     public static long g() {
@@ -67,19 +67,19 @@ public class e0 implements p {
     @Override // i1.p
     public void b(p.a aVar, Executor executor) {
         boolean z10 = true;
-        x2.g.j(!this.f20176a.get(), "AudioStream can not be started when setCallback.");
+        x2.g.j(!this.f20292a.get(), "AudioStream can not be started when setCallback.");
         e();
         if (aVar != null && executor == null) {
             z10 = false;
         }
         x2.g.b(z10, "executor can't be null with non-null callback.");
-        this.f20181g = aVar;
-        this.f20182h = executor;
+        this.f20297g = aVar;
+        this.f20298h = executor;
     }
 
     public final void h() {
-        final p.a aVar = this.f20181g;
-        Executor executor = this.f20182h;
+        final p.a aVar = this.f20297g;
+        Executor executor = this.f20298h;
         if (aVar == null || executor == null) {
             return;
         }
@@ -93,44 +93,44 @@ public class e0 implements p {
 
     public final void i(ByteBuffer byteBuffer, int i10) {
         x2.g.i(i10 <= byteBuffer.remaining());
-        byte[] bArr = this.f20179e;
+        byte[] bArr = this.f20295e;
         if (bArr == null || bArr.length < i10) {
-            this.f20179e = new byte[i10];
+            this.f20295e = new byte[i10];
         }
         int iPosition = byteBuffer.position();
-        byteBuffer.put(this.f20179e, 0, i10).limit(i10 + iPosition).position(iPosition);
+        byteBuffer.put(this.f20295e, 0, i10).limit(i10 + iPosition).position(iPosition);
     }
 
     @Override // i1.p
     public p.c read(ByteBuffer byteBuffer) {
         e();
         f();
-        long jG = t.g(byteBuffer.remaining(), this.f20177c);
-        int iE = (int) t.e(jG, this.f20177c);
+        long jG = t.g(byteBuffer.remaining(), this.f20293c);
+        int iE = (int) t.e(jG, this.f20293c);
         if (iE <= 0) {
-            return p.c.c(0, this.f20180f);
+            return p.c.c(0, this.f20296f);
         }
-        long jD = this.f20180f + t.d(jG, this.f20178d);
+        long jD = this.f20296f + t.d(jG, this.f20294d);
         d(jD);
         i(byteBuffer, iE);
-        p.c cVarC = p.c.c(iE, this.f20180f);
-        this.f20180f = jD;
+        p.c cVarC = p.c.c(iE, this.f20296f);
+        this.f20296f = jD;
         return cVarC;
     }
 
     @Override // i1.p
     public void start() {
         e();
-        if (this.f20176a.getAndSet(true)) {
+        if (this.f20292a.getAndSet(true)) {
             return;
         }
-        this.f20180f = g();
+        this.f20296f = g();
         h();
     }
 
     @Override // i1.p
     public void stop() {
         e();
-        this.f20176a.set(false);
+        this.f20292a.set(false);
     }
 }

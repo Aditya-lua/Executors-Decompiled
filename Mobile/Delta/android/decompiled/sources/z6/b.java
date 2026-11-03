@@ -13,10 +13,10 @@ public final class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final Extras.c<String> f37307a = new Extras.c<>(null);
+    public static final Extras.c<String> f38002a = new Extras.c<>(null);
 
     @Nullable
     public static final String a(@NotNull Options options) {
-        return (String) m.b(options, f37307a);
+        return (String) m.b(options, f38002a);
     }
 }

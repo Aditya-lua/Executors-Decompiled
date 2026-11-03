@@ -26,7 +26,7 @@ public class c7 {
             char cCharAt = str.charAt(i11);
             if (cCharAt >= 2048) {
                 try {
-                    int i13 = e7.f7036a;
+                    int i13 = e7.f7110a;
                     int length2 = str.length();
                     while (i11 < length2) {
                         char cCharAt2 = str.charAt(i11);

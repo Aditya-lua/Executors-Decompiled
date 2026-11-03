@@ -13,7 +13,7 @@ public final class AFi1vSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @Nullable
-    public AFi1ySDK f5429d;
+    public AFi1ySDK f5502d;
 
     public AFi1vSDK(@NotNull Context context) {
         Intrinsics.checkNotNullParameter(context, "");

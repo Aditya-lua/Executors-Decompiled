@@ -15,7 +15,7 @@ public final class Charsets {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final Charsets f22584a = new Charsets();
+    public static final Charsets f23039a = new Charsets();
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull

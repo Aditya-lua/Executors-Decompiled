@@ -8,7 +8,7 @@ public final class s5 extends cb implements pc {
         throw null;
     }
 
-    public final s5 A(String str) {
+    public final s5 B(String str) {
         p();
         ((w5) this.b).l0(str);
         return this;
@@ -112,7 +112,7 @@ public final class s5 extends cb implements pc {
         return this;
     }
 
-    public final s5 x(String str) {
+    public final s5 y(String str) {
         p();
         ((w5) this.b).j0(str);
         return this;

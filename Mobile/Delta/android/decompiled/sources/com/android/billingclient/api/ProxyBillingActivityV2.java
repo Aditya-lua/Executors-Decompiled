@@ -27,13 +27,13 @@ public class ProxyBillingActivityV2 extends p {
     public ResultReceiver I;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public g.c f5058x;
+    public g.c f5131x;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public g.c f5059y;
+    public g.c f5132y;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public g.c f5060z;
+    public g.c f5133z;
 
     public static final k2.c m1() {
         int i10 = Build.VERSION.SDK_INT;
@@ -149,40 +149,40 @@ public class ProxyBillingActivityV2 extends p {
     @Override // e.p, k2.g, android.app.Activity
     public final void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        this.f5058x = h(new h.j(), new g.a() { // from class: v7.r1
+        this.f5131x = h(new h.j(), new g.a() { // from class: v7.r1
             @Override // g.a
             public final void a(Object obj) {
-                this.f32833a.g1((ActivityResult) obj);
+                this.f33401a.g1((ActivityResult) obj);
             }
         });
-        this.f5059y = h(new h.j(), new g.a() { // from class: v7.s1
+        this.f5132y = h(new h.j(), new g.a() { // from class: v7.s1
             @Override // g.a
             public final void a(Object obj) {
-                this.f32836a.i1((ActivityResult) obj);
+                this.f33404a.i1((ActivityResult) obj);
             }
         });
-        this.f5060z = h(new h.j(), new g.a() { // from class: v7.t1
+        this.f5133z = h(new h.j(), new g.a() { // from class: v7.t1
             @Override // g.a
             public final void a(Object obj) {
-                this.f32844a.j1((ActivityResult) obj);
+                this.f33412a.j1((ActivityResult) obj);
             }
         });
         this.A = h(new h.j(), new g.a() { // from class: v7.u1
             @Override // g.a
             public final void a(Object obj) {
-                this.f32847a.k1((ActivityResult) obj);
+                this.f33415a.k1((ActivityResult) obj);
             }
         });
         this.B = h(new h.j(), new g.a() { // from class: v7.v1
             @Override // g.a
             public final void a(Object obj) {
-                this.f32850a.h1((ActivityResult) obj);
+                this.f33418a.h1((ActivityResult) obj);
             }
         });
         this.C = h(new h.j(), new g.a() { // from class: v7.w1
             @Override // g.a
             public final void a(Object obj) {
-                this.f32854a.l1((ActivityResult) obj);
+                this.f33422a.l1((ActivityResult) obj);
             }
         });
         if (bundle != null) {
@@ -211,19 +211,19 @@ public class ProxyBillingActivityV2 extends p {
         if (getIntent().hasExtra("ALTERNATIVE_BILLING_ONLY_DIALOG_INTENT")) {
             PendingIntent pendingIntent = (PendingIntent) getIntent().getParcelableExtra("ALTERNATIVE_BILLING_ONLY_DIALOG_INTENT");
             this.D = (ResultReceiver) getIntent().getParcelableExtra("alternative_billing_only_dialog_result_receiver");
-            this.f5058x.c(new IntentSenderRequest.a(pendingIntent).a(), m1());
+            this.f5131x.c(new IntentSenderRequest.a(pendingIntent).a(), m1());
             return;
         }
         if (getIntent().hasExtra("external_payment_dialog_pending_intent")) {
             PendingIntent pendingIntent2 = (PendingIntent) getIntent().getParcelableExtra("external_payment_dialog_pending_intent");
             this.E = (ResultReceiver) getIntent().getParcelableExtra("external_payment_dialog_result_receiver");
-            this.f5059y.c(new IntentSenderRequest.a(pendingIntent2).a(), m1());
+            this.f5132y.c(new IntentSenderRequest.a(pendingIntent2).a(), m1());
             return;
         }
         if (getIntent().hasExtra("external_offer_flow_pending_intent")) {
             PendingIntent pendingIntent3 = (PendingIntent) getIntent().getParcelableExtra("external_offer_flow_pending_intent");
             this.F = (ResultReceiver) getIntent().getParcelableExtra("external_offer_flow_result_receiver");
-            this.f5060z.c(new IntentSenderRequest.a(pendingIntent3).a(), m1());
+            this.f5133z.c(new IntentSenderRequest.a(pendingIntent3).a(), m1());
             return;
         }
         if (getIntent().hasExtra("launch_external_link_flow_pending_intent")) {

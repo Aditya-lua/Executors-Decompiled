@@ -6,7 +6,7 @@ import android.database.Cursor;
 public final class g {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Cursor f37348a;
+    public Cursor f38043a;
 
     public g() {
         throw null;

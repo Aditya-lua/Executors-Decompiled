@@ -8,20 +8,20 @@ import v7.j1;
 public final class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f5112a;
+    public int f5185a;
     public int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public String f5113c;
+    public String f5186c;
 
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public int f5114a;
+        public int f5187a;
         public int b = 0;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public String f5115c = "";
+        public String f5188c = "";
 
         public /* synthetic */ a(j1 j1Var) {
         }
@@ -29,15 +29,15 @@ public final class d {
         @NonNull
         public d a() {
             d dVar = new d();
-            dVar.f5112a = this.f5114a;
+            dVar.f5185a = this.f5187a;
             dVar.b = this.b;
-            dVar.f5113c = this.f5115c;
+            dVar.f5186c = this.f5188c;
             return dVar;
         }
 
         @NonNull
         public a b(@NonNull String str) {
-            this.f5115c = str;
+            this.f5188c = str;
             return this;
         }
 
@@ -49,7 +49,7 @@ public final class d {
 
         @NonNull
         public a d(int i10) {
-            this.f5114a = i10;
+            this.f5187a = i10;
             return this;
         }
     }
@@ -61,7 +61,7 @@ public final class d {
 
     @NonNull
     public String a() {
-        return this.f5113c;
+        return this.f5186c;
     }
 
     public int b() {
@@ -69,11 +69,11 @@ public final class d {
     }
 
     public int c() {
-        return this.f5112a;
+        return this.f5185a;
     }
 
     @NonNull
     public String toString() {
-        return "Response Code: " + m0.j(this.f5112a) + ", Debug Message: " + this.f5113c;
+        return "Response Code: " + m0.j(this.f5185a) + ", Debug Message: " + this.f5186c;
     }
 }

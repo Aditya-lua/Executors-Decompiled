@@ -57,7 +57,7 @@ public final class CameraProperties implements Parcelable {
 
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f9911e = qt.b.a(a());
+        public static final /* synthetic */ ot.a f9992e = ot.b.a(a());
     }
 
     public CameraProperties() {

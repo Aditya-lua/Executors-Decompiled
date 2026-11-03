@@ -11,11 +11,11 @@ public final class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final String f14443a;
+    public static final String f14423a;
 
     static {
         String strI = w.i("BatteryChrgTracker");
         Intrinsics.checkNotNullExpressionValue(strI, "tagWithPrefix(...)");
-        f14443a = strI;
+        f14423a = strI;
     }
 }

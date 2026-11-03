@@ -6,11 +6,11 @@ import java.util.List;
 public final class bd {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final ld f6390a;
+    public static final ld f6463a;
 
     static {
-        wc wcVar = wc.f6869c;
-        f6390a = new nd();
+        wc wcVar = wc.f6943c;
+        f6463a = new nd();
     }
 
     public static int A(List list) {
@@ -48,7 +48,7 @@ public final class bd {
     }
 
     public static ld a() {
-        return f6390a;
+        return f6463a;
     }
 
     public static boolean b(Object obj, Object obj2) {
@@ -59,7 +59,7 @@ public final class bd {
     }
 
     public static void c(sa saVar, Object obj, Object obj2) {
-        if (((db) obj2).zzb.f6867a.isEmpty()) {
+        if (((db) obj2).zzb.f6941a.isEmpty()) {
             return;
         }
         throw null;
@@ -202,7 +202,7 @@ public final class bd {
         cc ccVar = (cc) list;
         int iA2 = 0;
         while (i10 < size) {
-            iA2 += ma.a(ccVar.x0(i10));
+            iA2 += ma.a(ccVar.t0(i10));
             i10++;
         }
         return iA2;
@@ -225,7 +225,7 @@ public final class bd {
         cc ccVar = (cc) list;
         int iA2 = 0;
         while (i10 < size) {
-            iA2 += ma.a(ccVar.x0(i10));
+            iA2 += ma.a(ccVar.t0(i10));
             i10++;
         }
         return iA2;
@@ -249,8 +249,8 @@ public final class bd {
         cc ccVar = (cc) list;
         int iA2 = 0;
         while (i10 < size) {
-            long jX0 = ccVar.x0(i10);
-            iA2 += ma.a((jX0 >> 63) ^ (jX0 + jX0));
+            long jT0 = ccVar.t0(i10);
+            iA2 += ma.a((jT0 >> 63) ^ (jT0 + jT0));
             i10++;
         }
         return iA2;

@@ -1,0 +1,54 @@
+{
+  "apk": {
+    "sha256": "4d22c8be0f81251d18dc53a49b42a4c27ec64eb1ee039106a33913987027c3f2",
+    "bytes": 167457402
+  },
+  "protected_elf": {
+    "path": "lib/arm64-v8a/libzstd-jni-1.5.7-6.so",
+    "sha256": "fc3fd01754502ee1f001e190e7af2b760378bd20493c370a70f395d67484b554",
+    "bytes": 18491992,
+    "initializer": "0x105cac8"
+  },
+  "derived_analysis_elf": {
+    "sha256": "cf32c479f0580e245138d9e73b9c5eee024c6a4fd7a8dff74d0bef06d8b87244",
+    "tool": "bounded offline ARM64 emulation",
+    "initializer_returned": true
+  },
+  "constructor_trace": {
+    "constructor_count": 703,
+    "application_initializers_executed": 699,
+    "skipped_indices": [1, 2, 3],
+    "reason": "host CPU and C++ locale setup are outside constant recovery"
+  },
+  "jni_onload": {
+    "address": "0x10521e8",
+    "returned": true,
+    "return_value": "0x10006",
+    "registrations": "../../jni-registration-map.json"
+  },
+  "native_start": {
+    "address": "0x62851c",
+    "returned": true,
+    "return_value": "0x0",
+    "deferred_threads": ["0xa9ecf4", "0x76f384"]
+  },
+  "jni_deferred_worker": {
+    "address": "0x608450",
+    "returned": false,
+    "stop_reason": "blocked synthetic syscall 0"
+  },
+  "decompiler": {
+    "name": "Ghidra",
+    "version": "12.1.4",
+    "image_base": "0x100000",
+    "selected_outputs": ["../../JNI_OnLoad.c", "../../worker.c"]
+  },
+  "environment": {
+    "apk_installed": false,
+    "host_syscalls_forwarded": false,
+    "host_network_forwarded": false,
+    "jni_objects": "synthetic",
+    "sdk": 35,
+    "android_id": "0000000000000000"
+  }
+}

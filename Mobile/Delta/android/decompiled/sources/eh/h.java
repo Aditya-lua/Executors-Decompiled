@@ -1,34 +1,30 @@
 package eh;
 
 import android.content.Context;
-import android.view.View;
-import android.widget.LinearLayout;
-import androidx.appcompat.widget.ActionMenuView;
-import androidx.appcompat.widget.AppCompatImageButton;
-import androidx.appcompat.widget.Toolbar;
-import sg.e2;
+import android.content.DialogInterface;
+import android.view.KeyEvent;
+import kotlin.Metadata;
+import rg.q0;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class h {
-    public static void a(Toolbar toolbar, Context context, int i10, int i11) {
-        View viewFindViewById = toolbar.findViewById(i10);
-        if (viewFindViewById != null) {
-            ActionMenuView.c cVar = (ActionMenuView.c) viewFindViewById.getLayoutParams();
-            ((LinearLayout.LayoutParams) cVar).width = (int) e2.e(context, i11);
-            viewFindViewById.setLayoutParams(cVar);
+@Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\u001a\u0013\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\u0002¢\u0006\u0004\b\u0002\u0010\u0003\u001a\u001b\u0010\u0006\u001a\n \u0005*\u0004\u0018\u00010\u00000\u0000*\u00020\u0004H\u0002¢\u0006\u0004\b\u0006\u0010\u0007¨\u0006\b"}, d2 = {"Landroidx/appcompat/app/a;", "", "d", "(Landroidx/appcompat/app/a;)V", "Landroid/content/Context;", "kotlin.jvm.PlatformType", "e", "(Landroid/content/Context;)Landroidx/appcompat/app/a;", "NativeShell_googleProdRelease"}, k = 2, mv = {2, 2, 0}, xi = 48)
+public final class h {
+    public static final void d(androidx.appcompat.app.a aVar) {
+        if (aVar.isShowing()) {
+            aVar.dismiss();
         }
     }
 
-    public static void b(Toolbar toolbar, View.OnClickListener onClickListener) {
-        toolbar.setNavigationOnClickListener(onClickListener);
-    }
-
-    public static void c(Toolbar toolbar, int i10) {
-        for (int i11 = 0; i11 < toolbar.getChildCount(); i11++) {
-            View childAt = toolbar.getChildAt(i11);
-            if (childAt != null && childAt.getClass() == AppCompatImageButton.class) {
-                ((AppCompatImageButton) childAt).setImageResource(i10);
+    public static final androidx.appcompat.app.a e(Context context) {
+        return new androidx.appcompat.app.a.C0009a(context).d(false).g(q0.f30547k).l(new DialogInterface.OnKeyListener() { // from class: eh.g
+            @Override // android.content.DialogInterface.OnKeyListener
+            public final boolean onKey(DialogInterface dialogInterface, int i10, KeyEvent keyEvent) {
+                return h.f(dialogInterface, i10, keyEvent);
             }
-        }
+        }).r();
+    }
+
+    public static final boolean f(DialogInterface dialogInterface, int i10, KeyEvent keyEvent) {
+        return i10 == 4;
     }
 }

@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 public class h {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static boolean f27117a = true;
+    public static boolean f27682a = true;
 
     public static class a {
         public static void a(ImageView imageView, Matrix matrix) {
@@ -37,11 +37,11 @@ public class h {
 
     @SuppressLint({"NewApi"})
     public static void b(@NonNull ImageView imageView, Matrix matrix) {
-        if (f27117a) {
+        if (f27682a) {
             try {
                 a.a(imageView, matrix);
             } catch (NoSuchMethodError unused) {
-                f27117a = false;
+                f27682a = false;
             }
         }
     }

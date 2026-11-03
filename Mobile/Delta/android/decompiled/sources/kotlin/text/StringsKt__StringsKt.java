@@ -25,15 +25,15 @@ public class StringsKt__StringsKt extends x {
     public static final class a implements Sequence<String> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ CharSequence f22594a;
+        public final /* synthetic */ CharSequence f23049a;
 
         public a(CharSequence charSequence) {
-            this.f22594a = charSequence;
+            this.f23049a = charSequence;
         }
 
         @Override // kotlin.sequences.Sequence
         public Iterator<String> iterator() {
-            return new h(this.f22594a);
+            return new h(this.f23049a);
         }
     }
 
@@ -80,14 +80,14 @@ public class StringsKt__StringsKt extends x {
         if (iO0 < 0) {
             return null;
         }
-        return jt.s.a(Integer.valueOf(iO0), 1);
+        return gt.s.a(Integer.valueOf(iO0), 1);
     }
 
     public static final Pair E0(List list, boolean z10, CharSequence DelimitedRangesSequence, int i10) {
         Intrinsics.checkNotNullParameter(DelimitedRangesSequence, "$this$DelimitedRangesSequence");
         Pair<Integer, String> pairG0 = g0(DelimitedRangesSequence, list, i10, z10, false);
         if (pairG0 != null) {
-            return jt.s.a(pairG0.c(), Integer.valueOf(pairG0.d().length()));
+            return gt.s.a(pairG0.c(), Integer.valueOf(pairG0.d().length()));
         }
         return null;
     }
@@ -180,7 +180,7 @@ public class StringsKt__StringsKt extends x {
         if (delimiters.length == 1) {
             return O0(charSequence, String.valueOf(delimiters[0]), z10, i10);
         }
-        Iterable iterableN = iu.p.n(B0(charSequence, delimiters, 0, z10, i10, 2, null));
+        Iterable iterableN = gu.p.n(B0(charSequence, delimiters, 0, z10, i10, 2, null));
         ArrayList arrayList = new ArrayList(kotlin.collections.q.u(iterableN, 10));
         Iterator it = iterableN.iterator();
         while (it.hasNext()) {
@@ -199,7 +199,7 @@ public class StringsKt__StringsKt extends x {
                 return O0(charSequence, str, z10, i10);
             }
         }
-        Iterable iterableN = iu.p.n(C0(charSequence, delimiters, 0, z10, i10, 2, null));
+        Iterable iterableN = gu.p.n(C0(charSequence, delimiters, 0, z10, i10, 2, null));
         ArrayList arrayList = new ArrayList(kotlin.collections.q.u(iterableN, 10));
         Iterator it = iterableN.iterator();
         while (it.hasNext()) {
@@ -243,7 +243,7 @@ public class StringsKt__StringsKt extends x {
     public static final Sequence<String> Q0(@NotNull final CharSequence charSequence, @NotNull char[] delimiters, boolean z10, int i10) {
         Intrinsics.checkNotNullParameter(charSequence, "<this>");
         Intrinsics.checkNotNullParameter(delimiters, "delimiters");
-        return iu.p.x(B0(charSequence, delimiters, 0, z10, i10, 2, null), new Function1() { // from class: kotlin.text.a0
+        return gu.p.x(B0(charSequence, delimiters, 0, z10, i10, 2, null), new Function1() { // from class: kotlin.text.a0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
                 return StringsKt__StringsKt.S0(charSequence, (IntRange) obj);
@@ -463,7 +463,7 @@ public class StringsKt__StringsKt extends x {
             if (iN0 < 0) {
                 return null;
             }
-            return jt.s.a(Integer.valueOf(iN0), str);
+            return gt.s.a(Integer.valueOf(iN0), str);
         }
         CharSequence charSequence3 = charSequence;
         kotlin.ranges.a intRange = !z11 ? new IntRange(kotlin.ranges.d.c(i10, 0), charSequence3.length()) : kotlin.ranges.d.n(kotlin.ranges.d.f(i10, h0(charSequence3)), 0);
@@ -491,7 +491,7 @@ public class StringsKt__StringsKt extends x {
                     }
                     String str3 = (String) next2;
                     if (str3 != null) {
-                        return jt.s.a(Integer.valueOf(i11), str3);
+                        return gt.s.a(Integer.valueOf(i11), str3);
                     }
                     if (i11 != iE) {
                         i11 += iF;
@@ -526,7 +526,7 @@ public class StringsKt__StringsKt extends x {
                     }
                     String str5 = (String) next;
                     if (str5 != null) {
-                        return jt.s.a(Integer.valueOf(i12), str5);
+                        return gt.s.a(Integer.valueOf(i12), str5);
                     }
                     if (i12 != iE2) {
                         i12 += iF2;
@@ -912,7 +912,7 @@ public class StringsKt__StringsKt extends x {
     @NotNull
     public static List<String> w0(@NotNull CharSequence charSequence) {
         Intrinsics.checkNotNullParameter(charSequence, "<this>");
-        return iu.p.z(v0(charSequence));
+        return gu.p.z(v0(charSequence));
     }
 
     @NotNull

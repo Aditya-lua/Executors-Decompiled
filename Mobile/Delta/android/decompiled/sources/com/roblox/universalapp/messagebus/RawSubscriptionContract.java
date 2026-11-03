@@ -1,27 +1,27 @@
 package com.roblox.universalapp.messagebus;
 
-import mm.h;
+import km.h;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class RawSubscriptionContract {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f9817a;
+    public final String f9898a;
     public final h b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final String f9818c;
+    public final String f9899c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final boolean f9819d;
+    public final boolean f9900d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final boolean f9820e = true;
+    public final boolean f9901e = true;
 
     public RawSubscriptionContract(String str, h hVar, String str2, boolean z10) {
-        this.f9817a = str;
+        this.f9898a = str;
         this.b = hVar;
-        this.f9818c = str2;
-        this.f9819d = z10;
+        this.f9899c = str2;
+        this.f9900d = z10;
     }
 }

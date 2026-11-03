@@ -15,8 +15,8 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import hc.b;
-import hc.h;
+import ic.b;
+import ic.h;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class Snackbar extends BaseTransientBottomBar<Snackbar> {
@@ -87,7 +87,7 @@ public class Snackbar extends BaseTransientBottomBar<Snackbar> {
         K = new int[]{i10, b.W};
     }
 
-    public Snackbar(@NonNull Context context, @NonNull ViewGroup viewGroup, @NonNull View view, @NonNull id.a aVar) {
+    public Snackbar(@NonNull Context context, @NonNull ViewGroup viewGroup, @NonNull View view, @NonNull jd.a aVar) {
         super(context, viewGroup, view, aVar);
         this.H = (AccessibilityManager) viewGroup.getContext().getSystemService("accessibility");
     }
@@ -134,7 +134,7 @@ public class Snackbar extends BaseTransientBottomBar<Snackbar> {
         if (context == null) {
             context = viewGroupH0.getContext();
         }
-        SnackbarContentLayout snackbarContentLayout = (SnackbarContentLayout) LayoutInflater.from(context).inflate(k0(context) ? h.f18906u : h.f18888c, viewGroupH0, false);
+        SnackbarContentLayout snackbarContentLayout = (SnackbarContentLayout) LayoutInflater.from(context).inflate(k0(context) ? h.f20728u : h.f20710c, viewGroupH0, false);
         Snackbar snackbar = new Snackbar(context, viewGroupH0, snackbarContentLayout, snackbarContentLayout);
         snackbar.n0(charSequence);
         snackbar.V(i10);
@@ -167,7 +167,7 @@ public class Snackbar extends BaseTransientBottomBar<Snackbar> {
     }
 
     public final SnackbarContentLayout i0() {
-        return (SnackbarContentLayout) this.f8152i.getChildAt(0);
+        return (SnackbarContentLayout) this.f8226i.getChildAt(0);
     }
 
     public final TextView j0() {

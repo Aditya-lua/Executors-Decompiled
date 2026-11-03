@@ -13,9 +13,9 @@ public final class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final b f3759a = new b();
+    public static final b f3657a = new b();
 
-    public static final void a(@NotNull y.a.C0647a options, @NotNull n1.c priority) {
+    public static final void a(@NotNull y.a.C0662a options, @NotNull n1.c priority) {
         Intrinsics.checkNotNullParameter(options, "options");
         Intrinsics.checkNotNullParameter(priority, "priority");
         if (Build.VERSION.SDK_INT >= 34) {

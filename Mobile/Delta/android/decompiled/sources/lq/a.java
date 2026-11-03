@@ -1,28 +1,78 @@
 package lq;
 
-import kotlin.Metadata;
-import kotlin.jvm.internal.Intrinsics;
-import ku.l0;
-import ku.p0;
-import ku.q0;
-import ku.z2;
-import org.jetbrains.annotations.NotNull;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.widget.NestedScrollView;
+import hq.t;
+import hq.u;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0007\u0018\u00002\u00020\u0001B\u0013\b\u0007\u0012\b\b\u0001\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\r\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\u0007\u0010\bR\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0007\u0010\t¨\u0006\n"}, d2 = {"Llq/a;", "", "Lku/l0;", "defaultDispatcher", "<init>", "(Lku/l0;)V", "Lku/p0;", "a", "()Lku/p0;", "Lku/l0;", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class a {
+public final class a implements r5.a {
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
-    @NotNull
-    public final l0 defaultDispatcher;
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    @NonNull
+    public final CoordinatorLayout f23921a;
 
-    public a(@NotNull l0 defaultDispatcher) {
-        Intrinsics.checkNotNullParameter(defaultDispatcher, "defaultDispatcher");
-        this.defaultDispatcher = defaultDispatcher;
+    @NonNull
+    public final ConstraintLayout b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    @NonNull
+    public final FrameLayout f23922c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    @NonNull
+    public final NestedScrollView f23923d;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    @NonNull
+    public final View f23924e;
+
+    public a(@NonNull CoordinatorLayout coordinatorLayout, @NonNull ConstraintLayout constraintLayout, @NonNull FrameLayout frameLayout, @NonNull NestedScrollView nestedScrollView, @NonNull View view) {
+        this.f23921a = coordinatorLayout;
+        this.b = constraintLayout;
+        this.f23922c = frameLayout;
+        this.f23923d = nestedScrollView;
+        this.f23924e = view;
     }
 
-    @NotNull
-    public final p0 a() {
-        return q0.a(this.defaultDispatcher.plus(z2.b(null, 1, null)));
+    @NonNull
+    public static a a(@NonNull View view) {
+        View viewA;
+        int i10 = t.f19663c;
+        ConstraintLayout constraintLayout = (ConstraintLayout) r5.b.a(view, i10);
+        if (constraintLayout != null) {
+            i10 = t.f19666f;
+            FrameLayout frameLayout = (FrameLayout) r5.b.a(view, i10);
+            if (frameLayout != null) {
+                i10 = t.f19667g;
+                NestedScrollView nestedScrollView = (NestedScrollView) r5.b.a(view, i10);
+                if (nestedScrollView != null && (viewA = r5.b.a(view, (i10 = t.f19685y))) != null) {
+                    return new a((CoordinatorLayout) view, constraintLayout, frameLayout, nestedScrollView, viewA);
+                }
+            }
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
+    }
+
+    @NonNull
+    public static a c(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
+        View viewInflate = layoutInflater.inflate(u.f19687a, viewGroup, false);
+        if (z10) {
+            viewGroup.addView(viewInflate);
+        }
+        return a(viewInflate);
+    }
+
+    @Override // r5.a
+    @NonNull
+    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+    public CoordinatorLayout getRoot() {
+        return this.f23921a;
     }
 }

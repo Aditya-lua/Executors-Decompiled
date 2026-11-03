@@ -8,12 +8,12 @@ public final class j {
     public static final j b = a(new Locale[0]);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final k f32039a;
+    public final k f32692a;
 
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final Locale[] f32040a = {new Locale("en", "XA"), new Locale("ar", "XB")};
+        public static final Locale[] f32693a = {new Locale("en", "XA"), new Locale("ar", "XB")};
 
         public static Locale a(String str) {
             return Locale.forLanguageTag(str);
@@ -27,7 +27,7 @@ public final class j {
     }
 
     public j(k kVar) {
-        this.f32039a = kVar;
+        this.f32692a = kVar;
     }
 
     public static j a(Locale... localeArr) {
@@ -56,30 +56,30 @@ public final class j {
     }
 
     public Locale c(int i10) {
-        return this.f32039a.get(i10);
+        return this.f32692a.get(i10);
     }
 
     public boolean e() {
-        return this.f32039a.isEmpty();
+        return this.f32692a.isEmpty();
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof j) && this.f32039a.equals(((j) obj).f32039a);
+        return (obj instanceof j) && this.f32692a.equals(((j) obj).f32692a);
     }
 
     public int f() {
-        return this.f32039a.size();
+        return this.f32692a.size();
     }
 
     public String g() {
-        return this.f32039a.a();
+        return this.f32692a.a();
     }
 
     public int hashCode() {
-        return this.f32039a.hashCode();
+        return this.f32692a.hashCode();
     }
 
     public String toString() {
-        return this.f32039a.toString();
+        return this.f32692a.toString();
     }
 }

@@ -13,78 +13,78 @@ import sun.misc.Unsafe;
 public final class v0<T> implements g1<T> {
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public static final int[] f8629r = new int[0];
+    public static final int[] f8703r = new int[0];
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public static final Unsafe f8630s = q1.D();
+    public static final Unsafe f8704s = q1.D();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int[] f8631a;
+    public final int[] f8705a;
     public final Object[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final int f8632c;
+    public final int f8706c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final int f8633d;
+    public final int f8707d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final s0 f8634e;
+    public final s0 f8708e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final boolean f8635f;
+    public final boolean f8709f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final boolean f8636g;
+    public final boolean f8710g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final b1 f8637h;
+    public final b1 f8711h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final boolean f8638i;
+    public final boolean f8712i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final int[] f8639j;
+    public final int[] f8713j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final int f8640k;
+    public final int f8714k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final int f8641l;
+    public final int f8715l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final x0 f8642m;
+    public final x0 f8716m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public final g0 f8643n;
+    public final g0 f8717n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public final n1<?, ?> f8644o;
+    public final n1<?, ?> f8718o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public final q<?> f8645p;
+    public final q<?> f8719p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public final n0 f8646q;
+    public final n0 f8720q;
 
     public v0(int[] iArr, Object[] objArr, int i10, int i11, s0 s0Var, b1 b1Var, boolean z10, int[] iArr2, int i12, int i13, x0 x0Var, g0 g0Var, n1<?, ?> n1Var, q<?> qVar, n0 n0Var) {
-        this.f8631a = iArr;
+        this.f8705a = iArr;
         this.b = objArr;
-        this.f8632c = i10;
-        this.f8633d = i11;
-        this.f8636g = s0Var instanceof y;
-        this.f8637h = b1Var;
-        this.f8635f = qVar != null && qVar.e(s0Var);
-        this.f8638i = z10;
-        this.f8639j = iArr2;
-        this.f8640k = i12;
-        this.f8641l = i13;
-        this.f8642m = x0Var;
-        this.f8643n = g0Var;
-        this.f8644o = n1Var;
-        this.f8645p = qVar;
-        this.f8634e = s0Var;
-        this.f8646q = n0Var;
+        this.f8706c = i10;
+        this.f8707d = i11;
+        this.f8710g = s0Var instanceof y;
+        this.f8711h = b1Var;
+        this.f8709f = qVar != null && qVar.e(s0Var);
+        this.f8712i = z10;
+        this.f8713j = iArr2;
+        this.f8714k = i12;
+        this.f8715l = i13;
+        this.f8716m = x0Var;
+        this.f8717n = g0Var;
+        this.f8718o = n1Var;
+        this.f8719p = qVar;
+        this.f8708e = s0Var;
+        this.f8720q = n0Var;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -133,14 +133,14 @@ public final class v0<T> implements g1<T> {
         }
         int[] iArrD = k1Var.d();
         if (iArrD == null) {
-            iArrD = f8629r;
+            iArrD = f8703r;
         }
         if (tVarArrE.length > 0) {
             t tVar3 = tVarArrE[0];
             throw null;
         }
-        int[] iArr2 = f8629r;
-        int[] iArr3 = f8629r;
+        int[] iArr2 = f8703r;
+        int[] iArr3 = f8703r;
         int[] iArr4 = new int[iArrD.length + iArr2.length + iArr3.length];
         System.arraycopy(iArrD, 0, iArr4, 0, iArrD.length);
         System.arraycopy(iArr2, 0, iArr4, iArrD.length, iArr2.length);
@@ -249,7 +249,7 @@ public final class v0<T> implements g1<T> {
             i16 = 0;
             i11 = 0;
             i15 = 0;
-            iArr = f8629r;
+            iArr = f8703r;
             i14 = 0;
         } else {
             int i44 = i41 + 1;
@@ -407,7 +407,7 @@ public final class v0<T> implements g1<T> {
             i41 = i65;
             i16 = iCharAt6;
         }
-        Unsafe unsafe = f8630s;
+        Unsafe unsafe = f8704s;
         Object[] objArrD = e1Var.d();
         Class<?> cls = e1Var.b().getClass();
         int[] iArr3 = new int[iCharAt * 3];
@@ -870,10 +870,10 @@ public final class v0<T> implements g1<T> {
     }
 
     public final boolean F(T t8, int i10, int i11) {
-        if (this.f8646q.e(q1.C(t8, W(i10))).isEmpty()) {
+        if (this.f8720q.e(q1.C(t8, W(i10))).isEmpty()) {
             return true;
         }
-        this.f8646q.b(u(i11));
+        this.f8720q.b(u(i11));
         throw null;
     }
 
@@ -905,16 +905,16 @@ public final class v0<T> implements g1<T> {
         long jW = W(u0(i10));
         Object objC = q1.C(obj, jW);
         if (objC == null) {
-            objC = this.f8646q.d(obj2);
+            objC = this.f8720q.d(obj2);
             q1.R(obj, jW, objC);
-        } else if (this.f8646q.h(objC)) {
-            Object objD = this.f8646q.d(obj2);
-            this.f8646q.a(objD, objC);
+        } else if (this.f8720q.h(objC)) {
+            Object objD = this.f8720q.d(obj2);
+            this.f8720q.a(objD, objC);
             q1.R(obj, jW, objD);
             objC = objD;
         }
-        Map<?, ?> mapC = this.f8646q.c(objC);
-        this.f8646q.b(obj2);
+        Map<?, ?> mapC = this.f8720q.c(objC);
+        this.f8720q.b(obj2);
         f1Var.L(mapC, null, pVar);
     }
 
@@ -922,7 +922,7 @@ public final class v0<T> implements g1<T> {
     public final void N(T t8, T t10, int i10) {
         if (A(t10, i10)) {
             long jW = W(u0(i10));
-            Unsafe unsafe = f8630s;
+            Unsafe unsafe = f8704s;
             Object object = unsafe.getObject(t10, jW);
             if (object == null) {
                 throw new IllegalStateException("Source subfield " + V(i10) + " is present but null: " + t10);
@@ -955,7 +955,7 @@ public final class v0<T> implements g1<T> {
         int iV = V(i10);
         if (I(t10, iV, i10)) {
             long jW = W(u0(i10));
-            Unsafe unsafe = f8630s;
+            Unsafe unsafe = f8704s;
             Object object = unsafe.getObject(t10, jW);
             if (object == null) {
                 throw new IllegalStateException("Source subfield " + V(i10) + " is present but null: " + t10);
@@ -1122,10 +1122,10 @@ public final class v0<T> implements g1<T> {
             case 47:
             case 48:
             case 49:
-                this.f8643n.b(t8, t10, jW);
+                this.f8717n.b(t8, t10, jW);
                 break;
             case 50:
-                i1.F(this.f8646q, t8, t10, jW);
+                i1.F(this.f8720q, t8, t10, jW);
                 break;
             case 51:
             case 52:
@@ -1169,7 +1169,7 @@ public final class v0<T> implements g1<T> {
         if (!A(t8, i10)) {
             return g1VarV.e();
         }
-        Object object = f8630s.getObject(t8, jW);
+        Object object = f8704s.getObject(t8, jW);
         if (G(object)) {
             return object;
         }
@@ -1186,7 +1186,7 @@ public final class v0<T> implements g1<T> {
         if (!I(t8, i10, i11)) {
             return g1VarV.e();
         }
-        Object object = f8630s.getObject(t8, W(u0(i11)));
+        Object object = f8704s.getObject(t8, W(u0(i11)));
         if (G(object)) {
             return object;
         }
@@ -1198,19 +1198,19 @@ public final class v0<T> implements g1<T> {
     }
 
     public final int V(int i10) {
-        return this.f8631a[i10];
+        return this.f8705a[i10];
     }
 
     @Override // com.google.crypto.tink.shaded.protobuf.g1
     public void a(T t8, T t10) {
         m(t8);
         t10.getClass();
-        for (int i10 = 0; i10 < this.f8631a.length; i10 += 3) {
+        for (int i10 = 0; i10 < this.f8705a.length; i10 += 3) {
             P(t8, t10, i10);
         }
-        i1.G(this.f8644o, t8, t10);
-        if (this.f8635f) {
-            i1.E(this.f8645p, t8, t10);
+        i1.G(this.f8718o, t8, t10);
+        if (this.f8709f) {
+            i1.E(this.f8719p, t8, t10);
         }
     }
 
@@ -1227,7 +1227,7 @@ public final class v0<T> implements g1<T> {
                 yVar.r();
                 yVar.L();
             }
-            int length = this.f8631a.length;
+            int length = this.f8705a.length;
             for (int i10 = 0; i10 < length; i10 += 3) {
                 int iU0 = u0(i10);
                 long jW = W(iU0);
@@ -1237,7 +1237,7 @@ public final class v0<T> implements g1<T> {
                         switch (iT0) {
                             case 17:
                                 if (A(t8, i10)) {
-                                    v(i10).b(f8630s.getObject(t8, jW));
+                                    v(i10).b(f8704s.getObject(t8, jW));
                                 }
                                 break;
                             case 18:
@@ -1272,26 +1272,26 @@ public final class v0<T> implements g1<T> {
                             case 47:
                             case 48:
                             case 49:
-                                this.f8643n.a(t8, jW);
+                                this.f8717n.a(t8, jW);
                                 break;
                             case 50:
-                                Unsafe unsafe = f8630s;
+                                Unsafe unsafe = f8704s;
                                 Object object = unsafe.getObject(t8, jW);
                                 if (object != null) {
-                                    unsafe.putObject(t8, jW, this.f8646q.f(object));
+                                    unsafe.putObject(t8, jW, this.f8720q.f(object));
                                 }
                                 break;
                         }
                     } else if (I(t8, V(i10), i10)) {
-                        v(i10).b(f8630s.getObject(t8, jW));
+                        v(i10).b(f8704s.getObject(t8, jW));
                     }
                 } else if (A(t8, i10)) {
-                    v(i10).b(f8630s.getObject(t8, jW));
+                    v(i10).b(f8704s.getObject(t8, jW));
                 }
             }
-            this.f8644o.j(t8);
-            if (this.f8635f) {
-                this.f8645p.f(t8);
+            this.f8718o.j(t8);
+            if (this.f8709f) {
+                this.f8719p.f(t8);
             }
         }
     }
@@ -1306,16 +1306,16 @@ public final class v0<T> implements g1<T> {
         int i12 = 1048575;
         int i13 = 0;
         int i14 = 0;
-        while (i13 < this.f8640k) {
-            int i15 = this.f8639j[i13];
+        while (i13 < this.f8714k) {
+            int i15 = this.f8713j[i13];
             int iV = V(i15);
             int iU0 = u0(i15);
-            int i16 = this.f8631a[i15 + 2];
+            int i16 = this.f8705a[i15 + 2];
             int i17 = i16 & 1048575;
             int i18 = 1 << (i16 >>> 20);
             if (i17 != i12) {
                 if (i17 != 1048575) {
-                    i14 = f8630s.getInt(t8, i17);
+                    i14 = f8704s.getInt(t8, i17);
                 }
                 i11 = i14;
                 i10 = i17;
@@ -1352,21 +1352,21 @@ public final class v0<T> implements g1<T> {
             i12 = i10;
             i14 = i11;
         }
-        return !this.f8635f || this.f8645p.c(t8).o();
+        return !this.f8709f || this.f8719p.c(t8).o();
     }
 
     public final <K, V> int c0(T t8, byte[] bArr, int i10, int i11, int i12, long j10, e.b bVar) {
-        Unsafe unsafe = f8630s;
+        Unsafe unsafe = f8704s;
         Object objU = u(i12);
         Object object = unsafe.getObject(t8, j10);
-        if (this.f8646q.h(object)) {
-            Object objD = this.f8646q.d(objU);
-            this.f8646q.a(objD, object);
+        if (this.f8720q.h(object)) {
+            Object objD = this.f8720q.d(objU);
+            this.f8720q.a(objD, object);
             unsafe.putObject(t8, j10, objD);
             object = objD;
         }
-        this.f8646q.b(objU);
-        return n(bArr, i10, i11, null, this.f8646q.c(object), bVar);
+        this.f8720q.b(objU);
+        return n(bArr, i10, i11, null, this.f8720q.c(object), bVar);
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
@@ -1462,17 +1462,17 @@ public final class v0<T> implements g1<T> {
         int iW;
         v0<T> v0Var = this;
         T t10 = t8;
-        Unsafe unsafe = f8630s;
+        Unsafe unsafe = f8704s;
         int i13 = 1048575;
         int i14 = 0;
         int i15 = 0;
         int i16 = 0;
         int i17 = 1048575;
-        while (i14 < v0Var.f8631a.length) {
+        while (i14 < v0Var.f8705a.length) {
             int iU0 = v0Var.u0(i14);
             int iT0 = t0(iU0);
             int iV = v0Var.V(i14);
-            int i18 = v0Var.f8631a[i14 + 2];
+            int i18 = v0Var.f8705a[i14 + 2];
             int i19 = i18 & i13;
             if (iT0 <= 17) {
                 if (i19 != i17) {
@@ -1485,7 +1485,7 @@ public final class v0<T> implements g1<T> {
             }
             int i20 = i16;
             long jW = W(iU0);
-            if (iT0 < v.O.a() || iT0 > v.f8592b0.a()) {
+            if (iT0 < v.O.a() || iT0 > v.f8666b0.a()) {
                 i19 = 0;
             }
             switch (iT0) {
@@ -1734,7 +1734,7 @@ public final class v0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (v0Var.f8638i) {
+                        if (v0Var.f8712i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = k.U(iV);
@@ -1747,7 +1747,7 @@ public final class v0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (v0Var.f8638i) {
+                        if (v0Var.f8712i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = k.U(iV);
@@ -1760,7 +1760,7 @@ public final class v0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (v0Var.f8638i) {
+                        if (v0Var.f8712i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = k.U(iV);
@@ -1773,7 +1773,7 @@ public final class v0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (v0Var.f8638i) {
+                        if (v0Var.f8712i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = k.U(iV);
@@ -1786,7 +1786,7 @@ public final class v0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (v0Var.f8638i) {
+                        if (v0Var.f8712i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = k.U(iV);
@@ -1799,7 +1799,7 @@ public final class v0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (v0Var.f8638i) {
+                        if (v0Var.f8712i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = k.U(iV);
@@ -1812,7 +1812,7 @@ public final class v0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (v0Var.f8638i) {
+                        if (v0Var.f8712i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = k.U(iV);
@@ -1825,7 +1825,7 @@ public final class v0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (v0Var.f8638i) {
+                        if (v0Var.f8712i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = k.U(iV);
@@ -1838,7 +1838,7 @@ public final class v0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (v0Var.f8638i) {
+                        if (v0Var.f8712i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = k.U(iV);
@@ -1851,7 +1851,7 @@ public final class v0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (v0Var.f8638i) {
+                        if (v0Var.f8712i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = k.U(iV);
@@ -1864,7 +1864,7 @@ public final class v0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (v0Var.f8638i) {
+                        if (v0Var.f8712i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = k.U(iV);
@@ -1877,7 +1877,7 @@ public final class v0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (v0Var.f8638i) {
+                        if (v0Var.f8712i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = k.U(iV);
@@ -1890,7 +1890,7 @@ public final class v0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (v0Var.f8638i) {
+                        if (v0Var.f8712i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = k.U(iV);
@@ -1903,7 +1903,7 @@ public final class v0<T> implements g1<T> {
                     if (i12 <= 0) {
                         i16 = i20;
                     } else {
-                        if (v0Var.f8638i) {
+                        if (v0Var.f8712i) {
                             unsafe.putInt(t10, i19, i12);
                         }
                         iU = k.U(iV);
@@ -1916,7 +1916,7 @@ public final class v0<T> implements g1<T> {
                     i16 = i20 + i11;
                     break;
                 case 50:
-                    i11 = v0Var.f8646q.g(iV, unsafe.getObject(t10, jW), v0Var.u(i14));
+                    i11 = v0Var.f8720q.g(iV, unsafe.getObject(t10, jW), v0Var.u(i14));
                     i16 = i20 + i11;
                     break;
                 case 51:
@@ -2071,8 +2071,8 @@ public final class v0<T> implements g1<T> {
             i14 += 3;
             i13 = 1048575;
         }
-        int iX2 = i16 + v0Var.x(v0Var.f8644o, t10);
-        return v0Var.f8635f ? iX2 + v0Var.f8645p.c(t10).l() : iX2;
+        int iX2 = i16 + v0Var.x(v0Var.f8718o, t10);
+        return v0Var.f8709f ? iX2 + v0Var.f8719p.c(t10).l() : iX2;
     }
 
     /*  JADX ERROR: Type inference failed
@@ -2092,12 +2092,12 @@ public final class v0<T> implements g1<T> {
 
     @Override // com.google.crypto.tink.shaded.protobuf.g1
     public T e() {
-        return (T) this.f8642m.a(this.f8634e);
+        return (T) this.f8716m.a(this.f8708e);
     }
 
     public final int e0(T t8, byte[] bArr, int i10, int i11, int i12, int i13, int i14, int i15, int i16, long j10, int i17, e.b bVar) throws b0 {
-        Unsafe unsafe = f8630s;
-        long j11 = this.f8631a[i17 + 2] & 1048575;
+        Unsafe unsafe = f8704s;
+        long j11 = this.f8705a[i17 + 2] & 1048575;
         switch (i16) {
             case 51:
                 if (i14 != 1) {
@@ -2130,7 +2130,7 @@ public final class v0<T> implements g1<T> {
                     return i10;
                 }
                 int iJ = e.J(bArr, i10, bVar);
-                unsafe.putObject(t8, j10, Integer.valueOf(bVar.f8424a));
+                unsafe.putObject(t8, j10, Integer.valueOf(bVar.f8498a));
                 unsafe.putInt(t8, j11, i13);
                 return iJ;
             case 56:
@@ -2164,7 +2164,7 @@ public final class v0<T> implements g1<T> {
                     return i10;
                 }
                 int iJ2 = e.J(bArr, i10, bVar);
-                int i22 = bVar.f8424a;
+                int i22 = bVar.f8498a;
                 if (i22 == 0) {
                     unsafe.putObject(t8, j10, "");
                 } else {
@@ -2189,7 +2189,7 @@ public final class v0<T> implements g1<T> {
                     return i10;
                 }
                 int iC = e.c(bArr, i10, bVar);
-                unsafe.putObject(t8, j10, bVar.f8425c);
+                unsafe.putObject(t8, j10, bVar.f8499c);
                 unsafe.putInt(t8, j11, i13);
                 return iC;
             case 63:
@@ -2197,7 +2197,7 @@ public final class v0<T> implements g1<T> {
                     return i10;
                 }
                 int iJ3 = e.J(bArr, i10, bVar);
-                int i23 = bVar.f8424a;
+                int i23 = bVar.f8498a;
                 a0.e eVarT = t(i17);
                 if (eVarT != null && !eVarT.a(i23)) {
                     w(t8).n(i12, Long.valueOf(i23));
@@ -2211,7 +2211,7 @@ public final class v0<T> implements g1<T> {
                     return i10;
                 }
                 int iJ4 = e.J(bArr, i10, bVar);
-                unsafe.putObject(t8, j10, Integer.valueOf(i.c(bVar.f8424a)));
+                unsafe.putObject(t8, j10, Integer.valueOf(i.c(bVar.f8498a)));
                 unsafe.putInt(t8, j11, i13);
                 return iJ4;
             case 67:
@@ -2238,7 +2238,7 @@ public final class v0<T> implements g1<T> {
     public int f(T t8) {
         int i10;
         int iF;
-        int length = this.f8631a.length;
+        int length = this.f8705a.length;
         int i11 = 0;
         for (int i12 = 0; i12 < length; i12 += 3) {
             int iU0 = u0(i12);
@@ -2509,14 +2509,14 @@ public final class v0<T> implements g1<T> {
                     break;
             }
         }
-        int iHashCode2 = (i11 * 53) + this.f8644o.g(t8).hashCode();
-        return this.f8635f ? (iHashCode2 * 53) + this.f8645p.c(t8).hashCode() : iHashCode2;
+        int iHashCode2 = (i11 * 53) + this.f8718o.g(t8).hashCode();
+        return this.f8709f ? (iHashCode2 * 53) + this.f8719p.c(t8).hashCode() : iHashCode2;
     }
 
     /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
     public final int f0(T t8, byte[] bArr, int i10, int i11, int i12, int i13, int i14, int i15, long j10, int i16, long j11, e.b bVar) throws b0 {
         int iK;
-        Unsafe unsafe = f8630s;
+        Unsafe unsafe = f8704s;
         a0.i iVarO = (a0.i) unsafe.getObject(t8, j11);
         if (!iVarO.n()) {
             int size = iVarO.size();
@@ -2620,7 +2620,7 @@ public final class v0<T> implements g1<T> {
                     return i10;
                 }
                 iK = e.z(bArr, i10, iVar, bVar);
-                i1.A(t8, i13, iVar, t(i15), null, this.f8644o);
+                i1.A(t8, i13, iVar, t(i15), null, this.f8718o);
                 return iK;
             case 33:
             case 47:
@@ -2652,23 +2652,23 @@ public final class v0<T> implements g1<T> {
 
     @Override // com.google.crypto.tink.shaded.protobuf.g1
     public boolean g(T t8, T t10) {
-        int length = this.f8631a.length;
+        int length = this.f8705a.length;
         for (int i10 = 0; i10 < length; i10 += 3) {
             if (!p(t8, t10, i10)) {
                 return false;
             }
         }
-        if (!this.f8644o.g(t8).equals(this.f8644o.g(t10))) {
+        if (!this.f8718o.g(t8).equals(this.f8718o.g(t10))) {
             return false;
         }
-        if (this.f8635f) {
-            return this.f8645p.c(t8).equals(this.f8645p.c(t10));
+        if (this.f8709f) {
+            return this.f8719p.c(t8).equals(this.f8719p.c(t10));
         }
         return true;
     }
 
     public final int g0(int i10) {
-        if (i10 < this.f8632c || i10 > this.f8633d) {
+        if (i10 < this.f8706c || i10 > this.f8707d) {
             return -1;
         }
         return q0(i10, 0);
@@ -2680,7 +2680,7 @@ public final class v0<T> implements g1<T> {
     }
 
     public final int h0(int i10, int i11) {
-        if (i10 < this.f8632c || i10 > this.f8633d) {
+        if (i10 < this.f8706c || i10 > this.f8707d) {
             return -1;
         }
         return q0(i10, i11);
@@ -2690,11 +2690,11 @@ public final class v0<T> implements g1<T> {
     public void i(T t8, f1 f1Var, p pVar) {
         pVar.getClass();
         m(t8);
-        L(this.f8644o, this.f8645p, t8, f1Var, pVar);
+        L(this.f8718o, this.f8719p, t8, f1Var, pVar);
     }
 
     public final int i0(int i10) {
-        return this.f8631a[i10 + 2];
+        return this.f8705a[i10 + 2];
     }
 
     @Override // com.google.crypto.tink.shaded.protobuf.g1
@@ -2707,7 +2707,7 @@ public final class v0<T> implements g1<T> {
     }
 
     public final <E> void j0(Object obj, long j10, f1 f1Var, g1<E> g1Var, p pVar) {
-        f1Var.P(this.f8643n.c(obj, j10), g1Var, pVar);
+        f1Var.P(this.f8717n.c(obj, j10), g1Var, pVar);
     }
 
     public final boolean k(T t8, T t10, int i10) {
@@ -2715,13 +2715,13 @@ public final class v0<T> implements g1<T> {
     }
 
     public final <E> void k0(Object obj, int i10, f1 f1Var, g1<E> g1Var, p pVar) {
-        f1Var.N(this.f8643n.c(obj, W(i10)), g1Var, pVar);
+        f1Var.N(this.f8717n.c(obj, W(i10)), g1Var, pVar);
     }
 
     public final void l0(Object obj, int i10, f1 f1Var) {
         if (z(i10)) {
             q1.R(obj, W(i10), f1Var.I());
-        } else if (this.f8636g) {
+        } else if (this.f8710g) {
             q1.R(obj, W(i10), f1Var.z());
         } else {
             q1.R(obj, W(i10), f1Var.o());
@@ -2730,15 +2730,15 @@ public final class v0<T> implements g1<T> {
 
     public final void m0(Object obj, int i10, f1 f1Var) {
         if (z(i10)) {
-            f1Var.n(this.f8643n.c(obj, W(i10)));
+            f1Var.n(this.f8717n.c(obj, W(i10)));
         } else {
-            f1Var.B(this.f8643n.c(obj, W(i10)));
+            f1Var.B(this.f8717n.c(obj, W(i10)));
         }
     }
 
     public final <K, V> int n(byte[] bArr, int i10, int i11, l0.a<K, V> aVar, Map<K, V> map, e.b bVar) throws b0 {
         int iJ = e.J(bArr, i10, bVar);
-        int i12 = bVar.f8424a;
+        int i12 = bVar.f8498a;
         if (i12 < 0 || i12 > i11 - iJ) {
             throw b0.m();
         }
@@ -2861,11 +2861,11 @@ public final class v0<T> implements g1<T> {
         a0.e eVarT;
         int iV = V(i10);
         Object objC = q1.C(obj, W(u0(i10)));
-        return (objC == null || (eVarT = t(i10)) == null) ? ub : (UB) r(i10, iV, this.f8646q.c(objC), eVarT, ub, n1Var, obj2);
+        return (objC == null || (eVarT = t(i10)) == null) ? ub : (UB) r(i10, iV, this.f8720q.c(objC), eVarT, ub, n1Var, obj2);
     }
 
     public final int q0(int i10, int i11) {
-        int length = (this.f8631a.length / 3) - 1;
+        int length = (this.f8705a.length / 3) - 1;
         while (i11 <= length) {
             int i12 = (length + i11) >>> 1;
             int i13 = i12 * 3;
@@ -2883,7 +2883,7 @@ public final class v0<T> implements g1<T> {
     }
 
     public final <K, V, UT, UB> UB r(int i10, int i11, Map<K, V> map, a0.e eVar, UB ub, n1<UT, UB> n1Var, Object obj) {
-        this.f8646q.b(u(i10));
+        this.f8720q.b(u(i10));
         Iterator<Map.Entry<K, V>> it = map.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry<K, V> next = it.next();
@@ -2891,10 +2891,10 @@ public final class v0<T> implements g1<T> {
                 if (ub == null) {
                     ub = n1Var.f(obj);
                 }
-                h.C0127h c0127hL = h.l(l0.b(null, next.getKey(), next.getValue()));
+                h.C0131h c0131hL = h.l(l0.b(null, next.getKey(), next.getValue()));
                 try {
-                    l0.d(c0127hL.b(), null, next.getKey(), next.getValue());
-                    n1Var.d(ub, i11, c0127hL.a());
+                    l0.d(c0131hL.b(), null, next.getKey(), next.getValue());
+                    n1Var.d(ub, i11, c0131hL.a());
                     it.remove();
                 } catch (IOException e10) {
                     throw new RuntimeException(e10);
@@ -2905,12 +2905,12 @@ public final class v0<T> implements g1<T> {
     }
 
     public final void r0(T t8, int i10, Object obj) {
-        f8630s.putObject(t8, W(u0(i10)), obj);
+        f8704s.putObject(t8, W(u0(i10)), obj);
         o0(t8, i10);
     }
 
     public final void s0(T t8, int i10, int i11, Object obj) {
-        f8630s.putObject(t8, W(u0(i11)), obj);
+        f8704s.putObject(t8, W(u0(i11)), obj);
         p0(t8, i10, i11);
     }
 
@@ -2923,7 +2923,7 @@ public final class v0<T> implements g1<T> {
     }
 
     public final int u0(int i10) {
-        return this.f8631a[i10 + 1];
+        return this.f8705a[i10 + 1];
     }
 
     public final g1 v(int i10) {
@@ -2948,8 +2948,8 @@ public final class v0<T> implements g1<T> {
         int i12;
         boolean z11;
         v0<T> v0Var = this;
-        if (v0Var.f8635f) {
-            u<T> uVarC = v0Var.f8645p.c(t8);
+        if (v0Var.f8709f) {
+            u<T> uVarC = v0Var.f8719p.c(t8);
             if (uVarC.m()) {
                 entry = null;
                 it = null;
@@ -2962,8 +2962,8 @@ public final class v0<T> implements g1<T> {
             entry = null;
             it = null;
         }
-        int length = v0Var.f8631a.length;
-        Unsafe unsafe = f8630s;
+        int length = v0Var.f8705a.length;
+        Unsafe unsafe = f8704s;
         int i13 = 1048575;
         int i14 = 0;
         int i15 = 0;
@@ -2972,7 +2972,7 @@ public final class v0<T> implements g1<T> {
             int iV = v0Var.V(i14);
             int iT0 = t0(iU0);
             if (iT0 <= 17) {
-                int i16 = v0Var.f8631a[i14 + 2];
+                int i16 = v0Var.f8705a[i14 + 2];
                 z10 = true;
                 int i17 = i16 & 1048575;
                 if (i17 != i13) {
@@ -2988,8 +2988,8 @@ public final class v0<T> implements g1<T> {
                 i11 = i15;
                 i12 = 0;
             }
-            while (entry != null && v0Var.f8645p.a(entry) <= iV) {
-                v0Var.f8645p.j(t1Var, entry);
+            while (entry != null && v0Var.f8719p.a(entry) <= iV) {
+                v0Var.f8719p.j(t1Var, entry);
                 entry = it.hasNext() ? (Map.Entry) it.next() : null;
             }
             long jW = W(iU0);
@@ -3302,19 +3302,19 @@ public final class v0<T> implements g1<T> {
             entry = entry;
         }
         while (entry != null) {
-            v0Var.f8645p.j(t1Var, entry);
+            v0Var.f8719p.j(t1Var, entry);
             entry = it.hasNext() ? (Map.Entry) it.next() : null;
         }
-        v0Var.z0(v0Var.f8644o, t8, t1Var);
+        v0Var.z0(v0Var.f8718o, t8, t1Var);
     }
 
     /* JADX WARN: Code duplicated, block: B:7:0x0021  */
     public final void w0(T t8, t1 t1Var) {
         Iterator itG;
         Map.Entry<?, ?> entry;
-        z0(this.f8644o, t8, t1Var);
-        if (this.f8635f) {
-            u<T> uVarC = this.f8645p.c(t8);
+        z0(this.f8718o, t8, t1Var);
+        if (this.f8709f) {
+            u<T> uVarC = this.f8719p.c(t8);
             if (uVarC.m()) {
                 itG = null;
                 entry = null;
@@ -3326,11 +3326,11 @@ public final class v0<T> implements g1<T> {
             itG = null;
             entry = null;
         }
-        for (int length = this.f8631a.length - 3; length >= 0; length -= 3) {
+        for (int length = this.f8705a.length - 3; length >= 0; length -= 3) {
             int iU0 = u0(length);
             int iV = V(length);
-            while (entry != null && this.f8645p.a(entry) > iV) {
-                this.f8645p.j(t1Var, entry);
+            while (entry != null && this.f8719p.a(entry) > iV) {
+                this.f8719p.j(t1Var, entry);
                 entry = itG.hasNext() ? (Map.Entry) itG.next() : null;
             }
             switch (t0(iU0)) {
@@ -3616,7 +3616,7 @@ public final class v0<T> implements g1<T> {
             }
         }
         while (entry != null) {
-            this.f8645p.j(t1Var, entry);
+            this.f8719p.j(t1Var, entry);
             entry = itG.hasNext() ? (Map.Entry) itG.next() : null;
         }
     }
@@ -3627,8 +3627,8 @@ public final class v0<T> implements g1<T> {
 
     public final <K, V> void x0(t1 t1Var, int i10, Object obj, int i11) {
         if (obj != null) {
-            this.f8646q.b(u(i11));
-            t1Var.J(i10, null, this.f8646q.e(obj));
+            this.f8720q.b(u(i11));
+            t1Var.J(i10, null, this.f8720q.e(obj));
         }
     }
 

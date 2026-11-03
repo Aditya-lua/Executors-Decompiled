@@ -1,13 +1,13 @@
 package com.roblox.client.flags;
 
 import androidx.annotation.Keep;
-import gk.p;
+import ek.q;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
-import th.h;
+import rh.h;
 
 /* JADX INFO: loaded from: classes2.dex */
 @Keep
@@ -26,13 +26,13 @@ public final class NativeFlagsInitResult {
     }
 
     private final boolean resolveFlagValue(String key) {
-        a aVarK0 = h.a().K0(key);
-        if (!(aVarK0 instanceof a.d)) {
-            p.k(TAG, "resolveFlagValue: Unexpected type (not NativeBoolean) or flag not found for key: " + key + ". Defaulting to false.");
+        a aVarP0 = h.a().P0(key);
+        if (!(aVarP0 instanceof a.d)) {
+            q.k(TAG, "resolveFlagValue: Unexpected type (not NativeBoolean) or flag not found for key: " + key + ". Defaulting to false.");
             return false;
         }
-        a.d dVar = (a.d) aVarK0;
-        p.h(TAG, "resolveFlagValue: Using initial value: " + dVar.d() + " for " + key);
+        a.d dVar = (a.d) aVarP0;
+        q.h(TAG, "resolveFlagValue: Using initial value: " + dVar.d() + " for " + key);
         Boolean boolD = dVar.d();
         Intrinsics.checkNotNull(boolD);
         return boolD.booleanValue();
@@ -44,7 +44,7 @@ public final class NativeFlagsInitResult {
             value = resolveFlagValue(key);
         }
         String str = "FFlag" + key;
-        p.b(TAG, "addBoolean: Adding " + str + " = " + value);
+        q.b(TAG, "addBoolean: Adding " + str + " = " + value);
         this.booleanCachedMap.put(str, Boolean.valueOf(value));
     }
 

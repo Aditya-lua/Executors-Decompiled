@@ -22,22 +22,22 @@ public class a implements h0.a {
     public final p0 b;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object f14965a = new Object();
+    public final Object f15579a = new Object();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public Map<String, List<String>> f14967d = new HashMap();
+    public Map<String, List<String>> f15581d = new HashMap();
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public Set<Set<String>> f14968e = new HashSet();
+    public Set<Set<String>> f15582e = new HashSet();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public List<t> f14969f = new ArrayList();
+    public List<t> f15583f = new ArrayList();
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public int f14970g = 0;
+    public int f15584g = 0;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final List<h0.a.InterfaceC0334a> f14966c = new ArrayList();
+    public final List<h0.a.InterfaceC0336a> f15580c = new ArrayList();
 
     public a(p0 p0Var) {
         this.b = p0Var;
@@ -49,25 +49,25 @@ public class a implements h0.a {
     }
 
     @Override // h0.a
-    public void c(h0.a.InterfaceC0334a interfaceC0334a) {
-        synchronized (this.f14965a) {
-            this.f14966c.add(interfaceC0334a);
+    public void c(h0.a.InterfaceC0336a interfaceC0336a) {
+        synchronized (this.f15579a) {
+            this.f15580c.add(interfaceC0336a);
         }
     }
 
     @Override // h0.a
     public String d(String str) {
-        synchronized (this.f14965a) {
+        synchronized (this.f15579a) {
             try {
-                if (!this.f14967d.containsKey(str)) {
+                if (!this.f15581d.containsKey(str)) {
                     return null;
                 }
-                List<String> list = this.f14967d.get(str);
+                List<String> list = this.f15581d.get(str);
                 if (list == null) {
                     return null;
                 }
                 for (String str2 : list) {
-                    Iterator<t> it = this.f14969f.iterator();
+                    Iterator<t> it = this.f15583f.iterator();
                     while (it.hasNext()) {
                         if (str2.equals(h.a(it.next()).c())) {
                             return str2;
@@ -84,8 +84,8 @@ public class a implements h0.a {
     @Override // h0.a
     public int e() {
         int i10;
-        synchronized (this.f14965a) {
-            i10 = this.f14970g;
+        synchronized (this.f15579a) {
+            i10 = this.f15584g;
         }
         return i10;
     }
@@ -119,10 +119,10 @@ public class a implements h0.a {
                     }
                 }
             }
-            synchronized (this.f14965a) {
-                this.f14967d = map;
-                this.f14968e = hashSet;
-                r1.a("Camera2CameraCoordinator", "Updated concurrent camera map: " + this.f14967d);
+            synchronized (this.f15579a) {
+                this.f15581d = map;
+                this.f15582e = hashSet;
+                r1.a("Camera2CameraCoordinator", "Updated concurrent camera map: " + this.f15581d);
             }
         } catch (f e10) {
             throw new i1("Failed to retrieve concurrent camera id info.", e10);
@@ -131,16 +131,16 @@ public class a implements h0.a {
 
     @Override // h0.a
     public void h(int i10) {
-        synchronized (this.f14965a) {
+        synchronized (this.f15579a) {
             try {
-                int i11 = this.f14970g;
+                int i11 = this.f15584g;
                 if (i10 == i11) {
                     return;
                 }
-                this.f14970g = i10;
-                ArrayList arrayList = new ArrayList(this.f14966c);
+                this.f15584g = i10;
+                ArrayList arrayList = new ArrayList(this.f15580c);
                 if (i11 == 2 && i10 != 2) {
-                    this.f14969f.clear();
+                    this.f15583f.clear();
                 }
                 i(arrayList, i11, i10);
             } catch (Throwable th2) {
@@ -149,8 +149,8 @@ public class a implements h0.a {
         }
     }
 
-    public final void i(List<h0.a.InterfaceC0334a> list, int i10, int i11) {
-        Iterator<h0.a.InterfaceC0334a> it = list.iterator();
+    public final void i(List<h0.a.InterfaceC0336a> list, int i10, int i11) {
+        Iterator<h0.a.InterfaceC0336a> it = list.iterator();
         while (it.hasNext()) {
             it.next().a(i10, i11);
         }
@@ -158,12 +158,12 @@ public class a implements h0.a {
 
     @Override // h0.a
     public void shutdown() {
-        synchronized (this.f14965a) {
-            this.f14966c.clear();
-            this.f14967d.clear();
-            this.f14969f.clear();
-            this.f14968e.clear();
-            this.f14970g = 0;
+        synchronized (this.f15579a) {
+            this.f15580c.clear();
+            this.f15581d.clear();
+            this.f15583f.clear();
+            this.f15582e.clear();
+            this.f15584g = 0;
         }
     }
 }

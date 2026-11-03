@@ -7,20 +7,20 @@ import android.view.ViewParent;
 public class u {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public ViewParent f1914a;
+    public ViewParent f1759a;
     public ViewParent b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final View f1915c;
+    public final View f1760c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public boolean f1916d;
+    public boolean f1761d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public int[] f1917e;
+    public int[] f1762e;
 
     public u(View view) {
-        this.f1915c = view;
+        this.f1760c = view;
     }
 
     public boolean a(float f10, float f11, boolean z10) {
@@ -28,7 +28,7 @@ public class u {
         if (!l() || (viewParentH = h(0)) == null) {
             return false;
         }
-        return w0.a(viewParentH, this.f1915c, f10, f11, z10);
+        return w0.a(viewParentH, this.f1760c, f10, f11, z10);
     }
 
     public boolean b(float f10, float f11) {
@@ -36,7 +36,7 @@ public class u {
         if (!l() || (viewParentH = h(0)) == null) {
             return false;
         }
-        return w0.b(viewParentH, this.f1915c, f10, f11);
+        return w0.b(viewParentH, this.f1760c, f10, f11);
     }
 
     public boolean c(int i10, int i11, int[] iArr, int[] iArr2) {
@@ -58,7 +58,7 @@ public class u {
             return false;
         }
         if (iArr2 != null) {
-            this.f1915c.getLocationInWindow(iArr2);
+            this.f1760c.getLocationInWindow(iArr2);
             i13 = iArr2[0];
             i14 = iArr2[1];
         } else {
@@ -71,9 +71,9 @@ public class u {
         int[] iArr3 = iArr;
         iArr3[0] = 0;
         iArr3[1] = 0;
-        w0.c(viewParentH, this.f1915c, i10, i11, iArr3, i12);
+        w0.c(viewParentH, this.f1760c, i10, i11, iArr3, i12);
         if (iArr2 != null) {
-            this.f1915c.getLocationInWindow(iArr2);
+            this.f1760c.getLocationInWindow(iArr2);
             iArr2[0] = iArr2[0] - i13;
             iArr2[1] = iArr2[1] - i14;
         }
@@ -104,7 +104,7 @@ public class u {
             return false;
         }
         if (iArr != null) {
-            this.f1915c.getLocationInWindow(iArr);
+            this.f1760c.getLocationInWindow(iArr);
             i15 = iArr[0];
             i16 = iArr[1];
         } else {
@@ -119,9 +119,9 @@ public class u {
         } else {
             iArr3 = iArr2;
         }
-        w0.d(viewParentH, this.f1915c, i10, i11, i12, i13, i14, iArr3);
+        w0.d(viewParentH, this.f1760c, i10, i11, i12, i13, i14, iArr3);
         if (iArr != null) {
-            this.f1915c.getLocationInWindow(iArr);
+            this.f1760c.getLocationInWindow(iArr);
             iArr[0] = iArr[0] - i15;
             iArr[1] = iArr[1] - i16;
         }
@@ -130,7 +130,7 @@ public class u {
 
     public final ViewParent h(int i10) {
         if (i10 == 0) {
-            return this.f1914a;
+            return this.f1759a;
         }
         if (i10 != 1) {
             return null;
@@ -139,10 +139,10 @@ public class u {
     }
 
     public final int[] i() {
-        if (this.f1917e == null) {
-            this.f1917e = new int[2];
+        if (this.f1762e == null) {
+            this.f1762e = new int[2];
         }
-        return this.f1917e;
+        return this.f1762e;
     }
 
     public boolean j() {
@@ -154,19 +154,19 @@ public class u {
     }
 
     public boolean l() {
-        return this.f1916d;
+        return this.f1761d;
     }
 
     public void m(boolean z10) {
-        if (this.f1916d) {
-            o0.K0(this.f1915c);
+        if (this.f1761d) {
+            o0.K0(this.f1760c);
         }
-        this.f1916d = z10;
+        this.f1761d = z10;
     }
 
     public final void n(int i10, ViewParent viewParent) {
         if (i10 == 0) {
-            this.f1914a = viewParent;
+            this.f1759a = viewParent;
         } else {
             if (i10 != 1) {
                 return;
@@ -186,11 +186,11 @@ public class u {
         if (!l()) {
             return false;
         }
-        View view = this.f1915c;
-        for (ViewParent parent = this.f1915c.getParent(); parent != null; parent = parent.getParent()) {
-            if (w0.f(parent, view, this.f1915c, i10, i11)) {
+        View view = this.f1760c;
+        for (ViewParent parent = this.f1760c.getParent(); parent != null; parent = parent.getParent()) {
+            if (w0.f(parent, view, this.f1760c, i10, i11)) {
                 n(i11, parent);
-                w0.e(parent, view, this.f1915c, i10, i11);
+                w0.e(parent, view, this.f1760c, i10, i11);
                 return true;
             }
             if (parent instanceof View) {
@@ -207,7 +207,7 @@ public class u {
     public void r(int i10) {
         ViewParent viewParentH = h(i10);
         if (viewParentH != null) {
-            w0.g(viewParentH, this.f1915c, i10);
+            w0.g(viewParentH, this.f1760c, i10);
             n(i10, null);
         }
     }

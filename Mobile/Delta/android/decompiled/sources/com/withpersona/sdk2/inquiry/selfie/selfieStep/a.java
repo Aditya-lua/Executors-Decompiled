@@ -1,8 +1,8 @@
 package com.withpersona.sdk2.inquiry.selfie.selfieStep;
 
 import com.withpersona.sdk2.inquiry.tracking.TrackingEventsLogger;
-import fn.n0;
-import go.e;
+import dn.n0;
+import eo.e;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class a {
@@ -14,11 +14,11 @@ public final class a {
         selfieStepFragment.featureFlagManager = eVar;
     }
 
-    public static void c(SelfieStepFragment selfieStepFragment, ct.a<n0> aVar) {
+    public static void c(SelfieStepFragment selfieStepFragment, at.a<n0> aVar) {
         selfieStepFragment.selfieDirectionFeed = aVar;
     }
 
-    public static void d(SelfieStepFragment selfieStepFragment, vq.a aVar) {
+    public static void d(SelfieStepFragment selfieStepFragment, tq.a aVar) {
         selfieStepFragment.systemUiController = aVar;
     }
 

@@ -54,14 +54,14 @@ public class GridLayoutManager extends LinearLayoutManager {
     public static abstract class d {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final SparseIntArray f2891a = new SparseIntArray();
+        public final SparseIntArray f2736a = new SparseIntArray();
         public final SparseIntArray b = new SparseIntArray();
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public boolean f2892c = false;
+        public boolean f2737c = false;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public boolean f2893d = false;
+        public boolean f2738d = false;
 
         public static int a(SparseIntArray sparseIntArray, int i10) {
             int size = sparseIntArray.size() - 1;
@@ -82,7 +82,7 @@ public class GridLayoutManager extends LinearLayoutManager {
         }
 
         public int b(int i10, int i11) {
-            if (!this.f2893d) {
+            if (!this.f2738d) {
                 return d(i10, i11);
             }
             int i12 = this.b.get(i10, -1);
@@ -95,15 +95,15 @@ public class GridLayoutManager extends LinearLayoutManager {
         }
 
         public int c(int i10, int i11) {
-            if (!this.f2892c) {
+            if (!this.f2737c) {
                 return e(i10, i11);
             }
-            int i12 = this.f2891a.get(i10, -1);
+            int i12 = this.f2736a.get(i10, -1);
             if (i12 != -1) {
                 return i12;
             }
             int iE = e(i10, i11);
-            this.f2891a.put(i10, iE);
+            this.f2736a.put(i10, iE);
             return iE;
         }
 
@@ -112,7 +112,7 @@ public class GridLayoutManager extends LinearLayoutManager {
             int i13;
             int iC;
             int iA;
-            if (!this.f2893d || (iA = a(this.b, i10)) == -1) {
+            if (!this.f2738d || (iA = a(this.b, i10)) == -1) {
                 i12 = 0;
                 i13 = 0;
                 iC = 0;
@@ -150,7 +150,7 @@ public class GridLayoutManager extends LinearLayoutManager {
         }
 
         public void h() {
-            this.f2891a.clear();
+            this.f2736a.clear();
         }
     }
 
@@ -228,7 +228,7 @@ public class GridLayoutManager extends LinearLayoutManager {
         }
         int iI0 = i0() + j0();
         int iK0 = k0() + h0();
-        if (this.f2894s == 1) {
+        if (this.f2739s == 1) {
             iS2 = RecyclerView.q.s(i11, rect.height() + iK0, f0());
             int[] iArr = this.K;
             iS = RecyclerView.q.s(i10, iArr[iArr.length - 1] + iI0, g0());
@@ -242,7 +242,7 @@ public class GridLayoutManager extends LinearLayoutManager {
 
     @Override // androidx.recyclerview.widget.LinearLayoutManager, androidx.recyclerview.widget.RecyclerView.q
     public RecyclerView.r I() {
-        return this.f2894s == 0 ? new c(-2, -1) : new c(-1, -2);
+        return this.f2739s == 0 ? new c(-2, -1) : new c(-1, -2);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
@@ -292,8 +292,8 @@ public class GridLayoutManager extends LinearLayoutManager {
             View view = this.L[i11];
             c cVar = (c) view.getLayoutParams();
             int iO3 = o3(xVar, b0Var, l0(view));
-            cVar.f2890f = iO3;
-            cVar.f2889e = i14;
+            cVar.f2735f = iO3;
+            cVar.f2734e = i14;
             i14 += iO3;
             i11 += i13;
         }
@@ -318,7 +318,7 @@ public class GridLayoutManager extends LinearLayoutManager {
     public void R0(@NonNull RecyclerView.x xVar, @NonNull RecyclerView.b0 b0Var, @NonNull y2.p pVar) {
         super.R0(xVar, b0Var, pVar);
         pVar.l0(GridView.class.getName());
-        RecyclerView.h hVar = this.b.f2946m;
+        RecyclerView.h hVar = this.b.f2791m;
         if (hVar == null || hVar.e() <= 1) {
             return;
         }
@@ -331,7 +331,7 @@ public class GridLayoutManager extends LinearLayoutManager {
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
     public int S(RecyclerView.x xVar, RecyclerView.b0 b0Var) {
-        if (this.f2894s == 1) {
+        if (this.f2739s == 1) {
             return Math.min(this.J, e());
         }
         if (b0Var.b() < 1) {
@@ -344,10 +344,10 @@ public class GridLayoutManager extends LinearLayoutManager {
     public void S1(RecyclerView.b0 b0Var, LinearLayoutManager.c cVar, RecyclerView.q.c cVar2) {
         int iF = this.J;
         for (int i10 = 0; i10 < this.J && cVar.c(b0Var) && iF > 0; i10++) {
-            int i11 = cVar.f2913d;
-            cVar2.a(i11, Math.max(0, cVar.f2916g));
+            int i11 = cVar.f2758d;
+            cVar2.a(i11, Math.max(0, cVar.f2761g));
             iF -= this.O.f(i11);
-            cVar.f2913d += cVar.f2914e;
+            cVar.f2758d += cVar.f2759e;
         }
     }
 
@@ -365,7 +365,7 @@ public class GridLayoutManager extends LinearLayoutManager {
         }
         c cVar = (c) layoutParams;
         int iM3 = m3(xVar, b0Var, cVar.b());
-        if (this.f2894s == 0) {
+        if (this.f2739s == 0) {
             pVar.o0(y2.p.g.b(cVar.f(), cVar.g(), iM3, 1, false, false));
         } else {
             pVar.o0(y2.p.g.b(iM3, 1, cVar.f(), cVar.g(), false, false));
@@ -381,9 +381,9 @@ public class GridLayoutManager extends LinearLayoutManager {
             if (viewC2 != null && viewB2 != null) {
                 int iB = this.O.b(l0(viewC2), this.J);
                 int iB2 = this.O.b(l0(viewB2), this.J);
-                int iMax = this.f2899x ? Math.max(0, ((this.O.b(b0Var.b() - 1, this.J) + 1) - Math.max(iB, iB2)) - 1) : Math.max(0, Math.min(iB, iB2));
+                int iMax = this.f2744x ? Math.max(0, ((this.O.b(b0Var.b() - 1, this.J) + 1) - Math.max(iB, iB2)) - 1) : Math.max(0, Math.min(iB, iB2));
                 if (zS2) {
-                    return Math.round((iMax * (Math.abs(this.f2896u.d(viewB2) - this.f2896u.g(viewC2)) / ((this.O.b(l0(viewB2), this.J) - this.O.b(l0(viewC2), this.J)) + 1))) + (this.f2896u.m() - this.f2896u.g(viewC2)));
+                    return Math.round((iMax * (Math.abs(this.f2741u.d(viewB2) - this.f2741u.g(viewC2)) / ((this.O.b(l0(viewB2), this.J) - this.O.b(l0(viewC2), this.J)) + 1))) + (this.f2741u.m() - this.f2741u.g(viewC2)));
                 }
                 return iMax;
             }
@@ -400,7 +400,7 @@ public class GridLayoutManager extends LinearLayoutManager {
                 if (!s2()) {
                     return this.O.b(b0Var.b() - 1, this.J) + 1;
                 }
-                return (int) (((this.f2896u.d(viewB2) - this.f2896u.g(viewC2)) / ((this.O.b(l0(viewB2), this.J) - this.O.b(l0(viewC2), this.J)) + 1)) * (this.O.b(b0Var.b() - 1, this.J) + 1));
+                return (int) (((this.f2741u.d(viewB2) - this.f2741u.g(viewC2)) / ((this.O.b(l0(viewB2), this.J) - this.O.b(l0(viewC2), this.J)) + 1)) * (this.O.b(b0Var.b() - 1, this.J) + 1));
             }
         }
         return 0;
@@ -478,7 +478,7 @@ public class GridLayoutManager extends LinearLayoutManager {
     }
 
     public int Z2(int i10) {
-        if (i10 < 0 || this.f2894s == 1) {
+        if (i10 < 0 || this.f2739s == 1) {
             return -1;
         }
         TreeMap treeMap = new TreeMap();
@@ -505,7 +505,7 @@ public class GridLayoutManager extends LinearLayoutManager {
     }
 
     public int a3(int i10) {
-        if (i10 < 0 || this.f2894s == 1) {
+        if (i10 < 0 || this.f2739s == 1) {
             return -1;
         }
         TreeMap treeMap = new TreeMap(Collections.reverseOrder());
@@ -542,7 +542,7 @@ public class GridLayoutManager extends LinearLayoutManager {
             if (iH3 < 0 || iF3 < 0) {
                 break;
             }
-            if (this.f2894s == 1) {
+            if (this.f2739s == 1) {
                 if (iH3 < i10 && g3(i13).contains(Integer.valueOf(i11))) {
                     this.S = iH3;
                     return i13;
@@ -571,7 +571,7 @@ public class GridLayoutManager extends LinearLayoutManager {
             if (iH3 < 0 || iF3 < 0) {
                 break;
             }
-            if (this.f2894s == 1) {
+            if (this.f2739s == 1) {
                 if (iH3 > i10 && (iF3 == i11 || g3(i13).contains(Integer.valueOf(i11)))) {
                     this.S = iH3;
                     return i13;
@@ -604,7 +604,7 @@ public class GridLayoutManager extends LinearLayoutManager {
             if (iH3 < 0 || iF3 < 0) {
                 break;
             }
-            if (this.f2894s == 1) {
+            if (this.f2739s == 1) {
                 if ((iH3 == i10 && iF3 < i11) || iH3 < i10) {
                     this.S = iH3;
                     this.T = iF3;
@@ -625,7 +625,7 @@ public class GridLayoutManager extends LinearLayoutManager {
             if (iH3 < 0 || iF3 < 0) {
                 break;
             }
-            if (this.f2894s == 1) {
+            if (this.f2739s == 1) {
                 if ((iH3 == i10 && iF3 > i11) || iH3 > i10) {
                     this.S = iH3;
                     this.T = iF3;
@@ -640,12 +640,12 @@ public class GridLayoutManager extends LinearLayoutManager {
     }
 
     public final int f3(int i10) {
-        if (this.f2894s == 0) {
+        if (this.f2739s == 0) {
             RecyclerView recyclerView = this.b;
-            return m3(recyclerView.f2926c, recyclerView.f2941j0, i10);
+            return m3(recyclerView.f2771c, recyclerView.f2786j0, i10);
         }
         RecyclerView recyclerView2 = this.b;
-        return n3(recyclerView2.f2926c, recyclerView2.f2941j0, i10);
+        return n3(recyclerView2.f2771c, recyclerView2.f2786j0, i10);
     }
 
     public final Set<Integer> g3(int i10) {
@@ -653,12 +653,12 @@ public class GridLayoutManager extends LinearLayoutManager {
     }
 
     public final int h3(int i10) {
-        if (this.f2894s == 1) {
+        if (this.f2739s == 1) {
             RecyclerView recyclerView = this.b;
-            return m3(recyclerView.f2926c, recyclerView.f2941j0, i10);
+            return m3(recyclerView.f2771c, recyclerView.f2786j0, i10);
         }
         RecyclerView recyclerView2 = this.b;
-        return n3(recyclerView2.f2926c, recyclerView2.f2941j0, i10);
+        return n3(recyclerView2.f2771c, recyclerView2.f2786j0, i10);
     }
 
     public final Set<Integer> i3(int i10) {
@@ -668,7 +668,7 @@ public class GridLayoutManager extends LinearLayoutManager {
     public final Set<Integer> j3(int i10, int i11) {
         HashSet hashSet = new HashSet();
         RecyclerView recyclerView = this.b;
-        int iO3 = o3(recyclerView.f2926c, recyclerView.f2941j0, i11);
+        int iO3 = o3(recyclerView.f2771c, recyclerView.f2786j0, i11);
         for (int i12 = i10; i12 < i10 + iO3; i12++) {
             hashSet.add(Integer.valueOf(i12));
         }
@@ -691,8 +691,8 @@ public class GridLayoutManager extends LinearLayoutManager {
         }
         int iB = b0Var.b();
         Y1();
-        int iM = this.f2896u.m();
-        int i12 = this.f2896u.i();
+        int iM = this.f2741u.m();
+        int i12 = this.f2741u.i();
         View view = null;
         View view2 = null;
         while (iO != i10) {
@@ -704,7 +704,7 @@ public class GridLayoutManager extends LinearLayoutManager {
                         view2 = viewN;
                     }
                 } else {
-                    if (this.f2896u.g(viewN) < i12 && this.f2896u.d(viewN) >= iM) {
+                    if (this.f2741u.g(viewN) < i12 && this.f2741u.d(viewN) >= iM) {
                         return viewN;
                     }
                     if (view == null) {
@@ -718,7 +718,7 @@ public class GridLayoutManager extends LinearLayoutManager {
     }
 
     public int k3(int i10, int i11) {
-        if (this.f2894s != 1 || !r2()) {
+        if (this.f2739s != 1 || !r2()) {
             int[] iArr = this.K;
             return iArr[i11 + i10] - iArr[i10];
         }
@@ -738,7 +738,7 @@ public class GridLayoutManager extends LinearLayoutManager {
             int i11 = bundle.getInt("android.view.accessibility.action.ARGUMENT_ROW_INT", -1);
             int i12 = bundle.getInt("android.view.accessibility.action.ARGUMENT_COLUMN_INT", -1);
             if (i11 != -1 && i12 != -1) {
-                int iE = this.b.f2946m.e();
+                int iE = this.b.f2791m.e();
                 int i13 = 0;
                 while (true) {
                     if (i13 >= iE) {
@@ -746,10 +746,10 @@ public class GridLayoutManager extends LinearLayoutManager {
                         break;
                     }
                     RecyclerView recyclerView = this.b;
-                    int iN3 = n3(recyclerView.f2926c, recyclerView.f2941j0, i13);
+                    int iN3 = n3(recyclerView.f2771c, recyclerView.f2786j0, i13);
                     RecyclerView recyclerView2 = this.b;
-                    int iM3 = m3(recyclerView2.f2926c, recyclerView2.f2941j0, i13);
-                    if (this.f2894s != 1) {
+                    int iM3 = m3(recyclerView2.f2771c, recyclerView2.f2786j0, i13);
+                    if (this.f2739s != 1) {
                         if (iN3 == i11 && iM3 == i12) {
                             break;
                         }
@@ -804,7 +804,7 @@ public class GridLayoutManager extends LinearLayoutManager {
                 }
                 iD3 = c3(i15, iF3, iJ);
             }
-            if (iD3 == -1 && this.f2894s == 0) {
+            if (iD3 == -1 && this.f2739s == 0) {
                 if (i14 == 17) {
                     iD3 = a3(iH3);
                 } else if (i14 == 66) {
@@ -854,7 +854,7 @@ public class GridLayoutManager extends LinearLayoutManager {
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
     public int o0(RecyclerView.x xVar, RecyclerView.b0 b0Var) {
-        if (this.f2894s == 0) {
+        if (this.f2739s == 0) {
             return Math.min(this.J, e());
         }
         if (b0Var.b() < 1) {
@@ -899,13 +899,13 @@ public class GridLayoutManager extends LinearLayoutManager {
         Rect rect = cVar.b;
         int i11 = rect.top + rect.bottom + ((ViewGroup.MarginLayoutParams) cVar).topMargin + ((ViewGroup.MarginLayoutParams) cVar).bottomMargin;
         int i12 = rect.left + rect.right + ((ViewGroup.MarginLayoutParams) cVar).leftMargin + ((ViewGroup.MarginLayoutParams) cVar).rightMargin;
-        int iK3 = k3(cVar.f2889e, cVar.f2890f);
-        if (this.f2894s == 1) {
+        int iK3 = k3(cVar.f2734e, cVar.f2735f);
+        if (this.f2739s == 1) {
             iP2 = RecyclerView.q.P(iK3, i10, i12, ((ViewGroup.MarginLayoutParams) cVar).width, false);
-            iP = RecyclerView.q.P(this.f2896u.n(), c0(), i11, ((ViewGroup.MarginLayoutParams) cVar).height, true);
+            iP = RecyclerView.q.P(this.f2741u.n(), c0(), i11, ((ViewGroup.MarginLayoutParams) cVar).height, true);
         } else {
             int iP3 = RecyclerView.q.P(iK3, i10, i11, ((ViewGroup.MarginLayoutParams) cVar).height, false);
-            int iP4 = RecyclerView.q.P(this.f2896u.n(), t0(), i12, ((ViewGroup.MarginLayoutParams) cVar).width, true);
+            int iP4 = RecyclerView.q.P(this.f2741u.n(), t0(), i12, ((ViewGroup.MarginLayoutParams) cVar).width, true);
             iP = iP3;
             iP2 = iP4;
         }
@@ -931,20 +931,20 @@ public class GridLayoutManager extends LinearLayoutManager {
         int iP;
         int iP2;
         View viewD;
-        int iL = this.f2896u.l();
+        int iL = this.f2741u.l();
         boolean z10 = iL != 1073741824;
         int i13 = O() > 0 ? this.K[this.J] : 0;
         if (z10) {
             u3();
         }
-        boolean z11 = cVar.f2914e == 1;
+        boolean z11 = cVar.f2759e == 1;
         int iN3 = this.J;
         if (!z11) {
-            iN3 = n3(xVar, b0Var, cVar.f2913d) + o3(xVar, b0Var, cVar.f2913d);
+            iN3 = n3(xVar, b0Var, cVar.f2758d) + o3(xVar, b0Var, cVar.f2758d);
         }
         int i14 = 0;
         while (i14 < this.J && cVar.c(b0Var) && iN3 > 0) {
-            int i15 = cVar.f2913d;
+            int i15 = cVar.f2758d;
             int iO3 = o3(xVar, b0Var, i15);
             if (iO3 > this.J) {
                 throw new IllegalArgumentException("Item at position " + i15 + " requires " + iO3 + " spans but GridLayoutManager has only " + this.J + " spans.");
@@ -965,7 +965,7 @@ public class GridLayoutManager extends LinearLayoutManager {
         int i16 = 0;
         for (int i17 = 0; i17 < i14; i17++) {
             View view = this.L[i17];
-            if (cVar.f2921l == null) {
+            if (cVar.f2766l == null) {
                 if (z11) {
                     i(view);
                 } else {
@@ -978,11 +978,11 @@ public class GridLayoutManager extends LinearLayoutManager {
             }
             o(view, this.P);
             r3(view, iL, false);
-            int iE = this.f2896u.e(view);
+            int iE = this.f2741u.e(view);
             if (iE > i16) {
                 i16 = iE;
             }
-            float f11 = (this.f2896u.f(view) * 1.0f) / ((c) view.getLayoutParams()).f2890f;
+            float f11 = (this.f2741u.f(view) * 1.0f) / ((c) view.getLayoutParams()).f2735f;
             if (f11 > f10) {
                 f10 = f11;
             }
@@ -993,7 +993,7 @@ public class GridLayoutManager extends LinearLayoutManager {
             for (int i18 = 0; i18 < i14; i18++) {
                 View view2 = this.L[i18];
                 r3(view2, 1073741824, true);
-                int iE2 = this.f2896u.e(view2);
+                int iE2 = this.f2741u.e(view2);
                 if (iE2 > i16) {
                     i16 = iE2;
                 }
@@ -1001,13 +1001,13 @@ public class GridLayoutManager extends LinearLayoutManager {
         }
         for (int i19 = 0; i19 < i14; i19++) {
             View view3 = this.L[i19];
-            if (this.f2896u.e(view3) != i16) {
+            if (this.f2741u.e(view3) != i16) {
                 c cVar2 = (c) view3.getLayoutParams();
                 Rect rect = cVar2.b;
                 int i20 = rect.top + rect.bottom + ((ViewGroup.MarginLayoutParams) cVar2).topMargin + ((ViewGroup.MarginLayoutParams) cVar2).bottomMargin;
                 int i21 = rect.left + rect.right + ((ViewGroup.MarginLayoutParams) cVar2).leftMargin + ((ViewGroup.MarginLayoutParams) cVar2).rightMargin;
-                int iK3 = k3(cVar2.f2889e, cVar2.f2890f);
-                if (this.f2894s == 1) {
+                int iK3 = k3(cVar2.f2734e, cVar2.f2735f);
+                if (this.f2739s == 1) {
                     iP2 = RecyclerView.q.P(iK3, 1073741824, i21, ((ViewGroup.MarginLayoutParams) cVar2).width, false);
                     iP = View.MeasureSpec.makeMeasureSpec(i16 - i20, 1073741824);
                 } else {
@@ -1018,9 +1018,9 @@ public class GridLayoutManager extends LinearLayoutManager {
                 s3(view3, iP2, iP, true);
             }
         }
-        bVar.f2908a = i16;
-        if (this.f2894s == 1) {
-            if (cVar.f2915f == -1) {
+        bVar.f2753a = i16;
+        if (this.f2739s == 1) {
+            if (cVar.f2760f == -1) {
                 iF2 = cVar.b;
                 i12 = iF2 - i16;
             } else {
@@ -1031,7 +1031,7 @@ public class GridLayoutManager extends LinearLayoutManager {
             iF = 0;
             iI0 = 0;
         } else {
-            if (cVar.f2915f == -1) {
+            if (cVar.f2760f == -1) {
                 i11 = cVar.b;
                 i10 = i11 - i16;
             } else {
@@ -1046,15 +1046,15 @@ public class GridLayoutManager extends LinearLayoutManager {
         for (int i22 = 0; i22 < i14; i22++) {
             View view4 = this.L[i22];
             c cVar3 = (c) view4.getLayoutParams();
-            if (this.f2894s != 1) {
-                iK0 = this.K[cVar3.f2889e] + k0();
-                iF2 = this.f2896u.f(view4) + iK0;
+            if (this.f2739s != 1) {
+                iK0 = this.K[cVar3.f2734e] + k0();
+                iF2 = this.f2741u.f(view4) + iK0;
             } else if (r2()) {
-                iF = i0() + this.K[this.J - cVar3.f2889e];
-                iI0 = iF - this.f2896u.f(view4);
+                iF = i0() + this.K[this.J - cVar3.f2734e];
+                iI0 = iF - this.f2741u.f(view4);
             } else {
-                iI0 = this.K[cVar3.f2889e] + i0();
-                iF = this.f2896u.f(view4) + iI0;
+                iI0 = this.K[cVar3.f2734e] + i0();
+                iF = this.f2741u.f(view4) + iI0;
             }
             int i23 = iF2;
             int i24 = iK0;
@@ -1066,9 +1066,9 @@ public class GridLayoutManager extends LinearLayoutManager {
             iF = i25;
             iK0 = i24;
             if (cVar3.d() || cVar3.c()) {
-                bVar.f2909c = true;
+                bVar.f2754c = true;
             }
-            bVar.f2910d = view4.hasFocusable() | bVar.f2910d;
+            bVar.f2755d = view4.hasFocusable() | bVar.f2755d;
         }
         Arrays.fill(this.L, (Object) null);
     }
@@ -1128,41 +1128,41 @@ public class GridLayoutManager extends LinearLayoutManager {
     public static class c extends RecyclerView.r {
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public int f2889e;
+        public int f2734e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public int f2890f;
+        public int f2735f;
 
         public c(Context context, AttributeSet attributeSet) {
             super(context, attributeSet);
-            this.f2889e = -1;
-            this.f2890f = 0;
+            this.f2734e = -1;
+            this.f2735f = 0;
         }
 
         public int f() {
-            return this.f2889e;
+            return this.f2734e;
         }
 
         public int g() {
-            return this.f2890f;
+            return this.f2735f;
         }
 
         public c(int i10, int i11) {
             super(i10, i11);
-            this.f2889e = -1;
-            this.f2890f = 0;
+            this.f2734e = -1;
+            this.f2735f = 0;
         }
 
         public c(ViewGroup.MarginLayoutParams marginLayoutParams) {
             super(marginLayoutParams);
-            this.f2889e = -1;
-            this.f2890f = 0;
+            this.f2734e = -1;
+            this.f2735f = 0;
         }
 
         public c(ViewGroup.LayoutParams layoutParams) {
             super(layoutParams);
-            this.f2889e = -1;
-            this.f2890f = 0;
+            this.f2734e = -1;
+            this.f2735f = 0;
         }
     }
 

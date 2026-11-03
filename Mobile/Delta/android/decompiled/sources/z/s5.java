@@ -11,11 +11,11 @@ import java.util.List;
 public final class s5 extends h5.c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final List<h5.c> f36814a;
+    public final List<h5.c> f37509a;
 
     public s5(List<h5.c> list) {
         ArrayList arrayList = new ArrayList();
-        this.f36814a = arrayList;
+        this.f37509a = arrayList;
         arrayList.addAll(list);
     }
 
@@ -25,7 +25,7 @@ public final class s5 extends h5.c {
 
     @Override // z.h5.c
     public void p(h5 h5Var) {
-        Iterator<h5.c> it = this.f36814a.iterator();
+        Iterator<h5.c> it = this.f37509a.iterator();
         while (it.hasNext()) {
             it.next().p(h5Var);
         }
@@ -33,7 +33,7 @@ public final class s5 extends h5.c {
 
     @Override // z.h5.c
     public void q(h5 h5Var) {
-        Iterator<h5.c> it = this.f36814a.iterator();
+        Iterator<h5.c> it = this.f37509a.iterator();
         while (it.hasNext()) {
             it.next().q(h5Var);
         }
@@ -41,7 +41,7 @@ public final class s5 extends h5.c {
 
     @Override // z.h5.c
     public void r(h5 h5Var) {
-        Iterator<h5.c> it = this.f36814a.iterator();
+        Iterator<h5.c> it = this.f37509a.iterator();
         while (it.hasNext()) {
             it.next().r(h5Var);
         }
@@ -49,7 +49,7 @@ public final class s5 extends h5.c {
 
     @Override // z.h5.c
     public void s(h5 h5Var) {
-        Iterator<h5.c> it = this.f36814a.iterator();
+        Iterator<h5.c> it = this.f37509a.iterator();
         while (it.hasNext()) {
             it.next().s(h5Var);
         }
@@ -57,7 +57,7 @@ public final class s5 extends h5.c {
 
     @Override // z.h5.c
     public void t(h5 h5Var) {
-        Iterator<h5.c> it = this.f36814a.iterator();
+        Iterator<h5.c> it = this.f37509a.iterator();
         while (it.hasNext()) {
             it.next().t(h5Var);
         }
@@ -65,7 +65,7 @@ public final class s5 extends h5.c {
 
     @Override // z.h5.c
     public void u(h5 h5Var) {
-        Iterator<h5.c> it = this.f36814a.iterator();
+        Iterator<h5.c> it = this.f37509a.iterator();
         while (it.hasNext()) {
             it.next().u(h5Var);
         }
@@ -73,7 +73,7 @@ public final class s5 extends h5.c {
 
     @Override // z.h5.c
     public void v(h5 h5Var) {
-        Iterator<h5.c> it = this.f36814a.iterator();
+        Iterator<h5.c> it = this.f37509a.iterator();
         while (it.hasNext()) {
             it.next().v(h5Var);
         }
@@ -81,7 +81,7 @@ public final class s5 extends h5.c {
 
     @Override // z.h5.c
     public void w(h5 h5Var, Surface surface) {
-        Iterator<h5.c> it = this.f36814a.iterator();
+        Iterator<h5.c> it = this.f37509a.iterator();
         while (it.hasNext()) {
             it.next().w(h5Var, surface);
         }
@@ -90,40 +90,40 @@ public final class s5 extends h5.c {
     public static class a extends h5.c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final CameraCaptureSession.StateCallback f36815a;
+        public final CameraCaptureSession.StateCallback f37510a;
 
         public a(CameraCaptureSession.StateCallback stateCallback) {
-            this.f36815a = stateCallback;
+            this.f37510a = stateCallback;
         }
 
         @Override // z.h5.c
         public void p(h5 h5Var) {
-            this.f36815a.onActive(h5Var.n().d());
+            this.f37510a.onActive(h5Var.n().d());
         }
 
         @Override // z.h5.c
         public void q(h5 h5Var) {
-            a0.d.a(this.f36815a, h5Var.n().d());
+            a0.d.a(this.f37510a, h5Var.n().d());
         }
 
         @Override // z.h5.c
         public void r(h5 h5Var) {
-            this.f36815a.onClosed(h5Var.n().d());
+            this.f37510a.onClosed(h5Var.n().d());
         }
 
         @Override // z.h5.c
         public void s(h5 h5Var) {
-            this.f36815a.onConfigureFailed(h5Var.n().d());
+            this.f37510a.onConfigureFailed(h5Var.n().d());
         }
 
         @Override // z.h5.c
         public void t(h5 h5Var) {
-            this.f36815a.onConfigured(h5Var.n().d());
+            this.f37510a.onConfigured(h5Var.n().d());
         }
 
         @Override // z.h5.c
         public void u(h5 h5Var) {
-            this.f36815a.onReady(h5Var.n().d());
+            this.f37510a.onReady(h5Var.n().d());
         }
 
         @Override // z.h5.c
@@ -132,7 +132,7 @@ public final class s5 extends h5.c {
 
         @Override // z.h5.c
         public void w(h5 h5Var, Surface surface) {
-            a0.b.a(this.f36815a, h5Var.n().d(), surface);
+            a0.b.a(this.f37510a, h5Var.n().d(), surface);
         }
 
         public a(List<CameraCaptureSession.StateCallback> list) {

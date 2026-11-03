@@ -9,24 +9,24 @@ import java.util.concurrent.TimeUnit;
 public final class m0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final List<u1> f17480a;
+    public final List<u1> f18019a;
     public final List<u1> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final List<u1> f17481c;
+    public final List<u1> f18020c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final long f17482d;
+    public final long f18021d;
 
     public m0(a aVar) {
-        this.f17480a = Collections.unmodifiableList(aVar.f17483a);
+        this.f18019a = Collections.unmodifiableList(aVar.f18022a);
         this.b = Collections.unmodifiableList(aVar.b);
-        this.f17481c = Collections.unmodifiableList(aVar.f17484c);
-        this.f17482d = aVar.f17485d;
+        this.f18020c = Collections.unmodifiableList(aVar.f18023c);
+        this.f18021d = aVar.f18024d;
     }
 
     public long a() {
-        return this.f17482d;
+        return this.f18021d;
     }
 
     public List<u1> b() {
@@ -34,34 +34,34 @@ public final class m0 {
     }
 
     public List<u1> c() {
-        return this.f17480a;
+        return this.f18019a;
     }
 
     public List<u1> d() {
-        return this.f17481c;
+        return this.f18020c;
     }
 
     public boolean e() {
-        return this.f17482d > 0;
+        return this.f18021d > 0;
     }
 
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final List<u1> f17483a;
+        public final List<u1> f18022a;
         public final List<u1> b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final List<u1> f17484c;
+        public final List<u1> f18023c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public long f17485d;
+        public long f18024d;
 
         public a(u1 u1Var, int i10) {
-            this.f17483a = new ArrayList();
+            this.f18022a = new ArrayList();
             this.b = new ArrayList();
-            this.f17484c = new ArrayList();
-            this.f17485d = 5000L;
+            this.f18023c = new ArrayList();
+            this.f18024d = 5000L;
             a(u1Var, i10);
         }
 
@@ -73,13 +73,13 @@ public final class m0 {
             }
             x2.g.b(z10, "Invalid metering mode " + i10);
             if ((i10 & 1) != 0) {
-                this.f17483a.add(u1Var);
+                this.f18022a.add(u1Var);
             }
             if ((i10 & 2) != 0) {
                 this.b.add(u1Var);
             }
             if ((i10 & 4) != 0) {
-                this.f17484c.add(u1Var);
+                this.f18023c.add(u1Var);
             }
             return this;
         }
@@ -89,41 +89,41 @@ public final class m0 {
         }
 
         public a c() {
-            this.f17485d = 0L;
+            this.f18024d = 0L;
             return this;
         }
 
         public a d(int i10) {
             if ((i10 & 1) != 0) {
-                this.f17483a.clear();
+                this.f18022a.clear();
             }
             if ((i10 & 2) != 0) {
                 this.b.clear();
             }
             if ((i10 & 4) != 0) {
-                this.f17484c.clear();
+                this.f18023c.clear();
             }
             return this;
         }
 
         public a e(long j10, TimeUnit timeUnit) {
             x2.g.b(j10 >= 1, "autoCancelDuration must be at least 1");
-            this.f17485d = timeUnit.toMillis(j10);
+            this.f18024d = timeUnit.toMillis(j10);
             return this;
         }
 
         public a(m0 m0Var) {
             ArrayList arrayList = new ArrayList();
-            this.f17483a = arrayList;
+            this.f18022a = arrayList;
             ArrayList arrayList2 = new ArrayList();
             this.b = arrayList2;
             ArrayList arrayList3 = new ArrayList();
-            this.f17484c = arrayList3;
-            this.f17485d = 5000L;
+            this.f18023c = arrayList3;
+            this.f18024d = 5000L;
             arrayList.addAll(m0Var.c());
             arrayList2.addAll(m0Var.b());
             arrayList3.addAll(m0Var.d());
-            this.f17485d = m0Var.a();
+            this.f18024d = m0Var.a();
         }
     }
 }

@@ -14,7 +14,7 @@ public final class w extends f {
     }
 
     @Override // ab.n
-    public final void d1(Status status, RetrieveBytesResponse retrieveBytesResponse) {
+    public final void a1(Status status, RetrieveBytesResponse retrieveBytesResponse) {
         l9.v.a(status, retrieveBytesResponse, this.f310a);
     }
 }

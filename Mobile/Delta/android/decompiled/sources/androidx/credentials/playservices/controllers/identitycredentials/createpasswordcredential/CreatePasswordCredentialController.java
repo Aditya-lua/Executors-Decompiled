@@ -125,10 +125,10 @@ public final class CreatePasswordCredentialController extends CredentialProvider
         executor.execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpasswordcredential.m
             @Override // java.lang.Runnable
             public final void run() {
-                CreatePasswordCredentialController.handleResponse$lambda$11$lambda$10(this.f2059a, cVar);
+                CreatePasswordCredentialController.handleResponse$lambda$11$lambda$10(this.f1904a, cVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -151,10 +151,10 @@ public final class CreatePasswordCredentialController extends CredentialProvider
         executor.execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpasswordcredential.j
             @Override // java.lang.Runnable
             public final void run() {
-                CreatePasswordCredentialController.handleResponse$lambda$13$lambda$12(this.f2056a, fVar);
+                CreatePasswordCredentialController.handleResponse$lambda$13$lambda$12(this.f1901a, fVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -174,7 +174,7 @@ public final class CreatePasswordCredentialController extends CredentialProvider
     public static final Unit handleResponse$lambda$5(CancellationSignal cancellationSignal, Function0 f10) {
         Intrinsics.checkNotNullParameter(f10, "f");
         CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(cancellationSignal, f10);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -188,10 +188,10 @@ public final class CreatePasswordCredentialController extends CredentialProvider
         executor.execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpasswordcredential.h
             @Override // java.lang.Runnable
             public final void run() {
-                CreatePasswordCredentialController.handleResponse$lambda$7$lambda$6(this.f2054a, e10);
+                CreatePasswordCredentialController.handleResponse$lambda$7$lambda$6(this.f1899a, e10);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -214,10 +214,10 @@ public final class CreatePasswordCredentialController extends CredentialProvider
         executor.execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpasswordcredential.k
             @Override // java.lang.Runnable
             public final void run() {
-                CreatePasswordCredentialController.handleResponse$lambda$9$lambda$8(this.f2057a);
+                CreatePasswordCredentialController.handleResponse$lambda$9$lambda$8(this.f1902a);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -233,7 +233,7 @@ public final class CreatePasswordCredentialController extends CredentialProvider
     /* JADX INFO: Access modifiers changed from: private */
     public static final Unit invokePlayServices$lambda$2(CancellationSignal cancellationSignal, final CreatePasswordCredentialController createPasswordCredentialController, CreateCredentialHandle createCredentialHandle) {
         if (CredentialProviderPlayServicesImpl.INSTANCE.cancellationReviewer$credentials_play_services_auth_release(cancellationSignal)) {
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
         Intent intent = new Intent(createPasswordCredentialController.context, (Class<?>) HiddenActivity.class);
         createPasswordCredentialController.generateHiddenActivityIntent(createPasswordCredentialController.resultReceiver, intent, CredentialProviderBaseController.CREATE_PASSWORD_TAG);
@@ -244,11 +244,11 @@ public final class CreatePasswordCredentialController extends CredentialProvider
             CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(cancellationSignal, new Function0() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpasswordcredential.l
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return CreatePasswordCredentialController.invokePlayServices$lambda$2$lambda$1(this.f2058a);
+                    return CreatePasswordCredentialController.invokePlayServices$lambda$2$lambda$1(this.f1903a);
                 }
             });
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -261,10 +261,10 @@ public final class CreatePasswordCredentialController extends CredentialProvider
         executor.execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpasswordcredential.i
             @Override // java.lang.Runnable
             public final void run() {
-                CreatePasswordCredentialController.invokePlayServices$lambda$2$lambda$1$lambda$0(this.f2055a);
+                CreatePasswordCredentialController.invokePlayServices$lambda$2$lambda$1$lambda$0(this.f1900a);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -303,7 +303,7 @@ public final class CreatePasswordCredentialController extends CredentialProvider
         }, new Function1() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpasswordcredential.b
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return CreatePasswordCredentialController.handleResponse$lambda$7(this.f2045a, (f3.f) obj);
+                return CreatePasswordCredentialController.handleResponse$lambda$7(this.f1890a, (f3.f) obj);
             }
         }, this.cancellationSignal)) {
             return;
@@ -312,7 +312,7 @@ public final class CreatePasswordCredentialController extends CredentialProvider
             CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(this.cancellationSignal, new Function0() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpasswordcredential.c
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return CreatePasswordCredentialController.handleResponse$lambda$9(this.f2046a);
+                    return CreatePasswordCredentialController.handleResponse$lambda$9(this.f1891a);
                 }
             });
             return;
@@ -323,7 +323,7 @@ public final class CreatePasswordCredentialController extends CredentialProvider
             CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(this.cancellationSignal, new Function0() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpasswordcredential.d
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return CreatePasswordCredentialController.handleResponse$lambda$11(this.f2047a, cVarB);
+                    return CreatePasswordCredentialController.handleResponse$lambda$11(this.f1892a, cVarB);
                 }
             });
         } else {
@@ -331,7 +331,7 @@ public final class CreatePasswordCredentialController extends CredentialProvider
             CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(this.cancellationSignal, new Function0() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpasswordcredential.e
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return CreatePasswordCredentialController.handleResponse$lambda$13(this.f2048a, fVarA);
+                    return CreatePasswordCredentialController.handleResponse$lambda$13(this.f1893a, fVarA);
                 }
             });
         }
@@ -377,7 +377,7 @@ public final class CreatePasswordCredentialController extends CredentialProvider
         }).e(new sb.f() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpasswordcredential.g
             @Override // sb.f
             public final void onFailure(Exception exc) {
-                CreatePasswordCredentialController.invokePlayServices$lambda$4(this.f2050a, request, callback, executor, cancellationSignal, exc);
+                CreatePasswordCredentialController.invokePlayServices$lambda$4(this.f1895a, request, callback, executor, cancellationSignal, exc);
             }
         });
     }

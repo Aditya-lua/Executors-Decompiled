@@ -6,12 +6,12 @@ import java.lang.ref.WeakReference;
 public abstract class a0 extends x {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final WeakReference f21167c = new WeakReference(null);
+    public static final WeakReference f21740c = new WeakReference(null);
     public WeakReference b;
 
     public a0(byte[] bArr) {
         super(bArr);
-        this.b = f21167c;
+        this.b = f21740c;
     }
 
     @Override // j9.x

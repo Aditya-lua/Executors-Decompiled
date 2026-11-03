@@ -11,7 +11,7 @@ public final class u6 extends gb implements pc {
     static {
         u6 u6Var = new u6();
         zzg = u6Var;
-        gb.u(u6.class, u6Var);
+        gb.t(u6.class, u6Var);
     }
 
     @Override // com.google.android.gms.internal.measurement.gb

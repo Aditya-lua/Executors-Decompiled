@@ -9,7 +9,7 @@ public final class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final a f14882a = new a();
+    public static final a f15496a = new a();
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public static boolean isOnBackPressedLifecycleOrderMaintained = true;

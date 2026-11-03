@@ -12,7 +12,7 @@ public abstract class b extends e<k9.a.d.c> {
     public static final k9.a.g f259k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final k9.a.AbstractC0392a f260l;
+    public static final k9.a.AbstractC0391a f260l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
     public static final k9.a f261m;
@@ -26,7 +26,7 @@ public abstract class b extends e<k9.a.d.c> {
     }
 
     public b(@NonNull Context context) {
-        super(context, (k9.a<k9.a.d.c>) f261m, k9.a.d.Jo, e.a.f22280c);
+        super(context, (k9.a<k9.a.d.c>) f261m, k9.a.d.Ko, e.a.f22504c);
     }
 
     @NonNull

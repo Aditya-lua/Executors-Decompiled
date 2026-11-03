@@ -2,7 +2,8 @@ package com.roblox.client.pushnotification.v2.model;
 
 import androidx.annotation.Keep;
 import com.google.gson.reflect.TypeToken;
-import gk.m;
+import ek.n;
+import ek.q;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Metadata;
@@ -43,7 +44,7 @@ public final /* data */ class NotificationAction {
 
         /* JADX INFO: renamed from: com.roblox.client.pushnotification.v2.model.NotificationAction$a$a, reason: collision with other inner class name */
         @Metadata(d1 = {"\u0000\u0013\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000*\u0001\u0000\b\n\u0018\u00002\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00030\u00020\u0001¨\u0006\u0004"}, d2 = {"com/roblox/client/pushnotification/v2/model/NotificationAction$a$a", "Lcom/google/gson/reflect/TypeToken;", "", "Lcom/roblox/client/pushnotification/v2/model/NotificationAction;", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
-        public static final class C0146a extends TypeToken<List<? extends NotificationAction>> {
+        public static final class C0149a extends TypeToken<List<? extends NotificationAction>> {
         }
 
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
@@ -55,7 +56,7 @@ public final /* data */ class NotificationAction {
             ArrayList arrayList;
             Intrinsics.checkNotNullParameter(json, "json");
             try {
-                List list = (List) m.b().k(json, new C0146a().getType());
+                List list = (List) n.b().k(json, new C0149a().getType());
                 if (list != null) {
                     arrayList = new ArrayList();
                     for (Object obj : list) {
@@ -69,7 +70,7 @@ public final /* data */ class NotificationAction {
                 }
                 return arrayList == null ? p.k() : arrayList;
             } catch (Exception e10) {
-                gk.p.d("Failed to get notification actions. Exception: " + e10.getMessage() + "\nJson: " + json);
+                q.d("Failed to get notification actions. Exception: " + e10.getMessage() + "\nJson: " + json);
                 return p.k();
             }
         }

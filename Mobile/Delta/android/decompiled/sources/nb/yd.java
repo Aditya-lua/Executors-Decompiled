@@ -7,24 +7,24 @@ import java.util.Map;
 public final class yd {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f26139a;
+    public final String f26960a;
     public final Map b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final za f26140c;
+    public final za f26961c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final com.google.android.gms.internal.measurement.p7 f26141d;
+    public final com.google.android.gms.internal.measurement.p7 f26962d;
 
     public yd(String str, Map map, za zaVar, com.google.android.gms.internal.measurement.p7 p7Var) {
-        this.f26139a = str;
+        this.f26960a = str;
         this.b = map;
-        this.f26140c = zaVar;
-        this.f26141d = p7Var;
+        this.f26961c = zaVar;
+        this.f26962d = p7Var;
     }
 
     public final String a() {
-        return this.f26139a;
+        return this.f26960a;
     }
 
     public final Map b() {
@@ -33,10 +33,10 @@ public final class yd {
     }
 
     public final za c() {
-        return this.f26140c;
+        return this.f26961c;
     }
 
     public final com.google.android.gms.internal.measurement.p7 d() {
-        return this.f26141d;
+        return this.f26962d;
     }
 }

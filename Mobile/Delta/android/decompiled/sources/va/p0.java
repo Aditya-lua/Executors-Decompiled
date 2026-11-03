@@ -9,20 +9,20 @@ import android.os.Looper;
 public final class p0 extends n9.e {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final k9.a.g f32903e;
+    public static final k9.a.g f33471e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final k9.a.AbstractC0392a f32904f;
+    public static final k9.a.AbstractC0391a f33472f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final k9.a f32905g;
+    public static final k9.a f33473g;
 
     static {
         k9.a.g gVar = new k9.a.g();
-        f32903e = gVar;
+        f33471e = gVar;
         o0 o0Var = new o0();
-        f32904f = o0Var;
-        f32905g = new k9.a("AppIndexing.API", o0Var, gVar);
+        f33472f = o0Var;
+        f33473g = new k9.a("AppIndexing.API", o0Var, gVar);
     }
 
     public p0(Context context, Looper looper, n9.d dVar, l9.e eVar, l9.n nVar) {
@@ -31,7 +31,7 @@ public final class p0 extends n9.e {
 
     @Override // n9.c
     public final /* synthetic */ IInterface createServiceInterface(IBinder iBinder) {
-        return kf.c.s2(iBinder);
+        return lf.c.s2(iBinder);
     }
 
     @Override // n9.c, k9.a.f

@@ -6,13 +6,13 @@ import android.content.Context;
 public final class h implements d8.b<String> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ht.a<Context> f21122a;
+    public final ft.a<Context> f21695a;
 
-    public h(ht.a<Context> aVar) {
-        this.f21122a = aVar;
+    public h(ft.a<Context> aVar) {
+        this.f21695a = aVar;
     }
 
-    public static h a(ht.a<Context> aVar) {
+    public static h a(ft.a<Context> aVar) {
         return new h(aVar);
     }
 
@@ -20,9 +20,9 @@ public final class h implements d8.b<String> {
         return (String) d8.d.c(f.b(context), "Cannot return null from a non-@Nullable @Provides method");
     }
 
-    @Override // ht.a
+    @Override // ft.a
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
     public String get() {
-        return c(this.f21122a.get());
+        return c(this.f21695a.get());
     }
 }

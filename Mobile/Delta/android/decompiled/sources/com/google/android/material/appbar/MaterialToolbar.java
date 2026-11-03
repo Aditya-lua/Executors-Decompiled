@@ -1,5 +1,7 @@
 package com.google.android.material.appbar;
 
+import ad.o;
+import ad.p;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
@@ -14,37 +16,35 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.view.menu.e;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.o0;
-import gd.g;
-import gd.h;
-import hc.b;
-import hc.j;
-import hc.k;
+import hd.g;
+import hd.h;
+import ic.b;
+import ic.j;
+import ic.k;
 import q2.a;
-import vc.c;
-import zc.o;
-import zc.p;
+import wc.c;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class MaterialToolbar extends Toolbar {
 
     /* JADX INFO: renamed from: b0, reason: collision with root package name */
-    public static final int f7518b0 = j.D;
+    public static final int f7592b0 = j.D;
 
     /* JADX INFO: renamed from: c0, reason: collision with root package name */
-    public static final ImageView.ScaleType[] f7519c0 = {ImageView.ScaleType.MATRIX, ImageView.ScaleType.FIT_XY, ImageView.ScaleType.FIT_START, ImageView.ScaleType.FIT_CENTER, ImageView.ScaleType.FIT_END, ImageView.ScaleType.CENTER, ImageView.ScaleType.CENTER_CROP, ImageView.ScaleType.CENTER_INSIDE};
+    public static final ImageView.ScaleType[] f7593c0 = {ImageView.ScaleType.MATRIX, ImageView.ScaleType.FIT_XY, ImageView.ScaleType.FIT_START, ImageView.ScaleType.FIT_CENTER, ImageView.ScaleType.FIT_END, ImageView.ScaleType.CENTER, ImageView.ScaleType.CENTER_CROP, ImageView.ScaleType.CENTER_INSIDE};
     public Integer T;
     public boolean U;
     public boolean V;
     public ImageView.ScaleType W;
 
     /* JADX INFO: renamed from: a0, reason: collision with root package name */
-    public Boolean f7520a0;
+    public Boolean f7594a0;
 
     public MaterialToolbar(@NonNull Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, b.f18784i0);
+        this(context, attributeSet, b.f20606i0);
     }
 
-    public final Pair<Integer, Integer> U(TextView textView, TextView textView2) {
+    public final Pair<Integer, Integer> T(TextView textView, TextView textView2) {
         int measuredWidth = getMeasuredWidth();
         int i10 = measuredWidth / 2;
         int paddingLeft = getPaddingLeft();
@@ -63,7 +63,7 @@ public class MaterialToolbar extends Toolbar {
         return new Pair<>(Integer.valueOf(paddingLeft), Integer.valueOf(paddingRight));
     }
 
-    public final void V(Context context) {
+    public final void U(Context context) {
         Drawable background = getBackground();
         ColorStateList colorStateListValueOf = background == null ? ColorStateList.valueOf(0) : c.g(background);
         if (colorStateListValueOf != null) {
@@ -75,7 +75,7 @@ public class MaterialToolbar extends Toolbar {
         }
     }
 
-    public final void W(View view, Pair<Integer, Integer> pair) {
+    public final void V(View view, Pair<Integer, Integer> pair) {
         int measuredWidth = getMeasuredWidth();
         int measuredWidth2 = view.getMeasuredWidth();
         int i10 = (measuredWidth / 2) - (measuredWidth2 / 2);
@@ -89,25 +89,25 @@ public class MaterialToolbar extends Toolbar {
         view.layout(i10, view.getTop(), i11, view.getBottom());
     }
 
-    public final void X() {
+    public final void W() {
         if (this.U || this.V) {
             TextView textViewG = p.g(this);
             TextView textViewE = p.e(this);
             if (textViewG == null && textViewE == null) {
                 return;
             }
-            Pair<Integer, Integer> pairU = U(textViewG, textViewE);
+            Pair<Integer, Integer> pairT = T(textViewG, textViewE);
             if (this.U && textViewG != null) {
-                W(textViewG, pairU);
+                V(textViewG, pairT);
             }
             if (!this.V || textViewE == null) {
                 return;
             }
-            W(textViewE, pairU);
+            V(textViewE, pairT);
         }
     }
 
-    public final Drawable Y(Drawable drawable) {
+    public final Drawable X(Drawable drawable) {
         if (drawable == null || this.T == null) {
             return drawable;
         }
@@ -116,10 +116,10 @@ public class MaterialToolbar extends Toolbar {
         return drawableR;
     }
 
-    public final void Z() {
+    public final void Y() {
         ImageView imageViewC = p.c(this);
         if (imageViewC != null) {
-            Boolean bool = this.f7520a0;
+            Boolean bool = this.f7594a0;
             if (bool != null) {
                 imageViewC.setAdjustViewBounds(bool.booleanValue());
             }
@@ -147,8 +147,8 @@ public class MaterialToolbar extends Toolbar {
     @Override // androidx.appcompat.widget.Toolbar, android.view.ViewGroup, android.view.View
     public void onLayout(boolean z10, int i10, int i11, int i12, int i13) {
         super.onLayout(z10, i10, i11, i12, i13);
-        X();
-        Z();
+        W();
+        Y();
     }
 
     @Override // android.view.View
@@ -158,9 +158,9 @@ public class MaterialToolbar extends Toolbar {
     }
 
     public void setLogoAdjustViewBounds(boolean z10) {
-        Boolean bool = this.f7520a0;
+        Boolean bool = this.f7594a0;
         if (bool == null || bool.booleanValue() != z10) {
-            this.f7520a0 = Boolean.valueOf(z10);
+            this.f7594a0 = Boolean.valueOf(z10);
             requestLayout();
         }
     }
@@ -174,7 +174,7 @@ public class MaterialToolbar extends Toolbar {
 
     @Override // androidx.appcompat.widget.Toolbar
     public void setNavigationIcon(Drawable drawable) {
-        super.setNavigationIcon(Y(drawable));
+        super.setNavigationIcon(X(drawable));
     }
 
     public void setNavigationIconTint(int i10) {
@@ -200,13 +200,13 @@ public class MaterialToolbar extends Toolbar {
     }
 
     @Override // androidx.appcompat.widget.Toolbar
-    public void y(int i10) {
+    public void x(int i10) {
         Menu menu = getMenu();
         boolean z10 = menu instanceof e;
         if (z10) {
             ((e) menu).e0();
         }
-        super.y(i10);
+        super.x(i10);
         if (z10) {
             ((e) menu).d0();
         }
@@ -214,10 +214,10 @@ public class MaterialToolbar extends Toolbar {
 
     /* JADX WARN: Illegal instructions before constructor call */
     public MaterialToolbar(@NonNull Context context, AttributeSet attributeSet, int i10) {
-        int i11 = f7518b0;
-        super(ld.a.c(context, attributeSet, i10, i11), attributeSet, i10);
+        int i11 = f7592b0;
+        super(md.a.c(context, attributeSet, i10, i11), attributeSet, i10);
         Context context2 = getContext();
-        TypedArray typedArrayI = o.i(context2, attributeSet, k.f19186z4, i10, i11, new int[0]);
+        TypedArray typedArrayI = o.i(context2, attributeSet, k.f21008z4, i10, i11, new int[0]);
         int i12 = k.C4;
         if (typedArrayI.hasValue(i12)) {
             setNavigationIconTint(typedArrayI.getColor(i12, -1));
@@ -226,16 +226,16 @@ public class MaterialToolbar extends Toolbar {
         this.V = typedArrayI.getBoolean(k.D4, false);
         int i13 = typedArrayI.getInt(k.B4, -1);
         if (i13 >= 0) {
-            ImageView.ScaleType[] scaleTypeArr = f7519c0;
+            ImageView.ScaleType[] scaleTypeArr = f7593c0;
             if (i13 < scaleTypeArr.length) {
                 this.W = scaleTypeArr[i13];
             }
         }
         int i14 = k.A4;
         if (typedArrayI.hasValue(i14)) {
-            this.f7520a0 = Boolean.valueOf(typedArrayI.getBoolean(i14, false));
+            this.f7594a0 = Boolean.valueOf(typedArrayI.getBoolean(i14, false));
         }
         typedArrayI.recycle();
-        V(context2);
+        U(context2);
     }
 }

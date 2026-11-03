@@ -44,7 +44,7 @@ public class ProfileInstallerInitializer implements k5.b<b> {
         Choreographer.getInstance().postFrameCallback(new Choreographer.FrameCallback() { // from class: u4.f
             @Override // android.view.Choreographer.FrameCallback
             public final void doFrame(long j10) {
-                this.f32065a.e(applicationContext);
+                this.f32718a.e(applicationContext);
             }
         });
         return new b();

@@ -11,9 +11,9 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 import com.withpersona.sdk2.inquiry.governmentid.view.ScanningView;
+import hq.j;
+import hq.z;
 import i.a;
-import jq.j;
-import jq.z;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
@@ -65,7 +65,7 @@ public final class ScanningView extends View {
         this.isScanningAnimationEnabled = true;
         Context context2 = getContext();
         Intrinsics.checkNotNullExpressionValue(context2, "getContext(...)");
-        this.highlightColor = z.d(context2, a.f19910z, null, false, 6, null);
+        this.highlightColor = z.d(context2, a.f20026z, null, false, 6, null);
         this.borderColor = -1;
         this.gradient = b();
         Paint paint = new Paint(1);
@@ -76,10 +76,10 @@ public final class ScanningView extends View {
         this.path = c();
         ValueAnimator valueAnimatorOfFloat = ValueAnimator.ofFloat(0.0f, 1.0f);
         valueAnimatorOfFloat.setDuration(4000L);
-        valueAnimatorOfFloat.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: vo.a
+        valueAnimatorOfFloat.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: to.a
             @Override // android.animation.ValueAnimator.AnimatorUpdateListener
             public final void onAnimationUpdate(ValueAnimator valueAnimator) {
-                ScanningView.a(this.f33340a, valueAnimator);
+                ScanningView.a(this.f32476a, valueAnimator);
             }
         });
         valueAnimatorOfFloat.setInterpolator(new LinearInterpolator());

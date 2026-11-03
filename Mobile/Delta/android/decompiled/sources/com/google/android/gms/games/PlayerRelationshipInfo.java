@@ -5,7 +5,7 @@ import m9.e;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface PlayerRelationshipInfo extends e<PlayerRelationshipInfo>, Parcelable {
-    int Y();
+    int X();
 
     String zza();
 

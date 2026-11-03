@@ -1,7 +1,7 @@
 package com.withpersona.sdk2.inquiry.network.dto;
 
-import ft.d;
-import ft.h;
+import dt.d;
+import dt.h;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class NetworkInquiryModule_UserAgentFactory implements d<String> {
@@ -21,7 +21,7 @@ public final class NetworkInquiryModule_UserAgentFactory implements d<String> {
         return (String) h.e(NetworkInquiryModule.userAgent());
     }
 
-    @Override // ht.a
+    @Override // ft.a
     public String get() {
         return userAgent();
     }

@@ -4,20 +4,20 @@ package j;
 public class r {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static r f20973d;
+    public static r f21546d;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public long f20974a;
+    public long f21547a;
     public long b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f20975c;
+    public int f21548c;
 
     public static r b() {
-        if (f20973d == null) {
-            f20973d = new r();
+        if (f21546d == null) {
+            f21546d = new r();
         }
-        return f20973d;
+        return f21546d;
     }
 
     public void a(long j10, double d10, double d11) {
@@ -31,24 +31,24 @@ public class r {
         double d14 = 0.01745329238474369d * d10;
         double dSin2 = (Math.sin(-0.10471975803375244d) - (Math.sin(d14) * Math.sin(dAsin))) / (Math.cos(d14) * Math.cos(dAsin));
         if (dSin2 >= 1.0d) {
-            this.f20975c = 1;
-            this.f20974a = -1L;
+            this.f21548c = 1;
+            this.f21547a = -1L;
             this.b = -1L;
         } else {
             if (dSin2 <= -1.0d) {
-                this.f20975c = 0;
-                this.f20974a = -1L;
+                this.f21548c = 0;
+                this.f21547a = -1L;
                 this.b = -1L;
                 return;
             }
             double dAcos = (float) (Math.acos(dSin2) / 6.283185307179586d);
-            this.f20974a = Math.round((dRound + dAcos) * 8.64E7d) + 946728000000L;
+            this.f21547a = Math.round((dRound + dAcos) * 8.64E7d) + 946728000000L;
             long jRound = Math.round((dRound - dAcos) * 8.64E7d) + 946728000000L;
             this.b = jRound;
-            if (jRound >= j10 || this.f20974a <= j10) {
-                this.f20975c = 1;
+            if (jRound >= j10 || this.f21547a <= j10) {
+                this.f21548c = 1;
             } else {
-                this.f20975c = 0;
+                this.f21548c = 0;
             }
         }
     }

@@ -13,10 +13,10 @@ public enum b {
 
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final /* synthetic */ qt.a f22000f = qt.b.a(a());
+    public static final /* synthetic */ ot.a f22224f = ot.b.a(a());
 
     @NotNull
-    public static qt.a<b> b() {
-        return f22000f;
+    public static ot.a<b> b() {
+        return f22224f;
     }
 }

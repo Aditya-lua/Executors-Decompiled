@@ -6,20 +6,20 @@ public final class l1 {
     public class a implements b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ g f2244a;
+        public final /* synthetic */ g f2089a;
 
         public a(g gVar) {
-            this.f2244a = gVar;
+            this.f2089a = gVar;
         }
 
         @Override // androidx.datastore.preferences.protobuf.l1.b
         public byte a(int i10) {
-            return this.f2244a.b(i10);
+            return this.f2089a.b(i10);
         }
 
         @Override // androidx.datastore.preferences.protobuf.l1.b
         public int size() {
-            return this.f2244a.size();
+            return this.f2089a.size();
         }
     }
 

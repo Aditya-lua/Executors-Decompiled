@@ -11,13 +11,13 @@ import java.util.Locale;
 public class ImageCaptureFlashNotFireQuirk implements UseTorchAsFlashQuirk {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final List<String> f1334a = Arrays.asList("itel w6004");
+    public static final List<String> f1179a = Arrays.asList("itel w6004");
     public static final List<String> b = Arrays.asList("sm-j700f", "sm-j710f");
 
     public static boolean g(c0 c0Var) {
         List<String> list = b;
         String str = Build.MODEL;
         Locale locale = Locale.US;
-        return (list.contains(str.toLowerCase(locale)) && ((Integer) c0Var.a(CameraCharacteristics.LENS_FACING)).intValue() == 0) || f1334a.contains(str.toLowerCase(locale));
+        return (list.contains(str.toLowerCase(locale)) && ((Integer) c0Var.a(CameraCharacteristics.LENS_FACING)).intValue() == 0) || f1179a.contains(str.toLowerCase(locale));
     }
 }

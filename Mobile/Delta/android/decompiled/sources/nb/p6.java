@@ -7,11 +7,11 @@ import android.content.Intent;
 public final class p6 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final o6 f25847a;
+    public final o6 f26668a;
 
     public p6(o6 o6Var) {
         n9.m.l(o6Var);
-        this.f25847a = o6Var;
+        this.f26668a = o6Var;
     }
 
     public final void a(Context context, Intent intent) {
@@ -32,7 +32,7 @@ public final class p6 {
             Intent className = new Intent().setClassName(context, "com.google.android.gms.measurement.AppMeasurementService");
             className.setAction("com.google.android.gms.measurement.UPLOAD");
             w5VarA.w().a("Starting wakeful intent.");
-            this.f25847a.a(context, className);
+            this.f26668a.a(context, className);
         }
     }
 }

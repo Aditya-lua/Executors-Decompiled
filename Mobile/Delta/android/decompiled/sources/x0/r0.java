@@ -6,7 +6,7 @@ import g0.k2;
 public interface r0 extends k2 {
     void a();
 
-    default me.x<Void> c(int i10, int i11) {
+    default ne.x<Void> c(int i10, int i11) {
         return r0.n.p(null);
     }
 }

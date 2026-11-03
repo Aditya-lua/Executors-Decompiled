@@ -8,19 +8,19 @@ import java.util.Objects;
 public final class y1 extends e1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ sb.k f16587a;
+    public final /* synthetic */ sb.k f17183a;
 
     public y1(a2 a2Var, sb.k kVar) {
-        this.f16587a = kVar;
+        this.f17183a = kVar;
         Objects.requireNonNull(a2Var);
     }
 
     @Override // fb.f2
-    public final void v0(Status status, zzs zzsVar) {
+    public final void t0(Status status, zzs zzsVar) {
         if (zzsVar == null) {
-            this.f16587a.b(new k9.b(status));
+            this.f17183a.b(new k9.b(status));
         } else {
-            this.f16587a.c(zzsVar);
+            this.f17183a.c(zzsVar);
         }
     }
 }

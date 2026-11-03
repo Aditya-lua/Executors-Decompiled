@@ -15,16 +15,16 @@ import n9.m;
 public abstract class a<R extends n, A extends k9.a.b> extends BasePendingResult<R> implements d<R> {
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public final k9.a.c<A> f5742o;
+    public final k9.a.c<A> f5815o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public final k9.a<?> f5743p;
+    public final k9.a<?> f5816p;
 
     public a(@NonNull k9.a<?> aVar, @NonNull f fVar) {
         super((f) m.m(fVar, "GoogleApiClient must not be null"));
         m.m(aVar, "Api must not be null");
-        this.f5742o = aVar.b();
-        this.f5743p = aVar;
+        this.f5815o = aVar.b();
+        this.f5816p = aVar;
     }
 
     @Override // l9.d

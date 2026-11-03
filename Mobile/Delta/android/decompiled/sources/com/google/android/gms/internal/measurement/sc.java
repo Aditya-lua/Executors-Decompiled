@@ -7,20 +7,20 @@ import java.util.Map;
 public final class sc implements zc {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final oc f6785a;
+    public final oc f6859a;
     public final ld b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final boolean f6786c;
+    public final boolean f6860c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final sa f6787d;
+    public final sa f6861d;
 
     public sc(ld ldVar, sa saVar, oc ocVar) {
         this.b = ldVar;
-        this.f6786c = ocVar instanceof db;
-        this.f6787d = saVar;
-        this.f6785a = ocVar;
+        this.f6860c = ocVar instanceof db;
+        this.f6861d = saVar;
+        this.f6859a = ocVar;
     }
 
     public static sc g(ld ldVar, sa saVar, oc ocVar) {
@@ -35,15 +35,15 @@ public final class sc implements zc {
     @Override // com.google.android.gms.internal.measurement.zc
     public final void b(Object obj, Object obj2) {
         bd.d(this.b, obj, obj2);
-        if (this.f6786c) {
-            bd.c(this.f6787d, obj, obj2);
+        if (this.f6860c) {
+            bd.c(this.f6861d, obj, obj2);
         }
     }
 
     @Override // com.google.android.gms.internal.measurement.zc
     public final void c(Object obj) {
         this.b.b(obj);
-        this.f6787d.a(obj);
+        this.f6861d.a(obj);
     }
 
     @Override // com.google.android.gms.internal.measurement.zc
@@ -78,7 +78,7 @@ public final class sc implements zc {
         if (!((gb) obj).zzc.equals(((gb) obj2).zzc)) {
             return false;
         }
-        if (this.f6786c) {
+        if (this.f6860c) {
             return ((db) obj).zzb.equals(((db) obj2).zzb);
         }
         return true;
@@ -86,19 +86,19 @@ public final class sc implements zc {
 
     @Override // com.google.android.gms.internal.measurement.zc
     public final Object zza() {
-        oc ocVar = this.f6785a;
-        return ocVar instanceof gb ? ((gb) ocVar).n() : ocVar.e().M();
+        oc ocVar = this.f6859a;
+        return ocVar instanceof gb ? ((gb) ocVar).m() : ocVar.e().M();
     }
 
     @Override // com.google.android.gms.internal.measurement.zc
     public final int zzc(Object obj) {
         int iHashCode = ((gb) obj).zzc.hashCode();
-        return this.f6786c ? (iHashCode * 53) + ((db) obj).zzb.f6867a.hashCode() : iHashCode;
+        return this.f6860c ? (iHashCode * 53) + ((db) obj).zzb.f6941a.hashCode() : iHashCode;
     }
 
     @Override // com.google.android.gms.internal.measurement.zc
     public final int zze(Object obj) {
         int iH = ((gb) obj).zzc.h();
-        return this.f6786c ? iH + ((db) obj).zzb.g() : iH;
+        return this.f6860c ? iH + ((db) obj).zzb.g() : iH;
     }
 }

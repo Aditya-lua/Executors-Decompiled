@@ -24,7 +24,7 @@ public enum ErrorCode {
     HTTP_1_1_REQUIRED(13);
 
     private final int httpCode;
-    private static final /* synthetic */ qt.a $ENTRIES = qt.b.a(values());
+    private static final /* synthetic */ ot.a $ENTRIES = ot.b.a(values());
 
     /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     @NotNull
@@ -55,7 +55,7 @@ public enum ErrorCode {
     }
 
     @NotNull
-    public static qt.a<ErrorCode> getEntries() {
+    public static ot.a<ErrorCode> getEntries() {
         return $ENTRIES;
     }
 

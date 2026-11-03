@@ -4,7 +4,7 @@ package com.google.android.gms.internal.measurement;
 public class ja {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final /* synthetic */ int f6566a = 0;
+    public static final /* synthetic */ int f6639a = 0;
 
     public /* synthetic */ ja(byte[] bArr) {
     }

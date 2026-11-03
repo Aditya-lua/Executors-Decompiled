@@ -1,14 +1,69 @@
 package er;
 
-import kotlin.Metadata;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import com.google.android.material.radiobutton.MaterialRadioButton;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\b\u0005\b\u0086\u0081\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003j\u0002\b\u0004j\u0002\b\u0005¨\u0006\u0006"}, d2 = {"Ler/b;", "", "<init>", "(Ljava/lang/String;I)V", "a", "b", "ui-step-renderer_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public enum b {
-    Server,
-    None;
+public final class b implements r5.a {
 
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    @NonNull
+    public final ConstraintLayout f16282a;
+
+    @NonNull
+    public final MaterialRadioButton b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    @NonNull
+    public final TextView f16283c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final /* synthetic */ qt.a f15747d = qt.b.a(a());
+    @NonNull
+    public final TextView f16284d;
+
+    public b(@NonNull ConstraintLayout constraintLayout, @NonNull MaterialRadioButton materialRadioButton, @NonNull TextView textView, @NonNull TextView textView2) {
+        this.f16282a = constraintLayout;
+        this.b = materialRadioButton;
+        this.f16283c = textView;
+        this.f16284d = textView2;
+    }
+
+    @NonNull
+    public static b a(@NonNull View view) {
+        int i10 = yq.d.f37055t0;
+        MaterialRadioButton materialRadioButton = (MaterialRadioButton) r5.b.a(view, i10);
+        if (materialRadioButton != null) {
+            i10 = yq.d.f37059v0;
+            TextView textView = (TextView) r5.b.a(view, i10);
+            if (textView != null) {
+                i10 = yq.d.f37061w0;
+                TextView textView2 = (TextView) r5.b.a(view, i10);
+                if (textView2 != null) {
+                    return new b((ConstraintLayout) view, materialRadioButton, textView, textView2);
+                }
+            }
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
+    }
+
+    @NonNull
+    public static b c(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
+        View viewInflate = layoutInflater.inflate(yq.e.b, viewGroup, false);
+        if (z10) {
+            viewGroup.addView(viewInflate);
+        }
+        return a(viewInflate);
+    }
+
+    @Override // r5.a
+    @NonNull
+    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+    public ConstraintLayout getRoot() {
+        return this.f16282a;
+    }
 }

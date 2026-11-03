@@ -18,7 +18,7 @@ public class WebRtcAudioEffects {
     private AcousticEchoCanceler aec;
 
     /* JADX INFO: renamed from: ns, reason: collision with root package name */
-    private NoiseSuppressor f27925ns;
+    private NoiseSuppressor f28172ns;
     private boolean shouldEnableAec;
     private boolean shouldEnableNs;
 
@@ -136,7 +136,7 @@ public class WebRtcAudioEffects {
         Logging.b(TAG, "enable(audioSession=" + i10 + ")");
         boolean z10 = false;
         assertTrue(this.aec == null);
-        assertTrue(this.f27925ns == null);
+        assertTrue(this.f28172ns == null);
         if (isAcousticEchoCancelerSupported()) {
             AcousticEchoCanceler acousticEchoCancelerCreate = AcousticEchoCanceler.create(i10);
             this.aec = acousticEchoCancelerCreate;
@@ -160,7 +160,7 @@ public class WebRtcAudioEffects {
         }
         if (isNoiseSuppressorSupported()) {
             NoiseSuppressor noiseSuppressorCreate = NoiseSuppressor.create(i10);
-            this.f27925ns = noiseSuppressorCreate;
+            this.f28172ns = noiseSuppressorCreate;
             if (noiseSuppressorCreate == null) {
                 Logging.c(TAG, "Failed to create the NoiseSuppressor instance");
                 return;
@@ -169,7 +169,7 @@ public class WebRtcAudioEffects {
             if (this.shouldEnableNs && canUseNoiseSuppressor()) {
                 z10 = true;
             }
-            if (this.f27925ns.setEnabled(z10) != 0) {
+            if (this.f28172ns.setEnabled(z10) != 0) {
                 Logging.c(TAG, "Failed to set the NoiseSuppressor state");
             }
             StringBuilder sb3 = new StringBuilder();
@@ -178,7 +178,7 @@ public class WebRtcAudioEffects {
             sb3.append(", enable: ");
             sb3.append(z10);
             sb3.append(", is now: ");
-            sb3.append(this.f27925ns.getEnabled() ? "enabled" : "disabled");
+            sb3.append(this.f28172ns.getEnabled() ? "enabled" : "disabled");
             Logging.b(TAG, sb3.toString());
         }
     }
@@ -190,10 +190,10 @@ public class WebRtcAudioEffects {
             acousticEchoCanceler.release();
             this.aec = null;
         }
-        NoiseSuppressor noiseSuppressor = this.f27925ns;
+        NoiseSuppressor noiseSuppressor = this.f28172ns;
         if (noiseSuppressor != null) {
             noiseSuppressor.release();
-            this.f27925ns = null;
+            this.f28172ns = null;
         }
     }
 
@@ -219,7 +219,7 @@ public class WebRtcAudioEffects {
             this.shouldEnableNs = false;
             return false;
         }
-        if (this.f27925ns == null || z10 == this.shouldEnableNs) {
+        if (this.f28172ns == null || z10 == this.shouldEnableNs) {
             this.shouldEnableNs = z10;
             return true;
         }

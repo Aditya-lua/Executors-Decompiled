@@ -11,16 +11,19 @@ public interface b extends e<b> {
     Player L();
 
     @NonNull
-    String O2();
+    String N2();
 
     @NonNull
-    Uri W2();
+    Uri V2();
 
     @NonNull
-    String b0();
+    String a0();
 
     @NonNull
-    Uri c3();
+    Uri e3();
+
+    @NonNull
+    String f1();
 
     @NonNull
     @KeepName
@@ -34,13 +37,10 @@ public interface b extends e<b> {
 
     long h2();
 
-    @NonNull
-    String i1();
-
     long k2();
 
     long l2();
 
     @NonNull
-    String x1();
+    String v1();
 }

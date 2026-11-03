@@ -12,7 +12,7 @@ public final class y7 extends gb implements pc {
     static {
         y7 y7Var = new y7();
         zzf = y7Var;
-        gb.u(y7.class, y7Var);
+        gb.t(y7.class, y7Var);
     }
 
     @Override // com.google.android.gms.internal.measurement.gb

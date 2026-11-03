@@ -1,65 +1,48 @@
 package ek;
 
-import gk.p;
-import jv.d;
-import jv.f;
-import jv.x;
-import okhttp3.ResponseBody;
-import org.json.JSONException;
-import org.json.JSONObject;
-import vk.g;
+import android.content.Context;
+import android.os.AsyncTask;
+import java.io.IOException;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class a {
+public class a extends AsyncTask<Void, Void, String> {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public Context f16129a;
+    public InterfaceC0297a b;
 
     /* JADX INFO: renamed from: ek.a$a, reason: collision with other inner class name */
-    public class C0285a implements f<ResponseBody> {
-
-        /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ dk.a f15625a;
-
-        public C0285a(dk.a aVar) {
-            this.f15625a = aVar;
-        }
-
-        @Override // jv.f
-        public void a(d<ResponseBody> dVar, x<ResponseBody> xVar) {
-            a.this.c(gk.x.a(xVar), xVar.b(), this.f15625a);
-        }
-
-        @Override // jv.f
-        public void b(d<ResponseBody> dVar, Throwable th2) {
-            a.this.b(this.f15625a);
-        }
+    public interface InterfaceC0297a {
+        void a(String str);
     }
 
-    public void a(dk.a aVar, String str) {
-        if (aVar != null) {
-            aVar.a(str);
+    public a(Context context, InterfaceC0297a interfaceC0297a) {
+        this.f16129a = context;
+        this.b = interfaceC0297a;
+    }
+
+    @Override // android.os.AsyncTask
+    /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
+    public String doInBackground(Void... voidArr) {
+        q8.a.C0514a c0514aA;
+        String strA;
+        try {
+            c0514aA = q8.a.a(this.f16129a);
+        } catch (j9.e | j9.f | IOException unused) {
+            c0514aA = null;
         }
-    }
-
-    public void b(dk.a aVar) {
-        p.h("rbx.accountsettings", " api failure");
-        a(aVar, null);
-    }
-
-    public void c(String str, int i10, dk.a aVar) {
-        String strA = null;
-        if (i10 == 200) {
-            try {
-                strA = new b(new JSONObject(str)).a();
-            } catch (JSONException e10) {
-                e10.printStackTrace();
-                p.d("JSONException thrown while parsing response to fetch user theme from server. Exception message: " + e10.getMessage());
-            }
+        if (c0514aA != null) {
+            strA = c0514aA.b() ? "00000000-0000-0000-0000-000000000000" : c0514aA.a();
         } else {
-            p.h("rbx.accountsettings", "response code != 200, response code = " + i10);
+            strA = "";
         }
-        a(aVar, strA);
+        q.h("AdvertisingIdAsyncTask", "advertisingId:" + strA);
+        return strA;
     }
 
-    public void d(long j10, dk.a aVar) {
-        g.d().h().a(j10).B(new C0285a(aVar));
+    @Override // android.os.AsyncTask
+    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+    public void onPostExecute(String str) {
+        this.b.a(str);
     }
 }

@@ -21,25 +21,25 @@ import n0.o0;
 public class o {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final o0 f30444a;
+    public final o0 f30991a;
     public final int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final int f30445c;
+    public final int f30992c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Rational f30446d;
+    public final Rational f30993d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final p f30447e;
+    public final p f30994e;
 
     public o(o0 o0Var, Size size) {
-        this.f30444a = o0Var;
+        this.f30991a = o0Var;
         this.b = o0Var.d();
-        this.f30445c = o0Var.i();
+        this.f30992c = o0Var.i();
         Rational rationalH = size != null ? h(size) : i(o0Var);
-        this.f30446d = rationalH;
-        this.f30447e = new p(o0Var, rationalH);
+        this.f30993d = rationalH;
+        this.f30994e = new p(o0Var, rationalH);
     }
 
     public static LinkedHashMap<Rational, List<Size>> a(List<Size> list, a1.a aVar, Rational rational) {
@@ -68,7 +68,7 @@ public class o {
             }
         }
         ArrayList arrayList2 = new ArrayList(map.keySet());
-        Collections.sort(arrayList2, new p0.a.C0489a(rationalN, rational));
+        Collections.sort(arrayList2, new p0.a.C0495a(rationalN, rational));
         LinkedHashMap<Rational, List<Size>> linkedHashMap = new LinkedHashMap<>();
         int size2 = arrayList2.size();
         while (i10 < size2) {
@@ -149,8 +149,8 @@ public class o {
     public static List<Rational> k(List<Size> list) {
         Object obj;
         ArrayList arrayList = new ArrayList();
-        arrayList.add(p0.a.f28051a);
-        arrayList.add(p0.a.f28052c);
+        arrayList.add(p0.a.f28270a);
+        arrayList.add(p0.a.f28271c);
         for (Size size : list) {
             Rational rational = new Rational(size.getWidth(), size.getHeight());
             if (!arrayList.contains(rational)) {
@@ -174,10 +174,10 @@ public class o {
             return null;
         }
         if (i10 == 0) {
-            return z10 ? p0.a.f28051a : p0.a.b;
+            return z10 ? p0.a.f28270a : p0.a.b;
         }
         if (i10 == 1) {
-            return z10 ? p0.a.f28052c : p0.a.f28053d;
+            return z10 ? p0.a.f28271c : p0.a.f28272d;
         }
         r1.c("SupportedOutputSizesCollector", "Undefined target aspect ratio: " + i10);
         return null;
@@ -262,7 +262,7 @@ public class o {
         }
         ArrayList arrayList = new ArrayList();
         arrayList.addAll(list);
-        arrayList.addAll(this.f30444a.j(i10));
+        arrayList.addAll(this.f30991a.j(i10));
         Collections.sort(arrayList, new p0.e(true));
         return arrayList;
     }
@@ -283,7 +283,7 @@ public class o {
     public final List<Size> j(List<Pair<Integer, Size[]>> list, int i10) {
         List<Size> listL = l(list, i10);
         if (listL == null) {
-            listL = this.f30444a.m(i10);
+            listL = this.f30991a.m(i10);
         }
         ArrayList arrayList = new ArrayList(listL);
         Collections.sort(arrayList, new p0.e(true));
@@ -320,7 +320,7 @@ public class o {
         a1.c cVarQ = i2Var.q(null);
         List<Size> listJ = j(i2Var.l(null), i4Var.p());
         if (cVarQ == null) {
-            return this.f30447e.f(listJ, i4Var);
+            return this.f30994e.f(listJ, i4Var);
         }
         Size sizeI = ((i2) i4Var).i(null);
         int iJ = i2Var.J(0);
@@ -329,6 +329,6 @@ public class o {
         }
         List<Size> list = listJ;
         r1.a("SupportedOutputSizesCollector", "useCaseConfig = " + i4Var + ", candidateSizes = " + list);
-        return p(i2Var.m(), list, sizeI, iJ, this.f30446d, this.b, this.f30445c);
+        return p(i2Var.m(), list, sizeI, iJ, this.f30993d, this.b, this.f30992c);
     }
 }

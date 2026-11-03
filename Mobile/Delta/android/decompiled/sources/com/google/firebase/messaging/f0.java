@@ -16,7 +16,7 @@ import java.util.concurrent.ExecutionException;
 public class f0 {
     public static void A(String str, Bundle bundle) {
         try {
-            ef.e.l();
+            ff.e.k();
             if (bundle == null) {
                 bundle = new Bundle();
             }
@@ -64,7 +64,7 @@ public class f0 {
             if (Log.isLoggable("FirebaseMessaging", 3)) {
                 Log.d("FirebaseMessaging", "Logging to scion event=" + str + " scionPayload=" + bundle2);
             }
-            gf.a aVar = (gf.a) ef.e.l().i(gf.a.class);
+            hf.a aVar = (hf.a) ff.e.k().i(hf.a.class);
             if (aVar != null) {
                 aVar.a("fcm", str, bundle2);
             } else {
@@ -86,7 +86,7 @@ public class f0 {
             }
             return;
         }
-        gf.a aVar = (gf.a) ef.e.l().i(gf.a.class);
+        hf.a aVar = (hf.a) ff.e.k().i(hf.a.class);
         if (Log.isLoggable("FirebaseMessaging", 3)) {
             Log.d("FirebaseMessaging", "Received event with track-conversion=true. Setting user property and reengagement event");
         }
@@ -128,8 +128,8 @@ public class f0 {
         ApplicationInfo applicationInfo;
         Bundle bundle;
         try {
-            ef.e.l();
-            Context contextJ = ef.e.l().j();
+            ff.e.k();
+            Context contextJ = ff.e.k().j();
             SharedPreferences sharedPreferences = contextJ.getSharedPreferences("com.google.firebase.messaging", 0);
             if (sharedPreferences.contains("export_to_big_query")) {
                 return sharedPreferences.getBoolean("export_to_big_query", false);
@@ -148,7 +148,7 @@ public class f0 {
         }
     }
 
-    public static eg.a b(eg.a.b bVar, Intent intent) {
+    public static fg.a b(fg.a.b bVar, Intent intent) {
         if (intent == null) {
             return null;
         }
@@ -156,32 +156,32 @@ public class f0 {
         if (extras == null) {
             extras = Bundle.EMPTY;
         }
-        eg.a.C0284a c0284aJ = eg.a.p().n(s(extras)).e(bVar).f(f(extras)).i(o()).l(eg.a.d.ANDROID).h(m(extras)).j(k(extras));
+        fg.a.C0307a c0307aJ = fg.a.p().n(s(extras)).e(bVar).f(f(extras)).i(o()).l(fg.a.d.ANDROID).h(m(extras)).j(k(extras));
         String strH = h(extras);
         if (strH != null) {
-            c0284aJ.g(strH);
+            c0307aJ.g(strH);
         }
         String strR = r(extras);
         if (strR != null) {
-            c0284aJ.m(strR);
+            c0307aJ.m(strR);
         }
         String strC = c(extras);
         if (strC != null) {
-            c0284aJ.c(strC);
+            c0307aJ.c(strC);
         }
         String strI = i(extras);
         if (strI != null) {
-            c0284aJ.b(strI);
+            c0307aJ.b(strI);
         }
         String strE = e(extras);
         if (strE != null) {
-            c0284aJ.d(strE);
+            c0307aJ.d(strE);
         }
         long jQ = q(extras);
         if (jQ > 0) {
-            c0284aJ.k(jQ);
+            c0307aJ.k(jQ);
         }
-        return c0284aJ.a();
+        return c0307aJ.a();
     }
 
     public static String c(Bundle bundle) {
@@ -203,7 +203,7 @@ public class f0 {
             return string;
         }
         try {
-            return (String) sb.m.a(yf.g.q(ef.e.l()).getId());
+            return (String) sb.m.a(zf.g.q(ff.e.k()).getId());
         } catch (InterruptedException | ExecutionException e10) {
             throw new RuntimeException(e10);
         }
@@ -243,8 +243,8 @@ public class f0 {
     }
 
     @NonNull
-    public static eg.a.c m(Bundle bundle) {
-        return (bundle == null || !h0.t(bundle)) ? eg.a.c.DATA_MESSAGE : eg.a.c.DISPLAY_NOTIFICATION;
+    public static fg.a.c m(Bundle bundle) {
+        return (bundle == null || !h0.t(bundle)) ? fg.a.c.DATA_MESSAGE : fg.a.c.DISPLAY_NOTIFICATION;
     }
 
     @NonNull
@@ -254,7 +254,7 @@ public class f0 {
 
     @NonNull
     public static String o() {
-        return ef.e.l().j().getPackageName();
+        return ff.e.k().j().getPackageName();
     }
 
     @NonNull
@@ -277,8 +277,8 @@ public class f0 {
                 Log.w("FirebaseMessaging", "error parsing project number", e10);
             }
         }
-        ef.e eVarL = ef.e.l();
-        String strD = eVarL.n().d();
+        ff.e eVarK = ff.e.k();
+        String strD = eVarK.m().d();
         if (strD != null) {
             try {
                 return Long.parseLong(strD);
@@ -286,7 +286,7 @@ public class f0 {
                 Log.w("FirebaseMessaging", "error parsing sender ID", e11);
             }
         }
-        String strC = eVarL.n().c();
+        String strC = eVarK.m().c();
         if (strC.startsWith("1:")) {
             String[] strArrSplit = strC.split(":");
             if (strArrSplit.length < 2) {
@@ -365,26 +365,26 @@ public class f0 {
             A("_nr", intent.getExtras());
         }
         if (C(intent)) {
-            z(eg.a.b.MESSAGE_DELIVERED, intent, FirebaseMessaging.s());
+            z(fg.a.b.MESSAGE_DELIVERED, intent, FirebaseMessaging.s());
         }
     }
 
-    public static void z(eg.a.b bVar, Intent intent, y7.i iVar) {
+    public static void z(fg.a.b bVar, Intent intent, y7.i iVar) {
         if (iVar == null) {
             Log.e("FirebaseMessaging", "TransportFactory is null. Skip exporting message delivery metrics to Big Query");
             return;
         }
-        eg.a aVarB = b(bVar, intent);
+        fg.a aVarB = b(bVar, intent);
         if (aVarB == null) {
             return;
         }
         try {
-            iVar.a("FCM_CLIENT_EVENT_LOGGING", eg.b.class, y7.c.b("proto"), new y7.g() { // from class: com.google.firebase.messaging.e0
+            iVar.a("FCM_CLIENT_EVENT_LOGGING", fg.b.class, y7.c.b("proto"), new y7.g() { // from class: com.google.firebase.messaging.e0
                 @Override // y7.g
                 public final Object apply(Object obj) {
-                    return ((eg.b) obj).c();
+                    return ((fg.b) obj).c();
                 }
-            }).a(y7.d.f(eg.b.b().b(aVarB).a(), y7.f.b(Integer.valueOf(intent.getIntExtra("google.product_id", 111881503)))));
+            }).a(y7.d.f(fg.b.b().b(aVarB).a(), y7.f.b(Integer.valueOf(intent.getIntExtra("google.product_id", 111881503)))));
         } catch (RuntimeException e10) {
             Log.w("FirebaseMessaging", "Failed to send big query analytics payload.", e10);
         }

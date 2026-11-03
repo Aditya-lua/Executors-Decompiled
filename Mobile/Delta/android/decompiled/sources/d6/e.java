@@ -21,17 +21,17 @@ public abstract class e<T> extends h<T> {
     public static final class a extends BroadcastReceiver {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ e<T> f14446a;
+        public final /* synthetic */ e<T> f14426a;
 
         public a(e<T> eVar) {
-            this.f14446a = eVar;
+            this.f14426a = eVar;
         }
 
         @Override // android.content.BroadcastReceiver
         public void onReceive(Context context, Intent intent) {
             Intrinsics.checkNotNullParameter(context, "context");
             Intrinsics.checkNotNullParameter(intent, "intent");
-            this.f14446a.l(intent);
+            this.f14426a.l(intent);
         }
     }
 
@@ -45,13 +45,13 @@ public abstract class e<T> extends h<T> {
 
     @Override // d6.h
     public void i() {
-        w.e().a(f.f14447a, getClass().getSimpleName() + ": registering receiver");
+        w.e().a(f.f14427a, getClass().getSimpleName() + ": registering receiver");
         getAppContext().registerReceiver(this.broadcastReceiver, k());
     }
 
     @Override // d6.h
     public void j() {
-        w.e().a(f.f14447a, getClass().getSimpleName() + ": unregistering receiver");
+        w.e().a(f.f14427a, getClass().getSimpleName() + ": unregistering receiver");
         getAppContext().unregisterReceiver(this.broadcastReceiver);
     }
 

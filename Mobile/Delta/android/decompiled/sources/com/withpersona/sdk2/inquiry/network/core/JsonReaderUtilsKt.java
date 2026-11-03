@@ -2,7 +2,7 @@ package com.withpersona.sdk2.inquiry.network.core;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import um.m;
+import sm.m;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class JsonReaderUtilsKt {

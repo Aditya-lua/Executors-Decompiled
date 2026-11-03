@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class m {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final r7.c.a f29260a = r7.c.a.a("ch", "size", "w", "style", "fFamily", "data");
+    public static final r7.c.a f29613a = r7.c.a.a("ch", "size", "w", "style", "fFamily", "data");
     public static final r7.c.a b = r7.c.a.a("shapes");
 
     public static l7.d a(r7.c cVar, f7.i iVar) {
@@ -18,7 +18,7 @@ public class m {
         char cCharAt = 0;
         double dH2 = 0.0d;
         while (cVar.f()) {
-            int iR = cVar.r(f29260a);
+            int iR = cVar.r(f29613a);
             if (iR == 0) {
                 cCharAt = cVar.m().charAt(0);
             } else if (iR == 1) {

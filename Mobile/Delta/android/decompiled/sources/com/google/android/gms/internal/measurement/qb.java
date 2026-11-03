@@ -7,17 +7,17 @@ import java.nio.charset.Charset;
 public final class qb {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Charset f6750a;
+    public static final Charset f6824a;
     public static final byte[] b;
 
     static {
         Charset.forName("US-ASCII");
-        f6750a = Charset.forName("UTF-8");
+        f6824a = Charset.forName("UTF-8");
         Charset.forName("ISO-8859-1");
         byte[] bArr = new byte[0];
         b = bArr;
         ByteBuffer.wrap(bArr);
-        int i10 = ja.f6566a;
+        int i10 = ja.f6639a;
         try {
             new ia(bArr, 0, 0, false, null).c(0);
         } catch (sb e10) {

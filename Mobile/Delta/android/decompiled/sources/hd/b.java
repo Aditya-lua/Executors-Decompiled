@@ -1,102 +1,42 @@
 package hd;
 
-import android.view.View;
-import android.view.ViewGroup;
+import android.graphics.RectF;
 import androidx.annotation.NonNull;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import com.google.android.material.sidesheet.SideSheetBehavior;
+import java.util.Arrays;
 
 /* JADX INFO: loaded from: classes2.dex */
-public final class b extends d {
+public final class b implements c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final SideSheetBehavior<? extends View> f19191a;
+    public final c f19279a;
+    public final float b;
 
-    public b(@NonNull SideSheetBehavior<? extends View> sideSheetBehavior) {
-        this.f19191a = sideSheetBehavior;
-    }
-
-    @Override // hd.d
-    public int a(@NonNull ViewGroup.MarginLayoutParams marginLayoutParams) {
-        return marginLayoutParams.rightMargin;
-    }
-
-    @Override // hd.d
-    public float b(int i10) {
-        float fE = e();
-        return (fE - i10) / (fE - d());
-    }
-
-    @Override // hd.d
-    public int c(@NonNull ViewGroup.MarginLayoutParams marginLayoutParams) {
-        return marginLayoutParams.rightMargin;
-    }
-
-    @Override // hd.d
-    public int d() {
-        return Math.max(0, (e() - this.f19191a.d0()) - this.f19191a.k0());
-    }
-
-    @Override // hd.d
-    public int e() {
-        return this.f19191a.n0();
-    }
-
-    @Override // hd.d
-    public int f() {
-        return this.f19191a.n0();
-    }
-
-    @Override // hd.d
-    public int g() {
-        return d();
-    }
-
-    @Override // hd.d
-    public <V extends View> int h(@NonNull V v5) {
-        return v5.getLeft() - this.f19191a.k0();
-    }
-
-    @Override // hd.d
-    public int i(@NonNull CoordinatorLayout coordinatorLayout) {
-        return coordinatorLayout.getRight();
-    }
-
-    @Override // hd.d
-    public int j() {
-        return 0;
-    }
-
-    @Override // hd.d
-    public boolean k(float f10) {
-        return f10 < 0.0f;
-    }
-
-    @Override // hd.d
-    public boolean l(@NonNull View view) {
-        return view.getLeft() > (e() + d()) / 2;
-    }
-
-    @Override // hd.d
-    public boolean m(float f10, float f11) {
-        return e.a(f10, f11) && Math.abs(f10) > ((float) this.f19191a.o0());
-    }
-
-    @Override // hd.d
-    public boolean n(@NonNull View view, float f10) {
-        return Math.abs(((float) view.getRight()) + (f10 * this.f19191a.i0())) > this.f19191a.j0();
-    }
-
-    @Override // hd.d
-    public void o(@NonNull ViewGroup.MarginLayoutParams marginLayoutParams, int i10) {
-        marginLayoutParams.rightMargin = i10;
-    }
-
-    @Override // hd.d
-    public void p(@NonNull ViewGroup.MarginLayoutParams marginLayoutParams, int i10, int i11) {
-        int iN0 = this.f19191a.n0();
-        if (i10 <= iN0) {
-            marginLayoutParams.rightMargin = iN0 - i10;
+    public b(float f10, @NonNull c cVar) {
+        while (cVar instanceof b) {
+            cVar = ((b) cVar).f19279a;
+            f10 += ((b) cVar).b;
         }
+        this.f19279a = cVar;
+        this.b = f10;
+    }
+
+    @Override // hd.c
+    public float a(@NonNull RectF rectF) {
+        return Math.max(0.0f, this.f19279a.a(rectF) + this.b);
+    }
+
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof b)) {
+            return false;
+        }
+        b bVar = (b) obj;
+        return this.f19279a.equals(bVar.f19279a) && this.b == bVar.b;
+    }
+
+    public int hashCode() {
+        return Arrays.hashCode(new Object[]{this.f19279a, Float.valueOf(this.b)});
     }
 }

@@ -1,7 +1,7 @@
 package kotlin.jvm.internal;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class j extends d implements i, hu.g {
+public class j extends d implements i, fu.g {
     private final int arity;
     private final int flags;
 
@@ -10,7 +10,7 @@ public class j extends d implements i, hu.g {
     }
 
     @Override // kotlin.jvm.internal.d
-    public hu.b computeReflected() {
+    public fu.b computeReflected() {
         return d0.a(this);
     }
 
@@ -22,7 +22,7 @@ public class j extends d implements i, hu.g {
             j jVar = (j) obj;
             return getName().equals(jVar.getName()) && getSignature().equals(jVar.getSignature()) && this.flags == jVar.flags && this.arity == jVar.arity && Intrinsics.c(getBoundReceiver(), jVar.getBoundReceiver()) && Intrinsics.c(getOwner(), jVar.getOwner());
         }
-        if (obj instanceof hu.g) {
+        if (obj instanceof fu.g) {
             return obj.equals(compute());
         }
         return false;
@@ -37,33 +37,33 @@ public class j extends d implements i, hu.g {
         return (((getOwner() == null ? 0 : getOwner().hashCode() * 31) + getName().hashCode()) * 31) + getSignature().hashCode();
     }
 
-    @Override // hu.g
+    @Override // fu.g
     public boolean isExternal() {
         return getReflected().isExternal();
     }
 
-    @Override // hu.g
+    @Override // fu.g
     public boolean isInfix() {
         return getReflected().isInfix();
     }
 
-    @Override // hu.g
+    @Override // fu.g
     public boolean isInline() {
         return getReflected().isInline();
     }
 
-    @Override // hu.g
+    @Override // fu.g
     public boolean isOperator() {
         return getReflected().isOperator();
     }
 
-    @Override // kotlin.jvm.internal.d, hu.b
+    @Override // kotlin.jvm.internal.d, fu.b
     public boolean isSuspend() {
         return getReflected().isSuspend();
     }
 
     public String toString() {
-        hu.b bVarCompute = compute();
+        fu.b bVarCompute = compute();
         if (bVarCompute != this) {
             return bVarCompute.toString();
         }
@@ -78,8 +78,8 @@ public class j extends d implements i, hu.g {
     }
 
     @Override // kotlin.jvm.internal.d
-    public hu.g getReflected() {
-        return (hu.g) super.getReflected();
+    public fu.g getReflected() {
+        return (fu.g) super.getReflected();
     }
 
     public j(int i10, Object obj, Class cls, String str, String str2, int i11) {

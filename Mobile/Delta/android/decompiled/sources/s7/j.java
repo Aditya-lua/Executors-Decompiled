@@ -9,7 +9,7 @@ import n7.o;
 public class j {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final PointF f30514a = new PointF();
+    public static final PointF f31061a = new PointF();
 
     public static PointF a(PointF pointF, PointF pointF2) {
         return new PointF(pointF.x + pointF2.x, pointF.y + pointF2.y);
@@ -45,14 +45,14 @@ public class j {
         path.reset();
         PointF pointFB = oVar.b();
         path.moveTo(pointFB.x, pointFB.y);
-        f30514a.set(pointFB.x, pointFB.y);
+        f31061a.set(pointFB.x, pointFB.y);
         int i10 = 0;
         while (i10 < oVar.a().size()) {
             l7.a aVar = oVar.a().get(i10);
             PointF pointFA = aVar.a();
             PointF pointFB2 = aVar.b();
             PointF pointFC = aVar.c();
-            PointF pointF = f30514a;
+            PointF pointF = f31061a;
             if (pointFA.equals(pointF) && pointFB2.equals(pointFC)) {
                 path.lineTo(pointFC.x, pointFC.y);
                 path2 = path;

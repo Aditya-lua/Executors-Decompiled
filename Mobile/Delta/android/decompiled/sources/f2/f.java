@@ -4,6 +4,6 @@ package f2;
 public class f implements Comparable<f> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f16092a;
+    public int f16688a;
     public int b;
 }

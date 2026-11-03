@@ -17,37 +17,37 @@ import java.util.SortedMap;
 public final class l1 extends f1 implements NavigableMap {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final Comparator f15290f;
+    public static final Comparator f15904f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final l1 f15291g;
+    public static final l1 f15905g;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final transient v1 f15292c;
+    public final transient v1 f15906c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final transient e1 f15293d;
+    public final transient e1 f15907d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final transient l1 f15294e;
+    public final transient l1 f15908e;
 
     static {
-        q1 q1Var = q1.f15359a;
-        f15290f = q1Var;
+        q1 q1Var = q1.f15973a;
+        f15904f = q1Var;
         v1 v1VarB = m1.B(q1Var);
         d2 d2Var = e1.b;
-        f15291g = new l1(v1VarB, t1.f15397e, null);
+        f15905g = new l1(v1VarB, t1.f16011e, null);
     }
 
     public l1(v1 v1Var, e1 e1Var, l1 l1Var) {
-        this.f15292c = v1Var;
-        this.f15293d = e1Var;
-        this.f15294e = l1Var;
+        this.f15906c = v1Var;
+        this.f15907d = e1Var;
+        this.f15908e = l1Var;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public static l1 e(Map map) {
-        final Comparator comparator = f15290f;
+        final Comparator comparator = f15904f;
         Comparator comparator2 = map.comparator();
         int i10 = 1;
         boolean zEquals = comparator2 == null ? true : comparator.equals(comparator2);
@@ -128,22 +128,22 @@ public final class l1 extends f1 implements NavigableMap {
     }
 
     public static l1 f(Comparator comparator) {
-        if (q1.f15359a.equals(comparator)) {
-            return f15291g;
+        if (q1.f15973a.equals(comparator)) {
+            return f15905g;
         }
         v1 v1VarB = m1.B(comparator);
         d2 d2Var = e1.b;
-        return new l1(v1VarB, t1.f15397e, null);
+        return new l1(v1VarB, t1.f16011e, null);
     }
 
     @Override // eb.f1
     public final z0 a() {
-        return this.f15293d;
+        return this.f15907d;
     }
 
     @Override // eb.f1
     public final h1 b() {
-        return isEmpty() ? u1.f15404i : new k1(this);
+        return isEmpty() ? u1.f16018i : new k1(this);
     }
 
     @Override // java.util.NavigableMap
@@ -158,24 +158,24 @@ public final class l1 extends f1 implements NavigableMap {
 
     @Override // java.util.SortedMap
     public final Comparator comparator() {
-        return this.f15292c.f15303c;
+        return this.f15906c.f15917c;
     }
 
     @Override // java.util.NavigableMap
     public final /* synthetic */ NavigableSet descendingKeySet() {
-        return this.f15292c.descendingSet();
+        return this.f15906c.descendingSet();
     }
 
     @Override // java.util.NavigableMap
     public final /* bridge */ /* synthetic */ NavigableMap descendingMap() {
-        l1 l1Var = this.f15294e;
+        l1 l1Var = this.f15908e;
         if (l1Var != null) {
             return l1Var;
         }
         if (!isEmpty()) {
-            return new l1((v1) this.f15292c.descendingSet(), this.f15293d.f(), this);
+            return new l1((v1) this.f15906c.descendingSet(), this.f15907d.f(), this);
         }
-        Comparator comparator = this.f15292c.f15303c;
+        Comparator comparator = this.f15906c.f15917c;
         return f((comparator instanceof s1 ? (s1) comparator : new x0(comparator)).a());
     }
 
@@ -194,7 +194,7 @@ public final class l1 extends f1 implements NavigableMap {
 
     @Override // java.util.SortedMap
     public final Object firstKey() {
-        return this.f15292c.first();
+        return this.f15906c.first();
     }
 
     @Override // java.util.NavigableMap
@@ -211,19 +211,19 @@ public final class l1 extends f1 implements NavigableMap {
     /* JADX INFO: renamed from: g, reason: merged with bridge method [inline-methods] */
     public final l1 headMap(Object obj, boolean z10) {
         obj.getClass();
-        return l(0, this.f15292c.D(obj, z10));
+        return l(0, this.f15906c.D(obj, z10));
     }
 
     /* JADX WARN: Code duplicated, block: B:4:0x0005  */
     @Override // eb.f1, java.util.Map
     public final Object get(Object obj) {
         int iBinarySearch;
-        v1 v1Var = this.f15292c;
+        v1 v1Var = this.f15906c;
         if (obj == null) {
             iBinarySearch = -1;
         } else {
             try {
-                iBinarySearch = Collections.binarySearch(v1Var.f15417e, obj, v1Var.f15303c);
+                iBinarySearch = Collections.binarySearch(v1Var.f16031e, obj, v1Var.f15917c);
                 if (iBinarySearch < 0) {
                     iBinarySearch = -1;
                 }
@@ -233,7 +233,7 @@ public final class l1 extends f1 implements NavigableMap {
         if (iBinarySearch == -1) {
             return null;
         }
-        return this.f15293d.get(iBinarySearch);
+        return this.f15907d.get(iBinarySearch);
     }
 
     @Override // java.util.NavigableMap, java.util.SortedMap
@@ -256,7 +256,7 @@ public final class l1 extends f1 implements NavigableMap {
     public final l1 subMap(Object obj, boolean z10, Object obj2, boolean z11) {
         obj.getClass();
         obj2.getClass();
-        if (this.f15292c.f15303c.compare(obj, obj2) <= 0) {
+        if (this.f15906c.f15917c.compare(obj, obj2) <= 0) {
             return headMap(obj2, z11).tailMap(obj, z10);
         }
         throw new IllegalArgumentException(p0.a("expected fromKey <= toKey but %s > %s", obj, obj2));
@@ -266,25 +266,25 @@ public final class l1 extends f1 implements NavigableMap {
     /* JADX INFO: renamed from: j, reason: merged with bridge method [inline-methods] */
     public final l1 tailMap(Object obj, boolean z10) {
         obj.getClass();
-        return l(this.f15292c.E(obj, z10), this.f15293d.size());
+        return l(this.f15906c.E(obj, z10), this.f15907d.size());
     }
 
     @Override // java.util.Map, java.util.SortedMap
     public final /* synthetic */ Set keySet() {
-        return this.f15292c;
+        return this.f15906c;
     }
 
     public final l1 l(int i10, int i11) {
         if (i10 == 0) {
-            if (i11 == this.f15293d.size()) {
+            if (i11 == this.f15907d.size()) {
                 return this;
             }
             i10 = 0;
         }
         if (i10 == i11) {
-            return f(this.f15292c.f15303c);
+            return f(this.f15906c.f15917c);
         }
-        return new l1(this.f15292c.F(i10, i11), this.f15293d.subList(i10, i11), null);
+        return new l1(this.f15906c.F(i10, i11), this.f15907d.subList(i10, i11), null);
     }
 
     @Override // java.util.NavigableMap
@@ -292,12 +292,12 @@ public final class l1 extends f1 implements NavigableMap {
         if (isEmpty()) {
             return null;
         }
-        return (Map.Entry) c().i().get(this.f15293d.size() - 1);
+        return (Map.Entry) c().i().get(this.f15907d.size() - 1);
     }
 
     @Override // java.util.SortedMap
     public final Object lastKey() {
-        return this.f15292c.last();
+        return this.f15906c.last();
     }
 
     @Override // java.util.NavigableMap
@@ -312,7 +312,7 @@ public final class l1 extends f1 implements NavigableMap {
 
     @Override // java.util.NavigableMap
     public final /* synthetic */ NavigableSet navigableKeySet() {
-        return this.f15292c;
+        return this.f15906c;
     }
 
     @Override // java.util.NavigableMap
@@ -329,7 +329,7 @@ public final class l1 extends f1 implements NavigableMap {
 
     @Override // java.util.Map
     public final int size() {
-        return this.f15293d.size();
+        return this.f15907d.size();
     }
 
     @Override // java.util.NavigableMap, java.util.SortedMap
@@ -344,6 +344,6 @@ public final class l1 extends f1 implements NavigableMap {
 
     @Override // java.util.Map, java.util.SortedMap
     public final /* synthetic */ Collection values() {
-        return this.f15293d;
+        return this.f15907d;
     }
 }

@@ -9,7 +9,7 @@ import android.os.Parcelable;
 public final class t {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final ClassLoader f35810a = t.class.getClassLoader();
+    public static final ClassLoader f36667a = t.class.getClassLoader();
 
     public static Parcelable a(Parcel parcel, Parcelable.Creator creator) {
         if (parcel.readInt() == 0) {

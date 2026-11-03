@@ -6,10 +6,10 @@ import java.util.Arrays;
 public final class z3 extends e4 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final long f15431a;
+    public final long f16045a;
 
     public z3(long j10) {
-        this.f15431a = j10;
+        this.f16045a = j10;
     }
 
     @Override // java.lang.Comparable
@@ -18,8 +18,8 @@ public final class z3 extends e4 {
         if (zza() != e4Var.zza()) {
             return zza() - e4Var.zza();
         }
-        long jAbs = Math.abs(this.f15431a);
-        long jAbs2 = Math.abs(((z3) e4Var).f15431a);
+        long jAbs = Math.abs(this.f16045a);
+        long jAbs2 = Math.abs(((z3) e4Var).f16045a);
         if (jAbs < jAbs2) {
             return -1;
         }
@@ -30,23 +30,23 @@ public final class z3 extends e4 {
         if (this == obj) {
             return true;
         }
-        return obj != null && z3.class == obj.getClass() && this.f15431a == ((z3) obj).f15431a;
+        return obj != null && z3.class == obj.getClass() && this.f16045a == ((z3) obj).f16045a;
     }
 
     public final int hashCode() {
-        return Arrays.hashCode(new Object[]{Integer.valueOf(zza()), Long.valueOf(this.f15431a)});
+        return Arrays.hashCode(new Object[]{Integer.valueOf(zza()), Long.valueOf(this.f16045a)});
     }
 
     public final long q() {
-        return this.f15431a;
+        return this.f16045a;
     }
 
     public final String toString() {
-        return Long.toString(this.f15431a);
+        return Long.toString(this.f16045a);
     }
 
     @Override // eb.e4
     public final int zza() {
-        return e4.c(this.f15431a >= 0 ? (byte) 0 : (byte) 32);
+        return e4.c(this.f16045a >= 0 ? (byte) 0 : (byte) 32);
     }
 }

@@ -10,14 +10,14 @@ import java.util.Set;
 public class u0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f16464a = false;
+    public boolean f17060a = false;
     public final Set<b> b = new w1.b();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Map<String, s7.i> f16465c = new HashMap();
+    public final Map<String, s7.i> f17061c = new HashMap();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Comparator<x2.c<String, Float>> f16466d = new a();
+    public final Comparator<x2.c<String, Float>> f17062d = new a();
 
     public class a implements Comparator<x2.c<String, Float>> {
         public a() {
@@ -40,11 +40,11 @@ public class u0 {
     }
 
     public void a(String str, float f10) {
-        if (this.f16464a) {
-            s7.i iVar = this.f16465c.get(str);
+        if (this.f17060a) {
+            s7.i iVar = this.f17061c.get(str);
             if (iVar == null) {
                 iVar = new s7.i();
-                this.f16465c.put(str, iVar);
+                this.f17061c.put(str, iVar);
             }
             iVar.a(f10);
             if (str.equals("__container")) {
@@ -57,6 +57,6 @@ public class u0 {
     }
 
     public void b(boolean z10) {
-        this.f16464a = z10;
+        this.f17060a = z10;
     }
 }

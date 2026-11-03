@@ -11,6 +11,6 @@ public final class v0 {
     public static final void a(@NotNull View view, @NotNull i0 fullyDrawnReporterOwner) {
         Intrinsics.checkNotNullParameter(view, "<this>");
         Intrinsics.checkNotNullParameter(fullyDrawnReporterOwner, "fullyDrawnReporterOwner");
-        view.setTag(s0.f14952a, fullyDrawnReporterOwner);
+        view.setTag(s0.f15566a, fullyDrawnReporterOwner);
     }
 }

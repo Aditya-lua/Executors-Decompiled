@@ -9,7 +9,7 @@ import com.google.mlkit.vision.common.InputImage;
 import com.google.mlkit.vision.interfaces.Detector;
 import java.util.List;
 import k9.h;
-import nd.a;
+import od.a;
 
 /* JADX INFO: loaded from: classes2.dex */
 public interface FaceDetector extends Detector<List<Face>>, h {

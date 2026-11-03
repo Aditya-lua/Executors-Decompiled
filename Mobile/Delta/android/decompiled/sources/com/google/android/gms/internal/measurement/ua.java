@@ -4,13 +4,13 @@ package com.google.android.gms.internal.measurement;
 public final class ua {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final sa f6827a = new ta();
+    public static final sa f6901a = new ta();
 
     static {
-        wc wcVar = wc.f6869c;
+        wc wcVar = wc.f6943c;
     }
 
     public static sa a() {
-        return f6827a;
+        return f6901a;
     }
 }

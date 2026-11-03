@@ -22,7 +22,7 @@ public final class c5 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final c5 f36461a = new c5();
+    public static final c5 f37156a = new c5();
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull
@@ -75,7 +75,7 @@ public final class c5 {
             long value = surfaceConfigsWithStreamUseCase.get(i10).getStreamUseCase().getValue();
             if (surfaceConfigIndexAttachedSurfaceInfoMap.containsKey(Integer.valueOf(i10))) {
                 n0.g gVar = surfaceConfigIndexAttachedSurfaceInfoMap.get(Integer.valueOf(i10));
-                c5 c5Var = f36461a;
+                c5 c5Var = f37156a;
                 Intrinsics.checkNotNull(gVar);
                 n0.j4.b bVar = gVar.b().size() == 1 ? gVar.b().get(0) : n0.j4.b.STREAM_SHARING;
                 Intrinsics.checkNotNull(bVar);
@@ -91,7 +91,7 @@ public final class c5 {
                 n0.i4<?> i4Var = surfaceConfigIndexUseCaseConfigMap.get(Integer.valueOf(i10));
                 Intrinsics.checkNotNull(i4Var);
                 n0.i4<?> i4Var2 = i4Var;
-                c5 c5Var2 = f36461a;
+                c5 c5Var2 = f37156a;
                 n0.j4.b bVarX = i4Var2.X();
                 Intrinsics.checkNotNullExpressionValue(bVarX, "getCaptureType(...)");
                 if (i4Var2.X() == n0.j4.b.STREAM_SHARING) {
@@ -135,7 +135,7 @@ public final class c5 {
             List<n0.j4.b> listB = gVar.b();
             Intrinsics.checkNotNullExpressionValue(listB, "getCaptureTypes(...)");
             n0.j4.b bVar = listB.get(0);
-            c5 c5Var = f36461a;
+            c5 c5Var = f37156a;
             n0.n1 n1VarE = gVar.e();
             Intrinsics.checkNotNull(n1VarE);
             Intrinsics.checkNotNull(bVar);
@@ -144,7 +144,7 @@ public final class c5 {
             }
         }
         for (n0.i4<?> i4Var : newUseCaseConfigs) {
-            c5 c5Var2 = f36461a;
+            c5 c5Var2 = f37156a;
             n0.j4.b bVarX = i4Var.X();
             Intrinsics.checkNotNullExpressionValue(bVarX, "getCaptureType(...)");
             if (c5Var2.j(i4Var, bVarX)) {
@@ -171,7 +171,7 @@ public final class c5 {
         if (useCaseConfig.a(aVar3)) {
             x2VarK0.G(aVar3, useCaseConfig.e(aVar3));
         }
-        n0.n1.a<?> aVar4 = n0.h2.f24670j;
+        n0.n1.a<?> aVar4 = n0.h2.f25491j;
         if (useCaseConfig.a(aVar4)) {
             x2VarK0.G(aVar4, useCaseConfig.e(aVar4));
         }
@@ -211,10 +211,10 @@ public final class c5 {
             for (long j10 : jArr) {
                 hashSet.add(Long.valueOf(j10));
             }
-            if (f36461a.i(attachedSurfaces, arrayList, hashSet)) {
+            if (f37156a.i(attachedSurfaces, arrayList, hashSet)) {
                 for (n0.g gVar : attachedSurfaces) {
                     n0.n1 n1VarE = gVar.e();
-                    c5 c5Var = f36461a;
+                    c5 c5Var = f37156a;
                     Intrinsics.checkNotNull(n1VarE);
                     n0.n1 n1VarF = c5Var.f(n1VarE, (Long) n1VarE.e(y.a.R));
                     if (n1VarF != null) {
@@ -229,7 +229,7 @@ public final class c5 {
                     n0.t3 t3Var = suggestedStreamSpecMap.get(i4Var);
                     Intrinsics.checkNotNull(t3Var);
                     n0.n1 n1VarD = t3Var.d();
-                    c5 c5Var2 = f36461a;
+                    c5 c5Var2 = f37156a;
                     Intrinsics.checkNotNull(n1VarD);
                     n0.n1 n1VarF2 = c5Var2.f(n1VarD, (Long) n1VarD.e(y.a.R));
                     if (n1VarF2 != null) {
@@ -255,7 +255,7 @@ public final class c5 {
                 n0.g gVar = surfaceConfigIndexAttachedSurfaceInfoMap.get(Integer.valueOf(i10));
                 Intrinsics.checkNotNull(gVar);
                 n0.n1 n1VarE = gVar.e();
-                c5 c5Var = f36461a;
+                c5 c5Var = f37156a;
                 Intrinsics.checkNotNull(n1VarE);
                 n0.n1 n1VarF = c5Var.f(n1VarE, Long.valueOf(value));
                 if (n1VarF != null) {
@@ -271,7 +271,7 @@ public final class c5 {
                 n0.t3 t3Var = suggestedStreamSpecMap.get(i4Var2);
                 Intrinsics.checkNotNull(t3Var);
                 n0.n1 n1VarD = t3Var.d();
-                c5 c5Var2 = f36461a;
+                c5 c5Var2 = f37156a;
                 Intrinsics.checkNotNull(n1VarD);
                 n0.n1 n1VarF2 = c5Var2.f(n1VarD, Long.valueOf(value));
                 if (n1VarF2 != null) {
@@ -293,7 +293,7 @@ public final class c5 {
             n0.n1 n1VarG = o3Var.g();
             n0.n1.a<Long> aVar = STREAM_USE_CASE_STREAM_SPEC_OPTION;
             if (n1VarG.a(aVar) && o3Var.p().size() != 1) {
-                kotlin.jvm.internal.g0 g0Var = kotlin.jvm.internal.g0.f22559a;
+                kotlin.jvm.internal.g0 g0Var = kotlin.jvm.internal.g0.f23014a;
                 String str = String.format("SessionConfig has stream use case but also contains %d surfaces, abort populateSurfaceToStreamUseCaseMapping().", Arrays.copyOf(new Object[]{Integer.valueOf(o3Var.p().size())}, 1));
                 Intrinsics.checkNotNullExpressionValue(str, "format(...)");
                 g0.r1.c("StreamUseCaseUtil", str);

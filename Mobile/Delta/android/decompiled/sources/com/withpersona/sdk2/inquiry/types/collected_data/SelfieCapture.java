@@ -30,7 +30,7 @@ public final /* data */ class SelfieCapture implements Parcelable {
 
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f13705d = qt.b.a(a());
+        public static final /* synthetic */ ot.a f13786d = ot.b.a(a());
     }
 
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)

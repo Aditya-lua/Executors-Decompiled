@@ -2,23 +2,23 @@ package com.withpersona.sdk2.inquiry.document.network;
 
 import com.withpersona.sdk2.inquiry.document.DocumentFile;
 import com.withpersona.sdk2.inquiry.network.core.InternalErrorInfo;
+import hv.x;
 import java.util.List;
-import jv.x;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
-import nu.i;
-import nu.j;
+import lu.i;
+import lu.j;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
-import pt.m;
-import ym.o;
+import wm.o;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\t\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u00012\b\u0012\u0004\u0012\u00020\u00020\u0003:\u0002\r\u0019B!\b\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\b\u001a\u00020\u0004¢\u0006\u0004\b\t\u0010\nJ\u001b\u0010\r\u001a\u00020\f2\n\u0010\u000b\u001a\u0006\u0012\u0002\b\u00030\u0001H\u0016¢\u0006\u0004\b\r\u0010\u000eJ\u001b\u0010\u000f\u001a\u00020\f2\n\u0010\u000b\u001a\u0006\u0012\u0002\b\u00030\u0003H\u0016¢\u0006\u0004\b\u000f\u0010\u0010J\u0015\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u00020\u0011H\u0016¢\u0006\u0004\b\u0012\u0010\u0013R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\r\u0010\u0014R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000f\u0010\u0015R\u0017\u0010\b\u001a\u00020\u00048\u0006¢\u0006\f\n\u0004\b\u0016\u0010\u0014\u001a\u0004\b\u0017\u0010\u0018¨\u0006\u001a"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/network/e;", "Lym/o;", "Lcom/withpersona/sdk2/inquiry/document/network/e$b;", "Lvr/h;", "", "sessionToken", "Lbo/c;", "service", "documentId", "<init>", "(Ljava/lang/String;Lbo/c;Ljava/lang/String;)V", "otherWorker", "", "b", "(Lym/o;)Z", "c", "(Lvr/h;)Z", "Lnu/h;", "run", "()Lnu/h;", "Ljava/lang/String;", "Lbo/c;", "d", "f", "()Ljava/lang/String;", "a", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class e implements o<b>, vr.h<b> {
+@Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\t\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u00012\b\u0012\u0004\u0012\u00020\u00020\u0003:\u0002\u0014\u000fB!\b\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\b\u001a\u00020\u0004¢\u0006\u0004\b\t\u0010\nJ\u001b\u0010\r\u001a\u00020\f2\n\u0010\u000b\u001a\u0006\u0012\u0002\b\u00030\u0001H\u0016¢\u0006\u0004\b\r\u0010\u000eJ\u001b\u0010\u000f\u001a\u00020\f2\n\u0010\u000b\u001a\u0006\u0012\u0002\b\u00030\u0003H\u0016¢\u0006\u0004\b\u000f\u0010\u0010J\u0015\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u00020\u0011H\u0016¢\u0006\u0004\b\u0012\u0010\u0013R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0014\u0010\u0015R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\r\u0010\u0016R\u0017\u0010\b\u001a\u00020\u00048\u0006¢\u0006\f\n\u0004\b\u0017\u0010\u0015\u001a\u0004\b\u0018\u0010\u0019¨\u0006\u001a"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/network/e;", "Lwm/o;", "Lcom/withpersona/sdk2/inquiry/document/network/e$b;", "Ltr/h;", "", "sessionToken", "Lzn/c;", "service", "documentId", "<init>", "(Ljava/lang/String;Lzn/c;Ljava/lang/String;)V", "otherWorker", "", "c", "(Lwm/o;)Z", "a", "(Ltr/h;)Z", "Llu/h;", "run", "()Llu/h;", "b", "Ljava/lang/String;", "Lzn/c;", "d", "f", "()Ljava/lang/String;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class e implements o<b>, tr.h<b> {
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull
@@ -26,20 +26,20 @@ public final class e implements o<b>, vr.h<b> {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final bo.c service;
+    public final zn.c service;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
     @NotNull
     public final String documentId;
 
-    @Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u00002\u00020\u0001B\u0011\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u001f\u0010\n\u001a\u00020\t2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u0006H\u0000¢\u0006\u0004\b\n\u0010\u000bR\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\n\u0010\f¨\u0006\r"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/network/e$a;", "", "Lbo/c;", "service", "<init>", "(Lbo/c;)V", "", "sessionToken", "documentId", "Lcom/withpersona/sdk2/inquiry/document/network/e;", "a", "(Ljava/lang/String;Ljava/lang/String;)Lcom/withpersona/sdk2/inquiry/document/network/e;", "Lbo/c;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u00002\u00020\u0001B\u0011\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u001f\u0010\n\u001a\u00020\t2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u0006H\u0000¢\u0006\u0004\b\n\u0010\u000bR\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\n\u0010\f¨\u0006\r"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/network/e$a;", "", "Lzn/c;", "service", "<init>", "(Lzn/c;)V", "", "sessionToken", "documentId", "Lcom/withpersona/sdk2/inquiry/document/network/e;", "a", "(Ljava/lang/String;Ljava/lang/String;)Lcom/withpersona/sdk2/inquiry/document/network/e;", "Lzn/c;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         @NotNull
-        public final bo.c service;
+        public final zn.c service;
 
-        public a(@NotNull bo.c service) {
+        public a(@NotNull zn.c service) {
             Intrinsics.checkNotNullParameter(service, "service");
             this.service = service;
         }
@@ -78,7 +78,7 @@ public final class e implements o<b>, vr.h<b> {
 
         /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.document.network.e$b$b, reason: collision with other inner class name */
         @Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0007\u0018\u00002\u00020\u0001B\u0015\u0012\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00030\u0002¢\u0006\u0004\b\u0005\u0010\u0006R\u001d\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00030\u00028\u0006¢\u0006\f\n\u0004\b\u0007\u0010\b\u001a\u0004\b\u0007\u0010\t¨\u0006\n"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/network/e$b$b;", "Lcom/withpersona/sdk2/inquiry/document/network/e$b;", "", "Lcom/withpersona/sdk2/inquiry/document/DocumentFile;", "documents", "<init>", "(Ljava/util/List;)V", "a", "Ljava/util/List;", "()Ljava/util/List;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-        public static final class C0188b extends b {
+        public static final class C0191b extends b {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
             @NotNull
@@ -86,7 +86,7 @@ public final class e implements o<b>, vr.h<b> {
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             /* JADX WARN: Multi-variable type inference failed */
-            public C0188b(@NotNull List<? extends DocumentFile> documents) {
+            public C0191b(@NotNull List<? extends DocumentFile> documents) {
                 super(null);
                 Intrinsics.checkNotNullParameter(documents, "documents");
                 this.documents = documents;
@@ -106,87 +106,87 @@ public final class e implements o<b>, vr.h<b> {
         }
     }
 
-    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u0002*\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Lnu/i;", "Lcom/withpersona/sdk2/inquiry/document/network/e$b;", "", "<anonymous>", "(Lnu/i;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.document.network.DocumentLoadWorker$run$1", f = "DocumentLoadWorker.kt", l = {32, 49, 51, 62}, m = "invokeSuspend")
-    public static final class c extends m implements Function2<i<? super b>, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.document.network.DocumentLoadWorker$run$1", f = "DocumentLoadWorker.kt", l = {32, 49, 51, 62}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u0002*\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Llu/i;", "Lcom/withpersona/sdk2/inquiry/document/network/e$b;", "", "<anonymous>", "(Llu/i;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class c extends m implements Function2<i<? super b>, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f10337t;
+        public Object f10418t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f10338u;
+        public Object f10419u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public Object f10339v;
+        public Object f10420v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public int f10340w;
+        public int f10421w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public int f10341x;
+        public int f10422x;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public int f10342y;
+        public int f10423y;
 
         /* JADX INFO: renamed from: z, reason: collision with root package name */
-        public /* synthetic */ Object f10343z;
+        public /* synthetic */ Object f10424z;
 
-        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Ljv/x;", "Lcom/withpersona/sdk2/inquiry/document/network/CreateDocumentResponse;", "<anonymous>", "()Ljv/x;"}, k = 3, mv = {2, 2, 0})
-        @pt.f(c = "com.withpersona.sdk2.inquiry.document.network.DocumentLoadWorker$run$1$1", f = "DocumentLoadWorker.kt", l = {33}, m = "invokeSuspend")
-        public static final class a extends m implements Function1<nt.b<? super x<CreateDocumentResponse>>, Object> {
+        @nt.f(c = "com.withpersona.sdk2.inquiry.document.network.DocumentLoadWorker$run$1$1", f = "DocumentLoadWorker.kt", l = {33}, m = "invokeSuspend")
+        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lhv/x;", "Lcom/withpersona/sdk2/inquiry/document/network/CreateDocumentResponse;", "<anonymous>", "()Lhv/x;"}, k = 3, mv = {2, 2, 0})
+        public static final class a extends m implements Function1<lt.b<? super x<CreateDocumentResponse>>, Object> {
 
             /* JADX INFO: renamed from: t, reason: collision with root package name */
-            public int f10344t;
+            public int f10425t;
 
             /* JADX INFO: renamed from: u, reason: collision with root package name */
-            public final /* synthetic */ e f10345u;
+            public final /* synthetic */ e f10426u;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public a(e eVar, nt.b<? super a> bVar) {
+            public a(e eVar, lt.b<? super a> bVar) {
                 super(1, bVar);
-                this.f10345u = eVar;
+                this.f10426u = eVar;
             }
 
-            @Override // pt.a
-            public final nt.b<Unit> create(nt.b<?> bVar) {
-                return new a(this.f10345u, bVar);
+            @Override // nt.a
+            public final lt.b<Unit> create(lt.b<?> bVar) {
+                return new a(this.f10426u, bVar);
             }
 
-            @Override // pt.a
+            @Override // nt.a
             public final Object invokeSuspend(Object obj) {
-                Object objE = ot.c.e();
-                int i10 = this.f10344t;
+                Object objE = mt.c.e();
+                int i10 = this.f10425t;
                 if (i10 != 0) {
                     if (i10 != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                     }
-                    jt.o.b(obj);
+                    gt.o.b(obj);
                     return obj;
                 }
-                jt.o.b(obj);
-                bo.c cVar = this.f10345u.service;
-                String str = this.f10345u.sessionToken;
-                String documentId = this.f10345u.getDocumentId();
-                this.f10344t = 1;
-                Object objB = cVar.b(str, documentId, this);
-                return objB == objE ? objE : objB;
+                gt.o.b(obj);
+                zn.c cVar = this.f10426u.service;
+                String str = this.f10426u.sessionToken;
+                String documentId = this.f10426u.getDocumentId();
+                this.f10425t = 1;
+                Object objC = cVar.c(str, documentId, this);
+                return objC == objE ? objE : objC;
             }
 
             @Override // kotlin.jvm.functions.Function1
-            /* JADX INFO: renamed from: q, reason: merged with bridge method [inline-methods] */
-            public final Object invoke(nt.b<? super x<CreateDocumentResponse>> bVar) {
-                return ((a) create(bVar)).invokeSuspend(Unit.f22483a);
+            /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
+            public final Object invoke(lt.b<? super x<CreateDocumentResponse>> bVar) {
+                return ((a) create(bVar)).invokeSuspend(Unit.f22938a);
             }
         }
 
-        public c(nt.b<? super c> bVar) {
+        public c(lt.b<? super c> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             c cVar = e.this.new c(bVar);
-            cVar.f10343z = obj;
+            cVar.f10424z = obj;
             return cVar;
         }
 
@@ -195,7 +195,7 @@ public final class e implements o<b>, vr.h<b> {
         
             if (r1.emit(r6, r17) == r2) goto L47;
          */
-        @Override // pt.a
+        @Override // nt.a
         /*
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct add '--show-bad-code' argument
@@ -209,23 +209,18 @@ public final class e implements o<b>, vr.h<b> {
         }
 
         @Override // kotlin.jvm.functions.Function2
-        /* JADX INFO: renamed from: q, reason: merged with bridge method [inline-methods] */
-        public final Object invoke(i<? super b> iVar, nt.b<? super Unit> bVar) {
-            return ((c) create(iVar, bVar)).invokeSuspend(Unit.f22483a);
+        /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
+        public final Object invoke(i<? super b> iVar, lt.b<? super Unit> bVar) {
+            return ((c) create(iVar, bVar)).invokeSuspend(Unit.f22938a);
         }
     }
 
-    public /* synthetic */ e(String str, bo.c cVar, String str2, DefaultConstructorMarker defaultConstructorMarker) {
+    public /* synthetic */ e(String str, zn.c cVar, String str2, DefaultConstructorMarker defaultConstructorMarker) {
         this(str, cVar, str2);
     }
 
-    @Override // vr.h
-    public boolean a(@NotNull vr.h<?> hVar) {
-        return super.a(hVar);
-    }
-
-    @Override // ym.o
-    public boolean b(@NotNull o<?> otherWorker) {
+    @Override // tr.h
+    public boolean a(@NotNull tr.h<?> otherWorker) {
         Intrinsics.checkNotNullParameter(otherWorker, "otherWorker");
         if (!(otherWorker instanceof e)) {
             return false;
@@ -234,8 +229,13 @@ public final class e implements o<b>, vr.h<b> {
         return Intrinsics.c(this.sessionToken, eVar.sessionToken) && Intrinsics.c(this.documentId, eVar.documentId);
     }
 
-    @Override // vr.h
-    public boolean c(@NotNull vr.h<?> otherWorker) {
+    @Override // tr.h
+    public boolean b(@NotNull tr.h<?> hVar) {
+        return super.b(hVar);
+    }
+
+    @Override // wm.o
+    public boolean c(@NotNull o<?> otherWorker) {
         Intrinsics.checkNotNullParameter(otherWorker, "otherWorker");
         if (!(otherWorker instanceof e)) {
             return false;
@@ -250,13 +250,13 @@ public final class e implements o<b>, vr.h<b> {
         return this.documentId;
     }
 
-    @Override // ym.o, vr.h
+    @Override // wm.o, tr.h
     @NotNull
-    public nu.h<b> run() {
+    public lu.h<b> run() {
         return j.w(new c(null));
     }
 
-    public e(String str, bo.c cVar, String str2) {
+    public e(String str, zn.c cVar, String str2) {
         this.sessionToken = str;
         this.service = cVar;
         this.documentId = str2;

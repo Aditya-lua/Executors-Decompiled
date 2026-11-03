@@ -16,13 +16,13 @@ public final class g2 implements i4<g0.f1>, i2, s0.i {
     public static final n1.a<Integer> Z;
 
     /* JADX INFO: renamed from: a0, reason: collision with root package name */
-    public static final n1.a<g0.f1.j> f24651a0;
+    public static final n1.a<g0.f1.j> f25472a0;
 
     /* JADX INFO: renamed from: b0, reason: collision with root package name */
-    public static final n1.a<a1.c> f24652b0;
+    public static final n1.a<a1.c> f25473b0;
 
     /* JADX INFO: renamed from: c0, reason: collision with root package name */
-    public static final n1.a<Boolean> f24653c0;
+    public static final n1.a<Boolean> f25474c0;
     public final c3 P;
 
     static {
@@ -37,9 +37,9 @@ public final class g2 implements i4<g0.f1>, i2, s0.i {
         X = n1.a.a("camerax.core.imageCapture.useSoftwareJpegEncoder", Boolean.TYPE);
         Y = n1.a.a("camerax.core.imageCapture.flashType", cls);
         Z = n1.a.a("camerax.core.imageCapture.jpegCompressionQuality", cls);
-        f24651a0 = n1.a.a("camerax.core.imageCapture.screenFlash", g0.f1.j.class);
-        f24652b0 = n1.a.a("camerax.core.useCase.postviewResolutionSelector", a1.c.class);
-        f24653c0 = n1.a.a("camerax.core.useCase.isPostviewEnabled", Boolean.class);
+        f25472a0 = n1.a.a("camerax.core.imageCapture.screenFlash", g0.f1.j.class);
+        f25473b0 = n1.a.a("camerax.core.useCase.postviewResolutionSelector", a1.c.class);
+        f25474c0 = n1.a.a("camerax.core.useCase.isPostviewEnabled", Boolean.class);
     }
 
     public g2(c3 c3Var) {
@@ -80,12 +80,12 @@ public final class g2 implements i4<g0.f1>, i2, s0.i {
     }
 
     public g0.f1.j o0() {
-        return (g0.f1.j) h(f24651a0, null);
+        return (g0.f1.j) h(f25472a0, null);
     }
 
     @Override // n0.h2
     public int p() {
-        return ((Integer) e(h2.f24670j)).intValue();
+        return ((Integer) e(h2.f25491j)).intValue();
     }
 
     public boolean p0() {

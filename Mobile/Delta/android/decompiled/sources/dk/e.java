@@ -1,38 +1,81 @@
 package dk;
 
-import androidx.p000lifecycle.e0;
-import androidx.p000lifecycle.s;
+import gt.o;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function2;
+import lu.c0;
+import lu.j;
+import lu.r0;
+import nt.f;
+import nt.m;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class e {
+@Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0010\u0010\u0005\u001a\u00020\u0004H\u0086@¢\u0006\u0004\b\u0005\u0010\u0006J\u0015\u0010\t\u001a\u00020\b2\u0006\u0010\u0007\u001a\u00020\u0004¢\u0006\u0004\b\t\u0010\nJ\r\u0010\f\u001a\u00020\u000b¢\u0006\u0004\b\f\u0010\rR\u001a\u0010\u0010\u001a\b\u0012\u0004\u0012\u00020\u00040\u000e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\f\u0010\u000f¨\u0006\u0011"}, d2 = {"Ldk/e;", "", "<init>", "()V", "", "a", "(Llt/b;)Ljava/lang/Object;", "userId", "", "c", "(J)V", "", "b", "()Z", "Llu/c0;", "Llu/c0;", "userIdStateFlow", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public b f14742a;
+    @NotNull
+    public static final e f14994a = new e();
 
-    public class a implements e0<ol.a> {
-        public a() {
+    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
+    @NotNull
+    public static final c0<Long> userIdStateFlow = r0.a(-1L);
+
+    @f(c = "com.roblox.client.user.UserInfoStore$awaitSignedInUserId$2", f = "UserInfoStore.kt", l = {}, m = "invokeSuspend", v = 1)
+    @Metadata(d1 = {"\u0000\f\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\t\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\n"}, d2 = {"<anonymous>", "", "it", ""}, k = 3, mv = {2, 2, 0}, xi = 48)
+    public static final class a extends m implements Function2<Long, lt.b<? super Boolean>, Object> {
+
+        /* JADX INFO: renamed from: t, reason: collision with root package name */
+        public int f14995t;
+
+        /* JADX INFO: renamed from: u, reason: collision with root package name */
+        public /* synthetic */ long f14996u;
+
+        public a(lt.b<? super a> bVar) {
+            super(2, bVar);
         }
 
-        @Override // androidx.p000lifecycle.e0
-        /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-        public void a(ol.a aVar) {
-            b bVar = e.this.f14742a;
-            if (aVar == null) {
-                aVar = fk.c.f16787k;
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            a aVar = new a(bVar);
+            aVar.f14996u = ((Number) obj).longValue();
+            return aVar;
+        }
+
+        @Override // kotlin.jvm.functions.Function2
+        public /* bridge */ /* synthetic */ Object invoke(Long l10, lt.b<? super Boolean> bVar) {
+            return m(l10.longValue(), bVar);
+        }
+
+        @Override // nt.a
+        public final Object invokeSuspend(Object obj) {
+            long j10 = this.f14996u;
+            mt.c.e();
+            if (this.f14995t != 0) {
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            bVar.u(aVar);
+            o.b(obj);
+            return nt.b.a(j10 != -1);
+        }
+
+        public final Object m(long j10, lt.b<? super Boolean> bVar) {
+            return ((a) create(Long.valueOf(j10), bVar)).invokeSuspend(Unit.f22938a);
         }
     }
 
-    public interface b {
-        void u(ol.a aVar);
+    @Nullable
+    public final Object a(@NotNull lt.b<? super Long> bVar) {
+        return j.t(userIdStateFlow, new a(null), bVar);
     }
 
-    public e(b bVar) {
-        this.f14742a = bVar;
+    public final boolean b() {
+        return userIdStateFlow.getValue().longValue() != -1;
     }
 
-    public void b(s sVar) {
-        fk.c.c().h().i(sVar, new a());
+    public final void c(long userId) {
+        userIdStateFlow.setValue(Long.valueOf(userId));
     }
 }

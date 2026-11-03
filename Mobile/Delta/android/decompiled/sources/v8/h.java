@@ -10,18 +10,18 @@ import n9.m;
 public abstract class h {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static WeakReference f32877a;
+    public static WeakReference f33445a;
 
     @NonNull
     public static synchronized h b(@NonNull Context context) {
         m.l(context);
-        WeakReference weakReference = f32877a;
+        WeakReference weakReference = f33445a;
         h hVar = weakReference == null ? null : (h) weakReference.get();
         if (hVar != null) {
             return hVar;
         }
         va.c cVar = new va.c(context.getApplicationContext());
-        f32877a = new WeakReference(cVar);
+        f33445a = new WeakReference(cVar);
         return cVar;
     }
 

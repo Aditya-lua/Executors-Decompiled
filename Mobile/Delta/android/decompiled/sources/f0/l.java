@@ -15,7 +15,7 @@ public class l implements l3 {
     public static final class a implements l0<l> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final x2 f15799a = x2.k0();
+        public final x2 f16395a = x2.k0();
 
         public static /* synthetic */ boolean b(a aVar, n1 n1Var, n1.a aVar2) {
             aVar.a().D(aVar2, n1Var.g(aVar2), n1Var.e(aVar2));
@@ -27,7 +27,7 @@ public class l implements l3 {
             n1Var.d("camera2.captureRequest.option.", new n1.b() { // from class: f0.k
                 @Override // n0.n1.b
                 public final boolean a(n1.a aVar2) {
-                    return l.a.b(this.f15798a, n1Var, aVar2);
+                    return l.a.b(this.f16394a, n1Var, aVar2);
                 }
             });
             return aVar;
@@ -35,16 +35,16 @@ public class l implements l3 {
 
         @Override // g0.l0
         public w2 a() {
-            return this.f15799a;
+            return this.f16395a;
         }
 
         public l c() {
-            return new l(c3.j0(this.f15799a));
+            return new l(c3.j0(this.f16395a));
         }
 
         /* JADX WARN: Multi-variable type inference failed */
         public <ValueT> a f(CaptureRequest.Key<ValueT> key, ValueT valuet) {
-            this.f15799a.G(y.a.h0(key), valuet);
+            this.f16395a.G(y.a.h0(key), valuet);
             return this;
         }
     }

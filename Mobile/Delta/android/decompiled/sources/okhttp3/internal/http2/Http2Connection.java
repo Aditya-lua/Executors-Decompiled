@@ -29,7 +29,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000È\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\n\n\u0002\u0010\t\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u001f\n\u0002\u0018\u0002\n\u0002\b\u0012\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010%\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010#\n\u0002\b\u0007\u0018\u0000 Á\u00012\u00020\u00012\u00020\u0002:\bÂ\u0001Ã\u0001Ä\u0001Á\u0001B\u0011\b\u0000\u0012\u0006\u0010\u0004\u001a\u00020\u0003¢\u0006\u0004\b\u0005\u0010\u0006J-\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\b\u001a\u00020\u00072\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t2\u0006\u0010\r\u001a\u00020\fH\u0002¢\u0006\u0004\b\u000f\u0010\u0010J\u0019\u0010\u0014\u001a\u00020\u00132\b\u0010\u0012\u001a\u0004\u0018\u00010\u0011H\u0002¢\u0006\u0004\b\u0014\u0010\u0015J\r\u0010\u0016\u001a\u00020\u0007¢\u0006\u0004\b\u0016\u0010\u0017J\u0017\u0010\u0019\u001a\u0004\u0018\u00010\u000e2\u0006\u0010\u0018\u001a\u00020\u0007¢\u0006\u0004\b\u0019\u0010\u001aJ\u0019\u0010\u001d\u001a\u0004\u0018\u00010\u000e2\u0006\u0010\u001b\u001a\u00020\u0007H\u0000¢\u0006\u0004\b\u001c\u0010\u001aJ\u0017\u0010\"\u001a\u00020\u00132\u0006\u0010\u001f\u001a\u00020\u001eH\u0000¢\u0006\u0004\b \u0010!J+\u0010#\u001a\u00020\u000e2\u0006\u0010\b\u001a\u00020\u00072\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t2\u0006\u0010\r\u001a\u00020\f¢\u0006\u0004\b#\u0010\u0010J#\u0010\u000f\u001a\u00020\u000e2\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t2\u0006\u0010\r\u001a\u00020\f¢\u0006\u0004\b\u000f\u0010$J-\u0010)\u001a\u00020\u00132\u0006\u0010\u001b\u001a\u00020\u00072\u0006\u0010%\u001a\u00020\f2\f\u0010&\u001a\b\u0012\u0004\u0012\u00020\n0\tH\u0000¢\u0006\u0004\b'\u0010(J/\u0010-\u001a\u00020\u00132\u0006\u0010\u001b\u001a\u00020\u00072\u0006\u0010%\u001a\u00020\f2\b\u0010+\u001a\u0004\u0018\u00010*2\u0006\u0010,\u001a\u00020\u001e¢\u0006\u0004\b-\u0010.J\u001f\u00103\u001a\u00020\u00132\u0006\u0010\u001b\u001a\u00020\u00072\u0006\u00100\u001a\u00020/H\u0000¢\u0006\u0004\b1\u00102J\u001f\u00106\u001a\u00020\u00132\u0006\u0010\u001b\u001a\u00020\u00072\u0006\u00104\u001a\u00020/H\u0000¢\u0006\u0004\b5\u00102J\u001f\u0010:\u001a\u00020\u00132\u0006\u0010\u001b\u001a\u00020\u00072\u0006\u00107\u001a\u00020\u001eH\u0000¢\u0006\u0004\b8\u00109J%\u0010>\u001a\u00020\u00132\u0006\u0010;\u001a\u00020\f2\u0006\u0010<\u001a\u00020\u00072\u0006\u0010=\u001a\u00020\u0007¢\u0006\u0004\b>\u0010?J\r\u0010@\u001a\u00020\u0013¢\u0006\u0004\b@\u0010AJ\r\u0010>\u001a\u00020\u0013¢\u0006\u0004\b>\u0010AJ\r\u0010B\u001a\u00020\u0013¢\u0006\u0004\bB\u0010AJ\r\u0010C\u001a\u00020\u0013¢\u0006\u0004\bC\u0010AJ\u0015\u0010D\u001a\u00020\u00132\u0006\u00104\u001a\u00020/¢\u0006\u0004\bD\u0010EJ\u000f\u0010F\u001a\u00020\u0013H\u0016¢\u0006\u0004\bF\u0010AJ)\u0010F\u001a\u00020\u00132\u0006\u0010G\u001a\u00020/2\u0006\u0010H\u001a\u00020/2\b\u0010I\u001a\u0004\u0018\u00010\u0011H\u0000¢\u0006\u0004\bJ\u0010KJ\u0019\u0010M\u001a\u00020\u00132\b\b\u0002\u0010L\u001a\u00020\fH\u0007¢\u0006\u0004\bM\u0010NJ\u0015\u0010Q\u001a\u00020\u00132\u0006\u0010P\u001a\u00020O¢\u0006\u0004\bQ\u0010RJ\u0015\u0010T\u001a\u00020\f2\u0006\u0010S\u001a\u00020\u001e¢\u0006\u0004\bT\u0010UJ\u000f\u0010W\u001a\u00020\u0013H\u0000¢\u0006\u0004\bV\u0010AJ\u0017\u0010Z\u001a\u00020\f2\u0006\u0010\u001b\u001a\u00020\u0007H\u0000¢\u0006\u0004\bX\u0010YJ%\u0010]\u001a\u00020\u00132\u0006\u0010\u001b\u001a\u00020\u00072\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\tH\u0000¢\u0006\u0004\b[\u0010\\J-\u0010a\u001a\u00020\u00132\u0006\u0010\u001b\u001a\u00020\u00072\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t2\u0006\u0010^\u001a\u00020\fH\u0000¢\u0006\u0004\b_\u0010`J/\u0010f\u001a\u00020\u00132\u0006\u0010\u001b\u001a\u00020\u00072\u0006\u0010c\u001a\u00020b2\u0006\u0010,\u001a\u00020\u00072\u0006\u0010^\u001a\u00020\fH\u0000¢\u0006\u0004\bd\u0010eJ\u001f\u0010h\u001a\u00020\u00132\u0006\u0010\u001b\u001a\u00020\u00072\u0006\u00100\u001a\u00020/H\u0000¢\u0006\u0004\bg\u00102R\u001a\u0010i\u001a\u00020\f8\u0000X\u0080\u0004¢\u0006\f\n\u0004\bi\u0010j\u001a\u0004\bk\u0010lR\u001a\u0010n\u001a\u00020m8\u0000X\u0080\u0004¢\u0006\f\n\u0004\bn\u0010o\u001a\u0004\bp\u0010qR&\u0010s\u001a\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u000e0r8\u0000X\u0080\u0004¢\u0006\f\n\u0004\bs\u0010t\u001a\u0004\bu\u0010vR\u001a\u0010x\u001a\u00020w8\u0000X\u0080\u0004¢\u0006\f\n\u0004\bx\u0010y\u001a\u0004\bz\u0010{R#\u0010|\u001a\u00020\u00078\u0000@\u0000X\u0080\u000e¢\u0006\u0013\n\u0004\b|\u0010}\u001a\u0004\b~\u0010\u0017\"\u0005\b\u007f\u0010\u0080\u0001R'\u0010\u0081\u0001\u001a\u00020\u00078\u0000@\u0000X\u0080\u000e¢\u0006\u0016\n\u0005\b\u0081\u0001\u0010}\u001a\u0005\b\u0082\u0001\u0010\u0017\"\u0006\b\u0083\u0001\u0010\u0080\u0001R\u0018\u0010\u0084\u0001\u001a\u00020\f8\u0002@\u0002X\u0082\u000e¢\u0006\u0007\n\u0005\b\u0084\u0001\u0010jR\u0018\u0010\u0086\u0001\u001a\u00030\u0085\u00018\u0002X\u0082\u0004¢\u0006\b\n\u0006\b\u0086\u0001\u0010\u0087\u0001R\u0018\u0010\u0089\u0001\u001a\u00030\u0088\u00018\u0002X\u0082\u0004¢\u0006\b\n\u0006\b\u0089\u0001\u0010\u008a\u0001R\u0018\u0010\u008b\u0001\u001a\u00030\u0088\u00018\u0002X\u0082\u0004¢\u0006\b\n\u0006\b\u008b\u0001\u0010\u008a\u0001R\u0018\u0010\u008c\u0001\u001a\u00030\u0088\u00018\u0002X\u0082\u0004¢\u0006\b\n\u0006\b\u008c\u0001\u0010\u008a\u0001R\u0018\u0010\u008e\u0001\u001a\u00030\u008d\u00018\u0002X\u0082\u0004¢\u0006\b\n\u0006\b\u008e\u0001\u0010\u008f\u0001R\u0019\u0010\u0090\u0001\u001a\u00020\u001e8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0090\u0001\u0010\u0091\u0001R\u0019\u0010\u0092\u0001\u001a\u00020\u001e8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0092\u0001\u0010\u0091\u0001R\u0019\u0010\u0093\u0001\u001a\u00020\u001e8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0093\u0001\u0010\u0091\u0001R\u0019\u0010\u0094\u0001\u001a\u00020\u001e8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0094\u0001\u0010\u0091\u0001R\u0019\u0010\u0095\u0001\u001a\u00020\u001e8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0095\u0001\u0010\u0091\u0001R\u0019\u0010\u0096\u0001\u001a\u00020\u001e8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0096\u0001\u0010\u0091\u0001R\u0019\u0010\u0097\u0001\u001a\u00020\u001e8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0097\u0001\u0010\u0091\u0001R \u0010\u0099\u0001\u001a\u00030\u0098\u00018\u0000X\u0080\u0004¢\u0006\u0010\n\u0006\b\u0099\u0001\u0010\u009a\u0001\u001a\u0006\b\u009b\u0001\u0010\u009c\u0001R\u001c\u0010\u009d\u0001\u001a\u00020O8\u0006¢\u0006\u0010\n\u0006\b\u009d\u0001\u0010\u009e\u0001\u001a\u0006\b\u009f\u0001\u0010 \u0001R(\u0010¡\u0001\u001a\u00020O8\u0006@\u0006X\u0086\u000e¢\u0006\u0017\n\u0006\b¡\u0001\u0010\u009e\u0001\u001a\u0006\b¢\u0001\u0010 \u0001\"\u0005\b£\u0001\u0010RR\u001d\u0010¥\u0001\u001a\u00030¤\u00018\u0006¢\u0006\u0010\n\u0006\b¥\u0001\u0010¦\u0001\u001a\u0006\b§\u0001\u0010¨\u0001R*\u0010ª\u0001\u001a\u00020\u001e2\u0007\u0010©\u0001\u001a\u00020\u001e8\u0006@BX\u0086\u000e¢\u0006\u0010\n\u0006\bª\u0001\u0010\u0091\u0001\u001a\u0006\b«\u0001\u0010¬\u0001R*\u0010\u00ad\u0001\u001a\u00020\u001e2\u0007\u0010©\u0001\u001a\u00020\u001e8\u0006@BX\u0086\u000e¢\u0006\u0010\n\u0006\b\u00ad\u0001\u0010\u0091\u0001\u001a\u0006\b®\u0001\u0010¬\u0001R \u0010°\u0001\u001a\u00030¯\u00018\u0000X\u0080\u0004¢\u0006\u0010\n\u0006\b°\u0001\u0010±\u0001\u001a\u0006\b²\u0001\u0010³\u0001R\u001d\u0010µ\u0001\u001a\u00030´\u00018\u0006¢\u0006\u0010\n\u0006\bµ\u0001\u0010¶\u0001\u001a\u0006\b·\u0001\u0010¸\u0001R!\u0010º\u0001\u001a\u00070¹\u0001R\u00020\u00008\u0006¢\u0006\u0010\n\u0006\bº\u0001\u0010»\u0001\u001a\u0006\b¼\u0001\u0010½\u0001R\u001e\u0010¿\u0001\u001a\t\u0012\u0004\u0012\u00020\u00070¾\u00018\u0002X\u0082\u0004¢\u0006\b\n\u0006\b¿\u0001\u0010À\u0001¨\u0006Å\u0001"}, d2 = {"Lokhttp3/internal/http2/Http2Connection;", "Ljava/io/Closeable;", "Lokhttp3/internal/concurrent/Lockable;", "Lokhttp3/internal/http2/Http2Connection$Builder;", "builder", "<init>", "(Lokhttp3/internal/http2/Http2Connection$Builder;)V", "", "associatedStreamId", "", "Lokhttp3/internal/http2/Header;", "requestHeaders", "", "out", "Lokhttp3/internal/http2/Http2Stream;", "newStream", "(ILjava/util/List;Z)Lokhttp3/internal/http2/Http2Stream;", "Ljava/io/IOException;", "e", "", "failConnection", "(Ljava/io/IOException;)V", "openStreamCount", "()I", "id", "getStream", "(I)Lokhttp3/internal/http2/Http2Stream;", "streamId", "removeStream$okhttp", "removeStream", "", "read", "updateConnectionFlowControl$okhttp", "(J)V", "updateConnectionFlowControl", "pushStream", "(Ljava/util/List;Z)Lokhttp3/internal/http2/Http2Stream;", "outFinished", "alternating", "writeHeaders$okhttp", "(IZLjava/util/List;)V", "writeHeaders", "Lxu/e;", "buffer", "byteCount", "writeData", "(IZLxu/e;J)V", "Lokhttp3/internal/http2/ErrorCode;", "errorCode", "writeSynResetLater$okhttp", "(ILokhttp3/internal/http2/ErrorCode;)V", "writeSynResetLater", "statusCode", "writeSynReset$okhttp", "writeSynReset", "unacknowledgedBytesRead", "writeWindowUpdateLater$okhttp", "(IJ)V", "writeWindowUpdateLater", "reply", "payload1", "payload2", "writePing", "(ZII)V", "writePingAndAwaitPong", "()V", "awaitPong", "flush", "shutdown", "(Lokhttp3/internal/http2/ErrorCode;)V", "close", "connectionCode", "streamCode", "cause", "close$okhttp", "(Lokhttp3/internal/http2/ErrorCode;Lokhttp3/internal/http2/ErrorCode;Ljava/io/IOException;)V", "sendConnectionPreface", "start", "(Z)V", "Lokhttp3/internal/http2/Settings;", "settings", "setSettings", "(Lokhttp3/internal/http2/Settings;)V", "nowNs", "isHealthy", "(J)Z", "sendDegradedPingLater$okhttp", "sendDegradedPingLater", "pushedStream$okhttp", "(I)Z", "pushedStream", "pushRequestLater$okhttp", "(ILjava/util/List;)V", "pushRequestLater", "inFinished", "pushHeadersLater$okhttp", "(ILjava/util/List;Z)V", "pushHeadersLater", "Lxu/g;", Payload.SOURCE, "pushDataLater$okhttp", "(ILxu/g;IZ)V", "pushDataLater", "pushResetLater$okhttp", "pushResetLater", "client", "Z", "getClient$okhttp", "()Z", "Lokhttp3/internal/http2/Http2Connection$Listener;", "listener", "Lokhttp3/internal/http2/Http2Connection$Listener;", "getListener$okhttp", "()Lokhttp3/internal/http2/Http2Connection$Listener;", "", "streams", "Ljava/util/Map;", "getStreams$okhttp", "()Ljava/util/Map;", "", "connectionName", "Ljava/lang/String;", "getConnectionName$okhttp", "()Ljava/lang/String;", "lastGoodStreamId", "I", "getLastGoodStreamId$okhttp", "setLastGoodStreamId$okhttp", "(I)V", "nextStreamId", "getNextStreamId$okhttp", "setNextStreamId$okhttp", "isShutdown", "Lokhttp3/internal/concurrent/TaskRunner;", "taskRunner", "Lokhttp3/internal/concurrent/TaskRunner;", "Lokhttp3/internal/concurrent/TaskQueue;", "writerQueue", "Lokhttp3/internal/concurrent/TaskQueue;", "pushQueue", "settingsListenerQueue", "Lokhttp3/internal/http2/PushObserver;", "pushObserver", "Lokhttp3/internal/http2/PushObserver;", "intervalPingsSent", "J", "intervalPongsReceived", "degradedPingsSent", "degradedPongsReceived", "awaitPingsSent", "awaitPongsReceived", "degradedPongDeadlineNs", "Lokhttp3/internal/http2/FlowControlListener;", "flowControlListener", "Lokhttp3/internal/http2/FlowControlListener;", "getFlowControlListener$okhttp", "()Lokhttp3/internal/http2/FlowControlListener;", "okHttpSettings", "Lokhttp3/internal/http2/Settings;", "getOkHttpSettings", "()Lokhttp3/internal/http2/Settings;", "peerSettings", "getPeerSettings", "setPeerSettings", "Lokhttp3/internal/http2/flowcontrol/WindowCounter;", "readBytes", "Lokhttp3/internal/http2/flowcontrol/WindowCounter;", "getReadBytes", "()Lokhttp3/internal/http2/flowcontrol/WindowCounter;", "value", "writeBytesTotal", "getWriteBytesTotal", "()J", "writeBytesMaximum", "getWriteBytesMaximum", "Lokhttp3/internal/connection/BufferedSocket;", "socket", "Lokhttp3/internal/connection/BufferedSocket;", "getSocket$okhttp", "()Lokhttp3/internal/connection/BufferedSocket;", "Lokhttp3/internal/http2/Http2Writer;", "writer", "Lokhttp3/internal/http2/Http2Writer;", "getWriter", "()Lokhttp3/internal/http2/Http2Writer;", "Lokhttp3/internal/http2/Http2Connection$ReaderRunnable;", "readerRunnable", "Lokhttp3/internal/http2/Http2Connection$ReaderRunnable;", "getReaderRunnable", "()Lokhttp3/internal/http2/Http2Connection$ReaderRunnable;", "", "currentPushRequests", "Ljava/util/Set;", "Companion", "Builder", "ReaderRunnable", "Listener", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000È\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\n\n\u0002\u0010\t\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u001f\n\u0002\u0018\u0002\n\u0002\b\u0012\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010%\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010#\n\u0002\b\u0007\u0018\u0000 Á\u00012\u00020\u00012\u00020\u0002:\bÂ\u0001Ã\u0001Ä\u0001Á\u0001B\u0011\b\u0000\u0012\u0006\u0010\u0004\u001a\u00020\u0003¢\u0006\u0004\b\u0005\u0010\u0006J-\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\b\u001a\u00020\u00072\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t2\u0006\u0010\r\u001a\u00020\fH\u0002¢\u0006\u0004\b\u000f\u0010\u0010J\u0019\u0010\u0014\u001a\u00020\u00132\b\u0010\u0012\u001a\u0004\u0018\u00010\u0011H\u0002¢\u0006\u0004\b\u0014\u0010\u0015J\r\u0010\u0016\u001a\u00020\u0007¢\u0006\u0004\b\u0016\u0010\u0017J\u0017\u0010\u0019\u001a\u0004\u0018\u00010\u000e2\u0006\u0010\u0018\u001a\u00020\u0007¢\u0006\u0004\b\u0019\u0010\u001aJ\u0019\u0010\u001d\u001a\u0004\u0018\u00010\u000e2\u0006\u0010\u001b\u001a\u00020\u0007H\u0000¢\u0006\u0004\b\u001c\u0010\u001aJ\u0017\u0010\"\u001a\u00020\u00132\u0006\u0010\u001f\u001a\u00020\u001eH\u0000¢\u0006\u0004\b \u0010!J+\u0010#\u001a\u00020\u000e2\u0006\u0010\b\u001a\u00020\u00072\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t2\u0006\u0010\r\u001a\u00020\f¢\u0006\u0004\b#\u0010\u0010J#\u0010\u000f\u001a\u00020\u000e2\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t2\u0006\u0010\r\u001a\u00020\f¢\u0006\u0004\b\u000f\u0010$J-\u0010)\u001a\u00020\u00132\u0006\u0010\u001b\u001a\u00020\u00072\u0006\u0010%\u001a\u00020\f2\f\u0010&\u001a\b\u0012\u0004\u0012\u00020\n0\tH\u0000¢\u0006\u0004\b'\u0010(J/\u0010-\u001a\u00020\u00132\u0006\u0010\u001b\u001a\u00020\u00072\u0006\u0010%\u001a\u00020\f2\b\u0010+\u001a\u0004\u0018\u00010*2\u0006\u0010,\u001a\u00020\u001e¢\u0006\u0004\b-\u0010.J\u001f\u00103\u001a\u00020\u00132\u0006\u0010\u001b\u001a\u00020\u00072\u0006\u00100\u001a\u00020/H\u0000¢\u0006\u0004\b1\u00102J\u001f\u00106\u001a\u00020\u00132\u0006\u0010\u001b\u001a\u00020\u00072\u0006\u00104\u001a\u00020/H\u0000¢\u0006\u0004\b5\u00102J\u001f\u0010:\u001a\u00020\u00132\u0006\u0010\u001b\u001a\u00020\u00072\u0006\u00107\u001a\u00020\u001eH\u0000¢\u0006\u0004\b8\u00109J%\u0010>\u001a\u00020\u00132\u0006\u0010;\u001a\u00020\f2\u0006\u0010<\u001a\u00020\u00072\u0006\u0010=\u001a\u00020\u0007¢\u0006\u0004\b>\u0010?J\r\u0010@\u001a\u00020\u0013¢\u0006\u0004\b@\u0010AJ\r\u0010>\u001a\u00020\u0013¢\u0006\u0004\b>\u0010AJ\r\u0010B\u001a\u00020\u0013¢\u0006\u0004\bB\u0010AJ\r\u0010C\u001a\u00020\u0013¢\u0006\u0004\bC\u0010AJ\u0015\u0010D\u001a\u00020\u00132\u0006\u00104\u001a\u00020/¢\u0006\u0004\bD\u0010EJ\u000f\u0010F\u001a\u00020\u0013H\u0016¢\u0006\u0004\bF\u0010AJ)\u0010F\u001a\u00020\u00132\u0006\u0010G\u001a\u00020/2\u0006\u0010H\u001a\u00020/2\b\u0010I\u001a\u0004\u0018\u00010\u0011H\u0000¢\u0006\u0004\bJ\u0010KJ\u0019\u0010M\u001a\u00020\u00132\b\b\u0002\u0010L\u001a\u00020\fH\u0007¢\u0006\u0004\bM\u0010NJ\u0015\u0010Q\u001a\u00020\u00132\u0006\u0010P\u001a\u00020O¢\u0006\u0004\bQ\u0010RJ\u0015\u0010T\u001a\u00020\f2\u0006\u0010S\u001a\u00020\u001e¢\u0006\u0004\bT\u0010UJ\u000f\u0010W\u001a\u00020\u0013H\u0000¢\u0006\u0004\bV\u0010AJ\u0017\u0010Z\u001a\u00020\f2\u0006\u0010\u001b\u001a\u00020\u0007H\u0000¢\u0006\u0004\bX\u0010YJ%\u0010]\u001a\u00020\u00132\u0006\u0010\u001b\u001a\u00020\u00072\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\tH\u0000¢\u0006\u0004\b[\u0010\\J-\u0010a\u001a\u00020\u00132\u0006\u0010\u001b\u001a\u00020\u00072\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t2\u0006\u0010^\u001a\u00020\fH\u0000¢\u0006\u0004\b_\u0010`J/\u0010f\u001a\u00020\u00132\u0006\u0010\u001b\u001a\u00020\u00072\u0006\u0010c\u001a\u00020b2\u0006\u0010,\u001a\u00020\u00072\u0006\u0010^\u001a\u00020\fH\u0000¢\u0006\u0004\bd\u0010eJ\u001f\u0010h\u001a\u00020\u00132\u0006\u0010\u001b\u001a\u00020\u00072\u0006\u00100\u001a\u00020/H\u0000¢\u0006\u0004\bg\u00102R\u001a\u0010i\u001a\u00020\f8\u0000X\u0080\u0004¢\u0006\f\n\u0004\bi\u0010j\u001a\u0004\bk\u0010lR\u001a\u0010n\u001a\u00020m8\u0000X\u0080\u0004¢\u0006\f\n\u0004\bn\u0010o\u001a\u0004\bp\u0010qR&\u0010s\u001a\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u000e0r8\u0000X\u0080\u0004¢\u0006\f\n\u0004\bs\u0010t\u001a\u0004\bu\u0010vR\u001a\u0010x\u001a\u00020w8\u0000X\u0080\u0004¢\u0006\f\n\u0004\bx\u0010y\u001a\u0004\bz\u0010{R#\u0010|\u001a\u00020\u00078\u0000@\u0000X\u0080\u000e¢\u0006\u0013\n\u0004\b|\u0010}\u001a\u0004\b~\u0010\u0017\"\u0005\b\u007f\u0010\u0080\u0001R'\u0010\u0081\u0001\u001a\u00020\u00078\u0000@\u0000X\u0080\u000e¢\u0006\u0016\n\u0005\b\u0081\u0001\u0010}\u001a\u0005\b\u0082\u0001\u0010\u0017\"\u0006\b\u0083\u0001\u0010\u0080\u0001R\u0018\u0010\u0084\u0001\u001a\u00020\f8\u0002@\u0002X\u0082\u000e¢\u0006\u0007\n\u0005\b\u0084\u0001\u0010jR\u0018\u0010\u0086\u0001\u001a\u00030\u0085\u00018\u0002X\u0082\u0004¢\u0006\b\n\u0006\b\u0086\u0001\u0010\u0087\u0001R\u0018\u0010\u0089\u0001\u001a\u00030\u0088\u00018\u0002X\u0082\u0004¢\u0006\b\n\u0006\b\u0089\u0001\u0010\u008a\u0001R\u0018\u0010\u008b\u0001\u001a\u00030\u0088\u00018\u0002X\u0082\u0004¢\u0006\b\n\u0006\b\u008b\u0001\u0010\u008a\u0001R\u0018\u0010\u008c\u0001\u001a\u00030\u0088\u00018\u0002X\u0082\u0004¢\u0006\b\n\u0006\b\u008c\u0001\u0010\u008a\u0001R\u0018\u0010\u008e\u0001\u001a\u00030\u008d\u00018\u0002X\u0082\u0004¢\u0006\b\n\u0006\b\u008e\u0001\u0010\u008f\u0001R\u0019\u0010\u0090\u0001\u001a\u00020\u001e8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0090\u0001\u0010\u0091\u0001R\u0019\u0010\u0092\u0001\u001a\u00020\u001e8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0092\u0001\u0010\u0091\u0001R\u0019\u0010\u0093\u0001\u001a\u00020\u001e8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0093\u0001\u0010\u0091\u0001R\u0019\u0010\u0094\u0001\u001a\u00020\u001e8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0094\u0001\u0010\u0091\u0001R\u0019\u0010\u0095\u0001\u001a\u00020\u001e8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0095\u0001\u0010\u0091\u0001R\u0019\u0010\u0096\u0001\u001a\u00020\u001e8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0096\u0001\u0010\u0091\u0001R\u0019\u0010\u0097\u0001\u001a\u00020\u001e8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0097\u0001\u0010\u0091\u0001R \u0010\u0099\u0001\u001a\u00030\u0098\u00018\u0000X\u0080\u0004¢\u0006\u0010\n\u0006\b\u0099\u0001\u0010\u009a\u0001\u001a\u0006\b\u009b\u0001\u0010\u009c\u0001R\u001c\u0010\u009d\u0001\u001a\u00020O8\u0006¢\u0006\u0010\n\u0006\b\u009d\u0001\u0010\u009e\u0001\u001a\u0006\b\u009f\u0001\u0010 \u0001R(\u0010¡\u0001\u001a\u00020O8\u0006@\u0006X\u0086\u000e¢\u0006\u0017\n\u0006\b¡\u0001\u0010\u009e\u0001\u001a\u0006\b¢\u0001\u0010 \u0001\"\u0005\b£\u0001\u0010RR\u001d\u0010¥\u0001\u001a\u00030¤\u00018\u0006¢\u0006\u0010\n\u0006\b¥\u0001\u0010¦\u0001\u001a\u0006\b§\u0001\u0010¨\u0001R*\u0010ª\u0001\u001a\u00020\u001e2\u0007\u0010©\u0001\u001a\u00020\u001e8\u0006@BX\u0086\u000e¢\u0006\u0010\n\u0006\bª\u0001\u0010\u0091\u0001\u001a\u0006\b«\u0001\u0010¬\u0001R*\u0010\u00ad\u0001\u001a\u00020\u001e2\u0007\u0010©\u0001\u001a\u00020\u001e8\u0006@BX\u0086\u000e¢\u0006\u0010\n\u0006\b\u00ad\u0001\u0010\u0091\u0001\u001a\u0006\b®\u0001\u0010¬\u0001R \u0010°\u0001\u001a\u00030¯\u00018\u0000X\u0080\u0004¢\u0006\u0010\n\u0006\b°\u0001\u0010±\u0001\u001a\u0006\b²\u0001\u0010³\u0001R\u001d\u0010µ\u0001\u001a\u00030´\u00018\u0006¢\u0006\u0010\n\u0006\bµ\u0001\u0010¶\u0001\u001a\u0006\b·\u0001\u0010¸\u0001R!\u0010º\u0001\u001a\u00070¹\u0001R\u00020\u00008\u0006¢\u0006\u0010\n\u0006\bº\u0001\u0010»\u0001\u001a\u0006\b¼\u0001\u0010½\u0001R\u001e\u0010¿\u0001\u001a\t\u0012\u0004\u0012\u00020\u00070¾\u00018\u0002X\u0082\u0004¢\u0006\b\n\u0006\b¿\u0001\u0010À\u0001¨\u0006Å\u0001"}, d2 = {"Lokhttp3/internal/http2/Http2Connection;", "Ljava/io/Closeable;", "Lokhttp3/internal/concurrent/Lockable;", "Lokhttp3/internal/http2/Http2Connection$Builder;", "builder", "<init>", "(Lokhttp3/internal/http2/Http2Connection$Builder;)V", "", "associatedStreamId", "", "Lokhttp3/internal/http2/Header;", "requestHeaders", "", "out", "Lokhttp3/internal/http2/Http2Stream;", "newStream", "(ILjava/util/List;Z)Lokhttp3/internal/http2/Http2Stream;", "Ljava/io/IOException;", "e", "", "failConnection", "(Ljava/io/IOException;)V", "openStreamCount", "()I", "id", "getStream", "(I)Lokhttp3/internal/http2/Http2Stream;", "streamId", "removeStream$okhttp", "removeStream", "", "read", "updateConnectionFlowControl$okhttp", "(J)V", "updateConnectionFlowControl", "pushStream", "(Ljava/util/List;Z)Lokhttp3/internal/http2/Http2Stream;", "outFinished", "alternating", "writeHeaders$okhttp", "(IZLjava/util/List;)V", "writeHeaders", "Lvu/e;", "buffer", "byteCount", "writeData", "(IZLvu/e;J)V", "Lokhttp3/internal/http2/ErrorCode;", "errorCode", "writeSynResetLater$okhttp", "(ILokhttp3/internal/http2/ErrorCode;)V", "writeSynResetLater", "statusCode", "writeSynReset$okhttp", "writeSynReset", "unacknowledgedBytesRead", "writeWindowUpdateLater$okhttp", "(IJ)V", "writeWindowUpdateLater", "reply", "payload1", "payload2", "writePing", "(ZII)V", "writePingAndAwaitPong", "()V", "awaitPong", "flush", "shutdown", "(Lokhttp3/internal/http2/ErrorCode;)V", "close", "connectionCode", "streamCode", "cause", "close$okhttp", "(Lokhttp3/internal/http2/ErrorCode;Lokhttp3/internal/http2/ErrorCode;Ljava/io/IOException;)V", "sendConnectionPreface", "start", "(Z)V", "Lokhttp3/internal/http2/Settings;", "settings", "setSettings", "(Lokhttp3/internal/http2/Settings;)V", "nowNs", "isHealthy", "(J)Z", "sendDegradedPingLater$okhttp", "sendDegradedPingLater", "pushedStream$okhttp", "(I)Z", "pushedStream", "pushRequestLater$okhttp", "(ILjava/util/List;)V", "pushRequestLater", "inFinished", "pushHeadersLater$okhttp", "(ILjava/util/List;Z)V", "pushHeadersLater", "Lvu/g;", Payload.SOURCE, "pushDataLater$okhttp", "(ILvu/g;IZ)V", "pushDataLater", "pushResetLater$okhttp", "pushResetLater", "client", "Z", "getClient$okhttp", "()Z", "Lokhttp3/internal/http2/Http2Connection$Listener;", "listener", "Lokhttp3/internal/http2/Http2Connection$Listener;", "getListener$okhttp", "()Lokhttp3/internal/http2/Http2Connection$Listener;", "", "streams", "Ljava/util/Map;", "getStreams$okhttp", "()Ljava/util/Map;", "", "connectionName", "Ljava/lang/String;", "getConnectionName$okhttp", "()Ljava/lang/String;", "lastGoodStreamId", "I", "getLastGoodStreamId$okhttp", "setLastGoodStreamId$okhttp", "(I)V", "nextStreamId", "getNextStreamId$okhttp", "setNextStreamId$okhttp", "isShutdown", "Lokhttp3/internal/concurrent/TaskRunner;", "taskRunner", "Lokhttp3/internal/concurrent/TaskRunner;", "Lokhttp3/internal/concurrent/TaskQueue;", "writerQueue", "Lokhttp3/internal/concurrent/TaskQueue;", "pushQueue", "settingsListenerQueue", "Lokhttp3/internal/http2/PushObserver;", "pushObserver", "Lokhttp3/internal/http2/PushObserver;", "intervalPingsSent", "J", "intervalPongsReceived", "degradedPingsSent", "degradedPongsReceived", "awaitPingsSent", "awaitPongsReceived", "degradedPongDeadlineNs", "Lokhttp3/internal/http2/FlowControlListener;", "flowControlListener", "Lokhttp3/internal/http2/FlowControlListener;", "getFlowControlListener$okhttp", "()Lokhttp3/internal/http2/FlowControlListener;", "okHttpSettings", "Lokhttp3/internal/http2/Settings;", "getOkHttpSettings", "()Lokhttp3/internal/http2/Settings;", "peerSettings", "getPeerSettings", "setPeerSettings", "Lokhttp3/internal/http2/flowcontrol/WindowCounter;", "readBytes", "Lokhttp3/internal/http2/flowcontrol/WindowCounter;", "getReadBytes", "()Lokhttp3/internal/http2/flowcontrol/WindowCounter;", "value", "writeBytesTotal", "getWriteBytesTotal", "()J", "writeBytesMaximum", "getWriteBytesMaximum", "Lokhttp3/internal/connection/BufferedSocket;", "socket", "Lokhttp3/internal/connection/BufferedSocket;", "getSocket$okhttp", "()Lokhttp3/internal/connection/BufferedSocket;", "Lokhttp3/internal/http2/Http2Writer;", "writer", "Lokhttp3/internal/http2/Http2Writer;", "getWriter", "()Lokhttp3/internal/http2/Http2Writer;", "Lokhttp3/internal/http2/Http2Connection$ReaderRunnable;", "readerRunnable", "Lokhttp3/internal/http2/Http2Connection$ReaderRunnable;", "getReaderRunnable", "()Lokhttp3/internal/http2/Http2Connection$ReaderRunnable;", "", "currentPushRequests", "Ljava/util/Set;", "Companion", "Builder", "ReaderRunnable", "Listener", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class Http2Connection implements Closeable, Lockable {
     public static final int AWAIT_PING = 3;
 
@@ -303,7 +303,7 @@ public final class Http2Connection implements Closeable, Lockable {
         public abstract void onStream(@NotNull Http2Stream stream);
     }
 
-    @Metadata(d1 = {"\u0000`\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\t\n\u0002\b\f\n\u0002\u0010\u000e\n\u0002\b\u000b\b\u0086\u0004\u0018\u00002\u00020\u00012\b\u0012\u0004\u0012\u00020\u00030\u0002B\u0011\b\u0000\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\b\u001a\u00020\u0003H\u0096\u0002¢\u0006\u0004\b\b\u0010\tJ/\u0010\u0011\u001a\u00020\u00032\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\f2\u0006\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0010\u001a\u00020\fH\u0016¢\u0006\u0004\b\u0011\u0010\u0012J5\u0010\u0017\u001a\u00020\u00032\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\f2\u0006\u0010\u0013\u001a\u00020\f2\f\u0010\u0016\u001a\b\u0012\u0004\u0012\u00020\u00150\u0014H\u0016¢\u0006\u0004\b\u0017\u0010\u0018J\u001f\u0010\u001b\u001a\u00020\u00032\u0006\u0010\r\u001a\u00020\f2\u0006\u0010\u001a\u001a\u00020\u0019H\u0016¢\u0006\u0004\b\u001b\u0010\u001cJ\u001f\u0010\u001f\u001a\u00020\u00032\u0006\u0010\u001d\u001a\u00020\n2\u0006\u0010\u001f\u001a\u00020\u001eH\u0016¢\u0006\u0004\b\u001f\u0010 J\u001d\u0010!\u001a\u00020\u00032\u0006\u0010\u001d\u001a\u00020\n2\u0006\u0010\u001f\u001a\u00020\u001e¢\u0006\u0004\b!\u0010 J\u000f\u0010\"\u001a\u00020\u0003H\u0016¢\u0006\u0004\b\"\u0010\tJ'\u0010&\u001a\u00020\u00032\u0006\u0010#\u001a\u00020\n2\u0006\u0010$\u001a\u00020\f2\u0006\u0010%\u001a\u00020\fH\u0016¢\u0006\u0004\b&\u0010'J'\u0010+\u001a\u00020\u00032\u0006\u0010(\u001a\u00020\f2\u0006\u0010\u001a\u001a\u00020\u00192\u0006\u0010*\u001a\u00020)H\u0016¢\u0006\u0004\b+\u0010,J\u001f\u0010/\u001a\u00020\u00032\u0006\u0010\r\u001a\u00020\f2\u0006\u0010.\u001a\u00020-H\u0016¢\u0006\u0004\b/\u00100J/\u00104\u001a\u00020\u00032\u0006\u0010\r\u001a\u00020\f2\u0006\u00101\u001a\u00020\f2\u0006\u00102\u001a\u00020\f2\u0006\u00103\u001a\u00020\nH\u0016¢\u0006\u0004\b4\u00105J-\u00108\u001a\u00020\u00032\u0006\u0010\r\u001a\u00020\f2\u0006\u00106\u001a\u00020\f2\f\u00107\u001a\b\u0012\u0004\u0012\u00020\u00150\u0014H\u0016¢\u0006\u0004\b8\u00109J?\u0010@\u001a\u00020\u00032\u0006\u0010\r\u001a\u00020\f2\u0006\u0010;\u001a\u00020:2\u0006\u0010<\u001a\u00020)2\u0006\u0010=\u001a\u00020:2\u0006\u0010>\u001a\u00020\f2\u0006\u0010?\u001a\u00020-H\u0016¢\u0006\u0004\b@\u0010AR\u001a\u0010\u0005\u001a\u00020\u00048\u0000X\u0080\u0004¢\u0006\f\n\u0004\b\u0005\u0010B\u001a\u0004\bC\u0010D¨\u0006E"}, d2 = {"Lokhttp3/internal/http2/Http2Connection$ReaderRunnable;", "Lokhttp3/internal/http2/Http2Reader$Handler;", "Lkotlin/Function0;", "", "Lokhttp3/internal/http2/Http2Reader;", "reader", "<init>", "(Lokhttp3/internal/http2/Http2Connection;Lokhttp3/internal/http2/Http2Reader;)V", "invoke", "()V", "", "inFinished", "", "streamId", "Lxu/g;", Payload.SOURCE, "length", "data", "(ZILxu/g;I)V", "associatedStreamId", "", "Lokhttp3/internal/http2/Header;", "headerBlock", "headers", "(ZIILjava/util/List;)V", "Lokhttp3/internal/http2/ErrorCode;", "errorCode", "rstStream", "(ILokhttp3/internal/http2/ErrorCode;)V", "clearPrevious", "Lokhttp3/internal/http2/Settings;", "settings", "(ZLokhttp3/internal/http2/Settings;)V", "applyAndAckSettings", "ackSettings", "ack", "payload1", "payload2", "ping", "(ZII)V", "lastGoodStreamId", "Lxu/h;", "debugData", "goAway", "(ILokhttp3/internal/http2/ErrorCode;Lxu/h;)V", "", "windowSizeIncrement", "windowUpdate", "(IJ)V", "streamDependency", "weight", "exclusive", "priority", "(IIIZ)V", "promisedStreamId", "requestHeaders", "pushPromise", "(IILjava/util/List;)V", "", "origin", "protocol", "host", "port", "maxAge", "alternateService", "(ILjava/lang/String;Lxu/h;Ljava/lang/String;IJ)V", "Lokhttp3/internal/http2/Http2Reader;", "getReader$okhttp", "()Lokhttp3/internal/http2/Http2Reader;", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000`\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\t\n\u0002\b\f\n\u0002\u0010\u000e\n\u0002\b\u000b\b\u0086\u0004\u0018\u00002\u00020\u00012\b\u0012\u0004\u0012\u00020\u00030\u0002B\u0011\b\u0000\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\b\u001a\u00020\u0003H\u0096\u0002¢\u0006\u0004\b\b\u0010\tJ/\u0010\u0011\u001a\u00020\u00032\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\f2\u0006\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0010\u001a\u00020\fH\u0016¢\u0006\u0004\b\u0011\u0010\u0012J5\u0010\u0017\u001a\u00020\u00032\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\f2\u0006\u0010\u0013\u001a\u00020\f2\f\u0010\u0016\u001a\b\u0012\u0004\u0012\u00020\u00150\u0014H\u0016¢\u0006\u0004\b\u0017\u0010\u0018J\u001f\u0010\u001b\u001a\u00020\u00032\u0006\u0010\r\u001a\u00020\f2\u0006\u0010\u001a\u001a\u00020\u0019H\u0016¢\u0006\u0004\b\u001b\u0010\u001cJ\u001f\u0010\u001f\u001a\u00020\u00032\u0006\u0010\u001d\u001a\u00020\n2\u0006\u0010\u001f\u001a\u00020\u001eH\u0016¢\u0006\u0004\b\u001f\u0010 J\u001d\u0010!\u001a\u00020\u00032\u0006\u0010\u001d\u001a\u00020\n2\u0006\u0010\u001f\u001a\u00020\u001e¢\u0006\u0004\b!\u0010 J\u000f\u0010\"\u001a\u00020\u0003H\u0016¢\u0006\u0004\b\"\u0010\tJ'\u0010&\u001a\u00020\u00032\u0006\u0010#\u001a\u00020\n2\u0006\u0010$\u001a\u00020\f2\u0006\u0010%\u001a\u00020\fH\u0016¢\u0006\u0004\b&\u0010'J'\u0010+\u001a\u00020\u00032\u0006\u0010(\u001a\u00020\f2\u0006\u0010\u001a\u001a\u00020\u00192\u0006\u0010*\u001a\u00020)H\u0016¢\u0006\u0004\b+\u0010,J\u001f\u0010/\u001a\u00020\u00032\u0006\u0010\r\u001a\u00020\f2\u0006\u0010.\u001a\u00020-H\u0016¢\u0006\u0004\b/\u00100J/\u00104\u001a\u00020\u00032\u0006\u0010\r\u001a\u00020\f2\u0006\u00101\u001a\u00020\f2\u0006\u00102\u001a\u00020\f2\u0006\u00103\u001a\u00020\nH\u0016¢\u0006\u0004\b4\u00105J-\u00108\u001a\u00020\u00032\u0006\u0010\r\u001a\u00020\f2\u0006\u00106\u001a\u00020\f2\f\u00107\u001a\b\u0012\u0004\u0012\u00020\u00150\u0014H\u0016¢\u0006\u0004\b8\u00109J?\u0010@\u001a\u00020\u00032\u0006\u0010\r\u001a\u00020\f2\u0006\u0010;\u001a\u00020:2\u0006\u0010<\u001a\u00020)2\u0006\u0010=\u001a\u00020:2\u0006\u0010>\u001a\u00020\f2\u0006\u0010?\u001a\u00020-H\u0016¢\u0006\u0004\b@\u0010AR\u001a\u0010\u0005\u001a\u00020\u00048\u0000X\u0080\u0004¢\u0006\f\n\u0004\b\u0005\u0010B\u001a\u0004\bC\u0010D¨\u0006E"}, d2 = {"Lokhttp3/internal/http2/Http2Connection$ReaderRunnable;", "Lokhttp3/internal/http2/Http2Reader$Handler;", "Lkotlin/Function0;", "", "Lokhttp3/internal/http2/Http2Reader;", "reader", "<init>", "(Lokhttp3/internal/http2/Http2Connection;Lokhttp3/internal/http2/Http2Reader;)V", "invoke", "()V", "", "inFinished", "", "streamId", "Lvu/g;", Payload.SOURCE, "length", "data", "(ZILvu/g;I)V", "associatedStreamId", "", "Lokhttp3/internal/http2/Header;", "headerBlock", "headers", "(ZIILjava/util/List;)V", "Lokhttp3/internal/http2/ErrorCode;", "errorCode", "rstStream", "(ILokhttp3/internal/http2/ErrorCode;)V", "clearPrevious", "Lokhttp3/internal/http2/Settings;", "settings", "(ZLokhttp3/internal/http2/Settings;)V", "applyAndAckSettings", "ackSettings", "ack", "payload1", "payload2", "ping", "(ZII)V", "lastGoodStreamId", "Lvu/h;", "debugData", "goAway", "(ILokhttp3/internal/http2/ErrorCode;Lvu/h;)V", "", "windowSizeIncrement", "windowUpdate", "(IJ)V", "streamDependency", "weight", "exclusive", "priority", "(IIIZ)V", "promisedStreamId", "requestHeaders", "pushPromise", "(IILjava/util/List;)V", "", "origin", "protocol", "host", "port", "maxAge", "alternateService", "(ILjava/lang/String;Lvu/h;Ljava/lang/String;IJ)V", "Lokhttp3/internal/http2/Http2Reader;", "getReader$okhttp", "()Lokhttp3/internal/http2/Http2Reader;", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public final class ReaderRunnable implements Http2Reader.Handler, Function0<Unit> {
 
         @NotNull
@@ -319,8 +319,8 @@ public final class Http2Connection implements Closeable, Lockable {
         /* JADX INFO: Access modifiers changed from: private */
         /* JADX WARN: Multi-variable type inference failed */
         public static final Unit applyAndAckSettings$lambda$0$0$1(Http2Connection http2Connection, c0 c0Var) {
-            http2Connection.getListener().onSettings(http2Connection, (Settings) c0Var.f22552a);
-            return Unit.f22483a;
+            http2Connection.getListener().onSettings(http2Connection, (Settings) c0Var.f23007a);
+            return Unit.f22938a;
         }
 
         /* JADX INFO: Access modifiers changed from: private */
@@ -334,19 +334,19 @@ public final class Http2Connection implements Closeable, Lockable {
                 } catch (IOException unused) {
                 }
             }
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
 
         /* JADX INFO: Access modifiers changed from: private */
         public static final Unit ping$lambda$1(Http2Connection http2Connection, int i10, int i11) {
             http2Connection.writePing(true, i10, i11);
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
 
         /* JADX INFO: Access modifiers changed from: private */
         public static final Unit settings$lambda$0(ReaderRunnable readerRunnable, boolean z10, Settings settings) {
             readerRunnable.applyAndAckSettings(z10, settings);
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
 
         @Override // okhttp3.internal.http2.Http2Reader.Handler
@@ -354,7 +354,7 @@ public final class Http2Connection implements Closeable, Lockable {
         }
 
         @Override // okhttp3.internal.http2.Http2Reader.Handler
-        public void alternateService(int streamId, @NotNull String origin, @NotNull xu.h protocol, @NotNull String host, int port, long maxAge) {
+        public void alternateService(int streamId, @NotNull String origin, @NotNull vu.h protocol, @NotNull String host, int port, long maxAge) {
             Intrinsics.checkNotNullParameter(origin, "origin");
             Intrinsics.checkNotNullParameter(protocol, "protocol");
             Intrinsics.checkNotNullParameter(host, "host");
@@ -386,40 +386,40 @@ public final class Http2Connection implements Closeable, Lockable {
                             settings3.merge(settings2);
                             r8 = settings3;
                         }
-                        c0Var.f22552a = r8;
+                        c0Var.f23007a = r8;
                         initialWindowSize = ((long) r8.getInitialWindowSize()) - ((long) peerSettings.getInitialWindowSize());
                         http2StreamArr = (initialWindowSize == 0 || http2Connection.getStreams$okhttp().isEmpty()) ? null : (Http2Stream[]) http2Connection.getStreams$okhttp().values().toArray(new Http2Stream[0]);
-                        http2Connection.setPeerSettings((Settings) c0Var.f22552a);
+                        http2Connection.setPeerSettings((Settings) c0Var.f23007a);
                         TaskQueue.execute$default(http2Connection.settingsListenerQueue, http2Connection.getConnectionName() + " onSettings", 0L, false, new Function0() { // from class: okhttp3.internal.http2.l
                             @Override // kotlin.jvm.functions.Function0
                             public final Object invoke() {
                                 return Http2Connection.ReaderRunnable.applyAndAckSettings$lambda$0$0$1(http2Connection, c0Var);
                             }
                         }, 6, null);
-                        Unit unit = Unit.f22483a;
+                        Unit unit = Unit.f22938a;
                     } catch (Throwable th2) {
                         throw th2;
                     }
                 }
                 try {
-                    http2Connection.getWriter().applyAndAckSettings((Settings) c0Var.f22552a);
+                    http2Connection.getWriter().applyAndAckSettings((Settings) c0Var.f23007a);
                 } catch (IOException e10) {
                     http2Connection.failConnection(e10);
                 }
-                Unit unit2 = Unit.f22483a;
+                Unit unit2 = Unit.f22938a;
             }
             if (http2StreamArr != null) {
                 for (Http2Stream http2Stream : http2StreamArr) {
                     synchronized (http2Stream) {
                         http2Stream.addBytesToWriteWindow(initialWindowSize);
-                        Unit unit3 = Unit.f22483a;
+                        Unit unit3 = Unit.f22938a;
                     }
                 }
             }
         }
 
         @Override // okhttp3.internal.http2.Http2Reader.Handler
-        public void data(boolean inFinished, int streamId, @NotNull xu.g source, int length) {
+        public void data(boolean inFinished, int streamId, @NotNull vu.g source, int length) {
             Intrinsics.checkNotNullParameter(source, "source");
             if (this.this$0.pushedStream$okhttp(streamId)) {
                 this.this$0.pushDataLater$okhttp(streamId, source, length, inFinished);
@@ -446,7 +446,7 @@ public final class Http2Connection implements Closeable, Lockable {
         }
 
         @Override // okhttp3.internal.http2.Http2Reader.Handler
-        public void goAway(int lastGoodStreamId, @NotNull ErrorCode errorCode, @NotNull xu.h debugData) {
+        public void goAway(int lastGoodStreamId, @NotNull ErrorCode errorCode, @NotNull vu.h debugData) {
             int i10;
             Object[] array;
             Intrinsics.checkNotNullParameter(errorCode, "errorCode");
@@ -456,7 +456,7 @@ public final class Http2Connection implements Closeable, Lockable {
             synchronized (http2Connection) {
                 array = http2Connection.getStreams$okhttp().values().toArray(new Http2Stream[0]);
                 http2Connection.isShutdown = true;
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             }
             for (Http2Stream http2Stream : (Http2Stream[]) array) {
                 if (http2Stream.getId() > lastGoodStreamId && http2Stream.isLocallyInitiated()) {
@@ -477,7 +477,7 @@ public final class Http2Connection implements Closeable, Lockable {
             synchronized (http2Connection) {
                 Http2Stream stream = http2Connection.getStream(streamId);
                 if (stream != null) {
-                    Unit unit = Unit.f22483a;
+                    Unit unit = Unit.f22938a;
                     stream.receiveHeaders(_UtilJvmKt.toHeaders(headerBlock), inFinished);
                     return;
                 }
@@ -505,7 +505,7 @@ public final class Http2Connection implements Closeable, Lockable {
         @Override // kotlin.jvm.functions.Function0
         public /* bridge */ /* synthetic */ Unit invoke() throws Throwable {
             invoke2();
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
 
         @Override // okhttp3.internal.http2.Http2Reader.Handler
@@ -533,7 +533,7 @@ public final class Http2Connection implements Closeable, Lockable {
                             Intrinsics.d(http2Connection2, "null cannot be cast to non-null type java.lang.Object");
                             http2Connection2.notifyAll();
                         }
-                        Unit unit = Unit.f22483a;
+                        Unit unit = Unit.f22938a;
                     } else {
                         http2Connection2.degradedPongsReceived++;
                     }
@@ -572,7 +572,7 @@ public final class Http2Connection implements Closeable, Lockable {
             TaskQueue.execute$default(this.this$0.writerQueue, this.this$0.getConnectionName() + " applyAndAckSettings", 0L, false, new Function0() { // from class: okhttp3.internal.http2.k
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return Http2Connection.ReaderRunnable.settings$lambda$0(this.f27484a, clearPrevious, settings);
+                    return Http2Connection.ReaderRunnable.settings$lambda$0(this.f27993a, clearPrevious, settings);
                 }
             }, 6, null);
         }
@@ -585,7 +585,7 @@ public final class Http2Connection implements Closeable, Lockable {
                     http2Connection.writeBytesMaximum = http2Connection.getWriteBytesMaximum() + windowSizeIncrement;
                     Intrinsics.d(http2Connection, "null cannot be cast to non-null type java.lang.Object");
                     http2Connection.notifyAll();
-                    Unit unit = Unit.f22483a;
+                    Unit unit = Unit.f22938a;
                 }
                 return;
             }
@@ -593,7 +593,7 @@ public final class Http2Connection implements Closeable, Lockable {
             if (stream != null) {
                 synchronized (stream) {
                     stream.addBytesToWriteWindow(windowSizeIncrement);
-                    Unit unit2 = Unit.f22483a;
+                    Unit unit2 = Unit.f22938a;
                 }
             }
         }
@@ -695,7 +695,7 @@ public final class Http2Connection implements Closeable, Lockable {
             taskQueueNewQueue.schedule(connectionName$okhttp + " ping", nanos, new Function0() { // from class: okhttp3.internal.http2.b
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return Long.valueOf(Http2Connection._init_$lambda$0(this.f27468a, nanos));
+                    return Long.valueOf(Http2Connection._init_$lambda$0(this.f27977a, nanos));
                 }
             });
         }
@@ -729,7 +729,7 @@ public final class Http2Connection implements Closeable, Lockable {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static final Unit pushDataLater$lambda$0(Http2Connection http2Connection, int i10, xu.e eVar, int i11, boolean z10) {
+    public static final Unit pushDataLater$lambda$0(Http2Connection http2Connection, int i10, vu.e eVar, int i11, boolean z10) {
         try {
             boolean zOnData = http2Connection.pushObserver.onData(i10, eVar, i11, z10);
             if (zOnData) {
@@ -738,12 +738,12 @@ public final class Http2Connection implements Closeable, Lockable {
             if (zOnData || z10) {
                 synchronized (http2Connection) {
                     http2Connection.currentPushRequests.remove(Integer.valueOf(i10));
-                    Unit unit = Unit.f22483a;
+                    Unit unit = Unit.f22938a;
                 }
             }
         } catch (IOException unused) {
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -757,7 +757,7 @@ public final class Http2Connection implements Closeable, Lockable {
                 if (zOnHeaders || z10) {
                     synchronized (http2Connection) {
                         http2Connection.currentPushRequests.remove(Integer.valueOf(i10));
-                        Unit unit = Unit.f22483a;
+                        Unit unit = Unit.f22938a;
                     }
                 }
             } catch (IOException unused) {
@@ -765,15 +765,15 @@ public final class Http2Connection implements Closeable, Lockable {
         } else if (zOnHeaders) {
             synchronized (http2Connection) {
                 http2Connection.currentPushRequests.remove(Integer.valueOf(i10));
-                Unit unit2 = Unit.f22483a;
+                Unit unit2 = Unit.f22938a;
             }
         } else {
             synchronized (http2Connection) {
                 http2Connection.currentPushRequests.remove(Integer.valueOf(i10));
-                Unit unit3 = Unit.f22483a;
+                Unit unit3 = Unit.f22938a;
             }
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -783,12 +783,12 @@ public final class Http2Connection implements Closeable, Lockable {
                 http2Connection.writer.rstStream(i10, ErrorCode.CANCEL);
                 synchronized (http2Connection) {
                     http2Connection.currentPushRequests.remove(Integer.valueOf(i10));
-                    Unit unit = Unit.f22483a;
+                    Unit unit = Unit.f22938a;
                 }
             } catch (IOException unused) {
             }
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -797,13 +797,13 @@ public final class Http2Connection implements Closeable, Lockable {
         synchronized (http2Connection) {
             http2Connection.currentPushRequests.remove(Integer.valueOf(i10));
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public static final Unit sendDegradedPingLater$lambda$1(Http2Connection http2Connection) {
         http2Connection.writePing(false, 2, 0);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static /* synthetic */ void start$default(Http2Connection http2Connection, boolean z10, int i10, Object obj) {
@@ -820,7 +820,7 @@ public final class Http2Connection implements Closeable, Lockable {
         } catch (IOException e10) {
             http2Connection.failConnection(e10);
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -830,7 +830,7 @@ public final class Http2Connection implements Closeable, Lockable {
         } catch (IOException e10) {
             http2Connection.failConnection(e10);
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public final void awaitPong() {
@@ -843,7 +843,7 @@ public final class Http2Connection implements Closeable, Lockable {
                     throw th2;
                 }
             }
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
         }
     }
 
@@ -872,7 +872,7 @@ public final class Http2Connection implements Closeable, Lockable {
                     array = this.streams.values().toArray(new Http2Stream[0]);
                     this.streams.clear();
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -1012,16 +1012,16 @@ public final class Http2Connection implements Closeable, Lockable {
         return size;
     }
 
-    public final void pushDataLater$okhttp(final int streamId, @NotNull xu.g source, final int byteCount, final boolean inFinished) {
+    public final void pushDataLater$okhttp(final int streamId, @NotNull vu.g source, final int byteCount, final boolean inFinished) {
         Intrinsics.checkNotNullParameter(source, "source");
-        final xu.e eVar = new xu.e();
+        final vu.e eVar = new vu.e();
         long j10 = byteCount;
-        source.w1(j10);
+        source.u1(j10);
         source.read(eVar, j10);
         TaskQueue.execute$default(this.pushQueue, this.connectionName + '[' + streamId + "] onData", 0L, false, new Function0() { // from class: okhttp3.internal.http2.a
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return Http2Connection.pushDataLater$lambda$0(this.f27464a, streamId, eVar, byteCount, inFinished);
+                return Http2Connection.pushDataLater$lambda$0(this.f27973a, streamId, eVar, byteCount, inFinished);
             }
         }, 6, null);
     }
@@ -1031,7 +1031,7 @@ public final class Http2Connection implements Closeable, Lockable {
         TaskQueue.execute$default(this.pushQueue, this.connectionName + '[' + streamId + "] onHeaders", 0L, false, new Function0() { // from class: okhttp3.internal.http2.g
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return Http2Connection.pushHeadersLater$lambda$0(this.f27476a, streamId, requestHeaders, inFinished);
+                return Http2Connection.pushHeadersLater$lambda$0(this.f27985a, streamId, requestHeaders, inFinished);
             }
         }, 6, null);
     }
@@ -1047,7 +1047,7 @@ public final class Http2Connection implements Closeable, Lockable {
             TaskQueue.execute$default(this.pushQueue, this.connectionName + '[' + streamId + "] onRequest", 0L, false, new Function0() { // from class: okhttp3.internal.http2.f
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return Http2Connection.pushRequestLater$lambda$1(this.f27474a, streamId, requestHeaders);
+                    return Http2Connection.pushRequestLater$lambda$1(this.f27983a, streamId, requestHeaders);
                 }
             }, 6, null);
         }
@@ -1058,7 +1058,7 @@ public final class Http2Connection implements Closeable, Lockable {
         TaskQueue.execute$default(this.pushQueue, this.connectionName + '[' + streamId + "] onReset", 0L, false, new Function0() { // from class: okhttp3.internal.http2.h
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return Http2Connection.pushResetLater$lambda$0(this.f27479a, streamId, errorCode);
+                return Http2Connection.pushResetLater$lambda$0(this.f27988a, streamId, errorCode);
             }
         }, 6, null);
     }
@@ -1096,11 +1096,11 @@ public final class Http2Connection implements Closeable, Lockable {
             }
             this.degradedPingsSent = j11 + 1;
             this.degradedPongDeadlineNs = System.nanoTime() + ((long) DEGRADED_PONG_TIMEOUT_NS);
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
             TaskQueue.execute$default(this.writerQueue, this.connectionName + " ping", 0L, false, new Function0() { // from class: okhttp3.internal.http2.d
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return Http2Connection.sendDegradedPingLater$lambda$1(this.f27471a);
+                    return Http2Connection.sendDegradedPingLater$lambda$1(this.f27980a);
                 }
             }, 6, null);
         }
@@ -1127,7 +1127,7 @@ public final class Http2Connection implements Closeable, Lockable {
                     throw new ConnectionShutdownException();
                 }
                 this.okHttpSettings.merge(settings);
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             }
             this.writer.settings(settings);
         }
@@ -1142,7 +1142,7 @@ public final class Http2Connection implements Closeable, Lockable {
                 }
                 this.isShutdown = true;
                 int i10 = this.lastGoodStreamId;
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
                 this.writer.goAway(i10, statusCode, _UtilCommonKt.EMPTY_BYTE_ARRAY);
             }
         }
@@ -1162,14 +1162,14 @@ public final class Http2Connection implements Closeable, Lockable {
                     WindowCounter.update$default(this.readBytes, 0L, unacknowledged, 1, null);
                 }
                 this.flowControlListener.receivingConnectionWindowChanged(this.readBytes);
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }
         }
     }
 
-    public final void writeData(int streamId, boolean outFinished, @Nullable xu.e buffer, long byteCount) {
+    public final void writeData(int streamId, boolean outFinished, @Nullable vu.e buffer, long byteCount) {
         long j10;
         long j11;
         int iMin;
@@ -1204,7 +1204,7 @@ public final class Http2Connection implements Closeable, Lockable {
                 iMin = Math.min((int) Math.min(byteCount, j11 - j10), this.writer.getMaxFrameSize());
                 j12 = iMin;
                 this.writeBytesTotal += j12;
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             }
             byteCount -= j12;
             this.writer.data(outFinished && byteCount == 0, streamId, buffer, iMin);
@@ -1239,7 +1239,7 @@ public final class Http2Connection implements Closeable, Lockable {
         TaskQueue.execute$default(this.writerQueue, this.connectionName + '[' + streamId + "] writeSynReset", 0L, false, new Function0() { // from class: okhttp3.internal.http2.e
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return Http2Connection.writeSynResetLater$lambda$0(this.f27472a, streamId, errorCode);
+                return Http2Connection.writeSynResetLater$lambda$0(this.f27981a, streamId, errorCode);
             }
         }, 6, null);
     }
@@ -1248,7 +1248,7 @@ public final class Http2Connection implements Closeable, Lockable {
         TaskQueue.execute$default(this.writerQueue, this.connectionName + '[' + streamId + "] windowUpdate", 0L, false, new Function0() { // from class: okhttp3.internal.http2.c
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return Http2Connection.writeWindowUpdateLater$lambda$0(this.f27469a, streamId, unacknowledgedBytesRead);
+                return Http2Connection.writeWindowUpdateLater$lambda$0(this.f27978a, streamId, unacknowledgedBytesRead);
             }
         }, 6, null);
     }
@@ -1279,7 +1279,7 @@ public final class Http2Connection implements Closeable, Lockable {
                                 if (http2Stream.isOpen()) {
                                     this.streams.put(Integer.valueOf(i10), http2Stream);
                                 }
-                                Unit unit = Unit.f22483a;
+                                Unit unit = Unit.f22938a;
                                 if (associatedStreamId == 0) {
                                     this.writer.headers(z10, i10, requestHeaders);
                                 } else {

@@ -6,37 +6,37 @@ import java.util.concurrent.TimeUnit;
 public final /* synthetic */ class y {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final /* synthetic */ int[] f7344a;
+    public static final /* synthetic */ int[] f7418a;
 
     static {
         int[] iArr = new int[TimeUnit.values().length];
-        f7344a = iArr;
+        f7418a = iArr;
         try {
             iArr[TimeUnit.NANOSECONDS.ordinal()] = 1;
         } catch (NoSuchFieldError unused) {
         }
         try {
-            f7344a[TimeUnit.MICROSECONDS.ordinal()] = 2;
+            f7418a[TimeUnit.MICROSECONDS.ordinal()] = 2;
         } catch (NoSuchFieldError unused2) {
         }
         try {
-            f7344a[TimeUnit.MILLISECONDS.ordinal()] = 3;
+            f7418a[TimeUnit.MILLISECONDS.ordinal()] = 3;
         } catch (NoSuchFieldError unused3) {
         }
         try {
-            f7344a[TimeUnit.SECONDS.ordinal()] = 4;
+            f7418a[TimeUnit.SECONDS.ordinal()] = 4;
         } catch (NoSuchFieldError unused4) {
         }
         try {
-            f7344a[TimeUnit.MINUTES.ordinal()] = 5;
+            f7418a[TimeUnit.MINUTES.ordinal()] = 5;
         } catch (NoSuchFieldError unused5) {
         }
         try {
-            f7344a[TimeUnit.HOURS.ordinal()] = 6;
+            f7418a[TimeUnit.HOURS.ordinal()] = 6;
         } catch (NoSuchFieldError unused6) {
         }
         try {
-            f7344a[TimeUnit.DAYS.ordinal()] = 7;
+            f7418a[TimeUnit.DAYS.ordinal()] = 7;
         } catch (NoSuchFieldError unused7) {
         }
     }

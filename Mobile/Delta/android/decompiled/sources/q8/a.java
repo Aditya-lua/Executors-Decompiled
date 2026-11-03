@@ -20,39 +20,39 @@ import ua.f;
 public class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public j9.a f29281a;
+    public j9.a f29634a;
     public f b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f29282c;
+    public boolean f29635c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Object f29283d = new Object();
+    public final Object f29636d = new Object();
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public c f29284e;
+    public c f29637e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final Context f29285f;
+    public final Context f29638f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final long f29286g;
+    public final long f29639g;
 
     /* JADX INFO: renamed from: q8.a$a, reason: collision with other inner class name */
-    public static final class C0515a {
+    public static final class C0514a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final String f29287a;
+        public final String f29640a;
         public final boolean b;
 
         @Deprecated
-        public C0515a(String str, boolean z10) {
-            this.f29287a = str;
+        public C0514a(String str, boolean z10) {
+            this.f29640a = str;
             this.b = z10;
         }
 
         public String a() {
-            return this.f29287a;
+            return this.f29640a;
         }
 
         public boolean b() {
@@ -61,7 +61,7 @@ public class a {
 
         @NonNull
         public String toString() {
-            String str = this.f29287a;
+            String str = this.f29640a;
             boolean z10 = this.b;
             StringBuilder sb2 = new StringBuilder(String.valueOf(str).length() + 7);
             sb2.append("{");
@@ -79,21 +79,21 @@ public class a {
         if (z10 && (applicationContext = context.getApplicationContext()) != null) {
             context = applicationContext;
         }
-        this.f29285f = context;
-        this.f29282c = false;
-        this.f29286g = j10;
+        this.f29638f = context;
+        this.f29635c = false;
+        this.f29639g = j10;
     }
 
     @NonNull
-    public static C0515a a(@NonNull Context context) {
+    public static C0514a a(@NonNull Context context) {
         a aVar = new a(context, -1L, true, false);
         try {
             long jElapsedRealtime = SystemClock.elapsedRealtime();
             aVar.d(false);
-            C0515a c0515aF = aVar.f(-1);
-            aVar.e(c0515aF, true, 0.0f, SystemClock.elapsedRealtime() - jElapsedRealtime, "", null);
+            C0514a c0514aF = aVar.f(-1);
+            aVar.e(c0514aF, true, 0.0f, SystemClock.elapsedRealtime() - jElapsedRealtime, "", null);
             aVar.c();
-            return c0515aF;
+            return c0514aF;
         } catch (Throwable th2) {
             try {
                 aVar.e(null, true, 0.0f, -1L, "", th2);
@@ -112,19 +112,19 @@ public class a {
         m.k("Calling this from your main thread can lead to deadlock");
         synchronized (this) {
             try {
-                if (this.f29285f == null || this.f29281a == null) {
+                if (this.f29638f == null || this.f29634a == null) {
                     return;
                 }
                 try {
-                    if (this.f29282c) {
-                        t9.a.b().c(this.f29285f, this.f29281a);
+                    if (this.f29635c) {
+                        t9.a.b().c(this.f29638f, this.f29634a);
                     }
                 } catch (Throwable th2) {
                     Log.i("AdvertisingIdClient", "AdvertisingIdClient unbindService failed.", th2);
                 }
-                this.f29282c = false;
+                this.f29635c = false;
                 this.b = null;
-                this.f29281a = null;
+                this.f29634a = null;
             } catch (Throwable th3) {
                 throw th3;
             }
@@ -136,10 +136,10 @@ public class a {
         m.k("Calling this from your main thread can lead to deadlock");
         synchronized (this) {
             try {
-                if (this.f29282c) {
+                if (this.f29635c) {
                     c();
                 }
-                Context context = this.f29285f;
+                Context context = this.f29638f;
                 try {
                     context.getPackageManager().getPackageInfo(BuildConfig.STORE_PACKAGE, 0);
                     int iH = j9.d.f().h(context, 12451000);
@@ -153,10 +153,10 @@ public class a {
                         if (!t9.a.b().a(context, intent, aVar, 1)) {
                             throw new IOException("Connection failure");
                         }
-                        this.f29281a = aVar;
+                        this.f29634a = aVar;
                         try {
                             this.b = e.r2(aVar.a(10000L, TimeUnit.MILLISECONDS));
-                            this.f29282c = true;
+                            this.f29635c = true;
                             if (z10) {
                                 g();
                             }
@@ -178,15 +178,15 @@ public class a {
     }
 
     @VisibleForTesting
-    public final boolean e(C0515a c0515a, boolean z10, float f10, long j10, String str, Throwable th2) {
+    public final boolean e(C0514a c0514a, boolean z10, float f10, long j10, String str, Throwable th2) {
         if (Math.random() > 0.0d) {
             return false;
         }
         HashMap map = new HashMap();
         map.put("app_context", "1");
-        if (c0515a != null) {
-            map.put("limit_ad_tracking", true != c0515a.b() ? "0" : "1");
-            String strA = c0515a.a();
+        if (c0514a != null) {
+            map.put("limit_ad_tracking", true != c0514a.b() ? "0" : "1");
+            String strA = c0514a.a();
             if (strA != null) {
                 map.put("ad_id_size", Integer.toString(strA.length()));
             }
@@ -200,31 +200,31 @@ public class a {
         return true;
     }
 
-    public final C0515a f(int i10) {
-        C0515a c0515a;
+    public final C0514a f(int i10) {
+        C0514a c0514a;
         m.k("Calling this from your main thread can lead to deadlock");
         synchronized (this) {
             try {
-                if (!this.f29282c) {
-                    synchronized (this.f29283d) {
-                        c cVar = this.f29284e;
-                        if (cVar == null || !cVar.f29291d) {
+                if (!this.f29635c) {
+                    synchronized (this.f29636d) {
+                        c cVar = this.f29637e;
+                        if (cVar == null || !cVar.f29644d) {
                             throw new IOException("AdvertisingIdClient is not connected.");
                         }
                     }
                     try {
                         d(false);
-                        if (!this.f29282c) {
+                        if (!this.f29635c) {
                             throw new IOException("AdvertisingIdClient cannot reconnect.");
                         }
                     } catch (Exception e10) {
                         throw new IOException("AdvertisingIdClient cannot reconnect.", e10);
                     }
                 }
-                m.l(this.f29281a);
+                m.l(this.f29634a);
                 m.l(this.b);
                 try {
-                    c0515a = new C0515a(this.b.zzc(), this.b.B(true));
+                    c0514a = new C0514a(this.b.zzc(), this.b.B(true));
                 } catch (RemoteException e11) {
                     Log.i("AdvertisingIdClient", "GMS remote exception ", e11);
                     throw new IOException("Remote exception");
@@ -234,7 +234,7 @@ public class a {
             }
         }
         g();
-        return c0515a;
+        return c0514a;
     }
 
     public final void finalize() throws Throwable {
@@ -243,18 +243,18 @@ public class a {
     }
 
     public final void g() {
-        synchronized (this.f29283d) {
-            c cVar = this.f29284e;
+        synchronized (this.f29636d) {
+            c cVar = this.f29637e;
             if (cVar != null) {
-                cVar.f29290c.countDown();
+                cVar.f29643c.countDown();
                 try {
-                    this.f29284e.join();
+                    this.f29637e.join();
                 } catch (InterruptedException unused) {
                 }
             }
-            long j10 = this.f29286g;
+            long j10 = this.f29639g;
             if (j10 > 0) {
-                this.f29284e = new c(this, j10);
+                this.f29637e = new c(this, j10);
             }
         }
     }

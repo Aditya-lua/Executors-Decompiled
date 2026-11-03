@@ -97,7 +97,7 @@ public final class n implements m {
             List<j4.b> listQ0 = b1.g.q0(w2Var);
             n1 n1VarD = t3VarG.d();
             int iO = w2Var.l().o(0);
-            Range<Integer> rangeZ = w2Var.l().z(t3.f24861a);
+            Range<Integer> rangeZ = w2Var.l().z(t3.f25682a);
             if (rangeZ == null) {
                 throw new IllegalArgumentException("Required value was null.");
             }
@@ -134,7 +134,7 @@ public final class n implements m {
                     throw new IllegalArgumentException("Required value was null.");
                 }
                 f.b bVar2 = bVar;
-                i4<?> i4VarI = w2Var.I(cameraInfoInternal, bVar2.f30432a, bVar2.b);
+                i4<?> i4VarI = w2Var.I(cameraInfoInternal, bVar2.f30979a, bVar2.b);
                 Intrinsics.checkNotNullExpressionValue(i4VarI, "mergeConfigs(...)");
                 linkedHashMap2.put(i4VarI, w2Var);
                 List<Size> listM = oVar.m(i4VarI);

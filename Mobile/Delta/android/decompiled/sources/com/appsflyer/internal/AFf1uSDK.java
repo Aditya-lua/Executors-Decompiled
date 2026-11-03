@@ -46,7 +46,7 @@ public final class AFf1uSDK extends AFf1tSDK {
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
     @Nullable
-    public Map<? extends String, ? extends Object> f5361v;
+    public Map<? extends String, ? extends Object> f5434v;
 
     @Nullable
     private final AFh1sSDK values;
@@ -127,19 +127,19 @@ public final class AFf1uSDK extends AFf1tSDK {
         if (aFh1xSDK.unregisterClient.AFKeystoreWrapper.AFLogger("appsFlyerCount", 0) == 1) {
             long jCurrentTimeMillis = System.currentTimeMillis();
             aFh1xSDK.afErrorLog = jCurrentTimeMillis;
-            long j10 = aFh1xSDK.f5410e;
+            long j10 = aFh1xSDK.f5483e;
             if (j10 != 0) {
-                aFh1xSDK.f5409d.put("from_fg", Long.valueOf(jCurrentTimeMillis - j10));
-                aFh1xSDK.AFKeystoreWrapper.d("first_launch", new JSONObject(aFh1xSDK.f5409d).toString());
+                aFh1xSDK.f5482d.put("from_fg", Long.valueOf(jCurrentTimeMillis - j10));
+                aFh1xSDK.AFKeystoreWrapper.d("first_launch", new JSONObject(aFh1xSDK.f5482d).toString());
             } else {
                 AFLogger.INSTANCE.i(LogTag.GENERAL, "Metrics: fg ts is missing");
             }
         }
-        Object obj = aFh1pSDK.f5399d.get("meta");
+        Object obj = aFh1pSDK.f5472d.get("meta");
         Map map = kotlin.jvm.internal.h0.l(obj) ? (Map) obj : null;
         if (map == null) {
             map = new HashMap();
-            Map<String, Object> map2 = aFh1pSDK.f5399d;
+            Map<String, Object> map2 = aFh1pSDK.f5472d;
             Intrinsics.checkNotNullExpressionValue(map2, "");
             map2.put("meta", map);
         }
@@ -151,7 +151,7 @@ public final class AFf1uSDK extends AFf1tSDK {
         if (aFh1bSDKD != null) {
             HashMap map3 = new HashMap();
             map3.put("cdn_token", aFh1bSDKD.AFKeystoreWrapper);
-            String str = aFh1bSDKD.f5389d;
+            String str = aFh1bSDKD.f5462d;
             if (str != null) {
                 map3.put("c_ver", str);
             }
@@ -167,25 +167,25 @@ public final class AFf1uSDK extends AFf1tSDK {
             if (i11 > 0) {
                 map3.put("res_code", Integer.valueOf(i11));
             }
-            if (aFh1bSDKD.f5390e != null) {
+            if (aFh1bSDKD.f5463e != null) {
                 StringBuilder sb2 = new StringBuilder();
-                sb2.append(aFh1bSDKD.f5390e.getClass().getSimpleName());
+                sb2.append(aFh1bSDKD.f5463e.getClass().getSimpleName());
                 sb2.append(": ");
-                sb2.append(aFh1bSDKD.f5390e.getMessage());
+                sb2.append(aFh1bSDKD.f5463e.getMessage());
                 map3.put("error", sb2.toString());
             }
             AFh1dSDK aFh1dSDK = aFh1bSDKD.force;
             if (aFh1dSDK != null) {
                 map3.put("sig", aFh1dSDK.toString());
             }
-            String str2 = aFh1bSDKD.f5391w;
+            String str2 = aFh1bSDKD.f5464w;
             if (str2 != null) {
                 map3.put("cdn_cache_status", str2);
             }
             map.put("rc", map3);
         }
         AFg1rSDK w5 = getW();
-        Map<String, Object> map4 = aFh1pSDK.f5399d;
+        Map<String, Object> map4 = aFh1pSDK.f5472d;
         Intrinsics.checkNotNullExpressionValue(map4, "");
         w5.registerClient(map4);
         if (i10 == 1) {
@@ -196,7 +196,7 @@ public final class AFf1uSDK extends AFf1tSDK {
             if (!map5.isEmpty()) {
                 map.put("ddl", map5);
             }
-            HashMap map6 = new HashMap(this.afErrorLog.f5409d);
+            HashMap map6 = new HashMap(this.afErrorLog.f5482d);
             Intrinsics.checkNotNull(map6);
             if (!map6.isEmpty()) {
                 map.put("first_launch", map6);
@@ -204,7 +204,7 @@ public final class AFf1uSDK extends AFf1tSDK {
         } else if (i10 == 2) {
             AFh1xSDK aFh1xSDK3 = this.afErrorLog;
             aFh1xSDK3.AFKeystoreWrapper.AFLogger("first_launch");
-            HashMap map7 = new HashMap(aFh1xSDK3.f5409d);
+            HashMap map7 = new HashMap(aFh1xSDK3.f5482d);
             Intrinsics.checkNotNull(map7);
             if (!map7.isEmpty()) {
                 map.put("first_launch", map7);
@@ -219,7 +219,7 @@ public final class AFf1uSDK extends AFf1tSDK {
             }
         }
         if (map.isEmpty()) {
-            aFh1pSDK.f5399d.remove("meta");
+            aFh1pSDK.f5472d.remove("meta");
         }
         if (i10 <= 2) {
             if (i10 == 1) {
@@ -236,7 +236,7 @@ public final class AFf1uSDK extends AFf1tSDK {
                     arrayList.add(referrer.map);
                 } else if (i12 != 2) {
                     if (i12 != 3) {
-                        throw new jt.l();
+                        throw new gt.l();
                     }
                 } else if (i10 == 2 && !z10) {
                     HashMap map8 = new HashMap();
@@ -249,7 +249,7 @@ public final class AFf1uSDK extends AFf1tSDK {
             if (!arrayList.isEmpty()) {
                 aFh1pSDK.AFKeystoreWrapper(Payload.RFRS, arrayList);
             }
-            Object obj2 = this.f5361v;
+            Object obj2 = this.f5434v;
             if (obj2 != null) {
                 aFh1pSDK.AFKeystoreWrapper("fb_ddl", obj2);
             }
@@ -274,8 +274,8 @@ public final class AFf1uSDK extends AFf1tSDK {
             long jCurrentTimeMillis = System.currentTimeMillis();
             long j10 = aFh1xSDK.afErrorLog;
             if (j10 != 0) {
-                aFh1xSDK.f5409d.put("net", Long.valueOf(jCurrentTimeMillis - j10));
-                aFh1xSDK.AFKeystoreWrapper.d("first_launch", new JSONObject(aFh1xSDK.f5409d).toString());
+                aFh1xSDK.f5482d.put("net", Long.valueOf(jCurrentTimeMillis - j10));
+                aFh1xSDK.AFKeystoreWrapper.d("first_launch", new JSONObject(aFh1xSDK.f5482d).toString());
             } else {
                 AFLogger.INSTANCE.i(LogTag.GENERAL, "Metrics collection skipped: launch start timestamp not recorded");
             }
@@ -292,7 +292,7 @@ public final class AFf1uSDK extends AFf1tSDK {
             aFh1sSDK.unregisterClient(this, new Function0() { // from class: com.appsflyer.internal.p0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return AFf1uSDK.d(this.f5514a);
+                    return AFf1uSDK.d(this.f5587a);
                 }
             });
         }
@@ -315,6 +315,6 @@ public final class AFf1uSDK extends AFf1tSDK {
     /* JADX INFO: Access modifiers changed from: private */
     public static final Unit d(AFf1uSDK aFf1uSDK) {
         aFf1uSDK.getEntries.d(new AFh1kSDK());
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 }

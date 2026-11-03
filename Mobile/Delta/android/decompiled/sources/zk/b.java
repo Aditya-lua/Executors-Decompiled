@@ -1,10 +1,13 @@
 package zk;
 
-import mv.s;
-import okhttp3.ResponseBody;
+import com.roblox.platform.NoObfuscate;
 
 /* JADX INFO: loaded from: classes2.dex */
-public interface b {
-    @mv.f("v1/themes/User/{userId}")
-    jv.d<ResponseBody> a(@s("userId") long j10);
+public class b implements NoObfuscate {
+    public final long[] conversation_ids;
+
+    @Deprecated
+    public b(long[] jArr) {
+        this.conversation_ids = jArr;
+    }
 }

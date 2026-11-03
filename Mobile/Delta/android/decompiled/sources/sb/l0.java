@@ -9,10 +9,10 @@ import java.util.concurrent.Executor;
 public final class l0 implements Executor {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Handler f30590a = new kb.a(Looper.getMainLooper());
+    public final Handler f31137a = new kb.a(Looper.getMainLooper());
 
     @Override // java.util.concurrent.Executor
     public final void execute(@NonNull Runnable runnable) {
-        this.f30590a.post(runnable);
+        this.f31137a.post(runnable);
     }
 }

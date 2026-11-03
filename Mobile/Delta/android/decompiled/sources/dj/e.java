@@ -1,60 +1,199 @@
 package dj;
 
 import android.content.Context;
-import android.database.Cursor;
-import android.net.Uri;
-import com.roblox.client.provider.ShellConfigurationContentProvider;
+import rg.q0;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class e extends dj.a {
+public class e extends cj.p implements cj.j {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ShellConfigurationContentProvider f14730a;
-    public Context b;
+    public final b f14852a;
+    public final String b;
 
-    public class a extends cj.a {
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public final String f14853c;
+
+    public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ String f14731a;
-        public final /* synthetic */ String b;
+        public static final /* synthetic */ int[] f14854a;
 
-        public a(String str, String str2) {
-            this.f14731a = str;
-            this.b = str2;
-        }
-
-        @Override // cj.a, android.database.AbstractCursor, android.database.Cursor
-        public String[] getColumnNames() {
-            return new String[]{"dev_branch", "dev_commit"};
-        }
-
-        @Override // cj.a, android.database.AbstractCursor, android.database.Cursor
-        public String getString(int i10) {
-            if (i10 == getColumnIndex("dev_branch")) {
-                return this.f14731a;
+        static {
+            int[] iArr = new int[b.values().length];
+            f14854a = iArr;
+            try {
+                iArr[b.SUCCESS.ordinal()] = 1;
+            } catch (NoSuchFieldError unused) {
             }
-            if (i10 == getColumnIndex("dev_commit")) {
-                return this.b;
+            try {
+                f14854a[b.ALREADY_ACKNOWLEDGED.ordinal()] = 2;
+            } catch (NoSuchFieldError unused2) {
             }
-            return null;
+            try {
+                f14854a[b.IS_EMULATOR.ordinal()] = 3;
+            } catch (NoSuchFieldError unused3) {
+            }
+            try {
+                f14854a[b.VALIDATION_ERROR.ordinal()] = 4;
+            } catch (NoSuchFieldError unused4) {
+            }
+            try {
+                f14854a[b.VALIDATION_RETRY.ordinal()] = 5;
+            } catch (NoSuchFieldError unused5) {
+            }
+            try {
+                f14854a[b.VALIDATION_LIMIT.ordinal()] = 6;
+            } catch (NoSuchFieldError unused6) {
+            }
+            try {
+                f14854a[b.VALIDATION_LIMIT_UNDER_13.ordinal()] = 7;
+            } catch (NoSuchFieldError unused7) {
+            }
+            try {
+                f14854a[b.REQUEST_BALANCE_ERROR.ordinal()] = 8;
+            } catch (NoSuchFieldError unused8) {
+            }
+            try {
+                f14854a[b.USER_CANCELLED.ordinal()] = 9;
+            } catch (NoSuchFieldError unused9) {
+            }
+            try {
+                f14854a[b.FAILED_PRODUCT_NOT_FOUND.ordinal()] = 10;
+            } catch (NoSuchFieldError unused10) {
+            }
+            try {
+                f14854a[b.ACKNOWLEDGE_ERROR.ordinal()] = 11;
+            } catch (NoSuchFieldError unused11) {
+            }
+            try {
+                f14854a[b.IAB_LAUNCH_PURCHASE_FLOW_ERROR.ordinal()] = 12;
+            } catch (NoSuchFieldError unused12) {
+            }
+            try {
+                f14854a[b.IAB_HANDLE_ACTIVITY_RESULT_ERROR.ordinal()] = 13;
+            } catch (NoSuchFieldError unused13) {
+            }
+            try {
+                f14854a[b.IAB_QUERY_INVENTORY_ERROR.ordinal()] = 14;
+            } catch (NoSuchFieldError unused14) {
+            }
+            try {
+                f14854a[b.IAB_CONSUME_ERROR.ordinal()] = 15;
+            } catch (NoSuchFieldError unused15) {
+            }
+            try {
+                f14854a[b.RECEIPT_VERIFICATION_ERROR.ordinal()] = 16;
+            } catch (NoSuchFieldError unused16) {
+            }
+            try {
+                f14854a[b.RECEIPT_EMPTY.ordinal()] = 17;
+            } catch (NoSuchFieldError unused17) {
+            }
+            try {
+                f14854a[b.EMPTY_USERNAME.ordinal()] = 18;
+            } catch (NoSuchFieldError unused18) {
+            }
+            try {
+                f14854a[b.FAILED_PURCHASE_RESPONSE.ordinal()] = 19;
+            } catch (NoSuchFieldError unused19) {
+            }
+            try {
+                f14854a[b.FAILED_PURCHASE_UPDATE_RESPONSE.ordinal()] = 20;
+            } catch (NoSuchFieldError unused20) {
+            }
+            try {
+                f14854a[b.UNKNOWN.ordinal()] = 21;
+            } catch (NoSuchFieldError unused21) {
+            }
+            try {
+                f14854a[b.FAILED_NOT_ALLOWED.ordinal()] = 22;
+            } catch (NoSuchFieldError unused22) {
+            }
         }
     }
 
-    public e(ShellConfigurationContentProvider shellConfigurationContentProvider, Context context) {
-        this.f14730a = shellConfigurationContentProvider;
-        this.b = context;
+    public enum b {
+        SUCCESS,
+        IS_EMULATOR,
+        VALIDATION_ERROR,
+        VALIDATION_RETRY,
+        VALIDATION_LIMIT,
+        VALIDATION_LIMIT_UNDER_13,
+        REQUEST_BALANCE_ERROR,
+        ACKNOWLEDGE_ERROR,
+        CONSUME_ERROR,
+        USER_CANCELLED,
+        ALREADY_ACKNOWLEDGED,
+        IAB_LAUNCH_PURCHASE_FLOW_ERROR,
+        IAB_HANDLE_ACTIVITY_RESULT_ERROR,
+        IAB_QUERY_INVENTORY_ERROR,
+        IAB_CONSUME_ERROR,
+        RECEIPT_VERIFICATION_ERROR,
+        RECEIPT_EMPTY,
+        EMPTY_USERNAME,
+        FAILED_PURCHASE_RESPONSE,
+        FAILED_PURCHASE_UPDATE_RESPONSE,
+        FAILED_NOT_ALLOWED,
+        FAILED_PRODUCT_NOT_FOUND,
+        UNKNOWN
     }
 
-    @Override // dj.i
-    public gh.a a(i.a aVar) {
-        if (aVar == i.a.GET) {
-            return gh.a.GetDevBranchAndCommit;
+    public e(b bVar, String str) {
+        this(bVar, str, "");
+    }
+
+    @Override // cj.j
+    public String b() {
+        return this.f14853c;
+    }
+
+    @Override // cj.p
+    public CharSequence c(Context context) {
+        context.getString(q0.W);
+        switch (a.f14854a[this.f14852a.ordinal()]) {
+            case 1:
+            case 2:
+                return context.getText(q0.f30573s1);
+            case 3:
+                return context.getString(q0.f30561o1);
+            case 4:
+                return context.getString(q0.f30564p1);
+            case 5:
+                return context.getText(q0.f30555m1);
+            case 6:
+                return context.getString(q0.f30585w1);
+            case 7:
+                return context.getText(q0.f30588x1);
+            case 8:
+                return context.getString(q0.f30564p1);
+            case 9:
+                return context.getString(q0.f30558n1);
+            default:
+                return context.getString(q0.f30564p1);
         }
-        return null;
     }
 
-    @Override // dj.i
-    public Cursor b(Uri uri) {
-        return new a(this.f14730a.d().e(), this.f14730a.d().f());
+    @Override // cj.p
+    public boolean d() {
+        b bVar = this.f14852a;
+        return bVar == b.SUCCESS || bVar == b.ALREADY_ACKNOWLEDGED;
+    }
+
+    @Override // cj.p
+    public boolean f() {
+        int i10 = a.f14854a[this.f14852a.ordinal()];
+        return (i10 == 1 || i10 == 2 || i10 == 5 || i10 == 7) ? false : true;
+    }
+
+    @Override // cj.j
+    /* JADX INFO: renamed from: g, reason: merged with bridge method [inline-methods] */
+    public String a() {
+        return this.b;
+    }
+
+    public e(b bVar, String str, String str2) {
+        this.f14852a = bVar;
+        this.b = str;
+        this.f14853c = str2 == null ? "" : str2;
     }
 }

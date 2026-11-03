@@ -6,19 +6,19 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class a0 extends x {
     public a0() {
-        this.f6892a.add(n0.APPLY);
-        this.f6892a.add(n0.BLOCK);
-        this.f6892a.add(n0.BREAK);
-        this.f6892a.add(n0.CASE);
-        this.f6892a.add(n0.DEFAULT);
-        this.f6892a.add(n0.CONTINUE);
-        this.f6892a.add(n0.DEFINE_FUNCTION);
-        this.f6892a.add(n0.FN);
-        this.f6892a.add(n0.IF);
-        this.f6892a.add(n0.QUOTE);
-        this.f6892a.add(n0.RETURN);
-        this.f6892a.add(n0.SWITCH);
-        this.f6892a.add(n0.TERNARY);
+        this.f6966a.add(n0.APPLY);
+        this.f6966a.add(n0.BLOCK);
+        this.f6966a.add(n0.BREAK);
+        this.f6966a.add(n0.CASE);
+        this.f6966a.add(n0.DEFAULT);
+        this.f6966a.add(n0.CONTINUE);
+        this.f6966a.add(n0.DEFINE_FUNCTION);
+        this.f6966a.add(n0.FN);
+        this.f6966a.add(n0.IF);
+        this.f6966a.add(n0.QUOTE);
+        this.f6966a.add(n0.RETURN);
+        this.f6966a.add(n0.SWITCH);
+        this.f6966a.add(n0.TERNARY);
     }
 
     public static q c(u4 u4Var, List list) {
@@ -55,7 +55,7 @@ public final class a0 extends x {
         }
         if (iOrdinal == 15) {
             v5.a(n0.BREAK.name(), 0, list);
-            return q.Bo;
+            return q.Ao;
         }
         if (iOrdinal == 25) {
             return c(u4Var, list);
@@ -65,7 +65,7 @@ public final class a0 extends x {
             q qVarA3 = u4Var.a((q) list.get(0));
             q qVarA4 = u4Var.a((q) list.get(1));
             q qVarA5 = list.size() > 2 ? u4Var.a((q) list.get(2)) : null;
-            q qVar = q.f6743zo;
+            q qVar = q.f6816yo;
             q qVarB = qVarA3.zze().booleanValue() ? u4Var.b((f) qVarA4) : qVarA5 != null ? u4Var.b((f) qVarA5) : qVar;
             return true != (qVarB instanceof h) ? qVar : qVarB;
         }
@@ -74,7 +74,7 @@ public final class a0 extends x {
         }
         if (iOrdinal == 57) {
             if (list.isEmpty()) {
-                return q.Do;
+                return q.Co;
             }
             v5.a(n0.RETURN.name(), 1, list);
             return new h("return", u4Var.a((q) list.get(0)));
@@ -108,7 +108,7 @@ public final class a0 extends x {
                     if (z10 || qVarA6.equals(u4Var.a(fVar.m(i10)))) {
                         q qVarA9 = u4Var.a(fVar2.m(i10));
                         if (qVarA9 instanceof h) {
-                            return ((h) qVarA9).c().equals("break") ? q.f6743zo : qVarA9;
+                            return ((h) qVarA9).c().equals("break") ? q.f6816yo : qVarA9;
                         }
                         z10 = true;
                     } else {
@@ -124,7 +124,7 @@ public final class a0 extends x {
                         }
                     }
                 }
-                return q.f6743zo;
+                return q.f6816yo;
             }
             if (iOrdinal == 61) {
                 v5.a(n0.TERNARY.name(), 3, list);
@@ -135,7 +135,7 @@ public final class a0 extends x {
                     return u4Var.c().b(new f(list));
                 case 12:
                     v5.a(n0.BREAK.name(), 0, list);
-                    return q.Co;
+                    return q.Bo;
                 case 13:
                     break;
                 default:
@@ -143,9 +143,9 @@ public final class a0 extends x {
             }
         }
         if (list.isEmpty()) {
-            return q.f6743zo;
+            return q.f6816yo;
         }
         q qVarA11 = u4Var.a((q) list.get(0));
-        return qVarA11 instanceof f ? u4Var.b((f) qVarA11) : q.f6743zo;
+        return qVarA11 instanceof f ? u4Var.b((f) qVarA11) : q.f6816yo;
     }
 }

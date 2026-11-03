@@ -11,19 +11,19 @@ public enum z7 implements v4 {
 
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f7365a;
+    public final int f7439a;
 
     z7(int i10) {
-        this.f7365a = i10;
+        this.f7439a = i10;
     }
 
     @Override // java.lang.Enum
     public final String toString() {
-        return Integer.toString(this.f7365a);
+        return Integer.toString(this.f7439a);
     }
 
     @Override // com.google.android.gms.internal.play_billing.v4
     public final int zza() {
-        return this.f7365a;
+        return this.f7439a;
     }
 }

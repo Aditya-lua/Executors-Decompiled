@@ -139,7 +139,7 @@ public class BacktraceDatabaseContext implements DatabaseContext {
         Iterator<Map.Entry<Integer, Queue<BacktraceDatabaseRecord>>> it = this.batchRetry.entrySet().iterator();
         while (it.hasNext()) {
             for (BacktraceDatabaseRecord backtraceDatabaseRecord2 : it.next().getValue()) {
-                if (backtraceDatabaseRecord2 != null && backtraceDatabaseRecord2.f4079id == backtraceDatabaseRecord.f4079id) {
+                if (backtraceDatabaseRecord2 != null && backtraceDatabaseRecord2.f3977id == backtraceDatabaseRecord.f3977id) {
                     return true;
                 }
             }
@@ -164,7 +164,7 @@ public class BacktraceDatabaseContext implements DatabaseContext {
                 Iterator<BacktraceDatabaseRecord> it = queue.iterator();
                 while (it.hasNext()) {
                     BacktraceDatabaseRecord next = it.next();
-                    if (next != null && backtraceDatabaseRecord.f4079id.equals(next.f4079id)) {
+                    if (next != null && backtraceDatabaseRecord.f3977id.equals(next.f3977id)) {
                         next.delete();
                         try {
                             it.remove();
@@ -172,7 +172,7 @@ public class BacktraceDatabaseContext implements DatabaseContext {
                             this.totalSize.addAndGet(-next.getSize());
                             return true;
                         } catch (Exception e10) {
-                            BacktraceLogger.d(LOG_TAG, "Exception on removing record " + next.f4079id + " from db context: " + e10.getMessage());
+                            BacktraceLogger.d(LOG_TAG, "Exception on removing record " + next.f3977id + " from db context: " + e10.getMessage());
                         }
                     }
                 }

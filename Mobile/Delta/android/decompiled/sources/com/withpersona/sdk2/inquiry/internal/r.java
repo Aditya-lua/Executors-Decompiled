@@ -9,8 +9,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0010\b\u0000\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0001!BE\b\u0007\u0012\b\b\u0001\u0010\u0004\u001a\u00020\u0003\u0012\n\b\u0001\u0010\u0005\u001a\u0004\u0018\u00010\u0003\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0003\u0012\b\b\u0001\u0010\u0007\u001a\u00020\u0003\u0012\b\b\u0001\u0010\t\u001a\u00020\b\u0012\u0006\u0010\u000b\u001a\u00020\n¢\u0006\u0004\b\f\u0010\rJ\u0015\u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\u00020\u000eH\u0016¢\u0006\u0004\b\u000f\u0010\u0010J\u001b\u0010\u0013\u001a\u00020\u00122\n\u0010\u0011\u001a\u0006\u0012\u0002\b\u00030\u0001H\u0016¢\u0006\u0004\b\u0013\u0010\u0014R\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b\u0015\u0010\u0016\u001a\u0004\b\u0017\u0010\u0018R\u0016\u0010\u0005\u001a\u0004\u0018\u00010\u00038\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0013\u0010\u0016R\u0017\u0010\u0006\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b\u0019\u0010\u0016\u001a\u0004\b\u001a\u0010\u0018R\u0017\u0010\u0007\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b\u001b\u0010\u0016\u001a\u0004\b\u0019\u0010\u0018R\u0017\u0010\t\u001a\u00020\b8\u0006¢\u0006\f\n\u0004\b\u001a\u0010\u001c\u001a\u0004\b\u001d\u0010\u001eR\u0017\u0010\u000b\u001a\u00020\n8\u0006¢\u0006\f\n\u0004\b\u001d\u0010\u001f\u001a\u0004\b\u001b\u0010 ¨\u0006\""}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/r;", "Lvr/h;", "Lcom/withpersona/sdk2/inquiry/internal/network/h;", "", "sessionToken", "trackingEventsUrl", "inquiryId", "fromStep", "Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;", "inquirySessionConfig", "Lcom/withpersona/sdk2/inquiry/internal/network/e;", "inquiryApiHelper", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;Lcom/withpersona/sdk2/inquiry/internal/network/e;)V", "Lnu/h;", "run", "()Lnu/h;", "otherWorker", "", "c", "(Lvr/h;)Z", "b", "Ljava/lang/String;", "h", "()Ljava/lang/String;", "d", "f", "e", "Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;", "g", "()Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;", "Lcom/withpersona/sdk2/inquiry/internal/network/e;", "()Lcom/withpersona/sdk2/inquiry/internal/network/e;", "a", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class r implements vr.h<com.withpersona.sdk2.inquiry.internal.network.h> {
+@Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0010\b\u0000\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0001\u0013BE\b\u0007\u0012\b\b\u0001\u0010\u0004\u001a\u00020\u0003\u0012\n\b\u0001\u0010\u0005\u001a\u0004\u0018\u00010\u0003\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0003\u0012\b\b\u0001\u0010\u0007\u001a\u00020\u0003\u0012\b\b\u0001\u0010\t\u001a\u00020\b\u0012\u0006\u0010\u000b\u001a\u00020\n¢\u0006\u0004\b\f\u0010\rJ\u0015\u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\u00020\u000eH\u0016¢\u0006\u0004\b\u000f\u0010\u0010J\u001b\u0010\u0013\u001a\u00020\u00122\n\u0010\u0011\u001a\u0006\u0012\u0002\b\u00030\u0001H\u0016¢\u0006\u0004\b\u0013\u0010\u0014R\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b\u0015\u0010\u0016\u001a\u0004\b\u0017\u0010\u0018R\u0016\u0010\u0005\u001a\u0004\u0018\u00010\u00038\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0019\u0010\u0016R\u0017\u0010\u0006\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b\u001a\u0010\u0016\u001a\u0004\b\u001b\u0010\u0018R\u0017\u0010\u0007\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b\u001c\u0010\u0016\u001a\u0004\b\u001a\u0010\u0018R\u0017\u0010\t\u001a\u00020\b8\u0006¢\u0006\f\n\u0004\b\u001b\u0010\u001d\u001a\u0004\b\u001e\u0010\u001fR\u0017\u0010\u000b\u001a\u00020\n8\u0006¢\u0006\f\n\u0004\b\u001e\u0010 \u001a\u0004\b\u001c\u0010!¨\u0006\""}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/r;", "Ltr/h;", "Lcom/withpersona/sdk2/inquiry/internal/network/h;", "", "sessionToken", "trackingEventsUrl", "inquiryId", "fromStep", "Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;", "inquirySessionConfig", "Lcom/withpersona/sdk2/inquiry/internal/network/e;", "inquiryApiHelper", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;Lcom/withpersona/sdk2/inquiry/internal/network/e;)V", "Llu/h;", "run", "()Llu/h;", "otherWorker", "", "a", "(Ltr/h;)Z", "b", "Ljava/lang/String;", "h", "()Ljava/lang/String;", "c", "d", "f", "e", "Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;", "g", "()Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;", "Lcom/withpersona/sdk2/inquiry/internal/network/e;", "()Lcom/withpersona/sdk2/inquiry/internal/network/e;", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class r implements tr.h<com.withpersona.sdk2.inquiry.internal.network.h> {
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull
@@ -42,27 +42,27 @@ public final class r implements vr.h<com.withpersona.sdk2.inquiry.internal.netwo
         r a(@NotNull String sessionToken, @Nullable String trackingEventsUrl, @NotNull String inquiryId, @NotNull String fromStep, @NotNull InquirySessionConfig inquirySessionConfig);
     }
 
-    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u0002*\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Lnu/i;", "Lcom/withpersona/sdk2/inquiry/internal/network/h;", "", "<anonymous>", "(Lnu/i;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.internal.TransitionBackWorker$run$1", f = "TransitionBackWorker.kt", l = {23, 22}, m = "invokeSuspend")
-    public static final class b extends pt.m implements Function2<nu.i<? super com.withpersona.sdk2.inquiry.internal.network.h>, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.internal.TransitionBackWorker$run$1", f = "TransitionBackWorker.kt", l = {23, 22}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u0002*\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Llu/i;", "Lcom/withpersona/sdk2/inquiry/internal/network/h;", "", "<anonymous>", "(Llu/i;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class b extends nt.m implements Function2<lu.i<? super com.withpersona.sdk2.inquiry.internal.network.h>, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f12078t;
+        public Object f12159t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public int f12079u;
+        public int f12160u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public /* synthetic */ Object f12080v;
+        public /* synthetic */ Object f12161v;
 
-        public b(nt.b<? super b> bVar) {
+        public b(lt.b<? super b> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             b bVar2 = r.this.new b(bVar);
-            bVar2.f12080v = obj;
+            bVar2.f12161v = obj;
             return bVar2;
         }
 
@@ -70,7 +70,7 @@ public final class r implements vr.h<com.withpersona.sdk2.inquiry.internal.netwo
         
             if (r2.emit(r13, r12) == r1) goto L16;
          */
-        @Override // pt.a
+        @Override // nt.a
         /*
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct add '--show-bad-code' argument
@@ -78,16 +78,16 @@ public final class r implements vr.h<com.withpersona.sdk2.inquiry.internal.netwo
         public final java.lang.Object invokeSuspend(java.lang.Object r13) {
             /*
                 r12 = this;
-                java.lang.Object r0 = r12.f12080v
-                nu.i r0 = (nu.i) r0
-                java.lang.Object r1 = ot.c.e()
-                int r2 = r12.f12079u
+                java.lang.Object r0 = r12.f12161v
+                lu.i r0 = (lu.i) r0
+                java.lang.Object r1 = mt.c.e()
+                int r2 = r12.f12160u
                 r3 = 2
                 r4 = 1
                 if (r2 == 0) goto L28
                 if (r2 == r4) goto L1f
                 if (r2 != r3) goto L17
-                jt.o.b(r13)
+                gt.o.b(r13)
                 r11 = r12
                 goto L74
             L17:
@@ -96,13 +96,13 @@ public final class r implements vr.h<com.withpersona.sdk2.inquiry.internal.netwo
                 r13.<init>(r0)
                 throw r13
             L1f:
-                java.lang.Object r2 = r12.f12078t
-                nu.i r2 = (nu.i) r2
-                jt.o.b(r13)
+                java.lang.Object r2 = r12.f12159t
+                lu.i r2 = (lu.i) r2
+                gt.o.b(r13)
                 r11 = r12
                 goto L62
             L28:
-                jt.o.b(r13)
+                gt.o.b(r13)
                 com.withpersona.sdk2.inquiry.internal.r r13 = com.withpersona.sdk2.inquiry.internal.r.this
                 com.withpersona.sdk2.inquiry.internal.network.e r5 = r13.getInquiryApiHelper()
                 com.withpersona.sdk2.inquiry.internal.r r13 = com.withpersona.sdk2.inquiry.internal.r.this
@@ -114,11 +114,11 @@ public final class r implements vr.h<com.withpersona.sdk2.inquiry.internal.netwo
                 com.withpersona.sdk2.inquiry.internal.r r13 = com.withpersona.sdk2.inquiry.internal.r.this
                 com.withpersona.sdk2.inquiry.shared.inquiry_session.InquirySessionConfig r9 = r13.getInquirySessionConfig()
                 com.withpersona.sdk2.inquiry.internal.r r13 = com.withpersona.sdk2.inquiry.internal.r.this
-                java.lang.String r10 = com.withpersona.sdk2.inquiry.internal.r.b(r13)
-                java.lang.Object r13 = pt.l.a(r0)
-                r12.f12080v = r13
-                r12.f12078t = r0
-                r12.f12079u = r4
+                java.lang.String r10 = com.withpersona.sdk2.inquiry.internal.r.c(r13)
+                java.lang.Object r13 = nt.l.a(r0)
+                r12.f12161v = r13
+                r12.f12159t = r0
+                r12.f12160u = r4
                 r11 = r12
                 java.lang.Object r13 = r5.p(r6, r7, r8, r9, r10, r11)
                 if (r13 != r1) goto L61
@@ -126,26 +126,26 @@ public final class r implements vr.h<com.withpersona.sdk2.inquiry.internal.netwo
             L61:
                 r2 = r0
             L62:
-                java.lang.Object r0 = pt.l.a(r0)
-                r11.f12080v = r0
+                java.lang.Object r0 = nt.l.a(r0)
+                r11.f12161v = r0
                 r0 = 0
-                r11.f12078t = r0
-                r11.f12079u = r3
+                r11.f12159t = r0
+                r11.f12160u = r3
                 java.lang.Object r13 = r2.emit(r13, r12)
                 if (r13 != r1) goto L74
             L73:
                 return r1
             L74:
-                kotlin.Unit r13 = kotlin.Unit.f22483a
+                kotlin.Unit r13 = kotlin.Unit.f22938a
                 return r13
             */
             throw new UnsupportedOperationException("Method not decompiled: com.withpersona.sdk2.inquiry.internal.r.b.invokeSuspend(java.lang.Object):java.lang.Object");
         }
 
         @Override // kotlin.jvm.functions.Function2
-        /* JADX INFO: renamed from: q, reason: merged with bridge method [inline-methods] */
-        public final Object invoke(nu.i<? super com.withpersona.sdk2.inquiry.internal.network.h> iVar, nt.b<? super Unit> bVar) {
-            return ((b) create(iVar, bVar)).invokeSuspend(Unit.f22483a);
+        /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
+        public final Object invoke(lu.i<? super com.withpersona.sdk2.inquiry.internal.network.h> iVar, lt.b<? super Unit> bVar) {
+            return ((b) create(iVar, bVar)).invokeSuspend(Unit.f22938a);
         }
     }
 
@@ -163,19 +163,19 @@ public final class r implements vr.h<com.withpersona.sdk2.inquiry.internal.netwo
         this.inquiryApiHelper = inquiryApiHelper;
     }
 
-    @Override // vr.h
-    public boolean a(@NotNull vr.h<?> hVar) {
-        return super.a(hVar);
-    }
-
-    @Override // vr.h
-    public boolean c(@NotNull vr.h<?> otherWorker) {
+    @Override // tr.h
+    public boolean a(@NotNull tr.h<?> otherWorker) {
         Intrinsics.checkNotNullParameter(otherWorker, "otherWorker");
         if (!(otherWorker instanceof r)) {
             return false;
         }
         r rVar = (r) otherWorker;
         return Intrinsics.c(this.sessionToken, rVar.sessionToken) && Intrinsics.c(this.inquiryId, rVar.inquiryId);
+    }
+
+    @Override // tr.h
+    public boolean b(@NotNull tr.h<?> hVar) {
+        return super.b(hVar);
     }
 
     @NotNull
@@ -208,9 +208,9 @@ public final class r implements vr.h<com.withpersona.sdk2.inquiry.internal.netwo
         return this.sessionToken;
     }
 
-    @Override // vr.h
+    @Override // tr.h
     @NotNull
-    public nu.h<com.withpersona.sdk2.inquiry.internal.network.h> run() {
-        return nu.j.w(new b(null));
+    public lu.h<com.withpersona.sdk2.inquiry.internal.network.h> run() {
+        return lu.j.w(new b(null));
     }
 }

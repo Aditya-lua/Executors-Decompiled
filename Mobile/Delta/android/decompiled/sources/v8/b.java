@@ -11,18 +11,18 @@ import va.n0;
 public abstract class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static WeakReference f32874a;
+    public static WeakReference f33442a;
 
     @NonNull
     public static synchronized b a(@NonNull Context context) {
         m.l(context);
-        WeakReference weakReference = f32874a;
+        WeakReference weakReference = f33442a;
         b bVar = weakReference == null ? null : (b) weakReference.get();
         if (bVar != null) {
             return bVar;
         }
         n0 n0Var = new n0(context.getApplicationContext());
-        f32874a = new WeakReference(n0Var);
+        f33442a = new WeakReference(n0Var);
         return n0Var;
     }
 

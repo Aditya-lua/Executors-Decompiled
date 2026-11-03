@@ -9,15 +9,15 @@ import java.util.concurrent.Callable;
 public final class eh extends k {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final x7 f6433c;
+    public final x7 f6506c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Map f6434d;
+    public final Map f6507d;
 
     public eh(x7 x7Var) {
         super("require");
-        this.f6434d = new HashMap();
-        this.f6433c = x7Var;
+        this.f6507d = new HashMap();
+        this.f6506c = x7Var;
     }
 
     @Override // com.google.android.gms.internal.measurement.k
@@ -25,11 +25,11 @@ public final class eh extends k {
         q qVar;
         v5.a("require", 1, list);
         String strZzc = u4Var.a((q) list.get(0)).zzc();
-        Map map = this.f6434d;
+        Map map = this.f6507d;
         if (map.containsKey(strZzc)) {
             return (q) map.get(strZzc);
         }
-        Map map2 = this.f6433c.f6897a;
+        Map map2 = this.f6506c.f6971a;
         if (map2.containsKey(strZzc)) {
             try {
                 qVar = (q) ((Callable) map2.get(strZzc)).call();
@@ -37,10 +37,10 @@ public final class eh extends k {
                 throw new IllegalStateException("Failed to create API implementation: ".concat(String.valueOf(strZzc)));
             }
         } else {
-            qVar = q.f6743zo;
+            qVar = q.f6816yo;
         }
         if (qVar instanceof k) {
-            this.f6434d.put(strZzc, (k) qVar);
+            this.f6507d.put(strZzc, (k) qVar);
         }
         return qVar;
     }

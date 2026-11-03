@@ -24,7 +24,7 @@ public final class t extends a5.b {
     public void b(@NotNull g5.c db2) {
         Intrinsics.checkNotNullParameter(db2, "db");
         if (this.endVersion >= 10) {
-            db2.s0("INSERT OR REPLACE INTO `Preference` (`key`, `long_value`) VALUES (@key, @long_value)", new Object[]{"reschedule_needed", 1});
+            db2.o0("INSERT OR REPLACE INTO `Preference` (`key`, `long_value`) VALUES (@key, @long_value)", new Object[]{"reschedule_needed", 1});
         } else {
             this.mContext.getSharedPreferences("androidx.work.util.preferences", 0).edit().putBoolean("reschedule_needed", true).apply();
         }

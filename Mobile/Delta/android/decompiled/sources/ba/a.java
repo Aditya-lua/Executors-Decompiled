@@ -17,20 +17,20 @@ import sb.k;
 public class a extends e<k9.a.d.c> {
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final k9.a.g f4057k;
+    public static final k9.a.g f3955k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final k9.a f4058l;
+    public static final k9.a f3956l;
 
     static {
         k9.a.g gVar = new k9.a.g();
-        f4057k = gVar;
-        f4058l = new k9.a("Fido.FIDO2_API", new s4(), gVar);
+        f3955k = gVar;
+        f3956l = new k9.a("Fido.FIDO2_API", new s4(), gVar);
     }
 
     @Deprecated
     public a(@NonNull Context context) {
-        super(context, (k9.a<k9.a.d.c>) f4058l, k9.a.d.Jo, new l9.a());
+        super(context, (k9.a<k9.a.d.c>) f3956l, k9.a.d.Ko, new l9.a());
     }
 
     @NonNull
@@ -39,7 +39,7 @@ public class a extends e<k9.a.d.c> {
             /* JADX WARN: Multi-variable type inference failed */
             @Override // l9.q
             public final void accept(Object obj, Object obj2) {
-                ((w4) ((t4) obj).getService()).t2(new c(this.f4059a, (k) obj2), publicKeyCredentialCreationOptions);
+                ((w4) ((t4) obj).getService()).t2(new c(this.f3957a, (k) obj2), publicKeyCredentialCreationOptions);
             }
         }).e(5407).a());
     }

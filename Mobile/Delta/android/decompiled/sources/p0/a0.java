@@ -10,7 +10,7 @@ import java.util.Locale;
 public class a0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final RectF f28056a = new RectF(-1.0f, -1.0f, 1.0f, 1.0f);
+    public static final RectF f28275a = new RectF(-1.0f, -1.0f, 1.0f, 1.0f);
 
     public static float a(float f10, float f11, float f12, float f13) {
         float f14 = (f10 * f12) + (f11 * f13);
@@ -25,7 +25,7 @@ public class a0 {
 
     public static Matrix c(RectF rectF) {
         Matrix matrix = new Matrix();
-        matrix.setRectToRect(f28056a, rectF, Matrix.ScaleToFit.FILL);
+        matrix.setRectToRect(f28275a, rectF, Matrix.ScaleToFit.FILL);
         return matrix;
     }
 
@@ -35,7 +35,7 @@ public class a0 {
 
     public static Matrix e(RectF rectF, RectF rectF2, int i10, boolean z10) {
         Matrix matrix = new Matrix();
-        matrix.setRectToRect(rectF, f28056a, Matrix.ScaleToFit.FILL);
+        matrix.setRectToRect(rectF, f28275a, Matrix.ScaleToFit.FILL);
         matrix.postRotate(i10);
         if (z10) {
             matrix.postScale(-1.0f, 1.0f);

@@ -12,12 +12,12 @@ import n0.g3;
 public class CaptureFailedRetryQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Set<Pair<String, String>> f1391a = new HashSet(Collections.singletonList(Pair.create("SAMSUNG", "SM-G981U1")));
+    public static final Set<Pair<String, String>> f1236a = new HashSet(Collections.singletonList(Pair.create("SAMSUNG", "SM-G981U1")));
 
     public static boolean h() {
         String str = Build.BRAND;
         Locale locale = Locale.US;
-        return f1391a.contains(Pair.create(str.toUpperCase(locale), Build.MODEL.toUpperCase(locale)));
+        return f1236a.contains(Pair.create(str.toUpperCase(locale), Build.MODEL.toUpperCase(locale)));
     }
 
     public int g() {

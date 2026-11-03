@@ -6,14 +6,14 @@ import android.net.Uri;
 public final class r8 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final w1.j f6761a;
+    public final w1.j f6835a;
 
     public r8(w1.j jVar) {
-        this.f6761a = jVar;
+        this.f6835a = jVar;
     }
 
     public final String a(Uri uri, String str, String str2, String str3) {
-        w1.j jVar = uri != null ? (w1.j) this.f6761a.get(uri.toString()) : null;
+        w1.j jVar = uri != null ? (w1.j) this.f6835a.get(uri.toString()) : null;
         if (jVar == null) {
             return null;
         }

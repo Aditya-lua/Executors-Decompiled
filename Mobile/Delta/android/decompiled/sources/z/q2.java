@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u0000 \u001b2\u00020\u0001:\u0001\u001cB%\u0012\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00030\u0002\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\b\u001a\u00020\u0007¢\u0006\u0004\b\t\u0010\nJ\u000f\u0010\f\u001a\u00020\u000bH\u0016¢\u0006\u0004\b\f\u0010\rJ\u000f\u0010\u000e\u001a\u00020\u000bH\u0016¢\u0006\u0004\b\u000e\u0010\rJ\u001b\u0010\u0011\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00100\u00020\u000fH\u0016¢\u0006\u0004\b\u0011\u0010\u0012J\u0017\u0010\u0013\u001a\u00020\u000b*\u0006\u0012\u0002\b\u00030\u000fH\u0002¢\u0006\u0004\b\u0013\u0010\u0014R\u0014\u0010\u0006\u001a\u00020\u00058\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010\u0016R\u0014\u0010\b\u001a\u00020\u00078\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\f\u0010\u0017R\u0018\u0010\u001a\u001a\u0004\u0018\u00010\u00188\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u000e\u0010\u0019¨\u0006\u001d"}, d2 = {"Lz/q2;", "Ln0/b;", "", "", "initialCameraIds", "La0/p0;", "cameraManager", "Ljava/util/concurrent/Executor;", "systemCallbackExecutor", "<init>", "(Ljava/util/List;La0/p0;Ljava/util/concurrent/Executor;)V", "", "g", "()V", "h", "Lme/x;", "Lg0/s;", "b", "()Lme/x;", "q", "(Lme/x;)V", "f", "La0/p0;", "Ljava/util/concurrent/Executor;", "Landroid/hardware/camera2/CameraManager$AvailabilityCallback;", "Landroid/hardware/camera2/CameraManager$AvailabilityCallback;", "systemAvailabilityCallback", "i", "a", "camera-camera2_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
+@Metadata(d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u0000 \u001b2\u00020\u0001:\u0001\u001cB%\u0012\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00030\u0002\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\b\u001a\u00020\u0007¢\u0006\u0004\b\t\u0010\nJ\u000f\u0010\f\u001a\u00020\u000bH\u0016¢\u0006\u0004\b\f\u0010\rJ\u000f\u0010\u000e\u001a\u00020\u000bH\u0016¢\u0006\u0004\b\u000e\u0010\rJ\u001b\u0010\u0011\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00100\u00020\u000fH\u0016¢\u0006\u0004\b\u0011\u0010\u0012J\u0017\u0010\u0013\u001a\u00020\u000b*\u0006\u0012\u0002\b\u00030\u000fH\u0002¢\u0006\u0004\b\u0013\u0010\u0014R\u0014\u0010\u0006\u001a\u00020\u00058\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010\u0016R\u0014\u0010\b\u001a\u00020\u00078\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\f\u0010\u0017R\u0018\u0010\u001a\u001a\u0004\u0018\u00010\u00188\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u000e\u0010\u0019¨\u0006\u001d"}, d2 = {"Lz/q2;", "Ln0/b;", "", "", "initialCameraIds", "La0/p0;", "cameraManager", "Ljava/util/concurrent/Executor;", "systemCallbackExecutor", "<init>", "(Ljava/util/List;La0/p0;Ljava/util/concurrent/Executor;)V", "", "g", "()V", "h", "Lne/x;", "Lg0/s;", "b", "()Lne/x;", "q", "(Lne/x;)V", "f", "La0/p0;", "Ljava/util/concurrent/Executor;", "Landroid/hardware/camera2/CameraManager$AvailabilityCallback;", "Landroid/hardware/camera2/CameraManager$AvailabilityCallback;", "systemAvailabilityCallback", "i", "a", "camera-camera2_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
 public final class q2 extends n0.b {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name and from kotlin metadata */
@@ -72,7 +72,7 @@ public final class q2 extends n0.b {
         q2Var.systemCallbackExecutor.execute(new Runnable() { // from class: z.o2
             @Override // java.lang.Runnable
             public final void run() {
-                q2.p(this.f36737a, completer);
+                q2.p(this.f37432a, completer);
             }
         });
         return "FetchData for CameraAvailability";
@@ -102,11 +102,11 @@ public final class q2 extends n0.b {
 
     @Override // n0.a3
     @NotNull
-    public me.x<List<g0.s>> b() {
-        me.x<List<g0.s>> xVarA = y1.c.a(new y1.c.InterfaceC0650c() { // from class: z.p2
-            @Override // y1.c.InterfaceC0650c
+    public ne.x<List<g0.s>> b() {
+        ne.x<List<g0.s>> xVarA = y1.c.a(new y1.c.InterfaceC0665c() { // from class: z.p2
+            @Override // y1.c.InterfaceC0665c
             public final Object a(y1.c.a aVar) {
-                return q2.o(this.f36747a, aVar);
+                return q2.o(this.f37442a, aVar);
             }
         });
         Intrinsics.checkNotNullExpressionValue(xVarA, "getFuture(...)");
@@ -137,7 +137,7 @@ public final class q2 extends n0.b {
             try {
                 try {
                     this.cameraManager.h(availabilityCallback);
-                    Unit unit = Unit.f22483a;
+                    Unit unit = Unit.f22938a;
                 } catch (Exception e10) {
                     Log.w("Camera2PresenceSrc", "Failed to unregister system availability callback.", e10);
                 }
@@ -147,7 +147,7 @@ public final class q2 extends n0.b {
         }
     }
 
-    public final void q(me.x<?> xVar) {
+    public final void q(ne.x<?> xVar) {
         r0.n.z(xVar);
     }
 }

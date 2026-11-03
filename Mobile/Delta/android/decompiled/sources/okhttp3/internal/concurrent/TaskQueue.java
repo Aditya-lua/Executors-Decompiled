@@ -93,7 +93,7 @@ public final class TaskQueue {
                 if (cancelAllAndDecide$okhttp()) {
                     this.taskRunner.kickCoordinator$okhttp(this);
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -207,7 +207,7 @@ public final class TaskQueue {
                 if (scheduleAndDecide$okhttp(task, delayNanos, false)) {
                     this.taskRunner.kickCoordinator$okhttp(this);
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } else if (task.getCancelable()) {
                 Logger logger = this.taskRunner.getLogger();
                 if (logger.isLoggable(Level.FINE)) {
@@ -292,7 +292,7 @@ public final class TaskQueue {
                 if (cancelAllAndDecide$okhttp()) {
                     this.taskRunner.kickCoordinator$okhttp(this);
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }

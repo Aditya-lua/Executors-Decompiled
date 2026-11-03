@@ -162,7 +162,7 @@ public final class u {
         }
         com.google.android.gms.internal.measurement.y0.a();
         String path = sQLiteDatabase.getPath();
-        com.google.android.gms.internal.measurement.e1 e1Var = com.google.android.gms.internal.measurement.e1.f6422a;
+        com.google.android.gms.internal.measurement.e1 e1Var = com.google.android.gms.internal.measurement.e1.f6495a;
         File file = new File(path);
         if (!file.setReadable(false, false)) {
             w5Var.r().a("Failed to turn off database read permission");

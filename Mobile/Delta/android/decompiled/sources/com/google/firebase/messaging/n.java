@@ -28,7 +28,7 @@ public class n {
 
     @SuppressLint({"ThreadPoolCreation"})
     public static ExecutorService d() {
-        return fg.b.a().a(new v9.b("Firebase-Messaging-Intent-Handle"), fg.c.HIGH_SPEED);
+        return gg.b.a().a(new v9.b("Firebase-Messaging-Intent-Handle"), gg.c.HIGH_SPEED);
     }
 
     @SuppressLint({"ThreadPoolCreation"})

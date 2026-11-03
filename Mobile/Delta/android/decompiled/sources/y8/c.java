@@ -11,15 +11,15 @@ public final class c implements k9.a.d {
     public static final c b = new c(new Bundle(), null);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Bundle f35775a;
+    public final Bundle f36632a;
 
     public /* synthetic */ c(Bundle bundle, i iVar) {
-        this.f35775a = bundle;
+        this.f36632a = bundle;
     }
 
     @NonNull
     public final Bundle a() {
-        return new Bundle(this.f35775a);
+        return new Bundle(this.f36632a);
     }
 
     public final boolean equals(Object obj) {
@@ -27,12 +27,12 @@ public final class c implements k9.a.d {
             return true;
         }
         if (obj instanceof c) {
-            return k.a(this.f35775a, ((c) obj).f35775a);
+            return k.a(this.f36632a, ((c) obj).f36632a);
         }
         return false;
     }
 
     public final int hashCode() {
-        return k.c(this.f35775a);
+        return k.c(this.f36632a);
     }
 }

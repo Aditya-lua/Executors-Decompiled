@@ -14,7 +14,7 @@ import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes2.dex */
 @Metadata(d1 = {"\u00008\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010(\n\u0002\b\u0006\n\u0002\u0010*\n\u0002\b\u0007\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\t\b'\u0018\u0000  *\u0006\b\u0000\u0010\u0001 \u00012\b\u0012\u0004\u0012\u00028\u00000\u00022\b\u0012\u0004\u0012\u00028\u00000\u0003:\u0004!\"# B\t\b\u0004¢\u0006\u0004\b\u0004\u0010\u0005J\u0018\u0010\b\u001a\u00028\u00002\u0006\u0010\u0007\u001a\u00020\u0006H¦\u0002¢\u0006\u0004\b\b\u0010\tJ\u0016\u0010\u000b\u001a\b\u0012\u0004\u0012\u00028\u00000\nH\u0096\u0002¢\u0006\u0004\b\u000b\u0010\fJ\u0017\u0010\u000e\u001a\u00020\u00062\u0006\u0010\r\u001a\u00028\u0000H\u0016¢\u0006\u0004\b\u000e\u0010\u000fJ\u0017\u0010\u0010\u001a\u00020\u00062\u0006\u0010\r\u001a\u00028\u0000H\u0016¢\u0006\u0004\b\u0010\u0010\u000fJ\u0015\u0010\u0012\u001a\b\u0012\u0004\u0012\u00028\u00000\u0011H\u0016¢\u0006\u0004\b\u0012\u0010\u0013J\u001d\u0010\u0012\u001a\b\u0012\u0004\u0012\u00028\u00000\u00112\u0006\u0010\u0007\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\u0012\u0010\u0014J%\u0010\u0017\u001a\b\u0012\u0004\u0012\u00028\u00000\u00032\u0006\u0010\u0015\u001a\u00020\u00062\u0006\u0010\u0016\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\u0017\u0010\u0018J\u001a\u0010\u001c\u001a\u00020\u001b2\b\u0010\u001a\u001a\u0004\u0018\u00010\u0019H\u0096\u0002¢\u0006\u0004\b\u001c\u0010\u001dJ\u000f\u0010\u001e\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\u001e\u0010\u001f¨\u0006$"}, d2 = {"Lkotlin/collections/d;", "E", "Lkotlin/collections/b;", "", "<init>", "()V", "", "index", "get", "(I)Ljava/lang/Object;", "", "iterator", "()Ljava/util/Iterator;", "element", "indexOf", "(Ljava/lang/Object;)I", "lastIndexOf", "", "listIterator", "()Ljava/util/ListIterator;", "(I)Ljava/util/ListIterator;", "fromIndex", "toIndex", "subList", "(II)Ljava/util/List;", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "hashCode", "()I", "a", "d", "b", "c", "kotlin-stdlib"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public abstract class d<E> extends kotlin.collections.b<E> implements List<E>, au.a {
+public abstract class d<E> extends kotlin.collections.b<E> implements List<E>, yt.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -102,7 +102,7 @@ public abstract class d<E> extends kotlin.collections.b<E> implements List<E>, a
     }
 
     @Metadata(d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010(\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\b\n\u0002\b\b\b\u0092\u0004\u0018\u00002\b\u0012\u0004\u0012\u00028\u00000\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u0010\u0010\u0005\u001a\u00020\u0004H\u0096\u0002¢\u0006\u0004\b\u0005\u0010\u0006J\u0010\u0010\u0007\u001a\u00028\u0000H\u0096\u0002¢\u0006\u0004\b\u0007\u0010\bR\"\u0010\u0010\u001a\u00020\t8\u0004@\u0004X\u0084\u000e¢\u0006\u0012\n\u0004\b\n\u0010\u000b\u001a\u0004\b\f\u0010\r\"\u0004\b\u000e\u0010\u000f¨\u0006\u0011"}, d2 = {"Lkotlin/collections/d$b;", "", "<init>", "(Lkotlin/collections/d;)V", "", "hasNext", "()Z", "next", "()Ljava/lang/Object;", "", "a", "I", "b", "()I", "d", "(I)V", "index", "kotlin-stdlib"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    public class b implements Iterator<E>, au.a {
+    public class b implements Iterator<E>, yt.a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         public int index;
@@ -142,7 +142,7 @@ public abstract class d<E> extends kotlin.collections.b<E> implements List<E>, a
     }
 
     @Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010*\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\b\b\u0092\u0004\u0018\u00002\f0\u0001R\b\u0012\u0004\u0012\u00028\u00000\u00022\b\u0012\u0004\u0012\u00028\u00000\u0003B\u000f\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u000f\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\t\u0010\nJ\u000f\u0010\u000b\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u000b\u0010\fJ\u000f\u0010\r\u001a\u00028\u0000H\u0016¢\u0006\u0004\b\r\u0010\u000eJ\u000f\u0010\u000f\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u000f\u0010\f¨\u0006\u0010"}, d2 = {"Lkotlin/collections/d$c;", "Lkotlin/collections/d$b;", "Lkotlin/collections/d;", "", "", "index", "<init>", "(Lkotlin/collections/d;I)V", "", "hasPrevious", "()Z", "nextIndex", "()I", "previous", "()Ljava/lang/Object;", "previousIndex", "kotlin-stdlib"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    public class c extends d<E>.b implements ListIterator<E>, au.a {
+    public class c extends d<E>.b implements ListIterator<E>, yt.a {
         public c(int i10) {
             super();
             d.INSTANCE.c(i10, d.this.size());
@@ -187,7 +187,7 @@ public abstract class d<E> extends kotlin.collections.b<E> implements List<E>, a
 
     /* JADX INFO: renamed from: kotlin.collections.d$d, reason: collision with other inner class name */
     @Metadata(d1 = {"\u0000$\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0007\n\u0002\u0010 \n\u0002\b\u000b\b\u0002\u0018\u0000*\u0006\b\u0001\u0010\u0001 \u00012\b\u0012\u0004\u0012\u00028\u00010\u00022\u00060\u0003j\u0002`\u0004B%\u0012\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00028\u00010\u0002\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\b\u001a\u00020\u0006¢\u0006\u0004\b\t\u0010\nJ\u0018\u0010\f\u001a\u00028\u00012\u0006\u0010\u000b\u001a\u00020\u0006H\u0096\u0002¢\u0006\u0004\b\f\u0010\rJ%\u0010\u000f\u001a\b\u0012\u0004\u0012\u00028\u00010\u000e2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\u000f\u0010\u0010R\u001a\u0010\u0005\u001a\b\u0012\u0004\u0012\u00028\u00010\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0011\u0010\u0012R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0013\u0010\u0014R\u0016\u0010\u0016\u001a\u00020\u00068\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0015\u0010\u0014R\u0014\u0010\u0018\u001a\u00020\u00068VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\u0011\u0010\u0017¨\u0006\u0019"}, d2 = {"Lkotlin/collections/d$d;", "E", "Lkotlin/collections/d;", "Ljava/util/RandomAccess;", "Lkotlin/collections/RandomAccess;", "list", "", "fromIndex", "toIndex", "<init>", "(Lkotlin/collections/d;II)V", "index", "get", "(I)Ljava/lang/Object;", "", "subList", "(II)Ljava/util/List;", "b", "Lkotlin/collections/d;", "c", "I", "d", "_size", "()I", "size", "kotlin-stdlib"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    public static final class C0398d<E> extends d<E> implements RandomAccess {
+    public static final class C0401d<E> extends d<E> implements RandomAccess {
 
         /* JADX INFO: renamed from: b, reason: from kotlin metadata */
         @NotNull
@@ -200,7 +200,7 @@ public abstract class d<E> extends kotlin.collections.b<E> implements List<E>, a
         public int _size;
 
         /* JADX WARN: Multi-variable type inference failed */
-        public C0398d(@NotNull d<? extends E> list, int i10, int i11) {
+        public C0401d(@NotNull d<? extends E> list, int i10, int i11) {
             Intrinsics.checkNotNullParameter(list, "list");
             this.list = list;
             this.fromIndex = i10;
@@ -226,7 +226,7 @@ public abstract class d<E> extends kotlin.collections.b<E> implements List<E>, a
             d.INSTANCE.d(fromIndex, toIndex, this._size);
             d<E> dVar = this.list;
             int i10 = this.fromIndex;
-            return new C0398d(dVar, fromIndex + i10, i10 + toIndex);
+            return new C0401d(dVar, fromIndex + i10, i10 + toIndex);
         }
     }
 
@@ -308,7 +308,7 @@ public abstract class d<E> extends kotlin.collections.b<E> implements List<E>, a
     @Override // java.util.List
     @NotNull
     public List<E> subList(int fromIndex, int toIndex) {
-        return new C0398d(this, fromIndex, toIndex);
+        return new C0401d(this, fromIndex, toIndex);
     }
 
     @Override // java.util.List

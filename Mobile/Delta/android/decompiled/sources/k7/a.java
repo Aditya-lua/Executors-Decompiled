@@ -14,30 +14,30 @@ import s7.e;
 public class a {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final AssetManager f22262d;
+    public final AssetManager f22486d;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final i<String> f22260a = new i<>();
+    public final i<String> f22484a = new i<>();
     public final Map<i<String>, Typeface> b = new HashMap();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Map<String, Typeface> f22261c = new HashMap();
+    public final Map<String, Typeface> f22485c = new HashMap();
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public String f22263e = ".ttf";
+    public String f22487e = ".ttf";
 
     public a(Drawable.Callback callback, f7.b bVar) {
         if (callback instanceof View) {
-            this.f22262d = ((View) callback).getContext().getAssets();
+            this.f22486d = ((View) callback).getContext().getAssets();
         } else {
             e.c("LottieDrawable must be inside of a view for images to work.");
-            this.f22262d = null;
+            this.f22486d = null;
         }
     }
 
     public final Typeface a(c cVar) {
         String strA = cVar.a();
-        Typeface typeface = this.f22261c.get(strA);
+        Typeface typeface = this.f22485c.get(strA);
         if (typeface != null) {
             return typeface;
         }
@@ -46,24 +46,24 @@ public class a {
         if (cVar.d() != null) {
             return cVar.d();
         }
-        Typeface typefaceCreateFromAsset = Typeface.createFromAsset(this.f22262d, "fonts/" + strA + this.f22263e);
-        this.f22261c.put(strA, typefaceCreateFromAsset);
+        Typeface typefaceCreateFromAsset = Typeface.createFromAsset(this.f22486d, "fonts/" + strA + this.f22487e);
+        this.f22485c.put(strA, typefaceCreateFromAsset);
         return typefaceCreateFromAsset;
     }
 
     public Typeface b(c cVar) {
-        this.f22260a.b(cVar.a(), cVar.c());
-        Typeface typeface = this.b.get(this.f22260a);
+        this.f22484a.b(cVar.a(), cVar.c());
+        Typeface typeface = this.b.get(this.f22484a);
         if (typeface != null) {
             return typeface;
         }
         Typeface typefaceE = e(a(cVar), cVar.c());
-        this.b.put(this.f22260a, typefaceE);
+        this.b.put(this.f22484a, typefaceE);
         return typefaceE;
     }
 
     public void c(String str) {
-        this.f22263e = str;
+        this.f22487e = str;
     }
 
     public void d(f7.b bVar) {

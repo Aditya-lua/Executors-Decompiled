@@ -1,7 +1,7 @@
 package com.google.android.gms.internal.mlkit_common;
 
-import rf.a;
-import rf.b;
+import sf.a;
+import sf.b;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class zzkr implements a {
@@ -10,7 +10,7 @@ public final class zzkr implements a {
     private zzkr() {
     }
 
-    @Override // rf.a
+    @Override // sf.a
     public final void configure(b bVar) {
         bVar.registerEncoder(zzmy.class, zzgp.zza);
         bVar.registerEncoder(zzqv.class, zzkh.zza);

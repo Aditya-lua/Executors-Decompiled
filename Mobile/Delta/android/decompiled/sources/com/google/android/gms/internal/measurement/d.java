@@ -8,18 +8,18 @@ import java.util.Objects;
 public final class d implements Iterator {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ Iterator f6409a;
+    public final /* synthetic */ Iterator f6482a;
     public final /* synthetic */ Iterator b;
 
     public d(f fVar, Iterator it, Iterator it2) {
-        this.f6409a = it;
+        this.f6482a = it;
         this.b = it2;
         Objects.requireNonNull(fVar);
     }
 
     @Override // java.util.Iterator
     public final boolean hasNext() {
-        if (this.f6409a.hasNext()) {
+        if (this.f6482a.hasNext()) {
             return true;
         }
         return this.b.hasNext();
@@ -27,7 +27,7 @@ public final class d implements Iterator {
 
     @Override // java.util.Iterator
     public final /* bridge */ /* synthetic */ Object next() {
-        Iterator it = this.f6409a;
+        Iterator it = this.f6482a;
         if (it.hasNext()) {
             return new u(((Integer) it.next()).toString());
         }

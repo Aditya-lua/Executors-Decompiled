@@ -1,11 +1,11 @@
 package com.google.android.gms.internal.measurement;
 
 /* JADX INFO: loaded from: classes.dex */
-public final class vf implements ge.s {
+public final class vf implements he.s {
     public static final vf b = new vf();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ge.s f6856a = ge.t.b(new xf());
+    public final he.s f6930a = he.t.b(new xf());
 
     public static boolean a() {
         b.get().zza();
@@ -44,9 +44,9 @@ public final class vf implements ge.s {
         return b.get().d();
     }
 
-    @Override // ge.s
+    @Override // he.s
     /* JADX INFO: renamed from: j, reason: merged with bridge method [inline-methods] */
     public final wf get() {
-        return (wf) this.f6856a.get();
+        return (wf) this.f6930a.get();
     }
 }

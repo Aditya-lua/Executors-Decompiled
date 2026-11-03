@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 public class c extends w8.a<c> {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public a[] f27008e;
+    public a[] f27573e;
 
     public c() {
         super("Shortcut");
@@ -14,7 +14,7 @@ public class c extends w8.a<c> {
 
     @NonNull
     public c l(@NonNull a... aVarArr) {
-        this.f27008e = aVarArr;
+        this.f27573e = aVarArr;
         return c("capability", aVarArr);
     }
 

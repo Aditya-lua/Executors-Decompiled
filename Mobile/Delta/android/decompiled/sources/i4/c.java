@@ -22,13 +22,13 @@ public final class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final List<Class<? extends Object>> f20259a = m.I(new Class[]{Boolean.TYPE, boolean[].class, Double.TYPE, double[].class, Integer.TYPE, int[].class, Long.TYPE, long[].class, String.class, String[].class, Binder.class, Bundle.class, Byte.TYPE, byte[].class, Character.TYPE, char[].class, CharSequence.class, CharSequence[].class, ArrayList.class, Float.TYPE, float[].class, Parcelable.class, Parcelable[].class, Serializable.class, Short.TYPE, short[].class, SparseArray.class, Size.class, SizeF.class});
+    public static final List<Class<? extends Object>> f20375a = m.I(new Class[]{Boolean.TYPE, boolean[].class, Double.TYPE, double[].class, Integer.TYPE, int[].class, Long.TYPE, long[].class, String.class, String[].class, Binder.class, Bundle.class, Byte.TYPE, byte[].class, Character.TYPE, char[].class, CharSequence.class, CharSequence[].class, ArrayList.class, Float.TYPE, float[].class, Parcelable.class, Parcelable[].class, Serializable.class, Short.TYPE, short[].class, SparseArray.class, Size.class, SizeF.class});
 
     public static final boolean a(@Nullable Object obj) {
         if (obj == null) {
             return true;
         }
-        List<Class<? extends Object>> list = f20259a;
+        List<Class<? extends Object>> list = f20375a;
         if ((list instanceof Collection) && list.isEmpty()) {
             return false;
         }

@@ -14,72 +14,72 @@ import java.util.concurrent.Executor;
 public class r {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f20376a;
+    public final Context f20492a;
     public final c8.e b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final j8.d f20377c;
+    public final j8.d f20493c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final x f20378d;
+    public final x f20494d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Executor f20379e;
+    public final Executor f20495e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final k8.b f20380f;
+    public final k8.b f20496f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final l8.a f20381g;
+    public final l8.a f20497g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final l8.a f20382h;
+    public final l8.a f20498h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final j8.c f20383i;
+    public final j8.c f20499i;
 
     public r(Context context, c8.e eVar, j8.d dVar, x xVar, Executor executor, k8.b bVar, l8.a aVar, l8.a aVar2, j8.c cVar) {
-        this.f20376a = context;
+        this.f20492a = context;
         this.b = eVar;
-        this.f20377c = dVar;
-        this.f20378d = xVar;
-        this.f20379e = executor;
-        this.f20380f = bVar;
-        this.f20381g = aVar;
-        this.f20382h = aVar2;
-        this.f20383i = cVar;
+        this.f20493c = dVar;
+        this.f20494d = xVar;
+        this.f20495e = executor;
+        this.f20496f = bVar;
+        this.f20497g = aVar;
+        this.f20498h = aVar2;
+        this.f20499i = cVar;
     }
 
     public static /* synthetic */ Object b(r rVar, Iterable iterable, b8.o oVar, long j10) {
-        rVar.f20377c.s1(iterable);
-        rVar.f20377c.o2(oVar, rVar.f20381g.a() + j10);
+        rVar.f20493c.q1(iterable);
+        rVar.f20493c.p2(oVar, rVar.f20497g.a() + j10);
         return null;
     }
 
     public static /* synthetic */ Object c(r rVar) {
-        rVar.f20383i.a();
+        rVar.f20499i.a();
         return null;
     }
 
     public static /* synthetic */ Object e(r rVar, Iterable iterable) {
-        rVar.f20377c.J(iterable);
+        rVar.f20493c.J(iterable);
         return null;
     }
 
     public static /* synthetic */ Object f(r rVar, b8.o oVar, int i10) {
-        rVar.f20378d.b(oVar, i10 + 1);
+        rVar.f20494d.b(oVar, i10 + 1);
         return null;
     }
 
     public static /* synthetic */ Object g(r rVar, b8.o oVar, long j10) {
-        rVar.f20377c.o2(oVar, rVar.f20381g.a() + j10);
+        rVar.f20493c.p2(oVar, rVar.f20497g.a() + j10);
         return null;
     }
 
     public static /* synthetic */ Object h(r rVar, Map map) {
         rVar.getClass();
         for (Map.Entry entry : map.entrySet()) {
-            rVar.f20383i.d(((Integer) entry.getValue()).intValue(), e8.c.b.INVALID_PAYLOD, (String) entry.getKey());
+            rVar.f20499i.d(((Integer) entry.getValue()).intValue(), e8.c.b.INVALID_PAYLOD, (String) entry.getKey());
         }
         return null;
     }
@@ -87,8 +87,8 @@ public class r {
     public static /* synthetic */ void i(final r rVar, final b8.o oVar, final int i10, Runnable runnable) {
         rVar.getClass();
         try {
-            k8.b bVar = rVar.f20380f;
-            final j8.d dVar = rVar.f20377c;
+            k8.b bVar = rVar.f20496f;
+            final j8.d dVar = rVar.f20493c;
             Objects.requireNonNull(dVar);
             bVar.b(new k8.b.a() { // from class: i8.i
                 @Override // k8.b.a
@@ -99,25 +99,25 @@ public class r {
             if (rVar.k()) {
                 rVar.l(oVar, i10);
             } else {
-                rVar.f20380f.b(new k8.b.a() { // from class: i8.j
+                rVar.f20496f.b(new k8.b.a() { // from class: i8.j
                     @Override // k8.b.a
                     public final Object execute() {
-                        return r.f(this.f20364a, oVar, i10);
+                        return r.f(this.f20480a, oVar, i10);
                     }
                 });
             }
         } catch (k8.a unused) {
-            rVar.f20378d.b(oVar, i10 + 1);
+            rVar.f20494d.b(oVar, i10 + 1);
         } finally {
             runnable.run();
         }
     }
 
     public b8.i j(c8.m mVar) {
-        k8.b bVar = this.f20380f;
-        final j8.c cVar = this.f20383i;
+        k8.b bVar = this.f20496f;
+        final j8.c cVar = this.f20499i;
         Objects.requireNonNull(cVar);
-        return mVar.a(b8.i.a().i(this.f20381g.a()).k(this.f20382h.a()).j("GDT_CLIENT_METRICS").h(new b8.h(y7.c.b("proto"), ((e8.a) bVar.b(new k8.b.a() { // from class: i8.h
+        return mVar.a(b8.i.a().i(this.f20497g.a()).k(this.f20498h.a()).j("GDT_CLIENT_METRICS").h(new b8.h(y7.c.b("proto"), ((e8.a) bVar.b(new k8.b.a() { // from class: i8.h
             @Override // k8.b.a
             public final Object execute() {
                 return cVar.c();
@@ -126,7 +126,7 @@ public class r {
     }
 
     public boolean k() {
-        NetworkInfo activeNetworkInfo = ((ConnectivityManager) this.f20376a.getSystemService("connectivity")).getActiveNetworkInfo();
+        NetworkInfo activeNetworkInfo = ((ConnectivityManager) this.f20492a.getSystemService("connectivity")).getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
@@ -135,16 +135,16 @@ public class r {
         c8.m mVarA = this.b.a(oVar.b());
         c8.g gVarE = c8.g.e(0L);
         final long j10 = 0;
-        while (((Boolean) this.f20380f.b(new k8.b.a() { // from class: i8.k
+        while (((Boolean) this.f20496f.b(new k8.b.a() { // from class: i8.k
             @Override // k8.b.a
             public final Object execute() {
-                return Boolean.valueOf(this.f20366a.f20377c.K(oVar));
+                return Boolean.valueOf(this.f20482a.f20493c.K(oVar));
             }
         })).booleanValue()) {
-            final Iterable iterable = (Iterable) this.f20380f.b(new k8.b.a() { // from class: i8.l
+            final Iterable iterable = (Iterable) this.f20496f.b(new k8.b.a() { // from class: i8.l
                 @Override // k8.b.a
                 public final Object execute() {
-                    return this.f20367a.f20377c.d1(oVar);
+                    return this.f20483a.f20493c.Z0(oVar);
                 }
             });
             if (!iterable.iterator().hasNext()) {
@@ -167,29 +167,29 @@ public class r {
             gVarE = gVarB;
             if (gVarE.c() == c8.g.a.TRANSIENT_ERROR) {
                 final b8.o oVar2 = oVar;
-                this.f20380f.b(new k8.b.a() { // from class: i8.m
+                this.f20496f.b(new k8.b.a() { // from class: i8.m
                     @Override // k8.b.a
                     public final Object execute() {
-                        return r.b(this.f20368a, iterable, oVar2, j10);
+                        return r.b(this.f20484a, iterable, oVar2, j10);
                     }
                 });
-                this.f20378d.a(oVar2, i10 + 1, true);
+                this.f20494d.a(oVar2, i10 + 1, true);
                 return gVarE;
             }
             b8.o oVar3 = oVar;
-            this.f20380f.b(new k8.b.a() { // from class: i8.n
+            this.f20496f.b(new k8.b.a() { // from class: i8.n
                 @Override // k8.b.a
                 public final Object execute() {
-                    return r.e(this.f20371a, iterable);
+                    return r.e(this.f20487a, iterable);
                 }
             });
             if (gVarE.c() == c8.g.a.OK) {
                 long jMax = Math.max(j10, gVarE.b());
                 if (oVar3.e()) {
-                    this.f20380f.b(new k8.b.a() { // from class: i8.o
+                    this.f20496f.b(new k8.b.a() { // from class: i8.o
                         @Override // k8.b.a
                         public final Object execute() {
-                            return r.c(this.f20372a);
+                            return r.c(this.f20488a);
                         }
                     });
                 }
@@ -205,30 +205,30 @@ public class r {
                         map.put(strJ, 1);
                     }
                 }
-                this.f20380f.b(new k8.b.a() { // from class: i8.p
+                this.f20496f.b(new k8.b.a() { // from class: i8.p
                     @Override // k8.b.a
                     public final Object execute() {
-                        return r.h(this.f20373a, map);
+                        return r.h(this.f20489a, map);
                     }
                 });
             }
             oVar = oVar3;
         }
         final b8.o oVar4 = oVar;
-        this.f20380f.b(new k8.b.a() { // from class: i8.q
+        this.f20496f.b(new k8.b.a() { // from class: i8.q
             @Override // k8.b.a
             public final Object execute() {
-                return r.g(this.f20374a, oVar4, j10);
+                return r.g(this.f20490a, oVar4, j10);
             }
         });
         return gVarE;
     }
 
     public void m(final b8.o oVar, final int i10, final Runnable runnable) {
-        this.f20379e.execute(new Runnable() { // from class: i8.g
+        this.f20495e.execute(new Runnable() { // from class: i8.g
             @Override // java.lang.Runnable
             public final void run() {
-                r.i(this.f20359a, oVar, i10, runnable);
+                r.i(this.f20475a, oVar, i10, runnable);
             }
         });
     }

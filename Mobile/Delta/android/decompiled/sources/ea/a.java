@@ -15,6 +15,6 @@ public class a extends m9.a<Achievement> {
     @NonNull
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
     public Achievement get(int i10) {
-        return new AchievementRef(this.f24041a, i10);
+        return new AchievementRef(this.f24691a, i10);
     }
 }

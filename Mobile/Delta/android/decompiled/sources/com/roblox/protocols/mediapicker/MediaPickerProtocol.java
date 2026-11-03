@@ -14,10 +14,10 @@ import g.h;
 import h.f;
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
-import mm.i;
-import mm.j;
-import mm.l;
-import mm.m;
+import km.i;
+import km.j;
+import km.l;
+import km.m;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -25,25 +25,25 @@ import org.json.JSONObject;
 public class MediaPickerProtocol {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final HashMap<String, f.h> f9702f = new a();
+    public static final HashMap<String, f.h> f9783f = new a();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public m f9703a;
+    public m f9784a;
     public String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public WeakReference<Activity> f9704c;
+    public WeakReference<Activity> f9785c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public g.c<h> f9705d;
+    public g.c<h> f9786d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public ll.f f9706e;
+    public jl.f f9787e;
 
     public class a extends HashMap<String, f.h> {
         public a() {
-            put(MediaPickerProtocol.getAssetTypeImages(), f.d.f18486a);
-            put(MediaPickerProtocol.getAssetTypeVideos(), f.g.f18487a);
+            put(MediaPickerProtocol.getAssetTypeImages(), f.d.f18973a);
+            put(MediaPickerProtocol.getAssetTypeVideos(), f.g.f18974a);
         }
     }
 
@@ -51,13 +51,13 @@ public class MediaPickerProtocol {
         public b() {
         }
 
-        @Override // mm.i
+        @Override // km.i
         public l a(JSONObject jSONObject) {
             l lVar = new l();
             JSONObject jSONObject2 = new JSONObject();
             try {
                 jSONObject2.put(MediaPickerProtocol.getAvailableParamName(), true);
-                lVar.f24430a = jSONObject2;
+                lVar.f22909a = jSONObject2;
                 return lVar;
             } catch (JSONException e10) {
                 Log.e("MediaPickerProtocol", "Indicating available on Android failed with error: " + e10.getMessage());
@@ -69,24 +69,24 @@ public class MediaPickerProtocol {
     public static class c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final MediaPickerProtocol f9708a = new MediaPickerProtocol();
+        public static final MediaPickerProtocol f9789a = new MediaPickerProtocol();
     }
 
     public class d implements j {
         public d() {
         }
 
-        @Override // mm.j
+        @Override // km.j
         public void a(JSONObject jSONObject, m mVar) {
-            MediaPickerProtocol.this.f9703a = mVar;
-            if (MediaPickerProtocol.this.f9704c == null || MediaPickerProtocol.this.f9704c.get() == null) {
+            MediaPickerProtocol.this.f9784a = mVar;
+            if (MediaPickerProtocol.this.f9785c == null || MediaPickerProtocol.this.f9785c.get() == null) {
                 Log.e("MediaPickerProtocol", "No Activity found while checking permissions");
                 return;
             }
             try {
                 MediaPickerProtocol.this.b = jSONObject.getString(MediaPickerProtocol.getAssetTypeParamName());
                 if (!f.c()) {
-                    MediaPickerProtocol.this.f9706e.a();
+                    MediaPickerProtocol.this.f9787e.a();
                 } else {
                     Log.i("MediaPickerProtocol", "Permissions already granted for photo album");
                     MediaPickerProtocol.this.n();
@@ -129,7 +129,7 @@ public class MediaPickerProtocol {
     public static native void initializeMediaPickerProtocol();
 
     public static synchronized MediaPickerProtocol o() {
-        return c.f9708a;
+        return c.f9789a;
     }
 
     public static native void onMediaPickerResponse(long j10, byte[] bArr, String str);
@@ -137,13 +137,13 @@ public class MediaPickerProtocol {
     public final String i(Uri uri) {
         Cursor cursorQuery;
         int columnIndex;
-        WeakReference<Activity> weakReference = this.f9704c;
+        WeakReference<Activity> weakReference = this.f9785c;
         String string = null;
         if (weakReference == null || weakReference.get() == null) {
             Log.e("MediaPickerProtocol", "No Activity found while checking permissions");
             return null;
         }
-        Activity activity = this.f9704c.get();
+        Activity activity = this.f9785c.get();
         if (f.c()) {
             cursorQuery = activity.getContentResolver().query(uri, null, null, null, null);
         } else {
@@ -171,61 +171,61 @@ public class MediaPickerProtocol {
         if (uri == null) {
             Log.d("MediaPickerProtocol", "No media selected");
             l lVar = new l();
-            lVar.f24431c = 1;
+            lVar.f22910c = 1;
             try {
-                lVar.f24430a.put(getAssetTypeParamName(), this.b);
-                lVar.f24430a.put(getAssetFilePathParamName(), "");
-                lVar.f24430a.put(getErrorParamName(), "");
-                lVar.f24430a.put(getPermissionsParamName(), true);
+                lVar.f22909a.put(getAssetTypeParamName(), this.b);
+                lVar.f22909a.put(getAssetFilePathParamName(), "");
+                lVar.f22909a.put(getErrorParamName(), "");
+                lVar.f22909a.put(getPermissionsParamName(), true);
             } catch (JSONException unused) {
                 Log.e("MediaPickerProtocol", "Exception while writing response for pick media request");
             }
-            this.f9703a.a(lVar);
+            this.f9784a.a(lVar);
             return;
         }
         String strI = i(uri);
         Log.d("MediaPickerProtocol", "Selected file path: " + strI);
         l lVar2 = new l();
         try {
-            lVar2.f24430a.put(getAssetTypeParamName(), this.b);
-            lVar2.f24430a.put(getAssetFilePathParamName(), strI);
-            lVar2.f24430a.put(getErrorParamName(), "");
-            lVar2.f24430a.put(getPermissionsParamName(), true);
+            lVar2.f22909a.put(getAssetTypeParamName(), this.b);
+            lVar2.f22909a.put(getAssetFilePathParamName(), strI);
+            lVar2.f22909a.put(getErrorParamName(), "");
+            lVar2.f22909a.put(getPermissionsParamName(), true);
         } catch (JSONException unused2) {
             Log.e("MediaPickerProtocol", "Exception while handling pick media request");
         }
-        this.f9703a.a(lVar2);
+        this.f9784a.a(lVar2);
     }
 
     public final /* synthetic */ void k(f.h hVar) {
-        this.f9705d.b(new h.a().d(hVar).a());
+        this.f9786d.b(new h.a().d(hVar).a());
     }
 
     public void l(p pVar) {
-        this.f9704c = new WeakReference<>(pVar);
-        this.f9705d = pVar.h(new f(), new g.a() { // from class: ll.a
+        this.f9785c = new WeakReference<>(pVar);
+        this.f9786d = pVar.h(new f(), new g.a() { // from class: jl.a
             @Override // g.a
             public final void a(Object obj) {
-                this.f23362a.j((Uri) obj);
+                this.f22015a.j((Uri) obj);
             }
         });
     }
 
-    public void m(p pVar, ll.f fVar) {
-        this.f9704c = new WeakReference<>(pVar);
-        this.f9706e = fVar;
+    public void m(p pVar, jl.f fVar) {
+        this.f9785c = new WeakReference<>(pVar);
+        this.f9787e = fVar;
         initializeMediaPickerProtocol();
     }
 
     public final void n() {
-        final f.h hVar = f9702f.get(this.b);
+        final f.h hVar = f9783f.get(this.b);
         if (hVar == null) {
             Log.e("MediaPickerProtocol", "Media Type must be either IMAGES or VIDEOS");
         } else {
-            new Handler(Looper.getMainLooper()).post(new Runnable() { // from class: ll.b
+            new Handler(Looper.getMainLooper()).post(new Runnable() { // from class: jl.b
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f23363a.k(hVar);
+                    this.f22016a.k(hVar);
                 }
             });
         }

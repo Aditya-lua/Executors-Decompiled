@@ -6,7 +6,7 @@ import android.util.Log;
 public final class r1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static int f17507a = 3;
+    public static int f18046a = 3;
 
     public static void a(String str, String str2) {
         String strK = k(str);
@@ -48,7 +48,7 @@ public final class r1 {
     }
 
     public static boolean g(String str, int i10) {
-        return f17507a <= i10 || Log.isLoggable(str, i10);
+        return f18046a <= i10 || Log.isLoggable(str, i10);
     }
 
     public static boolean h(String str) {
@@ -56,11 +56,11 @@ public final class r1 {
     }
 
     public static void i() {
-        f17507a = 3;
+        f18046a = 3;
     }
 
     public static void j(int i10) {
-        f17507a = i10;
+        f18046a = i10;
     }
 
     public static String k(String str) {

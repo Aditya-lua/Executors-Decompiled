@@ -14,7 +14,7 @@ import java.lang.reflect.Method;
 public final class l1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Method f6595a;
+    public static final Method f6668a;
     public static final Method b;
 
     static {
@@ -28,7 +28,7 @@ public final class l1 {
             }
             declaredMethod = null;
         }
-        f6595a = declaredMethod;
+        f6668a = declaredMethod;
         try {
             declaredMethod2 = UserHandle.class.getDeclaredMethod("myUserId", null);
         } catch (NoSuchMethodException unused2) {
@@ -42,8 +42,8 @@ public final class l1 {
     /* JADX WARN: Code duplicated, block: B:17:0x0034  */
     public static int a(Context context, JobInfo jobInfo, String str, String str2) {
         int iIntValue;
-        JobScheduler jobScheduler = (JobScheduler) ge.n.l((JobScheduler) context.getSystemService("jobscheduler"));
-        if (f6595a == null || context.checkSelfPermission("android.permission.UPDATE_DEVICE_STATS") != 0) {
+        JobScheduler jobScheduler = (JobScheduler) he.n.l((JobScheduler) context.getSystemService("jobscheduler"));
+        if (f6668a == null || context.checkSelfPermission("android.permission.UPDATE_DEVICE_STATS") != 0) {
             return jobScheduler.schedule(jobInfo);
         }
         Method method = b;
@@ -63,7 +63,7 @@ public final class l1 {
         } else {
             iIntValue = 0;
         }
-        Method method2 = f6595a;
+        Method method2 = f6668a;
         if (method2 != null) {
             try {
                 Integer num2 = (Integer) method2.invoke(jobScheduler, jobInfo, "com.google.android.gms", Integer.valueOf(iIntValue), "UploadAlarm");

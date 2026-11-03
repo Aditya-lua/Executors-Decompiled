@@ -35,8 +35,8 @@ public final class AFa1zSDK implements AFa1ySDK {
             InputStream inputStreamOpen = p8.getAssets().open("af_init_config.json");
             Intrinsics.checkNotNullExpressionValue(inputStreamOpen, "");
             try {
-                String strH = ut.n.h(new BufferedReader(new InputStreamReader(inputStreamOpen, Charsets.UTF_8), 8192));
-                ut.c.a(inputStreamOpen, null);
+                String strH = st.n.h(new BufferedReader(new InputStreamReader(inputStreamOpen, Charsets.UTF_8), 8192));
+                st.c.a(inputStreamOpen, null);
                 JSONObject jSONObject2 = new JSONObject(strH);
                 try {
                     AFLoggerBase.d$default(AFLogger.INSTANCE, LogTag.INIT_BY_CONFIG, "Configuration file af_init_config.json loaded successfully", false, 4, null);
@@ -68,7 +68,7 @@ public final class AFa1zSDK implements AFa1ySDK {
                 try {
                     throw th4;
                 } catch (Throwable th5) {
-                    ut.c.a(inputStreamOpen, th4);
+                    st.c.a(inputStreamOpen, th4);
                     throw th5;
                 }
             }
@@ -88,17 +88,17 @@ public final class AFa1zSDK implements AFa1ySDK {
         Intrinsics.checkNotNullParameter(p8, "");
         JSONObject jSONObjectAFKeystoreWrapper = AFKeystoreWrapper(p8);
         try {
-            jt.n.Companion companion = jt.n.INSTANCE;
-            objB = jt.n.b(jSONObjectAFKeystoreWrapper != null ? JsonUtils.toMap(jSONObjectAFKeystoreWrapper) : null);
+            gt.n.Companion companion = gt.n.INSTANCE;
+            objB = gt.n.b(jSONObjectAFKeystoreWrapper != null ? JsonUtils.toMap(jSONObjectAFKeystoreWrapper) : null);
         } catch (Throwable th2) {
-            jt.n.Companion companion2 = jt.n.INSTANCE;
-            objB = jt.n.b(jt.o.a(th2));
+            gt.n.Companion companion2 = gt.n.INSTANCE;
+            objB = gt.n.b(gt.o.a(th2));
         }
-        Throwable thE = jt.n.e(objB);
+        Throwable thE = gt.n.e(objB);
         if (thE != null) {
             AFLoggerBase.e$default(AFLogger.INSTANCE, LogTag.INIT_BY_CONFIG, "Failed to parse config: " + thE.getMessage(), thE, false, false, false, false, 120, null);
         }
-        if (jt.n.g(objB)) {
+        if (gt.n.g(objB)) {
             objB = null;
         }
         Map map = (Map) objB;

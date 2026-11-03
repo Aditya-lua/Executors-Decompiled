@@ -38,7 +38,7 @@ public class a extends j {
                 break;
             }
             d dVar2 = dVarArr[i13];
-            dVar2.f4350i = dVar.q(dVar2);
+            dVar2.f4516i = dVar.q(dVar2);
             i13++;
         }
         int i14 = this.N0;
@@ -53,13 +53,13 @@ public class a extends j {
             this.Q0 = false;
             int i15 = this.N0;
             if (i15 == 0 || i15 == 1) {
-                dVar.f(this.O.f4350i, this.f4370f0);
-                dVar.f(this.Q.f4350i, this.f4370f0);
+                dVar.f(this.O.f4516i, this.f4536f0);
+                dVar.f(this.Q.f4516i, this.f4536f0);
                 return;
             } else {
                 if (i15 == 2 || i15 == 3) {
-                    dVar.f(this.P.f4350i, this.f4372g0);
-                    dVar.f(this.R.f4350i, this.f4372g0);
+                    dVar.f(this.P.f4516i, this.f4538g0);
+                    dVar.f(this.R.f4516i, this.f4538g0);
                     return;
                 }
                 return;
@@ -72,7 +72,7 @@ public class a extends j {
                 break;
             }
             e eVar = this.L0[i16];
-            if ((this.O0 || eVar.h()) && ((((i11 = this.N0) == 0 || i11 == 1) && eVar.A() == e.b.MATCH_CONSTRAINT && eVar.O.f4347f != null && eVar.Q.f4347f != null) || (((i12 = this.N0) == 2 || i12 == 3) && eVar.T() == e.b.MATCH_CONSTRAINT && eVar.P.f4347f != null && eVar.R.f4347f != null))) {
+            if ((this.O0 || eVar.h()) && ((((i11 = this.N0) == 0 || i11 == 1) && eVar.A() == e.b.MATCH_CONSTRAINT && eVar.O.f4513f != null && eVar.Q.f4513f != null) || (((i12 = this.N0) == 2 || i12 == 3) && eVar.T() == e.b.MATCH_CONSTRAINT && eVar.P.f4513f != null && eVar.R.f4513f != null))) {
                 z11 = true;
                 break;
             }
@@ -88,36 +88,36 @@ public class a extends j {
                 d[] dVarArr3 = eVar2.W;
                 int i19 = this.N0;
                 d dVar4 = dVarArr3[i19];
-                dVar4.f4350i = iVarQ;
-                d dVar5 = dVar4.f4347f;
-                int i20 = (dVar5 == null || dVar5.f4345d != this) ? 0 : dVar4.f4348g;
+                dVar4.f4516i = iVarQ;
+                d dVar5 = dVar4.f4513f;
+                int i20 = (dVar5 == null || dVar5.f4511d != this) ? 0 : dVar4.f4514g;
                 if (i19 == 0 || i19 == 2) {
-                    dVar.i(dVar3.f4350i, iVarQ, this.P0 - i20, z11);
+                    dVar.i(dVar3.f4516i, iVarQ, this.P0 - i20, z11);
                 } else {
-                    dVar.g(dVar3.f4350i, iVarQ, this.P0 + i20, z11);
+                    dVar.g(dVar3.f4516i, iVarQ, this.P0 + i20, z11);
                 }
-                dVar.e(dVar3.f4350i, iVarQ, this.P0 + i20, i17);
+                dVar.e(dVar3.f4516i, iVarQ, this.P0 + i20, i17);
             }
         }
         int i21 = this.N0;
         if (i21 == 0) {
-            dVar.e(this.Q.f4350i, this.O.f4350i, 0, 8);
-            dVar.e(this.O.f4350i, this.f4361a0.Q.f4350i, 0, 4);
-            dVar.e(this.O.f4350i, this.f4361a0.O.f4350i, 0, 0);
+            dVar.e(this.Q.f4516i, this.O.f4516i, 0, 8);
+            dVar.e(this.O.f4516i, this.f4527a0.Q.f4516i, 0, 4);
+            dVar.e(this.O.f4516i, this.f4527a0.O.f4516i, 0, 0);
             return;
         }
         if (i21 == 1) {
-            dVar.e(this.O.f4350i, this.Q.f4350i, 0, 8);
-            dVar.e(this.O.f4350i, this.f4361a0.O.f4350i, 0, 4);
-            dVar.e(this.O.f4350i, this.f4361a0.Q.f4350i, 0, 0);
+            dVar.e(this.O.f4516i, this.Q.f4516i, 0, 8);
+            dVar.e(this.O.f4516i, this.f4527a0.O.f4516i, 0, 4);
+            dVar.e(this.O.f4516i, this.f4527a0.Q.f4516i, 0, 0);
         } else if (i21 == 2) {
-            dVar.e(this.R.f4350i, this.P.f4350i, 0, 8);
-            dVar.e(this.P.f4350i, this.f4361a0.R.f4350i, 0, 4);
-            dVar.e(this.P.f4350i, this.f4361a0.P.f4350i, 0, 0);
+            dVar.e(this.R.f4516i, this.P.f4516i, 0, 8);
+            dVar.e(this.P.f4516i, this.f4527a0.R.f4516i, 0, 4);
+            dVar.e(this.P.f4516i, this.f4527a0.P.f4516i, 0, 0);
         } else if (i21 == 3) {
-            dVar.e(this.P.f4350i, this.R.f4350i, 0, 8);
-            dVar.e(this.P.f4350i, this.f4361a0.P.f4350i, 0, 4);
-            dVar.e(this.P.f4350i, this.f4361a0.R.f4350i, 0, 0);
+            dVar.e(this.P.f4516i, this.R.f4516i, 0, 8);
+            dVar.e(this.P.f4516i, this.f4527a0.P.f4516i, 0, 4);
+            dVar.e(this.P.f4516i, this.f4527a0.R.f4516i, 0, 0);
         }
     }
 

@@ -1,43 +1,73 @@
 package er;
 
-import java.util.Set;
-import kotlin.Metadata;
-import kotlin.jvm.internal.Intrinsics;
-import nu.c0;
-import nu.r0;
-import org.jetbrains.annotations.NotNull;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000$\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\"\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\b\u0018\u00002\u00020\u0001B\u0015\u0012\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00030\u0002¢\u0006\u0004\b\u0005\u0010\u0006R \u0010\n\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00030\u00020\u00078\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\b\u0010\tR#\u0010\u000f\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00030\u00020\u000b8\u0006¢\u0006\f\n\u0004\b\f\u0010\r\u001a\u0004\b\b\u0010\u000eR0\u0010\u0010\u001a\b\u0012\u0004\u0012\u00020\u00030\u00022\f\u0010\u0010\u001a\b\u0012\u0004\u0012\u00020\u00030\u00028F@FX\u0086\u000e¢\u0006\f\u001a\u0004\b\f\u0010\u0011\"\u0004\b\u0012\u0010\u0006¨\u0006\u0013"}, d2 = {"Ler/n;", "", "", "", "initialValue", "<init>", "(Ljava/util/Set;)V", "Lnu/c0;", "a", "Lnu/c0;", "_stringSetValue", "Lnu/h;", "b", "Lnu/h;", "()Lnu/h;", "onChanged", "value", "()Ljava/util/Set;", "c", "ui-step-renderer_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class n {
+public final class n implements r5.a {
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
-    @NotNull
-    public final c0<Set<String>> _stringSetValue;
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    @NonNull
+    public final LinearLayout f16337a;
 
-    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
-    @NotNull
-    public final nu.h<Set<String>> onChanged;
+    @NonNull
+    public final LinearLayout b;
 
-    public n(@NotNull Set<String> initialValue) {
-        Intrinsics.checkNotNullParameter(initialValue, "initialValue");
-        c0<Set<String>> c0VarA = r0.a(initialValue);
-        this._stringSetValue = c0VarA;
-        this.onChanged = nu.j.n(c0VarA, 1);
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    @NonNull
+    public final TextView f16338c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    @NonNull
+    public final TextView f16339d;
+
+    public n(@NonNull LinearLayout linearLayout, @NonNull LinearLayout linearLayout2, @NonNull TextView textView, @NonNull TextView textView2) {
+        this.f16337a = linearLayout;
+        this.b = linearLayout2;
+        this.f16338c = textView;
+        this.f16339d = textView2;
     }
 
-    @NotNull
-    public final nu.h<Set<String>> a() {
-        return this.onChanged;
+    @NonNull
+    public static n a(@NonNull View view) {
+        int i10 = yq.d.f37057u0;
+        LinearLayout linearLayout = (LinearLayout) r5.b.a(view, i10);
+        if (linearLayout != null) {
+            i10 = yq.d.f37063x0;
+            TextView textView = (TextView) r5.b.a(view, i10);
+            if (textView != null) {
+                i10 = yq.d.f37065y0;
+                TextView textView2 = (TextView) r5.b.a(view, i10);
+                if (textView2 != null) {
+                    return new n((LinearLayout) view, linearLayout, textView, textView2);
+                }
+            }
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
     }
 
-    @NotNull
-    public final Set<String> b() {
-        return this._stringSetValue.getValue();
+    @NonNull
+    public static n c(@NonNull LayoutInflater layoutInflater) {
+        return d(layoutInflater, null, false);
     }
 
-    public final void c(@NotNull Set<String> value) {
-        Intrinsics.checkNotNullParameter(value, "value");
-        this._stringSetValue.setValue(value);
+    @NonNull
+    public static n d(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
+        View viewInflate = layoutInflater.inflate(yq.e.f37081o, viewGroup, false);
+        if (z10) {
+            viewGroup.addView(viewInflate);
+        }
+        return a(viewInflate);
+    }
+
+    @Override // r5.a
+    @NonNull
+    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+    public LinearLayout getRoot() {
+        return this.f16337a;
     }
 }

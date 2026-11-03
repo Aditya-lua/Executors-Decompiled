@@ -360,6 +360,7 @@
     <id name="linear" />
     <id name="listMode" />
     <id name="list_item" />
+    <id name="loading_content_stub" />
     <id name="loading_layout" />
     <id name="loading_layout_stub" />
     <id name="loading_progress_view" />

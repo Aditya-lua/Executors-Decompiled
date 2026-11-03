@@ -22,29 +22,29 @@ import java.util.List;
 public class l implements j {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f22102a;
+    public final Context f22326a;
     public final Notification.Builder b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final k.f f22103c;
+    public final k.f f22327c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public RemoteViews f22104d;
+    public RemoteViews f22328d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public RemoteViews f22105e;
+    public RemoteViews f22329e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final List<Bundle> f22106f = new ArrayList();
+    public final List<Bundle> f22330f = new ArrayList();
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final Bundle f22107g = new Bundle();
+    public final Bundle f22331g = new Bundle();
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public int f22108h;
+    public int f22332h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public RemoteViews f22109i;
+    public RemoteViews f22333i;
 
     public static class a {
         public static Notification.Builder a(Notification.Builder builder, Notification.Action action) {
@@ -218,18 +218,18 @@ public class l implements j {
 
     public l(k.f fVar) {
         int i10;
-        this.f22103c = fVar;
-        Context context = fVar.f22063a;
-        this.f22102a = context;
+        this.f22327c = fVar;
+        Context context = fVar.f22287a;
+        this.f22326a = context;
         Notification.Builder builderA = e.a(context, fVar.L);
         this.b = builderA;
         Notification notification = fVar.T;
         int i11 = 0;
-        builderA.setWhen(notification.when).setSmallIcon(notification.icon, notification.iconLevel).setContent(notification.contentView).setTicker(notification.tickerText, fVar.f22071j).setVibrate(notification.vibrate).setLights(notification.ledARGB, notification.ledOnMS, notification.ledOffMS).setOngoing((notification.flags & 2) != 0).setOnlyAlertOnce((notification.flags & 8) != 0).setAutoCancel((notification.flags & 16) != 0).setDefaults(notification.defaults).setContentTitle(fVar.f22066e).setContentText(fVar.f22067f).setContentInfo(fVar.f22073l).setContentIntent(fVar.f22069h).setDeleteIntent(notification.deleteIntent).setFullScreenIntent(fVar.f22070i, (notification.flags & 128) != 0).setNumber(fVar.f22074m).setProgress(fVar.f22082u, fVar.f22083v, fVar.f22084w);
-        IconCompat iconCompat = fVar.f22072k;
+        builderA.setWhen(notification.when).setSmallIcon(notification.icon, notification.iconLevel).setContent(notification.contentView).setTicker(notification.tickerText, fVar.f22295j).setVibrate(notification.vibrate).setLights(notification.ledARGB, notification.ledOnMS, notification.ledOffMS).setOngoing((notification.flags & 2) != 0).setOnlyAlertOnce((notification.flags & 8) != 0).setAutoCancel((notification.flags & 16) != 0).setDefaults(notification.defaults).setContentTitle(fVar.f22290e).setContentText(fVar.f22291f).setContentInfo(fVar.f22297l).setContentIntent(fVar.f22293h).setDeleteIntent(notification.deleteIntent).setFullScreenIntent(fVar.f22294i, (notification.flags & 128) != 0).setNumber(fVar.f22298m).setProgress(fVar.f22306u, fVar.f22307v, fVar.f22308w);
+        IconCompat iconCompat = fVar.f22296k;
         c.b(builderA, iconCompat == null ? null : iconCompat.p(context));
-        builderA.setSubText(fVar.f22079r).setUsesChronometer(fVar.f22077p).setPriority(fVar.f22075n);
-        k.i iVar = fVar.f22078q;
+        builderA.setSubText(fVar.f22303r).setUsesChronometer(fVar.f22301p).setPriority(fVar.f22299n);
+        k.i iVar = fVar.f22302q;
         if (iVar instanceof k.g) {
             ArrayList<k.a> arrayListI = ((k.g) iVar).i();
             int size = arrayListI.size();
@@ -251,42 +251,42 @@ public class l implements j {
         }
         Bundle bundle = fVar.E;
         if (bundle != null) {
-            this.f22107g.putAll(bundle);
+            this.f22331g.putAll(bundle);
         }
         int i14 = Build.VERSION.SDK_INT;
-        this.f22104d = fVar.I;
-        this.f22105e = fVar.J;
-        this.b.setShowWhen(fVar.f22076o);
+        this.f22328d = fVar.I;
+        this.f22329e = fVar.J;
+        this.b.setShowWhen(fVar.f22300o);
         a.g(this.b, fVar.A);
-        a.e(this.b, fVar.f22085x);
-        a.h(this.b, fVar.f22087z);
-        a.f(this.b, fVar.f22086y);
-        this.f22108h = fVar.Q;
+        a.e(this.b, fVar.f22309x);
+        a.h(this.b, fVar.f22311z);
+        a.f(this.b, fVar.f22310y);
+        this.f22332h = fVar.Q;
         b.b(this.b, fVar.D);
         b.c(this.b, fVar.F);
         b.f(this.b, fVar.G);
         b.d(this.b, fVar.H);
         b.e(this.b, notification.sound, notification.audioAttributes);
-        List listE = i14 < 28 ? e(g(fVar.f22064c), fVar.W) : fVar.W;
+        List listE = i14 < 28 ? e(g(fVar.f22288c), fVar.W) : fVar.W;
         if (listE != null && !listE.isEmpty()) {
             Iterator it = listE.iterator();
             while (it.hasNext()) {
                 b.a(this.b, (String) it.next());
             }
         }
-        this.f22109i = fVar.K;
-        if (fVar.f22065d.size() > 0) {
+        this.f22333i = fVar.K;
+        if (fVar.f22289d.size() > 0) {
             Bundle bundle2 = fVar.d().getBundle("android.car.EXTENSIONS");
             bundle2 = bundle2 == null ? new Bundle() : bundle2;
             Bundle bundle3 = new Bundle(bundle2);
             Bundle bundle4 = new Bundle();
-            for (int i15 = 0; i15 < fVar.f22065d.size(); i15++) {
-                bundle4.putBundle(Integer.toString(i15), m.a(fVar.f22065d.get(i15)));
+            for (int i15 = 0; i15 < fVar.f22289d.size(); i15++) {
+                bundle4.putBundle(Integer.toString(i15), m.a(fVar.f22289d.get(i15)));
             }
             bundle2.putBundle("invisible_actions", bundle4);
             bundle3.putBundle("invisible_actions", bundle4);
             fVar.d().putBundle("android.car.EXTENSIONS", bundle2);
-            this.f22107g.putBundle("android.car.EXTENSIONS", bundle3);
+            this.f22331g.putBundle("android.car.EXTENSIONS", bundle3);
         }
         int i16 = Build.VERSION.SDK_INT;
         Object obj = fVar.V;
@@ -294,7 +294,7 @@ public class l implements j {
             c.c(this.b, obj);
         }
         this.b.setExtras(fVar.E);
-        d.e(this.b, fVar.f22081t);
+        d.e(this.b, fVar.f22305t);
         RemoteViews remoteViews = fVar.I;
         if (remoteViews != null) {
             d.c(this.b, remoteViews);
@@ -308,7 +308,7 @@ public class l implements j {
             d.d(this.b, remoteViews3);
         }
         e.b(this.b, fVar.M);
-        e.e(this.b, fVar.f22080s);
+        e.e(this.b, fVar.f22304s);
         e.f(this.b, fVar.N);
         e.g(this.b, fVar.P);
         e.d(this.b, fVar.Q);
@@ -319,7 +319,7 @@ public class l implements j {
             this.b.setSound(null).setDefaults(0).setLights(0, 0, 0).setVibrate(null);
         }
         if (i16 >= 28) {
-            ArrayList<r> arrayList2 = fVar.f22064c;
+            ArrayList<r> arrayList2 = fVar.f22288c;
             int size3 = arrayList2.size();
             while (i11 < size3) {
                 r rVar = arrayList2.get(i11);
@@ -340,23 +340,23 @@ public class l implements j {
             h.b(this.b, i10);
         }
         if (i17 >= 36) {
-            i.a(this.b, fVar.f22068g);
+            i.a(this.b, fVar.f22292g);
         }
         if (fVar.U) {
-            if (this.f22103c.f22086y) {
-                this.f22108h = 2;
+            if (this.f22327c.f22310y) {
+                this.f22332h = 2;
             } else {
-                this.f22108h = 1;
+                this.f22332h = 1;
             }
             this.b.setVibrate(null);
             this.b.setSound(null);
             int i18 = notification.defaults & (-4);
             notification.defaults = i18;
             this.b.setDefaults(i18);
-            if (TextUtils.isEmpty(this.f22103c.f22085x)) {
+            if (TextUtils.isEmpty(this.f22327c.f22309x)) {
                 a.e(this.b, "silent");
             }
-            e.d(this.b, this.f22108h);
+            e.d(this.b, this.f22332h);
         }
     }
 
@@ -421,7 +421,7 @@ public class l implements j {
         Bundle bundleA;
         RemoteViews remoteViewsF;
         RemoteViews remoteViewsD;
-        k.i iVar = this.f22103c.f22078q;
+        k.i iVar = this.f22327c.f22302q;
         if (iVar != null) {
             iVar.b(this);
         }
@@ -430,7 +430,7 @@ public class l implements j {
         if (remoteViewsE != null) {
             notificationD.contentView = remoteViewsE;
         } else {
-            RemoteViews remoteViews = this.f22103c.I;
+            RemoteViews remoteViews = this.f22327c.I;
             if (remoteViews != null) {
                 notificationD.contentView = remoteViews;
             }
@@ -438,7 +438,7 @@ public class l implements j {
         if (iVar != null && (remoteViewsD = iVar.d(this)) != null) {
             notificationD.bigContentView = remoteViewsD;
         }
-        if (iVar != null && (remoteViewsF = this.f22103c.f22078q.f(this)) != null) {
+        if (iVar != null && (remoteViewsF = this.f22327c.f22302q.f(this)) != null) {
             notificationD.headsUpContentView = remoteViewsF;
         }
         if (iVar != null && (bundleA = k.a(notificationD)) != null) {
@@ -452,6 +452,6 @@ public class l implements j {
     }
 
     public Context f() {
-        return this.f22102a;
+        return this.f22326a;
     }
 }

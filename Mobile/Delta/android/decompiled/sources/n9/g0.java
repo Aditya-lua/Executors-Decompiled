@@ -7,20 +7,20 @@ import java.util.concurrent.TimeUnit;
 public final class g0 implements k9.i.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ k9.i f25268a;
+    public final /* synthetic */ k9.i f26089a;
     public final /* synthetic */ sb.k b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final /* synthetic */ l.a f25269c;
+    public final /* synthetic */ l.a f26090c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final /* synthetic */ i0 f25270d;
+    public final /* synthetic */ i0 f26091d;
 
     public g0(k9.i iVar, sb.k kVar, l.a aVar, i0 i0Var) {
-        this.f25268a = iVar;
+        this.f26089a = iVar;
         this.b = kVar;
-        this.f25269c = aVar;
-        this.f25270d = i0Var;
+        this.f26090c = aVar;
+        this.f26091d = i0Var;
     }
 
     @Override // k9.i.a
@@ -28,7 +28,7 @@ public final class g0 implements k9.i.a {
         if (!status.A3()) {
             this.b.b(a.a(status));
         } else {
-            this.b.c(this.f25269c.a(this.f25268a.d(0L, TimeUnit.MILLISECONDS)));
+            this.b.c(this.f26090c.a(this.f26089a.d(0L, TimeUnit.MILLISECONDS)));
         }
     }
 }

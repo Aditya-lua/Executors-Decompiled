@@ -1,111 +1,38 @@
 package no;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import com.withpersona.sdk2.inquiry.shared.ui.Pi2NavigationBar;
-import com.withpersona.sdk2.inquiry.shared.ui.ThemeableLottieAnimationView;
-import io.n2;
-import io.o2;
+import com.withpersona.sdk2.camera.ImageIdMetadata;
+import com.withpersona.sdk2.inquiry.governmentid.network.AutocaptureState;
+import java.util.Iterator;
+import kotlin.Metadata;
+import kotlin.collections.CollectionsKt;
+import kotlin.jvm.internal.Intrinsics;
+import org.jetbrains.annotations.NotNull;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class a implements r5.a {
-
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    @NonNull
-    public final CoordinatorLayout f26471a;
-
-    @NonNull
-    public final LinearLayout b;
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    @NonNull
-    public final Button f26472c;
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    @NonNull
-    public final LinearLayout f26473d;
-
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    @NonNull
-    public final ThemeableLottieAnimationView f26474e;
-
-    /* JADX INFO: renamed from: f, reason: collision with root package name */
-    @NonNull
-    public final ConstraintLayout f26475f;
-
-    /* JADX INFO: renamed from: g, reason: collision with root package name */
-    @NonNull
-    public final Pi2NavigationBar f26476g;
-
-    /* JADX INFO: renamed from: h, reason: collision with root package name */
-    @NonNull
-    public final TextView f26477h;
-
-    public a(@NonNull CoordinatorLayout coordinatorLayout, @NonNull LinearLayout linearLayout, @NonNull Button button, @NonNull LinearLayout linearLayout2, @NonNull ThemeableLottieAnimationView themeableLottieAnimationView, @NonNull ConstraintLayout constraintLayout, @NonNull Pi2NavigationBar pi2NavigationBar, @NonNull TextView textView) {
-        this.f26471a = coordinatorLayout;
-        this.b = linearLayout;
-        this.f26472c = button;
-        this.f26473d = linearLayout2;
-        this.f26474e = themeableLottieAnimationView;
-        this.f26475f = constraintLayout;
-        this.f26476g = pi2NavigationBar;
-        this.f26477h = textView;
-    }
-
-    @NonNull
-    public static a a(@NonNull View view) {
-        int i10 = n2.f20742u;
-        LinearLayout linearLayout = (LinearLayout) r5.b.a(view, i10);
-        if (linearLayout != null) {
-            i10 = n2.f20744v;
-            Button button = (Button) r5.b.a(view, i10);
-            if (button != null) {
-                i10 = n2.J;
-                LinearLayout linearLayout2 = (LinearLayout) r5.b.a(view, i10);
-                if (linearLayout2 != null) {
-                    i10 = n2.T;
-                    ThemeableLottieAnimationView themeableLottieAnimationView = (ThemeableLottieAnimationView) r5.b.a(view, i10);
-                    if (themeableLottieAnimationView != null) {
-                        i10 = n2.Y;
-                        ConstraintLayout constraintLayout = (ConstraintLayout) r5.b.a(view, i10);
-                        if (constraintLayout != null) {
-                            i10 = n2.f20709d0;
-                            Pi2NavigationBar pi2NavigationBar = (Pi2NavigationBar) r5.b.a(view, i10);
-                            if (pi2NavigationBar != null) {
-                                i10 = n2.L0;
-                                TextView textView = (TextView) r5.b.a(view, i10);
-                                if (textView != null) {
-                                    return new a((CoordinatorLayout) view, linearLayout, button, linearLayout2, themeableLottieAnimationView, constraintLayout, pi2NavigationBar, textView);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+@Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0003\u001a\u0019\u0010\u0003\u001a\u00020\u0000*\u00020\u00002\u0006\u0010\u0002\u001a\u00020\u0001¢\u0006\u0004\b\u0003\u0010\u0004\u001a\u0011\u0010\u0006\u001a\u00020\u0005*\u00020\u0000¢\u0006\u0004\b\u0006\u0010\u0007¨\u0006\b"}, d2 = {"Lcom/withpersona/sdk2/inquiry/governmentid/network/AutocaptureState;", "Lcom/withpersona/sdk2/camera/ImageIdMetadata;", "newFrame", "b", "(Lcom/withpersona/sdk2/inquiry/governmentid/network/AutocaptureState;Lcom/withpersona/sdk2/camera/ImageIdMetadata;)Lcom/withpersona/sdk2/inquiry/governmentid/network/AutocaptureState;", "", "a", "(Lcom/withpersona/sdk2/inquiry/governmentid/network/AutocaptureState;)Z", "government-id_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
+public final class a {
+    public static final boolean a(@NotNull AutocaptureState autocaptureState) {
+        Intrinsics.checkNotNullParameter(autocaptureState, "<this>");
+        if (autocaptureState.f().size() < 3) {
+            return false;
         }
-        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
-    }
-
-    @NonNull
-    public static a c(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
-        View viewInflate = layoutInflater.inflate(o2.f20756a, viewGroup, false);
-        if (z10) {
-            viewGroup.addView(viewInflate);
+        Iterator<T> it = autocaptureState.f().iterator();
+        int length = 0;
+        while (it.hasNext()) {
+            length += ((ImageIdMetadata) it.next()).getTextOnImage().length();
         }
-        return a(viewInflate);
+        double size = ((double) length) / ((double) autocaptureState.f().size());
+        double length2 = 0.0d;
+        for (ImageIdMetadata imageIdMetadata : autocaptureState.f()) {
+            length2 += (((double) imageIdMetadata.getTextOnImage().length()) - size) * (((double) imageIdMetadata.getTextOnImage().length()) - size);
+        }
+        return Math.sqrt(length2 / ((double) autocaptureState.f().size())) / size < 0.05d;
     }
 
-    @Override // r5.a
-    @NonNull
-    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public CoordinatorLayout getRoot() {
-        return this.f26471a;
+    @NotNull
+    public static final AutocaptureState b(@NotNull AutocaptureState autocaptureState, @NotNull ImageIdMetadata newFrame) {
+        Intrinsics.checkNotNullParameter(autocaptureState, "<this>");
+        Intrinsics.checkNotNullParameter(newFrame, "newFrame");
+        return autocaptureState.a(CollectionsKt.x0(CollectionsKt.I0(autocaptureState.f(), 2), newFrame));
     }
 }

@@ -13,16 +13,16 @@ public final class ic extends LinkedHashMap {
     public static final ic b;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f6495a;
+    public boolean f6568a;
 
     static {
         ic icVar = new ic();
         b = icVar;
-        icVar.f6495a = false;
+        icVar.f6568a = false;
     }
 
     public ic() {
-        this.f6495a = true;
+        this.f6568a = true;
     }
 
     public static ic a() {
@@ -64,7 +64,7 @@ public final class ic extends LinkedHashMap {
     }
 
     public final void e() {
-        this.f6495a = false;
+        this.f6568a = false;
     }
 
     @Override // java.util.LinkedHashMap, java.util.HashMap, java.util.AbstractMap, java.util.Map
@@ -100,7 +100,7 @@ public final class ic extends LinkedHashMap {
     }
 
     public final boolean f() {
-        return this.f6495a;
+        return this.f6568a;
     }
 
     @Override // java.util.AbstractMap, java.util.Map
@@ -115,7 +115,7 @@ public final class ic extends LinkedHashMap {
     }
 
     public final void j() {
-        if (!this.f6495a) {
+        if (!this.f6568a) {
             throw new UnsupportedOperationException();
         }
     }
@@ -123,7 +123,7 @@ public final class ic extends LinkedHashMap {
     @Override // java.util.HashMap, java.util.AbstractMap, java.util.Map
     public final Object put(Object obj, Object obj2) {
         j();
-        Charset charset = qb.f6750a;
+        Charset charset = qb.f6824a;
         obj.getClass();
         obj2.getClass();
         return super.put(obj, obj2);
@@ -133,7 +133,7 @@ public final class ic extends LinkedHashMap {
     public final void putAll(Map map) {
         j();
         for (Object obj : map.keySet()) {
-            Charset charset = qb.f6750a;
+            Charset charset = qb.f6824a;
             obj.getClass();
             map.get(obj).getClass();
         }
@@ -148,6 +148,6 @@ public final class ic extends LinkedHashMap {
 
     public ic(Map map) {
         super(map);
-        this.f6495a = true;
+        this.f6568a = true;
     }
 }

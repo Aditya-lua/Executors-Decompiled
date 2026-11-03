@@ -7,11 +7,11 @@ import java.util.Objects;
 public final class r9 implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ com.google.android.gms.internal.measurement.x1 f25930a;
+    public final /* synthetic */ com.google.android.gms.internal.measurement.x1 f26751a;
     public final /* synthetic */ qa b;
 
     public r9(qa qaVar, com.google.android.gms.internal.measurement.x1 x1Var) {
-        this.f25930a = x1Var;
+        this.f26751a = x1Var;
         Objects.requireNonNull(qaVar);
         this.b = qaVar;
     }
@@ -22,19 +22,19 @@ public final class r9 implements Runnable {
     public final void run() {
         Long lValueOf;
         qa qaVar = this.b;
-        g7 g7Var = qaVar.f25625a.z().f25625a;
+        g7 g7Var = qaVar.f26446a.z().f26446a;
         if (g7Var.x().w().o(p8.ANALYTICS_STORAGE)) {
-            if (!g7Var.x().A(g7Var.e().a()) && g7Var.x().f25683r.a() != 0) {
-                lValueOf = Long.valueOf(g7Var.x().f25683r.a());
+            if (!g7Var.x().A(g7Var.e().a()) && g7Var.x().f26504r.a() != 0) {
+                lValueOf = Long.valueOf(g7Var.x().f26504r.a());
             }
             if (lValueOf == null) {
-                qaVar.f25625a.C().b0(this.f25930a, lValueOf.longValue());
+                qaVar.f26446a.C().b0(this.f26751a, lValueOf.longValue());
             } else {
                 try {
-                    this.f25930a.l(null);
+                    this.f26751a.l(null);
                     return;
                 } catch (RemoteException e10) {
-                    this.b.f25625a.a().o().b("getSessionId failed with exception", e10);
+                    this.b.f26446a.a().o().b("getSessionId failed with exception", e10);
                     return;
                 }
             }
@@ -42,9 +42,9 @@ public final class r9 implements Runnable {
         g7Var.a().t().a("Analytics storage consent denied; will not get session id");
         lValueOf = null;
         if (lValueOf == null) {
-            this.f25930a.l(null);
+            this.f26751a.l(null);
             return;
         }
-        qaVar.f25625a.C().b0(this.f25930a, lValueOf.longValue());
+        qaVar.f26446a.C().b0(this.f26751a, lValueOf.longValue());
     }
 }

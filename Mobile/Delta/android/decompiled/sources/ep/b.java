@@ -1,24 +1,43 @@
 package ep;
 
 import kotlin.Metadata;
-import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Intrinsics;
-import sb.g;
+import org.jetbrains.annotations.NotNull;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-public final /* synthetic */ class b implements g {
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0003\u001a\u0013\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\u0000¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"Lxo/h;", "", "a", "(Lxo/h;)Ljava/lang/String;", "inquiry-internal_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
+public final class b {
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ Function1 f15731a;
+    @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
+    public static final /* synthetic */ class a {
 
-    public b(Function1 function) {
-        Intrinsics.checkNotNullParameter(function, "function");
-        this.f15731a = function;
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final /* synthetic */ int[] f16224a;
+
+        static {
+            int[] iArr = new int[xo.h.values().length];
+            try {
+                iArr[xo.h.PRODUCTION.ordinal()] = 1;
+            } catch (NoSuchFieldError unused) {
+            }
+            try {
+                iArr[xo.h.SANDBOX.ordinal()] = 2;
+            } catch (NoSuchFieldError unused2) {
+            }
+            f16224a = iArr;
+        }
     }
 
-    @Override // sb.g
-    public final /* synthetic */ void onSuccess(Object obj) {
-        this.f15731a.invoke(obj);
+    @NotNull
+    public static final String a(@NotNull xo.h hVar) {
+        Intrinsics.checkNotNullParameter(hVar, "<this>");
+        int i10 = a.f16224a[hVar.ordinal()];
+        if (i10 == 1) {
+            return "production";
+        }
+        if (i10 == 2) {
+            return "sandbox";
+        }
+        throw new gt.l();
     }
 }

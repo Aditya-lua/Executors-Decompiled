@@ -11,11 +11,11 @@ public final class m {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final String f14460a;
+    public static final String f14440a;
 
     static {
         String strI = w.i("StorageNotLowTracker");
         Intrinsics.checkNotNullExpressionValue(strI, "tagWithPrefix(...)");
-        f14460a = strI;
+        f14440a = strI;
     }
 }

@@ -34,7 +34,7 @@ public abstract class NativeInitCrashpadParams {
     }
 
     public static Builder builder() {
-        return new a.C0151a().f(false);
+        return new a.C0154a().f(false);
     }
 
     public abstract String appVersion();

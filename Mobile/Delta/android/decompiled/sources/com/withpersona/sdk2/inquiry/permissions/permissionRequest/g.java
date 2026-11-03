@@ -86,7 +86,7 @@ public final class g {
         Intrinsics.checkNotNullParameter(lifecycleOwner, "lifecycleOwner");
         this.fragmentManager = fragmentManager;
         this.viewId = Integer.valueOf(viewId);
-        fragmentManager.t1("pi2_permission_request_request", lifecycleOwner, new f0() { // from class: tp.e
+        fragmentManager.t1("pi2_permission_request_request", lifecycleOwner, new f0() { // from class: rp.e
             @Override // e4.f0
             public final void a(String str, Bundle bundle) {
                 g.e(str, bundle);

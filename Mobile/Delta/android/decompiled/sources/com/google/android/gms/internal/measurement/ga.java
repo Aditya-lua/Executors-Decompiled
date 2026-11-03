@@ -4,33 +4,33 @@ package com.google.android.gms.internal.measurement;
 public class ga extends fa {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final byte[] f6458c;
+    public final byte[] f6531c;
 
     public ga(byte[] bArr) {
         super(null);
         bArr.getClass();
-        this.f6458c = bArr;
+        this.f6531c = bArr;
     }
 
     @Override // com.google.android.gms.internal.measurement.ha
     public byte b(int i10) {
-        return this.f6458c[i10];
+        return this.f6531c[i10];
     }
 
     @Override // com.google.android.gms.internal.measurement.ha
     public byte c(int i10) {
-        return this.f6458c[i10];
+        return this.f6531c[i10];
     }
 
     @Override // com.google.android.gms.internal.measurement.ha
     public int d() {
-        return this.f6458c.length;
+        return this.f6531c.length;
     }
 
     @Override // com.google.android.gms.internal.measurement.ha
     public final ha e(int i10, int i11) {
         int iK = ha.k(0, i11, d());
-        return iK == 0 ? ha.b : new ca(this.f6458c, 0, iK);
+        return iK == 0 ? ha.b : new ca(this.f6531c, 0, iK);
     }
 
     @Override // com.google.android.gms.internal.measurement.ha
@@ -71,8 +71,8 @@ public class ga extends fa {
             sb3.append(iD3);
             throw new IllegalArgumentException(sb3.toString());
         }
-        byte[] bArr = this.f6458c;
-        byte[] bArr2 = gaVar.f6458c;
+        byte[] bArr = this.f6531c;
+        byte[] bArr2 = gaVar.f6531c;
         gaVar.l();
         int i12 = 0;
         int i13 = 0;
@@ -88,12 +88,12 @@ public class ga extends fa {
 
     @Override // com.google.android.gms.internal.measurement.ha
     public final void f(y9 y9Var) {
-        ((ka) y9Var).H(this.f6458c, 0, d());
+        ((ka) y9Var).H(this.f6531c, 0, d());
     }
 
     @Override // com.google.android.gms.internal.measurement.ha
     public final int g(int i10, int i11, int i12) {
-        return qb.c(i10, this.f6458c, 0, i12);
+        return qb.c(i10, this.f6531c, 0, i12);
     }
 
     public int l() {

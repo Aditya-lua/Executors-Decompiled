@@ -7,15 +7,15 @@ import k9.a.b;
 public abstract class w<A extends k9.a.b, L> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final k.a f23098a;
+    public final k.a f23492a;
 
     public w(@NonNull k.a<L> aVar) {
-        this.f23098a = aVar;
+        this.f23492a = aVar;
     }
 
     @NonNull
     public k.a<L> a() {
-        return this.f23098a;
+        return this.f23492a;
     }
 
     public abstract void b(@NonNull A a10, @NonNull sb.k<Boolean> kVar);

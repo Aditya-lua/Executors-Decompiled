@@ -19,18 +19,18 @@ import java.util.Map;
 public class MediaCodecInfoUtils {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Map<Integer, List<String>> f9681a = d(MediaCodecInfo.CodecProfileLevel.class, "Profile");
+    public static final Map<Integer, List<String>> f9761a = d(MediaCodecInfo.CodecProfileLevel.class, "Profile");
     public static final Map<Integer, List<String>> b = d(MediaCodecInfo.CodecProfileLevel.class, "Level");
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final Map<Integer, List<String>> f9682c = d(MediaCodecInfo.CodecProfileLevel.class, "AACObject");
+    public static final Map<Integer, List<String>> f9762c = d(MediaCodecInfo.CodecProfileLevel.class, "AACObject");
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final Map<String, String> f9683d;
+    public static final Map<String, String> f9763d;
 
     static {
         HashMap map = new HashMap();
-        f9683d = map;
+        f9763d = map;
         map.put("heic", "HEVC");
         map.put("hevc", "HEVC");
         map.put("avc", "AVC");
@@ -65,7 +65,7 @@ public class MediaCodecInfoUtils {
         if (str.contains("aac") || str.contains("mp4a")) {
             return "AAC";
         }
-        for (Map.Entry<String, String> entry : f9683d.entrySet()) {
+        for (Map.Entry<String, String> entry : f9763d.entrySet()) {
             if (str.contains(entry.getKey())) {
                 return entry.getValue();
             }
@@ -113,7 +113,7 @@ public class MediaCodecInfoUtils {
         String strValueOf2;
         String strC = c(str);
         boolean zEquals = "AAC".equals(strC);
-        Iterator it = (zEquals ? (List) e(f9682c, Integer.valueOf(codecProfileLevel.profile), Collections.EMPTY_LIST) : (List) e(f9681a, Integer.valueOf(codecProfileLevel.profile), Collections.EMPTY_LIST)).iterator();
+        Iterator it = (zEquals ? (List) e(f9762c, Integer.valueOf(codecProfileLevel.profile), Collections.EMPTY_LIST) : (List) e(f9761a, Integer.valueOf(codecProfileLevel.profile), Collections.EMPTY_LIST)).iterator();
         do {
             strValueOf = "";
             if (!it.hasNext()) {

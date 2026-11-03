@@ -13,7 +13,7 @@ public final class j0 implements CoroutineContext.Element {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    public static final String f31395d = "Calling updateData inside updateData on the same DataStore instance is not supported\nsince updates made in the parent updateData call will not be visible to the nested\nupdateData call. See https://issuetracker.google.com/issues/241760537 for details.";
+    public static final String f31914d = "Calling updateData inside updateData on the same DataStore instance is not supported\nsince updates made in the parent updateData call will not be visible to the nested\nupdateData call. See https://issuetracker.google.com/issues/241760537 for details.";
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     @Nullable
@@ -32,7 +32,7 @@ public final class j0 implements CoroutineContext.Element {
     public final void a(@NotNull i<?> candidate) {
         Intrinsics.checkNotNullParameter(candidate, "candidate");
         if (this.instance == candidate) {
-            throw new IllegalStateException(f31395d.toString());
+            throw new IllegalStateException(f31914d.toString());
         }
         j0 j0Var = this.parent;
         if (j0Var != null) {
@@ -54,7 +54,7 @@ public final class j0 implements CoroutineContext.Element {
     @Override // kotlin.coroutines.CoroutineContext.Element
     @NotNull
     public CoroutineContext.b<?> getKey() {
-        return Companion.C0557a.f31397a;
+        return Companion.C0565a.f31916a;
     }
 
     @Override // kotlin.coroutines.CoroutineContext

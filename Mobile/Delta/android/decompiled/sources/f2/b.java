@@ -7,29 +7,29 @@ import java.util.HashMap;
 public class b {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final HashMap<Pair<Integer, Integer>, String> f16085f;
+    public static final HashMap<Pair<Integer, Integer>, String> f16681f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final HashMap<String, String> f16086g;
+    public static final HashMap<String, String> f16682g;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final j f16087a;
+    public final j f16683a;
     public String b = null;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public String f16088c = null;
+    public String f16684c = null;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public int f16089d = -1;
+    public int f16685d = -1;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public int f16090e = -1;
+    public int f16686e = -1;
 
     static {
         HashMap<Pair<Integer, Integer>, String> map = new HashMap<>();
-        f16085f = map;
+        f16681f = map;
         HashMap<String, String> map2 = new HashMap<>();
-        f16086g = map2;
+        f16682g = map2;
         map.put(Pair.create(4, 4), "layout_constraintBottom_toBottomOf");
         map.put(Pair.create(4, 3), "layout_constraintBottom_toTopOf");
         map.put(Pair.create(3, 4), "layout_constraintTop_toBottomOf");
@@ -58,6 +58,6 @@ public class b {
     }
 
     public b(j jVar) {
-        this.f16087a = jVar;
+        this.f16683a = jVar;
     }
 }

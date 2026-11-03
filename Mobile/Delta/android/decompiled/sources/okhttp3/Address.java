@@ -79,7 +79,7 @@ public final class Address {
 
     @NotNull
     /* JADX INFO: renamed from: -deprecated_connectionSpecs, reason: not valid java name */
-    public final List<ConnectionSpec> m74deprecated_connectionSpecs() {
+    public final List<ConnectionSpec> m75deprecated_connectionSpecs() {
         return this.connectionSpecs;
     }
 
@@ -97,7 +97,7 @@ public final class Address {
 
     @NotNull
     /* JADX INFO: renamed from: -deprecated_protocols, reason: not valid java name */
-    public final List<Protocol> m77deprecated_protocols() {
+    public final List<Protocol> m78deprecated_protocols() {
         return this.protocols;
     }
 

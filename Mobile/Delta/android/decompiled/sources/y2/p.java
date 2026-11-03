@@ -20,11 +20,11 @@ import okhttp3.internal.http2.Http2;
 public class p {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final AccessibilityNodeInfo f35500a;
+    public final AccessibilityNodeInfo f36357a;
     public int b = -1;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f35501c = -1;
+    public int f36358c = -1;
 
     public static class a {
         public static final a A;
@@ -51,80 +51,80 @@ public class p {
         public static final a V;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public static final a f35502e = new a(1, null);
+        public static final a f36359e = new a(1, null);
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public static final a f35503f = new a(2, null);
+        public static final a f36360f = new a(2, null);
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public static final a f35504g = new a(4, null);
+        public static final a f36361g = new a(4, null);
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public static final a f35505h = new a(8, null);
+        public static final a f36362h = new a(8, null);
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public static final a f35506i = new a(16, null);
+        public static final a f36363i = new a(16, null);
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public static final a f35507j = new a(32, null);
+        public static final a f36364j = new a(32, null);
 
         /* JADX INFO: renamed from: k, reason: collision with root package name */
-        public static final a f35508k = new a(64, null);
+        public static final a f36365k = new a(64, null);
 
         /* JADX INFO: renamed from: l, reason: collision with root package name */
-        public static final a f35509l = new a(128, null);
+        public static final a f36366l = new a(128, null);
 
         /* JADX INFO: renamed from: m, reason: collision with root package name */
-        public static final a f35510m = new a(Barcode.FORMAT_QR_CODE, (CharSequence) null, (Class<? extends s.a>) s.b.class);
+        public static final a f36367m = new a(Barcode.FORMAT_QR_CODE, (CharSequence) null, (Class<? extends s.a>) s.b.class);
 
         /* JADX INFO: renamed from: n, reason: collision with root package name */
-        public static final a f35511n = new a(Barcode.FORMAT_UPC_A, (CharSequence) null, (Class<? extends s.a>) s.b.class);
+        public static final a f36368n = new a(Barcode.FORMAT_UPC_A, (CharSequence) null, (Class<? extends s.a>) s.b.class);
 
         /* JADX INFO: renamed from: o, reason: collision with root package name */
-        public static final a f35512o = new a(Barcode.FORMAT_UPC_E, (CharSequence) null, (Class<? extends s.a>) s.c.class);
+        public static final a f36369o = new a(Barcode.FORMAT_UPC_E, (CharSequence) null, (Class<? extends s.a>) s.c.class);
 
         /* JADX INFO: renamed from: p, reason: collision with root package name */
-        public static final a f35513p = new a(Barcode.FORMAT_PDF417, (CharSequence) null, (Class<? extends s.a>) s.c.class);
+        public static final a f36370p = new a(Barcode.FORMAT_PDF417, (CharSequence) null, (Class<? extends s.a>) s.c.class);
 
         /* JADX INFO: renamed from: q, reason: collision with root package name */
-        public static final a f35514q = new a(Barcode.FORMAT_AZTEC, null);
+        public static final a f36371q = new a(Barcode.FORMAT_AZTEC, null);
 
         /* JADX INFO: renamed from: r, reason: collision with root package name */
-        public static final a f35515r = new a(8192, null);
+        public static final a f36372r = new a(8192, null);
 
         /* JADX INFO: renamed from: s, reason: collision with root package name */
-        public static final a f35516s = new a(Http2.INITIAL_MAX_FRAME_SIZE, null);
+        public static final a f36373s = new a(Http2.INITIAL_MAX_FRAME_SIZE, null);
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public static final a f35517t = new a(32768, null);
+        public static final a f36374t = new a(32768, null);
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public static final a f35518u = new a(65536, null);
+        public static final a f36375u = new a(65536, null);
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public static final a f35519v = new a(131072, (CharSequence) null, (Class<? extends s.a>) s.g.class);
+        public static final a f36376v = new a(131072, (CharSequence) null, (Class<? extends s.a>) s.g.class);
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public static final a f35520w = new a(262144, null);
+        public static final a f36377w = new a(262144, null);
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public static final a f35521x = new a(524288, null);
+        public static final a f36378x = new a(524288, null);
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public static final a f35522y = new a(1048576, null);
+        public static final a f36379y = new a(1048576, null);
 
         /* JADX INFO: renamed from: z, reason: collision with root package name */
-        public static final a f35523z = new a(2097152, (CharSequence) null, (Class<? extends s.a>) s.h.class);
+        public static final a f36380z = new a(2097152, (CharSequence) null, (Class<? extends s.a>) s.h.class);
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Object f35524a;
+        public final Object f36381a;
         public final int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final Class<? extends s.a> f35525c;
+        public final Class<? extends s.a> f36382c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final s f35526d;
+        public final s f36383d;
 
         static {
             int i10 = Build.VERSION.SDK_INT;
@@ -157,22 +157,22 @@ public class p {
         }
 
         public a a(CharSequence charSequence, s sVar) {
-            return new a(null, this.b, charSequence, sVar, this.f35525c);
+            return new a(null, this.b, charSequence, sVar, this.f36382c);
         }
 
         public int b() {
-            return ((AccessibilityNodeInfo.AccessibilityAction) this.f35524a).getId();
+            return ((AccessibilityNodeInfo.AccessibilityAction) this.f36381a).getId();
         }
 
         public CharSequence c() {
-            return ((AccessibilityNodeInfo.AccessibilityAction) this.f35524a).getLabel();
+            return ((AccessibilityNodeInfo.AccessibilityAction) this.f36381a).getLabel();
         }
 
         public boolean d(View view, Bundle bundle) {
-            if (this.f35526d == null) {
+            if (this.f36383d == null) {
                 return false;
             }
-            Class<? extends s.a> cls = this.f35525c;
+            Class<? extends s.a> cls = this.f36382c;
             s.a aVar = null;
             if (cls != null) {
                 try {
@@ -183,14 +183,14 @@ public class p {
                     } catch (Exception e10) {
                         e = e10;
                         aVar = aVarNewInstance;
-                        Class<? extends s.a> cls2 = this.f35525c;
+                        Class<? extends s.a> cls2 = this.f36382c;
                         Log.e("A11yActionCompat", "Failed to execute command with argument class ViewCommandArgument: " + (cls2 == null ? "null" : cls2.getName()), e);
                     }
                 } catch (Exception e11) {
                     e = e11;
                 }
             }
-            return this.f35526d.a(view, aVar);
+            return this.f36383d.a(view, aVar);
         }
 
         public boolean equals(Object obj) {
@@ -198,15 +198,15 @@ public class p {
                 return false;
             }
             a aVar = (a) obj;
-            Object obj2 = this.f35524a;
+            Object obj2 = this.f36381a;
             if (obj2 == null) {
-                return aVar.f35524a == null;
+                return aVar.f36381a == null;
             }
-            return obj2.equals(aVar.f35524a);
+            return obj2.equals(aVar.f36381a);
         }
 
         public int hashCode() {
-            Object obj = this.f35524a;
+            Object obj = this.f36381a;
             if (obj != null) {
                 return obj.hashCode();
             }
@@ -238,13 +238,13 @@ public class p {
 
         public a(Object obj, int i10, CharSequence charSequence, s sVar, Class<? extends s.a> cls) {
             this.b = i10;
-            this.f35526d = sVar;
+            this.f36383d = sVar;
             if (obj == null) {
-                this.f35524a = new AccessibilityNodeInfo.AccessibilityAction(i10, charSequence);
+                this.f36381a = new AccessibilityNodeInfo.AccessibilityAction(i10, charSequence);
             } else {
-                this.f35524a = obj;
+                this.f36381a = obj;
             }
-            this.f35525c = cls;
+            this.f36382c = cls;
         }
     }
 
@@ -307,10 +307,10 @@ public class p {
     public static class f {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Object f35527a;
+        public final Object f36384a;
 
         public f(Object obj) {
-            this.f35527a = obj;
+            this.f36384a = obj;
         }
 
         public static f a(int i10, int i11, boolean z10) {
@@ -325,10 +325,10 @@ public class p {
     public static class g {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Object f35528a;
+        public final Object f36385a;
 
         public g(Object obj) {
-            this.f35528a = obj;
+            this.f36385a = obj;
         }
 
         public static g a(int i10, int i11, int i12, int i13, boolean z10) {
@@ -341,7 +341,7 @@ public class p {
     }
 
     public p(AccessibilityNodeInfo accessibilityNodeInfo) {
-        this.f35500a = accessibilityNodeInfo;
+        this.f36357a = accessibilityNodeInfo;
     }
 
     public static p O0(AccessibilityNodeInfo accessibilityNodeInfo) {
@@ -357,7 +357,7 @@ public class p {
     }
 
     public static p a0(p pVar) {
-        return O0(AccessibilityNodeInfo.obtain(pVar.f35500a));
+        return O0(AccessibilityNodeInfo.obtain(pVar.f36357a));
     }
 
     public static String g(int i10) {
@@ -483,22 +483,22 @@ public class p {
     }
 
     public CharSequence A() {
-        return Build.VERSION.SDK_INT >= 36 ? e.d(this.f35500a) : this.f35500a.getExtras().getCharSequence("androidx.view.accessibility.AccessibilityNodeInfoCompat.SUPPLEMENTAL_DESCRIPTION_KEY");
+        return Build.VERSION.SDK_INT >= 36 ? e.d(this.f36357a) : this.f36357a.getExtras().getCharSequence("androidx.view.accessibility.AccessibilityNodeInfoCompat.SUPPLEMENTAL_DESCRIPTION_KEY");
     }
 
     public void A0(CharSequence charSequence) {
-        this.f35500a.setPackageName(charSequence);
+        this.f36357a.setPackageName(charSequence);
     }
 
     public CharSequence B() {
         if (!F()) {
-            return this.f35500a.getText();
+            return this.f36357a.getText();
         }
         List<Integer> listE = e("androidx.view.accessibility.AccessibilityNodeInfoCompat.SPANS_START_KEY");
         List<Integer> listE2 = e("androidx.view.accessibility.AccessibilityNodeInfoCompat.SPANS_END_KEY");
         List<Integer> listE3 = e("androidx.view.accessibility.AccessibilityNodeInfoCompat.SPANS_FLAGS_KEY");
         List<Integer> listE4 = e("androidx.view.accessibility.AccessibilityNodeInfoCompat.SPANS_ID_KEY");
-        SpannableString spannableString = new SpannableString(TextUtils.substring(this.f35500a.getText(), 0, this.f35500a.getText().length()));
+        SpannableString spannableString = new SpannableString(TextUtils.substring(this.f36357a.getText(), 0, this.f36357a.getText().length()));
         for (int i10 = 0; i10 < listE.size(); i10++) {
             spannableString.setSpan(new y2.a(listE4.get(i10).intValue(), this, w().getInt("androidx.view.accessibility.AccessibilityNodeInfoCompat.SPANS_ACTION_ID_KEY")), listE.get(i10).intValue(), listE2.get(i10).intValue(), listE3.get(i10).intValue());
         }
@@ -507,36 +507,36 @@ public class p {
 
     public void B0(CharSequence charSequence) {
         if (Build.VERSION.SDK_INT >= 28) {
-            this.f35500a.setPaneTitle(charSequence);
+            this.f36357a.setPaneTitle(charSequence);
         } else {
-            this.f35500a.getExtras().putCharSequence("androidx.view.accessibility.AccessibilityNodeInfoCompat.PANE_TITLE_KEY", charSequence);
+            this.f36357a.getExtras().putCharSequence("androidx.view.accessibility.AccessibilityNodeInfoCompat.PANE_TITLE_KEY", charSequence);
         }
     }
 
     public CharSequence C() {
-        return Build.VERSION.SDK_INT >= 28 ? this.f35500a.getTooltipText() : this.f35500a.getExtras().getCharSequence("androidx.view.accessibility.AccessibilityNodeInfoCompat.TOOLTIP_TEXT_KEY");
+        return Build.VERSION.SDK_INT >= 28 ? this.f36357a.getTooltipText() : this.f36357a.getExtras().getCharSequence("androidx.view.accessibility.AccessibilityNodeInfoCompat.TOOLTIP_TEXT_KEY");
     }
 
     public void C0(View view) {
         this.b = -1;
-        this.f35500a.setParent(view);
+        this.f36357a.setParent(view);
     }
 
     public String D() {
-        return Build.VERSION.SDK_INT >= 33 ? c.a(this.f35500a) : this.f35500a.getExtras().getString("androidx.view.accessibility.AccessibilityNodeInfoCompat.UNIQUE_ID_KEY");
+        return Build.VERSION.SDK_INT >= 33 ? c.a(this.f36357a) : this.f36357a.getExtras().getString("androidx.view.accessibility.AccessibilityNodeInfoCompat.UNIQUE_ID_KEY");
     }
 
     public void D0(View view, int i10) {
         this.b = i10;
-        this.f35500a.setParent(view, i10);
+        this.f36357a.setParent(view, i10);
     }
 
     public String E() {
-        return this.f35500a.getViewIdResourceName();
+        return this.f36357a.getViewIdResourceName();
     }
 
     public void E0(CharSequence charSequence) {
-        this.f35500a.getExtras().putCharSequence("AccessibilityNodeInfo.roleDescription", charSequence);
+        this.f36357a.getExtras().putCharSequence("AccessibilityNodeInfo.roleDescription", charSequence);
     }
 
     public final boolean F() {
@@ -545,84 +545,84 @@ public class p {
 
     public void F0(boolean z10) {
         if (Build.VERSION.SDK_INT >= 28) {
-            this.f35500a.setScreenReaderFocusable(z10);
+            this.f36357a.setScreenReaderFocusable(z10);
         } else {
             f0(1, z10);
         }
     }
 
     public boolean G() {
-        return Build.VERSION.SDK_INT >= 34 ? d.d(this.f35500a) : i(64);
+        return Build.VERSION.SDK_INT >= 34 ? d.d(this.f36357a) : i(64);
     }
 
     public void G0(boolean z10) {
-        this.f35500a.setScrollable(z10);
+        this.f36357a.setScrollable(z10);
     }
 
     public boolean H() {
-        return this.f35500a.isCheckable();
+        return this.f36357a.isCheckable();
     }
 
     public void H0(boolean z10) {
-        this.f35500a.setShowingHintText(z10);
+        this.f36357a.setShowingHintText(z10);
     }
 
     @Deprecated
     public boolean I() {
-        return this.f35500a.isChecked();
+        return this.f36357a.isChecked();
     }
 
     public void I0(View view, int i10) {
-        this.f35501c = i10;
-        this.f35500a.setSource(view, i10);
+        this.f36358c = i10;
+        this.f36357a.setSource(view, i10);
     }
 
     public boolean J() {
-        return this.f35500a.isClickable();
+        return this.f36357a.isClickable();
     }
 
     public void J0(CharSequence charSequence) {
         if (Build.VERSION.SDK_INT >= 30) {
-            b.b(this.f35500a, charSequence);
+            b.b(this.f36357a, charSequence);
         } else {
-            this.f35500a.getExtras().putCharSequence("androidx.view.accessibility.AccessibilityNodeInfoCompat.STATE_DESCRIPTION_KEY", charSequence);
+            this.f36357a.getExtras().putCharSequence("androidx.view.accessibility.AccessibilityNodeInfoCompat.STATE_DESCRIPTION_KEY", charSequence);
         }
     }
 
     public boolean K() {
-        return this.f35500a.isContextClickable();
+        return this.f36357a.isContextClickable();
     }
 
     public void K0(CharSequence charSequence) {
-        this.f35500a.setText(charSequence);
+        this.f36357a.setText(charSequence);
     }
 
     public boolean L() {
-        return this.f35500a.isEnabled();
+        return this.f36357a.isEnabled();
     }
 
     public void L0(View view) {
-        this.f35500a.setTraversalAfter(view);
+        this.f36357a.setTraversalAfter(view);
     }
 
     public boolean M() {
-        return Build.VERSION.SDK_INT >= 36 ? e.e(this.f35500a) : this.f35500a.getExtras().getBoolean("androidx.view.accessibility.AccessibilityNodeInfoCompat.IS_REQUIRED_KEY");
+        return Build.VERSION.SDK_INT >= 36 ? e.e(this.f36357a) : this.f36357a.getExtras().getBoolean("androidx.view.accessibility.AccessibilityNodeInfoCompat.IS_REQUIRED_KEY");
     }
 
     public void M0(boolean z10) {
-        this.f35500a.setVisibleToUser(z10);
+        this.f36357a.setVisibleToUser(z10);
     }
 
     public boolean N() {
-        return this.f35500a.isFocusable();
+        return this.f36357a.isFocusable();
     }
 
     public AccessibilityNodeInfo N0() {
-        return this.f35500a;
+        return this.f36357a;
     }
 
     public boolean O() {
-        return this.f35500a.isFocused();
+        return this.f36357a.isFocused();
     }
 
     public boolean P() {
@@ -630,51 +630,51 @@ public class p {
     }
 
     public boolean Q() {
-        return this.f35500a.isImportantForAccessibility();
+        return this.f36357a.isImportantForAccessibility();
     }
 
     public boolean R() {
-        return this.f35500a.isLongClickable();
+        return this.f36357a.isLongClickable();
     }
 
     public boolean S() {
-        return this.f35500a.isPassword();
+        return this.f36357a.isPassword();
     }
 
     public boolean T() {
-        return this.f35500a.isScrollable();
+        return this.f36357a.isScrollable();
     }
 
     public boolean U() {
-        return this.f35500a.isSelected();
+        return this.f36357a.isSelected();
     }
 
     public boolean V() {
-        return this.f35500a.isShowingHintText();
+        return this.f36357a.isShowingHintText();
     }
 
     public boolean W() {
-        return Build.VERSION.SDK_INT >= 33 ? c.b(this.f35500a) : i(8388608);
+        return Build.VERSION.SDK_INT >= 33 ? c.b(this.f36357a) : i(8388608);
     }
 
     public boolean X() {
-        return this.f35500a.isVisibleToUser();
+        return this.f36357a.isVisibleToUser();
     }
 
     public void a(int i10) {
-        this.f35500a.addAction(i10);
+        this.f36357a.addAction(i10);
     }
 
     public void b(a aVar) {
-        this.f35500a.addAction((AccessibilityNodeInfo.AccessibilityAction) aVar.f35524a);
+        this.f36357a.addAction((AccessibilityNodeInfo.AccessibilityAction) aVar.f36381a);
     }
 
     public boolean b0(int i10, Bundle bundle) {
-        return this.f35500a.performAction(i10, bundle);
+        return this.f36357a.performAction(i10, bundle);
     }
 
     public void c(View view, int i10) {
-        this.f35500a.addChild(view, i10);
+        this.f36357a.addChild(view, i10);
     }
 
     @Deprecated
@@ -685,21 +685,21 @@ public class p {
     }
 
     public boolean d0(a aVar) {
-        return this.f35500a.removeAction((AccessibilityNodeInfo.AccessibilityAction) aVar.f35524a);
+        return this.f36357a.removeAction((AccessibilityNodeInfo.AccessibilityAction) aVar.f36381a);
     }
 
     public final List<Integer> e(String str) {
-        ArrayList<Integer> integerArrayList = this.f35500a.getExtras().getIntegerArrayList(str);
+        ArrayList<Integer> integerArrayList = this.f36357a.getExtras().getIntegerArrayList(str);
         if (integerArrayList != null) {
             return integerArrayList;
         }
         ArrayList<Integer> arrayList = new ArrayList<>();
-        this.f35500a.getExtras().putIntegerArrayList(str, arrayList);
+        this.f36357a.getExtras().putIntegerArrayList(str, arrayList);
         return arrayList;
     }
 
     public void e0(boolean z10) {
-        this.f35500a.setAccessibilityFocused(z10);
+        this.f36357a.setAccessibilityFocused(z10);
     }
 
     public boolean equals(Object obj) {
@@ -710,19 +710,19 @@ public class p {
             return false;
         }
         p pVar = (p) obj;
-        AccessibilityNodeInfo accessibilityNodeInfo = this.f35500a;
+        AccessibilityNodeInfo accessibilityNodeInfo = this.f36357a;
         if (accessibilityNodeInfo == null) {
-            if (pVar.f35500a != null) {
+            if (pVar.f36357a != null) {
                 return false;
             }
-        } else if (!accessibilityNodeInfo.equals(pVar.f35500a)) {
+        } else if (!accessibilityNodeInfo.equals(pVar.f36357a)) {
             return false;
         }
-        return this.f35501c == pVar.f35501c && this.b == pVar.b;
+        return this.f36358c == pVar.f36358c && this.b == pVar.b;
     }
 
     public List<a> f() {
-        List<AccessibilityNodeInfo.AccessibilityAction> actionList = this.f35500a.getActionList();
+        List<AccessibilityNodeInfo.AccessibilityAction> actionList = this.f36357a.getActionList();
         ArrayList arrayList = new ArrayList();
         int size = actionList.size();
         for (int i10 = 0; i10 < size; i10++) {
@@ -744,20 +744,20 @@ public class p {
 
     @Deprecated
     public void g0(Rect rect) {
-        this.f35500a.setBoundsInParent(rect);
+        this.f36357a.setBoundsInParent(rect);
     }
 
     @Deprecated
     public int h() {
-        return this.f35500a.getActions();
+        return this.f36357a.getActions();
     }
 
     public void h0(Rect rect) {
-        this.f35500a.setBoundsInScreen(rect);
+        this.f36357a.setBoundsInScreen(rect);
     }
 
     public int hashCode() {
-        AccessibilityNodeInfo accessibilityNodeInfo = this.f35500a;
+        AccessibilityNodeInfo accessibilityNodeInfo = this.f36357a;
         if (accessibilityNodeInfo == null) {
             return 0;
         }
@@ -770,48 +770,48 @@ public class p {
     }
 
     public void i0(boolean z10) {
-        this.f35500a.setCanOpenPopup(z10);
+        this.f36357a.setCanOpenPopup(z10);
     }
 
     @Deprecated
     public void j(Rect rect) {
-        this.f35500a.getBoundsInParent(rect);
+        this.f36357a.getBoundsInParent(rect);
     }
 
     public void j0(boolean z10) {
-        this.f35500a.setCheckable(z10);
+        this.f36357a.setCheckable(z10);
     }
 
     public void k(Rect rect) {
-        this.f35500a.getBoundsInScreen(rect);
+        this.f36357a.getBoundsInScreen(rect);
     }
 
     @Deprecated
     public void k0(boolean z10) {
-        this.f35500a.setChecked(z10);
+        this.f36357a.setChecked(z10);
     }
 
     public void l(Rect rect) {
         if (Build.VERSION.SDK_INT >= 34) {
-            d.b(this.f35500a, rect);
+            d.b(this.f36357a, rect);
             return;
         }
-        Rect rect2 = (Rect) this.f35500a.getExtras().getParcelable("androidx.view.accessibility.AccessibilityNodeInfoCompat.BOUNDS_IN_WINDOW_KEY");
+        Rect rect2 = (Rect) this.f36357a.getExtras().getParcelable("androidx.view.accessibility.AccessibilityNodeInfoCompat.BOUNDS_IN_WINDOW_KEY");
         if (rect2 != null) {
             rect.set(rect2.left, rect2.top, rect2.right, rect2.bottom);
         }
     }
 
     public void l0(CharSequence charSequence) {
-        this.f35500a.setClassName(charSequence);
+        this.f36357a.setClassName(charSequence);
     }
 
     public int m() {
-        return Build.VERSION.SDK_INT >= 36 ? e.b(this.f35500a) : this.f35500a.getExtras().getInt("androidx.view.accessibility.AccessibilityNodeInfoCompat.CHECKED_KEY", this.f35500a.isChecked() ? 1 : 0);
+        return Build.VERSION.SDK_INT >= 36 ? e.b(this.f36357a) : this.f36357a.getExtras().getInt("androidx.view.accessibility.AccessibilityNodeInfoCompat.CHECKED_KEY", this.f36357a.isChecked() ? 1 : 0);
     }
 
     public void m0(boolean z10) {
-        this.f35500a.setClickable(z10);
+        this.f36357a.setClickable(z10);
     }
 
     public final String n() {
@@ -823,51 +823,51 @@ public class p {
     }
 
     public void n0(Object obj) {
-        this.f35500a.setCollectionInfo(obj == null ? null : (AccessibilityNodeInfo.CollectionInfo) ((f) obj).f35527a);
+        this.f36357a.setCollectionInfo(obj == null ? null : (AccessibilityNodeInfo.CollectionInfo) ((f) obj).f36384a);
     }
 
     public int o() {
-        return this.f35500a.getChildCount();
+        return this.f36357a.getChildCount();
     }
 
     public void o0(Object obj) {
-        this.f35500a.setCollectionItemInfo(obj == null ? null : (AccessibilityNodeInfo.CollectionItemInfo) ((g) obj).f35528a);
+        this.f36357a.setCollectionItemInfo(obj == null ? null : (AccessibilityNodeInfo.CollectionItemInfo) ((g) obj).f36385a);
     }
 
     public CharSequence p() {
-        return this.f35500a.getClassName();
+        return this.f36357a.getClassName();
     }
 
     public void p0(CharSequence charSequence) {
-        this.f35500a.setContentDescription(charSequence);
+        this.f36357a.setContentDescription(charSequence);
     }
 
     public void q0(boolean z10) {
-        this.f35500a.setDismissable(z10);
+        this.f36357a.setDismissable(z10);
     }
 
     public CharSequence r() {
-        return Build.VERSION.SDK_INT >= 34 ? d.c(this.f35500a) : this.f35500a.getExtras().getCharSequence("androidx.view.accessibility.AccessibilityNodeInfoCompat.CONTAINER_TITLE_KEY");
+        return Build.VERSION.SDK_INT >= 34 ? d.c(this.f36357a) : this.f36357a.getExtras().getCharSequence("androidx.view.accessibility.AccessibilityNodeInfoCompat.CONTAINER_TITLE_KEY");
     }
 
     public void r0(boolean z10) {
-        this.f35500a.setEnabled(z10);
+        this.f36357a.setEnabled(z10);
     }
 
     public CharSequence s() {
-        return this.f35500a.getContentDescription();
+        return this.f36357a.getContentDescription();
     }
 
     public void s0(CharSequence charSequence) {
-        this.f35500a.setError(charSequence);
+        this.f36357a.setError(charSequence);
     }
 
     public CharSequence t() {
-        return this.f35500a.getError();
+        return this.f36357a.getError();
     }
 
     public void t0(boolean z10) {
-        this.f35500a.setFocusable(z10);
+        this.f36357a.setFocusable(z10);
     }
 
     public String toString() {
@@ -957,11 +957,11 @@ public class p {
     }
 
     public int u() {
-        return Build.VERSION.SDK_INT >= 36 ? e.c(this.f35500a) : this.f35500a.getExtras().getInt("androidx.view.accessibility.AccessibilityNodeInfoCompat.EXPANDED_STATE_KEY", 0);
+        return Build.VERSION.SDK_INT >= 36 ? e.c(this.f36357a) : this.f36357a.getExtras().getInt("androidx.view.accessibility.AccessibilityNodeInfoCompat.EXPANDED_STATE_KEY", 0);
     }
 
     public void u0(boolean z10) {
-        this.f35500a.setFocused(z10);
+        this.f36357a.setFocused(z10);
     }
 
     public void v0(boolean z10) {
@@ -969,38 +969,38 @@ public class p {
     }
 
     public Bundle w() {
-        return this.f35500a.getExtras();
+        return this.f36357a.getExtras();
     }
 
     public void w0(boolean z10) {
         if (Build.VERSION.SDK_INT >= 28) {
-            this.f35500a.setHeading(z10);
+            this.f36357a.setHeading(z10);
         } else {
             f0(2, z10);
         }
     }
 
     public int x() {
-        return this.f35500a.getMaxTextLength();
+        return this.f36357a.getMaxTextLength();
     }
 
     public void x0(CharSequence charSequence) {
-        this.f35500a.setHintText(charSequence);
+        this.f36357a.setHintText(charSequence);
     }
 
     public CharSequence y() {
-        return this.f35500a.getPackageName();
+        return this.f36357a.getPackageName();
     }
 
     public void y0(View view) {
-        this.f35500a.setLabelFor(view);
+        this.f36357a.setLabelFor(view);
     }
 
     public CharSequence z() {
-        return Build.VERSION.SDK_INT >= 30 ? b.a(this.f35500a) : this.f35500a.getExtras().getCharSequence("androidx.view.accessibility.AccessibilityNodeInfoCompat.STATE_DESCRIPTION_KEY");
+        return Build.VERSION.SDK_INT >= 30 ? b.a(this.f36357a) : this.f36357a.getExtras().getCharSequence("androidx.view.accessibility.AccessibilityNodeInfoCompat.STATE_DESCRIPTION_KEY");
     }
 
     public void z0(int i10) {
-        this.f35500a.setMaxTextLength(i10);
+        this.f36357a.setMaxTextLength(i10);
     }
 }

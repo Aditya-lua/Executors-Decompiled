@@ -9,22 +9,22 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 public final class u extends p {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f14503a;
+    public final Context f14483a;
 
     public u(Context context) {
-        this.f14503a = context;
+        this.f14483a = context;
     }
 
     @Override // d9.q
     public final void E() {
         s2();
-        b bVarB = b.b(this.f14503a);
+        b bVarB = b.b(this.f14483a);
         GoogleSignInAccount googleSignInAccountC = bVarB.c();
-        GoogleSignInOptions googleSignInOptionsD = GoogleSignInOptions.f5627q;
+        GoogleSignInOptions googleSignInOptionsD = GoogleSignInOptions.f5700q;
         if (googleSignInAccountC != null) {
             googleSignInOptionsD = bVarB.d();
         }
-        c9.b bVarA = com.google.android.gms.auth.api.signin.a.a(this.f14503a, googleSignInOptionsD);
+        c9.b bVarA = com.google.android.gms.auth.api.signin.a.a(this.f14483a, googleSignInOptionsD);
         if (googleSignInAccountC != null) {
             bVarA.P();
         } else {
@@ -33,7 +33,7 @@ public final class u extends p {
     }
 
     public final void s2() {
-        if (u9.p.a(this.f14503a, Binder.getCallingUid())) {
+        if (u9.p.a(this.f14483a, Binder.getCallingUid())) {
             return;
         }
         throw new SecurityException("Calling UID " + Binder.getCallingUid() + " is not Google Play services.");
@@ -42,6 +42,6 @@ public final class u extends p {
     @Override // d9.q
     public final void t() {
         s2();
-        o.a(this.f14503a).b();
+        o.a(this.f14483a).b();
     }
 }

@@ -18,48 +18,48 @@ import java.util.HashMap;
 public abstract class b extends View {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int[] f1586a;
+    public int[] f1431a;
     public int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public Context f1587c;
+    public Context f1432c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public i f1588d;
+    public i f1433d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public boolean f1589e;
+    public boolean f1434e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public String f1590f;
+    public String f1435f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public String f1591g;
+    public String f1436g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public View[] f1592h;
+    public View[] f1437h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public HashMap<Integer, String> f1593i;
+    public HashMap<Integer, String> f1438i;
 
     public b(Context context) {
         super(context);
-        this.f1586a = new int[32];
-        this.f1589e = false;
-        this.f1592h = null;
-        this.f1593i = new HashMap<>();
-        this.f1587c = context;
+        this.f1431a = new int[32];
+        this.f1434e = false;
+        this.f1437h = null;
+        this.f1438i = new HashMap<>();
+        this.f1432c = context;
         m(null);
     }
 
     public final void d(String str) {
-        if (str == null || str.length() == 0 || this.f1587c == null) {
+        if (str == null || str.length() == 0 || this.f1432c == null) {
             return;
         }
         String strTrim = str.trim();
         int iK = k(strTrim);
         if (iK != 0) {
-            this.f1593i.put(Integer.valueOf(iK), strTrim);
+            this.f1438i.put(Integer.valueOf(iK), strTrim);
             e(iK);
             return;
         }
@@ -71,18 +71,18 @@ public abstract class b extends View {
             return;
         }
         int i11 = this.b + 1;
-        int[] iArr = this.f1586a;
+        int[] iArr = this.f1431a;
         if (i11 > iArr.length) {
-            this.f1586a = Arrays.copyOf(iArr, iArr.length * 2);
+            this.f1431a = Arrays.copyOf(iArr, iArr.length * 2);
         }
-        int[] iArr2 = this.f1586a;
+        int[] iArr2 = this.f1431a;
         int i12 = this.b;
         iArr2[i12] = i10;
         this.b = i12 + 1;
     }
 
     public final void f(String str) {
-        if (str == null || str.length() == 0 || this.f1587c == null) {
+        if (str == null || str.length() == 0 || this.f1432c == null) {
             return;
         }
         String strTrim = str.trim();
@@ -95,7 +95,7 @@ public abstract class b extends View {
         for (int i10 = 0; i10 < childCount; i10++) {
             View childAt = constraintLayout.getChildAt(i10);
             ViewGroup.LayoutParams layoutParams = childAt.getLayoutParams();
-            if ((layoutParams instanceof ConstraintLayout.b) && strTrim.equals(((ConstraintLayout.b) layoutParams).f1518c0)) {
+            if ((layoutParams instanceof ConstraintLayout.b) && strTrim.equals(((ConstraintLayout.b) layoutParams).f1363c0)) {
                 if (childAt.getId() == -1) {
                     Log.w("ConstraintHelper", "to use ConstraintTag view " + childAt.getClass().getSimpleName() + " must have an ID");
                 } else {
@@ -114,14 +114,14 @@ public abstract class b extends View {
     }
 
     public int[] getReferencedIds() {
-        return Arrays.copyOf(this.f1586a, this.b);
+        return Arrays.copyOf(this.f1431a, this.b);
     }
 
     public void h(ConstraintLayout constraintLayout) {
         int visibility = getVisibility();
         float elevation = getElevation();
         for (int i10 = 0; i10 < this.b; i10++) {
-            View viewQ = constraintLayout.q(this.f1586a[i10]);
+            View viewQ = constraintLayout.q(this.f1431a[i10]);
             if (viewQ != null) {
                 viewQ.setVisibility(visibility);
                 if (elevation > 0.0f) {
@@ -137,7 +137,7 @@ public abstract class b extends View {
     public final int j(ConstraintLayout constraintLayout, String str) {
         Resources resources;
         String resourceEntryName;
-        if (str == null || constraintLayout == null || (resources = this.f1587c.getResources()) == null) {
+        if (str == null || constraintLayout == null || (resources = this.f1432c.getResources()) == null) {
             return 0;
         }
         int childCount = constraintLayout.getChildCount();
@@ -175,18 +175,18 @@ public abstract class b extends View {
             } catch (Exception unused) {
             }
         }
-        return iJ == 0 ? this.f1587c.getResources().getIdentifier(str, "id", this.f1587c.getPackageName()) : iJ;
+        return iJ == 0 ? this.f1432c.getResources().getIdentifier(str, "id", this.f1432c.getPackageName()) : iJ;
     }
 
     public View[] l(ConstraintLayout constraintLayout) {
-        View[] viewArr = this.f1592h;
+        View[] viewArr = this.f1437h;
         if (viewArr == null || viewArr.length != this.b) {
-            this.f1592h = new View[this.b];
+            this.f1437h = new View[this.b];
         }
         for (int i10 = 0; i10 < this.b; i10++) {
-            this.f1592h[i10] = constraintLayout.q(this.f1586a[i10]);
+            this.f1437h[i10] = constraintLayout.q(this.f1431a[i10]);
         }
-        return this.f1592h;
+        return this.f1437h;
     }
 
     public void m(AttributeSet attributeSet) {
@@ -195,13 +195,13 @@ public abstract class b extends View {
             int indexCount = typedArrayObtainStyledAttributes.getIndexCount();
             for (int i10 = 0; i10 < indexCount; i10++) {
                 int index = typedArrayObtainStyledAttributes.getIndex(i10);
-                if (index == g2.d.f17781o1) {
+                if (index == g2.d.f18320o1) {
                     String string = typedArrayObtainStyledAttributes.getString(index);
-                    this.f1590f = string;
+                    this.f1435f = string;
                     setIds(string);
-                } else if (index == g2.d.f17790p1) {
+                } else if (index == g2.d.f18329p1) {
                     String string2 = typedArrayObtainStyledAttributes.getString(index);
-                    this.f1591g = string2;
+                    this.f1436g = string2;
                     setReferenceTags(string2);
                 }
             }
@@ -218,11 +218,11 @@ public abstract class b extends View {
     @Override // android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        String str = this.f1590f;
+        String str = this.f1435f;
         if (str != null) {
             setIds(str);
         }
-        String str2 = this.f1591g;
+        String str2 = this.f1436g;
         if (str2 != null) {
             setReferenceTags(str2);
         }
@@ -234,7 +234,7 @@ public abstract class b extends View {
 
     @Override // android.view.View
     public void onMeasure(int i10, int i11) {
-        if (this.f1589e) {
+        if (this.f1434e) {
             super.onMeasure(i10, i11);
         } else {
             setMeasuredDimension(0, 0);
@@ -251,40 +251,40 @@ public abstract class b extends View {
         String str;
         int iJ;
         if (isInEditMode()) {
-            setIds(this.f1590f);
+            setIds(this.f1435f);
         }
-        i iVar = this.f1588d;
+        i iVar = this.f1433d;
         if (iVar == null) {
             return;
         }
         iVar.c();
         for (int i10 = 0; i10 < this.b; i10++) {
-            int i11 = this.f1586a[i10];
+            int i11 = this.f1431a[i10];
             View viewQ = constraintLayout.q(i11);
-            if (viewQ == null && (iJ = j(constraintLayout, (str = this.f1593i.get(Integer.valueOf(i11))))) != 0) {
-                this.f1586a[i10] = iJ;
-                this.f1593i.put(Integer.valueOf(iJ), str);
+            if (viewQ == null && (iJ = j(constraintLayout, (str = this.f1438i.get(Integer.valueOf(i11))))) != 0) {
+                this.f1431a[i10] = iJ;
+                this.f1438i.put(Integer.valueOf(iJ), str);
                 viewQ = constraintLayout.q(iJ);
             }
             if (viewQ != null) {
-                this.f1588d.a(constraintLayout.r(viewQ));
+                this.f1433d.a(constraintLayout.r(viewQ));
             }
         }
-        this.f1588d.b(constraintLayout.f1491c);
+        this.f1433d.b(constraintLayout.f1336c);
     }
 
     public void s() {
-        if (this.f1588d == null) {
+        if (this.f1433d == null) {
             return;
         }
         ViewGroup.LayoutParams layoutParams = getLayoutParams();
         if (layoutParams instanceof ConstraintLayout.b) {
-            ((ConstraintLayout.b) layoutParams).f1556v0 = (c2.e) this.f1588d;
+            ((ConstraintLayout.b) layoutParams).f1401v0 = (c2.e) this.f1433d;
         }
     }
 
     public void setIds(String str) {
-        this.f1590f = str;
+        this.f1435f = str;
         if (str == null) {
             return;
         }
@@ -303,7 +303,7 @@ public abstract class b extends View {
     }
 
     public void setReferenceTags(String str) {
-        this.f1591g = str;
+        this.f1436g = str;
         if (str == null) {
             return;
         }
@@ -322,7 +322,7 @@ public abstract class b extends View {
     }
 
     public void setReferencedIds(int[] iArr) {
-        this.f1590f = null;
+        this.f1435f = null;
         this.b = 0;
         for (int i10 : iArr) {
             e(i10);
@@ -332,18 +332,18 @@ public abstract class b extends View {
     @Override // android.view.View
     public void setTag(int i10, Object obj) {
         super.setTag(i10, obj);
-        if (obj == null && this.f1590f == null) {
+        if (obj == null && this.f1435f == null) {
             e(i10);
         }
     }
 
     public b(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.f1586a = new int[32];
-        this.f1589e = false;
-        this.f1592h = null;
-        this.f1593i = new HashMap<>();
-        this.f1587c = context;
+        this.f1431a = new int[32];
+        this.f1434e = false;
+        this.f1437h = null;
+        this.f1438i = new HashMap<>();
+        this.f1432c = context;
         m(attributeSet);
     }
 }

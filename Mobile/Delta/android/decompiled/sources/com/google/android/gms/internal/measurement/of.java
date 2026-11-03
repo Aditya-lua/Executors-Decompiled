@@ -4,16 +4,16 @@ package com.google.android.gms.internal.measurement;
 public final class of implements nf {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final l9 f6716a;
+    public static final l9 f6789a;
 
     static {
         f9 f9VarB = new f9(a9.a("com.google.android.gms.measurement")).a().b();
         f9VarB.d("measurement.gmscore_feature_tracking", true);
-        f6716a = f9VarB.d("measurement.gmscore_client_telemetry", false);
+        f6789a = f9VarB.d("measurement.gmscore_client_telemetry", false);
     }
 
     @Override // com.google.android.gms.internal.measurement.nf
     public final boolean zza() {
-        return ((Boolean) f6716a.d()).booleanValue();
+        return ((Boolean) f6789a.d()).booleanValue();
     }
 }

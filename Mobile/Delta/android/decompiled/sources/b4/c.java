@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 public final class c extends InputConnectionWrapper {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final TextView f3892a;
+    public final TextView f3790a;
     public final a b;
 
     public static class a {
@@ -31,7 +31,7 @@ public final class c extends InputConnectionWrapper {
     }
 
     public final Editable a() {
-        return this.f3892a.getEditableText();
+        return this.f3790a.getEditableText();
     }
 
     @Override // android.view.inputmethod.InputConnectionWrapper, android.view.inputmethod.InputConnection
@@ -46,7 +46,7 @@ public final class c extends InputConnectionWrapper {
 
     public c(@NonNull TextView textView, @NonNull InputConnection inputConnection, @NonNull EditorInfo editorInfo, @NonNull a aVar) {
         super(inputConnection, false);
-        this.f3892a = textView;
+        this.f3790a = textView;
         this.b = aVar;
         aVar.b(editorInfo);
     }

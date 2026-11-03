@@ -13,13 +13,13 @@ import nb.xc;
 public final class AppMeasurementService extends Service implements xc {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public bd f7403a;
+    public bd f7477a;
 
     private final bd c() {
-        if (this.f7403a == null) {
-            this.f7403a = new bd(this);
+        if (this.f7477a == null) {
+            this.f7477a = new bd(this);
         }
-        return this.f7403a;
+        return this.f7477a;
     }
 
     @Override // nb.xc

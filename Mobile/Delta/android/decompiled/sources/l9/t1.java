@@ -14,19 +14,19 @@ public abstract class t1 extends i implements DialogInterface.OnCancelListener {
     public volatile boolean b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final AtomicReference f23085c;
+    public final AtomicReference f23479c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Handler f23086d;
+    public final Handler f23480d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final j9.c f23087e;
+    public final j9.c f23481e;
 
     public t1(j jVar, j9.c cVar) {
         super(jVar);
-        this.f23085c = new AtomicReference(null);
-        this.f23086d = new bb.j(Looper.getMainLooper());
-        this.f23087e = cVar;
+        this.f23479c = new AtomicReference(null);
+        this.f23480d = new bb.j(Looper.getMainLooper());
+        this.f23481e = cVar;
     }
 
     public static final int p(q1 q1Var) {
@@ -38,10 +38,10 @@ public abstract class t1 extends i implements DialogInterface.OnCancelListener {
 
     @Override // l9.i
     public final void e(int i10, int i11, Intent intent) {
-        q1 q1Var = (q1) this.f23085c.get();
+        q1 q1Var = (q1) this.f23479c.get();
         if (i10 != 1) {
             if (i10 == 2) {
-                int iG = this.f23087e.g(b());
+                int iG = this.f23481e.g(b());
                 if (iG == 0) {
                     o();
                     return;
@@ -73,14 +73,14 @@ public abstract class t1 extends i implements DialogInterface.OnCancelListener {
     public final void f(Bundle bundle) {
         super.f(bundle);
         if (bundle != null) {
-            this.f23085c.set(bundle.getBoolean("resolving_error", false) ? new q1(new ConnectionResult(bundle.getInt("failed_status"), (PendingIntent) bundle.getParcelable("failed_resolution")), bundle.getInt("failed_client_id", -1)) : null);
+            this.f23479c.set(bundle.getBoolean("resolving_error", false) ? new q1(new ConnectionResult(bundle.getInt("failed_status"), (PendingIntent) bundle.getParcelable("failed_resolution")), bundle.getInt("failed_client_id", -1)) : null);
         }
     }
 
     @Override // l9.i
     public final void i(Bundle bundle) {
         super.i(bundle);
-        q1 q1Var = (q1) this.f23085c.get();
+        q1 q1Var = (q1) this.f23479c.get();
         if (q1Var == null) {
             return;
         }
@@ -103,7 +103,7 @@ public abstract class t1 extends i implements DialogInterface.OnCancelListener {
     }
 
     public final void l(ConnectionResult connectionResult, int i10) {
-        this.f23085c.set(null);
+        this.f23479c.set(null);
         m(connectionResult, i10);
     }
 
@@ -112,22 +112,22 @@ public abstract class t1 extends i implements DialogInterface.OnCancelListener {
     public abstract void n();
 
     public final void o() {
-        this.f23085c.set(null);
+        this.f23479c.set(null);
         n();
     }
 
     @Override // android.content.DialogInterface.OnCancelListener
     public final void onCancel(DialogInterface dialogInterface) {
-        l(new ConnectionResult(13, null), p((q1) this.f23085c.get()));
+        l(new ConnectionResult(13, null), p((q1) this.f23479c.get()));
     }
 
     public final void s(ConnectionResult connectionResult, int i10) {
         AtomicReference atomicReference;
         q1 q1Var = new q1(connectionResult, i10);
         do {
-            atomicReference = this.f23085c;
+            atomicReference = this.f23479c;
             if (p1.t.a(atomicReference, null, q1Var)) {
-                this.f23086d.post(new s1(this, q1Var));
+                this.f23480d.post(new s1(this, q1Var));
                 return;
             }
         } while (atomicReference.get() == null);

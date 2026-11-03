@@ -39,7 +39,7 @@ public class c {
             arrayList.add(new ImageCaptureFailedForSpecificCombinationQuirk());
         }
         if (h3Var.a(PreviewGreenTintQuirk.class, PreviewGreenTintQuirk.h())) {
-            arrayList.add(PreviewGreenTintQuirk.f1396a);
+            arrayList.add(PreviewGreenTintQuirk.f1241a);
         }
         return arrayList;
     }

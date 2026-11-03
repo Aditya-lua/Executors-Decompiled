@@ -1,116 +1,72 @@
 package ic;
 
-import android.animation.Animator;
-import android.animation.TimeInterpolator;
-import android.animation.ValueAnimator;
-import android.view.animation.AccelerateDecelerateInterpolator;
-import android.view.animation.AccelerateInterpolator;
-import android.view.animation.DecelerateInterpolator;
-import androidx.annotation.NonNull;
-
 /* JADX INFO: loaded from: classes2.dex */
-public class i {
+public final class i {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public long f20482a;
-    public long b;
+    public static final int f20731a = 2131887978;
+    public static final int b = 2131887988;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public TimeInterpolator f20483c;
+    public static final int f20732c = 2131887989;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public int f20484d;
+    public static final int f20733d = 2131887990;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public int f20485e;
+    public static final int f20734e = 2131887991;
 
-    public i(long j10, long j11) {
-        this.f20483c = null;
-        this.f20484d = 0;
-        this.f20485e = 1;
-        this.f20482a = j10;
-        this.b = j11;
-    }
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    public static final int f20735f = 2131888015;
 
-    @NonNull
-    public static i b(@NonNull ValueAnimator valueAnimator) {
-        i iVar = new i(valueAnimator.getStartDelay(), valueAnimator.getDuration(), f(valueAnimator));
-        iVar.f20484d = valueAnimator.getRepeatCount();
-        iVar.f20485e = valueAnimator.getRepeatMode();
-        return iVar;
-    }
+    /* JADX INFO: renamed from: g, reason: collision with root package name */
+    public static final int f20736g = 2131888016;
 
-    public static TimeInterpolator f(@NonNull ValueAnimator valueAnimator) {
-        TimeInterpolator interpolator = valueAnimator.getInterpolator();
-        if ((interpolator instanceof AccelerateDecelerateInterpolator) || interpolator == null) {
-            return a.b;
-        }
-        if (interpolator instanceof AccelerateInterpolator) {
-            return a.f20472c;
-        }
-        return interpolator instanceof DecelerateInterpolator ? a.f20473d : interpolator;
-    }
+    /* JADX INFO: renamed from: h, reason: collision with root package name */
+    public static final int f20737h = 2131888091;
 
-    public void a(@NonNull Animator animator) {
-        animator.setStartDelay(c());
-        animator.setDuration(d());
-        animator.setInterpolator(e());
-        if (animator instanceof ValueAnimator) {
-            ValueAnimator valueAnimator = (ValueAnimator) animator;
-            valueAnimator.setRepeatCount(g());
-            valueAnimator.setRepeatMode(h());
-        }
-    }
+    /* JADX INFO: renamed from: i, reason: collision with root package name */
+    public static final int f20738i = 2131888092;
 
-    public long c() {
-        return this.f20482a;
-    }
+    /* JADX INFO: renamed from: j, reason: collision with root package name */
+    public static final int f20739j = 2131888093;
 
-    public long d() {
-        return this.b;
-    }
+    /* JADX INFO: renamed from: k, reason: collision with root package name */
+    public static final int f20740k = 2131888094;
 
-    public TimeInterpolator e() {
-        TimeInterpolator timeInterpolator = this.f20483c;
-        return timeInterpolator != null ? timeInterpolator : a.b;
-    }
+    /* JADX INFO: renamed from: l, reason: collision with root package name */
+    public static final int f20741l = 2131888107;
 
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (!(obj instanceof i)) {
-            return false;
-        }
-        i iVar = (i) obj;
-        if (c() == iVar.c() && d() == iVar.d() && g() == iVar.g() && h() == iVar.h()) {
-            return e().getClass().equals(iVar.e().getClass());
-        }
-        return false;
-    }
+    /* JADX INFO: renamed from: m, reason: collision with root package name */
+    public static final int f20742m = 2131888108;
 
-    public int g() {
-        return this.f20484d;
-    }
+    /* JADX INFO: renamed from: n, reason: collision with root package name */
+    public static final int f20743n = 2131888113;
 
-    public int h() {
-        return this.f20485e;
-    }
+    /* JADX INFO: renamed from: o, reason: collision with root package name */
+    public static final int f20744o = 2131888114;
 
-    public int hashCode() {
-        return (((((((((int) (c() ^ (c() >>> 32))) * 31) + ((int) (d() ^ (d() >>> 32)))) * 31) + e().getClass().hashCode()) * 31) + g()) * 31) + h();
-    }
+    /* JADX INFO: renamed from: p, reason: collision with root package name */
+    public static final int f20745p = 2131888122;
 
-    @NonNull
-    public String toString() {
-        return '\n' + getClass().getName() + '{' + Integer.toHexString(System.identityHashCode(this)) + " delay: " + c() + " duration: " + d() + " interpolator: " + e().getClass() + " repeatCount: " + g() + " repeatMode: " + h() + "}\n";
-    }
+    /* JADX INFO: renamed from: q, reason: collision with root package name */
+    public static final int f20746q = 2131888129;
 
-    public i(long j10, long j11, @NonNull TimeInterpolator timeInterpolator) {
-        this.f20484d = 0;
-        this.f20485e = 1;
-        this.f20482a = j10;
-        this.b = j11;
-        this.f20483c = timeInterpolator;
-    }
+    /* JADX INFO: renamed from: r, reason: collision with root package name */
+    public static final int f20747r = 2131888130;
+
+    /* JADX INFO: renamed from: s, reason: collision with root package name */
+    public static final int f20748s = 2131888131;
+
+    /* JADX INFO: renamed from: t, reason: collision with root package name */
+    public static final int f20749t = 2131888132;
+
+    /* JADX INFO: renamed from: u, reason: collision with root package name */
+    public static final int f20750u = 2131888133;
+
+    /* JADX INFO: renamed from: v, reason: collision with root package name */
+    public static final int f20751v = 2131888144;
+
+    /* JADX INFO: renamed from: w, reason: collision with root package name */
+    public static final int f20752w = 2131888250;
 }

@@ -10,7 +10,7 @@ public class q extends d2 {
     public final String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f3824c;
+    public int f3722c;
 
     public q(o0 o0Var) {
         super(o0Var);
@@ -18,7 +18,7 @@ public class q extends d2 {
     }
 
     public void B(int i10) {
-        this.f3824c = i10;
+        this.f3722c = i10;
     }
 
     @Override // n0.d2, g0.t
@@ -33,6 +33,6 @@ public class q extends d2 {
 
     @Override // n0.d2, g0.t
     public int w(int i10) {
-        return a0.w(super.w(i10) - this.f3824c);
+        return a0.w(super.w(i10) - this.f3722c);
     }
 }

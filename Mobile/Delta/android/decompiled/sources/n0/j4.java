@@ -6,7 +6,7 @@ import android.content.Context;
 public interface j4 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final j4 f24707a = new a();
+    public static final j4 f25528a = new a();
 
     public class a implements j4 {
         @Override // n0.j4

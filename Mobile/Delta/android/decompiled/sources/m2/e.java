@@ -26,7 +26,7 @@ import x2.g;
 public class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static volatile d<?> f23899a;
+    public static volatile d<?> f24549a;
     public static volatile List<b> b;
 
     public static class a {
@@ -45,11 +45,11 @@ public class e {
 
     public static boolean a(Context context, c cVar) {
         Bitmap bitmapDecodeStream;
-        IconCompat iconCompat = cVar.f23877i;
+        IconCompat iconCompat = cVar.f24527i;
         if (iconCompat == null) {
             return false;
         }
-        int i10 = iconCompat.f1785a;
+        int i10 = iconCompat.f1630a;
         if (i10 != 6 && i10 != 4) {
             return true;
         }
@@ -57,7 +57,7 @@ public class e {
         if (inputStreamK == null || (bitmapDecodeStream = BitmapFactory.decodeStream(inputStreamK)) == null) {
             return false;
         }
-        cVar.f23877i = i10 == 6 ? IconCompat.b(bitmapDecodeStream) : IconCompat.c(bitmapDecodeStream);
+        cVar.f24527i = i10 == 6 ? IconCompat.b(bitmapDecodeStream) : IconCompat.c(bitmapDecodeStream);
         return true;
     }
 
@@ -104,16 +104,16 @@ public class e {
     }
 
     public static d<?> e(Context context) {
-        if (f23899a == null) {
+        if (f24549a == null) {
             try {
-                f23899a = (d) Class.forName("androidx.sharetarget.ShortcutInfoCompatSaverImpl", false, e.class.getClassLoader()).getMethod("getInstance", Context.class).invoke(null, context);
+                f24549a = (d) Class.forName("androidx.sharetarget.ShortcutInfoCompatSaverImpl", false, e.class.getClassLoader()).getMethod("getInstance", Context.class).invoke(null, context);
             } catch (Exception unused) {
             }
-            if (f23899a == null) {
-                f23899a = new d.a();
+            if (f24549a == null) {
+                f24549a = new d.a();
             }
         }
-        return f23899a;
+        return f24549a;
     }
 
     public static List<c> f(Context context, int i10) {

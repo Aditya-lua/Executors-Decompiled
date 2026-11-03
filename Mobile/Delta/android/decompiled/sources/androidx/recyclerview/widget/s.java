@@ -10,16 +10,16 @@ import androidx.annotation.NonNull;
 public abstract class s extends RecyclerView.t {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public RecyclerView f3289a;
+    public RecyclerView f3134a;
     public Scroller b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final RecyclerView.v f3290c = new a();
+    public final RecyclerView.v f3135c = new a();
 
     public class a extends RecyclerView.v {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public boolean f3291a = false;
+        public boolean f3136a = false;
 
         public a() {
         }
@@ -27,8 +27,8 @@ public abstract class s extends RecyclerView.t {
         @Override // androidx.recyclerview.widget.RecyclerView.v
         public void a(RecyclerView recyclerView, int i10) {
             super.a(recyclerView, i10);
-            if (i10 == 0 && this.f3291a) {
-                this.f3291a = false;
+            if (i10 == 0 && this.f3136a) {
+                this.f3136a = false;
                 s.this.j();
             }
         }
@@ -38,32 +38,32 @@ public abstract class s extends RecyclerView.t {
             if (i10 == 0 && i11 == 0) {
                 return;
             }
-            this.f3291a = true;
+            this.f3136a = true;
         }
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.t
     public boolean a(int i10, int i11) {
-        RecyclerView.q layoutManager = this.f3289a.getLayoutManager();
-        if (layoutManager == null || this.f3289a.getAdapter() == null) {
+        RecyclerView.q layoutManager = this.f3134a.getLayoutManager();
+        if (layoutManager == null || this.f3134a.getAdapter() == null) {
             return false;
         }
-        int minFlingVelocity = this.f3289a.getMinFlingVelocity();
+        int minFlingVelocity = this.f3134a.getMinFlingVelocity();
         return (Math.abs(i11) > minFlingVelocity || Math.abs(i10) > minFlingVelocity) && i(layoutManager, i10, i11);
     }
 
     public void b(RecyclerView recyclerView) {
-        RecyclerView recyclerView2 = this.f3289a;
+        RecyclerView recyclerView2 = this.f3134a;
         if (recyclerView2 == recyclerView) {
             return;
         }
         if (recyclerView2 != null) {
             e();
         }
-        this.f3289a = recyclerView;
+        this.f3134a = recyclerView;
         if (recyclerView != null) {
             h();
-            this.b = new Scroller(this.f3289a.getContext(), new DecelerateInterpolator());
+            this.b = new Scroller(this.f3134a.getContext(), new DecelerateInterpolator());
             j();
         }
     }
@@ -73,8 +73,8 @@ public abstract class s extends RecyclerView.t {
     public abstract RecyclerView.a0 d(@NonNull RecyclerView.q qVar);
 
     public final void e() {
-        this.f3289a.k1(this.f3290c);
-        this.f3289a.setOnFlingListener(null);
+        this.f3134a.k1(this.f3135c);
+        this.f3134a.setOnFlingListener(null);
     }
 
     @SuppressLint({"UnknownNullness"})
@@ -84,11 +84,11 @@ public abstract class s extends RecyclerView.t {
     public abstract int g(RecyclerView.q qVar, int i10, int i11);
 
     public final void h() {
-        if (this.f3289a.getOnFlingListener() != null) {
+        if (this.f3134a.getOnFlingListener() != null) {
             throw new IllegalStateException("An instance of OnFlingListener already set.");
         }
-        this.f3289a.n(this.f3290c);
-        this.f3289a.setOnFlingListener(this);
+        this.f3134a.n(this.f3135c);
+        this.f3134a.setOnFlingListener(this);
     }
 
     public final boolean i(@NonNull RecyclerView.q qVar, int i10, int i11) {
@@ -105,7 +105,7 @@ public abstract class s extends RecyclerView.t {
     public void j() {
         RecyclerView.q layoutManager;
         View viewF;
-        RecyclerView recyclerView = this.f3289a;
+        RecyclerView recyclerView = this.f3134a;
         if (recyclerView == null || (layoutManager = recyclerView.getLayoutManager()) == null || (viewF = f(layoutManager)) == null) {
             return;
         }
@@ -114,6 +114,6 @@ public abstract class s extends RecyclerView.t {
         if (i10 == 0 && iArrC[1] == 0) {
             return;
         }
-        this.f3289a.y1(i10, iArrC[1]);
+        this.f3134a.y1(i10, iArrC[1]);
     }
 }

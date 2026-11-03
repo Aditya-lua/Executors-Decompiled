@@ -8,27 +8,27 @@ import java.util.Objects;
 public final class m3 extends j3 {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final /* synthetic */ Bundle f6619e;
+    public final /* synthetic */ Bundle f6692e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final /* synthetic */ Activity f6620f;
+    public final /* synthetic */ Activity f6693f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final /* synthetic */ u3 f6621g;
+    public final /* synthetic */ u3 f6694g;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public m3(u3 u3Var, Bundle bundle, Activity activity) {
-        super(u3Var.f6821a, true);
-        this.f6619e = bundle;
-        this.f6620f = activity;
+        super(u3Var.f6895a, true);
+        this.f6692e = bundle;
+        this.f6693f = activity;
         Objects.requireNonNull(u3Var);
-        this.f6621g = u3Var;
+        this.f6694g = u3Var;
     }
 
     @Override // com.google.android.gms.internal.measurement.j3
     public final void a() {
         Bundle bundle;
-        Bundle bundle2 = this.f6619e;
+        Bundle bundle2 = this.f6692e;
         if (bundle2 != null) {
             bundle = new Bundle();
             if (bundle2.containsKey("com.google.app_measurement.screen_service")) {
@@ -40,8 +40,8 @@ public final class m3 extends j3 {
         } else {
             bundle = null;
         }
-        u1 u1Var = (u1) n9.m.l(this.f6621g.f6821a.m());
-        Activity activity = this.f6620f;
+        u1 u1Var = (u1) n9.m.l(this.f6694g.f6895a.m());
+        Activity activity = this.f6693f;
         u1Var.onActivityCreatedByScionActivityInfo(zzdf.a(activity), bundle, this.b);
     }
 }

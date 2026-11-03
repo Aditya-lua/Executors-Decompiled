@@ -42,7 +42,7 @@ public enum Transport implements ReflectedParcelable {
     };
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f5891a;
+    public final String f5964a;
 
     public static class a extends Exception {
         public a(@NonNull String str) {
@@ -51,7 +51,7 @@ public enum Transport implements ReflectedParcelable {
     }
 
     Transport(String str) {
-        this.f5891a = str;
+        this.f5964a = str;
     }
 
     @NonNull
@@ -60,7 +60,7 @@ public enum Transport implements ReflectedParcelable {
             return HYBRID;
         }
         for (Transport transport : values()) {
-            if (str.equals(transport.f5891a)) {
+            if (str.equals(transport.f5964a)) {
                 return transport;
             }
         }
@@ -94,11 +94,11 @@ public enum Transport implements ReflectedParcelable {
     @Override // java.lang.Enum
     @NonNull
     public String toString() {
-        return this.f5891a;
+        return this.f5964a;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
-        parcel.writeString(this.f5891a);
+        parcel.writeString(this.f5964a);
     }
 }

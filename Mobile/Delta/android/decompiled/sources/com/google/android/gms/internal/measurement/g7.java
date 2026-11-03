@@ -6,7 +6,7 @@ public final class g7 extends cb implements pc {
         throw null;
     }
 
-    public final g7 x(int i10) {
+    public final g7 y(int i10) {
         p();
         ((h7) this.b).N(i10);
         return this;

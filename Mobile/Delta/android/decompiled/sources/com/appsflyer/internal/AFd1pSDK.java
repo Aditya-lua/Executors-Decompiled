@@ -13,7 +13,7 @@ public final class AFd1pSDK<ResponseBody> {
     private final ExecutorService AFLogger;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    private final AFd1iSDK<ResponseBody> f5286d;
+    private final AFd1iSDK<ResponseBody> f5359d;
     private final AFd1mSDK registerClient;
     public final AFd1oSDK unregisterClient;
 
@@ -21,7 +21,7 @@ public final class AFd1pSDK<ResponseBody> {
         this.unregisterClient = aFd1oSDK;
         this.AFLogger = executorService;
         this.registerClient = aFd1mSDK;
-        this.f5286d = aFd1iSDK;
+        this.f5359d = aFd1iSDK;
     }
 
     public final AFd1fSDK<ResponseBody> AFKeystoreWrapper() throws ParsingException {
@@ -30,7 +30,7 @@ public final class AFd1pSDK<ResponseBody> {
         }
         AFd1fSDK<String> aFd1fSDKRegisterClient = this.registerClient.registerClient(this.unregisterClient);
         try {
-            return new AFd1fSDK<>(this.f5286d.registerClient(aFd1fSDKRegisterClient.getBody()), aFd1fSDKRegisterClient.unregisterClient, aFd1fSDKRegisterClient.AFLogger, aFd1fSDKRegisterClient.f5276d, aFd1fSDKRegisterClient.AFKeystoreWrapper);
+            return new AFd1fSDK<>(this.f5359d.registerClient(aFd1fSDKRegisterClient.getBody()), aFd1fSDKRegisterClient.unregisterClient, aFd1fSDKRegisterClient.AFLogger, aFd1fSDKRegisterClient.f5349d, aFd1fSDKRegisterClient.AFKeystoreWrapper);
         } catch (JSONException e10) {
             AFLogger.INSTANCE.e(LogTag.HTTP_CLIENT, "Could not parse raw response during execute", e10, false, false);
             throw new ParsingException(e10.getMessage(), e10, aFd1fSDKRegisterClient);

@@ -14,20 +14,20 @@ public final /* synthetic */ class b {
         Intrinsics.checkNotNullParameter(connection, "connection");
         List listC = kotlin.collections.o.c();
         f5.d dVarR3 = connection.r3("SELECT name FROM sqlite_master WHERE type = 'trigger'");
-        while (dVarR3.g3()) {
+        while (dVarR3.i3()) {
             try {
-                listC.add(dVarR3.E2(0));
+                listC.add(dVarR3.F2(0));
             } catch (Throwable th2) {
                 try {
                     throw th2;
                 } catch (Throwable th3) {
-                    xt.a.a(dVarR3, th2);
+                    vt.a.a(dVarR3, th2);
                     throw th3;
                 }
             }
         }
-        Unit unit = Unit.f22483a;
-        xt.a.a(dVarR3, null);
+        Unit unit = Unit.f22938a;
+        vt.a.a(dVarR3, null);
         for (String str : kotlin.collections.o.a(listC)) {
             if (x.T(str, "room_fts_content_sync_", false, 2, null)) {
                 f5.a.a(connection, "DROP TRIGGER IF EXISTS " + str);

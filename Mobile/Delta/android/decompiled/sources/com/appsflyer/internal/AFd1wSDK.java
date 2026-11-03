@@ -27,20 +27,20 @@ public final class AFd1wSDK implements AFd1uSDK {
     private static int afWarnLog;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    private static final int f5299d;
+    private static final int f5372d;
     private int AFKeystoreWrapper;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    private final AFc1bSDK f5300e;
+    private final AFc1bSDK f5373e;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    private boolean f5301i;
+    private boolean f5374i;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    private boolean f5302v;
+    private boolean f5375v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    private AppsFlyerProperties f5303w;
+    private AppsFlyerProperties f5376w;
     private List<String> AFLogger = new ArrayList();
     private boolean unregisterClient = true;
 
@@ -50,7 +50,7 @@ public final class AFd1wSDK implements AFd1uSDK {
 
     static {
         force();
-        f5299d = 98166;
+        f5372d = 98166;
         int i10 = afWarnLog + 43;
         afInfoLog = i10 % 128;
         if (i10 % 2 == 0) {
@@ -59,12 +59,12 @@ public final class AFd1wSDK implements AFd1uSDK {
     }
 
     public AFd1wSDK(AFc1bSDK aFc1bSDK) {
-        this.f5303w = aFc1bSDK.registerClient();
+        this.f5376w = aFc1bSDK.registerClient();
         String strAFLogger = aFc1bSDK.AFLogger().AFLogger("AF_DISABLE_REMOTE_DEBUGGER");
-        this.f5302v = true ^ (strAFLogger != null ? Boolean.parseBoolean(strAFLogger) : false);
+        this.f5375v = true ^ (strAFLogger != null ? Boolean.parseBoolean(strAFLogger) : false);
         this.AFKeystoreWrapper = 0;
-        this.f5301i = false;
-        this.f5300e = aFc1bSDK;
+        this.f5374i = false;
+        this.f5373e = aFc1bSDK;
     }
 
     @NonNull
@@ -143,23 +143,23 @@ public final class AFd1wSDK implements AFd1uSDK {
             char c13 = (char) iArr[i14 + 1];
             cArr[3] = c13;
             aFk1oSDK.AFLogger = (c10 << 16) + c11;
-            aFk1oSDK.f5455d = (c12 << 16) + c13;
+            aFk1oSDK.f5528d = (c12 << 16) + c13;
             AFk1oSDK.unregisterClient(iArr4);
             for (int i16 = 0; i16 < 16; i16++) {
                 $11 = ($10 + 33) % 128;
                 int i17 = aFk1oSDK.AFLogger ^ iArr4[i16];
                 aFk1oSDK.AFLogger = i17;
-                int iD = AFk1oSDK.d(i17) ^ aFk1oSDK.f5455d;
+                int iD = AFk1oSDK.d(i17) ^ aFk1oSDK.f5528d;
                 int i18 = aFk1oSDK.AFLogger;
                 aFk1oSDK.AFLogger = iD;
-                aFk1oSDK.f5455d = i18;
+                aFk1oSDK.f5528d = i18;
             }
             int i19 = aFk1oSDK.AFLogger;
-            int i20 = aFk1oSDK.f5455d;
+            int i20 = aFk1oSDK.f5528d;
             aFk1oSDK.AFLogger = i20;
-            aFk1oSDK.f5455d = i19;
+            aFk1oSDK.f5528d = i19;
             int i21 = i19 ^ iArr4[16];
-            aFk1oSDK.f5455d = i21;
+            aFk1oSDK.f5528d = i21;
             int i22 = i20 ^ iArr4[17];
             aFk1oSDK.AFLogger = i22;
             cArr[0] = (char) (i22 >>> 16);
@@ -187,7 +187,7 @@ public final class AFd1wSDK implements AFd1uSDK {
     }
 
     private boolean afErrorLog() {
-        if (!this.f5302v || (!this.unregisterClient && !this.f5301i)) {
+        if (!this.f5375v || (!this.unregisterClient && !this.f5374i)) {
             afWarnLog = (afInfoLog + 95) % 128;
             return false;
         }
@@ -201,7 +201,7 @@ public final class AFd1wSDK implements AFd1uSDK {
 
     private boolean afInfoLog() {
         afInfoLog = (afWarnLog + 81) % 128;
-        boolean zAFKeystoreWrapper = this.f5300e.AFKeystoreWrapper().AFKeystoreWrapper("participantInProxy");
+        boolean zAFKeystoreWrapper = this.f5373e.AFKeystoreWrapper().AFKeystoreWrapper("participantInProxy");
         int i10 = afInfoLog + R.styleable.AppCompatTheme_windowMinWidthMinor;
         afWarnLog = i10 % 128;
         if (i10 % 2 != 0) {
@@ -216,10 +216,10 @@ public final class AFd1wSDK implements AFd1uSDK {
 
     private synchronized void e() {
         afWarnLog = (afInfoLog + 11) % 128;
-        if (this.f5301i) {
+        if (this.f5374i) {
             return;
         }
-        this.f5301i = true;
+        this.f5374i = true;
         try {
             AFLogger("r_debugging_on", new SimpleDateFormat("yyyy-MM-dd HH:mm:ssZ", Locale.ENGLISH).format(Long.valueOf(System.currentTimeMillis())), new String[0]);
             afInfoLog = (afWarnLog + 13) % 128;
@@ -243,7 +243,7 @@ public final class AFd1wSDK implements AFd1uSDK {
         if (i15 == 2) {
             AFd1wSDK aFd1wSDK = (AFd1wSDK) objArr[0];
             afWarnLog = (afInfoLog + 39) % 128;
-            aFd1wSDK.f5300e.AFKeystoreWrapper().AFLogger("participantInProxy");
+            aFd1wSDK.f5373e.AFKeystoreWrapper().AFLogger("participantInProxy");
             afWarnLog = (afInfoLog + 59) % 128;
             return null;
         }
@@ -337,7 +337,7 @@ public final class AFd1wSDK implements AFd1uSDK {
     @Override // com.appsflyer.internal.AFd1uSDK
     public final boolean AFLogger() {
         afInfoLog = (afWarnLog + 23) % 128;
-        boolean zD = d(AFKeystoreWrapper(this.f5300e.i().unregisterClient.AFLogger), AFKeystoreWrapper(this.f5300e.i().unregisterClient.f5350d));
+        boolean zD = d(AFKeystoreWrapper(this.f5373e.i().unregisterClient.AFLogger), AFKeystoreWrapper(this.f5373e.i().unregisterClient.f5423d));
         if (!zD) {
             registerClient();
             d();
@@ -364,7 +364,7 @@ public final class AFd1wSDK implements AFd1uSDK {
         try {
             int i11 = afWarnLog;
             afInfoLog = (i11 + 81) % 128;
-            if (!this.f5301i) {
+            if (!this.f5374i) {
                 int i12 = i11 + 123;
                 afInfoLog = i12 % 128;
                 if (i12 % 2 != 0) {
@@ -392,7 +392,7 @@ public final class AFd1wSDK implements AFd1uSDK {
                 throw th;
                 throw th;
             }
-            this.f5301i = false;
+            this.f5374i = false;
             this.unregisterClient = false;
             try {
                 AFLogger("r_debugging_off", new SimpleDateFormat("yyyy-MM-dd HH:mm:ssZ", Locale.ENGLISH).format(Long.valueOf(System.currentTimeMillis())), new String[0]);
@@ -409,7 +409,7 @@ public final class AFd1wSDK implements AFd1uSDK {
     public final boolean i() {
         int i10 = (afWarnLog + 61) % 128;
         afInfoLog = i10;
-        boolean z10 = this.f5301i;
+        boolean z10 = this.f5374i;
         afWarnLog = (i10 + 63) % 128;
         return z10;
     }
@@ -459,13 +459,13 @@ public final class AFd1wSDK implements AFd1uSDK {
             int r8 = java.lang.System.identityHashCode(r6)     // Catch: java.lang.Throwable -> L4b
             java.lang.Object r7 = registerClient(r7, r3, r2, r8)     // Catch: java.lang.Throwable -> L4b
             java.util.Map r7 = (java.util.Map) r7     // Catch: java.lang.Throwable -> L4b
-            com.appsflyer.internal.AFc1bSDK r8 = r6.f5300e     // Catch: java.lang.Throwable -> L4b
+            com.appsflyer.internal.AFc1bSDK r8 = r6.f5373e     // Catch: java.lang.Throwable -> L4b
             com.appsflyer.internal.AFf1fSDK r8 = r8.AppsFlyerLib()     // Catch: java.lang.Throwable -> L4b
             java.lang.Object[] r2 = new java.lang.Object[]{r8}     // Catch: java.lang.Throwable -> L4b
             int r8 = java.lang.System.identityHashCode(r8)     // Catch: java.lang.Throwable -> L4b
             java.lang.Object r8 = com.appsflyer.internal.AFf1fSDK.unregisterClient(r2, r1, r0, r8)     // Catch: java.lang.Throwable -> L4b
             java.lang.String r8 = (java.lang.String) r8     // Catch: java.lang.Throwable -> L4b
-            com.appsflyer.internal.AFc1bSDK r0 = r6.f5300e     // Catch: java.lang.Throwable -> L4b
+            com.appsflyer.internal.AFc1bSDK r0 = r6.f5373e     // Catch: java.lang.Throwable -> L4b
             com.appsflyer.internal.AFd1sSDK r0 = r0.unregisterClient()     // Catch: java.lang.Throwable -> L4b
             com.appsflyer.internal.AFd1vSDK r7 = r0.d(r7, r8)     // Catch: java.lang.Throwable -> L4b
             r8 = 40
@@ -482,13 +482,13 @@ public final class AFd1wSDK implements AFd1uSDK {
             int r8 = java.lang.System.identityHashCode(r6)     // Catch: java.lang.Throwable -> L4b
             java.lang.Object r7 = registerClient(r7, r3, r2, r8)     // Catch: java.lang.Throwable -> L4b
             java.util.Map r7 = (java.util.Map) r7     // Catch: java.lang.Throwable -> L4b
-            com.appsflyer.internal.AFc1bSDK r8 = r6.f5300e     // Catch: java.lang.Throwable -> L4b
+            com.appsflyer.internal.AFc1bSDK r8 = r6.f5373e     // Catch: java.lang.Throwable -> L4b
             com.appsflyer.internal.AFf1fSDK r8 = r8.AppsFlyerLib()     // Catch: java.lang.Throwable -> L4b
             java.lang.Object[] r2 = new java.lang.Object[]{r8}     // Catch: java.lang.Throwable -> L4b
             int r8 = java.lang.System.identityHashCode(r8)     // Catch: java.lang.Throwable -> L4b
             java.lang.Object r8 = com.appsflyer.internal.AFf1fSDK.unregisterClient(r2, r1, r0, r8)     // Catch: java.lang.Throwable -> L4b
             java.lang.String r8 = (java.lang.String) r8     // Catch: java.lang.Throwable -> L4b
-            com.appsflyer.internal.AFc1bSDK r0 = r6.f5300e     // Catch: java.lang.Throwable -> L4b
+            com.appsflyer.internal.AFc1bSDK r0 = r6.f5373e     // Catch: java.lang.Throwable -> L4b
             com.appsflyer.internal.AFd1sSDK r0 = r0.unregisterClient()     // Catch: java.lang.Throwable -> L4b
             com.appsflyer.internal.AFd1vSDK r7 = r0.d(r7, r8)     // Catch: java.lang.Throwable -> L4b
             if (r7 != 0) goto L90
@@ -504,7 +504,7 @@ public final class AFd1wSDK implements AFd1uSDK {
             r0.e(r1, r2, r3, r4, r5)     // Catch: java.lang.Throwable -> L4b
             return
         L90:
-            com.appsflyer.internal.AFc1bSDK r8 = r6.f5300e     // Catch: java.lang.Throwable -> L4b
+            com.appsflyer.internal.AFc1bSDK r8 = r6.f5373e     // Catch: java.lang.Throwable -> L4b
             java.util.concurrent.ExecutorService r8 = r8.d()     // Catch: java.lang.Throwable -> L4b
             com.appsflyer.internal.e0 r0 = new com.appsflyer.internal.e0     // Catch: java.lang.Throwable -> L4b
             r0.<init>()     // Catch: java.lang.Throwable -> L4b
@@ -549,7 +549,7 @@ public final class AFd1wSDK implements AFd1uSDK {
     public final void AFKeystoreWrapper() {
         int i10 = (afInfoLog + 105) % 128;
         afWarnLog = i10;
-        this.f5302v = false;
+        this.f5375v = false;
         int i11 = i10 + 71;
         afInfoLog = i11 % 128;
         if (i11 % 2 == 0) {
@@ -559,7 +559,7 @@ public final class AFd1wSDK implements AFd1uSDK {
 
     private void unregisterClient(boolean z10) {
         afInfoLog = (afWarnLog + 121) % 128;
-        this.f5300e.AFKeystoreWrapper().registerClient("participantInProxy", z10);
+        this.f5373e.AFKeystoreWrapper().registerClient("participantInProxy", z10);
         int i10 = afWarnLog + 89;
         afInfoLog = i10 % 128;
         if (i10 % 2 == 0) {
@@ -640,10 +640,10 @@ public final class AFd1wSDK implements AFd1uSDK {
         int i10 = afWarnLog + 5;
         afInfoLog = i10 % 128;
         if (i10 % 2 != 0) {
-            aFd1wSDK.d(str, aFd1wSDK.f5300e.setAndroidIdData());
+            aFd1wSDK.d(str, aFd1wSDK.f5373e.setAndroidIdData());
             return aFd1wSDK.AFLoggerLogLevel();
         }
-        aFd1wSDK.d(str, aFd1wSDK.f5300e.setAndroidIdData());
+        aFd1wSDK.d(str, aFd1wSDK.f5373e.setAndroidIdData());
         aFd1wSDK.AFLoggerLogLevel();
         throw null;
     }
@@ -810,7 +810,7 @@ public final class AFd1wSDK implements AFd1uSDK {
         if (str.trim().length() == 0) {
             return true;
         }
-        return str.equals(this.f5300e.AFLogger().r_().versionName);
+        return str.equals(this.f5373e.AFLogger().r_().versionName);
     }
 
     @Override // com.appsflyer.internal.AFd1uSDK
@@ -900,7 +900,7 @@ public final class AFd1wSDK implements AFd1uSDK {
                         string = sb3.toString();
                     }
                     int length = this.AFKeystoreWrapper + (string.length() << 1);
-                    int i11 = f5299d;
+                    int i11 = f5372d;
                     boolean z10 = false;
                     if (length > i11) {
                         string = string.substring(0, (i11 - this.AFKeystoreWrapper) / 2);
@@ -925,7 +925,7 @@ public final class AFd1wSDK implements AFd1uSDK {
 
     private synchronized void d(String str, AFc1eSDK aFc1eSDK) {
         try {
-            String string = this.f5303w.getString("remote_debug_static_data");
+            String string = this.f5376w.getString("remote_debug_static_data");
             this.registerClient.clear();
             if (string != null) {
                 try {
@@ -934,15 +934,15 @@ public final class AFd1wSDK implements AFd1uSDK {
                 } catch (Throwable unused) {
                 }
             } else {
-                AFKeystoreWrapper(this.f5300e.AFLogger().AFLogger(), aFc1eSDK.AFLoggerLogLevel, aFc1eSDK.force);
+                AFKeystoreWrapper(this.f5373e.AFLogger().AFLogger(), aFc1eSDK.AFLoggerLogLevel, aFc1eSDK.force);
                 StringBuilder sb2 = new StringBuilder("7.0.1.");
                 sb2.append(AFa1tSDK.unregisterClient);
                 String string2 = sb2.toString();
-                AFf1fSDK aFf1fSDKAppsFlyerLib = this.f5300e.AppsFlyerLib();
-                AFLogger(string2, (String) AFf1fSDK.unregisterClient(new Object[]{aFf1fSDKAppsFlyerLib}, -1660886869, 1660886871, System.identityHashCode(aFf1fSDKAppsFlyerLib)), this.f5303w.getString("KSAppsFlyerId"), AFb1jSDK.AFLogger(this.f5300e.AFLogger().AFKeystoreWrapper));
+                AFf1fSDK aFf1fSDKAppsFlyerLib = this.f5373e.AppsFlyerLib();
+                AFLogger(string2, (String) AFf1fSDK.unregisterClient(new Object[]{aFf1fSDKAppsFlyerLib}, -1660886869, 1660886871, System.identityHashCode(aFf1fSDKAppsFlyerLib)), this.f5376w.getString("KSAppsFlyerId"), AFb1jSDK.AFLogger(this.f5373e.AFLogger().AFKeystoreWrapper));
                 try {
-                    int i10 = this.f5300e.AFLogger().r_().versionCode;
-                    String strAFLogger = this.f5300e.AFLogger().AFLogger("CHANNEL");
+                    int i10 = this.f5373e.AFLogger().r_().versionCode;
+                    String strAFLogger = this.f5373e.AFLogger().AFLogger("CHANNEL");
                     if (strAFLogger != null) {
                         int i11 = afInfoLog + 15;
                         afWarnLog = i11 % 128;
@@ -955,13 +955,13 @@ public final class AFd1wSDK implements AFd1uSDK {
                             throw null;
                         }
                     }
-                    d(str, String.valueOf(i10), strAFLogger, this.f5303w.getString("preInstallName"));
+                    d(str, String.valueOf(i10), strAFLogger, this.f5376w.getString("preInstallName"));
                     afWarnLog = (afInfoLog + 77) % 128;
                 } catch (Throwable unused2) {
                 }
-                this.f5303w.set("remote_debug_static_data", new JSONObject(this.registerClient).toString());
+                this.f5376w.set("remote_debug_static_data", new JSONObject(this.registerClient).toString());
             }
-            this.registerClient.put("launch_counter", String.valueOf(this.f5300e.AFLogger().AFKeystoreWrapper.AFLogger("appsFlyerCount", 0)));
+            this.registerClient.put("launch_counter", String.valueOf(this.f5373e.AFLogger().AFKeystoreWrapper.AFLogger("appsFlyerCount", 0)));
         } catch (Throwable th2) {
             throw th2;
         }
@@ -988,7 +988,7 @@ public final class AFd1wSDK implements AFd1uSDK {
                 return false;
             }
             afInfoLog = (afWarnLog + 93) % 128;
-            if (this.f5300e.AFLogger().AFKeystoreWrapper.AFLogger("appsFlyerCount", 0) > aFh1cSDK.unregisterClient) {
+            if (this.f5373e.AFLogger().AFKeystoreWrapper.AFLogger("appsFlyerCount", 0) > aFh1cSDK.unregisterClient) {
                 return false;
             }
             if (!AFLogger(aFh1cSDK, aFh1cSDK2)) {

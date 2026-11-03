@@ -8,28 +8,28 @@ import java.util.Set;
 public class t implements s {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static volatile u f4049e;
+    public static volatile u f3947e;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final l8.a f4050a;
+    public final l8.a f3948a;
     public final l8.a b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final h8.e f4051c;
+    public final h8.e f3949c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final i8.r f4052d;
+    public final i8.r f3950d;
 
     public t(l8.a aVar, l8.a aVar2, h8.e eVar, i8.r rVar, i8.v vVar) {
-        this.f4050a = aVar;
+        this.f3948a = aVar;
         this.b = aVar2;
-        this.f4051c = eVar;
-        this.f4052d = rVar;
+        this.f3949c = eVar;
+        this.f3950d = rVar;
         vVar.c();
     }
 
     public static t c() {
-        u uVar = f4049e;
+        u uVar = f3947e;
         if (uVar != null) {
             return uVar.b();
         }
@@ -41,11 +41,11 @@ public class t implements s {
     }
 
     public static void f(Context context) {
-        if (f4049e == null) {
+        if (f3947e == null) {
             synchronized (t.class) {
                 try {
-                    if (f4049e == null) {
-                        f4049e = e.c().setApplicationContext(context).build();
+                    if (f3947e == null) {
+                        f3947e = e.c().setApplicationContext(context).build();
                     }
                 } catch (Throwable th2) {
                     throw th2;
@@ -56,15 +56,15 @@ public class t implements s {
 
     @Override // b8.s
     public void a(n nVar, y7.j jVar) {
-        this.f4051c.a(nVar.f().f(nVar.c().c()), b(nVar), jVar);
+        this.f3949c.a(nVar.f().f(nVar.c().c()), b(nVar), jVar);
     }
 
     public final i b(n nVar) {
-        return i.a().i(this.f4050a.a()).k(this.b.a()).j(nVar.g()).h(new h(nVar.b(), nVar.d())).g(nVar.c().a()).d();
+        return i.a().i(this.f3948a.a()).k(this.b.a()).j(nVar.g()).h(new h(nVar.b(), nVar.d())).g(nVar.c().a()).d();
     }
 
     public i8.r e() {
-        return this.f4052d;
+        return this.f3950d;
     }
 
     public y7.i g(f fVar) {

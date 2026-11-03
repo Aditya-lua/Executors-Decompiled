@@ -11,15 +11,15 @@ public enum za {
 
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f26230a;
+    public final int f27051a;
 
     za(int i10) {
-        this.f26230a = i10;
+        this.f27051a = i10;
     }
 
     public static za a(int i10) {
         for (za zaVar : values()) {
-            if (zaVar.f26230a == i10) {
+            if (zaVar.f27051a == i10) {
                 return zaVar;
             }
         }
@@ -27,6 +27,6 @@ public enum za {
     }
 
     public final int zza() {
-        return this.f26230a;
+        return this.f27051a;
     }
 }

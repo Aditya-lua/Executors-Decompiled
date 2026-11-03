@@ -1,6 +1,10 @@
 package com.withpersona.sdk2.inquiry.tracking;
 
 import android.util.Base64;
+import gt.o;
+import iu.g1;
+import iu.i;
+import iu.l0;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.security.KeyFactory;
@@ -10,22 +14,18 @@ import java.security.spec.InvalidKeySpecException;
 import java.security.spec.X509EncodedKeySpec;
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
-import jt.o;
 import kotlin.Metadata;
 import kotlin.text.Regex;
 import kotlin.text.x;
-import ku.g1;
-import ku.i;
-import ku.l0;
+import mt.c;
+import nt.d;
+import nt.f;
+import nt.l;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import ot.c;
-import pt.d;
-import pt.f;
-import pt.l;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000 \n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0007\u001a \u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0001\u001a\u00020\u00002\u0006\u0010\u0002\u001a\u00020\u0000H\u0086@¢\u0006\u0004\b\u0004\u0010\u0005\u001a\u0018\u0010\u0004\u001a\u00020\u00002\u0006\u0010\u0001\u001a\u00020\u0000H\u0086@¢\u0006\u0004\b\u0004\u0010\u0006\u001a\u0017\u0010\t\u001a\u00020\b2\u0006\u0010\u0007\u001a\u00020\u0000H\u0002¢\u0006\u0004\b\t\u0010\n\"\u0014\u0010\f\u001a\u00020\u000b8\u0002X\u0082T¢\u0006\u0006\n\u0004\b\f\u0010\r\"\u0014\u0010\u000e\u001a\u00020\u000b8\u0002X\u0082T¢\u0006\u0006\n\u0004\b\u000e\u0010\r\"\u0014\u0010\u000f\u001a\u00020\u000b8\u0002X\u0082T¢\u0006\u0006\n\u0004\b\u000f\u0010\r\"\u0014\u0010\u0010\u001a\u00020\u00008\u0002X\u0082T¢\u0006\u0006\n\u0004\b\u0010\u0010\u0011¨\u0006\u0012"}, d2 = {"", "data", "publicKeyPem", "Lcom/withpersona/sdk2/inquiry/tracking/ObfuscationResult;", "obfuscatePayload", "(Ljava/lang/String;Ljava/lang/String;Lnt/b;)Ljava/lang/Object;", "(Ljava/lang/String;Lnt/b;)Ljava/lang/Object;", "pem", "Ljava/security/PublicKey;", "parsePublicKeyPem", "(Ljava/lang/String;)Ljava/security/PublicKey;", "", "GCM_TAG_LENGTH_BITS", "I", "GCM_IV_LENGTH_BYTES", "AES_KEY_LENGTH_BYTES", "TEST_OBFUSCATION_KEY", "Ljava/lang/String;", "tracking-events_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000 \n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0007\u001a \u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0001\u001a\u00020\u00002\u0006\u0010\u0002\u001a\u00020\u0000H\u0086@¢\u0006\u0004\b\u0004\u0010\u0005\u001a\u0018\u0010\u0004\u001a\u00020\u00002\u0006\u0010\u0001\u001a\u00020\u0000H\u0086@¢\u0006\u0004\b\u0004\u0010\u0006\u001a\u0017\u0010\t\u001a\u00020\b2\u0006\u0010\u0007\u001a\u00020\u0000H\u0002¢\u0006\u0004\b\t\u0010\n\"\u0014\u0010\f\u001a\u00020\u000b8\u0002X\u0082T¢\u0006\u0006\n\u0004\b\f\u0010\r\"\u0014\u0010\u000e\u001a\u00020\u000b8\u0002X\u0082T¢\u0006\u0006\n\u0004\b\u000e\u0010\r\"\u0014\u0010\u000f\u001a\u00020\u000b8\u0002X\u0082T¢\u0006\u0006\n\u0004\b\u000f\u0010\r\"\u0014\u0010\u0010\u001a\u00020\u00008\u0002X\u0082T¢\u0006\u0006\n\u0004\b\u0010\u0010\u0011¨\u0006\u0012"}, d2 = {"", "data", "publicKeyPem", "Lcom/withpersona/sdk2/inquiry/tracking/ObfuscationResult;", "obfuscatePayload", "(Ljava/lang/String;Ljava/lang/String;Llt/b;)Ljava/lang/Object;", "(Ljava/lang/String;Llt/b;)Ljava/lang/Object;", "pem", "Ljava/security/PublicKey;", "parsePublicKeyPem", "(Ljava/lang/String;)Ljava/security/PublicKey;", "", "GCM_TAG_LENGTH_BITS", "I", "GCM_IV_LENGTH_BYTES", "AES_KEY_LENGTH_BYTES", "TEST_OBFUSCATION_KEY", "Ljava/lang/String;", "tracking-events_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
 public final class TrackingEventUtilsKt {
     private static final int AES_KEY_LENGTH_BYTES = 32;
     private static final int GCM_IV_LENGTH_BYTES = 12;
@@ -52,11 +52,11 @@ public final class TrackingEventUtilsKt {
         int label;
         /* synthetic */ Object result;
 
-        public AnonymousClass1(nt.b<? super AnonymousClass1> bVar) {
+        public AnonymousClass1(lt.b<? super AnonymousClass1> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
             this.result = obj;
@@ -77,11 +77,11 @@ public final class TrackingEventUtilsKt {
         int label;
         /* synthetic */ Object result;
 
-        public AnonymousClass2(nt.b<? super AnonymousClass2> bVar) {
+        public AnonymousClass2(lt.b<? super AnonymousClass2> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
             this.result = obj;
@@ -92,7 +92,7 @@ public final class TrackingEventUtilsKt {
 
     /* JADX WARN: Code duplicated, block: B:7:0x0015  */
     @Nullable
-    public static final Object obfuscatePayload(@NotNull String str, @NotNull String str2, @NotNull nt.b<? super ObfuscationResult> bVar) {
+    public static final Object obfuscatePayload(@NotNull String str, @NotNull String str2, @NotNull lt.b<? super ObfuscationResult> bVar) {
         AnonymousClass1 anonymousClass1;
         String str3;
         byte[] bytes;
@@ -214,7 +214,7 @@ public final class TrackingEventUtilsKt {
 
     /* JADX WARN: Code duplicated, block: B:7:0x0013  */
     @Nullable
-    public static final Object obfuscatePayload(@NotNull String str, @NotNull nt.b<? super String> bVar) {
+    public static final Object obfuscatePayload(@NotNull String str, @NotNull lt.b<? super String> bVar) {
         AnonymousClass2 anonymousClass2;
         byte[] bArr;
         byte[] bArr2;

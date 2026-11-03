@@ -18,15 +18,15 @@ public class c extends q {
     public static class a extends AnimatorListenerAdapter implements q.h {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Rect f27080a;
+        public final Rect f27645a;
         public final Rect b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final View f27081c;
+        public final View f27646c;
 
         public a(View view, Rect rect, Rect rect2) {
-            this.f27081c = view;
-            this.f27080a = rect;
+            this.f27646c = view;
+            this.f27645a = rect;
             this.b = rect2;
         }
 
@@ -36,20 +36,20 @@ public class c extends q {
 
         @Override // o5.q.h
         public void b(@NonNull q qVar) {
-            View view = this.f27081c;
+            View view = this.f27646c;
             int i10 = l.b;
-            this.f27081c.setClipBounds((Rect) view.getTag(i10));
-            this.f27081c.setTag(i10, null);
+            this.f27646c.setClipBounds((Rect) view.getTag(i10));
+            this.f27646c.setTag(i10, null);
         }
 
         @Override // o5.q.h
         public void d(@NonNull q qVar) {
-            Rect clipBounds = this.f27081c.getClipBounds();
+            Rect clipBounds = this.f27646c.getClipBounds();
             if (clipBounds == null) {
                 clipBounds = c.R;
             }
-            this.f27081c.setTag(l.b, clipBounds);
-            this.f27081c.setClipBounds(this.b);
+            this.f27646c.setTag(l.b, clipBounds);
+            this.f27646c.setClipBounds(this.b);
         }
 
         @Override // o5.q.h
@@ -68,9 +68,9 @@ public class c extends q {
         @Override // android.animation.Animator.AnimatorListener
         public void onAnimationEnd(Animator animator, boolean z10) {
             if (z10) {
-                this.f27081c.setClipBounds(this.f27080a);
+                this.f27646c.setClipBounds(this.f27645a);
             } else {
-                this.f27081c.setClipBounds(this.b);
+                this.f27646c.setClipBounds(this.b);
             }
         }
     }
@@ -85,9 +85,9 @@ public class c extends q {
             clipBounds = view.getClipBounds();
         }
         Rect rect = clipBounds != R ? clipBounds : null;
-        d0Var.f27089a.put("android:clipBounds:clip", rect);
+        d0Var.f27654a.put("android:clipBounds:clip", rect);
         if (rect == null) {
-            d0Var.f27089a.put("android:clipBounds:bounds", new Rect(0, 0, view.getWidth(), view.getHeight()));
+            d0Var.f27654a.put("android:clipBounds:bounds", new Rect(0, 0, view.getWidth(), view.getHeight()));
         }
     }
 
@@ -114,21 +114,21 @@ public class c extends q {
 
     @Override // o5.q
     public Animator s(@NonNull ViewGroup viewGroup, d0 d0Var, d0 d0Var2) {
-        if (d0Var == null || d0Var2 == null || !d0Var.f27089a.containsKey("android:clipBounds:clip") || !d0Var2.f27089a.containsKey("android:clipBounds:clip")) {
+        if (d0Var == null || d0Var2 == null || !d0Var.f27654a.containsKey("android:clipBounds:clip") || !d0Var2.f27654a.containsKey("android:clipBounds:clip")) {
             return null;
         }
-        Rect rect = (Rect) d0Var.f27089a.get("android:clipBounds:clip");
-        Rect rect2 = (Rect) d0Var2.f27089a.get("android:clipBounds:clip");
+        Rect rect = (Rect) d0Var.f27654a.get("android:clipBounds:clip");
+        Rect rect2 = (Rect) d0Var2.f27654a.get("android:clipBounds:clip");
         if (rect == null && rect2 == null) {
             return null;
         }
-        Rect rect3 = rect == null ? (Rect) d0Var.f27089a.get("android:clipBounds:bounds") : rect;
-        Rect rect4 = rect2 == null ? (Rect) d0Var2.f27089a.get("android:clipBounds:bounds") : rect2;
+        Rect rect3 = rect == null ? (Rect) d0Var.f27654a.get("android:clipBounds:bounds") : rect;
+        Rect rect4 = rect2 == null ? (Rect) d0Var2.f27654a.get("android:clipBounds:bounds") : rect2;
         if (rect3.equals(rect4)) {
             return null;
         }
         d0Var2.b.setClipBounds(rect);
-        ObjectAnimator objectAnimatorOfObject = ObjectAnimator.ofObject(d0Var2.b, (Property<View, V>) i0.f27121c, (TypeEvaluator) new m(new Rect()), (Object[]) new Rect[]{rect3, rect4});
+        ObjectAnimator objectAnimatorOfObject = ObjectAnimator.ofObject(d0Var2.b, (Property<View, V>) i0.f27686c, (TypeEvaluator) new m(new Rect()), (Object[]) new Rect[]{rect3, rect4});
         a aVar = new a(d0Var2.b, rect, rect2);
         objectAnimatorOfObject.addListener(aVar);
         c(aVar);

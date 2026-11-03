@@ -13,7 +13,7 @@ public class o {
     @NotNull
     public static <E> List<E> a(@NotNull List<E> builder) {
         Intrinsics.checkNotNullParameter(builder, "builder");
-        return ((kt.b) builder).u();
+        return ((ht.b) builder).u();
     }
 
     @NotNull
@@ -29,7 +29,7 @@ public class o {
 
     @NotNull
     public static <E> List<E> c() {
-        return new kt.b(0, 1, null);
+        return new ht.b(0, 1, null);
     }
 
     @NotNull

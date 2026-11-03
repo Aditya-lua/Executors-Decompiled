@@ -61,7 +61,7 @@ public abstract class WorkDatabase extends u {
                 public final g5.d a(g5.d.b bVar) {
                     return WorkDatabase.Companion.c(context, bVar);
                 }
-            })).g(queryExecutor).a(new c(clock)).b(j.f35637c).b(new t(context, 2, 3)).b(k.f35641c).b(l.f35642c).b(new t(context, 5, 6)).b(m.f35650c).b(y5.n.f35651c).b(o.f35653c).b(new g1(context)).b(new t(context, 10, 11)).b(f.f35603c).b(g.f35627c).b(h.f35630c).b(y5.i.f35633c).b(new t(context, 21, 22)).e(true).d();
+            })).g(queryExecutor).a(new c(clock)).b(j.f36494c).b(new t(context, 2, 3)).b(k.f36498c).b(l.f36499c).b(new t(context, 5, 6)).b(m.f36507c).b(y5.n.f36508c).b(o.f36510c).b(new g1(context)).b(new t(context, 10, 11)).b(f.f36460c).b(g.f36484c).b(h.f36487c).b(y5.i.f36490c).b(new t(context, 21, 22)).e(true).d();
         }
 
         public Companion() {

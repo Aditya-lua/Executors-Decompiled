@@ -112,8 +112,8 @@ public final class a extends Drawable implements Drawable.Callback, Animatable {
         int iHeight = targetBounds.height();
         double d10 = h.d(intrinsicWidth, intrinsicHeight, iWidth, iHeight, this.scale);
         double d11 = 2;
-        int iC = cu.b.c((((double) iWidth) - (((double) intrinsicWidth) * d10)) / d11);
-        int iC2 = cu.b.c((((double) iHeight) - (d10 * ((double) intrinsicHeight))) / d11);
+        int iC = au.b.c((((double) iWidth) - (((double) intrinsicWidth) * d10)) / d11);
+        int iC2 = au.b.c((((double) iHeight) - (d10 * ((double) intrinsicHeight))) / d11);
         drawable.setBounds(targetBounds.left + iC, targetBounds.top + iC2, targetBounds.right - iC, targetBounds.bottom - iC2);
     }
 

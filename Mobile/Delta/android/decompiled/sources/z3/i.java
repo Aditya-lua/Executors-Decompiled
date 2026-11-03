@@ -10,27 +10,27 @@ import androidx.annotation.NonNull;
 public class i {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final ThreadLocal<a4.a> f37143d = new ThreadLocal<>();
+    public static final ThreadLocal<a4.a> f37838d = new ThreadLocal<>();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f37144a;
+    public final int f37839a;
 
     @NonNull
     public final androidx.emoji2.text.f b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public volatile int f37145c = 0;
+    public volatile int f37840c = 0;
 
     public i(@NonNull androidx.emoji2.text.f fVar, int i10) {
         this.b = fVar;
-        this.f37144a = i10;
+        this.f37839a = i10;
     }
 
     public void a(@NonNull Canvas canvas, float f10, float f11, @NonNull Paint paint) {
         Typeface typefaceG = this.b.g();
         Typeface typeface = paint.getTypeface();
         paint.setTypeface(typefaceG);
-        canvas.drawText(this.b.c(), this.f37144a * 2, 2, f10, f11, paint);
+        canvas.drawText(this.b.c(), this.f37839a * 2, 2, f10, f11, paint);
         paint.setTypeface(typeface);
     }
 
@@ -44,7 +44,7 @@ public class i {
 
     @SuppressLint({"KotlinPropertyAccess"})
     public int d() {
-        return this.f37145c & 3;
+        return this.f37840c & 3;
     }
 
     public int e() {
@@ -56,13 +56,13 @@ public class i {
     }
 
     public final a4.a g() {
-        ThreadLocal<a4.a> threadLocal = f37143d;
+        ThreadLocal<a4.a> threadLocal = f37838d;
         a4.a aVar = threadLocal.get();
         if (aVar == null) {
             aVar = new a4.a();
             threadLocal.set(aVar);
         }
-        this.b.d().j(aVar, this.f37144a);
+        this.b.d().j(aVar, this.f37839a);
         return aVar;
     }
 
@@ -79,22 +79,22 @@ public class i {
     }
 
     public boolean k() {
-        return (this.f37145c & 4) > 0;
+        return (this.f37840c & 4) > 0;
     }
 
     public void l(boolean z10) {
         int iD = d();
         if (z10) {
-            this.f37145c = iD | 4;
+            this.f37840c = iD | 4;
         } else {
-            this.f37145c = iD;
+            this.f37840c = iD;
         }
     }
 
     @SuppressLint({"KotlinPropertyAccess"})
     public void m(boolean z10) {
-        int i10 = this.f37145c & 4;
-        this.f37145c = z10 ? i10 | 2 : i10 | 1;
+        int i10 = this.f37840c & 4;
+        this.f37840c = z10 ? i10 | 2 : i10 | 1;
     }
 
     @NonNull

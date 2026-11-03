@@ -10,14 +10,14 @@ import sb.k;
 public final class c extends u4 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ k f4060a;
+    public final /* synthetic */ k f3958a;
 
     public c(a aVar, k kVar) {
-        this.f4060a = kVar;
+        this.f3958a = kVar;
     }
 
     @Override // eb.v4
-    public final void C0(Status status, PendingIntent pendingIntent) {
-        v.a(status, pendingIntent, this.f4060a);
+    public final void y0(Status status, PendingIntent pendingIntent) {
+        v.a(status, pendingIntent, this.f3958a);
     }
 }

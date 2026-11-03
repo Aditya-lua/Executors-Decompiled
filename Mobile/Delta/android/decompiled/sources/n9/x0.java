@@ -11,13 +11,13 @@ import java.util.Objects;
 public final class x0 implements ServiceConnection {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f25305a;
+    public final int f26126a;
     public final /* synthetic */ c b;
 
     public x0(c cVar, int i10) {
         Objects.requireNonNull(cVar);
         this.b = cVar;
-        this.f25305a = i10;
+        this.f26126a = i10;
     }
 
     @Override // android.content.ServiceConnection
@@ -35,7 +35,7 @@ public final class x0 implements ServiceConnection {
                 throw th2;
             }
         }
-        this.b.zzb(0, null, this.f25305a);
+        this.b.zzb(0, null, this.f26126a);
     }
 
     @Override // android.content.ServiceConnection
@@ -45,7 +45,7 @@ public final class x0 implements ServiceConnection {
             cVar.zzi(null);
         }
         c cVar2 = this.b;
-        int i10 = this.f25305a;
+        int i10 = this.f26126a;
         Handler handler = cVar2.zzb;
         handler.sendMessage(handler.obtainMessage(6, i10, 1));
     }

@@ -13,9 +13,9 @@ import org.jetbrains.annotations.NotNull;
 public final class s0 {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
-    @Metadata(d1 = {"\u0000\u0012\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0004\u001a\u00020\u0003\"\u0004\b\u0000\u0010\u0000*\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00028\u00000\u00020\u0001H\n¢\u0006\u0004\b\u0004\u0010\u0005"}, d2 = {"T", "Liu/h;", "", "", "<anonymous>", "(Liu/h;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "kotlin.collections.SlidingWindowKt$windowedIterator$1", f = "SlidingWindow.kt", l = {34, 40, 49, 55, 58}, m = "invokeSuspend", v = 2)
-    public static final class a<T> extends pt.k implements Function2<iu.h<? super List<? extends T>>, nt.b<? super Unit>, Object> {
+    @nt.f(c = "kotlin.collections.SlidingWindowKt$windowedIterator$1", f = "SlidingWindow.kt", l = {34, 40, 49, 55, 58}, m = "invokeSuspend", v = 2)
+    @Metadata(d1 = {"\u0000\u0012\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0004\u001a\u00020\u0003\"\u0004\b\u0000\u0010\u0000*\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00028\u00000\u00020\u0001H\n¢\u0006\u0004\b\u0004\u0010\u0005"}, d2 = {"T", "Lgu/h;", "", "", "<anonymous>", "(Lgu/h;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class a<T> extends nt.k implements Function2<gu.h<? super List<? extends T>>, lt.b<? super Unit>, Object> {
         public int A;
         public /* synthetic */ Object B;
         public final /* synthetic */ int C;
@@ -25,26 +25,26 @@ public final class s0 {
         public final /* synthetic */ boolean G;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f22513u;
+        public Object f22968u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public Object f22514v;
+        public Object f22969v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public Object f22515w;
+        public Object f22970w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public int f22516x;
+        public int f22971x;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public int f22517y;
+        public int f22972y;
 
         /* JADX INFO: renamed from: z, reason: collision with root package name */
-        public int f22518z;
+        public int f22973z;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         /* JADX WARN: Multi-variable type inference failed */
-        public a(int i10, int i11, Iterator<? extends T> it, boolean z10, boolean z11, nt.b<? super a> bVar) {
+        public a(int i10, int i11, Iterator<? extends T> it, boolean z10, boolean z11, lt.b<? super a> bVar) {
             super(2, bVar);
             this.C = i10;
             this.D = i11;
@@ -53,8 +53,8 @@ public final class s0 {
             this.G = z11;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             a aVar = new a(this.C, this.D, this.E, this.F, this.G, bVar);
             aVar.B = obj;
             return aVar;
@@ -83,7 +83,7 @@ public final class s0 {
             	at jadx.core.utils.ErrorsCounter.error(ErrorsCounter.java:31)
             	at jadx.core.dex.attributes.nodes.NotificationAttrNode.addError(NotificationAttrNode.java:19)
             */
-        @Override // pt.a
+        @Override // nt.a
         public final java.lang.Object invokeSuspend(java.lang.Object r14) {
             /*
                 Method dump skipped, instruction units count: 422
@@ -93,9 +93,9 @@ public final class s0 {
         }
 
         @Override // kotlin.jvm.functions.Function2
-        /* JADX INFO: renamed from: q, reason: merged with bridge method [inline-methods] */
-        public final Object invoke(iu.h<? super List<? extends T>> hVar, nt.b<? super Unit> bVar) {
-            return ((a) create(hVar, bVar)).invokeSuspend(Unit.f22483a);
+        /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
+        public final Object invoke(gu.h<? super List<? extends T>> hVar, lt.b<? super Unit> bVar) {
+            return ((a) create(hVar, bVar)).invokeSuspend(Unit.f22938a);
         }
     }
 
@@ -114,6 +114,6 @@ public final class s0 {
     @NotNull
     public static final <T> Iterator<List<T>> b(@NotNull Iterator<? extends T> iterator, int i10, int i11, boolean z10, boolean z11) {
         Intrinsics.checkNotNullParameter(iterator, "iterator");
-        return !iterator.hasNext() ? y.f22520a : iu.i.a(new a(i10, i11, iterator, z11, z10, null));
+        return !iterator.hasNext() ? y.f22975a : gu.i.a(new a(i10, i11, iterator, z11, z10, null));
     }
 }

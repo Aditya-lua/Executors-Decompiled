@@ -9,26 +9,26 @@ import java.nio.charset.StandardCharsets;
 public final class h {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final Charset f28069e = StandardCharsets.US_ASCII;
+    public static final Charset f28288e = StandardCharsets.US_ASCII;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final String[] f28070f = {"", "BYTE", "STRING", "USHORT", "ULONG", "URATIONAL", "SBYTE", "UNDEFINED", "SSHORT", "SLONG", "SRATIONAL", "SINGLE", "DOUBLE", "IFD"};
+    public static final String[] f28289f = {"", "BYTE", "STRING", "USHORT", "ULONG", "URATIONAL", "SBYTE", "UNDEFINED", "SSHORT", "SLONG", "SRATIONAL", "SINGLE", "DOUBLE", "IFD"};
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final int[] f28071g = {0, 1, 1, 2, 4, 8, 1, 1, 2, 4, 8, 4, 8, 1};
+    public static final int[] f28290g = {0, 1, 1, 2, 4, 8, 1, 1, 2, 4, 8, 4, 8, 1};
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final byte[] f28072h = {65, 83, 67, 73, 73, 0, 0, 0};
+    public static final byte[] f28291h = {65, 83, 67, 73, 73, 0, 0, 0};
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f28073a;
+    public final int f28292a;
     public final int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final long f28074c;
+    public final long f28293c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final byte[] f28075d;
+    public final byte[] f28294d;
 
     public h(int i10, int i11, byte[] bArr) {
         this(i10, i11, -1L, bArr);
@@ -38,12 +38,12 @@ public final class h {
         if (str.length() == 1 && str.charAt(0) >= '0' && str.charAt(0) <= '1') {
             return new h(1, 1, new byte[]{(byte) (str.charAt(0) - '0')});
         }
-        byte[] bytes = str.getBytes(f28069e);
+        byte[] bytes = str.getBytes(f28288e);
         return new h(1, bytes.length, bytes);
     }
 
     public static h b(double[] dArr, ByteOrder byteOrder) {
-        ByteBuffer byteBufferWrap = ByteBuffer.wrap(new byte[f28071g[12] * dArr.length]);
+        ByteBuffer byteBufferWrap = ByteBuffer.wrap(new byte[f28290g[12] * dArr.length]);
         byteBufferWrap.order(byteOrder);
         for (double d10 : dArr) {
             byteBufferWrap.putDouble(d10);
@@ -52,7 +52,7 @@ public final class h {
     }
 
     public static h c(int[] iArr, ByteOrder byteOrder) {
-        ByteBuffer byteBufferWrap = ByteBuffer.wrap(new byte[f28071g[9] * iArr.length]);
+        ByteBuffer byteBufferWrap = ByteBuffer.wrap(new byte[f28290g[9] * iArr.length]);
         byteBufferWrap.order(byteOrder);
         for (int i10 : iArr) {
             byteBufferWrap.putInt(i10);
@@ -61,7 +61,7 @@ public final class h {
     }
 
     public static h d(n[] nVarArr, ByteOrder byteOrder) {
-        ByteBuffer byteBufferWrap = ByteBuffer.wrap(new byte[f28071g[10] * nVarArr.length]);
+        ByteBuffer byteBufferWrap = ByteBuffer.wrap(new byte[f28290g[10] * nVarArr.length]);
         byteBufferWrap.order(byteOrder);
         for (n nVar : nVarArr) {
             byteBufferWrap.putInt((int) nVar.b());
@@ -71,7 +71,7 @@ public final class h {
     }
 
     public static h e(String str) {
-        byte[] bytes = (str + (char) 0).getBytes(f28069e);
+        byte[] bytes = (str + (char) 0).getBytes(f28288e);
         return new h(2, bytes.length, bytes);
     }
 
@@ -80,7 +80,7 @@ public final class h {
     }
 
     public static h g(long[] jArr, ByteOrder byteOrder) {
-        ByteBuffer byteBufferWrap = ByteBuffer.wrap(new byte[f28071g[4] * jArr.length]);
+        ByteBuffer byteBufferWrap = ByteBuffer.wrap(new byte[f28290g[4] * jArr.length]);
         byteBufferWrap.order(byteOrder);
         for (long j10 : jArr) {
             byteBufferWrap.putInt((int) j10);
@@ -89,7 +89,7 @@ public final class h {
     }
 
     public static h h(n[] nVarArr, ByteOrder byteOrder) {
-        ByteBuffer byteBufferWrap = ByteBuffer.wrap(new byte[f28071g[5] * nVarArr.length]);
+        ByteBuffer byteBufferWrap = ByteBuffer.wrap(new byte[f28290g[5] * nVarArr.length]);
         byteBufferWrap.order(byteOrder);
         for (n nVar : nVarArr) {
             byteBufferWrap.putInt((int) nVar.b());
@@ -99,7 +99,7 @@ public final class h {
     }
 
     public static h i(int[] iArr, ByteOrder byteOrder) {
-        ByteBuffer byteBufferWrap = ByteBuffer.wrap(new byte[f28071g[3] * iArr.length]);
+        ByteBuffer byteBufferWrap = ByteBuffer.wrap(new byte[f28290g[3] * iArr.length]);
         byteBufferWrap.order(byteOrder);
         for (int i10 : iArr) {
             byteBufferWrap.putShort((short) i10);
@@ -108,17 +108,17 @@ public final class h {
     }
 
     public int j() {
-        return f28071g[this.f28073a] * this.b;
+        return f28290g[this.f28292a] * this.b;
     }
 
     public String toString() {
-        return "(" + f28070f[this.f28073a] + ", data length:" + this.f28075d.length + ")";
+        return "(" + f28289f[this.f28292a] + ", data length:" + this.f28294d.length + ")";
     }
 
     public h(int i10, int i11, long j10, byte[] bArr) {
-        this.f28073a = i10;
+        this.f28292a = i10;
         this.b = i11;
-        this.f28074c = j10;
-        this.f28075d = bArr;
+        this.f28293c = j10;
+        this.f28294d = bArr;
     }
 }

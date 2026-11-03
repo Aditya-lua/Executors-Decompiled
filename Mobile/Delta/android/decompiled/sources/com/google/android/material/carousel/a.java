@@ -2,8 +2,8 @@ package com.google.android.material.carousel;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
-import hc.d;
-import pc.f;
+import ic.d;
+import qc.f;
 
 /* JADX INFO: loaded from: classes2.dex */
 public final class a {
@@ -40,7 +40,7 @@ public final class a {
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.calculateFromBounds(TypeInferenceVisitor.java:147)
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.setBestType(TypeInferenceVisitor.java:125)
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.lambda$runTypePropagation$2(TypeInferenceVisitor.java:103)
-    	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+    	at java.base/java.util.ArrayList.forEach(Unknown Source)
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.runTypePropagation(TypeInferenceVisitor.java:103)
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.visit(TypeInferenceVisitor.java:75)
     Caused by: java.lang.NullPointerException: Cannot invoke "jadx.core.dex.instructions.args.InsnArg.getType()" because "arg" is null
@@ -59,7 +59,7 @@ public final class a {
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.calculateFromBounds(TypeInferenceVisitor.java:147)
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.setBestType(TypeInferenceVisitor.java:125)
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.lambda$runTypePropagation$2(TypeInferenceVisitor.java:103)
-    	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+    	at java.base/java.util.ArrayList.forEach(Unknown Source)
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.runTypePropagation(TypeInferenceVisitor.java:103)
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.visit(TypeInferenceVisitor.java:75)
     Caused by: java.lang.NullPointerException: Cannot invoke "jadx.core.dex.instructions.args.InsnArg.getType()" because "arg" is null
@@ -78,7 +78,7 @@ public final class a {
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.calculateFromBounds(TypeInferenceVisitor.java:147)
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.setBestType(TypeInferenceVisitor.java:125)
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.lambda$runTypePropagation$2(TypeInferenceVisitor.java:103)
-    	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+    	at java.base/java.util.ArrayList.forEach(Unknown Source)
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.runTypePropagation(TypeInferenceVisitor.java:103)
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.visit(TypeInferenceVisitor.java:75)
     Caused by: java.lang.NullPointerException: Cannot invoke "jadx.core.dex.instructions.args.InsnArg.getType()" because "arg" is null
@@ -97,7 +97,7 @@ public final class a {
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.calculateFromBounds(TypeInferenceVisitor.java:147)
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.setBestType(TypeInferenceVisitor.java:125)
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.lambda$runTypePropagation$2(TypeInferenceVisitor.java:103)
-    	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+    	at java.base/java.util.ArrayList.forEach(Unknown Source)
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.runTypePropagation(TypeInferenceVisitor.java:103)
     	at jadx.core.dex.visitors.typeinference.TypeInferenceVisitor.visit(TypeInferenceVisitor.java:75)
     Caused by: java.lang.NullPointerException: Cannot invoke "jadx.core.dex.instructions.args.InsnArg.getType()" because "arg" is null
@@ -126,52 +126,52 @@ public final class a {
         	at jadx.core.dex.visitors.typeinference.TypeUpdate.apply(TypeUpdate.java:91)
         	... 5 more
         */
-    public static com.google.android.material.carousel.b c(@androidx.annotation.NonNull android.content.Context r19, float r20, float r21, @androidx.annotation.NonNull pc.a r22) {
+    public static com.google.android.material.carousel.b c(@androidx.annotation.NonNull android.content.Context r19, float r20, float r21, @androidx.annotation.NonNull qc.a r22) {
         /*
             Method dump skipped, instruction units count: 293
             To view this dump add '--comments-level debug' option
         */
-        throw new UnsupportedOperationException("Method not decompiled: com.google.android.material.carousel.a.c(android.content.Context, float, float, pc.a):com.google.android.material.carousel.b");
+        throw new UnsupportedOperationException("Method not decompiled: com.google.android.material.carousel.a.c(android.content.Context, float, float, qc.a):com.google.android.material.carousel.b");
     }
 
-    public static b d(@NonNull Context context, float f10, float f11, @NonNull pc.a aVar, int i10) {
+    public static b d(@NonNull Context context, float f10, float f11, @NonNull qc.a aVar, int i10) {
         return i10 == 1 ? c(context, f10, f11, aVar) : e(context, f10, f11, aVar);
     }
 
-    public static b e(@NonNull Context context, float f10, float f11, @NonNull pc.a aVar) {
-        float fMin = Math.min(f(context) + f10, aVar.f28409f);
+    public static b e(@NonNull Context context, float f10, float f11, @NonNull qc.a aVar) {
+        float fMin = Math.min(f(context) + f10, aVar.f29657f);
         float f12 = fMin / 2.0f;
         float f13 = 0.0f - f12;
-        float fB = b(0.0f, aVar.f28409f, aVar.f28410g);
-        float fJ = j(0.0f, a(fB, aVar.f28409f, aVar.f28410g), aVar.f28409f, aVar.f28410g);
-        float fB2 = b(fJ, aVar.f28408e, aVar.f28407d);
-        float fB3 = b(j(fJ, fB2, aVar.f28408e, aVar.f28407d), aVar.b, aVar.f28406c);
+        float fB = b(0.0f, aVar.f29657f, aVar.f29658g);
+        float fJ = j(0.0f, a(fB, aVar.f29657f, aVar.f29658g), aVar.f29657f, aVar.f29658g);
+        float fB2 = b(fJ, aVar.f29656e, aVar.f29655d);
+        float fB3 = b(j(fJ, fB2, aVar.f29656e, aVar.f29655d), aVar.b, aVar.f29654c);
         float f14 = f12 + f11;
-        float fB4 = f.b(fMin, aVar.f28409f, f10);
-        float fB5 = f.b(aVar.b, aVar.f28409f, f10);
-        float fB6 = f.b(aVar.f28408e, aVar.f28409f, f10);
-        b.C0118b c0118bH = new b.C0118b(aVar.f28409f, f11).a(f13, fB4, fMin).h(fB, 0.0f, aVar.f28409f, aVar.f28410g, true);
-        if (aVar.f28407d > 0) {
-            c0118bH.b(fB2, fB6, aVar.f28408e);
+        float fB4 = f.b(fMin, aVar.f29657f, f10);
+        float fB5 = f.b(aVar.b, aVar.f29657f, f10);
+        float fB6 = f.b(aVar.f29656e, aVar.f29657f, f10);
+        b.C0122b c0122bH = new b.C0122b(aVar.f29657f, f11).a(f13, fB4, fMin).h(fB, 0.0f, aVar.f29657f, aVar.f29658g, true);
+        if (aVar.f29655d > 0) {
+            c0122bH.b(fB2, fB6, aVar.f29656e);
         }
-        int i10 = aVar.f28406c;
+        int i10 = aVar.f29654c;
         if (i10 > 0) {
-            c0118bH.g(fB3, fB5, aVar.b, i10);
+            c0122bH.g(fB3, fB5, aVar.b, i10);
         }
-        c0118bH.a(f14, fB4, fMin);
-        return c0118bH.i();
+        c0122bH.a(f14, fB4, fMin);
+        return c0122bH.i();
     }
 
     public static float f(@NonNull Context context) {
-        return context.getResources().getDimension(d.f18836o);
+        return context.getResources().getDimension(d.f20658o);
     }
 
     public static float g(@NonNull Context context) {
-        return context.getResources().getDimension(d.f18837p);
+        return context.getResources().getDimension(d.f20659p);
     }
 
     public static float h(@NonNull Context context) {
-        return context.getResources().getDimension(d.f18838q);
+        return context.getResources().getDimension(d.f20660q);
     }
 
     public static int i(int[] iArr) {

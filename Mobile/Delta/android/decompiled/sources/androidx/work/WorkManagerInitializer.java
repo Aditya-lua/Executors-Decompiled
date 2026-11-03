@@ -10,13 +10,13 @@ import x5.w;
 public final class WorkManagerInitializer implements k5.b<p0> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final String f3446a = w.i("WrkMgrInitializer");
+    public static final String f3291a = w.i("WrkMgrInitializer");
 
     @Override // k5.b
     /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
     public p0 create(Context context) {
-        w.e().a(f3446a, "Initializing WorkManager with default configuration.");
-        p0.i(context, new a.C0063a().a());
+        w.e().a(f3291a, "Initializing WorkManager with default configuration.");
+        p0.i(context, new a.C0059a().a());
         return p0.h(context);
     }
 

@@ -10,10 +10,10 @@ import java.util.Locale;
 public final class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f20449a;
+    public final String f20565a;
 
     public d(String str) {
-        this.f20449a = ("UID: [" + Process.myUid() + "]  PID: [" + Process.myPid() + "] ").concat(str);
+        this.f20565a = ("UID: [" + Process.myUid() + "]  PID: [" + Process.myPid() + "] ").concat(str);
     }
 
     public static String e(String str, String str2, Object... objArr) {
@@ -30,28 +30,28 @@ public final class d {
 
     public final int a(String str, Object... objArr) {
         if (Log.isLoggable("PlayCore", 6)) {
-            return Log.e("PlayCore", e(this.f20449a, "onError(%d)", objArr));
+            return Log.e("PlayCore", e(this.f20565a, "onError(%d)", objArr));
         }
         return 0;
     }
 
     public final int b(Throwable th2, String str, Object... objArr) {
         if (Log.isLoggable("PlayCore", 6)) {
-            return Log.e("PlayCore", e(this.f20449a, str, objArr), th2);
+            return Log.e("PlayCore", e(this.f20565a, str, objArr), th2);
         }
         return 0;
     }
 
     public final int c(String str, Object... objArr) {
         if (Log.isLoggable("PlayCore", 4)) {
-            return Log.i("PlayCore", e(this.f20449a, str, objArr));
+            return Log.i("PlayCore", e(this.f20565a, str, objArr));
         }
         return 0;
     }
 
     public final int d(String str, Object... objArr) {
         if (Log.isLoggable("PlayCore", 5)) {
-            return Log.w("PlayCore", e(this.f20449a, str, objArr));
+            return Log.w("PlayCore", e(this.f20565a, str, objArr));
         }
         return 0;
     }

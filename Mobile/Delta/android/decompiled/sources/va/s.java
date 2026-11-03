@@ -4,14 +4,14 @@ package va;
 public final class s implements r {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public volatile r f32907a;
+    public volatile r f33475a;
 
     public s(r rVar) {
-        this.f32907a = rVar;
+        this.f33475a = rVar;
     }
 
     public final String toString() {
-        Object obj = this.f32907a;
+        Object obj = this.f33475a;
         StringBuilder sb2 = new StringBuilder();
         sb2.append("Suppliers.memoize(");
         if (obj == null) {

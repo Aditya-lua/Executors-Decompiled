@@ -1,7 +1,7 @@
 package com.roblox.client.flags;
 
 import androidx.annotation.NonNull;
-import gk.p;
+import ek.q;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -9,20 +9,20 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class a<T> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f9033a;
+    public int f9106a;
     public T[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public Optional<String> f9034c;
+    public Optional<String> f9107c;
 
     /* JADX INFO: renamed from: com.roblox.client.flags.a$a, reason: collision with other inner class name */
-    public static class C0137a extends a<Boolean> {
-        public C0137a(String str, Boolean bool, boolean z10) {
+    public static class C0140a extends a<Boolean> {
+        public C0140a(String str, Boolean bool, boolean z10) {
             super(str, bool, z10);
         }
 
         public Boolean k() {
-            return a() ? Boolean.valueOf(th.f.f31815a.l(b())) : (Boolean) super.i();
+            return a() ? Boolean.valueOf(rh.f.f30722a.l(b())) : (Boolean) super.i();
         }
     }
 
@@ -69,43 +69,43 @@ public class a<T> {
                 return (Boolean) super.i();
             }
             if (l()) {
-                com.roblox.client.flags.b.f9037a.h(this.f9035d);
+                com.roblox.client.flags.b.f9110a.h(this.f9108d);
             }
-            return Boolean.valueOf(th.f.f31815a.o(b()));
+            return Boolean.valueOf(rh.f.f30722a.o(b()));
         }
     }
 
     public static abstract class e<T> extends a<T> {
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final String f9035d;
+        public final String f9108d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final AtomicBoolean f9036e;
+        public final AtomicBoolean f9109e;
 
         public e(String str, T t8, boolean z10) {
             super(str, t8, z10);
-            this.f9036e = new AtomicBoolean(true);
-            this.f9035d = str;
+            this.f9109e = new AtomicBoolean(true);
+            this.f9108d = str;
         }
 
         @Override // com.roblox.client.flags.a
         public T i() {
-            com.roblox.client.flags.b bVar = com.roblox.client.flags.b.f9037a;
+            com.roblox.client.flags.b bVar = com.roblox.client.flags.b.f9110a;
             if (bVar.g()) {
                 if (l()) {
-                    m(this.f9035d, bVar.e());
+                    m(this.f9108d, bVar.e());
                 }
-                return k(this.f9035d, d());
+                return k(this.f9108d, d());
             }
-            p.k("Roblox.AppFlag", "Native flag '" + this.f9035d + "' accessed before native flags are initialized. Returning initial value.");
+            q.k("Roblox.AppFlag", "Native flag '" + this.f9108d + "' accessed before native flags are initialized. Returning initial value.");
             return d();
         }
 
         public abstract T k(String str, T t8);
 
         public boolean l() {
-            return this.f9036e.getAndSet(false);
+            return this.f9109e.getAndSet(false);
         }
 
         public abstract void m(String str, int i10);
@@ -158,12 +158,12 @@ public class a<T> {
     }
 
     public boolean a() {
-        return this.f9034c.isPresent();
+        return this.f9107c.isPresent();
     }
 
     @NonNull
     public String b() {
-        return this.f9034c.orElse("");
+        return this.f9107c.orElse("");
     }
 
     public void c(int i10) {
@@ -175,7 +175,7 @@ public class a<T> {
     }
 
     public int e() {
-        return this.f9033a;
+        return this.f9106a;
     }
 
     public void f(T t8, int i10) {
@@ -183,12 +183,12 @@ public class a<T> {
             return;
         }
         this.b[i10] = t8;
-        int i11 = this.f9033a;
+        int i11 = this.f9106a;
         if (i10 >= i11) {
             if (t8 == null) {
                 h(i11);
             } else {
-                this.f9033a = i10;
+                this.f9106a = i10;
             }
         }
     }
@@ -200,7 +200,7 @@ public class a<T> {
     public final void h(int i10) {
         while (i10 >= 0) {
             if (this.b[i10] != null) {
-                this.f9033a = i10;
+                this.f9106a = i10;
                 return;
             }
             i10--;
@@ -208,7 +208,7 @@ public class a<T> {
     }
 
     public T i() {
-        return this.b[this.f9033a];
+        return this.b[this.f9106a];
     }
 
     public T j(int i10) {
@@ -219,11 +219,11 @@ public class a<T> {
         T[] tArr = (T[]) new Object[h.a()];
         this.b = tArr;
         tArr[0] = t8;
-        this.f9033a = 0;
+        this.f9106a = 0;
         if (z10) {
-            this.f9034c = Optional.of(str);
+            this.f9107c = Optional.of(str);
         } else {
-            this.f9034c = Optional.empty();
+            this.f9107c = Optional.empty();
         }
     }
 }

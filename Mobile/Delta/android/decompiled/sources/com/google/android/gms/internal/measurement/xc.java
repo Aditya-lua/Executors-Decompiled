@@ -8,29 +8,29 @@ import java.util.RandomAccess;
 public final class xc extends t9 implements RandomAccess {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final Object[] f6929d;
+    public static final Object[] f7003d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final xc f6930e;
+    public static final xc f7004e;
     public Object[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f6931c;
+    public int f7005c;
 
     static {
         Object[] objArr = new Object[0];
-        f6929d = objArr;
-        f6930e = new xc(objArr, 0, false);
+        f7003d = objArr;
+        f7004e = new xc(objArr, 0, false);
     }
 
     public xc(Object[] objArr, int i10, boolean z10) {
         super(z10);
         this.b = objArr;
-        this.f6931c = i10;
+        this.f7005c = i10;
     }
 
     public static xc b() {
-        return f6930e;
+        return f7004e;
     }
 
     private static int d(int i10) {
@@ -38,7 +38,7 @@ public final class xc extends t9 implements RandomAccess {
     }
 
     private final void w(int i10) {
-        if (i10 < 0 || i10 >= this.f6931c) {
+        if (i10 < 0 || i10 >= this.f7005c) {
             throw new IndexOutOfBoundsException(e(i10));
         }
     }
@@ -47,7 +47,7 @@ public final class xc extends t9 implements RandomAccess {
     public final void add(int i10, Object obj) {
         int i11;
         a();
-        if (i10 < 0 || i10 > (i11 = this.f6931c)) {
+        if (i10 < 0 || i10 > (i11 = this.f7005c)) {
             throw new IndexOutOfBoundsException(e(i10));
         }
         int i12 = i10 + 1;
@@ -58,11 +58,11 @@ public final class xc extends t9 implements RandomAccess {
         } else {
             Object[] objArr2 = new Object[d(length)];
             System.arraycopy(this.b, 0, objArr2, 0, i10);
-            System.arraycopy(this.b, i10, objArr2, i12, this.f6931c - i10);
+            System.arraycopy(this.b, i10, objArr2, i12, this.f7005c - i10);
             this.b = objArr2;
         }
         this.b[i10] = obj;
-        this.f6931c++;
+        this.f7005c++;
         ((AbstractList) this).modCount++;
     }
 
@@ -82,7 +82,7 @@ public final class xc extends t9 implements RandomAccess {
     }
 
     public final String e(int i10) {
-        return v9.a(this.f6931c, i10, (byte) 13, "Index:", ", Size:");
+        return v9.a(this.f7005c, i10, (byte) 13, "Index:", ", Size:");
     }
 
     @Override // java.util.AbstractList, java.util.List
@@ -97,11 +97,11 @@ public final class xc extends t9 implements RandomAccess {
         w(i10);
         Object[] objArr = this.b;
         Object obj = objArr[i10];
-        int i11 = this.f6931c;
+        int i11 = this.f7005c;
         if (i10 < i11 - 1) {
             System.arraycopy(objArr, i10 + 1, objArr, i10, (i11 - i10) - 1);
         }
-        this.f6931c--;
+        this.f7005c--;
         ((AbstractList) this).modCount++;
         return obj;
     }
@@ -119,13 +119,13 @@ public final class xc extends t9 implements RandomAccess {
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final int size() {
-        return this.f6931c;
+        return this.f7005c;
     }
 
     @Override // com.google.android.gms.internal.measurement.pb
     public final /* bridge */ /* synthetic */ pb v(int i10) {
-        if (i10 >= this.f6931c) {
-            return new xc(i10 == 0 ? f6929d : Arrays.copyOf(this.b, i10), this.f6931c, true);
+        if (i10 >= this.f7005c) {
+            return new xc(i10 == 0 ? f7003d : Arrays.copyOf(this.b, i10), this.f7005c, true);
         }
         throw new IllegalArgumentException();
     }
@@ -133,14 +133,14 @@ public final class xc extends t9 implements RandomAccess {
     @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection, java.util.List
     public final boolean add(Object obj) {
         a();
-        int i10 = this.f6931c;
+        int i10 = this.f7005c;
         int length = this.b.length;
         if (i10 == length) {
             this.b = Arrays.copyOf(this.b, d(length));
         }
         Object[] objArr = this.b;
-        int i11 = this.f6931c;
-        this.f6931c = i11 + 1;
+        int i11 = this.f7005c;
+        this.f7005c = i11 + 1;
         objArr[i11] = obj;
         ((AbstractList) this).modCount++;
         return true;

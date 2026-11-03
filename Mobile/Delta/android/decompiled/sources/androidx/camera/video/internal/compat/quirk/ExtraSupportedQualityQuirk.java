@@ -19,7 +19,7 @@ import w0.d;
 public class ExtraSupportedQualityQuirk implements g3 {
     public static Range<Integer> i(a2.c cVar, r1.a aVar) {
         r1 r1VarA = aVar.a(cVar.i());
-        return r1VarA != null ? r1VarA.g() : c2.f15828a;
+        return r1VarA != null ? r1VarA.g() : c2.f16424a;
     }
 
     private static boolean j() {
@@ -41,7 +41,7 @@ public class ExtraSupportedQualityQuirk implements g3 {
             return null;
         }
         Range<Integer> rangeI = i(cVarB, aVar);
-        Size size = d.f33585d;
+        Size size = d.f33791d;
         a2.b bVarH = a2.b.h(a2VarB.a(), a2VarB.e(), a2VarB.f(), Collections.singletonList(c.a(cVarB, size, rangeI)));
         HashMap map = new HashMap();
         map.put(4, bVarH);

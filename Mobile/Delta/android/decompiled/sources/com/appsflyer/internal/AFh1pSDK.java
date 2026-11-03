@@ -13,22 +13,22 @@ public abstract class AFh1pSDK {
     public int afWarnLog;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public Map<String, Object> f5399d;
+    public Map<String, Object> f5472d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public String f5400e;
+    public String f5473e;
     public byte[] force;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public String f5401i;
+    public String f5474i;
     public final Map<String, String> registerClient;
     public final boolean unregisterClient;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public String f5402v;
+    public String f5475v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public String f5403w;
+    public String f5476w;
 
     public AFh1pSDK() {
         this(null, null, null);
@@ -38,7 +38,7 @@ public abstract class AFh1pSDK {
 
     public final AFh1pSDK AFKeystoreWrapper(Map<String, ?> map) {
         synchronized (map) {
-            this.f5399d.putAll(map);
+            this.f5472d.putAll(map);
         }
         return this;
     }
@@ -61,23 +61,23 @@ public abstract class AFh1pSDK {
     }
 
     public AFh1pSDK(String str, String str2, Boolean bool) {
-        this.f5399d = new HashMap();
+        this.f5472d = new HashMap();
         this.registerClient = new HashMap();
         this.afErrorLog = false;
-        this.f5402v = str;
-        this.f5401i = str2;
+        this.f5475v = str;
+        this.f5474i = str2;
         this.unregisterClient = bool != null ? bool.booleanValue() : true;
     }
 
     public final AFh1pSDK unregisterClient(int i10) {
         this.afWarnLog = i10;
-        synchronized (this.f5399d) {
+        synchronized (this.f5472d) {
             try {
-                if (this.f5399d.containsKey("counter")) {
-                    this.f5399d.put("counter", Integer.toString(i10));
+                if (this.f5472d.containsKey("counter")) {
+                    this.f5472d.put("counter", Integer.toString(i10));
                 }
-                if (this.f5399d.containsKey("launch_counter")) {
-                    this.f5399d.put("launch_counter", Integer.toString(i10));
+                if (this.f5472d.containsKey("launch_counter")) {
+                    this.f5472d.put("launch_counter", Integer.toString(i10));
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -87,8 +87,8 @@ public abstract class AFh1pSDK {
     }
 
     public final AFh1pSDK AFKeystoreWrapper(String str, Object obj) {
-        synchronized (this.f5399d) {
-            this.f5399d.put(str, obj);
+        synchronized (this.f5472d) {
+            this.f5472d.put(str, obj);
         }
         return this;
     }

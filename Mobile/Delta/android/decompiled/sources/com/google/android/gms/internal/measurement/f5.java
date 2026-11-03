@@ -9,7 +9,7 @@ public final class f5 extends cb implements pc {
         throw null;
     }
 
-    public final f5 A(int i10, d5 d5Var) {
+    public final f5 B(int i10, d5 d5Var) {
         p();
         ((g5) this.b).Z(i10, (e5) d5Var.t());
         return this;
@@ -39,7 +39,7 @@ public final class f5 extends cb implements pc {
         return ((g5) this.b).S();
     }
 
-    public final int x() {
+    public final int y() {
         return ((g5) this.b).L();
     }
 

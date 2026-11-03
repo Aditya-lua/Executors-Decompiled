@@ -1,49 +1,26 @@
 package no;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import androidx.annotation.NonNull;
-import io.o2;
+import com.withpersona.sdk2.camera.CameraProperties;
+import com.withpersona.sdk2.inquiry.governmentid.network.GovernmentIdRequestArguments;
+import dt.i;
+import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class e implements r5.a {
+public final class e implements c.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    @NonNull
-    public final FrameLayout f26524a;
+    public final d f27400a;
 
-    @NonNull
-    public final FrameLayout b;
-
-    public e(@NonNull FrameLayout frameLayout, @NonNull FrameLayout frameLayout2) {
-        this.f26524a = frameLayout;
-        this.b = frameLayout2;
+    public e(d dVar) {
+        this.f27400a = dVar;
     }
 
-    @NonNull
-    public static e a(@NonNull View view) {
-        if (view == null) {
-            throw new NullPointerException("rootView");
-        }
-        FrameLayout frameLayout = (FrameLayout) view;
-        return new e(frameLayout, frameLayout);
+    public static i<c.a> b(d dVar) {
+        return dt.e.a(new e(dVar));
     }
 
-    @NonNull
-    public static e c(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
-        View viewInflate = layoutInflater.inflate(o2.f20759e, viewGroup, false);
-        if (z10) {
-            viewGroup.addView(viewInflate);
-        }
-        return a(viewInflate);
-    }
-
-    @Override // r5.a
-    @NonNull
-    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public FrameLayout getRoot() {
-        return this.f26524a;
+    @Override // no.c.a
+    public c a(String str, String str2, String str3, String str4, @Nullable GovernmentIdRequestArguments governmentIdRequestArguments, @Nullable String str5, CameraProperties cameraProperties) {
+        return this.f27400a.b(str, str2, str4, str3, governmentIdRequestArguments, str5, cameraProperties);
     }
 }

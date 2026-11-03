@@ -13,26 +13,26 @@ import androidx.annotation.NonNull;
 public class ContentFrameLayout extends FrameLayout {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public TypedValue f1121a;
+    public TypedValue f966a;
     public TypedValue b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public TypedValue f1122c;
+    public TypedValue f967c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public TypedValue f1123d;
+    public TypedValue f968d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public TypedValue f1124e;
+    public TypedValue f969e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public TypedValue f1125f;
+    public TypedValue f970f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final Rect f1126g;
+    public final Rect f971g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public a f1127h;
+    public a f972h;
 
     public interface a {
         void a();
@@ -45,45 +45,45 @@ public class ContentFrameLayout extends FrameLayout {
     }
 
     public void a(int i10, int i11, int i12, int i13) {
-        this.f1126g.set(i10, i11, i12, i13);
+        this.f971g.set(i10, i11, i12, i13);
         if (isLaidOut()) {
             requestLayout();
         }
     }
 
     public TypedValue getFixedHeightMajor() {
-        if (this.f1124e == null) {
-            this.f1124e = new TypedValue();
+        if (this.f969e == null) {
+            this.f969e = new TypedValue();
         }
-        return this.f1124e;
+        return this.f969e;
     }
 
     public TypedValue getFixedHeightMinor() {
-        if (this.f1125f == null) {
-            this.f1125f = new TypedValue();
+        if (this.f970f == null) {
+            this.f970f = new TypedValue();
         }
-        return this.f1125f;
+        return this.f970f;
     }
 
     public TypedValue getFixedWidthMajor() {
-        if (this.f1122c == null) {
-            this.f1122c = new TypedValue();
+        if (this.f967c == null) {
+            this.f967c = new TypedValue();
         }
-        return this.f1122c;
+        return this.f967c;
     }
 
     public TypedValue getFixedWidthMinor() {
-        if (this.f1123d == null) {
-            this.f1123d = new TypedValue();
+        if (this.f968d == null) {
+            this.f968d = new TypedValue();
         }
-        return this.f1123d;
+        return this.f968d;
     }
 
     public TypedValue getMinWidthMajor() {
-        if (this.f1121a == null) {
-            this.f1121a = new TypedValue();
+        if (this.f966a == null) {
+            this.f966a = new TypedValue();
         }
-        return this.f1121a;
+        return this.f966a;
     }
 
     public TypedValue getMinWidthMinor() {
@@ -96,7 +96,7 @@ public class ContentFrameLayout extends FrameLayout {
     @Override // android.view.ViewGroup, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        a aVar = this.f1127h;
+        a aVar = this.f972h;
         if (aVar != null) {
             aVar.a();
         }
@@ -105,7 +105,7 @@ public class ContentFrameLayout extends FrameLayout {
     @Override // android.view.ViewGroup, android.view.View
     public void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-        a aVar = this.f1127h;
+        a aVar = this.f972h;
         if (aVar != null) {
             aVar.onDetachedFromWindow();
         }
@@ -137,7 +137,7 @@ public class ContentFrameLayout extends FrameLayout {
         if (mode != Integer.MIN_VALUE) {
             z10 = false;
         } else {
-            TypedValue typedValue = z12 ? this.f1123d : this.f1122c;
+            TypedValue typedValue = z12 ? this.f968d : this.f967c;
             if (typedValue == null || (i16 = typedValue.type) == 0) {
                 z10 = false;
             } else {
@@ -151,7 +151,7 @@ public class ContentFrameLayout extends FrameLayout {
                         i17 = 0;
                     }
                     if (i17 > 0) {
-                        Rect rect = this.f1126g;
+                        Rect rect = this.f971g;
                         i10 = View.MeasureSpec.makeMeasureSpec(Math.min(i17 - (rect.left + rect.right), View.MeasureSpec.getSize(i10)), 1073741824);
                         z10 = true;
                     } else {
@@ -160,7 +160,7 @@ public class ContentFrameLayout extends FrameLayout {
                 }
                 i17 = (int) fraction3;
                 if (i17 > 0) {
-                    Rect rect2 = this.f1126g;
+                    Rect rect2 = this.f971g;
                     i10 = View.MeasureSpec.makeMeasureSpec(Math.min(i17 - (rect2.left + rect2.right), View.MeasureSpec.getSize(i10)), 1073741824);
                     z10 = true;
                 } else {
@@ -169,7 +169,7 @@ public class ContentFrameLayout extends FrameLayout {
             }
         }
         if (mode2 == Integer.MIN_VALUE) {
-            TypedValue typedValue2 = z12 ? this.f1124e : this.f1125f;
+            TypedValue typedValue2 = z12 ? this.f969e : this.f970f;
             if (typedValue2 != null && (i14 = typedValue2.type) != 0) {
                 if (i14 == 5) {
                     fraction2 = typedValue2.getDimension(displayMetrics);
@@ -181,13 +181,13 @@ public class ContentFrameLayout extends FrameLayout {
                         i15 = 0;
                     }
                     if (i15 > 0) {
-                        Rect rect3 = this.f1126g;
+                        Rect rect3 = this.f971g;
                         i11 = View.MeasureSpec.makeMeasureSpec(Math.min(i15 - (rect3.top + rect3.bottom), View.MeasureSpec.getSize(i11)), 1073741824);
                     }
                 }
                 i15 = (int) fraction2;
                 if (i15 > 0) {
-                    Rect rect4 = this.f1126g;
+                    Rect rect4 = this.f971g;
                     i11 = View.MeasureSpec.makeMeasureSpec(Math.min(i15 - (rect4.top + rect4.bottom), View.MeasureSpec.getSize(i11)), 1073741824);
                 }
             }
@@ -198,7 +198,7 @@ public class ContentFrameLayout extends FrameLayout {
         if (z10 || mode != Integer.MIN_VALUE) {
             z11 = false;
         } else {
-            TypedValue typedValue3 = z12 ? this.b : this.f1121a;
+            TypedValue typedValue3 = z12 ? this.b : this.f966a;
             if (typedValue3 == null || (i12 = typedValue3.type) == 0) {
                 z11 = false;
             } else {
@@ -212,7 +212,7 @@ public class ContentFrameLayout extends FrameLayout {
                         i13 = 0;
                     }
                     if (i13 > 0) {
-                        Rect rect5 = this.f1126g;
+                        Rect rect5 = this.f971g;
                         i13 -= rect5.left + rect5.right;
                     }
                     if (measuredWidth < i13) {
@@ -223,7 +223,7 @@ public class ContentFrameLayout extends FrameLayout {
                 }
                 i13 = (int) fraction;
                 if (i13 > 0) {
-                    Rect rect6 = this.f1126g;
+                    Rect rect6 = this.f971g;
                     i13 -= rect6.left + rect6.right;
                 }
                 if (measuredWidth < i13) {
@@ -239,7 +239,7 @@ public class ContentFrameLayout extends FrameLayout {
     }
 
     public void setAttachListener(a aVar) {
-        this.f1127h = aVar;
+        this.f972h = aVar;
     }
 
     public ContentFrameLayout(@NonNull Context context, AttributeSet attributeSet) {
@@ -248,6 +248,6 @@ public class ContentFrameLayout extends FrameLayout {
 
     public ContentFrameLayout(@NonNull Context context, AttributeSet attributeSet, int i10) {
         super(context, attributeSet, i10);
-        this.f1126g = new Rect();
+        this.f971g = new Rect();
     }
 }

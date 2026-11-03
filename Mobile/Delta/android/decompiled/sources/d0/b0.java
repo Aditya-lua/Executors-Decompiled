@@ -7,13 +7,13 @@ import n0.k3;
 public class b0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final boolean f14247a;
+    public final boolean f14227a;
 
     public b0(k3 k3Var) {
-        this.f14247a = k3Var.a(UseTorchAsFlashQuirk.class);
+        this.f14227a = k3Var.a(UseTorchAsFlashQuirk.class);
     }
 
     public boolean a() {
-        return this.f14247a;
+        return this.f14227a;
     }
 }

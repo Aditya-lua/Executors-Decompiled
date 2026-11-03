@@ -7,11 +7,11 @@ import n0.k3;
 public class n {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final boolean f14258a;
+    public final boolean f14238a;
     public boolean b = false;
 
     public n(k3 k3Var) {
-        this.f14258a = k3Var.b(AutoFlashUnderExposedQuirk.class) != null;
+        this.f14238a = k3Var.b(AutoFlashUnderExposedQuirk.class) != null;
     }
 
     public void a() {
@@ -23,6 +23,6 @@ public class n {
     }
 
     public boolean c(int i10) {
-        return this.b && i10 == 0 && this.f14258a;
+        return this.b && i10 == 0 && this.f14238a;
     }
 }

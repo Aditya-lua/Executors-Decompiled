@@ -7,15 +7,15 @@ import com.google.android.gms.common.Feature;
 public final class p extends UnsupportedOperationException {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Feature f22284a;
+    public final Feature f22508a;
 
     public p(@NonNull Feature feature) {
-        this.f22284a = feature;
+        this.f22508a = feature;
     }
 
     @Override // java.lang.Throwable
     @NonNull
     public String getMessage() {
-        return "Missing ".concat(String.valueOf(this.f22284a));
+        return "Missing ".concat(String.valueOf(this.f22508a));
     }
 }

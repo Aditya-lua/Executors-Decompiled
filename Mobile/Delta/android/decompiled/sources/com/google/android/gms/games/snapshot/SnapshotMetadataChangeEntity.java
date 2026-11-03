@@ -19,19 +19,19 @@ public final class SnapshotMetadataChangeEntity extends zzg {
     public static final Parcelable.Creator<SnapshotMetadataChangeEntity> CREATOR = new c();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final String f6232f;
+    public final String f6305f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final Long f6233g;
+    public final Long f6306g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final Uri f6234h;
+    public final Uri f6307h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public BitmapTeleporter f6235i;
+    public BitmapTeleporter f6308i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final Long f6236j;
+    public final Long f6309j;
 
     public SnapshotMetadataChangeEntity() {
         this(null, null, null, null, null);
@@ -39,22 +39,22 @@ public final class SnapshotMetadataChangeEntity extends zzg {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(@NonNull Parcel parcel, int i10) {
-        String str = this.f6232f;
+        String str = this.f6305f;
         int iA = b.a(parcel);
         b.v(parcel, 1, str, false);
-        b.s(parcel, 2, this.f6233g, false);
-        b.t(parcel, 4, this.f6234h, i10, false);
-        b.t(parcel, 5, this.f6235i, i10, false);
-        b.s(parcel, 6, this.f6236j, false);
+        b.s(parcel, 2, this.f6306g, false);
+        b.t(parcel, 4, this.f6307h, i10, false);
+        b.t(parcel, 5, this.f6308i, i10, false);
+        b.s(parcel, 6, this.f6309j, false);
         b.b(parcel, iA);
     }
 
     public SnapshotMetadataChangeEntity(String str, Long l10, BitmapTeleporter bitmapTeleporter, Uri uri, Long l11) {
-        this.f6232f = str;
-        this.f6233g = l10;
-        this.f6235i = bitmapTeleporter;
-        this.f6234h = uri;
-        this.f6236j = l11;
+        this.f6305f = str;
+        this.f6306g = l10;
+        this.f6308i = bitmapTeleporter;
+        this.f6307h = uri;
+        this.f6309j = l11;
         boolean z10 = true;
         if (bitmapTeleporter != null && uri != null) {
             z10 = false;

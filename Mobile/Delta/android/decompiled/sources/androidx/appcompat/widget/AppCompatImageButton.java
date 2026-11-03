@@ -18,11 +18,11 @@ import q.x0;
 public class AppCompatImageButton extends ImageButton {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final e f1098a;
+    public final e f943a;
     public final p b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f1099c;
+    public boolean f944c;
 
     public AppCompatImageButton(@NonNull Context context, AttributeSet attributeSet) {
         this(context, attributeSet, i.a.E);
@@ -31,7 +31,7 @@ public class AppCompatImageButton extends ImageButton {
     @Override // android.widget.ImageView, android.view.View
     public void drawableStateChanged() {
         super.drawableStateChanged();
-        e eVar = this.f1098a;
+        e eVar = this.f943a;
         if (eVar != null) {
             eVar.b();
         }
@@ -42,7 +42,7 @@ public class AppCompatImageButton extends ImageButton {
     }
 
     public ColorStateList getSupportBackgroundTintList() {
-        e eVar = this.f1098a;
+        e eVar = this.f943a;
         if (eVar != null) {
             return eVar.c();
         }
@@ -50,7 +50,7 @@ public class AppCompatImageButton extends ImageButton {
     }
 
     public PorterDuff.Mode getSupportBackgroundTintMode() {
-        e eVar = this.f1098a;
+        e eVar = this.f943a;
         if (eVar != null) {
             return eVar.d();
         }
@@ -81,7 +81,7 @@ public class AppCompatImageButton extends ImageButton {
     @Override // android.view.View
     public void setBackgroundDrawable(Drawable drawable) {
         super.setBackgroundDrawable(drawable);
-        e eVar = this.f1098a;
+        e eVar = this.f943a;
         if (eVar != null) {
             eVar.f(drawable);
         }
@@ -90,7 +90,7 @@ public class AppCompatImageButton extends ImageButton {
     @Override // android.view.View
     public void setBackgroundResource(int i10) {
         super.setBackgroundResource(i10);
-        e eVar = this.f1098a;
+        e eVar = this.f943a;
         if (eVar != null) {
             eVar.g(i10);
         }
@@ -108,14 +108,14 @@ public class AppCompatImageButton extends ImageButton {
     @Override // android.widget.ImageView
     public void setImageDrawable(Drawable drawable) {
         p pVar = this.b;
-        if (pVar != null && drawable != null && !this.f1099c) {
+        if (pVar != null && drawable != null && !this.f944c) {
             pVar.h(drawable);
         }
         super.setImageDrawable(drawable);
         p pVar2 = this.b;
         if (pVar2 != null) {
             pVar2.c();
-            if (this.f1099c) {
+            if (this.f944c) {
                 return;
             }
             this.b.b();
@@ -125,7 +125,7 @@ public class AppCompatImageButton extends ImageButton {
     @Override // android.widget.ImageView
     public void setImageLevel(int i10) {
         super.setImageLevel(i10);
-        this.f1099c = true;
+        this.f944c = true;
     }
 
     @Override // android.widget.ImageView
@@ -143,14 +143,14 @@ public class AppCompatImageButton extends ImageButton {
     }
 
     public void setSupportBackgroundTintList(ColorStateList colorStateList) {
-        e eVar = this.f1098a;
+        e eVar = this.f943a;
         if (eVar != null) {
             eVar.i(colorStateList);
         }
     }
 
     public void setSupportBackgroundTintMode(PorterDuff.Mode mode) {
-        e eVar = this.f1098a;
+        e eVar = this.f943a;
         if (eVar != null) {
             eVar.j(mode);
         }
@@ -172,10 +172,10 @@ public class AppCompatImageButton extends ImageButton {
 
     public AppCompatImageButton(@NonNull Context context, AttributeSet attributeSet, int i10) {
         super(x0.b(context), attributeSet, i10);
-        this.f1099c = false;
+        this.f944c = false;
         v0.a(this, getContext());
         e eVar = new e(this);
-        this.f1098a = eVar;
+        this.f943a = eVar;
         eVar.e(attributeSet, i10);
         p pVar = new p(this);
         this.b = pVar;

@@ -1,7 +1,7 @@
 package com.withpersona.sdk2.inquiry.network.core;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class NetworkStateManager_Factory implements ft.d<NetworkStateManager> {
+public final class NetworkStateManager_Factory implements dt.d<NetworkStateManager> {
 
     public static final class InstanceHolder {
         static final NetworkStateManager_Factory INSTANCE = new NetworkStateManager_Factory();
@@ -18,7 +18,7 @@ public final class NetworkStateManager_Factory implements ft.d<NetworkStateManag
         return new NetworkStateManager();
     }
 
-    @Override // ht.a
+    @Override // ft.a
     public NetworkStateManager get() {
         return newInstance();
     }

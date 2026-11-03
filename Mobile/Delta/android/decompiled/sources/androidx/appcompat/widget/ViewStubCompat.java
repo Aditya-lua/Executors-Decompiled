@@ -17,14 +17,14 @@ import java.lang.ref.WeakReference;
 public final class ViewStubCompat extends View {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f1243a;
+    public int f1088a;
     public int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public WeakReference<View> f1244c;
+    public WeakReference<View> f1089c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public LayoutInflater f1245d;
+    public LayoutInflater f1090d;
 
     public interface a {
     }
@@ -38,15 +38,15 @@ public final class ViewStubCompat extends View {
         if (!(parent instanceof ViewGroup)) {
             throw new IllegalStateException("ViewStub must have a non-null ViewGroup viewParent");
         }
-        if (this.f1243a == 0) {
+        if (this.f1088a == 0) {
             throw new IllegalArgumentException("ViewStub must have a valid layoutResource");
         }
         ViewGroup viewGroup = (ViewGroup) parent;
-        LayoutInflater layoutInflaterFrom = this.f1245d;
+        LayoutInflater layoutInflaterFrom = this.f1090d;
         if (layoutInflaterFrom == null) {
             layoutInflaterFrom = LayoutInflater.from(getContext());
         }
-        View viewInflate = layoutInflaterFrom.inflate(this.f1243a, viewGroup, false);
+        View viewInflate = layoutInflaterFrom.inflate(this.f1088a, viewGroup, false);
         int i10 = this.b;
         if (i10 != -1) {
             viewInflate.setId(i10);
@@ -59,7 +59,7 @@ public final class ViewStubCompat extends View {
         } else {
             viewGroup.addView(viewInflate, iIndexOfChild);
         }
-        this.f1244c = new WeakReference<>(viewInflate);
+        this.f1089c = new WeakReference<>(viewInflate);
         return viewInflate;
     }
 
@@ -77,11 +77,11 @@ public final class ViewStubCompat extends View {
     }
 
     public LayoutInflater getLayoutInflater() {
-        return this.f1245d;
+        return this.f1090d;
     }
 
     public int getLayoutResource() {
-        return this.f1243a;
+        return this.f1088a;
     }
 
     @Override // android.view.View
@@ -94,11 +94,11 @@ public final class ViewStubCompat extends View {
     }
 
     public void setLayoutInflater(LayoutInflater layoutInflater) {
-        this.f1245d = layoutInflater;
+        this.f1090d = layoutInflater;
     }
 
     public void setLayoutResource(int i10) {
-        this.f1243a = i10;
+        this.f1088a = i10;
     }
 
     public void setOnInflateListener(a aVar) {
@@ -106,7 +106,7 @@ public final class ViewStubCompat extends View {
 
     @Override // android.view.View
     public void setVisibility(int i10) {
-        WeakReference<View> weakReference = this.f1244c;
+        WeakReference<View> weakReference = this.f1089c;
         if (weakReference != null) {
             View view = weakReference.get();
             if (view == null) {
@@ -123,10 +123,10 @@ public final class ViewStubCompat extends View {
 
     public ViewStubCompat(@NonNull Context context, AttributeSet attributeSet, int i10) {
         super(context, attributeSet, i10);
-        this.f1243a = 0;
+        this.f1088a = 0;
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, j.Q3, i10, 0);
         this.b = typedArrayObtainStyledAttributes.getResourceId(j.T3, -1);
-        this.f1243a = typedArrayObtainStyledAttributes.getResourceId(j.S3, 0);
+        this.f1088a = typedArrayObtainStyledAttributes.getResourceId(j.S3, 0);
         setId(typedArrayObtainStyledAttributes.getResourceId(j.R3, -1));
         typedArrayObtainStyledAttributes.recycle();
         setVisibility(8);

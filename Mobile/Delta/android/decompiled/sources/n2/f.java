@@ -45,10 +45,10 @@ public final class f {
         typedArrayI.recycle();
         a aVarA = a(c(resources, xmlPullParser, attributeSet, theme), iB, iB3, zH, iB2);
         if (iG != 1) {
-            return iG != 2 ? new LinearGradient(f10, f11, f12, f13, aVarA.f25006a, aVarA.b, d(iG2)) : new SweepGradient(f14, f15, aVarA.f25006a, aVarA.b);
+            return iG != 2 ? new LinearGradient(f10, f11, f12, f13, aVarA.f25827a, aVarA.b, d(iG2)) : new SweepGradient(f14, f15, aVarA.f25827a, aVarA.b);
         }
         if (f16 > 0.0f) {
-            return new RadialGradient(f14, f15, f16, aVarA.f25006a, aVarA.b, d(iG2));
+            return new RadialGradient(f14, f15, f16, aVarA.f25827a, aVarA.b, d(iG2));
         }
         throw new XmlPullParserException("<gradient> tag requires 'gradientRadius' attribute with radial type");
     }
@@ -95,26 +95,26 @@ public final class f {
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final int[] f25006a;
+        public final int[] f25827a;
         public final float[] b;
 
         public a(List<Integer> list, List<Float> list2) {
             int size = list.size();
-            this.f25006a = new int[size];
+            this.f25827a = new int[size];
             this.b = new float[size];
             for (int i10 = 0; i10 < size; i10++) {
-                this.f25006a[i10] = list.get(i10).intValue();
+                this.f25827a[i10] = list.get(i10).intValue();
                 this.b[i10] = list2.get(i10).floatValue();
             }
         }
 
         public a(int i10, int i11) {
-            this.f25006a = new int[]{i10, i11};
+            this.f25827a = new int[]{i10, i11};
             this.b = new float[]{0.0f, 1.0f};
         }
 
         public a(int i10, int i11, int i12) {
-            this.f25006a = new int[]{i10, i11, i12};
+            this.f25827a = new int[]{i10, i11, i12};
             this.b = new float[]{0.0f, 0.5f, 1.0f};
         }
     }

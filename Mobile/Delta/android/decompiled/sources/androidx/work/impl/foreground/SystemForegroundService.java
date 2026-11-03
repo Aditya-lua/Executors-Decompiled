@@ -14,17 +14,17 @@ import x5.w;
 public class SystemForegroundService extends y implements androidx.work.impl.foreground.a.b {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final String f3522e = w.i("SystemFgService");
+    public static final String f3367e = w.i("SystemFgService");
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static SystemForegroundService f3523f = null;
+    public static SystemForegroundService f3368f = null;
     public boolean b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public androidx.work.impl.foreground.a f3524c;
+    public androidx.work.impl.foreground.a f3369c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public NotificationManager f3525d;
+    public NotificationManager f3370d;
 
     public static class a {
         public static void a(Service service, int i10, Notification notification, int i11) {
@@ -37,24 +37,24 @@ public class SystemForegroundService extends y implements androidx.work.impl.for
             try {
                 service.startForeground(i10, notification, i11);
             } catch (ForegroundServiceStartNotAllowedException e10) {
-                w.e().l(SystemForegroundService.f3522e, "Unable to start foreground service", e10);
+                w.e().l(SystemForegroundService.f3367e, "Unable to start foreground service", e10);
             } catch (SecurityException e11) {
-                w.e().l(SystemForegroundService.f3522e, "Unable to start foreground service", e11);
+                w.e().l(SystemForegroundService.f3367e, "Unable to start foreground service", e11);
             }
         }
     }
 
     @Override // androidx.work.impl.foreground.a.b
     public void b(int i10, Notification notification) {
-        this.f3525d.notify(i10, notification);
+        this.f3370d.notify(i10, notification);
     }
 
     @Override // androidx.work.impl.foreground.a.b
     public void c(int i10) {
         this.b = true;
-        w.e().a(f3522e, "Shutting down.");
+        w.e().a(f3367e, "Shutting down.");
         stopForeground(true);
-        f3523f = null;
+        f3368f = null;
         stopSelf(i10);
     }
 
@@ -72,42 +72,42 @@ public class SystemForegroundService extends y implements androidx.work.impl.for
 
     @Override // androidx.work.impl.foreground.a.b
     public void e(int i10) {
-        this.f3525d.cancel(i10);
+        this.f3370d.cancel(i10);
     }
 
     public final void g() {
-        this.f3525d = (NotificationManager) getApplicationContext().getSystemService("notification");
+        this.f3370d = (NotificationManager) getApplicationContext().getSystemService("notification");
         androidx.work.impl.foreground.a aVar = new androidx.work.impl.foreground.a(getApplicationContext());
-        this.f3524c = aVar;
+        this.f3369c = aVar;
         aVar.o(this);
     }
 
     @Override // androidx.p000lifecycle.y, android.app.Service
     public void onCreate() {
         super.onCreate();
-        f3523f = this;
+        f3368f = this;
         g();
     }
 
     @Override // androidx.p000lifecycle.y, android.app.Service
     public void onDestroy() {
         super.onDestroy();
-        this.f3524c.l();
+        this.f3369c.l();
     }
 
     @Override // androidx.p000lifecycle.y, android.app.Service
     public int onStartCommand(Intent intent, int i10, int i11) {
         super.onStartCommand(intent, i10, i11);
         if (this.b) {
-            w.e().f(f3522e, "Re-initializing SystemForegroundService after a request to shut-down.");
-            this.f3524c.l();
+            w.e().f(f3367e, "Re-initializing SystemForegroundService after a request to shut-down.");
+            this.f3369c.l();
             g();
             this.b = false;
         }
         if (intent == null) {
             return 3;
         }
-        this.f3524c.m(intent, i11);
+        this.f3369c.m(intent, i11);
         return 3;
     }
 
@@ -116,10 +116,10 @@ public class SystemForegroundService extends y implements androidx.work.impl.for
         if (Build.VERSION.SDK_INT >= 35) {
             return;
         }
-        this.f3524c.n(i10, Barcode.FORMAT_PDF417);
+        this.f3369c.n(i10, Barcode.FORMAT_PDF417);
     }
 
     public void onTimeout(int i10, int i11) {
-        this.f3524c.n(i10, i11);
+        this.f3369c.n(i10, i11);
     }
 }

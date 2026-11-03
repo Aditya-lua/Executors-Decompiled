@@ -16,7 +16,7 @@ public final class k {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final k f2810a = new k();
+    public static final k f2655a = new k();
 
     @Metadata(d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003\b\u0000\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"Landroidx/lifecycle/k$a;", "Ld5/f$a;", "<init>", "()V", "Ld5/i;", "owner", "", "a", "(Ld5/i;)V", "lifecycle-viewmodel-savedstate"}, k = 1, mv = {2, 0, 0}, xi = 48)
     public static final class a implements f.a {
@@ -26,40 +26,40 @@ public final class k {
             if (!(owner instanceof c1)) {
                 throw new IllegalStateException(("Internal error: OnRecreation should be registered only on components that implement ViewModelStoreOwner. Received owner: " + owner).toString());
             }
-            b1 b1VarW = ((c1) owner).w();
-            f fVarA = owner.A();
-            Iterator<String> it = b1VarW.c().iterator();
+            b1 b1VarV = ((c1) owner).v();
+            f fVarZ = owner.z();
+            Iterator<String> it = b1VarV.c().iterator();
             while (it.hasNext()) {
-                x0 x0VarB = b1VarW.b(it.next());
+                x0 x0VarB = b1VarV.b(it.next());
                 if (x0VarB != null) {
-                    k.a(x0VarB, fVarA, owner.a());
+                    k.a(x0VarB, fVarZ, owner.a());
                 }
             }
-            if (b1VarW.c().isEmpty()) {
+            if (b1VarV.c().isEmpty()) {
                 return;
             }
-            fVarA.d(a.class);
+            fVarZ.d(a.class);
         }
     }
 
-    @Metadata(d1 = {"\u0000\u001d\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J\u001f\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"androidx/lifecycle/k$b", "Landroidx/lifecycle/p;", "Landroidx/lifecycle/s;", Payload.SOURCE, "Landroidx/lifecycle/l$a;", "event", "", "g", "(Landroidx/lifecycle/s;Landroidx/lifecycle/l$a;)V", "lifecycle-viewmodel-savedstate"}, k = 1, mv = {2, 0, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000\u001d\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J\u001f\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"androidx/lifecycle/k$b", "Landroidx/lifecycle/p;", "Landroidx/lifecycle/s;", Payload.SOURCE, "Landroidx/lifecycle/l$a;", "event", "", "f", "(Landroidx/lifecycle/s;Landroidx/lifecycle/l$a;)V", "lifecycle-viewmodel-savedstate"}, k = 1, mv = {2, 0, 0}, xi = 48)
     public static final class b implements p {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ l f2811a;
+        public final /* synthetic */ l f2656a;
         public final /* synthetic */ f b;
 
         public b(l lVar, f fVar) {
-            this.f2811a = lVar;
+            this.f2656a = lVar;
             this.b = fVar;
         }
 
         @Override // androidx.p000lifecycle.p
-        public void g(s source, l.a event) {
+        public void f(s source, l.a event) {
             Intrinsics.checkNotNullParameter(source, "source");
             Intrinsics.checkNotNullParameter(event, "event");
             if (event == l.a.ON_START) {
-                this.f2811a.d(this);
+                this.f2656a.d(this);
                 this.b.d(a.class);
             }
         }
@@ -74,7 +74,7 @@ public final class k {
             return;
         }
         n0Var.a(registry, lifecycle);
-        f2810a.c(registry, lifecycle);
+        f2655a.c(registry, lifecycle);
     }
 
     @NotNull
@@ -84,7 +84,7 @@ public final class k {
         Intrinsics.checkNotNull(key);
         n0 n0Var = new n0(key, l0.INSTANCE.a(registry.a(key), defaultArgs));
         n0Var.a(registry, lifecycle);
-        f2810a.c(registry, lifecycle);
+        f2655a.c(registry, lifecycle);
         return n0Var;
     }
 

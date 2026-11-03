@@ -16,42 +16,42 @@ public final class j {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final Extras.c<d7.d.a> f35120a = new Extras.c<>(d7.d.a.b);
+    public static final Extras.c<d7.d.a> f35618a = new Extras.c<>(d7.d.a.b);
 
     @NotNull
     public static final Extras.c<Bitmap.Config> b = new Extras.c<>(i0.a());
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static final Extras.c<ColorSpace> f35121c = new Extras.c<>(i0.c());
+    public static final Extras.c<ColorSpace> f35619c = new Extras.c<>(i0.c());
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    public static final Extras.c<Boolean> f35122d;
+    public static final Extras.c<Boolean> f35620d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
     @NotNull
-    public static final Extras.c<androidx.p000lifecycle.l> f35123e;
+    public static final Extras.c<androidx.p000lifecycle.l> f35621e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NotNull
-    public static final Extras.c<Boolean> f35124f;
+    public static final Extras.c<Boolean> f35622f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
     @NotNull
-    public static final Extras.c<Boolean> f35125g;
+    public static final Extras.c<Boolean> f35623g;
 
     static {
         Boolean bool = Boolean.TRUE;
-        f35122d = new Extras.c<>(bool);
-        f35123e = new Extras.c<>(null);
-        f35124f = new Extras.c<>(bool);
-        f35125g = new Extras.c<>(Boolean.FALSE);
+        f35620d = new Extras.c<>(bool);
+        f35621e = new Extras.c<>(null);
+        f35622f = new Extras.c<>(bool);
+        f35623g = new Extras.c<>(Boolean.FALSE);
     }
 
     @NotNull
     public static final ImageRequest.a a(@NotNull ImageRequest.a aVar, boolean z10) {
-        aVar.h().b(f35124f, Boolean.valueOf(z10));
+        aVar.h().b(f35622f, Boolean.valueOf(z10));
         return aVar;
     }
 
@@ -72,20 +72,20 @@ public final class j {
     }
 
     public static final boolean e(@NotNull ImageRequest imageRequest) {
-        return ((Boolean) k6.m.a(imageRequest, f35124f)).booleanValue();
+        return ((Boolean) k6.m.a(imageRequest, f35622f)).booleanValue();
     }
 
     @NotNull
     public static final Extras.c<Boolean> f(@NotNull Extras.c.Companion companion) {
-        return f35125g;
+        return f35623g;
     }
 
     public static final boolean g(@NotNull ImageRequest imageRequest) {
-        return ((Boolean) k6.m.a(imageRequest, f35125g)).booleanValue();
+        return ((Boolean) k6.m.a(imageRequest, f35623g)).booleanValue();
     }
 
     public static final boolean h(@NotNull Options options) {
-        return ((Boolean) k6.m.b(options, f35125g)).booleanValue();
+        return ((Boolean) k6.m.b(options, f35623g)).booleanValue();
     }
 
     @NotNull
@@ -105,21 +105,21 @@ public final class j {
 
     @Nullable
     public static final ColorSpace l(@NotNull Options options) {
-        return (ColorSpace) k6.m.b(options, f35121c);
+        return (ColorSpace) k6.m.b(options, f35619c);
     }
 
     @Nullable
     public static final androidx.p000lifecycle.l m(@NotNull ImageRequest imageRequest) {
-        return (androidx.p000lifecycle.l) k6.m.a(imageRequest, f35123e);
+        return (androidx.p000lifecycle.l) k6.m.a(imageRequest, f35621e);
     }
 
     public static final boolean n(@NotNull Options options) {
-        return ((Boolean) k6.m.b(options, f35122d)).booleanValue();
+        return ((Boolean) k6.m.b(options, f35620d)).booleanValue();
     }
 
     @NotNull
     public static final d7.d.a o(@NotNull ImageRequest imageRequest) {
-        return (d7.d.a) k6.m.a(imageRequest, f35120a);
+        return (d7.d.a) k6.m.a(imageRequest, f35618a);
     }
 
     public static final d7.d.a p(int i10) {
@@ -136,13 +136,13 @@ public final class j {
 
     @NotNull
     public static final k6.s.a r(@NotNull k6.s.a aVar, @NotNull d7.d.a aVar2) {
-        aVar.getExtras().b(f35120a, aVar2);
+        aVar.getExtras().b(f35618a, aVar2);
         return aVar;
     }
 
     @NotNull
     public static final ImageRequest.a s(@NotNull ImageRequest.a aVar, @NotNull d7.d.a aVar2) {
-        aVar.h().b(f35120a, aVar2);
+        aVar.h().b(f35618a, aVar2);
         return aVar;
     }
 }

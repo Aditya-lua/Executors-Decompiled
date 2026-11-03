@@ -5,18 +5,18 @@ import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 import androidx.work.c;
 import com.roblox.client.datastructures.NameValuePair;
-import gk.p;
+import ek.q;
+import hj.r;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
-import jj.r;
 import kotlin.Metadata;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
-import vg.m;
-import vi.b;
-import vi.h;
+import ti.b;
+import ti.h;
+import ug.m;
 import x5.g0;
 import x5.i;
 import x5.p0;
@@ -39,13 +39,13 @@ public final class PushNotificationSettingsWorker extends Worker {
 
         public final void a(@NotNull p0 workManager) {
             Intrinsics.checkNotNullParameter(workManager, "workManager");
-            p.h("rbx.push", "Cancelling background notification job.");
+            q.h("rbx.push", "Cancelling background notification job.");
             workManager.b("PushNotificationSettingsBackgroundReporter");
         }
 
         public final void b(@NotNull p0 workManager) {
             Intrinsics.checkNotNullParameter(workManager, "workManager");
-            p.h("rbx.push", "Scheduling periodic background notification job every " + PushNotificationSettingsWorker.b + ".");
+            q.h("rbx.push", "Scheduling periodic background notification job every " + PushNotificationSettingsWorker.b + ".");
             Duration duration = PushNotificationSettingsWorker.b;
             Intrinsics.checkNotNullExpressionValue(duration, "access$getINTERVAL$cp(...)");
             workManager.e("PushNotificationSettingsBackgroundReporter", i.UPDATE, new g0.a(PushNotificationSettingsWorker.class, duration).p("PushNotificationSettingsBackgroundReporterTag").b());
@@ -65,9 +65,9 @@ public final class PushNotificationSettingsWorker extends Worker {
     @Override // androidx.work.Worker
     @NotNull
     public c.a d() {
-        p.b("rbx.push", "Initializing dependencies.");
+        q.b("rbx.push", "Initializing dependencies.");
         b.f().l(getApplicationContext());
-        p.b("rbx.push", "Logging current notification settings.");
+        q.b("rbx.push", "Logging current notification settings.");
         i();
         c.a aVarD = c.a.d();
         Intrinsics.checkNotNullExpressionValue(aVarD, "success(...)");

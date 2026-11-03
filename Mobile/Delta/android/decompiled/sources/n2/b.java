@@ -6,14 +6,14 @@ import android.graphics.Color;
 public final class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final float[][] f24991a = {new float[]{0.401288f, 0.650173f, -0.051461f}, new float[]{-0.250268f, 1.204414f, 0.045854f}, new float[]{-0.002079f, 0.048952f, 0.953127f}};
+    public static final float[][] f25812a = {new float[]{0.401288f, 0.650173f, -0.051461f}, new float[]{-0.250268f, 1.204414f, 0.045854f}, new float[]{-0.002079f, 0.048952f, 0.953127f}};
     public static final float[][] b = {new float[]{1.8620678f, -1.0112547f, 0.14918678f}, new float[]{0.38752654f, 0.62144744f, -0.00897398f}, new float[]{-0.0158415f, -0.03412294f, 1.0499644f}};
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final float[] f24992c = {95.047f, 100.0f, 108.883f};
+    public static final float[] f25813c = {95.047f, 100.0f, 108.883f};
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final float[][] f24993d = {new float[]{0.41233894f, 0.35762063f, 0.18051042f}, new float[]{0.2126f, 0.7152f, 0.0722f}, new float[]{0.01932141f, 0.11916382f, 0.9503448f}};
+    public static final float[][] f25814d = {new float[]{0.41233894f, 0.35762063f, 0.18051042f}, new float[]{0.2126f, 0.7152f, 0.0722f}, new float[]{0.01932141f, 0.11916382f, 0.9503448f}};
 
     public static int a(float f10) {
         if (f10 < 1.0f) {
@@ -30,7 +30,7 @@ public final class b {
         if (!z10) {
             f13 = ((f11 * 116.0f) - 16.0f) / 903.2963f;
         }
-        float[] fArr = f24992c;
+        float[] fArr = f25813c;
         return androidx.core.graphics.c.b(f14 * fArr[0], f12 * fArr[1], f13 * fArr[2]);
     }
 
@@ -56,7 +56,7 @@ public final class b {
         float fE = e(Color.red(i10));
         float fE2 = e(Color.green(i10));
         float fE3 = e(Color.blue(i10));
-        float[][] fArr2 = f24993d;
+        float[][] fArr2 = f25814d;
         float[] fArr3 = fArr2[0];
         fArr[0] = (fArr3[0] * fE) + (fArr3[1] * fE2) + (fArr3[2] * fE3);
         float[] fArr4 = fArr2[1];
@@ -69,7 +69,7 @@ public final class b {
         float fE = e(Color.red(i10));
         float fE2 = e(Color.green(i10));
         float fE3 = e(Color.blue(i10));
-        float[] fArr = f24993d[1];
+        float[] fArr = f25814d[1];
         return (fE * fArr[0]) + (fE2 * fArr[1]) + (fE3 * fArr[2]);
     }
 

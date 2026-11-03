@@ -6,11 +6,11 @@ import java.util.Objects;
 public final class ae implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ ne f25342a;
+    public final /* synthetic */ ne f26163a;
     public final /* synthetic */ me b;
 
     public ae(me meVar, ne neVar) {
-        this.f25342a = neVar;
+        this.f26163a = neVar;
         Objects.requireNonNull(meVar);
         this.b = meVar;
     }
@@ -18,7 +18,7 @@ public final class ae implements Runnable {
     @Override // java.lang.Runnable
     public final void run() {
         me meVar = this.b;
-        meVar.u0(this.f25342a);
+        meVar.u0(this.f26163a);
         meVar.A0();
     }
 }

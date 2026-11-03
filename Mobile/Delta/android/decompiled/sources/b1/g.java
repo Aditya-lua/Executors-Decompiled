@@ -18,7 +18,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
-import me.x;
 import n0.c3;
 import n0.h2;
 import n0.i2;
@@ -31,6 +30,7 @@ import n0.p0;
 import n0.t3;
 import n0.u3;
 import n0.x2;
+import ne.x;
 import p0.a0;
 import p0.z;
 import x0.n0;
@@ -51,28 +51,28 @@ public class g extends w2 {
     public o3.c I;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public final i f3794s;
+    public final i f3692s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public final k f3795t;
+    public final k f3693t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public final i0 f3796u;
+    public final i0 f3694u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public final i0 f3797v;
+    public final i0 f3695v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public v0 f3798w;
+    public v0 f3696w;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public v0 f3799x;
+    public v0 f3697x;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public r f3800y;
+    public r f3698y;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public v0 f3801z;
+    public v0 f3699z;
 
     public interface a {
         x<Void> a(int i10, int i11);
@@ -80,13 +80,13 @@ public class g extends w2 {
 
     public g(p0 p0Var, p0 p0Var2, i0 i0Var, i0 i0Var2, Set<w2> set, j4 j4Var) {
         super(v0(set));
-        this.f3794s = v0(set);
-        this.f3796u = i0Var;
-        this.f3797v = i0Var2;
-        this.f3795t = new k(p0Var, p0Var2, set, j4Var, new a() { // from class: b1.f
+        this.f3692s = v0(set);
+        this.f3694u = i0Var;
+        this.f3695v = i0Var2;
+        this.f3693t = new k(p0Var, p0Var2, set, j4Var, new a() { // from class: b1.f
             @Override // b1.g.a
             public final x a(int i10, int i11) {
-                return g.h0(this.f3793a, i10, i11);
+                return g.h0(this.f3691a, i10, i11);
             }
         });
         F0(set);
@@ -103,11 +103,11 @@ public class g extends w2 {
         gVar.j0();
         gVar.d0(gVar.m0(str, str2, i4Var, t3Var, t3Var2));
         gVar.L();
-        gVar.f3795t.Q();
+        gVar.f3693t.Q();
     }
 
     public static /* synthetic */ x h0(g gVar, int i10, int i11) {
-        v0 v0Var = gVar.f3799x;
+        v0 v0Var = gVar.f3697x;
         return v0Var != null ? v0Var.e().c(i10, i11) : r0.n.n(new Exception("Failed to take picture: pipeline is not ready."));
     }
 
@@ -147,25 +147,25 @@ public class g extends w2 {
             n0Var6.i();
             this.F = null;
         }
-        v0 v0Var = this.f3799x;
+        v0 v0Var = this.f3697x;
         if (v0Var != null) {
             v0Var.f();
-            this.f3799x = null;
+            this.f3697x = null;
         }
-        r rVar = this.f3800y;
+        r rVar = this.f3698y;
         if (rVar != null) {
             rVar.d();
-            this.f3800y = null;
+            this.f3698y = null;
         }
-        v0 v0Var2 = this.f3798w;
+        v0 v0Var2 = this.f3696w;
         if (v0Var2 != null) {
             v0Var2.f();
-            this.f3798w = null;
+            this.f3696w = null;
         }
-        v0 v0Var3 = this.f3801z;
+        v0 v0Var3 = this.f3699z;
         if (v0Var3 != null) {
             v0Var3.f();
-            this.f3801z = null;
+            this.f3699z = null;
         }
     }
 
@@ -192,7 +192,7 @@ public class g extends w2 {
 
     public static i v0(Set<w2> set) {
         n0.w2 w2VarA = new h().a();
-        w2VarA.G(h2.f24670j, 34);
+        w2VarA.G(h2.f25491j, 34);
         ArrayList arrayList = new ArrayList();
         for (w2 w2Var : set) {
             if (w2Var.l().a(i4.G)) {
@@ -202,7 +202,7 @@ public class g extends w2 {
             }
         }
         w2VarA.G(i.Q, arrayList);
-        w2VarA.G(i2.f24687p, 2);
+        w2VarA.G(i2.f25508p, 2);
         w2VarA.G(i4.K, u3.PREVIEW_VIDEO_STILL);
         return new i(c3.j0(w2VarA));
     }
@@ -265,28 +265,28 @@ public class g extends w2 {
 
     public final void D0(n0 n0Var, v0 v0Var, boolean z10) {
         boolean z11 = E() != null;
-        Map<w2, z0.f> mapE = this.f3795t.E(n0Var, C(), z11, z10);
+        Map<w2, z0.f> mapE = this.f3693t.E(n0Var, C(), z11, z10);
         v0.c cVarJ = v0Var.j(v0.b.c(n0Var, new ArrayList(mapE.values())));
         HashMap map = new HashMap();
         for (Map.Entry<w2, z0.f> entry : mapE.entrySet()) {
             map.put(entry.getKey(), cVarJ.get(entry.getValue()));
         }
-        this.f3795t.T(map, this.f3795t.J(n0Var, z11));
+        this.f3693t.T(map, this.f3693t.J(n0Var, z11));
     }
 
     public final void E0(n0 n0Var, n0 n0Var2, r rVar, t3 t3Var) {
         if (n() == null) {
             boolean z10 = E() != null;
-            Map<w2, y0.d> mapF = this.f3795t.F(n0Var, n0Var2, C(), z10);
-            r.c cVarG = this.f3800y.g(r.b.d(n0Var, n0Var2, new ArrayList(mapF.values())));
+            Map<w2, y0.d> mapF = this.f3693t.F(n0Var, n0Var2, C(), z10);
+            r.c cVarG = this.f3698y.g(r.b.d(n0Var, n0Var2, new ArrayList(mapF.values())));
             HashMap map = new HashMap();
             for (Map.Entry<w2, y0.d> entry : mapF.entrySet()) {
                 map.put(entry.getKey(), cVarG.get(entry.getValue()));
             }
-            this.f3795t.T(map, this.f3795t.J(n0Var, z10));
+            this.f3693t.T(map, this.f3693t.J(n0Var, z10));
             return;
         }
-        this.E = rVar.g(r.b.d(n0Var, n0Var2, Arrays.asList(this.f3795t.y(n0Var, n0Var2, C(), E() != null)))).values().iterator().next();
+        this.E = rVar.g(r.b.d(n0Var, n0Var2, Arrays.asList(this.f3693t.y(n0Var, n0Var2, C(), E() != null)))).values().iterator().next();
         if (n().e() == 1) {
             this.F = this.E;
         } else {
@@ -299,7 +299,7 @@ public class g extends w2 {
         p0 p0VarI2 = i();
         Objects.requireNonNull(p0VarI2);
         v0 v0VarL0 = l0(p0VarI2, t3Var);
-        this.f3801z = v0VarL0;
+        this.f3699z = v0VarL0;
         D0(this.F, v0VarL0, true);
     }
 
@@ -310,31 +310,31 @@ public class g extends w2 {
     @Override // g0.w2
     public void O() {
         super.O();
-        this.f3795t.t();
+        this.f3693t.t();
     }
 
     @Override // g0.w2
     public void P() {
         super.P();
-        this.f3795t.N();
+        this.f3693t.N();
     }
 
     @Override // g0.w2
     public i4<?> Q(o0 o0Var, i4.b<?, ?, ?> bVar) {
-        this.f3795t.M(bVar.a());
+        this.f3693t.M(bVar.a());
         return bVar.e();
     }
 
     @Override // g0.w2
     public void R() {
         super.R();
-        this.f3795t.O();
+        this.f3693t.O();
     }
 
     @Override // g0.w2
     public void S() {
         super.S();
-        this.f3795t.P();
+        this.f3693t.P();
     }
 
     @Override // g0.w2
@@ -356,7 +356,7 @@ public class g extends w2 {
     public void V() {
         super.V();
         j0();
-        this.f3795t.V();
+        this.f3693t.V();
     }
 
     public final void i0(o3.b bVar, final String str, final String str2, final i4<?> i4Var, final t3 t3Var, final t3 t3Var2) {
@@ -367,7 +367,7 @@ public class g extends w2 {
         o3.c cVar2 = new o3.c(new o3.d() { // from class: b1.e
             @Override // n0.o3.d
             public final void a(o3 o3Var, o3.g gVar) {
-                g.g0(this.f3788a, str, str2, i4Var, t3Var, t3Var2, o3Var, gVar);
+                g.g0(this.f3686a, str, str2, i4Var, t3Var, t3Var2, o3Var, gVar);
             }
         });
         this.I = cVar2;
@@ -383,15 +383,15 @@ public class g extends w2 {
             return new v0(p0Var, t.a.a(t3Var.b()));
         }
         v0 v0Var = new v0(p0Var, n().a());
-        this.f3798w = v0Var;
+        this.f3696w = v0Var;
         return v0Var;
     }
 
     @Override // g0.w2
     public i4<?> m(boolean z10, j4 j4Var) {
-        n1 n1VarA = j4Var.a(this.f3794s.X(), 1);
+        n1 n1VarA = j4Var.a(this.f3692s.X(), 1);
         if (z10) {
-            n1VarA = n1.L(n1VarA, this.f3794s.n());
+            n1VarA = n1.L(n1VarA, this.f3692s.n());
         }
         if (n1VarA == null) {
             return null;
@@ -404,8 +404,8 @@ public class g extends w2 {
         if (t3Var2 != null) {
             n0 n0VarN0 = n0(str, str2, i4Var, t3Var, t3Var2);
             n0 n0VarO0 = o0(str, str2, i4Var, t3Var, t3Var2);
-            r rVarK0 = k0(i(), v(), t3Var, this.f3796u, this.f3797v);
-            this.f3800y = rVarK0;
+            r rVarK0 = k0(i(), v(), t3Var, this.f3694u, this.f3695v);
+            this.f3698y = rVarK0;
             E0(n0VarN0, n0VarO0, rVarK0, t3Var);
             return g0.o0.a(new Object[]{this.G.p(), this.H.p()});
         }
@@ -413,7 +413,7 @@ public class g extends w2 {
         p0 p0VarI = i();
         Objects.requireNonNull(p0VarI);
         v0 v0VarL0 = l0(p0VarI, t3Var);
-        this.f3799x = v0VarL0;
+        this.f3697x = v0VarL0;
         D0(n0VarN1, v0VarL0, false);
         return g0.o0.a(new Object[]{this.G.p()});
     }
@@ -470,7 +470,7 @@ public class g extends w2 {
         C0(bVarR);
         B0(t3Var.f(), bVarR);
         bVarR.n(n0Var.o(), t3Var.b(), null, -1);
-        bVarR.j(this.f3795t.H());
+        bVarR.j(this.f3693t.H());
         if (t3Var.d() != null) {
             bVarR.g(t3Var.d());
         }
@@ -480,7 +480,7 @@ public class g extends w2 {
     }
 
     public Set<w2> s0() {
-        return this.f3795t.D();
+        return this.f3693t.D();
     }
 
     public final Rect u0(n0 n0Var) {
@@ -488,11 +488,11 @@ public class g extends w2 {
     }
 
     public final n0 w0(n0 n0Var, p0 p0Var) {
-        this.f3798w = new v0(p0Var, n().a());
+        this.f3696w = new v0(p0Var, n().a());
         int iY0 = y0();
         Rect rectU0 = u0(n0Var);
         z0.f fVarI = z0.f.i(n0Var.t(), n0Var.p(), rectU0, a0.f(rectU0, iY0), iY0, x0(), true);
-        n0 n0Var2 = this.f3798w.j(v0.b.c(n0Var, Collections.singletonList(fVarI))).get(fVarI);
+        n0 n0Var2 = this.f3696w.j(v0.b.c(n0Var, Collections.singletonList(fVarI))).get(fVarI);
         Objects.requireNonNull(n0Var2);
         return n0Var2;
     }

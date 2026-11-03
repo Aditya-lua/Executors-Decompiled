@@ -23,31 +23,33 @@ import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import ci.m;
+import cj.o;
+import cj.p;
 import com.appsflyer.sdk_base.referrer.Payload;
 import com.roblox.client.hybrid.RBHybridWebView;
 import com.roblox.client.personasdk.BuildConfig;
 import com.roblox.client.purchase.IAPPurchaseManager;
 import com.roblox.engine.jni.NativeGLInterface;
 import com.roblox.protocols.webview.DomainAllowListChecker;
-import e4.q;
-import ei.m;
-import fj.a0;
-import gk.d0;
-import gk.p;
-import gk.s;
-import om.n;
+import dj.a0;
+import ek.e0;
+import ek.q;
+import ek.t;
+import mm.n;
 import org.greenrobot.eventbus.ThreadMode;
-import sg.a1;
-import sg.e2;
-import sg.j0;
-import sg.m0;
-import sg.n0;
-import sg.q0;
-import sg.t0;
-import sg.x;
-import sg.x0;
-import sg.y;
-import vg.c0;
+import rg.a1;
+import rg.e2;
+import rg.f2;
+import rg.j0;
+import rg.m0;
+import rg.n0;
+import rg.q0;
+import rg.t0;
+import rg.x;
+import rg.x0;
+import rg.y;
+import ug.c0;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class c extends x0 implements SwipeRefreshLayout.j {
@@ -58,10 +60,10 @@ public class c extends x0 implements SwipeRefreshLayout.j {
     public j S0;
     public i T0;
     public ValueCallback<Uri[]> U0;
-    public wg.d Z0;
+    public vg.d Z0;
 
     /* JADX INFO: renamed from: a1, reason: collision with root package name */
-    public PermissionRequest f8960a1;
+    public PermissionRequest f9034a1;
     public TextView H0 = null;
     public RBHybridWebView I0 = null;
     public SwipeRefreshLayout J0 = null;
@@ -75,30 +77,30 @@ public class c extends x0 implements SwipeRefreshLayout.j {
     public String Y0 = null;
 
     /* JADX INFO: renamed from: b1, reason: collision with root package name */
-    public final g.c<String> f8961b1 = h(new h.h(), new g.a() { // from class: sg.c1
+    public final g.c<String> f9035b1 = h(new h.h(), new g.a() { // from class: rg.c1
         @Override // g.a
         public final void a(Object obj) {
-            this.f30747a.n3((Boolean) obj);
+            this.f30349a.n3((Boolean) obj);
         }
     });
 
     /* JADX INFO: renamed from: c1, reason: collision with root package name */
-    public final ej.j f8962c1 = new C0134c();
+    public final o f9036c1 = new C0137c();
 
     /* JADX INFO: renamed from: d1, reason: collision with root package name */
-    public final ej.j f8963d1 = new d();
+    public final o f9037d1 = new d();
 
     /* JADX INFO: renamed from: e1, reason: collision with root package name */
-    public final ej.j f8964e1 = new e();
+    public final o f9038e1 = new e();
 
     /* JADX INFO: renamed from: f1, reason: collision with root package name */
-    public final ej.j f8965f1 = new f();
+    public final o f9039f1 = new f();
 
-    public class a implements ii.a.b {
+    public class a implements gi.a.b {
         public a() {
         }
 
-        @Override // ii.a.b
+        @Override // gi.a.b
         public void a(String str) {
             if (c.this.T0 != null) {
                 c.this.T0.a(str);
@@ -138,20 +140,20 @@ public class c extends x0 implements SwipeRefreshLayout.j {
             for (String str : permissionRequest.getResources()) {
                 if (str.equals("android.webkit.resource.VIDEO_CAPTURE")) {
                     int iA = l2.b.a(c.this.p(), y.h().k().s(n.CAMERA));
-                    if (th.h.a().M5()) {
+                    if (rh.h.a().W5()) {
                         if (iA == 0) {
-                            p.h("rbx.web", "Camera permission already granted");
+                            q.h("rbx.web", "Camera permission already granted");
                             permissionRequest.grant(new String[]{str});
                         } else {
-                            p.h("rbx.web", "Camera permission not granted, requesting via ActivityResultLauncher");
-                            c.this.f8960a1 = permissionRequest;
-                            c.this.f8961b1.b("android.permission.CAMERA");
+                            q.h("rbx.web", "Camera permission not granted, requesting via ActivityResultLauncher");
+                            c.this.f9034a1 = permissionRequest;
+                            c.this.f9035b1.b("android.permission.CAMERA");
                         }
                     } else if (iA != 0) {
-                        p.h("rbx.web", "No permission granted for camera");
+                        q.h("rbx.web", "No permission granted for camera");
                         permissionRequest.deny();
                     } else {
-                        p.h("rbx.web", "Permission granted for camera");
+                        q.h("rbx.web", "Permission granted for camera");
                         permissionRequest.grant(new String[]{str});
                     }
                 }
@@ -175,124 +177,124 @@ public class c extends x0 implements SwipeRefreshLayout.j {
     }
 
     /* JADX INFO: renamed from: com.roblox.client.c$c, reason: collision with other inner class name */
-    public class C0134c implements ej.j {
-        public C0134c() {
+    public class C0137c implements o {
+        public C0137c() {
         }
 
-        @Override // ej.j
+        @Override // cj.o
         public void b() {
             c.this.F3();
         }
 
-        @Override // ej.j
-        public void c() {
+        @Override // cj.o
+        public void c(p pVar) {
+            c.this.Y2(pVar);
+        }
+
+        @Override // cj.o
+        public void d() {
             c.this.F3();
         }
 
-        @Override // ej.j
-        public void d() {
+        @Override // cj.o
+        public void e() {
             c.this.g3();
-        }
-
-        @Override // ej.j
-        public void e(ej.k kVar) {
-            c.this.Y2(kVar);
         }
     }
 
-    public class d implements ej.j {
+    public class d implements o {
         public d() {
         }
 
-        @Override // ej.j
+        @Override // cj.o
         public void b() {
             c.this.F3();
         }
 
-        @Override // ej.j
-        public void c() {
+        @Override // cj.o
+        public void c(p pVar) {
+            c.this.Y2(pVar);
+        }
+
+        @Override // cj.o
+        public void d() {
             c.this.F3();
         }
 
-        @Override // ej.j
-        public void d() {
+        @Override // cj.o
+        public void e() {
             c.this.g3();
-        }
-
-        @Override // ej.j
-        public void e(ej.k kVar) {
-            c.this.Y2(kVar);
         }
     }
 
-    public class e implements ej.j {
+    public class e implements o {
         public e() {
         }
 
-        @Override // ej.j
+        @Override // cj.o
         public void b() {
         }
 
-        @Override // ej.j
-        public void c() {
+        @Override // cj.o
+        public void c(p pVar) {
+            q.h("rbx.amazon.purchaseflow", "onPurchaseFinishedListener: Result=" + pVar + ".");
+            c.this.Y2(pVar);
         }
 
-        @Override // ej.j
+        @Override // cj.o
         public void d() {
         }
 
-        @Override // ej.j
-        public void e(ej.k kVar) {
-            p.h("rbx.amazon.purchaseflow", "onPurchaseFinishedListener: Result=" + kVar + ".");
-            c.this.Y2(kVar);
+        @Override // cj.o
+        public void e() {
         }
     }
 
-    public class f implements ej.j {
+    public class f implements o {
         public f() {
         }
 
-        @Override // ej.j
+        @Override // cj.o
         public void b() {
         }
 
-        @Override // ej.j
-        public void c() {
+        @Override // cj.o
+        public void c(p pVar) {
+            c.this.Y2(pVar);
+        }
+
+        @Override // cj.o
+        public void d() {
             c.this.F3();
         }
 
-        @Override // ej.j
-        public void d() {
-        }
-
-        @Override // ej.j
-        public void e(ej.k kVar) {
-            c.this.Y2(kVar);
+        @Override // cj.o
+        public void e() {
         }
     }
 
     public static /* synthetic */ class g {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f8973a;
+        public static final /* synthetic */ int[] f9047a;
 
         static {
             int[] iArr = new int[DomainAllowListChecker.a.values().length];
-            f8973a = iArr;
+            f9047a = iArr;
             try {
                 iArr[DomainAllowListChecker.a.FirstParty.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f8973a[DomainAllowListChecker.a.SecondParty.ordinal()] = 2;
+                f9047a[DomainAllowListChecker.a.SecondParty.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f8973a[DomainAllowListChecker.a.ThirdParty.ordinal()] = 3;
+                f9047a[DomainAllowListChecker.a.ThirdParty.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
             try {
-                f8973a[DomainAllowListChecker.a.Unknown.ordinal()] = 4;
+                f9047a[DomainAllowListChecker.a.Unknown.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
         }
@@ -313,36 +315,40 @@ public class c extends x0 implements SwipeRefreshLayout.j {
 
         default void b(String str) {
         }
+
+        default void c(String str, String str2) {
+            im.f.F().n(str2, "failed", "unhandled_by_host");
+        }
     }
 
     public class k extends WebViewClient {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public String f8975a = null;
+        public String f9049a = null;
 
         public class a implements m {
             public a() {
             }
 
-            @Override // ei.m
-            public void a(ei.j jVar) {
+            @Override // ci.m
+            public void a(ci.j jVar) {
             }
         }
 
         public k() {
         }
 
-        public final boolean d(final WebView webView, final String str) {
+        public final boolean d(final WebView webView, final String str, boolean z10, boolean z11) {
             String strC;
-            p.h("rbx.web", "-> " + str);
+            q.h("rbx.web", "-> " + str);
             if (str == null) {
-                p.e("rbx.web", "RWF.shouldOverrideUrlLoading() urlString is null!");
+                q.e("rbx.web", "RWF.shouldOverrideUrlLoading() urlString is null!");
                 c0.v(c0.c.URL_NULL);
                 return false;
             }
-            final q qVarP = c.this.p();
+            final e4.q qVarP = c.this.p();
             if (qVarP == null || qVarP.isFinishing()) {
-                p.h("rbx.web", "RWF.shouldOverrideUrlLoading() activity is null or finishing");
+                q.h("rbx.web", "RWF.shouldOverrideUrlLoading() activity is null or finishing");
                 c0.v(c0.c.ACTIVITY_FINISHING);
                 return true;
             }
@@ -354,8 +360,8 @@ public class c extends x0 implements SwipeRefreshLayout.j {
                 c0.v(c0.c.WEB_LINK);
                 return true;
             }
-            if (!DomainAllowListChecker.f9727a.enableDomainAllowListChecker() && c.this.s3(str)) {
-                p.h("rbx.web", "Navigating social media Link...");
+            if (!DomainAllowListChecker.f9808a.enableDomainAllowListChecker() && c.this.s3(str)) {
+                q.h("rbx.web", "Navigating social media Link...");
                 c0.v(c0.c.SOCIAL_MEDIA);
                 return true;
             }
@@ -367,12 +373,12 @@ public class c extends x0 implements SwipeRefreshLayout.j {
                 return true;
             }
             if (a1.m0(str) && !c.this.R0) {
-                p.h("rbx.web", "RWF.shouldOverrideUrlLoading() The URL is a LOGIN type!");
+                q.h("rbx.web", "RWF.shouldOverrideUrlLoading() The URL is a LOGIN type!");
                 c cVar = c.this;
-                cVar.z2(ri.a.c(cVar.x(), q0.f30954o, new Object[0]), 1);
-                vi.b.f().i(qVarP, vi.b.d.LOGOUT_BY_401_ERROR_IN_WEB);
+                cVar.z2(pi.a.c(cVar.w(), q0.f30559o, new Object[0]), 1);
+                ti.b.f().i(qVarP, ti.b.d.LOGOUT_BY_401_ERROR_IN_WEB);
                 a1.V(str);
-                vi.h.e().d(new a());
+                ti.h.e().d(new a());
                 c0.v(c0.c.SESSION_EXPIRED);
                 return true;
             }
@@ -380,75 +386,85 @@ public class c extends x0 implements SwipeRefreshLayout.j {
             c.this.I0.setOnTouchListener(null);
             c.this.E3(str, true);
             if (!str.contains("mobile-app-upgrades/buy?")) {
-                km.f.v().i(str, new km.f.k() { // from class: sg.m1
-                    @Override // km.f.k
-                    public final void a(boolean z10) {
-                        this.f30872a.g(str, qVarP, webView, z10);
+                String strA = f2.a(str, z10);
+                if (strA == null && rh.h.a().I0() && rh.h.a().g1() && f2.c(str, z11)) {
+                    strA = im.f.F().i(str, "android_webview");
+                }
+                final String str2 = strA;
+                im.f.k kVar = new im.f.k() { // from class: rg.m1
+                    @Override // im.f.k
+                    public final void a(boolean z12) {
+                        this.f30476a.g(str, str2, qVarP, webView, z12);
                     }
-                });
+                };
+                if (!rh.h.a().I0() || str2 == null) {
+                    im.f.F().r(str, kVar);
+                } else {
+                    im.f.F().o(str2, kVar);
+                }
                 return true;
             }
             c0.v(c0.c.PURCHASE);
-            String strK = fk.c.c().k();
+            String strK = dk.c.c().k();
             Uri uri = Uri.parse(str);
             String queryParameter2 = uri.getQueryParameter("id");
-            if (s.i()) {
-                p.h("rbx.purchaseflow", "RobloxWebDialogFragment to start an in-app purchase. Username = " + strK);
-                if (th.h.a().C5()) {
-                    ij.b.a(qVarP);
-                    c.this.U(q0.f30977v1);
+            if (t.i()) {
+                q.h("rbx.purchaseflow", "RobloxWebDialogFragment to start an in-app purchase. Username = " + strK);
+                if (rh.h.a().M5()) {
+                    gj.b.a(qVarP);
+                    c.this.T(q0.f30582v1);
                 } else {
-                    ij.a.a(qVarP);
-                    c.this.U(q0.f30977v1);
+                    gj.a.a(qVarP);
+                    c.this.T(q0.f30582v1);
                 }
             } else {
-                if (th.h.a().L()) {
+                if (rh.h.a().N()) {
                     String queryParameter3 = uri.getQueryParameter("ctx");
                     String queryParameter4 = uri.getQueryParameter(Payload.TYPE);
-                    String strC2 = d0.c(uri, "paymentSessionId");
+                    String strC2 = e0.c(uri, "paymentSessionId");
                     if (queryParameter3 != null && queryParameter4 != null && queryParameter3.equals("subscription")) {
-                        p.h("rbx.purchaseflow", "RobloxWebDialogFragment to start an in-app subscription purchase.");
+                        q.h("rbx.purchaseflow", "RobloxWebDialogFragment to start an in-app subscription purchase.");
                         IAPPurchaseManager.nativePerformSubscriptionPurchase(queryParameter4, queryParameter2, BuildConfig.STORE_TYPE, strC2);
                         return true;
                     }
                 }
-                if (th.h.a().B1()) {
-                    p.h("rbx.purchaseflow", "PaymentsProtocol: tryStartInAppPurchase in RobloxWebDialogFragment.");
+                if (rh.h.a().L1()) {
+                    q.h("rbx.purchaseflow", "PaymentsProtocol: tryStartInAppPurchase in RobloxWebDialogFragment.");
                     a0 a0VarR = a0.R(qVarP);
                     t0.d(c.this.c3(), "purchaseStart" + queryParameter2);
-                    a0VarR.e(queryParameter2, uri, strK, qVarP, c.this.f8962c1, new Runnable() { // from class: sg.l1
+                    a0VarR.e(queryParameter2, uri, strK, qVarP, c.this.f9036c1, new Runnable() { // from class: rg.l1
                         @Override // java.lang.Runnable
                         public final void run() {
-                            this.f30823a.e();
+                            this.f30426a.e();
                         }
                     });
-                } else if (th.h.a().g3()) {
-                    IAPPurchaseManager.nativeSetMetricsPurchaseType(IAPPurchaseManager.f9186l);
-                    if (!th.h.a().b3() || (strC = d0.c(uri, "paymentSessionId")) == null) {
+                } else if (rh.h.a().q3()) {
+                    IAPPurchaseManager.nativeSetMetricsPurchaseType(IAPPurchaseManager.f9259l);
+                    if (!rh.h.a().l3() || (strC = e0.c(uri, "paymentSessionId")) == null) {
                         strC = "";
                     }
-                    fj.m mVarF0 = fj.m.F0(qVarP);
-                    mVarF0.j(null);
+                    dj.m mVarF0 = dj.m.F0(qVarP);
+                    mVarF0.i(null);
                     mVarF0.k(true);
                     IAPPurchaseManager.nativeSetPaymentsProtocolIsInApp(true);
                     IAPPurchaseManager.nativeSetPaymentSessionId(strC);
                     IAPPurchaseManager.nativeSetProviderCurrencyCode(mVarF0.c(queryParameter2));
                     IAPPurchaseManager.nativeBeginPaymentsProtocolPurchase(queryParameter2);
                 } else {
-                    fj.m mVarF1 = fj.m.F0(qVarP);
+                    dj.m mVarF1 = dj.m.F0(qVarP);
                     if (mVarF1 == null) {
-                        c.this.U(q0.f30977v1);
+                        c.this.T(q0.f30582v1);
                     } else {
                         t0.d(c.this.c3(), "purchaseStart" + queryParameter2);
                         try {
                             queryParameter = uri.getQueryParameter("recurring");
                         } catch (NullPointerException unused) {
-                            p.h("rbx.purchaseflow", "NullPointerException thrown while parsing recurring parameter for purchase url");
+                            q.h("rbx.purchaseflow", "NullPointerException thrown while parsing recurring parameter for purchase url");
                         } catch (UnsupportedOperationException unused2) {
-                            p.h("rbx.purchaseflow", "UnsupportedOperationException thrown while parsing recurring parameter for purchase url");
+                            q.h("rbx.purchaseflow", "UnsupportedOperationException thrown while parsing recurring parameter for purchase url");
                         }
-                        if (!mVarF1.i(strK, queryParameter2, qVarP, c.this.f8962c1, Boolean.valueOf(queryParameter).booleanValue())) {
-                            c.this.U(q0.f30962q1);
+                        if (!mVarF1.d(strK, queryParameter2, qVarP, c.this.f9036c1, Boolean.valueOf(queryParameter).booleanValue())) {
+                            c.this.T(q0.f30567q1);
                         }
                     }
                 }
@@ -457,10 +473,10 @@ public class c extends x0 implements SwipeRefreshLayout.j {
         }
 
         public final /* synthetic */ void e() {
-            c.this.U(q0.f30962q1);
+            c.this.T(q0.f30567q1);
         }
 
-        public final /* synthetic */ void f(q qVar, String str, WebView webView) {
+        public final /* synthetic */ void f(e4.q qVar, String str, WebView webView) {
             if (qVar.isFinishing() || qVar.isDestroyed()) {
                 return;
             }
@@ -468,36 +484,62 @@ public class c extends x0 implements SwipeRefreshLayout.j {
             webView.loadUrl(str);
         }
 
-        public final /* synthetic */ void g(final String str, final q qVar, final WebView webView, boolean z10) {
+        public final /* synthetic */ void g(final String str, String str2, final e4.q qVar, final WebView webView, boolean z10) {
             if (!z10) {
-                if (DomainAllowListChecker.f9727a.enableDomainAllowListChecker()) {
+                if (str2 != null) {
+                    im.f.F().n(str2, "success", "handled_in_webview");
+                }
+                if (DomainAllowListChecker.f9808a.enableDomainAllowListChecker()) {
                     c.this.y3(str);
                     return;
                 } else {
                     c0.v(c0.c.DEFAULT_LOAD);
-                    qVar.runOnUiThread(new Runnable() { // from class: sg.n1
+                    qVar.runOnUiThread(new Runnable() { // from class: rg.n1
                         @Override // java.lang.Runnable
                         public final void run() {
-                            this.f30901a.f(qVar, str, webView);
+                            this.f30506a.f(qVar, str, webView);
                         }
                     });
                     return;
                 }
             }
             c0.v(c0.c.DEEPLINK_INTERCEPT);
-            if (th.h.a().G1()) {
-                c.this.S0.b(str);
+            if (rh.h.a().Q1()) {
+                if (!rh.h.a().g1()) {
+                    c.this.S0.b(str);
+                    return;
+                }
+                im.f fVarF = im.f.F();
+                fVarF.z(str, "android_webview", false);
+                if (str2 == null) {
+                    str2 = fVarF.i(str, "android_webview");
+                }
+                c.this.S0.c(str, str2);
                 return;
             }
-            fv.c.d().j(c.this.new h());
-            km.f.v().q(str, "android_webview", false);
-            km.f.v().e(str);
+            if (!rh.h.a().g1()) {
+                dv.c.d().j(c.this.new h());
+                im.f.F().f(str, "android_webview", false);
+                im.f.F().k(str);
+                return;
+            }
+            im.f fVarF2 = im.f.F();
+            fVarF2.z(str, "android_webview", false);
+            if (str2 == null) {
+                str2 = fVarF2.i(str, "android_webview");
+            }
+            dv.c.d().j(c.this.new h());
+            if (str2 == null || str2.isEmpty()) {
+                fVarF2.m(str);
+            } else {
+                fVarF2.j(str2);
+            }
         }
 
         @Override // android.webkit.WebViewClient
         public void onLoadResource(WebView webView, String str) {
             super.onLoadResource(webView, str);
-            wk.h.h().k(a1.g());
+            uk.h.j().n(a1.g());
         }
 
         @Override // android.webkit.WebViewClient
@@ -508,22 +550,25 @@ public class c extends x0 implements SwipeRefreshLayout.j {
         @Override // android.webkit.WebViewClient
         public void onPageFinished(WebView webView, String str) {
             c.this.J0.setRefreshing(false);
-            p.h("rbx.web", "onPageFinished. url=" + str);
+            q.h("rbx.web", "onPageFinished. url=" + str);
             c.this.w3(str);
-            if (th.h.a().d2() && !webView.hasFocus()) {
+            if (rh.h.a().W1()) {
+                uk.h.j().n(a1.g());
+            }
+            if (rh.h.a().p2() && !webView.hasFocus()) {
                 webView.requestFocus();
             }
-            if (DomainAllowListChecker.f9727a.enableDomainAllowListChecker()) {
-                this.f8975a = null;
+            if (DomainAllowListChecker.f9808a.enableDomainAllowListChecker()) {
+                this.f9049a = null;
             }
-            if (vh.m.b().a(str)) {
+            if (th.m.b().a(str)) {
                 c.this.I0.reload();
             }
         }
 
         @Override // android.webkit.WebViewClient
         public void onPageStarted(WebView webView, String str, Bitmap bitmap) {
-            p.h("rbx.web", "-> " + str);
+            q.h("rbx.web", "-> " + str);
             c.this.t3(str);
             c.this.J0.setRefreshing(true);
         }
@@ -532,7 +577,7 @@ public class c extends x0 implements SwipeRefreshLayout.j {
         public void onReceivedError(WebView webView, WebResourceRequest webResourceRequest, WebResourceError webResourceError) {
             super.onReceivedError(webView, webResourceRequest, webResourceError);
             if (webResourceRequest.isForMainFrame()) {
-                p.k("rbx.web", "onReceivedMainFrameError: suppressing impression. error=" + webResourceError.getErrorCode() + ": " + ((Object) webResourceError.getDescription()));
+                q.k("rbx.web", "onReceivedMainFrameError: suppressing impression. error=" + webResourceError.getErrorCode() + ": " + ((Object) webResourceError.getDescription()));
                 c.this.u3();
                 if (e2.j(RobloxApplication.f())) {
                     return;
@@ -543,21 +588,21 @@ public class c extends x0 implements SwipeRefreshLayout.j {
 
         @Override // android.webkit.WebViewClient
         public boolean shouldOverrideUrlLoading(WebView webView, WebResourceRequest webResourceRequest) {
-            if (!DomainAllowListChecker.f9727a.enableDomainAllowListChecker()) {
-                return d(webView, webResourceRequest.getUrl().toString());
+            if (!DomainAllowListChecker.f9808a.enableDomainAllowListChecker()) {
+                return d(webView, webResourceRequest.getUrl().toString(), webResourceRequest.hasGesture(), webResourceRequest.isForMainFrame());
             }
             String string = webResourceRequest.getUrl().toString();
-            if (!string.equals(this.f8975a) || webResourceRequest.hasGesture()) {
-                this.f8975a = string;
-                return d(webView, string);
+            if (!string.equals(this.f9049a) || webResourceRequest.hasGesture()) {
+                this.f9049a = string;
+                return d(webView, string, webResourceRequest.hasGesture(), webResourceRequest.isForMainFrame());
             }
-            p.h("rbx.web", "Skipping duplicate shouldOverrideUrlLoading call for URL: " + string);
+            q.h("rbx.web", "Skipping duplicate shouldOverrideUrlLoading call for URL: " + string);
             return true;
         }
     }
 
     public static /* synthetic */ void J2(DomainAllowListChecker.a aVar) {
-        int i10 = g.f8973a[aVar.ordinal()];
+        int i10 = g.f9047a[aVar.ordinal()];
         if (i10 == 1) {
             c0.v(c0.c.FIRST_PARTY_LOAD);
             return;
@@ -575,7 +620,7 @@ public class c extends x0 implements SwipeRefreshLayout.j {
             if (i11 == -1) {
                 this.U0.onReceiveValue(new Uri[]{intent.getData()});
             } else {
-                p.h("rbx.web", "Result of file chooser invalid.");
+                q.h("rbx.web", "Result of file chooser invalid.");
                 this.U0.onReceiveValue(null);
             }
         }
@@ -605,23 +650,23 @@ public class c extends x0 implements SwipeRefreshLayout.j {
         }
     }
 
-    @Override // sg.x0, e4.k, androidx.fragment.app.c
+    @Override // rg.x0, e4.k, androidx.fragment.app.c
     public void F0(Bundle bundle) {
         super.F0(bundle);
-        uk.b.a().n(this);
+        sk.b.a().n(this);
         Bundle bundleT = t();
         if (bundleT != null) {
             String string = bundleT.getString("DEFAULT_URL", null);
-            p.b("rbx.web", "onCreate: default-URL = " + string + ".");
+            q.b("rbx.web", "onCreate: default-URL = " + string + ".");
             if (string != null) {
                 if (string.contains("/giftcards?")) {
                     string = string.replace("/giftcards?", "/shopgiftcards?");
                 }
-                p.b("rbx.web", "onCreate: default-URL = " + string + ".");
+                q.b("rbx.web", "onCreate: default-URL = " + string + ".");
                 this.N0 = string;
                 if (this.K0 == null) {
                     this.K0 = string;
-                    if (DomainAllowListChecker.f9727a.enableDomainAllowListChecker()) {
+                    if (DomainAllowListChecker.f9808a.enableDomainAllowListChecker()) {
                         this.Y0 = string;
                     }
                 }
@@ -629,40 +674,40 @@ public class c extends x0 implements SwipeRefreshLayout.j {
             this.O0 = bundleT.getString("WEB_VIEW_TAG", null);
             this.V0 = bundleT.getBoolean("USE_APP_HYBRID");
         }
-        this.Z0 = new wg.d(x());
+        this.Z0 = new vg.d(w());
     }
 
     public final void F3() {
-        final q qVarP = p();
+        final e4.q qVarP = p();
         if (qVarP != null) {
-            qVarP.runOnUiThread(new Runnable() { // from class: sg.k1
+            qVarP.runOnUiThread(new Runnable() { // from class: rg.k1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f30796a.p3(qVarP);
+                    this.f30399a.p3(qVarP);
                 }
             });
         }
     }
 
-    public final void G3(ej.k kVar) {
-        q qVarP = p();
+    public final void G3(p pVar) {
+        e4.q qVarP = p();
         if (qVarP == null) {
             return;
         }
-        CharSequence charSequenceC = kVar.c(qVarP);
-        if (kVar.f()) {
+        CharSequence charSequenceC = pVar.c(qVarP);
+        if (pVar.f()) {
             v2(charSequenceC);
         } else {
-            W(charSequenceC.toString());
+            V(charSequenceC.toString());
         }
     }
 
-    public void H3(nl.a aVar) {
-        Boolean bool = aVar.f26299c;
+    public void H3(ll.a aVar) {
+        Boolean bool = aVar.f23588c;
         if (bool != null) {
             D3(bool.booleanValue());
         }
-        Boolean bool2 = aVar.f26301e;
+        Boolean bool2 = aVar.f23590e;
         if (bool2 != null) {
             A3(bool2.booleanValue());
         }
@@ -674,12 +719,12 @@ public class c extends x0 implements SwipeRefreshLayout.j {
 
     @Override // androidx.fragment.app.c
     public View J0(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        View viewInflate = layoutInflater.inflate(n0.f30883i, viewGroup, false);
-        ViewGroup viewGroup2 = (ViewGroup) viewInflate.findViewById(m0.f30841i0);
-        this.H0 = (TextView) viewInflate.findViewById(m0.f30867v0);
+        View viewInflate = layoutInflater.inflate(n0.f30488i, viewGroup, false);
+        ViewGroup viewGroup2 = (ViewGroup) viewInflate.findViewById(m0.f30446j0);
+        this.H0 = (TextView) viewInflate.findViewById(m0.f30472w0);
         k kVar = new k();
         this.I0 = a3();
-        if (th.h.a().e2()) {
+        if (rh.h.a().q2()) {
             this.I0.setCommandListener(new x());
         }
         viewGroup2.addView(this.I0, new ViewGroup.LayoutParams(-1, -1));
@@ -690,18 +735,18 @@ public class c extends x0 implements SwipeRefreshLayout.j {
         try {
             this.I0.getSettings().setJavaScriptEnabled(true);
             this.I0.getSettings().setDomStorageEnabled(true);
-            this.I0.getSettings().setUserAgentString(a1.Z0());
+            this.I0.getSettings().setUserAgentString(a1.a1());
             this.I0.getSettings().setCacheMode(-1);
             this.I0.setHorizontalScrollBarEnabled(false);
             this.I0.setVerticalScrollBarEnabled(false);
         } catch (Exception e10) {
             e10.printStackTrace();
         }
-        if (nh.b.a()) {
+        if (mh.b.a()) {
             WebView.setWebContentsDebuggingEnabled(true);
         }
         if (this.K0 != null) {
-            if (DomainAllowListChecker.f9727a.enableDomainAllowListChecker()) {
+            if (DomainAllowListChecker.f9808a.enableDomainAllowListChecker()) {
                 z3(this.K0, true);
             } else {
                 c0.v(c0.c.DEFAULT_LOAD);
@@ -709,14 +754,14 @@ public class c extends x0 implements SwipeRefreshLayout.j {
             }
             this.K0 = null;
         }
-        SwipeRefreshLayout swipeRefreshLayout = (SwipeRefreshLayout) viewInflate.findViewById(m0.f30841i0);
+        SwipeRefreshLayout swipeRefreshLayout = (SwipeRefreshLayout) viewInflate.findViewById(m0.f30446j0);
         this.J0 = swipeRefreshLayout;
         swipeRefreshLayout.setOnRefreshListener(this);
         SwipeRefreshLayout swipeRefreshLayout2 = this.J0;
         int i10 = j0.b;
-        int i11 = j0.f30788q;
+        int i11 = j0.f30391q;
         swipeRefreshLayout2.setColorSchemeResources(i10, i10, i11, i11);
-        this.Q0 = (FrameLayout) viewInflate.findViewById(m0.f30843j0);
+        this.Q0 = (FrameLayout) viewInflate.findViewById(m0.f30448k0);
         Bundle bundleT = t();
         if (bundleT != null) {
             this.L0 = bundleT.getInt("dialogHeight", 0);
@@ -733,11 +778,11 @@ public class c extends x0 implements SwipeRefreshLayout.j {
 
     @Override // androidx.fragment.app.c
     public void K0() {
-        uk.b.a().p(this);
-        if (th.h.a().M5() && this.f8960a1 != null) {
-            p.h("rbx.web", "onDestroy: Cleaning up pending permission request");
-            this.f8960a1.deny();
-            this.f8960a1 = null;
+        sk.b.a().p(this);
+        if (rh.h.a().W5() && this.f9034a1 != null) {
+            q.h("rbx.web", "onDestroy: Cleaning up pending permission request");
+            this.f9034a1.deny();
+            this.f9034a1 = null;
         }
         super.K0();
     }
@@ -751,7 +796,7 @@ public class c extends x0 implements SwipeRefreshLayout.j {
     @Override // androidx.fragment.app.c
     public void P0(boolean z10) {
         super.P0(z10);
-        if (z10 || !vh.m.b().a(this.I0.getUrl())) {
+        if (z10 || !th.m.b().a(this.I0.getUrl())) {
             return;
         }
         this.I0.reload();
@@ -767,33 +812,33 @@ public class c extends x0 implements SwipeRefreshLayout.j {
     }
 
     public final void X2(final String str) {
-        final q qVarP = p();
+        final e4.q qVarP = p();
         if (qVarP == null || qVarP.isFinishing() || qVarP.isDestroyed()) {
             return;
         }
-        qVarP.runOnUiThread(new Runnable() { // from class: sg.e1
+        qVarP.runOnUiThread(new Runnable() { // from class: rg.e1
             @Override // java.lang.Runnable
             public final void run() {
-                this.f30757a.j3(qVarP, str);
+                this.f30359a.j3(qVarP, str);
             }
         });
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public void Y2(final ej.k kVar) {
-        if (th.h.a().l1() && (kVar instanceof ej.f)) {
-            ej.f fVar = (ej.f) kVar;
-            String strB = fVar.b();
+    public void Y2(final p pVar) {
+        if (rh.h.a().u1() && (pVar instanceof cj.j)) {
+            cj.j jVar = (cj.j) pVar;
+            String strB = jVar.b();
             if (!strB.isEmpty()) {
-                NativeGLInterface.nativeMarketplacePurchaseFinished(kVar.d(), fVar.a().toString(), strB);
+                NativeGLInterface.nativeMarketplacePurchaseFinished(pVar.d(), jVar.a().toString(), strB);
             }
         }
-        final q qVarP = p();
+        final e4.q qVarP = p();
         if (qVarP != null) {
-            qVarP.runOnUiThread(new Runnable() { // from class: sg.f1
+            qVarP.runOnUiThread(new Runnable() { // from class: rg.f1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f30761a.k3(qVarP, kVar);
+                    this.f30363a.k3(qVarP, pVar);
                 }
             });
         }
@@ -808,6 +853,12 @@ public class c extends x0 implements SwipeRefreshLayout.j {
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.setOnCancelListener(null);
         return progressDialog;
+    }
+
+    @Override // rg.x0, bk.e.b
+    public void a0(ml.a aVar) {
+        super.a0(aVar);
+        this.I0.setBackgroundColor(this.Z0.a(dk.c.c().g()));
     }
 
     @Override // androidx.fragment.app.c
@@ -831,30 +882,30 @@ public class c extends x0 implements SwipeRefreshLayout.j {
     public RBHybridWebView a3() {
         RBHybridWebView rBHybridWebView;
         if (this.V0) {
-            rBHybridWebView = th.h.a().X0() ? new ii.a(x(), new a()) : new ii.a(x());
+            rBHybridWebView = rh.h.a().e1() ? new gi.a(w(), new a()) : new gi.a(w());
         } else {
-            rBHybridWebView = new RBHybridWebView(x());
+            rBHybridWebView = new RBHybridWebView(w());
         }
-        if (th.h.a().M1()) {
-            wk.e.r(a1.O());
+        if (rh.h.a().W1()) {
+            uk.e.A(a1.O());
         }
         return rBHybridWebView;
     }
 
     public final void b3(final String str, boolean z10) {
-        final q qVarP = p();
+        final e4.q qVarP = p();
         if (qVarP == null || qVarP.isFinishing() || qVarP.isDestroyed()) {
             return;
         }
-        qVarP.runOnUiThread(new Runnable() { // from class: sg.d1
+        qVarP.runOnUiThread(new Runnable() { // from class: rg.d1
             @Override // java.lang.Runnable
             public final void run() {
-                this.f30753a.l3(qVarP, str);
+                this.f30355a.l3(qVarP, str);
             }
         });
     }
 
-    @Override // sg.x0, e4.k, androidx.fragment.app.c
+    @Override // rg.x0, e4.k, androidx.fragment.app.c
     public void c1() {
         super.c1();
     }
@@ -863,7 +914,7 @@ public class c extends x0 implements SwipeRefreshLayout.j {
         return "undefinedWebContext";
     }
 
-    @Override // sg.x0, e4.k, androidx.fragment.app.c
+    @Override // rg.x0, e4.k, androidx.fragment.app.c
     public void d1() {
         super.d1();
     }
@@ -904,7 +955,7 @@ public class c extends x0 implements SwipeRefreshLayout.j {
         if (intent == null) {
             return false;
         }
-        if (s.a(x(), intent)) {
+        if (t.a(w(), intent)) {
             X1(intent);
             return true;
         }
@@ -913,12 +964,12 @@ public class c extends x0 implements SwipeRefreshLayout.j {
     }
 
     public final void g3() {
-        final q qVarP = p();
+        final e4.q qVarP = p();
         if (qVarP != null) {
-            qVarP.runOnUiThread(new Runnable() { // from class: sg.g1
+            qVarP.runOnUiThread(new Runnable() { // from class: rg.g1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f30766a.m3(qVarP);
+                    this.f30369a.m3(qVarP);
                 }
             });
         }
@@ -928,37 +979,37 @@ public class c extends x0 implements SwipeRefreshLayout.j {
         return this.W0;
     }
 
-    public final /* synthetic */ void i3(q qVar, DialogInterface dialogInterface) {
+    public final /* synthetic */ void i3(e4.q qVar, DialogInterface dialogInterface) {
         if (TextUtils.isEmpty(this.I0.getUrl())) {
             qVar.onBackPressed();
         }
     }
 
-    public final /* synthetic */ void j3(final q qVar, final String str) {
-        new androidx.appcompat.app.a.C0013a(qVar).d(false).p(q0.f30958p0).g(q0.f30955o0).i(q0.f30963r, null).m(q0.f30966s, new DialogInterface.OnClickListener() { // from class: sg.i1
+    public final /* synthetic */ void j3(final e4.q qVar, final String str) {
+        new androidx.appcompat.app.a.C0009a(qVar).d(false).p(q0.f30563p0).g(q0.f30560o0).i(q0.f30568r, null).m(q0.f30571s, new DialogInterface.OnClickListener() { // from class: rg.i1
             @Override // android.content.DialogInterface.OnClickListener
             public final void onClick(DialogInterface dialogInterface, int i10) {
                 e4.q qVar2 = qVar;
                 String str2 = str;
-                new km.a("rbx.web").e(qVar2, str2, str2);
+                new im.a("rbx.web").e(qVar2, str2, str2);
             }
-        }).k(new DialogInterface.OnDismissListener() { // from class: sg.j1
+        }).k(new DialogInterface.OnDismissListener() { // from class: rg.j1
             @Override // android.content.DialogInterface.OnDismissListener
             public final void onDismiss(DialogInterface dialogInterface) {
-                this.f30789a.i3(qVar, dialogInterface);
+                this.f30392a.i3(qVar, dialogInterface);
             }
         }).r();
     }
 
-    public final /* synthetic */ void k3(q qVar, ej.k kVar) {
+    public final /* synthetic */ void k3(e4.q qVar, p pVar) {
         if (qVar == null || qVar.isFinishing() || qVar.isDestroyed()) {
             return;
         }
         g3();
-        G3(kVar);
+        G3(pVar);
     }
 
-    public final /* synthetic */ void l3(q qVar, String str) {
+    public final /* synthetic */ void l3(e4.q qVar, String str) {
         if (qVar.isFinishing() || qVar.isDestroyed()) {
             return;
         }
@@ -966,7 +1017,7 @@ public class c extends x0 implements SwipeRefreshLayout.j {
         this.I0.loadUrl(str);
     }
 
-    public final /* synthetic */ void m3(q qVar) {
+    public final /* synthetic */ void m3(e4.q qVar) {
         ProgressDialog progressDialog;
         if (qVar == null || qVar.isFinishing() || qVar.isDestroyed() || (progressDialog = this.P0) == null || !progressDialog.isShowing()) {
             return;
@@ -975,23 +1026,23 @@ public class c extends x0 implements SwipeRefreshLayout.j {
     }
 
     public final /* synthetic */ void n3(Boolean bool) {
-        p.h("rbx.web", "Camera permission result: " + bool);
-        if (this.f8960a1 == null) {
-            p.k("rbx.web", "Camera permission callback received but no pending request");
+        q.h("rbx.web", "Camera permission result: " + bool);
+        if (this.f9034a1 == null) {
+            q.k("rbx.web", "Camera permission callback received but no pending request");
             return;
         }
         if (bool.booleanValue()) {
-            p.h("rbx.web", "Camera permission granted by user, granting to webview");
-            this.f8960a1.grant(new String[]{"android.webkit.resource.VIDEO_CAPTURE"});
+            q.h("rbx.web", "Camera permission granted by user, granting to webview");
+            this.f9034a1.grant(new String[]{"android.webkit.resource.VIDEO_CAPTURE"});
         } else {
-            p.h("rbx.web", "Camera permission denied by user, denying to webview");
-            this.f8960a1.deny();
+            q.h("rbx.web", "Camera permission denied by user, denying to webview");
+            this.f9034a1.deny();
         }
-        this.f8960a1 = null;
+        this.f9034a1 = null;
     }
 
     public final /* synthetic */ void o3(boolean z10, String str, DomainAllowListChecker.a aVar) {
-        int i10 = g.f8973a[aVar.ordinal()];
+        int i10 = g.f9047a[aVar.ordinal()];
         if (i10 == 1) {
             if (z10) {
                 c0.v(c0.c.FIRST_PARTY_LOAD);
@@ -1010,14 +1061,14 @@ public class c extends x0 implements SwipeRefreshLayout.j {
         }
     }
 
-    @fv.j(threadMode = ThreadMode.MAIN)
-    public void onEmitRbHybridEvent(uk.a aVar) {
+    @dv.j(threadMode = ThreadMode.MAIN)
+    public void onEmitRbHybridEvent(sk.a aVar) {
         if (this.I0 != null) {
             throw null;
         }
     }
 
-    public final /* synthetic */ void p3(q qVar) {
+    public final /* synthetic */ void p3(e4.q qVar) {
         if (qVar == null || qVar.isFinishing() || qVar.isDestroyed()) {
             return;
         }
@@ -1031,13 +1082,13 @@ public class c extends x0 implements SwipeRefreshLayout.j {
         c0.w(I3(), str);
         if (this.I0 == null) {
             this.K0 = str;
-        } else if (DomainAllowListChecker.f9727a.enableDomainAllowListChecker()) {
+        } else if (DomainAllowListChecker.f9808a.enableDomainAllowListChecker()) {
             z3(str, true);
         } else {
             c0.v(c0.c.DEFAULT_LOAD);
             this.I0.loadUrl(str);
         }
-        if (DomainAllowListChecker.f9727a.enableDomainAllowListChecker()) {
+        if (DomainAllowListChecker.f9808a.enableDomainAllowListChecker()) {
             this.Y0 = str;
         }
     }
@@ -1046,11 +1097,11 @@ public class c extends x0 implements SwipeRefreshLayout.j {
         if (str == null) {
             return;
         }
-        DomainAllowListChecker domainAllowListChecker = DomainAllowListChecker.f9727a;
+        DomainAllowListChecker domainAllowListChecker = DomainAllowListChecker.f9808a;
         if (domainAllowListChecker.isKnownTrustedDomain(str, this.Y0)) {
             c0.v(c0.c.FIRST_PARTY_LOAD);
         } else {
-            domainAllowListChecker.checkDomainAllowList(str, this.Y0, new DomainAllowListChecker.Callback() { // from class: sg.h1
+            domainAllowListChecker.checkDomainAllowList(str, this.Y0, new DomainAllowListChecker.Callback() { // from class: rg.h1
                 @Override // com.roblox.protocols.webview.DomainAllowListChecker.Callback
                 public final void onResult(DomainAllowListChecker.a aVar) {
                     com.roblox.client.c.J2(aVar);
@@ -1060,7 +1111,7 @@ public class c extends x0 implements SwipeRefreshLayout.j {
     }
 
     public final boolean s3(String str) {
-        zj.b bVar = new zj.b("rbx.web");
+        xj.b bVar = new xj.b("rbx.web");
         if (!bVar.b(str)) {
             return false;
         }
@@ -1069,12 +1120,6 @@ public class c extends x0 implements SwipeRefreshLayout.j {
     }
 
     public void t3(String str) {
-    }
-
-    @Override // sg.x0, dk.e.b
-    public void u(ol.a aVar) {
-        super.u(aVar);
-        this.I0.setBackgroundColor(this.Z0.a(fk.c.c().g()));
     }
 
     public void u3() {
@@ -1094,12 +1139,12 @@ public class c extends x0 implements SwipeRefreshLayout.j {
     }
 
     public final void z3(final String str, final boolean z10) {
-        DomainAllowListChecker domainAllowListChecker = DomainAllowListChecker.f9727a;
+        DomainAllowListChecker domainAllowListChecker = DomainAllowListChecker.f9808a;
         if (!domainAllowListChecker.isKnownTrustedDomain(str, this.Y0)) {
-            domainAllowListChecker.checkDomainAllowList(str, this.Y0, new DomainAllowListChecker.Callback() { // from class: sg.b1
+            domainAllowListChecker.checkDomainAllowList(str, this.Y0, new DomainAllowListChecker.Callback() { // from class: rg.b1
                 @Override // com.roblox.protocols.webview.DomainAllowListChecker.Callback
                 public final void onResult(DomainAllowListChecker.a aVar) {
-                    this.f30739a.o3(z10, str, aVar);
+                    this.f30341a.o3(z10, str, aVar);
                 }
             });
             return;

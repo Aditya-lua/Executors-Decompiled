@@ -8,29 +8,29 @@ import java.util.List;
 public class m extends a<n7.o, Path> {
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final n7.o f20317i;
+    public final n7.o f20433i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final Path f20318j;
+    public final Path f20434j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public Path f20319k;
+    public Path f20435k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public Path f20320l;
+    public Path f20436l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public List<s> f20321m;
+    public List<s> f20437m;
 
     public m(List<t7.a<n7.o>> list) {
         super(list);
-        this.f20317i = new n7.o();
-        this.f20318j = new Path();
+        this.f20433i = new n7.o();
+        this.f20434j = new Path();
     }
 
     @Override // i7.a
     public boolean p() {
-        List<s> list = this.f20321m;
+        List<s> list = this.f20437m;
         return (list == null || list.isEmpty()) ? false : true;
     }
 
@@ -48,35 +48,35 @@ public class m extends a<n7.o, Path> {
     /* JADX INFO: renamed from: r, reason: merged with bridge method [inline-methods] */
     public Path i(t7.a<n7.o> aVar, float f10) {
         n7.o oVar = aVar.b;
-        n7.o oVar2 = aVar.f31671c;
-        this.f20317i.c(oVar, oVar2 == null ? oVar : oVar2, f10);
-        n7.o oVarD = this.f20317i;
-        List<s> list = this.f20321m;
+        n7.o oVar2 = aVar.f32190c;
+        this.f20433i.c(oVar, oVar2 == null ? oVar : oVar2, f10);
+        n7.o oVarD = this.f20433i;
+        List<s> list = this.f20437m;
         if (list != null) {
             for (int size = list.size() - 1; size >= 0; size--) {
-                oVarD = this.f20321m.get(size).d(oVarD);
+                oVarD = this.f20437m.get(size).d(oVarD);
             }
         }
-        s7.j.h(oVarD, this.f20318j);
-        if (this.f20288e == null) {
-            return this.f20318j;
+        s7.j.h(oVarD, this.f20434j);
+        if (this.f20404e == null) {
+            return this.f20434j;
         }
-        if (this.f20319k == null) {
-            this.f20319k = new Path();
-            this.f20320l = new Path();
+        if (this.f20435k == null) {
+            this.f20435k = new Path();
+            this.f20436l = new Path();
         }
-        s7.j.h(oVar, this.f20319k);
+        s7.j.h(oVar, this.f20435k);
         if (oVar2 != null) {
-            s7.j.h(oVar2, this.f20320l);
+            s7.j.h(oVar2, this.f20436l);
         }
-        t7.c<A> cVar = this.f20288e;
-        float f11 = aVar.f31675g;
-        float fFloatValue = aVar.f31676h.floatValue();
-        Path path = this.f20319k;
-        return (Path) cVar.b(f11, fFloatValue, path, oVar2 == null ? path : this.f20320l, f10, e(), f());
+        t7.c<A> cVar = this.f20404e;
+        float f11 = aVar.f32194g;
+        float fFloatValue = aVar.f32195h.floatValue();
+        Path path = this.f20435k;
+        return (Path) cVar.b(f11, fFloatValue, path, oVar2 == null ? path : this.f20436l, f10, e(), f());
     }
 
     public void s(List<s> list) {
-        this.f20321m = list;
+        this.f20437m = list;
     }
 }

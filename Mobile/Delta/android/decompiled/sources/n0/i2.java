@@ -9,34 +9,34 @@ import java.util.List;
 public interface i2 extends l3 {
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public static final n1.a<Integer> f24684m = n1.a.a("camerax.core.imageOutput.targetAspectRatio", g0.d.class);
+    public static final n1.a<Integer> f25505m = n1.a.a("camerax.core.imageOutput.targetAspectRatio", g0.d.class);
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public static final n1.a<Integer> f24685n;
+    public static final n1.a<Integer> f25506n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public static final n1.a<Integer> f24686o;
+    public static final n1.a<Integer> f25507o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public static final n1.a<Integer> f24687p;
+    public static final n1.a<Integer> f25508p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public static final n1.a<Size> f24688q;
+    public static final n1.a<Size> f25509q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public static final n1.a<Size> f24689r;
+    public static final n1.a<Size> f25510r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public static final n1.a<Size> f24690s;
+    public static final n1.a<Size> f25511s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public static final n1.a<List<Pair<Integer, Size[]>>> f24691t;
+    public static final n1.a<List<Pair<Integer, Size[]>>> f25512t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public static final n1.a<a1.c> f24692u;
+    public static final n1.a<a1.c> f25513u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public static final n1.a<List<Size>> f24693v;
+    public static final n1.a<List<Size>> f25514v;
 
     public interface a<B> {
         B b(a1.c cVar);
@@ -48,15 +48,15 @@ public interface i2 extends l3 {
 
     static {
         Class cls = Integer.TYPE;
-        f24685n = n1.a.a("camerax.core.imageOutput.targetRotation", cls);
-        f24686o = n1.a.a("camerax.core.imageOutput.appTargetRotation", cls);
-        f24687p = n1.a.a("camerax.core.imageOutput.mirrorMode", cls);
-        f24688q = n1.a.a("camerax.core.imageOutput.targetResolution", Size.class);
-        f24689r = n1.a.a("camerax.core.imageOutput.defaultResolution", Size.class);
-        f24690s = n1.a.a("camerax.core.imageOutput.maxResolution", Size.class);
-        f24691t = n1.a.a("camerax.core.imageOutput.supportedResolutions", List.class);
-        f24692u = n1.a.a("camerax.core.imageOutput.resolutionSelector", a1.c.class);
-        f24693v = n1.a.a("camerax.core.imageOutput.customOrderedResolutions", List.class);
+        f25506n = n1.a.a("camerax.core.imageOutput.targetRotation", cls);
+        f25507o = n1.a.a("camerax.core.imageOutput.appTargetRotation", cls);
+        f25508p = n1.a.a("camerax.core.imageOutput.mirrorMode", cls);
+        f25509q = n1.a.a("camerax.core.imageOutput.targetResolution", Size.class);
+        f25510r = n1.a.a("camerax.core.imageOutput.defaultResolution", Size.class);
+        f25511s = n1.a.a("camerax.core.imageOutput.maxResolution", Size.class);
+        f25512t = n1.a.a("camerax.core.imageOutput.supportedResolutions", List.class);
+        f25513u = n1.a.a("camerax.core.imageOutput.resolutionSelector", a1.c.class);
+        f25514v = n1.a.a("camerax.core.imageOutput.customOrderedResolutions", List.class);
     }
 
     static void Y(i2 i2Var) {
@@ -73,19 +73,19 @@ public interface i2 extends l3 {
     }
 
     default boolean A() {
-        return a(f24684m);
+        return a(f25505m);
     }
 
     default int C() {
-        return ((Integer) e(f24684m)).intValue();
+        return ((Integer) e(f25505m)).intValue();
     }
 
     default int J(int i10) {
-        return ((Integer) h(f24685n, Integer.valueOf(i10))).intValue();
+        return ((Integer) h(f25506n, Integer.valueOf(i10))).intValue();
     }
 
     default List<Size> N(List<Size> list) {
-        List list2 = (List) h(f24693v, list);
+        List list2 = (List) h(f25514v, list);
         if (list2 != null) {
             return new ArrayList(list2);
         }
@@ -93,34 +93,34 @@ public interface i2 extends l3 {
     }
 
     default Size R(Size size) {
-        return (Size) h(f24689r, size);
+        return (Size) h(f25510r, size);
     }
 
     default Size V(Size size) {
-        return (Size) h(f24688q, size);
+        return (Size) h(f25509q, size);
     }
 
     default int g0(int i10) {
-        return ((Integer) h(f24687p, Integer.valueOf(i10))).intValue();
+        return ((Integer) h(f25508p, Integer.valueOf(i10))).intValue();
     }
 
     default Size i(Size size) {
-        return (Size) h(f24690s, size);
+        return (Size) h(f25511s, size);
     }
 
     default List<Pair<Integer, Size[]>> l(List<Pair<Integer, Size[]>> list) {
-        return (List) h(f24691t, list);
+        return (List) h(f25512t, list);
     }
 
     default a1.c m() {
-        return (a1.c) e(f24692u);
+        return (a1.c) e(f25513u);
     }
 
     default a1.c q(a1.c cVar) {
-        return (a1.c) h(f24692u, cVar);
+        return (a1.c) h(f25513u, cVar);
     }
 
     default int t(int i10) {
-        return ((Integer) h(f24686o, Integer.valueOf(i10))).intValue();
+        return ((Integer) h(f25507o, Integer.valueOf(i10))).intValue();
     }
 }

@@ -11,7 +11,7 @@ public final class m {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final m f28106a = new m();
+    public static final m f28325a = new m();
 
     @NotNull
     public static final <I, O> androidx.p000lifecycle.a0<O> a(@NotNull androidx.p000lifecycle.a0<I> source, @NotNull t.a<I, O> mapFunction) {

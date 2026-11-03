@@ -9,9 +9,9 @@ public final class t {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final Extras.c<Boolean> f22219a = new Extras.c<>(Boolean.TRUE);
+    public static final Extras.c<Boolean> f22443a = new Extras.c<>(Boolean.TRUE);
 
     public static final boolean a(@NotNull w.Options options) {
-        return ((Boolean) m.c(options.getDefaults().getExtras(), f22219a)).booleanValue();
+        return ((Boolean) m.c(options.getDefaults().getExtras(), f22443a)).booleanValue();
     }
 }

@@ -10,7 +10,7 @@ public final class a {
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
     @Deprecated
-    public static final k9.a<c> f35763a;
+    public static final k9.a<c> f36620a;
 
     @NonNull
     public static final k9.a<GoogleSignInOptions> b;
@@ -18,47 +18,47 @@ public final class a {
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NonNull
     @Deprecated
-    public static final b9.a f35764c;
+    public static final b9.a f36621c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NonNull
-    public static final c9.a f35765d;
+    public static final c9.a f36622d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
     @NonNull
-    public static final k9.a.g f35766e;
+    public static final k9.a.g f36623e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NonNull
-    public static final k9.a.g f35767f;
+    public static final k9.a.g f36624f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final k9.a.AbstractC0392a f35768g;
+    public static final k9.a.AbstractC0391a f36625g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final k9.a.AbstractC0392a f35769h;
+    public static final k9.a.AbstractC0391a f36626h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
     @NonNull
-    public static final k9.a f35770i;
+    public static final k9.a f36627i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final u f35771j;
+    public static final u f36628j;
 
     static {
         k9.a.g gVar = new k9.a.g();
-        f35766e = gVar;
+        f36623e = gVar;
         k9.a.g gVar2 = new k9.a.g();
-        f35767f = gVar2;
+        f36624f = gVar2;
         d dVar = new d();
-        f35768g = dVar;
+        f36625g = dVar;
         e eVar = new e();
-        f35769h = eVar;
-        f35763a = b.f35772a;
-        f35770i = new k9.a("Auth.CREDENTIALS_API", dVar, gVar);
+        f36626h = eVar;
+        f36620a = b.f36629a;
+        f36627i = new k9.a("Auth.CREDENTIALS_API", dVar, gVar);
         b = new k9.a<>("Auth.GOOGLE_SIGN_IN_API", eVar, gVar2);
-        f35764c = b.b;
-        f35771j = new u();
-        f35765d = new d9.g();
+        f36621c = b.b;
+        f36628j = new u();
+        f36622d = new d9.g();
     }
 }

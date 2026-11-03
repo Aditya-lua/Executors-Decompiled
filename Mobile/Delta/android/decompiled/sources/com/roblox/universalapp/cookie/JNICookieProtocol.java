@@ -9,11 +9,11 @@ public class JNICookieProtocol {
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final JNICookieProtocol f9788a = new JNICookieProtocol();
+        public static final JNICookieProtocol f9869a = new JNICookieProtocol();
     }
 
     public static JNICookieProtocol a() {
-        return a.f9788a;
+        return a.f9869a;
     }
 
     public native void updateOnSetCookieHandler(OnSetCookieHandler onSetCookieHandler);

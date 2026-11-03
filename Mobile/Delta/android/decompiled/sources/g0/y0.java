@@ -6,10 +6,10 @@ public final class y0 extends x0 {
     public class a implements r0.c<Void> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ androidx.camera.core.d f17628a;
+        public final /* synthetic */ androidx.camera.core.d f18167a;
 
         public a(androidx.camera.core.d dVar) {
-            this.f17628a = dVar;
+            this.f18167a = dVar;
         }
 
         @Override // r0.c
@@ -19,7 +19,7 @@ public final class y0 extends x0 {
 
         @Override // r0.c
         public void onFailure(Throwable th2) {
-            this.f17628a.close();
+            this.f18167a.close();
         }
     }
 

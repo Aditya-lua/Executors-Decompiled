@@ -4,7 +4,7 @@ package eb;
 public abstract class i2 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final char[] f15280a = "0123456789abcdef".toCharArray();
+    public static final char[] f15894a = "0123456789abcdef".toCharArray();
 
     public abstract int a();
 
@@ -43,7 +43,7 @@ public abstract class i2 {
         int length = bArrE.length;
         StringBuilder sb2 = new StringBuilder(length + length);
         for (byte b : bArrE) {
-            char[] cArr = f15280a;
+            char[] cArr = f15894a;
             sb2.append(cArr[(b >> 4) & 15]);
             sb2.append(cArr[b & 15]);
         }

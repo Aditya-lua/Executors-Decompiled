@@ -17,10 +17,10 @@ public enum k7 implements kb {
 
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f6586a;
+    public final int f6659a;
 
     k7(int i10) {
-        this.f6586a = i10;
+        this.f6659a = i10;
     }
 
     public static k7 a(int i10) {
@@ -59,11 +59,11 @@ public enum k7 implements kb {
 
     @Override // java.lang.Enum
     public final String toString() {
-        return Integer.toString(this.f6586a);
+        return Integer.toString(this.f6659a);
     }
 
     @Override // com.google.android.gms.internal.measurement.kb
     public final int zza() {
-        return this.f6586a;
+        return this.f6659a;
     }
 }

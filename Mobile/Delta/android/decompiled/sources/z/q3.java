@@ -10,71 +10,71 @@ import android.view.Display;
 public class q3 {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final Size f36764e = new Size(1920, 1080);
+    public static final Size f37459e = new Size(1920, 1080);
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final Size f36765f = new Size(320, 240);
+    public static final Size f37460f = new Size(320, 240);
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final Size f36766g = new Size(640, 480);
+    public static final Size f37461g = new Size(640, 480);
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final Object f36767h = new Object();
+    public static final Object f37462h = new Object();
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static volatile q3 f36768i;
+    public static volatile q3 f37463i;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final DisplayManager f36769a;
+    public final DisplayManager f37464a;
     public volatile Size b = null;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final d0.k f36770c = new d0.k();
+    public final d0.k f37465c = new d0.k();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final d0.d f36771d = new d0.d();
+    public final d0.d f37466d = new d0.d();
 
     public q3(Context context) {
-        this.f36769a = (DisplayManager) context.getSystemService("display");
+        this.f37464a = (DisplayManager) context.getSystemService("display");
     }
 
     public static q3 c(Context context) {
-        if (f36768i == null) {
-            synchronized (f36767h) {
+        if (f37463i == null) {
+            synchronized (f37462h) {
                 try {
-                    if (f36768i == null) {
-                        f36768i = new q3(context);
+                    if (f37463i == null) {
+                        f37463i = new q3(context);
                     }
                 } catch (Throwable th2) {
                     throw th2;
                 }
             }
         }
-        return f36768i;
+        return f37463i;
     }
 
     public final Size a() {
         Size sizeB = b();
         int width = sizeB.getWidth() * sizeB.getHeight();
-        Size size = f36764e;
+        Size size = f37459e;
         if (width > size.getWidth() * size.getHeight()) {
             sizeB = size;
         }
-        return this.f36770c.a(sizeB);
+        return this.f37465c.a(sizeB);
     }
 
     public final Size b() {
         Point point = new Point();
         d(false).getRealSize(point);
         Size size = new Size(point.x, point.y);
-        if (w0.d.d(size, f36765f) && (size = this.f36771d.a()) == null) {
-            size = f36766g;
+        if (w0.d.d(size, f37460f) && (size = this.f37466d.a()) == null) {
+            size = f37461g;
         }
         return size.getHeight() > size.getWidth() ? new Size(size.getHeight(), size.getWidth()) : size;
     }
 
     public Display d(boolean z10) {
-        Display[] displays = this.f36769a.getDisplays();
+        Display[] displays = this.f37464a.getDisplays();
         if (displays.length == 1) {
             return displays[0];
         }

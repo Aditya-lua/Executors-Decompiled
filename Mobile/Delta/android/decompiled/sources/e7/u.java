@@ -18,7 +18,7 @@ public interface u {
 
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f15214g = qt.b.a(a());
+        public static final /* synthetic */ ot.a f15828g = ot.b.a(a());
     }
 
     @NotNull

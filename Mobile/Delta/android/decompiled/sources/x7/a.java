@@ -8,16 +8,16 @@ import android.os.Parcel;
 public class a implements IInterface {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final IBinder f35155a;
+    public final IBinder f35653a;
     public final String b = "com.google.android.finsky.externalreferrer.IGetInstallReferrerService";
 
     public a(IBinder iBinder) {
-        this.f35155a = iBinder;
+        this.f35653a = iBinder;
     }
 
     @Override // android.os.IInterface
     public final IBinder asBinder() {
-        return this.f35155a;
+        return this.f35653a;
     }
 
     public final Parcel r2() {
@@ -30,7 +30,7 @@ public class a implements IInterface {
         Parcel parcelObtain = Parcel.obtain();
         try {
             try {
-                this.f35155a.transact(1, parcel, parcelObtain, 0);
+                this.f35653a.transact(1, parcel, parcelObtain, 0);
                 parcelObtain.readException();
                 parcel.recycle();
                 return parcelObtain;

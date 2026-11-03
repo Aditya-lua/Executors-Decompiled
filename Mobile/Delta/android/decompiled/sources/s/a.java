@@ -8,15 +8,15 @@ import java.util.Map;
 public class a<K, V> extends b<K, V> {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final HashMap<K, b.c<K, V>> f30388e = new HashMap<>();
+    public final HashMap<K, b.c<K, V>> f30935e = new HashMap<>();
 
     @Override // s.b
     public b.c<K, V> b(K k10) {
-        return this.f30388e.get(k10);
+        return this.f30935e.get(k10);
     }
 
     public boolean contains(K k10) {
-        return this.f30388e.containsKey(k10);
+        return this.f30935e.containsKey(k10);
     }
 
     @Override // s.b
@@ -25,20 +25,20 @@ public class a<K, V> extends b<K, V> {
         if (cVarB != null) {
             return cVarB.b;
         }
-        this.f30388e.put(k10, e(k10, v5));
+        this.f30935e.put(k10, e(k10, v5));
         return null;
     }
 
     @Override // s.b
     public V g(@NonNull K k10) {
         V v5 = (V) super.g(k10);
-        this.f30388e.remove(k10);
+        this.f30935e.remove(k10);
         return v5;
     }
 
     public Map.Entry<K, V> h(K k10) {
         if (contains(k10)) {
-            return this.f30388e.get(k10).f30394d;
+            return this.f30935e.get(k10).f30941d;
         }
         return null;
     }

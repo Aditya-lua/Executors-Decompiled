@@ -22,33 +22,33 @@ import n0.z1;
 public class h implements z1 {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final z1 f18505c;
+    public final z1 f18992c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Set<x> f18506d;
+    public final Set<x> f18993d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Set<Size> f18507e;
+    public final Set<Size> f18994e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final Set<k0> f18508f;
+    public final Set<k0> f18995f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final r1.a f18509g;
+    public final r1.a f18996g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final Map<Integer, a2> f18510h = new HashMap();
+    public final Map<Integer, a2> f18997h = new HashMap();
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final Map<k0, o> f18511i = new HashMap();
+    public final Map<k0, o> f18998i = new HashMap();
 
     public h(z1 z1Var, Collection<x> collection, Collection<k0> collection2, Collection<Size> collection3, r1.a aVar) {
         c(collection2);
-        this.f18505c = z1Var;
-        this.f18506d = new HashSet(collection);
-        this.f18508f = new HashSet(collection2);
-        this.f18507e = new HashSet(collection3);
-        this.f18509g = aVar;
+        this.f18992c = z1Var;
+        this.f18993d = new HashSet(collection);
+        this.f18995f = new HashSet(collection2);
+        this.f18994e = new HashSet(collection3);
+        this.f18996g = aVar;
     }
 
     public static void c(Collection<k0> collection) {
@@ -60,15 +60,15 @@ public class h implements z1 {
     }
 
     private a2 g(int i10) {
-        if (this.f18510h.containsKey(Integer.valueOf(i10))) {
-            return this.f18510h.get(Integer.valueOf(i10));
+        if (this.f18997h.containsKey(Integer.valueOf(i10))) {
+            return this.f18997h.get(Integer.valueOf(i10));
         }
-        a2 a2VarB = this.f18505c.b(i10);
+        a2 a2VarB = this.f18992c.b(i10);
         x.b bVarE = e(i10);
         if (bVarE != null && !h(a2VarB)) {
             a2VarB = j(a2VarB, d(bVarE));
         }
-        this.f18510h.put(Integer.valueOf(i10), a2VarB);
+        this.f18997h.put(Integer.valueOf(i10), a2VarB);
         return a2VarB;
     }
 
@@ -114,16 +114,16 @@ public class h implements z1 {
 
     public final a2 d(x.b bVar) {
         i iVarC;
-        x2.g.a(this.f18506d.contains(bVar));
-        a2 a2VarB = this.f18505c.b(bVar.e(1));
+        x2.g.a(this.f18993d.contains(bVar));
+        a2 a2VarB = this.f18992c.b(bVar.e(1));
         for (Size size : bVar.f()) {
-            if (this.f18507e.contains(size)) {
+            if (this.f18994e.contains(size)) {
                 TreeMap treeMap = new TreeMap(new p0.e());
                 ArrayList arrayList = new ArrayList();
-                for (k0 k0Var : this.f18508f) {
+                for (k0 k0Var : this.f18995f) {
                     if (!i(a2VarB, k0Var) && (iVarC = f(k0Var).c(size)) != null) {
                         a2.c cVarK = iVarC.k();
-                        r1 r1VarA = this.f18509g.a(cVarK.i());
+                        r1 r1VarA = this.f18996g.a(cVarK.i());
                         if (r1VarA != null && r1VarA.e(size.getWidth(), size.getHeight())) {
                             treeMap.put(cVarK.k(), iVarC);
                             arrayList.add(n1.c.a(cVarK, size, r1VarA.g()));
@@ -142,7 +142,7 @@ public class h implements z1 {
     }
 
     public final x.b e(int i10) {
-        Iterator<x> it = this.f18506d.iterator();
+        Iterator<x> it = this.f18993d.iterator();
         while (it.hasNext()) {
             x.b bVar = (x.b) it.next();
             if (bVar.e(1) == i10) {
@@ -153,13 +153,13 @@ public class h implements z1 {
     }
 
     public final o f(k0 k0Var) {
-        if (this.f18511i.containsKey(k0Var)) {
-            o oVar = this.f18511i.get(k0Var);
+        if (this.f18998i.containsKey(k0Var)) {
+            o oVar = this.f18998i.get(k0Var);
             Objects.requireNonNull(oVar);
             return oVar;
         }
-        o oVar2 = new o(new e(this.f18505c, k0Var), 1);
-        this.f18511i.put(k0Var, oVar2);
+        o oVar2 = new o(new e(this.f18992c, k0Var), 1);
+        this.f18998i.put(k0Var, oVar2);
         return oVar2;
     }
 
@@ -167,7 +167,7 @@ public class h implements z1 {
         if (a2Var == null) {
             return false;
         }
-        Iterator<k0> it = this.f18508f.iterator();
+        Iterator<k0> it = this.f18995f.iterator();
         while (it.hasNext()) {
             if (!i(a2Var, it.next())) {
                 return false;

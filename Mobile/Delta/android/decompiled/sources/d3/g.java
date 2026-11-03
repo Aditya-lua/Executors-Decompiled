@@ -6,11 +6,11 @@ import android.widget.ListView;
 public class g extends a {
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public final ListView f14417s;
+    public final ListView f14397s;
 
     public g(ListView listView) {
         super(listView);
-        this.f14417s = listView;
+        this.f14397s = listView;
     }
 
     @Override // d3.a
@@ -20,7 +20,7 @@ public class g extends a {
 
     @Override // d3.a
     public boolean b(int i10) {
-        ListView listView = this.f14417s;
+        ListView listView = this.f14397s;
         int count = listView.getCount();
         if (count == 0) {
             return false;
@@ -45,6 +45,6 @@ public class g extends a {
 
     @Override // d3.a
     public void j(int i10, int i11) {
-        this.f14417s.scrollListBy(i11);
+        this.f14397s.scrollListBy(i11);
     }
 }

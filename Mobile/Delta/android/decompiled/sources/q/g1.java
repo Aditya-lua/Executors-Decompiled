@@ -15,11 +15,11 @@ import java.lang.reflect.Method;
 public class g1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static boolean f28983a;
+    public static boolean f29336a;
     public static Method b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final boolean f28984c;
+    public static final boolean f29337c;
 
     public static class a {
         public static void a(@NonNull View view, @NonNull Rect rect, @NonNull Rect rect2) {
@@ -29,7 +29,7 @@ public class g1 {
     }
 
     static {
-        f28984c = Build.VERSION.SDK_INT >= 27;
+        f29337c = Build.VERSION.SDK_INT >= 27;
     }
 
     public static void a(@NonNull View view, @NonNull Rect rect, @NonNull Rect rect2) {
@@ -37,8 +37,8 @@ public class g1 {
             a.a(view, rect, rect2);
             return;
         }
-        if (!f28983a) {
-            f28983a = true;
+        if (!f29336a) {
+            f29336a = true;
             try {
                 Method declaredMethod = View.class.getDeclaredMethod("computeFitSystemWindows", Rect.class, Rect.class);
                 b = declaredMethod;

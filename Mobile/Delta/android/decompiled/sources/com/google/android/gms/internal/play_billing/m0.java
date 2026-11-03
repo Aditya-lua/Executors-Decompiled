@@ -15,7 +15,7 @@ import org.json.JSONException;
 public final class m0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final int f7176a = Runtime.getRuntime().availableProcessors();
+    public static final int f7250a = Runtime.getRuntime().availableProcessors();
 
     public static int a(Intent intent, String str) {
         if (intent != null) {
@@ -43,7 +43,7 @@ public final class m0 {
     }
 
     public static Bundle c(Bundle bundle, String str, String str2, long j10) {
-        bundle.putString("playBillingLibraryVersion", u7.a.f32091a);
+        bundle.putString("playBillingLibraryVersion", u7.a.f32744a);
         if (str2 != null) {
             bundle.putString("playBillingLibraryWrapperVersion", str2);
         }
@@ -69,7 +69,7 @@ public final class m0 {
 
     public static Bundle f(com.android.billingclient.api.c cVar, boolean z10, boolean z11, boolean z12, boolean z13, boolean z14, String str, String str2, long j10, String str3, long j11) {
         Bundle bundle = new Bundle();
-        c(bundle, u7.a.f32091a, str2, j10);
+        c(bundle, u7.a.f32744a, str2, j10);
         bundle.putLong("billingClientTransactionId", j11);
         if (cVar.d() != 0) {
             bundle.putInt("prorationMode", cVar.d());
@@ -129,14 +129,14 @@ public final class m0 {
 
     public static Bundle g(String str, String str2, ArrayList arrayList, String str3, String str4, a aVar, long j10) {
         Bundle bundle = new Bundle();
-        c(bundle, u7.a.f32091a, str2, j10);
+        c(bundle, u7.a.f32744a, str2, j10);
         bundle.putBoolean("enablePendingPurchases", true);
         bundle.putString("SKU_DETAILS_RESPONSE_FORMAT", "PRODUCT_DETAILS");
         bundle.putStringArrayList("PRODUCT_TYPES_TO_RETURN_MULTIPLE_OFFERS", new ArrayList<>(n0.m("subs", "inapp")));
         bundle.putStringArrayList("PRODUCT_TYPES_TO_RETURN_PREORDER_OFFERS", new ArrayList<>(n0.l("inapp")));
         bundle.putStringArrayList("PRODUCT_TYPES_TO_RETURN_RENT_OFFERS", new ArrayList<>(n0.l("inapp")));
         bundle.putBoolean("SHOULD_RETURN_UNFETCHED_PRODUCTS", true);
-        if (aVar.f6979a) {
+        if (aVar.f7053a) {
             bundle.putBoolean("enablePendingPurchaseForSubscriptions", true);
         }
         ArrayList<String> arrayList2 = new ArrayList<>();

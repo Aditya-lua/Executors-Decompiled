@@ -6,20 +6,20 @@ public final class l1 {
     public class a implements b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ h f8509a;
+        public final /* synthetic */ h f8583a;
 
         public a(h hVar) {
-            this.f8509a = hVar;
+            this.f8583a = hVar;
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.l1.b
         public byte a(int i10) {
-            return this.f8509a.b(i10);
+            return this.f8583a.b(i10);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.l1.b
         public int size() {
-            return this.f8509a.size();
+            return this.f8583a.size();
         }
     }
 

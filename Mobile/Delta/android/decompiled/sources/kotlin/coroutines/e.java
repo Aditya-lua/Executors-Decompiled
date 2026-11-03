@@ -13,7 +13,7 @@ public final class e implements CoroutineContext, Serializable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final e f22525a = new e();
+    public static final e f22980a = new e();
 
     @Override // kotlin.coroutines.CoroutineContext
     public <R> R fold(R initial, @NotNull Function2<? super R, ? super CoroutineContext.Element, ? extends R> operation) {

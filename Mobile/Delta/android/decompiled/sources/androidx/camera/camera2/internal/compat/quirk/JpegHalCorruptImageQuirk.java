@@ -12,9 +12,9 @@ import java.util.Set;
 public final class JpegHalCorruptImageQuirk implements SoftwareJpegEncodingPreferredQuirk {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Set<String> f1341a = new HashSet(Arrays.asList("heroqltevzw", "heroqltetmo", "k61v1_basic_ref"));
+    public static final Set<String> f1186a = new HashSet(Arrays.asList("heroqltevzw", "heroqltetmo", "k61v1_basic_ref"));
 
     public static boolean g(c0 c0Var) {
-        return f1341a.contains(Build.DEVICE.toLowerCase(Locale.US));
+        return f1186a.contains(Build.DEVICE.toLowerCase(Locale.US));
     }
 }

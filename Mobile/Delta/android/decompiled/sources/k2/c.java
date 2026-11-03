@@ -11,10 +11,10 @@ public class c {
     public static class a extends c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final ActivityOptions f22019a;
+        public final ActivityOptions f22243a;
 
         public a(ActivityOptions activityOptions) {
-            this.f22019a = activityOptions;
+            this.f22243a = activityOptions;
         }
 
         @Override // k2.c
@@ -22,18 +22,18 @@ public class c {
         public c b(int i10) {
             int i11 = Build.VERSION.SDK_INT;
             if (i11 >= 34) {
-                this.f22019a.setPendingIntentBackgroundActivityStartMode(i10);
+                this.f22243a.setPendingIntentBackgroundActivityStartMode(i10);
                 return this;
             }
             if (i11 >= 33) {
-                this.f22019a.setPendingIntentBackgroundActivityLaunchAllowed(i10 != 2);
+                this.f22243a.setPendingIntentBackgroundActivityLaunchAllowed(i10 != 2);
             }
             return this;
         }
 
         @Override // k2.c
         public Bundle c() {
-            return this.f22019a.toBundle();
+            return this.f22243a.toBundle();
         }
     }
 

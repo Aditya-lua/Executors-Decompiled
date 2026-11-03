@@ -7,20 +7,20 @@ import java.util.Map;
 public final class b6 implements h6 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final x5 f7009a;
+    public final x5 f7083a;
     public final t6 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final boolean f7010c;
+    public final boolean f7084c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final g4 f7011d;
+    public final g4 f7085d;
 
     public b6(t6 t6Var, g4 g4Var, x5 x5Var) {
         this.b = t6Var;
-        this.f7010c = x5Var instanceof q4;
-        this.f7011d = g4Var;
-        this.f7009a = x5Var;
+        this.f7084c = x5Var instanceof q4;
+        this.f7085d = g4Var;
+        this.f7083a = x5Var;
     }
 
     public static b6 g(t6 t6Var, g4 g4Var, x5 x5Var) {
@@ -35,14 +35,14 @@ public final class b6 implements h6 {
     @Override // com.google.android.gms.internal.play_billing.h6
     public final void b(Object obj) {
         this.b.b(obj);
-        this.f7011d.a(obj);
+        this.f7085d.a(obj);
     }
 
     @Override // com.google.android.gms.internal.play_billing.h6
     public final void c(Object obj, Object obj2) {
         i6.u(this.b, obj, obj2);
-        if (this.f7010c) {
-            i6.t(this.f7011d, obj, obj2);
+        if (this.f7084c) {
+            i6.t(this.f7085d, obj, obj2);
         }
     }
 
@@ -51,7 +51,7 @@ public final class b6 implements h6 {
         if (!((t4) obj).zzc.equals(((t4) obj2).zzc)) {
             return false;
         }
-        if (this.f7010c) {
+        if (this.f7084c) {
             return ((q4) obj).zzb.equals(((q4) obj2).zzb);
         }
         return true;
@@ -87,18 +87,18 @@ public final class b6 implements h6 {
     @Override // com.google.android.gms.internal.play_billing.h6
     public final int zza(Object obj) {
         int iB = ((t4) obj).zzc.b();
-        return this.f7010c ? iB + ((q4) obj).zzb.d() : iB;
+        return this.f7084c ? iB + ((q4) obj).zzb.d() : iB;
     }
 
     @Override // com.google.android.gms.internal.play_billing.h6
     public final int zzb(Object obj) {
         int iHashCode = ((t4) obj).zzc.hashCode();
-        return this.f7010c ? (iHashCode * 53) + ((q4) obj).zzb.f7119a.hashCode() : iHashCode;
+        return this.f7084c ? (iHashCode * 53) + ((q4) obj).zzb.f7193a.hashCode() : iHashCode;
     }
 
     @Override // com.google.android.gms.internal.play_billing.h6
     public final Object zze() {
-        x5 x5Var = this.f7009a;
+        x5 x5Var = this.f7083a;
         return x5Var instanceof t4 ? ((t4) x5Var).u() : x5Var.zzw().g();
     }
 }

@@ -1,5 +1,6 @@
 package com.google.android.material.internal;
 
+import ad.g;
 import android.R;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -21,13 +22,12 @@ import androidx.appcompat.widget.b;
 import androidx.core.view.o0;
 import com.google.mlkit.vision.barcode.common.Barcode;
 import d3.i;
-import hc.d;
-import hc.e;
-import hc.f;
+import ic.d;
+import ic.e;
+import ic.f;
 import n2.h;
 import q.e1;
 import y2.p;
-import zc.g;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class NavigationMenuItemView extends g implements j.a {
@@ -40,19 +40,19 @@ public class NavigationMenuItemView extends g implements j.a {
     public final androidx.core.view.a F;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public int f8034v;
+    public int f8108v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public boolean f8035w;
+    public boolean f8109w;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public boolean f8036x;
+    public boolean f8110x;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public boolean f8037y;
+    public boolean f8111y;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public final CheckedTextView f8038z;
+    public final CheckedTextView f8112z;
 
     public class a extends androidx.core.view.a {
         public a() {
@@ -61,7 +61,7 @@ public class NavigationMenuItemView extends g implements j.a {
         @Override // androidx.core.view.a
         public void g(View view, @NonNull p pVar) {
             super.g(view, pVar);
-            pVar.j0(NavigationMenuItemView.this.f8036x);
+            pVar.j0(NavigationMenuItemView.this.f8110x);
         }
     }
 
@@ -72,7 +72,7 @@ public class NavigationMenuItemView extends g implements j.a {
     private void setActionView(View view) {
         if (view != null) {
             if (this.A == null) {
-                this.A = (FrameLayout) ((ViewStub) findViewById(f.f18865g)).inflate();
+                this.A = (FrameLayout) ((ViewStub) findViewById(f.f20687g)).inflate();
             }
             if (view.getParent() != null) {
                 ((ViewGroup) view.getParent()).removeView(view);
@@ -84,7 +84,7 @@ public class NavigationMenuItemView extends g implements j.a {
 
     public final StateListDrawable A() {
         TypedValue typedValue = new TypedValue();
-        if (!getContext().getTheme().resolveAttribute(i.a.f19908x, typedValue, true)) {
+        if (!getContext().getTheme().resolveAttribute(i.a.f20024x, typedValue, true)) {
             return null;
         }
         StateListDrawable stateListDrawable = new StateListDrawable();
@@ -140,17 +140,17 @@ public class NavigationMenuItemView extends g implements j.a {
 
     public void setCheckable(boolean z10) {
         refreshDrawableState();
-        if (this.f8036x != z10) {
-            this.f8036x = z10;
-            this.F.l(this.f8038z, Barcode.FORMAT_PDF417);
+        if (this.f8110x != z10) {
+            this.f8110x = z10;
+            this.F.l(this.f8112z, Barcode.FORMAT_PDF417);
         }
     }
 
     public void setChecked(boolean z10) {
         refreshDrawableState();
-        this.f8038z.setChecked(z10);
-        CheckedTextView checkedTextView = this.f8038z;
-        checkedTextView.setTypeface(checkedTextView.getTypeface(), (z10 && this.f8037y) ? 1 : 0);
+        this.f8112z.setChecked(z10);
+        CheckedTextView checkedTextView = this.f8112z;
+        checkedTextView.setTypeface(checkedTextView.getTypeface(), (z10 && this.f8111y) ? 1 : 0);
     }
 
     public void setHorizontalPadding(int i10) {
@@ -167,28 +167,28 @@ public class NavigationMenuItemView extends g implements j.a {
                 drawable = q2.a.r(drawable).mutate();
                 q2.a.o(drawable, this.C);
             }
-            int i10 = this.f8034v;
+            int i10 = this.f8108v;
             drawable.setBounds(0, 0, i10, i10);
-        } else if (this.f8035w) {
+        } else if (this.f8109w) {
             if (this.E == null) {
-                Drawable drawableE = h.e(getResources(), e.f18859m, getContext().getTheme());
+                Drawable drawableE = h.e(getResources(), e.f20681m, getContext().getTheme());
                 this.E = drawableE;
                 if (drawableE != null) {
-                    int i11 = this.f8034v;
+                    int i11 = this.f8108v;
                     drawableE.setBounds(0, 0, i11, i11);
                 }
             }
             drawable = this.E;
         }
-        i.m(this.f8038z, drawable, null, null, null);
+        i.m(this.f8112z, drawable, null, null, null);
     }
 
     public void setIconPadding(int i10) {
-        this.f8038z.setCompoundDrawablePadding(i10);
+        this.f8112z.setCompoundDrawablePadding(i10);
     }
 
     public void setIconSize(int i10) {
-        this.f8034v = i10;
+        this.f8108v = i10;
     }
 
     public void setIconTintList(ColorStateList colorStateList) {
@@ -201,28 +201,28 @@ public class NavigationMenuItemView extends g implements j.a {
     }
 
     public void setMaxLines(int i10) {
-        this.f8038z.setMaxLines(i10);
+        this.f8112z.setMaxLines(i10);
     }
 
     public void setNeedsEmptyIcon(boolean z10) {
-        this.f8035w = z10;
+        this.f8109w = z10;
     }
 
     public void setTextAppearance(int i10) {
-        i.s(this.f8038z, i10);
+        i.s(this.f8112z, i10);
     }
 
     public void setTextColor(ColorStateList colorStateList) {
-        this.f8038z.setTextColor(colorStateList);
+        this.f8112z.setTextColor(colorStateList);
     }
 
     public void setTitle(CharSequence charSequence) {
-        this.f8038z.setText(charSequence);
+        this.f8112z.setText(charSequence);
     }
 
     public final void z() {
         if (B()) {
-            this.f8038z.setVisibility(8);
+            this.f8112z.setVisibility(8);
             FrameLayout frameLayout = this.A;
             if (frameLayout != null) {
                 b.a aVar = (b.a) frameLayout.getLayoutParams();
@@ -232,7 +232,7 @@ public class NavigationMenuItemView extends g implements j.a {
             }
             return;
         }
-        this.f8038z.setVisibility(0);
+        this.f8112z.setVisibility(0);
         FrameLayout frameLayout2 = this.A;
         if (frameLayout2 != null) {
             b.a aVar2 = (b.a) frameLayout2.getLayoutParams();
@@ -243,14 +243,14 @@ public class NavigationMenuItemView extends g implements j.a {
 
     public NavigationMenuItemView(@NonNull Context context, AttributeSet attributeSet, int i10) {
         super(context, attributeSet, i10);
-        this.f8037y = true;
+        this.f8111y = true;
         a aVar = new a();
         this.F = aVar;
         setOrientation(0);
-        LayoutInflater.from(context).inflate(hc.h.f18889d, (ViewGroup) this, true);
-        setIconSize(context.getResources().getDimensionPixelSize(d.f18816d));
-        CheckedTextView checkedTextView = (CheckedTextView) findViewById(f.f18866h);
-        this.f8038z = checkedTextView;
+        LayoutInflater.from(context).inflate(ic.h.f20711d, (ViewGroup) this, true);
+        setIconSize(context.getResources().getDimensionPixelSize(d.f20638d));
+        CheckedTextView checkedTextView = (CheckedTextView) findViewById(f.f20688h);
+        this.f8112z = checkedTextView;
         checkedTextView.setDuplicateParentStateEnabled(true);
         o0.m0(checkedTextView, aVar);
     }

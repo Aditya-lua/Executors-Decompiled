@@ -7,7 +7,7 @@ import java.util.Arrays;
 public final class r1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final b f2282a;
+    public static final b f2127a;
 
     public static class a {
         public static void h(byte b, byte b10, byte b11, byte b12, char[] cArr, int i10) throws a0 {
@@ -308,15 +308,15 @@ public final class r1 {
     }
 
     static {
-        f2282a = (!e.c() || androidx.datastore.preferences.protobuf.d.c()) ? new c() : new e();
+        f2127a = (!e.c() || androidx.datastore.preferences.protobuf.d.c()) ? new c() : new e();
     }
 
     public static String a(byte[] bArr, int i10, int i11) {
-        return f2282a.a(bArr, i10, i11);
+        return f2127a.a(bArr, i10, i11);
     }
 
     public static int b(String str, byte[] bArr, int i10, int i11) {
-        return f2282a.b(str, bArr, i10, i11);
+        return f2127a.b(str, bArr, i10, i11);
     }
 
     public static int c(String str) {

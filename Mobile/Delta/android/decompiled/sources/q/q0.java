@@ -40,25 +40,25 @@ public class q0 extends o0 implements p0 {
     public static class c extends l0 {
 
         /* JADX INFO: renamed from: n, reason: collision with root package name */
-        public final int f29085n;
+        public final int f29438n;
 
         /* JADX INFO: renamed from: o, reason: collision with root package name */
-        public final int f29086o;
+        public final int f29439o;
 
         /* JADX INFO: renamed from: p, reason: collision with root package name */
-        public p0 f29087p;
+        public p0 f29440p;
 
         /* JADX INFO: renamed from: q, reason: collision with root package name */
-        public MenuItem f29088q;
+        public MenuItem f29441q;
 
         public c(Context context, boolean z10) {
             super(context, z10);
             if (1 == context.getResources().getConfiguration().getLayoutDirection()) {
-                this.f29085n = 21;
-                this.f29086o = 22;
+                this.f29438n = 21;
+                this.f29439o = 22;
             } else {
-                this.f29085n = 22;
-                this.f29086o = 21;
+                this.f29438n = 22;
+                this.f29439o = 21;
             }
         }
 
@@ -98,7 +98,7 @@ public class q0 extends o0 implements p0 {
             int headersCount;
             int iPointToPosition;
             int i10;
-            if (this.f29087p != null) {
+            if (this.f29440p != null) {
                 ListAdapter adapter = getAdapter();
                 if (adapter instanceof HeaderViewListAdapter) {
                     HeaderViewListAdapter headerViewListAdapter = (HeaderViewListAdapter) adapter;
@@ -109,15 +109,15 @@ public class q0 extends o0 implements p0 {
                     headersCount = 0;
                 }
                 androidx.appcompat.view.menu.g item = (motionEvent.getAction() == 10 || (iPointToPosition = pointToPosition((int) motionEvent.getX(), (int) motionEvent.getY())) == -1 || (i10 = iPointToPosition - headersCount) < 0 || i10 >= dVar.getCount()) ? null : dVar.getItem(i10);
-                MenuItem menuItem = this.f29088q;
+                MenuItem menuItem = this.f29441q;
                 if (menuItem != item) {
                     androidx.appcompat.view.menu.e eVarB = dVar.b();
                     if (menuItem != null) {
-                        this.f29087p.n(eVarB, menuItem);
+                        this.f29440p.n(eVarB, menuItem);
                     }
-                    this.f29088q = item;
+                    this.f29441q = item;
                     if (item != null) {
-                        this.f29087p.d(eVarB, item);
+                        this.f29440p.d(eVarB, item);
                     }
                 }
             }
@@ -127,13 +127,13 @@ public class q0 extends o0 implements p0 {
         @Override // android.widget.ListView, android.widget.AbsListView, android.view.View, android.view.KeyEvent.Callback
         public boolean onKeyDown(int i10, KeyEvent keyEvent) {
             ListMenuItemView listMenuItemView = (ListMenuItemView) getSelectedView();
-            if (listMenuItemView != null && i10 == this.f29085n) {
+            if (listMenuItemView != null && i10 == this.f29438n) {
                 if (listMenuItemView.isEnabled() && listMenuItemView.getItemData().hasSubMenu()) {
                     performItemClick(listMenuItemView, getSelectedItemPosition(), getSelectedItemId());
                 }
                 return true;
             }
-            if (listMenuItemView == null || i10 != this.f29086o) {
+            if (listMenuItemView == null || i10 != this.f29439o) {
                 return super.onKeyDown(i10, keyEvent);
             }
             setSelection(-1);
@@ -148,7 +148,7 @@ public class q0 extends o0 implements p0 {
         }
 
         public void setHoverListener(p0 p0Var) {
-            this.f29087p = p0Var;
+            this.f29440p = p0Var;
         }
 
         @Override // q.l0, android.widget.AbsListView

@@ -6,39 +6,39 @@ import n0.a2;
 public final class h extends e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f22901a;
+    public final String f23295a;
     public final int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final a2.a f22902c;
+    public final a2.a f23296c;
 
     public static final class b extends e.a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public String f22903a;
+        public String f23297a;
         public Integer b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public a2.a f22904c;
+        public a2.a f23298c;
 
         @Override // l1.e.a
         public e b() {
             String str = "";
-            if (this.f22903a == null) {
+            if (this.f23297a == null) {
                 str = " mimeType";
             }
             if (this.b == null) {
                 str = str + " profile";
             }
             if (str.isEmpty()) {
-                return new h(this.f22903a, this.b.intValue(), this.f22904c);
+                return new h(this.f23297a, this.b.intValue(), this.f23298c);
             }
             throw new IllegalStateException("Missing required properties:" + str);
         }
 
         @Override // l1.e.a
         public e.a c(a2.a aVar) {
-            this.f22904c = aVar;
+            this.f23298c = aVar;
             return this;
         }
 
@@ -46,7 +46,7 @@ public final class h extends e {
             if (str == null) {
                 throw new NullPointerException("Null mimeType");
             }
-            this.f22903a = str;
+            this.f23297a = str;
             return this;
         }
 
@@ -60,7 +60,7 @@ public final class h extends e {
 
     @Override // l1.l
     public String a() {
-        return this.f22901a;
+        return this.f23295a;
     }
 
     @Override // l1.l
@@ -70,7 +70,7 @@ public final class h extends e {
 
     @Override // l1.e
     public a2.a d() {
-        return this.f22902c;
+        return this.f23296c;
     }
 
     public boolean equals(Object obj) {
@@ -80,7 +80,7 @@ public final class h extends e {
         }
         if (obj instanceof e) {
             e eVar = (e) obj;
-            if (this.f22901a.equals(eVar.a()) && this.b == eVar.b() && ((aVar = this.f22902c) != null ? aVar.equals(eVar.d()) : eVar.d() == null)) {
+            if (this.f23295a.equals(eVar.a()) && this.b == eVar.b() && ((aVar = this.f23296c) != null ? aVar.equals(eVar.d()) : eVar.d() == null)) {
                 return true;
             }
         }
@@ -88,18 +88,18 @@ public final class h extends e {
     }
 
     public int hashCode() {
-        int iHashCode = (((this.f22901a.hashCode() ^ 1000003) * 1000003) ^ this.b) * 1000003;
-        a2.a aVar = this.f22902c;
+        int iHashCode = (((this.f23295a.hashCode() ^ 1000003) * 1000003) ^ this.b) * 1000003;
+        a2.a aVar = this.f23296c;
         return iHashCode ^ (aVar == null ? 0 : aVar.hashCode());
     }
 
     public String toString() {
-        return "AudioMimeInfo{mimeType=" + this.f22901a + ", profile=" + this.b + ", compatibleAudioProfile=" + this.f22902c + "}";
+        return "AudioMimeInfo{mimeType=" + this.f23295a + ", profile=" + this.b + ", compatibleAudioProfile=" + this.f23296c + "}";
     }
 
     public h(String str, int i10, a2.a aVar) {
-        this.f22901a = str;
+        this.f23295a = str;
         this.b = i10;
-        this.f22902c = aVar;
+        this.f23296c = aVar;
     }
 }

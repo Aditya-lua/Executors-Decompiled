@@ -10,7 +10,7 @@ public final class j0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final String f35638a;
+    public static final String f36495a;
 
     @NotNull
     public static final String[] b;
@@ -18,7 +18,7 @@ public final class j0 {
     static {
         String strI = x5.w.i("WrkDbPathHelper");
         Intrinsics.checkNotNullExpressionValue(strI, "tagWithPrefix(...)");
-        f35638a = strI;
+        f36495a = strI;
         b = new String[]{"-journal", "-shm", "-wal"};
     }
 }

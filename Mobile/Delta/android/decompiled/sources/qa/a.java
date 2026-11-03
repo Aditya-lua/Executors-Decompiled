@@ -12,15 +12,15 @@ public final class a implements Parcelable.Creator {
         int iA = b.a(parcel);
         b.k(parcel, 1, playerStatsEntity.t3());
         b.k(parcel, 2, playerStatsEntity.F());
-        b.n(parcel, 3, playerStatsEntity.v1());
-        b.n(parcel, 4, playerStatsEntity.O0());
+        b.n(parcel, 3, playerStatsEntity.t1());
+        b.n(parcel, 4, playerStatsEntity.K0());
         b.n(parcel, 5, playerStatsEntity.S1());
-        b.k(parcel, 6, playerStatsEntity.J0());
-        b.k(parcel, 7, playerStatsEntity.X());
+        b.k(parcel, 6, playerStatsEntity.F0());
+        b.k(parcel, 7, playerStatsEntity.W());
         b.f(parcel, 8, playerStatsEntity.v3(), false);
-        b.k(parcel, 9, playerStatsEntity.L0());
-        b.k(parcel, 10, playerStatsEntity.e3());
-        b.k(parcel, 11, playerStatsEntity.c2());
+        b.k(parcel, 9, playerStatsEntity.H0());
+        b.k(parcel, 10, playerStatsEntity.g3());
+        b.k(parcel, 11, playerStatsEntity.d2());
         b.b(parcel, iA);
     }
 

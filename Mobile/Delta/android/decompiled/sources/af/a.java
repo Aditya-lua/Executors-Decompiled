@@ -1,228 +1,208 @@
 package af;
 
-import java.security.GeneralSecurityException;
-import java.security.spec.ECParameterSpec;
-import java.util.Objects;
-
 /* JADX INFO: loaded from: classes2.dex */
-public final class a extends a1 {
+public final class a extends com.google.crypto.tink.shaded.protobuf.y<a, b> implements com.google.crypto.tink.shaded.protobuf.t0 {
+    private static final a DEFAULT_INSTANCE;
+    public static final int KEY_VALUE_FIELD_NUMBER = 2;
+    public static final int PARAMS_FIELD_NUMBER = 3;
+    private static volatile com.google.crypto.tink.shaded.protobuf.a1<a> PARSER = null;
+    public static final int VERSION_FIELD_NUMBER = 1;
+    private int bitField0_;
+    private com.google.crypto.tink.shaded.protobuf.h keyValue_ = com.google.crypto.tink.shaded.protobuf.h.b;
+    private c params_;
+    private int version_;
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final e f371a;
-    public final c b;
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final d f372c;
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final f f373d;
-
-    public static final class b {
+    /* JADX INFO: renamed from: af.a$a, reason: collision with other inner class name */
+    public static /* synthetic */ class C0004a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public e f374a;
-        public c b;
+        public static final /* synthetic */ int[] f478a;
 
-        /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public d f375c;
+        static {
+            int[] iArr = new int[com.google.crypto.tink.shaded.protobuf.y.f.values().length];
+            f478a = iArr;
+            try {
+                iArr[com.google.crypto.tink.shaded.protobuf.y.f.NEW_MUTABLE_INSTANCE.ordinal()] = 1;
+            } catch (NoSuchFieldError unused) {
+            }
+            try {
+                f478a[com.google.crypto.tink.shaded.protobuf.y.f.NEW_BUILDER.ordinal()] = 2;
+            } catch (NoSuchFieldError unused2) {
+            }
+            try {
+                f478a[com.google.crypto.tink.shaded.protobuf.y.f.BUILD_MESSAGE_INFO.ordinal()] = 3;
+            } catch (NoSuchFieldError unused3) {
+            }
+            try {
+                f478a[com.google.crypto.tink.shaded.protobuf.y.f.GET_DEFAULT_INSTANCE.ordinal()] = 4;
+            } catch (NoSuchFieldError unused4) {
+            }
+            try {
+                f478a[com.google.crypto.tink.shaded.protobuf.y.f.GET_PARSER.ordinal()] = 5;
+            } catch (NoSuchFieldError unused5) {
+            }
+            try {
+                f478a[com.google.crypto.tink.shaded.protobuf.y.f.GET_MEMOIZED_IS_INITIALIZED.ordinal()] = 6;
+            } catch (NoSuchFieldError unused6) {
+            }
+            try {
+                f478a[com.google.crypto.tink.shaded.protobuf.y.f.SET_MEMOIZED_IS_INITIALIZED.ordinal()] = 7;
+            } catch (NoSuchFieldError unused7) {
+            }
+        }
+    }
 
-        /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public f f376d;
-
-        public a a() throws GeneralSecurityException {
-            e eVar = this.f374a;
-            if (eVar == null) {
-                throw new GeneralSecurityException("signature encoding is not set");
-            }
-            c cVar = this.b;
-            if (cVar == null) {
-                throw new GeneralSecurityException("EC curve type is not set");
-            }
-            d dVar = this.f375c;
-            if (dVar == null) {
-                throw new GeneralSecurityException("hash type is not set");
-            }
-            f fVar = this.f376d;
-            if (fVar == null) {
-                throw new GeneralSecurityException("variant is not set");
-            }
-            if (cVar == c.f377c && dVar != d.b) {
-                throw new GeneralSecurityException("NIST_P256 requires SHA256");
-            }
-            if (cVar == c.f378d && dVar != d.f381c && dVar != d.f382d) {
-                throw new GeneralSecurityException("NIST_P384 requires SHA384 or SHA512");
-            }
-            if (cVar != c.f379e || dVar == d.f382d) {
-                return new a(eVar, cVar, dVar, fVar);
-            }
-            throw new GeneralSecurityException("NIST_P521 requires SHA512");
+    public static final class b extends com.google.crypto.tink.shaded.protobuf.y.a<a, b> implements com.google.crypto.tink.shaded.protobuf.t0 {
+        public /* synthetic */ b(C0004a c0004a) {
+            this();
         }
 
-        public b b(c cVar) {
-            this.b = cVar;
+        public b C(com.google.crypto.tink.shaded.protobuf.h hVar) {
+            r();
+            ((a) this.b).i0(hVar);
             return this;
         }
 
-        public b c(d dVar) {
-            this.f375c = dVar;
+        public b D(c cVar) {
+            r();
+            ((a) this.b).j0(cVar);
             return this;
         }
 
-        public b d(e eVar) {
-            this.f374a = eVar;
-            return this;
+        @Override // com.google.crypto.tink.shaded.protobuf.y.a, com.google.crypto.tink.shaded.protobuf.s0.a
+        public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0.a F(com.google.crypto.tink.shaded.protobuf.i iVar, com.google.crypto.tink.shaded.protobuf.p pVar) {
+            return super.F(iVar, pVar);
         }
 
-        public b e(f fVar) {
-            this.f376d = fVar;
-            return this;
+        @Override // com.google.crypto.tink.shaded.protobuf.a.AbstractC0130a, com.google.crypto.tink.shaded.protobuf.s0.a
+        public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0.a H(com.google.crypto.tink.shaded.protobuf.s0 s0Var) {
+            return super.H(s0Var);
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.y.a, com.google.crypto.tink.shaded.protobuf.s0.a
+        public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0 build() {
+            return super.build();
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.y.a
+        public /* bridge */ /* synthetic */ Object clone() {
+            return super.clone();
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.y.a, com.google.crypto.tink.shaded.protobuf.s0.a
+        public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0 d() {
+            return super.d();
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.y.a, com.google.crypto.tink.shaded.protobuf.t0
+        public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0 f() {
+            return super.f();
+        }
+
+        @Override // com.google.crypto.tink.shaded.protobuf.y.a, com.google.crypto.tink.shaded.protobuf.a.AbstractC0130a
+        public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.a.AbstractC0130a j(com.google.crypto.tink.shaded.protobuf.a aVar) {
+            return super.j((com.google.crypto.tink.shaded.protobuf.y) aVar);
         }
 
         public b() {
-            this.f374a = null;
-            this.b = null;
-            this.f375c = null;
-            this.f376d = f.f388e;
+            super(a.DEFAULT_INSTANCE);
         }
     }
 
-    public static final class c {
+    static {
+        a aVar = new a();
+        DEFAULT_INSTANCE = aVar;
+        com.google.crypto.tink.shaded.protobuf.y.W(a.class, aVar);
+    }
 
-        /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static final c f377c = new c("NIST_P256", ve.g.f32942a);
+    public static b f0() {
+        return DEFAULT_INSTANCE.v();
+    }
 
-        /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final c f378d = new c("NIST_P384", ve.g.b);
+    public static a g0(com.google.crypto.tink.shaded.protobuf.h hVar, com.google.crypto.tink.shaded.protobuf.p pVar) {
+        return (a) com.google.crypto.tink.shaded.protobuf.y.Q(DEFAULT_INSTANCE, hVar, pVar);
+    }
 
-        /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public static final c f379e = new c("NIST_P521", ve.g.f32943c);
+    public static com.google.crypto.tink.shaded.protobuf.a1<a> h0() {
+        return DEFAULT_INSTANCE.h();
+    }
 
-        /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final String f380a;
-        public final ECParameterSpec b;
+    @Override // com.google.crypto.tink.shaded.protobuf.y, com.google.crypto.tink.shaded.protobuf.s0
+    public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0.a a() {
+        return super.a();
+    }
 
-        public c(String str, ECParameterSpec eCParameterSpec) {
-            this.f380a = str;
-            this.b = eCParameterSpec;
+    public com.google.crypto.tink.shaded.protobuf.h c0() {
+        return this.keyValue_;
+    }
+
+    public c d0() {
+        c cVar = this.params_;
+        return cVar == null ? c.b0() : cVar;
+    }
+
+    @Override // com.google.crypto.tink.shaded.protobuf.y, com.google.crypto.tink.shaded.protobuf.s0
+    public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0.a e() {
+        return super.e();
+    }
+
+    public int e0() {
+        return this.version_;
+    }
+
+    @Override // com.google.crypto.tink.shaded.protobuf.y, com.google.crypto.tink.shaded.protobuf.t0
+    public /* bridge */ /* synthetic */ com.google.crypto.tink.shaded.protobuf.s0 f() {
+        return super.f();
+    }
+
+    public final void i0(com.google.crypto.tink.shaded.protobuf.h hVar) {
+        hVar.getClass();
+        this.keyValue_ = hVar;
+    }
+
+    public final void j0(c cVar) {
+        cVar.getClass();
+        this.params_ = cVar;
+        this.bitField0_ |= 1;
+    }
+
+    @Override // com.google.crypto.tink.shaded.protobuf.y
+    public final Object z(com.google.crypto.tink.shaded.protobuf.y.f fVar, Object obj, Object obj2) {
+        com.google.crypto.tink.shaded.protobuf.a1 bVar;
+        C0004a c0004a = null;
+        switch (C0004a.f478a[fVar.ordinal()]) {
+            case 1:
+                return new a();
+            case 2:
+                return new b(c0004a);
+            case 3:
+                return com.google.crypto.tink.shaded.protobuf.y.O(DEFAULT_INSTANCE, "\u0000\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u000b\u0002\n\u0003ဉ\u0000", new Object[]{"bitField0_", "version_", "keyValue_", "params_"});
+            case 4:
+                return DEFAULT_INSTANCE;
+            case 5:
+                com.google.crypto.tink.shaded.protobuf.a1<a> a1Var = PARSER;
+                if (a1Var != null) {
+                    return a1Var;
+                }
+                synchronized (a.class) {
+                    try {
+                        bVar = PARSER;
+                        if (bVar == null) {
+                            bVar = new com.google.crypto.tink.shaded.protobuf.y.b(DEFAULT_INSTANCE);
+                            PARSER = bVar;
+                        }
+                    } catch (Throwable th2) {
+                        throw th2;
+                    }
+                    break;
+                }
+                return bVar;
+            case 6:
+                return (byte) 1;
+            case 7:
+                return null;
+            default:
+                throw new UnsupportedOperationException();
         }
-
-        public ECParameterSpec a() {
-            return this.b;
-        }
-
-        public String toString() {
-            return this.f380a;
-        }
-    }
-
-    public static final class d {
-        public static final d b = new d("SHA256");
-
-        /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static final d f381c = new d("SHA384");
-
-        /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final d f382d = new d("SHA512");
-
-        /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final String f383a;
-
-        public d(String str) {
-            this.f383a = str;
-        }
-
-        public String toString() {
-            return this.f383a;
-        }
-    }
-
-    public static final class e {
-        public static final e b = new e("IEEE_P1363");
-
-        /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static final e f384c = new e("DER");
-
-        /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final String f385a;
-
-        public e(String str) {
-            this.f385a = str;
-        }
-
-        public String toString() {
-            return this.f385a;
-        }
-    }
-
-    public static final class f {
-        public static final f b = new f("TINK");
-
-        /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static final f f386c = new f("CRUNCHY");
-
-        /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final f f387d = new f("LEGACY");
-
-        /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public static final f f388e = new f("NO_PREFIX");
-
-        /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final String f389a;
-
-        public f(String str) {
-            this.f389a = str;
-        }
-
-        public String toString() {
-            return this.f389a;
-        }
-    }
-
-    public static b b() {
-        return new b();
-    }
-
-    @Override // oe.x
-    public boolean a() {
-        return this.f373d != f.f388e;
-    }
-
-    public c c() {
-        return this.b;
-    }
-
-    public d d() {
-        return this.f372c;
-    }
-
-    public e e() {
-        return this.f371a;
-    }
-
-    public boolean equals(Object obj) {
-        if (!(obj instanceof a)) {
-            return false;
-        }
-        a aVar = (a) obj;
-        return aVar.e() == e() && aVar.c() == c() && aVar.d() == d() && aVar.f() == f();
-    }
-
-    public f f() {
-        return this.f373d;
-    }
-
-    public int hashCode() {
-        return Objects.hash(a.class, this.f371a, this.b, this.f372c, this.f373d);
-    }
-
-    public String toString() {
-        return "ECDSA Parameters (variant: " + this.f373d + ", hashType: " + this.f372c + ", encoding: " + this.f371a + ", curve: " + this.b + ")";
-    }
-
-    public a(e eVar, c cVar, d dVar, f fVar) {
-        this.f371a = eVar;
-        this.b = cVar;
-        this.f372c = dVar;
-        this.f373d = fVar;
     }
 }

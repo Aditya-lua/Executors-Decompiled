@@ -6,26 +6,26 @@ import java.util.Objects;
 public final class v2 extends j3 {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final /* synthetic */ r1 f6837e;
+    public final /* synthetic */ r1 f6911e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final /* synthetic */ v3 f6838f;
+    public final /* synthetic */ v3 f6912f;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public v2(v3 v3Var, r1 r1Var) {
         super(v3Var, true);
-        this.f6837e = r1Var;
+        this.f6911e = r1Var;
         Objects.requireNonNull(v3Var);
-        this.f6838f = v3Var;
+        this.f6912f = v3Var;
     }
 
     @Override // com.google.android.gms.internal.measurement.j3
     public final void a() {
-        ((u1) n9.m.l(this.f6838f.m())).generateEventId(this.f6837e);
+        ((u1) n9.m.l(this.f6912f.m())).generateEventId(this.f6911e);
     }
 
     @Override // com.google.android.gms.internal.measurement.j3
     public final void b() {
-        this.f6837e.l(null);
+        this.f6911e.l(null);
     }
 }

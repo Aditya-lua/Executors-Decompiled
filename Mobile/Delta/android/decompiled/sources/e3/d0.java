@@ -36,28 +36,28 @@ public final class d0 implements s {
     public static final class b implements OutcomeReceiver {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ p<e3.c, f3.f> f15006a;
+        public final /* synthetic */ p<e3.c, f3.f> f15620a;
         public final /* synthetic */ e3.b b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ d0 f15007c;
+        public final /* synthetic */ d0 f15621c;
 
         public b(p<e3.c, f3.f> pVar, e3.b bVar, d0 d0Var) {
-            this.f15006a = pVar;
+            this.f15620a = pVar;
             this.b = bVar;
-            this.f15007c = d0Var;
+            this.f15621c = d0Var;
         }
 
         public void a(CreateCredentialException error) {
             Intrinsics.checkNotNullParameter(error, "error");
             Log.i("CredManProvService", "CreateCredentialResponse error returned from framework");
-            this.f15006a.a(this.f15007c.f(error));
+            this.f15620a.a(this.f15621c.f(error));
         }
 
         public void b(CreateCredentialResponse response) {
             Intrinsics.checkNotNullParameter(response, "response");
             Log.i("CredManProvService", "Create Result returned from framework: ");
-            p<e3.c, f3.f> pVar = this.f15006a;
+            p<e3.c, f3.f> pVar = this.f15620a;
             e3.c.Companion companion = e3.c.INSTANCE;
             String str = this.b.getCom.appsflyer.sdk_base.referrer.Payload.TYPE java.lang.String();
             Bundle data = response.getData();
@@ -78,24 +78,24 @@ public final class d0 implements s {
     public static final class c implements OutcomeReceiver {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ p<l0, f3.n> f15008a;
+        public final /* synthetic */ p<l0, f3.n> f15622a;
         public final /* synthetic */ d0 b;
 
         public c(p<l0, f3.n> pVar, d0 d0Var) {
-            this.f15008a = pVar;
+            this.f15622a = pVar;
             this.b = d0Var;
         }
 
         public void a(GetCredentialException error) {
             Intrinsics.checkNotNullParameter(error, "error");
             Log.i("CredManProvService", "GetCredentialResponse error returned from framework");
-            this.f15008a.a(this.b.g(error));
+            this.f15622a.a(this.b.g(error));
         }
 
         public void b(GetCredentialResponse response) {
             Intrinsics.checkNotNullParameter(response, "response");
             Log.i("CredManProvService", "GetCredentialResponse returned from framework");
-            this.f15008a.onResult(this.b.e(response));
+            this.f15622a.onResult(this.b.e(response));
         }
 
         public /* bridge */ /* synthetic */ void onError(Throwable th2) {
@@ -114,12 +114,12 @@ public final class d0 implements s {
 
     public static final Unit i(p pVar) {
         pVar.a(new f3.k("Your device doesn't support credential manager"));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit j(p pVar) {
         pVar.a(new f3.r("Your device doesn't support credential manager"));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public final CreateCredentialRequest c(e3.b request, Context context) {

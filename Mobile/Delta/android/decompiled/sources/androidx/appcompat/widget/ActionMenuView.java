@@ -25,37 +25,37 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
     public e A;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public androidx.appcompat.view.menu.e f1052p;
+    public androidx.appcompat.view.menu.e f897p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public Context f1053q;
+    public Context f898q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public int f1054r;
+    public int f899r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public boolean f1055s;
+    public boolean f900s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public androidx.appcompat.widget.a f1056t;
+    public androidx.appcompat.widget.a f901t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public i.a f1057u;
+    public i.a f902u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public androidx.appcompat.view.menu.e.a f1058v;
+    public androidx.appcompat.view.menu.e.a f903v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public boolean f1059w;
+    public boolean f904w;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public int f1060x;
+    public int f905x;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public int f1061y;
+    public int f906y;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public int f1062z;
+    public int f907z;
 
     public interface a {
         boolean a();
@@ -78,25 +78,25 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @ViewDebug.ExportedProperty
-        public boolean f1063a;
+        public boolean f908a;
 
         @ViewDebug.ExportedProperty
         public int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
         @ViewDebug.ExportedProperty
-        public int f1064c;
+        public int f909c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
         @ViewDebug.ExportedProperty
-        public boolean f1065d;
+        public boolean f910d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
         @ViewDebug.ExportedProperty
-        public boolean f1066e;
+        public boolean f911e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public boolean f1067f;
+        public boolean f912f;
 
         public c(Context context, AttributeSet attributeSet) {
             super(context, attributeSet);
@@ -108,12 +108,12 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
 
         public c(c cVar) {
             super((ViewGroup.LayoutParams) cVar);
-            this.f1063a = cVar.f1063a;
+            this.f908a = cVar.f908a;
         }
 
         public c(int i10, int i11) {
             super(i10, i11);
-            this.f1063a = false;
+            this.f908a = false;
         }
     }
 
@@ -129,7 +129,7 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
 
         @Override // androidx.appcompat.view.menu.e.a
         public void b(@NonNull androidx.appcompat.view.menu.e eVar) {
-            androidx.appcompat.view.menu.e.a aVar = ActionMenuView.this.f1058v;
+            androidx.appcompat.view.menu.e.a aVar = ActionMenuView.this.f903v;
             if (aVar != null) {
                 aVar.b(eVar);
             }
@@ -170,10 +170,10 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
         } else {
             i14 = 0;
         }
-        if (!cVar.f1063a && z11) {
+        if (!cVar.f908a && z11) {
             z10 = true;
         }
-        cVar.f1065d = z10;
+        cVar.f910d = z10;
         cVar.b = i14;
         view.measure(View.MeasureSpec.makeMeasureSpec(i10 * i14, 1073741824), iMakeMeasureSpec);
         return i14;
@@ -208,7 +208,7 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
 
     public c D() {
         c cVarGenerateDefaultLayoutParams = generateDefaultLayoutParams();
-        cVarGenerateDefaultLayoutParams.f1063a = true;
+        cVarGenerateDefaultLayoutParams.f908a = true;
         return cVarGenerateDefaultLayoutParams;
     }
 
@@ -226,22 +226,22 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
     }
 
     public boolean F() {
-        androidx.appcompat.widget.a aVar = this.f1056t;
+        androidx.appcompat.widget.a aVar = this.f901t;
         return aVar != null && aVar.C();
     }
 
     public boolean G() {
-        androidx.appcompat.widget.a aVar = this.f1056t;
+        androidx.appcompat.widget.a aVar = this.f901t;
         return aVar != null && aVar.E();
     }
 
     public boolean H() {
-        androidx.appcompat.widget.a aVar = this.f1056t;
+        androidx.appcompat.widget.a aVar = this.f901t;
         return aVar != null && aVar.F();
     }
 
     public boolean I() {
-        return this.f1055s;
+        return this.f900s;
     }
 
     /* JADX WARN: Type inference failed for: r3v33 */
@@ -260,7 +260,7 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
         int paddingTop = getPaddingTop() + getPaddingBottom();
         int childMeasureSpec = ViewGroup.getChildMeasureSpec(i11, paddingTop, -2);
         int i14 = size - paddingLeft;
-        int i15 = this.f1061y;
+        int i15 = this.f906y;
         int i16 = i14 / i15;
         int i17 = i14 % i15;
         if (i16 == 0) {
@@ -285,27 +285,27 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
                 boolean z12 = childAt instanceof ActionMenuItemView;
                 i20++;
                 if (z12) {
-                    int i23 = this.f1062z;
+                    int i23 = this.f907z;
                     r8 = 0;
                     childAt.setPadding(i23, 0, i23, 0);
                 } else {
                     r8 = 0;
                 }
                 c cVar = (c) childAt.getLayoutParams();
-                cVar.f1067f = r8;
-                cVar.f1064c = r8;
+                cVar.f912f = r8;
+                cVar.f909c = r8;
                 cVar.b = r8;
-                cVar.f1065d = r8;
+                cVar.f910d = r8;
                 ((LinearLayout.LayoutParams) cVar).leftMargin = r8;
                 ((LinearLayout.LayoutParams) cVar).rightMargin = r8;
-                cVar.f1066e = z12 && ((ActionMenuItemView) childAt).s();
-                int iJ = J(childAt, i18, cVar.f1063a ? 1 : i16, childMeasureSpec, paddingTop);
+                cVar.f911e = z12 && ((ActionMenuItemView) childAt).s();
+                int iJ = J(childAt, i18, cVar.f908a ? 1 : i16, childMeasureSpec, paddingTop);
                 iMax2 = Math.max(iMax2, iJ);
                 i13 = i18;
-                if (cVar.f1065d) {
+                if (cVar.f910d) {
                     i21++;
                 }
-                if (cVar.f1063a) {
+                if (cVar.f908a) {
                     z11 = true;
                 }
                 i16 -= iJ;
@@ -337,7 +337,7 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
             while (i28 < childCount) {
                 c cVar2 = (c) getChildAt(i28).getLayoutParams();
                 boolean z15 = z13;
-                if (cVar2.f1065d) {
+                if (cVar2.f910d) {
                     int i29 = cVar2.b;
                     if (i29 < i26) {
                         j12 = 1 << i28;
@@ -368,17 +368,17 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
                     }
                     i31 = i31;
                 } else {
-                    if (!z16 || !cVar3.f1066e) {
+                    if (!z16 || !cVar3.f911e) {
                         z10 = true;
                     } else if (i16 == 1) {
-                        int i32 = this.f1062z;
+                        int i32 = this.f907z;
                         z10 = true;
                         childAt2.setPadding(i32 + i25, 0, i32, 0);
                     } else {
                         z10 = true;
                     }
                     cVar3.b++;
-                    cVar3.f1067f = z10;
+                    cVar3.f912f = z10;
                     i16--;
                 }
                 i31++;
@@ -397,14 +397,14 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
             } else {
                 if ((j11 & j10) != 0) {
                     i12 = 0;
-                    if (!((c) getChildAt(0).getLayoutParams()).f1066e) {
+                    if (!((c) getChildAt(0).getLayoutParams()).f911e) {
                         fBitCount -= 0.5f;
                     }
                 } else {
                     i12 = 0;
                 }
                 int i33 = childCount - 1;
-                if ((j11 & ((long) (1 << i33))) != 0 && !((c) getChildAt(i33).getLayoutParams()).f1066e) {
+                if ((j11 & ((long) (1 << i33))) != 0 && !((c) getChildAt(i33).getLayoutParams()).f911e) {
                     fBitCount -= 0.5f;
                 }
             }
@@ -415,15 +415,15 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
                     View childAt3 = getChildAt(i35);
                     c cVar4 = (c) childAt3.getLayoutParams();
                     if (childAt3 instanceof ActionMenuItemView) {
-                        cVar4.f1064c = i34;
-                        cVar4.f1067f = true;
-                        if (i35 == 0 && !cVar4.f1066e) {
+                        cVar4.f909c = i34;
+                        cVar4.f912f = true;
+                        if (i35 == 0 && !cVar4.f911e) {
                             ((LinearLayout.LayoutParams) cVar4).leftMargin = (-i34) / 2;
                         }
                         z18 = true;
-                    } else if (cVar4.f1063a) {
-                        cVar4.f1064c = i34;
-                        cVar4.f1067f = true;
+                    } else if (cVar4.f908a) {
+                        cVar4.f909c = i34;
+                        cVar4.f912f = true;
                         ((LinearLayout.LayoutParams) cVar4).rightMargin = (-i34) / 2;
                         z18 = true;
                     } else {
@@ -442,8 +442,8 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
             for (int i36 = i12; i36 < childCount; i36++) {
                 View childAt4 = getChildAt(i36);
                 c cVar5 = (c) childAt4.getLayoutParams();
-                if (cVar5.f1067f) {
-                    childAt4.measure(View.MeasureSpec.makeMeasureSpec((cVar5.b * i25) + cVar5.f1064c, 1073741824), childMeasureSpec);
+                if (cVar5.f912f) {
+                    childAt4.measure(View.MeasureSpec.makeMeasureSpec((cVar5.b * i25) + cVar5.f909c, 1073741824), childMeasureSpec);
                 }
             }
         }
@@ -451,27 +451,27 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
     }
 
     public androidx.appcompat.view.menu.e L() {
-        return this.f1052p;
+        return this.f897p;
     }
 
     public void M(i.a aVar, androidx.appcompat.view.menu.e.a aVar2) {
-        this.f1057u = aVar;
-        this.f1058v = aVar2;
+        this.f902u = aVar;
+        this.f903v = aVar2;
     }
 
     public boolean N() {
-        androidx.appcompat.widget.a aVar = this.f1056t;
+        androidx.appcompat.widget.a aVar = this.f901t;
         return aVar != null && aVar.L();
     }
 
     @Override // androidx.appcompat.view.menu.j
     public void a(androidx.appcompat.view.menu.e eVar) {
-        this.f1052p = eVar;
+        this.f897p = eVar;
     }
 
     @Override // androidx.appcompat.view.menu.e.b
     public boolean b(g gVar) {
-        return this.f1052p.M(gVar, 0);
+        return this.f897p.M(gVar, 0);
     }
 
     @Override // androidx.appcompat.widget.b, android.view.ViewGroup
@@ -485,33 +485,33 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
     }
 
     public Menu getMenu() {
-        if (this.f1052p == null) {
+        if (this.f897p == null) {
             Context context = getContext();
             androidx.appcompat.view.menu.e eVar = new androidx.appcompat.view.menu.e(context);
-            this.f1052p = eVar;
+            this.f897p = eVar;
             eVar.S(new d());
             androidx.appcompat.widget.a aVar = new androidx.appcompat.widget.a(context);
-            this.f1056t = aVar;
+            this.f901t = aVar;
             aVar.K(true);
-            androidx.appcompat.widget.a aVar2 = this.f1056t;
-            i.a bVar = this.f1057u;
+            androidx.appcompat.widget.a aVar2 = this.f901t;
+            i.a bVar = this.f902u;
             if (bVar == null) {
                 bVar = new b();
             }
             aVar2.d(bVar);
-            this.f1052p.c(this.f1056t, this.f1053q);
-            this.f1056t.I(this);
+            this.f897p.c(this.f901t, this.f898q);
+            this.f901t.I(this);
         }
-        return this.f1052p;
+        return this.f897p;
     }
 
     public Drawable getOverflowIcon() {
         getMenu();
-        return this.f1056t.B();
+        return this.f901t.B();
     }
 
     public int getPopupTheme() {
-        return this.f1054r;
+        return this.f899r;
     }
 
     public int getWindowAnimations() {
@@ -521,12 +521,12 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
     @Override // android.view.View
     public void onConfigurationChanged(Configuration configuration) {
         super.onConfigurationChanged(configuration);
-        androidx.appcompat.widget.a aVar = this.f1056t;
+        androidx.appcompat.widget.a aVar = this.f901t;
         if (aVar != null) {
             aVar.f(false);
-            if (this.f1056t.F()) {
-                this.f1056t.C();
-                this.f1056t.L();
+            if (this.f901t.F()) {
+                this.f901t.C();
+                this.f901t.L();
             }
         }
     }
@@ -541,7 +541,7 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
     public void onLayout(boolean z10, int i10, int i11, int i12, int i13) {
         int width;
         int paddingLeft;
-        if (!this.f1059w) {
+        if (!this.f904w) {
             super.onLayout(z10, i10, i11, i12, i13);
             return;
         }
@@ -557,7 +557,7 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
             View childAt = getChildAt(i18);
             if (childAt.getVisibility() != 8) {
                 c cVar = (c) childAt.getLayoutParams();
-                if (cVar.f1063a) {
+                if (cVar.f908a) {
                     int measuredWidth = childAt.getMeasuredWidth();
                     if (E(i18)) {
                         measuredWidth += dividerWidth;
@@ -597,7 +597,7 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
             for (int i23 = 0; i23 < childCount; i23++) {
                 View childAt3 = getChildAt(i23);
                 c cVar2 = (c) childAt3.getLayoutParams();
-                if (childAt3.getVisibility() != 8 && !cVar2.f1063a) {
+                if (childAt3.getVisibility() != 8 && !cVar2.f908a) {
                     int i24 = width2 - ((LinearLayout.LayoutParams) cVar2).rightMargin;
                     int measuredWidth3 = childAt3.getMeasuredWidth();
                     int measuredHeight3 = childAt3.getMeasuredHeight();
@@ -612,7 +612,7 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
         for (int i26 = 0; i26 < childCount; i26++) {
             View childAt4 = getChildAt(i26);
             c cVar3 = (c) childAt4.getLayoutParams();
-            if (childAt4.getVisibility() != 8 && !cVar3.f1063a) {
+            if (childAt4.getVisibility() != 8 && !cVar3.f908a) {
                 int i27 = paddingLeft2 + ((LinearLayout.LayoutParams) cVar3).leftMargin;
                 int measuredWidth4 = childAt4.getMeasuredWidth();
                 int measuredHeight4 = childAt4.getMeasuredHeight();
@@ -626,19 +626,19 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
     @Override // androidx.appcompat.widget.b, android.view.View
     public void onMeasure(int i10, int i11) {
         androidx.appcompat.view.menu.e eVar;
-        boolean z10 = this.f1059w;
+        boolean z10 = this.f904w;
         boolean z11 = View.MeasureSpec.getMode(i10) == 1073741824;
-        this.f1059w = z11;
+        this.f904w = z11;
         if (z10 != z11) {
-            this.f1060x = 0;
+            this.f905x = 0;
         }
         int size = View.MeasureSpec.getSize(i10);
-        if (this.f1059w && (eVar = this.f1052p) != null && size != this.f1060x) {
-            this.f1060x = size;
+        if (this.f904w && (eVar = this.f897p) != null && size != this.f905x) {
+            this.f905x = size;
             eVar.L(true);
         }
         int childCount = getChildCount();
-        if (this.f1059w && childCount > 0) {
+        if (this.f904w && childCount > 0) {
             K(i10, i11);
             return;
         }
@@ -651,7 +651,7 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
     }
 
     public void setExpandedActionViewsExclusive(boolean z10) {
-        this.f1056t.H(z10);
+        this.f901t.H(z10);
     }
 
     public void setOnMenuItemClickListener(e eVar) {
@@ -660,31 +660,31 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
 
     public void setOverflowIcon(Drawable drawable) {
         getMenu();
-        this.f1056t.J(drawable);
+        this.f901t.J(drawable);
     }
 
     public void setOverflowReserved(boolean z10) {
-        this.f1055s = z10;
+        this.f900s = z10;
     }
 
     public void setPopupTheme(int i10) {
-        if (this.f1054r != i10) {
-            this.f1054r = i10;
+        if (this.f899r != i10) {
+            this.f899r = i10;
             if (i10 == 0) {
-                this.f1053q = getContext();
+                this.f898q = getContext();
             } else {
-                this.f1053q = new ContextThemeWrapper(getContext(), i10);
+                this.f898q = new ContextThemeWrapper(getContext(), i10);
             }
         }
     }
 
     public void setPresenter(androidx.appcompat.widget.a aVar) {
-        this.f1056t = aVar;
+        this.f901t = aVar;
         aVar.I(this);
     }
 
     public void z() {
-        androidx.appcompat.widget.a aVar = this.f1056t;
+        androidx.appcompat.widget.a aVar = this.f901t;
         if (aVar != null) {
             aVar.z();
         }
@@ -694,9 +694,9 @@ public class ActionMenuView extends androidx.appcompat.widget.b implements andro
         super(context, attributeSet);
         setBaselineAligned(false);
         float f10 = context.getResources().getDisplayMetrics().density;
-        this.f1061y = (int) (56.0f * f10);
-        this.f1062z = (int) (f10 * 4.0f);
-        this.f1053q = context;
-        this.f1054r = 0;
+        this.f906y = (int) (56.0f * f10);
+        this.f907z = (int) (f10 * 4.0f);
+        this.f898q = context;
+        this.f899r = 0;
     }
 }

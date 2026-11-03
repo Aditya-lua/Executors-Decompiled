@@ -1,38 +1,57 @@
 package qe;
 
-import java.nio.ByteBuffer;
 import java.security.GeneralSecurityException;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class d0 extends e0 {
-    public d0(byte[] bArr, int i10) {
-        super(bArr, i10);
-    }
+public final class d0 {
 
-    @Override // qe.e0
-    public int[] b(int[] iArr, int i10) {
-        if (iArr.length != e() / 4) {
-            throw new IllegalArgumentException(String.format("ChaCha20 uses 96-bit nonces, but got a %d-bit nonce", Integer.valueOf(iArr.length * 32)));
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final we.h0<a0, pe.a> f29680a = we.h0.b(new we.h0.b() { // from class: qe.b0
+        @Override // we.h0.b
+        public final Object a(pe.l lVar) {
+            return d0.b((a0) lVar);
         }
-        int[] iArr2 = new int[16];
-        b0.e(iArr2, this.f29320a);
-        iArr2[12] = i10;
-        System.arraycopy(iArr, 0, iArr2, 13, iArr.length);
-        return iArr2;
+    }, a0.class, pe.a.class);
+    public static final we.w.a<e0> b = new we.w.a() { // from class: qe.c0
+        @Override // we.w.a
+        public final pe.l a(pe.x xVar, Integer num) {
+            return d0.c((e0) xVar, num);
+        }
+    };
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public static final pe.m<pe.a> f29681c = we.o.e(d(), pe.a.class, af.f0.c.SYMMETRIC, af.p.f0());
+
+    public static pe.a b(a0 a0Var) {
+        return re.v.f() ? re.v.d(a0Var) : df.f.c(a0Var);
     }
 
-    @Override // qe.e0
-    public /* bridge */ /* synthetic */ byte[] c(byte[] bArr, ByteBuffer byteBuffer) {
-        return super.c(bArr, byteBuffer);
+    public static a0 c(e0 e0Var, Integer num) {
+        return a0.b(e0Var.c(), ef.c.b(32), num);
     }
 
-    @Override // qe.e0
-    public /* bridge */ /* synthetic */ void d(ByteBuffer byteBuffer, byte[] bArr, byte[] bArr2) throws GeneralSecurityException {
-        super.d(byteBuffer, bArr, bArr2);
+    public static String d() {
+        return "type.googleapis.com/google.crypto.tink.ChaCha20Poly1305Key";
     }
 
-    @Override // qe.e0
-    public int e() {
-        return 12;
+    public static Map<String, pe.x> e() {
+        HashMap map = new HashMap();
+        map.put("CHACHA20_POLY1305", e0.b(e0.a.b));
+        map.put("CHACHA20_POLY1305_RAW", e0.b(e0.a.f29687d));
+        return Collections.unmodifiableMap(map);
+    }
+
+    public static void f(boolean z10) throws GeneralSecurityException {
+        if (!ue.b.EnumC0590b.f32770a.a()) {
+            throw new GeneralSecurityException("Registering ChaCha20Poly1305 is not supported in FIPS mode");
+        }
+        re.a0.g();
+        we.a0.c().d(f29680a);
+        we.w.f().b(b, e0.class);
+        we.z.a().c(e());
+        we.l.d().g(f29681c, z10);
     }
 }

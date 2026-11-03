@@ -9,8 +9,8 @@ import kotlin.jvm.internal.Intrinsics;
 import kotlin.text.CharsKt;
 import kotlin.text.Charsets;
 import org.jetbrains.annotations.NotNull;
-import qt.a;
-import qt.b;
+import ot.a;
+import ot.b;
 
 /* JADX INFO: loaded from: classes2.dex */
 @Metadata(d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0012\n\u0002\b\u000b\n\u0002\u0010\u0002\n\u0002\b\u0006\n\u0002\u0010\r\n\u0002\b\u0015\b\u0017\u0018\u0000 12\u00020\u0001:\u00022\"B)\b\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0004\u001a\u00020\u0002\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\b\u001a\u00020\u0007¢\u0006\u0004\b\t\u0010\nJ7\u0010\u0011\u001a\u00020\u00052\u0006\u0010\f\u001a\u00020\u000b2\u0006\u0010\r\u001a\u00020\u000b2\u0006\u0010\u000e\u001a\u00020\u00052\u0006\u0010\u000f\u001a\u00020\u00052\u0006\u0010\u0010\u001a\u00020\u0005H\u0002¢\u0006\u0004\b\u0011\u0010\u0012J/\u0010\u0015\u001a\u00020\u00052\u0006\u0010\f\u001a\u00020\u000b2\u0006\u0010\u0013\u001a\u00020\u00052\u0006\u0010\u0010\u001a\u00020\u00052\u0006\u0010\u0014\u001a\u00020\u0005H\u0002¢\u0006\u0004\b\u0015\u0010\u0016J\u0017\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u0013\u001a\u00020\u0005H\u0002¢\u0006\u0004\b\u0018\u0010\u0019J'\u0010\u001a\u001a\u00020\u00052\u0006\u0010\f\u001a\u00020\u000b2\u0006\u0010\u000f\u001a\u00020\u00052\u0006\u0010\u0010\u001a\u00020\u0005H\u0002¢\u0006\u0004\b\u001a\u0010\u001bJ)\u0010\u001c\u001a\u00020\u000b2\u0006\u0010\f\u001a\u00020\u000b2\b\b\u0002\u0010\u000f\u001a\u00020\u00052\b\b\u0002\u0010\u0010\u001a\u00020\u0005¢\u0006\u0004\b\u001c\u0010\u001dJ)\u0010\u001f\u001a\u00020\u000b2\u0006\u0010\f\u001a\u00020\u001e2\b\b\u0002\u0010\u000f\u001a\u00020\u00052\b\b\u0002\u0010\u0010\u001a\u00020\u0005¢\u0006\u0004\b\u001f\u0010 J'\u0010!\u001a\u00020\u00052\u0006\u0010\f\u001a\u00020\u000b2\u0006\u0010\u000f\u001a\u00020\u00052\u0006\u0010\u0010\u001a\u00020\u0005H\u0000¢\u0006\u0004\b!\u0010\u001bJ'\u0010\"\u001a\u00020\u000b2\u0006\u0010\f\u001a\u00020\u001e2\u0006\u0010\u000f\u001a\u00020\u00052\u0006\u0010\u0010\u001a\u00020\u0005H\u0000¢\u0006\u0004\b\"\u0010 J'\u0010$\u001a\u00020\u00172\u0006\u0010#\u001a\u00020\u00052\u0006\u0010\u000f\u001a\u00020\u00052\u0006\u0010\u0010\u001a\u00020\u0005H\u0000¢\u0006\u0004\b$\u0010%R\u001a\u0010\u0003\u001a\u00020\u00028\u0000X\u0080\u0004¢\u0006\f\n\u0004\b\"\u0010&\u001a\u0004\b'\u0010(R\u001a\u0010\u0004\u001a\u00020\u00028\u0000X\u0080\u0004¢\u0006\f\n\u0004\b\u0018\u0010&\u001a\u0004\b)\u0010(R\u001a\u0010\u0006\u001a\u00020\u00058\u0000X\u0080\u0004¢\u0006\f\n\u0004\b$\u0010*\u001a\u0004\b+\u0010,R\u001a\u0010\b\u001a\u00020\u00078\u0000X\u0080\u0004¢\u0006\f\n\u0004\b\u001f\u0010-\u001a\u0004\b.\u0010/R\u0014\u00100\u001a\u00020\u00058\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001c\u0010*¨\u00063"}, d2 = {"Lkotlin/io/encoding/Base64;", "", "", "isUrlSafe", "isMimeScheme", "", "mimeLineLength", "Lkotlin/io/encoding/Base64$PaddingOption;", "paddingOption", "<init>", "(ZZILkotlin/io/encoding/Base64$PaddingOption;)V", "", Payload.SOURCE, "destination", "destinationOffset", "startIndex", "endIndex", "h", "([B[BIII)I", "padIndex", "byteStart", "j", "([BIII)I", "", "b", "(I)V", "k", "([BII)I", "e", "([BII)[B", "", "d", "(Ljava/lang/CharSequence;II)[B", "i", "a", "sourceSize", "c", "(III)V", "Z", "isUrlSafe$kotlin_stdlib", "()Z", "isMimeScheme$kotlin_stdlib", "I", "getMimeLineLength$kotlin_stdlib", "()I", "Lkotlin/io/encoding/Base64$PaddingOption;", "getPaddingOption$kotlin_stdlib", "()Lkotlin/io/encoding/Base64$PaddingOption;", "mimeGroupsPerLine", "f", "PaddingOption", "kotlin-stdlib"}, k = 1, mv = {2, 2, 0}, xi = 48)
@@ -22,19 +22,19 @@ public class Base64 {
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
     @NotNull
-    public static final byte[] f22530g = {13, 10};
+    public static final byte[] f22985g = {13, 10};
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
     @NotNull
-    public static final Base64 f22531h;
+    public static final Base64 f22986h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
     @NotNull
-    public static final Base64 f22532i;
+    public static final Base64 f22987i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
     @NotNull
-    public static final Base64 f22533j;
+    public static final Base64 f22988j;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     public final boolean isUrlSafe;
@@ -61,7 +61,7 @@ public class Base64 {
 
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public static final /* synthetic */ a f22542f = b.a(a());
+        public static final /* synthetic */ a f22997f = b.a(a());
     }
 
     /* JADX INFO: renamed from: kotlin.io.encoding.Base64$a, reason: from kotlin metadata */
@@ -78,9 +78,9 @@ public class Base64 {
 
     static {
         PaddingOption paddingOption = PaddingOption.PRESENT;
-        f22531h = new Base64(true, false, -1, paddingOption);
-        f22532i = new Base64(false, true, 76, paddingOption);
-        f22533j = new Base64(false, true, 64, paddingOption);
+        f22986h = new Base64(true, false, -1, paddingOption);
+        f22987i = new Base64(false, true, 76, paddingOption);
+        f22988j = new Base64(false, true, 64, paddingOption);
     }
 
     public /* synthetic */ Base64(boolean z10, boolean z11, int i10, PaddingOption paddingOption, DefaultConstructorMarker defaultConstructorMarker) {
@@ -179,7 +179,7 @@ public class Base64 {
         int i10;
         int i11;
         int i12;
-        int[] iArr = this.isUrlSafe ? vt.a.f33523d : vt.a.b;
+        int[] iArr = this.isUrlSafe ? tt.a.f32659d : tt.a.b;
         int i13 = -8;
         int i14 = destinationOffset;
         int iJ = startIndex;
@@ -283,7 +283,7 @@ public class Base64 {
         }
         if (this.isMimeScheme) {
             while (startIndex < endIndex) {
-                int i11 = vt.a.b[source[startIndex] & 255];
+                int i11 = tt.a.b[source[startIndex] & 255];
                 if (i11 < 0) {
                     if (i11 == -2) {
                         i10 -= endIndex - startIndex;
@@ -326,7 +326,7 @@ public class Base64 {
             return startIndex;
         }
         while (startIndex < endIndex) {
-            if (vt.a.b[source[startIndex] & 255] != -1) {
+            if (tt.a.b[source[startIndex] & 255] != -1) {
                 break;
             }
             startIndex++;

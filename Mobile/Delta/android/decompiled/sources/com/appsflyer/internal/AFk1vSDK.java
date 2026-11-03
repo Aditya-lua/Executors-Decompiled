@@ -15,24 +15,24 @@ public final class AFk1vSDK extends FilterInputStream {
     private int afWarnLog;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    private final int f5461e;
+    private final int f5534e;
     private final byte[] force;
     private int getEntries;
     private int getLevel;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    private final byte[][] f5462i;
+    private final byte[][] f5535i;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    private final int[] f5463v;
+    private final int[] f5536v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    private final int[] f5464w;
+    private final int[] f5537w;
     private static final byte[] AFLogger = AFk1xSDK.registerClient;
-    private static final int[] unregisterClient = AFk1xSDK.f5465d;
+    private static final int[] unregisterClient = AFk1xSDK.f5538d;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    private static final int[] f5460d = AFk1xSDK.unregisterClient;
+    private static final int[] f5533d = AFk1xSDK.unregisterClient;
     private static final int[] registerClient = AFk1xSDK.AFKeystoreWrapper;
     private static final int[] AFKeystoreWrapper = AFk1xSDK.AFLogger;
 
@@ -41,13 +41,13 @@ public final class AFk1vSDK extends FilterInputStream {
     }
 
     private void registerClient(byte[] bArr, byte[] bArr2) {
-        int[] iArr = this.f5464w;
+        int[] iArr = this.f5537w;
         char c10 = 1;
         char c11 = 2;
         char c12 = '\b';
         char c13 = 3;
         int i10 = (bArr[0] << 24) | ((bArr[1] & 255) << 16) | ((bArr[2] & 255) << 8) | (bArr[3] & 255);
-        int[] iArr2 = this.f5463v;
+        int[] iArr2 = this.f5536v;
         iArr[0] = i10 ^ iArr2[0];
         char c14 = 5;
         char c15 = 6;
@@ -57,14 +57,14 @@ public final class AFk1vSDK extends FilterInputStream {
         iArr[3] = (((((bArr[13] & 255) << 16) | (bArr[12] << 24)) | ((bArr[14] & 255) << 8)) | (bArr[15] & 255)) ^ iArr2[3];
         int i11 = 1;
         int i12 = 4;
-        while (i11 < this.f5461e) {
+        while (i11 < this.f5534e) {
             int[] iArr3 = unregisterClient;
-            int[] iArr4 = this.f5464w;
+            int[] iArr4 = this.f5537w;
             char c17 = c10;
-            byte[][] bArr3 = this.f5462i;
+            byte[][] bArr3 = this.f5535i;
             byte[] bArr4 = bArr3[0];
             int i13 = iArr3[iArr4[bArr4[0]] >>> 24];
-            int[] iArr5 = f5460d;
+            int[] iArr5 = f5533d;
             byte[] bArr5 = bArr3[c17];
             char c18 = c11;
             int i14 = i13 ^ iArr5[(iArr4[bArr5[0]] >>> 16) & 255];
@@ -76,7 +76,7 @@ public final class AFk1vSDK extends FilterInputStream {
             byte[] bArr7 = bArr3[c19];
             char c20 = c12;
             int i16 = i15 ^ iArr7[iArr4[bArr7[0]] & 255];
-            int[] iArr8 = this.f5463v;
+            int[] iArr8 = this.f5536v;
             int i17 = i16 ^ iArr8[i12];
             char c21 = c16;
             char c22 = c14;
@@ -102,11 +102,11 @@ public final class AFk1vSDK extends FilterInputStream {
         char c25 = c13;
         char c26 = c12;
         char c27 = c16;
-        int[] iArr9 = this.f5463v;
+        int[] iArr9 = this.f5536v;
         int i21 = iArr9[i12];
         byte[] bArr8 = AFLogger;
-        int[] iArr10 = this.f5464w;
-        byte[][] bArr9 = this.f5462i;
+        int[] iArr10 = this.f5537w;
+        byte[][] bArr9 = this.f5535i;
         byte[] bArr10 = bArr9[0];
         bArr2[0] = (byte) (bArr8[iArr10[bArr10[0]] >>> 24] ^ (i21 >>> 24));
         byte[] bArr11 = bArr9[c23];
@@ -226,15 +226,15 @@ public final class AFk1vSDK extends FilterInputStream {
 
     private AFk1vSDK(InputStream inputStream, int i10, byte[] bArr, byte[][] bArr2, byte b) {
         super(new BufferedInputStream(inputStream, Barcode.FORMAT_AZTEC));
-        this.f5464w = new int[4];
+        this.f5537w = new int[4];
         this.force = new byte[16];
         this.afDebugLog = new byte[16];
         this.afWarnLog = 1;
         this.afErrorLog = Integer.MAX_VALUE;
         this.getLevel = 16;
         this.getEntries = 16;
-        this.f5461e = i10;
-        this.f5463v = AFk1xSDK.AFLogger(bArr, i10);
+        this.f5534e = i10;
+        this.f5536v = AFk1xSDK.AFLogger(bArr, i10);
         byte[][] bArr3 = new byte[bArr2.length][];
         for (int i11 = 0; i11 < bArr2.length; i11++) {
             bArr3[i11] = new byte[bArr2[i11].length];
@@ -247,7 +247,7 @@ public final class AFk1vSDK extends FilterInputStream {
                 }
             }
         }
-        this.f5462i = bArr3;
+        this.f5535i = bArr3;
         this.AFLoggerLogLevel = 100;
         this.afInfoLog = 100;
     }

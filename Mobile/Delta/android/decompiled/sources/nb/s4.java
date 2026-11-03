@@ -4,5 +4,5 @@ package nb;
 public final class s4 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static f f25940a;
+    public static f f26761a;
 }

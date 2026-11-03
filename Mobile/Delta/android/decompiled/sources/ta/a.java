@@ -24,8 +24,8 @@ import com.google.android.gms.identitycredentials.SignalCredentialStateResponse;
 public interface a extends IInterface {
 
     /* JADX INFO: renamed from: ta.a$a, reason: collision with other inner class name */
-    public static abstract class AbstractBinderC0566a extends gb.b implements a {
-        public AbstractBinderC0566a() {
+    public static abstract class AbstractBinderC0574a extends gb.b implements a {
+        public AbstractBinderC0574a() {
             super("com.google.android.gms.identitycredentials.internal.IIdentityCredentialCallbacks");
         }
 
@@ -48,7 +48,7 @@ public interface a extends IInterface {
                     Status status3 = (Status) gb.c.a(parcel, Status.CREATOR);
                     ClearRegistryResponse clearRegistryResponse = (ClearRegistryResponse) gb.c.a(parcel, ClearRegistryResponse.CREATOR);
                     s2(parcel);
-                    m1(status3, clearRegistryResponse);
+                    i1(status3, clearRegistryResponse);
                     return true;
                 case 4:
                     Status status4 = (Status) gb.c.a(parcel, Status.CREATOR);
@@ -66,19 +66,19 @@ public interface a extends IInterface {
                     Status status6 = (Status) gb.c.a(parcel, Status.CREATOR);
                     CreateCredentialResponse createCredentialResponse = (CreateCredentialResponse) gb.c.a(parcel, CreateCredentialResponse.CREATOR);
                     s2(parcel);
-                    J0(status6, createCredentialResponse);
+                    D0(status6, createCredentialResponse);
                     return true;
                 case 7:
                     Status status7 = (Status) gb.c.a(parcel, Status.CREATOR);
                     CreateCredentialHandle createCredentialHandle = (CreateCredentialHandle) gb.c.a(parcel, CreateCredentialHandle.CREATOR);
                     s2(parcel);
-                    V0(status7, createCredentialHandle);
+                    S0(status7, createCredentialHandle);
                     return true;
                 case 8:
                     Status status8 = (Status) gb.c.a(parcel, Status.CREATOR);
                     RegisterCreationOptionsResponse registerCreationOptionsResponse = (RegisterCreationOptionsResponse) gb.c.a(parcel, RegisterCreationOptionsResponse.CREATOR);
                     s2(parcel);
-                    g1(status8, registerCreationOptionsResponse);
+                    c1(status8, registerCreationOptionsResponse);
                     return true;
                 case 9:
                     Status status9 = (Status) gb.c.a(parcel, Status.CREATOR);
@@ -90,19 +90,19 @@ public interface a extends IInterface {
                     Status status10 = (Status) gb.c.a(parcel, Status.CREATOR);
                     SignalCredentialStateResponse signalCredentialStateResponse = (SignalCredentialStateResponse) gb.c.a(parcel, SignalCredentialStateResponse.CREATOR);
                     s2(parcel);
-                    e1(status10, signalCredentialStateResponse);
+                    b1(status10, signalCredentialStateResponse);
                     return true;
                 case 11:
                     Status status11 = (Status) gb.c.a(parcel, Status.CREATOR);
                     ClearExportResponse clearExportResponse = (ClearExportResponse) gb.c.a(parcel, ClearExportResponse.CREATOR);
                     s2(parcel);
-                    q1(status11, clearExportResponse);
+                    n1(status11, clearExportResponse);
                     return true;
                 case 12:
                     Status status12 = (Status) gb.c.a(parcel, Status.CREATOR);
                     ImportCredentialsForDeviceSetupResponse importCredentialsForDeviceSetupResponse = (ImportCredentialsForDeviceSetupResponse) gb.c.a(parcel, ImportCredentialsForDeviceSetupResponse.CREATOR);
                     s2(parcel);
-                    Q0(status12, importCredentialsForDeviceSetupResponse);
+                    N0(status12, importCredentialsForDeviceSetupResponse);
                     return true;
                 case 13:
                     Status status13 = (Status) gb.c.a(parcel, Status.CREATOR);
@@ -114,13 +114,13 @@ public interface a extends IInterface {
                     Status status14 = (Status) gb.c.a(parcel, Status.CREATOR);
                     CredentialTransferCapabilities credentialTransferCapabilities = (CredentialTransferCapabilities) gb.c.a(parcel, CredentialTransferCapabilities.CREATOR);
                     s2(parcel);
-                    s1(status14, credentialTransferCapabilities);
+                    p1(status14, credentialTransferCapabilities);
                     return true;
                 case 15:
                     Status status15 = (Status) gb.c.a(parcel, Status.CREATOR);
                     ClearCreationOptionsResponse clearCreationOptionsResponse = (ClearCreationOptionsResponse) gb.c.a(parcel, ClearCreationOptionsResponse.CREATOR);
                     s2(parcel);
-                    l0(status15, clearCreationOptionsResponse);
+                    i0(status15, clearCreationOptionsResponse);
                     return true;
                 default:
                     return false;
@@ -130,31 +130,31 @@ public interface a extends IInterface {
 
     void D(@NonNull Status status, PendingImportCredentialsHandle pendingImportCredentialsHandle);
 
+    void D0(@NonNull Status status, CreateCredentialResponse createCredentialResponse);
+
     void G1(@NonNull Status status, PendingGetCredentialHandle pendingGetCredentialHandle);
 
-    void J0(@NonNull Status status, CreateCredentialResponse createCredentialResponse);
+    void N0(@NonNull Status status, ImportCredentialsForDeviceSetupResponse importCredentialsForDeviceSetupResponse);
 
-    void Q0(@NonNull Status status, ImportCredentialsForDeviceSetupResponse importCredentialsForDeviceSetupResponse);
-
-    void V0(@NonNull Status status, CreateCredentialHandle createCredentialHandle);
+    void S0(@NonNull Status status, CreateCredentialHandle createCredentialHandle);
 
     void V1(@NonNull Status status, RegistrationResponse registrationResponse);
 
+    void b1(@NonNull Status status, SignalCredentialStateResponse signalCredentialStateResponse);
+
     void b2(@NonNull Status status, ClearCredentialStateResponse clearCredentialStateResponse);
 
-    void e1(@NonNull Status status, SignalCredentialStateResponse signalCredentialStateResponse);
+    void c1(@NonNull Status status, RegisterCreationOptionsResponse registerCreationOptionsResponse);
 
     void f2(@NonNull Status status, RegisterExportResponse registerExportResponse);
 
-    void g1(@NonNull Status status, RegisterCreationOptionsResponse registerCreationOptionsResponse);
-
     void h2(@NonNull Status status, ExportCredentialsToDeviceSetupResponse exportCredentialsToDeviceSetupResponse);
 
-    void l0(@NonNull Status status, ClearCreationOptionsResponse clearCreationOptionsResponse);
+    void i0(@NonNull Status status, ClearCreationOptionsResponse clearCreationOptionsResponse);
 
-    void m1(@NonNull Status status, ClearRegistryResponse clearRegistryResponse);
+    void i1(@NonNull Status status, ClearRegistryResponse clearRegistryResponse);
 
-    void q1(@NonNull Status status, ClearExportResponse clearExportResponse);
+    void n1(@NonNull Status status, ClearExportResponse clearExportResponse);
 
-    void s1(@NonNull Status status, CredentialTransferCapabilities credentialTransferCapabilities);
+    void p1(@NonNull Status status, CredentialTransferCapabilities credentialTransferCapabilities);
 }

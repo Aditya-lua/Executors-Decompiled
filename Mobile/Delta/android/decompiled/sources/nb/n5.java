@@ -22,19 +22,19 @@ import java.util.List;
 public final class n5 extends b5 {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final String[] f25783e = {"app_version", "ALTER TABLE messages ADD COLUMN app_version TEXT;", "app_version_int", "ALTER TABLE messages ADD COLUMN app_version_int INTEGER;"};
+    public static final String[] f26604e = {"app_version", "ALTER TABLE messages ADD COLUMN app_version TEXT;", "app_version_int", "ALTER TABLE messages ADD COLUMN app_version_int INTEGER;"};
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final l5 f25784c;
+    public final l5 f26605c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public boolean f25785d;
+    public boolean f26606d;
 
     public n5(g7 g7Var) {
         super(g7Var);
-        Context contextD = this.f25625a.d();
-        this.f25625a.w();
-        this.f25784c = new l5(this, contextD, "google_app_measurement_local.db");
+        Context contextD = this.f26446a.d();
+        this.f26446a.w();
+        this.f26605c = new l5(this, contextD, "google_app_measurement_local.db");
     }
 
     @Override // nb.b5
@@ -50,9 +50,9 @@ public final class n5 extends b5 {
             if (sQLiteDatabaseW == null || (iDelete = sQLiteDatabaseW.delete("messages", null, null)) <= 0) {
                 return;
             }
-            this.f25625a.a().w().b("Reset local analytics data. records", Integer.valueOf(iDelete));
+            this.f26446a.a().w().b("Reset local analytics data. records", Integer.valueOf(iDelete));
         } catch (SQLiteException e10) {
-            this.f25625a.a().o().b("Error resetting local analytics data. error", e10);
+            this.f26446a.a().o().b("Error resetting local analytics data. error", e10);
         }
     }
 
@@ -64,7 +64,7 @@ public final class n5 extends b5 {
         if (bArrMarshall.length <= 131072) {
             return z(0, bArrMarshall);
         }
-        this.f25625a.a().p().a("Event is too long for local database. Sending event directly to service");
+        this.f26446a.a().p().a("Event is too long for local database. Sending event directly to service");
         return false;
     }
 
@@ -76,12 +76,12 @@ public final class n5 extends b5 {
         if (bArrMarshall.length <= 131072) {
             return z(1, bArrMarshall);
         }
-        this.f25625a.a().p().a("User property too long for local database. Sending directly to service");
+        this.f26446a.a().p().a("User property too long for local database. Sending directly to service");
         return false;
     }
 
     public final boolean r(zzah zzahVar) {
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         byte[] bArrT = g7Var.C().T(zzahVar);
         if (bArrT.length <= 131072) {
             return z(2, bArrT);
@@ -91,7 +91,7 @@ public final class n5 extends b5 {
     }
 
     public final boolean s(zzbe zzbeVar) {
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         byte[] bArrT = g7Var.C().T(zzbeVar);
         if (bArrT == null) {
             g7Var.a().p().a("Null default event parameters; not writing to database");
@@ -174,7 +174,7 @@ public final class n5 extends b5 {
         String str3 = "rowid";
         h();
         ?? r8 = 0;
-        if (this.f25785d) {
+        if (this.f26606d) {
             return null;
         }
         ArrayList arrayList = new ArrayList();
@@ -189,7 +189,7 @@ public final class n5 extends b5 {
                 W = w();
                 try {
                     if (W == 0) {
-                        this.f25785d = true;
+                        this.f26606d = true;
                         return r8;
                     }
                     try {
@@ -216,10 +216,10 @@ public final class n5 extends b5 {
                                     r16 = r18;
                                 }
                                 String[] strArr2 = {str3, str2, str};
-                                g7 g7Var2 = this.f25625a;
+                                g7 g7Var2 = this.f26446a;
                                 ?? W2 = g7Var2.w();
                                 int i17 = 1;
-                                y4 y4Var = z4.f26156c1;
+                                y4 y4Var = z4.f26977c1;
                                 boolean zH = W2.H(r8, y4Var);
                                 int i18 = 4;
                                 int i19 = 3;
@@ -292,8 +292,8 @@ public final class n5 extends b5 {
                                                                     e = e10;
                                                                     str = str4;
                                                                     i13 = 0;
-                                                                    this.f25625a.a().o().b("Error reading entries from local database", e);
-                                                                    this.f25785d = true;
+                                                                    this.f26446a.a().o().b("Error reading entries from local database", e);
+                                                                    this.f26606d = true;
                                                                     if (cursorQuery != null) {
                                                                         cursorQuery.close();
                                                                     }
@@ -328,8 +328,8 @@ public final class n5 extends b5 {
                                                                             throw th;
                                                                         }
                                                                     }
-                                                                    this.f25625a.a().o().b("Error reading entries from local database", e);
-                                                                    this.f25785d = true;
+                                                                    this.f26446a.a().o().b("Error reading entries from local database", e);
+                                                                    this.f26606d = true;
                                                                     if (cursorQuery != null) {
                                                                         cursorQuery.close();
                                                                     }
@@ -348,11 +348,11 @@ public final class n5 extends b5 {
                                                                 parcelObtain.recycle();
                                                                 throw th;
                                                             }
-                                                        } catch (o9.a.C0471a unused2) {
-                                                            this.f25625a.a().o().a("Failed to load event from local database");
+                                                        } catch (o9.a.C0482a unused2) {
+                                                            this.f26446a.a().o().a("Failed to load event from local database");
                                                             parcelObtain.recycle();
                                                         }
-                                                    } catch (o9.a.C0471a unused3) {
+                                                    } catch (o9.a.C0482a unused3) {
                                                         str3 = str3;
                                                     } catch (Throwable th4) {
                                                         th = th4;
@@ -377,8 +377,8 @@ public final class n5 extends b5 {
                                                             parcelObtain2.setDataPosition(0);
                                                             zzplVarCreateFromParcel = zzpl.CREATOR.createFromParcel(parcelObtain2);
                                                             parcelObtain2.recycle();
-                                                        } catch (o9.a.C0471a unused5) {
-                                                            this.f25625a.a().o().a("Failed to load user property from local database");
+                                                        } catch (o9.a.C0482a unused5) {
+                                                            this.f26446a.a().o().a("Failed to load user property from local database");
                                                             parcelObtain2.recycle();
                                                             zzplVarCreateFromParcel = null;
                                                         }
@@ -430,8 +430,8 @@ public final class n5 extends b5 {
                                                                     } catch (SQLiteFullException e14) {
                                                                         e = e14;
                                                                         i13 = 0;
-                                                                        this.f25625a.a().o().b("Error reading entries from local database", e);
-                                                                        this.f25785d = true;
+                                                                        this.f26446a.a().o().b("Error reading entries from local database", e);
+                                                                        this.f26606d = true;
                                                                         if (cursorQuery != null) {
                                                                             cursorQuery.close();
                                                                         }
@@ -452,8 +452,8 @@ public final class n5 extends b5 {
                                                                                 W.endTransaction();
                                                                             }
                                                                         }
-                                                                        this.f25625a.a().o().b("Error reading entries from local database", e);
-                                                                        this.f25785d = true;
+                                                                        this.f26446a.a().o().b("Error reading entries from local database", e);
+                                                                        this.f26606d = true;
                                                                         if (cursorQuery != null) {
                                                                             cursorQuery.close();
                                                                         }
@@ -472,12 +472,12 @@ public final class n5 extends b5 {
                                                                     parcelObtain3.recycle();
                                                                     throw th;
                                                                 }
-                                                            } catch (o9.a.C0471a unused7) {
-                                                                this.f25625a.a().o().a("Failed to load conditional user property from local database");
+                                                            } catch (o9.a.C0482a unused7) {
+                                                                this.f26446a.a().o().a("Failed to load conditional user property from local database");
                                                                 parcelObtain3.recycle();
                                                                 zzahVarCreateFromParcel = null;
                                                             }
-                                                        } catch (o9.a.C0471a unused8) {
+                                                        } catch (o9.a.C0482a unused8) {
                                                             str = str4;
                                                         } catch (Throwable th7) {
                                                             th = th7;
@@ -517,8 +517,8 @@ public final class n5 extends b5 {
                                                                             r8 = 0;
                                                                         } catch (SQLiteFullException e16) {
                                                                             e = e16;
-                                                                            this.f25625a.a().o().b("Error reading entries from local database", e);
-                                                                            this.f25785d = true;
+                                                                            this.f26446a.a().o().b("Error reading entries from local database", e);
+                                                                            this.f26606d = true;
                                                                             if (cursorQuery != null) {
                                                                                 cursorQuery.close();
                                                                             }
@@ -538,8 +538,8 @@ public final class n5 extends b5 {
                                                                                     W.endTransaction();
                                                                                 }
                                                                             }
-                                                                            this.f25625a.a().o().b("Error reading entries from local database", e);
-                                                                            this.f25785d = true;
+                                                                            this.f26446a.a().o().b("Error reading entries from local database", e);
+                                                                            this.f26606d = true;
                                                                             if (cursorQuery != null) {
                                                                                 cursorQuery.close();
                                                                             }
@@ -558,12 +558,12 @@ public final class n5 extends b5 {
                                                                         parcelObtain4.recycle();
                                                                         throw th;
                                                                     }
-                                                                } catch (o9.a.C0471a unused10) {
-                                                                    this.f25625a.a().o().a("Failed to load default event parameters from local database");
+                                                                } catch (o9.a.C0482a unused10) {
+                                                                    this.f26446a.a().o().a("Failed to load default event parameters from local database");
                                                                     parcelObtain4.recycle();
                                                                     zzbeVarCreateFromParcel = null;
                                                                 }
-                                                            } catch (o9.a.C0471a unused11) {
+                                                            } catch (o9.a.C0482a unused11) {
                                                                 i13 = 0;
                                                             } catch (Throwable th9) {
                                                                 th = th9;
@@ -572,9 +572,9 @@ public final class n5 extends b5 {
                                                             i11 = 3;
                                                             i13 = 0;
                                                             if (i21 == 3) {
-                                                                this.f25625a.a().w().a("Skipping app launch break");
+                                                                this.f26446a.a().w().a("Skipping app launch break");
                                                             } else {
-                                                                this.f25625a.a().o().a("Unknown record type in local database");
+                                                                this.f26446a.a().o().a("Unknown record type in local database");
                                                             }
                                                         }
                                                     }
@@ -624,7 +624,7 @@ public final class n5 extends b5 {
                                     }
                                 }
                                 if (W.delete("messages", "rowid <= ?", new String[]{Long.toString(j12)}) < arrayList.size()) {
-                                    this.f25625a.a().o().a("Fewer entries removed from local database than expected");
+                                    this.f26446a.a().o().a("Fewer entries removed from local database than expected");
                                 }
                                 W.setTransactionSuccessful();
                                 W.endTransaction();
@@ -656,8 +656,8 @@ public final class n5 extends b5 {
                                         e = e22;
                                         W = W;
                                         cursorQuery = null;
-                                        this.f25625a.a().o().b("Error reading entries from local database", e);
-                                        this.f25785d = true;
+                                        this.f26446a.a().o().b("Error reading entries from local database", e);
+                                        this.f26606d = true;
                                         if (cursorQuery != null) {
                                             cursorQuery.close();
                                         }
@@ -679,8 +679,8 @@ public final class n5 extends b5 {
                                                 W.endTransaction();
                                             }
                                         }
-                                        this.f25625a.a().o().b("Error reading entries from local database", e);
-                                        this.f25785d = true;
+                                        this.f26446a.a().o().b("Error reading entries from local database", e);
+                                        this.f26606d = true;
                                         if (cursorQuery != null) {
                                             cursorQuery.close();
                                         }
@@ -759,7 +759,7 @@ public final class n5 extends b5 {
                 r13 = 0;
             }
         }
-        this.f25625a.a().r().a("Failed to read events from database in reasonable time");
+        this.f26446a.a().r().a("Failed to read events from database in reasonable time");
         return null;
     }
 
@@ -771,7 +771,7 @@ public final class n5 extends b5 {
       0x0068: PHI (r4v4 int) = (r4v2 int), (r4v1 int), (r4v1 int) binds: [B:28:0x0066, B:25:0x005f, B:32:0x007c] A[DONT_GENERATE, DONT_INLINE]] */
     public final boolean v() {
         h();
-        if (!this.f25785d && x()) {
+        if (!this.f26606d && x()) {
             int i10 = 5;
             for (int i11 = 0; i11 < 5; i11++) {
                 SQLiteDatabase sQLiteDatabase = null;
@@ -787,10 +787,10 @@ public final class n5 extends b5 {
                                 sQLiteDatabaseW.close();
                                 return true;
                             }
-                            this.f25785d = true;
+                            this.f26606d = true;
                         } catch (SQLiteFullException e10) {
-                            this.f25625a.a().o().b("Error deleting app launch break from local database", e10);
-                            this.f25785d = true;
+                            this.f26446a.a().o().b("Error deleting app launch break from local database", e10);
+                            this.f26606d = true;
                             if (0 != 0) {
                                 sQLiteDatabase.close();
                             }
@@ -808,8 +808,8 @@ public final class n5 extends b5 {
                                 throw th2;
                             }
                         }
-                        this.f25625a.a().o().b("Error deleting app launch break from local database", e11);
-                        this.f25785d = true;
+                        this.f26446a.a().o().b("Error deleting app launch break from local database", e11);
+                        this.f26606d = true;
                         if (0 != 0) {
                             sQLiteDatabase.close();
                         }
@@ -822,25 +822,25 @@ public final class n5 extends b5 {
                     }
                 }
             }
-            this.f25625a.a().r().a("Error deleting app launch break from local database in reasonable time");
+            this.f26446a.a().r().a("Error deleting app launch break from local database in reasonable time");
         }
         return false;
     }
 
     public final SQLiteDatabase w() {
-        if (this.f25785d) {
+        if (this.f26606d) {
             return null;
         }
-        SQLiteDatabase writableDatabase = this.f25784c.getWritableDatabase();
+        SQLiteDatabase writableDatabase = this.f26605c.getWritableDatabase();
         if (writableDatabase != null) {
             return writableDatabase;
         }
-        this.f25785d = true;
+        this.f26606d = true;
         return null;
     }
 
     public final boolean x() {
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         Context contextD = g7Var.d();
         g7Var.w();
         return contextD.getDatabasePath("google_app_measurement_local.db").exists();
@@ -873,19 +873,19 @@ public final class n5 extends b5 {
         h();
         boolean z12 = false;
         z12 = false;
-        if (!this.f25785d) {
-            g7 g7Var = this.f25625a;
+        if (!this.f26606d) {
+            g7 g7Var = this.f26446a;
             k kVarW = g7Var.w();
-            y4 y4Var = z4.f26156c1;
+            y4 y4Var = z4.f26977c1;
             Cursor cursor = null;
             cursor = null;
-            zzr zzrVarO = kVarW.H(null, y4Var) ? this.f25625a.L().o(null) : null;
+            zzr zzrVarO = kVarW.H(null, y4Var) ? this.f26446a.L().o(null) : null;
             ContentValues contentValues = new ContentValues();
             contentValues.put(Payload.TYPE, Integer.valueOf(i10));
             contentValues.put("entry", bArr);
             if (g7Var.w().H(null, y4Var) && zzrVarO != null) {
-                contentValues.put("app_version", zzrVarO.f7447h);
-                contentValues.put("app_version_int", Long.valueOf(zzrVarO.f7454o));
+                contentValues.put("app_version", zzrVarO.f7521h);
+                contentValues.put("app_version_int", Long.valueOf(zzrVarO.f7528o));
             }
             g7Var.w();
             int i11 = 0;
@@ -894,7 +894,7 @@ public final class n5 extends b5 {
                 try {
                     sQLiteDatabaseW = w();
                     if (sQLiteDatabaseW == null) {
-                        this.f25785d = true;
+                        this.f26606d = true;
                     } else {
                         try {
                             sQLiteDatabaseW.beginTransaction();
@@ -920,8 +920,8 @@ public final class n5 extends b5 {
                                 } catch (SQLiteFullException e10) {
                                     e = e10;
                                     z10 = z12 ? 1 : 0;
-                                    this.f25625a.a().o().b("Error writing entry; local database full", e);
-                                    this.f25785d = true;
+                                    this.f26446a.a().o().b("Error writing entry; local database full", e);
+                                    this.f26606d = true;
                                     if (cursorRawQuery != null) {
                                         cursorRawQuery.close();
                                     }
@@ -951,8 +951,8 @@ public final class n5 extends b5 {
                                             throw th;
                                         }
                                     }
-                                    this.f25625a.a().o().b("Error writing entry to local database", e);
-                                    this.f25785d = z11;
+                                    this.f26446a.a().o().b("Error writing entry to local database", e);
+                                    this.f26606d = z11;
                                     if (cursorRawQuery != null) {
                                         cursorRawQuery.close();
                                     }
@@ -977,8 +977,8 @@ public final class n5 extends b5 {
                                                 u5VarO.d("Different delete count than expected in local db. expected, received, difference", Long.valueOf(j11), Long.valueOf(jDelete), Long.valueOf(j11 - jDelete));
                                             } catch (SQLiteFullException e12) {
                                                 e = e12;
-                                                this.f25625a.a().o().b("Error writing entry; local database full", e);
-                                                this.f25785d = true;
+                                                this.f26446a.a().o().b("Error writing entry; local database full", e);
+                                                this.f26606d = true;
                                                 if (cursorRawQuery != null) {
                                                     cursorRawQuery.close();
                                                 }
@@ -994,8 +994,8 @@ public final class n5 extends b5 {
                                                         sQLiteDatabaseW.endTransaction();
                                                     }
                                                 }
-                                                this.f25625a.a().o().b("Error writing entry to local database", e);
-                                                this.f25785d = z11;
+                                                this.f26446a.a().o().b("Error writing entry to local database", e);
+                                                this.f26606d = z11;
                                                 if (cursorRawQuery != null) {
                                                     cursorRawQuery.close();
                                                 }
@@ -1019,8 +1019,8 @@ public final class n5 extends b5 {
                                         }
                                     } catch (SQLiteFullException e14) {
                                         e = e14;
-                                        this.f25625a.a().o().b("Error writing entry; local database full", e);
-                                        this.f25785d = true;
+                                        this.f26446a.a().o().b("Error writing entry; local database full", e);
+                                        this.f26606d = true;
                                         if (cursorRawQuery != null) {
                                             cursorRawQuery.close();
                                         }
@@ -1037,8 +1037,8 @@ public final class n5 extends b5 {
                                                 sQLiteDatabaseW.endTransaction();
                                             }
                                         }
-                                        this.f25625a.a().o().b("Error writing entry to local database", e);
-                                        this.f25785d = z11;
+                                        this.f26446a.a().o().b("Error writing entry to local database", e);
+                                        this.f26606d = z11;
                                         if (cursorRawQuery != null) {
                                             cursorRawQuery.close();
                                         }
@@ -1108,7 +1108,7 @@ public final class n5 extends b5 {
                 }
             }
             boolean z13 = z12 ? 1 : 0;
-            this.f25625a.a().w().a("Failed to write entry to local database");
+            this.f26446a.a().w().a("Failed to write entry to local database");
             return z13;
         }
         return z12;

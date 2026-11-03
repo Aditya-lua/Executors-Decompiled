@@ -29,14 +29,14 @@ import java.util.zip.ZipInputStream;
 public class q {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Map<String, s0<i>> f16449a = new HashMap();
+    public static final Map<String, s0<i>> f17045a = new HashMap();
     public static final Set<t0> b = new HashSet();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final byte[] f16450c = {80, 75, 3, 4};
+    public static final byte[] f17046c = {80, 75, 3, 4};
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final byte[] f16451d = {31, -117, 8};
+    public static final byte[] f17047d = {31, -117, 8};
 
     public static s0<i> A(final Context context, final String str, final String str2) {
         return h(str2, new Callable() { // from class: f7.j
@@ -88,7 +88,7 @@ public class q {
             } else if (nextEntry.getName().equalsIgnoreCase(Constants.AUTOML_IMAGE_LABELING_MANIFEST_JSON_FILE_NAME)) {
                 zipInputStream.closeEntry();
             } else if (nextEntry.getName().contains(".json")) {
-                iVarB = t(r7.c.n(xu.b0.c(xu.b0.j(zipInputStream))), null, false).b();
+                iVarB = t(r7.c.n(vu.b0.c(vu.b0.j(zipInputStream))), null, false).b();
             } else if (name.contains(".png") || name.contains(".webp") || name.contains(".jpg") || name.contains(".jpeg")) {
                 String[] strArrSplit = name.split("/");
                 map.put(strArrSplit[strArrSplit.length - 1], BitmapFactory.decodeStream(zipInputStream));
@@ -203,21 +203,21 @@ public class q {
         return new p0<>(iVarB);
     }
 
-    public static Boolean E(xu.g gVar) {
-        return H(gVar, f16451d);
+    public static Boolean E(vu.g gVar) {
+        return H(gVar, f17047d);
     }
 
     public static boolean F(Context context) {
         return (context.getResources().getConfiguration().uiMode & 48) == 32;
     }
 
-    public static Boolean G(xu.g gVar) {
-        return H(gVar, f16450c);
+    public static Boolean G(vu.g gVar) {
+        return H(gVar, f17046c);
     }
 
-    public static Boolean H(xu.g gVar, byte[] bArr) {
+    public static Boolean H(vu.g gVar, byte[] bArr) {
         try {
-            xu.g gVarPeek = gVar.peek();
+            vu.g gVarPeek = gVar.peek();
             for (byte b10 : bArr) {
                 if (gVarPeek.readByte() != b10) {
                     return Boolean.FALSE;
@@ -249,7 +249,7 @@ public class q {
     }
 
     public static /* synthetic */ void a(String str, AtomicBoolean atomicBoolean, Throwable th2) {
-        Map<String, s0<i>> map = f16449a;
+        Map<String, s0<i>> map = f17045a;
         map.remove(str);
         atomicBoolean.set(true);
         if (map.size() == 0) {
@@ -274,7 +274,7 @@ public class q {
     }
 
     public static /* synthetic */ void g(String str, AtomicBoolean atomicBoolean, i iVar) {
-        Map<String, s0<i>> map = f16449a;
+        Map<String, s0<i>> map = f17045a;
         map.remove(str);
         atomicBoolean.set(true);
         if (map.size() == 0) {
@@ -286,7 +286,7 @@ public class q {
         i iVarA = str == null ? null : l7.g.b().a(str);
         s0<i> s0Var = iVarA != null ? new s0<>(iVarA) : null;
         if (str != null) {
-            Map<String, s0<i>> map = f16449a;
+            Map<String, s0<i>> map = f17045a;
             if (map.containsKey(str)) {
                 s0Var = map.get(str);
             }
@@ -313,7 +313,7 @@ public class q {
                 }
             });
             if (!atomicBoolean.get()) {
-                Map<String, s0<i>> map2 = f16449a;
+                Map<String, s0<i>> map2 = f17045a;
                 map2.put(str, s0Var2);
                 if (map2.size() == 1) {
                     I(false);
@@ -368,7 +368,7 @@ public class q {
             return new p0<>(iVarA);
         }
         try {
-            xu.g gVarC = xu.b0.c(xu.b0.j(inputStream));
+            vu.g gVarC = vu.b0.c(vu.b0.j(inputStream));
             if (G(gVarC).booleanValue()) {
                 return B(context, new ZipInputStream(gVarC.s3()), str);
             }
@@ -397,7 +397,7 @@ public class q {
     }
 
     public static p0<i> q(InputStream inputStream, String str, boolean z10) {
-        return u(xu.b0.j(inputStream), str, z10);
+        return u(vu.b0.j(inputStream), str, z10);
     }
 
     public static p0<i> r(r7.c cVar, String str) {
@@ -428,8 +428,8 @@ public class q {
         }
     }
 
-    public static p0<i> u(xu.r0 r0Var, String str, boolean z10) {
-        return t(r7.c.n(xu.b0.c(r0Var)), str, z10);
+    public static p0<i> u(vu.r0 r0Var, String str, boolean z10) {
+        return t(r7.c.n(vu.b0.c(r0Var)), str, z10);
     }
 
     public static s0<i> v(Context context, int i10) {
@@ -457,7 +457,7 @@ public class q {
             return new p0<>(iVarA);
         }
         try {
-            xu.g gVarC = xu.b0.c(xu.b0.j(context.getResources().openRawResource(i10)));
+            vu.g gVarC = vu.b0.c(vu.b0.j(context.getResources().openRawResource(i10)));
             if (G(gVarC).booleanValue()) {
                 return B(context, new ZipInputStream(gVarC.s3()), str);
             }

@@ -15,15 +15,15 @@ public final class BeginSignInResult extends AbstractSafeParcelable {
     public static final Parcelable.Creator<BeginSignInResult> CREATOR = new z8.d();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final PendingIntent f5583f;
+    public final PendingIntent f5656f;
 
     public BeginSignInResult(@NonNull PendingIntent pendingIntent) {
-        this.f5583f = (PendingIntent) m.l(pendingIntent);
+        this.f5656f = (PendingIntent) m.l(pendingIntent);
     }
 
     @NonNull
     public PendingIntent v3() {
-        return this.f5583f;
+        return this.f5656f;
     }
 
     @Override // android.os.Parcelable

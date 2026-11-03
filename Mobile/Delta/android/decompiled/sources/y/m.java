@@ -36,12 +36,12 @@ import org.jetbrains.annotations.Nullable;
 import z.a3;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000t\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\f\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u000b\b\u0007\u0018\u0000 C2\u00020\u0001:\u0002D%B\u001f\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\b\u0010\tJ\u0017\u0010\r\u001a\u00020\f2\u0006\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\r\u0010\u000eJ\u001d\u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\u00100\u000f2\u0006\u0010\u000b\u001a\u00020\nH\u0002¢\u0006\u0004\b\u0011\u0010\u0012J\u0013\u0010\u0014\u001a\u00020\u0010*\u00020\u0013H\u0003¢\u0006\u0004\b\u0014\u0010\u0015J\u0013\u0010\u0016\u001a\u00020\u0010*\u00020\u0013H\u0003¢\u0006\u0004\b\u0016\u0010\u0015J\u001b\u0010\u001a\u001a\u00020\u0019*\u00020\u00172\u0006\u0010\u0018\u001a\u00020\u0013H\u0002¢\u0006\u0004\b\u001a\u0010\u001bJ'\u0010\u001f\u001a\u0004\u0018\u00010\u001e2\f\u0010\u001c\u001a\b\u0012\u0004\u0012\u00020\u00170\u000f2\u0006\u0010\u001d\u001a\u00020\nH\u0002¢\u0006\u0004\b\u001f\u0010 J\u0013\u0010!\u001a\u00020\u0004*\u00020\nH\u0002¢\u0006\u0004\b!\u0010\"J\u0011\u0010#\u001a\u0004\u0018\u00010\fH\u0002¢\u0006\u0004\b#\u0010$R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b%\u0010&R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b'\u0010(R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b)\u0010*R\u001b\u00100\u001a\u00020+8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b,\u0010-\u001a\u0004\b.\u0010/R\u001d\u00105\u001a\u0004\u0018\u0001018BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b2\u0010-\u001a\u0004\b3\u00104R\u001b\u00109\u001a\u0002068BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\u001a\u0010-\u001a\u0004\b7\u00108R\u001d\u0010>\u001a\u0004\u0018\u00010:8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b;\u0010-\u001a\u0004\b<\u0010=R\u001b\u0010B\u001a\u00020\f8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b?\u0010-\u001a\u0004\b@\u0010A¨\u0006E"}, d2 = {"Ly/m;", "Lj0/a;", "Landroid/content/Context;", "context", "", "cameraId", "La0/p0;", "cameraManagerCompat", "<init>", "(Landroid/content/Context;Ljava/lang/String;La0/p0;)V", "Ln0/o3;", "sessionConfig", "", "b", "(Ln0/o3;)Z", "", "Ly/m$a;", "l", "(Ln0/o3;)Ljava/util/List;", "Ln0/o3$f;", "v", "(Ln0/o3$f;)Ly/m$a;", "w", "Landroid/hardware/camera2/params/OutputConfiguration;", "outputConfig", "", "h", "(Landroid/hardware/camera2/params/OutputConfiguration;Ln0/o3$f;)V", "outputConfigs", "cameraXSessionConfig", "Landroid/hardware/camera2/params/SessionConfiguration;", "n", "(Ljava/util/List;Ln0/o3;)Landroid/hardware/camera2/params/SessionConfiguration;", "x", "(Ln0/o3;)Ljava/lang/String;", "s", "()Ljava/lang/Boolean;", "c", "Landroid/content/Context;", "d", "Ljava/lang/String;", "e", "La0/p0;", "Lc1/d;", "f", "Ljt/h;", "q", "()Lc1/d;", "cameraDeviceSetupCompat", "Landroid/hardware/camera2/CameraDevice$CameraDeviceSetup;", "g", "p", "()Landroid/hardware/camera2/CameraDevice$CameraDeviceSetup;", "cameraDeviceSetup", "La0/c0;", "o", "()La0/c0;", "cameraCharacteristics", "Landroid/hardware/camera2/params/DynamicRangeProfiles;", "i", "r", "()Landroid/hardware/camera2/params/DynamicRangeProfiles;", "dynamicRangeProfiles", "j", "t", "()Z", "isDeferredSurfaceSupported", "k", "a", "camera-camera2_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
+@Metadata(d1 = {"\u0000t\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\f\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u000b\b\u0007\u0018\u0000 C2\u00020\u0001:\u0002D%B\u001f\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\b\u0010\tJ\u0017\u0010\r\u001a\u00020\f2\u0006\u0010\u000b\u001a\u00020\nH\u0016¢\u0006\u0004\b\r\u0010\u000eJ\u001d\u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\u00100\u000f2\u0006\u0010\u000b\u001a\u00020\nH\u0002¢\u0006\u0004\b\u0011\u0010\u0012J\u0013\u0010\u0014\u001a\u00020\u0010*\u00020\u0013H\u0003¢\u0006\u0004\b\u0014\u0010\u0015J\u0013\u0010\u0016\u001a\u00020\u0010*\u00020\u0013H\u0003¢\u0006\u0004\b\u0016\u0010\u0015J\u001b\u0010\u001a\u001a\u00020\u0019*\u00020\u00172\u0006\u0010\u0018\u001a\u00020\u0013H\u0002¢\u0006\u0004\b\u001a\u0010\u001bJ'\u0010\u001f\u001a\u0004\u0018\u00010\u001e2\f\u0010\u001c\u001a\b\u0012\u0004\u0012\u00020\u00170\u000f2\u0006\u0010\u001d\u001a\u00020\nH\u0002¢\u0006\u0004\b\u001f\u0010 J\u0013\u0010!\u001a\u00020\u0004*\u00020\nH\u0002¢\u0006\u0004\b!\u0010\"J\u0011\u0010#\u001a\u0004\u0018\u00010\fH\u0002¢\u0006\u0004\b#\u0010$R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b%\u0010&R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b'\u0010(R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b)\u0010*R\u001b\u00100\u001a\u00020+8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b,\u0010-\u001a\u0004\b.\u0010/R\u001d\u00105\u001a\u0004\u0018\u0001018BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b2\u0010-\u001a\u0004\b3\u00104R\u001b\u00109\u001a\u0002068BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\u001a\u0010-\u001a\u0004\b7\u00108R\u001d\u0010>\u001a\u0004\u0018\u00010:8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b;\u0010-\u001a\u0004\b<\u0010=R\u001b\u0010B\u001a\u00020\f8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b?\u0010-\u001a\u0004\b@\u0010A¨\u0006E"}, d2 = {"Ly/m;", "Lj0/a;", "Landroid/content/Context;", "context", "", "cameraId", "La0/p0;", "cameraManagerCompat", "<init>", "(Landroid/content/Context;Ljava/lang/String;La0/p0;)V", "Ln0/o3;", "sessionConfig", "", "b", "(Ln0/o3;)Z", "", "Ly/m$a;", "l", "(Ln0/o3;)Ljava/util/List;", "Ln0/o3$f;", "v", "(Ln0/o3$f;)Ly/m$a;", "w", "Landroid/hardware/camera2/params/OutputConfiguration;", "outputConfig", "", "h", "(Landroid/hardware/camera2/params/OutputConfiguration;Ln0/o3$f;)V", "outputConfigs", "cameraXSessionConfig", "Landroid/hardware/camera2/params/SessionConfiguration;", "n", "(Ljava/util/List;Ln0/o3;)Landroid/hardware/camera2/params/SessionConfiguration;", "x", "(Ln0/o3;)Ljava/lang/String;", "s", "()Ljava/lang/Boolean;", "c", "Landroid/content/Context;", "d", "Ljava/lang/String;", "e", "La0/p0;", "Lc1/d;", "f", "Lgt/h;", "q", "()Lc1/d;", "cameraDeviceSetupCompat", "Landroid/hardware/camera2/CameraDevice$CameraDeviceSetup;", "g", "p", "()Landroid/hardware/camera2/CameraDevice$CameraDeviceSetup;", "cameraDeviceSetup", "La0/c0;", "o", "()La0/c0;", "cameraCharacteristics", "Landroid/hardware/camera2/params/DynamicRangeProfiles;", "i", "r", "()Landroid/hardware/camera2/params/DynamicRangeProfiles;", "dynamicRangeProfiles", "j", "t", "()Z", "isDeferredSurfaceSupported", "k", "a", "camera-camera2_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
 public final class m implements j0.a {
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
     @NotNull
-    public static final b f35418l = new b();
+    public static final b f36275l = new b();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -57,23 +57,23 @@ public final class m implements j0.a {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final jt.h cameraDeviceSetupCompat;
+    public final gt.h cameraDeviceSetupCompat;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final jt.h cameraDeviceSetup;
+    public final gt.h cameraDeviceSetup;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final jt.h cameraCharacteristics;
+    public final gt.h cameraCharacteristics;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final jt.h dynamicRangeProfiles;
+    public final gt.h dynamicRangeProfiles;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final jt.h isDeferredSurfaceSupported;
+    public final gt.h isDeferredSurfaceSupported;
 
     @Metadata(d1 = {"\u0000\u0017\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J\u0017\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0016¢\u0006\u0004\b\u0005\u0010\u0006J\u0017\u0010\u0007\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H\u0016¢\u0006\u0004\b\u0007\u0010\u0006¨\u0006\b"}, d2 = {"y/m$b", "Landroid/hardware/camera2/CameraCaptureSession$StateCallback;", "Landroid/hardware/camera2/CameraCaptureSession;", "p0", "", "onConfigured", "(Landroid/hardware/camera2/CameraCaptureSession;)V", "onConfigureFailed", "camera-camera2_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
     public static final class b extends CameraCaptureSession.StateCallback {
@@ -95,34 +95,34 @@ public final class m implements j0.a {
         this.context = context;
         this.cameraId = cameraId;
         this.cameraManagerCompat = cameraManagerCompat;
-        this.cameraDeviceSetupCompat = jt.i.b(new Function0() { // from class: y.i
+        this.cameraDeviceSetupCompat = gt.i.b(new Function0() { // from class: y.i
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return m.j(this.f35413a);
+                return m.j(this.f36270a);
             }
         });
-        this.cameraDeviceSetup = jt.i.b(new Function0() { // from class: y.j
+        this.cameraDeviceSetup = gt.i.b(new Function0() { // from class: y.j
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return m.k(this.f35414a);
+                return m.k(this.f36271a);
             }
         });
-        this.cameraCharacteristics = jt.i.b(new Function0() { // from class: y.k
+        this.cameraCharacteristics = gt.i.b(new Function0() { // from class: y.k
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return m.i(this.f35415a);
+                return m.i(this.f36272a);
             }
         });
-        this.dynamicRangeProfiles = jt.i.b(new Function0() { // from class: y.l
+        this.dynamicRangeProfiles = gt.i.b(new Function0() { // from class: y.l
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return m.m(this.f35416a);
+                return m.m(this.f36273a);
             }
         });
-        this.isDeferredSurfaceSupported = jt.i.b(new Function0() { // from class: y.h
+        this.isDeferredSurfaceSupported = gt.i.b(new Function0() { // from class: y.h
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return Boolean.valueOf(m.u(this.f35412a));
+                return Boolean.valueOf(m.u(this.f36269a));
             }
         });
     }
@@ -215,7 +215,7 @@ public final class m implements j0.a {
 
     public final SessionConfiguration n(List<OutputConfiguration> outputConfigs, o3 cameraXSessionConfig) {
         e.a();
-        SessionConfiguration sessionConfigurationA = d.a(0, outputConfigs, q0.c.b(), f35418l);
+        SessionConfiguration sessionConfigurationA = d.a(0, outputConfigs, q0.c.b(), f36275l);
         CameraDevice.CameraDeviceSetup cameraDeviceSetupP = p();
         if (cameraDeviceSetupP == null) {
             return null;

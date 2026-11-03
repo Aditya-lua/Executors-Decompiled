@@ -2,7 +2,7 @@ package com.google.mlkit.common.sdkinternal;
 
 import androidx.annotation.NonNull;
 import java.util.concurrent.Executor;
-import xf.b;
+import yf.b;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class ExecutorSelector {

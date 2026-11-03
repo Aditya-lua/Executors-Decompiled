@@ -25,10 +25,10 @@ public final class AFb1kSDK {
         public final boolean AFLogger;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final String f5234d;
+        public final String f5307d;
 
         public AFa1tSDK(String str, boolean z10) {
-            this.f5234d = str;
+            this.f5307d = str;
             this.AFLogger = z10;
         }
     }

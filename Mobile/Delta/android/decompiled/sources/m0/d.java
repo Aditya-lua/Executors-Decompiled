@@ -4,14 +4,14 @@ package m0;
 public final class d extends b0.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final x0.b0<androidx.camera.core.d> f23577a;
+    public final x0.b0<androidx.camera.core.d> f24227a;
     public final int b;
 
     public d(x0.b0<androidx.camera.core.d> b0Var, int i10) {
         if (b0Var == null) {
             throw new NullPointerException("Null packet");
         }
-        this.f23577a = b0Var;
+        this.f24227a = b0Var;
         this.b = i10;
     }
 
@@ -22,7 +22,7 @@ public final class d extends b0.a {
 
     @Override // m0.b0.a
     public x0.b0<androidx.camera.core.d> b() {
-        return this.f23577a;
+        return this.f24227a;
     }
 
     public boolean equals(Object obj) {
@@ -31,7 +31,7 @@ public final class d extends b0.a {
         }
         if (obj instanceof b0.a) {
             b0.a aVar = (b0.a) obj;
-            if (this.f23577a.equals(aVar.b()) && this.b == aVar.a()) {
+            if (this.f24227a.equals(aVar.b()) && this.b == aVar.a()) {
                 return true;
             }
         }
@@ -39,10 +39,10 @@ public final class d extends b0.a {
     }
 
     public int hashCode() {
-        return ((this.f23577a.hashCode() ^ 1000003) * 1000003) ^ this.b;
+        return ((this.f24227a.hashCode() ^ 1000003) * 1000003) ^ this.b;
     }
 
     public String toString() {
-        return "In{packet=" + this.f23577a + ", jpegQuality=" + this.b + "}";
+        return "In{packet=" + this.f24227a + ", jpegQuality=" + this.b + "}";
     }
 }

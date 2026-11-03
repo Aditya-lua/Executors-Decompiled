@@ -25,7 +25,7 @@ public final /* data */ class InquiryTheme implements Parcelable {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static final InquiryTheme f13191c = new InquiryTheme(c.Default);
+    public static final InquiryTheme f13272c = new InquiryTheme(c.Default);
 
     /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.shared.inquiryTheme.InquiryTheme$a, reason: from kotlin metadata */
     @Metadata(d1 = {"\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003R\u0017\u0010\u0005\u001a\u00020\u00048\u0006¢\u0006\f\n\u0004\b\u0005\u0010\u0006\u001a\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"Lcom/withpersona/sdk2/inquiry/shared/inquiryTheme/InquiryTheme$a;", "", "<init>", "()V", "Lcom/withpersona/sdk2/inquiry/shared/inquiryTheme/InquiryTheme;", "Default", "Lcom/withpersona/sdk2/inquiry/shared/inquiryTheme/InquiryTheme;", "a", "()Lcom/withpersona/sdk2/inquiry/shared/inquiryTheme/InquiryTheme;", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
@@ -36,7 +36,7 @@ public final /* data */ class InquiryTheme implements Parcelable {
 
         @NotNull
         public final InquiryTheme a() {
-            return InquiryTheme.f13191c;
+            return InquiryTheme.f13272c;
         }
 
         public Companion() {
@@ -66,7 +66,7 @@ public final /* data */ class InquiryTheme implements Parcelable {
 
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f13195d = qt.b.a(a());
+        public static final /* synthetic */ ot.a f13276d = ot.b.a(a());
     }
 
     public InquiryTheme(@NotNull c iconStyle) {
@@ -93,7 +93,7 @@ public final /* data */ class InquiryTheme implements Parcelable {
     }
 
     public final boolean g() {
-        return this == f13191c;
+        return this == f13272c;
     }
 
     public int hashCode() {

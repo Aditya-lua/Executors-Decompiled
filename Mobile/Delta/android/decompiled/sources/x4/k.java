@@ -40,7 +40,7 @@ public final class k {
 
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f34754e = qt.b.a(a());
+        public static final /* synthetic */ ot.a f35252e = ot.b.a(a());
     }
 
     public k(int i10) {
@@ -53,7 +53,7 @@ public final class k {
         reentrantLock.lock();
         try {
             this.needsSync = true;
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
         } finally {
             reentrantLock.unlock();
         }
@@ -107,7 +107,7 @@ public final class k {
         try {
             kotlin.collections.l.u(this.tableObservedState, false, 0, 0, 6, null);
             this.needsSync = true;
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
         } finally {
             reentrantLock.unlock();
         }

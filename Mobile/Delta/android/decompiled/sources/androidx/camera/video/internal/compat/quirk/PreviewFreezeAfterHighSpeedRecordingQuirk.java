@@ -15,7 +15,7 @@ public final class PreviewFreezeAfterHighSpeedRecordingQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final PreviewFreezeAfterHighSpeedRecordingQuirk f1405a = new PreviewFreezeAfterHighSpeedRecordingQuirk();
+    public static final PreviewFreezeAfterHighSpeedRecordingQuirk f1250a = new PreviewFreezeAfterHighSpeedRecordingQuirk();
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public static final boolean isPixelPhone;

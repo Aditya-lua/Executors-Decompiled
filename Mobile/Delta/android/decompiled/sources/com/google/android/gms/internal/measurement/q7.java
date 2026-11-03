@@ -6,7 +6,7 @@ public final class q7 extends cb implements pc {
         throw null;
     }
 
-    public final q7 A(String str) {
+    public final q7 B(String str) {
         p();
         ((r7) this.b).V(str);
         return this;
@@ -42,7 +42,7 @@ public final class q7 extends cb implements pc {
         return this;
     }
 
-    public final q7 x(long j10) {
+    public final q7 y(long j10) {
         p();
         ((r7) this.b).T(j10);
         return this;

@@ -14,7 +14,7 @@ import n9.m;
 public final class GamesResolutionActivity extends Activity {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public ResultReceiver f6200a;
+    public ResultReceiver f6273a;
     public boolean b;
 
     public final void a(int i10, Intent intent) {
@@ -23,7 +23,7 @@ public final class GamesResolutionActivity extends Activity {
             return;
         }
         this.b = true;
-        ResultReceiver resultReceiver = this.f6200a;
+        ResultReceiver resultReceiver = this.f6273a;
         if (resultReceiver != null) {
             if (intent == null) {
                 bundle = new Bundle();
@@ -56,10 +56,10 @@ public final class GamesResolutionActivity extends Activity {
     public final void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         if (bundle != null) {
-            this.f6200a = (ResultReceiver) m.l((ResultReceiver) bundle.getParcelable("resultReceiver"));
+            this.f6273a = (ResultReceiver) m.l((ResultReceiver) bundle.getParcelable("resultReceiver"));
             return;
         }
-        this.f6200a = (ResultReceiver) m.l((ResultReceiver) getIntent().getParcelableExtra("resultReceiver"));
+        this.f6273a = (ResultReceiver) m.l((ResultReceiver) getIntent().getParcelableExtra("resultReceiver"));
         try {
             try {
                 startIntentSenderForResult(((PendingIntent) m.l((PendingIntent) getIntent().getParcelableExtra("pendingIntent"))).getIntentSender(), 0, null, 0, 0, 0);
@@ -85,6 +85,6 @@ public final class GamesResolutionActivity extends Activity {
     @Override // android.app.Activity
     public final void onSaveInstanceState(@NonNull Bundle bundle) {
         super.onSaveInstanceState(bundle);
-        bundle.putParcelable("resultReceiver", this.f6200a);
+        bundle.putParcelable("resultReceiver", this.f6273a);
     }
 }

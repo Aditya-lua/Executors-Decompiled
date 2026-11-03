@@ -274,7 +274,7 @@ public final class y0 {
             }
             Map mapV = kotlin.collections.k0.v(this.cameraStateObservers);
             this.cameraStateObservers.clear();
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
             d1 d1Var = this.cameraRepository;
             if (d1Var != null) {
                 LinkedHashSet<p0> linkedHashSetM = d1Var.m();
@@ -295,7 +295,7 @@ public final class y0 {
                             y0.m(arrayList, e0Var, str);
                         }
                     });
-                    arrayList2.add(Unit.f22483a);
+                    arrayList2.add(Unit.f22938a);
                 }
             }
         }
@@ -437,7 +437,7 @@ public final class y0 {
                 } catch (IllegalArgumentException unused) {
                 }
             }
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
         }
     }
 
@@ -452,7 +452,7 @@ public final class y0 {
                 final androidx.p000lifecycle.e0<g0.w> e0Var = new androidx.p000lifecycle.e0() { // from class: n0.v0
                     @Override // androidx.p000lifecycle.e0
                     public final void a(Object obj) {
-                        y0.x(this.f24890a, strE, (g0.w) obj);
+                        y0.x(this.f25711a, strE, (g0.w) obj);
                     }
                 };
                 q0.c.e().execute(new Runnable() { // from class: n0.w0
@@ -463,7 +463,7 @@ public final class y0 {
                 });
                 this.cameraStateObservers.put(strE, e0Var);
                 g0.r1.a("CameraPresencePrvdr", "Registered state observer for camera: " + strE);
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             }
         }
     }

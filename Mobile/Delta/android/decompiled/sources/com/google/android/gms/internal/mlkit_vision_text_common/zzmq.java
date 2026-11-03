@@ -1,7 +1,7 @@
 package com.google.android.gms.internal.mlkit_vision_text_common;
 
-import rf.a;
-import rf.b;
+import sf.a;
+import sf.b;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class zzmq implements a {
@@ -10,7 +10,7 @@ public final class zzmq implements a {
     private zzmq() {
     }
 
-    @Override // rf.a
+    @Override // sf.a
     public final void configure(b bVar) {
         bVar.registerEncoder(zzoy.class, zzio.zza);
         bVar.registerEncoder(zzst.class, zzmg.zza);

@@ -21,8 +21,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000Z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u001c\n\u0002\u0010\u000b\n\u0002\b\u0006\b\u0000\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0003 <=B\u0081\u0001\b\u0007\u0012\b\b\u0001\u0010\u0004\u001a\u00020\u0003\u0012\n\b\u0001\u0010\u0005\u001a\u0004\u0018\u00010\u0003\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0003\u0012\n\b\u0001\u0010\u0007\u001a\u0004\u0018\u00010\u0003\u0012\u000e\b\u0001\u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\b\u0012\b\b\u0001\u0010\f\u001a\u00020\u000b\u0012\b\b\u0001\u0010\u000e\u001a\u00020\r\u0012\u0006\u0010\u0010\u001a\u00020\u000f\u0012\u0006\u0010\u0012\u001a\u00020\u0011\u0012\u0006\u0010\u0014\u001a\u00020\u0013\u0012\u0006\u0010\u0016\u001a\u00020\u0015\u0012\u0006\u0010\u0018\u001a\u00020\u0017¢\u0006\u0004\b\u0019\u0010\u001aJ\u0015\u0010\u001c\u001a\b\u0012\u0004\u0012\u00020\u00020\u001bH\u0016¢\u0006\u0004\b\u001c\u0010\u001dJ\u0015\u0010\u001e\u001a\b\u0012\u0004\u0012\u00020\u00020\u001bH\u0002¢\u0006\u0004\b\u001e\u0010\u001dJ\u0015\u0010\u001f\u001a\b\u0012\u0004\u0012\u00020\u00020\u001bH\u0002¢\u0006\u0004\b\u001f\u0010\u001dR\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b \u0010!\u001a\u0004\b\"\u0010#R\u0016\u0010\u0005\u001a\u0004\u0018\u00010\u00038\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b$\u0010!R\u0017\u0010\u0006\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b%\u0010!\u001a\u0004\b&\u0010#R\u0016\u0010\u0007\u001a\u0004\u0018\u00010\u00038\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b'\u0010!R\u001a\u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b(\u0010)R\u0014\u0010\f\u001a\u00020\u000b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b*\u0010+R\u0014\u0010\u000e\u001a\u00020\r8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b,\u0010-R\u0014\u0010\u0010\u001a\u00020\u000f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b.\u0010/R\u0014\u0010\u0012\u001a\u00020\u00118\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b0\u00101R\u0014\u0010\u0014\u001a\u00020\u00138\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b2\u00103R\u0014\u0010\u0016\u001a\u00020\u00158\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b4\u00105R\u0014\u0010\u0018\u001a\u00020\u00178\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b6\u00107R\u0014\u0010;\u001a\u0002088BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b9\u0010:¨\u0006>"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/TransitionWorker;", "Lvr/h;", "Lcom/withpersona/sdk2/inquiry/internal/TransitionWorker$b;", "", "sessionToken", "trackingEventsUrl", "inquiryId", "shareToken", "", "Lcom/withpersona/sdk2/inquiry/FieldMapping;", "fieldMappings", "Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;", "inquirySessionConfig", "Lcom/withpersona/sdk2/inquiry/internal/TransitionWorker$TransitionData;", "transitionData", "Lgp/w;", "service", "Lfo/a;", "fallbackModeManager", "Lcom/withpersona/sdk2/inquiry/internal/UiStepSavedStateHelper;", "uiStepSavedStateHelper", "Lgo/e;", "featureFlagManager", "Landroid/content/Context;", "applicationContext", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;Lcom/withpersona/sdk2/inquiry/internal/TransitionWorker$TransitionData;Lgp/w;Lfo/a;Lcom/withpersona/sdk2/inquiry/internal/UiStepSavedStateHelper;Lgo/e;Landroid/content/Context;)V", "Lnu/h;", "run", "()Lnu/h;", "s", "r", "b", "Ljava/lang/String;", "p", "()Ljava/lang/String;", "c", "d", "o", "e", "f", "Ljava/util/List;", "g", "Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;", "h", "Lcom/withpersona/sdk2/inquiry/internal/TransitionWorker$TransitionData;", "i", "Lgp/w;", "j", "Lfo/a;", "k", "Lcom/withpersona/sdk2/inquiry/internal/UiStepSavedStateHelper;", "l", "Lgo/e;", "m", "Landroid/content/Context;", "", "q", "()Z", "useMultipartTransition", "TransitionData", "a", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class TransitionWorker implements vr.h<b> {
+@Metadata(d1 = {"\u0000Z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u001c\n\u0002\u0010\u000b\n\u0002\b\u0006\b\u0000\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0003 <=B\u0081\u0001\b\u0007\u0012\b\b\u0001\u0010\u0004\u001a\u00020\u0003\u0012\n\b\u0001\u0010\u0005\u001a\u0004\u0018\u00010\u0003\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0003\u0012\n\b\u0001\u0010\u0007\u001a\u0004\u0018\u00010\u0003\u0012\u000e\b\u0001\u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\b\u0012\b\b\u0001\u0010\f\u001a\u00020\u000b\u0012\b\b\u0001\u0010\u000e\u001a\u00020\r\u0012\u0006\u0010\u0010\u001a\u00020\u000f\u0012\u0006\u0010\u0012\u001a\u00020\u0011\u0012\u0006\u0010\u0014\u001a\u00020\u0013\u0012\u0006\u0010\u0016\u001a\u00020\u0015\u0012\u0006\u0010\u0018\u001a\u00020\u0017¢\u0006\u0004\b\u0019\u0010\u001aJ\u0015\u0010\u001c\u001a\b\u0012\u0004\u0012\u00020\u00020\u001bH\u0016¢\u0006\u0004\b\u001c\u0010\u001dJ\u0015\u0010\u001e\u001a\b\u0012\u0004\u0012\u00020\u00020\u001bH\u0002¢\u0006\u0004\b\u001e\u0010\u001dJ\u0015\u0010\u001f\u001a\b\u0012\u0004\u0012\u00020\u00020\u001bH\u0002¢\u0006\u0004\b\u001f\u0010\u001dR\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b \u0010!\u001a\u0004\b\"\u0010#R\u0016\u0010\u0005\u001a\u0004\u0018\u00010\u00038\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b$\u0010!R\u0017\u0010\u0006\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b%\u0010!\u001a\u0004\b&\u0010#R\u0016\u0010\u0007\u001a\u0004\u0018\u00010\u00038\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b'\u0010!R\u001a\u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b(\u0010)R\u0014\u0010\f\u001a\u00020\u000b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b*\u0010+R\u0014\u0010\u000e\u001a\u00020\r8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b,\u0010-R\u0014\u0010\u0010\u001a\u00020\u000f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b.\u0010/R\u0014\u0010\u0012\u001a\u00020\u00118\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b0\u00101R\u0014\u0010\u0014\u001a\u00020\u00138\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b2\u00103R\u0014\u0010\u0016\u001a\u00020\u00158\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b4\u00105R\u0014\u0010\u0018\u001a\u00020\u00178\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b6\u00107R\u0014\u0010;\u001a\u0002088BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b9\u0010:¨\u0006>"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/TransitionWorker;", "Ltr/h;", "Lcom/withpersona/sdk2/inquiry/internal/TransitionWorker$b;", "", "sessionToken", "trackingEventsUrl", "inquiryId", "shareToken", "", "Lcom/withpersona/sdk2/inquiry/FieldMapping;", "fieldMappings", "Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;", "inquirySessionConfig", "Lcom/withpersona/sdk2/inquiry/internal/TransitionWorker$TransitionData;", "transitionData", "Lep/w;", "service", "Lco/a;", "fallbackModeManager", "Lcom/withpersona/sdk2/inquiry/internal/UiStepSavedStateHelper;", "uiStepSavedStateHelper", "Leo/e;", "featureFlagManager", "Landroid/content/Context;", "applicationContext", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;Lcom/withpersona/sdk2/inquiry/internal/TransitionWorker$TransitionData;Lep/w;Lco/a;Lcom/withpersona/sdk2/inquiry/internal/UiStepSavedStateHelper;Leo/e;Landroid/content/Context;)V", "Llu/h;", "run", "()Llu/h;", "s", "r", "b", "Ljava/lang/String;", "p", "()Ljava/lang/String;", "c", "d", "o", "e", "f", "Ljava/util/List;", "g", "Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;", "h", "Lcom/withpersona/sdk2/inquiry/internal/TransitionWorker$TransitionData;", "i", "Lep/w;", "j", "Lco/a;", "k", "Lcom/withpersona/sdk2/inquiry/internal/UiStepSavedStateHelper;", "l", "Leo/e;", "m", "Landroid/content/Context;", "", "q", "()Z", "useMultipartTransition", "TransitionData", "a", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class TransitionWorker implements tr.h<b> {
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull
@@ -54,11 +54,11 @@ public final class TransitionWorker implements vr.h<b> {
 
     /* JADX INFO: renamed from: i, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final gp.w service;
+    public final ep.w service;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final fo.a fallbackModeManager;
+    public final co.a fallbackModeManager;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -66,7 +66,7 @@ public final class TransitionWorker implements vr.h<b> {
 
     /* JADX INFO: renamed from: l, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final go.e featureFlagManager;
+    public final eo.e featureFlagManager;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -273,40 +273,40 @@ public final class TransitionWorker implements vr.h<b> {
         }
     }
 
-    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u0002*\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Lnu/i;", "Lcom/withpersona/sdk2/inquiry/internal/TransitionWorker$b;", "", "<anonymous>", "(Lnu/i;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.internal.TransitionWorker$run$1", f = "TransitionWorker.kt", l = {46, 48}, m = "invokeSuspend")
-    public static final class c extends pt.m implements Function2<nu.i<? super b>, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.internal.TransitionWorker$run$1", f = "TransitionWorker.kt", l = {46, 48}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u0002*\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Llu/i;", "Lcom/withpersona/sdk2/inquiry/internal/TransitionWorker$b;", "", "<anonymous>", "(Llu/i;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class c extends nt.m implements Function2<lu.i<? super b>, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f11398t;
+        public int f11479t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public /* synthetic */ Object f11399u;
+        public /* synthetic */ Object f11480u;
 
-        public c(nt.b<? super c> bVar) {
+        public c(lt.b<? super c> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             c cVar = TransitionWorker.this.new c(bVar);
-            cVar.f11399u = obj;
+            cVar.f11480u = obj;
             return cVar;
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:13:0x0040, code lost:
         
-            if (nu.j.q(r0, r6, r5) == r1) goto L17;
+            if (lu.j.q(r0, r6, r5) == r1) goto L17;
          */
         /* JADX WARN: Code restructure failed: missing block: B:16:0x0055, code lost:
         
-            if (nu.j.q(r0, r6, r5) == r1) goto L17;
+            if (lu.j.q(r0, r6, r5) == r1) goto L17;
          */
         /* JADX WARN: Code restructure failed: missing block: B:17:0x0057, code lost:
         
             return r1;
          */
-        @Override // pt.a
+        @Override // nt.a
         /*
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct add '--show-bad-code' argument
@@ -314,10 +314,10 @@ public final class TransitionWorker implements vr.h<b> {
         public final java.lang.Object invokeSuspend(java.lang.Object r6) {
             /*
                 r5 = this;
-                java.lang.Object r0 = r5.f11399u
-                nu.i r0 = (nu.i) r0
-                java.lang.Object r1 = ot.c.e()
-                int r2 = r5.f11398t
+                java.lang.Object r0 = r5.f11480u
+                lu.i r0 = (lu.i) r0
+                java.lang.Object r1 = mt.c.e()
+                int r2 = r5.f11479t
                 r3 = 2
                 r4 = 1
                 if (r2 == 0) goto L1f
@@ -330,73 +330,73 @@ public final class TransitionWorker implements vr.h<b> {
                 r6.<init>(r0)
                 throw r6
             L1b:
-                jt.o.b(r6)
+                gt.o.b(r6)
                 goto L58
             L1f:
-                jt.o.b(r6)
+                gt.o.b(r6)
                 com.withpersona.sdk2.inquiry.internal.TransitionWorker r6 = com.withpersona.sdk2.inquiry.internal.TransitionWorker.this
-                fo.a r6 = com.withpersona.sdk2.inquiry.internal.TransitionWorker.d(r6)
+                co.a r6 = com.withpersona.sdk2.inquiry.internal.TransitionWorker.d(r6)
                 boolean r6 = r6.b()
                 if (r6 == 0) goto L43
                 com.withpersona.sdk2.inquiry.internal.TransitionWorker r6 = com.withpersona.sdk2.inquiry.internal.TransitionWorker.this
-                nu.h r6 = com.withpersona.sdk2.inquiry.internal.TransitionWorker.m(r6)
-                java.lang.Object r2 = pt.l.a(r0)
-                r5.f11399u = r2
-                r5.f11398t = r4
-                java.lang.Object r6 = nu.j.q(r0, r6, r5)
+                lu.h r6 = com.withpersona.sdk2.inquiry.internal.TransitionWorker.m(r6)
+                java.lang.Object r2 = nt.l.a(r0)
+                r5.f11480u = r2
+                r5.f11479t = r4
+                java.lang.Object r6 = lu.j.q(r0, r6, r5)
                 if (r6 != r1) goto L58
                 goto L57
             L43:
                 com.withpersona.sdk2.inquiry.internal.TransitionWorker r6 = com.withpersona.sdk2.inquiry.internal.TransitionWorker.this
-                nu.h r6 = com.withpersona.sdk2.inquiry.internal.TransitionWorker.n(r6)
-                java.lang.Object r2 = pt.l.a(r0)
-                r5.f11399u = r2
-                r5.f11398t = r3
-                java.lang.Object r6 = nu.j.q(r0, r6, r5)
+                lu.h r6 = com.withpersona.sdk2.inquiry.internal.TransitionWorker.n(r6)
+                java.lang.Object r2 = nt.l.a(r0)
+                r5.f11480u = r2
+                r5.f11479t = r3
+                java.lang.Object r6 = lu.j.q(r0, r6, r5)
                 if (r6 != r1) goto L58
             L57:
                 return r1
             L58:
-                kotlin.Unit r6 = kotlin.Unit.f22483a
+                kotlin.Unit r6 = kotlin.Unit.f22938a
                 return r6
             */
             throw new UnsupportedOperationException("Method not decompiled: com.withpersona.sdk2.inquiry.internal.TransitionWorker.c.invokeSuspend(java.lang.Object):java.lang.Object");
         }
 
         @Override // kotlin.jvm.functions.Function2
-        /* JADX INFO: renamed from: q, reason: merged with bridge method [inline-methods] */
-        public final Object invoke(nu.i<? super b> iVar, nt.b<? super Unit> bVar) {
-            return ((c) create(iVar, bVar)).invokeSuspend(Unit.f22483a);
+        /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
+        public final Object invoke(lu.i<? super b> iVar, lt.b<? super Unit> bVar) {
+            return ((c) create(iVar, bVar)).invokeSuspend(Unit.f22938a);
         }
     }
 
-    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u0002*\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Lnu/i;", "Lcom/withpersona/sdk2/inquiry/internal/TransitionWorker$b;", "", "<anonymous>", "(Lnu/i;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.internal.TransitionWorker$runFallbackTransition$1", f = "TransitionWorker.kt", l = {117, 122, R.styleable.AppCompatTheme_windowMinWidthMajor}, m = "invokeSuspend")
-    public static final class d extends pt.m implements Function2<nu.i<? super b>, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.internal.TransitionWorker$runFallbackTransition$1", f = "TransitionWorker.kt", l = {117, 122, R.styleable.AppCompatTheme_windowMinWidthMajor}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u0002*\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Llu/i;", "Lcom/withpersona/sdk2/inquiry/internal/TransitionWorker$b;", "", "<anonymous>", "(Llu/i;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class d extends nt.m implements Function2<lu.i<? super b>, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f11401t;
+        public Object f11482t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f11402u;
+        public Object f11483u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public Object f11403v;
+        public Object f11484v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public int f11404w;
+        public int f11485w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public /* synthetic */ Object f11405x;
+        public /* synthetic */ Object f11486x;
 
-        public d(nt.b<? super d> bVar) {
+        public d(lt.b<? super d> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             d dVar = TransitionWorker.this.new d(bVar);
-            dVar.f11405x = obj;
+            dVar.f11486x = obj;
             return dVar;
         }
 
@@ -408,7 +408,7 @@ public final class TransitionWorker implements vr.h<b> {
         
             if (r1.emit(r5, r17) == r2) goto L31;
          */
-        @Override // pt.a
+        @Override // nt.a
         /*
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct add '--show-bad-code' argument
@@ -422,44 +422,44 @@ public final class TransitionWorker implements vr.h<b> {
         }
 
         @Override // kotlin.jvm.functions.Function2
-        /* JADX INFO: renamed from: q, reason: merged with bridge method [inline-methods] */
-        public final Object invoke(nu.i<? super b> iVar, nt.b<? super Unit> bVar) {
-            return ((d) create(iVar, bVar)).invokeSuspend(Unit.f22483a);
+        /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
+        public final Object invoke(lu.i<? super b> iVar, lt.b<? super Unit> bVar) {
+            return ((d) create(iVar, bVar)).invokeSuspend(Unit.f22938a);
         }
     }
 
-    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u0002*\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Lnu/i;", "Lcom/withpersona/sdk2/inquiry/internal/TransitionWorker$b;", "", "<anonymous>", "(Lnu/i;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.internal.TransitionWorker$runTransition$1", f = "TransitionWorker.kt", l = {64, 70, 77, 80, 96}, m = "invokeSuspend")
-    public static final class e extends pt.m implements Function2<nu.i<? super b>, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.internal.TransitionWorker$runTransition$1", f = "TransitionWorker.kt", l = {64, 70, 77, 80, 96}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u0002*\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Llu/i;", "Lcom/withpersona/sdk2/inquiry/internal/TransitionWorker$b;", "", "<anonymous>", "(Llu/i;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class e extends nt.m implements Function2<lu.i<? super b>, lt.b<? super Unit>, Object> {
         public /* synthetic */ Object A;
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f11407t;
+        public Object f11488t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f11408u;
+        public Object f11489u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public Object f11409v;
+        public Object f11490v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public Object f11410w;
+        public Object f11491w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public Object f11411x;
+        public Object f11492x;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public Object f11412y;
+        public Object f11493y;
 
         /* JADX INFO: renamed from: z, reason: collision with root package name */
-        public int f11413z;
+        public int f11494z;
 
-        public e(nt.b<? super e> bVar) {
+        public e(lt.b<? super e> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             e eVar = TransitionWorker.this.new e(bVar);
             eVar.A = obj;
             return eVar;
@@ -485,7 +485,7 @@ public final class TransitionWorker implements vr.h<b> {
         
             if (r1.emit(r9, r16) == r2) goto L47;
          */
-        @Override // pt.a
+        @Override // nt.a
         /*
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct add '--show-bad-code' argument
@@ -499,13 +499,13 @@ public final class TransitionWorker implements vr.h<b> {
         }
 
         @Override // kotlin.jvm.functions.Function2
-        /* JADX INFO: renamed from: q, reason: merged with bridge method [inline-methods] */
-        public final Object invoke(nu.i<? super b> iVar, nt.b<? super Unit> bVar) {
-            return ((e) create(iVar, bVar)).invokeSuspend(Unit.f22483a);
+        /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
+        public final Object invoke(lu.i<? super b> iVar, lt.b<? super Unit> bVar) {
+            return ((e) create(iVar, bVar)).invokeSuspend(Unit.f22938a);
         }
     }
 
-    public TransitionWorker(@NotNull String sessionToken, @Nullable String str, @NotNull String inquiryId, @Nullable String str2, @NotNull List<FieldMapping> fieldMappings, @NotNull InquirySessionConfig inquirySessionConfig, @NotNull TransitionData transitionData, @NotNull gp.w service, @NotNull fo.a fallbackModeManager, @NotNull UiStepSavedStateHelper uiStepSavedStateHelper, @NotNull go.e featureFlagManager, @NotNull Context applicationContext) {
+    public TransitionWorker(@NotNull String sessionToken, @Nullable String str, @NotNull String inquiryId, @Nullable String str2, @NotNull List<FieldMapping> fieldMappings, @NotNull InquirySessionConfig inquirySessionConfig, @NotNull TransitionData transitionData, @NotNull ep.w service, @NotNull co.a fallbackModeManager, @NotNull UiStepSavedStateHelper uiStepSavedStateHelper, @NotNull eo.e featureFlagManager, @NotNull Context applicationContext) {
         Intrinsics.checkNotNullParameter(sessionToken, "sessionToken");
         Intrinsics.checkNotNullParameter(inquiryId, "inquiryId");
         Intrinsics.checkNotNullParameter(fieldMappings, "fieldMappings");
@@ -530,14 +530,14 @@ public final class TransitionWorker implements vr.h<b> {
         this.applicationContext = applicationContext;
     }
 
-    @Override // vr.h
-    public boolean a(@NotNull vr.h<?> hVar) {
+    @Override // tr.h
+    public boolean a(@NotNull tr.h<?> hVar) {
         return super.a(hVar);
     }
 
-    @Override // vr.h
-    public boolean c(@NotNull vr.h<?> hVar) {
-        return super.c(hVar);
+    @Override // tr.h
+    public boolean b(@NotNull tr.h<?> hVar) {
+        return super.b(hVar);
     }
 
     @NotNull
@@ -553,20 +553,20 @@ public final class TransitionWorker implements vr.h<b> {
     }
 
     public final boolean q() {
-        return this.featureFlagManager.a(go.t.f18312a);
+        return this.featureFlagManager.a(eo.t.f16210a);
     }
 
-    public final nu.h<b> r() {
-        return nu.j.w(new d(null));
+    public final lu.h<b> r() {
+        return lu.j.w(new d(null));
     }
 
-    @Override // vr.h
+    @Override // tr.h
     @NotNull
-    public nu.h<b> run() {
-        return nu.j.w(new c(null));
+    public lu.h<b> run() {
+        return lu.j.w(new c(null));
     }
 
-    public final nu.h<b> s() {
-        return nu.j.w(new e(null));
+    public final lu.h<b> s() {
+        return lu.j.w(new e(null));
     }
 }

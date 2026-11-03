@@ -8,15 +8,15 @@ import java.util.concurrent.Executor;
 public final class c0 implements h0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Executor f30577a;
+    public final Executor f31124a;
     public final Object b = new Object();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public f f30578c;
+    public f f31125c;
 
     public c0(@NonNull Executor executor, @NonNull f fVar) {
-        this.f30577a = executor;
-        this.f30578c = fVar;
+        this.f31124a = executor;
+        this.f31125c = fVar;
     }
 
     @Override // sb.h0
@@ -26,10 +26,10 @@ public final class c0 implements h0 {
         }
         synchronized (this.b) {
             try {
-                if (this.f30578c == null) {
+                if (this.f31125c == null) {
                     return;
                 }
-                this.f30577a.execute(new b0(this, task));
+                this.f31124a.execute(new b0(this, task));
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -39,7 +39,7 @@ public final class c0 implements h0 {
     @Override // sb.h0
     public final void zzc() {
         synchronized (this.b) {
-            this.f30578c = null;
+            this.f31125c = null;
         }
     }
 }

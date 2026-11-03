@@ -26,7 +26,7 @@ import java.util.concurrent.TimeUnit;
 public abstract class a extends BroadcastReceiver {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static SoftReference f20400a;
+    public static SoftReference f20516a;
     public static SoftReference b;
 
     @NonNull
@@ -34,12 +34,12 @@ public abstract class a extends BroadcastReceiver {
         ExecutorService executorServiceUnconfigurableExecutorService;
         synchronized (a.class) {
             try {
-                SoftReference softReference = f20400a;
+                SoftReference softReference = f20516a;
                 executorServiceUnconfigurableExecutorService = softReference != null ? (ExecutorService) softReference.get() : null;
                 if (executorServiceUnconfigurableExecutorService == null) {
                     cb.e.a();
                     executorServiceUnconfigurableExecutorService = Executors.unconfigurableExecutorService(Executors.newCachedThreadPool(new v9.b("firebase-iid-executor")));
-                    f20400a = new SoftReference(executorServiceUnconfigurableExecutorService);
+                    f20516a = new SoftReference(executorServiceUnconfigurableExecutorService);
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -170,7 +170,7 @@ public abstract class a extends BroadcastReceiver {
         a().execute(new Runnable() { // from class: i9.n
             @Override // java.lang.Runnable
             public final void run() {
-                this.f20429a.d(intent, context, zIsOrderedBroadcast, pendingResultGoAsync);
+                this.f20545a.d(intent, context, zIsOrderedBroadcast, pendingResultGoAsync);
             }
         });
     }

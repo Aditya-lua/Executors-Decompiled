@@ -4,12 +4,12 @@ package w7;
 public class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f33775a;
+    public int f33981a;
     public long b;
 
     public c(long j10, int i10) {
         this.b = j10;
-        this.f33775a = i10;
+        this.f33981a = i10;
     }
 
     public static c b(String str, int i10, int i11) {
@@ -89,7 +89,7 @@ public class c {
     }
 
     public int a() {
-        return this.f33775a;
+        return this.f33981a;
     }
 
     public int d() {

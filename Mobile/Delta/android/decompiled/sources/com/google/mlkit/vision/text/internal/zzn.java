@@ -16,7 +16,7 @@ import com.google.mlkit.vision.text.Text;
 import com.google.mlkit.vision.text.TextRecognizer;
 import com.google.mlkit.vision.text.TextRecognizerOptionsInterface;
 import java.util.concurrent.Executor;
-import nd.a;
+import od.a;
 
 /* JADX INFO: loaded from: classes2.dex */
 public final class zzn extends MobileVisionBase implements TextRecognizer {

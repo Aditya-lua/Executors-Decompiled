@@ -4,11 +4,11 @@ package com.google.firebase.messaging;
 public abstract class i0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final tf.h f8784a = tf.h.a().c(a.f8719a).b();
+    public static final uf.h f8858a = uf.h.a().c(a.f8793a).b();
 
     public static byte[] a(Object obj) {
-        return f8784a.c(obj);
+        return f8858a.c(obj);
     }
 
-    public abstract eg.b b();
+    public abstract fg.b b();
 }

@@ -5,8 +5,8 @@ import androidx.annotation.NonNull;
 import com.roblox.universalapp.messagebus.Callback;
 import com.roblox.universalapp.messagebus.Connection;
 import com.roblox.universalapp.messagebus.MessageBus;
-import mm.i;
-import mm.l;
+import km.i;
+import km.l;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -14,34 +14,34 @@ import org.json.JSONObject;
 public class WebViewProtocol {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public String f9733a = "WebViewProtocol";
+    public String f9814a = "WebViewProtocol";
 
     @NonNull
-    public final nl.b b;
+    public final ll.b b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public Connection f9734c;
+    public Connection f9815c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public Connection f9735d;
+    public Connection f9816d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public Connection f9736e;
+    public Connection f9817e;
 
     public class a implements i {
         public a() {
         }
 
-        @Override // mm.i
+        @Override // km.i
         public l a(JSONObject jSONObject) {
             l lVar = new l();
             JSONObject jSONObject2 = new JSONObject();
-            lVar.f24430a = jSONObject2;
+            lVar.f22909a = jSONObject2;
             try {
                 jSONObject2.put(WebViewProtocol.getAvailableKey(), true);
                 return lVar;
             } catch (JSONException unused) {
-                Log.e(WebViewProtocol.this.f9733a, "Failed to write Availability to JSON");
+                Log.e(WebViewProtocol.this.f9814a, "Failed to write Availability to JSON");
                 return lVar;
             }
         }
@@ -55,7 +55,7 @@ public class WebViewProtocol {
         public void a(JSONObject jSONObject) {
             String strT = WebViewProtocol.this.t(jSONObject, WebViewProtocol.getUrlKey());
             if (strT == null) {
-                Log.e(WebViewProtocol.this.f9733a, "Attempted to open WebView window with no URL");
+                Log.e(WebViewProtocol.this.f9814a, "Attempted to open WebView window with no URL");
                 return;
             }
             String strT2 = WebViewProtocol.this.t(jSONObject, WebViewProtocol.getTitleKey());
@@ -100,9 +100,9 @@ public class WebViewProtocol {
     public WebViewProtocol(@NonNull com.roblox.protocols.webview.a.f fVar) {
         this.b = new com.roblox.protocols.webview.a(fVar);
         MessageBus.f().p(getProtocolName(), getIsAvailableId(), new a());
-        this.f9734c = MessageBus.f().t(MessageBus.getMessageId(getProtocolName(), getOpenWindowId()), new b());
-        this.f9735d = MessageBus.f().t(MessageBus.getMessageId(getProtocolName(), getMutateWindowId()), new c());
-        this.f9736e = MessageBus.f().t(MessageBus.getMessageId(getProtocolName(), getCloseWindowId()), new d());
+        this.f9815c = MessageBus.f().t(MessageBus.getMessageId(getProtocolName(), getOpenWindowId()), new b());
+        this.f9816d = MessageBus.f().t(MessageBus.getMessageId(getProtocolName(), getMutateWindowId()), new c());
+        this.f9817e = MessageBus.f().t(MessageBus.getMessageId(getProtocolName(), getCloseWindowId()), new d());
         initializeAndroidWebViewProtocol();
     }
 
@@ -165,7 +165,7 @@ public class WebViewProtocol {
             }
             return null;
         } catch (JSONException unused) {
-            Log.e(this.f9733a, String.format("Received \"%s\" that is not a Boolean type", str));
+            Log.e(this.f9814a, String.format("Received \"%s\" that is not a Boolean type", str));
             return null;
         }
     }
@@ -177,7 +177,7 @@ public class WebViewProtocol {
             }
             return null;
         } catch (JSONException unused) {
-            Log.e(this.f9733a, String.format("Received \"%s\" that is not a JSON Object type", str));
+            Log.e(this.f9814a, String.format("Received \"%s\" that is not a JSON Object type", str));
             return null;
         }
     }
@@ -189,7 +189,7 @@ public class WebViewProtocol {
             }
             return null;
         } catch (JSONException unused) {
-            Log.e(this.f9733a, String.format("Received \"%s\" that is not a String type", str));
+            Log.e(this.f9814a, String.format("Received \"%s\" that is not a String type", str));
             return null;
         }
     }

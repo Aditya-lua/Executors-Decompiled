@@ -6,5 +6,5 @@ import android.content.Context;
 public abstract class g9 {
     public abstract Context a();
 
-    public abstract ge.s b();
+    public abstract he.s b();
 }

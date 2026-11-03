@@ -25,19 +25,19 @@ public final class f extends k9.e<k9.a.d.c> implements f9.f {
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
     @NotNull
-    public static final k9.a.g<g> f17945l;
+    public static final k9.a.g<g> f18484l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
     @NotNull
-    public static final a f17946m;
+    public static final a f18485m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
     @NotNull
-    public static final k9.a<k9.a.d.c> f17947n;
+    public static final k9.a<k9.a.d.c> f18486n;
 
     @Metadata(d1 = {"\u00003\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004*\u0001\u0000\b\n\u0018\u00002\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001J?\u0010\u000f\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\n\u001a\u00020\u00032\u0006\u0010\f\u001a\u00020\u000b2\u0006\u0010\u000e\u001a\u00020\rH\u0016¢\u0006\u0004\b\u000f\u0010\u0010¨\u0006\u0011"}, d2 = {"g9/f$a", "Lk9/a$a;", "Lg9/g;", "Lk9/a$d$c;", "Landroid/content/Context;", "context", "Landroid/os/Looper;", "looper", "Ln9/d;", "commonSettings", "apiOptions", "Ll9/e;", "connectedListener", "Ll9/n;", "connectionFailedListener", "c", "(Landroid/content/Context;Landroid/os/Looper;Ln9/d;Lk9/a$d$c;Ll9/e;Ll9/n;)Lg9/g;", "java.com.google.android.gmscore.integ.client.auth_blockstore_client_auth_blockstore"}, k = 1, mv = {2, 0, 0}, xi = 48)
-    public static final class a extends k9.a.AbstractC0392a<g, k9.a.d.c> {
-        @Override // k9.a.AbstractC0392a
+    public static final class a extends k9.a.AbstractC0391a<g, k9.a.d.c> {
+        @Override // k9.a.AbstractC0391a
         @NonNull
         /* JADX INFO: renamed from: c, reason: merged with bridge method [inline-methods] */
         public g b(@NonNull Context context, @NonNull Looper looper, @NonNull n9.d commonSettings, @NonNull k9.a.d.c apiOptions, @NonNull l9.e connectedListener, @NonNull n connectionFailedListener) {
@@ -51,53 +51,53 @@ public final class f extends k9.e<k9.a.d.c> implements f9.f {
         }
     }
 
-    @Metadata(d1 = {"\u0000\u001d\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J\u001f\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"g9/f$c", "Lg9/a$a;", "Lcom/google/android/gms/common/api/Status;", "status", "Lcom/google/android/gms/auth/blockstore/restorecredential/CreateRestoreCredentialResponse;", Payload.RESPONSE, "", "P0", "(Lcom/google/android/gms/common/api/Status;Lcom/google/android/gms/auth/blockstore/restorecredential/CreateRestoreCredentialResponse;)V", "java.com.google.android.gmscore.integ.client.auth_blockstore_client_auth_blockstore"}, k = 1, mv = {2, 0, 0}, xi = 48)
-    public static final class c extends g9.a.AbstractBinderC0321a {
+    @Metadata(d1 = {"\u0000\u001d\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J\u001f\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"g9/f$c", "Lg9/a$a;", "Lcom/google/android/gms/common/api/Status;", "status", "Lcom/google/android/gms/auth/blockstore/restorecredential/CreateRestoreCredentialResponse;", Payload.RESPONSE, "", "M0", "(Lcom/google/android/gms/common/api/Status;Lcom/google/android/gms/auth/blockstore/restorecredential/CreateRestoreCredentialResponse;)V", "java.com.google.android.gmscore.integ.client.auth_blockstore_client_auth_blockstore"}, k = 1, mv = {2, 0, 0}, xi = 48)
+    public static final class c extends g9.a.AbstractBinderC0325a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ k<CreateRestoreCredentialResponse> f17948a;
+        public final /* synthetic */ k<CreateRestoreCredentialResponse> f18487a;
 
         public c(k<CreateRestoreCredentialResponse> kVar) {
-            this.f17948a = kVar;
+            this.f18487a = kVar;
         }
 
         @Override // g9.a
-        public void P0(@NonNull Status status, @NonNull CreateRestoreCredentialResponse response) {
+        public void M0(@NonNull Status status, @NonNull CreateRestoreCredentialResponse response) {
             Intrinsics.checkNotNullParameter(status, "status");
             Intrinsics.checkNotNullParameter(response, "response");
-            v.a(status, response, this.f17948a);
+            v.a(status, response, this.f18487a);
         }
     }
 
-    @Metadata(d1 = {"\u0000\u001d\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J\u001f\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"g9/f$d", "Lg9/b$a;", "Lcom/google/android/gms/common/api/Status;", "status", "Lcom/google/android/gms/auth/blockstore/restorecredential/GetRestoreCredentialResponse;", Payload.RESPONSE, "", "S", "(Lcom/google/android/gms/common/api/Status;Lcom/google/android/gms/auth/blockstore/restorecredential/GetRestoreCredentialResponse;)V", "java.com.google.android.gmscore.integ.client.auth_blockstore_client_auth_blockstore"}, k = 1, mv = {2, 0, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000\u001d\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J\u001f\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"g9/f$d", "Lg9/b$a;", "Lcom/google/android/gms/common/api/Status;", "status", "Lcom/google/android/gms/auth/blockstore/restorecredential/GetRestoreCredentialResponse;", Payload.RESPONSE, "", "Q", "(Lcom/google/android/gms/common/api/Status;Lcom/google/android/gms/auth/blockstore/restorecredential/GetRestoreCredentialResponse;)V", "java.com.google.android.gmscore.integ.client.auth_blockstore_client_auth_blockstore"}, k = 1, mv = {2, 0, 0}, xi = 48)
     public static final class d extends b.a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ k<GetRestoreCredentialResponse> f17949a;
+        public final /* synthetic */ k<GetRestoreCredentialResponse> f18488a;
 
         public d(k<GetRestoreCredentialResponse> kVar) {
-            this.f17949a = kVar;
+            this.f18488a = kVar;
         }
 
         @Override // g9.b
-        public void S(@NonNull Status status, @NonNull GetRestoreCredentialResponse response) {
+        public void Q(@NonNull Status status, @NonNull GetRestoreCredentialResponse response) {
             Intrinsics.checkNotNullParameter(status, "status");
             Intrinsics.checkNotNullParameter(response, "response");
-            v.a(status, response, this.f17949a);
+            v.a(status, response, this.f18488a);
         }
     }
 
     static {
         k9.a.g<g> gVar = new k9.a.g<>();
-        f17945l = gVar;
+        f18484l = gVar;
         a aVar = new a();
-        f17946m = aVar;
-        f17947n = new k9.a<>("RestoreCredential.API", aVar, gVar);
+        f18485m = aVar;
+        f18486n = new k9.a<>("RestoreCredential.API", aVar, gVar);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public f(@NonNull Context context) {
-        super(context, f17947n, k9.a.d.Jo, k9.e.a.f22280c);
+        super(context, f18486n, k9.a.d.Ko, k9.e.a.f22504c);
         Intrinsics.checkNotNullParameter(context, "context");
     }
 
@@ -108,7 +108,7 @@ public final class f extends k9.e<k9.a.d.c> implements f9.f {
 
     public static final void S(GetRestoreCredentialRequest request, g gVar, k kVar) {
         Intrinsics.checkNotNullParameter(request, "$request");
-        ((g9.c) gVar.getService()).M0(request, new d(kVar));
+        ((g9.c) gVar.getService()).H0(request, new d(kVar));
     }
 
     @Override // f9.f

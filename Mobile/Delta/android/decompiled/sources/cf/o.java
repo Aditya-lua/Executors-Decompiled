@@ -1,10 +1,34 @@
 package cf;
 
+import java.security.GeneralSecurityException;
+import we.l0;
+
 /* JADX INFO: loaded from: classes2.dex */
-public enum o {
-    SHA1,
-    SHA224,
-    SHA256,
-    SHA384,
-    SHA512
+public final class o implements pe.z {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final pe.z f4921a;
+    public final byte[] b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public final byte[] f4922c;
+
+    public o(pe.z zVar, byte[] bArr, byte[] bArr2) {
+        this.f4921a = zVar;
+        this.b = bArr;
+        this.f4922c = bArr2;
+    }
+
+    public static pe.z b(we.p pVar) throws GeneralSecurityException {
+        l0 l0VarB = pVar.b(pe.j.a());
+        return new o((pe.z) pe.b0.c(af.f0.h0().D(l0VarB.f()).E(l0VarB.g()).C(l0VarB.d()).build(), pe.z.class), p.d(l0VarB), p.c(l0VarB));
+    }
+
+    @Override // pe.z
+    public byte[] a(byte[] bArr) {
+        byte[] bArr2 = this.f4922c;
+        byte[] bArrA = bArr2.length == 0 ? this.f4921a.a(bArr) : this.f4921a.a(df.e.a(bArr, bArr2));
+        byte[] bArr3 = this.b;
+        return bArr3.length == 0 ? bArrA : df.e.a(bArr3, bArrA);
+    }
 }

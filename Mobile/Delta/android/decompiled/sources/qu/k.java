@@ -1,40 +1,41 @@
 package qu;
 
-import java.util.ArrayList;
+import iu.l0;
 import kotlin.Metadata;
-import kotlin.jvm.internal.DefaultConstructorMarker;
-import kotlin.jvm.internal.Intrinsics;
+import kotlin.coroutines.CoroutineContext;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import ou.m;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\b\u0007\b\u0081@\u0018\u0000*\u0004\b\u0000\u0010\u00012\u00020\u0002B\u0013\u0012\n\b\u0002\u0010\u0003\u001a\u0004\u0018\u00010\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u001e\u0010\u0007\u001a\b\u0012\u0004\u0012\u00028\u00000\u00002\u0006\u0010\u0006\u001a\u00028\u0000H\u0086\u0002¢\u0006\u0004\b\u0007\u0010\b\u0088\u0001\u0003\u0092\u0001\u0004\u0018\u00010\u0002¨\u0006\t"}, d2 = {"Lqu/k;", "E", "", "holder", "a", "(Ljava/lang/Object;)Ljava/lang/Object;", "element", "c", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", "kotlinx-coroutines-core"}, k = 1, mv = {2, 1, 0}, xi = 48)
-public final class k<E> {
+@Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0006\bÂ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J#\u0010\n\u001a\u00020\t2\u0006\u0010\u0005\u001a\u00020\u00042\n\u0010\b\u001a\u00060\u0006j\u0002`\u0007H\u0017¢\u0006\u0004\b\n\u0010\u000bJ#\u0010\f\u001a\u00020\t2\u0006\u0010\u0005\u001a\u00020\u00042\n\u0010\b\u001a\u00060\u0006j\u0002`\u0007H\u0016¢\u0006\u0004\b\f\u0010\u000bJ!\u0010\u0011\u001a\u00020\u00012\u0006\u0010\u000e\u001a\u00020\r2\b\u0010\u0010\u001a\u0004\u0018\u00010\u000fH\u0016¢\u0006\u0004\b\u0011\u0010\u0012J\u000f\u0010\u0013\u001a\u00020\u000fH\u0016¢\u0006\u0004\b\u0013\u0010\u0014¨\u0006\u0015"}, d2 = {"Lqu/k;", "Liu/l0;", "<init>", "()V", "Lkotlin/coroutines/CoroutineContext;", "context", "Ljava/lang/Runnable;", "Lkotlinx/coroutines/Runnable;", "block", "", "x", "(Lkotlin/coroutines/CoroutineContext;Ljava/lang/Runnable;)V", "w", "", "parallelism", "", "name", "P", "(ILjava/lang/String;)Liu/l0;", "toString", "()Ljava/lang/String;", "kotlinx-coroutines-core"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class k extends l0 {
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static <E> Object a(@Nullable Object obj) {
-        return obj;
+    public static final k f30083c = new k();
+
+    @Override // iu.l0
+    @NotNull
+    public l0 P(int parallelism, @Nullable String name) {
+        m.a(parallelism);
+        return parallelism >= j.f30080d ? m.b(this, name) : super.P(parallelism, name);
     }
 
-    public static /* synthetic */ Object b(Object obj, int i10, DefaultConstructorMarker defaultConstructorMarker) {
-        if ((i10 & 1) != 0) {
-            obj = null;
-        }
-        return a(obj);
+    @Override // iu.l0
+    @NotNull
+    /* JADX INFO: renamed from: toString */
+    public String getName() {
+        return "Dispatchers.IO";
     }
 
-    @NotNull
-    public static final Object c(Object obj, E e10) {
-        if (obj == null) {
-            return a(e10);
-        }
-        if (obj instanceof ArrayList) {
-            Intrinsics.d(obj, "null cannot be cast to non-null type java.util.ArrayList<E of kotlinx.coroutines.internal.InlineList>");
-            ((ArrayList) obj).add(e10);
-            return a(obj);
-        }
-        ArrayList arrayList = new ArrayList(4);
-        arrayList.add(obj);
-        arrayList.add(e10);
-        return a(arrayList);
+    @Override // iu.l0
+    public void w(@NotNull CoroutineContext context, @NotNull Runnable block) {
+        c.f30069i.Y(block, true, false);
+    }
+
+    @Override // iu.l0
+    public void x(@NotNull CoroutineContext context, @NotNull Runnable block) {
+        c.f30069i.Y(block, true, true);
     }
 }

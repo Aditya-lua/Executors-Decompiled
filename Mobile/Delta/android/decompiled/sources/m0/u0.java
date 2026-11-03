@@ -16,50 +16,50 @@ import n0.k3;
 public class u0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Executor f23636a;
+    public final Executor f24286a;
     public final x0.y b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final CameraCharacteristics f23637c;
+    public final CameraCharacteristics f24287c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public y f23638d;
+    public y f24288d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public a f23639e;
+    public a f24289e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public x0.a0<b, x0.b0<androidx.camera.core.d>> f23640f;
+    public x0.a0<b, x0.b0<androidx.camera.core.d>> f24290f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public x0.a0<b0.a, x0.b0<byte[]>> f23641g;
+    public x0.a0<b0.a, x0.b0<byte[]>> f24291g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public x0.a0<k.b, x0.b0<byte[]>> f23642h;
+    public x0.a0<k.b, x0.b0<byte[]>> f24292h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public x0.a0<f0.a, g0.f1.i> f23643i;
+    public x0.a0<f0.a, g0.f1.i> f24293i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public x0.a0<x0.b0<byte[]>, x0.b0<Bitmap>> f23644j;
+    public x0.a0<x0.b0<byte[]>, x0.b0<Bitmap>> f24294j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public x0.a0<x0.b0<androidx.camera.core.d>, androidx.camera.core.d> f23645k;
+    public x0.a0<x0.b0<androidx.camera.core.d>, androidx.camera.core.d> f24295k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public x0.a0<x0.b0<byte[]>, x0.b0<androidx.camera.core.d>> f23646l;
+    public x0.a0<x0.b0<byte[]>, x0.b0<androidx.camera.core.d>> f24296l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public x0.a0<x0.b0<androidx.camera.core.d>, Bitmap> f23647m;
+    public x0.a0<x0.b0<androidx.camera.core.d>, Bitmap> f24297m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public x0.a0<x0.b0<Bitmap>, x0.b0<Bitmap>> f23648n;
+    public x0.a0<x0.b0<Bitmap>, x0.b0<Bitmap>> f24298n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public final k3 f23649o;
+    public final k3 f24299o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public final boolean f23650p;
+    public final boolean f24300p;
 
     public static abstract class a {
         public static a e(int i10, List<Integer> list) {
@@ -94,10 +94,10 @@ public class u0 {
         if (bVar.b().l()) {
             bVar.a().close();
         } else {
-            u0Var.f23636a.execute(new Runnable() { // from class: m0.p0
+            u0Var.f24286a.execute(new Runnable() { // from class: m0.p0
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f23626a.k(bVar);
+                    this.f24276a.k(bVar);
                 }
             });
         }
@@ -106,10 +106,10 @@ public class u0 {
     public static /* synthetic */ void d(final u0 u0Var, final b bVar) {
         u0Var.getClass();
         if (!bVar.b().l()) {
-            u0Var.f23636a.execute(new Runnable() { // from class: m0.o0
+            u0Var.f24286a.execute(new Runnable() { // from class: m0.o0
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f23624a.m(bVar);
+                    this.f24274a.m(bVar);
                 }
             });
         } else {
@@ -120,28 +120,28 @@ public class u0 {
 
     public final x0.b0<byte[]> i(x0.b0<byte[]> b0Var, int i10) {
         x2.g.i(w0.b.j(b0Var.e()));
-        x0.b0<Bitmap> b0VarApply = this.f23644j.apply(b0Var);
-        x0.a0<x0.b0<Bitmap>, x0.b0<Bitmap>> a0Var = this.f23648n;
+        x0.b0<Bitmap> b0VarApply = this.f24294j.apply(b0Var);
+        x0.a0<x0.b0<Bitmap>, x0.b0<Bitmap>> a0Var = this.f24298n;
         if (a0Var != null) {
             b0VarApply = a0Var.apply(b0VarApply);
         }
-        return this.f23642h.apply(k.b.c(b0VarApply, i10));
+        return this.f24292h.apply(k.b.c(b0VarApply, i10));
     }
 
     public androidx.camera.core.d j(b bVar) {
         v0 v0VarB = bVar.b();
-        x0.b0<androidx.camera.core.d> b0VarApply = this.f23640f.apply(bVar);
-        List<Integer> listC = this.f23639e.c();
+        x0.b0<androidx.camera.core.d> b0VarApply = this.f24290f.apply(bVar);
+        List<Integer> listC = this.f24289e.c();
         x2.g.a(!listC.isEmpty());
         int iIntValue = listC.get(0).intValue();
-        if ((b0VarApply.e() == 35 || this.f23648n != null || this.f23650p) && iIntValue == 256) {
-            x0.b0<byte[]> b0VarApply2 = this.f23641g.apply(b0.a.c(b0VarApply, v0VarB.c()));
-            if (this.f23648n != null) {
+        if ((b0VarApply.e() == 35 || this.f24298n != null || this.f24300p) && iIntValue == 256) {
+            x0.b0<byte[]> b0VarApply2 = this.f24291g.apply(b0.a.c(b0VarApply, v0VarB.c()));
+            if (this.f24298n != null) {
                 b0VarApply2 = i(b0VarApply2, v0VarB.c());
             }
-            b0VarApply = this.f23646l.apply(b0VarApply2);
+            b0VarApply = this.f24296l.apply(b0VarApply2);
         }
-        androidx.camera.core.d dVarApply = this.f23645k.apply(b0VarApply);
+        androidx.camera.core.d dVarApply = this.f24295k.apply(b0VarApply);
         if (listC.size() > 1) {
             v0VarB.k().u(dVarApply.getFormat(), true);
         }
@@ -152,7 +152,7 @@ public class u0 {
         final v0 v0VarB = bVar.b();
         try {
             boolean z10 = true;
-            if (this.f23639e.c().size() <= 1) {
+            if (this.f24289e.c().size() <= 1) {
                 z10 = false;
             }
             if (bVar.b().m()) {
@@ -185,7 +185,7 @@ public class u0 {
     }
 
     public g0.f1.i l(b bVar) throws g0.h1 {
-        List<Integer> listC = this.f23639e.c();
+        List<Integer> listC = this.f24289e.c();
         x2.g.a(!listC.isEmpty());
         boolean z10 = false;
         Integer num = listC.get(0);
@@ -193,7 +193,7 @@ public class u0 {
         x2.g.b(w0.b.j(iIntValue) || w0.b.k(iIntValue), String.format("On-disk capture only support JPEG and JPEG/R and RAW output formats. Output format: %s", num));
         v0 v0VarB = bVar.b();
         x2.g.b(v0VarB.d() != null, "OutputFileOptions cannot be empty");
-        x0.b0<androidx.camera.core.d> b0VarApply = this.f23640f.apply(bVar);
+        x0.b0<androidx.camera.core.d> b0VarApply = this.f24290f.apply(bVar);
         if (listC.size() <= 1) {
             if (iIntValue != 32) {
                 g0.f1.h hVarD = v0VarB.d();
@@ -225,10 +225,10 @@ public class u0 {
     public void m(b bVar) {
         final v0 v0VarB = bVar.b();
         try {
-            x0.b0<androidx.camera.core.d> b0VarApply = this.f23640f.apply(bVar);
+            x0.b0<androidx.camera.core.d> b0VarApply = this.f24290f.apply(bVar);
             int iE = b0VarApply.e();
             x2.g.b(iE == 35 || iE == 256 || iE == 4101, String.format("Postview only supports to convert YUV, JPEG and JPEG_R format image to the postview output bitmap. Image format: %s", Integer.valueOf(iE)));
-            final Bitmap bitmapApply = this.f23647m.apply(b0VarApply);
+            final Bitmap bitmapApply = this.f24297m.apply(b0VarApply);
             q0.c.e().execute(new Runnable() { // from class: m0.s0
                 @Override // java.lang.Runnable
                 public final void run() {
@@ -245,30 +245,30 @@ public class u0 {
     }
 
     public final g0.f1.i o(x0.b0<androidx.camera.core.d> b0Var, g0.f1.h hVar, int i10) {
-        x0.b0<byte[]> b0VarApply = this.f23641g.apply(b0.a.c(b0Var, i10));
-        if (b0VarApply.i() || this.f23648n != null) {
+        x0.b0<byte[]> b0VarApply = this.f24291g.apply(b0.a.c(b0Var, i10));
+        if (b0VarApply.i() || this.f24298n != null) {
             b0VarApply = i(b0VarApply, i10);
         }
-        x0.a0<f0.a, g0.f1.i> a0Var = this.f23643i;
+        x0.a0<f0.a, g0.f1.i> a0Var = this.f24293i;
         Objects.requireNonNull(hVar);
         return a0Var.apply(f0.a.c(b0VarApply, hVar));
     }
 
     public final g0.f1.i p(x0.b0<androidx.camera.core.d> b0Var, g0.f1.h hVar) throws g0.h1 {
-        if (this.f23638d == null) {
-            if (this.f23637c == null) {
+        if (this.f24288d == null) {
+            if (this.f24287c == null) {
                 throw new g0.h1(0, "CameraCharacteristics is null, DngCreator cannot be created", null);
             }
             if (b0Var.a().e() == null) {
                 throw new g0.h1(0, "CameraCaptureResult is null, DngCreator cannot be created", null);
             }
-            CameraCharacteristics cameraCharacteristics = this.f23637c;
+            CameraCharacteristics cameraCharacteristics = this.f24287c;
             Objects.requireNonNull(cameraCharacteristics);
             CaptureResult captureResultE = b0Var.a().e();
             Objects.requireNonNull(captureResultE);
-            this.f23638d = new y(cameraCharacteristics, captureResultE);
+            this.f24288d = new y(cameraCharacteristics, captureResultE);
         }
-        y yVar = this.f23638d;
+        y yVar = this.f24288d;
         androidx.camera.core.d dVarC = b0Var.c();
         int iF = b0Var.f();
         Objects.requireNonNull(hVar);
@@ -285,46 +285,46 @@ public class u0 {
     }
 
     public Void r(a aVar) {
-        this.f23639e = aVar;
+        this.f24289e = aVar;
         aVar.a().a(new x2.a() { // from class: m0.m0
             @Override // x2.a
             public final void accept(Object obj) {
-                u0.b(this.f23620a, (u0.b) obj);
+                u0.b(this.f24270a, (u0.b) obj);
             }
         });
         aVar.d().a(new x2.a() { // from class: m0.n0
             @Override // x2.a
             public final void accept(Object obj) {
-                u0.d(this.f23622a, (u0.b) obj);
+                u0.d(this.f24272a, (u0.b) obj);
             }
         });
-        this.f23640f = new l0();
-        this.f23641g = new b0(this.f23649o);
-        this.f23644j = new e0();
-        this.f23642h = new k();
-        this.f23643i = new f0();
-        this.f23645k = new h0();
-        this.f23647m = new a0();
-        if (aVar.b() == 35 || this.b != null || this.f23650p) {
-            this.f23646l = new g0();
+        this.f24290f = new l0();
+        this.f24291g = new b0(this.f24299o);
+        this.f24294j = new e0();
+        this.f24292h = new k();
+        this.f24293i = new f0();
+        this.f24295k = new h0();
+        this.f24297m = new a0();
+        if (aVar.b() == 35 || this.b != null || this.f24300p) {
+            this.f24296l = new g0();
         }
         x0.y yVar = this.b;
         if (yVar == null) {
             return null;
         }
-        this.f23648n = new l(yVar);
+        this.f24298n = new l(yVar);
         return null;
     }
 
     public u0(Executor executor, CameraCharacteristics cameraCharacteristics, x0.y yVar, k3 k3Var) {
         if (u0.b.b(LowMemoryQuirk.class) != null) {
-            this.f23636a = q0.c.g(executor);
+            this.f24286a = q0.c.g(executor);
         } else {
-            this.f23636a = executor;
+            this.f24286a = executor;
         }
         this.b = yVar;
-        this.f23637c = cameraCharacteristics;
-        this.f23649o = k3Var;
-        this.f23650p = k3Var.a(IncorrectJpegMetadataQuirk.class);
+        this.f24287c = cameraCharacteristics;
+        this.f24299o = k3Var;
+        this.f24300p = k3Var.a(IncorrectJpegMetadataQuirk.class);
     }
 }

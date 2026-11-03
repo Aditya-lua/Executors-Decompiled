@@ -5,11 +5,11 @@ public final class AFb1lSDK {
     public final Boolean AFLogger;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final String f5235d;
+    public final String f5308d;
     public Boolean unregisterClient;
 
     public AFb1lSDK(String str, Boolean bool) {
-        this.f5235d = str;
+        this.f5308d = str;
         this.AFLogger = bool;
     }
 }

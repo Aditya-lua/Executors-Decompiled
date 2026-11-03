@@ -2,16 +2,16 @@ package com.appsflyer.share;
 
 import kotlin.Metadata;
 import org.jetbrains.annotations.NotNull;
-import qt.a;
-import qt.b;
+import ot.a;
+import ot.b;
 
 /* JADX WARN: Enum visitor error
 jadx.core.utils.exceptions.JadxRuntimeException: Can't remove SSA var: r0v1 com.appsflyer.share.AFPurchaseType[], still in use, count: 1, list:
-  (r0v1 com.appsflyer.share.AFPurchaseType[]) from 0x001e: INVOKE (r0v1 com.appsflyer.share.AFPurchaseType[]) STATIC call: qt.b.a(java.lang.Enum[]):qt.a A[MD:<E extends java.lang.Enum<E>>:(E extends java.lang.Enum<E>[]):qt.a<E extends java.lang.Enum<E>> (m), WRAPPED]
+  (r0v1 com.appsflyer.share.AFPurchaseType[]) from 0x001e: INVOKE (r0v1 com.appsflyer.share.AFPurchaseType[]) STATIC call: ot.b.a(java.lang.Enum[]):ot.a A[MD:<E extends java.lang.Enum<E>>:(E extends java.lang.Enum<E>[]):ot.a<E extends java.lang.Enum<E>> (m), WRAPPED]
 	at jadx.core.utils.InsnRemover.removeSsaVar(InsnRemover.java:164)
 	at jadx.core.utils.InsnRemover.unbindResult(InsnRemover.java:129)
 	at jadx.core.utils.InsnRemover.lambda$unbindInsns$1(InsnRemover.java:101)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
 	at jadx.core.utils.InsnRemover.unbindInsns(InsnRemover.java:100)
 	at jadx.core.utils.InsnRemover.removeAllAndUnbind(InsnRemover.java:257)
 	at jadx.core.dex.visitors.EnumVisitor.convertToEnum(EnumVisitor.java:187)

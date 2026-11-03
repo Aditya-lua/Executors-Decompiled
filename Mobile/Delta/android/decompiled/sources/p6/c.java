@@ -39,6 +39,6 @@ public final class c {
                 uVar.b("EngineInterceptor", aVar2, "Converting image of type " + d0.b(nVar.getClass()).f() + " to apply transformations: " + list + '.', null);
             }
         }
-        return i.f15192a.a(v.a(nVar, options.getContext().getResources()), j.j(options), options.getSize(), options.getScale(), options.getPrecision() == y6.c.INEXACT);
+        return i.f15806a.a(v.a(nVar, options.getContext().getResources()), j.j(options), options.getSize(), options.getScale(), options.getPrecision() == y6.c.INEXACT);
     }
 }

@@ -8,7 +8,7 @@ import n0.a4;
 public abstract class a implements n {
 
     /* JADX INFO: renamed from: m1.a$a, reason: collision with other inner class name */
-    public static abstract class AbstractC0418a {
+    public static abstract class AbstractC0432a {
         public abstract a a();
 
         public a b() {
@@ -19,22 +19,22 @@ public abstract class a implements n {
             return aVarA;
         }
 
-        public abstract AbstractC0418a c(int i10);
+        public abstract AbstractC0432a c(int i10);
 
-        public abstract AbstractC0418a d(int i10);
+        public abstract AbstractC0432a d(int i10);
 
-        public abstract AbstractC0418a e(int i10);
+        public abstract AbstractC0432a e(int i10);
 
-        public abstract AbstractC0418a f(int i10);
+        public abstract AbstractC0432a f(int i10);
 
-        public abstract AbstractC0418a g(a4 a4Var);
+        public abstract AbstractC0432a g(a4 a4Var);
 
-        public abstract AbstractC0418a h(String str);
+        public abstract AbstractC0432a h(String str);
 
-        public abstract AbstractC0418a i(int i10);
+        public abstract AbstractC0432a i(int i10);
     }
 
-    public static AbstractC0418a d() {
+    public static AbstractC0432a d() {
         return new c.b().i(-1);
     }
 

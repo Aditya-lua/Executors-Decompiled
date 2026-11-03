@@ -6,10 +6,10 @@ import java.util.Objects;
 public class n implements i.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object f3770a;
+    public final Object f3668a;
 
     public n(Object obj) {
-        this.f3770a = obj;
+        this.f3668a = obj;
     }
 
     @Override // b0.i.a
@@ -18,7 +18,7 @@ public class n implements i.a {
 
     public boolean equals(Object obj) {
         if (obj instanceof n) {
-            return Objects.equals(this.f3770a, ((n) obj).f3770a);
+            return Objects.equals(this.f3668a, ((n) obj).f3668a);
         }
         return false;
     }
@@ -28,6 +28,6 @@ public class n implements i.a {
     }
 
     public int hashCode() {
-        return this.f3770a.hashCode();
+        return this.f3668a.hashCode();
     }
 }

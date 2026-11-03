@@ -6,11 +6,11 @@ import okhttp3.internal.http2.Settings;
 public final class qa {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object f6749a;
+    public final Object f6823a;
     public final int b;
 
     public qa(Object obj, int i10) {
-        this.f6749a = obj;
+        this.f6823a = obj;
         this.b = i10;
     }
 
@@ -19,10 +19,10 @@ public final class qa {
             return false;
         }
         qa qaVar = (qa) obj;
-        return this.f6749a == qaVar.f6749a && this.b == qaVar.b;
+        return this.f6823a == qaVar.f6823a && this.b == qaVar.b;
     }
 
     public final int hashCode() {
-        return (System.identityHashCode(this.f6749a) * Settings.DEFAULT_INITIAL_WINDOW_SIZE) + this.b;
+        return (System.identityHashCode(this.f6823a) * Settings.DEFAULT_INITIAL_WINDOW_SIZE) + this.b;
     }
 }

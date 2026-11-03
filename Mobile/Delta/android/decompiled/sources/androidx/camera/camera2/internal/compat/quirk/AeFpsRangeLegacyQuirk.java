@@ -10,10 +10,10 @@ import n0.t3;
 public class AeFpsRangeLegacyQuirk implements AeFpsRangeQuirk {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Range<Integer> f1321a;
+    public final Range<Integer> f1166a;
 
     public AeFpsRangeLegacyQuirk(c0 c0Var) {
-        this.f1321a = i((Range[]) c0Var.a(CameraCharacteristics.CONTROL_AE_AVAILABLE_TARGET_FPS_RANGES));
+        this.f1166a = i((Range[]) c0Var.a(CameraCharacteristics.CONTROL_AE_AVAILABLE_TARGET_FPS_RANGES));
     }
 
     public static boolean h(c0 c0Var) {
@@ -23,8 +23,8 @@ public class AeFpsRangeLegacyQuirk implements AeFpsRangeQuirk {
 
     @Override // androidx.camera.core.internal.compat.quirk.AeFpsRangeQuirk
     public Range<Integer> a() {
-        Range<Integer> range = this.f1321a;
-        return range != null ? range : t3.f24861a;
+        Range<Integer> range = this.f1166a;
+        return range != null ? range : t3.f25682a;
     }
 
     public final Range<Integer> g(Range<Integer> range) {

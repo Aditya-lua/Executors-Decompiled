@@ -11,7 +11,7 @@ import java.util.Map;
 public final class h4 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f24677a;
+    public final String f25498a;
     public final Map<String, b> b = new LinkedHashMap();
 
     public interface a {
@@ -21,46 +21,46 @@ public final class h4 {
     public static final class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final o3 f24678a;
+        public final o3 f25499a;
         public final i4<?> b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final t3 f24679c;
+        public final t3 f25500c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final List<j4.b> f24680d;
+        public final List<j4.b> f25501d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public boolean f24681e = false;
+        public boolean f25502e = false;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public boolean f24682f = false;
+        public boolean f25503f = false;
 
         public b(o3 o3Var, i4<?> i4Var, t3 t3Var, List<j4.b> list) {
-            this.f24678a = o3Var;
+            this.f25499a = o3Var;
             this.b = i4Var;
-            this.f24679c = t3Var;
-            this.f24680d = list;
+            this.f25500c = t3Var;
+            this.f25501d = list;
         }
 
         public boolean a() {
-            return this.f24682f;
+            return this.f25503f;
         }
 
         public boolean b() {
-            return this.f24681e;
+            return this.f25502e;
         }
 
         public List<j4.b> c() {
-            return this.f24680d;
+            return this.f25501d;
         }
 
         public o3 d() {
-            return this.f24678a;
+            return this.f25499a;
         }
 
         public t3 e() {
-            return this.f24679c;
+            return this.f25500c;
         }
 
         public i4<?> f() {
@@ -68,20 +68,20 @@ public final class h4 {
         }
 
         public void g(boolean z10) {
-            this.f24682f = z10;
+            this.f25503f = z10;
         }
 
         public void h(boolean z10) {
-            this.f24681e = z10;
+            this.f25502e = z10;
         }
 
         public String toString() {
-            return "UseCaseAttachInfo{mSessionConfig=" + this.f24678a + ", mUseCaseConfig=" + this.b + ", mStreamSpec=" + this.f24679c + ", mCaptureTypes=" + this.f24680d + ", mAttached=" + this.f24681e + ", mActive=" + this.f24682f + '}';
+            return "UseCaseAttachInfo{mSessionConfig=" + this.f25499a + ", mUseCaseConfig=" + this.b + ", mStreamSpec=" + this.f25500c + ", mCaptureTypes=" + this.f25501d + ", mAttached=" + this.f25502e + ", mActive=" + this.f25503f + '}';
         }
     }
 
     public h4(String str) {
-        this.f24677a = str;
+        this.f25498a = str;
     }
 
     public static /* synthetic */ boolean a(b bVar) {
@@ -99,7 +99,7 @@ public final class h4 {
                 arrayList.add(key);
             }
         }
-        g0.r1.a("UseCaseAttachState", "Active and attached use case: " + arrayList + " for camera: " + this.f24677a);
+        g0.r1.a("UseCaseAttachState", "Active and attached use case: " + arrayList + " for camera: " + this.f25498a);
         return hVar;
     }
 
@@ -122,7 +122,7 @@ public final class h4 {
                 arrayList.add(entry.getKey());
             }
         }
-        g0.r1.a("UseCaseAttachState", "All use case: " + arrayList + " for camera: " + this.f24677a);
+        g0.r1.a("UseCaseAttachState", "All use case: " + arrayList + " for camera: " + this.f25498a);
         return hVar;
     }
 

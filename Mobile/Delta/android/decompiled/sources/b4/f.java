@@ -11,31 +11,31 @@ import androidx.annotation.NonNull;
 public final class f {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final b f3896a;
+    public final b f3794a;
 
     public static class a extends b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final TextView f3897a;
+        public final TextView f3795a;
         public final d b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public boolean f3898c = true;
+        public boolean f3796c = true;
 
         public a(TextView textView) {
-            this.f3897a = textView;
+            this.f3795a = textView;
             this.b = new d(textView);
         }
 
         @Override // b4.f.b
         @NonNull
         public InputFilter[] a(@NonNull InputFilter[] inputFilterArr) {
-            return !this.f3898c ? h(inputFilterArr) : f(inputFilterArr);
+            return !this.f3796c ? h(inputFilterArr) : f(inputFilterArr);
         }
 
         @Override // b4.f.b
         public boolean b() {
-            return this.f3898c;
+            return this.f3796c;
         }
 
         @Override // b4.f.b
@@ -47,14 +47,14 @@ public final class f {
 
         @Override // b4.f.b
         public void d(boolean z10) {
-            this.f3898c = z10;
+            this.f3796c = z10;
             l();
             k();
         }
 
         @Override // b4.f.b
         public TransformationMethod e(TransformationMethod transformationMethod) {
-            return this.f3898c ? m(transformationMethod) : j(transformationMethod);
+            return this.f3796c ? m(transformationMethod) : j(transformationMethod);
         }
 
         @NonNull
@@ -101,7 +101,7 @@ public final class f {
         }
 
         public void i(boolean z10) {
-            this.f3898c = z10;
+            this.f3796c = z10;
         }
 
         public final TransformationMethod j(TransformationMethod transformationMethod) {
@@ -109,11 +109,11 @@ public final class f {
         }
 
         public final void k() {
-            this.f3897a.setFilters(a(this.f3897a.getFilters()));
+            this.f3795a.setFilters(a(this.f3795a.getFilters()));
         }
 
         public void l() {
-            this.f3897a.setTransformationMethod(e(this.f3897a.getTransformationMethod()));
+            this.f3795a.setTransformationMethod(e(this.f3795a.getTransformationMethod()));
         }
 
         @NonNull
@@ -148,21 +148,21 @@ public final class f {
     public static class c extends b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final a f3899a;
+        public final a f3797a;
 
         public c(TextView textView) {
-            this.f3899a = new a(textView);
+            this.f3797a = new a(textView);
         }
 
         @Override // b4.f.b
         @NonNull
         public InputFilter[] a(@NonNull InputFilter[] inputFilterArr) {
-            return f() ? inputFilterArr : this.f3899a.a(inputFilterArr);
+            return f() ? inputFilterArr : this.f3797a.a(inputFilterArr);
         }
 
         @Override // b4.f.b
         public boolean b() {
-            return this.f3899a.b();
+            return this.f3797a.b();
         }
 
         @Override // b4.f.b
@@ -170,21 +170,21 @@ public final class f {
             if (f()) {
                 return;
             }
-            this.f3899a.c(z10);
+            this.f3797a.c(z10);
         }
 
         @Override // b4.f.b
         public void d(boolean z10) {
             if (f()) {
-                this.f3899a.i(z10);
+                this.f3797a.i(z10);
             } else {
-                this.f3899a.d(z10);
+                this.f3797a.d(z10);
             }
         }
 
         @Override // b4.f.b
         public TransformationMethod e(TransformationMethod transformationMethod) {
-            return f() ? transformationMethod : this.f3899a.e(transformationMethod);
+            return f() ? transformationMethod : this.f3797a.e(transformationMethod);
         }
 
         public final boolean f() {
@@ -195,30 +195,30 @@ public final class f {
     public f(@NonNull TextView textView, boolean z10) {
         x2.g.h(textView, "textView cannot be null");
         if (z10) {
-            this.f3896a = new a(textView);
+            this.f3794a = new a(textView);
         } else {
-            this.f3896a = new c(textView);
+            this.f3794a = new c(textView);
         }
     }
 
     @NonNull
     public InputFilter[] a(@NonNull InputFilter[] inputFilterArr) {
-        return this.f3896a.a(inputFilterArr);
+        return this.f3794a.a(inputFilterArr);
     }
 
     public boolean b() {
-        return this.f3896a.b();
+        return this.f3794a.b();
     }
 
     public void c(boolean z10) {
-        this.f3896a.c(z10);
+        this.f3794a.c(z10);
     }
 
     public void d(boolean z10) {
-        this.f3896a.d(z10);
+        this.f3794a.d(z10);
     }
 
     public TransformationMethod e(TransformationMethod transformationMethod) {
-        return this.f3896a.e(transformationMethod);
+        return this.f3794a.e(transformationMethod);
     }
 }

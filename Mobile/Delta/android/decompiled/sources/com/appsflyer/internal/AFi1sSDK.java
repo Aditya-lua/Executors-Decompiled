@@ -50,11 +50,11 @@ public final class AFi1sSDK extends AFi1ySDK {
             ConnectivityManager unregisterClient = getUnregisterClient();
             if (unregisterClient != null) {
                 unregisterClient.registerNetworkCallback(new NetworkRequest.Builder().build(), aFa1ySDK);
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             }
         } catch (Throwable th2) {
             AFLoggerBase.e$default(AFLogger.INSTANCE, LogTag.DEVICE_DATA, "Error at attempt to register network callback with ConnectivityManager", th2, true, false, false, false, 96, null);
-            Unit unit2 = Unit.f22483a;
+            Unit unit2 = Unit.f22938a;
         }
     }
 

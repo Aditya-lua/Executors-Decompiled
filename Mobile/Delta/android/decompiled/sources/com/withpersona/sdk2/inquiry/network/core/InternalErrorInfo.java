@@ -7,10 +7,10 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import um.h;
-import um.i;
-import um.m;
-import um.t;
+import sm.h;
+import sm.i;
+import sm.m;
+import sm.t;
 
 /* JADX INFO: loaded from: classes3.dex */
 public abstract class InternalErrorInfo implements Parcelable {
@@ -18,14 +18,14 @@ public abstract class InternalErrorInfo implements Parcelable {
     @NotNull
     public static final Companion Companion = new Companion(null);
     private static final h<Object> fallbackAdapter = new h<Object>() { // from class: com.withpersona.sdk2.inquiry.network.core.InternalErrorInfo$Companion$fallbackAdapter$1
-        @Override // um.h
+        @Override // sm.h
         public Object fromJson(m mVar) {
             mVar.b();
             mVar.d();
             return null;
         }
 
-        @Override // um.h
+        @Override // sm.h
         public void toJson(t tVar, Object obj) {
             tVar.c().n("message").M("Error with class '" + (obj != null ? obj.getClass().getCanonicalName() : null) + "' does not have a json adapter registered.").g();
         }
@@ -115,7 +115,7 @@ public abstract class InternalErrorInfo implements Parcelable {
 
         @NotNull
         public final h.e createAdapter() {
-            return vm.b.b(InternalErrorInfo.class, Payload.TYPE).e(NetworkErrorInfo.class, "network").e(IntegrationErrorInfo.class, "integration").e(PermissionErrorInfo.class, "permission").e(CameraErrorInfo.class, "camera").e(ConfigurationErrorInfo.class, "configuration").e(InvalidOneTimeLinkCode.class, "one_time_link_code").e(UnknownErrorInfo.class, "unknown").d(InternalErrorInfo.fallbackAdapter);
+            return tm.b.b(InternalErrorInfo.class, Payload.TYPE).e(NetworkErrorInfo.class, "network").e(IntegrationErrorInfo.class, "integration").e(PermissionErrorInfo.class, "permission").e(CameraErrorInfo.class, "camera").e(ConfigurationErrorInfo.class, "configuration").e(InvalidOneTimeLinkCode.class, "one_time_link_code").e(UnknownErrorInfo.class, "unknown").d(InternalErrorInfo.fallbackAdapter);
         }
 
         private Companion() {

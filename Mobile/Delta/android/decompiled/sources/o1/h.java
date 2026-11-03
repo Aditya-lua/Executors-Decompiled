@@ -10,50 +10,50 @@ import n0.a4;
 public class h {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final o1 f27001a;
+    public final o1 f27566a;
     public final a4 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final CameraUseInconsistentTimebaseQuirk f27002c;
+    public final CameraUseInconsistentTimebaseQuirk f27567c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public long f27003d = -1;
+    public long f27568d = -1;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public a4 f27004e;
+    public a4 f27569e;
 
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f27005a;
+        public static final /* synthetic */ int[] f27570a;
 
         static {
             int[] iArr = new int[a4.values().length];
-            f27005a = iArr;
+            f27570a = iArr;
             try {
                 iArr[a4.REALTIME.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f27005a[a4.UPTIME.ordinal()] = 2;
+                f27570a[a4.UPTIME.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
         }
     }
 
     public h(o1 o1Var, a4 a4Var, CameraUseInconsistentTimebaseQuirk cameraUseInconsistentTimebaseQuirk) {
-        this.f27001a = o1Var;
+        this.f27566a = o1Var;
         this.b = a4Var;
-        this.f27002c = cameraUseInconsistentTimebaseQuirk;
+        this.f27567c = cameraUseInconsistentTimebaseQuirk;
     }
 
     public final long a() {
         long j10 = Long.MAX_VALUE;
         long j11 = 0;
         for (int i10 = 0; i10 < 3; i10++) {
-            long jB = this.f27001a.b();
-            long jA = this.f27001a.a();
-            long jB2 = this.f27001a.b();
+            long jB = this.f27566a.b();
+            long jA = this.f27566a.a();
+            long jB2 = this.f27566a.b();
             long j12 = jB2 - jB;
             if (i10 == 0 || j12 < j10) {
                 j11 = jA - ((jB + jB2) >> 1);
@@ -64,35 +64,35 @@ public class h {
     }
 
     public long b(long j10) {
-        if (this.f27004e == null) {
-            this.f27004e = e(j10);
+        if (this.f27569e == null) {
+            this.f27569e = e(j10);
         }
-        int i10 = a.f27005a[this.f27004e.ordinal()];
+        int i10 = a.f27570a[this.f27569e.ordinal()];
         if (i10 != 1) {
             if (i10 == 2) {
                 return j10;
             }
-            throw new AssertionError("Unknown timebase: " + this.f27004e);
+            throw new AssertionError("Unknown timebase: " + this.f27569e);
         }
-        if (this.f27003d == -1) {
-            this.f27003d = a();
-            r1.a("VideoTimebaseConverter", "mUptimeToRealtimeOffsetUs = " + this.f27003d);
+        if (this.f27568d == -1) {
+            this.f27568d = a();
+            r1.a("VideoTimebaseConverter", "mUptimeToRealtimeOffsetUs = " + this.f27568d);
         }
-        return j10 - this.f27003d;
+        return j10 - this.f27568d;
     }
 
     public final boolean c() {
-        return this.f27001a.a() - this.f27001a.b() > 3000000;
+        return this.f27566a.a() - this.f27566a.b() > 3000000;
     }
 
     public final boolean d(long j10) {
-        return Math.abs(j10 - this.f27001a.a()) < Math.abs(j10 - this.f27001a.b());
+        return Math.abs(j10 - this.f27566a.a()) < Math.abs(j10 - this.f27566a.b());
     }
 
     public final a4 e(long j10) {
         boolean z10;
         String str;
-        if (this.f27002c != null) {
+        if (this.f27567c != null) {
             r1.l("VideoTimebaseConverter", "CameraUseInconsistentTimebaseQuirk is enabled");
             z10 = false;
         } else {

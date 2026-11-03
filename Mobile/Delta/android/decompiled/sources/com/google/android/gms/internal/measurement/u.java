@@ -12,22 +12,22 @@ import java.util.regex.Pattern;
 public final class u implements Iterable, q {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f6818a;
+    public final String f6892a;
 
     public u(String str) {
         if (str == null) {
             throw new IllegalArgumentException("StringValue cannot be null.");
         }
-        this.f6818a = str;
+        this.f6892a = str;
     }
 
     @Override // com.google.android.gms.internal.measurement.q
     public final q a() {
-        return new u(this.f6818a);
+        return new u(this.f6892a);
     }
 
     public final /* synthetic */ String b() {
-        return this.f6818a;
+        return this.f6892a;
     }
 
     /* JADX WARN: Code duplicated, block: B:104:0x02d8 A[PHI: r10
@@ -57,13 +57,13 @@ public final class u implements Iterable, q {
             case -1789698943:
                 if (str.equals("hasOwnProperty")) {
                     v5.a("hasOwnProperty", 1, list);
-                    String str3 = this.f6818a;
+                    String str3 = this.f6892a;
                     q qVarA = u4Var.a((q) list.get(0));
                     if ("length".equals(qVarA.zzc())) {
-                        return q.Eo;
+                        return q.Do;
                     }
                     double dDoubleValue = qVarA.zzd().doubleValue();
-                    return (dDoubleValue != Math.floor(dDoubleValue) || (i10 = (int) dDoubleValue) < 0 || i10 >= str3.length()) ? q.Fo : q.Eo;
+                    return (dDoubleValue != Math.floor(dDoubleValue) || (i10 = (int) dDoubleValue) < 0 || i10 >= str3.length()) ? q.Eo : q.Do;
                 }
                 throw new IllegalArgumentException("Command not supported");
             case -1776922004:
@@ -75,22 +75,22 @@ public final class u implements Iterable, q {
             case -1464939364:
                 if (str.equals("toLocaleLowerCase")) {
                     v5.a("toLocaleLowerCase", 0, list);
-                    return new u(this.f6818a.toLowerCase());
+                    return new u(this.f6892a.toLowerCase());
                 }
                 throw new IllegalArgumentException("Command not supported");
             case -1361633751:
                 if (str.equals("charAt")) {
                     v5.c("charAt", 1, list);
                     int i13 = list.isEmpty() ? 0 : (int) v5.i(u4Var.a((q) list.get(0)).zzd().doubleValue());
-                    String str4 = this.f6818a;
-                    return (i13 < 0 || i13 >= str4.length()) ? q.Go : new u(String.valueOf(str4.charAt(i13)));
+                    String str4 = this.f6892a;
+                    return (i13 < 0 || i13 >= str4.length()) ? q.Fo : new u(String.valueOf(str4.charAt(i13)));
                 }
                 throw new IllegalArgumentException("Command not supported");
             case -1354795244:
                 uVar = this;
                 if (str.equals("concat")) {
                     if (!list.isEmpty()) {
-                        StringBuilder sb2 = new StringBuilder(uVar.f6818a);
+                        StringBuilder sb2 = new StringBuilder(uVar.f6892a);
                         for (int i14 = 0; i14 < list.size(); i14++) {
                             sb2.append(u4Var.a((q) list.get(i14)).zzc());
                         }
@@ -102,26 +102,26 @@ public final class u implements Iterable, q {
             case -1137582698:
                 if (str.equals("toLowerCase")) {
                     v5.a("toLowerCase", 0, list);
-                    return new u(this.f6818a.toLowerCase(Locale.ENGLISH));
+                    return new u(this.f6892a.toLowerCase(Locale.ENGLISH));
                 }
                 throw new IllegalArgumentException("Command not supported");
             case -906336856:
                 if (str.equals("search")) {
                     v5.c("search", 1, list);
-                    Matcher matcher = Pattern.compile(list.isEmpty() ? "undefined" : u4Var.a((q) list.get(0)).zzc()).matcher(this.f6818a);
+                    Matcher matcher = Pattern.compile(list.isEmpty() ? "undefined" : u4Var.a((q) list.get(0)).zzc()).matcher(this.f6892a);
                     return matcher.find() ? new j(Double.valueOf(matcher.start())) : new j(Double.valueOf(-1.0d));
                 }
                 throw new IllegalArgumentException("Command not supported");
             case -726908483:
                 if (str.equals("toLocaleUpperCase")) {
                     v5.a("toLocaleUpperCase", 0, list);
-                    return new u(this.f6818a.toUpperCase());
+                    return new u(this.f6892a.toUpperCase());
                 }
                 throw new IllegalArgumentException("Command not supported");
             case -467511597:
                 if (str.equals("lastIndexOf")) {
                     v5.c("lastIndexOf", 2, list);
-                    String str5 = this.f6818a;
+                    String str5 = this.f6892a;
                     String strZzc2 = list.size() > 0 ? u4Var.a((q) list.get(0)).zzc() : "undefined";
                     double dDoubleValue2 = list.size() < 2 ? Double.NaN : u4Var.a((q) list.get(1)).zzd().doubleValue();
                     return new j(Double.valueOf(str5.lastIndexOf(strZzc2, (int) (Double.isNaN(dDoubleValue2) ? Double.POSITIVE_INFINITY : v5.i(dDoubleValue2)))));
@@ -130,26 +130,26 @@ public final class u implements Iterable, q {
             case -399551817:
                 if (str.equals("toUpperCase")) {
                     v5.a("toUpperCase", 0, list);
-                    return new u(this.f6818a.toUpperCase(Locale.ENGLISH));
+                    return new u(this.f6892a.toUpperCase(Locale.ENGLISH));
                 }
                 throw new IllegalArgumentException("Command not supported");
             case 3568674:
                 if (str.equals(str2)) {
                     v5.a("toUpperCase", 0, list);
-                    return new u(this.f6818a.trim());
+                    return new u(this.f6892a.trim());
                 }
                 throw new IllegalArgumentException("Command not supported");
             case 103668165:
                 if (str.equals("match")) {
                     v5.c("match", 1, list);
-                    Matcher matcher2 = Pattern.compile(list.size() <= 0 ? "" : u4Var.a((q) list.get(0)).zzc()).matcher(this.f6818a);
-                    return matcher2.find() ? new f(Arrays.asList(new u(matcher2.group()))) : q.Ao;
+                    Matcher matcher2 = Pattern.compile(list.size() <= 0 ? "" : u4Var.a((q) list.get(0)).zzc()).matcher(this.f6892a);
+                    return matcher2.find() ? new f(Arrays.asList(new u(matcher2.group()))) : q.f6817zo;
                 }
                 throw new IllegalArgumentException("Command not supported");
             case 109526418:
                 if (str.equals("slice")) {
                     v5.c("slice", 2, list);
-                    String str6 = this.f6818a;
+                    String str6 = this.f6892a;
                     double dI = v5.i(!list.isEmpty() ? u4Var.a((q) list.get(0)).zzd().doubleValue() : 0.0d);
                     double dMax = dI < 0.0d ? Math.max(((double) str6.length()) + dI, 0.0d) : Math.min(dI, str6.length());
                     double dI2 = v5.i(list.size() > 1 ? u4Var.a((q) list.get(1)).zzd().doubleValue() : str6.length());
@@ -160,7 +160,7 @@ public final class u implements Iterable, q {
             case 109648666:
                 if (str.equals("split")) {
                     v5.c("split", 2, list);
-                    String str7 = this.f6818a;
+                    String str7 = this.f6892a;
                     if (str7.length() == 0) {
                         return new f(Arrays.asList(this));
                     }
@@ -206,7 +206,7 @@ public final class u implements Iterable, q {
             case 530542161:
                 if (str.equals("substring")) {
                     v5.c("substring", 2, list);
-                    String str8 = this.f6818a;
+                    String str8 = this.f6892a;
                     int i16 = !list.isEmpty() ? (int) v5.i(u4Var.a((q) list.get(0)).zzd().doubleValue()) : 0;
                     int i17 = list.size() > 1 ? (int) v5.i(u4Var.a((q) list.get(1)).zzd().doubleValue()) : str8.length();
                     int iMin = Math.min(Math.max(i16, 0), str8.length());
@@ -218,7 +218,7 @@ public final class u implements Iterable, q {
                 uVar = this;
                 if (str.equals("replace")) {
                     v5.c("replace", 2, list);
-                    q qVarH = q.f6743zo;
+                    q qVarH = q.f6816yo;
                     if (!list.isEmpty()) {
                         strZzc = u4Var.a((q) list.get(0)).zzc();
                         if (list.size() > 1) {
@@ -226,7 +226,7 @@ public final class u implements Iterable, q {
                         }
                     }
                     String str9 = strZzc;
-                    String str10 = uVar.f6818a;
+                    String str10 = uVar.f6892a;
                     int iIndexOf = str10.indexOf(str9);
                     if (iIndexOf >= 0) {
                         if (qVarH instanceof k) {
@@ -247,7 +247,7 @@ public final class u implements Iterable, q {
             case 1943291465:
                 if (str.equals("indexOf")) {
                     v5.c("indexOf", 2, list);
-                    String str11 = this.f6818a;
+                    String str11 = this.f6892a;
                     if (list.size() <= 0) {
                         u4Var2 = u4Var;
                     } else {
@@ -266,13 +266,13 @@ public final class u implements Iterable, q {
             return true;
         }
         if (obj instanceof u) {
-            return this.f6818a.equals(((u) obj).f6818a);
+            return this.f6892a.equals(((u) obj).f6892a);
         }
         return false;
     }
 
     public final int hashCode() {
-        return this.f6818a.hashCode();
+        return this.f6892a.hashCode();
     }
 
     @Override // java.lang.Iterable
@@ -281,7 +281,7 @@ public final class u implements Iterable, q {
     }
 
     public final String toString() {
-        String str = this.f6818a;
+        String str = this.f6892a;
         StringBuilder sb2 = new StringBuilder(str.length() + 2);
         sb2.append("\"");
         sb2.append(str);
@@ -291,12 +291,12 @@ public final class u implements Iterable, q {
 
     @Override // com.google.android.gms.internal.measurement.q
     public final String zzc() {
-        return this.f6818a;
+        return this.f6892a;
     }
 
     @Override // com.google.android.gms.internal.measurement.q
     public final Double zzd() {
-        String str = this.f6818a;
+        String str = this.f6892a;
         if (str.isEmpty()) {
             return Double.valueOf(0.0d);
         }
@@ -309,7 +309,7 @@ public final class u implements Iterable, q {
 
     @Override // com.google.android.gms.internal.measurement.q
     public final Boolean zze() {
-        return Boolean.valueOf(!this.f6818a.isEmpty());
+        return Boolean.valueOf(!this.f6892a.isEmpty());
     }
 
     @Override // com.google.android.gms.internal.measurement.q

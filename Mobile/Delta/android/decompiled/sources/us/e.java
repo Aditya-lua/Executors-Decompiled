@@ -1,38 +1,13 @@
 package us;
 
-import android.content.Context;
-import android.text.Spanned;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
+import ss.r;
+import ss.t;
 
 /* JADX INFO: loaded from: classes3.dex */
-public abstract class e {
-
-    public interface a {
-        @NonNull
-        a a(@NonNull j jVar);
-
-        @NonNull
-        e build();
+public class e implements t {
+    @Override // ss.t
+    public Object a(@NonNull ss.g gVar, @NonNull r rVar) {
+        return new vs.f(gVar.e(), ts.b.f32606d.c(rVar).intValue());
     }
-
-    public interface b {
-    }
-
-    @NonNull
-    public static a a(@NonNull Context context) {
-        return new f(context).a(vs.a.r());
-    }
-
-    @NonNull
-    public static e b(@NonNull Context context) {
-        return a(context).a(vs.a.r()).build();
-    }
-
-    public abstract void c(@NonNull TextView textView, @NonNull String str);
-
-    public abstract void d(@NonNull TextView textView, @NonNull Spanned spanned);
-
-    @NonNull
-    public abstract Spanned e(@NonNull String str);
 }

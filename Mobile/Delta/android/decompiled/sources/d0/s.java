@@ -16,16 +16,16 @@ import z.a1;
 public class s {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final boolean f14263a;
-    public final List<me.x<Void>> b = Collections.synchronizedList(new ArrayList());
+    public final boolean f14243a;
+    public final List<ne.x<Void>> b = Collections.synchronizedList(new ArrayList());
 
     public static class a extends CameraCaptureSession.CaptureCallback {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final me.x<Void> f14264a = y1.c.a(new y1.c.InterfaceC0650c() { // from class: d0.r
-            @Override // y1.c.InterfaceC0650c
+        public final ne.x<Void> f14244a = y1.c.a(new y1.c.InterfaceC0665c() { // from class: d0.r
+            @Override // y1.c.InterfaceC0665c
             public final Object a(y1.c.a aVar) {
-                return s.a.a(this.f14262a, aVar);
+                return s.a.a(this.f14242a, aVar);
             }
         });
         public y1.c.a<Void> b;
@@ -70,10 +70,10 @@ public class s {
     }
 
     public s(boolean z10) {
-        this.f14263a = z10;
+        this.f14243a = z10;
     }
 
-    public static /* synthetic */ void a(s sVar, a aVar, me.x xVar) {
+    public static /* synthetic */ void a(s sVar, a aVar, ne.x xVar) {
         sVar.getClass();
         Log.d("RequestMonitor", "RequestListener " + aVar + " done " + sVar);
         sVar.b.remove(xVar);
@@ -85,13 +85,13 @@ public class s {
 
     public final CameraCaptureSession.CaptureCallback c() {
         final a aVar = new a();
-        final me.x<Void> xVar = aVar.f14264a;
+        final ne.x<Void> xVar = aVar.f14244a;
         this.b.add(xVar);
         Log.d("RequestMonitor", "RequestListener " + aVar + " monitoring " + this);
         xVar.a(new Runnable() { // from class: d0.q
             @Override // java.lang.Runnable
             public final void run() {
-                s.a(this.f14260a, aVar, xVar);
+                s.a(this.f14240a, aVar, xVar);
             }
         }, q0.c.b());
         return aVar;
@@ -101,7 +101,7 @@ public class s {
         return f() ? a1.b(c(), captureCallback) : captureCallback;
     }
 
-    public me.x<Void> e() {
+    public ne.x<Void> e() {
         return this.b.isEmpty() ? r0.n.p(null) : r0.n.s(r0.n.x(r0.n.w(new ArrayList(this.b)), new t.a() { // from class: d0.p
             @Override // t.a
             public final Object apply(Object obj) {
@@ -111,13 +111,13 @@ public class s {
     }
 
     public boolean f() {
-        return this.f14263a;
+        return this.f14243a;
     }
 
     public void g() {
         LinkedList linkedList = new LinkedList(this.b);
         while (!linkedList.isEmpty()) {
-            me.x xVar = (me.x) linkedList.poll();
+            ne.x xVar = (ne.x) linkedList.poll();
             Objects.requireNonNull(xVar);
             xVar.cancel(true);
         }

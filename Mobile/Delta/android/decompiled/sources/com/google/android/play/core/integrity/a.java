@@ -1,18 +1,18 @@
 package com.google.android.play.core.integrity;
 
-import sd.p;
-import sd.q;
+import td.p;
+import td.q;
 
 /* JADX INFO: loaded from: classes2.dex */
 public final class a extends IntegrityTokenRequest.Builder {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public String f8377a;
+    public String f8451a;
     public Long b;
 
     @Override // com.google.android.play.core.integrity.IntegrityTokenRequest.Builder
     public final IntegrityTokenRequest build() {
-        String str = this.f8377a;
+        String str = this.f8451a;
         if (str == null) {
             throw new IllegalStateException("Missing required properties: nonce");
         }
@@ -31,7 +31,7 @@ public final class a extends IntegrityTokenRequest.Builder {
         if (str == null) {
             throw new NullPointerException("Null nonce");
         }
-        this.f8377a = str;
+        this.f8451a = str;
         return this;
     }
 }

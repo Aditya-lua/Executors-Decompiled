@@ -9,10 +9,10 @@ import androidx.annotation.NonNull;
 public class k0 extends j0 {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static boolean f27124d = true;
+    public static boolean f27689d = true;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static boolean f27125e = true;
+    public static boolean f27690e = true;
 
     public static class a {
         public static void a(View view, Matrix matrix) {
@@ -31,11 +31,11 @@ public class k0 extends j0 {
     @Override // o5.j0
     @SuppressLint({"NewApi"})
     public void g(@NonNull View view, @NonNull Matrix matrix) {
-        if (f27124d) {
+        if (f27689d) {
             try {
                 a.b(view, matrix);
             } catch (NoSuchMethodError unused) {
-                f27124d = false;
+                f27689d = false;
             }
         }
     }
@@ -43,11 +43,11 @@ public class k0 extends j0 {
     @Override // o5.j0
     @SuppressLint({"NewApi"})
     public void h(@NonNull View view, @NonNull Matrix matrix) {
-        if (f27125e) {
+        if (f27690e) {
             try {
                 a.c(view, matrix);
             } catch (NoSuchMethodError unused) {
-                f27125e = false;
+                f27690e = false;
             }
         }
     }

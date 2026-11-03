@@ -11,20 +11,20 @@ import java.util.concurrent.TimeUnit;
 public final class f extends n4.a implements l9.r {
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public final Semaphore f14494o;
+    public final Semaphore f14474o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public final Set f14495p;
+    public final Set f14475p;
 
     public f(Context context, Set set) {
         super(context);
-        this.f14494o = new Semaphore(0);
-        this.f14495p = set;
+        this.f14474o = new Semaphore(0);
+        this.f14475p = set;
     }
 
     @Override // n4.a
     public final /* bridge */ /* synthetic */ Object C() {
-        Iterator it = this.f14495p.iterator();
+        Iterator it = this.f14475p.iterator();
         int i10 = 0;
         while (it.hasNext()) {
             if (((k9.f) it.next()).d(this)) {
@@ -32,7 +32,7 @@ public final class f extends n4.a implements l9.r {
             }
         }
         try {
-            this.f14494o.tryAcquire(i10, 5L, TimeUnit.SECONDS);
+            this.f14474o.tryAcquire(i10, 5L, TimeUnit.SECONDS);
             return null;
         } catch (InterruptedException e10) {
             Log.i("GACSignInLoader", "Unexpected InterruptedException", e10);
@@ -43,7 +43,7 @@ public final class f extends n4.a implements l9.r {
 
     @Override // n4.b
     public final void p() {
-        this.f14494o.drainPermits();
+        this.f14474o.drainPermits();
         h();
     }
 }

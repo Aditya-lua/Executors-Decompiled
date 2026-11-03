@@ -9,26 +9,26 @@ import java.util.List;
 public class s {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final r7.c.a f29268a = r7.c.a.a("x", "y");
+    public static final r7.c.a f29621a = r7.c.a.a("x", "y");
 
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f29269a;
+        public static final /* synthetic */ int[] f29622a;
 
         static {
             int[] iArr = new int[r7.c.b.values().length];
-            f29269a = iArr;
+            f29622a = iArr;
             try {
                 iArr[r7.c.b.NUMBER.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f29269a[r7.c.b.BEGIN_ARRAY.ordinal()] = 2;
+                f29622a[r7.c.b.BEGIN_ARRAY.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f29269a[r7.c.b.BEGIN_OBJECT.ordinal()] = 3;
+                f29622a[r7.c.b.BEGIN_OBJECT.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
         }
@@ -59,7 +59,7 @@ public class s {
         float fG = 0.0f;
         float fG2 = 0.0f;
         while (cVar.f()) {
-            int iR = cVar.r(f29268a);
+            int iR = cVar.r(f29621a);
             if (iR == 0) {
                 fG = g(cVar);
             } else if (iR != 1) {
@@ -86,7 +86,7 @@ public class s {
     }
 
     public static PointF e(r7.c cVar, float f10) {
-        int i10 = a.f29269a[cVar.o().ordinal()];
+        int i10 = a.f29622a[cVar.o().ordinal()];
         if (i10 == 1) {
             return b(cVar, f10);
         }
@@ -113,7 +113,7 @@ public class s {
 
     public static float g(r7.c cVar) {
         r7.c.b bVarO = cVar.o();
-        int i10 = a.f29269a[bVarO.ordinal()];
+        int i10 = a.f29622a[bVarO.ordinal()];
         if (i10 == 1) {
             return (float) cVar.h();
         }

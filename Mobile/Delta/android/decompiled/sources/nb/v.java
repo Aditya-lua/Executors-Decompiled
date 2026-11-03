@@ -6,18 +6,18 @@ import java.util.Objects;
 public final class v implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ l8 f26018a;
+    public final /* synthetic */ l8 f26839a;
     public final /* synthetic */ w b;
 
     public v(w wVar, l8 l8Var) {
-        this.f26018a = l8Var;
+        this.f26839a = l8Var;
         Objects.requireNonNull(wVar);
         this.b = wVar;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        l8 l8Var = this.f26018a;
+        l8 l8Var = this.f26839a;
         l8Var.c();
         if (f.a()) {
             l8Var.b().t(this);

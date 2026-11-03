@@ -18,84 +18,84 @@ public class GetServiceRequest extends AbstractSafeParcelable {
     public static final Parcelable.Creator<GetServiceRequest> CREATOR = new d1();
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public static final Scope[] f5774t = new Scope[0];
+    public static final Scope[] f5847t = new Scope[0];
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public static final Feature[] f5775u = new Feature[0];
+    public static final Feature[] f5848u = new Feature[0];
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f5776f;
+    public final int f5849f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final int f5777g;
+    public final int f5850g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final int f5778h;
+    public final int f5851h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public String f5779i;
+    public String f5852i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public IBinder f5780j;
+    public IBinder f5853j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public Scope[] f5781k;
+    public Scope[] f5854k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public Bundle f5782l;
+    public Bundle f5855l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public Account f5783m;
+    public Account f5856m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public Feature[] f5784n;
+    public Feature[] f5857n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public Feature[] f5785o;
+    public Feature[] f5858o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public final boolean f5786p;
+    public final boolean f5859p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public final int f5787q;
+    public final int f5860q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public boolean f5788r;
+    public boolean f5861r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public final String f5789s;
+    public final String f5862s;
 
     public GetServiceRequest(int i10, int i11, int i12, String str, IBinder iBinder, Scope[] scopeArr, Bundle bundle, Account account, Feature[] featureArr, Feature[] featureArr2, boolean z10, int i13, boolean z11, String str2) {
-        scopeArr = scopeArr == null ? f5774t : scopeArr;
+        scopeArr = scopeArr == null ? f5847t : scopeArr;
         bundle = bundle == null ? new Bundle() : bundle;
-        featureArr = featureArr == null ? f5775u : featureArr;
-        featureArr2 = featureArr2 == null ? f5775u : featureArr2;
-        this.f5776f = i10;
-        this.f5777g = i11;
-        this.f5778h = i12;
+        featureArr = featureArr == null ? f5848u : featureArr;
+        featureArr2 = featureArr2 == null ? f5848u : featureArr2;
+        this.f5849f = i10;
+        this.f5850g = i11;
+        this.f5851h = i12;
         if ("com.google.android.gms".equals(str)) {
-            this.f5779i = "com.google.android.gms";
+            this.f5852i = "com.google.android.gms";
         } else {
-            this.f5779i = str;
+            this.f5852i = str;
         }
         if (i10 < 2) {
-            this.f5783m = iBinder != null ? a.t2(b.a.s2(iBinder)) : null;
+            this.f5856m = iBinder != null ? a.t2(b.a.s2(iBinder)) : null;
         } else {
-            this.f5780j = iBinder;
-            this.f5783m = account;
+            this.f5853j = iBinder;
+            this.f5856m = account;
         }
-        this.f5781k = scopeArr;
-        this.f5782l = bundle;
-        this.f5784n = featureArr;
-        this.f5785o = featureArr2;
-        this.f5786p = z10;
-        this.f5787q = i13;
-        this.f5788r = z11;
-        this.f5789s = str2;
+        this.f5854k = scopeArr;
+        this.f5855l = bundle;
+        this.f5857n = featureArr;
+        this.f5858o = featureArr2;
+        this.f5859p = z10;
+        this.f5860q = i13;
+        this.f5861r = z11;
+        this.f5862s = str2;
     }
 
     public String v3() {
-        return this.f5789s;
+        return this.f5862s;
     }
 
     @Override // android.os.Parcelable

@@ -15,32 +15,32 @@ import n0.z1;
 public class f implements z1 {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final Map<Integer, x> f26994f;
+    public static final Map<Integer, x> f27559f;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final z1 f26995c;
+    public final z1 f27560c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final o0 f26996d;
+    public final o0 f27561d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final k3 f26997e;
+    public final k3 f27562e;
 
     static {
         HashMap map = new HashMap();
-        f26994f = map;
-        map.put(1, x.f16054f);
-        map.put(8, x.f16052d);
-        map.put(6, x.f16051c);
+        f27559f = map;
+        map.put(1, x.f16650f);
+        map.put(8, x.f16648d);
+        map.put(6, x.f16647c);
         map.put(5, x.b);
-        map.put(4, x.f16050a);
-        map.put(0, x.f16053e);
+        map.put(4, x.f16646a);
+        map.put(0, x.f16649e);
     }
 
     public f(z1 z1Var, o0 o0Var, k3 k3Var) {
-        this.f26995c = z1Var;
-        this.f26996d = o0Var;
-        this.f26997e = k3Var;
+        this.f27560c = z1Var;
+        this.f27561d = o0Var;
+        this.f27562e = k3Var;
     }
 
     public static boolean d(g3 g3Var) {
@@ -49,24 +49,24 @@ public class f implements z1 {
 
     @Override // n0.z1
     public boolean a(int i10) {
-        return this.f26995c.a(i10) && c(i10);
+        return this.f27560c.a(i10) && c(i10);
     }
 
     @Override // n0.z1
     public a2 b(int i10) {
         if (a(i10)) {
-            return this.f26995c.b(i10);
+            return this.f27560c.b(i10);
         }
         return null;
     }
 
     public final boolean c(int i10) {
-        x xVar = f26994f.get(Integer.valueOf(i10));
+        x xVar = f27559f.get(Integer.valueOf(i10));
         if (xVar == null) {
             return true;
         }
-        for (VideoQualityQuirk videoQualityQuirk : this.f26997e.c(VideoQualityQuirk.class)) {
-            if (videoQualityQuirk != null && videoQualityQuirk.c(this.f26996d, xVar) && !d(videoQualityQuirk)) {
+        for (VideoQualityQuirk videoQualityQuirk : this.f27562e.c(VideoQualityQuirk.class)) {
+            if (videoQualityQuirk != null && videoQualityQuirk.c(this.f27561d, xVar) && !d(videoQualityQuirk)) {
                 return false;
             }
         }

@@ -6,7 +6,7 @@ import android.graphics.Color;
 public class g implements n0<Integer> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final g f29240a = new g();
+    public static final g f29593a = new g();
 
     @Override // q7.n0
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */

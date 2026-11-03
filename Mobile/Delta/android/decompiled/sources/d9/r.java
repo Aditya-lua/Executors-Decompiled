@@ -17,17 +17,17 @@ public abstract class r extends ya.s implements s {
                 GoogleSignInAccount googleSignInAccount = (GoogleSignInAccount) ya.t.a(parcel, GoogleSignInAccount.CREATOR);
                 Status status = (Status) ya.t.a(parcel, Status.CREATOR);
                 ya.t.b(parcel);
-                Z(googleSignInAccount, status);
+                X(googleSignInAccount, status);
                 break;
             case 102:
                 Status status2 = (Status) ya.t.a(parcel, Status.CREATOR);
                 ya.t.b(parcel);
-                A1(status2);
+                z1(status2);
                 break;
             case 103:
                 Status status3 = (Status) ya.t.a(parcel, Status.CREATOR);
                 ya.t.b(parcel);
-                r1(status3);
+                o1(status3);
                 break;
             default:
                 return false;

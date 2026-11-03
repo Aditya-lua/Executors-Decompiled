@@ -14,7 +14,7 @@ public final class g extends b<NetworkState> {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    public static final String f4642d;
+    public static final String f4808d;
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public final int reason;
@@ -22,7 +22,7 @@ public final class g extends b<NetworkState> {
     static {
         String strI = w.i("NetworkMeteredCtrlr");
         Intrinsics.checkNotNullExpressionValue(strI, "tagWithPrefix(...)");
-        f4642d = strI;
+        f4808d = strI;
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

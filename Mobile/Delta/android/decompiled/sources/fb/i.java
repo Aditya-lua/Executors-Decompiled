@@ -10,46 +10,46 @@ import java.util.Objects;
 public final class i implements Application.ActivityLifecycleCallbacks {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Application f16539a;
+    public final Application f17135a;
     public boolean b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f16540c;
+    public boolean f17136c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final /* synthetic */ j f16541d;
+    public final /* synthetic */ j f17137d;
 
     public /* synthetic */ i(j jVar, Application application, byte[] bArr) {
         Objects.requireNonNull(jVar);
-        this.f16541d = jVar;
+        this.f17137d = jVar;
         this.b = false;
-        this.f16539a = application;
+        this.f17135a = application;
     }
 
     public final /* synthetic */ void a() {
         if (this.b) {
             return;
         }
-        this.f16539a.registerActivityLifecycleCallbacks(this);
+        this.f17135a.registerActivityLifecycleCallbacks(this);
         this.b = true;
     }
 
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivityCreated(@NonNull Activity activity, Bundle bundle) {
         String className = activity.getComponentName().getClassName();
-        if (this.f16540c) {
+        if (this.f17136c) {
             if (!Objects.equals(className, "com.epicgames.unreal.GameActivity")) {
                 return;
             }
-        } else if (Objects.equals(className, "com.epicgames.unreal.SplashActivity") && k.f16547c.a(activity)) {
-            this.f16540c = true;
+        } else if (Objects.equals(className, "com.epicgames.unreal.SplashActivity") && k.f17143c.a(activity)) {
+            this.f17136c = true;
             return;
         }
-        this.f16539a.unregisterActivityLifecycleCallbacks(this);
+        this.f17135a.unregisterActivityLifecycleCallbacks(this);
         if (this.b) {
             this.b = false;
             s0.a("AutomaticGamesAuthenticator", "Automatic connection attempt triggered");
-            this.f16541d.c().zzd();
+            this.f17137d.c().zzd();
         }
     }
 

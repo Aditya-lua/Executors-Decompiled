@@ -110,7 +110,7 @@ public final class CacheControl {
 
         @NotNull
         /* JADX INFO: renamed from: maxAge-LRDsOJo, reason: not valid java name */
-        public final Builder m95maxAgeLRDsOJo(long maxAge) {
+        public final Builder m96maxAgeLRDsOJo(long maxAge) {
             long jY = kotlin.time.a.y(maxAge);
             if (jY >= 0) {
                 this.maxAgeSeconds = _CacheControlCommonKt.commonClampToInt(jY);
@@ -131,7 +131,7 @@ public final class CacheControl {
 
         @NotNull
         /* JADX INFO: renamed from: maxStale-LRDsOJo, reason: not valid java name */
-        public final Builder m96maxStaleLRDsOJo(long maxStale) {
+        public final Builder m97maxStaleLRDsOJo(long maxStale) {
             long jY = kotlin.time.a.y(maxStale);
             if (jY >= 0) {
                 this.maxStaleSeconds = _CacheControlCommonKt.commonClampToInt(jY);
@@ -152,7 +152,7 @@ public final class CacheControl {
 
         @NotNull
         /* JADX INFO: renamed from: minFresh-LRDsOJo, reason: not valid java name */
-        public final Builder m97minFreshLRDsOJo(long minFresh) {
+        public final Builder m98minFreshLRDsOJo(long minFresh) {
             long jY = kotlin.time.a.y(minFresh);
             if (jY >= 0) {
                 this.minFreshSeconds = _CacheControlCommonKt.commonClampToInt(jY);

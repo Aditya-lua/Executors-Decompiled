@@ -13,58 +13,58 @@ import sun.misc.Unsafe;
 public final class a6<T> implements h6<T> {
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final int[] f6985l = new int[0];
+    public static final int[] f7059l = new int[0];
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public static final Unsafe f6986m = a7.k();
+    public static final Unsafe f7060m = a7.k();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int[] f6987a;
+    public final int[] f7061a;
     public final Object[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final int f6988c;
+    public final int f7062c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final int f6989d;
+    public final int f7063d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final x5 f6990e;
+    public final x5 f7064e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final boolean f6991f;
+    public final boolean f7065f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final int[] f6992g;
+    public final int[] f7066g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final int f6993h;
+    public final int f7067h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final int f6994i;
+    public final int f7068i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final t6 f6995j;
+    public final t6 f7069j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final g4 f6996k;
+    public final g4 f7070k;
 
     public a6(int[] iArr, Object[] objArr, int i10, int i11, x5 x5Var, boolean z10, int[] iArr2, int i12, int i13, c6 c6Var, i5 i5Var, t6 t6Var, g4 g4Var, s5 s5Var) {
-        this.f6987a = iArr;
+        this.f7061a = iArr;
         this.b = objArr;
-        this.f6988c = i10;
-        this.f6989d = i11;
+        this.f7062c = i10;
+        this.f7063d = i11;
         boolean z11 = false;
         if (g4Var != null && (x5Var instanceof q4)) {
             z11 = true;
         }
-        this.f6991f = z11;
-        this.f6992g = iArr2;
-        this.f6993h = i12;
-        this.f6994i = i13;
-        this.f6995j = t6Var;
-        this.f6996k = g4Var;
-        this.f6990e = x5Var;
+        this.f7065f = z11;
+        this.f7066g = iArr2;
+        this.f7067h = i12;
+        this.f7068i = i13;
+        this.f7069j = t6Var;
+        this.f7070k = g4Var;
+        this.f7064e = x5Var;
     }
 
     public static int B(int i10) {
@@ -245,7 +245,7 @@ public final class a6<T> implements h6<T> {
             i14 = 0;
             i12 = 0;
             i16 = 0;
-            iArr = f6985l;
+            iArr = f7059l;
             i11 = 0;
         } else {
             int i53 = i50 + 1;
@@ -397,7 +397,7 @@ public final class a6<T> implements h6<T> {
             i15 = i76;
             i16 = iCharAt8;
         }
-        Unsafe unsafe = f6986m;
+        Unsafe unsafe = f7060m;
         Object[] objArrB = g6Var.b();
         Class<?> cls2 = g6Var.zza().getClass();
         int i77 = i16 + i15;
@@ -789,7 +789,7 @@ public final class a6<T> implements h6<T> {
     }
 
     public final int A(int i10, int i11) {
-        int[] iArr = this.f6987a;
+        int[] iArr = this.f7061a;
         int length = (iArr.length / 3) - 1;
         while (i11 <= length) {
             int i12 = (length + i11) >>> 1;
@@ -808,7 +808,7 @@ public final class a6<T> implements h6<T> {
     }
 
     public final int C(int i10) {
-        return this.f6987a[i10 + 1];
+        return this.f7061a[i10 + 1];
     }
 
     public final w4 E(int i10) {
@@ -831,7 +831,7 @@ public final class a6<T> implements h6<T> {
 
     public final Object G(Object obj, int i10, Object obj2, t6 t6Var, Object obj3) {
         w4 w4VarE;
-        int i11 = this.f6987a[i10];
+        int i11 = this.f7061a[i10];
         Object objJ = a7.j(obj, C(i10) & 1048575);
         if (objJ == null || (w4VarE = E(i10)) == null) {
             return obj2;
@@ -872,7 +872,7 @@ public final class a6<T> implements h6<T> {
         if (!n(obj, i10)) {
             return h6VarF.zze();
         }
-        Object object = f6986m.getObject(obj, iC);
+        Object object = f7060m.getObject(obj, iC);
         if (q(object)) {
             return object;
         }
@@ -888,7 +888,7 @@ public final class a6<T> implements h6<T> {
         if (!s(obj, i10, i11)) {
             return h6VarF.zze();
         }
-        Object object = f6986m.getObject(obj, C(i11) & 1048575);
+        Object object = f7060m.getObject(obj, C(i11) & 1048575);
         if (q(object)) {
             return object;
         }
@@ -915,16 +915,16 @@ public final class a6<T> implements h6<T> {
         int i13 = 0;
         int i14 = 0;
         int i15 = 1048575;
-        while (i13 < this.f6993h) {
-            int i16 = this.f6992g[i13];
+        while (i13 < this.f7067h) {
+            int i16 = this.f7066g[i13];
             int iC = C(i16);
-            int[] iArr = this.f6987a;
+            int[] iArr = this.f7061a;
             int i17 = iArr[i16 + 2];
             int i18 = i17 & 1048575;
             int i19 = 1 << (i17 >>> 20);
             if (i18 != i15) {
                 if (i18 != 1048575) {
-                    i14 = f6986m.getInt(obj, i18);
+                    i14 = f7060m.getInt(obj, i18);
                 }
                 i11 = i14;
                 i10 = i18;
@@ -978,7 +978,7 @@ public final class a6<T> implements h6<T> {
             i15 = i10;
             i14 = i11;
         }
-        return !this.f6991f || ((q4) obj).zzb.i();
+        return !this.f7065f || ((q4) obj).zzb.i();
     }
 
     /* JADX WARN: Code duplicated, block: B:26:0x006f  */
@@ -993,7 +993,7 @@ public final class a6<T> implements h6<T> {
                 t4Var.zza = 0;
                 t4Var.h();
             }
-            int[] iArr = this.f6987a;
+            int[] iArr = this.f7061a;
             for (int i10 = 0; i10 < iArr.length; i10 += 3) {
                 int iC = C(i10);
                 int i11 = 1048575 & iC;
@@ -1004,7 +1004,7 @@ public final class a6<T> implements h6<T> {
                         switch (iB) {
                             case 17:
                                 if (n(obj, i10)) {
-                                    F(i10).b(f6986m.getObject(obj, j10));
+                                    F(i10).b(f7060m.getObject(obj, j10));
                                 }
                                 break;
                             case 18:
@@ -1042,7 +1042,7 @@ public final class a6<T> implements h6<T> {
                                 ((y4) a7.j(obj, j10)).zzb();
                                 break;
                             case 50:
-                                Unsafe unsafe = f6986m;
+                                Unsafe unsafe = f7060m;
                                 Object object = unsafe.getObject(obj, j10);
                                 if (object != null) {
                                     ((r5) object).c();
@@ -1051,15 +1051,15 @@ public final class a6<T> implements h6<T> {
                                 break;
                         }
                     } else if (s(obj, iArr[i10], i10)) {
-                        F(i10).b(f6986m.getObject(obj, j10));
+                        F(i10).b(f7060m.getObject(obj, j10));
                     }
                 } else if (n(obj, i10)) {
-                    F(i10).b(f6986m.getObject(obj, j10));
+                    F(i10).b(f7060m.getObject(obj, j10));
                 }
             }
-            this.f6995j.b(obj);
-            if (this.f6991f) {
-                this.f6996k.a(obj);
+            this.f7069j.b(obj);
+            if (this.f7065f) {
+                this.f7070k.a(obj);
             }
         }
     }
@@ -1070,11 +1070,11 @@ public final class a6<T> implements h6<T> {
         obj2.getClass();
         int i10 = 0;
         while (true) {
-            int[] iArr = this.f6987a;
+            int[] iArr = this.f7061a;
             if (i10 >= iArr.length) {
-                i6.u(this.f6995j, obj, obj2);
-                if (this.f6991f) {
-                    i6.t(this.f6996k, obj, obj2);
+                i6.u(this.f7069j, obj, obj2);
+                if (this.f7065f) {
+                    i6.t(this.f7070k, obj, obj2);
                     return;
                 }
                 return;
@@ -1235,7 +1235,7 @@ public final class a6<T> implements h6<T> {
                     a7.w(obj, j10, y4Var);
                     break;
                 case 50:
-                    t6 t6Var = i6.f7107a;
+                    t6 t6Var = i6.f7181a;
                     a7.w(obj, j10, s5.a(a7.j(obj, j10), a7.j(obj2, j10)));
                     break;
                 case 51:
@@ -1278,7 +1278,7 @@ public final class a6<T> implements h6<T> {
     @Override // com.google.android.gms.internal.play_billing.h6
     public final boolean d(Object obj, Object obj2) {
         boolean zE;
-        for (int i10 = 0; i10 < this.f6987a.length; i10 += 3) {
+        for (int i10 = 0; i10 < this.f7061a.length; i10 += 3) {
             int iC = C(i10);
             int iB = B(iC);
             if (iB <= 50 || iB >= 69) {
@@ -1460,14 +1460,14 @@ public final class a6<T> implements h6<T> {
                 }
             }
         }
-        int i11 = this.f6994i;
+        int i11 = this.f7068i;
         while (true) {
-            int[] iArr = this.f6992g;
+            int[] iArr = this.f7066g;
             if (i11 >= iArr.length) {
                 if (!((t4) obj).zzc.equals(((t4) obj2).zzc)) {
                     return false;
                 }
-                if (this.f6991f) {
+                if (this.f7065f) {
                     return ((q4) obj).zzb.equals(((q4) obj2).zzb);
                 }
                 return true;
@@ -1499,9 +1499,9 @@ public final class a6<T> implements h6<T> {
         p5 p5Var;
         a6<T> a6Var = this;
         p5 p5Var2 = null;
-        if (a6Var.f6991f) {
+        if (a6Var.f7065f) {
             k4 k4Var = ((q4) obj).zzb;
-            if (k4Var.f7119a.isEmpty()) {
+            if (k4Var.f7193a.isEmpty()) {
                 entry = null;
             } else {
                 entry = (Map.Entry) k4Var.f().next();
@@ -1509,8 +1509,8 @@ public final class a6<T> implements h6<T> {
         } else {
             entry = null;
         }
-        int[] iArr = a6Var.f6987a;
-        Unsafe unsafe = f6986m;
+        int[] iArr = a6Var.f7061a;
+        Unsafe unsafe = f7060m;
         int i11 = 1048575;
         int i12 = 1048575;
         int i13 = 0;
@@ -1682,7 +1682,7 @@ public final class a6<T> implements h6<T> {
                     p5Var = p5Var2;
                     int i18 = iArr[i13];
                     List list = (List) unsafe.getObject(obj, j10);
-                    t6 t6Var = i6.f7107a;
+                    t6 t6Var = i6.f7181a;
                     if (list != null && !list.isEmpty()) {
                         i7Var.I(i18, list);
                     }
@@ -1692,7 +1692,7 @@ public final class a6<T> implements h6<T> {
                     int i19 = iArr[i13];
                     List list2 = (List) unsafe.getObject(obj, j10);
                     h6 h6VarF = a6Var.F(i13);
-                    t6 t6Var2 = i6.f7107a;
+                    t6 t6Var2 = i6.f7181a;
                     if (list2 != null && !list2.isEmpty()) {
                         for (int i20 = 0; i20 < list2.size(); i20++) {
                             ((b4) i7Var).H(i19, list2.get(i20), h6VarF);
@@ -1703,7 +1703,7 @@ public final class a6<T> implements h6<T> {
                     p5Var = p5Var2;
                     int i21 = iArr[i13];
                     List list3 = (List) unsafe.getObject(obj, j10);
-                    t6 t6Var3 = i6.f7107a;
+                    t6 t6Var3 = i6.f7181a;
                     if (list3 != null && !list3.isEmpty()) {
                         i7Var.h(i21, list3);
                     }
@@ -1792,7 +1792,7 @@ public final class a6<T> implements h6<T> {
                     int i22 = iArr[i13];
                     List list4 = (List) unsafe.getObject(obj, j10);
                     h6 h6VarF2 = a6Var.F(i13);
-                    t6 t6Var4 = i6.f7107a;
+                    t6 t6Var4 = i6.f7181a;
                     if (list4 != null && !list4.isEmpty()) {
                         int i23 = 0;
                         while (i23 < list4.size()) {
@@ -1943,11 +1943,11 @@ public final class a6<T> implements h6<T> {
     public final void g(Object obj, Object obj2, int i10) {
         if (n(obj2, i10)) {
             int iC = C(i10) & 1048575;
-            Unsafe unsafe = f6986m;
+            Unsafe unsafe = f7060m;
             long j10 = iC;
             Object object = unsafe.getObject(obj2, j10);
             if (object == null) {
-                throw new IllegalStateException("Source subfield " + this.f6987a[i10] + " is present but null: " + obj2.toString());
+                throw new IllegalStateException("Source subfield " + this.f7061a[i10] + " is present but null: " + obj2.toString());
             }
             h6 h6VarF = F(i10);
             if (!n(obj, i10)) {
@@ -1973,11 +1973,11 @@ public final class a6<T> implements h6<T> {
     }
 
     public final void h(Object obj, Object obj2, int i10) {
-        int[] iArr = this.f6987a;
+        int[] iArr = this.f7061a;
         int i11 = iArr[i10];
         if (s(obj2, i11, i10)) {
             int iC = C(i10) & 1048575;
-            Unsafe unsafe = f6986m;
+            Unsafe unsafe = f7060m;
             long j10 = iC;
             Object object = unsafe.getObject(obj2, j10);
             if (object == null) {
@@ -2020,12 +2020,12 @@ public final class a6<T> implements h6<T> {
     }
 
     public final void k(Object obj, int i10, Object obj2) {
-        f6986m.putObject(obj, C(i10) & 1048575, obj2);
+        f7060m.putObject(obj, C(i10) & 1048575, obj2);
         i(obj, i10);
     }
 
     public final void l(Object obj, int i10, int i11, Object obj2) {
-        f6986m.putObject(obj, C(i11) & 1048575, obj2);
+        f7060m.putObject(obj, C(i11) & 1048575, obj2);
         j(obj, i10, i11);
     }
 
@@ -2126,7 +2126,7 @@ public final class a6<T> implements h6<T> {
     }
 
     public final int z(int i10) {
-        return this.f6987a[i10 + 2];
+        return this.f7061a[i10 + 2];
     }
 
     /* JADX WARN: Code duplicated, block: B:143:0x03a0  */
@@ -2164,19 +2164,19 @@ public final class a6<T> implements h6<T> {
         int iV16;
         int iV17;
         a6<T> a6Var = this;
-        Unsafe unsafe = f6986m;
+        Unsafe unsafe = f7060m;
         int i11 = 0;
         int i12 = 0;
         int iV18 = 0;
         int i13 = 1048575;
         while (true) {
-            int[] iArr = a6Var.f6987a;
+            int[] iArr = a6Var.f7061a;
             if (i11 >= iArr.length) {
                 int iA = iV18 + ((t4) obj).zzc.a();
-                if (!a6Var.f6991f) {
+                if (!a6Var.f7065f) {
                     return iA;
                 }
-                p6 p6Var = ((q4) obj).zzb.f7119a;
+                p6 p6Var = ((q4) obj).zzb.f7193a;
                 int iC2 = p6Var.c();
                 int iC3 = 0;
                 for (int i14 = 0; i14 < iC2; i14++) {
@@ -2284,7 +2284,7 @@ public final class a6<T> implements h6<T> {
                             iV6 = a4.v(iB);
                         } else {
                             iV5 = a4.v(i19);
-                            int i20 = e7.f7036a;
+                            int i20 = e7.f7110a;
                             iB = c7.b((String) object);
                             iV6 = a4.v(iB);
                         }
@@ -2298,7 +2298,7 @@ public final class a6<T> implements h6<T> {
                         int i21 = i15 << 3;
                         Object object2 = unsafe.getObject(obj, j10);
                         h6 h6VarF = a6Var.F(i11);
-                        t6 t6Var = i6.f7107a;
+                        t6 t6Var = i6.f7181a;
                         iV7 = a4.v(i21);
                         iC = ((c3) object2).c(h6VarF);
                         iV8 = a4.v(iC);
@@ -2389,7 +2389,7 @@ public final class a6<T> implements h6<T> {
                     break;
                 case 20:
                     List list = (List) unsafe.getObject(obj, j10);
-                    t6 t6Var2 = i6.f7107a;
+                    t6 t6Var2 = i6.f7181a;
                     if (list.size() == 0) {
                         iM = 0;
                     } else {
@@ -2399,7 +2399,7 @@ public final class a6<T> implements h6<T> {
                     break;
                 case 21:
                     List list2 = (List) unsafe.getObject(obj, j10);
-                    t6 t6Var3 = i6.f7107a;
+                    t6 t6Var3 = i6.f7181a;
                     size = list2.size();
                     if (size == 0) {
                         iF = 0;
@@ -2413,7 +2413,7 @@ public final class a6<T> implements h6<T> {
                     break;
                 case 22:
                     List list3 = (List) unsafe.getObject(obj, j10);
-                    t6 t6Var4 = i6.f7107a;
+                    t6 t6Var4 = i6.f7181a;
                     size = list3.size();
                     if (size == 0) {
                         iF = 0;
@@ -2435,7 +2435,7 @@ public final class a6<T> implements h6<T> {
                     break;
                 case 25:
                     List list4 = (List) unsafe.getObject(obj, j10);
-                    t6 t6Var5 = i6.f7107a;
+                    t6 t6Var5 = i6.f7181a;
                     int size2 = list4.size();
                     if (size2 == 0) {
                         iF = 0;
@@ -2446,7 +2446,7 @@ public final class a6<T> implements h6<T> {
                     break;
                 case 26:
                     List list5 = (List) unsafe.getObject(obj, j10);
-                    t6 t6Var6 = i6.f7107a;
+                    t6 t6Var6 = i6.f7181a;
                     int size3 = list5.size();
                     if (size3 == 0) {
                         iM = 0;
@@ -2460,7 +2460,7 @@ public final class a6<T> implements h6<T> {
                                     iB3 = ((s3) objZza).d();
                                     iV11 = a4.v(iB3);
                                 } else {
-                                    int i25 = e7.f7036a;
+                                    int i25 = e7.f7110a;
                                     iB3 = c7.b((String) objZza);
                                     iV11 = a4.v(iB3);
                                 }
@@ -2473,7 +2473,7 @@ public final class a6<T> implements h6<T> {
                                     iB2 = ((s3) obj2).d();
                                     iV10 = a4.v(iB2);
                                 } else {
-                                    int i27 = e7.f7036a;
+                                    int i27 = e7.f7110a;
                                     iB2 = c7.b((String) obj2);
                                     iV10 = a4.v(iB2);
                                 }
@@ -2486,7 +2486,7 @@ public final class a6<T> implements h6<T> {
                 case 27:
                     List list6 = (List) unsafe.getObject(obj, j10);
                     h6 h6VarF2 = a6Var.F(i11);
-                    t6 t6Var7 = i6.f7107a;
+                    t6 t6Var7 = i6.f7181a;
                     int size4 = list6.size();
                     if (size4 == 0) {
                         iV12 = 0;
@@ -2501,7 +2501,7 @@ public final class a6<T> implements h6<T> {
                     break;
                 case 28:
                     List list7 = (List) unsafe.getObject(obj, j10);
-                    t6 t6Var8 = i6.f7107a;
+                    t6 t6Var8 = i6.f7181a;
                     int size5 = list7.size();
                     if (size5 == 0) {
                         iV13 = 0;
@@ -2516,7 +2516,7 @@ public final class a6<T> implements h6<T> {
                     break;
                 case 29:
                     List list8 = (List) unsafe.getObject(obj, j10);
-                    t6 t6Var9 = i6.f7107a;
+                    t6 t6Var9 = i6.f7181a;
                     size = list8.size();
                     if (size == 0) {
                         iF = 0;
@@ -2530,7 +2530,7 @@ public final class a6<T> implements h6<T> {
                     break;
                 case 30:
                     List list9 = (List) unsafe.getObject(obj, j10);
-                    t6 t6Var10 = i6.f7107a;
+                    t6 t6Var10 = i6.f7181a;
                     size = list9.size();
                     if (size == 0) {
                         iF = 0;
@@ -2552,7 +2552,7 @@ public final class a6<T> implements h6<T> {
                     break;
                 case 33:
                     List list10 = (List) unsafe.getObject(obj, j10);
-                    t6 t6Var11 = i6.f7107a;
+                    t6 t6Var11 = i6.f7181a;
                     size = list10.size();
                     if (size == 0) {
                         iF = 0;
@@ -2566,7 +2566,7 @@ public final class a6<T> implements h6<T> {
                     break;
                 case 34:
                     List list11 = (List) unsafe.getObject(obj, j10);
-                    t6 t6Var12 = i6.f7107a;
+                    t6 t6Var12 = i6.f7181a;
                     size = list11.size();
                     if (size == 0) {
                         iF = 0;
@@ -2643,7 +2643,7 @@ public final class a6<T> implements h6<T> {
                     break;
                 case 42:
                     List list12 = (List) unsafe.getObject(obj, j10);
-                    t6 t6Var13 = i6.f7107a;
+                    t6 t6Var13 = i6.f7181a;
                     iK = list12.size();
                     if (iK > 0) {
                         iV14 = a4.v(i15 << 3);
@@ -2709,7 +2709,7 @@ public final class a6<T> implements h6<T> {
                 case 49:
                     List list13 = (List) unsafe.getObject(obj, j10);
                     h6 h6VarF3 = a6Var.F(i11);
-                    t6 t6Var14 = i6.f7107a;
+                    t6 t6Var14 = i6.f7181a;
                     int size6 = list13.size();
                     if (size6 == 0) {
                         iF2 = 0;
@@ -2805,7 +2805,7 @@ public final class a6<T> implements h6<T> {
                             iV8 = a4.v(iC);
                         } else {
                             iV7 = a4.v(i31);
-                            int i32 = e7.f7036a;
+                            int i32 = e7.f7110a;
                             iC = c7.b((String) object3);
                             iV8 = a4.v(iC);
                         }
@@ -2818,7 +2818,7 @@ public final class a6<T> implements h6<T> {
                         int i33 = i15 << 3;
                         Object object4 = unsafe.getObject(obj, j10);
                         h6 h6VarF4 = a6Var.F(i11);
-                        t6 t6Var15 = i6.f7107a;
+                        t6 t6Var15 = i6.f7181a;
                         iV7 = a4.v(i33);
                         iC = ((c3) object4).c(h6VarF4);
                         iV8 = a4.v(iC);
@@ -2904,7 +2904,7 @@ public final class a6<T> implements h6<T> {
         int iFloatToIntBits;
         int i11;
         int iHashCode = 0;
-        for (int i12 = 0; i12 < this.f6987a.length; i12 += 3) {
+        for (int i12 = 0; i12 < this.f7061a.length; i12 += 3) {
             int iC = C(i12);
             int iB = B(iC);
             if (iB <= 50 || iB >= 69) {
@@ -2914,7 +2914,7 @@ public final class a6<T> implements h6<T> {
                     case 0:
                         i10 = iHashCode * 53;
                         jDoubleToLongBits = Double.doubleToLongBits(a7.e(obj, j10));
-                        byte[] bArr = z4.f7356a;
+                        byte[] bArr = z4.f7430a;
                         iFloatToIntBits = (int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32));
                         iHashCode = i10 + iFloatToIntBits;
                         break;
@@ -2926,14 +2926,14 @@ public final class a6<T> implements h6<T> {
                     case 2:
                         i10 = iHashCode * 53;
                         jDoubleToLongBits = a7.h(obj, j10);
-                        byte[] bArr2 = z4.f7356a;
+                        byte[] bArr2 = z4.f7430a;
                         iFloatToIntBits = (int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32));
                         iHashCode = i10 + iFloatToIntBits;
                         break;
                     case 3:
                         i10 = iHashCode * 53;
                         jDoubleToLongBits = a7.h(obj, j10);
-                        byte[] bArr3 = z4.f7356a;
+                        byte[] bArr3 = z4.f7430a;
                         iFloatToIntBits = (int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32));
                         iHashCode = i10 + iFloatToIntBits;
                         break;
@@ -2945,7 +2945,7 @@ public final class a6<T> implements h6<T> {
                     case 5:
                         i10 = iHashCode * 53;
                         jDoubleToLongBits = a7.h(obj, j10);
-                        byte[] bArr4 = z4.f7356a;
+                        byte[] bArr4 = z4.f7430a;
                         iFloatToIntBits = (int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32));
                         iHashCode = i10 + iFloatToIntBits;
                         break;
@@ -2995,7 +2995,7 @@ public final class a6<T> implements h6<T> {
                     case 14:
                         i10 = iHashCode * 53;
                         jDoubleToLongBits = a7.h(obj, j10);
-                        byte[] bArr5 = z4.f7356a;
+                        byte[] bArr5 = z4.f7430a;
                         iFloatToIntBits = (int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32));
                         iHashCode = i10 + iFloatToIntBits;
                         break;
@@ -3007,7 +3007,7 @@ public final class a6<T> implements h6<T> {
                     case 16:
                         i10 = iHashCode * 53;
                         jDoubleToLongBits = a7.h(obj, j10);
-                        byte[] bArr6 = z4.f7356a;
+                        byte[] bArr6 = z4.f7430a;
                         iFloatToIntBits = (int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32));
                         iHashCode = i10 + iFloatToIntBits;
                         break;
@@ -3063,12 +3063,12 @@ public final class a6<T> implements h6<T> {
                 }
             }
         }
-        int i13 = this.f6994i;
+        int i13 = this.f7068i;
         while (true) {
-            int[] iArr = this.f6992g;
+            int[] iArr = this.f7066g;
             if (i13 >= iArr.length) {
                 int iHashCode3 = (iHashCode * 53) + ((t4) obj).zzc.hashCode();
-                return this.f6991f ? (iHashCode3 * 53) + ((q4) obj).zzb.f7119a.hashCode() : iHashCode3;
+                return this.f7065f ? (iHashCode3 * 53) + ((q4) obj).zzb.f7193a.hashCode() : iHashCode3;
             }
             int i14 = iArr[i13];
             if (!s(obj, 0, i14)) {
@@ -3080,6 +3080,6 @@ public final class a6<T> implements h6<T> {
 
     @Override // com.google.android.gms.internal.play_billing.h6
     public final Object zze() {
-        return ((t4) this.f6990e).u();
+        return ((t4) this.f7064e).u();
     }
 }

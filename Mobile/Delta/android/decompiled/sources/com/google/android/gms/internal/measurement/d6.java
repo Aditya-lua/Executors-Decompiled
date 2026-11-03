@@ -6,7 +6,7 @@ public final class d6 extends cb implements pc {
         throw null;
     }
 
-    public final d6 x(Iterable iterable) {
+    public final d6 y(Iterable iterable) {
         p();
         ((k6) this.b).J(iterable);
         return this;

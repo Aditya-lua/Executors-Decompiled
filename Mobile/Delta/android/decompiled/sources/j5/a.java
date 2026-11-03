@@ -25,7 +25,7 @@ public final class a {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NotNull
-    public static final Map<String, Lock> f21093f = new HashMap();
+    public static final Map<String, Lock> f21666f = new HashMap();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     public final boolean processLock;
@@ -51,9 +51,9 @@ public final class a {
 
         public final Lock b(String key) {
             Lock lock;
-            synchronized (a.f21093f) {
+            synchronized (a.f21666f) {
                 try {
-                    Map map = a.f21093f;
+                    Map map = a.f21666f;
                     Object reentrantLock = map.get(key);
                     if (reentrantLock == null) {
                         reentrantLock = new ReentrantLock();

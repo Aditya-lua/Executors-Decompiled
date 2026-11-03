@@ -14,7 +14,7 @@ public final class PreviewUnderExposureQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final PreviewUnderExposureQuirk f1344a = new PreviewUnderExposureQuirk();
+    public static final PreviewUnderExposureQuirk f1189a = new PreviewUnderExposureQuirk();
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public static final boolean isTclDevice = x.E(Build.BRAND, "TCL", true);

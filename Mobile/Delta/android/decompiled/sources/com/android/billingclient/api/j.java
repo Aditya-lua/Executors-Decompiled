@@ -12,22 +12,22 @@ import v7.i1;
 public final class j extends BroadcastReceiver {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public d f5190a;
+    public d f5263a;
     public boolean b = false;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final i1 f5191c;
+    public final i1 f5264c;
 
     public j(i1 i1Var) {
-        this.f5191c = i1Var;
+        this.f5264c = i1Var;
     }
 
     public final d a() {
-        return this.f5190a;
+        return this.f5263a;
     }
 
     public final void b() {
-        this.f5190a = null;
+        this.f5263a = null;
     }
 
     public final boolean c() {
@@ -47,7 +47,7 @@ public final class j extends BroadcastReceiver {
                 return;
             }
             this.b = true;
-            i1 i1Var = this.f5191c;
+            i1 i1Var = this.f5264c;
             if (i1Var != null) {
                 i1Var.h(intent.getLongExtra("billingClientTransactionId", 0L));
                 return;
@@ -56,7 +56,7 @@ public final class j extends BroadcastReceiver {
         }
         if (!intent.hasExtra("RESPONSE_CODE")) {
             m0.m("ProxyBillingReceiver", "Missing RESPONSE_CODE in intent.");
-            i1 i1Var2 = this.f5191c;
+            i1 i1Var2 = this.f5264c;
             if (i1Var2 != null) {
                 i1Var2.f(null, intent.getLongExtra("billingClientTransactionId", 0L));
                 return;
@@ -67,8 +67,8 @@ public final class j extends BroadcastReceiver {
         aVarD.d(intent.getIntExtra("RESPONSE_CODE", 0));
         aVarD.b(a0.c(intent.getStringExtra("DEBUG_MESSAGE")));
         d dVarA = aVarD.a();
-        this.f5190a = dVarA;
-        i1 i1Var3 = this.f5191c;
+        this.f5263a = dVarA;
+        i1 i1Var3 = this.f5264c;
         if (i1Var3 != null) {
             i1Var3.f(dVarA, intent.getLongExtra("billingClientTransactionId", 0L));
         }

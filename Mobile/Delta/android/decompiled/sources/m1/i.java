@@ -5,16 +5,16 @@ import java.nio.ByteBuffer;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface i extends AutoCloseable {
+    long a1();
+
     @Override // java.lang.AutoCloseable
     void close();
 
-    long e1();
+    MediaCodec.BufferInfo j0();
 
-    MediaCodec.BufferInfo m0();
+    boolean s0();
 
     long size();
 
     ByteBuffer t();
-
-    boolean w0();
 }

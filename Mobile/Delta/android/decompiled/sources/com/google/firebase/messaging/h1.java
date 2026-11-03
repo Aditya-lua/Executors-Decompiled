@@ -20,34 +20,34 @@ import java.util.concurrent.TimeUnit;
 public class h1 implements ServiceConnection {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f8777a;
+    public final Context f8851a;
     public final Intent b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final ScheduledExecutorService f8778c;
+    public final ScheduledExecutorService f8852c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Queue<a> f8779d;
+    public final Queue<a> f8853d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public e1 f8780e;
+    public e1 f8854e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public boolean f8781f;
+    public boolean f8855f;
 
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Intent f8782a;
+        public final Intent f8856a;
         public final sb.k<Void> b = new sb.k<>();
 
         public a(Intent intent) {
-            this.f8782a = intent;
+            this.f8856a = intent;
         }
 
         public static /* synthetic */ void b(a aVar) {
             aVar.getClass();
-            Log.w("FirebaseMessaging", "Service took too long to process intent: " + aVar.f8782a.getAction() + " finishing.");
+            Log.w("FirebaseMessaging", "Service took too long to process intent: " + aVar.f8856a.getAction() + " finishing.");
             aVar.d();
         }
 
@@ -55,7 +55,7 @@ public class h1 implements ServiceConnection {
             final ScheduledFuture<?> scheduledFutureSchedule = scheduledExecutorService.schedule(new Runnable() { // from class: com.google.firebase.messaging.f1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    h1.a.b(this.f8767a);
+                    h1.a.b(this.f8841a);
                 }
             }, 20L, TimeUnit.SECONDS);
             e().c(scheduledExecutorService, new OnCompleteListener() { // from class: com.google.firebase.messaging.g1
@@ -88,8 +88,8 @@ public class h1 implements ServiceConnection {
     }
 
     public final void b() {
-        while (!this.f8779d.isEmpty()) {
-            this.f8779d.poll().d();
+        while (!this.f8853d.isEmpty()) {
+            this.f8853d.poll().d();
         }
     }
 
@@ -98,11 +98,11 @@ public class h1 implements ServiceConnection {
             if (Log.isLoggable("FirebaseMessaging", 3)) {
                 Log.d("FirebaseMessaging", "flush queue called");
             }
-            while (!this.f8779d.isEmpty()) {
+            while (!this.f8853d.isEmpty()) {
                 if (Log.isLoggable("FirebaseMessaging", 3)) {
                     Log.d("FirebaseMessaging", "found intent to be delivered");
                 }
-                e1 e1Var = this.f8780e;
+                e1 e1Var = this.f8854e;
                 if (e1Var == null || !e1Var.isBinderAlive()) {
                     e();
                     return;
@@ -110,7 +110,7 @@ public class h1 implements ServiceConnection {
                 if (Log.isLoggable("FirebaseMessaging", 3)) {
                     Log.d("FirebaseMessaging", "binder is alive, sending the intent.");
                 }
-                this.f8780e.b(this.f8779d.poll());
+                this.f8854e.b(this.f8853d.poll());
             }
         } catch (Throwable th2) {
             throw th2;
@@ -124,8 +124,8 @@ public class h1 implements ServiceConnection {
                 Log.d("FirebaseMessaging", "new intent queued in the bind-strategy delivery");
             }
             aVar = new a(intent);
-            aVar.c(this.f8778c);
-            this.f8779d.add(aVar);
+            aVar.c(this.f8852c);
+            this.f8853d.add(aVar);
             c();
         } catch (Throwable th2) {
             throw th2;
@@ -137,15 +137,15 @@ public class h1 implements ServiceConnection {
         if (Log.isLoggable("FirebaseMessaging", 3)) {
             StringBuilder sb2 = new StringBuilder();
             sb2.append("binder is dead. start connection? ");
-            sb2.append(!this.f8781f);
+            sb2.append(!this.f8855f);
             Log.d("FirebaseMessaging", sb2.toString());
         }
-        if (this.f8781f) {
+        if (this.f8855f) {
             return;
         }
-        this.f8781f = true;
+        this.f8855f = true;
         try {
-            if (t9.a.b().a(this.f8777a, this.b, this, 65)) {
+            if (t9.a.b().a(this.f8851a, this.b, this, 65)) {
                 return;
             } else {
                 Log.e("FirebaseMessaging", "binding to the service failed");
@@ -153,7 +153,7 @@ public class h1 implements ServiceConnection {
         } catch (SecurityException e10) {
             Log.e("FirebaseMessaging", "Exception while binding the service", e10);
         }
-        this.f8781f = false;
+        this.f8855f = false;
         b();
     }
 
@@ -163,9 +163,9 @@ public class h1 implements ServiceConnection {
             if (Log.isLoggable("FirebaseMessaging", 3)) {
                 Log.d("FirebaseMessaging", "onServiceConnected: " + componentName);
             }
-            this.f8781f = false;
+            this.f8855f = false;
             if (iBinder instanceof e1) {
-                this.f8780e = (e1) iBinder;
+                this.f8854e = (e1) iBinder;
                 c();
                 return;
             }
@@ -185,11 +185,11 @@ public class h1 implements ServiceConnection {
     }
 
     public h1(Context context, String str, ScheduledExecutorService scheduledExecutorService) {
-        this.f8779d = new ArrayDeque();
-        this.f8781f = false;
+        this.f8853d = new ArrayDeque();
+        this.f8855f = false;
         Context applicationContext = context.getApplicationContext();
-        this.f8777a = applicationContext;
+        this.f8851a = applicationContext;
         this.b = new Intent(str).setPackage(applicationContext.getPackageName());
-        this.f8778c = scheduledExecutorService;
+        this.f8852c = scheduledExecutorService;
     }
 }

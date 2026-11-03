@@ -17,43 +17,43 @@ import java.util.zip.GZIPOutputStream;
 public final class ua implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final URL f26010a;
+    public final URL f26831a;
     public final byte[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final sa f26011c;
+    public final sa f26832c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final String f26012d;
+    public final String f26833d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Map f26013e;
+    public final Map f26834e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final /* synthetic */ va f26014f;
+    public final /* synthetic */ va f26835f;
 
     public ua(va vaVar, String str, URL url, byte[] bArr, Map map, sa saVar) {
         Objects.requireNonNull(vaVar);
-        this.f26014f = vaVar;
+        this.f26835f = vaVar;
         n9.m.f(str);
         n9.m.l(url);
         n9.m.l(saVar);
-        this.f26010a = url;
+        this.f26831a = url;
         this.b = bArr;
-        this.f26011c = saVar;
-        this.f26012d = str;
-        this.f26013e = map;
+        this.f26832c = saVar;
+        this.f26833d = str;
+        this.f26834e = map;
     }
 
     public final /* synthetic */ void a(int i10, Exception exc, byte[] bArr, Map map) {
-        this.f26011c.a(this.f26012d, i10, exc, bArr, map);
+        this.f26832c.a(this.f26833d, i10, exc, bArr, map);
     }
 
     public final void b(final int i10, final Exception exc, final byte[] bArr, final Map map) {
-        this.f26014f.f25625a.b().t(new Runnable() { // from class: nb.ta
+        this.f26835f.f26446a.b().t(new Runnable() { // from class: nb.ta
             @Override // java.lang.Runnable
             public final /* synthetic */ void run() {
-                this.f25982a.a(i10, exc, bArr, map);
+                this.f26803a.a(i10, exc, bArr, map);
             }
         });
     }
@@ -85,19 +85,19 @@ public final class ua implements Runnable {
         ?? r10;
         OutputStream outputStream4;
         InputStream inputStream;
-        va vaVar = this.f26014f;
+        va vaVar = this.f26835f;
         vaVar.g();
         int i10 = 0;
         try {
-            URL url = this.f26010a;
-            int i11 = com.google.android.gms.internal.measurement.m1.f6614a;
+            URL url = this.f26831a;
+            int i11 = com.google.android.gms.internal.measurement.m1.f6687a;
             URLConnection uRLConnectionOpenConnection = url.openConnection();
             if (!(uRLConnectionOpenConnection instanceof HttpURLConnection)) {
                 throw new IOException("Failed to obtain HTTP connection");
             }
             httpURLConnection = (HttpURLConnection) uRLConnectionOpenConnection;
             httpURLConnection.setDefaultUseCaches(false);
-            g7 g7Var = vaVar.f25625a;
+            g7 g7Var = vaVar.f26446a;
             g7Var.w();
             httpURLConnection.setConnectTimeout(60000);
             g7Var.w();
@@ -107,7 +107,7 @@ public final class ua implements Runnable {
             httpURLConnection.setDoInput(true);
             try {
                 try {
-                    Map map = this.f26013e;
+                    Map map = this.f26834e;
                     if (map != null) {
                         for (Map.Entry entry : map.entrySet()) {
                             httpURLConnection.addRequestProperty((String) entry.getKey(), (String) entry.getValue());
@@ -123,7 +123,7 @@ public final class ua implements Runnable {
                             gZIPOutputStream.close();
                             byteArrayOutputStream.close();
                             byte[] byteArray = byteArrayOutputStream.toByteArray();
-                            u5 u5VarW = this.f26014f.f25625a.a().w();
+                            u5 u5VarW = this.f26835f.f26446a.a().w();
                             int length = byteArray.length;
                             u5VarW.b("Uploading data. size", Integer.valueOf(length));
                             httpURLConnection.setDoOutput(true);
@@ -143,7 +143,7 @@ public final class ua implements Runnable {
                                     try {
                                         outputStream4.close();
                                     } catch (IOException e11) {
-                                        this.f26014f.f25625a.a().o().c("Error closing HTTP compressed POST connection output stream. appId", w5.x(this.f26012d), e11);
+                                        this.f26835f.f26446a.a().o().c("Error closing HTTP compressed POST connection output stream. appId", w5.x(this.f26833d), e11);
                                     }
                                 }
                                 if (httpURLConnection != null) {
@@ -158,7 +158,7 @@ public final class ua implements Runnable {
                                     try {
                                         outputStream3.close();
                                     } catch (IOException e12) {
-                                        this.f26014f.f25625a.a().o().c("Error closing HTTP compressed POST connection output stream. appId", w5.x(this.f26012d), e12);
+                                        this.f26835f.f26446a.a().o().c("Error closing HTTP compressed POST connection output stream. appId", w5.x(this.f26833d), e12);
                                     }
                                 }
                                 if (httpURLConnection != null) {
@@ -168,7 +168,7 @@ public final class ua implements Runnable {
                                 throw th;
                             }
                         } catch (IOException e13) {
-                            this.f26014f.f25625a.a().o().b("Failed to gzip post request content", e13);
+                            this.f26835f.f26446a.a().o().b("Failed to gzip post request content", e13);
                             throw e13;
                         }
                     }

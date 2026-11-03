@@ -1,5 +1,7 @@
 package com.google.android.material.textfield;
 
+import ad.h;
+import ad.o;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Point;
@@ -11,24 +13,22 @@ import android.view.accessibility.AccessibilityNodeInfo;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 import androidx.annotation.NonNull;
-import hc.b;
-import hc.j;
-import hc.k;
+import ic.b;
+import ic.j;
+import ic.k;
 import q.l;
-import zc.h;
-import zc.o;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class TextInputEditText extends l {
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final Rect f8222g;
+    public final Rect f8296g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public boolean f8223h;
+    public boolean f8297h;
 
     public TextInputEditText(@NonNull Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, b.f18791p);
+        this(context, attributeSet, b.f20613p);
     }
 
     private CharSequence getHintFromLayout() {
@@ -49,7 +49,7 @@ public class TextInputEditText extends l {
     }
 
     public final boolean e(TextInputLayout textInputLayout) {
-        return textInputLayout != null && this.f8223h;
+        return textInputLayout != null && this.f8297h;
     }
 
     @Override // android.widget.TextView, android.view.View
@@ -59,8 +59,8 @@ public class TextInputEditText extends l {
         if (!e(textInputLayout) || rect == null) {
             return;
         }
-        textInputLayout.getFocusedRect(this.f8222g);
-        rect.bottom = this.f8222g.bottom;
+        textInputLayout.getFocusedRect(this.f8296g);
+        rect.bottom = this.f8296g.bottom;
     }
 
     @Override // android.view.View
@@ -112,19 +112,19 @@ public class TextInputEditText extends l {
         if (!e(textInputLayout) || rect == null) {
             return super.requestRectangleOnScreen(rect);
         }
-        this.f8222g.set(rect.left, rect.top, rect.right, rect.bottom + (textInputLayout.getHeight() - getHeight()));
-        return super.requestRectangleOnScreen(this.f8222g);
+        this.f8296g.set(rect.left, rect.top, rect.right, rect.bottom + (textInputLayout.getHeight() - getHeight()));
+        return super.requestRectangleOnScreen(this.f8296g);
     }
 
     public void setTextInputLayoutFocusedRectEnabled(boolean z10) {
-        this.f8223h = z10;
+        this.f8297h = z10;
     }
 
     public TextInputEditText(@NonNull Context context, AttributeSet attributeSet, int i10) {
-        super(ld.a.c(context, attributeSet, i10, 0), attributeSet, i10);
-        this.f8222g = new Rect();
-        TypedArray typedArrayI = o.i(context, attributeSet, k.f19136t6, i10, j.f18938i, new int[0]);
-        setTextInputLayoutFocusedRectEnabled(typedArrayI.getBoolean(k.f19145u6, false));
+        super(md.a.c(context, attributeSet, i10, 0), attributeSet, i10);
+        this.f8296g = new Rect();
+        TypedArray typedArrayI = o.i(context, attributeSet, k.f20958t6, i10, j.f20760i, new int[0]);
+        setTextInputLayoutFocusedRectEnabled(typedArrayI.getBoolean(k.f20967u6, false));
         typedArrayI.recycle();
     }
 }

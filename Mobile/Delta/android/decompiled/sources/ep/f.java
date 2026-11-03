@@ -1,12 +1,28 @@
 package ep;
 
-import android.content.Context;
-import kotlin.Metadata;
-import org.jetbrains.annotations.NotNull;
-
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\bf\u0018\u00002\u00020\u0001J\u0017\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H&¢\u0006\u0004\b\u0005\u0010\u0006¨\u0006\u0007À\u0006\u0003"}, d2 = {"Lep/f;", "", "Landroid/content/Context;", "context", "Lsd/c;", "create", "(Landroid/content/Context;)Lsd/c;", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public interface f {
-    @NotNull
-    sd.c create(@NotNull Context context);
+public final class f implements dt.d<zn.c> {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final com.withpersona.sdk2.inquiry.internal.network.f f16243a;
+    public final dt.i<hv.y> b;
+
+    public f(com.withpersona.sdk2.inquiry.internal.network.f fVar, dt.i<hv.y> iVar) {
+        this.f16243a = fVar;
+        this.b = iVar;
+    }
+
+    public static f a(com.withpersona.sdk2.inquiry.internal.network.f fVar, dt.i<hv.y> iVar) {
+        return new f(fVar, iVar);
+    }
+
+    public static zn.c b(com.withpersona.sdk2.inquiry.internal.network.f fVar, hv.y yVar) {
+        return (zn.c) dt.h.e(fVar.a(yVar));
+    }
+
+    @Override // ft.a
+    /* JADX INFO: renamed from: c, reason: merged with bridge method [inline-methods] */
+    public zn.c get() {
+        return b(this.f16243a, this.b.get());
+    }
 }

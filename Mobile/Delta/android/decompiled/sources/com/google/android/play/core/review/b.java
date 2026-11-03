@@ -10,27 +10,27 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.play.core.common.PlayCoreDialogWrapperActivity;
 import sb.k;
 import sb.m;
-import vd.g;
+import wd.g;
 
 /* JADX INFO: loaded from: classes2.dex */
 @SuppressLint({"RestrictedApi"})
-public final class b implements vd.b {
+public final class b implements wd.b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final g f8378a;
+    public final g f8452a;
     public final Handler b = new Handler(Looper.getMainLooper());
 
     public b(g gVar) {
-        this.f8378a = gVar;
+        this.f8452a = gVar;
     }
 
-    @Override // vd.b
+    @Override // wd.b
     @NonNull
     public final Task<ReviewInfo> a() {
-        return this.f8378a.a();
+        return this.f8452a.a();
     }
 
-    @Override // vd.b
+    @Override // wd.b
     @NonNull
     public final Task<Void> b(@NonNull Activity activity, @NonNull ReviewInfo reviewInfo) {
         if (reviewInfo.zzb()) {

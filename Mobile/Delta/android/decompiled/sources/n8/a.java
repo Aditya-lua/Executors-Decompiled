@@ -11,11 +11,11 @@ import x7.c;
 public interface a extends IInterface {
 
     /* JADX INFO: renamed from: n8.a$a, reason: collision with other inner class name */
-    public static abstract class AbstractBinderC0438a extends b implements a {
+    public static abstract class AbstractBinderC0459a extends b implements a {
 
         /* JADX INFO: renamed from: n8.a$a$a, reason: collision with other inner class name */
-        public static class C0439a extends x7.a implements a {
-            public C0439a(IBinder iBinder) {
+        public static class C0460a extends x7.a implements a {
+            public C0460a(IBinder iBinder) {
                 super(iBinder);
             }
 
@@ -35,7 +35,7 @@ public interface a extends IInterface {
                 return null;
             }
             IInterface iInterfaceQueryLocalInterface = iBinder.queryLocalInterface("com.google.android.finsky.externalreferrer.IGetInstallReferrerService");
-            return iInterfaceQueryLocalInterface instanceof a ? (a) iInterfaceQueryLocalInterface : new C0439a(iBinder);
+            return iInterfaceQueryLocalInterface instanceof a ? (a) iInterfaceQueryLocalInterface : new C0460a(iBinder);
         }
     }
 

@@ -9,7 +9,7 @@ public final class g extends h {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @Deprecated
-    public static final int f21186f = h.f21189a;
+    public static final int f21759f = h.f21762a;
 
     @NonNull
     public static Resources d(@NonNull Context context) {

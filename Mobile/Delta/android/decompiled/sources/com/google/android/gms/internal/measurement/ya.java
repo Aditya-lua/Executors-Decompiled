@@ -10,20 +10,20 @@ import java.util.RandomAccess;
 public final class ya extends t9 implements RandomAccess, mb, vc {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final float[] f6956d;
+    public static final float[] f7030d;
     public float[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f6957c;
+    public int f7031c;
 
     static {
         float[] fArr = new float[0];
-        f6956d = fArr;
+        f7030d = fArr;
         new ya(fArr, 0, false);
     }
 
     public ya() {
-        this(f6956d, 0, true);
+        this(f7030d, 0, true);
     }
 
     private static int e(int i10) {
@@ -31,13 +31,13 @@ public final class ya extends t9 implements RandomAccess, mb, vc {
     }
 
     private final void f(int i10) {
-        if (i10 < 0 || i10 >= this.f6957c) {
+        if (i10 < 0 || i10 >= this.f7031c) {
             throw new IndexOutOfBoundsException(g(i10));
         }
     }
 
     private final String g(int i10) {
-        return v9.a(this.f6957c, i10, (byte) 13, "Index:", ", Size:");
+        return v9.a(this.f7031c, i10, (byte) 13, "Index:", ", Size:");
     }
 
     @Override // java.util.AbstractList, java.util.List
@@ -45,7 +45,7 @@ public final class ya extends t9 implements RandomAccess, mb, vc {
         int i11;
         float fFloatValue = ((Float) obj).floatValue();
         a();
-        if (i10 < 0 || i10 > (i11 = this.f6957c)) {
+        if (i10 < 0 || i10 > (i11 = this.f7031c)) {
             throw new IndexOutOfBoundsException(g(i10));
         }
         int i12 = i10 + 1;
@@ -56,28 +56,28 @@ public final class ya extends t9 implements RandomAccess, mb, vc {
         } else {
             float[] fArr2 = new float[e(length)];
             System.arraycopy(this.b, 0, fArr2, 0, i10);
-            System.arraycopy(this.b, i10, fArr2, i12, this.f6957c - i10);
+            System.arraycopy(this.b, i10, fArr2, i12, this.f7031c - i10);
             this.b = fArr2;
         }
         this.b[i10] = fFloatValue;
-        this.f6957c++;
+        this.f7031c++;
         ((AbstractList) this).modCount++;
     }
 
     @Override // com.google.android.gms.internal.measurement.t9, java.util.AbstractCollection, java.util.Collection, java.util.List
     public final boolean addAll(Collection collection) {
         a();
-        Charset charset = qb.f6750a;
+        Charset charset = qb.f6824a;
         collection.getClass();
         if (!(collection instanceof ya)) {
             return super.addAll(collection);
         }
         ya yaVar = (ya) collection;
-        int i10 = yaVar.f6957c;
+        int i10 = yaVar.f7031c;
         if (i10 == 0) {
             return false;
         }
-        int i11 = this.f6957c;
+        int i11 = this.f7031c;
         if (Integer.MAX_VALUE - i11 < i10) {
             throw new OutOfMemoryError();
         }
@@ -86,8 +86,8 @@ public final class ya extends t9 implements RandomAccess, mb, vc {
         if (i12 > fArr.length) {
             this.b = Arrays.copyOf(fArr, i12);
         }
-        System.arraycopy(yaVar.b, 0, this.b, this.f6957c, yaVar.f6957c);
-        this.f6957c = i12;
+        System.arraycopy(yaVar.b, 0, this.b, this.f7031c, yaVar.f7031c);
+        this.f7031c = i12;
         ((AbstractList) this).modCount++;
         return true;
     }
@@ -95,8 +95,8 @@ public final class ya extends t9 implements RandomAccess, mb, vc {
     @Override // com.google.android.gms.internal.measurement.pb
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
     public final mb v(int i10) {
-        if (i10 >= this.f6957c) {
-            return new ya(i10 == 0 ? f6956d : Arrays.copyOf(this.b, i10), this.f6957c, true);
+        if (i10 >= this.f7031c) {
+            return new ya(i10 == 0 ? f7030d : Arrays.copyOf(this.b, i10), this.f7031c, true);
         }
         throw new IllegalArgumentException();
     }
@@ -113,16 +113,16 @@ public final class ya extends t9 implements RandomAccess, mb, vc {
 
     public final void d(float f10) {
         a();
-        int i10 = this.f6957c;
+        int i10 = this.f7031c;
         int length = this.b.length;
         if (i10 == length) {
             float[] fArr = new float[e(length)];
-            System.arraycopy(this.b, 0, fArr, 0, this.f6957c);
+            System.arraycopy(this.b, 0, fArr, 0, this.f7031c);
             this.b = fArr;
         }
         float[] fArr2 = this.b;
-        int i11 = this.f6957c;
-        this.f6957c = i11 + 1;
+        int i11 = this.f7031c;
+        this.f7031c = i11 + 1;
         fArr2[i11] = f10;
     }
 
@@ -135,11 +135,11 @@ public final class ya extends t9 implements RandomAccess, mb, vc {
             return super.equals(obj);
         }
         ya yaVar = (ya) obj;
-        if (this.f6957c != yaVar.f6957c) {
+        if (this.f7031c != yaVar.f7031c) {
             return false;
         }
         float[] fArr = yaVar.b;
-        for (int i10 = 0; i10 < this.f6957c; i10++) {
+        for (int i10 = 0; i10 < this.f7031c; i10++) {
             if (Float.floatToIntBits(this.b[i10]) != Float.floatToIntBits(fArr[i10])) {
                 return false;
             }
@@ -156,7 +156,7 @@ public final class ya extends t9 implements RandomAccess, mb, vc {
     @Override // com.google.android.gms.internal.measurement.t9, java.util.AbstractList, java.util.Collection, java.util.List
     public final int hashCode() {
         int iFloatToIntBits = 1;
-        for (int i10 = 0; i10 < this.f6957c; i10++) {
+        for (int i10 = 0; i10 < this.f7031c; i10++) {
             iFloatToIntBits = (iFloatToIntBits * 31) + Float.floatToIntBits(this.b[i10]);
         }
         return iFloatToIntBits;
@@ -168,7 +168,7 @@ public final class ya extends t9 implements RandomAccess, mb, vc {
             return -1;
         }
         float fFloatValue = ((Float) obj).floatValue();
-        int i10 = this.f6957c;
+        int i10 = this.f7031c;
         for (int i11 = 0; i11 < i10; i11++) {
             if (this.b[i11] == fFloatValue) {
                 return i11;
@@ -183,11 +183,11 @@ public final class ya extends t9 implements RandomAccess, mb, vc {
         f(i10);
         float[] fArr = this.b;
         float f10 = fArr[i10];
-        int i11 = this.f6957c;
+        int i11 = this.f7031c;
         if (i10 < i11 - 1) {
             System.arraycopy(fArr, i10 + 1, fArr, i10, (i11 - i10) - 1);
         }
-        this.f6957c--;
+        this.f7031c--;
         ((AbstractList) this).modCount++;
         return Float.valueOf(f10);
     }
@@ -199,8 +199,8 @@ public final class ya extends t9 implements RandomAccess, mb, vc {
             throw new IndexOutOfBoundsException("toIndex < fromIndex");
         }
         float[] fArr = this.b;
-        System.arraycopy(fArr, i11, fArr, i10, this.f6957c - i11);
-        this.f6957c -= i11 - i10;
+        System.arraycopy(fArr, i11, fArr, i10, this.f7031c - i11);
+        this.f7031c -= i11 - i10;
         ((AbstractList) this).modCount++;
     }
 
@@ -217,7 +217,7 @@ public final class ya extends t9 implements RandomAccess, mb, vc {
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final int size() {
-        return this.f6957c;
+        return this.f7031c;
     }
 
     public final void w(int i10) {
@@ -238,7 +238,7 @@ public final class ya extends t9 implements RandomAccess, mb, vc {
     public ya(float[] fArr, int i10, boolean z10) {
         super(z10);
         this.b = fArr;
-        this.f6957c = i10;
+        this.f7031c = i10;
     }
 
     @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection, java.util.List

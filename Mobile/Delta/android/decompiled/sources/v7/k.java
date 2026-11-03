@@ -11,21 +11,21 @@ import org.json.JSONObject;
 public class k {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f32804a;
+    public final String f33372a;
     public final String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final JSONObject f32805c;
+    public final JSONObject f33373c;
 
     public k(@NonNull String str, @NonNull String str2) {
-        this.f32804a = str;
+        this.f33372a = str;
         this.b = str2;
-        this.f32805c = new JSONObject(str);
+        this.f33373c = new JSONObject(str);
         com.google.android.gms.internal.play_billing.s0.k();
     }
 
     public a a() {
-        JSONObject jSONObject = this.f32805c;
+        JSONObject jSONObject = this.f33373c;
         String strOptString = jSONObject.optString("obfuscatedAccountId");
         String strOptString2 = jSONObject.optString("obfuscatedProfileId");
         if (strOptString == null && strOptString2 == null) {
@@ -35,7 +35,7 @@ public class k {
     }
 
     public String b() {
-        String strOptString = this.f32805c.optString("orderId");
+        String strOptString = this.f33373c.optString("orderId");
         if (TextUtils.isEmpty(strOptString)) {
             return null;
         }
@@ -44,12 +44,12 @@ public class k {
 
     @NonNull
     public String c() {
-        return this.f32804a;
+        return this.f33372a;
     }
 
     @NonNull
     public String d() {
-        return this.f32805c.optString("packageName");
+        return this.f33373c.optString("packageName");
     }
 
     @NonNull
@@ -65,16 +65,16 @@ public class k {
             return false;
         }
         k kVar = (k) obj;
-        return TextUtils.equals(this.f32804a, kVar.c()) && TextUtils.equals(this.b, kVar.h());
+        return TextUtils.equals(this.f33372a, kVar.c()) && TextUtils.equals(this.b, kVar.h());
     }
 
     public int f() {
-        return this.f32805c.optInt("purchaseState", 1) != 4 ? 1 : 2;
+        return this.f33373c.optInt("purchaseState", 1) != 4 ? 1 : 2;
     }
 
     @NonNull
     public String g() {
-        JSONObject jSONObject = this.f32805c;
+        JSONObject jSONObject = this.f33373c;
         return jSONObject.optString("token", jSONObject.optString("purchaseToken"));
     }
 
@@ -84,16 +84,16 @@ public class k {
     }
 
     public int hashCode() {
-        return this.f32804a.hashCode();
+        return this.f33372a.hashCode();
     }
 
     public boolean i() {
-        return this.f32805c.optBoolean("acknowledged", true);
+        return this.f33373c.optBoolean("acknowledged", true);
     }
 
     public final ArrayList j() {
         ArrayList arrayList = new ArrayList();
-        JSONObject jSONObject = this.f32805c;
+        JSONObject jSONObject = this.f33373c;
         if (jSONObject.has("productIds")) {
             JSONArray jSONArrayOptJSONArray = jSONObject.optJSONArray("productIds");
             if (jSONArrayOptJSONArray != null) {
@@ -109,6 +109,6 @@ public class k {
 
     @NonNull
     public String toString() {
-        return "Purchase. Json: ".concat(String.valueOf(this.f32804a));
+        return "Purchase. Json: ".concat(String.valueOf(this.f33372a));
     }
 }

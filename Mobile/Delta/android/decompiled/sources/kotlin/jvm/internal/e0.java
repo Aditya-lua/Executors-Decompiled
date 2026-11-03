@@ -5,31 +5,31 @@ import kotlin.reflect.KTypeProjection;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class e0 {
-    public hu.g a(j jVar) {
+    public fu.g a(j jVar) {
         return jVar;
     }
 
-    public hu.c b(Class cls) {
+    public fu.c b(Class cls) {
         return new f(cls);
     }
 
-    public hu.f c(Class cls, String str) {
+    public fu.f c(Class cls, String str) {
         return new q(cls, str);
     }
 
-    public hu.h d(n nVar) {
+    public fu.h d(n nVar) {
         return nVar;
     }
 
-    public hu.i e(r rVar) {
+    public fu.i e(r rVar) {
         return rVar;
     }
 
-    public hu.j f(t tVar) {
+    public fu.j f(t tVar) {
         return tVar;
     }
 
-    public hu.k g(v vVar) {
+    public fu.k g(v vVar) {
         return vVar;
     }
 
@@ -42,7 +42,7 @@ public class e0 {
         return h(mVar);
     }
 
-    public hu.m j(hu.e eVar, List<KTypeProjection> list, boolean z10) {
+    public fu.m j(fu.e eVar, List<KTypeProjection> list, boolean z10) {
         return new j0(eVar, list, z10);
     }
 }

@@ -1,5 +1,6 @@
 package com.google.android.material.datepicker;
 
+import ad.r;
 import android.R;
 import android.app.Dialog;
 import android.content.Context;
@@ -27,17 +28,16 @@ import androidx.core.view.y;
 import com.google.android.material.internal.CheckableImageButton;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
-import zc.r;
 
 /* JADX INFO: loaded from: classes2.dex */
 public final class g<S> extends e4.k {
     public static final Object Z0 = "CONFIRM_BUTTON_TAG";
 
     /* JADX INFO: renamed from: a1, reason: collision with root package name */
-    public static final Object f7884a1 = "CANCEL_BUTTON_TAG";
+    public static final Object f7958a1 = "CANCEL_BUTTON_TAG";
 
     /* JADX INFO: renamed from: b1, reason: collision with root package name */
-    public static final Object f7885b1 = "TOGGLE_BUTTON_TAG";
+    public static final Object f7959b1 = "TOGGLE_BUTTON_TAG";
     public DateSelector<S> A0;
     public m<S> B0;
     public CalendarConstraints C0;
@@ -58,26 +58,26 @@ public final class g<S> extends e4.k {
     public TextView R0;
     public TextView S0;
     public CheckableImageButton T0;
-    public gd.g U0;
+    public hd.g U0;
     public Button V0;
     public boolean W0;
     public CharSequence X0;
     public CharSequence Y0;
 
     /* JADX INFO: renamed from: v0, reason: collision with root package name */
-    public final LinkedHashSet<h<? super S>> f7886v0 = new LinkedHashSet<>();
+    public final LinkedHashSet<h<? super S>> f7960v0 = new LinkedHashSet<>();
 
     /* JADX INFO: renamed from: w0, reason: collision with root package name */
-    public final LinkedHashSet<View.OnClickListener> f7887w0 = new LinkedHashSet<>();
+    public final LinkedHashSet<View.OnClickListener> f7961w0 = new LinkedHashSet<>();
 
     /* JADX INFO: renamed from: x0, reason: collision with root package name */
-    public final LinkedHashSet<DialogInterface.OnCancelListener> f7888x0 = new LinkedHashSet<>();
+    public final LinkedHashSet<DialogInterface.OnCancelListener> f7962x0 = new LinkedHashSet<>();
 
     /* JADX INFO: renamed from: y0, reason: collision with root package name */
-    public final LinkedHashSet<DialogInterface.OnDismissListener> f7889y0 = new LinkedHashSet<>();
+    public final LinkedHashSet<DialogInterface.OnDismissListener> f7963y0 = new LinkedHashSet<>();
 
     /* JADX INFO: renamed from: z0, reason: collision with root package name */
-    public int f7890z0;
+    public int f7964z0;
 
     public class a implements View.OnClickListener {
         public a() {
@@ -86,7 +86,7 @@ public final class g<S> extends e4.k {
         /* JADX WARN: Multi-variable type inference failed */
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
-            Iterator it = g.this.f7886v0.iterator();
+            Iterator it = g.this.f7960v0.iterator();
             while (it.hasNext()) {
                 ((h) it.next()).a(g.this.G2());
             }
@@ -100,7 +100,7 @@ public final class g<S> extends e4.k {
 
         @Override // android.view.View.OnClickListener
         public void onClick(View view) {
-            Iterator it = g.this.f7887w0.iterator();
+            Iterator it = g.this.f7961w0.iterator();
             while (it.hasNext()) {
                 ((View.OnClickListener) it.next()).onClick(view);
             }
@@ -111,28 +111,28 @@ public final class g<S> extends e4.k {
     public class c implements y {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ int f7893a;
+        public final /* synthetic */ int f7967a;
         public final /* synthetic */ View b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ int f7894c;
+        public final /* synthetic */ int f7968c;
 
         public c(int i10, View view, int i11) {
-            this.f7893a = i10;
+            this.f7967a = i10;
             this.b = view;
-            this.f7894c = i11;
+            this.f7968c = i11;
         }
 
         @Override // androidx.core.view.y
-        public WindowInsetsCompat K(View view, WindowInsetsCompat windowInsetsCompat) {
+        public WindowInsetsCompat J(View view, WindowInsetsCompat windowInsetsCompat) {
             int i10 = windowInsetsCompat.getInsets(WindowInsetsCompat.Type.systemBars()).top;
-            if (this.f7893a >= 0) {
-                this.b.getLayoutParams().height = this.f7893a + i10;
+            if (this.f7967a >= 0) {
+                this.b.getLayoutParams().height = this.f7967a + i10;
                 View view2 = this.b;
                 view2.setLayoutParams(view2.getLayoutParams());
             }
             View view3 = this.b;
-            view3.setPadding(view3.getPaddingLeft(), this.f7894c + i10, this.b.getPaddingRight(), this.b.getPaddingBottom());
+            view3.setPadding(view3.getPaddingLeft(), this.f7968c + i10, this.b.getPaddingRight(), this.b.getPaddingBottom());
             return windowInsetsCompat;
         }
     }
@@ -145,7 +145,7 @@ public final class g<S> extends e4.k {
         public void a(S s8) {
             g gVar = g.this;
             gVar.O2(gVar.E2());
-            g.this.V0.setEnabled(g.this.B2().L2());
+            g.this.V0.setEnabled(g.this.B2().K2());
         }
     }
 
@@ -167,9 +167,9 @@ public final class g<S> extends e4.k {
 
     public static int F2(@NonNull Context context) {
         Resources resources = context.getResources();
-        int dimensionPixelOffset = resources.getDimensionPixelOffset(hc.d.P);
-        int i10 = Month.o().f7833d;
-        return (dimensionPixelOffset * 2) + (resources.getDimensionPixelSize(hc.d.R) * i10) + ((i10 - 1) * resources.getDimensionPixelOffset(hc.d.U));
+        int dimensionPixelOffset = resources.getDimensionPixelOffset(ic.d.P);
+        int i10 = Month.o().f7907d;
+        return (dimensionPixelOffset * 2) + (resources.getDimensionPixelSize(ic.d.R) * i10) + ((i10 - 1) * resources.getDimensionPixelOffset(ic.d.U));
     }
 
     public static boolean J2(@NonNull Context context) {
@@ -177,18 +177,18 @@ public final class g<S> extends e4.k {
     }
 
     public static boolean L2(@NonNull Context context) {
-        return M2(context, hc.b.S);
+        return M2(context, ic.b.S);
     }
 
     public static boolean M2(@NonNull Context context, int i10) {
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(dd.b.d(context, hc.b.f18801z, e.class.getCanonicalName()), new int[]{i10});
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(ed.b.d(context, ic.b.f20623z, e.class.getCanonicalName()), new int[]{i10});
         boolean z10 = typedArrayObtainStyledAttributes.getBoolean(0, false);
         typedArrayObtainStyledAttributes.recycle();
         return z10;
     }
 
     public static /* synthetic */ void u2(g gVar, View view) {
-        gVar.V0.setEnabled(gVar.B2().L2());
+        gVar.V0.setEnabled(gVar.B2().K2());
         gVar.T0.toggle();
         gVar.I0 = gVar.I0 == 1 ? 0 : 1;
         gVar.Q2(gVar.T0);
@@ -198,8 +198,8 @@ public final class g<S> extends e4.k {
     @NonNull
     public static Drawable z2(Context context) {
         StateListDrawable stateListDrawable = new StateListDrawable();
-        stateListDrawable.addState(new int[]{R.attr.state_checked}, k.a.b(context, hc.e.f18851e));
-        stateListDrawable.addState(new int[0], k.a.b(context, hc.e.f18852f));
+        stateListDrawable.addState(new int[]{R.attr.state_checked}, k.a.b(context, ic.e.f20673e));
+        stateListDrawable.addState(new int[0], k.a.b(context, ic.e.f20674f));
         return stateListDrawable;
     }
 
@@ -207,18 +207,18 @@ public final class g<S> extends e4.k {
         if (this.W0) {
             return;
         }
-        View viewFindViewById = J1().findViewById(hc.f.f18867i);
-        zc.d.a(window, true, r.e(viewFindViewById), null);
+        View viewFindViewById = J1().findViewById(ic.f.f20689i);
+        ad.d.a(window, true, r.e(viewFindViewById), null);
         o0.A0(viewFindViewById, new c(viewFindViewById.getLayoutParams().height, viewFindViewById, viewFindViewById.getPaddingTop()));
         this.W0 = true;
     }
 
     public final String D2() {
-        return B2().N0(I1());
+        return B2().J0(I1());
     }
 
     public String E2() {
-        return B2().M1(x());
+        return B2().L1(w());
     }
 
     @Override // e4.k, androidx.fragment.app.c
@@ -227,7 +227,7 @@ public final class g<S> extends e4.k {
         if (bundle == null) {
             bundle = t();
         }
-        this.f7890z0 = bundle.getInt("OVERRIDE_THEME_RES_ID");
+        this.f7964z0 = bundle.getInt("OVERRIDE_THEME_RES_ID");
         this.A0 = (DateSelector) bundle.getParcelable("DATE_SELECTOR_KEY");
         this.C0 = (CalendarConstraints) bundle.getParcelable("CALENDAR_CONSTRAINTS_KEY");
         this.D0 = (DayViewDecorator) bundle.getParcelable("DAY_VIEW_DECORATOR_KEY");
@@ -251,16 +251,16 @@ public final class g<S> extends e4.k {
     }
 
     public final S G2() {
-        return B2().Z2();
+        return B2().Y2();
     }
 
     public final int H2(Context context) {
-        int i10 = this.f7890z0;
-        return i10 != 0 ? i10 : B2().T0(context);
+        int i10 = this.f7964z0;
+        return i10 != 0 ? i10 : B2().P0(context);
     }
 
     public final void I2(Context context) {
-        this.T0.setTag(f7885b1);
+        this.T0.setTag(f7959b1);
         this.T0.setImageDrawable(z2(context));
         this.T0.setChecked(this.I0 != 0);
         o0.m0(this.T0, null);
@@ -268,7 +268,7 @@ public final class g<S> extends e4.k {
         this.T0.setOnClickListener(new View.OnClickListener() { // from class: com.google.android.material.datepicker.f
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
-                g.u2(this.f7883a, view);
+                g.u2(this.f7957a, view);
             }
         });
     }
@@ -276,25 +276,25 @@ public final class g<S> extends e4.k {
     @Override // androidx.fragment.app.c
     @NonNull
     public final View J0(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        View viewInflate = layoutInflater.inflate(this.H0 ? hc.h.f18908w : hc.h.f18907v, viewGroup);
+        View viewInflate = layoutInflater.inflate(this.H0 ? ic.h.f20730w : ic.h.f20729v, viewGroup);
         Context context = viewInflate.getContext();
         DayViewDecorator dayViewDecorator = this.D0;
         if (dayViewDecorator != null) {
             dayViewDecorator.n(context);
         }
         if (this.H0) {
-            viewInflate.findViewById(hc.f.f18884z).setLayoutParams(new LinearLayout.LayoutParams(F2(context), -2));
+            viewInflate.findViewById(ic.f.f20706z).setLayoutParams(new LinearLayout.LayoutParams(F2(context), -2));
         } else {
-            viewInflate.findViewById(hc.f.A).setLayoutParams(new LinearLayout.LayoutParams(F2(context), -1));
+            viewInflate.findViewById(ic.f.A).setLayoutParams(new LinearLayout.LayoutParams(F2(context), -1));
         }
-        TextView textView = (TextView) viewInflate.findViewById(hc.f.G);
+        TextView textView = (TextView) viewInflate.findViewById(ic.f.G);
         this.S0 = textView;
         o0.o0(textView, 1);
-        this.T0 = (CheckableImageButton) viewInflate.findViewById(hc.f.H);
-        this.R0 = (TextView) viewInflate.findViewById(hc.f.I);
+        this.T0 = (CheckableImageButton) viewInflate.findViewById(ic.f.H);
+        this.R0 = (TextView) viewInflate.findViewById(ic.f.I);
         I2(context);
-        this.V0 = (Button) viewInflate.findViewById(hc.f.f18862d);
-        if (B2().L2()) {
+        this.V0 = (Button) viewInflate.findViewById(ic.f.f20684d);
+        if (B2().K2()) {
             this.V0.setEnabled(true);
         } else {
             this.V0.setEnabled(false);
@@ -313,11 +313,11 @@ public final class g<S> extends e4.k {
         if (charSequence2 != null) {
             this.V0.setContentDescription(charSequence2);
         } else if (this.L0 != 0) {
-            this.V0.setContentDescription(x().getResources().getText(this.L0));
+            this.V0.setContentDescription(w().getResources().getText(this.L0));
         }
         this.V0.setOnClickListener(new a());
-        Button button = (Button) viewInflate.findViewById(hc.f.f18860a);
-        button.setTag(f7884a1);
+        Button button = (Button) viewInflate.findViewById(ic.f.f20682a);
+        button.setTag(f7958a1);
         CharSequence charSequence3 = this.O0;
         if (charSequence3 != null) {
             button.setText(charSequence3);
@@ -331,14 +331,14 @@ public final class g<S> extends e4.k {
         if (charSequence4 != null) {
             button.setContentDescription(charSequence4);
         } else if (this.P0 != 0) {
-            button.setContentDescription(x().getResources().getText(this.P0));
+            button.setContentDescription(w().getResources().getText(this.P0));
         }
         button.setOnClickListener(new b());
         return viewInflate;
     }
 
     public final boolean K2() {
-        return T().getConfiguration().orientation == 2;
+        return S().getConfiguration().orientation == 2;
     }
 
     public final void N2() {
@@ -351,8 +351,8 @@ public final class g<S> extends e4.k {
         this.B0 = iVarT2;
         P2();
         O2(E2());
-        androidx.fragment.app.h hVarR = v().r();
-        hVarR.n(hc.f.f18884z, this.B0);
+        androidx.fragment.app.h hVarR = u().r();
+        hVarR.n(ic.f.f20706z, this.B0);
         hVarR.i();
         this.B0.b2(new d());
     }
@@ -367,19 +367,19 @@ public final class g<S> extends e4.k {
     }
 
     public final void Q2(@NonNull CheckableImageButton checkableImageButton) {
-        this.T0.setContentDescription(this.I0 == 1 ? checkableImageButton.getContext().getString(hc.i.f18925r) : checkableImageButton.getContext().getString(hc.i.f18927t));
+        this.T0.setContentDescription(this.I0 == 1 ? checkableImageButton.getContext().getString(ic.i.f20747r) : checkableImageButton.getContext().getString(ic.i.f20749t));
     }
 
     @Override // e4.k, androidx.fragment.app.c
     public final void b1(@NonNull Bundle bundle) {
         super.b1(bundle);
-        bundle.putInt("OVERRIDE_THEME_RES_ID", this.f7890z0);
+        bundle.putInt("OVERRIDE_THEME_RES_ID", this.f7964z0);
         bundle.putParcelable("DATE_SELECTOR_KEY", this.A0);
         CalendarConstraints.b bVar = new CalendarConstraints.b(this.C0);
         e<S> eVar = this.E0;
         Month monthO2 = eVar == null ? null : eVar.o2();
         if (monthO2 != null) {
-            bVar.b(monthO2.f7835f);
+            bVar.b(monthO2.f7909f);
         }
         bundle.putParcelable("CALENDAR_CONSTRAINTS_KEY", bVar.a());
         bundle.putParcelable("DAY_VIEW_DECORATOR_KEY", this.D0);
@@ -406,10 +406,10 @@ public final class g<S> extends e4.k {
             A2(window);
         } else {
             window.setLayout(-2, -2);
-            int dimensionPixelOffset = T().getDimensionPixelOffset(hc.d.T);
+            int dimensionPixelOffset = S().getDimensionPixelOffset(ic.d.T);
             Rect rect = new Rect(dimensionPixelOffset, dimensionPixelOffset, dimensionPixelOffset, dimensionPixelOffset);
             window.setBackgroundDrawable(new InsetDrawable((Drawable) this.U0, dimensionPixelOffset, dimensionPixelOffset, dimensionPixelOffset, dimensionPixelOffset));
-            window.getDecorView().setOnTouchListener(new uc.a(o2(), rect));
+            window.getDecorView().setOnTouchListener(new vc.a(o2(), rect));
         }
         N2();
     }
@@ -426,11 +426,11 @@ public final class g<S> extends e4.k {
         Dialog dialog = new Dialog(I1(), H2(I1()));
         Context context = dialog.getContext();
         this.H0 = J2(context);
-        int i10 = hc.b.f18801z;
-        int i11 = hc.j.f18954y;
-        this.U0 = new gd.g(context, null, i10, i11);
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(null, hc.k.f19007f3, i10, i11);
-        int color = typedArrayObtainStyledAttributes.getColor(hc.k.f19016g3, 0);
+        int i10 = ic.b.f20623z;
+        int i11 = ic.j.f20776y;
+        this.U0 = new hd.g(context, null, i10, i11);
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(null, ic.k.f20829f3, i10, i11);
+        int color = typedArrayObtainStyledAttributes.getColor(ic.k.f20838g3, 0);
         typedArrayObtainStyledAttributes.recycle();
         this.U0.Q(context);
         this.U0.a0(ColorStateList.valueOf(color));
@@ -440,7 +440,7 @@ public final class g<S> extends e4.k {
 
     @Override // e4.k, android.content.DialogInterface.OnCancelListener
     public final void onCancel(@NonNull DialogInterface dialogInterface) {
-        Iterator<DialogInterface.OnCancelListener> it = this.f7888x0.iterator();
+        Iterator<DialogInterface.OnCancelListener> it = this.f7962x0.iterator();
         while (it.hasNext()) {
             it.next().onCancel(dialogInterface);
         }
@@ -449,7 +449,7 @@ public final class g<S> extends e4.k {
 
     @Override // e4.k, android.content.DialogInterface.OnDismissListener
     public final void onDismiss(@NonNull DialogInterface dialogInterface) {
-        Iterator<DialogInterface.OnDismissListener> it = this.f7889y0.iterator();
+        Iterator<DialogInterface.OnDismissListener> it = this.f7963y0.iterator();
         while (it.hasNext()) {
             it.next().onDismiss(dialogInterface);
         }

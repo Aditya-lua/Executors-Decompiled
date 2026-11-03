@@ -1,16 +1,16 @@
 package com.google.crypto.tink.shaded.protobuf;
 
 import com.google.crypto.tink.shaded.protobuf.a;
-import com.google.crypto.tink.shaded.protobuf.a.AbstractC0126a;
+import com.google.crypto.tink.shaded.protobuf.a.AbstractC0130a;
 import java.io.IOException;
 import java.io.OutputStream;
 
 /* JADX INFO: loaded from: classes2.dex */
-public abstract class a<MessageType extends a<MessageType, BuilderType>, BuilderType extends AbstractC0126a<MessageType, BuilderType>> implements s0 {
+public abstract class a<MessageType extends a<MessageType, BuilderType>, BuilderType extends AbstractC0130a<MessageType, BuilderType>> implements s0 {
     protected int memoizedHashCode = 0;
 
     /* JADX INFO: renamed from: com.google.crypto.tink.shaded.protobuf.a$a, reason: collision with other inner class name */
-    public static abstract class AbstractC0126a<MessageType extends a<MessageType, BuilderType>, BuilderType extends AbstractC0126a<MessageType, BuilderType>> implements s0.a {
+    public static abstract class AbstractC0130a<MessageType extends a<MessageType, BuilderType>, BuilderType extends AbstractC0130a<MessageType, BuilderType>> implements s0.a {
         public static m1 n(s0 s0Var) {
             return new m1(s0Var);
         }
@@ -30,9 +30,9 @@ public abstract class a<MessageType extends a<MessageType, BuilderType>, Builder
     @Override // com.google.crypto.tink.shaded.protobuf.s0
     public h b() {
         try {
-            h.C0127h c0127hL = h.l(c());
-            i(c0127hL.b());
-            return c0127hL.a();
+            h.C0131h c0131hL = h.l(c());
+            i(c0131hL.b());
+            return c0131hL.a();
         } catch (IOException e10) {
             throw new RuntimeException(k("ByteString"), e10);
         }

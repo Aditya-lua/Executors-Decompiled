@@ -9,7 +9,7 @@ public final class j {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    public static final j f23987d = new j(false, 0);
+    public static final j f24637d = new j(false, 0);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     public final boolean isFlipped;

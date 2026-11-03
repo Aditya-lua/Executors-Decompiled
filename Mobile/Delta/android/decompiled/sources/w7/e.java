@@ -4,34 +4,34 @@ package w7;
 public class e {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final e f33778c = new e(null, null);
+    public static final e f33984c = new e(null, null);
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final e f33779d = new e(a.none, null);
+    public static final e f33985d = new e(a.none, null);
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final e f33780e;
+    public static final e f33986e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final e f33781f;
+    public static final e f33987f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final e f33782g;
+    public static final e f33988g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final e f33783h;
+    public static final e f33989h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final e f33784i;
+    public static final e f33990i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final e f33785j;
+    public static final e f33991j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final e f33786k;
+    public static final e f33992k;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public a f33787a;
+    public a f33993a;
     public b b;
 
     public enum a {
@@ -55,24 +55,24 @@ public class e {
     static {
         a aVar = a.xMidYMid;
         b bVar = b.meet;
-        f33780e = new e(aVar, bVar);
+        f33986e = new e(aVar, bVar);
         a aVar2 = a.xMinYMin;
-        f33781f = new e(aVar2, bVar);
-        f33782g = new e(a.xMaxYMax, bVar);
-        f33783h = new e(a.xMidYMin, bVar);
-        f33784i = new e(a.xMidYMax, bVar);
+        f33987f = new e(aVar2, bVar);
+        f33988g = new e(a.xMaxYMax, bVar);
+        f33989h = new e(a.xMidYMin, bVar);
+        f33990i = new e(a.xMidYMax, bVar);
         b bVar2 = b.slice;
-        f33785j = new e(aVar, bVar2);
-        f33786k = new e(aVar2, bVar2);
+        f33991j = new e(aVar, bVar2);
+        f33992k = new e(aVar2, bVar2);
     }
 
     public e(a aVar, b bVar) {
-        this.f33787a = aVar;
+        this.f33993a = aVar;
         this.b = bVar;
     }
 
     public a a() {
-        return this.f33787a;
+        return this.f33993a;
     }
 
     public b b() {
@@ -87,10 +87,10 @@ public class e {
             return false;
         }
         e eVar = (e) obj;
-        return this.f33787a == eVar.f33787a && this.b == eVar.b;
+        return this.f33993a == eVar.f33993a && this.b == eVar.b;
     }
 
     public String toString() {
-        return this.f33787a + " " + this.b;
+        return this.f33993a + " " + this.b;
     }
 }

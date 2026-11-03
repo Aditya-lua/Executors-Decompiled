@@ -27,21 +27,21 @@ import java.util.concurrent.atomic.AtomicInteger;
 public final class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final AtomicInteger f8753a = new AtomicInteger((int) SystemClock.elapsedRealtime());
+    public static final AtomicInteger f8827a = new AtomicInteger((int) SystemClock.elapsedRealtime());
 
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final k2.k.f f8754a;
+        public final k2.k.f f8828a;
         public final String b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final int f8755c;
+        public final int f8829c;
 
         public a(k2.k.f fVar, String str, int i10) {
-            this.f8754a = fVar;
+            this.f8828a = fVar;
             this.b = str;
-            this.f8755c = i10;
+            this.f8829c = i10;
         }
     }
 
@@ -160,7 +160,7 @@ public final class c {
     }
 
     public static int g() {
-        return f8753a.incrementAndGet();
+        return f8827a.incrementAndGet();
     }
 
     public static Integer h(Context context, String str, Bundle bundle) {

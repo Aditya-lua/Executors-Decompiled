@@ -24,13 +24,13 @@ public class d extends g<Float> {
      */
     public float s(t7.a<Float> aVar, float f10) {
         float f11;
-        if (aVar.b == null || aVar.f31671c == null) {
+        if (aVar.b == null || aVar.f32190c == null) {
             throw new IllegalStateException("Missing values for keyframe.");
         }
-        t7.c<A> cVar = this.f20288e;
+        t7.c<A> cVar = this.f20404e;
         if (cVar != 0) {
             f11 = f10;
-            Float f12 = (Float) cVar.b(aVar.f31675g, aVar.f31676h.floatValue(), aVar.b, aVar.f31671c, f11, e(), f());
+            Float f12 = (Float) cVar.b(aVar.f32194g, aVar.f32195h.floatValue(), aVar.b, aVar.f32190c, f11, e(), f());
             if (f12 != null) {
                 return f12.floatValue();
             }

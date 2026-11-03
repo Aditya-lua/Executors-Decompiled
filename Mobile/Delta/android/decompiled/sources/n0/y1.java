@@ -11,7 +11,7 @@ public final class y1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final y1 f24965a = new y1();
+    public static final y1 f25786a = new y1();
 
     /* JADX WARN: Code duplicated, block: B:14:0x0034 A[RETURN] */
     /* JADX WARN: Code duplicated, block: B:16:0x0036 A[RETURN] */
@@ -22,7 +22,7 @@ public final class y1 {
             return fullySpecifiedDynamicRanges.contains(dynamicRangeToTest);
         }
         for (Object obj : fullySpecifiedDynamicRanges) {
-            if (f24965a.d(dynamicRangeToTest, (g0.k0) obj)) {
+            if (f25786a.d(dynamicRangeToTest, (g0.k0) obj)) {
                 if (obj != null) {
                     return true;
                 }

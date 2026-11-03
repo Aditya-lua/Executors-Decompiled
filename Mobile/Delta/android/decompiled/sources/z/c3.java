@@ -6,13 +6,13 @@ import android.hardware.camera2.CameraCaptureSession;
 public final class c3 extends n0.u {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final CameraCaptureSession.CaptureCallback f36459a;
+    public final CameraCaptureSession.CaptureCallback f37154a;
 
     public c3(CameraCaptureSession.CaptureCallback captureCallback) {
         if (captureCallback == null) {
             throw new NullPointerException("captureCallback is null");
         }
-        this.f36459a = captureCallback;
+        this.f37154a = captureCallback;
     }
 
     public static c3 e(CameraCaptureSession.CaptureCallback captureCallback) {
@@ -20,6 +20,6 @@ public final class c3 extends n0.u {
     }
 
     public CameraCaptureSession.CaptureCallback f() {
-        return this.f36459a;
+        return this.f37154a;
     }
 }

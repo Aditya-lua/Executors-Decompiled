@@ -1,102 +1,84 @@
 package pe;
 
-import java.nio.BufferUnderflowException;
-import java.nio.ByteBuffer;
+import af.j0;
+import af.k0;
+import af.p0;
+import com.google.mlkit.vision.barcode.common.Barcode;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.Charset;
 import java.security.GeneralSecurityException;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Iterator;
 
 /* JADX INFO: loaded from: classes2.dex */
-public final class i0 implements oe.a {
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final byte[] f28450d = new byte[0];
-
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final Set<String> f28451e = g();
+public final class i0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f28452a;
-    public final oe.x b;
+    public static final Charset f28674a = Charset.forName("UTF-8");
 
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final oe.a f28453c;
+    public static k0.c a(j0.c cVar) {
+        return k0.c.e0().G(cVar.e0().f0()).E(cVar.h0()).D(cVar.g0()).C(cVar.f0()).build();
+    }
 
-    @Deprecated
-    public i0(ze.h0 h0Var, oe.a aVar) {
-        if (f(h0Var.f0())) {
-            this.f28452a = h0Var.f0();
-            this.b = e(h0Var);
-            this.f28453c = aVar;
-        } else {
-            throw new IllegalArgumentException("Unsupported DEK key type: " + h0Var.f0() + ". Only Tink AEAD key types are supported.");
+    public static k0 b(j0 j0Var) {
+        k0.b bVarD = k0.e0().D(j0Var.h0());
+        Iterator<j0.c> it = j0Var.g0().iterator();
+        while (it.hasNext()) {
+            bVarD.C(a(it.next()));
         }
+        return bVarD.build();
     }
 
-    public static oe.a d(c cVar, oe.a aVar) throws GeneralSecurityException {
-        try {
-            return new i0(ze.h0.j0(oe.h0.b(cVar), com.google.crypto.tink.shaded.protobuf.p.b()), aVar);
-        } catch (com.google.crypto.tink.shaded.protobuf.b0 e10) {
-            throw new GeneralSecurityException(e10);
-        }
-    }
-
-    public static boolean f(String str) {
-        return f28451e.contains(str);
-    }
-
-    public static Set<String> g() {
-        HashSet hashSet = new HashSet();
-        hashSet.add("type.googleapis.com/google.crypto.tink.AesGcmKey");
-        hashSet.add("type.googleapis.com/google.crypto.tink.ChaCha20Poly1305Key");
-        hashSet.add("type.googleapis.com/google.crypto.tink.XChaCha20Poly1305Key");
-        hashSet.add("type.googleapis.com/google.crypto.tink.AesCtrHmacAeadKey");
-        hashSet.add("type.googleapis.com/google.crypto.tink.AesGcmSivKey");
-        hashSet.add("type.googleapis.com/google.crypto.tink.AesEaxKey");
-        return Collections.unmodifiableSet(hashSet);
-    }
-
-    @Override // oe.a
-    public byte[] a(byte[] bArr, byte[] bArr2) throws GeneralSecurityException {
-        oe.l lVarC = ve.w.f().c(this.b, null);
-        byte[] bArrA = this.f28453c.a(((ve.l0) ve.d0.c().n(lVarC, ve.l0.class, oe.j.a())).g().x(), f28450d);
-        if (bArrA.length <= 4096) {
-            return c(bArrA, ((oe.a) ve.a0.c().b(lVarC, oe.a.class)).a(bArr, bArr2));
-        }
-        throw new GeneralSecurityException("length of encrypted DEK too large");
-    }
-
-    @Override // oe.a
-    public byte[] b(byte[] bArr, byte[] bArr2) throws GeneralSecurityException {
-        try {
-            ByteBuffer byteBufferWrap = ByteBuffer.wrap(bArr);
-            int i10 = byteBufferWrap.getInt();
-            if (i10 <= 0 || i10 > 4096 || i10 > bArr.length - 4) {
-                throw new GeneralSecurityException("length of encrypted DEK too large");
+    public static byte[] c(InputStream inputStream) throws IOException {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        byte[] bArr = new byte[Barcode.FORMAT_UPC_E];
+        while (true) {
+            int i10 = inputStream.read(bArr);
+            if (i10 == -1) {
+                return byteArrayOutputStream.toByteArray();
             }
-            byte[] bArr3 = new byte[i10];
-            byteBufferWrap.get(bArr3, 0, i10);
-            byte[] bArr4 = new byte[byteBufferWrap.remaining()];
-            byteBufferWrap.get(bArr4, 0, byteBufferWrap.remaining());
-            return ((oe.a) ve.a0.c().b(ve.d0.c().f(ve.l0.b(this.f28452a, com.google.crypto.tink.shaded.protobuf.h.e(this.f28453c.b(bArr3, f28450d)), ze.f0.c.SYMMETRIC, ze.p0.RAW, null), oe.j.a()), oe.a.class)).b(bArr4, bArr2);
-        } catch (IndexOutOfBoundsException e10) {
-            e = e10;
-            throw new GeneralSecurityException("invalid ciphertext", e);
-        } catch (NegativeArraySizeException e11) {
-            e = e11;
-            throw new GeneralSecurityException("invalid ciphertext", e);
-        } catch (BufferUnderflowException e12) {
-            e = e12;
-            throw new GeneralSecurityException("invalid ciphertext", e);
+            byteArrayOutputStream.write(bArr, 0, i10);
         }
     }
 
-    public final byte[] c(byte[] bArr, byte[] bArr2) {
-        return ByteBuffer.allocate(bArr.length + 4 + bArr2.length).putInt(bArr.length).put(bArr).put(bArr2).array();
+    public static void d(j0.c cVar) throws GeneralSecurityException {
+        if (!cVar.i0()) {
+            throw new GeneralSecurityException(String.format("key %d has no key data", Integer.valueOf(cVar.f0())));
+        }
+        if (cVar.g0() == p0.UNKNOWN_PREFIX) {
+            throw new GeneralSecurityException(String.format("key %d has unknown prefix", Integer.valueOf(cVar.f0())));
+        }
+        if (cVar.h0() == af.g0.UNKNOWN_STATUS) {
+            throw new GeneralSecurityException(String.format("key %d has unknown status", Integer.valueOf(cVar.f0())));
+        }
     }
 
-    public final oe.x e(ze.h0 h0Var) {
-        return oe.h0.a(ze.h0.i0(h0Var).C(ze.p0.RAW).build().n());
+    public static void e(j0 j0Var) {
+        int iH0 = j0Var.h0();
+        int i10 = 0;
+        boolean z10 = false;
+        boolean z11 = true;
+        for (j0.c cVar : j0Var.g0()) {
+            if (cVar.h0() == af.g0.ENABLED) {
+                d(cVar);
+                if (cVar.f0() == iH0) {
+                    if (z10) {
+                        throw new GeneralSecurityException("keyset contains multiple primary keys");
+                    }
+                    z10 = true;
+                }
+                if (cVar.e0().e0() != af.f0.c.ASYMMETRIC_PUBLIC) {
+                    z11 = false;
+                }
+                i10++;
+            }
+        }
+        if (i10 == 0) {
+            throw new GeneralSecurityException("keyset must contain at least one ENABLED key");
+        }
+        if (!z10 && !z11) {
+            throw new GeneralSecurityException("keyset doesn't contain a valid primary key");
+        }
     }
 }

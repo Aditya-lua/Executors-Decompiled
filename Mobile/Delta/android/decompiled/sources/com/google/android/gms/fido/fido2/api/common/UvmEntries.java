@@ -18,10 +18,10 @@ public class UvmEntries extends AbstractSafeParcelable {
     public static final Parcelable.Creator<UvmEntries> CREATOR = new u();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final List f6026f;
+    public final List f6099f;
 
     public UvmEntries(List list) {
-        this.f6026f = list;
+        this.f6099f = list;
     }
 
     public boolean equals(Object obj) {
@@ -30,29 +30,29 @@ public class UvmEntries extends AbstractSafeParcelable {
             return false;
         }
         UvmEntries uvmEntries = (UvmEntries) obj;
-        List list2 = this.f6026f;
-        if (list2 == null && uvmEntries.f6026f == null) {
+        List list2 = this.f6099f;
+        if (list2 == null && uvmEntries.f6099f == null) {
             return true;
         }
-        return list2 != null && (list = uvmEntries.f6026f) != null && list2.containsAll(list) && uvmEntries.f6026f.containsAll(this.f6026f);
+        return list2 != null && (list = uvmEntries.f6099f) != null && list2.containsAll(list) && uvmEntries.f6099f.containsAll(this.f6099f);
     }
 
     public int hashCode() {
-        List list = this.f6026f;
+        List list = this.f6099f;
         return k.c(list == null ? null : new HashSet(list));
     }
 
     public List<UvmEntry> v3() {
-        return this.f6026f;
+        return this.f6099f;
     }
 
     @NonNull
     public final JSONArray w3() {
         try {
             JSONArray jSONArray = new JSONArray();
-            if (this.f6026f != null) {
-                for (int i10 = 0; i10 < this.f6026f.size(); i10++) {
-                    UvmEntry uvmEntry = (UvmEntry) this.f6026f.get(i10);
+            if (this.f6099f != null) {
+                for (int i10 = 0; i10 < this.f6099f.size(); i10++) {
+                    UvmEntry uvmEntry = (UvmEntry) this.f6099f.get(i10);
                     JSONArray jSONArray2 = new JSONArray();
                     jSONArray2.put((int) uvmEntry.w3());
                     jSONArray2.put((int) uvmEntry.v3());

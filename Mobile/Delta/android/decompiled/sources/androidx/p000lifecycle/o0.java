@@ -15,19 +15,19 @@ public final class o0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final CreationExtras.c<i> f2834a;
+    public static final CreationExtras.c<i> f2679a;
 
     @NotNull
     public static final CreationExtras.c<c1> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static final CreationExtras.c<Bundle> f2835c;
+    public static final CreationExtras.c<Bundle> f2680c;
 
-    @Metadata(d1 = {"\u0000\u001d\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J/\u0010\b\u001a\u00028\u0000\"\b\b\u0000\u0010\u0003*\u00020\u00022\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00028\u00000\u00042\u0006\u0010\u0007\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\b\u0010\t¨\u0006\n"}, d2 = {"androidx/lifecycle/o0$a", "Landroidx/lifecycle/a1$c;", "Landroidx/lifecycle/x0;", "T", "Lhu/c;", "modelClass", "Lk4/a;", "extras", "c", "(Lhu/c;Lk4/a;)Landroidx/lifecycle/x0;", "lifecycle-viewmodel-savedstate"}, k = 1, mv = {2, 0, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000\u001d\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J/\u0010\b\u001a\u00028\u0000\"\b\b\u0000\u0010\u0003*\u00020\u00022\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00028\u00000\u00042\u0006\u0010\u0007\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\b\u0010\t¨\u0006\n"}, d2 = {"androidx/lifecycle/o0$a", "Landroidx/lifecycle/a1$c;", "Landroidx/lifecycle/x0;", "T", "Lfu/c;", "modelClass", "Lk4/a;", "extras", "b", "(Lfu/c;Lk4/a;)Landroidx/lifecycle/x0;", "lifecycle-viewmodel-savedstate"}, k = 1, mv = {2, 0, 0}, xi = 48)
     public static final class a implements a1.c {
         @Override // androidx.lifecycle.a1.c
-        public <T extends x0> T c(hu.c<T> modelClass, CreationExtras extras) {
+        public <T extends x0> T b(fu.c<T> modelClass, CreationExtras extras) {
             Intrinsics.checkNotNullParameter(modelClass, "modelClass");
             Intrinsics.checkNotNullParameter(extras, "extras");
             return new s0();
@@ -48,9 +48,9 @@ public final class o0 {
 
     static {
         CreationExtras.Companion companion = CreationExtras.INSTANCE;
-        f2834a = new b();
+        f2679a = new b();
         b = new c();
-        f2835c = new d();
+        f2680c = new d();
     }
 
     public static final l0 a(i iVar, c1 c1Var, String str, Bundle bundle) {
@@ -68,7 +68,7 @@ public final class o0 {
     @NotNull
     public static final l0 b(@NotNull CreationExtras creationExtras) {
         Intrinsics.checkNotNullParameter(creationExtras, "<this>");
-        i iVar = (i) creationExtras.a(f2834a);
+        i iVar = (i) creationExtras.a(f2679a);
         if (iVar == null) {
             throw new IllegalArgumentException("CreationExtras must have a value by `SAVED_STATE_REGISTRY_OWNER_KEY`");
         }
@@ -76,8 +76,8 @@ public final class o0 {
         if (c1Var == null) {
             throw new IllegalArgumentException("CreationExtras must have a value by `VIEW_MODEL_STORE_OWNER_KEY`");
         }
-        Bundle bundle = (Bundle) creationExtras.a(f2835c);
-        String str = (String) creationExtras.a(a1.f2748c);
+        Bundle bundle = (Bundle) creationExtras.a(f2680c);
+        String str = (String) creationExtras.a(a1.f2593c);
         if (str != null) {
             return a(iVar, c1Var, str, bundle);
         }
@@ -91,9 +91,9 @@ public final class o0 {
         if (state != l.b.INITIALIZED && state != l.b.CREATED) {
             throw new IllegalArgumentException("Failed requirement.");
         }
-        if (t8.A().b("androidx.lifecycle.internal.SavedStateHandlesProvider") == null) {
-            r0 r0Var = new r0(t8.A(), t8);
-            t8.A().c("androidx.lifecycle.internal.SavedStateHandlesProvider", r0Var);
+        if (t8.z().b("androidx.lifecycle.internal.SavedStateHandlesProvider") == null) {
+            r0 r0Var = new r0(t8.z(), t8);
+            t8.z().c("androidx.lifecycle.internal.SavedStateHandlesProvider", r0Var);
             t8.a().a(new m0(r0Var));
         }
     }
@@ -101,7 +101,7 @@ public final class o0 {
     @NotNull
     public static final r0 d(@NotNull i iVar) {
         Intrinsics.checkNotNullParameter(iVar, "<this>");
-        f.b bVarB = iVar.A().b("androidx.lifecycle.internal.SavedStateHandlesProvider");
+        f.b bVarB = iVar.z().b("androidx.lifecycle.internal.SavedStateHandlesProvider");
         r0 r0Var = bVarB instanceof r0 ? (r0) bVarB : null;
         if (r0Var != null) {
             return r0Var;

@@ -9,62 +9,62 @@ import java.util.Map;
 public final class k implements t1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final j f2232a;
+    public final j f2077a;
 
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f2233a;
+        public static final /* synthetic */ int[] f2078a;
 
         static {
             int[] iArr = new int[s1.b.values().length];
-            f2233a = iArr;
+            f2078a = iArr;
             try {
-                iArr[s1.b.f2293j.ordinal()] = 1;
+                iArr[s1.b.f2138j.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f2233a[s1.b.f2292i.ordinal()] = 2;
+                f2078a[s1.b.f2137i.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f2233a[s1.b.f2290g.ordinal()] = 3;
+                f2078a[s1.b.f2135g.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
             try {
-                f2233a[s1.b.f2300q.ordinal()] = 4;
+                f2078a[s1.b.f2145q.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
             try {
-                f2233a[s1.b.f2302s.ordinal()] = 5;
+                f2078a[s1.b.f2147s.ordinal()] = 5;
             } catch (NoSuchFieldError unused5) {
             }
             try {
-                f2233a[s1.b.f2298o.ordinal()] = 6;
+                f2078a[s1.b.f2143o.ordinal()] = 6;
             } catch (NoSuchFieldError unused6) {
             }
             try {
-                f2233a[s1.b.f2291h.ordinal()] = 7;
+                f2078a[s1.b.f2136h.ordinal()] = 7;
             } catch (NoSuchFieldError unused7) {
             }
             try {
-                f2233a[s1.b.f2288e.ordinal()] = 8;
+                f2078a[s1.b.f2133e.ordinal()] = 8;
             } catch (NoSuchFieldError unused8) {
             }
             try {
-                f2233a[s1.b.f2301r.ordinal()] = 9;
+                f2078a[s1.b.f2146r.ordinal()] = 9;
             } catch (NoSuchFieldError unused9) {
             }
             try {
-                f2233a[s1.b.f2303t.ordinal()] = 10;
+                f2078a[s1.b.f2148t.ordinal()] = 10;
             } catch (NoSuchFieldError unused10) {
             }
             try {
-                f2233a[s1.b.f2289f.ordinal()] = 11;
+                f2078a[s1.b.f2134f.ordinal()] = 11;
             } catch (NoSuchFieldError unused11) {
             }
             try {
-                f2233a[s1.b.f2294k.ordinal()] = 12;
+                f2078a[s1.b.f2139k.ordinal()] = 12;
             } catch (NoSuchFieldError unused12) {
             }
         }
@@ -72,12 +72,12 @@ public final class k implements t1 {
 
     public k(j jVar) {
         j jVar2 = (j) z.b(jVar, "output");
-        this.f2232a = jVar2;
-        jVar2.f2206a = this;
+        this.f2077a = jVar2;
+        jVar2.f2051a = this;
     }
 
     public static k P(j jVar) {
-        k kVar = jVar.f2206a;
+        k kVar = jVar.f2051a;
         return kVar != null ? kVar : new k(jVar);
     }
 
@@ -92,13 +92,13 @@ public final class k implements t1 {
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public void B(int i10, float f10) {
-        this.f2232a.x0(i10, f10);
+        this.f2077a.x0(i10, f10);
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
     @Deprecated
     public void C(int i10) {
-        this.f2232a.V0(i10, 4);
+        this.f2077a.V0(i10, 4);
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
@@ -112,7 +112,7 @@ public final class k implements t1 {
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public void E(int i10, int i11) {
-        this.f2232a.r0(i10, i11);
+        this.f2077a.r0(i10, i11);
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
@@ -135,13 +135,13 @@ public final class k implements t1 {
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public void H(int i10, int i11) {
-        this.f2232a.P0(i10, i11);
+        this.f2077a.P0(i10, i11);
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public void I(int i10, List<g> list) {
         for (int i11 = 0; i11 < list.size(); i11++) {
-            this.f2232a.n0(i10, list.get(i11));
+            this.f2077a.n0(i10, list.get(i11));
         }
     }
 
@@ -154,30 +154,30 @@ public final class k implements t1 {
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public void K(int i10, g gVar) {
-        this.f2232a.n0(i10, gVar);
+        this.f2077a.n0(i10, gVar);
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public void L(int i10, Object obj, g1 g1Var) {
-        this.f2232a.H0(i10, (r0) obj, g1Var);
+        this.f2077a.H0(i10, (r0) obj, g1Var);
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public <K, V> void M(int i10, k0.a<K, V> aVar, Map<K, V> map) {
-        if (this.f2232a.d0()) {
+        if (this.f2077a.d0()) {
             V(i10, aVar, map);
             return;
         }
         for (Map.Entry<K, V> entry : map.entrySet()) {
-            this.f2232a.V0(i10, 2);
-            this.f2232a.X0(k0.b(aVar, entry.getKey(), entry.getValue()));
-            k0.e(this.f2232a, aVar, entry.getKey(), entry.getValue());
+            this.f2077a.V0(i10, 2);
+            this.f2077a.X0(k0.b(aVar, entry.getKey(), entry.getValue()));
+            k0.e(this.f2077a, aVar, entry.getKey(), entry.getValue());
         }
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public void N(int i10, Object obj, g1 g1Var) {
-        this.f2232a.A0(i10, (r0) obj, g1Var);
+        this.f2077a.A0(i10, (r0) obj, g1Var);
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
@@ -191,19 +191,19 @@ public final class k implements t1 {
         int i11 = 0;
         if (!z10) {
             while (i11 < eVar.size()) {
-                this.f2232a.j0(i10, eVar.c(i11));
+                this.f2077a.j0(i10, eVar.c(i11));
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iE = 0;
         for (int i12 = 0; i12 < eVar.size(); i12++) {
             iE += j.e(eVar.c(i12));
         }
-        this.f2232a.X0(iE);
+        this.f2077a.X0(iE);
         while (i11 < eVar.size()) {
-            this.f2232a.k0(eVar.c(i11));
+            this.f2077a.k0(eVar.c(i11));
             i11++;
         }
     }
@@ -212,27 +212,27 @@ public final class k implements t1 {
         int i11 = 0;
         if (!z10) {
             while (i11 < list.size()) {
-                this.f2232a.j0(i10, list.get(i11).booleanValue());
+                this.f2077a.j0(i10, list.get(i11).booleanValue());
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iE = 0;
         for (int i12 = 0; i12 < list.size(); i12++) {
             iE += j.e(list.get(i12).booleanValue());
         }
-        this.f2232a.X0(iE);
+        this.f2077a.X0(iE);
         while (i11 < list.size()) {
-            this.f2232a.k0(list.get(i11).booleanValue());
+            this.f2077a.k0(list.get(i11).booleanValue());
             i11++;
         }
     }
 
     public final <V> void S(int i10, boolean z10, V v5, k0.a<Boolean, V> aVar) {
-        this.f2232a.V0(i10, 2);
-        this.f2232a.X0(k0.b(aVar, Boolean.valueOf(z10), v5));
-        k0.e(this.f2232a, aVar, Boolean.valueOf(z10), v5);
+        this.f2077a.V0(i10, 2);
+        this.f2077a.X0(k0.b(aVar, Boolean.valueOf(z10), v5));
+        k0.e(this.f2077a, aVar, Boolean.valueOf(z10), v5);
     }
 
     public final <V> void T(int i10, k0.a<Integer, V> aVar, Map<Integer, V> map) {
@@ -248,9 +248,9 @@ public final class k implements t1 {
         for (int i12 = 0; i12 < size; i12++) {
             int i13 = iArr[i12];
             V v5 = map.get(Integer.valueOf(i13));
-            this.f2232a.V0(i10, 2);
-            this.f2232a.X0(k0.b(aVar, Integer.valueOf(i13), v5));
-            k0.e(this.f2232a, aVar, Integer.valueOf(i13), v5);
+            this.f2077a.V0(i10, 2);
+            this.f2077a.X0(k0.b(aVar, Integer.valueOf(i13), v5));
+            k0.e(this.f2077a, aVar, Integer.valueOf(i13), v5);
         }
     }
 
@@ -267,14 +267,14 @@ public final class k implements t1 {
         for (int i12 = 0; i12 < size; i12++) {
             long j10 = jArr[i12];
             V v5 = map.get(Long.valueOf(j10));
-            this.f2232a.V0(i10, 2);
-            this.f2232a.X0(k0.b(aVar, Long.valueOf(j10), v5));
-            k0.e(this.f2232a, aVar, Long.valueOf(j10), v5);
+            this.f2077a.V0(i10, 2);
+            this.f2077a.X0(k0.b(aVar, Long.valueOf(j10), v5));
+            k0.e(this.f2077a, aVar, Long.valueOf(j10), v5);
         }
     }
 
     public final <K, V> void V(int i10, k0.a<K, V> aVar, Map<K, V> map) {
-        switch (a.f2233a[aVar.f2236a.ordinal()]) {
+        switch (a.f2078a[aVar.f2081a.ordinal()]) {
             case 1:
                 V v5 = map.get(Boolean.FALSE);
                 if (v5 != null) {
@@ -304,7 +304,7 @@ public final class k implements t1 {
                 W(i10, aVar, map);
                 return;
             default:
-                throw new IllegalArgumentException("does not support key type: " + aVar.f2236a);
+                throw new IllegalArgumentException("does not support key type: " + aVar.f2081a);
         }
     }
 
@@ -321,9 +321,9 @@ public final class k implements t1 {
         for (int i12 = 0; i12 < size; i12++) {
             String str = strArr[i12];
             V v5 = map.get(str);
-            this.f2232a.V0(i10, 2);
-            this.f2232a.X0(k0.b(aVar, str, v5));
-            k0.e(this.f2232a, aVar, str, v5);
+            this.f2077a.V0(i10, 2);
+            this.f2077a.X0(k0.b(aVar, str, v5));
+            k0.e(this.f2077a, aVar, str, v5);
         }
     }
 
@@ -331,19 +331,19 @@ public final class k implements t1 {
         int i11 = 0;
         if (!z10) {
             while (i11 < lVar.size()) {
-                this.f2232a.p0(i10, lVar.c(i11));
+                this.f2077a.p0(i10, lVar.c(i11));
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iJ = 0;
         for (int i12 = 0; i12 < lVar.size(); i12++) {
             iJ += j.j(lVar.c(i12));
         }
-        this.f2232a.X0(iJ);
+        this.f2077a.X0(iJ);
         while (i11 < lVar.size()) {
-            this.f2232a.q0(lVar.c(i11));
+            this.f2077a.q0(lVar.c(i11));
             i11++;
         }
     }
@@ -352,19 +352,19 @@ public final class k implements t1 {
         int i11 = 0;
         if (!z10) {
             while (i11 < list.size()) {
-                this.f2232a.p0(i10, list.get(i11).doubleValue());
+                this.f2077a.p0(i10, list.get(i11).doubleValue());
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iJ = 0;
         for (int i12 = 0; i12 < list.size(); i12++) {
             iJ += j.j(list.get(i12).doubleValue());
         }
-        this.f2232a.X0(iJ);
+        this.f2077a.X0(iJ);
         while (i11 < list.size()) {
-            this.f2232a.q0(list.get(i11).doubleValue());
+            this.f2077a.q0(list.get(i11).doubleValue());
             i11++;
         }
     }
@@ -373,19 +373,19 @@ public final class k implements t1 {
         int i11 = 0;
         if (!z10) {
             while (i11 < yVar.size()) {
-                this.f2232a.r0(i10, yVar.h(i11));
+                this.f2077a.r0(i10, yVar.h(i11));
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iL = 0;
         for (int i12 = 0; i12 < yVar.size(); i12++) {
             iL += j.l(yVar.h(i12));
         }
-        this.f2232a.X0(iL);
+        this.f2077a.X0(iL);
         while (i11 < yVar.size()) {
-            this.f2232a.s0(yVar.h(i11));
+            this.f2077a.s0(yVar.h(i11));
             i11++;
         }
     }
@@ -403,19 +403,19 @@ public final class k implements t1 {
         int i11 = 0;
         if (!z10) {
             while (i11 < list.size()) {
-                this.f2232a.r0(i10, list.get(i11).intValue());
+                this.f2077a.r0(i10, list.get(i11).intValue());
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iL = 0;
         for (int i12 = 0; i12 < list.size(); i12++) {
             iL += j.l(list.get(i12).intValue());
         }
-        this.f2232a.X0(iL);
+        this.f2077a.X0(iL);
         while (i11 < list.size()) {
-            this.f2232a.s0(list.get(i11).intValue());
+            this.f2077a.s0(list.get(i11).intValue());
             i11++;
         }
     }
@@ -423,9 +423,9 @@ public final class k implements t1 {
     @Override // androidx.datastore.preferences.protobuf.t1
     public final void b(int i10, Object obj) {
         if (obj instanceof g) {
-            this.f2232a.K0(i10, (g) obj);
+            this.f2077a.K0(i10, (g) obj);
         } else {
-            this.f2232a.J0(i10, (r0) obj);
+            this.f2077a.J0(i10, (r0) obj);
         }
     }
 
@@ -433,45 +433,45 @@ public final class k implements t1 {
         int i11 = 0;
         if (!z10) {
             while (i11 < yVar.size()) {
-                this.f2232a.t0(i10, yVar.h(i11));
+                this.f2077a.t0(i10, yVar.h(i11));
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iN = 0;
         for (int i12 = 0; i12 < yVar.size(); i12++) {
             iN += j.n(yVar.h(i12));
         }
-        this.f2232a.X0(iN);
+        this.f2077a.X0(iN);
         while (i11 < yVar.size()) {
-            this.f2232a.u0(yVar.h(i11));
+            this.f2077a.u0(yVar.h(i11));
             i11++;
         }
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public void c(int i10, int i11) {
-        this.f2232a.t0(i10, i11);
+        this.f2077a.t0(i10, i11);
     }
 
     public final void c0(int i10, List<Integer> list, boolean z10) {
         int i11 = 0;
         if (!z10) {
             while (i11 < list.size()) {
-                this.f2232a.t0(i10, list.get(i11).intValue());
+                this.f2077a.t0(i10, list.get(i11).intValue());
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iN = 0;
         for (int i12 = 0; i12 < list.size(); i12++) {
             iN += j.n(list.get(i12).intValue());
         }
-        this.f2232a.X0(iN);
+        this.f2077a.X0(iN);
         while (i11 < list.size()) {
-            this.f2232a.u0(list.get(i11).intValue());
+            this.f2077a.u0(list.get(i11).intValue());
             i11++;
         }
     }
@@ -481,7 +481,7 @@ public final class k implements t1 {
         int i11 = 0;
         if (!(list instanceof e0)) {
             while (i11 < list.size()) {
-                this.f2232a.T0(i10, list.get(i11));
+                this.f2077a.T0(i10, list.get(i11));
                 i11++;
             }
         } else {
@@ -497,71 +497,71 @@ public final class k implements t1 {
         int i11 = 0;
         if (!z10) {
             while (i11 < i0Var.size()) {
-                this.f2232a.v0(i10, i0Var.h(i11));
+                this.f2077a.v0(i10, i0Var.h(i11));
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iP = 0;
         for (int i12 = 0; i12 < i0Var.size(); i12++) {
             iP += j.p(i0Var.h(i12));
         }
-        this.f2232a.X0(iP);
+        this.f2077a.X0(iP);
         while (i11 < i0Var.size()) {
-            this.f2232a.w0(i0Var.h(i11));
+            this.f2077a.w0(i0Var.h(i11));
             i11++;
         }
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public void e(int i10, String str) {
-        this.f2232a.T0(i10, str);
+        this.f2077a.T0(i10, str);
     }
 
     public final void e0(int i10, List<Long> list, boolean z10) {
         int i11 = 0;
         if (!z10) {
             while (i11 < list.size()) {
-                this.f2232a.v0(i10, list.get(i11).longValue());
+                this.f2077a.v0(i10, list.get(i11).longValue());
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iP = 0;
         for (int i12 = 0; i12 < list.size(); i12++) {
             iP += j.p(list.get(i12).longValue());
         }
-        this.f2232a.X0(iP);
+        this.f2077a.X0(iP);
         while (i11 < list.size()) {
-            this.f2232a.w0(list.get(i11).longValue());
+            this.f2077a.w0(list.get(i11).longValue());
             i11++;
         }
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public void f(int i10, long j10) {
-        this.f2232a.Y0(i10, j10);
+        this.f2077a.Y0(i10, j10);
     }
 
     public final void f0(int i10, v vVar, boolean z10) {
         int i11 = 0;
         if (!z10) {
             while (i11 < vVar.size()) {
-                this.f2232a.x0(i10, vVar.c(i11));
+                this.f2077a.x0(i10, vVar.c(i11));
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iR = 0;
         for (int i12 = 0; i12 < vVar.size(); i12++) {
             iR += j.r(vVar.c(i12));
         }
-        this.f2232a.X0(iR);
+        this.f2077a.X0(iR);
         while (i11 < vVar.size()) {
-            this.f2232a.y0(vVar.c(i11));
+            this.f2077a.y0(vVar.c(i11));
             i11++;
         }
     }
@@ -579,71 +579,71 @@ public final class k implements t1 {
         int i11 = 0;
         if (!z10) {
             while (i11 < list.size()) {
-                this.f2232a.x0(i10, list.get(i11).floatValue());
+                this.f2077a.x0(i10, list.get(i11).floatValue());
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iR = 0;
         for (int i12 = 0; i12 < list.size(); i12++) {
             iR += j.r(list.get(i12).floatValue());
         }
-        this.f2232a.X0(iR);
+        this.f2077a.X0(iR);
         while (i11 < list.size()) {
-            this.f2232a.y0(list.get(i11).floatValue());
+            this.f2077a.y0(list.get(i11).floatValue());
             i11++;
         }
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public void h(int i10, int i11) {
-        this.f2232a.D0(i10, i11);
+        this.f2077a.D0(i10, i11);
     }
 
     public final void h0(int i10, y yVar, boolean z10) {
         int i11 = 0;
         if (!z10) {
             while (i11 < yVar.size()) {
-                this.f2232a.D0(i10, yVar.h(i11));
+                this.f2077a.D0(i10, yVar.h(i11));
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iW = 0;
         for (int i12 = 0; i12 < yVar.size(); i12++) {
             iW += j.w(yVar.h(i12));
         }
-        this.f2232a.X0(iW);
+        this.f2077a.X0(iW);
         while (i11 < yVar.size()) {
-            this.f2232a.E0(yVar.h(i11));
+            this.f2077a.E0(yVar.h(i11));
             i11++;
         }
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public void i(int i10, long j10) {
-        this.f2232a.N0(i10, j10);
+        this.f2077a.N0(i10, j10);
     }
 
     public final void i0(int i10, List<Integer> list, boolean z10) {
         int i11 = 0;
         if (!z10) {
             while (i11 < list.size()) {
-                this.f2232a.D0(i10, list.get(i11).intValue());
+                this.f2077a.D0(i10, list.get(i11).intValue());
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iW = 0;
         for (int i12 = 0; i12 < list.size(); i12++) {
             iW += j.w(list.get(i12).intValue());
         }
-        this.f2232a.X0(iW);
+        this.f2077a.X0(iW);
         while (i11 < list.size()) {
-            this.f2232a.E0(list.get(i11).intValue());
+            this.f2077a.E0(list.get(i11).intValue());
             i11++;
         }
     }
@@ -661,19 +661,19 @@ public final class k implements t1 {
         int i11 = 0;
         if (!z10) {
             while (i11 < i0Var.size()) {
-                this.f2232a.F0(i10, i0Var.h(i11));
+                this.f2077a.F0(i10, i0Var.h(i11));
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iY = 0;
         for (int i12 = 0; i12 < i0Var.size(); i12++) {
             iY += j.y(i0Var.h(i12));
         }
-        this.f2232a.X0(iY);
+        this.f2077a.X0(iY);
         while (i11 < i0Var.size()) {
-            this.f2232a.G0(i0Var.h(i11));
+            this.f2077a.G0(i0Var.h(i11));
             i11++;
         }
     }
@@ -691,19 +691,19 @@ public final class k implements t1 {
         int i11 = 0;
         if (!z10) {
             while (i11 < list.size()) {
-                this.f2232a.F0(i10, list.get(i11).longValue());
+                this.f2077a.F0(i10, list.get(i11).longValue());
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iY = 0;
         for (int i12 = 0; i12 < list.size(); i12++) {
             iY += j.y(list.get(i12).longValue());
         }
-        this.f2232a.X0(iY);
+        this.f2077a.X0(iY);
         while (i11 < list.size()) {
-            this.f2232a.G0(list.get(i11).longValue());
+            this.f2077a.G0(list.get(i11).longValue());
             i11++;
         }
     }
@@ -719,34 +719,34 @@ public final class k implements t1 {
 
     public final void l0(int i10, Object obj) {
         if (obj instanceof String) {
-            this.f2232a.T0(i10, (String) obj);
+            this.f2077a.T0(i10, (String) obj);
         } else {
-            this.f2232a.n0(i10, (g) obj);
+            this.f2077a.n0(i10, (g) obj);
         }
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public void m(int i10, long j10) {
-        this.f2232a.R0(i10, j10);
+        this.f2077a.R0(i10, j10);
     }
 
     public final void m0(int i10, y yVar, boolean z10) {
         int i11 = 0;
         if (!z10) {
             while (i11 < yVar.size()) {
-                this.f2232a.L0(i10, yVar.h(i11));
+                this.f2077a.L0(i10, yVar.h(i11));
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iL = 0;
         for (int i12 = 0; i12 < yVar.size(); i12++) {
             iL += j.L(yVar.h(i12));
         }
-        this.f2232a.X0(iL);
+        this.f2077a.X0(iL);
         while (i11 < yVar.size()) {
-            this.f2232a.M0(yVar.h(i11));
+            this.f2077a.M0(yVar.h(i11));
             i11++;
         }
     }
@@ -764,71 +764,71 @@ public final class k implements t1 {
         int i11 = 0;
         if (!z10) {
             while (i11 < list.size()) {
-                this.f2232a.L0(i10, list.get(i11).intValue());
+                this.f2077a.L0(i10, list.get(i11).intValue());
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iL = 0;
         for (int i12 = 0; i12 < list.size(); i12++) {
             iL += j.L(list.get(i12).intValue());
         }
-        this.f2232a.X0(iL);
+        this.f2077a.X0(iL);
         while (i11 < list.size()) {
-            this.f2232a.M0(list.get(i11).intValue());
+            this.f2077a.M0(list.get(i11).intValue());
             i11++;
         }
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public void o(int i10, int i11) {
-        this.f2232a.W0(i10, i11);
+        this.f2077a.W0(i10, i11);
     }
 
     public final void o0(int i10, i0 i0Var, boolean z10) {
         int i11 = 0;
         if (!z10) {
             while (i11 < i0Var.size()) {
-                this.f2232a.N0(i10, i0Var.h(i11));
+                this.f2077a.N0(i10, i0Var.h(i11));
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iN = 0;
         for (int i12 = 0; i12 < i0Var.size(); i12++) {
             iN += j.N(i0Var.h(i12));
         }
-        this.f2232a.X0(iN);
+        this.f2077a.X0(iN);
         while (i11 < i0Var.size()) {
-            this.f2232a.O0(i0Var.h(i11));
+            this.f2077a.O0(i0Var.h(i11));
             i11++;
         }
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public void p(int i10, double d10) {
-        this.f2232a.p0(i10, d10);
+        this.f2077a.p0(i10, d10);
     }
 
     public final void p0(int i10, List<Long> list, boolean z10) {
         int i11 = 0;
         if (!z10) {
             while (i11 < list.size()) {
-                this.f2232a.N0(i10, list.get(i11).longValue());
+                this.f2077a.N0(i10, list.get(i11).longValue());
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iN = 0;
         for (int i12 = 0; i12 < list.size(); i12++) {
             iN += j.N(list.get(i12).longValue());
         }
-        this.f2232a.X0(iN);
+        this.f2077a.X0(iN);
         while (i11 < list.size()) {
-            this.f2232a.O0(list.get(i11).longValue());
+            this.f2077a.O0(list.get(i11).longValue());
             i11++;
         }
     }
@@ -846,19 +846,19 @@ public final class k implements t1 {
         int i11 = 0;
         if (!z10) {
             while (i11 < yVar.size()) {
-                this.f2232a.P0(i10, yVar.h(i11));
+                this.f2077a.P0(i10, yVar.h(i11));
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iP = 0;
         for (int i12 = 0; i12 < yVar.size(); i12++) {
             iP += j.P(yVar.h(i12));
         }
-        this.f2232a.X0(iP);
+        this.f2077a.X0(iP);
         while (i11 < yVar.size()) {
-            this.f2232a.Q0(yVar.h(i11));
+            this.f2077a.Q0(yVar.h(i11));
             i11++;
         }
     }
@@ -876,45 +876,45 @@ public final class k implements t1 {
         int i11 = 0;
         if (!z10) {
             while (i11 < list.size()) {
-                this.f2232a.P0(i10, list.get(i11).intValue());
+                this.f2077a.P0(i10, list.get(i11).intValue());
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iP = 0;
         for (int i12 = 0; i12 < list.size(); i12++) {
             iP += j.P(list.get(i12).intValue());
         }
-        this.f2232a.X0(iP);
+        this.f2077a.X0(iP);
         while (i11 < list.size()) {
-            this.f2232a.Q0(list.get(i11).intValue());
+            this.f2077a.Q0(list.get(i11).intValue());
             i11++;
         }
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public void s(int i10, long j10) {
-        this.f2232a.v0(i10, j10);
+        this.f2077a.v0(i10, j10);
     }
 
     public final void s0(int i10, i0 i0Var, boolean z10) {
         int i11 = 0;
         if (!z10) {
             while (i11 < i0Var.size()) {
-                this.f2232a.R0(i10, i0Var.h(i11));
+                this.f2077a.R0(i10, i0Var.h(i11));
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iR = 0;
         for (int i12 = 0; i12 < i0Var.size(); i12++) {
             iR += j.R(i0Var.h(i12));
         }
-        this.f2232a.X0(iR);
+        this.f2077a.X0(iR);
         while (i11 < i0Var.size()) {
-            this.f2232a.S0(i0Var.h(i11));
+            this.f2077a.S0(i0Var.h(i11));
             i11++;
         }
     }
@@ -928,97 +928,97 @@ public final class k implements t1 {
         int i11 = 0;
         if (!z10) {
             while (i11 < list.size()) {
-                this.f2232a.R0(i10, list.get(i11).longValue());
+                this.f2077a.R0(i10, list.get(i11).longValue());
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iR = 0;
         for (int i12 = 0; i12 < list.size(); i12++) {
             iR += j.R(list.get(i12).longValue());
         }
-        this.f2232a.X0(iR);
+        this.f2077a.X0(iR);
         while (i11 < list.size()) {
-            this.f2232a.S0(list.get(i11).longValue());
+            this.f2077a.S0(list.get(i11).longValue());
             i11++;
         }
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public void u(int i10, long j10) {
-        this.f2232a.F0(i10, j10);
+        this.f2077a.F0(i10, j10);
     }
 
     public final void u0(int i10, y yVar, boolean z10) {
         int i11 = 0;
         if (!z10) {
             while (i11 < yVar.size()) {
-                this.f2232a.W0(i10, yVar.h(i11));
+                this.f2077a.W0(i10, yVar.h(i11));
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iW = 0;
         for (int i12 = 0; i12 < yVar.size(); i12++) {
             iW += j.W(yVar.h(i12));
         }
-        this.f2232a.X0(iW);
+        this.f2077a.X0(iW);
         while (i11 < yVar.size()) {
-            this.f2232a.X0(yVar.h(i11));
+            this.f2077a.X0(yVar.h(i11));
             i11++;
         }
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public void v(int i10, boolean z10) {
-        this.f2232a.j0(i10, z10);
+        this.f2077a.j0(i10, z10);
     }
 
     public void v0(int i10, List<Integer> list, boolean z10) {
         int i11 = 0;
         if (!z10) {
             while (i11 < list.size()) {
-                this.f2232a.W0(i10, list.get(i11).intValue());
+                this.f2077a.W0(i10, list.get(i11).intValue());
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iW = 0;
         for (int i12 = 0; i12 < list.size(); i12++) {
             iW += j.W(list.get(i12).intValue());
         }
-        this.f2232a.X0(iW);
+        this.f2077a.X0(iW);
         while (i11 < list.size()) {
-            this.f2232a.X0(list.get(i11).intValue());
+            this.f2077a.X0(list.get(i11).intValue());
             i11++;
         }
     }
 
     @Override // androidx.datastore.preferences.protobuf.t1
     public void w(int i10, int i11) {
-        this.f2232a.L0(i10, i11);
+        this.f2077a.L0(i10, i11);
     }
 
     public final void w0(int i10, i0 i0Var, boolean z10) {
         int i11 = 0;
         if (!z10) {
             while (i11 < i0Var.size()) {
-                this.f2232a.Y0(i10, i0Var.h(i11));
+                this.f2077a.Y0(i10, i0Var.h(i11));
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iY = 0;
         for (int i12 = 0; i12 < i0Var.size(); i12++) {
             iY += j.Y(i0Var.h(i12));
         }
-        this.f2232a.X0(iY);
+        this.f2077a.X0(iY);
         while (i11 < i0Var.size()) {
-            this.f2232a.Z0(i0Var.h(i11));
+            this.f2077a.Z0(i0Var.h(i11));
             i11++;
         }
     }
@@ -1026,26 +1026,26 @@ public final class k implements t1 {
     @Override // androidx.datastore.preferences.protobuf.t1
     @Deprecated
     public void x(int i10) {
-        this.f2232a.V0(i10, 3);
+        this.f2077a.V0(i10, 3);
     }
 
     public final void x0(int i10, List<Long> list, boolean z10) {
         int i11 = 0;
         if (!z10) {
             while (i11 < list.size()) {
-                this.f2232a.Y0(i10, list.get(i11).longValue());
+                this.f2077a.Y0(i10, list.get(i11).longValue());
                 i11++;
             }
             return;
         }
-        this.f2232a.V0(i10, 2);
+        this.f2077a.V0(i10, 2);
         int iY = 0;
         for (int i12 = 0; i12 < list.size(); i12++) {
             iY += j.Y(list.get(i12).longValue());
         }
-        this.f2232a.X0(iY);
+        this.f2077a.X0(iY);
         while (i11 < list.size()) {
-            this.f2232a.Z0(list.get(i11).longValue());
+            this.f2077a.Z0(list.get(i11).longValue());
             i11++;
         }
     }

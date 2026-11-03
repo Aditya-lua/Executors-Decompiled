@@ -122,7 +122,7 @@ public final class CreatePublicKeyCredentialController extends CredentialProvide
     public static final Unit handleResponse$lambda$13(CancellationSignal cancellationSignal, Function0 f10) {
         Intrinsics.checkNotNullParameter(f10, "f");
         CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(cancellationSignal, f10);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -136,10 +136,10 @@ public final class CreatePublicKeyCredentialController extends CredentialProvide
         executor.execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpublickeycredential.d
             @Override // java.lang.Runnable
             public final void run() {
-                CreatePublicKeyCredentialController.handleResponse$lambda$15$lambda$14(this.f2064a, e10);
+                CreatePublicKeyCredentialController.handleResponse$lambda$15$lambda$14(this.f1909a, e10);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -162,10 +162,10 @@ public final class CreatePublicKeyCredentialController extends CredentialProvide
         executor.execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpublickeycredential.f
             @Override // java.lang.Runnable
             public final void run() {
-                CreatePublicKeyCredentialController.handleResponse$lambda$17$lambda$16(this.f2066a);
+                CreatePublicKeyCredentialController.handleResponse$lambda$17$lambda$16(this.f1911a);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -188,10 +188,10 @@ public final class CreatePublicKeyCredentialController extends CredentialProvide
         executor.execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpublickeycredential.e
             @Override // java.lang.Runnable
             public final void run() {
-                CreatePublicKeyCredentialController.handleResponse$lambda$19$lambda$18(this.f2065a, cVar);
+                CreatePublicKeyCredentialController.handleResponse$lambda$19$lambda$18(this.f1910a, cVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -214,10 +214,10 @@ public final class CreatePublicKeyCredentialController extends CredentialProvide
         executor.execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpublickeycredential.k
             @Override // java.lang.Runnable
             public final void run() {
-                CreatePublicKeyCredentialController.handleResponse$lambda$21$lambda$20(this.f2077a, fVar);
+                CreatePublicKeyCredentialController.handleResponse$lambda$21$lambda$20(this.f1922a, fVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -239,7 +239,7 @@ public final class CreatePublicKeyCredentialController extends CredentialProvide
         CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(cancellationSignal, new Function0() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpublickeycredential.g
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return CreatePublicKeyCredentialController.invokePlayServices$lambda$12$lambda$11(this.f2067a, e10, executor, pVar);
+                return CreatePublicKeyCredentialController.invokePlayServices$lambda$12$lambda$11(this.f1912a, e10, executor, pVar);
             }
         });
     }
@@ -254,7 +254,7 @@ public final class CreatePublicKeyCredentialController extends CredentialProvide
                 pVar.a(fVarFromGmsException);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -268,7 +268,7 @@ public final class CreatePublicKeyCredentialController extends CredentialProvide
                     return CreatePublicKeyCredentialController.invokePlayServices$lambda$8$lambda$1(executor, pVar);
                 }
             });
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
         if (pendingIntent != null) {
             Intent intent = new Intent(createPublicKeyCredentialController.context, (Class<?>) HiddenActivity.class);
@@ -280,7 +280,7 @@ public final class CreatePublicKeyCredentialController extends CredentialProvide
                 CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(cancellationSignal, new Function0() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpublickeycredential.v
                     @Override // kotlin.jvm.functions.Function0
                     public final Object invoke() {
-                        return CreatePublicKeyCredentialController.invokePlayServices$lambda$8$lambda$3(this.f2087a);
+                        return CreatePublicKeyCredentialController.invokePlayServices$lambda$8$lambda$3(this.f1932a);
                     }
                 });
             }
@@ -294,7 +294,7 @@ public final class CreatePublicKeyCredentialController extends CredentialProvide
                         return CreatePublicKeyCredentialController.invokePlayServices$lambda$8$lambda$5(executor, pVar, cVarConvertResponseToCredentialManager);
                     }
                 });
-                return Unit.f22483a;
+                return Unit.f22938a;
             }
         }
         if (pendingIntent == null) {
@@ -305,7 +305,7 @@ public final class CreatePublicKeyCredentialController extends CredentialProvide
                 }
             });
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -316,7 +316,7 @@ public final class CreatePublicKeyCredentialController extends CredentialProvide
                 CreatePublicKeyCredentialController.invokePlayServices$lambda$8$lambda$1$lambda$0(pVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -334,10 +334,10 @@ public final class CreatePublicKeyCredentialController extends CredentialProvide
         executor.execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpublickeycredential.m
             @Override // java.lang.Runnable
             public final void run() {
-                CreatePublicKeyCredentialController.invokePlayServices$lambda$8$lambda$3$lambda$2(this.f2078a);
+                CreatePublicKeyCredentialController.invokePlayServices$lambda$8$lambda$3$lambda$2(this.f1923a);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -358,7 +358,7 @@ public final class CreatePublicKeyCredentialController extends CredentialProvide
                 pVar.onResult(cVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -369,7 +369,7 @@ public final class CreatePublicKeyCredentialController extends CredentialProvide
                 CreatePublicKeyCredentialController.invokePlayServices$lambda$8$lambda$7$lambda$6(pVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -416,7 +416,7 @@ public final class CreatePublicKeyCredentialController extends CredentialProvide
         }, new Function1() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpublickeycredential.o
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return CreatePublicKeyCredentialController.handleResponse$lambda$15(this.f2080a, (f3.f) obj);
+                return CreatePublicKeyCredentialController.handleResponse$lambda$15(this.f1925a, (f3.f) obj);
             }
         }, this.cancellationSignal)) {
             return;
@@ -425,7 +425,7 @@ public final class CreatePublicKeyCredentialController extends CredentialProvide
             CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(this.cancellationSignal, new Function0() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpublickeycredential.p
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return CreatePublicKeyCredentialController.handleResponse$lambda$17(this.f2081a);
+                    return CreatePublicKeyCredentialController.handleResponse$lambda$17(this.f1926a);
                 }
             });
             return;
@@ -436,7 +436,7 @@ public final class CreatePublicKeyCredentialController extends CredentialProvide
             CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(this.cancellationSignal, new Function0() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpublickeycredential.q
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return CreatePublicKeyCredentialController.handleResponse$lambda$19(this.f2082a, cVarB);
+                    return CreatePublicKeyCredentialController.handleResponse$lambda$19(this.f1927a, cVarB);
                 }
             });
         } else {
@@ -444,7 +444,7 @@ public final class CreatePublicKeyCredentialController extends CredentialProvide
             CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(this.cancellationSignal, new Function0() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createpublickeycredential.r
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return CreatePublicKeyCredentialController.handleResponse$lambda$21(this.f2083a, fVarA);
+                    return CreatePublicKeyCredentialController.handleResponse$lambda$21(this.f1928a, fVarA);
                 }
             });
         }

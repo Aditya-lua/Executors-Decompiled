@@ -15,18 +15,18 @@ public final class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final int[] f22687a = {1, 10, 100, 1000, BacktraceMetrics.defaultTimeBetweenRetriesMs, 100000, 1000000, 10000000, 100000000, Http2Connection.DEGRADED_PONG_TIMEOUT_NS};
+    public static final int[] f23142a = {1, 10, 100, 1000, BacktraceMetrics.defaultTimeBetweenRetriesMs, 100000, 1000000, 10000000, 100000000, Http2Connection.DEGRADED_PONG_TIMEOUT_NS};
 
     @NotNull
     public static final int[] b = {1, 2, 4, 5, 7, 8, 10, 11, 13, 14};
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static final int[] f22688c = {3, 6};
+    public static final int[] f23143c = {3, 6};
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    public static final int[] f22689d = {1, 2, 4, 5, 7, 8};
+    public static final int[] f23144d = {1, 2, 4, 5, 7, 8};
 
     public static final String j(c cVar) throws IOException {
         int[] iArr;
@@ -64,7 +64,7 @@ public final class d {
             sb2.append('.');
             while (true) {
                 int iE = fVarA.getNanosecond();
-                iArr = f22687a;
+                iArr = f23142a;
                 int i11 = i10 + 1;
                 if (iE % iArr[i11] != 0) {
                     break;
@@ -150,7 +150,7 @@ public final class d {
         if (charSequence.length() < i17) {
             return v(charSequence, "The input string is too short");
         }
-        e.a aVarO = o(charSequence, "'-'", i14, new Function1() { // from class: ju.e
+        e.a aVarO = o(charSequence, "'-'", i14, new Function1() { // from class: hu.e
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
                 return Boolean.valueOf(kotlin.time.d.p(((Character) obj).charValue()));
@@ -159,7 +159,7 @@ public final class d {
         if (aVarO != null) {
             return aVarO;
         }
-        e.a aVarO2 = o(charSequence, "'-'", i14 + 3, new Function1() { // from class: ju.f
+        e.a aVarO2 = o(charSequence, "'-'", i14 + 3, new Function1() { // from class: hu.f
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
                 return Boolean.valueOf(kotlin.time.d.r(((Character) obj).charValue()));
@@ -168,7 +168,7 @@ public final class d {
         if (aVarO2 != null) {
             return aVarO2;
         }
-        e.a aVarO3 = o(charSequence, "'T' or 't'", i14 + 6, new Function1() { // from class: ju.g
+        e.a aVarO3 = o(charSequence, "'T' or 't'", i14 + 6, new Function1() { // from class: hu.g
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
                 return Boolean.valueOf(kotlin.time.d.s(((Character) obj).charValue()));
@@ -177,7 +177,7 @@ public final class d {
         if (aVarO3 != null) {
             return aVarO3;
         }
-        e.a aVarO4 = o(charSequence, "':'", i14 + 9, new Function1() { // from class: ju.h
+        e.a aVarO4 = o(charSequence, "':'", i14 + 9, new Function1() { // from class: hu.h
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
                 return Boolean.valueOf(kotlin.time.d.t(((Character) obj).charValue()));
@@ -186,7 +186,7 @@ public final class d {
         if (aVarO4 != null) {
             return aVarO4;
         }
-        e.a aVarO5 = o(charSequence, "':'", i14 + 12, new Function1() { // from class: ju.i
+        e.a aVarO5 = o(charSequence, "':'", i14 + 12, new Function1() { // from class: hu.i
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
                 return Boolean.valueOf(kotlin.time.d.u(((Character) obj).charValue()));
@@ -196,7 +196,7 @@ public final class d {
             return aVarO5;
         }
         for (int i18 : b) {
-            e.a aVarO6 = o(charSequence, "an ASCII digit", i18 + i14, new Function1() { // from class: ju.j
+            e.a aVarO6 = o(charSequence, "an ASCII digit", i18 + i14, new Function1() { // from class: hu.j
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
                     return Boolean.valueOf(kotlin.time.d.q(((Character) obj).charValue()));
@@ -223,7 +223,7 @@ public final class d {
             if (1 > i20 || i20 >= 10) {
                 return v(charSequence, "1..9 digits are supported for the fraction of the second, got " + i20 + " digits");
             }
-            i11 = iCharAt2 * f22687a[9 - i20];
+            i11 = iCharAt2 * f23142a[9 - i20];
         } else {
             i11 = 0;
         }
@@ -239,7 +239,7 @@ public final class d {
             if (length % 3 != 0) {
                 return v(charSequence, "Invalid UTC offset string \"" + charSequence.subSequence(i19, charSequence.length()).toString() + '\"');
             }
-            for (int i21 : f22688c) {
+            for (int i21 : f23143c) {
                 int i22 = i19 + i21;
                 if (i22 >= charSequence.length()) {
                     break;
@@ -248,7 +248,7 @@ public final class d {
                     return v(charSequence, "Expected ':' at index " + i22 + ", got '" + charSequence.charAt(i22) + '\'');
                 }
             }
-            int[] iArr = f22689d;
+            int[] iArr = f23144d;
             int length2 = iArr.length;
             int i23 = 0;
             while (i23 < length2) {

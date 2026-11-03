@@ -4,7 +4,7 @@ package l7;
 public class i<T> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public T f22982a;
+    public T f23376a;
     public T b;
 
     public static boolean a(Object obj, Object obj2) {
@@ -15,7 +15,7 @@ public class i<T> {
     }
 
     public void b(T t8, T t10) {
-        this.f22982a = t8;
+        this.f23376a = t8;
         this.b = t10;
     }
 
@@ -24,17 +24,17 @@ public class i<T> {
             return false;
         }
         x2.c cVar = (x2.c) obj;
-        return a(cVar.f34681a, this.f22982a) && a(cVar.b, this.b);
+        return a(cVar.f35179a, this.f23376a) && a(cVar.b, this.b);
     }
 
     public int hashCode() {
-        T t8 = this.f22982a;
+        T t8 = this.f23376a;
         int iHashCode = t8 == null ? 0 : t8.hashCode();
         T t10 = this.b;
         return iHashCode ^ (t10 != null ? t10.hashCode() : 0);
     }
 
     public String toString() {
-        return "Pair{" + this.f22982a + " " + this.b + "}";
+        return "Pair{" + this.f23376a + " " + this.b + "}";
     }
 }

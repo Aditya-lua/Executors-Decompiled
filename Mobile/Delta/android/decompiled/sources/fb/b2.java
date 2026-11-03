@@ -10,11 +10,11 @@ import android.os.Looper;
 public final class b2 extends n9.e {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final p1 f16515e;
+    public final p1 f17111e;
 
     public b2(Context context, Looper looper, n9.d dVar, p1 p1Var, l9.e eVar, l9.n nVar) {
         super(context, looper, 1, dVar, eVar, nVar);
-        this.f16515e = p1Var;
+        this.f17111e = p1Var;
     }
 
     @Override // n9.c
@@ -29,8 +29,8 @@ public final class b2 extends n9.e {
     @Override // n9.c
     public final Bundle getGetServiceRequestExtraArgs() {
         Bundle bundle = new Bundle();
-        p1 p1Var = this.f16515e;
-        bundle.putInt("com.google.android.gms.games.key.API_VERSION", p1Var.f16567a);
+        p1 p1Var = this.f17111e;
+        bundle.putInt("com.google.android.gms.games.key.API_VERSION", p1Var.f17163a);
         bundle.putString("com.google.android.gms.games.key.gamePackageName", p1Var.b);
         return bundle;
     }

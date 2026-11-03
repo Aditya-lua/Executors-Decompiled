@@ -19,7 +19,7 @@ public enum CaptureMethod implements Parcelable {
     public final String type;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final /* synthetic */ qt.a f9986e = qt.b.a(a());
+    public static final /* synthetic */ ot.a f10067e = ot.b.a(a());
 
     @NotNull
     public static final Parcelable.Creator<CaptureMethod> CREATOR = new Parcelable.Creator<CaptureMethod>() { // from class: com.withpersona.sdk2.inquiry.document.CaptureMethod.a

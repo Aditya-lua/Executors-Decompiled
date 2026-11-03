@@ -12,37 +12,37 @@ import java.util.ArrayList;
 public class y {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static q f27203a = new o5.a();
+    public static q f27768a = new o5.a();
     public static ThreadLocal<WeakReference<w1.a<ViewGroup, ArrayList<q>>>> b = new ThreadLocal<>();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static ArrayList<ViewGroup> f27204c = new ArrayList<>();
+    public static ArrayList<ViewGroup> f27769c = new ArrayList<>();
 
     public static class a implements ViewTreeObserver.OnPreDrawListener, View.OnAttachStateChangeListener {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public q f27205a;
+        public q f27770a;
         public ViewGroup b;
 
         /* JADX INFO: renamed from: o5.y$a$a, reason: collision with other inner class name */
-        public class C0469a extends x {
+        public class C0480a extends x {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ w1.a f27206a;
+            public final /* synthetic */ w1.a f27771a;
 
-            public C0469a(w1.a aVar) {
-                this.f27206a = aVar;
+            public C0480a(w1.a aVar) {
+                this.f27771a = aVar;
             }
 
             @Override // o5.x, o5.q.h
             public void k(@NonNull q qVar) {
-                ((ArrayList) this.f27206a.get(a.this.b)).remove(qVar);
+                ((ArrayList) this.f27771a.get(a.this.b)).remove(qVar);
                 qVar.m0(this);
             }
         }
 
         public a(q qVar, ViewGroup viewGroup) {
-            this.f27205a = qVar;
+            this.f27770a = qVar;
             this.b = viewGroup;
         }
 
@@ -54,7 +54,7 @@ public class y {
         @Override // android.view.ViewTreeObserver.OnPreDrawListener
         public boolean onPreDraw() {
             a();
-            if (!y.f27204c.remove(this.b)) {
+            if (!y.f27769c.remove(this.b)) {
                 return true;
             }
             w1.a<ViewGroup, ArrayList<q>> aVarE = y.e();
@@ -66,10 +66,10 @@ public class y {
             } else if (arrayList.size() > 0) {
                 arrayList2 = new ArrayList(arrayList);
             }
-            arrayList.add(this.f27205a);
-            this.f27205a.c(new C0469a(aVarE));
+            arrayList.add(this.f27770a);
+            this.f27770a.c(new C0480a(aVarE));
             int i10 = 0;
-            this.f27205a.p(this.b, false);
+            this.f27770a.p(this.b, false);
             if (arrayList2 != null) {
                 int size = arrayList2.size();
                 while (i10 < size) {
@@ -78,7 +78,7 @@ public class y {
                     ((q) obj).o0(this.b);
                 }
             }
-            this.f27205a.k0(this.b);
+            this.f27770a.k0(this.b);
             return true;
         }
 
@@ -89,7 +89,7 @@ public class y {
         @Override // android.view.View.OnAttachStateChangeListener
         public void onViewDetachedFromWindow(View view) {
             a();
-            y.f27204c.remove(this.b);
+            y.f27769c.remove(this.b);
             ArrayList<q> arrayList = y.e().get(this.b);
             if (arrayList != null && arrayList.size() > 0) {
                 int size = arrayList.size();
@@ -100,17 +100,17 @@ public class y {
                     qVar.o0(this.b);
                 }
             }
-            this.f27205a.q(true);
+            this.f27770a.q(true);
         }
     }
 
     public static void a(@NonNull ViewGroup viewGroup, q qVar) {
-        if (f27204c.contains(viewGroup) || !viewGroup.isLaidOut()) {
+        if (f27769c.contains(viewGroup) || !viewGroup.isLaidOut()) {
             return;
         }
-        f27204c.add(viewGroup);
+        f27769c.add(viewGroup);
         if (qVar == null) {
-            qVar = f27203a;
+            qVar = f27768a;
         }
         q qVarClone = qVar.clone();
         h(viewGroup, qVarClone);
@@ -120,7 +120,7 @@ public class y {
 
     public static void b(n nVar, q qVar) {
         ViewGroup viewGroupD = nVar.d();
-        if (f27204c.contains(viewGroupD)) {
+        if (f27769c.contains(viewGroupD)) {
             return;
         }
         n nVarC = n.c(viewGroupD);
@@ -131,7 +131,7 @@ public class y {
             nVar.a();
             return;
         }
-        f27204c.add(viewGroupD);
+        f27769c.add(viewGroupD);
         q qVarClone = qVar.clone();
         if (nVarC != null && nVarC.e()) {
             qVarClone.r0(true);
@@ -142,13 +142,13 @@ public class y {
     }
 
     public static a0 c(@NonNull ViewGroup viewGroup, @NonNull q qVar) {
-        if (f27204c.contains(viewGroup) || !viewGroup.isLaidOut() || Build.VERSION.SDK_INT < 34) {
+        if (f27769c.contains(viewGroup) || !viewGroup.isLaidOut() || Build.VERSION.SDK_INT < 34) {
             return null;
         }
         if (!qVar.Y()) {
             throw new IllegalArgumentException("The Transition must support seeking.");
         }
-        f27204c.add(viewGroup);
+        f27769c.add(viewGroup);
         q qVarClone = qVar.clone();
         b0 b0Var = new b0();
         b0Var.D0(qVarClone);
@@ -160,14 +160,14 @@ public class y {
     }
 
     public static void d(ViewGroup viewGroup) {
-        f27204c.remove(viewGroup);
+        f27769c.remove(viewGroup);
         ArrayList<q> arrayList = e().get(viewGroup);
         if (arrayList == null || arrayList.isEmpty()) {
             return;
         }
         ArrayList arrayList2 = new ArrayList(arrayList);
         for (int size = arrayList2.size() - 1; size >= 0; size--) {
-            ((q) arrayList2.get(size)).x(viewGroup);
+            ((q) arrayList2.get(size)).y(viewGroup);
         }
     }
 

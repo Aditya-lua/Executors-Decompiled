@@ -1,100 +1,193 @@
 package pq;
 
-import com.withpersona.sdk2.inquiry.inline_inquiry.InquiryEvent;
-import jt.o;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import gt.n;
+import gt.o;
+import iu.a2;
+import iu.g1;
+import iu.l0;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 import kotlin.Metadata;
 import kotlin.Unit;
-import kotlin.jvm.functions.Function2;
-import kotlin.jvm.internal.Intrinsics;
-import ku.k;
-import ku.p0;
-import nu.b0;
+import kotlin.collections.j0;
+import kotlin.collections.k0;
+import kotlin.collections.p;
+import kotlin.collections.q;
+import kotlin.jvm.functions.Function0;
+import nt.f;
+import nt.l;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pt.m;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\t\b\u0007\u0018\u00002\u00020\u0001B\u0019\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0015\u0010\u000b\u001a\u00020\n2\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\u000b\u0010\fJ\u0015\u0010\u000f\u001a\u00020\n2\u0006\u0010\u000e\u001a\u00020\r¢\u0006\u0004\b\u000f\u0010\u0010R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0011\u0010\u0012R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000b\u0010\u0013R\u0018\u0010\u0015\u001a\u0004\u0018\u00010\r8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u000f\u0010\u0014¨\u0006\u0016"}, d2 = {"Lpq/c;", "", "Lpq/e;", "externalInquiryController", "Lku/p0;", "coroutineScope", "<init>", "(Lpq/e;Lku/p0;)V", "Lcom/withpersona/sdk2/inquiry/inline_inquiry/InquiryEvent;", "inquiryEvent", "", "b", "(Lcom/withpersona/sdk2/inquiry/inline_inquiry/InquiryEvent;)V", "Lpq/i;", "page", "c", "(Lpq/i;)V", "a", "Lpq/e;", "Lku/p0;", "Lpq/i;", "currentPage", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class c {
+@Metadata(d1 = {"\u00008\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010$\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0005\u0018\u00002\u00020\u0001B\t\b\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u001e\u0010\b\u001a\b\u0012\u0004\u0012\u00020\u00070\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0096@¢\u0006\u0004\b\b\u0010\tJ-\u0010\r\u001a\u00020\u00072\u0006\u0010\u0005\u001a\u00020\u00042\u0014\u0010\f\u001a\u0010\u0012\u0004\u0012\u00020\u000b\u0012\u0006\u0012\u0004\u0018\u00010\u000b0\nH\u0002¢\u0006\u0004\b\r\u0010\u000eJ%\u0010\u000f\u001a\u0010\u0012\u0004\u0012\u00020\u000b\u0012\u0006\u0012\u0004\u0018\u00010\u000b0\n2\u0006\u0010\u0005\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u000f\u0010\u0010J'\u0010\u0016\u001a\u00020\u00132\u0006\u0010\u0012\u001a\u00020\u00112\u0006\u0010\u0014\u001a\u00020\u00132\u0006\u0010\u0015\u001a\u00020\u0013H\u0002¢\u0006\u0004\b\u0016\u0010\u0017¨\u0006\u0018"}, d2 = {"Lpq/c;", "Lpq/a;", "<init>", "()V", "Ljava/io/File;", "file", "Lgt/n;", "", "a", "(Ljava/io/File;Llt/b;)Ljava/lang/Object;", "", "", "exifData", "f", "(Ljava/io/File;Ljava/util/Map;)V", "d", "(Ljava/io/File;)Ljava/util/Map;", "Landroid/graphics/BitmapFactory$Options;", "options", "", "reqWidth", "reqHeight", "c", "(Landroid/graphics/BitmapFactory$Options;II)I", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class c implements pq.a {
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
-    @NotNull
-    public final e externalInquiryController;
-
-    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
-    @NotNull
-    public final p0 coroutineScope;
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
-    @Nullable
-    public i currentPage;
-
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.shared.external_inquiry_controller.ExternalEventLogger$logEvent$1", f = "ExternalEventLogger.kt", l = {21}, m = "invokeSuspend")
-    public static final class a extends m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @f(c = "com.withpersona.sdk2.inquiry.shared.image.RealImageHelper", f = "ImageHelper.kt", l = {21}, m = "resizeAndCompressImageInPlace-gIAlu-s")
+    @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
+    public static final class a extends nt.d {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f28814t;
+        public Object f29060t;
 
-        /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ InquiryEvent f28816v;
+        /* JADX INFO: renamed from: u, reason: collision with root package name */
+        public /* synthetic */ Object f29061u;
 
-        /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public a(InquiryEvent inquiryEvent, nt.b<? super a> bVar) {
-            super(2, bVar);
-            this.f28816v = inquiryEvent;
+        /* JADX INFO: renamed from: w, reason: collision with root package name */
+        public int f29063w;
+
+        public a(lt.b<? super a> bVar) {
+            super(bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return c.this.new a(this.f28816v, bVar);
+        @Override // nt.a
+        @Nullable
+        public final Object invokeSuspend(@NotNull Object obj) {
+            this.f29061u = obj;
+            this.f29063w |= Integer.MIN_VALUE;
+            Object objA = c.this.a(null, this);
+            return objA == mt.c.e() ? objA : n.a(objA);
         }
+    }
 
-        @Override // pt.a
-        public final Object invokeSuspend(Object obj) {
-            Object objE = ot.c.e();
-            int i10 = this.f28814t;
-            if (i10 == 0) {
-                o.b(obj);
-                b0<InquiryEvent> b0VarA = c.this.externalInquiryController.a();
-                InquiryEvent inquiryEvent = this.f28816v;
-                this.f28814t = 1;
-                if (b0VarA.emit(inquiryEvent, this) == objE) {
-                    return objE;
+    public static final n e(c cVar, File file) {
+        Object objB;
+        try {
+            n.Companion companion = n.INSTANCE;
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inJustDecodeBounds = true;
+            BitmapFactory.decodeFile(file.getAbsolutePath(), options);
+            Map<String, String> mapD = cVar.d(file);
+            String absolutePath = file.getAbsolutePath();
+            BitmapFactory.Options options2 = new BitmapFactory.Options();
+            options2.inSampleSize = cVar.c(options, 2000, 2000);
+            Bitmap bitmapDecodeFile = BitmapFactory.decodeFile(absolutePath, options2);
+            FileOutputStream fileOutputStream = new FileOutputStream(file);
+            if (bitmapDecodeFile != null) {
+                try {
+                    bitmapDecodeFile.compress(Bitmap.CompressFormat.JPEG, 80, fileOutputStream);
+                } catch (Throwable th2) {
+                    try {
+                        throw th2;
+                    } catch (Throwable th3) {
+                        st.c.a(fileOutputStream, th2);
+                        throw th3;
+                    }
                 }
-            } else {
-                if (i10 != 1) {
-                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-                }
-                o.b(obj);
             }
-            return Unit.f22483a;
+            st.c.a(fileOutputStream, null);
+            if (bitmapDecodeFile != null) {
+                bitmapDecodeFile.recycle();
+            }
+            cVar.f(file, mapD);
+            objB = n.b(Unit.f22938a);
+        } catch (Throwable th4) {
+            n.Companion companion2 = n.INSTANCE;
+            objB = n.b(o.a(th4));
         }
+        return n.a(objB);
+    }
 
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+    /* JADX WARN: Code duplicated, block: B:7:0x0013  */
+    @Override // pq.a
+    @Nullable
+    public Object a(@NotNull final File file, @NotNull lt.b<? super n<Unit>> bVar) {
+        a aVar;
+        if (bVar instanceof a) {
+            aVar = (a) bVar;
+            int i10 = aVar.f29063w;
+            if ((i10 & Integer.MIN_VALUE) != 0) {
+                aVar.f29063w = i10 - Integer.MIN_VALUE;
+            } else {
+                aVar = new a(bVar);
+            }
+        } else {
+            aVar = new a(bVar);
+        }
+        Object objB = aVar.f29061u;
+        Object objE = mt.c.e();
+        int i11 = aVar.f29063w;
+        if (i11 == 0) {
+            o.b(objB);
+            l0 l0VarA = g1.a();
+            Function0 function0 = new Function0() { // from class: pq.b
+                @Override // kotlin.jvm.functions.Function0
+                public final Object invoke() {
+                    return c.e(this.f29059a, file);
+                }
+            };
+            aVar.f29060t = l.a(file);
+            aVar.f29063w = 1;
+            objB = a2.b(l0VarA, function0, aVar);
+            if (objB == objE) {
+                return objE;
+            }
+        } else {
+            if (i11 != 1) {
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            }
+            o.b(objB);
+        }
+        return ((n) objB).getValue();
+    }
+
+    public final int c(BitmapFactory.Options options, int reqWidth, int reqHeight) {
+        int i10 = options.outHeight;
+        int i11 = options.outWidth;
+        if (i10 > reqHeight || i11 > reqWidth) {
+            return Math.min(au.b.d(i10 / reqHeight), au.b.d(i11 / reqWidth));
+        }
+        return 1;
+    }
+
+    public final Map<String, String> d(File file) {
+        try {
+            List listN = p.n("DateTime", "DateTimeDigitized", "ExposureTime", "Flash", "FocalLength", "GPSAltitude", "GPSAltitudeRef", "GPSDateStamp", "GPSLatitude", "GPSLatitudeRef", "GPSLongitude", "GPSLongitudeRef", "GPSProcessingMethod", "GPSTimeStamp", "Make", "Model", "Orientation", "SubSecTime", "WhiteBalance");
+            FileInputStream fileInputStream = new FileInputStream(file);
+            try {
+                c4.a aVar = new c4.a(fileInputStream);
+                List list = listN;
+                LinkedHashMap linkedHashMap = new LinkedHashMap(kotlin.ranges.d.c(j0.f(q.u(list, 10)), 16));
+                for (Object obj : list) {
+                    linkedHashMap.put(obj, aVar.k((String) obj));
+                }
+                st.c.a(fileInputStream, null);
+                return linkedHashMap;
+            } catch (Throwable th2) {
+                try {
+                    throw th2;
+                } catch (Throwable th3) {
+                    st.c.a(fileInputStream, th2);
+                    throw th3;
+                }
+            }
+        } catch (IOException unused) {
+            return k0.j();
         }
     }
 
-    public c(@NotNull e externalInquiryController, @NotNull p0 coroutineScope) {
-        Intrinsics.checkNotNullParameter(externalInquiryController, "externalInquiryController");
-        Intrinsics.checkNotNullParameter(coroutineScope, "coroutineScope");
-        this.externalInquiryController = externalInquiryController;
-        this.coroutineScope = coroutineScope;
-    }
-
-    public final void b(@NotNull InquiryEvent inquiryEvent) {
-        Intrinsics.checkNotNullParameter(inquiryEvent, "inquiryEvent");
-        k.d(this.coroutineScope, null, null, new a(inquiryEvent, null), 3, null);
-    }
-
-    public final void c(@NotNull i page) {
-        Intrinsics.checkNotNullParameter(page, "page");
-        if (Intrinsics.c(this.currentPage, page)) {
-            return;
+    public final void f(File file, Map<String, String> exifData) throws Throwable {
+        try {
+            c4.a aVar = new c4.a(file.getAbsolutePath());
+            Iterator<T> it = exifData.entrySet().iterator();
+            while (it.hasNext()) {
+                Map.Entry entry = (Map.Entry) it.next();
+                String str = (String) entry.getKey();
+                String str2 = (String) entry.getValue();
+                if (str2 != null) {
+                    aVar.h0(str, str2);
+                }
+            }
+            aVar.c0();
+        } catch (IOException unused) {
         }
-        this.currentPage = page;
-        b(new InquiryEvent.PageChange(page.getStepName(), page.toString()));
     }
 }

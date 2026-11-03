@@ -4,10 +4,10 @@ package com.google.android.gms.internal.measurement;
 public final class bb implements mc {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final bb f6389a = new bb();
+    public static final bb f6462a = new bb();
 
     public static bb c() {
-        return f6389a;
+        return f6462a;
     }
 
     @Override // com.google.android.gms.internal.measurement.mc
@@ -21,7 +21,7 @@ public final class bb implements mc {
             throw new IllegalArgumentException("Unsupported message type: ".concat(cls.getName()));
         }
         try {
-            return (lc) gb.t(cls.asSubclass(gb.class)).E(3, null, null);
+            return (lc) gb.s(cls.asSubclass(gb.class)).E(3, null, null);
         } catch (Exception e10) {
             throw new RuntimeException("Unable to get message info for ".concat(cls.getName()), e10);
         }

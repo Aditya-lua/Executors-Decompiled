@@ -1,77 +1,47 @@
 package qe;
 
 import java.security.GeneralSecurityException;
-import java.util.Arrays;
-import pe.k1;
 
 /* JADX INFO: loaded from: classes2.dex */
-public final class l0 implements oe.a {
+public class l0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final byte[] f29331a;
-    public final int b;
+    public static final pe.m<pe.a> f29743a = we.o.e(d(), pe.a.class, af.f0.c.SYMMETRIC, af.n0.f0());
+    public static final we.w.a<u0> b = new we.w.a() { // from class: qe.j0
+        @Override // we.w.a
+        public final pe.l a(pe.x xVar, Integer num) {
+            return l0.e((u0) xVar, num);
+        }
+    };
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final ye.a f29332c;
+    public static final we.h0<t0, pe.a> f29744c = we.h0.b(new we.h0.b() { // from class: qe.k0
+        @Override // we.h0.b
+        public final Object a(pe.l lVar) {
+            return l0.c((t0) lVar);
+        }
+    }, t0.class, pe.a.class);
 
-    public l0(byte[] bArr, df.a aVar, int i10) {
-        this.f29332c = new cf.r(bArr);
-        this.f29331a = aVar.d();
-        this.b = i10;
+    public static pe.a c(t0 t0Var) {
+        String strD = t0Var.d().d();
+        return re.j0.c(i0.d(t0Var.d().c(), pe.u.a(strD).b(strD)), t0Var.c());
     }
 
-    public static oe.a c(k1 k1Var) throws GeneralSecurityException {
-        if (k1Var.f().c() < 8 || k1Var.f().c() > 12) {
-            throw new GeneralSecurityException("invalid salt size");
-        }
-        return new l0(k1Var.c().d(oe.j.a()), k1Var.d(), k1Var.f().c());
+    public static String d() {
+        return "type.googleapis.com/google.crypto.tink.KmsEnvelopeAeadKey";
     }
 
-    @Override // oe.a
-    public byte[] a(byte[] bArr, byte[] bArr2) throws GeneralSecurityException {
-        if (bArr == null) {
-            throw new NullPointerException("plaintext is null");
-        }
-        byte[] bArrA = cf.u.a(this.b + 12);
-        byte[] bArrCopyOf = Arrays.copyOf(bArrA, this.b);
-        int i10 = this.b;
-        byte[] bArrCopyOfRange = Arrays.copyOfRange(bArrA, i10, i10 + 12);
-        byte[] bArrB = new c0(d(bArrCopyOf)).b(bArrCopyOfRange, bArr, this.f29331a.length + this.b + bArrCopyOfRange.length, bArr2);
-        byte[] bArr3 = this.f29331a;
-        System.arraycopy(bArr3, 0, bArrB, 0, bArr3.length);
-        System.arraycopy(bArrA, 0, bArrB, this.f29331a.length, bArrA.length);
-        return bArrB;
+    public static t0 e(u0 u0Var, Integer num) {
+        return t0.b(u0Var, num);
     }
 
-    @Override // oe.a
-    public byte[] b(byte[] bArr, byte[] bArr2) throws GeneralSecurityException {
-        if (bArr == null) {
-            throw new NullPointerException("ciphertext is null");
+    public static void f(boolean z10) throws GeneralSecurityException {
+        if (!ue.b.EnumC0590b.f32770a.a()) {
+            throw new GeneralSecurityException("Registering KMS Envelope AEAD is not supported in FIPS mode");
         }
-        int length = bArr.length;
-        byte[] bArr3 = this.f29331a;
-        if (length < bArr3.length + this.b + 28) {
-            throw new GeneralSecurityException("ciphertext too short");
-        }
-        if (!ve.s0.e(bArr3, bArr)) {
-            throw new GeneralSecurityException("Decryption failed (OutputPrefix mismatch).");
-        }
-        int length2 = this.f29331a.length + this.b;
-        int i10 = length2 + 12;
-        return new c0(d(Arrays.copyOfRange(bArr, this.f29331a.length, length2))).a(Arrays.copyOfRange(bArr, length2, i10), bArr, i10, bArr2);
-    }
-
-    public final byte[] d(byte[] bArr) throws GeneralSecurityException {
-        byte[] bArr2 = {0, 1, 88, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-        byte[] bArr3 = {0, 2, 88, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-        if (bArr.length > 12 || bArr.length < 8) {
-            throw new GeneralSecurityException("invalid salt size");
-        }
-        System.arraycopy(bArr, 0, bArr2, 4, bArr.length);
-        System.arraycopy(bArr, 0, bArr3, 4, bArr.length);
-        byte[] bArr4 = new byte[32];
-        System.arraycopy(this.f29332c.a(bArr2, 16), 0, bArr4, 0, 16);
-        System.arraycopy(this.f29332c.a(bArr3, 16), 0, bArr4, 16, 16);
-        return bArr4;
+        z0.h();
+        we.w.f().b(b, u0.class);
+        we.a0.c().d(f29744c);
+        we.l.d().g(f29743a, z10);
     }
 }

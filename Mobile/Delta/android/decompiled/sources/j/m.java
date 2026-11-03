@@ -9,7 +9,7 @@ public class m extends e4.k {
     @Override // e4.k
     @NonNull
     public Dialog k2(Bundle bundle) {
-        return new l(x(), j2());
+        return new l(w(), j2());
     }
 
     @Override // e4.k

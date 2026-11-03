@@ -6,5 +6,5 @@ import com.google.android.gms.common.api.Status;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface v4 extends IInterface {
-    void C0(Status status, PendingIntent pendingIntent);
+    void y0(Status status, PendingIntent pendingIntent);
 }

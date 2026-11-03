@@ -15,17 +15,17 @@ import n0.z1;
 public class e implements z1 {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final z1 f26991c;
+    public final z1 f27556c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final k3 f26992d;
+    public final k3 f27557d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Map<Integer, a2> f26993e = new HashMap();
+    public final Map<Integer, a2> f27558e = new HashMap();
 
     public e(z1 z1Var, k3 k3Var) {
-        this.f26991c = z1Var;
-        this.f26992d = k3Var;
+        this.f27556c = z1Var;
+        this.f27557d = k3Var;
     }
 
     public static a2.c d(a2.c cVar, Size size) {
@@ -34,11 +34,11 @@ public class e implements z1 {
 
     private a2 f(int i10) {
         a2 a2VarC;
-        if (this.f26993e.containsKey(Integer.valueOf(i10))) {
-            return this.f26993e.get(Integer.valueOf(i10));
+        if (this.f27558e.containsKey(Integer.valueOf(i10))) {
+            return this.f27558e.get(Integer.valueOf(i10));
         }
-        if (this.f26991c.a(i10)) {
-            a2 a2VarB = this.f26991c.b(i10);
+        if (this.f27556c.a(i10)) {
+            a2 a2VarB = this.f27556c.b(i10);
             Objects.requireNonNull(a2VarB);
             a2VarC = a2VarB;
             Size sizeE = e(i10);
@@ -48,13 +48,13 @@ public class e implements z1 {
         } else {
             a2VarC = null;
         }
-        this.f26993e.put(Integer.valueOf(i10), a2VarC);
+        this.f27558e.put(Integer.valueOf(i10), a2VarC);
         return a2VarC;
     }
 
     @Override // n0.z1
     public boolean a(int i10) {
-        return this.f26991c.a(i10) && f(i10) != null;
+        return this.f27556c.a(i10) && f(i10) != null;
     }
 
     @Override // n0.z1
@@ -75,7 +75,7 @@ public class e implements z1 {
     }
 
     public final Size e(int i10) {
-        for (StretchedVideoResolutionQuirk stretchedVideoResolutionQuirk : this.f26992d.c(StretchedVideoResolutionQuirk.class)) {
+        for (StretchedVideoResolutionQuirk stretchedVideoResolutionQuirk : this.f27557d.c(StretchedVideoResolutionQuirk.class)) {
             if (stretchedVideoResolutionQuirk != null) {
                 return stretchedVideoResolutionQuirk.g(i10);
             }

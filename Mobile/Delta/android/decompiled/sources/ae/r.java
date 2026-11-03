@@ -1,9 +1,8 @@
 package ae;
 
-import java.io.File;
-import java.util.ArrayList;
-
 /* JADX INFO: loaded from: classes2.dex */
-public interface r {
-    Object[] a(Object obj, ArrayList arrayList, File file, ArrayList arrayList2);
+public final /* synthetic */ class r {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final /* synthetic */ r f455a = new r();
 }

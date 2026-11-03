@@ -43,130 +43,130 @@ import y9.b;
 public class AppMeasurementDynamiteService extends t1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public g7 f7405a = null;
+    public g7 f7479a = null;
     public final Map b = new a();
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void beginAdUnitExposure(@NonNull String str, long j10) {
         s2();
-        this.f7405a.M().i(str, j10);
+        this.f7479a.M().i(str, j10);
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void clearConditionalUserProperty(@NonNull String str, @NonNull String str2, @NonNull Bundle bundle) {
         s2();
-        this.f7405a.B().O(str, str2, bundle);
+        this.f7479a.B().O(str, str2, bundle);
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void clearMeasurementEnabled(long j10) {
         s2();
-        this.f7405a.B().n0(null);
+        this.f7479a.B().n0(null);
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void endAdUnitExposure(@NonNull String str, long j10) {
         s2();
-        this.f7405a.M().j(str, j10);
+        this.f7479a.M().j(str, j10);
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void generateEventId(x1 x1Var) {
         s2();
-        long jP0 = this.f7405a.C().p0();
+        long jP0 = this.f7479a.C().p0();
         s2();
-        this.f7405a.C().b0(x1Var, jP0);
+        this.f7479a.C().b0(x1Var, jP0);
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void getAppInstanceId(x1 x1Var) {
         s2();
-        this.f7405a.b().t(new d7(this, x1Var));
+        this.f7479a.b().t(new d7(this, x1Var));
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void getCachedAppInstanceId(x1 x1Var) {
         s2();
-        t2(x1Var, this.f7405a.B().D());
+        t2(x1Var, this.f7479a.B().D());
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void getConditionalUserProperties(String str, String str2, x1 x1Var) {
         s2();
-        this.f7405a.b().t(new hb(this, x1Var, str, str2));
+        this.f7479a.b().t(new hb(this, x1Var, str, str2));
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void getCurrentScreenClass(x1 x1Var) {
         s2();
-        t2(x1Var, this.f7405a.B().R());
+        t2(x1Var, this.f7479a.B().R());
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void getCurrentScreenName(x1 x1Var) {
         s2();
-        t2(x1Var, this.f7405a.B().Q());
+        t2(x1Var, this.f7479a.B().Q());
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void getGmpAppId(x1 x1Var) {
         s2();
-        t2(x1Var, this.f7405a.B().S());
+        t2(x1Var, this.f7479a.B().S());
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void getMaxUserProperties(String str, x1 x1Var) {
         s2();
-        this.f7405a.B().L(str);
+        this.f7479a.B().L(str);
         s2();
-        this.f7405a.C().c0(x1Var, 25);
+        this.f7479a.C().c0(x1Var, 25);
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void getSessionId(x1 x1Var) {
         s2();
-        qa qaVarB = this.f7405a.B();
-        qaVarB.f25625a.b().t(new r9(qaVarB, x1Var));
+        qa qaVarB = this.f7479a.B();
+        qaVarB.f26446a.b().t(new r9(qaVarB, x1Var));
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void getTestFlag(x1 x1Var, int i10) {
         s2();
         if (i10 == 0) {
-            this.f7405a.C().a0(x1Var, this.f7405a.B().j0());
+            this.f7479a.C().a0(x1Var, this.f7479a.B().j0());
             return;
         }
         if (i10 == 1) {
-            this.f7405a.C().b0(x1Var, this.f7405a.B().k0().longValue());
+            this.f7479a.C().b0(x1Var, this.f7479a.B().k0().longValue());
             return;
         }
         if (i10 != 2) {
             if (i10 == 3) {
-                this.f7405a.C().c0(x1Var, this.f7405a.B().l0().intValue());
+                this.f7479a.C().c0(x1Var, this.f7479a.B().l0().intValue());
                 return;
             } else {
                 if (i10 != 4) {
                     return;
                 }
-                this.f7405a.C().e0(x1Var, this.f7405a.B().i0().booleanValue());
+                this.f7479a.C().e0(x1Var, this.f7479a.B().i0().booleanValue());
                 return;
             }
         }
-        ve veVarC = this.f7405a.C();
-        double dDoubleValue = this.f7405a.B().m0().doubleValue();
+        ve veVarC = this.f7479a.C();
+        double dDoubleValue = this.f7479a.B().m0().doubleValue();
         Bundle bundle = new Bundle();
         bundle.putDouble("r", dDoubleValue);
         try {
             x1Var.l(bundle);
         } catch (RemoteException e10) {
-            veVarC.f25625a.a().r().b("Error returning double value to wrapper", e10);
+            veVarC.f26446a.a().r().b("Error returning double value to wrapper", e10);
         }
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void getUserProperties(String str, String str2, boolean z10, x1 x1Var) {
         s2();
-        this.f7405a.b().t(new f9(this, x1Var, str, str2, z10));
+        this.f7479a.b().t(new f9(this, x1Var, str, str2, z10));
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
@@ -176,9 +176,9 @@ public class AppMeasurementDynamiteService extends t1 {
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void initialize(y9.a aVar, zzdd zzddVar, long j10) {
-        g7 g7Var = this.f7405a;
+        g7 g7Var = this.f7479a;
         if (g7Var == null) {
-            this.f7405a = g7.O((Context) m.l((Context) b.t2(aVar)), zzddVar, Long.valueOf(j10));
+            this.f7479a = g7.O((Context) m.l((Context) b.t2(aVar)), zzddVar, Long.valueOf(j10));
         } else {
             g7Var.a().r().a("Attempting to initialize multiple times");
         }
@@ -187,13 +187,13 @@ public class AppMeasurementDynamiteService extends t1 {
     @Override // com.google.android.gms.internal.measurement.u1
     public void isDataCollectionEnabled(x1 x1Var) {
         s2();
-        this.f7405a.b().t(new hc(this, x1Var));
+        this.f7479a.b().t(new hc(this, x1Var));
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void logEvent(@NonNull String str, @NonNull String str2, @NonNull Bundle bundle, boolean z10, boolean z11, long j10) {
         s2();
-        this.f7405a.B().q(str, str2, bundle, z10, z11, j10);
+        this.f7479a.B().q(str, str2, bundle, z10, z11, j10);
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
@@ -201,13 +201,13 @@ public class AppMeasurementDynamiteService extends t1 {
         s2();
         m.f(str2);
         (bundle != null ? new Bundle(bundle) : new Bundle()).putString("_o", Payload.TYPE_APP);
-        this.f7405a.b().t(new e8(this, x1Var, new zzbg(str2, new zzbe(bundle), Payload.TYPE_APP, j10), str));
+        this.f7479a.b().t(new e8(this, x1Var, new zzbg(str2, new zzbe(bundle), Payload.TYPE_APP, j10), str));
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void logHealthData(int i10, @NonNull String str, @NonNull y9.a aVar, @NonNull y9.a aVar2, @NonNull y9.a aVar3) {
         s2();
-        this.f7405a.a().y(i10, true, false, str, aVar == null ? null : b.t2(aVar), aVar2 == null ? null : b.t2(aVar2), aVar3 != null ? b.t2(aVar3) : null);
+        this.f7479a.a().y(i10, true, false, str, aVar == null ? null : b.t2(aVar), aVar2 == null ? null : b.t2(aVar2), aVar3 != null ? b.t2(aVar3) : null);
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
@@ -219,9 +219,9 @@ public class AppMeasurementDynamiteService extends t1 {
     @Override // com.google.android.gms.internal.measurement.u1
     public void onActivityCreatedByScionActivityInfo(zzdf zzdfVar, Bundle bundle, long j10) {
         s2();
-        da daVar = this.f7405a.B().f25891c;
+        da daVar = this.f7479a.B().f26712c;
         if (daVar != null) {
-            this.f7405a.B().h0();
+            this.f7479a.B().h0();
             daVar.e(zzdfVar, bundle);
         }
     }
@@ -235,9 +235,9 @@ public class AppMeasurementDynamiteService extends t1 {
     @Override // com.google.android.gms.internal.measurement.u1
     public void onActivityDestroyedByScionActivityInfo(zzdf zzdfVar, long j10) {
         s2();
-        da daVar = this.f7405a.B().f25891c;
+        da daVar = this.f7479a.B().f26712c;
         if (daVar != null) {
-            this.f7405a.B().h0();
+            this.f7479a.B().h0();
             daVar.b(zzdfVar);
         }
     }
@@ -251,9 +251,9 @@ public class AppMeasurementDynamiteService extends t1 {
     @Override // com.google.android.gms.internal.measurement.u1
     public void onActivityPausedByScionActivityInfo(zzdf zzdfVar, long j10) {
         s2();
-        da daVar = this.f7405a.B().f25891c;
+        da daVar = this.f7479a.B().f26712c;
         if (daVar != null) {
-            this.f7405a.B().h0();
+            this.f7479a.B().h0();
             daVar.a(zzdfVar);
         }
     }
@@ -267,9 +267,9 @@ public class AppMeasurementDynamiteService extends t1 {
     @Override // com.google.android.gms.internal.measurement.u1
     public void onActivityResumedByScionActivityInfo(zzdf zzdfVar, long j10) {
         s2();
-        da daVar = this.f7405a.B().f25891c;
+        da daVar = this.f7479a.B().f26712c;
         if (daVar != null) {
-            this.f7405a.B().h0();
+            this.f7479a.B().h0();
             daVar.d(zzdfVar);
         }
     }
@@ -283,16 +283,16 @@ public class AppMeasurementDynamiteService extends t1 {
     @Override // com.google.android.gms.internal.measurement.u1
     public void onActivitySaveInstanceStateByScionActivityInfo(zzdf zzdfVar, x1 x1Var, long j10) {
         s2();
-        da daVar = this.f7405a.B().f25891c;
+        da daVar = this.f7479a.B().f26712c;
         Bundle bundle = new Bundle();
         if (daVar != null) {
-            this.f7405a.B().h0();
+            this.f7479a.B().h0();
             daVar.c(zzdfVar, bundle);
         }
         try {
             x1Var.l(bundle);
         } catch (RemoteException e10) {
-            this.f7405a.a().r().b("Error returning bundle value to wrapper", e10);
+            this.f7479a.a().r().b("Error returning bundle value to wrapper", e10);
         }
     }
 
@@ -305,8 +305,8 @@ public class AppMeasurementDynamiteService extends t1 {
     @Override // com.google.android.gms.internal.measurement.u1
     public void onActivityStartedByScionActivityInfo(zzdf zzdfVar, long j10) {
         s2();
-        if (this.f7405a.B().f25891c != null) {
-            this.f7405a.B().h0();
+        if (this.f7479a.B().f26712c != null) {
+            this.f7479a.B().h0();
         }
     }
 
@@ -319,8 +319,8 @@ public class AppMeasurementDynamiteService extends t1 {
     @Override // com.google.android.gms.internal.measurement.u1
     public void onActivityStoppedByScionActivityInfo(zzdf zzdfVar, long j10) {
         s2();
-        if (this.f7405a.B().f25891c != null) {
-            this.f7405a.B().h0();
+        if (this.f7479a.B().f26712c != null) {
+            this.f7479a.B().h0();
         }
     }
 
@@ -346,32 +346,32 @@ public class AppMeasurementDynamiteService extends t1 {
                 throw th2;
             }
         }
-        this.f7405a.B().J(weVar);
+        this.f7479a.B().J(weVar);
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void resetAnalyticsData(long j10) {
         s2();
-        this.f7405a.B().G(j10);
+        this.f7479a.B().G(j10);
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void retrieveAndUploadBatches(final a2 a2Var) {
         s2();
-        this.f7405a.B().r0(new Runnable() { // from class: nb.id
+        this.f7479a.B().r0(new Runnable() { // from class: nb.id
             @Override // java.lang.Runnable
             public final /* synthetic */ void run() {
                 try {
                     a2Var.zze();
                 } catch (RemoteException e10) {
-                    ((g7) n9.m.l(this.f25611a.f7405a)).a().r().b("Failed to call IDynamiteUploadBatchesCallback", e10);
+                    ((g7) n9.m.l(this.f26432a.f7479a)).a().r().b("Failed to call IDynamiteUploadBatchesCallback", e10);
                 }
             }
         });
     }
 
     public final void s2() {
-        if (this.f7405a == null) {
+        if (this.f7479a == null) {
             throw new IllegalStateException("Attempting to perform action before initialize.");
         }
     }
@@ -380,9 +380,9 @@ public class AppMeasurementDynamiteService extends t1 {
     public void setConditionalUserProperty(@NonNull Bundle bundle, long j10) {
         s2();
         if (bundle == null) {
-            this.f7405a.a().o().a("Conditional user property must not be null");
+            this.f7479a.a().o().a("Conditional user property must not be null");
         } else {
-            this.f7405a.B().N(bundle, j10);
+            this.f7479a.B().N(bundle, j10);
         }
     }
 
@@ -393,7 +393,7 @@ public class AppMeasurementDynamiteService extends t1 {
     @Override // com.google.android.gms.internal.measurement.u1
     public void setConsentThirdParty(@NonNull Bundle bundle, long j10) {
         s2();
-        this.f7405a.B().o0(bundle, -20, j10);
+        this.f7479a.B().o0(bundle, -20, j10);
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
@@ -405,23 +405,23 @@ public class AppMeasurementDynamiteService extends t1 {
     @Override // com.google.android.gms.internal.measurement.u1
     public void setCurrentScreenByScionActivityInfo(zzdf zzdfVar, String str, String str2, long j10) {
         s2();
-        this.f7405a.I().t(zzdfVar, str, str2);
+        this.f7479a.I().t(zzdfVar, str, str2);
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void setDataCollectionEnabled(boolean z10) {
         s2();
-        qa qaVarB = this.f7405a.B();
+        qa qaVarB = this.f7479a.B();
         qaVarB.j();
-        qaVarB.f25625a.b().t(new d9(qaVarB, z10));
+        qaVarB.f26446a.b().t(new d9(qaVarB, z10));
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void setDefaultEventParameters(@NonNull Bundle bundle) {
         s2();
-        final qa qaVarB = this.f7405a.B();
+        final qa qaVarB = this.f7479a.B();
         final Bundle bundle2 = bundle == null ? new Bundle() : new Bundle(bundle);
-        qaVarB.f25625a.b().t(new Runnable() { // from class: nb.la
+        qaVarB.f26446a.b().t(new Runnable() { // from class: nb.la
             @Override // java.lang.Runnable
             public final /* synthetic */ void run() {
                 qaVarB.U(bundle2);
@@ -433,10 +433,10 @@ public class AppMeasurementDynamiteService extends t1 {
     public void setEventInterceptor(e2 e2Var) {
         s2();
         fe feVar = new fe(this, e2Var);
-        if (this.f7405a.b().p()) {
-            this.f7405a.B().I(feVar);
+        if (this.f7479a.b().p()) {
+            this.f7479a.B().I(feVar);
         } else {
-            this.f7405a.b().t(new fa(this, feVar));
+            this.f7479a.b().t(new fa(this, feVar));
         }
     }
 
@@ -448,7 +448,7 @@ public class AppMeasurementDynamiteService extends t1 {
     @Override // com.google.android.gms.internal.measurement.u1
     public void setMeasurementEnabled(boolean z10, long j10) {
         s2();
-        this.f7405a.B().n0(Boolean.valueOf(z10));
+        this.f7479a.B().n0(Boolean.valueOf(z10));
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
@@ -459,22 +459,22 @@ public class AppMeasurementDynamiteService extends t1 {
     @Override // com.google.android.gms.internal.measurement.u1
     public void setSessionTimeoutDuration(long j10) {
         s2();
-        qa qaVarB = this.f7405a.B();
-        qaVarB.f25625a.b().t(new g9(qaVarB, j10));
+        qa qaVarB = this.f7479a.B();
+        qaVarB.f26446a.b().t(new g9(qaVarB, j10));
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
     public void setSgtmDebugInfo(@NonNull Intent intent) {
         s2();
-        qa qaVarB = this.f7405a.B();
+        qa qaVarB = this.f7479a.B();
         Uri data = intent.getData();
         if (data == null) {
-            qaVarB.f25625a.a().u().a("Activity intent has no data. Preview Mode was not enabled.");
+            qaVarB.f26446a.a().u().a("Activity intent has no data. Preview Mode was not enabled.");
             return;
         }
         String queryParameter = data.getQueryParameter("sgtm_debug_enable");
         if (queryParameter == null || !queryParameter.equals("1")) {
-            g7 g7Var = qaVarB.f25625a;
+            g7 g7Var = qaVarB.f26446a;
             g7Var.a().u().a("[sgtm] Preview Mode was not enabled.");
             g7Var.w().Q(null);
         } else {
@@ -482,7 +482,7 @@ public class AppMeasurementDynamiteService extends t1 {
             if (TextUtils.isEmpty(queryParameter2)) {
                 return;
             }
-            g7 g7Var2 = qaVarB.f25625a;
+            g7 g7Var2 = qaVarB.f26446a;
             g7Var2.a().u().b("[sgtm] Preview Mode was enabled. Using the sgtmPreviewKey: ", queryParameter2);
             g7Var2.w().Q(queryParameter2);
         }
@@ -491,14 +491,14 @@ public class AppMeasurementDynamiteService extends t1 {
     @Override // com.google.android.gms.internal.measurement.u1
     public void setUserId(@NonNull final String str, long j10) {
         s2();
-        final qa qaVarB = this.f7405a.B();
+        final qa qaVarB = this.f7479a.B();
         if (str != null && TextUtils.isEmpty(str)) {
-            qaVarB.f25625a.a().r().a("User ID must be non-empty or null");
+            qaVarB.f26446a.a().r().a("User ID must be non-empty or null");
         } else {
-            qaVarB.f25625a.b().t(new Runnable() { // from class: nb.ma
+            qaVarB.f26446a.b().t(new Runnable() { // from class: nb.ma
                 @Override // java.lang.Runnable
                 public final /* synthetic */ void run() {
-                    g7 g7Var = qaVarB.f25625a;
+                    g7 g7Var = qaVarB.f26446a;
                     if (g7Var.L().x(str)) {
                         g7Var.L().p();
                     }
@@ -511,12 +511,12 @@ public class AppMeasurementDynamiteService extends t1 {
     @Override // com.google.android.gms.internal.measurement.u1
     public void setUserProperty(@NonNull String str, @NonNull String str2, @NonNull y9.a aVar, boolean z10, long j10) {
         s2();
-        this.f7405a.B().z(str, str2, b.t2(aVar), z10, j10);
+        this.f7479a.B().z(str, str2, b.t2(aVar), z10, j10);
     }
 
     public final void t2(x1 x1Var, String str) {
         s2();
-        this.f7405a.C().a0(x1Var, str);
+        this.f7479a.C().a0(x1Var, str);
     }
 
     @Override // com.google.android.gms.internal.measurement.u1
@@ -530,6 +530,6 @@ public class AppMeasurementDynamiteService extends t1 {
         if (weVar == null) {
             weVar = new we(this, e2Var);
         }
-        this.f7405a.B().K(weVar);
+        this.f7479a.B().K(weVar);
     }
 }

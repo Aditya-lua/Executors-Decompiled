@@ -11,7 +11,7 @@ public final class o4 extends gb implements pc {
     static {
         o4 o4Var = new o4();
         zzg = o4Var;
-        gb.u(o4.class, o4Var);
+        gb.t(o4.class, o4Var);
     }
 
     @Override // com.google.android.gms.internal.measurement.gb
@@ -21,7 +21,7 @@ public final class o4 extends gb implements pc {
             return (byte) 1;
         }
         if (i11 == 2) {
-            return gb.v(zzg, "\u0004\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001᠌\u0000\u0002᠌\u0001\u0003᠌\u0002", new Object[]{"zzb", "zzd", t4.f6803a, "zze", r4.f6759a, "zzf", y4.f6954a});
+            return gb.v(zzg, "\u0004\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001᠌\u0000\u0002᠌\u0001\u0003᠌\u0002", new Object[]{"zzb", "zzd", t4.f6877a, "zze", r4.f6833a, "zzf", y4.f7028a});
         }
         if (i11 == 3) {
             return new o4();

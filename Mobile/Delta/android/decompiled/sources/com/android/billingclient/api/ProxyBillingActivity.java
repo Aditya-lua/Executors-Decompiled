@@ -29,26 +29,26 @@ import v7.m1;
 public class ProxyBillingActivity extends Activity {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public ResultReceiver f5051a;
+    public ResultReceiver f5124a;
     public boolean b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f5052c;
+    public boolean f5125c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public int f5053d;
+    public int f5126d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public long f5054e;
+    public long f5127e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public boolean f5055f;
+    public boolean f5128f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public j f5056g;
+    public j f5129g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public i1 f5057h;
+    public i1 f5130h;
 
     public final s7 a(int i10, Intent intent) {
         if (intent != null) {
@@ -84,7 +84,7 @@ public class ProxyBillingActivity extends Activity {
     }
 
     public final boolean d() {
-        return this.f5056g != null;
+        return this.f5129g != null;
     }
 
     public final Intent e(String str) {
@@ -104,20 +104,20 @@ public class ProxyBillingActivity extends Activity {
             aVarD.d(6);
             aVarD.b("An internal error occurred.");
             d dVarA = aVarD.a();
-            int i10 = h1.f32789a;
+            int i10 = h1.f33357a;
             intentG.putExtra("FAILURE_LOGGING_PAYLOAD", h1.b(s7Var, 2, dVarA, null, z7.BROADCAST_ACTION_UNSPECIFIED).b());
-        } else if (d() && this.f5056g.a() != null) {
-            d dVarA2 = this.f5056g.a();
+        } else if (d() && this.f5129g.a() != null) {
+            d dVarA2 = this.f5129g.a();
             intentG.putExtra("RESPONSE_CODE", dVarA2.c());
             intentG.putExtra("DEBUG_MESSAGE", dVarA2.a());
-        } else if (!d() || this.f5056g.c()) {
+        } else if (!d() || this.f5129g.c()) {
             intentG.putExtra("RESPONSE_CODE", 6);
             intentG.putExtra("DEBUG_MESSAGE", "An internal error occurred.");
             d.a aVarD2 = d.d();
             aVarD2.d(6);
             aVarD2.b("An internal error occurred.");
             d dVarA3 = aVarD2.a();
-            int i11 = h1.f32789a;
+            int i11 = h1.f33357a;
             intentG.putExtra("FAILURE_LOGGING_PAYLOAD", h1.b(s7Var, 2, dVarA3, null, z7.BROADCAST_ACTION_UNSPECIFIED).b());
         } else {
             intentG.putExtra("RESPONSE_CODE", 3);
@@ -127,12 +127,12 @@ public class ProxyBillingActivity extends Activity {
             aVarD3.b("Play Store is blocked.");
             d dVarA4 = aVarD3.a();
             s7 s7Var2 = s7.PLAY_STORE_APP_BLOCKED;
-            int i12 = h1.f32789a;
+            int i12 = h1.f33357a;
             intentG.putExtra("FAILURE_LOGGING_PAYLOAD", h1.b(s7Var2, 2, dVarA4, null, z7.BROADCAST_ACTION_UNSPECIFIED).b());
         }
         intentG.putExtra("INTENT_SOURCE", "LAUNCH_BILLING_FLOW");
         intentG.putExtra("billingClientTransactionId", j10);
-        intentG.putExtra("wasServiceAutoReconnected", this.f5055f);
+        intentG.putExtra("wasServiceAutoReconnected", this.f5128f);
         return intentG;
     }
 
@@ -148,22 +148,22 @@ public class ProxyBillingActivity extends Activity {
         ProxyBillingActivity proxyBillingActivity;
         try {
             try {
-                this.f5056g = new j(this.f5057h);
+                this.f5129g = new j(this.f5130h);
                 IntentFilter intentFilter = new IntentFilter("com.android.vending.billing.IN_APP_BILLING_RESULT_UPDATE_ACTION");
                 intentFilter.addAction("com.android.vending.billing.PLAY_BILLING_ACTIVITY_CREATED_ACTION");
                 proxyBillingActivity = this;
                 try {
-                    l2.b.n(proxyBillingActivity, this.f5056g, intentFilter, "com.google.android.finsky.permission.PLAY_BILLING_LIBRARY_BROADCAST", null, 2);
+                    l2.b.n(proxyBillingActivity, this.f5129g, intentFilter, "com.google.android.finsky.permission.PLAY_BILLING_LIBRARY_BROADCAST", null, 2);
                 } catch (NoSuchMethodError e10) {
                     e = e10;
-                    proxyBillingActivity.f5056g = null;
+                    proxyBillingActivity.f5129g = null;
                     if (e instanceof NoSuchMethodError) {
-                        i1 i1Var = proxyBillingActivity.f5057h;
+                        i1 i1Var = proxyBillingActivity.f5130h;
                         b9 b9VarB = e9.B();
                         b9VarB.o(2);
                         i1Var.d((e9) b9VarB.i());
                     } else {
-                        i1 i1Var2 = proxyBillingActivity.f5057h;
+                        i1 i1Var2 = proxyBillingActivity.f5130h;
                         b9 b9VarB2 = e9.B();
                         b9VarB2.o(1);
                         i1Var2.d((e9) b9VarB2.i());
@@ -171,14 +171,14 @@ public class ProxyBillingActivity extends Activity {
                     m0.n("ProxyBillingActivity", "Failed to register receiver.", e);
                 } catch (RuntimeException e11) {
                     e = e11;
-                    proxyBillingActivity.f5056g = null;
+                    proxyBillingActivity.f5129g = null;
                     if (e instanceof NoSuchMethodError) {
-                        i1 i1Var3 = proxyBillingActivity.f5057h;
+                        i1 i1Var3 = proxyBillingActivity.f5130h;
                         b9 b9VarB3 = e9.B();
                         b9VarB3.o(2);
                         i1Var3.d((e9) b9VarB3.i());
                     } else {
-                        i1 i1Var4 = proxyBillingActivity.f5057h;
+                        i1 i1Var4 = proxyBillingActivity.f5130h;
                         b9 b9VarB4 = e9.B();
                         b9VarB4.o(1);
                         i1Var4.d((e9) b9VarB4.i());
@@ -192,14 +192,14 @@ public class ProxyBillingActivity extends Activity {
         } catch (NoSuchMethodError e12) {
             e = e12;
             proxyBillingActivity = this;
-            proxyBillingActivity.f5056g = null;
+            proxyBillingActivity.f5129g = null;
             if (e instanceof NoSuchMethodError) {
-                i1 i1Var5 = proxyBillingActivity.f5057h;
+                i1 i1Var5 = proxyBillingActivity.f5130h;
                 b9 b9VarB5 = e9.B();
                 b9VarB5.o(2);
                 i1Var5.d((e9) b9VarB5.i());
             } else {
-                i1 i1Var6 = proxyBillingActivity.f5057h;
+                i1 i1Var6 = proxyBillingActivity.f5130h;
                 b9 b9VarB6 = e9.B();
                 b9VarB6.o(1);
                 i1Var6.d((e9) b9VarB6.i());
@@ -208,14 +208,14 @@ public class ProxyBillingActivity extends Activity {
         } catch (RuntimeException e13) {
             e = e13;
             proxyBillingActivity = this;
-            proxyBillingActivity.f5056g = null;
+            proxyBillingActivity.f5129g = null;
             if (e instanceof NoSuchMethodError) {
-                i1 i1Var7 = proxyBillingActivity.f5057h;
+                i1 i1Var7 = proxyBillingActivity.f5130h;
                 b9 b9VarB7 = e9.B();
                 b9VarB7.o(2);
                 i1Var7.d((e9) b9VarB7.i());
             } else {
-                i1 i1Var8 = proxyBillingActivity.f5057h;
+                i1 i1Var8 = proxyBillingActivity.f5130h;
                 b9 b9VarB8 = e9.B();
                 b9VarB8.o(1);
                 i1Var8.d((e9) b9VarB8.i());
@@ -277,7 +277,7 @@ public class ProxyBillingActivity extends Activity {
             }
             if (c(i12, intent)) {
                 s7 s7VarA = a(i12, intent);
-                long j10 = this.f5054e;
+                long j10 = this.f5127e;
                 if (intent == null) {
                     z11 = true;
                 } else {
@@ -294,8 +294,8 @@ public class ProxyBillingActivity extends Activity {
                     intentG.putExtras(intent.getExtras());
                     intentG.putExtra("INTENT_SOURCE", "LAUNCH_BILLING_FLOW");
                 }
-                intentG.putExtra("billingClientTransactionId", this.f5054e);
-                intentG.putExtra("wasServiceAutoReconnected", this.f5055f);
+                intentG.putExtra("billingClientTransactionId", this.f5127e);
+                intentG.putExtra("wasServiceAutoReconnected", this.f5128f);
             }
             if (i10 == 110) {
                 intentG.putExtra("IS_FIRST_PARTY_PURCHASE", true);
@@ -324,7 +324,7 @@ public class ProxyBillingActivity extends Activity {
             }
             if (c(i12, intent)) {
                 s7 s7VarA2 = a(i12, intent);
-                long j11 = this.f5054e;
+                long j11 = this.f5127e;
                 if (intent == null) {
                     z11 = true;
                 } else {
@@ -341,8 +341,8 @@ public class ProxyBillingActivity extends Activity {
                     intentG.putExtras(intent.getExtras());
                     intentG.putExtra("INTENT_SOURCE", "LAUNCH_BILLING_FLOW");
                 }
-                intentG.putExtra("billingClientTransactionId", this.f5054e);
-                intentG.putExtra("wasServiceAutoReconnected", this.f5055f);
+                intentG.putExtra("billingClientTransactionId", this.f5127e);
+                intentG.putExtra("wasServiceAutoReconnected", this.f5128f);
             }
             if (i10 == 110) {
                 intentG.putExtra("IS_FIRST_PARTY_PURCHASE", true);
@@ -350,7 +350,7 @@ public class ProxyBillingActivity extends Activity {
             sendBroadcast(intentG);
         } else if (i10 == 101) {
             int iA = m0.a(intent, "ProxyBillingActivity");
-            ResultReceiver resultReceiver = this.f5051a;
+            ResultReceiver resultReceiver = this.f5124a;
             if (resultReceiver != null) {
                 resultReceiver.send(iA, intent == null ? null : intent.getExtras());
             }
@@ -359,7 +359,7 @@ public class ProxyBillingActivity extends Activity {
         }
         this.b = false;
         if (d()) {
-            this.f5056g.b();
+            this.f5129g.b();
         }
         finish();
     }
@@ -378,15 +378,15 @@ public class ProxyBillingActivity extends Activity {
                 m0.n("ProxyBillingActivity", "Failed to get package info for current package.", e10);
                 i10 = -1;
             }
-            if (this.f5057h == null) {
+            if (this.f5130h == null) {
                 Context applicationContext = getApplicationContext();
                 e8 e8VarL = h8.L();
                 e8VarL.v(getPackageName());
-                e8VarL.E(u7.a.f32091a);
+                e8VarL.E(u7.a.f32744a);
                 e8VarL.p(i10);
                 e8VarL.o(Build.VERSION.SDK_INT);
                 e8VarL.t(912213584L);
-                this.f5057h = new m1(applicationContext, (h8) e8VarL.i());
+                this.f5130h = new m1(applicationContext, (h8) e8VarL.i());
             }
             h();
         }
@@ -394,39 +394,39 @@ public class ProxyBillingActivity extends Activity {
             m0.l("ProxyBillingActivity", "Launching Play Store billing flow from savedInstanceState");
             this.b = bundle.getBoolean("send_cancelled_broadcast_if_finished", false);
             if (bundle.containsKey("in_app_message_result_receiver")) {
-                this.f5051a = (ResultReceiver) bundle.getParcelable("in_app_message_result_receiver");
+                this.f5124a = (ResultReceiver) bundle.getParcelable("in_app_message_result_receiver");
             }
-            this.f5052c = bundle.getBoolean("IS_FLOW_FROM_FIRST_PARTY_CLIENT", false);
-            this.f5053d = bundle.getInt("activity_code", 100);
+            this.f5125c = bundle.getBoolean("IS_FLOW_FROM_FIRST_PARTY_CLIENT", false);
+            this.f5126d = bundle.getInt("activity_code", 100);
             if (bundle.containsKey("billingClientTransactionId")) {
-                this.f5054e = bundle.getLong("billingClientTransactionId");
+                this.f5127e = bundle.getLong("billingClientTransactionId");
             }
             if (bundle.containsKey("wasServiceAutoReconnected")) {
-                this.f5055f = bundle.getBoolean("wasServiceAutoReconnected");
+                this.f5128f = bundle.getBoolean("wasServiceAutoReconnected");
                 return;
             }
             return;
         }
         m0.l("ProxyBillingActivity", "Launching Play Store billing flow");
-        this.f5053d = 100;
+        this.f5126d = 100;
         if (getIntent().hasExtra("BUY_INTENT")) {
             pendingIntent = (PendingIntent) getIntent().getParcelableExtra("BUY_INTENT");
             if (getIntent().hasExtra("IS_FLOW_FROM_FIRST_PARTY_CLIENT") && getIntent().getBooleanExtra("IS_FLOW_FROM_FIRST_PARTY_CLIENT", false)) {
-                this.f5052c = true;
-                this.f5053d = 110;
+                this.f5125c = true;
+                this.f5126d = 110;
             }
         } else if (getIntent().hasExtra("IN_APP_MESSAGE_INTENT")) {
             pendingIntent = (PendingIntent) getIntent().getParcelableExtra("IN_APP_MESSAGE_INTENT");
-            this.f5051a = (ResultReceiver) getIntent().getParcelableExtra("in_app_message_result_receiver");
-            this.f5053d = 101;
+            this.f5124a = (ResultReceiver) getIntent().getParcelableExtra("in_app_message_result_receiver");
+            this.f5126d = 101;
         } else {
             pendingIntent = null;
         }
         if (getIntent().hasExtra("billingClientTransactionId")) {
-            this.f5054e = getIntent().getLongExtra("billingClientTransactionId", 0L);
+            this.f5127e = getIntent().getLongExtra("billingClientTransactionId", 0L);
         }
         if (getIntent().hasExtra("wasServiceAutoReconnected")) {
-            this.f5055f = getIntent().getBooleanExtra("wasServiceAutoReconnected", false);
+            this.f5128f = getIntent().getBooleanExtra("wasServiceAutoReconnected", false);
         }
         try {
             this.b = true;
@@ -437,19 +437,19 @@ public class ProxyBillingActivity extends Activity {
                 } else {
                     bundle2 = null;
                 }
-                startIntentSenderForResult(pendingIntent.getIntentSender(), this.f5053d, new Intent(), 0, 0, 0, bundle2);
+                startIntentSenderForResult(pendingIntent.getIntentSender(), this.f5126d, new Intent(), 0, 0, 0, bundle2);
             }
             bundle3 = ActivityOptions.makeBasic().setPendingIntentBackgroundActivityStartMode(3).toBundle();
             bundle2 = bundle3;
-            startIntentSenderForResult(pendingIntent.getIntentSender(), this.f5053d, new Intent(), 0, 0, 0, bundle2);
+            startIntentSenderForResult(pendingIntent.getIntentSender(), this.f5126d, new Intent(), 0, 0, 0, bundle2);
         } catch (IntentSender.SendIntentException e11) {
             m0.n("ProxyBillingActivity", "Got exception while trying to start a purchase flow.", e11);
-            ResultReceiver resultReceiver = this.f5051a;
+            ResultReceiver resultReceiver = this.f5124a;
             if (resultReceiver != null) {
                 resultReceiver.send(0, null);
             } else {
-                Intent intentF = f(s7.INTENT_SENDER_EXCEPTION, this.f5054e, false);
-                if (this.f5052c) {
+                Intent intentF = f(s7.INTENT_SENDER_EXCEPTION, this.f5127e, false);
+                if (this.f5125c) {
                     intentF.putExtra("IS_FIRST_PARTY_PURCHASE", true);
                 }
                 sendBroadcast(intentF);
@@ -464,9 +464,9 @@ public class ProxyBillingActivity extends Activity {
         d dVarA;
         super.onDestroy();
         if (d()) {
-            dVarA = this.f5056g.a();
+            dVarA = this.f5129g.a();
             try {
-                unregisterReceiver(this.f5056g);
+                unregisterReceiver(this.f5129g);
             } catch (RuntimeException e10) {
                 m0.n("ProxyBillingActivity", "Failed to unregister receiver.", e10);
             }
@@ -482,13 +482,13 @@ public class ProxyBillingActivity extends Activity {
                 intentG.putExtra("RESPONSE_CODE", 1);
                 intentG.putExtra("DEBUG_MESSAGE", "Billing dialog closed.");
             }
-            if (this.f5052c) {
+            if (this.f5125c) {
                 intentG.putExtra("IS_FIRST_PARTY_PURCHASE", true);
             }
-            int i10 = this.f5053d;
+            int i10 = this.f5126d;
             if (i10 == 110 || i10 == 100) {
                 intentG.putExtra("INTENT_SOURCE", "LAUNCH_BILLING_FLOW");
-                intentG.putExtra("billingClientTransactionId", this.f5054e);
+                intentG.putExtra("billingClientTransactionId", this.f5127e);
             }
             sendBroadcast(intentG);
         }
@@ -497,14 +497,14 @@ public class ProxyBillingActivity extends Activity {
     @Override // android.app.Activity
     public void onSaveInstanceState(@NonNull Bundle bundle) {
         super.onSaveInstanceState(bundle);
-        ResultReceiver resultReceiver = this.f5051a;
+        ResultReceiver resultReceiver = this.f5124a;
         if (resultReceiver != null) {
             bundle.putParcelable("in_app_message_result_receiver", resultReceiver);
         }
         bundle.putBoolean("send_cancelled_broadcast_if_finished", this.b);
-        bundle.putBoolean("IS_FLOW_FROM_FIRST_PARTY_CLIENT", this.f5052c);
-        bundle.putInt("activity_code", this.f5053d);
-        bundle.putLong("billingClientTransactionId", this.f5054e);
-        bundle.putBoolean("wasServiceAutoReconnected", this.f5055f);
+        bundle.putBoolean("IS_FLOW_FROM_FIRST_PARTY_CLIENT", this.f5125c);
+        bundle.putInt("activity_code", this.f5126d);
+        bundle.putLong("billingClientTransactionId", this.f5127e);
+        bundle.putBoolean("wasServiceAutoReconnected", this.f5128f);
     }
 }

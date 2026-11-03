@@ -13,17 +13,17 @@ import androidx.core.view.o0;
 import androidx.core.view.y;
 import b7.ImageViewTarget;
 import com.roblox.client.IncomingCallActivity;
+import dv.j;
 import e.u0;
 import e.x;
-import fv.j;
 import k6.d0;
-import oi.f;
+import mi.f;
 import org.greenrobot.eventbus.ThreadMode;
-import sg.m0;
-import sg.n0;
-import th.h;
+import rg.m0;
+import rg.n0;
+import rh.h;
+import vl.g;
 import x6.ImageRequest;
-import xl.g;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class IncomingCallActivity extends j.b implements g.a {
@@ -41,8 +41,8 @@ public class IncomingCallActivity extends j.b implements g.a {
         return new Intent(context, (Class<?>) IncomingCallActivity.class).putExtra("EXTRA_ACCEPT_INTENT", intent).putExtra("EXTRA_IS_ACCEPT_ENABLED", z10).putExtra("EXTRA_DECLINE_INTENT", intent2).putExtra("EXTRA_CALLER_ID", j10).putExtra("EXTRA_CALLER_COMBINED_NAME", str);
     }
 
-    @Override // xl.g.a
-    public void C(String str, boolean z10) {
+    @Override // vl.g.a
+    public void B(String str, boolean z10) {
     }
 
     public final /* synthetic */ void I1(Intent intent, View view) {
@@ -65,26 +65,26 @@ public class IncomingCallActivity extends j.b implements g.a {
     }
 
     public final void K1(ImageView imageView, String str) {
-        d0.a(this).c(new ImageRequest.a(this).c(str).v(new ImageViewTarget(imageView)).b());
+        d0.a(this).d(new ImageRequest.a(this).c(str).v(new ImageViewTarget(imageView)).b());
     }
 
-    @Override // xl.g.a
-    public void V(String str) {
+    @Override // vl.g.a
+    public void U(String str) {
         finish();
     }
 
-    @Override // xl.g.a
+    @Override // vl.g.a
     public void m0(String str) {
     }
 
-    @Override // xl.g.a
+    @Override // vl.g.a
     public void o(String str, String str2, String str3, String str4, String str5, String str6) {
     }
 
     @j(threadMode = ThreadMode.MAIN)
-    public void onAvatarHeadshotsRetrievedEvent(ph.b bVar) {
+    public void onAvatarHeadshotsRetrievedEvent(oh.b bVar) {
         if (bVar.a().contains(Long.valueOf(this.E))) {
-            K1(this.G, dh.b.b().d(this.E).a());
+            K1(this.G, ch.b.b().d(this.E).a());
         }
     }
 
@@ -92,13 +92,13 @@ public class IncomingCallActivity extends j.b implements g.a {
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         x.b(this, u0.a(0, 0), u0.a(0, 0));
-        setContentView(n0.f30877c);
-        if (h.a().p0()) {
+        setContentView(n0.f30482c);
+        if (h.a().u0()) {
             View viewFindViewById = findViewById(m0.L);
             final int paddingBottom = viewFindViewById.getPaddingBottom();
-            o0.A0(viewFindViewById, new y() { // from class: sg.a0
+            o0.A0(viewFindViewById, new y() { // from class: rg.a0
                 @Override // androidx.core.view.y
-                public final WindowInsetsCompat K(View view, WindowInsetsCompat windowInsetsCompat) {
+                public final WindowInsetsCompat J(View view, WindowInsetsCompat windowInsetsCompat) {
                     return IncomingCallActivity.F1(paddingBottom, view, windowInsetsCompat);
                 }
             });
@@ -108,16 +108,16 @@ public class IncomingCallActivity extends j.b implements g.a {
         final Intent intent = (Intent) getIntent().getParcelableExtra("EXTRA_ACCEPT_INTENT");
         final boolean booleanExtra = getIntent().getBooleanExtra("EXTRA_IS_ACCEPT_ENABLED", true);
         final Intent intent2 = (Intent) getIntent().getParcelableExtra("EXTRA_DECLINE_INTENT");
-        findViewById(m0.J).setOnClickListener(new View.OnClickListener() { // from class: sg.b0
+        findViewById(m0.J).setOnClickListener(new View.OnClickListener() { // from class: rg.b0
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
-                this.f30738a.I1(intent2, view);
+                this.f30340a.I1(intent2, view);
             }
         });
-        findViewById(m0.I).setOnClickListener(new View.OnClickListener() { // from class: sg.c0
+        findViewById(m0.I).setOnClickListener(new View.OnClickListener() { // from class: rg.c0
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
-                this.f30745a.J1(intent, booleanExtra, view);
+                this.f30347a.J1(intent, booleanExtra, view);
             }
         });
         ImageView imageView = (ImageView) findViewById(m0.K);
@@ -132,10 +132,10 @@ public class IncomingCallActivity extends j.b implements g.a {
         } else {
             getWindow().addFlags(6815873);
         }
-        fv.c.d().n(this);
+        dv.c.d().n(this);
         g.x().g(this);
         if (this.E > 0) {
-            dh.a aVarD = dh.b.b().d(this.E);
+            ch.a aVarD = ch.b.b().d(this.E);
             if (aVarD == null) {
                 f.b(this.E);
             } else if (aVarD.a() == null) {
@@ -157,16 +157,16 @@ public class IncomingCallActivity extends j.b implements g.a {
         }
         this.G = null;
         this.H = null;
-        fv.c.d().p(this);
+        dv.c.d().p(this);
         g.x().w(this);
     }
 
-    @Override // xl.g.a
+    @Override // vl.g.a
     public void p(String str, String str2, String str3, String str4, String str5, String str6) {
     }
 
-    @Override // xl.g.a
-    public void v(String str, String str2) {
+    @Override // vl.g.a
+    public void u(String str, String str2) {
         finish();
     }
 }

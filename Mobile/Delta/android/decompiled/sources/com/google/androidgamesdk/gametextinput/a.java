@@ -6,14 +6,14 @@ import android.view.inputmethod.EditorInfo;
 public final class a {
 
     /* JADX INFO: renamed from: com.google.androidgamesdk.gametextinput.a$a, reason: collision with other inner class name */
-    public static final class C0125a {
+    public static final class C0129a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public int f8387a;
+        public int f8461a;
         public int b;
 
-        public C0125a(int i10, int i11) {
-            this.f8387a = i10;
+        public C0129a(int i10, int i11) {
+            this.f8461a = i10;
             this.b = i11;
         }
     }

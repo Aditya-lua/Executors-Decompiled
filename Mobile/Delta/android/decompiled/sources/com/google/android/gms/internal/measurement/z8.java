@@ -11,7 +11,7 @@ import android.util.Log;
 public final class z8 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static volatile ge.k f6968a = ge.k.a();
+    public static volatile he.k f7042a = he.k.a();
     public static final Object b = new Object();
 
     /* JADX WARN: Code duplicated, block: B:29:0x0079 A[Catch: all -> 0x004b, TRY_LEAVE, TryCatch #1 {all -> 0x004b, blocks: (B:12:0x0035, B:14:0x003d, B:15:0x0049, B:19:0x004d, B:21:0x0059, B:25:0x0069, B:27:0x006f, B:34:0x008a, B:35:0x0094, B:29:0x0079, B:30:0x007d, B:31:0x0083), top: B:43:0x0035 }] */
@@ -23,13 +23,13 @@ public final class z8 {
             Log.e("PhenotypeClientHelper", String.valueOf(authority).concat(" is an unsupported authority. Only com.google.android.gms.phenotype authority is supported."));
             return false;
         }
-        if (f6968a.c()) {
-            return ((Boolean) f6968a.b()).booleanValue();
+        if (f7042a.c()) {
+            return ((Boolean) f7042a.b()).booleanValue();
         }
         synchronized (b) {
             try {
-                if (f6968a.c()) {
-                    return ((Boolean) f6968a.b()).booleanValue();
+                if (f7042a.c()) {
+                    return ((Boolean) f7042a.b()).booleanValue();
                 }
                 if (!"com.google.android.gms".equals(context.getPackageName())) {
                     ProviderInfo providerInfoResolveContentProvider = context.getPackageManager().resolveContentProvider("com.google.android.gms.phenotype", Build.VERSION.SDK_INT < 29 ? 0 : 268435456);
@@ -44,8 +44,8 @@ public final class z8 {
                 } else if ((context.getPackageManager().getApplicationInfo("com.google.android.gms", 0).flags & 129) != 0) {
                     z10 = true;
                 }
-                f6968a = ge.k.d(Boolean.valueOf(z10));
-                return ((Boolean) f6968a.b()).booleanValue();
+                f7042a = he.k.d(Boolean.valueOf(z10));
+                return ((Boolean) f7042a.b()).booleanValue();
             } catch (Throwable th2) {
                 throw th2;
             }

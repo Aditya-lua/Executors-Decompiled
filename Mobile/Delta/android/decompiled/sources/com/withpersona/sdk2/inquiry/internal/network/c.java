@@ -1,7 +1,7 @@
 package com.withpersona.sdk2.inquiry.internal.network;
 
 import com.withpersona.sdk2.inquiry.network.core.InternalErrorInfo;
-import jt.l;
+import gt.l;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;

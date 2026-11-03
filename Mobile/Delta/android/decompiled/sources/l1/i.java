@@ -6,39 +6,39 @@ import n0.a2;
 public final class i extends p {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f22905a;
+    public final String f23299a;
     public final int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final a2.c f22906c;
+    public final a2.c f23300c;
 
     public static final class b extends p.a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public String f22907a;
+        public String f23301a;
         public Integer b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public a2.c f22908c;
+        public a2.c f23302c;
 
         @Override // l1.p.a
         public p b() {
             String str = "";
-            if (this.f22907a == null) {
+            if (this.f23301a == null) {
                 str = " mimeType";
             }
             if (this.b == null) {
                 str = str + " profile";
             }
             if (str.isEmpty()) {
-                return new i(this.f22907a, this.b.intValue(), this.f22908c);
+                return new i(this.f23301a, this.b.intValue(), this.f23302c);
             }
             throw new IllegalStateException("Missing required properties:" + str);
         }
 
         @Override // l1.p.a
         public p.a c(a2.c cVar) {
-            this.f22908c = cVar;
+            this.f23302c = cVar;
             return this;
         }
 
@@ -46,7 +46,7 @@ public final class i extends p {
             if (str == null) {
                 throw new NullPointerException("Null mimeType");
             }
-            this.f22907a = str;
+            this.f23301a = str;
             return this;
         }
 
@@ -60,7 +60,7 @@ public final class i extends p {
 
     @Override // l1.l
     public String a() {
-        return this.f22905a;
+        return this.f23299a;
     }
 
     @Override // l1.l
@@ -70,7 +70,7 @@ public final class i extends p {
 
     @Override // l1.p
     public a2.c d() {
-        return this.f22906c;
+        return this.f23300c;
     }
 
     public boolean equals(Object obj) {
@@ -80,7 +80,7 @@ public final class i extends p {
         }
         if (obj instanceof p) {
             p pVar = (p) obj;
-            if (this.f22905a.equals(pVar.a()) && this.b == pVar.b() && ((cVar = this.f22906c) != null ? cVar.equals(pVar.d()) : pVar.d() == null)) {
+            if (this.f23299a.equals(pVar.a()) && this.b == pVar.b() && ((cVar = this.f23300c) != null ? cVar.equals(pVar.d()) : pVar.d() == null)) {
                 return true;
             }
         }
@@ -88,18 +88,18 @@ public final class i extends p {
     }
 
     public int hashCode() {
-        int iHashCode = (((this.f22905a.hashCode() ^ 1000003) * 1000003) ^ this.b) * 1000003;
-        a2.c cVar = this.f22906c;
+        int iHashCode = (((this.f23299a.hashCode() ^ 1000003) * 1000003) ^ this.b) * 1000003;
+        a2.c cVar = this.f23300c;
         return iHashCode ^ (cVar == null ? 0 : cVar.hashCode());
     }
 
     public String toString() {
-        return "VideoMimeInfo{mimeType=" + this.f22905a + ", profile=" + this.b + ", compatibleVideoProfile=" + this.f22906c + "}";
+        return "VideoMimeInfo{mimeType=" + this.f23299a + ", profile=" + this.b + ", compatibleVideoProfile=" + this.f23300c + "}";
     }
 
     public i(String str, int i10, a2.c cVar) {
-        this.f22905a = str;
+        this.f23299a = str;
         this.b = i10;
-        this.f22906c = cVar;
+        this.f23300c = cVar;
     }
 }

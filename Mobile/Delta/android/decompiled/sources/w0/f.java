@@ -17,10 +17,10 @@ public final class f extends a<androidx.camera.core.d> {
     @Override // w0.a, w0.c
     /* JADX INFO: renamed from: c, reason: merged with bridge method [inline-methods] */
     public void b(androidx.camera.core.d dVar) {
-        if (d(dVar.H2())) {
+        if (d(dVar.I2())) {
             super.b(dVar);
         } else {
-            this.f33578d.a((T) dVar);
+            this.f33784d.a((T) dVar);
         }
     }
 

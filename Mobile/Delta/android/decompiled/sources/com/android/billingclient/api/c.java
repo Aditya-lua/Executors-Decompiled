@@ -15,52 +15,52 @@ import v7.g1;
 public class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f5095a;
+    public boolean f5168a;
     public String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public String f5096c;
+    public String f5169c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public C0110c f5097d;
+    public C0114c f5170d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public n0 f5098e;
+    public n0 f5171e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public ArrayList f5099f;
+    public ArrayList f5172f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public boolean f5100g;
+    public boolean f5173g;
 
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public String f5101a;
+        public String f5174a;
         public String b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public List f5102c;
+        public List f5175c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public boolean f5103d;
+        public boolean f5176d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public C0110c.a f5104e;
+        public C0114c.a f5177e;
 
         public /* synthetic */ a(g1 g1Var) {
-            C0110c.a aVarA = C0110c.a();
-            C0110c.a.b(aVarA);
-            this.f5104e = aVarA;
+            C0114c.a aVarA = C0114c.a();
+            C0114c.a.b(aVarA);
+            this.f5177e = aVarA;
         }
 
         @NonNull
         public c a() {
-            List list = this.f5102c;
+            List list = this.f5175c;
             if (list == null || list.isEmpty()) {
                 throw new IllegalArgumentException("Details of the products must be provided.");
             }
-            List list2 = this.f5102c;
+            List list2 = this.f5175c;
             if (list2 != null) {
                 Iterator it = list2.iterator();
                 while (it.hasNext()) {
@@ -70,21 +70,21 @@ public class c {
                 }
             }
             c cVar = new c(null);
-            cVar.f5095a = !((b) this.f5102c.get(0)).c().g().isEmpty();
-            cVar.b = this.f5101a;
-            cVar.f5096c = this.b;
-            cVar.f5097d = this.f5104e.a();
-            cVar.f5099f = new ArrayList();
-            cVar.f5100g = this.f5103d;
-            List list3 = this.f5102c;
-            cVar.f5098e = list3 != null ? n0.i(list3) : n0.k();
+            cVar.f5168a = !((b) this.f5175c.get(0)).c().g().isEmpty();
+            cVar.b = this.f5174a;
+            cVar.f5169c = this.b;
+            cVar.f5170d = this.f5177e.a();
+            cVar.f5172f = new ArrayList();
+            cVar.f5173g = this.f5176d;
+            List list3 = this.f5175c;
+            cVar.f5171e = list3 != null ? n0.i(list3) : n0.k();
             cVar.getClass();
             return cVar;
         }
 
         @NonNull
         public a b(@NonNull String str) {
-            this.f5101a = str;
+            this.f5174a = str;
             return this;
         }
 
@@ -96,7 +96,7 @@ public class c {
 
         @NonNull
         public a d(@NonNull List<b> list) {
-            this.f5102c = new ArrayList(list);
+            this.f5175c = new ArrayList(list);
             return this;
         }
     }
@@ -104,26 +104,26 @@ public class c {
     public static final class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final e f5105a;
+        public final e f5178a;
         public final String b;
 
         public static class a {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public e f5106a;
+            public e f5179a;
             public String b;
 
             public /* synthetic */ a(g1 g1Var) {
             }
 
-            public static /* bridge */ /* synthetic */ C0109b d(a aVar) {
+            public static /* bridge */ /* synthetic */ C0113b d(a aVar) {
                 aVar.getClass();
                 return null;
             }
 
             @NonNull
             public b a() {
-                x.c(this.f5106a, "ProductDetails is required for constructing ProductDetailsParams.");
+                x.c(this.f5179a, "ProductDetails is required for constructing ProductDetailsParams.");
                 return new b(this, null);
             }
 
@@ -138,7 +138,7 @@ public class c {
 
             @NonNull
             public a c(@NonNull e eVar) {
-                this.f5106a = eVar;
+                this.f5179a = eVar;
                 if (eVar.b() != null) {
                     eVar.b().getClass();
                     e.b bVarB = eVar.b();
@@ -151,11 +151,11 @@ public class c {
         }
 
         /* JADX INFO: renamed from: com.android.billingclient.api.c$b$b, reason: collision with other inner class name */
-        public static class C0109b {
+        public static class C0113b {
         }
 
         public /* synthetic */ b(a aVar, g1 g1Var) {
-            this.f5105a = aVar.f5106a;
+            this.f5178a = aVar.f5179a;
             this.b = aVar.b;
             a.d(aVar);
         }
@@ -165,13 +165,13 @@ public class c {
             return new a(null);
         }
 
-        public C0109b a() {
+        public C0113b a() {
             return null;
         }
 
         @NonNull
         public final e c() {
-            return this.f5105a;
+            return this.f5178a;
         }
 
         public final String d() {
@@ -180,59 +180,59 @@ public class c {
     }
 
     /* JADX INFO: renamed from: com.android.billingclient.api.c$c, reason: collision with other inner class name */
-    public static class C0110c {
+    public static class C0114c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public String f5107a;
+        public String f5180a;
         public String b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public int f5108c = 0;
+        public int f5181c = 0;
 
         /* JADX INFO: renamed from: com.android.billingclient.api.c$c$a */
         public static class a {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public String f5109a;
+            public String f5182a;
             public String b;
 
             /* JADX INFO: renamed from: c, reason: collision with root package name */
-            public boolean f5110c;
+            public boolean f5183c;
 
             /* JADX INFO: renamed from: d, reason: collision with root package name */
-            public int f5111d = 0;
+            public int f5184d = 0;
 
             public /* synthetic */ a(g1 g1Var) {
             }
 
             public static /* synthetic */ a b(a aVar) {
-                aVar.f5110c = true;
+                aVar.f5183c = true;
                 return aVar;
             }
 
             @NonNull
-            public C0110c a() {
+            public C0114c a() {
                 boolean z10 = true;
                 g1 g1Var = null;
-                if (TextUtils.isEmpty(this.f5109a) && TextUtils.isEmpty(null)) {
+                if (TextUtils.isEmpty(this.f5182a) && TextUtils.isEmpty(null)) {
                     z10 = false;
                 }
                 boolean zIsEmpty = TextUtils.isEmpty(this.b);
                 if (z10 && !zIsEmpty) {
                     throw new IllegalArgumentException("Please provide Old SKU purchase information(token/id) or original external transaction id, not both.");
                 }
-                if (!this.f5110c && !z10 && zIsEmpty) {
+                if (!this.f5183c && !z10 && zIsEmpty) {
                     throw new IllegalArgumentException("Old SKU purchase information(token/id) or original external transaction id must be provided.");
                 }
-                C0110c c0110c = new C0110c(g1Var);
-                c0110c.f5107a = this.f5109a;
-                c0110c.f5108c = this.f5111d;
-                c0110c.b = this.b;
-                return c0110c;
+                C0114c c0114c = new C0114c(g1Var);
+                c0114c.f5180a = this.f5182a;
+                c0114c.f5181c = this.f5184d;
+                c0114c.b = this.b;
+                return c0114c;
             }
         }
 
-        public /* synthetic */ C0110c(g1 g1Var) {
+        public /* synthetic */ C0114c(g1 g1Var) {
         }
 
         @NonNull
@@ -241,11 +241,11 @@ public class c {
         }
 
         public final int b() {
-            return this.f5108c;
+            return this.f5181c;
         }
 
         public final String c() {
-            return this.f5107a;
+            return this.f5180a;
         }
 
         public final String d() {
@@ -270,7 +270,7 @@ public class c {
     }
 
     public final int d() {
-        return this.f5097d.b();
+        return this.f5170d.b();
     }
 
     public long e() {
@@ -279,12 +279,12 @@ public class c {
 
     public final d f() {
         e.b next;
-        if (this.f5098e.isEmpty()) {
-            return h.f5172i;
+        if (this.f5171e.isEmpty()) {
+            return h.f5245i;
         }
-        b bVar = (b) this.f5098e.get(0);
-        for (int i10 = 1; i10 < this.f5098e.size(); i10++) {
-            b bVar2 = (b) this.f5098e.get(i10);
+        b bVar = (b) this.f5171e.get(0);
+        for (int i10 = 1; i10 < this.f5171e.size(); i10++) {
+            b bVar2 = (b) this.f5171e.get(i10);
             if (!bVar2.c().e().equals(bVar.c().e()) && !bVar2.c().e().equals("play_pass_subs")) {
                 return h.a(5, "All products should have same ProductType.");
             }
@@ -292,7 +292,7 @@ public class c {
         String strG = bVar.c().g();
         HashMap map = new HashMap();
         HashSet<String> hashSet = new HashSet();
-        n0 n0Var = this.f5098e;
+        n0 n0Var = this.f5171e;
         int size = n0Var.size();
         for (int i11 = 0; i11 < size; i11++) {
             b bVar3 = (b) n0Var.get(i11);
@@ -329,7 +329,7 @@ public class c {
                 return h.a(5, "Both autoPayDetails and autoPayBalanceThreshold is required for constructing ProductDetailsParams for autopay.");
             }
         }
-        return h.f5172i;
+        return h.f5245i;
     }
 
     public final String g() {
@@ -337,7 +337,7 @@ public class c {
     }
 
     public final String h() {
-        return this.f5096c;
+        return this.f5169c;
     }
 
     @Deprecated
@@ -347,34 +347,34 @@ public class c {
 
     @Deprecated
     public final String j() {
-        return this.f5097d.c();
+        return this.f5170d.c();
     }
 
     public final String k() {
-        return this.f5097d.d();
+        return this.f5170d.d();
     }
 
     @NonNull
     public final ArrayList l() {
         ArrayList arrayList = new ArrayList();
-        arrayList.addAll(this.f5099f);
+        arrayList.addAll(this.f5172f);
         return arrayList;
     }
 
     @NonNull
     public final List m() {
-        return this.f5098e;
+        return this.f5171e;
     }
 
     public final boolean v() {
-        return this.f5100g;
+        return this.f5173g;
     }
 
     public final boolean w() {
-        if (this.b != null || this.f5096c != null || this.f5097d.d() != null || this.f5097d.b() != 0 || this.f5095a || this.f5100g) {
+        if (this.b != null || this.f5169c != null || this.f5170d.d() != null || this.f5170d.b() != 0 || this.f5168a || this.f5173g) {
             return true;
         }
-        n0 n0Var = this.f5098e;
+        n0 n0Var = this.f5171e;
         if (n0Var != null) {
             int size = n0Var.size();
             for (int i10 = 0; i10 < size; i10++) {

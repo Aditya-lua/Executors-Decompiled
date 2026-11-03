@@ -12,7 +12,7 @@ public final class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final b f17884a = new b();
+    public static final b f18423a = new b();
 
     @NotNull
     public static final File a(@NotNull Context context) {

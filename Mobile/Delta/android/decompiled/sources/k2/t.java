@@ -12,23 +12,23 @@ import java.util.Set;
 public final class t {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f22140a;
+    public final String f22364a;
     public final CharSequence b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final CharSequence[] f22141c;
+    public final CharSequence[] f22365c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final boolean f22142d;
+    public final boolean f22366d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final int f22143e;
+    public final int f22367e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final Bundle f22144f;
+    public final Bundle f22368f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final Set<String> f22145g;
+    public final Set<String> f22369g;
 
     public static class a {
         public static RemoteInput a(t tVar) {
@@ -66,49 +66,49 @@ public final class t {
     public static final class d {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final String f22146a;
+        public final String f22370a;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public CharSequence f22148d;
+        public CharSequence f22372d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public CharSequence[] f22149e;
+        public CharSequence[] f22373e;
         public final Set<String> b = new HashSet();
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final Bundle f22147c = new Bundle();
+        public final Bundle f22371c = new Bundle();
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public boolean f22150f = true;
+        public boolean f22374f = true;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public int f22151g = 0;
+        public int f22375g = 0;
 
         public d(String str) {
             if (str == null) {
                 throw new IllegalArgumentException("Result key can't be null");
             }
-            this.f22146a = str;
+            this.f22370a = str;
         }
 
         public t a() {
-            return new t(this.f22146a, this.f22148d, this.f22149e, this.f22150f, this.f22151g, this.f22147c, this.b);
+            return new t(this.f22370a, this.f22372d, this.f22373e, this.f22374f, this.f22375g, this.f22371c, this.b);
         }
 
         public d b(CharSequence charSequence) {
-            this.f22148d = charSequence;
+            this.f22372d = charSequence;
             return this;
         }
     }
 
     public t(String str, CharSequence charSequence, CharSequence[] charSequenceArr, boolean z10, int i10, Bundle bundle, Set<String> set) {
-        this.f22140a = str;
+        this.f22364a = str;
         this.b = charSequence;
-        this.f22141c = charSequenceArr;
-        this.f22142d = z10;
-        this.f22143e = i10;
-        this.f22144f = bundle;
-        this.f22145g = set;
+        this.f22365c = charSequenceArr;
+        this.f22366d = z10;
+        this.f22367e = i10;
+        this.f22368f = bundle;
+        this.f22369g = set;
         if (f() == 2 && !c()) {
             throw new IllegalArgumentException("setEditChoicesBeforeSending requires setAllowFreeFormInput");
         }
@@ -134,23 +134,23 @@ public final class t {
     }
 
     public boolean c() {
-        return this.f22142d;
+        return this.f22366d;
     }
 
     public Set<String> d() {
-        return this.f22145g;
+        return this.f22369g;
     }
 
     public CharSequence[] e() {
-        return this.f22141c;
+        return this.f22365c;
     }
 
     public int f() {
-        return this.f22143e;
+        return this.f22367e;
     }
 
     public Bundle g() {
-        return this.f22144f;
+        return this.f22368f;
     }
 
     public CharSequence h() {
@@ -158,7 +158,7 @@ public final class t {
     }
 
     public String i() {
-        return this.f22140a;
+        return this.f22364a;
     }
 
     public boolean k() {

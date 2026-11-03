@@ -6,32 +6,32 @@ import android.util.Rational;
 public class u1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public float f17529a;
+    public float f18068a;
     public float b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public float f17530c;
+    public float f18069c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public Rational f17531d;
+    public Rational f18070d;
 
     public u1(float f10, float f11, float f12, Rational rational) {
-        this.f17529a = f10;
+        this.f18068a = f10;
         this.b = f11;
-        this.f17530c = f12;
-        this.f17531d = rational;
+        this.f18069c = f12;
+        this.f18070d = rational;
     }
 
     public float a() {
-        return this.f17530c;
+        return this.f18069c;
     }
 
     public Rational b() {
-        return this.f17531d;
+        return this.f18070d;
     }
 
     public float c() {
-        return this.f17529a;
+        return this.f18068a;
     }
 
     public float d() {

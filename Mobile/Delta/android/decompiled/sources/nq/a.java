@@ -1,78 +1,56 @@
 package nq;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.core.widget.NestedScrollView;
-import jq.t;
-import jq.u;
+import kotlin.Metadata;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class a implements r5.a {
+@Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\bv\u0018\u00002\u00020\u0001:\u0001\u0002\u0082\u0001\u0001\u0003¨\u0006\u0004À\u0006\u0003"}, d2 = {"Lnq/a;", "", "a", "Lnq/a$a;", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public interface a {
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    @NonNull
-    public final CoordinatorLayout f26632a;
+    /* JADX INFO: renamed from: nq.a$a, reason: collision with other inner class name and from toString */
+    @Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0002\b\b\b\u0086\b\u0018\u00002\u00020\u0001B\u0019\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\b\u0002\u0010\u0004\u001a\u00020\u0002¢\u0006\u0004\b\u0005\u0010\u0006J\u0010\u0010\b\u001a\u00020\u0007HÖ\u0001¢\u0006\u0004\b\b\u0010\tJ\u0010\u0010\u000b\u001a\u00020\nHÖ\u0001¢\u0006\u0004\b\u000b\u0010\fJ\u001a\u0010\u000f\u001a\u00020\u00022\b\u0010\u000e\u001a\u0004\u0018\u00010\rHÖ\u0003¢\u0006\u0004\b\u000f\u0010\u0010R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0011\u0010\u0012\u001a\u0004\b\u0011\u0010\u0013R\u0017\u0010\u0004\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0014\u0010\u0012\u001a\u0004\b\u0014\u0010\u0013¨\u0006\u0015"}, d2 = {"Lnq/a$a;", "Lnq/a;", "", "force", "skipBackendCall", "<init>", "(ZZ)V", "", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "", "other", "equals", "(Ljava/lang/Object;)Z", "a", "Z", "()Z", "b", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final /* data */ class CancelRequest implements a {
 
-    @NonNull
-    public final ConstraintLayout b;
+        /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
+        public final boolean force;
 
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    @NonNull
-    public final FrameLayout f26633c;
+        /* JADX INFO: renamed from: b, reason: from kotlin metadata and from toString */
+        public final boolean skipBackendCall;
 
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    @NonNull
-    public final NestedScrollView f26634d;
+        public CancelRequest(boolean z10, boolean z11) {
+            this.force = z10;
+            this.skipBackendCall = z11;
+        }
 
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    @NonNull
-    public final View f26635e;
+        /* JADX INFO: renamed from: a, reason: from getter */
+        public final boolean getForce() {
+            return this.force;
+        }
 
-    public a(@NonNull CoordinatorLayout coordinatorLayout, @NonNull ConstraintLayout constraintLayout, @NonNull FrameLayout frameLayout, @NonNull NestedScrollView nestedScrollView, @NonNull View view) {
-        this.f26632a = coordinatorLayout;
-        this.b = constraintLayout;
-        this.f26633c = frameLayout;
-        this.f26634d = nestedScrollView;
-        this.f26635e = view;
-    }
+        /* JADX INFO: renamed from: b, reason: from getter */
+        public final boolean getSkipBackendCall() {
+            return this.skipBackendCall;
+        }
 
-    @NonNull
-    public static a a(@NonNull View view) {
-        View viewA;
-        int i10 = t.f21655c;
-        ConstraintLayout constraintLayout = (ConstraintLayout) r5.b.a(view, i10);
-        if (constraintLayout != null) {
-            i10 = t.f21658f;
-            FrameLayout frameLayout = (FrameLayout) r5.b.a(view, i10);
-            if (frameLayout != null) {
-                i10 = t.f21659g;
-                NestedScrollView nestedScrollView = (NestedScrollView) r5.b.a(view, i10);
-                if (nestedScrollView != null && (viewA = r5.b.a(view, (i10 = t.f21677y))) != null) {
-                    return new a((CoordinatorLayout) view, constraintLayout, frameLayout, nestedScrollView, viewA);
-                }
+        public boolean equals(@Nullable Object other) {
+            if (this == other) {
+                return true;
             }
+            if (!(other instanceof CancelRequest)) {
+                return false;
+            }
+            CancelRequest cancelRequest = (CancelRequest) other;
+            return this.force == cancelRequest.force && this.skipBackendCall == cancelRequest.skipBackendCall;
         }
-        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
-    }
 
-    @NonNull
-    public static a c(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
-        View viewInflate = layoutInflater.inflate(u.f21679a, viewGroup, false);
-        if (z10) {
-            viewGroup.addView(viewInflate);
+        public int hashCode() {
+            return (Boolean.hashCode(this.force) * 31) + Boolean.hashCode(this.skipBackendCall);
         }
-        return a(viewInflate);
-    }
 
-    @Override // r5.a
-    @NonNull
-    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public CoordinatorLayout getRoot() {
-        return this.f26632a;
+        @NotNull
+        public String toString() {
+            return "CancelRequest(force=" + this.force + ", skipBackendCall=" + this.skipBackendCall + ")";
+        }
     }
 }

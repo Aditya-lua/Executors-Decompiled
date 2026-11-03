@@ -24,80 +24,80 @@ import k2.r;
 public class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Context f23870a;
+    public Context f24520a;
     public String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public String f23871c;
+    public String f24521c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public Intent[] f23872d;
+    public Intent[] f24522d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public ComponentName f23873e;
+    public ComponentName f24523e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public CharSequence f23874f;
+    public CharSequence f24524f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public CharSequence f23875g;
+    public CharSequence f24525g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public CharSequence f23876h;
+    public CharSequence f24526h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public IconCompat f23877i;
+    public IconCompat f24527i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public r[] f23878j;
+    public r[] f24528j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public Set<String> f23879k;
+    public Set<String> f24529k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public l2.d f23880l;
+    public l2.d f24530l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public boolean f23881m;
+    public boolean f24531m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public int f23882n;
+    public int f24532n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public PersistableBundle f23883o;
+    public PersistableBundle f24533o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public long f23884p;
+    public long f24534p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public UserHandle f23885q;
+    public UserHandle f24535q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public boolean f23886r;
+    public boolean f24536r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public boolean f23887s;
+    public boolean f24537s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public boolean f23888t;
+    public boolean f24538t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public boolean f23889u;
+    public boolean f24539u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public boolean f23890v;
+    public boolean f24540v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public boolean f23891w = true;
+    public boolean f24541w = true;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public boolean f23892x;
+    public boolean f24542x;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public int f23893y;
+    public int f24543y;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public int f23894z;
+    public int f24544z;
 
     public static class a {
         public static void a(ShortcutInfo.Builder builder, int i10) {
@@ -151,41 +151,41 @@ public class c {
     }
 
     public final PersistableBundle a() {
-        if (this.f23883o == null) {
-            this.f23883o = new PersistableBundle();
+        if (this.f24533o == null) {
+            this.f24533o = new PersistableBundle();
         }
-        r[] rVarArr = this.f23878j;
+        r[] rVarArr = this.f24528j;
         if (rVarArr != null && rVarArr.length > 0) {
-            this.f23883o.putInt("extraPersonCount", rVarArr.length);
+            this.f24533o.putInt("extraPersonCount", rVarArr.length);
             int i10 = 0;
-            while (i10 < this.f23878j.length) {
-                PersistableBundle persistableBundle = this.f23883o;
+            while (i10 < this.f24528j.length) {
+                PersistableBundle persistableBundle = this.f24533o;
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append("extraPerson_");
                 int i11 = i10 + 1;
                 sb2.append(i11);
-                persistableBundle.putPersistableBundle(sb2.toString(), this.f23878j[i10].k());
+                persistableBundle.putPersistableBundle(sb2.toString(), this.f24528j[i10].k());
                 i10 = i11;
             }
         }
-        l2.d dVar = this.f23880l;
+        l2.d dVar = this.f24530l;
         if (dVar != null) {
-            this.f23883o.putString("extraLocusId", dVar.a());
+            this.f24533o.putString("extraLocusId", dVar.a());
         }
-        this.f23883o.putBoolean("extraLongLived", this.f23881m);
-        return this.f23883o;
+        this.f24533o.putBoolean("extraLongLived", this.f24531m);
+        return this.f24533o;
     }
 
     public Set<String> c() {
-        return this.f23879k;
+        return this.f24529k;
     }
 
     public PersistableBundle d() {
-        return this.f23883o;
+        return this.f24533o;
     }
 
     public IconCompat e() {
-        return this.f23877i;
+        return this.f24527i;
     }
 
     public String f() {
@@ -193,71 +193,71 @@ public class c {
     }
 
     public Intent g() {
-        Intent[] intentArr = this.f23872d;
+        Intent[] intentArr = this.f24522d;
         return intentArr[intentArr.length - 1];
     }
 
     public CharSequence j() {
-        return this.f23875g;
+        return this.f24525g;
     }
 
     public int l() {
-        return this.f23882n;
+        return this.f24532n;
     }
 
     public CharSequence m() {
-        return this.f23874f;
+        return this.f24524f;
     }
 
     public boolean n(int i10) {
-        return (i10 & this.f23894z) != 0;
+        return (i10 & this.f24544z) != 0;
     }
 
     public ShortcutInfo o() {
-        ShortcutInfo.Builder intents = new ShortcutInfo.Builder(this.f23870a, this.b).setShortLabel(this.f23874f).setIntents(this.f23872d);
-        IconCompat iconCompat = this.f23877i;
+        ShortcutInfo.Builder intents = new ShortcutInfo.Builder(this.f24520a, this.b).setShortLabel(this.f24524f).setIntents(this.f24522d);
+        IconCompat iconCompat = this.f24527i;
         if (iconCompat != null) {
-            intents.setIcon(iconCompat.p(this.f23870a));
+            intents.setIcon(iconCompat.p(this.f24520a));
         }
-        if (!TextUtils.isEmpty(this.f23875g)) {
-            intents.setLongLabel(this.f23875g);
+        if (!TextUtils.isEmpty(this.f24525g)) {
+            intents.setLongLabel(this.f24525g);
         }
-        if (!TextUtils.isEmpty(this.f23876h)) {
-            intents.setDisabledMessage(this.f23876h);
+        if (!TextUtils.isEmpty(this.f24526h)) {
+            intents.setDisabledMessage(this.f24526h);
         }
-        ComponentName componentName = this.f23873e;
+        ComponentName componentName = this.f24523e;
         if (componentName != null) {
             intents.setActivity(componentName);
         }
-        Set<String> set = this.f23879k;
+        Set<String> set = this.f24529k;
         if (set != null) {
             intents.setCategories(set);
         }
-        intents.setRank(this.f23882n);
-        PersistableBundle persistableBundle = this.f23883o;
+        intents.setRank(this.f24532n);
+        PersistableBundle persistableBundle = this.f24533o;
         if (persistableBundle != null) {
             intents.setExtras(persistableBundle);
         }
         if (Build.VERSION.SDK_INT >= 29) {
-            r[] rVarArr = this.f23878j;
+            r[] rVarArr = this.f24528j;
             if (rVarArr != null && rVarArr.length > 0) {
                 int length = rVarArr.length;
                 Person[] personArr = new Person[length];
                 for (int i10 = 0; i10 < length; i10++) {
-                    personArr[i10] = this.f23878j[i10].i();
+                    personArr[i10] = this.f24528j[i10].i();
                 }
                 intents.setPersons(personArr);
             }
-            l2.d dVar = this.f23880l;
+            l2.d dVar = this.f24530l;
             if (dVar != null) {
                 intents.setLocusId(dVar.c());
             }
-            intents.setLongLived(this.f23881m);
+            intents.setLongLived(this.f24531m);
         } else {
             intents.setExtras(a());
         }
         if (Build.VERSION.SDK_INT >= 33) {
-            a.a(intents, this.f23894z);
+            a.a(intents, this.f24544z);
         }
         return intents.build();
     }
@@ -265,78 +265,78 @@ public class c {
     public static class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final c f23895a;
+        public final c f24545a;
         public boolean b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public Set<String> f23896c;
+        public Set<String> f24546c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public Map<String, Map<String, List<String>>> f23897d;
+        public Map<String, Map<String, List<String>>> f24547d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public Uri f23898e;
+        public Uri f24548e;
 
         public b(Context context, String str) {
             c cVar = new c();
-            this.f23895a = cVar;
-            cVar.f23870a = context;
+            this.f24545a = cVar;
+            cVar.f24520a = context;
             cVar.b = str;
         }
 
         public c a() {
-            if (TextUtils.isEmpty(this.f23895a.f23874f)) {
+            if (TextUtils.isEmpty(this.f24545a.f24524f)) {
                 throw new IllegalArgumentException("Shortcut must have a non-empty label");
             }
-            c cVar = this.f23895a;
-            Intent[] intentArr = cVar.f23872d;
+            c cVar = this.f24545a;
+            Intent[] intentArr = cVar.f24522d;
             if (intentArr == null || intentArr.length == 0) {
                 throw new IllegalArgumentException("Shortcut must have an intent");
             }
             if (this.b) {
-                if (cVar.f23880l == null) {
-                    cVar.f23880l = new l2.d(cVar.b);
+                if (cVar.f24530l == null) {
+                    cVar.f24530l = new l2.d(cVar.b);
                 }
-                this.f23895a.f23881m = true;
+                this.f24545a.f24531m = true;
             }
-            if (this.f23896c != null) {
-                c cVar2 = this.f23895a;
-                if (cVar2.f23879k == null) {
-                    cVar2.f23879k = new HashSet();
+            if (this.f24546c != null) {
+                c cVar2 = this.f24545a;
+                if (cVar2.f24529k == null) {
+                    cVar2.f24529k = new HashSet();
                 }
-                this.f23895a.f23879k.addAll(this.f23896c);
+                this.f24545a.f24529k.addAll(this.f24546c);
             }
-            if (this.f23897d != null) {
-                c cVar3 = this.f23895a;
-                if (cVar3.f23883o == null) {
-                    cVar3.f23883o = new PersistableBundle();
+            if (this.f24547d != null) {
+                c cVar3 = this.f24545a;
+                if (cVar3.f24533o == null) {
+                    cVar3.f24533o = new PersistableBundle();
                 }
-                for (String str : this.f23897d.keySet()) {
-                    Map<String, List<String>> map = this.f23897d.get(str);
-                    this.f23895a.f23883o.putStringArray(str, (String[]) map.keySet().toArray(new String[0]));
+                for (String str : this.f24547d.keySet()) {
+                    Map<String, List<String>> map = this.f24547d.get(str);
+                    this.f24545a.f24533o.putStringArray(str, (String[]) map.keySet().toArray(new String[0]));
                     for (String str2 : map.keySet()) {
                         List<String> list = map.get(str2);
-                        this.f23895a.f23883o.putStringArray(str + "/" + str2, list == null ? new String[0] : (String[]) list.toArray(new String[0]));
+                        this.f24545a.f24533o.putStringArray(str + "/" + str2, list == null ? new String[0] : (String[]) list.toArray(new String[0]));
                     }
                 }
             }
-            if (this.f23898e != null) {
-                c cVar4 = this.f23895a;
-                if (cVar4.f23883o == null) {
-                    cVar4.f23883o = new PersistableBundle();
+            if (this.f24548e != null) {
+                c cVar4 = this.f24545a;
+                if (cVar4.f24533o == null) {
+                    cVar4.f24533o = new PersistableBundle();
                 }
-                this.f23895a.f23883o.putString("extraSliceUri", t2.b.a(this.f23898e));
+                this.f24545a.f24533o.putString("extraSliceUri", t2.b.a(this.f24548e));
             }
-            return this.f23895a;
+            return this.f24545a;
         }
 
         public b b(ComponentName componentName) {
-            this.f23895a.f23873e = componentName;
+            this.f24545a.f24523e = componentName;
             return this;
         }
 
         public b c(IconCompat iconCompat) {
-            this.f23895a.f23877i = iconCompat;
+            this.f24545a.f24527i = iconCompat;
             return this;
         }
 
@@ -345,59 +345,59 @@ public class c {
         }
 
         public b e(Intent[] intentArr) {
-            this.f23895a.f23872d = intentArr;
+            this.f24545a.f24522d = intentArr;
             return this;
         }
 
         public b f(boolean z10) {
-            this.f23895a.f23881m = z10;
+            this.f24545a.f24531m = z10;
             return this;
         }
 
         public b g(int i10) {
-            this.f23895a.f23882n = i10;
+            this.f24545a.f24532n = i10;
             return this;
         }
 
         public b h(CharSequence charSequence) {
-            this.f23895a.f23874f = charSequence;
+            this.f24545a.f24524f = charSequence;
             return this;
         }
 
         public b(Context context, ShortcutInfo shortcutInfo) {
             c cVar = new c();
-            this.f23895a = cVar;
-            cVar.f23870a = context;
+            this.f24545a = cVar;
+            cVar.f24520a = context;
             cVar.b = shortcutInfo.getId();
-            cVar.f23871c = shortcutInfo.getPackage();
+            cVar.f24521c = shortcutInfo.getPackage();
             Intent[] intents = shortcutInfo.getIntents();
-            cVar.f23872d = (Intent[]) Arrays.copyOf(intents, intents.length);
-            cVar.f23873e = shortcutInfo.getActivity();
-            cVar.f23874f = shortcutInfo.getShortLabel();
-            cVar.f23875g = shortcutInfo.getLongLabel();
-            cVar.f23876h = shortcutInfo.getDisabledMessage();
+            cVar.f24522d = (Intent[]) Arrays.copyOf(intents, intents.length);
+            cVar.f24523e = shortcutInfo.getActivity();
+            cVar.f24524f = shortcutInfo.getShortLabel();
+            cVar.f24525g = shortcutInfo.getLongLabel();
+            cVar.f24526h = shortcutInfo.getDisabledMessage();
             int i10 = Build.VERSION.SDK_INT;
             if (i10 >= 28) {
-                cVar.f23893y = shortcutInfo.getDisabledReason();
+                cVar.f24543y = shortcutInfo.getDisabledReason();
             } else {
-                cVar.f23893y = shortcutInfo.isEnabled() ? 0 : 3;
+                cVar.f24543y = shortcutInfo.isEnabled() ? 0 : 3;
             }
-            cVar.f23879k = shortcutInfo.getCategories();
-            cVar.f23878j = c.k(shortcutInfo.getExtras());
-            cVar.f23885q = shortcutInfo.getUserHandle();
-            cVar.f23884p = shortcutInfo.getLastChangedTimestamp();
+            cVar.f24529k = shortcutInfo.getCategories();
+            cVar.f24528j = c.k(shortcutInfo.getExtras());
+            cVar.f24535q = shortcutInfo.getUserHandle();
+            cVar.f24534p = shortcutInfo.getLastChangedTimestamp();
             if (i10 >= 30) {
-                cVar.f23886r = shortcutInfo.isCached();
+                cVar.f24536r = shortcutInfo.isCached();
             }
-            cVar.f23887s = shortcutInfo.isDynamic();
-            cVar.f23888t = shortcutInfo.isPinned();
-            cVar.f23889u = shortcutInfo.isDeclaredInManifest();
-            cVar.f23890v = shortcutInfo.isImmutable();
-            cVar.f23891w = shortcutInfo.isEnabled();
-            cVar.f23892x = shortcutInfo.hasKeyFieldsOnly();
-            cVar.f23880l = c.h(shortcutInfo);
-            cVar.f23882n = shortcutInfo.getRank();
-            cVar.f23883o = shortcutInfo.getExtras();
+            cVar.f24537s = shortcutInfo.isDynamic();
+            cVar.f24538t = shortcutInfo.isPinned();
+            cVar.f24539u = shortcutInfo.isDeclaredInManifest();
+            cVar.f24540v = shortcutInfo.isImmutable();
+            cVar.f24541w = shortcutInfo.isEnabled();
+            cVar.f24542x = shortcutInfo.hasKeyFieldsOnly();
+            cVar.f24530l = c.h(shortcutInfo);
+            cVar.f24532n = shortcutInfo.getRank();
+            cVar.f24533o = shortcutInfo.getExtras();
         }
     }
 }

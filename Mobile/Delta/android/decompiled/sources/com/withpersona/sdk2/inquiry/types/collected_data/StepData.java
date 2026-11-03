@@ -166,7 +166,7 @@ public abstract class StepData implements Closeable, Parcelable {
         public void close() {
             Iterator<T> it = this.captures.iterator();
             while (it.hasNext()) {
-                Iterator<T> it2 = ((GovernmentIdCapture) it.next()).d3().iterator();
+                Iterator<T> it2 = ((GovernmentIdCapture) it.next()).f3().iterator();
                 while (it2.hasNext()) {
                     ((GovernmentIdCapture.Frame) it2.next()).getData().delete();
                 }

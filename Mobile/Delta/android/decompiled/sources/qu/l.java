@@ -1,185 +1,214 @@
 package qu;
 
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
+import java.util.concurrent.atomic.AtomicReferenceArray;
+import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 import kotlin.Metadata;
-import kotlin.Unit;
-import kotlin.coroutines.CoroutineContext;
-import ku.i1;
-import ku.v0;
-import ku.y0;
+import kotlin.jvm.internal.c0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0000\u0018\u00002\u00020\u00012\u00020\u0002:\u00015B!\u0012\u0006\u0010\u0003\u001a\u00020\u0001\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0006¢\u0006\u0004\b\b\u0010\tJ!\u0010\n\u001a\u00020\u00012\u0006\u0010\u0005\u001a\u00020\u00042\b\u0010\u0007\u001a\u0004\u0018\u00010\u0006H\u0016¢\u0006\u0004\b\n\u0010\u000bJ#\u0010\u0012\u001a\u00020\u00112\u0006\u0010\r\u001a\u00020\f2\n\u0010\u0010\u001a\u00060\u000ej\u0002`\u000fH\u0016¢\u0006\u0004\b\u0012\u0010\u0013J#\u0010\u0014\u001a\u00020\u00112\u0006\u0010\r\u001a\u00020\f2\n\u0010\u0010\u001a\u00060\u000ej\u0002`\u000fH\u0017¢\u0006\u0004\b\u0014\u0010\u0013J\u000f\u0010\u0015\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\u0015\u0010\u0016J&\u0010\u001b\u001a\u00020\u00112\u0006\u0010\u0018\u001a\u00020\u00172\f\u0010\u001a\u001a\b\u0012\u0004\u0012\u00020\u00110\u0019H\u0096\u0001¢\u0006\u0004\b\u001b\u0010\u001cJ,\u0010\u001e\u001a\u00020\u001d2\u0006\u0010\u0018\u001a\u00020\u00172\n\u0010\u0010\u001a\u00060\u000ej\u0002`\u000f2\u0006\u0010\r\u001a\u00020\fH\u0096\u0001¢\u0006\u0004\b\u001e\u0010\u001fJ\u000f\u0010!\u001a\u00020 H\u0002¢\u0006\u0004\b!\u0010\"J\u0017\u0010#\u001a\n\u0018\u00010\u000ej\u0004\u0018\u0001`\u000fH\u0002¢\u0006\u0004\b#\u0010$R\u0014\u0010\u0003\u001a\u00020\u00018\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b%\u0010&R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b'\u0010(R\u0016\u0010\u0007\u001a\u0004\u0018\u00010\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001e\u0010)R\u001e\u0010-\u001a\f\u0012\b\u0012\u00060\u000ej\u0002`\u000f0*8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b+\u0010,R\u0018\u00102\u001a\u00060.j\u0002`/8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b0\u00101R\u000b\u00104\u001a\u0002038\u0002X\u0082\u0004¨\u00066"}, d2 = {"Lqu/l;", "Lku/l0;", "Lku/y0;", "dispatcher", "", "parallelism", "", "name", "<init>", "(Lku/l0;ILjava/lang/String;)V", "P", "(ILjava/lang/String;)Lku/l0;", "Lkotlin/coroutines/CoroutineContext;", "context", "Ljava/lang/Runnable;", "Lkotlinx/coroutines/Runnable;", "block", "", "w", "(Lkotlin/coroutines/CoroutineContext;Ljava/lang/Runnable;)V", "F", "toString", "()Ljava/lang/String;", "", "timeMillis", "Lku/n;", "continuation", "o", "(JLku/n;)V", "Lku/i1;", "f", "(JLjava/lang/Runnable;Lkotlin/coroutines/CoroutineContext;)Lku/i1;", "", "f0", "()Z", "e0", "()Ljava/lang/Runnable;", "d", "Lku/l0;", "e", "I", "Ljava/lang/String;", "Lqu/q;", "g", "Lqu/q;", "queue", "", "Lkotlinx/coroutines/internal/SynchronizedObject;", "h", "Ljava/lang/Object;", "workerAllocationLock", "Lkotlinx/atomicfu/AtomicInt;", "runningWorkers", "a", "kotlinx-coroutines-core"}, k = 1, mv = {2, 1, 0}, xi = 48)
-public final class l extends ku.l0 implements y0 {
-
-    /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final /* synthetic */ AtomicIntegerFieldUpdater f29651i = AtomicIntegerFieldUpdater.newUpdater(l.class, "runningWorkers$volatile");
+@Metadata(d1 = {"\u0000\\\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0000\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u0019\u0010\u0006\u001a\u0004\u0018\u00010\u00042\u0006\u0010\u0005\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u0006\u0010\u0007J\u001d\u0010\u000b\u001a\u0004\u0018\u00010\u00042\n\u0010\n\u001a\u00060\bj\u0002`\tH\u0002¢\u0006\u0004\b\u000b\u0010\fJ\u0019\u0010\u000f\u001a\u0004\u0018\u00010\u00042\u0006\u0010\u000e\u001a\u00020\rH\u0002¢\u0006\u0004\b\u000f\u0010\u0010J!\u0010\u0012\u001a\u0004\u0018\u00010\u00042\u0006\u0010\u0011\u001a\u00020\b2\u0006\u0010\u000e\u001a\u00020\rH\u0002¢\u0006\u0004\b\u0012\u0010\u0013J+\u0010\u0017\u001a\u00020\u00162\n\u0010\n\u001a\u00060\bj\u0002`\t2\u000e\u0010\u0015\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00040\u0014H\u0002¢\u0006\u0004\b\u0017\u0010\u0018J\u0017\u0010\u001b\u001a\u00020\r2\u0006\u0010\u001a\u001a\u00020\u0019H\u0002¢\u0006\u0004\b\u001b\u0010\u001cJ\u0011\u0010\u001d\u001a\u0004\u0018\u00010\u0004H\u0002¢\u0006\u0004\b\u001d\u0010\u001eJ\u0015\u0010 \u001a\u00020\u001f*\u0004\u0018\u00010\u0004H\u0002¢\u0006\u0004\b \u0010!J\u000f\u0010\"\u001a\u0004\u0018\u00010\u0004¢\u0006\u0004\b\"\u0010\u001eJ!\u0010$\u001a\u0004\u0018\u00010\u00042\u0006\u0010\u0005\u001a\u00020\u00042\b\b\u0002\u0010#\u001a\u00020\r¢\u0006\u0004\b$\u0010%J)\u0010&\u001a\u00020\u00162\n\u0010\n\u001a\u00060\bj\u0002`\t2\u000e\u0010\u0015\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00040\u0014¢\u0006\u0004\b&\u0010\u0018J\u000f\u0010'\u001a\u0004\u0018\u00010\u0004¢\u0006\u0004\b'\u0010\u001eJ\u0015\u0010)\u001a\u00020\u001f2\u0006\u0010(\u001a\u00020\u0019¢\u0006\u0004\b)\u0010*R\u001c\u0010-\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00040+8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b$\u0010,R\u0014\u00100\u001a\u00020\b8BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b.\u0010/R\u0014\u00102\u001a\u00020\b8@X\u0080\u0004¢\u0006\u0006\u001a\u0004\b1\u0010/R\u0013\u00104\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u0004038\u0002X\u0082\u0004R\u000b\u00106\u001a\u0002058\u0002X\u0082\u0004R\u000b\u00107\u001a\u0002058\u0002X\u0082\u0004R\u000b\u00108\u001a\u0002058\u0002X\u0082\u0004¨\u00069"}, d2 = {"Lqu/l;", "", "<init>", "()V", "Lqu/h;", "task", "b", "(Lqu/h;)Lqu/h;", "", "Lkotlinx/coroutines/scheduling/StealingMode;", "stealingMode", "p", "(I)Lqu/h;", "", "onlyBlocking", "o", "(Z)Lqu/h;", "index", "q", "(IZ)Lqu/h;", "Lkotlin/jvm/internal/c0;", "stolenTaskRef", "", "s", "(ILkotlin/jvm/internal/c0;)J", "Lqu/d;", "queue", "n", "(Lqu/d;)Z", "m", "()Lqu/h;", "", "c", "(Lqu/h;)V", "k", "fair", "a", "(Lqu/h;Z)Lqu/h;", "r", "l", "globalQueue", "j", "(Lqu/d;)V", "Ljava/util/concurrent/atomic/AtomicReferenceArray;", "Ljava/util/concurrent/atomic/AtomicReferenceArray;", "buffer", "e", "()I", "bufferSize", "i", "size", "Lkotlinx/atomicfu/AtomicRef;", "lastScheduledTask", "Lkotlinx/atomicfu/AtomicInt;", "producerIndex", "consumerIndex", "blockingTasksInBuffer", "kotlinx-coroutines-core"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class l {
+    public static final /* synthetic */ AtomicReferenceFieldUpdater b = AtomicReferenceFieldUpdater.newUpdater(l.class, Object.class, "lastScheduledTask$volatile");
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final /* synthetic */ y0 f29652c;
+    public static final /* synthetic */ AtomicIntegerFieldUpdater f30084c = AtomicIntegerFieldUpdater.newUpdater(l.class, "producerIndex$volatile");
 
-    /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public static final /* synthetic */ AtomicIntegerFieldUpdater f30085d = AtomicIntegerFieldUpdater.newUpdater(l.class, "consumerIndex$volatile");
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public static final /* synthetic */ AtomicIntegerFieldUpdater f30086e = AtomicIntegerFieldUpdater.newUpdater(l.class, "blockingTasksInBuffer$volatile");
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final ku.l0 dispatcher;
+    public final AtomicReferenceArray<h> buffer = new AtomicReferenceArray<>(128);
+    private volatile /* synthetic */ int blockingTasksInBuffer$volatile;
+    private volatile /* synthetic */ int consumerIndex$volatile;
+    private volatile /* synthetic */ Object lastScheduledTask$volatile;
+    private volatile /* synthetic */ int producerIndex$volatile;
 
-    /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
-    public final int parallelism;
-
-    /* JADX INFO: renamed from: f, reason: collision with root package name and from kotlin metadata */
     @Nullable
-    public final String name;
-
-    /* JADX INFO: renamed from: g, reason: collision with root package name and from kotlin metadata */
-    @NotNull
-    public final q<Runnable> queue;
-
-    /* JADX INFO: renamed from: h, reason: collision with root package name and from kotlin metadata */
-    @NotNull
-    public final Object workerAllocationLock;
-    private volatile /* synthetic */ int runningWorkers$volatile;
-
-    @Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0005\b\u0082\u0004\u0018\u00002\u00060\u0001j\u0002`\u0002B\u0013\u0012\n\u0010\u0003\u001a\u00060\u0001j\u0002`\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u000f\u0010\u0007\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\u0007\u0010\bR\u001a\u0010\u0003\u001a\u00060\u0001j\u0002`\u00028\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\t\u0010\n¨\u0006\u000b"}, d2 = {"Lqu/l$a;", "Ljava/lang/Runnable;", "Lkotlinx/coroutines/Runnable;", "currentTask", "<init>", "(Lqu/l;Ljava/lang/Runnable;)V", "", "run", "()V", "a", "Ljava/lang/Runnable;", "kotlinx-coroutines-core"}, k = 1, mv = {2, 1, 0}, xi = 48)
-    public final class a implements Runnable {
-
-        /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
-        @NotNull
-        public Runnable currentTask;
-
-        public a(Runnable runnable) {
-            this.currentTask = runnable;
+    public final h a(@NotNull h task, boolean fair) {
+        if (fair) {
+            return b(task);
         }
+        h hVar = (h) b.getAndSet(this, task);
+        if (hVar == null) {
+            return null;
+        }
+        return b(hVar);
+    }
 
-        @Override // java.lang.Runnable
-        public void run() {
-            int i10 = 0;
-            while (true) {
-                try {
-                    this.currentTask.run();
-                } catch (Throwable th2) {
-                    ku.n0.a(kotlin.coroutines.e.f22525a, th2);
-                }
-                try {
-                    Runnable runnableE0 = l.this.e0();
-                    if (runnableE0 == null) {
-                        return;
-                    }
-                    this.currentTask = runnableE0;
-                    i10++;
-                    if (i10 >= 16 && j.d(l.this.dispatcher, l.this)) {
-                        j.c(l.this.dispatcher, l.this, this);
-                        return;
-                    }
-                } catch (Throwable th3) {
-                    Object obj = l.this.workerAllocationLock;
-                    l lVar = l.this;
-                    synchronized (obj) {
-                        l.b0().decrementAndGet(lVar);
-                        throw th3;
-                    }
-                }
+    public final h b(h task) {
+        if (e() == 127) {
+            return task;
+        }
+        if (task.taskContext) {
+            f30086e.incrementAndGet(this);
+        }
+        int i10 = f30084c.get(this) & 127;
+        while (this.buffer.get(i10) != null) {
+            Thread.yield();
+        }
+        this.buffer.lazySet(i10, task);
+        f30084c.incrementAndGet(this);
+        return null;
+    }
+
+    public final void c(h hVar) {
+        if (hVar == null || !hVar.taskContext) {
+            return;
+        }
+        f30086e.decrementAndGet(this);
+    }
+
+    public final int e() {
+        return f30084c.get(this) - f30085d.get(this);
+    }
+
+    public final int i() {
+        return b.get(this) != null ? e() + 1 : e();
+    }
+
+    public final void j(@NotNull d globalQueue) {
+        h hVar = (h) b.getAndSet(this, null);
+        if (hVar != null) {
+            globalQueue.a(hVar);
+        }
+        while (n(globalQueue)) {
+        }
+    }
+
+    @Nullable
+    public final h k() {
+        h hVar = (h) b.getAndSet(this, null);
+        return hVar == null ? m() : hVar;
+    }
+
+    @Nullable
+    public final h l() {
+        return o(true);
+    }
+
+    public final h m() {
+        h andSet;
+        while (true) {
+            int i10 = f30085d.get(this);
+            if (i10 - f30084c.get(this) == 0) {
+                return null;
+            }
+            int i11 = i10 & 127;
+            if (f30085d.compareAndSet(this, i10, i10 + 1) && (andSet = this.buffer.getAndSet(i11, null)) != null) {
+                c(andSet);
+                return andSet;
             }
         }
+    }
+
+    public final boolean n(d queue) {
+        h hVarM = m();
+        if (hVarM == null) {
+            return false;
+        }
+        queue.a(hVarM);
+        return true;
+    }
+
+    public final h o(boolean onlyBlocking) {
+        h hVar;
+        do {
+            hVar = (h) b.get(this);
+            if (hVar == null || hVar.taskContext != onlyBlocking) {
+                int i10 = f30085d.get(this);
+                int i11 = f30084c.get(this);
+                while (i10 != i11) {
+                    if (onlyBlocking && f30086e.get(this) == 0) {
+                        return null;
+                    }
+                    i11--;
+                    h hVarQ = q(i11, onlyBlocking);
+                    if (hVarQ != null) {
+                        return hVarQ;
+                    }
+                }
+                return null;
+            }
+        } while (!y1.b.a(b, this, hVar, null));
+        return hVar;
+    }
+
+    public final h p(int stealingMode) {
+        int i10 = f30085d.get(this);
+        int i11 = f30084c.get(this);
+        boolean z10 = stealingMode == 1;
+        while (i10 != i11) {
+            if (z10 && f30086e.get(this) == 0) {
+                return null;
+            }
+            int i12 = i10 + 1;
+            h hVarQ = q(i10, z10);
+            if (hVarQ != null) {
+                return hVarQ;
+            }
+            i10 = i12;
+        }
+        return null;
+    }
+
+    public final h q(int index, boolean onlyBlocking) {
+        int i10 = index & 127;
+        h hVar = this.buffer.get(i10);
+        if (hVar == null || hVar.taskContext != onlyBlocking || !ku.l.a(this.buffer, i10, hVar, null)) {
+            return null;
+        }
+        if (onlyBlocking) {
+            f30086e.decrementAndGet(this);
+        }
+        return hVar;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public l(@NotNull ku.l0 l0Var, int i10, @Nullable String str) {
-        y0 y0Var = l0Var instanceof y0 ? (y0) l0Var : null;
-        this.f29652c = y0Var == null ? v0.a() : y0Var;
-        this.dispatcher = l0Var;
-        this.parallelism = i10;
-        this.name = str;
-        this.queue = new q<>(false);
-        this.workerAllocationLock = new Object();
-    }
-
-    public static final /* synthetic */ AtomicIntegerFieldUpdater b0() {
-        return f29651i;
-    }
-
-    @Override // ku.l0
-    public void F(@NotNull CoroutineContext context, @NotNull Runnable block) {
-        Runnable runnableE0;
-        this.queue.a(block);
-        if (f29651i.get(this) >= this.parallelism || !f0() || (runnableE0 = e0()) == null) {
-            return;
+    public final long r(int stealingMode, @NotNull c0<h> stolenTaskRef) {
+        h hVarP;
+        T t8;
+        h hVarM;
+        if (stealingMode == 3) {
+            hVarM = m();
+        } else {
+            hVarP = p(stealingMode);
         }
-        try {
-            this.dispatcher.F(this, new a(runnableE0));
-        } catch (Throwable th2) {
-            f29651i.decrementAndGet(this);
-            throw th2;
+        if (t8 == 0) {
+            t8 = hVarP;
+            t8 = hVarM;
+            return s(stealingMode, stolenTaskRef);
         }
+        t8 = hVarP;
+        t8 = hVarM;
+        stolenTaskRef.f23007a = t8;
+        return -1L;
     }
 
-    @Override // ku.l0
-    @NotNull
-    public ku.l0 P(int parallelism, @Nullable String name) {
-        m.a(parallelism);
-        return parallelism >= this.parallelism ? m.b(this, name) : super.P(parallelism, name);
-    }
-
-    public final Runnable e0() {
-        while (true) {
-            Runnable runnableE = this.queue.e();
-            if (runnableE != null) {
-                return runnableE;
+    /* JADX WARN: Type inference failed for: r0v2, types: [T, java.lang.Object, qu.h] */
+    public final long s(int stealingMode, c0<h> stolenTaskRef) {
+        ?? r8;
+        do {
+            r8 = (h) b.get(this);
+            if (r8 == 0) {
+                return -2L;
             }
-            synchronized (this.workerAllocationLock) {
-                f29651i.decrementAndGet(this);
-                if (this.queue.c() == 0) {
-                    return null;
-                }
-                f29651i.incrementAndGet(this);
+            if (((r8.taskContext ? 1 : 2) & stealingMode) == 0) {
+                return -2L;
             }
-        }
-    }
-
-    @Override // ku.y0
-    @NotNull
-    public i1 f(long timeMillis, @NotNull Runnable block, @NotNull CoroutineContext context) {
-        return this.f29652c.f(timeMillis, block, context);
-    }
-
-    public final boolean f0() {
-        synchronized (this.workerAllocationLock) {
-            if (f29651i.get(this) >= this.parallelism) {
-                return false;
+            long jA = j.f30082f.a() - r8.submissionTime;
+            long j10 = j.b;
+            if (jA < j10) {
+                return j10 - jA;
             }
-            f29651i.incrementAndGet(this);
-            return true;
-        }
-    }
-
-    @Override // ku.y0
-    public void o(long timeMillis, @NotNull ku.n<? super Unit> continuation) {
-        this.f29652c.o(timeMillis, continuation);
-    }
-
-    @Override // ku.l0
-    @NotNull
-    /* JADX INFO: renamed from: toString */
-    public String getName() {
-        String str = this.name;
-        if (str != null) {
-            return str;
-        }
-        return this.dispatcher + ".limitedParallelism(" + this.parallelism + ')';
-    }
-
-    @Override // ku.l0
-    public void w(@NotNull CoroutineContext context, @NotNull Runnable block) {
-        Runnable runnableE0;
-        this.queue.a(block);
-        if (f29651i.get(this) >= this.parallelism || !f0() || (runnableE0 = e0()) == null) {
-            return;
-        }
-        try {
-            j.c(this.dispatcher, this, new a(runnableE0));
-        } catch (Throwable th2) {
-            f29651i.decrementAndGet(this);
-            throw th2;
-        }
+        } while (!y1.b.a(b, this, r8, null));
+        stolenTaskRef.f23007a = r8;
+        return -1L;
     }
 }

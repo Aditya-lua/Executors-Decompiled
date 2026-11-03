@@ -19,19 +19,19 @@ public final class x {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final String f17934a;
+    public static final String f18473a;
 
     static {
         String strI = x5.w.i("ProcessUtils");
         Intrinsics.checkNotNullExpressionValue(strI, "tagWithPrefix(...)");
-        f17934a = strI;
+        f18473a = strI;
     }
 
     @SuppressLint({"PrivateApi", "DiscouragedPrivateApi"})
     public static final String a(Context context) {
         Object next;
         if (Build.VERSION.SDK_INT >= 28) {
-            return a.f17895a.a();
+            return a.f18434a.a();
         }
         try {
             Method declaredMethod = Class.forName("android.app.ActivityThread", false, p0.class.getClassLoader()).getDeclaredMethod("currentProcessName", null);
@@ -42,7 +42,7 @@ public final class x {
                 return (String) objInvoke;
             }
         } catch (Throwable th2) {
-            x5.w.e().b(f17934a, "Unable to check ActivityThread for processName", th2);
+            x5.w.e().b(f18473a, "Unable to check ActivityThread for processName", th2);
         }
         int iMyPid = Process.myPid();
         Object systemService = context.getSystemService("activity");

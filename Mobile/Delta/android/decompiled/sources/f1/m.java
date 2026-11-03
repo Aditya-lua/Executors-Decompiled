@@ -6,36 +6,36 @@ import g0.v2;
 public final class m extends g1 {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final int f15885d;
+    public final int f16481d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final g1.a f15886e;
+    public final g1.a f16482e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final v2.h f15887f;
+    public final v2.h f16483f;
 
     public m(int i10, g1.a aVar, v2.h hVar) {
-        this.f15885d = i10;
+        this.f16481d = i10;
         if (aVar == null) {
             throw new NullPointerException("Null streamState");
         }
-        this.f15886e = aVar;
-        this.f15887f = hVar;
+        this.f16482e = aVar;
+        this.f16483f = hVar;
     }
 
     @Override // f1.g1
     public int a() {
-        return this.f15885d;
+        return this.f16481d;
     }
 
     @Override // f1.g1
     public v2.h b() {
-        return this.f15887f;
+        return this.f16483f;
     }
 
     @Override // f1.g1
     public g1.a c() {
-        return this.f15886e;
+        return this.f16482e;
     }
 
     public boolean equals(Object obj) {
@@ -45,7 +45,7 @@ public final class m extends g1 {
         }
         if (obj instanceof g1) {
             g1 g1Var = (g1) obj;
-            if (this.f15885d == g1Var.a() && this.f15886e.equals(g1Var.c()) && ((hVar = this.f15887f) != null ? hVar.equals(g1Var.b()) : g1Var.b() == null)) {
+            if (this.f16481d == g1Var.a() && this.f16482e.equals(g1Var.c()) && ((hVar = this.f16483f) != null ? hVar.equals(g1Var.b()) : g1Var.b() == null)) {
                 return true;
             }
         }
@@ -53,12 +53,12 @@ public final class m extends g1 {
     }
 
     public int hashCode() {
-        int iHashCode = (((this.f15885d ^ 1000003) * 1000003) ^ this.f15886e.hashCode()) * 1000003;
-        v2.h hVar = this.f15887f;
+        int iHashCode = (((this.f16481d ^ 1000003) * 1000003) ^ this.f16482e.hashCode()) * 1000003;
+        v2.h hVar = this.f16483f;
         return iHashCode ^ (hVar == null ? 0 : hVar.hashCode());
     }
 
     public String toString() {
-        return "StreamInfo{id=" + this.f15885d + ", streamState=" + this.f15886e + ", inProgressTransformationInfo=" + this.f15887f + "}";
+        return "StreamInfo{id=" + this.f16481d + ", streamState=" + this.f16482e + ", inProgressTransformationInfo=" + this.f16483f + "}";
     }
 }

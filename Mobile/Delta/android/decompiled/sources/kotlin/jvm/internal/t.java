@@ -1,18 +1,18 @@
 package kotlin.jvm.internal;
 
 /* JADX INFO: loaded from: classes2.dex */
-public abstract class t extends x implements hu.j {
+public abstract class t extends x implements fu.j {
     public t() {
     }
 
-    @Override // hu.j
-    public hu.j.a c() {
-        ((hu.j) getReflected()).c();
+    @Override // fu.j
+    public fu.j.a c() {
+        ((fu.j) getReflected()).c();
         return null;
     }
 
     @Override // kotlin.jvm.internal.d
-    public hu.b computeReflected() {
+    public fu.b computeReflected() {
         return d0.g(this);
     }
 

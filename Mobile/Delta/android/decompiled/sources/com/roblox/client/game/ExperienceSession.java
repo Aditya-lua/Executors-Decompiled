@@ -26,98 +26,97 @@ import com.roblox.engine.jni.NativeGLInterface;
 import com.roblox.engine.jni.NativeGLJavaInterface;
 import com.roblox.engine.jni.NativeReportingInterface;
 import com.roblox.engine.jni.RunOnMainEngineJavaCallback;
+import com.roblox.engine.jni.autovalue.NativePurchaseContext;
 import com.roblox.protocols.mediapicker.MediaPickerProtocolV2;
 import com.roblox.universalapp.facialageestimation.FacialAgeEstimationProtocol;
 import com.roblox.universalapp.logging.LoggingProtocol;
-import e4.q;
-import gk.p;
-import sg.a1;
-import sg.c2;
-import sg.f0;
-import sg.m0;
-import sg.q0;
-import sg.y;
-import th.h;
-import wh.i0;
-import wh.l0;
-import wh.t0;
-import wh.v0;
-import wh.x0;
-import wh.y0;
-import xl.g;
+import ek.q;
+import rg.a1;
+import rg.c2;
+import rg.f0;
+import rg.m0;
+import rg.q0;
+import rg.y;
+import rh.h;
+import uh.j0;
+import uh.u0;
+import uh.w0;
+import uh.y0;
+import uh.z0;
+import vl.g;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class ExperienceSession implements v0, ej.a, com.roblox.client.game.a.InterfaceC0139a, g.a {
+public class ExperienceSession implements w0, cj.a, com.roblox.client.game.a.InterfaceC0142a, g.a {
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public static boolean f9052x;
+    public static boolean f9125x;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public x0 f9053a;
+    public y0 f9126a;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public boolean f9055d;
+    public boolean f9128d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public CountDownTimer f9056e;
+    public CountDownTimer f9129e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public d f9057f;
+    public d f9130f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final Bundle f9058g;
+    public final Bundle f9131g;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public i0 f9061j;
+    public j0 f9134j;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public Handler f9063l;
+    public Handler f9136l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public IAPPurchaseManager f9064m;
+    public IAPPurchaseManager f9137m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public y f9065n;
+    public y f9138n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public int f9066o;
+    public int f9139o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public boolean f9067p;
+    public boolean f9140p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public long f9068q;
+    public long f9141q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public y0 f9069r;
+    public z0 f9142r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public ViewGroup f9070s;
+    public ViewGroup f9143s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public ViewTreeObserver.OnGlobalLayoutListener f9071t;
+    public ViewTreeObserver.OnGlobalLayoutListener f9144t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public long f9072u;
+    public long f9145u;
     public final String b = "ExperienceSession";
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f9054c = false;
+    public boolean f9127c = false;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final long f9059h = 30000;
+    public final long f9132h = 30000;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final f f9060i = new f();
+    public final f f9133i = new f();
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public com.roblox.client.game.b f9062k = null;
+    public com.roblox.client.game.b f9135k = null;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public boolean f9073v = false;
+    public boolean f9146v = false;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public boolean f9074w = false;
+    public boolean f9147w = false;
 
     public class a implements Runnable {
         public a() {
@@ -125,7 +124,7 @@ public class ExperienceSession implements v0, ej.a, com.roblox.client.game.a.Int
 
         @Override // java.lang.Runnable
         public void run() {
-            ExperienceSession.this.Z();
+            ExperienceSession.this.b0();
         }
     }
 
@@ -135,9 +134,9 @@ public class ExperienceSession implements v0, ej.a, com.roblox.client.game.a.Int
 
         @Override // com.roblox.engine.jni.EngineExitJavaCallback2
         public void a() {
-            p.h("ExperienceSession", "... (onCreate) gameDidLeave callback invoked.");
-            ExperienceSession.this.G();
-            ExperienceSession.this.T(true);
+            q.h("ExperienceSession", "... (onCreate) gameDidLeave callback invoked.");
+            ExperienceSession.this.I();
+            ExperienceSession.this.Y(true);
         }
     }
 
@@ -148,8 +147,8 @@ public class ExperienceSession implements v0, ej.a, com.roblox.client.game.a.Int
 
         @Override // android.os.CountDownTimer
         public void onFinish() {
-            p.h("ExperienceSession", "CountDownTimer::onFinish -> onGameTimeoutInBackground()");
-            ExperienceSession.this.B();
+            q.h("ExperienceSession", "CountDownTimer::onFinish -> onGameTimeoutInBackground()");
+            ExperienceSession.this.E();
         }
 
         @Override // android.os.CountDownTimer
@@ -160,14 +159,14 @@ public class ExperienceSession implements v0, ej.a, com.roblox.client.game.a.Int
     public interface d extends f0 {
         void m(Bundle bundle);
 
-        q o0();
+        e4.q o0();
     }
 
-    public class e extends y0 {
-        @Override // wh.y0
+    public class e extends z0 {
+        @Override // uh.z0
         public void h(int i10) {
-            p.h("rbx.game.orientation", "setting orientation: " + i10);
-            ExperienceSession.this.H().setRequestedOrientation(i10);
+            q.h("rbx.game.orientation", "setting orientation: " + i10);
+            ExperienceSession.this.J().setRequestedOrientation(i10);
         }
 
         public e() {
@@ -178,21 +177,21 @@ public class ExperienceSession implements v0, ej.a, com.roblox.client.game.a.Int
         public f() {
         }
 
-        public nk.b a() {
-            if (ExperienceSession.this.H() == null) {
+        public lk.b a() {
+            if (ExperienceSession.this.J() == null) {
                 return null;
             }
-            return nk.b.a(ExperienceSession.this.f9070s.getRootView(), ExperienceSession.this.H().getWindowManager(), null, ((com.roblox.client.a) ExperienceSession.this.H()).G1().c());
+            return lk.b.a(ExperienceSession.this.f9143s.getRootView(), ExperienceSession.this.J().getWindowManager(), null, ((com.roblox.client.a) ExperienceSession.this.J()).G1().c());
         }
     }
 
     public ExperienceSession(Bundle bundle) {
-        this.f9058g = bundle;
+        this.f9131g = bundle;
     }
 
-    private void L(View view) {
+    private void N(View view) {
         ViewStub viewStub;
-        if (h.a().G0() && (viewStub = (ViewStub) view.findViewById(m0.R)) != null) {
+        if (h.a().L0() && (viewStub = (ViewStub) view.findViewById(m0.R)) != null) {
             viewStub.inflate();
         }
         RbxKeyboard rbxKeyboard = (RbxKeyboard) view.findViewById(m0.G);
@@ -200,22 +199,22 @@ public class ExperienceSession implements v0, ej.a, com.roblox.client.game.a.Int
             return;
         }
         rbxKeyboard.setBackgroundColor(0);
-        eh.e.d(rbxKeyboard, I(), "SourceSansPro-Regular.ttf");
-        this.f9062k = new com.roblox.client.game.b(rbxKeyboard, this.f9061j, this.f9060i);
-        RobloxApplication.f().registerComponentCallbacks(this.f9062k);
+        dh.e.d(rbxKeyboard, K(), "SourceSansPro-Regular.ttf");
+        this.f9135k = new com.roblox.client.game.b(rbxKeyboard, this.f9134j, this.f9133i);
+        RobloxApplication.f().registerComponentCallbacks(this.f9135k);
     }
 
-    private void k0() {
+    private void n0() {
         Window window;
-        if (Build.VERSION.SDK_INT < 28 || this.f9057f == null || (window = H().getWindow()) == null) {
+        if (Build.VERSION.SDK_INT < 28 || this.f9130f == null || (window = J().getWindow()) == null) {
             return;
         }
         window.getAttributes().layoutInDisplayCutoutMode = 1;
         q0().G1().e(window.getDecorView());
-        if (this.f9053a == null) {
-            this.f9053a = new x0(I());
+        if (this.f9126a == null) {
+            this.f9126a = new y0(K());
         }
-        this.f9053a.i(q0(), q0().G1().a());
+        this.f9126a.i(q0(), q0().G1().a());
     }
 
     @Keep
@@ -223,145 +222,145 @@ public class ExperienceSession implements v0, ej.a, com.roblox.client.game.a.Int
         if (g.x().h() || MediaPickerProtocolV2.isCapturingMedia()) {
             return true;
         }
-        return h.a().s3() && FacialAgeEstimationProtocol.INSTANCE.isInInquiryFlow();
+        return h.a().E3() && FacialAgeEstimationProtocol.INSTANCE.isInInquiryFlow();
     }
 
-    public final void A() {
-        p.h("ExperienceSession", "GameSession cancelScheduledGameExit");
-        CountDownTimer countDownTimer = this.f9056e;
+    @Override // vl.g.a
+    public void B(String str, boolean z10) {
+    }
+
+    public final void D() {
+        q.h("ExperienceSession", "GameSession cancelScheduledGameExit");
+        CountDownTimer countDownTimer = this.f9129e;
         if (countDownTimer != null) {
             countDownTimer.cancel();
-            this.f9056e = null;
+            this.f9129e = null;
         }
     }
 
-    public final void B() {
-        if (H() != null) {
-            p.h("ExperienceSession", "endGameInBackground: call finish() on this GL activity.");
-            D(true);
+    public final void E() {
+        if (J() != null) {
+            q.h("ExperienceSession", "endGameInBackground: call finish() on this GL activity.");
+            F(true);
         }
-        if (h.a().w5()) {
-            p.h("ExperienceSession", "endGameInBackground: setAppSuspended(true)");
+        if (h.a().G5()) {
+            q.h("ExperienceSession", "endGameInBackground: setAppSuspended(true)");
             NativeReportingInterface.setAppSuspended(true);
         }
         NativeGLInterface.setTaskSchedulerBackgroundMode(true, "ES.endGameInBackground");
-        T(true);
+        Y(true);
     }
 
-    @Override // xl.g.a
-    public void C(String str, boolean z10) {
-    }
-
-    public void D(boolean z10) {
-        p.h("ExperienceSession", "Ending game session with place ID " + this.f9072u);
-        this.f9074w = false;
-        A();
+    public void F(boolean z10) {
+        q.h("ExperienceSession", "Ending game session with place ID " + this.f9145u);
+        this.f9147w = false;
+        D();
         g.x().w(this);
         if (!z10) {
             NativeReportingInterface.applicationForegrounded();
         }
-        h0(false);
-        if (this.f9054c) {
-            p.k("ExperienceSession", "Trying to end the session but it has already ended.");
+        j0(false);
+        if (this.f9127c) {
+            q.k("ExperienceSession", "Trying to end the session but it has already ended.");
             return;
         }
-        this.f9054c = true;
-        c0();
+        this.f9127c = true;
+        e0();
         Bundle bundle = new Bundle();
         bundle.putInt("gameExitStatus", 102);
-        if (h.a().g0()) {
-            bundle.putLong(PinShortcutHandler.EXTRA_PLACE_ID, this.f9058g.getLong("roblox_placeId"));
-            bundle.putString("gameId", this.f9058g.getString("roblox_gameId"));
+        if (h.a().l0()) {
+            bundle.putLong(PinShortcutHandler.EXTRA_PLACE_ID, this.f9131g.getLong("roblox_placeId"));
+            bundle.putString("gameId", this.f9131g.getString("roblox_gameId"));
         }
-        boolean zIsChangingConfigurations = H().isChangingConfigurations();
+        boolean zIsChangingConfigurations = J().isChangingConfigurations();
         StringBuilder sb2 = new StringBuilder();
         sb2.append("onDestroy: shutdown = ");
         sb2.append(!zIsChangingConfigurations);
         sb2.append(", hasGameStarted = ");
-        sb2.append(this.f9055d);
-        p.h("ExperienceSession", sb2.toString());
-        if (!zIsChangingConfigurations && this.f9055d) {
-            p.h("ExperienceSession", "onDestroy: Call stopDataModel (SYNC) if the GL fragment is still there...");
+        sb2.append(this.f9128d);
+        q.h("ExperienceSession", sb2.toString());
+        if (!zIsChangingConfigurations && this.f9128d) {
+            q.h("ExperienceSession", "onDestroy: Call stopDataModel (SYNC) if the GL fragment is still there...");
             if (z10) {
-                this.f9061j.j();
+                this.f9134j.j();
             } else {
-                this.f9061j.D();
+                this.f9134j.D();
             }
         }
-        H().runOnUiThread(new Runnable() { // from class: wh.r
+        J().runOnUiThread(new Runnable() { // from class: uh.r
             @Override // java.lang.Runnable
             public final void run() {
-                this.f34368a.N();
+                this.f33045a.P();
             }
         });
         NativeGLJavaInterface.setExitImplementation(null);
-        this.f9057f.m(bundle);
-        RobloxApplication.f().unregisterComponentCallbacks(this.f9062k);
+        this.f9130f.m(bundle);
+        RobloxApplication.f().unregisterComponentCallbacks(this.f9135k);
     }
 
-    public final void E() {
-        p.h("ExperienceSession", "Entering immersive mode");
-        if (this.f9067p) {
-            c2.b(H().getWindow());
+    public final void G() {
+        q.h("ExperienceSession", "Entering immersive mode");
+        if (this.f9140p) {
+            c2.b(J().getWindow());
         } else {
-            p.h("ExperienceSession", "System visibility " + this.f9066o);
-            if (this.f9066o == 0) {
-                this.f9066o = H().getWindow().getDecorView().getSystemUiVisibility();
+            q.h("ExperienceSession", "System visibility " + this.f9139o);
+            if (this.f9139o == 0) {
+                this.f9139o = J().getWindow().getDecorView().getSystemUiVisibility();
             }
-            H().getWindow().getDecorView().setSystemUiVisibility(5894);
+            J().getWindow().getDecorView().setSystemUiVisibility(5894);
         }
-        ((ActivityNativeMain) H()).W1().o(t0.EXPERIENCE);
+        ((ActivityNativeMain) J()).W1().o(u0.EXPERIENCE);
     }
 
-    public final void F() {
-        p.h("ExperienceSession", "Exiting immersive mode");
-        Activity activityH = H();
-        if (activityH == null || activityH.isFinishing()) {
+    public final void H() {
+        q.h("ExperienceSession", "Exiting immersive mode");
+        Activity activityJ = J();
+        if (activityJ == null || activityJ.isFinishing()) {
             return;
         }
-        ((com.roblox.client.a) activityH).W1().o(t0.APP);
-        if (this.f9067p) {
-            c2.c(activityH.getWindow());
+        ((com.roblox.client.a) activityJ).W1().o(u0.APP);
+        if (this.f9140p) {
+            c2.c(activityJ.getWindow());
         } else {
-            activityH.getWindow().getDecorView().setSystemUiVisibility(this.f9066o);
+            activityJ.getWindow().getDecorView().setSystemUiVisibility(this.f9139o);
         }
-        if (a1.Q0(activityH.getResources().getConfiguration())) {
-            activityH.getWindow().getDecorView().post(new Runnable() { // from class: wh.s
+        if (a1.R0(activityJ.getResources().getConfiguration())) {
+            activityJ.getWindow().getDecorView().post(new Runnable() { // from class: uh.s
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f34369a.O();
+                    this.f33047a.Q();
                 }
             });
         }
     }
 
-    public final void G() {
-        p.h("ExperienceSession", "finishGame:");
-        if (((q) H()) != null) {
-            b0();
-            D(false);
+    public final void I() {
+        q.h("ExperienceSession", "finishGame:");
+        if (((e4.q) J()) != null) {
+            d0();
+            F(false);
         }
     }
 
-    public Activity H() {
-        return this.f9057f.o0();
+    public Activity J() {
+        return this.f9130f.o0();
     }
 
-    public Context I() {
-        return this.f9057f.o0();
+    public Context K() {
+        return this.f9130f.o0();
     }
 
-    public final void J() {
-        G();
-        T(false);
+    public final void L() {
+        I();
+        Y(false);
     }
 
-    public final void K() {
-        final View viewFindViewById = H().findViewById(m0.V);
+    public final void M() {
+        final View viewFindViewById = J().findViewById(m0.W);
         if (viewFindViewById == null || viewFindViewById.getVisibility() == 8) {
             return;
         }
-        viewFindViewById.post(new Runnable() { // from class: wh.u
+        viewFindViewById.post(new Runnable() { // from class: uh.u
             @Override // java.lang.Runnable
             public final void run() {
                 viewFindViewById.setVisibility(8);
@@ -369,203 +368,208 @@ public class ExperienceSession implements v0, ej.a, com.roblox.client.game.a.Int
         });
     }
 
-    public boolean M() {
-        d dVar = this.f9057f;
+    public boolean O() {
+        d dVar = this.f9130f;
         if (dVar != null) {
             return dVar.b();
         }
         return false;
     }
 
-    public final /* synthetic */ void N() {
-        if (!h.a().W4()) {
-            H().getWindow().clearFlags(128);
+    public final /* synthetic */ void P() {
+        if (!h.a().j5()) {
+            J().getWindow().clearFlags(128);
         }
-        b0();
-        if (!this.f9067p) {
-            H().getWindow().getDecorView().setOnSystemUiVisibilityChangeListener(null);
+        d0();
+        if (!this.f9140p) {
+            J().getWindow().getDecorView().setOnSystemUiVisibilityChangeListener(null);
         }
-        F();
+        H();
     }
 
-    public final /* synthetic */ void O() {
-        Activity activityH = H();
-        if (activityH == null || activityH.isFinishing()) {
+    public final /* synthetic */ void Q() {
+        Activity activityJ = J();
+        if (activityJ == null || activityJ.isFinishing()) {
             return;
         }
-        c2.b(activityH.getWindow());
+        c2.b(activityJ.getWindow());
     }
 
-    public final /* synthetic */ void P(DialogInterface dialogInterface, int i10) {
+    public final /* synthetic */ void R(DialogInterface dialogInterface, int i10) {
         dialogInterface.dismiss();
-        J();
+        L();
     }
 
-    public final /* synthetic */ void Q(DialogInterface dialogInterface) {
+    public final /* synthetic */ void S(DialogInterface dialogInterface) {
         dialogInterface.dismiss();
-        J();
+        L();
     }
 
-    public final /* synthetic */ void R(int i10) {
-        qi.b.f().u(I());
-        new AlertDialog.Builder(I()).setMessage(i10).setNegativeButton(H().getString(q0.N), new DialogInterface.OnClickListener() { // from class: wh.w
+    @Override // cj.a
+    public void T(int i10) {
+        ((com.roblox.client.b) J()).T(i10);
+    }
+
+    @Override // vl.g.a
+    public void U(String str) {
+    }
+
+    @Override // cj.a
+    public void V(String str) {
+        ((com.roblox.client.b) J()).V(str);
+    }
+
+    public final /* synthetic */ void W(int i10) {
+        oi.b.f().u(K());
+        new AlertDialog.Builder(K()).setMessage(i10).setNegativeButton(J().getString(q0.N), new DialogInterface.OnClickListener() { // from class: uh.x
             @Override // android.content.DialogInterface.OnClickListener
             public final void onClick(DialogInterface dialogInterface, int i11) {
-                this.f34392a.P(dialogInterface, i11);
+                this.f33071a.R(dialogInterface, i11);
             }
-        }).setOnCancelListener(new DialogInterface.OnCancelListener() { // from class: wh.x
+        }).setOnCancelListener(new DialogInterface.OnCancelListener() { // from class: uh.y
             @Override // android.content.DialogInterface.OnCancelListener
             public final void onCancel(DialogInterface dialogInterface) {
-                this.f34393a.Q(dialogInterface);
+                this.f33072a.S(dialogInterface);
             }
         }).create().show();
     }
 
-    public final /* synthetic */ void S(int i10) {
-        if (this.f9054c || (i10 & 4) != 0) {
+    public final /* synthetic */ void X(int i10) {
+        if (this.f9127c || (i10 & 4) != 0) {
             return;
         }
-        E();
+        G();
     }
 
-    public void T(boolean z10) {
-        p.h("ExperienceSession", "onGameEnded: success = " + z10 + ", hasGameStarted = " + this.f9055d);
-        this.f9055d = false;
-    }
-
-    @Override // ej.a
-    public void U(int i10) {
-        ((com.roblox.client.b) H()).U(i10);
-    }
-
-    @Override // xl.g.a
-    public void V(String str) {
-    }
-
-    @Override // ej.a
-    public void W(String str) {
-        ((com.roblox.client.b) H()).W(str);
-    }
-
-    public void X() {
-        p.b("ExperienceSession", "onSurfaceCreated: finished = " + this.f9054c);
-        NativeGLInterface.setTaskSchedulerBackgroundMode(false, "ES.onSurfaceCreated");
-    }
-
-    public void Y() {
-        p.b("ExperienceSession", "onSurfaceDestroyed: finished = " + this.f9054c);
+    public void Y(boolean z10) {
+        q.h("ExperienceSession", "onGameEnded: success = " + z10 + ", hasGameStarted = " + this.f9128d);
+        this.f9128d = false;
     }
 
     public void Z() {
-        if (shouldDisableExperienceIdleTimer()) {
-            p.h("ExperienceSession", "Not pausing game session, user is in a call or capturing media or in a persona session");
-            this.f9074w = true;
-            return;
-        }
-        p.h("ExperienceSession", "Pause game session");
-        this.f9065n.p().d();
-        h0(true);
-        e0();
-        b0();
+        q.b("ExperienceSession", "onSurfaceCreated: finished = " + this.f9127c);
+        NativeGLInterface.setTaskSchedulerBackgroundMode(false, "ES.onSurfaceCreated");
     }
 
-    @Override // wh.v0
+    @Override // uh.w0
     public void a(long j10) {
-        p.h("ExperienceSession", "onGameStarting: placeId = " + j10);
-        this.f9065n.p().b();
+        q.h("ExperienceSession", "onGameStarting: placeId = " + j10);
+        this.f9138n.p().b();
     }
 
-    public void a0(Runnable runnable) {
-        this.f9063l.post(runnable);
+    public void a0() {
+        q.b("ExperienceSession", "onSurfaceDestroyed: finished = " + this.f9127c);
     }
 
-    @Override // wh.v0
+    @Override // uh.w0
     public void b(long j10) {
-        p.h("ExperienceSession", "onGameStarted: placeId = " + j10);
-        this.f9055d = true;
-        this.f9065n.p().a();
-        if (h.a().h5()) {
-            com.roblox.client.ossearch.b.b(I(), j10);
+        q.h("ExperienceSession", "onGameStarted: placeId = " + j10);
+        this.f9128d = true;
+        this.f9138n.p().a();
+        if (h.a().t5()) {
+            com.roblox.client.ossearch.b.b(K(), j10);
         }
     }
 
-    public final void b0() {
-        if (this.f9071t != null) {
-            p.b("rbx.screen", "removing GlobalLayoutListener");
-            this.f9070s.getViewTreeObserver().removeOnGlobalLayoutListener(this.f9071t);
-            this.f9071t = null;
-        }
-    }
-
-    @Override // wh.v0
-    public void c() {
-        p.h("ExperienceSession", "onSettingsNotLoaded (detected from Game fragment)");
-        if (H().isFinishing()) {
+    public void b0() {
+        if (shouldDisableExperienceIdleTimer()) {
+            q.h("ExperienceSession", "Not pausing game session, user is in a call or capturing media or in a persona session");
+            this.f9147w = true;
             return;
         }
-        H().setResult(103);
-        D(false);
+        q.h("ExperienceSession", "Pause game session");
+        this.f9138n.p().d();
+        j0(true);
+        h0();
+        d0();
     }
 
-    public final void c0() {
-        if (this.f9068q > 0) {
-            long jElapsedRealtime = SystemClock.elapsedRealtime() - this.f9068q;
-            p.h("ExperienceSession", "Game duration: " + jElapsedRealtime + "ms.");
-            vi.g.b().k(I(), jElapsedRealtime);
+    @Override // uh.w0
+    public void c() {
+        q.h("ExperienceSession", "onSettingsNotLoaded (detected from Game fragment)");
+        if (J().isFinishing()) {
+            return;
         }
+        J().setResult(103);
+        F(false);
     }
 
-    public void d0() {
-        p.h("ExperienceSession", "Resume game session");
-        this.f9074w = false;
-        g0(true);
-        A();
-        this.f9065n.p().e();
+    public void c0(Runnable runnable) {
+        this.f9136l.post(runnable);
+    }
+
+    public final void d0() {
+        if (this.f9144t != null) {
+            q.b("rbx.screen", "removing GlobalLayoutListener");
+            this.f9143s.getViewTreeObserver().removeOnGlobalLayoutListener(this.f9144t);
+            this.f9144t = null;
+        }
     }
 
     public final void e0() {
-        long jA = h.a().L0() ? new dm.a(dm.b.i().d("Backgrounding.General"), 30000L).a() : 30000L;
-        p.h("ExperienceSession", "CountDownTimer constructed with delay:" + jA);
-        this.f9056e = new c(jA, 1000L).start();
-    }
-
-    @Override // com.roblox.client.game.a.InterfaceC0139a
-    public void f(boolean z10) {
-        this.f9057f.f(z10);
-    }
-
-    @Override // ej.a
-    public Activity f0() {
-        return H();
-    }
-
-    @Override // com.roblox.client.game.a.InterfaceC0139a
-    public void g(int i10) {
-        if (this.f9069r == null) {
-            this.f9069r = new e();
+        if (this.f9141q > 0) {
+            long jElapsedRealtime = SystemClock.elapsedRealtime() - this.f9141q;
+            q.h("ExperienceSession", "Game duration: " + jElapsedRealtime + "ms.");
+            ti.g.b().k(K(), jElapsedRealtime);
         }
-        this.f9069r.e(Integer.valueOf(i10));
     }
 
-    public final synchronized void g0(boolean z10) {
+    @Override // cj.a
+    public Activity f0() {
+        return J();
+    }
+
+    @Override // com.roblox.client.game.a.InterfaceC0142a
+    public void g(boolean z10) {
+        this.f9130f.g(z10);
+    }
+
+    public void g0() {
+        q.h("ExperienceSession", "Resume game session");
+        this.f9147w = false;
+        i0(true);
+        D();
+        this.f9138n.p().e();
+    }
+
+    @Override // com.roblox.client.game.a.InterfaceC0142a
+    public void h(long j10, String str, NativePurchaseContext nativePurchaseContext) {
+        this.f9137m.H(j10, str, nativePurchaseContext);
+    }
+
+    public final void h0() {
+        long jA = h.a().Q0() ? new bm.a(bm.b.i().d("Backgrounding.General"), 30000L).a() : 30000L;
+        q.h("ExperienceSession", "CountDownTimer constructed with delay:" + jA);
+        this.f9129e = new c(jA, 1000L).start();
+    }
+
+    @Override // com.roblox.client.game.a.InterfaceC0142a
+    public void i(int i10) {
+        if (this.f9142r == null) {
+            this.f9142r = new e();
+        }
+        this.f9142r.e(Integer.valueOf(i10));
+    }
+
+    public final synchronized void i0(boolean z10) {
         try {
-            if (this.f9073v) {
+            if (this.f9146v) {
                 return;
             }
-            this.f9073v = true;
+            this.f9146v = true;
             NativeReportingInterface.gameForegrounded();
             if (z10) {
                 NativeGLInterface.nativeOnExperienceSessionResume();
             } else {
                 NativeGLInterface.nativeOnFragmentStart();
             }
-            hm.b.h().e();
-            if (this.f9071t == null && this.f9062k != null) {
-                p.b("rbx.screen", "adding GlobalLayoutListener");
-                this.f9071t = this.f9062k;
-                this.f9070s.getViewTreeObserver().addOnGlobalLayoutListener(this.f9071t);
+            fm.b.h().e();
+            if (this.f9144t == null && this.f9135k != null) {
+                q.b("rbx.screen", "adding GlobalLayoutListener");
+                this.f9144t = this.f9135k;
+                this.f9143s.getViewTreeObserver().addOnGlobalLayoutListener(this.f9144t);
             }
-            com.roblox.client.game.b bVar = this.f9062k;
+            com.roblox.client.game.b bVar = this.f9135k;
             if (bVar != null) {
                 bVar.y();
             }
@@ -574,23 +578,23 @@ public class ExperienceSession implements v0, ej.a, com.roblox.client.game.a.Int
         }
     }
 
-    @Override // com.roblox.client.game.a.InterfaceC0139a
-    public void h(long j10, String str, String str2) {
-        this.f9064m.A(j10, str, str2);
+    @Override // com.roblox.client.game.a.InterfaceC0142a
+    public void j(long j10, String str, String str2) {
+        this.f9137m.I(j10, str, str2);
     }
 
-    public final synchronized void h0(boolean z10) {
+    public final synchronized void j0(boolean z10) {
         try {
-            if (this.f9073v) {
-                this.f9073v = false;
+            if (this.f9146v) {
+                this.f9146v = false;
                 NativeReportingInterface.gameBackgrounded();
                 if (z10) {
                     NativeGLInterface.nativeOnExperienceSessionPause();
                 } else {
                     NativeGLInterface.nativeOnFragmentStop();
                 }
-                hm.b.h().f();
-                com.roblox.client.game.b bVar = this.f9062k;
+                fm.b.h().f();
+                com.roblox.client.game.b bVar = this.f9135k;
                 if (bVar != null) {
                     bVar.G();
                 }
@@ -600,129 +604,145 @@ public class ExperienceSession implements v0, ej.a, com.roblox.client.game.a.Int
         }
     }
 
-    @Override // com.roblox.client.game.a.InterfaceC0139a
-    public void i(String str, String str2, String str3) {
-        sg.q.g(this.f9057f.o0(), str, str2, str3);
+    @Override // com.roblox.client.game.a.InterfaceC0142a
+    public void k(String str, String str2, String str3) {
+        rg.q.g(this.f9130f.o0(), str, str2, str3);
     }
 
-    public void i0(d dVar) {
-        this.f9057f = dVar;
+    public void k0(d dVar) {
+        this.f9130f = dVar;
     }
 
-    @Override // com.roblox.client.game.a.InterfaceC0139a
-    public void j(long j10, String str, String str2) {
-        this.f9064m.z(j10, str, str2);
+    @Override // com.roblox.client.game.a.InterfaceC0142a
+    public void l(long j10, String str, String str2) {
+        this.f9137m.G(j10, str, str2);
     }
 
-    public final void j0(long j10) {
-        NativeGLJavaInterface.setImplementation(new RunOnMainEngineJavaCallback(this.f9063l, new com.roblox.client.game.a(this, this.f9062k)));
+    public final void l0(long j10) {
+        NativeGLJavaInterface.setImplementation(new RunOnMainEngineJavaCallback(this.f9136l, new com.roblox.client.game.a(this, this.f9135k)));
         NativeGLJavaInterface.setExitImplementation(new b());
     }
 
-    @Override // com.roblox.client.game.a.InterfaceC0139a
-    public void k(long j10, String str, String str2) {
-        this.f9064m.B(j10, str, str2);
+    @Override // com.roblox.client.game.a.InterfaceC0142a
+    public void m(long j10, String str, String str2) {
+        this.f9137m.J(j10, str, str2);
     }
 
-    @Override // com.roblox.client.game.a.InterfaceC0139a
-    public void l(long j10, String str, String str2, String str3) {
-        this.f9064m.C(j10, str, str2, str3);
+    @Override // vl.g.a
+    public void m0(String str) {
     }
 
-    public void l0() {
-        p.h("ExperienceSession", "Start game session");
-        if (h.a().f4()) {
+    @Override // com.roblox.client.game.a.InterfaceC0142a
+    public void n(long j10, String str, String str2, String str3) {
+        this.f9137m.K(j10, str, str2, str3);
+    }
+
+    @Override // vl.g.a
+    public void o(String str, String str2, String str3, String str4, String str5, String str6) {
+    }
+
+    public void o0() {
+        q.h("ExperienceSession", "Start game session");
+        if (h.a().q4()) {
             LoggingProtocol.g("native_experience_start");
         }
-        A();
-        this.f9063l = new Handler(Looper.getMainLooper());
-        this.f9064m = new IAPPurchaseManager(this, false);
-        this.f9067p = h.a().L5();
-        E();
-        if (!this.f9067p) {
-            H().getWindow().getDecorView().setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() { // from class: wh.t
+        D();
+        this.f9136l = new Handler(Looper.getMainLooper());
+        this.f9137m = new IAPPurchaseManager(this, false);
+        this.f9140p = h.a().V5();
+        G();
+        if (!this.f9140p) {
+            J().getWindow().getDecorView().setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() { // from class: uh.t
                 @Override // android.view.View.OnSystemUiVisibilityChangeListener
                 public final void onSystemUiVisibilityChange(int i10) {
-                    this.f34380a.S(i10);
+                    this.f33048a.X(i10);
                 }
             });
         }
-        K();
-        Bundle bundle = this.f9058g;
-        this.f9070s = (ViewGroup) H().findViewById(m0.f30832e);
-        k0();
-        if (!y0.j()) {
-            this.f9057f.I();
+        M();
+        Bundle bundle = this.f9131g;
+        this.f9143s = (ViewGroup) J().findViewById(m0.f30435e);
+        n0();
+        if (!z0.j()) {
+            this.f9130f.H();
         }
-        this.f9065n = y.h();
-        l0 l0Var = new l0(bundle);
-        this.f9072u = bundle.getLong("roblox_placeId", 0L);
-        a1.V0();
-        if (!f9052x) {
-            f9052x = true;
+        this.f9138n = y.h();
+        uh.m0 m0Var = new uh.m0(bundle);
+        this.f9145u = bundle.getLong("roblox_placeId", 0L);
+        a1.W0();
+        if (!f9125x) {
+            f9125x = true;
             NativeGLInterface.nativeGameGlobalInit();
         }
-        a1.U0();
-        i0 i0Var = new i0(this, l0Var);
-        this.f9061j = i0Var;
-        i0Var.A(null, null, null);
-        L(this.f9070s);
-        j0(this.f9072u);
-        g0(false);
+        a1.V0();
+        j0 j0Var = new j0(this, m0Var);
+        this.f9134j = j0Var;
+        j0Var.A(null, null, null);
+        N(this.f9143s);
+        l0(this.f9145u);
+        i0(false);
         NativeReportingInterface.applicationBackgrounded();
-        if (!h.a().W4()) {
-            H().getWindow().addFlags(128);
+        if (!h.a().j5()) {
+            J().getWindow().addFlags(128);
         }
         g.x().g(this);
     }
 
-    @Override // com.roblox.client.game.a.InterfaceC0139a
-    public void m(long j10) {
-        p.h("ExperienceSession", "onGameLoaded: placeId = " + j10);
-        com.roblox.client.game.b bVar = this.f9062k;
-        if (bVar != null) {
-            bVar.K(j10);
-        }
-        this.f9068q = SystemClock.elapsedRealtime();
-    }
-
-    @Override // xl.g.a
-    public void m0(String str) {
-    }
-
-    @Override // com.roblox.client.game.a.InterfaceC0139a
-    public void n(long j10, String str) {
-        this.f9064m.y(j10, str);
-    }
-
-    @Override // xl.g.a
-    public void o(String str, String str2, String str3, String str4, String str5, String str6) {
-    }
-
-    @Override // xl.g.a
+    @Override // vl.g.a
     public void p(String str, String str2, String str3, String str4, String str5, String str6) {
     }
 
-    @Override // com.roblox.client.game.a.InterfaceC0139a
-    public void q(final int i10) {
-        a0(new Runnable() { // from class: wh.v
+    @Override // com.roblox.client.game.a.InterfaceC0142a
+    public void q() {
+        final e4.q qVarO0 = this.f9130f.o0();
+        if (qVarO0 == null) {
+            q.k("ExperienceSession", "exitApp: no activity to finish");
+        } else {
+            q.h("ExperienceSession", "exitApp: finishing task at the user's request");
+            qVarO0.runOnUiThread(new Runnable() { // from class: uh.v
+                @Override // java.lang.Runnable
+                public final void run() {
+                    qVarO0.finishAndRemoveTask();
+                }
+            });
+        }
+    }
+
+    @Override // cj.a
+    public com.roblox.client.b q0() {
+        return (com.roblox.client.a) J();
+    }
+
+    @Override // com.roblox.client.game.a.InterfaceC0142a
+    public void r(long j10) {
+        q.h("ExperienceSession", "onGameLoaded: placeId = " + j10);
+        com.roblox.client.game.b bVar = this.f9135k;
+        if (bVar != null) {
+            bVar.K(j10);
+        }
+        this.f9141q = SystemClock.elapsedRealtime();
+    }
+
+    @Override // com.roblox.client.game.a.InterfaceC0142a
+    public void s(long j10, String str) {
+        this.f9137m.F(j10, str);
+    }
+
+    @Override // com.roblox.client.game.a.InterfaceC0142a
+    public void t(final int i10) {
+        c0(new Runnable() { // from class: uh.w
             @Override // java.lang.Runnable
             public final void run() {
-                this.f34391a.R(i10);
+                this.f33070a.W(i10);
             }
         });
     }
 
-    @Override // ej.a
-    public com.roblox.client.b q0() {
-        return (com.roblox.client.a) H();
-    }
-
-    @Override // xl.g.a
-    public void v(String str, String str2) {
-        if (this.f9074w) {
-            this.f9063l.post(new a());
-            this.f9074w = false;
+    @Override // vl.g.a
+    public void u(String str, String str2) {
+        if (this.f9147w) {
+            this.f9136l.post(new a());
+            this.f9147w = false;
         }
     }
 }

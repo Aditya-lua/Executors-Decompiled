@@ -12,24 +12,24 @@ import java.util.ArrayList;
 public class x0 extends ContextWrapper {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final Object f29144c = new Object();
+    public static final Object f29497c = new Object();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static ArrayList<WeakReference<x0>> f29145d;
+    public static ArrayList<WeakReference<x0>> f29498d;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Resources f29146a;
+    public final Resources f29499a;
     public final Resources.Theme b;
 
     public x0(@NonNull Context context) {
         super(context);
         if (!f1.c()) {
-            this.f29146a = new z0(this, context.getResources());
+            this.f29499a = new z0(this, context.getResources());
             this.b = null;
             return;
         }
         f1 f1Var = new f1(this, context.getResources());
-        this.f29146a = f1Var;
+        this.f29499a = f1Var;
         Resources.Theme themeNewTheme = f1Var.newTheme();
         this.b = themeNewTheme;
         themeNewTheme.setTo(context.getTheme());
@@ -43,20 +43,20 @@ public class x0 extends ContextWrapper {
         if (!a(context)) {
             return context;
         }
-        synchronized (f29144c) {
+        synchronized (f29497c) {
             try {
-                ArrayList<WeakReference<x0>> arrayList = f29145d;
+                ArrayList<WeakReference<x0>> arrayList = f29498d;
                 if (arrayList == null) {
-                    f29145d = new ArrayList<>();
+                    f29498d = new ArrayList<>();
                 } else {
                     for (int size = arrayList.size() - 1; size >= 0; size--) {
-                        WeakReference<x0> weakReference = f29145d.get(size);
+                        WeakReference<x0> weakReference = f29498d.get(size);
                         if (weakReference == null || weakReference.get() == null) {
-                            f29145d.remove(size);
+                            f29498d.remove(size);
                         }
                     }
-                    for (int size2 = f29145d.size() - 1; size2 >= 0; size2--) {
-                        WeakReference<x0> weakReference2 = f29145d.get(size2);
+                    for (int size2 = f29498d.size() - 1; size2 >= 0; size2--) {
+                        WeakReference<x0> weakReference2 = f29498d.get(size2);
                         x0 x0Var = weakReference2 != null ? weakReference2.get() : null;
                         if (x0Var != null && x0Var.getBaseContext() == context) {
                             return x0Var;
@@ -64,7 +64,7 @@ public class x0 extends ContextWrapper {
                     }
                 }
                 x0 x0Var2 = new x0(context);
-                f29145d.add(new WeakReference<>(x0Var2));
+                f29498d.add(new WeakReference<>(x0Var2));
                 return x0Var2;
             } catch (Throwable th2) {
                 throw th2;
@@ -74,12 +74,12 @@ public class x0 extends ContextWrapper {
 
     @Override // android.content.ContextWrapper, android.content.Context
     public AssetManager getAssets() {
-        return this.f29146a.getAssets();
+        return this.f29499a.getAssets();
     }
 
     @Override // android.content.ContextWrapper, android.content.Context
     public Resources getResources() {
-        return this.f29146a;
+        return this.f29499a;
     }
 
     @Override // android.content.ContextWrapper, android.content.Context

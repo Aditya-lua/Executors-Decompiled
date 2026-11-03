@@ -17,28 +17,28 @@ import x2.g;
 public final class ImageProcessingUtil {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static int f1349a;
+    public static int f1194a;
 
     public static class a extends androidx.camera.core.b {
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final d.a[] f1350d;
+        public final d.a[] f1195d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final int f1351e;
+        public final int f1196e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public final int f1352f;
+        public final int f1197f;
 
         /* JADX INFO: renamed from: androidx.camera.core.ImageProcessingUtil$a$a, reason: collision with other inner class name */
-        public class C0018a implements d.a {
+        public class C0014a implements d.a {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ int f1353a;
+            public final /* synthetic */ int f1198a;
             public final /* synthetic */ ByteBuffer b;
 
-            public C0018a(int i10, ByteBuffer byteBuffer) {
-                this.f1353a = i10;
+            public C0014a(int i10, ByteBuffer byteBuffer) {
+                this.f1198a = i10;
                 this.b = byteBuffer;
             }
 
@@ -49,7 +49,7 @@ public final class ImageProcessingUtil {
 
             @Override // androidx.camera.core.d.a
             public int l() {
-                return this.f1353a;
+                return this.f1198a;
             }
 
             @Override // androidx.camera.core.d.a
@@ -60,45 +60,45 @@ public final class ImageProcessingUtil {
 
         public a(d dVar, ByteBuffer byteBuffer, ByteBuffer byteBuffer2, ByteBuffer byteBuffer3, int i10, int i11, int i12) {
             super(dVar);
-            this.f1350d = c(byteBuffer, byteBuffer2, byteBuffer3, i10);
-            this.f1351e = i10;
-            this.f1352f = i11;
+            this.f1195d = c(byteBuffer, byteBuffer2, byteBuffer3, i10);
+            this.f1196e = i10;
+            this.f1197f = i11;
         }
 
         @Override // androidx.camera.core.b, androidx.camera.core.d
-        public d.a[] H1() {
-            return this.f1350d;
+        public d.a[] E1() {
+            return this.f1195d;
         }
 
         public final d.a[] c(ByteBuffer byteBuffer, ByteBuffer byteBuffer2, ByteBuffer byteBuffer3, int i10) {
-            return new d.a[]{new C0018a(i10, byteBuffer), new b(byteBuffer2, i10), new b(byteBuffer3, i10)};
+            return new d.a[]{new C0014a(i10, byteBuffer), new b(byteBuffer2, i10), new b(byteBuffer3, i10)};
         }
 
         @Override // androidx.camera.core.b, androidx.camera.core.d
         public int getHeight() {
-            return this.f1352f;
+            return this.f1197f;
         }
 
         @Override // androidx.camera.core.b, androidx.camera.core.d
         public int getWidth() {
-            return this.f1351e;
+            return this.f1196e;
         }
     }
 
     public static class b implements d.a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final ByteBuffer f1355a;
+        public final ByteBuffer f1200a;
         public final int b;
 
         public b(ByteBuffer byteBuffer, int i10) {
-            this.f1355a = byteBuffer;
+            this.f1200a = byteBuffer;
             this.b = i10;
         }
 
         @Override // androidx.camera.core.d.a
         public ByteBuffer k() {
-            return this.f1355a;
+            return this.f1200a;
         }
 
         @Override // androidx.camera.core.d.a
@@ -151,12 +151,12 @@ public final class ImageProcessingUtil {
     public static c d(d dVar) {
         int width = dVar.getWidth();
         int height = dVar.getHeight();
-        int iL = dVar.H1()[0].l();
-        int iL2 = dVar.H1()[1].l();
-        int iL3 = dVar.H1()[2].l();
-        int iM = dVar.H1()[0].m();
-        int iM2 = dVar.H1()[1].m();
-        return nativeShiftPixel(dVar.H1()[0].k(), iL, dVar.H1()[1].k(), iL2, dVar.H1()[2].k(), iL3, iM, iM2, width, height, iM, iM2, iM2) != 0 ? c.ERROR_CONVERSION : c.SUCCESS;
+        int iL = dVar.E1()[0].l();
+        int iL2 = dVar.E1()[1].l();
+        int iL3 = dVar.E1()[2].l();
+        int iM = dVar.E1()[0].m();
+        int iM2 = dVar.E1()[1].m();
+        return nativeShiftPixel(dVar.E1()[0].k(), iL, dVar.E1()[1].k(), iL2, dVar.E1()[2].k(), iL3, iM, iM2, width, height, iM, iM2, iM2) != 0 ? c.ERROR_CONVERSION : c.SUCCESS;
     }
 
     public static d e(j2 j2Var, byte[] bArr) {
@@ -181,13 +181,13 @@ public final class ImageProcessingUtil {
         }
         int width = dVar.getWidth();
         int height = dVar.getHeight();
-        int iL = dVar.H1()[0].l();
-        int iL2 = dVar.H1()[1].l();
-        int iL3 = dVar.H1()[2].l();
-        int iM = dVar.H1()[0].m();
-        int iM2 = dVar.H1()[1].m();
+        int iL = dVar.E1()[0].l();
+        int iL2 = dVar.E1()[1].l();
+        int iL3 = dVar.E1()[2].l();
+        int iM = dVar.E1()[0].m();
+        int iM2 = dVar.E1()[1].m();
         Bitmap bitmapCreateBitmap = Bitmap.createBitmap(dVar.getWidth(), dVar.getHeight(), Bitmap.Config.ARGB_8888);
-        if (nativeConvertAndroid420ToBitmap(dVar.H1()[0].k(), iL, dVar.H1()[1].k(), iL2, dVar.H1()[2].k(), iL3, iM, iM2, bitmapCreateBitmap, bitmapCreateBitmap.getRowBytes(), width, height) == 0) {
+        if (nativeConvertAndroid420ToBitmap(dVar.E1()[0].k(), iL, dVar.E1()[1].k(), iL2, dVar.E1()[2].k(), iL3, iM, iM2, bitmapCreateBitmap, bitmapCreateBitmap.getRowBytes(), width, height) == 0) {
             return bitmapCreateBitmap;
         }
         throw new UnsupportedOperationException("YUV to RGB conversion failed");
@@ -208,8 +208,8 @@ public final class ImageProcessingUtil {
             return null;
         }
         if (Log.isLoggable("MH", 3)) {
-            r1.a("ImageProcessingUtil", String.format(Locale.US, "Image processing performance profiling, duration: [%d], image count: %d", Long.valueOf(System.currentTimeMillis() - jCurrentTimeMillis), Integer.valueOf(f1349a)));
-            f1349a++;
+            r1.a("ImageProcessingUtil", String.format(Locale.US, "Image processing performance profiling, duration: [%d], image count: %d", Long.valueOf(System.currentTimeMillis() - jCurrentTimeMillis), Integer.valueOf(f1194a)));
+            f1194a++;
         }
         final d dVarB = j2Var.b();
         if (dVarB == null) {
@@ -229,12 +229,12 @@ public final class ImageProcessingUtil {
     public static c h(d dVar, Surface surface, ByteBuffer byteBuffer, int i10, boolean z10) {
         int width = dVar.getWidth();
         int height = dVar.getHeight();
-        int iL = dVar.H1()[0].l();
-        int iL2 = dVar.H1()[1].l();
-        int iL3 = dVar.H1()[2].l();
-        int iM = dVar.H1()[0].m();
-        int iM2 = dVar.H1()[1].m();
-        return nativeConvertAndroid420ToABGR(dVar.H1()[0].k(), iL, dVar.H1()[1].k(), iL2, dVar.H1()[2].k(), iL3, iM, iM2, surface, byteBuffer, width, height, z10 ? iM : 0, z10 ? iM2 : 0, z10 ? iM2 : 0, i10) != 0 ? c.ERROR_CONVERSION : c.SUCCESS;
+        int iL = dVar.E1()[0].l();
+        int iL2 = dVar.E1()[1].l();
+        int iL3 = dVar.E1()[2].l();
+        int iM = dVar.E1()[0].m();
+        int iM2 = dVar.E1()[1].m();
+        return nativeConvertAndroid420ToABGR(dVar.E1()[0].k(), iL, dVar.E1()[1].k(), iL2, dVar.E1()[2].k(), iL3, iM, iM2, surface, byteBuffer, width, height, z10 ? iM : 0, z10 ? iM2 : 0, z10 ? iM2 : 0, i10) != 0 ? c.ERROR_CONVERSION : c.SUCCESS;
     }
 
     public static void i(Bitmap bitmap, ByteBuffer byteBuffer, int i10) {
@@ -246,7 +246,7 @@ public final class ImageProcessingUtil {
     }
 
     public static boolean k(d dVar) {
-        return dVar.H1().length == 3 && dVar.H1()[1].m() == 2 && nativeGetYUVImageVUOff(dVar.H1()[2].k(), dVar.H1()[1].k()) == -1;
+        return dVar.E1().length == 3 && dVar.E1()[1].m() == 2 && nativeGetYUVImageVUOff(dVar.E1()[2].k(), dVar.E1()[1].k()) == -1;
     }
 
     public static boolean l(int i10) {
@@ -254,7 +254,7 @@ public final class ImageProcessingUtil {
     }
 
     public static boolean m(d dVar) {
-        return dVar.getFormat() == 35 && dVar.H1().length == 3;
+        return dVar.getFormat() == 35 && dVar.E1().length == 3;
     }
 
     public static d n(d dVar, j2 j2Var, ImageWriter imageWriter, ByteBuffer byteBuffer, ByteBuffer byteBuffer2, ByteBuffer byteBuffer3, int i10) {
@@ -328,7 +328,7 @@ public final class ImageProcessingUtil {
         int height = i11 == 0 ? dVar.getHeight() : dVar.getWidth();
         ByteBuffer byteBufferNativeNewDirectByteBuffer = nativeNewDirectByteBuffer(byteBuffer5, 1, byteBuffer5.capacity());
         int i12 = height;
-        if (nativeRotateYUV(dVar.H1()[0].k(), dVar.H1()[0].l(), dVar.H1()[1].k(), dVar.H1()[1].l(), dVar.H1()[2].k(), dVar.H1()[2].l(), dVar.H1()[2].m(), byteBuffer4, width, 1, byteBufferNativeNewDirectByteBuffer, width, 2, byteBuffer5, width, 2, byteBuffer, byteBuffer2, byteBuffer3, dVar.getWidth(), dVar.getHeight(), i10) == 0) {
+        if (nativeRotateYUV(dVar.E1()[0].k(), dVar.E1()[0].l(), dVar.E1()[1].k(), dVar.E1()[1].l(), dVar.E1()[2].k(), dVar.E1()[2].l(), dVar.E1()[2].m(), byteBuffer4, width, 1, byteBufferNativeNewDirectByteBuffer, width, 2, byteBuffer5, width, 2, byteBuffer, byteBuffer2, byteBuffer3, dVar.getWidth(), dVar.getHeight(), i10) == 0) {
             return new i2(new a(dVar, byteBuffer4, byteBufferNativeNewDirectByteBuffer, byteBuffer5, width, i12, i10));
         }
         r1.c("ImageProcessingUtil", "rotate YUV failure");
@@ -338,12 +338,12 @@ public final class ImageProcessingUtil {
     public static c p(d dVar, ImageWriter imageWriter, ByteBuffer byteBuffer, ByteBuffer byteBuffer2, ByteBuffer byteBuffer3, int i10) {
         int width = dVar.getWidth();
         int height = dVar.getHeight();
-        int iL = dVar.H1()[0].l();
-        int iL2 = dVar.H1()[1].l();
-        int iL3 = dVar.H1()[2].l();
-        int iM = dVar.H1()[1].m();
+        int iL = dVar.E1()[0].l();
+        int iL2 = dVar.E1()[1].l();
+        int iL3 = dVar.E1()[2].l();
+        int iM = dVar.E1()[1].m();
         Image imageB = t0.a.b(imageWriter);
-        if (imageB != null && nativeRotateYUV(dVar.H1()[0].k(), iL, dVar.H1()[1].k(), iL2, dVar.H1()[2].k(), iL3, iM, imageB.getPlanes()[0].getBuffer(), imageB.getPlanes()[0].getRowStride(), imageB.getPlanes()[0].getPixelStride(), imageB.getPlanes()[1].getBuffer(), imageB.getPlanes()[1].getRowStride(), imageB.getPlanes()[1].getPixelStride(), imageB.getPlanes()[2].getBuffer(), imageB.getPlanes()[2].getRowStride(), imageB.getPlanes()[2].getPixelStride(), byteBuffer, byteBuffer2, byteBuffer3, width, height, i10) == 0) {
+        if (imageB != null && nativeRotateYUV(dVar.E1()[0].k(), iL, dVar.E1()[1].k(), iL2, dVar.E1()[2].k(), iL3, iM, imageB.getPlanes()[0].getBuffer(), imageB.getPlanes()[0].getRowStride(), imageB.getPlanes()[0].getPixelStride(), imageB.getPlanes()[1].getBuffer(), imageB.getPlanes()[1].getRowStride(), imageB.getPlanes()[1].getPixelStride(), imageB.getPlanes()[2].getBuffer(), imageB.getPlanes()[2].getRowStride(), imageB.getPlanes()[2].getPixelStride(), byteBuffer, byteBuffer2, byteBuffer3, width, height, i10) == 0) {
             t0.a.d(imageWriter, imageB);
             return c.SUCCESS;
         }

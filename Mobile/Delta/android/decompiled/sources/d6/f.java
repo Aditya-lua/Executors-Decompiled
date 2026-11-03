@@ -11,11 +11,11 @@ public final class f {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final String f14447a;
+    public static final String f14427a;
 
     static {
         String strI = w.i("BrdcstRcvrCnstrntTrckr");
         Intrinsics.checkNotNullExpressionValue(strI, "tagWithPrefix(...)");
-        f14447a = strI;
+        f14427a = strI;
     }
 }

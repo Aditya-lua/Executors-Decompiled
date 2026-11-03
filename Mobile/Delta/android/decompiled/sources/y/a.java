@@ -20,41 +20,41 @@ public final class a extends f0.l {
     public static final n1.a<String> W = n1.a.a("camera2.cameraCaptureSession.physicalCameraId", String.class);
 
     /* JADX INFO: renamed from: y.a$a, reason: collision with other inner class name */
-    public static final class C0647a implements l0<a> {
+    public static final class C0662a implements l0<a> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final x2 f35411a = x2.k0();
+        public final x2 f36268a = x2.k0();
 
         @Override // g0.l0
         public w2 a() {
-            return this.f35411a;
+            return this.f36268a;
         }
 
         public a b() {
-            return new a(c3.j0(this.f35411a));
+            return new a(c3.j0(this.f36268a));
         }
 
-        public C0647a c(n1 n1Var) {
+        public C0662a c(n1 n1Var) {
             d(n1Var, n1.c.OPTIONAL);
             return this;
         }
 
-        public C0647a d(n1 n1Var, n1.c cVar) {
+        public C0662a d(n1 n1Var, n1.c cVar) {
             for (n1.a<?> aVar : n1Var.b()) {
-                this.f35411a.D(aVar, cVar, n1Var.e(aVar));
+                this.f36268a.D(aVar, cVar, n1Var.e(aVar));
             }
             return this;
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        public <ValueT> C0647a f(CaptureRequest.Key<ValueT> key, ValueT valuet) {
-            this.f35411a.G(a.h0(key), valuet);
+        public <ValueT> C0662a f(CaptureRequest.Key<ValueT> key, ValueT valuet) {
+            this.f36268a.G(a.h0(key), valuet);
             return this;
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        public <ValueT> C0647a g(CaptureRequest.Key<ValueT> key, ValueT valuet, n1.c cVar) {
-            this.f35411a.D(a.h0(key), cVar, valuet);
+        public <ValueT> C0662a g(CaptureRequest.Key<ValueT> key, ValueT valuet, n1.c cVar) {
+            this.f36268a.D(a.h0(key), cVar, valuet);
             return this;
         }
     }

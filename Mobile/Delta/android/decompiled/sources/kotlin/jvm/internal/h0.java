@@ -10,28 +10,28 @@ import kotlin.jvm.functions.Function2;
 /* JADX INFO: loaded from: classes2.dex */
 public class h0 {
     public static Collection a(Object obj) {
-        if ((obj instanceof au.a) && !(obj instanceof au.b)) {
+        if ((obj instanceof yt.a) && !(obj instanceof yt.b)) {
             o(obj, "kotlin.collections.MutableCollection");
         }
         return f(obj);
     }
 
     public static Iterable b(Object obj) {
-        if ((obj instanceof au.a) && !(obj instanceof au.c)) {
+        if ((obj instanceof yt.a) && !(obj instanceof yt.c)) {
             o(obj, "kotlin.collections.MutableIterable");
         }
         return g(obj);
     }
 
     public static List c(Object obj) {
-        if ((obj instanceof au.a) && !(obj instanceof au.d)) {
+        if ((obj instanceof yt.a) && !(obj instanceof yt.d)) {
             o(obj, "kotlin.collections.MutableList");
         }
         return h(obj);
     }
 
     public static Map d(Object obj) {
-        if ((obj instanceof au.a) && !(obj instanceof au.e)) {
+        if ((obj instanceof yt.a) && !(obj instanceof yt.e)) {
             o(obj, "kotlin.collections.MutableMap");
         }
         return i(obj);
@@ -89,73 +89,73 @@ public class h0 {
         if (obj instanceof Function2) {
             return 2;
         }
-        if (obj instanceof zt.n) {
+        if (obj instanceof xt.n) {
             return 3;
         }
-        if (obj instanceof zt.o) {
+        if (obj instanceof xt.o) {
             return 4;
         }
-        if (obj instanceof zt.p) {
+        if (obj instanceof xt.p) {
             return 5;
         }
-        if (obj instanceof zt.q) {
+        if (obj instanceof xt.q) {
             return 6;
         }
-        if (obj instanceof zt.r) {
+        if (obj instanceof xt.r) {
             return 7;
         }
-        if (obj instanceof zt.s) {
+        if (obj instanceof xt.s) {
             return 8;
         }
-        if (obj instanceof zt.t) {
+        if (obj instanceof xt.t) {
             return 9;
         }
-        if (obj instanceof zt.a) {
+        if (obj instanceof xt.a) {
             return 10;
         }
-        if (obj instanceof zt.b) {
+        if (obj instanceof xt.b) {
             return 11;
         }
-        if (obj instanceof zt.c) {
+        if (obj instanceof xt.c) {
             return 12;
         }
-        if (obj instanceof zt.d) {
+        if (obj instanceof xt.d) {
             return 13;
         }
-        if (obj instanceof zt.e) {
+        if (obj instanceof xt.e) {
             return 14;
         }
-        if (obj instanceof zt.f) {
+        if (obj instanceof xt.f) {
             return 15;
         }
-        if (obj instanceof zt.g) {
+        if (obj instanceof xt.g) {
             return 16;
         }
-        if (obj instanceof zt.h) {
+        if (obj instanceof xt.h) {
             return 17;
         }
-        if (obj instanceof zt.i) {
+        if (obj instanceof xt.i) {
             return 18;
         }
-        if (obj instanceof zt.j) {
+        if (obj instanceof xt.j) {
             return 19;
         }
-        if (obj instanceof zt.k) {
+        if (obj instanceof xt.k) {
             return 20;
         }
-        if (obj instanceof zt.l) {
+        if (obj instanceof xt.l) {
             return 21;
         }
-        return obj instanceof zt.m ? 22 : -1;
+        return obj instanceof xt.m ? 22 : -1;
     }
 
     public static boolean k(Object obj, int i10) {
-        return (obj instanceof jt.b) && j(obj) == i10;
+        return (obj instanceof gt.b) && j(obj) == i10;
     }
 
     public static boolean l(Object obj) {
         if (obj instanceof Map) {
-            return !(obj instanceof au.a) || (obj instanceof au.e);
+            return !(obj instanceof yt.a) || (obj instanceof yt.e);
         }
         return false;
     }

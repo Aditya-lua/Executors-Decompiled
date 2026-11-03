@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final r7.c.a f29228a = r7.c.a.a("k", "x", "y");
+    public static final r7.c.a f29581a = r7.c.a.a("k", "x", "y");
 
     public static m7.e a(r7.c cVar, f7.i iVar) {
         ArrayList arrayList = new ArrayList();
@@ -31,7 +31,7 @@ public class a {
         boolean z10 = false;
         m7.b bVarE2 = null;
         while (cVar.o() != r7.c.b.END_OBJECT) {
-            int iR = cVar.r(f29228a);
+            int iR = cVar.r(f29581a);
             if (iR == 0) {
                 eVarA = a(cVar, iVar);
             } else if (iR != 1) {

@@ -8,7 +8,7 @@ public final class f4 {
     public static final f4 b = new f4(true);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Map f7041a = Collections.EMPTY_MAP;
+    public final Map f7115a = Collections.EMPTY_MAP;
 
     public f4(boolean z10) {
     }
@@ -18,6 +18,6 @@ public final class f4 {
     }
 
     public final s4 a(x5 x5Var, int i10) {
-        return (s4) this.f7041a.get(new e4(x5Var, i10));
+        return (s4) this.f7115a.get(new e4(x5Var, i10));
     }
 }

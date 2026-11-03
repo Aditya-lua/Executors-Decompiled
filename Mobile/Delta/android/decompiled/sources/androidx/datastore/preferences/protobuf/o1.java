@@ -6,27 +6,27 @@ import java.util.Arrays;
 public final class o1 {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final o1 f2252f = new o1(0, new int[0], new Object[0], false);
+    public static final o1 f2097f = new o1(0, new int[0], new Object[0], false);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f2253a;
+    public int f2098a;
     public int[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public Object[] f2254c;
+    public Object[] f2099c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public int f2255d;
+    public int f2100d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public boolean f2256e;
+    public boolean f2101e;
 
     public o1() {
         this(0, new int[8], new Object[8], true);
     }
 
     public static o1 c() {
-        return f2252f;
+        return f2097f;
     }
 
     public static int f(int[] iArr, int i10) {
@@ -46,11 +46,11 @@ public final class o1 {
     }
 
     public static o1 j(o1 o1Var, o1 o1Var2) {
-        int i10 = o1Var.f2253a + o1Var2.f2253a;
+        int i10 = o1Var.f2098a + o1Var2.f2098a;
         int[] iArrCopyOf = Arrays.copyOf(o1Var.b, i10);
-        System.arraycopy(o1Var2.b, 0, iArrCopyOf, o1Var.f2253a, o1Var2.f2253a);
-        Object[] objArrCopyOf = Arrays.copyOf(o1Var.f2254c, i10);
-        System.arraycopy(o1Var2.f2254c, 0, objArrCopyOf, o1Var.f2253a, o1Var2.f2253a);
+        System.arraycopy(o1Var2.b, 0, iArrCopyOf, o1Var.f2098a, o1Var2.f2098a);
+        Object[] objArrCopyOf = Arrays.copyOf(o1Var.f2099c, i10);
+        System.arraycopy(o1Var2.f2099c, 0, objArrCopyOf, o1Var.f2098a, o1Var2.f2098a);
         return new o1(i10, iArrCopyOf, objArrCopyOf, true);
     }
 
@@ -108,7 +108,7 @@ public final class o1 {
     }
 
     public void a() {
-        if (!this.f2256e) {
+        if (!this.f2101e) {
             throw new UnsupportedOperationException();
         }
     }
@@ -116,7 +116,7 @@ public final class o1 {
     public final void b(int i10) {
         int[] iArr = this.b;
         if (i10 > iArr.length) {
-            int i11 = this.f2253a;
+            int i11 = this.f2098a;
             int i12 = i11 + (i11 / 2);
             if (i12 >= i10) {
                 i10 = i12;
@@ -125,51 +125,51 @@ public final class o1 {
                 i10 = 8;
             }
             this.b = Arrays.copyOf(iArr, i10);
-            this.f2254c = Arrays.copyOf(this.f2254c, i10);
+            this.f2099c = Arrays.copyOf(this.f2099c, i10);
         }
     }
 
     public int d() {
         int iX;
-        int i10 = this.f2255d;
+        int i10 = this.f2100d;
         if (i10 != -1) {
             return i10;
         }
         int i11 = 0;
-        for (int i12 = 0; i12 < this.f2253a; i12++) {
+        for (int i12 = 0; i12 < this.f2098a; i12++) {
             int i13 = this.b[i12];
             int iA = s1.a(i13);
             int iB = s1.b(i13);
             if (iB == 0) {
-                iX = j.X(iA, ((Long) this.f2254c[i12]).longValue());
+                iX = j.X(iA, ((Long) this.f2099c[i12]).longValue());
             } else if (iB == 1) {
-                iX = j.o(iA, ((Long) this.f2254c[i12]).longValue());
+                iX = j.o(iA, ((Long) this.f2099c[i12]).longValue());
             } else if (iB == 2) {
-                iX = j.g(iA, (g) this.f2254c[i12]);
+                iX = j.g(iA, (g) this.f2099c[i12]);
             } else if (iB == 3) {
-                iX = (j.U(iA) * 2) + ((o1) this.f2254c[i12]).d();
+                iX = (j.U(iA) * 2) + ((o1) this.f2099c[i12]).d();
             } else {
                 if (iB != 5) {
                     throw new IllegalStateException(a0.e());
                 }
-                iX = j.m(iA, ((Integer) this.f2254c[i12]).intValue());
+                iX = j.m(iA, ((Integer) this.f2099c[i12]).intValue());
             }
             i11 += iX;
         }
-        this.f2255d = i11;
+        this.f2100d = i11;
         return i11;
     }
 
     public int e() {
-        int i10 = this.f2255d;
+        int i10 = this.f2100d;
         if (i10 != -1) {
             return i10;
         }
         int iJ = 0;
-        for (int i11 = 0; i11 < this.f2253a; i11++) {
-            iJ += j.J(s1.a(this.b[i11]), (g) this.f2254c[i11]);
+        for (int i11 = 0; i11 < this.f2098a; i11++) {
+            iJ += j.J(s1.a(this.b[i11]), (g) this.f2099c[i11]);
         }
-        this.f2255d = iJ;
+        this.f2100d = iJ;
         return iJ;
     }
 
@@ -181,19 +181,19 @@ public final class o1 {
             return false;
         }
         o1 o1Var = (o1) obj;
-        int i10 = this.f2253a;
-        return i10 == o1Var.f2253a && o(this.b, o1Var.b, i10) && l(this.f2254c, o1Var.f2254c, this.f2253a);
+        int i10 = this.f2098a;
+        return i10 == o1Var.f2098a && o(this.b, o1Var.b, i10) && l(this.f2099c, o1Var.f2099c, this.f2098a);
     }
 
     public void h() {
-        if (this.f2256e) {
-            this.f2256e = false;
+        if (this.f2101e) {
+            this.f2101e = false;
         }
     }
 
     public int hashCode() {
-        int i10 = this.f2253a;
-        return ((((527 + i10) * 31) + f(this.b, i10)) * 31) + g(this.f2254c, this.f2253a);
+        int i10 = this.f2098a;
+        return ((((527 + i10) * 31) + f(this.b, i10)) * 31) + g(this.f2099c, this.f2098a);
     }
 
     public o1 i(o1 o1Var) {
@@ -201,62 +201,62 @@ public final class o1 {
             return this;
         }
         a();
-        int i10 = this.f2253a + o1Var.f2253a;
+        int i10 = this.f2098a + o1Var.f2098a;
         b(i10);
-        System.arraycopy(o1Var.b, 0, this.b, this.f2253a, o1Var.f2253a);
-        System.arraycopy(o1Var.f2254c, 0, this.f2254c, this.f2253a, o1Var.f2253a);
-        this.f2253a = i10;
+        System.arraycopy(o1Var.b, 0, this.b, this.f2098a, o1Var.f2098a);
+        System.arraycopy(o1Var.f2099c, 0, this.f2099c, this.f2098a, o1Var.f2098a);
+        this.f2098a = i10;
         return this;
     }
 
     public final void m(StringBuilder sb2, int i10) {
-        for (int i11 = 0; i11 < this.f2253a; i11++) {
-            t0.d(sb2, i10, String.valueOf(s1.a(this.b[i11])), this.f2254c[i11]);
+        for (int i11 = 0; i11 < this.f2098a; i11++) {
+            t0.d(sb2, i10, String.valueOf(s1.a(this.b[i11])), this.f2099c[i11]);
         }
     }
 
     public void n(int i10, Object obj) {
         a();
-        b(this.f2253a + 1);
+        b(this.f2098a + 1);
         int[] iArr = this.b;
-        int i11 = this.f2253a;
+        int i11 = this.f2098a;
         iArr[i11] = i10;
-        this.f2254c[i11] = obj;
-        this.f2253a = i11 + 1;
+        this.f2099c[i11] = obj;
+        this.f2098a = i11 + 1;
     }
 
     public void p(t1 t1Var) {
         if (t1Var.t() == t1.a.DESCENDING) {
-            for (int i10 = this.f2253a - 1; i10 >= 0; i10--) {
-                t1Var.b(s1.a(this.b[i10]), this.f2254c[i10]);
+            for (int i10 = this.f2098a - 1; i10 >= 0; i10--) {
+                t1Var.b(s1.a(this.b[i10]), this.f2099c[i10]);
             }
             return;
         }
-        for (int i11 = 0; i11 < this.f2253a; i11++) {
-            t1Var.b(s1.a(this.b[i11]), this.f2254c[i11]);
+        for (int i11 = 0; i11 < this.f2098a; i11++) {
+            t1Var.b(s1.a(this.b[i11]), this.f2099c[i11]);
         }
     }
 
     public void r(t1 t1Var) {
-        if (this.f2253a == 0) {
+        if (this.f2098a == 0) {
             return;
         }
         if (t1Var.t() == t1.a.ASCENDING) {
-            for (int i10 = 0; i10 < this.f2253a; i10++) {
-                q(this.b[i10], this.f2254c[i10], t1Var);
+            for (int i10 = 0; i10 < this.f2098a; i10++) {
+                q(this.b[i10], this.f2099c[i10], t1Var);
             }
             return;
         }
-        for (int i11 = this.f2253a - 1; i11 >= 0; i11--) {
-            q(this.b[i11], this.f2254c[i11], t1Var);
+        for (int i11 = this.f2098a - 1; i11 >= 0; i11--) {
+            q(this.b[i11], this.f2099c[i11], t1Var);
         }
     }
 
     public o1(int i10, int[] iArr, Object[] objArr, boolean z10) {
-        this.f2255d = -1;
-        this.f2253a = i10;
+        this.f2100d = -1;
+        this.f2098a = i10;
         this.b = iArr;
-        this.f2254c = objArr;
-        this.f2256e = z10;
+        this.f2099c = objArr;
+        this.f2101e = z10;
     }
 }

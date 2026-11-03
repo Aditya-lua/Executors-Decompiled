@@ -4,51 +4,51 @@ package n2;
 public final class l {
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final l f25016k = k(b.f24992c, (float) ((((double) b.h(50.0f)) * 63.66197723675813d) / 100.0d), 50.0f, 2.0f, false);
+    public static final l f25837k = k(b.f25813c, (float) ((((double) b.h(50.0f)) * 63.66197723675813d) / 100.0d), 50.0f, 2.0f, false);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final float f25017a;
+    public final float f25838a;
     public final float b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final float f25018c;
+    public final float f25839c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final float f25019d;
+    public final float f25840d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final float f25020e;
+    public final float f25841e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final float f25021f;
+    public final float f25842f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final float[] f25022g;
+    public final float[] f25843g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final float f25023h;
+    public final float f25844h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final float f25024i;
+    public final float f25845i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final float f25025j;
+    public final float f25846j;
 
     public l(float f10, float f11, float f12, float f13, float f14, float f15, float[] fArr, float f16, float f17, float f18) {
-        this.f25021f = f10;
-        this.f25017a = f11;
+        this.f25842f = f10;
+        this.f25838a = f11;
         this.b = f12;
-        this.f25018c = f13;
-        this.f25019d = f14;
-        this.f25020e = f15;
-        this.f25022g = fArr;
-        this.f25023h = f16;
-        this.f25024i = f17;
-        this.f25025j = f18;
+        this.f25839c = f13;
+        this.f25840d = f14;
+        this.f25841e = f15;
+        this.f25843g = fArr;
+        this.f25844h = f16;
+        this.f25845i = f17;
+        this.f25846j = f18;
     }
 
     public static l k(float[] fArr, float f10, float f11, float f12, boolean z10) {
-        float[][] fArr2 = b.f24991a;
+        float[][] fArr2 = b.f25812a;
         float f13 = fArr[0];
         float[] fArr3 = fArr2[0];
         float f14 = fArr3[0] * f13;
@@ -89,23 +89,23 @@ public final class l {
     }
 
     public float a() {
-        return this.f25017a;
+        return this.f25838a;
     }
 
     public float b() {
-        return this.f25019d;
+        return this.f25840d;
     }
 
     public float c() {
-        return this.f25023h;
+        return this.f25844h;
     }
 
     public float d() {
-        return this.f25024i;
+        return this.f25845i;
     }
 
     public float e() {
-        return this.f25021f;
+        return this.f25842f;
     }
 
     public float f() {
@@ -113,18 +113,18 @@ public final class l {
     }
 
     public float g() {
-        return this.f25020e;
+        return this.f25841e;
     }
 
     public float h() {
-        return this.f25018c;
+        return this.f25839c;
     }
 
     public float[] i() {
-        return this.f25022g;
+        return this.f25843g;
     }
 
     public float j() {
-        return this.f25025j;
+        return this.f25846j;
     }
 }

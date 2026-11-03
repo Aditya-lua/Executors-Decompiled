@@ -7,17 +7,17 @@ import java.util.List;
 public class i implements o<PointF, PointF> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final b f24021a;
+    public final b f24671a;
     public final b b;
 
     public i(b bVar, b bVar2) {
-        this.f24021a = bVar;
+        this.f24671a = bVar;
         this.b = bVar2;
     }
 
     @Override // m7.o
     public i7.a<PointF, PointF> a() {
-        return new i7.n(this.f24021a.a(), this.b.a());
+        return new i7.n(this.f24671a.a(), this.b.a());
     }
 
     @Override // m7.o
@@ -27,6 +27,6 @@ public class i implements o<PointF, PointF> {
 
     @Override // m7.o
     public boolean c() {
-        return this.f24021a.c() && this.b.c();
+        return this.f24671a.c() && this.b.c();
     }
 }

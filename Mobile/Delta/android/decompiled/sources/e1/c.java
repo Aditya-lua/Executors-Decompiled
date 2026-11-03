@@ -24,41 +24,41 @@ import p0.a0;
 public class c implements u0.a {
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final Size f14980g = new Size(480, 360);
+    public static final Size f15594g = new Size(480, 360);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final List<Detector<?>> f14981a;
+    public final List<Detector<?>> f15595a;
     public final int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final x2.a<a> f14982c;
+    public final x2.a<a> f15596c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final t1.a f14983d;
+    public final t1.a f15597d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Executor f14984e;
+    public final Executor f15598e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public Matrix f14985f;
+    public Matrix f15599f;
 
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Map<Detector<?>, Object> f14986a;
+        public final Map<Detector<?>, Object> f15600a;
         public final Map<Detector<?>, Throwable> b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final long f14987c;
+        public final long f15601c;
 
         public a(Map<Detector<?>, Object> map, long j10, Map<Detector<?>, Throwable> map2) {
-            this.f14986a = map;
+            this.f15600a = map;
             this.b = map2;
-            this.f14987c = j10;
+            this.f15601c = j10;
         }
 
         public final void a(Detector<?> detector) {
-            m.b(this.f14986a.containsKey(detector) || this.b.containsKey(detector), "The detector does not exist");
+            m.b(this.f15600a.containsKey(detector) || this.b.containsKey(detector), "The detector does not exist");
         }
 
         public Throwable b(Detector<?> detector) {
@@ -68,7 +68,7 @@ public class c implements u0.a {
 
         public <T> T c(Detector<T> detector) {
             a(detector);
-            return (T) this.f14986a.get(detector);
+            return (T) this.f15600a.get(detector);
         }
     }
 
@@ -79,12 +79,12 @@ public class c implements u0.a {
                 m.b(it.next().getDetectorType() != 7, "Segmentation only works with COORDINATE_SYSTEM_ORIGINAL");
             }
         }
-        this.f14981a = new ArrayList(list);
+        this.f15595a = new ArrayList(list);
         this.b = i10;
-        this.f14982c = aVar;
-        this.f14984e = executor;
+        this.f15596c = aVar;
+        this.f15598e = executor;
         t1.a aVar2 = new t1.a();
-        this.f14983d = aVar2;
+        this.f15597d = aVar2;
         aVar2.a(true);
     }
 
@@ -97,13 +97,13 @@ public class c implements u0.a {
         } else {
             map.put(detector, task.getException());
         }
-        cVar.e(dVar, i10 + 1, matrix, map2, map);
+        cVar.f(dVar, i10 + 1, matrix, map2, map);
     }
 
     @Override // g0.u0.a
     public final Size c() {
-        Size size = f14980g;
-        Iterator<Detector<?>> it = this.f14981a.iterator();
+        Size size = f15594g;
+        Iterator<Detector<?>> it = this.f15595a.iterator();
         while (it.hasNext()) {
             Size sizeG = g(it.next().getDetectorType());
             if (sizeG.getHeight() * sizeG.getWidth() > size.getWidth() * size.getHeight()) {
@@ -118,48 +118,48 @@ public class c implements u0.a {
         return this.b;
     }
 
-    public final void e(final d dVar, final int i10, final Matrix matrix, final Map<Detector<?>, Object> map, final Map<Detector<?>, Throwable> map2) {
+    @Override // g0.u0.a
+    public final void e(Matrix matrix) {
+        if (matrix == null) {
+            this.f15599f = null;
+        } else {
+            this.f15599f = new Matrix(matrix);
+        }
+    }
+
+    public final void f(final d dVar, final int i10, final Matrix matrix, final Map<Detector<?>, Object> map, final Map<Detector<?>, Throwable> map2) {
         Image imageP = dVar.p();
         if (imageP == null) {
             r1.c("MlKitAnalyzer", "Image is null.");
             dVar.close();
             return;
         }
-        if (i10 > this.f14981a.size() - 1) {
+        if (i10 > this.f15595a.size() - 1) {
             dVar.close();
-            this.f14984e.execute(new Runnable() { // from class: e1.a
+            this.f15598e.execute(new Runnable() { // from class: e1.a
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f14971a.f14982c.accept(new c.a(map, dVar.H2().getTimestamp(), map2));
+                    this.f15585a.f15596c.accept(new c.a(map, dVar.I2().getTimestamp(), map2));
                 }
             });
             return;
         }
-        final Detector<?> detector = this.f14981a.get(i10);
+        final Detector<?> detector = this.f15595a.get(i10);
         try {
-            detector.process(imageP, dVar.H2().d(), matrix).c(this.f14984e, new OnCompleteListener() { // from class: e1.b
+            detector.process(imageP, dVar.I2().d(), matrix).c(this.f15598e, new OnCompleteListener() { // from class: e1.b
                 @Override // com.google.android.gms.tasks.OnCompleteListener
                 public final void onComplete(Task task) {
-                    c.a(this.f14974a, map2, detector, map, dVar, i10, matrix, task);
+                    c.a(this.f15588a, map2, detector, map, dVar, i10, matrix, task);
                 }
             });
         } catch (Exception e10) {
             map2.put(detector, new RuntimeException("Failed to process the image.", e10));
-            e(dVar, i10 + 1, matrix, map, map2);
-        }
-    }
-
-    @Override // g0.u0.a
-    public final void f(Matrix matrix) {
-        if (matrix == null) {
-            this.f14985f = null;
-        } else {
-            this.f14985f = new Matrix(matrix);
+            f(dVar, i10 + 1, matrix, map, map2);
         }
     }
 
     public final Size g(int i10) {
-        return (i10 == 1 || i10 == 4) ? new Size(1280, 720) : f14980g;
+        return (i10 == 1 || i10 == 4) ? new Size(1280, 720) : f15594g;
     }
 
     @Override // g0.u0.a
@@ -167,20 +167,20 @@ public class c implements u0.a {
         Matrix matrix = new Matrix();
         int i10 = this.b;
         if (i10 != 0) {
-            Matrix matrix2 = this.f14985f;
+            Matrix matrix2 = this.f15599f;
             if (i10 != 2 && matrix2 == null) {
                 r1.a("MlKitAnalyzer", "Sensor-to-target transformation is null.");
                 dVar.close();
                 return;
             }
-            Matrix matrix3 = new Matrix(dVar.H2().e());
+            Matrix matrix3 = new Matrix(dVar.I2().e());
             RectF rectF = new RectF(0.0f, 0.0f, dVar.getWidth(), dVar.getHeight());
-            matrix3.postConcat(a0.d(rectF, a0.p(rectF, dVar.H2().d()), dVar.H2().d()));
+            matrix3.postConcat(a0.d(rectF, a0.p(rectF, dVar.I2().d()), dVar.I2().d()));
             matrix3.invert(matrix);
             if (this.b != 2) {
                 matrix.postConcat(matrix2);
             }
         }
-        e(dVar, 0, matrix, new HashMap(), new HashMap());
+        f(dVar, 0, matrix, new HashMap(), new HashMap());
     }
 }

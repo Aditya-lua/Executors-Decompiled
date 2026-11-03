@@ -12,36 +12,36 @@ public final class zzi extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzi> CREATOR = new g();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final String f6191f;
+    public final String f6264f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final PersistableBundle f6192g;
+    public final PersistableBundle f6265g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final Boolean f6193h;
+    public final Boolean f6266h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final Boolean f6194i;
+    public final Boolean f6267i;
 
     public zzi(String str, PersistableBundle persistableBundle, Boolean bool, Boolean bool2) {
-        this.f6191f = str;
-        this.f6192g = persistableBundle;
-        this.f6193h = bool;
-        this.f6194i = bool2;
+        this.f6264f = str;
+        this.f6265g = persistableBundle;
+        this.f6266h = bool;
+        this.f6267i = bool2;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i10) {
-        String str = this.f6191f;
+        String str = this.f6264f;
         int iA = b.a(parcel);
         b.v(parcel, 1, str, false);
-        b.t(parcel, 2, this.f6192g, i10, false);
-        b.e(parcel, 3, this.f6193h, false);
-        b.e(parcel, 4, this.f6194i, false);
+        b.t(parcel, 2, this.f6265g, i10, false);
+        b.e(parcel, 3, this.f6266h, false);
+        b.e(parcel, 4, this.f6267i, false);
         b.b(parcel, iA);
     }
 
     public final String zza() {
-        return this.f6191f;
+        return this.f6264f;
     }
 }

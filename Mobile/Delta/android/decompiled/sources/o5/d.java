@@ -49,39 +49,39 @@ public class d extends q {
     public static /* synthetic */ class c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f27085a;
+        public static final /* synthetic */ int[] f27650a;
 
         static {
             int[] iArr = new int[ImageView.ScaleType.values().length];
-            f27085a = iArr;
+            f27650a = iArr;
             try {
                 iArr[ImageView.ScaleType.FIT_XY.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f27085a[ImageView.ScaleType.CENTER_CROP.ordinal()] = 2;
+                f27650a[ImageView.ScaleType.CENTER_CROP.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
         }
     }
 
     /* JADX INFO: renamed from: o5.d$d, reason: collision with other inner class name */
-    public static class C0468d extends AnimatorListenerAdapter implements q.h {
+    public static class C0479d extends AnimatorListenerAdapter implements q.h {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final ImageView f27086a;
+        public final ImageView f27651a;
         public final Matrix b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final Matrix f27087c;
+        public final Matrix f27652c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public boolean f27088d = true;
+        public boolean f27653d = true;
 
-        public C0468d(ImageView imageView, Matrix matrix, Matrix matrix2) {
-            this.f27086a = imageView;
+        public C0479d(ImageView imageView, Matrix matrix, Matrix matrix2) {
+            this.f27651a = imageView;
             this.b = matrix;
-            this.f27087c = matrix2;
+            this.f27652c = matrix2;
         }
 
         @Override // o5.q.h
@@ -94,25 +94,25 @@ public class d extends q {
         }
 
         public final void c() {
-            ImageView imageView = this.f27086a;
-            int i10 = l.f27128d;
+            ImageView imageView = this.f27651a;
+            int i10 = l.f27693d;
             Matrix matrix = (Matrix) imageView.getTag(i10);
             if (matrix != null) {
-                h.a(this.f27086a, matrix);
-                this.f27086a.setTag(i10, null);
+                h.a(this.f27651a, matrix);
+                this.f27651a.setTag(i10, null);
             }
         }
 
         @Override // o5.q.h
         public void d(@NonNull q qVar) {
-            if (this.f27088d) {
+            if (this.f27653d) {
                 e(this.b);
             }
         }
 
         public final void e(Matrix matrix) {
-            this.f27086a.setTag(l.f27128d, matrix);
-            h.a(this.f27086a, this.f27087c);
+            this.f27651a.setTag(l.f27693d, matrix);
+            h.a(this.f27651a, this.f27652c);
         }
 
         @Override // o5.q.h
@@ -125,7 +125,7 @@ public class d extends q {
 
         @Override // android.animation.Animator.AnimatorListener
         public void onAnimationEnd(@NonNull Animator animator, boolean z10) {
-            this.f27088d = z10;
+            this.f27653d = z10;
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorPauseListener
@@ -140,17 +140,17 @@ public class d extends q {
 
         @Override // android.animation.Animator.AnimatorListener
         public void onAnimationStart(@NonNull Animator animator, boolean z10) {
-            this.f27088d = false;
+            this.f27653d = false;
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationEnd(Animator animator) {
-            this.f27088d = false;
+            this.f27653d = false;
         }
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationStart(Animator animator) {
-            this.f27088d = false;
+            this.f27653d = false;
         }
     }
 
@@ -161,9 +161,9 @@ public class d extends q {
             if (imageView.getDrawable() == null) {
                 return;
             }
-            Map<String, Object> map = d0Var.f27089a;
+            Map<String, Object> map = d0Var.f27654a;
             map.put("android:changeImageTransform:bounds", new Rect(view.getLeft(), view.getTop(), view.getRight(), view.getBottom()));
-            Matrix matrixD0 = z10 ? (Matrix) imageView.getTag(l.f27128d) : null;
+            Matrix matrixD0 = z10 ? (Matrix) imageView.getTag(l.f27693d) : null;
             if (matrixD0 == null) {
                 matrixD0 = D0(imageView);
             }
@@ -194,7 +194,7 @@ public class d extends q {
         if (drawable.getIntrinsicWidth() <= 0 || drawable.getIntrinsicHeight() <= 0) {
             return new Matrix(imageView.getImageMatrix());
         }
-        int i10 = c.f27085a[imageView.getScaleType().ordinal()];
+        int i10 = c.f27650a[imageView.getScaleType().ordinal()];
         if (i10 != 1) {
             return i10 != 2 ? new Matrix(imageView.getImageMatrix()) : C0(imageView);
         }
@@ -216,7 +216,7 @@ public class d extends q {
     public final ObjectAnimator F0(@NonNull ImageView imageView) {
         Property<ImageView, Matrix> property = S;
         TypeEvaluator<Matrix> typeEvaluator = R;
-        Matrix matrix = i.f27119a;
+        Matrix matrix = i.f27684a;
         return ObjectAnimator.ofObject(imageView, (Property<ImageView, V>) property, (TypeEvaluator) typeEvaluator, (Object[]) new Matrix[]{matrix, matrix});
     }
 
@@ -246,13 +246,13 @@ public class d extends q {
         if (d0Var == null || d0Var2 == null) {
             return null;
         }
-        Rect rect = (Rect) d0Var.f27089a.get("android:changeImageTransform:bounds");
-        Rect rect2 = (Rect) d0Var2.f27089a.get("android:changeImageTransform:bounds");
+        Rect rect = (Rect) d0Var.f27654a.get("android:changeImageTransform:bounds");
+        Rect rect2 = (Rect) d0Var2.f27654a.get("android:changeImageTransform:bounds");
         if (rect == null || rect2 == null) {
             return null;
         }
-        Matrix matrix = (Matrix) d0Var.f27089a.get("android:changeImageTransform:matrix");
-        Matrix matrix2 = (Matrix) d0Var2.f27089a.get("android:changeImageTransform:matrix");
+        Matrix matrix = (Matrix) d0Var.f27654a.get("android:changeImageTransform:matrix");
+        Matrix matrix2 = (Matrix) d0Var2.f27654a.get("android:changeImageTransform:matrix");
         boolean z10 = (matrix == null && matrix2 == null) || (matrix != null && matrix.equals(matrix2));
         if (rect.equals(rect2) && z10) {
             return null;
@@ -265,17 +265,17 @@ public class d extends q {
             return F0(imageView);
         }
         if (matrix == null) {
-            matrix = i.f27119a;
+            matrix = i.f27684a;
         }
         if (matrix2 == null) {
-            matrix2 = i.f27119a;
+            matrix2 = i.f27684a;
         }
         S.set(imageView, matrix);
         ObjectAnimator objectAnimatorE0 = E0(imageView, matrix, matrix2);
-        C0468d c0468d = new C0468d(imageView, matrix, matrix2);
-        objectAnimatorE0.addListener(c0468d);
-        objectAnimatorE0.addPauseListener(c0468d);
-        c(c0468d);
+        C0479d c0479d = new C0479d(imageView, matrix, matrix2);
+        objectAnimatorE0.addListener(c0479d);
+        objectAnimatorE0.addPauseListener(c0479d);
+        c(c0479d);
         return objectAnimatorE0;
     }
 }

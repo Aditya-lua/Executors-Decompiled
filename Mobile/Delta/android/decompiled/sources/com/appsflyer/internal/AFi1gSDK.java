@@ -50,7 +50,7 @@ public class AFi1gSDK extends Referrer {
             executorService.execute(new Runnable() { // from class: com.appsflyer.internal.d1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f5479a.lambda$onInstallReferrerSetupFinished$0(installReferrerClient, context, i10);
+                    this.f5552a.lambda$onInstallReferrerSetupFinished$0(installReferrerClient, context, i10);
                 }
             });
         }
@@ -110,7 +110,7 @@ public class AFi1gSDK extends Referrer {
             this.AFLogger.execute(new Runnable() { // from class: com.appsflyer.internal.c1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f5477a.registerClient(context);
+                    this.f5550a.registerClient(context);
                 }
             });
         }

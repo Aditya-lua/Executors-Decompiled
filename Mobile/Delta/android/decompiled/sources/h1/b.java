@@ -14,17 +14,17 @@ import n0.z1;
 public class b implements z1 {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final z1 f18496c;
+    public final z1 f18983c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final r1.a f18497d;
+    public final r1.a f18984d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Map<Integer, a2> f18498e = new HashMap();
+    public final Map<Integer, a2> f18985e = new HashMap();
 
     public b(z1 z1Var, r1.a aVar) {
-        this.f18496c = z1Var;
-        this.f18497d = aVar;
+        this.f18983c = z1Var;
+        this.f18984d = aVar;
     }
 
     public static int d(int i10) {
@@ -73,14 +73,14 @@ public class b implements z1 {
     }
 
     private a2 h(int i10) {
-        if (this.f18498e.containsKey(Integer.valueOf(i10))) {
-            return this.f18498e.get(Integer.valueOf(i10));
+        if (this.f18985e.containsKey(Integer.valueOf(i10))) {
+            return this.f18985e.get(Integer.valueOf(i10));
         }
-        if (!this.f18496c.a(i10)) {
+        if (!this.f18983c.a(i10)) {
             return null;
         }
-        a2 a2VarC = c(this.f18496c.b(i10), 1, 10);
-        this.f18498e.put(Integer.valueOf(i10), a2VarC);
+        a2 a2VarC = c(this.f18983c.b(i10), 1, 10);
+        this.f18985e.put(Integer.valueOf(i10), a2VarC);
         return a2VarC;
     }
 
@@ -111,7 +111,7 @@ public class b implements z1 {
 
     @Override // n0.z1
     public boolean a(int i10) {
-        return this.f18496c.a(i10) && h(i10) != null;
+        return this.f18983c.a(i10) && h(i10) != null;
     }
 
     @Override // n0.z1
@@ -133,7 +133,7 @@ public class b implements z1 {
             }
             next = it.next();
         } while (next.g() != 0);
-        a2.c cVarK = k(g(next, i10, i11), this.f18497d);
+        a2.c cVarK = k(g(next, i10, i11), this.f18984d);
         if (cVarK != null) {
             arrayList.add(cVarK);
         }

@@ -15,26 +15,26 @@ public final class VideoCapabilities extends zzg {
     public static final Parcelable.Creator<VideoCapabilities> CREATOR = new a();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final boolean f6262f;
+    public final boolean f6335f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final boolean f6263g;
+    public final boolean f6336g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final boolean f6264h;
+    public final boolean f6337h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final boolean[] f6265i;
+    public final boolean[] f6338i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final boolean[] f6266j;
+    public final boolean[] f6339j;
 
     public VideoCapabilities(boolean z10, boolean z11, boolean z12, @NonNull boolean[] zArr, @NonNull boolean[] zArr2) {
-        this.f6262f = z10;
-        this.f6263g = z11;
-        this.f6264h = z12;
-        this.f6265i = zArr;
-        this.f6266j = zArr2;
+        this.f6335f = z10;
+        this.f6336g = z11;
+        this.f6337h = z12;
+        this.f6338i = zArr;
+        this.f6339j = zArr2;
     }
 
     public boolean equals(Object obj) {
@@ -59,12 +59,12 @@ public final class VideoCapabilities extends zzg {
 
     @NonNull
     public boolean[] v3() {
-        return this.f6265i;
+        return this.f6338i;
     }
 
     @NonNull
     public boolean[] w3() {
-        return this.f6266j;
+        return this.f6339j;
     }
 
     @Override // android.os.Parcelable
@@ -79,14 +79,14 @@ public final class VideoCapabilities extends zzg {
     }
 
     public boolean x3() {
-        return this.f6262f;
+        return this.f6335f;
     }
 
     public boolean y3() {
-        return this.f6263g;
+        return this.f6336g;
     }
 
     public boolean z3() {
-        return this.f6264h;
+        return this.f6337h;
     }
 }

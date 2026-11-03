@@ -17,7 +17,7 @@ public final class DynamicRangeFeature extends i0.b {
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
     @NotNull
-    public static final k0 f21993j;
+    public static final k0 f22217j;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name and from kotlin metadata and from toString */
     @NotNull
@@ -28,9 +28,9 @@ public final class DynamicRangeFeature extends i0.b {
     public final b featureTypeInternal;
 
     static {
-        k0 SDR = k0.f17470d;
+        k0 SDR = k0.f18009d;
         Intrinsics.checkNotNullExpressionValue(SDR, "SDR");
-        f21993j = SDR;
+        f22217j = SDR;
     }
 
     public DynamicRangeFeature(@NotNull k0 dynamicRange) {

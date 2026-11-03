@@ -87,10 +87,6 @@ public class NativeGLInterface {
 
     public static native int nativeInitClientSettings(String str, String str2, String str3);
 
-    public static native int nativeInitClientSettingsCached(String str, String str2, String str3, String str4, long j10);
-
-    public static native int nativeInitClientSettingsCachedCompressed(byte[] bArr, String str, String str2, String str3, long j10, boolean z10);
-
     public static native int nativeInitClientSettingsSigned(String str, String str2, String str3, String str4);
 
     public static native void nativeMarketplacePurchaseFinished(boolean z10, String str, String str2);

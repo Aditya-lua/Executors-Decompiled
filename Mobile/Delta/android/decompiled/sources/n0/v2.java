@@ -10,16 +10,16 @@ import java.util.Set;
 public abstract class v2<C> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Set<C> f24894a = new HashSet();
+    public Set<C> f25715a = new HashSet();
 
     public void a(List<C> list) {
-        this.f24894a.addAll(list);
+        this.f25715a.addAll(list);
     }
 
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
     public abstract v2<C> clone();
 
     public List<C> c() {
-        return Collections.unmodifiableList(new ArrayList(this.f24894a));
+        return Collections.unmodifiableList(new ArrayList(this.f25715a));
     }
 }

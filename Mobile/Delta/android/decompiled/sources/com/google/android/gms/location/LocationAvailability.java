@@ -18,33 +18,33 @@ public final class LocationAvailability extends AbstractSafeParcelable implement
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @Deprecated
-    public int f7366f;
+    public int f7440f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
     @Deprecated
-    public int f7367g;
+    public int f7441g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public long f7368h;
+    public long f7442h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public int f7369i;
+    public int f7443i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public zzbo[] f7370j;
+    public zzbo[] f7444j;
 
     public LocationAvailability(int i10, int i11, int i12, long j10, zzbo[] zzboVarArr) {
-        this.f7369i = i10;
-        this.f7366f = i11;
-        this.f7367g = i12;
-        this.f7368h = j10;
-        this.f7370j = zzboVarArr;
+        this.f7443i = i10;
+        this.f7440f = i11;
+        this.f7441g = i12;
+        this.f7442h = j10;
+        this.f7444j = zzboVarArr;
     }
 
     public boolean equals(@NonNull Object obj) {
         if (obj instanceof LocationAvailability) {
             LocationAvailability locationAvailability = (LocationAvailability) obj;
-            if (this.f7366f == locationAvailability.f7366f && this.f7367g == locationAvailability.f7367g && this.f7368h == locationAvailability.f7368h && this.f7369i == locationAvailability.f7369i && Arrays.equals(this.f7370j, locationAvailability.f7370j)) {
+            if (this.f7440f == locationAvailability.f7440f && this.f7441g == locationAvailability.f7441g && this.f7442h == locationAvailability.f7442h && this.f7443i == locationAvailability.f7443i && Arrays.equals(this.f7444j, locationAvailability.f7444j)) {
                 return true;
             }
         }
@@ -52,7 +52,7 @@ public final class LocationAvailability extends AbstractSafeParcelable implement
     }
 
     public int hashCode() {
-        return k.c(Integer.valueOf(this.f7369i), Integer.valueOf(this.f7366f), Integer.valueOf(this.f7367g), Long.valueOf(this.f7368h), this.f7370j);
+        return k.c(Integer.valueOf(this.f7443i), Integer.valueOf(this.f7440f), Integer.valueOf(this.f7441g), Long.valueOf(this.f7442h), this.f7444j);
     }
 
     @NonNull
@@ -66,17 +66,17 @@ public final class LocationAvailability extends AbstractSafeParcelable implement
     }
 
     public boolean v3() {
-        return this.f7369i < 1000;
+        return this.f7443i < 1000;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
         int iA = b.a(parcel);
-        b.n(parcel, 1, this.f7366f);
-        b.n(parcel, 2, this.f7367g);
-        b.r(parcel, 3, this.f7368h);
-        b.n(parcel, 4, this.f7369i);
-        b.y(parcel, 5, this.f7370j, i10, false);
+        b.n(parcel, 1, this.f7440f);
+        b.n(parcel, 2, this.f7441g);
+        b.r(parcel, 3, this.f7442h);
+        b.n(parcel, 4, this.f7443i);
+        b.y(parcel, 5, this.f7444j, i10, false);
         b.b(parcel, iA);
     }
 }

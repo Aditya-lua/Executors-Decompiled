@@ -7,27 +7,27 @@ import java.util.concurrent.TimeUnit;
 public final class k2 implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public n2 f7117a;
+    public n2 f7191a;
 
     public k2(n2 n2Var) {
-        this.f7117a = n2Var;
+        this.f7191a = n2Var;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
         i2 i2Var;
-        n2 n2Var = this.f7117a;
-        if (n2Var == null || (i2Var = n2Var.f7186h) == null) {
+        n2 n2Var = this.f7191a;
+        if (n2Var == null || (i2Var = n2Var.f7260h) == null) {
             return;
         }
-        this.f7117a = null;
+        this.f7191a = null;
         if (i2Var.isDone()) {
             n2Var.s(i2Var);
             return;
         }
         try {
-            ScheduledFuture scheduledFuture = n2Var.f7187i;
-            n2Var.f7187i = null;
+            ScheduledFuture scheduledFuture = n2Var.f7261i;
+            n2Var.f7261i = null;
             String str = "Timed out";
             if (scheduledFuture != null) {
                 try {

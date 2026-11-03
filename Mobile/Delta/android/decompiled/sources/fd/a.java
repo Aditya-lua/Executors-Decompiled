@@ -1,145 +1,139 @@
 package fd;
 
+import android.content.res.ColorStateList;
 import android.graphics.Canvas;
-import android.graphics.LinearGradient;
-import android.graphics.Matrix;
-import android.graphics.Paint;
-import android.graphics.Path;
-import android.graphics.RadialGradient;
-import android.graphics.RectF;
-import android.graphics.Region;
-import android.graphics.Shader;
+import android.graphics.ColorFilter;
+import android.graphics.PorterDuff;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
 import androidx.annotation.NonNull;
-import androidx.core.graphics.c;
+import hd.g;
+import hd.k;
+import hd.n;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class a {
-
-    /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final int[] f16590i = new int[3];
-
-    /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final float[] f16591j = {0.0f, 0.5f, 1.0f};
-
-    /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final int[] f16592k = new int[4];
-
-    /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final float[] f16593l = {0.0f, 0.0f, 0.5f, 1.0f};
+public class a extends Drawable implements n {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public b f17186a;
+
+    @Override // android.graphics.drawable.Drawable
     @NonNull
-    public final Paint f16594a;
-
-    @NonNull
-    public final Paint b;
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    @NonNull
-    public final Paint f16595c;
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public int f16596d;
-
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public int f16597e;
-
-    /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public int f16598f;
-
-    /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final Path f16599g;
-
-    /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final Paint f16600h;
-
-    public a() {
-        this(-16777216);
+    /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
+    public a mutate() {
+        this.f17186a = new b(this.f17186a);
+        return this;
     }
 
-    public void a(@NonNull Canvas canvas, Matrix matrix, @NonNull RectF rectF, int i10, float f10, float f11) {
-        float f12;
-        boolean z10 = f11 < 0.0f;
-        Path path = this.f16599g;
-        if (z10) {
-            int[] iArr = f16592k;
-            iArr[0] = 0;
-            iArr[1] = this.f16598f;
-            iArr[2] = this.f16597e;
-            iArr[3] = this.f16596d;
-            f12 = f10;
-        } else {
-            path.rewind();
-            path.moveTo(rectF.centerX(), rectF.centerY());
-            f12 = f10;
-            path.arcTo(rectF, f12, f11);
-            path.close();
-            float f13 = -i10;
-            rectF.inset(f13, f13);
-            int[] iArr2 = f16592k;
-            iArr2[0] = 0;
-            iArr2[1] = this.f16596d;
-            iArr2[2] = this.f16597e;
-            iArr2[3] = this.f16598f;
+    @Override // android.graphics.drawable.Drawable
+    public void draw(Canvas canvas) {
+        b bVar = this.f17186a;
+        if (bVar.b) {
+            bVar.f17187a.draw(canvas);
         }
-        float fWidth = rectF.width() / 2.0f;
-        if (fWidth <= 0.0f) {
-            return;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public Drawable.ConstantState getConstantState() {
+        return this.f17186a;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public int getOpacity() {
+        return this.f17186a.f17187a.getOpacity();
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public boolean isStateful() {
+        return true;
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public void onBoundsChange(@NonNull Rect rect) {
+        super.onBoundsChange(rect);
+        this.f17186a.f17187a.setBounds(rect);
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public boolean onStateChange(@NonNull int[] iArr) {
+        boolean zOnStateChange = super.onStateChange(iArr);
+        if (this.f17186a.f17187a.setState(iArr)) {
+            zOnStateChange = true;
         }
-        float f14 = 1.0f - (i10 / fWidth);
-        float[] fArr = f16593l;
-        fArr[1] = f14;
-        fArr[2] = ((1.0f - f14) / 2.0f) + f14;
-        this.b.setShader(new RadialGradient(rectF.centerX(), rectF.centerY(), fWidth, f16592k, fArr, Shader.TileMode.CLAMP));
-        canvas.save();
-        canvas.concat(matrix);
-        canvas.scale(1.0f, rectF.height() / rectF.width());
-        if (!z10) {
-            canvas.clipPath(path, Region.Op.DIFFERENCE);
-            canvas.drawPath(path, this.f16600h);
+        boolean zB = fd.b.b(iArr);
+        b bVar = this.f17186a;
+        if (bVar.b == zB) {
+            return zOnStateChange;
         }
-        canvas.drawArc(rectF, f12, f11, true, this.b);
-        canvas.restore();
+        bVar.b = zB;
+        return true;
     }
 
-    public void b(@NonNull Canvas canvas, Matrix matrix, @NonNull RectF rectF, int i10) {
-        rectF.bottom += i10;
-        rectF.offset(0.0f, -i10);
-        int[] iArr = f16590i;
-        iArr[0] = this.f16598f;
-        iArr[1] = this.f16597e;
-        iArr[2] = this.f16596d;
-        Paint paint = this.f16595c;
-        float f10 = rectF.left;
-        paint.setShader(new LinearGradient(f10, rectF.top, f10, rectF.bottom, iArr, f16591j, Shader.TileMode.CLAMP));
-        canvas.save();
-        canvas.concat(matrix);
-        canvas.drawRect(rectF, this.f16595c);
-        canvas.restore();
+    @Override // android.graphics.drawable.Drawable
+    public void setAlpha(int i10) {
+        this.f17186a.f17187a.setAlpha(i10);
     }
 
-    @NonNull
-    public Paint c() {
-        return this.f16594a;
+    @Override // android.graphics.drawable.Drawable
+    public void setColorFilter(ColorFilter colorFilter) {
+        this.f17186a.f17187a.setColorFilter(colorFilter);
     }
 
-    public void d(int i10) {
-        this.f16596d = c.l(i10, 68);
-        this.f16597e = c.l(i10, 20);
-        this.f16598f = c.l(i10, 0);
-        this.f16594a.setColor(this.f16596d);
+    @Override // hd.n
+    public void setShapeAppearanceModel(@NonNull k kVar) {
+        this.f17186a.f17187a.setShapeAppearanceModel(kVar);
     }
 
-    public a(int i10) {
-        this.f16599g = new Path();
-        Paint paint = new Paint();
-        this.f16600h = paint;
-        this.f16594a = new Paint();
-        d(i10);
-        paint.setColor(0);
-        Paint paint2 = new Paint(4);
-        this.b = paint2;
-        paint2.setStyle(Paint.Style.FILL);
-        this.f16595c = new Paint(paint2);
+    @Override // android.graphics.drawable.Drawable
+    public void setTint(int i10) {
+        this.f17186a.f17187a.setTint(i10);
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public void setTintList(ColorStateList colorStateList) {
+        this.f17186a.f17187a.setTintList(colorStateList);
+    }
+
+    @Override // android.graphics.drawable.Drawable
+    public void setTintMode(PorterDuff.Mode mode) {
+        this.f17186a.f17187a.setTintMode(mode);
+    }
+
+    public a(k kVar) {
+        this(new b(new g(kVar)));
+    }
+
+    public static final class b extends Drawable.ConstantState {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        @NonNull
+        public g f17187a;
+        public boolean b;
+
+        public b(g gVar) {
+            this.f17187a = gVar;
+            this.b = false;
+        }
+
+        @Override // android.graphics.drawable.Drawable.ConstantState
+        @NonNull
+        /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
+        public a newDrawable() {
+            return new a(new b(this));
+        }
+
+        @Override // android.graphics.drawable.Drawable.ConstantState
+        public int getChangingConfigurations() {
+            return 0;
+        }
+
+        public b(@NonNull b bVar) {
+            this.f17187a = (g) bVar.f17187a.getConstantState().newDrawable();
+            this.b = bVar.b;
+        }
+    }
+
+    public a(b bVar) {
+        this.f17186a = bVar;
     }
 }

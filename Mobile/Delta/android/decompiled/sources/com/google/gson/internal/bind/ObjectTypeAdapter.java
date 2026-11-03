@@ -18,7 +18,7 @@ import jg.z;
 
 /* JADX INFO: loaded from: classes2.dex */
 public final class ObjectTypeAdapter extends a0<Object> {
-    private static final b0 DOUBLE_FACTORY = newFactory(y.f21451a);
+    private static final b0 DOUBLE_FACTORY = newFactory(y.f21910a);
     private final f gson;
     private final z toNumberStrategy;
 
@@ -57,7 +57,7 @@ public final class ObjectTypeAdapter extends a0<Object> {
     }
 
     public static b0 getFactory(z zVar) {
-        return zVar == y.f21451a ? DOUBLE_FACTORY : newFactory(zVar);
+        return zVar == y.f21910a ? DOUBLE_FACTORY : newFactory(zVar);
     }
 
     private static b0 newFactory(final z zVar) {

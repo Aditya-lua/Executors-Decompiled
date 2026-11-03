@@ -42,8 +42,8 @@ public final class g extends b {
     public volatile e1 Q;
     public volatile ScheduledExecutorService R;
 
-    public g(String str, Context context, i1 i1Var, ExecutorService executorService, a.C0108a c0108a) {
-        super(null, context, null, null, c0108a);
+    public g(String str, Context context, i1 i1Var, ExecutorService executorService, a.C0112a c0112a) {
+        super(null, context, null, null, c0112a);
         this.O = 0;
         this.N = context;
     }
@@ -67,7 +67,7 @@ public final class g extends b {
             } else {
                 str = "IS_FEATURE_SUPPORTED";
             }
-            mVar.j1(packageName, str, new d1(t9Var));
+            mVar.f1(packageName, str, new d1(t9Var));
             return "billingOverrideService.getBillingOverride";
         } catch (Exception e10) {
             gVar.g1(s7.BILLING_OVERRIDE_SERVICE_CALL_EXCEPTION, 28, h.F);
@@ -221,7 +221,7 @@ public final class g extends b {
             return (d) callable.call();
         } catch (Exception e10) {
             s7 s7Var = s7.BILLING_OVERRIDE_SERVICE_FALLBACK_ERROR;
-            d dVar = h.f5171h;
+            d dVar = h.f5244h;
             g1(s7Var, 2, dVar);
             m0.n("BillingClientTesting", "An internal error occurred.", e10);
             return dVar;
@@ -239,7 +239,7 @@ public final class g extends b {
             return y9.a(new v9() { // from class: v7.x0
                 @Override // com.google.android.gms.internal.play_billing.v9
                 public final Object a(t9 t9Var) {
-                    return com.android.billingclient.api.g.X0(this.f32860a, i10, t9Var);
+                    return com.android.billingclient.api.g.X0(this.f33428a, i10, t9Var);
                 }
             });
         }
@@ -265,14 +265,14 @@ public final class g extends b {
     }
 
     public final void g1(s7 s7Var, int i10, d dVar) {
-        int i11 = h1.f32789a;
+        int i11 = h1.f33357a;
         l7 l7VarB = h1.b(s7Var, i10, dVar, null, z7.BROADCAST_ACTION_UNSPECIFIED);
         Objects.requireNonNull(l7VarB, "ApiFailure should not be null");
         D0().j(l7VarB);
     }
 
     public final void h1(int i10) {
-        int i11 = h1.f32789a;
+        int i11 = h1.f33357a;
         p7 p7VarC = h1.c(i10, z7.BROADCAST_ACTION_UNSPECIFIED);
         Objects.requireNonNull(p7VarC, "ApiSuccess should not be null");
         D0().c(p7VarC);
@@ -288,14 +288,14 @@ public final class g extends b {
         d2.c(d2.b(f1(i10), 28500L, TimeUnit.MILLISECONDS, b1()), new c1(this, i10, aVar, runnable), n());
     }
 
-    public g(String str, v7.i iVar, Context context, p1 p1Var, i1 i1Var, ExecutorService executorService, a.C0108a c0108a) {
-        super(null, iVar, context, null, null, null, c0108a);
+    public g(String str, v7.i iVar, Context context, p1 p1Var, i1 i1Var, ExecutorService executorService, a.C0112a c0112a) {
+        super(null, iVar, context, null, null, null, c0112a);
         this.O = 0;
         this.N = context;
     }
 
-    public g(String str, v7.i iVar, Context context, v7.m mVar, c0 c0Var, i1 i1Var, ExecutorService executorService, a.C0108a c0108a) {
-        super(null, iVar, context, mVar, null, null, null, c0108a);
+    public g(String str, v7.i iVar, Context context, v7.m mVar, c0 c0Var, i1 i1Var, ExecutorService executorService, a.C0112a c0112a) {
+        super(null, iVar, context, mVar, null, null, null, c0112a);
         this.O = 0;
         this.N = context;
     }

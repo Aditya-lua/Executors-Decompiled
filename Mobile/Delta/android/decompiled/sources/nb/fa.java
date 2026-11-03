@@ -7,17 +7,17 @@ import java.util.Objects;
 public final class fa implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ fe f25517a;
+    public final /* synthetic */ fe f26338a;
     public final /* synthetic */ AppMeasurementDynamiteService b;
 
     public fa(AppMeasurementDynamiteService appMeasurementDynamiteService, fe feVar) {
-        this.f25517a = feVar;
+        this.f26338a = feVar;
         Objects.requireNonNull(appMeasurementDynamiteService);
         this.b = appMeasurementDynamiteService;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        this.b.f7405a.B().I(this.f25517a);
+        this.b.f7479a.B().I(this.f26338a);
     }
 }

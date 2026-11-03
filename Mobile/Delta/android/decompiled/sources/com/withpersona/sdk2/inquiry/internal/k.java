@@ -10,11 +10,11 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import zo.a0;
+import xo.a0;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000Z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b!\b\u0000\u0018\u0000 (2\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0003!#=B\u007f\b\u0007\u0012\b\b\u0001\u0010\u0004\u001a\u00020\u0003\u0012\n\b\u0001\u0010\u0005\u001a\u0004\u0018\u00010\u0003\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0003\u0012\b\b\u0001\u0010\b\u001a\u00020\u0007\u0012\b\b\u0001\u0010\n\u001a\u00020\t\u0012\b\b\u0001\u0010\f\u001a\u00020\u000b\u0012\u0006\u0010\u000e\u001a\u00020\r\u0012\u0006\u0010\u0010\u001a\u00020\u000f\u0012\u0006\u0010\u0012\u001a\u00020\u0011\u0012\u0006\u0010\u0014\u001a\u00020\u0013\u0012\u0006\u0010\u0016\u001a\u00020\u0015\u0012\u0006\u0010\u0018\u001a\u00020\u0017\u0012\u0006\u0010\u001a\u001a\u00020\u0019¢\u0006\u0004\b\u001b\u0010\u001cJ\u0015\u0010\u001e\u001a\b\u0012\u0004\u0012\u00020\u00020\u001dH\u0016¢\u0006\u0004\b\u001e\u0010\u001fJ\u001b\u0010!\u001a\u00020\u000b2\n\u0010 \u001a\u0006\u0012\u0002\b\u00030\u0001H\u0016¢\u0006\u0004\b!\u0010\"R\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b#\u0010$\u001a\u0004\b%\u0010&R\u0016\u0010\u0005\u001a\u0004\u0018\u00010\u00038\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b!\u0010$R\u0017\u0010\u0006\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b'\u0010$\u001a\u0004\b(\u0010&R\u0014\u0010\b\u001a\u00020\u00078\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b)\u0010*R\u0016\u0010\n\u001a\u00020\t8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b+\u0010,R\u0014\u0010\f\u001a\u00020\u000b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b-\u0010.R\u0014\u0010\u000e\u001a\u00020\r8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b/\u00100R\u0014\u0010\u0010\u001a\u00020\u000f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b1\u00102R\u0014\u0010\u0012\u001a\u00020\u00118\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b3\u00104R\u0014\u0010\u0014\u001a\u00020\u00138\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b5\u00106R\u0014\u0010\u0016\u001a\u00020\u00158\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b7\u00108R\u0014\u0010\u0018\u001a\u00020\u00178\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b9\u0010:R\u0014\u0010\u001a\u001a\u00020\u00198\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b;\u0010<¨\u0006>"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/k;", "Lvr/h;", "Lcom/withpersona/sdk2/inquiry/internal/k$c;", "", "sessionToken", "trackingEventsUrl", "inquiryId", "Lzo/a0;", "pollingMode", "Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;", "inquirySessionConfig", "", "canReuseWorkflow", "Lgp/w;", "service", "Lyn/a;", "deviceIdProvider", "Lwp/c;", "sandboxFlags", "Ldp/i;", "fallbackModeManager", "Lkr/a;", "fontDownloader", "Lcom/withpersona/sdk2/inquiry/shared/inquiryTheme/a;", "themeManager", "Lcom/withpersona/sdk2/inquiry/internal/network/e;", "inquiryApiHelper", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lzo/a0;Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;ZLgp/w;Lyn/a;Lwp/c;Ldp/i;Lkr/a;Lcom/withpersona/sdk2/inquiry/shared/inquiryTheme/a;Lcom/withpersona/sdk2/inquiry/internal/network/e;)V", "Lnu/h;", "run", "()Lnu/h;", "otherWorker", "c", "(Lvr/h;)Z", "b", "Ljava/lang/String;", "p", "()Ljava/lang/String;", "d", "o", "e", "Lzo/a0;", "f", "Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;", "g", "Z", "h", "Lgp/w;", "i", "Lyn/a;", "j", "Lwp/c;", "k", "Ldp/i;", "l", "Lkr/a;", "m", "Lcom/withpersona/sdk2/inquiry/shared/inquiryTheme/a;", "n", "Lcom/withpersona/sdk2/inquiry/internal/network/e;", "a", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class k implements vr.h<c> {
+@Metadata(d1 = {"\u0000Z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b!\b\u0000\u0018\u0000 )2\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0003'#!B\u007f\b\u0007\u0012\b\b\u0001\u0010\u0004\u001a\u00020\u0003\u0012\n\b\u0001\u0010\u0005\u001a\u0004\u0018\u00010\u0003\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0003\u0012\b\b\u0001\u0010\b\u001a\u00020\u0007\u0012\b\b\u0001\u0010\n\u001a\u00020\t\u0012\b\b\u0001\u0010\f\u001a\u00020\u000b\u0012\u0006\u0010\u000e\u001a\u00020\r\u0012\u0006\u0010\u0010\u001a\u00020\u000f\u0012\u0006\u0010\u0012\u001a\u00020\u0011\u0012\u0006\u0010\u0014\u001a\u00020\u0013\u0012\u0006\u0010\u0016\u001a\u00020\u0015\u0012\u0006\u0010\u0018\u001a\u00020\u0017\u0012\u0006\u0010\u001a\u001a\u00020\u0019¢\u0006\u0004\b\u001b\u0010\u001cJ\u0015\u0010\u001e\u001a\b\u0012\u0004\u0012\u00020\u00020\u001dH\u0016¢\u0006\u0004\b\u001e\u0010\u001fJ\u001b\u0010!\u001a\u00020\u000b2\n\u0010 \u001a\u0006\u0012\u0002\b\u00030\u0001H\u0016¢\u0006\u0004\b!\u0010\"R\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b#\u0010$\u001a\u0004\b%\u0010&R\u0016\u0010\u0005\u001a\u0004\u0018\u00010\u00038\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b'\u0010$R\u0017\u0010\u0006\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b(\u0010$\u001a\u0004\b)\u0010&R\u0014\u0010\b\u001a\u00020\u00078\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b*\u0010+R\u0016\u0010\n\u001a\u00020\t8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b,\u0010-R\u0014\u0010\f\u001a\u00020\u000b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b.\u0010/R\u0014\u0010\u000e\u001a\u00020\r8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b0\u00101R\u0014\u0010\u0010\u001a\u00020\u000f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b2\u00103R\u0014\u0010\u0012\u001a\u00020\u00118\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b4\u00105R\u0014\u0010\u0014\u001a\u00020\u00138\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b6\u00107R\u0014\u0010\u0016\u001a\u00020\u00158\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b8\u00109R\u0014\u0010\u0018\u001a\u00020\u00178\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b:\u0010;R\u0014\u0010\u001a\u001a\u00020\u00198\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b<\u0010=¨\u0006>"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/k;", "Ltr/h;", "Lcom/withpersona/sdk2/inquiry/internal/k$c;", "", "sessionToken", "trackingEventsUrl", "inquiryId", "Lxo/a0;", "pollingMode", "Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;", "inquirySessionConfig", "", "canReuseWorkflow", "Lep/w;", "service", "Lwn/a;", "deviceIdProvider", "Lup/c;", "sandboxFlags", "Lbp/i;", "fallbackModeManager", "Lir/a;", "fontDownloader", "Lcom/withpersona/sdk2/inquiry/shared/inquiryTheme/a;", "themeManager", "Lcom/withpersona/sdk2/inquiry/internal/network/e;", "inquiryApiHelper", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lxo/a0;Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;ZLep/w;Lwn/a;Lup/c;Lbp/i;Lir/a;Lcom/withpersona/sdk2/inquiry/shared/inquiryTheme/a;Lcom/withpersona/sdk2/inquiry/internal/network/e;)V", "Llu/h;", "run", "()Llu/h;", "otherWorker", "a", "(Ltr/h;)Z", "b", "Ljava/lang/String;", "p", "()Ljava/lang/String;", "c", "d", "o", "e", "Lxo/a0;", "f", "Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;", "g", "Z", "h", "Lep/w;", "i", "Lwn/a;", "j", "Lup/c;", "k", "Lbp/i;", "l", "Lir/a;", "m", "Lcom/withpersona/sdk2/inquiry/shared/inquiryTheme/a;", "n", "Lcom/withpersona/sdk2/inquiry/internal/network/e;", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class k implements tr.h<c> {
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull
@@ -41,23 +41,23 @@ public final class k implements vr.h<c> {
 
     /* JADX INFO: renamed from: h, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final gp.w service;
+    public final ep.w service;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final yn.a deviceIdProvider;
+    public final wn.a deviceIdProvider;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final wp.c sandboxFlags;
+    public final up.c sandboxFlags;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final dp.i fallbackModeManager;
+    public final bp.i fallbackModeManager;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final kr.a fontDownloader;
+    public final ir.a fontDownloader;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -67,7 +67,7 @@ public final class k implements vr.h<c> {
     @NotNull
     public final com.withpersona.sdk2.inquiry.internal.network.e inquiryApiHelper;
 
-    @Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\bg\u0018\u00002\u00020\u0001JG\u0010\r\u001a\u00020\f2\b\b\u0001\u0010\u0003\u001a\u00020\u00022\n\b\u0001\u0010\u0004\u001a\u0004\u0018\u00010\u00022\b\b\u0001\u0010\u0005\u001a\u00020\u00022\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\nH&¢\u0006\u0004\b\r\u0010\u000e¨\u0006\u000fÀ\u0006\u0003"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/k$b;", "", "", "sessionToken", "trackingEventsUrl", "inquiryId", "Lzo/a0;", "pollingMode", "Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;", "inquirySessionConfig", "", "canReuseWorkflow", "Lcom/withpersona/sdk2/inquiry/internal/k;", "a", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lzo/a0;Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;Z)Lcom/withpersona/sdk2/inquiry/internal/k;", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\bg\u0018\u00002\u00020\u0001JG\u0010\r\u001a\u00020\f2\b\b\u0001\u0010\u0003\u001a\u00020\u00022\n\b\u0001\u0010\u0004\u001a\u0004\u0018\u00010\u00022\b\b\u0001\u0010\u0005\u001a\u00020\u00022\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\nH&¢\u0006\u0004\b\r\u0010\u000e¨\u0006\u000fÀ\u0006\u0003"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/k$b;", "", "", "sessionToken", "trackingEventsUrl", "inquiryId", "Lxo/a0;", "pollingMode", "Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;", "inquirySessionConfig", "", "canReuseWorkflow", "Lcom/withpersona/sdk2/inquiry/internal/k;", "a", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lxo/a0;Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;Z)Lcom/withpersona/sdk2/inquiry/internal/k;", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public interface b {
         @NotNull
         k a(@NotNull String sessionToken, @Nullable String trackingEventsUrl, @NotNull String inquiryId, @NotNull a0 pollingMode, @NotNull InquirySessionConfig inquirySessionConfig, boolean canReuseWorkflow);
@@ -167,9 +167,9 @@ public final class k implements vr.h<c> {
         }
     }
 
-    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u0002*\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Lnu/i;", "Lcom/withpersona/sdk2/inquiry/internal/k$c;", "", "<anonymous>", "(Lnu/i;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.internal.PollingWorker$run$1", f = "PollingWorker.kt", l = {52, 63, 142, 153, 160, 164, 170, 174}, m = "invokeSuspend")
-    public static final class d extends pt.m implements Function2<nu.i<? super c>, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.internal.PollingWorker$run$1", f = "PollingWorker.kt", l = {52, 63, 142, 153, 160, 164, 170, 174}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u0002*\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Llu/i;", "Lcom/withpersona/sdk2/inquiry/internal/k$c;", "", "<anonymous>", "(Llu/i;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class d extends nt.m implements Function2<lu.i<? super c>, lt.b<? super Unit>, Object> {
         public Object A;
         public Object B;
         public Object C;
@@ -179,31 +179,31 @@ public final class k implements vr.h<c> {
         public /* synthetic */ Object G;
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f11845t;
+        public Object f11926t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f11846u;
+        public Object f11927u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public Object f11847v;
+        public Object f11928v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public Object f11848w;
+        public Object f11929w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public Object f11849x;
+        public Object f11930x;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public Object f11850y;
+        public Object f11931y;
 
         /* JADX INFO: renamed from: z, reason: collision with root package name */
-        public Object f11851z;
+        public Object f11932z;
 
         @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
         public static final /* synthetic */ class a {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public static final /* synthetic */ int[] f11852a;
+            public static final /* synthetic */ int[] f11933a;
 
             static {
                 int[] iArr = new int[CheckInquiryResponse.PollingMode.values().length];
@@ -219,16 +219,16 @@ public final class k implements vr.h<c> {
                     iArr[CheckInquiryResponse.PollingMode.None.ordinal()] = 3;
                 } catch (NoSuchFieldError unused3) {
                 }
-                f11852a = iArr;
+                f11933a = iArr;
             }
         }
 
-        public d(nt.b<? super d> bVar) {
+        public d(lt.b<? super d> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             d dVar = k.this.new d(bVar);
             dVar.G = obj;
             return dVar;
@@ -251,7 +251,7 @@ public final class k implements vr.h<c> {
             	at jadx.core.utils.ErrorsCounter.error(ErrorsCounter.java:31)
             	at jadx.core.dex.attributes.nodes.NotificationAttrNode.addError(NotificationAttrNode.java:19)
             */
-        @Override // pt.a
+        @Override // nt.a
         public final java.lang.Object invokeSuspend(java.lang.Object r29) {
             /*
                 Method dump skipped, instruction units count: 1496
@@ -261,13 +261,13 @@ public final class k implements vr.h<c> {
         }
 
         @Override // kotlin.jvm.functions.Function2
-        /* JADX INFO: renamed from: q, reason: merged with bridge method [inline-methods] */
-        public final Object invoke(nu.i<? super c> iVar, nt.b<? super Unit> bVar) {
-            return ((d) create(iVar, bVar)).invokeSuspend(Unit.f22483a);
+        /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
+        public final Object invoke(lu.i<? super c> iVar, lt.b<? super Unit> bVar) {
+            return ((d) create(iVar, bVar)).invokeSuspend(Unit.f22938a);
         }
     }
 
-    public k(@NotNull String sessionToken, @Nullable String str, @NotNull String inquiryId, @NotNull a0 pollingMode, @NotNull InquirySessionConfig inquirySessionConfig, boolean z10, @NotNull gp.w service, @NotNull yn.a deviceIdProvider, @NotNull wp.c sandboxFlags, @NotNull dp.i fallbackModeManager, @NotNull kr.a fontDownloader, @NotNull com.withpersona.sdk2.inquiry.shared.inquiryTheme.a themeManager, @NotNull com.withpersona.sdk2.inquiry.internal.network.e inquiryApiHelper) {
+    public k(@NotNull String sessionToken, @Nullable String str, @NotNull String inquiryId, @NotNull a0 pollingMode, @NotNull InquirySessionConfig inquirySessionConfig, boolean z10, @NotNull ep.w service, @NotNull wn.a deviceIdProvider, @NotNull up.c sandboxFlags, @NotNull bp.i fallbackModeManager, @NotNull ir.a fontDownloader, @NotNull com.withpersona.sdk2.inquiry.shared.inquiryTheme.a themeManager, @NotNull com.withpersona.sdk2.inquiry.internal.network.e inquiryApiHelper) {
         Intrinsics.checkNotNullParameter(sessionToken, "sessionToken");
         Intrinsics.checkNotNullParameter(inquiryId, "inquiryId");
         Intrinsics.checkNotNullParameter(pollingMode, "pollingMode");
@@ -294,19 +294,19 @@ public final class k implements vr.h<c> {
         this.inquiryApiHelper = inquiryApiHelper;
     }
 
-    @Override // vr.h
-    public boolean a(@NotNull vr.h<?> hVar) {
-        return super.a(hVar);
-    }
-
-    @Override // vr.h
-    public boolean c(@NotNull vr.h<?> otherWorker) {
+    @Override // tr.h
+    public boolean a(@NotNull tr.h<?> otherWorker) {
         Intrinsics.checkNotNullParameter(otherWorker, "otherWorker");
         if (!(otherWorker instanceof k)) {
             return false;
         }
         k kVar = (k) otherWorker;
         return Intrinsics.c(this.sessionToken, kVar.sessionToken) && Intrinsics.c(this.inquiryId, kVar.inquiryId) && this.pollingMode == kVar.pollingMode;
+    }
+
+    @Override // tr.h
+    public boolean b(@NotNull tr.h<?> hVar) {
+        return super.b(hVar);
     }
 
     @NotNull
@@ -321,9 +321,9 @@ public final class k implements vr.h<c> {
         return this.sessionToken;
     }
 
-    @Override // vr.h
+    @Override // tr.h
     @NotNull
-    public nu.h<c> run() {
-        return nu.j.w(new d(null));
+    public lu.h<c> run() {
+        return lu.j.w(new d(null));
     }
 }

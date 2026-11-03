@@ -6,7 +6,7 @@ public class o extends n {
         super(d.NO_RECEIVER, cls, str, str2, i10);
     }
 
-    @Override // hu.j
+    @Override // fu.j
     public Object get(Object obj) {
         c();
         throw null;

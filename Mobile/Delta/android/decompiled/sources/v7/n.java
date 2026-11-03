@@ -7,16 +7,16 @@ import java.util.List;
 public final class n {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final List<com.android.billingclient.api.e> f32813a;
+    public final List<com.android.billingclient.api.e> f33381a;
     public final List<p> b;
 
     public n(List<com.android.billingclient.api.e> list, List<p> list2) {
-        this.f32813a = list;
+        this.f33381a = list;
         this.b = list2;
     }
 
     @NonNull
     public List<com.android.billingclient.api.e> a() {
-        return this.f32813a;
+        return this.f33381a;
     }
 }

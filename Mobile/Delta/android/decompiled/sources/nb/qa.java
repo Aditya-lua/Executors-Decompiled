@@ -48,85 +48,85 @@ import okhttp3.internal.ws.RealWebSocket;
 public final class qa extends b5 {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public da f25891c;
+    public da f26712c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public u8 f25892d;
+    public u8 f26713d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Set f25893e;
+    public final Set f26714e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public boolean f25894f;
+    public boolean f26715f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final AtomicReference f25895g;
+    public final AtomicReference f26716g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final Object f25896h;
+    public final Object f26717h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public boolean f25897i;
+    public boolean f26718i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public int f25898j;
+    public int f26719j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public w f25899k;
+    public w f26720k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public w f25900l;
+    public w f26721l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public PriorityQueue f25901m;
+    public PriorityQueue f26722m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public boolean f25902n;
+    public boolean f26723n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public q8 f25903o;
+    public q8 f26724o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public final AtomicLong f25904p;
+    public final AtomicLong f26725p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public long f25905q;
+    public long f26726q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public final cf f25906r;
+    public final cf f26727r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public boolean f25907s;
+    public boolean f26728s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public w f25908t;
+    public w f26729t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public SharedPreferences.OnSharedPreferenceChangeListener f25909u;
+    public SharedPreferences.OnSharedPreferenceChangeListener f26730u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public w f25910v;
+    public w f26731v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public final ue f25911w;
+    public final ue f26732w;
 
     public qa(g7 g7Var) {
         super(g7Var);
-        this.f25893e = new CopyOnWriteArraySet();
-        this.f25896h = new Object();
-        this.f25897i = false;
-        this.f25898j = 1;
-        this.f25907s = true;
-        this.f25911w = new s9(this);
-        this.f25895g = new AtomicReference();
-        this.f25903o = q8.f25885c;
-        this.f25905q = -1L;
-        this.f25904p = new AtomicLong(0L);
-        this.f25906r = new cf(g7Var);
+        this.f26714e = new CopyOnWriteArraySet();
+        this.f26717h = new Object();
+        this.f26718i = false;
+        this.f26719j = 1;
+        this.f26728s = true;
+        this.f26732w = new s9(this);
+        this.f26716g = new AtomicReference();
+        this.f26724o = q8.f26706c;
+        this.f26726q = -1L;
+        this.f26725p = new AtomicLong(0L);
+        this.f26727r = new cf(g7Var);
     }
 
     public final void A(String str, String str2, long j10, Object obj) {
-        this.f25625a.b().t(new j9(this, str, str2, obj, j10));
+        this.f26446a.b().t(new j9(this, str, str2, obj, j10));
     }
 
     /* JADX WARN: Code duplicated, block: B:17:0x0053 A[DONT_INVERT] */
@@ -142,35 +142,35 @@ public final class qa extends b5 {
                 String str3 = (String) obj;
                 if (!TextUtils.isEmpty(str3)) {
                     long j11 = true != "false".equals(str3.toLowerCase(Locale.ENGLISH)) ? 0L : 1L;
-                    g7 g7Var = this.f25625a;
+                    g7 g7Var = this.f26446a;
                     Long lValueOf = Long.valueOf(j11);
-                    g7Var.x().f25679n.b(lValueOf.longValue() == 1 ? "true" : "false");
+                    g7Var.x().f26500n.b(lValueOf.longValue() == 1 ? "true" : "false");
                     obj = lValueOf;
                 } else if (obj == null) {
-                    this.f25625a.x().f25679n.b("unset");
+                    this.f26446a.x().f26500n.b("unset");
                     obj = obj;
                 }
                 str2 = "_npa";
             } else if (obj == null) {
-                this.f25625a.x().f25679n.b("unset");
+                this.f26446a.x().f26500n.b("unset");
                 obj = obj;
                 str2 = "_npa";
             }
-            this.f25625a.a().w().c("Setting user property(FE)", "non_personalized_ads(_npa)", obj);
+            this.f26446a.a().w().c("Setting user property(FE)", "non_personalized_ads(_npa)", obj);
             obj2 = obj;
         }
         String str4 = str2;
         Object obj3 = obj2;
-        g7 g7Var2 = this.f25625a;
+        g7 g7Var2 = this.f26446a;
         if (!g7Var2.g()) {
-            this.f25625a.a().w().a("User property not set since app measurement is disabled");
+            this.f26446a.a().w().a("User property not set since app measurement is disabled");
         } else if (g7Var2.m()) {
-            this.f25625a.J().o(new zzpl(str4, j10, obj3, str));
+            this.f26446a.J().o(new zzpl(str4, j10, obj3, str));
         }
     }
 
     public final Map C(String str, String str2, boolean z10) {
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         if (g7Var.b().p()) {
             g7Var.a().o().a("Cannot get user properties from analytics worker thread");
             return Collections.EMPTY_MAP;
@@ -181,7 +181,7 @@ public final class qa extends b5 {
             return Collections.EMPTY_MAP;
         }
         AtomicReference atomicReference = new AtomicReference();
-        this.f25625a.b().u(atomicReference, 5000L, "get user properties", new q9(this, atomicReference, null, str, str2, z10));
+        this.f26446a.b().u(atomicReference, 5000L, "get user properties", new q9(this, atomicReference, null, str, str2, z10));
         List<zzpl> list = (List) atomicReference.get();
         if (list == null) {
             g7Var.a().o().b("Timed out waiting for handle get user properties, includeInternal", Boolean.valueOf(z10));
@@ -191,69 +191,69 @@ public final class qa extends b5 {
         for (zzpl zzplVar : list) {
             Object objZza = zzplVar.zza();
             if (objZza != null) {
-                aVar.put(zzplVar.f7439g, objZza);
+                aVar.put(zzplVar.f7513g, objZza);
             }
         }
         return aVar;
     }
 
     public final String D() {
-        return (String) this.f25895g.get();
+        return (String) this.f26716g.get();
     }
 
     public final void E(String str) {
-        this.f25895g.set(str);
+        this.f26716g.set(str);
     }
 
     public final void F() {
         h();
-        g7 g7Var = this.f25625a;
-        if (g7Var.x().f25686u.a()) {
+        g7 g7Var = this.f26446a;
+        if (g7Var.x().f26507u.a()) {
             g7Var.a().v().a("Deferred Deep Link already retrieved. Not fetching again.");
             return;
         }
-        long jA = g7Var.x().f25687v.a();
-        g7Var.x().f25687v.b(1 + jA);
+        long jA = g7Var.x().f26508v.a();
+        g7Var.x().f26508v.b(1 + jA);
         g7Var.w();
         if (jA >= 5) {
             g7Var.a().r().a("Permanently failed to retrieve Deferred Deep Link. Reached maximum retries.");
-            g7Var.x().f25686u.b(true);
+            g7Var.x().f26507u.b(true);
         } else {
-            if (this.f25908t == null) {
-                this.f25908t = new l9(this, this.f25625a);
+            if (this.f26729t == null) {
+                this.f26729t = new l9(this, this.f26446a);
             }
-            this.f25908t.b(0L);
+            this.f26729t.b(0L);
         }
     }
 
     public final void G(long j10) {
-        this.f25895g.set(null);
-        this.f25625a.b().t(new m9(this, j10));
+        this.f26716g.set(null);
+        this.f26446a.b().t(new m9(this, j10));
     }
 
     public final void H() {
         h();
         j();
-        if (this.f25625a.m()) {
-            g7 g7Var = this.f25625a;
+        if (this.f26446a.m()) {
+            g7 g7Var = this.f26446a;
             k kVarW = g7Var.w();
-            kVarW.f25625a.c();
+            kVarW.f26446a.c();
             Boolean boolJ = kVarW.J("google_analytics_deferred_deep_link_enabled");
             if (boolJ != null && boolJ.booleanValue()) {
                 g7Var.a().v().a("Deferred Deep Link feature enabled.");
                 g7Var.b().t(new Runnable() { // from class: nb.na
                     @Override // java.lang.Runnable
                     public final /* synthetic */ void run() {
-                        this.f25796a.F();
+                        this.f26617a.F();
                     }
                 });
             }
-            this.f25625a.J().s();
-            this.f25907s = false;
+            this.f26446a.J().s();
+            this.f26728s = false;
             k6 k6VarX = g7Var.x();
             k6VarX.h();
             String string = k6VarX.p().getString("previous_os_version", null);
-            k6VarX.f25625a.K().l();
+            k6VarX.f26446a.K().l();
             String str = Build.VERSION.RELEASE;
             if (!TextUtils.isEmpty(str) && !str.equals(string)) {
                 SharedPreferences.Editor editorEdit = k6VarX.p().edit();
@@ -277,45 +277,45 @@ public final class qa extends b5 {
         u8 u8Var2;
         h();
         j();
-        if (u8Var != null && u8Var != (u8Var2 = this.f25892d)) {
+        if (u8Var != null && u8Var != (u8Var2 = this.f26713d)) {
             n9.m.q(u8Var2 == null, "EventInterceptor already set.");
         }
-        this.f25892d = u8Var;
+        this.f26713d = u8Var;
     }
 
     public final void J(v8 v8Var) {
         j();
         n9.m.l(v8Var);
-        if (this.f25893e.add(v8Var)) {
+        if (this.f26714e.add(v8Var)) {
             return;
         }
-        this.f25625a.a().r().a("OnEventListener already registered");
+        this.f26446a.a().r().a("OnEventListener already registered");
     }
 
     public final void K(v8 v8Var) {
         j();
         n9.m.l(v8Var);
-        if (this.f25893e.remove(v8Var)) {
+        if (this.f26714e.remove(v8Var)) {
             return;
         }
-        this.f25625a.a().r().a("OnEventListener had not been registered");
+        this.f26446a.a().r().a("OnEventListener had not been registered");
     }
 
     public final int L(String str) {
         n9.m.f(str);
-        this.f25625a.w();
+        this.f26446a.w();
         return 25;
     }
 
     public final void M(Bundle bundle) {
-        N(bundle, this.f25625a.e().a());
+        N(bundle, this.f26446a.e().a());
     }
 
     public final void N(Bundle bundle, long j10) {
         n9.m.l(bundle);
         Bundle bundle2 = new Bundle(bundle);
         if (!TextUtils.isEmpty(bundle2.getString("app_id"))) {
-            this.f25625a.a().r().a("Package name should be null when calling setConditionalUserProperty");
+            this.f26446a.a().r().a("Package name should be null when calling setConditionalUserProperty");
         }
         bundle2.remove("app_id");
         n9.m.l(bundle2);
@@ -338,7 +338,7 @@ public final class qa extends b5 {
         bundle2.putLong("creation_timestamp", j10);
         String string = bundle2.getString("name");
         Object obj = bundle2.get("value");
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         if (g7Var.C().y0(string) != 0) {
             g7Var.a().o().b("Invalid conditional user property name", g7Var.D().c(string));
             return;
@@ -371,7 +371,7 @@ public final class qa extends b5 {
     }
 
     public final void O(String str, String str2, Bundle bundle) {
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         long jA = g7Var.e().a();
         n9.m.f(str);
         Bundle bundle2 = new Bundle();
@@ -385,7 +385,7 @@ public final class qa extends b5 {
     }
 
     public final ArrayList P(String str, String str2) {
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         if (g7Var.b().p()) {
             g7Var.a().o().a("Cannot get conditional user properties from analytics worker thread");
             return new ArrayList(0);
@@ -396,7 +396,7 @@ public final class qa extends b5 {
             return new ArrayList(0);
         }
         AtomicReference atomicReference = new AtomicReference();
-        this.f25625a.b().u(atomicReference, 5000L, "get conditional user properties", new p9(this, atomicReference, null, str, str2));
+        this.f26446a.b().u(atomicReference, 5000L, "get conditional user properties", new p9(this, atomicReference, null, str, str2));
         List list = (List) atomicReference.get();
         if (list != null) {
             return ve.h0(list);
@@ -406,15 +406,15 @@ public final class qa extends b5 {
     }
 
     public final String Q() {
-        bb bbVarU = this.f25625a.I().u();
+        bb bbVarU = this.f26446a.I().u();
         if (bbVarU != null) {
-            return bbVarU.f25365a;
+            return bbVarU.f26186a;
         }
         return null;
     }
 
     public final String R() {
-        bb bbVarU = this.f25625a.I().u();
+        bb bbVarU = this.f26446a.I().u();
         if (bbVarU != null) {
             return bbVarU.b;
         }
@@ -423,26 +423,26 @@ public final class qa extends b5 {
 
     public final String S() {
         try {
-            return ab.a(this.f25625a.d(), "google_app_id", this.f25625a.H());
+            return ab.a(this.f26446a.d(), "google_app_id", this.f26446a.H());
         } catch (IllegalStateException e10) {
-            this.f25625a.a().o().b("getGoogleAppId failed with exception", e10);
+            this.f26446a.a().o().b("getGoogleAppId failed with exception", e10);
             return null;
         }
     }
 
     public final /* synthetic */ void T(SharedPreferences sharedPreferences, String str) {
-        g7 g7Var = this.f25625a;
-        if (!g7Var.w().H(null, z4.f26151a1)) {
+        g7 g7Var = this.f26446a;
+        if (!g7Var.w().H(null, z4.f26972a1)) {
             if (Objects.equals(str, "IABTCF_TCString")) {
                 g7Var.a().w().a("IABTCF_TCString change picked up in listener.");
-                ((w) n9.m.l(this.f25910v)).b(500L);
+                ((w) n9.m.l(this.f26731v)).b(500L);
                 return;
             }
             return;
         }
         if (Objects.equals(str, "IABTCF_TCString") || Objects.equals(str, "IABTCF_gdprApplies") || Objects.equals(str, "IABTCF_EnableAdvertiserConsentMode")) {
             g7Var.a().w().a("IABTCF_TCString change picked up in listener.");
-            ((w) n9.m.l(this.f25910v)).b(500L);
+            ((w) n9.m.l(this.f26731v)).b(500L);
         }
     }
 
@@ -452,8 +452,8 @@ public final class qa extends b5 {
         if (bundle.isEmpty()) {
             bundle2 = bundle;
         } else {
-            g7 g7Var = this.f25625a;
-            bundle2 = new Bundle(g7Var.x().f25691z.a());
+            g7 g7Var = this.f26446a;
+            bundle2 = new Bundle(g7Var.x().f26512z.a());
             Iterator<String> it = bundle.keySet().iterator();
             while (true) {
                 i10 = 0;
@@ -464,7 +464,7 @@ public final class qa extends b5 {
                 Object obj = bundle.get(next);
                 if (obj != null && !(obj instanceof String) && !(obj instanceof Long) && !(obj instanceof Double)) {
                     if (g7Var.C().B0(obj)) {
-                        g7Var.C().B(this.f25911w, null, 27, null, null, 0);
+                        g7Var.C().B(this.f26732w, null, 27, null, null, 0);
                     }
                     g7Var.a().t().c("Invalid default event parameter type. Name, value", next, obj);
                 } else if (ve.N(next)) {
@@ -484,22 +484,22 @@ public final class qa extends b5 {
                         bundle2.remove(str);
                     }
                 }
-                g7Var.C().B(this.f25911w, null, 26, null, null, 0);
+                g7Var.C().B(this.f26732w, null, 26, null, null, 0);
                 g7Var.a().t().a("Too many default event parameters set. Discarding beyond event parameter limit");
             }
         }
-        g7 g7Var2 = this.f25625a;
-        g7Var2.x().f25691z.b(bundle2);
+        g7 g7Var2 = this.f26446a;
+        g7Var2.x().f26512z.b(bundle2);
         if (!bundle.isEmpty() || g7Var2.w().H(null, z4.X0)) {
-            this.f25625a.J().v(bundle2);
+            this.f26446a.J().v(bundle2);
         }
     }
 
     public final /* synthetic */ void V(int i10) {
-        if (this.f25899k == null) {
-            this.f25899k = new c9(this, this.f25625a);
+        if (this.f26720k == null) {
+            this.f26720k = new c9(this, this.f26446a);
         }
-        this.f25899k.b(((long) i10) * 1000);
+        this.f26720k.b(((long) i10) * 1000);
     }
 
     public final /* synthetic */ void W(Boolean bool, boolean z10) {
@@ -509,27 +509,27 @@ public final class qa extends b5 {
     public final /* synthetic */ void X(q8 q8Var, long j10, boolean z10, boolean z11) {
         h();
         j();
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         q8 q8VarW = g7Var.x().w();
-        if (j10 <= this.f25905q && q8.u(q8VarW.b(), q8Var.b())) {
+        if (j10 <= this.f26726q && q8.u(q8VarW.b(), q8Var.b())) {
             g7Var.a().u().b("Dropped out-of-date consent setting, proposed settings", q8Var);
             return;
         }
         k6 k6VarX = g7Var.x();
-        g7 g7Var2 = k6VarX.f25625a;
+        g7 g7Var2 = k6VarX.f26446a;
         k6VarX.h();
         int iB = q8Var.b();
         if (!k6VarX.v(iB)) {
             g7Var.a().u().b("Lower precedence consent source ignored, proposed source", Integer.valueOf(q8Var.b()));
             return;
         }
-        g7 g7Var3 = this.f25625a;
+        g7 g7Var3 = this.f26446a;
         SharedPreferences.Editor editorEdit = k6VarX.p().edit();
         editorEdit.putString("consent_settings", q8Var.l());
         editorEdit.putInt("consent_source", iB);
         editorEdit.apply();
         g7Var.a().w().b("Setting storage consent(FE)", q8Var);
-        this.f25905q = j10;
+        this.f26726q = j10;
         if (g7Var3.J().D()) {
             g7Var3.J().Z(z10);
         } else {
@@ -541,24 +541,24 @@ public final class qa extends b5 {
     }
 
     public final /* synthetic */ void Z(boolean z10) {
-        this.f25897i = false;
+        this.f26718i = false;
     }
 
     public final /* synthetic */ int a0() {
-        return this.f25898j;
+        return this.f26719j;
     }
 
     public final /* synthetic */ void b0(int i10) {
-        this.f25898j = i10;
+        this.f26719j = i10;
     }
 
     public final /* synthetic */ w c0() {
-        return this.f25908t;
+        return this.f26729t;
     }
 
     public final /* synthetic */ int d0(Throwable th2) {
         String message = th2.getMessage();
-        this.f25902n = false;
+        this.f26723n = false;
         if (message == null) {
             return 2;
         }
@@ -568,24 +568,24 @@ public final class qa extends b5 {
         if (!message.contains("Background")) {
             return 1;
         }
-        this.f25902n = true;
+        this.f26723n = true;
         return 1;
     }
 
     public final ya e0(final zzom zzomVar) {
         try {
-            URL url = new URI(zzomVar.f7431h).toURL();
+            URL url = new URI(zzomVar.f7505h).toURL();
             final AtomicReference atomicReference = new AtomicReference();
-            String strS = this.f25625a.L().s();
-            g7 g7Var = this.f25625a;
+            String strS = this.f26446a.L().s();
+            g7 g7Var = this.f26446a;
             u5 u5VarW = g7Var.a().w();
-            Long lValueOf = Long.valueOf(zzomVar.f7429f);
-            u5VarW.d("[sgtm] Uploading data from app. row_id, url, uncompressed size", lValueOf, zzomVar.f7431h, Integer.valueOf(zzomVar.f7430g.length));
-            if (!TextUtils.isEmpty(zzomVar.f7435l)) {
-                g7Var.a().w().c("[sgtm] Uploading data from app. row_id", lValueOf, zzomVar.f7435l);
+            Long lValueOf = Long.valueOf(zzomVar.f7503f);
+            u5VarW.d("[sgtm] Uploading data from app. row_id, url, uncompressed size", lValueOf, zzomVar.f7505h, Integer.valueOf(zzomVar.f7504g.length));
+            if (!TextUtils.isEmpty(zzomVar.f7509l)) {
+                g7Var.a().w().c("[sgtm] Uploading data from app. row_id", lValueOf, zzomVar.f7509l);
             }
             HashMap map = new HashMap();
-            Bundle bundle = zzomVar.f7432i;
+            Bundle bundle = zzomVar.f7506i;
             for (String str : bundle.keySet()) {
                 String string = bundle.getString(str);
                 if (!TextUtils.isEmpty(string)) {
@@ -593,7 +593,7 @@ public final class qa extends b5 {
                 }
             }
             va vaVarF = g7Var.F();
-            byte[] bArr = zzomVar.f7430g;
+            byte[] bArr = zzomVar.f7504g;
             sa saVar = new sa() { // from class: nb.ea
                 /* JADX WARN: Code duplicated, block: B:10:0x0016  */
                 /* JADX WARN: Code duplicated, block: B:11:0x002e A[PHI: r8
@@ -603,16 +603,16 @@ public final class qa extends b5 {
                 @Override // nb.sa
                 public final /* synthetic */ void a(String str2, int i10, Throwable th2, byte[] bArr2, Map map2) {
                     ya yaVar;
-                    qa qaVar = this.f25488a;
+                    qa qaVar = this.f26309a;
                     qaVar.h();
                     zzom zzomVar2 = zzomVar;
                     if (i10 == 200 || i10 == 204) {
                         if (th2 == null) {
-                            qaVar.f25625a.a().w().b("[sgtm] Upload succeeded for row_id", Long.valueOf(zzomVar2.f7429f));
+                            qaVar.f26446a.a().w().b("[sgtm] Upload succeeded for row_id", Long.valueOf(zzomVar2.f7503f));
                             yaVar = ya.SUCCESS;
                         } else {
-                            qaVar.f25625a.a().r().d("[sgtm] Upload failed for row_id. response, exception", Long.valueOf(zzomVar2.f7429f), Integer.valueOf(i10), th2);
-                            if (Arrays.asList(((String) z4.f26200u.b(null)).split(",")).contains(String.valueOf(i10))) {
+                            qaVar.f26446a.a().r().d("[sgtm] Upload failed for row_id. response, exception", Long.valueOf(zzomVar2.f7503f), Integer.valueOf(i10), th2);
+                            if (Arrays.asList(((String) z4.f27021u.b(null)).split(",")).contains(String.valueOf(i10))) {
                                 yaVar = ya.BACKOFF;
                             } else {
                                 yaVar = ya.FAILURE;
@@ -621,29 +621,29 @@ public final class qa extends b5 {
                     } else if (i10 == 304) {
                         i10 = 304;
                         if (th2 == null) {
-                            qaVar.f25625a.a().w().b("[sgtm] Upload succeeded for row_id", Long.valueOf(zzomVar2.f7429f));
+                            qaVar.f26446a.a().w().b("[sgtm] Upload succeeded for row_id", Long.valueOf(zzomVar2.f7503f));
                             yaVar = ya.SUCCESS;
                         } else {
-                            qaVar.f25625a.a().r().d("[sgtm] Upload failed for row_id. response, exception", Long.valueOf(zzomVar2.f7429f), Integer.valueOf(i10), th2);
-                            if (Arrays.asList(((String) z4.f26200u.b(null)).split(",")).contains(String.valueOf(i10))) {
+                            qaVar.f26446a.a().r().d("[sgtm] Upload failed for row_id. response, exception", Long.valueOf(zzomVar2.f7503f), Integer.valueOf(i10), th2);
+                            if (Arrays.asList(((String) z4.f27021u.b(null)).split(",")).contains(String.valueOf(i10))) {
                                 yaVar = ya.BACKOFF;
                             } else {
                                 yaVar = ya.FAILURE;
                             }
                         }
                     } else {
-                        qaVar.f25625a.a().r().d("[sgtm] Upload failed for row_id. response, exception", Long.valueOf(zzomVar2.f7429f), Integer.valueOf(i10), th2);
-                        if (Arrays.asList(((String) z4.f26200u.b(null)).split(",")).contains(String.valueOf(i10))) {
+                        qaVar.f26446a.a().r().d("[sgtm] Upload failed for row_id. response, exception", Long.valueOf(zzomVar2.f7503f), Integer.valueOf(i10), th2);
+                        if (Arrays.asList(((String) z4.f27021u.b(null)).split(",")).contains(String.valueOf(i10))) {
                             yaVar = ya.BACKOFF;
                         } else {
                             yaVar = ya.FAILURE;
                         }
                     }
                     AtomicReference atomicReference2 = atomicReference;
-                    tc tcVarJ = qaVar.f25625a.J();
-                    long j10 = zzomVar2.f7429f;
-                    tcVarJ.k0(new zzaf(j10, yaVar.zza(), zzomVar2.f7434k));
-                    qaVar.f25625a.a().w().c("[sgtm] Updated status for row_id", Long.valueOf(j10), yaVar);
+                    tc tcVarJ = qaVar.f26446a.J();
+                    long j10 = zzomVar2.f7503f;
+                    tcVarJ.k0(new zzaf(j10, yaVar.zza(), zzomVar2.f7508k));
+                    qaVar.f26446a.a().w().c("[sgtm] Updated status for row_id", Long.valueOf(j10), yaVar);
                     synchronized (atomicReference2) {
                         atomicReference2.set(yaVar);
                         atomicReference2.notifyAll();
@@ -654,9 +654,9 @@ public final class qa extends b5 {
             n9.m.l(url);
             n9.m.l(bArr);
             n9.m.l(saVar);
-            vaVarF.f25625a.b().w(new ua(vaVarF, strS, url, bArr, map, saVar));
+            vaVarF.f26446a.b().w(new ua(vaVarF, strS, url, bArr, map, saVar));
             try {
-                g7 g7Var2 = g7Var.C().f25625a;
+                g7 g7Var2 = g7Var.C().f26446a;
                 long jA = g7Var2.e().a();
                 long j10 = jA + RealWebSocket.CANCEL_AFTER_CLOSE_MILLIS;
                 synchronized (atomicReference) {
@@ -669,11 +669,11 @@ public final class qa extends b5 {
                     }
                 }
             } catch (InterruptedException unused) {
-                this.f25625a.a().r().a("[sgtm] Interrupted waiting for uploading batch");
+                this.f26446a.a().r().a("[sgtm] Interrupted waiting for uploading batch");
             }
             return atomicReference.get() == null ? ya.UNKNOWN : (ya) atomicReference.get();
         } catch (MalformedURLException | URISyntaxException e10) {
-            this.f25625a.a().o().d("[sgtm] Bad upload url for row_id", zzomVar.f7431h, Long.valueOf(zzomVar.f7429f), e10);
+            this.f26446a.a().o().d("[sgtm] Bad upload url for row_id", zzomVar.f7505h, Long.valueOf(zzomVar.f7503f), e10);
             return ya.FAILURE;
         }
     }
@@ -681,12 +681,12 @@ public final class qa extends b5 {
     public final void f0(Boolean bool, boolean z10) {
         h();
         j();
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         g7Var.a().v().b("Setting app measurement enabled (FE)", bool);
         g7Var.x().s(bool);
         if (z10) {
             k6 k6VarX = g7Var.x();
-            g7 g7Var2 = k6VarX.f25625a;
+            g7 g7Var2 = k6VarX.f26446a;
             k6VarX.h();
             SharedPreferences.Editor editorEdit = k6VarX.p().edit();
             if (bool != null) {
@@ -696,7 +696,7 @@ public final class qa extends b5 {
             }
             editorEdit.apply();
         }
-        if (this.f25625a.j() || !(bool == null || bool.booleanValue())) {
+        if (this.f26446a.j() || !(bool == null || bool.booleanValue())) {
             Y();
         }
     }
@@ -705,8 +705,8 @@ public final class qa extends b5 {
     public final void Y() {
         qa qaVar;
         h();
-        g7 g7Var = this.f25625a;
-        String strA = g7Var.x().f25679n.a();
+        g7 g7Var = this.f26446a;
+        String strA = g7Var.x().f26500n.a();
         if (strA == null) {
             qaVar = this;
         } else if ("unset".equals(strA)) {
@@ -716,43 +716,43 @@ public final class qa extends b5 {
             B(Payload.TYPE_APP, "_npa", Long.valueOf(true != "true".equals(strA) ? 0L : 1L), g7Var.e().a());
             qaVar = this;
         }
-        if (!qaVar.f25625a.g() || !qaVar.f25907s) {
+        if (!qaVar.f26446a.g() || !qaVar.f26728s) {
             g7Var.a().v().a("Updating Scion state (FE)");
-            qaVar.f25625a.J().X();
+            qaVar.f26446a.J().X();
         } else {
             g7Var.a().v().a("Recording app launch after enabling measurement for the first time (FE)");
             H();
-            qaVar.f25625a.z().f25734e.a();
+            qaVar.f26446a.z().f26555e.a();
             g7Var.b().t(new e9(this));
         }
     }
 
     public final void h0() {
-        g7 g7Var = this.f25625a;
-        if (!(g7Var.d().getApplicationContext() instanceof Application) || this.f25891c == null) {
+        g7 g7Var = this.f26446a;
+        if (!(g7Var.d().getApplicationContext() instanceof Application) || this.f26712c == null) {
             return;
         }
-        ((Application) g7Var.d().getApplicationContext()).unregisterActivityLifecycleCallbacks(this.f25891c);
+        ((Application) g7Var.d().getApplicationContext()).unregisterActivityLifecycleCallbacks(this.f26712c);
     }
 
     public final Boolean i0() {
         AtomicReference atomicReference = new AtomicReference();
-        return (Boolean) this.f25625a.b().u(atomicReference, 15000L, "boolean test flag value", new k9(this, atomicReference));
+        return (Boolean) this.f26446a.b().u(atomicReference, 15000L, "boolean test flag value", new k9(this, atomicReference));
     }
 
     public final String j0() {
         AtomicReference atomicReference = new AtomicReference();
-        return (String) this.f25625a.b().u(atomicReference, 15000L, "String test flag value", new t9(this, atomicReference));
+        return (String) this.f26446a.b().u(atomicReference, 15000L, "String test flag value", new t9(this, atomicReference));
     }
 
     public final Long k0() {
         AtomicReference atomicReference = new AtomicReference();
-        return (Long) this.f25625a.b().u(atomicReference, 15000L, "long test flag value", new u9(this, atomicReference));
+        return (Long) this.f26446a.b().u(atomicReference, 15000L, "long test flag value", new u9(this, atomicReference));
     }
 
     public final Integer l0() {
         AtomicReference atomicReference = new AtomicReference();
-        return (Integer) this.f25625a.b().u(atomicReference, 15000L, "int test flag value", new v9(this, atomicReference));
+        return (Integer) this.f26446a.b().u(atomicReference, 15000L, "int test flag value", new v9(this, atomicReference));
     }
 
     @Override // nb.b5
@@ -762,22 +762,22 @@ public final class qa extends b5 {
 
     public final Double m0() {
         AtomicReference atomicReference = new AtomicReference();
-        return (Double) this.f25625a.b().u(atomicReference, 15000L, "double test flag value", new w9(this, atomicReference));
+        return (Double) this.f26446a.b().u(atomicReference, 15000L, "double test flag value", new w9(this, atomicReference));
     }
 
     public final void n0(Boolean bool) {
         j();
-        this.f25625a.b().t(new x9(this, bool));
+        this.f26446a.b().t(new x9(this, bool));
     }
 
     public final void o(q8 q8Var) {
         h();
-        boolean z10 = (q8Var.o(p8.ANALYTICS_STORAGE) && q8Var.o(p8.AD_STORAGE)) || this.f25625a.J().C();
-        g7 g7Var = this.f25625a;
+        boolean z10 = (q8Var.o(p8.ANALYTICS_STORAGE) && q8Var.o(p8.AD_STORAGE)) || this.f26446a.J().C();
+        g7 g7Var = this.f26446a;
         if (z10 != g7Var.j()) {
             g7Var.i(z10);
-            k6 k6VarX = this.f25625a.x();
-            g7 g7Var2 = k6VarX.f25625a;
+            k6 k6VarX = this.f26446a.x();
+            g7 g7Var2 = k6VarX.f26446a;
             k6VarX.h();
             Boolean boolValueOf = k6VarX.p().contains("measurement_enabled_from_api") ? Boolean.valueOf(k6VarX.p().getBoolean("measurement_enabled_from_api", true)) : null;
             if (!z10 || boolValueOf == null || boolValueOf.booleanValue()) {
@@ -790,7 +790,7 @@ public final class qa extends b5 {
         Object obj;
         String string;
         j();
-        q8 q8Var = q8.f25885c;
+        q8 q8Var = q8.f26706c;
         p8[] p8VarArrB = o8.STORAGE.b();
         int length = p8VarArrB.length;
         int i11 = 0;
@@ -799,7 +799,7 @@ public final class qa extends b5 {
             if (i11 >= length) {
                 break;
             }
-            String str = p8VarArrB[i11].f25855a;
+            String str = p8VarArrB[i11].f26676a;
             if (bundle.containsKey(str) && (string = bundle.getString(str)) != null) {
                 if (string.equals("granted")) {
                     obj = Boolean.TRUE;
@@ -814,11 +814,11 @@ public final class qa extends b5 {
             i11++;
         }
         if (obj != null) {
-            g7 g7Var = this.f25625a;
+            g7 g7Var = this.f26446a;
             g7Var.a().t().b("Ignoring invalid consent setting", obj);
             g7Var.a().t().a("Valid consent values are 'granted', 'denied'");
         }
-        boolean zP = this.f25625a.b().p();
+        boolean zP = this.f26446a.b().p();
         q8 q8VarE = q8.e(bundle, i10);
         if (q8VarE.c()) {
             q0(q8VarE, zP);
@@ -839,13 +839,13 @@ public final class qa extends b5 {
     }
 
     public final void p(String str, String str2, Bundle bundle) {
-        q(str, str2, bundle, true, true, this.f25625a.e().a());
+        q(str, str2, bundle, true, true, this.f26446a.e().a());
     }
 
     public final void p0(x xVar, boolean z10) {
         y9 y9Var = new y9(this, xVar);
         if (!z10) {
-            this.f25625a.b().t(y9Var);
+            this.f26446a.b().t(y9Var);
         } else {
             h();
             y9Var.run();
@@ -858,11 +858,11 @@ public final class qa extends b5 {
         }
         Bundle bundle2 = bundle;
         if (Objects.equals(str2, "screen_view")) {
-            this.f25625a.I().s(bundle2, j10);
+            this.f26446a.I().s(bundle2, j10);
             return;
         }
         boolean z12 = true;
-        if (z11 && this.f25892d != null && !ve.N(str2)) {
+        if (z11 && this.f26713d != null && !ve.N(str2)) {
             z12 = false;
         }
         boolean z13 = z12;
@@ -893,13 +893,13 @@ public final class qa extends b5 {
         md mdVar2;
         com.google.android.gms.internal.measurement.p9 p9Var;
         h();
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         g7Var.a().v().a("Handle tcf update.");
         SharedPreferences sharedPreferencesQ = g7Var.x().q();
         HashMap map = new HashMap();
-        y4 y4Var = z4.f26151a1;
+        y4 y4Var = z4.f26972a1;
         if (((Boolean) y4Var.b(null)).booleanValue()) {
-            he.t tVar = od.f25824a;
+            ie.t tVar = od.f26645a;
             com.google.android.gms.internal.measurement.o9 o9Var = com.google.android.gms.internal.measurement.o9.IAB_TCF_PURPOSE_STORE_AND_ACCESS_INFORMATION_ON_A_DEVICE;
             nd ndVar = nd.CONSENT;
             Map.Entry entryA = pa.a(o9Var, ndVar);
@@ -907,8 +907,8 @@ public final class qa extends b5 {
             com.google.android.gms.internal.measurement.o9 o9Var2 = com.google.android.gms.internal.measurement.o9.IAB_TCF_PURPOSE_SELECT_BASIC_ADS;
             int i11 = 1;
             nd ndVar2 = nd.FLEXIBLE_LEGITIMATE_INTEREST;
-            he.u uVarO = he.u.o(entryA, pa.a(o9Var2, ndVar2), pa.a(com.google.android.gms.internal.measurement.o9.IAB_TCF_PURPOSE_CREATE_A_PERSONALISED_ADS_PROFILE, ndVar), pa.a(com.google.android.gms.internal.measurement.o9.IAB_TCF_PURPOSE_SELECT_PERSONALISED_ADS, ndVar), pa.a(com.google.android.gms.internal.measurement.o9.IAB_TCF_PURPOSE_MEASURE_AD_PERFORMANCE, ndVar2), pa.a(com.google.android.gms.internal.measurement.o9.IAB_TCF_PURPOSE_APPLY_MARKET_RESEARCH_TO_GENERATE_AUDIENCE_INSIGHTS, ndVar2), pa.a(com.google.android.gms.internal.measurement.o9.IAB_TCF_PURPOSE_DEVELOP_AND_IMPROVE_PRODUCTS, ndVar2));
-            he.w wVarU = he.w.u("CH");
+            ie.u uVarO = ie.u.o(entryA, pa.a(o9Var2, ndVar2), pa.a(com.google.android.gms.internal.measurement.o9.IAB_TCF_PURPOSE_CREATE_A_PERSONALISED_ADS_PROFILE, ndVar), pa.a(com.google.android.gms.internal.measurement.o9.IAB_TCF_PURPOSE_SELECT_PERSONALISED_ADS, ndVar), pa.a(com.google.android.gms.internal.measurement.o9.IAB_TCF_PURPOSE_MEASURE_AD_PERFORMANCE, ndVar2), pa.a(com.google.android.gms.internal.measurement.o9.IAB_TCF_PURPOSE_APPLY_MARKET_RESEARCH_TO_GENERATE_AUDIENCE_INSIGHTS, ndVar2), pa.a(com.google.android.gms.internal.measurement.o9.IAB_TCF_PURPOSE_DEVELOP_AND_IMPROVE_PRODUCTS, ndVar2));
+            ie.w wVarU = ie.w.u("CH");
             char[] cArr = new char[5];
             boolean zContains = sharedPreferencesQ.contains("IABTCF_TCString");
             int iB = od.b(sharedPreferencesQ, "IABTCF_CmpSdkID");
@@ -917,8 +917,8 @@ public final class qa extends b5 {
             int iB4 = od.b(sharedPreferencesQ, "IABTCF_PurposeOneTreatment");
             int iB5 = od.b(sharedPreferencesQ, "IABTCF_EnableAdvertiserConsentMode");
             String strA = od.a(sharedPreferencesQ, "IABTCF_PublisherCC");
-            he.u.a aVarA = he.u.a();
-            he.y0 it = uVarO.keySet().iterator();
+            ie.u.a aVarA = ie.u.a();
+            ie.y0 it = uVarO.keySet().iterator();
             while (it.hasNext()) {
                 com.google.android.gms.internal.measurement.o9 o9Var3 = (com.google.android.gms.internal.measurement.o9) it.next();
                 int iZza = o9Var3.zza();
@@ -942,7 +942,7 @@ public final class qa extends b5 {
                 i10 = 2;
                 i11 = 1;
             }
-            he.u uVarC = aVarA.c();
+            ie.u uVarC = aVarA.c();
             String strA3 = od.a(sharedPreferencesQ, "IABTCF_PurposeConsents");
             String strA4 = od.a(sharedPreferencesQ, "IABTCF_VendorConsents");
             boolean z10 = !TextUtils.isEmpty(strA4) && strA4.length() >= 755 && strA4.charAt(754) == '1';
@@ -1002,7 +1002,7 @@ public final class qa extends b5 {
         } else {
             for (String str : string.split(";")) {
                 String[] strArrSplit = str.split("=");
-                if (strArrSplit.length >= 2 && od.f25824a.contains(strArrSplit[0])) {
+                if (strArrSplit.length >= 2 && od.f26645a.contains(strArrSplit[0])) {
                     map2.put(strArrSplit[0], strArrSplit[1]);
                 }
             }
@@ -1024,7 +1024,7 @@ public final class qa extends b5 {
 
     public final void r0(Runnable runnable) {
         j();
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         if (g7Var.b().p()) {
             g7Var.a().o().a("Cannot retrieve and upload batches from analytics worker thread");
             return;
@@ -1048,14 +1048,14 @@ public final class qa extends b5 {
             g7Var.b().u(atomicReference, 10000L, "[sgtm] Getting upload batches", new Runnable() { // from class: nb.oa
                 @Override // java.lang.Runnable
                 public final /* synthetic */ void run() {
-                    this.f25821a.f25625a.J().j0(atomicReference, zzoo.a(za.SGTM_CLIENT));
+                    this.f26642a.f26446a.J().j0(atomicReference, zzoo.a(za.SGTM_CLIENT));
                 }
             });
             zzoq zzoqVar = (zzoq) atomicReference.get();
             if (zzoqVar == null) {
                 break;
             }
-            List list = zzoqVar.f7437f;
+            List list = zzoqVar.f7511f;
             if (!list.isEmpty()) {
                 g7Var.a().w().b("[sgtm] Retrieved upload batches. count", Integer.valueOf(list.size()));
                 size += list.size();
@@ -1083,36 +1083,36 @@ public final class qa extends b5 {
 
     public final void s() {
         h();
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         g7Var.a().v().a("Register tcfPrefChangeListener.");
-        if (this.f25909u == null) {
-            this.f25910v = new h9(this, this.f25625a);
-            this.f25909u = new SharedPreferences.OnSharedPreferenceChangeListener() { // from class: nb.ka
+        if (this.f26730u == null) {
+            this.f26731v = new h9(this, this.f26446a);
+            this.f26730u = new SharedPreferences.OnSharedPreferenceChangeListener() { // from class: nb.ka
                 @Override // android.content.SharedPreferences.OnSharedPreferenceChangeListener
                 public final /* synthetic */ void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String str) {
-                    this.f25697a.T(sharedPreferences, str);
+                    this.f26518a.T(sharedPreferences, str);
                 }
             };
         }
-        g7Var.x().q().registerOnSharedPreferenceChangeListener(this.f25909u);
+        g7Var.x().q().registerOnSharedPreferenceChangeListener(this.f26730u);
     }
 
     public final void s0(long j10) {
         h();
-        if (this.f25900l == null) {
-            this.f25900l = new z8(this, this.f25625a);
+        if (this.f26721l == null) {
+            this.f26721l = new z8(this, this.f26446a);
         }
-        this.f25900l.b(j10);
+        this.f26721l.b(j10);
     }
 
     public final void t(String str, String str2, Bundle bundle) {
         h();
-        u(str, str2, this.f25625a.e().a(), bundle);
+        u(str, str2, this.f26446a.e().a(), bundle);
     }
 
     public final void t0() {
         h();
-        w wVar = this.f25900l;
+        w wVar = this.f26721l;
         if (wVar != null) {
             wVar.d();
         }
@@ -1121,7 +1121,7 @@ public final class qa extends b5 {
     public final void u(String str, String str2, long j10, Bundle bundle) {
         h();
         boolean z10 = true;
-        if (this.f25892d != null && !ve.N(str2)) {
+        if (this.f26713d != null && !ve.N(str2)) {
             z10 = false;
         }
         v(str, str2, j10, bundle, true, z10, true, null);
@@ -1129,7 +1129,7 @@ public final class qa extends b5 {
 
     public final void u0() {
         vf.a();
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         if (g7Var.w().H(null, z4.R0)) {
             if (g7Var.b().p()) {
                 g7Var.a().o().a("Cannot get trigger URIs from analytics worker thread");
@@ -1146,8 +1146,8 @@ public final class qa extends b5 {
             g7Var.b().u(atomicReference, 10000L, "get trigger URIs", new Runnable() { // from class: nb.ga
                 @Override // java.lang.Runnable
                 public final /* synthetic */ void run() {
-                    qa qaVar = this.f25560a;
-                    qaVar.f25625a.J().i0(atomicReference, qaVar.f25625a.x().f25680o.a());
+                    qa qaVar = this.f26381a;
+                    qaVar.f26446a.J().i0(atomicReference, qaVar.f26446a.x().f26501o.a());
                 }
             });
             final List list = (List) atomicReference.get();
@@ -1157,16 +1157,16 @@ public final class qa extends b5 {
                 g7Var.b().t(new Runnable() { // from class: nb.ha
                     @Override // java.lang.Runnable
                     public final /* synthetic */ void run() {
-                        qa qaVar = this.f25580a;
+                        qa qaVar = this.f26401a;
                         qaVar.h();
                         if (Build.VERSION.SDK_INT < 30) {
                             return;
                         }
                         List<zzoh> list2 = list;
-                        SparseArray sparseArrayR = qaVar.f25625a.x().r();
+                        SparseArray sparseArrayR = qaVar.f26446a.x().r();
                         for (zzoh zzohVar : list2) {
-                            int i10 = zzohVar.f7428h;
-                            if (!sparseArrayR.contains(i10) || ((Long) sparseArrayR.get(i10)).longValue() < zzohVar.f7427g) {
+                            int i10 = zzohVar.f7502h;
+                            if (!sparseArrayR.contains(i10) || ((Long) sparseArrayR.get(i10)).longValue() < zzohVar.f7501g) {
                                 qaVar.w0().add(zzohVar);
                             }
                         }
@@ -1192,47 +1192,47 @@ public final class qa extends b5 {
         n9.m.l(bundle);
         h();
         j();
-        g7 g7Var2 = this.f25625a;
+        g7 g7Var2 = this.f26446a;
         if (!g7Var2.g()) {
-            this.f25625a.a().v().a("Event not sent since app measurement is disabled");
+            this.f26446a.a().v().a("Event not sent since app measurement is disabled");
             return;
         }
-        List listW = this.f25625a.L().w();
+        List listW = this.f26446a.L().w();
         if (listW != null && !listW.contains(str2)) {
-            this.f25625a.a().v().c("Dropping non-safelisted event. event name, origin", str2, str5);
+            this.f26446a.a().v().c("Dropping non-safelisted event. event name, origin", str2, str5);
             return;
         }
-        if (!this.f25894f) {
-            this.f25894f = true;
+        if (!this.f26715f) {
+            this.f26715f = true;
             try {
                 try {
-                    (!g7Var2.G() ? Class.forName("com.google.android.gms.tagmanager.TagManagerService", true, this.f25625a.d().getClassLoader()) : Class.forName("com.google.android.gms.tagmanager.TagManagerService")).getDeclaredMethod("initialize", Context.class).invoke(null, this.f25625a.d());
+                    (!g7Var2.G() ? Class.forName("com.google.android.gms.tagmanager.TagManagerService", true, this.f26446a.d().getClassLoader()) : Class.forName("com.google.android.gms.tagmanager.TagManagerService")).getDeclaredMethod("initialize", Context.class).invoke(null, this.f26446a.d());
                 } catch (Exception e10) {
-                    this.f25625a.a().r().b("Failed to invoke Tag Manager's initialize() method", e10);
+                    this.f26446a.a().r().b("Failed to invoke Tag Manager's initialize() method", e10);
                 }
             } catch (ClassNotFoundException unused) {
-                this.f25625a.a().u().a("Tag Manager is not found and thus will not be used");
+                this.f26446a.a().u().a("Tag Manager is not found and thus will not be used");
             }
         }
-        g7 g7Var3 = this.f25625a;
-        if (!g7Var3.w().H(null, z4.f26168g1) && "_cmp".equals(str2) && bundle.containsKey("gclid")) {
+        g7 g7Var3 = this.f26446a;
+        if (!g7Var3.w().H(null, z4.f26989g1) && "_cmp".equals(str2) && bundle.containsKey("gclid")) {
             g7Var3.c();
             B("auto", "_lgclid", bundle.getString("gclid"), g7Var3.e().a());
         }
         qa qaVar = this;
         g7Var3.c();
         if (z10 && ve.U(str2)) {
-            g7Var3.C().w(bundle, g7Var3.x().f25691z.a());
+            g7Var3.C().w(bundle, g7Var3.x().f26512z.a());
         }
         if (!z12) {
             g7Var3.c();
             if (!"_iap".equals(str2)) {
-                g7 g7Var4 = qaVar.f25625a;
+                g7 g7Var4 = qaVar.f26446a;
                 ve veVarC = g7Var4.C();
                 int i11 = 2;
                 if (veVarC.t0("event", str2)) {
-                    if (veVarC.v0("event", r8.f25927a, r8.b, str2)) {
-                        veVarC.f25625a.w();
+                    if (veVarC.v0("event", r8.f26748a, r8.b, str2)) {
+                        veVarC.f26446a.w();
                         if (veVarC.w0("event", 40, str2)) {
                             i11 = 0;
                         }
@@ -1244,39 +1244,39 @@ public final class qa extends b5 {
                     g7Var3.a().q().b("Invalid public event name. Event will not be logged (FE)", g7Var3.D().a(str2));
                     ve veVarC2 = g7Var4.C();
                     g7Var4.w();
-                    g7Var4.C().B(qaVar.f25911w, null, i11, "_ev", veVarC2.q(str2, 40, true), str2 != null ? str2.length() : 0);
+                    g7Var4.C().B(qaVar.f26732w, null, i11, "_ev", veVarC2.q(str2, 40, true), str2 != null ? str2.length() : 0);
                     return;
                 }
             }
         }
         g7Var3.c();
-        g7 g7Var5 = qaVar.f25625a;
+        g7 g7Var5 = qaVar.f26446a;
         bb bbVarQ = g7Var5.I().q(false);
         if (bbVarQ != null && !bundle.containsKey("_sc")) {
-            bbVarQ.f25367d = true;
+            bbVarQ.f26188d = true;
         }
         ve.k0(bbVarQ, bundle, z10 && !z12);
         boolean zEquals = "am".equals(str5);
         boolean zN = ve.N(str2);
-        if (!z10 || qaVar.f25892d == null || zN) {
+        if (!z10 || qaVar.f26713d == null || zN) {
             z13 = zEquals;
         } else {
             if (!zEquals) {
                 g7Var3.a().v().c("Passing event to registered event handler (FE)", g7Var3.D().a(str2), g7Var3.D().e(bundle));
-                n9.m.l(qaVar.f25892d);
-                qaVar.f25892d.a(str5, str2, bundle, j10);
+                n9.m.l(qaVar.f26713d);
+                qaVar.f26713d.a(str5, str2, bundle, j10);
                 return;
             }
             z13 = true;
         }
-        g7 g7Var6 = qaVar.f25625a;
+        g7 g7Var6 = qaVar.f26446a;
         if (g7Var6.m()) {
             int iX0 = g7Var3.C().x0(str2);
             if (iX0 != 0) {
                 g7Var3.a().q().b("Invalid event name. Event will not be logged (FE)", g7Var3.D().a(str2));
                 ve veVarC3 = g7Var3.C();
                 g7Var3.w();
-                g7Var6.C().B(qaVar.f25911w, str3, iX0, "_ev", veVarC3.q(str2, 40, true), str2 != null ? str2.length() : 0);
+                g7Var6.C().B(qaVar.f26732w, str3, iX0, "_ev", veVarC3.q(str2, 40, true), str2 != null ? str2.length() : 0);
                 return;
             }
             Bundle bundleT = g7Var3.C().t(str3, str2, bundle, u9.f.b("_o", "_sn", "_sc", "_si"), z12);
@@ -1287,9 +1287,9 @@ public final class qa extends b5 {
                 g7Var = g7Var5;
                 j11 = 0;
             } else {
-                jd jdVar = g7Var5.z().f25735f;
+                jd jdVar = g7Var5.z().f26556f;
                 j11 = 0;
-                long jB = jdVar.f25644d.f25625a.e().b();
+                long jB = jdVar.f26465d.f26446a.e().b();
                 i10 = 0;
                 g7Var = g7Var5;
                 long j14 = jB - jdVar.b;
@@ -1306,22 +1306,22 @@ public final class qa extends b5 {
                 } else if (string != null) {
                     string = string.trim();
                 }
-                g7 g7Var7 = veVarC4.f25625a;
-                if (Objects.equals(string, g7Var7.x().f25688w.a())) {
+                g7 g7Var7 = veVarC4.f26446a;
+                if (Objects.equals(string, g7Var7.x().f26509w.a())) {
                     g7Var7.a().v().a("Not logging duplicate session_start_with_rollout event");
                     return;
                 }
-                g7Var7.x().f25688w.b(string);
+                g7Var7.x().f26509w.b(string);
             } else if ("_ae".equals(str2)) {
-                String strA = g7Var3.C().f25625a.x().f25688w.a();
+                String strA = g7Var3.C().f26446a.x().f26509w.a();
                 if (!TextUtils.isEmpty(strA)) {
                     bundleT.putString("_ffr", strA);
                 }
             }
             ArrayList arrayList = new ArrayList();
             arrayList.add(bundleT);
-            boolean zP = g7Var3.w().H(null, z4.V0) ? g7Var.z().p() : g7Var3.x().f25685t.a();
-            if (g7Var3.x().f25682q.a() > j11 && g7Var3.x().A(j10) && zP) {
+            boolean zP = g7Var3.w().H(null, z4.V0) ? g7Var.z().p() : g7Var3.x().f26506t.a();
+            if (g7Var3.x().f26503q.a() > j11 && g7Var3.x().A(j10) && zP) {
                 g7Var3.a().w().a("Current session is expired, remove the session number, ID, and engagement time");
                 str4 = "_ae";
                 j12 = j11;
@@ -1329,7 +1329,7 @@ public final class qa extends b5 {
                 B("auto", "_sno", null, g7Var3.e().a());
                 B("auto", "_se", null, g7Var3.e().a());
                 qaVar = this;
-                g7Var3.x().f25683r.b(j12);
+                g7Var3.x().f26504r.b(j12);
             } else {
                 j12 = j11;
                 str4 = "_ae";
@@ -1337,7 +1337,7 @@ public final class qa extends b5 {
             if (bundleT.getLong("extend_session", j12) == 1) {
                 g7Var3.a().w().a("EXTEND_SESSION param attached: initiate a new session or extend the current active session");
                 j13 = j10;
-                g7Var6.z().f25734e.b(j13, true);
+                g7Var6.z().f26555e.b(j13, true);
             } else {
                 j13 = j10;
             }
@@ -1377,7 +1377,7 @@ public final class qa extends b5 {
                 Bundle bundle2 = bundleQ;
                 g7Var.J().c0(new zzbg(str7, new zzbe(bundle2), str5, j13), str3);
                 if (!z13) {
-                    Iterator it = qaVar.f25893e.iterator();
+                    Iterator it = qaVar.f26714e.iterator();
                     while (it.hasNext()) {
                         ((v8) it.next()).a(str, str2, new Bundle(bundle2), j10);
                     }
@@ -1390,26 +1390,26 @@ public final class qa extends b5 {
             if (g7Var.I().q(i10) == null || !str4.equals(str2)) {
                 return;
             }
-            g7Var.z().f25735f.d(true, true, g7Var3.e().b());
+            g7Var.z().f26556f.d(true, true, g7Var3.e().b());
         }
     }
 
     public final boolean v0() {
-        return this.f25902n;
+        return this.f26723n;
     }
 
     public final void w(String str, String str2, Bundle bundle, String str3) {
         g7.q();
-        x("auto", str2, this.f25625a.e().a(), bundle, false, true, true, str3);
+        x("auto", str2, this.f26446a.e().a(), bundle, false, true, true, str3);
     }
 
     @TargetApi(30)
     public final PriorityQueue w0() {
-        if (this.f25901m == null) {
-            this.f25901m = new PriorityQueue(Comparator.comparing(new Function() { // from class: nb.ia
+        if (this.f26722m == null) {
+            this.f26722m = new PriorityQueue(Comparator.comparing(new Function() { // from class: nb.ia
                 @Override // java.util.function.Function
                 public final /* synthetic */ Object apply(Object obj) {
-                    return Long.valueOf(((zzoh) obj).f7427g);
+                    return Long.valueOf(((zzoh) obj).f7501g);
                 }
             }, new Comparator() { // from class: nb.ja
                 @Override // java.util.Comparator
@@ -1418,11 +1418,11 @@ public final class qa extends b5 {
                 }
             }));
         }
-        return this.f25901m;
+        return this.f26722m;
     }
 
     public final void x(String str, String str2, long j10, Bundle bundle, boolean z10, boolean z11, boolean z12, String str3) {
-        String[] strArr = ve.f26040i;
+        String[] strArr = ve.f26861i;
         Bundle bundle2 = new Bundle(bundle);
         for (String str4 : bundle2.keySet()) {
             Object obj = bundle2.get(str4);
@@ -1451,36 +1451,36 @@ public final class qa extends b5 {
                 }
             }
         }
-        this.f25625a.b().t(new i9(this, str, str2, j10, bundle2, z10, z11, z12, str3));
+        this.f26446a.b().t(new i9(this, str, str2, j10, bundle2, z10, z11, z12, str3));
     }
 
     @TargetApi(30)
     public final void x0() {
         zzoh zzohVar;
         h();
-        this.f25902n = false;
-        if (w0().isEmpty() || this.f25897i || (zzohVar = (zzoh) w0().poll()) == null) {
+        this.f26723n = false;
+        if (w0().isEmpty() || this.f26718i || (zzohVar = (zzoh) w0().poll()) == null) {
             return;
         }
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         r4.a aVarH = g7Var.C().H();
         if (aVarH != null) {
-            this.f25897i = true;
+            this.f26718i = true;
             u5 u5VarW = g7Var.a().w();
-            String str = zzohVar.f7426f;
+            String str = zzohVar.f7500f;
             u5VarW.b("Registering trigger URI", str);
-            me.x<Unit> xVarC = aVarH.c(Uri.parse(str));
+            ne.x<Unit> xVarC = aVarH.c(Uri.parse(str));
             if (xVarC != null) {
-                me.s.a(xVarC, new b9(this, zzohVar), new a9(this));
+                ne.s.a(xVarC, new b9(this, zzohVar), new a9(this));
             } else {
-                this.f25897i = false;
+                this.f26718i = false;
                 w0().add(zzohVar);
             }
         }
     }
 
     public final void y(String str, String str2, Object obj, boolean z10) {
-        z("auto", "_ldl", obj, true, this.f25625a.e().a());
+        z("auto", "_ldl", obj, true, this.f26446a.e().a());
     }
 
     /* JADX WARN: Code duplicated, block: B:18:0x0044  */
@@ -1504,11 +1504,11 @@ public final class qa extends b5 {
         int iY;
         Object objZ;
         if (!z10) {
-            ve veVarC = this.f25625a.C();
+            ve veVarC = this.f26446a.C();
             if (!veVarC.t0("user property", str2)) {
                 i10 = 6;
-            } else if (veVarC.v0("user property", t8.f25980a, null, str2)) {
-                veVarC.f25625a.w();
+            } else if (veVarC.v0("user property", t8.f26801a, null, str2)) {
+                veVarC.f26446a.w();
                 if (veVarC.w0("user property", 24, str2)) {
                     i10 = 0;
                 } else {
@@ -1518,10 +1518,10 @@ public final class qa extends b5 {
                 iY0 = 15;
             }
             if (i10 != 0) {
-                g7 g7Var2 = this.f25625a;
+                g7 g7Var2 = this.f26446a;
                 ve veVarC2 = g7Var2.C();
                 g7Var2.w();
-                this.f25625a.C().B(this.f25911w, null, i10, "_ev", veVarC2.q(str2, 24, true), str2 != null ? str2.length() : 0);
+                this.f26446a.C().B(this.f26732w, null, i10, "_ev", veVarC2.q(str2, 24, true), str2 != null ? str2.length() : 0);
                 return;
             }
             if (str == null) {
@@ -1533,7 +1533,7 @@ public final class qa extends b5 {
                 A(str3, str2, j10, null);
                 return;
             }
-            g7Var = this.f25625a;
+            g7Var = this.f26446a;
             iY = g7Var.C().y(str2, obj);
             if (iY != 0) {
                 objZ = g7Var.C().z(str2, obj);
@@ -1545,17 +1545,17 @@ public final class qa extends b5 {
             }
             ve veVarC3 = g7Var.C();
             g7Var.w();
-            this.f25625a.C().B(this.f25911w, null, iY, "_ev", veVarC3.q(str2, 24, true), (!(obj instanceof String) || (obj instanceof CharSequence)) ? obj.toString().length() : 0);
+            this.f26446a.C().B(this.f26732w, null, iY, "_ev", veVarC3.q(str2, 24, true), (!(obj instanceof String) || (obj instanceof CharSequence)) ? obj.toString().length() : 0);
         }
-        iY0 = this.f25625a.C().y0(str2);
+        iY0 = this.f26446a.C().y0(str2);
         i10 = iY0;
         if (i10 != 0) {
-            g7 g7Var3 = this.f25625a;
+            g7 g7Var3 = this.f26446a;
             ve veVarC4 = g7Var3.C();
             g7Var3.w();
             if (str2 != null) {
             }
-            this.f25625a.C().B(this.f25911w, null, i10, "_ev", veVarC4.q(str2, 24, true), str2 != null ? str2.length() : 0);
+            this.f26446a.C().B(this.f26732w, null, i10, "_ev", veVarC4.q(str2, 24, true), str2 != null ? str2.length() : 0);
             return;
         }
         if (str == null) {
@@ -1567,7 +1567,7 @@ public final class qa extends b5 {
             A(str3, str2, j10, null);
             return;
         }
-        g7Var = this.f25625a;
+        g7Var = this.f26446a;
         iY = g7Var.C().y(str2, obj);
         if (iY != 0) {
             objZ = g7Var.C().z(str2, obj);
@@ -1579,6 +1579,6 @@ public final class qa extends b5 {
         }
         ve veVarC5 = g7Var.C();
         g7Var.w();
-        this.f25625a.C().B(this.f25911w, null, iY, "_ev", veVarC5.q(str2, 24, true), (!(obj instanceof String) || (obj instanceof CharSequence)) ? obj.toString().length() : 0);
+        this.f26446a.C().B(this.f26732w, null, iY, "_ev", veVarC5.q(str2, 24, true), (!(obj instanceof String) || (obj instanceof CharSequence)) ? obj.toString().length() : 0);
     }
 }

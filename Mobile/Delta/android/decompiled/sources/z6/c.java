@@ -13,30 +13,30 @@ import x6.Options;
 @Metadata(d1 = {"\u0000>\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0007\n\u0002\b\u0004\bg\u0018\u00002\u00020\u0001:\u0002\u0015\u0005J\u0017\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H&¢\u0006\u0004\b\u0005\u0010\u0006J\u0017\u0010\u0007\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H&¢\u0006\u0004\b\u0007\u0010\u0006J\u0017\u0010\n\u001a\u00020\u00042\u0006\u0010\t\u001a\u00020\bH&¢\u0006\u0004\b\n\u0010\u000bJ#\u0010\u0010\u001a\u00020\u000f2\b\b\u0002\u0010\r\u001a\u00020\f2\b\b\u0002\u0010\u000e\u001a\u00020\fH&¢\u0006\u0004\b\u0010\u0010\u0011R\u001e\u0010\u0017\u001a\u0004\u0018\u00010\u00128&@&X¦\u000e¢\u0006\f\u001a\u0004\b\u0013\u0010\u0014\"\u0004\b\u0015\u0010\u0016R\u0014\u0010\r\u001a\u00020\u00188&X¦\u0004¢\u0006\u0006\u001a\u0004\b\u0019\u0010\u001aR\u0014\u0010\u000e\u001a\u00020\u00188&X¦\u0004¢\u0006\u0006\u001a\u0004\b\u001b\u0010\u001aø\u0001\u0000\u0082\u0002\u0006\n\u0004\b!0\u0001¨\u0006\u001cÀ\u0006\u0001"}, d2 = {"Lz6/c;", "", "", "value", "", "a", "(Ljava/lang/String;)V", "d", "Lx6/p;", "options", "c", "(Lx6/p;)V", "", "width", "height", "Lk6/n;", "f", "(II)Lk6/n;", "Lz6/c$b;", "e", "()Lz6/c$b;", "b", "(Lz6/c$b;)V", "viewBox", "", "getWidth", "()F", "getHeight", "coil-svg_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public interface c {
 
-    @Metadata(d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\bæ\u0080\u0001\u0018\u0000 \u00052\u00020\u0001:\u0001\u0007J\u0017\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H&¢\u0006\u0004\b\u0005\u0010\u0006ø\u0001\u0000\u0082\u0002\u0006\n\u0004\b!0\u0001¨\u0006\bÀ\u0006\u0001"}, d2 = {"Lz6/c$a;", "", "Lxu/g;", Payload.SOURCE, "Lz6/c;", "a", "(Lxu/g;)Lz6/c;", "b", "coil-svg_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\bæ\u0080\u0001\u0018\u0000 \u00052\u00020\u0001:\u0001\u0007J\u0017\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002H&¢\u0006\u0004\b\u0005\u0010\u0006ø\u0001\u0000\u0082\u0002\u0006\n\u0004\b!0\u0001¨\u0006\bÀ\u0006\u0001"}, d2 = {"Lz6/c$a;", "", "Lvu/g;", Payload.SOURCE, "Lz6/c;", "a", "(Lvu/g;)Lz6/c;", "b", "coil-svg_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public interface a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         @NotNull
-        public static final Companion INSTANCE = Companion.f37310a;
+        public static final Companion INSTANCE = Companion.f38005a;
 
         @NotNull
-        public static final a b = C0677a.f37309c;
+        public static final a b = C0687a.f38004c;
 
         /* JADX INFO: renamed from: z6.c$a$a, reason: collision with other inner class name */
         @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-        public static final /* synthetic */ class C0677a implements a, kotlin.jvm.internal.h {
+        public static final /* synthetic */ class C0687a implements a, kotlin.jvm.internal.h {
 
             /* JADX INFO: renamed from: c, reason: collision with root package name */
-            public static final C0677a f37309c = new C0677a();
+            public static final C0687a f38004c = new C0687a();
 
             @Override // z6.c.a
-            public final c a(xu.g gVar) {
+            public final c a(vu.g gVar) {
                 return a7.b.a(gVar);
             }
 
             @Override // kotlin.jvm.internal.h
-            public final jt.b<?> b() {
+            public final gt.b<?> b() {
                 return new k(1, a7.b.class, "parseSvg", "parseSvg(Lokio/BufferedSource;)Lcoil3/svg/Svg;", 1);
             }
 
@@ -57,11 +57,11 @@ public interface c {
         public static final class Companion {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public static final /* synthetic */ Companion f37310a = new Companion();
+            public static final /* synthetic */ Companion f38005a = new Companion();
         }
 
         @NotNull
-        c a(@NotNull xu.g source);
+        c a(@NotNull vu.g source);
     }
 
     /* JADX INFO: renamed from: z6.c$b, reason: from toString */

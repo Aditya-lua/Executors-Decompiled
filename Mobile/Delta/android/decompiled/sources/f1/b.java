@@ -9,7 +9,7 @@ import java.util.Set;
 public abstract class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Set<Integer> f15806a = Collections.unmodifiableSet(new HashSet(Arrays.asList(2, 3, 4)));
+    public static final Set<Integer> f16402a = Collections.unmodifiableSet(new HashSet(Arrays.asList(2, 3, 4)));
 
     public static b e(int i10, Throwable th2, double d10, long j10) {
         return new d(i10, d10, j10, th2);

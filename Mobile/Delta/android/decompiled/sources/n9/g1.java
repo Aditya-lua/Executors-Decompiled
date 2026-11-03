@@ -10,18 +10,18 @@ import java.util.Objects;
 public final class g1 implements Handler.Callback {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ h1 f25271a;
+    public final /* synthetic */ h1 f26092a;
 
     public /* synthetic */ g1(h1 h1Var, byte[] bArr) {
         Objects.requireNonNull(h1Var);
-        this.f25271a = h1Var;
+        this.f26092a = h1Var;
     }
 
     @Override // android.os.Handler.Callback
     public final boolean handleMessage(Message message) {
         int i10 = message.what;
         if (i10 == 0) {
-            h1 h1Var = this.f25271a;
+            h1 h1Var = this.f26092a;
             synchronized (h1Var.f()) {
                 try {
                     e1 e1Var = (e1) message.obj;
@@ -41,7 +41,7 @@ public final class g1 implements Handler.Callback {
         if (i10 != 1) {
             return false;
         }
-        h1 h1Var2 = this.f25271a;
+        h1 h1Var2 = this.f26092a;
         synchronized (h1Var2.f()) {
             try {
                 e1 e1Var2 = (e1) message.obj;

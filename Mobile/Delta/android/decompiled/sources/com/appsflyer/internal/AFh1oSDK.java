@@ -34,10 +34,10 @@ public final class AFh1oSDK implements AFh1sSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    private final AFi1aSDK f5396d;
+    private final AFi1aSDK f5469d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    private boolean f5397e;
+    private boolean f5470e;
     private boolean force;
 
     @Nullable
@@ -47,13 +47,13 @@ public final class AFh1oSDK implements AFh1sSDK {
     private final AFc1iSDK unregisterClient;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    private boolean f5398v;
+    private boolean f5471v;
 
     public AFh1oSDK(@NotNull AFc1iSDK aFc1iSDK, @NotNull AFi1aSDK aFi1aSDK) {
         Intrinsics.checkNotNullParameter(aFc1iSDK, "");
         Intrinsics.checkNotNullParameter(aFi1aSDK, "");
         this.unregisterClient = aFc1iSDK;
-        this.f5396d = aFi1aSDK;
+        this.f5469d = aFi1aSDK;
     }
 
     private final JSONObject AFKeystoreWrapper() {
@@ -67,7 +67,7 @@ public final class AFh1oSDK implements AFh1sSDK {
 
     @Override // com.appsflyer.internal.AFh1sSDK
     public final void AFLogger() {
-        this.f5397e = false;
+        this.f5470e = false;
         this.force = false;
         MigrationDataProvider.clear();
     }
@@ -101,7 +101,7 @@ public final class AFh1oSDK implements AFh1sSDK {
                 map.put(1508099722, method2);
             }
             boolean zBooleanValue = ((Boolean) ((Method) method2).invoke(objInvoke, null)).booleanValue();
-            this.f5397e = !zBooleanValue;
+            this.f5470e = !zBooleanValue;
             this.force = zBooleanValue;
         } catch (Throwable th2) {
             Throwable cause = th2.getCause();
@@ -118,14 +118,14 @@ public final class AFh1oSDK implements AFh1sSDK {
         JSONObject attributionData = MigrationDataProvider.getAttributionData();
         if (attributionData != null) {
             unregisterClient("attr", aFh1pSDK, attributionData);
-            this.f5398v = true;
+            this.f5471v = true;
         }
         MigrationDataProvider.clear();
     }
 
     @Override // com.appsflyer.internal.AFh1sSDK
     public final boolean registerClient() {
-        return this.f5397e;
+        return this.f5470e;
     }
 
     @Override // com.appsflyer.internal.AFh1sSDK
@@ -158,10 +158,10 @@ public final class AFh1oSDK implements AFh1sSDK {
 
     @Override // com.appsflyer.internal.AFh1sSDK
     public final void d() {
-        if (this.f5397e || this.force || MigrationDataProvider.waitForDeepLinkingData(0L) == null) {
+        if (this.f5470e || this.force || MigrationDataProvider.waitForDeepLinkingData(0L) == null) {
             return;
         }
-        this.f5397e = true;
+        this.f5470e = true;
     }
 
     @Override // com.appsflyer.internal.AFh1sSDK
@@ -170,13 +170,13 @@ public final class AFh1oSDK implements AFh1sSDK {
         Intrinsics.checkNotNullParameter(aFf1uSDK, "");
         Intrinsics.checkNotNullParameter(function0, "");
         if (this.unregisterClient.AFKeystoreWrapper.AFLogger("appsFlyerCount", 0) == 1 && aFf1uSDK.unregisterClient == AFd1bSDK.CONVERSION) {
-            Iterator<Referrer> it = this.f5396d.unregisterClient.iterator();
+            Iterator<Referrer> it = this.f5469d.unregisterClient.iterator();
             while (it.hasNext()) {
                 if (it.next().getState() == Referrer.State.STARTED) {
                     return;
                 }
             }
-            if (this.f5398v || (jSONObjectAFKeystoreWrapper = AFKeystoreWrapper()) == null) {
+            if (this.f5471v || (jSONObjectAFKeystoreWrapper = AFKeystoreWrapper()) == null) {
                 return;
             }
             this.AFLogger = jSONObjectAFKeystoreWrapper;
@@ -192,7 +192,7 @@ public final class AFh1oSDK implements AFh1sSDK {
         HashMap map3 = new HashMap();
         map3.put("external", map2);
         aFh1pSDK.AFKeystoreWrapper(map3);
-        Map<String, Object> map4 = aFh1pSDK.f5399d;
+        Map<String, Object> map4 = aFh1pSDK.f5472d;
         Intrinsics.checkNotNullExpressionValue(map4, "");
         AFe1zSDK aFe1zSDKAFKeystoreWrapper = aFh1pSDK.AFKeystoreWrapper();
         Intrinsics.checkNotNullExpressionValue(aFe1zSDKAFKeystoreWrapper, "");
@@ -207,12 +207,12 @@ public final class AFh1oSDK implements AFh1sSDK {
             l10 = aFe1zSDK == AFd1bSDK.ATTR ? this.registerClient : null;
         }
         if (l10 != null) {
-            AFj1iSDK.AFLogger(map).put("migration", kotlin.collections.j0.g(jt.s.a("delay", Long.valueOf(l10.longValue()))));
+            AFj1iSDK.AFLogger(map).put("migration", kotlin.collections.j0.g(gt.s.a("delay", Long.valueOf(l10.longValue()))));
         }
     }
 
     @Override // com.appsflyer.internal.AFh1sSDK
     public final boolean unregisterClient() {
-        return this.f5398v;
+        return this.f5471v;
     }
 }

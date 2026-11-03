@@ -29,7 +29,7 @@ public enum Attachment implements Parcelable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final String f5894a;
+    public final String f5967a;
 
     public static class a extends Exception {
         public a(@NonNull String str) {
@@ -38,13 +38,13 @@ public enum Attachment implements Parcelable {
     }
 
     Attachment(String str) {
-        this.f5894a = str;
+        this.f5967a = str;
     }
 
     @NonNull
     public static Attachment a(@NonNull String str) throws a {
         for (Attachment attachment : values()) {
-            if (str.equals(attachment.f5894a)) {
+            if (str.equals(attachment.f5967a)) {
                 return attachment;
             }
         }
@@ -59,11 +59,11 @@ public enum Attachment implements Parcelable {
     @Override // java.lang.Enum
     @NonNull
     public String toString() {
-        return this.f5894a;
+        return this.f5967a;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
-        parcel.writeString(this.f5894a);
+        parcel.writeString(this.f5967a);
     }
 }

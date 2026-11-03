@@ -1,7 +1,7 @@
 package okhttp3.internal;
 
-import iu.m;
-import iu.p;
+import gu.m;
+import gu.p;
 import kotlin.Metadata;
 import kotlin.collections.CollectionsKt;
 import kotlin.jvm.functions.Function1;
@@ -10,11 +10,11 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0010\u000e\n\u0002\b\u0006\b\u0002\u0018\u0000*\b\b\u0000\u0010\u0002*\u00020\u00012\u00020\u0003B%\u0012\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00028\u00000\u0004\u0012\u0006\u0010\u0006\u001a\u00028\u0000\u0012\u0006\u0010\u0007\u001a\u00020\u0003¢\u0006\u0004\b\b\u0010\tJ1\u0010\u000b\u001a\u00020\u0003\"\b\b\u0001\u0010\n*\u00020\u00012\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00028\u00010\u00042\b\u0010\u0006\u001a\u0004\u0018\u00018\u0001H\u0016¢\u0006\u0004\b\u000b\u0010\fJ*\u0010\r\u001a\u0004\u0018\u00018\u0001\"\b\b\u0001\u0010\n*\u00020\u00012\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00028\u00010\u0004H\u0096\u0002¢\u0006\u0004\b\r\u0010\u000eJ\u000f\u0010\u0010\u001a\u00020\u000fH\u0016¢\u0006\u0004\b\u0010\u0010\u0011R\u001a\u0010\u0005\u001a\b\u0012\u0004\u0012\u00028\u00000\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0005\u0010\u0012R\u0014\u0010\u0006\u001a\u00028\u00008\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0006\u0010\u0013R\u0014\u0010\u0007\u001a\u00020\u00038\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0007\u0010\u0014¨\u0006\u0015"}, d2 = {"Lokhttp3/internal/LinkedTags;", "", "K", "Lokhttp3/internal/Tags;", "Lhu/c;", "key", "value", "next", "<init>", "(Lhu/c;Ljava/lang/Object;Lokhttp3/internal/Tags;)V", "T", "plus", "(Lhu/c;Ljava/lang/Object;)Lokhttp3/internal/Tags;", "get", "(Lhu/c;)Ljava/lang/Object;", "", "toString", "()Ljava/lang/String;", "Lhu/c;", "Ljava/lang/Object;", "Lokhttp3/internal/Tags;", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0010\u000e\n\u0002\b\u0006\b\u0002\u0018\u0000*\b\b\u0000\u0010\u0002*\u00020\u00012\u00020\u0003B%\u0012\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00028\u00000\u0004\u0012\u0006\u0010\u0006\u001a\u00028\u0000\u0012\u0006\u0010\u0007\u001a\u00020\u0003¢\u0006\u0004\b\b\u0010\tJ1\u0010\u000b\u001a\u00020\u0003\"\b\b\u0001\u0010\n*\u00020\u00012\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00028\u00010\u00042\b\u0010\u0006\u001a\u0004\u0018\u00018\u0001H\u0016¢\u0006\u0004\b\u000b\u0010\fJ*\u0010\r\u001a\u0004\u0018\u00018\u0001\"\b\b\u0001\u0010\n*\u00020\u00012\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00028\u00010\u0004H\u0096\u0002¢\u0006\u0004\b\r\u0010\u000eJ\u000f\u0010\u0010\u001a\u00020\u000fH\u0016¢\u0006\u0004\b\u0010\u0010\u0011R\u001a\u0010\u0005\u001a\b\u0012\u0004\u0012\u00028\u00000\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0005\u0010\u0012R\u0014\u0010\u0006\u001a\u00028\u00008\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0006\u0010\u0013R\u0014\u0010\u0007\u001a\u00020\u00038\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0007\u0010\u0014¨\u0006\u0015"}, d2 = {"Lokhttp3/internal/LinkedTags;", "", "K", "Lokhttp3/internal/Tags;", "Lfu/c;", "key", "value", "next", "<init>", "(Lfu/c;Ljava/lang/Object;Lokhttp3/internal/Tags;)V", "T", "plus", "(Lfu/c;Ljava/lang/Object;)Lokhttp3/internal/Tags;", "get", "(Lfu/c;)Ljava/lang/Object;", "", "toString", "()Ljava/lang/String;", "Lfu/c;", "Ljava/lang/Object;", "Lokhttp3/internal/Tags;", "okhttp"}, k = 1, mv = {2, 2, 0}, xi = 48)
 final class LinkedTags<K> extends Tags {
 
     @NotNull
-    private final hu.c<K> key;
+    private final fu.c<K> key;
 
     @NotNull
     private final Tags next;
@@ -23,7 +23,7 @@ final class LinkedTags<K> extends Tags {
     private final K value;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public LinkedTags(@NotNull hu.c<K> key, @NotNull K value, @NotNull Tags next) {
+    public LinkedTags(@NotNull fu.c<K> key, @NotNull K value, @NotNull Tags next) {
         super(null);
         Intrinsics.checkNotNullParameter(key, "key");
         Intrinsics.checkNotNullParameter(value, "value");
@@ -55,14 +55,14 @@ final class LinkedTags<K> extends Tags {
 
     @Override // okhttp3.internal.Tags
     @Nullable
-    public <T> T get(@NotNull hu.c<T> key) {
+    public <T> T get(@NotNull fu.c<T> key) {
         Intrinsics.checkNotNullParameter(key, "key");
-        return Intrinsics.c(key, this.key) ? (T) yt.a.a(key).cast(this.value) : (T) this.next.get(key);
+        return Intrinsics.c(key, this.key) ? (T) wt.a.a(key).cast(this.value) : (T) this.next.get(key);
     }
 
     @Override // okhttp3.internal.Tags
     @NotNull
-    public <T> Tags plus(@NotNull hu.c<T> key, @Nullable T value) {
+    public <T> Tags plus(@NotNull fu.c<T> key, @Nullable T value) {
         Tags linkedTags;
         Intrinsics.checkNotNullParameter(key, "key");
         if (Intrinsics.c(key, this.key)) {

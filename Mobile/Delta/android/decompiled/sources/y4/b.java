@@ -21,7 +21,7 @@ public final class b {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    public static final Map<String, ReentrantLock> f35583d = new LinkedHashMap();
+    public static final Map<String, ReentrantLock> f36440d = new LinkedHashMap();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -46,7 +46,7 @@ public final class b {
             ReentrantLock reentrantLock;
             synchronized (this) {
                 try {
-                    Map map = b.f35583d;
+                    Map map = b.f36440d;
                     Object reentrantLock2 = map.get(key);
                     if (reentrantLock2 == null) {
                         reentrantLock2 = new ReentrantLock();
@@ -103,7 +103,7 @@ public final class b {
                     throw th3;
                 }
                 onLockError.invoke(th3);
-                throw new jt.d();
+                throw new gt.d();
             } catch (Throwable th4) {
                 this.threadLock.unlock();
                 throw th4;

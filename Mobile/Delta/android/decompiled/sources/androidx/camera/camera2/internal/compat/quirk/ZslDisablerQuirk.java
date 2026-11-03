@@ -12,7 +12,7 @@ import n0.g3;
 public class ZslDisablerQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final List<String> f1348a = Arrays.asList("SM-F936", "SM-S901U", "SM-S908U", "SM-S908U1", "SM-F721U1", "SM-S928U1");
+    public static final List<String> f1193a = Arrays.asList("SM-F936", "SM-S901U", "SM-S908U", "SM-S908U1", "SM-F721U1", "SM-S928U1");
     public static final List<String> b = Arrays.asList("MI 8");
 
     public static boolean g(List<String> list) {
@@ -26,7 +26,7 @@ public class ZslDisablerQuirk implements g3 {
     }
 
     private static boolean h() {
-        return Payload.SOURCE_SAMSUNG.equalsIgnoreCase(Build.BRAND) && g(f1348a);
+        return Payload.SOURCE_SAMSUNG.equalsIgnoreCase(Build.BRAND) && g(f1193a);
     }
 
     public static boolean i() {

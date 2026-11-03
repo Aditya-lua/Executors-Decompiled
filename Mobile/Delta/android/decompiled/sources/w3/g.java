@@ -40,14 +40,14 @@ public final class g extends x<g, a> implements s0 {
     }
 
     public static a a0() {
-        return DEFAULT_INSTANCE.x();
+        return DEFAULT_INSTANCE.w();
     }
 
     @Override // androidx.datastore.preferences.protobuf.x
     public final Object A(x.f fVar, Object obj, Object obj2) {
         z0 bVar;
         e eVar = null;
-        switch (e.f33667a[fVar.ordinal()]) {
+        switch (e.f33873a[fVar.ordinal()]) {
             case 1:
                 return new g();
             case 2:

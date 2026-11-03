@@ -21,7 +21,7 @@ public enum Protocol {
 
     @NotNull
     private final String protocol;
-    private static final /* synthetic */ qt.a $ENTRIES = qt.b.a(values());
+    private static final /* synthetic */ ot.a $ENTRIES = ot.b.a(values());
 
     /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     @NotNull
@@ -81,7 +81,7 @@ public enum Protocol {
     }
 
     @NotNull
-    public static qt.a<Protocol> getEntries() {
+    public static ot.a<Protocol> getEntries() {
         return $ENTRIES;
     }
 

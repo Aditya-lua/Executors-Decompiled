@@ -32,86 +32,86 @@ import java.util.WeakHashMap;
 public class u0 extends p3.c implements View.OnClickListener {
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final SearchView f29115l;
+    public final SearchView f29468l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final SearchableInfo f29116m;
+    public final SearchableInfo f29469m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public final Context f29117n;
+    public final Context f29470n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public final WeakHashMap<String, Drawable.ConstantState> f29118o;
+    public final WeakHashMap<String, Drawable.ConstantState> f29471o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public final int f29119p;
+    public final int f29472p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public boolean f29120q;
+    public boolean f29473q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public int f29121r;
+    public int f29474r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public ColorStateList f29122s;
+    public ColorStateList f29475s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public int f29123t;
+    public int f29476t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public int f29124u;
+    public int f29477u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public int f29125v;
+    public int f29478v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public int f29126w;
+    public int f29479w;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public int f29127x;
+    public int f29480x;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public int f29128y;
+    public int f29481y;
 
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final TextView f29129a;
+        public final TextView f29482a;
         public final TextView b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final ImageView f29130c;
+        public final ImageView f29483c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final ImageView f29131d;
+        public final ImageView f29484d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final ImageView f29132e;
+        public final ImageView f29485e;
 
         public a(View view) {
-            this.f29129a = (TextView) view.findViewById(R.id.text1);
+            this.f29482a = (TextView) view.findViewById(R.id.text1);
             this.b = (TextView) view.findViewById(R.id.text2);
-            this.f29130c = (ImageView) view.findViewById(R.id.icon1);
-            this.f29131d = (ImageView) view.findViewById(R.id.icon2);
-            this.f29132e = (ImageView) view.findViewById(i.f.f19971s);
+            this.f29483c = (ImageView) view.findViewById(R.id.icon1);
+            this.f29484d = (ImageView) view.findViewById(R.id.icon2);
+            this.f29485e = (ImageView) view.findViewById(i.f.f20087s);
         }
     }
 
     public u0(Context context, SearchView searchView, SearchableInfo searchableInfo, WeakHashMap<String, Drawable.ConstantState> weakHashMap) {
         super(context, searchView.getSuggestionRowLayout(), null, true);
-        this.f29120q = false;
-        this.f29121r = 1;
-        this.f29123t = -1;
-        this.f29124u = -1;
-        this.f29125v = -1;
-        this.f29126w = -1;
-        this.f29127x = -1;
-        this.f29128y = -1;
-        this.f29115l = searchView;
-        this.f29116m = searchableInfo;
-        this.f29119p = searchView.getSuggestionCommitIconResId();
-        this.f29117n = context;
-        this.f29118o = weakHashMap;
+        this.f29473q = false;
+        this.f29474r = 1;
+        this.f29476t = -1;
+        this.f29477u = -1;
+        this.f29478v = -1;
+        this.f29479w = -1;
+        this.f29480x = -1;
+        this.f29481y = -1;
+        this.f29468l = searchView;
+        this.f29469m = searchableInfo;
+        this.f29472p = searchView.getSuggestionCommitIconResId();
+        this.f29470n = context;
+        this.f29471o = weakHashMap;
     }
 
     public static String n(Cursor cursor, String str) {
@@ -139,7 +139,7 @@ public class u0 extends p3.c implements View.OnClickListener {
 
     @Override // p3.a, p3.b.a
     public void a(Cursor cursor) {
-        if (this.f29120q) {
+        if (this.f29473q) {
             Log.w("SuggestionsAdapter", "Tried to change cursor after adapter was closed.");
             if (cursor != null) {
                 cursor.close();
@@ -150,12 +150,12 @@ public class u0 extends p3.c implements View.OnClickListener {
         try {
             super.a(cursor);
             if (cursor != null) {
-                this.f29123t = cursor.getColumnIndex("suggest_text_1");
-                this.f29124u = cursor.getColumnIndex("suggest_text_2");
-                this.f29125v = cursor.getColumnIndex("suggest_text_2_url");
-                this.f29126w = cursor.getColumnIndex("suggest_icon_1");
-                this.f29127x = cursor.getColumnIndex("suggest_icon_2");
-                this.f29128y = cursor.getColumnIndex("suggest_flags");
+                this.f29476t = cursor.getColumnIndex("suggest_text_1");
+                this.f29477u = cursor.getColumnIndex("suggest_text_2");
+                this.f29478v = cursor.getColumnIndex("suggest_text_2_url");
+                this.f29479w = cursor.getColumnIndex("suggest_icon_1");
+                this.f29480x = cursor.getColumnIndex("suggest_icon_2");
+                this.f29481y = cursor.getColumnIndex("suggest_flags");
             }
         } catch (Exception e10) {
             Log.e("SuggestionsAdapter", "error changing cursor and caching columns", e10);
@@ -165,9 +165,9 @@ public class u0 extends p3.c implements View.OnClickListener {
     @Override // p3.b.a
     public Cursor b(CharSequence charSequence) {
         String string = charSequence == null ? "" : charSequence.toString();
-        if (this.f29115l.getVisibility() == 0 && this.f29115l.getWindowVisibility() == 0) {
+        if (this.f29468l.getVisibility() == 0 && this.f29468l.getWindowVisibility() == 0) {
             try {
-                Cursor cursorU = u(this.f29116m, string, 50);
+                Cursor cursorU = u(this.f29469m, string, 50);
                 if (cursorU != null) {
                     cursorU.getCount();
                     return cursorU;
@@ -190,10 +190,10 @@ public class u0 extends p3.c implements View.OnClickListener {
         if (strN3 != null) {
             return strN3;
         }
-        if (this.f29116m.shouldRewriteQueryFromData() && (strN2 = n(cursor, "suggest_intent_data")) != null) {
+        if (this.f29469m.shouldRewriteQueryFromData() && (strN2 = n(cursor, "suggest_intent_data")) != null) {
             return strN2;
         }
-        if (!this.f29116m.shouldRewriteQueryFromText() || (strN = n(cursor, "suggest_text_1")) == null) {
+        if (!this.f29469m.shouldRewriteQueryFromText() || (strN = n(cursor, "suggest_text_1")) == null) {
             return null;
         }
         return strN;
@@ -202,52 +202,52 @@ public class u0 extends p3.c implements View.OnClickListener {
     @Override // p3.a
     public void d(View view, Context context, Cursor cursor) {
         a aVar = (a) view.getTag();
-        int i10 = this.f29128y;
+        int i10 = this.f29481y;
         int i11 = i10 != -1 ? cursor.getInt(i10) : 0;
-        if (aVar.f29129a != null) {
-            y(aVar.f29129a, v(cursor, this.f29123t));
+        if (aVar.f29482a != null) {
+            y(aVar.f29482a, v(cursor, this.f29476t));
         }
         if (aVar.b != null) {
-            String strV = v(cursor, this.f29125v);
-            CharSequence charSequenceK = strV != null ? k(strV) : v(cursor, this.f29124u);
+            String strV = v(cursor, this.f29478v);
+            CharSequence charSequenceK = strV != null ? k(strV) : v(cursor, this.f29477u);
             if (TextUtils.isEmpty(charSequenceK)) {
-                TextView textView = aVar.f29129a;
+                TextView textView = aVar.f29482a;
                 if (textView != null) {
                     textView.setSingleLine(false);
-                    aVar.f29129a.setMaxLines(2);
+                    aVar.f29482a.setMaxLines(2);
                 }
             } else {
-                TextView textView2 = aVar.f29129a;
+                TextView textView2 = aVar.f29482a;
                 if (textView2 != null) {
                     textView2.setSingleLine(true);
-                    aVar.f29129a.setMaxLines(1);
+                    aVar.f29482a.setMaxLines(1);
                 }
             }
             y(aVar.b, charSequenceK);
         }
-        ImageView imageView = aVar.f29130c;
+        ImageView imageView = aVar.f29483c;
         if (imageView != null) {
             x(imageView, s(cursor), 4);
         }
-        ImageView imageView2 = aVar.f29131d;
+        ImageView imageView2 = aVar.f29484d;
         if (imageView2 != null) {
             x(imageView2, t(cursor), 8);
         }
-        int i12 = this.f29121r;
+        int i12 = this.f29474r;
         if (i12 != 2 && (i12 != 1 || (i11 & 1) == 0)) {
-            aVar.f29132e.setVisibility(8);
+            aVar.f29485e.setVisibility(8);
             return;
         }
-        aVar.f29132e.setVisibility(0);
-        aVar.f29132e.setTag(aVar.f29129a.getText());
-        aVar.f29132e.setOnClickListener(this);
+        aVar.f29485e.setVisibility(0);
+        aVar.f29485e.setTag(aVar.f29482a.getText());
+        aVar.f29485e.setOnClickListener(this);
     }
 
     @Override // p3.c, p3.a
     public View g(Context context, Cursor cursor, ViewGroup viewGroup) {
         View viewG = super.g(context, cursor, viewGroup);
         viewG.setTag(new a(viewG));
-        ((ImageView) viewG.findViewById(i.f.f19971s)).setImageResource(this.f29119p);
+        ((ImageView) viewG.findViewById(i.f.f20087s)).setImageResource(this.f29472p);
         return viewG;
     }
 
@@ -257,9 +257,9 @@ public class u0 extends p3.c implements View.OnClickListener {
             return super.getDropDownView(i10, view, viewGroup);
         } catch (RuntimeException e10) {
             Log.w("SuggestionsAdapter", "Search suggestions cursor threw exception.", e10);
-            View viewF = f(this.f29117n, c(), viewGroup);
+            View viewF = f(this.f29470n, c(), viewGroup);
             if (viewF != null) {
-                ((a) viewF.getTag()).f29129a.setText(e10.toString());
+                ((a) viewF.getTag()).f29482a.setText(e10.toString());
             }
             return viewF;
         }
@@ -271,9 +271,9 @@ public class u0 extends p3.c implements View.OnClickListener {
             return super.getView(i10, view, viewGroup);
         } catch (RuntimeException e10) {
             Log.w("SuggestionsAdapter", "Search suggestions cursor threw exception.", e10);
-            View viewG = g(this.f29117n, c(), viewGroup);
+            View viewG = g(this.f29470n, c(), viewGroup);
             if (viewG != null) {
-                ((a) viewG.getTag()).f29129a.setText(e10.toString());
+                ((a) viewG.getTag()).f29482a.setText(e10.toString());
             }
             return viewG;
         }
@@ -285,7 +285,7 @@ public class u0 extends p3.c implements View.OnClickListener {
     }
 
     public final Drawable j(String str) {
-        Drawable.ConstantState constantState = this.f29118o.get(str);
+        Drawable.ConstantState constantState = this.f29471o.get(str);
         if (constantState == null) {
             return null;
         }
@@ -293,18 +293,18 @@ public class u0 extends p3.c implements View.OnClickListener {
     }
 
     public final CharSequence k(CharSequence charSequence) {
-        if (this.f29122s == null) {
+        if (this.f29475s == null) {
             TypedValue typedValue = new TypedValue();
-            this.f29117n.getTheme().resolveAttribute(i.a.O, typedValue, true);
-            this.f29122s = this.f29117n.getResources().getColorStateList(typedValue.resourceId);
+            this.f29470n.getTheme().resolveAttribute(i.a.O, typedValue, true);
+            this.f29475s = this.f29470n.getResources().getColorStateList(typedValue.resourceId);
         }
         SpannableString spannableString = new SpannableString(charSequence);
-        spannableString.setSpan(new TextAppearanceSpan(null, 0, 0, this.f29122s, null), 0, charSequence.length(), 33);
+        spannableString.setSpan(new TextAppearanceSpan(null, 0, 0, this.f29475s, null), 0, charSequence.length(), 33);
         return spannableString;
     }
 
     public final Drawable l(ComponentName componentName) {
-        PackageManager packageManager = this.f29117n.getPackageManager();
+        PackageManager packageManager = this.f29470n.getPackageManager();
         try {
             ActivityInfo activityInfo = packageManager.getActivityInfo(componentName, 128);
             int iconResource = activityInfo.getIconResource();
@@ -325,16 +325,16 @@ public class u0 extends p3.c implements View.OnClickListener {
 
     public final Drawable m(ComponentName componentName) {
         String strFlattenToShortString = componentName.flattenToShortString();
-        if (!this.f29118o.containsKey(strFlattenToShortString)) {
+        if (!this.f29471o.containsKey(strFlattenToShortString)) {
             Drawable drawableL = l(componentName);
-            this.f29118o.put(strFlattenToShortString, drawableL != null ? drawableL.getConstantState() : null);
+            this.f29471o.put(strFlattenToShortString, drawableL != null ? drawableL.getConstantState() : null);
             return drawableL;
         }
-        Drawable.ConstantState constantState = this.f29118o.get(strFlattenToShortString);
+        Drawable.ConstantState constantState = this.f29471o.get(strFlattenToShortString);
         if (constantState == null) {
             return null;
         }
-        return constantState.newDrawable(this.f29117n.getResources());
+        return constantState.newDrawable(this.f29470n.getResources());
     }
 
     @Override // android.widget.BaseAdapter
@@ -350,15 +350,15 @@ public class u0 extends p3.c implements View.OnClickListener {
     }
 
     public final Drawable o() {
-        Drawable drawableM = m(this.f29116m.getSearchActivity());
-        return drawableM != null ? drawableM : this.f29117n.getPackageManager().getDefaultActivityIcon();
+        Drawable drawableM = m(this.f29469m.getSearchActivity());
+        return drawableM != null ? drawableM : this.f29470n.getPackageManager().getDefaultActivityIcon();
     }
 
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
         Object tag = view.getTag();
         if (tag instanceof CharSequence) {
-            this.f29115l.S((CharSequence) tag);
+            this.f29468l.S((CharSequence) tag);
         }
     }
 
@@ -371,7 +371,7 @@ public class u0 extends p3.c implements View.OnClickListener {
                     throw new FileNotFoundException("Resource does not exist: " + uri);
                 }
             }
-            InputStream inputStreamOpenInputStream = this.f29117n.getContentResolver().openInputStream(uri);
+            InputStream inputStreamOpenInputStream = this.f29470n.getContentResolver().openInputStream(uri);
             if (inputStreamOpenInputStream == null) {
                 throw new FileNotFoundException("Failed to open " + uri);
             }
@@ -407,7 +407,7 @@ public class u0 extends p3.c implements View.OnClickListener {
             throw new FileNotFoundException("No authority: " + uri);
         }
         try {
-            Resources resourcesForApplication = this.f29117n.getPackageManager().getResourcesForApplication(authority);
+            Resources resourcesForApplication = this.f29470n.getPackageManager().getResourcesForApplication(authority);
             List<String> pathSegments = uri.getPathSegments();
             if (pathSegments == null) {
                 throw new FileNotFoundException("No path: " + uri);
@@ -440,12 +440,12 @@ public class u0 extends p3.c implements View.OnClickListener {
         }
         try {
             int i10 = Integer.parseInt(str);
-            String str2 = "android.resource://" + this.f29117n.getPackageName() + "/" + i10;
+            String str2 = "android.resource://" + this.f29470n.getPackageName() + "/" + i10;
             Drawable drawableJ = j(str2);
             if (drawableJ != null) {
                 return drawableJ;
             }
-            Drawable drawableF = l2.b.f(this.f29117n, i10);
+            Drawable drawableF = l2.b.f(this.f29470n, i10);
             z(str2, drawableF);
             return drawableF;
         } catch (Resources.NotFoundException unused) {
@@ -463,7 +463,7 @@ public class u0 extends p3.c implements View.OnClickListener {
     }
 
     public final Drawable s(Cursor cursor) {
-        int i10 = this.f29126w;
+        int i10 = this.f29479w;
         if (i10 == -1) {
             return null;
         }
@@ -472,7 +472,7 @@ public class u0 extends p3.c implements View.OnClickListener {
     }
 
     public final Drawable t(Cursor cursor) {
-        int i10 = this.f29127x;
+        int i10 = this.f29480x;
         if (i10 == -1) {
             return null;
         }
@@ -501,11 +501,11 @@ public class u0 extends p3.c implements View.OnClickListener {
         if (i10 > 0) {
             builderFragment.appendQueryParameter("limit", String.valueOf(i10));
         }
-        return this.f29117n.getContentResolver().query(builderFragment.build(), null, suggestSelection, strArr2, null);
+        return this.f29470n.getContentResolver().query(builderFragment.build(), null, suggestSelection, strArr2, null);
     }
 
     public void w(int i10) {
-        this.f29121r = i10;
+        this.f29474r = i10;
     }
 
     public final void x(ImageView imageView, Drawable drawable, int i10) {
@@ -530,7 +530,7 @@ public class u0 extends p3.c implements View.OnClickListener {
 
     public final void z(String str, Drawable drawable) {
         if (drawable != null) {
-            this.f29118o.put(str, drawable.getConstantState());
+            this.f29471o.put(str, drawable.getConstantState());
         }
     }
 }

@@ -1,35 +1,28 @@
 package zn;
 
-import android.content.Context;
-import android.net.Uri;
+import dt.i;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class b implements ft.d<com.withpersona.sdk2.inquiry.document.a> {
+public final class b implements dt.d<a.C0693a> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ft.i<g.c<Uri>> f37723a;
-    public final ft.i<Context> b;
+    public final i<c> f38214a;
 
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final ft.i<qq.c> f37724c;
-
-    public b(ft.i<g.c<Uri>> iVar, ft.i<Context> iVar2, ft.i<qq.c> iVar3) {
-        this.f37723a = iVar;
-        this.b = iVar2;
-        this.f37724c = iVar3;
+    public b(i<c> iVar) {
+        this.f38214a = iVar;
     }
 
-    public static b a(ft.i<g.c<Uri>> iVar, ft.i<Context> iVar2, ft.i<qq.c> iVar3) {
-        return new b(iVar, iVar2, iVar3);
+    public static b a(i<c> iVar) {
+        return new b(iVar);
     }
 
-    public static com.withpersona.sdk2.inquiry.document.a c(g.c<Uri> cVar, Context context, qq.c cVar2) {
-        return new com.withpersona.sdk2.inquiry.document.a(cVar, context, cVar2);
+    public static a.C0693a c(c cVar) {
+        return new a.C0693a(cVar);
     }
 
-    @Override // ht.a
+    @Override // ft.a
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public com.withpersona.sdk2.inquiry.document.a get() {
-        return c(this.f37723a.get(), this.b.get(), this.f37724c.get());
+    public a.C0693a get() {
+        return c(this.f38214a.get());
     }
 }

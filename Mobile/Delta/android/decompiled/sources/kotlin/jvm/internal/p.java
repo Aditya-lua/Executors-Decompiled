@@ -1,7 +1,7 @@
 package kotlin.jvm.internal;
 
 /* JADX INFO: loaded from: classes2.dex */
-public abstract class p extends x implements hu.l {
+public abstract class p extends x implements fu.l {
     public p() {
     }
 

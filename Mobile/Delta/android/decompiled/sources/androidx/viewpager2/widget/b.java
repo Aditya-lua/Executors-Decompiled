@@ -6,10 +6,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 public final class b extends ViewPager2.i {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final LinearLayoutManager f3425a;
+    public final LinearLayoutManager f3270a;
 
     public b(LinearLayoutManager linearLayoutManager) {
-        this.f3425a = linearLayoutManager;
+        this.f3270a = linearLayoutManager;
     }
 
     @Override // androidx.viewpager2.widget.ViewPager2.i

@@ -68,12 +68,12 @@ public final class g extends b {
         return this.password;
     }
 
-    public /* synthetic */ g(String str, String str2, boolean z10, b.C0279b c0279b, String str3, boolean z11, Bundle bundle, Bundle bundle2, int i10, DefaultConstructorMarker defaultConstructorMarker) {
-        this(str, str2, z10, c0279b, (i10 & 16) != 0 ? null : str3, z11, (i10 & 64) != 0 ? INSTANCE.b(str, str2) : bundle, (i10 & 128) != 0 ? INSTANCE.a() : bundle2);
+    public /* synthetic */ g(String str, String str2, boolean z10, b.C0293b c0293b, String str3, boolean z11, Bundle bundle, Bundle bundle2, int i10, DefaultConstructorMarker defaultConstructorMarker) {
+        this(str, str2, z10, c0293b, (i10 & 16) != 0 ? null : str3, z11, (i10 & 64) != 0 ? INSTANCE.b(str, str2) : bundle, (i10 & 128) != 0 ? INSTANCE.a() : bundle2);
     }
 
-    public g(String str, String str2, boolean z10, b.C0279b c0279b, String str3, boolean z11, Bundle bundle, Bundle bundle2) {
-        super("android.credentials.TYPE_PASSWORD_CREDENTIAL", bundle, bundle2, false, z10, c0279b, str3, z11);
+    public g(String str, String str2, boolean z10, b.C0293b c0293b, String str3, boolean z11, Bundle bundle, Bundle bundle2) {
+        super("android.credentials.TYPE_PASSWORD_CREDENTIAL", bundle, bundle2, false, z10, c0293b, str3, z11);
         this.id = str;
         this.password = str2;
         if (str2.length() <= 0) {
@@ -87,7 +87,7 @@ public final class g extends b {
 
     /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
     public g(@NotNull String id2, @NotNull String password, @Nullable String str, boolean z10, boolean z11) {
-        this(id2, password, z11, new b.C0279b(id2, null), str, z10, null, null, 192, null);
+        this(id2, password, z11, new b.C0293b(id2, null), str, z10, null, null, 192, null);
         Intrinsics.checkNotNullParameter(id2, "id");
         Intrinsics.checkNotNullParameter(password, "password");
     }

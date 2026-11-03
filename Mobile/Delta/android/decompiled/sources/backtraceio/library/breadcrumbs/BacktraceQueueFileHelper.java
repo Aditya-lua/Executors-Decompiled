@@ -5,7 +5,7 @@ import com.google.mlkit.vision.barcode.common.Barcode;
 import java.io.File;
 import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
-import xm.a;
+import vm.a;
 
 /* JADX INFO: loaded from: classes.dex */
 public class BacktraceQueueFileHelper {

@@ -15,45 +15,45 @@ public final class ApiMetadata extends AbstractSafeParcelable {
     public static final Parcelable.Creator<ApiMetadata> CREATOR = t.a();
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final ApiMetadata f5699i = w3().a();
+    public static final ApiMetadata f5772i = w3().a();
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
     @NonNull
-    public static final ApiMetadata f5700j;
+    public static final ApiMetadata f5773j;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final ComplianceOptions f5701f;
+    public final ComplianceOptions f5774f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final boolean f5702g;
+    public final boolean f5775g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public boolean f5703h;
+    public boolean f5776h;
 
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public ComplianceOptions f5704a;
+        public ComplianceOptions f5777a;
         public boolean b = false;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public boolean f5705c;
+        public boolean f5778c;
 
         @NonNull
         public ApiMetadata a() {
-            ApiMetadata apiMetadata = new ApiMetadata(this.f5704a, this.b);
-            apiMetadata.x3(this.f5705c);
+            ApiMetadata apiMetadata = new ApiMetadata(this.f5777a, this.b);
+            apiMetadata.x3(this.f5778c);
             return apiMetadata;
         }
 
         @NonNull
         public a b(ComplianceOptions complianceOptions) {
-            this.f5704a = complianceOptions;
+            this.f5777a = complianceOptions;
             return this;
         }
 
         public final /* synthetic */ a c(boolean z10) {
-            this.f5705c = z10;
+            this.f5778c = z10;
             return this;
         }
     }
@@ -61,12 +61,12 @@ public final class ApiMetadata extends AbstractSafeParcelable {
     static {
         a aVarW3 = w3();
         aVarW3.c(true);
-        f5700j = aVarW3.a();
+        f5773j = aVarW3.a();
     }
 
     public ApiMetadata(ComplianceOptions complianceOptions, boolean z10) {
-        this.f5701f = complianceOptions;
-        this.f5702g = z10;
+        this.f5774f = complianceOptions;
+        this.f5775g = z10;
     }
 
     @NonNull
@@ -78,7 +78,7 @@ public final class ApiMetadata extends AbstractSafeParcelable {
 
     @NonNull
     public static final ApiMetadata v3() {
-        return f5699i;
+        return f5772i;
     }
 
     @NonNull
@@ -91,16 +91,16 @@ public final class ApiMetadata extends AbstractSafeParcelable {
             return false;
         }
         ApiMetadata apiMetadata = (ApiMetadata) obj;
-        return k.b(this.f5701f, apiMetadata.f5701f) && this.f5703h == apiMetadata.f5703h && this.f5702g == apiMetadata.f5702g;
+        return k.b(this.f5774f, apiMetadata.f5774f) && this.f5776h == apiMetadata.f5776h && this.f5775g == apiMetadata.f5775g;
     }
 
     public final int hashCode() {
-        return k.c(this.f5701f, Boolean.valueOf(this.f5703h), Boolean.valueOf(this.f5702g));
+        return k.c(this.f5774f, Boolean.valueOf(this.f5776h), Boolean.valueOf(this.f5775g));
     }
 
     @NonNull
     public final String toString() {
-        String strValueOf = String.valueOf(this.f5701f);
+        String strValueOf = String.valueOf(this.f5774f);
         StringBuilder sb2 = new StringBuilder(strValueOf.length() + 31);
         sb2.append("ApiMetadata(complianceOptions=");
         sb2.append(strValueOf);
@@ -110,19 +110,19 @@ public final class ApiMetadata extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(@NonNull Parcel parcel, int i10) {
-        if (this.f5703h) {
+        if (this.f5776h) {
             parcel.setDataPosition(parcel.dataPosition() - 4);
             parcel.setDataSize(parcel.dataSize() - 4);
             return;
         }
         parcel.writeInt(-204102970);
         int iA = b.a(parcel);
-        b.t(parcel, 1, this.f5701f, i10, false);
-        b.c(parcel, 2, this.f5702g);
+        b.t(parcel, 1, this.f5774f, i10, false);
+        b.c(parcel, 2, this.f5775g);
         b.b(parcel, iA);
     }
 
     public final /* synthetic */ void x3(boolean z10) {
-        this.f5703h = z10;
+        this.f5776h = z10;
     }
 }

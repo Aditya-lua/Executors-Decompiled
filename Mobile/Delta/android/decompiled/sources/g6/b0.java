@@ -11,7 +11,7 @@ public final class b0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final b0 f17898a = new b0();
+    public static final b0 f18437a = new b0();
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull

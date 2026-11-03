@@ -14,18 +14,18 @@ public final class g {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final Object[] f22558a = new Object[0];
+    public static final Object[] f23013a = new Object[0];
 
     @NotNull
     public static final Object[] a(@NotNull Collection<?> collection) {
         Intrinsics.checkNotNullParameter(collection, "collection");
         int size = collection.size();
         if (size == 0) {
-            return f22558a;
+            return f23013a;
         }
         Iterator<?> it = collection.iterator();
         if (!it.hasNext()) {
-            return f22558a;
+            return f23013a;
         }
         Object[] objArrCopyOf = new Object[size];
         int i10 = 0;

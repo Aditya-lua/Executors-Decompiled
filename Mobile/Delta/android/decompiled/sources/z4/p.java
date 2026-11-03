@@ -13,7 +13,7 @@ import x4.f0;
 import x4.g0;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000h\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0002\u0018\u00002\u00020\u00012\u00020\u0002:\u0003\u001b\u001c\u0019B\u001f\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\b\u001a\u00020\u0007¢\u0006\u0004\b\t\u0010\nJJ\u0010\u0013\u001a\u00028\u0000\"\u0004\b\u0000\u0010\u000b2\b\u0010\r\u001a\u0004\u0018\u00010\f2(\u0010\u0012\u001a$\b\u0001\u0012\n\u0012\b\u0012\u0004\u0012\u00028\u00000\u000f\u0012\n\u0012\b\u0012\u0004\u0012\u00028\u00000\u0010\u0012\u0006\u0012\u0004\u0018\u00010\u00110\u000eH\u0082@¢\u0006\u0004\b\u0013\u0010\u0014J2\u0010\u0019\u001a\u00028\u0000\"\u0004\b\u0000\u0010\u000b2\u0006\u0010\u0016\u001a\u00020\u00152\u0012\u0010\u0012\u001a\u000e\u0012\u0004\u0012\u00020\u0018\u0012\u0004\u0012\u00028\u00000\u0017H\u0096@¢\u0006\u0004\b\u0019\u0010\u001aJH\u0010\u001b\u001a\u00028\u0000\"\u0004\b\u0000\u0010\u000b2\u0006\u0010\r\u001a\u00020\f2(\u0010\u0012\u001a$\b\u0001\u0012\n\u0012\b\u0012\u0004\u0012\u00028\u00000\u000f\u0012\n\u0012\b\u0012\u0004\u0012\u00028\u00000\u0010\u0012\u0006\u0012\u0004\u0018\u00010\u00110\u000eH\u0096@¢\u0006\u0004\b\u001b\u0010\u0014J\u0010\u0010\u001c\u001a\u00020\u0007H\u0096@¢\u0006\u0004\b\u001c\u0010\u001dJ\r\u0010\u001f\u001a\u00020\u001e¢\u0006\u0004\b\u001f\u0010 J\u0018\u0010!\u001a\u00020\u001e2\u0006\u0010\r\u001a\u00020\fH\u0082@¢\u0006\u0004\b!\u0010\"J\u0018\u0010$\u001a\u00020\u001e2\u0006\u0010#\u001a\u00020\u0007H\u0082@¢\u0006\u0004\b$\u0010%R\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b\u0019\u0010&\u001a\u0004\b'\u0010(R\u0017\u0010\u0006\u001a\u00020\u00058\u0006¢\u0006\f\n\u0004\b\u001c\u0010)\u001a\u0004\b*\u0010+R\u0017\u0010\b\u001a\u00020\u00078\u0006¢\u0006\f\n\u0004\b\u001b\u0010,\u001a\u0004\b-\u0010.R\u001a\u00103\u001a\b\u0012\u0004\u0012\u0002000/8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b1\u00102R\u0016\u00105\u001a\u00020\u00078\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b4\u0010,R\u0014\u00108\u001a\u0002068VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b1\u00107¨\u00069"}, d2 = {"Lz4/p;", "Lx4/g0;", "Lz4/q;", "Lz4/b;", "connectionElementKey", "Lz4/j;", "delegate", "", "isReadOnly", "<init>", "(Lz4/b;Lz4/j;Z)V", "R", "Lx4/g0$a;", Payload.TYPE, "Lkotlin/Function2;", "Lx4/f0;", "Lnt/b;", "", "block", "o", "(Lx4/g0$a;Lkotlin/jvm/functions/Function2;Lnt/b;)Ljava/lang/Object;", "", "sql", "Lkotlin/Function1;", "Lf5/d;", "a", "(Ljava/lang/String;Lkotlin/jvm/functions/Function1;Lnt/b;)Ljava/lang/Object;", "c", "b", "(Lnt/b;)Ljava/lang/Object;", "", "n", "()V", "i", "(Lx4/g0$a;Lnt/b;)Ljava/lang/Object;", "success", "j", "(ZLnt/b;)Ljava/lang/Object;", "Lz4/b;", "k", "()Lz4/b;", "Lz4/j;", "l", "()Lz4/j;", "Z", "m", "()Z", "Lkotlin/collections/i;", "Lz4/p$c;", "d", "Lkotlin/collections/i;", "transactionStack", "e", "isRecycled", "Lf5/b;", "()Lf5/b;", "rawConnection", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
+@Metadata(d1 = {"\u0000h\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0011\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0002\u0018\u00002\u00020\u00012\u00020\u0002:\u0003,\u001c\u0019B\u001f\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\b\u001a\u00020\u0007¢\u0006\u0004\b\t\u0010\nJJ\u0010\u0013\u001a\u00028\u0000\"\u0004\b\u0000\u0010\u000b2\b\u0010\r\u001a\u0004\u0018\u00010\f2(\u0010\u0012\u001a$\b\u0001\u0012\n\u0012\b\u0012\u0004\u0012\u00028\u00000\u000f\u0012\n\u0012\b\u0012\u0004\u0012\u00028\u00000\u0010\u0012\u0006\u0012\u0004\u0018\u00010\u00110\u000eH\u0082@¢\u0006\u0004\b\u0013\u0010\u0014J2\u0010\u0019\u001a\u00028\u0000\"\u0004\b\u0000\u0010\u000b2\u0006\u0010\u0016\u001a\u00020\u00152\u0012\u0010\u0012\u001a\u000e\u0012\u0004\u0012\u00020\u0018\u0012\u0004\u0012\u00028\u00000\u0017H\u0096@¢\u0006\u0004\b\u0019\u0010\u001aJH\u0010\u001b\u001a\u00028\u0000\"\u0004\b\u0000\u0010\u000b2\u0006\u0010\r\u001a\u00020\f2(\u0010\u0012\u001a$\b\u0001\u0012\n\u0012\b\u0012\u0004\u0012\u00028\u00000\u000f\u0012\n\u0012\b\u0012\u0004\u0012\u00028\u00000\u0010\u0012\u0006\u0012\u0004\u0018\u00010\u00110\u000eH\u0096@¢\u0006\u0004\b\u001b\u0010\u0014J\u0010\u0010\u001c\u001a\u00020\u0007H\u0096@¢\u0006\u0004\b\u001c\u0010\u001dJ\r\u0010\u001f\u001a\u00020\u001e¢\u0006\u0004\b\u001f\u0010 J\u0018\u0010!\u001a\u00020\u001e2\u0006\u0010\r\u001a\u00020\fH\u0082@¢\u0006\u0004\b!\u0010\"J\u0018\u0010$\u001a\u00020\u001e2\u0006\u0010#\u001a\u00020\u0007H\u0082@¢\u0006\u0004\b$\u0010%R\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b\u0019\u0010&\u001a\u0004\b'\u0010(R\u0017\u0010\u0006\u001a\u00020\u00058\u0006¢\u0006\f\n\u0004\b\u001c\u0010)\u001a\u0004\b*\u0010+R\u0017\u0010\b\u001a\u00020\u00078\u0006¢\u0006\f\n\u0004\b,\u0010-\u001a\u0004\b.\u0010/R\u001a\u00103\u001a\b\u0012\u0004\u0012\u000201008\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001b\u00102R\u0016\u00105\u001a\u00020\u00078\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b4\u0010-R\u0014\u00108\u001a\u0002068VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b,\u00107¨\u00069"}, d2 = {"Lz4/p;", "Lx4/g0;", "Lz4/q;", "Lz4/b;", "connectionElementKey", "Lz4/j;", "delegate", "", "isReadOnly", "<init>", "(Lz4/b;Lz4/j;Z)V", "R", "Lx4/g0$a;", Payload.TYPE, "Lkotlin/Function2;", "Lx4/f0;", "Llt/b;", "", "block", "o", "(Lx4/g0$a;Lkotlin/jvm/functions/Function2;Llt/b;)Ljava/lang/Object;", "", "sql", "Lkotlin/Function1;", "Lf5/d;", "a", "(Ljava/lang/String;Lkotlin/jvm/functions/Function1;Llt/b;)Ljava/lang/Object;", "d", "b", "(Llt/b;)Ljava/lang/Object;", "", "n", "()V", "i", "(Lx4/g0$a;Llt/b;)Ljava/lang/Object;", "success", "j", "(ZLlt/b;)Ljava/lang/Object;", "Lz4/b;", "k", "()Lz4/b;", "Lz4/j;", "l", "()Lz4/j;", "c", "Z", "m", "()Z", "Lkotlin/collections/i;", "Lz4/p$c;", "Lkotlin/collections/i;", "transactionStack", "e", "isRecycled", "Lf5/b;", "()Lf5/b;", "rawConnection", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
 public final class p implements g0, q {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -34,7 +34,7 @@ public final class p implements g0, q {
     /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
     public volatile boolean isRecycled;
 
-    @Metadata(d1 = {"\u00008\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\n\n\u0002\u0010\u000b\n\u0002\b\u0011\b\u0082\u0004\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0002\u001a\u00020\u0001¢\u0006\u0004\b\u0003\u0010\u0004J\u001f\u0010\n\u001a\u00020\t2\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\b\u001a\u00020\u0007H\u0016¢\u0006\u0004\b\n\u0010\u000bJ\u001f\u0010\r\u001a\u00020\t2\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\b\u001a\u00020\fH\u0016¢\u0006\u0004\b\r\u0010\u000eJ\u001f\u0010\u0010\u001a\u00020\t2\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\b\u001a\u00020\u000fH\u0016¢\u0006\u0004\b\u0010\u0010\u0011J\u0017\u0010\u0012\u001a\u00020\t2\u0006\u0010\u0006\u001a\u00020\u0005H\u0016¢\u0006\u0004\b\u0012\u0010\u0013J\u0017\u0010\u0014\u001a\u00020\u00072\u0006\u0010\u0006\u001a\u00020\u0005H\u0016¢\u0006\u0004\b\u0014\u0010\u0015J\u0017\u0010\u0016\u001a\u00020\f2\u0006\u0010\u0006\u001a\u00020\u0005H\u0016¢\u0006\u0004\b\u0016\u0010\u0017J\u0017\u0010\u0018\u001a\u00020\u000f2\u0006\u0010\u0006\u001a\u00020\u0005H\u0016¢\u0006\u0004\b\u0018\u0010\u0019J\u0017\u0010\u001b\u001a\u00020\u001a2\u0006\u0010\u0006\u001a\u00020\u0005H\u0016¢\u0006\u0004\b\u001b\u0010\u001cJ\u000f\u0010\u001d\u001a\u00020\u0005H\u0016¢\u0006\u0004\b\u001d\u0010\u001eJ\u0017\u0010\u001f\u001a\u00020\u000f2\u0006\u0010\u0006\u001a\u00020\u0005H\u0016¢\u0006\u0004\b\u001f\u0010\u0019J\u000f\u0010 \u001a\u00020\u001aH\u0016¢\u0006\u0004\b \u0010!J\u000f\u0010\"\u001a\u00020\tH\u0016¢\u0006\u0004\b\"\u0010#J\u000f\u0010$\u001a\u00020\tH\u0016¢\u0006\u0004\b$\u0010#J\u000f\u0010%\u001a\u00020\tH\u0016¢\u0006\u0004\b%\u0010#R\u0014\u0010\u0002\u001a\u00020\u00018\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b&\u0010'R\u0014\u0010*\u001a\u00020\f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b(\u0010)¨\u0006+"}, d2 = {"Lz4/p$a;", "Lf5/d;", "delegate", "<init>", "(Lz4/p;Lf5/d;)V", "", "index", "", "value", "", "A", "(I[B)V", "", "z", "(IJ)V", "", "k0", "(ILjava/lang/String;)V", "C", "(I)V", "getBlob", "(I)[B", "getLong", "(I)J", "E2", "(I)Ljava/lang/String;", "", "isNull", "(I)Z", "getColumnCount", "()I", "getColumnName", "g3", "()Z", "reset", "()V", "E", "close", "a", "Lf5/d;", "b", "J", "threadId", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    @Metadata(d1 = {"\u00008\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\n\n\u0002\u0010\u000b\n\u0002\b\u0011\b\u0082\u0004\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0002\u001a\u00020\u0001¢\u0006\u0004\b\u0003\u0010\u0004J\u001f\u0010\n\u001a\u00020\t2\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\b\u001a\u00020\u0007H\u0016¢\u0006\u0004\b\n\u0010\u000bJ\u001f\u0010\r\u001a\u00020\t2\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\b\u001a\u00020\fH\u0016¢\u0006\u0004\b\r\u0010\u000eJ\u001f\u0010\u0010\u001a\u00020\t2\u0006\u0010\u0006\u001a\u00020\u00052\u0006\u0010\b\u001a\u00020\u000fH\u0016¢\u0006\u0004\b\u0010\u0010\u0011J\u0017\u0010\u0012\u001a\u00020\t2\u0006\u0010\u0006\u001a\u00020\u0005H\u0016¢\u0006\u0004\b\u0012\u0010\u0013J\u0017\u0010\u0014\u001a\u00020\u00072\u0006\u0010\u0006\u001a\u00020\u0005H\u0016¢\u0006\u0004\b\u0014\u0010\u0015J\u0017\u0010\u0016\u001a\u00020\f2\u0006\u0010\u0006\u001a\u00020\u0005H\u0016¢\u0006\u0004\b\u0016\u0010\u0017J\u0017\u0010\u0018\u001a\u00020\u000f2\u0006\u0010\u0006\u001a\u00020\u0005H\u0016¢\u0006\u0004\b\u0018\u0010\u0019J\u0017\u0010\u001b\u001a\u00020\u001a2\u0006\u0010\u0006\u001a\u00020\u0005H\u0016¢\u0006\u0004\b\u001b\u0010\u001cJ\u000f\u0010\u001d\u001a\u00020\u0005H\u0016¢\u0006\u0004\b\u001d\u0010\u001eJ\u0017\u0010\u001f\u001a\u00020\u000f2\u0006\u0010\u0006\u001a\u00020\u0005H\u0016¢\u0006\u0004\b\u001f\u0010\u0019J\u000f\u0010 \u001a\u00020\u001aH\u0016¢\u0006\u0004\b \u0010!J\u000f\u0010\"\u001a\u00020\tH\u0016¢\u0006\u0004\b\"\u0010#J\u000f\u0010$\u001a\u00020\tH\u0016¢\u0006\u0004\b$\u0010#J\u000f\u0010%\u001a\u00020\tH\u0016¢\u0006\u0004\b%\u0010#R\u0014\u0010\u0002\u001a\u00020\u00018\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b&\u0010'R\u0014\u0010*\u001a\u00020\f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b(\u0010)¨\u0006+"}, d2 = {"Lz4/p$a;", "Lf5/d;", "delegate", "<init>", "(Lz4/p;Lf5/d;)V", "", "index", "", "value", "", "z", "(I[B)V", "", "y", "(IJ)V", "", "h0", "(ILjava/lang/String;)V", "B", "(I)V", "getBlob", "(I)[B", "getLong", "(I)J", "F2", "(I)Ljava/lang/String;", "", "isNull", "(I)Z", "getColumnCount", "()I", "getColumnName", "i3", "()Z", "reset", "()V", "E", "close", "a", "Lf5/d;", "b", "J", "threadId", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
     public final class a implements f5.d {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -45,224 +45,224 @@ public final class p implements g0, q {
         public final long threadId;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ p f37246c;
+        public final /* synthetic */ p f37941c;
 
         public a(@NotNull p pVar, f5.d delegate) {
             Intrinsics.checkNotNullParameter(delegate, "delegate");
-            this.f37246c = pVar;
+            this.f37941c = pVar;
             this.delegate = delegate;
             this.threadId = y4.d.b();
         }
 
         @Override // f5.d
-        public void A(int index, @NotNull byte[] value) {
-            Intrinsics.checkNotNullParameter(value, "value");
-            if (this.f37246c.isRecycled) {
+        public void B(int index) {
+            if (this.f37941c.isRecycled) {
                 f5.a.b(21, "Statement is recycled");
-                throw new jt.d();
+                throw new gt.d();
             }
             if (this.threadId == y4.d.b()) {
-                this.delegate.A(index, value);
+                this.delegate.B(index);
             } else {
                 f5.a.b(21, "Attempted to use statement on a different thread");
-                throw new jt.d();
-            }
-        }
-
-        @Override // f5.d
-        public void C(int index) {
-            if (this.f37246c.isRecycled) {
-                f5.a.b(21, "Statement is recycled");
-                throw new jt.d();
-            }
-            if (this.threadId == y4.d.b()) {
-                this.delegate.C(index);
-            } else {
-                f5.a.b(21, "Attempted to use statement on a different thread");
-                throw new jt.d();
+                throw new gt.d();
             }
         }
 
         @Override // f5.d
         public void E() {
-            if (this.f37246c.isRecycled) {
+            if (this.f37941c.isRecycled) {
                 f5.a.b(21, "Statement is recycled");
-                throw new jt.d();
+                throw new gt.d();
             }
             if (this.threadId == y4.d.b()) {
                 this.delegate.E();
             } else {
                 f5.a.b(21, "Attempted to use statement on a different thread");
-                throw new jt.d();
+                throw new gt.d();
             }
         }
 
         @Override // f5.d
         @NotNull
-        public String E2(int index) {
-            if (this.f37246c.isRecycled) {
+        public String F2(int index) {
+            if (this.f37941c.isRecycled) {
                 f5.a.b(21, "Statement is recycled");
-                throw new jt.d();
+                throw new gt.d();
             }
             if (this.threadId == y4.d.b()) {
-                return this.delegate.E2(index);
+                return this.delegate.F2(index);
             }
             f5.a.b(21, "Attempted to use statement on a different thread");
-            throw new jt.d();
+            throw new gt.d();
         }
 
         @Override // f5.d, java.lang.AutoCloseable
         public void close() {
-            if (this.f37246c.isRecycled) {
+            if (this.f37941c.isRecycled) {
                 f5.a.b(21, "Statement is recycled");
-                throw new jt.d();
+                throw new gt.d();
             }
             if (this.threadId == y4.d.b()) {
                 this.delegate.close();
             } else {
                 f5.a.b(21, "Attempted to use statement on a different thread");
-                throw new jt.d();
+                throw new gt.d();
             }
-        }
-
-        @Override // f5.d
-        public boolean g3() {
-            if (this.f37246c.isRecycled) {
-                f5.a.b(21, "Statement is recycled");
-                throw new jt.d();
-            }
-            if (this.threadId == y4.d.b()) {
-                return this.delegate.g3();
-            }
-            f5.a.b(21, "Attempted to use statement on a different thread");
-            throw new jt.d();
         }
 
         @Override // f5.d
         @NotNull
         public byte[] getBlob(int index) {
-            if (this.f37246c.isRecycled) {
+            if (this.f37941c.isRecycled) {
                 f5.a.b(21, "Statement is recycled");
-                throw new jt.d();
+                throw new gt.d();
             }
             if (this.threadId == y4.d.b()) {
                 return this.delegate.getBlob(index);
             }
             f5.a.b(21, "Attempted to use statement on a different thread");
-            throw new jt.d();
+            throw new gt.d();
         }
 
         @Override // f5.d
         public int getColumnCount() {
-            if (this.f37246c.isRecycled) {
+            if (this.f37941c.isRecycled) {
                 f5.a.b(21, "Statement is recycled");
-                throw new jt.d();
+                throw new gt.d();
             }
             if (this.threadId == y4.d.b()) {
                 return this.delegate.getColumnCount();
             }
             f5.a.b(21, "Attempted to use statement on a different thread");
-            throw new jt.d();
+            throw new gt.d();
         }
 
         @Override // f5.d
         @NotNull
         public String getColumnName(int index) {
-            if (this.f37246c.isRecycled) {
+            if (this.f37941c.isRecycled) {
                 f5.a.b(21, "Statement is recycled");
-                throw new jt.d();
+                throw new gt.d();
             }
             if (this.threadId == y4.d.b()) {
                 return this.delegate.getColumnName(index);
             }
             f5.a.b(21, "Attempted to use statement on a different thread");
-            throw new jt.d();
+            throw new gt.d();
         }
 
         @Override // f5.d
         public long getLong(int index) {
-            if (this.f37246c.isRecycled) {
+            if (this.f37941c.isRecycled) {
                 f5.a.b(21, "Statement is recycled");
-                throw new jt.d();
+                throw new gt.d();
             }
             if (this.threadId == y4.d.b()) {
                 return this.delegate.getLong(index);
             }
             f5.a.b(21, "Attempted to use statement on a different thread");
-            throw new jt.d();
+            throw new gt.d();
+        }
+
+        @Override // f5.d
+        public void h0(int index, @NotNull String value) {
+            Intrinsics.checkNotNullParameter(value, "value");
+            if (this.f37941c.isRecycled) {
+                f5.a.b(21, "Statement is recycled");
+                throw new gt.d();
+            }
+            if (this.threadId == y4.d.b()) {
+                this.delegate.h0(index, value);
+            } else {
+                f5.a.b(21, "Attempted to use statement on a different thread");
+                throw new gt.d();
+            }
+        }
+
+        @Override // f5.d
+        public boolean i3() {
+            if (this.f37941c.isRecycled) {
+                f5.a.b(21, "Statement is recycled");
+                throw new gt.d();
+            }
+            if (this.threadId == y4.d.b()) {
+                return this.delegate.i3();
+            }
+            f5.a.b(21, "Attempted to use statement on a different thread");
+            throw new gt.d();
         }
 
         @Override // f5.d
         public boolean isNull(int index) {
-            if (this.f37246c.isRecycled) {
+            if (this.f37941c.isRecycled) {
                 f5.a.b(21, "Statement is recycled");
-                throw new jt.d();
+                throw new gt.d();
             }
             if (this.threadId == y4.d.b()) {
                 return this.delegate.isNull(index);
             }
             f5.a.b(21, "Attempted to use statement on a different thread");
-            throw new jt.d();
-        }
-
-        @Override // f5.d
-        public void k0(int index, @NotNull String value) {
-            Intrinsics.checkNotNullParameter(value, "value");
-            if (this.f37246c.isRecycled) {
-                f5.a.b(21, "Statement is recycled");
-                throw new jt.d();
-            }
-            if (this.threadId == y4.d.b()) {
-                this.delegate.k0(index, value);
-            } else {
-                f5.a.b(21, "Attempted to use statement on a different thread");
-                throw new jt.d();
-            }
+            throw new gt.d();
         }
 
         @Override // f5.d
         public void reset() {
-            if (this.f37246c.isRecycled) {
+            if (this.f37941c.isRecycled) {
                 f5.a.b(21, "Statement is recycled");
-                throw new jt.d();
+                throw new gt.d();
             }
             if (this.threadId == y4.d.b()) {
                 this.delegate.reset();
             } else {
                 f5.a.b(21, "Attempted to use statement on a different thread");
-                throw new jt.d();
+                throw new gt.d();
             }
         }
 
         @Override // f5.d
-        public void z(int index, long value) {
-            if (this.f37246c.isRecycled) {
+        public void y(int index, long value) {
+            if (this.f37941c.isRecycled) {
                 f5.a.b(21, "Statement is recycled");
-                throw new jt.d();
+                throw new gt.d();
+            }
+            if (this.threadId == y4.d.b()) {
+                this.delegate.y(index, value);
+            } else {
+                f5.a.b(21, "Attempted to use statement on a different thread");
+                throw new gt.d();
+            }
+        }
+
+        @Override // f5.d
+        public void z(int index, @NotNull byte[] value) {
+            Intrinsics.checkNotNullParameter(value, "value");
+            if (this.f37941c.isRecycled) {
+                f5.a.b(21, "Statement is recycled");
+                throw new gt.d();
             }
             if (this.threadId == y4.d.b()) {
                 this.delegate.z(index, value);
             } else {
                 f5.a.b(21, "Attempted to use statement on a different thread");
-                throw new jt.d();
+                throw new gt.d();
             }
         }
     }
 
-    @Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0082\u0004\u0018\u0000*\u0004\b\u0000\u0010\u00012\b\u0012\u0004\u0012\u00028\u00000\u00022\u00020\u0003B\u0007¢\u0006\u0004\b\u0004\u0010\u0005J2\u0010\f\u001a\u00028\u0001\"\u0004\b\u0001\u0010\u00062\u0006\u0010\b\u001a\u00020\u00072\u0012\u0010\u000b\u001a\u000e\u0012\u0004\u0012\u00020\n\u0012\u0004\u0012\u00028\u00010\tH\u0096@¢\u0006\u0004\b\f\u0010\rR\u0014\u0010\u0011\u001a\u00020\u000e8VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\u000f\u0010\u0010¨\u0006\u0012"}, d2 = {"Lz4/p$b;", "T", "Lx4/f0;", "Lz4/q;", "<init>", "(Lz4/p;)V", "R", "", "sql", "Lkotlin/Function1;", "Lf5/d;", "block", "a", "(Ljava/lang/String;Lkotlin/jvm/functions/Function1;Lnt/b;)Ljava/lang/Object;", "Lf5/b;", "d", "()Lf5/b;", "rawConnection", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0082\u0004\u0018\u0000*\u0004\b\u0000\u0010\u00012\b\u0012\u0004\u0012\u00028\u00000\u00022\u00020\u0003B\u0007¢\u0006\u0004\b\u0004\u0010\u0005J2\u0010\f\u001a\u00028\u0001\"\u0004\b\u0001\u0010\u00062\u0006\u0010\b\u001a\u00020\u00072\u0012\u0010\u000b\u001a\u000e\u0012\u0004\u0012\u00020\n\u0012\u0004\u0012\u00028\u00010\tH\u0096@¢\u0006\u0004\b\f\u0010\rR\u0014\u0010\u0011\u001a\u00020\u000e8VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\u000f\u0010\u0010¨\u0006\u0012"}, d2 = {"Lz4/p$b;", "T", "Lx4/f0;", "Lz4/q;", "<init>", "(Lz4/p;)V", "R", "", "sql", "Lkotlin/Function1;", "Lf5/d;", "block", "a", "(Ljava/lang/String;Lkotlin/jvm/functions/Function1;Llt/b;)Ljava/lang/Object;", "Lf5/b;", "c", "()Lf5/b;", "rawConnection", "room-runtime"}, k = 1, mv = {2, 1, 0}, xi = 48)
     public final class b<T> implements f0<T>, q {
         public b() {
         }
 
         @Override // x4.m
         @Nullable
-        public <R> Object a(@NotNull String str, @NotNull Function1<? super f5.d, ? extends R> function1, @NotNull nt.b<? super R> bVar) {
+        public <R> Object a(@NotNull String str, @NotNull Function1<? super f5.d, ? extends R> function1, @NotNull lt.b<? super R> bVar) {
             return p.this.a(str, function1, bVar);
         }
 
         @Override // z4.q
         @NotNull
-        /* JADX INFO: renamed from: d */
+        /* JADX INFO: renamed from: c */
         public f5.b getDelegate() {
             return p.this.getDelegate();
         }
@@ -297,7 +297,7 @@ public final class p implements g0, q {
     public static final /* synthetic */ class d {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f37249a;
+        public static final /* synthetic */ int[] f37944a;
 
         static {
             int[] iArr = new int[g0.a.values().length];
@@ -313,128 +313,128 @@ public final class p implements g0, q {
                 iArr[g0.a.EXCLUSIVE.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
-            f37249a = iArr;
+            f37944a = iArr;
         }
     }
 
-    @pt.f(c = "androidx.room.coroutines.PooledConnectionImpl", f = "ConnectionPoolImpl.kt", l = {629}, m = "beginTransaction")
+    @nt.f(c = "androidx.room.coroutines.PooledConnectionImpl", f = "ConnectionPoolImpl.kt", l = {629}, m = "beginTransaction")
     @Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
-    public static final class e extends pt.d {
+    public static final class e extends nt.d {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f37250t;
+        public Object f37945t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f37251u;
+        public Object f37946u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public /* synthetic */ Object f37252v;
+        public /* synthetic */ Object f37947v;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public int f37254x;
+        public int f37949x;
 
-        public e(nt.b<? super e> bVar) {
+        public e(lt.b<? super e> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
-            this.f37252v = obj;
-            this.f37254x |= Integer.MIN_VALUE;
+            this.f37947v = obj;
+            this.f37949x |= Integer.MIN_VALUE;
             return p.this.i(null, this);
         }
     }
 
-    @pt.f(c = "androidx.room.coroutines.PooledConnectionImpl", f = "ConnectionPoolImpl.kt", l = {629}, m = "endTransaction")
+    @nt.f(c = "androidx.room.coroutines.PooledConnectionImpl", f = "ConnectionPoolImpl.kt", l = {629}, m = "endTransaction")
     @Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
-    public static final class f extends pt.d {
+    public static final class f extends nt.d {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public boolean f37255t;
+        public boolean f37950t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f37256u;
+        public Object f37951u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public /* synthetic */ Object f37257v;
+        public /* synthetic */ Object f37952v;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public int f37259x;
+        public int f37954x;
 
-        public f(nt.b<? super f> bVar) {
+        public f(lt.b<? super f> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
-            this.f37257v = obj;
-            this.f37259x |= Integer.MIN_VALUE;
+            this.f37952v = obj;
+            this.f37954x |= Integer.MIN_VALUE;
             return p.this.j(false, this);
         }
     }
 
+    @nt.f(c = "androidx.room.coroutines.PooledConnectionImpl", f = "ConnectionPoolImpl.kt", l = {464, 468, 482, 482, 482}, m = "transaction")
     @Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
-    @pt.f(c = "androidx.room.coroutines.PooledConnectionImpl", f = "ConnectionPoolImpl.kt", l = {464, 468, 482, 482, 482}, m = "transaction")
-    public static final class g<R> extends pt.d {
+    public static final class g<R> extends nt.d {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f37260t;
+        public Object f37955t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f37261u;
+        public Object f37956u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public int f37262v;
+        public int f37957v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public /* synthetic */ Object f37263w;
+        public /* synthetic */ Object f37958w;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public int f37265y;
+        public int f37960y;
 
-        public g(nt.b<? super g> bVar) {
+        public g(lt.b<? super g> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
-            this.f37263w = obj;
-            this.f37265y |= Integer.MIN_VALUE;
+            this.f37958w = obj;
+            this.f37960y |= Integer.MIN_VALUE;
             return p.this.o(null, null, this);
         }
     }
 
+    @nt.f(c = "androidx.room.coroutines.PooledConnectionImpl", f = "ConnectionPoolImpl.kt", l = {640}, m = "usePrepared")
     @Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
-    @pt.f(c = "androidx.room.coroutines.PooledConnectionImpl", f = "ConnectionPoolImpl.kt", l = {640}, m = "usePrepared")
-    public static final class h<R> extends pt.d {
+    public static final class h<R> extends nt.d {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f37266t;
+        public Object f37961t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f37267u;
+        public Object f37962u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public Object f37268v;
+        public Object f37963v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public /* synthetic */ Object f37269w;
+        public /* synthetic */ Object f37964w;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public int f37271y;
+        public int f37966y;
 
-        public h(nt.b<? super h> bVar) {
+        public h(lt.b<? super h> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
-            this.f37269w = obj;
-            this.f37271y |= Integer.MIN_VALUE;
+            this.f37964w = obj;
+            this.f37966y |= Integer.MIN_VALUE;
             return p.this.a(null, null, this);
         }
     }
@@ -463,27 +463,27 @@ public final class p implements g0, q {
         Code decompiled incorrectly, please refer to instructions dump.
         To view partially-correct add '--show-bad-code' argument
     */
-    public final <R> java.lang.Object o(x4.g0.a r11, kotlin.jvm.functions.Function2<? super x4.f0<R>, ? super nt.b<? super R>, ? extends java.lang.Object> r12, nt.b<? super R> r13) throws java.lang.Throwable {
+    public final <R> java.lang.Object o(x4.g0.a r11, kotlin.jvm.functions.Function2<? super x4.f0<R>, ? super lt.b<? super R>, ? extends java.lang.Object> r12, lt.b<? super R> r13) throws java.lang.Throwable {
         /*
             r10 = this;
             boolean r0 = r13 instanceof z4.p.g
             if (r0 == 0) goto L13
             r0 = r13
             z4.p$g r0 = (z4.p.g) r0
-            int r1 = r0.f37265y
+            int r1 = r0.f37960y
             r2 = -2147483648(0xffffffff80000000, float:-0.0)
             r3 = r1 & r2
             if (r3 == 0) goto L13
             int r1 = r1 - r2
-            r0.f37265y = r1
+            r0.f37960y = r1
             goto L18
         L13:
             z4.p$g r0 = new z4.p$g
             r0.<init>(r13)
         L18:
-            java.lang.Object r13 = r0.f37263w
-            java.lang.Object r1 = ot.c.e()
-            int r2 = r0.f37265y
+            java.lang.Object r13 = r0.f37958w
+            java.lang.Object r1 = mt.c.e()
+            int r2 = r0.f37960y
             r3 = 5
             r4 = 4
             r5 = 3
@@ -502,48 +502,48 @@ public final class p implements g0, q {
             r11.<init>(r12)
             throw r11
         L3b:
-            java.lang.Object r11 = r0.f37261u
+            java.lang.Object r11 = r0.f37956u
             java.lang.Throwable r11 = (java.lang.Throwable) r11
-            java.lang.Object r12 = r0.f37260t
+            java.lang.Object r12 = r0.f37955t
             java.lang.Throwable r12 = (java.lang.Throwable) r12
-            jt.o.b(r13)     // Catch: android.database.SQLException -> L48
+            gt.o.b(r13)     // Catch: android.database.SQLException -> L48
             goto Lc6
         L48:
             r13 = move-exception
             goto Lc1
         L4b:
-            java.lang.Object r11 = r0.f37260t
-            jt.o.b(r13)
+            java.lang.Object r11 = r0.f37955t
+            gt.o.b(r13)
             return r11
         L51:
-            int r11 = r0.f37262v
-            jt.o.b(r13)     // Catch: java.lang.Throwable -> L57
+            int r11 = r0.f37957v
+            gt.o.b(r13)     // Catch: java.lang.Throwable -> L57
             goto L87
         L57:
             r11 = move-exception
             goto L96
         L59:
-            java.lang.Object r11 = r0.f37260t
+            java.lang.Object r11 = r0.f37955t
             r12 = r11
             kotlin.jvm.functions.Function2 r12 = (kotlin.jvm.functions.Function2) r12
-            jt.o.b(r13)
+            gt.o.b(r13)
             goto L74
         L62:
-            jt.o.b(r13)
+            gt.o.b(r13)
             if (r11 != 0) goto L69
             x4.g0$a r11 = x4.g0.a.DEFERRED
         L69:
-            r0.f37260t = r12
-            r0.f37265y = r8
+            r0.f37955t = r12
+            r0.f37960y = r8
             java.lang.Object r11 = r10.i(r11, r0)
             if (r11 != r1) goto L74
             goto Lbe
         L74:
             z4.p$b r11 = new z4.p$b     // Catch: java.lang.Throwable -> L57
             r11.<init>()     // Catch: java.lang.Throwable -> L57
-            r0.f37260t = r9     // Catch: java.lang.Throwable -> L57
-            r0.f37262v = r8     // Catch: java.lang.Throwable -> L57
-            r0.f37265y = r6     // Catch: java.lang.Throwable -> L57
+            r0.f37955t = r9     // Catch: java.lang.Throwable -> L57
+            r0.f37957v = r8     // Catch: java.lang.Throwable -> L57
+            r0.f37960y = r6     // Catch: java.lang.Throwable -> L57
             java.lang.Object r13 = r12.invoke(r11, r0)     // Catch: java.lang.Throwable -> L57
             if (r13 != r1) goto L86
             goto Lbe
@@ -553,8 +553,8 @@ public final class p implements g0, q {
             if (r11 == 0) goto L8a
             r7 = r8
         L8a:
-            r0.f37260t = r13
-            r0.f37265y = r5
+            r0.f37955t = r13
+            r0.f37960y = r5
             java.lang.Object r11 = r10.j(r7, r0)
             if (r11 != r1) goto L95
             goto Lbe
@@ -565,8 +565,8 @@ public final class p implements g0, q {
             if (r12 == 0) goto Lae
             z4.c$a r11 = (z4.c.a) r11     // Catch: java.lang.Throwable -> Lac
             java.lang.Object r11 = r11.a()     // Catch: java.lang.Throwable -> Lac
-            r0.f37260t = r11
-            r0.f37265y = r4
+            r0.f37955t = r11
+            r0.f37960y = r4
             java.lang.Object r12 = r10.j(r7, r0)
             if (r12 != r1) goto Lab
             goto Lbe
@@ -582,9 +582,9 @@ public final class p implements g0, q {
             r9 = r11
             r11 = r12
         Lb2:
-            r0.f37260t = r9     // Catch: android.database.SQLException -> Lbf
-            r0.f37261u = r11     // Catch: android.database.SQLException -> Lbf
-            r0.f37265y = r3     // Catch: android.database.SQLException -> Lbf
+            r0.f37955t = r9     // Catch: android.database.SQLException -> Lbf
+            r0.f37956u = r11     // Catch: android.database.SQLException -> Lbf
+            r0.f37960y = r3     // Catch: android.database.SQLException -> Lbf
             java.lang.Object r12 = r10.j(r7, r0)     // Catch: android.database.SQLException -> Lbf
             if (r12 != r1) goto Lc6
         Lbe:
@@ -594,62 +594,62 @@ public final class p implements g0, q {
             r12 = r9
         Lc1:
             if (r12 == 0) goto Lc7
-            jt.a.a(r12, r13)
+            gt.a.a(r12, r13)
         Lc6:
             throw r11
         Lc7:
             throw r13
         */
-        throw new UnsupportedOperationException("Method not decompiled: z4.p.o(x4.g0$a, kotlin.jvm.functions.Function2, nt.b):java.lang.Object");
+        throw new UnsupportedOperationException("Method not decompiled: z4.p.o(x4.g0$a, kotlin.jvm.functions.Function2, lt.b):java.lang.Object");
     }
 
     /* JADX WARN: Code duplicated, block: B:7:0x0013  */
     @Override // x4.m
     @Nullable
-    public <R> Object a(@NotNull String str, @NotNull Function1<? super f5.d, ? extends R> function1, @NotNull nt.b<? super R> bVar) {
+    public <R> Object a(@NotNull String str, @NotNull Function1<? super f5.d, ? extends R> function1, @NotNull lt.b<? super R> bVar) {
         h hVar;
-        uu.a aVar;
+        su.a aVar;
         if (bVar instanceof h) {
             hVar = (h) bVar;
-            int i10 = hVar.f37271y;
+            int i10 = hVar.f37966y;
             if ((i10 & Integer.MIN_VALUE) != 0) {
-                hVar.f37271y = i10 - Integer.MIN_VALUE;
+                hVar.f37966y = i10 - Integer.MIN_VALUE;
             } else {
                 hVar = new h(bVar);
             }
         } else {
             hVar = new h(bVar);
         }
-        Object obj = hVar.f37269w;
-        Object objE = ot.c.e();
-        int i11 = hVar.f37271y;
+        Object obj = hVar.f37964w;
+        Object objE = mt.c.e();
+        int i11 = hVar.f37966y;
         if (i11 == 0) {
-            jt.o.b(obj);
+            gt.o.b(obj);
             if (this.isRecycled) {
                 f5.a.b(21, "Connection is recycled");
-                throw new jt.d();
+                throw new gt.d();
             }
             z4.a aVar2 = (z4.a) hVar.getContext().get(getConnectionElementKey());
             if (aVar2 == null || aVar2.getConnectionWrapper() != this) {
                 f5.a.b(21, "Attempted to use connection on a different coroutine");
-                throw new jt.d();
+                throw new gt.d();
             }
             aVar = this.delegate;
-            hVar.f37266t = str;
-            hVar.f37267u = function1;
-            hVar.f37268v = aVar;
-            hVar.f37271y = 1;
-            if (aVar.f(null, hVar) == objE) {
+            hVar.f37961t = str;
+            hVar.f37962u = function1;
+            hVar.f37963v = aVar;
+            hVar.f37966y = 1;
+            if (aVar.b(null, hVar) == objE) {
                 return objE;
             }
         } else {
             if (i11 != 1) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            uu.a aVar3 = (uu.a) hVar.f37268v;
-            function1 = (Function1) hVar.f37267u;
-            String str2 = (String) hVar.f37266t;
-            jt.o.b(obj);
+            su.a aVar3 = (su.a) hVar.f37963v;
+            function1 = (Function1) hVar.f37962u;
+            String str2 = (String) hVar.f37961t;
+            gt.o.b(obj);
             aVar = aVar3;
             str = str2;
         }
@@ -657,108 +657,108 @@ public final class p implements g0, q {
             a aVar4 = new a(this, this.delegate.r3(str));
             try {
                 R rInvoke = function1.invoke(aVar4);
-                xt.a.a(aVar4, null);
-                aVar.e(null);
+                vt.a.a(aVar4, null);
+                aVar.f(null);
                 return rInvoke;
             } catch (Throwable th2) {
                 try {
                     throw th2;
                 } catch (Throwable th3) {
-                    xt.a.a(aVar4, th2);
+                    vt.a.a(aVar4, th2);
                     throw th3;
                 }
             }
         } catch (Throwable th4) {
-            aVar.e(null);
+            aVar.f(null);
             throw th4;
         }
     }
 
     @Override // x4.g0
     @Nullable
-    public Object b(@NotNull nt.b<? super Boolean> bVar) {
+    public Object b(@NotNull lt.b<? super Boolean> bVar) {
         if (this.isRecycled) {
             f5.a.b(21, "Connection is recycled");
-            throw new jt.d();
+            throw new gt.d();
         }
         z4.a aVar = (z4.a) bVar.getContext().get(getConnectionElementKey());
         if (aVar != null && aVar.getConnectionWrapper() == this) {
-            return pt.b.a(!this.transactionStack.isEmpty() || this.delegate.D());
+            return nt.b.a(!this.transactionStack.isEmpty() || this.delegate.D());
         }
         f5.a.b(21, "Attempted to use connection on a different coroutine");
-        throw new jt.d();
+        throw new gt.d();
+    }
+
+    @Override // z4.q
+    @NotNull
+    /* JADX INFO: renamed from: c */
+    public f5.b getDelegate() {
+        return this.delegate;
     }
 
     @Override // x4.g0
     @Nullable
-    public <R> Object c(@NotNull g0.a aVar, @NotNull Function2<? super f0<R>, ? super nt.b<? super R>, ? extends Object> function2, @NotNull nt.b<? super R> bVar) {
+    public <R> Object d(@NotNull g0.a aVar, @NotNull Function2<? super f0<R>, ? super lt.b<? super R>, ? extends Object> function2, @NotNull lt.b<? super R> bVar) {
         if (this.isRecycled) {
             f5.a.b(21, "Connection is recycled");
-            throw new jt.d();
+            throw new gt.d();
         }
         z4.a aVar2 = (z4.a) bVar.getContext().get(getConnectionElementKey());
         if (aVar2 != null && aVar2.getConnectionWrapper() == this) {
             return o(aVar, function2, bVar);
         }
         f5.a.b(21, "Attempted to use connection on a different coroutine");
-        throw new jt.d();
-    }
-
-    @Override // z4.q
-    @NotNull
-    /* JADX INFO: renamed from: d */
-    public f5.b getDelegate() {
-        return this.delegate;
+        throw new gt.d();
     }
 
     /* JADX WARN: Code duplicated, block: B:7:0x0013  */
-    public final Object i(g0.a aVar, nt.b<? super Unit> bVar) {
+    public final Object i(g0.a aVar, lt.b<? super Unit> bVar) {
         e eVar;
-        uu.a aVar2;
+        su.a aVar2;
         if (bVar instanceof e) {
             eVar = (e) bVar;
-            int i10 = eVar.f37254x;
+            int i10 = eVar.f37949x;
             if ((i10 & Integer.MIN_VALUE) != 0) {
-                eVar.f37254x = i10 - Integer.MIN_VALUE;
+                eVar.f37949x = i10 - Integer.MIN_VALUE;
             } else {
                 eVar = new e(bVar);
             }
         } else {
             eVar = new e(bVar);
         }
-        Object obj = eVar.f37252v;
-        Object objE = ot.c.e();
-        int i11 = eVar.f37254x;
+        Object obj = eVar.f37947v;
+        Object objE = mt.c.e();
+        int i11 = eVar.f37949x;
         if (i11 == 0) {
-            jt.o.b(obj);
+            gt.o.b(obj);
             aVar2 = this.delegate;
-            eVar.f37250t = aVar;
-            eVar.f37251u = aVar2;
-            eVar.f37254x = 1;
-            if (aVar2.f(null, eVar) == objE) {
+            eVar.f37945t = aVar;
+            eVar.f37946u = aVar2;
+            eVar.f37949x = 1;
+            if (aVar2.b(null, eVar) == objE) {
                 return objE;
             }
         } else {
             if (i11 != 1) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            uu.a aVar3 = (uu.a) eVar.f37251u;
-            g0.a aVar4 = (g0.a) eVar.f37250t;
-            jt.o.b(obj);
+            su.a aVar3 = (su.a) eVar.f37946u;
+            g0.a aVar4 = (g0.a) eVar.f37945t;
+            gt.o.b(obj);
             aVar2 = aVar3;
             aVar = aVar4;
         }
         try {
             int size = this.transactionStack.size();
             if (this.transactionStack.isEmpty()) {
-                int i12 = d.f37249a[aVar.ordinal()];
+                int i12 = d.f37944a[aVar.ordinal()];
                 if (i12 == 1) {
                     f5.a.a(this.delegate, "BEGIN DEFERRED TRANSACTION");
                 } else if (i12 == 2) {
                     f5.a.a(this.delegate, "BEGIN IMMEDIATE TRANSACTION");
                 } else {
                     if (i12 != 3) {
-                        throw new jt.l();
+                        throw new gt.l();
                     }
                     f5.a.a(this.delegate, "BEGIN EXCLUSIVE TRANSACTION");
                 }
@@ -766,40 +766,40 @@ public final class p implements g0, q {
                 f5.a.a(this.delegate, "SAVEPOINT '" + size + '\'');
             }
             this.transactionStack.addLast(new c(size, false));
-            Unit unit = Unit.f22483a;
-            aVar2.e(null);
+            Unit unit = Unit.f22938a;
+            aVar2.f(null);
             return unit;
         } catch (Throwable th2) {
-            aVar2.e(null);
+            aVar2.f(null);
             throw th2;
         }
     }
 
     /* JADX WARN: Code duplicated, block: B:7:0x0013  */
-    public final Object j(boolean z10, nt.b<? super Unit> bVar) {
+    public final Object j(boolean z10, lt.b<? super Unit> bVar) {
         f fVar;
-        uu.a aVar;
+        su.a aVar;
         if (bVar instanceof f) {
             fVar = (f) bVar;
-            int i10 = fVar.f37259x;
+            int i10 = fVar.f37954x;
             if ((i10 & Integer.MIN_VALUE) != 0) {
-                fVar.f37259x = i10 - Integer.MIN_VALUE;
+                fVar.f37954x = i10 - Integer.MIN_VALUE;
             } else {
                 fVar = new f(bVar);
             }
         } else {
             fVar = new f(bVar);
         }
-        Object obj = fVar.f37257v;
-        Object objE = ot.c.e();
-        int i11 = fVar.f37259x;
+        Object obj = fVar.f37952v;
+        Object objE = mt.c.e();
+        int i11 = fVar.f37954x;
         if (i11 == 0) {
-            jt.o.b(obj);
+            gt.o.b(obj);
             j jVar = this.delegate;
-            fVar.f37256u = jVar;
-            fVar.f37255t = z10;
-            fVar.f37259x = 1;
-            if (jVar.f(null, fVar) == objE) {
+            fVar.f37951u = jVar;
+            fVar.f37950t = z10;
+            fVar.f37954x = 1;
+            if (jVar.b(null, fVar) == objE) {
                 return objE;
             }
             aVar = jVar;
@@ -807,9 +807,9 @@ public final class p implements g0, q {
             if (i11 != 1) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            z10 = fVar.f37255t;
-            aVar = (uu.a) fVar.f37256u;
-            jt.o.b(obj);
+            z10 = fVar.f37950t;
+            aVar = (su.a) fVar.f37951u;
+            gt.o.b(obj);
         }
         try {
             if (this.transactionStack.isEmpty()) {
@@ -827,11 +827,11 @@ public final class p implements g0, q {
             } else {
                 f5.a.a(this.delegate, "RELEASE SAVEPOINT '" + cVar.getId() + '\'');
             }
-            Unit unit = Unit.f22483a;
-            aVar.e(null);
+            Unit unit = Unit.f22938a;
+            aVar.f(null);
             return unit;
         } catch (Throwable th2) {
-            aVar.e(null);
+            aVar.f(null);
             throw th2;
         }
     }

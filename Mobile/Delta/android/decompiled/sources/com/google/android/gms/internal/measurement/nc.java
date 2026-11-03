@@ -6,5 +6,5 @@ public interface nc extends Cloneable, pc {
 
     oc M();
 
-    nc m(byte[] bArr);
+    nc u(byte[] bArr);
 }

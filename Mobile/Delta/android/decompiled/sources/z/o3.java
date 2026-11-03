@@ -12,20 +12,20 @@ import java.util.concurrent.Executor;
 public class o3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Executor f36738a;
+    public final Executor f37433a;
     public final Object b = new Object();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Set<h5> f36739c = new LinkedHashSet();
+    public final Set<h5> f37434c = new LinkedHashSet();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Set<h5> f36740d = new LinkedHashSet();
+    public final Set<h5> f37435d = new LinkedHashSet();
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Set<h5> f36741e = new LinkedHashSet();
+    public final Set<h5> f37436e = new LinkedHashSet();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final CameraDevice.StateCallback f36742f = new a();
+    public final CameraDevice.StateCallback f37437f = new a();
 
     public class a extends CameraDevice.StateCallback {
         public a() {
@@ -42,9 +42,9 @@ public class o3 {
             List<h5> listF;
             synchronized (o3.this.b) {
                 listF = o3.this.f();
-                o3.this.f36741e.clear();
-                o3.this.f36739c.clear();
-                o3.this.f36740d.clear();
+                o3.this.f37436e.clear();
+                o3.this.f37434c.clear();
+                o3.this.f37435d.clear();
             }
             Iterator<h5> it = listF.iterator();
             while (it.hasNext()) {
@@ -55,10 +55,10 @@ public class o3 {
         public final void d(final int i10) {
             final LinkedHashSet linkedHashSet = new LinkedHashSet();
             synchronized (o3.this.b) {
-                linkedHashSet.addAll(o3.this.f36741e);
-                linkedHashSet.addAll(o3.this.f36739c);
+                linkedHashSet.addAll(o3.this.f37436e);
+                linkedHashSet.addAll(o3.this.f37434c);
             }
-            o3.this.f36738a.execute(new Runnable() { // from class: z.n3
+            o3.this.f37433a.execute(new Runnable() { // from class: z.n3
                 @Override // java.lang.Runnable
                 public final void run() {
                     o3.a.a(linkedHashSet, i10);
@@ -69,10 +69,10 @@ public class o3 {
         public final void e() {
             final LinkedHashSet linkedHashSet = new LinkedHashSet();
             synchronized (o3.this.b) {
-                linkedHashSet.addAll(o3.this.f36741e);
-                linkedHashSet.addAll(o3.this.f36739c);
+                linkedHashSet.addAll(o3.this.f37436e);
+                linkedHashSet.addAll(o3.this.f37434c);
             }
-            o3.this.f36738a.execute(new Runnable() { // from class: z.m3
+            o3.this.f37433a.execute(new Runnable() { // from class: z.m3
                 @Override // java.lang.Runnable
                 public final void run() {
                     o3.b(linkedHashSet);
@@ -105,7 +105,7 @@ public class o3 {
     }
 
     public o3(Executor executor) {
-        this.f36738a = executor;
+        this.f37433a = executor;
     }
 
     public static void b(Set<h5> set) {
@@ -123,13 +123,13 @@ public class o3 {
     }
 
     public CameraDevice.StateCallback c() {
-        return this.f36742f;
+        return this.f37437f;
     }
 
     public List<h5> d() {
         ArrayList arrayList;
         synchronized (this.b) {
-            arrayList = new ArrayList(this.f36739c);
+            arrayList = new ArrayList(this.f37434c);
         }
         return arrayList;
     }
@@ -137,7 +137,7 @@ public class o3 {
     public List<h5> e() {
         ArrayList arrayList;
         synchronized (this.b) {
-            arrayList = new ArrayList(this.f36741e);
+            arrayList = new ArrayList(this.f37436e);
         }
         return arrayList;
     }
@@ -154,35 +154,35 @@ public class o3 {
 
     public void g(h5 h5Var) {
         synchronized (this.b) {
-            this.f36739c.remove(h5Var);
-            this.f36740d.remove(h5Var);
+            this.f37434c.remove(h5Var);
+            this.f37435d.remove(h5Var);
         }
     }
 
     public void h(h5 h5Var) {
         synchronized (this.b) {
-            this.f36740d.add(h5Var);
+            this.f37435d.add(h5Var);
         }
     }
 
     public void i(h5 h5Var) {
         a(h5Var);
         synchronized (this.b) {
-            this.f36741e.remove(h5Var);
+            this.f37436e.remove(h5Var);
         }
     }
 
     public void j(h5 h5Var) {
         synchronized (this.b) {
-            this.f36739c.add(h5Var);
-            this.f36741e.remove(h5Var);
+            this.f37434c.add(h5Var);
+            this.f37436e.remove(h5Var);
         }
         a(h5Var);
     }
 
     public void k(h5 h5Var) {
         synchronized (this.b) {
-            this.f36741e.add(h5Var);
+            this.f37436e.add(h5Var);
         }
     }
 }

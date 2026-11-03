@@ -13,11 +13,11 @@ import n9.e;
 public final class b extends e {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Bundle f35159e;
+    public final Bundle f35657e;
 
     public b(Context context, Looper looper, n9.d dVar, y8.c cVar, l9.e eVar, n nVar) {
         super(context, looper, 16, dVar, eVar, nVar);
-        this.f35159e = cVar == null ? new Bundle() : cVar.a();
+        this.f35657e = cVar == null ? new Bundle() : cVar.a();
     }
 
     @Override // n9.c
@@ -31,7 +31,7 @@ public final class b extends e {
 
     @Override // n9.c
     public final Bundle getGetServiceRequestExtraArgs() {
-        return this.f35159e;
+        return this.f35657e;
     }
 
     @Override // n9.c, k9.a.f
@@ -52,7 +52,7 @@ public final class b extends e {
     @Override // n9.c, k9.a.f
     public final boolean requiresSignIn() {
         n9.d dVarD = d();
-        return (TextUtils.isEmpty(dVarD.b()) || dVarD.e(y8.b.f35772a).isEmpty()) ? false : true;
+        return (TextUtils.isEmpty(dVarD.b()) || dVarD.e(y8.b.f36629a).isEmpty()) ? false : true;
     }
 
     @Override // n9.c

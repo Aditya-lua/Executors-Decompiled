@@ -12,24 +12,24 @@ import java.util.logging.Logger;
 public final class wa {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final wa f6866d = new wa(true);
+    public static final wa f6940d = new wa(true);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final hd f6867a = new dd();
+    public final hd f6941a = new dd();
     public boolean b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f6868c;
+    public boolean f6942c;
 
     public wa() {
     }
 
     public static wa a() {
-        return f6866d;
+        return f6940d;
     }
 
     public static void f(ma maVar, wd wdVar, int i10, Object obj) {
-        if (wdVar == wd.f6880l) {
+        if (wdVar == wd.f6954l) {
             oc ocVar = (oc) obj;
             qb.d(ocVar);
             maVar.i(i10, 3);
@@ -114,7 +114,7 @@ public final class wa {
 
     public static int h(wd wdVar, int i10, Object obj) {
         int iG = ma.G(i10 << 3);
-        if (wdVar == wd.f6880l) {
+        if (wdVar == wd.f6954l) {
             qb.d((oc) obj);
             iG += iG;
         }
@@ -124,7 +124,7 @@ public final class wa {
     public static int i(wd wdVar, Object obj) {
         int iD;
         int iG;
-        wd wdVar2 = wd.f6871c;
+        wd wdVar2 = wd.f6945c;
         xd xdVar = xd.INT;
         switch (wdVar.ordinal()) {
             case 0:
@@ -296,9 +296,9 @@ public final class wa {
     public static final void n(va vaVar, Object obj) {
         boolean z10;
         vaVar.zzb();
-        Charset charset = qb.f6750a;
+        Charset charset = qb.f6824a;
         obj.getClass();
-        wd wdVar = wd.f6871c;
+        wd wdVar = wd.f6945c;
         xd xdVar = xd.INT;
         switch (r0.a()) {
             case INT:
@@ -361,19 +361,19 @@ public final class wa {
         if (this.b) {
             return;
         }
-        hd hdVar = this.f6867a;
+        hd hdVar = this.f6941a;
         int iC = hdVar.c();
         for (int i10 = 0; i10 < iC; i10++) {
             Object value = hdVar.d(i10).getValue();
             if (value instanceof gb) {
-                ((gb) value).p();
+                ((gb) value).o();
             }
         }
         Iterator it = hdVar.e().iterator();
         while (it.hasNext()) {
             Object value2 = ((Map.Entry) it.next()).getValue();
             if (value2 instanceof gb) {
-                ((gb) value2).p();
+                ((gb) value2).o();
             }
         }
         hdVar.a();
@@ -381,16 +381,16 @@ public final class wa {
     }
 
     public final Iterator c() {
-        hd hdVar = this.f6867a;
+        hd hdVar = this.f6941a;
         if (hdVar.isEmpty()) {
             return Collections.emptyIterator();
         }
-        return this.f6868c ? new vb(hdVar.entrySet().iterator()) : hdVar.entrySet().iterator();
+        return this.f6942c ? new vb(hdVar.entrySet().iterator()) : hdVar.entrySet().iterator();
     }
 
     public final /* bridge */ /* synthetic */ Object clone() {
         wa waVar = new wa();
-        hd hdVar = this.f6867a;
+        hd hdVar = this.f6941a;
         int iC = hdVar.c();
         for (int i10 = 0; i10 < iC; i10++) {
             Map.Entry entryD = hdVar.d(i10);
@@ -399,7 +399,7 @@ public final class wa {
         for (Map.Entry entry : hdVar.e()) {
             waVar.d((va) entry.getKey(), entry.getValue());
         }
-        waVar.f6868c = this.f6868c;
+        waVar.f6942c = this.f6942c;
         return waVar;
     }
 
@@ -421,13 +421,13 @@ public final class wa {
             obj = arrayList;
         }
         if (obj instanceof wb) {
-            this.f6868c = true;
+            this.f6942c = true;
         }
-        this.f6867a.put(vaVar, obj);
+        this.f6941a.put(vaVar, obj);
     }
 
     public final boolean e() {
-        hd hdVar = this.f6867a;
+        hd hdVar = this.f6941a;
         int iC = hdVar.c();
         for (int i10 = 0; i10 < iC; i10++) {
             if (!k(hdVar.d(i10))) {
@@ -448,13 +448,13 @@ public final class wa {
             return true;
         }
         if (obj instanceof wa) {
-            return this.f6867a.equals(((wa) obj).f6867a);
+            return this.f6941a.equals(((wa) obj).f6941a);
         }
         return false;
     }
 
     public final int g() {
-        hd hdVar = this.f6867a;
+        hd hdVar = this.f6941a;
         int iC = hdVar.c();
         int iM = 0;
         for (int i10 = 0; i10 < iC; i10++) {
@@ -468,7 +468,7 @@ public final class wa {
     }
 
     public final int hashCode() {
-        return this.f6867a.hashCode();
+        return this.f6941a.hashCode();
     }
 
     public wa(boolean z10) {

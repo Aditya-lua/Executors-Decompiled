@@ -8,10 +8,10 @@ import java.util.Objects;
 public final class h {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final m f16533a;
+    public final m f17129a;
 
     public h(m mVar) {
-        this.f16533a = mVar;
+        this.f17129a = mVar;
     }
 
     public static h a(Application application) {
@@ -20,7 +20,7 @@ public final class h {
 
     public final Task b(final g gVar) {
         Objects.requireNonNull(gVar);
-        return this.f16533a.a(new l() { // from class: fb.f
+        return this.f17129a.a(new l() { // from class: fb.f
             @Override // fb.l
             public final /* synthetic */ Task a(k9.e eVar) {
                 return gVar.a(eVar);

@@ -61,7 +61,7 @@ public final class AFd1ySDK {
                 Intrinsics.checkNotNull(intOrNull5);
                 int iIntValue4 = iIntValue3 + (intOrNull5.intValue() * 1000);
                 Intrinsics.checkNotNull(num);
-                pairA = jt.s.a(numValueOf, Integer.valueOf(iIntValue4 + num.intValue()));
+                pairA = gt.s.a(numValueOf, Integer.valueOf(iIntValue4 + num.intValue()));
             }
         }
         Intrinsics.checkNotNullParameter(str2, "");
@@ -74,9 +74,9 @@ public final class AFd1ySDK {
             MatchGroup matchGroup9 = matchResultE2.getGroups().get(4);
             Integer intOrNull9 = (matchGroup9 == null || (value = matchGroup9.getValue()) == null) ? null : StringsKt.toIntOrNull(value);
             if (intOrNull7 != null) {
-                pairA2 = jt.s.a(Integer.valueOf(intOrNull7.intValue() * 1000000), Integer.valueOf(((intOrNull7.intValue() + 1) * 1000000) - 1));
+                pairA2 = gt.s.a(Integer.valueOf(intOrNull7.intValue() * 1000000), Integer.valueOf(((intOrNull7.intValue() + 1) * 1000000) - 1));
             } else if (intOrNull8 != null && intOrNull9 != null) {
-                pairA2 = jt.s.a(Integer.valueOf((intOrNull8.intValue() * 1000000) + (intOrNull9.intValue() * 1000)), Integer.valueOf(((intOrNull8.intValue() * 1000000) + ((intOrNull9.intValue() + 1) * 1000)) - 1));
+                pairA2 = gt.s.a(Integer.valueOf((intOrNull8.intValue() * 1000000) + (intOrNull9.intValue() * 1000)), Integer.valueOf(((intOrNull8.intValue() * 1000000) + ((intOrNull9.intValue() + 1) * 1000)) - 1));
             }
         }
         if (iAFKeystoreWrapper2 != -1 && pairA == null) {

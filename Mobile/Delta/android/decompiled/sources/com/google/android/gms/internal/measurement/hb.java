@@ -10,27 +10,27 @@ import java.util.RandomAccess;
 public final class hb extends t9 implements RandomAccess, nb, vc {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final int[] f6471d;
+    public static final int[] f6544d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final hb f6472e;
+    public static final hb f6545e;
     public int[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f6473c;
+    public int f6546c;
 
     static {
         int[] iArr = new int[0];
-        f6471d = iArr;
-        f6472e = new hb(iArr, 0, false);
+        f6544d = iArr;
+        f6545e = new hb(iArr, 0, false);
     }
 
     public hb() {
-        this(f6471d, 0, true);
+        this(f6544d, 0, true);
     }
 
     public static hb b() {
-        return f6472e;
+        return f6545e;
     }
 
     public static int e(int i10) {
@@ -40,8 +40,8 @@ public final class hb extends t9 implements RandomAccess, nb, vc {
     @Override // com.google.android.gms.internal.measurement.pb
     /* JADX INFO: renamed from: U, reason: merged with bridge method [inline-methods] */
     public final nb v(int i10) {
-        if (i10 >= this.f6473c) {
-            return new hb(i10 == 0 ? f6471d : Arrays.copyOf(this.b, i10), this.f6473c, true);
+        if (i10 >= this.f6546c) {
+            return new hb(i10 == 0 ? f6544d : Arrays.copyOf(this.b, i10), this.f6546c, true);
         }
         throw new IllegalArgumentException();
     }
@@ -51,7 +51,7 @@ public final class hb extends t9 implements RandomAccess, nb, vc {
         int i11;
         int iIntValue = ((Integer) obj).intValue();
         a();
-        if (i10 < 0 || i10 > (i11 = this.f6473c)) {
+        if (i10 < 0 || i10 > (i11 = this.f6546c)) {
             throw new IndexOutOfBoundsException(g(i10));
         }
         int i12 = i10 + 1;
@@ -62,28 +62,28 @@ public final class hb extends t9 implements RandomAccess, nb, vc {
         } else {
             int[] iArr2 = new int[e(length)];
             System.arraycopy(this.b, 0, iArr2, 0, i10);
-            System.arraycopy(this.b, i10, iArr2, i12, this.f6473c - i10);
+            System.arraycopy(this.b, i10, iArr2, i12, this.f6546c - i10);
             this.b = iArr2;
         }
         this.b[i10] = iIntValue;
-        this.f6473c++;
+        this.f6546c++;
         ((AbstractList) this).modCount++;
     }
 
     @Override // com.google.android.gms.internal.measurement.t9, java.util.AbstractCollection, java.util.Collection, java.util.List
     public final boolean addAll(Collection collection) {
         a();
-        Charset charset = qb.f6750a;
+        Charset charset = qb.f6824a;
         collection.getClass();
         if (!(collection instanceof hb)) {
             return super.addAll(collection);
         }
         hb hbVar = (hb) collection;
-        int i10 = hbVar.f6473c;
+        int i10 = hbVar.f6546c;
         if (i10 == 0) {
             return false;
         }
-        int i11 = this.f6473c;
+        int i11 = this.f6546c;
         if (Integer.MAX_VALUE - i11 < i10) {
             throw new OutOfMemoryError();
         }
@@ -92,8 +92,8 @@ public final class hb extends t9 implements RandomAccess, nb, vc {
         if (i12 > iArr.length) {
             this.b = Arrays.copyOf(iArr, i12);
         }
-        System.arraycopy(hbVar.b, 0, this.b, this.f6473c, hbVar.f6473c);
-        this.f6473c = i12;
+        System.arraycopy(hbVar.b, 0, this.b, this.f6546c, hbVar.f6546c);
+        this.f6546c = i12;
         ((AbstractList) this).modCount++;
         return true;
     }
@@ -132,11 +132,11 @@ public final class hb extends t9 implements RandomAccess, nb, vc {
             return super.equals(obj);
         }
         hb hbVar = (hb) obj;
-        if (this.f6473c != hbVar.f6473c) {
+        if (this.f6546c != hbVar.f6546c) {
             return false;
         }
         int[] iArr = hbVar.b;
-        for (int i10 = 0; i10 < this.f6473c; i10++) {
+        for (int i10 = 0; i10 < this.f6546c; i10++) {
             if (this.b[i10] != iArr[i10]) {
                 return false;
             }
@@ -145,13 +145,13 @@ public final class hb extends t9 implements RandomAccess, nb, vc {
     }
 
     public final void f(int i10) {
-        if (i10 < 0 || i10 >= this.f6473c) {
+        if (i10 < 0 || i10 >= this.f6546c) {
             throw new IndexOutOfBoundsException(g(i10));
         }
     }
 
     public final String g(int i10) {
-        return v9.a(this.f6473c, i10, (byte) 13, "Index:", ", Size:");
+        return v9.a(this.f6546c, i10, (byte) 13, "Index:", ", Size:");
     }
 
     @Override // java.util.AbstractList, java.util.List
@@ -163,7 +163,7 @@ public final class hb extends t9 implements RandomAccess, nb, vc {
     @Override // com.google.android.gms.internal.measurement.t9, java.util.AbstractList, java.util.Collection, java.util.List
     public final int hashCode() {
         int i10 = 1;
-        for (int i11 = 0; i11 < this.f6473c; i11++) {
+        for (int i11 = 0; i11 < this.f6546c; i11++) {
             i10 = (i10 * 31) + this.b[i11];
         }
         return i10;
@@ -175,7 +175,7 @@ public final class hb extends t9 implements RandomAccess, nb, vc {
             return -1;
         }
         int iIntValue = ((Integer) obj).intValue();
-        int i10 = this.f6473c;
+        int i10 = this.f6546c;
         for (int i11 = 0; i11 < i10; i11++) {
             if (this.b[i11] == iIntValue) {
                 return i11;
@@ -190,11 +190,11 @@ public final class hb extends t9 implements RandomAccess, nb, vc {
         f(i10);
         int[] iArr = this.b;
         int i11 = iArr[i10];
-        int i12 = this.f6473c;
+        int i12 = this.f6546c;
         if (i10 < i12 - 1) {
             System.arraycopy(iArr, i10 + 1, iArr, i10, (i12 - i10) - 1);
         }
-        this.f6473c--;
+        this.f6546c--;
         ((AbstractList) this).modCount++;
         return Integer.valueOf(i11);
     }
@@ -206,8 +206,8 @@ public final class hb extends t9 implements RandomAccess, nb, vc {
             throw new IndexOutOfBoundsException("toIndex < fromIndex");
         }
         int[] iArr = this.b;
-        System.arraycopy(iArr, i11, iArr, i10, this.f6473c - i11);
-        this.f6473c -= i11 - i10;
+        System.arraycopy(iArr, i11, iArr, i10, this.f6546c - i11);
+        this.f6546c -= i11 - i10;
         ((AbstractList) this).modCount++;
     }
 
@@ -224,28 +224,28 @@ public final class hb extends t9 implements RandomAccess, nb, vc {
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final int size() {
-        return this.f6473c;
+        return this.f6546c;
     }
 
     public final void w(int i10) {
         a();
-        int i11 = this.f6473c;
+        int i11 = this.f6546c;
         int length = this.b.length;
         if (i11 == length) {
             int[] iArr = new int[e(length)];
-            System.arraycopy(this.b, 0, iArr, 0, this.f6473c);
+            System.arraycopy(this.b, 0, iArr, 0, this.f6546c);
             this.b = iArr;
         }
         int[] iArr2 = this.b;
-        int i12 = this.f6473c;
-        this.f6473c = i12 + 1;
+        int i12 = this.f6546c;
+        this.f6546c = i12 + 1;
         iArr2[i12] = i10;
     }
 
     public hb(int[] iArr, int i10, boolean z10) {
         super(z10);
         this.b = iArr;
-        this.f6473c = i10;
+        this.f6546c = i10;
     }
 
     @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection, java.util.List

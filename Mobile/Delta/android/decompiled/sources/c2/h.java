@@ -14,45 +14,45 @@ public class h extends e {
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f4474a;
+        public static final /* synthetic */ int[] f4640a;
 
         static {
             int[] iArr = new int[d.a.values().length];
-            f4474a = iArr;
+            f4640a = iArr;
             try {
                 iArr[d.a.LEFT.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f4474a[d.a.RIGHT.ordinal()] = 2;
+                f4640a[d.a.RIGHT.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f4474a[d.a.TOP.ordinal()] = 3;
+                f4640a[d.a.TOP.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
             try {
-                f4474a[d.a.BOTTOM.ordinal()] = 4;
+                f4640a[d.a.BOTTOM.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
             try {
-                f4474a[d.a.BASELINE.ordinal()] = 5;
+                f4640a[d.a.BASELINE.ordinal()] = 5;
             } catch (NoSuchFieldError unused5) {
             }
             try {
-                f4474a[d.a.CENTER.ordinal()] = 6;
+                f4640a[d.a.CENTER.ordinal()] = 6;
             } catch (NoSuchFieldError unused6) {
             }
             try {
-                f4474a[d.a.CENTER_X.ordinal()] = 7;
+                f4640a[d.a.CENTER_X.ordinal()] = 7;
             } catch (NoSuchFieldError unused7) {
             }
             try {
-                f4474a[d.a.CENTER_Y.ordinal()] = 8;
+                f4640a[d.a.CENTER_Y.ordinal()] = 8;
             } catch (NoSuchFieldError unused8) {
             }
             try {
-                f4474a[d.a.NONE.ordinal()] = 9;
+                f4640a[d.a.NONE.ordinal()] = 9;
             } catch (NoSuchFieldError unused9) {
             }
         }
@@ -101,12 +101,12 @@ public class h extends e {
         }
         d dVarO = fVar.o(d.a.LEFT);
         d dVarO2 = fVar.o(d.a.RIGHT);
-        e eVar = this.f4361a0;
+        e eVar = this.f4527a0;
         boolean z11 = eVar != null && eVar.Z[0] == e.b.WRAP_CONTENT;
         if (this.Q0 == 0) {
             dVarO = fVar.o(d.a.TOP);
             dVarO2 = fVar.o(d.a.BOTTOM);
-            e eVar2 = this.f4361a0;
+            e eVar2 = this.f4527a0;
             z11 = eVar2 != null && eVar2.Z[1] == e.b.WRAP_CONTENT;
         }
         if (this.S0 && this.P0.n()) {
@@ -161,7 +161,7 @@ public class h extends e {
 
     @Override // c2.e
     public d o(d.a aVar) {
-        int i10 = a.f4474a[aVar.ordinal()];
+        int i10 = a.f4640a[aVar.ordinal()];
         if (i10 == 1 || i10 == 2) {
             if (this.Q0 == 1) {
                 return this.P0;

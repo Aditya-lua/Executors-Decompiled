@@ -1,9 +1,9 @@
 package com.withpersona.sdk2.inquiry.governmentid;
 
-import an.q;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
+import cn.AlertContainerScreen;
 import com.google.mlkit.vision.barcode.common.Barcode;
 import com.withpersona.sdk2.camera.CameraProperties;
 import com.withpersona.sdk2.inquiry.governmentid.GovernmentIdWorkflow;
@@ -27,13 +27,14 @@ import com.withpersona.sdk2.inquiry.tracking.model.GovIdCaptureButtonType;
 import com.withpersona.sdk2.inquiry.tracking.model.GovIdCaptureState;
 import com.withpersona.sdk2.inquiry.tracking.model.GovernmentIdButtonEventData;
 import com.withpersona.sdk2.inquiry.tracking.model.GovernmentIdStateEventData;
-import en.AlertContainerScreen;
-import io.p2;
+import go.p2;
+import iu.p0;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import jo.t0;
 import k6.s;
 import kotlin.Metadata;
 import kotlin.Unit;
@@ -44,20 +45,19 @@ import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.d0;
-import ku.p0;
-import lo.t0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import uo.v;
-import uo.x;
-import ym.Snapshot;
-import ym.r;
-import ym.w;
-import ym.z;
+import so.v;
+import so.x;
+import wm.Snapshot;
+import wm.r;
+import wm.w;
+import wm.z;
+import ym.q;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000Ì\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\"\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u00002\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u00012\u00020\u0005:\u0002zVBy\b\u0007\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b\u0012\u0006\u0010\u000b\u001a\u00020\n\u0012\u0006\u0010\r\u001a\u00020\f\u0012\u0006\u0010\u000f\u001a\u00020\u000e\u0012\u0006\u0010\u0011\u001a\u00020\u0010\u0012\u0006\u0010\u0013\u001a\u00020\u0012\u0012\u0006\u0010\u0015\u001a\u00020\u0014\u0012\u0006\u0010\u0017\u001a\u00020\u0016\u0012\u0006\u0010\u0019\u001a\u00020\u0018\u0012\u0006\u0010\u001b\u001a\u00020\u001a\u0012\u0006\u0010\u001d\u001a\u00020\u001c\u0012\u0006\u0010\u001f\u001a\u00020\u001e\u0012\u0006\u0010!\u001a\u00020 ¢\u0006\u0004\b\"\u0010#JC\u0010(\u001a\u00020\u00052\u0006\u0010$\u001a\u00020\u00022\u0006\u0010%\u001a\u00020\u00032\"\u0010'\u001a\u001e0&R\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0001H\u0002¢\u0006\u0004\b(\u0010)J;\u0010,\u001a\u00020+2\"\u0010'\u001a\u001e0&R\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u00012\u0006\u0010*\u001a\u00020\u0004H\u0002¢\u0006\u0004\b,\u0010-J-\u00101\u001a\u00020+2\u001c\u00100\u001a\u00180.R\u0014\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040/H\u0002¢\u0006\u0004\b1\u00102J\u001b\u00104\u001a\u000203*\u00020\u00052\u0006\u0010%\u001a\u00020\u0003H\u0002¢\u0006\u0004\b4\u00105J!\u00109\u001a\b\u0012\u0004\u0012\u00020\u000508*\u00020\u00052\u0006\u00107\u001a\u000206H\u0002¢\u0006\u0004\b9\u0010:J\u0013\u0010<\u001a\u00020;*\u00020\u0003H\u0002¢\u0006\u0004\b<\u0010=J\u0015\u0010>\u001a\u0004\u0018\u000106*\u00020\u0003H\u0002¢\u0006\u0004\b>\u0010?J-\u0010E\u001a\u000206*\u00020@2\u0006\u0010B\u001a\u00020A2\u0006\u0010C\u001a\u0002062\b\u0010D\u001a\u0004\u0018\u000106H\u0002¢\u0006\u0004\bE\u0010FJ-\u0010G\u001a\u000206*\u00020@2\u0006\u0010B\u001a\u00020A2\u0006\u0010C\u001a\u0002062\b\u0010D\u001a\u0004\u0018\u000106H\u0002¢\u0006\u0004\bG\u0010FJ-\u0010H\u001a\u000206*\u00020@2\u0006\u0010B\u001a\u00020A2\u0006\u0010C\u001a\u0002062\b\u0010D\u001a\u0004\u0018\u000106H\u0002¢\u0006\u0004\bH\u0010FJ\u001b\u0010I\u001a\u000206*\u00020@2\u0006\u0010B\u001a\u00020AH\u0002¢\u0006\u0004\bI\u0010JJ\u001b\u0010K\u001a\u000206*\u00020@2\u0006\u0010B\u001a\u00020AH\u0002¢\u0006\u0004\bK\u0010JJ\u0017\u0010M\u001a\u00020;2\u0006\u0010L\u001a\u00020\u0003H\u0002¢\u0006\u0004\bM\u0010=J!\u0010Q\u001a\u00020\u00032\u0006\u0010N\u001a\u00020\u00022\b\u0010P\u001a\u0004\u0018\u00010OH\u0016¢\u0006\u0004\bQ\u0010RJC\u0010S\u001a\u00020\u00052\u0006\u0010$\u001a\u00020\u00022\u0006\u0010%\u001a\u00020\u00032\"\u0010'\u001a\u001e0&R\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0001H\u0016¢\u0006\u0004\bS\u0010)J\u0019\u0010T\u001a\u0004\u0018\u00010O2\u0006\u0010L\u001a\u00020\u0003H\u0016¢\u0006\u0004\bT\u0010UR\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bV\u0010WR\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bX\u0010YR\u0014\u0010\u000b\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bZ\u0010[R\u0014\u0010\r\u001a\u00020\f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\\\u0010]R\u0014\u0010\u000f\u001a\u00020\u000e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b^\u0010_R\u0014\u0010\u0011\u001a\u00020\u00108\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b`\u0010aR\u0014\u0010\u0013\u001a\u00020\u00128\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bb\u0010cR\u0014\u0010\u0015\u001a\u00020\u00148\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bd\u0010eR\u0014\u0010\u0017\u001a\u00020\u00168\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bf\u0010gR\u0014\u0010\u0019\u001a\u00020\u00188\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bh\u0010iR\u0014\u0010\u001b\u001a\u00020\u001a8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bj\u0010kR\u0014\u0010\u001d\u001a\u00020\u001c8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bl\u0010mR\u0014\u0010\u001f\u001a\u00020\u001e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bn\u0010oR\u0014\u0010!\u001a\u00020 8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bp\u0010qR\u0014\u0010u\u001a\u00020r8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bs\u0010tR \u0010y\u001a\f\u0012\u0006\b\u0001\u0012\u00020\u0003\u0018\u00010v8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bw\u0010x¨\u0006{"}, d2 = {"Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow;", "Lym/k;", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input;", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdState;", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$a;", "", "Landroid/content/Context;", "applicationContext", "Lk6/s;", "imageLoader", "Lpo/c$a;", "submitVerificationWorkerFactory", "Lcom/withpersona/sdk2/inquiry/governmentid/e;", "documentSelectWorker", "Luo/j;", "localVideoCaptureRenderer", "Luo/v;", "webRtcRenderer", "Llo/t0;", "captureRenderer", "Lcom/withpersona/sdk2/inquiry/governmentid/network/AutoClassifyWorker$b;", "autoClassifyWorkerFactory", "Ljo/n;", "autoClassificationRenderer", "Lln/a;", "cameraStatsManager", "Luq/a;", "navigationStateManager", "Lpq/c;", "externalEventLogger", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "trackingEventsLogger", "Lcom/withpersona/sdk2/inquiry/shared/inquiryTheme/a;", "themeManager", "<init>", "(Landroid/content/Context;Lk6/s;Lpo/c$a;Lcom/withpersona/sdk2/inquiry/governmentid/e;Luo/j;Luo/v;Llo/t0;Lcom/withpersona/sdk2/inquiry/governmentid/network/AutoClassifyWorker$b;Ljo/n;Lln/a;Luq/a;Lpq/c;Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;Lcom/withpersona/sdk2/inquiry/shared/inquiryTheme/a;)V", "renderProps", "renderState", "Lym/k$a;", "context", "j0", "(Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input;Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdState;Lym/k$a;)Ljava/lang/Object;", "output", "", "b1", "(Lym/k$a;Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$a;)V", "Lym/r$c;", "Lym/r;", "updater", "c1", "(Lym/r$c;)V", "Lwq/m;", "f1", "(Ljava/lang/Object;Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdState;)Lwq/m;", "", "name", "Lan/m;", "h0", "(Ljava/lang/Object;Ljava/lang/String;)Lan/m;", "", "e1", "(Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdState;)Z", "e0", "(Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdState;)Ljava/lang/String;", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input$Strings;", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;", "side", "selectedId", "countryCode", "a0", "(Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input$Strings;Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", "Z", "b0", "d0", "(Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input$Strings;Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;)Ljava/lang/String;", "c0", "state", "g0", "props", "Lym/i;", "snapshot", "f0", "(Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input;Lym/i;)Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdState;", "i0", "d1", "(Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdState;)Lym/i;", "a", "Landroid/content/Context;", "b", "Lk6/s;", "c", "Lpo/c$a;", "d", "Lcom/withpersona/sdk2/inquiry/governmentid/e;", "e", "Luo/j;", "f", "Luo/v;", "g", "Llo/t0;", "h", "Lcom/withpersona/sdk2/inquiry/governmentid/network/AutoClassifyWorker$b;", "i", "Ljo/n;", "j", "Lln/a;", "k", "Luq/a;", "l", "Lpq/c;", "m", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "n", "Lcom/withpersona/sdk2/inquiry/shared/inquiryTheme/a;", "Luo/l;", "o", "Luo/l;", "videoCaptureHelper", "Lhu/c;", "p", "Lhu/c;", "previousStateClass", "Input", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a, Object> {
+@Metadata(d1 = {"\u0000Ì\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\"\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\u0018\u00002\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u00012\u00020\u0005:\u0002zVBy\b\u0007\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b\u0012\u0006\u0010\u000b\u001a\u00020\n\u0012\u0006\u0010\r\u001a\u00020\f\u0012\u0006\u0010\u000f\u001a\u00020\u000e\u0012\u0006\u0010\u0011\u001a\u00020\u0010\u0012\u0006\u0010\u0013\u001a\u00020\u0012\u0012\u0006\u0010\u0015\u001a\u00020\u0014\u0012\u0006\u0010\u0017\u001a\u00020\u0016\u0012\u0006\u0010\u0019\u001a\u00020\u0018\u0012\u0006\u0010\u001b\u001a\u00020\u001a\u0012\u0006\u0010\u001d\u001a\u00020\u001c\u0012\u0006\u0010\u001f\u001a\u00020\u001e\u0012\u0006\u0010!\u001a\u00020 ¢\u0006\u0004\b\"\u0010#JC\u0010(\u001a\u00020\u00052\u0006\u0010$\u001a\u00020\u00022\u0006\u0010%\u001a\u00020\u00032\"\u0010'\u001a\u001e0&R\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0001H\u0002¢\u0006\u0004\b(\u0010)J;\u0010,\u001a\u00020+2\"\u0010'\u001a\u001e0&R\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u00012\u0006\u0010*\u001a\u00020\u0004H\u0002¢\u0006\u0004\b,\u0010-J-\u00101\u001a\u00020+2\u001c\u00100\u001a\u00180.R\u0014\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040/H\u0002¢\u0006\u0004\b1\u00102J\u001b\u00104\u001a\u000203*\u00020\u00052\u0006\u0010%\u001a\u00020\u0003H\u0002¢\u0006\u0004\b4\u00105J!\u00109\u001a\b\u0012\u0004\u0012\u00020\u000508*\u00020\u00052\u0006\u00107\u001a\u000206H\u0002¢\u0006\u0004\b9\u0010:J\u0013\u0010<\u001a\u00020;*\u00020\u0003H\u0002¢\u0006\u0004\b<\u0010=J\u0015\u0010>\u001a\u0004\u0018\u000106*\u00020\u0003H\u0002¢\u0006\u0004\b>\u0010?J-\u0010E\u001a\u000206*\u00020@2\u0006\u0010B\u001a\u00020A2\u0006\u0010C\u001a\u0002062\b\u0010D\u001a\u0004\u0018\u000106H\u0002¢\u0006\u0004\bE\u0010FJ-\u0010G\u001a\u000206*\u00020@2\u0006\u0010B\u001a\u00020A2\u0006\u0010C\u001a\u0002062\b\u0010D\u001a\u0004\u0018\u000106H\u0002¢\u0006\u0004\bG\u0010FJ-\u0010H\u001a\u000206*\u00020@2\u0006\u0010B\u001a\u00020A2\u0006\u0010C\u001a\u0002062\b\u0010D\u001a\u0004\u0018\u000106H\u0002¢\u0006\u0004\bH\u0010FJ\u001b\u0010I\u001a\u000206*\u00020@2\u0006\u0010B\u001a\u00020AH\u0002¢\u0006\u0004\bI\u0010JJ\u001b\u0010K\u001a\u000206*\u00020@2\u0006\u0010B\u001a\u00020AH\u0002¢\u0006\u0004\bK\u0010JJ\u0017\u0010M\u001a\u00020;2\u0006\u0010L\u001a\u00020\u0003H\u0002¢\u0006\u0004\bM\u0010=J!\u0010Q\u001a\u00020\u00032\u0006\u0010N\u001a\u00020\u00022\b\u0010P\u001a\u0004\u0018\u00010OH\u0016¢\u0006\u0004\bQ\u0010RJC\u0010S\u001a\u00020\u00052\u0006\u0010$\u001a\u00020\u00022\u0006\u0010%\u001a\u00020\u00032\"\u0010'\u001a\u001e0&R\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0001H\u0016¢\u0006\u0004\bS\u0010)J\u0019\u0010T\u001a\u0004\u0018\u00010O2\u0006\u0010L\u001a\u00020\u0003H\u0016¢\u0006\u0004\bT\u0010UR\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bV\u0010WR\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bX\u0010YR\u0014\u0010\u000b\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bZ\u0010[R\u0014\u0010\r\u001a\u00020\f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\\\u0010]R\u0014\u0010\u000f\u001a\u00020\u000e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b^\u0010_R\u0014\u0010\u0011\u001a\u00020\u00108\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b`\u0010aR\u0014\u0010\u0013\u001a\u00020\u00128\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bb\u0010cR\u0014\u0010\u0015\u001a\u00020\u00148\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bd\u0010eR\u0014\u0010\u0017\u001a\u00020\u00168\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bf\u0010gR\u0014\u0010\u0019\u001a\u00020\u00188\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bh\u0010iR\u0014\u0010\u001b\u001a\u00020\u001a8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bj\u0010kR\u0014\u0010\u001d\u001a\u00020\u001c8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bl\u0010mR\u0014\u0010\u001f\u001a\u00020\u001e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bn\u0010oR\u0014\u0010!\u001a\u00020 8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bp\u0010qR\u0014\u0010u\u001a\u00020r8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bs\u0010tR \u0010y\u001a\f\u0012\u0006\b\u0001\u0012\u00020\u0003\u0018\u00010v8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bw\u0010x¨\u0006{"}, d2 = {"Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow;", "Lwm/k;", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input;", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdState;", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$a;", "", "Landroid/content/Context;", "applicationContext", "Lk6/s;", "imageLoader", "Lno/c$a;", "submitVerificationWorkerFactory", "Lcom/withpersona/sdk2/inquiry/governmentid/e;", "documentSelectWorker", "Lso/j;", "localVideoCaptureRenderer", "Lso/v;", "webRtcRenderer", "Ljo/t0;", "captureRenderer", "Lcom/withpersona/sdk2/inquiry/governmentid/network/AutoClassifyWorker$b;", "autoClassifyWorkerFactory", "Lho/n;", "autoClassificationRenderer", "Ljn/a;", "cameraStatsManager", "Lsq/a;", "navigationStateManager", "Lnq/c;", "externalEventLogger", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "trackingEventsLogger", "Lcom/withpersona/sdk2/inquiry/shared/inquiryTheme/a;", "themeManager", "<init>", "(Landroid/content/Context;Lk6/s;Lno/c$a;Lcom/withpersona/sdk2/inquiry/governmentid/e;Lso/j;Lso/v;Ljo/t0;Lcom/withpersona/sdk2/inquiry/governmentid/network/AutoClassifyWorker$b;Lho/n;Ljn/a;Lsq/a;Lnq/c;Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;Lcom/withpersona/sdk2/inquiry/shared/inquiryTheme/a;)V", "renderProps", "renderState", "Lwm/k$a;", "context", "j0", "(Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input;Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdState;Lwm/k$a;)Ljava/lang/Object;", "output", "", "b1", "(Lwm/k$a;Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$a;)V", "Lwm/r$c;", "Lwm/r;", "updater", "c1", "(Lwm/r$c;)V", "Luq/m;", "f1", "(Ljava/lang/Object;Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdState;)Luq/m;", "", "name", "Lym/m;", "h0", "(Ljava/lang/Object;Ljava/lang/String;)Lym/m;", "", "e1", "(Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdState;)Z", "e0", "(Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdState;)Ljava/lang/String;", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input$Strings;", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;", "side", "selectedId", "countryCode", "a0", "(Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input$Strings;Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", "Z", "b0", "d0", "(Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input$Strings;Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;)Ljava/lang/String;", "c0", "state", "g0", "props", "Lwm/i;", "snapshot", "f0", "(Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input;Lwm/i;)Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdState;", "i0", "d1", "(Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdState;)Lwm/i;", "a", "Landroid/content/Context;", "b", "Lk6/s;", "c", "Lno/c$a;", "d", "Lcom/withpersona/sdk2/inquiry/governmentid/e;", "e", "Lso/j;", "f", "Lso/v;", "g", "Ljo/t0;", "h", "Lcom/withpersona/sdk2/inquiry/governmentid/network/AutoClassifyWorker$b;", "i", "Lho/n;", "j", "Ljn/a;", "k", "Lsq/a;", "l", "Lnq/c;", "m", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "n", "Lcom/withpersona/sdk2/inquiry/shared/inquiryTheme/a;", "Lso/l;", "o", "Lso/l;", "videoCaptureHelper", "Lfu/c;", "p", "Lfu/c;", "previousStateClass", "Input", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class GovernmentIdWorkflow extends wm.k<Input, GovernmentIdState, a, Object> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -69,7 +69,7 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
 
     /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final po.c.a submitVerificationWorkerFactory;
+    public final no.c.a submitVerificationWorkerFactory;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -77,7 +77,7 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
 
     /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final uo.j localVideoCaptureRenderer;
+    public final so.j localVideoCaptureRenderer;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -93,19 +93,19 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
 
     /* JADX INFO: renamed from: i, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final jo.n autoClassificationRenderer;
+    public final ho.n autoClassificationRenderer;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final ln.a cameraStatsManager;
+    public final jn.a cameraStatsManager;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final uq.a navigationStateManager;
+    public final sq.a navigationStateManager;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final pq.c externalEventLogger;
+    public final nq.c externalEventLogger;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -117,13 +117,13 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
 
     /* JADX INFO: renamed from: o, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final uo.l videoCaptureHelper;
+    public final so.l videoCaptureHelper;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name and from kotlin metadata */
     @Nullable
-    public hu.c<? extends GovernmentIdState> previousStateClass;
+    public fu.c<? extends GovernmentIdState> previousStateClass;
 
-    @Metadata(d1 = {"\u0000\u008e\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\bF\b\u0007\u0018\u00002\u00020\u0001:\u0001|B\u008f\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\u0010\u0004\u001a\u0004\u0018\u00010\u0002\u0012\f\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005\u0012\u0006\u0010\b\u001a\u00020\u0002\u0012\u0006\u0010\t\u001a\u00020\u0002\u0012\u0006\u0010\n\u001a\u00020\u0002\u0012\u0006\u0010\f\u001a\u00020\u000b\u0012\u0006\u0010\r\u001a\u00020\u000b\u0012\f\u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\u000e0\u0005\u0012\b\u0010\u0011\u001a\u0004\u0018\u00010\u0010\u0012\u0006\u0010\u0013\u001a\u00020\u0012\u0012\u0006\u0010\u0015\u001a\u00020\u0014\u0012\u0006\u0010\u0016\u001a\u00020\u0002\u0012\u0006\u0010\u0017\u001a\u00020\u0002\u0012\u0006\u0010\u0019\u001a\u00020\u0018\u0012\u0006\u0010\u001a\u001a\u00020\u000b\u0012\n\b\u0001\u0010\u001b\u001a\u0004\u0018\u00010\u0014\u0012\u0006\u0010\u001d\u001a\u00020\u001c\u0012\u0006\u0010\u001f\u001a\u00020\u001e\u0012\u0006\u0010 \u001a\u00020\u000b\u0012\u0006\u0010\"\u001a\u00020!\u0012\u0006\u0010$\u001a\u00020#\u0012\u0006\u0010&\u001a\u00020%\u0012\b\u0010(\u001a\u0004\u0018\u00010'\u0012\u0006\u0010)\u001a\u00020\u000b\u0012\b\u0010*\u001a\u0004\u0018\u00010\u0014\u0012\u0006\u0010,\u001a\u00020+\u0012\n\b\u0002\u0010-\u001a\u0004\u0018\u00010\u0002\u0012\n\b\u0002\u0010/\u001a\u0004\u0018\u00010.¢\u0006\u0004\b0\u00101J\r\u00102\u001a\u00020\u0014¢\u0006\u0004\b2\u00103J\u001d\u00108\u001a\u0002072\u0006\u00105\u001a\u0002042\u0006\u00106\u001a\u00020\u0014¢\u0006\u0004\b8\u00109R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b:\u0010;\u001a\u0004\b<\u0010=R\u0019\u0010\u0004\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b>\u0010;\u001a\u0004\b?\u0010=R\u001d\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\u00060\u00058\u0006¢\u0006\f\n\u0004\b@\u0010A\u001a\u0004\bB\u0010CR\u0017\u0010\b\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bD\u0010;\u001a\u0004\bE\u0010=R\u0017\u0010\t\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bF\u0010;\u001a\u0004\bG\u0010=R\u0017\u0010\n\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bH\u0010;\u001a\u0004\bI\u0010=R\u0017\u0010\f\u001a\u00020\u000b8\u0006¢\u0006\f\n\u0004\bJ\u0010K\u001a\u0004\bJ\u0010LR\u0017\u0010\r\u001a\u00020\u000b8\u0006¢\u0006\f\n\u0004\bM\u0010K\u001a\u0004\bN\u0010LR\u001d\u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\u000e0\u00058\u0006¢\u0006\f\n\u0004\bN\u0010A\u001a\u0004\bO\u0010CR\u0019\u0010\u0011\u001a\u0004\u0018\u00010\u00108\u0006¢\u0006\f\n\u0004\b?\u0010P\u001a\u0004\bQ\u0010RR\u0017\u0010\u0013\u001a\u00020\u00128\u0006¢\u0006\f\n\u0004\bS\u0010T\u001a\u0004\bU\u0010VR\u0017\u0010\u0015\u001a\u00020\u00148\u0006¢\u0006\f\n\u0004\bW\u0010Q\u001a\u0004\bX\u00103R\u0017\u0010\u0016\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bY\u0010;\u001a\u0004\bZ\u0010=R\u0017\u0010\u0017\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bO\u0010;\u001a\u0004\b[\u0010=R\u0017\u0010\u0019\u001a\u00020\u00188\u0006¢\u0006\f\n\u0004\bB\u0010\\\u001a\u0004\b]\u0010^R\u0017\u0010\u001a\u001a\u00020\u000b8\u0006¢\u0006\f\n\u0004\bZ\u0010K\u001a\u0004\b_\u0010LR\u0019\u0010\u001b\u001a\u0004\u0018\u00010\u00148\u0006¢\u0006\f\n\u0004\b[\u0010`\u001a\u0004\ba\u0010bR\u0017\u0010\u001d\u001a\u00020\u001c8\u0006¢\u0006\f\n\u0004\bc\u0010d\u001a\u0004\b\\\u0010eR\u0017\u0010\u001f\u001a\u00020\u001e8\u0006¢\u0006\f\n\u0004\bI\u0010f\u001a\u0004\b:\u0010gR\u0017\u0010 \u001a\u00020\u000b8\u0006¢\u0006\f\n\u0004\bG\u0010K\u001a\u0004\b \u0010LR\u0017\u0010\"\u001a\u00020!8\u0006¢\u0006\f\n\u0004\bh\u0010i\u001a\u0004\bH\u0010jR\u0017\u0010$\u001a\u00020#8\u0006¢\u0006\f\n\u0004\bk\u0010l\u001a\u0004\bm\u0010nR\u0017\u0010&\u001a\u00020%8\u0006¢\u0006\f\n\u0004\bX\u0010o\u001a\u0004\bp\u0010qR\u0019\u0010(\u001a\u0004\u0018\u00010'8\u0006¢\u0006\f\n\u0004\bE\u0010r\u001a\u0004\bs\u0010tR\u0017\u0010)\u001a\u00020\u000b8\u0006¢\u0006\f\n\u0004\b<\u0010K\u001a\u0004\bu\u0010LR\u0019\u0010*\u001a\u0004\u0018\u00010\u00148\u0006¢\u0006\f\n\u0004\b]\u0010`\u001a\u0004\bk\u0010bR\u0017\u0010,\u001a\u00020+8\u0006¢\u0006\f\n\u0004\bp\u0010v\u001a\u0004\bY\u0010wR\u0019\u0010-\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bx\u0010;\u001a\u0004\bc\u0010=R\u0019\u0010/\u001a\u0004\u0018\u00010.8\u0006¢\u0006\f\n\u0004\bm\u0010y\u001a\u0004\bS\u0010zR\u0011\u0010{\u001a\u00020\u000b8F¢\u0006\u0006\u001a\u0004\bh\u0010L¨\u0006}"}, d2 = {"Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input;", "Landroid/os/Parcelable;", "", "sessionToken", "countryCode", "", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig;", "enabledIdClasses", "inquiryId", "fromStep", "fromComponent", "", "backStepEnabled", "cancelButtonEnabled", "Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CaptureOptionNativeMobile;", "enabledCaptureOptionsNativeMobile", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$GovernmentIdStepStyle;", "styles", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input$Strings;", "strings", "", "imageCaptureCount", "fieldKeyDocument", "fieldKeyIdClass", "", "manualCaptureButtonDelayMs", "shouldSkipReviewScreen", "theme", "Lcom/withpersona/sdk2/inquiry/governmentid/video_capture/VideoCaptureConfig;", "videoCaptureConfig", "Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$GovernmentId$AssetConfig;", "assetConfig", "isEnabled", "Lcom/withpersona/sdk2/inquiry/governmentid/autoClassification/AutoClassificationConfig;", "autoClassificationConfig", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StyleElements$Axis;", "reviewCaptureButtonsAxis", "Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;", "pendingPageTextVerticalPosition", "Lcom/withpersona/sdk2/inquiry/governmentid/digitalId/DigitalIdConfig;", "digitalIdConfig", "staticCaptureTipsEnabled", "holographicTorchEnabledDurationMs", "Lio/d;", "designVersion", "flowWatermarkText", "Lcom/withpersona/sdk2/inquiry/steps/ui/CustomPendingPage;", "customPendingPage", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/util/List;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$GovernmentIdStepStyle;Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input$Strings;ILjava/lang/String;Ljava/lang/String;JZLjava/lang/Integer;Lcom/withpersona/sdk2/inquiry/governmentid/video_capture/VideoCaptureConfig;Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$GovernmentId$AssetConfig;ZLcom/withpersona/sdk2/inquiry/governmentid/autoClassification/AutoClassificationConfig;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StyleElements$Axis;Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;Lcom/withpersona/sdk2/inquiry/governmentid/digitalId/DigitalIdConfig;ZLjava/lang/Integer;Lio/d;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/steps/ui/CustomPendingPage;)V", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "a", "Ljava/lang/String;", "y", "()Ljava/lang/String;", "b", "j", "c", "Ljava/util/List;", "o", "()Ljava/util/List;", "d", "x", "e", "t", "f", "s", "g", "Z", "()Z", "h", "i", "n", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$GovernmentIdStepStyle;", "I", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$GovernmentIdStepStyle;", "k", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input$Strings;", "G", "()Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input$Strings;", "l", "w", "m", "p", "q", "J", "z", "()J", "D", "Ljava/lang/Integer;", "getTheme", "()Ljava/lang/Integer;", "r", "Lcom/withpersona/sdk2/inquiry/governmentid/video_capture/VideoCaptureConfig;", "()Lcom/withpersona/sdk2/inquiry/governmentid/video_capture/VideoCaptureConfig;", "Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$GovernmentId$AssetConfig;", "()Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$GovernmentId$AssetConfig;", "u", "Lcom/withpersona/sdk2/inquiry/governmentid/autoClassification/AutoClassificationConfig;", "()Lcom/withpersona/sdk2/inquiry/governmentid/autoClassification/AutoClassificationConfig;", "v", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StyleElements$Axis;", "C", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StyleElements$Axis;", "Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;", "A", "()Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;", "Lcom/withpersona/sdk2/inquiry/governmentid/digitalId/DigitalIdConfig;", "getDigitalIdConfig", "()Lcom/withpersona/sdk2/inquiry/governmentid/digitalId/DigitalIdConfig;", "E", "Lio/d;", "()Lio/d;", "B", "Lcom/withpersona/sdk2/inquiry/steps/ui/CustomPendingPage;", "()Lcom/withpersona/sdk2/inquiry/steps/ui/CustomPendingPage;", "hasMultipleCaptureOptions", "Strings", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000\u008e\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\bF\b\u0007\u0018\u00002\u00020\u0001:\u0001|B\u008f\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\u0010\u0004\u001a\u0004\u0018\u00010\u0002\u0012\f\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005\u0012\u0006\u0010\b\u001a\u00020\u0002\u0012\u0006\u0010\t\u001a\u00020\u0002\u0012\u0006\u0010\n\u001a\u00020\u0002\u0012\u0006\u0010\f\u001a\u00020\u000b\u0012\u0006\u0010\r\u001a\u00020\u000b\u0012\f\u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\u000e0\u0005\u0012\b\u0010\u0011\u001a\u0004\u0018\u00010\u0010\u0012\u0006\u0010\u0013\u001a\u00020\u0012\u0012\u0006\u0010\u0015\u001a\u00020\u0014\u0012\u0006\u0010\u0016\u001a\u00020\u0002\u0012\u0006\u0010\u0017\u001a\u00020\u0002\u0012\u0006\u0010\u0019\u001a\u00020\u0018\u0012\u0006\u0010\u001a\u001a\u00020\u000b\u0012\n\b\u0001\u0010\u001b\u001a\u0004\u0018\u00010\u0014\u0012\u0006\u0010\u001d\u001a\u00020\u001c\u0012\u0006\u0010\u001f\u001a\u00020\u001e\u0012\u0006\u0010 \u001a\u00020\u000b\u0012\u0006\u0010\"\u001a\u00020!\u0012\u0006\u0010$\u001a\u00020#\u0012\u0006\u0010&\u001a\u00020%\u0012\b\u0010(\u001a\u0004\u0018\u00010'\u0012\u0006\u0010)\u001a\u00020\u000b\u0012\b\u0010*\u001a\u0004\u0018\u00010\u0014\u0012\u0006\u0010,\u001a\u00020+\u0012\n\b\u0002\u0010-\u001a\u0004\u0018\u00010\u0002\u0012\n\b\u0002\u0010/\u001a\u0004\u0018\u00010.¢\u0006\u0004\b0\u00101J\r\u00102\u001a\u00020\u0014¢\u0006\u0004\b2\u00103J\u001d\u00108\u001a\u0002072\u0006\u00105\u001a\u0002042\u0006\u00106\u001a\u00020\u0014¢\u0006\u0004\b8\u00109R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b:\u0010;\u001a\u0004\b<\u0010=R\u0019\u0010\u0004\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b>\u0010;\u001a\u0004\b?\u0010=R\u001d\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\u00060\u00058\u0006¢\u0006\f\n\u0004\b@\u0010A\u001a\u0004\bB\u0010CR\u0017\u0010\b\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bD\u0010;\u001a\u0004\bE\u0010=R\u0017\u0010\t\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bF\u0010;\u001a\u0004\bG\u0010=R\u0017\u0010\n\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bH\u0010;\u001a\u0004\bI\u0010=R\u0017\u0010\f\u001a\u00020\u000b8\u0006¢\u0006\f\n\u0004\bJ\u0010K\u001a\u0004\bJ\u0010LR\u0017\u0010\r\u001a\u00020\u000b8\u0006¢\u0006\f\n\u0004\bM\u0010K\u001a\u0004\bN\u0010LR\u001d\u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\u000e0\u00058\u0006¢\u0006\f\n\u0004\bN\u0010A\u001a\u0004\bO\u0010CR\u0019\u0010\u0011\u001a\u0004\u0018\u00010\u00108\u0006¢\u0006\f\n\u0004\b?\u0010P\u001a\u0004\bQ\u0010RR\u0017\u0010\u0013\u001a\u00020\u00128\u0006¢\u0006\f\n\u0004\bS\u0010T\u001a\u0004\bU\u0010VR\u0017\u0010\u0015\u001a\u00020\u00148\u0006¢\u0006\f\n\u0004\bW\u0010Q\u001a\u0004\bX\u00103R\u0017\u0010\u0016\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bY\u0010;\u001a\u0004\bZ\u0010=R\u0017\u0010\u0017\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bO\u0010;\u001a\u0004\b[\u0010=R\u0017\u0010\u0019\u001a\u00020\u00188\u0006¢\u0006\f\n\u0004\bB\u0010\\\u001a\u0004\b]\u0010^R\u0017\u0010\u001a\u001a\u00020\u000b8\u0006¢\u0006\f\n\u0004\bZ\u0010K\u001a\u0004\b_\u0010LR\u0019\u0010\u001b\u001a\u0004\u0018\u00010\u00148\u0006¢\u0006\f\n\u0004\b[\u0010`\u001a\u0004\ba\u0010bR\u0017\u0010\u001d\u001a\u00020\u001c8\u0006¢\u0006\f\n\u0004\bc\u0010d\u001a\u0004\b\\\u0010eR\u0017\u0010\u001f\u001a\u00020\u001e8\u0006¢\u0006\f\n\u0004\bI\u0010f\u001a\u0004\b:\u0010gR\u0017\u0010 \u001a\u00020\u000b8\u0006¢\u0006\f\n\u0004\bG\u0010K\u001a\u0004\b \u0010LR\u0017\u0010\"\u001a\u00020!8\u0006¢\u0006\f\n\u0004\bh\u0010i\u001a\u0004\bH\u0010jR\u0017\u0010$\u001a\u00020#8\u0006¢\u0006\f\n\u0004\bk\u0010l\u001a\u0004\bm\u0010nR\u0017\u0010&\u001a\u00020%8\u0006¢\u0006\f\n\u0004\bX\u0010o\u001a\u0004\bp\u0010qR\u0019\u0010(\u001a\u0004\u0018\u00010'8\u0006¢\u0006\f\n\u0004\b<\u0010r\u001a\u0004\bs\u0010tR\u0017\u0010)\u001a\u00020\u000b8\u0006¢\u0006\f\n\u0004\bE\u0010K\u001a\u0004\bu\u0010LR\u0019\u0010*\u001a\u0004\u0018\u00010\u00148\u0006¢\u0006\f\n\u0004\b]\u0010`\u001a\u0004\bk\u0010bR\u0017\u0010,\u001a\u00020+8\u0006¢\u0006\f\n\u0004\bv\u0010w\u001a\u0004\bY\u0010xR\u0019\u0010-\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bp\u0010;\u001a\u0004\bc\u0010=R\u0019\u0010/\u001a\u0004\u0018\u00010.8\u0006¢\u0006\f\n\u0004\bm\u0010y\u001a\u0004\bS\u0010zR\u0011\u0010{\u001a\u00020\u000b8F¢\u0006\u0006\u001a\u0004\bh\u0010L¨\u0006}"}, d2 = {"Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input;", "Landroid/os/Parcelable;", "", "sessionToken", "countryCode", "", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig;", "enabledIdClasses", "inquiryId", "fromStep", "fromComponent", "", "backStepEnabled", "cancelButtonEnabled", "Lcom/withpersona/sdk2/inquiry/network/dto/government_id/CaptureOptionNativeMobile;", "enabledCaptureOptionsNativeMobile", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$GovernmentIdStepStyle;", "styles", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input$Strings;", "strings", "", "imageCaptureCount", "fieldKeyDocument", "fieldKeyIdClass", "", "manualCaptureButtonDelayMs", "shouldSkipReviewScreen", "theme", "Lcom/withpersona/sdk2/inquiry/governmentid/video_capture/VideoCaptureConfig;", "videoCaptureConfig", "Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$GovernmentId$AssetConfig;", "assetConfig", "isEnabled", "Lcom/withpersona/sdk2/inquiry/governmentid/autoClassification/AutoClassificationConfig;", "autoClassificationConfig", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StyleElements$Axis;", "reviewCaptureButtonsAxis", "Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;", "pendingPageTextVerticalPosition", "Lcom/withpersona/sdk2/inquiry/governmentid/digitalId/DigitalIdConfig;", "digitalIdConfig", "staticCaptureTipsEnabled", "holographicTorchEnabledDurationMs", "Lgo/d;", "designVersion", "flowWatermarkText", "Lcom/withpersona/sdk2/inquiry/steps/ui/CustomPendingPage;", "customPendingPage", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/util/List;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$GovernmentIdStepStyle;Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input$Strings;ILjava/lang/String;Ljava/lang/String;JZLjava/lang/Integer;Lcom/withpersona/sdk2/inquiry/governmentid/video_capture/VideoCaptureConfig;Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$GovernmentId$AssetConfig;ZLcom/withpersona/sdk2/inquiry/governmentid/autoClassification/AutoClassificationConfig;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StyleElements$Axis;Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;Lcom/withpersona/sdk2/inquiry/governmentid/digitalId/DigitalIdConfig;ZLjava/lang/Integer;Lgo/d;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/steps/ui/CustomPendingPage;)V", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "a", "Ljava/lang/String;", "x", "()Ljava/lang/String;", "b", "j", "c", "Ljava/util/List;", "o", "()Ljava/util/List;", "d", "y", "e", "t", "f", "s", "g", "Z", "()Z", "h", "i", "n", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$GovernmentIdStepStyle;", "I", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$GovernmentIdStepStyle;", "k", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input$Strings;", "G", "()Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input$Strings;", "l", "w", "m", "p", "q", "J", "z", "()J", "D", "Ljava/lang/Integer;", "getTheme", "()Ljava/lang/Integer;", "r", "Lcom/withpersona/sdk2/inquiry/governmentid/video_capture/VideoCaptureConfig;", "()Lcom/withpersona/sdk2/inquiry/governmentid/video_capture/VideoCaptureConfig;", "Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$GovernmentId$AssetConfig;", "()Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$GovernmentId$AssetConfig;", "u", "Lcom/withpersona/sdk2/inquiry/governmentid/autoClassification/AutoClassificationConfig;", "()Lcom/withpersona/sdk2/inquiry/governmentid/autoClassification/AutoClassificationConfig;", "v", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StyleElements$Axis;", "C", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StyleElements$Axis;", "Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;", "B", "()Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;", "Lcom/withpersona/sdk2/inquiry/governmentid/digitalId/DigitalIdConfig;", "getDigitalIdConfig", "()Lcom/withpersona/sdk2/inquiry/governmentid/digitalId/DigitalIdConfig;", "E", "A", "Lgo/d;", "()Lgo/d;", "Lcom/withpersona/sdk2/inquiry/steps/ui/CustomPendingPage;", "()Lcom/withpersona/sdk2/inquiry/steps/ui/CustomPendingPage;", "hasMultipleCaptureOptions", "Strings", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class Input implements Parcelable {
 
         @NotNull
@@ -131,7 +131,7 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
 
         /* JADX INFO: renamed from: A, reason: from kotlin metadata */
         @NotNull
-        public final io.d designVersion;
+        public final go.d designVersion;
 
         /* JADX INFO: renamed from: B, reason: from kotlin metadata */
         @Nullable
@@ -238,7 +238,7 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         @Nullable
         public final Integer holographicTorchEnabledDurationMs;
 
-        @Metadata(d1 = {"\u0000Z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0010$\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b&\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b_\b\u0087\b\u0018\u00002\u00020\u0001B\u0095\u0005\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0004\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0002\u0012\u0006\u0010\u0006\u001a\u00020\u0002\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\b\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\t\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\n\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u000b\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\f\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\r\u001a\u0004\u0018\u00010\u0002\u0012\u0006\u0010\u000f\u001a\u00020\u000e\u0012\u0006\u0010\u0010\u001a\u00020\u000e\u0012\u0006\u0010\u0011\u001a\u00020\u000e\u0012\u0006\u0010\u0012\u001a\u00020\u0002\u0012\u0006\u0010\u0013\u001a\u00020\u000e\u0012\u0006\u0010\u0014\u001a\u00020\u0002\u0012\u0006\u0010\u0015\u001a\u00020\u0002\u0012\u0006\u0010\u0016\u001a\u00020\u0002\u0012\u0006\u0010\u0017\u001a\u00020\u000e\u0012\u0006\u0010\u0018\u001a\u00020\u0002\u0012\u0006\u0010\u0019\u001a\u00020\u0002\u0012\u0012\u0010\u001b\u001a\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00020\u001a\u0012\u0006\u0010\u001c\u001a\u00020\u000e\u0012\u0006\u0010\u001d\u001a\u00020\u000e\u0012\u0006\u0010\u001e\u001a\u00020\u0002\u0012\u0006\u0010\u001f\u001a\u00020\u0002\u0012\u0012\u0010!\u001a\u000e\u0012\u0004\u0012\u00020 \u0012\u0004\u0012\u00020\u00020\u001a\u0012\u0012\u0010\"\u001a\u000e\u0012\u0004\u0012\u00020 \u0012\u0004\u0012\u00020\u00020\u001a\u0012\u0006\u0010#\u001a\u00020\u0002\u0012\u0006\u0010$\u001a\u00020\u0002\u0012\b\u0010%\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010&\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010'\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010(\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010)\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010*\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010+\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010,\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010-\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010.\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010/\u001a\u0004\u0018\u00010\u0002\u0012\b\u00100\u001a\u0004\u0018\u00010\u0002\u0012\b\u00101\u001a\u0004\u0018\u00010\u0002\u0012\b\u00102\u001a\u0004\u0018\u00010\u0002\u0012\b\u00103\u001a\u0004\u0018\u00010\u0002\u0012\b\u00104\u001a\u0004\u0018\u00010\u0002\u0012\b\u00105\u001a\u0004\u0018\u00010\u0002\u0012\b\u00106\u001a\u0004\u0018\u00010\u0002\u0012\b\u00107\u001a\u0004\u0018\u00010\u0002\u0012\b\u00108\u001a\u0004\u0018\u00010\u0002\u0012\b\u00109\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010:\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010;\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010<\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010=\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010>\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010?\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010@\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010A\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010B\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010C\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010D\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010E\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010F\u001a\u0004\u0018\u00010\u0002\u0012\u000e\u0010I\u001a\n\u0012\u0004\u0012\u00020H\u0018\u00010G¢\u0006\u0004\bJ\u0010KJ\r\u0010M\u001a\u00020L¢\u0006\u0004\bM\u0010NJ\u001d\u0010S\u001a\u00020R2\u0006\u0010P\u001a\u00020O2\u0006\u0010Q\u001a\u00020L¢\u0006\u0004\bS\u0010TJ\u0010\u0010U\u001a\u00020\u0002HÖ\u0001¢\u0006\u0004\bU\u0010VJ\u0010\u0010W\u001a\u00020LHÖ\u0001¢\u0006\u0004\bW\u0010NJ\u001a\u0010[\u001a\u00020Z2\b\u0010Y\u001a\u0004\u0018\u00010XHÖ\u0003¢\u0006\u0004\b[\u0010\\R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b]\u0010^\u001a\u0004\b_\u0010VR\u0017\u0010\u0004\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b`\u0010^\u001a\u0004\ba\u0010VR\u0017\u0010\u0005\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bb\u0010^\u001a\u0004\bc\u0010VR\u0017\u0010\u0006\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bd\u0010^\u001a\u0004\be\u0010VR\u0019\u0010\u0007\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bf\u0010^\u001a\u0004\bg\u0010VR\u0019\u0010\b\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bh\u0010^\u001a\u0004\bi\u0010VR\u0019\u0010\t\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bj\u0010^\u001a\u0004\bk\u0010VR\u0019\u0010\n\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bl\u0010^\u001a\u0004\bm\u0010VR\u0019\u0010\u000b\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bn\u0010^\u001a\u0004\bo\u0010VR\u0019\u0010\f\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bp\u0010^\u001a\u0004\bq\u0010VR\u0019\u0010\r\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\br\u0010^\u001a\u0004\bh\u0010VR\u0017\u0010\u000f\u001a\u00020\u000e8\u0006¢\u0006\f\n\u0004\bs\u0010t\u001a\u0004\bu\u0010vR\u0017\u0010\u0010\u001a\u00020\u000e8\u0006¢\u0006\f\n\u0004\bw\u0010t\u001a\u0004\bx\u0010vR\u0017\u0010\u0011\u001a\u00020\u000e8\u0006¢\u0006\f\n\u0004\by\u0010t\u001a\u0004\bz\u0010vR\u0017\u0010\u0012\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b{\u0010^\u001a\u0004\b|\u0010VR\u0017\u0010\u0013\u001a\u00020\u000e8\u0006¢\u0006\f\n\u0004\b}\u0010t\u001a\u0004\b~\u0010vR\u0018\u0010\u0014\u001a\u00020\u00028\u0006¢\u0006\r\n\u0004\b\u007f\u0010^\u001a\u0005\b\u0080\u0001\u0010VR\u0018\u0010\u0015\u001a\u00020\u00028\u0006¢\u0006\r\n\u0005\b\u0081\u0001\u0010^\u001a\u0004\by\u0010VR\u0018\u0010\u0016\u001a\u00020\u00028\u0006¢\u0006\r\n\u0005\b\u0080\u0001\u0010^\u001a\u0004\bw\u0010VR\u0018\u0010\u0017\u001a\u00020\u000e8\u0006¢\u0006\r\n\u0004\bi\u0010t\u001a\u0005\b\u0082\u0001\u0010vR\u0018\u0010\u0018\u001a\u00020\u00028\u0006¢\u0006\r\n\u0004\bx\u0010^\u001a\u0005\b\u0083\u0001\u0010VR\u0018\u0010\u0019\u001a\u00020\u00028\u0006¢\u0006\r\n\u0004\bu\u0010^\u001a\u0005\b\u0084\u0001\u0010VR&\u0010\u001b\u001a\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00020\u001a8\u0006¢\u0006\u000f\n\u0005\b|\u0010\u0085\u0001\u001a\u0006\b\u0086\u0001\u0010\u0087\u0001R\u0018\u0010\u001c\u001a\u00020\u000e8\u0006¢\u0006\r\n\u0004\bk\u0010t\u001a\u0005\b\u0088\u0001\u0010vR\u0019\u0010\u001d\u001a\u00020\u000e8\u0006¢\u0006\u000e\n\u0005\b\u0089\u0001\u0010t\u001a\u0005\b\u008a\u0001\u0010vR\u0018\u0010\u001e\u001a\u00020\u00028\u0006¢\u0006\r\n\u0004\bc\u0010^\u001a\u0005\b\u008b\u0001\u0010VR\u0019\u0010\u001f\u001a\u00020\u00028\u0006¢\u0006\u000e\n\u0005\b\u008a\u0001\u0010^\u001a\u0005\b\u008c\u0001\u0010VR'\u0010!\u001a\u000e\u0012\u0004\u0012\u00020 \u0012\u0004\u0012\u00020\u00020\u001a8\u0006¢\u0006\u0010\n\u0006\b\u008d\u0001\u0010\u0085\u0001\u001a\u0006\b\u008e\u0001\u0010\u0087\u0001R'\u0010\"\u001a\u000e\u0012\u0004\u0012\u00020 \u0012\u0004\u0012\u00020\u00020\u001a8\u0006¢\u0006\u0010\n\u0006\b\u008b\u0001\u0010\u0085\u0001\u001a\u0006\b\u008f\u0001\u0010\u0087\u0001R\u0019\u0010#\u001a\u00020\u00028\u0006¢\u0006\u000e\n\u0005\b\u0088\u0001\u0010^\u001a\u0005\b\u0090\u0001\u0010VR\u0019\u0010$\u001a\u00020\u00028\u0006¢\u0006\u000e\n\u0005\b\u008c\u0001\u0010^\u001a\u0005\b\u0091\u0001\u0010VR\u001b\u0010%\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b\u0092\u0001\u0010^\u001a\u0005\b\u0081\u0001\u0010VR\u0019\u0010&\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b~\u0010^\u001a\u0004\b\u007f\u0010VR\u001a\u0010'\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\r\n\u0005\b\u0093\u0001\u0010^\u001a\u0004\b{\u0010VR\u001a\u0010(\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\r\n\u0005\b\u0082\u0001\u0010^\u001a\u0004\b}\u0010VR\u001b\u0010)\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b\u0094\u0001\u0010^\u001a\u0005\b\u0095\u0001\u0010VR\u001b\u0010*\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b\u0096\u0001\u0010^\u001a\u0005\b\u0097\u0001\u0010VR\u001b\u0010+\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b\u0098\u0001\u0010^\u001a\u0005\b\u0099\u0001\u0010VR\u001b\u0010,\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b\u009a\u0001\u0010^\u001a\u0005\b\u009b\u0001\u0010VR\u001b\u0010-\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b\u009c\u0001\u0010^\u001a\u0005\b\u0098\u0001\u0010VR\u001b\u0010.\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b\u009d\u0001\u0010^\u001a\u0005\b\u009c\u0001\u0010VR\u001b\u0010/\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b\u009e\u0001\u0010^\u001a\u0005\b\u0096\u0001\u0010VR\u001a\u00100\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\r\n\u0005\b\u009f\u0001\u0010^\u001a\u0004\br\u0010VR\u001a\u00101\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\r\n\u0005\b \u0001\u0010^\u001a\u0004\bp\u0010VR\u001a\u00102\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\r\n\u0005\b¡\u0001\u0010^\u001a\u0004\bn\u0010VR\u001a\u00103\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\r\n\u0005\b¢\u0001\u0010^\u001a\u0004\bj\u0010VR\u001b\u00104\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b£\u0001\u0010^\u001a\u0005\b¤\u0001\u0010VR\u001b\u00105\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b\u0086\u0001\u0010^\u001a\u0005\b¥\u0001\u0010VR\u001b\u00106\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b¦\u0001\u0010^\u001a\u0005\b§\u0001\u0010VR\u001b\u00107\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b¨\u0001\u0010^\u001a\u0005\b¦\u0001\u0010VR\u001b\u00108\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b©\u0001\u0010^\u001a\u0005\b \u0001\u0010VR\u001b\u00109\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\bª\u0001\u0010^\u001a\u0005\b\u009f\u0001\u0010VR\u001b\u0010:\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b«\u0001\u0010^\u001a\u0005\b\u009e\u0001\u0010VR\u001b\u0010;\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b§\u0001\u0010^\u001a\u0005\b\u009d\u0001\u0010VR\u001b\u0010<\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b¥\u0001\u0010^\u001a\u0005\b¬\u0001\u0010VR\u001b\u0010=\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b¤\u0001\u0010^\u001a\u0005\b\u00ad\u0001\u0010VR\u001b\u0010>\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b®\u0001\u0010^\u001a\u0005\b¯\u0001\u0010VR\u001b\u0010?\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b°\u0001\u0010^\u001a\u0005\b±\u0001\u0010VR\u001a\u0010@\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\r\n\u0004\be\u0010^\u001a\u0005\b£\u0001\u0010VR\u001b\u0010A\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b²\u0001\u0010^\u001a\u0005\b¢\u0001\u0010VR\u001b\u0010B\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b³\u0001\u0010^\u001a\u0005\b\u0094\u0001\u0010VR\u001b\u0010C\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b´\u0001\u0010^\u001a\u0005\b¡\u0001\u0010VR\u001b\u0010D\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\bµ\u0001\u0010^\u001a\u0005\bµ\u0001\u0010VR\u001b\u0010E\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b¶\u0001\u0010^\u001a\u0005\b´\u0001\u0010VR\u001a\u0010F\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\r\n\u0005\b\u0099\u0001\u0010^\u001a\u0004\b]\u0010VR#\u0010I\u001a\n\u0012\u0004\u0012\u00020H\u0018\u00010G8\u0006¢\u0006\u0010\n\u0006\b\u009b\u0001\u0010·\u0001\u001a\u0006\b²\u0001\u0010¸\u0001¨\u0006¹\u0001"}, d2 = {"Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input$Strings;", "Landroid/os/Parcelable;", "", Title.type, "prompt", "choose", "instructionsDisclaimer", "selectPageNavBarTitle", "capturePageNavBarTitle", "checkPageNavBarTitle", "pendingPageNavBarTitle", "requestPageNavBarTitle", "reviewUploadPageNavBarTitle", "autoClassificationPageNavBarTitle", "Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;", "captureScreenTitle", "captureScreenDescription", "scanInstructions", "capturing", "confirmCapture", "captureDisclaimer", "buttonSubmit", "buttonRetake", "confirmCaptureTitle", "processingTitle", "processingDescription", "", "idClassToName", "chooseCaptureMethodTitle", "chooseCaptureMethodBody", "chooseCaptureMethodCameraButton", "chooseCaptureMethodUploadButton", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;", "reviewSelectedImageTitle", "reviewSelectedImageBody", "reviewSelectedImageConfirmButton", "reviewSelectedImageChooseAnotherButton", "cameraPermissionsTitle", "cameraPermissionsPrompt", "cameraPermissionsAllowButtonText", "cameraPermissionsCancelButtonText", "microphonePermissionsTitle", "microphonePermissionsPrompt", "microphonePermissionsAllowButtonText", "microphonePermissionsCancelButtonText", "hintHoldStill", "hintLowLight", "helpButtonText", "barcodeHelpModalTitle", "barcodeHelpModalPrompt", "barcodeHelpModalHints", "barcodeHelpModalContinueButtonText", "idFrontHelpModalTitle", "idFrontHelpModalPrompt", "idFrontHelpModalHints", "idFrontHelpModalContinueButtonText", "idBackHelpModalTitle", "idBackHelpModalPrompt", "idBackHelpModalHints", "idBackHelpModalContinueButtonText", "staticCaptureTipsTitle", "staticCaptureTipsSubtext", "unableToClassifyDocumentTitle", "unableToClassifyDocumentContinueButtonText", "idClassRejectedTitle", "idClassRejectedContinueButtonText", "countryInputTitle", "idClassInputTitle", "manualClassificationTitle", "manualClassificationContinueButtonText", "autoClassificationCaptureTipText", "", "Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$GovernmentId$LocalizationOverride;", "localizationOverrides", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Ljava/lang/String;", "getTitle", "b", "v0", "c", "z", "d", "g0", "e", "K0", "f", "t", "g", "x", "h", "q0", "i", "w0", "j", "G0", "k", "l", "Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;", "v", "()Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;", "m", "u", "n", "I0", "o", "w", "p", "G", "q", "s", "r", "I", "u0", "s0", "Ljava/util/Map;", "V", "()Ljava/util/Map;", "D", "y", "A", "C", "E", "B", "C0", "x0", "B0", "y0", "F", "H", "J", "p0", "K", "o0", "L", "m0", "M", "n0", "N", "O", "P", "Q", "R", "S", "T", "U", "d0", "c0", "W", "b0", "X", "Y", "Z", "a0", "U0", "M0", "e0", "d1", "f0", "b1", "h0", "i0", "j0", "k0", "l0", "Ljava/util/List;", "()Ljava/util/List;", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+        @Metadata(d1 = {"\u0000Z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0010$\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b&\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b`\b\u0087\b\u0018\u00002\u00020\u0001B\u0095\u0005\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0004\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0002\u0012\u0006\u0010\u0006\u001a\u00020\u0002\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\b\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\t\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\n\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u000b\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\f\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\r\u001a\u0004\u0018\u00010\u0002\u0012\u0006\u0010\u000f\u001a\u00020\u000e\u0012\u0006\u0010\u0010\u001a\u00020\u000e\u0012\u0006\u0010\u0011\u001a\u00020\u000e\u0012\u0006\u0010\u0012\u001a\u00020\u0002\u0012\u0006\u0010\u0013\u001a\u00020\u000e\u0012\u0006\u0010\u0014\u001a\u00020\u0002\u0012\u0006\u0010\u0015\u001a\u00020\u0002\u0012\u0006\u0010\u0016\u001a\u00020\u0002\u0012\u0006\u0010\u0017\u001a\u00020\u000e\u0012\u0006\u0010\u0018\u001a\u00020\u0002\u0012\u0006\u0010\u0019\u001a\u00020\u0002\u0012\u0012\u0010\u001b\u001a\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00020\u001a\u0012\u0006\u0010\u001c\u001a\u00020\u000e\u0012\u0006\u0010\u001d\u001a\u00020\u000e\u0012\u0006\u0010\u001e\u001a\u00020\u0002\u0012\u0006\u0010\u001f\u001a\u00020\u0002\u0012\u0012\u0010!\u001a\u000e\u0012\u0004\u0012\u00020 \u0012\u0004\u0012\u00020\u00020\u001a\u0012\u0012\u0010\"\u001a\u000e\u0012\u0004\u0012\u00020 \u0012\u0004\u0012\u00020\u00020\u001a\u0012\u0006\u0010#\u001a\u00020\u0002\u0012\u0006\u0010$\u001a\u00020\u0002\u0012\b\u0010%\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010&\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010'\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010(\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010)\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010*\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010+\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010,\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010-\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010.\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010/\u001a\u0004\u0018\u00010\u0002\u0012\b\u00100\u001a\u0004\u0018\u00010\u0002\u0012\b\u00101\u001a\u0004\u0018\u00010\u0002\u0012\b\u00102\u001a\u0004\u0018\u00010\u0002\u0012\b\u00103\u001a\u0004\u0018\u00010\u0002\u0012\b\u00104\u001a\u0004\u0018\u00010\u0002\u0012\b\u00105\u001a\u0004\u0018\u00010\u0002\u0012\b\u00106\u001a\u0004\u0018\u00010\u0002\u0012\b\u00107\u001a\u0004\u0018\u00010\u0002\u0012\b\u00108\u001a\u0004\u0018\u00010\u0002\u0012\b\u00109\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010:\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010;\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010<\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010=\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010>\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010?\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010@\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010A\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010B\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010C\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010D\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010E\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010F\u001a\u0004\u0018\u00010\u0002\u0012\u000e\u0010I\u001a\n\u0012\u0004\u0012\u00020H\u0018\u00010G¢\u0006\u0004\bJ\u0010KJ\r\u0010M\u001a\u00020L¢\u0006\u0004\bM\u0010NJ\u001d\u0010S\u001a\u00020R2\u0006\u0010P\u001a\u00020O2\u0006\u0010Q\u001a\u00020L¢\u0006\u0004\bS\u0010TJ\u0010\u0010U\u001a\u00020\u0002HÖ\u0001¢\u0006\u0004\bU\u0010VJ\u0010\u0010W\u001a\u00020LHÖ\u0001¢\u0006\u0004\bW\u0010NJ\u001a\u0010[\u001a\u00020Z2\b\u0010Y\u001a\u0004\u0018\u00010XHÖ\u0003¢\u0006\u0004\b[\u0010\\R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b]\u0010^\u001a\u0004\b_\u0010VR\u0017\u0010\u0004\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b`\u0010^\u001a\u0004\ba\u0010VR\u0017\u0010\u0005\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bb\u0010^\u001a\u0004\bc\u0010VR\u0017\u0010\u0006\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bd\u0010^\u001a\u0004\be\u0010VR\u0019\u0010\u0007\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bf\u0010^\u001a\u0004\bg\u0010VR\u0019\u0010\b\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bh\u0010^\u001a\u0004\bi\u0010VR\u0019\u0010\t\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bj\u0010^\u001a\u0004\bk\u0010VR\u0019\u0010\n\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bl\u0010^\u001a\u0004\bm\u0010VR\u0019\u0010\u000b\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bn\u0010^\u001a\u0004\bo\u0010VR\u0019\u0010\f\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bp\u0010^\u001a\u0004\bq\u0010VR\u0019\u0010\r\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\br\u0010^\u001a\u0004\bh\u0010VR\u0017\u0010\u000f\u001a\u00020\u000e8\u0006¢\u0006\f\n\u0004\bs\u0010t\u001a\u0004\bu\u0010vR\u0017\u0010\u0010\u001a\u00020\u000e8\u0006¢\u0006\f\n\u0004\bw\u0010t\u001a\u0004\bx\u0010vR\u0017\u0010\u0011\u001a\u00020\u000e8\u0006¢\u0006\f\n\u0004\by\u0010t\u001a\u0004\bz\u0010vR\u0017\u0010\u0012\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b{\u0010^\u001a\u0004\b|\u0010VR\u0017\u0010\u0013\u001a\u00020\u000e8\u0006¢\u0006\f\n\u0004\b}\u0010t\u001a\u0004\b~\u0010vR\u0018\u0010\u0014\u001a\u00020\u00028\u0006¢\u0006\r\n\u0004\b\u007f\u0010^\u001a\u0005\b\u0080\u0001\u0010VR\u0018\u0010\u0015\u001a\u00020\u00028\u0006¢\u0006\r\n\u0005\b\u0081\u0001\u0010^\u001a\u0004\by\u0010VR\u0018\u0010\u0016\u001a\u00020\u00028\u0006¢\u0006\r\n\u0005\b\u0080\u0001\u0010^\u001a\u0004\bw\u0010VR\u0018\u0010\u0017\u001a\u00020\u000e8\u0006¢\u0006\r\n\u0004\bi\u0010t\u001a\u0005\b\u0082\u0001\u0010vR\u0018\u0010\u0018\u001a\u00020\u00028\u0006¢\u0006\r\n\u0004\bx\u0010^\u001a\u0005\b\u0083\u0001\u0010VR\u0018\u0010\u0019\u001a\u00020\u00028\u0006¢\u0006\r\n\u0004\bu\u0010^\u001a\u0005\b\u0084\u0001\u0010VR&\u0010\u001b\u001a\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00020\u001a8\u0006¢\u0006\u000f\n\u0005\b|\u0010\u0085\u0001\u001a\u0006\b\u0086\u0001\u0010\u0087\u0001R\u0019\u0010\u001c\u001a\u00020\u000e8\u0006¢\u0006\u000e\n\u0005\b\u0088\u0001\u0010t\u001a\u0005\b\u0089\u0001\u0010vR\u0018\u0010\u001d\u001a\u00020\u000e8\u0006¢\u0006\r\n\u0004\bk\u0010t\u001a\u0005\b\u008a\u0001\u0010vR\u0018\u0010\u001e\u001a\u00020\u00028\u0006¢\u0006\r\n\u0004\bc\u0010^\u001a\u0005\b\u008b\u0001\u0010VR\u0019\u0010\u001f\u001a\u00020\u00028\u0006¢\u0006\u000e\n\u0005\b\u008c\u0001\u0010^\u001a\u0005\b\u008d\u0001\u0010VR'\u0010!\u001a\u000e\u0012\u0004\u0012\u00020 \u0012\u0004\u0012\u00020\u00020\u001a8\u0006¢\u0006\u0010\n\u0006\b\u008a\u0001\u0010\u0085\u0001\u001a\u0006\b\u008e\u0001\u0010\u0087\u0001R'\u0010\"\u001a\u000e\u0012\u0004\u0012\u00020 \u0012\u0004\u0012\u00020\u00020\u001a8\u0006¢\u0006\u0010\n\u0006\b\u008b\u0001\u0010\u0085\u0001\u001a\u0006\b\u008f\u0001\u0010\u0087\u0001R\u0019\u0010#\u001a\u00020\u00028\u0006¢\u0006\u000e\n\u0005\b\u0089\u0001\u0010^\u001a\u0005\b\u0090\u0001\u0010VR\u0019\u0010$\u001a\u00020\u00028\u0006¢\u0006\u000e\n\u0005\b\u008d\u0001\u0010^\u001a\u0005\b\u0091\u0001\u0010VR\u001b\u0010%\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b\u0092\u0001\u0010^\u001a\u0005\b\u0081\u0001\u0010VR\u0019\u0010&\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b~\u0010^\u001a\u0004\b\u007f\u0010VR\u001a\u0010'\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\r\n\u0005\b\u0093\u0001\u0010^\u001a\u0004\b{\u0010VR\u001a\u0010(\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\r\n\u0005\b\u0082\u0001\u0010^\u001a\u0004\b}\u0010VR\u001b\u0010)\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b\u0094\u0001\u0010^\u001a\u0005\b\u0095\u0001\u0010VR\u001b\u0010*\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b\u0096\u0001\u0010^\u001a\u0005\b\u0097\u0001\u0010VR\u001b\u0010+\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b\u0098\u0001\u0010^\u001a\u0005\b\u0099\u0001\u0010VR\u001b\u0010,\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b\u009a\u0001\u0010^\u001a\u0005\b\u009b\u0001\u0010VR\u001b\u0010-\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b\u009c\u0001\u0010^\u001a\u0005\b\u0098\u0001\u0010VR\u001b\u0010.\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b\u009d\u0001\u0010^\u001a\u0005\b\u009c\u0001\u0010VR\u001b\u0010/\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b\u009e\u0001\u0010^\u001a\u0005\b\u0096\u0001\u0010VR\u001a\u00100\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\r\n\u0005\b\u009f\u0001\u0010^\u001a\u0004\br\u0010VR\u001a\u00101\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\r\n\u0005\b \u0001\u0010^\u001a\u0004\bp\u0010VR\u001a\u00102\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\r\n\u0005\b¡\u0001\u0010^\u001a\u0004\bn\u0010VR\u001a\u00103\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\r\n\u0005\b¢\u0001\u0010^\u001a\u0004\bj\u0010VR\u001b\u00104\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b£\u0001\u0010^\u001a\u0005\b¤\u0001\u0010VR\u001b\u00105\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b\u0086\u0001\u0010^\u001a\u0005\b¥\u0001\u0010VR\u001b\u00106\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b¦\u0001\u0010^\u001a\u0005\b§\u0001\u0010VR\u001b\u00107\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b¨\u0001\u0010^\u001a\u0005\b©\u0001\u0010VR\u001b\u00108\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\bª\u0001\u0010^\u001a\u0005\b \u0001\u0010VR\u001b\u00109\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b«\u0001\u0010^\u001a\u0005\b\u009f\u0001\u0010VR\u001b\u0010:\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b©\u0001\u0010^\u001a\u0005\b\u009e\u0001\u0010VR\u001b\u0010;\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b§\u0001\u0010^\u001a\u0005\b\u009d\u0001\u0010VR\u001b\u0010<\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b¬\u0001\u0010^\u001a\u0005\b\u00ad\u0001\u0010VR\u001b\u0010=\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b®\u0001\u0010^\u001a\u0005\b¯\u0001\u0010VR\u001b\u0010>\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b¥\u0001\u0010^\u001a\u0005\b°\u0001\u0010VR\u001b\u0010?\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b±\u0001\u0010^\u001a\u0005\b²\u0001\u0010VR\u001b\u0010@\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b¤\u0001\u0010^\u001a\u0005\b£\u0001\u0010VR\u001a\u0010A\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\r\n\u0004\be\u0010^\u001a\u0005\b¢\u0001\u0010VR\u001b\u0010B\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b³\u0001\u0010^\u001a\u0005\b\u0094\u0001\u0010VR\u001b\u0010C\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b´\u0001\u0010^\u001a\u0005\b¡\u0001\u0010VR\u001b\u0010D\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\bµ\u0001\u0010^\u001a\u0005\b¶\u0001\u0010VR\u001b\u0010E\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\u000e\n\u0005\b¶\u0001\u0010^\u001a\u0005\bµ\u0001\u0010VR\u001a\u0010F\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\r\n\u0005\b\u0099\u0001\u0010^\u001a\u0004\b]\u0010VR#\u0010I\u001a\n\u0012\u0004\u0012\u00020H\u0018\u00010G8\u0006¢\u0006\u0010\n\u0006\b·\u0001\u0010¸\u0001\u001a\u0006\b´\u0001\u0010¹\u0001¨\u0006º\u0001"}, d2 = {"Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input$Strings;", "Landroid/os/Parcelable;", "", Title.type, "prompt", "choose", "instructionsDisclaimer", "selectPageNavBarTitle", "capturePageNavBarTitle", "checkPageNavBarTitle", "pendingPageNavBarTitle", "requestPageNavBarTitle", "reviewUploadPageNavBarTitle", "autoClassificationPageNavBarTitle", "Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;", "captureScreenTitle", "captureScreenDescription", "scanInstructions", "capturing", "confirmCapture", "captureDisclaimer", "buttonSubmit", "buttonRetake", "confirmCaptureTitle", "processingTitle", "processingDescription", "", "idClassToName", "chooseCaptureMethodTitle", "chooseCaptureMethodBody", "chooseCaptureMethodCameraButton", "chooseCaptureMethodUploadButton", "Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig$b;", "reviewSelectedImageTitle", "reviewSelectedImageBody", "reviewSelectedImageConfirmButton", "reviewSelectedImageChooseAnotherButton", "cameraPermissionsTitle", "cameraPermissionsPrompt", "cameraPermissionsAllowButtonText", "cameraPermissionsCancelButtonText", "microphonePermissionsTitle", "microphonePermissionsPrompt", "microphonePermissionsAllowButtonText", "microphonePermissionsCancelButtonText", "hintHoldStill", "hintLowLight", "helpButtonText", "barcodeHelpModalTitle", "barcodeHelpModalPrompt", "barcodeHelpModalHints", "barcodeHelpModalContinueButtonText", "idFrontHelpModalTitle", "idFrontHelpModalPrompt", "idFrontHelpModalHints", "idFrontHelpModalContinueButtonText", "idBackHelpModalTitle", "idBackHelpModalPrompt", "idBackHelpModalHints", "idBackHelpModalContinueButtonText", "staticCaptureTipsTitle", "staticCaptureTipsSubtext", "unableToClassifyDocumentTitle", "unableToClassifyDocumentContinueButtonText", "idClassRejectedTitle", "idClassRejectedContinueButtonText", "countryInputTitle", "idClassInputTitle", "manualClassificationTitle", "manualClassificationContinueButtonText", "autoClassificationCaptureTipText", "", "Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$GovernmentId$LocalizationOverride;", "localizationOverrides", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Ljava/lang/String;", "getTitle", "b", "x0", "c", "z", "d", "h0", "e", "Z0", "f", "t", "g", "y", "h", "s0", "i", "y0", "j", "Q0", "k", "l", "Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;", "v", "()Lcom/withpersona/sdk2/inquiry/governmentid/OverridableText;", "m", "u", "n", "X0", "o", "w", "p", "G", "q", "s", "r", "I", "u0", "t0", "Ljava/util/Map;", "V", "()Ljava/util/Map;", "x", "D", "B", "C", "A", "E", "I0", "C0", "G0", "E0", "F", "H", "J", "r0", "K", "q0", "L", "m0", "M", "o0", "N", "O", "P", "Q", "R", "S", "T", "U", "g0", "e0", "W", "b0", "X", "a0", "Y", "Z", "c0", "e1", "d0", "a1", "g1", "f0", "f1", "i0", "j0", "k0", "l0", "n0", "Ljava/util/List;", "()Ljava/util/List;", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
         public static final /* data */ class Strings implements Parcelable {
 
             @NotNull
@@ -720,15 +720,9 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
             }
 
             @NotNull
-            /* JADX INFO: renamed from: A, reason: from getter */
+            /* JADX INFO: renamed from: B, reason: from getter */
             public final OverridableText getChooseCaptureMethodBody() {
                 return this.chooseCaptureMethodBody;
-            }
-
-            @NotNull
-            /* JADX INFO: renamed from: B0, reason: from getter */
-            public final String getReviewSelectedImageConfirmButton() {
-                return this.reviewSelectedImageConfirmButton;
             }
 
             @NotNull
@@ -739,7 +733,7 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
 
             @NotNull
             public final Map<IdConfig.b, String> C0() {
-                return this.reviewSelectedImageTitle;
+                return this.reviewSelectedImageBody;
             }
 
             @NotNull
@@ -755,15 +749,21 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
             }
 
             @NotNull
+            /* JADX INFO: renamed from: E0, reason: from getter */
+            public final String getReviewSelectedImageChooseAnotherButton() {
+                return this.reviewSelectedImageChooseAnotherButton;
+            }
+
+            @NotNull
             /* JADX INFO: renamed from: G, reason: from getter */
             public final OverridableText getConfirmCapture() {
                 return this.confirmCapture;
             }
 
-            @Nullable
+            @NotNull
             /* JADX INFO: renamed from: G0, reason: from getter */
-            public final String getReviewUploadPageNavBarTitle() {
-                return this.reviewUploadPageNavBarTitle;
+            public final String getReviewSelectedImageConfirmButton() {
+                return this.reviewSelectedImageConfirmButton;
             }
 
             @NotNull
@@ -773,9 +773,8 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
             }
 
             @NotNull
-            /* JADX INFO: renamed from: I0, reason: from getter */
-            public final OverridableText getScanInstructions() {
-                return this.scanInstructions;
+            public final Map<IdConfig.b, String> I0() {
+                return this.reviewSelectedImageTitle;
             }
 
             @Nullable
@@ -791,21 +790,9 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
             }
 
             @Nullable
-            /* JADX INFO: renamed from: K0, reason: from getter */
-            public final String getSelectPageNavBarTitle() {
-                return this.selectPageNavBarTitle;
-            }
-
-            @Nullable
             /* JADX INFO: renamed from: L, reason: from getter */
             public final String getHintHoldStill() {
                 return this.hintHoldStill;
-            }
-
-            @Nullable
-            /* JADX INFO: renamed from: M0, reason: from getter */
-            public final String getStaticCaptureTipsSubtext() {
-                return this.staticCaptureTipsSubtext;
             }
 
             @Nullable
@@ -833,6 +820,12 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
             }
 
             @Nullable
+            /* JADX INFO: renamed from: Q0, reason: from getter */
+            public final String getReviewUploadPageNavBarTitle() {
+                return this.reviewUploadPageNavBarTitle;
+            }
+
+            @Nullable
             /* JADX INFO: renamed from: R, reason: from getter */
             public final String getIdBackHelpModalTitle() {
                 return this.idBackHelpModalTitle;
@@ -856,21 +849,21 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
                 return this.idClassRejectedTitle;
             }
 
-            @Nullable
-            /* JADX INFO: renamed from: U0, reason: from getter */
-            public final String getStaticCaptureTipsTitle() {
-                return this.staticCaptureTipsTitle;
-            }
-
             @NotNull
             public final Map<String, String> V() {
                 return this.idClassToName;
             }
 
+            @NotNull
+            /* JADX INFO: renamed from: X0, reason: from getter */
+            public final OverridableText getScanInstructions() {
+                return this.scanInstructions;
+            }
+
             @Nullable
-            /* JADX INFO: renamed from: W, reason: from getter */
-            public final String getIdFrontHelpModalContinueButtonText() {
-                return this.idFrontHelpModalContinueButtonText;
+            /* JADX INFO: renamed from: Z0, reason: from getter */
+            public final String getSelectPageNavBarTitle() {
+                return this.selectPageNavBarTitle;
             }
 
             @Nullable
@@ -880,38 +873,38 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
             }
 
             @Nullable
+            /* JADX INFO: renamed from: a0, reason: from getter */
+            public final String getIdFrontHelpModalContinueButtonText() {
+                return this.idFrontHelpModalContinueButtonText;
+            }
+
+            @Nullable
+            /* JADX INFO: renamed from: a1, reason: from getter */
+            public final String getStaticCaptureTipsSubtext() {
+                return this.staticCaptureTipsSubtext;
+            }
+
+            @Nullable
             /* JADX INFO: renamed from: b0, reason: from getter */
             public final String getIdFrontHelpModalHints() {
                 return this.idFrontHelpModalHints;
             }
 
-            @Nullable
-            /* JADX INFO: renamed from: b1, reason: from getter */
-            public final String getUnableToClassifyDocumentContinueButtonText() {
-                return this.unableToClassifyDocumentContinueButtonText;
+            @Override // android.os.Parcelable
+            public final int describeContents() {
+                return 0;
             }
 
             @Nullable
-            /* JADX INFO: renamed from: c0, reason: from getter */
+            /* JADX INFO: renamed from: e0, reason: from getter */
             public final String getIdFrontHelpModalPrompt() {
                 return this.idFrontHelpModalPrompt;
             }
 
             @Nullable
-            /* JADX INFO: renamed from: d0, reason: from getter */
-            public final String getIdFrontHelpModalTitle() {
-                return this.idFrontHelpModalTitle;
-            }
-
-            @Nullable
-            /* JADX INFO: renamed from: d1, reason: from getter */
-            public final String getUnableToClassifyDocumentTitle() {
-                return this.unableToClassifyDocumentTitle;
-            }
-
-            @Override // android.os.Parcelable
-            public final int describeContents() {
-                return 0;
+            /* JADX INFO: renamed from: e1, reason: from getter */
+            public final String getStaticCaptureTipsTitle() {
+                return this.staticCaptureTipsTitle;
             }
 
             public boolean equals(@Nullable Object other) {
@@ -932,15 +925,27 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
             }
 
             @Nullable
+            /* JADX INFO: renamed from: f1, reason: from getter */
+            public final String getUnableToClassifyDocumentContinueButtonText() {
+                return this.unableToClassifyDocumentContinueButtonText;
+            }
+
+            @Nullable
             /* JADX INFO: renamed from: g, reason: from getter */
             public final String getBarcodeHelpModalContinueButtonText() {
                 return this.barcodeHelpModalContinueButtonText;
             }
 
-            @NotNull
+            @Nullable
             /* JADX INFO: renamed from: g0, reason: from getter */
-            public final String getInstructionsDisclaimer() {
-                return this.instructionsDisclaimer;
+            public final String getIdFrontHelpModalTitle() {
+                return this.idFrontHelpModalTitle;
+            }
+
+            @Nullable
+            /* JADX INFO: renamed from: g1, reason: from getter */
+            public final String getUnableToClassifyDocumentTitle() {
+                return this.unableToClassifyDocumentTitle;
             }
 
             @NotNull
@@ -948,9 +953,10 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
                 return this.title;
             }
 
-            @Nullable
-            public final List<NextStep.GovernmentId.LocalizationOverride> h0() {
-                return this.localizationOverrides;
+            @NotNull
+            /* JADX INFO: renamed from: h0, reason: from getter */
+            public final String getInstructionsDisclaimer() {
+                return this.instructionsDisclaimer;
             }
 
             public int hashCode() {
@@ -1054,9 +1060,8 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
             }
 
             @Nullable
-            /* JADX INFO: renamed from: j0, reason: from getter */
-            public final String getManualClassificationContinueButtonText() {
-                return this.manualClassificationContinueButtonText;
+            public final List<NextStep.GovernmentId.LocalizationOverride> j0() {
+                return this.localizationOverrides;
             }
 
             @Nullable
@@ -1067,6 +1072,12 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
 
             @Nullable
             /* JADX INFO: renamed from: k0, reason: from getter */
+            public final String getManualClassificationContinueButtonText() {
+                return this.manualClassificationContinueButtonText;
+            }
+
+            @Nullable
+            /* JADX INFO: renamed from: l0, reason: from getter */
             public final String getManualClassificationTitle() {
                 return this.manualClassificationTitle;
             }
@@ -1090,12 +1101,6 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
             }
 
             @Nullable
-            /* JADX INFO: renamed from: n0, reason: from getter */
-            public final String getMicrophonePermissionsCancelButtonText() {
-                return this.microphonePermissionsCancelButtonText;
-            }
-
-            @Nullable
             /* JADX INFO: renamed from: o, reason: from getter */
             public final String getCameraPermissionsAllowButtonText() {
                 return this.cameraPermissionsAllowButtonText;
@@ -1103,20 +1108,14 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
 
             @Nullable
             /* JADX INFO: renamed from: o0, reason: from getter */
-            public final String getMicrophonePermissionsPrompt() {
-                return this.microphonePermissionsPrompt;
+            public final String getMicrophonePermissionsCancelButtonText() {
+                return this.microphonePermissionsCancelButtonText;
             }
 
             @Nullable
             /* JADX INFO: renamed from: p, reason: from getter */
             public final String getCameraPermissionsCancelButtonText() {
                 return this.cameraPermissionsCancelButtonText;
-            }
-
-            @Nullable
-            /* JADX INFO: renamed from: p0, reason: from getter */
-            public final String getMicrophonePermissionsTitle() {
-                return this.microphonePermissionsTitle;
             }
 
             @Nullable
@@ -1127,8 +1126,8 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
 
             @Nullable
             /* JADX INFO: renamed from: q0, reason: from getter */
-            public final String getPendingPageNavBarTitle() {
-                return this.pendingPageNavBarTitle;
+            public final String getMicrophonePermissionsPrompt() {
+                return this.microphonePermissionsPrompt;
             }
 
             @Nullable
@@ -1137,22 +1136,34 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
                 return this.cameraPermissionsTitle;
             }
 
+            @Nullable
+            /* JADX INFO: renamed from: r0, reason: from getter */
+            public final String getMicrophonePermissionsTitle() {
+                return this.microphonePermissionsTitle;
+            }
+
             @NotNull
             /* JADX INFO: renamed from: s, reason: from getter */
             public final String getCaptureDisclaimer() {
                 return this.captureDisclaimer;
             }
 
-            @NotNull
+            @Nullable
             /* JADX INFO: renamed from: s0, reason: from getter */
-            public final String getProcessingDescription() {
-                return this.processingDescription;
+            public final String getPendingPageNavBarTitle() {
+                return this.pendingPageNavBarTitle;
             }
 
             @Nullable
             /* JADX INFO: renamed from: t, reason: from getter */
             public final String getCapturePageNavBarTitle() {
                 return this.capturePageNavBarTitle;
+            }
+
+            @NotNull
+            /* JADX INFO: renamed from: t0, reason: from getter */
+            public final String getProcessingDescription() {
+                return this.processingDescription;
             }
 
             @NotNull
@@ -1179,21 +1190,9 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
             }
 
             @NotNull
-            /* JADX INFO: renamed from: v0, reason: from getter */
-            public final String getPrompt() {
-                return this.prompt;
-            }
-
-            @NotNull
             /* JADX INFO: renamed from: w, reason: from getter */
             public final String getCapturing() {
                 return this.capturing;
-            }
-
-            @Nullable
-            /* JADX INFO: renamed from: w0, reason: from getter */
-            public final String getRequestPageNavBarTitle() {
-                return this.requestPageNavBarTitle;
             }
 
             @Override // android.os.Parcelable
@@ -1292,21 +1291,22 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
                 }
             }
 
+            @NotNull
+            /* JADX INFO: renamed from: x0, reason: from getter */
+            public final String getPrompt() {
+                return this.prompt;
+            }
+
             @Nullable
-            /* JADX INFO: renamed from: x, reason: from getter */
+            /* JADX INFO: renamed from: y, reason: from getter */
             public final String getCheckPageNavBarTitle() {
                 return this.checkPageNavBarTitle;
             }
 
-            @NotNull
-            public final Map<IdConfig.b, String> x0() {
-                return this.reviewSelectedImageBody;
-            }
-
-            @NotNull
+            @Nullable
             /* JADX INFO: renamed from: y0, reason: from getter */
-            public final String getReviewSelectedImageChooseAnotherButton() {
-                return this.reviewSelectedImageChooseAnotherButton;
+            public final String getRequestPageNavBarTitle() {
+                return this.requestPageNavBarTitle;
             }
 
             @NotNull
@@ -1342,7 +1342,7 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
                 for (int i13 = 0; i13 != i12; i13++) {
                     arrayList2.add(CaptureOptionNativeMobile.valueOf(parcel.readString()));
                 }
-                return new Input(string, string2, arrayList, string3, string4, string5, z10, z11, arrayList2, (StepStyles.GovernmentIdStepStyle) parcel.readParcelable(Input.class.getClassLoader()), Strings.CREATOR.createFromParcel(parcel), parcel.readInt(), parcel.readString(), parcel.readString(), parcel.readLong(), parcel.readInt() != 0 ? z10 : false, parcel.readInt() == 0 ? null : Integer.valueOf(parcel.readInt()), VideoCaptureConfig.CREATOR.createFromParcel(parcel), (NextStep.GovernmentId.AssetConfig) parcel.readParcelable(r19.getClassLoader()), parcel.readInt() != 0, AutoClassificationConfig.CREATOR.createFromParcel(parcel), StyleElements.Axis.valueOf(parcel.readString()), PendingPageTextPosition.valueOf(parcel.readString()), parcel.readInt() == 0 ? null : DigitalIdConfig.CREATOR.createFromParcel(parcel), parcel.readInt() != 0, parcel.readInt() != 0 ? Integer.valueOf(parcel.readInt()) : null, io.d.valueOf(parcel.readString()), parcel.readString(), (CustomPendingPage) parcel.readParcelable(Input.class.getClassLoader()));
+                return new Input(string, string2, arrayList, string3, string4, string5, z10, z11, arrayList2, (StepStyles.GovernmentIdStepStyle) parcel.readParcelable(Input.class.getClassLoader()), Strings.CREATOR.createFromParcel(parcel), parcel.readInt(), parcel.readString(), parcel.readString(), parcel.readLong(), parcel.readInt() != 0 ? z10 : false, parcel.readInt() == 0 ? null : Integer.valueOf(parcel.readInt()), VideoCaptureConfig.CREATOR.createFromParcel(parcel), (NextStep.GovernmentId.AssetConfig) parcel.readParcelable(r19.getClassLoader()), parcel.readInt() != 0, AutoClassificationConfig.CREATOR.createFromParcel(parcel), StyleElements.Axis.valueOf(parcel.readString()), PendingPageTextPosition.valueOf(parcel.readString()), parcel.readInt() == 0 ? null : DigitalIdConfig.CREATOR.createFromParcel(parcel), parcel.readInt() != 0, parcel.readInt() != 0 ? Integer.valueOf(parcel.readInt()) : null, go.d.valueOf(parcel.readString()), parcel.readString(), (CustomPendingPage) parcel.readParcelable(Input.class.getClassLoader()));
             }
 
             @Override // android.os.Parcelable.Creator
@@ -1353,7 +1353,7 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        public Input(@NotNull String sessionToken, @Nullable String str, @NotNull List<IdConfig> enabledIdClasses, @NotNull String inquiryId, @NotNull String fromStep, @NotNull String fromComponent, boolean z10, boolean z11, @NotNull List<? extends CaptureOptionNativeMobile> enabledCaptureOptionsNativeMobile, @Nullable StepStyles.GovernmentIdStepStyle governmentIdStepStyle, @NotNull Strings strings, int i10, @NotNull String fieldKeyDocument, @NotNull String fieldKeyIdClass, long j10, boolean z12, @Nullable Integer num, @NotNull VideoCaptureConfig videoCaptureConfig, @NotNull NextStep.GovernmentId.AssetConfig assetConfig, boolean z13, @NotNull AutoClassificationConfig autoClassificationConfig, @NotNull StyleElements.Axis reviewCaptureButtonsAxis, @NotNull PendingPageTextPosition pendingPageTextVerticalPosition, @Nullable DigitalIdConfig digitalIdConfig, boolean z14, @Nullable Integer num2, @NotNull io.d designVersion, @Nullable String str2, @Nullable CustomPendingPage customPendingPage) {
+        public Input(@NotNull String sessionToken, @Nullable String str, @NotNull List<IdConfig> enabledIdClasses, @NotNull String inquiryId, @NotNull String fromStep, @NotNull String fromComponent, boolean z10, boolean z11, @NotNull List<? extends CaptureOptionNativeMobile> enabledCaptureOptionsNativeMobile, @Nullable StepStyles.GovernmentIdStepStyle governmentIdStepStyle, @NotNull Strings strings, int i10, @NotNull String fieldKeyDocument, @NotNull String fieldKeyIdClass, long j10, boolean z12, @Nullable Integer num, @NotNull VideoCaptureConfig videoCaptureConfig, @NotNull NextStep.GovernmentId.AssetConfig assetConfig, boolean z13, @NotNull AutoClassificationConfig autoClassificationConfig, @NotNull StyleElements.Axis reviewCaptureButtonsAxis, @NotNull PendingPageTextPosition pendingPageTextVerticalPosition, @Nullable DigitalIdConfig digitalIdConfig, boolean z14, @Nullable Integer num2, @NotNull go.d designVersion, @Nullable String str2, @Nullable CustomPendingPage customPendingPage) {
             Intrinsics.checkNotNullParameter(sessionToken, "sessionToken");
             Intrinsics.checkNotNullParameter(enabledIdClasses, "enabledIdClasses");
             Intrinsics.checkNotNullParameter(inquiryId, "inquiryId");
@@ -1401,7 +1401,7 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         }
 
         @NotNull
-        /* JADX INFO: renamed from: A, reason: from getter */
+        /* JADX INFO: renamed from: B, reason: from getter */
         public final PendingPageTextPosition getPendingPageTextVerticalPosition() {
             return this.pendingPageTextVerticalPosition;
         }
@@ -1486,7 +1486,7 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
 
         @NotNull
         /* JADX INFO: renamed from: m, reason: from getter */
-        public final io.d getDesignVersion() {
+        public final go.d getDesignVersion() {
             return this.designVersion;
         }
 
@@ -1609,14 +1609,14 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
 
         @NotNull
         /* JADX INFO: renamed from: x, reason: from getter */
-        public final String getInquiryId() {
-            return this.inquiryId;
+        public final String getSessionToken() {
+            return this.sessionToken;
         }
 
         @NotNull
         /* JADX INFO: renamed from: y, reason: from getter */
-        public final String getSessionToken() {
-            return this.sessionToken;
+        public final String getInquiryId() {
+            return this.inquiryId;
         }
 
         /* JADX INFO: renamed from: z, reason: from getter */
@@ -1630,18 +1630,18 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
 
         /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.governmentid.GovernmentIdWorkflow$a$a, reason: collision with other inner class name */
         @Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\bÆ\n\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0010\u0010\u0005\u001a\u00020\u0004HÖ\u0001¢\u0006\u0004\b\u0005\u0010\u0006J\u0010\u0010\b\u001a\u00020\u0007HÖ\u0001¢\u0006\u0004\b\b\u0010\tJ\u001a\u0010\r\u001a\u00020\f2\b\u0010\u000b\u001a\u0004\u0018\u00010\nHÖ\u0003¢\u0006\u0004\b\r\u0010\u000e¨\u0006\u000f"}, d2 = {"Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$a$a;", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$a;", "<init>", "()V", "", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-        public static final /* data */ class C0192a extends a {
+        public static final /* data */ class C0195a extends a {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final C0192a f10660a = new C0192a();
+            public static final C0195a f10741a = new C0195a();
 
-            public C0192a() {
+            public C0195a() {
                 super(null);
             }
 
             public boolean equals(@Nullable Object other) {
-                return this == other || (other instanceof C0192a);
+                return this == other || (other instanceof C0195a);
             }
 
             public int hashCode() {
@@ -1659,7 +1659,7 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final b f10661a = new b();
+            public static final b f10742a = new b();
 
             public b() {
                 super(null);
@@ -1705,7 +1705,7 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final d f10663a = new d();
+            public static final d f10744a = new d();
 
             public d() {
                 super(null);
@@ -1737,7 +1737,7 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
     public static final /* synthetic */ class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f10664a;
+        public static final /* synthetic */ int[] f10745a;
 
         static {
             int[] iArr = new int[IdConfig.b.values().length];
@@ -1761,35 +1761,40 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
                 iArr[IdConfig.b.PassportSignature.ordinal()] = 5;
             } catch (NoSuchFieldError unused5) {
             }
-            f10664a = iArr;
+            f10745a = iArr;
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.governmentid.GovernmentIdWorkflow$render$2", f = "GovernmentIdWorkflow.kt", l = {157}, m = "invokeSuspend")
-    public static final class c extends pt.m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.governmentid.GovernmentIdWorkflow$render$2", f = "GovernmentIdWorkflow.kt", l = {157}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class c extends nt.m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f10665t;
+        public int f10746t;
 
-        public c(nt.b<? super c> bVar) {
+        public c(lt.b<? super c> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             return GovernmentIdWorkflow.this.new c(bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            Object objE = ot.c.e();
-            int i10 = this.f10665t;
+            Object objE = mt.c.e();
+            int i10 = this.f10746t;
             if (i10 == 0) {
-                jt.o.b(obj);
-                fn.j jVar = fn.j.f16915a;
+                gt.o.b(obj);
+                dn.j jVar = dn.j.f15111a;
                 Context context = GovernmentIdWorkflow.this.applicationContext;
-                this.f10665t = 1;
+                this.f10746t = 1;
                 if (jVar.b(context, this) == objE) {
                     return objE;
                 }
@@ -1797,170 +1802,170 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
                 if (i10 != 1) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                 }
-                jt.o.b(obj);
+                gt.o.b(obj);
             }
             GovernmentIdWorkflow.this.videoCaptureHelper.a();
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            return Unit.f22938a;
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.governmentid.GovernmentIdWorkflow$render$3", f = "GovernmentIdWorkflow.kt", l = {}, m = "invokeSuspend")
-    public static final class d extends pt.m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.governmentid.GovernmentIdWorkflow$render$3", f = "GovernmentIdWorkflow.kt", l = {}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class d extends nt.m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f10667t;
+        public int f10748t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public final /* synthetic */ ym.k<Input, GovernmentIdState, a, Object>.a f10668u;
+        public final /* synthetic */ wm.k<Input, GovernmentIdState, a, Object>.a f10749u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ GovernmentIdWorkflow f10669v;
+        public final /* synthetic */ GovernmentIdWorkflow f10750v;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         /* JADX WARN: Multi-variable type inference failed */
-        public d(ym.k<? super Input, GovernmentIdState, ? extends a, ? extends Object>.a aVar, GovernmentIdWorkflow governmentIdWorkflow, nt.b<? super d> bVar) {
+        public d(wm.k<? super Input, GovernmentIdState, ? extends a, ? extends Object>.a aVar, GovernmentIdWorkflow governmentIdWorkflow, lt.b<? super d> bVar) {
             super(2, bVar);
-            this.f10668u = aVar;
-            this.f10669v = governmentIdWorkflow;
+            this.f10749u = aVar;
+            this.f10750v = governmentIdWorkflow;
         }
 
-        public static final Unit r(GovernmentIdWorkflow governmentIdWorkflow, r.c cVar) {
+        public static final Unit n(GovernmentIdWorkflow governmentIdWorkflow, r.c cVar) {
             governmentIdWorkflow.c1(cVar);
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return new d(this.f10668u, this.f10669v, bVar);
-        }
-
-        @Override // pt.a
-        public final Object invokeSuspend(Object obj) {
-            ot.c.e();
-            if (this.f10667t != 0) {
-                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-            }
-            jt.o.b(obj);
-            ym.h<r<? super Input, GovernmentIdState, ? extends a>> hVarD = this.f10668u.d();
-            final GovernmentIdWorkflow governmentIdWorkflow = this.f10669v;
-            hVarD.a(z.d(governmentIdWorkflow, null, new Function1() { // from class: io.k1
-                @Override // kotlin.jvm.functions.Function1
-                public final Object invoke(Object obj2) {
-                    return GovernmentIdWorkflow.d.r(governmentIdWorkflow, (ym.r.c) obj2);
-                }
-            }, 1, null));
-            return Unit.f22483a;
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return new d(this.f10749u, this.f10750v, bVar);
         }
 
         @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((d) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((d) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
+        public final Object invokeSuspend(Object obj) {
+            mt.c.e();
+            if (this.f10748t != 0) {
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            }
+            gt.o.b(obj);
+            wm.h<r<? super Input, GovernmentIdState, ? extends a>> hVarD = this.f10749u.d();
+            final GovernmentIdWorkflow governmentIdWorkflow = this.f10750v;
+            hVarD.a(z.d(governmentIdWorkflow, null, new Function1() { // from class: go.k1
+                @Override // kotlin.jvm.functions.Function1
+                public final Object invoke(Object obj2) {
+                    return GovernmentIdWorkflow.d.n(governmentIdWorkflow, (wm.r.c) obj2);
+                }
+            }, 1, null));
+            return Unit.f22938a;
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.governmentid.GovernmentIdWorkflow$renderScreen$1", f = "GovernmentIdWorkflow.kt", l = {}, m = "invokeSuspend")
-    public static final class e extends pt.m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.governmentid.GovernmentIdWorkflow$renderScreen$1", f = "GovernmentIdWorkflow.kt", l = {}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class e extends nt.m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f10670t;
+        public int f10751t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public final /* synthetic */ Input f10671u;
+        public final /* synthetic */ Input f10752u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ GovernmentIdState f10672v;
+        public final /* synthetic */ GovernmentIdState f10753v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public final /* synthetic */ GovernmentIdWorkflow f10673w;
+        public final /* synthetic */ GovernmentIdWorkflow f10754w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public final /* synthetic */ ym.k<Input, GovernmentIdState, a, Object>.a f10674x;
+        public final /* synthetic */ wm.k<Input, GovernmentIdState, a, Object>.a f10755x;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         /* JADX WARN: Multi-variable type inference failed */
-        public e(Input input, GovernmentIdState governmentIdState, GovernmentIdWorkflow governmentIdWorkflow, ym.k<? super Input, GovernmentIdState, ? extends a, ? extends Object>.a aVar, nt.b<? super e> bVar) {
+        public e(Input input, GovernmentIdState governmentIdState, GovernmentIdWorkflow governmentIdWorkflow, wm.k<? super Input, GovernmentIdState, ? extends a, ? extends Object>.a aVar, lt.b<? super e> bVar) {
             super(2, bVar);
-            this.f10671u = input;
-            this.f10672v = governmentIdState;
-            this.f10673w = governmentIdWorkflow;
-            this.f10674x = aVar;
+            this.f10752u = input;
+            this.f10753v = governmentIdState;
+            this.f10754w = governmentIdWorkflow;
+            this.f10755x = aVar;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return new e(this.f10671u, this.f10672v, this.f10673w, this.f10674x, bVar);
-        }
-
-        @Override // pt.a
-        public final Object invokeSuspend(Object obj) {
-            ot.c.e();
-            if (this.f10670t != 0) {
-                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-            }
-            jt.o.b(obj);
-            if (this.f10671u.o().size() == 1) {
-                GovernmentIdState governmentIdState = this.f10672v;
-                GovernmentIdWorkflow governmentIdWorkflow = this.f10673w;
-                ym.k<Input, GovernmentIdState, a, Object>.a aVar = this.f10674x;
-                Input input = this.f10671u;
-                GovernmentIdWorkflow.Z0(governmentIdState, governmentIdWorkflow, aVar, input, (IdConfig) CollectionsKt.d0(input.o()), false);
-            }
-            return Unit.f22483a;
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return new e(this.f10752u, this.f10753v, this.f10754w, this.f10755x, bVar);
         }
 
         @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((e) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((e) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
+        public final Object invokeSuspend(Object obj) {
+            mt.c.e();
+            if (this.f10751t != 0) {
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            }
+            gt.o.b(obj);
+            if (this.f10752u.o().size() == 1) {
+                GovernmentIdState governmentIdState = this.f10753v;
+                GovernmentIdWorkflow governmentIdWorkflow = this.f10754w;
+                wm.k<Input, GovernmentIdState, a, Object>.a aVar = this.f10755x;
+                Input input = this.f10752u;
+                GovernmentIdWorkflow.Z0(governmentIdState, governmentIdWorkflow, aVar, input, (IdConfig) CollectionsKt.d0(input.o()), false);
+            }
+            return Unit.f22938a;
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.governmentid.GovernmentIdWorkflow$renderScreen$24", f = "GovernmentIdWorkflow.kt", l = {774}, m = "invokeSuspend")
-    public static final class f extends pt.m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.governmentid.GovernmentIdWorkflow$renderScreen$24", f = "GovernmentIdWorkflow.kt", l = {774}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class f extends nt.m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f10675t;
+        public int f10756t;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ ym.k<Input, GovernmentIdState, a, Object>.a f10677v;
+        public final /* synthetic */ wm.k<Input, GovernmentIdState, a, Object>.a f10758v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public final /* synthetic */ GovernmentIdState f10678w;
+        public final /* synthetic */ GovernmentIdState f10759w;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         /* JADX WARN: Multi-variable type inference failed */
-        public f(ym.k<? super Input, GovernmentIdState, ? extends a, ? extends Object>.a aVar, GovernmentIdState governmentIdState, nt.b<? super f> bVar) {
+        public f(wm.k<? super Input, GovernmentIdState, ? extends a, ? extends Object>.a aVar, GovernmentIdState governmentIdState, lt.b<? super f> bVar) {
             super(2, bVar);
-            this.f10677v = aVar;
-            this.f10678w = governmentIdState;
+            this.f10758v = aVar;
+            this.f10759w = governmentIdState;
         }
 
-        public static final Unit r(GovernmentIdState governmentIdState, r.c cVar) {
+        public static final Unit n(GovernmentIdState governmentIdState, r.c cVar) {
             cVar.e(governmentIdState);
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return GovernmentIdWorkflow.this.new f(this.f10677v, this.f10678w, bVar);
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return GovernmentIdWorkflow.this.new f(this.f10758v, this.f10759w, bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((f) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            Object objE = ot.c.e();
-            int i10 = this.f10675t;
+            Object objE = mt.c.e();
+            int i10 = this.f10756t;
             if (i10 == 0) {
-                jt.o.b(obj);
-                fn.j jVar = fn.j.f16915a;
+                gt.o.b(obj);
+                dn.j jVar = dn.j.f15111a;
                 Context context = GovernmentIdWorkflow.this.applicationContext;
-                this.f10675t = 1;
+                this.f10756t = 1;
                 if (jVar.b(context, this) == objE) {
                     return objE;
                 }
@@ -1968,24 +1973,19 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
                 if (i10 != 1) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                 }
-                jt.o.b(obj);
+                gt.o.b(obj);
             }
             GovernmentIdWorkflow.this.videoCaptureHelper.a();
-            ym.h<r<? super Input, GovernmentIdState, ? extends a>> hVarD = this.f10677v.d();
+            wm.h<r<? super Input, GovernmentIdState, ? extends a>> hVarD = this.f10758v.d();
             GovernmentIdWorkflow governmentIdWorkflow = GovernmentIdWorkflow.this;
-            final GovernmentIdState governmentIdState = this.f10678w;
-            hVarD.a(z.d(governmentIdWorkflow, null, new Function1() { // from class: io.l1
+            final GovernmentIdState governmentIdState = this.f10759w;
+            hVarD.a(z.d(governmentIdWorkflow, null, new Function1() { // from class: go.l1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj2) {
-                    return GovernmentIdWorkflow.f.r(governmentIdState, (ym.r.c) obj2);
+                    return GovernmentIdWorkflow.f.n(governmentIdState, (wm.r.c) obj2);
                 }
             }, 1, null));
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((f) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            return Unit.f22938a;
         }
     }
 
@@ -1993,40 +1993,40 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
     public static final /* synthetic */ class g extends kotlin.jvm.internal.a implements Function1<IdConfig, Unit> {
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public final /* synthetic */ GovernmentIdState f10679h;
+        public final /* synthetic */ GovernmentIdState f10760h;
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ GovernmentIdWorkflow f10680i;
+        public final /* synthetic */ GovernmentIdWorkflow f10761i;
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public final /* synthetic */ ym.k<Input, GovernmentIdState, a, Object>.a f10681j;
+        public final /* synthetic */ wm.k<Input, GovernmentIdState, a, Object>.a f10762j;
 
         /* JADX INFO: renamed from: k, reason: collision with root package name */
-        public final /* synthetic */ Input f10682k;
+        public final /* synthetic */ Input f10763k;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         /* JADX WARN: Multi-variable type inference failed */
-        public g(GovernmentIdState governmentIdState, GovernmentIdWorkflow governmentIdWorkflow, ym.k<? super Input, GovernmentIdState, ? extends a, ? extends Object>.a aVar, Input input) {
+        public g(GovernmentIdState governmentIdState, GovernmentIdWorkflow governmentIdWorkflow, wm.k<? super Input, GovernmentIdState, ? extends a, ? extends Object>.a aVar, Input input) {
             super(1, Intrinsics.a.class, "selectIdClass", "renderScreen$selectIdClass(Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdState;Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow;Lcom/squareup/workflow1/StatefulWorkflow$RenderContext;Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input;Lcom/withpersona/sdk2/inquiry/governmentid/IdConfig;Z)V", 0);
-            this.f10679h = governmentIdState;
-            this.f10680i = governmentIdWorkflow;
-            this.f10681j = aVar;
-            this.f10682k = input;
+            this.f10760h = governmentIdState;
+            this.f10761i = governmentIdWorkflow;
+            this.f10762j = aVar;
+            this.f10763k = input;
         }
 
         public final void a(IdConfig p8) {
             Intrinsics.checkNotNullParameter(p8, "p0");
-            GovernmentIdWorkflow.a1(this.f10679h, this.f10680i, this.f10681j, this.f10682k, p8, false, 32, null);
+            GovernmentIdWorkflow.a1(this.f10760h, this.f10761i, this.f10762j, this.f10763k, p8, false, 32, null);
         }
 
         @Override // kotlin.jvm.functions.Function1
         public /* bridge */ /* synthetic */ Unit invoke(IdConfig idConfig) {
             a(idConfig);
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
     }
 
-    public GovernmentIdWorkflow(@NotNull Context applicationContext, @NotNull s imageLoader, @NotNull po.c.a submitVerificationWorkerFactory, @NotNull com.withpersona.sdk2.inquiry.governmentid.e documentSelectWorker, @NotNull uo.j localVideoCaptureRenderer, @NotNull v webRtcRenderer, @NotNull t0 captureRenderer, @NotNull AutoClassifyWorker.b autoClassifyWorkerFactory, @NotNull jo.n autoClassificationRenderer, @NotNull ln.a cameraStatsManager, @NotNull uq.a navigationStateManager, @NotNull pq.c externalEventLogger, @NotNull TrackingEventsLogger trackingEventsLogger, @NotNull com.withpersona.sdk2.inquiry.shared.inquiryTheme.a themeManager) {
+    public GovernmentIdWorkflow(@NotNull Context applicationContext, @NotNull s imageLoader, @NotNull no.c.a submitVerificationWorkerFactory, @NotNull com.withpersona.sdk2.inquiry.governmentid.e documentSelectWorker, @NotNull so.j localVideoCaptureRenderer, @NotNull v webRtcRenderer, @NotNull t0 captureRenderer, @NotNull AutoClassifyWorker.b autoClassifyWorkerFactory, @NotNull ho.n autoClassificationRenderer, @NotNull jn.a cameraStatsManager, @NotNull sq.a navigationStateManager, @NotNull nq.c externalEventLogger, @NotNull TrackingEventsLogger trackingEventsLogger, @NotNull com.withpersona.sdk2.inquiry.shared.inquiryTheme.a themeManager) {
         Intrinsics.checkNotNullParameter(applicationContext, "applicationContext");
         Intrinsics.checkNotNullParameter(imageLoader, "imageLoader");
         Intrinsics.checkNotNullParameter(submitVerificationWorkerFactory, "submitVerificationWorkerFactory");
@@ -2055,29 +2055,29 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         this.externalEventLogger = externalEventLogger;
         this.trackingEventsLogger = trackingEventsLogger;
         this.themeManager = themeManager;
-        this.videoCaptureHelper = new uo.l(null, 1, null);
+        this.videoCaptureHelper = new so.l(null, 1, null);
     }
 
-    public static final Unit A0(final GovernmentIdWorkflow governmentIdWorkflow, final ym.k.a aVar, final GovernmentIdState governmentIdState, final Input input, final CaptureConfig captureConfig) {
+    public static final Unit A0(final GovernmentIdWorkflow governmentIdWorkflow, final wm.k.a aVar, final GovernmentIdState governmentIdState, final Input input, final CaptureConfig captureConfig) {
         TrackingEventsLogger.logGovernmentIdButtonClickEvent$default(governmentIdWorkflow.trackingEventsLogger, new GovernmentIdButtonEventData(GovIdCaptureButtonType.RETAKE_PHOTO, null, 2, null), false, 2, null);
-        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: io.k0
+        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: go.k0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return GovernmentIdWorkflow.B0(governmentIdState, input, captureConfig, aVar, governmentIdWorkflow, (ym.r.c) obj);
+                return GovernmentIdWorkflow.B0(governmentIdState, input, captureConfig, aVar, governmentIdWorkflow, (wm.r.c) obj);
             }
         }, 1, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit B0(GovernmentIdState governmentIdState, Input input, CaptureConfig captureConfig, final ym.k.a aVar, final GovernmentIdWorkflow governmentIdWorkflow, r.c action) {
+    public static final Unit B0(GovernmentIdState governmentIdState, Input input, CaptureConfig captureConfig, final wm.k.a aVar, final GovernmentIdWorkflow governmentIdWorkflow, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         Object objC = action.c();
         GovernmentIdState governmentIdState2 = objC instanceof GovernmentIdState ? (GovernmentIdState) objC : null;
         if (governmentIdState2 == null) {
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
         GovernmentIdState.ReviewCapturedImage reviewCapturedImage = (GovernmentIdState.ReviewCapturedImage) governmentIdState;
-        GovernmentIdState.WaitForAutocapture waitForAutocapture = new GovernmentIdState.WaitForAutocapture(reviewCapturedImage.getCurrentPart(), ((GovernmentIdState) action.c()).E(), captureConfig, n.O((Input) action.b(), reviewCapturedImage.getCurrentPart().getSide()), governmentIdState2.D(), governmentIdState2.getPartIndex(), n.x(action, false), x.Disconnected, input.getVideoCaptureConfig().getWebRtcJwt(), null, false, false, reviewCapturedImage.getCountryCode(), null, new Function0() { // from class: io.y0
+        GovernmentIdState.WaitForAutocapture waitForAutocapture = new GovernmentIdState.WaitForAutocapture(reviewCapturedImage.getCurrentPart(), ((GovernmentIdState) action.c()).E(), captureConfig, n.O((Input) action.b(), reviewCapturedImage.getCurrentPart().getSide()), governmentIdState2.D(), governmentIdState2.getPartIndex(), n.x(action, false), x.Disconnected, input.getVideoCaptureConfig().getWebRtcJwt(), null, false, false, reviewCapturedImage.getCountryCode(), null, new Function0() { // from class: go.y0
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
                 return GovernmentIdWorkflow.C0(aVar, governmentIdWorkflow);
@@ -2085,17 +2085,17 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         }, 11776, null);
         waitForAutocapture.G(true);
         action.e(waitForAutocapture);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit C0(ym.k.a aVar, final GovernmentIdWorkflow governmentIdWorkflow) {
-        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: io.c1
+    public static final Unit C0(wm.k.a aVar, final GovernmentIdWorkflow governmentIdWorkflow) {
+        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: go.c1
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return GovernmentIdWorkflow.D0(this.f20606a, (ym.r.c) obj);
+                return GovernmentIdWorkflow.D0(this.f18663a, (wm.r.c) obj);
             }
         }, 1, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit D0(GovernmentIdWorkflow governmentIdWorkflow, r.c action) {
@@ -2105,113 +2105,113 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         if (waitForAutocapture != null) {
             action.e(GovernmentIdState.WaitForAutocapture.L(waitForAutocapture, null, null, null, null, null, 0, null, governmentIdWorkflow.videoCaptureHelper.d() ? x.Connected : x.Disconnected, null, null, false, false, null, null, null, 32639, null));
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit E0(ym.h hVar) {
-        hVar.a(a.b.f10661a);
-        return Unit.f22483a;
+    public static final Unit E0(wm.h hVar) {
+        hVar.a(a.b.f10742a);
+        return Unit.f22938a;
     }
 
-    public static final Unit F0(ym.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow, final GovernmentIdState governmentIdState) {
-        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: io.v0
+    public static final Unit F0(wm.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow, final GovernmentIdState governmentIdState) {
+        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: go.v0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return GovernmentIdWorkflow.G0(governmentIdState, (ym.r.c) obj);
+                return GovernmentIdWorkflow.G0(governmentIdState, (wm.r.c) obj);
             }
         }, 1, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit G0(GovernmentIdState governmentIdState, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         action.e(GovernmentIdState.ReviewCapturedImage.O((GovernmentIdState.ReviewCapturedImage) governmentIdState, null, null, null, null, null, 0, null, null, null, false, null, 1791, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit H0(Input input, GovernmentIdState governmentIdState, ym.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow) {
+    public static final Unit H0(Input input, GovernmentIdState governmentIdState, wm.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow) {
         p.h(input, (GovernmentIdState.ReviewImageState) governmentIdState, aVar, governmentIdWorkflow.videoCaptureHelper, governmentIdWorkflow.trackingEventsLogger);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit I0(ym.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow) {
+    public static final Unit I0(wm.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow) {
         n.S(aVar, governmentIdWorkflow.videoCaptureHelper);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit J0(ym.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow) {
+    public static final Unit J0(wm.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow) {
         n.S(aVar, governmentIdWorkflow.videoCaptureHelper);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit K0(ym.k.a aVar) {
+    public static final Unit K0(wm.k.a aVar) {
         n.v(aVar);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit L0(ym.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow, final GovernmentIdState governmentIdState) {
-        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: io.l0
+    public static final Unit L0(wm.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow, final GovernmentIdState governmentIdState) {
+        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: go.l0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return GovernmentIdWorkflow.M0(governmentIdState, (ym.r.c) obj);
+                return GovernmentIdWorkflow.M0(governmentIdState, (wm.r.c) obj);
             }
         }, 1, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit M0(GovernmentIdState governmentIdState, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         action.e(GovernmentIdState.ReviewSelectedImage.O((GovernmentIdState.ReviewSelectedImage) governmentIdState, null, null, null, null, null, null, 0, null, null, null, false, null, 3583, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit N0(ym.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow) {
+    public static final Unit N0(wm.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow) {
         n.S(aVar, governmentIdWorkflow.videoCaptureHelper);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final r O0(final GovernmentIdWorkflow governmentIdWorkflow, final ym.k.a aVar, final po.c.b it) {
+    public static final r O0(final GovernmentIdWorkflow governmentIdWorkflow, final wm.k.a aVar, final no.c.b it) {
         final String string;
         Intrinsics.checkNotNullParameter(it, "it");
-        if (it instanceof po.c.b.C0502c) {
-            return z.d(governmentIdWorkflow, null, new Function1() { // from class: io.n0
+        if (it instanceof no.c.b.C0469c) {
+            return z.d(governmentIdWorkflow, null, new Function1() { // from class: go.n0
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return GovernmentIdWorkflow.P0(this.f20701a, aVar, (ym.r.c) obj);
+                    return GovernmentIdWorkflow.P0(this.f18758a, aVar, (wm.r.c) obj);
                 }
             }, 1, null);
         }
-        if (!(it instanceof po.c.b.C0501b)) {
-            if (it instanceof po.c.b.a) {
-                return z.d(governmentIdWorkflow, null, new Function1() { // from class: io.p0
+        if (!(it instanceof no.c.b.C0468b)) {
+            if (it instanceof no.c.b.a) {
+                return z.d(governmentIdWorkflow, null, new Function1() { // from class: go.p0
                     @Override // kotlin.jvm.functions.Function1
                     public final Object invoke(Object obj) {
-                        return GovernmentIdWorkflow.R0(it, governmentIdWorkflow, aVar, (ym.r.c) obj);
+                        return GovernmentIdWorkflow.R0(it, governmentIdWorkflow, aVar, (wm.r.c) obj);
                     }
                 }, 1, null);
             }
-            throw new jt.l();
+            throw new gt.l();
         }
-        po.c.b.C0501b c0501b = (po.c.b.C0501b) it;
-        if (c0501b.getCause() instanceof GenericFileUploadErrorResponse.DocumentErrorResponse.GovernmentIdDimensionSizeError) {
-            string = governmentIdWorkflow.applicationContext.getString(vp.g.f33405t, Integer.valueOf(((GenericFileUploadErrorResponse.DocumentErrorResponse.GovernmentIdDimensionSizeError) c0501b.getCause()).getDetails().getMinDimensionSize()));
+        no.c.b.C0468b c0468b = (no.c.b.C0468b) it;
+        if (c0468b.getCause() instanceof GenericFileUploadErrorResponse.DocumentErrorResponse.GovernmentIdDimensionSizeError) {
+            string = governmentIdWorkflow.applicationContext.getString(tp.g.f32541t, Integer.valueOf(((GenericFileUploadErrorResponse.DocumentErrorResponse.GovernmentIdDimensionSizeError) c0468b.getCause()).getDetails().getMinDimensionSize()));
             Intrinsics.checkNotNullExpressionValue(string, "getString(...)");
         } else {
-            string = governmentIdWorkflow.applicationContext.getString(vp.g.f33406u);
+            string = governmentIdWorkflow.applicationContext.getString(tp.g.f32542u);
             Intrinsics.checkNotNullExpressionValue(string, "getString(...)");
         }
-        return z.d(governmentIdWorkflow, null, new Function1() { // from class: io.o0
+        return z.d(governmentIdWorkflow, null, new Function1() { // from class: go.o0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return GovernmentIdWorkflow.Q0(string, (ym.r.c) obj);
+                return GovernmentIdWorkflow.Q0(string, (wm.r.c) obj);
             }
         }, 1, null);
     }
 
-    public static final Unit P0(GovernmentIdWorkflow governmentIdWorkflow, ym.k.a aVar, r.c action) {
+    public static final Unit P0(GovernmentIdWorkflow governmentIdWorkflow, wm.k.a aVar, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
-        governmentIdWorkflow.b1(aVar, a.d.f10663a);
-        return Unit.f22483a;
+        governmentIdWorkflow.b1(aVar, a.d.f10744a);
+        return Unit.f22938a;
     }
 
     public static final Unit Q0(String str, r.c action) {
@@ -2220,60 +2220,60 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         if (backState != null) {
             action.e(backState.u(str));
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit R0(po.c.b bVar, GovernmentIdWorkflow governmentIdWorkflow, ym.k.a aVar, r.c action) {
+    public static final Unit R0(no.c.b bVar, GovernmentIdWorkflow governmentIdWorkflow, wm.k.a aVar, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         GovernmentIdState backState = ((GovernmentIdState) action.c()).getBackState();
-        po.c.b.a aVar2 = (po.c.b.a) bVar;
+        no.c.b.a aVar2 = (no.c.b.a) bVar;
         if ((aVar2.getCause() instanceof InternalErrorInfo.NetworkErrorInfo) && ((InternalErrorInfo.NetworkErrorInfo) aVar2.getCause()).isRecoverable() && backState != null) {
-            String string = governmentIdWorkflow.applicationContext.getString(vp.g.B);
+            String string = governmentIdWorkflow.applicationContext.getString(tp.g.B);
             Intrinsics.checkNotNullExpressionValue(string, "getString(...)");
             action.e(backState.u(string));
         } else {
             governmentIdWorkflow.b1(aVar, new a.c(aVar2.getCause()));
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit S0(GovernmentIdWorkflow governmentIdWorkflow, ym.k.a aVar) {
-        governmentIdWorkflow.b1(aVar, a.b.f10661a);
-        return Unit.f22483a;
+    public static final Unit S0(GovernmentIdWorkflow governmentIdWorkflow, wm.k.a aVar) {
+        governmentIdWorkflow.b1(aVar, a.b.f10742a);
+        return Unit.f22938a;
     }
 
-    public static final Unit T0(GovernmentIdWorkflow governmentIdWorkflow, ym.k.a aVar) {
-        governmentIdWorkflow.b1(aVar, a.b.f10661a);
-        return Unit.f22483a;
+    public static final Unit T0(GovernmentIdWorkflow governmentIdWorkflow, wm.k.a aVar) {
+        governmentIdWorkflow.b1(aVar, a.b.f10742a);
+        return Unit.f22938a;
     }
 
-    public static final Unit U0(ym.k.a aVar) {
+    public static final Unit U0(wm.k.a aVar) {
         n.v(aVar);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit V0(ym.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow, final GovernmentIdState governmentIdState) {
-        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: io.x0
+    public static final Unit V0(wm.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow, final GovernmentIdState governmentIdState) {
+        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: go.x0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return GovernmentIdWorkflow.W0(governmentIdState, (ym.r.c) obj);
+                return GovernmentIdWorkflow.W0(governmentIdState, (wm.r.c) obj);
             }
         }, 1, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit W0(GovernmentIdState governmentIdState, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         action.e(GovernmentIdState.ShowInstructions.J((GovernmentIdState.ShowInstructions) governmentIdState, null, null, null, null, 0, null, null, null, 127, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final r<Input, GovernmentIdState, a> X0(IdPart.SideIdPart sideIdPart, final GovernmentIdState governmentIdState, GovernmentIdWorkflow governmentIdWorkflow, String str, final String str2) {
-        final GovernmentId.GovernmentIdImage governmentIdImage = new GovernmentId.GovernmentIdImage(kotlin.collections.o.d(new Frame(str, null, 2, null)), n.e0(sideIdPart.getSide()), com.withpersona.sdk2.inquiry.governmentid.c.b(((GovernmentIdState.ChooseCaptureMethod) governmentIdState).getCaptureConfig()), GovernmentId.a.f10450c, null, null, 32, null);
-        return z.d(governmentIdWorkflow, null, new Function1() { // from class: io.z0
+        final GovernmentId.GovernmentIdImage governmentIdImage = new GovernmentId.GovernmentIdImage(kotlin.collections.o.d(new Frame(str, null, 2, null)), n.e0(sideIdPart.getSide()), com.withpersona.sdk2.inquiry.governmentid.c.b(((GovernmentIdState.ChooseCaptureMethod) governmentIdState).getCaptureConfig()), GovernmentId.a.f10531c, null, null, 32, null);
+        return z.d(governmentIdWorkflow, null, new Function1() { // from class: go.z0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return GovernmentIdWorkflow.Y0(governmentIdState, governmentIdImage, str2, (ym.r.c) obj);
+                return GovernmentIdWorkflow.Y0(governmentIdState, governmentIdImage, str2, (wm.r.c) obj);
             }
         }, 1, null);
     }
@@ -2283,98 +2283,98 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         Object objC = action.c();
         GovernmentIdState.ChooseCaptureMethod chooseCaptureMethod = objC instanceof GovernmentIdState.ChooseCaptureMethod ? (GovernmentIdState.ChooseCaptureMethod) objC : null;
         if (chooseCaptureMethod == null) {
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
         GovernmentIdState.ChooseCaptureMethod chooseCaptureMethod2 = chooseCaptureMethod;
         GovernmentIdState.ChooseCaptureMethod chooseCaptureMethod3 = (GovernmentIdState.ChooseCaptureMethod) governmentIdState;
         action.e(new GovernmentIdState.ReviewSelectedImage(chooseCaptureMethod3.getCurrentPart(), chooseCaptureMethod3.E(), chooseCaptureMethod3.getCaptureConfig(), governmentIdImage, str, chooseCaptureMethod2.D(), chooseCaptureMethod2.getPartIndex(), n.y(action, false, 1, null), null, null, false, chooseCaptureMethod3.getCountryCode(), 1792, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final void Z0(GovernmentIdState governmentIdState, GovernmentIdWorkflow governmentIdWorkflow, ym.k<? super Input, GovernmentIdState, ? extends a, ? extends Object>.a aVar, Input input, IdConfig idConfig, boolean z10) {
+    public static final void Z0(GovernmentIdState governmentIdState, GovernmentIdWorkflow governmentIdWorkflow, wm.k<? super Input, GovernmentIdState, ? extends a, ? extends Object>.a aVar, Input input, IdConfig idConfig, boolean z10) {
         GovernmentIdState.ShowInstructions showInstructions = (GovernmentIdState.ShowInstructions) governmentIdState;
         n.W(showInstructions, aVar, input, null, idConfig, governmentIdWorkflow.videoCaptureHelper, new CameraProperties(null, null, null, 0, 0, 31, null), (3584 & 128) != 0 ? true : z10, (3584 & Barcode.FORMAT_QR_CODE) != 0 ? showInstructions.D() : idConfig.f(), (3584 & Barcode.FORMAT_UPC_A) != 0 ? showInstructions.getPartIndex() : 0, (3584 & Barcode.FORMAT_UPC_E) != 0 ? null : null, (3584 & Barcode.FORMAT_PDF417) != 0 ? showInstructions.getCountryCode() : null);
     }
 
-    public static /* synthetic */ void a1(GovernmentIdState governmentIdState, GovernmentIdWorkflow governmentIdWorkflow, ym.k.a aVar, Input input, IdConfig idConfig, boolean z10, int i10, Object obj) {
+    public static /* synthetic */ void a1(GovernmentIdState governmentIdState, GovernmentIdWorkflow governmentIdWorkflow, wm.k.a aVar, Input input, IdConfig idConfig, boolean z10, int i10, Object obj) {
         if ((i10 & 32) != 0) {
             z10 = true;
         }
         Z0(governmentIdState, governmentIdWorkflow, aVar, input, idConfig, z10);
     }
 
-    public static final r k0(final GovernmentIdWorkflow governmentIdWorkflow, IdPart.SideIdPart sideIdPart, final GovernmentIdState governmentIdState, final ym.k.a aVar, final com.withpersona.sdk2.inquiry.governmentid.e.a it) {
+    public static final r k0(final GovernmentIdWorkflow governmentIdWorkflow, IdPart.SideIdPart sideIdPart, final GovernmentIdState governmentIdState, final wm.k.a aVar, final com.withpersona.sdk2.inquiry.governmentid.e.a it) {
         Intrinsics.checkNotNullParameter(it, "it");
         if (it instanceof com.withpersona.sdk2.inquiry.governmentid.e.a.c) {
             com.withpersona.sdk2.inquiry.governmentid.e.a.c cVar = (com.withpersona.sdk2.inquiry.governmentid.e.a.c) it;
             return X0(sideIdPart, governmentIdState, governmentIdWorkflow, cVar.getAbsoluteFilePath(), cVar.getFileName());
         }
-        if (Intrinsics.c(it, com.withpersona.sdk2.inquiry.governmentid.e.a.C0195a.f10885a)) {
-            return z.d(governmentIdWorkflow, null, new Function1() { // from class: io.r0
+        if (Intrinsics.c(it, com.withpersona.sdk2.inquiry.governmentid.e.a.C0198a.f10966a)) {
+            return z.d(governmentIdWorkflow, null, new Function1() { // from class: go.r0
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return GovernmentIdWorkflow.m0(governmentIdState, (ym.r.c) obj);
+                    return GovernmentIdWorkflow.m0(governmentIdState, (wm.r.c) obj);
                 }
             }, 1, null);
         }
         if (it instanceof com.withpersona.sdk2.inquiry.governmentid.e.a.b) {
-            return z.d(governmentIdWorkflow, null, new Function1() { // from class: io.t0
+            return z.d(governmentIdWorkflow, null, new Function1() { // from class: go.t0
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return GovernmentIdWorkflow.l0(this.f20787a, aVar, it, (ym.r.c) obj);
+                    return GovernmentIdWorkflow.l0(this.f18844a, aVar, it, (wm.r.c) obj);
                 }
             }, 1, null);
         }
-        throw new jt.l();
+        throw new gt.l();
     }
 
-    public static final Unit l0(GovernmentIdWorkflow governmentIdWorkflow, ym.k.a aVar, com.withpersona.sdk2.inquiry.governmentid.e.a aVar2, r.c action) {
+    public static final Unit l0(GovernmentIdWorkflow governmentIdWorkflow, wm.k.a aVar, com.withpersona.sdk2.inquiry.governmentid.e.a aVar2, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         governmentIdWorkflow.b1(aVar, new a.c(((com.withpersona.sdk2.inquiry.governmentid.e.a.b) aVar2).getCause()));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit m0(GovernmentIdState governmentIdState, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         action.e(GovernmentIdState.ChooseCaptureMethod.J((GovernmentIdState.ChooseCaptureMethod) governmentIdState, null, null, null, 0, null, null, false, null, null, 447, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit n0(final ym.k.a aVar, final GovernmentIdWorkflow governmentIdWorkflow, final GovernmentIdState governmentIdState, final Input input) {
-        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: io.m0
+    public static final Unit n0(final wm.k.a aVar, final GovernmentIdWorkflow governmentIdWorkflow, final GovernmentIdState governmentIdState, final Input input) {
+        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: go.m0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return GovernmentIdWorkflow.o0(governmentIdState, input, aVar, governmentIdWorkflow, (ym.r.c) obj);
+                return GovernmentIdWorkflow.o0(governmentIdState, input, aVar, governmentIdWorkflow, (wm.r.c) obj);
             }
         }, 1, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit o0(GovernmentIdState governmentIdState, Input input, final ym.k.a aVar, final GovernmentIdWorkflow governmentIdWorkflow, r.c action) {
+    public static final Unit o0(GovernmentIdState governmentIdState, Input input, final wm.k.a aVar, final GovernmentIdWorkflow governmentIdWorkflow, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         Object objC = action.c();
         GovernmentIdState.ChooseCaptureMethod chooseCaptureMethod = objC instanceof GovernmentIdState.ChooseCaptureMethod ? (GovernmentIdState.ChooseCaptureMethod) objC : null;
         if (chooseCaptureMethod == null) {
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
         GovernmentIdState.ChooseCaptureMethod chooseCaptureMethod2 = (GovernmentIdState.ChooseCaptureMethod) governmentIdState;
-        action.e(new GovernmentIdState.WaitForAutocapture(chooseCaptureMethod2.getCurrentPart(), chooseCaptureMethod2.E(), chooseCaptureMethod2.getCaptureConfig(), n.O(input, chooseCaptureMethod2.getCurrentPart().getSide()), chooseCaptureMethod.D(), chooseCaptureMethod.getPartIndex(), n.y(action, false, 1, null), x.Disconnected, input.getVideoCaptureConfig().getWebRtcJwt(), null, false, false, chooseCaptureMethod2.getCountryCode(), null, new Function0() { // from class: io.a1
+        action.e(new GovernmentIdState.WaitForAutocapture(chooseCaptureMethod2.getCurrentPart(), chooseCaptureMethod2.E(), chooseCaptureMethod2.getCaptureConfig(), n.O(input, chooseCaptureMethod2.getCurrentPart().getSide()), chooseCaptureMethod.D(), chooseCaptureMethod.getPartIndex(), n.y(action, false, 1, null), x.Disconnected, input.getVideoCaptureConfig().getWebRtcJwt(), null, false, false, chooseCaptureMethod2.getCountryCode(), null, new Function0() { // from class: go.a1
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
                 return GovernmentIdWorkflow.p0(aVar, governmentIdWorkflow);
             }
         }, 11776, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit p0(ym.k.a aVar, final GovernmentIdWorkflow governmentIdWorkflow) {
-        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: io.b1
+    public static final Unit p0(wm.k.a aVar, final GovernmentIdWorkflow governmentIdWorkflow) {
+        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: go.b1
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return GovernmentIdWorkflow.q0(this.f20602a, (ym.r.c) obj);
+                return GovernmentIdWorkflow.q0(this.f18659a, (wm.r.c) obj);
             }
         }, 1, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit q0(GovernmentIdWorkflow governmentIdWorkflow, r.c action) {
@@ -2384,71 +2384,71 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         if (waitForAutocapture != null) {
             action.e(GovernmentIdState.WaitForAutocapture.L(waitForAutocapture, null, null, null, null, null, 0, null, governmentIdWorkflow.videoCaptureHelper.d() ? x.Connected : x.Disconnected, null, null, false, false, null, null, null, 32639, null));
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit r0(ym.k.a aVar, final GovernmentIdWorkflow governmentIdWorkflow, final GovernmentIdState governmentIdState) {
-        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: io.u0
+    public static final Unit r0(wm.k.a aVar, final GovernmentIdWorkflow governmentIdWorkflow, final GovernmentIdState governmentIdState) {
+        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: go.u0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return GovernmentIdWorkflow.s0(this.f20792a, governmentIdState, (ym.r.c) obj);
+                return GovernmentIdWorkflow.s0(this.f18849a, governmentIdState, (wm.r.c) obj);
             }
         }, 1, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit s0(GovernmentIdWorkflow governmentIdWorkflow, GovernmentIdState governmentIdState, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         governmentIdWorkflow.documentSelectWorker.g();
         action.e(GovernmentIdState.ChooseCaptureMethod.J((GovernmentIdState.ChooseCaptureMethod) governmentIdState, null, null, null, 0, null, null, true, null, null, 447, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit t0(ym.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow) {
+    public static final Unit t0(wm.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow) {
         n.S(aVar, governmentIdWorkflow.videoCaptureHelper);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit u0(ym.k.a aVar) {
+    public static final Unit u0(wm.k.a aVar) {
         n.v(aVar);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final void v0(final ym.k.a aVar, final GovernmentIdWorkflow governmentIdWorkflow, final a it) {
+    public static final void v0(final wm.k.a aVar, final GovernmentIdWorkflow governmentIdWorkflow, final a it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: io.w0
+        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: go.w0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return GovernmentIdWorkflow.w0(this.f20805a, aVar, it, (ym.r.c) obj);
+                return GovernmentIdWorkflow.w0(this.f18862a, aVar, it, (wm.r.c) obj);
             }
         }, 1, null));
     }
 
-    public static final Unit w0(GovernmentIdWorkflow governmentIdWorkflow, ym.k.a aVar, a aVar2, r.c action) {
+    public static final Unit w0(GovernmentIdWorkflow governmentIdWorkflow, wm.k.a aVar, a aVar2, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         governmentIdWorkflow.b1(aVar, aVar2);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit x0(ym.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow, final GovernmentIdState governmentIdState) {
-        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: io.q0
+    public static final Unit x0(wm.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow, final GovernmentIdState governmentIdState) {
+        aVar.d().a(z.d(governmentIdWorkflow, null, new Function1() { // from class: go.q0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return GovernmentIdWorkflow.y0(governmentIdState, (ym.r.c) obj);
+                return GovernmentIdWorkflow.y0(governmentIdState, (wm.r.c) obj);
             }
         }, 1, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit y0(GovernmentIdState governmentIdState, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         action.e(GovernmentIdState.ChooseCaptureMethod.J((GovernmentIdState.ChooseCaptureMethod) governmentIdState, null, null, null, 0, null, null, false, null, null, 255, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit z0(Input input, GovernmentIdState governmentIdState, ym.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow) {
+    public static final Unit z0(Input input, GovernmentIdState governmentIdState, wm.k.a aVar, GovernmentIdWorkflow governmentIdWorkflow) {
         p.h(input, (GovernmentIdState.ReviewImageState) governmentIdState, aVar, governmentIdWorkflow.videoCaptureHelper, governmentIdWorkflow.trackingEventsLogger);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public final String Z(Input.Strings strings, IdConfig.b bVar, String str, String str2) {
@@ -2456,7 +2456,7 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         if (strA != null) {
             return strA;
         }
-        String string = this.applicationContext.getString(vp.g.f33403r);
+        String string = this.applicationContext.getString(tp.g.f32539r);
         Intrinsics.checkNotNullExpressionValue(string, "getString(...)");
         return string;
     }
@@ -2466,7 +2466,7 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         if (strA != null) {
             return strA;
         }
-        String string = this.applicationContext.getString(vp.g.f33404s);
+        String string = this.applicationContext.getString(tp.g.f32540s);
         Intrinsics.checkNotNullExpressionValue(string, "getString(...)");
         return string;
     }
@@ -2476,16 +2476,16 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         return strA == null ? "" : strA;
     }
 
-    public final void b1(ym.k<? super Input, GovernmentIdState, ? extends a, ? extends Object>.a context, a output) {
+    public final void b1(wm.k<? super Input, GovernmentIdState, ? extends a, ? extends Object>.a context, a output) {
         n.b0(context, output, this.videoCaptureHelper);
     }
 
     public final String c0(Input.Strings strings, IdConfig.b bVar) {
-        String str = strings.x0().get(bVar);
+        String str = strings.C0().get(bVar);
         if (str != null) {
             return str;
         }
-        String string = this.applicationContext.getString(vp.g.f33407v);
+        String string = this.applicationContext.getString(tp.g.f32543v);
         Intrinsics.checkNotNullExpressionValue(string, "getString(...)");
         return string;
     }
@@ -2495,16 +2495,16 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
     }
 
     public final String d0(Input.Strings strings, IdConfig.b bVar) {
-        String str = strings.C0().get(bVar);
+        String str = strings.I0().get(bVar);
         if (str != null) {
             return str;
         }
-        String string = this.applicationContext.getString(vp.g.f33408w);
+        String string = this.applicationContext.getString(tp.g.f32544w);
         Intrinsics.checkNotNullExpressionValue(string, "getString(...)");
         return string;
     }
 
-    @Override // ym.k
+    @Override // wm.k
     @Nullable
     /* JADX INFO: renamed from: d1, reason: merged with bridge method [inline-methods] */
     public Snapshot g(@NotNull GovernmentIdState state) {
@@ -2522,7 +2522,7 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         if ((governmentIdState instanceof GovernmentIdState.ChooseCaptureMethod) || (governmentIdState instanceof GovernmentIdState.ReviewSelectedImage) || (governmentIdState instanceof GovernmentIdState.ShowInstructions) || (governmentIdState instanceof GovernmentIdState.Submit) || (governmentIdState instanceof GovernmentIdState.AutoClassificationError) || (governmentIdState instanceof GovernmentIdState.AutoClassificationManualSelect) || (governmentIdState instanceof GovernmentIdState.RestartStep)) {
             return null;
         }
-        throw new jt.l();
+        throw new gt.l();
     }
 
     public final boolean e1(GovernmentIdState governmentIdState) {
@@ -2532,10 +2532,10 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         if ((governmentIdState instanceof GovernmentIdState.ChooseCaptureMethod) || (governmentIdState instanceof GovernmentIdState.ReviewSelectedImage) || (governmentIdState instanceof GovernmentIdState.ShowInstructions) || (governmentIdState instanceof GovernmentIdState.Submit) || (governmentIdState instanceof GovernmentIdState.ReviewCapturedImage) || (governmentIdState instanceof GovernmentIdState.AutoClassificationError) || (governmentIdState instanceof GovernmentIdState.AutoClassificationManualSelect) || (governmentIdState instanceof GovernmentIdState.RestartStep)) {
             return false;
         }
-        throw new jt.l();
+        throw new gt.l();
     }
 
-    @Override // ym.k
+    @Override // wm.k
     @NotNull
     /* JADX INFO: renamed from: f0, reason: merged with bridge method [inline-methods] */
     public GovernmentIdState d(@NotNull Input props, @Nullable Snapshot snapshot) {
@@ -2543,7 +2543,7 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         GovernmentIdState governmentIdState = null;
         Parcelable parcelable = null;
         if (snapshot != null) {
-            xu.h hVarB = snapshot.b();
+            vu.h hVarB = snapshot.b();
             if (hVarB.I() <= 0) {
                 hVarB = null;
             }
@@ -2568,13 +2568,13 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
             if (props.u()) {
                 return new GovernmentIdState.ChooseCaptureMethod(new IdPart.SideIdPart(IdConfig.b.Front), kotlin.collections.p.k(), kotlin.collections.p.k(), 0, props.getCountryCode(), new CaptureConfig.AutoClassifyConfig(props.getAutoClassificationConfig()), false, null, null, 320, null);
             }
-            return new GovernmentIdState.WaitForAutocapture(new IdPart.SideIdPart(IdConfig.b.Front), kotlin.collections.p.k(), new CaptureConfig.AutoClassifyConfig(props.getAutoClassificationConfig()), props.getDesignVersion() == io.d.K0000 ? Screen.b.a.Hidden : Screen.b.a.Enabled, kotlin.collections.p.k(), 0, null, x.Disconnected, props.getVideoCaptureConfig().getWebRtcJwt(), null, false, false, props.getCountryCode(), null, null, 28160, null);
+            return new GovernmentIdState.WaitForAutocapture(new IdPart.SideIdPart(IdConfig.b.Front), kotlin.collections.p.k(), new CaptureConfig.AutoClassifyConfig(props.getAutoClassificationConfig()), props.getDesignVersion() == go.d.K0000 ? Screen.b.a.Hidden : Screen.b.a.Enabled, kotlin.collections.p.k(), 0, null, x.Disconnected, props.getVideoCaptureConfig().getWebRtcJwt(), null, false, false, props.getCountryCode(), null, null, 28160, null);
         }
         return new GovernmentIdState.ShowInstructions(null, null, null, null, 0, props.getCountryCode(), null, null, 223, null);
     }
 
-    public final wq.m f1(Object obj, GovernmentIdState governmentIdState) {
-        return new wq.m(obj, governmentIdState.getDidGoBack() ? wq.l.SLIDE_OUT : wq.l.SLIDE_IN);
+    public final uq.m f1(Object obj, GovernmentIdState governmentIdState) {
+        return new uq.m(obj, governmentIdState.getDidGoBack() ? uq.l.SLIDE_OUT : uq.l.SLIDE_IN);
     }
 
     public final boolean g0(GovernmentIdState state) {
@@ -2587,14 +2587,14 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         return false;
     }
 
-    public final an.m<Object> h0(Object obj, String str) {
-        return new an.m<>(obj, str);
+    public final ym.m<Object> h0(Object obj, String str) {
+        return new ym.m<>(obj, str);
     }
 
-    @Override // ym.k
+    @Override // wm.k
     @NotNull
     /* JADX INFO: renamed from: i0, reason: merged with bridge method [inline-methods] */
-    public Object f(@NotNull Input renderProps, @NotNull GovernmentIdState renderState, @NotNull ym.k<? super Input, GovernmentIdState, ? extends a, ? extends Object>.a context) {
+    public Object f(@NotNull Input renderProps, @NotNull GovernmentIdState renderState, @NotNull wm.k<? super Input, GovernmentIdState, ? extends a, ? extends Object>.a context) {
         Intrinsics.checkNotNullParameter(renderProps, "renderProps");
         Intrinsics.checkNotNullParameter(renderState, "renderState");
         Intrinsics.checkNotNullParameter(context, "context");
@@ -2606,50 +2606,50 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         if (!e1(renderState)) {
             context.b("close_camera", new c(null));
         }
-        if (!this.videoCaptureHelper.f(renderProps) && jq.g.e(this.applicationContext)) {
+        if (!this.videoCaptureHelper.f(renderProps) && hq.g.e(this.applicationContext)) {
             context.b("output_webrtc_error", new d(context, this, null));
         }
         return f1(objJ0, renderState);
     }
 
     /* JADX WARN: Code duplicated, block: B:76:0x025e  */
-    public final Object j0(final Input renderProps, final GovernmentIdState renderState, final ym.k<? super Input, GovernmentIdState, ? extends a, ? extends Object>.a context) {
-        pq.h takePhoto;
+    public final Object j0(final Input renderProps, final GovernmentIdState renderState, final wm.k<? super Input, GovernmentIdState, ? extends a, ? extends Object>.a context) {
+        nq.h takePhoto;
         RemoteImage idFrontPictograph;
         RemoteImage remoteImage;
         int i10;
-        hu.c<? extends GovernmentIdState> cVarB = d0.b(renderState.getClass());
-        final ym.h<? super a> hVar = new ym.h() { // from class: io.w
-            @Override // ym.h
+        fu.c<? extends GovernmentIdState> cVarB = d0.b(renderState.getClass());
+        final wm.h<? super a> hVar = new wm.h() { // from class: go.w
+            @Override // wm.h
             public final void a(Object obj) {
                 GovernmentIdWorkflow.v0(context, this, (GovernmentIdWorkflow.a) obj);
             }
         };
-        uq.a.d(this.navigationStateManager, renderProps.getBackStepEnabled(), renderProps.getCancelButtonEnabled(), renderProps.getIsEnabled() && !(renderState instanceof GovernmentIdState.Submit), false, 8, null);
+        sq.a.d(this.navigationStateManager, renderProps.getBackStepEnabled(), renderProps.getCancelButtonEnabled(), renderProps.getIsEnabled() && !(renderState instanceof GovernmentIdState.Submit), false, 8, null);
         boolean z10 = renderState instanceof GovernmentIdState.AutoClassificationError;
         if (z10) {
-            takePhoto = pq.h.a.f28820a;
+            takePhoto = nq.h.a.f27414a;
         } else if (renderState instanceof GovernmentIdState.AutoClassificationManualSelect) {
-            takePhoto = pq.h.b.f28821a;
+            takePhoto = nq.h.b.f27415a;
         } else if (renderState instanceof GovernmentIdState.ShowInstructions) {
-            takePhoto = pq.h.C0506h.f28827a;
+            takePhoto = nq.h.C0473h.f27421a;
         } else if (renderState instanceof GovernmentIdState.ChooseCaptureMethod) {
-            takePhoto = new pq.h.Prompt(((GovernmentIdState.ChooseCaptureMethod) renderState).getPartIndex());
+            takePhoto = new nq.h.Prompt(((GovernmentIdState.ChooseCaptureMethod) renderState).getPartIndex());
         } else if ((renderState instanceof GovernmentIdState.WaitForAutocapture) || (renderState instanceof GovernmentIdState.CountdownToCapture) || (renderState instanceof GovernmentIdState.FinalizeLocalVideoCapture) || (renderState instanceof GovernmentIdState.FinalizeWebRtc) || (renderState instanceof GovernmentIdState.HolographicTorchDelay)) {
-            takePhoto = new pq.h.TakePhoto(renderState.getPartIndex());
+            takePhoto = new nq.h.TakePhoto(renderState.getPartIndex());
         } else if (renderState instanceof GovernmentIdState.ReviewCapturedImage) {
-            takePhoto = new pq.h.Check(((GovernmentIdState.ReviewCapturedImage) renderState).getPartIndex());
+            takePhoto = new nq.h.Check(((GovernmentIdState.ReviewCapturedImage) renderState).getPartIndex());
         } else if (renderState instanceof GovernmentIdState.ReviewSelectedImage) {
-            takePhoto = new pq.h.CheckUpload(((GovernmentIdState.ReviewSelectedImage) renderState).getPartIndex());
+            takePhoto = new nq.h.CheckUpload(((GovernmentIdState.ReviewSelectedImage) renderState).getPartIndex());
         } else if (renderState instanceof GovernmentIdState.Submit) {
-            takePhoto = pq.h.e.f28824a;
+            takePhoto = nq.h.e.f27418a;
         } else {
             if (!(renderState instanceof GovernmentIdState.RestartStep)) {
-                throw new jt.l();
+                throw new gt.l();
             }
-            takePhoto = pq.h.g.f28826a;
+            takePhoto = nq.h.g.f27420a;
         }
-        this.externalEventLogger.c(new pq.i.c(renderProps.getFromStep(), takePhoto));
+        this.externalEventLogger.c(new nq.i.c(renderProps.getFromStep(), takePhoto));
         if (!Intrinsics.c(this.previousStateClass, cVarB)) {
             TrackingEventsLogger.logInquiryPageViewEvent$default(this.trackingEventsLogger, renderProps.getFromStep(), takePhoto.toString(), false, 4, null);
             if (Intrinsics.c(cVarB, d0.b(GovernmentIdState.WaitForAutocapture.class))) {
@@ -2670,17 +2670,17 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
             g gVar = new g(renderState, this, context, renderProps);
             NextStep.GovernmentId.AssetConfig.SelectPage selectPage = renderProps.getAssetConfig().getSelectPage();
             StepStyles.GovernmentIdStepStyle styles = renderProps.getStyles();
-            return new Screen.e(title, prompt, choose, instructionsDisclaimer, listN, this.navigationStateManager.b(), gVar, styles, selectPage, renderProps.getIsEnabled(), new Function0() { // from class: io.y
+            return new Screen.e(title, prompt, choose, instructionsDisclaimer, listN, this.navigationStateManager.b(), gVar, styles, selectPage, renderProps.getIsEnabled(), new Function0() { // from class: go.y
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
                     return GovernmentIdWorkflow.N0(context, this);
                 }
-            }, new Function0() { // from class: io.b0
+            }, new Function0() { // from class: go.b0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
                     return GovernmentIdWorkflow.U0(context);
                 }
-            }, ((GovernmentIdState.ShowInstructions) renderState).getError(), new Function0() { // from class: io.c0
+            }, ((GovernmentIdState.ShowInstructions) renderState).getError(), new Function0() { // from class: go.c0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
                     return GovernmentIdWorkflow.V0(context, this, renderState);
@@ -2691,10 +2691,10 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
             GovernmentIdState.ChooseCaptureMethod chooseCaptureMethod = (GovernmentIdState.ChooseCaptureMethod) renderState;
             final IdPart.SideIdPart currentPart = chooseCaptureMethod.getCurrentPart();
             if (chooseCaptureMethod.getChoosingDocumentToUpload()) {
-                w.l(context, this.documentSelectWorker, d0.k(com.withpersona.sdk2.inquiry.governmentid.e.class), "", new Function1() { // from class: io.d0
+                w.l(context, this.documentSelectWorker, d0.k(com.withpersona.sdk2.inquiry.governmentid.e.class), "", new Function1() { // from class: go.d0
                     @Override // kotlin.jvm.functions.Function1
                     public final Object invoke(Object obj) {
-                        return GovernmentIdWorkflow.k0(this.f20611a, currentPart, renderState, context, (com.withpersona.sdk2.inquiry.governmentid.e.a) obj);
+                        return GovernmentIdWorkflow.k0(this.f18668a, currentPart, renderState, context, (com.withpersona.sdk2.inquiry.governmentid.e.a) obj);
                     }
                 });
             }
@@ -2705,32 +2705,32 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
             String chooseCaptureMethodCameraButton = renderProps.getStrings().getChooseCaptureMethodCameraButton();
             String chooseCaptureMethodUploadButton = renderProps.getStrings().getChooseCaptureMethodUploadButton();
             NavigationState navigationStateB = this.navigationStateManager.b();
-            Function0 function0 = new Function0() { // from class: io.e0
+            Function0 function0 = new Function0() { // from class: go.e0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
                     return GovernmentIdWorkflow.n0(context, this, renderState, renderProps);
                 }
             };
-            Function0 function1 = new Function0() { // from class: io.f0
+            Function0 function1 = new Function0() { // from class: go.f0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
                     return GovernmentIdWorkflow.r0(context, this, renderState);
                 }
             };
-            Function0 function2 = new Function0() { // from class: io.g0
+            Function0 function2 = new Function0() { // from class: go.g0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
                     return GovernmentIdWorkflow.t0(context, this);
                 }
             };
-            Function0 function3 = new Function0() { // from class: io.i0
+            Function0 function3 = new Function0() { // from class: go.i0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
                     return GovernmentIdWorkflow.u0(context);
                 }
             };
             String error = chooseCaptureMethod.getError();
-            Function0 function4 = new Function0() { // from class: io.j0
+            Function0 function4 = new Function0() { // from class: go.j0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
                     return GovernmentIdWorkflow.x0(context, this, renderState);
@@ -2738,14 +2738,14 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
             };
             StepStyles.GovernmentIdStepStyle styles2 = renderProps.getStyles();
             IdConfig.b side = chooseCaptureMethod.getCurrentPart().getSide();
-            int[] iArr = b.f10664a;
+            int[] iArr = b.f10745a;
             int i11 = iArr[side.ordinal()];
             if (i11 != 1) {
                 if (i11 != 2) {
                     if (i11 != 3) {
                         if (i11 != 4) {
                             if (i11 != 5) {
-                                throw new jt.l();
+                                throw new gt.l();
                             }
                             if (promptPage != null) {
                                 idFrontPictograph = promptPage.getPassportSignaturePictograph();
@@ -2763,7 +2763,7 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
                 } else {
                     remoteImage = null;
                 }
-            } else if (com.withpersona.sdk2.inquiry.governmentid.c.a(chooseCaptureMethod.getCaptureConfig()) == po.b.Passport) {
+            } else if (com.withpersona.sdk2.inquiry.governmentid.c.a(chooseCaptureMethod.getCaptureConfig()) == no.b.Passport) {
                 if (promptPage != null) {
                     idFrontPictograph = promptPage.getPassportFrontPictograph();
                     remoteImage = idFrontPictograph;
@@ -2778,9 +2778,9 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
             }
             int i12 = iArr[chooseCaptureMethod.getCurrentPart().getSide().ordinal()];
             if (i12 != 1) {
-                i10 = (i12 == 2 || i12 == 4) ? p2.f20773d : p2.f20774e;
+                i10 = (i12 == 2 || i12 == 4) ? p2.f18830d : p2.f18831e;
             } else {
-                i10 = com.withpersona.sdk2.inquiry.governmentid.c.a(chooseCaptureMethod.getCaptureConfig()) == po.b.Passport ? p2.f20775f : p2.f20774e;
+                i10 = com.withpersona.sdk2.inquiry.governmentid.c.a(chooseCaptureMethod.getCaptureConfig()) == no.b.Passport ? p2.f18832f : p2.f18831e;
             }
             int i13 = i10;
             String requestPageNavBarTitle = renderProps.getStrings().getRequestPageNavBarTitle();
@@ -2800,26 +2800,26 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
             TrackingEventsLogger.logGovernmentIdStateEvent$default(this.trackingEventsLogger, new GovernmentIdStateEventData(GovIdCaptureState.CONFIRMING, null, n.d0(reviewCapturedImage.getCurrentPart().getSide()), null, 8, null), false, 2, null);
             final CaptureConfig captureConfig = reviewCapturedImage.getCaptureConfig();
             IdConfig.IdSideConfig idSideConfigD = com.withpersona.sdk2.inquiry.governmentid.c.d(captureConfig, reviewCapturedImage.getCurrentPart().getSide());
-            Frame frame = (Frame) CollectionsKt.d0(reviewCapturedImage.getIdForReview().d3());
+            Frame frame = (Frame) CollectionsKt.d0(reviewCapturedImage.getIdForReview().f3());
             if (reviewCapturedImage.getSubmittingForAutoClassification()) {
                 p.j(renderProps, (GovernmentIdState.ReviewImageState) renderState, context, this.videoCaptureHelper, this.autoClassifyWorkerFactory);
             }
-            return new AlertContainerScreen(com.withpersona.sdk2.inquiry.permissions.g.c(new Screen.h(this.imageLoader, n.M(renderProps.getStrings(), reviewCapturedImage.getCurrentPart().getSide(), com.withpersona.sdk2.inquiry.governmentid.c.b(reviewCapturedImage.getCaptureConfig()), reviewCapturedImage.getCountryCode()), renderProps.getStrings().getCaptureDisclaimer(), idSideConfigD.getOverlay(), frame.getAbsoluteFilePath(), reviewCapturedImage.getCurrentPart().getSide(), com.withpersona.sdk2.inquiry.governmentid.c.a(captureConfig), this.navigationStateManager.b(), new Function0() { // from class: io.h0
+            return new AlertContainerScreen(com.withpersona.sdk2.inquiry.permissions.g.c(new Screen.h(this.imageLoader, n.M(renderProps.getStrings(), reviewCapturedImage.getCurrentPart().getSide(), com.withpersona.sdk2.inquiry.governmentid.c.b(reviewCapturedImage.getCaptureConfig()), reviewCapturedImage.getCountryCode()), renderProps.getStrings().getCaptureDisclaimer(), idSideConfigD.getOverlay(), frame.getAbsoluteFilePath(), reviewCapturedImage.getCurrentPart().getSide(), com.withpersona.sdk2.inquiry.governmentid.c.a(captureConfig), this.navigationStateManager.b(), new Function0() { // from class: go.h0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
                     return GovernmentIdWorkflow.z0(renderProps, renderState, context, this);
                 }
-            }, renderProps.getStrings().getButtonSubmit(), new Function0() { // from class: io.s0
+            }, renderProps.getStrings().getButtonSubmit(), new Function0() { // from class: go.s0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return GovernmentIdWorkflow.A0(this.f20779a, context, renderState, renderProps, captureConfig);
+                    return GovernmentIdWorkflow.A0(this.f18836a, context, renderState, renderProps, captureConfig);
                 }
-            }, renderProps.getStrings().getButtonRetake(), b0(renderProps.getStrings(), reviewCapturedImage.getCurrentPart().getSide(), com.withpersona.sdk2.inquiry.governmentid.c.b(reviewCapturedImage.getCaptureConfig()), reviewCapturedImage.getCountryCode()), new Function0() { // from class: io.d1
+            }, renderProps.getStrings().getButtonRetake(), b0(renderProps.getStrings(), reviewCapturedImage.getCurrentPart().getSide(), com.withpersona.sdk2.inquiry.governmentid.c.b(reviewCapturedImage.getCaptureConfig()), reviewCapturedImage.getCountryCode()), new Function0() { // from class: go.d1
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
                     return GovernmentIdWorkflow.E0(hVar);
                 }
-            }, renderProps.getStyles(), reviewCapturedImage.getError(), new Function0() { // from class: io.e1
+            }, renderProps.getStyles(), reviewCapturedImage.getError(), new Function0() { // from class: go.e1
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
                     return GovernmentIdWorkflow.F0(context, this, renderState);
@@ -2829,22 +2829,22 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         if (!(renderState instanceof GovernmentIdState.ReviewSelectedImage)) {
             if (renderState instanceof GovernmentIdState.Submit) {
                 GovernmentIdState.Submit submit = (GovernmentIdState.Submit) renderState;
-                w.l(context, this.submitVerificationWorkerFactory.a(renderProps.getSessionToken(), renderProps.getInquiryId(), renderProps.getFromComponent(), renderProps.getFromStep(), submit.getGovernmentIdRequestArguments(), submit.getWebRtcObjectId(), submit.getCameraProperties()), d0.k(po.c.class), "", new Function1() { // from class: io.x
+                w.l(context, this.submitVerificationWorkerFactory.a(renderProps.getSessionToken(), renderProps.getInquiryId(), renderProps.getFromComponent(), renderProps.getFromStep(), submit.getGovernmentIdRequestArguments(), submit.getWebRtcObjectId(), submit.getCameraProperties()), d0.k(no.c.class), "", new Function1() { // from class: go.x
                     @Override // kotlin.jvm.functions.Function1
                     public final Object invoke(Object obj) {
-                        return GovernmentIdWorkflow.O0(this.f20809a, context, (po.c.b) obj);
+                        return GovernmentIdWorkflow.O0(this.f18866a, context, (no.c.b) obj);
                     }
                 });
-                uq.a.d(this.navigationStateManager, false, false, false, false, 12, null);
-                return new Screen.j(renderProps.getStrings().getProcessingTitle(), renderProps.getStrings().getProcessingDescription(), renderProps.getStyles(), renderProps.getAssetConfig().getPendingPage(), this.navigationStateManager.b(), new Function0() { // from class: io.z
+                sq.a.d(this.navigationStateManager, false, false, false, false, 12, null);
+                return new Screen.j(renderProps.getStrings().getProcessingTitle(), renderProps.getStrings().getProcessingDescription(), renderProps.getStyles(), renderProps.getAssetConfig().getPendingPage(), this.navigationStateManager.b(), new Function0() { // from class: go.z
                     @Override // kotlin.jvm.functions.Function0
                     public final Object invoke() {
-                        return GovernmentIdWorkflow.S0(this.f20813a, context);
+                        return GovernmentIdWorkflow.S0(this.f18870a, context);
                     }
-                }, new Function0() { // from class: io.a0
+                }, new Function0() { // from class: go.a0
                     @Override // kotlin.jvm.functions.Function0
                     public final Object invoke() {
-                        return GovernmentIdWorkflow.T0(this.f20584a, context);
+                        return GovernmentIdWorkflow.T0(this.f18641a, context);
                     }
                 }, renderProps.getPendingPageTextVerticalPosition(), false, renderProps.getStrings().getPendingPageNavBarTitle(), null, 1280, null);
             }
@@ -2864,7 +2864,7 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
                 return this.autoClassificationRenderer.t(renderProps, (GovernmentIdState.AutoClassificationManualSelect) renderState, context, this.videoCaptureHelper);
             }
             if (!(renderState instanceof GovernmentIdState.RestartStep)) {
-                throw new jt.l();
+                throw new gt.l();
             }
             context.b("restart_step", new f(context, d(renderProps, null), null));
             return new Screen.g(null, 1, null);
@@ -2880,8 +2880,8 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         String strC0 = c0(renderProps.getStrings(), currentPart2.getSide());
         String reviewSelectedImageConfirmButton = renderProps.getStrings().getReviewSelectedImageConfirmButton();
         String reviewSelectedImageChooseAnotherButton = renderProps.getStrings().getReviewSelectedImageChooseAnotherButton();
-        String absoluteFilePath = ((Frame) CollectionsKt.d0(reviewSelectedImage.getIdForReview().d3())).getAbsoluteFilePath();
-        String mimeType = ((Frame) CollectionsKt.d0(reviewSelectedImage.getIdForReview().d3())).getMimeType();
+        String absoluteFilePath = ((Frame) CollectionsKt.d0(reviewSelectedImage.getIdForReview().f3())).getAbsoluteFilePath();
+        String mimeType = ((Frame) CollectionsKt.d0(reviewSelectedImage.getIdForReview().f3())).getMimeType();
         String fileName = reviewSelectedImage.getFileName();
         NavigationState navigationStateB2 = this.navigationStateManager.b();
         String error2 = reviewSelectedImage.getError();
@@ -2891,27 +2891,27 @@ public final class GovernmentIdWorkflow extends ym.k<Input, GovernmentIdState, a
         if (reviewUploadPageNavBarTitle == null) {
             reviewUploadPageNavBarTitle = renderProps.getStrings().getCapturePageNavBarTitle();
         }
-        return new Screen.i(sVar, strD0, strC0, reviewSelectedImageConfirmButton, reviewSelectedImageChooseAnotherButton, absoluteFilePath, mimeType, fileName, navigationStateB2, new Function0() { // from class: io.f1
+        return new Screen.i(sVar, strD0, strC0, reviewSelectedImageConfirmButton, reviewSelectedImageChooseAnotherButton, absoluteFilePath, mimeType, fileName, navigationStateB2, new Function0() { // from class: go.f1
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
                 return GovernmentIdWorkflow.H0(renderProps, renderState, context, this);
             }
-        }, new Function0() { // from class: io.g1
+        }, new Function0() { // from class: go.g1
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
                 return GovernmentIdWorkflow.I0(context, this);
             }
-        }, new Function0() { // from class: io.h1
+        }, new Function0() { // from class: go.h1
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
                 return GovernmentIdWorkflow.J0(context, this);
             }
-        }, new Function0() { // from class: io.i1
+        }, new Function0() { // from class: go.i1
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
                 return GovernmentIdWorkflow.K0(context);
             }
-        }, error2, new Function0() { // from class: io.j1
+        }, error2, new Function0() { // from class: go.j1
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
                 return GovernmentIdWorkflow.L0(context, this, renderState);

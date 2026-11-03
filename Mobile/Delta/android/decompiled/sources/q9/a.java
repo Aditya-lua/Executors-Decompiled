@@ -9,14 +9,14 @@ import n9.g;
 public class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f29292a;
+    public final String f29645a;
     public final String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final g f29293c;
+    public final g f29646c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final int f29294d;
+    public final int f29647d;
 
     public a(@NonNull String str, @NonNull String... strArr) {
         String string;
@@ -35,23 +35,23 @@ public class a {
             string = sb2.toString();
         }
         this.b = string;
-        this.f29292a = str;
-        this.f29293c = new g(str);
+        this.f29645a = str;
+        this.f29646c = new g(str);
         int i10 = 2;
-        while (i10 <= 7 && !Log.isLoggable(this.f29292a, i10)) {
+        while (i10 <= 7 && !Log.isLoggable(this.f29645a, i10)) {
             i10++;
         }
-        this.f29294d = i10;
+        this.f29647d = i10;
     }
 
     public void a(@NonNull String str, @NonNull Object... objArr) {
         if (d(3)) {
-            Log.d(this.f29292a, c(str, objArr));
+            Log.d(this.f29645a, c(str, objArr));
         }
     }
 
     public void b(@NonNull String str, @NonNull Object... objArr) {
-        Log.e(this.f29292a, c(str, objArr));
+        Log.e(this.f29645a, c(str, objArr));
     }
 
     @NonNull
@@ -63,6 +63,6 @@ public class a {
     }
 
     public boolean d(int i10) {
-        return this.f29294d <= i10;
+        return this.f29647d <= i10;
     }
 }

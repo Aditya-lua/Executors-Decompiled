@@ -1,49 +1,28 @@
 package bp;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import androidx.annotation.NonNull;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import zo.f0;
-
 /* JADX INFO: loaded from: classes3.dex */
-public final class f implements r5.a {
+public final class f implements dt.d<co.a> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    @NonNull
-    public final CoordinatorLayout f4303a;
+    public final c f4361a;
+    public final dt.i<i> b;
 
-    @NonNull
-    public final CoordinatorLayout b;
-
-    public f(@NonNull CoordinatorLayout coordinatorLayout, @NonNull CoordinatorLayout coordinatorLayout2) {
-        this.f4303a = coordinatorLayout;
-        this.b = coordinatorLayout2;
+    public f(c cVar, dt.i<i> iVar) {
+        this.f4361a = cVar;
+        this.b = iVar;
     }
 
-    @NonNull
-    public static f a(@NonNull View view) {
-        if (view == null) {
-            throw new NullPointerException("rootView");
-        }
-        CoordinatorLayout coordinatorLayout = (CoordinatorLayout) view;
-        return new f(coordinatorLayout, coordinatorLayout);
+    public static f a(c cVar, dt.i<i> iVar) {
+        return new f(cVar, iVar);
     }
 
-    @NonNull
-    public static f c(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
-        View viewInflate = layoutInflater.inflate(f0.f37879f, viewGroup, false);
-        if (z10) {
-            viewGroup.addView(viewInflate);
-        }
-        return a(viewInflate);
+    public static co.a b(c cVar, i iVar) {
+        return (co.a) dt.h.e(cVar.c(iVar));
     }
 
-    @Override // r5.a
-    @NonNull
-    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public CoordinatorLayout getRoot() {
-        return this.f4303a;
+    @Override // ft.a
+    /* JADX INFO: renamed from: c, reason: merged with bridge method [inline-methods] */
+    public co.a get() {
+        return b(this.f4361a, this.b.get());
     }
 }

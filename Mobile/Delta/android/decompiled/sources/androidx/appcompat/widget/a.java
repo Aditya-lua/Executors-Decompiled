@@ -28,60 +28,60 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
     public int D;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public d f1246k;
+    public d f1091k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public Drawable f1247l;
+    public Drawable f1092l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public boolean f1248m;
+    public boolean f1093m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public boolean f1249n;
+    public boolean f1094n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public boolean f1250o;
+    public boolean f1095o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public int f1251p;
+    public int f1096p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public int f1252q;
+    public int f1097q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public int f1253r;
+    public int f1098r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public boolean f1254s;
+    public boolean f1099s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public boolean f1255t;
+    public boolean f1100t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public boolean f1256u;
+    public boolean f1101u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public boolean f1257v;
+    public boolean f1102v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public int f1258w;
+    public int f1103w;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public final SparseBooleanArray f1259x;
+    public final SparseBooleanArray f1104x;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public e f1260y;
+    public e f1105y;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public C0015a f1261z;
+    public C0011a f1106z;
 
     /* JADX INFO: renamed from: androidx.appcompat.widget.a$a, reason: collision with other inner class name */
-    public class C0015a extends h {
-        public C0015a(Context context, l lVar, View view) {
-            super(context, lVar, view, false, i.a.f19897m);
+    public class C0011a extends h {
+        public C0011a(Context context, l lVar, View view) {
+            super(context, lVar, view, false, i.a.f20013m);
             if (!((g) lVar.getItem()).l()) {
-                View view2 = a.this.f1246k;
-                f(view2 == null ? (View) a.this.f866i : view2);
+                View view2 = a.this.f1091k;
+                f(view2 == null ? (View) a.this.f711i : view2);
             }
             j(a.this.C);
         }
@@ -89,7 +89,7 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
         @Override // androidx.appcompat.view.menu.h
         public void e() {
             a aVar = a.this;
-            aVar.f1261z = null;
+            aVar.f1106z = null;
             aVar.D = 0;
             super.e();
         }
@@ -101,9 +101,9 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
 
         @Override // androidx.appcompat.view.menu.ActionMenuItemView.b
         public p.f a() {
-            C0015a c0015a = a.this.f1261z;
-            if (c0015a != null) {
-                return c0015a.c();
+            C0011a c0011a = a.this.f1106z;
+            if (c0011a != null) {
+                return c0011a.c();
             }
             return null;
         }
@@ -112,20 +112,20 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
     public class c implements Runnable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public e f1264a;
+        public e f1109a;
 
         public c(e eVar) {
-            this.f1264a = eVar;
+            this.f1109a = eVar;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            if (a.this.f860c != null) {
-                a.this.f860c.d();
+            if (a.this.f705c != null) {
+                a.this.f705c.d();
             }
-            View view = (View) a.this.f866i;
-            if (view != null && view.getWindowToken() != null && this.f1264a.m()) {
-                a.this.f1260y = this.f1264a;
+            View view = (View) a.this.f711i;
+            if (view != null && view.getWindowToken() != null && this.f1109a.m()) {
+                a.this.f1105y = this.f1109a;
             }
             a.this.A = null;
         }
@@ -134,20 +134,20 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
     public class d extends q implements ActionMenuView.a {
 
         /* JADX INFO: renamed from: androidx.appcompat.widget.a$d$a, reason: collision with other inner class name */
-        public class C0016a extends n0 {
+        public class C0012a extends n0 {
 
             /* JADX INFO: renamed from: j, reason: collision with root package name */
-            public final /* synthetic */ a f1266j;
+            public final /* synthetic */ a f1111j;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C0016a(View view, a aVar) {
+            public C0012a(View view, a aVar) {
                 super(view);
-                this.f1266j = aVar;
+                this.f1111j = aVar;
             }
 
             @Override // q.n0
             public p.f b() {
-                e eVar = a.this.f1260y;
+                e eVar = a.this.f1105y;
                 if (eVar == null) {
                     return null;
                 }
@@ -172,13 +172,13 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
         }
 
         public d(Context context) {
-            super(context, null, i.a.f19896l);
+            super(context, null, i.a.f20012l);
             setClickable(true);
             setFocusable(true);
             setVisibility(0);
             setEnabled(true);
             e1.a(this, getContentDescription());
-            setOnTouchListener(new C0016a(this, a.this));
+            setOnTouchListener(new C0012a(this, a.this));
         }
 
         @Override // androidx.appcompat.widget.ActionMenuView.a
@@ -220,17 +220,17 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
 
     public class e extends h {
         public e(Context context, androidx.appcompat.view.menu.e eVar, View view, boolean z10) {
-            super(context, eVar, view, z10, i.a.f19897m);
+            super(context, eVar, view, z10, i.a.f20013m);
             h(8388613);
             j(a.this.C);
         }
 
         @Override // androidx.appcompat.view.menu.h
         public void e() {
-            if (a.this.f860c != null) {
-                a.this.f860c.close();
+            if (a.this.f705c != null) {
+                a.this.f705c.close();
             }
-            a.this.f1260y = null;
+            a.this.f1105y = null;
             super.e();
         }
     }
@@ -252,7 +252,7 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
 
         @Override // androidx.appcompat.view.menu.i.a
         public boolean c(@NonNull androidx.appcompat.view.menu.e eVar) {
-            if (eVar == a.this.f860c) {
+            if (eVar == a.this.f705c) {
                 return false;
             }
             a.this.D = ((l) eVar).getItem().getItemId();
@@ -265,14 +265,14 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
     }
 
     public a(Context context) {
-        super(context, i.g.f19980c, i.g.b);
-        this.f1259x = new SparseBooleanArray();
+        super(context, i.g.f20096c, i.g.b);
+        this.f1104x = new SparseBooleanArray();
         this.C = new f();
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public final View A(MenuItem menuItem) {
-        ViewGroup viewGroup = (ViewGroup) this.f866i;
+        ViewGroup viewGroup = (ViewGroup) this.f711i;
         if (viewGroup == null) {
             return null;
         }
@@ -287,12 +287,12 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
     }
 
     public Drawable B() {
-        d dVar = this.f1246k;
+        d dVar = this.f1091k;
         if (dVar != null) {
             return dVar.getDrawable();
         }
-        if (this.f1248m) {
-            return this.f1247l;
+        if (this.f1093m) {
+            return this.f1092l;
         }
         return null;
     }
@@ -300,12 +300,12 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
     public boolean C() {
         Object obj;
         c cVar = this.A;
-        if (cVar != null && (obj = this.f866i) != null) {
+        if (cVar != null && (obj = this.f711i) != null) {
             ((View) obj).removeCallbacks(cVar);
             this.A = null;
             return true;
         }
-        e eVar = this.f1260y;
+        e eVar = this.f1105y;
         if (eVar == null) {
             return false;
         }
@@ -314,11 +314,11 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
     }
 
     public boolean D() {
-        C0015a c0015a = this.f1261z;
-        if (c0015a == null) {
+        C0011a c0011a = this.f1106z;
+        if (c0011a == null) {
             return false;
         }
-        c0015a.b();
+        c0011a.b();
         return true;
     }
 
@@ -327,52 +327,52 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
     }
 
     public boolean F() {
-        e eVar = this.f1260y;
+        e eVar = this.f1105y;
         return eVar != null && eVar.d();
     }
 
     public void G(Configuration configuration) {
-        if (!this.f1254s) {
-            this.f1253r = o.a.b(this.b).d();
+        if (!this.f1099s) {
+            this.f1098r = o.a.b(this.b).d();
         }
-        androidx.appcompat.view.menu.e eVar = this.f860c;
+        androidx.appcompat.view.menu.e eVar = this.f705c;
         if (eVar != null) {
             eVar.L(true);
         }
     }
 
     public void H(boolean z10) {
-        this.f1257v = z10;
+        this.f1102v = z10;
     }
 
     public void I(ActionMenuView actionMenuView) {
-        this.f866i = actionMenuView;
-        actionMenuView.a(this.f860c);
+        this.f711i = actionMenuView;
+        actionMenuView.a(this.f705c);
     }
 
     public void J(Drawable drawable) {
-        d dVar = this.f1246k;
+        d dVar = this.f1091k;
         if (dVar != null) {
             dVar.setImageDrawable(drawable);
         } else {
-            this.f1248m = true;
-            this.f1247l = drawable;
+            this.f1093m = true;
+            this.f1092l = drawable;
         }
     }
 
     public void K(boolean z10) {
-        this.f1249n = z10;
-        this.f1250o = true;
+        this.f1094n = z10;
+        this.f1095o = true;
     }
 
     public boolean L() {
         androidx.appcompat.view.menu.e eVar;
-        if (!this.f1249n || F() || (eVar = this.f860c) == null || this.f866i == null || this.A != null || eVar.z().isEmpty()) {
+        if (!this.f1094n || F() || (eVar = this.f705c) == null || this.f711i == null || this.A != null || eVar.z().isEmpty()) {
             return false;
         }
-        c cVar = new c(new e(this.b, this.f860c, this.f1246k, true));
+        c cVar = new c(new e(this.b, this.f705c, this.f1091k, true));
         this.A = cVar;
-        ((View) this.f866i).post(cVar);
+        ((View) this.f711i).post(cVar);
         return true;
     }
 
@@ -382,7 +382,7 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
             super.e(null);
             return;
         }
-        androidx.appcompat.view.menu.e eVar = this.f860c;
+        androidx.appcompat.view.menu.e eVar = this.f705c;
         if (eVar != null) {
             eVar.e(false);
         }
@@ -401,7 +401,7 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
             return false;
         }
         l lVar2 = lVar;
-        while (lVar2.f0() != this.f860c) {
+        while (lVar2.f0() != this.f705c) {
             lVar2 = (l) lVar2.f0();
         }
         View viewA = A(lVar2.getItem());
@@ -417,10 +417,10 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
                 break;
             }
         }
-        C0015a c0015a = new C0015a(this.b, lVar, viewA);
-        this.f1261z = c0015a;
-        c0015a.g(z10);
-        this.f1261z.k();
+        C0011a c0011a = new C0011a(this.b, lVar, viewA);
+        this.f1106z = c0011a;
+        c0011a.g(z10);
+        this.f1106z.k();
         super.e(lVar);
         return true;
     }
@@ -428,8 +428,8 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
     @Override // androidx.appcompat.view.menu.a, androidx.appcompat.view.menu.i
     public void f(boolean z10) {
         super.f(z10);
-        ((View) this.f866i).requestLayout();
-        androidx.appcompat.view.menu.e eVar = this.f860c;
+        ((View) this.f711i).requestLayout();
+        androidx.appcompat.view.menu.e eVar = this.f705c;
         boolean z11 = false;
         if (eVar != null) {
             ArrayList<g> arrayListS = eVar.s();
@@ -441,9 +441,9 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
                 }
             }
         }
-        androidx.appcompat.view.menu.e eVar2 = this.f860c;
+        androidx.appcompat.view.menu.e eVar2 = this.f705c;
         ArrayList<g> arrayListZ = eVar2 != null ? eVar2.z() : null;
-        if (this.f1249n && arrayListZ != null) {
+        if (this.f1094n && arrayListZ != null) {
             int size2 = arrayListZ.size();
             if (size2 == 1) {
                 z11 = !arrayListZ.get(0).isActionViewExpanded();
@@ -452,28 +452,28 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
             }
         }
         if (z11) {
-            if (this.f1246k == null) {
-                this.f1246k = new d(this.f859a);
+            if (this.f1091k == null) {
+                this.f1091k = new d(this.f704a);
             }
-            ViewGroup viewGroup = (ViewGroup) this.f1246k.getParent();
-            if (viewGroup != this.f866i) {
+            ViewGroup viewGroup = (ViewGroup) this.f1091k.getParent();
+            if (viewGroup != this.f711i) {
                 if (viewGroup != null) {
-                    viewGroup.removeView(this.f1246k);
+                    viewGroup.removeView(this.f1091k);
                 }
-                ActionMenuView actionMenuView = (ActionMenuView) this.f866i;
-                actionMenuView.addView(this.f1246k, actionMenuView.D());
+                ActionMenuView actionMenuView = (ActionMenuView) this.f711i;
+                actionMenuView.addView(this.f1091k, actionMenuView.D());
             }
         } else {
-            d dVar = this.f1246k;
+            d dVar = this.f1091k;
             if (dVar != null) {
                 Object parent = dVar.getParent();
-                Object obj = this.f866i;
+                Object obj = this.f711i;
                 if (parent == obj) {
-                    ((ViewGroup) obj).removeView(this.f1246k);
+                    ((ViewGroup) obj).removeView(this.f1091k);
                 }
             }
         }
-        ((ActionMenuView) this.f866i).setOverflowReserved(this.f1249n);
+        ((ActionMenuView) this.f711i).setOverflowReserved(this.f1094n);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -496,7 +496,7 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
         int iJ;
         ?? r8;
         a aVar = this;
-        androidx.appcompat.view.menu.e eVar = aVar.f860c;
+        androidx.appcompat.view.menu.e eVar = aVar.f705c;
         View view = null;
         ?? r10 = 0;
         if (eVar != null) {
@@ -506,10 +506,10 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
             arrayListE = null;
             size = 0;
         }
-        int i11 = aVar.f1253r;
-        int i12 = aVar.f1252q;
+        int i11 = aVar.f1098r;
+        int i12 = aVar.f1097q;
         int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(0, 0);
-        ViewGroup viewGroup = (ViewGroup) aVar.f866i;
+        ViewGroup viewGroup = (ViewGroup) aVar.f711i;
         boolean z10 = false;
         int i13 = 0;
         int i14 = 0;
@@ -522,18 +522,18 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
             } else {
                 z10 = true;
             }
-            if (aVar.f1257v && gVar.isActionViewExpanded()) {
+            if (aVar.f1102v && gVar.isActionViewExpanded()) {
                 i11 = 0;
             }
         }
-        if (aVar.f1249n && (z10 || i14 + i13 > i11)) {
+        if (aVar.f1094n && (z10 || i14 + i13 > i11)) {
             i11--;
         }
         int i16 = i11 - i13;
-        SparseBooleanArray sparseBooleanArray = aVar.f1259x;
+        SparseBooleanArray sparseBooleanArray = aVar.f1104x;
         sparseBooleanArray.clear();
-        if (aVar.f1255t) {
-            int i17 = aVar.f1258w;
+        if (aVar.f1100t) {
+            int i17 = aVar.f1103w;
             iJ = i12 / i17;
             i10 = i17 + ((i12 % i17) / iJ);
         } else {
@@ -547,7 +547,7 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
             g gVar2 = arrayListE.get(i18);
             if (gVar2.o()) {
                 View viewO = r11.o(gVar2, view, viewGroup);
-                if (r11.f1255t) {
+                if (r11.f1100t) {
                     iJ -= ActionMenuView.J(viewO, i10, iJ, iMakeMeasureSpec, r10);
                 } else {
                     viewO.measure(iMakeMeasureSpec, iMakeMeasureSpec);
@@ -566,11 +566,11 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
             } else if (gVar2.n()) {
                 int groupId2 = gVar2.getGroupId();
                 boolean z11 = sparseBooleanArray.get(groupId2);
-                boolean z12 = (i16 > 0 || z11) && i12 > 0 && (!r11.f1255t || iJ > 0);
+                boolean z12 = (i16 > 0 || z11) && i12 > 0 && (!r11.f1100t || iJ > 0);
                 boolean z13 = z12;
                 if (z12) {
                     View viewO2 = r11.o(gVar2, null, viewGroup);
-                    if (r11.f1255t) {
+                    if (r11.f1100t) {
                         int iJ2 = ActionMenuView.J(viewO2, i10, iJ, iMakeMeasureSpec, 0);
                         iJ -= iJ2;
                         if (iJ2 == 0) {
@@ -585,7 +585,7 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
                     if (i19 == 0) {
                         i19 = measuredWidth2;
                     }
-                    z12 = z14 & (!r11.f1255t ? i12 + i19 <= 0 : i12 < 0);
+                    z12 = z14 & (!r11.f1100t ? i12 + i19 <= 0 : i12 < 0);
                 }
                 if (z12 && groupId2 != 0) {
                     sparseBooleanArray.put(groupId2, true);
@@ -624,41 +624,41 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
         super.i(context, eVar);
         Resources resources = context.getResources();
         o.a aVarB = o.a.b(context);
-        if (!this.f1250o) {
-            this.f1249n = aVarB.h();
+        if (!this.f1095o) {
+            this.f1094n = aVarB.h();
         }
-        if (!this.f1256u) {
-            this.f1251p = aVarB.c();
+        if (!this.f1101u) {
+            this.f1096p = aVarB.c();
         }
-        if (!this.f1254s) {
-            this.f1253r = aVarB.d();
+        if (!this.f1099s) {
+            this.f1098r = aVarB.d();
         }
-        int measuredWidth = this.f1251p;
-        if (this.f1249n) {
-            if (this.f1246k == null) {
-                d dVar = new d(this.f859a);
-                this.f1246k = dVar;
-                if (this.f1248m) {
-                    dVar.setImageDrawable(this.f1247l);
-                    this.f1247l = null;
-                    this.f1248m = false;
+        int measuredWidth = this.f1096p;
+        if (this.f1094n) {
+            if (this.f1091k == null) {
+                d dVar = new d(this.f704a);
+                this.f1091k = dVar;
+                if (this.f1093m) {
+                    dVar.setImageDrawable(this.f1092l);
+                    this.f1092l = null;
+                    this.f1093m = false;
                 }
                 int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(0, 0);
-                this.f1246k.measure(iMakeMeasureSpec, iMakeMeasureSpec);
+                this.f1091k.measure(iMakeMeasureSpec, iMakeMeasureSpec);
             }
-            measuredWidth -= this.f1246k.getMeasuredWidth();
+            measuredWidth -= this.f1091k.getMeasuredWidth();
         } else {
-            this.f1246k = null;
+            this.f1091k = null;
         }
-        this.f1252q = measuredWidth;
-        this.f1258w = (int) (resources.getDisplayMetrics().density * 56.0f);
+        this.f1097q = measuredWidth;
+        this.f1103w = (int) (resources.getDisplayMetrics().density * 56.0f);
     }
 
     @Override // androidx.appcompat.view.menu.a
     public void k(g gVar, j.a aVar) {
         aVar.c(gVar, 0);
         ActionMenuItemView actionMenuItemView = (ActionMenuItemView) aVar;
-        actionMenuItemView.setItemInvoker((ActionMenuView) this.f866i);
+        actionMenuItemView.setItemInvoker((ActionMenuView) this.f711i);
         if (this.B == null) {
             this.B = new b();
         }
@@ -667,7 +667,7 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
 
     @Override // androidx.appcompat.view.menu.a
     public boolean m(ViewGroup viewGroup, int i10) {
-        if (viewGroup.getChildAt(i10) == this.f1246k) {
+        if (viewGroup.getChildAt(i10) == this.f1091k) {
             return false;
         }
         return super.m(viewGroup, i10);
@@ -690,7 +690,7 @@ public class a extends androidx.appcompat.view.menu.a implements androidx.core.v
 
     @Override // androidx.appcompat.view.menu.a
     public j p(ViewGroup viewGroup) {
-        j jVar = this.f866i;
+        j jVar = this.f711i;
         j jVarP = super.p(viewGroup);
         if (jVar != jVarP) {
             ((ActionMenuView) jVarP).setPresenter(this);

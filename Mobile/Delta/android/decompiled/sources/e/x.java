@@ -16,12 +16,12 @@ import org.jetbrains.annotations.Nullable;
 public final class x {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final int f14963a = Color.argb(230, 255, 255, 255);
+    public static final int f15577a = Color.argb(230, 255, 255, 255);
     public static final int b = Color.argb(128, 27, 27, 27);
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @Nullable
-    public static f0 f14964c;
+    public static f0 f15578c;
 
     public static final void a(@NotNull p pVar) {
         Intrinsics.checkNotNullParameter(pVar, "<this>");
@@ -42,7 +42,7 @@ public final class x {
         Resources resources2 = decorView.getResources();
         Intrinsics.checkNotNullExpressionValue(resources2, "getResources(...)");
         boolean zBooleanValue2 = function1B2.invoke(resources2).booleanValue();
-        f0 a0Var = f14964c;
+        f0 a0Var = f15578c;
         if (a0Var == null) {
             int i10 = Build.VERSION.SDK_INT;
             if (i10 >= 35) {
@@ -54,7 +54,7 @@ public final class x {
             } else {
                 a0Var = i10 >= 28 ? new a0() : new y();
             }
-            f14964c = a0Var;
+            f15578c = a0Var;
         }
         f0 f0Var = a0Var;
         Window window = pVar.getWindow();
@@ -70,7 +70,7 @@ public final class x {
             u0Var = u0.Companion.d(u0.INSTANCE, 0, 0, null, 4, null);
         }
         if ((i10 & 2) != 0) {
-            u0Var2 = u0.Companion.d(u0.INSTANCE, f14963a, b, null, 4, null);
+            u0Var2 = u0.Companion.d(u0.INSTANCE, f15577a, b, null, 4, null);
         }
         b(pVar, u0Var, u0Var2);
     }

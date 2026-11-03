@@ -16,7 +16,7 @@ public final class a {
     }
 
     @Nullable
-    public static final Object b(@NotNull u uVar, boolean z10, @NotNull nt.b<? super CoroutineContext> bVar) {
+    public static final Object b(@NotNull u uVar, boolean z10, @NotNull lt.b<? super CoroutineContext> bVar) {
         return c.a(uVar, z10, bVar);
     }
 
@@ -25,12 +25,12 @@ public final class a {
     }
 
     @Nullable
-    public static final <R> Object d(@NotNull u uVar, @NotNull Function1<? super nt.b<? super R>, ? extends Object> function1, @NotNull nt.b<? super R> bVar) {
+    public static final <R> Object d(@NotNull u uVar, @NotNull Function1<? super lt.b<? super R>, ? extends Object> function1, @NotNull lt.b<? super R> bVar) {
         return c.c(uVar, function1, bVar);
     }
 
     @Nullable
-    public static final <R> Object e(@NotNull u uVar, boolean z10, boolean z11, @NotNull Function1<? super f5.b, ? extends R> function1, @NotNull nt.b<? super R> bVar) {
+    public static final <R> Object e(@NotNull u uVar, boolean z10, boolean z11, @NotNull Function1<? super f5.b, ? extends R> function1, @NotNull lt.b<? super R> bVar) {
         return c.d(uVar, z10, z11, function1, bVar);
     }
 

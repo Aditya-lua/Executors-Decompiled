@@ -13,16 +13,16 @@ import java.util.concurrent.TimeUnit;
 public final class c1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final long f8757a = TimeUnit.MINUTES.toMillis(1);
+    public static final long f8831a = TimeUnit.MINUTES.toMillis(1);
     public static final Object b = new Object();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static rb.a f8758c;
+    public static rb.a f8832c;
 
     public static void b(Context context) {
-        if (f8758c == null) {
+        if (f8832c == null) {
             rb.a aVar = new rb.a(context, 1, "wake:com.google.firebase.iid.WakeLockHolder");
-            f8758c = aVar;
+            f8832c = aVar;
             aVar.d(true);
         }
     }
@@ -30,9 +30,9 @@ public final class c1 {
     public static void c(@NonNull Intent intent) {
         synchronized (b) {
             try {
-                if (f8758c != null && d(intent)) {
+                if (f8832c != null && d(intent)) {
                     f(intent, false);
-                    f8758c.c();
+                    f8832c.c();
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -52,7 +52,7 @@ public final class c1 {
                 boolean zD = d(intent);
                 f(intent, true);
                 if (!zD) {
-                    f8758c.a(f8757a);
+                    f8832c.a(f8831a);
                 }
                 h1Var.d(intent).addOnCompleteListener(new OnCompleteListener() { // from class: com.google.firebase.messaging.b1
                     @Override // com.google.android.gms.tasks.OnCompleteListener
@@ -81,7 +81,7 @@ public final class c1 {
                     return null;
                 }
                 if (!zD) {
-                    f8758c.a(f8757a);
+                    f8832c.a(f8831a);
                 }
                 return componentNameStartService;
             } catch (Throwable th2) {

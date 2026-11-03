@@ -11,7 +11,7 @@ import java.util.Spliterators;
 public abstract class z0 extends AbstractCollection implements Serializable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Object[] f15428a = new Object[0];
+    public static final Object[] f16042a = new Object[0];
 
     public int a(Object[] objArr, int i10) {
         c2 c2VarD = d();
@@ -83,7 +83,7 @@ public abstract class z0 extends AbstractCollection implements Serializable {
 
     @Override // java.util.AbstractCollection, java.util.Collection
     public final Object[] toArray() {
-        return toArray(f15428a);
+        return toArray(f16042a);
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection

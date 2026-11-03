@@ -28,11 +28,11 @@ public final class g5 extends gb implements pc {
     static {
         g5 g5Var = new g5();
         zzu = g5Var;
-        gb.u(g5.class, g5Var);
+        gb.t(g5.class, g5Var);
     }
 
     public static f5 X() {
-        return (f5) zzu.q();
+        return (f5) zzu.p();
     }
 
     public static g5 Y() {

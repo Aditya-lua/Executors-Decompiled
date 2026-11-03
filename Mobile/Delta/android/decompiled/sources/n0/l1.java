@@ -14,49 +14,49 @@ import java.util.Set;
 public final class l1 {
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final n1.a<Integer> f24728i = n1.a.a("camerax.core.captureConfig.rotation", Integer.TYPE);
+    public static final n1.a<Integer> f25549i = n1.a.a("camerax.core.captureConfig.rotation", Integer.TYPE);
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final n1.a<Integer> f24729j = n1.a.a("camerax.core.captureConfig.jpegQuality", Integer.class);
+    public static final n1.a<Integer> f25550j = n1.a.a("camerax.core.captureConfig.jpegQuality", Integer.class);
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final n1.a<Range<Integer>> f24730k = n1.a.a("camerax.core.captureConfig.resolvedFrameRate", Range.class);
+    public static final n1.a<Range<Integer>> f25551k = n1.a.a("camerax.core.captureConfig.resolvedFrameRate", Range.class);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final List<u1> f24731a;
+    public final List<u1> f25552a;
     public final n1 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final int f24732c;
+    public final int f25553c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final boolean f24733d;
+    public final boolean f25554d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final List<u> f24734e;
+    public final List<u> f25555e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final boolean f24735f;
+    public final boolean f25556f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final z3 f24736g;
+    public final z3 f25557g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final e0 f24737h;
+    public final e0 f25558h;
 
     public interface b {
         void a(i4<?> i4Var, a aVar);
     }
 
     public l1(List<u1> list, n1 n1Var, int i10, boolean z10, List<u> list2, boolean z11, z3 z3Var, e0 e0Var) {
-        this.f24731a = list;
+        this.f25552a = list;
         this.b = n1Var;
-        this.f24732c = i10;
-        this.f24734e = Collections.unmodifiableList(list2);
-        this.f24735f = z11;
-        this.f24736g = z3Var;
-        this.f24737h = e0Var;
-        this.f24733d = z10;
+        this.f25553c = i10;
+        this.f25555e = Collections.unmodifiableList(list2);
+        this.f25556f = z11;
+        this.f25557g = z3Var;
+        this.f25558h = e0Var;
+        this.f25554d = z10;
     }
 
     public static l1 b() {
@@ -64,21 +64,21 @@ public final class l1 {
     }
 
     public List<u> c() {
-        return this.f24734e;
+        return this.f25555e;
     }
 
     public e0 d() {
-        return this.f24737h;
+        return this.f25558h;
     }
 
     public Range<Integer> e() {
-        Range<Integer> range = (Range) this.b.h(f24730k, t3.f24861a);
+        Range<Integer> range = (Range) this.b.h(f25551k, t3.f25682a);
         Objects.requireNonNull(range);
         return range;
     }
 
     public int f() {
-        Object objD = this.f24736g.d("CAPTURE_CONFIG_ID_KEY");
+        Object objD = this.f25557g.d("CAPTURE_CONFIG_ID_KEY");
         if (objD == null) {
             return -1;
         }
@@ -96,15 +96,15 @@ public final class l1 {
     }
 
     public List<u1> i() {
-        return Collections.unmodifiableList(this.f24731a);
+        return Collections.unmodifiableList(this.f25552a);
     }
 
     public z3 j() {
-        return this.f24736g;
+        return this.f25557g;
     }
 
     public int k() {
-        return this.f24732c;
+        return this.f25553c;
     }
 
     public int l() {
@@ -114,45 +114,45 @@ public final class l1 {
     }
 
     public boolean m() {
-        return this.f24733d;
+        return this.f25554d;
     }
 
     public boolean n() {
-        return this.f24735f;
+        return this.f25556f;
     }
 
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Set<u1> f24738a;
+        public final Set<u1> f25559a;
         public w2 b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public int f24739c;
+        public int f25560c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public boolean f24740d;
+        public boolean f25561d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public List<u> f24741e;
+        public List<u> f25562e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public boolean f24742f;
+        public boolean f25563f;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public z2 f24743g;
+        public z2 f25564g;
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public e0 f24744h;
+        public e0 f25565h;
 
         public a() {
-            this.f24738a = new HashSet();
+            this.f25559a = new HashSet();
             this.b = x2.k0();
-            this.f24739c = -1;
-            this.f24740d = false;
-            this.f24741e = new ArrayList();
-            this.f24742f = false;
-            this.f24743g = z2.g();
+            this.f25560c = -1;
+            this.f25561d = false;
+            this.f25562e = new ArrayList();
+            this.f25563f = false;
+            this.f25564g = z2.g();
         }
 
         public static a j(i4<?> i4Var) {
@@ -177,14 +177,14 @@ public final class l1 {
         }
 
         public void b(z3 z3Var) {
-            this.f24743g.f(z3Var);
+            this.f25564g.f(z3Var);
         }
 
         public void c(u uVar) {
-            if (this.f24741e.contains(uVar)) {
+            if (this.f25562e.contains(uVar)) {
                 return;
             }
-            this.f24741e.add(uVar);
+            this.f25562e.add(uVar);
         }
 
         public <T> void d(n1.a<T> aVar, T t8) {
@@ -207,47 +207,47 @@ public final class l1 {
         }
 
         public void f(u1 u1Var) {
-            this.f24738a.add(u1Var);
+            this.f25559a.add(u1Var);
         }
 
         public void g(String str, Object obj) {
-            this.f24743g.i(str, obj);
+            this.f25564g.i(str, obj);
         }
 
         public l1 h() {
-            return new l1(new ArrayList(this.f24738a), c3.j0(this.b), this.f24739c, this.f24740d, new ArrayList(this.f24741e), this.f24742f, z3.c(this.f24743g), this.f24744h);
+            return new l1(new ArrayList(this.f25559a), c3.j0(this.b), this.f25560c, this.f25561d, new ArrayList(this.f25562e), this.f25563f, z3.c(this.f25564g), this.f25565h);
         }
 
         public void i() {
-            this.f24738a.clear();
+            this.f25559a.clear();
         }
 
         public Range<Integer> l() {
-            return (Range) this.b.h(l1.f24730k, t3.f24861a);
+            return (Range) this.b.h(l1.f25551k, t3.f25682a);
         }
 
         public Set<u1> m() {
-            return this.f24738a;
+            return this.f25559a;
         }
 
         public int n() {
-            return this.f24739c;
+            return this.f25560c;
         }
 
         public boolean o(u uVar) {
-            return this.f24741e.remove(uVar);
+            return this.f25562e.remove(uVar);
         }
 
         public void p(e0 e0Var) {
-            this.f24744h = e0Var;
+            this.f25565h = e0Var;
         }
 
         public void q(Range<Integer> range) {
-            d(l1.f24730k, range);
+            d(l1.f25551k, range);
         }
 
         public void r(int i10) {
-            this.f24743g.i("CAPTURE_CONFIG_ID_KEY", Integer.valueOf(i10));
+            this.f25564g.i("CAPTURE_CONFIG_ID_KEY", Integer.valueOf(i10));
         }
 
         public void s(n1 n1Var) {
@@ -255,7 +255,7 @@ public final class l1 {
         }
 
         public void t(boolean z10) {
-            this.f24740d = z10;
+            this.f25561d = z10;
         }
 
         public void u(int i10) {
@@ -265,11 +265,11 @@ public final class l1 {
         }
 
         public void v(int i10) {
-            this.f24739c = i10;
+            this.f25560c = i10;
         }
 
         public void w(boolean z10) {
-            this.f24742f = z10;
+            this.f25563f = z10;
         }
 
         public void x(int i10) {
@@ -280,20 +280,20 @@ public final class l1 {
 
         public a(l1 l1Var) {
             HashSet hashSet = new HashSet();
-            this.f24738a = hashSet;
+            this.f25559a = hashSet;
             this.b = x2.k0();
-            this.f24739c = -1;
-            this.f24740d = false;
-            this.f24741e = new ArrayList();
-            this.f24742f = false;
-            this.f24743g = z2.g();
-            hashSet.addAll(l1Var.f24731a);
+            this.f25560c = -1;
+            this.f25561d = false;
+            this.f25562e = new ArrayList();
+            this.f25563f = false;
+            this.f25564g = z2.g();
+            hashSet.addAll(l1Var.f25552a);
             this.b = x2.l0(l1Var.b);
-            this.f24739c = l1Var.f24732c;
-            this.f24741e.addAll(l1Var.c());
-            this.f24742f = l1Var.n();
-            this.f24743g = z2.h(l1Var.j());
-            this.f24740d = l1Var.f24733d;
+            this.f25560c = l1Var.f25553c;
+            this.f25562e.addAll(l1Var.c());
+            this.f25563f = l1Var.n();
+            this.f25564g = z2.h(l1Var.j());
+            this.f25561d = l1Var.f25554d;
         }
     }
 }

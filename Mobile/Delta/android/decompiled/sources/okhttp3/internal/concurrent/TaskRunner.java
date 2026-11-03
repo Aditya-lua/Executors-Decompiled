@@ -217,7 +217,7 @@ public final class TaskRunner implements Lockable {
                             TaskRunner taskRunner3 = this.this$0;
                             synchronized (taskRunner3) {
                                 taskRunner3.afterRun(taskAwaitTaskToRun, -1L, false);
-                                Unit unit = Unit.f22483a;
+                                Unit unit = Unit.f22938a;
                                 if (!(th3 instanceof InterruptedException)) {
                                     throw th3;
                                 }

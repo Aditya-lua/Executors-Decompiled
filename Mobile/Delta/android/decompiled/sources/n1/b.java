@@ -17,29 +17,29 @@ import x2.g;
 public class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Map<Integer, Set<Integer>> f24978a;
+    public static final Map<Integer, Set<Integer>> f25799a;
     public static final Map<Integer, Set<Integer>> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final Map<Integer, Integer> f24979c;
+    public static final Map<Integer, Integer> f25800c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final Map<Integer, Integer> f24980d;
+    public static final Map<Integer, Integer> f25801d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final Map<String, Map<k0, Integer>> f24981e;
+    public static final Map<String, Map<k0, Integer>> f25802e;
 
     static {
         HashMap map = new HashMap();
-        f24978a = map;
+        f25799a = map;
         HashMap map2 = new HashMap();
         b = map2;
         HashMap map3 = new HashMap();
-        f24979c = map3;
+        f25800c = map3;
         HashMap map4 = new HashMap();
-        f24980d = map4;
+        f25801d = map4;
         HashMap map5 = new HashMap();
-        f24981e = map5;
+        f25802e = map5;
         map.put(8, new HashSet(Collections.singletonList(8)));
         map.put(10, new HashSet(Collections.singletonList(10)));
         map.put(0, new HashSet(Arrays.asList(8, 10)));
@@ -58,14 +58,14 @@ public class b {
         map4.put(3, 5);
         map4.put(4, 6);
         HashMap map6 = new HashMap();
-        k0 k0Var = k0.f17470d;
+        k0 k0Var = k0.f18009d;
         map6.put(k0Var, 1);
-        k0 k0Var2 = k0.f17472f;
+        k0 k0Var2 = k0.f18011f;
         map6.put(k0Var2, 2);
-        k0 k0Var3 = k0.f17473g;
+        k0 k0Var3 = k0.f18012g;
         Integer numValueOf = Integer.valueOf(Barcode.FORMAT_AZTEC);
         map6.put(k0Var3, numValueOf);
-        k0 k0Var4 = k0.f17474h;
+        k0 k0Var4 = k0.f18013h;
         map6.put(k0Var4, 8192);
         HashMap map7 = new HashMap();
         map7.put(k0Var, 1);
@@ -78,8 +78,8 @@ public class b {
         map8.put(k0Var3, numValueOf);
         map8.put(k0Var4, Integer.valueOf(Http2.INITIAL_MAX_FRAME_SIZE));
         HashMap map9 = new HashMap();
-        map9.put(k0.f17475i, Integer.valueOf(Barcode.FORMAT_QR_CODE));
-        map9.put(k0.f17476j, Integer.valueOf(Barcode.FORMAT_UPC_A));
+        map9.put(k0.f18014i, Integer.valueOf(Barcode.FORMAT_QR_CODE));
+        map9.put(k0.f18015j, Integer.valueOf(Barcode.FORMAT_UPC_A));
         map5.put("video/hevc", map6);
         map5.put("video/av01", map7);
         map5.put("video/x-vnd.on2.vp9", map8);
@@ -88,7 +88,7 @@ public class b {
 
     public static int a(String str, k0 k0Var) {
         Integer num;
-        Map<k0, Integer> map = f24981e.get(str);
+        Map<k0, Integer> map = f25802e.get(str);
         if (map == null || (num = map.get(k0Var)) == null) {
             return -1;
         }
@@ -96,7 +96,7 @@ public class b {
     }
 
     public static Set<Integer> b(k0 k0Var) {
-        Set<Integer> set = f24978a.get(Integer.valueOf(k0Var.a()));
+        Set<Integer> set = f25799a.get(Integer.valueOf(k0Var.a()));
         return set == null ? Collections.EMPTY_SET : set;
     }
 
@@ -106,7 +106,7 @@ public class b {
     }
 
     public static boolean d(int i10, k0 k0Var) {
-        Set<Integer> set = f24978a.get(Integer.valueOf(k0Var.a()));
+        Set<Integer> set = f25799a.get(Integer.valueOf(k0Var.a()));
         return set != null && set.contains(Integer.valueOf(i10));
     }
 
@@ -120,7 +120,7 @@ public class b {
     }
 
     public static int g(int i10) {
-        Map<Integer, Integer> map = f24979c;
+        Map<Integer, Integer> map = f25800c;
         g.a(map.containsKey(Integer.valueOf(i10)));
         Integer num = map.get(Integer.valueOf(i10));
         Objects.requireNonNull(num);
@@ -128,7 +128,7 @@ public class b {
     }
 
     public static int h(int i10) {
-        Map<Integer, Integer> map = f24980d;
+        Map<Integer, Integer> map = f25801d;
         g.a(map.containsKey(Integer.valueOf(i10)));
         Integer num = map.get(Integer.valueOf(i10));
         Objects.requireNonNull(num);

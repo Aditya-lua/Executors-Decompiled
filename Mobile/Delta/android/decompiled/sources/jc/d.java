@@ -1,65 +1,35 @@
 package jc;
 
-import android.view.View;
-import androidx.core.view.o0;
+import android.util.Property;
+import android.view.ViewGroup;
+import androidx.annotation.NonNull;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class d {
+public class d extends Property<ViewGroup, Float> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final View f21254a;
-    public int b;
+    public static final Property<ViewGroup, Float> f21817a = new d("childrenAlpha");
 
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f21255c;
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public int f21256d;
-
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public int f21257e;
-
-    /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public boolean f21258f = true;
-
-    /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public boolean f21259g = true;
-
-    public d(View view) {
-        this.f21254a = view;
+    public d(String str) {
+        super(Float.class, str);
     }
 
-    public void a() {
-        View view = this.f21254a;
-        o0.X(view, this.f21256d - (view.getTop() - this.b));
-        View view2 = this.f21254a;
-        o0.W(view2, this.f21257e - (view2.getLeft() - this.f21255c));
+    @Override // android.util.Property
+    @NonNull
+    /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
+    public Float get(@NonNull ViewGroup viewGroup) {
+        Float f10 = (Float) viewGroup.getTag(ic.f.F);
+        return f10 != null ? f10 : Float.valueOf(1.0f);
     }
 
-    public int b() {
-        return this.f21256d;
-    }
-
-    public void c() {
-        this.b = this.f21254a.getTop();
-        this.f21255c = this.f21254a.getLeft();
-    }
-
-    public boolean d(int i10) {
-        if (!this.f21259g || this.f21257e == i10) {
-            return false;
+    @Override // android.util.Property
+    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+    public void set(@NonNull ViewGroup viewGroup, @NonNull Float f10) {
+        float fFloatValue = f10.floatValue();
+        viewGroup.setTag(ic.f.F, f10);
+        int childCount = viewGroup.getChildCount();
+        for (int i10 = 0; i10 < childCount; i10++) {
+            viewGroup.getChildAt(i10).setAlpha(fFloatValue);
         }
-        this.f21257e = i10;
-        a();
-        return true;
-    }
-
-    public boolean e(int i10) {
-        if (!this.f21258f || this.f21256d == i10) {
-            return false;
-        }
-        this.f21256d = i10;
-        a();
-        return true;
     }
 }

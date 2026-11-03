@@ -3,7 +3,7 @@ package com.roblox.client.components;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.TextView;
-import eh.e;
+import dh.e;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class RbxTextView extends TextView {

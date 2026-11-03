@@ -15,19 +15,19 @@ public class PublicKeyCredentialParameters extends AbstractSafeParcelable {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NonNull
-    public final PublicKeyCredentialType f5998f;
+    public final PublicKeyCredentialType f6071f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
     @NonNull
-    public final COSEAlgorithmIdentifier f5999g;
+    public final COSEAlgorithmIdentifier f6072g;
 
     public PublicKeyCredentialParameters(@NonNull String str, int i10) {
         n9.m.l(str);
         try {
-            this.f5998f = PublicKeyCredentialType.a(str);
+            this.f6071f = PublicKeyCredentialType.a(str);
             n9.m.l(Integer.valueOf(i10));
             try {
-                this.f5999g = COSEAlgorithmIdentifier.a(i10);
+                this.f6072g = COSEAlgorithmIdentifier.a(i10);
             } catch (COSEAlgorithmIdentifier.a e10) {
                 throw new IllegalArgumentException(e10);
             }
@@ -41,26 +41,26 @@ public class PublicKeyCredentialParameters extends AbstractSafeParcelable {
             return false;
         }
         PublicKeyCredentialParameters publicKeyCredentialParameters = (PublicKeyCredentialParameters) obj;
-        return this.f5998f.equals(publicKeyCredentialParameters.f5998f) && this.f5999g.equals(publicKeyCredentialParameters.f5999g);
+        return this.f6071f.equals(publicKeyCredentialParameters.f6071f) && this.f6072g.equals(publicKeyCredentialParameters.f6072g);
     }
 
     public int hashCode() {
-        return k.c(this.f5998f, this.f5999g);
+        return k.c(this.f6071f, this.f6072g);
     }
 
     @NonNull
     public final String toString() {
-        COSEAlgorithmIdentifier cOSEAlgorithmIdentifier = this.f5999g;
-        return "PublicKeyCredentialParameters{\n type=" + String.valueOf(this.f5998f) + ", \n algorithm=" + String.valueOf(cOSEAlgorithmIdentifier) + "\n }";
+        COSEAlgorithmIdentifier cOSEAlgorithmIdentifier = this.f6072g;
+        return "PublicKeyCredentialParameters{\n type=" + String.valueOf(this.f6071f) + ", \n algorithm=" + String.valueOf(cOSEAlgorithmIdentifier) + "\n }";
     }
 
     public int v3() {
-        return this.f5999g.f();
+        return this.f6072g.f();
     }
 
     @NonNull
     public String w3() {
-        return this.f5998f.toString();
+        return this.f6071f.toString();
     }
 
     @Override // android.os.Parcelable

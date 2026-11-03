@@ -1,85 +1,157 @@
 package ku;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
+import backtraceio.library.services.BacktraceMetrics;
 import kotlin.Metadata;
 import kotlin.Unit;
+import kotlin.coroutines.CoroutineContext;
+import kotlin.jvm.functions.Function2;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import ou.e0;
+import ou.h0;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000\u001e\n\u0000\n\u0002\u0010\u001e\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u001a,\u0010\u0004\u001a\b\u0012\u0004\u0012\u00028\u00000\u0003\"\u0004\b\u0000\u0010\u0000*\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00028\u00000\u00020\u0001H\u0086@¢\u0006\u0004\b\u0004\u0010\u0005\u001a\u001a\u0010\b\u001a\u00020\u0007*\b\u0012\u0004\u0012\u00020\u00060\u0001H\u0086@¢\u0006\u0004\b\b\u0010\u0005¨\u0006\t"}, d2 = {"T", "", "Lku/w0;", "", "a", "(Ljava/util/Collection;Lnt/b;)Ljava/lang/Object;", "Lku/d2;", "", "b", "kotlinx-coroutines-core"}, k = 2, mv = {2, 1, 0}, xi = 48)
+@Metadata(d1 = {"\u0000J\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0003\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\n\n\u0002\u0010\u0000\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b$\u001a3\u0010\u0004\u001a \u0012\u0004\u0012\u00020\u0002\u0012\n\u0012\b\u0012\u0004\u0012\u00028\u00000\u0003\u0012\n\u0012\b\u0012\u0004\u0012\u00028\u00000\u00030\u0001\"\u0004\b\u0000\u0010\u0000H\u0000¢\u0006\u0004\b\u0004\u0010\u0005\u001a1\u0010\b\u001a\b\u0012\u0004\u0012\u00028\u00000\u0003\"\u0004\b\u0000\u0010\u00002\u0006\u0010\u0006\u001a\u00020\u00022\f\u0010\u0007\u001a\b\u0012\u0004\u0012\u00028\u00000\u0003H\u0002¢\u0006\u0004\b\b\u0010\t\u001aK\u0010\u0013\u001a\u00020\u0012\"\u0004\b\u0000\u0010\n*\b\u0012\u0004\u0012\u00028\u00000\u000b2\u0006\u0010\f\u001a\u00028\u00002\"\b\u0002\u0010\u0011\u001a\u001c\u0012\u0004\u0012\u00020\u000e\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u0010\u0018\u00010\rH\u0002¢\u0006\u0004\b\u0013\u0010\u0014\u001a\u0017\u0010\u0017\u001a\u00020\u00022\u0006\u0010\u0016\u001a\u00020\u0015H\u0002¢\u0006\u0004\b\u0017\u0010\u0018\u001a\u001f\u0010\u001b\u001a\u00020\u00022\u0006\u0010\u0019\u001a\u00020\u00022\u0006\u0010\u001a\u001a\u00020\u0015H\u0002¢\u0006\u0004\b\u001b\u0010\u001c\u001a\u001f\u0010\u001e\u001a\u00020\u00022\u0006\u0010\u0019\u001a\u00020\u00022\u0006\u0010\u001d\u001a\u00020\u0012H\u0002¢\u0006\u0004\b\u001e\u0010\u001f\"\u001c\u0010#\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010 0\u00038\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b!\u0010\"\"\u0014\u0010&\u001a\u00020\u00158\u0000X\u0081\u0004¢\u0006\u0006\n\u0004\b$\u0010%\"\u0014\u0010(\u001a\u00020\u00158\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b'\u0010%\"\u0014\u0010,\u001a\u00020)8\u0000X\u0081\u0004¢\u0006\u0006\n\u0004\b*\u0010+\"\u0014\u0010.\u001a\u00020)8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b-\u0010+\"\u0014\u00100\u001a\u00020)8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b/\u0010+\"\u0014\u00102\u001a\u00020)8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b1\u0010+\"\u0014\u00104\u001a\u00020)8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b3\u0010+\"\u0014\u00106\u001a\u00020)8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b5\u0010+\"\u0014\u00108\u001a\u00020)8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b7\u0010+\"\u0014\u0010:\u001a\u00020)8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b9\u0010+\"\u001a\u0010>\u001a\u00020)8\u0000X\u0080\u0004¢\u0006\f\n\u0004\b;\u0010+\u001a\u0004\b<\u0010=\"\u0014\u0010@\u001a\u00020)8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b?\u0010+\"\u0014\u0010B\u001a\u00020)8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bA\u0010+\"\u0014\u0010D\u001a\u00020)8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bC\u0010+\"\u0014\u0010F\u001a\u00020)8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bE\u0010+\"\u0014\u0010H\u001a\u00020)8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bG\u0010+\"\u0014\u0010J\u001a\u00020)8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bI\u0010+\"\u0014\u0010L\u001a\u00020)8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bK\u0010+¨\u0006M"}, d2 = {"E", "Lkotlin/reflect/KFunction2;", "", "Lku/m;", "y", "()Lfu/g;", "id", "prev", "x", "(JLku/m;)Lku/m;", "T", "Liu/n;", "value", "Lkotlin/Function3;", "", "Lkotlin/coroutines/CoroutineContext;", "", "onCancellation", "", "B", "(Liu/n;Ljava/lang/Object;Lxt/n;)Z", "", "capacity", "A", "(I)J", "counter", "closeStatus", "w", "(JI)J", "pauseEB", "v", "(JZ)J", "", "a", "Lku/m;", "NULL_SEGMENT", "b", "I", "SEGMENT_SIZE", "c", "EXPAND_BUFFER_COMPLETION_WAIT_ITERATIONS", "Lou/e0;", "d", "Lou/e0;", "BUFFERED", "e", "IN_BUFFER", "f", "RESUMING_BY_RCV", "g", "RESUMING_BY_EB", "h", "POISONED", "i", "DONE_RCV", "j", "INTERRUPTED_SEND", "k", "INTERRUPTED_RCV", "l", "z", "()Lou/e0;", "CHANNEL_CLOSED", "m", "SUSPEND", "n", "SUSPEND_NO_WAITER", "o", "FAILED", "p", "NO_RECEIVE_RESULT", "q", "CLOSE_HANDLER_CLOSED", "r", "CLOSE_HANDLER_INVOKED", "s", "NO_CLOSE_CAUSE", "kotlinx-coroutines-core"}, k = 2, mv = {2, 1, 0}, xi = 48)
 public final class f {
 
-    @pt.f(c = "kotlinx.coroutines.AwaitKt", f = "Await.kt", l = {58}, m = "joinAll")
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    @NotNull
+    public static final m<Object> f23236a = new m<>(-1, null, null, 0);
+    public static final int b = h0.e("kotlinx.coroutines.bufferedChannel.segmentSize", 32, 0, 0, 12, null);
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public static final int f23237c = h0.e("kotlinx.coroutines.bufferedChannel.expandBufferCompletionWaitIterations", BacktraceMetrics.defaultTimeBetweenRetriesMs, 0, 0, 12, null);
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    @NotNull
+    public static final e0 f23238d = new e0("BUFFERED");
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    @NotNull
+    public static final e0 f23239e = new e0("SHOULD_BUFFER");
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    @NotNull
+    public static final e0 f23240f = new e0("S_RESUMING_BY_RCV");
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name */
+    @NotNull
+    public static final e0 f23241g = new e0("RESUMING_BY_EB");
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name */
+    @NotNull
+    public static final e0 f23242h = new e0("POISONED");
+
+    /* JADX INFO: renamed from: i, reason: collision with root package name */
+    @NotNull
+    public static final e0 f23243i = new e0("DONE_RCV");
+
+    /* JADX INFO: renamed from: j, reason: collision with root package name */
+    @NotNull
+    public static final e0 f23244j = new e0("INTERRUPTED_SEND");
+
+    /* JADX INFO: renamed from: k, reason: collision with root package name */
+    @NotNull
+    public static final e0 f23245k = new e0("INTERRUPTED_RCV");
+
+    /* JADX INFO: renamed from: l, reason: collision with root package name */
+    @NotNull
+    public static final e0 f23246l = new e0("CHANNEL_CLOSED");
+
+    /* JADX INFO: renamed from: m, reason: collision with root package name */
+    @NotNull
+    public static final e0 f23247m = new e0("SUSPEND");
+
+    /* JADX INFO: renamed from: n, reason: collision with root package name */
+    @NotNull
+    public static final e0 f23248n = new e0("SUSPEND_NO_WAITER");
+
+    /* JADX INFO: renamed from: o, reason: collision with root package name */
+    @NotNull
+    public static final e0 f23249o = new e0("FAILED");
+
+    /* JADX INFO: renamed from: p, reason: collision with root package name */
+    @NotNull
+    public static final e0 f23250p = new e0("NO_RECEIVE_RESULT");
+
+    /* JADX INFO: renamed from: q, reason: collision with root package name */
+    @NotNull
+    public static final e0 f23251q = new e0("CLOSE_HANDLER_CLOSED");
+
+    /* JADX INFO: renamed from: r, reason: collision with root package name */
+    @NotNull
+    public static final e0 f23252r = new e0("CLOSE_HANDLER_INVOKED");
+
+    /* JADX INFO: renamed from: s, reason: collision with root package name */
+    @NotNull
+    public static final e0 f23253s = new e0("NO_CLOSE_CAUSE");
+
+    /* JADX INFO: Add missing generic type declarations: [E] */
     @Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
-    public static final class a extends pt.d {
+    public /* synthetic */ class a<E> extends kotlin.jvm.internal.k implements Function2<Long, m<E>, m<E>> {
 
-        /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f22785t;
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public static final a f23254a = new a();
 
-        /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public /* synthetic */ Object f22786u;
-
-        /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public int f22787v;
-
-        public a(nt.b<? super a> bVar) {
-            super(bVar);
+        public a() {
+            super(2, f.class, "createSegment", "createSegment(JLkotlinx/coroutines/channels/ChannelSegment;)Lkotlinx/coroutines/channels/ChannelSegment;", 1);
         }
 
-        @Override // pt.a
-        @Nullable
-        public final Object invokeSuspend(@NotNull Object obj) {
-            this.f22786u = obj;
-            this.f22787v |= Integer.MIN_VALUE;
-            return f.b(null, this);
+        public final m<E> d(long j10, m<E> mVar) {
+            return f.x(j10, mVar);
+        }
+
+        @Override // kotlin.jvm.functions.Function2
+        public /* bridge */ /* synthetic */ Object invoke(Long l10, Object obj) {
+            return d(l10.longValue(), (m) obj);
         }
     }
 
-    @Nullable
-    public static final <T> Object a(@NotNull Collection<? extends w0<? extends T>> collection, @NotNull nt.b<? super List<? extends T>> bVar) {
-        return collection.isEmpty() ? kotlin.collections.p.k() : new e((w0[]) collection.toArray(new w0[0])).c(bVar);
+    public static final long A(int i10) {
+        if (i10 == 0) {
+            return 0L;
+        }
+        if (i10 != Integer.MAX_VALUE) {
+            return i10;
+        }
+        return Long.MAX_VALUE;
     }
 
-    /* JADX WARN: Code duplicated, block: B:7:0x0013  */
-    @Nullable
-    public static final Object b(@NotNull Collection<? extends d2> collection, @NotNull nt.b<? super Unit> bVar) {
-        a aVar;
-        Iterator it;
-        if (bVar instanceof a) {
-            aVar = (a) bVar;
-            int i10 = aVar.f22787v;
-            if ((i10 & Integer.MIN_VALUE) != 0) {
-                aVar.f22787v = i10 - Integer.MIN_VALUE;
-            } else {
-                aVar = new a(bVar);
-            }
-        } else {
-            aVar = new a(bVar);
+    /* JADX WARN: Multi-variable type inference failed */
+    public static final <T> boolean B(iu.n<? super T> nVar, T t8, xt.n<? super Throwable, ? super T, ? super CoroutineContext, Unit> nVar2) {
+        Object objW = nVar.w(t8, null, nVar2);
+        if (objW == null) {
+            return false;
         }
-        Object obj = aVar.f22786u;
-        Object objE = ot.c.e();
-        int i11 = aVar.f22787v;
-        if (i11 == 0) {
-            jt.o.b(obj);
-            it = collection.iterator();
-        } else {
-            if (i11 != 1) {
-                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-            }
-            it = (Iterator) aVar.f22785t;
-            jt.o.b(obj);
+        nVar.K(objW);
+        return true;
+    }
+
+    public static /* synthetic */ boolean C(iu.n nVar, Object obj, xt.n nVar2, int i10, Object obj2) {
+        if ((i10 & 2) != 0) {
+            nVar2 = null;
         }
-        while (it.hasNext()) {
-            d2 d2Var = (d2) it.next();
-            aVar.f22785t = it;
-            aVar.f22787v = 1;
-            if (d2Var.L(aVar) == objE) {
-                return objE;
-            }
-        }
-        return Unit.f22483a;
+        return B(nVar, obj, nVar2);
+    }
+
+    public static final long v(long j10, boolean z10) {
+        return (z10 ? 4611686018427387904L : 0L) + j10;
+    }
+
+    public static final long w(long j10, int i10) {
+        return (((long) i10) << 60) + j10;
+    }
+
+    public static final <E> m<E> x(long j10, m<E> mVar) {
+        return new m<>(j10, mVar, mVar.y(), 0);
+    }
+
+    @NotNull
+    public static final <E> fu.g<m<E>> y() {
+        return a.f23254a;
+    }
+
+    @NotNull
+    public static final e0 z() {
+        return f23246l;
     }
 }

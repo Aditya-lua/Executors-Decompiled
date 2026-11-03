@@ -8,17 +8,17 @@ public interface d extends Closeable {
 
     boolean K(b8.o oVar);
 
-    k U0(b8.o oVar, b8.i iVar);
+    k Q0(b8.o oVar, b8.i iVar);
+
+    Iterable<k> Z0(b8.o oVar);
 
     int cleanUp();
 
-    Iterable<k> d1(b8.o oVar);
+    Iterable<b8.o> e0();
 
-    Iterable<b8.o> g0();
+    void p2(b8.o oVar, long j10);
 
-    void o2(b8.o oVar, long j10);
+    void q1(Iterable<k> iterable);
 
-    void s1(Iterable<k> iterable);
-
-    long v0(b8.o oVar);
+    long r0(b8.o oVar);
 }

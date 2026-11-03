@@ -1,16 +1,16 @@
 package pk;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class a {
-    public String a() {
-        return "";
-    }
+public interface a {
+    String a();
 
-    public String b() {
-        return "";
-    }
+    void b(String str, String str2);
 
-    public String c() {
-        return "";
-    }
+    String c();
+
+    String d();
+
+    String e();
+
+    void f(String str, String str2, String str3, long j10);
 }

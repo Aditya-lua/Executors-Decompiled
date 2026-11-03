@@ -9,24 +9,24 @@ import java.util.RandomAccess;
 public final class m extends c<Double> implements a0.b, RandomAccess {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final m f8510d = new m(new double[0], 0, false);
+    public static final m f8584d = new m(new double[0], 0, false);
     public double[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f8511c;
+    public int f8585c;
 
     public m() {
         this(new double[10], 0, true);
     }
 
     private void f(int i10) {
-        if (i10 < 0 || i10 >= this.f8511c) {
+        if (i10 < 0 || i10 >= this.f8585c) {
             throw new IndexOutOfBoundsException(i(i10));
         }
     }
 
     private String i(int i10) {
-        return "Index:" + i10 + ", Size:" + this.f8511c;
+        return "Index:" + i10 + ", Size:" + this.f8585c;
     }
 
     @Override // com.google.crypto.tink.shaded.protobuf.c, java.util.AbstractCollection, java.util.Collection, java.util.List
@@ -37,11 +37,11 @@ public final class m extends c<Double> implements a0.b, RandomAccess {
             return super.addAll(collection);
         }
         m mVar = (m) collection;
-        int i10 = mVar.f8511c;
+        int i10 = mVar.f8585c;
         if (i10 == 0) {
             return false;
         }
-        int i11 = this.f8511c;
+        int i11 = this.f8585c;
         if (Integer.MAX_VALUE - i11 < i10) {
             throw new OutOfMemoryError();
         }
@@ -50,8 +50,8 @@ public final class m extends c<Double> implements a0.b, RandomAccess {
         if (i12 > dArr.length) {
             this.b = Arrays.copyOf(dArr, i12);
         }
-        System.arraycopy(mVar.b, 0, this.b, this.f8511c, mVar.f8511c);
-        this.f8511c = i12;
+        System.arraycopy(mVar.b, 0, this.b, this.f8585c, mVar.f8585c);
+        this.f8585c = i12;
         ((AbstractList) this).modCount++;
         return true;
     }
@@ -76,7 +76,7 @@ public final class m extends c<Double> implements a0.b, RandomAccess {
 
     public void d(double d10) {
         a();
-        int i10 = this.f8511c;
+        int i10 = this.f8585c;
         double[] dArr = this.b;
         if (i10 == dArr.length) {
             double[] dArr2 = new double[((i10 * 3) / 2) + 1];
@@ -84,15 +84,15 @@ public final class m extends c<Double> implements a0.b, RandomAccess {
             this.b = dArr2;
         }
         double[] dArr3 = this.b;
-        int i11 = this.f8511c;
-        this.f8511c = i11 + 1;
+        int i11 = this.f8585c;
+        this.f8585c = i11 + 1;
         dArr3[i11] = d10;
     }
 
     public final void e(int i10, double d10) {
         int i11;
         a();
-        if (i10 < 0 || i10 > (i11 = this.f8511c)) {
+        if (i10 < 0 || i10 > (i11 = this.f8585c)) {
             throw new IndexOutOfBoundsException(i(i10));
         }
         double[] dArr = this.b;
@@ -101,11 +101,11 @@ public final class m extends c<Double> implements a0.b, RandomAccess {
         } else {
             double[] dArr2 = new double[((i11 * 3) / 2) + 1];
             System.arraycopy(dArr, 0, dArr2, 0, i10);
-            System.arraycopy(this.b, i10, dArr2, i10 + 1, this.f8511c - i10);
+            System.arraycopy(this.b, i10, dArr2, i10 + 1, this.f8585c - i10);
             this.b = dArr2;
         }
         this.b[i10] = d10;
-        this.f8511c++;
+        this.f8585c++;
         ((AbstractList) this).modCount++;
     }
 
@@ -118,11 +118,11 @@ public final class m extends c<Double> implements a0.b, RandomAccess {
             return super.equals(obj);
         }
         m mVar = (m) obj;
-        if (this.f8511c != mVar.f8511c) {
+        if (this.f8585c != mVar.f8585c) {
             return false;
         }
         double[] dArr = mVar.b;
-        for (int i10 = 0; i10 < this.f8511c; i10++) {
+        for (int i10 = 0; i10 < this.f8585c; i10++) {
             if (Double.doubleToLongBits(this.b[i10]) != Double.doubleToLongBits(dArr[i10])) {
                 return false;
             }
@@ -144,7 +144,7 @@ public final class m extends c<Double> implements a0.b, RandomAccess {
     @Override // com.google.crypto.tink.shaded.protobuf.c, java.util.AbstractList, java.util.Collection, java.util.List
     public int hashCode() {
         int iF = 1;
-        for (int i10 = 0; i10 < this.f8511c; i10++) {
+        for (int i10 = 0; i10 < this.f8585c; i10++) {
             iF = (iF * 31) + a0.f(Double.doubleToLongBits(this.b[i10]));
         }
         return iF;
@@ -168,8 +168,8 @@ public final class m extends c<Double> implements a0.b, RandomAccess {
     @Override // com.google.crypto.tink.shaded.protobuf.a0.i
     /* JADX INFO: renamed from: k, reason: merged with bridge method [inline-methods] */
     public a0.b o(int i10) {
-        if (i10 >= this.f8511c) {
-            return new m(Arrays.copyOf(this.b, i10), this.f8511c, true);
+        if (i10 >= this.f8585c) {
+            return new m(Arrays.copyOf(this.b, i10), this.f8585c, true);
         }
         throw new IllegalArgumentException();
     }
@@ -181,11 +181,11 @@ public final class m extends c<Double> implements a0.b, RandomAccess {
         f(i10);
         double[] dArr = this.b;
         double d10 = dArr[i10];
-        int i11 = this.f8511c;
+        int i11 = this.f8585c;
         if (i10 < i11 - 1) {
             System.arraycopy(dArr, i10 + 1, dArr, i10, (i11 - i10) - 1);
         }
-        this.f8511c--;
+        this.f8585c--;
         ((AbstractList) this).modCount++;
         return Double.valueOf(d10);
     }
@@ -212,19 +212,19 @@ public final class m extends c<Double> implements a0.b, RandomAccess {
             throw new IndexOutOfBoundsException("toIndex < fromIndex");
         }
         double[] dArr = this.b;
-        System.arraycopy(dArr, i11, dArr, i10, this.f8511c - i11);
-        this.f8511c -= i11 - i10;
+        System.arraycopy(dArr, i11, dArr, i10, this.f8585c - i11);
+        this.f8585c -= i11 - i10;
         ((AbstractList) this).modCount++;
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public int size() {
-        return this.f8511c;
+        return this.f8585c;
     }
 
     public m(double[] dArr, int i10, boolean z10) {
         super(z10);
         this.b = dArr;
-        this.f8511c = i10;
+        this.f8585c = i10;
     }
 }

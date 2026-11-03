@@ -95,7 +95,7 @@ public final class CreateDigitalCredentialController extends CredentialProviderC
     public static final Unit handleResponse$lambda$0(CancellationSignal cancellationSignal, Function0 f10) {
         Intrinsics.checkNotNullParameter(f10, "f");
         CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(cancellationSignal, f10);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -104,10 +104,10 @@ public final class CreateDigitalCredentialController extends CredentialProviderC
         createDigitalCredentialController.getExecutor().execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createdigitalcredential.j
             @Override // java.lang.Runnable
             public final void run() {
-                CreateDigitalCredentialController.handleResponse$lambda$2$lambda$1(this.f2039a, e10);
+                CreateDigitalCredentialController.handleResponse$lambda$2$lambda$1(this.f1884a, e10);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -120,10 +120,10 @@ public final class CreateDigitalCredentialController extends CredentialProviderC
         createDigitalCredentialController.getExecutor().execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createdigitalcredential.l
             @Override // java.lang.Runnable
             public final void run() {
-                CreateDigitalCredentialController.handleResponse$lambda$4$lambda$3(this.f2041a);
+                CreateDigitalCredentialController.handleResponse$lambda$4$lambda$3(this.f1886a);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -136,10 +136,10 @@ public final class CreateDigitalCredentialController extends CredentialProviderC
         createDigitalCredentialController.getExecutor().execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createdigitalcredential.k
             @Override // java.lang.Runnable
             public final void run() {
-                CreateDigitalCredentialController.handleResponse$lambda$6$lambda$5(this.f2040a, fVar);
+                CreateDigitalCredentialController.handleResponse$lambda$6$lambda$5(this.f1885a, fVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -156,10 +156,10 @@ public final class CreateDigitalCredentialController extends CredentialProviderC
         createDigitalCredentialController.getExecutor().execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createdigitalcredential.h
             @Override // java.lang.Runnable
             public final void run() {
-                CreateDigitalCredentialController.handleResponse$lambda$8$lambda$7(this.f2037a, cVar);
+                CreateDigitalCredentialController.handleResponse$lambda$8$lambda$7(this.f1882a, cVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -186,7 +186,7 @@ public final class CreateDigitalCredentialController extends CredentialProviderC
                 CreateDigitalCredentialController.invokePlayServices$lambda$13$lambda$12$lambda$11(pVar, exc);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -197,7 +197,7 @@ public final class CreateDigitalCredentialController extends CredentialProviderC
     /* JADX INFO: Access modifiers changed from: private */
     public static final Unit invokePlayServices$lambda$9(CancellationSignal cancellationSignal, CreateDigitalCredentialController createDigitalCredentialController, CreateCredentialHandle createCredentialHandle) {
         if (CredentialProviderPlayServicesImpl.INSTANCE.cancellationReviewer$credentials_play_services_auth_release(cancellationSignal)) {
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
         Intent intent = new Intent(createDigitalCredentialController.context, (Class<?>) IdentityCredentialApiHiddenActivity.class);
         intent.setFlags(65536);
@@ -205,7 +205,7 @@ public final class CreateDigitalCredentialController extends CredentialProviderC
         intent.putExtra(CredentialProviderBaseController.EXTRA_FLOW_PENDING_INTENT, createCredentialHandle.getPendingIntent());
         intent.putExtra(CredentialProviderBaseController.EXTRA_ERROR_NAME, CredentialProviderBaseController.CREATE_UNKNOWN);
         createDigitalCredentialController.context.startActivity(intent);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     @NotNull
@@ -242,7 +242,7 @@ public final class CreateDigitalCredentialController extends CredentialProviderC
         }, new Function1() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createdigitalcredential.b
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return CreateDigitalCredentialController.handleResponse$lambda$2(this.f2030a, (f3.f) obj);
+                return CreateDigitalCredentialController.handleResponse$lambda$2(this.f1875a, (f3.f) obj);
             }
         }, this.cancellationSignal)) {
             return;
@@ -251,7 +251,7 @@ public final class CreateDigitalCredentialController extends CredentialProviderC
             CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(this.cancellationSignal, new Function0() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createdigitalcredential.c
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return CreateDigitalCredentialController.handleResponse$lambda$4(this.f2031a);
+                    return CreateDigitalCredentialController.handleResponse$lambda$4(this.f1876a);
                 }
             });
             return;
@@ -262,7 +262,7 @@ public final class CreateDigitalCredentialController extends CredentialProviderC
             CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(this.cancellationSignal, new Function0() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createdigitalcredential.e
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return CreateDigitalCredentialController.handleResponse$lambda$8(this.f2033a, cVarB);
+                    return CreateDigitalCredentialController.handleResponse$lambda$8(this.f1878a, cVarB);
                 }
             });
         } else {
@@ -270,7 +270,7 @@ public final class CreateDigitalCredentialController extends CredentialProviderC
             CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(this.cancellationSignal, new Function0() { // from class: androidx.credentials.playservices.controllers.identitycredentials.createdigitalcredential.d
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return CreateDigitalCredentialController.handleResponse$lambda$6(this.f2032a, fVarA);
+                    return CreateDigitalCredentialController.handleResponse$lambda$6(this.f1877a, fVarA);
                 }
             });
         }

@@ -9,33 +9,33 @@ import java.util.concurrent.Future;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
-import me.x;
+import ne.x;
 
 /* JADX INFO: loaded from: classes.dex */
 public class b<I, O> extends d<O> implements Runnable {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public r0.a<? super I, ? extends O> f29693c;
+    public r0.a<? super I, ? extends O> f30095c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final BlockingQueue<Boolean> f29694d = new LinkedBlockingQueue(1);
+    public final BlockingQueue<Boolean> f30096d = new LinkedBlockingQueue(1);
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final CountDownLatch f29695e = new CountDownLatch(1);
+    public final CountDownLatch f30097e = new CountDownLatch(1);
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public x<? extends I> f29696f;
+    public x<? extends I> f30098f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public volatile x<? extends O> f29697g;
+    public volatile x<? extends O> f30099g;
 
     public class a implements Runnable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ x f29698a;
+        public final /* synthetic */ x f30100a;
 
         public a(x xVar) {
-            this.f29698a = xVar;
+            this.f30100a = xVar;
         }
 
         @Override // java.lang.Runnable
@@ -43,7 +43,7 @@ public class b<I, O> extends d<O> implements Runnable {
             try {
                 try {
                     try {
-                        b.this.d(n.m(this.f29698a));
+                        b.this.d(n.m(this.f30100a));
                     } catch (CancellationException unused) {
                         b.this.cancel(false);
                     }
@@ -51,14 +51,14 @@ public class b<I, O> extends d<O> implements Runnable {
                     b.this.e(e10.getCause());
                 }
             } finally {
-                b.this.f29697g = null;
+                b.this.f30099g = null;
             }
         }
     }
 
     public b(r0.a<? super I, ? extends O> aVar, x<? extends I> xVar) {
-        this.f29693c = (r0.a) x2.g.g(aVar);
-        this.f29696f = (x) x2.g.g(xVar);
+        this.f30095c = (r0.a) x2.g.g(aVar);
+        this.f30098f = (x) x2.g.g(xVar);
     }
 
     @Override // r0.d, java.util.concurrent.Future
@@ -66,21 +66,21 @@ public class b<I, O> extends d<O> implements Runnable {
         if (!super.cancel(z10)) {
             return false;
         }
-        i(this.f29694d, Boolean.valueOf(z10));
-        h(this.f29696f, z10);
-        h(this.f29697g, z10);
+        i(this.f30096d, Boolean.valueOf(z10));
+        h(this.f30098f, z10);
+        h(this.f30099g, z10);
         return true;
     }
 
     @Override // r0.d, java.util.concurrent.Future
     public O get() throws ExecutionException, InterruptedException {
         if (!isDone()) {
-            x<? extends I> xVar = this.f29696f;
+            x<? extends I> xVar = this.f30098f;
             if (xVar != null) {
                 xVar.get();
             }
-            this.f29695e.await();
-            x<? extends O> xVar2 = this.f29697g;
+            this.f30097e.await();
+            x<? extends O> xVar2 = this.f30099g;
             if (xVar2 != null) {
                 xVar2.get();
             }
@@ -136,13 +136,13 @@ public class b<I, O> extends d<O> implements Runnable {
         return eTake;
     }
 
-    /* JADX WARN: Type inference failed for: r0v0, types: [me.x<? extends I>, r0.a<? super I, ? extends O>] */
-    /* JADX WARN: Type inference failed for: r0v1, types: [me.x<? extends I>, r0.a<? super I, ? extends O>] */
+    /* JADX WARN: Type inference failed for: r0v0, types: [ne.x<? extends I>, r0.a<? super I, ? extends O>] */
+    /* JADX WARN: Type inference failed for: r0v1, types: [ne.x<? extends I>, r0.a<? super I, ? extends O>] */
     /* JADX WARN: Type inference failed for: r0v15 */
     /* JADX WARN: Type inference failed for: r0v16 */
     /* JADX WARN: Type inference failed for: r0v17 */
     /* JADX WARN: Type inference failed for: r0v3 */
-    /* JADX WARN: Type inference failed for: r0v4, types: [me.x<? extends I>, r0.a<? super I, ? extends O>] */
+    /* JADX WARN: Type inference failed for: r0v4, types: [ne.x<? extends I>, r0.a<? super I, ? extends O>] */
     /* JADX WARN: Type inference failed for: r0v6 */
     /* JADX WARN: Type inference failed for: r0v7 */
     /* JADX WARN: Type inference failed for: r0v8, types: [java.util.concurrent.CountDownLatch] */
@@ -152,11 +152,11 @@ public class b<I, O> extends d<O> implements Runnable {
         ?? r10 = (r0.a<? super I, ? extends O>) null;
         try {
             try {
-                x<? extends O> xVarApply = this.f29693c.apply(n.m(this.f29696f));
-                this.f29697g = xVarApply;
+                x<? extends O> xVarApply = this.f30095c.apply(n.m(this.f30098f));
+                this.f30099g = xVarApply;
                 if (isCancelled()) {
-                    xVarApply.cancel(((Boolean) j(this.f29694d)).booleanValue());
-                    this.f29697g = null;
+                    xVarApply.cancel(((Boolean) j(this.f30096d)).booleanValue());
+                    this.f30099g = null;
                 } else {
                     xVarApply.a(new a(xVarApply), q0.c.b());
                 }
@@ -170,9 +170,9 @@ public class b<I, O> extends d<O> implements Runnable {
                 e(e12);
                 r8 = r10;
             } finally {
-                this.f29693c = (r0.a<? super I, ? extends O>) r10;
-                this.f29696f = (x<? extends I>) r10;
-                this.f29695e.countDown();
+                this.f30095c = (r0.a<? super I, ? extends O>) r10;
+                this.f30098f = (x<? extends I>) r10;
+                this.f30097e.countDown();
             }
         } catch (CancellationException unused) {
             cancel(false);
@@ -189,16 +189,16 @@ public class b<I, O> extends d<O> implements Runnable {
                 j10 = timeUnit2.convert(j10, timeUnit);
                 timeUnit = timeUnit2;
             }
-            x<? extends I> xVar = this.f29696f;
+            x<? extends I> xVar = this.f30098f;
             if (xVar != null) {
                 long jNanoTime = System.nanoTime();
                 xVar.get(j10, timeUnit);
                 j10 -= Math.max(0L, System.nanoTime() - jNanoTime);
             }
             long jNanoTime2 = System.nanoTime();
-            if (this.f29695e.await(j10, timeUnit)) {
+            if (this.f30097e.await(j10, timeUnit)) {
                 j10 -= Math.max(0L, System.nanoTime() - jNanoTime2);
-                x<? extends O> xVar2 = this.f29697g;
+                x<? extends O> xVar2 = this.f30099g;
                 if (xVar2 != null) {
                     xVar2.get(j10, timeUnit);
                 }

@@ -12,39 +12,39 @@ import java.lang.ref.WeakReference;
 public final class g implements TextWatcher {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final EditText f3900a;
+    public final EditText f3798a;
     public final boolean b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public androidx.emoji2.text.c.f f3901c;
+    public androidx.emoji2.text.c.f f3799c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public int f3902d = Integer.MAX_VALUE;
+    public int f3800d = Integer.MAX_VALUE;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public int f3903e = 0;
+    public int f3801e = 0;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public boolean f3904f = true;
+    public boolean f3802f = true;
 
     public static class a extends androidx.emoji2.text.c.f {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Reference<EditText> f3905a;
+        public final Reference<EditText> f3803a;
 
         public a(EditText editText) {
-            this.f3905a = new WeakReference(editText);
+            this.f3803a = new WeakReference(editText);
         }
 
         @Override // androidx.emoji2.text.c.f
         public void b() {
             super.b();
-            g.b(this.f3905a.get(), 1);
+            g.b(this.f3803a.get(), 1);
         }
     }
 
     public g(EditText editText, boolean z10) {
-        this.f3900a = editText;
+        this.f3798a = editText;
         this.b = z10;
     }
 
@@ -59,10 +59,10 @@ public final class g implements TextWatcher {
     }
 
     public final androidx.emoji2.text.c.f a() {
-        if (this.f3901c == null) {
-            this.f3901c = new a(this.f3900a);
+        if (this.f3799c == null) {
+            this.f3799c = new a(this.f3798a);
         }
-        return this.f3901c;
+        return this.f3799c;
     }
 
     @Override // android.text.TextWatcher
@@ -74,19 +74,19 @@ public final class g implements TextWatcher {
     }
 
     public void c(boolean z10) {
-        if (this.f3904f != z10) {
-            if (this.f3901c != null) {
-                androidx.emoji2.text.c.c().u(this.f3901c);
+        if (this.f3802f != z10) {
+            if (this.f3799c != null) {
+                androidx.emoji2.text.c.c().u(this.f3799c);
             }
-            this.f3904f = z10;
+            this.f3802f = z10;
             if (z10) {
-                b(this.f3900a, androidx.emoji2.text.c.c().e());
+                b(this.f3798a, androidx.emoji2.text.c.c().e());
             }
         }
     }
 
     public final boolean d() {
-        if (this.f3904f) {
+        if (this.f3802f) {
             return (this.b || androidx.emoji2.text.c.i()) ? false : true;
         }
         return true;
@@ -94,13 +94,13 @@ public final class g implements TextWatcher {
 
     @Override // android.text.TextWatcher
     public void onTextChanged(CharSequence charSequence, int i10, int i11, int i12) {
-        if (this.f3900a.isInEditMode() || d() || i11 > i12 || !(charSequence instanceof Spannable)) {
+        if (this.f3798a.isInEditMode() || d() || i11 > i12 || !(charSequence instanceof Spannable)) {
             return;
         }
         int iE = androidx.emoji2.text.c.c().e();
         if (iE != 0) {
             if (iE == 1) {
-                androidx.emoji2.text.c.c().s((Spannable) charSequence, i10, i10 + i12, this.f3902d, this.f3903e);
+                androidx.emoji2.text.c.c().s((Spannable) charSequence, i10, i10 + i12, this.f3800d, this.f3801e);
                 return;
             } else if (iE != 3) {
                 return;

@@ -12,21 +12,21 @@ public final class RemoteMessage extends AbstractSafeParcelable {
     public static final Parcelable.Creator<RemoteMessage> CREATOR = new n0();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public Bundle f8717f;
+    public Bundle f8791f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public Map<String, String> f8718g;
+    public Map<String, String> f8792g;
 
     public RemoteMessage(Bundle bundle) {
-        this.f8717f = bundle;
+        this.f8791f = bundle;
     }
 
     @NonNull
     public Map<String, String> v3() {
-        if (this.f8718g == null) {
-            this.f8718g = d.a.a(this.f8717f);
+        if (this.f8792g == null) {
+            this.f8792g = d.a.a(this.f8791f);
         }
-        return this.f8718g;
+        return this.f8792g;
     }
 
     public final int w3(String str) {
@@ -42,20 +42,20 @@ public final class RemoteMessage extends AbstractSafeParcelable {
     }
 
     public int x3() {
-        String string = this.f8717f.getString("google.original_priority");
+        String string = this.f8791f.getString("google.original_priority");
         if (string == null) {
-            string = this.f8717f.getString("google.priority");
+            string = this.f8791f.getString("google.priority");
         }
         return w3(string);
     }
 
     public int y3() {
-        String string = this.f8717f.getString("google.delivered_priority");
+        String string = this.f8791f.getString("google.delivered_priority");
         if (string == null) {
-            if ("1".equals(this.f8717f.getString("google.priority_reduced"))) {
+            if ("1".equals(this.f8791f.getString("google.priority_reduced"))) {
                 return 2;
             }
-            string = this.f8717f.getString("google.priority");
+            string = this.f8791f.getString("google.priority");
         }
         return w3(string);
     }

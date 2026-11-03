@@ -6,11 +6,11 @@ import java.util.Map;
 import kotlin.collections.q0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import um.a0;
-import um.h;
-import um.m;
-import um.t;
-import um.w;
+import sm.a0;
+import sm.h;
+import sm.m;
+import sm.t;
+import sm.w;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class ErrorResponse_Error_InvalidFieldValueErrorJsonAdapter extends h<ErrorResponse.Error.InvalidFieldValueError> {
@@ -37,7 +37,7 @@ public final class ErrorResponse_Error_InvalidFieldValueErrorJsonAdapter extends
     }
 
     /* JADX WARN: Can't rename method to resolve collision */
-    @Override // um.h
+    @Override // sm.h
     @NotNull
     public ErrorResponse.Error.InvalidFieldValueError fromJson(@NotNull m mVar) {
         mVar.b();
@@ -58,7 +58,7 @@ public final class ErrorResponse_Error_InvalidFieldValueErrorJsonAdapter extends
         return new ErrorResponse.Error.InvalidFieldValueError(strFromJson, mapFromJson);
     }
 
-    @Override // um.h
+    @Override // sm.h
     public void toJson(@NotNull t tVar, @Nullable ErrorResponse.Error.InvalidFieldValueError invalidFieldValueError) {
         if (invalidFieldValueError == null) {
             throw new NullPointerException("value_ was null! Wrap in .nullSafe() to write nullable values.");

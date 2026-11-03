@@ -9,10 +9,10 @@ import org.jetbrains.annotations.NotNull;
 public final class h {
     @NotNull
     public static final Size a(int i10, int i11) {
-        return new Size(a.C0655a.a(b.a(i10)), a.C0655a.a(b.a(i11)));
+        return new Size(a.C0670a.a(b.a(i10)), a.C0670a.a(b.a(i11)));
     }
 
     public static final boolean b(@NotNull Size size) {
-        return Intrinsics.c(size, Size.f35746d);
+        return Intrinsics.c(size, Size.f36603d);
     }
 }

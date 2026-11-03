@@ -13,18 +13,18 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Objects;
-import me.x;
+import ne.x;
 import y1.f;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final f<c> f2881a = f.B();
+    public static final f<c> f2726a = f.B();
     public static final Object b = new Object();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static c f2882c = null;
+    public static c f2727c = null;
 
     public static class a {
         public static PackageInfo a(PackageManager packageManager, Context context) {
@@ -35,20 +35,20 @@ public final class d {
     public static class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final int f2883a;
+        public final int f2728a;
         public final int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final long f2884c;
+        public final long f2729c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final long f2885d;
+        public final long f2730d;
 
         public b(int i10, int i11, long j10, long j11) {
-            this.f2883a = i10;
+            this.f2728a = i10;
             this.b = i11;
-            this.f2884c = j10;
-            this.f2885d = j11;
+            this.f2729c = j10;
+            this.f2730d = j11;
         }
 
         public static b a(@NonNull File file) throws IOException {
@@ -72,10 +72,10 @@ public final class d {
             file.delete();
             DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(file));
             try {
-                dataOutputStream.writeInt(this.f2883a);
+                dataOutputStream.writeInt(this.f2728a);
                 dataOutputStream.writeInt(this.b);
-                dataOutputStream.writeLong(this.f2884c);
-                dataOutputStream.writeLong(this.f2885d);
+                dataOutputStream.writeLong(this.f2729c);
+                dataOutputStream.writeLong(this.f2730d);
                 dataOutputStream.close();
             } catch (Throwable th2) {
                 try {
@@ -93,7 +93,7 @@ public final class d {
             }
             if (obj != null && (obj instanceof b)) {
                 b bVar = (b) obj;
-                if (this.b == bVar.b && this.f2884c == bVar.f2884c && this.f2883a == bVar.f2883a && this.f2885d == bVar.f2885d) {
+                if (this.b == bVar.b && this.f2729c == bVar.f2729c && this.f2728a == bVar.f2728a && this.f2730d == bVar.f2730d) {
                     return true;
                 }
             }
@@ -101,35 +101,35 @@ public final class d {
         }
 
         public int hashCode() {
-            return Objects.hash(Integer.valueOf(this.b), Long.valueOf(this.f2884c), Integer.valueOf(this.f2883a), Long.valueOf(this.f2885d));
+            return Objects.hash(Integer.valueOf(this.b), Long.valueOf(this.f2729c), Integer.valueOf(this.f2728a), Long.valueOf(this.f2730d));
         }
     }
 
     public static class c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final int f2886a;
+        public final int f2731a;
         public final boolean b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final boolean f2887c;
+        public final boolean f2732c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final boolean f2888d;
+        public final boolean f2733d;
 
         public c(int i10, boolean z10, boolean z11, boolean z12) {
-            this.f2886a = i10;
-            this.f2887c = z11;
+            this.f2731a = i10;
+            this.f2732c = z11;
             this.b = z10;
-            this.f2888d = z12;
+            this.f2733d = z12;
         }
 
         public int a() {
-            return this.f2886a;
+            return this.f2731a;
         }
 
         public boolean b() {
-            return this.f2887c;
+            return this.f2732c;
         }
 
         public boolean c() {
@@ -139,7 +139,7 @@ public final class d {
 
     @NonNull
     public static x<c> a() {
-        return f2881a;
+        return f2726a;
     }
 
     public static long b(Context context) {
@@ -149,9 +149,9 @@ public final class d {
 
     public static c c(int i10, boolean z10, boolean z11, boolean z12) {
         c cVar = new c(i10, z10, z11, z12);
-        f2882c = cVar;
-        f2881a.x(cVar);
-        return f2882c;
+        f2727c = cVar;
+        f2726a.x(cVar);
+        return f2727c;
     }
 
     /* JADX WARN: Code duplicated, block: B:103:0x00f6 A[EXC_TOP_SPLITTER, SYNTHETIC] */
@@ -183,7 +183,7 @@ public final class d {
         int i12;
         AssetFileDescriptor assetFileDescriptorOpenFd;
         c cVar;
-        if (!z10 && (cVar = f2882c) != null) {
+        if (!z10 && (cVar = f2727c) != null) {
             return cVar;
         }
         synchronized (b) {
@@ -251,7 +251,7 @@ public final class d {
                 }
                 return c(262144, false, false, z11);
             }
-            c cVar2 = f2882c;
+            c cVar2 = f2727c;
             if (cVar2 != null) {
                 return cVar2;
             }
@@ -308,7 +308,7 @@ public final class d {
                     } else {
                         bVarA = null;
                     }
-                    if (bVarA == null && bVarA.f2884c == jB2 && (i12 = bVarA.b) != 2) {
+                    if (bVarA == null && bVarA.f2729c == jB2 && (i12 = bVarA.b) != 2) {
                         i10 = i12;
                     } else if (!z11) {
                         i10 = 327680;
@@ -320,7 +320,7 @@ public final class d {
                     if (z10 && z13 && i10 != 1) {
                         i10 = 2;
                     }
-                    if (bVarA != null && bVarA.b == 2 && i10 == 1 && length3 < bVarA.f2885d) {
+                    if (bVarA != null && bVarA.b == 2 && i10 == 1 && length3 < bVarA.f2730d) {
                         i10 = 3;
                     }
                     int i14 = i10;

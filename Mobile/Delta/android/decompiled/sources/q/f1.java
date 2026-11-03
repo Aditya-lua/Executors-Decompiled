@@ -23,7 +23,7 @@ import org.xmlpull.v1.XmlPullParserException;
 public class f1 extends s0 {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static boolean f28979c;
+    public static boolean f29332c;
     public final WeakReference<Context> b;
 
     public f1(@NonNull Context context, @NonNull Resources resources) {
@@ -32,7 +32,7 @@ public class f1 extends s0 {
     }
 
     public static boolean b() {
-        return f28979c;
+        return f29332c;
     }
 
     public static boolean c() {

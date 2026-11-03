@@ -94,113 +94,113 @@ public class b extends a {
     public final c0 M;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object f5070a;
+    public final Object f5143a;
     public volatile int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final String f5071c;
+    public final String f5144c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final String f5072d;
+    public final String f5145d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Handler f5073e;
+    public final Handler f5146e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public volatile t f5074f;
+    public volatile t f5147f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public Context f5075g;
+    public Context f5148g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public i1 f5076h;
+    public i1 f5149h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public volatile com.google.android.gms.internal.play_billing.f f5077i;
+    public volatile com.google.android.gms.internal.play_billing.f f5150i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public volatile p0 f5078j;
+    public volatile p0 f5151j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public boolean f5079k;
+    public boolean f5152k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public boolean f5080l;
+    public boolean f5153l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public int f5081m;
+    public int f5154m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public boolean f5082n;
+    public boolean f5155n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public boolean f5083o;
+    public boolean f5156o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public boolean f5084p;
+    public boolean f5157p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public boolean f5085q;
+    public boolean f5158q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public boolean f5086r;
+    public boolean f5159r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public boolean f5087s;
+    public boolean f5160s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public boolean f5088t;
+    public boolean f5161t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public boolean f5089u;
+    public boolean f5162u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public boolean f5090v;
+    public boolean f5163v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public boolean f5091w;
+    public boolean f5164w;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public boolean f5092x;
+    public boolean f5165x;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public boolean f5093y;
+    public boolean f5166y;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public boolean f5094z;
+    public boolean f5167z;
 
-    public b(String str, Context context, i1 i1Var, ExecutorService executorService, a.C0108a c0108a) {
-        this.f5070a = new Object();
+    public b(String str, Context context, i1 i1Var, ExecutorService executorService, a.C0112a c0112a) {
+        this.f5143a = new Object();
         this.b = 0;
-        this.f5073e = new Handler(Looper.getMainLooper());
-        this.f5081m = 0;
+        this.f5146e = new Handler(Looper.getMainLooper());
+        this.f5154m = 0;
         this.I = s0.k();
         Long lValueOf = Long.valueOf(new Random().nextLong());
         this.L = lValueOf;
         this.M = r.a();
-        this.f5071c = u7.a.f32091a;
+        this.f5144c = u7.a.f32744a;
         String strB = B();
-        this.f5072d = strB;
-        this.f5075g = context.getApplicationContext();
+        this.f5145d = strB;
+        this.f5148g = context.getApplicationContext();
         e8 e8VarL = h8.L();
-        e8VarL.E(u7.a.f32091a);
+        e8VarL.E(u7.a.f32744a);
         if (strB != null) {
             e8VarL.G(strB);
         }
-        e8VarL.v(this.f5075g.getPackageName());
+        e8VarL.v(this.f5148g.getPackageName());
         e8VarL.r(lValueOf.longValue());
-        e8VarL.D(c0108a.f5069j);
+        e8VarL.D(c0112a.f5142j);
         e8VarL.o(Build.VERSION.SDK_INT);
         e8VarL.t(912213584L);
         m0(e8VarL, context);
         try {
-            e8VarL.p(this.f5075g.getPackageManager().getPackageInfo(this.f5075g.getPackageName(), 0).versionCode);
+            e8VarL.p(this.f5148g.getPackageManager().getPackageInfo(this.f5148g.getPackageName(), 0).versionCode);
         } catch (Throwable th2) {
             m0.n("BillingClient", "Error getting app version code.", th2);
         }
-        this.f5076h = new m1(this.f5075g, (h8) e8VarL.i());
-        this.f5075g.getPackageName();
-        this.G = c0108a.f5069j;
+        this.f5149h = new m1(this.f5148g, (h8) e8VarL.i());
+        this.f5148g.getPackageName();
+        this.G = c0112a.f5142j;
     }
 
     @SuppressLint({"PrivateApi"})
@@ -213,7 +213,7 @@ public class b extends a {
     }
 
     public static /* bridge */ /* synthetic */ d F0(Exception exc) {
-        return exc instanceof DeadObjectException ? h.f5173j : h.f5171h;
+        return exc instanceof DeadObjectException ? h.f5246j : h.f5244h;
     }
 
     public static /* synthetic */ Object M0(b bVar, int i10, t9 t9Var) {
@@ -222,25 +222,25 @@ public class b extends a {
     }
 
     public static /* bridge */ /* synthetic */ void N(b bVar, int i10) {
-        bVar.f5081m = i10;
+        bVar.f5154m = i10;
         bVar.E = i10 >= 28;
         bVar.D = i10 >= 27;
         bVar.C = i10 >= 26;
         bVar.B = i10 >= 24;
         bVar.A = i10 >= 23;
-        bVar.f5094z = i10 >= 22;
-        bVar.f5093y = i10 >= 21;
-        bVar.f5092x = i10 >= 20;
-        bVar.f5091w = i10 >= 19;
-        bVar.f5090v = i10 >= 18;
-        bVar.f5089u = i10 >= 17;
-        bVar.f5088t = i10 >= 16;
-        bVar.f5087s = i10 >= 15;
-        bVar.f5086r = i10 >= 14;
-        bVar.f5085q = i10 >= 12;
-        bVar.f5084p = i10 >= 9;
-        bVar.f5083o = i10 >= 8;
-        bVar.f5082n = i10 >= 6;
+        bVar.f5167z = i10 >= 22;
+        bVar.f5166y = i10 >= 21;
+        bVar.f5165x = i10 >= 20;
+        bVar.f5164w = i10 >= 19;
+        bVar.f5163v = i10 >= 18;
+        bVar.f5162u = i10 >= 17;
+        bVar.f5161t = i10 >= 16;
+        bVar.f5160s = i10 >= 15;
+        bVar.f5159r = i10 >= 14;
+        bVar.f5158q = i10 >= 12;
+        bVar.f5157p = i10 >= 9;
+        bVar.f5156o = i10 >= 8;
+        bVar.f5155n = i10 >= 6;
     }
 
     public static /* synthetic */ Object N0(b bVar, v7.f fVar, v7.e eVar) throws Throwable {
@@ -249,7 +249,7 @@ public class b extends a {
             return null;
         }
         s7 s7Var = s7.SERVICE_CONNECTION_NOT_READY;
-        d dVar = h.f5173j;
+        d dVar = h.f5246j;
         bVar.q0(s7Var, 4, dVar);
         fVar.a(dVar, eVar.a());
         return null;
@@ -258,19 +258,19 @@ public class b extends a {
     public static /* synthetic */ Object O0(b bVar, v7.j jVar, f fVar) {
         if (!bVar.j0(l1.b())) {
             s7 s7Var = s7.SERVICE_CONNECTION_NOT_READY;
-            d dVar = h.f5173j;
+            d dVar = h.f5246j;
             bVar.q0(s7Var, 7, dVar);
             jVar.a(dVar, new n(n0.k(), n0.k()));
             return null;
         }
-        if (bVar.f5089u) {
+        if (bVar.f5162u) {
             r0 r0VarA0 = bVar.A0(fVar);
             jVar.a(h.a(r0VarA0.a(), r0VarA0.b()), new n(r0VarA0.c(), r0VarA0.d()));
             return null;
         }
         m0.m("BillingClient", "Querying product details is not supported.");
         s7 s7Var2 = s7.PRODUCT_DETAILS_NOT_SUPPORTED;
-        d dVar2 = h.f5182s;
+        d dVar2 = h.f5255s;
         bVar.q0(s7Var2, 7, dVar2);
         jVar.a(dVar2, new n(n0.k(), n0.k()));
         return null;
@@ -281,15 +281,15 @@ public class b extends a {
             bVar.f0(0);
             return;
         }
-        synchronized (bVar.f5070a) {
+        synchronized (bVar.f5143a) {
             try {
                 if (bVar.b == 3) {
                     return;
                 }
                 bVar.f0(2);
-                t tVar = bVar.f5074f != null ? bVar.f5074f : null;
+                t tVar = bVar.f5147f != null ? bVar.f5147f : null;
                 if (tVar != null) {
-                    tVar.h(bVar.f5093y);
+                    tVar.h(bVar.f5166y);
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -304,7 +304,7 @@ public class b extends a {
 
     public static /* bridge */ /* synthetic */ boolean T(b bVar) {
         boolean z10;
-        synchronized (bVar.f5070a) {
+        synchronized (bVar.f5143a) {
             z10 = true;
             if (bVar.b != 1) {
                 z10 = false;
@@ -331,9 +331,9 @@ public class b extends a {
                 activityManager.getMemoryInfo(memoryInfo);
                 e8Var.C((int) (memoryInfo.totalMem / 1048576));
                 e8Var.w(Build.BRAND);
-                e8Var.A(Build.MODEL);
+                e8Var.B(Build.MODEL);
                 e8Var.z(Build.MANUFACTURER);
-                e8Var.x(Build.FINGERPRINT);
+                e8Var.y(Build.FINGERPRINT);
             }
         } catch (RuntimeException e10) {
             m0.n("BillingClient", "Runtime error while populating device info.", e10);
@@ -367,35 +367,35 @@ public class b extends a {
 
     public static /* synthetic */ void p(b bVar, v7.f fVar, v7.e eVar) {
         s7 s7Var = s7.EXECUTE_ASYNC_TIMEOUT;
-        d dVar = h.f5174k;
+        d dVar = h.f5247k;
         bVar.q0(s7Var, 4, dVar);
         fVar.a(dVar, eVar.a());
     }
 
     public static /* synthetic */ void q(b bVar, l lVar) {
         s7 s7Var = s7.EXECUTE_ASYNC_TIMEOUT;
-        d dVar = h.f5174k;
+        d dVar = h.f5247k;
         bVar.q0(s7Var, 9, dVar);
         lVar.a(dVar, n0.k());
     }
 
     public static /* synthetic */ void r(b bVar, v7.c cVar) {
         s7 s7Var = s7.EXECUTE_ASYNC_TIMEOUT;
-        d dVar = h.f5174k;
+        d dVar = h.f5247k;
         bVar.q0(s7Var, 3, dVar);
         cVar.a(dVar);
     }
 
     public static /* synthetic */ void s(b bVar, v7.j jVar) {
         s7 s7Var = s7.EXECUTE_ASYNC_TIMEOUT;
-        d dVar = h.f5174k;
+        d dVar = h.f5247k;
         bVar.q0(s7Var, 7, dVar);
         jVar.a(dVar, new n(n0.k(), n0.k()));
     }
 
     public static /* synthetic */ void t(b bVar, d dVar) {
-        if (bVar.f5074f.e() != null) {
-            bVar.f5074f.e().a(dVar, null);
+        if (bVar.f5147f.e() != null) {
+            bVar.f5147f.e().a(dVar, null);
         } else {
             m0.m("BillingClient", "No valid listener is set in BroadcastManager");
         }
@@ -403,7 +403,7 @@ public class b extends a {
 
     public final String A(f fVar) {
         if (TextUtils.isEmpty(null)) {
-            return this.f5075g.getPackageName();
+            return this.f5148g.getPackageName();
         }
         return null;
     }
@@ -428,21 +428,21 @@ public class b extends a {
             }
             Bundle bundle = new Bundle();
             bundle.putStringArrayList("ITEM_ID_LIST", arrayList4);
-            String str = this.f5071c;
+            String str = this.f5144c;
             bundle.putString("playBillingLibraryVersion", str);
             try {
-                synchronized (this.f5070a) {
-                    fVar2 = this.f5077i;
+                synchronized (this.f5143a) {
+                    fVar2 = this.f5150i;
                 }
                 if (fVar2 == null) {
-                    return v(h.f5173j, s7.SERVICE_RESET_TO_NULL, "Service has been reset to null.", null);
+                    return v(h.f5246j, s7.SERVICE_RESET_TO_NULL, "Service has been reset to null.", null);
                 }
-                boolean z10 = this.f5091w && this.F.b();
+                boolean z10 = this.f5164w && this.F.b();
                 A(fVar);
                 A(fVar);
                 A(fVar);
                 A(fVar);
-                Bundle bundleA2 = fVar2.a2(true != this.f5092x ? 17 : 20, this.f5075g.getPackageName(), strC, bundle, m0.g(str, this.f5072d, arrayList3, null, null, com.google.android.gms.internal.play_billing.a.a(z10, true, true, true, false, true), this.L.longValue()));
+                Bundle bundleA2 = fVar2.a2(true != this.f5165x ? 17 : 20, this.f5148g.getPackageName(), strC, bundle, m0.g(str, this.f5145d, arrayList3, null, null, com.google.android.gms.internal.play_billing.a.a(z10, true, true, true, false, true), this.L.longValue()));
                 if (bundleA2 == null) {
                     return v(h.B, s7.NULL_BUNDLE_FROM_GET_SKU_DETAILS_SERVICE_CALL, "queryProductDetailsAsync got empty product details response.", null);
                 }
@@ -521,9 +521,9 @@ public class b extends a {
                     return v(h.a(6, "Error trying to decode SkuDetails."), s7.ERROR_DECODING_SKU_DETAILS, "Got a JSON exception trying to decode UnfetchedProduct. \n Exception: ", e11);
                 }
             } catch (DeadObjectException e12) {
-                return v(h.f5173j, s7.GET_SKU_DETAILS_SERVICE_CALL_EXCEPTION, "queryProductDetailsAsync got a remote exception (try to reconnect).", e12);
+                return v(h.f5246j, s7.GET_SKU_DETAILS_SERVICE_CALL_EXCEPTION, "queryProductDetailsAsync got a remote exception (try to reconnect).", e12);
             } catch (Exception e13) {
-                return v(h.f5171h, s7.GET_SKU_DETAILS_SERVICE_CALL_EXCEPTION, "queryProductDetailsAsync got a remote exception (try to reconnect).", e13);
+                return v(h.f5244h, s7.GET_SKU_DETAILS_SERVICE_CALL_EXCEPTION, "queryProductDetailsAsync got a remote exception (try to reconnect).", e13);
             }
         }
         return new r0(0, "", arrayList, arrayList2);
@@ -549,7 +549,7 @@ public class b extends a {
     }
 
     public final i1 D0() {
-        return this.f5076h;
+        return this.f5149h;
     }
 
     public final void E(v7.f fVar, String str, d dVar, s7 s7Var, String str2, Exception exc) {
@@ -562,10 +562,10 @@ public class b extends a {
         if (Thread.interrupted()) {
             return dVar;
         }
-        this.f5073e.post(new Runnable() { // from class: v7.a0
+        this.f5146e.post(new Runnable() { // from class: v7.a0
             @Override // java.lang.Runnable
             public final void run() {
-                com.android.billingclient.api.b.t(this.f32767a, dVar);
+                com.android.billingclient.api.b.t(this.f33335a, dVar);
             }
         });
         return dVar;
@@ -575,40 +575,40 @@ public class b extends a {
         if (Looper.myLooper() == Looper.getMainLooper()) {
             runnable.run();
         } else {
-            this.f5073e.post(runnable);
+            this.f5146e.post(runnable);
         }
     }
 
     public final /* synthetic */ Bundle W(int i10, String str, String str2, c cVar, Bundle bundle) {
         com.google.android.gms.internal.play_billing.f fVar;
         try {
-            synchronized (this.f5070a) {
-                fVar = this.f5077i;
+            synchronized (this.f5143a) {
+                fVar = this.f5150i;
             }
-            return fVar == null ? m0.d(h.f5173j, s7.SERVICE_RESET_TO_NULL) : fVar.o0(i10, this.f5075g.getPackageName(), str, str2, null, bundle);
+            return fVar == null ? m0.d(h.f5246j, s7.SERVICE_RESET_TO_NULL) : fVar.l0(i10, this.f5148g.getPackageName(), str, str2, null, bundle);
         } catch (DeadObjectException e10) {
-            return m0.e(h.f5173j, s7.LAUNCH_BILLING_FLOW_EXCEPTION, h1.a(e10));
+            return m0.e(h.f5246j, s7.LAUNCH_BILLING_FLOW_EXCEPTION, h1.a(e10));
         } catch (Exception e11) {
-            return m0.e(h.f5171h, s7.LAUNCH_BILLING_FLOW_EXCEPTION, h1.a(e11));
+            return m0.e(h.f5244h, s7.LAUNCH_BILLING_FLOW_EXCEPTION, h1.a(e11));
         }
     }
 
     public final /* synthetic */ Bundle X(String str, String str2) {
         com.google.android.gms.internal.play_billing.f fVar;
         try {
-            synchronized (this.f5070a) {
-                fVar = this.f5077i;
+            synchronized (this.f5143a) {
+                fVar = this.f5150i;
             }
-            return fVar == null ? m0.d(h.f5173j, s7.SERVICE_RESET_TO_NULL) : fVar.i1(3, this.f5075g.getPackageName(), str, str2, null);
+            return fVar == null ? m0.d(h.f5246j, s7.SERVICE_RESET_TO_NULL) : fVar.e1(3, this.f5148g.getPackageName(), str, str2, null);
         } catch (DeadObjectException e10) {
-            return m0.e(h.f5173j, s7.LAUNCH_BILLING_FLOW_EXCEPTION, h1.a(e10));
+            return m0.e(h.f5246j, s7.LAUNCH_BILLING_FLOW_EXCEPTION, h1.a(e10));
         } catch (Exception e11) {
-            return m0.e(h.f5171h, s7.LAUNCH_BILLING_FLOW_EXCEPTION, h1.a(e11));
+            return m0.e(h.f5244h, s7.LAUNCH_BILLING_FLOW_EXCEPTION, h1.a(e11));
         }
     }
 
     public final Handler Y() {
-        return Looper.myLooper() == null ? this.f5073e : new Handler(Looper.myLooper());
+        return Looper.myLooper() == null ? this.f5146e : new Handler(Looper.myLooper());
     }
 
     @Override // com.android.billingclient.api.a
@@ -616,13 +616,13 @@ public class b extends a {
         if (o(new Callable() { // from class: v7.z
             @Override // java.util.concurrent.Callable
             public final Object call() {
-                com.android.billingclient.api.b.P0(this.f32865a, cVar, bVar);
+                com.android.billingclient.api.b.P0(this.f33433a, cVar, bVar);
                 return null;
             }
         }, 30000L, new Runnable() { // from class: v7.b0
             @Override // java.lang.Runnable
             public final void run() {
-                com.android.billingclient.api.b.r(this.f32771a, cVar);
+                com.android.billingclient.api.b.r(this.f33339a, cVar);
             }
         }, Y(), n()) == null) {
             d dVarX = x();
@@ -633,7 +633,7 @@ public class b extends a {
 
     public final void a0(int i10) {
         try {
-            int i11 = h1.f32789a;
+            int i11 = h1.f33357a;
             d0(h1.c(i10, z7.BROADCAST_ACTION_UNSPECIFIED));
         } catch (Throwable th2) {
             m0.n("BillingClient", "Unable to log.", th2);
@@ -645,13 +645,13 @@ public class b extends a {
         if (o(new Callable() { // from class: v7.e0
             @Override // java.util.concurrent.Callable
             public final Object call() throws Throwable {
-                com.android.billingclient.api.b.N0(this.f32781a, fVar, eVar);
+                com.android.billingclient.api.b.N0(this.f33349a, fVar, eVar);
                 return null;
             }
         }, 30000L, new Runnable() { // from class: v7.f0
             @Override // java.lang.Runnable
             public final void run() {
-                com.android.billingclient.api.b.p(this.f32784a, fVar, eVar);
+                com.android.billingclient.api.b.p(this.f33352a, fVar, eVar);
             }
         }, Y(), n()) == null) {
             d dVarX = x();
@@ -662,7 +662,7 @@ public class b extends a {
 
     public final void b0(l7 l7Var) {
         try {
-            this.f5076h.k(l7Var, this.f5081m);
+            this.f5149h.k(l7Var, this.f5154m);
         } catch (Throwable th2) {
             m0.n("BillingClient", "Unable to log.", th2);
         }
@@ -672,7 +672,7 @@ public class b extends a {
     @Override // com.android.billingclient.api.a
     public final d c(String str) {
         if (!i0(l1.c())) {
-            d dVar = h.f5173j;
+            d dVar = h.f5246j;
             s7 s7Var = s7.SERVICE_CONNECTION_NOT_READY;
             if (dVar.c() != 0) {
                 q0(s7Var, 5, dVar);
@@ -681,144 +681,144 @@ public class b extends a {
             a0(5);
             return dVar;
         }
-        d dVar2 = h.f5165a;
+        d dVar2 = h.f5238a;
         switch (str.hashCode()) {
             case -422092961:
                 if (str.equals("subscriptionsUpdate")) {
-                    d dVar3 = this.f5080l ? h.f5172i : h.f5176m;
+                    d dVar3 = this.f5153l ? h.f5245i : h.f5249m;
                     p0(dVar3, s7.SUBSCRIPTIONS_UPDATE_NOT_SUPPORTED, 3);
                     return dVar3;
                 }
                 break;
             case 96321:
                 if (str.equals("aaa")) {
-                    d dVar4 = this.f5087s ? h.f5172i : h.f5178o;
+                    d dVar4 = this.f5160s ? h.f5245i : h.f5251o;
                     p0(dVar4, s7.CROSS_APP_NOT_SUPPORTED, 6);
                     return dVar4;
                 }
                 break;
             case 97314:
                 if (str.equals("bbb")) {
-                    d dVar5 = this.f5085q ? h.f5172i : h.f5183t;
+                    d dVar5 = this.f5158q ? h.f5245i : h.f5256t;
                     p0(dVar5, s7.IN_APP_MESSAGE_NOT_SUPPORTED, 5);
                     return dVar5;
                 }
                 break;
             case 98307:
                 if (str.equals("ccc")) {
-                    d dVar6 = this.f5088t ? h.f5172i : h.f5179p;
+                    d dVar6 = this.f5161t ? h.f5245i : h.f5252p;
                     p0(dVar6, s7.MULTI_ITEM_NOT_SUPPORTED, 8);
                     return dVar6;
                 }
                 break;
             case 99300:
                 if (str.equals("ddd")) {
-                    d dVar7 = this.f5086r ? h.f5172i : h.f5180q;
+                    d dVar7 = this.f5159r ? h.f5245i : h.f5253q;
                     p0(dVar7, s7.OFFER_ID_TOKEN_NOT_SUPPORTED, 7);
                     return dVar7;
                 }
                 break;
             case 100293:
                 if (str.equals("eee")) {
-                    d dVar8 = this.f5088t ? h.f5172i : h.f5179p;
+                    d dVar8 = this.f5161t ? h.f5245i : h.f5252p;
                     p0(dVar8, s7.PBL_FOR_PAYMENTS_GATEWAY_BUYFLOW_NOT_SUPPORTED, 9);
                     return dVar8;
                 }
                 break;
             case 101286:
                 if (str.equals("fff")) {
-                    d dVar9 = this.f5089u ? h.f5172i : h.f5182s;
+                    d dVar9 = this.f5162u ? h.f5245i : h.f5255s;
                     p0(dVar9, s7.PRODUCT_DETAILS_NOT_SUPPORTED, 10);
                     return dVar9;
                 }
                 break;
             case 102279:
                 if (str.equals("ggg")) {
-                    d dVar10 = this.f5090v ? h.f5172i : h.f5189z;
+                    d dVar10 = this.f5163v ? h.f5245i : h.f5262z;
                     p0(dVar10, s7.GET_BILLING_CONFIG_NOT_SUPPORTED, 11);
                     return dVar10;
                 }
                 break;
             case 103272:
                 if (str.equals("hhh")) {
-                    d dVar11 = this.f5090v ? h.f5172i : h.A;
+                    d dVar11 = this.f5163v ? h.f5245i : h.A;
                     p0(dVar11, s7.QUERY_PRODUCT_DETAILS_WITH_SERIALIZED_DOCID_NOT_SUPPORTED, 12);
                     return dVar11;
                 }
                 break;
             case 104265:
                 if (str.equals("iii")) {
-                    d dVar12 = this.f5092x ? h.f5172i : h.C;
+                    d dVar12 = this.f5165x ? h.f5245i : h.C;
                     p0(dVar12, s7.QUERY_PRODUCT_DETAILS_WITH_DEVELOPER_SPECIFIED_ACCOUNT_NOT_SUPPORTED, 13);
                     return dVar12;
                 }
                 break;
             case 105258:
                 if (str.equals("jjj")) {
-                    d dVar13 = this.f5093y ? h.f5172i : h.D;
+                    d dVar13 = this.f5166y ? h.f5245i : h.D;
                     p0(dVar13, s7.ALTERNATIVE_BILLING_ONLY_NOT_SUPPORTED, 14);
                     return dVar13;
                 }
                 break;
             case 106251:
                 if (str.equals("kkk")) {
-                    d dVar14 = this.B ? h.f5172i : h.f5184u;
+                    d dVar14 = this.B ? h.f5245i : h.f5257u;
                     p0(dVar14, s7.EXTERNAL_OFFER_NOT_SUPPORTED, 18);
                     return dVar14;
                 }
                 break;
             case 107244:
                 if (str.equals("lll")) {
-                    d dVar15 = this.A ? h.f5172i : h.f5185v;
+                    d dVar15 = this.A ? h.f5245i : h.f5258v;
                     p0(dVar15, s7.MULTI_ITEM_WITH_SEASON_PASS_NOT_SUPPORTED, 19);
                     return dVar15;
                 }
                 break;
             case 108237:
                 if (str.equals("mmm")) {
-                    d dVar16 = this.B ? h.f5172i : h.f5186w;
+                    d dVar16 = this.B ? h.f5245i : h.f5259w;
                     p0(dVar16, s7.AUTO_PAY_NOT_SUPPORTED, 20);
                     return dVar16;
                 }
                 break;
             case 109230:
                 if (str.equals("nnn")) {
-                    d dVar17 = this.C ? h.f5172i : h.f5187x;
+                    d dVar17 = this.C ? h.f5245i : h.f5260x;
                     p0(dVar17, s7.INCLUDE_SUSPENDED_SUBSCRIPTIONS_NOT_SUPPORTED, 21);
                     return dVar17;
                 }
                 break;
             case 110223:
                 if (str.equals("ooo")) {
-                    d dVar18 = this.E ? h.f5172i : h.f5181r;
+                    d dVar18 = this.E ? h.f5245i : h.f5254r;
                     p0(dVar18, s7.GIFT_CODE_PURCHASE_NOT_SUPPORTED, 22);
                     return dVar18;
                 }
                 break;
             case 207616302:
                 if (str.equals("priceChangeConfirmation")) {
-                    d dVar19 = this.f5083o ? h.f5172i : h.f5177n;
+                    d dVar19 = this.f5156o ? h.f5245i : h.f5250n;
                     p0(dVar19, s7.PRICE_CHANGE_CONFIRMATION_NOT_SUPPORTED, 4);
                     return dVar19;
                 }
                 break;
             case 1987365622:
                 if (str.equals("subscriptions")) {
-                    d dVar20 = this.f5079k ? h.f5172i : h.f5175l;
+                    d dVar20 = this.f5152k ? h.f5245i : h.f5248l;
                     p0(dVar20, s7.SUBSCRIPTIONS_NOT_SUPPORTED, 2);
                     return dVar20;
                 }
                 break;
         }
         m0.m("BillingClient", "Unsupported feature: ".concat(str));
-        d dVar21 = h.f5188y;
+        d dVar21 = h.f5261y;
         p0(dVar21, s7.UNKNOWN_FEATURE, 1);
         return dVar21;
     }
 
     public final void c0(l7 l7Var, long j10, boolean z10) {
         try {
-            this.f5076h.b(l7Var, this.f5081m, j10, z10);
+            this.f5149h.b(l7Var, this.f5154m, j10, z10);
         } catch (Throwable th2) {
             m0.n("BillingClient", "Unable to log.", th2);
         }
@@ -834,7 +834,7 @@ public class b extends a {
 
     public final void d0(p7 p7Var) {
         try {
-            this.f5076h.e(p7Var, this.f5081m);
+            this.f5149h.e(p7Var, this.f5154m);
         } catch (Throwable th2) {
             m0.n("BillingClient", "Unable to log.", th2);
         }
@@ -870,7 +870,7 @@ public class b extends a {
         boolean z10;
         int i10;
         long jNextLong = new Random().nextLong();
-        if (this.f5074f == null || this.f5074f.e() == null) {
+        if (this.f5147f == null || this.f5147f.e() == null) {
             s7 s7Var = s7.MISSING_LISTENER;
             d dVar = h.E;
             r0(s7Var, 2, dVar, jNextLong);
@@ -879,14 +879,14 @@ public class b extends a {
         cVar.a();
         if (!i0(l1.c())) {
             s7 s7Var2 = s7.SERVICE_CONNECTION_NOT_READY;
-            d dVar2 = h.f5173j;
+            d dVar2 = h.f5246j;
             r0(s7Var2, 2, dVar2, jNextLong);
             G0(dVar2);
             return dVar2;
         }
-        synchronized (this.f5070a) {
+        synchronized (this.f5143a) {
             try {
-                zG = this.f5078j != null ? this.f5078j.g() : false;
+                zG = this.f5151j != null ? this.f5151j.g() : false;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -900,34 +900,34 @@ public class b extends a {
         }
         final String strD = bVar.c().d();
         final String strE = bVar.c().e();
-        if (strE.equals("subs") && !this.f5079k) {
+        if (strE.equals("subs") && !this.f5152k) {
             m0.m("BillingClient", "Current client doesn't support subscriptions.");
             s7 s7Var3 = s7.SUBSCRIPTIONS_NOT_SUPPORTED;
-            d dVar3 = h.f5175l;
+            d dVar3 = h.f5248l;
             t0(s7Var3, 2, dVar3, jNextLong, zG);
             G0(dVar3);
             return dVar3;
         }
-        if (cVar.w() && !this.f5082n) {
+        if (cVar.w() && !this.f5155n) {
             m0.m("BillingClient", "Current client doesn't support extra params for buy intent.");
             s7 s7Var4 = s7.EXTRA_PARAMS_NOT_SUPPORTED;
-            d dVar4 = h.f5169f;
+            d dVar4 = h.f5242f;
             t0(s7Var4, 2, dVar4, jNextLong, zG);
             G0(dVar4);
             return dVar4;
         }
-        if (arrayListL.size() > 1 && !this.f5088t) {
+        if (arrayListL.size() > 1 && !this.f5161t) {
             m0.m("BillingClient", "Current client doesn't support multi-item purchases.");
             s7 s7Var5 = s7.MULTI_ITEM_NOT_SUPPORTED;
-            d dVar5 = h.f5179p;
+            d dVar5 = h.f5252p;
             t0(s7Var5, 2, dVar5, jNextLong, zG);
             G0(dVar5);
             return dVar5;
         }
-        if (!listM.isEmpty() && !this.f5089u) {
+        if (!listM.isEmpty() && !this.f5162u) {
             m0.m("BillingClient", "Current client doesn't support purchases with ProductDetails.");
             s7 s7Var6 = s7.PRODUCT_DETAILS_NOT_SUPPORTED;
-            d dVar6 = h.f5182s;
+            d dVar6 = h.f5255s;
             t0(s7Var6, 2, dVar6, jNextLong, zG);
             G0(dVar6);
             return dVar6;
@@ -938,22 +938,22 @@ public class b extends a {
             if (strD2 != null && strD2.contains(":") && !this.E) {
                 m0.m("BillingClient", "Current Play Store version doesn't support gift code purchase.");
                 s7 s7Var7 = s7.GIFT_CODE_PURCHASE_NOT_SUPPORTED;
-                d dVar7 = h.f5181r;
+                d dVar7 = h.f5254r;
                 t0(s7Var7, 2, dVar7, jNextLong, zG);
                 G0(dVar7);
                 return dVar7;
             }
         }
         d dVarF = cVar.f();
-        if (dVarF != h.f5172i) {
+        if (dVarF != h.f5245i) {
             t0(s7.INVALID_BILLING_FLOW_PARAMS, 2, dVarF, jNextLong, zG);
             G0(dVarF);
             return dVarF;
         }
         boolean z11 = zG;
-        if (this.f5082n) {
+        if (this.f5155n) {
             long j11 = jNextLong;
-            final Bundle bundleF = m0.f(cVar, this.f5084p, this.f5091w, this.F.a(), this.F.b(), this.H, this.f5071c, this.f5072d, this.L.longValue(), this.f5075g.getPackageName(), j11);
+            final Bundle bundleF = m0.f(cVar, this.f5157p, this.f5164w, this.F.a(), this.F.b(), this.H, this.f5144c, this.f5145d, this.L.longValue(), this.f5148g.getPackageName(), j11);
             if (arrayListL.isEmpty()) {
                 ArrayList<String> arrayList = new ArrayList<>(listM.size() - 1);
                 ArrayList<String> arrayList2 = new ArrayList<>(listM.size() - 1);
@@ -1015,9 +1015,9 @@ public class b extends a {
                     bundleF.putStringArrayList("additionalSkuTypes", arrayList9);
                 }
             }
-            if (bundleF.containsKey("SKU_OFFER_ID_TOKEN_LIST") && !this.f5086r) {
+            if (bundleF.containsKey("SKU_OFFER_ID_TOKEN_LIST") && !this.f5159r) {
                 s7 s7Var8 = s7.OFFER_ID_TOKEN_NOT_SUPPORTED;
-                d dVar8 = h.f5180q;
+                d dVar8 = h.f5253q;
                 t0(s7Var8, 2, dVar8, j11, z11);
                 G0(dVar8);
                 return dVar8;
@@ -1038,28 +1038,28 @@ public class b extends a {
                 String stringExtra = intent.getStringExtra("PROXY_PACKAGE");
                 bundleF.putString("proxyPackage", stringExtra);
                 try {
-                    bundleF.putString("proxyPackageVersion", this.f5075g.getPackageManager().getPackageInfo(stringExtra, 0).versionName);
+                    bundleF.putString("proxyPackageVersion", this.f5148g.getPackageManager().getPackageInfo(stringExtra, 0).versionName);
                 } catch (PackageManager.NameNotFoundException unused) {
                     bundleF.putString("proxyPackageVersion", "package not found");
                 }
             }
             if (this.E) {
                 i10 = 28;
-            } else if (this.f5089u && !listM.isEmpty()) {
+            } else if (this.f5162u && !listM.isEmpty()) {
                 i10 = 17;
-            } else if (this.f5087s && z10) {
+            } else if (this.f5160s && z10) {
                 i10 = 15;
             } else {
-                i10 = this.f5084p ? 9 : 6;
+                i10 = this.f5157p ? 9 : 6;
             }
             final int i12 = i10;
             final c cVar2 = cVar;
             futureO = o(new Callable() { // from class: v7.x
                 @Override // java.util.concurrent.Callable
                 public final Object call() {
-                    return this.f32855a.W(i12, strD, strE, cVar2, bundleF);
+                    return this.f33423a.W(i12, strD, strE, cVar2, bundleF);
                 }
-            }, 5000L, null, this.f5073e, n());
+            }, 5000L, null, this.f5146e, n());
             r8 = cVar2;
             j10 = j11;
         } else {
@@ -1067,16 +1067,16 @@ public class b extends a {
             futureO = o(new Callable() { // from class: v7.y
                 @Override // java.util.concurrent.Callable
                 public final Object call() {
-                    return this.f32862a.X(strD, strE);
+                    return this.f33430a.X(strD, strE);
                 }
-            }, 5000L, null, this.f5073e, n());
+            }, 5000L, null, this.f5146e, n());
             r8 = jNextLong;
         }
         try {
             if (futureO == null) {
                 try {
                     s7 s7Var9 = s7.MISSING_RESULT_FROM_EXECUTE_ASYNC;
-                    d dVar9 = h.f5166c;
+                    d dVar9 = h.f5239c;
                     t0(s7Var9, 2, dVar9, j10, z11);
                     G0(dVar9);
                     return dVar9;
@@ -1085,7 +1085,7 @@ public class b extends a {
                     r11 = j10;
                     m0.n("BillingClient", "Time out while launching billing flow. Try to reconnect", e);
                     s7 s7Var10 = s7.LAUNCH_BILLING_FLOW_TIMEOUT;
-                    d dVar10 = h.f5174k;
+                    d dVar10 = h.f5247k;
                     u0(s7Var10, 2, dVar10, h1.a(e), r11, z11);
                     G0(dVar10);
                     return dVar10;
@@ -1094,7 +1094,7 @@ public class b extends a {
                     r11 = j10;
                     m0.n("BillingClient", "Time out while launching billing flow. Try to reconnect", e);
                     s7 s7Var11 = s7.LAUNCH_BILLING_FLOW_TIMEOUT;
-                    d dVar11 = h.f5174k;
+                    d dVar11 = h.f5247k;
                     u0(s7Var11, 2, dVar11, h1.a(e), r11, z11);
                     G0(dVar11);
                     return dVar11;
@@ -1103,7 +1103,7 @@ public class b extends a {
                     r10 = j10;
                     m0.n("BillingClient", "Exception while launching billing flow. Try to reconnect", e);
                     s7 s7Var12 = s7.LAUNCH_BILLING_FLOW_EXCEPTION;
-                    d dVar12 = h.f5173j;
+                    d dVar12 = h.f5246j;
                     u0(s7Var12, 2, dVar12, h1.a(e), r10, z11);
                     G0(dVar12);
                     return dVar12;
@@ -1119,7 +1119,7 @@ public class b extends a {
                 intent2.putExtra("billingClientTransactionId", j12);
                 intent2.putExtra("wasServiceAutoReconnected", z11);
                 activity.startActivity(intent2);
-                return h.f5172i;
+                return h.f5245i;
             }
             m0.m("BillingClient", "Unable to buy item, Error response code: " + iB);
             d dVarA = h.a(iB, strI2);
@@ -1160,7 +1160,7 @@ public class b extends a {
                 z11 = z11;
                 m0.n("BillingClient", "Time out while launching billing flow. Try to reconnect", e);
                 s7 s7Var14 = s7.LAUNCH_BILLING_FLOW_TIMEOUT;
-                d dVar13 = h.f5174k;
+                d dVar13 = h.f5247k;
                 u0(s7Var14, 2, dVar13, h1.a(e), r11, z11);
                 G0(dVar13);
                 return dVar13;
@@ -1170,7 +1170,7 @@ public class b extends a {
                 z11 = z11;
                 m0.n("BillingClient", "Time out while launching billing flow. Try to reconnect", e);
                 s7 s7Var15 = s7.LAUNCH_BILLING_FLOW_TIMEOUT;
-                d dVar14 = h.f5174k;
+                d dVar14 = h.f5247k;
                 u0(s7Var15, 2, dVar14, h1.a(e), r11, z11);
                 G0(dVar14);
                 return dVar14;
@@ -1180,7 +1180,7 @@ public class b extends a {
                 z11 = z11;
                 m0.n("BillingClient", "Exception while launching billing flow. Try to reconnect", e);
                 s7 s7Var16 = s7.LAUNCH_BILLING_FLOW_EXCEPTION;
-                d dVar15 = h.f5173j;
+                d dVar15 = h.f5246j;
                 u0(s7Var16, 2, dVar15, h1.a(e), r10, z11);
                 G0(dVar15);
                 return dVar15;
@@ -1199,7 +1199,7 @@ public class b extends a {
 
     public final void e0(s7 s7Var, d dVar, int i10) {
         try {
-            int i11 = h1.f32789a;
+            int i11 = h1.f33357a;
             j7 j7Var = (j7) h1.b(s7Var, 6, dVar, null, z7.BROADCAST_ACTION_UNSPECIFIED).s();
             n9 n9VarB = p9.B();
             n9VarB.o(i10 > 0);
@@ -1212,7 +1212,7 @@ public class b extends a {
     }
 
     public final void f0(int i10) {
-        synchronized (this.f5070a) {
+        synchronized (this.f5143a) {
             try {
                 if (this.b == 3) {
                     return;
@@ -1230,13 +1230,13 @@ public class b extends a {
         if (o(new Callable() { // from class: v7.g0
             @Override // java.util.concurrent.Callable
             public final Object call() {
-                com.android.billingclient.api.b.O0(this.f32786a, jVar, fVar);
+                com.android.billingclient.api.b.O0(this.f33354a, jVar, fVar);
                 return null;
             }
         }, 30000L, new Runnable() { // from class: v7.h0
             @Override // java.lang.Runnable
             public final void run() {
-                com.android.billingclient.api.b.s(this.f32788a, jVar);
+                com.android.billingclient.api.b.s(this.f33356a, jVar);
             }
         }, Y(), n()) == null) {
             d dVarX = x();
@@ -1249,7 +1249,7 @@ public class b extends a {
         s7 s7Var;
         d dVarW;
         d dVar2;
-        synchronized (this.f5070a) {
+        synchronized (this.f5143a) {
             try {
                 if (k0()) {
                     dVarW = w(i10);
@@ -1257,12 +1257,12 @@ public class b extends a {
                     if (this.b == 1) {
                         m0.m("BillingClient", "Client is already in the process of connecting to billing service.");
                         s7 s7Var2 = s7.BILLING_CLIENT_CONNECTING;
-                        dVar2 = h.f5167d;
+                        dVar2 = h.f5240d;
                         e0(s7Var2, dVar2, i10);
                     } else if (this.b == 3) {
                         m0.m("BillingClient", "Client was already closed and can't be reused. Please create another instance.");
                         s7 s7Var3 = s7.BILLING_CLIENT_CLOSED;
-                        dVar2 = h.f5173j;
+                        dVar2 = h.f5246j;
                         e0(s7Var3, dVar2, i10);
                     } else {
                         f0(1);
@@ -1272,11 +1272,11 @@ public class b extends a {
                         }
                         h0();
                         m0.l("BillingClient", "Starting in-app billing setup.");
-                        this.f5078j = new p0(this, dVar, i10, null);
-                        this.f5078j.f();
+                        this.f5151j = new p0(this, dVar, i10, null);
+                        this.f5151j.f();
                         Intent intent = new Intent("com.android.vending.billing.InAppBillingService.BIND");
                         intent.setPackage(BuildConfig.STORE_PACKAGE);
-                        List<ResolveInfo> listQueryIntentServices = this.f5075g.getPackageManager().queryIntentServices(intent, 0);
+                        List<ResolveInfo> listQueryIntentServices = this.f5148g.getPackageManager().queryIntentServices(intent, 0);
                         if (listQueryIntentServices == null || listQueryIntentServices.isEmpty()) {
                             s7Var = s7.INTENT_SERVICE_NOT_FOUND;
                         } else {
@@ -1291,19 +1291,19 @@ public class b extends a {
                                     ComponentName componentName = new ComponentName(str, str2);
                                     Intent intent2 = new Intent(intent);
                                     intent2.setComponent(componentName);
-                                    intent2.putExtra("playBillingLibraryVersion", this.f5071c);
-                                    synchronized (this.f5070a) {
+                                    intent2.putExtra("playBillingLibraryVersion", this.f5144c);
+                                    synchronized (this.f5143a) {
                                         try {
                                             if (this.b == 2) {
                                                 dVarW = w(i10);
                                             } else if (this.b != 1) {
                                                 m0.m("BillingClient", "Client state no longer CONNECTING, returning service disconnected.");
                                                 s7 s7Var4 = s7.BILLING_CLIENT_TRANSITIONED_OUT_OF_CONNECTING;
-                                                dVar2 = h.f5173j;
+                                                dVar2 = h.f5246j;
                                                 e0(s7Var4, dVar2, i10);
                                             } else {
-                                                p0 p0Var = this.f5078j;
-                                                if ((i10 <= 0 || Build.VERSION.SDK_INT < 29) ? this.f5075g.bindService(intent2, p0Var, 1) : this.f5075g.bindService(intent2, 1, n(), p0Var)) {
+                                                p0 p0Var = this.f5151j;
+                                                if ((i10 <= 0 || Build.VERSION.SDK_INT < 29) ? this.f5148g.bindService(intent2, p0Var, 1) : this.f5148g.bindService(intent2, 1, n(), p0Var)) {
                                                     m0.l("BillingClient", "Service was bonded successfully.");
                                                     dVarW = null;
                                                 } else {
@@ -1343,7 +1343,7 @@ public class b extends a {
         if (o(new j0(this, lVar, oVar.c(), oVar.a()), 30000L, new Runnable() { // from class: v7.w
             @Override // java.lang.Runnable
             public final void run() {
-                com.android.billingclient.api.b.q(this.f32851a, lVar);
+                com.android.billingclient.api.b.q(this.f33419a, lVar);
             }
         }, Y(), n()) == null) {
             d dVarX = x();
@@ -1353,20 +1353,20 @@ public class b extends a {
     }
 
     public final void h0() {
-        synchronized (this.f5070a) {
-            if (this.f5078j != null) {
+        synchronized (this.f5143a) {
+            if (this.f5151j != null) {
                 try {
-                    this.f5075g.unbindService(this.f5078j);
-                    this.f5077i = null;
-                    this.f5078j = null;
+                    this.f5148g.unbindService(this.f5151j);
+                    this.f5150i = null;
+                    this.f5151j = null;
                 } catch (Throwable th2) {
                     try {
                         m0.n("BillingClient", "There was an exception while unbinding service!", th2);
-                        this.f5077i = null;
-                        this.f5078j = null;
+                        this.f5150i = null;
+                        this.f5151j = null;
                     } catch (Throwable th3) {
-                        this.f5077i = null;
-                        this.f5078j = null;
+                        this.f5150i = null;
+                        this.f5151j = null;
                         throw th3;
                     }
                 }
@@ -1400,38 +1400,38 @@ public class b extends a {
         return k0();
     }
 
-    public final void j(Context context, m mVar, v7.i iVar, v7.c0 c0Var, String str, i1 i1Var, a.C0108a c0108a) {
-        this.f5075g = context.getApplicationContext();
+    public final void j(Context context, m mVar, v7.i iVar, v7.c0 c0Var, String str, i1 i1Var, a.C0112a c0112a) {
+        this.f5148g = context.getApplicationContext();
         e8 e8VarL = h8.L();
         e8VarL.E(str);
-        String str2 = this.f5072d;
+        String str2 = this.f5145d;
         if (str2 != null) {
             e8VarL.G(str2);
         }
-        e8VarL.v(this.f5075g.getPackageName());
+        e8VarL.v(this.f5148g.getPackageName());
         e8VarL.r(this.L.longValue());
-        e8VarL.D(c0108a.f5069j);
+        e8VarL.D(c0112a.f5142j);
         e8VarL.o(Build.VERSION.SDK_INT);
         e8VarL.t(912213584L);
         m0(e8VarL, context);
         try {
-            e8VarL.p(this.f5075g.getPackageManager().getPackageInfo(this.f5075g.getPackageName(), 0).versionCode);
+            e8VarL.p(this.f5148g.getPackageManager().getPackageInfo(this.f5148g.getPackageName(), 0).versionCode);
         } catch (Throwable th2) {
             m0.n("BillingClient", "Error getting app version code.", th2);
         }
         if (i1Var != null) {
-            this.f5076h = i1Var;
+            this.f5149h = i1Var;
         } else {
-            this.f5076h = new m1(this.f5075g, (h8) e8VarL.i());
+            this.f5149h = new m1(this.f5148g, (h8) e8VarL.i());
         }
         if (mVar == null) {
             m0.m("BillingClient", "Billing client should have a valid listener but the provided is null.");
         }
-        this.f5074f = new t(this.f5075g, mVar, null, c0Var, null, null, this.f5076h);
+        this.f5147f = new t(this.f5148g, mVar, null, c0Var, null, null, this.f5149h);
         this.F = iVar;
         this.H = c0Var != null;
-        this.f5075g.getPackageName();
-        this.G = c0108a.f5069j;
+        this.f5148g.getPackageName();
+        this.G = c0112a.f5142j;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -1481,10 +1481,10 @@ public class b extends a {
 
     public final boolean k0() {
         boolean z10;
-        synchronized (this.f5070a) {
+        synchronized (this.f5143a) {
             try {
                 z10 = false;
-                if (this.b == 2 && this.f5077i != null && this.f5078j != null) {
+                if (this.b == 2 && this.f5150i != null && this.f5151j != null) {
                     z10 = true;
                 }
             } catch (Throwable th2) {
@@ -1497,7 +1497,7 @@ public class b extends a {
     public final synchronized ExecutorService n() {
         try {
             if (this.K == null) {
-                this.K = Executors.newFixedThreadPool(m0.f7176a, new i0(this));
+                this.K = Executors.newFixedThreadPool(m0.f7250a, new i0(this));
             }
         } catch (Throwable th2) {
             throw th2;
@@ -1521,7 +1521,7 @@ public class b extends a {
         com.google.android.gms.internal.play_billing.f fVar;
         int i11;
         int i12;
-        Bundle bundleW0;
+        Bundle bundleU0;
         d dVarA;
         s7 s7Var;
         ArrayList<String> stringArrayList;
@@ -1532,13 +1532,13 @@ public class b extends a {
         k kVar;
         m0.l("BillingClient", "Querying owned items, item type: ".concat(String.valueOf(str)));
         ArrayList arrayList = new ArrayList();
-        boolean z12 = this.f5084p;
-        boolean z13 = this.f5091w;
+        boolean z12 = this.f5157p;
+        boolean z13 = this.f5164w;
         boolean zA = this.F.a();
         boolean zB = this.F.b();
         long jLongValue = this.L.longValue();
         Bundle bundle = new Bundle();
-        m0.c(bundle, u7.a.f32091a, this.f5072d, jLongValue);
+        m0.c(bundle, u7.a.f32744a, this.f5145d, jLongValue);
         if (z12 && zA) {
             bundle.putBoolean("enablePendingPurchases", true);
         }
@@ -1551,40 +1551,40 @@ public class b extends a {
         String string = null;
         do {
             try {
-                synchronized (this.f5070a) {
-                    fVar = this.f5077i;
+                synchronized (this.f5143a) {
+                    fVar = this.f5150i;
                 }
                 if (fVar == null) {
-                    return n0(9, h.f5173j, s7.SERVICE_RESET_TO_NULL, "Service has been reset to null", null);
+                    return n0(9, h.f5246j, s7.SERVICE_RESET_TO_NULL, "Service has been reset to null", null);
                 }
                 if (z10 && !this.C) {
-                    return n0(9, h.f5187x, s7.INCLUDE_SUSPENDED_SUBSCRIPTIONS_NOT_SUPPORTED, "Include suspended subscriptions is not supported", null);
+                    return n0(9, h.f5260x, s7.INCLUDE_SUSPENDED_SUBSCRIPTIONS_NOT_SUPPORTED, "Include suspended subscriptions is not supported", null);
                 }
-                if (this.f5084p) {
+                if (this.f5157p) {
                     if (this.C) {
                         i12 = 26;
                     } else if (this.B) {
                         i12 = 24;
                     } else {
-                        if (this.f5091w) {
+                        if (this.f5164w) {
                             i12 = 19;
                         } else {
                             i11 = 9;
                         }
-                        bundleW0 = fVar.w0(i11, this.f5075g.getPackageName(), str, string, bundle);
+                        bundleU0 = fVar.u0(i11, this.f5148g.getPackageName(), str, string, bundle);
                     }
                     i11 = i12;
-                    bundleW0 = fVar.w0(i11, this.f5075g.getPackageName(), str, string, bundle);
+                    bundleU0 = fVar.u0(i11, this.f5148g.getPackageName(), str, string, bundle);
                 } else {
-                    bundleW0 = fVar.a0(3, this.f5075g.getPackageName(), str, string);
+                    bundleU0 = fVar.Y(3, this.f5148g.getPackageName(), str, string);
                 }
-                d dVar = h.f5171h;
-                if (bundleW0 == null) {
+                d dVar = h.f5244h;
+                if (bundleU0 == null) {
                     m0.m("BillingClient", String.format("%s got null owned items list", "getPurchase()"));
                     s7Var = s7.NULL_OWNED_ITEMS_LIST;
                 } else {
-                    int iB = m0.b(bundleW0, "BillingClient");
-                    String strI = m0.i(bundleW0, "BillingClient");
+                    int iB = m0.b(bundleU0, "BillingClient");
+                    String strI = m0.i(bundleU0, "BillingClient");
                     d.a aVarD = d.d();
                     aVarD.d(iB);
                     aVarD.b(strI);
@@ -1592,10 +1592,10 @@ public class b extends a {
                     if (iB != 0) {
                         m0.m("BillingClient", String.format("%s failed. Response code: %s", "getPurchase()", Integer.valueOf(iB)));
                         s7Var = s7.BILLING_RESULT_RECEIVED_FROM_PHONESKY;
-                    } else if (bundleW0.containsKey("INAPP_PURCHASE_ITEM_LIST") && bundleW0.containsKey("INAPP_PURCHASE_DATA_LIST") && bundleW0.containsKey("INAPP_DATA_SIGNATURE_LIST")) {
-                        ArrayList<String> stringArrayList4 = bundleW0.getStringArrayList("INAPP_PURCHASE_ITEM_LIST");
-                        ArrayList<String> stringArrayList5 = bundleW0.getStringArrayList("INAPP_PURCHASE_DATA_LIST");
-                        ArrayList<String> stringArrayList6 = bundleW0.getStringArrayList("INAPP_DATA_SIGNATURE_LIST");
+                    } else if (bundleU0.containsKey("INAPP_PURCHASE_ITEM_LIST") && bundleU0.containsKey("INAPP_PURCHASE_DATA_LIST") && bundleU0.containsKey("INAPP_DATA_SIGNATURE_LIST")) {
+                        ArrayList<String> stringArrayList4 = bundleU0.getStringArrayList("INAPP_PURCHASE_ITEM_LIST");
+                        ArrayList<String> stringArrayList5 = bundleU0.getStringArrayList("INAPP_PURCHASE_DATA_LIST");
+                        ArrayList<String> stringArrayList6 = bundleU0.getStringArrayList("INAPP_DATA_SIGNATURE_LIST");
                         if (stringArrayList4 == null) {
                             m0.m("BillingClient", String.format("Bundle returned from %s contains null SKUs list.", "getPurchase()"));
                             s7Var = s7.NULL_SKUS_LIST;
@@ -1606,19 +1606,19 @@ public class b extends a {
                             m0.m("BillingClient", String.format("Bundle returned from %s contains null signatures list.", "getPurchase()"));
                             s7Var = s7.NULL_SIGNATURES_LIST;
                         } else {
-                            dVarA = h.f5172i;
+                            dVarA = h.f5245i;
                             s7Var = s7.REASON_UNSPECIFIED;
                         }
                     } else {
                         m0.m("BillingClient", String.format("Bundle returned from %s doesn't contain required fields.", "getPurchase()"));
                         s7Var = s7.MISSING_REQUIRED_PURCHASE_KEY;
                     }
-                    if (dVarA != h.f5172i) {
+                    if (dVarA != h.f5245i) {
                         return n0(9, dVarA, s7Var, "Purchase bundle invalid", null);
                     }
-                    stringArrayList = bundleW0.getStringArrayList("INAPP_PURCHASE_ITEM_LIST");
-                    stringArrayList2 = bundleW0.getStringArrayList("INAPP_PURCHASE_DATA_LIST");
-                    stringArrayList3 = bundleW0.getStringArrayList("INAPP_DATA_SIGNATURE_LIST");
+                    stringArrayList = bundleU0.getStringArrayList("INAPP_PURCHASE_ITEM_LIST");
+                    stringArrayList2 = bundleU0.getStringArrayList("INAPP_PURCHASE_DATA_LIST");
+                    stringArrayList3 = bundleU0.getStringArrayList("INAPP_DATA_SIGNATURE_LIST");
                     z11 = false;
                     for (i13 = 0; i13 < stringArrayList2.size(); i13++) {
                         String str2 = stringArrayList2.get(i13);
@@ -1633,22 +1633,22 @@ public class b extends a {
                             }
                             arrayList.add(kVar);
                         } catch (JSONException e10) {
-                            return n0(9, h.f5171h, s7.ERROR_DECODING_PURCHASE_DATA, "Got an exception trying to decode the purchase!", e10);
+                            return n0(9, h.f5244h, s7.ERROR_DECODING_PURCHASE_DATA, "Got an exception trying to decode the purchase!", e10);
                         }
                     }
                     if (z11) {
                         q0(s7.EMPTY_PURCHASE_TOKEN, 9, dVar);
                     }
-                    string = bundleW0.getString("INAPP_CONTINUATION_TOKEN");
+                    string = bundleU0.getString("INAPP_CONTINUATION_TOKEN");
                     m0.l("BillingClient", "Continuation token: ".concat(String.valueOf(string)));
                 }
                 dVarA = dVar;
-                if (dVarA != h.f5172i) {
+                if (dVarA != h.f5245i) {
                     return n0(9, dVarA, s7Var, "Purchase bundle invalid", null);
                 }
-                stringArrayList = bundleW0.getStringArrayList("INAPP_PURCHASE_ITEM_LIST");
-                stringArrayList2 = bundleW0.getStringArrayList("INAPP_PURCHASE_DATA_LIST");
-                stringArrayList3 = bundleW0.getStringArrayList("INAPP_DATA_SIGNATURE_LIST");
+                stringArrayList = bundleU0.getStringArrayList("INAPP_PURCHASE_ITEM_LIST");
+                stringArrayList2 = bundleU0.getStringArrayList("INAPP_PURCHASE_DATA_LIST");
+                stringArrayList3 = bundleU0.getStringArrayList("INAPP_DATA_SIGNATURE_LIST");
                 z11 = false;
                 while (i13 < stringArrayList2.size()) {
                     String str4 = stringArrayList2.get(i13);
@@ -1665,22 +1665,22 @@ public class b extends a {
                 if (z11) {
                     q0(s7.EMPTY_PURCHASE_TOKEN, 9, dVar);
                 }
-                string = bundleW0.getString("INAPP_CONTINUATION_TOKEN");
+                string = bundleU0.getString("INAPP_CONTINUATION_TOKEN");
                 m0.l("BillingClient", "Continuation token: ".concat(String.valueOf(string)));
             } catch (DeadObjectException e11) {
-                return n0(9, h.f5173j, s7.GET_PURCHASE_SERVICE_CALL_EXCEPTION, "Got exception trying to get purchases try to reconnect", e11);
+                return n0(9, h.f5246j, s7.GET_PURCHASE_SERVICE_CALL_EXCEPTION, "Got exception trying to get purchases try to reconnect", e11);
             } catch (Exception e12) {
-                return n0(9, h.f5171h, s7.GET_PURCHASE_SERVICE_CALL_EXCEPTION, "Got exception trying to get purchases try to reconnect", e12);
+                return n0(9, h.f5244h, s7.GET_PURCHASE_SERVICE_CALL_EXCEPTION, "Got exception trying to get purchases try to reconnect", e12);
             }
         } while (!TextUtils.isEmpty(string));
-        return new x1(h.f5172i, arrayList);
+        return new x1(h.f5245i, arrayList);
     }
 
     public final void p0(d dVar, s7 s7Var, int i10) {
         p7 p7Var = null;
         l7 l7Var = null;
         if (dVar.c() == 0) {
-            int i11 = h1.f32789a;
+            int i11 = h1.f33357a;
             try {
                 n7 n7VarC = p7.C();
                 n7VarC.s(5);
@@ -1694,7 +1694,7 @@ public class b extends a {
             d0(p7Var);
             return;
         }
-        int i12 = h1.f32789a;
+        int i12 = h1.f33357a;
         try {
             j7 j7VarE = l7.E();
             q7 q7VarC = u7.C();
@@ -1715,7 +1715,7 @@ public class b extends a {
 
     public final void q0(s7 s7Var, int i10, d dVar) {
         try {
-            int i11 = h1.f32789a;
+            int i11 = h1.f33357a;
             b0(h1.b(s7Var, i10, dVar, null, z7.BROADCAST_ACTION_UNSPECIFIED));
         } catch (Throwable th2) {
             m0.n("BillingClient", "Unable to log.", th2);
@@ -1724,9 +1724,9 @@ public class b extends a {
 
     public final void r0(s7 s7Var, int i10, d dVar, long j10) {
         try {
-            int i11 = h1.f32789a;
+            int i11 = h1.f33357a;
             try {
-                this.f5076h.n(h1.b(s7Var, 2, dVar, null, z7.BROADCAST_ACTION_UNSPECIFIED), this.f5081m, j10);
+                this.f5149h.n(h1.b(s7Var, 2, dVar, null, z7.BROADCAST_ACTION_UNSPECIFIED), this.f5154m, j10);
             } catch (Throwable th2) {
                 m0.n("BillingClient", "Unable to log.", th2);
             }
@@ -1737,7 +1737,7 @@ public class b extends a {
 
     public final void s0(s7 s7Var, int i10, d dVar, String str) {
         try {
-            int i11 = h1.f32789a;
+            int i11 = h1.f33357a;
             b0(h1.b(s7Var, i10, dVar, str, z7.BROADCAST_ACTION_UNSPECIFIED));
         } catch (Throwable th2) {
             m0.n("BillingClient", "Unable to log.", th2);
@@ -1746,7 +1746,7 @@ public class b extends a {
 
     public final void t0(s7 s7Var, int i10, d dVar, long j10, boolean z10) {
         try {
-            int i11 = h1.f32789a;
+            int i11 = h1.f33357a;
             c0(h1.b(s7Var, 2, dVar, null, z7.BROADCAST_ACTION_UNSPECIFIED), j10, z10);
         } catch (Throwable th2) {
             m0.n("BillingClient", "Unable to log.", th2);
@@ -1755,7 +1755,7 @@ public class b extends a {
 
     public final void u0(s7 s7Var, int i10, d dVar, String str, long j10, boolean z10) {
         try {
-            int i11 = h1.f32789a;
+            int i11 = h1.f33357a;
             c0(h1.b(s7Var, 2, dVar, str, z7.BROADCAST_ACTION_UNSPECIFIED), j10, z10);
         } catch (Throwable th2) {
             m0.n("BillingClient", "Unable to log.", th2);
@@ -1778,18 +1778,18 @@ public class b extends a {
         n9VarB.p(i10);
         n7VarC.r(n9VarB);
         d0((p7) n7VarC.i());
-        return h.f5172i;
+        return h.f5245i;
     }
 
     public final d x() {
         int[] iArr = {0, 3};
-        synchronized (this.f5070a) {
+        synchronized (this.f5143a) {
             for (int i10 = 0; i10 < 2; i10++) {
                 if (this.b == iArr[i10]) {
-                    return h.f5173j;
+                    return h.f5246j;
                 }
             }
-            return h.f5171h;
+            return h.f5244h;
         }
     }
 
@@ -1798,12 +1798,12 @@ public class b extends a {
             return y9.a(new v9() { // from class: v7.v
                 @Override // com.google.android.gms.internal.play_billing.v9
                 public final Object a(t9 t9Var) {
-                    return com.android.billingclient.api.b.M0(this.f32848a, i10, t9Var);
+                    return com.android.billingclient.api.b.M0(this.f33416a, i10, t9Var);
                 }
             });
         }
         m0.l("BillingClient", "Already connected or not opted into auto reconnection.");
-        return d2.a(h.f5172i);
+        return d2.a(h.f5245i);
     }
 
     public final /* synthetic */ Object z(v7.c cVar, v7.b bVar) {
@@ -1811,95 +1811,95 @@ public class b extends a {
         try {
             if (!j0(l1.b())) {
                 s7 s7Var = s7.SERVICE_CONNECTION_NOT_READY;
-                d dVar = h.f5173j;
+                d dVar = h.f5246j;
                 q0(s7Var, 3, dVar);
                 cVar.a(dVar);
             } else if (TextUtils.isEmpty(bVar.a())) {
                 m0.m("BillingClient", "Please provide a valid purchase token.");
                 s7 s7Var2 = s7.EMPTY_PURCHASE_TOKEN;
-                d dVar2 = h.f5170g;
+                d dVar2 = h.f5243g;
                 q0(s7Var2, 3, dVar2);
                 cVar.a(dVar2);
-            } else if (this.f5084p) {
-                synchronized (this.f5070a) {
-                    fVar = this.f5077i;
+            } else if (this.f5157p) {
+                synchronized (this.f5143a) {
+                    fVar = this.f5150i;
                 }
                 if (fVar != null) {
-                    String packageName = this.f5075g.getPackageName();
+                    String packageName = this.f5148g.getPackageName();
                     String strA = bVar.a();
-                    String str = this.f5072d;
+                    String str = this.f5145d;
                     long jLongValue = this.L.longValue();
-                    int i10 = m0.f7176a;
+                    int i10 = m0.f7250a;
                     Bundle bundle = new Bundle();
-                    m0.c(bundle, u7.a.f32091a, str, jLongValue);
+                    m0.c(bundle, u7.a.f32744a, str, jLongValue);
                     Bundle bundleO2 = fVar.o2(9, packageName, strA, bundle);
                     cVar.a(h.a(m0.b(bundleO2, "BillingClient"), m0.i(bundleO2, "BillingClient")));
                     return null;
                 }
-                D(cVar, h.f5173j, s7.SERVICE_RESET_TO_NULL, null);
+                D(cVar, h.f5246j, s7.SERVICE_RESET_TO_NULL, null);
             } else {
                 s7 s7Var3 = s7.API_VERSION_NOT_V9;
-                d dVar3 = h.f5165a;
+                d dVar3 = h.f5238a;
                 q0(s7Var3, 3, dVar3);
                 cVar.a(dVar3);
             }
             return null;
         } catch (DeadObjectException e10) {
-            D(cVar, h.f5173j, s7.ACKNOWLEDGE_PURCHASE_SERVICE_CALL_EXCEPTION, e10);
+            D(cVar, h.f5246j, s7.ACKNOWLEDGE_PURCHASE_SERVICE_CALL_EXCEPTION, e10);
             return null;
         } catch (Exception e11) {
-            D(cVar, h.f5171h, s7.ACKNOWLEDGE_PURCHASE_SERVICE_CALL_EXCEPTION, e11);
+            D(cVar, h.f5244h, s7.ACKNOWLEDGE_PURCHASE_SERVICE_CALL_EXCEPTION, e11);
             return null;
         }
     }
 
-    public b(String str, v7.i iVar, Context context, p1 p1Var, i1 i1Var, ExecutorService executorService, a.C0108a c0108a) {
-        this.f5070a = new Object();
+    public b(String str, v7.i iVar, Context context, p1 p1Var, i1 i1Var, ExecutorService executorService, a.C0112a c0112a) {
+        this.f5143a = new Object();
         this.b = 0;
-        this.f5073e = new Handler(Looper.getMainLooper());
-        this.f5081m = 0;
+        this.f5146e = new Handler(Looper.getMainLooper());
+        this.f5154m = 0;
         this.I = s0.k();
         Long lValueOf = Long.valueOf(new Random().nextLong());
         this.L = lValueOf;
         this.M = r.a();
-        this.f5071c = u7.a.f32091a;
+        this.f5144c = u7.a.f32744a;
         String strB = B();
-        this.f5072d = strB;
-        this.f5075g = context.getApplicationContext();
+        this.f5145d = strB;
+        this.f5148g = context.getApplicationContext();
         e8 e8VarL = h8.L();
-        e8VarL.E(u7.a.f32091a);
+        e8VarL.E(u7.a.f32744a);
         if (strB != null) {
             e8VarL.G(strB);
         }
-        e8VarL.v(this.f5075g.getPackageName());
+        e8VarL.v(this.f5148g.getPackageName());
         e8VarL.r(lValueOf.longValue());
-        e8VarL.D(c0108a.f5069j);
+        e8VarL.D(c0112a.f5142j);
         e8VarL.o(Build.VERSION.SDK_INT);
         e8VarL.t(912213584L);
         m0(e8VarL, context);
         try {
-            e8VarL.p(this.f5075g.getPackageManager().getPackageInfo(this.f5075g.getPackageName(), 0).versionCode);
+            e8VarL.p(this.f5148g.getPackageManager().getPackageInfo(this.f5148g.getPackageName(), 0).versionCode);
         } catch (Throwable th2) {
             m0.n("BillingClient", "Error getting app version code.", th2);
         }
-        this.f5076h = new m1(this.f5075g, (h8) e8VarL.i());
+        this.f5149h = new m1(this.f5148g, (h8) e8VarL.i());
         m0.m("BillingClient", "Billing client should have a valid listener but the provided is null.");
-        this.f5074f = new t(this.f5075g, null, null, null, null, null, this.f5076h);
+        this.f5147f = new t(this.f5148g, null, null, null, null, null, this.f5149h);
         this.F = iVar;
-        this.f5075g.getPackageName();
-        this.G = c0108a.f5069j;
+        this.f5148g.getPackageName();
+        this.G = c0112a.f5142j;
     }
 
-    public b(String str, v7.i iVar, Context context, m mVar, v7.c0 c0Var, i1 i1Var, ExecutorService executorService, a.C0108a c0108a) {
-        this.f5070a = new Object();
+    public b(String str, v7.i iVar, Context context, m mVar, v7.c0 c0Var, i1 i1Var, ExecutorService executorService, a.C0112a c0112a) {
+        this.f5143a = new Object();
         this.b = 0;
-        this.f5073e = new Handler(Looper.getMainLooper());
-        this.f5081m = 0;
+        this.f5146e = new Handler(Looper.getMainLooper());
+        this.f5154m = 0;
         this.I = s0.k();
         this.L = Long.valueOf(new Random().nextLong());
         this.M = r.a();
-        this.f5071c = u7.a.f32091a;
-        this.f5072d = B();
-        j(context, mVar, iVar, null, u7.a.f32091a, null, c0108a);
+        this.f5144c = u7.a.f32744a;
+        this.f5145d = B();
+        j(context, mVar, iVar, null, u7.a.f32744a, null, c0112a);
     }
 }

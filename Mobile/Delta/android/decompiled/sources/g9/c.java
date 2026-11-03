@@ -13,13 +13,13 @@ public interface c extends IInterface {
     public static abstract class a extends ab.d implements c {
 
         /* JADX INFO: renamed from: g9.c$a$a, reason: collision with other inner class name */
-        public static class C0322a extends ab.a implements c {
-            public C0322a(IBinder iBinder) {
+        public static class C0326a extends ab.a implements c {
+            public C0326a(IBinder iBinder) {
                 super(iBinder, "com.google.android.gms.auth.blockstore.restorecredential.internal.IRestoreCredentialService");
             }
 
             @Override // g9.c
-            public void M0(@NonNull GetRestoreCredentialRequest getRestoreCredentialRequest, @NonNull b bVar) {
+            public void H0(@NonNull GetRestoreCredentialRequest getRestoreCredentialRequest, @NonNull b bVar) {
                 Parcel parcelR2 = r2();
                 ab.e.b(parcelR2, getRestoreCredentialRequest);
                 ab.e.c(parcelR2, bVar);
@@ -41,11 +41,11 @@ public interface c extends IInterface {
                 return null;
             }
             IInterface iInterfaceQueryLocalInterface = iBinder.queryLocalInterface("com.google.android.gms.auth.blockstore.restorecredential.internal.IRestoreCredentialService");
-            return iInterfaceQueryLocalInterface instanceof c ? (c) iInterfaceQueryLocalInterface : new C0322a(iBinder);
+            return iInterfaceQueryLocalInterface instanceof c ? (c) iInterfaceQueryLocalInterface : new C0326a(iBinder);
         }
     }
 
-    void M0(@NonNull GetRestoreCredentialRequest getRestoreCredentialRequest, @NonNull b bVar);
+    void H0(@NonNull GetRestoreCredentialRequest getRestoreCredentialRequest, @NonNull b bVar);
 
     void y(@NonNull CreateRestoreCredentialRequest createRestoreCredentialRequest, @NonNull g9.a aVar);
 }

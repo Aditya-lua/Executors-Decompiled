@@ -26,7 +26,7 @@ public final class AFi1eSDK implements AFi1hSDK {
         Iterator<T> it = externalReferrers.iterator();
         while (it.hasNext()) {
             Referrer referrerCreate = ((ReferrerCreator) ((Pair) it.next()).c()).create(referrerProp);
-            AFLoggerBase.d$default(AFLogger.INSTANCE, LogTag.REFERRER, "External Referrer object created: " + kotlin.jvm.internal.d0.b(referrerCreate.getClass()).g(), false, 4, null);
+            AFLoggerBase.d$default(AFLogger.INSTANCE, LogTag.REFERRER, "External Referrer object created: " + kotlin.jvm.internal.d0.b(referrerCreate.getClass()).h(), false, 4, null);
             arrayList.add(referrerCreate);
         }
         return arrayList;

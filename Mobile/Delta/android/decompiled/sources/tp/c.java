@@ -1,28 +1,21 @@
 package tp;
 
-import androidx.p000lifecycle.l0;
-import com.withpersona.sdk2.inquiry.permissions.state.PermissionRequestStateManager;
-import ft.i;
-
-/* JADX INFO: loaded from: classes3.dex */
+/* JADX INFO: loaded from: classes2.dex */
 public final class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final i<PermissionRequestStateManager.c> f31947a;
+    public static final int f32500a = 2131166011;
+    public static final int b = 2131166012;
 
-    public c(i<PermissionRequestStateManager.c> iVar) {
-        this.f31947a = iVar;
-    }
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public static final int f32501c = 2131166013;
 
-    public static c a(i<PermissionRequestStateManager.c> iVar) {
-        return new c(iVar);
-    }
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public static final int f32502d = 2131166014;
 
-    public static com.withpersona.sdk2.inquiry.permissions.permissionRequest.c c(l0 l0Var, PermissionRequestStateManager.c cVar) {
-        return new com.withpersona.sdk2.inquiry.permissions.permissionRequest.c(l0Var, cVar);
-    }
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public static final int f32503e = 2131166015;
 
-    public com.withpersona.sdk2.inquiry.permissions.permissionRequest.c b(l0 l0Var) {
-        return c(l0Var, this.f31947a.get());
-    }
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    public static final int f32504f = 2131166016;
 }

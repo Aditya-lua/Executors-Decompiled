@@ -5,5 +5,5 @@ import m9.e;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface CurrentPlayerInfo extends e<CurrentPlayerInfo>, Parcelable {
-    int B1();
+    int z1();
 }

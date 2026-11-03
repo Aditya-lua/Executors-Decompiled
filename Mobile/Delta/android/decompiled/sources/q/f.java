@@ -17,29 +17,29 @@ import androidx.annotation.NonNull;
 public class f extends Button implements d3.b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final e f28977a;
+    public final e f29330a;
     public final a0 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NonNull
-    public n f28978c;
+    public n f29331c;
 
     public f(@NonNull Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, i.a.f19902r);
+        this(context, attributeSet, i.a.f20018r);
     }
 
     @NonNull
     private n getEmojiTextViewHelper() {
-        if (this.f28978c == null) {
-            this.f28978c = new n(this);
+        if (this.f29331c == null) {
+            this.f29331c = new n(this);
         }
-        return this.f28978c;
+        return this.f29331c;
     }
 
     @Override // android.widget.TextView, android.view.View
     public void drawableStateChanged() {
         super.drawableStateChanged();
-        e eVar = this.f28977a;
+        e eVar = this.f29330a;
         if (eVar != null) {
             eVar.b();
         }
@@ -51,7 +51,7 @@ public class f extends Button implements d3.b {
 
     @Override // android.widget.TextView
     public int getAutoSizeMaxTextSize() {
-        if (g1.f28984c) {
+        if (g1.f29337c) {
             return super.getAutoSizeMaxTextSize();
         }
         a0 a0Var = this.b;
@@ -63,7 +63,7 @@ public class f extends Button implements d3.b {
 
     @Override // android.widget.TextView, d3.b
     public int getAutoSizeMinTextSize() {
-        if (g1.f28984c) {
+        if (g1.f29337c) {
             return super.getAutoSizeMinTextSize();
         }
         a0 a0Var = this.b;
@@ -75,7 +75,7 @@ public class f extends Button implements d3.b {
 
     @Override // android.widget.TextView, d3.b
     public int getAutoSizeStepGranularity() {
-        if (g1.f28984c) {
+        if (g1.f29337c) {
             return super.getAutoSizeStepGranularity();
         }
         a0 a0Var = this.b;
@@ -87,7 +87,7 @@ public class f extends Button implements d3.b {
 
     @Override // android.widget.TextView
     public int[] getAutoSizeTextAvailableSizes() {
-        if (g1.f28984c) {
+        if (g1.f29337c) {
             return super.getAutoSizeTextAvailableSizes();
         }
         a0 a0Var = this.b;
@@ -97,7 +97,7 @@ public class f extends Button implements d3.b {
     @Override // android.widget.TextView, d3.b
     @SuppressLint({"WrongConstant"})
     public int getAutoSizeTextType() {
-        if (g1.f28984c) {
+        if (g1.f29337c) {
             return super.getAutoSizeTextType() == 1 ? 1 : 0;
         }
         a0 a0Var = this.b;
@@ -113,7 +113,7 @@ public class f extends Button implements d3.b {
     }
 
     public ColorStateList getSupportBackgroundTintList() {
-        e eVar = this.f28977a;
+        e eVar = this.f29330a;
         if (eVar != null) {
             return eVar.c();
         }
@@ -121,7 +121,7 @@ public class f extends Button implements d3.b {
     }
 
     public PorterDuff.Mode getSupportBackgroundTintMode() {
-        e eVar = this.f28977a;
+        e eVar = this.f29330a;
         if (eVar != null) {
             return eVar.d();
         }
@@ -161,7 +161,7 @@ public class f extends Button implements d3.b {
     public void onTextChanged(CharSequence charSequence, int i10, int i11, int i12) {
         super.onTextChanged(charSequence, i10, i11, i12);
         a0 a0Var = this.b;
-        if (a0Var == null || g1.f28984c || !a0Var.l()) {
+        if (a0Var == null || g1.f29337c || !a0Var.l()) {
             return;
         }
         this.b.c();
@@ -175,7 +175,7 @@ public class f extends Button implements d3.b {
 
     @Override // android.widget.TextView, d3.b
     public void setAutoSizeTextTypeUniformWithConfiguration(int i10, int i11, int i12, int i13) {
-        if (g1.f28984c) {
+        if (g1.f29337c) {
             super.setAutoSizeTextTypeUniformWithConfiguration(i10, i11, i12, i13);
             return;
         }
@@ -187,7 +187,7 @@ public class f extends Button implements d3.b {
 
     @Override // android.widget.TextView
     public void setAutoSizeTextTypeUniformWithPresetSizes(@NonNull int[] iArr, int i10) {
-        if (g1.f28984c) {
+        if (g1.f29337c) {
             super.setAutoSizeTextTypeUniformWithPresetSizes(iArr, i10);
             return;
         }
@@ -199,7 +199,7 @@ public class f extends Button implements d3.b {
 
     @Override // android.widget.TextView
     public void setAutoSizeTextTypeWithDefaults(int i10) {
-        if (g1.f28984c) {
+        if (g1.f29337c) {
             super.setAutoSizeTextTypeWithDefaults(i10);
             return;
         }
@@ -212,7 +212,7 @@ public class f extends Button implements d3.b {
     @Override // android.view.View
     public void setBackgroundDrawable(Drawable drawable) {
         super.setBackgroundDrawable(drawable);
-        e eVar = this.f28977a;
+        e eVar = this.f29330a;
         if (eVar != null) {
             eVar.f(drawable);
         }
@@ -221,7 +221,7 @@ public class f extends Button implements d3.b {
     @Override // android.view.View
     public void setBackgroundResource(int i10) {
         super.setBackgroundResource(i10);
-        e eVar = this.f28977a;
+        e eVar = this.f29330a;
         if (eVar != null) {
             eVar.g(i10);
         }
@@ -249,14 +249,14 @@ public class f extends Button implements d3.b {
     }
 
     public void setSupportBackgroundTintList(ColorStateList colorStateList) {
-        e eVar = this.f28977a;
+        e eVar = this.f29330a;
         if (eVar != null) {
             eVar.i(colorStateList);
         }
     }
 
     public void setSupportBackgroundTintMode(PorterDuff.Mode mode) {
-        e eVar = this.f28977a;
+        e eVar = this.f29330a;
         if (eVar != null) {
             eVar.j(mode);
         }
@@ -283,7 +283,7 @@ public class f extends Button implements d3.b {
 
     @Override // android.widget.TextView
     public void setTextSize(int i10, float f10) {
-        if (g1.f28984c) {
+        if (g1.f29337c) {
             super.setTextSize(i10, f10);
             return;
         }
@@ -297,7 +297,7 @@ public class f extends Button implements d3.b {
         super(x0.b(context), attributeSet, i10);
         v0.a(this, getContext());
         e eVar = new e(this);
-        this.f28977a = eVar;
+        this.f29330a = eVar;
         eVar.e(attributeSet, i10);
         a0 a0Var = new a0(this);
         this.b = a0Var;

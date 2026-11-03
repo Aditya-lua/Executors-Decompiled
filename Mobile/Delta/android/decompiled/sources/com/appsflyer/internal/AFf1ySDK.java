@@ -19,16 +19,16 @@ public final class AFf1ySDK {
     private static final long AFKeystoreWrapper;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    private static final int f5366d;
+    private static final int f5439d;
 
     @NotNull
     private static final IntRange unregisterClient;
 
     static {
         kotlin.time.a.Companion companion = kotlin.time.a.INSTANCE;
-        ju.b bVar = ju.b.SECONDS;
+        hu.b bVar = hu.b.SECONDS;
         AFKeystoreWrapper = kotlin.time.a.w(kotlin.time.b.p(60, bVar));
-        f5366d = (int) kotlin.time.a.w(kotlin.time.b.p(2, bVar));
+        f5439d = (int) kotlin.time.a.w(kotlin.time.b.p(2, bVar));
         unregisterClient = new IntRange(MlKitException.LOW_LIGHT_AUTO_EXPOSURE_COMPUTATION_FAILURE, 305);
     }
 
@@ -45,7 +45,7 @@ public final class AFf1ySDK {
             Intrinsics.d(uRLConnectionOpenConnection, "");
             HttpURLConnection httpURLConnection2 = (HttpURLConnection) uRLConnectionOpenConnection;
             httpURLConnection2.setInstanceFollowRedirects(false);
-            int i10 = f5366d;
+            int i10 = f5439d;
             httpURLConnection2.setReadTimeout(i10);
             httpURLConnection2.setConnectTimeout(i10);
             httpURLConnection2.setRequestProperty("User-agent", "Dalvik/2.1.0 (Linux; U; Android 6.0.1; Nexus 5 Build/M4B30Z)");

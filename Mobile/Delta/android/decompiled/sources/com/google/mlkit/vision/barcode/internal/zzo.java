@@ -103,7 +103,7 @@ final class zzo implements zzm {
         if (zzd(this.zze)) {
             this.zzc = true;
             try {
-                this.zzh = zze(DynamiteModule.f5863c, "com.google.mlkit.dynamite.barcode", "com.google.mlkit.vision.barcode.bundled.internal.ThickBarcodeScannerCreator");
+                this.zzh = zze(DynamiteModule.f5936c, "com.google.mlkit.dynamite.barcode", "com.google.mlkit.vision.barcode.bundled.internal.ThickBarcodeScannerCreator");
             } catch (RemoteException e10) {
                 throw new MlKitException("Failed to create thick barcode scanner.", 13, e10);
             } catch (DynamiteModule.a e11) {

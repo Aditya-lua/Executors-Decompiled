@@ -51,7 +51,7 @@ public abstract class p0 {
 
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f34986e = qt.b.a(a());
+        public static final /* synthetic */ ot.a f35484e = ot.b.a(a());
     }
 
     @NotNull

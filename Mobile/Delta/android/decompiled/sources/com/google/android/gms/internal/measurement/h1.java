@@ -10,11 +10,11 @@ import java.util.Set;
 public final class h1 implements SharedPreferences {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Map f6465a = new HashMap();
+    public final Map f6538a = new HashMap();
     public final Set b = new HashSet();
 
     public final /* synthetic */ Map a() {
-        return this.f6465a;
+        return this.f6538a;
     }
 
     public final /* synthetic */ Set b() {
@@ -22,13 +22,13 @@ public final class h1 implements SharedPreferences {
     }
 
     public final Object c(String str, Object obj) {
-        Object obj2 = this.f6465a.get(str);
+        Object obj2 = this.f6538a.get(str);
         return obj2 != null ? obj2 : obj;
     }
 
     @Override // android.content.SharedPreferences
     public final boolean contains(String str) {
-        return this.f6465a.containsKey(str);
+        return this.f6538a.containsKey(str);
     }
 
     @Override // android.content.SharedPreferences
@@ -38,7 +38,7 @@ public final class h1 implements SharedPreferences {
 
     @Override // android.content.SharedPreferences
     public final Map getAll() {
-        return this.f6465a;
+        return this.f6538a;
     }
 
     @Override // android.content.SharedPreferences

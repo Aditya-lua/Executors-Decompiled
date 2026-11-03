@@ -7,16 +7,16 @@ import java.util.Objects;
 public final class k6 implements Map.Entry, Comparable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Comparable f7124a;
+    public final Comparable f7198a;
     public Object b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final /* synthetic */ p6 f7125c;
+    public final /* synthetic */ p6 f7199c;
 
     public k6(p6 p6Var, Comparable comparable, Object obj) {
         Objects.requireNonNull(p6Var);
-        this.f7125c = p6Var;
-        this.f7124a = comparable;
+        this.f7199c = p6Var;
+        this.f7198a = comparable;
         this.b = obj;
     }
 
@@ -28,12 +28,12 @@ public final class k6 implements Map.Entry, Comparable {
     }
 
     public final Comparable a() {
-        return this.f7124a;
+        return this.f7198a;
     }
 
     @Override // java.lang.Comparable
     public final /* bridge */ /* synthetic */ int compareTo(Object obj) {
-        return this.f7124a.compareTo(((k6) obj).f7124a);
+        return this.f7198a.compareTo(((k6) obj).f7198a);
     }
 
     @Override // java.util.Map.Entry
@@ -45,12 +45,12 @@ public final class k6 implements Map.Entry, Comparable {
             return false;
         }
         Map.Entry entry = (Map.Entry) obj;
-        return b(this.f7124a, entry.getKey()) && b(this.b, entry.getValue());
+        return b(this.f7198a, entry.getKey()) && b(this.b, entry.getValue());
     }
 
     @Override // java.util.Map.Entry
     public final /* synthetic */ Object getKey() {
-        return this.f7124a;
+        return this.f7198a;
     }
 
     @Override // java.util.Map.Entry
@@ -60,7 +60,7 @@ public final class k6 implements Map.Entry, Comparable {
 
     @Override // java.util.Map.Entry
     public final int hashCode() {
-        Comparable comparable = this.f7124a;
+        Comparable comparable = this.f7198a;
         int iHashCode = comparable == null ? 0 : comparable.hashCode();
         Object obj = this.b;
         return iHashCode ^ (obj != null ? obj.hashCode() : 0);
@@ -68,13 +68,13 @@ public final class k6 implements Map.Entry, Comparable {
 
     @Override // java.util.Map.Entry
     public final Object setValue(Object obj) {
-        this.f7125c.p();
+        this.f7199c.p();
         Object obj2 = this.b;
         this.b = obj;
         return obj2;
     }
 
     public final String toString() {
-        return String.valueOf(this.f7124a) + "=" + String.valueOf(this.b);
+        return String.valueOf(this.f7198a) + "=" + String.valueOf(this.b);
     }
 }

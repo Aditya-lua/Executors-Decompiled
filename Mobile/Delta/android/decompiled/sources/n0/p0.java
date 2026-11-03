@@ -17,18 +17,18 @@ public interface p0 extends g0.l, g0.w2.c {
 
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final boolean f24801a;
+        public final boolean f25622a;
 
         a(boolean z10) {
-            this.f24801a = z10;
+            this.f25622a = z10;
         }
 
         public boolean b() {
-            return this.f24801a;
+            return this.f25622a;
         }
     }
 
-    me.x<Void> a();
+    ne.x<Void> a();
 
     a3<a> b();
 
@@ -44,7 +44,7 @@ public interface p0 extends g0.l, g0.w2.c {
 
     l0 e();
 
-    default h0 f() {
+    default h0 g() {
         return k0.a();
     }
 

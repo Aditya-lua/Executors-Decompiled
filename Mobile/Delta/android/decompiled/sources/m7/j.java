@@ -21,7 +21,7 @@ public class j extends p<l7.b, l7.b> {
     @Override // m7.o
     /* JADX INFO: renamed from: d, reason: merged with bridge method [inline-methods] */
     public i7.o a() {
-        return new i7.o(this.f24039a);
+        return new i7.o(this.f24689a);
     }
 
     @Override // m7.p

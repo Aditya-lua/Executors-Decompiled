@@ -46,7 +46,7 @@ public final class AFj1kSDK {
         Intrinsics.checkNotNullExpressionValue(bArrDigest, "");
         String str3 = "";
         for (byte b : bArrDigest) {
-            kotlin.jvm.internal.g0 g0Var = kotlin.jvm.internal.g0.f22559a;
+            kotlin.jvm.internal.g0 g0Var = kotlin.jvm.internal.g0.f23014a;
             String str4 = String.format(Locale.US, "%02x", Arrays.copyOf(new Object[]{Byte.valueOf(b)}, 1));
             Intrinsics.checkNotNullExpressionValue(str4, "");
             str3 = str3 + str4;

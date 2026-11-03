@@ -13,23 +13,23 @@ import java.util.regex.PatternSyntaxException;
 public abstract class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f25377a;
+    public final String f26198a;
     public final int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public Boolean f25378c;
+    public Boolean f26199c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public Boolean f25379d;
+    public Boolean f26200d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public Long f25380e;
+    public Long f26201e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public Long f25381f;
+    public Long f26202f;
 
     public c(String str, int i10) {
-        this.f25377a = str;
+        this.f26198a = str;
         this.b = i10;
     }
 

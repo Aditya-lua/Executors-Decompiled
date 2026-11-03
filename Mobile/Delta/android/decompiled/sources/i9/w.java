@@ -12,13 +12,13 @@ import java.util.Objects;
 public final class w {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Messenger f20444a;
+    public final Messenger f20560a;
     public final zzd b;
 
     public w(IBinder iBinder) throws RemoteException {
         String interfaceDescriptor = iBinder.getInterfaceDescriptor();
         if (Objects.equals(interfaceDescriptor, "android.os.IMessenger")) {
-            this.f20444a = new Messenger(iBinder);
+            this.f20560a = new Messenger(iBinder);
             this.b = null;
         } else {
             if (!Objects.equals(interfaceDescriptor, "com.google.android.gms.iid.IMessengerCompat")) {
@@ -26,12 +26,12 @@ public final class w {
                 throw new RemoteException();
             }
             this.b = new zzd(iBinder);
-            this.f20444a = null;
+            this.f20560a = null;
         }
     }
 
     public final void a(Message message) throws RemoteException {
-        Messenger messenger = this.f20444a;
+        Messenger messenger = this.f20560a;
         if (messenger != null) {
             messenger.send(message);
             return;

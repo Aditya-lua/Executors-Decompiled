@@ -12,14 +12,14 @@ public class j {
     public static final g b = new g("LibraryVersion", "");
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final j f25280c = new j();
+    public static final j f26101c = new j();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ConcurrentHashMap f25281a = new ConcurrentHashMap();
+    public final ConcurrentHashMap f26102a = new ConcurrentHashMap();
 
     @NonNull
     public static j a() {
-        return f25280c;
+        return f26101c;
     }
 
     @NonNull
@@ -28,7 +28,7 @@ public class j {
         String str2;
         InputStream resourceAsStream;
         m.g(str, "Please provide a valid libraryName");
-        ConcurrentHashMap concurrentHashMap = this.f25281a;
+        ConcurrentHashMap concurrentHashMap = this.f26102a;
         if (concurrentHashMap.containsKey(str)) {
             return (String) concurrentHashMap.get(str);
         }
@@ -87,7 +87,7 @@ public class j {
                 b.b("LibraryVersion", ".properties file is dropped during release process. Failure to read app version is expected during Google internal testing where locally-built libraries are used");
                 property = "UNKNOWN";
             }
-            this.f25281a.put(str, property);
+            this.f26102a.put(str, property);
             return property;
         } catch (Throwable th3) {
             th = th3;

@@ -6,13 +6,13 @@ import java.util.Locale;
 public final class ka extends ma {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final byte[] f6589d;
+    public final byte[] f6662d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final int f6590e;
+    public final int f6663e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public int f6591f;
+    public int f6664f;
 
     public ka(byte[] bArr, int i10, int i11) {
         super(null);
@@ -20,23 +20,23 @@ public final class ka extends ma {
         if (((length - i11) | i11) < 0) {
             throw new IllegalArgumentException(String.format(Locale.US, "Array range is invalid. Buffer.length=%d, offset=%d, length=%d", Integer.valueOf(length), 0, Integer.valueOf(i11)));
         }
-        this.f6589d = bArr;
-        this.f6591f = 0;
-        this.f6590e = i11;
+        this.f6662d = bArr;
+        this.f6664f = 0;
+        this.f6663e = i11;
     }
 
     @Override // com.google.android.gms.internal.measurement.ma
     public final void A(int i10) throws la {
-        int i11 = this.f6591f;
+        int i11 = this.f6664f;
         try {
-            byte[] bArr = this.f6589d;
+            byte[] bArr = this.f6662d;
             bArr[i11] = (byte) i10;
             bArr[i11 + 1] = (byte) (i10 >> 8);
             bArr[i11 + 2] = (byte) (i10 >> 16);
             bArr[i11 + 3] = (byte) (i10 >> 24);
-            this.f6591f = i11 + 4;
+            this.f6664f = i11 + 4;
         } catch (IndexOutOfBoundsException e10) {
-            throw new la(i11, this.f6590e, 4, e10);
+            throw new la(i11, this.f6663e, 4, e10);
         }
     }
 
@@ -44,20 +44,20 @@ public final class ka extends ma {
     public final void B(long j10) throws la {
         int i10;
         IndexOutOfBoundsException indexOutOfBoundsException;
-        boolean z10 = ma.f6624c;
-        int i11 = this.f6591f;
-        if (!z10 || this.f6590e - i11 < 10) {
+        boolean z10 = ma.f6697c;
+        int i11 = this.f6664f;
+        if (!z10 || this.f6663e - i11 < 10) {
             while ((j10 & (-128)) != 0) {
                 try {
                     int i12 = i11 + 1;
                     try {
-                        this.f6589d[i11] = (byte) (((int) j10) | 128);
+                        this.f6662d[i11] = (byte) (((int) j10) | 128);
                         j10 >>>= 7;
                         i11 = i12;
                     } catch (IndexOutOfBoundsException e10) {
                         indexOutOfBoundsException = e10;
                         i11 = i12;
-                        throw new la(i11, this.f6590e, 1, indexOutOfBoundsException);
+                        throw new la(i11, this.f6663e, 1, indexOutOfBoundsException);
                     }
                 } catch (IndexOutOfBoundsException e11) {
                     indexOutOfBoundsException = e11;
@@ -65,29 +65,29 @@ public final class ka extends ma {
             }
             i10 = i11 + 1;
             try {
-                this.f6589d[i11] = (byte) j10;
+                this.f6662d[i11] = (byte) j10;
             } catch (IndexOutOfBoundsException e12) {
                 indexOutOfBoundsException = e12;
                 i11 = i10;
-                throw new la(i11, this.f6590e, 1, indexOutOfBoundsException);
+                throw new la(i11, this.f6663e, 1, indexOutOfBoundsException);
             }
         } else {
             while ((j10 & (-128)) != 0) {
-                sd.u(this.f6589d, i11, (byte) (((int) j10) | 128));
+                sd.u(this.f6662d, i11, (byte) (((int) j10) | 128));
                 j10 >>>= 7;
                 i11++;
             }
             i10 = i11 + 1;
-            sd.u(this.f6589d, i11, (byte) j10);
+            sd.u(this.f6662d, i11, (byte) j10);
         }
-        this.f6591f = i10;
+        this.f6664f = i10;
     }
 
     @Override // com.google.android.gms.internal.measurement.ma
     public final void C(long j10) throws la {
-        int i10 = this.f6591f;
+        int i10 = this.f6664f;
         try {
-            byte[] bArr = this.f6589d;
+            byte[] bArr = this.f6662d;
             bArr[i10] = (byte) j10;
             bArr[i10 + 1] = (byte) (j10 >> 8);
             bArr[i10 + 2] = (byte) (j10 >> 16);
@@ -96,9 +96,9 @@ public final class ka extends ma {
             bArr[i10 + 5] = (byte) (j10 >> 40);
             bArr[i10 + 6] = (byte) (j10 >> 48);
             bArr[i10 + 7] = (byte) (j10 >> 56);
-            this.f6591f = i10 + 8;
+            this.f6664f = i10 + 8;
         } catch (IndexOutOfBoundsException e10) {
-            throw new la(i10, this.f6590e, 8, e10);
+            throw new la(i10, this.f6663e, 8, e10);
         }
     }
 
@@ -109,25 +109,25 @@ public final class ka extends ma {
 
     @Override // com.google.android.gms.internal.measurement.ma
     public final void E(String str) throws la {
-        int i10 = this.f6591f;
+        int i10 = this.f6664f;
         try {
             int iG = ma.G(str.length() * 3);
             int iG2 = ma.G(str.length());
             if (iG2 != iG) {
                 z(vd.b(str));
-                byte[] bArr = this.f6589d;
-                int i11 = this.f6591f;
-                this.f6591f = vd.c(str, bArr, i11, this.f6590e - i11);
+                byte[] bArr = this.f6662d;
+                int i11 = this.f6664f;
+                this.f6664f = vd.c(str, bArr, i11, this.f6663e - i11);
                 return;
             }
             int i12 = i10 + iG2;
-            this.f6591f = i12;
-            int iC = vd.c(str, this.f6589d, i12, this.f6590e - i12);
-            this.f6591f = i10;
+            this.f6664f = i12;
+            int iC = vd.c(str, this.f6662d, i12, this.f6663e - i12);
+            this.f6664f = i10;
             z((iC - i10) - iG2);
-            this.f6591f = iC;
+            this.f6664f = iC;
         } catch (ud e10) {
-            this.f6591f = i10;
+            this.f6664f = i10;
             f(str, e10);
         } catch (IndexOutOfBoundsException e11) {
             throw new la(e11);
@@ -136,15 +136,15 @@ public final class ka extends ma {
 
     @Override // com.google.android.gms.internal.measurement.ma
     public final int F() {
-        return this.f6590e - this.f6591f;
+        return this.f6663e - this.f6664f;
     }
 
     public final void H(byte[] bArr, int i10, int i11) {
         try {
-            System.arraycopy(bArr, 0, this.f6589d, this.f6591f, i11);
-            this.f6591f += i11;
+            System.arraycopy(bArr, 0, this.f6662d, this.f6664f, i11);
+            this.f6664f += i11;
         } catch (IndexOutOfBoundsException e10) {
-            throw new la(this.f6591f, this.f6590e, i11, e10);
+            throw new la(this.f6664f, this.f6663e, i11, e10);
         }
     }
 
@@ -217,7 +217,7 @@ public final class ka extends ma {
     public final void t(int i10, oc ocVar, zc zcVar) throws la {
         z((i10 << 3) | 2);
         z(((r9) ocVar).g(zcVar));
-        zcVar.e(ocVar, this.f6625a);
+        zcVar.e(ocVar, this.f6698a);
     }
 
     @Override // com.google.android.gms.internal.measurement.ma
@@ -245,16 +245,16 @@ public final class ka extends ma {
 
     @Override // com.google.android.gms.internal.measurement.ma
     public final void x(byte b) throws la {
-        int i10 = this.f6591f;
+        int i10 = this.f6664f;
         try {
             int i11 = i10 + 1;
             try {
-                this.f6589d[i10] = b;
-                this.f6591f = i11;
+                this.f6662d[i10] = b;
+                this.f6664f = i11;
             } catch (IndexOutOfBoundsException e10) {
                 e = e10;
                 i10 = i11;
-                throw new la(i10, this.f6590e, 1, e);
+                throw new la(i10, this.f6663e, 1, e);
             }
         } catch (IndexOutOfBoundsException e11) {
             e = e11;
@@ -274,26 +274,26 @@ public final class ka extends ma {
     public final void z(int i10) throws la {
         int i11;
         IndexOutOfBoundsException indexOutOfBoundsException;
-        int i12 = this.f6591f;
+        int i12 = this.f6664f;
         while ((i10 & (-128)) != 0) {
             try {
                 i11 = i12 + 1;
                 try {
-                    this.f6589d[i12] = (byte) (i10 | 128);
+                    this.f6662d[i12] = (byte) (i10 | 128);
                     i10 >>>= 7;
                     i12 = i11;
                 } catch (IndexOutOfBoundsException e10) {
                     indexOutOfBoundsException = e10;
                     i12 = i11;
-                    throw new la(i12, this.f6590e, 1, indexOutOfBoundsException);
+                    throw new la(i12, this.f6663e, 1, indexOutOfBoundsException);
                 }
             } catch (IndexOutOfBoundsException e11) {
                 indexOutOfBoundsException = e11;
-                throw new la(i12, this.f6590e, 1, indexOutOfBoundsException);
+                throw new la(i12, this.f6663e, 1, indexOutOfBoundsException);
             }
         }
         i11 = i12 + 1;
-        this.f6589d[i12] = (byte) i10;
-        this.f6591f = i11;
+        this.f6662d[i12] = (byte) i10;
+        this.f6664f = i11;
     }
 }

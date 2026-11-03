@@ -31,23 +31,23 @@ public final class i4 {
     public static List<n0.v3> c() {
         ArrayList arrayList = new ArrayList();
         SurfaceConfig.d dVar = SurfaceConfig.d.PRIV;
-        SurfaceConfig.b bVar = SurfaceConfig.b.f24913h;
+        SurfaceConfig.b bVar = SurfaceConfig.b.f25734h;
         arrayList.add(new n0.v3(SurfaceConfig.c(dVar, bVar)));
-        SurfaceConfig.b bVar2 = SurfaceConfig.b.f24910e;
+        SurfaceConfig.b bVar2 = SurfaceConfig.b.f25731e;
         arrayList.add(new n0.v3(SurfaceConfig.c(dVar, bVar2)));
-        SurfaceConfig.b bVar3 = SurfaceConfig.b.f24920o;
+        SurfaceConfig.b bVar3 = SurfaceConfig.b.f25741o;
         arrayList.addAll(a(bVar, bVar3));
-        SurfaceConfig.b bVar4 = SurfaceConfig.b.f24916k;
+        SurfaceConfig.b bVar4 = SurfaceConfig.b.f25737k;
         arrayList.addAll(a(bVar, bVar4));
-        arrayList.addAll(a(bVar, SurfaceConfig.b.f24915j));
+        arrayList.addAll(a(bVar, SurfaceConfig.b.f25736j));
         arrayList.addAll(a(bVar, bVar));
         arrayList.addAll(a(bVar2, bVar3));
         arrayList.addAll(a(bVar2, bVar4));
         arrayList.addAll(a(bVar2, bVar));
-        SurfaceConfig.b bVar5 = SurfaceConfig.b.f24909d;
-        SurfaceConfig.b bVar6 = SurfaceConfig.b.f24919n;
+        SurfaceConfig.b bVar5 = SurfaceConfig.b.f25730d;
+        SurfaceConfig.b bVar6 = SurfaceConfig.b.f25740n;
         arrayList.addAll(a(bVar5, bVar6));
-        arrayList.addAll(a(SurfaceConfig.b.f24912g, bVar6));
+        arrayList.addAll(a(SurfaceConfig.b.f25733g, bVar6));
         return arrayList;
     }
 
@@ -76,7 +76,7 @@ public final class i4 {
         ArrayList arrayList = new ArrayList();
         n0.v3 v3Var = new n0.v3();
         SurfaceConfig.d dVar = SurfaceConfig.d.PRIV;
-        SurfaceConfig.b bVar = SurfaceConfig.b.f24918m;
+        SurfaceConfig.b bVar = SurfaceConfig.b.f25739m;
         v3Var.a(SurfaceConfig.c(dVar, bVar));
         arrayList.add(v3Var);
         n0.v3 v3Var2 = new n0.v3();
@@ -84,7 +84,7 @@ public final class i4 {
         v3Var2.a(SurfaceConfig.c(dVar2, bVar));
         arrayList.add(v3Var2);
         n0.v3 v3Var3 = new n0.v3();
-        SurfaceConfig.b bVar2 = SurfaceConfig.b.f24911f;
+        SurfaceConfig.b bVar2 = SurfaceConfig.b.f25732f;
         v3Var3.a(SurfaceConfig.c(dVar, bVar2));
         SurfaceConfig.d dVar3 = SurfaceConfig.d.JPEG;
         v3Var3.a(SurfaceConfig.c(dVar3, bVar));
@@ -99,7 +99,7 @@ public final class i4 {
         arrayList.add(v3Var5);
         n0.v3 v3Var6 = new n0.v3();
         v3Var6.a(SurfaceConfig.c(dVar, bVar2));
-        SurfaceConfig.b bVar3 = SurfaceConfig.b.f24917l;
+        SurfaceConfig.b bVar3 = SurfaceConfig.b.f25738l;
         v3Var6.a(SurfaceConfig.c(dVar, bVar3));
         arrayList.add(v3Var6);
         n0.v3 v3Var7 = new n0.v3();
@@ -119,9 +119,9 @@ public final class i4 {
         ArrayList arrayList = new ArrayList();
         n0.v3 v3Var = new n0.v3();
         SurfaceConfig.d dVar = SurfaceConfig.d.PRIV;
-        SurfaceConfig.b bVar = SurfaceConfig.b.f24911f;
+        SurfaceConfig.b bVar = SurfaceConfig.b.f25732f;
         v3Var.a(SurfaceConfig.c(dVar, bVar));
-        SurfaceConfig.b bVar2 = SurfaceConfig.b.f24918m;
+        SurfaceConfig.b bVar2 = SurfaceConfig.b.f25739m;
         v3Var.a(SurfaceConfig.c(dVar, bVar2));
         arrayList.add(v3Var);
         n0.v3 v3Var2 = new n0.v3();
@@ -140,7 +140,7 @@ public final class i4 {
         ArrayList arrayList = new ArrayList();
         n0.v3 v3Var = new n0.v3();
         SurfaceConfig.d dVar = SurfaceConfig.d.YUV;
-        SurfaceConfig.b bVar = SurfaceConfig.b.f24914i;
+        SurfaceConfig.b bVar = SurfaceConfig.b.f25735i;
         v3Var.a(SurfaceConfig.c(dVar, bVar));
         arrayList.add(v3Var);
         n0.v3 v3Var2 = new n0.v3();
@@ -152,7 +152,7 @@ public final class i4 {
         v3Var3.a(SurfaceConfig.c(dVar3, bVar));
         arrayList.add(v3Var3);
         n0.v3 v3Var4 = new n0.v3();
-        SurfaceConfig.b bVar2 = SurfaceConfig.b.f24910e;
+        SurfaceConfig.b bVar2 = SurfaceConfig.b.f25731e;
         v3Var4.a(SurfaceConfig.c(dVar, bVar2));
         v3Var4.a(SurfaceConfig.c(dVar3, bVar));
         arrayList.add(v3Var4);
@@ -183,9 +183,9 @@ public final class i4 {
         ArrayList arrayList = new ArrayList();
         n0.v3 v3Var = new n0.v3();
         SurfaceConfig.d dVar = SurfaceConfig.d.PRIV;
-        SurfaceConfig.b bVar = SurfaceConfig.b.f24911f;
+        SurfaceConfig.b bVar = SurfaceConfig.b.f25732f;
         v3Var.a(SurfaceConfig.c(dVar, bVar));
-        SurfaceConfig.b bVar2 = SurfaceConfig.b.f24918m;
+        SurfaceConfig.b bVar2 = SurfaceConfig.b.f25739m;
         v3Var.a(SurfaceConfig.c(dVar, bVar2));
         arrayList.add(v3Var);
         n0.v3 v3Var2 = new n0.v3();
@@ -203,7 +203,7 @@ public final class i4 {
         v3Var4.a(SurfaceConfig.c(SurfaceConfig.d.JPEG, bVar2));
         arrayList.add(v3Var4);
         n0.v3 v3Var5 = new n0.v3();
-        SurfaceConfig.b bVar3 = SurfaceConfig.b.f24908c;
+        SurfaceConfig.b bVar3 = SurfaceConfig.b.f25729c;
         v3Var5.a(SurfaceConfig.c(dVar2, bVar3));
         v3Var5.a(SurfaceConfig.c(dVar, bVar));
         v3Var5.a(SurfaceConfig.c(dVar2, bVar2));
@@ -220,7 +220,7 @@ public final class i4 {
         ArrayList arrayList = new ArrayList();
         n0.v3 v3Var = new n0.v3();
         SurfaceConfig.d dVar = SurfaceConfig.d.PRIV;
-        SurfaceConfig.b bVar = SurfaceConfig.b.f24918m;
+        SurfaceConfig.b bVar = SurfaceConfig.b.f25739m;
         v3Var.a(SurfaceConfig.c(dVar, bVar));
         arrayList.add(v3Var);
         n0.v3 v3Var2 = new n0.v3();
@@ -232,7 +232,7 @@ public final class i4 {
         v3Var3.a(SurfaceConfig.c(dVar3, bVar));
         arrayList.add(v3Var3);
         n0.v3 v3Var4 = new n0.v3();
-        SurfaceConfig.b bVar2 = SurfaceConfig.b.f24911f;
+        SurfaceConfig.b bVar2 = SurfaceConfig.b.f25732f;
         v3Var4.a(SurfaceConfig.c(dVar, bVar2));
         v3Var4.a(SurfaceConfig.c(dVar2, bVar));
         arrayList.add(v3Var4);
@@ -260,12 +260,12 @@ public final class i4 {
         ArrayList arrayList = new ArrayList();
         n0.v3 v3Var = new n0.v3();
         SurfaceConfig.d dVar = SurfaceConfig.d.PRIV;
-        SurfaceConfig.b bVar = SurfaceConfig.b.f24911f;
+        SurfaceConfig.b bVar = SurfaceConfig.b.f25732f;
         v3Var.a(SurfaceConfig.c(dVar, bVar));
-        SurfaceConfig.b bVar2 = SurfaceConfig.b.f24908c;
+        SurfaceConfig.b bVar2 = SurfaceConfig.b.f25729c;
         v3Var.a(SurfaceConfig.c(dVar, bVar2));
         SurfaceConfig.d dVar2 = SurfaceConfig.d.YUV;
-        SurfaceConfig.b bVar3 = SurfaceConfig.b.f24918m;
+        SurfaceConfig.b bVar3 = SurfaceConfig.b.f25739m;
         v3Var.a(SurfaceConfig.c(dVar2, bVar3));
         SurfaceConfig.d dVar3 = SurfaceConfig.d.RAW;
         v3Var.a(SurfaceConfig.c(dVar3, bVar3));
@@ -283,9 +283,9 @@ public final class i4 {
         ArrayList arrayList = new ArrayList();
         n0.v3 v3Var = new n0.v3();
         SurfaceConfig.d dVar = SurfaceConfig.d.PRIV;
-        SurfaceConfig.b bVar = SurfaceConfig.b.f24911f;
+        SurfaceConfig.b bVar = SurfaceConfig.b.f25732f;
         v3Var.a(SurfaceConfig.c(dVar, bVar));
-        SurfaceConfig.b bVar2 = SurfaceConfig.b.f24917l;
+        SurfaceConfig.b bVar2 = SurfaceConfig.b.f25738l;
         v3Var.a(SurfaceConfig.c(dVar, bVar2));
         arrayList.add(v3Var);
         n0.v3 v3Var2 = new n0.v3();
@@ -311,7 +311,7 @@ public final class i4 {
         n0.v3 v3Var6 = new n0.v3();
         v3Var6.a(SurfaceConfig.c(dVar2, bVar));
         v3Var6.a(SurfaceConfig.c(dVar2, bVar));
-        v3Var6.a(SurfaceConfig.c(dVar3, SurfaceConfig.b.f24918m));
+        v3Var6.a(SurfaceConfig.c(dVar3, SurfaceConfig.b.f25739m));
         arrayList.add(v3Var6);
         return arrayList;
     }
@@ -320,7 +320,7 @@ public final class i4 {
         ArrayList arrayList = new ArrayList();
         n0.v3 v3Var = new n0.v3();
         SurfaceConfig.d dVar = SurfaceConfig.d.PRIV;
-        SurfaceConfig.b bVar = SurfaceConfig.b.f24914i;
+        SurfaceConfig.b bVar = SurfaceConfig.b.f25735i;
         v3Var.a(SurfaceConfig.c(dVar, bVar));
         arrayList.add(v3Var);
         n0.v3 v3Var2 = new n0.v3();
@@ -330,7 +330,7 @@ public final class i4 {
         n0.v3 v3Var3 = new n0.v3();
         v3Var3.a(SurfaceConfig.c(dVar, bVar));
         SurfaceConfig.d dVar3 = SurfaceConfig.d.JPEG;
-        SurfaceConfig.b bVar2 = SurfaceConfig.b.f24918m;
+        SurfaceConfig.b bVar2 = SurfaceConfig.b.f25739m;
         v3Var3.a(SurfaceConfig.c(dVar3, bVar2));
         arrayList.add(v3Var3);
         n0.v3 v3Var4 = new n0.v3();
@@ -346,7 +346,7 @@ public final class i4 {
         v3Var6.a(SurfaceConfig.c(dVar2, bVar2));
         arrayList.add(v3Var6);
         n0.v3 v3Var7 = new n0.v3();
-        SurfaceConfig.b bVar3 = SurfaceConfig.b.f24911f;
+        SurfaceConfig.b bVar3 = SurfaceConfig.b.f25732f;
         v3Var7.a(SurfaceConfig.c(dVar, bVar3));
         v3Var7.a(SurfaceConfig.c(dVar, bVar));
         arrayList.add(v3Var7);
@@ -369,12 +369,12 @@ public final class i4 {
         ArrayList arrayList = new ArrayList();
         n0.v3 v3Var = new n0.v3();
         SurfaceConfig.d dVar = SurfaceConfig.d.RAW;
-        SurfaceConfig.b bVar = SurfaceConfig.b.f24918m;
+        SurfaceConfig.b bVar = SurfaceConfig.b.f25739m;
         v3Var.a(SurfaceConfig.c(dVar, bVar));
         arrayList.add(v3Var);
         n0.v3 v3Var2 = new n0.v3();
         SurfaceConfig.d dVar2 = SurfaceConfig.d.PRIV;
-        SurfaceConfig.b bVar2 = SurfaceConfig.b.f24911f;
+        SurfaceConfig.b bVar2 = SurfaceConfig.b.f25732f;
         v3Var2.a(SurfaceConfig.c(dVar2, bVar2));
         v3Var2.a(SurfaceConfig.c(dVar, bVar));
         arrayList.add(v3Var2);
@@ -416,7 +416,7 @@ public final class i4 {
         ArrayList arrayList = new ArrayList();
         n0.v3 v3Var = new n0.v3();
         SurfaceConfig.d dVar = SurfaceConfig.d.PRIV;
-        SurfaceConfig.b bVar = SurfaceConfig.b.f24914i;
+        SurfaceConfig.b bVar = SurfaceConfig.b.f25735i;
         n0.u3 u3Var = n0.u3.PREVIEW_VIDEO_STILL;
         v3Var.a(SurfaceConfig.d(dVar, bVar, u3Var));
         arrayList.add(v3Var);
@@ -425,7 +425,7 @@ public final class i4 {
         v3Var2.a(SurfaceConfig.d(dVar2, bVar, u3Var));
         arrayList.add(v3Var2);
         n0.v3 v3Var3 = new n0.v3();
-        SurfaceConfig.b bVar2 = SurfaceConfig.b.f24917l;
+        SurfaceConfig.b bVar2 = SurfaceConfig.b.f25738l;
         n0.u3 u3Var2 = n0.u3.VIDEO_RECORD;
         v3Var3.a(SurfaceConfig.d(dVar, bVar2, u3Var2));
         arrayList.add(v3Var3);
@@ -434,7 +434,7 @@ public final class i4 {
         arrayList.add(v3Var4);
         n0.v3 v3Var5 = new n0.v3();
         SurfaceConfig.d dVar3 = SurfaceConfig.d.JPEG;
-        SurfaceConfig.b bVar3 = SurfaceConfig.b.f24918m;
+        SurfaceConfig.b bVar3 = SurfaceConfig.b.f25739m;
         n0.u3 u3Var3 = n0.u3.STILL_CAPTURE;
         v3Var5.a(SurfaceConfig.d(dVar3, bVar3, u3Var3));
         arrayList.add(v3Var5);
@@ -442,7 +442,7 @@ public final class i4 {
         v3Var6.a(SurfaceConfig.d(dVar2, bVar3, u3Var3));
         arrayList.add(v3Var6);
         n0.v3 v3Var7 = new n0.v3();
-        SurfaceConfig.b bVar4 = SurfaceConfig.b.f24911f;
+        SurfaceConfig.b bVar4 = SurfaceConfig.b.f25732f;
         n0.u3 u3Var4 = n0.u3.PREVIEW;
         v3Var7.a(SurfaceConfig.d(dVar, bVar4, u3Var4));
         v3Var7.a(SurfaceConfig.d(dVar3, bVar3, u3Var3));
@@ -485,11 +485,11 @@ public final class i4 {
         ArrayList arrayList = new ArrayList();
         n0.v3 v3Var = new n0.v3();
         SurfaceConfig.d dVar = SurfaceConfig.d.JPEG_R;
-        SurfaceConfig.b bVar = SurfaceConfig.b.f24918m;
+        SurfaceConfig.b bVar = SurfaceConfig.b.f25739m;
         v3Var.a(SurfaceConfig.c(dVar, bVar));
         arrayList.add(v3Var);
         n0.v3 v3Var2 = new n0.v3();
-        v3Var2.a(SurfaceConfig.c(SurfaceConfig.d.PRIV, SurfaceConfig.b.f24911f));
+        v3Var2.a(SurfaceConfig.c(SurfaceConfig.d.PRIV, SurfaceConfig.b.f25732f));
         v3Var2.a(SurfaceConfig.c(dVar, bVar));
         arrayList.add(v3Var2);
         return arrayList;
@@ -499,12 +499,12 @@ public final class i4 {
         ArrayList arrayList = new ArrayList();
         n0.v3 v3Var = new n0.v3();
         SurfaceConfig.d dVar = SurfaceConfig.d.YUV;
-        SurfaceConfig.b bVar = SurfaceConfig.b.f24921p;
+        SurfaceConfig.b bVar = SurfaceConfig.b.f25742p;
         v3Var.a(SurfaceConfig.c(dVar, bVar));
         SurfaceConfig.d dVar2 = SurfaceConfig.d.PRIV;
-        SurfaceConfig.b bVar2 = SurfaceConfig.b.f24911f;
+        SurfaceConfig.b bVar2 = SurfaceConfig.b.f25732f;
         v3Var.a(SurfaceConfig.c(dVar2, bVar2));
-        SurfaceConfig.b bVar3 = SurfaceConfig.b.f24917l;
+        SurfaceConfig.b bVar3 = SurfaceConfig.b.f25738l;
         v3Var.a(SurfaceConfig.c(dVar2, bVar3));
         arrayList.add(v3Var);
         n0.v3 v3Var2 = new n0.v3();
@@ -522,7 +522,7 @@ public final class i4 {
         n0.v3 v3Var4 = new n0.v3();
         v3Var4.a(SurfaceConfig.c(dVar, bVar));
         v3Var4.a(SurfaceConfig.c(dVar2, bVar2));
-        SurfaceConfig.b bVar4 = SurfaceConfig.b.f24918m;
+        SurfaceConfig.b bVar4 = SurfaceConfig.b.f25739m;
         v3Var4.a(SurfaceConfig.c(dVar3, bVar4));
         arrayList.add(v3Var4);
         n0.v3 v3Var5 = new n0.v3();

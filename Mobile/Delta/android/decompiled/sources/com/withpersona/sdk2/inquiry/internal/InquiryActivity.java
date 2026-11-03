@@ -21,42 +21,42 @@ import kotlin.jvm.internal.d0;
 import kotlin.text.StringsKt;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import zo.e0;
-import zo.x;
+import xo.e0;
+import xo.x;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000:\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0000\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0014¢\u0006\u0004\b\u0007\u0010\bJ\u0019\u0010\u000b\u001a\u00020\u00062\b\u0010\n\u001a\u0004\u0018\u00010\tH\u0014¢\u0006\u0004\b\u000b\u0010\fJ\u000f\u0010\r\u001a\u00020\u0006H\u0014¢\u0006\u0004\b\r\u0010\u0003J\u000f\u0010\u000e\u001a\u00020\u0006H\u0014¢\u0006\u0004\b\u000e\u0010\u0003J\u0019\u0010\u000f\u001a\u00020\u00062\b\u0010\n\u001a\u0004\u0018\u00010\tH\u0002¢\u0006\u0004\b\u000f\u0010\fJ\u000f\u0010\u0011\u001a\u00020\u0010H\u0002¢\u0006\u0004\b\u0011\u0010\u0012R\u001b\u0010\u0018\u001a\u00020\u00138BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\u0014\u0010\u0015\u001a\u0004\b\u0016\u0010\u0017R\u001b\u0010\u001d\u001a\u00020\u00198BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\u001a\u0010\u0015\u001a\u0004\b\u001b\u0010\u001c¨\u0006\u001e"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/InquiryActivity;", "Lj/b;", "<init>", "()V", "Landroid/content/Context;", "base", "", "attachBaseContext", "(Landroid/content/Context;)V", "Landroid/os/Bundle;", "savedInstanceState", "onCreate", "(Landroid/os/Bundle;)V", "onPause", "onResume", "J1", "", "L1", "()Z", "Lcom/withpersona/sdk2/inquiry/internal/h;", "E", "Ljt/h;", "H1", "()Lcom/withpersona/sdk2/inquiry/internal/h;", "args", "Lzo/x;", "F", "I1", "()Lzo/x;", "viewModel", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000:\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0000\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0014¢\u0006\u0004\b\u0007\u0010\bJ\u0019\u0010\u000b\u001a\u00020\u00062\b\u0010\n\u001a\u0004\u0018\u00010\tH\u0014¢\u0006\u0004\b\u000b\u0010\fJ\u000f\u0010\r\u001a\u00020\u0006H\u0014¢\u0006\u0004\b\r\u0010\u0003J\u000f\u0010\u000e\u001a\u00020\u0006H\u0014¢\u0006\u0004\b\u000e\u0010\u0003J\u0019\u0010\u000f\u001a\u00020\u00062\b\u0010\n\u001a\u0004\u0018\u00010\tH\u0002¢\u0006\u0004\b\u000f\u0010\fJ\u000f\u0010\u0011\u001a\u00020\u0010H\u0002¢\u0006\u0004\b\u0011\u0010\u0012R\u001b\u0010\u0018\u001a\u00020\u00138BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\u0014\u0010\u0015\u001a\u0004\b\u0016\u0010\u0017R\u001b\u0010\u001d\u001a\u00020\u00198BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\u001a\u0010\u0015\u001a\u0004\b\u001b\u0010\u001c¨\u0006\u001e"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/InquiryActivity;", "Lj/b;", "<init>", "()V", "Landroid/content/Context;", "base", "", "attachBaseContext", "(Landroid/content/Context;)V", "Landroid/os/Bundle;", "savedInstanceState", "onCreate", "(Landroid/os/Bundle;)V", "onPause", "onResume", "J1", "", "L1", "()Z", "Lcom/withpersona/sdk2/inquiry/internal/h;", "E", "Lgt/h;", "H1", "()Lcom/withpersona/sdk2/inquiry/internal/h;", "args", "Lxo/x;", "F", "I1", "()Lxo/x;", "viewModel", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class InquiryActivity extends j.b {
 
     /* JADX INFO: renamed from: E, reason: from kotlin metadata */
     @NotNull
-    public final jt.h args = jt.i.b(new Function0() { // from class: zo.l
+    public final gt.h args = gt.i.b(new Function0() { // from class: xo.l
         @Override // kotlin.jvm.functions.Function0
         public final Object invoke() {
-            return InquiryActivity.G1(this.f37935a);
+            return InquiryActivity.G1(this.f36058a);
         }
     });
 
     /* JADX INFO: renamed from: F, reason: from kotlin metadata */
     @NotNull
-    public final jt.h viewModel = new z0(d0.b(x.class), new b(this), new a(this), new c(null, this));
+    public final gt.h viewModel = new z0(d0.b(x.class), new b(this), new a(this), new c(null, this));
 
     @Metadata(d1 = {"\u0000\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u00020\u0002\"\n\b\u0000\u0010\u0001\u0018\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"Landroidx/lifecycle/x0;", "VM", "Landroidx/lifecycle/a1$c;", "b", "()Landroidx/lifecycle/a1$c;"}, k = 3, mv = {2, 2, 0})
     public static final class a extends kotlin.jvm.internal.m implements Function0<a1.c> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ e.p f11194i;
+        public final /* synthetic */ e.p f11275i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public a(e.p pVar) {
             super(0);
-            this.f11194i = pVar;
+            this.f11275i = pVar;
         }
 
         @Override // kotlin.jvm.functions.Function0
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final a1.c invoke() {
-            return this.f11194i.X();
+            return this.f11275i.W();
         }
     }
 
@@ -64,18 +64,18 @@ public final class InquiryActivity extends j.b {
     public static final class b extends kotlin.jvm.internal.m implements Function0<b1> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ e.p f11195i;
+        public final /* synthetic */ e.p f11276i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public b(e.p pVar) {
             super(0);
-            this.f11195i = pVar;
+            this.f11276i = pVar;
         }
 
         @Override // kotlin.jvm.functions.Function0
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final b1 invoke() {
-            return this.f11195i.w();
+            return this.f11276i.v();
         }
     }
 
@@ -83,24 +83,24 @@ public final class InquiryActivity extends j.b {
     public static final class c extends kotlin.jvm.internal.m implements Function0<CreationExtras> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ Function0 f11196i;
+        public final /* synthetic */ Function0 f11277i;
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public final /* synthetic */ e.p f11197j;
+        public final /* synthetic */ e.p f11278j;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public c(Function0 function0, e.p pVar) {
             super(0);
-            this.f11196i = function0;
-            this.f11197j = pVar;
+            this.f11277i = function0;
+            this.f11278j = pVar;
         }
 
         @Override // kotlin.jvm.functions.Function0
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final CreationExtras invoke() {
             CreationExtras creationExtras;
-            Function0 function0 = this.f11196i;
-            return (function0 == null || (creationExtras = (CreationExtras) function0.invoke()) == null) ? this.f11197j.Z() : creationExtras;
+            Function0 function0 = this.f11277i;
+            return (function0 == null || (creationExtras = (CreationExtras) function0.invoke()) == null) ? this.f11278j.Y() : creationExtras;
         }
     }
 
@@ -113,7 +113,7 @@ public final class InquiryActivity extends j.b {
         Intrinsics.checkNotNullParameter(bundle, "bundle");
         Intent intent = new Intent();
         intent.putExtras(bundle);
-        Unit unit = Unit.f22483a;
+        Unit unit = Unit.f22938a;
         inquiryActivity.setResult(-1, intent);
         inquiryActivity.finish();
     }
@@ -133,29 +133,29 @@ public final class InquiryActivity extends j.b {
             intent.putExtra("INQUIRY_ID_KEY", H1().m());
             String strW = H1().w();
             intent.putExtra("SESSION_TOKEN_KEY", strW != null ? h.INSTANCE.a(strW) : null);
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
             setResult(0, intent);
             Integer numC = H1().C();
             if (numC != null) {
                 setTheme(numC.intValue());
             }
-            bp.e eVarC = bp.e.c(LayoutInflater.from(this));
+            zo.e eVarC = zo.e.c(LayoutInflater.from(this));
             Intrinsics.checkNotNullExpressionValue(eVarC, "inflate(...)");
             setContentView(eVarC.getRoot());
             if (savedInstanceState == null) {
                 FragmentManager fragmentManagerL1 = l1();
                 Intrinsics.checkNotNullExpressionValue(fragmentManagerL1, "getSupportFragmentManager(...)");
                 androidx.fragment.app.h hVarR = fragmentManagerL1.r();
-                int i10 = e0.f37855f;
+                int i10 = e0.f35978f;
                 i iVar = new i();
                 iVar.O1(getIntent().getExtras());
                 hVarR.n(i10, iVar);
                 hVarR.g();
             }
-            l1().t1(H1().t(), this, new f0() { // from class: zo.m
+            l1().t1(H1().t(), this, new f0() { // from class: xo.m
                 @Override // e4.f0
                 public final void a(String str, Bundle bundle) {
-                    InquiryActivity.K1(this.f37938a, str, bundle);
+                    InquiryActivity.K1(this.f36061a, str, bundle);
                 }
             });
         }
@@ -172,7 +172,7 @@ public final class InquiryActivity extends j.b {
         ErrorCode errorCode = ErrorCode.SessionTokenError;
         Intrinsics.d(errorCode, "null cannot be cast to non-null type android.os.Parcelable");
         intent.putExtra("ERROR_CODE_KEY", (Parcelable) errorCode);
-        Unit unit = Unit.f22483a;
+        Unit unit = Unit.f22938a;
         setResult(0, intent);
         finish();
         return false;
@@ -182,7 +182,7 @@ public final class InquiryActivity extends j.b {
     public void attachBaseContext(@NotNull Context base) {
         Intrinsics.checkNotNullParameter(base, "base");
         super.attachBaseContext(base);
-        yq.b.a(this);
+        wq.b.a(this);
     }
 
     @Override // e4.q, e.p, k2.g, android.app.Activity
@@ -196,7 +196,7 @@ public final class InquiryActivity extends j.b {
                 throw e10;
             }
             if (H1().e()) {
-                cp.c.c(this).c(e10);
+                ap.c.c(this).c(e10);
             }
             Intent intent = new Intent();
             intent.putExtra("PERSONA_ACTIVITY_RESULT", "INQUIRY_ERROR");
@@ -204,7 +204,7 @@ public final class InquiryActivity extends j.b {
             ErrorCode errorCode = ErrorCode.ExceptionError;
             Intrinsics.d(errorCode, "null cannot be cast to non-null type android.os.Parcelable");
             intent.putExtra("ERROR_CODE_KEY", (Parcelable) errorCode);
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
             setResult(0, intent);
             finish();
         }
@@ -214,7 +214,7 @@ public final class InquiryActivity extends j.b {
     public void onPause() {
         super.onPause();
         if (isFinishing()) {
-            cp.c.e(this);
+            ap.c.e(this);
         }
     }
 

@@ -18,11 +18,11 @@ import kotlin.jvm.internal.Intrinsics;
 import m6.t;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import vu.b0;
 import x6.Options;
-import xu.b0;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0000\u0018\u00002\u00020\u0001:\u0001\tB\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bH\u0096@¢\u0006\u0004\b\t\u0010\nJ\u0017\u0010\f\u001a\u00020\u000b2\u0006\u0010\u0003\u001a\u00020\u0002H\u0001¢\u0006\u0004\b\f\u0010\rJ\u0017\u0010\u000e\u001a\u00020\u000b2\u0006\u0010\u0003\u001a\u00020\u0002H\u0001¢\u0006\u0004\b\u000e\u0010\rJ\u0011\u0010\u0010\u001a\u0004\u0018\u00010\u000fH\u0002¢\u0006\u0004\b\u0010\u0010\u0011R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\t\u0010\u0012R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\f\u0010\u0013¨\u0006\u0014"}, d2 = {"Lo6/f;", "Lo6/j;", "Lk6/h0;", "data", "Lx6/p;", "options", "<init>", "(Lk6/h0;Lx6/p;)V", "Lo6/i;", "a", "(Lnt/b;)Ljava/lang/Object;", "", "b", "(Lk6/h0;)Z", "c", "Landroid/os/Bundle;", "d", "()Landroid/os/Bundle;", "Lk6/h0;", "Lx6/p;", "coil-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0000\u0018\u00002\u00020\u0001:\u0001\tB\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bH\u0096@¢\u0006\u0004\b\t\u0010\nJ\u0017\u0010\f\u001a\u00020\u000b2\u0006\u0010\u0003\u001a\u00020\u0002H\u0001¢\u0006\u0004\b\f\u0010\rJ\u0017\u0010\u000e\u001a\u00020\u000b2\u0006\u0010\u0003\u001a\u00020\u0002H\u0001¢\u0006\u0004\b\u000e\u0010\rJ\u0011\u0010\u0010\u001a\u0004\u0018\u00010\u000fH\u0002¢\u0006\u0004\b\u0010\u0010\u0011R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\t\u0010\u0012R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\f\u0010\u0013¨\u0006\u0014"}, d2 = {"Lo6/f;", "Lo6/j;", "Lk6/h0;", "data", "Lx6/p;", "options", "<init>", "(Lk6/h0;Lx6/p;)V", "Lo6/i;", "a", "(Llt/b;)Ljava/lang/Object;", "", "b", "(Lk6/h0;)Z", "c", "Landroid/os/Bundle;", "d", "()Landroid/os/Bundle;", "Lk6/h0;", "Lx6/p;", "coil-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class f implements j {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -57,7 +57,7 @@ public final class f implements j {
 
     @Override // o6.j
     @Nullable
-    public Object a(@NotNull nt.b<? super i> bVar) throws FileNotFoundException {
+    public Object a(@NotNull lt.b<? super i> bVar) throws FileNotFoundException {
         AssetFileDescriptor assetFileDescriptorOpenAssetFileDescriptor;
         Uri uriA = j0.a(this.data);
         ContentResolver contentResolver = this.options.getContext().getContentResolver();
@@ -92,17 +92,17 @@ public final class f implements j {
 
     public final Bundle d() {
         y6.a aVarD = this.options.getSize().d();
-        y6.a.C0655a c0655a = aVarD instanceof y6.a.C0655a ? (y6.a.C0655a) aVarD : null;
-        if (c0655a == null) {
+        y6.a.C0670a c0670a = aVarD instanceof y6.a.C0670a ? (y6.a.C0670a) aVarD : null;
+        if (c0670a == null) {
             return null;
         }
-        int px = c0655a.getPx();
+        int px = c0670a.getPx();
         y6.a aVarC = this.options.getSize().c();
-        y6.a.C0655a c0655a2 = aVarC instanceof y6.a.C0655a ? (y6.a.C0655a) aVarC : null;
-        if (c0655a2 == null) {
+        y6.a.C0670a c0670a2 = aVarC instanceof y6.a.C0670a ? (y6.a.C0670a) aVarC : null;
+        if (c0670a2 == null) {
             return null;
         }
-        int px2 = c0655a2.getPx();
+        int px2 = c0670a2.getPx();
         Bundle bundle = new Bundle(1);
         bundle.putParcelable("android.content.extra.SIZE", new Point(px, px2));
         return bundle;

@@ -4,22 +4,22 @@ package eb;
 public final class i {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Object f15276a = new Object();
+    public static final Object f15890a = new Object();
     public static volatile h b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static volatile boolean f15277c;
+    public static volatile boolean f15891c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static volatile h f15278d;
+    public static volatile h f15892d;
 
     public static void a() {
-        f15277c = true;
+        f15891c = true;
     }
 
     public static void b() {
-        if (f15278d == null) {
-            f15278d = new h(null);
+        if (f15892d == null) {
+            f15892d = new h(null);
         }
     }
 
@@ -30,7 +30,7 @@ public final class i {
     }
 
     public static boolean d() {
-        synchronized (f15276a) {
+        synchronized (f15890a) {
         }
         return false;
     }

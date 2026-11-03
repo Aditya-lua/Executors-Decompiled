@@ -123,7 +123,7 @@ public final class CredentialProviderGetDigitalCredentialController extends Cred
     /* JADX INFO: Access modifiers changed from: private */
     public static final Unit invokePlayServices$lambda$0(CancellationSignal cancellationSignal, CredentialProviderGetDigitalCredentialController credentialProviderGetDigitalCredentialController, PendingGetCredentialHandle pendingGetCredentialHandle) {
         if (CredentialProviderPlayServicesImpl.INSTANCE.cancellationReviewer$credentials_play_services_auth_release(cancellationSignal)) {
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
         Intent intent = new Intent(credentialProviderGetDigitalCredentialController.context, (Class<?>) IdentityCredentialApiHiddenActivity.class);
         intent.setFlags(65536);
@@ -131,7 +131,7 @@ public final class CredentialProviderGetDigitalCredentialController extends Cred
         intent.putExtra(CredentialProviderBaseController.EXTRA_FLOW_PENDING_INTENT, pendingGetCredentialHandle.getPendingIntent());
         intent.putExtra(CredentialProviderBaseController.EXTRA_ERROR_NAME, CredentialProviderBaseController.GET_UNKNOWN);
         credentialProviderGetDigitalCredentialController.context.startActivity(intent);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -154,7 +154,7 @@ public final class CredentialProviderGetDigitalCredentialController extends Cred
                 pVar.a(nVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     @NotNull
@@ -233,7 +233,7 @@ public final class CredentialProviderGetDigitalCredentialController extends Cred
         }).e(new f() { // from class: androidx.credentials.playservices.controllers.identitycredentials.getdigitalcredential.c
             @Override // sb.f
             public final void onFailure(Exception exc) {
-                CredentialProviderGetDigitalCredentialController.invokePlayServices$lambda$4(this.f2100a, cancellationSignal, executor, callback, exc);
+                CredentialProviderGetDigitalCredentialController.invokePlayServices$lambda$4(this.f1945a, cancellationSignal, executor, callback, exc);
             }
         });
     }

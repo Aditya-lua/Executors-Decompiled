@@ -21,14 +21,14 @@ public final class AFe1nSDK extends AFe1kSDK<String> {
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
     @NotNull
-    private final String f5320v;
+    private final String f5393v;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public AFe1nSDK(@NotNull AFc1bSDK aFc1bSDK, @NotNull String str, @Nullable AFj1bSDK aFj1bSDK) {
         super(AFd1bSDK.IMPRESSIONS, new AFe1zSDK[]{AFd1bSDK.RC_CDN, AFd1bSDK.FETCH_ADVERTISING_ID}, aFc1bSDK, str);
         Intrinsics.checkNotNullParameter(aFc1bSDK, "");
         Intrinsics.checkNotNullParameter(str, "");
-        this.f5320v = str;
+        this.f5393v = str;
         this.force = aFj1bSDK;
         AFc1iSDK aFc1iSDKAFLogger = aFc1bSDK.AFLogger();
         Intrinsics.checkNotNullExpressionValue(aFc1iSDKAFLogger, "");
@@ -61,14 +61,14 @@ public final class AFe1nSDK extends AFe1kSDK<String> {
         }
         int statusCode = aFd1fSDK.getStatusCode();
         if (statusCode == 200) {
-            AFLogger.INSTANCE.i(LogTag.CROSS_PROMOTION, "Cross promotion impressions success: " + this.f5320v, false);
+            AFLogger.INSTANCE.i(LogTag.CROSS_PROMOTION, "Cross promotion impressions success: " + this.f5393v, false);
             return;
         }
         if (statusCode != 301 && statusCode != 302) {
-            AFLogger.INSTANCE.i(LogTag.CROSS_PROMOTION, "call to " + this.f5320v + " failed: " + aFd1fSDK.getStatusCode(), true);
+            AFLogger.INSTANCE.i(LogTag.CROSS_PROMOTION, "call to " + this.f5393v + " failed: " + aFd1fSDK.getStatusCode(), true);
             return;
         }
-        AFLogger.INSTANCE.i(LogTag.CROSS_PROMOTION, "Cross promotion redirection success: " + this.f5320v, false);
+        AFLogger.INSTANCE.i(LogTag.CROSS_PROMOTION, "Cross promotion redirection success: " + this.f5393v, false);
         String strAFKeystoreWrapper = aFd1fSDK.AFKeystoreWrapper("Location");
         if (strAFKeystoreWrapper == null || (aFj1bSDK = this.force) == null) {
             return;
@@ -94,9 +94,9 @@ public final class AFe1nSDK extends AFe1kSDK<String> {
         AFd1sSDK d10 = getD();
         String strAFLogger = this.afWarnLog.AFLogger();
         if (strAFLogger == null || strAFLogger.length() == 0) {
-            string = this.f5320v;
+            string = this.f5393v;
         } else {
-            string = Uri.parse(this.f5320v).buildUpon().appendQueryParameter("advertising_id", strAFLogger).build().toString();
+            string = Uri.parse(this.f5393v).buildUpon().appendQueryParameter("advertising_id", strAFLogger).build().toString();
             Intrinsics.checkNotNullExpressionValue(string, "");
         }
         AFd1pSDK<String> aFd1pSDKD = d10.d(string);

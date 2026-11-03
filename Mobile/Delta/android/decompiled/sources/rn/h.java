@@ -1,8 +1,20 @@
 package rn;
 
-import qn.s;
+import pn.i;
 
 /* JADX INFO: loaded from: classes3.dex */
 public interface h {
-    s a(s sVar);
+    boolean a();
+
+    i b();
+
+    int c();
+
+    int d();
+
+    int e();
+
+    d f();
+
+    int getIndex();
 }

@@ -39,7 +39,7 @@ public enum ErrorCode implements Parcelable {
     };
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f5959a;
+    public final int f6032a;
 
     public static class a extends Exception {
         public a(int i10) {
@@ -48,13 +48,13 @@ public enum ErrorCode implements Parcelable {
     }
 
     ErrorCode(int i10) {
-        this.f5959a = i10;
+        this.f6032a = i10;
     }
 
     @NonNull
     public static ErrorCode j(int i10) throws a {
         for (ErrorCode errorCode : values()) {
-            if (i10 == errorCode.f5959a) {
+            if (i10 == errorCode.f6032a) {
                 return errorCode;
             }
         }
@@ -62,7 +62,7 @@ public enum ErrorCode implements Parcelable {
     }
 
     public int a() {
-        return this.f5959a;
+        return this.f6032a;
     }
 
     @Override // android.os.Parcelable
@@ -72,6 +72,6 @@ public enum ErrorCode implements Parcelable {
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
-        parcel.writeInt(this.f5959a);
+        parcel.writeInt(this.f6032a);
     }
 }

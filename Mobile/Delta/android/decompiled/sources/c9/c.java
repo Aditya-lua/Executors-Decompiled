@@ -10,7 +10,7 @@ import k9.n;
 public class c implements n {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Status f4670a;
+    public final Status f4836a;
     public final GoogleSignInAccount b;
 
     public GoogleSignInAccount a() {
@@ -20,6 +20,6 @@ public class c implements n {
     @Override // k9.n
     @NonNull
     public Status m() {
-        return this.f4670a;
+        return this.f4836a;
     }
 }

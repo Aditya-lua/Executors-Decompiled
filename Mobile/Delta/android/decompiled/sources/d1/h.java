@@ -19,23 +19,23 @@ import java.util.Set;
 public final class h {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final Object f14295f = new Object();
+    public static final Object f14275f = new Object();
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static h f14296g;
+    public static h f14276g;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object f14297a = new Object();
+    public final Object f14277a = new Object();
     public final Map<a, c> b = new HashMap();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Map<b, Set<a>> f14298c = new HashMap();
+    public final Map<b, Set<a>> f14278c = new HashMap();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final ArrayDeque<s> f14299d = new ArrayDeque<>();
+    public final ArrayDeque<s> f14279d = new ArrayDeque<>();
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public h0.a f14300e;
+    public h0.a f14280e;
 
     public static abstract class a {
         public static a a(s sVar, g0.s sVar2) {
@@ -50,12 +50,12 @@ public final class h {
     public static class b implements r {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final h f14301a;
+        public final h f14281a;
         public final s b;
 
         public b(s sVar, h hVar) {
             this.b = sVar;
-            this.f14301a = hVar;
+            this.f14281a = hVar;
         }
 
         public s a() {
@@ -64,28 +64,28 @@ public final class h {
 
         @f0(l.a.ON_DESTROY)
         public void onDestroy(s sVar) {
-            this.f14301a.p(sVar);
+            this.f14281a.p(sVar);
         }
 
         @f0(l.a.ON_START)
         public void onStart(s sVar) {
-            this.f14301a.j(sVar);
+            this.f14281a.j(sVar);
         }
 
         @f0(l.a.ON_STOP)
         public void onStop(s sVar) {
-            this.f14301a.k(sVar);
+            this.f14281a.k(sVar);
         }
     }
 
     public static h c() {
         h hVar;
-        synchronized (f14295f) {
+        synchronized (f14275f) {
             try {
-                if (f14296g == null) {
-                    f14296g = new h();
+                if (f14276g == null) {
+                    f14276g = new h();
                 }
-                hVar = f14296g;
+                hVar = f14276g;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -94,17 +94,17 @@ public final class h {
     }
 
     public void a(c cVar, g2 g2Var, h0.a aVar) {
-        synchronized (this.f14297a) {
+        synchronized (this.f14277a) {
             try {
                 x2.g.a(!g2Var.k().isEmpty());
-                this.f14300e = aVar;
+                this.f14280e = aVar;
                 s sVarT = cVar.t();
                 b bVarE = e(sVarT);
                 if (bVarE == null) {
                     return;
                 }
-                Set<a> set = this.f14298c.get(bVarE);
-                h0.a aVar2 = this.f14300e;
+                Set<a> set = this.f14278c.get(bVarE);
+                h0.a aVar2 = this.f14280e;
                 if (aVar2 == null || aVar2.e() != 2) {
                     Iterator<a> it = set.iterator();
                     while (it.hasNext()) {
@@ -132,7 +132,7 @@ public final class h {
     }
 
     public c b(s sVar, s0.f fVar) {
-        synchronized (this.f14297a) {
+        synchronized (this.f14277a) {
             try {
                 x2.g.b(this.b.get(a.a(sVar, fVar.J())) == null, "LifecycleCamera already exists for the given LifecycleOwner and set of cameras");
                 c cVar = new c(sVar, fVar);
@@ -152,16 +152,16 @@ public final class h {
 
     public c d(s sVar, g0.s sVar2) {
         c cVar;
-        synchronized (this.f14297a) {
+        synchronized (this.f14277a) {
             cVar = this.b.get(a.a(sVar, sVar2));
         }
         return cVar;
     }
 
     public final b e(s sVar) {
-        synchronized (this.f14297a) {
+        synchronized (this.f14277a) {
             try {
-                for (b bVar : this.f14298c.keySet()) {
+                for (b bVar : this.f14278c.keySet()) {
                     if (sVar.equals(bVar.a())) {
                         return bVar;
                     }
@@ -175,20 +175,20 @@ public final class h {
 
     public Collection<c> f() {
         Collection<c> collectionUnmodifiableCollection;
-        synchronized (this.f14297a) {
+        synchronized (this.f14277a) {
             collectionUnmodifiableCollection = Collections.unmodifiableCollection(this.b.values());
         }
         return collectionUnmodifiableCollection;
     }
 
     public final boolean g(s sVar) {
-        synchronized (this.f14297a) {
+        synchronized (this.f14277a) {
             try {
                 b bVarE = e(sVar);
                 if (bVarE == null) {
                     return false;
                 }
-                Iterator<a> it = this.f14298c.get(bVarE).iterator();
+                Iterator<a> it = this.f14278c.get(bVarE).iterator();
                 while (it.hasNext()) {
                     if (!((c) x2.g.g(this.b.get(it.next()))).u().isEmpty()) {
                         return true;
@@ -202,17 +202,17 @@ public final class h {
     }
 
     public final void h(c cVar) {
-        synchronized (this.f14297a) {
+        synchronized (this.f14277a) {
             try {
                 s sVarT = cVar.t();
                 a aVarA = a.a(sVarT, cVar.s().J());
                 b bVarE = e(sVarT);
-                Set<a> hashSet = bVarE != null ? this.f14298c.get(bVarE) : new HashSet<>();
+                Set<a> hashSet = bVarE != null ? this.f14278c.get(bVarE) : new HashSet<>();
                 hashSet.add(aVarA);
                 this.b.put(aVarA, cVar);
                 if (bVarE == null) {
                     b bVar = new b(sVarT, this);
-                    this.f14298c.put(bVar, hashSet);
+                    this.f14278c.put(bVar, hashSet);
                     sVarT.a().a(bVar);
                 }
             } catch (Throwable th2) {
@@ -222,7 +222,7 @@ public final class h {
     }
 
     public void i(Set<a> set) {
-        synchronized (this.f14297a) {
+        synchronized (this.f14277a) {
             if (set == null) {
                 try {
                     set = this.b.keySet();
@@ -239,19 +239,19 @@ public final class h {
     }
 
     public void j(s sVar) {
-        synchronized (this.f14297a) {
+        synchronized (this.f14277a) {
             try {
                 if (g(sVar)) {
-                    if (this.f14299d.isEmpty()) {
-                        this.f14299d.push(sVar);
+                    if (this.f14279d.isEmpty()) {
+                        this.f14279d.push(sVar);
                     } else {
-                        h0.a aVar = this.f14300e;
+                        h0.a aVar = this.f14280e;
                         if (aVar == null || aVar.e() != 2) {
-                            s sVarPeek = this.f14299d.peek();
+                            s sVarPeek = this.f14279d.peek();
                             if (!sVar.equals(sVarPeek)) {
                                 l(sVarPeek);
-                                this.f14299d.remove(sVar);
-                                this.f14299d.push(sVar);
+                                this.f14279d.remove(sVar);
+                                this.f14279d.push(sVar);
                             }
                         }
                     }
@@ -264,12 +264,12 @@ public final class h {
     }
 
     public void k(s sVar) {
-        synchronized (this.f14297a) {
+        synchronized (this.f14277a) {
             try {
-                this.f14299d.remove(sVar);
+                this.f14279d.remove(sVar);
                 l(sVar);
-                if (!this.f14299d.isEmpty()) {
-                    q(this.f14299d.peek());
+                if (!this.f14279d.isEmpty()) {
+                    q(this.f14279d.peek());
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -278,13 +278,13 @@ public final class h {
     }
 
     public final void l(s sVar) {
-        synchronized (this.f14297a) {
+        synchronized (this.f14277a) {
             try {
                 b bVarE = e(sVar);
                 if (bVarE == null) {
                     return;
                 }
-                Iterator<a> it = this.f14298c.get(bVarE).iterator();
+                Iterator<a> it = this.f14278c.get(bVarE).iterator();
                 while (it.hasNext()) {
                     ((c) x2.g.g(this.b.get(it.next()))).x();
                 }
@@ -295,7 +295,7 @@ public final class h {
     }
 
     public void m(g2 g2Var, Set<a> set) {
-        synchronized (this.f14297a) {
+        synchronized (this.f14277a) {
             if (set == null) {
                 try {
                     set = this.b.keySet();
@@ -319,7 +319,7 @@ public final class h {
     }
 
     public void n(Set<a> set) {
-        synchronized (this.f14297a) {
+        synchronized (this.f14277a) {
             if (set == null) {
                 try {
                     set = this.b.keySet();
@@ -339,15 +339,15 @@ public final class h {
     }
 
     public final void o(c cVar) {
-        synchronized (this.f14297a) {
+        synchronized (this.f14277a) {
             try {
                 s sVarT = cVar.t();
                 a aVarA = a.a(sVarT, cVar.s().J());
                 this.b.remove(aVarA);
                 HashSet hashSet = new HashSet();
-                for (b bVar : this.f14298c.keySet()) {
+                for (b bVar : this.f14278c.keySet()) {
                     if (sVarT.equals(bVar.a())) {
-                        Set<a> set = this.f14298c.get(bVar);
+                        Set<a> set = this.f14278c.get(bVar);
                         set.remove(aVarA);
                         if (set.isEmpty()) {
                             hashSet.add(bVar.a());
@@ -365,18 +365,18 @@ public final class h {
     }
 
     public void p(s sVar) {
-        synchronized (this.f14297a) {
+        synchronized (this.f14277a) {
             try {
                 b bVarE = e(sVar);
                 if (bVarE == null) {
                     return;
                 }
                 k(sVar);
-                Iterator<a> it = this.f14298c.get(bVarE).iterator();
+                Iterator<a> it = this.f14278c.get(bVarE).iterator();
                 while (it.hasNext()) {
                     this.b.remove(it.next());
                 }
-                this.f14298c.remove(bVarE);
+                this.f14278c.remove(bVarE);
                 bVarE.a().a().d(bVarE);
             } catch (Throwable th2) {
                 throw th2;
@@ -385,9 +385,9 @@ public final class h {
     }
 
     public final void q(s sVar) {
-        synchronized (this.f14297a) {
+        synchronized (this.f14277a) {
             try {
-                Iterator<a> it = this.f14298c.get(e(sVar)).iterator();
+                Iterator<a> it = this.f14278c.get(e(sVar)).iterator();
                 while (it.hasNext()) {
                     c cVar = this.b.get(it.next());
                     if (!((c) x2.g.g(cVar)).u().isEmpty()) {

@@ -24,68 +24,68 @@ import n9.m;
 public final class DynamiteModule {
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static Boolean f5868h = null;
+    public static Boolean f5941h = null;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static String f5869i = null;
+    public static String f5942i = null;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static boolean f5870j = false;
+    public static boolean f5943j = false;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static int f5871k = -1;
+    public static int f5944k = -1;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static Boolean f5872l;
+    public static Boolean f5945l;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public static z9.h f5878r;
+    public static z9.h f5951r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public static z9.i f5879s;
+    public static z9.i f5952s;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f5880a;
+    public final Context f5953a;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public static final ThreadLocal f5873m = new ThreadLocal();
+    public static final ThreadLocal f5946m = new ThreadLocal();
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public static final ThreadLocal f5874n = new z9.f();
+    public static final ThreadLocal f5947n = new z9.f();
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public static final b.a f5875o = new com.google.android.gms.dynamite.b();
+    public static final b.a f5948o = new com.google.android.gms.dynamite.b();
 
     @NonNull
     public static final b b = new c();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NonNull
-    public static final b f5863c = new d();
+    public static final b f5936c = new d();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NonNull
-    public static final b f5864d = new e();
+    public static final b f5937d = new e();
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
     @NonNull
-    public static final b f5865e = new f();
+    public static final b f5938e = new f();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NonNull
-    public static final b f5866f = new g();
+    public static final b f5939f = new g();
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
     @NonNull
-    public static final b f5867g = new h();
+    public static final b f5940g = new h();
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
     @NonNull
-    public static final b f5876p = new i();
+    public static final b f5949p = new i();
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
     @NonNull
-    public static final b f5877q = new com.google.android.gms.dynamite.a();
+    public static final b f5950q = new com.google.android.gms.dynamite.a();
 
     @DynamiteApi
     public static class DynamiteLoaderClassLoader {
@@ -113,23 +113,23 @@ public final class DynamiteModule {
         }
 
         /* JADX INFO: renamed from: com.google.android.gms.dynamite.DynamiteModule$b$b, reason: collision with other inner class name */
-        public static class C0115b {
+        public static class C0119b {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public int f5881a = 0;
+            public int f5954a = 0;
             public int b = 0;
 
             /* JADX INFO: renamed from: c, reason: collision with root package name */
-            public int f5882c = 0;
+            public int f5955c = 0;
         }
 
         @NonNull
-        C0115b a(@NonNull Context context, @NonNull String str, @NonNull a aVar);
+        C0119b a(@NonNull Context context, @NonNull String str, @NonNull a aVar);
     }
 
     public DynamiteModule(Context context) {
         m.l(context);
-        this.f5880a = context;
+        this.f5953a = context;
     }
 
     public static int a(@NonNull Context context, @NonNull String str) {
@@ -230,18 +230,18 @@ public final class DynamiteModule {
         if (applicationContext == null) {
             throw new a("null application Context", null);
         }
-        ThreadLocal threadLocal = f5873m;
+        ThreadLocal threadLocal = f5946m;
         z9.g gVar3 = (z9.g) threadLocal.get();
         z9.g gVar4 = new z9.g(null);
         threadLocal.set(gVar4);
-        ThreadLocal threadLocal2 = f5874n;
+        ThreadLocal threadLocal2 = f5947n;
         Long l10 = (Long) threadLocal2.get();
         long jLongValue = l10.longValue();
         try {
             threadLocal2.set(Long.valueOf(SystemClock.uptimeMillis()));
-            b.C0115b c0115bA = bVar.a(context, str, f5875o);
-            int i12 = c0115bA.f5881a;
-            int i13 = c0115bA.b;
+            b.C0119b c0119bA = bVar.a(context, str, f5948o);
+            int i12 = c0119bA.f5954a;
+            int i13 = c0119bA.b;
             StringBuilder sb2 = new StringBuilder(String.valueOf(str).length() + 26 + String.valueOf(i12).length() + 19 + String.valueOf(str).length() + 1 + String.valueOf(i13).length());
             sb2.append("Considering local module ");
             sb2.append(str);
@@ -252,10 +252,10 @@ public final class DynamiteModule {
             sb2.append(":");
             sb2.append(i13);
             Log.i("DynamiteModule", sb2.toString());
-            int i14 = c0115bA.f5882c;
+            int i14 = c0119bA.f5955c;
             if (i14 != 0) {
                 if (i14 != -1) {
-                    if (i14 == 1 || c0115bA.b != 0) {
+                    if (i14 == 1 || c0119bA.b != 0) {
                         if (i14 == -1) {
                             DynamiteModule dynamiteModuleJ2 = j(applicationContext, str);
                             if (jLongValue == 0) {
@@ -263,7 +263,7 @@ public final class DynamiteModule {
                             } else {
                                 threadLocal2.set(l10);
                             }
-                            cursor2 = gVar4.f37348a;
+                            cursor2 = gVar4.f38043a;
                             if (cursor2 != null) {
                                 cursor2.close();
                             }
@@ -278,13 +278,13 @@ public final class DynamiteModule {
                         }
                         try {
                             try {
-                                i11 = c0115bA.b;
+                                i11 = c0119bA.b;
                                 try {
                                     synchronized (DynamiteModule.class) {
                                         if (g(context)) {
                                             throw new a("Remote loading disabled", null);
                                         }
-                                        bool = f5868h;
+                                        bool = f5941h;
                                     }
                                     if (bool != null) {
                                         throw new a("Failed to determine which loading route to use.", null);
@@ -297,20 +297,20 @@ public final class DynamiteModule {
                                         sb4.append(i11);
                                         Log.i("DynamiteModule", sb4.toString());
                                         synchronized (DynamiteModule.class) {
-                                            iVar = f5879s;
+                                            iVar = f5952s;
                                         }
                                         if (iVar != null) {
                                             throw new a("DynamiteLoaderV2 was not cached.", null);
                                         }
                                         gVar2 = (z9.g) threadLocal.get();
-                                        if (gVar2 != null || gVar2.f37348a == null) {
+                                        if (gVar2 != null || gVar2.f38043a == null) {
                                             throw new a("No result cursor", null);
                                         }
                                         Context applicationContext2 = context.getApplicationContext();
-                                        Cursor cursor3 = gVar2.f37348a;
+                                        Cursor cursor3 = gVar2.f38043a;
                                         y9.b.u2(null);
                                         synchronized (DynamiteModule.class) {
-                                            z10 = f5871k >= 2;
+                                            z10 = f5944k >= 2;
                                         }
                                         if (z10) {
                                             Log.v("DynamiteModule", "Dynamite loader version >= 2, using loadModule2NoCrashUtils");
@@ -341,7 +341,7 @@ public final class DynamiteModule {
                                             if (gVar != null) {
                                                 throw new a("No cached result cursor holder", null);
                                             }
-                                            aVarT2 = hVarL.z2(y9.b.u2(context), str, i11, y9.b.u2(gVar.f37348a));
+                                            aVarT2 = hVarL.z2(y9.b.u2(context), str, i11, y9.b.u2(gVar.f38043a));
                                         } else if (iX2 == 2) {
                                             Log.w("DynamiteModule", "IDynamite loader version = 2");
                                             aVarT2 = hVarL.v2(y9.b.u2(context), str, i11);
@@ -356,15 +356,15 @@ public final class DynamiteModule {
                                         dynamiteModuleJ = new DynamiteModule((Context) objT2);
                                     }
                                     if (jLongValue == 0) {
-                                        f5874n.remove();
+                                        f5947n.remove();
                                     } else {
-                                        f5874n.set(l10);
+                                        f5947n.set(l10);
                                     }
-                                    cursor = gVar4.f37348a;
+                                    cursor = gVar4.f38043a;
                                     if (cursor != null) {
                                         cursor.close();
                                     }
-                                    f5873m.set(gVar3);
+                                    f5946m.set(gVar3);
                                     return dynamiteModuleJ;
                                 } catch (RemoteException e10) {
                                     throw new a("Failed to load remote module.", e10, null);
@@ -382,8 +382,8 @@ public final class DynamiteModule {
                                 sb6.append("Failed to load remote module: ");
                                 sb6.append(message);
                                 Log.w("DynamiteModule", sb6.toString());
-                                i10 = c0115bA.f5881a;
-                                if (i10 != 0 || bVar.a(r8, str, new j(i10, 0)).f5882c != -1) {
+                                i10 = c0119bA.f5954a;
+                                if (i10 != 0 || bVar.a(r8, str, new j(i10, 0)).f5955c != -1) {
                                     throw new a("Remote load failed. No local fallback found.", e, null);
                                 }
                                 dynamiteModuleJ = j(applicationContext, str);
@@ -396,13 +396,13 @@ public final class DynamiteModule {
                             sb7.append("Failed to load remote module: ");
                             sb7.append(message2);
                             Log.w("DynamiteModule", sb7.toString());
-                            i10 = c0115bA.f5881a;
+                            i10 = c0119bA.f5954a;
                             if (i10 != 0) {
                             }
                             throw new a("Remote load failed. No local fallback found.", e, null);
                         }
                     }
-                } else if (c0115bA.f5881a != 0) {
+                } else if (c0119bA.f5954a != 0) {
                     i14 = -1;
                     if (i14 == 1) {
                     }
@@ -413,7 +413,7 @@ public final class DynamiteModule {
                         } else {
                             threadLocal2.set(l10);
                         }
-                        cursor2 = gVar4.f37348a;
+                        cursor2 = gVar4.f38043a;
                         if (cursor2 != null) {
                             cursor2.close();
                         }
@@ -426,12 +426,12 @@ public final class DynamiteModule {
                         sb8.append(i14);
                         throw new a(sb8.toString(), null);
                     }
-                    i11 = c0115bA.b;
+                    i11 = c0119bA.b;
                     synchronized (DynamiteModule.class) {
                         if (g(context)) {
                             throw new a("Remote loading disabled", null);
                         }
-                        bool = f5868h;
+                        bool = f5941h;
                         if (bool != null) {
                             throw new a("Failed to determine which loading route to use.", null);
                         }
@@ -443,7 +443,7 @@ public final class DynamiteModule {
                             sb9.append(i11);
                             Log.i("DynamiteModule", sb9.toString());
                             synchronized (DynamiteModule.class) {
-                                iVar = f5879s;
+                                iVar = f5952s;
                                 if (iVar != null) {
                                     throw new a("DynamiteLoaderV2 was not cached.", null);
                                 }
@@ -469,7 +469,7 @@ public final class DynamiteModule {
                             if (gVar != null) {
                                 throw new a("No cached result cursor holder", null);
                             }
-                            aVarT2 = hVarL.z2(y9.b.u2(context), str, i11, y9.b.u2(gVar.f37348a));
+                            aVarT2 = hVarL.z2(y9.b.u2(context), str, i11, y9.b.u2(gVar.f38043a));
                         } else if (iX2 == 2) {
                             Log.w("DynamiteModule", "IDynamite loader version = 2");
                             aVarT2 = hVarL.v2(y9.b.u2(context), str, i11);
@@ -483,21 +483,21 @@ public final class DynamiteModule {
                         }
                         dynamiteModuleJ = new DynamiteModule((Context) objT2);
                         if (jLongValue == 0) {
-                            f5874n.remove();
+                            f5947n.remove();
                         } else {
-                            f5874n.set(l10);
+                            f5947n.set(l10);
                         }
-                        cursor = gVar4.f37348a;
+                        cursor = gVar4.f38043a;
                         if (cursor != null) {
                             cursor.close();
                         }
-                        f5873m.set(gVar3);
+                        f5946m.set(gVar3);
                         return dynamiteModuleJ;
                     }
                 }
             }
-            int i15 = c0115bA.f5881a;
-            int i16 = c0115bA.b;
+            int i15 = c0119bA.f5954a;
+            int i16 = c0119bA.b;
             StringBuilder sb11 = new StringBuilder(String.valueOf(str).length() + 46 + String.valueOf(i15).length() + 23 + String.valueOf(i16).length() + 1);
             sb11.append("No acceptable module ");
             sb11.append(str);
@@ -509,15 +509,15 @@ public final class DynamiteModule {
             throw new a(sb11.toString(), null);
         } catch (Throwable th3) {
             if (jLongValue == 0) {
-                f5874n.remove();
+                f5947n.remove();
             } else {
-                f5874n.set(l10);
+                f5947n.set(l10);
             }
-            Cursor cursor4 = gVar4.f37348a;
+            Cursor cursor4 = gVar4.f38043a;
             if (cursor4 != null) {
                 cursor4.close();
             }
-            f5873m.set(gVar3);
+            f5946m.set(gVar3);
             throw th3;
         }
     }
@@ -530,7 +530,7 @@ public final class DynamiteModule {
         Cursor cursor;
         try {
             synchronized (DynamiteModule.class) {
-                Boolean bool = f5868h;
+                Boolean bool = f5941h;
                 Cursor cursor2 = null;
                 int iU2 = 0;
                 if (bool == null) {
@@ -551,7 +551,7 @@ public final class DynamiteModule {
                                     if (!g(context)) {
                                         return 0;
                                     }
-                                    if (f5870j) {
+                                    if (f5943j) {
                                         declaredField.set(null, ClassLoader.getSystemClassLoader());
                                         bool = Boolean.FALSE;
                                     } else {
@@ -562,24 +562,24 @@ public final class DynamiteModule {
                                         } else {
                                             try {
                                                 int iH = h(context, str, z10, true);
-                                                String str2 = f5869i;
+                                                String str2 = f5942i;
                                                 if (str2 != null && !str2.isEmpty()) {
                                                     ClassLoader classLoaderA = z9.d.a();
                                                     if (classLoaderA == null) {
                                                         if (Build.VERSION.SDK_INT >= 29) {
                                                             z9.b.a();
-                                                            String str3 = f5869i;
+                                                            String str3 = f5942i;
                                                             m.l(str3);
                                                             classLoaderA = z9.a.a(str3, ClassLoader.getSystemClassLoader());
                                                         } else {
-                                                            String str4 = f5869i;
+                                                            String str4 = f5942i;
                                                             m.l(str4);
                                                             classLoaderA = new z9.e(str4, ClassLoader.getSystemClassLoader());
                                                         }
                                                     }
                                                     k(classLoaderA);
                                                     declaredField.set(null, classLoaderA);
-                                                    f5868h = bool2;
+                                                    f5941h = bool2;
                                                     return iH;
                                                 }
                                                 return iH;
@@ -590,7 +590,7 @@ public final class DynamiteModule {
                                         }
                                     }
                                 }
-                                f5868h = bool;
+                                f5941h = bool;
                             } catch (Throwable th3) {
                                 throw th3;
                             }
@@ -622,9 +622,9 @@ public final class DynamiteModule {
                         try {
                             int iX2 = hVarL.x2();
                             if (iX2 >= 3) {
-                                z9.g gVar = (z9.g) f5873m.get();
-                                if (gVar == null || (cursor = gVar.f37348a) == null) {
-                                    Cursor cursor3 = (Cursor) y9.b.t2(hVarL.y2(y9.b.u2(context), str, z10, ((Long) f5874n.get()).longValue()));
+                                z9.g gVar = (z9.g) f5946m.get();
+                                if (gVar == null || (cursor = gVar.f38043a) == null) {
+                                    Cursor cursor3 = (Cursor) y9.b.t2(hVarL.y2(y9.b.u2(context), str, z10, ((Long) f5947n.get()).longValue()));
                                     if (cursor3 != null) {
                                         try {
                                             if (cursor3.moveToFirst()) {
@@ -694,19 +694,19 @@ public final class DynamiteModule {
     public static boolean g(Context context) {
         ApplicationInfo applicationInfo;
         Boolean bool = Boolean.TRUE;
-        if (bool.equals(null) || bool.equals(f5872l)) {
+        if (bool.equals(null) || bool.equals(f5945l)) {
             return true;
         }
         boolean z10 = false;
-        if (f5872l == null) {
+        if (f5945l == null) {
             ProviderInfo providerInfoResolveContentProvider = context.getPackageManager().resolveContentProvider("com.google.android.gms.chimera", true != u9.m.i() ? 0 : 268435456);
             if (j9.d.f().h(context, 10000000) == 0 && providerInfoResolveContentProvider != null && "com.google.android.gms".equals(providerInfoResolveContentProvider.packageName)) {
                 z10 = true;
             }
-            f5872l = Boolean.valueOf(z10);
+            f5945l = Boolean.valueOf(z10);
             if (z10 && (applicationInfo = providerInfoResolveContentProvider.applicationInfo) != null && (applicationInfo.flags & 129) == 0) {
                 Log.i("DynamiteModule", "Non-system-image GmsCore APK, forcing V1");
-                f5870j = true;
+                f5943j = true;
             }
         }
         if (!z10) {
@@ -733,7 +733,7 @@ public final class DynamiteModule {
         try {
             try {
                 boolean z12 = true;
-                Uri uriBuild = new Uri.Builder().scheme("content").authority("com.google.android.gms.chimera").path(true != z10 ? "api" : "api_force_staging").appendPath(str).appendQueryParameter("requestStartUptime", String.valueOf(((Long) f5874n.get()).longValue())).build();
+                Uri uriBuild = new Uri.Builder().scheme("content").authority("com.google.android.gms.chimera").path(true != z10 ? "api" : "api_force_staging").appendPath(str).appendQueryParameter("requestStartUptime", String.valueOf(((Long) f5947n.get()).longValue())).build();
                 ContentProviderClient contentProviderClientAcquireUnstableContentProviderClient = context.getContentResolver().acquireUnstableContentProviderClient(uriBuild);
                 boolean z13 = false;
                 if (contentProviderClientAcquireUnstableContentProviderClient == null) {
@@ -798,17 +798,17 @@ public final class DynamiteModule {
                             if (i12 > 0) {
                                 synchronized (DynamiteModule.class) {
                                     try {
-                                        f5869i = matrixCursor.getString(2);
+                                        f5942i = matrixCursor.getString(2);
                                         int columnIndex = matrixCursor.getColumnIndex("loaderVersion");
                                         if (columnIndex >= 0) {
-                                            f5871k = matrixCursor.getInt(columnIndex);
+                                            f5944k = matrixCursor.getInt(columnIndex);
                                         }
                                         int columnIndex2 = matrixCursor.getColumnIndex("disableStandaloneDynamiteLoader2");
                                         if (columnIndex2 >= 0) {
                                             if (matrixCursor.getInt(columnIndex2) == 0) {
                                                 z12 = false;
                                             }
-                                            f5870j = z12;
+                                            f5943j = z12;
                                             z13 = z12;
                                         }
                                     } catch (Throwable th6) {
@@ -871,11 +871,11 @@ public final class DynamiteModule {
     }
 
     public static boolean i(Cursor cursor) {
-        z9.g gVar = (z9.g) f5873m.get();
-        if (gVar == null || gVar.f37348a != null) {
+        z9.g gVar = (z9.g) f5946m.get();
+        if (gVar == null || gVar.f38043a != null) {
             return false;
         }
-        gVar.f37348a = cursor;
+        gVar.f38043a = cursor;
         return true;
     }
 
@@ -895,7 +895,7 @@ public final class DynamiteModule {
                 IInterface iInterfaceQueryLocalInterface = iBinder.queryLocalInterface("com.google.android.gms.dynamite.IDynamiteLoaderV2");
                 iVar = iInterfaceQueryLocalInterface instanceof z9.i ? (z9.i) iInterfaceQueryLocalInterface : new z9.i(iBinder);
             }
-            f5879s = iVar;
+            f5952s = iVar;
         } catch (ClassNotFoundException e10) {
             e = e10;
             throw new a("Failed to instantiate dynamite loader", e, bArr);
@@ -917,7 +917,7 @@ public final class DynamiteModule {
     public static z9.h l(Context context) {
         z9.h hVar;
         synchronized (DynamiteModule.class) {
-            z9.h hVar2 = f5878r;
+            z9.h hVar2 = f5951r;
             if (hVar2 != null) {
                 return hVar2;
             }
@@ -930,7 +930,7 @@ public final class DynamiteModule {
                     hVar = iInterfaceQueryLocalInterface instanceof z9.h ? (z9.h) iInterfaceQueryLocalInterface : new z9.h(iBinder);
                 }
                 if (hVar != null) {
-                    f5878r = hVar;
+                    f5951r = hVar;
                     return hVar;
                 }
             } catch (Exception e10) {
@@ -946,13 +946,13 @@ public final class DynamiteModule {
 
     @NonNull
     public Context b() {
-        return this.f5880a;
+        return this.f5953a;
     }
 
     @NonNull
     public IBinder d(@NonNull String str) throws a {
         try {
-            return (IBinder) this.f5880a.getClassLoader().loadClass(str).newInstance();
+            return (IBinder) this.f5953a.getClassLoader().loadClass(str).newInstance();
         } catch (ClassNotFoundException | IllegalAccessException | InstantiationException e10) {
             throw new a("Failed to instantiate module class: ".concat(String.valueOf(str)), e10, null);
         }

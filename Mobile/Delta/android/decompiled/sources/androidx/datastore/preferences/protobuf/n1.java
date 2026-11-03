@@ -4,7 +4,7 @@ package androidx.datastore.preferences.protobuf;
 public abstract class n1<T, B> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static volatile int f2247a = 100;
+    public static volatile int f2092a = 100;
 
     public abstract void a(B b, int i10, int i11);
 
@@ -62,7 +62,7 @@ public abstract class n1<T, B> {
         B bN = n();
         int iC = s1.c(iA2, 4);
         int i11 = i10 + 1;
-        if (i11 >= f2247a) {
+        if (i11 >= f2092a) {
             throw a0.i();
         }
         l(bN, f1Var, i11);

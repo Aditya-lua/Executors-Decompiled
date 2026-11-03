@@ -1,163 +1,154 @@
-# Delta 2.743.1136: recovered code and native-loader investigation
+# Delta 2.745.1142: recovered code and native-loader investigation
 
-The Java/Kotlin decompilation and native unpacking are complete for this pass.
-The APK establishes the loader path, and an exact public-source reference
-recovered from its native heap led to Delta's runtime UI source. That source
-resolves the client-side key flow: it uses PlatoBoost service ID 6 and performs
-server-side whitelist/redeem checks keyed by a SHA-256 hash of the executor
-HWID. There is no offline key-acceptance algorithm in the recovered UI source.
+This pass updates the Android recovery from `2.743.1136` to `2.745.1142`.
+The Java/Kotlin source representation, decoded resources, manifest, metadata,
+APK-to-APK diff, native registration map, offline traces, and selected Ghidra
+pseudocode were regenerated from the supplied APK. These are analysis outputs,
+not Delta's original source tree or a buildable Android project.
 
 ## Artifacts
 
-- `Delta-2.743.1136-decompiled.zip`: decompiled Java, decoded resources, manifest,
-  metadata, JNI registration map, and selected native pseudocode.
-- `decompiled/sources/`: 13,355 output files. JADX reported 113 errors;
-  152 Java files contain at least one `Method not decompiled` marker.
-  `decompilation-limitations.json` lists the affected files. These are recovered
-  representations, not the original source tree or a buildable project.
-- `resources/`: Apktool-decoded manifest/resources; original DEX and native
-  libraries are retained separately under `extracted/`.
-- `unpacked-analysis.so`: derived analysis-only ELF containing the decrypted
-  native code region. `unpacked-provenance.json` records hashes and exact patches.
-- `JNI_OnLoad.c`, `worker.c`: Ghidra pseudocode. Much of this code still dispatches
-  through obfuscated/virtualized logic; generated names are not original names.
-- `emulate_initializer.py`: bounded offline ARM64 analysis harness.
-- `*-emulation.json`: recorded imports, JNI calls and synthetic-environment
-  assumptions. These are custom emulator traces, not REA Evidence or device logs.
-- `package-evidence.json`, `loader-class-evidence.json`,
-  `jni-onload-evidence.json`, `worker-evidence.json`: REA Evidence.
-- `KEY-SYSTEM.md`: focused key request/decision map and source provenance.
-- `public-leads/Gloop/`: public runtime-source repository at pinned commit
-  `995434a098be7569426f8870dd742853dbaedddf`.
+- `decompiled/sources/`: 13,371 Java files produced by JADX 1.5.6. JADX
+  returned exit code 3 with 113 reported errors; 153 files contain a
+  `Method not decompiled` marker and are listed in
+  `decompilation-limitations.json`.
+- `resources/res/`: Apktool 3.0.3 decoded resources.
+- `AndroidManifest.xml` and `apk-metadata.json`: decoded component and signing
+  metadata. Cryptographic verification results come from `apksigner`.
+- `apk-diff-2.743.1136-to-2.745.1142.{txt,json}`: exact archive-member and
+  manifest comparison against the previous recovered build.
+- `JNI_OnLoad.c` and `worker.c`: selected Ghidra 12.1.4 pseudocode from the
+  current derived native image. Generated types, names, and control flow are
+  approximate.
+- `jni-registration-map.json`, `unpacked-provenance.json`, and
+  `evidence/2.745.1142/native-analysis.json`: current native addresses, hashes,
+  patch ranges, and trace conditions.
+- `evidence/2.743.1136/`: version-scoped REA evidence retained from the prior
+  build; it must not be interpreted as evidence for current addresses.
+- `KEY-SYSTEM.md`: key request/decision map and public-source provenance.
 
 ## Target identity
 
-Source URL: `https://delta.filenetwork.vip/file/Delta-2.743.1136.apk`
+Source URL: `https://delta.filenetwork.vip/file/Delta-2.745.1142.apk`
+
+APK size: 167,457,402 bytes
 
 APK SHA-256:
-`fdb861bea54e5dd3f6de0542369d5a45498d6e65c6dfaf7d60bf1bde5314cce0`
+`4d22c8be0f81251d18dc53a49b42a4c27ec64eb1ee039106a33913987027c3f2`
 
-Manifest identity: `com.roblox.client`, label `Roblox`, version `2.743.1136`,
-version code `18934`, minimum SDK 26, target SDK 35. The archive contains four
-DEX files and eight ARM64 native libraries. There is no x86 library variant.
+Manifest identity: `com.roblox.client`, label `Roblox`, version `2.745.1142`,
+version code `20136`, minimum SDK 26, target SDK 35. The archive contains four
+DEX files and eight ARM64 native libraries; no x86 library variant is present.
 
-Parsed v2/v3 certificate SHA-256:
+`apksigner` verifies the APK with v2 and v3. It reports v1, v3.1, v4, and
+SourceStamp as false. The single signer certificate has SHA-256
 `8d57bfbe5c24e25e74e1faca78ced13d314efcdba2a948f66ecf69d8d051876a`
+and subject `CN=Gloopiest Man,OU=Gloop,O=Gloop,L=Berlin,ST=Berlin,C=DE`.
+This establishes archive integrity under that certificate; it does not prove
+that the APK is an official Roblox release.
 
-Certificate subject: `CN=Gloopiest Man,OU=Gloop,O=Gloop,L=Berlin,ST=Berlin,C=DE`.
-This is parsed certificate metadata; it does not authenticate the publisher or
-establish equivalence to an official Roblox APK. No official baseline comparison
-or full cryptographic signature verification was performed.
+## Delta from 2.743.1136
 
-## Recovered integration path
+The previous APK has 2,380 members and the current APK has 2,383. Of those,
+2,152 members are byte-identical, 215 paths changed, 13 occur only in the old
+archive, and 16 occur only in the new archive.
 
-Both `com.roblox.client.startup.MainGameActivity.onCreate` and
-`com.roblox.client.ActivityNativeMain.onCreate` call
-`com.roblox.gloop.Loader.get().startLib(this)`.
+The manifest version changed from `2.743.1136` / `18934` to
+`2.745.1142` / `20136`, and
+`com.google.firebase.provider.FirebaseInitProvider` was added. Major changed
+members include `classes.dex`, `classes2.dex`, `classes3.dex`, `libroblox.so`,
+`libzstd-jni-1.5.7-6.so`, Roblox model files, shaders, sprite sheets, and
+Halloween 2026 resources. `classes4.dex` remained byte-identical.
 
-`Loader.startLib` stores the Activity, keeps its window awake, registers a
-layout-change listener, requests storage access, and calls `nativeStart`.
-The Loader also exposes Java helpers for opening a URL, reading/writing the
-clipboard, displaying toasts, and notifying native code of size changes.
-Android 11+ storage access uses the all-files-access Settings intent.
+The Delta-specific `com.roblox.gloop.Loader` source is byte-identical to the
+previous recovery (SHA-256
+`1b52da443298bc6dc2e67df8de0d73461d8e5e78d44f7e7c212daf995f2a0795`).
+Both integration call sites remain present:
 
-The Zstd loader in `com.github.luben.zstd.util.Native` selects
-`libzstd-jni-1.5.7-6.so`. `com.roblox.client.startup.a.r()` invokes `Native.load()`.
-That ELF has real Zstd JNI exports and additional obfuscated native machinery.
-Its imports include Android graphics APIs and dynamic-library loading.
+- `com.roblox.client.startup.MainGameActivity.onCreate`
+- `com.roblox.client.ActivityNativeMain.onCreate`
 
-The ELF's first initializer at RVA `0x1071068` decrypts the region beginning at
-`0x5a4b80`, length `0xac1c08`. The original section header labels that region
-`.data`; the recovered bytes contain ARM64 code. Offline emulation reached the
-initializer's return. Application constant initializers 4 through 700 also
-returned in the synthetic model; CPU/C++ locale initializers 1–3 were skipped
-for that constant-recovery pass.
+Each calls `Loader.get().startLib(this)`. The obfuscated Roblox classes around
+the integration were renamed/rebuilt, so paths outside the stable Delta loader
+must be treated as version-specific.
 
-The following registrations were observed while emulating `JNI_OnLoad`:
+## Native recovery
 
-| Java class / method | Native RVA |
+`libzstd-jni-1.5.7-6.so` changed from SHA-256
+`372b1d66047b259de4ffac7822a46491fe1b411a44b51011ba427718650b4bee`
+to
+`fc3fd01754502ee1f001e190e7af2b760378bd20493c370a70f395d67484b554`.
+It contains real Zstd JNI exports plus protected Delta code.
+
+The first initializer at ELF-relative address `0x105cac8` decrypts the large
+section beginning at `0x5a4b80`, length `0xaad668`. Bounded ARM64 emulation
+reached its return without forwarding host syscalls or network access. The
+derived analysis ELF has SHA-256
+`cf32c479f0580e245138d9e73b9c5eee024c6a4fd7a8dff74d0bef06d8b87244`.
+The reconstruction procedure was cross-checked against the previous ELF and
+reproduced its recorded derived hash exactly.
+
+The current init array contains 703 entries. Application initializers 4 through
+702 completed in the synthetic constant-recovery pass; CPU/C++ locale
+initializers 1 through 3 were intentionally skipped. `JNI_OnLoad` at
+`0x10521e8` returned JNI version `0x10006` and registered:
+
+| Java class / method | Native address |
 | --- | --- |
-| `com.roblox.gloop.Loader.nativeStart` | `0x601084` |
-| `com.roblox.gloop.Loader.nativeResize` | `0x6186a8` |
-| `com.roblox.engine.jni.NativeQuoteInterface.requestResponseContinue` | `0x5f8224` |
-| `gk.z.a(Context, String)` | `0x729fa0` |
+| `com.roblox.gloop.Loader.nativeStart` | `0x62851c` |
+| `com.roblox.gloop.Loader.nativeResize` | `0x61bb3c` |
+| `com.roblox.engine.jni.NativeQuoteInterface.requestResponseContinue` | `0x5f66c8` |
+| `ek.a0.a(Context, String)` | `0x72aa20` |
 
-`NativeQuoteInterface.requestResponse` contains Android Keystore attestation
-code. `gk.z` constructs Play Store/market links. Those are distinct observations;
-neither establishes Delta's key-system algorithm. `Loader.nativeContext` and
-`Loader.getDownloadUrl` exist as Java declarations, but were not in the observed
-JNI registration set. Their absence from this trace does not prove they can
-never be registered later.
+`ek.a0` is the current obfuscated name for the fourth registration; it was
+`gk.z` in the previous build. `Loader.nativeContext` and
+`Loader.getDownloadUrl` remain Java declarations but were not in the observed
+registration set. Their absence from this trace does not prove that later
+registration is impossible.
 
-Addresses above are ELF-relative virtual addresses at base zero. Ghidra's
-generated pseudocode in this run adds an image base of `0x100000`.
+The synthetic `nativeStart` trace at `0x62851c` returned zero and deferred
+threads at `0xa9ecf4` and `0x76f384`. `JNI_OnLoad` deferred a worker at
+`0x608450`; `worker.c` is the current pseudocode for that entry. Its separate
+offline trace stopped at an unimplemented syscall zero, as recorded by the
+model, so no behavior beyond that point is claimed. The startup trace again
+observed external-files/storage setup, Android ID and SDK reads, display
+properties, package version checks, `/proc/self/status`, and package probes for
+`com.keybypass.bypass`, `com.bypass`, and `com.bypasstools.app`. Emulator and
+instrumentation-related strings remain present. These are loader/anti-tamper
+observations, not the key decision itself.
 
-## Module and key-system leads
+## Runtime and key-system leads
 
-Recovered constructor-created strings include:
+Current constructor/startup memory again contains:
 
 - `https://gloop-cdn.pages.dev/versions/`
 - `https://gloop-cdn.pages.dev/modules/`
-- `GeebleMafia`, `aarch64`
 - `libloader.so`, `libgloopmodule.so`, `libgloop.so`, `libroblox.so`
-- `shared_cache`, `shared_cache.cache`, `shared_modules`,
-  `gloopversioncache.txt`
+- `shared_cache`, `shared_cache.cache`, `shared_modules`
+- the exact `Goober2112/Gloop/scripts/env-additions.lua` runtime source URL
 
-The URL strings are present in `constructors-heap.bin` at offsets `0x40` and
-`0x70`, with copies at later offsets. The first corresponding C++ string
-objects occupy mapped addresses `0x11b9778` and `0x11b9790`.
+The retained public source snapshot's `scripts/ui/Delta.lua` has SHA-256
+`5afd72bce87daea28beb0821a0584263f72492469649f04d5196ea752d8a5dc2`.
+It uses PlatoBoost service ID 6, the `api.platorelay.com` primary host and
+`api.platoboost.net` fallback, server whitelist/redeem endpoints, a keyless
+feature flag, and revalidation of the internal `delta_key` file. There is no
+offline key-acceptance algorithm in that source. `KEY-SYSTEM.md` records the
+request map and trust boundary; no live key was submitted and no bypass was
+attempted.
 
-The `nativeStart` trace reaches Android external-files/storage APIs,
-`Settings.Secure.getString` with `android_id`, system-property reads, SDK
-selection, and a window-service request. It also tests storage write access
-using `.__gloop_perm_check.tmp`. It probes for `com.keybypass.bypass`,
-`com.bypass`, and `com.bypasstools.app`, checks `/proc/self/status`, and
-tests emulator artifacts associated with MuMu, LDPlayer, and VirtualBox. These
-are loader/anti-tamper checks rather than the key decision itself.
-
-The emulated `nativeStart` path now returns successfully and creates background
-watchdog/wait routines. Those routines do not reach module acquisition in the
-synthetic process state. No module URL suffix or live module response was
-recovered, and the two CDN prefixes remain module-delivery leads rather than
-key-verification endpoints.
-
-The unpacked heap also contains an exact source URL for
-`Goober2112/Gloop/scripts/env-additions.lua`. The referenced public repository
-was cloned at commit `995434a098be7569426f8870dd742853dbaedddf`.
-`scripts/ui/Delta.lua` (SHA-256
-`5afd72bce87daea28beb0821a0584263f72492469649f04d5196ea752d8a5dc2`)
-implements the Android key flow:
-
-- primary `https://api.platorelay.com`, fallback
-  `https://api.platoboost.net`;
-- `POST /public/start` for a get-key URL;
-- `GET /public/whitelist/6?identifier=<sha256-hwid>&key=<key>`;
-- `POST /public/redeem/6` for submitted values beginning with `KEY_`;
-- `GET /public/flag/6?name=keyless`;
-- local persistence in the internal file `delta_key`, followed by server
-  revalidation on each startup.
-
-The client configures `useNonce = false` and `secret = "NONE"`, leaving its
-nonce/response-hash branches inactive. The active decision trusts HTTPS and the
-server JSON fields `success` and `data.valid`. This describes validation; no
-live key was submitted and no bypass was attempted.
-
-The public repository is a mutable runtime dependency. The APK proves the
-source relationship through the exact embedded URL, but `Delta.lua` was not
-itself recovered as an immutable APK asset. Generic OpenSSL `key`/`auth`
-strings remain unrelated library text and were excluded from the conclusion.
+The public repository is mutable and `Delta.lua` is not an immutable APK asset.
+The current APK confirms the exact runtime source relationship, while the
+retained source hash identifies the snapshot used for this analysis.
 
 ## Scope and limitations
 
-No APK was installed on a phone or emulator, and no live key-validation request
-was sent. Native code ran only inside the offline Unicorn model. Host syscalls
-and network connections were never forwarded. The model uses synthetic JNI
-objects, SDK 35, an all-zero Android ID, virtual paths, missing-file responses,
-and synthetic clock readings. Worker threads are deferred unless separately
-selected. ELF headers from the supplied `libroblox.so` are mapped for library
-lookup; execution of that library is blocked.
+The APK was not installed or launched. Native code ran only in a bounded
+Unicorn model with synthetic JNI objects, SDK 35, an all-zero Android ID,
+virtual files, deterministic time, and blocked host networking. Unimplemented
+operations stop the model. Deferred threads run only when explicitly selected.
 
-These choices allow inspection of selected paths but are not a faithful Android
-runtime and do not establish real-device behavior, full coverage, or successful
-authentication. Unimplemented operations stop emulation and are recorded.
-The original APK and extracted libraries are retained unchanged.
+Decompiler outputs are lossy representations of optimized and obfuscated
+bytecode/native code. JADX's recorded failures, Ghidra warnings, synthetic
+environment choices, and selected-path coverage prevent claims of exact source
+recovery or full real-device behavior. Original APK and native-library hashes
+are retained so every derived claim can be tied back to the supplied artifact.

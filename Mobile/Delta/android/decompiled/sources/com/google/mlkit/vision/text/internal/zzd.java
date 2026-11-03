@@ -105,7 +105,7 @@ final class zzd implements zzm {
             String strZza = z10 ? ((zzb) textRecognizerOptionsInterface).zza() : null;
             if (this.zzb.getIsThickClient()) {
                 Log.d("DecoupledTextDelegate", "Start loading thick OCR module.");
-                zzuvVarZzd = zzux.zza(DynamiteModule.e(this.zza, DynamiteModule.f5863c, this.zzb.getModuleId()).d("com.google.mlkit.vision.text.bundled.common.BundledTextRecognizerCreator")).zze(b.u2(this.zza), zzd(this.zzb, strZza));
+                zzuvVarZzd = zzux.zza(DynamiteModule.e(this.zza, DynamiteModule.f5936c, this.zzb.getModuleId()).d("com.google.mlkit.vision.text.bundled.common.BundledTextRecognizerCreator")).zze(b.u2(this.zza), zzd(this.zzb, strZza));
             } else if (z10) {
                 Log.d("DecoupledTextDelegate", "Start loading custom OCR module.");
                 zzuvVarZzd = zzut.zza(DynamiteModule.e(this.zza, DynamiteModule.b, this.zzb.getModuleId()).d("com.google.android.gms.vision.text.mlkit.CommonTextRecognizerCreator")).zzd(b.u2(this.zza), null, zzd(this.zzb, strZza));

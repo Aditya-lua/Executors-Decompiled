@@ -22,10 +22,10 @@ public final class zzak extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzak> CREATOR = new i();
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final byte[] f6041g = "WebAuthn PRF\u0000".getBytes(StandardCharsets.UTF_8);
+    public static final byte[] f6114g = "WebAuthn PRF\u0000".getBytes(StandardCharsets.UTF_8);
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final byte[][] f6042f;
+    public final byte[][] f6115f;
 
     public zzak(byte[][] bArr) {
         m.a(bArr != null);
@@ -39,7 +39,7 @@ public final class zzak extends AbstractSafeParcelable {
             m.a(length == 32 || length == 64);
             i10 += 2;
         }
-        this.f6042f = bArr;
+        this.f6115f = bArr;
     }
 
     public static zzak a(JSONObject jSONObject, boolean z10) throws JSONException {
@@ -85,7 +85,7 @@ public final class zzak extends AbstractSafeParcelable {
 
     public static byte[] w3(byte[] bArr) {
         k2 k2VarZza = m2.a().zza();
-        k2VarZza.a(f6041g);
+        k2VarZza.a(f6114g);
         k2VarZza.a(bArr);
         return k2VarZza.zzc().d();
     }
@@ -112,14 +112,14 @@ public final class zzak extends AbstractSafeParcelable {
 
     public final boolean equals(Object obj) {
         if (obj instanceof zzak) {
-            return Arrays.deepEquals(this.f6042f, ((zzak) obj).f6042f);
+            return Arrays.deepEquals(this.f6115f, ((zzak) obj).f6115f);
         }
         return false;
     }
 
     public final int hashCode() {
         int iC = 0;
-        for (byte[] bArr : this.f6042f) {
+        for (byte[] bArr : this.f6115f) {
             if (bArr != null) {
                 iC ^= k.c(bArr);
             }
@@ -133,7 +133,7 @@ public final class zzak extends AbstractSafeParcelable {
             int i10 = 0;
             JSONObject jSONObject2 = null;
             while (true) {
-                byte[][] bArr = this.f6042f;
+                byte[][] bArr = this.f6115f;
                 if (i10 >= bArr.length) {
                     return "PrfExtension{" + jSONObject.toString() + "}";
                 }
@@ -144,7 +144,7 @@ public final class zzak extends AbstractSafeParcelable {
                         jSONObject2 = new JSONObject();
                         jSONObject.put("evalByCredential", jSONObject2);
                     }
-                    jSONObject2.put(u9.c.b(this.f6042f[i10]), v3(this.f6042f[i10 + 1]));
+                    jSONObject2.put(u9.c.b(this.f6115f[i10]), v3(this.f6115f[i10 + 1]));
                 }
                 i10 += 2;
             }
@@ -155,7 +155,7 @@ public final class zzak extends AbstractSafeParcelable {
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i10) {
-        byte[][] bArr = this.f6042f;
+        byte[][] bArr = this.f6115f;
         int iA = o9.b.a(parcel);
         o9.b.h(parcel, 1, bArr, false);
         o9.b.b(parcel, iA);

@@ -18,7 +18,7 @@ public final class z {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final z f2863a = new z();
+    public static final z f2708a = new z();
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull
@@ -49,7 +49,7 @@ public final class z {
             return (p) object;
         }
         Class<?> cls = object.getClass();
-        z zVar = f2863a;
+        z zVar = f2708a;
         if (zVar.d(cls) != 2) {
             return new i0(object);
         }
@@ -62,7 +62,7 @@ public final class z {
         int size = list2.size();
         i[] iVarArr = new i[size];
         for (int i10 = 0; i10 < size; i10++) {
-            iVarArr[i10] = f2863a.a(list2.get(i10), object);
+            iVarArr[i10] = f2708a.a(list2.get(i10), object);
         }
         return new e(iVarArr);
     }
@@ -136,7 +136,7 @@ public final class z {
             classToAdapters.put(klass, o.d(constructorB));
             return 2;
         }
-        if (d.f2764c.d(klass)) {
+        if (d.f2609c.d(klass)) {
             return 1;
         }
         Class<? super Object> superclass = klass.getSuperclass();

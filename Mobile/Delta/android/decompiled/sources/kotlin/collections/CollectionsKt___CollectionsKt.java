@@ -32,15 +32,15 @@ public class CollectionsKt___CollectionsKt extends w {
     public static final class a<T> implements Sequence<T> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ Iterable f22484a;
+        public final /* synthetic */ Iterable f22939a;
 
         public a(Iterable iterable) {
-            this.f22484a = iterable;
+            this.f22939a = iterable;
         }
 
         @Override // kotlin.sequences.Sequence
         public Iterator<T> iterator() {
-            return this.f22484a.iterator();
+            return this.f22939a.iterator();
         }
     }
 
@@ -92,7 +92,7 @@ public class CollectionsKt___CollectionsKt extends w {
     @NotNull
     public static <T extends Comparable<? super T>> List<T> E0(@NotNull Iterable<? extends T> iterable) {
         Intrinsics.checkNotNullParameter(iterable, "<this>");
-        return F0(iterable, mt.a.c());
+        return F0(iterable, kt.a.c());
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -326,7 +326,7 @@ public class CollectionsKt___CollectionsKt extends w {
         Iterator<? extends R> it2 = other.iterator();
         ArrayList arrayList = new ArrayList(Math.min(q.u(iterable, 10), q.u(other, 10)));
         while (it.hasNext() && it2.hasNext()) {
-            arrayList.add(jt.s.a(it.next(), it2.next()));
+            arrayList.add(gt.s.a(it.next(), it2.next()));
         }
         return arrayList;
     }

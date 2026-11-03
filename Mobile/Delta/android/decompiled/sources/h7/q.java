@@ -10,20 +10,20 @@ import java.util.List;
 public class q implements s, i7.a.b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final h0 f18696a;
+    public final h0 f19183a;
     public final String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final i7.a<Float, Float> f18697c;
+    public final i7.a<Float, Float> f19184c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public n7.o f18698d;
+    public n7.o f19185d;
 
     public q(h0 h0Var, o7.b bVar, n7.n nVar) {
-        this.f18696a = h0Var;
+        this.f19183a = h0Var;
         this.b = nVar.c();
         i7.a<Float, Float> aVarA = nVar.b().a();
-        this.f18697c = aVarA;
+        this.f19184c = aVarA;
         bVar.j(aVarA);
         aVarA.a(this);
     }
@@ -39,7 +39,7 @@ public class q implements s, i7.a.b {
 
     @Override // i7.a.b
     public void a() {
-        this.f18696a.invalidateSelf();
+        this.f19183a.invalidateSelf();
     }
 
     @Override // h7.c
@@ -52,7 +52,7 @@ public class q implements s, i7.a.b {
         boolean z10;
         List<l7.a> listA = oVar.a();
         if (listA.size() > 2) {
-            float fFloatValue = this.f18697c.h().floatValue();
+            float fFloatValue = this.f19184c.h().floatValue();
             if (fFloatValue != 0.0f) {
                 n7.o oVarJ = j(oVar);
                 oVarJ.f(oVar.b().x, oVar.b().y);
@@ -130,11 +130,11 @@ public class q implements s, i7.a.b {
 
     @Override // h7.s
     public void g(i7.a.b bVar) {
-        this.f18697c.a(bVar);
+        this.f19184c.a(bVar);
     }
 
     public i7.a<Float, Float> h() {
-        return this.f18697c;
+        return this.f19184c;
     }
 
     @NonNull
@@ -150,15 +150,15 @@ public class q implements s, i7.a.b {
             i10 = (((size != 0 || zD) ? aVar2.b() : pointFC).equals(pointFC) && aVar.a().equals(pointFC) && !(!oVar.d() && (size == 0 || size == listA.size() - 1))) ? i10 + 2 : i10 + 1;
             size--;
         }
-        n7.o oVar2 = this.f18698d;
+        n7.o oVar2 = this.f19185d;
         if (oVar2 == null || oVar2.a().size() != i10) {
             ArrayList arrayList = new ArrayList(i10);
             for (int i11 = 0; i11 < i10; i11++) {
                 arrayList.add(new l7.a());
             }
-            this.f18698d = new n7.o(new PointF(0.0f, 0.0f), false, arrayList);
+            this.f19185d = new n7.o(new PointF(0.0f, 0.0f), false, arrayList);
         }
-        this.f18698d.e(zD);
-        return this.f18698d;
+        this.f19185d.e(zD);
+        return this.f19185d;
     }
 }

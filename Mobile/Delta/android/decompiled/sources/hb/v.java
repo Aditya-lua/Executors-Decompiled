@@ -12,15 +12,15 @@ import lb.a0;
 public class v extends n9.e<f> {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final String f18763e;
+    public final String f19250e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final r<f> f18764f;
+    public final r<f> f19251f;
 
     public v(Context context, Looper looper, k9.f.a aVar, k9.f.b bVar, String str, n9.d dVar) {
         super(context, looper, 23, dVar, aVar, bVar);
-        this.f18764f = new u(this);
-        this.f18763e = str;
+        this.f19251f = new u(this);
+        this.f19250e = str;
     }
 
     @Override // n9.c
@@ -34,13 +34,13 @@ public class v extends n9.e<f> {
 
     @Override // n9.c
     public final Feature[] getApiFeatures() {
-        return a0.f23117f;
+        return a0.f23511f;
     }
 
     @Override // n9.c
     public final Bundle getGetServiceRequestExtraArgs() {
         Bundle bundle = new Bundle();
-        bundle.putString("client_name", this.f18763e);
+        bundle.putString("client_name", this.f19250e);
         return bundle;
     }
 

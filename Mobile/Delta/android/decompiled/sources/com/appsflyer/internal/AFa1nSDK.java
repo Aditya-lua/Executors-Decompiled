@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class AFa1nSDK extends HashMap<Integer, String> {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    private static AFa1nSDK f5222d;
+    private static AFa1nSDK f5295d;
     private final Object AFKeystoreWrapper = new Object();
 
     private AFa1nSDK() {
@@ -14,13 +14,13 @@ public class AFa1nSDK extends HashMap<Integer, String> {
 
     public static synchronized AFa1nSDK afErrorLog() {
         try {
-            if (f5222d == null) {
-                f5222d = new AFa1nSDK();
+            if (f5295d == null) {
+                f5295d = new AFa1nSDK();
             }
         } catch (Throwable th2) {
             throw th2;
         }
-        return f5222d;
+        return f5295d;
     }
 
     @Override // java.util.HashMap, java.util.AbstractMap, java.util.Map

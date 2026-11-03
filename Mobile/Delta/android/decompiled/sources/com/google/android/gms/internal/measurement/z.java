@@ -5,14 +5,14 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class z extends x {
     public z() {
-        this.f6892a.add(n0.EQUALS);
-        this.f6892a.add(n0.GREATER_THAN);
-        this.f6892a.add(n0.GREATER_THAN_EQUALS);
-        this.f6892a.add(n0.IDENTITY_EQUALS);
-        this.f6892a.add(n0.IDENTITY_NOT_EQUALS);
-        this.f6892a.add(n0.LESS_THAN);
-        this.f6892a.add(n0.LESS_THAN_EQUALS);
-        this.f6892a.add(n0.NOT_EQUALS);
+        this.f6966a.add(n0.EQUALS);
+        this.f6966a.add(n0.GREATER_THAN);
+        this.f6966a.add(n0.GREATER_THAN_EQUALS);
+        this.f6966a.add(n0.IDENTITY_EQUALS);
+        this.f6966a.add(n0.IDENTITY_NOT_EQUALS);
+        this.f6966a.add(n0.LESS_THAN);
+        this.f6966a.add(n0.LESS_THAN_EQUALS);
+        this.f6966a.add(n0.NOT_EQUALS);
     }
 
     public static boolean c(q qVar, q qVar2) {
@@ -116,6 +116,6 @@ public final class z extends x {
         } else {
             zD = d(qVarA, qVarA2);
         }
-        return zD ? q.Eo : q.Fo;
+        return zD ? q.Do : q.Eo;
     }
 }

@@ -6,15 +6,15 @@ import kotlin.jvm.internal.Intrinsics;
 public class u<T> implements x2.a<T> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public x2.a<T> f34650a;
+    public x2.a<T> f35148a;
 
     public void a(x2.a<T> aVar) {
-        this.f34650a = aVar;
+        this.f35148a = aVar;
     }
 
     @Override // x2.a
     public void accept(T t8) {
-        Intrinsics.d(this.f34650a, "Listener is not set.");
-        this.f34650a.accept(t8);
+        Intrinsics.d(this.f35148a, "Listener is not set.");
+        this.f35148a.accept(t8);
     }
 }

@@ -35,7 +35,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0003\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0018\n\u0002\b\u0005*\u00019\b\u0000\u0018\u0000 <2 \u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\u00060\u0001:\u0001<B\u000f\u0012\u0006\u0010\b\u001a\u00020\u0007¢\u0006\u0004\b\t\u0010\nJ\u0017\u0010\r\u001a\u00020\u00062\u0006\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\r\u0010\u000eJ\u0017\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u000f\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u0011\u0010\u0012J=\u0010\u001b\u001a\u00020\u001a2\u0006\u0010\u0013\u001a\u00020\u00022\u0012\u0010\u0015\u001a\u000e\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\u00060\u00142\u0006\u0010\u0017\u001a\u00020\u00162\b\u0010\u0019\u001a\u0004\u0018\u00010\u0018H\u0016¢\u0006\u0004\b\u001b\u0010\u001cJ)\u0010$\u001a\u00020\u001a2\u0006\u0010\u001e\u001a\u00020\u001d2\u0006\u0010\u001f\u001a\u00020\u001d2\b\u0010!\u001a\u0004\u0018\u00010 H\u0000¢\u0006\u0004\b\"\u0010#J\u0017\u0010%\u001a\u00020\u00032\u0006\u0010\u0013\u001a\u00020\u0002H\u0017¢\u0006\u0004\b%\u0010&J\u0017\u0010'\u001a\u00020\u00052\u0006\u0010\u000f\u001a\u00020\u0004H\u0017¢\u0006\u0004\b'\u0010(R\u0014\u0010\b\u001a\u00020\u00078\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\b\u0010)R4\u0010\u0015\u001a\u000e\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\u00060\u00148\u0006@\u0006X\u0087.¢\u0006\u0018\n\u0004\b\u0015\u0010*\u0012\u0004\b/\u00100\u001a\u0004\b+\u0010,\"\u0004\b-\u0010.R(\u0010\u0017\u001a\u00020\u00168\u0006@\u0006X\u0087.¢\u0006\u0018\n\u0004\b\u0017\u00101\u0012\u0004\b6\u00100\u001a\u0004\b2\u00103\"\u0004\b4\u00105R\u001e\u0010\u0019\u001a\u0004\u0018\u00010\u00188\u0002@\u0002X\u0083\u000e¢\u0006\f\n\u0004\b\u0019\u00107\u0012\u0004\b8\u00100R\u0014\u0010:\u001a\u0002098\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b:\u0010;¨\u0006="}, d2 = {"Landroidx/credentials/playservices/controllers/identityauth/beginsignin/CredentialProviderBeginSignInController;", "Landroidx/credentials/playservices/controllers/CredentialProviderController;", "Le3/k0;", "Lcom/google/android/gms/auth/api/identity/BeginSignInRequest;", "Lcom/google/android/gms/auth/api/identity/SignInCredential;", "Le3/l0;", "Lf3/n;", "Landroid/content/Context;", "context", "<init>", "(Landroid/content/Context;)V", "", "e", "fromGmsException", "(Ljava/lang/Throwable;)Lf3/n;", Payload.RESPONSE, "Lgc/d;", "createGoogleIdCredential", "(Lcom/google/android/gms/auth/api/identity/SignInCredential;)Lgc/d;", "request", "Le3/p;", "callback", "Ljava/util/concurrent/Executor;", "executor", "Landroid/os/CancellationSignal;", "cancellationSignal", "", "invokePlayServices", "(Le3/k0;Le3/p;Ljava/util/concurrent/Executor;Landroid/os/CancellationSignal;)V", "", "uniqueRequestCode", "resultCode", "Landroid/content/Intent;", "data", "handleResponse$credentials_play_services_auth_release", "(IILandroid/content/Intent;)V", "handleResponse", "convertRequestToPlayServices", "(Le3/k0;)Lcom/google/android/gms/auth/api/identity/BeginSignInRequest;", "convertResponseToCredentialManager", "(Lcom/google/android/gms/auth/api/identity/SignInCredential;)Le3/l0;", "Landroid/content/Context;", "Le3/p;", "getCallback", "()Le3/p;", "setCallback", "(Le3/p;)V", "getCallback$annotations", "()V", "Ljava/util/concurrent/Executor;", "getExecutor", "()Ljava/util/concurrent/Executor;", "setExecutor", "(Ljava/util/concurrent/Executor;)V", "getExecutor$annotations", "Landroid/os/CancellationSignal;", "getCancellationSignal$annotations", "androidx/credentials/playservices/controllers/identityauth/beginsignin/CredentialProviderBeginSignInController$resultReceiver$1", "resultReceiver", "Landroidx/credentials/playservices/controllers/identityauth/beginsignin/CredentialProviderBeginSignInController$resultReceiver$1;", "Companion", "credentials-play-services-auth_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+@Metadata(d1 = {"\u0000e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0003\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0018\n\u0002\b\u0005*\u00019\b\u0000\u0018\u0000 <2 \u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\u00060\u0001:\u0001<B\u000f\u0012\u0006\u0010\b\u001a\u00020\u0007¢\u0006\u0004\b\t\u0010\nJ\u0017\u0010\r\u001a\u00020\u00062\u0006\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\r\u0010\u000eJ\u0017\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u000f\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u0011\u0010\u0012J=\u0010\u001b\u001a\u00020\u001a2\u0006\u0010\u0013\u001a\u00020\u00022\u0012\u0010\u0015\u001a\u000e\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\u00060\u00142\u0006\u0010\u0017\u001a\u00020\u00162\b\u0010\u0019\u001a\u0004\u0018\u00010\u0018H\u0016¢\u0006\u0004\b\u001b\u0010\u001cJ)\u0010$\u001a\u00020\u001a2\u0006\u0010\u001e\u001a\u00020\u001d2\u0006\u0010\u001f\u001a\u00020\u001d2\b\u0010!\u001a\u0004\u0018\u00010 H\u0000¢\u0006\u0004\b\"\u0010#J\u0017\u0010%\u001a\u00020\u00032\u0006\u0010\u0013\u001a\u00020\u0002H\u0017¢\u0006\u0004\b%\u0010&J\u0017\u0010'\u001a\u00020\u00052\u0006\u0010\u000f\u001a\u00020\u0004H\u0017¢\u0006\u0004\b'\u0010(R\u0014\u0010\b\u001a\u00020\u00078\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\b\u0010)R4\u0010\u0015\u001a\u000e\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\u00060\u00148\u0006@\u0006X\u0087.¢\u0006\u0018\n\u0004\b\u0015\u0010*\u0012\u0004\b/\u00100\u001a\u0004\b+\u0010,\"\u0004\b-\u0010.R(\u0010\u0017\u001a\u00020\u00168\u0006@\u0006X\u0087.¢\u0006\u0018\n\u0004\b\u0017\u00101\u0012\u0004\b6\u00100\u001a\u0004\b2\u00103\"\u0004\b4\u00105R\u001e\u0010\u0019\u001a\u0004\u0018\u00010\u00188\u0002@\u0002X\u0083\u000e¢\u0006\f\n\u0004\b\u0019\u00107\u0012\u0004\b8\u00100R\u0014\u0010:\u001a\u0002098\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b:\u0010;¨\u0006="}, d2 = {"Landroidx/credentials/playservices/controllers/identityauth/beginsignin/CredentialProviderBeginSignInController;", "Landroidx/credentials/playservices/controllers/CredentialProviderController;", "Le3/k0;", "Lcom/google/android/gms/auth/api/identity/BeginSignInRequest;", "Lcom/google/android/gms/auth/api/identity/SignInCredential;", "Le3/l0;", "Lf3/n;", "Landroid/content/Context;", "context", "<init>", "(Landroid/content/Context;)V", "", "e", "fromGmsException", "(Ljava/lang/Throwable;)Lf3/n;", Payload.RESPONSE, "Lhc/d;", "createGoogleIdCredential", "(Lcom/google/android/gms/auth/api/identity/SignInCredential;)Lhc/d;", "request", "Le3/p;", "callback", "Ljava/util/concurrent/Executor;", "executor", "Landroid/os/CancellationSignal;", "cancellationSignal", "", "invokePlayServices", "(Le3/k0;Le3/p;Ljava/util/concurrent/Executor;Landroid/os/CancellationSignal;)V", "", "uniqueRequestCode", "resultCode", "Landroid/content/Intent;", "data", "handleResponse$credentials_play_services_auth_release", "(IILandroid/content/Intent;)V", "handleResponse", "convertRequestToPlayServices", "(Le3/k0;)Lcom/google/android/gms/auth/api/identity/BeginSignInRequest;", "convertResponseToCredentialManager", "(Lcom/google/android/gms/auth/api/identity/SignInCredential;)Le3/l0;", "Landroid/content/Context;", "Le3/p;", "getCallback", "()Le3/p;", "setCallback", "(Le3/p;)V", "getCallback$annotations", "()V", "Ljava/util/concurrent/Executor;", "getExecutor", "()Ljava/util/concurrent/Executor;", "setExecutor", "(Ljava/util/concurrent/Executor;)V", "getExecutor$annotations", "Landroid/os/CancellationSignal;", "getCancellationSignal$annotations", "androidx/credentials/playservices/controllers/identityauth/beginsignin/CredentialProviderBeginSignInController$resultReceiver$1", "resultReceiver", "Landroidx/credentials/playservices/controllers/identityauth/beginsignin/CredentialProviderBeginSignInController$resultReceiver$1;", "Companion", "credentials-play-services-auth_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
 public final class CredentialProviderBeginSignInController extends CredentialProviderController<k0, BeginSignInRequest, SignInCredential, l0, f3.n> {
 
     /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
@@ -91,14 +91,14 @@ public final class CredentialProviderBeginSignInController extends CredentialPro
         };
     }
 
-    private final gc.d createGoogleIdCredential(SignInCredential response) {
-        gc.d.a aVar = new gc.d.a();
+    private final hc.d createGoogleIdCredential(SignInCredential response) {
+        hc.d.a aVar = new hc.d.a();
         String strY3 = response.y3();
         Intrinsics.checkNotNullExpressionValue(strY3, "getId(...)");
-        gc.d.a aVarE = aVar.e(strY3);
+        hc.d.a aVarE = aVar.e(strY3);
         String strX3 = response.x3();
         Intrinsics.checkNotNull(strX3);
-        gc.d.a aVarF = aVarE.f(strX3);
+        hc.d.a aVarF = aVarE.f(strX3);
         if (response.l() != null) {
             aVarF.b(response.l());
         }
@@ -141,10 +141,10 @@ public final class CredentialProviderBeginSignInController extends CredentialPro
         credentialProviderBeginSignInController.getExecutor().execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identityauth.beginsignin.r
             @Override // java.lang.Runnable
             public final void run() {
-                CredentialProviderBeginSignInController.handleResponse$lambda$11$lambda$10(this.f1976a, l0Var);
+                CredentialProviderBeginSignInController.handleResponse$lambda$11$lambda$10(this.f1821a, l0Var);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -157,16 +157,16 @@ public final class CredentialProviderBeginSignInController extends CredentialPro
         credentialProviderBeginSignInController.getExecutor().execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identityauth.beginsignin.h
             @Override // java.lang.Runnable
             public final void run() {
-                CredentialProviderBeginSignInController.handleResponse$lambda$13$lambda$12(this.f1966a, c0Var);
+                CredentialProviderBeginSignInController.handleResponse$lambda$13$lambda$12(this.f1811a, c0Var);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* JADX WARN: Multi-variable type inference failed */
     public static final void handleResponse$lambda$13$lambda$12(CredentialProviderBeginSignInController credentialProviderBeginSignInController, c0 c0Var) {
-        credentialProviderBeginSignInController.getCallback().a(c0Var.f22552a);
+        credentialProviderBeginSignInController.getCallback().a(c0Var.f23007a);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -174,10 +174,10 @@ public final class CredentialProviderBeginSignInController extends CredentialPro
         credentialProviderBeginSignInController.getExecutor().execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identityauth.beginsignin.n
             @Override // java.lang.Runnable
             public final void run() {
-                CredentialProviderBeginSignInController.handleResponse$lambda$15$lambda$14(this.f1972a, nVar);
+                CredentialProviderBeginSignInController.handleResponse$lambda$15$lambda$14(this.f1817a, nVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -190,10 +190,10 @@ public final class CredentialProviderBeginSignInController extends CredentialPro
         credentialProviderBeginSignInController.getExecutor().execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identityauth.beginsignin.p
             @Override // java.lang.Runnable
             public final void run() {
-                CredentialProviderBeginSignInController.handleResponse$lambda$17$lambda$16(this.f1974a, qVar);
+                CredentialProviderBeginSignInController.handleResponse$lambda$17$lambda$16(this.f1819a, qVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -205,7 +205,7 @@ public final class CredentialProviderBeginSignInController extends CredentialPro
     public static final Unit handleResponse$lambda$7(CancellationSignal cancellationSignal, Function0 f10) {
         Intrinsics.checkNotNullParameter(f10, "f");
         CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(cancellationSignal, f10);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -214,10 +214,10 @@ public final class CredentialProviderBeginSignInController extends CredentialPro
         credentialProviderBeginSignInController.getExecutor().execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identityauth.beginsignin.o
             @Override // java.lang.Runnable
             public final void run() {
-                CredentialProviderBeginSignInController.handleResponse$lambda$9$lambda$8(this.f1973a, e10);
+                CredentialProviderBeginSignInController.handleResponse$lambda$9$lambda$8(this.f1818a, e10);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -228,7 +228,7 @@ public final class CredentialProviderBeginSignInController extends CredentialPro
     /* JADX INFO: Access modifiers changed from: private */
     public static final Unit invokePlayServices$lambda$2(CancellationSignal cancellationSignal, final CredentialProviderBeginSignInController credentialProviderBeginSignInController, BeginSignInResult beginSignInResult) {
         if (CredentialProviderPlayServicesImpl.INSTANCE.cancellationReviewer$credentials_play_services_auth_release(cancellationSignal)) {
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
         Intent intent = new Intent(credentialProviderBeginSignInController.context, (Class<?>) HiddenActivity.class);
         credentialProviderBeginSignInController.generateHiddenActivityIntent(credentialProviderBeginSignInController.resultReceiver, intent, CredentialProviderBaseController.BEGIN_SIGN_IN_TAG);
@@ -239,11 +239,11 @@ public final class CredentialProviderBeginSignInController extends CredentialPro
             CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(cancellationSignal, new Function0() { // from class: androidx.credentials.playservices.controllers.identityauth.beginsignin.i
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return CredentialProviderBeginSignInController.invokePlayServices$lambda$2$lambda$1(this.f1967a);
+                    return CredentialProviderBeginSignInController.invokePlayServices$lambda$2$lambda$1(this.f1812a);
                 }
             });
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -251,10 +251,10 @@ public final class CredentialProviderBeginSignInController extends CredentialPro
         credentialProviderBeginSignInController.getExecutor().execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identityauth.beginsignin.l
             @Override // java.lang.Runnable
             public final void run() {
-                CredentialProviderBeginSignInController.invokePlayServices$lambda$2$lambda$1$lambda$0(this.f1970a);
+                CredentialProviderBeginSignInController.invokePlayServices$lambda$2$lambda$1$lambda$0(this.f1815a);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -269,7 +269,7 @@ public final class CredentialProviderBeginSignInController extends CredentialPro
         CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(cancellationSignal, new Function0() { // from class: androidx.credentials.playservices.controllers.identityauth.beginsignin.m
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return CredentialProviderBeginSignInController.invokePlayServices$lambda$6$lambda$5(this.f1971a, nVarFromGmsException);
+                return CredentialProviderBeginSignInController.invokePlayServices$lambda$6$lambda$5(this.f1816a, nVarFromGmsException);
             }
         });
     }
@@ -279,10 +279,10 @@ public final class CredentialProviderBeginSignInController extends CredentialPro
         credentialProviderBeginSignInController.getExecutor().execute(new Runnable() { // from class: androidx.credentials.playservices.controllers.identityauth.beginsignin.q
             @Override // java.lang.Runnable
             public final void run() {
-                CredentialProviderBeginSignInController.invokePlayServices$lambda$6$lambda$5$lambda$4(this.f1975a, nVar);
+                CredentialProviderBeginSignInController.invokePlayServices$lambda$6$lambda$5$lambda$4(this.f1820a, nVar);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -328,7 +328,7 @@ public final class CredentialProviderBeginSignInController extends CredentialPro
         }, new Function1() { // from class: androidx.credentials.playservices.controllers.identityauth.beginsignin.c
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return CredentialProviderBeginSignInController.handleResponse$lambda$9(this.f1961a, (f3.n) obj);
+                return CredentialProviderBeginSignInController.handleResponse$lambda$9(this.f1806a, (f3.n) obj);
             }
         }, this.cancellationSignal)) {
             return;
@@ -340,28 +340,28 @@ public final class CredentialProviderBeginSignInController extends CredentialPro
             companion2.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(this.cancellationSignal, new Function0() { // from class: androidx.credentials.playservices.controllers.identityauth.beginsignin.d
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return CredentialProviderBeginSignInController.handleResponse$lambda$11(this.f1962a, l0VarConvertResponseToCredentialManager);
+                    return CredentialProviderBeginSignInController.handleResponse$lambda$11(this.f1807a, l0VarConvertResponseToCredentialManager);
                 }
             });
         } catch (f3.n e10) {
             CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(this.cancellationSignal, new Function0() { // from class: androidx.credentials.playservices.controllers.identityauth.beginsignin.f
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return CredentialProviderBeginSignInController.handleResponse$lambda$15(this.f1964a, e10);
+                    return CredentialProviderBeginSignInController.handleResponse$lambda$15(this.f1809a, e10);
                 }
             });
         } catch (k9.b e11) {
             final c0 c0Var = new c0();
-            c0Var.f22552a = new f3.q(e11.getMessage());
+            c0Var.f23007a = new f3.q(e11.getMessage());
             if (e11.b() == 16) {
-                c0Var.f22552a = new f3.l(e11.getMessage());
+                c0Var.f23007a = new f3.l(e11.getMessage());
             } else if (CredentialProviderBaseController.INSTANCE.getRetryables().contains(Integer.valueOf(e11.b()))) {
-                c0Var.f22552a = new f3.o(e11.getMessage());
+                c0Var.f23007a = new f3.o(e11.getMessage());
             }
             CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(this.cancellationSignal, new Function0() { // from class: androidx.credentials.playservices.controllers.identityauth.beginsignin.e
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return CredentialProviderBeginSignInController.handleResponse$lambda$13(this.f1963a, c0Var);
+                    return CredentialProviderBeginSignInController.handleResponse$lambda$13(this.f1808a, c0Var);
                 }
             });
         } catch (Throwable th2) {
@@ -369,7 +369,7 @@ public final class CredentialProviderBeginSignInController extends CredentialPro
             CredentialProviderController.INSTANCE.cancelOrCallbackExceptionOrResult$credentials_play_services_auth_release(this.cancellationSignal, new Function0() { // from class: androidx.credentials.playservices.controllers.identityauth.beginsignin.g
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return CredentialProviderBeginSignInController.handleResponse$lambda$17(this.f1965a, qVar);
+                    return CredentialProviderBeginSignInController.handleResponse$lambda$17(this.f1810a, qVar);
                 }
             });
         }
@@ -443,7 +443,7 @@ public final class CredentialProviderBeginSignInController extends CredentialPro
         }).e(new sb.f() { // from class: androidx.credentials.playservices.controllers.identityauth.beginsignin.k
             @Override // sb.f
             public final void onFailure(Exception exc) {
-                CredentialProviderBeginSignInController.invokePlayServices$lambda$6(this.f1969a, cancellationSignal, exc);
+                CredentialProviderBeginSignInController.invokePlayServices$lambda$6(this.f1814a, cancellationSignal, exc);
             }
         });
     }

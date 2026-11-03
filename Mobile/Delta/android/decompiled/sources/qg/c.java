@@ -10,31 +10,31 @@ import java.util.Map;
 public final class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final int[] f29366a = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 36, -1, -1, -1, 37, 38, -1, -1, -1, -1, 39, 40, -1, 41, 42, 43, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 44, -1, -1, -1, -1, -1, -1, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, -1, -1, -1, -1, -1};
+    public static final int[] f29835a = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 36, -1, -1, -1, 37, 38, -1, -1, -1, -1, 39, 40, -1, 41, 42, 43, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 44, -1, -1, -1, -1, -1, -1, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, -1, -1, -1, -1, -1};
     public static final Charset b = StandardCharsets.ISO_8859_1;
 
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f29367a;
+        public static final /* synthetic */ int[] f29836a;
 
         static {
             int[] iArr = new int[pg.b.values().length];
-            f29367a = iArr;
+            f29836a = iArr;
             try {
                 iArr[pg.b.NUMERIC.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f29367a[pg.b.ALPHANUMERIC.ordinal()] = 2;
+                f29836a[pg.b.ALPHANUMERIC.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f29367a[pg.b.BYTE.ordinal()] = 3;
+                f29836a[pg.b.BYTE.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
             try {
-                f29367a[pg.b.KANJI.ordinal()] = 4;
+                f29836a[pg.b.KANJI.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
         }
@@ -70,7 +70,7 @@ public final class c {
     }
 
     public static void c(String str, pg.b bVar, mg.a aVar, Charset charset) {
-        int i10 = a.f29367a[bVar.ordinal()];
+        int i10 = a.f29836a[bVar.ordinal()];
         if (i10 == 1) {
             h(str, aVar);
             return;
@@ -340,7 +340,7 @@ public final class c {
         for (int i11 = 0; i11 < length; i11++) {
             iArr[i11] = bArr[i11] & 255;
         }
-        new ng.c(ng.a.f26265l).b(iArr, i10);
+        new ng.c(ng.a.f27202l).b(iArr, i10);
         byte[] bArr2 = new byte[i10];
         for (int i12 = 0; i12 < i10; i12++) {
             bArr2[i12] = (byte) iArr[length + i12];
@@ -349,7 +349,7 @@ public final class c {
     }
 
     public static int p(int i10) {
-        int[] iArr = f29366a;
+        int[] iArr = f29835a;
         if (i10 < iArr.length) {
             return iArr[i10];
         }

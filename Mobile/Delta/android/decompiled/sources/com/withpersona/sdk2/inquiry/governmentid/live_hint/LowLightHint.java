@@ -13,7 +13,7 @@ public final /* data */ class LowLightHint implements Hint {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final LowLightHint f10925a = new LowLightHint();
+    public static final LowLightHint f11006a = new LowLightHint();
 
     @NotNull
     public static final Parcelable.Creator<LowLightHint> CREATOR = new a();
@@ -25,7 +25,7 @@ public final /* data */ class LowLightHint implements Hint {
         public final LowLightHint createFromParcel(Parcel parcel) {
             Intrinsics.checkNotNullParameter(parcel, "parcel");
             parcel.readInt();
-            return LowLightHint.f10925a;
+            return LowLightHint.f11006a;
         }
 
         @Override // android.os.Parcelable.Creator

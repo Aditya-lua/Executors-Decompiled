@@ -12,12 +12,12 @@ public class p0 {
     @NotNull
     public static <E> Set<E> a(@NotNull Set<E> builder) {
         Intrinsics.checkNotNullParameter(builder, "builder");
-        return ((kt.h) builder).b();
+        return ((ht.h) builder).b();
     }
 
     @NotNull
     public static <E> Set<E> b() {
-        return new kt.h();
+        return new ht.h();
     }
 
     @NotNull

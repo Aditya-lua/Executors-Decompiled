@@ -1,25 +1,30 @@
 package qq;
 
-import kotlin.Metadata;
-import kotlin.jvm.internal.Intrinsics;
-import org.jetbrains.annotations.NotNull;
+import androidx.p000lifecycle.l0;
+import dt.d;
+import dt.i;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\b\u0007\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u000f\u0010\u0006\u001a\u00020\u0002H\u0007¢\u0006\u0004\b\u0006\u0010\u0007R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0006\u0010\b¨\u0006\t"}, d2 = {"Lqq/a;", "", "Lqq/c;", "sdkFilesManager", "<init>", "(Lqq/c;)V", "a", "()Lqq/c;", "Lqq/c;", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class a {
+public final class a implements d<com.withpersona.sdk2.inquiry.shared.inquiryTheme.a> {
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
-    @NotNull
-    public final c sdkFilesManager;
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final i<l0> f30036a;
 
-    public a(@NotNull c sdkFilesManager) {
-        Intrinsics.checkNotNullParameter(sdkFilesManager, "sdkFilesManager");
-        this.sdkFilesManager = sdkFilesManager;
+    public a(i<l0> iVar) {
+        this.f30036a = iVar;
     }
 
-    @NotNull
-    /* JADX INFO: renamed from: a, reason: from getter */
-    public final c getSdkFilesManager() {
-        return this.sdkFilesManager;
+    public static a a(i<l0> iVar) {
+        return new a(iVar);
+    }
+
+    public static com.withpersona.sdk2.inquiry.shared.inquiryTheme.a c(l0 l0Var) {
+        return new com.withpersona.sdk2.inquiry.shared.inquiryTheme.a(l0Var);
+    }
+
+    @Override // ft.a
+    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+    public com.withpersona.sdk2.inquiry.shared.inquiryTheme.a get() {
+        return c(this.f30036a.get());
     }
 }

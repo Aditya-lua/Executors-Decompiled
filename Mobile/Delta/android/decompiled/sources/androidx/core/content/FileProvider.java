@@ -56,11 +56,11 @@ public class FileProvider extends ContentProvider {
     public static class c implements b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final String f1751a;
+        public final String f1596a;
         public final HashMap<String, File> b = new HashMap<>();
 
         public c(String str) {
-            this.f1751a = str;
+            this.f1596a = str;
         }
 
         @Override // androidx.core.content.FileProvider.b
@@ -78,7 +78,7 @@ public class FileProvider extends ContentProvider {
                     throw new IllegalArgumentException("Failed to find configured root that contains " + canonicalPath);
                 }
                 String path2 = entry.getValue().getPath();
-                return new Uri.Builder().scheme("content").authority(this.f1751a).encodedPath(Uri.encode(entry.getKey()) + '/' + Uri.encode(path2.endsWith("/") ? canonicalPath.substring(path2.length()) : canonicalPath.substring(path2.length() + 1), "/")).build();
+                return new Uri.Builder().scheme("content").authority(this.f1596a).encodedPath(Uri.encode(entry.getKey()) + '/' + Uri.encode(path2.endsWith("/") ? canonicalPath.substring(path2.length()) : canonicalPath.substring(path2.length() + 1), "/")).build();
             } catch (IOException unused) {
                 throw new IllegalArgumentException("Failed to resolve canonical path for " + file);
             }

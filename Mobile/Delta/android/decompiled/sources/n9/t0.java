@@ -14,7 +14,7 @@ import com.google.android.gms.common.ConnectionResult;
 public final class t0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Uri f25299a = new Uri.Builder().scheme("content").authority("com.google.android.gms.chimera").build();
+    public static final Uri f26120a = new Uri.Builder().scheme("content").authority("com.google.android.gms.chimera").build();
 
     public static Intent a(Context context, e1 e1Var) throws r0 {
         Bundle bundleCall;
@@ -27,7 +27,7 @@ public final class t0 {
             Bundle bundle = new Bundle();
             bundle.putString("serviceActionBundleKey", strA);
             try {
-                ContentProviderClient contentProviderClientAcquireUnstableContentProviderClient = context.getContentResolver().acquireUnstableContentProviderClient(f25299a);
+                ContentProviderClient contentProviderClientAcquireUnstableContentProviderClient = context.getContentResolver().acquireUnstableContentProviderClient(f26120a);
                 if (contentProviderClientAcquireUnstableContentProviderClient == null) {
                     throw new RemoteException("Failed to acquire ContentProviderClient");
                 }

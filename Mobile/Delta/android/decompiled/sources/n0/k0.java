@@ -4,7 +4,7 @@ package n0;
 public class k0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final h0 f24719a = new a();
+    public static final h0 f25540a = new a();
 
     public static final class a implements h0 {
         public final e2 P = e2.a(new Object());
@@ -21,6 +21,6 @@ public class k0 {
     }
 
     public static h0 a() {
-        return f24719a;
+        return f25540a;
     }
 }

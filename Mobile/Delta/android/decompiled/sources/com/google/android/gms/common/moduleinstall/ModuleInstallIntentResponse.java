@@ -15,14 +15,14 @@ public class ModuleInstallIntentResponse extends AbstractSafeParcelable {
     public static final Parcelable.Creator<ModuleInstallIntentResponse> CREATOR = new f();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final PendingIntent f5821f;
+    public final PendingIntent f5894f;
 
     public ModuleInstallIntentResponse(PendingIntent pendingIntent) {
-        this.f5821f = pendingIntent;
+        this.f5894f = pendingIntent;
     }
 
     public PendingIntent v3() {
-        return this.f5821f;
+        return this.f5894f;
     }
 
     @Override // android.os.Parcelable

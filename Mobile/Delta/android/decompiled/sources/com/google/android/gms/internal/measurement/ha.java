@@ -9,10 +9,10 @@ public abstract class ha implements Iterable, Serializable {
     public static final ha b = new ga(qb.b);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f6470a = 0;
+    public int f6543a = 0;
 
     static {
-        int i10 = u9.f6826a;
+        int i10 = u9.f6900a;
     }
 
     public static ha h(byte[] bArr, int i10, int i11) {
@@ -65,20 +65,20 @@ public abstract class ha implements Iterable, Serializable {
     public abstract int g(int i10, int i11, int i12);
 
     public final int hashCode() {
-        int iG = this.f6470a;
+        int iG = this.f6543a;
         if (iG == 0) {
             int iD = d();
             iG = g(iD, 0, iD);
             if (iG == 0) {
                 iG = 1;
             }
-            this.f6470a = iG;
+            this.f6543a = iG;
         }
         return iG;
     }
 
     public final int i() {
-        return this.f6470a;
+        return this.f6543a;
     }
 
     @Override // java.lang.Iterable

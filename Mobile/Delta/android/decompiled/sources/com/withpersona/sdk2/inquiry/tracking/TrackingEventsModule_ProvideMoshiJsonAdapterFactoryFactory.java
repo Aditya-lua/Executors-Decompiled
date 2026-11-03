@@ -1,8 +1,8 @@
 package com.withpersona.sdk2.inquiry.tracking;
 
-import ft.d;
+import dt.d;
 import java.util.Set;
-import um.h;
+import sm.h;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class TrackingEventsModule_ProvideMoshiJsonAdapterFactoryFactory implements d<Set<h.e>> {
@@ -17,10 +17,10 @@ public final class TrackingEventsModule_ProvideMoshiJsonAdapterFactoryFactory im
     }
 
     public static Set<h.e> provideMoshiJsonAdapterFactory(TrackingEventsModule trackingEventsModule) {
-        return (Set) ft.h.e(trackingEventsModule.provideMoshiJsonAdapterFactory());
+        return (Set) dt.h.e(trackingEventsModule.provideMoshiJsonAdapterFactory());
     }
 
-    @Override // ht.a
+    @Override // ft.a
     public Set<h.e> get() {
         return provideMoshiJsonAdapterFactory(this.module);
     }

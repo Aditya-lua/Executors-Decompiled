@@ -6,17 +6,17 @@ import java.util.Objects;
 public class e {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final e f21385d = new e("", "", false);
+    public static final e f21844d = new e("", "", false);
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final e f21386e = new e("\n", "  ", true);
+    public static final e f21845e = new e("\n", "  ", true);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f21387a;
+    public final String f21846a;
     public final String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final boolean f21388c;
+    public final boolean f21847c;
 
     public e(String str, String str2, boolean z10) {
         Objects.requireNonNull(str, "newline == null");
@@ -27,9 +27,9 @@ public class e {
         if (!str2.matches("[ \t]*")) {
             throw new IllegalArgumentException("Only combinations of spaces and tabs are allowed in indent.");
         }
-        this.f21387a = str;
+        this.f21846a = str;
         this.b = str2;
-        this.f21388c = z10;
+        this.f21847c = z10;
     }
 
     public String a() {
@@ -37,14 +37,14 @@ public class e {
     }
 
     public String b() {
-        return this.f21387a;
+        return this.f21846a;
     }
 
     public boolean c() {
-        return this.f21388c;
+        return this.f21847c;
     }
 
     public e d(String str) {
-        return new e(this.f21387a, str, this.f21388c);
+        return new e(this.f21846a, str, this.f21847c);
     }
 }

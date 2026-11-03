@@ -11,13 +11,13 @@ public final class h {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final h f23984a = new h();
+    public static final h f24634a = new h();
 
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
     public static final /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f23985a;
+        public static final /* synthetic */ int[] f24635a;
 
         static {
             int[] iArr = new int[y6.f.values().length];
@@ -29,7 +29,7 @@ public final class h {
                 iArr[y6.f.FIT.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
-            f23985a = iArr;
+            f24635a = iArr;
         }
     }
 
@@ -37,12 +37,12 @@ public final class h {
         int iMin;
         int iHighestOneBit = Integer.highestOneBit(srcWidth / dstWidth);
         int iHighestOneBit2 = Integer.highestOneBit(srcHeight / dstHeight);
-        int i10 = a.f23985a[scale.ordinal()];
+        int i10 = a.f24635a[scale.ordinal()];
         if (i10 == 1) {
             iMin = Math.min(iHighestOneBit, iHighestOneBit2);
         } else {
             if (i10 != 2) {
-                throw new jt.l();
+                throw new gt.l();
             }
             iMin = Math.max(iHighestOneBit, iHighestOneBit2);
         }
@@ -51,16 +51,16 @@ public final class h {
 
     public static final long b(int srcWidth, int srcHeight, @NotNull Size targetSize, @NotNull y6.f scale, @NotNull Size maxSize) {
         if (!y6.h.b(targetSize)) {
-            h hVar = f23984a;
+            h hVar = f24634a;
             int iF = hVar.f(targetSize.d(), scale);
             srcHeight = hVar.f(targetSize.c(), scale);
             srcWidth = iF;
         }
-        if ((maxSize.d() instanceof y6.a.C0655a) && !h0.o(srcWidth)) {
-            srcWidth = kotlin.ranges.d.f(srcWidth, ((y6.a.C0655a) maxSize.d()).getPx());
+        if ((maxSize.d() instanceof y6.a.C0670a) && !h0.o(srcWidth)) {
+            srcWidth = kotlin.ranges.d.f(srcWidth, ((y6.a.C0670a) maxSize.d()).getPx());
         }
-        if ((maxSize.c() instanceof y6.a.C0655a) && !h0.o(srcHeight)) {
-            srcHeight = kotlin.ranges.d.f(srcHeight, ((y6.a.C0655a) maxSize.c()).getPx());
+        if ((maxSize.c() instanceof y6.a.C0670a) && !h0.o(srcHeight)) {
+            srcHeight = kotlin.ranges.d.f(srcHeight, ((y6.a.C0670a) maxSize.c()).getPx());
         }
         return e7.r.a(srcWidth, srcHeight);
     }
@@ -68,53 +68,53 @@ public final class h {
     public static final double c(double srcWidth, double srcHeight, double dstWidth, double dstHeight, @NotNull y6.f scale) {
         double d10 = dstWidth / srcWidth;
         double d11 = dstHeight / srcHeight;
-        int i10 = a.f23985a[scale.ordinal()];
+        int i10 = a.f24635a[scale.ordinal()];
         if (i10 == 1) {
             return Math.max(d10, d11);
         }
         if (i10 == 2) {
             return Math.min(d10, d11);
         }
-        throw new jt.l();
+        throw new gt.l();
     }
 
     public static final double d(int srcWidth, int srcHeight, int dstWidth, int dstHeight, @NotNull y6.f scale) {
         double d10 = ((double) dstWidth) / ((double) srcWidth);
         double d11 = ((double) dstHeight) / ((double) srcHeight);
-        int i10 = a.f23985a[scale.ordinal()];
+        int i10 = a.f24635a[scale.ordinal()];
         if (i10 == 1) {
             return Math.max(d10, d11);
         }
         if (i10 == 2) {
             return Math.min(d10, d11);
         }
-        throw new jt.l();
+        throw new gt.l();
     }
 
     public static final float e(float srcWidth, float srcHeight, float dstWidth, float dstHeight, @NotNull y6.f scale) {
         float f10 = dstWidth / srcWidth;
         float f11 = dstHeight / srcHeight;
-        int i10 = a.f23985a[scale.ordinal()];
+        int i10 = a.f24635a[scale.ordinal()];
         if (i10 == 1) {
             return Math.max(f10, f11);
         }
         if (i10 == 2) {
             return Math.min(f10, f11);
         }
-        throw new jt.l();
+        throw new gt.l();
     }
 
     public final int f(y6.a aVar, y6.f fVar) {
-        if (aVar instanceof y6.a.C0655a) {
-            return ((y6.a.C0655a) aVar).getPx();
+        if (aVar instanceof y6.a.C0670a) {
+            return ((y6.a.C0670a) aVar).getPx();
         }
-        int i10 = a.f23985a[fVar.ordinal()];
+        int i10 = a.f24635a[fVar.ordinal()];
         if (i10 == 1) {
             return Integer.MIN_VALUE;
         }
         if (i10 == 2) {
             return Integer.MAX_VALUE;
         }
-        throw new jt.l();
+        throw new gt.l();
     }
 }

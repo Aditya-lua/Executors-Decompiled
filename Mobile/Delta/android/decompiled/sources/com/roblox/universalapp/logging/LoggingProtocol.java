@@ -6,40 +6,40 @@ import android.util.Log;
 import androidx.annotation.Keep;
 import com.roblox.engine.jni.autovalue.RobloxTelemetryEvent;
 import com.roblox.universalapp.logging.LoggingProtocol;
+import gt.h;
+import gt.i;
+import gt.n;
+import gt.o;
+import iu.g1;
+import iu.k;
+import iu.p0;
+import iu.q0;
 import java.util.concurrent.atomic.AtomicBoolean;
-import jt.h;
-import jt.i;
-import jt.n;
-import jt.o;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.Intrinsics;
-import ku.g1;
-import ku.k;
-import ku.p0;
-import ku.q0;
-import mu.g;
-import mu.j;
-import nt.b;
+import ku.g;
+import ku.j;
+import lt.b;
+import mt.c;
+import nt.d;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import ot.c;
-import pt.d;
-import pt.m;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000H\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\bÆ\u0002\u0018\u00002\u00020\u0001:\u0004.\u0018\u0016\u0014B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0007¢\u0006\u0004\b\u0005\u0010\u0006J#\u0010\u000b\u001a\u00020\n2\u0006\u0010\b\u001a\u00020\u00072\n\b\u0002\u0010\t\u001a\u0004\u0018\u00010\u0004H\u0007¢\u0006\u0004\b\u000b\u0010\fJ!\u0010\u000e\u001a\u00020\n2\u0006\u0010\b\u001a\u00020\u00072\b\b\u0002\u0010\r\u001a\u00020\u0004H\u0007¢\u0006\u0004\b\u000e\u0010\u000fJ\u0017\u0010\u0012\u001a\u00020\n2\u0006\u0010\u0011\u001a\u00020\u0010H\u0007¢\u0006\u0004\b\u0012\u0010\u0013J\u000f\u0010\u0014\u001a\u00020\nH\u0007¢\u0006\u0004\b\u0014\u0010\u0003J\u000f\u0010\u0015\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u0015\u0010\u0006J\u0010\u0010\u0016\u001a\u00020\nH\u0082@¢\u0006\u0004\b\u0016\u0010\u0017R\u001b\u0010\u001b\u001a\u00020\u00048BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\u0018\u0010\u0019\u001a\u0004\b\u001a\u0010\u0006R(\u0010#\u001a\u00020\u001c8\u0000@\u0000X\u0081\u000e¢\u0006\u0018\n\u0004\b\u0016\u0010\u001d\u0012\u0004\b\"\u0010\u0003\u001a\u0004\b\u001e\u0010\u001f\"\u0004\b \u0010!R \u0010)\u001a\u00020$8\u0000X\u0081\u0004¢\u0006\u0012\n\u0004\b\u0014\u0010%\u0012\u0004\b(\u0010\u0003\u001a\u0004\b&\u0010'R\u001a\u0010-\u001a\b\u0012\u0004\u0012\u00020+0*8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001a\u0010,¨\u0006/"}, d2 = {"Lcom/roblox/universalapp/logging/LoggingProtocol;", "", "<init>", "()V", "", "getProcessTimestamp", "()J", "", "eventName", "systemClockTime", "", "l", "(Ljava/lang/String;Ljava/lang/Long;)V", "timestamp", "h", "(Ljava/lang/String;J)V", "Lcom/roblox/engine/jni/autovalue/RobloxTelemetryEvent;", "event", "j", "(Lcom/roblox/engine/jni/autovalue/RobloxTelemetryEvent;)V", "d", "f", "c", "(Lnt/b;)Ljava/lang/Object;", "b", "Ljt/h;", "e", "processStartTime", "Lku/p0;", "Lku/p0;", "getScope$universalapp_googleProdRelease", "()Lku/p0;", "setScope$universalapp_googleProdRelease", "(Lku/p0;)V", "getScope$universalapp_googleProdRelease$annotations", "scope", "Lkotlin/concurrent/atomics/AtomicBoolean;", "Ljava/util/concurrent/atomic/AtomicBoolean;", "getConsumerStarted$universalapp_googleProdRelease", "()Ljava/util/concurrent/atomic/AtomicBoolean;", "getConsumerStarted$universalapp_googleProdRelease$annotations", "consumerStarted", "Lmu/g;", "Lcom/roblox/universalapp/logging/LoggingProtocol$a;", "Lmu/g;", "channel", "a", "universalapp_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000H\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\bÆ\u0002\u0018\u00002\u00020\u0001:\u0004.\u0018\u0016\u0014B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0007¢\u0006\u0004\b\u0005\u0010\u0006J#\u0010\u000b\u001a\u00020\n2\u0006\u0010\b\u001a\u00020\u00072\n\b\u0002\u0010\t\u001a\u0004\u0018\u00010\u0004H\u0007¢\u0006\u0004\b\u000b\u0010\fJ!\u0010\u000e\u001a\u00020\n2\u0006\u0010\b\u001a\u00020\u00072\b\b\u0002\u0010\r\u001a\u00020\u0004H\u0007¢\u0006\u0004\b\u000e\u0010\u000fJ\u0017\u0010\u0012\u001a\u00020\n2\u0006\u0010\u0011\u001a\u00020\u0010H\u0007¢\u0006\u0004\b\u0012\u0010\u0013J\u000f\u0010\u0014\u001a\u00020\nH\u0007¢\u0006\u0004\b\u0014\u0010\u0003J\u000f\u0010\u0015\u001a\u00020\u0004H\u0002¢\u0006\u0004\b\u0015\u0010\u0006J\u0010\u0010\u0016\u001a\u00020\nH\u0082@¢\u0006\u0004\b\u0016\u0010\u0017R\u001b\u0010\u001b\u001a\u00020\u00048BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\u0018\u0010\u0019\u001a\u0004\b\u001a\u0010\u0006R(\u0010#\u001a\u00020\u001c8\u0000@\u0000X\u0081\u000e¢\u0006\u0018\n\u0004\b\u0016\u0010\u001d\u0012\u0004\b\"\u0010\u0003\u001a\u0004\b\u001e\u0010\u001f\"\u0004\b \u0010!R \u0010)\u001a\u00020$8\u0000X\u0081\u0004¢\u0006\u0012\n\u0004\b\u0014\u0010%\u0012\u0004\b(\u0010\u0003\u001a\u0004\b&\u0010'R\u001a\u0010-\u001a\b\u0012\u0004\u0012\u00020+0*8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001a\u0010,¨\u0006/"}, d2 = {"Lcom/roblox/universalapp/logging/LoggingProtocol;", "", "<init>", "()V", "", "getProcessTimestamp", "()J", "", "eventName", "systemClockTime", "", "l", "(Ljava/lang/String;Ljava/lang/Long;)V", "timestamp", "h", "(Ljava/lang/String;J)V", "Lcom/roblox/engine/jni/autovalue/RobloxTelemetryEvent;", "event", "j", "(Lcom/roblox/engine/jni/autovalue/RobloxTelemetryEvent;)V", "d", "f", "c", "(Llt/b;)Ljava/lang/Object;", "b", "Lgt/h;", "e", "processStartTime", "Liu/p0;", "Liu/p0;", "getScope$universalapp_googleProdRelease", "()Liu/p0;", "setScope$universalapp_googleProdRelease", "(Liu/p0;)V", "getScope$universalapp_googleProdRelease$annotations", "scope", "Lkotlin/concurrent/atomics/AtomicBoolean;", "Ljava/util/concurrent/atomic/AtomicBoolean;", "getConsumerStarted$universalapp_googleProdRelease", "()Ljava/util/concurrent/atomic/AtomicBoolean;", "getConsumerStarted$universalapp_googleProdRelease$annotations", "consumerStarted", "Lku/g;", "Lcom/roblox/universalapp/logging/LoggingProtocol$a;", "Lku/g;", "channel", "a", "universalapp_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class LoggingProtocol {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final LoggingProtocol f9789a = new LoggingProtocol();
+    public static final LoggingProtocol f9870a = new LoggingProtocol();
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull
-    public static final h processStartTime = i.b(new Function0() { // from class: lm.a
+    public static final h processStartTime = i.b(new Function0() { // from class: jm.a
         @Override // kotlin.jvm.functions.Function0
         public final Object invoke() {
             return Long.valueOf(LoggingProtocol.n());
@@ -196,56 +196,61 @@ public final class LoggingProtocol {
         }
     }
 
-    @pt.f(c = "com.roblox.universalapp.logging.LoggingProtocol", f = "LoggingProtocol.kt", l = {115}, m = "consumeEvents", v = 1)
+    @nt.f(c = "com.roblox.universalapp.logging.LoggingProtocol", f = "LoggingProtocol.kt", l = {115}, m = "consumeEvents", v = 1)
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
     public static final class e extends d {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f9796t;
+        public Object f9877t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public /* synthetic */ Object f9797u;
+        public /* synthetic */ Object f9878u;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public int f9799w;
+        public int f9880w;
 
         public e(b<? super e> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
-            this.f9797u = obj;
-            this.f9799w |= Integer.MIN_VALUE;
+            this.f9878u = obj;
+            this.f9880w |= Integer.MIN_VALUE;
             return LoggingProtocol.this.c(this);
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.roblox.universalapp.logging.LoggingProtocol$flushPendingEvents$1", f = "LoggingProtocol.kt", l = {109}, m = "invokeSuspend", v = 1)
+    @nt.f(c = "com.roblox.universalapp.logging.LoggingProtocol$flushPendingEvents$1", f = "LoggingProtocol.kt", l = {109}, m = "invokeSuspend", v = 1)
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
     public static final class f extends m implements Function2<p0, b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f9800t;
+        public int f9881t;
 
         public f(b<? super f> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         public final b<Unit> create(Object obj, b<?> bVar) {
             return new f(bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, b<? super Unit> bVar) {
+            return ((f) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
             Object objE = c.e();
-            int i10 = this.f9800t;
+            int i10 = this.f9881t;
             if (i10 == 0) {
                 o.b(obj);
-                LoggingProtocol loggingProtocol = LoggingProtocol.f9789a;
-                this.f9800t = 1;
+                LoggingProtocol loggingProtocol = LoggingProtocol.f9870a;
+                this.f9881t = 1;
                 if (loggingProtocol.c(this) == objE) {
                     return objE;
                 }
@@ -255,12 +260,7 @@ public final class LoggingProtocol {
                 }
                 o.b(obj);
             }
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, b<? super Unit> bVar) {
-            return ((f) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            return Unit.f22938a;
         }
     }
 
@@ -277,12 +277,12 @@ public final class LoggingProtocol {
 
     @Keep
     public static final long getProcessTimestamp() {
-        return SystemClock.elapsedRealtime() - f9789a.e();
+        return SystemClock.elapsedRealtime() - f9870a.e();
     }
 
     public static final void h(@NotNull String eventName, long timestamp) {
         Intrinsics.checkNotNullParameter(eventName, "eventName");
-        channel.w(new RawTimestampEvent(eventName, timestamp));
+        channel.y(new RawTimestampEvent(eventName, timestamp));
     }
 
     public static /* synthetic */ void i(String str, long j10, int i10, Object obj) {
@@ -294,7 +294,7 @@ public final class LoggingProtocol {
 
     public static final void j(@NotNull RobloxTelemetryEvent event) {
         Intrinsics.checkNotNullParameter(event, "event");
-        channel.w(new PendingRobloxTelemetryEvent(event));
+        channel.y(new PendingRobloxTelemetryEvent(event));
     }
 
     public static final void k(@NotNull String eventName) {
@@ -304,7 +304,7 @@ public final class LoggingProtocol {
 
     public static final void l(@NotNull String eventName, @Nullable Long systemClockTime) {
         Intrinsics.checkNotNullParameter(eventName, "eventName");
-        channel.w(new PendingTimestampEvent(eventName, systemClockTime != null ? systemClockTime.longValue() : SystemClock.elapsedRealtime()));
+        channel.y(new PendingTimestampEvent(eventName, systemClockTime != null ? systemClockTime.longValue() : SystemClock.elapsedRealtime()));
     }
 
     public static /* synthetic */ void m(String str, Long l10, int i10, Object obj) {
@@ -334,33 +334,33 @@ public final class LoggingProtocol {
         	at jadx.core.utils.ErrorsCounter.error(ErrorsCounter.java:31)
         	at jadx.core.dex.attributes.nodes.NotificationAttrNode.addError(NotificationAttrNode.java:19)
         */
-    public final java.lang.Object c(nt.b<? super kotlin.Unit> r11) {
+    public final java.lang.Object c(lt.b<? super kotlin.Unit> r11) {
         /*
             r10 = this;
             boolean r0 = r11 instanceof com.roblox.universalapp.logging.LoggingProtocol.e
             if (r0 == 0) goto L13
             r0 = r11
             com.roblox.universalapp.logging.LoggingProtocol$e r0 = (com.roblox.universalapp.logging.LoggingProtocol.e) r0
-            int r1 = r0.f9799w
+            int r1 = r0.f9880w
             r2 = -2147483648(0xffffffff80000000, float:-0.0)
             r3 = r1 & r2
             if (r3 == 0) goto L13
             int r1 = r1 - r2
-            r0.f9799w = r1
+            r0.f9880w = r1
             goto L18
         L13:
             com.roblox.universalapp.logging.LoggingProtocol$e r0 = new com.roblox.universalapp.logging.LoggingProtocol$e
             r0.<init>(r11)
         L18:
-            java.lang.Object r11 = r0.f9797u
-            java.lang.Object r1 = ot.c.e()
-            int r2 = r0.f9799w
+            java.lang.Object r11 = r0.f9878u
+            java.lang.Object r1 = mt.c.e()
+            int r2 = r0.f9880w
             r3 = 1
             if (r2 == 0) goto L35
             if (r2 != r3) goto L2d
-            java.lang.Object r2 = r0.f9796t
-            mu.i r2 = (mu.i) r2
-            jt.o.b(r11)
+            java.lang.Object r2 = r0.f9877t
+            ku.i r2 = (ku.i) r2
+            gt.o.b(r11)
             goto L4a
         L2d:
             java.lang.IllegalStateException r11 = new java.lang.IllegalStateException
@@ -368,13 +368,13 @@ public final class LoggingProtocol {
             r11.<init>(r0)
             throw r11
         L35:
-            jt.o.b(r11)
-            mu.g<com.roblox.universalapp.logging.LoggingProtocol$a> r11 = com.roblox.universalapp.logging.LoggingProtocol.channel
-            mu.i r11 = r11.iterator()
+            gt.o.b(r11)
+            ku.g<com.roblox.universalapp.logging.LoggingProtocol$a> r11 = com.roblox.universalapp.logging.LoggingProtocol.channel
+            ku.i r11 = r11.iterator()
             r2 = r11
         L3f:
-            r0.f9796t = r2
-            r0.f9799w = r3
+            r0.f9877t = r2
+            r0.f9880w = r3
             java.lang.Object r11 = r2.a(r0)
             if (r11 != r1) goto L4a
             return r1
@@ -414,14 +414,14 @@ public final class LoggingProtocol {
             com.roblox.universalapp.logging.JNILoggingProtocol.a(r4, r6, r11)
             goto L3f
         L99:
-            jt.l r11 = new jt.l
+            gt.l r11 = new gt.l
             r11.<init>()
             throw r11
         L9f:
-            kotlin.Unit r11 = kotlin.Unit.f22483a
+            kotlin.Unit r11 = kotlin.Unit.f22938a
             return r11
         */
-        throw new UnsupportedOperationException("Method not decompiled: com.roblox.universalapp.logging.LoggingProtocol.c(nt.b):java.lang.Object");
+        throw new UnsupportedOperationException("Method not decompiled: com.roblox.universalapp.logging.LoggingProtocol.c(lt.b):java.lang.Object");
     }
 
     public final long e() {

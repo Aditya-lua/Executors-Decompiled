@@ -1,31 +1,31 @@
 package com.withpersona.sdk2.inquiry.governmentid.network;
 
-import ft.d;
-import ft.i;
+import dt.d;
+import dt.i;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class a implements d<AutoClassifyWorker.b> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final i<b> f10978a;
-    public final i<rq.a> b;
+    public final i<b> f11059a;
+    public final i<pq.a> b;
 
-    public a(i<b> iVar, i<rq.a> iVar2) {
-        this.f10978a = iVar;
+    public a(i<b> iVar, i<pq.a> iVar2) {
+        this.f11059a = iVar;
         this.b = iVar2;
     }
 
-    public static a a(i<b> iVar, i<rq.a> iVar2) {
+    public static a a(i<b> iVar, i<pq.a> iVar2) {
         return new a(iVar, iVar2);
     }
 
-    public static AutoClassifyWorker.b c(b bVar, rq.a aVar) {
+    public static AutoClassifyWorker.b c(b bVar, pq.a aVar) {
         return new AutoClassifyWorker.b(bVar, aVar);
     }
 
-    @Override // ht.a
+    @Override // ft.a
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
     public AutoClassifyWorker.b get() {
-        return c(this.f10978a.get(), this.b.get());
+        return c(this.f11059a.get(), this.b.get());
     }
 }

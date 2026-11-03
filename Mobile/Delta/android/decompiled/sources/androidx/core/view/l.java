@@ -17,26 +17,26 @@ import java.lang.reflect.Method;
 public class l {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static boolean f1879a;
+    public static boolean f1724a;
     public static Method b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static boolean f1880c;
+    public static boolean f1725c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static Field f1881d;
+    public static Field f1726d;
 
     public interface a {
-        boolean D(KeyEvent keyEvent);
+        boolean C(KeyEvent keyEvent);
     }
 
     public static boolean a(ActionBar actionBar, KeyEvent keyEvent) {
-        if (!f1879a) {
+        if (!f1724a) {
             try {
                 b = actionBar.getClass().getMethod("onMenuKeyEvent", KeyEvent.class);
             } catch (NoSuchMethodException unused) {
             }
-            f1879a = true;
+            f1724a = true;
         }
         Method method = b;
         if (method != null) {
@@ -97,7 +97,7 @@ public class l {
             return false;
         }
         if (Build.VERSION.SDK_INT >= 28) {
-            return aVar.D(keyEvent);
+            return aVar.C(keyEvent);
         }
         if (callback instanceof Activity) {
             return b((Activity) callback, keyEvent);
@@ -105,20 +105,20 @@ public class l {
         if (callback instanceof Dialog) {
             return c((Dialog) callback, keyEvent);
         }
-        return (view != null && o0.h(view, keyEvent)) || aVar.D(keyEvent);
+        return (view != null && o0.h(view, keyEvent)) || aVar.C(keyEvent);
     }
 
     public static DialogInterface.OnKeyListener f(Dialog dialog) {
-        if (!f1880c) {
+        if (!f1725c) {
             try {
                 Field declaredField = Dialog.class.getDeclaredField("mOnKeyListener");
-                f1881d = declaredField;
+                f1726d = declaredField;
                 declaredField.setAccessible(true);
             } catch (NoSuchFieldException unused) {
             }
-            f1880c = true;
+            f1725c = true;
         }
-        Field field = f1881d;
+        Field field = f1726d;
         if (field == null) {
             return null;
         }

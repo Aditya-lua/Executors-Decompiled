@@ -26,14 +26,24 @@ public abstract class IConnectivityV2CoreListener {
 
         private native void native_reportNetworkChanged(long j10, NetworkChangeReport networkChangeReport);
 
+        private native void native_reportNetworkChangedV2(long j10, NetworkChangeReportV2 networkChangeReportV2);
+
         @Override // com.roblox.protocols.connectivityv2platforminterface.generated.IConnectivityV2CoreListener
         public void reportNetworkChanged(NetworkChangeReport networkChangeReport) {
             native_reportNetworkChanged(this.nativeRef, networkChangeReport);
+        }
+
+        @Override // com.roblox.protocols.connectivityv2platforminterface.generated.IConnectivityV2CoreListener
+        public void reportNetworkChangedV2(NetworkChangeReportV2 networkChangeReportV2) {
+            native_reportNetworkChangedV2(this.nativeRef, networkChangeReportV2);
         }
     }
 
     public static native IConnectivityV2CoreListener setPlatformImpl(IPlatformConnectivityV2 iPlatformConnectivityV2);
 
     public void reportNetworkChanged(NetworkChangeReport networkChangeReport) {
+    }
+
+    public void reportNetworkChangedV2(NetworkChangeReportV2 networkChangeReportV2) {
     }
 }

@@ -7,18 +7,18 @@ import java.util.Objects;
 public final class de extends w {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final /* synthetic */ me f25464e;
+    public final /* synthetic */ me f26285e;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public de(me meVar, l8 l8Var) {
         super(l8Var);
         Objects.requireNonNull(meVar);
-        this.f25464e = meVar;
+        this.f26285e = meVar;
     }
 
     @Override // nb.w
     public final void a() {
-        me meVar = this.f25464e;
+        me meVar = this.f26285e;
         meVar.b().h();
         String str = (String) meVar.y0().pollFirst();
         if (str != null) {

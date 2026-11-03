@@ -22,7 +22,7 @@ public class h extends p<n7.o, Path> {
     @Override // m7.o
     /* JADX INFO: renamed from: d, reason: merged with bridge method [inline-methods] */
     public i7.m a() {
-        return new i7.m(this.f24039a);
+        return new i7.m(this.f24689a);
     }
 
     @Override // m7.p

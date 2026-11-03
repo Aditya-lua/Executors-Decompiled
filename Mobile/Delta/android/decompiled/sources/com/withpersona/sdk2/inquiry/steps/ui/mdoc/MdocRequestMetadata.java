@@ -6,7 +6,7 @@ import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import qt.b;
+import ot.b;
 
 /* JADX INFO: loaded from: classes3.dex */
 @Metadata(d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\bv\u0018\u00002\u00020\u0001:\u0002\u0002\u0003\u0082\u0001\u0001\u0004¨\u0006\u0005À\u0006\u0003"}, d2 = {"Lcom/withpersona/sdk2/inquiry/steps/ui/mdoc/MdocRequestMetadata;", "Landroid/os/Parcelable;", "GoogleWalletRequestMetadata", "a", "Lcom/withpersona/sdk2/inquiry/steps/ui/mdoc/MdocRequestMetadata$GoogleWalletRequestMetadata;", "ui-step-renderer_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
@@ -102,6 +102,6 @@ public interface MdocRequestMetadata extends Parcelable {
 
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f13607d = b.a(a());
+        public static final /* synthetic */ ot.a f13688d = b.a(a());
     }
 }

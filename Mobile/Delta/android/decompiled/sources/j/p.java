@@ -13,7 +13,7 @@ public class p {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final Deque<WeakReference<XmlPullParser>> f20972a = new ArrayDeque();
+    public final Deque<WeakReference<XmlPullParser>> f21545a = new ArrayDeque();
 
     public static boolean b(XmlPullParser xmlPullParser) {
         if (xmlPullParser != null) {
@@ -60,8 +60,8 @@ public class p {
         if (xmlPullParser.getDepth() != 1) {
             return false;
         }
-        XmlPullParser xmlPullParserC = c(this.f20972a);
-        this.f20972a.push(new WeakReference<>(xmlPullParser));
+        XmlPullParser xmlPullParserC = c(this.f21545a);
+        this.f21545a.push(new WeakReference<>(xmlPullParser));
         return d(xmlPullParser, xmlPullParserC);
     }
 }

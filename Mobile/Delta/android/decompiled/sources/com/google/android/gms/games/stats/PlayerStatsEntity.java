@@ -17,54 +17,54 @@ public class PlayerStatsEntity extends zzg implements PlayerStats {
     public static final Parcelable.Creator<PlayerStatsEntity> CREATOR = new a();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final float f6251f;
+    public final float f6324f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final float f6252g;
+    public final float f6325g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final int f6253h;
+    public final int f6326h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final int f6254i;
+    public final int f6327i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final int f6255j;
+    public final int f6328j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final float f6256k;
+    public final float f6329k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final float f6257l;
+    public final float f6330l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final Bundle f6258m;
+    public final Bundle f6331m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public final float f6259n;
+    public final float f6332n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public final float f6260o;
+    public final float f6333o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public final float f6261p;
+    public final float f6334p;
 
     public PlayerStatsEntity(float f10, float f11, int i10, int i11, int i12, float f12, float f13, Bundle bundle, float f14, float f15, float f16) {
-        this.f6251f = f10;
-        this.f6252g = f11;
-        this.f6253h = i10;
-        this.f6254i = i11;
-        this.f6255j = i12;
-        this.f6256k = f12;
-        this.f6257l = f13;
-        this.f6258m = bundle;
-        this.f6259n = f14;
-        this.f6260o = f15;
-        this.f6261p = f16;
+        this.f6324f = f10;
+        this.f6325g = f11;
+        this.f6326h = i10;
+        this.f6327i = i11;
+        this.f6328j = i12;
+        this.f6329k = f12;
+        this.f6330l = f13;
+        this.f6331m = bundle;
+        this.f6332n = f14;
+        this.f6333o = f15;
+        this.f6334p = f16;
     }
 
     public static int w3(PlayerStats playerStats) {
-        return k.c(Float.valueOf(playerStats.t3()), Float.valueOf(playerStats.F()), Integer.valueOf(playerStats.v1()), Integer.valueOf(playerStats.O0()), Integer.valueOf(playerStats.S1()), Float.valueOf(playerStats.J0()), Float.valueOf(playerStats.X()), Float.valueOf(playerStats.L0()), Float.valueOf(playerStats.e3()), Float.valueOf(playerStats.c2()));
+        return k.c(Float.valueOf(playerStats.t3()), Float.valueOf(playerStats.F()), Integer.valueOf(playerStats.t1()), Integer.valueOf(playerStats.K0()), Integer.valueOf(playerStats.S1()), Float.valueOf(playerStats.F0()), Float.valueOf(playerStats.W()), Float.valueOf(playerStats.H0()), Float.valueOf(playerStats.g3()), Float.valueOf(playerStats.d2()));
     }
 
     public static boolean x3(PlayerStats playerStats, Object obj) {
@@ -75,55 +75,55 @@ public class PlayerStatsEntity extends zzg implements PlayerStats {
             return true;
         }
         PlayerStats playerStats2 = (PlayerStats) obj;
-        return k.b(Float.valueOf(playerStats2.t3()), Float.valueOf(playerStats.t3())) && k.b(Float.valueOf(playerStats2.F()), Float.valueOf(playerStats.F())) && k.b(Integer.valueOf(playerStats2.v1()), Integer.valueOf(playerStats.v1())) && k.b(Integer.valueOf(playerStats2.O0()), Integer.valueOf(playerStats.O0())) && k.b(Integer.valueOf(playerStats2.S1()), Integer.valueOf(playerStats.S1())) && k.b(Float.valueOf(playerStats2.J0()), Float.valueOf(playerStats.J0())) && k.b(Float.valueOf(playerStats2.X()), Float.valueOf(playerStats.X())) && k.b(Float.valueOf(playerStats2.L0()), Float.valueOf(playerStats.L0())) && k.b(Float.valueOf(playerStats2.e3()), Float.valueOf(playerStats.e3())) && k.b(Float.valueOf(playerStats2.c2()), Float.valueOf(playerStats.c2()));
+        return k.b(Float.valueOf(playerStats2.t3()), Float.valueOf(playerStats.t3())) && k.b(Float.valueOf(playerStats2.F()), Float.valueOf(playerStats.F())) && k.b(Integer.valueOf(playerStats2.t1()), Integer.valueOf(playerStats.t1())) && k.b(Integer.valueOf(playerStats2.K0()), Integer.valueOf(playerStats.K0())) && k.b(Integer.valueOf(playerStats2.S1()), Integer.valueOf(playerStats.S1())) && k.b(Float.valueOf(playerStats2.F0()), Float.valueOf(playerStats.F0())) && k.b(Float.valueOf(playerStats2.W()), Float.valueOf(playerStats.W())) && k.b(Float.valueOf(playerStats2.H0()), Float.valueOf(playerStats.H0())) && k.b(Float.valueOf(playerStats2.g3()), Float.valueOf(playerStats.g3())) && k.b(Float.valueOf(playerStats2.d2()), Float.valueOf(playerStats.d2()));
     }
 
     public static String y3(PlayerStats playerStats) {
-        return k.d(playerStats).a("AverageSessionLength", Float.valueOf(playerStats.t3())).a("ChurnProbability", Float.valueOf(playerStats.F())).a("DaysSinceLastPlayed", Integer.valueOf(playerStats.v1())).a("NumberOfPurchases", Integer.valueOf(playerStats.O0())).a("NumberOfSessions", Integer.valueOf(playerStats.S1())).a("SessionPercentile", Float.valueOf(playerStats.J0())).a("SpendPercentile", Float.valueOf(playerStats.X())).a("SpendProbability", Float.valueOf(playerStats.L0())).a("HighSpenderProbability", Float.valueOf(playerStats.e3())).a("TotalSpendNext28Days", Float.valueOf(playerStats.c2())).toString();
+        return k.d(playerStats).a("AverageSessionLength", Float.valueOf(playerStats.t3())).a("ChurnProbability", Float.valueOf(playerStats.F())).a("DaysSinceLastPlayed", Integer.valueOf(playerStats.t1())).a("NumberOfPurchases", Integer.valueOf(playerStats.K0())).a("NumberOfSessions", Integer.valueOf(playerStats.S1())).a("SessionPercentile", Float.valueOf(playerStats.F0())).a("SpendPercentile", Float.valueOf(playerStats.W())).a("SpendProbability", Float.valueOf(playerStats.H0())).a("HighSpenderProbability", Float.valueOf(playerStats.g3())).a("TotalSpendNext28Days", Float.valueOf(playerStats.d2())).toString();
     }
 
     @Override // com.google.android.gms.games.stats.PlayerStats
     public final float F() {
-        return this.f6252g;
+        return this.f6325g;
     }
 
     @Override // com.google.android.gms.games.stats.PlayerStats
-    public final float J0() {
-        return this.f6256k;
+    public final float F0() {
+        return this.f6329k;
     }
 
     @Override // com.google.android.gms.games.stats.PlayerStats
-    public final float L0() {
-        return this.f6259n;
+    public final float H0() {
+        return this.f6332n;
     }
 
     @Override // com.google.android.gms.games.stats.PlayerStats
-    public final int O0() {
-        return this.f6254i;
+    public final int K0() {
+        return this.f6327i;
     }
 
     @Override // com.google.android.gms.games.stats.PlayerStats
     public final int S1() {
-        return this.f6255j;
+        return this.f6328j;
     }
 
     @Override // com.google.android.gms.games.stats.PlayerStats
-    public final float X() {
-        return this.f6257l;
+    public final float W() {
+        return this.f6330l;
     }
 
     @Override // com.google.android.gms.games.stats.PlayerStats
-    public final float c2() {
-        return this.f6261p;
-    }
-
-    @Override // com.google.android.gms.games.stats.PlayerStats
-    public final float e3() {
-        return this.f6260o;
+    public final float d2() {
+        return this.f6334p;
     }
 
     public final boolean equals(Object obj) {
         return x3(this, obj);
+    }
+
+    @Override // com.google.android.gms.games.stats.PlayerStats
+    public final float g3() {
+        return this.f6333o;
     }
 
     public final int hashCode() {
@@ -131,8 +131,13 @@ public class PlayerStatsEntity extends zzg implements PlayerStats {
     }
 
     @Override // com.google.android.gms.games.stats.PlayerStats
+    public final int t1() {
+        return this.f6326h;
+    }
+
+    @Override // com.google.android.gms.games.stats.PlayerStats
     public final float t3() {
-        return this.f6251f;
+        return this.f6324f;
     }
 
     @NonNull
@@ -140,14 +145,9 @@ public class PlayerStatsEntity extends zzg implements PlayerStats {
         return y3(this);
     }
 
-    @Override // com.google.android.gms.games.stats.PlayerStats
-    public final int v1() {
-        return this.f6253h;
-    }
-
     @NonNull
     public final Bundle v3() {
-        return this.f6258m;
+        return this.f6331m;
     }
 
     @Override // android.os.Parcelable

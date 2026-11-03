@@ -10,19 +10,19 @@ public class o {
     public static volatile o b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final o f2248c = new o(true);
+    public static final o f2093c = new o(true);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Map<a, x.e<?, ?>> f2249a;
+    public final Map<a, x.e<?, ?>> f2094a;
 
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Object f2250a;
+        public final Object f2095a;
         public final int b;
 
         public a(Object obj, int i10) {
-            this.f2250a = obj;
+            this.f2095a = obj;
             this.b = i10;
         }
 
@@ -31,22 +31,22 @@ public class o {
                 return false;
             }
             a aVar = (a) obj;
-            return this.f2250a == aVar.f2250a && this.b == aVar.b;
+            return this.f2095a == aVar.f2095a && this.b == aVar.b;
         }
 
         public int hashCode() {
-            return (System.identityHashCode(this.f2250a) * Settings.DEFAULT_INITIAL_WINDOW_SIZE) + this.b;
+            return (System.identityHashCode(this.f2095a) * Settings.DEFAULT_INITIAL_WINDOW_SIZE) + this.b;
         }
     }
 
     public o() {
-        this.f2249a = new HashMap();
+        this.f2094a = new HashMap();
     }
 
     public static o b() {
         o oVarA;
-        if (c1.f2152d) {
-            return f2248c;
+        if (c1.f1997d) {
+            return f2093c;
         }
         o oVar = b;
         if (oVar != null) {
@@ -67,10 +67,10 @@ public class o {
     }
 
     public <ContainingType extends r0> x.e<ContainingType, ?> a(ContainingType containingtype, int i10) {
-        return (x.e) this.f2249a.get(new a(containingtype, i10));
+        return (x.e) this.f2094a.get(new a(containingtype, i10));
     }
 
     public o(boolean z10) {
-        this.f2249a = Collections.EMPTY_MAP;
+        this.f2094a = Collections.EMPTY_MAP;
     }
 }

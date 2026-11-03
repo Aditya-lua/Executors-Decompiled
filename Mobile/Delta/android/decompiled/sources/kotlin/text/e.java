@@ -11,18 +11,18 @@ public final class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final int[] f22629a;
+    public static final int[] f23084a;
 
     @NotNull
     public static final int[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static final int[] f22630c;
+    public static final int[] f23085c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    public static final long[] f22631d;
+    public static final long[] f23086d;
 
     static {
         int[] iArr = new int[Barcode.FORMAT_QR_CODE];
@@ -30,7 +30,7 @@ public final class e {
         for (int i11 = 0; i11 < 256; i11++) {
             iArr[i11] = "0123456789abcdef".charAt(i11 & 15) | ("0123456789abcdef".charAt(i11 >> 4) << '\b');
         }
-        f22629a = iArr;
+        f23084a = iArr;
         int[] iArr2 = new int[Barcode.FORMAT_QR_CODE];
         for (int i12 = 0; i12 < 256; i12++) {
             iArr2[i12] = "0123456789ABCDEF".charAt(i12 & 15) | ("0123456789ABCDEF".charAt(i12 >> 4) << '\b');
@@ -54,7 +54,7 @@ public final class e {
             i16++;
             i17++;
         }
-        f22630c = iArr3;
+        f23085c = iArr3;
         long[] jArr = new long[Barcode.FORMAT_QR_CODE];
         for (int i18 = 0; i18 < 256; i18++) {
             jArr[i18] = -1;
@@ -72,14 +72,14 @@ public final class e {
             i10++;
             i21++;
         }
-        f22631d = jArr;
+        f23086d = jArr;
     }
 
     public static final int a(long j10) {
         if (0 <= j10 && j10 <= 2147483647L) {
             return (int) j10;
         }
-        throw new IllegalArgumentException("The resulting string length is too big: " + ((Object) jt.y.e(jt.y.b(j10))));
+        throw new IllegalArgumentException("The resulting string length is too big: " + ((Object) gt.y.e(gt.y.b(j10))));
     }
 
     public static final int b(byte[] bArr, int i10, String str, String str2, int[] iArr, char[] cArr, int i11) {
@@ -138,7 +138,7 @@ public final class e {
         if (i10 == i11) {
             return "";
         }
-        int[] iArr = format.getUpperCase() ? b : f22629a;
+        int[] iArr = format.getUpperCase() ? b : f23084a;
         HexFormat.BytesHexFormat bytes = format.getBytes();
         return bytes.getNoLineAndGroupSeparator() ? j(bArr, i10, i11, bytes, iArr) : m(bArr, i10, i11, bytes, iArr);
     }

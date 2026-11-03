@@ -6,7 +6,7 @@ import android.util.Size;
 public final class s2 implements n0.o3.e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final s2 f36808a = new s2();
+    public static final s2 f37503a = new s2();
 
     @Override // n0.o3.e
     public void a(Size size, n0.i4<?> i4Var, n0.o3.b bVar) {

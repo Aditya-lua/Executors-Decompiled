@@ -13,7 +13,7 @@ import org.jetbrains.annotations.Nullable;
 public final class AFj1eSDK implements AFj1cSDK {
 
     @NotNull
-    private final jt.h AFKeystoreWrapper = jt.i.b(new Function0() { // from class: com.appsflyer.internal.g1
+    private final gt.h AFKeystoreWrapper = gt.i.b(new Function0() { // from class: com.appsflyer.internal.g1
         @Override // kotlin.jvm.functions.Function0
         public final Object invoke() {
             return AFj1eSDK.AFKeystoreWrapper();
@@ -35,12 +35,12 @@ public final class AFj1eSDK implements AFj1cSDK {
         if (pluginInfo == null) {
             pluginInfo = (PluginInfo) this.AFKeystoreWrapper.getValue();
         }
-        Pair pairA = jt.s.a("platform", pluginInfo.getPlugin().getPluginName());
+        Pair pairA = gt.s.a("platform", pluginInfo.getPlugin().getPluginName());
         PluginInfo pluginInfo2 = this.AFLogger;
         if (pluginInfo2 == null) {
             pluginInfo2 = (PluginInfo) this.AFKeystoreWrapper.getValue();
         }
-        Map<String, Object> mapN = kotlin.collections.k0.n(pairA, jt.s.a("version", pluginInfo2.getVersion()));
+        Map<String, Object> mapN = kotlin.collections.k0.n(pairA, gt.s.a("version", pluginInfo2.getVersion()));
         PluginInfo pluginInfo3 = this.AFLogger;
         if (pluginInfo3 == null) {
             pluginInfo3 = (PluginInfo) this.AFKeystoreWrapper.getValue();

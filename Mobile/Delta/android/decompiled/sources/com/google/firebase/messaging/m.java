@@ -13,17 +13,17 @@ import java.util.concurrent.Executor;
 public class m {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final Object f8790c = new Object();
+    public static final Object f8864c = new Object();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static h1 f8791d;
+    public static h1 f8865d;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f8792a;
+    public final Context f8866a;
     public final Executor b = new e3.n();
 
     public m(Context context) {
-        this.f8792a = context;
+        this.f8866a = context;
     }
 
     public static /* synthetic */ Task a(Context context, Intent intent, boolean z10, Task task) {
@@ -66,12 +66,12 @@ public class m {
 
     public static h1 f(Context context, String str) {
         h1 h1Var;
-        synchronized (f8790c) {
+        synchronized (f8864c) {
             try {
-                if (f8791d == null) {
-                    f8791d = new h1(context, str);
+                if (f8865d == null) {
+                    f8865d = new h1(context, str);
                 }
-                h1Var = f8791d;
+                h1Var = f8865d;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -85,7 +85,7 @@ public class m {
             intent.putExtra("rawData", Base64.decode(stringExtra, 0));
             intent.removeExtra("gcm.rawData64");
         }
-        return h(this.f8792a, intent);
+        return h(this.f8866a, intent);
     }
 
     @SuppressLint({"InlinedApi"})

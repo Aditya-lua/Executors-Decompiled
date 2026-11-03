@@ -1,16 +1,6 @@
 package com.squareup.workflow1.ui.backstack;
 
-import an.ViewEnvironment;
-import an.a0;
-import an.c0;
-import an.e0;
-import an.f;
-import an.f0;
-import an.g;
-import an.g0;
-import an.h;
-import an.h0;
-import an.m;
+import an.c;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -19,17 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.FrameLayout;
-import bn.d;
-import cn.c;
+import bn.a;
 import com.appsflyer.sdk_base.referrer.Payload;
 import com.squareup.workflow1.ui.backstack.BackStackContainer;
 import d5.i;
-import dn.a;
+import gt.l;
+import gt.s;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import jt.l;
-import jt.s;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.Unit;
@@ -46,10 +34,22 @@ import o5.p;
 import o5.y;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import zt.o;
+import xt.o;
+import ym.ViewEnvironment;
+import ym.a0;
+import ym.c0;
+import ym.e0;
+import ym.f;
+import ym.f0;
+import ym.g;
+import ym.g0;
+import ym.h;
+import ym.h0;
+import ym.m;
+import zm.d;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000X\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\b\u0017\u0018\u0000 \u00102\u00020\u0001:\u0002#,B1\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0004\u0012\b\b\u0002\u0010\u0007\u001a\u00020\u0006\u0012\b\b\u0002\u0010\b\u001a\u00020\u0006¢\u0006\u0004\b\t\u0010\nJ#\u0010\u0010\u001a\u00020\u000f2\n\u0010\f\u001a\u0006\u0012\u0002\b\u00030\u000b2\u0006\u0010\u000e\u001a\u00020\rH\u0004¢\u0006\u0004\b\u0010\u0010\u0011J)\u0010\u0017\u001a\u00020\u000f2\b\u0010\u0013\u001a\u0004\u0018\u00010\u00122\u0006\u0010\u0014\u001a\u00020\u00122\u0006\u0010\u0016\u001a\u00020\u0015H\u0014¢\u0006\u0004\b\u0017\u0010\u0018J\u0011\u0010\u001a\u001a\u0004\u0018\u00010\u0019H\u0014¢\u0006\u0004\b\u001a\u0010\u001bJ\u0017\u0010\u001d\u001a\u00020\u000f2\u0006\u0010\u001c\u001a\u00020\u0019H\u0014¢\u0006\u0004\b\u001d\u0010\u001eJ\u000f\u0010\u001f\u001a\u00020\u000fH\u0014¢\u0006\u0004\b\u001f\u0010 J\u000f\u0010!\u001a\u00020\u000fH\u0014¢\u0006\u0004\b!\u0010 R\u0014\u0010%\u001a\u00020\"8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b#\u0010$R\"\u0010(\u001a\u000e\u0012\b\u0012\u0006\u0012\u0002\b\u00030&\u0018\u00010\u000b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0017\u0010'R\u0016\u0010+\u001a\u0004\u0018\u00010\u00128BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b)\u0010*¨\u0006-"}, d2 = {"Lcom/squareup/workflow1/ui/backstack/BackStackContainer;", "Landroid/widget/FrameLayout;", "Landroid/content/Context;", "context", "Landroid/util/AttributeSet;", "attributeSet", "", "defStyle", "defStyleRes", "<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;II)V", "Lcn/c;", "newRendering", "Lan/y;", "newViewEnvironment", "", "c", "(Lcn/c;Lan/y;)V", "Landroid/view/View;", "oldViewMaybe", "newView", "", "popped", "b", "(Landroid/view/View;Landroid/view/View;Z)V", "Landroid/os/Parcelable;", "onSaveInstanceState", "()Landroid/os/Parcelable;", "state", "onRestoreInstanceState", "(Landroid/os/Parcelable;)V", "onAttachedToWindow", "()V", "onDetachedFromWindow", "Lcom/squareup/workflow1/ui/backstack/ViewStateCache;", "a", "Lcom/squareup/workflow1/ui/backstack/ViewStateCache;", "viewStateCache", "Lan/m;", "Lcn/c;", "currentRendering", "getCurrentView", "()Landroid/view/View;", "currentView", "SavedState", "wf1-container-android"}, k = 1, mv = {1, 6, 0}, xi = 48)
+@Metadata(d1 = {"\u0000X\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\b\u0017\u0018\u0000 \u00102\u00020\u0001:\u0002#,B1\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0004\u0012\b\b\u0002\u0010\u0007\u001a\u00020\u0006\u0012\b\b\u0002\u0010\b\u001a\u00020\u0006¢\u0006\u0004\b\t\u0010\nJ#\u0010\u0010\u001a\u00020\u000f2\n\u0010\f\u001a\u0006\u0012\u0002\b\u00030\u000b2\u0006\u0010\u000e\u001a\u00020\rH\u0004¢\u0006\u0004\b\u0010\u0010\u0011J)\u0010\u0017\u001a\u00020\u000f2\b\u0010\u0013\u001a\u0004\u0018\u00010\u00122\u0006\u0010\u0014\u001a\u00020\u00122\u0006\u0010\u0016\u001a\u00020\u0015H\u0014¢\u0006\u0004\b\u0017\u0010\u0018J\u0011\u0010\u001a\u001a\u0004\u0018\u00010\u0019H\u0014¢\u0006\u0004\b\u001a\u0010\u001bJ\u0017\u0010\u001d\u001a\u00020\u000f2\u0006\u0010\u001c\u001a\u00020\u0019H\u0014¢\u0006\u0004\b\u001d\u0010\u001eJ\u000f\u0010\u001f\u001a\u00020\u000fH\u0014¢\u0006\u0004\b\u001f\u0010 J\u000f\u0010!\u001a\u00020\u000fH\u0014¢\u0006\u0004\b!\u0010 R\u0014\u0010%\u001a\u00020\"8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b#\u0010$R\"\u0010(\u001a\u000e\u0012\b\u0012\u0006\u0012\u0002\b\u00030&\u0018\u00010\u000b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0017\u0010'R\u0016\u0010+\u001a\u0004\u0018\u00010\u00128BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b)\u0010*¨\u0006-"}, d2 = {"Lcom/squareup/workflow1/ui/backstack/BackStackContainer;", "Landroid/widget/FrameLayout;", "Landroid/content/Context;", "context", "Landroid/util/AttributeSet;", "attributeSet", "", "defStyle", "defStyleRes", "<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;II)V", "Lan/c;", "newRendering", "Lym/y;", "newViewEnvironment", "", "c", "(Lan/c;Lym/y;)V", "Landroid/view/View;", "oldViewMaybe", "newView", "", "popped", "b", "(Landroid/view/View;Landroid/view/View;Z)V", "Landroid/os/Parcelable;", "onSaveInstanceState", "()Landroid/os/Parcelable;", "state", "onRestoreInstanceState", "(Landroid/os/Parcelable;)V", "onAttachedToWindow", "()V", "onDetachedFromWindow", "Lcom/squareup/workflow1/ui/backstack/ViewStateCache;", "a", "Lcom/squareup/workflow1/ui/backstack/ViewStateCache;", "viewStateCache", "Lym/m;", "Lan/c;", "currentRendering", "getCurrentView", "()Landroid/view/View;", "currentView", "SavedState", "wf1-container-android"}, k = 1, mv = {1, 6, 0}, xi = 48)
 public class BackStackContainer extends FrameLayout {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
@@ -65,23 +65,23 @@ public class BackStackContainer extends FrameLayout {
     public c<m<?>> currentRendering;
 
     /* JADX INFO: renamed from: com.squareup.workflow1.ui.backstack.BackStackContainer$a, reason: from kotlin metadata */
-    @Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0086\u0003\u0018\u00002\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0003\u0010\u0004J8\u0010\r\u001a\u00020\f2\n\u0010\u0005\u001a\u0006\u0012\u0002\b\u00030\u00022\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\b2\n\b\u0002\u0010\u000b\u001a\u0004\u0018\u00010\nH\u0096\u0001¢\u0006\u0004\b\r\u0010\u000eR \u0010\u0012\u001a\u000e\u0012\n\b\u0000\u0012\u0006\u0012\u0002\b\u00030\u00020\u000f8\u0016X\u0096\u0005¢\u0006\u0006\u001a\u0004\b\u0010\u0010\u0011¨\u0006\u0013"}, d2 = {"Lcom/squareup/workflow1/ui/backstack/BackStackContainer$a;", "Lan/a0;", "Lcn/c;", "<init>", "()V", "initialRendering", "Lan/y;", "initialViewEnvironment", "Landroid/content/Context;", "contextForNewView", "Landroid/view/ViewGroup;", "container", "Landroid/view/View;", "b", "(Lcn/c;Lan/y;Landroid/content/Context;Landroid/view/ViewGroup;)Landroid/view/View;", "Lhu/c;", "getType", "()Lhu/c;", Payload.TYPE, "wf1-container-android"}, k = 1, mv = {1, 6, 0}, xi = 48)
+    @Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0086\u0003\u0018\u00002\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0003\u0010\u0004J8\u0010\r\u001a\u00020\f2\n\u0010\u0005\u001a\u0006\u0012\u0002\b\u00030\u00022\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\b2\n\b\u0002\u0010\u000b\u001a\u0004\u0018\u00010\nH\u0096\u0001¢\u0006\u0004\b\r\u0010\u000eR \u0010\u0012\u001a\u000e\u0012\n\b\u0000\u0012\u0006\u0012\u0002\b\u00030\u00020\u000f8\u0016X\u0096\u0005¢\u0006\u0006\u001a\u0004\b\u0010\u0010\u0011¨\u0006\u0013"}, d2 = {"Lcom/squareup/workflow1/ui/backstack/BackStackContainer$a;", "Lym/a0;", "Lan/c;", "<init>", "()V", "initialRendering", "Lym/y;", "initialViewEnvironment", "Landroid/content/Context;", "contextForNewView", "Landroid/view/ViewGroup;", "container", "Landroid/view/View;", "b", "(Lan/c;Lym/y;Landroid/content/Context;Landroid/view/ViewGroup;)Landroid/view/View;", "Lfu/c;", "getType", "()Lfu/c;", Payload.TYPE, "wf1-container-android"}, k = 1, mv = {1, 6, 0}, xi = 48)
     public static final class Companion implements a0<c<?>> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ f<c<?>> f9876a;
+        public final /* synthetic */ f<c<?>> f9957a;
 
         /* JADX INFO: renamed from: com.squareup.workflow1.ui.backstack.BackStackContainer$a$a, reason: collision with other inner class name */
-        @Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\t\u001a\u00020\b2\n\u0010\u0001\u001a\u0006\u0012\u0002\b\u00030\u00002\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u00042\b\u0010\u0007\u001a\u0004\u0018\u00010\u0006H\n¢\u0006\u0004\b\t\u0010\n"}, d2 = {"Lcn/c;", "initialRendering", "Lan/y;", "initialEnv", "Landroid/content/Context;", "context", "Landroid/view/ViewGroup;", "<anonymous parameter 3>", "Landroid/view/View;", "a", "(Lcn/c;Lan/y;Landroid/content/Context;Landroid/view/ViewGroup;)Landroid/view/View;"}, k = 3, mv = {1, 6, 0})
-        public static final class C0158a extends kotlin.jvm.internal.m implements o<c<?>, ViewEnvironment, Context, ViewGroup, View> {
+        @Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\t\u001a\u00020\b2\n\u0010\u0001\u001a\u0006\u0012\u0002\b\u00030\u00002\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u00042\b\u0010\u0007\u001a\u0004\u0018\u00010\u0006H\n¢\u0006\u0004\b\t\u0010\n"}, d2 = {"Lan/c;", "initialRendering", "Lym/y;", "initialEnv", "Landroid/content/Context;", "context", "Landroid/view/ViewGroup;", "<anonymous parameter 3>", "Landroid/view/View;", "a", "(Lan/c;Lym/y;Landroid/content/Context;Landroid/view/ViewGroup;)Landroid/view/View;"}, k = 3, mv = {1, 6, 0})
+        public static final class C0161a extends kotlin.jvm.internal.m implements o<c<?>, ViewEnvironment, Context, ViewGroup, View> {
 
             /* JADX INFO: renamed from: i, reason: collision with root package name */
-            public static final C0158a f9877i = new C0158a();
+            public static final C0161a f9958i = new C0161a();
 
             /* JADX INFO: renamed from: com.squareup.workflow1.ui.backstack.BackStackContainer$a$a$a, reason: collision with other inner class name */
             @Metadata(k = 3, mv = {1, 6, 0}, xi = 48)
-            public /* synthetic */ class C0159a extends k implements Function2<c<?>, ViewEnvironment, Unit> {
-                public C0159a(Object obj) {
+            public /* synthetic */ class C0162a extends k implements Function2<c<?>, ViewEnvironment, Unit> {
+                public C0162a(Object obj) {
                     super(2, obj, BackStackContainer.class, "update", "update(Lcom/squareup/workflow1/ui/backstack/BackStackScreen;Lcom/squareup/workflow1/ui/ViewEnvironment;)V", 0);
                 }
 
@@ -94,15 +94,15 @@ public class BackStackContainer extends FrameLayout {
                 @Override // kotlin.jvm.functions.Function2
                 public /* bridge */ /* synthetic */ Unit invoke(c<?> cVar, ViewEnvironment viewEnvironment) {
                     d(cVar, viewEnvironment);
-                    return Unit.f22483a;
+                    return Unit.f22938a;
                 }
             }
 
-            public C0158a() {
+            public C0161a() {
                 super(4);
             }
 
-            @Override // zt.o
+            @Override // xt.o
             @NotNull
             /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
             public final View e(@NotNull c<?> initialRendering, @NotNull ViewEnvironment initialEnv, @NotNull Context context, @Nullable ViewGroup viewGroup) {
@@ -110,9 +110,9 @@ public class BackStackContainer extends FrameLayout {
                 Intrinsics.checkNotNullParameter(initialEnv, "initialEnv");
                 Intrinsics.checkNotNullParameter(context, "context");
                 BackStackContainer backStackContainer = new BackStackContainer(context, null, 0, 0, 14, null);
-                backStackContainer.setId(a.f14762c);
+                backStackContainer.setId(a.f4354c);
                 backStackContainer.setLayoutParams(new ViewGroup.LayoutParams(-1, -1));
-                e0.a(backStackContainer, initialRendering, initialEnv, new C0159a(backStackContainer));
+                e0.a(backStackContainer, initialRendering, initialEnv, new C0162a(backStackContainer));
                 return backStackContainer;
             }
         }
@@ -121,32 +121,32 @@ public class BackStackContainer extends FrameLayout {
             this();
         }
 
-        @Override // an.a0
+        @Override // ym.a0
         @NotNull
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public View a(@NotNull c<?> initialRendering, @NotNull ViewEnvironment initialViewEnvironment, @NotNull Context contextForNewView, @Nullable ViewGroup container) {
             Intrinsics.checkNotNullParameter(initialRendering, "initialRendering");
             Intrinsics.checkNotNullParameter(initialViewEnvironment, "initialViewEnvironment");
             Intrinsics.checkNotNullParameter(contextForNewView, "contextForNewView");
-            return this.f9876a.a(initialRendering, initialViewEnvironment, contextForNewView, container);
+            return this.f9957a.a(initialRendering, initialViewEnvironment, contextForNewView, container);
         }
 
-        @Override // an.a0
+        @Override // ym.a0
         @NotNull
-        public hu.c<? super c<?>> getType() {
-            return this.f9876a.getType();
+        public fu.c<? super c<?>> getType() {
+            return this.f9957a.getType();
         }
 
         public Companion() {
-            this.f9876a = new f<>(d0.b(c.class), C0158a.f9877i);
+            this.f9957a = new f<>(d0.b(c.class), C0161a.f9958i);
         }
     }
 
-    @Metadata(d1 = {"\u0000\u000e\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u0006\u0012\u0002\b\u00030\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"", "it", "Lan/m;", "a", "(Ljava/lang/Object;)Lan/m;"}, k = 3, mv = {1, 6, 0})
+    @Metadata(d1 = {"\u0000\u000e\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0003\u001a\u0006\u0012\u0002\b\u00030\u00022\u0006\u0010\u0001\u001a\u00020\u0000H\n¢\u0006\u0004\b\u0003\u0010\u0004"}, d2 = {"", "it", "Lym/m;", "a", "(Ljava/lang/Object;)Lym/m;"}, k = 3, mv = {1, 6, 0})
     public static final class b extends kotlin.jvm.internal.m implements Function1<Object, m<?>> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public static final b f9878i = new b();
+        public static final b f9959i = new b();
 
         public b() {
             super(1);
@@ -188,7 +188,7 @@ public class BackStackContainer extends FrameLayout {
             addView(newView);
             return;
         }
-        int i10 = a.f14761a;
+        int i10 = a.f4353a;
         View viewFindViewById = oldViewMaybe.findViewById(i10);
         View viewFindViewById2 = newView.findViewById(i10);
         if (viewFindViewById == null || viewFindViewById2 == null) {
@@ -215,8 +215,8 @@ public class BackStackContainer extends FrameLayout {
         List<m<?>> listA;
         Intrinsics.checkNotNullParameter(newRendering, "newRendering");
         Intrinsics.checkNotNullParameter(newViewEnvironment, "newViewEnvironment");
-        ViewEnvironment viewEnvironmentC = newViewEnvironment.c(s.a(cn.a.INSTANCE, newRendering.a().isEmpty() ? cn.a.First : cn.a.Other));
-        c cVarD = newRendering.d(b.f9878i);
+        ViewEnvironment viewEnvironmentC = newViewEnvironment.c(s.a(an.a.INSTANCE, newRendering.a().isEmpty() ? an.a.First : an.a.Other));
+        c cVarD = newRendering.d(b.f9959i);
         View currentView = getCurrentView();
         if (currentView != null) {
             View view = e0.b(currentView, cVarD.c()) ? currentView : null;
@@ -230,8 +230,8 @@ public class BackStackContainer extends FrameLayout {
         Object objC = cVarD.c();
         Context context = getContext();
         Intrinsics.checkNotNullExpressionValue(context, "this.context");
-        View viewC = an.d0.c(c0Var, objC, viewEnvironmentC, context, this, new f0() { // from class: cn.b
-            @Override // an.f0
+        View viewC = ym.d0.c(c0Var, objC, viewEnvironmentC, context, this, new f0() { // from class: an.b
+            @Override // ym.f0
             public final void a(View view2, Function0 function0) {
                 BackStackContainer.d(view2, function0);
             }
@@ -254,7 +254,7 @@ public class BackStackContainer extends FrameLayout {
         }
         b(currentView, viewC, z10);
         if (currentView != null && (dVarC = d.INSTANCE.c(currentView)) != null) {
-            dVarC.L();
+            dVarC.K();
         }
         this.currentRendering = cVarD;
     }
@@ -262,7 +262,7 @@ public class BackStackContainer extends FrameLayout {
     @Override // android.view.ViewGroup, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        i iVarC = bn.c.f4262a.c(this);
+        i iVarC = zm.c.f38190a.c(this);
         g.Companion companion = g.INSTANCE;
         g0<?> g0VarD = h0.d(this);
         Object objC = g0VarD == null ? null : g0VarD.c();
@@ -287,7 +287,7 @@ public class BackStackContainer extends FrameLayout {
         if (savedState != null) {
             this.viewStateCache.f(savedState.getSavedViewState());
             super.onRestoreInstanceState(((SavedState) state).getSuperState());
-            unit = Unit.f22483a;
+            unit = Unit.f22938a;
         }
         if (unit == null) {
             super.onRestoreInstanceState(super.onSaveInstanceState());

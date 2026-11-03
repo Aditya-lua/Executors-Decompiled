@@ -13,14 +13,14 @@ public final class zzf extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzf> CREATOR = new z();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final m3 f6044f;
+    public final m3 f6117f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final m3 f6045g;
+    public final m3 f6118g;
 
     public zzf(m3 m3Var, m3 m3Var2) {
-        this.f6044f = m3Var;
-        this.f6045g = m3Var2;
+        this.f6117f = m3Var;
+        this.f6118g = m3Var2;
     }
 
     public final boolean equals(Object obj) {
@@ -28,19 +28,19 @@ public final class zzf extends AbstractSafeParcelable {
             return false;
         }
         zzf zzfVar = (zzf) obj;
-        return k.b(this.f6044f, zzfVar.f6044f) && k.b(this.f6045g, zzfVar.f6045g);
+        return k.b(this.f6117f, zzfVar.f6117f) && k.b(this.f6118g, zzfVar.f6118g);
     }
 
     public final int hashCode() {
-        return k.c(this.f6044f, this.f6045g);
+        return k.c(this.f6117f, this.f6118g);
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(@NonNull Parcel parcel, int i10) {
-        m3 m3Var = this.f6044f;
+        m3 m3Var = this.f6117f;
         int iA = o9.b.a(parcel);
         o9.b.g(parcel, 1, m3Var == null ? null : m3Var.p(), false);
-        m3 m3Var2 = this.f6045g;
+        m3 m3Var2 = this.f6118g;
         o9.b.g(parcel, 2, m3Var2 != null ? m3Var2.p() : null, false);
         o9.b.b(parcel, iA);
     }

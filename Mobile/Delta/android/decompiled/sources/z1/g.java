@@ -4,20 +4,20 @@ package z1;
 public class g<T> implements f<T> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object[] f37086a;
+    public final Object[] f37781a;
     public int b;
 
     public g(int i10) {
         if (i10 <= 0) {
             throw new IllegalArgumentException("The max pool size must be > 0");
         }
-        this.f37086a = new Object[i10];
+        this.f37781a = new Object[i10];
     }
 
     @Override // z1.f
     public boolean a(T t8) {
         int i10 = this.b;
-        Object[] objArr = this.f37086a;
+        Object[] objArr = this.f37781a;
         if (i10 >= objArr.length) {
             return false;
         }
@@ -33,7 +33,7 @@ public class g<T> implements f<T> {
             return null;
         }
         int i11 = i10 - 1;
-        Object[] objArr = this.f37086a;
+        Object[] objArr = this.f37781a;
         T t8 = (T) objArr[i11];
         objArr[i11] = null;
         this.b = i10 - 1;
@@ -48,7 +48,7 @@ public class g<T> implements f<T> {
         for (int i11 = 0; i11 < i10; i11++) {
             T t8 = tArr[i11];
             int i12 = this.b;
-            Object[] objArr = this.f37086a;
+            Object[] objArr = this.f37781a;
             if (i12 < objArr.length) {
                 objArr[i12] = t8;
                 this.b = i12 + 1;

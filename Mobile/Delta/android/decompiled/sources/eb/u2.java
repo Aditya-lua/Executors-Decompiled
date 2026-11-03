@@ -6,20 +6,20 @@ import java.io.IOException;
 public abstract class u2 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final u2 f15410a = new s2("base64()", "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", '=');
+    public static final u2 f16024a = new s2("base64()", "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", '=');
     public static final u2 b = new s2("base64Url()", "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_", '=');
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final u2 f15411c = new t2("base32()", "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567", '=');
+    public static final u2 f16025c = new t2("base32()", "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567", '=');
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final u2 f15412d = new t2("base32Hex()", "0123456789ABCDEFGHIJKLMNOPQRSTUV", '=');
+    public static final u2 f16026d = new t2("base32Hex()", "0123456789ABCDEFGHIJKLMNOPQRSTUV", '=');
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final u2 f15413e = new r2("base16()", "0123456789ABCDEF");
+    public static final u2 f16027e = new r2("base16()", "0123456789ABCDEF");
 
     public static u2 d() {
-        return f15413e;
+        return f16027e;
     }
 
     public abstract void a(Appendable appendable, byte[] bArr, int i10, int i11);

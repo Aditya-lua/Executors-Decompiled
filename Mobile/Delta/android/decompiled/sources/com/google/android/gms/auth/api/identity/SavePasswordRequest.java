@@ -16,32 +16,32 @@ public class SavePasswordRequest extends AbstractSafeParcelable {
     public static final Parcelable.Creator<SavePasswordRequest> CREATOR = new i();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final SignInPassword f5596f;
+    public final SignInPassword f5669f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final String f5597g;
+    public final String f5670g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final int f5598h;
+    public final int f5671h;
 
     @Deprecated
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public SignInPassword f5599a;
+        public SignInPassword f5672a;
         public String b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public int f5600c;
+        public int f5673c;
 
         @NonNull
         public SavePasswordRequest a() {
-            return new SavePasswordRequest(this.f5599a, this.b, this.f5600c);
+            return new SavePasswordRequest(this.f5672a, this.b, this.f5673c);
         }
 
         @NonNull
         public a b(@NonNull SignInPassword signInPassword) {
-            this.f5599a = signInPassword;
+            this.f5672a = signInPassword;
             return this;
         }
 
@@ -53,15 +53,15 @@ public class SavePasswordRequest extends AbstractSafeParcelable {
 
         @NonNull
         public final a d(int i10) {
-            this.f5600c = i10;
+            this.f5673c = i10;
             return this;
         }
     }
 
     public SavePasswordRequest(SignInPassword signInPassword, String str, int i10) {
-        this.f5596f = (SignInPassword) m.l(signInPassword);
-        this.f5597g = str;
-        this.f5598h = i10;
+        this.f5669f = (SignInPassword) m.l(signInPassword);
+        this.f5670g = str;
+        this.f5671h = i10;
     }
 
     @NonNull
@@ -74,8 +74,8 @@ public class SavePasswordRequest extends AbstractSafeParcelable {
         m.l(savePasswordRequest);
         a aVarV3 = v3();
         aVarV3.b(savePasswordRequest.w3());
-        aVarV3.d(savePasswordRequest.f5598h);
-        String str = savePasswordRequest.f5597g;
+        aVarV3.d(savePasswordRequest.f5671h);
+        String str = savePasswordRequest.f5670g;
         if (str != null) {
             aVarV3.c(str);
         }
@@ -87,24 +87,24 @@ public class SavePasswordRequest extends AbstractSafeParcelable {
             return false;
         }
         SavePasswordRequest savePasswordRequest = (SavePasswordRequest) obj;
-        return k.b(this.f5596f, savePasswordRequest.f5596f) && k.b(this.f5597g, savePasswordRequest.f5597g) && this.f5598h == savePasswordRequest.f5598h;
+        return k.b(this.f5669f, savePasswordRequest.f5669f) && k.b(this.f5670g, savePasswordRequest.f5670g) && this.f5671h == savePasswordRequest.f5671h;
     }
 
     public int hashCode() {
-        return k.c(this.f5596f, this.f5597g);
+        return k.c(this.f5669f, this.f5670g);
     }
 
     @NonNull
     public SignInPassword w3() {
-        return this.f5596f;
+        return this.f5669f;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
         int iA = o9.b.a(parcel);
         o9.b.t(parcel, 1, w3(), i10, false);
-        o9.b.v(parcel, 2, this.f5597g, false);
-        o9.b.n(parcel, 3, this.f5598h);
+        o9.b.v(parcel, 2, this.f5670g, false);
+        o9.b.n(parcel, 3, this.f5671h);
         o9.b.b(parcel, iA);
     }
 }

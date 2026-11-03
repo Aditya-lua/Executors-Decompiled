@@ -8,16 +8,16 @@ import java.util.List;
 public class q implements c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f25204a;
+    public final String f26025a;
     public final List<c> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final boolean f25205c;
+    public final boolean f26026c;
 
     public q(String str, List<c> list, boolean z10) {
-        this.f25204a = str;
+        this.f26025a = str;
         this.b = list;
-        this.f25205c = z10;
+        this.f26026c = z10;
     }
 
     @Override // n7.c
@@ -30,14 +30,14 @@ public class q implements c {
     }
 
     public String c() {
-        return this.f25204a;
+        return this.f26025a;
     }
 
     public boolean d() {
-        return this.f25205c;
+        return this.f26026c;
     }
 
     public String toString() {
-        return "ShapeGroup{name='" + this.f25204a + "' Shapes: " + Arrays.toString(this.b.toArray()) + '}';
+        return "ShapeGroup{name='" + this.f26025a + "' Shapes: " + Arrays.toString(this.b.toArray()) + '}';
     }
 }

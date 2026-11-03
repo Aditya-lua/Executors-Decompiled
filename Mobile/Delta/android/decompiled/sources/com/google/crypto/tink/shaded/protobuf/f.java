@@ -9,11 +9,11 @@ import java.util.RandomAccess;
 public final class f extends c<Boolean> implements a0.a, RandomAccess {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final f f8434d = new f(new boolean[0], 0, false);
+    public static final f f8508d = new f(new boolean[0], 0, false);
     public boolean[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f8435c;
+    public int f8509c;
 
     public f() {
         this(new boolean[10], 0, true);
@@ -27,11 +27,11 @@ public final class f extends c<Boolean> implements a0.a, RandomAccess {
             return super.addAll(collection);
         }
         f fVar = (f) collection;
-        int i10 = fVar.f8435c;
+        int i10 = fVar.f8509c;
         if (i10 == 0) {
             return false;
         }
-        int i11 = this.f8435c;
+        int i11 = this.f8509c;
         if (Integer.MAX_VALUE - i11 < i10) {
             throw new OutOfMemoryError();
         }
@@ -40,8 +40,8 @@ public final class f extends c<Boolean> implements a0.a, RandomAccess {
         if (i12 > zArr.length) {
             this.b = Arrays.copyOf(zArr, i12);
         }
-        System.arraycopy(fVar.b, 0, this.b, this.f8435c, fVar.f8435c);
-        this.f8435c = i12;
+        System.arraycopy(fVar.b, 0, this.b, this.f8509c, fVar.f8509c);
+        this.f8509c = i12;
         ((AbstractList) this).modCount++;
         return true;
     }
@@ -67,7 +67,7 @@ public final class f extends c<Boolean> implements a0.a, RandomAccess {
     public final void d(int i10, boolean z10) {
         int i11;
         a();
-        if (i10 < 0 || i10 > (i11 = this.f8435c)) {
+        if (i10 < 0 || i10 > (i11 = this.f8509c)) {
             throw new IndexOutOfBoundsException(i(i10));
         }
         boolean[] zArr = this.b;
@@ -76,17 +76,17 @@ public final class f extends c<Boolean> implements a0.a, RandomAccess {
         } else {
             boolean[] zArr2 = new boolean[((i11 * 3) / 2) + 1];
             System.arraycopy(zArr, 0, zArr2, 0, i10);
-            System.arraycopy(this.b, i10, zArr2, i10 + 1, this.f8435c - i10);
+            System.arraycopy(this.b, i10, zArr2, i10 + 1, this.f8509c - i10);
             this.b = zArr2;
         }
         this.b[i10] = z10;
-        this.f8435c++;
+        this.f8509c++;
         ((AbstractList) this).modCount++;
     }
 
     public void e(boolean z10) {
         a();
-        int i10 = this.f8435c;
+        int i10 = this.f8509c;
         boolean[] zArr = this.b;
         if (i10 == zArr.length) {
             boolean[] zArr2 = new boolean[((i10 * 3) / 2) + 1];
@@ -94,8 +94,8 @@ public final class f extends c<Boolean> implements a0.a, RandomAccess {
             this.b = zArr2;
         }
         boolean[] zArr3 = this.b;
-        int i11 = this.f8435c;
-        this.f8435c = i11 + 1;
+        int i11 = this.f8509c;
+        this.f8509c = i11 + 1;
         zArr3[i11] = z10;
     }
 
@@ -108,11 +108,11 @@ public final class f extends c<Boolean> implements a0.a, RandomAccess {
             return super.equals(obj);
         }
         f fVar = (f) obj;
-        if (this.f8435c != fVar.f8435c) {
+        if (this.f8509c != fVar.f8509c) {
             return false;
         }
         boolean[] zArr = fVar.b;
-        for (int i10 = 0; i10 < this.f8435c; i10++) {
+        for (int i10 = 0; i10 < this.f8509c; i10++) {
             if (this.b[i10] != zArr[i10]) {
                 return false;
             }
@@ -121,7 +121,7 @@ public final class f extends c<Boolean> implements a0.a, RandomAccess {
     }
 
     public final void f(int i10) {
-        if (i10 < 0 || i10 >= this.f8435c) {
+        if (i10 < 0 || i10 >= this.f8509c) {
             throw new IndexOutOfBoundsException(i(i10));
         }
     }
@@ -140,14 +140,14 @@ public final class f extends c<Boolean> implements a0.a, RandomAccess {
     @Override // com.google.crypto.tink.shaded.protobuf.c, java.util.AbstractList, java.util.Collection, java.util.List
     public int hashCode() {
         int iC = 1;
-        for (int i10 = 0; i10 < this.f8435c; i10++) {
+        for (int i10 = 0; i10 < this.f8509c; i10++) {
             iC = (iC * 31) + a0.c(this.b[i10]);
         }
         return iC;
     }
 
     public final String i(int i10) {
-        return "Index:" + i10 + ", Size:" + this.f8435c;
+        return "Index:" + i10 + ", Size:" + this.f8509c;
     }
 
     @Override // java.util.AbstractList, java.util.List
@@ -168,8 +168,8 @@ public final class f extends c<Boolean> implements a0.a, RandomAccess {
     @Override // com.google.crypto.tink.shaded.protobuf.a0.i
     /* JADX INFO: renamed from: k, reason: merged with bridge method [inline-methods] */
     public a0.a o(int i10) {
-        if (i10 >= this.f8435c) {
-            return new f(Arrays.copyOf(this.b, i10), this.f8435c, true);
+        if (i10 >= this.f8509c) {
+            return new f(Arrays.copyOf(this.b, i10), this.f8509c, true);
         }
         throw new IllegalArgumentException();
     }
@@ -181,11 +181,11 @@ public final class f extends c<Boolean> implements a0.a, RandomAccess {
         f(i10);
         boolean[] zArr = this.b;
         boolean z10 = zArr[i10];
-        int i11 = this.f8435c;
+        int i11 = this.f8509c;
         if (i10 < i11 - 1) {
             System.arraycopy(zArr, i10 + 1, zArr, i10, (i11 - i10) - 1);
         }
-        this.f8435c--;
+        this.f8509c--;
         ((AbstractList) this).modCount++;
         return Boolean.valueOf(z10);
     }
@@ -212,19 +212,19 @@ public final class f extends c<Boolean> implements a0.a, RandomAccess {
             throw new IndexOutOfBoundsException("toIndex < fromIndex");
         }
         boolean[] zArr = this.b;
-        System.arraycopy(zArr, i11, zArr, i10, this.f8435c - i11);
-        this.f8435c -= i11 - i10;
+        System.arraycopy(zArr, i11, zArr, i10, this.f8509c - i11);
+        this.f8509c -= i11 - i10;
         ((AbstractList) this).modCount++;
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public int size() {
-        return this.f8435c;
+        return this.f8509c;
     }
 
     public f(boolean[] zArr, int i10, boolean z10) {
         super(z10);
         this.b = zArr;
-        this.f8435c = i10;
+        this.f8509c = i10;
     }
 }

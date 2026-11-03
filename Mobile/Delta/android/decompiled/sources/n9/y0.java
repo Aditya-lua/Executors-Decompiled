@@ -12,26 +12,26 @@ import java.util.Objects;
 public final class y0 extends l0 {
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final IBinder f25308g;
+    public final IBinder f26129g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final /* synthetic */ c f25309h;
+    public final /* synthetic */ c f26130h;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public y0(c cVar, int i10, IBinder iBinder, Bundle bundle) {
         super(cVar, i10, bundle);
         Objects.requireNonNull(cVar);
-        this.f25309h = cVar;
-        this.f25308g = iBinder;
+        this.f26130h = cVar;
+        this.f26129g = iBinder;
     }
 
     @Override // n9.l0
     public final boolean e() {
         try {
-            IBinder iBinder = this.f25308g;
+            IBinder iBinder = this.f26129g;
             m.l(iBinder);
             String interfaceDescriptor = iBinder.getInterfaceDescriptor();
-            c cVar = this.f25309h;
+            c cVar = this.f26130h;
             if (!cVar.getServiceDescriptor().equals(interfaceDescriptor)) {
                 String serviceDescriptor = cVar.getServiceDescriptor();
                 StringBuilder sb2 = new StringBuilder(String.valueOf(serviceDescriptor).length() + 34 + String.valueOf(interfaceDescriptor).length());
@@ -42,7 +42,7 @@ public final class y0 extends l0 {
                 Log.w("GmsClient", sb2.toString());
                 return false;
             }
-            IInterface iInterfaceCreateServiceInterface = cVar.createServiceInterface(this.f25308g);
+            IInterface iInterfaceCreateServiceInterface = cVar.createServiceInterface(this.f26129g);
             if (iInterfaceCreateServiceInterface == null || !(cVar.zze(2, 4, iInterfaceCreateServiceInterface) || cVar.zze(3, 4, iInterfaceCreateServiceInterface))) {
                 return false;
             }
@@ -62,7 +62,7 @@ public final class y0 extends l0 {
 
     @Override // n9.l0
     public final void f(ConnectionResult connectionResult) {
-        c cVar = this.f25309h;
+        c cVar = this.f26130h;
         if (cVar.zzl() != null) {
             cVar.zzl().onConnectionFailed(connectionResult);
         }

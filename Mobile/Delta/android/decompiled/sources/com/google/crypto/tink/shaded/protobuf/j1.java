@@ -16,20 +16,20 @@ import java.util.TreeMap;
 public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public List<j1<K, V>.d> f8475a;
+    public List<j1<K, V>.d> f8549a;
     public Map<K, V> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f8476c;
+    public boolean f8550c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public volatile j1<K, V>.f f8477d;
+    public volatile j1<K, V>.f f8551d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public Map<K, V> f8478e;
+    public Map<K, V> f8552e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public volatile j1<K, V>.c f8479f;
+    public volatile j1<K, V>.c f8553f;
 
     /* JADX INFO: Add missing generic type declarations: [FieldDescriptorType] */
     public class a<FieldDescriptorType> extends j1<FieldDescriptorType, Object> {
@@ -79,7 +79,7 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
     public class d implements Map.Entry<K, V>, Comparable<j1<K, V>.d> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final K f8482a;
+        public final K f8556a;
         public V b;
 
         public d(j1 j1Var, Map.Entry<K, V> entry) {
@@ -102,7 +102,7 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
         @Override // java.util.Map.Entry
         /* JADX INFO: renamed from: c, reason: merged with bridge method [inline-methods] */
         public K getKey() {
-            return this.f8482a;
+            return this.f8556a;
         }
 
         @Override // java.util.Map.Entry
@@ -114,7 +114,7 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
                 return false;
             }
             Map.Entry entry = (Map.Entry) obj;
-            return b(this.f8482a, entry.getKey()) && b(this.b, entry.getValue());
+            return b(this.f8556a, entry.getKey()) && b(this.b, entry.getValue());
         }
 
         @Override // java.util.Map.Entry
@@ -124,7 +124,7 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
 
         @Override // java.util.Map.Entry
         public int hashCode() {
-            K k10 = this.f8482a;
+            K k10 = this.f8556a;
             int iHashCode = k10 == null ? 0 : k10.hashCode();
             V v5 = this.b;
             return iHashCode ^ (v5 != null ? v5.hashCode() : 0);
@@ -139,11 +139,11 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
         }
 
         public String toString() {
-            return this.f8482a + "=" + this.b;
+            return this.f8556a + "=" + this.b;
         }
 
         public d(K k10, V v5) {
-            this.f8482a = k10;
+            this.f8556a = k10;
             this.b = v5;
         }
     }
@@ -214,8 +214,8 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
     @Override // java.util.AbstractMap, java.util.Map
     public void clear() {
         g();
-        if (!this.f8475a.isEmpty()) {
-            this.f8475a.clear();
+        if (!this.f8549a.isEmpty()) {
+            this.f8549a.clear();
         }
         if (this.b.isEmpty()) {
             return;
@@ -231,10 +231,10 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
 
     @Override // java.util.AbstractMap, java.util.Map
     public Set<Map.Entry<K, V>> entrySet() {
-        if (this.f8477d == null) {
-            this.f8477d = new f(this, null);
+        if (this.f8551d == null) {
+            this.f8551d = new f(this, null);
         }
-        return this.f8477d;
+        return this.f8551d;
     }
 
     @Override // java.util.AbstractMap, java.util.Map
@@ -275,13 +275,13 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
         int i11;
         int i12;
         int iCompareTo;
-        int size = this.f8475a.size();
+        int size = this.f8549a.size();
         int i13 = size - 1;
         if (i13 < 0) {
             i10 = 0;
             while (i10 <= i13) {
                 i12 = (i10 + i13) / 2;
-                iCompareTo = k10.compareTo(this.f8475a.get(i12).getKey());
+                iCompareTo = k10.compareTo(this.f8549a.get(i12).getKey());
                 if (iCompareTo < 0) {
                     i13 = i12 - 1;
                 } else {
@@ -293,7 +293,7 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
             }
             i11 = i10 + 1;
         } else {
-            int iCompareTo2 = k10.compareTo(this.f8475a.get(i13).getKey());
+            int iCompareTo2 = k10.compareTo(this.f8549a.get(i13).getKey());
             if (iCompareTo2 > 0) {
                 i11 = size + 1;
             } else {
@@ -303,7 +303,7 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
                 i10 = 0;
                 while (i10 <= i13) {
                     i12 = (i10 + i13) / 2;
-                    iCompareTo = k10.compareTo(this.f8475a.get(i12).getKey());
+                    iCompareTo = k10.compareTo(this.f8549a.get(i12).getKey());
                     if (iCompareTo < 0) {
                         i13 = i12 - 1;
                     } else {
@@ -320,7 +320,7 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
     }
 
     public final void g() {
-        if (this.f8476c) {
+        if (this.f8550c) {
             throw new UnsupportedOperationException();
         }
     }
@@ -329,7 +329,7 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
     public V get(Object obj) {
         Comparable comparable = (Comparable) obj;
         int iF = f(comparable);
-        return iF >= 0 ? this.f8475a.get(iF).getValue() : this.b.get(comparable);
+        return iF >= 0 ? this.f8549a.get(iF).getValue() : this.b.get(comparable);
     }
 
     @Override // java.util.AbstractMap, java.util.Map
@@ -337,32 +337,32 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
         int iL = l();
         int iHashCode = 0;
         for (int i10 = 0; i10 < iL; i10++) {
-            iHashCode += this.f8475a.get(i10).hashCode();
+            iHashCode += this.f8549a.get(i10).hashCode();
         }
         return m() > 0 ? iHashCode + this.b.hashCode() : iHashCode;
     }
 
     public Set<Map.Entry<K, V>> i() {
-        if (this.f8479f == null) {
-            this.f8479f = new c(this, null);
+        if (this.f8553f == null) {
+            this.f8553f = new c(this, null);
         }
-        return this.f8479f;
+        return this.f8553f;
     }
 
     public final void j() {
         g();
-        if (!this.f8475a.isEmpty() || (this.f8475a instanceof ArrayList)) {
+        if (!this.f8549a.isEmpty() || (this.f8549a instanceof ArrayList)) {
             return;
         }
-        this.f8475a = new ArrayList(16);
+        this.f8549a = new ArrayList(16);
     }
 
     public Map.Entry<K, V> k(int i10) {
-        return this.f8475a.get(i10);
+        return this.f8549a.get(i10);
     }
 
     public int l() {
-        return this.f8475a.size();
+        return this.f8549a.size();
     }
 
     public int m() {
@@ -378,22 +378,22 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
         if (this.b.isEmpty() && !(this.b instanceof TreeMap)) {
             TreeMap treeMap = new TreeMap();
             this.b = treeMap;
-            this.f8478e = treeMap.descendingMap();
+            this.f8552e = treeMap.descendingMap();
         }
         return (SortedMap) this.b;
     }
 
     public boolean p() {
-        return this.f8476c;
+        return this.f8550c;
     }
 
     public void q() {
-        if (this.f8476c) {
+        if (this.f8550c) {
             return;
         }
         this.b = this.b.isEmpty() ? Collections.EMPTY_MAP : Collections.unmodifiableMap(this.b);
-        this.f8478e = this.f8478e.isEmpty() ? Collections.EMPTY_MAP : Collections.unmodifiableMap(this.f8478e);
-        this.f8476c = true;
+        this.f8552e = this.f8552e.isEmpty() ? Collections.EMPTY_MAP : Collections.unmodifiableMap(this.f8552e);
+        this.f8550c = true;
     }
 
     @Override // java.util.AbstractMap, java.util.Map
@@ -414,32 +414,32 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
         g();
         int iF = f(k10);
         if (iF >= 0) {
-            return this.f8475a.get(iF).setValue(v5);
+            return this.f8549a.get(iF).setValue(v5);
         }
         j();
         int i10 = -(iF + 1);
         if (i10 >= 16) {
             return o().put(k10, v5);
         }
-        if (this.f8475a.size() == 16) {
-            j1<K, V>.d dVarRemove = this.f8475a.remove(15);
+        if (this.f8549a.size() == 16) {
+            j1<K, V>.d dVarRemove = this.f8549a.remove(15);
             o().put(dVarRemove.getKey(), dVarRemove.getValue());
         }
-        this.f8475a.add(i10, new d(k10, v5));
+        this.f8549a.add(i10, new d(k10, v5));
         return null;
     }
 
     @Override // java.util.AbstractMap, java.util.Map
     public int size() {
-        return this.f8475a.size() + this.b.size();
+        return this.f8549a.size() + this.b.size();
     }
 
     public final V t(int i10) {
         g();
-        V value = this.f8475a.remove(i10).getValue();
+        V value = this.f8549a.remove(i10).getValue();
         if (!this.b.isEmpty()) {
             Iterator<Map.Entry<K, V>> it = o().entrySet().iterator();
-            this.f8475a.add(new d(this, it.next()));
+            this.f8549a.add(new d(this, it.next()));
             it.remove();
         }
         return value;
@@ -448,16 +448,16 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
     public class b implements Iterator<Map.Entry<K, V>> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public int f8480a;
+        public int f8554a;
         public Iterator<Map.Entry<K, V>> b;
 
         public b() {
-            this.f8480a = j1.this.f8475a.size();
+            this.f8554a = j1.this.f8549a.size();
         }
 
         public final Iterator<Map.Entry<K, V>> b() {
             if (this.b == null) {
-                this.b = j1.this.f8478e.entrySet().iterator();
+                this.b = j1.this.f8552e.entrySet().iterator();
             }
             return this.b;
         }
@@ -468,16 +468,16 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
             if (b().hasNext()) {
                 return b().next();
             }
-            List list = j1.this.f8475a;
-            int i10 = this.f8480a - 1;
-            this.f8480a = i10;
+            List list = j1.this.f8549a;
+            int i10 = this.f8554a - 1;
+            this.f8554a = i10;
             return (Map.Entry) list.get(i10);
         }
 
         @Override // java.util.Iterator
         public boolean hasNext() {
-            int i10 = this.f8480a;
-            return (i10 > 0 && i10 <= j1.this.f8475a.size()) || b().hasNext();
+            int i10 = this.f8554a;
+            return (i10 > 0 && i10 <= j1.this.f8549a.size()) || b().hasNext();
         }
 
         @Override // java.util.Iterator
@@ -493,35 +493,35 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
     public class e implements Iterator<Map.Entry<K, V>> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public int f8484a;
+        public int f8558a;
         public boolean b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public Iterator<Map.Entry<K, V>> f8485c;
+        public Iterator<Map.Entry<K, V>> f8559c;
 
         public e() {
-            this.f8484a = -1;
+            this.f8558a = -1;
         }
 
         public final Iterator<Map.Entry<K, V>> b() {
-            if (this.f8485c == null) {
-                this.f8485c = j1.this.b.entrySet().iterator();
+            if (this.f8559c == null) {
+                this.f8559c = j1.this.b.entrySet().iterator();
             }
-            return this.f8485c;
+            return this.f8559c;
         }
 
         @Override // java.util.Iterator
         /* JADX INFO: renamed from: d, reason: merged with bridge method [inline-methods] */
         public Map.Entry<K, V> next() {
             this.b = true;
-            int i10 = this.f8484a + 1;
-            this.f8484a = i10;
-            return i10 < j1.this.f8475a.size() ? (Map.Entry) j1.this.f8475a.get(this.f8484a) : b().next();
+            int i10 = this.f8558a + 1;
+            this.f8558a = i10;
+            return i10 < j1.this.f8549a.size() ? (Map.Entry) j1.this.f8549a.get(this.f8558a) : b().next();
         }
 
         @Override // java.util.Iterator
         public boolean hasNext() {
-            return this.f8484a + 1 < j1.this.f8475a.size() || (!j1.this.b.isEmpty() && b().hasNext());
+            return this.f8558a + 1 < j1.this.f8549a.size() || (!j1.this.b.isEmpty() && b().hasNext());
         }
 
         @Override // java.util.Iterator
@@ -531,13 +531,13 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
             }
             this.b = false;
             j1.this.g();
-            if (this.f8484a >= j1.this.f8475a.size()) {
+            if (this.f8558a >= j1.this.f8549a.size()) {
                 b().remove();
                 return;
             }
             j1 j1Var = j1.this;
-            int i10 = this.f8484a;
-            this.f8484a = i10 - 1;
+            int i10 = this.f8558a;
+            this.f8558a = i10 - 1;
             j1Var.t(i10);
         }
 
@@ -547,9 +547,9 @@ public class j1<K extends Comparable<K>, V> extends AbstractMap<K, V> {
     }
 
     public j1() {
-        this.f8475a = Collections.EMPTY_LIST;
+        this.f8549a = Collections.EMPTY_LIST;
         Map<K, V> map = Collections.EMPTY_MAP;
         this.b = map;
-        this.f8478e = map;
+        this.f8552e = map;
     }
 }

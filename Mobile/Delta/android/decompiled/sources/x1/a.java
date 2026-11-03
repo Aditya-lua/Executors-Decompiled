@@ -11,14 +11,14 @@ public final class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final int[] f34678a = new int[0];
+    public static final int[] f35176a = new int[0];
 
     @NotNull
     public static final long[] b = new long[0];
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static final Object[] f34679c = new Object[0];
+    public static final Object[] f35177c = new Object[0];
 
     public static final int a(@NotNull int[] array, int i10, int i11) {
         Intrinsics.checkNotNullParameter(array, "array");

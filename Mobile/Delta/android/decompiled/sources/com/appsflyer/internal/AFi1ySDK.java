@@ -190,7 +190,7 @@ public abstract class AFi1ySDK {
                 pair = new Pair(str2, Boolean.valueOf(linkProperties.isPrivateDnsActive()));
             }
         }
-        return new NetworkTroubleshootingData(aFi1xSDKUnregisterClient.unregisterClient, aFi1xSDKUnregisterClient.f5430d, boolA, boolB, strE, str, hostAddress, (String) pair.a(), (Boolean) pair.b());
+        return new NetworkTroubleshootingData(aFi1xSDKUnregisterClient.unregisterClient, aFi1xSDKUnregisterClient.f5503d, boolA, boolB, strE, str, hostAddress, (String) pair.a(), (Boolean) pair.b());
     }
 
     @NotNull

@@ -12,58 +12,58 @@ import sun.misc.Unsafe;
 public final class rc<T> implements zc<T> {
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final int[] f6764l = new int[0];
+    public static final int[] f6838l = new int[0];
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public static final Unsafe f6765m = sd.v();
+    public static final Unsafe f6839m = sd.v();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int[] f6766a;
+    public final int[] f6840a;
     public final Object[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final int f6767c;
+    public final int f6841c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final int f6768d;
+    public final int f6842d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final oc f6769e;
+    public final oc f6843e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final boolean f6770f;
+    public final boolean f6844f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final int[] f6771g;
+    public final int[] f6845g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final int f6772h;
+    public final int f6846h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final int f6773i;
+    public final int f6847i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final ld f6774j;
+    public final ld f6848j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final sa f6775k;
+    public final sa f6849k;
 
     public rc(int[] iArr, Object[] objArr, int i10, int i11, oc ocVar, boolean z10, int[] iArr2, int i12, int i13, tc tcVar, zb zbVar, ld ldVar, sa saVar, jc jcVar) {
-        this.f6766a = iArr;
+        this.f6840a = iArr;
         this.b = objArr;
-        this.f6767c = i10;
-        this.f6768d = i11;
+        this.f6841c = i10;
+        this.f6842d = i11;
         boolean z11 = false;
         if (saVar != null && (ocVar instanceof db)) {
             z11 = true;
         }
-        this.f6770f = z11;
-        this.f6771g = iArr2;
-        this.f6772h = i12;
-        this.f6773i = i13;
-        this.f6774j = ldVar;
-        this.f6775k = saVar;
-        this.f6769e = ocVar;
+        this.f6844f = z11;
+        this.f6845g = iArr2;
+        this.f6846h = i12;
+        this.f6847i = i13;
+        this.f6848j = ldVar;
+        this.f6849k = saVar;
+        this.f6843e = ocVar;
     }
 
     public static boolean J(Object obj, int i10, zc zcVar) {
@@ -111,40 +111,40 @@ public final class rc<T> implements zc<T> {
     }
 
     public static final int u(byte[] bArr, int i10, int i11, wd wdVar, Class cls, v9 v9Var) {
-        wd wdVar2 = wd.f6871c;
+        wd wdVar2 = wd.f6945c;
         switch (wdVar.ordinal()) {
             case 0:
                 int i12 = i10 + 8;
-                v9Var.f6850c = Double.valueOf(Double.longBitsToDouble(w9.e(bArr, i10)));
+                v9Var.f6924c = Double.valueOf(Double.longBitsToDouble(w9.e(bArr, i10)));
                 return i12;
             case 1:
                 int i13 = i10 + 4;
-                v9Var.f6850c = Float.valueOf(Float.intBitsToFloat(w9.d(bArr, i10)));
+                v9Var.f6924c = Float.valueOf(Float.intBitsToFloat(w9.d(bArr, i10)));
                 return i13;
             case 2:
             case 3:
                 int iC = w9.c(bArr, i10, v9Var);
-                v9Var.f6850c = Long.valueOf(v9Var.b);
+                v9Var.f6924c = Long.valueOf(v9Var.b);
                 return iC;
             case 4:
             case 12:
             case 13:
                 int iA = w9.a(bArr, i10, v9Var);
-                v9Var.f6850c = Integer.valueOf(v9Var.f6849a);
+                v9Var.f6924c = Integer.valueOf(v9Var.f6923a);
                 return iA;
             case 5:
             case 15:
                 int i14 = i10 + 8;
-                v9Var.f6850c = Long.valueOf(w9.e(bArr, i10));
+                v9Var.f6924c = Long.valueOf(w9.e(bArr, i10));
                 return i14;
             case 6:
             case 14:
                 int i15 = i10 + 4;
-                v9Var.f6850c = Integer.valueOf(w9.d(bArr, i10));
+                v9Var.f6924c = Integer.valueOf(w9.d(bArr, i10));
                 return i15;
             case 7:
                 int iC2 = w9.c(bArr, i10, v9Var);
-                v9Var.f6850c = Boolean.valueOf(v9Var.b != 0);
+                v9Var.f6924c = Boolean.valueOf(v9Var.b != 0);
                 return iC2;
             case 8:
                 return w9.f(bArr, i10, v9Var);
@@ -157,11 +157,11 @@ public final class rc<T> implements zc<T> {
                 return w9.g(bArr, i10, v9Var);
             case 16:
                 int iA2 = w9.a(bArr, i10, v9Var);
-                v9Var.f6850c = Integer.valueOf(ja.a(v9Var.f6849a));
+                v9Var.f6924c = Integer.valueOf(ja.a(v9Var.f6923a));
                 return iA2;
             case 17:
                 int iC3 = w9.c(bArr, i10, v9Var);
-                v9Var.f6850c = Long.valueOf(ja.b(v9Var.b));
+                v9Var.f6924c = Long.valueOf(ja.b(v9Var.b));
                 return iC3;
         }
     }
@@ -291,7 +291,7 @@ public final class rc<T> implements zc<T> {
             i11 = 0;
             i13 = 0;
             i14 = 0;
-            iArr = f6764l;
+            iArr = f6838l;
             i16 = 0;
         } else {
             int i45 = i42 + 1;
@@ -450,7 +450,7 @@ public final class rc<T> implements zc<T> {
             i16 = iCharAt3;
             i42 = i66;
         }
-        Unsafe unsafe = f6765m;
+        Unsafe unsafe = f6839m;
         Object[] objArrB = ycVar.b();
         Class<?> cls2 = ycVar.zzb().getClass();
         int i71 = i14 + i12;
@@ -770,11 +770,11 @@ public final class rc<T> implements zc<T> {
     public final void A(Object obj, Object obj2, int i10) {
         if (p(obj2, i10)) {
             int iK = K(i10) & 1048575;
-            Unsafe unsafe = f6765m;
+            Unsafe unsafe = f6839m;
             long j10 = iK;
             Object object = unsafe.getObject(obj2, j10);
             if (object == null) {
-                int i11 = this.f6766a[i10];
+                int i11 = this.f6840a[i10];
                 String string = obj2.toString();
                 StringBuilder sb2 = new StringBuilder(String.valueOf(i11).length() + 38 + string.length());
                 sb2.append("Source subfield ");
@@ -807,11 +807,11 @@ public final class rc<T> implements zc<T> {
     }
 
     public final void B(Object obj, Object obj2, int i10) {
-        int[] iArr = this.f6766a;
+        int[] iArr = this.f6840a;
         int i11 = iArr[i10];
         if (r(obj2, i11, i10)) {
             int iK = K(i10) & 1048575;
-            Unsafe unsafe = f6765m;
+            Unsafe unsafe = f6839m;
             long j10 = iK;
             Object object = unsafe.getObject(obj2, j10);
             if (object == null) {
@@ -876,7 +876,7 @@ public final class rc<T> implements zc<T> {
         if (!p(obj, i10)) {
             return zcVarC.zza();
         }
-        Object object = f6765m.getObject(obj, iK);
+        Object object = f6839m.getObject(obj, iK);
         if (g(object)) {
             return object;
         }
@@ -888,7 +888,7 @@ public final class rc<T> implements zc<T> {
     }
 
     public final void G(Object obj, int i10, Object obj2) {
-        f6765m.putObject(obj, K(i10) & 1048575, obj2);
+        f6839m.putObject(obj, K(i10) & 1048575, obj2);
         q(obj, i10);
     }
 
@@ -897,7 +897,7 @@ public final class rc<T> implements zc<T> {
         if (!r(obj, i10, i11)) {
             return zcVarC.zza();
         }
-        Object object = f6765m.getObject(obj, K(i11) & 1048575);
+        Object object = f6839m.getObject(obj, K(i11) & 1048575);
         if (g(object)) {
             return object;
         }
@@ -909,16 +909,16 @@ public final class rc<T> implements zc<T> {
     }
 
     public final void I(Object obj, int i10, int i11, Object obj2) {
-        f6765m.putObject(obj, K(i11) & 1048575, obj2);
+        f6839m.putObject(obj, K(i11) & 1048575, obj2);
         s(obj, i10, i11);
     }
 
     public final int K(int i10) {
-        return this.f6766a[i10 + 1];
+        return this.f6840a[i10 + 1];
     }
 
     public final int L(int i10) {
-        return this.f6766a[i10 + 2];
+        return this.f6840a[i10 + 2];
     }
 
     /* JADX WARN: Code duplicated, block: B:50:0x00c1  */
@@ -937,9 +937,9 @@ public final class rc<T> implements zc<T> {
         int i13 = 0;
         int i14 = 0;
         int i15 = 1048575;
-        while (i14 < this.f6772h) {
-            int[] iArr = this.f6771g;
-            int[] iArr2 = this.f6766a;
+        while (i14 < this.f6846h) {
+            int[] iArr = this.f6845g;
+            int[] iArr2 = this.f6840a;
             int i16 = iArr[i14];
             int i17 = iArr2[i16];
             int iK = K(i16);
@@ -948,7 +948,7 @@ public final class rc<T> implements zc<T> {
             int i20 = 1 << (i18 >>> 20);
             if (i19 != i15) {
                 if (i19 != 1048575) {
-                    i13 = f6765m.getInt(obj, i19);
+                    i13 = f6839m.getInt(obj, i19);
                 }
                 i11 = i13;
                 i10 = i19;
@@ -997,7 +997,7 @@ public final class rc<T> implements zc<T> {
                 continue;
             } else {
                 ic icVar = (ic) sd.s(obj, iK & 1048575);
-                if (!icVar.isEmpty() && ((hc) D(i16)).e().f6460c.a() == xd.MESSAGE) {
+                if (!icVar.isEmpty() && ((hc) D(i16)).e().f6533c.a() == xd.MESSAGE) {
                     zc zcVarB = null;
                     for (Object obj2 : icVar.values()) {
                         if (zcVarB == null) {
@@ -1013,7 +1013,7 @@ public final class rc<T> implements zc<T> {
             i15 = i10;
             i13 = i11;
         }
-        return !this.f6770f || ((db) obj).zzb.e();
+        return !this.f6844f || ((db) obj).zzb.e();
     }
 
     @Override // com.google.android.gms.internal.measurement.zc
@@ -1022,11 +1022,11 @@ public final class rc<T> implements zc<T> {
         obj2.getClass();
         int i10 = 0;
         while (true) {
-            int[] iArr = this.f6766a;
+            int[] iArr = this.f6840a;
             if (i10 >= iArr.length) {
-                bd.d(this.f6774j, obj, obj2);
-                if (this.f6770f) {
-                    bd.c(this.f6775k, obj, obj2);
+                bd.d(this.f6848j, obj, obj2);
+                if (this.f6844f) {
+                    bd.c(this.f6849k, obj, obj2);
                     return;
                 }
                 return;
@@ -1187,7 +1187,7 @@ public final class rc<T> implements zc<T> {
                     sd.t(obj, j10, pbVar);
                     break;
                 case 50:
-                    ld ldVar = bd.f6390a;
+                    ld ldVar = bd.f6463a;
                     sd.t(obj, j10, jc.a(sd.s(obj, j10), sd.s(obj2, j10)));
                     break;
                 case 51:
@@ -1235,11 +1235,11 @@ public final class rc<T> implements zc<T> {
         if (g(obj)) {
             if (obj instanceof gb) {
                 gb gbVar = (gb) obj;
-                gbVar.s(Integer.MAX_VALUE);
+                gbVar.r(Integer.MAX_VALUE);
                 gbVar.zza = 0;
                 gbVar.l();
             }
-            int[] iArr = this.f6766a;
+            int[] iArr = this.f6840a;
             for (int i10 = 0; i10 < iArr.length; i10 += 3) {
                 int iK = K(i10);
                 int i11 = 1048575 & iK;
@@ -1250,7 +1250,7 @@ public final class rc<T> implements zc<T> {
                         switch (iM) {
                             case 17:
                                 if (p(obj, i10)) {
-                                    C(i10).c(f6765m.getObject(obj, j10));
+                                    C(i10).c(f6839m.getObject(obj, j10));
                                 }
                                 break;
                             case 18:
@@ -1288,7 +1288,7 @@ public final class rc<T> implements zc<T> {
                                 ((pb) sd.s(obj, j10)).zzb();
                                 break;
                             case 50:
-                                Unsafe unsafe = f6765m;
+                                Unsafe unsafe = f6839m;
                                 Object object = unsafe.getObject(obj, j10);
                                 if (object != null) {
                                     ((ic) object).e();
@@ -1297,15 +1297,15 @@ public final class rc<T> implements zc<T> {
                                 break;
                         }
                     } else if (r(obj, iArr[i10], i10)) {
-                        C(i10).c(f6765m.getObject(obj, j10));
+                        C(i10).c(f6839m.getObject(obj, j10));
                     }
                 } else if (p(obj, i10)) {
-                    C(i10).c(f6765m.getObject(obj, j10));
+                    C(i10).c(f6839m.getObject(obj, j10));
                 }
             }
-            this.f6774j.b(obj);
-            if (this.f6770f) {
-                this.f6775k.a(obj);
+            this.f6848j.b(obj);
+            if (this.f6844f) {
+                this.f6849k.a(obj);
             }
         }
     }
@@ -1321,9 +1321,9 @@ public final class rc<T> implements zc<T> {
         Map.Entry entry;
         int i10;
         rc<T> rcVar = this;
-        if (rcVar.f6770f) {
+        if (rcVar.f6844f) {
             wa waVar = ((db) obj).zzb;
-            if (waVar.f6867a.isEmpty()) {
+            if (waVar.f6941a.isEmpty()) {
                 entry = null;
             } else {
                 entry = (Map.Entry) waVar.c().next();
@@ -1331,8 +1331,8 @@ public final class rc<T> implements zc<T> {
         } else {
             entry = null;
         }
-        int[] iArr = rcVar.f6766a;
-        Unsafe unsafe = f6765m;
+        int[] iArr = rcVar.f6840a;
+        Unsafe unsafe = f6839m;
         int i11 = 1048575;
         int i12 = 1048575;
         int i13 = 0;
@@ -1595,7 +1595,7 @@ public final class rc<T> implements zc<T> {
                 case 26:
                     int i18 = iArr[i13];
                     List list = (List) unsafe.getObject(obj, j10);
-                    ld ldVar = bd.f6390a;
+                    ld ldVar = bd.f6463a;
                     if (list != null && !list.isEmpty()) {
                         ydVar.F(i18, list);
                     }
@@ -1604,7 +1604,7 @@ public final class rc<T> implements zc<T> {
                     int i19 = iArr[i13];
                     List list2 = (List) unsafe.getObject(obj, j10);
                     zc zcVarC = rcVar.C(i13);
-                    ld ldVar2 = bd.f6390a;
+                    ld ldVar2 = bd.f6463a;
                     if (list2 != null && !list2.isEmpty()) {
                         for (int i20 = 0; i20 < list2.size(); i20++) {
                             ((na) ydVar).j(i19, list2.get(i20), zcVarC);
@@ -1614,7 +1614,7 @@ public final class rc<T> implements zc<T> {
                 case 28:
                     int i21 = iArr[i13];
                     List list3 = (List) unsafe.getObject(obj, j10);
-                    ld ldVar3 = bd.f6390a;
+                    ld ldVar3 = bd.f6463a;
                     if (list3 != null && !list3.isEmpty()) {
                         ydVar.D(i21, list3);
                     }
@@ -1707,7 +1707,7 @@ public final class rc<T> implements zc<T> {
                     int i22 = iArr[i13];
                     List list4 = (List) unsafe.getObject(obj, j10);
                     zc zcVarC2 = rcVar.C(i13);
-                    ld ldVar4 = bd.f6390a;
+                    ld ldVar4 = bd.f6463a;
                     if (list4 != null && !list4.isEmpty()) {
                         for (int i23 = 0; i23 < list4.size(); i23++) {
                             ((na) ydVar).s(i22, list4.get(i23), zcVarC2);
@@ -1824,7 +1824,7 @@ public final class rc<T> implements zc<T> {
     @Override // com.google.android.gms.internal.measurement.zc
     public final boolean f(Object obj, Object obj2) {
         boolean zB;
-        for (int i10 = 0; i10 < this.f6766a.length; i10 += 3) {
+        for (int i10 = 0; i10 < this.f6840a.length; i10 += 3) {
             int iK = K(i10);
             long j10 = iK & 1048575;
             switch (M(iK)) {
@@ -2027,7 +2027,7 @@ public final class rc<T> implements zc<T> {
         if (!((gb) obj).zzc.equals(((gb) obj2).zzc)) {
             return false;
         }
-        if (this.f6770f) {
+        if (this.f6844f) {
             return ((db) obj).zzb.equals(((db) obj2).zzb);
         }
         return true;
@@ -2119,7 +2119,7 @@ public final class rc<T> implements zc<T> {
     }
 
     public final int t(int i10, int i11) {
-        int[] iArr = this.f6766a;
+        int[] iArr = this.f6840a;
         int length = (iArr.length / 3) - 1;
         while (i11 <= length) {
             int i12 = (length + i11) >>> 1;
@@ -2154,7 +2154,7 @@ public final class rc<T> implements zc<T> {
 
     @Override // com.google.android.gms.internal.measurement.zc
     public final Object zza() {
-        return ((gb) this.f6769e).n();
+        return ((gb) this.f6843e).m();
     }
 
     @Override // com.google.android.gms.internal.measurement.zc
@@ -2166,10 +2166,10 @@ public final class rc<T> implements zc<T> {
         int i12 = 0;
         int i13 = 0;
         while (true) {
-            int[] iArr = this.f6766a;
+            int[] iArr = this.f6840a;
             if (i12 >= iArr.length) {
                 int iHashCode = (i13 * 53) + ((gb) obj).zzc.hashCode();
-                return this.f6770f ? (iHashCode * 53) + ((db) obj).zzb.f6867a.hashCode() : iHashCode;
+                return this.f6844f ? (iHashCode * 53) + ((db) obj).zzb.f6941a.hashCode() : iHashCode;
             }
             int iK = K(i12);
             int i14 = 1048575 & iK;
@@ -2181,7 +2181,7 @@ public final class rc<T> implements zc<T> {
                 case 0:
                     i10 = i13 * 53;
                     jDoubleToLongBits = Double.doubleToLongBits(sd.q(obj, j10));
-                    Charset charset = qb.f6750a;
+                    Charset charset = qb.f6824a;
                     iFloatToIntBits = (int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32));
                     i13 = i10 + iFloatToIntBits;
                     break;
@@ -2193,14 +2193,14 @@ public final class rc<T> implements zc<T> {
                 case 2:
                     i10 = i13 * 53;
                     jDoubleToLongBits = sd.k(obj, j10);
-                    Charset charset2 = qb.f6750a;
+                    Charset charset2 = qb.f6824a;
                     iFloatToIntBits = (int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32));
                     i13 = i10 + iFloatToIntBits;
                     break;
                 case 3:
                     i10 = i13 * 53;
                     jDoubleToLongBits = sd.k(obj, j10);
-                    Charset charset3 = qb.f6750a;
+                    Charset charset3 = qb.f6824a;
                     iFloatToIntBits = (int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32));
                     i13 = i10 + iFloatToIntBits;
                     break;
@@ -2212,7 +2212,7 @@ public final class rc<T> implements zc<T> {
                 case 5:
                     i10 = i13 * 53;
                     jDoubleToLongBits = sd.k(obj, j10);
-                    Charset charset4 = qb.f6750a;
+                    Charset charset4 = qb.f6824a;
                     iFloatToIntBits = (int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32));
                     i13 = i10 + iFloatToIntBits;
                     break;
@@ -2262,7 +2262,7 @@ public final class rc<T> implements zc<T> {
                 case 14:
                     i10 = i13 * 53;
                     jDoubleToLongBits = sd.k(obj, j10);
-                    Charset charset5 = qb.f6750a;
+                    Charset charset5 = qb.f6824a;
                     iFloatToIntBits = (int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32));
                     i13 = i10 + iFloatToIntBits;
                     break;
@@ -2274,7 +2274,7 @@ public final class rc<T> implements zc<T> {
                 case 16:
                     i10 = i13 * 53;
                     jDoubleToLongBits = sd.k(obj, j10);
-                    Charset charset6 = qb.f6750a;
+                    Charset charset6 = qb.f6824a;
                     iFloatToIntBits = (int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32));
                     i13 = i10 + iFloatToIntBits;
                     break;
@@ -2331,7 +2331,7 @@ public final class rc<T> implements zc<T> {
                     if (r(obj, i15, i12)) {
                         i10 = i13 * 53;
                         jDoubleToLongBits = Double.doubleToLongBits(i(obj, j10));
-                        Charset charset7 = qb.f6750a;
+                        Charset charset7 = qb.f6824a;
                         iFloatToIntBits = (int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32));
                         i13 = i10 + iFloatToIntBits;
                     }
@@ -2347,7 +2347,7 @@ public final class rc<T> implements zc<T> {
                     if (r(obj, i15, i12)) {
                         i10 = i13 * 53;
                         jDoubleToLongBits = l(obj, j10);
-                        Charset charset8 = qb.f6750a;
+                        Charset charset8 = qb.f6824a;
                         iFloatToIntBits = (int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32));
                         i13 = i10 + iFloatToIntBits;
                     }
@@ -2356,7 +2356,7 @@ public final class rc<T> implements zc<T> {
                     if (r(obj, i15, i12)) {
                         i10 = i13 * 53;
                         jDoubleToLongBits = l(obj, j10);
-                        Charset charset9 = qb.f6750a;
+                        Charset charset9 = qb.f6824a;
                         iFloatToIntBits = (int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32));
                         i13 = i10 + iFloatToIntBits;
                     }
@@ -2372,7 +2372,7 @@ public final class rc<T> implements zc<T> {
                     if (r(obj, i15, i12)) {
                         i10 = i13 * 53;
                         jDoubleToLongBits = l(obj, j10);
-                        Charset charset10 = qb.f6750a;
+                        Charset charset10 = qb.f6824a;
                         iFloatToIntBits = (int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32));
                         i13 = i10 + iFloatToIntBits;
                     }
@@ -2437,7 +2437,7 @@ public final class rc<T> implements zc<T> {
                     if (r(obj, i15, i12)) {
                         i10 = i13 * 53;
                         jDoubleToLongBits = l(obj, j10);
-                        Charset charset11 = qb.f6750a;
+                        Charset charset11 = qb.f6824a;
                         iFloatToIntBits = (int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32));
                         i13 = i10 + iFloatToIntBits;
                     }
@@ -2453,7 +2453,7 @@ public final class rc<T> implements zc<T> {
                     if (r(obj, i15, i12)) {
                         i10 = i13 * 53;
                         jDoubleToLongBits = l(obj, j10);
-                        Charset charset12 = qb.f6750a;
+                        Charset charset12 = qb.f6824a;
                         iFloatToIntBits = (int) (jDoubleToLongBits ^ (jDoubleToLongBits >>> 32));
                         i13 = i10 + iFloatToIntBits;
                     }
@@ -2501,19 +2501,19 @@ public final class rc<T> implements zc<T> {
         int iD2;
         int iG16;
         rc<T> rcVar = this;
-        Unsafe unsafe = f6765m;
+        Unsafe unsafe = f6839m;
         int i11 = 0;
         int i12 = 0;
         int iG17 = 0;
         int i13 = 1048575;
         while (true) {
-            int[] iArr = rcVar.f6766a;
+            int[] iArr = rcVar.f6840a;
             if (i11 >= iArr.length) {
                 int i14 = iG17 + ((gb) obj).zzc.i();
-                if (!rcVar.f6770f) {
+                if (!rcVar.f6844f) {
                     return i14;
                 }
-                hd hdVar = ((db) obj).zzb.f6867a;
+                hd hdVar = ((db) obj).zzb.f6941a;
                 int iC2 = hdVar.c();
                 int iJ = 0;
                 for (int i15 = 0; i15 < iC2; i15++) {
@@ -2719,7 +2719,7 @@ public final class rc<T> implements zc<T> {
                     break;
                 case 20:
                     List list = (List) unsafe.getObject(obj, j10);
-                    ld ldVar = bd.f6390a;
+                    ld ldVar = bd.f6463a;
                     if (list.size() == 0) {
                         iT = 0;
                     } else {
@@ -2729,7 +2729,7 @@ public final class rc<T> implements zc<T> {
                     break;
                 case 21:
                     List list2 = (List) unsafe.getObject(obj, j10);
-                    ld ldVar2 = bd.f6390a;
+                    ld ldVar2 = bd.f6463a;
                     size = list2.size();
                     if (size == 0) {
                         iE = 0;
@@ -2743,7 +2743,7 @@ public final class rc<T> implements zc<T> {
                     break;
                 case 22:
                     List list3 = (List) unsafe.getObject(obj, j10);
-                    ld ldVar3 = bd.f6390a;
+                    ld ldVar3 = bd.f6463a;
                     size = list3.size();
                     if (size == 0) {
                         iE = 0;
@@ -2765,7 +2765,7 @@ public final class rc<T> implements zc<T> {
                     break;
                 case 25:
                     List list4 = (List) unsafe.getObject(obj, j10);
-                    ld ldVar4 = bd.f6390a;
+                    ld ldVar4 = bd.f6463a;
                     int size2 = list4.size();
                     if (size2 == 0) {
                         iE = 0;
@@ -2776,7 +2776,7 @@ public final class rc<T> implements zc<T> {
                     break;
                 case 26:
                     List list5 = (List) unsafe.getObject(obj, j10);
-                    ld ldVar5 = bd.f6390a;
+                    ld ldVar5 = bd.f6463a;
                     int size3 = list5.size();
                     if (size3 == 0) {
                         iT = 0;
@@ -2810,7 +2810,7 @@ public final class rc<T> implements zc<T> {
                 case 27:
                     List list6 = (List) unsafe.getObject(obj, j10);
                     zc zcVarC = rcVar.C(i11);
-                    ld ldVar6 = bd.f6390a;
+                    ld ldVar6 = bd.f6463a;
                     int size4 = list6.size();
                     if (size4 == 0) {
                         iG8 = 0;
@@ -2830,7 +2830,7 @@ public final class rc<T> implements zc<T> {
                     break;
                 case 28:
                     List list7 = (List) unsafe.getObject(obj, j10);
-                    ld ldVar7 = bd.f6390a;
+                    ld ldVar7 = bd.f6463a;
                     int size5 = list7.size();
                     if (size5 == 0) {
                         iG9 = 0;
@@ -2845,7 +2845,7 @@ public final class rc<T> implements zc<T> {
                     break;
                 case 29:
                     List list8 = (List) unsafe.getObject(obj, j10);
-                    ld ldVar8 = bd.f6390a;
+                    ld ldVar8 = bd.f6463a;
                     size = list8.size();
                     if (size == 0) {
                         iE = 0;
@@ -2859,7 +2859,7 @@ public final class rc<T> implements zc<T> {
                     break;
                 case 30:
                     List list9 = (List) unsafe.getObject(obj, j10);
-                    ld ldVar9 = bd.f6390a;
+                    ld ldVar9 = bd.f6463a;
                     size = list9.size();
                     if (size == 0) {
                         iE = 0;
@@ -2881,7 +2881,7 @@ public final class rc<T> implements zc<T> {
                     break;
                 case 33:
                     List list10 = (List) unsafe.getObject(obj, j10);
-                    ld ldVar10 = bd.f6390a;
+                    ld ldVar10 = bd.f6463a;
                     size = list10.size();
                     if (size == 0) {
                         iE = 0;
@@ -2895,7 +2895,7 @@ public final class rc<T> implements zc<T> {
                     break;
                 case 34:
                     List list11 = (List) unsafe.getObject(obj, j10);
-                    ld ldVar11 = bd.f6390a;
+                    ld ldVar11 = bd.f6463a;
                     size = list11.size();
                     if (size == 0) {
                         iE = 0;
@@ -2972,7 +2972,7 @@ public final class rc<T> implements zc<T> {
                     break;
                 case 42:
                     List list12 = (List) unsafe.getObject(obj, j10);
-                    ld ldVar12 = bd.f6390a;
+                    ld ldVar12 = bd.f6463a;
                     iC = list12.size();
                     if (iC > 0) {
                         iG10 = ma.G(i16 << 3);
@@ -3038,7 +3038,7 @@ public final class rc<T> implements zc<T> {
                 case 49:
                     List list13 = (List) unsafe.getObject(obj, j10);
                     zc zcVarC2 = rcVar.C(i11);
-                    ld ldVar13 = bd.f6390a;
+                    ld ldVar13 = bd.f6463a;
                     int size6 = list13.size();
                     if (size6 == 0) {
                         iG12 = 0;

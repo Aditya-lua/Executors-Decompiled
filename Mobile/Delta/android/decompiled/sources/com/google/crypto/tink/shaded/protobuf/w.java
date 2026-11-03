@@ -9,24 +9,24 @@ import java.util.RandomAccess;
 public final class w extends c<Float> implements a0.f, RandomAccess {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final w f8647d = new w(new float[0], 0, false);
+    public static final w f8721d = new w(new float[0], 0, false);
     public float[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f8648c;
+    public int f8722c;
 
     public w() {
         this(new float[10], 0, true);
     }
 
     private void f(int i10) {
-        if (i10 < 0 || i10 >= this.f8648c) {
+        if (i10 < 0 || i10 >= this.f8722c) {
             throw new IndexOutOfBoundsException(i(i10));
         }
     }
 
     private String i(int i10) {
-        return "Index:" + i10 + ", Size:" + this.f8648c;
+        return "Index:" + i10 + ", Size:" + this.f8722c;
     }
 
     @Override // com.google.crypto.tink.shaded.protobuf.c, java.util.AbstractCollection, java.util.Collection, java.util.List
@@ -37,11 +37,11 @@ public final class w extends c<Float> implements a0.f, RandomAccess {
             return super.addAll(collection);
         }
         w wVar = (w) collection;
-        int i10 = wVar.f8648c;
+        int i10 = wVar.f8722c;
         if (i10 == 0) {
             return false;
         }
-        int i11 = this.f8648c;
+        int i11 = this.f8722c;
         if (Integer.MAX_VALUE - i11 < i10) {
             throw new OutOfMemoryError();
         }
@@ -50,8 +50,8 @@ public final class w extends c<Float> implements a0.f, RandomAccess {
         if (i12 > fArr.length) {
             this.b = Arrays.copyOf(fArr, i12);
         }
-        System.arraycopy(wVar.b, 0, this.b, this.f8648c, wVar.f8648c);
-        this.f8648c = i12;
+        System.arraycopy(wVar.b, 0, this.b, this.f8722c, wVar.f8722c);
+        this.f8722c = i12;
         ((AbstractList) this).modCount++;
         return true;
     }
@@ -76,7 +76,7 @@ public final class w extends c<Float> implements a0.f, RandomAccess {
 
     public void d(float f10) {
         a();
-        int i10 = this.f8648c;
+        int i10 = this.f8722c;
         float[] fArr = this.b;
         if (i10 == fArr.length) {
             float[] fArr2 = new float[((i10 * 3) / 2) + 1];
@@ -84,15 +84,15 @@ public final class w extends c<Float> implements a0.f, RandomAccess {
             this.b = fArr2;
         }
         float[] fArr3 = this.b;
-        int i11 = this.f8648c;
-        this.f8648c = i11 + 1;
+        int i11 = this.f8722c;
+        this.f8722c = i11 + 1;
         fArr3[i11] = f10;
     }
 
     public final void e(int i10, float f10) {
         int i11;
         a();
-        if (i10 < 0 || i10 > (i11 = this.f8648c)) {
+        if (i10 < 0 || i10 > (i11 = this.f8722c)) {
             throw new IndexOutOfBoundsException(i(i10));
         }
         float[] fArr = this.b;
@@ -101,11 +101,11 @@ public final class w extends c<Float> implements a0.f, RandomAccess {
         } else {
             float[] fArr2 = new float[((i11 * 3) / 2) + 1];
             System.arraycopy(fArr, 0, fArr2, 0, i10);
-            System.arraycopy(this.b, i10, fArr2, i10 + 1, this.f8648c - i10);
+            System.arraycopy(this.b, i10, fArr2, i10 + 1, this.f8722c - i10);
             this.b = fArr2;
         }
         this.b[i10] = f10;
-        this.f8648c++;
+        this.f8722c++;
         ((AbstractList) this).modCount++;
     }
 
@@ -118,11 +118,11 @@ public final class w extends c<Float> implements a0.f, RandomAccess {
             return super.equals(obj);
         }
         w wVar = (w) obj;
-        if (this.f8648c != wVar.f8648c) {
+        if (this.f8722c != wVar.f8722c) {
             return false;
         }
         float[] fArr = wVar.b;
-        for (int i10 = 0; i10 < this.f8648c; i10++) {
+        for (int i10 = 0; i10 < this.f8722c; i10++) {
             if (Float.floatToIntBits(this.b[i10]) != Float.floatToIntBits(fArr[i10])) {
                 return false;
             }
@@ -144,7 +144,7 @@ public final class w extends c<Float> implements a0.f, RandomAccess {
     @Override // com.google.crypto.tink.shaded.protobuf.c, java.util.AbstractList, java.util.Collection, java.util.List
     public int hashCode() {
         int iFloatToIntBits = 1;
-        for (int i10 = 0; i10 < this.f8648c; i10++) {
+        for (int i10 = 0; i10 < this.f8722c; i10++) {
             iFloatToIntBits = (iFloatToIntBits * 31) + Float.floatToIntBits(this.b[i10]);
         }
         return iFloatToIntBits;
@@ -168,8 +168,8 @@ public final class w extends c<Float> implements a0.f, RandomAccess {
     @Override // com.google.crypto.tink.shaded.protobuf.a0.i
     /* JADX INFO: renamed from: k, reason: merged with bridge method [inline-methods] */
     public a0.f o(int i10) {
-        if (i10 >= this.f8648c) {
-            return new w(Arrays.copyOf(this.b, i10), this.f8648c, true);
+        if (i10 >= this.f8722c) {
+            return new w(Arrays.copyOf(this.b, i10), this.f8722c, true);
         }
         throw new IllegalArgumentException();
     }
@@ -181,11 +181,11 @@ public final class w extends c<Float> implements a0.f, RandomAccess {
         f(i10);
         float[] fArr = this.b;
         float f10 = fArr[i10];
-        int i11 = this.f8648c;
+        int i11 = this.f8722c;
         if (i10 < i11 - 1) {
             System.arraycopy(fArr, i10 + 1, fArr, i10, (i11 - i10) - 1);
         }
-        this.f8648c--;
+        this.f8722c--;
         ((AbstractList) this).modCount++;
         return Float.valueOf(f10);
     }
@@ -212,19 +212,19 @@ public final class w extends c<Float> implements a0.f, RandomAccess {
             throw new IndexOutOfBoundsException("toIndex < fromIndex");
         }
         float[] fArr = this.b;
-        System.arraycopy(fArr, i11, fArr, i10, this.f8648c - i11);
-        this.f8648c -= i11 - i10;
+        System.arraycopy(fArr, i11, fArr, i10, this.f8722c - i11);
+        this.f8722c -= i11 - i10;
         ((AbstractList) this).modCount++;
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public int size() {
-        return this.f8648c;
+        return this.f8722c;
     }
 
     public w(float[] fArr, int i10, boolean z10) {
         super(z10);
         this.b = fArr;
-        this.f8648c = i10;
+        this.f8722c = i10;
     }
 }

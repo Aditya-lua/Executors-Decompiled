@@ -14,15 +14,15 @@ public final class i {
         }
         f5.d dVarR3 = connection.r3("SELECT last_insert_rowid()");
         try {
-            dVarR3.g3();
+            dVarR3.i3();
             long j10 = dVarR3.getLong(0);
-            xt.a.a(dVarR3, null);
+            vt.a.a(dVarR3, null);
             return j10;
         } catch (Throwable th2) {
             try {
                 throw th2;
             } catch (Throwable th3) {
-                xt.a.a(dVarR3, th2);
+                vt.a.a(dVarR3, th2);
                 throw th3;
             }
         }
@@ -32,15 +32,15 @@ public final class i {
         Intrinsics.checkNotNullParameter(connection, "connection");
         f5.d dVarR3 = connection.r3("SELECT changes()");
         try {
-            dVarR3.g3();
+            dVarR3.i3();
             int i10 = (int) dVarR3.getLong(0);
-            xt.a.a(dVarR3, null);
+            vt.a.a(dVarR3, null);
             return i10;
         } catch (Throwable th2) {
             try {
                 throw th2;
             } catch (Throwable th3) {
-                xt.a.a(dVarR3, th2);
+                vt.a.a(dVarR3, th2);
                 throw th3;
             }
         }

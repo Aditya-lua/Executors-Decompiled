@@ -11,15 +11,15 @@ import java.util.List;
 public class m {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f14256a;
+    public final String f14236a;
     public final ExtraSupportedOutputSizeQuirk b = (ExtraSupportedOutputSizeQuirk) c0.e.b(ExtraSupportedOutputSizeQuirk.class);
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final e f14257c;
+    public final e f14237c;
 
     public m(String str) {
-        this.f14256a = str;
-        this.f14257c = new e(str);
+        this.f14236a = str;
+        this.f14237c = new e(str);
     }
 
     public final void a(List<Size> list, int i10) {
@@ -44,7 +44,7 @@ public class m {
     }
 
     public final void c(List<Size> list, int i10) {
-        List<Size> listA = this.f14257c.a(i10);
+        List<Size> listA = this.f14237c.a(i10);
         if (listA.isEmpty()) {
             return;
         }

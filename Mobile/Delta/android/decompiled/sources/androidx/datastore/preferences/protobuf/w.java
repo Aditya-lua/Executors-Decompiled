@@ -4,10 +4,10 @@ package androidx.datastore.preferences.protobuf;
 public class w implements q0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final w f2382a = new w();
+    public static final w f2227a = new w();
 
     public static w c() {
-        return f2382a;
+        return f2227a;
     }
 
     @Override // androidx.datastore.preferences.protobuf.q0

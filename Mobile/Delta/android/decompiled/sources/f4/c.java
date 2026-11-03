@@ -22,11 +22,11 @@ public final class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final c f16198a = new c();
+    public static final c f16794a = new c();
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull
-    public static C0306c defaultPolicy = C0306c.f16209d;
+    public static C0304c defaultPolicy = C0304c.f16805d;
 
     @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\b\f\b\u0080\u0001\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003j\u0002\b\u0004j\u0002\b\u0005j\u0002\b\u0006j\u0002\b\u0007j\u0002\b\bj\u0002\b\tj\u0002\b\nj\u0002\b\u000bj\u0002\b\f¨\u0006\r"}, d2 = {"Lf4/c$a;", "", "<init>", "(Ljava/lang/String;I)V", "a", "b", "c", "d", "e", "f", "g", "h", "i", "fragment_release"}, k = 1, mv = {1, 8, 0}, xi = 48)
     public enum a {
@@ -47,11 +47,11 @@ public final class c {
 
     /* JADX INFO: renamed from: f4.c$c, reason: collision with other inner class name */
     @Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\"\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010$\n\u0002\u0010\u000e\n\u0002\u0010#\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u000e\u0018\u0000 \u00142\u00020\u0001:\u0001\u000fBC\b\u0000\u0012\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00030\u0002\u0012\b\u0010\u0006\u001a\u0004\u0018\u00010\u0005\u0012 \u0010\f\u001a\u001c\u0012\u0004\u0012\u00020\b\u0012\u0012\u0012\u0010\u0012\f\u0012\n\u0012\u0006\b\u0001\u0012\u00020\u000b0\n0\t0\u0007¢\u0006\u0004\b\r\u0010\u000eR \u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00030\u00028\u0000X\u0080\u0004¢\u0006\f\n\u0004\b\u000f\u0010\u0010\u001a\u0004\b\u000f\u0010\u0011R4\u0010\u0016\u001a\u001c\u0012\u0004\u0012\u00020\b\u0012\u0012\u0012\u0010\u0012\f\u0012\n\u0012\u0006\b\u0001\u0012\u00020\u000b0\n0\u00020\u00078\u0000X\u0080\u0004¢\u0006\f\n\u0004\b\u0012\u0010\u0013\u001a\u0004\b\u0014\u0010\u0015R\u001c\u0010\u0006\u001a\u0004\u0018\u00010\u00058\u0000X\u0080\u0004¢\u0006\f\n\u0004\b\u0006\u0010\u0017\u001a\u0004\b\u0012\u0010\u0018¨\u0006\u0019"}, d2 = {"Lf4/c$c;", "", "", "Lf4/c$a;", "flags", "Lf4/c$b;", "listener", "", "", "", "Ljava/lang/Class;", "Lf4/j;", "allowedViolations", "<init>", "(Ljava/util/Set;Lf4/c$b;Ljava/util/Map;)V", "a", "Ljava/util/Set;", "()Ljava/util/Set;", "b", "Ljava/util/Map;", "c", "()Ljava/util/Map;", "mAllowedViolations", "Lf4/c$b;", "()Lf4/c$b;", "fragment_release"}, k = 1, mv = {1, 8, 0}, xi = 48)
-    public static final class C0306c {
+    public static final class C0304c {
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
         @NotNull
-        public static final C0306c f16209d = new C0306c(q0.d(), null, k0.j());
+        public static final C0304c f16805d = new C0304c(q0.d(), null, k0.j());
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         @NotNull
@@ -62,7 +62,7 @@ public final class c {
         public final Map<String, Set<Class<? extends j>>> mAllowedViolations;
 
         /* JADX WARN: Multi-variable type inference failed */
-        public C0306c(@NotNull Set<? extends a> flags, @Nullable b bVar, @NotNull Map<String, ? extends Set<Class<? extends j>>> allowedViolations) {
+        public C0304c(@NotNull Set<? extends a> flags, @Nullable b bVar, @NotNull Map<String, ? extends Set<Class<? extends j>>> allowedViolations) {
             Intrinsics.checkNotNullParameter(flags, "flags");
             Intrinsics.checkNotNullParameter(allowedViolations, "allowedViolations");
             this.flags = flags;
@@ -100,11 +100,11 @@ public final class c {
         Intrinsics.checkNotNullParameter(fragment, "fragment");
         Intrinsics.checkNotNullParameter(previousFragmentId, "previousFragmentId");
         f4.a aVar = new f4.a(fragment, previousFragmentId);
-        c cVar = f16198a;
+        c cVar = f16794a;
         cVar.e(aVar);
-        C0306c c0306cB = cVar.b(fragment);
-        if (c0306cB.a().contains(a.DETECT_FRAGMENT_REUSE) && cVar.n(c0306cB, fragment.getClass(), aVar.getClass())) {
-            cVar.c(c0306cB, aVar);
+        C0304c c0304cB = cVar.b(fragment);
+        if (c0304cB.a().contains(a.DETECT_FRAGMENT_REUSE) && cVar.n(c0304cB, fragment.getClass(), aVar.getClass())) {
+            cVar.c(c0304cB, aVar);
         }
     }
 
@@ -112,11 +112,11 @@ public final class c {
     public static final void g(@NotNull androidx.fragment.app.c fragment, @Nullable ViewGroup container) {
         Intrinsics.checkNotNullParameter(fragment, "fragment");
         d dVar = new d(fragment, container);
-        c cVar = f16198a;
+        c cVar = f16794a;
         cVar.e(dVar);
-        C0306c c0306cB = cVar.b(fragment);
-        if (c0306cB.a().contains(a.DETECT_FRAGMENT_TAG_USAGE) && cVar.n(c0306cB, fragment.getClass(), dVar.getClass())) {
-            cVar.c(c0306cB, dVar);
+        C0304c c0304cB = cVar.b(fragment);
+        if (c0304cB.a().contains(a.DETECT_FRAGMENT_TAG_USAGE) && cVar.n(c0304cB, fragment.getClass(), dVar.getClass())) {
+            cVar.c(c0304cB, dVar);
         }
     }
 
@@ -124,11 +124,11 @@ public final class c {
     public static final void h(@NotNull androidx.fragment.app.c fragment) {
         Intrinsics.checkNotNullParameter(fragment, "fragment");
         e eVar = new e(fragment);
-        c cVar = f16198a;
+        c cVar = f16794a;
         cVar.e(eVar);
-        C0306c c0306cB = cVar.b(fragment);
-        if (c0306cB.a().contains(a.DETECT_RETAIN_INSTANCE_USAGE) && cVar.n(c0306cB, fragment.getClass(), eVar.getClass())) {
-            cVar.c(c0306cB, eVar);
+        C0304c c0304cB = cVar.b(fragment);
+        if (c0304cB.a().contains(a.DETECT_RETAIN_INSTANCE_USAGE) && cVar.n(c0304cB, fragment.getClass(), eVar.getClass())) {
+            cVar.c(c0304cB, eVar);
         }
     }
 
@@ -136,11 +136,11 @@ public final class c {
     public static final void i(@NotNull androidx.fragment.app.c fragment) {
         Intrinsics.checkNotNullParameter(fragment, "fragment");
         f fVar = new f(fragment);
-        c cVar = f16198a;
+        c cVar = f16794a;
         cVar.e(fVar);
-        C0306c c0306cB = cVar.b(fragment);
-        if (c0306cB.a().contains(a.DETECT_TARGET_FRAGMENT_USAGE) && cVar.n(c0306cB, fragment.getClass(), fVar.getClass())) {
-            cVar.c(c0306cB, fVar);
+        C0304c c0304cB = cVar.b(fragment);
+        if (c0304cB.a().contains(a.DETECT_TARGET_FRAGMENT_USAGE) && cVar.n(c0304cB, fragment.getClass(), fVar.getClass())) {
+            cVar.c(c0304cB, fVar);
         }
     }
 
@@ -148,11 +148,11 @@ public final class c {
     public static final void j(@NotNull androidx.fragment.app.c fragment) {
         Intrinsics.checkNotNullParameter(fragment, "fragment");
         h hVar = new h(fragment);
-        c cVar = f16198a;
+        c cVar = f16794a;
         cVar.e(hVar);
-        C0306c c0306cB = cVar.b(fragment);
-        if (c0306cB.a().contains(a.DETECT_RETAIN_INSTANCE_USAGE) && cVar.n(c0306cB, fragment.getClass(), hVar.getClass())) {
-            cVar.c(c0306cB, hVar);
+        C0304c c0304cB = cVar.b(fragment);
+        if (c0304cB.a().contains(a.DETECT_RETAIN_INSTANCE_USAGE) && cVar.n(c0304cB, fragment.getClass(), hVar.getClass())) {
+            cVar.c(c0304cB, hVar);
         }
     }
 
@@ -161,11 +161,11 @@ public final class c {
         Intrinsics.checkNotNullParameter(fragment, "fragment");
         Intrinsics.checkNotNullParameter(container, "container");
         k kVar = new k(fragment, container);
-        c cVar = f16198a;
+        c cVar = f16794a;
         cVar.e(kVar);
-        C0306c c0306cB = cVar.b(fragment);
-        if (c0306cB.a().contains(a.DETECT_WRONG_FRAGMENT_CONTAINER) && cVar.n(c0306cB, fragment.getClass(), kVar.getClass())) {
-            cVar.c(c0306cB, kVar);
+        C0304c c0304cB = cVar.b(fragment);
+        if (c0304cB.a().contains(a.DETECT_WRONG_FRAGMENT_CONTAINER) && cVar.n(c0304cB, fragment.getClass(), kVar.getClass())) {
+            cVar.c(c0304cB, kVar);
         }
     }
 
@@ -174,31 +174,31 @@ public final class c {
         Intrinsics.checkNotNullParameter(fragment, "fragment");
         Intrinsics.checkNotNullParameter(expectedParentFragment, "expectedParentFragment");
         l lVar = new l(fragment, expectedParentFragment, containerId);
-        c cVar = f16198a;
+        c cVar = f16794a;
         cVar.e(lVar);
-        C0306c c0306cB = cVar.b(fragment);
-        if (c0306cB.a().contains(a.DETECT_WRONG_NESTED_HIERARCHY) && cVar.n(c0306cB, fragment.getClass(), lVar.getClass())) {
-            cVar.c(c0306cB, lVar);
+        C0304c c0304cB = cVar.b(fragment);
+        if (c0304cB.a().contains(a.DETECT_WRONG_NESTED_HIERARCHY) && cVar.n(c0304cB, fragment.getClass(), lVar.getClass())) {
+            cVar.c(c0304cB, lVar);
         }
     }
 
-    public final C0306c b(androidx.fragment.app.c fragment) {
+    public final C0304c b(androidx.fragment.app.c fragment) {
         while (fragment != null) {
             if (fragment.p0()) {
-                FragmentManager fragmentManagerM = fragment.M();
-                Intrinsics.checkNotNullExpressionValue(fragmentManagerM, "declaringFragment.parentFragmentManager");
-                if (fragmentManagerM.G0() != null) {
-                    C0306c c0306cG0 = fragmentManagerM.G0();
-                    Intrinsics.checkNotNull(c0306cG0);
-                    return c0306cG0;
+                FragmentManager fragmentManagerL = fragment.L();
+                Intrinsics.checkNotNullExpressionValue(fragmentManagerL, "declaringFragment.parentFragmentManager");
+                if (fragmentManagerL.G0() != null) {
+                    C0304c c0304cG0 = fragmentManagerL.G0();
+                    Intrinsics.checkNotNull(c0304cG0);
+                    return c0304cG0;
                 }
             }
-            fragment = fragment.K();
+            fragment = fragment.J();
         }
         return defaultPolicy;
     }
 
-    public final void c(C0306c policy, final j violation) {
+    public final void c(C0304c policy, final j violation) {
         androidx.fragment.app.c cVarA = violation.getFragment();
         final String name = cVarA.getClass().getName();
         if (policy.a().contains(a.PENALTY_LOG)) {
@@ -226,7 +226,7 @@ public final class c {
             runnable.run();
             return;
         }
-        Handler handler = fragment.M().A0().getHandler();
+        Handler handler = fragment.L().A0().getHandler();
         if (Intrinsics.c(handler.getLooper(), Looper.myLooper())) {
             runnable.run();
         } else {
@@ -234,7 +234,7 @@ public final class c {
         }
     }
 
-    public final boolean n(C0306c policy, Class<? extends androidx.fragment.app.c> fragmentClass, Class<? extends j> violationClass) {
+    public final boolean n(C0304c policy, Class<? extends androidx.fragment.app.c> fragmentClass, Class<? extends j> violationClass) {
         Set<Class<? extends j>> set = policy.c().get(fragmentClass.getName());
         if (set == null) {
             return true;

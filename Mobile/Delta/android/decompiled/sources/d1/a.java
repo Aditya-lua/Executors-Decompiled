@@ -6,11 +6,11 @@ import g0.s;
 public final class a extends h.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f14272a;
+    public final int f14252a;
     public final s b;
 
     public a(int i10, s sVar) {
-        this.f14272a = i10;
+        this.f14252a = i10;
         if (sVar == null) {
             throw new NullPointerException("Null cameraIdentifier");
         }
@@ -24,7 +24,7 @@ public final class a extends h.a {
 
     @Override // d1.h.a
     public int c() {
-        return this.f14272a;
+        return this.f14252a;
     }
 
     public boolean equals(Object obj) {
@@ -33,7 +33,7 @@ public final class a extends h.a {
         }
         if (obj instanceof h.a) {
             h.a aVar = (h.a) obj;
-            if (this.f14272a == aVar.c() && this.b.equals(aVar.b())) {
+            if (this.f14252a == aVar.c() && this.b.equals(aVar.b())) {
                 return true;
             }
         }
@@ -41,10 +41,10 @@ public final class a extends h.a {
     }
 
     public int hashCode() {
-        return ((this.f14272a ^ 1000003) * 1000003) ^ this.b.hashCode();
+        return ((this.f14252a ^ 1000003) * 1000003) ^ this.b.hashCode();
     }
 
     public String toString() {
-        return "Key{lifecycleOwnerHash=" + this.f14272a + ", cameraIdentifier=" + this.b + "}";
+        return "Key{lifecycleOwnerHash=" + this.f14252a + ", cameraIdentifier=" + this.b + "}";
     }
 }

@@ -4,16 +4,16 @@ package v7;
 public final class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f32766a;
+    public final String f33334a;
     public final String b;
 
     public a(String str, String str2) {
-        this.f32766a = str;
+        this.f33334a = str;
         this.b = str2;
     }
 
     public String a() {
-        return this.f32766a;
+        return this.f33334a;
     }
 
     public String b() {

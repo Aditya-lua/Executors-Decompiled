@@ -1,7 +1,7 @@
 package com.roblox.client.pushnotification.v2.richpushnotifications;
 
 import androidx.annotation.Keep;
-import gk.p;
+import ek.q;
 import jg.c;
 import jg.f;
 import jg.g;
@@ -23,7 +23,7 @@ public final /* data */ class RichPushNotificationMedia {
     /* JADX INFO: renamed from: default, reason: not valid java name */
     @NotNull
     private static final RichPushNotificationMedia f0default = new RichPushNotificationMedia(null, null, new Options(false));
-    private static final f gson = new g().g(c.f21378a).f().b();
+    private static final f gson = new g().g(c.f21837a).f().b();
 
     @Nullable
     private Options options;
@@ -43,7 +43,7 @@ public final /* data */ class RichPushNotificationMedia {
 
         @NotNull
         public final RichPushNotificationMedia a(@Nullable String jsonString) {
-            p.b("RichPushNotificationMedia", "Parsing string for push notification media: " + jsonString);
+            q.b("RichPushNotificationMedia", "Parsing string for push notification media: " + jsonString);
             if (jsonString == null || jsonString.length() == 0) {
                 return b();
             }

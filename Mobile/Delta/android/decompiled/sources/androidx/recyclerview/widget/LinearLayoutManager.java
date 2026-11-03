@@ -24,39 +24,39 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
     public int[] H;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public int f2894s;
+    public int f2739s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public c f2895t;
+    public c f2740t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public n f2896u;
+    public n f2741u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public boolean f2897v;
+    public boolean f2742v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public boolean f2898w;
+    public boolean f2743w;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public boolean f2899x;
+    public boolean f2744x;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public boolean f2900y;
+    public boolean f2745y;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public boolean f2901z;
+    public boolean f2746z;
 
     @SuppressLint({"BanParcelableUsage"})
     public static class SavedState implements Parcelable {
         public static final Parcelable.Creator<SavedState> CREATOR = new a();
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public int f2902a;
+        public int f2747a;
         public int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public boolean f2903c;
+        public boolean f2748c;
 
         public class a implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
@@ -76,7 +76,7 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
         }
 
         public boolean a() {
-            return this.f2902a >= 0;
+            return this.f2747a >= 0;
         }
 
         @Override // android.os.Parcelable
@@ -85,91 +85,91 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
         }
 
         public void f() {
-            this.f2902a = -1;
+            this.f2747a = -1;
         }
 
         @Override // android.os.Parcelable
         public void writeToParcel(Parcel parcel, int i10) {
-            parcel.writeInt(this.f2902a);
+            parcel.writeInt(this.f2747a);
             parcel.writeInt(this.b);
-            parcel.writeInt(this.f2903c ? 1 : 0);
+            parcel.writeInt(this.f2748c ? 1 : 0);
         }
 
         public SavedState(Parcel parcel) {
-            this.f2902a = parcel.readInt();
+            this.f2747a = parcel.readInt();
             this.b = parcel.readInt();
-            this.f2903c = parcel.readInt() == 1;
+            this.f2748c = parcel.readInt() == 1;
         }
 
         @SuppressLint({"UnknownNullness"})
         public SavedState(SavedState savedState) {
-            this.f2902a = savedState.f2902a;
+            this.f2747a = savedState.f2747a;
             this.b = savedState.b;
-            this.f2903c = savedState.f2903c;
+            this.f2748c = savedState.f2748c;
         }
     }
 
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public n f2904a;
+        public n f2749a;
         public int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public int f2905c;
+        public int f2750c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public boolean f2906d;
+        public boolean f2751d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public boolean f2907e;
+        public boolean f2752e;
 
         public a() {
             e();
         }
 
         public void a() {
-            this.f2905c = this.f2906d ? this.f2904a.i() : this.f2904a.m();
+            this.f2750c = this.f2751d ? this.f2749a.i() : this.f2749a.m();
         }
 
         public void b(View view, int i10) {
-            if (this.f2906d) {
-                this.f2905c = this.f2904a.d(view) + this.f2904a.o();
+            if (this.f2751d) {
+                this.f2750c = this.f2749a.d(view) + this.f2749a.o();
             } else {
-                this.f2905c = this.f2904a.g(view);
+                this.f2750c = this.f2749a.g(view);
             }
             this.b = i10;
         }
 
         public void c(View view, int i10) {
-            int iO = this.f2904a.o();
+            int iO = this.f2749a.o();
             if (iO >= 0) {
                 b(view, i10);
                 return;
             }
             this.b = i10;
-            if (this.f2906d) {
-                int i11 = (this.f2904a.i() - iO) - this.f2904a.d(view);
-                this.f2905c = this.f2904a.i() - i11;
+            if (this.f2751d) {
+                int i11 = (this.f2749a.i() - iO) - this.f2749a.d(view);
+                this.f2750c = this.f2749a.i() - i11;
                 if (i11 > 0) {
-                    int iE = this.f2905c - this.f2904a.e(view);
-                    int iM = this.f2904a.m();
-                    int iMin = iE - (iM + Math.min(this.f2904a.g(view) - iM, 0));
+                    int iE = this.f2750c - this.f2749a.e(view);
+                    int iM = this.f2749a.m();
+                    int iMin = iE - (iM + Math.min(this.f2749a.g(view) - iM, 0));
                     if (iMin < 0) {
-                        this.f2905c += Math.min(i11, -iMin);
+                        this.f2750c += Math.min(i11, -iMin);
                         return;
                     }
                     return;
                 }
                 return;
             }
-            int iG = this.f2904a.g(view);
-            int iM2 = iG - this.f2904a.m();
-            this.f2905c = iG;
+            int iG = this.f2749a.g(view);
+            int iM2 = iG - this.f2749a.m();
+            this.f2750c = iG;
             if (iM2 > 0) {
-                int i12 = (this.f2904a.i() - Math.min(0, (this.f2904a.i() - iO) - this.f2904a.d(view))) - (iG + this.f2904a.e(view));
+                int i12 = (this.f2749a.i() - Math.min(0, (this.f2749a.i() - iO) - this.f2749a.d(view))) - (iG + this.f2749a.e(view));
                 if (i12 < 0) {
-                    this.f2905c -= Math.min(iM2, -i12);
+                    this.f2750c -= Math.min(iM2, -i12);
                 }
             }
         }
@@ -181,33 +181,33 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
 
         public void e() {
             this.b = -1;
-            this.f2905c = Integer.MIN_VALUE;
-            this.f2906d = false;
-            this.f2907e = false;
+            this.f2750c = Integer.MIN_VALUE;
+            this.f2751d = false;
+            this.f2752e = false;
         }
 
         public String toString() {
-            return "AnchorInfo{mPosition=" + this.b + ", mCoordinate=" + this.f2905c + ", mLayoutFromEnd=" + this.f2906d + ", mValid=" + this.f2907e + '}';
+            return "AnchorInfo{mPosition=" + this.b + ", mCoordinate=" + this.f2750c + ", mLayoutFromEnd=" + this.f2751d + ", mValid=" + this.f2752e + '}';
         }
     }
 
     public static class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public int f2908a;
+        public int f2753a;
         public boolean b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public boolean f2909c;
+        public boolean f2754c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public boolean f2910d;
+        public boolean f2755d;
 
         public void a() {
-            this.f2908a = 0;
+            this.f2753a = 0;
             this.b = false;
-            this.f2909c = false;
-            this.f2910d = false;
+            this.f2754c = false;
+            this.f2755d = false;
         }
     }
 
@@ -215,40 +215,40 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
         public int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public int f2912c;
+        public int f2757c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public int f2913d;
+        public int f2758d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public int f2914e;
+        public int f2759e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public int f2915f;
+        public int f2760f;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public int f2916g;
+        public int f2761g;
 
         /* JADX INFO: renamed from: k, reason: collision with root package name */
-        public int f2920k;
+        public int f2765k;
 
         /* JADX INFO: renamed from: m, reason: collision with root package name */
-        public boolean f2922m;
+        public boolean f2767m;
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public boolean f2911a = true;
+        public boolean f2756a = true;
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public int f2917h = 0;
+        public int f2762h = 0;
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public int f2918i = 0;
+        public int f2763i = 0;
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public boolean f2919j = false;
+        public boolean f2764j = false;
 
         /* JADX INFO: renamed from: l, reason: collision with root package name */
-        public List<RecyclerView.f0> f2921l = null;
+        public List<RecyclerView.f0> f2766l = null;
 
         public void a() {
             b(null);
@@ -257,32 +257,32 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
         public void b(View view) {
             View viewF = f(view);
             if (viewF == null) {
-                this.f2913d = -1;
+                this.f2758d = -1;
             } else {
-                this.f2913d = ((RecyclerView.r) viewF.getLayoutParams()).b();
+                this.f2758d = ((RecyclerView.r) viewF.getLayoutParams()).b();
             }
         }
 
         public boolean c(RecyclerView.b0 b0Var) {
-            int i10 = this.f2913d;
+            int i10 = this.f2758d;
             return i10 >= 0 && i10 < b0Var.b();
         }
 
         public View d(RecyclerView.x xVar) {
-            if (this.f2921l != null) {
+            if (this.f2766l != null) {
                 return e();
             }
-            View viewO = xVar.o(this.f2913d);
-            this.f2913d += this.f2914e;
+            View viewO = xVar.o(this.f2758d);
+            this.f2758d += this.f2759e;
             return viewO;
         }
 
         public final View e() {
-            int size = this.f2921l.size();
+            int size = this.f2766l.size();
             for (int i10 = 0; i10 < size; i10++) {
-                View view = this.f2921l.get(i10).f3016a;
+                View view = this.f2766l.get(i10).f2861a;
                 RecyclerView.r rVar = (RecyclerView.r) view.getLayoutParams();
-                if (!rVar.d() && this.f2913d == rVar.b()) {
+                if (!rVar.d() && this.f2758d == rVar.b()) {
                     b(view);
                     return view;
                 }
@@ -292,13 +292,13 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
 
         public View f(View view) {
             int iB;
-            int size = this.f2921l.size();
+            int size = this.f2766l.size();
             View view2 = null;
             int i10 = Integer.MAX_VALUE;
             for (int i11 = 0; i11 < size; i11++) {
-                View view3 = this.f2921l.get(i11).f3016a;
+                View view3 = this.f2766l.get(i11).f2861a;
                 RecyclerView.r rVar = (RecyclerView.r) view3.getLayoutParams();
-                if (view3 != view && !rVar.d() && (iB = (rVar.b() - this.f2913d) * this.f2914e) >= 0 && iB < i10) {
+                if (view3 != view && !rVar.d() && (iB = (rVar.b() - this.f2758d) * this.f2759e) >= 0 && iB < i10) {
                     if (iB == 0) {
                         return view3;
                     }
@@ -315,11 +315,11 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
     }
 
     private View n2() {
-        return N(this.f2899x ? 0 : O() - 1);
+        return N(this.f2744x ? 0 : O() - 1);
     }
 
     private View o2() {
-        return N(this.f2899x ? O() - 1 : 0);
+        return N(this.f2744x ? O() - 1 : 0);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
@@ -330,27 +330,27 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
     public boolean A0() {
-        return this.f2898w;
+        return this.f2743w;
     }
 
     public boolean A2() {
-        return this.f2896u.k() == 0 && this.f2896u.h() == 0;
+        return this.f2741u.k() == 0 && this.f2741u.h() == 0;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
     @SuppressLint({"UnknownNullness"})
     public int B1(int i10, RecyclerView.x xVar, RecyclerView.b0 b0Var) {
-        if (this.f2894s == 1) {
+        if (this.f2739s == 1) {
             return 0;
         }
         return C2(i10, xVar, b0Var);
     }
 
     public final void B2() {
-        if (this.f2894s == 1 || !r2()) {
-            this.f2899x = this.f2898w;
+        if (this.f2739s == 1 || !r2()) {
+            this.f2744x = this.f2743w;
         } else {
-            this.f2899x = !this.f2898w;
+            this.f2744x = !this.f2743w;
         }
     }
 
@@ -370,27 +370,27 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
             return 0;
         }
         Y1();
-        this.f2895t.f2911a = true;
+        this.f2740t.f2756a = true;
         int i11 = i10 > 0 ? 1 : -1;
         int iAbs = Math.abs(i10);
         K2(i11, iAbs, true, b0Var);
-        c cVar = this.f2895t;
-        int iZ1 = cVar.f2916g + Z1(xVar, cVar, b0Var, false);
+        c cVar = this.f2740t;
+        int iZ1 = cVar.f2761g + Z1(xVar, cVar, b0Var, false);
         if (iZ1 < 0) {
             return 0;
         }
         if (iAbs > iZ1) {
             i10 = i11 * iZ1;
         }
-        this.f2896u.r(-i10);
-        this.f2895t.f2920k = i10;
+        this.f2741u.r(-i10);
+        this.f2740t.f2765k = i10;
         return i10;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
     @SuppressLint({"UnknownNullness"})
     public int D1(int i10, RecyclerView.x xVar, RecyclerView.b0 b0Var) {
-        if (this.f2894s == 0) {
+        if (this.f2739s == 0) {
             return 0;
         }
         return C2(i10, xVar, b0Var);
@@ -411,30 +411,30 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
             throw new IllegalArgumentException("invalid orientation:" + i10);
         }
         l(null);
-        if (i10 != this.f2894s || this.f2896u == null) {
+        if (i10 != this.f2739s || this.f2741u == null) {
             n nVarB = n.b(this, i10);
-            this.f2896u = nVarB;
-            this.E.f2904a = nVarB;
-            this.f2894s = i10;
+            this.f2741u = nVarB;
+            this.E.f2749a = nVarB;
+            this.f2739s = i10;
             y1();
         }
     }
 
     public void F2(boolean z10) {
         l(null);
-        if (z10 == this.f2898w) {
+        if (z10 == this.f2743w) {
             return;
         }
-        this.f2898w = z10;
+        this.f2743w = z10;
         y1();
     }
 
     public void G2(boolean z10) {
         l(null);
-        if (this.f2900y == z10) {
+        if (this.f2745y == z10) {
             return;
         }
-        this.f2900y = z10;
+        this.f2745y = z10;
         y1();
     }
 
@@ -466,26 +466,26 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
             aVar.c(viewA0, l0(viewA0));
             return true;
         }
-        boolean z11 = this.f2897v;
-        boolean z12 = this.f2900y;
-        if (z11 != z12 || (viewK2 = k2(xVar, b0Var, aVar.f2906d, z12)) == null) {
+        boolean z11 = this.f2742v;
+        boolean z12 = this.f2745y;
+        if (z11 != z12 || (viewK2 = k2(xVar, b0Var, aVar.f2751d, z12)) == null) {
             return false;
         }
         aVar.b(viewK2, l0(viewK2));
         if (!b0Var.e() && Q1()) {
-            int iG = this.f2896u.g(viewK2);
-            int iD = this.f2896u.d(viewK2);
-            int iM = this.f2896u.m();
-            int i10 = this.f2896u.i();
+            int iG = this.f2741u.g(viewK2);
+            int iD = this.f2741u.d(viewK2);
+            int iM = this.f2741u.m();
+            int i10 = this.f2741u.i();
             boolean z13 = iD <= iM && iG < iM;
             if (iG >= i10 && iD > i10) {
                 z10 = true;
             }
             if (z13 || z10) {
-                if (aVar.f2906d) {
+                if (aVar.f2751d) {
                     iM = i10;
                 }
-                aVar.f2905c = iM;
+                aVar.f2750c = iM;
             }
         }
         return true;
@@ -504,47 +504,47 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
                 aVar.b = this.A;
                 SavedState savedState = this.D;
                 if (savedState != null && savedState.a()) {
-                    boolean z10 = this.D.f2903c;
-                    aVar.f2906d = z10;
+                    boolean z10 = this.D.f2748c;
+                    aVar.f2751d = z10;
                     if (z10) {
-                        aVar.f2905c = this.f2896u.i() - this.D.b;
+                        aVar.f2750c = this.f2741u.i() - this.D.b;
                     } else {
-                        aVar.f2905c = this.f2896u.m() + this.D.b;
+                        aVar.f2750c = this.f2741u.m() + this.D.b;
                     }
                     return true;
                 }
                 if (this.B != Integer.MIN_VALUE) {
-                    boolean z11 = this.f2899x;
-                    aVar.f2906d = z11;
+                    boolean z11 = this.f2744x;
+                    aVar.f2751d = z11;
                     if (z11) {
-                        aVar.f2905c = this.f2896u.i() - this.B;
+                        aVar.f2750c = this.f2741u.i() - this.B;
                     } else {
-                        aVar.f2905c = this.f2896u.m() + this.B;
+                        aVar.f2750c = this.f2741u.m() + this.B;
                     }
                     return true;
                 }
                 View viewH = H(this.A);
                 if (viewH == null) {
                     if (O() > 0) {
-                        aVar.f2906d = (this.A < l0(N(0))) == this.f2899x;
+                        aVar.f2751d = (this.A < l0(N(0))) == this.f2744x;
                     }
                     aVar.a();
                 } else {
-                    if (this.f2896u.e(viewH) > this.f2896u.n()) {
+                    if (this.f2741u.e(viewH) > this.f2741u.n()) {
                         aVar.a();
                         return true;
                     }
-                    if (this.f2896u.g(viewH) - this.f2896u.m() < 0) {
-                        aVar.f2905c = this.f2896u.m();
-                        aVar.f2906d = false;
+                    if (this.f2741u.g(viewH) - this.f2741u.m() < 0) {
+                        aVar.f2750c = this.f2741u.m();
+                        aVar.f2751d = false;
                         return true;
                     }
-                    if (this.f2896u.i() - this.f2896u.d(viewH) < 0) {
-                        aVar.f2905c = this.f2896u.i();
-                        aVar.f2906d = true;
+                    if (this.f2741u.i() - this.f2741u.d(viewH) < 0) {
+                        aVar.f2750c = this.f2741u.i();
+                        aVar.f2751d = true;
                         return true;
                     }
-                    aVar.f2905c = aVar.f2906d ? this.f2896u.d(viewH) + this.f2896u.o() : this.f2896u.g(viewH);
+                    aVar.f2750c = aVar.f2751d ? this.f2741u.d(viewH) + this.f2741u.o() : this.f2741u.g(viewH);
                 }
                 return true;
             }
@@ -559,13 +559,13 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
             return;
         }
         aVar.a();
-        aVar.b = this.f2900y ? b0Var.b() - 1 : 0;
+        aVar.b = this.f2745y ? b0Var.b() - 1 : 0;
     }
 
     public final void K2(int i10, int i11, boolean z10, RecyclerView.b0 b0Var) {
         int iM;
-        this.f2895t.f2922m = A2();
-        this.f2895t.f2915f = i10;
+        this.f2740t.f2767m = A2();
+        this.f2740t.f2760f = i10;
         int[] iArr = this.H;
         iArr[0] = 0;
         iArr[1] = 0;
@@ -573,40 +573,40 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
         int iMax = Math.max(0, this.H[0]);
         int iMax2 = Math.max(0, this.H[1]);
         boolean z11 = i10 == 1;
-        c cVar = this.f2895t;
+        c cVar = this.f2740t;
         int i12 = z11 ? iMax2 : iMax;
-        cVar.f2917h = i12;
+        cVar.f2762h = i12;
         if (!z11) {
             iMax = iMax2;
         }
-        cVar.f2918i = iMax;
+        cVar.f2763i = iMax;
         if (z11) {
-            cVar.f2917h = i12 + this.f2896u.j();
+            cVar.f2762h = i12 + this.f2741u.j();
             View viewN2 = n2();
-            c cVar2 = this.f2895t;
-            cVar2.f2914e = this.f2899x ? -1 : 1;
+            c cVar2 = this.f2740t;
+            cVar2.f2759e = this.f2744x ? -1 : 1;
             int iL0 = l0(viewN2);
-            c cVar3 = this.f2895t;
-            cVar2.f2913d = iL0 + cVar3.f2914e;
-            cVar3.b = this.f2896u.d(viewN2);
-            iM = this.f2896u.d(viewN2) - this.f2896u.i();
+            c cVar3 = this.f2740t;
+            cVar2.f2758d = iL0 + cVar3.f2759e;
+            cVar3.b = this.f2741u.d(viewN2);
+            iM = this.f2741u.d(viewN2) - this.f2741u.i();
         } else {
             View viewO2 = o2();
-            this.f2895t.f2917h += this.f2896u.m();
-            c cVar4 = this.f2895t;
-            cVar4.f2914e = this.f2899x ? 1 : -1;
+            this.f2740t.f2762h += this.f2741u.m();
+            c cVar4 = this.f2740t;
+            cVar4.f2759e = this.f2744x ? 1 : -1;
             int iL1 = l0(viewO2);
-            c cVar5 = this.f2895t;
-            cVar4.f2913d = iL1 + cVar5.f2914e;
-            cVar5.b = this.f2896u.g(viewO2);
-            iM = (-this.f2896u.g(viewO2)) + this.f2896u.m();
+            c cVar5 = this.f2740t;
+            cVar4.f2758d = iL1 + cVar5.f2759e;
+            cVar5.b = this.f2741u.g(viewO2);
+            iM = (-this.f2741u.g(viewO2)) + this.f2741u.m();
         }
-        c cVar6 = this.f2895t;
-        cVar6.f2912c = i11;
+        c cVar6 = this.f2740t;
+        cVar6.f2757c = i11;
         if (z10) {
-            cVar6.f2912c = i11 - iM;
+            cVar6.f2757c = i11 - iM;
         }
-        cVar6.f2916g = iM;
+        cVar6.f2761g = iM;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
@@ -615,17 +615,17 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
     }
 
     public final void L2(int i10, int i11) {
-        this.f2895t.f2912c = this.f2896u.i() - i11;
-        c cVar = this.f2895t;
-        cVar.f2914e = this.f2899x ? -1 : 1;
-        cVar.f2913d = i10;
-        cVar.f2915f = 1;
+        this.f2740t.f2757c = this.f2741u.i() - i11;
+        c cVar = this.f2740t;
+        cVar.f2759e = this.f2744x ? -1 : 1;
+        cVar.f2758d = i10;
+        cVar.f2760f = 1;
         cVar.b = i11;
-        cVar.f2916g = Integer.MIN_VALUE;
+        cVar.f2761g = Integer.MIN_VALUE;
     }
 
     public final void M2(a aVar) {
-        L2(aVar.b, aVar.f2905c);
+        L2(aVar.b, aVar.f2750c);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
@@ -647,13 +647,13 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
     }
 
     public final void N2(int i10, int i11) {
-        this.f2895t.f2912c = i11 - this.f2896u.m();
-        c cVar = this.f2895t;
-        cVar.f2913d = i10;
-        cVar.f2914e = this.f2899x ? 1 : -1;
-        cVar.f2915f = -1;
+        this.f2740t.f2757c = i11 - this.f2741u.m();
+        c cVar = this.f2740t;
+        cVar.f2758d = i10;
+        cVar.f2759e = this.f2744x ? 1 : -1;
+        cVar.f2760f = -1;
         cVar.b = i11;
-        cVar.f2916g = Integer.MIN_VALUE;
+        cVar.f2761g = Integer.MIN_VALUE;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
@@ -665,10 +665,10 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
             return null;
         }
         Y1();
-        K2(iW1, (int) (this.f2896u.n() * 0.33333334f), false, b0Var);
-        c cVar = this.f2895t;
-        cVar.f2916g = Integer.MIN_VALUE;
-        cVar.f2911a = false;
+        K2(iW1, (int) (this.f2741u.n() * 0.33333334f), false, b0Var);
+        c cVar = this.f2740t;
+        cVar.f2761g = Integer.MIN_VALUE;
+        cVar.f2756a = false;
         Z1(xVar, cVar, b0Var, true);
         View viewJ2 = iW1 == -1 ? j2() : i2();
         View viewO2 = iW1 == -1 ? o2() : n2();
@@ -682,7 +682,7 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
     }
 
     public final void O2(a aVar) {
-        N2(aVar.b, aVar.f2905c);
+        N2(aVar.b, aVar.f2750c);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
@@ -697,13 +697,13 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
     public boolean Q1() {
-        return this.D == null && this.f2897v == this.f2900y;
+        return this.D == null && this.f2742v == this.f2745y;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
     public void R0(@NonNull RecyclerView.x xVar, @NonNull RecyclerView.b0 b0Var, @NonNull y2.p pVar) {
         super.R0(xVar, b0Var, pVar);
-        RecyclerView.h hVar = this.b.f2946m;
+        RecyclerView.h hVar = this.b.f2791m;
         if (hVar == null || hVar.e() <= 0) {
             return;
         }
@@ -713,7 +713,7 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
     public void R1(@NonNull RecyclerView.b0 b0Var, @NonNull int[] iArr) {
         int i10;
         int iP2 = p2(b0Var);
-        if (this.f2895t.f2915f == -1) {
+        if (this.f2740t.f2760f == -1) {
             i10 = 0;
         } else {
             i10 = iP2;
@@ -724,11 +724,11 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
     }
 
     public void S1(RecyclerView.b0 b0Var, c cVar, RecyclerView.q.c cVar2) {
-        int i10 = cVar.f2913d;
+        int i10 = cVar.f2758d;
         if (i10 < 0 || i10 >= b0Var.b()) {
             return;
         }
-        cVar2.a(i10, Math.max(0, cVar.f2916g));
+        cVar2.a(i10, Math.max(0, cVar.f2761g));
     }
 
     public final int T1(RecyclerView.b0 b0Var) {
@@ -736,7 +736,7 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
             return 0;
         }
         Y1();
-        return q.a(b0Var, this.f2896u, c2(!this.f2901z, true), b2(!this.f2901z, true), this, this.f2901z);
+        return q.a(b0Var, this.f2741u, c2(!this.f2746z, true), b2(!this.f2746z, true), this, this.f2746z);
     }
 
     public final int U1(RecyclerView.b0 b0Var) {
@@ -744,7 +744,7 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
             return 0;
         }
         Y1();
-        return q.b(b0Var, this.f2896u, c2(!this.f2901z, true), b2(!this.f2901z, true), this, this.f2901z, this.f2899x);
+        return q.b(b0Var, this.f2741u, c2(!this.f2746z, true), b2(!this.f2746z, true), this, this.f2746z, this.f2744x);
     }
 
     public final int V1(RecyclerView.b0 b0Var) {
@@ -752,26 +752,26 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
             return 0;
         }
         Y1();
-        return q.c(b0Var, this.f2896u, c2(!this.f2901z, true), b2(!this.f2901z, true), this, this.f2901z);
+        return q.c(b0Var, this.f2741u, c2(!this.f2746z, true), b2(!this.f2746z, true), this, this.f2746z);
     }
 
     public int W1(int i10) {
         if (i10 == 1) {
-            return (this.f2894s != 1 && r2()) ? 1 : -1;
+            return (this.f2739s != 1 && r2()) ? 1 : -1;
         }
         if (i10 == 2) {
-            return (this.f2894s != 1 && r2()) ? -1 : 1;
+            return (this.f2739s != 1 && r2()) ? -1 : 1;
         }
         if (i10 == 17) {
-            return this.f2894s == 0 ? -1 : Integer.MIN_VALUE;
+            return this.f2739s == 0 ? -1 : Integer.MIN_VALUE;
         }
         if (i10 == 33) {
-            return this.f2894s == 1 ? -1 : Integer.MIN_VALUE;
+            return this.f2739s == 1 ? -1 : Integer.MIN_VALUE;
         }
         if (i10 != 66) {
-            return (i10 == 130 && this.f2894s == 1) ? 1 : Integer.MIN_VALUE;
+            return (i10 == 130 && this.f2739s == 1) ? 1 : Integer.MIN_VALUE;
         }
-        return this.f2894s == 0 ? 1 : Integer.MIN_VALUE;
+        return this.f2739s == 0 ? 1 : Integer.MIN_VALUE;
     }
 
     public c X1() {
@@ -779,54 +779,54 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
     }
 
     public void Y1() {
-        if (this.f2895t == null) {
-            this.f2895t = X1();
+        if (this.f2740t == null) {
+            this.f2740t = X1();
         }
     }
 
     public int Z1(RecyclerView.x xVar, c cVar, RecyclerView.b0 b0Var, boolean z10) {
-        int i10 = cVar.f2912c;
-        int i11 = cVar.f2916g;
+        int i10 = cVar.f2757c;
+        int i11 = cVar.f2761g;
         if (i11 != Integer.MIN_VALUE) {
             if (i10 < 0) {
-                cVar.f2916g = i11 + i10;
+                cVar.f2761g = i11 + i10;
             }
             w2(xVar, cVar);
         }
-        int i12 = cVar.f2912c + cVar.f2917h;
+        int i12 = cVar.f2757c + cVar.f2762h;
         b bVar = this.F;
         while (true) {
-            if ((!cVar.f2922m && i12 <= 0) || !cVar.c(b0Var)) {
+            if ((!cVar.f2767m && i12 <= 0) || !cVar.c(b0Var)) {
                 break;
             }
             bVar.a();
             t2(xVar, b0Var, cVar, bVar);
             if (!bVar.b) {
-                cVar.b += bVar.f2908a * cVar.f2915f;
-                if (!bVar.f2909c || cVar.f2921l != null || !b0Var.e()) {
-                    int i13 = cVar.f2912c;
-                    int i14 = bVar.f2908a;
-                    cVar.f2912c = i13 - i14;
+                cVar.b += bVar.f2753a * cVar.f2760f;
+                if (!bVar.f2754c || cVar.f2766l != null || !b0Var.e()) {
+                    int i13 = cVar.f2757c;
+                    int i14 = bVar.f2753a;
+                    cVar.f2757c = i13 - i14;
                     i12 -= i14;
                 }
-                int i15 = cVar.f2916g;
+                int i15 = cVar.f2761g;
                 if (i15 != Integer.MIN_VALUE) {
-                    int i16 = i15 + bVar.f2908a;
-                    cVar.f2916g = i16;
-                    int i17 = cVar.f2912c;
+                    int i16 = i15 + bVar.f2753a;
+                    cVar.f2761g = i16;
+                    int i17 = cVar.f2757c;
                     if (i17 < 0) {
-                        cVar.f2916g = i16 + i17;
+                        cVar.f2761g = i16 + i17;
                     }
                     w2(xVar, cVar);
                 }
-                if (z10 && bVar.f2910d) {
+                if (z10 && bVar.f2755d) {
                     break;
                 }
             } else {
                 break;
             }
         }
-        return i10 - cVar.f2912c;
+        return i10 - cVar.f2757c;
     }
 
     public final View a2() {
@@ -834,7 +834,7 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
     }
 
     public View b2(boolean z10, boolean z11) {
-        return this.f2899x ? h2(0, O(), z10, z11) : h2(O() - 1, -1, z10, z11);
+        return this.f2744x ? h2(0, O(), z10, z11) : h2(O() - 1, -1, z10, z11);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.a0.b
@@ -843,8 +843,8 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
         if (O() == 0) {
             return null;
         }
-        int i11 = (i10 < l0(N(0))) != this.f2899x ? -1 : 1;
-        return this.f2894s == 0 ? new PointF(i11, 0.0f) : new PointF(0.0f, i11);
+        int i11 = (i10 < l0(N(0))) != this.f2744x ? -1 : 1;
+        return this.f2739s == 0 ? new PointF(i11, 0.0f) : new PointF(0.0f, i11);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
@@ -866,36 +866,36 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
         }
         SavedState savedState = this.D;
         if (savedState != null && savedState.a()) {
-            this.A = this.D.f2902a;
+            this.A = this.D.f2747a;
         }
         Y1();
-        this.f2895t.f2911a = false;
+        this.f2740t.f2756a = false;
         B2();
         View viewA0 = a0();
         a aVar = this.E;
-        if (!aVar.f2907e || this.A != -1 || this.D != null) {
+        if (!aVar.f2752e || this.A != -1 || this.D != null) {
             aVar.e();
             a aVar2 = this.E;
-            aVar2.f2906d = this.f2899x ^ this.f2900y;
+            aVar2.f2751d = this.f2744x ^ this.f2745y;
             J2(xVar, b0Var, aVar2);
-            this.E.f2907e = true;
-        } else if (viewA0 != null && (this.f2896u.g(viewA0) >= this.f2896u.i() || this.f2896u.d(viewA0) <= this.f2896u.m())) {
+            this.E.f2752e = true;
+        } else if (viewA0 != null && (this.f2741u.g(viewA0) >= this.f2741u.i() || this.f2741u.d(viewA0) <= this.f2741u.m())) {
             this.E.c(viewA0, l0(viewA0));
         }
-        c cVar = this.f2895t;
-        cVar.f2915f = cVar.f2920k >= 0 ? 1 : -1;
+        c cVar = this.f2740t;
+        cVar.f2760f = cVar.f2765k >= 0 ? 1 : -1;
         int[] iArr = this.H;
         iArr[0] = 0;
         iArr[1] = 0;
         R1(b0Var, iArr);
-        int iMax = Math.max(0, this.H[0]) + this.f2896u.m();
-        int iMax2 = Math.max(0, this.H[1]) + this.f2896u.j();
+        int iMax = Math.max(0, this.H[0]) + this.f2741u.m();
+        int iMax2 = Math.max(0, this.H[1]) + this.f2741u.j();
         if (b0Var.e() && (i14 = this.A) != -1 && this.B != Integer.MIN_VALUE && (viewH = H(i14)) != null) {
-            if (this.f2899x) {
-                i15 = this.f2896u.i() - this.f2896u.d(viewH);
+            if (this.f2744x) {
+                i15 = this.f2741u.i() - this.f2741u.d(viewH);
                 iG = this.B;
             } else {
-                iG = this.f2896u.g(viewH) - this.f2896u.m();
+                iG = this.f2741u.g(viewH) - this.f2741u.m();
                 i15 = this.B;
             }
             int i17 = i15 - iG;
@@ -906,72 +906,72 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
             }
         }
         a aVar3 = this.E;
-        if (!aVar3.f2906d ? !this.f2899x : this.f2899x) {
+        if (!aVar3.f2751d ? !this.f2744x : this.f2744x) {
             i16 = 1;
         }
         v2(xVar, b0Var, aVar3, i16);
         B(xVar);
-        this.f2895t.f2922m = A2();
-        this.f2895t.f2919j = b0Var.e();
-        this.f2895t.f2918i = 0;
+        this.f2740t.f2767m = A2();
+        this.f2740t.f2764j = b0Var.e();
+        this.f2740t.f2763i = 0;
         a aVar4 = this.E;
-        if (aVar4.f2906d) {
+        if (aVar4.f2751d) {
             O2(aVar4);
-            c cVar2 = this.f2895t;
-            cVar2.f2917h = iMax;
+            c cVar2 = this.f2740t;
+            cVar2.f2762h = iMax;
             Z1(xVar, cVar2, b0Var, false);
-            c cVar3 = this.f2895t;
+            c cVar3 = this.f2740t;
             i11 = cVar3.b;
-            int i18 = cVar3.f2913d;
-            int i19 = cVar3.f2912c;
+            int i18 = cVar3.f2758d;
+            int i19 = cVar3.f2757c;
             if (i19 > 0) {
                 iMax2 += i19;
             }
             M2(this.E);
-            c cVar4 = this.f2895t;
-            cVar4.f2917h = iMax2;
-            cVar4.f2913d += cVar4.f2914e;
+            c cVar4 = this.f2740t;
+            cVar4.f2762h = iMax2;
+            cVar4.f2758d += cVar4.f2759e;
             Z1(xVar, cVar4, b0Var, false);
-            c cVar5 = this.f2895t;
+            c cVar5 = this.f2740t;
             i10 = cVar5.b;
-            int i20 = cVar5.f2912c;
+            int i20 = cVar5.f2757c;
             if (i20 > 0) {
                 N2(i18, i11);
-                c cVar6 = this.f2895t;
-                cVar6.f2917h = i20;
+                c cVar6 = this.f2740t;
+                cVar6.f2762h = i20;
                 Z1(xVar, cVar6, b0Var, false);
-                i11 = this.f2895t.b;
+                i11 = this.f2740t.b;
             }
         } else {
             M2(aVar4);
-            c cVar7 = this.f2895t;
-            cVar7.f2917h = iMax2;
+            c cVar7 = this.f2740t;
+            cVar7.f2762h = iMax2;
             Z1(xVar, cVar7, b0Var, false);
-            c cVar8 = this.f2895t;
+            c cVar8 = this.f2740t;
             i10 = cVar8.b;
-            int i21 = cVar8.f2913d;
-            int i22 = cVar8.f2912c;
+            int i21 = cVar8.f2758d;
+            int i22 = cVar8.f2757c;
             if (i22 > 0) {
                 iMax += i22;
             }
             O2(this.E);
-            c cVar9 = this.f2895t;
-            cVar9.f2917h = iMax;
-            cVar9.f2913d += cVar9.f2914e;
+            c cVar9 = this.f2740t;
+            cVar9.f2762h = iMax;
+            cVar9.f2758d += cVar9.f2759e;
             Z1(xVar, cVar9, b0Var, false);
-            c cVar10 = this.f2895t;
+            c cVar10 = this.f2740t;
             i11 = cVar10.b;
-            int i23 = cVar10.f2912c;
+            int i23 = cVar10.f2757c;
             if (i23 > 0) {
                 L2(i21, i10);
-                c cVar11 = this.f2895t;
-                cVar11.f2917h = i23;
+                c cVar11 = this.f2740t;
+                cVar11.f2762h = i23;
                 Z1(xVar, cVar11, b0Var, false);
-                i10 = this.f2895t.b;
+                i10 = this.f2740t.b;
             }
         }
         if (O() > 0) {
-            if (this.f2899x ^ this.f2900y) {
+            if (this.f2744x ^ this.f2745y) {
                 int iL3 = l2(i10, xVar, b0Var, true);
                 i12 = i11 + iL3;
                 i13 = i10 + iL3;
@@ -989,13 +989,13 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
         if (b0Var.e()) {
             this.E.e();
         } else {
-            this.f2896u.s();
+            this.f2741u.s();
         }
-        this.f2897v = this.f2900y;
+        this.f2742v = this.f2745y;
     }
 
     public View c2(boolean z10, boolean z11) {
-        return this.f2899x ? h2(O() - 1, -1, z10, z11) : h2(0, O(), z10, z11);
+        return this.f2744x ? h2(O() - 1, -1, z10, z11) : h2(0, O(), z10, z11);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
@@ -1035,14 +1035,14 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
         if (i11 <= i10 && i11 >= i10) {
             return N(i10);
         }
-        if (this.f2896u.g(N(i10)) < this.f2896u.m()) {
+        if (this.f2741u.g(N(i10)) < this.f2741u.m()) {
             i12 = 16644;
             i13 = 16388;
         } else {
             i12 = 4161;
             i13 = 4097;
         }
-        return this.f2894s == 0 ? this.f3052e.a(i10, i11, i12, i13) : this.f3053f.a(i10, i11, i12, i13);
+        return this.f2739s == 0 ? this.f2897e.a(i10, i11, i12, i13) : this.f2898f.a(i10, i11, i12, i13);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
@@ -1062,7 +1062,7 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
         Y1();
         int i12 = z10 ? 24579 : 320;
         int i13 = z11 ? 320 : 0;
-        return this.f2894s == 0 ? this.f3052e.a(i10, i11, i12, i13) : this.f3053f.a(i10, i11, i12, i13);
+        return this.f2739s == 0 ? this.f2897e.a(i10, i11, i12, i13) : this.f2898f.a(i10, i11, i12, i13);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
@@ -1077,26 +1077,26 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
             return savedState;
         }
         Y1();
-        boolean z10 = this.f2897v ^ this.f2899x;
-        savedState.f2903c = z10;
+        boolean z10 = this.f2742v ^ this.f2744x;
+        savedState.f2748c = z10;
         if (z10) {
             View viewN2 = n2();
-            savedState.b = this.f2896u.i() - this.f2896u.d(viewN2);
-            savedState.f2902a = l0(viewN2);
+            savedState.b = this.f2741u.i() - this.f2741u.d(viewN2);
+            savedState.f2747a = l0(viewN2);
             return savedState;
         }
         View viewO2 = o2();
-        savedState.f2902a = l0(viewO2);
-        savedState.b = this.f2896u.g(viewO2) - this.f2896u.m();
+        savedState.f2747a = l0(viewO2);
+        savedState.b = this.f2741u.g(viewO2) - this.f2741u.m();
         return savedState;
     }
 
     public final View i2() {
-        return this.f2899x ? a2() : e2();
+        return this.f2744x ? a2() : e2();
     }
 
     public final View j2() {
-        return this.f2899x ? e2() : a2();
+        return this.f2744x ? e2() : a2();
     }
 
     /* JADX WARN: Code duplicated, block: B:33:0x0073  */
@@ -1117,16 +1117,16 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
             i11 = 1;
         }
         int iB = b0Var.b();
-        int iM = this.f2896u.m();
-        int i12 = this.f2896u.i();
+        int iM = this.f2741u.m();
+        int i12 = this.f2741u.i();
         View view = null;
         View view2 = null;
         View view3 = null;
         while (iO != i10) {
             View viewN = N(iO);
             int iL0 = l0(viewN);
-            int iG = this.f2896u.g(viewN);
-            int iD = this.f2896u.d(viewN);
+            int iG = this.f2741u.g(viewN);
+            int iD = this.f2741u.d(viewN);
             if (iL0 >= 0 && iL0 < iB) {
                 if (!((RecyclerView.r) viewN.getLayoutParams()).d()) {
                     boolean z12 = iD <= iM && iG < iM;
@@ -1172,20 +1172,20 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
             return true;
         }
         if (i10 == 16908343 && bundle != null) {
-            if (this.f2894s == 1) {
+            if (this.f2739s == 1) {
                 int i11 = bundle.getInt("android.view.accessibility.action.ARGUMENT_ROW_INT", -1);
                 if (i11 < 0) {
                     return false;
                 }
                 RecyclerView recyclerView = this.b;
-                iMin = Math.min(i11, o0(recyclerView.f2926c, recyclerView.f2941j0) - 1);
+                iMin = Math.min(i11, o0(recyclerView.f2771c, recyclerView.f2786j0) - 1);
             } else {
                 int i12 = bundle.getInt("android.view.accessibility.action.ARGUMENT_COLUMN_INT", -1);
                 if (i12 < 0) {
                     return false;
                 }
                 RecyclerView recyclerView2 = this.b;
-                iMin = Math.min(i12, S(recyclerView2.f2926c, recyclerView2.f2941j0) - 1);
+                iMin = Math.min(i12, S(recyclerView2.f2771c, recyclerView2.f2786j0) - 1);
             }
             if (iMin >= 0) {
                 D2(iMin, 0);
@@ -1197,54 +1197,54 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
 
     public final int l2(int i10, RecyclerView.x xVar, RecyclerView.b0 b0Var, boolean z10) {
         int i11;
-        int i12 = this.f2896u.i() - i10;
+        int i12 = this.f2741u.i() - i10;
         if (i12 <= 0) {
             return 0;
         }
         int i13 = -C2(-i12, xVar, b0Var);
         int i14 = i10 + i13;
-        if (!z10 || (i11 = this.f2896u.i() - i14) <= 0) {
+        if (!z10 || (i11 = this.f2741u.i() - i14) <= 0) {
             return i13;
         }
-        this.f2896u.r(i11);
+        this.f2741u.r(i11);
         return i11 + i13;
     }
 
     public final int m2(int i10, RecyclerView.x xVar, RecyclerView.b0 b0Var, boolean z10) {
         int iM;
-        int iM2 = i10 - this.f2896u.m();
+        int iM2 = i10 - this.f2741u.m();
         if (iM2 <= 0) {
             return 0;
         }
         int i11 = -C2(iM2, xVar, b0Var);
         int i12 = i10 + i11;
-        if (!z10 || (iM = i12 - this.f2896u.m()) <= 0) {
+        if (!z10 || (iM = i12 - this.f2741u.m()) <= 0) {
             return i11;
         }
-        this.f2896u.r(-iM);
+        this.f2741u.r(-iM);
         return i11 - iM;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
     public boolean p() {
-        return this.f2894s == 0;
+        return this.f2739s == 0;
     }
 
     @Deprecated
     public int p2(RecyclerView.b0 b0Var) {
         if (b0Var.d()) {
-            return this.f2896u.n();
+            return this.f2741u.n();
         }
         return 0;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
     public boolean q() {
-        return this.f2894s == 1;
+        return this.f2739s == 1;
     }
 
     public int q2() {
-        return this.f2894s;
+        return this.f2739s;
     }
 
     public boolean r2() {
@@ -1252,13 +1252,13 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
     }
 
     public boolean s2() {
-        return this.f2901z;
+        return this.f2746z;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
     @SuppressLint({"UnknownNullness"})
     public void t(int i10, int i11, RecyclerView.b0 b0Var, RecyclerView.q.c cVar) {
-        if (this.f2894s != 0) {
+        if (this.f2739s != 0) {
             i10 = i11;
         }
         if (O() == 0 || i10 == 0) {
@@ -1266,7 +1266,7 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
         }
         Y1();
         K2(i10 > 0 ? 1 : -1, Math.abs(i10), true, b0Var);
-        S1(b0Var, this.f2895t, cVar);
+        S1(b0Var, this.f2740t, cVar);
     }
 
     public void t2(RecyclerView.x xVar, RecyclerView.b0 b0Var, c cVar, b bVar) {
@@ -1284,35 +1284,35 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
             return;
         }
         RecyclerView.r rVar = (RecyclerView.r) viewD.getLayoutParams();
-        if (cVar.f2921l == null) {
-            if (this.f2899x == (cVar.f2915f == -1)) {
+        if (cVar.f2766l == null) {
+            if (this.f2744x == (cVar.f2760f == -1)) {
                 i(viewD);
             } else {
                 j(viewD, 0);
             }
         } else {
-            if (this.f2899x == (cVar.f2915f == -1)) {
+            if (this.f2744x == (cVar.f2760f == -1)) {
                 g(viewD);
             } else {
                 h(viewD, 0);
             }
         }
         F0(viewD, 0, 0);
-        bVar.f2908a = this.f2896u.e(viewD);
-        if (this.f2894s == 1) {
+        bVar.f2753a = this.f2741u.e(viewD);
+        if (this.f2739s == 1) {
             if (r2()) {
                 iF2 = s0() - j0();
-                iI0 = iF2 - this.f2896u.f(viewD);
+                iI0 = iF2 - this.f2741u.f(viewD);
             } else {
                 iI0 = i0();
-                iF2 = this.f2896u.f(viewD) + iI0;
+                iF2 = this.f2741u.f(viewD) + iI0;
             }
-            if (cVar.f2915f == -1) {
+            if (cVar.f2760f == -1) {
                 i14 = cVar.b;
-                i13 = i14 - bVar.f2908a;
+                i13 = i14 - bVar.f2753a;
             } else {
                 i13 = cVar.b;
-                i14 = bVar.f2908a + i13;
+                i14 = bVar.f2753a + i13;
             }
             int i15 = iI0;
             i12 = i13;
@@ -1321,23 +1321,23 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
             i10 = iF2;
         } else {
             int iK0 = k0();
-            iF = this.f2896u.f(viewD) + iK0;
-            if (cVar.f2915f == -1) {
+            iF = this.f2741u.f(viewD) + iK0;
+            if (cVar.f2760f == -1) {
                 int i16 = cVar.b;
-                i11 = i16 - bVar.f2908a;
+                i11 = i16 - bVar.f2753a;
                 i10 = i16;
             } else {
                 int i17 = cVar.b;
-                i10 = bVar.f2908a + i17;
+                i10 = bVar.f2753a + i17;
                 i11 = i17;
             }
             i12 = iK0;
         }
         E0(viewD, i11, i12, i10, iF);
         if (rVar.d() || rVar.c()) {
-            bVar.f2909c = true;
+            bVar.f2754c = true;
         }
-        bVar.f2910d = viewD.hasFocusable();
+        bVar.f2755d = viewD.hasFocusable();
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
@@ -1348,15 +1348,15 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
         SavedState savedState = this.D;
         if (savedState == null || !savedState.a()) {
             B2();
-            z10 = this.f2899x;
+            z10 = this.f2744x;
             i11 = this.A;
             if (i11 == -1) {
                 i11 = z10 ? i10 - 1 : 0;
             }
         } else {
             SavedState savedState2 = this.D;
-            z10 = savedState2.f2903c;
-            i11 = savedState2.f2902a;
+            z10 = savedState2.f2748c;
+            i11 = savedState2.f2747a;
         }
         int i12 = z10 ? -1 : 1;
         for (int i13 = 0; i13 < this.G && i11 >= 0 && i11 < i10; i13++) {
@@ -1377,31 +1377,31 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
         for (int i12 = 0; i12 < size; i12++) {
             RecyclerView.f0 f0Var = listK.get(i12);
             if (!f0Var.w()) {
-                if ((f0Var.n() < iL0) != this.f2899x) {
-                    iE += this.f2896u.e(f0Var.f3016a);
+                if ((f0Var.n() < iL0) != this.f2744x) {
+                    iE += this.f2741u.e(f0Var.f2861a);
                 } else {
-                    iE2 += this.f2896u.e(f0Var.f3016a);
+                    iE2 += this.f2741u.e(f0Var.f2861a);
                 }
             }
         }
-        this.f2895t.f2921l = listK;
+        this.f2740t.f2766l = listK;
         if (iE > 0) {
             N2(l0(o2()), i10);
-            c cVar = this.f2895t;
-            cVar.f2917h = iE;
-            cVar.f2912c = 0;
+            c cVar = this.f2740t;
+            cVar.f2762h = iE;
+            cVar.f2757c = 0;
             cVar.a();
-            Z1(xVar, this.f2895t, b0Var, false);
+            Z1(xVar, this.f2740t, b0Var, false);
         }
         if (iE2 > 0) {
             L2(l0(n2()), i11);
-            c cVar2 = this.f2895t;
-            cVar2.f2917h = iE2;
-            cVar2.f2912c = 0;
+            c cVar2 = this.f2740t;
+            cVar2.f2762h = iE2;
+            cVar2.f2757c = 0;
             cVar2.a();
-            Z1(xVar, this.f2895t, b0Var, false);
+            Z1(xVar, this.f2740t, b0Var, false);
         }
-        this.f2895t.f2921l = null;
+        this.f2740t.f2766l = null;
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.q
@@ -1425,12 +1425,12 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
     }
 
     public final void w2(RecyclerView.x xVar, c cVar) {
-        if (!cVar.f2911a || cVar.f2922m) {
+        if (!cVar.f2756a || cVar.f2767m) {
             return;
         }
-        int i10 = cVar.f2916g;
-        int i11 = cVar.f2918i;
-        if (cVar.f2915f == -1) {
+        int i10 = cVar.f2761g;
+        int i11 = cVar.f2763i;
+        if (cVar.f2760f == -1) {
             y2(xVar, i10, i11);
         } else {
             z2(xVar, i10, i11);
@@ -1470,11 +1470,11 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
         if (i10 < 0) {
             return;
         }
-        int iH = (this.f2896u.h() - i10) + i11;
-        if (this.f2899x) {
+        int iH = (this.f2741u.h() - i10) + i11;
+        if (this.f2744x) {
             for (int i12 = 0; i12 < iO; i12++) {
                 View viewN = N(i12);
-                if (this.f2896u.g(viewN) < iH || this.f2896u.q(viewN) < iH) {
+                if (this.f2741u.g(viewN) < iH || this.f2741u.q(viewN) < iH) {
                     x2(xVar, 0, i12);
                     return;
                 }
@@ -1484,7 +1484,7 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
         int i13 = iO - 1;
         for (int i14 = i13; i14 >= 0; i14--) {
             View viewN2 = N(i14);
-            if (this.f2896u.g(viewN2) < iH || this.f2896u.q(viewN2) < iH) {
+            if (this.f2741u.g(viewN2) < iH || this.f2741u.q(viewN2) < iH) {
                 x2(xVar, i13, i14);
                 return;
             }
@@ -1503,10 +1503,10 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
         }
         int i12 = i10 - i11;
         int iO = O();
-        if (!this.f2899x) {
+        if (!this.f2744x) {
             for (int i13 = 0; i13 < iO; i13++) {
                 View viewN = N(i13);
-                if (this.f2896u.d(viewN) > i12 || this.f2896u.p(viewN) > i12) {
+                if (this.f2741u.d(viewN) > i12 || this.f2741u.p(viewN) > i12) {
                     x2(xVar, 0, i13);
                     return;
                 }
@@ -1516,7 +1516,7 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
         int i14 = iO - 1;
         for (int i15 = i14; i15 >= 0; i15--) {
             View viewN2 = N(i15);
-            if (this.f2896u.d(viewN2) > i12 || this.f2896u.p(viewN2) > i12) {
+            if (this.f2741u.d(viewN2) > i12 || this.f2741u.p(viewN2) > i12) {
                 x2(xVar, i14, i15);
                 return;
             }
@@ -1524,11 +1524,11 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
     }
 
     public LinearLayoutManager(@SuppressLint({"UnknownNullness"}) Context context, int i10, boolean z10) {
-        this.f2894s = 1;
-        this.f2898w = false;
-        this.f2899x = false;
-        this.f2900y = false;
-        this.f2901z = true;
+        this.f2739s = 1;
+        this.f2743w = false;
+        this.f2744x = false;
+        this.f2745y = false;
+        this.f2746z = true;
         this.A = -1;
         this.B = Integer.MIN_VALUE;
         this.D = null;
@@ -1542,11 +1542,11 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
 
     @SuppressLint({"UnknownNullness"})
     public LinearLayoutManager(Context context, AttributeSet attributeSet, int i10, int i11) {
-        this.f2894s = 1;
-        this.f2898w = false;
-        this.f2899x = false;
-        this.f2900y = false;
-        this.f2901z = true;
+        this.f2739s = 1;
+        this.f2743w = false;
+        this.f2744x = false;
+        this.f2745y = false;
+        this.f2746z = true;
         this.A = -1;
         this.B = Integer.MIN_VALUE;
         this.D = null;
@@ -1555,8 +1555,8 @@ public class LinearLayoutManager extends RecyclerView.q implements RecyclerView.
         this.G = 2;
         this.H = new int[2];
         RecyclerView.q.d dVarM0 = RecyclerView.q.m0(context, attributeSet, i10, i11);
-        E2(dVarM0.f3068a);
-        F2(dVarM0.f3069c);
-        G2(dVarM0.f3070d);
+        E2(dVarM0.f2913a);
+        F2(dVarM0.f2914c);
+        G2(dVarM0.f2915d);
     }
 }

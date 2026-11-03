@@ -46,7 +46,7 @@ public class CrossPromotionHelper {
         AFa1tSDK aFa1tSDKD = AFa1tSDK.d();
         AFc1aSDK aFc1aSDK = aFa1tSDKD.AFKeystoreWrapper;
         if (context != null) {
-            aFc1aSDK.f5240d.f5305d = context.getApplicationContext();
+            aFc1aSDK.f5313d.f5378d = context.getApplicationContext();
         }
         AFc1aSDK aFc1aSDK2 = aFa1tSDKD.AFKeystoreWrapper;
         aFc1aSDK2.afWarnLog().d(new AFe1nSDK(aFc1aSDK2, str, aFj1bSDK));
@@ -58,7 +58,7 @@ public class CrossPromotionHelper {
             String key = entry.getKey();
             key.getClass();
             if (key.equals(Payload.TYPE_APP)) {
-                AFj1fSDK.f5438d = value;
+                AFj1fSDK.f5511d = value;
             } else if (key.equals("impression")) {
                 registerClient = value;
             }
@@ -66,7 +66,7 @@ public class CrossPromotionHelper {
     }
 
     public static void logAndOpenStore(@NonNull Context context, String str, String str2, Map<String, String> map) {
-        LinkGenerator linkGeneratorAFLogger = AFLogger(context, str, str2, map, String.format(Locale.US, AFj1fSDK.f5438d, AppsFlyerLib.getInstance().getHostPrefix(), AFa1tSDK.d().getHostName()));
+        LinkGenerator linkGeneratorAFLogger = AFLogger(context, str, str2, map, String.format(Locale.US, AFj1fSDK.f5511d, AppsFlyerLib.getInstance().getHostPrefix(), AFa1tSDK.d().getHostName()));
         if (AppsFlyerLib.getInstance().isStopped()) {
             AFLogger.INSTANCE.i(LogTag.CROSS_PROMOTION, "SDK is stopped, track And Open Store is disabled", true);
             return;

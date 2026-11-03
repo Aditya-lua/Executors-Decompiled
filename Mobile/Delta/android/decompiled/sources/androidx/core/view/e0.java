@@ -7,16 +7,16 @@ import android.view.RoundedCorner;
 public final class e0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f1858a;
+    public final int f1703a;
     public final int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Point f1859c;
+    public final Point f1704c;
 
     public e0(int i10, int i11, int i12, int i13) {
-        this.f1858a = i10;
+        this.f1703a = i10;
         this.b = i11;
-        this.f1859c = new Point(i12, i13);
+        this.f1704c = new Point(i12, i13);
     }
 
     public static int f(int i10) {
@@ -69,15 +69,15 @@ public final class e0 {
     }
 
     public int a() {
-        return this.f1859c.x;
+        return this.f1704c.x;
     }
 
     public int b() {
-        return this.f1859c.y;
+        return this.f1704c.y;
     }
 
     public int c() {
-        return this.f1858a;
+        return this.f1703a;
     }
 
     public final String d(int i10) {
@@ -103,7 +103,7 @@ public final class e0 {
         }
         if (obj instanceof e0) {
             e0 e0Var = (e0) obj;
-            if (this.f1858a == e0Var.f1858a && this.b == e0Var.b && this.f1859c.equals(e0Var.f1859c)) {
+            if (this.f1703a == e0Var.f1703a && this.b == e0Var.b && this.f1704c.equals(e0Var.f1704c)) {
                 return true;
             }
         }
@@ -111,11 +111,11 @@ public final class e0 {
     }
 
     public int hashCode() {
-        return (((this.f1858a * 31) + this.b) * 31) + this.f1859c.hashCode();
+        return (((this.f1703a * 31) + this.b) * 31) + this.f1704c.hashCode();
     }
 
     public String toString() {
-        return "RoundedCornerCompat{position=" + d(this.f1858a) + ", radius=" + this.b + ", center=" + this.f1859c + '}';
+        return "RoundedCornerCompat{position=" + d(this.f1703a) + ", radius=" + this.b + ", center=" + this.f1704c + '}';
     }
 
     public e0(int i10, int i11, Point point) {

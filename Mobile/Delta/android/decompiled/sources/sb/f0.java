@@ -8,18 +8,18 @@ import java.util.concurrent.Executor;
 public final class f0 implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ Task f30582a;
+    public final /* synthetic */ Task f31129a;
     public final /* synthetic */ g0 b;
 
     public f0(g0 g0Var, Task task) {
         this.b = g0Var;
-        this.f30582a = task;
+        this.f31129a = task;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
         try {
-            Task taskThen = this.b.b.then(this.f30582a.getResult());
+            Task taskThen = this.b.b.then(this.f31129a.getResult());
             if (taskThen == null) {
                 this.b.onFailure(new NullPointerException("Continuation returned null"));
                 return;

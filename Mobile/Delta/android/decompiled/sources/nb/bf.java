@@ -10,42 +10,42 @@ import java.util.Objects;
 public final class bf extends BroadcastReceiver {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final g7 f25376a;
+    public final g7 f26197a;
 
     public bf(g7 g7Var) {
-        this.f25376a = g7Var;
+        this.f26197a = g7Var;
     }
 
     public final /* synthetic */ void a() {
-        this.f25376a.N().o(((Long) z4.D.b(null)).longValue());
+        this.f26197a.N().o(((Long) z4.D.b(null)).longValue());
     }
 
     @Override // android.content.BroadcastReceiver
     public final void onReceive(Context context, Intent intent) {
         if (intent == null) {
-            this.f25376a.a().r().a("App receiver called with null intent");
+            this.f26197a.a().r().a("App receiver called with null intent");
             return;
         }
         String action = intent.getAction();
         if (action == null) {
-            this.f25376a.a().r().a("App receiver called with null action");
+            this.f26197a.a().r().a("App receiver called with null action");
             return;
         }
         int iHashCode = action.hashCode();
         if (iHashCode != -1928239649) {
             if (iHashCode == 1279883384 && action.equals("com.google.android.gms.measurement.BATCHES_AVAILABLE")) {
-                g7 g7Var = this.f25376a;
+                g7 g7Var = this.f26197a;
                 g7Var.a().w().a("[sgtm] App Receiver notified batches are available");
                 g7Var.b().t(new Runnable() { // from class: nb.ye
                     @Override // java.lang.Runnable
                     public final /* synthetic */ void run() {
-                        this.f26142a.a();
+                        this.f26963a.a();
                     }
                 });
                 return;
             }
         } else if (action.equals("com.google.android.gms.measurement.TRIGGERS_AVAILABLE")) {
-            final g7 g7Var2 = this.f25376a;
+            final g7 g7Var2 = this.f26197a;
             vf.a();
             if (g7Var2.w().H(null, z4.R0)) {
                 g7Var2.a().w().a("App receiver notified triggers are available");
@@ -72,6 +72,6 @@ public final class bf extends BroadcastReceiver {
             }
             return;
         }
-        this.f25376a.a().r().a("App receiver called with unknown action");
+        this.f26197a.a().r().a("App receiver called with unknown action");
     }
 }

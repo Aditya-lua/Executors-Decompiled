@@ -12,7 +12,7 @@ public final class b2 {
         if (iterable instanceof SortedSet) {
             comparator2 = ((SortedSet) iterable).comparator();
             if (comparator2 == null) {
-                comparator2 = q1.f15359a;
+                comparator2 = q1.f15973a;
             }
         } else {
             if (!(iterable instanceof a2)) {

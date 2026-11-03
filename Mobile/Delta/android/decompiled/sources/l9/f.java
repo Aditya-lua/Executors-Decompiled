@@ -29,80 +29,80 @@ public class f implements Handler.Callback {
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
     @NonNull
-    public static final Status f23001u = new Status(4, "Sign-out occurred while this API call was in progress.");
+    public static final Status f23395u = new Status(4, "Sign-out occurred while this API call was in progress.");
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public static final Status f23002v = new Status(4, "The user must be signed in to make this API call.");
+    public static final Status f23396v = new Status(4, "The user must be signed in to make this API call.");
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public static final Object f23003w = new Object();
+    public static final Object f23397w = new Object();
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public static f f23004x;
+    public static f f23398x;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public TelemetryData f23006c;
+    public TelemetryData f23400c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public n9.q f23007d;
+    public n9.q f23401d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Context f23008e;
+    public final Context f23402e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final j9.c f23009f;
+    public final j9.c f23403f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final n9.d0 f23010g;
+    public final n9.d0 f23404g;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public final Handler f23017s;
+    public final Handler f23411s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public volatile boolean f23018t;
+    public volatile boolean f23412t;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public long f23005a = 10000;
+    public long f23399a = 10000;
     public boolean b = false;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final AtomicInteger f23011h = new AtomicInteger(1);
+    public final AtomicInteger f23405h = new AtomicInteger(1);
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final AtomicInteger f23012i = new AtomicInteger(0);
+    public final AtomicInteger f23406i = new AtomicInteger(0);
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public final Map f23013o = new ConcurrentHashMap(5, 0.75f, 1);
+    public final Map f23407o = new ConcurrentHashMap(5, 0.75f, 1);
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public a0 f23014p = null;
+    public a0 f23408p = null;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public final Set f23015q = new w1.b();
+    public final Set f23409q = new w1.b();
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public final Set f23016r = new w1.b();
+    public final Set f23410r = new w1.b();
 
     public f(Context context, Looper looper, j9.c cVar) {
-        this.f23018t = true;
-        this.f23008e = context;
+        this.f23412t = true;
+        this.f23402e = context;
         bb.j jVar = new bb.j(looper, this);
-        this.f23017s = jVar;
-        this.f23009f = cVar;
-        this.f23010g = new n9.d0(cVar);
+        this.f23411s = jVar;
+        this.f23403f = cVar;
+        this.f23404g = new n9.d0(cVar);
         if (u9.i.a(context)) {
-            this.f23018t = false;
+            this.f23412t = false;
         }
         jVar.sendMessage(jVar.obtainMessage(6));
     }
 
     public static void a() {
-        synchronized (f23003w) {
+        synchronized (f23397w) {
             try {
-                f fVar = f23004x;
+                f fVar = f23398x;
                 if (fVar != null) {
-                    fVar.f23012i.incrementAndGet();
-                    Handler handler = fVar.f23017s;
+                    fVar.f23406i.incrementAndGet();
+                    Handler handler = fVar.f23411s;
                     handler.sendMessageAtFrontOfQueue(handler.obtainMessage(10));
                 }
             } catch (Throwable th2) {
@@ -118,9 +118,9 @@ public class f implements Handler.Callback {
     @NonNull
     public static f u() {
         f fVar;
-        synchronized (f23003w) {
-            n9.m.m(f23004x, "Must guarantee manager is non-null before using getInstance");
-            fVar = f23004x;
+        synchronized (f23397w) {
+            n9.m.m(f23398x, "Must guarantee manager is non-null before using getInstance");
+            fVar = f23398x;
         }
         return fVar;
     }
@@ -129,12 +129,12 @@ public class f implements Handler.Callback {
     @ResultIgnorabilityUnspecified
     public static f v(@NonNull Context context) {
         f fVar;
-        synchronized (f23003w) {
+        synchronized (f23397w) {
             try {
-                if (f23004x == null) {
-                    f23004x = new f(context.getApplicationContext(), n9.f.b().getLooper(), j9.c.o());
+                if (f23398x == null) {
+                    f23398x = new f(context.getApplicationContext(), n9.f.b().getLooper(), j9.c.o());
                 }
-                fVar = f23004x;
+                fVar = f23398x;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -143,44 +143,44 @@ public class f implements Handler.Callback {
     }
 
     public final void E(@NonNull k9.e eVar, int i10, @NonNull com.google.android.gms.common.api.internal.a aVar) {
-        this.f23017s.sendMessage(this.f23017s.obtainMessage(4, new v0(new k1(i10, aVar), this.f23012i.get(), eVar)));
+        this.f23411s.sendMessage(this.f23411s.obtainMessage(4, new v0(new k1(i10, aVar), this.f23406i.get(), eVar)));
     }
 
     public final void F(@NonNull k9.e eVar, int i10, @NonNull u uVar, @NonNull sb.k kVar, @NonNull s sVar) {
         k(kVar, uVar.f(), eVar);
-        this.f23017s.sendMessage(this.f23017s.obtainMessage(4, new v0(new m1(i10, uVar, kVar, sVar), this.f23012i.get(), eVar)));
+        this.f23411s.sendMessage(this.f23411s.obtainMessage(4, new v0(new m1(i10, uVar, kVar, sVar), this.f23406i.get(), eVar)));
     }
 
     public final void G(MethodInvocation methodInvocation, int i10, long j10, int i11) {
-        this.f23017s.sendMessage(this.f23017s.obtainMessage(18, new u0(methodInvocation, i10, j10, i11)));
+        this.f23411s.sendMessage(this.f23411s.obtainMessage(18, new u0(methodInvocation, i10, j10, i11)));
     }
 
     public final void H(@NonNull ConnectionResult connectionResult, int i10) {
         if (f(connectionResult, i10)) {
             return;
         }
-        Handler handler = this.f23017s;
+        Handler handler = this.f23411s;
         handler.sendMessage(handler.obtainMessage(5, i10, 0, connectionResult));
     }
 
     public final void I() {
-        Handler handler = this.f23017s;
+        Handler handler = this.f23411s;
         handler.sendMessage(handler.obtainMessage(3));
     }
 
     public final void J(@NonNull k9.e eVar) {
-        Handler handler = this.f23017s;
+        Handler handler = this.f23411s;
         handler.sendMessage(handler.obtainMessage(7, eVar));
     }
 
     public final void b(@NonNull a0 a0Var) {
-        synchronized (f23003w) {
+        synchronized (f23397w) {
             try {
-                if (this.f23014p != a0Var) {
-                    this.f23014p = a0Var;
-                    this.f23015q.clear();
+                if (this.f23408p != a0Var) {
+                    this.f23408p = a0Var;
+                    this.f23409q.clear();
                 }
-                this.f23015q.addAll(a0Var.t());
+                this.f23409q.addAll(a0Var.t());
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -188,11 +188,11 @@ public class f implements Handler.Callback {
     }
 
     public final void c(@NonNull a0 a0Var) {
-        synchronized (f23003w) {
+        synchronized (f23397w) {
             try {
-                if (this.f23014p == a0Var) {
-                    this.f23014p = null;
-                    this.f23015q.clear();
+                if (this.f23408p == a0Var) {
+                    this.f23408p = null;
+                    this.f23409q.clear();
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -208,26 +208,26 @@ public class f implements Handler.Callback {
         if (rootTelemetryConfigurationA != null && !rootTelemetryConfigurationA.x3()) {
             return false;
         }
-        int iA = this.f23010g.a(this.f23008e, 203400000);
+        int iA = this.f23404g.a(this.f23402e, 203400000);
         return iA == -1 || iA == 0;
     }
 
     @ResultIgnorabilityUnspecified
     public final boolean f(ConnectionResult connectionResult, int i10) {
-        return this.f23009f.y(this.f23008e, connectionResult, i10);
+        return this.f23403f.y(this.f23402e, connectionResult, i10);
     }
 
     @ResultIgnorabilityUnspecified
     public final j0 h(k9.e eVar) {
-        Map map = this.f23013o;
+        Map map = this.f23407o;
         b bVarU = eVar.u();
         j0 j0Var = (j0) map.get(bVarU);
         if (j0Var == null) {
             j0Var = new j0(this, eVar);
-            this.f23013o.put(bVarU, j0Var);
+            this.f23407o.put(bVarU, j0Var);
         }
         if (j0Var.a()) {
-            this.f23016r.add(bVarU);
+            this.f23410r.add(bVarU);
         }
         j0Var.C();
         return j0Var;
@@ -245,23 +245,23 @@ public class f implements Handler.Callback {
         j0 j0Var = null;
         switch (i10) {
             case 1:
-                this.f23005a = true == ((Boolean) message.obj).booleanValue() ? 10000L : 300000L;
-                this.f23017s.removeMessages(12);
-                for (b bVar : this.f23013o.keySet()) {
-                    Handler handler = this.f23017s;
-                    handler.sendMessageDelayed(handler.obtainMessage(12, bVar), this.f23005a);
+                this.f23399a = true == ((Boolean) message.obj).booleanValue() ? 10000L : 300000L;
+                this.f23411s.removeMessages(12);
+                for (b bVar : this.f23407o.keySet()) {
+                    Handler handler = this.f23411s;
+                    handler.sendMessageDelayed(handler.obtainMessage(12, bVar), this.f23399a);
                 }
                 return true;
             case 2:
                 p1 p1Var = (p1) message.obj;
                 for (b bVar2 : p1Var.b()) {
-                    j0 j0Var2 = (j0) this.f23013o.get(bVar2);
+                    j0 j0Var2 = (j0) this.f23407o.get(bVar2);
                     if (j0Var2 == null) {
                         p1Var.c(bVar2, new ConnectionResult(13), null);
                         return true;
                     }
                     if (j0Var2.N()) {
-                        p1Var.c(bVar2, ConnectionResult.f5688k, j0Var2.t().getEndpointPackageName());
+                        p1Var.c(bVar2, ConnectionResult.f5761k, j0Var2.t().getEndpointPackageName());
                     } else {
                         ConnectionResult connectionResultR = j0Var2.r();
                         if (connectionResultR != null) {
@@ -274,7 +274,7 @@ public class f implements Handler.Callback {
                 }
                 return true;
             case 3:
-                for (j0 j0Var3 : this.f23013o.values()) {
+                for (j0 j0Var3 : this.f23407o.values()) {
                     j0Var3.B();
                     j0Var3.C();
                 }
@@ -283,29 +283,29 @@ public class f implements Handler.Callback {
             case 8:
             case 13:
                 v0 v0Var = (v0) message.obj;
-                j0 j0VarH = (j0) this.f23013o.get(v0Var.f23097c.u());
+                j0 j0VarH = (j0) this.f23407o.get(v0Var.f23491c.u());
                 if (j0VarH == null) {
-                    j0VarH = h(v0Var.f23097c);
+                    j0VarH = h(v0Var.f23491c);
                 }
-                if (!j0VarH.a() || this.f23012i.get() == v0Var.b) {
-                    j0VarH.D(v0Var.f23096a);
+                if (!j0VarH.a() || this.f23406i.get() == v0Var.b) {
+                    j0VarH.D(v0Var.f23490a);
                 } else {
-                    v0Var.f23096a.a(f23001u);
+                    v0Var.f23490a.a(f23395u);
                     j0VarH.J();
                 }
                 return true;
             case 5:
                 int i11 = message.arg1;
                 ConnectionResult connectionResult = (ConnectionResult) message.obj;
-                for (j0 j0Var4 : this.f23013o.values()) {
+                for (j0 j0Var4 : this.f23407o.values()) {
                     if (j0Var4.p() == i11) {
                         j0Var = j0Var4;
                         if (j0Var != null) {
                             Log.wtf("GoogleApiManager", "Could not find API instance " + i11 + " while trying to fail enqueued calls.", new Exception());
                         } else if (connectionResult.w3() == 13) {
-                            j0Var.e(new Status(17, "Error resolution was canceled by the user, original error message: " + this.f23009f.e(connectionResult.w3()) + ": " + connectionResult.x3()));
+                            j0Var.e(new Status(17, "Error resolution was canceled by the user, original error message: " + this.f23403f.e(connectionResult.w3()) + ": " + connectionResult.x3()));
                         } else {
-                            j0Var.e(g(j0Var.f23034c, connectionResult));
+                            j0Var.e(g(j0Var.f23428c, connectionResult));
                         }
                         return true;
                     }
@@ -313,17 +313,17 @@ public class f implements Handler.Callback {
                 if (j0Var != null) {
                     Log.wtf("GoogleApiManager", "Could not find API instance " + i11 + " while trying to fail enqueued calls.", new Exception());
                 } else if (connectionResult.w3() == 13) {
-                    j0Var.e(new Status(17, "Error resolution was canceled by the user, original error message: " + this.f23009f.e(connectionResult.w3()) + ": " + connectionResult.x3()));
+                    j0Var.e(new Status(17, "Error resolution was canceled by the user, original error message: " + this.f23403f.e(connectionResult.w3()) + ": " + connectionResult.x3()));
                 } else {
-                    j0Var.e(g(j0Var.f23034c, connectionResult));
+                    j0Var.e(g(j0Var.f23428c, connectionResult));
                 }
                 return true;
             case 6:
-                if (this.f23008e.getApplicationContext() instanceof Application) {
-                    c.c((Application) this.f23008e.getApplicationContext());
+                if (this.f23402e.getApplicationContext() instanceof Application) {
+                    c.c((Application) this.f23402e.getApplicationContext());
                     c.b().a(new e0(this));
                     if (!c.b().e(true)) {
-                        this.f23005a = 300000L;
+                        this.f23399a = 300000L;
                     }
                 }
                 return true;
@@ -331,49 +331,49 @@ public class f implements Handler.Callback {
                 h((k9.e) message.obj);
                 return true;
             case 9:
-                if (this.f23013o.containsKey(message.obj)) {
-                    ((j0) this.f23013o.get(message.obj)).I();
+                if (this.f23407o.containsKey(message.obj)) {
+                    ((j0) this.f23407o.get(message.obj)).I();
                 }
                 return true;
             case 10:
-                Iterator it = this.f23016r.iterator();
+                Iterator it = this.f23410r.iterator();
                 while (it.hasNext()) {
-                    j0 j0Var5 = (j0) this.f23013o.remove((b) it.next());
+                    j0 j0Var5 = (j0) this.f23407o.remove((b) it.next());
                     if (j0Var5 != null) {
                         j0Var5.J();
                     }
                 }
-                this.f23016r.clear();
+                this.f23410r.clear();
                 return true;
             case 11:
-                if (this.f23013o.containsKey(message.obj)) {
-                    ((j0) this.f23013o.get(message.obj)).K();
+                if (this.f23407o.containsKey(message.obj)) {
+                    ((j0) this.f23407o.get(message.obj)).K();
                 }
                 return true;
             case 12:
-                if (this.f23013o.containsKey(message.obj)) {
-                    ((j0) this.f23013o.get(message.obj)).b();
+                if (this.f23407o.containsKey(message.obj)) {
+                    ((j0) this.f23407o.get(message.obj)).b();
                 }
                 return true;
             case 14:
                 b0 b0Var = (b0) message.obj;
                 b bVarA = b0Var.a();
-                if (this.f23013o.containsKey(bVarA)) {
-                    b0Var.b().c(Boolean.valueOf(((j0) this.f23013o.get(bVarA)).o(false)));
+                if (this.f23407o.containsKey(bVarA)) {
+                    b0Var.b().c(Boolean.valueOf(((j0) this.f23407o.get(bVarA)).o(false)));
                 } else {
                     b0Var.b().c(Boolean.FALSE);
                 }
                 return true;
             case 15:
                 l0 l0Var = (l0) message.obj;
-                if (this.f23013o.containsKey(l0Var.f23048a)) {
-                    j0.z((j0) this.f23013o.get(l0Var.f23048a), l0Var);
+                if (this.f23407o.containsKey(l0Var.f23442a)) {
+                    j0.z((j0) this.f23407o.get(l0Var.f23442a), l0Var);
                 }
                 return true;
             case 16:
                 l0 l0Var2 = (l0) message.obj;
-                if (this.f23013o.containsKey(l0Var2.f23048a)) {
-                    j0.A((j0) this.f23013o.get(l0Var2.f23048a), l0Var2);
+                if (this.f23407o.containsKey(l0Var2.f23442a)) {
+                    j0.A((j0) this.f23407o.get(l0Var2.f23442a), l0Var2);
                 }
                 return true;
             case 17:
@@ -381,25 +381,25 @@ public class f implements Handler.Callback {
                 return true;
             case 18:
                 u0 u0Var = (u0) message.obj;
-                if (u0Var.f23094c == 0) {
-                    i().c(new TelemetryData(u0Var.b, Arrays.asList(u0Var.f23093a)));
+                if (u0Var.f23488c == 0) {
+                    i().c(new TelemetryData(u0Var.b, Arrays.asList(u0Var.f23487a)));
                 } else {
-                    TelemetryData telemetryData = this.f23006c;
+                    TelemetryData telemetryData = this.f23400c;
                     if (telemetryData != null) {
                         List listW3 = telemetryData.w3();
-                        if (telemetryData.v3() != u0Var.b || (listW3 != null && listW3.size() >= u0Var.f23095d)) {
-                            this.f23017s.removeMessages(17);
+                        if (telemetryData.v3() != u0Var.b || (listW3 != null && listW3.size() >= u0Var.f23489d)) {
+                            this.f23411s.removeMessages(17);
                             j();
                         } else {
-                            this.f23006c.x3(u0Var.f23093a);
+                            this.f23400c.x3(u0Var.f23487a);
                         }
                     }
-                    if (this.f23006c == null) {
+                    if (this.f23400c == null) {
                         ArrayList arrayList = new ArrayList();
-                        arrayList.add(u0Var.f23093a);
-                        this.f23006c = new TelemetryData(u0Var.b, arrayList);
-                        Handler handler2 = this.f23017s;
-                        handler2.sendMessageDelayed(handler2.obtainMessage(17), u0Var.f23094c);
+                        arrayList.add(u0Var.f23487a);
+                        this.f23400c = new TelemetryData(u0Var.b, arrayList);
+                        Handler handler2 = this.f23411s;
+                        handler2.sendMessageDelayed(handler2.obtainMessage(17), u0Var.f23488c);
                     }
                 }
                 return true;
@@ -413,19 +413,19 @@ public class f implements Handler.Callback {
     }
 
     public final n9.q i() {
-        if (this.f23007d == null) {
-            this.f23007d = n9.p.a(this.f23008e);
+        if (this.f23401d == null) {
+            this.f23401d = n9.p.a(this.f23402e);
         }
-        return this.f23007d;
+        return this.f23401d;
     }
 
     public final void j() {
-        TelemetryData telemetryData = this.f23006c;
+        TelemetryData telemetryData = this.f23400c;
         if (telemetryData != null) {
             if (telemetryData.v3() > 0 || e()) {
                 i().c(telemetryData);
             }
-            this.f23006c = null;
+            this.f23400c = null;
         }
     }
 
@@ -435,7 +435,7 @@ public class f implements Handler.Callback {
             return;
         }
         Task taskA = kVar.a();
-        final Handler handler = this.f23017s;
+        final Handler handler = this.f23411s;
         handler.getClass();
         taskA.c(new Executor() { // from class: l9.d0
             @Override // java.util.concurrent.Executor
@@ -446,17 +446,17 @@ public class f implements Handler.Callback {
     }
 
     public final int l() {
-        return this.f23011h.getAndIncrement();
+        return this.f23405h.getAndIncrement();
     }
 
     public final j0 t(b bVar) {
-        return (j0) this.f23013o.get(bVar);
+        return (j0) this.f23407o.get(bVar);
     }
 
     @NonNull
     public final Task x(@NonNull Iterable iterable) {
         p1 p1Var = new p1(iterable);
-        this.f23017s.sendMessage(this.f23017s.obtainMessage(2, p1Var));
+        this.f23411s.sendMessage(this.f23411s.obtainMessage(2, p1Var));
         return p1Var.a();
     }
 
@@ -464,7 +464,7 @@ public class f implements Handler.Callback {
     public final Task y(@NonNull k9.e eVar, @NonNull o oVar, @NonNull w wVar, @NonNull Runnable runnable) {
         sb.k kVar = new sb.k();
         k(kVar, oVar.e(), eVar);
-        this.f23017s.sendMessage(this.f23017s.obtainMessage(8, new v0(new l1(new w0(oVar, wVar, runnable), kVar), this.f23012i.get(), eVar)));
+        this.f23411s.sendMessage(this.f23411s.obtainMessage(8, new v0(new l1(new w0(oVar, wVar, runnable), kVar), this.f23406i.get(), eVar)));
         return kVar.a();
     }
 
@@ -472,7 +472,7 @@ public class f implements Handler.Callback {
     public final Task z(@NonNull k9.e eVar, @NonNull k.a aVar, int i10) {
         sb.k kVar = new sb.k();
         k(kVar, i10, eVar);
-        this.f23017s.sendMessage(this.f23017s.obtainMessage(13, new v0(new n1(aVar, kVar), this.f23012i.get(), eVar)));
+        this.f23411s.sendMessage(this.f23411s.obtainMessage(13, new v0(new n1(aVar, kVar), this.f23406i.get(), eVar)));
         return kVar.a();
     }
 }

@@ -22,7 +22,7 @@ public class AFKeystoreWrapper {
     public final Object AFLogger = new Object();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public String f5196d = "";
+    public String f5269d = "";
     public int unregisterClient = 0;
 
     public AFKeystoreWrapper(Context context) {
@@ -72,7 +72,7 @@ public class AFKeystoreWrapper {
     public final String AFLogger() {
         String str;
         synchronized (this.AFLogger) {
-            str = this.f5196d;
+            str = this.f5269d;
         }
         return str;
     }
@@ -101,7 +101,7 @@ public class AFKeystoreWrapper {
                                     break;
                                     break;
                                 }
-                                this.f5196d = strArrSplit2[1].trim();
+                                this.f5269d = strArrSplit2[1].trim();
                                 this.unregisterClient = Integer.parseInt(strArrSplit3[1].trim());
                                 break;
                             }
@@ -134,7 +134,7 @@ public class AFKeystoreWrapper {
         sb2.append("com.appsflyer,");
         synchronized (this.AFLogger) {
             sb2.append("KSAppsFlyerId=");
-            sb2.append(this.f5196d);
+            sb2.append(this.f5269d);
             sb2.append(",");
             sb2.append("KSAppsFlyerRICounter=");
             sb2.append(this.unregisterClient);

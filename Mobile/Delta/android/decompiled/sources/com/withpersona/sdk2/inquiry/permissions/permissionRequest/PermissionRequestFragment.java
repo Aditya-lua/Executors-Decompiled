@@ -21,8 +21,9 @@ import com.withpersona.sdk2.inquiry.permissions.state.PermissionRequestStateMana
 import e.m0;
 import e4.l0;
 import e4.u;
-import jt.l;
-import jt.o;
+import gt.l;
+import gt.o;
+import iu.p0;
 import k4.CreationExtras;
 import kotlin.Metadata;
 import kotlin.Unit;
@@ -33,20 +34,19 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.d0;
 import kotlin.jvm.internal.k;
-import ku.p0;
-import nu.c0;
+import lu.c0;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pt.m;
-import rp.CheckRequestPermissionRationaleStateView;
-import rp.i0;
-import rp.j1;
-import rp.n1;
-import zt.n;
+import pp.CheckRequestPermissionRationaleStateView;
+import pp.i0;
+import pp.j1;
+import pp.n1;
+import xt.n;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\n\u0018\u0000 $2\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001:\u0003%&'B\u0007¢\u0006\u0004\b\u0004\u0010\u0005J!\u0010\u000b\u001a\u00020\n2\u0006\u0010\u0007\u001a\u00020\u00062\b\u0010\t\u001a\u0004\u0018\u00010\bH\u0016¢\u0006\u0004\b\u000b\u0010\fJ\u0017\u0010\u000e\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\u0003H\u0014¢\u0006\u0004\b\u000e\u0010\u000fR\u001b\u0010\u0015\u001a\u00020\u00108BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\u0011\u0010\u0012\u001a\u0004\b\u0013\u0010\u0014R\"\u0010\u001d\u001a\u00020\u00168\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\b\u0017\u0010\u0018\u001a\u0004\b\u0019\u0010\u001a\"\u0004\b\u001b\u0010\u001cR\u001b\u0010#\u001a\u00020\u001e8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\u001f\u0010 \u001a\u0004\b!\u0010\"¨\u0006("}, d2 = {"Lcom/withpersona/sdk2/inquiry/permissions/permissionRequest/PermissionRequestFragment;", "Loq/c;", "Lsp/b;", "Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$d;", "<init>", "()V", "Landroid/view/View;", "view", "Landroid/os/Bundle;", "savedInstanceState", "", "e1", "(Landroid/view/View;Landroid/os/Bundle;)V", "rendering", "o2", "(Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$d;)V", "Lcom/withpersona/sdk2/inquiry/permissions/permissionRequest/PermissionRequestFragment$PermissionRequestFragmentArgs;", "j0", "Lkq/c;", "l2", "()Lcom/withpersona/sdk2/inquiry/permissions/permissionRequest/PermissionRequestFragment$PermissionRequestFragmentArgs;", "args", "Lcom/withpersona/sdk2/inquiry/permissions/permissionRequest/c$a;", "k0", "Lcom/withpersona/sdk2/inquiry/permissions/permissionRequest/c$a;", "n2", "()Lcom/withpersona/sdk2/inquiry/permissions/permissionRequest/c$a;", "setViewModelFactory", "(Lcom/withpersona/sdk2/inquiry/permissions/permissionRequest/c$a;)V", "viewModelFactory", "Lcom/withpersona/sdk2/inquiry/permissions/permissionRequest/c;", "l0", "Ljt/h;", "m2", "()Lcom/withpersona/sdk2/inquiry/permissions/permissionRequest/c;", "viewModel", "m0", "b", "PermissionRequestFragmentArgs", "PermissionRequestFragmentResult", "permissions_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class PermissionRequestFragment extends oq.c<sp.b, PermissionRequestStateManager.d> {
+@Metadata(d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\n\u0018\u0000 $2\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001:\u0003%&'B\u0007¢\u0006\u0004\b\u0004\u0010\u0005J!\u0010\u000b\u001a\u00020\n2\u0006\u0010\u0007\u001a\u00020\u00062\b\u0010\t\u001a\u0004\u0018\u00010\bH\u0016¢\u0006\u0004\b\u000b\u0010\fJ\u0017\u0010\u000e\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\u0003H\u0014¢\u0006\u0004\b\u000e\u0010\u000fR\u001b\u0010\u0015\u001a\u00020\u00108BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\u0011\u0010\u0012\u001a\u0004\b\u0013\u0010\u0014R\"\u0010\u001d\u001a\u00020\u00168\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\b\u0017\u0010\u0018\u001a\u0004\b\u0019\u0010\u001a\"\u0004\b\u001b\u0010\u001cR\u001b\u0010#\u001a\u00020\u001e8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\u001f\u0010 \u001a\u0004\b!\u0010\"¨\u0006("}, d2 = {"Lcom/withpersona/sdk2/inquiry/permissions/permissionRequest/PermissionRequestFragment;", "Lmq/c;", "Lqp/b;", "Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$d;", "<init>", "()V", "Landroid/view/View;", "view", "Landroid/os/Bundle;", "savedInstanceState", "", "e1", "(Landroid/view/View;Landroid/os/Bundle;)V", "rendering", "o2", "(Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$d;)V", "Lcom/withpersona/sdk2/inquiry/permissions/permissionRequest/PermissionRequestFragment$PermissionRequestFragmentArgs;", "j0", "Liq/c;", "l2", "()Lcom/withpersona/sdk2/inquiry/permissions/permissionRequest/PermissionRequestFragment$PermissionRequestFragmentArgs;", "args", "Lcom/withpersona/sdk2/inquiry/permissions/permissionRequest/c$a;", "k0", "Lcom/withpersona/sdk2/inquiry/permissions/permissionRequest/c$a;", "n2", "()Lcom/withpersona/sdk2/inquiry/permissions/permissionRequest/c$a;", "setViewModelFactory", "(Lcom/withpersona/sdk2/inquiry/permissions/permissionRequest/c$a;)V", "viewModelFactory", "Lcom/withpersona/sdk2/inquiry/permissions/permissionRequest/c;", "l0", "Lgt/h;", "m2", "()Lcom/withpersona/sdk2/inquiry/permissions/permissionRequest/c;", "viewModel", "m0", "b", "PermissionRequestFragmentArgs", "PermissionRequestFragmentResult", "permissions_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class PermissionRequestFragment extends mq.c<qp.b, PermissionRequestStateManager.d> {
 
     /* JADX INFO: renamed from: m0, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -54,14 +54,14 @@ public final class PermissionRequestFragment extends oq.c<sp.b, PermissionReques
 
     /* JADX INFO: renamed from: j0, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final kq.c args;
+    public final iq.c args;
 
     /* JADX INFO: renamed from: k0, reason: collision with root package name and from kotlin metadata */
     public com.withpersona.sdk2.inquiry.permissions.permissionRequest.c.a viewModelFactory;
 
     /* JADX INFO: renamed from: l0, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final jt.h viewModel;
+    public final gt.h viewModel;
 
     @Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\n\b\u0001\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\r\u0010\t\u001a\u00020\b¢\u0006\u0004\b\t\u0010\nJ\u001d\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\f\u001a\u00020\u000b2\u0006\u0010\r\u001a\u00020\b¢\u0006\u0004\b\u000f\u0010\u0010R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0011\u0010\u0012\u001a\u0004\b\u0013\u0010\u0014R\u0017\u0010\u0005\u001a\u00020\u00048\u0006¢\u0006\f\n\u0004\b\u0015\u0010\u0016\u001a\u0004\b\u0011\u0010\u0017¨\u0006\u0018"}, d2 = {"Lcom/withpersona/sdk2/inquiry/permissions/permissionRequest/PermissionRequestFragment$PermissionRequestFragmentArgs;", "Landroid/os/Parcelable;", "", "requestId", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;", "props", "<init>", "(Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "a", "Ljava/lang/String;", "f", "()Ljava/lang/String;", "b", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;", "()Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;", "permissions_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class PermissionRequestFragmentArgs implements Parcelable {
@@ -188,22 +188,22 @@ public final class PermissionRequestFragment extends oq.c<sp.b, PermissionReques
     }
 
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final /* synthetic */ class a extends k implements n<LayoutInflater, ViewGroup, Boolean, sp.b> {
+    public static final /* synthetic */ class a extends k implements n<LayoutInflater, ViewGroup, Boolean, qp.b> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final a f12333a = new a();
+        public static final a f12414a = new a();
 
         public a() {
-            super(3, sp.b.class, "inflate", "inflate(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lcom/withpersona/sdk2/inquiry/permissions/databinding/Pi2FragmentPermissionRequestBinding;", 0);
+            super(3, qp.b.class, "inflate", "inflate(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lcom/withpersona/sdk2/inquiry/permissions/databinding/Pi2FragmentPermissionRequestBinding;", 0);
         }
 
-        public final sp.b d(LayoutInflater p8, ViewGroup viewGroup, boolean z10) {
+        public final qp.b d(LayoutInflater p8, ViewGroup viewGroup, boolean z10) {
             Intrinsics.checkNotNullParameter(p8, "p0");
-            return sp.b.c(p8, viewGroup, z10);
+            return qp.b.c(p8, viewGroup, z10);
         }
 
-        @Override // zt.n
-        public /* bridge */ /* synthetic */ sp.b invoke(LayoutInflater layoutInflater, ViewGroup viewGroup, Boolean bool) {
+        @Override // xt.n
+        public /* bridge */ /* synthetic */ qp.b invoke(LayoutInflater layoutInflater, ViewGroup viewGroup, Boolean bool) {
             return d(layoutInflater, viewGroup, bool.booleanValue());
         }
     }
@@ -220,7 +220,7 @@ public final class PermissionRequestFragment extends oq.c<sp.b, PermissionReques
             Intrinsics.checkNotNullParameter(requestId, "requestId");
             Intrinsics.checkNotNullParameter(props, "props");
             androidx.fragment.app.h hVarR = fragmentManager.r();
-            hVarR.b(viewId, kq.b.a(new PermissionRequestFragment(), new PermissionRequestFragmentArgs(requestId, props)), "Pi2PermissionRequestFragment");
+            hVarR.b(viewId, iq.b.a(new PermissionRequestFragment(), new PermissionRequestFragmentArgs(requestId, props)), "Pi2PermissionRequestFragment");
             hVarR.i();
         }
 
@@ -246,74 +246,79 @@ public final class PermissionRequestFragment extends oq.c<sp.b, PermissionReques
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.permissions.permissionRequest.PermissionRequestFragment$onViewCreated$2", f = "PermissionRequestFragment.kt", l = {96}, m = "invokeSuspend")
-    public static final class d extends m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.permissions.permissionRequest.PermissionRequestFragment$onViewCreated$2", f = "PermissionRequestFragment.kt", l = {96}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class d extends m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f12334t;
+        public int f12415t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public final /* synthetic */ PermissionRequestStateManager f12335u;
+        public final /* synthetic */ PermissionRequestStateManager f12416u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ PermissionRequestFragment f12336v;
+        public final /* synthetic */ PermissionRequestFragment f12417v;
 
         @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-        public static final class a<T> implements nu.i {
+        public static final class a<T> implements lu.i {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ PermissionRequestStateManager f12337a;
+            public final /* synthetic */ PermissionRequestStateManager f12418a;
             public final /* synthetic */ PermissionRequestFragment b;
 
             public a(PermissionRequestStateManager permissionRequestStateManager, PermissionRequestFragment permissionRequestFragment) {
-                this.f12337a = permissionRequestStateManager;
+                this.f12418a = permissionRequestStateManager;
                 this.b = permissionRequestFragment;
             }
 
-            @Override // nu.i
+            @Override // lu.i
             /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-            public final Object emit(PermissionRequestWorkflow.Output output, nt.b<? super Unit> bVar) {
+            public final Object emit(PermissionRequestWorkflow.Output output, lt.b<? super Unit> bVar) {
                 if (output == null) {
-                    return Unit.f22483a;
+                    return Unit.f22938a;
                 }
-                this.f12337a.a().setValue(null);
+                this.f12418a.a().setValue(null);
                 PermissionRequestFragment permissionRequestFragment = this.b;
                 Bundle bundle = new Bundle();
                 bundle.putParcelable("pi2_result", new PermissionRequestFragmentResult(this.b.l2().getRequestId(), output.getPermissionState()));
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
                 u.a(permissionRequestFragment, "pi2_permission_request_request", bundle);
-                FragmentManager fragmentManagerM = this.b.M();
-                Intrinsics.checkNotNullExpressionValue(fragmentManagerM, "getParentFragmentManager(...)");
+                FragmentManager fragmentManagerL = this.b.L();
+                Intrinsics.checkNotNullExpressionValue(fragmentManagerL, "getParentFragmentManager(...)");
                 PermissionRequestFragment permissionRequestFragment2 = this.b;
-                androidx.fragment.app.h hVarR = fragmentManagerM.r();
+                androidx.fragment.app.h hVarR = fragmentManagerL.r();
                 hVarR.m(permissionRequestFragment2);
                 hVarR.g();
-                return Unit.f22483a;
+                return Unit.f22938a;
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public d(PermissionRequestStateManager permissionRequestStateManager, PermissionRequestFragment permissionRequestFragment, nt.b<? super d> bVar) {
+        public d(PermissionRequestStateManager permissionRequestStateManager, PermissionRequestFragment permissionRequestFragment, lt.b<? super d> bVar) {
             super(2, bVar);
-            this.f12335u = permissionRequestStateManager;
-            this.f12336v = permissionRequestFragment;
+            this.f12416u = permissionRequestStateManager;
+            this.f12417v = permissionRequestFragment;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return new d(this.f12335u, this.f12336v, bVar);
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return new d(this.f12416u, this.f12417v, bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((d) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            Object objE = ot.c.e();
-            int i10 = this.f12334t;
+            Object objE = mt.c.e();
+            int i10 = this.f12415t;
             if (i10 == 0) {
                 o.b(obj);
-                c0<PermissionRequestWorkflow.Output> c0VarA = this.f12335u.a();
-                a aVar = new a(this.f12335u, this.f12336v);
-                this.f12334t = 1;
+                c0<PermissionRequestWorkflow.Output> c0VarA = this.f12416u.a();
+                a aVar = new a(this.f12416u, this.f12417v);
+                this.f12415t = 1;
                 if (c0VarA.collect(aVar, this) == objE) {
                     return objE;
                 }
@@ -323,12 +328,7 @@ public final class PermissionRequestFragment extends oq.c<sp.b, PermissionReques
                 }
                 o.b(obj);
             }
-            throw new jt.d();
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((d) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            throw new gt.d();
         }
     }
 
@@ -336,20 +336,20 @@ public final class PermissionRequestFragment extends oq.c<sp.b, PermissionReques
     public static final class e implements Function0<Bundle> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ androidx.fragment.app.c f12338a;
+        public final /* synthetic */ androidx.fragment.app.c f12419a;
 
         public e(androidx.fragment.app.c cVar) {
-            this.f12338a = cVar;
+            this.f12419a = cVar;
         }
 
         @Override // kotlin.jvm.functions.Function0
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public final Bundle invoke() {
-            Bundle bundleT = this.f12338a.t();
+            Bundle bundleT = this.f12419a.t();
             if (bundleT != null) {
                 return bundleT;
             }
-            throw new IllegalStateException("Fragment " + this.f12338a + " has null arguments");
+            throw new IllegalStateException("Fragment " + this.f12419a + " has null arguments");
         }
     }
 
@@ -357,18 +357,18 @@ public final class PermissionRequestFragment extends oq.c<sp.b, PermissionReques
     public static final class f implements Function0<a1.c> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ androidx.fragment.app.c f12339a;
+        public final /* synthetic */ androidx.fragment.app.c f12420a;
         public final /* synthetic */ Function1 b;
 
         public f(androidx.fragment.app.c cVar, Function1 function1) {
-            this.f12339a = cVar;
+            this.f12420a = cVar;
             this.b = function1;
         }
 
         @Override // kotlin.jvm.functions.Function0
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public final a1.c invoke() {
-            return new oq.d(this.f12339a, this.b);
+            return new mq.d(this.f12420a, this.b);
         }
     }
 
@@ -376,19 +376,19 @@ public final class PermissionRequestFragment extends oq.c<sp.b, PermissionReques
     public static final class g extends kotlin.jvm.internal.m implements Function0<androidx.fragment.app.c> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ androidx.fragment.app.c f12340i;
+        public final /* synthetic */ androidx.fragment.app.c f12421i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public g(androidx.fragment.app.c cVar) {
             super(0);
-            this.f12340i = cVar;
+            this.f12421i = cVar;
         }
 
         @Override // kotlin.jvm.functions.Function0
         @NotNull
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final androidx.fragment.app.c invoke() {
-            return this.f12340i;
+            return this.f12421i;
         }
     }
 
@@ -396,19 +396,19 @@ public final class PermissionRequestFragment extends oq.c<sp.b, PermissionReques
     public static final class h extends kotlin.jvm.internal.m implements Function0<c1> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ Function0 f12341i;
+        public final /* synthetic */ Function0 f12422i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public h(Function0 function0) {
             super(0);
-            this.f12341i = function0;
+            this.f12422i = function0;
         }
 
         @Override // kotlin.jvm.functions.Function0
         @NotNull
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final c1 invoke() {
-            return (c1) this.f12341i.invoke();
+            return (c1) this.f12422i.invoke();
         }
     }
 
@@ -416,19 +416,19 @@ public final class PermissionRequestFragment extends oq.c<sp.b, PermissionReques
     public static final class i extends kotlin.jvm.internal.m implements Function0<b1> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ jt.h f12342i;
+        public final /* synthetic */ gt.h f12423i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public i(jt.h hVar) {
+        public i(gt.h hVar) {
             super(0);
-            this.f12342i = hVar;
+            this.f12423i = hVar;
         }
 
         @Override // kotlin.jvm.functions.Function0
         @NotNull
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final b1 invoke() {
-            return l0.c(this.f12342i).w();
+            return l0.c(this.f12423i).v();
         }
     }
 
@@ -436,16 +436,16 @@ public final class PermissionRequestFragment extends oq.c<sp.b, PermissionReques
     public static final class j extends kotlin.jvm.internal.m implements Function0<CreationExtras> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ Function0 f12343i;
+        public final /* synthetic */ Function0 f12424i;
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public final /* synthetic */ jt.h f12344j;
+        public final /* synthetic */ gt.h f12425j;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public j(Function0 function0, jt.h hVar) {
+        public j(Function0 function0, gt.h hVar) {
             super(0);
-            this.f12343i = function0;
-            this.f12344j = hVar;
+            this.f12424i = function0;
+            this.f12425j = hVar;
         }
 
         @Override // kotlin.jvm.functions.Function0
@@ -453,26 +453,26 @@ public final class PermissionRequestFragment extends oq.c<sp.b, PermissionReques
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final CreationExtras invoke() {
             CreationExtras creationExtras;
-            Function0 function0 = this.f12343i;
+            Function0 function0 = this.f12424i;
             if (function0 != null && (creationExtras = (CreationExtras) function0.invoke()) != null) {
                 return creationExtras;
             }
-            c1 c1VarC = l0.c(this.f12344j);
+            c1 c1VarC = l0.c(this.f12425j);
             androidx.p000lifecycle.j jVar = c1VarC instanceof androidx.p000lifecycle.j ? (androidx.p000lifecycle.j) c1VarC : null;
-            return jVar != null ? jVar.Z() : CreationExtras.b.f22169c;
+            return jVar != null ? jVar.Y() : CreationExtras.b.f22393c;
         }
     }
 
     public PermissionRequestFragment() {
-        super(a.f12333a);
-        this.args = new kq.c(d0.b(PermissionRequestFragmentArgs.class), new e(this));
-        f fVar = new f(this, new Function1() { // from class: tp.a
+        super(a.f12414a);
+        this.args = new iq.c(d0.b(PermissionRequestFragmentArgs.class), new e(this));
+        f fVar = new f(this, new Function1() { // from class: rp.a
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return PermissionRequestFragment.q2(this.f31944a, (androidx.p000lifecycle.l0) obj);
+                return PermissionRequestFragment.q2(this.f30869a, (androidx.p000lifecycle.l0) obj);
             }
         });
-        jt.h hVarA = jt.i.a(jt.k.NONE, new h(new g(this)));
+        gt.h hVarA = gt.i.a(gt.k.NONE, new h(new g(this)));
         this.viewModel = l0.b(this, d0.b(com.withpersona.sdk2.inquiry.permissions.permissionRequest.c.class), new i(hVarA), new j(null, hVarA), fVar);
     }
 
@@ -491,19 +491,19 @@ public final class PermissionRequestFragment extends oq.c<sp.b, PermissionReques
         return permissionRequestFragment.n2().a(it);
     }
 
-    @Override // oq.c, androidx.fragment.app.c
+    @Override // mq.c, androidx.fragment.app.c
     public void e1(@NotNull View view, @Nullable Bundle savedInstanceState) {
         Intrinsics.checkNotNullParameter(view, "view");
         super.e1(view, savedInstanceState);
         PermissionRequestStateManager permissionRequestStateManagerE = m2().e(l2().getProps());
-        e.p0 p0VarQ = H1().Q();
+        e.p0 p0VarP = H1().P();
         s sVarK0 = k0();
         Intrinsics.checkNotNullExpressionValue(sVarK0, "getViewLifecycleOwner(...)");
-        p0VarQ.d(sVarK0, new c(permissionRequestStateManagerE, this));
+        p0VarP.d(sVarK0, new c(permissionRequestStateManagerE, this));
         g2(permissionRequestStateManagerE.c());
         s sVarK1 = k0();
         Intrinsics.checkNotNullExpressionValue(sVarK1, "getViewLifecycleOwner(...)");
-        ku.k.d(t.a(sVarK1), null, null, new d(permissionRequestStateManagerE, this, null), 3, null);
+        iu.k.d(t.a(sVarK1), null, null, new d(permissionRequestStateManagerE, this, null), 3, null);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -526,17 +526,17 @@ public final class PermissionRequestFragment extends oq.c<sp.b, PermissionReques
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // oq.c
+    @Override // mq.c
     /* JADX INFO: renamed from: o2, reason: merged with bridge method [inline-methods] */
     public void h2(@NotNull PermissionRequestStateManager.d rendering) {
         Intrinsics.checkNotNullParameter(rendering, "rendering");
-        final FrameLayout content = ((sp.b) b2()).b;
+        final FrameLayout content = ((qp.b) b2()).b;
         Intrinsics.checkNotNullExpressionValue(content, "content");
         content.removeAllViews();
         if (rendering instanceof PermissionRequestStateManager.d.a) {
             PermissionRequestStateManager.d.a aVar = (PermissionRequestStateManager.d.a) rendering;
             aVar.getView();
-            sp.c cVarC = sp.c.c(LayoutInflater.from(x()), content, true);
+            qp.c cVarC = qp.c.c(LayoutInflater.from(w()), content, true);
             Intrinsics.checkNotNullExpressionValue(cVarC, "inflate(...)");
             aVar.getView().i(cVarC);
             aVar.getView().n(cVarC, aVar.getView());
@@ -548,9 +548,9 @@ public final class PermissionRequestFragment extends oq.c<sp.b, PermissionReques
         final CheckRequestPermissionRationaleStateView checkRequestPermissionRationaleStateViewA = ((PermissionRequestStateManager.d.b) rendering).getView();
         Context context = content.getContext();
         Intrinsics.checkNotNullExpressionValue(context, "getContext(...)");
-        final j.b bVarH = jq.g.h(context);
+        final j.b bVarH = hq.g.h(context);
         if (checkRequestPermissionRationaleStateViewA.a() != null) {
-            content.post(new Runnable() { // from class: tp.b
+            content.post(new Runnable() { // from class: rp.b
                 @Override // java.lang.Runnable
                 public final void run() {
                     PermissionRequestFragment.p2(content, checkRequestPermissionRationaleStateViewA, bVarH);

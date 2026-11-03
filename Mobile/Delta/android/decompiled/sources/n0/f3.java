@@ -15,6 +15,6 @@ public final class f3 implements i4<g0.a2>, i2, s0.r {
 
     @Override // n0.h2
     public int p() {
-        return ((Integer) e(h2.f24670j)).intValue();
+        return ((Integer) e(h2.f25491j)).intValue();
     }
 }

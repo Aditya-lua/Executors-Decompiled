@@ -6,11 +6,11 @@ import java.util.Objects;
 public final class fc implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ d5 f25519a;
+    public final /* synthetic */ d5 f26340a;
     public final /* synthetic */ nc b;
 
     public fc(nc ncVar, d5 d5Var) {
-        this.f25519a = d5Var;
+        this.f26340a = d5Var;
         Objects.requireNonNull(ncVar);
         this.b = ncVar;
     }
@@ -21,10 +21,10 @@ public final class fc implements Runnable {
         synchronized (ncVar) {
             try {
                 ncVar.d(false);
-                tc tcVar = ncVar.f25801c;
+                tc tcVar = ncVar.f26622c;
                 if (!tcVar.W()) {
-                    tcVar.f25625a.a().w().a("Connected to service");
-                    tcVar.z(this.f25519a);
+                    tcVar.f26446a.a().w().a("Connected to service");
+                    tcVar.z(this.f26340a);
                 }
             } catch (Throwable th2) {
                 throw th2;

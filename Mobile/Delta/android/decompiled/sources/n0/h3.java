@@ -9,27 +9,27 @@ import java.util.Set;
 public class h3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final boolean f24673a;
+    public final boolean f25494a;
     public final Set<Class<? extends g3>> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Set<Class<? extends g3>> f24674c;
+    public final Set<Class<? extends g3>> f25495c;
 
     public static class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public boolean f24675a = true;
+        public boolean f25496a = true;
         public Set<Class<? extends g3>> b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public Set<Class<? extends g3>> f24676c;
+        public Set<Class<? extends g3>> f25497c;
 
         public h3 a() {
-            return new h3(this.f24675a, this.b, this.f24676c);
+            return new h3(this.f25496a, this.b, this.f25497c);
         }
 
         public b b(Set<Class<? extends g3>> set) {
-            this.f24676c = new HashSet(set);
+            this.f25497c = new HashSet(set);
             return this;
         }
 
@@ -39,7 +39,7 @@ public class h3 {
         }
 
         public b d(boolean z10) {
-            this.f24675a = z10;
+            this.f25496a = z10;
             return this;
         }
     }
@@ -52,7 +52,7 @@ public class h3 {
         if (this.b.contains(cls)) {
             return true;
         }
-        return !this.f24674c.contains(cls) && this.f24673a && z10;
+        return !this.f25495c.contains(cls) && this.f25494a && z10;
     }
 
     public boolean equals(Object obj) {
@@ -63,20 +63,20 @@ public class h3 {
             return true;
         }
         h3 h3Var = (h3) obj;
-        return this.f24673a == h3Var.f24673a && Objects.equals(this.b, h3Var.b) && Objects.equals(this.f24674c, h3Var.f24674c);
+        return this.f25494a == h3Var.f25494a && Objects.equals(this.b, h3Var.b) && Objects.equals(this.f25495c, h3Var.f25495c);
     }
 
     public int hashCode() {
-        return Objects.hash(Boolean.valueOf(this.f24673a), this.b, this.f24674c);
+        return Objects.hash(Boolean.valueOf(this.f25494a), this.b, this.f25495c);
     }
 
     public String toString() {
-        return "QuirkSettings{enabledWhenDeviceHasQuirk=" + this.f24673a + ", forceEnabledQuirks=" + this.b + ", forceDisabledQuirks=" + this.f24674c + '}';
+        return "QuirkSettings{enabledWhenDeviceHasQuirk=" + this.f25494a + ", forceEnabledQuirks=" + this.b + ", forceDisabledQuirks=" + this.f25495c + '}';
     }
 
     public h3(boolean z10, Set<Class<? extends g3>> set, Set<Class<? extends g3>> set2) {
-        this.f24673a = z10;
+        this.f25494a = z10;
         this.b = set == null ? Collections.EMPTY_SET : new HashSet<>(set);
-        this.f24674c = set2 == null ? Collections.EMPTY_SET : new HashSet<>(set2);
+        this.f25495c = set2 == null ? Collections.EMPTY_SET : new HashSet<>(set2);
     }
 }

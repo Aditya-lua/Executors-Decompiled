@@ -20,56 +20,56 @@ import java.util.Locale;
 public final class k5 extends b5 {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public String f25653c;
+    public String f26474c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public String f25654d;
+    public String f26475d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public int f25655e;
+    public int f26476e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public String f25656f;
+    public String f26477f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public String f25657g;
+    public String f26478g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public long f25658h;
+    public long f26479h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final long f25659i;
+    public final long f26480i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final long f25660j;
+    public final long f26481j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public List f25661k;
+    public List f26482k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public String f25662l;
+    public String f26483l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public int f25663m;
+    public int f26484m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public String f25664n;
+    public String f26485n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public String f25665o;
+    public String f26486o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public long f25666p;
+    public long f26487p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public String f25667q;
+    public String f26488q;
 
     public k5(g7 g7Var, long j10, long j11) {
         super(g7Var);
-        this.f25666p = 0L;
-        this.f25667q = null;
-        this.f25659i = j10;
-        this.f25660j = j11;
+        this.f26487p = 0L;
+        this.f26488q = null;
+        this.f26480i = j10;
+        this.f26481j = j11;
     }
 
     @Override // nb.b5
@@ -112,8 +112,8 @@ public final class k5 extends b5 {
         List listK;
         Iterator it;
         String strA;
-        g7 g7Var3 = this.f25625a;
-        g7Var3.a().w().c("sdkVersion bundled with app, dynamiteVersion", Long.valueOf(this.f25660j), Long.valueOf(this.f25659i));
+        g7 g7Var3 = this.f26446a;
+        g7Var3.a().w().c("sdkVersion bundled with app, dynamiteVersion", Long.valueOf(this.f26481j), Long.valueOf(this.f26480i));
         String packageName = g7Var3.d().getPackageName();
         PackageManager packageManager = g7Var3.d().getPackageManager();
         String str2 = "";
@@ -125,7 +125,7 @@ public final class k5 extends b5 {
                 try {
                     installerPackageName = packageManager.getInstallerPackageName(packageName);
                 } catch (IllegalArgumentException unused) {
-                    this.f25625a.a().o().b("Error retrieving app installer package name. appId", w5.x(packageName));
+                    this.f26446a.a().o().b("Error retrieving app installer package name. appId", w5.x(packageName));
                 }
                 if (installerPackageName == null) {
                     installerPackageName = "manual_install";
@@ -133,7 +133,7 @@ public final class k5 extends b5 {
                     installerPackageName = "";
                 }
                 try {
-                    PackageInfo packageInfo = packageManager.getPackageInfo(this.f25625a.d().getPackageName(), 0);
+                    PackageInfo packageInfo = packageManager.getPackageInfo(this.f26446a.d().getPackageName(), 0);
                     if (packageInfo != null) {
                         CharSequence applicationLabel = packageManager.getApplicationLabel(packageInfo.applicationInfo);
                         string = !TextUtils.isEmpty(applicationLabel) ? applicationLabel.toString() : "Unknown";
@@ -143,7 +143,7 @@ public final class k5 extends b5 {
                         } catch (PackageManager.NameNotFoundException unused2) {
                             str = str3;
                             str3 = string;
-                            this.f25625a.a().o().c("Error retrieving package info. appId, appName", w5.x(packageName), str3);
+                            this.f26446a.a().o().c("Error retrieving package info. appId, appName", w5.x(packageName), str3);
                             string = str3;
                             str3 = str;
                         }
@@ -151,56 +151,56 @@ public final class k5 extends b5 {
                 } catch (PackageManager.NameNotFoundException unused3) {
                     str = "Unknown";
                 }
-                this.f25653c = packageName;
-                this.f25656f = installerPackageName;
-                this.f25654d = str3;
-                this.f25655e = i10;
-                this.f25657g = string;
-                this.f25658h = 0L;
-                g7 g7Var4 = this.f25625a;
+                this.f26474c = packageName;
+                this.f26477f = installerPackageName;
+                this.f26475d = str3;
+                this.f26476e = i10;
+                this.f26478g = string;
+                this.f26479h = 0L;
+                g7 g7Var4 = this.f26446a;
                 iH = g7Var4.h();
                 if (iH != 0) {
-                    this.f25625a.a().w().a("App measurement collection enabled");
+                    this.f26446a.a().w().a("App measurement collection enabled");
                 } else if (iH != 1) {
-                    this.f25625a.a().u().a("App measurement deactivated via the manifest");
+                    this.f26446a.a().u().a("App measurement deactivated via the manifest");
                 } else if (iH != 3) {
-                    this.f25625a.a().u().a("App measurement disabled by setAnalyticsCollectionEnabled(false)");
+                    this.f26446a.a().u().a("App measurement disabled by setAnalyticsCollectionEnabled(false)");
                 } else if (iH != 4) {
-                    this.f25625a.a().u().a("App measurement disabled via the manifest");
+                    this.f26446a.a().u().a("App measurement disabled via the manifest");
                 } else if (iH != 6) {
-                    this.f25625a.a().t().a("App measurement deactivated via resources. This method is being deprecated. Please refer to https://firebase.google.com/support/guides/disable-analytics");
+                    this.f26446a.a().t().a("App measurement deactivated via resources. This method is being deprecated. Please refer to https://firebase.google.com/support/guides/disable-analytics");
                 } else if (iH != 7) {
-                    this.f25625a.a().u().a("App measurement disabled via the global data collection setting");
+                    this.f26446a.a().u().a("App measurement disabled via the global data collection setting");
                 } else if (iH != 8) {
-                    g7 g7Var5 = this.f25625a;
+                    g7 g7Var5 = this.f26446a;
                     g7Var5.a().u().a("App measurement disabled");
                     g7Var5.a().p().a("Invalid scion state in identity");
                 } else {
-                    this.f25625a.a().u().a("App measurement disabled due to denied storage consent");
+                    this.f26446a.a().u().a("App measurement disabled due to denied storage consent");
                 }
-                this.f25664n = "";
-                g7Var = this.f25625a;
+                this.f26485n = "";
+                g7Var = this.f26446a;
                 g7Var.c();
                 strA = ab.a(g7Var.d(), "google_app_id", g7Var4.H());
                 if (TextUtils.isEmpty(strA)) {
                     str2 = strA;
                 }
-                this.f25664n = str2;
+                this.f26485n = str2;
                 if (iH == 0) {
-                    g7Var.a().w().c("App measurement enabled for app package, google app id", this.f25653c, this.f25664n);
+                    g7Var.a().w().c("App measurement enabled for app package, google app id", this.f26474c, this.f26485n);
                 }
-                this.f25661k = null;
-                g7Var2 = this.f25625a;
+                this.f26482k = null;
+                g7Var2 = this.f26446a;
                 g7Var2.c();
                 listK = g7Var2.w().K("analytics.safelisted_events");
                 if (listK != null) {
-                    this.f25661k = listK;
+                    this.f26482k = listK;
                     break;
                 } else if (listK.isEmpty()) {
                     it = listK.iterator();
                     do {
                         if (it.hasNext()) {
-                            this.f25661k = listK;
+                            this.f26482k = listK;
                             break;
                         }
                     } while (g7Var2.C().u0("safelisted event", (String) it.next()));
@@ -208,9 +208,9 @@ public final class k5 extends b5 {
                     g7Var2.a().t().a("Safelisted event list is empty. Ignoring");
                 }
                 if (packageManager != null) {
-                    this.f25663m = w9.a.a(g7Var2.d()) ? 1 : 0;
+                    this.f26484m = w9.a.a(g7Var2.d()) ? 1 : 0;
                 } else {
-                    this.f25663m = 0;
+                    this.f26484m = 0;
                 }
             }
             g7Var3.a().o().b("PackageManager is null, app identity information might be inaccurate. appId", w5.x(packageName));
@@ -218,56 +218,56 @@ public final class k5 extends b5 {
             if (TextUtils.isEmpty(strA)) {
                 str2 = strA;
             }
-            this.f25664n = str2;
+            this.f26485n = str2;
             if (iH == 0) {
-                g7Var.a().w().c("App measurement enabled for app package, google app id", this.f25653c, this.f25664n);
+                g7Var.a().w().c("App measurement enabled for app package, google app id", this.f26474c, this.f26485n);
             }
         } catch (IllegalStateException e10) {
-            this.f25625a.a().o().c("Fetching Google App Id failed with exception. appId", w5.x(packageName), e10);
+            this.f26446a.a().o().c("Fetching Google App Id failed with exception. appId", w5.x(packageName), e10);
         }
         string = "Unknown";
-        this.f25653c = packageName;
-        this.f25656f = installerPackageName;
-        this.f25654d = str3;
-        this.f25655e = i10;
-        this.f25657g = string;
-        this.f25658h = 0L;
-        g7 g7Var6 = this.f25625a;
+        this.f26474c = packageName;
+        this.f26477f = installerPackageName;
+        this.f26475d = str3;
+        this.f26476e = i10;
+        this.f26478g = string;
+        this.f26479h = 0L;
+        g7 g7Var6 = this.f26446a;
         iH = g7Var6.h();
         if (iH != 0) {
-            this.f25625a.a().w().a("App measurement collection enabled");
+            this.f26446a.a().w().a("App measurement collection enabled");
         } else if (iH != 1) {
-            this.f25625a.a().u().a("App measurement deactivated via the manifest");
+            this.f26446a.a().u().a("App measurement deactivated via the manifest");
         } else if (iH != 3) {
-            this.f25625a.a().u().a("App measurement disabled by setAnalyticsCollectionEnabled(false)");
+            this.f26446a.a().u().a("App measurement disabled by setAnalyticsCollectionEnabled(false)");
         } else if (iH != 4) {
-            this.f25625a.a().u().a("App measurement disabled via the manifest");
+            this.f26446a.a().u().a("App measurement disabled via the manifest");
         } else if (iH != 6) {
-            this.f25625a.a().t().a("App measurement deactivated via resources. This method is being deprecated. Please refer to https://firebase.google.com/support/guides/disable-analytics");
+            this.f26446a.a().t().a("App measurement deactivated via resources. This method is being deprecated. Please refer to https://firebase.google.com/support/guides/disable-analytics");
         } else if (iH != 7) {
-            this.f25625a.a().u().a("App measurement disabled via the global data collection setting");
+            this.f26446a.a().u().a("App measurement disabled via the global data collection setting");
         } else if (iH != 8) {
-            g7 g7Var7 = this.f25625a;
+            g7 g7Var7 = this.f26446a;
             g7Var7.a().u().a("App measurement disabled");
             g7Var7.a().p().a("Invalid scion state in identity");
         } else {
-            this.f25625a.a().u().a("App measurement disabled due to denied storage consent");
+            this.f26446a.a().u().a("App measurement disabled due to denied storage consent");
         }
-        this.f25664n = "";
-        g7Var = this.f25625a;
+        this.f26485n = "";
+        g7Var = this.f26446a;
         g7Var.c();
-        this.f25661k = null;
-        g7Var2 = this.f25625a;
+        this.f26482k = null;
+        g7Var2 = this.f26446a;
         g7Var2.c();
         listK = g7Var2.w().K("analytics.safelisted_events");
         if (listK != null) {
-            this.f25661k = listK;
+            this.f26482k = listK;
             break;
         } else if (listK.isEmpty()) {
             it = listK.iterator();
             do {
                 if (it.hasNext()) {
-                    this.f25661k = listK;
+                    this.f26482k = listK;
                     break;
                 }
             } while (g7Var2.C().u0("safelisted event", (String) it.next()));
@@ -275,9 +275,9 @@ public final class k5 extends b5 {
             g7Var2.a().t().a("Safelisted event list is empty. Ignoring");
         }
         if (packageManager != null) {
-            this.f25663m = w9.a.a(g7Var2.d()) ? 1 : 0;
+            this.f26484m = w9.a.a(g7Var2.d()) ? 1 : 0;
         } else {
-            this.f25663m = 0;
+            this.f26484m = 0;
         }
     }
 
@@ -293,19 +293,19 @@ public final class k5 extends b5 {
         String strQ = q();
         String strR = r();
         j();
-        String str4 = this.f25654d;
+        String str4 = this.f26475d;
         j();
-        long j11 = this.f25655e;
+        long j11 = this.f26476e;
         j();
-        n9.m.l(this.f25656f);
-        String str5 = this.f25656f;
-        g7 g7Var = this.f25625a;
+        n9.m.l(this.f26477f);
+        String str5 = this.f26477f;
+        g7 g7Var = this.f26446a;
         g7Var.w().A();
         j();
         h();
-        long j12 = this.f25658h;
+        long j12 = this.f26479h;
         if (j12 == 0) {
-            ve veVarC = this.f25625a.C();
+            ve veVarC = this.f26446a.C();
             Context contextD = g7Var.d();
             String packageName = g7Var.d().getPackageName();
             veVarC.h();
@@ -315,7 +315,7 @@ public final class k5 extends b5 {
             MessageDigest messageDigestC = ve.C();
             long jD = -1;
             if (messageDigestC == null) {
-                veVarC.f25625a.a().o().a("Could not get MD5 instance");
+                veVarC.f26446a.a().o().a("Could not get MD5 instance");
                 J = 0;
             } else {
                 if (packageManager != null) {
@@ -325,7 +325,7 @@ public final class k5 extends b5 {
                             jD = 0;
                         } else {
                             w9.b bVarA = w9.c.a(contextD);
-                            g7 g7Var2 = veVarC.f25625a;
+                            g7 g7Var2 = veVarC.f26446a;
                             J = 0;
                             try {
                                 Signature[] signatureArr = bVarA.e(g7Var2.d().getPackageName(), 64).signatures;
@@ -336,7 +336,7 @@ public final class k5 extends b5 {
                                 }
                             } catch (PackageManager.NameNotFoundException e10) {
                                 e = e10;
-                                veVarC.f25625a.a().o().b("Package name not found", e);
+                                veVarC.f26446a.a().o().b("Package name not found", e);
                                 j12 = J;
                             }
                         }
@@ -348,38 +348,38 @@ public final class k5 extends b5 {
                     J = 0;
                 }
                 j12 = J;
-                this.f25658h = j12;
+                this.f26479h = j12;
             }
             j12 = jD;
-            this.f25658h = j12;
+            this.f26479h = j12;
         } else {
             J = 0;
         }
         long j13 = j12;
-        g7 g7Var3 = this.f25625a;
+        g7 g7Var3 = this.f26446a;
         boolean zG = g7Var3.g();
-        boolean z11 = !g7Var3.x().f25684s;
+        boolean z11 = !g7Var3.x().f26505s;
         h();
         if (g7Var3.g()) {
             ug.a();
             if (g7Var3.w().H(null, z4.I0)) {
-                this.f25625a.a().w().a("Disabled IID for tests.");
+                this.f26446a.a().w().a("Disabled IID for tests.");
             } else {
                 try {
                     Class<?> clsLoadClass = g7Var3.d().getClassLoader().loadClass("com.google.firebase.analytics.FirebaseAnalytics");
                     if (clsLoadClass != null) {
                         try {
-                            Object objInvoke = clsLoadClass.getDeclaredMethod("getInstance", Context.class).invoke(null, this.f25625a.d());
+                            Object objInvoke = clsLoadClass.getDeclaredMethod("getInstance", Context.class).invoke(null, this.f26446a.d());
                             if (objInvoke != null) {
                                 try {
                                     str2 = (String) clsLoadClass.getDeclaredMethod("getFirebaseInstanceId", null).invoke(objInvoke, null);
                                 } catch (Exception unused) {
-                                    this.f25625a.a().t().a("Failed to retrieve Firebase Instance Id");
+                                    this.f26446a.a().t().a("Failed to retrieve Firebase Instance Id");
                                     str2 = null;
                                 }
                             }
                         } catch (Exception unused2) {
-                            this.f25625a.a().s().a("Failed to obtain Firebase Analytics instance");
+                            this.f26446a.a().s().a("Failed to obtain Firebase Analytics instance");
                         }
                     }
                 } catch (ClassNotFoundException unused3) {
@@ -389,38 +389,38 @@ public final class k5 extends b5 {
         } else {
             str2 = null;
         }
-        g7 g7Var4 = this.f25625a;
-        long jA = g7Var4.x().f25671f.a();
+        g7 g7Var4 = this.f26446a;
+        long jA = g7Var4.x().f26492f.a();
         long jMin = jA == J ? g7Var4.D : Math.min(g7Var4.D, jA);
         j();
-        int i12 = this.f25663m;
-        g7 g7Var5 = this.f25625a;
+        int i12 = this.f26484m;
+        g7 g7Var5 = this.f26446a;
         boolean zM = g7Var5.w().M();
         k6 k6VarX = g7Var5.x();
         k6VarX.h();
         String str6 = str2;
         boolean z12 = k6VarX.p().getBoolean("deferred_analytics_collection", false);
         boolean z13 = g7Var5.w().O("google_analytics_default_allow_ad_personalization_signals", true) != n8.GRANTED;
-        long j14 = this.f25659i;
+        long j14 = this.f26480i;
         Boolean boolValueOf = Boolean.valueOf(z13);
-        List list = this.f25661k;
+        List list = this.f26482k;
         String strL = g7Var5.x().w().l();
-        if (this.f25662l == null) {
-            this.f25662l = g7Var5.C().l0();
+        if (this.f26483l == null) {
+            this.f26483l = g7Var5.C().l0();
         }
-        String str7 = this.f25662l;
+        String str7 = this.f26483l;
         if (g7Var5.x().w().o(p8.ANALYTICS_STORAGE)) {
             h();
-            if (this.f25666p != J) {
-                long jA2 = g7Var5.e().a() - this.f25666p;
-                if (this.f25665o != null && jA2 > 86400000 && this.f25667q == null) {
+            if (this.f26487p != J) {
+                long jA2 = g7Var5.e().a() - this.f26487p;
+                if (this.f26486o != null && jA2 > 86400000 && this.f26488q == null) {
                     p();
                 }
             }
-            if (this.f25665o == null) {
+            if (this.f26486o == null) {
                 p();
             }
-            str3 = this.f25665o;
+            str3 = this.f26486o;
         } else {
             str3 = null;
         }
@@ -428,7 +428,7 @@ public final class k5 extends b5 {
         ve veVarC2 = g7Var5.C();
         String strQ2 = q();
         String str8 = str3;
-        g7 g7Var6 = veVarC2.f25625a;
+        g7 g7Var6 = veVarC2.f26446a;
         if (g7Var6.d().getPackageManager() == null) {
             z10 = zP;
             j10 = J;
@@ -440,7 +440,7 @@ public final class k5 extends b5 {
                     ApplicationInfo applicationInfoC = w9.c.a(g7Var6.d()).c(strQ2, 0);
                     i11 = applicationInfoC != null ? applicationInfoC.targetSdkVersion : i10;
                 } catch (PackageManager.NameNotFoundException unused4) {
-                    g7 g7Var7 = veVarC2.f25625a;
+                    g7 g7Var7 = veVarC2.f26446a;
                     g7Var7.c();
                     g7Var7.a().u().b("PackageManager failed to find running app: app_id", strQ2);
                 }
@@ -450,7 +450,7 @@ public final class k5 extends b5 {
             }
             j10 = i11;
         }
-        g7 g7Var8 = this.f25625a;
+        g7 g7Var8 = this.f26446a;
         int iB = g7Var8.x().w().b();
         String strE = g7Var8.x().u().e();
         vf.a();
@@ -464,14 +464,14 @@ public final class k5 extends b5 {
         }
         String strR2 = g7Var8.w().R();
         String strB = new z2(g7Var8.w().O("google_analytics_default_allow_ad_personalization_signals", true)).b();
-        g7 g7Var9 = this.f25625a;
+        g7 g7Var9 = this.f26446a;
         return new zzr(strQ, strR, str4, j11, str5, 133005L, j13, str, zG, z11, str6, jMin, i12, zM, z12, boolValueOf, j14, list, strL, str7, str8, z10, j15, iB, strE, I, J, strR2, strB, g7Var9.D, g7Var9.N().q().zza());
     }
 
     public final void p() {
         String str;
         h();
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         if (g7Var.x().w().o(p8.ANALYTICS_STORAGE)) {
             byte[] bArr = new byte[16];
             g7Var.C().q0().nextBytes(bArr);
@@ -481,54 +481,54 @@ public final class k5 extends b5 {
             str = null;
         }
         g7Var.a().v().a(String.format("Resetting session stitching token to %s", str == null ? "null" : "not null"));
-        this.f25665o = str;
-        this.f25666p = g7Var.e().a();
+        this.f26486o = str;
+        this.f26487p = g7Var.e().a();
     }
 
     public final String q() {
         j();
-        n9.m.l(this.f25653c);
-        return this.f25653c;
+        n9.m.l(this.f26474c);
+        return this.f26474c;
     }
 
     public final String r() {
         h();
         j();
-        n9.m.l(this.f25664n);
-        return this.f25664n;
+        n9.m.l(this.f26485n);
+        return this.f26485n;
     }
 
     public final String s() {
         j();
-        n9.m.l(this.f25657g);
-        return this.f25657g;
+        n9.m.l(this.f26478g);
+        return this.f26478g;
     }
 
     public final int t() {
         j();
-        return this.f25655e;
+        return this.f26476e;
     }
 
     public final long u() {
-        return this.f25660j;
+        return this.f26481j;
     }
 
     public final int v() {
         j();
-        return this.f25663m;
+        return this.f26484m;
     }
 
     public final List w() {
-        return this.f25661k;
+        return this.f26482k;
     }
 
     public final boolean x(String str) {
-        String str2 = this.f25667q;
+        String str2 = this.f26488q;
         boolean z10 = false;
         if (str2 != null && !str2.equals(str)) {
             z10 = true;
         }
-        this.f25667q = str;
+        this.f26488q = str;
         return z10;
     }
 }

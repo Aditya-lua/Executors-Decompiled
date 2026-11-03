@@ -16,20 +16,20 @@ public final class PlayerLevel extends zzg {
     public static final Parcelable.Creator<PlayerLevel> CREATOR = new s();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f6092f;
+    public final int f6165f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final long f6093g;
+    public final long f6166g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final long f6094h;
+    public final long f6167h;
 
     public PlayerLevel(int i10, long j10, long j11) {
         m.q(j10 >= 0, "Min XP must be positive!");
         m.q(j11 > j10, "Max XP must be more than min XP!");
-        this.f6092f = i10;
-        this.f6093g = j10;
-        this.f6094h = j11;
+        this.f6165f = i10;
+        this.f6166g = j10;
+        this.f6167h = j11;
     }
 
     public boolean equals(Object obj) {
@@ -44,7 +44,7 @@ public final class PlayerLevel extends zzg {
     }
 
     public int hashCode() {
-        return k.c(Integer.valueOf(this.f6092f), Long.valueOf(this.f6093g), Long.valueOf(this.f6094h));
+        return k.c(Integer.valueOf(this.f6165f), Long.valueOf(this.f6166g), Long.valueOf(this.f6167h));
     }
 
     @NonNull
@@ -53,11 +53,11 @@ public final class PlayerLevel extends zzg {
     }
 
     public int v3() {
-        return this.f6092f;
+        return this.f6165f;
     }
 
     public long w3() {
-        return this.f6094h;
+        return this.f6167h;
     }
 
     @Override // android.os.Parcelable
@@ -70,6 +70,6 @@ public final class PlayerLevel extends zzg {
     }
 
     public long x3() {
-        return this.f6093g;
+        return this.f6166g;
     }
 }

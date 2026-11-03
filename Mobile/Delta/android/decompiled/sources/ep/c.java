@@ -1,40 +1,29 @@
 package ep;
 
-import android.content.Context;
-import ft.i;
-import ku.l0;
+import com.withpersona.sdk2.inquiry.network.dto.Attributes;
+import com.withpersona.sdk2.inquiry.shared.inquiry_session.GpsCollectionRequirement;
+import com.withpersona.sdk2.inquiry.shared.inquiry_session.GpsPrecisionRequirement;
+import com.withpersona.sdk2.inquiry.shared.inquiry_session.InquirySessionConfig;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import org.jetbrains.annotations.NotNull;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class c implements ft.d<a> {
-
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final i<Context> f15732a;
-    public final i<np.e.a> b;
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final i<f> f15733c;
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final i<l0> f15734d;
-
-    public c(i<Context> iVar, i<np.e.a> iVar2, i<f> iVar3, i<l0> iVar4) {
-        this.f15732a = iVar;
-        this.b = iVar2;
-        this.f15733c = iVar3;
-        this.f15734d = iVar4;
-    }
-
-    public static c a(i<Context> iVar, i<np.e.a> iVar2, i<f> iVar3, i<l0> iVar4) {
-        return new c(iVar, iVar2, iVar3, iVar4);
-    }
-
-    public static a c(Context context, np.e.a aVar, f fVar, l0 l0Var) {
-        return new a(context, aVar, fVar, l0Var);
-    }
-
-    @Override // ht.a
-    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public a get() {
-        return c(this.f15732a.get(), this.b.get(), this.f15733c.get(), this.f15734d.get());
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u001a\u0013\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\u0000¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"Lcom/withpersona/sdk2/inquiry/network/dto/Attributes;", "Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;", "a", "(Lcom/withpersona/sdk2/inquiry/network/dto/Attributes;)Lcom/withpersona/sdk2/inquiry/shared/inquiry_session/InquirySessionConfig;", "inquiry-internal_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
+public final class c {
+    @NotNull
+    public static final InquirySessionConfig a(@NotNull Attributes attributes) {
+        GpsCollectionRequirement gpsCollectionRequirementA;
+        GpsPrecisionRequirement gpsPrecisionRequirementB;
+        Intrinsics.checkNotNullParameter(attributes, "<this>");
+        com.withpersona.sdk2.inquiry.network.dto.GpsCollectionRequirement gpsCollectionRequirement = attributes.getGpsCollectionRequirement();
+        if (gpsCollectionRequirement == null || (gpsCollectionRequirementA = xo.b.a(gpsCollectionRequirement)) == null) {
+            gpsCollectionRequirementA = GpsCollectionRequirement.NONE;
+        }
+        com.withpersona.sdk2.inquiry.network.dto.GpsPrecisionRequirement gpsPrecisionRequirement = attributes.getGpsPrecisionRequirement();
+        if (gpsPrecisionRequirement == null || (gpsPrecisionRequirementB = xo.b.b(gpsPrecisionRequirement)) == null) {
+            gpsPrecisionRequirementB = GpsPrecisionRequirement.PRECISE;
+        }
+        return new InquirySessionConfig(gpsCollectionRequirementA, gpsPrecisionRequirementB, attributes.getPlayIntegrityProjectId() != null);
     }
 }

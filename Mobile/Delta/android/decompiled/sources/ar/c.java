@@ -1,15 +1,17 @@
 package ar;
 
+import android.graphics.Bitmap;
+import com.withpersona.sdk2.inquiry.steps.ui.components.UiComponent;
+import kotlin.Metadata;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 /* JADX INFO: loaded from: classes3.dex */
-public final class c {
+@Metadata(d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\bf\u0018\u0000*\b\b\u0000\u0010\u0002*\u00020\u00012\u00020\u0003J\u0019\u0010\u0006\u001a\u00028\u00002\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004H&¢\u0006\u0004\b\u0006\u0010\u0007R\u0014\u0010\u000b\u001a\u00020\b8&X¦\u0004¢\u0006\u0006\u001a\u0004\b\t\u0010\n¨\u0006\fÀ\u0006\u0003"}, d2 = {"Lar/c;", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;", "T", "", "Landroid/graphics/Bitmap;", "newValue", "f", "(Landroid/graphics/Bitmap;)Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;", "Lcr/c;", "a", "()Lcr/c;", "bitmapController", "ui-step-renderer_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public interface c<T extends UiComponent> {
+    @NotNull
+    cr.c a();
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final int f3655a = -2029780964;
-    public static final int b = -2029780923;
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final int f3656c = -2029780922;
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final int f3657d = -2029780918;
+    @NotNull
+    T f(@Nullable Bitmap newValue);
 }

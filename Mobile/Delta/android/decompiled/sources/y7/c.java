@@ -6,13 +6,13 @@ import androidx.annotation.NonNull;
 public final class c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f35759a;
+    public final String f36616a;
 
     public c(@NonNull String str) {
         if (str == null) {
             throw new NullPointerException("name is null");
         }
-        this.f35759a = str;
+        this.f36616a = str;
     }
 
     public static c b(@NonNull String str) {
@@ -20,7 +20,7 @@ public final class c {
     }
 
     public String a() {
-        return this.f35759a;
+        return this.f36616a;
     }
 
     public boolean equals(Object obj) {
@@ -28,17 +28,17 @@ public final class c {
             return true;
         }
         if (obj instanceof c) {
-            return this.f35759a.equals(((c) obj).f35759a);
+            return this.f36616a.equals(((c) obj).f36616a);
         }
         return false;
     }
 
     public int hashCode() {
-        return this.f35759a.hashCode() ^ 1000003;
+        return this.f36616a.hashCode() ^ 1000003;
     }
 
     @NonNull
     public String toString() {
-        return "Encoding{name=\"" + this.f35759a + "\"}";
+        return "Encoding{name=\"" + this.f36616a + "\"}";
     }
 }

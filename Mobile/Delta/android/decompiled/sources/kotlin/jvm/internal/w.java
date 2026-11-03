@@ -6,8 +6,8 @@ public class w extends v {
         super(cls, str, str2, i10);
     }
 
-    @Override // hu.k
-    public Object m(Object obj, Object obj2) {
+    @Override // fu.k
+    public Object l(Object obj, Object obj2) {
         c();
         throw null;
     }

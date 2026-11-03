@@ -6,7 +6,7 @@ package jg;
 public abstract class v {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final v f21442a = new a("DEFAULT", 0);
+    public static final v f21901a = new a("DEFAULT", 0);
     public static final v b = new v("STRING", 1) { // from class: jg.v.b
         {
             a aVar = null;
@@ -14,7 +14,7 @@ public abstract class v {
     };
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final /* synthetic */ v[] f21443c = a();
+    public static final /* synthetic */ v[] f21902c = a();
 
     public final enum a extends v {
         public a(String str, int i10) {
@@ -27,7 +27,7 @@ public abstract class v {
     }
 
     public static /* synthetic */ v[] a() {
-        return new v[]{f21442a, b};
+        return new v[]{f21901a, b};
     }
 
     public static v valueOf(String str) {
@@ -35,7 +35,7 @@ public abstract class v {
     }
 
     public static v[] values() {
-        return (v[]) f21443c.clone();
+        return (v[]) f21902c.clone();
     }
 
     public /* synthetic */ v(String str, int i10, a aVar) {

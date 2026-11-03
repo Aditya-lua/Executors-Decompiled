@@ -16,14 +16,14 @@ import n0.j4;
 public final class ImageCaptureFailedForSpecificCombinationQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Set<String> f1392a = new HashSet(Arrays.asList("pixel 4a", "pixel 4a (5g)", "pixel 5", "pixel 5a"));
+    public static final Set<String> f1237a = new HashSet(Arrays.asList("pixel 4a", "pixel 4a (5g)", "pixel 5", "pixel 5a"));
 
     public static boolean g() {
         return "oneplus".equalsIgnoreCase(Build.BRAND) && "cph2583".equalsIgnoreCase(Build.MODEL);
     }
 
     public static boolean h() {
-        return "google".equalsIgnoreCase(Build.BRAND) && f1392a.contains(Build.MODEL.toLowerCase());
+        return "google".equalsIgnoreCase(Build.BRAND) && f1237a.contains(Build.MODEL.toLowerCase());
     }
 
     public static boolean j() {

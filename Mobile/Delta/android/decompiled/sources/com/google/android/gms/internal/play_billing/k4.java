@@ -10,21 +10,21 @@ import java.util.Map;
 public final class k4 {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final k4 f7118d = new k4(true);
+    public static final k4 f7192d = new k4(true);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final p6 f7119a = new j6();
+    public final p6 f7193a = new j6();
     public boolean b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f7120c;
+    public boolean f7194c;
 
     public k4() {
     }
 
     public static int a(g7 g7Var, int i10, Object obj) {
         int iV = a4.v(i10 << 3);
-        if (g7Var == g7.f7075l) {
+        if (g7Var == g7.f7149l) {
             iV += iV;
         }
         return iV + b(g7Var, obj);
@@ -33,7 +33,7 @@ public final class k4 {
     public static int b(g7 g7Var, Object obj) {
         int iB;
         int iV;
-        g7 g7Var2 = g7.f7066c;
+        g7 g7Var2 = g7.f7140c;
         h7 h7Var = h7.INT;
         switch (g7Var.ordinal()) {
             case 0:
@@ -65,7 +65,7 @@ public final class k4 {
             case 8:
                 if (!(obj instanceof s3)) {
                     boolean z15 = a4.b;
-                    int i10 = e7.f7036a;
+                    int i10 = e7.f7110a;
                     iB = c7.b((String) obj);
                     iV = a4.v(iB);
                 } else {
@@ -142,7 +142,7 @@ public final class k4 {
     }
 
     public static k4 e() {
-        return f7118d;
+        return f7192d;
     }
 
     public static boolean j(Map.Entry entry) {
@@ -193,7 +193,7 @@ public final class k4 {
         boolean z10;
         j4Var.zzb();
         obj.getClass();
-        g7 g7Var = g7.f7066c;
+        g7 g7Var = g7.f7140c;
         h7 h7Var = h7.INT;
         switch (r0.a()) {
             case INT:
@@ -254,7 +254,7 @@ public final class k4 {
 
     public final /* bridge */ /* synthetic */ Object clone() {
         k4 k4Var = new k4();
-        p6 p6Var = this.f7119a;
+        p6 p6Var = this.f7193a;
         int iC = p6Var.c();
         for (int i10 = 0; i10 < iC; i10++) {
             Map.Entry entryG = p6Var.g(i10);
@@ -263,12 +263,12 @@ public final class k4 {
         for (Map.Entry entry : p6Var.d()) {
             k4Var.h((j4) entry.getKey(), entry.getValue());
         }
-        k4Var.f7120c = this.f7120c;
+        k4Var.f7194c = this.f7194c;
         return k4Var;
     }
 
     public final int d() {
-        p6 p6Var = this.f7119a;
+        p6 p6Var = this.f7193a;
         int iC = p6Var.c();
         int iL = 0;
         for (int i10 = 0; i10 < iC; i10++) {
@@ -286,24 +286,24 @@ public final class k4 {
             return true;
         }
         if (obj instanceof k4) {
-            return this.f7119a.equals(((k4) obj).f7119a);
+            return this.f7193a.equals(((k4) obj).f7193a);
         }
         return false;
     }
 
     public final Iterator f() {
-        p6 p6Var = this.f7119a;
+        p6 p6Var = this.f7193a;
         if (p6Var.isEmpty()) {
             return Collections.emptyIterator();
         }
-        return this.f7120c ? new b5(p6Var.entrySet().iterator()) : p6Var.entrySet().iterator();
+        return this.f7194c ? new b5(p6Var.entrySet().iterator()) : p6Var.entrySet().iterator();
     }
 
     public final void g() {
         if (this.b) {
             return;
         }
-        p6 p6Var = this.f7119a;
+        p6 p6Var = this.f7193a;
         int iC = p6Var.c();
         for (int i10 = 0; i10 < iC; i10++) {
             Object value = p6Var.g(i10).getValue();
@@ -340,17 +340,17 @@ public final class k4 {
             obj = arrayList;
         }
         if (obj instanceof d5) {
-            this.f7120c = true;
+            this.f7194c = true;
         }
-        this.f7119a.put(j4Var, obj);
+        this.f7193a.put(j4Var, obj);
     }
 
     public final int hashCode() {
-        return this.f7119a.hashCode();
+        return this.f7193a.hashCode();
     }
 
     public final boolean i() {
-        p6 p6Var = this.f7119a;
+        p6 p6Var = this.f7193a;
         int iC = p6Var.c();
         for (int i10 = 0; i10 < iC; i10++) {
             if (!j(p6Var.g(i10))) {

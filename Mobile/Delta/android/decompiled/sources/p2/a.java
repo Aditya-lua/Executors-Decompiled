@@ -9,9 +9,9 @@ import androidx.core.google.shortcuts.TrampolineActivity;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.security.GeneralSecurityException;
-import oe.p;
-import oe.w;
-import we.n;
+import pe.p;
+import pe.w;
+import xe.n;
 
 /* JADX INFO: loaded from: classes.dex */
 public class a {
@@ -45,8 +45,8 @@ public class a {
 
     public static p c(@NonNull Context context) {
         try {
-            we.p.c();
-            return new ue.a.b().n(context, "core-google-shortcuts.TINK_KEYSET", "core-google-shortcuts.PREF_FILE_NAME").l(n.c()).m(String.format("android-keystore://%s", "core-google-shortcuts.MASTER_KEY")).f().e();
+            xe.p.c();
+            return new ve.a.b().n(context, "core-google-shortcuts.TINK_KEYSET", "core-google-shortcuts.PREF_FILE_NAME").l(n.c()).m(String.format("android-keystore://%s", "core-google-shortcuts.MASTER_KEY")).f().e();
         } catch (IOException | GeneralSecurityException e10) {
             Log.e("ShortcutUtils", "could not get or create keyset handle.", e10);
             return null;

@@ -58,7 +58,7 @@ public class g2 {
     public /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f17440a;
+        public static final /* synthetic */ int[] f17979a;
 
         static {
             int[] iArr = new int[k0.b.values().length];
@@ -78,7 +78,7 @@ public class g2 {
                 iArr[k0.b.IMAGE_FORMAT.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
-            f17440a = iArr;
+            f17979a = iArr;
         }
     }
 
@@ -193,7 +193,7 @@ public class g2 {
         sb2.append(" despite using feature groups. Do not use APIs like ");
         sb2.append(strJ);
         sb2.append(".Builder.");
-        int[] iArr = a.f17440a;
+        int[] iArr = a.f17979a;
         int i10 = iArr[bVarA.ordinal()];
         if (i10 == 1) {
             str = "setDynamicRange";
@@ -203,7 +203,7 @@ public class g2 {
             str = s0.f.e0(w2Var) ? "setVideoStabilizationEnabled" : "setPreviewStabilizationEnabled";
         } else {
             if (i10 != 4) {
-                throw new jt.l();
+                throw new gt.l();
             }
             str = "setOutputFormat";
         }
@@ -218,7 +218,7 @@ public class g2 {
             str2 = "stabilization";
         } else {
             if (i11 != 4) {
-                throw new jt.l();
+                throw new gt.l();
             }
             str2 = "JPEG_R output format";
         }
@@ -233,7 +233,7 @@ public class g2 {
             str3 = "GroupableFeature.PREVIEW_STABILIZATION";
         } else {
             if (i12 != 4) {
-                throw new jt.l();
+                throw new gt.l();
             }
             str3 = "GroupableFeature.IMAGE_ULTRA_HDR";
         }
@@ -266,7 +266,7 @@ public class g2 {
     }
 
     public final void p() {
-        if (Intrinsics.c(this.frameRateRange, t3.f24861a)) {
+        if (Intrinsics.c(this.frameRateRange, t3.f25682a)) {
             return;
         }
         Iterator<w2> it = this.useCases.iterator();
@@ -299,6 +299,6 @@ public class g2 {
     }
 
     public /* synthetic */ g2(List list, y2 y2Var, List list2, Range range, Set set, List list3, int i10, DefaultConstructorMarker defaultConstructorMarker) {
-        this(list, (i10 & 2) != 0 ? null : y2Var, (i10 & 4) != 0 ? kotlin.collections.p.k() : list2, (i10 & 8) != 0 ? t3.f24861a : range, (i10 & 16) != 0 ? kotlin.collections.q0.d() : set, (i10 & 32) != 0 ? kotlin.collections.p.k() : list3);
+        this(list, (i10 & 2) != 0 ? null : y2Var, (i10 & 4) != 0 ? kotlin.collections.p.k() : list2, (i10 & 8) != 0 ? t3.f25682a : range, (i10 & 16) != 0 ? kotlin.collections.q0.d() : set, (i10 & 32) != 0 ? kotlin.collections.p.k() : list3);
     }
 }

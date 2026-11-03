@@ -1970,7 +1970,7 @@ Advertiser/Payor: %1$s."</string>
     <string name="google_api_key">AIzaSyAiU9tuF1RSsyGs_gFgzxeOISgGV6M4zIc</string>
     <string name="google_app_id">1:100155320909:android:a2e486505ad434f5</string>
     <string name="google_crash_reporting_api_key">AIzaSyAiU9tuF1RSsyGs_gFgzxeOISgGV6M4zIc</string>
-    <string name="google_sso_server_client_id">934438917975-j90p6ikvdvimtmct36tsnva6aeam6o07.apps.googleusercontent.com</string>
+    <string name="google_sso_server_client_id">56711522248-1fcarhkgvhgirrt22fr0ml64mpcgcqop.apps.googleusercontent.com</string>
     <string name="google_storage_bucket">api-project-100155320909.firebasestorage.app</string>
     <string name="hide_bottom_view_on_scroll_behavior">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string name="icon_content_description">Dialog Icon</string>
@@ -2186,11 +2186,12 @@ Advertiser/Payor: %1$s."</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_gmasdk">GMA SDK</string>
     <string name="title_personasdk">Persona SDK</string>
-    <string name="zgooglebinarycompresswarm25743">zgooglebinarycompresswarm25743</string>
-    <string name="zgooglebinarycontrol743743">zgooglebinarycontrol743743</string>
-    <string name="zgooglebinarydeferredfonts743743">zgooglebinarydeferredfonts743743</string>
-    <string name="zgooglebinarymimalloc743743">zgooglebinarymimalloc743743</string>
-    <string name="zgooglebinarytonecompress25743">zgooglebinarytonecompress25743</string>
-    <string name="zgooglebinarywarmceiling25743">zgooglebinarywarmceiling25743</string>
+    <string name="title_pgs">PGS</string>
+    <string name="zgooglebinarycontrol745">zgooglebinarycontrol745</string>
+    <string name="zgooglebinaryfmodupgrade745">zgooglebinaryfmodupgrade745</string>
+    <string name="zgooglebinarym154buck2745">zgooglebinarym154buck2745</string>
+    <string name="zgooglebinarym154cmake745">zgooglebinarym154cmake745</string>
+    <string name="zgooglebinarymimalloc745">zgooglebinarymimalloc745</string>
+    <string name="zgooglebinaryupdateorderfile745">zgooglebinaryupdateorderfile745</string>
     <string name="gpdeku_split_title">gpdeku</string>
 </resources>

@@ -12,53 +12,53 @@ public class g {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NonNull
-        public final ByteBuffer f37139a;
+        public final ByteBuffer f37834a;
 
         public a(@NonNull ByteBuffer byteBuffer) {
-            this.f37139a = byteBuffer;
+            this.f37834a = byteBuffer;
             byteBuffer.order(ByteOrder.BIG_ENDIAN);
         }
 
         @Override // z3.g.c
         public int a() {
-            return this.f37139a.getInt();
+            return this.f37834a.getInt();
         }
 
         @Override // z3.g.c
         public void b(int i10) {
-            ByteBuffer byteBuffer = this.f37139a;
+            ByteBuffer byteBuffer = this.f37834a;
             byteBuffer.position(byteBuffer.position() + i10);
         }
 
         @Override // z3.g.c
         public long c() {
-            return g.c(this.f37139a.getInt());
+            return g.c(this.f37834a.getInt());
         }
 
         @Override // z3.g.c
         public long getPosition() {
-            return this.f37139a.position();
+            return this.f37834a.position();
         }
 
         @Override // z3.g.c
         public int readUnsignedShort() {
-            return g.d(this.f37139a.getShort());
+            return g.d(this.f37834a.getShort());
         }
     }
 
     public static class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final long f37140a;
+        public final long f37835a;
         public final long b;
 
         public b(long j10, long j11) {
-            this.f37140a = j10;
+            this.f37835a = j10;
             this.b = j11;
         }
 
         public long a() {
-            return this.f37140a;
+            return this.f37835a;
         }
     }
 

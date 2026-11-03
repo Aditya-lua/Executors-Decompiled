@@ -14,25 +14,25 @@ public final class AFc1gSDK implements AFc1kSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    private final AFc1dSDK<SharedPreferences> f5252d;
+    private final AFc1dSDK<SharedPreferences> f5325d;
 
     @NotNull
-    private final jt.h registerClient;
+    private final gt.h registerClient;
 
     public AFc1gSDK(@NotNull AFc1dSDK<SharedPreferences> aFc1dSDK) {
         Intrinsics.checkNotNullParameter(aFc1dSDK, "");
-        this.f5252d = aFc1dSDK;
-        this.registerClient = jt.i.b(new Function0() { // from class: com.appsflyer.internal.y
+        this.f5325d = aFc1dSDK;
+        this.registerClient = gt.i.b(new Function0() { // from class: com.appsflyer.internal.y
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return AFc1gSDK.q_(this.f5530a);
+                return AFc1gSDK.q_(this.f5603a);
             }
         });
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public static final SharedPreferences q_(AFc1gSDK aFc1gSDK) {
-        return aFc1gSDK.f5252d.AFKeystoreWrapper.invoke();
+        return aFc1gSDK.f5325d.AFKeystoreWrapper.invoke();
     }
 
     @Override // com.appsflyer.internal.AFc1kSDK

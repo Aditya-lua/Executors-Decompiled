@@ -13,10 +13,10 @@ public final class zzx extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zzx> CREATOR = new h2();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final Intent f6340f;
+    public final Intent f6413f;
 
     public zzx(Intent intent) {
-        this.f6340f = intent;
+        this.f6413f = intent;
     }
 
     public static zzx a(Intent intent) {
@@ -28,13 +28,13 @@ public final class zzx extends AbstractSafeParcelable {
             return true;
         }
         if (obj instanceof zzx) {
-            return k.b(this.f6340f, ((zzx) obj).f6340f);
+            return k.b(this.f6413f, ((zzx) obj).f6413f);
         }
         return false;
     }
 
     public final int hashCode() {
-        Intent intent = this.f6340f;
+        Intent intent = this.f6413f;
         if (intent != null) {
             return intent.hashCode();
         }
@@ -42,12 +42,12 @@ public final class zzx extends AbstractSafeParcelable {
     }
 
     public final String toString() {
-        return k.d(this).a("resultData", this.f6340f).toString();
+        return k.d(this).a("resultData", this.f6413f).toString();
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i10) {
-        Intent intent = this.f6340f;
+        Intent intent = this.f6413f;
         int iA = b.a(parcel);
         b.t(parcel, 1, intent, i10, false);
         b.b(parcel, iA);

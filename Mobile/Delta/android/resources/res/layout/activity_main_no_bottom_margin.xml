@@ -2,8 +2,7 @@
 <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <FrameLayout android:id="@id/loading_view" android:background="@color/activityBackground" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
-        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/roblox_logo" android:contentDescription="@string/CommonUI_Messages_Label_Roblox" />
-        <com.roblox.client.components.LoadingBar android:layout_gravity="center|bottom" android:orientation="horizontal" android:id="@id/loading_progress_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30.0dp" />
+        <ViewStub android:id="@id/loading_content_stub" android:layout="@layout/loading_content_roblox" android:layout_width="match_parent" android:layout_height="match_parent" />
     </FrameLayout>
     <ViewStub android:id="@id/google_ads_view_stub" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" />
     <FrameLayout android:id="@id/content_main" android:layout_width="match_parent" android:layout_height="match_parent">

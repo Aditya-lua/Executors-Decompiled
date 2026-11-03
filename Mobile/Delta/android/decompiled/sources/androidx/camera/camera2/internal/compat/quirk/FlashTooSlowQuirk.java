@@ -12,10 +12,10 @@ import java.util.Locale;
 public class FlashTooSlowQuirk implements UseTorchAsFlashQuirk {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final List<String> f1331a = Arrays.asList("PIXEL 3A", "PIXEL 3A XL", "PIXEL 4", "PIXEL 5", "SM-A320", "MOTO G(20)", "ITEL L6006", "RMX3231");
+    public static final List<String> f1176a = Arrays.asList("PIXEL 3A", "PIXEL 3A XL", "PIXEL 4", "PIXEL 5", "SM-A320", "MOTO G(20)", "ITEL L6006", "RMX3231");
 
     public static boolean g() {
-        Iterator<String> it = f1331a.iterator();
+        Iterator<String> it = f1176a.iterator();
         while (it.hasNext()) {
             if (Build.MODEL.toUpperCase(Locale.US).startsWith(it.next())) {
                 return true;

@@ -14,24 +14,24 @@ import org.json.JSONObject;
 public class u0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final SharedPreferences f8812a;
+    public final SharedPreferences f8886a;
 
     public static class a {
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final long f8813d = TimeUnit.DAYS.toMillis(7);
+        public static final long f8887d = TimeUnit.DAYS.toMillis(7);
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final String f8814a;
+        public final String f8888a;
         public final String b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final long f8815c;
+        public final long f8889c;
 
         public a(String str, String str2, long j10) {
-            this.f8814a = str;
+            this.f8888a = str;
             this.b = str2;
-            this.f8815c = j10;
+            this.f8889c = j10;
         }
 
         public static String a(String str, String str2, long j10) {
@@ -64,12 +64,12 @@ public class u0 {
         }
 
         public boolean b(String str) {
-            return System.currentTimeMillis() > this.f8815c + f8813d || !str.equals(this.b);
+            return System.currentTimeMillis() > this.f8889c + f8887d || !str.equals(this.b);
         }
     }
 
     public u0(Context context) {
-        this.f8812a = context.getSharedPreferences("com.google.android.gms.appid", 0);
+        this.f8886a = context.getSharedPreferences("com.google.android.gms.appid", 0);
         a(context, "com.google.android.gms.appid-no-backup");
     }
 
@@ -96,15 +96,15 @@ public class u0 {
     }
 
     public synchronized void c() {
-        this.f8812a.edit().clear().commit();
+        this.f8886a.edit().clear().commit();
     }
 
     public synchronized a d(String str, String str2) {
-        return a.c(this.f8812a.getString(b(str, str2), null));
+        return a.c(this.f8886a.getString(b(str, str2), null));
     }
 
     public synchronized boolean e() {
-        return this.f8812a.getAll().isEmpty();
+        return this.f8886a.getAll().isEmpty();
     }
 
     public synchronized void f(String str, String str2, String str3, String str4) {
@@ -112,7 +112,7 @@ public class u0 {
         if (strA == null) {
             return;
         }
-        SharedPreferences.Editor editorEdit = this.f8812a.edit();
+        SharedPreferences.Editor editorEdit = this.f8886a.edit();
         editorEdit.putString(b(str, str2), strA);
         editorEdit.commit();
     }

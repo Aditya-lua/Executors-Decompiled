@@ -13,16 +13,16 @@ import n0.u1;
 public class i {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final boolean f14252a;
+    public final boolean f14232a;
     public final boolean b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final boolean f14253c;
+    public final boolean f14233c;
 
     public i(k3 k3Var, k3 k3Var2) {
-        this.f14252a = k3Var2.a(TextureViewIsClosedQuirk.class);
+        this.f14232a = k3Var2.a(TextureViewIsClosedQuirk.class);
         this.b = k3Var.a(PreviewOrientationIncorrectQuirk.class);
-        this.f14253c = k3Var.a(ConfigureSurfaceToSecondarySessionFailQuirk.class);
+        this.f14233c = k3Var.a(ConfigureSurfaceToSecondarySessionFailQuirk.class);
     }
 
     public void a(List<u1> list) {
@@ -37,6 +37,6 @@ public class i {
     }
 
     public boolean b() {
-        return this.f14252a || this.b || this.f14253c;
+        return this.f14232a || this.b || this.f14233c;
     }
 }

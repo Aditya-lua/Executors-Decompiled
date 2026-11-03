@@ -18,7 +18,7 @@ public interface m {
             throw new IllegalArgumentException(String.format("Object has no function %s", qVar.zzc()));
         }
         v5.a("hasOwnProperty", 1, list);
-        return mVar.g(u4Var.a((q) list.get(0)).zzc()) ? q.Eo : q.Fo;
+        return mVar.g(u4Var.a((q) list.get(0)).zzc()) ? q.Do : q.Eo;
     }
 
     static Iterator f(Map map) {

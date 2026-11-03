@@ -7,11 +7,11 @@ import android.util.Size;
 public final class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Matrix f31344a;
+    public final Matrix f31863a;
     public final Size b;
 
     public b(Matrix matrix, Size size) {
-        this.f31344a = matrix;
+        this.f31863a = matrix;
         this.b = size;
     }
 }

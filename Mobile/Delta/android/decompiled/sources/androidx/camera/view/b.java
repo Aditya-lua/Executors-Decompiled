@@ -19,60 +19,60 @@ import x2.g;
 public final class b {
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final PreviewView.d f1444i = PreviewView.d.FILL_CENTER;
+    public static final PreviewView.d f1289i = PreviewView.d.FILL_CENTER;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Size f1445a;
+    public Size f1290a;
     public Rect b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f1446c;
+    public int f1291c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public Matrix f1447d;
+    public Matrix f1292d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public int f1448e;
+    public int f1293e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public boolean f1449f;
+    public boolean f1294f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public boolean f1450g;
+    public boolean f1295g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public PreviewView.d f1451h = f1444i;
+    public PreviewView.d f1296h = f1289i;
 
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f1452a;
+        public static final /* synthetic */ int[] f1297a;
 
         static {
             int[] iArr = new int[PreviewView.d.values().length];
-            f1452a = iArr;
+            f1297a = iArr;
             try {
                 iArr[PreviewView.d.FIT_CENTER.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f1452a[PreviewView.d.FILL_CENTER.ordinal()] = 2;
+                f1297a[PreviewView.d.FILL_CENTER.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f1452a[PreviewView.d.FIT_END.ordinal()] = 3;
+                f1297a[PreviewView.d.FIT_END.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
             try {
-                f1452a[PreviewView.d.FILL_END.ordinal()] = 4;
+                f1297a[PreviewView.d.FILL_END.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
             try {
-                f1452a[PreviewView.d.FIT_START.ordinal()] = 5;
+                f1297a[PreviewView.d.FIT_START.ordinal()] = 5;
             } catch (NoSuchFieldError unused5) {
             }
             try {
-                f1452a[PreviewView.d.FILL_START.ordinal()] = 6;
+                f1297a[PreviewView.d.FILL_START.ordinal()] = 6;
             } catch (NoSuchFieldError unused6) {
             }
         }
@@ -85,7 +85,7 @@ public final class b {
 
     public static void p(Matrix matrix, RectF rectF, RectF rectF2, PreviewView.d dVar) {
         Matrix.ScaleToFit scaleToFit;
-        switch (a.f1452a[dVar.ordinal()]) {
+        switch (a.f1297a[dVar.ordinal()]) {
             case 1:
             case 2:
                 scaleToFit = Matrix.ScaleToFit.CENTER;
@@ -121,7 +121,7 @@ public final class b {
         Canvas canvas = new Canvas(bitmapCreateBitmap);
         Matrix matrix = new Matrix();
         matrix.postConcat(matrixK);
-        matrix.postScale(rectFL.width() / this.f1445a.getWidth(), rectFL.height() / this.f1445a.getHeight());
+        matrix.postScale(rectFL.width() / this.f1290a.getWidth(), rectFL.height() / this.f1290a.getHeight());
         matrix.postTranslate(rectFL.left, rectFL.top);
         canvas.drawBitmap(bitmap, matrix, new Paint(7));
         return bitmapCreateBitmap;
@@ -144,28 +144,28 @@ public final class b {
         Size sizeF = f();
         RectF rectF2 = new RectF(0.0f, 0.0f, sizeF.getWidth(), sizeF.getHeight());
         Matrix matrix = new Matrix();
-        p(matrix, rectF2, rectF, this.f1451h);
+        p(matrix, rectF2, rectF, this.f1296h);
         matrix.mapRect(rectF2);
         return i10 == 1 ? b(rectF2, size.getWidth() / 2.0f) : rectF2;
     }
 
     public final int e() {
-        return !this.f1450g ? this.f1446c : -p0.c.b(this.f1448e);
+        return !this.f1295g ? this.f1291c : -p0.c.b(this.f1293e);
     }
 
     public final Size f() {
-        return a0.i(this.f1446c) ? new Size(this.b.height(), this.b.width()) : new Size(this.b.width(), this.b.height());
+        return a0.i(this.f1291c) ? new Size(this.b.height(), this.b.width()) : new Size(this.b.width(), this.b.height());
     }
 
     public PreviewView.d g() {
-        return this.f1451h;
+        return this.f1296h;
     }
 
     public Matrix h(Size size, int i10) {
         if (!m()) {
             return null;
         }
-        Matrix matrix = new Matrix(this.f1447d);
+        Matrix matrix = new Matrix(this.f1292d);
         matrix.postConcat(j(size, i10));
         return matrix;
     }
@@ -176,9 +176,9 @@ public final class b {
 
     public Matrix j(Size size, int i10) {
         g.i(m());
-        Matrix matrixD = a0.d(new RectF(this.b), n(size) ? new RectF(0.0f, 0.0f, size.getWidth(), size.getHeight()) : d(size, i10), this.f1446c);
-        if (this.f1449f && this.f1450g) {
-            if (a0.i(this.f1446c)) {
+        Matrix matrixD = a0.d(new RectF(this.b), n(size) ? new RectF(0.0f, 0.0f, size.getWidth(), size.getHeight()) : d(size, i10), this.f1291c);
+        if (this.f1294f && this.f1295g) {
+            if (a0.i(this.f1291c)) {
                 matrixD.preScale(1.0f, -1.0f, this.b.centerX(), this.b.centerY());
                 return matrixD;
             }
@@ -189,20 +189,20 @@ public final class b {
 
     public Matrix k() {
         g.i(m());
-        RectF rectF = new RectF(0.0f, 0.0f, this.f1445a.getWidth(), this.f1445a.getHeight());
+        RectF rectF = new RectF(0.0f, 0.0f, this.f1290a.getWidth(), this.f1290a.getHeight());
         return a0.d(rectF, rectF, e());
     }
 
     public final RectF l(Size size, int i10) {
         g.i(m());
         Matrix matrixJ = j(size, i10);
-        RectF rectF = new RectF(0.0f, 0.0f, this.f1445a.getWidth(), this.f1445a.getHeight());
+        RectF rectF = new RectF(0.0f, 0.0f, this.f1290a.getWidth(), this.f1290a.getHeight());
         matrixJ.mapRect(rectF);
         return rectF;
     }
 
     public final boolean m() {
-        return (this.b == null || this.f1445a == null || !(!this.f1450g || this.f1448e != -1)) ? false : true;
+        return (this.b == null || this.f1290a == null || !(!this.f1295g || this.f1293e != -1)) ? false : true;
     }
 
     public boolean n(Size size) {
@@ -210,25 +210,25 @@ public final class b {
     }
 
     public void o(int i10, int i11) {
-        if (this.f1450g) {
-            this.f1446c = i10;
-            this.f1448e = i11;
+        if (this.f1295g) {
+            this.f1291c = i10;
+            this.f1293e = i11;
         }
     }
 
     public void q(PreviewView.d dVar) {
-        this.f1451h = dVar;
+        this.f1296h = dVar;
     }
 
     public void r(v2.h hVar, Size size, boolean z10) {
         r1.a("PreviewTransform", "Transformation info set: " + hVar + " " + size + " " + z10);
         this.b = hVar.a();
-        this.f1446c = hVar.b();
-        this.f1448e = hVar.d();
-        this.f1445a = size;
-        this.f1449f = z10;
-        this.f1450g = hVar.e();
-        this.f1447d = hVar.c();
+        this.f1291c = hVar.b();
+        this.f1293e = hVar.d();
+        this.f1290a = size;
+        this.f1294f = z10;
+        this.f1295g = hVar.e();
+        this.f1292d = hVar.c();
     }
 
     public void s(Size size, int i10, View view) {
@@ -242,8 +242,8 @@ public final class b {
             } else {
                 Display display = view.getDisplay();
                 boolean z10 = false;
-                boolean z11 = (!this.f1450g || display == null || display.getRotation() == this.f1448e) ? false : true;
-                if (!this.f1450g && e() != 0) {
+                boolean z11 = (!this.f1295g || display == null || display.getRotation() == this.f1293e) ? false : true;
+                if (!this.f1295g && e() != 0) {
                     z10 = true;
                 }
                 if (z11 || z10) {
@@ -253,8 +253,8 @@ public final class b {
             RectF rectFL = l(size, i10);
             view.setPivotX(0.0f);
             view.setPivotY(0.0f);
-            view.setScaleX(rectFL.width() / this.f1445a.getWidth());
-            view.setScaleY(rectFL.height() / this.f1445a.getHeight());
+            view.setScaleX(rectFL.width() / this.f1290a.getWidth());
+            view.setScaleY(rectFL.height() / this.f1290a.getHeight());
             view.setTranslationX(rectFL.left - view.getLeft());
             view.setTranslationY(rectFL.top - view.getTop());
         }

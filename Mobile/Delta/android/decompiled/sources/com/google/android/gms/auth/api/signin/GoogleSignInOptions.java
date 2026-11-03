@@ -36,81 +36,81 @@ public class GoogleSignInOptions extends AbstractSafeParcelable implements k9.a.
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
     @NonNull
-    public static final GoogleSignInOptions f5627q;
+    public static final GoogleSignInOptions f5700q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
     @NonNull
-    public static final GoogleSignInOptions f5628r;
+    public static final GoogleSignInOptions f5701r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
     @NonNull
-    public static final Scope f5629s = new Scope("profile");
+    public static final Scope f5702s = new Scope("profile");
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
     @NonNull
-    public static final Scope f5630t = new Scope("email");
+    public static final Scope f5703t = new Scope("email");
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
     @NonNull
-    public static final Scope f5631u = new Scope("openid");
+    public static final Scope f5704u = new Scope("openid");
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
     @NonNull
-    public static final Scope f5632v;
+    public static final Scope f5705v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
     @NonNull
-    public static final Scope f5633w;
+    public static final Scope f5706w;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public static final Comparator f5634x;
+    public static final Comparator f5707x;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f5635f;
+    public final int f5708f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final ArrayList f5636g;
+    public final ArrayList f5709g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public Account f5637h;
+    public Account f5710h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public boolean f5638i;
+    public boolean f5711i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final boolean f5639j;
+    public final boolean f5712j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final boolean f5640k;
+    public final boolean f5713k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public String f5641l;
+    public String f5714l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public String f5642m;
+    public String f5715m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public ArrayList f5643n;
+    public ArrayList f5716n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public String f5644o;
+    public String f5717o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public Map f5645p;
+    public Map f5718p;
 
     static {
         Scope scope = new Scope("https://www.googleapis.com/auth/games_lite");
-        f5632v = scope;
-        f5633w = new Scope("https://www.googleapis.com/auth/games");
+        f5705v = scope;
+        f5706w = new Scope("https://www.googleapis.com/auth/games");
         a aVar = new a();
         aVar.b();
         aVar.c();
-        f5627q = aVar.a();
+        f5700q = aVar.a();
         a aVar2 = new a();
         aVar2.d(scope, new Scope[0]);
-        f5628r = aVar2.a();
+        f5701r = aVar2.a();
         CREATOR = new h();
-        f5634x = new f();
+        f5707x = new f();
     }
 
     public static GoogleSignInOptions D3(String str) throws JSONException {
@@ -141,15 +141,15 @@ public class GoogleSignInOptions extends AbstractSafeParcelable implements k9.a.
     }
 
     public boolean A3() {
-        return this.f5638i;
+        return this.f5711i;
     }
 
     public boolean B3() {
-        return this.f5639j;
+        return this.f5712j;
     }
 
-    public Account G2() {
-        return this.f5637h;
+    public Account H2() {
+        return this.f5710h;
     }
 
     @NonNull
@@ -157,8 +157,8 @@ public class GoogleSignInOptions extends AbstractSafeParcelable implements k9.a.
         JSONObject jSONObject = new JSONObject();
         try {
             JSONArray jSONArray = new JSONArray();
-            Collections.sort(this.f5636g, f5634x);
-            ArrayList arrayList = this.f5636g;
+            Collections.sort(this.f5709g, f5707x);
+            ArrayList arrayList = this.f5709g;
             int size = arrayList.size();
             int i10 = 0;
             while (i10 < size) {
@@ -167,18 +167,18 @@ public class GoogleSignInOptions extends AbstractSafeParcelable implements k9.a.
                 jSONArray.put(((Scope) obj).v3());
             }
             jSONObject.put("scopes", jSONArray);
-            Account account = this.f5637h;
+            Account account = this.f5710h;
             if (account != null) {
                 jSONObject.put("accountName", account.name);
             }
-            jSONObject.put("idTokenRequested", this.f5638i);
-            jSONObject.put("forceCodeForRefreshToken", this.f5640k);
-            jSONObject.put("serverAuthRequested", this.f5639j);
-            if (!TextUtils.isEmpty(this.f5641l)) {
-                jSONObject.put("serverClientId", this.f5641l);
+            jSONObject.put("idTokenRequested", this.f5711i);
+            jSONObject.put("forceCodeForRefreshToken", this.f5713k);
+            jSONObject.put("serverAuthRequested", this.f5712j);
+            if (!TextUtils.isEmpty(this.f5714l)) {
+                jSONObject.put("serverClientId", this.f5714l);
             }
-            if (!TextUtils.isEmpty(this.f5642m)) {
-                jSONObject.put("hostedDomain", this.f5642m);
+            if (!TextUtils.isEmpty(this.f5715m)) {
+                jSONObject.put("hostedDomain", this.f5715m);
             }
             return jSONObject.toString();
         } catch (JSONException e10) {
@@ -198,29 +198,29 @@ public class GoogleSignInOptions extends AbstractSafeParcelable implements k9.a.
         }
         try {
             GoogleSignInOptions googleSignInOptions = (GoogleSignInOptions) obj;
-            if (this.f5643n.isEmpty() && googleSignInOptions.f5643n.isEmpty() && this.f5636g.size() == googleSignInOptions.x3().size() && this.f5636g.containsAll(googleSignInOptions.x3())) {
-                Account account = this.f5637h;
+            if (this.f5716n.isEmpty() && googleSignInOptions.f5716n.isEmpty() && this.f5709g.size() == googleSignInOptions.x3().size() && this.f5709g.containsAll(googleSignInOptions.x3())) {
+                Account account = this.f5710h;
                 if (account == null) {
-                    if (googleSignInOptions.G2() == null) {
-                        if (TextUtils.isEmpty(this.f5641l)) {
+                    if (googleSignInOptions.H2() == null) {
+                        if (TextUtils.isEmpty(this.f5714l)) {
                             if (TextUtils.isEmpty(googleSignInOptions.y3())) {
-                                if (this.f5640k != googleSignInOptions.z3() && this.f5638i == googleSignInOptions.A3() && this.f5639j == googleSignInOptions.B3() && TextUtils.equals(this.f5644o, googleSignInOptions.w3())) {
+                                if (this.f5713k != googleSignInOptions.z3() && this.f5711i == googleSignInOptions.A3() && this.f5712j == googleSignInOptions.B3() && TextUtils.equals(this.f5717o, googleSignInOptions.w3())) {
                                     return true;
                                 }
                             }
-                        } else if (!this.f5641l.equals(googleSignInOptions.y3())) {
-                            if (this.f5640k != googleSignInOptions.z3()) {
+                        } else if (!this.f5714l.equals(googleSignInOptions.y3())) {
+                            if (this.f5713k != googleSignInOptions.z3()) {
                             }
                         }
                     }
-                } else if (account.equals(googleSignInOptions.G2())) {
-                    if (TextUtils.isEmpty(this.f5641l)) {
+                } else if (account.equals(googleSignInOptions.H2())) {
+                    if (TextUtils.isEmpty(this.f5714l)) {
                         if (TextUtils.isEmpty(googleSignInOptions.y3())) {
-                            if (this.f5640k != googleSignInOptions.z3()) {
+                            if (this.f5713k != googleSignInOptions.z3()) {
                             }
                         }
-                    } else if (!this.f5641l.equals(googleSignInOptions.y3())) {
-                        if (this.f5640k != googleSignInOptions.z3()) {
+                    } else if (!this.f5714l.equals(googleSignInOptions.y3())) {
+                        if (this.f5713k != googleSignInOptions.z3()) {
                         }
                     }
                 }
@@ -232,7 +232,7 @@ public class GoogleSignInOptions extends AbstractSafeParcelable implements k9.a.
 
     public int hashCode() {
         ArrayList arrayList = new ArrayList();
-        ArrayList arrayList2 = this.f5636g;
+        ArrayList arrayList2 = this.f5709g;
         int size = arrayList2.size();
         for (int i10 = 0; i10 < size; i10++) {
             arrayList.add(((Scope) arrayList2.get(i10)).v3());
@@ -240,36 +240,36 @@ public class GoogleSignInOptions extends AbstractSafeParcelable implements k9.a.
         Collections.sort(arrayList);
         d9.a aVar = new d9.a();
         aVar.a(arrayList);
-        aVar.a(this.f5637h);
-        aVar.a(this.f5641l);
-        aVar.c(this.f5640k);
-        aVar.c(this.f5638i);
-        aVar.c(this.f5639j);
-        aVar.a(this.f5644o);
+        aVar.a(this.f5710h);
+        aVar.a(this.f5714l);
+        aVar.c(this.f5713k);
+        aVar.c(this.f5711i);
+        aVar.c(this.f5712j);
+        aVar.a(this.f5717o);
         return aVar.b();
     }
 
     @NonNull
     public ArrayList<GoogleSignInOptionsExtensionParcelable> v3() {
-        return this.f5643n;
+        return this.f5716n;
     }
 
     public String w3() {
-        return this.f5644o;
+        return this.f5717o;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
-        int i11 = this.f5635f;
+        int i11 = this.f5708f;
         int iA = b.a(parcel);
         b.n(parcel, 1, i11);
         b.z(parcel, 2, x3(), false);
-        b.t(parcel, 3, G2(), i10, false);
+        b.t(parcel, 3, H2(), i10, false);
         b.c(parcel, 4, A3());
         b.c(parcel, 5, B3());
         b.c(parcel, 6, z3());
         b.v(parcel, 7, y3(), false);
-        b.v(parcel, 8, this.f5642m, false);
+        b.v(parcel, 8, this.f5715m, false);
         b.z(parcel, 9, v3(), false);
         b.v(parcel, 10, w3(), false);
         b.b(parcel, iA);
@@ -277,102 +277,102 @@ public class GoogleSignInOptions extends AbstractSafeParcelable implements k9.a.
 
     @NonNull
     public ArrayList<Scope> x3() {
-        return new ArrayList<>(this.f5636g);
+        return new ArrayList<>(this.f5709g);
     }
 
     public String y3() {
-        return this.f5641l;
+        return this.f5714l;
     }
 
     public boolean z3() {
-        return this.f5640k;
+        return this.f5713k;
     }
 
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public Set f5646a;
+        public Set f5719a;
         public boolean b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public boolean f5647c;
+        public boolean f5720c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public boolean f5648d;
+        public boolean f5721d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public String f5649e;
+        public String f5722e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public Account f5650f;
+        public Account f5723f;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public String f5651g;
+        public String f5724g;
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public Map f5652h;
+        public Map f5725h;
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public String f5653i;
+        public String f5726i;
 
         public a() {
-            this.f5646a = new HashSet();
-            this.f5652h = new HashMap();
+            this.f5719a = new HashSet();
+            this.f5725h = new HashMap();
         }
 
         @NonNull
         public GoogleSignInOptions a() {
-            if (this.f5646a.contains(GoogleSignInOptions.f5633w)) {
-                Set set = this.f5646a;
-                Scope scope = GoogleSignInOptions.f5632v;
+            if (this.f5719a.contains(GoogleSignInOptions.f5706w)) {
+                Set set = this.f5719a;
+                Scope scope = GoogleSignInOptions.f5705v;
                 if (set.contains(scope)) {
-                    this.f5646a.remove(scope);
+                    this.f5719a.remove(scope);
                 }
             }
-            if (this.f5648d && (this.f5650f == null || !this.f5646a.isEmpty())) {
+            if (this.f5721d && (this.f5723f == null || !this.f5719a.isEmpty())) {
                 b();
             }
-            return new GoogleSignInOptions(new ArrayList(this.f5646a), this.f5650f, this.f5648d, this.b, this.f5647c, this.f5649e, this.f5651g, this.f5652h, this.f5653i);
+            return new GoogleSignInOptions(new ArrayList(this.f5719a), this.f5723f, this.f5721d, this.b, this.f5720c, this.f5722e, this.f5724g, this.f5725h, this.f5726i);
         }
 
         @NonNull
         public a b() {
-            this.f5646a.add(GoogleSignInOptions.f5631u);
+            this.f5719a.add(GoogleSignInOptions.f5704u);
             return this;
         }
 
         @NonNull
         public a c() {
-            this.f5646a.add(GoogleSignInOptions.f5629s);
+            this.f5719a.add(GoogleSignInOptions.f5702s);
             return this;
         }
 
         @NonNull
         public a d(@NonNull Scope scope, @NonNull Scope... scopeArr) {
-            this.f5646a.add(scope);
-            this.f5646a.addAll(Arrays.asList(scopeArr));
+            this.f5719a.add(scope);
+            this.f5719a.addAll(Arrays.asList(scopeArr));
             return this;
         }
 
         @NonNull
         public a e(@NonNull String str) {
-            this.f5653i = str;
+            this.f5726i = str;
             return this;
         }
 
         public a(@NonNull GoogleSignInOptions googleSignInOptions) {
-            this.f5646a = new HashSet();
-            this.f5652h = new HashMap();
+            this.f5719a = new HashSet();
+            this.f5725h = new HashMap();
             m.l(googleSignInOptions);
-            this.f5646a = new HashSet(googleSignInOptions.f5636g);
-            this.b = googleSignInOptions.f5639j;
-            this.f5647c = googleSignInOptions.f5640k;
-            this.f5648d = googleSignInOptions.f5638i;
-            this.f5649e = googleSignInOptions.f5641l;
-            this.f5650f = googleSignInOptions.f5637h;
-            this.f5651g = googleSignInOptions.f5642m;
-            this.f5652h = GoogleSignInOptions.O3(googleSignInOptions.f5643n);
-            this.f5653i = googleSignInOptions.f5644o;
+            this.f5719a = new HashSet(googleSignInOptions.f5709g);
+            this.b = googleSignInOptions.f5712j;
+            this.f5720c = googleSignInOptions.f5713k;
+            this.f5721d = googleSignInOptions.f5711i;
+            this.f5722e = googleSignInOptions.f5714l;
+            this.f5723f = googleSignInOptions.f5710h;
+            this.f5724g = googleSignInOptions.f5715m;
+            this.f5725h = GoogleSignInOptions.O3(googleSignInOptions.f5716n);
+            this.f5726i = googleSignInOptions.f5717o;
         }
     }
 
@@ -381,16 +381,16 @@ public class GoogleSignInOptions extends AbstractSafeParcelable implements k9.a.
     }
 
     public GoogleSignInOptions(int i10, ArrayList arrayList, Account account, boolean z10, boolean z11, boolean z12, String str, String str2, Map map, String str3) {
-        this.f5635f = i10;
-        this.f5636g = arrayList;
-        this.f5637h = account;
-        this.f5638i = z10;
-        this.f5639j = z11;
-        this.f5640k = z12;
-        this.f5641l = str;
-        this.f5642m = str2;
-        this.f5643n = new ArrayList(map.values());
-        this.f5645p = map;
-        this.f5644o = str3;
+        this.f5708f = i10;
+        this.f5709g = arrayList;
+        this.f5710h = account;
+        this.f5711i = z10;
+        this.f5712j = z11;
+        this.f5713k = z12;
+        this.f5714l = str;
+        this.f5715m = str2;
+        this.f5716n = new ArrayList(map.values());
+        this.f5718p = map;
+        this.f5717o = str3;
     }
 }

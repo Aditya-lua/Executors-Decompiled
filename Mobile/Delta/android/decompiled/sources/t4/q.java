@@ -23,6 +23,6 @@ public final class q extends s {
     @NotNull
     public GetTopicsRequest c(@NotNull b request) {
         Intrinsics.checkNotNullParameter(request, "request");
-        return d.f31592a.a(request);
+        return d.f32111a.a(request);
     }
 }

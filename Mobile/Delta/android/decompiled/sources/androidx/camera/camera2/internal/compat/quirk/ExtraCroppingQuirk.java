@@ -14,26 +14,26 @@ import n0.g3;
 public class ExtraCroppingQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Map<String, Range<Integer>> f1325a;
+    public static final Map<String, Range<Integer>> f1170a;
 
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f1326a;
+        public static final /* synthetic */ int[] f1171a;
 
         static {
             int[] iArr = new int[SurfaceConfig.d.values().length];
-            f1326a = iArr;
+            f1171a = iArr;
             try {
                 iArr[SurfaceConfig.d.PRIV.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f1326a[SurfaceConfig.d.YUV.ordinal()] = 2;
+                f1171a[SurfaceConfig.d.YUV.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f1326a[SurfaceConfig.d.JPEG.ordinal()] = 3;
+                f1171a[SurfaceConfig.d.JPEG.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
         }
@@ -41,7 +41,7 @@ public class ExtraCroppingQuirk implements g3 {
 
     static {
         HashMap map = new HashMap();
-        f1325a = map;
+        f1170a = map;
         map.put("SM-T580", null);
         map.put("SM-J710MN", new Range(21, 26));
         map.put("SM-A320FL", null);
@@ -54,7 +54,7 @@ public class ExtraCroppingQuirk implements g3 {
         if (!Payload.SOURCE_SAMSUNG.equalsIgnoreCase(Build.BRAND)) {
             return false;
         }
-        Map<String, Range<Integer>> map = f1325a;
+        Map<String, Range<Integer>> map = f1170a;
         String str = Build.MODEL;
         Locale locale = Locale.US;
         if (!map.containsKey(str.toUpperCase(locale))) {
@@ -75,7 +75,7 @@ public class ExtraCroppingQuirk implements g3 {
         if (!h()) {
             return null;
         }
-        int i10 = a.f1326a[dVar.ordinal()];
+        int i10 = a.f1171a[dVar.ordinal()];
         if (i10 == 1) {
             return new Size(1920, 1080);
         }

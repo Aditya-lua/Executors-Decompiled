@@ -14,14 +14,14 @@ public final class zzbe extends AbstractSafeParcelable implements Iterable<Strin
     public static final Parcelable.Creator<zzbe> CREATOR = new d0();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final Bundle f7421f;
+    public final Bundle f7495f;
 
     public zzbe(Bundle bundle) {
-        this.f7421f = bundle;
+        this.f7495f = bundle;
     }
 
     public final Object a(String str) {
-        return this.f7421f.get(str);
+        return this.f7495f.get(str);
     }
 
     @Override // java.lang.Iterable
@@ -30,15 +30,15 @@ public final class zzbe extends AbstractSafeParcelable implements Iterable<Strin
     }
 
     public final String toString() {
-        return this.f7421f.toString();
+        return this.f7495f.toString();
     }
 
     public final Long v3(String str) {
-        return Long.valueOf(this.f7421f.getLong(str));
+        return Long.valueOf(this.f7495f.getLong(str));
     }
 
     public final Double w3(String str) {
-        return Double.valueOf(this.f7421f.getDouble("value"));
+        return Double.valueOf(this.f7495f.getDouble("value"));
     }
 
     @Override // android.os.Parcelable
@@ -49,18 +49,18 @@ public final class zzbe extends AbstractSafeParcelable implements Iterable<Strin
     }
 
     public final String x3(String str) {
-        return this.f7421f.getString(str);
+        return this.f7495f.getString(str);
     }
 
     public final Bundle y3() {
-        return new Bundle(this.f7421f);
+        return new Bundle(this.f7495f);
     }
 
     public final /* synthetic */ Bundle z3() {
-        return this.f7421f;
+        return this.f7495f;
     }
 
     public final int zze() {
-        return this.f7421f.size();
+        return this.f7495f.size();
     }
 }

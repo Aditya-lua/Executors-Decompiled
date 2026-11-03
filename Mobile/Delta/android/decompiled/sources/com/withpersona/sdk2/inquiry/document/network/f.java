@@ -1,28 +1,28 @@
 package com.withpersona.sdk2.inquiry.document.network;
 
-import ft.i;
+import dt.i;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class f implements ft.d<e.a> {
+public final class f implements dt.d<e.a> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final i<bo.c> f10346a;
+    public final i<zn.c> f10427a;
 
-    public f(i<bo.c> iVar) {
-        this.f10346a = iVar;
+    public f(i<zn.c> iVar) {
+        this.f10427a = iVar;
     }
 
-    public static f a(i<bo.c> iVar) {
+    public static f a(i<zn.c> iVar) {
         return new f(iVar);
     }
 
-    public static e.a c(bo.c cVar) {
+    public static e.a c(zn.c cVar) {
         return new e.a(cVar);
     }
 
-    @Override // ht.a
+    @Override // ft.a
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
     public e.a get() {
-        return c(this.f10346a.get());
+        return c(this.f10427a.get());
     }
 }

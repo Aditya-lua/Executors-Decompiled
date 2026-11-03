@@ -14,17 +14,17 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public final class c implements Application.ActivityLifecycleCallbacks, ComponentCallbacks2 {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final c f22993e = new c();
+    public static final c f23387e = new c();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final AtomicBoolean f22994a = new AtomicBoolean();
+    public final AtomicBoolean f23388a = new AtomicBoolean();
     public final AtomicBoolean b = new AtomicBoolean();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final ArrayList f22995c = new ArrayList();
+    public final ArrayList f23389c = new ArrayList();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public boolean f22996d = false;
+    public boolean f23390d = false;
 
     public interface a {
         void a(boolean z10);
@@ -32,17 +32,17 @@ public final class c implements Application.ActivityLifecycleCallbacks, Componen
 
     @NonNull
     public static c b() {
-        return f22993e;
+        return f23387e;
     }
 
     public static void c(@NonNull Application application) {
-        c cVar = f22993e;
+        c cVar = f23387e;
         synchronized (cVar) {
             try {
-                if (!cVar.f22996d) {
+                if (!cVar.f23390d) {
                     application.registerActivityLifecycleCallbacks(cVar);
                     application.registerComponentCallbacks(cVar);
-                    cVar.f22996d = true;
+                    cVar.f23390d = true;
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -51,13 +51,13 @@ public final class c implements Application.ActivityLifecycleCallbacks, Componen
     }
 
     public void a(@NonNull a aVar) {
-        synchronized (f22993e) {
-            this.f22995c.add(aVar);
+        synchronized (f23387e) {
+            this.f23389c.add(aVar);
         }
     }
 
     public boolean d() {
-        return this.f22994a.get();
+        return this.f23388a.get();
     }
 
     public boolean e(boolean z10) {
@@ -69,16 +69,16 @@ public final class c implements Application.ActivityLifecycleCallbacks, Componen
             ActivityManager.RunningAppProcessInfo runningAppProcessInfo = new ActivityManager.RunningAppProcessInfo();
             ActivityManager.getMyMemoryState(runningAppProcessInfo);
             if (!atomicBoolean.getAndSet(true) && runningAppProcessInfo.importance > 100) {
-                this.f22994a.set(true);
+                this.f23388a.set(true);
             }
         }
         return d();
     }
 
     public final void f(boolean z10) {
-        synchronized (f22993e) {
+        synchronized (f23387e) {
             try {
-                ArrayList arrayList = this.f22995c;
+                ArrayList arrayList = this.f23389c;
                 int size = arrayList.size();
                 int i10 = 0;
                 while (i10 < size) {
@@ -95,7 +95,7 @@ public final class c implements Application.ActivityLifecycleCallbacks, Componen
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivityCreated(@NonNull Activity activity, Bundle bundle) {
         AtomicBoolean atomicBoolean = this.b;
-        boolean zCompareAndSet = this.f22994a.compareAndSet(true, false);
+        boolean zCompareAndSet = this.f23388a.compareAndSet(true, false);
         atomicBoolean.set(true);
         if (zCompareAndSet) {
             f(false);
@@ -113,7 +113,7 @@ public final class c implements Application.ActivityLifecycleCallbacks, Componen
     @Override // android.app.Application.ActivityLifecycleCallbacks
     public final void onActivityResumed(@NonNull Activity activity) {
         AtomicBoolean atomicBoolean = this.b;
-        boolean zCompareAndSet = this.f22994a.compareAndSet(true, false);
+        boolean zCompareAndSet = this.f23388a.compareAndSet(true, false);
         atomicBoolean.set(true);
         if (zCompareAndSet) {
             f(false);
@@ -142,7 +142,7 @@ public final class c implements Application.ActivityLifecycleCallbacks, Componen
 
     @Override // android.content.ComponentCallbacks2
     public final void onTrimMemory(int i10) {
-        if (i10 == 20 && this.f22994a.compareAndSet(false, true)) {
+        if (i10 == 20 && this.f23388a.compareAndSet(false, true)) {
             this.b.set(true);
             f(true);
         }

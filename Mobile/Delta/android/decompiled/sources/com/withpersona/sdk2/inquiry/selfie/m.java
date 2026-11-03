@@ -13,7 +13,7 @@ public final class m {
     public static final /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f12989a;
+        public static final /* synthetic */ int[] f13070a;
 
         static {
             int[] iArr = new int[NextStep.Selfie.CaptureMethod.values().length];
@@ -29,23 +29,23 @@ public final class m {
                 iArr[NextStep.Selfie.CaptureMethod.CONFIGURABLE_POSES.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
-            f12989a = iArr;
+            f13070a = iArr;
         }
     }
 
     @NotNull
     public static final SelfieType a(@NotNull NextStep.Selfie.CaptureMethod captureMethod) {
         Intrinsics.checkNotNullParameter(captureMethod, "<this>");
-        int i10 = a.f12989a[captureMethod.ordinal()];
+        int i10 = a.f13070a[captureMethod.ordinal()];
         if (i10 == 1) {
-            return SelfieType.CenterOnly.f12562a;
+            return SelfieType.CenterOnly.f12643a;
         }
         if (i10 == 2) {
-            return SelfieType.ThreePhotos.f12564a;
+            return SelfieType.ThreePhotos.f12645a;
         }
         if (i10 == 3) {
-            return SelfieType.ConfigurablePoses.f12563a;
+            return SelfieType.ConfigurablePoses.f12644a;
         }
-        throw new jt.l();
+        throw new gt.l();
     }
 }

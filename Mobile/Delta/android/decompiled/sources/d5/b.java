@@ -3,6 +3,7 @@ package d5;
 import android.os.Bundle;
 import androidx.p000lifecycle.p;
 import com.appsflyer.sdk_base.referrer.Payload;
+import gt.s;
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,7 +12,6 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import jt.s;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.collections.CollectionsKt;
@@ -20,7 +20,7 @@ import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0006\b\u0000\u0018\u0000 \u00122\u00020\u0001:\u0002\u0012\u000fB\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u001f\u0010\u000b\u001a\u00020\n2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u000b\u0010\fJ\u0017\u0010\u000f\u001a\u00020\n2\u0006\u0010\u000e\u001a\u00020\rH\u0002¢\u0006\u0004\b\u000f\u0010\u0010R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000f\u0010\u0011¨\u0006\u0013"}, d2 = {"Ld5/b;", "Landroidx/lifecycle/p;", "Ld5/i;", "owner", "<init>", "(Ld5/i;)V", "Landroidx/lifecycle/s;", Payload.SOURCE, "Landroidx/lifecycle/l$a;", "event", "", "g", "(Landroidx/lifecycle/s;Landroidx/lifecycle/l$a;)V", "", "className", "a", "(Ljava/lang/String;)V", "Ld5/i;", "b", "savedstate"}, k = 1, mv = {2, 0, 0}, xi = 48)
+@Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0006\b\u0000\u0018\u0000 \u00122\u00020\u0001:\u0002\u0012\u000fB\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u001f\u0010\u000b\u001a\u00020\n2\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\u000b\u0010\fJ\u0017\u0010\u000f\u001a\u00020\n2\u0006\u0010\u000e\u001a\u00020\rH\u0002¢\u0006\u0004\b\u000f\u0010\u0010R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000f\u0010\u0011¨\u0006\u0013"}, d2 = {"Ld5/b;", "Landroidx/lifecycle/p;", "Ld5/i;", "owner", "<init>", "(Ld5/i;)V", "Landroidx/lifecycle/s;", Payload.SOURCE, "Landroidx/lifecycle/l$a;", "event", "", "f", "(Landroidx/lifecycle/s;Landroidx/lifecycle/l$a;)V", "", "className", "a", "(Ljava/lang/String;)V", "Ld5/i;", "b", "savedstate"}, k = 1, mv = {2, 0, 0}, xi = 48)
 public final class b implements p {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -29,13 +29,13 @@ public final class b implements p {
 
     /* JADX INFO: renamed from: d5.b$b, reason: collision with other inner class name */
     @Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010#\n\u0002\b\u0003\b\u0000\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u0013\u0010\b\u001a\u00060\u0006j\u0002`\u0007H\u0016¢\u0006\u0004\b\b\u0010\tJ\u0015\u0010\r\u001a\u00020\f2\u0006\u0010\u000b\u001a\u00020\n¢\u0006\u0004\b\r\u0010\u000eR\u001a\u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\n0\u000f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\b\u0010\u0010¨\u0006\u0012"}, d2 = {"Ld5/b$b;", "Ld5/f$b;", "Ld5/f;", "registry", "<init>", "(Ld5/f;)V", "Landroid/os/Bundle;", "Landroidx/savedstate/SavedState;", "a", "()Landroid/os/Bundle;", "", "className", "", "b", "(Ljava/lang/String;)V", "", "Ljava/util/Set;", "classes", "savedstate"}, k = 1, mv = {2, 0, 0}, xi = 48)
-    public static final class C0266b implements f.b {
+    public static final class C0278b implements f.b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         @NotNull
         public final Set<String> classes;
 
-        public C0266b(@NotNull f registry) {
+        public C0278b(@NotNull f registry) {
             Intrinsics.checkNotNullParameter(registry, "registry");
             this.classes = new LinkedHashSet();
             registry.c("androidx.savedstate.Restarter", this);
@@ -94,14 +94,14 @@ public final class b implements p {
     }
 
     @Override // androidx.p000lifecycle.p
-    public void g(@NotNull androidx.p000lifecycle.s source, @NotNull androidx.lifecycle.l.a event) {
+    public void f(@NotNull androidx.p000lifecycle.s source, @NotNull androidx.lifecycle.l.a event) {
         Intrinsics.checkNotNullParameter(source, "source");
         Intrinsics.checkNotNullParameter(event, "event");
         if (event != androidx.lifecycle.l.a.ON_CREATE) {
             throw new AssertionError("Next event must be ON_CREATE");
         }
         source.a().d(this);
-        Bundle bundleA = this.owner.A().a("androidx.savedstate.Restarter");
+        Bundle bundleA = this.owner.z().a("androidx.savedstate.Restarter");
         if (bundleA == null) {
             return;
         }

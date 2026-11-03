@@ -23,22 +23,22 @@ public class LinkGenerator {
     private String afInfoLog;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    private final String f5536d;
+    private final String f5609d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    private String f5537e;
+    private String f5610e;
     private String force;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    private String f5538i;
+    private String f5611i;
     private String registerClient;
     String unregisterClient;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    private String f5539v;
+    private String f5612v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    private String f5540w;
+    private String f5613w;
 
     public interface ResponseListener {
         void onResponse(String str);
@@ -47,12 +47,12 @@ public class LinkGenerator {
     }
 
     public LinkGenerator(String str) {
-        this.f5536d = str;
+        this.f5609d = str;
     }
 
     private Map<String, String> AFLogger() {
         HashMap map = new HashMap();
-        map.put("pid", this.f5536d);
+        map.put("pid", this.f5609d);
         String str = this.force;
         if (str != null) {
             map.put("af_referrer_uid", str);
@@ -61,7 +61,7 @@ public class LinkGenerator {
         if (str2 != null) {
             map.put(AFInAppEventParameterName.AF_CHANNEL, str2);
         }
-        String str3 = this.f5539v;
+        String str3 = this.f5612v;
         if (str3 != null) {
             map.put("af_referrer_customer_id", str3);
         }
@@ -69,22 +69,22 @@ public class LinkGenerator {
         if (str4 != null) {
             map.put("c", str4);
         }
-        String str5 = this.f5540w;
+        String str5 = this.f5613w;
         if (str5 != null) {
             map.put("af_referrer_name", str5);
         }
-        String str6 = this.f5538i;
+        String str6 = this.f5611i;
         if (str6 != null) {
             map.put("af_referrer_image_url", str6);
         }
         if (this.afErrorLog != null) {
             StringBuilder sb2 = new StringBuilder();
             sb2.append(this.afErrorLog);
-            String str7 = this.f5537e;
+            String str7 = this.f5610e;
             if (str7 != null) {
-                this.f5537e = str7.replaceFirst("^[/]", "");
+                this.f5610e = str7.replaceFirst("^[/]", "");
                 sb2.append(this.afErrorLog.endsWith("/") ? "" : "/");
-                sb2.append(this.f5537e);
+                sb2.append(this.f5610e);
             }
             map.put("af_dp", sb2.toString());
         }
@@ -110,7 +110,7 @@ public class LinkGenerator {
         StringBuilder sb2 = new StringBuilder();
         String str = this.AFKeystoreWrapper;
         if (str == null || !str.startsWith("http")) {
-            sb2.append(String.format(Locale.US, AFj1fSDK.f5438d, AppsFlyerLib.getInstance().getHostPrefix(), AFa1tSDK.d().getHostName()));
+            sb2.append(String.format(Locale.US, AFj1fSDK.f5511d, AppsFlyerLib.getInstance().getHostPrefix(), AFa1tSDK.d().getHostName()));
         } else {
             sb2.append(this.AFKeystoreWrapper);
         }
@@ -147,7 +147,7 @@ public class LinkGenerator {
     }
 
     public String getMediaSource() {
-        return this.f5536d;
+        return this.f5609d;
     }
 
     public Map<String, String> getUserParams() {
@@ -188,22 +188,22 @@ public class LinkGenerator {
     }
 
     public LinkGenerator setDeeplinkPath(String str) {
-        this.f5537e = str;
+        this.f5610e = str;
         return this;
     }
 
     public LinkGenerator setReferrerCustomerId(String str) {
-        this.f5539v = str;
+        this.f5612v = str;
         return this;
     }
 
     public LinkGenerator setReferrerImageURL(String str) {
-        this.f5538i = str;
+        this.f5611i = str;
         return this;
     }
 
     public LinkGenerator setReferrerName(String str) {
-        this.f5540w = str;
+        this.f5613w = str;
         return this;
     }
 
@@ -226,7 +226,7 @@ public class LinkGenerator {
         Map<String, String> mapAFLogger = AFLogger();
         AFc1aSDK aFc1aSDK = AFa1tSDK.d().AFKeystoreWrapper;
         if (context != null) {
-            aFc1aSDK.f5240d.f5305d = context.getApplicationContext();
+            aFc1aSDK.f5313d.f5378d = context.getApplicationContext();
         }
         AFc1aSDK aFc1aSDK2 = AFa1tSDK.d().AFKeystoreWrapper;
         aFc1aSDK2.afWarnLog().d(new AFe1pSDK(aFc1aSDK2, UUID.randomUUID(), str, mapAFLogger, str2, responseListener, this));

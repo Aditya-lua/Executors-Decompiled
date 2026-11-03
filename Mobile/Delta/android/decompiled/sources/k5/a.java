@@ -17,44 +17,44 @@ import java.util.Set;
 public final class a {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static volatile a f22171d;
+    public static volatile a f22395d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final Object f22172e = new Object();
+    public static final Object f22396e = new Object();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NonNull
-    public final Context f22174c;
+    public final Context f22398c;
 
     @NonNull
     public final Set<Class<? extends b<?>>> b = new HashSet();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final Map<Class<?>, Object> f22173a = new HashMap();
+    public final Map<Class<?>, Object> f22397a = new HashMap();
 
     public a(@NonNull Context context) {
-        this.f22174c = context.getApplicationContext();
+        this.f22398c = context.getApplicationContext();
     }
 
     @NonNull
     public static a e(@NonNull Context context) {
-        if (f22171d == null) {
-            synchronized (f22172e) {
+        if (f22395d == null) {
+            synchronized (f22396e) {
                 try {
-                    if (f22171d == null) {
-                        f22171d = new a(context);
+                    if (f22395d == null) {
+                        f22395d = new a(context);
                     }
                 } catch (Throwable th2) {
                     throw th2;
                 }
             }
         }
-        return f22171d;
+        return f22395d;
     }
 
     public void a(Bundle bundle) {
-        String string = this.f22174c.getString(c.f22175a);
+        String string = this.f22398c.getString(c.f22399a);
         if (bundle != null) {
             try {
                 HashSet hashSet = new HashSet();
@@ -80,7 +80,7 @@ public final class a {
         try {
             try {
                 n5.a.c("Startup");
-                a(this.f22174c.getPackageManager().getProviderInfo(new ComponentName(this.f22174c, cls), 128).metaData);
+                a(this.f22398c.getPackageManager().getProviderInfo(new ComponentName(this.f22398c, cls), 128).metaData);
                 n5.a.f();
             } catch (PackageManager.NameNotFoundException e10) {
                 throw new d(e10);
@@ -94,9 +94,9 @@ public final class a {
     @NonNull
     public <T> T c(@NonNull Class<? extends b<?>> cls) {
         T t8;
-        synchronized (f22172e) {
+        synchronized (f22396e) {
             try {
-                t8 = (T) this.f22173a.get(cls);
+                t8 = (T) this.f22397a.get(cls);
                 if (t8 == null) {
                     t8 = (T) d(cls, new HashSet());
                 }
@@ -121,8 +121,8 @@ public final class a {
         if (set.contains(cls)) {
             throw new IllegalStateException(String.format("Cannot initialize %s. Cycle detected.", cls.getName()));
         }
-        if (this.f22173a.containsKey(cls)) {
-            t8 = (T) this.f22173a.get(cls);
+        if (this.f22397a.containsKey(cls)) {
+            t8 = (T) this.f22397a.get(cls);
         } else {
             set.add(cls);
             try {
@@ -130,14 +130,14 @@ public final class a {
                 List<Class<? extends b<?>>> listDependencies = bVarNewInstance.dependencies();
                 if (!listDependencies.isEmpty()) {
                     for (Class<? extends b<?>> cls2 : listDependencies) {
-                        if (!this.f22173a.containsKey(cls2)) {
+                        if (!this.f22397a.containsKey(cls2)) {
                             d(cls2, set);
                         }
                     }
                 }
-                t8 = (T) bVarNewInstance.create(this.f22174c);
+                t8 = (T) bVarNewInstance.create(this.f22398c);
                 set.remove(cls);
-                this.f22173a.put(cls, t8);
+                this.f22397a.put(cls, t8);
             } catch (Throwable th3) {
                 throw new d(th3);
             }

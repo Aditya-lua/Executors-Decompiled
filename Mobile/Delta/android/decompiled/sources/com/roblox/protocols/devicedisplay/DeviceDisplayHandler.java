@@ -12,10 +12,10 @@ import com.roblox.protocols.devicedisplay.DeviceDisplayHandler;
 import com.roblox.protocols.devicedisplayplatforminterface.generated.DeviceDisplayCapability;
 import com.roblox.protocols.devicedisplayplatforminterface.generated.IDeviceDisplayHandlerCore;
 import com.roblox.protocols.devicedisplayplatforminterface.generated.IPlatformDeviceDisplayHandler;
+import gt.n;
+import gt.o;
 import java.lang.ref.WeakReference;
 import java.util.concurrent.CountDownLatch;
-import jt.n;
-import jt.o;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.z;
@@ -43,7 +43,7 @@ public final class DeviceDisplayHandler extends IPlatformDeviceDisplayHandler im
     public static final /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f9695a;
+        public static final /* synthetic */ int[] f9776a;
 
         static {
             int[] iArr = new int[DeviceDisplayCapability.values().length];
@@ -55,7 +55,7 @@ public final class DeviceDisplayHandler extends IPlatformDeviceDisplayHandler im
                 iArr[DeviceDisplayCapability.WAKELOCK.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
-            f9695a = iArr;
+            f9776a = iArr;
         }
     }
 
@@ -70,7 +70,7 @@ public final class DeviceDisplayHandler extends IPlatformDeviceDisplayHandler im
 
     /* JADX INFO: Access modifiers changed from: private */
     public static final void getBrightness$lambda$0(z zVar, Activity activity, CountDownLatch countDownLatch) {
-        zVar.f22569a = INSTANCE.getBrightnessInternal(activity);
+        zVar.f23024a = INSTANCE.getBrightnessInternal(activity);
         countDownLatch.countDown();
     }
 
@@ -138,22 +138,22 @@ public final class DeviceDisplayHandler extends IPlatformDeviceDisplayHandler im
             return getBrightnessInternal(activity);
         }
         final z zVar = new z();
-        zVar.f22569a = BRIGHTNESS_UNAVAILABLE;
+        zVar.f23024a = BRIGHTNESS_UNAVAILABLE;
         final CountDownLatch countDownLatch = new CountDownLatch(1);
-        activity.runOnUiThread(new Runnable() { // from class: jl.a
+        activity.runOnUiThread(new Runnable() { // from class: hl.a
             @Override // java.lang.Runnable
             public final void run() {
                 DeviceDisplayHandler.getBrightness$lambda$0(zVar, activity, countDownLatch);
             }
         });
         countDownLatch.await();
-        return zVar.f22569a;
+        return zVar.f23024a;
     }
 
     @Override // com.roblox.protocols.devicedisplayplatforminterface.generated.IPlatformDeviceDisplayHandler
     public boolean hasCapability(@NotNull DeviceDisplayCapability capability) {
         Intrinsics.checkNotNullParameter(capability, "capability");
-        int i10 = a.f9695a[capability.ordinal()];
+        int i10 = a.f9776a[capability.ordinal()];
         return i10 == 1 || i10 == 2;
     }
 
@@ -207,7 +207,7 @@ public final class DeviceDisplayHandler extends IPlatformDeviceDisplayHandler im
             return;
         }
         final float fI = d.i(brightnessLevel, 0.0f, 1.0f);
-        activity.runOnUiThread(new Runnable() { // from class: jl.c
+        activity.runOnUiThread(new Runnable() { // from class: hl.c
             @Override // java.lang.Runnable
             public final void run() {
                 DeviceDisplayHandler.setBrightness$lambda$0(activity, fI);
@@ -222,7 +222,7 @@ public final class DeviceDisplayHandler extends IPlatformDeviceDisplayHandler im
         if (weakReference == null || (activity = weakReference.get()) == null) {
             return;
         }
-        activity.runOnUiThread(new Runnable() { // from class: jl.d
+        activity.runOnUiThread(new Runnable() { // from class: hl.d
             @Override // java.lang.Runnable
             public final void run() {
                 DeviceDisplayHandler.setBrightnessToDefault$lambda$0(activity);
@@ -237,7 +237,7 @@ public final class DeviceDisplayHandler extends IPlatformDeviceDisplayHandler im
         if (weakReference == null || (activity = weakReference.get()) == null) {
             return;
         }
-        activity.runOnUiThread(new Runnable() { // from class: jl.b
+        activity.runOnUiThread(new Runnable() { // from class: hl.b
             @Override // java.lang.Runnable
             public final void run() {
                 DeviceDisplayHandler.setKeepAwake$lambda$0(enable, activity);

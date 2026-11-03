@@ -14,30 +14,30 @@ public final class AFa1hSDK implements AFa1lSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    private final AFc1kSDK f5216d;
+    private final AFc1kSDK f5289d;
 
     public AFa1hSDK(@NotNull AFc1kSDK aFc1kSDK) {
         Intrinsics.checkNotNullParameter(aFc1kSDK, "");
-        this.f5216d = aFc1kSDK;
+        this.f5289d = aFc1kSDK;
     }
 
     @Override // com.appsflyer.internal.AFa1lSDK
     public final void d(@NotNull Map<String, ? extends Object> map) {
         Intrinsics.checkNotNullParameter(map, "");
-        this.f5216d.d("deeplink_data", new JSONObject(map).toString());
+        this.f5289d.d("deeplink_data", new JSONObject(map).toString());
     }
 
     @Override // com.appsflyer.internal.AFa1lSDK
     public final void registerClient() {
-        this.f5216d.AFLogger("deeplink_data");
+        this.f5289d.AFLogger("deeplink_data");
     }
 
     @Override // com.appsflyer.internal.AFa1lSDK
     @NotNull
     public final Map<String, Object> unregisterClient() {
-        if (this.f5216d.registerClient("deeplink_data")) {
+        if (this.f5289d.registerClient("deeplink_data")) {
             try {
-                String strD = this.f5216d.d("deeplink_data");
+                String strD = this.f5289d.d("deeplink_data");
                 return strD == null ? kotlin.collections.k0.j() : JsonUtils.toMap(new JSONObject(strD));
             } catch (Throwable th2) {
                 AFLoggerBase.e$default(AFLogger.INSTANCE, LogTag.DDL, "Exception while parsing stored deeplink data", th2, false, true, false, false, 72, null);

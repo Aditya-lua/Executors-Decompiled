@@ -1,6 +1,6 @@
 package com.roblox.engine.jni.user;
 
-import sk.a;
+import qk.a;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class NativeUserJavaInterface {

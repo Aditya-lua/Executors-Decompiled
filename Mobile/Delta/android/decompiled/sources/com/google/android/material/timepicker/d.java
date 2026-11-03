@@ -12,11 +12,11 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.o0;
-import gd.g;
-import gd.i;
-import hc.f;
-import hc.h;
-import hc.k;
+import hd.g;
+import hd.i;
+import ic.f;
+import ic.h;
+import ic.k;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -29,7 +29,7 @@ public class d extends ConstraintLayout {
     public g B;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public final Runnable f8350z;
+    public final Runnable f8424z;
 
     public d(@NonNull Context context, AttributeSet attributeSet) {
         this(context, attributeSet, 0);
@@ -43,7 +43,7 @@ public class d extends ConstraintLayout {
         Iterator<View> it = list.iterator();
         float size = 0.0f;
         while (it.hasNext()) {
-            cVar.j(it.next().getId(), f.f18861c, i10, size);
+            cVar.j(it.next().getId(), f.f20683c, i10, size);
             size += 360.0f / list.size();
         }
     }
@@ -75,8 +75,8 @@ public class d extends ConstraintLayout {
         HashMap map = new HashMap();
         for (int i10 = 0; i10 < getChildCount(); i10++) {
             View childAt = getChildAt(i10);
-            if (childAt.getId() != f.f18861c && !I(childAt)) {
-                int i11 = (Integer) childAt.getTag(f.f18871m);
+            if (childAt.getId() != f.f20683c && !I(childAt)) {
+                int i11 = (Integer) childAt.getTag(f.f20693m);
                 if (i11 == null) {
                     i11 = 1;
                 }
@@ -95,8 +95,8 @@ public class d extends ConstraintLayout {
     public final void K() {
         Handler handler = getHandler();
         if (handler != null) {
-            handler.removeCallbacks(this.f8350z);
-            handler.post(this.f8350z);
+            handler.removeCallbacks(this.f8424z);
+            handler.post(this.f8424z);
         }
     }
 
@@ -128,14 +128,14 @@ public class d extends ConstraintLayout {
 
     public d(@NonNull Context context, AttributeSet attributeSet, int i10) {
         super(context, attributeSet, i10);
-        LayoutInflater.from(context).inflate(h.f18894i, this);
+        LayoutInflater.from(context).inflate(h.f20716i, this);
         o0.q0(this, E());
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, k.X4, i10, 0);
         this.A = typedArrayObtainStyledAttributes.getDimensionPixelSize(k.Y4, 0);
-        this.f8350z = new Runnable() { // from class: com.google.android.material.timepicker.c
+        this.f8424z = new Runnable() { // from class: com.google.android.material.timepicker.c
             @Override // java.lang.Runnable
             public final void run() {
-                this.f8349a.J();
+                this.f8423a.J();
             }
         };
         typedArrayObtainStyledAttributes.recycle();

@@ -4,14 +4,14 @@ package sb;
 public final class j0 implements h {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ k f30587a;
+    public final /* synthetic */ k f31134a;
 
     public j0(k kVar) {
-        this.f30587a = kVar;
+        this.f31134a = kVar;
     }
 
     @Override // sb.h
     public final void a() {
-        this.f30587a.f30588a.r();
+        this.f31134a.f31135a.r();
     }
 }

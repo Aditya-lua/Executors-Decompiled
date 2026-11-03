@@ -11,6 +11,6 @@ public final class m {
     public static final boolean a(@NotNull File file, @NotNull File toFile) {
         Intrinsics.checkNotNullParameter(file, "<this>");
         Intrinsics.checkNotNullParameter(toFile, "toFile");
-        return a.f31345a.a(file, toFile);
+        return a.f31864a.a(file, toFile);
     }
 }

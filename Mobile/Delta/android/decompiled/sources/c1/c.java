@@ -7,14 +7,14 @@ import android.hardware.camera2.CameraManager;
 public class c implements f {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final CameraManager f4317a;
+    public final CameraManager f4483a;
 
     public c(Context context) {
-        this.f4317a = (CameraManager) context.getSystemService(CameraManager.class);
+        this.f4483a = (CameraManager) context.getSystemService(CameraManager.class);
     }
 
     @Override // c1.f
     public d a(String str) {
-        return new b(this.f4317a, str);
+        return new b(this.f4483a, str);
     }
 }

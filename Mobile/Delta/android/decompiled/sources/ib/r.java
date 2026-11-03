@@ -14,7 +14,7 @@ import java.util.Iterator;
 public final class r {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final d f20470a = new d("PhoneskyVerificationUtils");
+    public static final d f20586a = new d("PhoneskyVerificationUtils");
 
     public static int a(Context context) {
         try {
@@ -37,20 +37,20 @@ public final class r {
                         return true;
                     }
                 } catch (PackageManager.NameNotFoundException unused) {
-                    f20470a.d("Play Store package is not found.", new Object[0]);
+                    f20586a.d("Play Store package is not found.", new Object[0]);
                 }
             } else {
-                f20470a.d("Play Store package is disabled.", new Object[0]);
+                f20586a.d("Play Store package is disabled.", new Object[0]);
             }
         } catch (PackageManager.NameNotFoundException unused2) {
-            f20470a.d("Play Store package is not found.", new Object[0]);
+            f20586a.d("Play Store package is not found.", new Object[0]);
         }
         return false;
     }
 
     public static boolean c(Signature[] signatureArr) {
         if (signatureArr == null || (signatureArr.length) == 0) {
-            f20470a.d("Play Store package is not signed -- possibly self-built package. Could not verify.", new Object[0]);
+            f20586a.d("Play Store package is not signed -- possibly self-built package. Could not verify.", new Object[0]);
             return false;
         }
         ArrayList arrayList = new ArrayList();
@@ -65,7 +65,7 @@ public final class r {
                 return true;
             }
         }
-        d dVar = f20470a;
+        d dVar = f20586a;
         StringBuilder sb2 = new StringBuilder();
         Iterator it = arrayList.iterator();
         if (it.hasNext()) {

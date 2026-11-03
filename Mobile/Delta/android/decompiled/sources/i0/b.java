@@ -2,9 +2,9 @@ package i0;
 
 import g0.g2;
 import g0.k0;
-import jt.h;
-import jt.i;
-import jt.l;
+import gt.h;
+import gt.i;
+import gt.l;
 import k0.DynamicRangeFeature;
 import k0.FpsRangeFeature;
 import k0.ImageFormatFeature;
@@ -16,40 +16,40 @@ import n0.o0;
 import org.jetbrains.annotations.NotNull;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\b\f\b'\u0018\u0000 \u00172\u00020\u0001:\u0001\u000fB\t\b\u0001¢\u0006\u0004\b\u0002\u0010\u0003J\u001f\u0010\t\u001a\u00020\b2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u0006H\u0017¢\u0006\u0004\b\t\u0010\nJ\u0013\u0010\r\u001a\u00020\f*\u00020\u000bH\u0002¢\u0006\u0004\b\r\u0010\u000eR\u001b\u0010\u0013\u001a\u00020\f8FX\u0086\u0084\u0002¢\u0006\f\n\u0004\b\u000f\u0010\u0010\u001a\u0004\b\u0011\u0010\u0012R\u0014\u0010\u0016\u001a\u00020\u000b8aX \u0004¢\u0006\u0006\u001a\u0004\b\u0014\u0010\u0015¨\u0006\u0018"}, d2 = {"Li0/b;", "", "<init>", "()V", "Ln0/o0;", "cameraInfoInternal", "Lg0/g2;", "sessionConfig", "", "d", "(Ln0/o0;Lg0/g2;)Z", "Lk0/b;", "", "e", "(Lk0/b;)I", "a", "Ljt/h;", "getFeatureType", "()I", "featureType", "c", "()Lk0/b;", "featureTypeInternal", "b", "camera-core_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
+@Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\b\f\b'\u0018\u0000 \u00172\u00020\u0001:\u0001\u000fB\t\b\u0001¢\u0006\u0004\b\u0002\u0010\u0003J\u001f\u0010\t\u001a\u00020\b2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u0006H\u0017¢\u0006\u0004\b\t\u0010\nJ\u0013\u0010\r\u001a\u00020\f*\u00020\u000bH\u0002¢\u0006\u0004\b\r\u0010\u000eR\u001b\u0010\u0013\u001a\u00020\f8FX\u0086\u0084\u0002¢\u0006\f\n\u0004\b\u000f\u0010\u0010\u001a\u0004\b\u0011\u0010\u0012R\u0014\u0010\u0016\u001a\u00020\u000b8aX \u0004¢\u0006\u0006\u001a\u0004\b\u0014\u0010\u0015¨\u0006\u0018"}, d2 = {"Li0/b;", "", "<init>", "()V", "Ln0/o0;", "cameraInfoInternal", "Lg0/g2;", "sessionConfig", "", "d", "(Ln0/o0;Lg0/g2;)Z", "Lk0/b;", "", "e", "(Lk0/b;)I", "a", "Lgt/h;", "getFeatureType", "()I", "featureType", "c", "()Lk0/b;", "featureTypeInternal", "b", "camera-core_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
 public abstract class b {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static final b f20148c;
+    public static final b f20264c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    public static final b f20149d;
+    public static final b f20265d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
     @NotNull
-    public static final b f20150e;
+    public static final b f20266e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NotNull
-    public static final b f20151f;
+    public static final b f20267f;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     @NotNull
     public final h featureType = i.b(new Function0() { // from class: i0.a
         @Override // kotlin.jvm.functions.Function0
         public final Object invoke() {
-            return Integer.valueOf(b.b(this.f20147a));
+            return Integer.valueOf(b.b(this.f20263a));
         }
     });
 
     /* JADX INFO: renamed from: i0.b$b, reason: collision with other inner class name */
     @Metadata(k = 3, mv = {2, 0, 0}, xi = 48)
-    public /* synthetic */ class C0355b {
+    public /* synthetic */ class C0353b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f20153a;
+        public static final /* synthetic */ int[] f20269a;
 
         static {
             int[] iArr = new int[k0.b.values().length];
@@ -69,17 +69,17 @@ public abstract class b {
                 iArr[k0.b.IMAGE_FORMAT.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
-            f20153a = iArr;
+            f20269a = iArr;
         }
     }
 
     static {
-        k0 HLG_10_BIT = k0.f17472f;
+        k0 HLG_10_BIT = k0.f18011f;
         Intrinsics.checkNotNullExpressionValue(HLG_10_BIT, "HLG_10_BIT");
-        f20148c = new DynamicRangeFeature(HLG_10_BIT);
-        f20149d = new FpsRangeFeature(60, 60);
-        f20150e = new VideoStabilizationFeature(VideoStabilizationFeature.b.PREVIEW);
-        f20151f = new ImageFormatFeature(1);
+        f20264c = new DynamicRangeFeature(HLG_10_BIT);
+        f20265d = new FpsRangeFeature(60, 60);
+        f20266e = new VideoStabilizationFeature(VideoStabilizationFeature.b.PREVIEW);
+        f20267f = new ImageFormatFeature(1);
     }
 
     public static final int b(b bVar) {
@@ -97,7 +97,7 @@ public abstract class b {
     }
 
     public final int e(k0.b bVar) {
-        int i10 = C0355b.f20153a[bVar.ordinal()];
+        int i10 = C0353b.f20269a[bVar.ordinal()];
         if (i10 == 1) {
             return 0;
         }

@@ -6,91 +6,91 @@ import java.util.ArrayList;
 public class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ArrayList<c2.e> f14305a = new ArrayList<>();
+    public final ArrayList<c2.e> f14285a = new ArrayList<>();
     public a b = new a();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public c2.f f14306c;
+    public c2.f f14286c;
 
     public static class a {
 
         /* JADX INFO: renamed from: k, reason: collision with root package name */
-        public static int f14307k = 0;
+        public static int f14287k = 0;
 
         /* JADX INFO: renamed from: l, reason: collision with root package name */
-        public static int f14308l = 1;
+        public static int f14288l = 1;
 
         /* JADX INFO: renamed from: m, reason: collision with root package name */
-        public static int f14309m = 2;
+        public static int f14289m = 2;
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public c2.e.b f14310a;
+        public c2.e.b f14290a;
         public c2.e.b b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public int f14311c;
+        public int f14291c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public int f14312d;
+        public int f14292d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public int f14313e;
+        public int f14293e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public int f14314f;
+        public int f14294f;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public int f14315g;
+        public int f14295g;
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public boolean f14316h;
+        public boolean f14296h;
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public boolean f14317i;
+        public boolean f14297i;
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public int f14318j;
+        public int f14298j;
     }
 
     /* JADX INFO: renamed from: d2.b$b, reason: collision with other inner class name */
-    public interface InterfaceC0264b {
+    public interface InterfaceC0276b {
         void a();
 
         void b(c2.e eVar, a aVar);
     }
 
     public b(c2.f fVar) {
-        this.f14306c = fVar;
+        this.f14286c = fVar;
     }
 
-    public final boolean a(InterfaceC0264b interfaceC0264b, c2.e eVar, int i10) {
-        this.b.f14310a = eVar.A();
+    public final boolean a(InterfaceC0276b interfaceC0276b, c2.e eVar, int i10) {
+        this.b.f14290a = eVar.A();
         this.b.b = eVar.T();
-        this.b.f14311c = eVar.W();
-        this.b.f14312d = eVar.x();
+        this.b.f14291c = eVar.W();
+        this.b.f14292d = eVar.x();
         a aVar = this.b;
-        aVar.f14317i = false;
-        aVar.f14318j = i10;
-        c2.e.b bVar = aVar.f14310a;
+        aVar.f14297i = false;
+        aVar.f14298j = i10;
+        c2.e.b bVar = aVar.f14290a;
         c2.e.b bVar2 = c2.e.b.MATCH_CONSTRAINT;
         boolean z10 = bVar == bVar2;
         boolean z11 = aVar.b == bVar2;
-        boolean z12 = z10 && eVar.f4366d0 > 0.0f;
-        boolean z13 = z11 && eVar.f4366d0 > 0.0f;
-        if (z12 && eVar.f4407y[0] == 4) {
-            aVar.f14310a = c2.e.b.FIXED;
+        boolean z12 = z10 && eVar.f4532d0 > 0.0f;
+        boolean z13 = z11 && eVar.f4532d0 > 0.0f;
+        if (z12 && eVar.f4573y[0] == 4) {
+            aVar.f14290a = c2.e.b.FIXED;
         }
-        if (z13 && eVar.f4407y[1] == 4) {
+        if (z13 && eVar.f4573y[1] == 4) {
             aVar.b = c2.e.b.FIXED;
         }
-        interfaceC0264b.b(eVar, aVar);
-        eVar.l1(this.b.f14313e);
-        eVar.M0(this.b.f14314f);
-        eVar.L0(this.b.f14316h);
-        eVar.B0(this.b.f14315g);
+        interfaceC0276b.b(eVar, aVar);
+        eVar.l1(this.b.f14293e);
+        eVar.M0(this.b.f14294f);
+        eVar.L0(this.b.f14296h);
+        eVar.B0(this.b.f14295g);
         a aVar2 = this.b;
-        aVar2.f14318j = a.f14307k;
-        return aVar2.f14317i;
+        aVar2.f14298j = a.f14287k;
+        return aVar2.f14297i;
     }
 
     /* JADX WARN: Code duplicated, block: B:56:0x0097 A[PHI: r10
@@ -101,29 +101,29 @@ public class b {
         n nVar;
         int size = fVar.L0.size();
         boolean zV1 = fVar.V1(64);
-        InterfaceC0264b interfaceC0264bK1 = fVar.K1();
+        InterfaceC0276b interfaceC0276bK1 = fVar.K1();
         for (int i10 = 0; i10 < size; i10++) {
             c2.e eVar = fVar.L0.get(i10);
-            if (!(eVar instanceof c2.h) && !(eVar instanceof c2.a) && !eVar.l0() && (!zV1 || (lVar = eVar.f4367e) == null || (nVar = eVar.f4369f) == null || !lVar.f14378e.f14337j || !nVar.f14378e.f14337j)) {
+            if (!(eVar instanceof c2.h) && !(eVar instanceof c2.a) && !eVar.l0() && (!zV1 || (lVar = eVar.f4533e) == null || (nVar = eVar.f4535f) == null || !lVar.f14358e.f14317j || !nVar.f14358e.f14317j)) {
                 c2.e.b bVarU = eVar.u(0);
                 c2.e.b bVarU2 = eVar.u(1);
                 c2.e.b bVar = c2.e.b.MATCH_CONSTRAINT;
-                boolean z11 = bVarU == bVar && eVar.f4403w != 1 && bVarU2 == bVar && eVar.f4405x != 1;
+                boolean z11 = bVarU == bVar && eVar.f4569w != 1 && bVarU2 == bVar && eVar.f4571x != 1;
                 if (!z11 && fVar.V1(1) && !(eVar instanceof c2.l)) {
-                    if (bVarU == bVar && eVar.f4403w == 0 && bVarU2 != bVar && !eVar.i0()) {
+                    if (bVarU == bVar && eVar.f4569w == 0 && bVarU2 != bVar && !eVar.i0()) {
                         z11 = true;
                     }
-                    if (bVarU2 == bVar && eVar.f4405x == 0 && bVarU != bVar && !eVar.i0()) {
+                    if (bVarU2 == bVar && eVar.f4571x == 0 && bVarU != bVar && !eVar.i0()) {
                         z11 = true;
                     }
-                    z10 = (!(bVarU == bVar || bVarU2 == bVar) || eVar.f4366d0 <= 0.0f) ? z11 : true;
+                    z10 = (!(bVarU == bVar || bVarU2 == bVar) || eVar.f4532d0 <= 0.0f) ? z11 : true;
                 }
                 if (!z10) {
-                    a(interfaceC0264bK1, eVar, a.f14307k);
+                    a(interfaceC0276bK1, eVar, a.f14287k);
                 }
             }
         }
-        interfaceC0264bK1.a();
+        interfaceC0276bK1.a();
     }
 
     public final void c(c2.f fVar, String str, int i10, int i11, int i12) {
@@ -136,8 +136,8 @@ public class b {
         fVar.M0(i12);
         fVar.b1(I);
         fVar.a1(iH);
-        this.f14306c.Z1(i10);
-        this.f14306c.t1();
+        this.f14286c.Z1(i10);
+        this.f14286c.t1();
     }
 
     public long d(c2.f fVar, int i10, int i11, int i12, int i13, int i14, int i15, int i16, int i17, int i18) {
@@ -149,7 +149,7 @@ public class b {
         int i22;
         boolean z11;
         b bVar = this;
-        InterfaceC0264b interfaceC0264bK1 = fVar.K1();
+        InterfaceC0276b interfaceC0276bK1 = fVar.K1();
         int size = fVar.L0.size();
         int iW = fVar.W();
         int iX = fVar.x();
@@ -168,7 +168,7 @@ public class b {
             }
         }
         if (z12) {
-            boolean z14 = z1.d.f37062s;
+            boolean z14 = z1.d.f37757s;
         }
         boolean z15 = z12 & ((i13 == 1073741824 && i15 == 1073741824) || zB);
         int i24 = 2;
@@ -216,7 +216,7 @@ public class b {
             b(fVar);
         }
         e(fVar);
-        int size2 = bVar.f14305a.size();
+        int size2 = bVar.f14285a.size();
         if (size > 0) {
             bVar.c(fVar, "First pass", 0, iW, iX);
             i20 = iW;
@@ -230,16 +230,16 @@ public class b {
             c2.e.b bVar3 = c2.e.b.WRAP_CONTENT;
             boolean z16 = bVarA2 == bVar3;
             boolean z17 = fVar.T() == bVar3;
-            int iMax = Math.max(fVar.W(), bVar.f14306c.I());
-            int iMax2 = Math.max(fVar.x(), bVar.f14306c.H());
+            int iMax = Math.max(fVar.W(), bVar.f14286c.I());
+            int iMax2 = Math.max(fVar.x(), bVar.f14286c.H());
             int i25 = 0;
             boolean zG1 = false;
             while (i25 < size2) {
-                c2.e eVar2 = bVar.f14305a.get(i25);
+                c2.e eVar2 = bVar.f14285a.get(i25);
                 if (eVar2 instanceof c2.l) {
                     int iW2 = eVar2.W();
                     int iX2 = eVar2.x();
-                    boolean zA = bVar.a(interfaceC0264bK1, eVar2, a.f14308l) | zG1;
+                    boolean zA = bVar.a(interfaceC0276bK1, eVar2, a.f14288l) | zG1;
                     int iW3 = eVar2.W();
                     int iX3 = eVar2.x();
                     if (iW3 != iW2) {
@@ -270,8 +270,8 @@ public class b {
             while (i28 < i27) {
                 int i29 = 0;
                 while (i29 < size2) {
-                    c2.e eVar3 = bVar.f14305a.get(i29);
-                    if (((eVar3 instanceof c2.i) && !(eVar3 instanceof c2.l)) || (eVar3 instanceof c2.h) || eVar3.V() == 8 || ((z15 && eVar3.f4367e.f14378e.f14337j && eVar3.f4369f.f14378e.f14337j) || (eVar3 instanceof c2.l))) {
+                    c2.e eVar3 = bVar.f14285a.get(i29);
+                    if (((eVar3 instanceof c2.i) && !(eVar3 instanceof c2.l)) || (eVar3 instanceof c2.h) || eVar3.V() == 8 || ((z15 && eVar3.f4533e.f14358e.f14317j && eVar3.f4535f.f14358e.f14317j) || (eVar3 instanceof c2.l))) {
                         z10 = z15;
                         i22 = size2;
                     } else {
@@ -279,12 +279,12 @@ public class b {
                         int iX4 = eVar3.x();
                         z10 = z15;
                         int iP = eVar3.p();
-                        int i30 = a.f14308l;
+                        int i30 = a.f14288l;
                         i22 = size2;
                         if (i28 == 1) {
-                            i30 = a.f14309m;
+                            i30 = a.f14289m;
                         }
-                        boolean zA2 = bVar.a(interfaceC0264bK1, eVar3, i30) | zG1;
+                        boolean zA2 = bVar.a(interfaceC0276bK1, eVar3, i30) | zG1;
                         int iW5 = eVar3.W();
                         int iX5 = eVar3.x();
                         if (iW5 != iW4) {
@@ -327,14 +327,14 @@ public class b {
     }
 
     public void e(c2.f fVar) {
-        this.f14305a.clear();
+        this.f14285a.clear();
         int size = fVar.L0.size();
         for (int i10 = 0; i10 < size; i10++) {
             c2.e eVar = fVar.L0.get(i10);
             c2.e.b bVarA = eVar.A();
             c2.e.b bVar = c2.e.b.MATCH_CONSTRAINT;
             if (bVarA == bVar || eVar.T() == bVar) {
-                this.f14305a.add(eVar);
+                this.f14285a.add(eVar);
             }
         }
         fVar.O1();

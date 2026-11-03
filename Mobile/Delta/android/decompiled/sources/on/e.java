@@ -1,40 +1,34 @@
 package on;
 
-import java.util.Set;
-import java.util.regex.Pattern;
-import qn.b0;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /* JADX INFO: loaded from: classes3.dex */
-public class e implements sn.a {
+public class e<D> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Pattern f27534a = Pattern.compile("^[!\"#$%&'()*+,./:;<=>?@\\[\\\\\\]^_`{|}~-]");
+    public final Class<D> f28015a;
+    public final Map<String, D> b = new LinkedHashMap();
 
-    public static class a implements sn.b {
-        @Override // sn.b
-        public sn.a a() {
-            return new e();
-        }
+    public e(Class<D> cls) {
+        this.f28015a = cls;
+    }
 
-        @Override // sn.b
-        public Set<Character> b() {
-            return c.a(new Object[]{'\\'});
+    public void a(e<D> eVar) {
+        for (Map.Entry<String, D> entry : eVar.b.entrySet()) {
+            this.b.putIfAbsent(entry.getKey(), entry.getValue());
         }
     }
 
-    @Override // sn.a
-    public sn.g a(sn.c cVar) {
-        sn.i iVarA = cVar.a();
-        iVarA.h();
-        char cL = iVarA.l();
-        if (cL == '\n') {
-            iVarA.h();
-            return sn.g.b(new qn.i(), iVarA.o());
-        }
-        if (!f27534a.matcher(String.valueOf(cL)).matches()) {
-            return sn.g.b(new b0("\\"), iVarA.o());
-        }
-        iVarA.h();
-        return sn.g.b(new b0(String.valueOf(cL)), iVarA.o());
+    public D b(String str) {
+        return this.b.get(nn.c.c(str));
+    }
+
+    public Class<D> c() {
+        return this.f28015a;
+    }
+
+    public D d(String str, D d10) {
+        return this.b.putIfAbsent(nn.c.c(str), d10);
     }
 }

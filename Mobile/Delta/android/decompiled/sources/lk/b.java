@@ -1,54 +1,125 @@
 package lk;
 
-import com.roblox.client.datastructures.NameValuePair;
-import com.roblox.protocols.telemetrybindingsplatforminterface.generated.TelemetryBackend;
-import com.roblox.protocols.telemetrybindingsplatforminterface.generated.TelemetryConfig;
-import jt.h;
-import jt.i;
-import kotlin.Metadata;
-import kotlin.collections.p;
-import kotlin.collections.p0;
-import kotlin.jvm.functions.Function0;
-import kotlin.jvm.internal.Intrinsics;
-import org.jetbrains.annotations.NotNull;
-import vg.m;
+import android.graphics.Point;
+import android.graphics.Rect;
+import android.view.View;
+import android.view.WindowManager;
+import ek.q;
+import kk.d;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000*\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0006\u001a\r\u0010\u0001\u001a\u00020\u0000¢\u0006\u0004\b\u0001\u0010\u0002\u001a9\u0010\f\u001a\u00020\u0000*\u00020\u00032\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u00042\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\u000b\u001a\u00020\u0004¢\u0006\u0004\b\f\u0010\r\"\u001b\u0010\u0013\u001a\u00020\u000e8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\u000f\u0010\u0010\u001a\u0004\b\u0011\u0010\u0012¨\u0006\u0014"}, d2 = {"", "d", "()V", "Lvg/m;", "", "widgetType", "Llk/f;", "widgetAction", "widgetSize", "Llk/g;", "widgetLocation", "widgetId", "b", "(Lvg/m;Ljava/lang/String;Llk/f;Ljava/lang/String;Llk/g;Ljava/lang/String;)V", "Lcom/roblox/protocols/telemetrybindingsplatforminterface/generated/TelemetryConfig;", "a", "Ljt/h;", "c", "()Lcom/roblox/protocols/telemetrybindingsplatforminterface/generated/TelemetryConfig;", "recentlyPlayedActiveWidgetCounter", "NativeShell_googleProdRelease"}, k = 2, mv = {2, 2, 0}, xi = 48)
-public final class b {
+public class b {
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name */
+    public static boolean f23580h;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    @NotNull
-    public static final h f23337a = i.b(new Function0() { // from class: lk.a
-        @Override // kotlin.jvm.functions.Function0
-        public final Object invoke() {
-            return b.e();
+    public Rect f23581a;
+    public int b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public int f23582c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public int f23583d;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public int f23584e;
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    public int f23585f;
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name */
+    public int f23586g;
+
+    public b(Rect rect, int i10, int i11, int i12, int i13, int i14, int i15) {
+        this.f23581a = rect;
+        this.b = i10;
+        this.f23582c = i11;
+        this.f23583d = i12;
+        this.f23584e = i13;
+        this.f23585f = i14;
+        this.f23586g = i15;
+    }
+
+    public static b a(View view, WindowManager windowManager, View view2, Rect rect) {
+        int i10;
+        int i11;
+        int i12;
+        int i13;
+        b("getInfo() ------ start ------");
+        Rect rect2 = new Rect();
+        view.getWindowVisibleDisplayFrame(rect2);
+        b("getInfo() sr:" + rect2.toString());
+        Point point = new Point();
+        windowManager.getDefaultDisplay().getSize(point);
+        b("getInfo() ss:" + point.toString());
+        int height = view.getHeight();
+        int width = view.getWidth();
+        if (d.a()) {
+            i10 = 0;
+            i11 = 0;
+        } else {
+            Point point2 = new Point();
+            windowManager.getDefaultDisplay().getRealSize(point2);
+            i10 = point2.y;
+            i11 = point2.x;
         }
-    });
-
-    public static final void b(@NotNull m mVar, @NotNull String widgetType, @NotNull f widgetAction, @NotNull String widgetSize, @NotNull g widgetLocation, @NotNull String widgetId) {
-        Intrinsics.checkNotNullParameter(mVar, "<this>");
-        Intrinsics.checkNotNullParameter(widgetType, "widgetType");
-        Intrinsics.checkNotNullParameter(widgetAction, "widgetAction");
-        Intrinsics.checkNotNullParameter(widgetSize, "widgetSize");
-        Intrinsics.checkNotNullParameter(widgetLocation, "widgetLocation");
-        Intrinsics.checkNotNullParameter(widgetId, "widgetId");
-        m.c("androidMobileWidgetAction", "widgetAction", p.n(new NameValuePair("widgetType", widgetType), new NameValuePair("widgetAction", widgetAction.name()), new NameValuePair("widgetSize", widgetSize), new NameValuePair("widgetLocation", widgetLocation.name()), new NameValuePair("widgetId", widgetId)), false);
+        b("getInfo() sh1:" + height + " sh2:" + i10);
+        if (height > i10) {
+            i12 = height;
+        } else {
+            width = i11;
+            i12 = i10;
+        }
+        b("getInfo() sh:" + i12);
+        int i14 = rect != null ? rect.bottom : i12 - rect2.bottom;
+        b("getInfo() bm:" + i14);
+        int i15 = i12 - point.y;
+        b("getInfo() sbh:" + i15);
+        if (rect != null) {
+            i13 = rect.top;
+        } else {
+            int[] iArr = new int[2];
+            if (view2 != null) {
+                view2.getLocationInWindow(iArr);
+            }
+            i13 = iArr[1];
+        }
+        int i16 = i13;
+        b("getInfo() top:" + i16);
+        int i17 = rect2.bottom;
+        if (d.b() && i16 < rect2.top) {
+            b("getInfo() adjusting top margin");
+            int i18 = rect2.top;
+            i17 -= i18;
+            i15 -= i18;
+        }
+        int i19 = i17;
+        b("getInfo() kby:" + i19);
+        int i20 = rect != null ? rect.right : width - point.x;
+        b("getInfo() rsbw:" + i20);
+        int iMin = d.a() ? 0 : Math.min(i14, i15);
+        b("getInfo() rsbh:" + iMin);
+        int iMax = Math.max(0, i14 - i15);
+        b("getInfo() kbh:" + iMax);
+        return new b(rect2, i12, iMin, i20, iMax, i19, i16);
     }
 
-    public static final TelemetryConfig c() {
-        return (TelemetryConfig) f23337a.getValue();
+    public static void b(String str) {
+        if (f23580h) {
+            q.i("rbx.screen", str);
+        }
     }
 
-    public static final void d() {
-        sm.c.f(c(), 0.0d, 2, null);
-    }
-
-    public static final TelemetryConfig e() {
-        sm.c cVar = sm.c.f31236a;
-        sm.c.a aVar = new sm.c.a("recently_played_active_widget_counter", p0.c(TelemetryBackend.COUNTER));
-        aVar.b(2026, 4, 15);
-        aVar.a("Counts when device has at least one Recently Played Widget");
-        return aVar.d();
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof b)) {
+            return false;
+        }
+        b bVar = (b) obj;
+        return bVar.f23581a.equals(this.f23581a) && bVar.b == this.b && bVar.f23582c == this.f23582c && bVar.f23583d == this.f23583d && bVar.f23584e == this.f23584e && bVar.f23585f == this.f23585f && bVar.f23586g == this.f23586g;
     }
 }

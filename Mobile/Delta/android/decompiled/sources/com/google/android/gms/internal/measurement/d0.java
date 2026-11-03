@@ -122,16 +122,16 @@ public final class d0 {
                         throw new IllegalArgumentException("Callback should be a method");
                     }
                     if (fVar.l() == 0) {
-                        return q.f6743zo;
+                        return q.f6816yo;
                     }
                     c(fVar, u4Var, (p) qVarA4, null, null);
-                    return q.f6743zo;
+                    return q.f6816yo;
                 }
                 throw new IllegalArgumentException("Command not supported");
             case -467511597:
                 if (str.equals("lastIndexOf")) {
                     v5.c("lastIndexOf", 2, list);
-                    q qVarA5 = q.f6743zo;
+                    q qVarA5 = q.f6816yo;
                     if (!list.isEmpty()) {
                         qVarA5 = u4Var.a((q) list.get(0));
                     }
@@ -199,7 +199,7 @@ public final class d0 {
                     v5.a("pop", 0, list);
                     int iK5 = fVar.k();
                     if (iK5 == 0) {
-                        return q.f6743zo;
+                        return q.f6816yo;
                     }
                     int i14 = iK5 - 1;
                     q qVarM = fVar.m(i14);
@@ -211,7 +211,7 @@ public final class d0 {
                 if (str.equals("join")) {
                     v5.c("join", 1, list);
                     if (fVar.k() == 0) {
-                        return q.Go;
+                        return q.Fo;
                     }
                     if (!list.isEmpty()) {
                         q qVarA9 = u4Var.a((q) list.get(0));
@@ -239,17 +239,17 @@ public final class d0 {
                         throw new IllegalArgumentException("Callback should be a method");
                     }
                     if (fVar.k() == 0) {
-                        return q.Fo;
+                        return q.Eo;
                     }
                     k kVar2 = (k) qVarA10;
                     Iterator itI5 = fVar.i();
                     while (itI5.hasNext()) {
                         int iIntValue = ((Integer) itI5.next()).intValue();
                         if (fVar.t(iIntValue) && kVar2.h(u4Var, Arrays.asList(fVar.m(iIntValue), new j(Double.valueOf(iIntValue)), fVar)).zze().booleanValue()) {
-                            return q.Eo;
+                            return q.Do;
                         }
                     }
-                    return q.Fo;
+                    return q.Eo;
                 }
                 throw new IllegalArgumentException("Command not supported");
             case 3536286:
@@ -283,16 +283,16 @@ public final class d0 {
                         throw new IllegalArgumentException("Callback should be a method");
                     }
                     if (fVar.k() != 0 && c(fVar, u4Var, (p) qVarA12, Boolean.FALSE, Boolean.TRUE).k() != fVar.k()) {
-                        return q.Fo;
+                        return q.Eo;
                     }
-                    return q.Eo;
+                    return q.Do;
                 }
                 throw new IllegalArgumentException("Command not supported");
             case 109407362:
                 if (str.equals("shift")) {
                     v5.a("shift", 0, list);
                     if (fVar.k() == 0) {
-                        return q.f6743zo;
+                        return q.f6816yo;
                     }
                     q qVarM2 = fVar.m(0);
                     fVar.y(0);
@@ -348,7 +348,7 @@ public final class d0 {
             case 1943291465:
                 if (str.equals("indexOf")) {
                     v5.c("indexOf", 2, list);
-                    q qVarA13 = q.f6743zo;
+                    q qVarA13 = q.f6816yo;
                     if (!list.isEmpty()) {
                         qVarA13 = u4Var.a((q) list.get(0));
                     }

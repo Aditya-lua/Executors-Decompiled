@@ -9,6 +9,13 @@ import com.withpersona.sdk2.inquiry.network.core.NetworkCallResult;
 import com.withpersona.sdk2.inquiry.network.core.NetworkUtilsKt;
 import com.withpersona.sdk2.inquiry.network.upload.UploadResponse;
 import com.withpersona.sdk2.inquiry.network.upload.UploadService;
+import gt.n;
+import gt.o;
+import hv.x;
+import iu.d2;
+import iu.k;
+import iu.p0;
+import iu.q0;
 import java.io.File;
 import java.io.Serializable;
 import java.util.Collection;
@@ -16,32 +23,25 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
-import jt.n;
-import jt.o;
-import jv.x;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
-import ku.d2;
-import ku.k;
-import ku.p0;
-import ku.q0;
-import nt.b;
-import nu.c0;
+import lt.b;
+import lu.c0;
+import mt.c;
+import nt.l;
+import nt.m;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import ot.c;
-import pt.l;
-import pt.m;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000k\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007*\u0001\u001a\b\u0007\u0018\u0000 /2\u00020\u0001:\u0004#01(B!\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\b\u0010\tJ\u001d\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\f\u001a\u00020\n¢\u0006\u0004\b\u000e\u0010\u000fJ\r\u0010\u0010\u001a\u00020\r¢\u0006\u0004\b\u0010\u0010\u0011J \u0010\u0013\u001a\u00020\u00122\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\f\u001a\u00020\nH\u0086@¢\u0006\u0004\b\u0013\u0010\u0014J(\u0010\u0018\u001a\u00020\u00122\u0006\u0010\u000b\u001a\u00020\u00152\u0006\u0010\f\u001a\u00020\n2\u0006\u0010\u0017\u001a\u00020\u0016H\u0082@¢\u0006\u0004\b\u0018\u0010\u0019J\u000f\u0010\u001b\u001a\u00020\u001aH\u0002¢\u0006\u0004\b\u001b\u0010\u001cJ\u0015\u0010\u001f\u001a\u0004\u0018\u00010\u001e*\u00020\u001dH\u0002¢\u0006\u0004\b\u001f\u0010 R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b!\u0010\"R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b#\u0010$R6\u0010*\u001a$\u0012 \u0012\u001e\u0012\u0004\u0012\u00020\u0015\u0012\u0004\u0012\u00020\u00120&j\u000e\u0012\u0004\u0012\u00020\u0015\u0012\u0004\u0012\u00020\u0012`'0%8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b(\u0010)R\u0014\u0010.\u001a\u00020+8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b,\u0010-¨\u00062"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader;", "", "Landroidx/lifecycle/l0;", "savedStateHandle", "Lcom/withpersona/sdk2/inquiry/network/upload/UploadService;", "uploadService", "Lku/p0;", "coroutineScope", "<init>", "(Landroidx/lifecycle/l0;Lcom/withpersona/sdk2/inquiry/network/upload/UploadService;Lku/p0;)V", "", "absoluteFilePath", "fileUploadUrl", "", "j", "(Ljava/lang/String;Ljava/lang/String;)V", "f", "()V", "Lcom/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader$UploadTask;", "i", "(Ljava/lang/String;Ljava/lang/String;Lnt/b;)Ljava/lang/Object;", "Lcom/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader$FilePath;", "", "allowRetry", "k", "(Ljava/lang/String;Ljava/lang/String;ZLnt/b;)Ljava/lang/Object;", "com/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader$d", "g", "()Lcom/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader$d;", "Lcom/withpersona/sdk2/inquiry/network/upload/UploadResponse;", "Lcom/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader$c;", "h", "(Lcom/withpersona/sdk2/inquiry/network/upload/UploadResponse;)Lcom/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader$c;", "a", "Lcom/withpersona/sdk2/inquiry/network/upload/UploadService;", "b", "Lku/p0;", "Lnu/c0;", "Ljava/util/HashMap;", "Lkotlin/collections/HashMap;", "c", "Lnu/c0;", "uploadTasks", "Luu/a;", "d", "Luu/a;", "mutex", "e", "FilePath", "UploadTask", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000k\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007*\u0001\u001a\b\u0007\u0018\u0000 /2\u00020\u0001:\u0004#01(B!\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\b\u0010\tJ\u001d\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\f\u001a\u00020\n¢\u0006\u0004\b\u000e\u0010\u000fJ\r\u0010\u0010\u001a\u00020\r¢\u0006\u0004\b\u0010\u0010\u0011J \u0010\u0013\u001a\u00020\u00122\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\f\u001a\u00020\nH\u0086@¢\u0006\u0004\b\u0013\u0010\u0014J(\u0010\u0018\u001a\u00020\u00122\u0006\u0010\u000b\u001a\u00020\u00152\u0006\u0010\f\u001a\u00020\n2\u0006\u0010\u0017\u001a\u00020\u0016H\u0082@¢\u0006\u0004\b\u0018\u0010\u0019J\u000f\u0010\u001b\u001a\u00020\u001aH\u0002¢\u0006\u0004\b\u001b\u0010\u001cJ\u0015\u0010\u001f\u001a\u0004\u0018\u00010\u001e*\u00020\u001dH\u0002¢\u0006\u0004\b\u001f\u0010 R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b!\u0010\"R\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b#\u0010$R6\u0010*\u001a$\u0012 \u0012\u001e\u0012\u0004\u0012\u00020\u0015\u0012\u0004\u0012\u00020\u00120&j\u000e\u0012\u0004\u0012\u00020\u0015\u0012\u0004\u0012\u00020\u0012`'0%8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b(\u0010)R\u0014\u0010.\u001a\u00020+8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b,\u0010-¨\u00062"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader;", "", "Landroidx/lifecycle/l0;", "savedStateHandle", "Lcom/withpersona/sdk2/inquiry/network/upload/UploadService;", "uploadService", "Liu/p0;", "coroutineScope", "<init>", "(Landroidx/lifecycle/l0;Lcom/withpersona/sdk2/inquiry/network/upload/UploadService;Liu/p0;)V", "", "absoluteFilePath", "fileUploadUrl", "", "j", "(Ljava/lang/String;Ljava/lang/String;)V", "f", "()V", "Lcom/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader$UploadTask;", "i", "(Ljava/lang/String;Ljava/lang/String;Llt/b;)Ljava/lang/Object;", "Lcom/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader$FilePath;", "", "allowRetry", "k", "(Ljava/lang/String;Ljava/lang/String;ZLlt/b;)Ljava/lang/Object;", "com/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader$d", "g", "()Lcom/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader$d;", "Lcom/withpersona/sdk2/inquiry/network/upload/UploadResponse;", "Lcom/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader$c;", "h", "(Lcom/withpersona/sdk2/inquiry/network/upload/UploadResponse;)Lcom/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader$c;", "a", "Lcom/withpersona/sdk2/inquiry/network/upload/UploadService;", "b", "Liu/p0;", "Llu/c0;", "Ljava/util/HashMap;", "Lkotlin/collections/HashMap;", "c", "Llu/c0;", "uploadTasks", "Lsu/a;", "d", "Lsu/a;", "mutex", "e", "FilePath", "UploadTask", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class DirectFileUploader {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -58,7 +58,7 @@ public final class DirectFileUploader {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final uu.a mutex;
+    public final su.a mutex;
 
     @Metadata(d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0007\b\u0087@\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\r\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\u0007\u0010\bJ\u001d\u0010\r\u001a\u00020\f2\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\u000b\u001a\u00020\u0006¢\u0006\u0004\b\r\u0010\u000eJ\u0010\u0010\u000f\u001a\u00020\u0002HÖ\u0001¢\u0006\u0004\b\u000f\u0010\u0005J\u0010\u0010\u0010\u001a\u00020\u0006HÖ\u0001¢\u0006\u0004\b\u0010\u0010\bJ\u001a\u0010\u0014\u001a\u00020\u00132\b\u0010\u0012\u001a\u0004\u0018\u00010\u0011HÖ\u0003¢\u0006\u0004\b\u0014\u0010\u0015R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0016\u0010\u0017\u001a\u0004\b\u0018\u0010\u0019\u0088\u0001\u0003\u0092\u0001\u00020\u0002¨\u0006\u001a"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader$FilePath;", "Landroid/os/Parcelable;", "", "filePath", "f", "(Ljava/lang/String;)Ljava/lang/String;", "", "g", "(Ljava/lang/String;)I", "Landroid/os/Parcel;", "dest", "flags", "", "n", "(Ljava/lang/String;Landroid/os/Parcel;I)V", "k", "j", "", "other", "", "i", "(Ljava/lang/String;Ljava/lang/Object;)Z", "a", "Ljava/lang/String;", "getFilePath", "()Ljava/lang/String;", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class FilePath implements Parcelable {
@@ -153,7 +153,7 @@ public final class DirectFileUploader {
         }
     }
 
-    @Metadata(d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\n\b\u0007\u0018\u00002\u00020\u0001B)\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0010\b\u0002\u0010\b\u001a\n\u0012\u0004\u0012\u00020\u0007\u0018\u00010\u0006¢\u0006\u0004\b\t\u0010\nJ\u0016\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\u00070\u0006H\u0086@¢\u0006\u0004\b\u000b\u0010\fJ\r\u0010\u000e\u001a\u00020\r¢\u0006\u0004\b\u000e\u0010\u000fJ\u001d\u0010\u0014\u001a\u00020\u00132\u0006\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u0012\u001a\u00020\r¢\u0006\u0004\b\u0014\u0010\u0015R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u000b\u0010\u0016\u001a\u0004\b\u0017\u0010\u0018R\u0017\u0010\u0005\u001a\u00020\u00048\u0006¢\u0006\f\n\u0004\b\u0019\u0010\u0016\u001a\u0004\b\u001a\u0010\u0018R*\u0010\b\u001a\n\u0012\u0004\u0012\u00020\u0007\u0018\u00010\u00068\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b\u001b\u0010\u001c\u001a\u0004\b\u001d\u0010\u001e\"\u0004\b\u001f\u0010 R*\u0010*\u001a\u0004\u0018\u00010!8\u0006@\u0006X\u0086\u000e¢\u0006\u0018\n\u0004\b\"\u0010#\u0012\u0004\b(\u0010)\u001a\u0004\b$\u0010%\"\u0004\b&\u0010'¨\u0006+"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader$UploadTask;", "Landroid/os/Parcelable;", "Lcom/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader$FilePath;", "absoluteFilePath", "", "fileUploadUrl", "Ljt/n;", "Lcom/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader$c;", "result", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljt/n;Lkotlin/jvm/internal/DefaultConstructorMarker;)V", "a", "(Lnt/b;)Ljava/lang/Object;", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "Ljava/lang/String;", "f", "()Ljava/lang/String;", "b", "g", "c", "Ljt/n;", "i", "()Ljt/n;", "k", "(Ljt/n;)V", "Lku/d2;", "d", "Lku/d2;", "getJob", "()Lku/d2;", "j", "(Lku/d2;)V", "getJob$annotations", "()V", "job", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\n\b\u0007\u0018\u00002\u00020\u0001B)\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0010\b\u0002\u0010\b\u001a\n\u0012\u0004\u0012\u00020\u0007\u0018\u00010\u0006¢\u0006\u0004\b\t\u0010\nJ\u0016\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\u00070\u0006H\u0086@¢\u0006\u0004\b\u000b\u0010\fJ\r\u0010\u000e\u001a\u00020\r¢\u0006\u0004\b\u000e\u0010\u000fJ\u001d\u0010\u0014\u001a\u00020\u00132\u0006\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u0012\u001a\u00020\r¢\u0006\u0004\b\u0014\u0010\u0015R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u000b\u0010\u0016\u001a\u0004\b\u0017\u0010\u0018R\u0017\u0010\u0005\u001a\u00020\u00048\u0006¢\u0006\f\n\u0004\b\u0019\u0010\u0016\u001a\u0004\b\u001a\u0010\u0018R*\u0010\b\u001a\n\u0012\u0004\u0012\u00020\u0007\u0018\u00010\u00068\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b\u001b\u0010\u001c\u001a\u0004\b\u001d\u0010\u001e\"\u0004\b\u001f\u0010 R*\u0010*\u001a\u0004\u0018\u00010!8\u0006@\u0006X\u0086\u000e¢\u0006\u0018\n\u0004\b\"\u0010#\u0012\u0004\b(\u0010)\u001a\u0004\b$\u0010%\"\u0004\b&\u0010'¨\u0006+"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader$UploadTask;", "Landroid/os/Parcelable;", "Lcom/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader$FilePath;", "absoluteFilePath", "", "fileUploadUrl", "Lgt/n;", "Lcom/withpersona/sdk2/inquiry/selfie/directFileUploader/DirectFileUploader$c;", "result", "<init>", "(Ljava/lang/String;Ljava/lang/String;Lgt/n;Lkotlin/jvm/internal/DefaultConstructorMarker;)V", "a", "(Llt/b;)Ljava/lang/Object;", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "Ljava/lang/String;", "f", "()Ljava/lang/String;", "b", "g", "c", "Lgt/n;", "i", "()Lgt/n;", "k", "(Lgt/n;)V", "Liu/d2;", "d", "Liu/d2;", "getJob", "()Liu/d2;", "j", "(Liu/d2;)V", "getJob$annotations", "()V", "job", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class UploadTask implements Parcelable {
 
         @NotNull
@@ -191,25 +191,25 @@ public final class DirectFileUploader {
             }
         }
 
-        @pt.f(c = "com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader$UploadTask", f = "DirectFileUploader.kt", l = {79}, m = "await-IoAF18A")
+        @nt.f(c = "com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader$UploadTask", f = "DirectFileUploader.kt", l = {79}, m = "await-IoAF18A")
         @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-        public static final class b extends pt.d {
+        public static final class b extends nt.d {
 
             /* JADX INFO: renamed from: t, reason: collision with root package name */
-            public /* synthetic */ Object f12893t;
+            public /* synthetic */ Object f12974t;
 
             /* JADX INFO: renamed from: v, reason: collision with root package name */
-            public int f12895v;
+            public int f12976v;
 
-            public b(nt.b<? super b> bVar) {
+            public b(lt.b<? super b> bVar) {
                 super(bVar);
             }
 
-            @Override // pt.a
+            @Override // nt.a
             @Nullable
             public final Object invokeSuspend(@NotNull Object obj) {
-                this.f12893t = obj;
-                this.f12895v |= Integer.MIN_VALUE;
+                this.f12974t = obj;
+                this.f12976v |= Integer.MIN_VALUE;
                 Object objA = UploadTask.this.a(this);
                 return objA == c.e() ? objA : n.a(objA);
             }
@@ -221,28 +221,28 @@ public final class DirectFileUploader {
 
         /* JADX WARN: Code duplicated, block: B:7:0x0013  */
         @Nullable
-        public final Object a(@NotNull nt.b<? super n<UploadResult>> bVar) {
+        public final Object a(@NotNull lt.b<? super n<UploadResult>> bVar) {
             b bVar2;
             if (bVar instanceof b) {
                 bVar2 = (b) bVar;
-                int i10 = bVar2.f12895v;
+                int i10 = bVar2.f12976v;
                 if ((i10 & Integer.MIN_VALUE) != 0) {
-                    bVar2.f12895v = i10 - Integer.MIN_VALUE;
+                    bVar2.f12976v = i10 - Integer.MIN_VALUE;
                 } else {
                     bVar2 = new b(bVar);
                 }
             } else {
                 bVar2 = new b(bVar);
             }
-            Object obj = bVar2.f12893t;
+            Object obj = bVar2.f12974t;
             Object objE = c.e();
-            int i11 = bVar2.f12895v;
+            int i11 = bVar2.f12976v;
             if (i11 == 0) {
                 o.b(obj);
                 d2 d2Var = this.job;
                 if (d2Var != null) {
-                    bVar2.f12895v = 1;
-                    if (d2Var.L(bVar2) == objE) {
+                    bVar2.f12976v = 1;
+                    if (d2Var.F(bVar2) == objE) {
                         return objE;
                     }
                 }
@@ -311,42 +311,47 @@ public final class DirectFileUploader {
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader$1", f = "DirectFileUploader.kt", l = {119, 220}, m = "invokeSuspend")
+    @nt.f(c = "com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader$1", f = "DirectFileUploader.kt", l = {119, 220}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
     public static final class a extends m implements Function2<p0, b<? super Unit>, Object> {
         public final /* synthetic */ DirectFileUploader A;
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f12896t;
+        public Object f12977t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f12897u;
+        public Object f12978u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public Object f12898v;
+        public Object f12979v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public Object f12899w;
+        public Object f12980w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public int f12900x;
+        public int f12981x;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public int f12901y;
+        public int f12982y;
 
         /* JADX INFO: renamed from: z, reason: collision with root package name */
-        public final /* synthetic */ HashMap<FilePath, UploadTask> f12902z;
+        public final /* synthetic */ HashMap<FilePath, UploadTask> f12983z;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public a(HashMap<FilePath, UploadTask> map, DirectFileUploader directFileUploader, b<? super a> bVar) {
             super(2, bVar);
-            this.f12902z = map;
+            this.f12983z = map;
             this.A = directFileUploader;
         }
 
-        @Override // pt.a
+        @Override // nt.a
         public final b<Unit> create(Object obj, b<?> bVar) {
-            return new a(this.f12902z, this.A, bVar);
+            return new a(this.f12983z, this.A, bVar);
+        }
+
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, b<? super Unit> bVar) {
+            return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
         }
 
         /* JADX WARN: Code duplicated, block: B:13:0x004c  */
@@ -362,27 +367,27 @@ public final class DirectFileUploader {
             	at jadx.core.utils.ErrorsCounter.error(ErrorsCounter.java:31)
             	at jadx.core.dex.attributes.nodes.NotificationAttrNode.addError(NotificationAttrNode.java:19)
             */
-        @Override // pt.a
+        @Override // nt.a
         public final java.lang.Object invokeSuspend(java.lang.Object r10) {
             /*
                 r9 = this;
-                java.lang.Object r0 = ot.c.e()
-                int r1 = r9.f12901y
+                java.lang.Object r0 = mt.c.e()
+                int r1 = r9.f12982y
                 r2 = 2
                 r3 = 1
                 r4 = 0
                 if (r1 == 0) goto L38
                 if (r1 == r3) goto L2c
                 if (r1 != r2) goto L24
-                java.lang.Object r1 = r9.f12899w
+                java.lang.Object r1 = r9.f12980w
                 com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader r1 = (com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader) r1
-                java.lang.Object r5 = r9.f12898v
-                uu.a r5 = (uu.a) r5
-                java.lang.Object r6 = r9.f12897u
+                java.lang.Object r5 = r9.f12979v
+                su.a r5 = (su.a) r5
+                java.lang.Object r6 = r9.f12978u
                 com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader$UploadTask r6 = (com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader.UploadTask) r6
-                java.lang.Object r7 = r9.f12896t
+                java.lang.Object r7 = r9.f12977t
                 java.util.Iterator r7 = (java.util.Iterator) r7
-                jt.o.b(r10)
+                gt.o.b(r10)
                 goto L9d
             L24:
                 java.lang.IllegalStateException r10 = new java.lang.IllegalStateException
@@ -390,15 +395,15 @@ public final class DirectFileUploader {
                 r10.<init>(r0)
                 throw r10
             L2c:
-                java.lang.Object r1 = r9.f12897u
+                java.lang.Object r1 = r9.f12978u
                 com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader$UploadTask r1 = (com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader.UploadTask) r1
-                java.lang.Object r1 = r9.f12896t
+                java.lang.Object r1 = r9.f12977t
                 java.util.Iterator r1 = (java.util.Iterator) r1
-                jt.o.b(r10)
+                gt.o.b(r10)
                 goto L7f
             L38:
-                jt.o.b(r10)
-                java.util.HashMap<com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader$FilePath, com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader$UploadTask> r10 = r9.f12902z
+                gt.o.b(r10)
+                java.util.HashMap<com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader$FilePath, com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader$UploadTask> r10 = r9.f12983z
                 java.util.Collection r10 = r10.values()
                 java.util.Iterator r10 = r10.iterator()
                 r7 = r10
@@ -410,18 +415,18 @@ public final class DirectFileUploader {
                 kotlin.jvm.internal.Intrinsics.checkNotNullExpressionValue(r10, r1)
                 r6 = r10
                 com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader$UploadTask r6 = (com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader.UploadTask) r6
-                jt.n r10 = r6.i()
+                gt.n r10 = r6.i()
                 r1 = 0
                 if (r10 != 0) goto L81
                 com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader r10 = r9.A
                 java.lang.String r5 = r6.getAbsoluteFilePath()
                 java.lang.String r8 = r6.getFileUploadUrl()
-                r9.f12896t = r7
-                java.lang.Object r6 = pt.l.a(r6)
-                r9.f12897u = r6
-                r9.f12898v = r4
-                r9.f12899w = r4
-                r9.f12901y = r3
+                r9.f12977t = r7
+                java.lang.Object r6 = nt.l.a(r6)
+                r9.f12978u = r6
+                r9.f12979v = r4
+                r9.f12980w = r4
+                r9.f12982y = r3
                 java.lang.Object r10 = com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader.e(r10, r5, r8, r1, r9)
                 if (r10 != r0) goto L7e
                 goto L9b
@@ -432,44 +437,39 @@ public final class DirectFileUploader {
                 goto L46
             L81:
                 com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader r10 = r9.A
-                uu.a r5 = com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader.a(r10)
+                su.a r5 = com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader.a(r10)
                 com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader r10 = r9.A
-                r9.f12896t = r7
-                r9.f12897u = r6
-                r9.f12898v = r5
-                r9.f12899w = r10
-                r9.f12900x = r1
-                r9.f12901y = r2
-                java.lang.Object r1 = r5.f(r4, r9)
+                r9.f12977t = r7
+                r9.f12978u = r6
+                r9.f12979v = r5
+                r9.f12980w = r10
+                r9.f12981x = r1
+                r9.f12982y = r2
+                java.lang.Object r1 = r5.b(r4, r9)
                 if (r1 != r0) goto L9c
             L9b:
                 return r0
             L9c:
                 r1 = r10
             L9d:
-                nu.c0 r10 = com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader.c(r1)     // Catch: java.lang.Throwable -> Lb8
+                lu.c0 r10 = com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader.c(r1)     // Catch: java.lang.Throwable -> Lb8
                 java.lang.Object r10 = r10.getValue()     // Catch: java.lang.Throwable -> Lb8
                 java.util.Map r10 = (java.util.Map) r10     // Catch: java.lang.Throwable -> Lb8
                 java.lang.String r1 = r6.getAbsoluteFilePath()     // Catch: java.lang.Throwable -> Lb8
                 com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader$FilePath r1 = com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader.FilePath.a(r1)     // Catch: java.lang.Throwable -> Lb8
                 r10.put(r1, r6)     // Catch: java.lang.Throwable -> Lb8
-                kotlin.Unit r10 = kotlin.Unit.f22483a     // Catch: java.lang.Throwable -> Lb8
-                r5.e(r4)
+                kotlin.Unit r10 = kotlin.Unit.f22938a     // Catch: java.lang.Throwable -> Lb8
+                r5.f(r4)
                 goto L46
             Lb8:
                 r10 = move-exception
-                r5.e(r4)
+                r5.f(r4)
                 throw r10
             Lbd:
-                kotlin.Unit r10 = kotlin.Unit.f22483a
+                kotlin.Unit r10 = kotlin.Unit.f22938a
                 return r10
             */
             throw new UnsupportedOperationException("Method not decompiled: com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader.a.invokeSuspend(java.lang.Object):java.lang.Object");
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, b<? super Unit> bVar) {
-            return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
         }
     }
 
@@ -663,41 +663,46 @@ public final class DirectFileUploader {
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader$uploadImageAsync$1", f = "DirectFileUploader.kt", l = {135}, m = "invokeSuspend")
+    @nt.f(c = "com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader$uploadImageAsync$1", f = "DirectFileUploader.kt", l = {135}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
     public static final class e extends m implements Function2<p0, b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f12907t;
+        public int f12988t;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ String f12909v;
+        public final /* synthetic */ String f12990v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public final /* synthetic */ String f12910w;
+        public final /* synthetic */ String f12991w;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public e(String str, String str2, b<? super e> bVar) {
             super(2, bVar);
-            this.f12909v = str;
-            this.f12910w = str2;
+            this.f12990v = str;
+            this.f12991w = str2;
         }
 
-        @Override // pt.a
+        @Override // nt.a
         public final b<Unit> create(Object obj, b<?> bVar) {
-            return DirectFileUploader.this.new e(this.f12909v, this.f12910w, bVar);
+            return DirectFileUploader.this.new e(this.f12990v, this.f12991w, bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, b<? super Unit> bVar) {
+            return ((e) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
             Object objE = c.e();
-            int i10 = this.f12907t;
+            int i10 = this.f12988t;
             if (i10 == 0) {
                 o.b(obj);
                 DirectFileUploader directFileUploader = DirectFileUploader.this;
-                String strF = FilePath.f(this.f12909v);
-                String str = this.f12910w;
-                this.f12907t = 1;
+                String strF = FilePath.f(this.f12990v);
+                String str = this.f12991w;
+                this.f12988t = 1;
                 if (directFileUploader.k(strF, str, false, this) == objE) {
                     return objE;
                 }
@@ -707,113 +712,108 @@ public final class DirectFileUploader {
                 }
                 o.b(obj);
             }
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, b<? super Unit> bVar) {
-            return ((e) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            return Unit.f22938a;
         }
     }
 
-    @pt.f(c = "com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader", f = "DirectFileUploader.kt", l = {220}, m = "uploadImageInternal-XenoRnc")
+    @nt.f(c = "com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader", f = "DirectFileUploader.kt", l = {220}, m = "uploadImageInternal-XenoRnc")
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final class f extends pt.d {
+    public static final class f extends nt.d {
         public int A;
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f12911t;
+        public Object f12992t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f12912u;
+        public Object f12993u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public Object f12913v;
+        public Object f12994v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public boolean f12914w;
+        public boolean f12995w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public int f12915x;
+        public int f12996x;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public /* synthetic */ Object f12916y;
+        public /* synthetic */ Object f12997y;
 
         public f(b<? super f> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
-            this.f12916y = obj;
+            this.f12997y = obj;
             this.A |= Integer.MIN_VALUE;
             return DirectFileUploader.this.k(null, null, false, this);
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader$uploadImageInternal$2$1", f = "DirectFileUploader.kt", l = {174}, m = "invokeSuspend")
+    @nt.f(c = "com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader$uploadImageInternal$2$1", f = "DirectFileUploader.kt", l = {174}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
     public static final class g extends m implements Function2<p0, b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f12918t;
+        public Object f12999t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f12919u;
+        public Object f13000u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public int f12920v;
+        public int f13001v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public final /* synthetic */ String f12921w;
+        public final /* synthetic */ String f13002w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public final /* synthetic */ DirectFileUploader f12922x;
+        public final /* synthetic */ DirectFileUploader f13003x;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public final /* synthetic */ String f12923y;
+        public final /* synthetic */ String f13004y;
 
         /* JADX INFO: renamed from: z, reason: collision with root package name */
-        public final /* synthetic */ UploadTask f12924z;
+        public final /* synthetic */ UploadTask f13005z;
 
-        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Ljv/x;", "Lcom/withpersona/sdk2/inquiry/network/upload/UploadResponse;", "<anonymous>", "()Ljv/x;"}, k = 3, mv = {2, 2, 0})
-        @pt.f(c = "com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader$uploadImageInternal$2$1$1", f = "DirectFileUploader.kt", l = {176}, m = "invokeSuspend")
+        @nt.f(c = "com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader$uploadImageInternal$2$1$1", f = "DirectFileUploader.kt", l = {176}, m = "invokeSuspend")
+        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00010\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lhv/x;", "Lcom/withpersona/sdk2/inquiry/network/upload/UploadResponse;", "<anonymous>", "()Lhv/x;"}, k = 3, mv = {2, 2, 0})
         public static final class a extends m implements Function1<b<? super x<UploadResponse>>, Object> {
 
             /* JADX INFO: renamed from: t, reason: collision with root package name */
-            public int f12925t;
+            public int f13006t;
 
             /* JADX INFO: renamed from: u, reason: collision with root package name */
-            public final /* synthetic */ DirectFileUploader f12926u;
+            public final /* synthetic */ DirectFileUploader f13007u;
 
             /* JADX INFO: renamed from: v, reason: collision with root package name */
-            public final /* synthetic */ String f12927v;
+            public final /* synthetic */ String f13008v;
 
             /* JADX INFO: renamed from: w, reason: collision with root package name */
-            public final /* synthetic */ File f12928w;
+            public final /* synthetic */ File f13009w;
 
             /* JADX INFO: renamed from: x, reason: collision with root package name */
-            public final /* synthetic */ RequestBody f12929x;
+            public final /* synthetic */ RequestBody f13010x;
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
             public a(DirectFileUploader directFileUploader, String str, File file, RequestBody requestBody, b<? super a> bVar) {
                 super(1, bVar);
-                this.f12926u = directFileUploader;
-                this.f12927v = str;
-                this.f12928w = file;
-                this.f12929x = requestBody;
+                this.f13007u = directFileUploader;
+                this.f13008v = str;
+                this.f13009w = file;
+                this.f13010x = requestBody;
             }
 
-            @Override // pt.a
+            @Override // nt.a
             public final b<Unit> create(b<?> bVar) {
-                return new a(this.f12926u, this.f12927v, this.f12928w, this.f12929x, bVar);
+                return new a(this.f13007u, this.f13008v, this.f13009w, this.f13010x, bVar);
             }
 
-            @Override // pt.a
+            @Override // nt.a
             public final Object invokeSuspend(Object obj) {
                 Object objE = c.e();
-                int i10 = this.f12925t;
+                int i10 = this.f13006t;
                 if (i10 != 0) {
                     if (i10 != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -822,47 +822,52 @@ public final class DirectFileUploader {
                     return obj;
                 }
                 o.b(obj);
-                UploadService uploadService = this.f12926u.uploadService;
-                String str = this.f12927v;
-                MultipartBody.Part partCreateFormData = MultipartBody.Part.INSTANCE.createFormData("file", this.f12928w.getName(), this.f12929x);
-                this.f12925t = 1;
+                UploadService uploadService = this.f13007u.uploadService;
+                String str = this.f13008v;
+                MultipartBody.Part partCreateFormData = MultipartBody.Part.INSTANCE.createFormData("file", this.f13009w.getName(), this.f13010x);
+                this.f13006t = 1;
                 Object objUpload = uploadService.upload(str, partCreateFormData, this);
                 return objUpload == objE ? objE : objUpload;
             }
 
             @Override // kotlin.jvm.functions.Function1
-            /* JADX INFO: renamed from: q, reason: merged with bridge method [inline-methods] */
+            /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
             public final Object invoke(b<? super x<UploadResponse>> bVar) {
-                return ((a) create(bVar)).invokeSuspend(Unit.f22483a);
+                return ((a) create(bVar)).invokeSuspend(Unit.f22938a);
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public g(String str, DirectFileUploader directFileUploader, String str2, UploadTask uploadTask, b<? super g> bVar) {
             super(2, bVar);
-            this.f12921w = str;
-            this.f12922x = directFileUploader;
-            this.f12923y = str2;
-            this.f12924z = uploadTask;
+            this.f13002w = str;
+            this.f13003x = directFileUploader;
+            this.f13004y = str2;
+            this.f13005z = uploadTask;
         }
 
-        @Override // pt.a
+        @Override // nt.a
         public final b<Unit> create(Object obj, b<?> bVar) {
-            return new g(this.f12921w, this.f12922x, this.f12923y, this.f12924z, bVar);
+            return new g(this.f13002w, this.f13003x, this.f13004y, this.f13005z, bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, b<? super Unit> bVar) {
+            return ((g) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
             Object objE = c.e();
-            int i10 = this.f12920v;
+            int i10 = this.f13001v;
             if (i10 == 0) {
                 o.b(obj);
-                File file = new File(this.f12921w);
+                File file = new File(this.f13002w);
                 RequestBody requestBodyCreate = RequestBody.INSTANCE.create(file, MediaType.INSTANCE.parse("image/jpeg"));
-                a aVar = new a(this.f12922x, this.f12923y, file, requestBodyCreate, null);
-                this.f12918t = l.a(file);
-                this.f12919u = l.a(requestBodyCreate);
-                this.f12920v = 1;
+                a aVar = new a(this.f13003x, this.f13004y, file, requestBodyCreate, null);
+                this.f12999t = l.a(file);
+                this.f13000u = l.a(requestBodyCreate);
+                this.f13001v = 1;
                 obj = NetworkUtilsKt.enqueueRetriableRequestWithRetry(aVar, this);
                 if (obj == objE) {
                     return objE;
@@ -874,30 +879,25 @@ public final class DirectFileUploader {
                 o.b(obj);
             }
             NetworkCallResult networkCallResult = (NetworkCallResult) obj;
-            DirectFileUploader directFileUploader = this.f12922x;
-            UploadTask uploadTask = this.f12924z;
+            DirectFileUploader directFileUploader = this.f13003x;
+            UploadTask uploadTask = this.f13005z;
             if (networkCallResult instanceof NetworkCallResult.Success) {
                 UploadResponse uploadResponse = (UploadResponse) ((NetworkCallResult.Success) networkCallResult).getResponse();
                 UploadResult uploadResultH = uploadResponse != null ? directFileUploader.h(uploadResponse) : null;
                 if (uploadResultH == null) {
                     n.Companion companion = n.INSTANCE;
-                    uploadTask.k(n.a(n.b(o.a(new cq.b.c()))));
+                    uploadTask.k(n.a(n.b(o.a(new aq.b.c()))));
                 } else {
                     uploadTask.k(n.a(n.b(uploadResultH)));
                 }
             }
-            UploadTask uploadTask2 = this.f12924z;
+            UploadTask uploadTask2 = this.f13005z;
             if (networkCallResult instanceof NetworkCallResult.Failure) {
                 InternalErrorInfo.NetworkErrorInfo networkErrorInfo = ((NetworkCallResult.Failure) networkCallResult).getNetworkErrorInfo();
                 n.Companion companion2 = n.INSTANCE;
                 uploadTask2.k(n.a(n.b(o.a(new InternalErrorException(networkErrorInfo)))));
             }
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, b<? super Unit> bVar) {
-            return ((g) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            return Unit.f22938a;
         }
     }
 
@@ -909,7 +909,7 @@ public final class DirectFileUploader {
         this.coroutineScope = coroutineScope;
         c0<HashMap<FilePath, UploadTask>> c0VarE = savedStateHandle.e("com.withpersona.sdk2.inquiry.selfie.directFileUploader.DirectFileUploader.UPLOAD_TASKS", g());
         this.uploadTasks = c0VarE;
-        this.mutex = uu.g.b(false, 1, null);
+        this.mutex = su.g.b(false, 1, null);
         HashMap<FilePath, UploadTask> value = c0VarE.getValue();
         c0VarE.setValue(g());
         k.d(coroutineScope, null, null, new a(value, this, null), 3, null);
@@ -953,7 +953,7 @@ public final class DirectFileUploader {
     /* JADX WARN: Code duplicated, block: B:7:0x0015  */
     public final Object k(String str, String str2, boolean z10, b<? super UploadTask> bVar) {
         f fVar;
-        uu.a aVar;
+        su.a aVar;
         String str3;
         boolean z11;
         String str4;
@@ -969,21 +969,21 @@ public final class DirectFileUploader {
         } else {
             fVar = new f(bVar);
         }
-        Object obj = fVar.f12916y;
+        Object obj = fVar.f12997y;
         Object objE = c.e();
         int i11 = fVar.A;
         if (i11 == 0) {
             o.b(obj);
             aVar = this.mutex;
-            fVar.f12911t = str;
+            fVar.f12992t = str;
             str3 = str2;
-            fVar.f12912u = str3;
-            fVar.f12913v = aVar;
+            fVar.f12993u = str3;
+            fVar.f12994v = aVar;
             z11 = z10;
-            fVar.f12914w = z11;
-            fVar.f12915x = 0;
+            fVar.f12995w = z11;
+            fVar.f12996x = 0;
             fVar.A = 1;
-            if (aVar.f(null, fVar) == objE) {
+            if (aVar.b(null, fVar) == objE) {
                 return objE;
             }
             str4 = str;
@@ -991,14 +991,14 @@ public final class DirectFileUploader {
             if (i11 != 1) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            boolean z12 = fVar.f12914w;
-            aVar = (uu.a) fVar.f12913v;
-            str3 = (String) fVar.f12912u;
-            str4 = (String) fVar.f12911t;
+            boolean z12 = fVar.f12995w;
+            aVar = (su.a) fVar.f12994v;
+            str3 = (String) fVar.f12993u;
+            str4 = (String) fVar.f12992t;
             o.b(obj);
             z11 = z12;
         }
-        uu.a aVar2 = aVar;
+        su.a aVar2 = aVar;
         String str5 = str3;
         try {
             UploadTask uploadTask = this.uploadTasks.getValue().get(FilePath.a(str4));
@@ -1010,7 +1010,7 @@ public final class DirectFileUploader {
             this.uploadTasks.getValue().put(FilePath.a(uploadTask2.getAbsoluteFilePath()), uploadTask2);
             return uploadTask2;
         } finally {
-            aVar2.e(null);
+            aVar2.f(null);
         }
     }
 }

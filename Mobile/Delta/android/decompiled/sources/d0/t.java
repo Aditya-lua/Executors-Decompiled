@@ -10,7 +10,7 @@ import n0.SurfaceConfig;
 public class t {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ExtraCroppingQuirk f14265a;
+    public final ExtraCroppingQuirk f14245a;
 
     public t() {
         this((ExtraCroppingQuirk) c0.e.b(ExtraCroppingQuirk.class));
@@ -18,7 +18,7 @@ public class t {
 
     public List<Size> a(SurfaceConfig.d dVar, List<Size> list) {
         Size sizeG;
-        ExtraCroppingQuirk extraCroppingQuirk = this.f14265a;
+        ExtraCroppingQuirk extraCroppingQuirk = this.f14245a;
         if (extraCroppingQuirk == null || (sizeG = extraCroppingQuirk.g(dVar)) == null) {
             return list;
         }
@@ -33,6 +33,6 @@ public class t {
     }
 
     public t(ExtraCroppingQuirk extraCroppingQuirk) {
-        this.f14265a = extraCroppingQuirk;
+        this.f14245a = extraCroppingQuirk;
     }
 }

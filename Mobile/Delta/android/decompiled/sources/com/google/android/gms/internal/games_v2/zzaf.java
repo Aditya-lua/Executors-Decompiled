@@ -14,27 +14,27 @@ public final class zzaf extends zzg {
     public static final Parcelable.Creator<zzaf> CREATOR = new e();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final Bundle f6335f;
+    public final Bundle f6408f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final IBinder f6336g;
+    public final IBinder f6409g;
 
     public zzaf(Bundle bundle, IBinder iBinder) {
-        this.f6335f = bundle;
-        this.f6336g = iBinder;
+        this.f6408f = bundle;
+        this.f6409g = iBinder;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i10) {
-        Bundle bundle = this.f6335f;
+        Bundle bundle = this.f6408f;
         int iA = b.a(parcel);
         b.f(parcel, 1, bundle, false);
-        b.m(parcel, 2, this.f6336g, false);
+        b.m(parcel, 2, this.f6409g, false);
         b.b(parcel, iA);
     }
 
     public zzaf(d dVar) {
-        this.f6335f = dVar.a();
-        this.f6336g = dVar.f16517a;
+        this.f6408f = dVar.a();
+        this.f6409g = dVar.f17113a;
     }
 }

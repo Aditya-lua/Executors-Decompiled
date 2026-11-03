@@ -12,7 +12,7 @@ public enum h implements Executor {
 
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final /* synthetic */ qt.a f34945c = qt.b.a(b());
+    public static final /* synthetic */ ot.a f35443c = ot.b.a(b());
 
     @Override // java.util.concurrent.Executor
     public void execute(@NotNull Runnable command) {

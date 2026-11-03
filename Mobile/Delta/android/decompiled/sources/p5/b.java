@@ -7,7 +7,7 @@ import android.graphics.drawable.Drawable;
 public abstract class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Animatable2.AnimationCallback f28228a;
+    public Animatable2.AnimationCallback f28447a;
 
     public class a extends Animatable2.AnimationCallback {
         public a() {
@@ -25,10 +25,10 @@ public abstract class b {
     }
 
     public Animatable2.AnimationCallback a() {
-        if (this.f28228a == null) {
-            this.f28228a = new a();
+        if (this.f28447a == null) {
+            this.f28447a = new a();
         }
-        return this.f28228a;
+        return this.f28447a;
     }
 
     public void b(Drawable drawable) {

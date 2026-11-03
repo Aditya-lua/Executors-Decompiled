@@ -29,49 +29,49 @@ import java.util.Map;
 public final class t extends xd {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final String[] f25955f = {"last_bundled_timestamp", "ALTER TABLE events ADD COLUMN last_bundled_timestamp INTEGER;", "last_bundled_day", "ALTER TABLE events ADD COLUMN last_bundled_day INTEGER;", "last_sampled_complex_event_id", "ALTER TABLE events ADD COLUMN last_sampled_complex_event_id INTEGER;", "last_sampling_rate", "ALTER TABLE events ADD COLUMN last_sampling_rate INTEGER;", "last_exempt_from_sampling", "ALTER TABLE events ADD COLUMN last_exempt_from_sampling INTEGER;", "current_session_count", "ALTER TABLE events ADD COLUMN current_session_count INTEGER;"};
+    public static final String[] f26776f = {"last_bundled_timestamp", "ALTER TABLE events ADD COLUMN last_bundled_timestamp INTEGER;", "last_bundled_day", "ALTER TABLE events ADD COLUMN last_bundled_day INTEGER;", "last_sampled_complex_event_id", "ALTER TABLE events ADD COLUMN last_sampled_complex_event_id INTEGER;", "last_sampling_rate", "ALTER TABLE events ADD COLUMN last_sampling_rate INTEGER;", "last_exempt_from_sampling", "ALTER TABLE events ADD COLUMN last_exempt_from_sampling INTEGER;", "current_session_count", "ALTER TABLE events ADD COLUMN current_session_count INTEGER;"};
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final String[] f25956g = {"associated_row_id", "ALTER TABLE upload_queue ADD COLUMN associated_row_id INTEGER;", "last_upload_timestamp", "ALTER TABLE upload_queue ADD COLUMN last_upload_timestamp INTEGER;"};
+    public static final String[] f26777g = {"associated_row_id", "ALTER TABLE upload_queue ADD COLUMN associated_row_id INTEGER;", "last_upload_timestamp", "ALTER TABLE upload_queue ADD COLUMN last_upload_timestamp INTEGER;"};
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final String[] f25957h = {"origin", "ALTER TABLE user_attributes ADD COLUMN origin TEXT;"};
+    public static final String[] f26778h = {"origin", "ALTER TABLE user_attributes ADD COLUMN origin TEXT;"};
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final String[] f25958i = {"app_version", "ALTER TABLE apps ADD COLUMN app_version TEXT;", "app_store", "ALTER TABLE apps ADD COLUMN app_store TEXT;", "gmp_version", "ALTER TABLE apps ADD COLUMN gmp_version INTEGER;", "dev_cert_hash", "ALTER TABLE apps ADD COLUMN dev_cert_hash INTEGER;", "measurement_enabled", "ALTER TABLE apps ADD COLUMN measurement_enabled INTEGER;", "last_bundle_start_timestamp", "ALTER TABLE apps ADD COLUMN last_bundle_start_timestamp INTEGER;", "day", "ALTER TABLE apps ADD COLUMN day INTEGER;", "daily_public_events_count", "ALTER TABLE apps ADD COLUMN daily_public_events_count INTEGER;", "daily_events_count", "ALTER TABLE apps ADD COLUMN daily_events_count INTEGER;", "daily_conversions_count", "ALTER TABLE apps ADD COLUMN daily_conversions_count INTEGER;", "remote_config", "ALTER TABLE apps ADD COLUMN remote_config BLOB;", "config_fetched_time", "ALTER TABLE apps ADD COLUMN config_fetched_time INTEGER;", "failed_config_fetch_time", "ALTER TABLE apps ADD COLUMN failed_config_fetch_time INTEGER;", "app_version_int", "ALTER TABLE apps ADD COLUMN app_version_int INTEGER;", "firebase_instance_id", "ALTER TABLE apps ADD COLUMN firebase_instance_id TEXT;", "daily_error_events_count", "ALTER TABLE apps ADD COLUMN daily_error_events_count INTEGER;", "daily_realtime_events_count", "ALTER TABLE apps ADD COLUMN daily_realtime_events_count INTEGER;", "health_monitor_sample", "ALTER TABLE apps ADD COLUMN health_monitor_sample TEXT;", "android_id", "ALTER TABLE apps ADD COLUMN android_id INTEGER;", "adid_reporting_enabled", "ALTER TABLE apps ADD COLUMN adid_reporting_enabled INTEGER;", "ssaid_reporting_enabled", "ALTER TABLE apps ADD COLUMN ssaid_reporting_enabled INTEGER;", "admob_app_id", "ALTER TABLE apps ADD COLUMN admob_app_id TEXT;", "linked_admob_app_id", "ALTER TABLE apps ADD COLUMN linked_admob_app_id TEXT;", "dynamite_version", "ALTER TABLE apps ADD COLUMN dynamite_version INTEGER;", "safelisted_events", "ALTER TABLE apps ADD COLUMN safelisted_events TEXT;", "ga_app_id", "ALTER TABLE apps ADD COLUMN ga_app_id TEXT;", "config_last_modified_time", "ALTER TABLE apps ADD COLUMN config_last_modified_time TEXT;", "e_tag", "ALTER TABLE apps ADD COLUMN e_tag TEXT;", "session_stitching_token", "ALTER TABLE apps ADD COLUMN session_stitching_token TEXT;", "sgtm_upload_enabled", "ALTER TABLE apps ADD COLUMN sgtm_upload_enabled INTEGER;", "target_os_version", "ALTER TABLE apps ADD COLUMN target_os_version INTEGER;", "session_stitching_token_hash", "ALTER TABLE apps ADD COLUMN session_stitching_token_hash INTEGER;", "ad_services_version", "ALTER TABLE apps ADD COLUMN ad_services_version INTEGER;", "unmatched_first_open_without_ad_id", "ALTER TABLE apps ADD COLUMN unmatched_first_open_without_ad_id INTEGER;", "npa_metadata_value", "ALTER TABLE apps ADD COLUMN npa_metadata_value INTEGER;", "attribution_eligibility_status", "ALTER TABLE apps ADD COLUMN attribution_eligibility_status INTEGER;", "sgtm_preview_key", "ALTER TABLE apps ADD COLUMN sgtm_preview_key TEXT;", "dma_consent_state", "ALTER TABLE apps ADD COLUMN dma_consent_state INTEGER;", "daily_realtime_dcu_count", "ALTER TABLE apps ADD COLUMN daily_realtime_dcu_count INTEGER;", "bundle_delivery_index", "ALTER TABLE apps ADD COLUMN bundle_delivery_index INTEGER;", "serialized_npa_metadata", "ALTER TABLE apps ADD COLUMN serialized_npa_metadata TEXT;", "unmatched_pfo", "ALTER TABLE apps ADD COLUMN unmatched_pfo INTEGER;", "unmatched_uwa", "ALTER TABLE apps ADD COLUMN unmatched_uwa INTEGER;", "ad_campaign_info", "ALTER TABLE apps ADD COLUMN ad_campaign_info BLOB;", "daily_registered_triggers_count", "ALTER TABLE apps ADD COLUMN daily_registered_triggers_count INTEGER;", "client_upload_eligibility", "ALTER TABLE apps ADD COLUMN client_upload_eligibility INTEGER;", "gmp_version_for_remote_config", "ALTER TABLE apps ADD COLUMN gmp_version_for_remote_config INTEGER;"};
+    public static final String[] f26779i = {"app_version", "ALTER TABLE apps ADD COLUMN app_version TEXT;", "app_store", "ALTER TABLE apps ADD COLUMN app_store TEXT;", "gmp_version", "ALTER TABLE apps ADD COLUMN gmp_version INTEGER;", "dev_cert_hash", "ALTER TABLE apps ADD COLUMN dev_cert_hash INTEGER;", "measurement_enabled", "ALTER TABLE apps ADD COLUMN measurement_enabled INTEGER;", "last_bundle_start_timestamp", "ALTER TABLE apps ADD COLUMN last_bundle_start_timestamp INTEGER;", "day", "ALTER TABLE apps ADD COLUMN day INTEGER;", "daily_public_events_count", "ALTER TABLE apps ADD COLUMN daily_public_events_count INTEGER;", "daily_events_count", "ALTER TABLE apps ADD COLUMN daily_events_count INTEGER;", "daily_conversions_count", "ALTER TABLE apps ADD COLUMN daily_conversions_count INTEGER;", "remote_config", "ALTER TABLE apps ADD COLUMN remote_config BLOB;", "config_fetched_time", "ALTER TABLE apps ADD COLUMN config_fetched_time INTEGER;", "failed_config_fetch_time", "ALTER TABLE apps ADD COLUMN failed_config_fetch_time INTEGER;", "app_version_int", "ALTER TABLE apps ADD COLUMN app_version_int INTEGER;", "firebase_instance_id", "ALTER TABLE apps ADD COLUMN firebase_instance_id TEXT;", "daily_error_events_count", "ALTER TABLE apps ADD COLUMN daily_error_events_count INTEGER;", "daily_realtime_events_count", "ALTER TABLE apps ADD COLUMN daily_realtime_events_count INTEGER;", "health_monitor_sample", "ALTER TABLE apps ADD COLUMN health_monitor_sample TEXT;", "android_id", "ALTER TABLE apps ADD COLUMN android_id INTEGER;", "adid_reporting_enabled", "ALTER TABLE apps ADD COLUMN adid_reporting_enabled INTEGER;", "ssaid_reporting_enabled", "ALTER TABLE apps ADD COLUMN ssaid_reporting_enabled INTEGER;", "admob_app_id", "ALTER TABLE apps ADD COLUMN admob_app_id TEXT;", "linked_admob_app_id", "ALTER TABLE apps ADD COLUMN linked_admob_app_id TEXT;", "dynamite_version", "ALTER TABLE apps ADD COLUMN dynamite_version INTEGER;", "safelisted_events", "ALTER TABLE apps ADD COLUMN safelisted_events TEXT;", "ga_app_id", "ALTER TABLE apps ADD COLUMN ga_app_id TEXT;", "config_last_modified_time", "ALTER TABLE apps ADD COLUMN config_last_modified_time TEXT;", "e_tag", "ALTER TABLE apps ADD COLUMN e_tag TEXT;", "session_stitching_token", "ALTER TABLE apps ADD COLUMN session_stitching_token TEXT;", "sgtm_upload_enabled", "ALTER TABLE apps ADD COLUMN sgtm_upload_enabled INTEGER;", "target_os_version", "ALTER TABLE apps ADD COLUMN target_os_version INTEGER;", "session_stitching_token_hash", "ALTER TABLE apps ADD COLUMN session_stitching_token_hash INTEGER;", "ad_services_version", "ALTER TABLE apps ADD COLUMN ad_services_version INTEGER;", "unmatched_first_open_without_ad_id", "ALTER TABLE apps ADD COLUMN unmatched_first_open_without_ad_id INTEGER;", "npa_metadata_value", "ALTER TABLE apps ADD COLUMN npa_metadata_value INTEGER;", "attribution_eligibility_status", "ALTER TABLE apps ADD COLUMN attribution_eligibility_status INTEGER;", "sgtm_preview_key", "ALTER TABLE apps ADD COLUMN sgtm_preview_key TEXT;", "dma_consent_state", "ALTER TABLE apps ADD COLUMN dma_consent_state INTEGER;", "daily_realtime_dcu_count", "ALTER TABLE apps ADD COLUMN daily_realtime_dcu_count INTEGER;", "bundle_delivery_index", "ALTER TABLE apps ADD COLUMN bundle_delivery_index INTEGER;", "serialized_npa_metadata", "ALTER TABLE apps ADD COLUMN serialized_npa_metadata TEXT;", "unmatched_pfo", "ALTER TABLE apps ADD COLUMN unmatched_pfo INTEGER;", "unmatched_uwa", "ALTER TABLE apps ADD COLUMN unmatched_uwa INTEGER;", "ad_campaign_info", "ALTER TABLE apps ADD COLUMN ad_campaign_info BLOB;", "daily_registered_triggers_count", "ALTER TABLE apps ADD COLUMN daily_registered_triggers_count INTEGER;", "client_upload_eligibility", "ALTER TABLE apps ADD COLUMN client_upload_eligibility INTEGER;", "gmp_version_for_remote_config", "ALTER TABLE apps ADD COLUMN gmp_version_for_remote_config INTEGER;"};
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final String[] f25959j = {"realtime", "ALTER TABLE raw_events ADD COLUMN realtime INTEGER;"};
+    public static final String[] f26780j = {"realtime", "ALTER TABLE raw_events ADD COLUMN realtime INTEGER;"};
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final String[] f25960k = {"has_realtime", "ALTER TABLE queue ADD COLUMN has_realtime INTEGER;", "retry_count", "ALTER TABLE queue ADD COLUMN retry_count INTEGER;"};
+    public static final String[] f26781k = {"has_realtime", "ALTER TABLE queue ADD COLUMN has_realtime INTEGER;", "retry_count", "ALTER TABLE queue ADD COLUMN retry_count INTEGER;"};
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final String[] f25961l = {"session_scoped", "ALTER TABLE event_filters ADD COLUMN session_scoped BOOLEAN;"};
+    public static final String[] f26782l = {"session_scoped", "ALTER TABLE event_filters ADD COLUMN session_scoped BOOLEAN;"};
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public static final String[] f25962m = {"session_scoped", "ALTER TABLE property_filters ADD COLUMN session_scoped BOOLEAN;"};
+    public static final String[] f26783m = {"session_scoped", "ALTER TABLE property_filters ADD COLUMN session_scoped BOOLEAN;"};
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public static final String[] f25963n = {"previous_install_count", "ALTER TABLE app2 ADD COLUMN previous_install_count INTEGER;"};
+    public static final String[] f26784n = {"previous_install_count", "ALTER TABLE app2 ADD COLUMN previous_install_count INTEGER;"};
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public static final String[] f25964o = {"consent_source", "ALTER TABLE consent_settings ADD COLUMN consent_source INTEGER;", "dma_consent_settings", "ALTER TABLE consent_settings ADD COLUMN dma_consent_settings TEXT;", "storage_consent_at_bundling", "ALTER TABLE consent_settings ADD COLUMN storage_consent_at_bundling TEXT;"};
+    public static final String[] f26785o = {"consent_source", "ALTER TABLE consent_settings ADD COLUMN consent_source INTEGER;", "dma_consent_settings", "ALTER TABLE consent_settings ADD COLUMN dma_consent_settings TEXT;", "storage_consent_at_bundling", "ALTER TABLE consent_settings ADD COLUMN storage_consent_at_bundling TEXT;"};
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public static final String[] f25965p = {"idempotent", "CREATE INDEX IF NOT EXISTS trigger_uris_index ON trigger_uris (app_id);"};
+    public static final String[] f26786p = {"idempotent", "CREATE INDEX IF NOT EXISTS trigger_uris_index ON trigger_uris (app_id);"};
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final s f25966d;
+    public final s f26787d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final pd f25967e;
+    public final pd f26788e;
 
     public t(me meVar) {
         super(meVar);
-        this.f25967e = new pd(this.f25625a.e());
-        this.f25625a.w();
-        this.f25966d = new s(this, this.f25625a.d(), "google_app_measurement.db");
+        this.f26788e = new pd(this.f26446a.e());
+        this.f26446a.w();
+        this.f26787d = new s(this, this.f26446a.d(), "google_app_measurement.db");
     }
 
     public static final String T(List list) {
@@ -101,16 +101,16 @@ public final class t extends xd {
         n9.m.l(teVar);
         h();
         j();
-        String str = teVar.f25995a;
-        String str2 = teVar.f25996c;
+        String str = teVar.f26816a;
+        String str2 = teVar.f26817c;
         if (B0(str, str2) == null) {
             if (ve.r0(str2)) {
-                if (p0("select count(1) from user_attributes where app_id=? and name not like '!_%' escape '!'", new String[]{str}) >= this.f25625a.w().F(str, z4.W, 25, 100)) {
+                if (p0("select count(1) from user_attributes where app_id=? and name not like '!_%' escape '!'", new String[]{str}) >= this.f26446a.w().F(str, z4.W, 25, 100)) {
                     return false;
                 }
             } else if (!"_npa".equals(str2)) {
                 long jP0 = p0("select count(1) from user_attributes where app_id=? and origin=? AND name like '!_%' escape '!'", new String[]{str, teVar.b});
-                this.f25625a.w();
+                this.f26446a.w();
                 if (jP0 >= 25) {
                     return false;
                 }
@@ -120,16 +120,16 @@ public final class t extends xd {
         contentValues.put("app_id", str);
         contentValues.put("origin", teVar.b);
         contentValues.put("name", str2);
-        contentValues.put("set_timestamp", Long.valueOf(teVar.f25997d));
-        o0(contentValues, "value", teVar.f25998e);
+        contentValues.put("set_timestamp", Long.valueOf(teVar.f26818d));
+        o0(contentValues, "value", teVar.f26819e);
         try {
             if (u0().insertWithOnConflict("user_attributes", null, contentValues, 5) != -1) {
                 return true;
             }
-            this.f25625a.a().o().b("Failed to insert/update user property (got -1). appId", w5.x(str));
+            this.f26446a.a().o().b("Failed to insert/update user property (got -1). appId", w5.x(str));
             return true;
         } catch (SQLiteException e10) {
-            this.f25625a.a().o().c("Error storing user property. appId", w5.x(teVar.f25995a), e10);
+            this.f26446a.a().o().c("Error storing user property. appId", w5.x(teVar.f26816a), e10);
             return true;
         }
     }
@@ -164,7 +164,7 @@ public final class t extends xd {
                             try {
                                 te teVar = new te(str3, cursorQuery.getString(2), str4, j10, objX);
                                 if (cursorQuery.moveToNext()) {
-                                    this.f25625a.a().o().b("Got multiple records for user property, expected one. appId", w5.x(str3));
+                                    this.f26446a.a().o().b("Got multiple records for user property, expected one. appId", w5.x(str3));
                                 }
                                 cursorQuery.close();
                                 return teVar;
@@ -173,7 +173,7 @@ public final class t extends xd {
                             }
                         }
                         sQLiteException = e;
-                        g7 g7Var = this.f25625a;
+                        g7 g7Var = this.f26446a;
                         g7Var.a().o().d("Error querying user property. appId", w5.x(str3), g7Var.D().c(str4), sQLiteException);
                     }
                 } catch (Throwable th3) {
@@ -222,7 +222,7 @@ public final class t extends xd {
         Cursor cursorQuery = null;
         try {
             try {
-                g7 g7Var = this.f25625a;
+                g7 g7Var = this.f26446a;
                 g7Var.w();
                 cursorQuery = u0().query("user_attributes", new String[]{"name", "origin", "set_timestamp", "value"}, "app_id=?", new String[]{str}, null, null, "rowid", "1000");
                 try {
@@ -250,7 +250,7 @@ public final class t extends xd {
                                 str = str2;
                             } catch (SQLiteException e10) {
                                 e = e10;
-                                this.f25625a.a().o().c("Error querying user properties. appId", w5.x(str2), e);
+                                this.f26446a.a().o().c("Error querying user properties. appId", w5.x(str2), e);
                                 arrayList = Collections.EMPTY_LIST;
                             }
                         }
@@ -303,7 +303,7 @@ public final class t extends xd {
                         e = e10;
                         cursor = null;
                         try {
-                            this.f25625a.a().o().d("(2)Error querying user properties", w5.x(str), str4, e);
+                            this.f26446a.a().o().d("(2)Error querying user properties", w5.x(str), str4, e);
                             arrayList = Collections.EMPTY_LIST;
                             cursorQuery = cursor;
                             if (cursorQuery != null) {
@@ -328,7 +328,7 @@ public final class t extends xd {
                 }
                 String[] strArr = (String[]) arrayList2.toArray(new String[arrayList2.size()]);
                 String string = sb2.toString();
-                g7 g7Var = this.f25625a;
+                g7 g7Var = this.f26446a;
                 g7Var.w();
                 cursorQuery = u0().query("user_attributes", new String[]{"name", "set_timestamp", "value", "origin"}, string, strArr, null, null, "rowid", "1001");
                 try {
@@ -356,7 +356,7 @@ public final class t extends xd {
                                         str5 = string3;
                                         cursor = cursorQuery;
                                         str4 = str5;
-                                        this.f25625a.a().o().d("(2)Error querying user properties", w5.x(str), str4, e);
+                                        this.f26446a.a().o().d("(2)Error querying user properties", w5.x(str), str4, e);
                                         arrayList = Collections.EMPTY_LIST;
                                         cursorQuery = cursor;
                                         if (cursorQuery != null) {
@@ -378,7 +378,7 @@ public final class t extends xd {
                                     e = e12;
                                     cursor = cursorQuery;
                                     str4 = str5;
-                                    this.f25625a.a().o().d("(2)Error querying user properties", w5.x(str), str4, e);
+                                    this.f26446a.a().o().d("(2)Error querying user properties", w5.x(str), str4, e);
                                     arrayList = Collections.EMPTY_LIST;
                                     cursorQuery = cursor;
                                 }
@@ -419,30 +419,30 @@ public final class t extends xd {
         n9.m.l(zzahVar);
         h();
         j();
-        String str = zzahVar.f7409f;
+        String str = zzahVar.f7483f;
         n9.m.l(str);
-        if (B0(str, zzahVar.f7411h.f7439g) == null) {
+        if (B0(str, zzahVar.f7485h.f7513g) == null) {
             long jP0 = p0("SELECT COUNT(1) FROM conditional_properties WHERE app_id=?", new String[]{str});
-            this.f25625a.w();
+            this.f26446a.w();
             if (jP0 >= 1000) {
                 return false;
             }
         }
         ContentValues contentValues = new ContentValues();
         contentValues.put("app_id", str);
-        contentValues.put("origin", zzahVar.f7410g);
-        contentValues.put("name", zzahVar.f7411h.f7439g);
-        o0(contentValues, "value", n9.m.l(zzahVar.f7411h.zza()));
-        contentValues.put("active", Boolean.valueOf(zzahVar.f7413j));
-        contentValues.put("trigger_event_name", zzahVar.f7414k);
-        contentValues.put("trigger_timeout", Long.valueOf(zzahVar.f7416m));
-        g7 g7Var = this.f25625a;
-        contentValues.put("timed_out_event", g7Var.C().T(zzahVar.f7415l));
-        contentValues.put("creation_timestamp", Long.valueOf(zzahVar.f7412i));
-        contentValues.put("triggered_event", g7Var.C().T(zzahVar.f7417n));
-        contentValues.put("triggered_timestamp", Long.valueOf(zzahVar.f7411h.f7440h));
-        contentValues.put("time_to_live", Long.valueOf(zzahVar.f7418o));
-        contentValues.put("expired_event", g7Var.C().T(zzahVar.f7419p));
+        contentValues.put("origin", zzahVar.f7484g);
+        contentValues.put("name", zzahVar.f7485h.f7513g);
+        o0(contentValues, "value", n9.m.l(zzahVar.f7485h.zza()));
+        contentValues.put("active", Boolean.valueOf(zzahVar.f7487j));
+        contentValues.put("trigger_event_name", zzahVar.f7488k);
+        contentValues.put("trigger_timeout", Long.valueOf(zzahVar.f7490m));
+        g7 g7Var = this.f26446a;
+        contentValues.put("timed_out_event", g7Var.C().T(zzahVar.f7489l));
+        contentValues.put("creation_timestamp", Long.valueOf(zzahVar.f7486i));
+        contentValues.put("triggered_event", g7Var.C().T(zzahVar.f7491n));
+        contentValues.put("triggered_timestamp", Long.valueOf(zzahVar.f7485h.f7514h));
+        contentValues.put("time_to_live", Long.valueOf(zzahVar.f7492o));
+        contentValues.put("expired_event", g7Var.C().T(zzahVar.f7493p));
         try {
             if (u0().insertWithOnConflict("conditional_properties", null, contentValues, 5) != -1) {
                 return true;
@@ -450,7 +450,7 @@ public final class t extends xd {
             g7Var.a().o().b("Failed to insert/update conditional user property (got -1)", w5.x(str));
             return true;
         } catch (SQLiteException e10) {
-            this.f25625a.a().o().c("Error storing conditional user property", w5.x(str), e10);
+            this.f26446a.a().o().c("Error storing conditional user property", w5.x(str), e10);
             return true;
         }
     }
@@ -461,7 +461,7 @@ public final class t extends xd {
         n9.m.l(o6Var);
         n9.m.f(str);
         n9.m.l(l10);
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         byte[] bArrD = o6Var.d();
         g7Var.a().w().c("Saving complex main event, appId, data size", g7Var.D().a(str), Integer.valueOf(bArrD.length));
         ContentValues contentValues = new ContentValues();
@@ -476,7 +476,7 @@ public final class t extends xd {
             g7Var.a().o().b("Failed to insert complex main event (got -1). appId", w5.x(str));
             return false;
         } catch (SQLiteException e10) {
-            this.f25625a.a().o().c("Error storing complex main event. appId", w5.x(str), e10);
+            this.f26446a.a().o().c("Error storing complex main event. appId", w5.x(str), e10);
             return false;
         }
     }
@@ -521,7 +521,7 @@ public final class t extends xd {
                     try {
                         zzah zzahVar = new zzah(str, str4, new zzpl(str3, cursorQuery.getLong(8), objX, str4), cursorQuery.getLong(6), z10, string2, zzbgVar, j10, (zzbg) meVar.K0().N(cursorQuery.getBlob(7), creator), cursorQuery.getLong(9), (zzbg) meVar.K0().N(cursorQuery.getBlob(10), creator));
                         if (cursorQuery.moveToNext()) {
-                            g7 g7Var = this.f25625a;
+                            g7 g7Var = this.f26446a;
                             g7Var.a().o().c("Got multiple records for conditional property, expected one", w5.x(str), g7Var.D().c(str3));
                         }
                         cursorQuery.close();
@@ -552,7 +552,7 @@ public final class t extends xd {
             }
             throw th;
         }
-        g7 g7Var2 = this.f25625a;
+        g7 g7Var2 = this.f26446a;
         g7Var2.a().o().d("Error querying conditional property", w5.x(str), g7Var2.D().c(str3), e);
         if (cursorQuery != null) {
             cursorQuery.close();
@@ -580,14 +580,14 @@ public final class t extends xd {
                             cursorRawQuery.close();
                             return bundleQ;
                         } catch (IOException e10) {
-                            this.f25625a.a().o().c("Failed to retrieve default event parameters. appId", w5.x(str), e10);
+                            this.f26446a.a().o().c("Failed to retrieve default event parameters. appId", w5.x(str), e10);
                         }
                     } else {
-                        this.f25625a.a().w().a("Default event parameters not found");
+                        this.f26446a.a().w().a("Default event parameters not found");
                     }
                 } catch (SQLiteException e11) {
                     e = e11;
-                    this.f25625a.a().o().b("Error selecting default event parameters", e);
+                    this.f26446a.a().o().b("Error selecting default event parameters", e);
                 }
             } catch (Throwable th2) {
                 th = th2;
@@ -621,7 +621,7 @@ public final class t extends xd {
         try {
             return u0().delete("conditional_properties", "app_id=? and name=?", new String[]{str, str2});
         } catch (SQLiteException e10) {
-            g7 g7Var = this.f25625a;
+            g7 g7Var = this.f26446a;
             g7Var.a().o().d("Error deleting conditional property", w5.x(str), g7Var.D().c(str2), e10);
             return 0;
         }
@@ -631,7 +631,7 @@ public final class t extends xd {
         try {
             return q0("select count(*) from raw_events where app_id=? and timestamp >= ? and name not like '!_%' escape '!' limit 1;", new String[]{str, String.valueOf(j10)}, 0L) <= 0 && q0("select count(*) from raw_events where app_id=? and timestamp >= ? and name like '!_%' escape '!' limit 1;", new String[]{str, String.valueOf(j10)}, 0L) > 0;
         } catch (SQLiteException e10) {
-            this.f25625a.a().o().b("Error checking backfill conditions", e10);
+            this.f26446a.a().o().b("Error checking backfill conditions", e10);
             return false;
         }
     }
@@ -692,21 +692,21 @@ public final class t extends xd {
                                                 a7Var = (com.google.android.gms.internal.measurement.a7) ((com.google.android.gms.internal.measurement.z6) re.W(com.google.android.gms.internal.measurement.a7.m0(), cursorQuery.getBlob(0))).t();
                                                 try {
                                                     if (cursorQuery.moveToNext()) {
-                                                        this.f25625a.a().r().b("Get multiple raw event metadata records, expected one. appId", w5.x(str4));
+                                                        this.f26446a.a().r().b("Get multiple raw event metadata records, expected one. appId", w5.x(str4));
                                                     }
                                                     cursorQuery.close();
                                                     cursorQuery.close();
                                                 } catch (SQLiteException e10) {
                                                     e = e10;
                                                     cursor2 = cursorQuery;
-                                                    this.f25625a.a().o().c("Data loss. Error selecting raw event. appId", w5.x(str4), e);
+                                                    this.f26446a.a().o().c("Data loss. Error selecting raw event. appId", w5.x(str4), e);
                                                     if (cursor2 != null) {
                                                         cursor2.close();
                                                     }
                                                 }
                                                 a7Var2 = a7Var;
                                             } catch (IOException e11) {
-                                                this.f25625a.a().o().c("Data loss. Failed to merge raw event metadata. appId", w5.x(str4), e11);
+                                                this.f26446a.a().o().c("Data loss. Failed to merge raw event metadata. appId", w5.x(str4), e11);
                                                 cursorQuery.close();
                                             }
                                             if (a7Var2 != null) {
@@ -719,7 +719,7 @@ public final class t extends xd {
                                                 }
                                             }
                                         } else {
-                                            this.f25625a.a().o().b("Raw event metadata record is missing. appId", w5.x(str4));
+                                            this.f26446a.a().o().b("Raw event metadata record is missing. appId", w5.x(str4));
                                         }
                                         cursorQuery.close();
                                     } catch (Throwable th2) {
@@ -756,11 +756,11 @@ public final class t extends xd {
                         g7Var.a().o().c("Failed to update raw event. appId, updatedRows", w5.x(str3), Long.valueOf(jUpdate));
                     }
                 } catch (SQLiteException e14) {
-                    this.f25625a.a().o().c("Error updating raw event. appId", w5.x(a0Var.f25314a), e14);
+                    this.f26446a.a().o().c("Error updating raw event. appId", w5.x(a0Var.f26135a), e14);
                 }
                 me meVar = this.b;
                 re reVarK0 = meVar.K0();
-                com.google.android.gms.internal.measurement.o6 o6Var = qVar.f25875d;
+                com.google.android.gms.internal.measurement.o6 o6Var = qVar.f26696d;
                 Bundle bundle3 = new Bundle();
                 for (com.google.android.gms.internal.measurement.s6 s6Var : o6Var.F()) {
                     if (s6Var.P()) {
@@ -772,7 +772,7 @@ public final class t extends xd {
                     } else if (s6Var.H()) {
                         bundle3.putString(s6Var.G(), s6Var.J());
                     } else if (s6Var.R().isEmpty()) {
-                        reVarK0.f25625a.a().o().b("Unexpected parameter type for parameter", s6Var);
+                        reVarK0.f26446a.a().o().b("Unexpected parameter type for parameter", s6Var);
                     } else {
                         bundle3.putParcelableArray(s6Var.G(), re.Y(s6Var.R()));
                     }
@@ -784,9 +784,9 @@ public final class t extends xd {
                     string = "";
                 }
                 x5 x5Var = new x5(strJ, string, bundle3, o6Var.L());
-                g7Var = this.f25625a;
-                Bundle bundle4 = x5Var.f26090d;
-                String str5 = x5Var.f26088a;
+                g7Var = this.f26446a;
+                Bundle bundle4 = x5Var.f26911d;
+                String str5 = x5Var.f26909a;
                 ve veVarC = g7Var.C();
                 if (str5.equals("_cmp")) {
                     bundle2 = new Bundle(bundle);
@@ -802,20 +802,20 @@ public final class t extends xd {
                 }
                 me meVar3 = meVar;
                 veVarC.w(bundle4, bundle2);
-                a0Var = new a0(this.f25625a, x5Var.b, str4, o6Var.J(), o6Var.L(), o6Var.O(), bundle4);
-                j10 = qVar.f25873a;
+                a0Var = new a0(this.f26446a, x5Var.b, str4, o6Var.J(), o6Var.L(), o6Var.O(), bundle4);
+                j10 = qVar.f26694a;
                 long j11 = qVar.b;
-                boolean z10 = qVar.f25874c;
+                boolean z10 = qVar.f26695c;
                 h();
                 j();
                 n9.m.l(a0Var);
-                str3 = a0Var.f25314a;
+                str3 = a0Var.f26135a;
                 n9.m.f(str3);
                 byte[] bArrD = meVar3.K0().J(a0Var).d();
                 contentValues = new ContentValues();
                 contentValues.put("app_id", str3);
                 contentValues.put("name", a0Var.b);
-                contentValues.put("timestamp", Long.valueOf(a0Var.f25316d));
+                contentValues.put("timestamp", Long.valueOf(a0Var.f26137d));
                 contentValues.put("metadata_fingerprint", Long.valueOf(j11));
                 contentValues.put("data", bArrD);
                 contentValues.put("realtime", Integer.valueOf(z10 ? 1 : 0));
@@ -833,7 +833,7 @@ public final class t extends xd {
         Cursor cursorQuery = null;
         try {
             try {
-                g7 g7Var = this.f25625a;
+                g7 g7Var = this.f26446a;
                 g7Var.w();
                 cursorQuery = u0().query("conditional_properties", new String[]{"app_id", "origin", "name", "value", "active", "trigger_event_name", "trigger_timeout", "timed_out_event", "creation_timestamp", "triggered_event", "triggered_timestamp", "time_to_live", "expired_event"}, str, strArr, null, null, "rowid", "1001");
                 if (cursorQuery.moveToFirst()) {
@@ -862,7 +862,7 @@ public final class t extends xd {
                     } while (cursorQuery.moveToNext());
                 }
             } catch (SQLiteException e10) {
-                this.f25625a.a().o().b("Error querying conditional user property value", e10);
+                this.f26446a.a().o().b("Error querying conditional user property value", e10);
                 arrayList = Collections.EMPTY_LIST;
             }
             return arrayList;
@@ -905,15 +905,15 @@ public final class t extends xd {
                     if (RawQuery.moveToFirst()) {
                         q8VarF = q8.f(RawQuery.getString(0), RawQuery.getInt(1));
                     } else {
-                        this.f25625a.a().w().a("No data found");
+                        this.f26446a.a().w().a("No data found");
                     }
                 } catch (SQLiteException e11) {
                     e10 = e11;
-                    this.f25625a.a().o().b("Error querying database.", e10);
+                    this.f26446a.a().o().b("Error querying database.", e10);
                     if (RawQuery != 0) {
                     }
                     if (q8VarF == null) {
-                        return q8.f25885c;
+                        return q8.f26706c;
                     }
                     return q8VarF;
                 }
@@ -937,7 +937,7 @@ public final class t extends xd {
         }
         RawQuery.close();
         if (q8VarF == null) {
-            return q8.f25885c;
+            return q8.f26706c;
         }
         return q8VarF;
     }
@@ -999,7 +999,7 @@ public final class t extends xd {
                         c6Var.Y(cursorQuery.getLong(30));
                         c6Var.a0(cursorQuery.getLong(31));
                         vf.a();
-                        g7 g7Var = this.f25625a;
+                        g7 g7Var = this.f26446a;
                         if (g7Var.w().H(str, z4.Q0)) {
                             c6Var.c0(cursorQuery.getInt(32));
                             c6Var.k0(cursorQuery.getLong(35));
@@ -1033,7 +1033,7 @@ public final class t extends xd {
                     }
                 } catch (SQLiteException e10) {
                     e = e10;
-                    this.f25625a.a().o().c("Error querying app. appId", w5.x(str), e);
+                    this.f26446a.a().o().c("Error querying app. appId", w5.x(str), e);
                 }
             } catch (Throwable th2) {
                 th = th2;
@@ -1064,19 +1064,19 @@ public final class t extends xd {
         j();
         n9.m.l(zzohVar);
         n9.m.f(str);
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         long jA = g7Var.e().a();
-        y4 y4Var = z4.f26205w0;
+        y4 y4Var = z4.f27026w0;
         long jLongValue = jA - ((Long) y4Var.b(null)).longValue();
-        long j10 = zzohVar.f7427g;
+        long j10 = zzohVar.f7501g;
         if (j10 < jLongValue || j10 > ((Long) y4Var.b(null)).longValue() + jA) {
             g7Var.a().r().d("Storing trigger URI outside of the max retention time span. appId, now, timestamp", w5.x(str), Long.valueOf(jA), Long.valueOf(j10));
         }
         g7Var.a().w().a("Saving trigger URI");
         ContentValues contentValues = new ContentValues();
         contentValues.put("app_id", str);
-        contentValues.put("trigger_uri", zzohVar.f7426f);
-        contentValues.put(Payload.SOURCE, Integer.valueOf(zzohVar.f7428h));
+        contentValues.put("trigger_uri", zzohVar.f7500f);
+        contentValues.put(Payload.SOURCE, Integer.valueOf(zzohVar.f7502h));
         contentValues.put("timestamp_millis", Long.valueOf(j10));
         try {
             if (u0().insert("trigger_uris", null, contentValues) != -1) {
@@ -1085,7 +1085,7 @@ public final class t extends xd {
             g7Var.a().o().b("Failed to insert trigger URI (got -1). appId", w5.x(str));
             return false;
         } catch (SQLiteException e10) {
-            this.f25625a.a().o().c("Error storing trigger URI. appId", w5.x(str), e10);
+            this.f26446a.a().o().c("Error storing trigger URI. appId", w5.x(str), e10);
             return false;
         }
     }
@@ -1137,7 +1137,7 @@ public final class t extends xd {
         contentValues.put("target_os_version", Long.valueOf(c6Var.X()));
         contentValues.put("session_stitching_token_hash", Long.valueOf(c6Var.Z()));
         vf.a();
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         if (g7Var.w().H(strO0, z4.Q0)) {
             contentValues.put("ad_services_version", Integer.valueOf(c6Var.b0()));
             contentValues.put("attribution_eligibility_status", Long.valueOf(c6Var.j0()));
@@ -1171,7 +1171,7 @@ public final class t extends xd {
                 g7Var.a().o().b("Failed to insert/update app (got -1). appId", w5.x(strO0));
             }
         } catch (SQLiteException e10) {
-            this.f25625a.a().o().c("Error storing app. appId", w5.x(strO0), e10);
+            this.f26446a.a().o().c("Error storing app. appId", w5.x(strO0), e10);
         }
     }
 
@@ -1205,7 +1205,7 @@ public final class t extends xd {
                 cursorRawQuery.close();
                 return string;
             } catch (SQLiteException e10) {
-                this.f25625a.a().o().c("Database error", str, e10);
+                this.f26446a.a().o().c("Database error", str, e10);
                 throw e10;
             }
         } catch (Throwable th2) {
@@ -1234,49 +1234,49 @@ public final class t extends xd {
                 if (cursorQuery.moveToFirst()) {
                     if (cursorQuery.getLong(0) == j10) {
                         pVar.b = cursorQuery.getLong(1);
-                        pVar.f25833a = cursorQuery.getLong(2);
-                        pVar.f25834c = cursorQuery.getLong(3);
-                        pVar.f25835d = cursorQuery.getLong(4);
-                        pVar.f25836e = cursorQuery.getLong(5);
-                        pVar.f25837f = cursorQuery.getLong(6);
-                        pVar.f25838g = cursorQuery.getLong(7);
+                        pVar.f26654a = cursorQuery.getLong(2);
+                        pVar.f26655c = cursorQuery.getLong(3);
+                        pVar.f26656d = cursorQuery.getLong(4);
+                        pVar.f26657e = cursorQuery.getLong(5);
+                        pVar.f26658f = cursorQuery.getLong(6);
+                        pVar.f26659g = cursorQuery.getLong(7);
                     }
                     if (z10) {
                         pVar.b += j11;
                     }
                     if (z11) {
-                        pVar.f25833a += j11;
+                        pVar.f26654a += j11;
                     }
                     if (z12) {
-                        pVar.f25834c += j11;
+                        pVar.f26655c += j11;
                     }
                     if (z13) {
-                        pVar.f25835d += j11;
+                        pVar.f26656d += j11;
                     }
                     if (z14) {
-                        pVar.f25836e += j11;
+                        pVar.f26657e += j11;
                     }
                     if (z15) {
-                        pVar.f25837f += j11;
+                        pVar.f26658f += j11;
                     }
                     if (z16) {
-                        pVar.f25838g += j11;
+                        pVar.f26659g += j11;
                     }
                     ContentValues contentValues = new ContentValues();
                     contentValues.put("day", Long.valueOf(j10));
-                    contentValues.put("daily_public_events_count", Long.valueOf(pVar.f25833a));
+                    contentValues.put("daily_public_events_count", Long.valueOf(pVar.f26654a));
                     contentValues.put("daily_events_count", Long.valueOf(pVar.b));
-                    contentValues.put("daily_conversions_count", Long.valueOf(pVar.f25834c));
-                    contentValues.put("daily_error_events_count", Long.valueOf(pVar.f25835d));
-                    contentValues.put("daily_realtime_events_count", Long.valueOf(pVar.f25836e));
-                    contentValues.put("daily_realtime_dcu_count", Long.valueOf(pVar.f25837f));
-                    contentValues.put("daily_registered_triggers_count", Long.valueOf(pVar.f25838g));
+                    contentValues.put("daily_conversions_count", Long.valueOf(pVar.f26655c));
+                    contentValues.put("daily_error_events_count", Long.valueOf(pVar.f26656d));
+                    contentValues.put("daily_realtime_events_count", Long.valueOf(pVar.f26657e));
+                    contentValues.put("daily_realtime_dcu_count", Long.valueOf(pVar.f26658f));
+                    contentValues.put("daily_registered_triggers_count", Long.valueOf(pVar.f26659g));
                     sQLiteDatabaseU0.update("apps", contentValues, "app_id=?", strArr);
                 } else {
-                    this.f25625a.a().r().b("Not updating daily counts, app is not known. appId", w5.x(str));
+                    this.f26446a.a().r().b("Not updating daily counts, app is not known. appId", w5.x(str));
                 }
             } catch (SQLiteException e10) {
-                this.f25625a.a().o().c("Error updating daily counts. appId", w5.x(str), e10);
+                this.f26446a.a().o().c("Error updating daily counts. appId", w5.x(str), e10);
             }
             return pVar;
         } finally {
@@ -1291,23 +1291,23 @@ public final class t extends xd {
             SQLiteDatabase sQLiteDatabaseU0 = u0();
             String asString = contentValues.getAsString("app_id");
             if (asString == null) {
-                this.f25625a.a().q().b("Value of the primary key is not set.", w5.x("app_id"));
+                this.f26446a.a().q().b("Value of the primary key is not set.", w5.x("app_id"));
                 return;
             }
             StringBuilder sb2 = new StringBuilder(10);
             sb2.append("app_id");
             sb2.append(" = ?");
             if (sQLiteDatabaseU0.update("consent_settings", contentValues, sb2.toString(), new String[]{asString}) == 0 && sQLiteDatabaseU0.insertWithOnConflict("consent_settings", null, contentValues, 5) == -1) {
-                this.f25625a.a().o().c("Failed to insert/update table (got -1). key", w5.x("consent_settings"), w5.x("app_id"));
+                this.f26446a.a().o().c("Failed to insert/update table (got -1). key", w5.x("consent_settings"), w5.x("app_id"));
             }
         } catch (SQLiteException e10) {
-            this.f25625a.a().o().d("Error storing into table. key", w5.x("consent_settings"), w5.x("app_id"), e10);
+            this.f26446a.a().o().d("Error storing into table. key", w5.x("consent_settings"), w5.x("app_id"), e10);
         }
     }
 
     /* JADX WARN: Code duplicated, block: B:29:0x008a  */
     /* JADX WARN: Code duplicated, block: B:36:? A[SYNTHETIC] */
-    public final o N0(String str) throws Throwable {
+    public final o N0(String str) {
         Throwable th2;
         Cursor cursorQuery;
         n9.m.f(str);
@@ -1323,7 +1323,7 @@ public final class t extends xd {
                         String string = cursorQuery.getString(1);
                         String string2 = cursorQuery.getString(2);
                         if (cursorQuery.moveToNext()) {
-                            this.f25625a.a().o().b("Got multiple records for app config, expected one. appId", w5.x(str));
+                            this.f26446a.a().o().b("Got multiple records for app config, expected one. appId", w5.x(str));
                         }
                         if (blob != null) {
                             o oVar = new o(blob, string, string2);
@@ -1333,7 +1333,7 @@ public final class t extends xd {
                     }
                 } catch (SQLiteException e10) {
                     e = e10;
-                    this.f25625a.a().o().c("Error querying remote config. appId", w5.x(str), e);
+                    this.f26446a.a().o().c("Error querying remote config. appId", w5.x(str), e);
                 }
             } catch (Throwable th3) {
                 th2 = th3;
@@ -1389,14 +1389,14 @@ public final class t extends xd {
                         }
                         b0 b0Var = new b0(str2, str3, j10, j11, cursorQuery.isNull(8) ? 0L : cursorQuery.getLong(8), j12, j13, lValueOf, lValueOf2, lValueOf3, boolValueOf);
                         if (cursorQuery.moveToNext()) {
-                            this.f25625a.a().o().b("Got multiple records for event aggregates, expected one. appId", w5.x(str2));
+                            this.f26446a.a().o().b("Got multiple records for event aggregates, expected one. appId", w5.x(str2));
                         }
                         cursorQuery.close();
                         return b0Var;
                     }
                 } catch (SQLiteException e10) {
                     e = e10;
-                    g7 g7Var = this.f25625a;
+                    g7 g7Var = this.f26446a;
                     g7Var.a().o().d("Error querying events. appId", w5.x(str2), g7Var.D().a(str3), e);
                 }
             } catch (Throwable th2) {
@@ -1431,7 +1431,7 @@ public final class t extends xd {
         n9.m.f(a7Var.F());
         n9.m.p(a7Var.w2());
         u();
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         long jA = g7Var.e().a();
         long jX2 = a7Var.x2();
         g7Var.w();
@@ -1446,7 +1446,7 @@ public final class t extends xd {
         }
         try {
             byte[] bArrV = this.b.K0().V(a7Var.d());
-            g7 g7Var2 = this.f25625a;
+            g7 g7Var2 = this.f26446a;
             g7Var2.a().w().b("Saving bundle, size", Integer.valueOf(bArrV.length));
             ContentValues contentValues = new ContentValues();
             contentValues.put("app_id", a7Var.F());
@@ -1463,11 +1463,11 @@ public final class t extends xd {
                 g7Var2.a().o().b("Failed to insert bundle (got -1). appId", w5.x(a7Var.F()));
                 return false;
             } catch (SQLiteException e10) {
-                this.f25625a.a().o().c("Error storing bundle. appId", w5.x(a7Var.F()), e10);
+                this.f26446a.a().o().c("Error storing bundle. appId", w5.x(a7Var.F()), e10);
                 return false;
             }
         } catch (IOException e11) {
-            this.f25625a.a().o().c("Data loss. Failed to serialize bundle. appId", w5.x(a7Var.F()), e11);
+            this.f26446a.a().o().c("Data loss. Failed to serialize bundle. appId", w5.x(a7Var.F()), e11);
             return false;
         }
     }
@@ -1477,25 +1477,25 @@ public final class t extends xd {
         h();
         j();
         ContentValues contentValues = new ContentValues();
-        String str2 = b0Var.f25346a;
+        String str2 = b0Var.f26167a;
         contentValues.put("app_id", str2);
         contentValues.put("name", b0Var.b);
-        contentValues.put("lifetime_count", Long.valueOf(b0Var.f25347c));
-        contentValues.put("current_bundle_count", Long.valueOf(b0Var.f25348d));
-        contentValues.put("last_fire_timestamp", Long.valueOf(b0Var.f25350f));
-        contentValues.put("last_bundled_timestamp", Long.valueOf(b0Var.f25351g));
-        contentValues.put("last_bundled_day", b0Var.f25352h);
-        contentValues.put("last_sampled_complex_event_id", b0Var.f25353i);
-        contentValues.put("last_sampling_rate", b0Var.f25354j);
-        contentValues.put("current_session_count", Long.valueOf(b0Var.f25349e));
-        Boolean bool = b0Var.f25355k;
+        contentValues.put("lifetime_count", Long.valueOf(b0Var.f26168c));
+        contentValues.put("current_bundle_count", Long.valueOf(b0Var.f26169d));
+        contentValues.put("last_fire_timestamp", Long.valueOf(b0Var.f26171f));
+        contentValues.put("last_bundled_timestamp", Long.valueOf(b0Var.f26172g));
+        contentValues.put("last_bundled_day", b0Var.f26173h);
+        contentValues.put("last_sampled_complex_event_id", b0Var.f26174i);
+        contentValues.put("last_sampling_rate", b0Var.f26175j);
+        contentValues.put("current_session_count", Long.valueOf(b0Var.f26170e));
+        Boolean bool = b0Var.f26176k;
         contentValues.put("last_exempt_from_sampling", (bool == null || !bool.booleanValue()) ? null : 1L);
         try {
             if (u0().insertWithOnConflict(str, null, contentValues, 5) == -1) {
-                this.f25625a.a().o().b("Failed to insert/update event aggregates (got -1). appId", w5.x(str2));
+                this.f26446a.a().o().b("Failed to insert/update event aggregates (got -1). appId", w5.x(str2));
             }
         } catch (SQLiteException e10) {
-            this.f25625a.a().o().c("Error storing event aggregates. appId", w5.x(b0Var.f25346a), e10);
+            this.f26446a.a().o().c("Error storing event aggregates. appId", w5.x(b0Var.f26167a), e10);
         }
     }
 
@@ -1506,13 +1506,13 @@ public final class t extends xd {
         try {
             u0().delete(str, "app_id=?", new String[]{str2});
         } catch (SQLiteException e10) {
-            this.f25625a.a().o().c("Error deleting snapshot. appId", w5.x(str2), e10);
+            this.f26446a.a().o().c("Error deleting snapshot. appId", w5.x(str2), e10);
         }
     }
 
     public final pe R(String str, long j10, byte[] bArr, String str2, String str3, int i10, int i11, long j11, long j12, long j13) {
         if (TextUtils.isEmpty(str2)) {
-            this.f25625a.a().v().a("Upload uri is null or empty. Destination is unknown. Dropping batch. ");
+            this.f26446a.a().v().a("Upload uri is null or empty. Destination is unknown. Dropping batch. ");
             return null;
         }
         try {
@@ -1520,9 +1520,9 @@ public final class t extends xd {
             za zaVarA = za.a(i10);
             if (zaVarA != za.GOOGLE_SIGNAL && zaVarA != za.GOOGLE_SIGNAL_PENDING && i11 > 0) {
                 ArrayList arrayList = new ArrayList();
-                Iterator it = v6Var.x().iterator();
+                Iterator it = v6Var.y().iterator();
                 while (it.hasNext()) {
-                    com.google.android.gms.internal.measurement.z6 z6Var = (com.google.android.gms.internal.measurement.z6) ((com.google.android.gms.internal.measurement.a7) it.next()).r();
+                    com.google.android.gms.internal.measurement.z6 z6Var = (com.google.android.gms.internal.measurement.z6) ((com.google.android.gms.internal.measurement.a7) it.next()).q();
                     z6Var.K0(i11);
                     arrayList.add((com.google.android.gms.internal.measurement.a7) z6Var.t());
                 }
@@ -1537,7 +1537,7 @@ public final class t extends xd {
                     }
                     String[] strArrSplit = str4.split("=", 2);
                     if (strArrSplit.length != 2) {
-                        this.f25625a.a().o().b("Invalid upload header: ", str4);
+                        this.f26446a.a().o().b("Invalid upload header: ", str4);
                         break;
                     }
                     map.put(strArrSplit[0], strArrSplit[1]);
@@ -1555,13 +1555,13 @@ public final class t extends xd {
             oeVar.j(i11);
             return oeVar.a();
         } catch (IOException e10) {
-            this.f25625a.a().o().c("Failed to queued MeasurementBatch from upload_queue. appId", str, e10);
+            this.f26446a.a().o().c("Failed to queued MeasurementBatch from upload_queue. appId", str, e10);
             return null;
         }
     }
 
     public final String S() {
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         long jA = g7Var.e().a();
         Locale locale = Locale.US;
         za zaVar = za.GOOGLE_SIGNAL;
@@ -1596,7 +1596,7 @@ public final class t extends xd {
         h();
         j();
         q8 q8VarJ = J(str);
-        q8 q8Var = q8.f25885c;
+        q8 q8Var = q8.f26706c;
         if (q8VarJ == q8Var) {
             L(str, q8Var);
         }
@@ -1625,17 +1625,17 @@ public final class t extends xd {
         return q8.f(M("select storage_consent_at_bundling from consent_settings where app_id=? limit 1;", new String[]{str}, ""), 100);
     }
 
-    public final void Y(String str, List list) throws Throwable {
+    public final void Y(String str, List list) {
         SQLiteDatabase sQLiteDatabase;
         boolean z10;
         n9.m.l(list);
         for (int i10 = 0; i10 < list.size(); i10++) {
-            com.google.android.gms.internal.measurement.w3 w3Var = (com.google.android.gms.internal.measurement.w3) ((com.google.android.gms.internal.measurement.x3) list.get(i10)).r();
+            com.google.android.gms.internal.measurement.w3 w3Var = (com.google.android.gms.internal.measurement.w3) ((com.google.android.gms.internal.measurement.x3) list.get(i10)).q();
             if (w3Var.C() != 0) {
                 for (int i11 = 0; i11 < w3Var.C(); i11++) {
-                    com.google.android.gms.internal.measurement.y3 y3Var = (com.google.android.gms.internal.measurement.y3) w3Var.D(i11).r();
+                    com.google.android.gms.internal.measurement.y3 y3Var = (com.google.android.gms.internal.measurement.y3) w3Var.D(i11).q();
                     com.google.android.gms.internal.measurement.y3 y3Var2 = (com.google.android.gms.internal.measurement.y3) y3Var.clone();
-                    String strB = r8.b(y3Var.x());
+                    String strB = r8.b(y3Var.y());
                     if (strB != null) {
                         y3Var2.z(strB);
                         z10 = true;
@@ -1643,14 +1643,14 @@ public final class t extends xd {
                         z10 = false;
                     }
                     int i12 = 0;
-                    while (i12 < y3Var.A()) {
+                    while (i12 < y3Var.B()) {
                         com.google.android.gms.internal.measurement.b4 b4VarC = y3Var.C(i12);
                         com.google.android.gms.internal.measurement.y3 y3Var3 = y3Var;
                         boolean z11 = z10;
-                        String strB2 = ab.b(b4VarC.O(), s8.f25946a, s8.b);
+                        String strB2 = ab.b(b4VarC.O(), s8.f26767a, s8.b);
                         if (strB2 != null) {
-                            com.google.android.gms.internal.measurement.a4 a4Var = (com.google.android.gms.internal.measurement.a4) b4VarC.r();
-                            a4Var.x(strB2);
+                            com.google.android.gms.internal.measurement.a4 a4Var = (com.google.android.gms.internal.measurement.a4) b4VarC.q();
+                            a4Var.y(strB2);
                             y3Var2.D(i12, (com.google.android.gms.internal.measurement.b4) a4Var.t());
                             z10 = true;
                         } else {
@@ -1665,14 +1665,14 @@ public final class t extends xd {
                     }
                 }
             }
-            if (w3Var.x() != 0) {
-                for (int i13 = 0; i13 < w3Var.x(); i13++) {
+            if (w3Var.y() != 0) {
+                for (int i13 = 0; i13 < w3Var.y(); i13++) {
                     com.google.android.gms.internal.measurement.h4 h4VarZ = w3Var.z(i13);
-                    String strB3 = ab.b(h4VarZ.H(), t8.f25980a, t8.b);
+                    String strB3 = ab.b(h4VarZ.H(), t8.f26801a, t8.b);
                     if (strB3 != null) {
-                        com.google.android.gms.internal.measurement.g4 g4Var = (com.google.android.gms.internal.measurement.g4) h4VarZ.r();
-                        g4Var.x(strB3);
-                        w3Var.A(i13, g4Var);
+                        com.google.android.gms.internal.measurement.g4 g4Var = (com.google.android.gms.internal.measurement.g4) h4VarZ.q();
+                        g4Var.y(strB3);
+                        w3Var.B(i13, g4Var);
                         list.set(i10, (com.google.android.gms.internal.measurement.x3) w3Var.t());
                     }
                 }
@@ -1704,7 +1704,7 @@ public final class t extends xd {
                     while (true) {
                         if (it2.hasNext()) {
                             if (!((com.google.android.gms.internal.measurement.z3) it2.next()).F()) {
-                                this.f25625a.a().r().c("Event filter with no ID. Audience definition ignored. appId, audienceId", w5.x(str), Integer.valueOf(iG));
+                                this.f26446a.a().r().c("Event filter with no ID. Audience definition ignored. appId, audienceId", w5.x(str), Integer.valueOf(iG));
                                 break;
                             }
                         } else {
@@ -1727,7 +1727,7 @@ public final class t extends xd {
                                                         n9.m.f(str);
                                                         n9.m.l(h4Var);
                                                         if (h4Var.H().isEmpty()) {
-                                                            this.f25625a.a().r().d("Property filter had no property name. Audience definition ignored. appId, audienceId, filterId", w5.x(str), Integer.valueOf(iG), String.valueOf(h4Var.F() ? Integer.valueOf(h4Var.G()) : null));
+                                                            this.f26446a.a().r().d("Property filter had no property name. Audience definition ignored. appId, audienceId, filterId", w5.x(str), Integer.valueOf(iG), String.valueOf(h4Var.F() ? Integer.valueOf(h4Var.G()) : null));
                                                         } else {
                                                             byte[] bArrD = h4Var.d();
                                                             ContentValues contentValues = new ContentValues();
@@ -1741,13 +1741,13 @@ public final class t extends xd {
                                                             contentValues.put("data", bArrD);
                                                             try {
                                                                 if (u0().insertWithOnConflict("property_filters", null, contentValues, 5) == -1) {
-                                                                    this.f25625a.a().o().b("Failed to insert property filter (got -1). appId", w5.x(str));
+                                                                    this.f26446a.a().o().b("Failed to insert property filter (got -1). appId", w5.x(str));
                                                                 } else {
                                                                     str2 = str3;
                                                                     it5 = it6;
                                                                 }
                                                             } catch (SQLiteException e10) {
-                                                                this.f25625a.a().o().c("Error storing property filter. appId", w5.x(str), e10);
+                                                                this.f26446a.a().o().c("Error storing property filter. appId", w5.x(str), e10);
                                                             }
                                                         }
                                                     }
@@ -1772,12 +1772,12 @@ public final class t extends xd {
                                                 contentValues2.put("data", bArrD2);
                                                 try {
                                                     if (u0().insertWithOnConflict("event_filters", null, contentValues2, 5) == -1) {
-                                                        this.f25625a.a().o().b("Failed to insert event filter (got -1). appId", w5.x(str));
+                                                        this.f26446a.a().o().b("Failed to insert event filter (got -1). appId", w5.x(str));
                                                     }
                                                     x3Var = x3Var2;
                                                     sQLiteDatabaseU0 = sQLiteDatabase;
                                                 } catch (SQLiteException e11) {
-                                                    this.f25625a.a().o().c("Error storing event filter. appId", w5.x(str), e11);
+                                                    this.f26446a.a().o().c("Error storing event filter. appId", w5.x(str), e11);
                                                     j();
                                                     h();
                                                     n9.m.f(str);
@@ -1788,7 +1788,7 @@ public final class t extends xd {
                                                     break;
                                                 }
                                             } else {
-                                                this.f25625a.a().r().d("Event filter had no event name. Audience definition ignored. appId, audienceId, filterId", w5.x(str), Integer.valueOf(iG), String.valueOf(z3Var.F() ? Integer.valueOf(z3Var.G()) : null));
+                                                this.f26446a.a().r().d("Event filter had no event name. Audience definition ignored. appId, audienceId, filterId", w5.x(str), Integer.valueOf(iG), String.valueOf(z3Var.F() ? Integer.valueOf(z3Var.G()) : null));
                                                 sQLiteDatabase = sQLiteDatabaseU0;
                                             }
                                             j();
@@ -1808,14 +1808,14 @@ public final class t extends xd {
                                     }
                                 }
                                 if (!((com.google.android.gms.internal.measurement.h4) it3.next()).F()) {
-                                    this.f25625a.a().r().c("Property filter with no ID. Audience definition ignored. appId, audienceId", w5.x(str), Integer.valueOf(iG));
+                                    this.f26446a.a().r().c("Property filter with no ID. Audience definition ignored. appId, audienceId", w5.x(str), Integer.valueOf(iG));
                                     break;
                                 }
                             }
                         }
                     }
                 } else {
-                    this.f25625a.a().r().b("Audience with no ID. appId", w5.x(str));
+                    this.f26446a.a().r().b("Audience with no ID. appId", w5.x(str));
                 }
             }
             sQLiteDatabase = sQLiteDatabaseU0;
@@ -1832,7 +1832,7 @@ public final class t extends xd {
             try {
                 long jP0 = p0("select count(1) from audience_filter_values where app_id=?", new String[]{str});
                 int i14 = 0;
-                int iMax = Math.max(0, Math.min(2000, this.f25625a.w().E(str, z4.V)));
+                int iMax = Math.max(0, Math.min(2000, this.f26446a.w().E(str, z4.V)));
                 if (jP0 > iMax) {
                     ArrayList arrayList2 = new ArrayList();
                     while (true) {
@@ -1859,7 +1859,7 @@ public final class t extends xd {
                     }
                 }
             } catch (SQLiteException e12) {
-                this.f25625a.a().o().c("Database error querying filters. appId", w5.x(str), e12);
+                this.f26446a.a().o().c("Database error querying filters. appId", w5.x(str), e12);
             }
             sQLiteDatabase.setTransactionSuccessful();
             sQLiteDatabase.endTransaction();
@@ -1869,20 +1869,20 @@ public final class t extends xd {
         }
     }
 
-    public final b0 Z(String str, com.google.android.gms.internal.measurement.o6 o6Var, String str2) throws Throwable {
+    public final b0 Z(String str, com.google.android.gms.internal.measurement.o6 o6Var, String str2) {
         b0 b0VarO = O("events", str, o6Var.J());
         if (b0VarO == null) {
-            g7 g7Var = this.f25625a;
+            g7 g7Var = this.f26446a;
             g7Var.a().r().c("Event aggregate wasn't created during raw event logging. appId, event", w5.x(str), g7Var.D().a(str2));
             return new b0(str, o6Var.J(), 1L, 1L, 1L, o6Var.L(), 0L, null, null, null, null);
         }
-        long j10 = b0VarO.f25349e + 1;
-        long j11 = b0VarO.f25348d + 1;
-        return new b0(b0VarO.f25346a, b0VarO.b, b0VarO.f25347c + 1, j11, j10, b0VarO.f25350f, b0VarO.f25351g, b0VarO.f25352h, b0VarO.f25353i, b0VarO.f25354j, b0VarO.f25355k);
+        long j10 = b0VarO.f26170e + 1;
+        long j11 = b0VarO.f26169d + 1;
+        return new b0(b0VarO.f26167a, b0VarO.b, b0VarO.f26168c + 1, j11, j10, b0VarO.f26171f, b0VarO.f26172g, b0VarO.f26173h, b0VarO.f26174i, b0VarO.f26175j, b0VarO.f26176k);
     }
 
     public final boolean a0() {
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         Context contextD = g7Var.d();
         g7Var.w();
         return contextD.getDatabasePath("google_app_measurement.db").exists();
@@ -1907,13 +1907,13 @@ public final class t extends xd {
         j();
         if (a0()) {
             me meVar = this.b;
-            long jA = meVar.L0().f26035f.a();
-            g7 g7Var = this.f25625a;
+            long jA = meVar.L0().f26856f.a();
+            g7 g7Var = this.f26446a;
             long jB = g7Var.e().b();
             long jAbs = Math.abs(jB - jA);
             g7Var.w();
             if (jAbs > k.r()) {
-                meVar.L0().f26035f.b(jB);
+                meVar.L0().f26856f.b(jB);
                 h();
                 j();
                 if (a0() && (iDelete = u0().delete("upload_queue", S(), new String[0])) > 0) {
@@ -1928,7 +1928,7 @@ public final class t extends xd {
                         u0().delete("upload_queue", "rowid in (SELECT rowid FROM upload_queue WHERE app_id=? ORDER BY rowid DESC LIMIT -1 OFFSET ?)", new String[]{str, String.valueOf(iE)});
                     }
                 } catch (SQLiteException e10) {
-                    this.f25625a.a().o().c("Error deleting over the limit queued batches. appId", w5.x(str), e10);
+                    this.f26446a.a().o().c("Error deleting over the limit queued batches. appId", w5.x(str), e10);
                 }
             }
         }
@@ -1949,7 +1949,7 @@ public final class t extends xd {
         contentValues.put("upload_uri", str2);
         contentValues.put("upload_headers", String.join("\r\n", arrayList));
         contentValues.put("upload_type", Integer.valueOf(zaVar.zza()));
-        g7 g7Var2 = this.f25625a;
+        g7 g7Var2 = this.f26446a;
         contentValues.put("creation_timestamp", Long.valueOf(g7Var2.e().a()));
         contentValues.put("retry_count", (Integer) 0);
         if (l10 != null) {
@@ -1963,13 +1963,13 @@ public final class t extends xd {
             g7Var2.a().o().b("Failed to insert MeasurementBatch (got -1) to upload_queue. appId", str);
             return -1L;
         } catch (SQLiteException e11) {
-            this.f25625a.a().o().c("Error storing MeasurementBatch to upload_queue. appId", str, e11);
+            this.f26446a.a().o().c("Error storing MeasurementBatch to upload_queue. appId", str, e11);
             return -1L;
         }
     }
 
     public final /* synthetic */ pd m0() {
-        return this.f25967e;
+        return this.f26788e;
     }
 
     /* JADX WARN: Code duplicated, block: B:30:0x00b5  */
@@ -1989,7 +1989,7 @@ public final class t extends xd {
             } catch (SQLiteException e10) {
                 e = e10;
                 try {
-                    this.f25625a.a().o().c("Error to querying MeasurementBatch from upload_queue. rowId", Long.valueOf(j10), e);
+                    this.f26446a.a().o().c("Error to querying MeasurementBatch from upload_queue. rowId", Long.valueOf(j10), e);
                 } catch (Throwable th2) {
                     th = th2;
                     cursor = cursorQuery;
@@ -2111,14 +2111,14 @@ public final class t extends xd {
                                         try {
                                             com.google.android.gms.internal.measurement.a7 a7Var = (com.google.android.gms.internal.measurement.a7) ((com.google.android.gms.internal.measurement.z6) re.W(com.google.android.gms.internal.measurement.a7.m0(), cursorRawQuery.getBlob(0))).t();
                                             if (cursorRawQuery.moveToNext()) {
-                                                this.f25625a.a().r().b("Get multiple raw event metadata records, expected one. appId", w5.x(r11));
+                                                this.f26446a.a().r().b("Get multiple raw event metadata records, expected one. appId", w5.x(r11));
                                             }
                                             cursorRawQuery.close();
                                             n9.m.l(a7Var);
-                                            ieVar.f25612a = a7Var;
-                                            g7Var = this.f25625a;
+                                            ieVar.f26433a = a7Var;
+                                            g7Var = this.f26446a;
                                             str3 = "app_id = ? and metadata_fingerprint = ?";
-                                            if (g7Var.w().H(null, z4.f26183l1)) {
+                                            if (g7Var.w().H(null, z4.f27004l1)) {
                                                 jQ0 = q0("select (rowid - 1) as max_rowid from raw_events where app_id = ? and metadata_fingerprint != ? order by rowid limit 1;", new String[]{r11, string}, -1L);
                                                 if (j11 == -1) {
                                                     j13 = j11;
@@ -2157,7 +2157,7 @@ public final class t extends xd {
                                                                 break;
                                                             }
                                                         } catch (IOException e10) {
-                                                            this.f25625a.a().o().c("Data loss. Failed to merge raw event. appId", w5.x(r11), e10);
+                                                            this.f26446a.a().o().c("Data loss. Failed to merge raw event. appId", w5.x(r11), e10);
                                                         }
                                                     } while (cursorQuery.moveToNext());
                                                 } else {
@@ -2166,20 +2166,20 @@ public final class t extends xd {
                                             } catch (SQLiteException e11) {
                                                 e = e11;
                                                 r10 = r11;
-                                                this.f25625a.a().o().c("Data loss. Error selecting raw event. appId", w5.x(r10), e);
+                                                this.f26446a.a().o().c("Data loss. Error selecting raw event. appId", w5.x(r10), e);
                                             }
                                             cursorRawQuery = cursorQuery;
                                         } catch (IOException e12) {
-                                            this.f25625a.a().o().c("Data loss. Failed to merge raw event metadata. appId", w5.x(r11), e12);
+                                            this.f26446a.a().o().c("Data loss. Failed to merge raw event metadata. appId", w5.x(r11), e12);
                                         }
                                     } else {
-                                        this.f25625a.a().o().b("Raw event metadata record is missing. appId", w5.x(r11));
+                                        this.f26446a.a().o().b("Raw event metadata record is missing. appId", w5.x(r11));
                                     }
                                 } catch (SQLiteException e13) {
                                     e = e13;
                                     cursorQuery = cursorRawQuery;
                                     r10 = string2;
-                                    this.f25625a.a().o().c("Data loss. Error selecting raw event. appId", w5.x(r10), e);
+                                    this.f26446a.a().o().c("Data loss. Error selecting raw event. appId", w5.x(r10), e);
                                     cursorRawQuery = cursorQuery;
                                     if (cursorRawQuery != null) {
                                         cursorRawQuery.close();
@@ -2217,18 +2217,18 @@ public final class t extends xd {
                                     r11 = IsEmpty;
                                     cursorRawQuery = sQLiteDatabaseU0.query("raw_events_metadata", new String[]{"metadata"}, "app_id = ? and metadata_fingerprint = ?", new String[]{r11, string}, null, null, "rowid", "2");
                                     if (cursorRawQuery.moveToFirst()) {
-                                        this.f25625a.a().o().b("Raw event metadata record is missing. appId", w5.x(r11));
+                                        this.f26446a.a().o().b("Raw event metadata record is missing. appId", w5.x(r11));
                                     } else {
                                         com.google.android.gms.internal.measurement.a7 a7Var2 = (com.google.android.gms.internal.measurement.a7) ((com.google.android.gms.internal.measurement.z6) re.W(com.google.android.gms.internal.measurement.a7.m0(), cursorRawQuery.getBlob(0))).t();
                                         if (cursorRawQuery.moveToNext()) {
-                                            this.f25625a.a().r().b("Get multiple raw event metadata records, expected one. appId", w5.x(r11));
+                                            this.f26446a.a().r().b("Get multiple raw event metadata records, expected one. appId", w5.x(r11));
                                         }
                                         cursorRawQuery.close();
                                         n9.m.l(a7Var2);
-                                        ieVar.f25612a = a7Var2;
-                                        g7Var = this.f25625a;
+                                        ieVar.f26433a = a7Var2;
+                                        g7Var = this.f26446a;
                                         str3 = "app_id = ? and metadata_fingerprint = ?";
-                                        if (g7Var.w().H(null, z4.f26183l1)) {
+                                        if (g7Var.w().H(null, z4.f27004l1)) {
                                             jQ0 = q0("select (rowid - 1) as max_rowid from raw_events where app_id = ? and metadata_fingerprint != ? order by rowid limit 1;", new String[]{r11, string}, -1L);
                                             if (j11 == -1) {
                                                 j13 = j11;
@@ -2279,7 +2279,7 @@ public final class t extends xd {
                                 cursorQuery = cursorRawQuery;
                                 r8 = IsEmpty;
                                 r10 = r8;
-                                this.f25625a.a().o().c("Data loss. Error selecting raw event. appId", w5.x(r10), e);
+                                this.f26446a.a().o().c("Data loss. Error selecting raw event. appId", w5.x(r10), e);
                                 cursorRawQuery = cursorQuery;
                                 if (cursorRawQuery != null) {
                                     cursorRawQuery.close();
@@ -2320,7 +2320,7 @@ public final class t extends xd {
         try {
             SQLiteDatabase sQLiteDatabaseU0 = u0();
             String[] strArr = {"rowId", "app_id", "measurement_batch", "upload_uri", "upload_headers", "upload_type", "retry_count", "creation_timestamp", "associated_row_id", "last_upload_timestamp"};
-            String strT = T(zzooVar.f7436f);
+            String strT = T(zzooVar.f7510f);
             String strS = S();
             StringBuilder sb2 = new StringBuilder(String.valueOf(strT).length() + 17 + strS.length());
             sb2.append("app_id=?");
@@ -2337,7 +2337,7 @@ public final class t extends xd {
             }
         } catch (SQLiteException e10) {
             try {
-                this.f25625a.a().o().c("Error to querying MeasurementBatch from upload_queue. appId", str, e10);
+                this.f26446a.a().o().c("Error to querying MeasurementBatch from upload_queue. appId", str, e10);
                 arrayList = Collections.EMPTY_LIST;
             } catch (Throwable th2) {
                 th = th2;
@@ -2385,7 +2385,7 @@ public final class t extends xd {
                 cursorRawQuery.close();
                 return j10;
             } catch (SQLiteException e10) {
-                this.f25625a.a().o().c("Database error", str, e10);
+                this.f26446a.a().o().c("Database error", str, e10);
                 throw e10;
             }
         } catch (Throwable th2) {
@@ -2402,10 +2402,10 @@ public final class t extends xd {
         n9.m.l(l10);
         try {
             if (u0().delete("upload_queue", "rowid=?", new String[]{l10.toString()}) != 1) {
-                this.f25625a.a().r().a("Deleted fewer rows from upload_queue than expected");
+                this.f26446a.a().r().a("Deleted fewer rows from upload_queue than expected");
             }
         } catch (SQLiteException e10) {
-            this.f25625a.a().o().b("Failed to delete a MeasurementBatch in a upload_queue table", e10);
+            this.f26446a.a().o().b("Failed to delete a MeasurementBatch in a upload_queue table", e10);
             throw e10;
         }
     }
@@ -2421,7 +2421,7 @@ public final class t extends xd {
                 cursorRawQuery.close();
                 return j10;
             } catch (SQLiteException e10) {
-                this.f25625a.a().o().c("Database error", str, e10);
+                this.f26446a.a().o().c("Database error", str, e10);
                 throw e10;
             }
         } catch (Throwable th2) {
@@ -2437,7 +2437,7 @@ public final class t extends xd {
     /* JADX WARN: Type inference failed for: r1v0 */
     /* JADX WARN: Type inference failed for: r1v1, types: [android.database.Cursor] */
     /* JADX WARN: Type inference failed for: r1v3 */
-    public final String r() throws Throwable {
+    public final String r() {
         SQLiteException e10;
         Cursor cursorRawQuery;
         SQLiteDatabase sQLiteDatabaseU0 = u0();
@@ -2453,7 +2453,7 @@ public final class t extends xd {
                     }
                 } catch (SQLiteException e11) {
                     e10 = e11;
-                    this.f25625a.a().o().b("Database error getting next bundle app id", e10);
+                    this.f26446a.a().o().b("Database error getting next bundle app id", e10);
                 }
             } catch (Throwable th2) {
                 r8 = sQLiteDatabaseU0;
@@ -2502,7 +2502,7 @@ public final class t extends xd {
                 throw new SQLiteException("Deleted fewer rows from queue than expected");
             }
         } catch (SQLiteException e10) {
-            this.f25625a.a().o().b("Failed to delete a bundle in a queue table", e10);
+            this.f26446a.a().o().b("Failed to delete a bundle in a queue table", e10);
             throw e10;
         }
     }
@@ -2517,13 +2517,13 @@ public final class t extends xd {
         j();
         if (a0()) {
             me meVar = this.b;
-            long jA = meVar.L0().f26034e.a();
-            g7 g7Var = this.f25625a;
+            long jA = meVar.L0().f26855e.a();
+            g7 g7Var = this.f26446a;
             long jB = g7Var.e().b();
             long jAbs = Math.abs(jB - jA);
             g7Var.w();
             if (jAbs > k.r()) {
-                meVar.L0().f26034e.b(jB);
+                meVar.L0().f26855e.b(jB);
                 h();
                 j();
                 if (a0()) {
@@ -2542,9 +2542,9 @@ public final class t extends xd {
     public final SQLiteDatabase u0() {
         h();
         try {
-            return this.f25966d.getWritableDatabase();
+            return this.f26787d.getWritableDatabase();
         } catch (SQLiteException e10) {
-            this.f25625a.a().r().b("Error opening database", e10);
+            this.f26446a.a().r().b("Error opening database", e10);
             throw e10;
         }
     }
@@ -2566,7 +2566,7 @@ public final class t extends xd {
             sb3.append(string);
             sb3.append(" AND retry_count =  2147483647 LIMIT 1");
             if (p0(sb3.toString(), null) > 0) {
-                this.f25625a.a().r().a("The number of upload retries exceeds the limit. Will remain unchanged.");
+                this.f26446a.a().r().a("The number of upload retries exceeds the limit. Will remain unchanged.");
             }
             try {
                 SQLiteDatabase sQLiteDatabaseU0 = u0();
@@ -2576,7 +2576,7 @@ public final class t extends xd {
                 sb4.append(" AND (retry_count IS NULL OR retry_count < 2147483647)");
                 sQLiteDatabaseU0.execSQL(sb4.toString());
             } catch (SQLiteException e10) {
-                this.f25625a.a().o().b("Error incrementing retry count. error", e10);
+                this.f26446a.a().o().b("Error incrementing retry count. error", e10);
             }
         }
     }
@@ -2595,11 +2595,11 @@ public final class t extends xd {
             sb2.append(l10);
             sb2.append(" AND retry_count =  2147483647 LIMIT 1");
             if (p0(sb2.toString(), null) > 0) {
-                this.f25625a.a().r().a("The number of upload retries exceeds the limit. Will remain unchanged.");
+                this.f26446a.a().r().a("The number of upload retries exceeds the limit. Will remain unchanged.");
             }
             try {
                 SQLiteDatabase sQLiteDatabaseU0 = u0();
-                long jA = this.f25625a.e().a();
+                long jA = this.f26446a.e().a();
                 StringBuilder sb3 = new StringBuilder(String.valueOf(jA).length() + 60);
                 sb3.append(" SET retry_count = retry_count + 1, last_upload_timestamp = ");
                 sb3.append(jA);
@@ -2612,7 +2612,7 @@ public final class t extends xd {
                 sb4.append(" AND retry_count < 2147483647");
                 sQLiteDatabaseU0.execSQL(sb4.toString());
             } catch (SQLiteException e10) {
-                this.f25625a.a().o().b("Error incrementing retry count. error", e10);
+                this.f26446a.a().o().b("Error incrementing retry count. error", e10);
             }
         }
     }
@@ -2624,7 +2624,7 @@ public final class t extends xd {
     public final Object x(Cursor cursor, int i10) {
         int type = cursor.getType(i10);
         if (type == 0) {
-            this.f25625a.a().o().a("Loaded invalid null value from database");
+            this.f26446a.a().o().a("Loaded invalid null value from database");
             return null;
         }
         if (type == 1) {
@@ -2637,10 +2637,10 @@ public final class t extends xd {
             return cursor.getString(i10);
         }
         if (type != 4) {
-            this.f25625a.a().o().b("Loaded invalid unknown value type, ignoring it", Integer.valueOf(type));
+            this.f26446a.a().o().b("Loaded invalid unknown value type, ignoring it", Integer.valueOf(type));
             return null;
         }
-        this.f25625a.a().o().a("Loaded invalid blob type value, ignoring it");
+        this.f26446a.a().o().a("Loaded invalid blob type value, ignoring it");
         return null;
     }
 
@@ -2660,7 +2660,7 @@ public final class t extends xd {
                     } while (cursorQuery.moveToNext());
                 }
             } catch (SQLiteException e10) {
-                this.f25625a.a().o().c("Error creating snapshot. appId", w5.x(str), e10);
+                this.f26446a.a().o().c("Error creating snapshot. appId", w5.x(str), e10);
             }
         } finally {
             if (cursorQuery != null) {
@@ -2709,7 +2709,7 @@ public final class t extends xd {
                         e = e10;
                         z11 = z12;
                         try {
-                            this.f25625a.a().o().c("Error querying snapshot. appId", w5.x(str), e);
+                            this.f26446a.a().o().c("Error querying snapshot. appId", w5.x(str), e);
                             z12 = z11;
                         } catch (Throwable th2) {
                             th = th2;
@@ -2794,7 +2794,7 @@ public final class t extends xd {
                     contentValues2.put("first_open_count", (Integer) 0);
                     contentValues2.put("previous_install_count", (Integer) 0);
                     if (sQLiteDatabaseU0.insertWithOnConflict("app2", null, contentValues2, 5) == -1) {
-                        this.f25625a.a().o().c("Failed to insert column (got -1). appId", w5.x(str), "first_open_count");
+                        this.f26446a.a().o().c("Failed to insert column (got -1). appId", w5.x(str), "first_open_count");
                     } else {
                         jQ0 = 0;
                         try {
@@ -2802,14 +2802,14 @@ public final class t extends xd {
                             contentValues.put("app_id", str);
                             contentValues.put("first_open_count", Long.valueOf(1 + jQ0));
                             if (sQLiteDatabaseU0.update("app2", contentValues, "app_id = ?", new String[]{str}) == 0) {
-                                this.f25625a.a().o().c("Failed to update column (got 0). appId", w5.x(str), "first_open_count");
+                                this.f26446a.a().o().c("Failed to update column (got 0). appId", w5.x(str), "first_open_count");
                             } else {
                                 sQLiteDatabaseU0.setTransactionSuccessful();
                                 j10 = jQ0;
                             }
                         } catch (SQLiteException e11) {
                             e10 = e11;
-                            this.f25625a.a().o().d("Error inserting column. appId", w5.x(str), "first_open_count", e10);
+                            this.f26446a.a().o().d("Error inserting column. appId", w5.x(str), "first_open_count", e10);
                         }
                     }
                 } else {
@@ -2817,7 +2817,7 @@ public final class t extends xd {
                     contentValues.put("app_id", str);
                     contentValues.put("first_open_count", Long.valueOf(1 + jQ0));
                     if (sQLiteDatabaseU0.update("app2", contentValues, "app_id = ?", new String[]{str}) == 0) {
-                        this.f25625a.a().o().c("Failed to update column (got 0). appId", w5.x(str), "first_open_count");
+                        this.f26446a.a().o().c("Failed to update column (got 0). appId", w5.x(str), "first_open_count");
                     } else {
                         sQLiteDatabaseU0.setTransactionSuccessful();
                         j10 = jQ0;
@@ -2841,7 +2841,7 @@ public final class t extends xd {
         try {
             u0().delete("user_attributes", "app_id=? and name=?", new String[]{str, str2});
         } catch (SQLiteException e10) {
-            g7 g7Var = this.f25625a;
+            g7 g7Var = this.f26446a;
             g7Var.a().o().d("Error deleting user property. appId", w5.x(str), g7Var.D().c(str2), e10);
         }
     }

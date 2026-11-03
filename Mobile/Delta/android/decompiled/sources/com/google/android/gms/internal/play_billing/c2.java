@@ -7,11 +7,11 @@ import java.util.concurrent.Future;
 public final class c2 implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final i2 f7021a;
+    public final i2 f7095a;
     public final b2 b;
 
     public c2(i2 i2Var, b2 b2Var) {
-        this.f7021a = i2Var;
+        this.f7095a = i2Var;
         this.b = b2Var;
     }
 
@@ -20,7 +20,7 @@ public final class c2 implements Runnable {
     public final void run() {
         Object obj;
         Throwable thA;
-        i2 i2Var = this.f7021a;
+        i2 i2Var = this.f7095a;
         if ((i2Var instanceof o2) && (thA = p2.a((o2) i2Var)) != null) {
             this.b.zza(thA);
             return;

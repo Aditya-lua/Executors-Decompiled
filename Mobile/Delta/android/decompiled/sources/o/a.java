@@ -10,10 +10,10 @@ import i.j;
 public class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Context f26924a;
+    public Context f27489a;
 
     public a(Context context) {
-        this.f26924a = context;
+        this.f27489a = context;
     }
 
     public static a b(Context context) {
@@ -21,15 +21,15 @@ public class a {
     }
 
     public boolean a() {
-        return this.f26924a.getApplicationInfo().targetSdkVersion < 14;
+        return this.f27489a.getApplicationInfo().targetSdkVersion < 14;
     }
 
     public int c() {
-        return this.f26924a.getResources().getDisplayMetrics().widthPixels / 2;
+        return this.f27489a.getResources().getDisplayMetrics().widthPixels / 2;
     }
 
     public int d() {
-        Configuration configuration = this.f26924a.getResources().getConfiguration();
+        Configuration configuration = this.f27489a.getResources().getConfiguration();
         int i10 = configuration.screenWidthDp;
         int i11 = configuration.screenHeightDp;
         if (configuration.smallestScreenWidthDp > 600 || i10 > 600) {
@@ -54,22 +54,22 @@ public class a {
     }
 
     public int e() {
-        return this.f26924a.getResources().getDimensionPixelSize(i.d.b);
+        return this.f27489a.getResources().getDimensionPixelSize(i.d.b);
     }
 
     public int f() {
-        TypedArray typedArrayObtainStyledAttributes = this.f26924a.obtainStyledAttributes(null, j.f20018a, i.a.f19887c, 0);
-        int layoutDimension = typedArrayObtainStyledAttributes.getLayoutDimension(j.f20062j, 0);
-        Resources resources = this.f26924a.getResources();
+        TypedArray typedArrayObtainStyledAttributes = this.f27489a.obtainStyledAttributes(null, j.f20134a, i.a.f20003c, 0);
+        int layoutDimension = typedArrayObtainStyledAttributes.getLayoutDimension(j.f20178j, 0);
+        Resources resources = this.f27489a.getResources();
         if (!g()) {
-            layoutDimension = Math.min(layoutDimension, resources.getDimensionPixelSize(i.d.f19919a));
+            layoutDimension = Math.min(layoutDimension, resources.getDimensionPixelSize(i.d.f20035a));
         }
         typedArrayObtainStyledAttributes.recycle();
         return layoutDimension;
     }
 
     public boolean g() {
-        return this.f26924a.getResources().getBoolean(i.b.f19911a);
+        return this.f27489a.getResources().getBoolean(i.b.f20027a);
     }
 
     public boolean h() {

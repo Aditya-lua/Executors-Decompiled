@@ -9,10 +9,10 @@ import java.util.List;
 public class o implements n0<n7.d> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f29263a;
+    public int f29616a;
 
     public o(int i10) {
-        this.f29263a = i10;
+        this.f29616a = i10;
     }
 
     public static float[] e(float[] fArr, float[] fArr2) {
@@ -47,7 +47,7 @@ public class o implements n0<n7.d> {
     }
 
     public final n7.d b(n7.d dVar, List<Float> list) {
-        int i10 = this.f29263a * 4;
+        int i10 = this.f29616a * 4;
         if (list.size() <= i10) {
             return dVar;
         }
@@ -143,20 +143,20 @@ public class o implements n0<n7.d> {
             arrayList.add(arrayList.get(1));
             arrayList.add(arrayList.get(2));
             arrayList.add(arrayList.get(3));
-            this.f29263a = 2;
+            this.f29616a = 2;
         }
         if (z10) {
             cVar.d();
         }
-        if (this.f29263a == -1) {
-            this.f29263a = arrayList.size() / 4;
+        if (this.f29616a == -1) {
+            this.f29616a = arrayList.size() / 4;
         }
-        int i10 = this.f29263a;
+        int i10 = this.f29616a;
         float[] fArr = new float[i10];
         int[] iArr = new int[i10];
         int i11 = 0;
         int i12 = 0;
-        for (int i13 = 0; i13 < this.f29263a * 4; i13++) {
+        for (int i13 = 0; i13 < this.f29616a * 4; i13++) {
             int i14 = i13 / 4;
             double dFloatValue = arrayList.get(i13).floatValue();
             int i15 = i13 % 4;

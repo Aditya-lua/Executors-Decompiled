@@ -13,7 +13,7 @@ public final class g extends u0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final g f34942a = new g();
+    public static final g f35440a = new g();
 
     @Override // x5.u0
     public /* bridge */ /* synthetic */ androidx.work.c a(Context context, String str, WorkerParameters workerParameters) {

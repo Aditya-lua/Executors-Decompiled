@@ -11,10 +11,10 @@ import java.util.List;
 public final class d {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final List<CharsetEncoder> f24220c = new ArrayList();
+    public static final List<CharsetEncoder> f24789c = new ArrayList();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final CharsetEncoder[] f24221a;
+    public final CharsetEncoder[] f24790a;
     public final int b;
 
     static {
@@ -23,7 +23,7 @@ public final class d {
             String str = strArr[i10];
             if (c.b(str) != null) {
                 try {
-                    f24220c.add(Charset.forName(str).newEncoder());
+                    f24789c.add(Charset.forName(str).newEncoder());
                 } catch (UnsupportedCharsetException unused) {
                 }
             }
@@ -54,7 +54,7 @@ public final class d {
                 }
             }
             if (!z10) {
-                for (CharsetEncoder charsetEncoder2 : f24220c) {
+                for (CharsetEncoder charsetEncoder2 : f24789c) {
                     if (charsetEncoder2.canEncode(str.charAt(i12))) {
                         arrayList.add(charsetEncoder2);
                         z10 = true;
@@ -67,27 +67,27 @@ public final class d {
             }
         }
         if (arrayList.size() != 1 || z11) {
-            this.f24221a = new CharsetEncoder[arrayList.size() + 2];
+            this.f24790a = new CharsetEncoder[arrayList.size() + 2];
             int size2 = arrayList.size();
             int i14 = 0;
             int i15 = 0;
             while (i15 < size2) {
                 Object obj2 = arrayList.get(i15);
                 i15++;
-                this.f24221a[i14] = (CharsetEncoder) obj2;
+                this.f24790a[i14] = (CharsetEncoder) obj2;
                 i14++;
             }
-            this.f24221a[i14] = StandardCharsets.UTF_8.newEncoder();
-            this.f24221a[i14 + 1] = StandardCharsets.UTF_16BE.newEncoder();
+            this.f24790a[i14] = StandardCharsets.UTF_8.newEncoder();
+            this.f24790a[i14 + 1] = StandardCharsets.UTF_16BE.newEncoder();
         } else {
-            this.f24221a = new CharsetEncoder[]{(CharsetEncoder) arrayList.get(0)};
+            this.f24790a = new CharsetEncoder[]{(CharsetEncoder) arrayList.get(0)};
         }
         if (charset != null) {
             while (true) {
-                CharsetEncoder[] charsetEncoderArr = this.f24221a;
+                CharsetEncoder[] charsetEncoderArr = this.f24790a;
                 if (i11 >= charsetEncoderArr.length) {
                     break;
-                } else if (charsetEncoderArr[i11] == null || !charset.name().equals(this.f24221a[i11].charset().name())) {
+                } else if (charsetEncoderArr[i11] == null || !charset.name().equals(this.f24790a[i11].charset().name())) {
                     i11++;
                 }
             }
@@ -99,19 +99,19 @@ public final class d {
     }
 
     public boolean a(char c10, int i10) {
-        return this.f24221a[i10].canEncode("" + c10);
+        return this.f24790a[i10].canEncode("" + c10);
     }
 
     public byte[] b(String str, int i10) {
-        return str.getBytes(this.f24221a[i10].charset());
+        return str.getBytes(this.f24790a[i10].charset());
     }
 
     public Charset c(int i10) {
-        return this.f24221a[i10].charset();
+        return this.f24790a[i10].charset();
     }
 
     public int d(int i10) {
-        return c.a(this.f24221a[i10].charset()).c();
+        return c.a(this.f24790a[i10].charset()).c();
     }
 
     public int e() {
@@ -119,6 +119,6 @@ public final class d {
     }
 
     public int f() {
-        return this.f24221a.length;
+        return this.f24790a.length;
     }
 }

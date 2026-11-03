@@ -89,6 +89,7 @@ with SOURCE.open('rb') as f:
                 raise RuntimeError(f'Unsupported relocation {typ}')
             u.mem_write(rel['r_offset'], struct.pack('<Q', value & ((1 << 64)-1)))
     init = elf.get_section_by_name('.init_array')
+    jni_onload = elf.get_section_by_name('.text')['sh_addr']
     start = struct.unpack('<Q', bytes(u.mem_read(init['sh_addr'],8)))[0]
     constructors=[struct.unpack('<Q',bytes(u.mem_read(init['sh_addr']+i,8)))[0] for i in range(0,init['sh_size'],8)]
 
@@ -227,7 +228,7 @@ def external(uc, address, size, data):
     elif name == 'JNI.CallVoidMethodV' and jni_methods.get(a[2],('',))[0] in ('getRealSize','getSize','getMetrics','getRealMetrics'):
         log(kind='synthetic_java',method=jni_methods[a[2]][0]); result=0
     elif name == 'JNI.CallLongMethodV' and jni_methods.get(a[2],('',))[0]=='getLongVersionCode':
-        result=18934; log(kind='synthetic_java',method='PackageInfo.getLongVersionCode',value=result)
+        result=20136; log(kind='synthetic_java',method='PackageInfo.getLongVersionCode',value=result)
     elif name == 'JNI.GetObjectClass': result=0x60004000
     elif name == 'JNI.CallObjectMethodV' and jni_methods.get(a[2],('',))[0]=='getPackageInfo':
         # Package-manager probes are anti-tamper checks. Only the target app is
@@ -267,7 +268,7 @@ def external(uc, address, size, data):
         log(kind='synthetic_java_field',field=field,value=result)
     elif name == 'JNI.GetObjectField':
         field=jni_fields.get(a[2])
-        values={'nativeLibraryDir':str(SOURCE.parent),'sourceDir':'/workspace/targets/Delta-2.743.1136.apk','dataDir':'/data/user/0/com.roblox.client','versionName':'2.743.1136'}
+        values={'nativeLibraryDir':str(SOURCE.parent),'sourceDir':'/workspace/targets/Delta-2.745.1142.apk','dataDir':'/data/user/0/com.roblox.client','versionName':'2.745.1142'}
         if field not in values: log(kind='blocked_java_field',field=field); uc.emu_stop(); return
         value=values[field].encode()+b'\0'; result=heap; heap+=(len(value)+15)&~15; uc.mem_write(result,value)
         log(kind='synthetic_java_field',field=field,value=values[field])
@@ -393,9 +394,9 @@ if jni_mode:
             imports[addr]=('JavaVM.GetEnv' if i==6 else f'JavaVM.{i}') if count==8 else 'JNI.'+known.get(i,str(i))
             u.mem_write(addr,bytes.fromhex('c0035fd6')); u.mem_write(table+i*8,struct.pack('<Q',addr))
     u.reg_write(UC_ARM64_REG_X0,0x60002000); u.reg_write(UC_ARM64_REG_X1,0)
-    jobs=[(0,0x1066788)]
-    if '--start' in sys.argv: jobs.append((1,0x601084))
-    if '--worker' in sys.argv: jobs.append((2,0x642c80))
+    jobs=[(0,jni_onload)]
+    if '--start' in sys.argv: jobs.append((1,0x62851c))
+    if '--worker' in sys.argv: jobs.append((2,0x608450))
     for arg in sys.argv:
         if arg.startswith('--entry='): jobs.append((2,int(arg.split('=',1)[1],0)))
 elif ctor_mode:

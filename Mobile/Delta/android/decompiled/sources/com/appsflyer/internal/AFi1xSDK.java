@@ -11,7 +11,7 @@ public final class AFi1xSDK {
     public final String AFKeystoreWrapper;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final boolean f5430d;
+    public final boolean f5503d;
 
     @Nullable
     public final String registerClient;
@@ -24,7 +24,7 @@ public final class AFi1xSDK {
         this.unregisterClient = str;
         this.AFKeystoreWrapper = str2;
         this.registerClient = str3;
-        this.f5430d = z10;
+        this.f5503d = z10;
     }
 
     public final boolean equals(@Nullable Object obj) {
@@ -35,7 +35,7 @@ public final class AFi1xSDK {
             return false;
         }
         AFi1xSDK aFi1xSDK = (AFi1xSDK) obj;
-        return Intrinsics.c(this.unregisterClient, aFi1xSDK.unregisterClient) && Intrinsics.c(this.AFKeystoreWrapper, aFi1xSDK.AFKeystoreWrapper) && Intrinsics.c(this.registerClient, aFi1xSDK.registerClient) && this.f5430d == aFi1xSDK.f5430d;
+        return Intrinsics.c(this.unregisterClient, aFi1xSDK.unregisterClient) && Intrinsics.c(this.AFKeystoreWrapper, aFi1xSDK.AFKeystoreWrapper) && Intrinsics.c(this.registerClient, aFi1xSDK.registerClient) && this.f5503d == aFi1xSDK.f5503d;
     }
 
     public final int hashCode() {
@@ -43,11 +43,11 @@ public final class AFi1xSDK {
         String str = this.AFKeystoreWrapper;
         int iHashCode2 = (iHashCode + (str == null ? 0 : str.hashCode())) * 31;
         String str2 = this.registerClient;
-        return ((iHashCode2 + (str2 != null ? str2.hashCode() : 0)) * 31) + Boolean.hashCode(this.f5430d);
+        return ((iHashCode2 + (str2 != null ? str2.hashCode() : 0)) * 31) + Boolean.hashCode(this.f5503d);
     }
 
     @NotNull
     public final String toString() {
-        return "NetworkData(networkType=" + this.unregisterClient + ", carrierName=" + this.AFKeystoreWrapper + ", simOperator=" + this.registerClient + ", isVpnEnabled=" + this.f5430d + ")";
+        return "NetworkData(networkType=" + this.unregisterClient + ", carrierName=" + this.AFKeystoreWrapper + ", simOperator=" + this.registerClient + ", isVpnEnabled=" + this.f5503d + ")";
     }
 }

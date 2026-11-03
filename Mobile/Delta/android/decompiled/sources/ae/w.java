@@ -1,10 +1,16 @@
 package ae;
 
-import java.security.MessageDigest;
+import android.os.Bundle;
 
 /* JADX INFO: loaded from: classes2.dex */
-public interface w {
-    void a(MessageDigest[] messageDigestArr, long j10, int i10);
+public final class w extends z {
+    public w(a0 a0Var, sb.k kVar) {
+        super(a0Var, kVar);
+    }
 
-    long zza();
+    @Override // ae.z, be.m0
+    public final void R0(Bundle bundle) {
+        super.R0(bundle);
+        this.f474a.e(null);
+    }
 }

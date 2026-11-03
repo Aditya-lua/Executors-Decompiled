@@ -1,31 +1,60 @@
 package ae;
 
-import android.content.Context;
-import android.os.LocaleList;
-import java.util.ArrayList;
+import androidx.annotation.NonNull;
+import com.google.android.gms.tasks.Task;
 import java.util.List;
-import java.util.Locale;
+import java.util.Set;
 
 /* JADX INFO: loaded from: classes2.dex */
-public final class o0 {
+public final class o0 implements b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f353a;
+    public final be.u0 f451a;
+    public final be.u0 b;
 
-    public o0(Context context) {
-        this.f353a = context;
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public final be.u0 f452c;
+
+    public o0(be.u0 u0Var, be.u0 u0Var2, be.u0 u0Var3) {
+        this.f451a = u0Var;
+        this.b = u0Var2;
+        this.f452c = u0Var3;
     }
 
-    public static String b(Locale locale) {
-        return String.valueOf(locale.getLanguage()).concat(locale.getCountry().isEmpty() ? "" : "_".concat(String.valueOf(locale.getCountry())));
+    @Override // ae.b
+    public final Task<Integer> a(@NonNull d dVar) {
+        return g().a(dVar);
     }
 
-    public final List a() {
-        LocaleList locales = this.f353a.getResources().getConfiguration().getLocales();
-        ArrayList arrayList = new ArrayList(locales.size());
-        for (int i10 = 0; i10 < locales.size(); i10++) {
-            arrayList.add(b(locales.get(i10)));
-        }
-        return arrayList;
+    @Override // ae.b
+    public final void b(@NonNull f fVar) {
+        g().b(fVar);
+    }
+
+    @Override // ae.b
+    public final void c(@NonNull f fVar) {
+        g().c(fVar);
+    }
+
+    @Override // ae.b
+    @NonNull
+    public final Task<Void> d(List<String> list) {
+        return g().d(list);
+    }
+
+    @Override // ae.b
+    @NonNull
+    public final Set<String> e() {
+        return g().e();
+    }
+
+    @Override // ae.b
+    @NonNull
+    public final Task<Void> f(List<String> list) {
+        return g().f(list);
+    }
+
+    public final b g() {
+        return this.f452c.zza() != null ? (b) this.b.zza() : (b) this.f451a.zza();
     }
 }

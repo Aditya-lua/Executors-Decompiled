@@ -50,7 +50,7 @@ public final class f implements d {
     public void b(long j10) {
         synchronized (this.lock) {
             this.strongMemoryCache.b(j10);
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
         }
     }
 
@@ -67,7 +67,7 @@ public final class f implements d {
         synchronized (this.lock) {
             this.strongMemoryCache.clear();
             this.weakMemoryCache.clear();
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
         }
     }
 
@@ -93,7 +93,7 @@ public final class f implements d {
     public void g(long size) {
         synchronized (this.lock) {
             this.strongMemoryCache.g(size);
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
         }
     }
 
@@ -105,7 +105,7 @@ public final class f implements d {
                 throw new IllegalStateException(("Image size must be non-negative: " + jI).toString());
             }
             this.strongMemoryCache.c(key, value.getImage(), value.a(), jI);
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
         }
     }
 

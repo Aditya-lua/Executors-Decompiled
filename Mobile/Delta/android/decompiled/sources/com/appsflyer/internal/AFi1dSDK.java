@@ -21,27 +21,27 @@ public final class AFi1dSDK implements SensorEventListener {
     private final String AFLogger;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    private final int f5417d;
+    private final int f5490d;
 
     @NonNull
     private final Executor force;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    private long f5418i;
+    private long f5491i;
     private final int registerClient;
 
     @NonNull
     private final String unregisterClient;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    private final float[][] f5419v = new float[2][];
+    private final float[][] f5492v = new float[2][];
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    private final long[] f5420w = new long[2];
+    private final long[] f5493w = new long[2];
 
     public AFi1dSDK(Sensor sensor, @NonNull ExecutorService executorService) {
         int type = sensor.getType();
-        this.f5417d = type;
+        this.f5490d = type;
         String name = sensor.getName();
         name = name == null ? "" : name;
         this.unregisterClient = name;
@@ -67,31 +67,31 @@ public final class AFi1dSDK implements SensorEventListener {
         long j10 = sensorEvent.timestamp;
         float[] fArr = sensorEvent.values;
         long jCurrentTimeMillis = System.currentTimeMillis();
-        float[][] fArr2 = this.f5419v;
+        float[][] fArr2 = this.f5492v;
         float[] fArr3 = fArr2[0];
         if (fArr3 == null) {
             fArr2[0] = Arrays.copyOf(fArr, fArr.length);
-            this.f5420w[0] = jCurrentTimeMillis;
+            this.f5493w[0] = jCurrentTimeMillis;
             return;
         }
         float[] fArr4 = fArr2[1];
         if (fArr4 == null) {
             float[] fArrCopyOf = Arrays.copyOf(fArr, fArr.length);
-            this.f5419v[1] = fArrCopyOf;
-            this.f5420w[1] = jCurrentTimeMillis;
+            this.f5492v[1] = fArrCopyOf;
+            this.f5493w[1] = jCurrentTimeMillis;
             this.AFKeystoreWrapper = AFLogger(fArr3, fArrCopyOf);
             return;
         }
-        if (50000000 <= j10 - this.f5418i) {
-            this.f5418i = j10;
+        if (50000000 <= j10 - this.f5491i) {
+            this.f5491i = j10;
             if (Arrays.equals(fArr4, fArr)) {
-                this.f5420w[1] = jCurrentTimeMillis;
+                this.f5493w[1] = jCurrentTimeMillis;
                 return;
             }
             double dAFLogger = AFLogger(fArr3, fArr);
             if (dAFLogger > this.AFKeystoreWrapper) {
-                this.f5419v[1] = Arrays.copyOf(fArr, fArr.length);
-                this.f5420w[1] = jCurrentTimeMillis;
+                this.f5492v[1] = Arrays.copyOf(fArr, fArr.length);
+                this.f5493w[1] = jCurrentTimeMillis;
                 this.AFKeystoreWrapper = dAFLogger;
             }
         }
@@ -100,14 +100,14 @@ public final class AFi1dSDK implements SensorEventListener {
     @NonNull
     private Map<String, Object> registerClient() {
         ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap(7);
-        concurrentHashMap.put("sT", Integer.valueOf(this.f5417d));
+        concurrentHashMap.put("sT", Integer.valueOf(this.f5490d));
         concurrentHashMap.put("sN", this.unregisterClient);
         concurrentHashMap.put("sV", this.AFLogger);
-        float[] fArr = this.f5419v[0];
+        float[] fArr = this.f5492v[0];
         if (fArr != null) {
             concurrentHashMap.put("sVS", unregisterClient(fArr));
         }
-        float[] fArr2 = this.f5419v[1];
+        float[] fArr2 = this.f5492v[1];
         if (fArr2 != null) {
             concurrentHashMap.put("sVE", unregisterClient(fArr2));
         }
@@ -129,10 +129,10 @@ public final class AFi1dSDK implements SensorEventListener {
         }
         if (obj instanceof AFi1dSDK) {
             AFi1dSDK aFi1dSDK = (AFi1dSDK) obj;
-            int i10 = aFi1dSDK.f5417d;
+            int i10 = aFi1dSDK.f5490d;
             String str = aFi1dSDK.unregisterClient;
             String str2 = aFi1dSDK.AFLogger;
-            if (this.f5417d == i10 && this.unregisterClient.equals(str) && this.AFLogger.equals(str2)) {
+            if (this.f5490d == i10 && this.unregisterClient.equals(str) && this.AFLogger.equals(str2)) {
                 return true;
             }
         }
@@ -153,7 +153,7 @@ public final class AFi1dSDK implements SensorEventListener {
             this.force.execute(new Runnable() { // from class: com.appsflyer.internal.b1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f5475a.P_(sensorEvent);
+                    this.f5548a.P_(sensorEvent);
                 }
             });
         } else {
@@ -162,19 +162,19 @@ public final class AFi1dSDK implements SensorEventListener {
     }
 
     public final void AFLogger(@NonNull Map<AFi1dSDK, Map<String, Object>> map, boolean z10) {
-        if (this.f5419v[0] != null) {
+        if (this.f5492v[0] != null) {
             map.put(this, registerClient());
             if (z10) {
-                int length = this.f5419v.length;
+                int length = this.f5492v.length;
                 for (int i10 = 0; i10 < length; i10++) {
-                    this.f5419v[i10] = null;
+                    this.f5492v[i10] = null;
                 }
-                int length2 = this.f5420w.length;
+                int length2 = this.f5493w.length;
                 for (int i11 = 0; i11 < length2; i11++) {
-                    this.f5420w[i11] = 0;
+                    this.f5493w[i11] = 0;
                 }
                 this.AFKeystoreWrapper = 0.0d;
-                this.f5418i = 0L;
+                this.f5491i = 0L;
                 return;
             }
             return;

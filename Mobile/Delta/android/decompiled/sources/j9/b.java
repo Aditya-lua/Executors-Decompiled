@@ -13,11 +13,11 @@ import androidx.annotation.NonNull;
 public class b extends DialogFragment {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Dialog f21168a;
+    public Dialog f21741a;
     public DialogInterface.OnCancelListener b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public Dialog f21169c;
+    public Dialog f21742c;
 
     @NonNull
     public static b a(@NonNull Dialog dialog, DialogInterface.OnCancelListener onCancelListener) {
@@ -25,7 +25,7 @@ public class b extends DialogFragment {
         Dialog dialog2 = (Dialog) n9.m.m(dialog, "Cannot display null dialog");
         dialog2.setOnCancelListener(null);
         dialog2.setOnDismissListener(null);
-        bVar.f21168a = dialog2;
+        bVar.f21741a = dialog2;
         if (onCancelListener != null) {
             bVar.b = onCancelListener;
         }
@@ -43,15 +43,15 @@ public class b extends DialogFragment {
     @Override // android.app.DialogFragment
     @NonNull
     public Dialog onCreateDialog(Bundle bundle) {
-        Dialog dialog = this.f21168a;
+        Dialog dialog = this.f21741a;
         if (dialog != null) {
             return dialog;
         }
         setShowsDialog(false);
-        if (this.f21169c == null) {
-            this.f21169c = new AlertDialog.Builder((Context) n9.m.l(getActivity())).create();
+        if (this.f21742c == null) {
+            this.f21742c = new AlertDialog.Builder((Context) n9.m.l(getActivity())).create();
         }
-        return this.f21169c;
+        return this.f21742c;
     }
 
     @Override // android.app.DialogFragment

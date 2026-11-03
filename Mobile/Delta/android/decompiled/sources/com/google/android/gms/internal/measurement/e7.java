@@ -6,7 +6,7 @@ public final class e7 extends cb implements pc {
         throw null;
     }
 
-    public final e7 A(Iterable iterable) {
+    public final e7 B(Iterable iterable) {
         p();
         ((f7) this.b).T(iterable);
         return this;
@@ -42,7 +42,7 @@ public final class e7 extends cb implements pc {
         return this;
     }
 
-    public final e7 x(Iterable iterable) {
+    public final e7 y(Iterable iterable) {
         p();
         ((f7) this.b).R(iterable);
         return this;

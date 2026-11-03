@@ -19,14 +19,14 @@ import s7.m;
 public class b {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final Object f22264d = new Object();
+    public static final Object f22488d = new Object();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f22265a;
+    public final Context f22489a;
     public final String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Map<String, k0> f22266c;
+    public final Map<String, k0> f22490c;
 
     public b(Drawable.Callback callback, String str, c cVar, Map<String, k0> map) {
         if (TextUtils.isEmpty(str) || str.charAt(str.length() - 1) == '/') {
@@ -34,17 +34,17 @@ public class b {
         } else {
             this.b = str + '/';
         }
-        this.f22266c = map;
+        this.f22490c = map;
         d(cVar);
         if (callback instanceof View) {
-            this.f22265a = ((View) callback).getContext().getApplicationContext();
+            this.f22489a = ((View) callback).getContext().getApplicationContext();
         } else {
-            this.f22265a = null;
+            this.f22489a = null;
         }
     }
 
     public Bitmap a(String str) {
-        k0 k0Var = this.f22266c.get(str);
+        k0 k0Var = this.f22490c.get(str);
         if (k0Var == null) {
             return null;
         }
@@ -52,7 +52,7 @@ public class b {
         if (bitmapB != null) {
             return bitmapB;
         }
-        Context context = this.f22265a;
+        Context context = this.f22489a;
         if (context == null) {
             return null;
         }
@@ -102,17 +102,17 @@ public class b {
 
     public boolean b(Context context) {
         if (context == null) {
-            return this.f22265a == null;
+            return this.f22489a == null;
         }
-        if (this.f22265a instanceof Application) {
+        if (this.f22489a instanceof Application) {
             context = context.getApplicationContext();
         }
-        return context == this.f22265a;
+        return context == this.f22489a;
     }
 
     public final Bitmap c(String str, Bitmap bitmap) {
-        synchronized (f22264d) {
-            this.f22266c.get(str).g(bitmap);
+        synchronized (f22488d) {
+            this.f22490c.get(str).g(bitmap);
         }
         return bitmap;
     }

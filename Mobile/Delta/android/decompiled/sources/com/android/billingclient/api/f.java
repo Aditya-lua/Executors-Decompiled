@@ -10,19 +10,19 @@ import v7.y1;
 public final class f {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final n0 f5159a;
+    public final n0 f5232a;
 
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public n0 f5160a;
+        public n0 f5233a;
 
         public /* synthetic */ a(y1 y1Var) {
         }
 
         @NonNull
         public f a() {
-            if (this.f5160a != null) {
+            if (this.f5233a != null) {
                 return new f(this, null);
             }
             throw new IllegalArgumentException("Product list must be set to a non empty list.");
@@ -42,7 +42,7 @@ public final class f {
             if (hashSet.size() > 1) {
                 throw new IllegalArgumentException("All products should be of the same product type.");
             }
-            this.f5160a = n0.i(list);
+            this.f5233a = n0.i(list);
             return this;
         }
     }
@@ -50,27 +50,27 @@ public final class f {
     public static class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final String f5161a;
+        public final String f5234a;
         public final String b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final String f5162c;
+        public final String f5235c;
 
         public static class a {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public String f5163a;
+            public String f5236a;
             public String b;
 
             /* JADX INFO: renamed from: c, reason: collision with root package name */
-            public String f5164c;
+            public String f5237c;
 
             public /* synthetic */ a(y1 y1Var) {
             }
 
             @NonNull
             public b a() {
-                String str = this.f5164c;
+                String str = this.f5237c;
                 if ("first_party".equals(str)) {
                     throw new IllegalArgumentException("Serialized doc id must be provided for first party products.");
                 }
@@ -91,15 +91,15 @@ public final class f {
 
             @NonNull
             public a c(@NonNull String str) {
-                this.f5164c = str;
+                this.f5237c = str;
                 return this;
             }
         }
 
         public /* synthetic */ b(a aVar, y1 y1Var) {
             this.b = aVar.b;
-            this.f5162c = aVar.f5164c;
-            this.f5161a = aVar.f5163a;
+            this.f5235c = aVar.f5237c;
+            this.f5234a = aVar.f5236a;
         }
 
         @NonNull
@@ -108,7 +108,7 @@ public final class f {
         }
 
         public String a() {
-            return this.f5161a;
+            return this.f5234a;
         }
 
         @NonNull
@@ -118,12 +118,12 @@ public final class f {
 
         @NonNull
         public final String d() {
-            return this.f5162c;
+            return this.f5235c;
         }
     }
 
     public /* synthetic */ f(a aVar, y1 y1Var) {
-        this.f5159a = aVar.f5160a;
+        this.f5232a = aVar.f5233a;
     }
 
     @NonNull
@@ -132,11 +132,11 @@ public final class f {
     }
 
     public final n0 b() {
-        return this.f5159a;
+        return this.f5232a;
     }
 
     @NonNull
     public final String c() {
-        return ((b) this.f5159a.get(0)).d();
+        return ((b) this.f5232a.get(0)).d();
     }
 }

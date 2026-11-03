@@ -18,15 +18,15 @@ public class b0 extends q {
     public class a extends x {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ q f27077a;
+        public final /* synthetic */ q f27642a;
 
         public a(q qVar) {
-            this.f27077a = qVar;
+            this.f27642a = qVar;
         }
 
         @Override // o5.x, o5.q.h
         public void k(@NonNull q qVar) {
-            this.f27077a.q0();
+            this.f27642a.q0();
             qVar.m0(this);
         }
     }
@@ -41,7 +41,7 @@ public class b0 extends q {
             if (b0.this.X()) {
                 return;
             }
-            b0.this.i0(q.i.f27199c, false);
+            b0.this.i0(q.i.f27764c, false);
             b0 b0Var = b0.this;
             b0Var.B = true;
             b0Var.i0(q.i.b, false);
@@ -51,25 +51,25 @@ public class b0 extends q {
     public static class c extends x {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public b0 f27079a;
+        public b0 f27644a;
 
         public c(b0 b0Var) {
-            this.f27079a = b0Var;
+            this.f27644a = b0Var;
         }
 
         @Override // o5.x, o5.q.h
         public void g(@NonNull q qVar) {
-            b0 b0Var = this.f27079a;
+            b0 b0Var = this.f27644a;
             if (b0Var.T) {
                 return;
             }
             b0Var.z0();
-            this.f27079a.T = true;
+            this.f27644a.T = true;
         }
 
         @Override // o5.x, o5.q.h
         public void k(@NonNull q qVar) {
-            b0 b0Var = this.f27079a;
+            b0 b0Var = this.f27644a;
             int i10 = b0Var.S - 1;
             b0Var.S = i10;
             if (i10 == 0) {
@@ -113,7 +113,7 @@ public class b0 extends q {
     @NonNull
     public b0 D0(@NonNull q qVar) {
         E0(qVar);
-        long j10 = this.f27158c;
+        long j10 = this.f27723c;
         if (j10 >= 0) {
             qVar.t0(j10);
         }
@@ -134,7 +134,7 @@ public class b0 extends q {
 
     public final void E0(@NonNull q qVar) {
         this.Q.add(qVar);
-        qVar.f27173r = this;
+        qVar.f27738r = this;
     }
 
     public q F0(int i10) {
@@ -180,7 +180,7 @@ public class b0 extends q {
     public b0 t0(long j10) {
         ArrayList<q> arrayList;
         super.t0(j10);
-        if (this.f27158c >= 0 && (arrayList = this.Q) != null) {
+        if (this.f27723c >= 0 && (arrayList = this.Q) != null) {
             int size = arrayList.size();
             for (int i10 = 0; i10 < size; i10++) {
                 this.Q.get(i10).t0(j10);
@@ -279,7 +279,7 @@ public class b0 extends q {
                 q qVar2 = qVar;
                 if (qVar2.a0(d0Var.b)) {
                     qVar2.j(d0Var);
-                    d0Var.f27090c.add(qVar2);
+                    d0Var.f27655c.add(qVar2);
                 }
             }
         }
@@ -334,7 +334,7 @@ public class b0 extends q {
                 q qVar2 = qVar;
                 if (qVar2.a0(d0Var.b)) {
                     qVar2.o(d0Var);
-                    d0Var.f27090c.add(qVar2);
+                    d0Var.f27655c.add(qVar2);
                 }
             }
         }
@@ -407,7 +407,7 @@ public class b0 extends q {
         long j12;
         long jU = U();
         long j13 = 0;
-        if (this.f27173r != null) {
+        if (this.f27738r != null) {
             if (j10 < 0 && j11 < 0) {
                 return;
             }
@@ -418,7 +418,7 @@ public class b0 extends q {
         boolean z10 = j10 < j11;
         if ((j10 >= 0 && j11 < 0) || (j10 <= jU && j11 > jU)) {
             this.B = false;
-            i0(q.i.f27198a, z10);
+            i0(q.i.f27763a, z10);
         }
         if (!this.R) {
             int iH0 = H0(j11);
@@ -451,7 +451,7 @@ public class b0 extends q {
                     }
                 }
             }
-            if (this.f27173r != null) {
+            if (this.f27738r != null) {
                 if ((j10 > jU || j11 > jU) && (j10 >= 0 || j11 < j12)) {
                     return;
                 }
@@ -465,7 +465,7 @@ public class b0 extends q {
             this.Q.get(i10).s0(j10, j11);
         }
         j12 = j13;
-        if (this.f27173r != null) {
+        if (this.f27738r != null) {
             if (j10 > jU) {
                 return;
             } else {
@@ -518,21 +518,21 @@ public class b0 extends q {
     }
 
     @Override // o5.q
-    public void x(ViewGroup viewGroup) {
-        super.x(viewGroup);
-        int size = this.Q.size();
-        for (int i10 = 0; i10 < size; i10++) {
-            this.Q.get(i10).x(viewGroup);
-        }
-    }
-
-    @Override // o5.q
     public void x0(z zVar) {
         super.x0(zVar);
         this.U |= 2;
         int size = this.Q.size();
         for (int i10 = 0; i10 < size; i10++) {
             this.Q.get(i10).x0(zVar);
+        }
+    }
+
+    @Override // o5.q
+    public void y(ViewGroup viewGroup) {
+        super.y(viewGroup);
+        int size = this.Q.size();
+        for (int i10 = 0; i10 < size; i10++) {
+            this.Q.get(i10).y(viewGroup);
         }
     }
 }

@@ -16,7 +16,7 @@ public abstract class u0 {
             Intrinsics.checkNotNull(cVarNewInstance);
             return cVarNewInstance;
         } catch (Throwable th2) {
-            w.e().d(v0.f35008a, "Could not instantiate " + str, th2);
+            w.e().d(v0.f35506a, "Could not instantiate " + str, th2);
             throw th2;
         }
     }
@@ -27,7 +27,7 @@ public abstract class u0 {
             Intrinsics.checkNotNull(clsAsSubclass);
             return clsAsSubclass;
         } catch (Throwable th2) {
-            w.e().d(v0.f35008a, "Invalid class: " + str, th2);
+            w.e().d(v0.f35506a, "Invalid class: " + str, th2);
             throw th2;
         }
     }

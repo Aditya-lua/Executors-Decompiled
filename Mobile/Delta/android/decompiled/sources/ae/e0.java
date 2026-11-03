@@ -1,47 +1,82 @@
 package ae;
 
-import java.lang.reflect.Array;
-import java.lang.reflect.Field;
-import java.util.Collection;
-import java.util.Iterator;
+import android.util.Log;
+import java.io.IOException;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
 
 /* JADX INFO: loaded from: classes2.dex */
-public final class e0 extends f0 {
-    public e0(Object obj, Field field, Class cls) {
-        super(obj, field, Array.newInstance((Class<?>) cls, 0).getClass());
+public final class e0 {
+    public static final n0 a(XmlPullParser xmlPullParser, l0 l0Var) {
+        while (xmlPullParser.next() != 1) {
+            try {
+                if (xmlPullParser.getEventType() == 2) {
+                    if (xmlPullParser.getName().equals("splits")) {
+                        while (xmlPullParser.next() != 3) {
+                            if (xmlPullParser.getEventType() == 2) {
+                                if (xmlPullParser.getName().equals("module")) {
+                                    String strB = b("name", xmlPullParser, l0Var);
+                                    if (strB != null) {
+                                        while (xmlPullParser.next() != 3) {
+                                            if (xmlPullParser.getEventType() == 2) {
+                                                if (xmlPullParser.getName().equals("language")) {
+                                                    while (xmlPullParser.next() != 3) {
+                                                        if (xmlPullParser.getEventType() == 2) {
+                                                            if (xmlPullParser.getName().equals("entry")) {
+                                                                String strB2 = b("key", xmlPullParser, l0Var);
+                                                                String strB3 = b("split", xmlPullParser, l0Var);
+                                                                c(xmlPullParser, l0Var);
+                                                                if (strB2 != null && strB3 != null) {
+                                                                    l0Var.a(strB, strB2, strB3);
+                                                                }
+                                                            } else {
+                                                                c(xmlPullParser, l0Var);
+                                                            }
+                                                        }
+                                                    }
+                                                } else {
+                                                    c(xmlPullParser, l0Var);
+                                                }
+                                            }
+                                        }
+                                    } else {
+                                        c(xmlPullParser, l0Var);
+                                    }
+                                } else {
+                                    c(xmlPullParser, l0Var);
+                                }
+                            }
+                        }
+                    } else {
+                        c(xmlPullParser, l0Var);
+                    }
+                }
+            } catch (IOException | IllegalStateException | XmlPullParserException e10) {
+                Log.e("SplitInstall", "Error while parsing splits.xml", e10);
+                return null;
+            }
+        }
+        return l0Var.b();
     }
 
-    public final void d(Collection collection) {
-        Object[] objArr = (Object[]) a();
-        int length = objArr == null ? 0 : objArr.length;
-        Object[] objArr2 = (Object[]) Array.newInstance((Class<?>) f(), collection.size() + length);
-        if (objArr != null) {
-            System.arraycopy(objArr, 0, objArr2, 0, objArr.length);
+    public static final String b(String str, XmlPullParser xmlPullParser, l0 l0Var) {
+        for (int i10 = 0; i10 < xmlPullParser.getAttributeCount(); i10++) {
+            if (xmlPullParser.getAttributeName(i10).equals(str)) {
+                return xmlPullParser.getAttributeValue(i10);
+            }
         }
-        Iterator it = collection.iterator();
-        while (it.hasNext()) {
-            objArr2[length] = it.next();
-            length++;
-        }
-        c(objArr2);
+        return null;
     }
 
-    public final void e(Collection collection) {
-        Object[] objArr = (Object[]) a();
-        int i10 = 0;
-        Object[] objArr2 = (Object[]) Array.newInstance((Class<?>) f(), (objArr == null ? 0 : objArr.length) + collection.size());
-        if (objArr != null) {
-            System.arraycopy(objArr, 0, objArr2, collection.size(), objArr.length);
+    public static final void c(XmlPullParser xmlPullParser, l0 l0Var) throws XmlPullParserException, IOException {
+        int i10 = 1;
+        while (i10 != 0) {
+            int next = xmlPullParser.next();
+            if (next == 2) {
+                i10++;
+            } else if (next == 3) {
+                i10--;
+            }
         }
-        Iterator it = collection.iterator();
-        while (it.hasNext()) {
-            objArr2[i10] = it.next();
-            i10++;
-        }
-        c(objArr2);
-    }
-
-    public final Class f() {
-        return b().getType().getComponentType();
     }
 }

@@ -16,10 +16,10 @@ public final /* synthetic */ class w {
         Intrinsics.checkNotNullParameter(uVar, "<this>");
         Intrinsics.checkNotNullParameter(configuration, "configuration");
         LinkedHashMap linkedHashMap = new LinkedHashMap();
-        Set<hu.c<? extends a5.a>> setW = uVar.w();
+        Set<fu.c<? extends a5.a>> setW = uVar.w();
         int size = configuration.autoMigrationSpecs.size();
         boolean[] zArr = new boolean[size];
-        Iterator<hu.c<? extends a5.a>> it = setW.iterator();
+        Iterator<fu.c<? extends a5.a>> it = setW.iterator();
         while (true) {
             int i10 = -1;
             if (!it.hasNext()) {
@@ -44,7 +44,7 @@ public final /* synthetic */ class w {
                 }
                 return;
             }
-            hu.c<? extends a5.a> next = it.next();
+            fu.c<? extends a5.a> next = it.next();
             int size3 = configuration.autoMigrationSpecs.size() - 1;
             if (size3 >= 0) {
                 while (true) {
@@ -85,11 +85,11 @@ public final /* synthetic */ class w {
     public static final void c(@NotNull u uVar, @NotNull c configuration) {
         Intrinsics.checkNotNullParameter(uVar, "<this>");
         Intrinsics.checkNotNullParameter(configuration, "configuration");
-        Map<hu.c<?>, List<hu.c<?>>> mapZ = uVar.z();
+        Map<fu.c<?>, List<fu.c<?>>> mapZ = uVar.z();
         boolean[] zArr = new boolean[configuration.typeConverters.size()];
-        for (Map.Entry<hu.c<?>, List<hu.c<?>>> entry : mapZ.entrySet()) {
-            hu.c<?> key = entry.getKey();
-            for (hu.c<?> cVar : entry.getValue()) {
+        for (Map.Entry<fu.c<?>, List<fu.c<?>>> entry : mapZ.entrySet()) {
+            fu.c<?> key = entry.getKey();
+            for (fu.c<?> cVar : entry.getValue()) {
                 int size = configuration.typeConverters.size() - 1;
                 if (size < 0) {
                     size = -1;

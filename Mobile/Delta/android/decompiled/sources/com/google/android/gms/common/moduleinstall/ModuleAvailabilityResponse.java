@@ -14,22 +14,22 @@ public class ModuleAvailabilityResponse extends AbstractSafeParcelable {
     public static final Parcelable.Creator<ModuleAvailabilityResponse> CREATOR = new e();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final boolean f5819f;
+    public final boolean f5892f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final int f5820g;
+    public final int f5893g;
 
     public ModuleAvailabilityResponse(boolean z10, int i10) {
-        this.f5819f = z10;
-        this.f5820g = i10;
+        this.f5892f = z10;
+        this.f5893g = i10;
     }
 
     public boolean v3() {
-        return this.f5819f;
+        return this.f5892f;
     }
 
     public int w3() {
-        return this.f5820g;
+        return this.f5893g;
     }
 
     @Override // android.os.Parcelable

@@ -13,7 +13,7 @@ public class i0 {
     public static <K, V> V a(@NotNull Map<K, ? extends V> map, K k10) {
         Intrinsics.checkNotNullParameter(map, "<this>");
         if (map instanceof g0) {
-            return (V) ((g0) map).z(k10);
+            return (V) ((g0) map).y(k10);
         }
         V v5 = map.get(k10);
         if (v5 != null || map.containsKey(k10)) {

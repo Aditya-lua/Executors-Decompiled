@@ -17,11 +17,11 @@ public final class b extends EventListener {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public final Function1<String, Unit> f12171a;
+    public final Function1<String, Unit> f12252a;
 
     /* JADX WARN: Multi-variable type inference failed */
     public b(@NotNull Function1<? super String, Unit> function1) {
-        this.f12171a = function1;
+        this.f12252a = function1;
     }
 
     @Override // okhttp3.EventListener
@@ -31,6 +31,6 @@ public final class b extends EventListener {
         if (handshake == null || (listPeerCertificates = handshake.peerCertificates()) == null || (certificate = (Certificate) CollectionsKt.firstOrNull(listPeerCertificates)) == null) {
             return;
         }
-        this.f12171a.invoke(kotlin.text.e.i(MessageDigest.getInstance("SHA-256").digest(certificate.getEncoded()), null, 1, null));
+        this.f12252a.invoke(kotlin.text.e.i(MessageDigest.getInstance("SHA-256").digest(certificate.getEncoded()), null, 1, null));
     }
 }

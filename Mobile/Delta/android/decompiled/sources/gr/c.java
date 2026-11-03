@@ -1,101 +1,95 @@
 package gr;
 
-import android.view.LayoutInflater;
+import android.content.res.ColorStateList;
+import android.graphics.Rect;
 import android.view.View;
-import android.view.ViewGroup;
-import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
+import com.google.mlkit.vision.barcode.common.Barcode;
+import com.withpersona.sdk2.inquiry.network.dto.ui.styling.TextBasedComponentStyle;
+import com.withpersona.sdk2.inquiry.shared.navigation.NavigationState;
+import com.withpersona.sdk2.inquiry.shared.ui.Pi2NavigationBar;
+import hq.m0;
+import hq.t;
+import hr.e0;
+import hr.h0;
+import kotlin.Metadata;
+import kotlin.Unit;
+import kotlin.collections.q0;
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.internal.Intrinsics;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class c implements r5.a {
+@Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\u001au\u0010\u0011\u001a\u00020\u00032\u0006\u0010\u0001\u001a\u00020\u00002\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00030\u00022\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00030\u00022\u000e\b\u0002\u0010\u0006\u001a\b\u0012\u0004\u0012\u00020\u00030\u00022\u0006\u0010\b\u001a\u00020\u00072\u0006\u0010\n\u001a\u00020\t2\n\b\u0002\u0010\f\u001a\u0004\u0018\u00010\u000b2\n\b\u0002\u0010\u000e\u001a\u0004\u0018\u00010\r2\n\b\u0002\u0010\u0010\u001a\u0004\u0018\u00010\u000f¢\u0006\u0004\b\u0011\u0010\u0012\u001a\u001d\u0010\u0014\u001a\u00020\u0003*\u00020\u00072\b\u0010\u0013\u001a\u0004\u0018\u00010\u000fH\u0002¢\u0006\u0004\b\u0014\u0010\u0015¨\u0006\u0016"}, d2 = {"Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "navigationState", "Lkotlin/Function0;", "", "back", "cancel", "launchHelp", "Lcom/withpersona/sdk2/inquiry/shared/ui/Pi2NavigationBar;", "navigationBar", "Landroid/view/View;", "backPressHandler", "Landroid/graphics/Rect;", "navBarPadding", "", "navBarTitle", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/TextBasedComponentStyle;", "navBarTitleStyle", "d", "(Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lcom/withpersona/sdk2/inquiry/shared/ui/Pi2NavigationBar;Landroid/view/View;Landroid/graphics/Rect;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/TextBasedComponentStyle;)V", "style", "c", "(Lcom/withpersona/sdk2/inquiry/shared/ui/Pi2NavigationBar;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/TextBasedComponentStyle;)V", "ui-step-renderer_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
+public final class c {
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    @NonNull
-    public final ConstraintLayout f18387a;
+    @Metadata(d1 = {"\u0000\u000b\n\u0000\n\u0002\u0010\u0000\n\u0000*\u0001\u0000\b\n\u0018\u00002\u00020\u0001¨\u0006\u0002"}, d2 = {"gr/c$a", "", "ui-step-renderer_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final class a {
 
-    @NonNull
-    public final TextInputLayout b;
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public final /* synthetic */ Function0<Unit> f18905a;
 
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    @NonNull
-    public final TextInputEditText f18388c;
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    @NonNull
-    public final TextInputLayout f18389d;
-
-    /* JADX INFO: renamed from: e, reason: collision with root package name */
-    @NonNull
-    public final TextInputLayout f18390e;
-
-    /* JADX INFO: renamed from: f, reason: collision with root package name */
-    @NonNull
-    public final TextInputEditText f18391f;
-
-    /* JADX INFO: renamed from: g, reason: collision with root package name */
-    @NonNull
-    public final TextInputLayout f18392g;
-
-    public c(@NonNull ConstraintLayout constraintLayout, @NonNull TextInputLayout textInputLayout, @NonNull TextInputEditText textInputEditText, @NonNull TextInputLayout textInputLayout2, @NonNull TextInputLayout textInputLayout3, @NonNull TextInputEditText textInputEditText2, @NonNull TextInputLayout textInputLayout4) {
-        this.f18387a = constraintLayout;
-        this.b = textInputLayout;
-        this.f18388c = textInputEditText;
-        this.f18389d = textInputLayout2;
-        this.f18390e = textInputLayout3;
-        this.f18391f = textInputEditText2;
-        this.f18392g = textInputLayout4;
+        public a(Function0<Unit> function0) {
+            this.f18905a = function0;
+        }
     }
 
-    @NonNull
-    public static c a(@NonNull View view) {
-        int i10 = ar.d.J;
-        TextInputLayout textInputLayout = (TextInputLayout) r5.b.a(view, i10);
-        if (textInputLayout != null) {
-            i10 = ar.d.K;
-            TextInputEditText textInputEditText = (TextInputEditText) r5.b.a(view, i10);
-            if (textInputEditText != null) {
-                i10 = ar.d.M;
-                TextInputLayout textInputLayout2 = (TextInputLayout) r5.b.a(view, i10);
-                if (textInputLayout2 != null) {
-                    i10 = ar.d.C0;
-                    TextInputLayout textInputLayout3 = (TextInputLayout) r5.b.a(view, i10);
-                    if (textInputLayout3 != null) {
-                        i10 = ar.d.D0;
-                        TextInputEditText textInputEditText2 = (TextInputEditText) r5.b.a(view, i10);
-                        if (textInputEditText2 != null) {
-                            i10 = ar.d.L0;
-                            TextInputLayout textInputLayout4 = (TextInputLayout) r5.b.a(view, i10);
-                            if (textInputLayout4 != null) {
-                                return new c((ConstraintLayout) view, textInputLayout, textInputEditText, textInputLayout2, textInputLayout3, textInputEditText2, textInputLayout4);
-                            }
-                        }
-                    }
-                }
+    public static final void c(Pi2NavigationBar pi2NavigationBar, TextBasedComponentStyle textBasedComponentStyle) {
+        if (textBasedComponentStyle == null) {
+            return;
+        }
+        ColorStateList textColors = pi2NavigationBar.getNavBarTitleView().getTextColors();
+        h0.k(pi2NavigationBar.getNavBarTitleView(), textBasedComponentStyle, q0.g(e0.Margin, e0.Justification));
+        pi2NavigationBar.getNavBarTitleView().setTextColor(textColors);
+    }
+
+    public static final void d(@NotNull final NavigationState navigationState, @NotNull final Function0<Unit> back, @NotNull final Function0<Unit> cancel, @NotNull Function0<Unit> launchHelp, @NotNull Pi2NavigationBar navigationBar, @NotNull View backPressHandler, @Nullable Rect rect, @Nullable String str, @Nullable TextBasedComponentStyle textBasedComponentStyle) {
+        Intrinsics.checkNotNullParameter(navigationState, "navigationState");
+        Intrinsics.checkNotNullParameter(back, "back");
+        Intrinsics.checkNotNullParameter(cancel, "cancel");
+        Intrinsics.checkNotNullParameter(launchHelp, "launchHelp");
+        Intrinsics.checkNotNullParameter(navigationBar, "navigationBar");
+        Intrinsics.checkNotNullParameter(backPressHandler, "backPressHandler");
+        if (rect != null) {
+            navigationBar.setPreferredPadding(rect);
+        }
+        navigationBar.G(navigationState, back, cancel, launchHelp);
+        navigationBar.setTitle(str);
+        c(navigationBar, textBasedComponentStyle);
+        Function0 function0 = new Function0() { // from class: gr.b
+            @Override // kotlin.jvm.functions.Function0
+            public final Object invoke() {
+                return c.g(navigationState, back, cancel);
             }
+        };
+        backPressHandler.setTag(t.f19680t, new a(function0));
+        if (navigationState.getHandleBackPress()) {
+            m0.e(backPressHandler, function0);
         }
-        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
     }
 
-    @NonNull
-    public static c c(@NonNull LayoutInflater layoutInflater) {
-        return d(layoutInflater, null, false);
-    }
-
-    @NonNull
-    public static c d(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
-        View viewInflate = layoutInflater.inflate(ar.e.f3710c, viewGroup, false);
-        if (z10) {
-            viewGroup.addView(viewInflate);
+    public static /* synthetic */ void e(NavigationState navigationState, Function0 function0, Function0 function1, Function0 function2, Pi2NavigationBar pi2NavigationBar, View view, Rect rect, String str, TextBasedComponentStyle textBasedComponentStyle, int i10, Object obj) {
+        if ((i10 & 8) != 0) {
+            function2 = new Function0() { // from class: gr.a
+                @Override // kotlin.jvm.functions.Function0
+                public final Object invoke() {
+                    return c.f();
+                }
+            };
         }
-        return a(viewInflate);
+        d(navigationState, function0, function1, function2, pi2NavigationBar, view, (i10 & 64) != 0 ? null : rect, (i10 & 128) != 0 ? null : str, (i10 & Barcode.FORMAT_QR_CODE) != 0 ? null : textBasedComponentStyle);
     }
 
-    @Override // r5.a
-    @NonNull
-    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public ConstraintLayout getRoot() {
-        return this.f18387a;
+    public static final Unit f() {
+        return Unit.f22938a;
+    }
+
+    public static final Unit g(NavigationState navigationState, Function0 function0, Function0 function1) {
+        if (navigationState.getShowBackButton()) {
+            function0.invoke();
+        } else {
+            function1.invoke();
+        }
+        return Unit.f22938a;
     }
 }

@@ -21,18 +21,18 @@ public final class AFa1vSDK implements AppsFlyerProperties {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    private final Map<String, Object> f5230d;
+    private final Map<String, Object> f5303d;
     private boolean registerClient;
 
     public AFa1vSDK(@NotNull AFc1kSDK aFc1kSDK) {
         Intrinsics.checkNotNullParameter(aFc1kSDK, "");
         this.AFLogger = aFc1kSDK;
-        this.f5230d = new LinkedHashMap();
+        this.f5303d = new LinkedHashMap();
     }
 
     @Override // com.appsflyer.AppsFlyerProperties
     public final synchronized void clear() {
-        this.f5230d.clear();
+        this.f5303d.clear();
     }
 
     @Override // com.appsflyer.AppsFlyerProperties
@@ -56,7 +56,7 @@ public final class AFa1vSDK implements AppsFlyerProperties {
     @Override // com.appsflyer.AppsFlyerProperties
     @Nullable
     public final synchronized String getString(@Nullable String str) {
-        Object obj = this.f5230d.get(str);
+        Object obj = this.f5303d.get(str);
         if (!(obj instanceof String)) {
             return null;
         }
@@ -79,13 +79,13 @@ public final class AFa1vSDK implements AppsFlyerProperties {
                 Iterator<String> itKeys = jSONObject.keys();
                 while (itKeys.hasNext()) {
                     String next = itKeys.next();
-                    if (this.f5230d.get(next) == null) {
-                        this.f5230d.put(next, jSONObject.getString(next));
+                    if (this.f5303d.get(next) == null) {
+                        this.f5303d.put(next, jSONObject.getString(next));
                     }
                 }
                 String[] strArr = {"AppsFlyerKey", "custom_host", "custom_host_prefix", "advertiserIdEnabled", "advertiserId"};
                 for (int i10 = 0; i10 < 5; i10++) {
-                    this.f5230d.remove(strArr[i10]);
+                    this.f5303d.remove(strArr[i10]);
                 }
                 saveProperties();
                 this.registerClient = true;
@@ -100,37 +100,37 @@ public final class AFa1vSDK implements AppsFlyerProperties {
 
     @Override // com.appsflyer.AppsFlyerProperties
     public final synchronized void remove(@Nullable String str) {
-        this.f5230d.remove(str);
+        this.f5303d.remove(str);
     }
 
     @Override // com.appsflyer.AppsFlyerProperties
     public final synchronized void saveProperties() {
-        this.f5230d.remove("AppsFlyerKey");
-        this.AFLogger.d("savedProperties", new JSONObject(this.f5230d).toString());
+        this.f5303d.remove("AppsFlyerKey");
+        this.AFLogger.d("savedProperties", new JSONObject(this.f5303d).toString());
     }
 
     @Override // com.appsflyer.AppsFlyerProperties
     public final synchronized void set(@Nullable String str, @Nullable String str2) {
-        this.f5230d.put(str, str2);
+        this.f5303d.put(str, str2);
     }
 
     @Override // com.appsflyer.AppsFlyerProperties
     public final synchronized void set(@Nullable String str, @Nullable String[] strArr) {
-        this.f5230d.put(str, strArr);
+        this.f5303d.put(str, strArr);
     }
 
     @Override // com.appsflyer.AppsFlyerProperties
     public final synchronized void set(@Nullable String str, int i10) {
-        this.f5230d.put(str, String.valueOf(i10));
+        this.f5303d.put(str, String.valueOf(i10));
     }
 
     @Override // com.appsflyer.AppsFlyerProperties
     public final synchronized void set(@Nullable String str, long j10) {
-        this.f5230d.put(str, String.valueOf(j10));
+        this.f5303d.put(str, String.valueOf(j10));
     }
 
     @Override // com.appsflyer.AppsFlyerProperties
     public final synchronized void set(@Nullable String str, boolean z10) {
-        this.f5230d.put(str, String.valueOf(z10));
+        this.f5303d.put(str, String.valueOf(z10));
     }
 }

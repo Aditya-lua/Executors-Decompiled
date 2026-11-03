@@ -11,7 +11,7 @@ import java.security.NoSuchAlgorithmException;
 public class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Object f32092a = new Object();
+    public static final Object f32745a = new Object();
 
     @Deprecated
     public static byte[] a(@NonNull Context context, @NonNull String str) {

@@ -71,7 +71,7 @@ public final class AFe1eSDK extends AFe1lSDK {
     private final void AFLogger(String p8, int p10) {
         AppsFlyerInAppPurchaseValidationCallback appsFlyerInAppPurchaseValidationCallback = this.AFKeystoreWrapper;
         if (appsFlyerInAppPurchaseValidationCallback != null) {
-            appsFlyerInAppPurchaseValidationCallback.onInAppPurchaseValidationError(kotlin.collections.k0.m(jt.s.a("error_code", Integer.valueOf(p10)), jt.s.a("error_message", p8)));
+            appsFlyerInAppPurchaseValidationCallback.onInAppPurchaseValidationError(kotlin.collections.k0.m(gt.s.a("error_code", Integer.valueOf(p10)), gt.s.a("error_message", p8)));
         }
     }
 
@@ -87,7 +87,7 @@ public final class AFe1eSDK extends AFe1lSDK {
         if (i10 == 2) {
             return getD().registerClient(p8, p10);
         }
-        throw new jt.l();
+        throw new gt.l();
     }
 
     @Override // com.appsflyer.internal.AFe1kSDK
@@ -115,29 +115,29 @@ public final class AFe1eSDK extends AFe1lSDK {
             if (responseNetwork.getStatusCode() != 200) {
                 AppsFlyerInAppPurchaseValidationCallback appsFlyerInAppPurchaseValidationCallback = this.AFKeystoreWrapper;
                 if (appsFlyerInAppPurchaseValidationCallback != null) {
-                    appsFlyerInAppPurchaseValidationCallback.onInAppPurchaseValidationError(kotlin.collections.k0.m(jt.s.a("error_code", Integer.valueOf(responseNetwork.getStatusCode())), jt.s.a("error_message", responseNetwork.getBody())));
+                    appsFlyerInAppPurchaseValidationCallback.onInAppPurchaseValidationError(kotlin.collections.k0.m(gt.s.a("error_code", Integer.valueOf(responseNetwork.getStatusCode())), gt.s.a("error_message", responseNetwork.getBody())));
                     return;
                 }
                 return;
             }
             try {
-                jt.n.Companion companion = jt.n.INSTANCE;
+                gt.n.Companion companion = gt.n.INSTANCE;
                 AppsFlyerInAppPurchaseValidationCallback appsFlyerInAppPurchaseValidationCallback2 = this.AFKeystoreWrapper;
                 if (appsFlyerInAppPurchaseValidationCallback2 != null) {
                     appsFlyerInAppPurchaseValidationCallback2.onInAppPurchaseValidationFinished(JsonUtils.toMap(new JSONObject((String) responseNetwork.getBody())));
-                    unit = Unit.f22483a;
+                    unit = Unit.f22938a;
                 } else {
                     unit = null;
                 }
-                objB = jt.n.b(unit);
+                objB = gt.n.b(unit);
             } catch (Throwable th2) {
-                jt.n.Companion companion2 = jt.n.INSTANCE;
-                objB = jt.n.b(jt.o.a(th2));
+                gt.n.Companion companion2 = gt.n.INSTANCE;
+                objB = gt.n.b(gt.o.a(th2));
             }
-            if (jt.n.e(objB) != null) {
+            if (gt.n.e(objB) != null) {
                 AFLogger("Error while trying to parse JSON response", responseNetwork.getStatusCode());
             }
-            jt.n.a(objB);
+            gt.n.a(objB);
         }
     }
 

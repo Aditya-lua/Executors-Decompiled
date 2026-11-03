@@ -8,11 +8,11 @@ public class b implements c.e {
     public static final ThreadLocal<StringBuilder> b = new ThreadLocal<>();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final TextPaint f2408a;
+    public final TextPaint f2253a;
 
     public b() {
         TextPaint textPaint = new TextPaint();
-        this.f2408a = textPaint;
+        this.f2253a = textPaint;
         textPaint.setTextSize(10.0f);
     }
 
@@ -32,6 +32,6 @@ public class b implements c.e {
             sbB.append(charSequence.charAt(i10));
             i10++;
         }
-        return androidx.core.graphics.d.a(this.f2408a, sbB.toString());
+        return androidx.core.graphics.d.a(this.f2253a, sbB.toString());
     }
 }

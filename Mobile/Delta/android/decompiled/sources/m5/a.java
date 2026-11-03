@@ -16,39 +16,39 @@ import androidx.core.view.o0;
 public class a extends ImageView {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Animation.AnimationListener f23927a;
+    public Animation.AnimationListener f24577a;
     public int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f23928c;
+    public int f24578c;
 
     /* JADX INFO: renamed from: m5.a$a, reason: collision with other inner class name */
-    public static class C0423a extends OvalShape {
+    public static class C0437a extends OvalShape {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public Paint f23929a = new Paint();
+        public Paint f24579a = new Paint();
         public int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public a f23930c;
+        public a f24580c;
 
-        public C0423a(a aVar, int i10) {
-            this.f23930c = aVar;
+        public C0437a(a aVar, int i10) {
+            this.f24580c = aVar;
             this.b = i10;
             a((int) rect().width());
         }
 
         public final void a(int i10) {
             float f10 = i10 / 2;
-            this.f23929a.setShader(new RadialGradient(f10, f10, this.b, new int[]{1023410176, 0}, (float[]) null, Shader.TileMode.CLAMP));
+            this.f24579a.setShader(new RadialGradient(f10, f10, this.b, new int[]{1023410176, 0}, (float[]) null, Shader.TileMode.CLAMP));
         }
 
         @Override // android.graphics.drawable.shapes.OvalShape, android.graphics.drawable.shapes.RectShape, android.graphics.drawable.shapes.Shape
         public void draw(Canvas canvas, Paint paint) {
-            int width = this.f23930c.getWidth() / 2;
+            int width = this.f24580c.getWidth() / 2;
             float f10 = width;
-            float height = this.f23930c.getHeight() / 2;
-            canvas.drawCircle(f10, height, f10, this.f23929a);
+            float height = this.f24580c.getHeight() / 2;
+            canvas.drawCircle(f10, height, f10, this.f24579a);
             canvas.drawCircle(f10, height, width - this.b, paint);
         }
 
@@ -66,21 +66,21 @@ public class a extends ImageView {
         int i10 = (int) (1.75f * f10);
         int i11 = (int) (0.0f * f10);
         this.b = (int) (3.5f * f10);
-        TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(l5.a.f22949a);
-        this.f23928c = typedArrayObtainStyledAttributes.getColor(l5.a.b, -328966);
+        TypedArray typedArrayObtainStyledAttributes = getContext().obtainStyledAttributes(l5.a.f23343a);
+        this.f24578c = typedArrayObtainStyledAttributes.getColor(l5.a.b, -328966);
         typedArrayObtainStyledAttributes.recycle();
         if (a()) {
             shapeDrawable = new ShapeDrawable(new OvalShape());
             o0.u0(this, f10 * 4.0f);
         } else {
-            ShapeDrawable shapeDrawable2 = new ShapeDrawable(new C0423a(this, this.b));
+            ShapeDrawable shapeDrawable2 = new ShapeDrawable(new C0437a(this, this.b));
             setLayerType(1, shapeDrawable2.getPaint());
             shapeDrawable2.getPaint().setShadowLayer(this.b, i11, i10, 503316480);
             int i12 = this.b;
             setPadding(i12, i12, i12, i12);
             shapeDrawable = shapeDrawable2;
         }
-        shapeDrawable.getPaint().setColor(this.f23928c);
+        shapeDrawable.getPaint().setColor(this.f24578c);
         setBackground(shapeDrawable);
     }
 
@@ -89,13 +89,13 @@ public class a extends ImageView {
     }
 
     public void b(Animation.AnimationListener animationListener) {
-        this.f23927a = animationListener;
+        this.f24577a = animationListener;
     }
 
     @Override // android.view.View
     public void onAnimationEnd() {
         super.onAnimationEnd();
-        Animation.AnimationListener animationListener = this.f23927a;
+        Animation.AnimationListener animationListener = this.f24577a;
         if (animationListener != null) {
             animationListener.onAnimationEnd(getAnimation());
         }
@@ -104,7 +104,7 @@ public class a extends ImageView {
     @Override // android.view.View
     public void onAnimationStart() {
         super.onAnimationStart();
-        Animation.AnimationListener animationListener = this.f23927a;
+        Animation.AnimationListener animationListener = this.f24577a;
         if (animationListener != null) {
             animationListener.onAnimationStart(getAnimation());
         }
@@ -123,7 +123,7 @@ public class a extends ImageView {
     public void setBackgroundColor(int i10) {
         if (getBackground() instanceof ShapeDrawable) {
             ((ShapeDrawable) getBackground()).getPaint().setColor(i10);
-            this.f23928c = i10;
+            this.f24578c = i10;
         }
     }
 }

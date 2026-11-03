@@ -35,53 +35,53 @@ import x0.n0;
 public class k implements w2.c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Set<w2> f3806a;
+    public final Set<w2> f3704a;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final j4 f3809e;
+    public final j4 f3707e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final p0 f3810f;
+    public final p0 f3708f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final p0 f3811g;
+    public final p0 f3709g;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final Set<i4<?>> f3813i;
+    public final Set<i4<?>> f3711i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final Map<w2, i4<?>> f3814j;
+    public final Map<w2, i4<?>> f3712j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final c f3815k;
+    public final c f3713k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public c f3816l;
+    public c f3714l;
     public final Map<w2, n0> b = new HashMap();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Map<w2, j> f3807c = new HashMap();
+    public final Map<w2, j> f3705c = new HashMap();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Map<w2, Boolean> f3808d = new HashMap();
+    public final Map<w2, Boolean> f3706d = new HashMap();
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final u f3812h = v();
+    public final u f3710h = v();
 
     public static class a extends u {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final WeakReference<k> f3817a;
+        public final WeakReference<k> f3715a;
 
         public a(k kVar) {
-            this.f3817a = new WeakReference<>(kVar);
+            this.f3715a = new WeakReference<>(kVar);
         }
 
         @Override // n0.u
         public void b(int i10, e0 e0Var) {
-            k kVar = this.f3817a.get();
+            k kVar = this.f3715a.get();
             if (kVar != null) {
-                Iterator<w2> it = kVar.f3806a.iterator();
+                Iterator<w2> it = kVar.f3704a.iterator();
                 while (it.hasNext()) {
                     k.S(e0Var, it.next().z(), i10);
                 }
@@ -90,21 +90,21 @@ public class k implements w2.c {
     }
 
     public k(p0 p0Var, p0 p0Var2, Set<w2> set, j4 j4Var, g.a aVar) {
-        this.f3810f = p0Var;
-        this.f3811g = p0Var2;
-        this.f3809e = j4Var;
-        this.f3806a = set;
+        this.f3708f = p0Var;
+        this.f3709g = p0Var2;
+        this.f3707e = j4Var;
+        this.f3704a = set;
         Map<w2, i4<?>> mapU = U(p0Var, set, j4Var);
-        this.f3814j = mapU;
+        this.f3712j = mapU;
         HashSet hashSet = new HashSet(mapU.values());
-        this.f3813i = hashSet;
-        this.f3815k = new c(p0Var, hashSet);
+        this.f3711i = hashSet;
+        this.f3713k = new c(p0Var, hashSet);
         if (p0Var2 != null) {
-            this.f3816l = new c(p0Var2, hashSet);
+            this.f3714l = new c(p0Var2, hashSet);
         }
         for (w2 w2Var : set) {
-            this.f3808d.put(w2Var, Boolean.FALSE);
-            this.f3807c.put(w2Var, new j(p0Var, this, aVar));
+            this.f3706d.put(w2Var, Boolean.FALSE);
+            this.f3705c.put(w2Var, new j(p0Var, this, aVar));
         }
     }
 
@@ -143,12 +143,12 @@ public class k implements w2.c {
     }
 
     public static Range<Integer> R(Set<i4<?>> set) {
-        Range<Integer> rangeIntersect = t3.f24861a;
+        Range<Integer> rangeIntersect = t3.f25682a;
         Iterator<i4<?>> it = set.iterator();
         while (it.hasNext()) {
             Range<Integer> rangeZ = it.next().z(rangeIntersect);
             Objects.requireNonNull(rangeZ);
-            if (t3.f24861a.equals(rangeIntersect)) {
+            if (t3.f25682a.equals(rangeIntersect)) {
                 rangeIntersect = rangeZ;
             } else {
                 try {
@@ -196,14 +196,14 @@ public class k implements w2.c {
     }
 
     public Set<w2> D() {
-        return this.f3806a;
+        return this.f3704a;
     }
 
     public Map<w2, z0.f> E(n0 n0Var, int i10, boolean z10, boolean z11) {
         HashMap map = new HashMap();
-        for (w2 w2Var : this.f3806a) {
+        for (w2 w2Var : this.f3704a) {
             n0 n0Var2 = n0Var;
-            z0.f fVarU = u(w2Var, this.f3815k, this.f3810f, n0Var2, i10, z10, z11);
+            z0.f fVarU = u(w2Var, this.f3713k, this.f3708f, n0Var2, i10, z10, z11);
             W(w2Var);
             map.put(w2Var, fVarU);
             n0Var = n0Var2;
@@ -213,14 +213,14 @@ public class k implements w2.c {
 
     public Map<w2, y0.d> F(n0 n0Var, n0 n0Var2, int i10, boolean z10) {
         HashMap map = new HashMap();
-        for (w2 w2Var : this.f3806a) {
+        for (w2 w2Var : this.f3704a) {
             n0 n0Var3 = n0Var;
             int i11 = i10;
             boolean z11 = z10;
-            z0.f fVarU = u(w2Var, this.f3815k, this.f3810f, n0Var3, i11, z11, false);
-            c cVar = this.f3816l;
+            z0.f fVarU = u(w2Var, this.f3713k, this.f3708f, n0Var3, i11, z11, false);
+            c cVar = this.f3714l;
             Objects.requireNonNull(cVar);
-            p0 p0Var = this.f3811g;
+            p0 p0Var = this.f3709g;
             Objects.requireNonNull(p0Var);
             n0 n0Var4 = n0Var2;
             z0.f fVarU2 = u(w2Var, cVar, p0Var, n0Var4, i11, z11, false);
@@ -235,11 +235,11 @@ public class k implements w2.c {
     }
 
     public u H() {
-        return this.f3812h;
+        return this.f3710h;
     }
 
     public final a2 I() {
-        for (w2 w2Var : this.f3806a) {
+        for (w2 w2Var : this.f3704a) {
             if (w2Var instanceof a2) {
                 return (a2) w2Var;
             }
@@ -249,9 +249,9 @@ public class k implements w2.c {
 
     public Map<w2, Size> J(n0 n0Var, boolean z10) {
         HashMap map = new HashMap();
-        for (w2 w2Var : this.f3806a) {
-            c cVar = this.f3815k;
-            i4<?> i4Var = this.f3814j.get(w2Var);
+        for (w2 w2Var : this.f3704a) {
+            c cVar = this.f3713k;
+            i4<?> i4Var = this.f3712j.get(w2Var);
             Objects.requireNonNull(i4Var);
             PreferredChildSize preferredChildSizeR = cVar.r(i4Var, n0Var.n(), a0.g(n0Var.r()), z10);
             map.put(w2Var, preferredChildSizeR.getOriginalSelectedChildSize());
@@ -267,23 +267,23 @@ public class k implements w2.c {
     }
 
     public final boolean L(w2 w2Var) {
-        Boolean bool = this.f3808d.get(w2Var);
+        Boolean bool = this.f3706d.get(w2Var);
         Objects.requireNonNull(bool);
         return bool.booleanValue();
     }
 
     public void M(n0.w2 w2Var) {
-        w2Var.G(i2.f24693v, this.f3815k.o(w2Var));
-        w2Var.G(i4.A, Integer.valueOf(G(this.f3813i)));
-        k0 k0VarD = b1.a.d(this.f3813i);
+        w2Var.G(i2.f25514v, this.f3713k.o(w2Var));
+        w2Var.G(i4.A, Integer.valueOf(G(this.f3711i)));
+        k0 k0VarD = b1.a.d(this.f3711i);
         if (k0VarD == null) {
             throw new IllegalArgumentException("Failed to merge child dynamic ranges, can not find a dynamic range that satisfies all children.");
         }
-        w2Var.G(h2.f24672l, k0VarD);
-        w2Var.G(i4.C, R(this.f3813i));
-        Iterator<w2> it = this.f3806a.iterator();
+        w2Var.G(h2.f25493l, k0VarD);
+        w2Var.G(i4.C, R(this.f3711i));
+        Iterator<w2> it = this.f3704a.iterator();
         while (it.hasNext()) {
-            i4<?> i4Var = this.f3814j.get(it.next());
+            i4<?> i4Var = this.f3712j.get(it.next());
             Objects.requireNonNull(i4Var);
             i4<?> i4Var2 = i4Var;
             if (i4Var2.x() != 0) {
@@ -296,21 +296,21 @@ public class k implements w2.c {
     }
 
     public void N() {
-        Iterator<w2> it = this.f3806a.iterator();
+        Iterator<w2> it = this.f3704a.iterator();
         while (it.hasNext()) {
             it.next().P();
         }
     }
 
     public void O() {
-        Iterator<w2> it = this.f3806a.iterator();
+        Iterator<w2> it = this.f3704a.iterator();
         while (it.hasNext()) {
             it.next().R();
         }
     }
 
     public void P() {
-        Iterator<w2> it = this.f3806a.iterator();
+        Iterator<w2> it = this.f3704a.iterator();
         while (it.hasNext()) {
             it.next().S();
         }
@@ -318,7 +318,7 @@ public class k implements w2.c {
 
     public void Q() {
         z.b();
-        Iterator<w2> it = this.f3806a.iterator();
+        Iterator<w2> it = this.f3704a.iterator();
         while (it.hasNext()) {
             n(it.next());
         }
@@ -338,22 +338,22 @@ public class k implements w2.c {
     }
 
     public void V() {
-        for (w2 w2Var : this.f3806a) {
-            j jVar = this.f3807c.get(w2Var);
+        for (w2 w2Var : this.f3704a) {
+            j jVar = this.f3705c.get(w2Var);
             Objects.requireNonNull(jVar);
             w2Var.c0(jVar);
         }
     }
 
     public final void W(w2 w2Var) {
-        int iZ = z(w2Var, this.f3810f);
-        j jVar = this.f3807c.get(w2Var);
+        int iZ = z(w2Var, this.f3708f);
+        j jVar = this.f3705c.get(w2Var);
         Objects.requireNonNull(jVar);
         jVar.t(iZ);
     }
 
     @Override // g0.w2.c
-    public void g(w2 w2Var) {
+    public void f(w2 w2Var) {
         z.b();
         if (L(w2Var)) {
             n0 n0VarK = K(w2Var);
@@ -370,7 +370,7 @@ public class k implements w2.c {
     public void m(w2 w2Var) {
         z.b();
         if (L(w2Var)) {
-            this.f3808d.put(w2Var, Boolean.FALSE);
+            this.f3706d.put(w2Var, Boolean.FALSE);
             K(w2Var).m();
         }
     }
@@ -391,7 +391,7 @@ public class k implements w2.c {
         if (L(w2Var)) {
             return;
         }
-        this.f3808d.put(w2Var, Boolean.TRUE);
+        this.f3706d.put(w2Var, Boolean.TRUE);
         u1 u1VarB = B(w2Var);
         if (u1VarB != null) {
             w(K(w2Var), u1VarB, w2Var.z());
@@ -399,17 +399,17 @@ public class k implements w2.c {
     }
 
     public void t() {
-        for (w2 w2Var : this.f3806a) {
-            j jVar = this.f3807c.get(w2Var);
+        for (w2 w2Var : this.f3704a) {
+            j jVar = this.f3705c.get(w2Var);
             Objects.requireNonNull(jVar);
-            w2Var.d(jVar, null, null, w2Var.m(true, this.f3809e));
+            w2Var.d(jVar, null, null, w2Var.m(true, this.f3707e));
         }
     }
 
     public final z0.f u(w2 w2Var, c cVar, p0 p0Var, n0 n0Var, int i10, boolean z10, boolean z11) {
         int iW = p0Var.d().w(i10);
         boolean zL = a0.l(n0Var.r());
-        i4<?> i4Var = this.f3814j.get(w2Var);
+        i4<?> i4Var = this.f3712j.get(w2Var);
         Objects.requireNonNull(i4Var);
         PreferredChildSize preferredChildSizeR = cVar.r(i4Var, n0Var.n(), a0.g(n0Var.r()), z10);
         Rect cropRectBeforeScaling = preferredChildSizeR.getCropRectBeforeScaling();
@@ -424,7 +424,7 @@ public class k implements w2.c {
 
     public y0.d y(n0 n0Var, n0 n0Var2, int i10, boolean z10) {
         a2 a2Var = (a2) x2.g.g(I());
-        return y0.d.c(u(a2Var, this.f3815k, this.f3810f, n0Var, i10, z10, false), u(a2Var, this.f3815k, this.f3811g, n0Var2, i10, z10, false));
+        return y0.d.c(u(a2Var, this.f3713k, this.f3708f, n0Var, i10, z10, false), u(a2Var, this.f3713k, this.f3709g, n0Var2, i10, z10, false));
     }
 
     public final int z(w2 w2Var, p0 p0Var) {

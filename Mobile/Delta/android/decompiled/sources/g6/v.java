@@ -7,7 +7,7 @@ import android.content.Context;
 public class v {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final String f17932a = x5.w.i("PackageManagerHelper");
+    public static final String f18471a = x5.w.i("PackageManagerHelper");
 
     public static int a(Context context, String str) {
         return context.getPackageManager().getComponentEnabledSetting(new ComponentName(context, str));
@@ -23,12 +23,12 @@ public class v {
     public static void c(Context context, Class<?> cls, boolean z10) {
         try {
             if (z10 == b(a(context, cls.getName()), false)) {
-                x5.w.e().a(f17932a, "Skipping component enablement for " + cls.getName());
+                x5.w.e().a(f18471a, "Skipping component enablement for " + cls.getName());
                 return;
             }
             context.getPackageManager().setComponentEnabledSetting(new ComponentName(context, cls.getName()), z10 ? 1 : 2, 1);
             x5.w wVarE = x5.w.e();
-            String str = f17932a;
+            String str = f18471a;
             StringBuilder sb2 = new StringBuilder();
             sb2.append(cls.getName());
             sb2.append(" ");
@@ -36,7 +36,7 @@ public class v {
             wVarE.a(str, sb2.toString());
         } catch (Exception e10) {
             x5.w wVarE2 = x5.w.e();
-            String str2 = f17932a;
+            String str2 = f18471a;
             StringBuilder sb3 = new StringBuilder();
             sb3.append(cls.getName());
             sb3.append("could not be ");

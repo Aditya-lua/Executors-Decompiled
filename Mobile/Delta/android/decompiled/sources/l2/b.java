@@ -23,7 +23,7 @@ import n2.h;
 public class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Object f22923a = new Object();
+    public static final Object f23317a = new Object();
 
     public static class a {
         public static Drawable a(Context context, int i10) {
@@ -83,7 +83,7 @@ public class b {
         if (Build.VERSION.SDK_INT >= 33 || !TextUtils.equals("android.permission.POST_NOTIFICATIONS", str)) {
             return context.checkPermission(str, Process.myPid(), Process.myUid());
         }
-        return n.e(context).a() ? 0 : -1;
+        return n.f(context).a() ? 0 : -1;
     }
 
     public static Context b(Context context) {

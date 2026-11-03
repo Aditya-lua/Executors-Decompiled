@@ -15,12 +15,12 @@ import java.util.Set;
 public final class a0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final List<x> f15802a;
+    public final List<x> f16398a;
     public final p b;
 
     public a0(List<x> list, p pVar) {
-        x2.g.b((list.isEmpty() && pVar == p.f15905a) ? false : true, "No preferred quality and fallback strategy.");
-        this.f15802a = Collections.unmodifiableList(new ArrayList(list));
+        x2.g.b((list.isEmpty() && pVar == p.f16501a) ? false : true, "No preferred quality and fallback strategy.");
+        this.f16398a = Collections.unmodifiableList(new ArrayList(list));
         this.b = pVar;
     }
 
@@ -69,13 +69,13 @@ public final class a0 {
         }
         g0.r1.a("QualitySelector", "Select quality by fallbackStrategy = " + this.b);
         p pVar = this.b;
-        if (pVar == p.f15905a) {
+        if (pVar == p.f16501a) {
             return;
         }
         x2.g.j(pVar instanceof p.b, "Currently only support type RuleStrategy");
         p.b bVar = (p.b) this.b;
         List<x> listB = x.b();
-        x xVarC = bVar.c() == x.f16054f ? listB.get(0) : bVar.c() == x.f16053e ? listB.get(listB.size() - 1) : bVar.c();
+        x xVarC = bVar.c() == x.f16650f ? listB.get(0) : bVar.c() == x.f16649e ? listB.get(listB.size() - 1) : bVar.c();
         x2.g.i(listB.indexOf(xVarC) != -1);
         ArrayList arrayList = new ArrayList();
         for (int i10 = r4 - 1; i10 >= 0; i10--) {
@@ -123,12 +123,12 @@ public final class a0 {
         }
         g0.r1.a("QualitySelector", "supportedQualities = " + list);
         Set<x> linkedHashSet = new LinkedHashSet<>();
-        for (x xVar : this.f15802a) {
-            if (xVar == x.f16054f) {
+        for (x xVar : this.f16398a) {
+            if (xVar == x.f16650f) {
                 linkedHashSet.addAll(list);
                 break;
             }
-            if (xVar == x.f16053e) {
+            if (xVar == x.f16649e) {
                 ArrayList arrayList = new ArrayList(list);
                 Collections.reverse(arrayList);
                 linkedHashSet.addAll(arrayList);
@@ -145,6 +145,6 @@ public final class a0 {
     }
 
     public String toString() {
-        return "QualitySelector{preferredQualities=" + this.f15802a + ", fallbackStrategy=" + this.b + "}";
+        return "QualitySelector{preferredQualities=" + this.f16398a + ", fallbackStrategy=" + this.b + "}";
     }
 }

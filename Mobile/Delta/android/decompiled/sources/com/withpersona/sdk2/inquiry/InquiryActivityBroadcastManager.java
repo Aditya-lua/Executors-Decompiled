@@ -1,25 +1,25 @@
 package com.withpersona.sdk2.inquiry;
 
-import jt.o;
+import gt.o;
+import iu.g1;
+import iu.k;
+import iu.p0;
+import iu.q0;
+import iu.z2;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
-import ku.g1;
-import ku.k;
-import ku.p0;
-import ku.q0;
-import ku.z2;
-import nt.b;
-import nu.b0;
-import nu.g0;
-import nu.i0;
+import lt.b;
+import lu.b0;
+import lu.g0;
+import lu.i0;
+import mt.c;
+import nt.f;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
-import ot.c;
-import pt.f;
-import pt.m;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\b\b\u0002\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0007\u0010\bR\u0014\u0010\n\u001a\u00020\t8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\n\u0010\u000bR\u001a\u0010\u000e\u001a\b\u0012\u0004\u0012\u00020\r0\f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000e\u0010\u000fR\u0017\u0010\u0013\u001a\b\u0012\u0004\u0012\u00020\r0\u00108F¢\u0006\u0006\u001a\u0004\b\u0011\u0010\u0012¨\u0006\u0014"}, d2 = {"Lcom/withpersona/sdk2/inquiry/InquiryActivityBroadcastManager;", "", "<init>", "()V", "", "skipBackendCall", "", "cancelRunningInquiries", "(Z)V", "Lku/p0;", "coroutineScope", "Lku/p0;", "Lnu/b0;", "Lcom/withpersona/sdk2/inquiry/InquiryActivityEvent;", "_eventFlow", "Lnu/b0;", "Lnu/g0;", "getEventFlow", "()Lnu/g0;", "eventFlow", "inquiry-dynamic-feature_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u00006\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\b\b\u0002\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0007\u0010\bR\u0014\u0010\n\u001a\u00020\t8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\n\u0010\u000bR\u001a\u0010\u000e\u001a\b\u0012\u0004\u0012\u00020\r0\f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000e\u0010\u000fR\u0017\u0010\u0013\u001a\b\u0012\u0004\u0012\u00020\r0\u00108F¢\u0006\u0006\u001a\u0004\b\u0011\u0010\u0012¨\u0006\u0014"}, d2 = {"Lcom/withpersona/sdk2/inquiry/InquiryActivityBroadcastManager;", "", "<init>", "()V", "", "skipBackendCall", "", "cancelRunningInquiries", "(Z)V", "Liu/p0;", "coroutineScope", "Liu/p0;", "Llu/b0;", "Lcom/withpersona/sdk2/inquiry/InquiryActivityEvent;", "_eventFlow", "Llu/b0;", "Llu/g0;", "getEventFlow", "()Llu/g0;", "eventFlow", "inquiry-dynamic-feature_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class InquiryActivityBroadcastManager {
 
     @NotNull
@@ -32,8 +32,8 @@ public final class InquiryActivityBroadcastManager {
     private static final b0<InquiryActivityEvent> _eventFlow = i0.b(0, 0, null, 7, null);
 
     /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.InquiryActivityBroadcastManager$cancelRunningInquiries$1, reason: invalid class name */
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
     @f(c = "com.withpersona.sdk2.inquiry.InquiryActivityBroadcastManager$cancelRunningInquiries$1", f = "InquiryActivityBroadcastManager.kt", l = {19}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
     public static final class AnonymousClass1 extends m implements Function2<p0, b<? super Unit>, Object> {
         final /* synthetic */ boolean $skipBackendCall;
         int label;
@@ -44,12 +44,17 @@ public final class InquiryActivityBroadcastManager {
             this.$skipBackendCall = z10;
         }
 
-        @Override // pt.a
+        @Override // nt.a
         public final b<Unit> create(Object obj, b<?> bVar) {
             return new AnonymousClass1(this.$skipBackendCall, bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, b<? super Unit> bVar) {
+            return ((AnonymousClass1) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
             Object objE = c.e();
             int i10 = this.label;
@@ -67,12 +72,7 @@ public final class InquiryActivityBroadcastManager {
                 }
                 o.b(obj);
             }
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, b<? super Unit> bVar) {
-            return ((AnonymousClass1) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            return Unit.f22938a;
         }
     }
 

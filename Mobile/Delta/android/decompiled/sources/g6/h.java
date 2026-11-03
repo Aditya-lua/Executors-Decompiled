@@ -55,7 +55,7 @@ public final class h {
             }
         });
         s(f1Var);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final void j(f1 f1Var, UUID uuid) {
@@ -83,7 +83,7 @@ public final class h {
     public static final Unit l(String str, f1 f1Var) {
         m(str, f1Var);
         s(f1Var);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final void m(@NotNull final String name, @NotNull final f1 workManagerImpl) {
@@ -132,7 +132,7 @@ public final class h {
             }
         });
         s(f1Var);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final void q(WorkDatabase workDatabase, String str, f1 f1Var) {

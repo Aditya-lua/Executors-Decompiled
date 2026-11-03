@@ -16,13 +16,13 @@ public final class AFf1nSDK {
     private static byte[] AFLogger = null;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    private static int f5352d = 0;
+    private static int f5425d = 0;
     private static int force = 0;
     private static int registerClient = 0;
     private static short[] unregisterClient = null;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    private static int f5353v = 1;
+    private static int f5426v = 1;
 
     static {
         registerClient();
@@ -32,7 +32,7 @@ public final class AFf1nSDK {
         ViewConfiguration.getWindowTouchSlop();
         ViewConfiguration.getScrollBarFadeDuration();
         int i10 = force + 95;
-        f5353v = i10 % 128;
+        f5426v = i10 % 128;
         if (i10 % 2 == 0) {
             throw null;
         }
@@ -52,7 +52,7 @@ public final class AFf1nSDK {
         } else {
             str3 = strIntern;
         }
-        boolean zEquals = d(new StringBuilder(str3).reverse().toString(), aFh1aSDK.f5388d, "android", "v1", string).equals(str);
+        boolean zEquals = d(new StringBuilder(str3).reverse().toString(), aFh1aSDK.f5461d, "android", "v1", string).equals(str);
         return new AFi1uSDK(zEquals, zEquals ? AFh1dSDK.SUCCESS : AFh1dSDK.FAILURE);
     }
 
@@ -84,20 +84,20 @@ public final class AFf1nSDK {
                 }
                 bArr = bArr2;
             }
-            i15 = bArr != null ? (byte) (((byte) (((long) AFLogger[i12 + ((int) (((long) f5352d) ^ (-6851507024414479503L)))]) ^ (-6851507024414479503L))) + ((int) (((long) registerClient) ^ (-6851507024414479503L)))) : (short) (((short) (((long) unregisterClient[i12 + ((int) (((long) f5352d) ^ (-6851507024414479503L)))]) ^ (-6851507024414479503L))) + ((int) (((long) registerClient) ^ (-6851507024414479503L))));
+            i15 = bArr != null ? (byte) (((byte) (((long) AFLogger[i12 + ((int) (((long) f5425d) ^ (-6851507024414479503L)))]) ^ (-6851507024414479503L))) + ((int) (((long) registerClient) ^ (-6851507024414479503L)))) : (short) (((short) (((long) unregisterClient[i12 + ((int) (((long) f5425d) ^ (-6851507024414479503L)))]) ^ (-6851507024414479503L))) + ((int) (((long) registerClient) ^ (-6851507024414479503L))));
         }
         if (i15 > 0) {
             int i18 = $10 + 123;
             $11 = i18 % 128;
             if (i18 % 2 == 0) {
-                i13 = ((i12 >>> i15) - 5) + ((int) (((long) f5352d) % (-6851507024414479503L)));
+                i13 = ((i12 >>> i15) - 5) + ((int) (((long) f5425d) % (-6851507024414479503L)));
                 if (z11) {
                     i14 = 1;
                 } else {
                     i14 = 0;
                 }
             } else {
-                i13 = ((i12 + i15) - 2) + ((int) (((long) f5352d) ^ (-6851507024414479503L)));
+                i13 = ((i12 + i15) - 2) + ((int) (((long) f5425d) ^ (-6851507024414479503L)));
                 if (z11) {
                     i14 = 1;
                 } else {
@@ -129,8 +129,8 @@ public final class AFf1nSDK {
             } else {
                 z10 = false;
             }
-            aFk1rSDK.f5456d = 1;
-            while (aFk1rSDK.f5456d < i15) {
+            aFk1rSDK.f5529d = 1;
+            while (aFk1rSDK.f5529d < i15) {
                 if (z10) {
                     byte[] bArr5 = AFLogger;
                     int i21 = aFk1rSDK.AFLogger;
@@ -144,7 +144,7 @@ public final class AFf1nSDK {
                 }
                 sb2.append(aFk1rSDK.registerClient);
                 aFk1rSDK.AFKeystoreWrapper = aFk1rSDK.registerClient;
-                aFk1rSDK.f5456d++;
+                aFk1rSDK.f5529d++;
             }
         }
         objArr[0] = sb2.toString();
@@ -177,7 +177,7 @@ public final class AFf1nSDK {
     /* JADX WARN: Code restructure failed: missing block: B:9:0x0044, code lost:
     
         r8 = com.appsflyer.internal.AFf1nSDK.force + 33;
-        com.appsflyer.internal.AFf1nSDK.f5353v = r8 % 128;
+        com.appsflyer.internal.AFf1nSDK.f5426v = r8 % 128;
      */
     /*
         Code decompiled incorrectly, please refer to instructions dump.
@@ -185,7 +185,7 @@ public final class AFf1nSDK {
     */
     private static java.lang.String d(java.lang.String r7, java.lang.String r8, java.lang.String r9, java.lang.String r10, java.lang.String r11) {
         /*
-            int r0 = com.appsflyer.internal.AFf1nSDK.f5353v
+            int r0 = com.appsflyer.internal.AFf1nSDK.f5426v
             int r0 = r0 + 63
             int r1 = r0 % 128
             com.appsflyer.internal.AFf1nSDK.force = r1
@@ -220,7 +220,7 @@ public final class AFf1nSDK {
             int r8 = com.appsflyer.internal.AFf1nSDK.force
             int r8 = r8 + 33
             int r9 = r8 % 128
-            com.appsflyer.internal.AFf1nSDK.f5353v = r9
+            com.appsflyer.internal.AFf1nSDK.f5426v = r9
             int r8 = r8 % r1
             if (r8 != 0) goto L52
             r8 = 56
@@ -235,7 +235,7 @@ public final class AFf1nSDK {
     }
 
     public static void registerClient() {
-        f5352d = -1732147492;
+        f5425d = -1732147492;
         registerClient = -2119275717;
         AFKeystoreWrapper = 154316849;
         AFLogger = new byte[]{-121, -94, 82, 82, 82, -82, 92, -89, -85, 82, 86, -83, -83, -87, 82, 80, -82, -84, -81, 87, 91, -95, 93, -94, 82, -81, 89, -90, -81, 82, 82, -83, -88, 81, -81, 80, 95, -67, -87, 81, 81, -87, 86, -86, 80, -84, 83, -87, -83, 83, -83, -81, 84, -81, 83, -85, 80, 82, -84, -82, -83, 81, -87, -83};
@@ -244,11 +244,11 @@ public final class AFf1nSDK {
     @NonNull
     public final AFi1uSDK AFKeystoreWrapper(@NonNull AFh1aSDK aFh1aSDK, String str, @NonNull String str2, @NonNull String str3) {
         if (aFh1aSDK != null && str2 != null && str3 != null) {
-            force = (f5353v + 73) % 128;
+            force = (f5426v + 73) % 128;
             return AFLogger(aFh1aSDK, str, str2, str3);
         }
         AFi1uSDK aFi1uSDK = new AFi1uSDK(false, AFh1dSDK.INTERNAL_ERROR);
-        force = (f5353v + 33) % 128;
+        force = (f5426v + 33) % 128;
         return aFi1uSDK;
     }
 }

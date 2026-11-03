@@ -27,27 +27,27 @@ public class BitmapTeleporter extends AbstractSafeParcelable implements Reflecte
     public static final Parcelable.Creator<BitmapTeleporter> CREATOR = new f();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f5744f;
+    public final int f5817f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public ParcelFileDescriptor f5745g;
+    public ParcelFileDescriptor f5818g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final int f5746h;
+    public final int f5819h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public Bitmap f5747i = null;
+    public Bitmap f5820i = null;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public boolean f5748j = false;
+    public boolean f5821j = false;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public File f5749k;
+    public File f5822k;
 
     public BitmapTeleporter(int i10, ParcelFileDescriptor parcelFileDescriptor, int i11) {
-        this.f5744f = i10;
-        this.f5745g = parcelFileDescriptor;
-        this.f5746h = i11;
+        this.f5817f = i10;
+        this.f5818g = parcelFileDescriptor;
+        this.f5819h = i11;
     }
 
     public static final void a(Closeable closeable) {
@@ -60,12 +60,12 @@ public class BitmapTeleporter extends AbstractSafeParcelable implements Reflecte
 
     @Override // android.os.Parcelable
     public final void writeToParcel(@NonNull Parcel parcel, int i10) {
-        if (this.f5745g == null) {
-            Bitmap bitmap = (Bitmap) m.l(this.f5747i);
+        if (this.f5818g == null) {
+            Bitmap bitmap = (Bitmap) m.l(this.f5820i);
             ByteBuffer byteBufferAllocate = ByteBuffer.allocate(bitmap.getRowBytes() * bitmap.getHeight());
             bitmap.copyPixelsToBuffer(byteBufferAllocate);
             byte[] bArrArray = byteBufferAllocate.array();
-            File file = this.f5749k;
+            File file = this.f5822k;
             if (file == null) {
                 throw new IllegalStateException("setTempDir() must be called before writing this object to a parcel");
             }
@@ -73,7 +73,7 @@ public class BitmapTeleporter extends AbstractSafeParcelable implements Reflecte
                 File fileCreateTempFile = File.createTempFile("teleporter", ".tmp", file);
                 try {
                     FileOutputStream fileOutputStream = new FileOutputStream(fileCreateTempFile);
-                    this.f5745g = ParcelFileDescriptor.open(fileCreateTempFile, 268435456);
+                    this.f5818g = ParcelFileDescriptor.open(fileCreateTempFile, 268435456);
                     fileCreateTempFile.delete();
                     DataOutputStream dataOutputStream = new DataOutputStream(new BufferedOutputStream(fileOutputStream));
                     try {
@@ -99,10 +99,10 @@ public class BitmapTeleporter extends AbstractSafeParcelable implements Reflecte
             }
         }
         int iA = b.a(parcel);
-        b.n(parcel, 1, this.f5744f);
-        b.t(parcel, 2, this.f5745g, i10 | 1, false);
-        b.n(parcel, 3, this.f5746h);
+        b.n(parcel, 1, this.f5817f);
+        b.t(parcel, 2, this.f5818g, i10 | 1, false);
+        b.n(parcel, 3, this.f5819h);
         b.b(parcel, iA);
-        this.f5745g = null;
+        this.f5818g = null;
     }
 }

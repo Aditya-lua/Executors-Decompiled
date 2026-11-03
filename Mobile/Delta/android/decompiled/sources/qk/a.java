@@ -1,34 +1,40 @@
 package qk;
 
-import com.roblox.engine.jni.model.PlatformParams;
-
 /* JADX INFO: loaded from: classes2.dex */
-public class a extends PlatformParams {
-    public boolean isLuaChatEnabled;
-    public boolean isLuaGamesPageEnabled;
-    public boolean isLuaHomePageEnabled;
-    public boolean isTablet;
-
-    public a() {
-        this(null);
+public class a {
+    public String a() {
+        throw null;
     }
 
-    @Override // com.roblox.engine.jni.model.PlatformParams
-    public void a(PlatformParams platformParams) {
-        super.a(platformParams);
-        if (platformParams instanceof a) {
-            b((a) platformParams);
-        }
+    public String b() {
+        throw null;
     }
 
-    public final void b(a aVar) {
-        this.isLuaHomePageEnabled = aVar.isLuaHomePageEnabled;
-        this.isLuaGamesPageEnabled = aVar.isLuaGamesPageEnabled;
-        this.isLuaChatEnabled = aVar.isLuaChatEnabled;
-        this.isTablet = aVar.isTablet;
+    public int c() {
+        throw null;
     }
 
-    public a(PlatformParams platformParams) {
-        a(platformParams);
+    public String d() {
+        return "";
+    }
+
+    public String e() {
+        throw null;
+    }
+
+    public long f() {
+        throw null;
+    }
+
+    public String g() {
+        throw null;
+    }
+
+    public boolean h() {
+        throw null;
+    }
+
+    public boolean i() {
+        throw null;
     }
 }

@@ -1,11 +1,29 @@
 package du;
 
-import hu.l;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\bæ\u0080\u0001\u0018\u0000*\u0006\b\u0000\u0010\u0001 \u0000*\u0006\b\u0001\u0010\u0002 \u00012\u00020\u0003J$\u0010\u0007\u001a\u00028\u00012\u0006\u0010\u0004\u001a\u00028\u00002\n\u0010\u0006\u001a\u0006\u0012\u0002\b\u00030\u0005H¦\u0002¢\u0006\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"Ldu/a;", "T", "V", "", "thisRef", "Lhu/l;", "property", "getValue", "(Ljava/lang/Object;Lhu/l;)Ljava/lang/Object;", "kotlin-stdlib"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public interface a<T, V> {
-    V getValue(T thisRef, @NotNull l<?> property);
+@Metadata(d1 = {"\u0000$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0010\u0006\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0000\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u001f\u0010\u0007\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0006\u001a\u00020\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\bJ\u0017\u0010\n\u001a\u00020\t2\u0006\u0010\u0006\u001a\u00020\tH\u0016¢\u0006\u0004\b\n\u0010\u000bR\u0014\u0010\u000f\u001a\u00020\f8VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\r\u0010\u000e¨\u0006\u0010"}, d2 = {"Ldu/a;", "Lcu/a;", "<init>", "()V", "", "from", "until", "h", "(II)I", "", "d", "(D)D", "Ljava/util/Random;", "i", "()Ljava/util/Random;", "impl", "kotlin-stdlib-jdk8"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class a extends cu.a {
+    @Override // cu.d
+    public double d(double until) {
+        return ThreadLocalRandom.current().nextDouble(until);
+    }
+
+    @Override // cu.d
+    public int h(int from, int until) {
+        return ThreadLocalRandom.current().nextInt(from, until);
+    }
+
+    @Override // cu.a
+    @NotNull
+    public Random i() {
+        ThreadLocalRandom threadLocalRandomCurrent = ThreadLocalRandom.current();
+        Intrinsics.checkNotNullExpressionValue(threadLocalRandomCurrent, "current(...)");
+        return threadLocalRandomCurrent;
+    }
 }

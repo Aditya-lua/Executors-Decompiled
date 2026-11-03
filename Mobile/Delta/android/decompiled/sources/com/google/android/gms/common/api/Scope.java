@@ -16,15 +16,15 @@ public final class Scope extends AbstractSafeParcelable implements ReflectedParc
     public static final Parcelable.Creator<Scope> CREATOR = new w();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f5715f;
+    public final int f5788f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final String f5716g;
+    public final String f5789g;
 
     public Scope(int i10, String str) {
         m.g(str, "scopeUri must not be null or empty");
-        this.f5715f = i10;
-        this.f5716g = str;
+        this.f5788f = i10;
+        this.f5789g = str;
     }
 
     public boolean equals(Object obj) {
@@ -32,28 +32,28 @@ public final class Scope extends AbstractSafeParcelable implements ReflectedParc
             return true;
         }
         if (obj instanceof Scope) {
-            return this.f5716g.equals(((Scope) obj).f5716g);
+            return this.f5789g.equals(((Scope) obj).f5789g);
         }
         return false;
     }
 
     public int hashCode() {
-        return this.f5716g.hashCode();
+        return this.f5789g.hashCode();
     }
 
     @NonNull
     public String toString() {
-        return this.f5716g;
+        return this.f5789g;
     }
 
     @NonNull
     public String v3() {
-        return this.f5716g;
+        return this.f5789g;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
-        int i11 = this.f5715f;
+        int i11 = this.f5788f;
         int iA = b.a(parcel);
         b.n(parcel, 1, i11);
         b.v(parcel, 2, v3(), false);

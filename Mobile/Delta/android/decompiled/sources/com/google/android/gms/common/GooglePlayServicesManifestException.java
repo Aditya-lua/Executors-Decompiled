@@ -8,10 +8,10 @@ import com.google.android.gms.common.annotation.KeepName;
 public class GooglePlayServicesManifestException extends IllegalStateException {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f5698a;
+    public final int f5771a;
 
     public GooglePlayServicesManifestException(int i10, @NonNull String str) {
         super(str);
-        this.f5698a = i10;
+        this.f5771a = i10;
     }
 }

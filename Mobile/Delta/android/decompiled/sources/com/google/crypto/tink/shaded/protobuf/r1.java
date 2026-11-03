@@ -7,7 +7,7 @@ import java.util.Arrays;
 public final class r1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final b f8549a;
+    public static final b f8623a;
 
     public static class a {
         public static void h(byte b, byte b10, byte b11, byte b12, char[] cArr, int i10) throws b0 {
@@ -481,7 +481,7 @@ public final class r1 {
             }
             while (true) {
                 int i13 = i11 + 8;
-                if (i13 > i10 || (q1.A(bArr, q1.f8531h + j10) & (-9187201950435737472L)) != 0) {
+                if (i13 > i10 || (q1.A(bArr, q1.f8605h + j10) & (-9187201950435737472L)) != 0) {
                     break;
                 }
                 j10 += 8;
@@ -745,15 +745,15 @@ public final class r1 {
     }
 
     static {
-        f8549a = (!e.e() || com.google.crypto.tink.shaded.protobuf.d.c()) ? new c() : new e();
+        f8623a = (!e.e() || com.google.crypto.tink.shaded.protobuf.d.c()) ? new c() : new e();
     }
 
     public static String e(byte[] bArr, int i10, int i11) {
-        return f8549a.a(bArr, i10, i11);
+        return f8623a.a(bArr, i10, i11);
     }
 
     public static int f(String str, byte[] bArr, int i10, int i11) {
-        return f8549a.b(str, bArr, i10, i11);
+        return f8623a.b(str, bArr, i10, i11);
     }
 
     public static int g(String str) {
@@ -836,6 +836,6 @@ public final class r1 {
     }
 
     public static boolean m(byte[] bArr, int i10, int i11) {
-        return f8549a.c(bArr, i10, i11);
+        return f8623a.c(bArr, i10, i11);
     }
 }

@@ -59,7 +59,7 @@ public interface d {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NotNull
-        public static final b f9940a = new b();
+        public static final b f10021a = new b();
     }
 
     @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"Lcom/withpersona/sdk2/camera/d$c;", "Lcom/withpersona/sdk2/camera/d;", "<init>", "()V", "camera_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
@@ -67,16 +67,16 @@ public interface d {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NotNull
-        public static final c f9941a = new c();
+        public static final c f10022a = new c();
     }
 
     /* JADX INFO: renamed from: com.withpersona.sdk2.camera.d$d, reason: collision with other inner class name */
     @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"Lcom/withpersona/sdk2/camera/d$d;", "Lcom/withpersona/sdk2/camera/d;", "<init>", "()V", "camera_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    public static final class C0162d implements d {
+    public static final class C0165d implements d {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NotNull
-        public static final C0162d f9942a = new C0162d();
+        public static final C0165d f10023a = new C0165d();
     }
 
     /* JADX INFO: renamed from: com.withpersona.sdk2.camera.d$e, reason: from toString */

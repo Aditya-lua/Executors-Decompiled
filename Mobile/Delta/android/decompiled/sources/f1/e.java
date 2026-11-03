@@ -5,14 +5,14 @@ public final class e extends p.b {
     public final x b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final int f15837c;
+    public final int f16433c;
 
     public e(x xVar, int i10) {
         if (xVar == null) {
             throw new NullPointerException("Null fallbackQuality");
         }
         this.b = xVar;
-        this.f15837c = i10;
+        this.f16433c = i10;
     }
 
     @Override // f1.p.b
@@ -22,7 +22,7 @@ public final class e extends p.b {
 
     @Override // f1.p.b
     public int d() {
-        return this.f15837c;
+        return this.f16433c;
     }
 
     public boolean equals(Object obj) {
@@ -31,7 +31,7 @@ public final class e extends p.b {
         }
         if (obj instanceof p.b) {
             p.b bVar = (p.b) obj;
-            if (this.b.equals(bVar.c()) && this.f15837c == bVar.d()) {
+            if (this.b.equals(bVar.c()) && this.f16433c == bVar.d()) {
                 return true;
             }
         }
@@ -39,10 +39,10 @@ public final class e extends p.b {
     }
 
     public int hashCode() {
-        return ((this.b.hashCode() ^ 1000003) * 1000003) ^ this.f15837c;
+        return ((this.b.hashCode() ^ 1000003) * 1000003) ^ this.f16433c;
     }
 
     public String toString() {
-        return "RuleStrategy{fallbackQuality=" + this.b + ", fallbackRule=" + this.f15837c + "}";
+        return "RuleStrategy{fallbackQuality=" + this.b + ", fallbackRule=" + this.f16433c + "}";
     }
 }

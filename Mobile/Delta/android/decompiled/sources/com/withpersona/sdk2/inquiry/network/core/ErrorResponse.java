@@ -17,11 +17,11 @@ import kotlin.jvm.internal.Intrinsics;
 import okhttp3.ResponseBody;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import um.h;
-import um.i;
-import um.m;
-import um.t;
-import um.w;
+import sm.h;
+import sm.i;
+import sm.m;
+import sm.t;
+import sm.w;
 
 /* JADX INFO: loaded from: classes3.dex */
 @i(generateAdapter = true)
@@ -1051,12 +1051,12 @@ public final class ErrorResponse {
 
         @NotNull
         private static final String LABEL_KEY = "code";
-        private static final vm.b<Error> adapterFactory = vm.b.b(Error.class, LABEL_KEY).e(Error.InactiveTemplateError.class, "inactive_template_error").e(Error.InvalidConfigError.class, "invalid_config").e(Error.UnauthenticatedError.class, "unauthenticated").e(Error.InconsistentTransitionError.class, "inconsistent_transition_error").e(Error.TransitionFromTerminalStateError.class, "transition_from_terminal_state_error").e(Error.FieldNotFoundError.class, "field_not_found_error").e(Error.RateLimitExceededError.class, "rate_limit_exceeded").e(Error.InvalidFieldValueError.class, "invalid_field_value_error").e(Error.UnknownError.class, "unknown_error").d(UnknownErrorAdapter.INSTANCE);
+        private static final tm.b<Error> adapterFactory = tm.b.b(Error.class, LABEL_KEY).e(Error.InactiveTemplateError.class, "inactive_template_error").e(Error.InvalidConfigError.class, "invalid_config").e(Error.UnauthenticatedError.class, "unauthenticated").e(Error.InconsistentTransitionError.class, "inconsistent_transition_error").e(Error.TransitionFromTerminalStateError.class, "transition_from_terminal_state_error").e(Error.FieldNotFoundError.class, "field_not_found_error").e(Error.RateLimitExceededError.class, "rate_limit_exceeded").e(Error.InvalidFieldValueError.class, "invalid_field_value_error").e(Error.UnknownError.class, "unknown_error").d(UnknownErrorAdapter.INSTANCE);
 
         private ErrorJsonAdapterFactory() {
         }
 
-        @Override // um.h.e
+        @Override // sm.h.e
         @Nullable
         public h<?> create(@NotNull Type type, @NotNull Set<? extends Annotation> set, @NotNull w wVar) {
             final h<?> hVarCreate = adapterFactory.create(type, set, wVar);
@@ -1079,12 +1079,12 @@ public final class ErrorResponse {
                 }
 
                 /* JADX WARN: Can't rename method to resolve collision */
-                @Override // um.h
+                @Override // sm.h
                 public ErrorResponse.Error fromJson(m mVar) {
                     return ErrorResponse.ErrorJsonAdapterFactory.INSTANCE.hasLabel(mVar.v()) ? this.errorAdapter.fromJson(mVar) : ErrorResponse.UnknownErrorAdapter.INSTANCE.fromJson(mVar);
                 }
 
-                @Override // um.h
+                @Override // sm.h
                 public void toJson(t tVar, ErrorResponse.Error error) {
                     this.errorAdapter.toJson(tVar, error);
                 }
@@ -1112,7 +1112,7 @@ public final class ErrorResponse {
         }
 
         /* JADX WARN: Can't rename method to resolve collision */
-        @Override // um.h
+        @Override // sm.h
         @NotNull
         public Error.UnknownError fromJson(@NotNull m mVar) {
             mVar.b();
@@ -1132,7 +1132,7 @@ public final class ErrorResponse {
             return new Error.UnknownError(strNextStringOrNull, strNextStringOrNull2);
         }
 
-        @Override // um.h
+        @Override // sm.h
         public void toJson(@NotNull t tVar, @Nullable Error.UnknownError unknownError) {
             tVar.c();
             tVar.n("originalCode");

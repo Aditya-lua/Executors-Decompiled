@@ -7,11 +7,11 @@ import com.google.android.gms.internal.play_billing.t4;
 public class p4<MessageType extends t4<MessageType, BuilderType>, BuilderType extends p4<MessageType, BuilderType>> extends b3<MessageType, BuilderType> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final t4 f7202a;
+    public final t4 f7276a;
     public t4 b;
 
     public p4(MessageType messagetype) {
-        this.f7202a = messagetype;
+        this.f7276a = messagetype;
         if (messagetype.l()) {
             throw new IllegalArgumentException("Default instance must be immutable.");
         }
@@ -24,13 +24,13 @@ public class p4<MessageType extends t4<MessageType, BuilderType>, BuilderType ex
 
     /* JADX INFO: renamed from: c, reason: merged with bridge method [inline-methods] */
     public final p4 clone() {
-        p4 p4Var = (p4) this.f7202a.p(5, null, null);
+        p4 p4Var = (p4) this.f7276a.p(5, null, null);
         p4Var.b = g();
         return p4Var;
     }
 
     public final p4 h(t4 t4Var) {
-        if (!this.f7202a.equals(t4Var)) {
+        if (!this.f7276a.equals(t4Var)) {
             if (!this.b.l()) {
                 n();
             }
@@ -65,7 +65,7 @@ public class p4<MessageType extends t4<MessageType, BuilderType>, BuilderType ex
     }
 
     public void n() {
-        t4 t4VarU = this.f7202a.u();
+        t4 t4VarU = this.f7276a.u();
         b(t4VarU, this.b);
         this.b = t4VarU;
     }

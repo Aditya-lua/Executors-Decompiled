@@ -10,7 +10,7 @@ public final class q4 extends gb implements pc {
     static {
         q4 q4Var = new q4();
         zzf = q4Var;
-        gb.u(q4.class, q4Var);
+        gb.t(q4.class, q4Var);
     }
 
     @Override // com.google.android.gms.internal.measurement.gb
@@ -20,7 +20,7 @@ public final class q4 extends gb implements pc {
             return (byte) 1;
         }
         if (i11 == 2) {
-            lb lbVar = t4.f6803a;
+            lb lbVar = t4.f6877a;
             return gb.v(zzf, "\u0004\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001᠌\u0000\u0002᠌\u0001", new Object[]{"zzb", "zzd", lbVar, "zze", lbVar});
         }
         if (i11 == 3) {

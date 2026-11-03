@@ -8,65 +8,65 @@ import java.util.UUID;
 public final class b extends f {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final UUID f37014a;
+    public final UUID f37709a;
     public final int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final int f37015c;
+    public final int f37710c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Rect f37016d;
+    public final Rect f37711d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Size f37017e;
+    public final Size f37712e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f37018f;
+    public final int f37713f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final boolean f37019g;
+    public final boolean f37714g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final boolean f37020h;
+    public final boolean f37715h;
 
     public b(UUID uuid, int i10, int i11, Rect rect, Size size, int i12, boolean z10, boolean z11) {
         if (uuid == null) {
             throw new NullPointerException("Null getUuid");
         }
-        this.f37014a = uuid;
+        this.f37709a = uuid;
         this.b = i10;
-        this.f37015c = i11;
+        this.f37710c = i11;
         if (rect == null) {
             throw new NullPointerException("Null getCropRect");
         }
-        this.f37016d = rect;
+        this.f37711d = rect;
         if (size == null) {
             throw new NullPointerException("Null getSize");
         }
-        this.f37017e = size;
-        this.f37018f = i12;
-        this.f37019g = z10;
-        this.f37020h = z11;
+        this.f37712e = size;
+        this.f37713f = i12;
+        this.f37714g = z10;
+        this.f37715h = z11;
     }
 
     @Override // z0.f
     public Rect a() {
-        return this.f37016d;
+        return this.f37711d;
     }
 
     @Override // z0.f
     public int b() {
-        return this.f37015c;
+        return this.f37710c;
     }
 
     @Override // z0.f
     public int c() {
-        return this.f37018f;
+        return this.f37713f;
     }
 
     @Override // z0.f
     public Size d() {
-        return this.f37017e;
+        return this.f37712e;
     }
 
     @Override // z0.f
@@ -80,7 +80,7 @@ public final class b extends f {
         }
         if (obj instanceof f) {
             f fVar = (f) obj;
-            if (this.f37014a.equals(fVar.f()) && this.b == fVar.e() && this.f37015c == fVar.b() && this.f37016d.equals(fVar.a()) && this.f37017e.equals(fVar.d()) && this.f37018f == fVar.c() && this.f37019g == fVar.g() && this.f37020h == fVar.k()) {
+            if (this.f37709a.equals(fVar.f()) && this.b == fVar.e() && this.f37710c == fVar.b() && this.f37711d.equals(fVar.a()) && this.f37712e.equals(fVar.d()) && this.f37713f == fVar.c() && this.f37714g == fVar.g() && this.f37715h == fVar.k()) {
                 return true;
             }
         }
@@ -89,24 +89,24 @@ public final class b extends f {
 
     @Override // z0.f
     public UUID f() {
-        return this.f37014a;
+        return this.f37709a;
     }
 
     @Override // z0.f
     public boolean g() {
-        return this.f37019g;
+        return this.f37714g;
     }
 
     public int hashCode() {
-        return ((((((((((((((this.f37014a.hashCode() ^ 1000003) * 1000003) ^ this.b) * 1000003) ^ this.f37015c) * 1000003) ^ this.f37016d.hashCode()) * 1000003) ^ this.f37017e.hashCode()) * 1000003) ^ this.f37018f) * 1000003) ^ (this.f37019g ? 1231 : 1237)) * 1000003) ^ (this.f37020h ? 1231 : 1237);
+        return ((((((((((((((this.f37709a.hashCode() ^ 1000003) * 1000003) ^ this.b) * 1000003) ^ this.f37710c) * 1000003) ^ this.f37711d.hashCode()) * 1000003) ^ this.f37712e.hashCode()) * 1000003) ^ this.f37713f) * 1000003) ^ (this.f37714g ? 1231 : 1237)) * 1000003) ^ (this.f37715h ? 1231 : 1237);
     }
 
     @Override // z0.f
     public boolean k() {
-        return this.f37020h;
+        return this.f37715h;
     }
 
     public String toString() {
-        return "OutConfig{getUuid=" + this.f37014a + ", getTargets=" + this.b + ", getFormat=" + this.f37015c + ", getCropRect=" + this.f37016d + ", getSize=" + this.f37017e + ", getRotationDegrees=" + this.f37018f + ", isMirroring=" + this.f37019g + ", shouldRespectInputCropRect=" + this.f37020h + "}";
+        return "OutConfig{getUuid=" + this.f37709a + ", getTargets=" + this.b + ", getFormat=" + this.f37710c + ", getCropRect=" + this.f37711d + ", getSize=" + this.f37712e + ", getRotationDegrees=" + this.f37713f + ", isMirroring=" + this.f37714g + ", shouldRespectInputCropRect=" + this.f37715h + "}";
     }
 }

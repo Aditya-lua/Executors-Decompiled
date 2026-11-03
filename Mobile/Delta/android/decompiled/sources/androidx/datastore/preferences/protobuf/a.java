@@ -1,7 +1,7 @@
 package androidx.datastore.preferences.protobuf;
 
 import androidx.datastore.preferences.protobuf.a;
-import androidx.datastore.preferences.protobuf.a.AbstractC0031a;
+import androidx.datastore.preferences.protobuf.a.AbstractC0027a;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
@@ -9,11 +9,11 @@ import java.util.Collection;
 import java.util.List;
 
 /* JADX INFO: loaded from: classes.dex */
-public abstract class a<MessageType extends a<MessageType, BuilderType>, BuilderType extends AbstractC0031a<MessageType, BuilderType>> implements r0 {
+public abstract class a<MessageType extends a<MessageType, BuilderType>, BuilderType extends AbstractC0027a<MessageType, BuilderType>> implements r0 {
     protected int memoizedHashCode = 0;
 
     /* JADX INFO: renamed from: androidx.datastore.preferences.protobuf.a$a, reason: collision with other inner class name */
-    public static abstract class AbstractC0031a<MessageType extends a<MessageType, BuilderType>, BuilderType extends AbstractC0031a<MessageType, BuilderType>> implements r0.a {
+    public static abstract class AbstractC0027a<MessageType extends a<MessageType, BuilderType>, BuilderType extends AbstractC0027a<MessageType, BuilderType>> implements r0.a {
         public static <T> void j(Iterable<T> iterable, List<? super T> list) {
             z.a(iterable);
             if (!(iterable instanceof e0)) {
@@ -37,9 +37,9 @@ public abstract class a<MessageType extends a<MessageType, BuilderType>, Builder
                     throw new NullPointerException(str);
                 }
                 if (obj instanceof g) {
-                    e0Var.f2((g) obj);
+                    e0Var.g2((g) obj);
                 } else if (obj instanceof byte[]) {
-                    e0Var.f2(g.e((byte[]) obj));
+                    e0Var.g2(g.e((byte[]) obj));
                 } else {
                     e0Var.add((String) obj);
                 }
@@ -80,7 +80,7 @@ public abstract class a<MessageType extends a<MessageType, BuilderType>, Builder
     }
 
     public static <T> void g(Iterable<T> iterable, List<? super T> list) {
-        AbstractC0031a.j(iterable, list);
+        AbstractC0027a.j(iterable, list);
     }
 
     @Override // androidx.datastore.preferences.protobuf.r0

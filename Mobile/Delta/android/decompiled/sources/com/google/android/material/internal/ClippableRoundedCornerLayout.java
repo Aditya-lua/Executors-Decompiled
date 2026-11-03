@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 public class ClippableRoundedCornerLayout extends FrameLayout {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Path f8033a;
+    public Path f8107a;
     public float b;
 
     public ClippableRoundedCornerLayout(@NonNull Context context, AttributeSet attributeSet) {
@@ -20,12 +20,12 @@ public class ClippableRoundedCornerLayout extends FrameLayout {
 
     @Override // android.view.ViewGroup, android.view.View
     public void dispatchDraw(Canvas canvas) {
-        if (this.f8033a == null) {
+        if (this.f8107a == null) {
             super.dispatchDraw(canvas);
             return;
         }
         int iSave = canvas.save();
-        canvas.clipPath(this.f8033a);
+        canvas.clipPath(this.f8107a);
         super.dispatchDraw(canvas);
         canvas.restoreToCount(iSave);
     }

@@ -16,19 +16,19 @@ import w8.a;
 public abstract class a<T extends a<?>> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Bundle f34136a;
+    public final Bundle f34342a;
     public final String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public zzj f34137c;
+    public zzj f34343c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public String f34138d;
+    public String f34344d;
 
     public a(@NonNull String str) {
         m.l(str);
         m.f(str);
-        this.f34136a = new Bundle();
+        this.f34342a = new Bundle();
         this.b = str;
     }
 
@@ -98,18 +98,18 @@ public abstract class a<T extends a<?>> {
 
     @NonNull
     public final g a() {
-        Bundle bundle = new Bundle(this.f34136a);
-        zzj zzjVarA = this.f34137c;
+        Bundle bundle = new Bundle(this.f34342a);
+        zzj zzjVarA = this.f34343c;
         if (zzjVarA == null) {
             zzjVarA = new f().a();
         }
-        return new Thing(bundle, zzjVarA, this.f34138d, this.b);
+        return new Thing(bundle, zzjVarA, this.f34344d, this.b);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     @NonNull
     public T b(@NonNull String str, @NonNull String... strArr) {
-        i(this.f34136a, str, strArr);
+        i(this.f34342a, str, strArr);
         return this;
     }
 
@@ -132,7 +132,7 @@ public abstract class a<T extends a<?>> {
                 thingArr[i10] = (Thing) s8.a();
             }
         }
-        j(this.f34136a, str, thingArr);
+        j(this.f34342a, str, thingArr);
         return this;
     }
 
@@ -164,7 +164,7 @@ public abstract class a<T extends a<?>> {
     @NonNull
     public final T h(@NonNull String str) {
         m.l(str);
-        this.f34138d = str;
+        this.f34344d = str;
         return this;
     }
 }

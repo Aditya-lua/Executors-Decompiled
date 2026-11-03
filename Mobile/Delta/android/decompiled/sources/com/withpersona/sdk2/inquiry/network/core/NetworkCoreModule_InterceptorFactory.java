@@ -1,12 +1,12 @@
 package com.withpersona.sdk2.inquiry.network.core;
 
-import ft.h;
-import ft.i;
+import dt.h;
+import dt.i;
 import okhttp3.Interceptor;
-import um.w;
+import sm.w;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class NetworkCoreModule_InterceptorFactory implements ft.d<Interceptor> {
+public final class NetworkCoreModule_InterceptorFactory implements dt.d<Interceptor> {
     private final NetworkCoreModule module;
     private final i<w> moshiProvider;
 
@@ -23,7 +23,7 @@ public final class NetworkCoreModule_InterceptorFactory implements ft.d<Intercep
         return (Interceptor) h.e(networkCoreModule.interceptor(wVar));
     }
 
-    @Override // ht.a
+    @Override // ft.a
     public Interceptor get() {
         return interceptor(this.module, this.moshiProvider.get());
     }

@@ -9,8 +9,8 @@ import db.n;
 public interface a extends IInterface {
 
     /* JADX INFO: renamed from: y9.a$a, reason: collision with other inner class name */
-    public static abstract class AbstractBinderC0656a extends n implements a {
-        public AbstractBinderC0656a() {
+    public static abstract class AbstractBinderC0671a extends n implements a {
+        public AbstractBinderC0671a() {
             super("com.google.android.gms.dynamic.IObjectWrapper");
         }
 

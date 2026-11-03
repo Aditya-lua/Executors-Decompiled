@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 public abstract class y implements z {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final y f21451a = new a("DOUBLE", 0);
+    public static final y f21910a = new a("DOUBLE", 0);
     public static final y b = new y("LAZILY_PARSED_NUMBER", 1) { // from class: jg.y.b
         {
             a aVar = null;
@@ -26,7 +26,7 @@ public abstract class y implements z {
     };
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final y f21452c = new y("LONG_OR_DOUBLE", 2) { // from class: jg.y.c
+    public static final y f21911c = new y("LONG_OR_DOUBLE", 2) { // from class: jg.y.c
         {
             a aVar = null;
         }
@@ -60,7 +60,7 @@ public abstract class y implements z {
     };
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final y f21453d = new y("BIG_DECIMAL", 3) { // from class: jg.y.d
+    public static final y f21912d = new y("BIG_DECIMAL", 3) { // from class: jg.y.d
         {
             a aVar = null;
         }
@@ -78,7 +78,7 @@ public abstract class y implements z {
     };
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final /* synthetic */ y[] f21454e = b();
+    public static final /* synthetic */ y[] f21913e = b();
 
     public final enum a extends y {
         public a(String str, int i10) {
@@ -97,7 +97,7 @@ public abstract class y implements z {
     }
 
     public static /* synthetic */ y[] b() {
-        return new y[]{f21451a, b, f21452c, f21453d};
+        return new y[]{f21910a, b, f21911c, f21912d};
     }
 
     public static y valueOf(String str) {
@@ -105,7 +105,7 @@ public abstract class y implements z {
     }
 
     public static y[] values() {
-        return (y[]) f21454e.clone();
+        return (y[]) f21913e.clone();
     }
 
     public /* synthetic */ y(String str, int i10, a aVar) {

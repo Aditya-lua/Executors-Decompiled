@@ -10,7 +10,7 @@ public class o extends p0 {
     public float b = 3.0f;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f27139c = 80;
+    public int f27704c = 80;
 
     @Override // o5.z
     public long c(@NonNull ViewGroup viewGroup, @NonNull q qVar, d0 d0Var, d0 d0Var2) {
@@ -22,7 +22,7 @@ public class o extends p0 {
         if (d0Var3 == null && d0Var2 == null) {
             return 0L;
         }
-        Rect rectA = qVar.A();
+        Rect rectB = qVar.B();
         if (d0Var2 == null || e(d0Var3) == 0) {
             i10 = -1;
         } else {
@@ -37,10 +37,10 @@ public class o extends p0 {
         int iRound2 = iArr[1] + Math.round(viewGroup.getTranslationY());
         int width = viewGroup.getWidth() + iRound;
         int height = viewGroup.getHeight() + iRound2;
-        if (rectA != null) {
-            int iCenterX = rectA.centerX();
+        if (rectB != null) {
+            int iCenterX = rectB.centerX();
             i12 = iRound2;
-            iCenterY = rectA.centerY();
+            iCenterY = rectB.centerY();
             i11 = iCenterX;
         } else {
             i11 = (iRound + width) / 2;
@@ -58,7 +58,7 @@ public class o extends p0 {
     /* JADX WARN: Code duplicated, block: B:6:0x0010  */
     /* JADX WARN: Code duplicated, block: B:7:0x0012  */
     public final int h(View view, int i10, int i11, int i12, int i13, int i14, int i15, int i16, int i17) {
-        int i18 = this.f27139c;
+        int i18 = this.f27704c;
         if (i18 == 8388611) {
             if (view.getLayoutDirection() == 1) {
                 i18 = 5;
@@ -88,11 +88,11 @@ public class o extends p0 {
     }
 
     public final int i(ViewGroup viewGroup) {
-        int i10 = this.f27139c;
+        int i10 = this.f27704c;
         return (i10 == 3 || i10 == 5 || i10 == 8388611 || i10 == 8388613) ? viewGroup.getWidth() : viewGroup.getHeight();
     }
 
     public void j(int i10) {
-        this.f27139c = i10;
+        this.f27704c = i10;
     }
 }

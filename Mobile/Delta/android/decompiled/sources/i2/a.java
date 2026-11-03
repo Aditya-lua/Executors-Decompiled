@@ -12,14 +12,14 @@ import x2.e;
 public final class a<T> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final d<ArrayList<T>> f20247a = new e(10);
+    public final d<ArrayList<T>> f20363a = new e(10);
     public final j<T, ArrayList<T>> b = new j<>();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final ArrayList<T> f20248c = new ArrayList<>();
+    public final ArrayList<T> f20364c = new ArrayList<>();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final HashSet<T> f20249d = new HashSet<>();
+    public final HashSet<T> f20365d = new HashSet<>();
 
     public void a(@NonNull T t8, @NonNull T t10) {
         if (!this.b.containsKey(t8) || !this.b.containsKey(t10)) {
@@ -76,7 +76,7 @@ public final class a<T> {
 
     @NonNull
     public final ArrayList<T> f() {
-        ArrayList<T> arrayListB = this.f20247a.b();
+        ArrayList<T> arrayListB = this.f20363a.b();
         return arrayListB == null ? new ArrayList<>() : arrayListB;
     }
 
@@ -101,13 +101,13 @@ public final class a<T> {
 
     @NonNull
     public ArrayList<T> i() {
-        this.f20248c.clear();
-        this.f20249d.clear();
+        this.f20364c.clear();
+        this.f20365d.clear();
         int size = this.b.getSize();
         for (int i10 = 0; i10 < size; i10++) {
-            e(this.b.f(i10), this.f20248c, this.f20249d);
+            e(this.b.f(i10), this.f20364c, this.f20365d);
         }
-        return this.f20248c;
+        return this.f20364c;
     }
 
     public boolean j(@NonNull T t8) {
@@ -123,6 +123,6 @@ public final class a<T> {
 
     public final void k(@NonNull ArrayList<T> arrayList) {
         arrayList.clear();
-        this.f20247a.a(arrayList);
+        this.f20363a.a(arrayList);
     }
 }

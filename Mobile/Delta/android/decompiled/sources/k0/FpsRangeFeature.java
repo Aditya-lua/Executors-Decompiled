@@ -11,7 +11,7 @@ public final class FpsRangeFeature extends i0.b {
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
     @NotNull
-    public static final Range<Integer> f22002k = new Range<>(30, 30);
+    public static final Range<Integer> f22226k = new Range<>(30, 30);
 
     /* JADX INFO: renamed from: g, reason: collision with root package name and from kotlin metadata and from toString */
     public final int minFps;

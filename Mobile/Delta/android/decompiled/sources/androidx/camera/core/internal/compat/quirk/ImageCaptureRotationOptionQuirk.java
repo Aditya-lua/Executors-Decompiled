@@ -37,6 +37,6 @@ public final class ImageCaptureRotationOptionQuirk implements g3 {
     }
 
     public boolean k(n1.a<?> aVar) {
-        return aVar != l1.f24728i;
+        return aVar != l1.f25549i;
     }
 }

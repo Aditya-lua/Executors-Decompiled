@@ -1,42 +1,227 @@
 package ve;
 
-import java.math.BigInteger;
+import af.h0;
+import android.content.Context;
+import android.preference.PreferenceManager;
+import android.util.Log;
+import df.p;
+import java.io.CharConversionException;
+import java.io.IOException;
 import java.security.GeneralSecurityException;
-import java.util.Arrays;
+import java.security.KeyStoreException;
+import java.security.ProviderException;
+import pe.j;
+import pe.o;
+import pe.q;
+import pe.s;
+import pe.v;
 
 /* JADX INFO: loaded from: classes2.dex */
 public final class a {
-    public static BigInteger a(byte[] bArr) {
-        return new BigInteger(1, bArr);
-    }
 
-    public static byte[] b(BigInteger bigInteger) {
-        if (bigInteger.signum() != -1) {
-            return bigInteger.toByteArray();
-        }
-        throw new IllegalArgumentException("n must not be negative");
-    }
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public static final Object f33482d = new Object();
 
-    public static byte[] c(BigInteger bigInteger, int i10) throws GeneralSecurityException {
-        if (bigInteger.signum() == -1) {
-            throw new IllegalArgumentException("integer must be nonnegative");
-        }
-        byte[] byteArray = bigInteger.toByteArray();
-        if (byteArray.length == i10) {
-            return byteArray;
-        }
-        int i11 = i10 + 1;
-        if (byteArray.length > i11) {
-            throw new GeneralSecurityException("integer too large");
-        }
-        if (byteArray.length == i11) {
-            if (byteArray[0] == 0) {
-                return Arrays.copyOfRange(byteArray, 1, byteArray.length);
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public static final String f33483e = "a";
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final s f33484a;
+    public final pe.a b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public q f33485c;
+
+    public static final class b {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public Context f33486a = null;
+        public String b = null;
+
+        /* JADX INFO: renamed from: c, reason: collision with root package name */
+        public String f33487c = null;
+
+        /* JADX INFO: renamed from: d, reason: collision with root package name */
+        public String f33488d = null;
+
+        /* JADX INFO: renamed from: e, reason: collision with root package name */
+        public pe.a f33489e = null;
+
+        /* JADX INFO: renamed from: f, reason: collision with root package name */
+        public boolean f33490f = true;
+
+        /* JADX INFO: renamed from: g, reason: collision with root package name */
+        public o f33491g = null;
+
+        /* JADX INFO: renamed from: h, reason: collision with root package name */
+        public h0 f33492h = null;
+
+        /* JADX INFO: renamed from: i, reason: collision with root package name */
+        public q f33493i;
+
+        public static byte[] h(Context context, String str, String str2) throws CharConversionException {
+            if (str == null) {
+                throw new IllegalArgumentException("keysetName cannot be null");
             }
-            throw new GeneralSecurityException("integer too large");
+            Context applicationContext = context.getApplicationContext();
+            try {
+                String string = (str2 == null ? PreferenceManager.getDefaultSharedPreferences(applicationContext) : applicationContext.getSharedPreferences(str2, 0)).getString(str, null);
+                if (string == null) {
+                    return null;
+                }
+                return p.a(string);
+            } catch (ClassCastException | IllegalArgumentException unused) {
+                throw new CharConversionException(String.format("can't read keyset; the pref value %s is not a valid hex string", str));
+            }
         }
-        byte[] bArr = new byte[i10];
-        System.arraycopy(byteArray, 0, bArr, i10 - byteArray.length, byteArray.length);
-        return bArr;
+
+        public synchronized a f() {
+            a aVar;
+            try {
+                if (this.b == null) {
+                    throw new IllegalArgumentException("keysetName cannot be null");
+                }
+                h0 h0Var = this.f33492h;
+                if (h0Var != null && this.f33491g == null) {
+                    this.f33491g = o.a(pe.h0.a(h0Var.n()));
+                }
+                synchronized (a.f33482d) {
+                    try {
+                        byte[] bArrH = h(this.f33486a, this.b, this.f33487c);
+                        if (bArrH == null) {
+                            if (this.f33488d != null) {
+                                this.f33489e = k();
+                            }
+                            this.f33493i = g();
+                        } else if (this.f33488d == null || !a.f()) {
+                            this.f33493i = i(bArrH);
+                        } else {
+                            this.f33493i = j(bArrH);
+                        }
+                        aVar = new a(this);
+                    } catch (Throwable th2) {
+                        throw th2;
+                    }
+                }
+            } catch (Throwable th3) {
+                throw th3;
+            }
+            return aVar;
+        }
+
+        public final q g() throws GeneralSecurityException {
+            o oVar = this.f33491g;
+            if (oVar == null) {
+                throw new GeneralSecurityException("cannot read or generate keyset");
+            }
+            pe.p pVarK = pe.p.k(oVar);
+            a.g(pVarK, new e(this.f33486a, this.b, this.f33487c), this.f33489e);
+            return q.b(pVarK);
+        }
+
+        public final q i(byte[] bArr) {
+            return q.b(v.b(pe.b.b(bArr), j.a()));
+        }
+
+        public final q j(byte[] bArr) {
+            try {
+                this.f33489e = new d().b(this.f33488d);
+                try {
+                    return q.b(v.a(pe.b.b(bArr), this.f33489e, new byte[0]));
+                } catch (IOException | GeneralSecurityException e10) {
+                    try {
+                        return i(bArr);
+                    } catch (IOException unused) {
+                        throw e10;
+                    }
+                }
+            } catch (GeneralSecurityException | ProviderException e11) {
+                try {
+                    q qVarI = i(bArr);
+                    Log.w(a.f33483e, "cannot use Android Keystore, it'll be disabled", e11);
+                    return qVarI;
+                } catch (IOException unused2) {
+                    throw e11;
+                }
+            }
+        }
+
+        public final pe.a k() throws KeyStoreException {
+            if (!a.f()) {
+                Log.w(a.f33483e, "Android Keystore requires at least Android M");
+                return null;
+            }
+            d dVar = new d();
+            try {
+                boolean zD = d.d(this.f33488d);
+                try {
+                    return dVar.b(this.f33488d);
+                } catch (GeneralSecurityException | ProviderException e10) {
+                    if (!zD) {
+                        throw new KeyStoreException(String.format("the master key %s exists but is unusable", this.f33488d), e10);
+                    }
+                    Log.w(a.f33483e, "cannot use Android Keystore, it'll be disabled", e10);
+                    return null;
+                }
+            } catch (GeneralSecurityException | ProviderException e11) {
+                Log.w(a.f33483e, "cannot use Android Keystore, it'll be disabled", e11);
+                return null;
+            }
+        }
+
+        public b l(o oVar) {
+            this.f33491g = oVar;
+            return this;
+        }
+
+        public b m(String str) {
+            if (!str.startsWith("android-keystore://")) {
+                throw new IllegalArgumentException("key URI must start with android-keystore://");
+            }
+            if (!this.f33490f) {
+                throw new IllegalArgumentException("cannot call withMasterKeyUri() after calling doNotUseKeystore()");
+            }
+            this.f33488d = str;
+            return this;
+        }
+
+        public b n(Context context, String str, String str2) {
+            if (context == null) {
+                throw new IllegalArgumentException("need an Android context");
+            }
+            if (str == null) {
+                throw new IllegalArgumentException("need a keyset name");
+            }
+            this.f33486a = context;
+            this.b = str;
+            this.f33487c = str2;
+            return this;
+        }
+    }
+
+    public static boolean f() {
+        return true;
+    }
+
+    public static void g(pe.p pVar, s sVar, pe.a aVar) throws GeneralSecurityException {
+        try {
+            if (aVar != null) {
+                v.c(pVar, sVar, aVar, new byte[0]);
+            } else {
+                v.d(pVar, sVar, j.a());
+            }
+        } catch (IOException e10) {
+            throw new GeneralSecurityException(e10);
+        }
+    }
+
+    public synchronized pe.p e() {
+        return this.f33485c.a();
+    }
+
+    public a(b bVar) {
+        this.f33484a = new e(bVar.f33486a, bVar.b, bVar.f33487c);
+        this.b = bVar.f33489e;
+        this.f33485c = bVar.f33493i;
     }
 }

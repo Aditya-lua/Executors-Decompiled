@@ -22,7 +22,7 @@ public final class h0 implements s {
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
     @NotNull
-    public static final h0 f2773j = new h0();
+    public static final h0 f2618j = new h0();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     public int startedCounter;
@@ -49,7 +49,7 @@ public final class h0 implements s {
     public final Runnable delayedPauseRunnable = new Runnable() { // from class: androidx.lifecycle.g0
         @Override // java.lang.Runnable
         public final void run() {
-            h0.j(this.f2771a);
+            h0.j(this.f2616a);
         }
     };
 
@@ -62,7 +62,7 @@ public final class h0 implements s {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
         @NotNull
-        public static final a f2781a = new a();
+        public static final a f2626a = new a();
 
         public static final void a(@NotNull Activity activity, @NotNull Application.ActivityLifecycleCallbacks callback) {
             Intrinsics.checkNotNullParameter(activity, "activity");
@@ -80,12 +80,12 @@ public final class h0 implements s {
 
         @NotNull
         public final s a() {
-            return h0.f2773j;
+            return h0.f2618j;
         }
 
         public final void b(@NotNull Context context) {
             Intrinsics.checkNotNullParameter(context, "context");
-            h0.f2773j.i(context);
+            h0.f2618j.i(context);
         }
 
         public Companion() {

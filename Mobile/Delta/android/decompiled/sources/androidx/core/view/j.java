@@ -8,7 +8,7 @@ import android.view.DisplayCutout;
 public final class j {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final DisplayCutout f1875a;
+    public final DisplayCutout f1720a;
 
     public static class a {
         public static int a(DisplayCutout displayCutout) {
@@ -35,7 +35,7 @@ public final class j {
     }
 
     public j(DisplayCutout displayCutout) {
-        this.f1875a = displayCutout;
+        this.f1720a = displayCutout;
     }
 
     public static j g(DisplayCutout displayCutout) {
@@ -47,34 +47,34 @@ public final class j {
 
     public int a() {
         if (Build.VERSION.SDK_INT >= 28) {
-            return a.a(this.f1875a);
+            return a.a(this.f1720a);
         }
         return 0;
     }
 
     public int b() {
         if (Build.VERSION.SDK_INT >= 28) {
-            return a.b(this.f1875a);
+            return a.b(this.f1720a);
         }
         return 0;
     }
 
     public int c() {
         if (Build.VERSION.SDK_INT >= 28) {
-            return a.c(this.f1875a);
+            return a.c(this.f1720a);
         }
         return 0;
     }
 
     public int d() {
         if (Build.VERSION.SDK_INT >= 28) {
-            return a.d(this.f1875a);
+            return a.d(this.f1720a);
         }
         return 0;
     }
 
     public androidx.core.graphics.Insets e() {
-        return Build.VERSION.SDK_INT >= 30 ? androidx.core.graphics.Insets.toCompatInsets(b.a(this.f1875a)) : androidx.core.graphics.Insets.NONE;
+        return Build.VERSION.SDK_INT >= 30 ? androidx.core.graphics.Insets.toCompatInsets(b.a(this.f1720a)) : androidx.core.graphics.Insets.NONE;
     }
 
     public boolean equals(Object obj) {
@@ -84,15 +84,15 @@ public final class j {
         if (obj == null || j.class != obj.getClass()) {
             return false;
         }
-        return x2.b.a(this.f1875a, ((j) obj).f1875a);
+        return x2.b.a(this.f1720a, ((j) obj).f1720a);
     }
 
     public DisplayCutout f() {
-        return this.f1875a;
+        return this.f1720a;
     }
 
     public int hashCode() {
-        DisplayCutout displayCutout = this.f1875a;
+        DisplayCutout displayCutout = this.f1720a;
         if (displayCutout == null) {
             return 0;
         }
@@ -100,6 +100,6 @@ public final class j {
     }
 
     public String toString() {
-        return "DisplayCutoutCompat{" + this.f1875a + "}";
+        return "DisplayCutoutCompat{" + this.f1720a + "}";
     }
 }

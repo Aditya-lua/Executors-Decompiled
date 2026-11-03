@@ -6,6 +6,6 @@ public final class AFe1oSDK {
 
     static {
         kotlin.time.a.Companion companion = kotlin.time.a.INSTANCE;
-        AFKeystoreWrapper = kotlin.time.a.w(kotlin.time.b.p(3, ju.b.SECONDS));
+        AFKeystoreWrapper = kotlin.time.a.w(kotlin.time.b.p(3, hu.b.SECONDS));
     }
 }

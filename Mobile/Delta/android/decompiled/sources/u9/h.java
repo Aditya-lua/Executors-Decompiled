@@ -7,11 +7,11 @@ import androidx.annotation.NonNull;
 public class h implements e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final h f32094a = new h();
+    public static final h f32747a = new h();
 
     @NonNull
     public static e c() {
-        return f32094a;
+        return f32747a;
     }
 
     @Override // u9.e

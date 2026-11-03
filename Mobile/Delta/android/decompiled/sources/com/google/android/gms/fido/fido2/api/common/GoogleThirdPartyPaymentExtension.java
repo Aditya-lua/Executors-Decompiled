@@ -13,22 +13,22 @@ public class GoogleThirdPartyPaymentExtension extends AbstractSafeParcelable {
     public static final Parcelable.Creator<GoogleThirdPartyPaymentExtension> CREATOR = new ca.f();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final boolean f5961f;
+    public final boolean f6034f;
 
     public GoogleThirdPartyPaymentExtension(boolean z10) {
-        this.f5961f = z10;
+        this.f6034f = z10;
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof GoogleThirdPartyPaymentExtension) && this.f5961f == ((GoogleThirdPartyPaymentExtension) obj).v3();
+        return (obj instanceof GoogleThirdPartyPaymentExtension) && this.f6034f == ((GoogleThirdPartyPaymentExtension) obj).v3();
     }
 
     public int hashCode() {
-        return k.c(Boolean.valueOf(this.f5961f));
+        return k.c(Boolean.valueOf(this.f6034f));
     }
 
     public boolean v3() {
-        return this.f5961f;
+        return this.f6034f;
     }
 
     @Override // android.os.Parcelable

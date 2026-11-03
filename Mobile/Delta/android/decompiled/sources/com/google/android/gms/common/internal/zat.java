@@ -12,32 +12,32 @@ public final class zat extends AbstractSafeParcelable {
     public static final Parcelable.Creator<zat> CREATOR = new j0();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f5806f;
+    public final int f5879f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final Account f5807g;
+    public final Account f5880g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final int f5808h;
+    public final int f5881h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final GoogleSignInAccount f5809i;
+    public final GoogleSignInAccount f5882i;
 
     public zat(int i10, Account account, int i11, GoogleSignInAccount googleSignInAccount) {
-        this.f5806f = i10;
-        this.f5807g = account;
-        this.f5808h = i11;
-        this.f5809i = googleSignInAccount;
+        this.f5879f = i10;
+        this.f5880g = account;
+        this.f5881h = i11;
+        this.f5882i = googleSignInAccount;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(Parcel parcel, int i10) {
-        int i11 = this.f5806f;
+        int i11 = this.f5879f;
         int iA = o9.b.a(parcel);
         o9.b.n(parcel, 1, i11);
-        o9.b.t(parcel, 2, this.f5807g, i10, false);
-        o9.b.n(parcel, 3, this.f5808h);
-        o9.b.t(parcel, 4, this.f5809i, i10, false);
+        o9.b.t(parcel, 2, this.f5880g, i10, false);
+        o9.b.n(parcel, 3, this.f5881h);
+        o9.b.t(parcel, 4, this.f5882i, i10, false);
         o9.b.b(parcel, iA);
     }
 

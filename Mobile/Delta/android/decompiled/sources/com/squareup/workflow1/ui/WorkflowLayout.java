@@ -1,6 +1,5 @@
 package com.squareup.workflow1.ui;
 
-import an.ViewEnvironment;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -13,25 +12,26 @@ import androidx.p000lifecycle.j0;
 import androidx.p000lifecycle.l;
 import androidx.p000lifecycle.q;
 import com.appsflyer.sdk_base.referrer.Payload;
-import jt.o;
+import gt.o;
+import iu.k;
+import iu.p0;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
-import ku.k;
-import ku.p0;
-import nt.b;
-import nu.h;
-import nu.i;
+import lt.b;
+import lu.h;
+import lu.i;
+import mt.c;
+import nt.f;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import ot.c;
-import pt.f;
-import pt.m;
+import ym.ViewEnvironment;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000V\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0007\u0018\u00002\u00020\u0001:\u0001$B\u001b\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u001d\u0010\r\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\n¢\u0006\u0004\b\r\u0010\u000eJ7\u0010\u0015\u001a\u00020\f2\u0006\u0010\u0010\u001a\u00020\u000f2\f\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\b0\u00112\b\b\u0002\u0010\u0014\u001a\u00020\u00132\b\b\u0002\u0010\u000b\u001a\u00020\n¢\u0006\u0004\b\u0015\u0010\u0016J\u000f\u0010\u0018\u001a\u00020\u0017H\u0014¢\u0006\u0004\b\u0018\u0010\u0019J\u0019\u0010\u001b\u001a\u00020\f2\b\u0010\u001a\u001a\u0004\u0018\u00010\u0017H\u0014¢\u0006\u0004\b\u001b\u0010\u001cR\u0014\u0010\u001f\u001a\u00020\u001d8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010\u001eR\u001e\u0010#\u001a\n\u0012\u0004\u0012\u00020\u0017\u0018\u00010 8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b!\u0010\"¨\u0006%"}, d2 = {"Lcom/squareup/workflow1/ui/WorkflowLayout;", "Landroid/widget/FrameLayout;", "Landroid/content/Context;", "context", "Landroid/util/AttributeSet;", "attributeSet", "<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", "", "newRendering", "Lan/y;", "environment", "", "c", "(Ljava/lang/Object;Lan/y;)V", "Landroidx/lifecycle/l;", "lifecycle", "Lnu/h;", "renderings", "Landroidx/lifecycle/l$b;", "repeatOnLifecycle", "a", "(Landroidx/lifecycle/l;Lnu/h;Landroidx/lifecycle/l$b;Lan/y;)V", "Landroid/os/Parcelable;", "onSaveInstanceState", "()Landroid/os/Parcelable;", "state", "onRestoreInstanceState", "(Landroid/os/Parcelable;)V", "Lcom/squareup/workflow1/ui/WorkflowViewStub;", "Lcom/squareup/workflow1/ui/WorkflowViewStub;", "showing", "Landroid/util/SparseArray;", "b", "Landroid/util/SparseArray;", "restoredChildState", "SavedState", "wf1-core-android"}, k = 1, mv = {1, 6, 0}, xi = 48)
+@Metadata(d1 = {"\u0000V\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0007\u0018\u00002\u00020\u0001:\u0001$B\u001b\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u001d\u0010\r\u001a\u00020\f2\u0006\u0010\t\u001a\u00020\b2\u0006\u0010\u000b\u001a\u00020\n¢\u0006\u0004\b\r\u0010\u000eJ7\u0010\u0015\u001a\u00020\f2\u0006\u0010\u0010\u001a\u00020\u000f2\f\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\b0\u00112\b\b\u0002\u0010\u0014\u001a\u00020\u00132\b\b\u0002\u0010\u000b\u001a\u00020\n¢\u0006\u0004\b\u0015\u0010\u0016J\u000f\u0010\u0018\u001a\u00020\u0017H\u0014¢\u0006\u0004\b\u0018\u0010\u0019J\u0019\u0010\u001b\u001a\u00020\f2\b\u0010\u001a\u001a\u0004\u0018\u00010\u0017H\u0014¢\u0006\u0004\b\u001b\u0010\u001cR\u0014\u0010\u001f\u001a\u00020\u001d8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010\u001eR\u001e\u0010#\u001a\n\u0012\u0004\u0012\u00020\u0017\u0018\u00010 8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b!\u0010\"¨\u0006%"}, d2 = {"Lcom/squareup/workflow1/ui/WorkflowLayout;", "Landroid/widget/FrameLayout;", "Landroid/content/Context;", "context", "Landroid/util/AttributeSet;", "attributeSet", "<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", "", "newRendering", "Lym/y;", "environment", "", "c", "(Ljava/lang/Object;Lym/y;)V", "Landroidx/lifecycle/l;", "lifecycle", "Llu/h;", "renderings", "Landroidx/lifecycle/l$b;", "repeatOnLifecycle", "a", "(Landroidx/lifecycle/l;Llu/h;Landroidx/lifecycle/l$b;Lym/y;)V", "Landroid/os/Parcelable;", "onSaveInstanceState", "()Landroid/os/Parcelable;", "state", "onRestoreInstanceState", "(Landroid/os/Parcelable;)V", "Lcom/squareup/workflow1/ui/WorkflowViewStub;", "Lcom/squareup/workflow1/ui/WorkflowViewStub;", "showing", "Landroid/util/SparseArray;", "b", "Landroid/util/SparseArray;", "restoredChildState", "SavedState", "wf1-core-android"}, k = 1, mv = {1, 6, 0}, xi = 48)
 public final class WorkflowLayout extends FrameLayout {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -42,91 +42,97 @@ public final class WorkflowLayout extends FrameLayout {
     @Nullable
     public SparseArray<Parcelable> restoredChildState;
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\u008a@¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {1, 6, 0})
     @f(c = "com.squareup.workflow1.ui.WorkflowLayout$start$1", f = "WorkflowLayout.kt", l = {87}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\u008a@¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {1, 6, 0})
     public static final class a extends m implements Function2<p0, b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f9858t;
+        public int f9939t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public final /* synthetic */ l f9859u;
+        public final /* synthetic */ l f9940u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ l.b f9860v;
+        public final /* synthetic */ l.b f9941v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public final /* synthetic */ h<Object> f9861w;
+        public final /* synthetic */ h<Object> f9942w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public final /* synthetic */ WorkflowLayout f9862x;
+        public final /* synthetic */ WorkflowLayout f9943x;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public final /* synthetic */ ViewEnvironment f9863y;
+        public final /* synthetic */ ViewEnvironment f9944y;
 
         /* JADX INFO: renamed from: com.squareup.workflow1.ui.WorkflowLayout$a$a, reason: collision with other inner class name */
-        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\u008a@¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {1, 6, 0})
         @f(c = "com.squareup.workflow1.ui.WorkflowLayout$start$1$1", f = "WorkflowLayout.kt", l = {212}, m = "invokeSuspend")
-        public static final class C0156a extends m implements Function2<p0, b<? super Unit>, Object> {
+        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\u008a@¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {1, 6, 0})
+        public static final class C0159a extends m implements Function2<p0, b<? super Unit>, Object> {
 
             /* JADX INFO: renamed from: t, reason: collision with root package name */
-            public int f9864t;
+            public int f9945t;
 
             /* JADX INFO: renamed from: u, reason: collision with root package name */
-            public final /* synthetic */ h<Object> f9865u;
+            public final /* synthetic */ h<Object> f9946u;
 
             /* JADX INFO: renamed from: v, reason: collision with root package name */
-            public final /* synthetic */ WorkflowLayout f9866v;
+            public final /* synthetic */ WorkflowLayout f9947v;
 
             /* JADX INFO: renamed from: w, reason: collision with root package name */
-            public final /* synthetic */ ViewEnvironment f9867w;
+            public final /* synthetic */ ViewEnvironment f9948w;
 
             /* JADX INFO: renamed from: com.squareup.workflow1.ui.WorkflowLayout$a$a$a, reason: collision with other inner class name */
-            @Metadata(d1 = {"\u0000\u0013\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\b\u0012\u0004\u0012\u00028\u00000\u0001J\u001b\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0002\u001a\u00028\u0000H\u0096@ø\u0001\u0000¢\u0006\u0004\b\u0004\u0010\u0005\u0082\u0002\u0004\n\u0002\b\u0019¨\u0006\u0006"}, d2 = {"com/squareup/workflow1/ui/WorkflowLayout$a$a$a", "Lnu/i;", "value", "", "emit", "(Ljava/lang/Object;Lnt/b;)Ljava/lang/Object;", "kotlinx-coroutines-core"}, k = 1, mv = {1, 6, 0}, xi = 48)
-            public static final class C0157a implements i<Object> {
+            @Metadata(d1 = {"\u0000\u0013\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\b\u0012\u0004\u0012\u00028\u00000\u0001J\u001b\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0002\u001a\u00028\u0000H\u0096@ø\u0001\u0000¢\u0006\u0004\b\u0004\u0010\u0005\u0082\u0002\u0004\n\u0002\b\u0019¨\u0006\u0006"}, d2 = {"com/squareup/workflow1/ui/WorkflowLayout$a$a$a", "Llu/i;", "value", "", "emit", "(Ljava/lang/Object;Llt/b;)Ljava/lang/Object;", "kotlinx-coroutines-core"}, k = 1, mv = {1, 6, 0}, xi = 48)
+            public static final class C0160a implements i<Object> {
 
                 /* JADX INFO: renamed from: a, reason: collision with root package name */
-                public final /* synthetic */ WorkflowLayout f9868a;
+                public final /* synthetic */ WorkflowLayout f9949a;
                 public final /* synthetic */ ViewEnvironment b;
 
-                public C0157a(WorkflowLayout workflowLayout, ViewEnvironment viewEnvironment) {
-                    this.f9868a = workflowLayout;
+                public C0160a(WorkflowLayout workflowLayout, ViewEnvironment viewEnvironment) {
+                    this.f9949a = workflowLayout;
                     this.b = viewEnvironment;
                 }
 
-                @Override // nu.i
+                @Override // lu.i
                 @Nullable
                 public Object emit(Object obj, @NotNull b<? super Unit> bVar) {
-                    this.f9868a.c(obj, this.b);
-                    return Unit.f22483a;
+                    this.f9949a.c(obj, this.b);
+                    return Unit.f22938a;
                 }
             }
 
             /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            public C0156a(h<? extends Object> hVar, WorkflowLayout workflowLayout, ViewEnvironment viewEnvironment, b<? super C0156a> bVar) {
+            public C0159a(h<? extends Object> hVar, WorkflowLayout workflowLayout, ViewEnvironment viewEnvironment, b<? super C0159a> bVar) {
                 super(2, bVar);
-                this.f9865u = hVar;
-                this.f9866v = workflowLayout;
-                this.f9867w = viewEnvironment;
+                this.f9946u = hVar;
+                this.f9947v = workflowLayout;
+                this.f9948w = viewEnvironment;
             }
 
-            @Override // pt.a
+            @Override // nt.a
             @NotNull
             public final b<Unit> create(@Nullable Object obj, @NotNull b<?> bVar) {
-                return new C0156a(this.f9865u, this.f9866v, this.f9867w, bVar);
+                return new C0159a(this.f9946u, this.f9947v, this.f9948w, bVar);
             }
 
-            @Override // pt.a
+            @Override // kotlin.jvm.functions.Function2
+            @Nullable
+            public final Object invoke(@NotNull p0 p0Var, @Nullable b<? super Unit> bVar) {
+                return ((C0159a) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+            }
+
+            @Override // nt.a
             @Nullable
             public final Object invokeSuspend(@NotNull Object obj) {
                 Object objE = c.e();
-                int i10 = this.f9864t;
+                int i10 = this.f9945t;
                 if (i10 == 0) {
                     o.b(obj);
-                    h<Object> hVar = this.f9865u;
-                    C0157a c0157a = new C0157a(this.f9866v, this.f9867w);
-                    this.f9864t = 1;
-                    if (hVar.collect(c0157a, this) == objE) {
+                    h<Object> hVar = this.f9946u;
+                    C0160a c0160a = new C0160a(this.f9947v, this.f9948w);
+                    this.f9945t = 1;
+                    if (hVar.collect(c0160a, this) == objE) {
                         return objE;
                     }
                 } else {
@@ -135,44 +141,44 @@ public final class WorkflowLayout extends FrameLayout {
                     }
                     o.b(obj);
                 }
-                return Unit.f22483a;
-            }
-
-            @Override // kotlin.jvm.functions.Function2
-            @Nullable
-            public final Object invoke(@NotNull p0 p0Var, @Nullable b<? super Unit> bVar) {
-                return ((C0156a) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+                return Unit.f22938a;
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public a(l lVar, l.b bVar, h<? extends Object> hVar, WorkflowLayout workflowLayout, ViewEnvironment viewEnvironment, b<? super a> bVar2) {
             super(2, bVar2);
-            this.f9859u = lVar;
-            this.f9860v = bVar;
-            this.f9861w = hVar;
-            this.f9862x = workflowLayout;
-            this.f9863y = viewEnvironment;
+            this.f9940u = lVar;
+            this.f9941v = bVar;
+            this.f9942w = hVar;
+            this.f9943x = workflowLayout;
+            this.f9944y = viewEnvironment;
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @NotNull
         public final b<Unit> create(@Nullable Object obj, @NotNull b<?> bVar) {
-            return new a(this.f9859u, this.f9860v, this.f9861w, this.f9862x, this.f9863y, bVar);
+            return new a(this.f9940u, this.f9941v, this.f9942w, this.f9943x, this.f9944y, bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        @Nullable
+        public final Object invoke(@NotNull p0 p0Var, @Nullable b<? super Unit> bVar) {
+            return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
             Object objE = c.e();
-            int i10 = this.f9858t;
+            int i10 = this.f9939t;
             if (i10 == 0) {
                 o.b(obj);
-                l lVar = this.f9859u;
-                l.b bVar = this.f9860v;
-                C0156a c0156a = new C0156a(this.f9861w, this.f9862x, this.f9863y, null);
-                this.f9858t = 1;
-                if (j0.a(lVar, bVar, c0156a, this) == objE) {
+                l lVar = this.f9940u;
+                l.b bVar = this.f9941v;
+                C0159a c0159a = new C0159a(this.f9942w, this.f9943x, this.f9944y, null);
+                this.f9939t = 1;
+                if (j0.a(lVar, bVar, c0159a, this) == objE) {
                     return objE;
                 }
             } else {
@@ -181,13 +187,7 @@ public final class WorkflowLayout extends FrameLayout {
                 }
                 o.b(obj);
             }
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        @Nullable
-        public final Object invoke(@NotNull p0 p0Var, @Nullable b<? super Unit> bVar) {
-            return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            return Unit.f22938a;
         }
     }
 
@@ -232,7 +232,7 @@ public final class WorkflowLayout extends FrameLayout {
         if (savedState != null) {
             this.restoredChildState = savedState.a();
             super.onRestoreInstanceState(((SavedState) state).getSuperState());
-            unit = Unit.f22483a;
+            unit = Unit.f22938a;
         }
         if (unit == null) {
             super.onRestoreInstanceState(super.onSaveInstanceState());
@@ -321,7 +321,7 @@ public final class WorkflowLayout extends FrameLayout {
         super(context, attributeSet);
         Intrinsics.checkNotNullParameter(context, "context");
         if (getId() == -1) {
-            setId(an.o.f730d);
+            setId(ym.o.f36875d);
         }
         WorkflowViewStub workflowViewStub = new WorkflowViewStub(context, null, 0, 0, 14, null);
         workflowViewStub.setUpdatesVisibility(false);

@@ -7,7 +7,7 @@ import java.util.Arrays;
 public abstract class c2 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Range<Integer> f15828a = new Range<>(0, Integer.MAX_VALUE);
+    public static final Range<Integer> f16424a = new Range<>(0, Integer.MAX_VALUE);
     public static final a0 b;
 
     public static abstract class a {
@@ -23,12 +23,12 @@ public abstract class c2 {
     }
 
     static {
-        x xVar = x.f16051c;
-        b = a0.e(Arrays.asList(xVar, x.b, x.f16050a), p.a(xVar));
+        x xVar = x.f16647c;
+        b = a0.e(Arrays.asList(xVar, x.b, x.f16646a), p.a(xVar));
     }
 
     public static a a() {
-        return new n.b().e(b).d(0).c(f15828a).b(-1);
+        return new n.b().e(b).d(0).c(f16424a).b(-1);
     }
 
     public abstract int b();

@@ -9,35 +9,35 @@ import java.util.Objects;
 public abstract class l0 extends v0 {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final int f25286d;
+    public final int f26107d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Bundle f25287e;
+    public final Bundle f26108e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final /* synthetic */ c f25288f;
+    public final /* synthetic */ c f26109f;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public l0(c cVar, int i10, Bundle bundle) {
         super(cVar, Boolean.TRUE);
         Objects.requireNonNull(cVar);
-        this.f25288f = cVar;
-        this.f25286d = i10;
-        this.f25287e = bundle;
+        this.f26109f = cVar;
+        this.f26107d = i10;
+        this.f26108e = bundle;
     }
 
     @Override // n9.v0
     public final /* bridge */ /* synthetic */ void a(Object obj) {
-        int i10 = this.f25286d;
+        int i10 = this.f26107d;
         if (i10 != 0) {
-            this.f25288f.zzd(1, null);
-            Bundle bundle = this.f25287e;
+            this.f26109f.zzd(1, null);
+            Bundle bundle = this.f26108e;
             f(new ConnectionResult(i10, bundle != null ? (PendingIntent) bundle.getParcelable("pendingIntent") : null));
         } else {
             if (e()) {
                 return;
             }
-            this.f25288f.zzd(1, null);
+            this.f26109f.zzd(1, null);
             f(new ConnectionResult(8, null));
         }
     }

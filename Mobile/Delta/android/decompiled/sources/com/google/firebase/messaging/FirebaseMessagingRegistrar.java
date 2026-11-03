@@ -10,19 +10,19 @@ import java.util.List;
 public class FirebaseMessagingRegistrar implements ComponentRegistrar {
     private static final String LIBRARY_NAME = "fire-fcm";
 
-    public static /* synthetic */ FirebaseMessaging a(lf.e0 e0Var, lf.d dVar) {
-        return new FirebaseMessaging((ef.e) dVar.a(ef.e.class), (wf.a) dVar.a(wf.a.class), dVar.d(gg.i.class), dVar.d(vf.j.class), (yf.h) dVar.a(yf.h.class), dVar.c(e0Var), (uf.d) dVar.a(uf.d.class));
+    public static /* synthetic */ FirebaseMessaging a(mf.e0 e0Var, mf.d dVar) {
+        return new FirebaseMessaging((ff.e) dVar.a(ff.e.class), (xf.a) dVar.a(xf.a.class), dVar.g(hg.i.class), dVar.g(wf.j.class), (zf.h) dVar.a(zf.h.class), dVar.c(e0Var), (vf.d) dVar.a(vf.d.class));
     }
 
     @Override // com.google.firebase.components.ComponentRegistrar
     @Keep
-    public List<lf.c<?>> getComponents() {
-        final lf.e0 e0VarA = lf.e0.a(of.b.class, y7.i.class);
-        return Arrays.asList(lf.c.c(FirebaseMessaging.class).h(LIBRARY_NAME).b(lf.r.j(ef.e.class)).b(lf.r.g(wf.a.class)).b(lf.r.h(gg.i.class)).b(lf.r.h(vf.j.class)).b(lf.r.j(yf.h.class)).b(lf.r.i(e0VarA)).b(lf.r.j(uf.d.class)).f(new lf.g() { // from class: com.google.firebase.messaging.z
-            @Override // lf.g
-            public final Object create(lf.d dVar) {
+    public List<mf.c<?>> getComponents() {
+        final mf.e0 e0VarA = mf.e0.a(pf.b.class, y7.i.class);
+        return Arrays.asList(mf.c.c(FirebaseMessaging.class).h(LIBRARY_NAME).b(mf.r.j(ff.e.class)).b(mf.r.g(xf.a.class)).b(mf.r.h(hg.i.class)).b(mf.r.h(wf.j.class)).b(mf.r.j(zf.h.class)).b(mf.r.i(e0VarA)).b(mf.r.j(vf.d.class)).f(new mf.g() { // from class: com.google.firebase.messaging.z
+            @Override // mf.g
+            public final Object create(mf.d dVar) {
                 return FirebaseMessagingRegistrar.a(e0VarA, dVar);
             }
-        }).c().d(), gg.h.b(LIBRARY_NAME, "25.0.1"));
+        }).c().d(), hg.h.b(LIBRARY_NAME, "25.0.1"));
     }
 }

@@ -8,11 +8,11 @@ import java.util.Objects;
 public final class yb implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ zzr f26136a;
+    public final /* synthetic */ zzr f26957a;
     public final /* synthetic */ tc b;
 
     public yb(tc tcVar, zzr zzrVar) {
-        this.f26136a = zzrVar;
+        this.f26957a = zzrVar;
         Objects.requireNonNull(tcVar);
         this.b = tcVar;
     }
@@ -22,16 +22,16 @@ public final class yb implements Runnable {
         tc tcVar = this.b;
         d5 d5VarN = tcVar.N();
         if (d5VarN == null) {
-            tcVar.f25625a.a().o().a("Failed to send measurementEnabled to service");
+            tcVar.f26446a.a().o().a("Failed to send measurementEnabled to service");
             return;
         }
         try {
-            zzr zzrVar = this.f26136a;
+            zzr zzrVar = this.f26957a;
             n9.m.l(zzrVar);
-            d5VarN.Y(zzrVar);
+            d5VarN.W(zzrVar);
             tcVar.J();
         } catch (RemoteException e10) {
-            this.b.f25625a.a().o().b("Failed to send measurementEnabled to the service", e10);
+            this.b.f26446a.a().o().b("Failed to send measurementEnabled to the service", e10);
         }
     }
 }

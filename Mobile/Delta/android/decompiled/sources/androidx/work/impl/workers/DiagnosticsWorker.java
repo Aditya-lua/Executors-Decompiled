@@ -45,16 +45,16 @@ public final class DiagnosticsWorker extends Worker {
         List<j0> listW = k0VarC0.w();
         List<j0> listO = k0VarC0.o(MlKitException.CODE_SCANNER_UNAVAILABLE);
         if (!listD.isEmpty()) {
-            w.e().f(a.f20284a, "Recently completed work:\n\n");
-            w.e().f(a.f20284a, a.d(yVarA0, q1VarD0, pVarZ, listD));
+            w.e().f(a.f20400a, "Recently completed work:\n\n");
+            w.e().f(a.f20400a, a.d(yVarA0, q1VarD0, pVarZ, listD));
         }
         if (!listW.isEmpty()) {
-            w.e().f(a.f20284a, "Running work:\n\n");
-            w.e().f(a.f20284a, a.d(yVarA0, q1VarD0, pVarZ, listW));
+            w.e().f(a.f20400a, "Running work:\n\n");
+            w.e().f(a.f20400a, a.d(yVarA0, q1VarD0, pVarZ, listW));
         }
         if (!listO.isEmpty()) {
-            w.e().f(a.f20284a, "Enqueued work:\n\n");
-            w.e().f(a.f20284a, a.d(yVarA0, q1VarD0, pVarZ, listO));
+            w.e().f(a.f20400a, "Enqueued work:\n\n");
+            w.e().f(a.f20400a, a.d(yVarA0, q1VarD0, pVarZ, listO));
         }
         c.a aVarD = c.a.d();
         Intrinsics.checkNotNullExpressionValue(aVarD, "success(...)");

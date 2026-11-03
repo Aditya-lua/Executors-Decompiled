@@ -22,32 +22,32 @@ import org.xmlpull.v1.XmlPullParserException;
 public final class r0 {
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static r0 f29093i;
+    public static r0 f29446i;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public WeakHashMap<Context, w1.k<ColorStateList>> f29095a;
+    public WeakHashMap<Context, w1.k<ColorStateList>> f29448a;
     public w1.j<String, b> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public w1.k<String> f29096c;
+    public w1.k<String> f29449c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final WeakHashMap<Context, w1.g<WeakReference<Drawable.ConstantState>>> f29097d = new WeakHashMap<>(0);
+    public final WeakHashMap<Context, w1.g<WeakReference<Drawable.ConstantState>>> f29450d = new WeakHashMap<>(0);
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public TypedValue f29098e;
+    public TypedValue f29451e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public boolean f29099f;
+    public boolean f29452f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public c f29100g;
+    public c f29453g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final PorterDuff.Mode f29092h = PorterDuff.Mode.SRC_IN;
+    public static final PorterDuff.Mode f29445h = PorterDuff.Mode.SRC_IN;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final a f29094j = new a(6);
+    public static final a f29447j = new a(6);
 
     public static class a extends w1.i<Integer, PorterDuffColorFilter> {
         public a(int i10) {
@@ -96,20 +96,20 @@ public final class r0 {
 
     public static synchronized r0 g() {
         try {
-            if (f29093i == null) {
+            if (f29446i == null) {
                 r0 r0Var = new r0();
-                f29093i = r0Var;
+                f29446i = r0Var;
                 o(r0Var);
             }
         } catch (Throwable th2) {
             throw th2;
         }
-        return f29093i;
+        return f29446i;
     }
 
     public static synchronized PorterDuffColorFilter k(int i10, PorterDuff.Mode mode) {
         PorterDuffColorFilter porterDuffColorFilterM;
-        a aVar = f29094j;
+        a aVar = f29447j;
         porterDuffColorFilterM = aVar.m(i10, mode);
         if (porterDuffColorFilterM == null) {
             porterDuffColorFilterM = new PorterDuffColorFilter(i10, mode);
@@ -135,9 +135,9 @@ public final class r0 {
             drawable.setState(new int[0]);
             drawable.setState(state);
         }
-        boolean z10 = y0Var.f29155d;
-        if (z10 || y0Var.f29154c) {
-            drawable.setColorFilter(f(z10 ? y0Var.f29153a : null, y0Var.f29154c ? y0Var.b : f29092h, iArr));
+        boolean z10 = y0Var.f29508d;
+        if (z10 || y0Var.f29507c) {
+            drawable.setColorFilter(f(z10 ? y0Var.f29506a : null, y0Var.f29507c ? y0Var.b : f29445h, iArr));
         } else {
             drawable.clearColorFilter();
         }
@@ -149,10 +149,10 @@ public final class r0 {
             if (constantState == null) {
                 return false;
             }
-            w1.g<WeakReference<Drawable.ConstantState>> gVar = this.f29097d.get(context);
+            w1.g<WeakReference<Drawable.ConstantState>> gVar = this.f29450d.get(context);
             if (gVar == null) {
                 gVar = new w1.g<>();
-                this.f29097d.put(context, gVar);
+                this.f29450d.put(context, gVar);
             }
             gVar.i(j10, new WeakReference<>(constantState));
             return true;
@@ -162,41 +162,41 @@ public final class r0 {
     }
 
     public final void b(@NonNull Context context, int i10, @NonNull ColorStateList colorStateList) {
-        if (this.f29095a == null) {
-            this.f29095a = new WeakHashMap<>();
+        if (this.f29448a == null) {
+            this.f29448a = new WeakHashMap<>();
         }
-        w1.k<ColorStateList> kVar = this.f29095a.get(context);
+        w1.k<ColorStateList> kVar = this.f29448a.get(context);
         if (kVar == null) {
             kVar = new w1.k<>();
-            this.f29095a.put(context, kVar);
+            this.f29448a.put(context, kVar);
         }
         kVar.a(i10, colorStateList);
     }
 
     public final void c(@NonNull Context context) {
-        if (this.f29099f) {
+        if (this.f29452f) {
             return;
         }
-        this.f29099f = true;
-        Drawable drawableI = i(context, m.a.f23563a);
+        this.f29452f = true;
+        Drawable drawableI = i(context, m.a.f24213a);
         if (drawableI == null || !p(drawableI)) {
-            this.f29099f = false;
+            this.f29452f = false;
             throw new IllegalStateException("This app has been built with an incorrect configuration. Please configure your build for VectorDrawableCompat.");
         }
     }
 
     public final Drawable e(@NonNull Context context, int i10) {
-        if (this.f29098e == null) {
-            this.f29098e = new TypedValue();
+        if (this.f29451e == null) {
+            this.f29451e = new TypedValue();
         }
-        TypedValue typedValue = this.f29098e;
+        TypedValue typedValue = this.f29451e;
         context.getResources().getValue(i10, typedValue, true);
         long jD = d(typedValue);
         Drawable drawableH = h(context, jD);
         if (drawableH != null) {
             return drawableH;
         }
-        c cVar = this.f29100g;
+        c cVar = this.f29453g;
         Drawable drawableA = cVar == null ? null : cVar.a(this, context, i10);
         if (drawableA != null) {
             drawableA.setChangingConfigurations(typedValue.changingConfigurations);
@@ -206,7 +206,7 @@ public final class r0 {
     }
 
     public final synchronized Drawable h(@NonNull Context context, long j10) {
-        w1.g<WeakReference<Drawable.ConstantState>> gVar = this.f29097d.get(context);
+        w1.g<WeakReference<Drawable.ConstantState>> gVar = this.f29450d.get(context);
         if (gVar == null) {
             return null;
         }
@@ -252,7 +252,7 @@ public final class r0 {
         ColorStateList colorStateListM;
         colorStateListM = m(context, i10);
         if (colorStateListM == null) {
-            c cVar = this.f29100g;
+            c cVar = this.f29453g;
             colorStateListM = cVar == null ? null : cVar.b(context, i10);
             if (colorStateListM != null) {
                 b(context, i10, colorStateListM);
@@ -263,7 +263,7 @@ public final class r0 {
 
     public final ColorStateList m(@NonNull Context context, int i10) {
         w1.k<ColorStateList> kVar;
-        WeakHashMap<Context, w1.k<ColorStateList>> weakHashMap = this.f29095a;
+        WeakHashMap<Context, w1.k<ColorStateList>> weakHashMap = this.f29448a;
         if (weakHashMap == null || (kVar = weakHashMap.get(context)) == null) {
             return null;
         }
@@ -271,7 +271,7 @@ public final class r0 {
     }
 
     public PorterDuff.Mode n(int i10) {
-        c cVar = this.f29100g;
+        c cVar = this.f29453g;
         if (cVar == null) {
             return null;
         }
@@ -284,19 +284,19 @@ public final class r0 {
         if (jVar == null || jVar.isEmpty()) {
             return null;
         }
-        w1.k<String> kVar = this.f29096c;
+        w1.k<String> kVar = this.f29449c;
         if (kVar != null) {
             String strE = kVar.e(i10);
             if ("appcompat_skip_skip".equals(strE) || (strE != null && this.b.get(strE) == null)) {
                 return null;
             }
         } else {
-            this.f29096c = new w1.k<>();
+            this.f29449c = new w1.k<>();
         }
-        if (this.f29098e == null) {
-            this.f29098e = new TypedValue();
+        if (this.f29451e == null) {
+            this.f29451e = new TypedValue();
         }
-        TypedValue typedValue = this.f29098e;
+        TypedValue typedValue = this.f29451e;
         Resources resources = context.getResources();
         resources.getValue(i10, typedValue, true);
         long jD = d(typedValue);
@@ -319,7 +319,7 @@ public final class r0 {
                     throw new XmlPullParserException("No start tag found");
                 }
                 String name = xml.getName();
-                this.f29096c.a(i10, name);
+                this.f29449c.a(i10, name);
                 b bVar = this.b.get(name);
                 if (bVar != null) {
                     drawableH = bVar.a(context, xml, attributeSetAsAttributeSet, context.getTheme());
@@ -333,13 +333,13 @@ public final class r0 {
             }
         }
         if (drawableH == null) {
-            this.f29096c.a(i10, "appcompat_skip_skip");
+            this.f29449c.a(i10, "appcompat_skip_skip");
         }
         return drawableH;
     }
 
     public synchronized void r(@NonNull Context context) {
-        w1.g<WeakReference<Drawable.ConstantState>> gVar = this.f29097d.get(context);
+        w1.g<WeakReference<Drawable.ConstantState>> gVar = this.f29450d.get(context);
         if (gVar != null) {
             gVar.a();
         }
@@ -361,7 +361,7 @@ public final class r0 {
     }
 
     public synchronized void t(c cVar) {
-        this.f29100g = cVar;
+        this.f29453g = cVar;
     }
 
     public final Drawable u(@NonNull Context context, int i10, boolean z10, @NonNull Drawable drawable) {
@@ -375,7 +375,7 @@ public final class r0 {
             }
             return drawableR;
         }
-        c cVar = this.f29100g;
+        c cVar = this.f29453g;
         if ((cVar == null || !cVar.e(context, i10, drawable)) && !w(context, i10, drawable) && z10) {
             return null;
         }
@@ -383,7 +383,7 @@ public final class r0 {
     }
 
     public boolean w(@NonNull Context context, int i10, @NonNull Drawable drawable) {
-        c cVar = this.f29100g;
+        c cVar = this.f29453g;
         return cVar != null && cVar.c(context, i10, drawable);
     }
 }

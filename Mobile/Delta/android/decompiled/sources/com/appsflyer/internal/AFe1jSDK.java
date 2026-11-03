@@ -75,7 +75,7 @@ public final class AFe1jSDK extends AFe1ySDK<Boolean> {
         for (AFc1sSDK aFc1sSDK : this.AFKeystoreWrapper.AFKeystoreWrapper()) {
             AFLoggerBase.i$default(AFLogger.INSTANCE, LogTag.CACHE, "resending request: " + aFc1sSDK.unregisterClient, false, 4, null);
             try {
-                this.registerClient.d(new AFf1sSDK(new AFh1nSDK(unregisterClient(aFc1sSDK), aFc1sSDK.f5263d, aFc1sSDK.registerClient, aFc1sSDK.AFLogger, aFc1sSDK.f5264e), this.d));
+                this.registerClient.d(new AFf1sSDK(new AFh1nSDK(unregisterClient(aFc1sSDK), aFc1sSDK.f5336d, aFc1sSDK.registerClient, aFc1sSDK.AFLogger, aFc1sSDK.f5337e), this.d));
             } catch (Exception e10) {
                 AFLoggerBase.e$default(AFLogger.INSTANCE, LogTag.QUEUE, "Failed to resend cached request", e10, false, false, false, false, 120, null);
             }

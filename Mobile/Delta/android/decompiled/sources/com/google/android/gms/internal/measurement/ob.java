@@ -4,5 +4,5 @@ package com.google.android.gms.internal.measurement;
 public interface ob extends pb {
     ob r(int i10);
 
-    long x0(int i10);
+    long t0(int i10);
 }

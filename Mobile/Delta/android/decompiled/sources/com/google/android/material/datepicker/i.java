@@ -12,13 +12,13 @@ import java.util.Iterator;
 public final class i<S> extends m<S> {
 
     /* JADX INFO: renamed from: g0, reason: collision with root package name */
-    public int f7897g0;
+    public int f7971g0;
 
     /* JADX INFO: renamed from: h0, reason: collision with root package name */
-    public DateSelector<S> f7898h0;
+    public DateSelector<S> f7972h0;
 
     /* JADX INFO: renamed from: i0, reason: collision with root package name */
-    public CalendarConstraints f7899i0;
+    public CalendarConstraints f7973i0;
 
     public class a extends l<S> {
         public a() {
@@ -26,7 +26,7 @@ public final class i<S> extends m<S> {
 
         @Override // com.google.android.material.datepicker.l
         public void a(S s8) {
-            Iterator<l<S>> it = i.this.f7916f0.iterator();
+            Iterator<l<S>> it = i.this.f7990f0.iterator();
             while (it.hasNext()) {
                 it.next().a(s8);
             }
@@ -50,22 +50,22 @@ public final class i<S> extends m<S> {
         if (bundle == null) {
             bundle = t();
         }
-        this.f7897g0 = bundle.getInt("THEME_RES_ID_KEY");
-        this.f7898h0 = (DateSelector) bundle.getParcelable("DATE_SELECTOR_KEY");
-        this.f7899i0 = (CalendarConstraints) bundle.getParcelable("CALENDAR_CONSTRAINTS_KEY");
+        this.f7971g0 = bundle.getInt("THEME_RES_ID_KEY");
+        this.f7972h0 = (DateSelector) bundle.getParcelable("DATE_SELECTOR_KEY");
+        this.f7973i0 = (CalendarConstraints) bundle.getParcelable("CALENDAR_CONSTRAINTS_KEY");
     }
 
     @Override // androidx.fragment.app.c
     @NonNull
     public View J0(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
-        return this.f7898h0.v2(layoutInflater.cloneInContext(new ContextThemeWrapper(x(), this.f7897g0)), viewGroup, bundle, this.f7899i0, new a());
+        return this.f7972h0.w2(layoutInflater.cloneInContext(new ContextThemeWrapper(w(), this.f7971g0)), viewGroup, bundle, this.f7973i0, new a());
     }
 
     @Override // androidx.fragment.app.c
     public void b1(@NonNull Bundle bundle) {
         super.b1(bundle);
-        bundle.putInt("THEME_RES_ID_KEY", this.f7897g0);
-        bundle.putParcelable("DATE_SELECTOR_KEY", this.f7898h0);
-        bundle.putParcelable("CALENDAR_CONSTRAINTS_KEY", this.f7899i0);
+        bundle.putInt("THEME_RES_ID_KEY", this.f7971g0);
+        bundle.putParcelable("DATE_SELECTOR_KEY", this.f7972h0);
+        bundle.putParcelable("CALENDAR_CONSTRAINTS_KEY", this.f7973i0);
     }
 }

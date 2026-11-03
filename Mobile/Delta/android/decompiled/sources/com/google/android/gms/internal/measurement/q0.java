@@ -10,7 +10,7 @@ import java.util.HashMap;
 public final class q0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final ClassLoader f6744a = q0.class.getClassLoader();
+    public static final ClassLoader f6818a = q0.class.getClassLoader();
 
     public static boolean a(Parcel parcel) {
         return parcel.readInt() != 0;
@@ -41,7 +41,7 @@ public final class q0 {
     }
 
     public static HashMap e(Parcel parcel) {
-        return parcel.readHashMap(f6744a);
+        return parcel.readHashMap(f6818a);
     }
 
     public static void f(Parcel parcel) {

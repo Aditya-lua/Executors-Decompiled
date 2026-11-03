@@ -11,27 +11,27 @@ public final class l {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final Object f33625a = new Object();
+    public static final Object f33831a = new Object();
 
     @Nullable
     public static final <E> E c(@NotNull k<E> kVar, int i10) {
         E e10;
         Intrinsics.checkNotNullParameter(kVar, "<this>");
-        int iA = x1.a.a(kVar.b, kVar.f33624d, i10);
-        if (iA < 0 || (e10 = (E) kVar.f33623c[iA]) == f33625a) {
+        int iA = x1.a.a(kVar.b, kVar.f33830d, i10);
+        if (iA < 0 || (e10 = (E) kVar.f33829c[iA]) == f33831a) {
             return null;
         }
         return e10;
     }
 
     public static final <E> void d(k<E> kVar) {
-        int i10 = kVar.f33624d;
+        int i10 = kVar.f33830d;
         int[] iArr = kVar.b;
-        Object[] objArr = kVar.f33623c;
+        Object[] objArr = kVar.f33829c;
         int i11 = 0;
         for (int i12 = 0; i12 < i10; i12++) {
             Object obj = objArr[i12];
-            if (obj != f33625a) {
+            if (obj != f33831a) {
                 if (i12 != i11) {
                     iArr[i11] = iArr[i12];
                     objArr[i11] = obj;
@@ -40,7 +40,7 @@ public final class l {
                 i11++;
             }
         }
-        kVar.f33622a = false;
-        kVar.f33624d = i11;
+        kVar.f33828a = false;
+        kVar.f33830d = i11;
     }
 }

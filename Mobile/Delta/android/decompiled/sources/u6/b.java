@@ -16,7 +16,7 @@ public final class b<P, T> {
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @Nullable
-    public Object _value = d.f32083a;
+    public Object _value = d.f32736a;
 
     public b(@NotNull Function1<? super P, ? extends T> function1) {
         this.initializer = function1;
@@ -25,7 +25,7 @@ public final class b<P, T> {
     public final T a(P parameter) {
         T tInvoke;
         T t8 = (T) this._value;
-        d dVar = d.f32083a;
+        d dVar = d.f32736a;
         if (t8 != dVar) {
             return t8;
         }

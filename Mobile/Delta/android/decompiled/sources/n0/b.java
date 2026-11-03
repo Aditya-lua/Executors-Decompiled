@@ -12,26 +12,26 @@ import java.util.concurrent.Executor;
 public abstract class b implements a3<List<g0.s>> {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public List<g0.s> f24596c;
+    public List<g0.s> f25417c;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object f24595a = new Object();
+    public final Object f25416a = new Object();
     public final List<a> b = new CopyOnWriteArrayList();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public Throwable f24597d = null;
+    public Throwable f25418d = null;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public boolean f24598e = false;
+    public boolean f25419e = false;
 
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Executor f24599a;
+        public final Executor f25420a;
         public final a3.a<? super List<g0.s>> b;
 
         public a(Executor executor, a3.a<? super List<g0.s>> aVar) {
-            this.f24599a = executor;
+            this.f25420a = executor;
             this.b = aVar;
         }
     }
@@ -42,7 +42,7 @@ public abstract class b implements a3<List<g0.s>> {
         while (it.hasNext()) {
             arrayList.add(g0.s.a(it.next()));
         }
-        this.f24596c = arrayList;
+        this.f25417c = arrayList;
     }
 
     public static /* synthetic */ void a(Throwable th2, a aVar, List list) {
@@ -60,15 +60,15 @@ public abstract class b implements a3<List<g0.s>> {
         x2.g.g(executor);
         x2.g.g(aVar);
         this.b.add(new a(executor, aVar));
-        synchronized (this.f24595a) {
+        synchronized (this.f25416a) {
             try {
-                if (!this.f24598e && !this.b.isEmpty()) {
+                if (!this.f25419e && !this.b.isEmpty()) {
                     Log.i("CameraPresenceSrc", "First observer added. Starting monitoring.");
-                    this.f24598e = true;
+                    this.f25419e = true;
                     g();
                 }
-                listUnmodifiableList = Collections.unmodifiableList(this.f24596c);
-                th2 = this.f24597d;
+                listUnmodifiableList = Collections.unmodifiableList(this.f25417c);
+                th2 = this.f25418d;
             } catch (Throwable th3) {
                 throw th3;
             }
@@ -91,11 +91,11 @@ public abstract class b implements a3<List<g0.s>> {
         if (next != null) {
             this.b.remove(next);
         }
-        synchronized (this.f24595a) {
+        synchronized (this.f25416a) {
             try {
-                if (this.f24598e && this.b.isEmpty()) {
+                if (this.f25419e && this.b.isEmpty()) {
                     Log.i("CameraPresenceSrc", "Last observer removed. Stopping monitoring.");
-                    this.f24598e = false;
+                    this.f25419e = false;
                     h();
                 }
             } catch (Throwable th2) {
@@ -105,7 +105,7 @@ public abstract class b implements a3<List<g0.s>> {
     }
 
     public final void f(final a aVar, final List<g0.s> list, final Throwable th2) {
-        aVar.f24599a.execute(new Runnable() { // from class: n0.a
+        aVar.f25420a.execute(new Runnable() { // from class: n0.a
             @Override // java.lang.Runnable
             public final void run() {
                 b.a(th2, aVar, list);
@@ -129,21 +129,21 @@ public abstract class b implements a3<List<g0.s>> {
         boolean z10;
         List<g0.s> listUnmodifiableList;
         Throwable th3;
-        synchronized (this.f24595a) {
+        synchronized (this.f25416a) {
             try {
                 if (th2 != null) {
-                    z10 = this.f24597d == null || !this.f24596c.isEmpty();
-                    this.f24597d = th2;
-                    this.f24596c = Collections.EMPTY_LIST;
+                    z10 = this.f25418d == null || !this.f25417c.isEmpty();
+                    this.f25418d = th2;
+                    this.f25417c = Collections.EMPTY_LIST;
                 } else {
                     x2.g.g(list);
-                    boolean z11 = (this.f24597d == null && this.f24596c.equals(list)) ? false : true;
-                    this.f24597d = null;
-                    this.f24596c = list;
+                    boolean z11 = (this.f25418d == null && this.f25417c.equals(list)) ? false : true;
+                    this.f25418d = null;
+                    this.f25417c = list;
                     z10 = z11;
                 }
-                listUnmodifiableList = Collections.unmodifiableList(this.f24596c);
-                th3 = this.f24597d;
+                listUnmodifiableList = Collections.unmodifiableList(this.f25417c);
+                th3 = this.f25418d;
             } catch (Throwable th4) {
                 throw th4;
             }

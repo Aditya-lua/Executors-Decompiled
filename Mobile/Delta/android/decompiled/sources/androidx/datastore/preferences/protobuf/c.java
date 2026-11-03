@@ -9,14 +9,14 @@ import java.util.RandomAccess;
 public abstract class c<E> extends AbstractList<E> implements z.f<E> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f2147a;
+    public boolean f1992a;
 
     public c(boolean z10) {
-        this.f2147a = z10;
+        this.f1992a = z10;
     }
 
     public void a() {
-        if (!this.f2147a) {
+        if (!this.f1992a) {
             throw new UnsupportedOperationException();
         }
     }
@@ -69,14 +69,14 @@ public abstract class c<E> extends AbstractList<E> implements z.f<E> {
 
     @Override // androidx.datastore.preferences.protobuf.z.f
     public final void j() {
-        if (this.f2147a) {
-            this.f2147a = false;
+        if (this.f1992a) {
+            this.f1992a = false;
         }
     }
 
     @Override // androidx.datastore.preferences.protobuf.z.f
     public boolean n() {
-        return this.f2147a;
+        return this.f1992a;
     }
 
     @Override // java.util.AbstractList, java.util.List

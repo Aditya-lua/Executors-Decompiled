@@ -7,15 +7,15 @@ import com.google.android.gms.tasks.Task;
 public final class n0 implements da.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final h f16558a;
+    public final h f17154a;
 
     public n0(h hVar) {
-        this.f16558a = hVar;
+        this.f17154a = hVar;
     }
 
     @Override // da.a
     public final Task<da.b<ea.a>> a(final boolean z10) {
-        return this.f16558a.b(new g() { // from class: fb.i0
+        return this.f17154a.b(new g() { // from class: fb.i0
             @Override // fb.g
             public final /* synthetic */ Task a(k9.e eVar) {
                 l9.u.a aVarC = l9.u.c();
@@ -32,7 +32,7 @@ public final class n0 implements da.a {
 
     @Override // da.a
     public final Task<Void> b(@NonNull final String str) {
-        return this.f16558a.b(new g() { // from class: fb.j0
+        return this.f17154a.b(new g() { // from class: fb.j0
             @Override // fb.g
             public final /* synthetic */ Task a(k9.e eVar) {
                 l9.u.a aVarC = l9.u.c();

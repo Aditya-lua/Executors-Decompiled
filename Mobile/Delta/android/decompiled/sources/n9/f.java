@@ -11,47 +11,47 @@ import java.util.concurrent.Executor;
 public abstract class f {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Object f25256a = new Object();
+    public static final Object f26077a = new Object();
     public static int b = 9;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static h1 f25257c;
+    public static h1 f26078c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static HandlerThread f25258d;
+    public static HandlerThread f26079d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static Executor f25259e;
+    public static Executor f26080e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static boolean f25260f;
+    public static boolean f26081f;
 
     @NonNull
     public static f a(@NonNull Context context) {
-        synchronized (f25256a) {
+        synchronized (f26077a) {
             try {
-                if (f25257c == null) {
-                    f25257c = new h1(context.getApplicationContext(), f25260f ? b().getLooper() : context.getMainLooper(), f25259e);
+                if (f26078c == null) {
+                    f26078c = new h1(context.getApplicationContext(), f26081f ? b().getLooper() : context.getMainLooper(), f26080e);
                 }
             } catch (Throwable th2) {
                 throw th2;
             }
         }
-        return f25257c;
+        return f26078c;
     }
 
     @NonNull
     public static HandlerThread b() {
-        synchronized (f25256a) {
+        synchronized (f26077a) {
             try {
-                HandlerThread handlerThread = f25258d;
+                HandlerThread handlerThread = f26079d;
                 if (handlerThread != null) {
                     return handlerThread;
                 }
                 HandlerThread handlerThread2 = new HandlerThread("GoogleApiHandler", b);
-                f25258d = handlerThread2;
+                f26079d = handlerThread2;
                 handlerThread2.start();
-                return f25258d;
+                return f26079d;
             } catch (Throwable th2) {
                 throw th2;
             }

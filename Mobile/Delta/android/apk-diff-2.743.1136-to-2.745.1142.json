@@ -1,0 +1,1482 @@
+{
+  "a": {
+    "path": "Delta-2.743.1136.apk",
+    "bytes": 167563578,
+    "sha256": "fdb861bea54e5dd3f6de0542369d5a45498d6e65c6dfaf7d60bf1bde5314cce0",
+    "members": 2380
+  },
+  "b": {
+    "path": "Delta-2.745.1142.apk",
+    "bytes": 167457402,
+    "sha256": "4d22c8be0f81251d18dc53a49b42a4c27ec64eb1ee039106a33913987027c3f2",
+    "members": 2383
+  },
+  "only_in_a": [
+    "META-INF/services/ku.m0",
+    "META-INF/services/qu.s",
+    "assets/android/shared_compression_dictionaries/57ace1df87f8e37023aebc8d9ce7e0802ffc0ee11dbcc89b34b18ed4e75f1de7.dict",
+    "res/mipmap-hdpi-v4/ic_launcher_halloween_2026_background.png",
+    "res/mipmap-hdpi-v4/ic_launcher_halloween_2026_foreground.png",
+    "res/mipmap-mdpi-v4/ic_launcher_halloween_2026_background.png",
+    "res/mipmap-mdpi-v4/ic_launcher_halloween_2026_foreground.png",
+    "res/mipmap-xhdpi-v4/ic_launcher_halloween_2026_background.png",
+    "res/mipmap-xhdpi-v4/ic_launcher_halloween_2026_foreground.png",
+    "res/mipmap-xxhdpi-v4/ic_launcher_halloween_2026_background.png",
+    "res/mipmap-xxhdpi-v4/ic_launcher_halloween_2026_foreground.png",
+    "res/mipmap-xxxhdpi-v4/ic_launcher_halloween_2026_background.png",
+    "res/mipmap-xxxhdpi-v4/ic_launcher_halloween_2026_foreground.png"
+  ],
+  "only_in_b": [
+    "META-INF/services/iu.m0",
+    "META-INF/services/ou.s",
+    "assets/ExtraContent/textures/ui/LuaApp/graphic/home_background_halloween2026.jpg",
+    "assets/android/shared_compression_dictionaries/35659ed0421961bc16f9bd3955ac6b8e583db18147d4c97c4ad62dc9f9d48438.dict",
+    "assets/content/configs/DateTimeLocaleConfigs/nl-nl.json",
+    "res/layout/loading_content_roblox.xml",
+    "res/mipmap-hdpi-v4/ic_launcher_halloween_2026_background.webp",
+    "res/mipmap-hdpi-v4/ic_launcher_halloween_2026_foreground.webp",
+    "res/mipmap-mdpi-v4/ic_launcher_halloween_2026_background.webp",
+    "res/mipmap-mdpi-v4/ic_launcher_halloween_2026_foreground.webp",
+    "res/mipmap-xhdpi-v4/ic_launcher_halloween_2026_background.webp",
+    "res/mipmap-xhdpi-v4/ic_launcher_halloween_2026_foreground.webp",
+    "res/mipmap-xxhdpi-v4/ic_launcher_halloween_2026_background.webp",
+    "res/mipmap-xxhdpi-v4/ic_launcher_halloween_2026_foreground.webp",
+    "res/mipmap-xxxhdpi-v4/ic_launcher_halloween_2026_background.webp",
+    "res/mipmap-xxxhdpi-v4/ic_launcher_halloween_2026_foreground.webp"
+  ],
+  "identical_members": 2152,
+  "changed_members": [
+    {
+      "name": "AndroidManifest.xml",
+      "sha256_a": "3f9c4f87e7a06e1bf06948a92388fff1d6ef299757b792d8ea6d30674d91bd05",
+      "sha256_b": "d15efb96fde6a05c2be2a236b853b45a62f1543fb1dcaf843f0cea4e4e5a3f35",
+      "size_a": 56752,
+      "size_b": 57268
+    },
+    {
+      "name": "META-INF/KEY.RSA",
+      "sha256_a": "db6c816d7714a98bca21be3a6e4f9f57885fe9a3bd3934e3fa57521f5d3e9fbf",
+      "sha256_b": "dd22f6d07453684b91beca02bd66f261ee3b11537eea66160d0d0314a14d5e9d",
+      "size_a": 1363,
+      "size_b": 1363
+    },
+    {
+      "name": "META-INF/KEY.SF",
+      "sha256_a": "99aa30bb8dbf036dd2511c5c380d5947e3d0a2decae0835d52dc57e6835eb9c2",
+      "sha256_b": "d86324c322c59ef7844180ba537cbb629d19ae7dd5886720f576b0b29aa15266",
+      "size_a": 288039,
+      "size_b": 288440
+    },
+    {
+      "name": "META-INF/MANIFEST.MF",
+      "sha256_a": "b832e3b6706afbd89e4887f1b3f8aa02c0177aa709c025ecc4794ed807747c27",
+      "sha256_b": "cae9baf0925fba4fdf067201cc22af1fd0fb5456ae89331dd78a857b605292e4",
+      "size_a": 287912,
+      "size_b": 288313
+    },
+    {
+      "name": "META-INF/NativeShell_googleProdRelease.kotlin_module",
+      "sha256_a": "a20bdab6e9b8ce4bfbd2e54fd631eb903862d67cc7ad89c8c700646a870bb70e",
+      "sha256_b": "28ecb8efa5cb49bff34c5119dcbb0935fc41effb44dabd5e0f0d62e9e744657b",
+      "size_a": 222,
+      "size_b": 225
+    },
+    {
+      "name": "META-INF/appdome-threatevents_release.kotlin_module",
+      "sha256_a": "c12d7eab0015cc231281f9ae1ba284ad4125c137a51709ad5e4f695a14ce9ed4",
+      "sha256_b": "de4492fcda19cdc5c55a7d6c73e73b5f09ea6149d0eddbb757385c66b15d29d9",
+      "size_a": 29,
+      "size_b": 29
+    },
+    {
+      "name": "META-INF/camera_release.kotlin_module",
+      "sha256_a": "09086aa393f4de5aea43c3f16cae12a3295c025e99a2c64a5b3c50dcdf2f8a12",
+      "sha256_b": "d7fc5693b7717ad82625899bcb1cfb90cf177210baf6d6e73e217fd0fbc94445",
+      "size_a": 112,
+      "size_b": 112
+    },
+    {
+      "name": "META-INF/com.google.firebase-firebase-common.kotlin_module",
+      "sha256_a": "523ba8d1c488698ffbf4390691365723eb6db5bfaec41dcdb2479fb8e84a31d0",
+      "sha256_b": "7bb6e61dfc74cd91227f60cc28e0fbb36ab3846b21e01c420039bee9cfc9d962",
+      "size_a": 29,
+      "size_b": 29
+    },
+    {
+      "name": "META-INF/database_googleProdRelease.kotlin_module",
+      "sha256_a": "796a43f26ba502a3a7fbe9897586d7c499900cd6064a43126862fc3699a77bd8",
+      "sha256_b": "e0f35a4c5977f3ba24b14e492f45095f34a99ab4c692734b6aaff4f509e425f8",
+      "size_a": 29,
+      "size_b": 29
+    },
+    {
+      "name": "META-INF/device_release.kotlin_module",
+      "sha256_a": "d8f0c3d76fc6f07fee7058c78f9809b0c31cb4ff9123af1e53809b6c1b174f2a",
+      "sha256_b": "7b65fec578249c888f1455bca92ebc1a19e7c0e328d12b4ed69da2e416819054",
+      "size_a": 33,
+      "size_b": 33
+    },
+    {
+      "name": "META-INF/document_release.kotlin_module",
+      "sha256_a": "0ab6e21c6de23607a691eb8f2ce6b30b9f0c739a0fee4d19a7d1db83f60c3c8e",
+      "sha256_b": "24e47dc67fb5c1c9283f6a5e344506a613660cdc955bda27ae26a8ea3b821f98",
+      "size_a": 82,
+      "size_b": 82
+    },
+    {
+      "name": "META-INF/gmasdk_googleProdRelease.kotlin_module",
+      "sha256_a": "aa82a7c1fdc5d48081074838ba457e804b8c001f62be814695bcd6aee6ad7856",
+      "sha256_b": "208ee0b90a44a4fea0394176f4cb003715da33281e82eca84d05378c3b364959",
+      "size_a": 55,
+      "size_b": 58
+    },
+    {
+      "name": "META-INF/government-id_release.kotlin_module",
+      "sha256_a": "9de78066c510dc69e6b786cfc4695c41bb22917ba3b0834b22c914c68213741a",
+      "sha256_b": "d3648b7b2d949de190a80fe4e5708c9c9e115dcfbbcb99495e3b4b5420064d4a",
+      "size_a": 156,
+      "size_b": 156
+    },
+    {
+      "name": "META-INF/inquiry-internal_release.kotlin_module",
+      "sha256_a": "be7b9d5d14453922eb8201a8c55c0686a7694ef6e176260919f9d66e4c8536e5",
+      "sha256_b": "2f1fe6b7557a49077616092297ce6b217086dcba3e4eaf2300c51611293fc7fb",
+      "size_a": 159,
+      "size_b": 159
+    },
+    {
+      "name": "META-INF/integration_release.kotlin_module",
+      "sha256_a": "a4f481d982ca77321ae0f84b951f8e3647083d2eda36f5133ede74917cd0d6df",
+      "sha256_b": "1fdcf52ca8e3e1bb83815b891939d335c72e8975f8b751556c71b3cdd1d49695",
+      "size_a": 29,
+      "size_b": 29
+    },
+    {
+      "name": "META-INF/jp-my-number_release.kotlin_module",
+      "sha256_a": "9fa8e6c4c430a0c2e8245b735f070c6eb3dea9c75100bbae255b7ee97cc39a14",
+      "sha256_b": "d22eb08a4cbdf6821ebb4e38bb6ac91746cef3bbd29bb3054c781b0c183341d1",
+      "size_a": 29,
+      "size_b": 29
+    },
+    {
+      "name": "META-INF/kotlin-stdlib-jdk8.kotlin_module",
+      "sha256_a": "e1fbc6b804debd591155378649276eb276c1451325c5a72b524211c333442c49",
+      "sha256_b": "21510fd1708ccbcc6307c6faf4fd1dc6b8d9560c301b625736696d06eefcc8ab",
+      "size_a": 29,
+      "size_b": 29
+    },
+    {
+      "name": "META-INF/kotlin-stdlib.kotlin_module",
+      "sha256_a": "78ef4d161e9351f49f5170a09a72f75661977d51baee6afd129a7d961f605947",
+      "sha256_b": "e1c7d8ad1ade869a74776d783aba61cd95f1e9984c7b5686a70d3920e75c55bf",
+      "size_a": 505,
+      "size_b": 505
+    },
+    {
+      "name": "META-INF/kotlinx-coroutines-android.kotlin_module",
+      "sha256_a": "c03da4057e484c352b5fde2e3f86e01746b2b677ef6452618bfb30e37c6eb7f1",
+      "sha256_b": "30c7c47154788abd79610ee154aa7b641ccffe8f83c6d500bf0f2d3b6ec6b2f3",
+      "size_a": 29,
+      "size_b": 29
+    },
+    {
+      "name": "META-INF/kotlinx-coroutines-core.kotlin_module",
+      "sha256_a": "fdabf8968be3dafc0727de28d8e89113092a9650c34346e66a4f6c78aa874605",
+      "sha256_b": "51c55c6aece034796510f3ae3b539c04f38eea8d7c8d4f32183870319f7d11a3",
+      "size_a": 395,
+      "size_b": 395
+    },
+    {
+      "name": "META-INF/kotlinx-coroutines-play-services.kotlin_module",
+      "sha256_a": "5dea9583d8b25f655ebf2050fbe41c734865d991cae181048623611d3ca75222",
+      "sha256_b": "f0fc9d59b5da592d980dcf18a06ba4eee932d24c717f975dd570a088a419700e",
+      "size_a": 29,
+      "size_b": 29
+    },
+    {
+      "name": "META-INF/launchers_release.kotlin_module",
+      "sha256_a": "2b9a437ff2fa1cc5c68772609cac8588c23c4f379d8280b1710285ac83d3f6d6",
+      "sha256_b": "833e173e443ca40e62fe9ffe7e1d14afcebe74cb25a866ea88ff384d8c261ce0",
+      "size_a": 46,
+      "size_b": 46
+    },
+    {
+      "name": "META-INF/modal_release.kotlin_module",
+      "sha256_a": "06f2bac055bd0d62f20059f0edd2041967a24fa016dace91f22ed437e575cd04",
+      "sha256_b": "d17067205f19899a2438a9db584319d61a1e74f313567108c5b58eb7e9dcc1ee",
+      "size_a": 29,
+      "size_b": 29
+    },
+    {
+      "name": "META-INF/nfc_release.kotlin_module",
+      "sha256_a": "c0723164f6d53494016cdf084851b110d8aa877080d9989927a314fb460988db",
+      "sha256_b": "ae8f671f2ec3f2ea3f873fc5f4fce0d8a6a14d830dabd239a9d0d42d2e569272",
+      "size_a": 29,
+      "size_b": 29
+    },
+    {
+      "name": "META-INF/okio.kotlin_module",
+      "sha256_a": "9c08ca89ea828dfee0d8bbfb3abab2f94d5be93fd30d101105bb4b89a0d2e2b4",
+      "sha256_b": "9a47916e2ed43d458f4ed03bb2f554dae6dc80ae13437a8faf70b6f0cb943ab2",
+      "size_a": 100,
+      "size_b": 100
+    },
+    {
+      "name": "META-INF/operations-stdlib_release.kotlin_module",
+      "sha256_a": "732f19788711fc697b33cc493afb153c098a87ba3dbb56751a5307f4efc1f40f",
+      "sha256_b": "b73e4f3688ab9f7f7df6a734fd93b44db662949cab7056faf540b49bcb3a8448",
+      "size_a": 29,
+      "size_b": 29
+    },
+    {
+      "name": "META-INF/permissions_release.kotlin_module",
+      "sha256_a": "2c34efd1d87fa7a7e515fe27d155e950eeab742ea0faba0e8e717147bb68cd67",
+      "sha256_b": "851bf65e1e2037871430c259c3d1b60f2a39eeafe85fdddf4f0a0cf0f4d78c1f",
+      "size_a": 77,
+      "size_b": 77
+    },
+    {
+      "name": "META-INF/renderscript-toolkit_release.kotlin_module",
+      "sha256_a": "af7229789f191c4a399f651e072ccd3d5e54c9f064476fabd8ec0d4635e4dd34",
+      "sha256_b": "190521b8af93504a720b263ac161e51c6a37d0813a42bbd0e07fdca2a4c44b10",
+      "size_a": 29,
+      "size_b": 29
+    },
+    {
+      "name": "META-INF/retrofit.kotlin_module",
+      "sha256_a": "320bc09daf4e7a4207a07e937b34047720efe140ad6f1405cd1a74ee8221e515",
+      "sha256_b": "b76c2a2d61e5f7f045ce8a4455c1d5c8be255216ce53f9a63118104b6cba645e",
+      "size_a": 29,
+      "size_b": 29
+    },
+    {
+      "name": "META-INF/selfie_release.kotlin_module",
+      "sha256_a": "550e06b0d45ee3467fd15efa11ad7e26594586a10be08ec1dea504373bbf80e1",
+      "sha256_b": "0af8134fc67c52b81c27f251a8fc38bfd29d09843ec7b0074e6c08f123841dfc",
+      "size_a": 102,
+      "size_b": 102
+    },
+    {
+      "name": "META-INF/shared_release.kotlin_module",
+      "sha256_a": "218ca9e23a2707713b09294b5882c02b4163bd228c485e708fc6d723c7033c1a",
+      "sha256_b": "8124da4079a15a1d1706a89831bfbe7972370fbbb7d8fbf83124d4862a8d6f66",
+      "size_a": 193,
+      "size_b": 193
+    },
+    {
+      "name": "META-INF/ui-step-renderer_release.kotlin_module",
+      "sha256_a": "5213055024c1479c5987668c2eca1bd8398d1c7bcc8f2d45fb58d638b31cfe3f",
+      "sha256_b": "4b58ce63e3a72687503958c9cb633df9d1f092eab00bd1b9ecd0617d23c797f2",
+      "size_a": 370,
+      "size_b": 370
+    },
+    {
+      "name": "META-INF/ui_release.kotlin_module",
+      "sha256_a": "5486c8795b80ed7b2f52e5e301a188a28126b58b4db68749df2579aa49c73710",
+      "sha256_b": "a94571208224da5e2dc9b9b0b08ca7a89b027f503580d779707deb9792c5e608",
+      "size_a": 122,
+      "size_b": 122
+    },
+    {
+      "name": "META-INF/universalapp_googleProdRelease.kotlin_module",
+      "sha256_a": "0cf430735a16c85a8f93b0985457b3442acf8fa0953b1c4ad82246b8b169794b",
+      "sha256_b": "54fc6b65260f1ad18b7c116a4d365e30a6fe913ff7a0bceea174d55168c039a5",
+      "size_a": 38,
+      "size_b": 47
+    },
+    {
+      "name": "META-INF/utils_googleRelease.kotlin_module",
+      "sha256_a": "5feb2fd8645704584e2622951196d96855ed60e8891b35c75ca18c226bbe455d",
+      "sha256_b": "dcdf416dea41cee5aa47cc51c61c9628e249ba524eccfd7c2913f9231ce43018",
+      "size_a": 32,
+      "size_b": 36
+    },
+    {
+      "name": "META-INF/utils_release.kotlin_module",
+      "sha256_a": "6f9ca6b7e47589b86fe4ee2584921984fab064a88be7ecff7cb0a4df067a5c3e",
+      "sha256_b": "d9083aadc048e281c92c9fec5cc12c23881445e0f1a9e5c22cc5485eaa1c5352",
+      "size_a": 38,
+      "size_b": 38
+    },
+    {
+      "name": "META-INF/webrtc_release.kotlin_module",
+      "sha256_a": "92046f961197c1c1cad654e9e19d7008d2b819167577a2a697a4e8ba12c9d9c7",
+      "sha256_b": "ca5224dba1bd5db78ec05651ea0b9a5ad44a39b73b2a92371350414022659da5",
+      "size_a": 29,
+      "size_b": 29
+    },
+    {
+      "name": "META-INF/wf1-container-android.kotlin_module",
+      "sha256_a": "7047e20df0724c9ab8a115b045f8a648322e2021ed366f8b3d580114e0fe380c",
+      "sha256_b": "a1caff1fb01eb5b6c9eaf6dd203b9166f0a774f17da5c7221ca6121c35777e62",
+      "size_a": 38,
+      "size_b": 38
+    },
+    {
+      "name": "META-INF/wf1-container-common.kotlin_module",
+      "sha256_a": "54dc8ea36dacdd9377a433285cbebd89bb107bc9fb2ac694bd5d23f7d8f905a1",
+      "sha256_b": "de3eff6f57339a3f09ee60e3892389dcb3506f5454884186bbbdf975dc73dcaf",
+      "size_a": 29,
+      "size_b": 29
+    },
+    {
+      "name": "META-INF/wf1-core-android.kotlin_module",
+      "sha256_a": "491530c9c29407108d2e08579fb4c9a933e96fef05b2e56b1b111d4e47ff42fb",
+      "sha256_b": "57231a76a600bbc5f2355cd1d538614e1372130e5f19bc69e2bdb6fe4626d9c9",
+      "size_a": 57,
+      "size_b": 57
+    },
+    {
+      "name": "META-INF/wf1-core-common.kotlin_module",
+      "sha256_a": "80bec159a062ff4fcd83a6a6a0e9ee6c98a0d935191235d3353137720505f61b",
+      "sha256_b": "9fa09d35a5c25acabdee58a5e4e9223460f03accf3f8c6478a30819a5fa0bd2a",
+      "size_a": 32,
+      "size_b": 32
+    },
+    {
+      "name": "META-INF/wf1-workflow-core.kotlin_module",
+      "sha256_a": "d47a0469b94931209caa07a973d4e549bda85da316b89d580a80ed87d7472230",
+      "sha256_b": "94c09744e7ab0d61cfbf651f026c4320fb62f20d6f53694cdadff87c52aa8dfd",
+      "size_a": 61,
+      "size_b": 61
+    },
+    {
+      "name": "META-INF/wf1-workflow-runtime.kotlin_module",
+      "sha256_a": "00e4edc26943b1656dee1bb18ec5841b5af8b715a899220ea7dfbd260a56cd95",
+      "sha256_b": "a9a691bdc091b3396dbd1cf99c5d30681cc37c9516b6b7cee228ec0f1315901c",
+      "size_a": 44,
+      "size_b": 44
+    },
+    {
+      "name": "META-INF/workflows_release.kotlin_module",
+      "sha256_a": "a1d61d5f726634bc2a54b93738c17b20a11299779fe32f3670371a048c2f62fe",
+      "sha256_b": "603eac53d610c1fee0f0d8834d45b0f8459738dab192cc57c81bfc4983e9e6ea",
+      "size_a": 29,
+      "size_b": 29
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_3.png",
+      "sha256_a": "dff2c84fbec556afa48b5fa1c1f4a039f063511ab67c288261b3fe6788dc0169",
+      "sha256_b": "25403153d1261ec1a9f3d0c1c5334468de1c2a2b2dbffc3037ffdddd8ba8934f",
+      "size_a": 50009,
+      "size_b": 57426
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_4.png",
+      "sha256_a": "05be8e1b816c8f36790a5d6c5cf8ac370209c85407c9144fe650ccf2f52fa47e",
+      "sha256_b": "578aedc52e61c9778940af6ba32568d5440f6390edcb4421ac018561dc0d0b48",
+      "size_a": 46573,
+      "size_b": 40586
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_5.png",
+      "sha256_a": "da19347bdbb4f8c6fd60136046e476fce5367f36c56ecab7f8be5fc21605a01f",
+      "sha256_b": "e1ebf8f73f7281883448df4bcefaaaa594be4fbbaef68b9c4819345414a30f35",
+      "size_a": 31750,
+      "size_b": 25474
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_6.png",
+      "sha256_a": "f9092103acb05022a52db8df3f17ff417f0c992dcb4b478d9e713c615af57d74",
+      "sha256_b": "fc02b298b8e126266a3eeaa3d2dd1fc56f81b572757e2e68c9938197c4d7c9b7",
+      "size_a": 26967,
+      "size_b": 5023
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_7.png",
+      "sha256_a": "16a971fc728953773935f0dda6c7fc7c70481bd1a9d3861a0688dd7eada9d4e1",
+      "sha256_b": "2fbc4ad14ec33d1d87d46bdf389edf190773a101bf142057af036e89ad342480",
+      "size_a": 8046,
+      "size_b": 2107
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_10.png",
+      "sha256_a": "9e3c7f50b701c0843696352d67c13eae0e4481576a9a7856d1d4b6ddf0b40a45",
+      "sha256_b": "eceeb26a272f84d4031036168321fc8c3aabb08d75359661596a83adc79eca3f",
+      "size_a": 38887,
+      "size_b": 6995
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_11.png",
+      "sha256_a": "a464561d70cc6c07547a9d96b869f32d3f221ccba058c077f99a77fb105e7632",
+      "sha256_b": "9cc8c85535cd406767202d47497ff348ada5c614e1873dc2bd3e28fc36fae0f5",
+      "size_a": 53309,
+      "size_b": 10511
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_12.png",
+      "sha256_a": "ecb100d5d5fc626f233a054f32191a06614013eadd8fafd83a2b59bed01c5fbf",
+      "sha256_b": "c3d89a80f4a53db97dae412ce03c415b6d03ce0388d65cc582a2c12f0f23fd0b",
+      "size_a": 9837,
+      "size_b": 45504
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_13.png",
+      "sha256_a": "bd08d32cd8390f0776022e7e8ff6e8bf33bb17273e03bdfb2757212d4c792907",
+      "sha256_b": "a1a4f65e6641710b26691733d966937456c92e05bd0c0680d82ac11db23f3701",
+      "size_a": 65436,
+      "size_b": 47085
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_14.png",
+      "sha256_a": "28f3a0db168eb25794e3601fe45b16ca842874c6a6d50ac7a06b3a47473a729d",
+      "sha256_b": "27d397185ab24ed45e8e0134ed896d556564beb75448d279bc3672e662360f3b",
+      "size_a": 6225,
+      "size_b": 19559
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_15.png",
+      "sha256_a": "b234bb47de003de5cbccaeb7ec2d08aee4065b209f1dbf4231f21934b787e83c",
+      "sha256_b": "4b7a2d5c9e614d893abf27c5455a0316de36695b2df86678e9f8fb5420b713aa",
+      "size_a": 47419,
+      "size_b": 14924
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_16.png",
+      "sha256_a": "d25e85d885f02a95bd62a0496c70cda17421e1df26006ae55fe219faf77bd7e5",
+      "sha256_b": "61a736a32fff017adfbd76322fa50074945074c75f93d8fb81fb8500b70c8cca",
+      "size_a": 48533,
+      "size_b": 10335
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_17.png",
+      "sha256_a": "49c48a101375eb3ce4dcd351679124c290043b981bd8d75a0986a5f3d41e3a1f",
+      "sha256_b": "a70af6bfcfd35bdc1e4600bbb8a68c45c3cadc9dcc4dcc390ee91faceb044a3c",
+      "size_a": 18780,
+      "size_b": 7930
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_18.png",
+      "sha256_a": "600430bb96a5f0228f0c1c8b3af629e2b8ccc0b9099aeb3a746082bc2bf9edec",
+      "sha256_b": "e5651dea034dc899e7136ea8f990e77176cab72b839572f6fe23a116c25ea917",
+      "size_a": 12724,
+      "size_b": 29608
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_19.png",
+      "sha256_a": "064298802e6375ca28136836c55accd74c6ac10b017d4328e85ac2f022f33623",
+      "sha256_b": "8fc76d5d93531fa565fe2a451a9bc8dcba230ea0f0d099fd82693cd5cec39dfa",
+      "size_a": 9838,
+      "size_b": 29171
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_2.png",
+      "sha256_a": "07d801717af747ad4e950a923896d4f83cc176befba0eb62be363e1ac7d39373",
+      "sha256_b": "e8506cc1c5c9d8079198ec628d2a8959e69f1af8093d538a6dab05dc89561f7c",
+      "size_a": 21003,
+      "size_b": 18707
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_20.png",
+      "sha256_a": "d93b9d192eb2f527052a028e254550ba23082db39f1d62fcc5461f444137b754",
+      "sha256_b": "179466336730feeb607804015e8211545815d1a7de36a66326bc4547a499560a",
+      "size_a": 9140,
+      "size_b": 12604
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_21.png",
+      "sha256_a": "d7643f507a9c4be7f3c7dc643600241f21e145015025f5404927409eec96f064",
+      "sha256_b": "44c5bf7827d428cd78d0d43c31cc66e3625068635c9603501d4e7710e87430fe",
+      "size_a": 30014,
+      "size_b": 3648
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_3.png",
+      "sha256_a": "dcf52cd19258892dd24b2653bbafad392f357be10ea78112a7d399f3bd6784bd",
+      "sha256_b": "43a455a11cbb4c557954dd8e4012cbbe090fd33acf7cf0227f3e57cda3742c9c",
+      "size_a": 19670,
+      "size_b": 32681
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_4.png",
+      "sha256_a": "b2e86a978dcc6b0af5fd934d5ebe5d920d753e8a67a9ae90128b5bf372cfb584",
+      "sha256_b": "c22547fe23d47e63650e4358593d199e0ef105c60a23acead2518c89e75c58d1",
+      "size_a": 13718,
+      "size_b": 12301
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_5.png",
+      "sha256_a": "22f43e7f583fba32d30594584ff11966d04691f16f1b9a6f9c75ddd44a55d3dc",
+      "sha256_b": "a83a9e1434387e386d34ac785b4c03fc9885798f1a59c04714ce31f74830cc2a",
+      "size_a": 17619,
+      "size_b": 91575
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_6.png",
+      "sha256_a": "e2bc28154ca268d1c14f955dad126cf639f5dfd9ba1b29e7e2e4e94a5181ddf4",
+      "sha256_b": "c0f70cc4ee63c028a64853fb706eda10a72c2c3c9a474c39c259cd01f24e8f11",
+      "size_a": 17998,
+      "size_b": 31595
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_7.png",
+      "sha256_a": "6fe8403aa1bb79db2d084593390d7e972e39f7d8d75506060485b7c8d1335bef",
+      "sha256_b": "af12ee48c5e076e94a826ec34cf41e517918ea3074f58bcdb1eabb06b0e7ed78",
+      "size_a": 26786,
+      "size_b": 53732
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_8.png",
+      "sha256_a": "45c03a5e3e4aed028d47a8c6e835df2104d5c4bc1bd533e51248f163d7ef7df6",
+      "sha256_b": "6a664e6ea339d559ea3498af6b69014251e91806f3439a3d5256a3b89dae34ca",
+      "size_a": 20675,
+      "size_b": 42391
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_9.png",
+      "sha256_a": "0d380d440c548e3223866d6113cd6d3fe1d15abb4e6c8e8bd58967292385cf50",
+      "sha256_b": "f30a905b2e4caf567576af06ccfd2a1a440dc18e9b24dea96d43c0fdd4ecf2d7",
+      "size_a": 91079,
+      "size_b": 68145
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_10.png",
+      "sha256_a": "98f605051126f4a710451bb3c3dbccd83b4623e25d89a013e5321d9e51071a7d",
+      "sha256_b": "7cd0d0dfc740f17b5898447d4466fc067f10d816aa8491d0b3f9daec6c542f20",
+      "size_a": 101145,
+      "size_b": 106403
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_11.png",
+      "sha256_a": "9bfc4d416dab805e25506850ec73b06ea3efe3b4a5c946cc67567e5855a636b5",
+      "sha256_b": "4f62590dccde0b98aee5711de993e57749a686de55431cff0ad5e31e7409498c",
+      "size_a": 143969,
+      "size_b": 135161
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_12.png",
+      "sha256_a": "799eae8091b27fbb69b89980ac92eab46e45f71d6960be9d87b6ae277d99975d",
+      "sha256_b": "7f8b0dfad44afebc3dbd86b17f30befb75c7aad9bfdbfbf0ee637627f6e497a5",
+      "size_a": 82207,
+      "size_b": 71114
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_13.png",
+      "sha256_a": "9861fe6703a64cbe0e01ff7de04bf47efc387d0e9f7e9c06663fc673e78ffd43",
+      "sha256_b": "0984584fe1fff0006e09029d90a8be3449d6564e3aa43206047818dcdce8bd2e",
+      "size_a": 106349,
+      "size_b": 180558
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_14.png",
+      "sha256_a": "937ed1e0f6dcdf19d31be4f44e81b486a2531c7904123558a77215f43bdbdcb1",
+      "sha256_b": "1dde91aa48255fe2cc84f05eff84f17b6405f17571c6f2fdc823c174f32252a2",
+      "size_a": 72211,
+      "size_b": 54524
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_15.png",
+      "sha256_a": "800dbb25d1183b0af009f62a4438bb702aab6724dadb981b916d2eb01d629127",
+      "sha256_b": "84aa2448751a309781b50318b3caa88257983f1ba65157270abb00b6b0137f94",
+      "size_a": 181558,
+      "size_b": 50993
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_16.png",
+      "sha256_a": "0a3acadd278b9581a674b16802da67d5e32817384243f15e96007038850de074",
+      "sha256_b": "401287035f71f010ff6ced89ff729b9e4dfa5211f38475465284b3c22a670c9b",
+      "size_a": 43096,
+      "size_b": 33214
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_17.png",
+      "sha256_a": "84aa2448751a309781b50318b3caa88257983f1ba65157270abb00b6b0137f94",
+      "sha256_b": "ae3b9592ba6d88fd09e434d641cc961f8a7a1e641acee91972706184dd428eaf",
+      "size_a": 50993,
+      "size_b": 78614
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_19.png",
+      "sha256_a": "ae3b9592ba6d88fd09e434d641cc961f8a7a1e641acee91972706184dd428eaf",
+      "sha256_b": "14d084df908f2cf8fe3e68cd5bc4266728fdecb782fdbb033dfe89aca139d01c",
+      "size_a": 78614,
+      "size_b": 7594
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_20.png",
+      "sha256_a": "14d084df908f2cf8fe3e68cd5bc4266728fdecb782fdbb033dfe89aca139d01c",
+      "sha256_b": "6b0f86cfc15fad90dcbb145bcaa01a0ea5c9ee1d9a81677c3e374584dbb420d6",
+      "size_a": 7594,
+      "size_b": 57946
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_3.png",
+      "sha256_a": "7ee808ec058b038a8189e49ca951a5337b4a62bbac97039b9fec26f8eb5ac43c",
+      "sha256_b": "420074f8521ca35015b0208de96d0c9b4271ccd80a83c731731130438ce91619",
+      "size_a": 40348,
+      "size_b": 41336
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_4.png",
+      "sha256_a": "8a3c77639d9747d4900df85089245747443e5de0a3d1a8f17d293032e3aa6276",
+      "sha256_b": "c28bbbc4f95d40ec049736a262252d4f925047e3730a9e38489d1f7613c9cfb9",
+      "size_a": 35206,
+      "size_b": 34337
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_5.png",
+      "sha256_a": "0273f4d831c972add9eef46025ff17213180bd6a2b553d5346f408df9590abc2",
+      "sha256_b": "2d281d8f5e957382369b2a489214b4f32932e0bc7320255d9acf1f9e511bc776",
+      "size_a": 53279,
+      "size_b": 97862
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_6.png",
+      "sha256_a": "14ad664e0aa79a731b8fee7f2ea60a5019f62ac1d5e656b168534aeb82ca710b",
+      "sha256_b": "cd606839e7308e3e043a127f7d028ccb9ff2a2a27fb61af2af24ce2b51be45fc",
+      "size_a": 34359,
+      "size_b": 53810
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_7.png",
+      "sha256_a": "f04d385b5178a416040024ae5fc7d3fccdebed8befdfa73a3b75f70150193afa",
+      "sha256_b": "01a4f9052aa199e96f48b145d0d1e5230567e5fab64aa24c6cf0264ad3d34f44",
+      "size_a": 63096,
+      "size_b": 57661
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_8.png",
+      "sha256_a": "619e654bc0dd39b82cca111606679afcc62d83ea55e9ddee34deb42b6c9173c9",
+      "sha256_b": "734f0659edef2a1da46323e41b581a693b2e261c91ea1e75e200742e29fc5c05",
+      "size_a": 37958,
+      "size_b": 42979
+    },
+    {
+      "name": "assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_9.png",
+      "sha256_a": "27fbe3b9c387c5e912342b0e9c8d5f7709fd9c1b4091cc2ce85df79686237c95",
+      "sha256_b": "4d0d1b95efbc8a29b0790cd92c9ae44b2b9164920f3475b0baebada6832944fb",
+      "size_a": 143299,
+      "size_b": 140977
+    },
+    {
+      "name": "assets/ExtraContent/models/CrossExpVoiceDataModelPatch/CrossExpVoiceDataModelPatch.rbxm",
+      "sha256_a": "5358123208a64dbc048135369466c55c4afc5b9c016e2eeaf35d1e32f0b0f321",
+      "sha256_b": "d7401494bbaea9b248dfd8fadda8252913e60989ba32c663b41a69158fbe3190",
+      "size_a": 354915,
+      "size_b": 353915
+    },
+    {
+      "name": "assets/ExtraContent/models/InExperience/InExperience.rbxm",
+      "sha256_a": "6f84140b2168b17b90df4d8a13f38b02286b2e766317e7d8a1265ee3357cff9f",
+      "sha256_b": "2eb7717d0a3b5d61a93c3211aebe734ba03f0795bb79a09dda06874adb66d109",
+      "size_a": 13958113,
+      "size_b": 14385439
+    },
+    {
+      "name": "assets/ExtraContent/models/InExperience/InExperience_checksum",
+      "sha256_a": "d2f9b7e5b153872ee672b7b31041ecf3caa71af08769b3902822aa757098e512",
+      "sha256_b": "4238496bee8cafb3d17f5fb1ef367fa7dbd615b113c81f8b0a8e96f729c34e58",
+      "size_a": 128,
+      "size_b": 128
+    },
+    {
+      "name": "assets/ExtraContent/models/Licenses/Licenses.rbxm",
+      "sha256_a": "fd8cf80fd91eaee35692c953d01b010e5de55b0100b98567bc5ca76ffa7d8794",
+      "sha256_b": "3c27c53b64f0809b3d18c7e098fb5d0519d29fd0b612a43758b6df22226ea08c",
+      "size_a": 1774,
+      "size_b": 2564
+    },
+    {
+      "name": "assets/ExtraContent/models/UniversalApp/UniversalApp.rbxm",
+      "sha256_a": "523bdda7568b8ad198b21dade9011b2a0d669279439f38c86f9779680facd33b",
+      "sha256_b": "f1a7df3d79c3d0d350e34f9d05751856d8563c933669d4edd44a33c619b6cb86",
+      "size_a": 12945101,
+      "size_b": 13258034
+    },
+    {
+      "name": "assets/ExtraContent/models/UniversalApp/UniversalApp_checksum",
+      "sha256_a": "b13f7a168666101a2bdb4b3385ab9ed12a6f9d9aeb03475180d914ea8d895e96",
+      "sha256_b": "9acf1f7323f660dfa8936f143ff6043d17cb2e7c903f752b05c20ddfdff48454",
+      "size_a": 128,
+      "size_b": 128
+    },
+    {
+      "name": "assets/content/configs/InExperiencePatchConfig/InExperiencePatchConfig.json",
+      "sha256_a": "144b1ebcccecc21cb7ca10d52d77d090ce74f19e8df4d70a377261489b568789",
+      "sha256_b": "789d3134f6c175319282776459fede2c62abd40748c843b283321366f22ff95c",
+      "size_a": 252,
+      "size_b": 252
+    },
+    {
+      "name": "assets/content/configs/UniversalAppPatchConfig/UniversalAppPatchConfig.json",
+      "sha256_a": "b6bf8ba85e9b1efbf33e8cbfd2d44d4e9761762934b1559fb9daee84f8eb4de3",
+      "sha256_b": "e98c750b489db508b45271719cb9cfff5a9493e3466a088deb7754af062fdecf",
+      "size_a": 253,
+      "size_b": 253
+    },
+    {
+      "name": "assets/content/guac/defaultConfigs/GuacDefaultPolicy-CJVDist.json",
+      "sha256_a": "2cefa92f107c12c11116bd29530aa222b2fe22d86eccc4999d0b9de30494419b",
+      "sha256_b": "484e947e979c2087bf44641bf1b7b498fd134414c6b93497bd56c84898885565",
+      "size_a": 10278,
+      "size_b": 10467
+    },
+    {
+      "name": "assets/content/guac/defaultConfigs/GuacDefaultPolicy-GlobalDist.json",
+      "sha256_a": "a8f422d5a03953d8dd25d26cfe32756a252c5fb697c86a773c3b5398d728f58c",
+      "sha256_b": "dca4fdbcfe773b4cd6a7e1421b4d5b4cfb2e0dbab2f3bbb32cab8925d93355e3",
+      "size_a": 9905,
+      "size_b": 10094
+    },
+    {
+      "name": "assets/content/guac/defaultConfigs/GuacDefaultPolicy-VNGGamesDist.json",
+      "sha256_a": "8aa3de53519af00aa4a378ef37af1b9ac152e27b3a8fa14971de0e971ced99fa",
+      "sha256_b": "b7137bed1e736e63da5f170589dd7fd2da32d4a6d164cb3df656eb7f318d44bf",
+      "size_a": 10100,
+      "size_b": 10289
+    },
+    {
+      "name": "assets/dexopt/baseline.prof",
+      "sha256_a": "c046d43a7f6e3c913569ea185809fa7bc222cb8d2e214e3ce089a2257ec0b971",
+      "sha256_b": "54548b675f4a385404e7c441c66163568da52a4f41d49aaf244f2323ac36b899",
+      "size_a": 14236,
+      "size_b": 16814
+    },
+    {
+      "name": "assets/dexopt/baseline.profm",
+      "sha256_a": "e26c6461ab7e958c7762de09abe0f8e6002c85c0b42984f8b518d5aed185d175",
+      "sha256_b": "97d5b46ee63dcf3fff607b80769e8d3fca3e7aa3dd539506e73669b434f8bf11",
+      "size_a": 2398,
+      "size_b": 2389
+    },
+    {
+      "name": "assets/shaders/shaders_glsles3.pack",
+      "sha256_a": "b7855d8d51a81b94f1ade26a3bacd3a2a4f27116e4203d64954f33b188137471",
+      "sha256_b": "d34442fb30b14d4301196b91547b20c878157782f9ba14626c67b922b7540f45",
+      "size_a": 4203760,
+      "size_b": 4224071
+    },
+    {
+      "name": "assets/shaders/shaders_vulkan_mobile.pack",
+      "sha256_a": "a77f0b5654dc1f63587a2202ec91b89c75367202ca05ca2c2aadda3ba9b4b5d7",
+      "sha256_b": "2c971075f82a7852d719b33bd43abebcec32180d42ea77acb4ad432835c6bdb0",
+      "size_a": 18890727,
+      "size_b": 18920111
+    },
+    {
+      "name": "classes.dex",
+      "sha256_a": "0de1157dfd84e47d81c028502ea2ebb1abc091e8d3662b92188becd8b3807e79",
+      "sha256_b": "b53187fb0248cda084330a5914704628e6274f266c315d38f9cfe3851c068d79",
+      "size_a": 9078696,
+      "size_b": 9079712
+    },
+    {
+      "name": "classes2.dex",
+      "sha256_a": "ce6a70a4d6cadbd62fbb4c7a67c8a5377003543c14bd5672f7065a4b9e7e9f95",
+      "sha256_b": "1698fb516bdf68de44c9f7e40a9f993e0dadeb9d96bd04d1cf88510e1af93bdf",
+      "size_a": 6233928,
+      "size_b": 6290584
+    },
+    {
+      "name": "classes3.dex",
+      "sha256_a": "f4dad917205b70c41ecea5ee01ce3e88c4ed222c8bfe37c7bbeea32e38306600",
+      "sha256_b": "3921ad996ab8c5656c0e8d890e2f9fac04a9af67e8f7d9bad03199323365d8e7",
+      "size_a": 6998664,
+      "size_b": 6998712
+    },
+    {
+      "name": "lib/arm64-v8a/libroblox.so",
+      "sha256_a": "dd78ba1da00e7078e3deae23d1cbb07b21de2975f96ef1289765e5bee972b41e",
+      "sha256_b": "3d3dc6e858676b2a1bdbde94d5a20c5ff4ff5e88d2ed066f683a7da76487b319",
+      "size_a": 112194584,
+      "size_b": 107218432
+    },
+    {
+      "name": "lib/arm64-v8a/libzstd-jni-1.5.7-6.so",
+      "sha256_a": "372b1d66047b259de4ffac7822a46491fe1b411a44b51011ba427718650b4bee",
+      "sha256_b": "fc3fd01754502ee1f001e190e7af2b760378bd20493c370a70f395d67484b554",
+      "size_a": 18574888,
+      "size_b": 18491992
+    },
+    {
+      "name": "res/drawable/abc_btn_check_material_anim.xml",
+      "sha256_a": "5e8f278363feb1a9dab513a0db184ab0cf4973dfe339735b075aeac1e8b4e39d",
+      "sha256_b": "87ca6dfadc572ed7f9fb33845239bcdedfd115c6418813c434c9389ab1f295e6",
+      "size_a": 816,
+      "size_b": 816
+    },
+    {
+      "name": "res/drawable/abc_btn_radio_material_anim.xml",
+      "sha256_a": "80191b195fcf24d6841d1c5b31dbde03a891c568eca8c16f2d63ca0b0d569695",
+      "sha256_b": "786297590e0ca1d126342078ce3947dd5ff481b24835af3efa7f68a37ad8bc8d",
+      "size_a": 816,
+      "size_b": 816
+    },
+    {
+      "name": "res/drawable/design_password_eye.xml",
+      "sha256_a": "f605a37c5f129a9c6b8c49cee24f9d9fb55ba61f11b4eb72221ff8a3b1a0aafe",
+      "sha256_b": "3086c71a9653ee1f212842e56a1d505e4065fa61a4cd7d7dc59913b1317798ea",
+      "size_a": 816,
+      "size_b": 816
+    },
+    {
+      "name": "res/drawable/m3_password_eye.xml",
+      "sha256_a": "f8d605b6e993a91d993c883a6be55e41cc66dcac5be1809329d44bfc5ab41a44",
+      "sha256_b": "298648f898cefd74aeee1cf73ad9c42c1b89b9ddfd21b0bee690f0392b03748e",
+      "size_a": 816,
+      "size_b": 816
+    },
+    {
+      "name": "res/drawable/mtrl_checkbox_button.xml",
+      "sha256_a": "ab5bd9f258758fd1239ba1af6f38d78d288bd59ae65f0f2d995090cce9826514",
+      "sha256_b": "72e1f180feaa54093f5860eaaeef29e2d4615e410116e14ae01bcfaaf38596c8",
+      "size_a": 1332,
+      "size_b": 1332
+    },
+    {
+      "name": "res/drawable/mtrl_checkbox_button_icon.xml",
+      "sha256_a": "522d2156344eda7771785e4c176bd15b6739293300ba75177764be652481a116",
+      "sha256_b": "44041aa35172a9d804a5dddd59cef32ab582fd481fca9b051cfc13a2cbffc013",
+      "size_a": 1572,
+      "size_b": 1572
+    },
+    {
+      "name": "res/drawable/mtrl_switch_thumb.xml",
+      "sha256_a": "cea217110c429c624cc54f70f16c301e42a8880ef4b9a8a27ac22815c7d24a0b",
+      "sha256_b": "7b44b12933a581dc37bb1b00f94431e1a7cf0bd466ce77758e092e546135d841",
+      "size_a": 2004,
+      "size_b": 2004
+    },
+    {
+      "name": "res/layout-land/material_clock_period_toggle_land.xml",
+      "sha256_a": "ed6763da2e23b7db87941b9a54645555a6e74392cbae690c21f1d8155784b71f",
+      "sha256_b": "952a5166dd7b6b0ffab2697fce48333dc858e371002cea9313a55285536a9d50",
+      "size_a": 1232,
+      "size_b": 1232
+    },
+    {
+      "name": "res/layout-land/material_timepicker.xml",
+      "sha256_a": "3f44f1812dd059d9c3b3fc7638d664c8e82256d3acff3c2f8949fd3fed702da3",
+      "sha256_b": "90071438dce29b5650c955707570687bb045e6c45758118fea93057b5b778fa6",
+      "size_a": 1676,
+      "size_b": 1676
+    },
+    {
+      "name": "res/layout-land/mtrl_picker_header_dialog.xml",
+      "sha256_a": "e1328fb6681d8104e7326a4b55812027ae2de5555a74827cbb6a573c61211add",
+      "sha256_b": "042ec5720aa6efe7714b9323357d97e1c92880139ad4d5b5fe36e6237c0960e3",
+      "size_a": 1532,
+      "size_b": 1532
+    },
+    {
+      "name": "res/layout-v21/notification_template_custom_big.xml",
+      "sha256_a": "2405d019076cdad9c8b1195e3c136d1426f5b6fbcb0e849821611a8df3a05687",
+      "sha256_b": "18bbc3509bb4b10bdd9124a26f3330575cf5492bbc1a078395de77de8e98b6f4",
+      "size_a": 2456,
+      "size_b": 2456
+    },
+    {
+      "name": "res/layout-v21/notification_template_icon_group.xml",
+      "sha256_a": "985d7f9eb941e24f94aeca0d58fa1aa63153dd3c20e7baf52a60c3a411066dbc",
+      "sha256_b": "7bc9d381333c2099798e2bbcd2262a21f3482cbdd2e2e275ea8a8cd288da97d9",
+      "size_a": 988,
+      "size_b": 988
+    },
+    {
+      "name": "res/layout-v26/mtrl_calendar_month.xml",
+      "sha256_a": "fdb920d3f7fa69cca88c571aa91b183d15f53a1e95ff979481694d821523482c",
+      "sha256_b": "a87c55f69e925594b2c65b724425a9afeb96d4b963cd0dc834514112fd77c27d",
+      "size_a": 744,
+      "size_b": 744
+    },
+    {
+      "name": "res/layout-watch-v20/abc_alert_dialog_title_material.xml",
+      "sha256_a": "71889d8c4a830aeaffaea6d34725a294979911f9b713639b21b5d62176ba0c50",
+      "sha256_b": "0c6ea3566fcdde690eedcf19ae5857a7742cb21e1c5b6c6ada05fba3384372b8",
+      "size_a": 1352,
+      "size_b": 1352
+    },
+    {
+      "name": "res/layout/abc_activity_chooser_view_list_item.xml",
+      "sha256_a": "52e99ff5a4d0e2953cebd7d7985d6a0d6c7a6de0d67776a812e3cfacd4f2f6db",
+      "sha256_b": "8a57bfc76ffb058f3fd0702115da5174e3f5372ff9218d360aef6741c22785cb",
+      "size_a": 1304,
+      "size_b": 1304
+    },
+    {
+      "name": "res/layout/abc_alert_dialog_button_bar_material.xml",
+      "sha256_a": "c3040a8c6a5ba6d454aa79c21f7069d5f26b12862094bc33ae9fa034a07ec6c0",
+      "sha256_b": "adf7d8ce4483250d6d88e4f8ae8c3ab48dfb171e975e8a82d6443f55ca877dcf",
+      "size_a": 1584,
+      "size_b": 1584
+    },
+    {
+      "name": "res/layout/abc_alert_dialog_material.xml",
+      "sha256_a": "9736d4bdecbdb688a34604342f6cbb91a392bb0d733adf89c655fde5dfa47c10",
+      "sha256_b": "b5c6baebbb3d59fac236c9793fda447febd19c562053d78f81d20f3fa3b86680",
+      "size_a": 2648,
+      "size_b": 2648
+    },
+    {
+      "name": "res/layout/abc_alert_dialog_title_material.xml",
+      "sha256_a": "d3afd95f9be62bce6242e6d152cde4665d5a6c0f8d97c366377d5385318b57b0",
+      "sha256_b": "4bdb643345f3a1a3dfaa962cf441f3c97401ef35230d4169096c484ca6e19db7",
+      "size_a": 1560,
+      "size_b": 1560
+    },
+    {
+      "name": "res/layout/abc_cascading_menu_item_layout.xml",
+      "sha256_a": "f01e0cb8952f07ca29a4dd7f61614abe42899b9ad1a45b3986b2231fd754308b",
+      "sha256_b": "3282118d7032ed20711b00a62af29668733ad5b3a7b0ee68674a4984bedc7ca1",
+      "size_a": 1868,
+      "size_b": 1868
+    },
+    {
+      "name": "res/layout/abc_dialog_title_material.xml",
+      "sha256_a": "fa0739c08012a30a745256d7b41fa112693a3ec3f81a8cb8774d98aaa066a56e",
+      "sha256_b": "2ba449295ea03fbe4bf89076c5ff573c09bcadd1570e8b3f614453b47ecdb553",
+      "size_a": 1116,
+      "size_b": 1116
+    },
+    {
+      "name": "res/layout/abc_list_menu_item_layout.xml",
+      "sha256_a": "c06ac25aaf2a7cc174f8bd72d05d5a624da3f74ac7e2933b9224a1a6f1ee6bf4",
+      "sha256_b": "d2bd0a77a8e4425178b1e2f4c00eb2a5e3520d874dc9499ee8f1a114043bc6af",
+      "size_a": 1396,
+      "size_b": 1396
+    },
+    {
+      "name": "res/layout/abc_list_menu_item_radio.xml",
+      "sha256_a": "d68ca7aa474ad00fcaf7d13c203acb2356f28779c3cbc422fcedf495993f8c64",
+      "sha256_b": "3dc49ac32541eac1adc2b10e54aa49d6b3db32740e9aac87fd4354ae479b52bf",
+      "size_a": 532,
+      "size_b": 532
+    },
+    {
+      "name": "res/layout/abc_popup_menu_item_layout.xml",
+      "sha256_a": "7c0780e647734d5156086fb5e1a7aff1de5d59bf1f20341dc011f50f10416169",
+      "sha256_b": "521c6808ab06862266614e7b135d1f8fdd07a05a4c75ac007b8508c051b653ec",
+      "size_a": 2072,
+      "size_b": 2072
+    },
+    {
+      "name": "res/layout/abc_search_view.xml",
+      "sha256_a": "fd688fe06768895f61e4d40935b5a98d230cb9e1defee0d972ee0e2bc09c13b9",
+      "sha256_b": "0e8112276d1f1a5852462329d38c9c11dfa377132e3a0713dff93cc13514cd32",
+      "size_a": 3472,
+      "size_b": 3472
+    },
+    {
+      "name": "res/layout/abc_select_dialog_material.xml",
+      "sha256_a": "33bd9c9f518ee630b7ce9ffa0d202ae94357f92a79c5d4eaf6ed1b18ad7d5cc4",
+      "sha256_b": "8d1dbb1d0350517fed3fb75ce6abc0f03677551977e4f9a47351b8e1c9219613",
+      "size_a": 1020,
+      "size_b": 1020
+    },
+    {
+      "name": "res/layout/abc_tooltip.xml",
+      "sha256_a": "1e42df4051c73bbbb9a07b8a64296bedf19b5021048ba118e338f8974e12ee9c",
+      "sha256_b": "ce4c6d022ff1bc8d805380b24631bafdb2e63dcc277df12af5a80b4f851bdf0d",
+      "size_a": 1056,
+      "size_b": 1056
+    },
+    {
+      "name": "res/layout/activity_curltest.xml",
+      "sha256_a": "69a6ed162e2556629a29120532b613cff8135d2a9dfcae3cdba388c70802830c",
+      "sha256_b": "08c947fed6c59f16cc7fc4116672afb90b9115c2a61d20a3cf5110735ae29409",
+      "size_a": 1304,
+      "size_b": 1304
+    },
+    {
+      "name": "res/layout/activity_game.xml",
+      "sha256_a": "5eeee13da9eeadc23cc6894aa232725371c6f863914f21f1582e1488b1fc54bc",
+      "sha256_b": "54a1853d280f3dfb5b4c066c7d4dd10d8bde958890d9c80d2036059fe5282915",
+      "size_a": 1732,
+      "size_b": 1392
+    },
+    {
+      "name": "res/layout/activity_local_settings.xml",
+      "sha256_a": "834aa6e7e461bca2041569b720e025589fa46c9097cbe996700ba5f9cd2abf42",
+      "sha256_b": "e6cfdd46ffb31cdb8963c09a1724b92e1f54c15c039c7fd36890fa1217ce1395",
+      "size_a": 2012,
+      "size_b": 2012
+    },
+    {
+      "name": "res/layout/activity_main_no_bottom_margin.xml",
+      "sha256_a": "d97527d5e26c64e7117f8cdcd0527b0074d46d9f8d38f436f61c16f82fd524f1",
+      "sha256_b": "6621770c0e22c90397faa1b8bfb1f6932c53306215c7307c1222d65c50f4872e",
+      "size_a": 1572,
+      "size_b": 1208
+    },
+    {
+      "name": "res/layout/activity_splash.xml",
+      "sha256_a": "6981bfdb3388f4ff4e857f11caa51e6b83dd92be377bc45e165c4eee35ed2038",
+      "sha256_b": "9170292aaa71256258c1ad043c1b41781b15cda3dc43a5b75128944d2106139e",
+      "size_a": 936,
+      "size_b": 936
+    },
+    {
+      "name": "res/layout/activity_web.xml",
+      "sha256_a": "d9268b613d8f09864784218715e6453ec09c574e562d75c7d7077293957054d4",
+      "sha256_b": "986f790c077d61a323c973b04660bf830f25960cd313989c3332da4f874f4f71",
+      "size_a": 784,
+      "size_b": 784
+    },
+    {
+      "name": "res/layout/activity_web_with_overlay.xml",
+      "sha256_a": "f2322cdf0a492d5a62daf1593bbb1e6afd62bde311aab05ef6a773cdd7d74c4e",
+      "sha256_b": "c74cb4ab86c4c032083f569242c441a09656503bb7aa5871effecffc5b0d8c13",
+      "size_a": 1004,
+      "size_b": 1004
+    },
+    {
+      "name": "res/layout/button_notification_stream_layout.xml",
+      "sha256_a": "6c8c16db7962fa503c8b4a79b7187f1f6f09061f75973bd4a66d3454ae815e9a",
+      "sha256_b": "48f5a4c95f7f0befb6c33c35fed246d8727f659e93210ea102ba67b6066dbb6b",
+      "size_a": 1152,
+      "size_b": 1152
+    },
+    {
+      "name": "res/layout/configlib_activity_config.xml",
+      "sha256_a": "c9293790c2ca72d60c7257d2dc8d153abb35c6b37541a34a8bdfa819371db528",
+      "sha256_b": "c298d938880b69421e53b0d86a1d572e4e3699ce9b4407487eddccf075cb2536",
+      "size_a": 4688,
+      "size_b": 4688
+    },
+    {
+      "name": "res/layout/configlib_activity_useragent.xml",
+      "sha256_a": "4e3d8f61a5eaeaa299ff413a8a3c54845c0029b1df35fb6e2c7a46a3d7ddfdd8",
+      "sha256_b": "c1c57303e735a512176012a995a3c7ce38002cd0f40dad461451b2a430b08803",
+      "size_a": 1336,
+      "size_b": 1336
+    },
+    {
+      "name": "res/layout/configure_studio_deployment_fragment.xml",
+      "sha256_a": "37383a966a4fe5f41ef5ea5abc93a592e8f4c254df77db0936703b3fbdbd6546",
+      "sha256_b": "11c8734241bea7f9819c1fadeef4f6378eaacb1d2f5641ec090721ec86c2f86d",
+      "size_a": 1860,
+      "size_b": 1860
+    },
+    {
+      "name": "res/layout/design_bottom_navigation_item.xml",
+      "sha256_a": "0debdd0a2c73bff0eb5c1087c3c61c10e9349de83ca349bb529d095735159aed",
+      "sha256_b": "00aae8dffd941a77f5b3c799bf85ff5dab0d70a30187b5621c498ded8316b5b3",
+      "size_a": 1860,
+      "size_b": 1860
+    },
+    {
+      "name": "res/layout/design_bottom_sheet_dialog.xml",
+      "sha256_a": "e93e4facd076fa2b5bf3762df4c854748740b60af4e83fb9d021f09f781ea9a2",
+      "sha256_b": "58b8173ca1e1ce8f6ebcd123823200736c5c929f588cc50907c11151d1630556",
+      "size_a": 1224,
+      "size_b": 1224
+    },
+    {
+      "name": "res/layout/design_layout_snackbar_include.xml",
+      "sha256_a": "b1b86aa381c1f9dbe8a956ad2cd32fb927d3bf8caf6f52b8591cb13de83f5e66",
+      "sha256_b": "e307b539dfaa06bd6c2cefc582b238eda0d30a59cc24ae161ddce216d58fc444",
+      "size_a": 1444,
+      "size_b": 1444
+    },
+    {
+      "name": "res/layout/design_navigation_item_header.xml",
+      "sha256_a": "c0b2986d548d9dc463ac3ea0b3c3437c940cb4a25d5f15ac7b0f662661547179",
+      "sha256_b": "a85f08304be0f5056e7238ed7dc28d27e809e136156b9ee7e2154045dac7fc92",
+      "size_a": 440,
+      "size_b": 440
+    },
+    {
+      "name": "res/layout/design_text_input_end_icon.xml",
+      "sha256_a": "dd8b5228b8118f651af9940e5f9986a4d429353022288d3c85e9d8fa32c0d24d",
+      "sha256_b": "3691f68a00e557a7514688967b3975b7720990ce724804d3f693b5e88d9b5402",
+      "size_a": 656,
+      "size_b": 656
+    },
+    {
+      "name": "res/layout/design_text_input_start_icon.xml",
+      "sha256_a": "e237d30d1bd6f3b06a72d6203c8197d1b659bd039e1b6163079b93738b2c796a",
+      "sha256_b": "562beca2b98016dba8023085f5a8385649e6cb9c521144889db7fb4d4ce9d434",
+      "size_a": 652,
+      "size_b": 652
+    },
+    {
+      "name": "res/layout/dev_branch_commit_settings.xml",
+      "sha256_a": "a9272dd7e752cd7a9444dfe5184477c8261b1ff71c0dd175bf8c5650c52aa244",
+      "sha256_b": "c3a05207cf004f9a3092dd7c1cf5bdc4e36e480c78de8205f870d374ec56e719",
+      "size_a": 1796,
+      "size_b": 1796
+    },
+    {
+      "name": "res/layout/dev_rpc_settings.xml",
+      "sha256_a": "f8e5f9ed25b612b107ebdc44c815b4a91d75ade826178b8c6361b92338d428bb",
+      "sha256_b": "f8e33ee72cf530a9d0f12a64c41587c75d26bc5c589519902e09275a88d8e348",
+      "size_a": 2396,
+      "size_b": 2396
+    },
+    {
+      "name": "res/layout/dialog_fragment_app_rating_flagged.xml",
+      "sha256_a": "42edb4db81223d95d868ef8952d0036114604e5dd78a41123f694b64e6c89bab",
+      "sha256_b": "273937977641eaaf382a864297e580aa461dc9405f964e4616c336622c1ed35b",
+      "size_a": 3484,
+      "size_b": 3484
+    },
+    {
+      "name": "res/layout/fragment_custom_capture.xml",
+      "sha256_a": "15a66279e200f6562522040adfc83e9e4352007c245a4c233fb337670ffdf72e",
+      "sha256_b": "a92d38af834fab192816c291d3fa596319b7be66a89dbec042f33ba20a73973b",
+      "size_a": 2016,
+      "size_b": 2016
+    },
+    {
+      "name": "res/layout/fragment_dialog_webview.xml",
+      "sha256_a": "9c65d49b57e7faab33179d42e5478ad2b2175b9be52cb58978e327fdd7c9f2bd",
+      "sha256_b": "e4e93695fbacc70ec9a57f409525571403f09d5ead774b6c9ec6bef27aa783d1",
+      "size_a": 1980,
+      "size_b": 1980
+    },
+    {
+      "name": "res/layout/fragment_shared.xml",
+      "sha256_a": "8f06db320738c2789b053793bcf2b8668ce00bef49fc136c694d8eb217d7196f",
+      "sha256_b": "245b26bed85dd7bdefb65d4bc678559fc8aee7335d5034962e8d30810b184f35",
+      "size_a": 1680,
+      "size_b": 1680
+    },
+    {
+      "name": "res/layout/fragment_shared_deferred.xml",
+      "sha256_a": "cea9959e04ea2411d77393ba4017a0136164bd049d6546bcd050160978bfae3c",
+      "sha256_b": "09148f6c1f45e04e9855793d20ccdd465d152a516d363028a1cadf20c5fc99f2",
+      "size_a": 1008,
+      "size_b": 1008
+    },
+    {
+      "name": "res/layout/fragment_shared_lazy_retry.xml",
+      "sha256_a": "308a342e9ee8ba475e31ba45c8d30c3b856c4c1e40ea818d94e9ea47e0ff0cc3",
+      "sha256_b": "2c76fb8733d98c4b8e7d2ccff4654b839fff21c9417938efc301c60182b734cb",
+      "size_a": 1576,
+      "size_b": 1576
+    },
+    {
+      "name": "res/layout/fragment_webview_deprecated.xml",
+      "sha256_a": "536f555e99f7f433066213df4718533ddaeb0045e245712928895d3945f25b7f",
+      "sha256_b": "15191abb3f9eb85cf54fb37681a0e631ee53cdc2b72387a7449bc72ea743d51b",
+      "size_a": 2096,
+      "size_b": 2096
+    },
+    {
+      "name": "res/layout/fragment_webview_with_floating_close.xml",
+      "sha256_a": "251cb2bfca06c8dfe62e2b1d26fa1b59683e1011c78ed58f134c4a068fb5cf86",
+      "sha256_b": "0f4185e5faf0df7781864255b765ac6ecea5171008ccb45b4cab10e5b5b3bb9e",
+      "size_a": 2372,
+      "size_b": 2372
+    },
+    {
+      "name": "res/layout/friend_request_ignored_layout.xml",
+      "sha256_a": "5412f4bab89fbe93e7b8109a2886d790e04a44f3fc492af04bc436a83952a2ce",
+      "sha256_b": "af103b5332ce921463fcdfe530942568fc45c51ba8e519a7e1ff287c259e18fc",
+      "size_a": 644,
+      "size_b": 644
+    },
+    {
+      "name": "res/layout/include_rbx_progress_bar.xml",
+      "sha256_a": "61bd848baba7a9b2f94d740a2c0d2c22a55a74a31b65a1a91ccc8e1b65174208",
+      "sha256_b": "220831ce7095313afa6b29617fa451cde44bc0b0b29087e5fd74b720d7d73581",
+      "size_a": 440,
+      "size_b": 440
+    },
+    {
+      "name": "res/layout/loading_layout_wrapper.xml",
+      "sha256_a": "f8aded4b8d7072e494d6d846f09d714b10437530a77fb7e913711db19189ccfc",
+      "sha256_b": "78dcc6930d734c1690a4f2360011827fb51ebbe5a4a5fb8a772ae1543c33efbf",
+      "size_a": 588,
+      "size_b": 588
+    },
+    {
+      "name": "res/layout/m3_alert_dialog.xml",
+      "sha256_a": "7a8c0184c58256ce70adfabb3e3563d3bd2c98923f692c0c0b832182bf48d20c",
+      "sha256_b": "b0dbd2c0f9555694be952a6de75dddb9de35545a91a2e9f4f3a5baeb3dba3f3c",
+      "size_a": 2720,
+      "size_b": 2720
+    },
+    {
+      "name": "res/layout/m3_alert_dialog_actions.xml",
+      "sha256_a": "3fcc5646147db6f734b89cd87ba33e145800ebb804f3d4915cf58a9b71b6bf0a",
+      "sha256_b": "96a4fb7cbbd102e89d09a84fda1b88b53e0898333910110c8e9c6d168e883111",
+      "size_a": 1584,
+      "size_b": 1584
+    },
+    {
+      "name": "res/layout/m3_alert_dialog_title.xml",
+      "sha256_a": "03c85d410952c60184df7ef1e49bacfdf2c4062f42ab42467cd293e0550326e5",
+      "sha256_b": "74780192636fb463afbb9e03fbcb2b42464cbfb4898d824c6dc76437a79d9326",
+      "size_a": 956,
+      "size_b": 956
+    },
+    {
+      "name": "res/layout/m3_side_sheet_dialog.xml",
+      "sha256_a": "b4f7b97ac2ea316898d27cc71481ea5ecbe6e299811cc6fe7e89577d93e1a05b",
+      "sha256_b": "2e0930cc8d88b84072e04084b37b3c3e88a1362b8bcb6b0fa3900a11fe7df8ff",
+      "size_a": 1140,
+      "size_b": 1140
+    },
+    {
+      "name": "res/layout/material_clock_display.xml",
+      "sha256_a": "56723733b5c7c8ae0ec67b7d3c4b0beb75a6983c24b03ab6f93af86bd1ae2a9c",
+      "sha256_b": "cb3144024f4db2534392c615f08d91549e71e9823474459168b8ba53b954b2ff",
+      "size_a": 796,
+      "size_b": 796
+    },
+    {
+      "name": "res/layout/material_clock_period_toggle.xml",
+      "sha256_a": "ccbfa700001812634df82e77518e1912a722f611eefb1fd523ea816d247569b7",
+      "sha256_b": "308088cc6c53525b4b741b3f2fd2bcf6e2fcf58853b98cb0c105ccc32d70ccfe",
+      "size_a": 1220,
+      "size_b": 1220
+    },
+    {
+      "name": "res/layout/material_clockface_view.xml",
+      "sha256_a": "93d4c8ae9b742badb8440672df9f6d1031d900d24040088abb665f711102abd4",
+      "sha256_b": "bf1f52c4c5441db24c96a873707189a62e0ad6b77b771f48718c390068dfac3a",
+      "size_a": 1012,
+      "size_b": 1012
+    },
+    {
+      "name": "res/layout/material_textinput_timepicker.xml",
+      "sha256_a": "306d84601723bb576fecd419826f289dc96f6338969af8ceb1c595bd46ca0353",
+      "sha256_b": "7033532c5e7e82d09b41a8d005c63f116ed44b429d768b5cda8a6fd5238933d5",
+      "size_a": 720,
+      "size_b": 720
+    },
+    {
+      "name": "res/layout/material_time_input.xml",
+      "sha256_a": "00c31c8885c12d53b5af4868c41788a8ebddbb5300e7476353f4bb7674ae1f82",
+      "sha256_b": "8cccad6322aebe13619d875c306605f0dd480977903481da727d7e1447907f03",
+      "size_a": 956,
+      "size_b": 956
+    },
+    {
+      "name": "res/layout/material_timepicker.xml",
+      "sha256_a": "eac529aab6f39c08ff47a9ae6a9b359de8bb86c8d8c74b6470f020cbb35fe109",
+      "sha256_b": "c80940192bbc67e8498f39bffa4236677c96457c556499f8a359b50b80b3b8fc",
+      "size_a": 1608,
+      "size_b": 1608
+    },
+    {
+      "name": "res/layout/material_timepicker_dialog.xml",
+      "sha256_a": "3950de73b6b684e92b0353c1ec6caae9207752dbce56c9453bc7a3a3b67644f4",
+      "sha256_b": "0b56033c9ffe16d9ea5c1cd02c36ae7a25ae1c05246783d0984dbfac70f3aa0c",
+      "size_a": 2892,
+      "size_b": 2892
+    },
+    {
+      "name": "res/layout/material_timepicker_textinput_display.xml",
+      "sha256_a": "122e225cf6ed9a310a5babfde56e294e3bdeef57362dbda78cc655bd919a3576",
+      "sha256_b": "f4efb07aab7e1a37b1a3522c90c84971deaad5496fc941df7019ff83de003392",
+      "size_a": 728,
+      "size_b": 728
+    },
+    {
+      "name": "res/layout/mtrl_alert_dialog.xml",
+      "sha256_a": "d29e5c4c9935c1f794d4234ba03ad1133710a3481bf6b5e384aea660293de5d7",
+      "sha256_b": "82ecbdaa568906d8638f6be8909a59919047381e005a7e0c7b0dfedc9645bcfc",
+      "size_a": 2476,
+      "size_b": 2476
+    },
+    {
+      "name": "res/layout/mtrl_alert_dialog_actions.xml",
+      "sha256_a": "eff8dc862aa6108daf27fbf34031ecc17e757b250cc6e7171d95afbb926ed289",
+      "sha256_b": "9b4255aedb1bb6d2a795b02407f4e974fa764c062a0b97b9377060411f92a9b0",
+      "size_a": 1676,
+      "size_b": 1676
+    },
+    {
+      "name": "res/layout/mtrl_alert_dialog_title.xml",
+      "sha256_a": "9ad96c004b5c81d7ae47449b2e06aadbe546da59e75bfaa0de012b8dfe353df1",
+      "sha256_b": "27e380c2cbbd72cd1ccfceb7de3e56a0c582d3519dea29ccb5eae44a0908bccb",
+      "size_a": 956,
+      "size_b": 956
+    },
+    {
+      "name": "res/layout/mtrl_calendar_days_of_week.xml",
+      "sha256_a": "a2d87993f0ab147da07223892c23bb3e2834f78e26905bac1bd4e8931783963c",
+      "sha256_b": "9de803d8ae390a7224ca28226850317867893425a5cf94b99e3d27600b02da7d",
+      "size_a": 436,
+      "size_b": 436
+    },
+    {
+      "name": "res/layout/mtrl_calendar_horizontal.xml",
+      "sha256_a": "5bffa2a2f9e73d02fc9a989399b2aeca86c6cd755cb2605ce6e22629529bdf5f",
+      "sha256_b": "73eed59a1d688ca9cccfa34c4beaec15e47e86527a1a012c4f3d4ed1d8e4d1a3",
+      "size_a": 1176,
+      "size_b": 1176
+    },
+    {
+      "name": "res/layout/mtrl_calendar_month_labeled.xml",
+      "sha256_a": "a08a32f7658cdc2f30fc78ac4b60c660d606524421d984510f4c9aa4d18faf0a",
+      "sha256_b": "bc07792c5ac36ed72f0434b6051355e459a1a4da4c68bfd6523f3157fe77cbab",
+      "size_a": 728,
+      "size_b": 728
+    },
+    {
+      "name": "res/layout/mtrl_calendar_month_navigation.xml",
+      "sha256_a": "689746b18890f63333e41f4bb5acde3179b877205cbe9f3d4e9b4d0329032da9",
+      "sha256_b": "44134444b9ef513b6d109b4fb4bfd476f961b6a55aec0d0b419a5f905c909165",
+      "size_a": 1748,
+      "size_b": 1748
+    },
+    {
+      "name": "res/layout/mtrl_calendar_months.xml",
+      "sha256_a": "49e76f2841ae61afdee78a517900e134f93fcb633dfee838e9a1590ef9ba52f3",
+      "sha256_b": "3e05c1954fe237499623df4aed553fc9530c3cfe2932d1573586dc1f7251cb47",
+      "size_a": 428,
+      "size_b": 428
+    },
+    {
+      "name": "res/layout/mtrl_calendar_vertical.xml",
+      "sha256_a": "d5ece7ae8f280a35d7960a2b74386c19f70b154f78752435455b2690eb883f4b",
+      "sha256_b": "705393eeadbe89b718c2c1a1b9a108f43f24b2843cf47ae941eadac7c4eb327b",
+      "size_a": 740,
+      "size_b": 740
+    },
+    {
+      "name": "res/layout/mtrl_layout_snackbar_include.xml",
+      "sha256_a": "3c34927eb417a3d6ee61057d50a9cbdf10c92e71faabf6bbe7ca1d4233c535f2",
+      "sha256_b": "369477687a2aefd3caa44be02ee811b10acb17b2f3b33e586597f51f0223b9cb",
+      "size_a": 952,
+      "size_b": 952
+    },
+    {
+      "name": "res/layout/mtrl_navigation_rail_item.xml",
+      "sha256_a": "7417b6e9a3b0c6b66aeab878a4a27d1c233d662e904ba54093e9849269cb9567",
+      "sha256_b": "6cc6a4bcd7eaf11b67f83a7dc473898a5e5503433d401ff0de91845ba307b29d",
+      "size_a": 1984,
+      "size_b": 1984
+    },
+    {
+      "name": "res/layout/mtrl_picker_dialog.xml",
+      "sha256_a": "b23f95470921f51648c516976fd5ab85c6413fbdf072f68e26289d050c06a1cb",
+      "sha256_b": "fb34cddff6a5162b025001a623342c276db7722d9a98b91e7d0e6714ee483e04",
+      "size_a": 1172,
+      "size_b": 1172
+    },
+    {
+      "name": "res/layout/mtrl_picker_fullscreen.xml",
+      "sha256_a": "4c2a8350e8370356e64310cc0cfe00f590d9c769275dbb2e34ead43a90f3e1f6",
+      "sha256_b": "c0971b8db3d19ff0a3d8e80ba4948773631339b360412981530a9e103ba32a67",
+      "size_a": 880,
+      "size_b": 880
+    },
+    {
+      "name": "res/layout/mtrl_picker_header_dialog.xml",
+      "sha256_a": "7873d50c8a357c80379f78b4476d9b907fee3514153fe6495dec3c9d15817ef6",
+      "sha256_b": "0c445367a040533e567cf39ad5c786fdb9e2b8fed17165cec073d6be21eb88b2",
+      "size_a": 1492,
+      "size_b": 1492
+    },
+    {
+      "name": "res/layout/mtrl_picker_header_fullscreen.xml",
+      "sha256_a": "8fc5445851f423a40810fa5e87d3a27f622873b10502b9361a79bc3c7997d22d",
+      "sha256_b": "de0b0832a37837ec83cf7c3084fc88ce74c8960ed21d5fbbd96156d6e8ab8074",
+      "size_a": 2800,
+      "size_b": 2800
+    },
+    {
+      "name": "res/layout/mtrl_picker_header_selection_text.xml",
+      "sha256_a": "a4be0102e2166fbf0e722761dfb5ad2203e32c0f6f10a58839407a309760572b",
+      "sha256_b": "327b31b2ea49724265f30b5563ccdc1fd5d07d833115f3ccb3343837f5c24b9d",
+      "size_a": 712,
+      "size_b": 712
+    },
+    {
+      "name": "res/layout/mtrl_picker_header_title_text.xml",
+      "sha256_a": "4d386cbec32b759c0f5a9e44af1a6259ae5a3fe952abdd4abad3dbe9ae2e1262",
+      "sha256_b": "e9ce63e4b3f686283b2d2cfdfbfc2bfc14f818ffcd10c53ce7f4c31658fa5c5b",
+      "size_a": 624,
+      "size_b": 624
+    },
+    {
+      "name": "res/layout/mtrl_picker_header_toggle.xml",
+      "sha256_a": "2dc407b379b4b3f918401218cbf5a744c607a0ede4d866ee0be7ae876dcc0708",
+      "sha256_b": "b7e027c42b9f2d55b583f822ccc3b3acec0715edcf7eafaa2a35c22e2678f76b",
+      "size_a": 528,
+      "size_b": 528
+    },
+    {
+      "name": "res/layout/mtrl_picker_text_input_date.xml",
+      "sha256_a": "b6110e4677828fc6a30bfeb57a34266d99e3864e5ba437a7cd88798f3289757a",
+      "sha256_b": "6286d32fa9c0725dd39f273cb29dea74fdff74c4676258b0b39afa1923a03eb9",
+      "size_a": 984,
+      "size_b": 984
+    },
+    {
+      "name": "res/layout/mtrl_picker_text_input_date_range.xml",
+      "sha256_a": "66a8f2556b8c3e398d43456ac9e0d27489d0c16194432fa01a5166ebffc8e2b7",
+      "sha256_b": "e368529aa5feb18d8df4ff0515299c5e38767543602bf325ec2515bd07da2679",
+      "size_a": 1580,
+      "size_b": 1580
+    },
+    {
+      "name": "res/layout/mtrl_search_bar.xml",
+      "sha256_a": "91e120e8a5f9b5fa8800c4ae983ddd72e0073dca768a6abe80aaa19beab6b68b",
+      "sha256_b": "fd2a4a6be11c71545251efbe5089bbde345bd8404eb043e3f3a9e02373e52724",
+      "size_a": 488,
+      "size_b": 488
+    },
+    {
+      "name": "res/layout/mtrl_search_view.xml",
+      "sha256_a": "a99e35d7df96fc8eee677a7b8f6b61435be41fac48400ddf818edb7aecccad74",
+      "sha256_b": "f2fb9bb2f17535912e48b9aacaf6f0ed6de8bf7d7fc35d5860357a42a7dbb821",
+      "size_a": 3424,
+      "size_b": 3424
+    },
+    {
+      "name": "res/layout/notification_stream_layout.xml",
+      "sha256_a": "a29aa9801ffca7930d0322210e5b88ab19795e108979788c3c0311be31e2f4ad",
+      "sha256_b": "8bd437e9c637d147e5f4699819a0836f41f6265821fd734c5682d66d8e20dd68",
+      "size_a": 828,
+      "size_b": 828
+    },
+    {
+      "name": "res/layout/notification_template_part_time.xml",
+      "sha256_a": "356735a1e18e54734afbcda868c2e8f9f0f97d35acbc3f0d25f263524c5adfa7",
+      "sha256_b": "0aa7379a0b7e6c9a6ee60f2704ac06f5ef9973dcb8fffee6524bbcfd0afc4d5a",
+      "size_a": 440,
+      "size_b": 440
+    },
+    {
+      "name": "res/layout/progress_bar.xml",
+      "sha256_a": "6840d2408d3ea8d724081d9d093f58614f47211ecf3bf8a4ca86652328583532",
+      "sha256_b": "cc6cde9fc6f14fe49b36667d92f7d08ce7dcdac8ea9eba0cc1452fbadfffd973",
+      "size_a": 588,
+      "size_b": 588
+    },
+    {
+      "name": "res/layout/recently_played_widget_empty_large_med.xml",
+      "sha256_a": "5161a7307ad907df09883532c44941fa585d374b2bc580a3a8a279104f34bf31",
+      "sha256_b": "1fa11138824bdc33e11f84487645d4de9474d3abc58f48a8ea674d9f943215fb",
+      "size_a": 1924,
+      "size_b": 1924
+    }
+  ],
+  "changed_members_truncated": 15,
+  "manifest_diff": {
+    "version_name": {
+      "a": "2.743.1136",
+      "b": "2.745.1142"
+    },
+    "version_code": {
+      "a": "18934",
+      "b": "20136"
+    },
+    "providers": {
+      "a": [
+        "androidx.core.content.FileProvider",
+        "androidx.startup.InitializationProvider",
+        "com.roblox.client.gmasdk.isolate.sandbox.GmaWebViewInitializerProvider",
+        "com.roblox.client.personasdk.PersonaInitProvider",
+        "com.roblox.client.provider.AppAssetsContentProvider",
+        "com.roblox.client.provider.ShellConfigurationContentProvider",
+        "com.withpersona.sdk2.inquiry.DocumentFileProvider"
+      ],
+      "b": [
+        "androidx.core.content.FileProvider",
+        "androidx.startup.InitializationProvider",
+        "com.google.firebase.provider.FirebaseInitProvider",
+        "com.roblox.client.gmasdk.isolate.sandbox.GmaWebViewInitializerProvider",
+        "com.roblox.client.personasdk.PersonaInitProvider",
+        "com.roblox.client.provider.AppAssetsContentProvider",
+        "com.roblox.client.provider.ShellConfigurationContentProvider",
+        "com.withpersona.sdk2.inquiry.DocumentFileProvider"
+      ]
+    }
+  }
+}

@@ -7,26 +7,26 @@ import java.util.concurrent.atomic.AtomicReference;
 public final class u9 implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ AtomicReference f26009a;
+    public final /* synthetic */ AtomicReference f26830a;
     public final /* synthetic */ qa b;
 
     public u9(qa qaVar, AtomicReference atomicReference) {
-        this.f26009a = atomicReference;
+        this.f26830a = atomicReference;
         Objects.requireNonNull(qaVar);
         this.b = qaVar;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        AtomicReference atomicReference = this.f26009a;
+        AtomicReference atomicReference = this.f26830a;
         synchronized (atomicReference) {
             try {
                 try {
                     qa qaVar = this.b;
-                    atomicReference.set(Long.valueOf(qaVar.f25625a.w().D(qaVar.f25625a.L().q(), z4.f26158d0)));
-                    this.f26009a.notify();
+                    atomicReference.set(Long.valueOf(qaVar.f26446a.w().D(qaVar.f26446a.L().q(), z4.f26979d0)));
+                    this.f26830a.notify();
                 } catch (Throwable th2) {
-                    this.f26009a.notify();
+                    this.f26830a.notify();
                     throw th2;
                 }
             } catch (Throwable th3) {

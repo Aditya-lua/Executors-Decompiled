@@ -15,7 +15,7 @@ public final class w2 {
             return i12;
         }
         int i14 = ((i10 ^ i11) >> 31) | 1;
-        switch (v2.f15418a[roundingMode.ordinal()]) {
+        switch (v2.f16032a[roundingMode.ordinal()]) {
             case 1:
                 x2.a(false);
                 return i12;
@@ -57,7 +57,7 @@ public final class w2 {
         if (i10 <= 0) {
             throw new IllegalArgumentException("x (0) must be > 0");
         }
-        switch (v2.f15418a[roundingMode.ordinal()]) {
+        switch (v2.f16032a[roundingMode.ordinal()]) {
             case 1:
                 x2.a(((i10 + (-1)) & i10) == 0);
                 break;

@@ -1,8 +1,8 @@
 package com.google.android.gms.internal.mlkit_vision_face;
 
-import qf.d;
-import qf.e;
-import qf.f;
+import rf.d;
+import rf.e;
+import rf.f;
 
 /* JADX INFO: loaded from: classes.dex */
 final class zzgf implements e {
@@ -44,7 +44,7 @@ final class zzgf implements e {
     private zzgf() {
     }
 
-    @Override // qf.b
+    @Override // rf.b
     public final /* bridge */ /* synthetic */ void encode(Object obj, f fVar) {
         throw null;
     }

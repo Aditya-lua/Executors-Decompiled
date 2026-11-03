@@ -1,20 +1,20 @@
 package com.withpersona.sdk2.inquiry.internal;
 
+import iu.d2;
+import iu.l0;
+import iu.p0;
+import iu.q0;
+import iu.z2;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.Intrinsics;
-import ku.d2;
-import ku.l0;
-import ku.p0;
-import ku.q0;
-import ku.z2;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import zo.k0;
+import xo.k0;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0000\u0018\u0000 \u00112\u00020\u0001:\u0002\r\u0013B\u001b\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\b\u0001\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0015\u0010\u000b\u001a\u00020\n2\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\u000b\u0010\fJ\r\u0010\r\u001a\u00020\n¢\u0006\u0004\b\r\u0010\u000eJ\r\u0010\u000f\u001a\u00020\n¢\u0006\u0004\b\u000f\u0010\u000eJ\u0015\u0010\u0011\u001a\u0004\u0018\u00010\u0010*\u00020\bH\u0002¢\u0006\u0004\b\u0011\u0010\u0012R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0013\u0010\u0014R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\r\u0010\u0015R\u0014\u0010\u0018\u001a\u00020\u00168\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000f\u0010\u0017R\u0018\u0010\u001b\u001a\u0004\u0018\u00010\u00198\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u000b\u0010\u001a¨\u0006\u001c"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/q;", "", "Lzo/k0;", "orchestrator", "Lku/l0;", "dispatcher", "<init>", "(Lzo/k0;Lku/l0;)V", "Lcom/withpersona/sdk2/inquiry/internal/InquiryState;", "state", "", "d", "(Lcom/withpersona/sdk2/inquiry/internal/InquiryState;)V", "b", "()V", "c", "Lcom/withpersona/sdk2/inquiry/internal/q$b;", "e", "(Lcom/withpersona/sdk2/inquiry/internal/InquiryState;)Lcom/withpersona/sdk2/inquiry/internal/q$b;", "a", "Lzo/k0;", "Lku/l0;", "Lku/p0;", "Lku/p0;", "scope", "Lku/d2;", "Lku/d2;", "currentJob", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0000\u0018\u0000 \u00112\u00020\u0001:\u0002\r\u0013B\u001b\b\u0007\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\b\u0001\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0015\u0010\u000b\u001a\u00020\n2\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\u000b\u0010\fJ\r\u0010\r\u001a\u00020\n¢\u0006\u0004\b\r\u0010\u000eJ\r\u0010\u000f\u001a\u00020\n¢\u0006\u0004\b\u000f\u0010\u000eJ\u0015\u0010\u0011\u001a\u0004\u0018\u00010\u0010*\u00020\bH\u0002¢\u0006\u0004\b\u0011\u0010\u0012R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0013\u0010\u0014R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\r\u0010\u0015R\u0014\u0010\u0018\u001a\u00020\u00168\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000f\u0010\u0017R\u0018\u0010\u001b\u001a\u0004\u0018\u00010\u00198\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u000b\u0010\u001a¨\u0006\u001c"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/q;", "", "Lxo/k0;", "orchestrator", "Liu/l0;", "dispatcher", "<init>", "(Lxo/k0;Liu/l0;)V", "Lcom/withpersona/sdk2/inquiry/internal/InquiryState;", "state", "", "d", "(Lcom/withpersona/sdk2/inquiry/internal/InquiryState;)V", "b", "()V", "c", "Lcom/withpersona/sdk2/inquiry/internal/q$b;", "e", "(Lcom/withpersona/sdk2/inquiry/internal/InquiryState;)Lcom/withpersona/sdk2/inquiry/internal/q$b;", "a", "Lxo/k0;", "Liu/l0;", "Liu/p0;", "Liu/p0;", "scope", "Liu/d2;", "Liu/d2;", "currentJob", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class q {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -98,39 +98,44 @@ public final class q {
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.internal.SilentNetworkAuthenticationManager$start$1", f = "SilentNetworkAuthenticationManager.kt", l = {30}, m = "invokeSuspend")
-    public static final class c extends pt.m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.internal.SilentNetworkAuthenticationManager$start$1", f = "SilentNetworkAuthenticationManager.kt", l = {30}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class c extends nt.m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f12070t;
+        public int f12151t;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ SnaParams f12072v;
+        public final /* synthetic */ SnaParams f12153v;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public c(SnaParams snaParams, nt.b<? super c> bVar) {
+        public c(SnaParams snaParams, lt.b<? super c> bVar) {
             super(2, bVar);
-            this.f12072v = snaParams;
+            this.f12153v = snaParams;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return q.this.new c(this.f12072v, bVar);
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return q.this.new c(this.f12153v, bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            Object objE = ot.c.e();
-            int i10 = this.f12070t;
+            Object objE = mt.c.e();
+            int i10 = this.f12151t;
             if (i10 == 0) {
-                jt.o.b(obj);
+                gt.o.b(obj);
                 k0 k0Var = q.this.orchestrator;
-                String sessionToken = this.f12072v.getSessionToken();
-                String checkUrl = this.f12072v.getCheckUrl();
-                Integer timeoutSeconds = this.f12072v.getTimeoutSeconds();
+                String sessionToken = this.f12153v.getSessionToken();
+                String checkUrl = this.f12153v.getCheckUrl();
+                Integer timeoutSeconds = this.f12153v.getTimeoutSeconds();
                 int iIntValue = timeoutSeconds != null ? timeoutSeconds.intValue() : 10;
-                this.f12070t = 1;
+                this.f12151t = 1;
                 if (k0Var.c(sessionToken, checkUrl, iIntValue, this) == objE) {
                     return objE;
                 }
@@ -138,14 +143,9 @@ public final class q {
                 if (i10 != 1) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                 }
-                jt.o.b(obj);
+                gt.o.b(obj);
             }
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            return Unit.f22938a;
         }
     }
 
@@ -177,7 +177,7 @@ public final class q {
         }
         d2 d2Var = this.currentJob;
         if (d2Var == null || !d2Var.b()) {
-            this.currentJob = ku.k.d(this.scope, null, null, new c(snaParamsE, null), 3, null);
+            this.currentJob = iu.k.d(this.scope, null, null, new c(snaParamsE, null), 3, null);
         }
     }
 

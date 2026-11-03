@@ -13,14 +13,14 @@ public enum b implements com.google.android.gms.fido.fido2.api.common.a {
 
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f4688a;
+    public final int f4854a;
 
     b(int i10) {
-        this.f4688a = i10;
+        this.f4854a = i10;
     }
 
     @Override // com.google.android.gms.fido.fido2.api.common.a
     public int a() {
-        return this.f4688a;
+        return this.f4854a;
     }
 }

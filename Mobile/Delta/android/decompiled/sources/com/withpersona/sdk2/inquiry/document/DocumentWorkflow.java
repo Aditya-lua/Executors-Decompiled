@@ -3,7 +3,6 @@ package com.withpersona.sdk2.inquiry.document;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
-import ar.UiStepBottomSheet;
 import com.google.mlkit.vision.barcode.common.Barcode;
 import com.withpersona.sdk2.inquiry.document.DocumentFile;
 import com.withpersona.sdk2.inquiry.document.DocumentWorkflow;
@@ -21,12 +20,13 @@ import com.withpersona.sdk2.inquiry.steps.ui.UiComponentScreen;
 import com.withpersona.sdk2.inquiry.steps.ui.components.UiComponent;
 import com.withpersona.sdk2.inquiry.tracking.TrackingEventsLogger;
 import com.withpersona.sdk2.inquiry.workflows.WorkflowState;
+import gt.l;
+import gt.o;
+import iu.p0;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
-import jt.l;
-import jt.o;
 import k6.s;
 import kotlin.Metadata;
 import kotlin.Pair;
@@ -40,21 +40,21 @@ import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.d0;
-import ku.p0;
+import nt.m;
 import okhttp3.internal.http2.Http2;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pt.m;
-import rp.i0;
-import rp.j1;
-import ym.Snapshot;
-import ym.k;
-import ym.r;
-import ym.w;
-import ym.z;
+import pp.i0;
+import pp.j1;
+import wm.Snapshot;
+import wm.k;
+import wm.r;
+import wm.w;
+import wm.z;
+import yq.UiStepBottomSheet;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000¸\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b&\u0018\u00002\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0001:\u0006F`aHbJBq\b\u0007\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b\u0012\u0006\u0010\u000b\u001a\u00020\n\u0012\u0006\u0010\r\u001a\u00020\f\u0012\u0006\u0010\u000f\u001a\u00020\u000e\u0012\u0006\u0010\u0011\u001a\u00020\u0010\u0012\u0006\u0010\u0013\u001a\u00020\u0012\u0012\u0006\u0010\u0015\u001a\u00020\u0014\u0012\u0006\u0010\u0017\u001a\u00020\u0016\u0012\u0006\u0010\u0019\u001a\u00020\u0018\u0012\u0006\u0010\u001b\u001a\u00020\u001a\u0012\u0006\u0010\u001d\u001a\u00020\u001c\u0012\u0006\u0010\u001f\u001a\u00020\u001e¢\u0006\u0004\b \u0010!J7\u0010&\u001a\u00020%*\u001e0\"R\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u00012\u0006\u0010$\u001a\u00020#H\u0002¢\u0006\u0004\b&\u0010'JU\u0010/\u001a \u0012\u001c\u0012\u001a\u0012\u0004\u0012\u00020,\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020.\u0012\u0004\u0012\u00020%0-0+0**\u00020(2\"\u0010)\u001a\u001e0\"R\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0001H\u0002¢\u0006\u0004\b/\u00100JU\u00102\u001a \u0012\u001c\u0012\u001a\u0012\u0004\u0012\u00020,\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020.\u0012\u0004\u0012\u00020%0-0+0**\u0002012\"\u0010)\u001a\u001e0\"R\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0001H\u0002¢\u0006\u0004\b2\u00103JG\u00107\u001a\u00020%*\u0002042\u0006\u00105\u001a\u00020\u00022\u0006\u00106\u001a\u00020\u00032\"\u0010)\u001a\u001e0\"R\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0001H\u0002¢\u0006\u0004\b7\u00108JG\u0010:\u001a\u00020%*\u0002092\u0006\u00105\u001a\u00020\u00022\u0006\u00106\u001a\u00020\u00032\"\u0010)\u001a\u001e0\"R\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0001H\u0002¢\u0006\u0004\b:\u0010;J!\u0010?\u001a\u00020\u00032\u0006\u0010<\u001a\u00020\u00022\b\u0010>\u001a\u0004\u0018\u00010=H\u0016¢\u0006\u0004\b?\u0010@J\u0017\u0010B\u001a\u00020=2\u0006\u0010A\u001a\u00020\u0003H\u0016¢\u0006\u0004\bB\u0010CJC\u0010D\u001a\u00020\u00052\u0006\u00105\u001a\u00020\u00022\u0006\u00106\u001a\u00020\u00032\"\u0010)\u001a\u001e0\"R\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0001H\u0016¢\u0006\u0004\bD\u0010ER\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bF\u0010GR\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bH\u0010IR\u0014\u0010\u000b\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bJ\u0010KR\u0014\u0010\r\u001a\u00020\f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bL\u0010MR\u0014\u0010\u000f\u001a\u00020\u000e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bN\u0010OR\u0014\u0010\u0011\u001a\u00020\u00108\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bP\u0010QR\u0014\u0010\u0013\u001a\u00020\u00128\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bR\u0010SR\u0014\u0010\u0015\u001a\u00020\u00148\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bT\u0010UR\u0014\u0010\u0017\u001a\u00020\u00168\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bV\u0010WR\u0014\u0010\u0019\u001a\u00020\u00188\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bX\u0010YR\u0014\u0010\u001b\u001a\u00020\u001a8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bZ\u0010[R\u0014\u0010\u001d\u001a\u00020\u001c8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\\\u0010]R\u0014\u0010\u001f\u001a\u00020\u001e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b^\u0010_¨\u0006c"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow;", "Lym/k;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$Input;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$b;", "", "Lk6/s;", "imageLoader", "Landroid/content/Context;", "applicationContext", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow;", "permissionRequestWorkflow", "Lcom/withpersona/sdk2/inquiry/document/a;", "documentCameraWorker", "Lcom/withpersona/sdk2/inquiry/document/i$b;", "documentsSelectWorkerFactory", "Lcom/withpersona/sdk2/inquiry/document/network/a$a;", "documentCreateWorker", "Lcom/withpersona/sdk2/inquiry/document/network/e$a;", "documentLoadWorker", "Lcom/withpersona/sdk2/inquiry/document/network/c$a;", "documentFileUploadWorker", "Lbo/a$a;", "documentFileDeleteWorker", "Lcom/withpersona/sdk2/inquiry/document/network/g$a;", "documentSubmitWorker", "Luq/a;", "navigationStateManager", "Lpq/c;", "externalEventLogger", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "trackingEventsLogger", "<init>", "(Lk6/s;Landroid/content/Context;Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow;Lcom/withpersona/sdk2/inquiry/document/a;Lcom/withpersona/sdk2/inquiry/document/i$b;Lcom/withpersona/sdk2/inquiry/document/network/a$a;Lcom/withpersona/sdk2/inquiry/document/network/e$a;Lcom/withpersona/sdk2/inquiry/document/network/c$a;Lbo/a$a;Lcom/withpersona/sdk2/inquiry/document/network/g$a;Luq/a;Lpq/c;Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;)V", "Lym/k$a;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$a;", "event", "", "K0", "(Lym/k$a;Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$a;)V", "Lcom/withpersona/sdk2/inquiry/document/DocumentStartPage;", "context", "", "Lkotlin/Pair;", "", "Lkotlin/Function1;", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;", "A0", "(Lcom/withpersona/sdk2/inquiry/document/DocumentStartPage;Lym/k$a;)Ljava/util/List;", "Lcom/withpersona/sdk2/inquiry/document/UploadOptionsDialog;", "B0", "(Lcom/withpersona/sdk2/inquiry/document/UploadOptionsDialog;Lym/k$a;)Ljava/util/List;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$a;", "renderProps", "renderState", "H1", "(Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$a;Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$Input;Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;Lym/k$a;)V", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$UploadState;", "I1", "(Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$UploadState;Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$Input;Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;Lym/k$a;)V", "props", "Lym/i;", "snapshot", "J0", "(Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$Input;Lym/i;)Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;", "state", "a2", "(Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;)Lym/i;", "V0", "(Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$Input;Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;Lym/k$a;)Ljava/lang/Object;", "a", "Lk6/s;", "b", "Landroid/content/Context;", "c", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow;", "d", "Lcom/withpersona/sdk2/inquiry/document/a;", "e", "Lcom/withpersona/sdk2/inquiry/document/i$b;", "f", "Lcom/withpersona/sdk2/inquiry/document/network/a$a;", "g", "Lcom/withpersona/sdk2/inquiry/document/network/e$a;", "h", "Lcom/withpersona/sdk2/inquiry/document/network/c$a;", "i", "Lbo/a$a;", "j", "Lcom/withpersona/sdk2/inquiry/document/network/g$a;", "k", "Luq/a;", "l", "Lpq/c;", "m", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "Input", "StartPage", "State", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000¸\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b&\u0018\u00002\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0001:\u0006F`aHbJBq\b\u0007\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b\u0012\u0006\u0010\u000b\u001a\u00020\n\u0012\u0006\u0010\r\u001a\u00020\f\u0012\u0006\u0010\u000f\u001a\u00020\u000e\u0012\u0006\u0010\u0011\u001a\u00020\u0010\u0012\u0006\u0010\u0013\u001a\u00020\u0012\u0012\u0006\u0010\u0015\u001a\u00020\u0014\u0012\u0006\u0010\u0017\u001a\u00020\u0016\u0012\u0006\u0010\u0019\u001a\u00020\u0018\u0012\u0006\u0010\u001b\u001a\u00020\u001a\u0012\u0006\u0010\u001d\u001a\u00020\u001c\u0012\u0006\u0010\u001f\u001a\u00020\u001e¢\u0006\u0004\b \u0010!J7\u0010&\u001a\u00020%*\u001e0\"R\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u00012\u0006\u0010$\u001a\u00020#H\u0002¢\u0006\u0004\b&\u0010'JU\u0010/\u001a \u0012\u001c\u0012\u001a\u0012\u0004\u0012\u00020,\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020.\u0012\u0004\u0012\u00020%0-0+0**\u00020(2\"\u0010)\u001a\u001e0\"R\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0001H\u0002¢\u0006\u0004\b/\u00100JU\u00102\u001a \u0012\u001c\u0012\u001a\u0012\u0004\u0012\u00020,\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020.\u0012\u0004\u0012\u00020%0-0+0**\u0002012\"\u0010)\u001a\u001e0\"R\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0001H\u0002¢\u0006\u0004\b2\u00103JG\u00107\u001a\u00020%*\u0002042\u0006\u00105\u001a\u00020\u00022\u0006\u00106\u001a\u00020\u00032\"\u0010)\u001a\u001e0\"R\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0001H\u0002¢\u0006\u0004\b7\u00108JG\u0010:\u001a\u00020%*\u0002092\u0006\u00105\u001a\u00020\u00022\u0006\u00106\u001a\u00020\u00032\"\u0010)\u001a\u001e0\"R\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0001H\u0002¢\u0006\u0004\b:\u0010;J!\u0010?\u001a\u00020\u00032\u0006\u0010<\u001a\u00020\u00022\b\u0010>\u001a\u0004\u0018\u00010=H\u0016¢\u0006\u0004\b?\u0010@J\u0017\u0010B\u001a\u00020=2\u0006\u0010A\u001a\u00020\u0003H\u0016¢\u0006\u0004\bB\u0010CJC\u0010D\u001a\u00020\u00052\u0006\u00105\u001a\u00020\u00022\u0006\u00106\u001a\u00020\u00032\"\u0010)\u001a\u001e0\"R\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0001H\u0016¢\u0006\u0004\bD\u0010ER\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bF\u0010GR\u0014\u0010\t\u001a\u00020\b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bH\u0010IR\u0014\u0010\u000b\u001a\u00020\n8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bJ\u0010KR\u0014\u0010\r\u001a\u00020\f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bL\u0010MR\u0014\u0010\u000f\u001a\u00020\u000e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bN\u0010OR\u0014\u0010\u0011\u001a\u00020\u00108\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bP\u0010QR\u0014\u0010\u0013\u001a\u00020\u00128\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bR\u0010SR\u0014\u0010\u0015\u001a\u00020\u00148\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bT\u0010UR\u0014\u0010\u0017\u001a\u00020\u00168\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bV\u0010WR\u0014\u0010\u0019\u001a\u00020\u00188\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bX\u0010YR\u0014\u0010\u001b\u001a\u00020\u001a8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bZ\u0010[R\u0014\u0010\u001d\u001a\u00020\u001c8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\\\u0010]R\u0014\u0010\u001f\u001a\u00020\u001e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b^\u0010_¨\u0006c"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow;", "Lwm/k;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$Input;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$b;", "", "Lk6/s;", "imageLoader", "Landroid/content/Context;", "applicationContext", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow;", "permissionRequestWorkflow", "Lcom/withpersona/sdk2/inquiry/document/a;", "documentCameraWorker", "Lcom/withpersona/sdk2/inquiry/document/i$b;", "documentsSelectWorkerFactory", "Lcom/withpersona/sdk2/inquiry/document/network/a$a;", "documentCreateWorker", "Lcom/withpersona/sdk2/inquiry/document/network/e$a;", "documentLoadWorker", "Lcom/withpersona/sdk2/inquiry/document/network/c$a;", "documentFileUploadWorker", "Lzn/a$a;", "documentFileDeleteWorker", "Lcom/withpersona/sdk2/inquiry/document/network/g$a;", "documentSubmitWorker", "Lsq/a;", "navigationStateManager", "Lnq/c;", "externalEventLogger", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "trackingEventsLogger", "<init>", "(Lk6/s;Landroid/content/Context;Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow;Lcom/withpersona/sdk2/inquiry/document/a;Lcom/withpersona/sdk2/inquiry/document/i$b;Lcom/withpersona/sdk2/inquiry/document/network/a$a;Lcom/withpersona/sdk2/inquiry/document/network/e$a;Lcom/withpersona/sdk2/inquiry/document/network/c$a;Lzn/a$a;Lcom/withpersona/sdk2/inquiry/document/network/g$a;Lsq/a;Lnq/c;Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;)V", "Lwm/k$a;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$a;", "event", "", "K0", "(Lwm/k$a;Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$a;)V", "Lcom/withpersona/sdk2/inquiry/document/DocumentStartPage;", "context", "", "Lkotlin/Pair;", "", "Lkotlin/Function1;", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;", "A0", "(Lcom/withpersona/sdk2/inquiry/document/DocumentStartPage;Lwm/k$a;)Ljava/util/List;", "Lcom/withpersona/sdk2/inquiry/document/UploadOptionsDialog;", "B0", "(Lcom/withpersona/sdk2/inquiry/document/UploadOptionsDialog;Lwm/k$a;)Ljava/util/List;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$a;", "renderProps", "renderState", "H1", "(Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$a;Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$Input;Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;Lwm/k$a;)V", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$UploadState;", "I1", "(Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$UploadState;Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$Input;Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;Lwm/k$a;)V", "props", "Lwm/i;", "snapshot", "J0", "(Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$Input;Lwm/i;)Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;", "state", "a2", "(Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;)Lwm/i;", "V0", "(Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$Input;Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;Lwm/k$a;)Ljava/lang/Object;", "a", "Lk6/s;", "b", "Landroid/content/Context;", "c", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow;", "d", "Lcom/withpersona/sdk2/inquiry/document/a;", "e", "Lcom/withpersona/sdk2/inquiry/document/i$b;", "f", "Lcom/withpersona/sdk2/inquiry/document/network/a$a;", "g", "Lcom/withpersona/sdk2/inquiry/document/network/e$a;", "h", "Lcom/withpersona/sdk2/inquiry/document/network/c$a;", "i", "Lzn/a$a;", "j", "Lcom/withpersona/sdk2/inquiry/document/network/g$a;", "k", "Lsq/a;", "l", "Lnq/c;", "m", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "Input", "StartPage", "State", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -79,7 +79,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final com.withpersona.sdk2.inquiry.document.network.a.C0179a documentCreateWorker;
+    public final com.withpersona.sdk2.inquiry.document.network.a.C0182a documentCreateWorker;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -91,7 +91,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
     /* JADX INFO: renamed from: i, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final bo.a.C0086a documentFileDeleteWorker;
+    public final zn.a.C0693a documentFileDeleteWorker;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -99,17 +99,17 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
     /* JADX INFO: renamed from: k, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final uq.a navigationStateManager;
+    public final sq.a navigationStateManager;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final pq.c externalEventLogger;
+    public final nq.c externalEventLogger;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name and from kotlin metadata */
     @NotNull
     public final TrackingEventsLogger trackingEventsLogger;
 
-    @Metadata(d1 = {"\u0000^\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\r\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0010\u0000\n\u0002\b8\b\u0087\b\u0018\u00002\u00020\u0001B¡\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0004\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0002\u0012\u0006\u0010\u0006\u001a\u00020\u0002\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\b\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\t\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\n\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u000b\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\f\u001a\u0004\u0018\u00010\u0002\u0012\u0006\u0010\r\u001a\u00020\u0002\u0012\u0006\u0010\u000e\u001a\u00020\u0002\u0012\b\u0010\u000f\u001a\u0004\u0018\u00010\u0002\u0012\u0006\u0010\u0011\u001a\u00020\u0010\u0012\u0006\u0010\u0013\u001a\u00020\u0012\u0012\u0006\u0010\u0015\u001a\u00020\u0014\u0012\u0006\u0010\u0017\u001a\u00020\u0016\u0012\u0006\u0010\u0018\u001a\u00020\u0016\u0012\b\u0010\u0019\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u001a\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u001b\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u001c\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u001d\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u001f\u001a\u0004\u0018\u00010\u001e\u0012\u0006\u0010!\u001a\u00020 \u0012\u0006\u0010#\u001a\u00020\"\u0012\n\b\u0002\u0010$\u001a\u0004\u0018\u00010\u0002\u0012\n\b\u0002\u0010%\u001a\u0004\u0018\u00010\u0002\u0012\n\b\u0002\u0010&\u001a\u0004\u0018\u00010\u0002\u0012\n\b\u0002\u0010(\u001a\u0004\u0018\u00010'¢\u0006\u0004\b)\u0010*J\r\u0010+\u001a\u00020\u0014¢\u0006\u0004\b+\u0010,J\u001d\u00101\u001a\u0002002\u0006\u0010.\u001a\u00020-2\u0006\u0010/\u001a\u00020\u0014¢\u0006\u0004\b1\u00102J\u0010\u00103\u001a\u00020\u0002HÖ\u0001¢\u0006\u0004\b3\u00104J\u0010\u00105\u001a\u00020\u0014HÖ\u0001¢\u0006\u0004\b5\u0010,J\u001a\u00108\u001a\u00020\u00162\b\u00107\u001a\u0004\u0018\u000106HÖ\u0003¢\u0006\u0004\b8\u00109R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b:\u0010;\u001a\u0004\b<\u00104R\u0017\u0010\u0004\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b=\u0010;\u001a\u0004\b>\u00104R\u0017\u0010\u0005\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b?\u0010;\u001a\u0004\b@\u00104R\u0017\u0010\u0006\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bA\u0010;\u001a\u0004\bB\u00104R\u0019\u0010\u0007\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bC\u0010;\u001a\u0004\bD\u00104R\u0019\u0010\b\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bE\u0010;\u001a\u0004\bF\u00104R\u0019\u0010\t\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bG\u0010;\u001a\u0004\bH\u00104R\u0019\u0010\n\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bI\u0010;\u001a\u0004\bJ\u00104R\u0019\u0010\u000b\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bK\u0010;\u001a\u0004\bL\u00104R\u0019\u0010\f\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bM\u0010;\u001a\u0004\bN\u00104R\u0017\u0010\r\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bH\u0010;\u001a\u0004\bO\u00104R\u0017\u0010\u000e\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bP\u0010;\u001a\u0004\bQ\u00104R\u0019\u0010\u000f\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bR\u0010;\u001a\u0004\bS\u00104R\u0017\u0010\u0011\u001a\u00020\u00108\u0006¢\u0006\f\n\u0004\bS\u0010T\u001a\u0004\bU\u0010VR\u0017\u0010\u0013\u001a\u00020\u00128\u0006¢\u0006\f\n\u0004\bO\u0010W\u001a\u0004\bX\u0010YR\u0017\u0010\u0015\u001a\u00020\u00148\u0006¢\u0006\f\n\u0004\bB\u0010Z\u001a\u0004\bR\u0010,R\u0017\u0010\u0017\u001a\u00020\u00168\u0006¢\u0006\f\n\u0004\b@\u0010[\u001a\u0004\bE\u0010\\R\u0017\u0010\u0018\u001a\u00020\u00168\u0006¢\u0006\f\n\u0004\b>\u0010[\u001a\u0004\bG\u0010\\R\u0019\u0010\u0019\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bQ\u0010;\u001a\u0004\b]\u00104R\u0019\u0010\u001a\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b^\u0010;\u001a\u0004\b_\u00104R\u0019\u0010\u001b\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bX\u0010;\u001a\u0004\b`\u00104R\u0019\u0010\u001c\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bN\u0010;\u001a\u0004\ba\u00104R\u0019\u0010\u001d\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bb\u0010;\u001a\u0004\b^\u00104R\u0019\u0010\u001f\u001a\u0004\u0018\u00010\u001e8\u0006¢\u0006\f\n\u0004\bc\u0010d\u001a\u0004\be\u0010fR\u0017\u0010!\u001a\u00020 8\u0006¢\u0006\f\n\u0004\b<\u0010g\u001a\u0004\b:\u0010hR\u0017\u0010#\u001a\u00020\"8\u0006¢\u0006\f\n\u0004\bL\u0010i\u001a\u0004\bc\u0010jR\u0019\u0010$\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\ba\u0010;\u001a\u0004\bZ\u00104R\u0019\u0010%\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bk\u0010;\u001a\u0004\bK\u00104R\u0019\u0010&\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b`\u0010;\u001a\u0004\bb\u00104R\u0019\u0010(\u001a\u0004\u0018\u00010'8\u0006¢\u0006\f\n\u0004\b_\u0010l\u001a\u0004\bM\u0010m¨\u0006n"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$Input;", "Landroid/os/Parcelable;", "", "sessionToken", "inquiryId", "fromStep", "fromComponent", "promptTitle", "promptDescription", "disclaimer", "submitButtonText", "pendingTitle", "pendingDescription", "fieldKeyDocument", "kind", "documentId", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$StartPage;", "startPage", "Lcom/withpersona/sdk2/inquiry/document/DocumentPages;", "pages", "", "documentFileLimit", "", "backStepEnabled", "cancelButtonEnabled", "permissionsTitle", "permissionsRationale", "permissionsModalPositiveButton", "permissionsModalNegativeButton", "largeFileErrorPrompt", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "styles", "Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$Document$AssetConfig;", "assetConfig", "Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;", "pendingPageTextVerticalPosition", "promptPageNavBarTitle", "checkPageNavBarTitle", "pendingPageNavBarTitle", "Lcom/withpersona/sdk2/inquiry/steps/ui/CustomPendingPage;", "customPendingPage", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$StartPage;Lcom/withpersona/sdk2/inquiry/document/DocumentPages;IZZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$Document$AssetConfig;Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/steps/ui/CustomPendingPage;)V", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "equals", "(Ljava/lang/Object;)Z", "a", "Ljava/lang/String;", "y", "b", "r", "c", "q", "d", "p", "e", "J", "f", "G", "g", "k", "h", "N", "i", "z", "j", "v", "o", "l", "s", "m", "n", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$StartPage;", "K", "()Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$StartPage;", "Lcom/withpersona/sdk2/inquiry/document/DocumentPages;", "u", "()Lcom/withpersona/sdk2/inquiry/document/DocumentPages;", "I", "Z", "()Z", "E", "t", "D", "C", "A", "w", "x", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "L", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$Document$AssetConfig;", "()Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$Document$AssetConfig;", "Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;", "()Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;", "B", "Lcom/withpersona/sdk2/inquiry/steps/ui/CustomPendingPage;", "()Lcom/withpersona/sdk2/inquiry/steps/ui/CustomPendingPage;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000^\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\r\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0010\u0000\n\u0002\b8\b\u0087\b\u0018\u00002\u00020\u0001B¡\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0004\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0002\u0012\u0006\u0010\u0006\u001a\u00020\u0002\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\b\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\t\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\n\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u000b\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\f\u001a\u0004\u0018\u00010\u0002\u0012\u0006\u0010\r\u001a\u00020\u0002\u0012\u0006\u0010\u000e\u001a\u00020\u0002\u0012\b\u0010\u000f\u001a\u0004\u0018\u00010\u0002\u0012\u0006\u0010\u0011\u001a\u00020\u0010\u0012\u0006\u0010\u0013\u001a\u00020\u0012\u0012\u0006\u0010\u0015\u001a\u00020\u0014\u0012\u0006\u0010\u0017\u001a\u00020\u0016\u0012\u0006\u0010\u0018\u001a\u00020\u0016\u0012\b\u0010\u0019\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u001a\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u001b\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u001c\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u001d\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u001f\u001a\u0004\u0018\u00010\u001e\u0012\u0006\u0010!\u001a\u00020 \u0012\u0006\u0010#\u001a\u00020\"\u0012\n\b\u0002\u0010$\u001a\u0004\u0018\u00010\u0002\u0012\n\b\u0002\u0010%\u001a\u0004\u0018\u00010\u0002\u0012\n\b\u0002\u0010&\u001a\u0004\u0018\u00010\u0002\u0012\n\b\u0002\u0010(\u001a\u0004\u0018\u00010'¢\u0006\u0004\b)\u0010*J\r\u0010+\u001a\u00020\u0014¢\u0006\u0004\b+\u0010,J\u001d\u00101\u001a\u0002002\u0006\u0010.\u001a\u00020-2\u0006\u0010/\u001a\u00020\u0014¢\u0006\u0004\b1\u00102J\u0010\u00103\u001a\u00020\u0002HÖ\u0001¢\u0006\u0004\b3\u00104J\u0010\u00105\u001a\u00020\u0014HÖ\u0001¢\u0006\u0004\b5\u0010,J\u001a\u00108\u001a\u00020\u00162\b\u00107\u001a\u0004\u0018\u000106HÖ\u0003¢\u0006\u0004\b8\u00109R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b:\u0010;\u001a\u0004\b<\u00104R\u0017\u0010\u0004\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b=\u0010;\u001a\u0004\b>\u00104R\u0017\u0010\u0005\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b?\u0010;\u001a\u0004\b@\u00104R\u0017\u0010\u0006\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bA\u0010;\u001a\u0004\bB\u00104R\u0019\u0010\u0007\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bC\u0010;\u001a\u0004\bD\u00104R\u0019\u0010\b\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bE\u0010;\u001a\u0004\bF\u00104R\u0019\u0010\t\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bG\u0010;\u001a\u0004\bH\u00104R\u0019\u0010\n\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bI\u0010;\u001a\u0004\bJ\u00104R\u0019\u0010\u000b\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bK\u0010;\u001a\u0004\bL\u00104R\u0019\u0010\f\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bM\u0010;\u001a\u0004\bN\u00104R\u0017\u0010\r\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bH\u0010;\u001a\u0004\bO\u00104R\u0017\u0010\u000e\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\bP\u0010;\u001a\u0004\bQ\u00104R\u0019\u0010\u000f\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bR\u0010;\u001a\u0004\bS\u00104R\u0017\u0010\u0011\u001a\u00020\u00108\u0006¢\u0006\f\n\u0004\bS\u0010T\u001a\u0004\bU\u0010VR\u0017\u0010\u0013\u001a\u00020\u00128\u0006¢\u0006\f\n\u0004\bO\u0010W\u001a\u0004\bX\u0010YR\u0017\u0010\u0015\u001a\u00020\u00148\u0006¢\u0006\f\n\u0004\bB\u0010Z\u001a\u0004\bR\u0010,R\u0017\u0010\u0017\u001a\u00020\u00168\u0006¢\u0006\f\n\u0004\b@\u0010[\u001a\u0004\bE\u0010\\R\u0017\u0010\u0018\u001a\u00020\u00168\u0006¢\u0006\f\n\u0004\b>\u0010[\u001a\u0004\bG\u0010\\R\u0019\u0010\u0019\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bQ\u0010;\u001a\u0004\b]\u00104R\u0019\u0010\u001a\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b^\u0010;\u001a\u0004\b_\u00104R\u0019\u0010\u001b\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bX\u0010;\u001a\u0004\b`\u00104R\u0019\u0010\u001c\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bN\u0010;\u001a\u0004\ba\u00104R\u0019\u0010\u001d\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bb\u0010;\u001a\u0004\b^\u00104R\u0019\u0010\u001f\u001a\u0004\u0018\u00010\u001e8\u0006¢\u0006\f\n\u0004\b<\u0010c\u001a\u0004\bd\u0010eR\u0017\u0010!\u001a\u00020 8\u0006¢\u0006\f\n\u0004\bf\u0010g\u001a\u0004\b:\u0010hR\u0017\u0010#\u001a\u00020\"8\u0006¢\u0006\f\n\u0004\bL\u0010i\u001a\u0004\bf\u0010jR\u0019\u0010$\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\bk\u0010;\u001a\u0004\bZ\u00104R\u0019\u0010%\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\ba\u0010;\u001a\u0004\bK\u00104R\u0019\u0010&\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b`\u0010;\u001a\u0004\bb\u00104R\u0019\u0010(\u001a\u0004\u0018\u00010'8\u0006¢\u0006\f\n\u0004\b_\u0010l\u001a\u0004\bM\u0010m¨\u0006n"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$Input;", "Landroid/os/Parcelable;", "", "sessionToken", "inquiryId", "fromStep", "fromComponent", "promptTitle", "promptDescription", "disclaimer", "submitButtonText", "pendingTitle", "pendingDescription", "fieldKeyDocument", "kind", "documentId", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$StartPage;", "startPage", "Lcom/withpersona/sdk2/inquiry/document/DocumentPages;", "pages", "", "documentFileLimit", "", "backStepEnabled", "cancelButtonEnabled", "permissionsTitle", "permissionsRationale", "permissionsModalPositiveButton", "permissionsModalNegativeButton", "largeFileErrorPrompt", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "styles", "Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$Document$AssetConfig;", "assetConfig", "Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;", "pendingPageTextVerticalPosition", "promptPageNavBarTitle", "checkPageNavBarTitle", "pendingPageNavBarTitle", "Lcom/withpersona/sdk2/inquiry/steps/ui/CustomPendingPage;", "customPendingPage", "<init>", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$StartPage;Lcom/withpersona/sdk2/inquiry/document/DocumentPages;IZZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$Document$AssetConfig;Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/steps/ui/CustomPendingPage;)V", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "equals", "(Ljava/lang/Object;)Z", "a", "Ljava/lang/String;", "x", "b", "r", "c", "q", "d", "p", "e", "J", "f", "G", "g", "k", "h", "N", "i", "z", "j", "v", "o", "l", "s", "m", "n", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$StartPage;", "K", "()Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$StartPage;", "Lcom/withpersona/sdk2/inquiry/document/DocumentPages;", "u", "()Lcom/withpersona/sdk2/inquiry/document/DocumentPages;", "I", "Z", "()Z", "E", "t", "D", "C", "B", "w", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "L", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "y", "Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$Document$AssetConfig;", "()Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$Document$AssetConfig;", "Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;", "()Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;", "A", "Lcom/withpersona/sdk2/inquiry/steps/ui/CustomPendingPage;", "()Lcom/withpersona/sdk2/inquiry/steps/ui/CustomPendingPage;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final /* data */ class Input implements Parcelable {
 
         @NotNull
@@ -292,7 +292,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
         }
 
         @Nullable
-        /* JADX INFO: renamed from: A, reason: from getter */
+        /* JADX INFO: renamed from: B, reason: from getter */
         public final String getPermissionsModalNegativeButton() {
             return this.permissionsModalNegativeButton;
         }
@@ -546,14 +546,14 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
         @NotNull
         /* JADX INFO: renamed from: x, reason: from getter */
-        public final PendingPageTextPosition getPendingPageTextVerticalPosition() {
-            return this.pendingPageTextVerticalPosition;
+        public final String getSessionToken() {
+            return this.sessionToken;
         }
 
         @NotNull
         /* JADX INFO: renamed from: y, reason: from getter */
-        public final String getSessionToken() {
-            return this.sessionToken;
+        public final PendingPageTextPosition getPendingPageTextVerticalPosition() {
+            return this.pendingPageTextVerticalPosition;
         }
 
         @Nullable
@@ -571,7 +571,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final Prompt f10038a = new Prompt();
+            public static final Prompt f10119a = new Prompt();
 
             @NotNull
             public static final Parcelable.Creator<Prompt> CREATOR = new a();
@@ -583,7 +583,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
                 public final Prompt createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return Prompt.f10038a;
+                    return Prompt.f10119a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -684,7 +684,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
         }
     }
 
-    @Metadata(d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b6\u0018\u00002\u00020\u0001:\u0006\u0014()*+,B1\b\u0004\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0006\u0012\f\u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\b¢\u0006\u0004\b\u000b\u0010\fJ\u0017\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\r\u001a\u00020\u0001H\u0016¢\u0006\u0004\b\u000f\u0010\u0010J\u0017\u0010\u0012\u001a\u00020\u00002\u0006\u0010\u0011\u001a\u00020\u000eH\u0000¢\u0006\u0004\b\u0012\u0010\u0013J\u0017\u0010\u0014\u001a\u00020\u00002\u0006\u0010\u0003\u001a\u00020\u0002H\u0000¢\u0006\u0004\b\u0014\u0010\u0015JA\u0010\u0017\u001a\u00020\u00002\u0006\u0010\u0005\u001a\u00020\u00042\n\b\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u00062\u0010\b\u0002\u0010\n\u001a\n\u0012\u0004\u0012\u00020\t\u0018\u00010\b2\n\b\u0002\u0010\u0016\u001a\u0004\u0018\u00010\tH\u0000¢\u0006\u0004\b\u0017\u0010\u0018R\u001a\u0010\u0003\u001a\u00020\u00028\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u0014\u0010\u0019\u001a\u0004\b\u001a\u0010\u001bR\u001a\u0010\u0005\u001a\u00020\u00048\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u001c\u0010\u001d\u001a\u0004\b\u001e\u0010\u001fR\u001c\u0010\u0007\u001a\u0004\u0018\u00010\u00068\u0016X\u0096\u0004¢\u0006\f\n\u0004\b \u0010!\u001a\u0004\b\"\u0010#R \u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\b8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b$\u0010%\u001a\u0004\b&\u0010'\u0082\u0001\u0004-./0¨\u00061"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;", "Lcom/withpersona/sdk2/inquiry/workflows/WorkflowState;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$a;", "captureState", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$UploadState;", "uploadState", "", "documentId", "", "Lcom/withpersona/sdk2/inquiry/document/DocumentFile;", "documents", "<init>", "(Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$a;Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$UploadState;Ljava/lang/String;Ljava/util/List;)V", "other", "", "t0", "(Lcom/withpersona/sdk2/inquiry/workflows/WorkflowState;)Z", "shouldShowUploadOptionsDialog", "f", "(Z)Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;", "a", "(Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$a;)Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;", "documentFileToDelete", "g", "(Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$UploadState;Ljava/lang/String;Ljava/util/List;Lcom/withpersona/sdk2/inquiry/document/DocumentFile;)Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$a;", "j", "()Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$a;", "b", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$UploadState;", "n", "()Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$UploadState;", "c", "Ljava/lang/String;", "k", "()Ljava/lang/String;", "d", "Ljava/util/List;", "m", "()Ljava/util/List;", "UploadState", "Start", "ReviewCapturesWithoutDocumentId", "ReviewCaptures", "UploadDocument", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$ReviewCaptures;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$ReviewCapturesWithoutDocumentId;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$Start;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$UploadDocument;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b6\u0018\u00002\u00020\u0001:\u0006\u0014()*+,B1\b\u0004\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0006\u0012\f\u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\b¢\u0006\u0004\b\u000b\u0010\fJ\u0017\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\r\u001a\u00020\u0001H\u0016¢\u0006\u0004\b\u000f\u0010\u0010J\u0017\u0010\u0012\u001a\u00020\u00002\u0006\u0010\u0011\u001a\u00020\u000eH\u0000¢\u0006\u0004\b\u0012\u0010\u0013J\u0017\u0010\u0014\u001a\u00020\u00002\u0006\u0010\u0003\u001a\u00020\u0002H\u0000¢\u0006\u0004\b\u0014\u0010\u0015JA\u0010\u0017\u001a\u00020\u00002\u0006\u0010\u0005\u001a\u00020\u00042\n\b\u0002\u0010\u0007\u001a\u0004\u0018\u00010\u00062\u0010\b\u0002\u0010\n\u001a\n\u0012\u0004\u0012\u00020\t\u0018\u00010\b2\n\b\u0002\u0010\u0016\u001a\u0004\u0018\u00010\tH\u0000¢\u0006\u0004\b\u0017\u0010\u0018R\u001a\u0010\u0003\u001a\u00020\u00028\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u0014\u0010\u0019\u001a\u0004\b\u001a\u0010\u001bR\u001a\u0010\u0005\u001a\u00020\u00048\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u001c\u0010\u001d\u001a\u0004\b\u001e\u0010\u001fR\u001c\u0010\u0007\u001a\u0004\u0018\u00010\u00068\u0016X\u0096\u0004¢\u0006\f\n\u0004\b \u0010!\u001a\u0004\b\"\u0010#R \u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\b8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b$\u0010%\u001a\u0004\b&\u0010'\u0082\u0001\u0004-./0¨\u00061"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;", "Lcom/withpersona/sdk2/inquiry/workflows/WorkflowState;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$a;", "captureState", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$UploadState;", "uploadState", "", "documentId", "", "Lcom/withpersona/sdk2/inquiry/document/DocumentFile;", "documents", "<init>", "(Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$a;Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$UploadState;Ljava/lang/String;Ljava/util/List;)V", "other", "", "p0", "(Lcom/withpersona/sdk2/inquiry/workflows/WorkflowState;)Z", "shouldShowUploadOptionsDialog", "f", "(Z)Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;", "a", "(Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$a;)Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;", "documentFileToDelete", "g", "(Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$UploadState;Ljava/lang/String;Ljava/util/List;Lcom/withpersona/sdk2/inquiry/document/DocumentFile;)Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$a;", "j", "()Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$a;", "b", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$UploadState;", "n", "()Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$UploadState;", "c", "Ljava/lang/String;", "k", "()Ljava/lang/String;", "d", "Ljava/util/List;", "m", "()Ljava/util/List;", "UploadState", "Start", "ReviewCapturesWithoutDocumentId", "ReviewCaptures", "UploadDocument", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$ReviewCaptures;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$ReviewCapturesWithoutDocumentId;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$Start;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$State$UploadDocument;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static abstract class State implements WorkflowState {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -711,7 +711,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
                 /* JADX INFO: renamed from: a, reason: collision with root package name */
                 @NotNull
-                public static final CreateDocument f10067a = new CreateDocument();
+                public static final CreateDocument f10148a = new CreateDocument();
 
                 @NotNull
                 public static final Parcelable.Creator<CreateDocument> CREATOR = new a();
@@ -723,7 +723,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
                     public final CreateDocument createFromParcel(Parcel parcel) {
                         Intrinsics.checkNotNullParameter(parcel, "parcel");
                         parcel.readInt();
-                        return CreateDocument.f10067a;
+                        return CreateDocument.f10148a;
                     }
 
                     @Override // android.os.Parcelable.Creator
@@ -958,7 +958,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
 
             /* JADX INFO: renamed from: g, reason: collision with root package name */
-            public static final /* synthetic */ qt.a f10076g = qt.b.a(a());
+            public static final /* synthetic */ ot.a f10157g = ot.b.a(a());
         }
 
         public /* synthetic */ State(a aVar, UploadState uploadState, String str, List list, DefaultConstructorMarker defaultConstructorMarker) {
@@ -1075,7 +1075,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
         }
 
         @Override // com.withpersona.sdk2.inquiry.workflows.WorkflowState
-        public boolean t0(@NotNull WorkflowState other) {
+        public boolean p0(@NotNull WorkflowState other) {
             Intrinsics.checkNotNullParameter(other, "other");
             return getClass() == other.getClass() && getCaptureState() == ((State) other).getCaptureState();
         }
@@ -1124,7 +1124,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
             }
 
             public /* synthetic */ UploadDocument(List list, String str, UploadState uploadState, String str2, int i10, DefaultConstructorMarker defaultConstructorMarker) {
-                this(list, str, (i10 & 4) != 0 ? UploadState.CreateDocument.f10067a : uploadState, (i10 & 8) != 0 ? null : str2);
+                this(list, str, (i10 & 4) != 0 ? UploadState.CreateDocument.f10148a : uploadState, (i10 & 8) != 0 ? null : str2);
             }
 
             /* JADX WARN: Multi-variable type inference failed */
@@ -1301,7 +1301,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
             }
 
             public /* synthetic */ ReviewCaptures(List list, String str, a aVar, UploadState uploadState, DocumentFile documentFile, boolean z10, boolean z11, String str2, int i10, DefaultConstructorMarker defaultConstructorMarker) {
-                this(list, str, (i10 & 4) != 0 ? a.None : aVar, (i10 & 8) != 0 ? UploadState.CreateDocument.f10067a : uploadState, (i10 & 16) != 0 ? null : documentFile, (i10 & 32) != 0 ? false : z10, (i10 & 64) != 0 ? false : z11, (i10 & 128) != 0 ? null : str2);
+                this(list, str, (i10 & 4) != 0 ? a.None : aVar, (i10 & 8) != 0 ? UploadState.CreateDocument.f10148a : uploadState, (i10 & 16) != 0 ? null : documentFile, (i10 & 32) != 0 ? false : z10, (i10 & 64) != 0 ? false : z11, (i10 & 128) != 0 ? null : str2);
             }
 
             /* JADX WARN: Multi-variable type inference failed */
@@ -1527,7 +1527,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
             }
 
             public /* synthetic */ ReviewCapturesWithoutDocumentId(List list, String str, a aVar, UploadState uploadState, DocumentFile documentFile, boolean z10, boolean z11, String str2, int i10, DefaultConstructorMarker defaultConstructorMarker) {
-                this(list, str, (i10 & 4) != 0 ? a.None : aVar, (i10 & 8) != 0 ? UploadState.CreateDocument.f10067a : uploadState, (i10 & 16) != 0 ? null : documentFile, (i10 & 32) != 0 ? false : z10, (i10 & 64) != 0 ? false : z11, (i10 & 128) != 0 ? null : str2);
+                this(list, str, (i10 & 4) != 0 ? a.None : aVar, (i10 & 8) != 0 ? UploadState.CreateDocument.f10148a : uploadState, (i10 & 16) != 0 ? null : documentFile, (i10 & 32) != 0 ? false : z10, (i10 & 64) != 0 ? false : z11, (i10 & 128) != 0 ? null : str2);
             }
 
             /* JADX WARN: Multi-variable type inference failed */
@@ -1719,7 +1719,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
             }
 
             public /* synthetic */ Start(a aVar, UploadState uploadState, String str, boolean z10, int i10, DefaultConstructorMarker defaultConstructorMarker) {
-                this((i10 & 1) != 0 ? a.None : aVar, (i10 & 2) != 0 ? UploadState.CreateDocument.f10067a : uploadState, str, (i10 & 8) != 0 ? false : z10);
+                this((i10 & 1) != 0 ? a.None : aVar, (i10 & 2) != 0 ? UploadState.CreateDocument.f10148a : uploadState, str, (i10 & 8) != 0 ? false : z10);
             }
 
             public static /* synthetic */ Start p(Start start, a aVar, UploadState uploadState, String str, boolean z10, int i10, Object obj) {
@@ -1825,18 +1825,18 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
         /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.document.DocumentWorkflow$a$a, reason: collision with other inner class name */
         @Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\bÆ\n\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0010\u0010\u0005\u001a\u00020\u0004HÖ\u0001¢\u0006\u0004\b\u0005\u0010\u0006J\u0010\u0010\b\u001a\u00020\u0007HÖ\u0001¢\u0006\u0004\b\b\u0010\tJ\u001a\u0010\r\u001a\u00020\f2\b\u0010\u000b\u001a\u0004\u0018\u00010\nHÖ\u0003¢\u0006\u0004\b\r\u0010\u000e¨\u0006\u000f"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$a$a;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$a;", "<init>", "()V", "", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-        public static final /* data */ class C0164a extends a {
+        public static final /* data */ class C0167a extends a {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final C0164a f10077a = new C0164a();
+            public static final C0167a f10158a = new C0167a();
 
-            public C0164a() {
+            public C0167a() {
                 super(null);
             }
 
             public boolean equals(@Nullable Object other) {
-                return this == other || (other instanceof C0164a);
+                return this == other || (other instanceof C0167a);
             }
 
             public int hashCode() {
@@ -1854,7 +1854,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final b f10078a = new b();
+            public static final b f10159a = new b();
 
             public b() {
                 super(null);
@@ -1879,7 +1879,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final c f10079a = new c();
+            public static final c f10160a = new c();
 
             public c() {
                 super(null);
@@ -1904,7 +1904,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final d f10080a = new d();
+            public static final d f10161a = new d();
 
             public d() {
                 super(null);
@@ -1929,7 +1929,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final e f10081a = new e();
+            public static final e f10162a = new e();
 
             public e() {
                 super(null);
@@ -2008,7 +2008,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final g f10083a = new g();
+            public static final g f10164a = new g();
 
             public g() {
                 super(null);
@@ -2033,7 +2033,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final h f10084a = new h();
+            public static final h f10165a = new h();
 
             public h() {
                 super(null);
@@ -2096,7 +2096,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final j f10086a = new j();
+            public static final j f10167a = new j();
 
             public j() {
                 super(null);
@@ -2132,7 +2132,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final a f10087a = new a();
+            public static final a f10168a = new a();
 
             public a() {
                 super(null);
@@ -2154,18 +2154,18 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
         /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.document.DocumentWorkflow$b$b, reason: collision with other inner class name */
         @Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\bÆ\n\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0010\u0010\u0005\u001a\u00020\u0004HÖ\u0001¢\u0006\u0004\b\u0005\u0010\u0006J\u0010\u0010\b\u001a\u00020\u0007HÖ\u0001¢\u0006\u0004\b\b\u0010\tJ\u001a\u0010\r\u001a\u00020\f2\b\u0010\u000b\u001a\u0004\u0018\u00010\nHÖ\u0003¢\u0006\u0004\b\r\u0010\u000e¨\u0006\u000f"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$b$b;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$b;", "<init>", "()V", "", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-        public static final /* data */ class C0165b extends b {
+        public static final /* data */ class C0168b extends b {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final C0165b f10088a = new C0165b();
+            public static final C0168b f10169a = new C0168b();
 
-            public C0165b() {
+            public C0168b() {
                 super(null);
             }
 
             public boolean equals(@Nullable Object other) {
-                return this == other || (other instanceof C0165b);
+                return this == other || (other instanceof C0168b);
             }
 
             public int hashCode() {
@@ -2221,7 +2221,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final d f10090a = new d();
+            public static final d f10171a = new d();
 
             public d() {
                 super(null);
@@ -2253,7 +2253,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
     public static final /* synthetic */ class d {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f10128a;
+        public static final /* synthetic */ int[] f10209a;
         public static final /* synthetic */ int[] b;
 
         static {
@@ -2270,7 +2270,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
                 iArr[j1.SettingsLaunched.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
-            f10128a = iArr;
+            f10209a = iArr;
             int[] iArr2 = new int[State.a.values().length];
             try {
                 iArr2[State.a.None.ordinal()] = 1;
@@ -2296,132 +2296,132 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.document.DocumentWorkflow$render$4", f = "DocumentWorkflow.kt", l = {}, m = "invokeSuspend")
-    public static final class e extends m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.document.DocumentWorkflow$render$4", f = "DocumentWorkflow.kt", l = {}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class e extends m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f10129t;
+        public int f10210t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public final /* synthetic */ k<Input, State, b, Object>.a f10130u;
+        public final /* synthetic */ k<Input, State, b, Object>.a f10211u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ DocumentWorkflow f10131v;
+        public final /* synthetic */ DocumentWorkflow f10212v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public final /* synthetic */ String f10132w;
+        public final /* synthetic */ String f10213w;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         /* JADX WARN: Multi-variable type inference failed */
-        public e(k<? super Input, State, ? extends b, ? extends Object>.a aVar, DocumentWorkflow documentWorkflow, String str, nt.b<? super e> bVar) {
+        public e(k<? super Input, State, ? extends b, ? extends Object>.a aVar, DocumentWorkflow documentWorkflow, String str, lt.b<? super e> bVar) {
             super(2, bVar);
-            this.f10130u = aVar;
-            this.f10131v = documentWorkflow;
-            this.f10132w = str;
+            this.f10211u = aVar;
+            this.f10212v = documentWorkflow;
+            this.f10213w = str;
         }
 
-        public static final Unit r(String str, r.c cVar) {
+        public static final Unit n(String str, r.c cVar) {
             Object objC = cVar.c();
             State.ReviewCapturesWithoutDocumentId reviewCapturesWithoutDocumentId = objC instanceof State.ReviewCapturesWithoutDocumentId ? (State.ReviewCapturesWithoutDocumentId) objC : null;
             if (reviewCapturesWithoutDocumentId == null) {
-                return Unit.f22483a;
+                return Unit.f22938a;
             }
             cVar.e(new State.ReviewCaptures(reviewCapturesWithoutDocumentId.m(), str, null, new State.UploadState.UploadFiles(str), null, false, false, reviewCapturesWithoutDocumentId.getError(), 116, null));
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return new e(this.f10130u, this.f10131v, this.f10132w, bVar);
-        }
-
-        @Override // pt.a
-        public final Object invokeSuspend(Object obj) {
-            ot.c.e();
-            if (this.f10129t != 0) {
-                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-            }
-            o.b(obj);
-            ym.h<r<? super Input, State, ? extends b>> hVarD = this.f10130u.d();
-            DocumentWorkflow documentWorkflow = this.f10131v;
-            final String str = this.f10132w;
-            hVarD.a(z.d(documentWorkflow, null, new Function1() { // from class: zn.j2
-                @Override // kotlin.jvm.functions.Function1
-                public final Object invoke(Object obj2) {
-                    return DocumentWorkflow.e.r(str, (ym.r.c) obj2);
-                }
-            }, 1, null));
-            return Unit.f22483a;
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return new e(this.f10211u, this.f10212v, this.f10213w, bVar);
         }
 
         @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((e) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((e) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
+        public final Object invokeSuspend(Object obj) {
+            mt.c.e();
+            if (this.f10210t != 0) {
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            }
+            o.b(obj);
+            wm.h<r<? super Input, State, ? extends b>> hVarD = this.f10211u.d();
+            DocumentWorkflow documentWorkflow = this.f10212v;
+            final String str = this.f10213w;
+            hVarD.a(z.d(documentWorkflow, null, new Function1() { // from class: xn.j2
+                @Override // kotlin.jvm.functions.Function1
+                public final Object invoke(Object obj2) {
+                    return DocumentWorkflow.e.n(str, (wm.r.c) obj2);
+                }
+            }, 1, null));
+            return Unit.f22938a;
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.document.DocumentWorkflow$run$4", f = "DocumentWorkflow.kt", l = {}, m = "invokeSuspend")
-    public static final class f extends m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.document.DocumentWorkflow$run$4", f = "DocumentWorkflow.kt", l = {}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class f extends m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f10133t;
+        public int f10214t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public final /* synthetic */ k<Input, State, b, Object>.a f10134u;
+        public final /* synthetic */ k<Input, State, b, Object>.a f10215u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ DocumentWorkflow f10135v;
+        public final /* synthetic */ DocumentWorkflow f10216v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public final /* synthetic */ State.UploadState f10136w;
+        public final /* synthetic */ State.UploadState f10217w;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         /* JADX WARN: Multi-variable type inference failed */
-        public f(k<? super Input, State, ? extends b, ? extends Object>.a aVar, DocumentWorkflow documentWorkflow, State.UploadState uploadState, nt.b<? super f> bVar) {
+        public f(k<? super Input, State, ? extends b, ? extends Object>.a aVar, DocumentWorkflow documentWorkflow, State.UploadState uploadState, lt.b<? super f> bVar) {
             super(2, bVar);
-            this.f10134u = aVar;
-            this.f10135v = documentWorkflow;
-            this.f10136w = uploadState;
+            this.f10215u = aVar;
+            this.f10216v = documentWorkflow;
+            this.f10217w = uploadState;
         }
 
-        public static final Unit r(State.UploadState uploadState, r.c cVar) {
+        public static final Unit n(State.UploadState uploadState, r.c cVar) {
             cVar.e(State.i((State) cVar.c(), new State.UploadState.ReadyToSubmit(((State.UploadState.UploadFiles) uploadState).getDocumentId()), null, null, null, 14, null));
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return new f(this.f10134u, this.f10135v, this.f10136w, bVar);
-        }
-
-        @Override // pt.a
-        public final Object invokeSuspend(Object obj) {
-            ot.c.e();
-            if (this.f10133t != 0) {
-                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-            }
-            o.b(obj);
-            ym.h<r<? super Input, State, ? extends b>> hVarD = this.f10134u.d();
-            DocumentWorkflow documentWorkflow = this.f10135v;
-            final State.UploadState uploadState = this.f10136w;
-            hVarD.a(z.d(documentWorkflow, null, new Function1() { // from class: zn.k2
-                @Override // kotlin.jvm.functions.Function1
-                public final Object invoke(Object obj2) {
-                    return DocumentWorkflow.f.r(uploadState, (ym.r.c) obj2);
-                }
-            }, 1, null));
-            return Unit.f22483a;
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return new f(this.f10215u, this.f10216v, this.f10217w, bVar);
         }
 
         @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((f) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((f) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
+        public final Object invokeSuspend(Object obj) {
+            mt.c.e();
+            if (this.f10214t != 0) {
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            }
+            o.b(obj);
+            wm.h<r<? super Input, State, ? extends b>> hVarD = this.f10215u.d();
+            DocumentWorkflow documentWorkflow = this.f10216v;
+            final State.UploadState uploadState = this.f10217w;
+            hVarD.a(z.d(documentWorkflow, null, new Function1() { // from class: xn.k2
+                @Override // kotlin.jvm.functions.Function1
+                public final Object invoke(Object obj2) {
+                    return DocumentWorkflow.f.n(uploadState, (wm.r.c) obj2);
+                }
+            }, 1, null));
+            return Unit.f22938a;
         }
     }
 
-    public DocumentWorkflow(@NotNull s imageLoader, @NotNull Context applicationContext, @NotNull PermissionRequestWorkflow permissionRequestWorkflow, @NotNull com.withpersona.sdk2.inquiry.document.a documentCameraWorker, @NotNull i.b documentsSelectWorkerFactory, @NotNull com.withpersona.sdk2.inquiry.document.network.a.C0179a documentCreateWorker, @NotNull com.withpersona.sdk2.inquiry.document.network.e.a documentLoadWorker, @NotNull com.withpersona.sdk2.inquiry.document.network.c.a documentFileUploadWorker, @NotNull bo.a.C0086a documentFileDeleteWorker, @NotNull com.withpersona.sdk2.inquiry.document.network.g.a documentSubmitWorker, @NotNull uq.a navigationStateManager, @NotNull pq.c externalEventLogger, @NotNull TrackingEventsLogger trackingEventsLogger) {
+    public DocumentWorkflow(@NotNull s imageLoader, @NotNull Context applicationContext, @NotNull PermissionRequestWorkflow permissionRequestWorkflow, @NotNull com.withpersona.sdk2.inquiry.document.a documentCameraWorker, @NotNull i.b documentsSelectWorkerFactory, @NotNull com.withpersona.sdk2.inquiry.document.network.a.C0182a documentCreateWorker, @NotNull com.withpersona.sdk2.inquiry.document.network.e.a documentLoadWorker, @NotNull com.withpersona.sdk2.inquiry.document.network.c.a documentFileUploadWorker, @NotNull zn.a.C0693a documentFileDeleteWorker, @NotNull com.withpersona.sdk2.inquiry.document.network.g.a documentSubmitWorker, @NotNull sq.a navigationStateManager, @NotNull nq.c externalEventLogger, @NotNull TrackingEventsLogger trackingEventsLogger) {
         Intrinsics.checkNotNullParameter(imageLoader, "imageLoader");
         Intrinsics.checkNotNullParameter(applicationContext, "applicationContext");
         Intrinsics.checkNotNullParameter(permissionRequestWorkflow, "permissionRequestWorkflow");
@@ -2452,20 +2452,20 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
     public static final r A1(final DocumentWorkflow documentWorkflow, final State state, final PermissionRequestWorkflow.Output it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        return z.d(documentWorkflow, null, new Function1() { // from class: zn.r0
+        return z.d(documentWorkflow, null, new Function1() { // from class: xn.r0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return DocumentWorkflow.B1(it, documentWorkflow, state, (ym.r.c) obj);
+                return DocumentWorkflow.B1(it, documentWorkflow, state, (wm.r.c) obj);
             }
         }, 1, null);
     }
 
     public static final Unit B1(PermissionRequestWorkflow.Output output, DocumentWorkflow documentWorkflow, State state, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
-        int i10 = d.f10128a[output.getPermissionState().getResult().ordinal()];
+        int i10 = d.f10209a[output.getPermissionState().getResult().ordinal()];
         if (i10 == 1) {
             com.withpersona.sdk2.inquiry.document.a aVar = documentWorkflow.documentCameraWorker;
-            String string = documentWorkflow.applicationContext.getString(vp.g.b);
+            String string = documentWorkflow.applicationContext.getString(tp.g.b);
             Intrinsics.checkNotNullExpressionValue(string, "getString(...)");
             action.e(aVar.e(string) ? state.a(State.a.CameraRunning) : state.a(State.a.None));
         } else {
@@ -2474,30 +2474,30 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
             }
             action.e(state.a(State.a.None));
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit C0(DocumentWorkflow documentWorkflow, k.a aVar, UiComponent it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        documentWorkflow.K0(aVar, a.g.f10083a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.g.f10164a);
+        return Unit.f22938a;
     }
 
     public static final r C1(DocumentWorkflow documentWorkflow, final com.withpersona.sdk2.inquiry.document.network.e.b it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        if (it instanceof com.withpersona.sdk2.inquiry.document.network.e.b.C0188b) {
-            return z.d(documentWorkflow, null, new Function1() { // from class: zn.e1
+        if (it instanceof com.withpersona.sdk2.inquiry.document.network.e.b.C0191b) {
+            return z.d(documentWorkflow, null, new Function1() { // from class: xn.e1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.D1(it, (ym.r.c) obj);
+                    return DocumentWorkflow.D1(it, (wm.r.c) obj);
                 }
             }, 1, null);
         }
         if (it instanceof com.withpersona.sdk2.inquiry.document.network.e.b.a) {
-            return z.d(documentWorkflow, null, new Function1() { // from class: zn.f1
+            return z.d(documentWorkflow, null, new Function1() { // from class: xn.f1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.E1(it, (ym.r.c) obj);
+                    return DocumentWorkflow.E1(it, (wm.r.c) obj);
                 }
             }, 1, null);
         }
@@ -2506,8 +2506,8 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
     public static final Unit D0(DocumentWorkflow documentWorkflow, k.a aVar, UiComponent it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        documentWorkflow.K0(aVar, a.h.f10084a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.h.f10165a);
+        return Unit.f22938a;
     }
 
     public static final Unit D1(com.withpersona.sdk2.inquiry.document.network.e.b bVar, r.c action) {
@@ -2515,10 +2515,10 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
         Object objC = action.c();
         State.ReviewCaptures reviewCaptures = objC instanceof State.ReviewCaptures ? (State.ReviewCaptures) objC : null;
         if (reviewCaptures == null) {
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
         State.UploadState.ReadyToSubmit readyToSubmit = new State.UploadState.ReadyToSubmit(reviewCaptures.getDocumentId());
-        List<DocumentFile> listA = ((com.withpersona.sdk2.inquiry.document.network.e.b.C0188b) bVar).a();
+        List<DocumentFile> listA = ((com.withpersona.sdk2.inquiry.document.network.e.b.C0191b) bVar).a();
         List<DocumentFile> listM = reviewCaptures.m();
         ArrayList arrayList = new ArrayList();
         for (Object obj : listM) {
@@ -2527,70 +2527,70 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
             }
         }
         action.e(State.ReviewCaptures.p(reviewCaptures, CollectionsKt.w0(listA, arrayList), null, null, readyToSubmit, null, false, false, null, 214, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit E0(DocumentWorkflow documentWorkflow, k.a aVar, UiComponent it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        documentWorkflow.K0(aVar, a.j.f10086a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.j.f10167a);
+        return Unit.f22938a;
     }
 
     public static final Unit E1(com.withpersona.sdk2.inquiry.document.network.e.b bVar, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         action.d(new b.Errored(((com.withpersona.sdk2.inquiry.document.network.e.b.a) bVar).getCause()));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit F0(DocumentWorkflow documentWorkflow, k.a aVar, UiComponent it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        documentWorkflow.K0(aVar, a.e.f10081a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.e.f10162a);
+        return Unit.f22938a;
     }
 
     public static final Unit F1(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.g.f10083a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.g.f10164a);
+        return Unit.f22938a;
     }
 
     public static final Unit G0(DocumentWorkflow documentWorkflow, k.a aVar, UiComponent it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        documentWorkflow.K0(aVar, a.g.f10083a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.g.f10164a);
+        return Unit.f22938a;
     }
 
     public static final Unit G1(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.h.f10084a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.h.f10165a);
+        return Unit.f22938a;
     }
 
     public static final Unit H0(DocumentWorkflow documentWorkflow, k.a aVar, UiComponent it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        documentWorkflow.K0(aVar, a.h.f10084a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.h.f10165a);
+        return Unit.f22938a;
     }
 
     public static final Unit I0(DocumentWorkflow documentWorkflow, k.a aVar, UiComponent it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        documentWorkflow.K0(aVar, a.j.f10086a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.j.f10167a);
+        return Unit.f22938a;
     }
 
     public static final r J1(DocumentWorkflow documentWorkflow, final Input input, final com.withpersona.sdk2.inquiry.document.a.b it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        if (it instanceof com.withpersona.sdk2.inquiry.document.a.b.C0169b) {
-            return z.d(documentWorkflow, null, new Function1() { // from class: zn.z1
+        if (it instanceof com.withpersona.sdk2.inquiry.document.a.b.C0172b) {
+            return z.d(documentWorkflow, null, new Function1() { // from class: xn.z1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.K1(it, input, (ym.r.c) obj);
+                    return DocumentWorkflow.K1(it, input, (wm.r.c) obj);
                 }
             }, 1, null);
         }
-        if (Intrinsics.c(it, com.withpersona.sdk2.inquiry.document.a.b.C0168a.f10147a)) {
-            return z.d(documentWorkflow, null, new Function1() { // from class: zn.a2
+        if (Intrinsics.c(it, com.withpersona.sdk2.inquiry.document.a.b.C0171a.f10228a)) {
+            return z.d(documentWorkflow, null, new Function1() { // from class: xn.a2
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.L1((ym.r.c) obj);
+                    return DocumentWorkflow.L1((wm.r.c) obj);
                 }
             }, 1, null);
         }
@@ -2605,51 +2605,51 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
         boolean z10 = false;
         boolean z11 = false;
         String str = null;
-        action.e(new State.ReviewCapturesWithoutDocumentId(CollectionsKt.H0(CollectionsKt.x0(((State) action.c()).m(), new DocumentFile.Local(((com.withpersona.sdk2.inquiry.document.a.b.C0169b) bVar).getAbsoluteFilePath(), CaptureMethod.MANUAL, 0, 4, null)), input.getDocumentFileLimit()), ((State) action.c()).getDocumentId(), aVar, uploadState, documentFile, z10, z11, str, 244, null));
-        return Unit.f22483a;
+        action.e(new State.ReviewCapturesWithoutDocumentId(CollectionsKt.H0(CollectionsKt.x0(((State) action.c()).m(), new DocumentFile.Local(((com.withpersona.sdk2.inquiry.document.a.b.C0172b) bVar).getAbsoluteFilePath(), CaptureMethod.MANUAL, 0, 4, null)), input.getDocumentFileLimit()), ((State) action.c()).getDocumentId(), aVar, uploadState, documentFile, z10, z11, str, 244, null));
+        return Unit.f22938a;
     }
 
     public static final Unit L0(r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
-        action.d(b.C0165b.f10088a);
-        return Unit.f22483a;
+        action.d(b.C0168b.f10169a);
+        return Unit.f22938a;
     }
 
     public static final Unit L1(r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         action.e(((State) action.c()).a(State.a.None));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit M0(r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
-        action.d(b.a.f10087a);
-        return Unit.f22483a;
+        action.d(b.a.f10168a);
+        return Unit.f22938a;
     }
 
     public static final r M1(final DocumentWorkflow documentWorkflow, final Input input, final State state, final i.c it) {
         Intrinsics.checkNotNullParameter(it, "it");
         if (it instanceof i.c.Success) {
-            return z.d(documentWorkflow, null, new Function1() { // from class: zn.b2
+            return z.d(documentWorkflow, null, new Function1() { // from class: xn.b2
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.N1(it, input, (ym.r.c) obj);
+                    return DocumentWorkflow.N1(it, input, (wm.r.c) obj);
                 }
             }, 1, null);
         }
         if (it instanceof i.c.Failure) {
-            return z.d(documentWorkflow, null, new Function1() { // from class: zn.c2
+            return z.d(documentWorkflow, null, new Function1() { // from class: xn.c2
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.O1(it, input, documentWorkflow, (ym.r.c) obj);
+                    return DocumentWorkflow.O1(it, input, documentWorkflow, (wm.r.c) obj);
                 }
             }, 1, null);
         }
-        if (Intrinsics.c(it, i.c.a.f10218a)) {
-            return z.d(documentWorkflow, null, new Function1() { // from class: zn.d2
+        if (Intrinsics.c(it, i.c.a.f10299a)) {
+            return z.d(documentWorkflow, null, new Function1() { // from class: xn.d2
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.P1(state, (ym.r.c) obj);
+                    return DocumentWorkflow.P1(state, (wm.r.c) obj);
                 }
             }, 1, null);
         }
@@ -2659,62 +2659,62 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
     public static final Unit N0(r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         action.e(((State) action.c()).a(State.a.SelectFileFromDocuments).f(false));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit N1(i.c cVar, Input input, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         State.a aVar = null;
         action.e(new State.ReviewCapturesWithoutDocumentId(CollectionsKt.H0(CollectionsKt.w0(((State) action.c()).m(), g.b(((i.c.Success) cVar).a())), input.getDocumentFileLimit()), ((State) action.c()).getDocumentId(), aVar, ((State) action.c()).getUploadState(), null, false, false, null, 244, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit O0(r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         action.e(((State) action.c()).a(State.a.SelectImageFromPhotoLibrary).f(false));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit O1(i.c cVar, Input input, DocumentWorkflow documentWorkflow, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         State.a aVar = null;
-        action.e(new State.ReviewCapturesWithoutDocumentId(CollectionsKt.H0(CollectionsKt.w0(((State) action.c()).m(), g.b(((i.c.Failure) cVar).a())), input.getDocumentFileLimit()), ((State) action.c()).getDocumentId(), aVar, ((State) action.c()).getUploadState(), null, false, false, documentWorkflow.applicationContext.getString(vp.g.f33398m), 116, null));
-        return Unit.f22483a;
+        action.e(new State.ReviewCapturesWithoutDocumentId(CollectionsKt.H0(CollectionsKt.w0(((State) action.c()).m(), g.b(((i.c.Failure) cVar).a())), input.getDocumentFileLimit()), ((State) action.c()).getDocumentId(), aVar, ((State) action.c()).getUploadState(), null, false, false, documentWorkflow.applicationContext.getString(tp.g.f32534m), 116, null));
+        return Unit.f22938a;
     }
 
     public static final Unit P0(r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         action.e(((State) action.c()).a(State.a.CheckCameraPermissions).f(false));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit P1(State state, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         action.e(state.a(State.a.None));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit Q0(r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         action.e(((State) action.c()).f(true));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final r Q1(DocumentWorkflow documentWorkflow, final com.withpersona.sdk2.inquiry.document.network.a.b it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        if (it instanceof com.withpersona.sdk2.inquiry.document.network.a.b.C0181b) {
-            return z.d(documentWorkflow, null, new Function1() { // from class: zn.s1
+        if (it instanceof com.withpersona.sdk2.inquiry.document.network.a.b.C0184b) {
+            return z.d(documentWorkflow, null, new Function1() { // from class: xn.s1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.R1(it, (ym.r.c) obj);
+                    return DocumentWorkflow.R1(it, (wm.r.c) obj);
                 }
             }, 1, null);
         }
         if (it instanceof com.withpersona.sdk2.inquiry.document.network.a.b.Error) {
-            return z.d(documentWorkflow, null, new Function1() { // from class: zn.u1
+            return z.d(documentWorkflow, null, new Function1() { // from class: xn.u1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.S1(it, (ym.r.c) obj);
+                    return DocumentWorkflow.S1(it, (wm.r.c) obj);
                 }
             }, 1, null);
         }
@@ -2724,14 +2724,14 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
     public static final Unit R0(r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         action.e(((State) action.c()).f(false));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit R1(com.withpersona.sdk2.inquiry.document.network.a.b bVar, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
-        com.withpersona.sdk2.inquiry.document.network.a.b.C0181b c0181b = (com.withpersona.sdk2.inquiry.document.network.a.b.C0181b) bVar;
-        action.e(State.i((State) action.c(), new State.UploadState.ReadyToSubmit(c0181b.getDocumentId()), c0181b.getDocumentId(), null, null, 12, null));
-        return Unit.f22483a;
+        com.withpersona.sdk2.inquiry.document.network.a.b.C0184b c0184b = (com.withpersona.sdk2.inquiry.document.network.a.b.C0184b) bVar;
+        action.e(State.i((State) action.c(), new State.UploadState.ReadyToSubmit(c0184b.getDocumentId()), c0184b.getDocumentId(), null, null, 12, null));
+        return Unit.f22938a;
     }
 
     public static final Unit S0(a aVar, r.c action) {
@@ -2740,7 +2740,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
             a.RemoveDocument removeDocument = (a.RemoveDocument) aVar;
             action.e(State.i((State) action.c(), new State.UploadState.DeleteFiles(removeDocument.getDocumentId()), null, null, removeDocument.getDocument(), 6, null));
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit S1(com.withpersona.sdk2.inquiry.document.network.a.b bVar, r.c action) {
@@ -2749,7 +2749,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
         if (!error.getCause().isRecoverable()) {
             action.d(new b.Errored(error.getCause()));
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit T0(r.c action) {
@@ -2758,40 +2758,40 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
         if (state instanceof State.ReviewCaptures) {
             action.e(State.ReviewCaptures.p((State.ReviewCaptures) state, null, null, null, null, null, false, false, null, 127, null));
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final r T1(final DocumentWorkflow documentWorkflow, final State.UploadState uploadState, final DocumentFile.Local local, final Input input, final com.withpersona.sdk2.inquiry.document.network.c.b response) {
         Intrinsics.checkNotNullParameter(response, "response");
         if (response instanceof com.withpersona.sdk2.inquiry.document.network.c.b.d) {
-            return z.d(documentWorkflow, null, new Function1() { // from class: zn.v1
+            return z.d(documentWorkflow, null, new Function1() { // from class: xn.v1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.U1(uploadState, response, (ym.r.c) obj);
+                    return DocumentWorkflow.U1(uploadState, response, (wm.r.c) obj);
                 }
             }, 1, null);
         }
-        if (response instanceof com.withpersona.sdk2.inquiry.document.network.c.b.C0183c) {
-            return z.d(documentWorkflow, null, new Function1() { // from class: zn.w1
+        if (response instanceof com.withpersona.sdk2.inquiry.document.network.c.b.C0186c) {
+            return z.d(documentWorkflow, null, new Function1() { // from class: xn.w1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.V1(local, response, (ym.r.c) obj);
+                    return DocumentWorkflow.V1(local, response, (wm.r.c) obj);
                 }
             }, 1, null);
         }
         if (response instanceof com.withpersona.sdk2.inquiry.document.network.c.b.a) {
-            return z.d(documentWorkflow, null, new Function1() { // from class: zn.x1
+            return z.d(documentWorkflow, null, new Function1() { // from class: xn.x1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.W1(local, uploadState, response, documentWorkflow, input, (ym.r.c) obj);
+                    return DocumentWorkflow.W1(local, uploadState, response, documentWorkflow, input, (wm.r.c) obj);
                 }
             }, 1, null);
         }
-        if (response instanceof com.withpersona.sdk2.inquiry.document.network.c.b.C0182b) {
-            return z.d(documentWorkflow, null, new Function1() { // from class: zn.y1
+        if (response instanceof com.withpersona.sdk2.inquiry.document.network.c.b.C0185b) {
+            return z.d(documentWorkflow, null, new Function1() { // from class: xn.y1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.X1(response, (ym.r.c) obj);
+                    return DocumentWorkflow.X1(response, (wm.r.c) obj);
                 }
             }, 1, null);
         }
@@ -2802,7 +2802,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         a.Submit submit = (a.Submit) aVar;
         action.e(new State.UploadDocument(((State) action.c()).m(), submit.getDocumentId(), new State.UploadState.ReadyToSubmit(submit.getDocumentId()), null, 8, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit U1(State.UploadState uploadState, com.withpersona.sdk2.inquiry.document.network.c.b bVar, r.c action) {
@@ -2836,7 +2836,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
             }
         }
         action.e(State.i((State) action.c(), readyToSubmit, null, arrayList, null, 10, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit V1(DocumentFile.Local local, com.withpersona.sdk2.inquiry.document.network.c.b bVar, r.c action) {
@@ -2845,17 +2845,17 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
         ArrayList arrayList = new ArrayList(q.u(listM, 10));
         for (Parcelable parcelableF : listM) {
             if ((parcelableF instanceof DocumentFile.Local) && Intrinsics.c(parcelableF, local)) {
-                parcelableF = DocumentFile.Local.f((DocumentFile.Local) parcelableF, null, null, ((com.withpersona.sdk2.inquiry.document.network.c.b.C0183c) bVar).getProgressPercentage(), 3, null);
+                parcelableF = DocumentFile.Local.f((DocumentFile.Local) parcelableF, null, null, ((com.withpersona.sdk2.inquiry.document.network.c.b.C0186c) bVar).getProgressPercentage(), 3, null);
             }
             arrayList.add(parcelableF);
         }
         action.e(State.i((State) action.c(), ((State) action.c()).getUploadState(), null, arrayList, null, 10, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit W0(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.C0164a.f10077a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.C0167a.f10158a);
+        return Unit.f22938a;
     }
 
     public static final Unit W1(DocumentFile.Local local, State.UploadState uploadState, com.withpersona.sdk2.inquiry.document.network.c.b bVar, DocumentWorkflow documentWorkflow, Input input, r.c action) {
@@ -2883,47 +2883,47 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
         com.withpersona.sdk2.inquiry.document.network.c.b.a aVar = (com.withpersona.sdk2.inquiry.document.network.c.b.a) bVar;
         DocumentFile documentFile = null;
         action.e(new State.ReviewCaptures(listV0, ((State.UploadState.UploadFiles) uploadState).getDocumentId(), State.a.None, uploadState2, documentFile, aVar.getCause() instanceof GenericFileUploadErrorResponse.DocumentErrorResponse.FileLimitExceededError, false, g.c(aVar.getCause(), documentWorkflow.applicationContext, input), 80, null));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit X0(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.b.f10078a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.b.f10159a);
+        return Unit.f22938a;
     }
 
     public static final Unit X1(com.withpersona.sdk2.inquiry.document.network.c.b bVar, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
-        action.d(new b.Errored(((com.withpersona.sdk2.inquiry.document.network.c.b.C0182b) bVar).getCause()));
-        return Unit.f22483a;
+        action.d(new b.Errored(((com.withpersona.sdk2.inquiry.document.network.c.b.C0185b) bVar).getCause()));
+        return Unit.f22938a;
     }
 
     public static final Unit Y0(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.j.f10086a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.j.f10167a);
+        return Unit.f22938a;
     }
 
-    public static final r Y1(DocumentWorkflow documentWorkflow, final DocumentFile.Remote remote, final State.UploadState uploadState, final bo.a.b response) {
+    public static final r Y1(DocumentWorkflow documentWorkflow, final DocumentFile.Remote remote, final State.UploadState uploadState, final zn.a.b response) {
         Intrinsics.checkNotNullParameter(response, "response");
-        return z.d(documentWorkflow, null, new Function1() { // from class: zn.f2
+        return z.d(documentWorkflow, null, new Function1() { // from class: xn.f2
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return DocumentWorkflow.Z1(remote, uploadState, response, (ym.r.c) obj);
+                return DocumentWorkflow.Z1(remote, uploadState, response, (wm.r.c) obj);
             }
         }, 1, null);
     }
 
     public static final Unit Z0(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.e.f10081a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.e.f10162a);
+        return Unit.f22938a;
     }
 
-    public static final Unit Z1(DocumentFile.Remote remote, State.UploadState uploadState, bo.a.b bVar, r.c action) {
+    public static final Unit Z1(DocumentFile.Remote remote, State.UploadState uploadState, zn.a.b bVar, r.c action) {
         State.UploadState uploadFiles;
         Intrinsics.checkNotNullParameter(action, "$this$action");
         Object objC = action.c();
         State.ReviewCaptures reviewCaptures = objC instanceof State.ReviewCaptures ? (State.ReviewCaptures) objC : null;
         if (reviewCaptures == null) {
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
         List listV0 = CollectionsKt.v0(reviewCaptures.m(), remote);
         List list = listV0;
@@ -2944,59 +2944,59 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
             break;
         }
         State.UploadState uploadState2 = uploadFiles;
-        if (bVar instanceof bo.a.b.C0088b) {
+        if (bVar instanceof zn.a.b.C0695b) {
             action.e(State.ReviewCaptures.p(reviewCaptures, listV0, null, null, uploadState2, null, false, false, null, 230, null));
         } else {
-            if (!(bVar instanceof bo.a.b.Error)) {
+            if (!(bVar instanceof zn.a.b.Error)) {
                 throw new l();
             }
-            action.d(new b.Errored(((bo.a.b.Error) bVar).getCause()));
+            action.d(new b.Errored(((zn.a.b.Error) bVar).getCause()));
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit a1(DocumentWorkflow documentWorkflow, k.a aVar, State state, DocumentFile.Remote document) {
         Intrinsics.checkNotNullParameter(document, "document");
         documentWorkflow.K0(aVar, new a.RemoveDocument(((State.ReviewCaptures) state).getDocumentId(), document));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit b1(DocumentWorkflow documentWorkflow, k.a aVar, State state) {
         documentWorkflow.K0(aVar, new a.Submit(((State.ReviewCaptures) state).getDocumentId()));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit c1(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.b.f10078a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.b.f10159a);
+        return Unit.f22938a;
     }
 
     public static final Unit d1(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.C0164a.f10077a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.C0167a.f10158a);
+        return Unit.f22938a;
     }
 
     public static final Unit e1(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.d.f10080a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.d.f10161a);
+        return Unit.f22938a;
     }
 
     public static final r f1(final DocumentWorkflow documentWorkflow, final State state, final PermissionRequestWorkflow.Output it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        return z.d(documentWorkflow, null, new Function1() { // from class: zn.y0
+        return z.d(documentWorkflow, null, new Function1() { // from class: xn.y0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return DocumentWorkflow.g1(it, documentWorkflow, state, (ym.r.c) obj);
+                return DocumentWorkflow.g1(it, documentWorkflow, state, (wm.r.c) obj);
             }
         }, 1, null);
     }
 
     public static final Unit g1(PermissionRequestWorkflow.Output output, DocumentWorkflow documentWorkflow, State state, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
-        int i10 = d.f10128a[output.getPermissionState().getResult().ordinal()];
+        int i10 = d.f10209a[output.getPermissionState().getResult().ordinal()];
         if (i10 == 1) {
             com.withpersona.sdk2.inquiry.document.a aVar = documentWorkflow.documentCameraWorker;
-            String string = documentWorkflow.applicationContext.getString(vp.g.b);
+            String string = documentWorkflow.applicationContext.getString(tp.g.b);
             Intrinsics.checkNotNullExpressionValue(string, "getString(...)");
             action.e(aVar.e(string) ? state.a(State.a.CameraRunning) : state.a(State.a.None));
         } else {
@@ -3005,79 +3005,79 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
             }
             action.e(state.a(State.a.None));
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit h1(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.c.f10079a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.c.f10160a);
+        return Unit.f22938a;
     }
 
     public static final Unit i1(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.c.f10079a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.c.f10160a);
+        return Unit.f22938a;
     }
 
     public static final Unit j1(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.g.f10083a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.g.f10164a);
+        return Unit.f22938a;
     }
 
     public static final Unit k1(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.h.f10084a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.h.f10165a);
+        return Unit.f22938a;
     }
 
     public static final Unit l1(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.j.f10086a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.j.f10167a);
+        return Unit.f22938a;
     }
 
     public static final Unit m1(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.e.f10081a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.e.f10162a);
+        return Unit.f22938a;
     }
 
     public static final Unit n1(DocumentFile.Remote it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit o1() {
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit p1(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.b.f10078a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.b.f10159a);
+        return Unit.f22938a;
     }
 
     public static final Unit q1(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.C0164a.f10077a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.C0167a.f10158a);
+        return Unit.f22938a;
     }
 
     public static final Unit r1(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.d.f10080a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.d.f10161a);
+        return Unit.f22938a;
     }
 
     public static final r s1(final DocumentWorkflow documentWorkflow, final State state, final PermissionRequestWorkflow.Output it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        return z.d(documentWorkflow, null, new Function1() { // from class: zn.g1
+        return z.d(documentWorkflow, null, new Function1() { // from class: xn.g1
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return DocumentWorkflow.t1(it, documentWorkflow, state, (ym.r.c) obj);
+                return DocumentWorkflow.t1(it, documentWorkflow, state, (wm.r.c) obj);
             }
         }, 1, null);
     }
 
     public static final Unit t1(PermissionRequestWorkflow.Output output, DocumentWorkflow documentWorkflow, State state, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
-        int i10 = d.f10128a[output.getPermissionState().getResult().ordinal()];
+        int i10 = d.f10209a[output.getPermissionState().getResult().ordinal()];
         if (i10 == 1) {
             com.withpersona.sdk2.inquiry.document.a aVar = documentWorkflow.documentCameraWorker;
-            String string = documentWorkflow.applicationContext.getString(vp.g.b);
+            String string = documentWorkflow.applicationContext.getString(tp.g.b);
             Intrinsics.checkNotNullExpressionValue(string, "getString(...)");
             action.e(aVar.e(string) ? state.a(State.a.CameraRunning) : state.a(State.a.None));
         } else {
@@ -3086,29 +3086,29 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
             }
             action.e(state.a(State.a.None));
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit u1(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.c.f10079a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.c.f10160a);
+        return Unit.f22938a;
     }
 
     public static final r v1(DocumentWorkflow documentWorkflow, final com.withpersona.sdk2.inquiry.document.network.g.b it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        if (Intrinsics.c(it, com.withpersona.sdk2.inquiry.document.network.g.b.C0189b.f10357a)) {
-            return z.d(documentWorkflow, null, new Function1() { // from class: zn.c1
+        if (Intrinsics.c(it, com.withpersona.sdk2.inquiry.document.network.g.b.C0192b.f10438a)) {
+            return z.d(documentWorkflow, null, new Function1() { // from class: xn.c1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.w1((ym.r.c) obj);
+                    return DocumentWorkflow.w1((wm.r.c) obj);
                 }
             }, 1, null);
         }
         if (it instanceof com.withpersona.sdk2.inquiry.document.network.g.b.Error) {
-            return z.d(documentWorkflow, null, new Function1() { // from class: zn.d1
+            return z.d(documentWorkflow, null, new Function1() { // from class: xn.d1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.x1(it, (ym.r.c) obj);
+                    return DocumentWorkflow.x1(it, (wm.r.c) obj);
                 }
             }, 1, null);
         }
@@ -3117,65 +3117,65 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
     public static final Unit w1(r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
-        action.d(b.d.f10090a);
-        return Unit.f22483a;
+        action.d(b.d.f10171a);
+        return Unit.f22938a;
     }
 
     public static final Unit x1(com.withpersona.sdk2.inquiry.document.network.g.b bVar, r.c action) {
         Intrinsics.checkNotNullParameter(action, "$this$action");
         action.d(new b.Errored(((com.withpersona.sdk2.inquiry.document.network.g.b.Error) bVar).getCause()));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit y1(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.b.f10078a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.b.f10159a);
+        return Unit.f22938a;
     }
 
     public static final Unit z1(DocumentWorkflow documentWorkflow, k.a aVar) {
-        documentWorkflow.K0(aVar, a.b.f10078a);
-        return Unit.f22483a;
+        documentWorkflow.K0(aVar, a.b.f10159a);
+        return Unit.f22938a;
     }
 
     public final List<Pair<String, Function1<UiComponent, Unit>>> A0(DocumentStartPage documentStartPage, final k<? super Input, State, ? extends b, ? extends Object>.a aVar) {
-        return new NestedUiStep.a().a(documentStartPage.getSelectDocumentButton(), new Function1() { // from class: zn.n0
+        return new NestedUiStep.a().a(documentStartPage.getSelectDocumentButton(), new Function1() { // from class: xn.n0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return DocumentWorkflow.C0(this.f37771a, aVar, (UiComponent) obj);
+                return DocumentWorkflow.C0(this.f35894a, aVar, (UiComponent) obj);
             }
-        }).a(documentStartPage.getSelectPhotoButton(), new Function1() { // from class: zn.o0
+        }).a(documentStartPage.getSelectPhotoButton(), new Function1() { // from class: xn.o0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return DocumentWorkflow.D0(this.f37793a, aVar, (UiComponent) obj);
+                return DocumentWorkflow.D0(this.f35916a, aVar, (UiComponent) obj);
             }
-        }).a(documentStartPage.getTakePhotoButton(), new Function1() { // from class: zn.p0
+        }).a(documentStartPage.getTakePhotoButton(), new Function1() { // from class: xn.p0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return DocumentWorkflow.E0(this.f37799a, aVar, (UiComponent) obj);
+                return DocumentWorkflow.E0(this.f35922a, aVar, (UiComponent) obj);
             }
-        }).a(documentStartPage.getLaunchUploadOptionsButton(), new Function1() { // from class: zn.q0
+        }).a(documentStartPage.getLaunchUploadOptionsButton(), new Function1() { // from class: xn.q0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return DocumentWorkflow.F0(this.f37803a, aVar, (UiComponent) obj);
+                return DocumentWorkflow.F0(this.f35926a, aVar, (UiComponent) obj);
             }
         }).b();
     }
 
     public final List<Pair<String, Function1<UiComponent, Unit>>> B0(UploadOptionsDialog uploadOptionsDialog, final k<? super Input, State, ? extends b, ? extends Object>.a aVar) {
-        return new NestedUiStep.a().a(uploadOptionsDialog.getSelectDocumentButton(), new Function1() { // from class: zn.s0
+        return new NestedUiStep.a().a(uploadOptionsDialog.getSelectDocumentButton(), new Function1() { // from class: xn.s0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return DocumentWorkflow.G0(this.f37809a, aVar, (UiComponent) obj);
+                return DocumentWorkflow.G0(this.f35932a, aVar, (UiComponent) obj);
             }
-        }).a(uploadOptionsDialog.getSelectPhotoButton(), new Function1() { // from class: zn.t0
+        }).a(uploadOptionsDialog.getSelectPhotoButton(), new Function1() { // from class: xn.t0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return DocumentWorkflow.H0(this.f37811a, aVar, (UiComponent) obj);
+                return DocumentWorkflow.H0(this.f35934a, aVar, (UiComponent) obj);
             }
-        }).a(uploadOptionsDialog.getTakePhotoButton(), new Function1() { // from class: zn.u0
+        }).a(uploadOptionsDialog.getTakePhotoButton(), new Function1() { // from class: xn.u0
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return DocumentWorkflow.I0(this.f37813a, aVar, (UiComponent) obj);
+                return DocumentWorkflow.I0(this.f35936a, aVar, (UiComponent) obj);
             }
         }).b();
     }
@@ -3186,34 +3186,34 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
             return;
         }
         if (i10 == 3) {
-            w.l(aVar2, this.documentCameraWorker, d0.k(com.withpersona.sdk2.inquiry.document.a.class), "", new Function1() { // from class: zn.v0
+            w.l(aVar2, this.documentCameraWorker, d0.k(com.withpersona.sdk2.inquiry.document.a.class), "", new Function1() { // from class: xn.v0
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.J1(this.f37816a, input, (com.withpersona.sdk2.inquiry.document.a.b) obj);
+                    return DocumentWorkflow.J1(this.f35939a, input, (com.withpersona.sdk2.inquiry.document.a.b) obj);
                 }
             });
         } else {
             if (i10 != 4 && i10 != 5) {
                 throw new l();
             }
-            w.l(aVar2, state.getCaptureState() == State.a.SelectFileFromDocuments ? this.documentsSelectWorkerFactory.c() : this.documentsSelectWorkerFactory.e(), d0.k(i.class), "", new Function1() { // from class: zn.w0
+            w.l(aVar2, state.getCaptureState() == State.a.SelectFileFromDocuments ? this.documentsSelectWorkerFactory.c() : this.documentsSelectWorkerFactory.e(), d0.k(i.class), "", new Function1() { // from class: xn.w0
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.M1(this.f37819a, input, state, (com.withpersona.sdk2.inquiry.document.i.c) obj);
+                    return DocumentWorkflow.M1(this.f35942a, input, state, (com.withpersona.sdk2.inquiry.document.i.c) obj);
                 }
             });
         }
     }
 
     public final void I1(final State.UploadState uploadState, final Input input, State state, k<? super Input, State, ? extends b, ? extends Object>.a aVar) {
-        if (Intrinsics.c(uploadState, State.UploadState.CreateDocument.f10067a)) {
+        if (Intrinsics.c(uploadState, State.UploadState.CreateDocument.f10148a)) {
             if (state.getDocumentId() != null) {
                 return;
             }
-            w.l(aVar, this.documentCreateWorker.a(input.getSessionToken(), input.getKind(), input.getFieldKeyDocument(), input.getDocumentFileLimit()), d0.k(com.withpersona.sdk2.inquiry.document.network.a.class), "", new Function1() { // from class: zn.z0
+            w.l(aVar, this.documentCreateWorker.a(input.getSessionToken(), input.getKind(), input.getFieldKeyDocument(), input.getDocumentFileLimit()), d0.k(com.withpersona.sdk2.inquiry.document.network.a.class), "", new Function1() { // from class: xn.z0
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.Q1(this.f37833a, (com.withpersona.sdk2.inquiry.document.network.a.b) obj);
+                    return DocumentWorkflow.Q1(this.f35956a, (com.withpersona.sdk2.inquiry.document.network.a.b) obj);
                 }
             });
             return;
@@ -3232,10 +3232,10 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
                     if (remote == null) {
                         return;
                     }
-                    w.l(aVar, this.documentFileDeleteWorker.a(input.getSessionToken(), reviewCaptures.getDocumentId(), remote), d0.k(bo.a.class), "", new Function1() { // from class: zn.b1
+                    w.l(aVar, this.documentFileDeleteWorker.a(input.getSessionToken(), reviewCaptures.getDocumentId(), remote), d0.k(zn.a.class), "", new Function1() { // from class: xn.b1
                         @Override // kotlin.jvm.functions.Function1
                         public final Object invoke(Object obj) {
-                            return DocumentWorkflow.Y1(this.f37727a, remote, uploadState, (bo.a.b) obj);
+                            return DocumentWorkflow.Y1(this.f35850a, remote, uploadState, (zn.a.b) obj);
                         }
                     });
                     return;
@@ -3262,23 +3262,23 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
             if (input.getDocumentFileLimit() != 1) {
                 z10 = false;
             }
-            w.l(aVar, aVar2.a(sessionToken, documentId, local, z10), d0.k(com.withpersona.sdk2.inquiry.document.network.c.class), local.getAbsoluteFilePath(), new Function1() { // from class: zn.a1
+            w.l(aVar, aVar2.a(sessionToken, documentId, local, z10), d0.k(com.withpersona.sdk2.inquiry.document.network.c.class), local.getAbsoluteFilePath(), new Function1() { // from class: xn.a1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj2) {
-                    return DocumentWorkflow.T1(this.f37720a, uploadState, local, input, (com.withpersona.sdk2.inquiry.document.network.c.b) obj2);
+                    return DocumentWorkflow.T1(this.f35843a, uploadState, local, input, (com.withpersona.sdk2.inquiry.document.network.c.b) obj2);
                 }
             });
         }
     }
 
-    @Override // ym.k
+    @Override // wm.k
     @NotNull
     /* JADX INFO: renamed from: J0, reason: merged with bridge method [inline-methods] */
     public State d(@NotNull Input props, @Nullable Snapshot snapshot) {
         State stateF;
         Intrinsics.checkNotNullParameter(props, "props");
         if (snapshot != null) {
-            xu.h hVarB = snapshot.b();
+            vu.h hVarB = snapshot.b();
             Parcelable parcelable = null;
             if (hVarB.I() <= 0) {
                 hVarB = null;
@@ -3301,7 +3301,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
             }
         }
         StartPage startPage = props.getStartPage();
-        if (Intrinsics.c(startPage, StartPage.Prompt.f10038a)) {
+        if (Intrinsics.c(startPage, StartPage.Prompt.f10119a)) {
             return new State.Start(null, null, props.getDocumentId(), false, 11, null);
         }
         if (startPage instanceof StartPage.Review) {
@@ -3312,112 +3312,112 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
 
     public final void K0(k<? super Input, State, ? extends b, ? extends Object>.a aVar, final a aVar2) {
         r<? super Object, State, ? extends Object> rVarD;
-        if (Intrinsics.c(aVar2, a.b.f10078a)) {
-            rVarD = z.d(this, null, new Function1() { // from class: zn.h1
+        if (Intrinsics.c(aVar2, a.b.f10159a)) {
+            rVarD = z.d(this, null, new Function1() { // from class: xn.h1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.L0((ym.r.c) obj);
+                    return DocumentWorkflow.L0((wm.r.c) obj);
                 }
             }, 1, null);
-        } else if (Intrinsics.c(aVar2, a.C0164a.f10077a)) {
-            rVarD = z.d(this, null, new Function1() { // from class: zn.j1
+        } else if (Intrinsics.c(aVar2, a.C0167a.f10158a)) {
+            rVarD = z.d(this, null, new Function1() { // from class: xn.j1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.M0((ym.r.c) obj);
+                    return DocumentWorkflow.M0((wm.r.c) obj);
                 }
             }, 1, null);
-        } else if (Intrinsics.c(aVar2, a.g.f10083a)) {
-            rVarD = z.d(this, null, new Function1() { // from class: zn.k1
+        } else if (Intrinsics.c(aVar2, a.g.f10164a)) {
+            rVarD = z.d(this, null, new Function1() { // from class: xn.k1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.N0((ym.r.c) obj);
+                    return DocumentWorkflow.N0((wm.r.c) obj);
                 }
             }, 1, null);
-        } else if (Intrinsics.c(aVar2, a.h.f10084a)) {
-            rVarD = z.d(this, null, new Function1() { // from class: zn.l1
+        } else if (Intrinsics.c(aVar2, a.h.f10165a)) {
+            rVarD = z.d(this, null, new Function1() { // from class: xn.l1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.O0((ym.r.c) obj);
+                    return DocumentWorkflow.O0((wm.r.c) obj);
                 }
             }, 1, null);
-        } else if (Intrinsics.c(aVar2, a.j.f10086a)) {
-            rVarD = z.d(this, null, new Function1() { // from class: zn.m1
+        } else if (Intrinsics.c(aVar2, a.j.f10167a)) {
+            rVarD = z.d(this, null, new Function1() { // from class: xn.m1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.P0((ym.r.c) obj);
+                    return DocumentWorkflow.P0((wm.r.c) obj);
                 }
             }, 1, null);
-        } else if (Intrinsics.c(aVar2, a.e.f10081a)) {
-            rVarD = z.d(this, null, new Function1() { // from class: zn.n1
+        } else if (Intrinsics.c(aVar2, a.e.f10162a)) {
+            rVarD = z.d(this, null, new Function1() { // from class: xn.n1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.Q0((ym.r.c) obj);
+                    return DocumentWorkflow.Q0((wm.r.c) obj);
                 }
             }, 1, null);
-        } else if (Intrinsics.c(aVar2, a.c.f10079a)) {
-            rVarD = z.d(this, null, new Function1() { // from class: zn.o1
+        } else if (Intrinsics.c(aVar2, a.c.f10160a)) {
+            rVarD = z.d(this, null, new Function1() { // from class: xn.o1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.R0((ym.r.c) obj);
+                    return DocumentWorkflow.R0((wm.r.c) obj);
                 }
             }, 1, null);
         } else if (aVar2 instanceof a.RemoveDocument) {
-            rVarD = z.d(this, null, new Function1() { // from class: zn.p1
+            rVarD = z.d(this, null, new Function1() { // from class: xn.p1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.S0(aVar2, (ym.r.c) obj);
+                    return DocumentWorkflow.S0(aVar2, (wm.r.c) obj);
                 }
             }, 1, null);
-        } else if (Intrinsics.c(aVar2, a.d.f10080a)) {
-            rVarD = z.d(this, null, new Function1() { // from class: zn.q1
+        } else if (Intrinsics.c(aVar2, a.d.f10161a)) {
+            rVarD = z.d(this, null, new Function1() { // from class: xn.q1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.T0((ym.r.c) obj);
+                    return DocumentWorkflow.T0((wm.r.c) obj);
                 }
             }, 1, null);
         } else {
             if (!(aVar2 instanceof a.Submit)) {
                 throw new l();
             }
-            rVarD = z.d(this, null, new Function1() { // from class: zn.r1
+            rVarD = z.d(this, null, new Function1() { // from class: xn.r1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.U0(aVar2, (ym.r.c) obj);
+                    return DocumentWorkflow.U0(aVar2, (wm.r.c) obj);
                 }
             }, 1, null);
         }
         aVar.d().a(rVarD);
     }
 
-    @Override // ym.k
+    @Override // wm.k
     @NotNull
     /* JADX INFO: renamed from: V0, reason: merged with bridge method [inline-methods] */
     public Object f(@NotNull Input renderProps, @NotNull final State renderState, @NotNull final k<? super Input, State, ? extends b, ? extends Object>.a context) {
         Intrinsics.checkNotNullParameter(renderProps, "renderProps");
         Intrinsics.checkNotNullParameter(renderState, "renderState");
         Intrinsics.checkNotNullParameter(context, "context");
-        uq.a.d(this.navigationStateManager, renderProps.getBackStepEnabled(), renderProps.getCancelButtonEnabled(), !(renderState instanceof State.UploadDocument), false, 8, null);
+        sq.a.d(this.navigationStateManager, renderProps.getBackStepEnabled(), renderProps.getCancelButtonEnabled(), !(renderState instanceof State.UploadDocument), false, 8, null);
         H1(renderState.getCaptureState(), renderProps, renderState, context);
         I1(renderState.getUploadState(), renderProps, renderState, context);
         g.a(this.externalEventLogger, this.trackingEventsLogger, renderProps, renderState);
         if (renderState instanceof State.Start) {
-            Object bVar = new com.withpersona.sdk2.inquiry.document.b(ar.b.a(renderProps.getPages().getDocumentStartPage()), A0(renderProps.getPages().getDocumentStartPage(), context), this.navigationStateManager.b(), new Function0() { // from class: zn.q
+            Object bVar = new com.withpersona.sdk2.inquiry.document.b(yq.b.a(renderProps.getPages().getDocumentStartPage()), A0(renderProps.getPages().getDocumentStartPage(), context), this.navigationStateManager.b(), new Function0() { // from class: xn.q
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return DocumentWorkflow.W0(this.f37802a, context);
+                    return DocumentWorkflow.W0(this.f35925a, context);
                 }
-            }, new Function0() { // from class: zn.s
+            }, new Function0() { // from class: xn.s
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return DocumentWorkflow.X0(this.f37808a, context);
+                    return DocumentWorkflow.X0(this.f35931a, context);
                 }
             }, null, renderProps.getPromptPageNavBarTitle(), renderProps.getStyles(), 32, null);
             State.Start start = (State.Start) renderState;
             if (start.getShouldShowUploadOptionsDialog()) {
-                bVar = op.d.a(ar.s.f3757a.j(ar.b.a(renderProps.getPages().getUploadOptionsDialog()), B0(renderProps.getPages().getUploadOptionsDialog(), context), new Function0() { // from class: zn.e0
+                bVar = mp.d.a(yq.s.f37116a.j(yq.b.a(renderProps.getPages().getUploadOptionsDialog()), B0(renderProps.getPages().getUploadOptionsDialog(), context), new Function0() { // from class: xn.e0
                     @Override // kotlin.jvm.functions.Function0
                     public final Object invoke() {
-                        return DocumentWorkflow.i1(this.f37739a, context);
+                        return DocumentWorkflow.i1(this.f35862a, context);
                     }
                 }, renderProps.getPages().getUploadOptionsDialog().getCancelButton()), bVar, "document_upload_options_dialog");
             }
@@ -3427,73 +3427,73 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
             String str = permissionsTitle != null ? permissionsTitle : "";
             String permissionsRationale = renderProps.getPermissionsRationale();
             if (permissionsRationale == null) {
-                permissionsRationale = this.applicationContext.getString(vp.g.f33391f);
+                permissionsRationale = this.applicationContext.getString(tp.g.f32527f);
                 Intrinsics.checkNotNullExpressionValue(permissionsRationale, "getString(...)");
             }
             Context context2 = this.applicationContext;
-            String string = context2.getString(vp.g.f33390e, jq.g.b(context2));
+            String string = context2.getString(tp.g.f32526e, hq.g.b(context2));
             Intrinsics.checkNotNullExpressionValue(string, "getString(...)");
-            return com.withpersona.sdk2.inquiry.permissions.g.d(bVar, context, z10, i0Var, (3592 & 8) != 0 ? false : false, str, permissionsRationale, string, renderProps.getPermissionsModalPositiveButton(), renderProps.getPermissionsModalNegativeButton(), (3592 & Barcode.FORMAT_UPC_A) != 0 ? null : null, (3592 & Barcode.FORMAT_UPC_E) != 0 ? null : null, (3592 & Barcode.FORMAT_PDF417) != 0 ? null : null, this.permissionRequestWorkflow, renderProps.getStyles(), (3592 & Http2.INITIAL_MAX_FRAME_SIZE) != 0 ? "" : null, new Function1() { // from class: zn.f0
+            return com.withpersona.sdk2.inquiry.permissions.g.d(bVar, context, z10, i0Var, (3592 & 8) != 0 ? false : false, str, permissionsRationale, string, renderProps.getPermissionsModalPositiveButton(), renderProps.getPermissionsModalNegativeButton(), (3592 & Barcode.FORMAT_UPC_A) != 0 ? null : null, (3592 & Barcode.FORMAT_UPC_E) != 0 ? null : null, (3592 & Barcode.FORMAT_PDF417) != 0 ? null : null, this.permissionRequestWorkflow, renderProps.getStyles(), (3592 & Http2.INITIAL_MAX_FRAME_SIZE) != 0 ? "" : null, new Function1() { // from class: xn.f0
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.A1(this.f37742a, renderState, (PermissionRequestWorkflow.Output) obj);
+                    return DocumentWorkflow.A1(this.f35865a, renderState, (PermissionRequestWorkflow.Output) obj);
                 }
             });
         }
         if (renderState instanceof State.ReviewCaptures) {
             State.ReviewCaptures reviewCaptures = (State.ReviewCaptures) renderState;
             if (reviewCaptures.getShouldLoadDocuments()) {
-                w.l(context, this.documentLoadWorker.a(renderProps.getSessionToken(), reviewCaptures.getDocumentId()), d0.k(com.withpersona.sdk2.inquiry.document.network.e.class), "", new Function1() { // from class: zn.g0
+                w.l(context, this.documentLoadWorker.a(renderProps.getSessionToken(), reviewCaptures.getDocumentId()), d0.k(com.withpersona.sdk2.inquiry.document.network.e.class), "", new Function1() { // from class: xn.g0
                     @Override // kotlin.jvm.functions.Function1
                     public final Object invoke(Object obj) {
-                        return DocumentWorkflow.C1(this.f37746a, (com.withpersona.sdk2.inquiry.document.network.e.b) obj);
+                        return DocumentWorkflow.C1(this.f35869a, (com.withpersona.sdk2.inquiry.document.network.e.b) obj);
                     }
                 });
             }
-            c.ReviewCaptures reviewCaptures2 = new c.ReviewCaptures(this.imageLoader, renderProps.getPromptTitle(), renderProps.getPromptDescription(), renderProps.getDisclaimer(), renderProps.getSubmitButtonText(), reviewCaptures.m(), this.navigationStateManager.b(), new Function0() { // from class: zn.h0
+            c.ReviewCaptures reviewCaptures2 = new c.ReviewCaptures(this.imageLoader, renderProps.getPromptTitle(), renderProps.getPromptDescription(), renderProps.getDisclaimer(), renderProps.getSubmitButtonText(), reviewCaptures.m(), this.navigationStateManager.b(), new Function0() { // from class: xn.h0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return DocumentWorkflow.F1(this.f37751a, context);
+                    return DocumentWorkflow.F1(this.f35874a, context);
                 }
-            }, new Function0() { // from class: zn.i0
+            }, new Function0() { // from class: xn.i0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return DocumentWorkflow.G1(this.f37754a, context);
+                    return DocumentWorkflow.G1(this.f35877a, context);
                 }
-            }, new Function0() { // from class: zn.j0
+            }, new Function0() { // from class: xn.j0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return DocumentWorkflow.Y0(this.f37758a, context);
+                    return DocumentWorkflow.Y0(this.f35881a, context);
                 }
-            }, new Function0() { // from class: zn.k0
+            }, new Function0() { // from class: xn.k0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return DocumentWorkflow.Z0(this.f37761a, context);
+                    return DocumentWorkflow.Z0(this.f35884a, context);
                 }
-            }, new Function1() { // from class: zn.l0
+            }, new Function1() { // from class: xn.l0
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.a1(this.f37764a, context, renderState, (DocumentFile.Remote) obj);
+                    return DocumentWorkflow.a1(this.f35887a, context, renderState, (DocumentFile.Remote) obj);
                 }
-            }, new Function0() { // from class: zn.b0
+            }, new Function0() { // from class: xn.b0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return DocumentWorkflow.b1(this.f37725a, context, renderState);
+                    return DocumentWorkflow.b1(this.f35848a, context, renderState);
                 }
-            }, new Function0() { // from class: zn.m0
+            }, new Function0() { // from class: xn.m0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return DocumentWorkflow.c1(this.f37768a, context);
+                    return DocumentWorkflow.c1(this.f35891a, context);
                 }
-            }, new Function0() { // from class: zn.x0
+            }, new Function0() { // from class: xn.x0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return DocumentWorkflow.d1(this.f37823a, context);
+                    return DocumentWorkflow.d1(this.f35946a, context);
                 }
-            }, reviewCaptures.getShouldLoadDocuments(), reviewCaptures.m().size() < renderProps.getDocumentFileLimit(), !reviewCaptures.m().isEmpty() && Intrinsics.c(reviewCaptures.getUploadState(), new State.UploadState.ReadyToSubmit(reviewCaptures.getDocumentId())), reviewCaptures.getError(), new Function0() { // from class: zn.i1
+            }, reviewCaptures.getShouldLoadDocuments(), reviewCaptures.m().size() < renderProps.getDocumentFileLimit(), !reviewCaptures.m().isEmpty() && Intrinsics.c(reviewCaptures.getUploadState(), new State.UploadState.ReadyToSubmit(reviewCaptures.getDocumentId())), reviewCaptures.getError(), new Function0() { // from class: xn.i1
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return DocumentWorkflow.e1(this.f37755a, context);
+                    return DocumentWorkflow.e1(this.f35878a, context);
                 }
             }, renderProps.getStyles(), renderProps.getCheckPageNavBarTitle(), null, 4194304, null);
             boolean z11 = reviewCaptures.getCaptureState() == State.a.CheckCameraPermissions;
@@ -3504,45 +3504,45 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
             }
             String permissionsRationale2 = renderProps.getPermissionsRationale();
             if (permissionsRationale2 == null) {
-                permissionsRationale2 = this.applicationContext.getString(vp.g.f33391f);
+                permissionsRationale2 = this.applicationContext.getString(tp.g.f32527f);
                 Intrinsics.checkNotNullExpressionValue(permissionsRationale2, "getString(...)");
             }
             Context context3 = this.applicationContext;
-            String string2 = context3.getString(vp.g.f33390e, jq.g.b(context3));
+            String string2 = context3.getString(tp.g.f32526e, hq.g.b(context3));
             Intrinsics.checkNotNullExpressionValue(string2, "getString(...)");
-            op.c cVarD = com.withpersona.sdk2.inquiry.permissions.g.d(reviewCaptures2, context, z11, i0Var2, (3592 & 8) != 0 ? false : false, permissionsTitle2, permissionsRationale2, string2, renderProps.getPermissionsModalPositiveButton(), renderProps.getPermissionsModalNegativeButton(), (3592 & Barcode.FORMAT_UPC_A) != 0 ? null : null, (3592 & Barcode.FORMAT_UPC_E) != 0 ? null : null, (3592 & Barcode.FORMAT_PDF417) != 0 ? null : null, this.permissionRequestWorkflow, renderProps.getStyles(), (3592 & Http2.INITIAL_MAX_FRAME_SIZE) != 0 ? "" : null, new Function1() { // from class: zn.t1
+            mp.c cVarD = com.withpersona.sdk2.inquiry.permissions.g.d(reviewCaptures2, context, z11, i0Var2, (3592 & 8) != 0 ? false : false, permissionsTitle2, permissionsRationale2, string2, renderProps.getPermissionsModalPositiveButton(), renderProps.getPermissionsModalNegativeButton(), (3592 & Barcode.FORMAT_UPC_A) != 0 ? null : null, (3592 & Barcode.FORMAT_UPC_E) != 0 ? null : null, (3592 & Barcode.FORMAT_PDF417) != 0 ? null : null, this.permissionRequestWorkflow, renderProps.getStyles(), (3592 & Http2.INITIAL_MAX_FRAME_SIZE) != 0 ? "" : null, new Function1() { // from class: xn.t1
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.f1(this.f37812a, renderState, (PermissionRequestWorkflow.Output) obj);
+                    return DocumentWorkflow.f1(this.f35935a, renderState, (PermissionRequestWorkflow.Output) obj);
                 }
             });
-            return reviewCaptures.getShouldShowUploadOptionsDialog() ? op.d.a(ar.s.f3757a.j(ar.b.a(renderProps.getPages().getUploadOptionsDialog()), B0(renderProps.getPages().getUploadOptionsDialog(), context), new Function0() { // from class: zn.e2
+            return reviewCaptures.getShouldShowUploadOptionsDialog() ? mp.d.a(yq.s.f37116a.j(yq.b.a(renderProps.getPages().getUploadOptionsDialog()), B0(renderProps.getPages().getUploadOptionsDialog(), context), new Function0() { // from class: xn.e2
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return DocumentWorkflow.h1(this.f37741a, context);
+                    return DocumentWorkflow.h1(this.f35864a, context);
                 }
-            }, renderProps.getPages().getUploadOptionsDialog().getCancelButton()), cVarD, "document_upload_screen") : new op.c(cVarD, p.k(), "document_upload_screen");
+            }, renderProps.getPages().getUploadOptionsDialog().getCancelButton()), cVarD, "document_upload_screen") : new mp.c(cVarD, p.k(), "document_upload_screen");
         }
         if (!(renderState instanceof State.ReviewCapturesWithoutDocumentId)) {
             if (!(renderState instanceof State.UploadDocument)) {
                 throw new l();
             }
-            w.l(context, this.documentSubmitWorker.a(renderProps.getSessionToken(), renderProps.getInquiryId(), renderProps.getFromStep(), renderProps.getFromComponent(), ((State.UploadDocument) renderState).m()), d0.k(com.withpersona.sdk2.inquiry.document.network.g.class), "", new Function1() { // from class: zn.a0
+            w.l(context, this.documentSubmitWorker.a(renderProps.getSessionToken(), renderProps.getInquiryId(), renderProps.getFromStep(), renderProps.getFromComponent(), ((State.UploadDocument) renderState).m()), d0.k(com.withpersona.sdk2.inquiry.document.network.g.class), "", new Function1() { // from class: xn.a0
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return DocumentWorkflow.v1(this.f37719a, (com.withpersona.sdk2.inquiry.document.network.g.b) obj);
+                    return DocumentWorkflow.v1(this.f35842a, (com.withpersona.sdk2.inquiry.document.network.g.b) obj);
                 }
             });
-            uq.a.d(this.navigationStateManager, false, false, false, false, 12, null);
-            return new c.LoadingAnimation(renderProps.getPendingTitle(), renderProps.getPendingDescription(), this.navigationStateManager.b(), new Function0() { // from class: zn.c0
+            sq.a.d(this.navigationStateManager, false, false, false, false, 12, null);
+            return new c.LoadingAnimation(renderProps.getPendingTitle(), renderProps.getPendingDescription(), this.navigationStateManager.b(), new Function0() { // from class: xn.c0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return DocumentWorkflow.y1(this.f37731a, context);
+                    return DocumentWorkflow.y1(this.f35854a, context);
                 }
-            }, new Function0() { // from class: zn.d0
+            }, new Function0() { // from class: xn.d0
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return DocumentWorkflow.z1(this.f37735a, context);
+                    return DocumentWorkflow.z1(this.f35858a, context);
                 }
             }, renderProps.getStyles(), renderProps.getAssetConfig().getPendingPage(), renderProps.getPendingPageTextVerticalPosition(), renderProps.getPendingPageNavBarTitle(), null, Barcode.FORMAT_UPC_A, null);
         }
@@ -3551,50 +3551,50 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
         if (documentId != null) {
             context.b(documentId, new e(context, this, documentId, null));
         }
-        c.ReviewCaptures reviewCaptures3 = new c.ReviewCaptures(this.imageLoader, renderProps.getPromptTitle(), renderProps.getPromptDescription(), renderProps.getDisclaimer(), renderProps.getSubmitButtonText(), reviewCapturesWithoutDocumentId.m(), this.navigationStateManager.b(), new Function0() { // from class: zn.g2
+        c.ReviewCaptures reviewCaptures3 = new c.ReviewCaptures(this.imageLoader, renderProps.getPromptTitle(), renderProps.getPromptDescription(), renderProps.getDisclaimer(), renderProps.getSubmitButtonText(), reviewCapturesWithoutDocumentId.m(), this.navigationStateManager.b(), new Function0() { // from class: xn.g2
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return DocumentWorkflow.j1(this.f37749a, context);
+                return DocumentWorkflow.j1(this.f35872a, context);
             }
-        }, new Function0() { // from class: zn.h2
+        }, new Function0() { // from class: xn.h2
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return DocumentWorkflow.k1(this.f37752a, context);
+                return DocumentWorkflow.k1(this.f35875a, context);
             }
-        }, new Function0() { // from class: zn.i2
+        }, new Function0() { // from class: xn.i2
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return DocumentWorkflow.l1(this.f37756a, context);
+                return DocumentWorkflow.l1(this.f35879a, context);
             }
-        }, new Function0() { // from class: zn.r
+        }, new Function0() { // from class: xn.r
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return DocumentWorkflow.m1(this.f37804a, context);
+                return DocumentWorkflow.m1(this.f35927a, context);
             }
-        }, new Function1() { // from class: zn.t
+        }, new Function1() { // from class: xn.t
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
                 return DocumentWorkflow.n1((DocumentFile.Remote) obj);
             }
-        }, new Function0() { // from class: zn.u
+        }, new Function0() { // from class: xn.u
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
                 return DocumentWorkflow.o1();
             }
-        }, new Function0() { // from class: zn.v
+        }, new Function0() { // from class: xn.v
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return DocumentWorkflow.p1(this.f37815a, context);
+                return DocumentWorkflow.p1(this.f35938a, context);
             }
-        }, new Function0() { // from class: zn.w
+        }, new Function0() { // from class: xn.w
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return DocumentWorkflow.q1(this.f37818a, context);
+                return DocumentWorkflow.q1(this.f35941a, context);
             }
-        }, reviewCapturesWithoutDocumentId.getReloadingFromPreviousSession(), reviewCapturesWithoutDocumentId.m().size() < renderProps.getDocumentFileLimit(), false, reviewCapturesWithoutDocumentId.getError(), new Function0() { // from class: zn.x
+        }, reviewCapturesWithoutDocumentId.getReloadingFromPreviousSession(), reviewCapturesWithoutDocumentId.m().size() < renderProps.getDocumentFileLimit(), false, reviewCapturesWithoutDocumentId.getError(), new Function0() { // from class: xn.x
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return DocumentWorkflow.r1(this.f37822a, context);
+                return DocumentWorkflow.r1(this.f35945a, context);
             }
         }, renderProps.getStyles(), renderProps.getCheckPageNavBarTitle(), null, 4194304, null);
         boolean z12 = reviewCapturesWithoutDocumentId.getCaptureState() == State.a.CheckCameraPermissions;
@@ -3605,42 +3605,42 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
         }
         String permissionsRationale3 = renderProps.getPermissionsRationale();
         if (permissionsRationale3 == null) {
-            permissionsRationale3 = this.applicationContext.getString(vp.g.f33391f);
+            permissionsRationale3 = this.applicationContext.getString(tp.g.f32527f);
             Intrinsics.checkNotNullExpressionValue(permissionsRationale3, "getString(...)");
         }
         String str2 = permissionsRationale3;
         Context context4 = this.applicationContext;
-        String string3 = context4.getString(vp.g.f33390e, jq.g.b(context4));
+        String string3 = context4.getString(tp.g.f32526e, hq.g.b(context4));
         Intrinsics.checkNotNullExpressionValue(string3, "getString(...)");
-        op.c cVarD2 = com.withpersona.sdk2.inquiry.permissions.g.d(reviewCaptures3, context, z12, i0Var3, (3592 & 8) != 0 ? false : false, permissionsTitle3, str2, string3, renderProps.getPermissionsModalPositiveButton(), renderProps.getPermissionsModalNegativeButton(), (3592 & Barcode.FORMAT_UPC_A) != 0 ? null : null, (3592 & Barcode.FORMAT_UPC_E) != 0 ? null : null, (3592 & Barcode.FORMAT_PDF417) != 0 ? null : null, this.permissionRequestWorkflow, renderProps.getStyles(), (3592 & Http2.INITIAL_MAX_FRAME_SIZE) != 0 ? "" : null, new Function1() { // from class: zn.y
+        mp.c cVarD2 = com.withpersona.sdk2.inquiry.permissions.g.d(reviewCaptures3, context, z12, i0Var3, (3592 & 8) != 0 ? false : false, permissionsTitle3, str2, string3, renderProps.getPermissionsModalPositiveButton(), renderProps.getPermissionsModalNegativeButton(), (3592 & Barcode.FORMAT_UPC_A) != 0 ? null : null, (3592 & Barcode.FORMAT_UPC_E) != 0 ? null : null, (3592 & Barcode.FORMAT_PDF417) != 0 ? null : null, this.permissionRequestWorkflow, renderProps.getStyles(), (3592 & Http2.INITIAL_MAX_FRAME_SIZE) != 0 ? "" : null, new Function1() { // from class: xn.y
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return DocumentWorkflow.s1(this.f37828a, renderState, (PermissionRequestWorkflow.Output) obj);
+                return DocumentWorkflow.s1(this.f35951a, renderState, (PermissionRequestWorkflow.Output) obj);
             }
         });
-        return reviewCapturesWithoutDocumentId.getShouldShowUploadOptionsDialog() ? op.d.a(ar.s.f3757a.j(ar.b.a(renderProps.getPages().getUploadOptionsDialog()), B0(renderProps.getPages().getUploadOptionsDialog(), context), new Function0() { // from class: zn.z
+        return reviewCapturesWithoutDocumentId.getShouldShowUploadOptionsDialog() ? mp.d.a(yq.s.f37116a.j(yq.b.a(renderProps.getPages().getUploadOptionsDialog()), B0(renderProps.getPages().getUploadOptionsDialog(), context), new Function0() { // from class: xn.z
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return DocumentWorkflow.u1(this.f37832a, context);
+                return DocumentWorkflow.u1(this.f35955a, context);
             }
-        }, renderProps.getPages().getUploadOptionsDialog().getCancelButton()), cVarD2, "document_upload_screen") : new op.c(cVarD2, p.k(), "document_upload_screen");
+        }, renderProps.getPages().getUploadOptionsDialog().getCancelButton()), cVarD2, "document_upload_screen") : new mp.c(cVarD2, p.k(), "document_upload_screen");
     }
 
-    @Override // ym.k
+    @Override // wm.k
     @NotNull
     /* JADX INFO: renamed from: a2, reason: merged with bridge method [inline-methods] */
     public Snapshot g(@NotNull State state) {
         Intrinsics.checkNotNullParameter(state, "state");
-        return an.q.a(state);
+        return ym.q.a(state);
     }
 
-    @Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\bv\u0018\u00002\u00020\u0001:\u0003\u0006\u0007\u0003R\u0016\u0010\u0005\u001a\u0004\u0018\u00010\u00028&X¦\u0004¢\u0006\u0006\u001a\u0004\b\u0003\u0010\u0004\u0082\u0001\u0004\b\t\n\u000b¨\u0006\fÀ\u0006\u0003"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c;", "", "Lar/p;", "b", "()Lar/p;", "bottomSheet", "c", "a", "Lcom/withpersona/sdk2/inquiry/document/b;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c$a;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c$b;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c$c;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\bv\u0018\u00002\u00020\u0001:\u0003\u0006\u0007\u0003R\u0016\u0010\u0005\u001a\u0004\u0018\u00010\u00028&X¦\u0004¢\u0006\u0006\u001a\u0004\b\u0003\u0010\u0004\u0082\u0001\u0004\b\t\n\u000b¨\u0006\fÀ\u0006\u0003"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c;", "", "Lyq/p;", "b", "()Lyq/p;", "bottomSheet", "c", "a", "Lcom/withpersona/sdk2/inquiry/document/b;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c$a;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c$b;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c$c;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public interface c {
         @Nullable
         /* JADX INFO: renamed from: b */
         UiStepBottomSheet getBottomSheet();
 
-        @Metadata(d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0017\u0018\u00002\u00020\u0001BU\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0006\u0012\f\u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\b\u0012\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\t0\b\u0012\n\b\u0002\u0010\r\u001a\u0004\u0018\u00010\f\u0012\n\b\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u000e¢\u0006\u0004\b\u0010\u0010\u0011R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0012\u0010\u0013\u001a\u0004\b\u0014\u0010\u0015R\u0017\u0010\u0005\u001a\u00020\u00048\u0006¢\u0006\f\n\u0004\b\u0016\u0010\u0017\u001a\u0004\b\u0018\u0010\u0019R\u0019\u0010\u0007\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\b\u0018\u0010\u001a\u001a\u0004\b\u001b\u0010\u001cR\u001d\u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\b8\u0006¢\u0006\f\n\u0004\b\u001d\u0010\u001e\u001a\u0004\b\u001d\u0010\u001fR\u001d\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\t0\b8\u0006¢\u0006\f\n\u0004\b \u0010\u001e\u001a\u0004\b \u0010\u001fR\u0019\u0010\r\u001a\u0004\u0018\u00010\f8\u0006¢\u0006\f\n\u0004\b\u001b\u0010!\u001a\u0004\b\u0012\u0010\"R\u001c\u0010\u000f\u001a\u0004\u0018\u00010\u000e8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u0014\u0010#\u001a\u0004\b\u0016\u0010$¨\u0006%"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c$b;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c;", "Lcom/withpersona/sdk2/inquiry/steps/ui/UiComponentScreen;", "uiScreen", "Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "navigationState", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "styles", "Lkotlin/Function0;", "", "onBack", "onCancel", "", "navBarTitle", "Lar/p;", "bottomSheet", "<init>", "(Lcom/withpersona/sdk2/inquiry/steps/ui/UiComponentScreen;Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Ljava/lang/String;Lar/p;)V", "a", "Lcom/withpersona/sdk2/inquiry/steps/ui/UiComponentScreen;", "g", "()Lcom/withpersona/sdk2/inquiry/steps/ui/UiComponentScreen;", "b", "Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "c", "()Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "f", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "d", "Lkotlin/jvm/functions/Function0;", "()Lkotlin/jvm/functions/Function0;", "e", "Ljava/lang/String;", "()Ljava/lang/String;", "Lar/p;", "()Lar/p;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+        @Metadata(d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0017\u0018\u00002\u00020\u0001BU\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0006\u0012\f\u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\b\u0012\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\t0\b\u0012\n\b\u0002\u0010\r\u001a\u0004\u0018\u00010\f\u0012\n\b\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u000e¢\u0006\u0004\b\u0010\u0010\u0011R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0012\u0010\u0013\u001a\u0004\b\u0014\u0010\u0015R\u0017\u0010\u0005\u001a\u00020\u00048\u0006¢\u0006\f\n\u0004\b\u0016\u0010\u0017\u001a\u0004\b\u0018\u0010\u0019R\u0019\u0010\u0007\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\b\u0018\u0010\u001a\u001a\u0004\b\u001b\u0010\u001cR\u001d\u0010\n\u001a\b\u0012\u0004\u0012\u00020\t0\b8\u0006¢\u0006\f\n\u0004\b\u001d\u0010\u001e\u001a\u0004\b\u001d\u0010\u001fR\u001d\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\t0\b8\u0006¢\u0006\f\n\u0004\b \u0010\u001e\u001a\u0004\b \u0010\u001fR\u0019\u0010\r\u001a\u0004\u0018\u00010\f8\u0006¢\u0006\f\n\u0004\b\u001b\u0010!\u001a\u0004\b\u0012\u0010\"R\u001c\u0010\u000f\u001a\u0004\u0018\u00010\u000e8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u0014\u0010#\u001a\u0004\b\u0016\u0010$¨\u0006%"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c$b;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c;", "Lcom/withpersona/sdk2/inquiry/steps/ui/UiComponentScreen;", "uiScreen", "Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "navigationState", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "styles", "Lkotlin/Function0;", "", "onBack", "onCancel", "", "navBarTitle", "Lyq/p;", "bottomSheet", "<init>", "(Lcom/withpersona/sdk2/inquiry/steps/ui/UiComponentScreen;Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Ljava/lang/String;Lyq/p;)V", "a", "Lcom/withpersona/sdk2/inquiry/steps/ui/UiComponentScreen;", "g", "()Lcom/withpersona/sdk2/inquiry/steps/ui/UiComponentScreen;", "b", "Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "c", "()Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "f", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "d", "Lkotlin/jvm/functions/Function0;", "()Lkotlin/jvm/functions/Function0;", "e", "Ljava/lang/String;", "()Ljava/lang/String;", "Lyq/p;", "()Lyq/p;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
         public static final class b implements c {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -3732,7 +3732,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
         }
 
         /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.document.DocumentWorkflow$c$a, reason: from toString */
-        @Metadata(d1 = {"\u0000T\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u001b\b\u0086\b\u0018\u00002\u00020\u0001Bs\u0012\b\u0010\u0003\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u0004\u001a\u0004\u0018\u00010\u0002\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\f\u0010\t\u001a\b\u0012\u0004\u0012\u00020\b0\u0007\u0012\f\u0010\n\u001a\b\u0012\u0004\u0012\u00020\b0\u0007\u0012\b\u0010\f\u001a\u0004\u0018\u00010\u000b\u0012\b\u0010\u000e\u001a\u0004\u0018\u00010\r\u0012\u0006\u0010\u0010\u001a\u00020\u000f\u0012\n\b\u0002\u0010\u0011\u001a\u0004\u0018\u00010\u0002\u0012\n\b\u0002\u0010\u0013\u001a\u0004\u0018\u00010\u0012¢\u0006\u0004\b\u0014\u0010\u0015J\u0010\u0010\u0016\u001a\u00020\u0002HÖ\u0001¢\u0006\u0004\b\u0016\u0010\u0017J\u0010\u0010\u0019\u001a\u00020\u0018HÖ\u0001¢\u0006\u0004\b\u0019\u0010\u001aJ\u001a\u0010\u001e\u001a\u00020\u001d2\b\u0010\u001c\u001a\u0004\u0018\u00010\u001bHÖ\u0003¢\u0006\u0004\b\u001e\u0010\u001fR\u0019\u0010\u0003\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b \u0010!\u001a\u0004\b\"\u0010\u0017R\u0019\u0010\u0004\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b#\u0010!\u001a\u0004\b$\u0010\u0017R\u0017\u0010\u0006\u001a\u00020\u00058\u0006¢\u0006\f\n\u0004\b%\u0010&\u001a\u0004\b%\u0010'R\u001d\u0010\t\u001a\b\u0012\u0004\u0012\u00020\b0\u00078\u0006¢\u0006\f\n\u0004\b(\u0010)\u001a\u0004\b(\u0010*R\u001d\u0010\n\u001a\b\u0012\u0004\u0012\u00020\b0\u00078\u0006¢\u0006\f\n\u0004\b+\u0010)\u001a\u0004\b+\u0010*R\u0019\u0010\f\u001a\u0004\u0018\u00010\u000b8\u0006¢\u0006\f\n\u0004\b,\u0010-\u001a\u0004\b.\u0010/R\u0019\u0010\u000e\u001a\u0004\u0018\u00010\r8\u0006¢\u0006\f\n\u0004\b$\u00100\u001a\u0004\b \u00101R\u0017\u0010\u0010\u001a\u00020\u000f8\u0006¢\u0006\f\n\u0004\b.\u00102\u001a\u0004\b,\u00103R\u0019\u0010\u0011\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\"\u0010!\u001a\u0004\b4\u0010\u0017R\u001c\u0010\u0013\u001a\u0004\u0018\u00010\u00128\u0016X\u0096\u0004¢\u0006\f\n\u0004\b5\u00106\u001a\u0004\b#\u00107¨\u00068"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c$a;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c;", "", Title.type, "prompt", "Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "navigationState", "Lkotlin/Function0;", "", "onBack", "onCancel", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "styles", "Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$Document$AssetConfig$PendingPage;", "assetConfig", "Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;", "pendingPageTextVerticalPosition", "navBarTitle", "Lar/p;", "bottomSheet", "<init>", "(Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$Document$AssetConfig$PendingPage;Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;Ljava/lang/String;Lar/p;)V", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Ljava/lang/String;", "i", "b", "g", "c", "Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "()Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "d", "Lkotlin/jvm/functions/Function0;", "()Lkotlin/jvm/functions/Function0;", "e", "f", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "h", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$Document$AssetConfig$PendingPage;", "()Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$Document$AssetConfig$PendingPage;", "Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;", "()Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;", "getNavBarTitle", "j", "Lar/p;", "()Lar/p;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+        @Metadata(d1 = {"\u0000T\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u001b\b\u0086\b\u0018\u00002\u00020\u0001Bs\u0012\b\u0010\u0003\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u0004\u001a\u0004\u0018\u00010\u0002\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\f\u0010\t\u001a\b\u0012\u0004\u0012\u00020\b0\u0007\u0012\f\u0010\n\u001a\b\u0012\u0004\u0012\u00020\b0\u0007\u0012\b\u0010\f\u001a\u0004\u0018\u00010\u000b\u0012\b\u0010\u000e\u001a\u0004\u0018\u00010\r\u0012\u0006\u0010\u0010\u001a\u00020\u000f\u0012\n\b\u0002\u0010\u0011\u001a\u0004\u0018\u00010\u0002\u0012\n\b\u0002\u0010\u0013\u001a\u0004\u0018\u00010\u0012¢\u0006\u0004\b\u0014\u0010\u0015J\u0010\u0010\u0016\u001a\u00020\u0002HÖ\u0001¢\u0006\u0004\b\u0016\u0010\u0017J\u0010\u0010\u0019\u001a\u00020\u0018HÖ\u0001¢\u0006\u0004\b\u0019\u0010\u001aJ\u001a\u0010\u001e\u001a\u00020\u001d2\b\u0010\u001c\u001a\u0004\u0018\u00010\u001bHÖ\u0003¢\u0006\u0004\b\u001e\u0010\u001fR\u0019\u0010\u0003\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b \u0010!\u001a\u0004\b\"\u0010\u0017R\u0019\u0010\u0004\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b#\u0010!\u001a\u0004\b$\u0010\u0017R\u0017\u0010\u0006\u001a\u00020\u00058\u0006¢\u0006\f\n\u0004\b%\u0010&\u001a\u0004\b%\u0010'R\u001d\u0010\t\u001a\b\u0012\u0004\u0012\u00020\b0\u00078\u0006¢\u0006\f\n\u0004\b(\u0010)\u001a\u0004\b(\u0010*R\u001d\u0010\n\u001a\b\u0012\u0004\u0012\u00020\b0\u00078\u0006¢\u0006\f\n\u0004\b+\u0010)\u001a\u0004\b+\u0010*R\u0019\u0010\f\u001a\u0004\u0018\u00010\u000b8\u0006¢\u0006\f\n\u0004\b,\u0010-\u001a\u0004\b.\u0010/R\u0019\u0010\u000e\u001a\u0004\u0018\u00010\r8\u0006¢\u0006\f\n\u0004\b$\u00100\u001a\u0004\b \u00101R\u0017\u0010\u0010\u001a\u00020\u000f8\u0006¢\u0006\f\n\u0004\b.\u00102\u001a\u0004\b,\u00103R\u0019\u0010\u0011\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\"\u0010!\u001a\u0004\b4\u0010\u0017R\u001c\u0010\u0013\u001a\u0004\u0018\u00010\u00128\u0016X\u0096\u0004¢\u0006\f\n\u0004\b5\u00106\u001a\u0004\b#\u00107¨\u00068"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c$a;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c;", "", Title.type, "prompt", "Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "navigationState", "Lkotlin/Function0;", "", "onBack", "onCancel", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "styles", "Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$Document$AssetConfig$PendingPage;", "assetConfig", "Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;", "pendingPageTextVerticalPosition", "navBarTitle", "Lyq/p;", "bottomSheet", "<init>", "(Ljava/lang/String;Ljava/lang/String;Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$Document$AssetConfig$PendingPage;Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;Ljava/lang/String;Lyq/p;)V", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "a", "Ljava/lang/String;", "i", "b", "g", "c", "Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "()Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "d", "Lkotlin/jvm/functions/Function0;", "()Lkotlin/jvm/functions/Function0;", "e", "f", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "h", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$Document$AssetConfig$PendingPage;", "()Lcom/withpersona/sdk2/inquiry/network/dto/NextStep$Document$AssetConfig$PendingPage;", "Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;", "()Lcom/withpersona/sdk2/inquiry/network/dto/PendingPageTextPosition;", "getNavBarTitle", "j", "Lyq/p;", "()Lyq/p;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
         public static final /* data */ class LoadingAnimation implements c {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
@@ -3882,7 +3882,7 @@ public final class DocumentWorkflow extends k<Input, State, b, Object> {
         }
 
         /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.document.DocumentWorkflow$c$c, reason: collision with other inner class name and from toString */
-        @Metadata(d1 = {"\u0000f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0002\b/\b\u0086\b\u0018\u00002\u00020\u0001B\u0095\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004\u0012\b\u0010\u0006\u001a\u0004\u0018\u00010\u0004\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0004\u0012\b\u0010\b\u001a\u0004\u0018\u00010\u0004\u0012\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t\u0012\u0006\u0010\r\u001a\u00020\f\u0012\f\u0010\u0010\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e\u0012\f\u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e\u0012\f\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e\u0012\f\u0010\u0013\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e\u0012\u0012\u0010\u0016\u001a\u000e\u0012\u0004\u0012\u00020\u0015\u0012\u0004\u0012\u00020\u000f0\u0014\u0012\f\u0010\u0017\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e\u0012\f\u0010\u0018\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e\u0012\f\u0010\u0019\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e\u0012\u0006\u0010\u001b\u001a\u00020\u001a\u0012\u0006\u0010\u001c\u001a\u00020\u001a\u0012\u0006\u0010\u001d\u001a\u00020\u001a\u0012\b\u0010\u001e\u001a\u0004\u0018\u00010\u0004\u0012\f\u0010\u001f\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e\u0012\b\u0010!\u001a\u0004\u0018\u00010 \u0012\n\b\u0002\u0010\"\u001a\u0004\u0018\u00010\u0004\u0012\n\b\u0002\u0010$\u001a\u0004\u0018\u00010#¢\u0006\u0004\b%\u0010&J\u0010\u0010'\u001a\u00020\u0004HÖ\u0001¢\u0006\u0004\b'\u0010(J\u0010\u0010*\u001a\u00020)HÖ\u0001¢\u0006\u0004\b*\u0010+J\u001a\u0010.\u001a\u00020\u001a2\b\u0010-\u001a\u0004\u0018\u00010,HÖ\u0003¢\u0006\u0004\b.\u0010/R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b0\u00101\u001a\u0004\b2\u00103R\u0019\u0010\u0005\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\b4\u00105\u001a\u0004\b6\u0010(R\u0019\u0010\u0006\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\b7\u00105\u001a\u0004\b8\u0010(R\u0019\u0010\u0007\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\b9\u00105\u001a\u0004\b9\u0010(R\u0019\u0010\b\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\b:\u00105\u001a\u0004\b;\u0010(R\u001d\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t8\u0006¢\u0006\f\n\u0004\b<\u0010=\u001a\u0004\b:\u0010>R\u0017\u0010\r\u001a\u00020\f8\u0006¢\u0006\f\n\u0004\b2\u0010?\u001a\u0004\b@\u0010AR\u001d\u0010\u0010\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e8\u0006¢\u0006\f\n\u0004\bB\u0010C\u001a\u0004\bD\u0010ER\u001d\u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e8\u0006¢\u0006\f\n\u0004\b@\u0010C\u001a\u0004\bF\u0010ER\u001d\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e8\u0006¢\u0006\f\n\u0004\bG\u0010C\u001a\u0004\bH\u0010ER\u001d\u0010\u0013\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e8\u0006¢\u0006\f\n\u0004\bI\u0010C\u001a\u0004\bJ\u0010ER#\u0010\u0016\u001a\u000e\u0012\u0004\u0012\u00020\u0015\u0012\u0004\u0012\u00020\u000f0\u00148\u0006¢\u0006\f\n\u0004\bK\u0010L\u001a\u0004\bM\u0010NR\u001d\u0010\u0017\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e8\u0006¢\u0006\f\n\u0004\bM\u0010C\u001a\u0004\bO\u0010ER\u001d\u0010\u0018\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e8\u0006¢\u0006\f\n\u0004\bO\u0010C\u001a\u0004\bI\u0010ER\u001d\u0010\u0019\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e8\u0006¢\u0006\f\n\u0004\bJ\u0010C\u001a\u0004\bG\u0010ER\u0017\u0010\u001b\u001a\u00020\u001a8\u0006¢\u0006\f\n\u0004\b8\u0010P\u001a\u0004\b7\u0010QR\u0017\u0010\u001c\u001a\u00020\u001a8\u0006¢\u0006\f\n\u0004\bR\u0010P\u001a\u0004\b0\u0010QR\u0017\u0010\u001d\u001a\u00020\u001a8\u0006¢\u0006\f\n\u0004\bS\u0010P\u001a\u0004\bS\u0010QR\u0019\u0010\u001e\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\b;\u00105\u001a\u0004\b<\u0010(R\u001d\u0010\u001f\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e8\u0006¢\u0006\f\n\u0004\b6\u0010C\u001a\u0004\bK\u0010ER\u0019\u0010!\u001a\u0004\u0018\u00010 8\u0006¢\u0006\f\n\u0004\bT\u0010U\u001a\u0004\bR\u0010VR\u0019\u0010\"\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\bW\u00105\u001a\u0004\bB\u0010(R\u001c\u0010$\u001a\u0004\u0018\u00010#8\u0016X\u0096\u0004¢\u0006\f\n\u0004\bX\u0010Y\u001a\u0004\b4\u0010Z¨\u0006["}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c$c;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c;", "Lk6/s;", "imageLoader", "", Title.type, "prompt", "disclaimer", "submitButtonText", "", "Lcom/withpersona/sdk2/inquiry/document/DocumentFile;", "documents", "Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "navigationState", "Lkotlin/Function0;", "", "openSelectFile", "selectFromPhotoLibrary", "openCamera", "openUploadOptions", "Lkotlin/Function1;", "Lcom/withpersona/sdk2/inquiry/document/DocumentFile$Remote;", "onRemove", "onSubmit", "onCancel", "onBack", "", "disabled", "addButtonEnabled", "submitButtonEnabled", "error", "onErrorDismissed", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "styles", "navBarTitle", "Lar/p;", "bottomSheet", "<init>", "(Lk6/s;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;ZZZLjava/lang/String;Lkotlin/jvm/functions/Function0;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;Ljava/lang/String;Lar/p;)V", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "", "other", "equals", "(Ljava/lang/Object;)Z", "a", "Lk6/s;", "g", "()Lk6/s;", "b", "Ljava/lang/String;", "t", "c", "p", "d", "e", "s", "f", "Ljava/util/List;", "()Ljava/util/List;", "Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "i", "()Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "h", "Lkotlin/jvm/functions/Function0;", "getOpenSelectFile", "()Lkotlin/jvm/functions/Function0;", "getSelectFromPhotoLibrary", "j", "getOpenCamera", "k", "o", "l", "Lkotlin/jvm/functions/Function1;", "m", "()Lkotlin/jvm/functions/Function1;", "n", "Z", "()Z", "q", "r", "u", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "v", "w", "Lar/p;", "()Lar/p;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+        @Metadata(d1 = {"\u0000f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0002\b/\b\u0086\b\u0018\u00002\u00020\u0001B\u0095\u0002\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004\u0012\b\u0010\u0006\u001a\u0004\u0018\u00010\u0004\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0004\u0012\b\u0010\b\u001a\u0004\u0018\u00010\u0004\u0012\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t\u0012\u0006\u0010\r\u001a\u00020\f\u0012\f\u0010\u0010\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e\u0012\f\u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e\u0012\f\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e\u0012\f\u0010\u0013\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e\u0012\u0012\u0010\u0016\u001a\u000e\u0012\u0004\u0012\u00020\u0015\u0012\u0004\u0012\u00020\u000f0\u0014\u0012\f\u0010\u0017\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e\u0012\f\u0010\u0018\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e\u0012\f\u0010\u0019\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e\u0012\u0006\u0010\u001b\u001a\u00020\u001a\u0012\u0006\u0010\u001c\u001a\u00020\u001a\u0012\u0006\u0010\u001d\u001a\u00020\u001a\u0012\b\u0010\u001e\u001a\u0004\u0018\u00010\u0004\u0012\f\u0010\u001f\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e\u0012\b\u0010!\u001a\u0004\u0018\u00010 \u0012\n\b\u0002\u0010\"\u001a\u0004\u0018\u00010\u0004\u0012\n\b\u0002\u0010$\u001a\u0004\u0018\u00010#¢\u0006\u0004\b%\u0010&J\u0010\u0010'\u001a\u00020\u0004HÖ\u0001¢\u0006\u0004\b'\u0010(J\u0010\u0010*\u001a\u00020)HÖ\u0001¢\u0006\u0004\b*\u0010+J\u001a\u0010.\u001a\u00020\u001a2\b\u0010-\u001a\u0004\u0018\u00010,HÖ\u0003¢\u0006\u0004\b.\u0010/R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b0\u00101\u001a\u0004\b2\u00103R\u0019\u0010\u0005\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\b4\u00105\u001a\u0004\b6\u0010(R\u0019\u0010\u0006\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\b7\u00105\u001a\u0004\b8\u0010(R\u0019\u0010\u0007\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\b9\u00105\u001a\u0004\b9\u0010(R\u0019\u0010\b\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\b:\u00105\u001a\u0004\b;\u0010(R\u001d\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t8\u0006¢\u0006\f\n\u0004\b<\u0010=\u001a\u0004\b:\u0010>R\u0017\u0010\r\u001a\u00020\f8\u0006¢\u0006\f\n\u0004\b2\u0010?\u001a\u0004\b@\u0010AR\u001d\u0010\u0010\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e8\u0006¢\u0006\f\n\u0004\bB\u0010C\u001a\u0004\bD\u0010ER\u001d\u0010\u0011\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e8\u0006¢\u0006\f\n\u0004\b@\u0010C\u001a\u0004\bF\u0010ER\u001d\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e8\u0006¢\u0006\f\n\u0004\bG\u0010C\u001a\u0004\bH\u0010ER\u001d\u0010\u0013\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e8\u0006¢\u0006\f\n\u0004\bI\u0010C\u001a\u0004\bJ\u0010ER#\u0010\u0016\u001a\u000e\u0012\u0004\u0012\u00020\u0015\u0012\u0004\u0012\u00020\u000f0\u00148\u0006¢\u0006\f\n\u0004\bK\u0010L\u001a\u0004\bM\u0010NR\u001d\u0010\u0017\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e8\u0006¢\u0006\f\n\u0004\bM\u0010C\u001a\u0004\bO\u0010ER\u001d\u0010\u0018\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e8\u0006¢\u0006\f\n\u0004\bO\u0010C\u001a\u0004\bI\u0010ER\u001d\u0010\u0019\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e8\u0006¢\u0006\f\n\u0004\bJ\u0010C\u001a\u0004\bG\u0010ER\u0017\u0010\u001b\u001a\u00020\u001a8\u0006¢\u0006\f\n\u0004\b8\u0010P\u001a\u0004\b7\u0010QR\u0017\u0010\u001c\u001a\u00020\u001a8\u0006¢\u0006\f\n\u0004\bR\u0010P\u001a\u0004\b0\u0010QR\u0017\u0010\u001d\u001a\u00020\u001a8\u0006¢\u0006\f\n\u0004\bS\u0010P\u001a\u0004\bS\u0010QR\u0019\u0010\u001e\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\b;\u00105\u001a\u0004\b<\u0010(R\u001d\u0010\u001f\u001a\b\u0012\u0004\u0012\u00020\u000f0\u000e8\u0006¢\u0006\f\n\u0004\b6\u0010C\u001a\u0004\bK\u0010ER\u0019\u0010!\u001a\u0004\u0018\u00010 8\u0006¢\u0006\f\n\u0004\bT\u0010U\u001a\u0004\bR\u0010VR\u0019\u0010\"\u001a\u0004\u0018\u00010\u00048\u0006¢\u0006\f\n\u0004\bW\u00105\u001a\u0004\bB\u0010(R\u001c\u0010$\u001a\u0004\u0018\u00010#8\u0016X\u0096\u0004¢\u0006\f\n\u0004\bX\u0010Y\u001a\u0004\b4\u0010Z¨\u0006["}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c$c;", "Lcom/withpersona/sdk2/inquiry/document/DocumentWorkflow$c;", "Lk6/s;", "imageLoader", "", Title.type, "prompt", "disclaimer", "submitButtonText", "", "Lcom/withpersona/sdk2/inquiry/document/DocumentFile;", "documents", "Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "navigationState", "Lkotlin/Function0;", "", "openSelectFile", "selectFromPhotoLibrary", "openCamera", "openUploadOptions", "Lkotlin/Function1;", "Lcom/withpersona/sdk2/inquiry/document/DocumentFile$Remote;", "onRemove", "onSubmit", "onCancel", "onBack", "", "disabled", "addButtonEnabled", "submitButtonEnabled", "error", "onErrorDismissed", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "styles", "navBarTitle", "Lyq/p;", "bottomSheet", "<init>", "(Lk6/s;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;ZZZLjava/lang/String;Lkotlin/jvm/functions/Function0;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;Ljava/lang/String;Lyq/p;)V", "toString", "()Ljava/lang/String;", "", "hashCode", "()I", "", "other", "equals", "(Ljava/lang/Object;)Z", "a", "Lk6/s;", "g", "()Lk6/s;", "b", "Ljava/lang/String;", "t", "c", "p", "d", "e", "s", "f", "Ljava/util/List;", "()Ljava/util/List;", "Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "i", "()Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "h", "Lkotlin/jvm/functions/Function0;", "getOpenSelectFile", "()Lkotlin/jvm/functions/Function0;", "getSelectFromPhotoLibrary", "j", "getOpenCamera", "k", "o", "l", "Lkotlin/jvm/functions/Function1;", "m", "()Lkotlin/jvm/functions/Function1;", "n", "Z", "()Z", "q", "r", "u", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "v", "w", "Lyq/p;", "()Lyq/p;", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
         public static final /* data */ class ReviewCaptures implements c {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */

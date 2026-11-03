@@ -6,11 +6,11 @@ import java.util.List;
 public final class bh extends k {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final gg f6394c;
+    public final gg f6467c;
 
     public bh(gg ggVar) {
         super("internal.logger");
-        this.f6394c = ggVar;
+        this.f6467c = ggVar;
         this.b.put("log", new ah(this, false, true));
         this.b.put("silent", new de(this, "silent"));
         ((k) this.b.get("silent")).d("log", new ah(this, true, true));
@@ -20,10 +20,10 @@ public final class bh extends k {
 
     @Override // com.google.android.gms.internal.measurement.k
     public final q h(u4 u4Var, List list) {
-        return q.f6743zo;
+        return q.f6816yo;
     }
 
     public final /* synthetic */ gg j() {
-        return this.f6394c;
+        return this.f6467c;
     }
 }

@@ -18,7 +18,7 @@ public final class h extends SpannableStringBuilder {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final Class<?> f37141a;
+    public final Class<?> f37836a;
 
     @NonNull
     public final List<a> b;
@@ -26,11 +26,11 @@ public final class h extends SpannableStringBuilder {
     public static class a implements TextWatcher, SpanWatcher {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Object f37142a;
+        public final Object f37837a;
         public final AtomicInteger b = new AtomicInteger(0);
 
         public a(Object obj) {
-            this.f37142a = obj;
+            this.f37837a = obj;
         }
 
         public final void a() {
@@ -39,7 +39,7 @@ public final class h extends SpannableStringBuilder {
 
         @Override // android.text.TextWatcher
         public void afterTextChanged(Editable editable) {
-            ((TextWatcher) this.f37142a).afterTextChanged(editable);
+            ((TextWatcher) this.f37837a).afterTextChanged(editable);
         }
 
         public final boolean b(Object obj) {
@@ -48,7 +48,7 @@ public final class h extends SpannableStringBuilder {
 
         @Override // android.text.TextWatcher
         public void beforeTextChanged(CharSequence charSequence, int i10, int i11, int i12) {
-            ((TextWatcher) this.f37142a).beforeTextChanged(charSequence, i10, i11, i12);
+            ((TextWatcher) this.f37837a).beforeTextChanged(charSequence, i10, i11, i12);
         }
 
         public final void c() {
@@ -58,7 +58,7 @@ public final class h extends SpannableStringBuilder {
         @Override // android.text.SpanWatcher
         public void onSpanAdded(Spannable spannable, Object obj, int i10, int i11) {
             if (this.b.get() <= 0 || !b(obj)) {
-                ((SpanWatcher) this.f37142a).onSpanAdded(spannable, obj, i10, i11);
+                ((SpanWatcher) this.f37837a).onSpanAdded(spannable, obj, i10, i11);
             }
         }
 
@@ -84,20 +84,20 @@ public final class h extends SpannableStringBuilder {
                         i15 = i12;
                     }
                 }
-                ((SpanWatcher) this.f37142a).onSpanChanged(spannable, obj, i14, i11, i15, i13);
+                ((SpanWatcher) this.f37837a).onSpanChanged(spannable, obj, i14, i11, i15, i13);
             }
         }
 
         @Override // android.text.SpanWatcher
         public void onSpanRemoved(Spannable spannable, Object obj, int i10, int i11) {
             if (this.b.get() <= 0 || !b(obj)) {
-                ((SpanWatcher) this.f37142a).onSpanRemoved(spannable, obj, i10, i11);
+                ((SpanWatcher) this.f37837a).onSpanRemoved(spannable, obj, i10, i11);
             }
         }
 
         @Override // android.text.TextWatcher
         public void onTextChanged(CharSequence charSequence, int i10, int i11, int i12) {
-            ((TextWatcher) this.f37142a).onTextChanged(charSequence, i10, i11, i12);
+            ((TextWatcher) this.f37837a).onTextChanged(charSequence, i10, i11, i12);
         }
     }
 
@@ -105,7 +105,7 @@ public final class h extends SpannableStringBuilder {
         super(charSequence);
         this.b = new ArrayList();
         x2.g.h(cls, "watcherClass cannot be null");
-        this.f37141a = cls;
+        this.f37836a = cls;
     }
 
     @NonNull
@@ -137,7 +137,7 @@ public final class h extends SpannableStringBuilder {
     public final a f(Object obj) {
         for (int i10 = 0; i10 < this.b.size(); i10++) {
             a aVar = this.b.get(i10);
-            if (aVar.f37142a == obj) {
+            if (aVar.f37837a == obj) {
                 return aVar;
             }
         }
@@ -145,7 +145,7 @@ public final class h extends SpannableStringBuilder {
     }
 
     public final boolean g(@NonNull Class<?> cls) {
-        return this.f37141a == cls;
+        return this.f37836a == cls;
     }
 
     @Override // android.text.SpannableStringBuilder, android.text.Spanned
@@ -185,7 +185,7 @@ public final class h extends SpannableStringBuilder {
         a[] aVarArr = (a[]) super.getSpans(i10, i11, a.class);
         T[] tArr = (T[]) ((Object[]) Array.newInstance((Class<?>) cls, aVarArr.length));
         for (int i12 = 0; i12 < aVarArr.length; i12++) {
-            tArr[i12] = aVarArr[i12].f37142a;
+            tArr[i12] = aVarArr[i12].f37837a;
         }
         return tArr;
     }
@@ -238,7 +238,7 @@ public final class h extends SpannableStringBuilder {
     @Override // android.text.SpannableStringBuilder, java.lang.CharSequence
     @SuppressLint({"UnknownNullness"})
     public CharSequence subSequence(int i10, int i11) {
-        return new h(this.f37141a, this, i10, i11);
+        return new h(this.f37836a, this, i10, i11);
     }
 
     @Override // android.text.SpannableStringBuilder, android.text.Editable
@@ -275,7 +275,7 @@ public final class h extends SpannableStringBuilder {
         super(charSequence, i10, i11);
         this.b = new ArrayList();
         x2.g.h(cls, "watcherClass cannot be null");
-        this.f37141a = cls;
+        this.f37836a = cls;
     }
 
     @Override // android.text.SpannableStringBuilder, android.text.Editable

@@ -6,14 +6,14 @@ import androidx.annotation.NonNull;
 public class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final s f30575a = new s();
+    public final s f31122a = new s();
 
     public void a() {
-        this.f30575a.c();
+        this.f31122a.c();
     }
 
     @NonNull
     public a b() {
-        return this.f30575a;
+        return this.f31122a;
     }
 }

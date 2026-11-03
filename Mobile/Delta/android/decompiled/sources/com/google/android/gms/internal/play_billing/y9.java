@@ -9,9 +9,9 @@ public final class y9 {
         t9 t9Var = new t9();
         x9 x9Var = new x9(t9Var);
         t9Var.b = x9Var;
-        t9Var.f7322a = v9Var.getClass();
+        t9Var.f7396a = v9Var.getClass();
         try {
-            t9Var.f7322a = v9Var.a(t9Var);
+            t9Var.f7396a = v9Var.a(t9Var);
             return x9Var;
         } catch (Exception e10) {
             x9Var.d(e10);

@@ -1,11 +1,31 @@
 package ts;
 
-import kotlin.Metadata;
+import ss.p;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000\f\n\u0002\u0010\u000b\n\u0002\u0010\u0006\n\u0002\b\u0003\u001a\u0011\u0010\u0002\u001a\u00020\u0001*\u00020\u0000¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"", "", "a", "(Z)D", "utils_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
-public final class b {
-    public static final double a(boolean z10) {
-        return z10 ? 1.0d : 0.0d;
+public abstract class b {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public static final p<a> f32604a = p.b("list-item-type");
+    public static final p<Integer> b = p.b("bullet-list-item-level");
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    public static final p<Integer> f32605c = p.b("ordered-list-item-number");
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public static final p<Integer> f32606d = p.b("heading-level");
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public static final p<String> f32607e = p.b("link-destination");
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    public static final p<Boolean> f32608f = p.b("paragraph-is-in-tight-list");
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name */
+    public static final p<String> f32609g = p.b("code-block-info");
+
+    public enum a {
+        BULLET,
+        ORDERED
     }
 }

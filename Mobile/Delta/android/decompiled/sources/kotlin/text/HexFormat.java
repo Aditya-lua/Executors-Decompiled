@@ -17,11 +17,11 @@ public final class HexFormat {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
     @NotNull
-    public static final HexFormat f22633e;
+    public static final HexFormat f23088e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NotNull
-    public static final HexFormat f22634f;
+    public static final HexFormat f23089f;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     public final boolean upperCase;
@@ -44,7 +44,7 @@ public final class HexFormat {
 
         /* JADX INFO: renamed from: k, reason: collision with root package name */
         @NotNull
-        public static final BytesHexFormat f22638k = new BytesHexFormat(Integer.MAX_VALUE, Integer.MAX_VALUE, "  ", "", "", "");
+        public static final BytesHexFormat f23093k = new BytesHexFormat(Integer.MAX_VALUE, Integer.MAX_VALUE, "  ", "", "", "");
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         public final int bytesPerLine;
@@ -86,7 +86,7 @@ public final class HexFormat {
 
             @NotNull
             public final BytesHexFormat a() {
-                return BytesHexFormat.f22638k;
+                return BytesHexFormat.f23093k;
             }
 
             public Companion() {
@@ -209,7 +209,7 @@ public final class HexFormat {
 
         @NotNull
         public final HexFormat a() {
-            return HexFormat.f22633e;
+            return HexFormat.f23088e;
         }
 
         public Companion() {
@@ -226,7 +226,7 @@ public final class HexFormat {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
         @NotNull
-        public static final NumberHexFormat f22648i = new NumberHexFormat("", "", false, 1);
+        public static final NumberHexFormat f23103i = new NumberHexFormat("", "", false, 1);
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         @NotNull
@@ -260,7 +260,7 @@ public final class HexFormat {
 
             @NotNull
             public final NumberHexFormat a() {
-                return NumberHexFormat.f22648i;
+                return NumberHexFormat.f23103i;
             }
 
             public Companion() {
@@ -320,8 +320,8 @@ public final class HexFormat {
         BytesHexFormat.Companion companion = BytesHexFormat.INSTANCE;
         BytesHexFormat bytesHexFormatA = companion.a();
         NumberHexFormat.Companion companion2 = NumberHexFormat.INSTANCE;
-        f22633e = new HexFormat(false, bytesHexFormatA, companion2.a());
-        f22634f = new HexFormat(true, companion.a(), companion2.a());
+        f23088e = new HexFormat(false, bytesHexFormatA, companion2.a());
+        f23089f = new HexFormat(true, companion.a(), companion2.a());
     }
 
     public HexFormat(boolean z10, @NotNull BytesHexFormat bytes, @NotNull NumberHexFormat number) {

@@ -4,14 +4,14 @@ package q7;
 public class y {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final r7.c.a f29280a = r7.c.a.a("nm", "mm", "hd");
+    public static final r7.c.a f29633a = r7.c.a.a("nm", "mm", "hd");
 
     public static n7.j a(r7.c cVar) {
         String strM = null;
         boolean zG = false;
         n7.j.a aVarB = null;
         while (cVar.f()) {
-            int iR = cVar.r(f29280a);
+            int iR = cVar.r(f29633a);
             if (iR == 0) {
                 strM = cVar.m();
             } else if (iR == 1) {

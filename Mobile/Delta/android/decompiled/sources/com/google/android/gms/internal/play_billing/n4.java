@@ -9,20 +9,20 @@ import java.util.RandomAccess;
 public final class n4 extends d3 implements RandomAccess, y4 {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final float[] f7188d;
+    public static final float[] f7262d;
     public float[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f7189c;
+    public int f7263c;
 
     static {
         float[] fArr = new float[0];
-        f7188d = fArr;
+        f7262d = fArr;
         new n4(fArr, 0, false);
     }
 
     public n4() {
-        this(f7188d, 0, true);
+        this(f7262d, 0, true);
     }
 
     private static int f(int i10) {
@@ -30,11 +30,11 @@ public final class n4 extends d3 implements RandomAccess, y4 {
     }
 
     private final String g(int i10) {
-        return "Index:" + i10 + ", Size:" + this.f7189c;
+        return "Index:" + i10 + ", Size:" + this.f7263c;
     }
 
     private final void h(int i10) {
-        if (i10 < 0 || i10 >= this.f7189c) {
+        if (i10 < 0 || i10 >= this.f7263c) {
             throw new IndexOutOfBoundsException(g(i10));
         }
     }
@@ -44,7 +44,7 @@ public final class n4 extends d3 implements RandomAccess, y4 {
         int i11;
         float fFloatValue = ((Float) obj).floatValue();
         a();
-        if (i10 < 0 || i10 > (i11 = this.f7189c)) {
+        if (i10 < 0 || i10 > (i11 = this.f7263c)) {
             throw new IndexOutOfBoundsException(g(i10));
         }
         int i12 = i10 + 1;
@@ -55,11 +55,11 @@ public final class n4 extends d3 implements RandomAccess, y4 {
         } else {
             float[] fArr2 = new float[f(length)];
             System.arraycopy(this.b, 0, fArr2, 0, i10);
-            System.arraycopy(this.b, i10, fArr2, i12, this.f7189c - i10);
+            System.arraycopy(this.b, i10, fArr2, i12, this.f7263c - i10);
             this.b = fArr2;
         }
         this.b[i10] = fFloatValue;
-        this.f7189c++;
+        this.f7263c++;
         ((AbstractList) this).modCount++;
     }
 
@@ -71,11 +71,11 @@ public final class n4 extends d3 implements RandomAccess, y4 {
             return super.addAll(collection);
         }
         n4 n4Var = (n4) collection;
-        int i10 = n4Var.f7189c;
+        int i10 = n4Var.f7263c;
         if (i10 == 0) {
             return false;
         }
-        int i11 = this.f7189c;
+        int i11 = this.f7263c;
         if (Integer.MAX_VALUE - i11 < i10) {
             throw new OutOfMemoryError();
         }
@@ -84,8 +84,8 @@ public final class n4 extends d3 implements RandomAccess, y4 {
         if (i12 > fArr.length) {
             this.b = Arrays.copyOf(fArr, i12);
         }
-        System.arraycopy(n4Var.b, 0, this.b, this.f7189c, n4Var.f7189c);
-        this.f7189c = i12;
+        System.arraycopy(n4Var.b, 0, this.b, this.f7263c, n4Var.f7263c);
+        this.f7263c = i12;
         ((AbstractList) this).modCount++;
         return true;
     }
@@ -102,16 +102,16 @@ public final class n4 extends d3 implements RandomAccess, y4 {
 
     public final void d(float f10) {
         a();
-        int i10 = this.f7189c;
+        int i10 = this.f7263c;
         int length = this.b.length;
         if (i10 == length) {
             float[] fArr = new float[f(length)];
-            System.arraycopy(this.b, 0, fArr, 0, this.f7189c);
+            System.arraycopy(this.b, 0, fArr, 0, this.f7263c);
             this.b = fArr;
         }
         float[] fArr2 = this.b;
-        int i11 = this.f7189c;
-        this.f7189c = i11 + 1;
+        int i11 = this.f7263c;
+        this.f7263c = i11 + 1;
         fArr2[i11] = f10;
     }
 
@@ -139,11 +139,11 @@ public final class n4 extends d3 implements RandomAccess, y4 {
             return super.equals(obj);
         }
         n4 n4Var = (n4) obj;
-        if (this.f7189c != n4Var.f7189c) {
+        if (this.f7263c != n4Var.f7263c) {
             return false;
         }
         float[] fArr = n4Var.b;
-        for (int i10 = 0; i10 < this.f7189c; i10++) {
+        for (int i10 = 0; i10 < this.f7263c; i10++) {
             if (Float.floatToIntBits(this.b[i10]) != Float.floatToIntBits(fArr[i10])) {
                 return false;
             }
@@ -160,7 +160,7 @@ public final class n4 extends d3 implements RandomAccess, y4 {
     @Override // java.util.AbstractList, java.util.Collection, java.util.List
     public final int hashCode() {
         int iFloatToIntBits = 1;
-        for (int i10 = 0; i10 < this.f7189c; i10++) {
+        for (int i10 = 0; i10 < this.f7263c; i10++) {
             iFloatToIntBits = (iFloatToIntBits * 31) + Float.floatToIntBits(this.b[i10]);
         }
         return iFloatToIntBits;
@@ -172,7 +172,7 @@ public final class n4 extends d3 implements RandomAccess, y4 {
             return -1;
         }
         float fFloatValue = ((Float) obj).floatValue();
-        int i10 = this.f7189c;
+        int i10 = this.f7263c;
         for (int i11 = 0; i11 < i10; i11++) {
             if (this.b[i11] == fFloatValue) {
                 return i11;
@@ -183,8 +183,8 @@ public final class n4 extends d3 implements RandomAccess, y4 {
 
     @Override // com.google.android.gms.internal.play_billing.y4
     public final /* bridge */ /* synthetic */ y4 r(int i10) {
-        if (i10 >= this.f7189c) {
-            return new n4(i10 == 0 ? f7188d : Arrays.copyOf(this.b, i10), this.f7189c, true);
+        if (i10 >= this.f7263c) {
+            return new n4(i10 == 0 ? f7262d : Arrays.copyOf(this.b, i10), this.f7263c, true);
         }
         throw new IllegalArgumentException();
     }
@@ -195,11 +195,11 @@ public final class n4 extends d3 implements RandomAccess, y4 {
         h(i10);
         float[] fArr = this.b;
         float f10 = fArr[i10];
-        int i11 = this.f7189c;
+        int i11 = this.f7263c;
         if (i10 < i11 - 1) {
             System.arraycopy(fArr, i10 + 1, fArr, i10, (i11 - i10) - 1);
         }
-        this.f7189c--;
+        this.f7263c--;
         ((AbstractList) this).modCount++;
         return Float.valueOf(f10);
     }
@@ -211,8 +211,8 @@ public final class n4 extends d3 implements RandomAccess, y4 {
             throw new IndexOutOfBoundsException("toIndex < fromIndex");
         }
         float[] fArr = this.b;
-        System.arraycopy(fArr, i11, fArr, i10, this.f7189c - i11);
-        this.f7189c -= i11 - i10;
+        System.arraycopy(fArr, i11, fArr, i10, this.f7263c - i11);
+        this.f7263c -= i11 - i10;
         ((AbstractList) this).modCount++;
     }
 
@@ -229,13 +229,13 @@ public final class n4 extends d3 implements RandomAccess, y4 {
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final int size() {
-        return this.f7189c;
+        return this.f7263c;
     }
 
     public n4(float[] fArr, int i10, boolean z10) {
         super(z10);
         this.b = fArr;
-        this.f7189c = i10;
+        this.f7263c = i10;
     }
 
     @Override // java.util.AbstractList, java.util.AbstractCollection, java.util.Collection, java.util.List

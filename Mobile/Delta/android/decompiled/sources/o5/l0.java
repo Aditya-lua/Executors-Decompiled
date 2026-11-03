@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 public class l0 extends k0 {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static boolean f27131f = true;
+    public static boolean f27696f = true;
 
     public static class a {
         public static void a(View view, int i10, int i11, int i12, int i13) {
@@ -19,11 +19,11 @@ public class l0 extends k0 {
     @Override // o5.j0
     @SuppressLint({"NewApi"})
     public void d(@NonNull View view, int i10, int i11, int i12, int i13) {
-        if (f27131f) {
+        if (f27696f) {
             try {
                 a.a(view, i10, i11, i12, i13);
             } catch (NoSuchMethodError unused) {
-                f27131f = false;
+                f27696f = false;
             }
         }
     }

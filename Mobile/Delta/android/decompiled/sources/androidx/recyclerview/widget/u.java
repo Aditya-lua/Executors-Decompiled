@@ -6,36 +6,36 @@ import androidx.annotation.NonNull;
 public class u {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final w1.j<RecyclerView.f0, a> f3297a = new w1.j<>();
+    public final w1.j<RecyclerView.f0, a> f3142a = new w1.j<>();
     public final w1.g<RecyclerView.f0> b = new w1.g<>();
 
     public static class a {
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static x2.d<a> f3298d = new x2.e(20);
+        public static x2.d<a> f3143d = new x2.e(20);
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public int f3299a;
+        public int f3144a;
         public RecyclerView.n.c b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public RecyclerView.n.c f3300c;
+        public RecyclerView.n.c f3145c;
 
         public static void a() {
-            while (f3298d.b() != null) {
+            while (f3143d.b() != null) {
             }
         }
 
         public static a b() {
-            a aVarB = f3298d.b();
+            a aVarB = f3143d.b();
             return aVarB == null ? new a() : aVarB;
         }
 
         public static void c(a aVar) {
-            aVar.f3299a = 0;
+            aVar.f3144a = 0;
             aVar.b = null;
-            aVar.f3300c = null;
-            f3298d.a(aVar);
+            aVar.f3145c = null;
+            f3143d.a(aVar);
         }
     }
 
@@ -50,22 +50,22 @@ public class u {
     }
 
     public void a(RecyclerView.f0 f0Var, RecyclerView.n.c cVar) {
-        a aVarB = this.f3297a.get(f0Var);
+        a aVarB = this.f3142a.get(f0Var);
         if (aVarB == null) {
             aVarB = a.b();
-            this.f3297a.put(f0Var, aVarB);
+            this.f3142a.put(f0Var, aVarB);
         }
-        aVarB.f3299a |= 2;
+        aVarB.f3144a |= 2;
         aVarB.b = cVar;
     }
 
     public void b(RecyclerView.f0 f0Var) {
-        a aVarB = this.f3297a.get(f0Var);
+        a aVarB = this.f3142a.get(f0Var);
         if (aVarB == null) {
             aVarB = a.b();
-            this.f3297a.put(f0Var, aVarB);
+            this.f3142a.put(f0Var, aVarB);
         }
-        aVarB.f3299a |= 1;
+        aVarB.f3144a |= 1;
     }
 
     public void c(long j10, RecyclerView.f0 f0Var) {
@@ -73,27 +73,27 @@ public class u {
     }
 
     public void d(RecyclerView.f0 f0Var, RecyclerView.n.c cVar) {
-        a aVarB = this.f3297a.get(f0Var);
+        a aVarB = this.f3142a.get(f0Var);
         if (aVarB == null) {
             aVarB = a.b();
-            this.f3297a.put(f0Var, aVarB);
+            this.f3142a.put(f0Var, aVarB);
         }
-        aVarB.f3300c = cVar;
-        aVarB.f3299a |= 8;
+        aVarB.f3145c = cVar;
+        aVarB.f3144a |= 8;
     }
 
     public void e(RecyclerView.f0 f0Var, RecyclerView.n.c cVar) {
-        a aVarB = this.f3297a.get(f0Var);
+        a aVarB = this.f3142a.get(f0Var);
         if (aVarB == null) {
             aVarB = a.b();
-            this.f3297a.put(f0Var, aVarB);
+            this.f3142a.put(f0Var, aVarB);
         }
         aVarB.b = cVar;
-        aVarB.f3299a |= 4;
+        aVarB.f3144a |= 4;
     }
 
     public void f() {
-        this.f3297a.clear();
+        this.f3142a.clear();
         this.b.a();
     }
 
@@ -102,13 +102,13 @@ public class u {
     }
 
     public boolean h(RecyclerView.f0 f0Var) {
-        a aVar = this.f3297a.get(f0Var);
-        return (aVar == null || (aVar.f3299a & 1) == 0) ? false : true;
+        a aVar = this.f3142a.get(f0Var);
+        return (aVar == null || (aVar.f3144a & 1) == 0) ? false : true;
     }
 
     public boolean i(RecyclerView.f0 f0Var) {
-        a aVar = this.f3297a.get(f0Var);
-        return (aVar == null || (aVar.f3299a & 4) == 0) ? false : true;
+        a aVar = this.f3142a.get(f0Var);
+        return (aVar == null || (aVar.f3144a & 4) == 0) ? false : true;
     }
 
     public void j() {
@@ -122,22 +122,22 @@ public class u {
     public final RecyclerView.n.c l(RecyclerView.f0 f0Var, int i10) {
         a aVarK;
         RecyclerView.n.c cVar;
-        int iD = this.f3297a.d(f0Var);
-        if (iD >= 0 && (aVarK = this.f3297a.k(iD)) != null) {
-            int i11 = aVarK.f3299a;
+        int iD = this.f3142a.d(f0Var);
+        if (iD >= 0 && (aVarK = this.f3142a.k(iD)) != null) {
+            int i11 = aVarK.f3144a;
             if ((i11 & i10) != 0) {
                 int i12 = (~i10) & i11;
-                aVarK.f3299a = i12;
+                aVarK.f3144a = i12;
                 if (i10 == 4) {
                     cVar = aVarK.b;
                 } else {
                     if (i10 != 8) {
                         throw new IllegalArgumentException("Must provide flag PRE or POST");
                     }
-                    cVar = aVarK.f3300c;
+                    cVar = aVarK.f3145c;
                 }
                 if ((i12 & 12) == 0) {
-                    this.f3297a.i(iD);
+                    this.f3142a.i(iD);
                     a.c(aVarK);
                 }
                 return cVar;
@@ -155,10 +155,10 @@ public class u {
     }
 
     public void o(b bVar) {
-        for (int size = this.f3297a.getSize() - 1; size >= 0; size--) {
-            RecyclerView.f0 f0VarF = this.f3297a.f(size);
-            a aVarI = this.f3297a.i(size);
-            int i10 = aVarI.f3299a;
+        for (int size = this.f3142a.getSize() - 1; size >= 0; size--) {
+            RecyclerView.f0 f0VarF = this.f3142a.f(size);
+            a aVarI = this.f3142a.i(size);
+            int i10 = aVarI.f3144a;
             if ((i10 & 3) == 3) {
                 bVar.b(f0VarF);
             } else if ((i10 & 1) != 0) {
@@ -166,27 +166,27 @@ public class u {
                 if (cVar == null) {
                     bVar.b(f0VarF);
                 } else {
-                    bVar.c(f0VarF, cVar, aVarI.f3300c);
+                    bVar.c(f0VarF, cVar, aVarI.f3145c);
                 }
             } else if ((i10 & 14) == 14) {
-                bVar.a(f0VarF, aVarI.b, aVarI.f3300c);
+                bVar.a(f0VarF, aVarI.b, aVarI.f3145c);
             } else if ((i10 & 12) == 12) {
-                bVar.d(f0VarF, aVarI.b, aVarI.f3300c);
+                bVar.d(f0VarF, aVarI.b, aVarI.f3145c);
             } else if ((i10 & 4) != 0) {
                 bVar.c(f0VarF, aVarI.b, null);
             } else if ((i10 & 8) != 0) {
-                bVar.a(f0VarF, aVarI.b, aVarI.f3300c);
+                bVar.a(f0VarF, aVarI.b, aVarI.f3145c);
             }
             a.c(aVarI);
         }
     }
 
     public void p(RecyclerView.f0 f0Var) {
-        a aVar = this.f3297a.get(f0Var);
+        a aVar = this.f3142a.get(f0Var);
         if (aVar == null) {
             return;
         }
-        aVar.f3299a &= -2;
+        aVar.f3144a &= -2;
     }
 
     public void q(RecyclerView.f0 f0Var) {
@@ -196,7 +196,7 @@ public class u {
                 break;
             }
         }
-        a aVarRemove = this.f3297a.remove(f0Var);
+        a aVarRemove = this.f3142a.remove(f0Var);
         if (aVarRemove != null) {
             a.c(aVarRemove);
         }

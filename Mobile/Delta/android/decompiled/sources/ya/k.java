@@ -7,14 +7,14 @@ import com.google.android.gms.common.api.Status;
 public final class k extends y {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ sb.k f35792a;
+    public final /* synthetic */ sb.k f36649a;
 
     public k(o oVar, sb.k kVar) {
-        this.f35792a = kVar;
+        this.f36649a = kVar;
     }
 
     @Override // ya.z
     public final void C(Status status, BeginSignInResult beginSignInResult) {
-        l9.v.a(status, beginSignInResult, this.f35792a);
+        l9.v.a(status, beginSignInResult, this.f36649a);
     }
 }

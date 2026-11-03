@@ -48,19 +48,19 @@ public final class Challenge {
 
     @NotNull
     /* JADX INFO: renamed from: -deprecated_authParams, reason: not valid java name */
-    public final Map<String, String> m98deprecated_authParams() {
+    public final Map<String, String> m99deprecated_authParams() {
         return this.authParams;
     }
 
     @NotNull
     /* JADX INFO: renamed from: -deprecated_charset, reason: not valid java name */
-    public final Charset m99deprecated_charset() {
+    public final Charset m100deprecated_charset() {
         return charset();
     }
 
     @Nullable
     /* JADX INFO: renamed from: -deprecated_realm, reason: not valid java name */
-    public final String m100deprecated_realm() {
+    public final String m101deprecated_realm() {
         return realm();
     }
 

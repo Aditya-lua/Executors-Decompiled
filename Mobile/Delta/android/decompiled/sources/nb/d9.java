@@ -6,11 +6,11 @@ import java.util.Objects;
 public final class d9 implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ boolean f25453a;
+    public final /* synthetic */ boolean f26274a;
     public final /* synthetic */ qa b;
 
     public d9(qa qaVar, boolean z10) {
-        this.f25453a = z10;
+        this.f26274a = z10;
         Objects.requireNonNull(qaVar);
         this.b = qaVar;
     }
@@ -18,10 +18,10 @@ public final class d9 implements Runnable {
     @Override // java.lang.Runnable
     public final void run() {
         qa qaVar = this.b;
-        g7 g7Var = qaVar.f25625a;
+        g7 g7Var = qaVar.f26446a;
         boolean zG = g7Var.g();
         boolean zF = g7Var.f();
-        boolean z10 = this.f25453a;
+        boolean z10 = this.f26274a;
         g7Var.P(z10);
         if (zF == z10) {
             g7Var.a().w().b("Default data collection state already set to", Boolean.valueOf(z10));

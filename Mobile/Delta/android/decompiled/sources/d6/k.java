@@ -40,7 +40,7 @@ public final class k extends h<NetworkState> {
         public void onBlockedStatusChanged(Network network, boolean blocked) {
             Intrinsics.checkNotNullParameter(network, "network");
             if (Intrinsics.c(network, k.this.connectivityManager.getActiveNetwork())) {
-                w.e().a(j.f14454a, "Network blocked status changed: " + blocked);
+                w.e().a(j.f14434a, "Network blocked status changed: " + blocked);
                 NetworkState networkStateE = k.this.e();
                 Object obj = k.this.lock;
                 k kVar = k.this;
@@ -49,7 +49,7 @@ public final class k extends h<NetworkState> {
                         return;
                     }
                     kVar.isBlocked = blocked;
-                    Unit unit = Unit.f22483a;
+                    Unit unit = Unit.f22938a;
                     k.this.h(NetworkState.b(networkStateE, false, false, false, false, blocked, 15, null));
                 }
             }
@@ -59,7 +59,7 @@ public final class k extends h<NetworkState> {
         public void onCapabilitiesChanged(Network network, NetworkCapabilities capabilities) {
             Intrinsics.checkNotNullParameter(network, "network");
             Intrinsics.checkNotNullParameter(capabilities, "capabilities");
-            w.e().a(j.f14454a, "Network capabilities changed: " + capabilities);
+            w.e().a(j.f14434a, "Network capabilities changed: " + capabilities);
             k kVar = k.this;
             kVar.h(j.c(kVar.connectivityManager, k.this.isBlocked));
         }
@@ -67,7 +67,7 @@ public final class k extends h<NetworkState> {
         @Override // android.net.ConnectivityManager.NetworkCallback
         public void onLost(Network network) {
             Intrinsics.checkNotNullParameter(network, "network");
-            w.e().a(j.f14454a, "Network connection lost");
+            w.e().a(j.f14434a, "Network connection lost");
             k.this.h(new NetworkState(false, false, false, false, false));
         }
     }
@@ -87,24 +87,24 @@ public final class k extends h<NetworkState> {
     @Override // d6.h
     public void i() {
         try {
-            w.e().a(j.f14454a, "Registering network callback");
+            w.e().a(j.f14434a, "Registering network callback");
             p.a(this.connectivityManager, this.networkCallback);
         } catch (IllegalArgumentException e10) {
-            w.e().d(j.f14454a, "Received exception while registering network callback", e10);
+            w.e().d(j.f14434a, "Received exception while registering network callback", e10);
         } catch (SecurityException e11) {
-            w.e().d(j.f14454a, "Received exception while registering network callback", e11);
+            w.e().d(j.f14434a, "Received exception while registering network callback", e11);
         }
     }
 
     @Override // d6.h
     public void j() {
         try {
-            w.e().a(j.f14454a, "Unregistering network callback");
+            w.e().a(j.f14434a, "Unregistering network callback");
             this.connectivityManager.unregisterNetworkCallback(this.networkCallback);
         } catch (IllegalArgumentException e10) {
-            w.e().d(j.f14454a, "Received exception while unregistering network callback", e10);
+            w.e().d(j.f14434a, "Received exception while unregistering network callback", e10);
         } catch (SecurityException e11) {
-            w.e().d(j.f14454a, "Received exception while unregistering network callback", e11);
+            w.e().d(j.f14434a, "Received exception while unregistering network callback", e11);
         }
     }
 

@@ -30,20 +30,20 @@ public abstract class a {
 
         /* JADX INFO: renamed from: x4.a$b$a, reason: collision with other inner class name */
         @Metadata(k = 3, mv = {2, 1, 0}, xi = 48)
-        public static final class C0637a implements Function1 {
+        public static final class C0644a implements Function1 {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ String f34703a;
+            public final /* synthetic */ String f35201a;
 
-            public C0637a(String str) {
-                this.f34703a = str;
+            public C0644a(String str) {
+                this.f35201a = str;
             }
 
             @Override // kotlin.jvm.functions.Function1
             /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
             public final Void invoke(Throwable error) {
                 Intrinsics.checkNotNullParameter(error, "error");
-                throw new IllegalStateException("Unable to open database '" + this.f34703a + "'. Was a proper path / name used in Room's database builder?", error);
+                throw new IllegalStateException("Unable to open database '" + this.f35201a + "'. Was a proper path / name used in Room's database builder?", error);
             }
         }
 
@@ -91,7 +91,7 @@ public abstract class a {
                 public final Object invoke() {
                     return a.b.e(aVar, this, filename);
                 }
-            }, new C0637a(filename));
+            }, new C0644a(filename));
         }
     }
 
@@ -99,7 +99,7 @@ public abstract class a {
     public static final /* synthetic */ class c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f34704a;
+        public static final /* synthetic */ int[] f35202a;
 
         static {
             int[] iArr = new int[u.d.values().length];
@@ -111,7 +111,7 @@ public abstract class a {
                 iArr[u.d.WRITE_AHEAD_LOGGING.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
-            f34704a = iArr;
+            f35202a = iArr;
         }
     }
 
@@ -128,44 +128,44 @@ public abstract class a {
         if (t(connection)) {
             f5.d dVarR3 = connection.r3("SELECT identity_hash FROM room_master_table WHERE id = 42 LIMIT 1");
             try {
-                String strE2 = dVarR3.g3() ? dVarR3.E2(0) : null;
-                xt.a.a(dVarR3, null);
-                if (Intrinsics.c(getOpenDelegate().getIdentityHash(), strE2) || Intrinsics.c(getOpenDelegate().getLegacyIdentityHash(), strE2)) {
+                String strF2 = dVarR3.i3() ? dVarR3.F2(0) : null;
+                vt.a.a(dVarR3, null);
+                if (Intrinsics.c(getOpenDelegate().getIdentityHash(), strF2) || Intrinsics.c(getOpenDelegate().getLegacyIdentityHash(), strF2)) {
                     return;
                 }
-                throw new IllegalStateException(("Room cannot verify the data integrity. Looks like you've changed schema but forgot to update the version number. You can simply fix this by increasing the version number. Expected identity hash: " + getOpenDelegate().getIdentityHash() + ", found: " + strE2).toString());
+                throw new IllegalStateException(("Room cannot verify the data integrity. Looks like you've changed schema but forgot to update the version number. You can simply fix this by increasing the version number. Expected identity hash: " + getOpenDelegate().getIdentityHash() + ", found: " + strF2).toString());
             } catch (Throwable th2) {
                 try {
                     throw th2;
                 } catch (Throwable th3) {
-                    xt.a.a(dVarR3, th2);
+                    vt.a.a(dVarR3, th2);
                     throw th3;
                 }
             }
         }
         f5.a.a(connection, "BEGIN EXCLUSIVE TRANSACTION");
         try {
-            jt.n.Companion companion = jt.n.INSTANCE;
+            gt.n.Companion companion = gt.n.INSTANCE;
             a0.a aVarJ = getOpenDelegate().j(connection);
             if (!aVarJ.isValid) {
                 throw new IllegalStateException(("Pre-packaged database has an invalid schema: " + aVarJ.expectedFoundMsg).toString());
             }
             getOpenDelegate().h(connection);
             B(connection);
-            objB = jt.n.b(Unit.f22483a);
-            if (jt.n.h(objB)) {
+            objB = gt.n.b(Unit.f22938a);
+            if (gt.n.h(objB)) {
                 f5.a.a(connection, "END TRANSACTION");
             }
-            Throwable thE = jt.n.e(objB);
+            Throwable thE = gt.n.e(objB);
             if (thE == null) {
-                jt.n.a(objB);
+                gt.n.a(objB);
             } else {
                 f5.a.a(connection, "ROLLBACK TRANSACTION");
                 throw thE;
             }
         } catch (Throwable th4) {
-            jt.n.Companion companion2 = jt.n.INSTANCE;
-            objB = jt.n.b(jt.o.a(th4));
+            gt.n.Companion companion2 = gt.n.INSTANCE;
+            objB = gt.n.b(gt.o.a(th4));
         }
     }
 
@@ -178,9 +178,9 @@ public abstract class a {
     public final void h(f5.b connection) throws Exception {
         f5.d dVarR3 = connection.r3("PRAGMA busy_timeout");
         try {
-            dVarR3.g3();
+            dVarR3.i3();
             long j10 = dVarR3.getLong(0);
-            xt.a.a(dVarR3, null);
+            vt.a.a(dVarR3, null);
             if (j10 < 3000) {
                 f5.a.a(connection, "PRAGMA busy_timeout = 3000");
             }
@@ -188,7 +188,7 @@ public abstract class a {
             try {
                 throw th2;
             } catch (Throwable th3) {
-                xt.a.a(dVarR3, th2);
+                vt.a.a(dVarR3, th2);
                 throw th3;
             }
         }
@@ -201,28 +201,28 @@ public abstract class a {
         k(connection);
         f5.d dVarR3 = connection.r3("PRAGMA user_version");
         try {
-            dVarR3.g3();
+            dVarR3.i3();
             int i10 = (int) dVarR3.getLong(0);
-            xt.a.a(dVarR3, null);
+            vt.a.a(dVarR3, null);
             if (i10 != getOpenDelegate().getVersion()) {
                 f5.a.a(connection, "BEGIN EXCLUSIVE TRANSACTION");
                 try {
-                    jt.n.Companion companion = jt.n.INSTANCE;
+                    gt.n.Companion companion = gt.n.INSTANCE;
                     if (i10 == 0) {
                         x(connection);
                     } else {
                         y(connection, i10, getOpenDelegate().getVersion());
                     }
                     f5.a.a(connection, "PRAGMA user_version = " + getOpenDelegate().getVersion());
-                    objB = jt.n.b(Unit.f22483a);
+                    objB = gt.n.b(Unit.f22938a);
                 } catch (Throwable th2) {
-                    jt.n.Companion companion2 = jt.n.INSTANCE;
-                    objB = jt.n.b(jt.o.a(th2));
+                    gt.n.Companion companion2 = gt.n.INSTANCE;
+                    objB = gt.n.b(gt.o.a(th2));
                 }
-                if (jt.n.h(objB)) {
+                if (gt.n.h(objB)) {
                     f5.a.a(connection, "END TRANSACTION");
                 }
-                Throwable thE = jt.n.e(objB);
+                Throwable thE = gt.n.e(objB);
                 if (thE != null) {
                     f5.a.a(connection, "ROLLBACK TRANSACTION");
                     throw thE;
@@ -233,7 +233,7 @@ public abstract class a {
             try {
                 throw th3;
             } catch (Throwable th4) {
-                xt.a.a(dVarR3, th3);
+                vt.a.a(dVarR3, th3);
                 throw th4;
             }
         }
@@ -267,14 +267,14 @@ public abstract class a {
         f5.d dVarR3 = connection.r3("SELECT name, type FROM sqlite_master WHERE type = 'table' OR type = 'view'");
         try {
             List listC = kotlin.collections.o.c();
-            while (dVarR3.g3()) {
-                String strE2 = dVarR3.E2(0);
-                if (!kotlin.text.x.T(strE2, "sqlite_", false, 2, null) && !Intrinsics.c(strE2, "android_metadata")) {
-                    listC.add(jt.s.a(strE2, Boolean.valueOf(Intrinsics.c(dVarR3.E2(1), "view"))));
+            while (dVarR3.i3()) {
+                String strF2 = dVarR3.F2(0);
+                if (!kotlin.text.x.T(strF2, "sqlite_", false, 2, null) && !Intrinsics.c(strF2, "android_metadata")) {
+                    listC.add(gt.s.a(strF2, Boolean.valueOf(Intrinsics.c(dVarR3.F2(1), "view"))));
                 }
             }
             List<Pair> listA = kotlin.collections.o.a(listC);
-            xt.a.a(dVarR3, null);
+            vt.a.a(dVarR3, null);
             for (Pair pair : listA) {
                 String str = (String) pair.a();
                 if (((Boolean) pair.b()).booleanValue()) {
@@ -287,7 +287,7 @@ public abstract class a {
             try {
                 throw th2;
             } catch (Throwable th3) {
-                xt.a.a(dVarR3, th2);
+                vt.a.a(dVarR3, th2);
                 throw th3;
             }
         }
@@ -302,7 +302,7 @@ public abstract class a {
 
     public final int p(@NotNull u.d dVar) {
         Intrinsics.checkNotNullParameter(dVar, "<this>");
-        int i10 = c.f34704a[dVar.ordinal()];
+        int i10 = c.f35202a[dVar.ordinal()];
         if (i10 == 1) {
             return 1;
         }
@@ -314,7 +314,7 @@ public abstract class a {
 
     public final int q(@NotNull u.d dVar) {
         Intrinsics.checkNotNullParameter(dVar, "<this>");
-        int i10 = c.f34704a[dVar.ordinal()];
+        int i10 = c.f35202a[dVar.ordinal()];
         if (i10 == 1 || i10 == 2) {
             return 1;
         }
@@ -329,16 +329,16 @@ public abstract class a {
         f5.d dVarR3 = connection.r3("SELECT count(*) FROM sqlite_master WHERE name != 'android_metadata'");
         try {
             boolean z10 = false;
-            if (dVarR3.g3() && dVarR3.getLong(0) == 0) {
+            if (dVarR3.i3() && dVarR3.getLong(0) == 0) {
                 z10 = true;
             }
-            xt.a.a(dVarR3, null);
+            vt.a.a(dVarR3, null);
             return z10;
         } catch (Throwable th2) {
             try {
                 throw th2;
             } catch (Throwable th3) {
-                xt.a.a(dVarR3, th2);
+                vt.a.a(dVarR3, th2);
                 throw th3;
             }
         }
@@ -348,16 +348,16 @@ public abstract class a {
         f5.d dVarR3 = connection.r3("SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = 'room_master_table'");
         try {
             boolean z10 = false;
-            if (dVarR3.g3() && dVarR3.getLong(0) != 0) {
+            if (dVarR3.i3() && dVarR3.getLong(0) != 0) {
                 z10 = true;
             }
-            xt.a.a(dVarR3, null);
+            vt.a.a(dVarR3, null);
             return z10;
         } catch (Throwable th2) {
             try {
                 throw th2;
             } catch (Throwable th3) {
-                xt.a.a(dVarR3, th2);
+                vt.a.a(dVarR3, th2);
                 throw th3;
             }
         }

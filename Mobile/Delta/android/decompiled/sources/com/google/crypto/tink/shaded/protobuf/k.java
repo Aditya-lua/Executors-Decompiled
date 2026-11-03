@@ -10,28 +10,28 @@ import java.util.logging.Logger;
 public abstract class k extends g {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final Logger f8488c = Logger.getLogger(k.class.getName());
+    public static final Logger f8562c = Logger.getLogger(k.class.getName());
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final boolean f8489d = q1.E();
+    public static final boolean f8563d = q1.E();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public l f8490a;
+    public l f8564a;
     public boolean b;
 
     public static abstract class b extends k {
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final byte[] f8491e;
+        public final byte[] f8565e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public final int f8492f;
+        public final int f8566f;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public int f8493g;
+        public int f8567g;
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public int f8494h;
+        public int f8568h;
 
         public b(int i10) {
             super();
@@ -39,62 +39,62 @@ public abstract class k extends g {
                 throw new IllegalArgumentException("bufferSize must be >= 0");
             }
             byte[] bArr = new byte[Math.max(i10, 20)];
-            this.f8491e = bArr;
-            this.f8492f = bArr.length;
+            this.f8565e = bArr;
+            this.f8566f = bArr.length;
         }
 
         public final void T0(byte b) {
-            byte[] bArr = this.f8491e;
-            int i10 = this.f8493g;
-            this.f8493g = i10 + 1;
+            byte[] bArr = this.f8565e;
+            int i10 = this.f8567g;
+            this.f8567g = i10 + 1;
             bArr[i10] = b;
-            this.f8494h++;
+            this.f8568h++;
         }
 
         public final void U0(int i10) {
-            byte[] bArr = this.f8491e;
-            int i11 = this.f8493g;
+            byte[] bArr = this.f8565e;
+            int i11 = this.f8567g;
             int i12 = i11 + 1;
-            this.f8493g = i12;
+            this.f8567g = i12;
             bArr[i11] = (byte) (i10 & 255);
             int i13 = i11 + 2;
-            this.f8493g = i13;
+            this.f8567g = i13;
             bArr[i12] = (byte) ((i10 >> 8) & 255);
             int i14 = i11 + 3;
-            this.f8493g = i14;
+            this.f8567g = i14;
             bArr[i13] = (byte) ((i10 >> 16) & 255);
-            this.f8493g = i11 + 4;
+            this.f8567g = i11 + 4;
             bArr[i14] = (byte) ((i10 >> 24) & 255);
-            this.f8494h += 4;
+            this.f8568h += 4;
         }
 
         public final void V0(long j10) {
-            byte[] bArr = this.f8491e;
-            int i10 = this.f8493g;
+            byte[] bArr = this.f8565e;
+            int i10 = this.f8567g;
             int i11 = i10 + 1;
-            this.f8493g = i11;
+            this.f8567g = i11;
             bArr[i10] = (byte) (j10 & 255);
             int i12 = i10 + 2;
-            this.f8493g = i12;
+            this.f8567g = i12;
             bArr[i11] = (byte) ((j10 >> 8) & 255);
             int i13 = i10 + 3;
-            this.f8493g = i13;
+            this.f8567g = i13;
             bArr[i12] = (byte) ((j10 >> 16) & 255);
             int i14 = i10 + 4;
-            this.f8493g = i14;
+            this.f8567g = i14;
             bArr[i13] = (byte) (255 & (j10 >> 24));
             int i15 = i10 + 5;
-            this.f8493g = i15;
+            this.f8567g = i15;
             bArr[i14] = (byte) (((int) (j10 >> 32)) & 255);
             int i16 = i10 + 6;
-            this.f8493g = i16;
+            this.f8567g = i16;
             bArr[i15] = (byte) (((int) (j10 >> 40)) & 255);
             int i17 = i10 + 7;
-            this.f8493g = i17;
+            this.f8567g = i17;
             bArr[i16] = (byte) (((int) (j10 >> 48)) & 255);
-            this.f8493g = i10 + 8;
+            this.f8567g = i10 + 8;
             bArr[i17] = (byte) (((int) (j10 >> 56)) & 255);
-            this.f8494h += 8;
+            this.f8568h += 8;
         }
 
         public final void W0(int i10) {
@@ -110,67 +110,67 @@ public abstract class k extends g {
         }
 
         public final void Y0(int i10) {
-            if (!k.f8489d) {
+            if (!k.f8563d) {
                 while ((i10 & (-128)) != 0) {
-                    byte[] bArr = this.f8491e;
-                    int i11 = this.f8493g;
-                    this.f8493g = i11 + 1;
+                    byte[] bArr = this.f8565e;
+                    int i11 = this.f8567g;
+                    this.f8567g = i11 + 1;
                     bArr[i11] = (byte) ((i10 | 128) & 255);
-                    this.f8494h++;
+                    this.f8568h++;
                     i10 >>>= 7;
                 }
-                byte[] bArr2 = this.f8491e;
-                int i12 = this.f8493g;
-                this.f8493g = i12 + 1;
+                byte[] bArr2 = this.f8565e;
+                int i12 = this.f8567g;
+                this.f8567g = i12 + 1;
                 bArr2[i12] = (byte) i10;
-                this.f8494h++;
+                this.f8568h++;
                 return;
             }
-            long j10 = this.f8493g;
+            long j10 = this.f8567g;
             while ((i10 & (-128)) != 0) {
-                byte[] bArr3 = this.f8491e;
-                int i13 = this.f8493g;
-                this.f8493g = i13 + 1;
+                byte[] bArr3 = this.f8565e;
+                int i13 = this.f8567g;
+                this.f8567g = i13 + 1;
                 q1.K(bArr3, i13, (byte) ((i10 | 128) & 255));
                 i10 >>>= 7;
             }
-            byte[] bArr4 = this.f8491e;
-            int i14 = this.f8493g;
-            this.f8493g = i14 + 1;
+            byte[] bArr4 = this.f8565e;
+            int i14 = this.f8567g;
+            this.f8567g = i14 + 1;
             q1.K(bArr4, i14, (byte) i10);
-            this.f8494h += (int) (((long) this.f8493g) - j10);
+            this.f8568h += (int) (((long) this.f8567g) - j10);
         }
 
         public final void Z0(long j10) {
-            if (!k.f8489d) {
+            if (!k.f8563d) {
                 while ((j10 & (-128)) != 0) {
-                    byte[] bArr = this.f8491e;
-                    int i10 = this.f8493g;
-                    this.f8493g = i10 + 1;
+                    byte[] bArr = this.f8565e;
+                    int i10 = this.f8567g;
+                    this.f8567g = i10 + 1;
                     bArr[i10] = (byte) ((((int) j10) | 128) & 255);
-                    this.f8494h++;
+                    this.f8568h++;
                     j10 >>>= 7;
                 }
-                byte[] bArr2 = this.f8491e;
-                int i11 = this.f8493g;
-                this.f8493g = i11 + 1;
+                byte[] bArr2 = this.f8565e;
+                int i11 = this.f8567g;
+                this.f8567g = i11 + 1;
                 bArr2[i11] = (byte) j10;
-                this.f8494h++;
+                this.f8568h++;
                 return;
             }
-            long j11 = this.f8493g;
+            long j11 = this.f8567g;
             while ((j10 & (-128)) != 0) {
-                byte[] bArr3 = this.f8491e;
-                int i12 = this.f8493g;
-                this.f8493g = i12 + 1;
+                byte[] bArr3 = this.f8565e;
+                int i12 = this.f8567g;
+                this.f8567g = i12 + 1;
                 q1.K(bArr3, i12, (byte) ((((int) j10) | 128) & 255));
                 j10 >>>= 7;
             }
-            byte[] bArr4 = this.f8491e;
-            int i13 = this.f8493g;
-            this.f8493g = i13 + 1;
+            byte[] bArr4 = this.f8565e;
+            int i13 = this.f8567g;
+            this.f8567g = i13 + 1;
             q1.K(bArr4, i13, (byte) j10);
-            this.f8494h += (int) (((long) this.f8493g) - j11);
+            this.f8568h += (int) (((long) this.f8567g) - j11);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.k
@@ -182,16 +182,16 @@ public abstract class k extends g {
     public static class c extends k {
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final byte[] f8495e;
+        public final byte[] f8569e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public final int f8496f;
+        public final int f8570f;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public final int f8497g;
+        public final int f8571g;
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public int f8498h;
+        public int f8572h;
 
         public c(byte[] bArr, int i10, int i11) {
             super();
@@ -202,17 +202,17 @@ public abstract class k extends g {
             if ((i10 | i11 | (bArr.length - i12)) < 0) {
                 throw new IllegalArgumentException(String.format("Array range is invalid. Buffer.length=%d, offset=%d, length=%d", Integer.valueOf(bArr.length), Integer.valueOf(i10), Integer.valueOf(i11)));
             }
-            this.f8495e = bArr;
-            this.f8496f = i10;
-            this.f8498h = i10;
-            this.f8497g = i12;
+            this.f8569e = bArr;
+            this.f8570f = i10;
+            this.f8572h = i10;
+            this.f8571g = i12;
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.k
         public final void C0(int i10, s0 s0Var, g1 g1Var) throws d {
             O0(i10, 2);
             Q0(((com.google.crypto.tink.shaded.protobuf.a) s0Var).j(g1Var));
-            g1Var.j(s0Var, this.f8490a);
+            g1Var.j(s0Var, this.f8564a);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.k
@@ -252,18 +252,18 @@ public abstract class k extends g {
         public final void Q0(int i10) throws d {
             while ((i10 & (-128)) != 0) {
                 try {
-                    byte[] bArr = this.f8495e;
-                    int i11 = this.f8498h;
-                    this.f8498h = i11 + 1;
+                    byte[] bArr = this.f8569e;
+                    int i11 = this.f8572h;
+                    this.f8572h = i11 + 1;
                     bArr[i11] = (byte) ((i10 | 128) & 255);
                     i10 >>>= 7;
                 } catch (IndexOutOfBoundsException e10) {
-                    throw new d(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f8498h), Integer.valueOf(this.f8497g), 1), e10);
+                    throw new d(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f8572h), Integer.valueOf(this.f8571g), 1), e10);
                 }
             }
-            byte[] bArr2 = this.f8495e;
-            int i12 = this.f8498h;
-            this.f8498h = i12 + 1;
+            byte[] bArr2 = this.f8569e;
+            int i12 = this.f8572h;
+            this.f8572h = i12 + 1;
             bArr2[i12] = (byte) i10;
         }
 
@@ -275,43 +275,43 @@ public abstract class k extends g {
 
         @Override // com.google.crypto.tink.shaded.protobuf.k
         public final void S0(long j10) throws d {
-            if (k.f8489d && h0() >= 10) {
+            if (k.f8563d && h0() >= 10) {
                 while ((j10 & (-128)) != 0) {
-                    byte[] bArr = this.f8495e;
-                    int i10 = this.f8498h;
-                    this.f8498h = i10 + 1;
+                    byte[] bArr = this.f8569e;
+                    int i10 = this.f8572h;
+                    this.f8572h = i10 + 1;
                     q1.K(bArr, i10, (byte) ((((int) j10) | 128) & 255));
                     j10 >>>= 7;
                 }
-                byte[] bArr2 = this.f8495e;
-                int i11 = this.f8498h;
-                this.f8498h = i11 + 1;
+                byte[] bArr2 = this.f8569e;
+                int i11 = this.f8572h;
+                this.f8572h = i11 + 1;
                 q1.K(bArr2, i11, (byte) j10);
                 return;
             }
             while ((j10 & (-128)) != 0) {
                 try {
-                    byte[] bArr3 = this.f8495e;
-                    int i12 = this.f8498h;
-                    this.f8498h = i12 + 1;
+                    byte[] bArr3 = this.f8569e;
+                    int i12 = this.f8572h;
+                    this.f8572h = i12 + 1;
                     bArr3[i12] = (byte) ((((int) j10) | 128) & 255);
                     j10 >>>= 7;
                 } catch (IndexOutOfBoundsException e10) {
-                    throw new d(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f8498h), Integer.valueOf(this.f8497g), 1), e10);
+                    throw new d(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f8572h), Integer.valueOf(this.f8571g), 1), e10);
                 }
             }
-            byte[] bArr4 = this.f8495e;
-            int i13 = this.f8498h;
-            this.f8498h = i13 + 1;
+            byte[] bArr4 = this.f8569e;
+            int i13 = this.f8572h;
+            this.f8572h = i13 + 1;
             bArr4[i13] = (byte) j10;
         }
 
         public final void T0(byte[] bArr, int i10, int i11) throws d {
             try {
-                System.arraycopy(bArr, i10, this.f8495e, this.f8498h, i11);
-                this.f8498h += i11;
+                System.arraycopy(bArr, i10, this.f8569e, this.f8572h, i11);
+                this.f8572h += i11;
             } catch (IndexOutOfBoundsException e10) {
-                throw new d(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f8498h), Integer.valueOf(this.f8497g), Integer.valueOf(i11)), e10);
+                throw new d(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f8572h), Integer.valueOf(this.f8571g), Integer.valueOf(i11)), e10);
             }
         }
 
@@ -331,23 +331,23 @@ public abstract class k extends g {
         }
 
         public final void X0(String str) throws d {
-            int i10 = this.f8498h;
+            int i10 = this.f8572h;
             try {
                 int iW = k.W(str.length() * 3);
                 int iW2 = k.W(str.length());
                 if (iW2 != iW) {
                     Q0(r1.g(str));
-                    this.f8498h = r1.f(str, this.f8495e, this.f8498h, h0());
+                    this.f8572h = r1.f(str, this.f8569e, this.f8572h, h0());
                     return;
                 }
                 int i11 = i10 + iW2;
-                this.f8498h = i11;
-                int iF = r1.f(str, this.f8495e, i11, h0());
-                this.f8498h = i10;
+                this.f8572h = i11;
+                int iF = r1.f(str, this.f8569e, i11, h0());
+                this.f8572h = i10;
                 Q0((iF - i10) - iW2);
-                this.f8498h = iF;
+                this.f8572h = iF;
             } catch (r1.d e10) {
-                this.f8498h = i10;
+                this.f8572h = i10;
                 c0(str, e10);
             } catch (IndexOutOfBoundsException e11) {
                 throw new d(e11);
@@ -365,18 +365,18 @@ public abstract class k extends g {
 
         @Override // com.google.crypto.tink.shaded.protobuf.k
         public final int h0() {
-            return this.f8497g - this.f8498h;
+            return this.f8571g - this.f8572h;
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.k
         public final void i0(byte b) throws d {
             try {
-                byte[] bArr = this.f8495e;
-                int i10 = this.f8498h;
-                this.f8498h = i10 + 1;
+                byte[] bArr = this.f8569e;
+                int i10 = this.f8572h;
+                this.f8572h = i10 + 1;
                 bArr[i10] = b;
             } catch (IndexOutOfBoundsException e10) {
-                throw new d(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f8498h), Integer.valueOf(this.f8497g), 1), e10);
+                throw new d(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f8572h), Integer.valueOf(this.f8571g), 1), e10);
             }
         }
 
@@ -401,21 +401,21 @@ public abstract class k extends g {
         @Override // com.google.crypto.tink.shaded.protobuf.k
         public final void r0(int i10) throws d {
             try {
-                byte[] bArr = this.f8495e;
-                int i11 = this.f8498h;
+                byte[] bArr = this.f8569e;
+                int i11 = this.f8572h;
                 int i12 = i11 + 1;
-                this.f8498h = i12;
+                this.f8572h = i12;
                 bArr[i11] = (byte) (i10 & 255);
                 int i13 = i11 + 2;
-                this.f8498h = i13;
+                this.f8572h = i13;
                 bArr[i12] = (byte) ((i10 >> 8) & 255);
                 int i14 = i11 + 3;
-                this.f8498h = i14;
+                this.f8572h = i14;
                 bArr[i13] = (byte) ((i10 >> 16) & 255);
-                this.f8498h = i11 + 4;
+                this.f8572h = i11 + 4;
                 bArr[i14] = (byte) ((i10 >> 24) & 255);
             } catch (IndexOutOfBoundsException e10) {
-                throw new d(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f8498h), Integer.valueOf(this.f8497g), 1), e10);
+                throw new d(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f8572h), Integer.valueOf(this.f8571g), 1), e10);
             }
         }
 
@@ -428,33 +428,33 @@ public abstract class k extends g {
         @Override // com.google.crypto.tink.shaded.protobuf.k
         public final void t0(long j10) throws d {
             try {
-                byte[] bArr = this.f8495e;
-                int i10 = this.f8498h;
+                byte[] bArr = this.f8569e;
+                int i10 = this.f8572h;
                 int i11 = i10 + 1;
-                this.f8498h = i11;
+                this.f8572h = i11;
                 bArr[i10] = (byte) (((int) j10) & 255);
                 int i12 = i10 + 2;
-                this.f8498h = i12;
+                this.f8572h = i12;
                 bArr[i11] = (byte) (((int) (j10 >> 8)) & 255);
                 int i13 = i10 + 3;
-                this.f8498h = i13;
+                this.f8572h = i13;
                 bArr[i12] = (byte) (((int) (j10 >> 16)) & 255);
                 int i14 = i10 + 4;
-                this.f8498h = i14;
+                this.f8572h = i14;
                 bArr[i13] = (byte) (((int) (j10 >> 24)) & 255);
                 int i15 = i10 + 5;
-                this.f8498h = i15;
+                this.f8572h = i15;
                 bArr[i14] = (byte) (((int) (j10 >> 32)) & 255);
                 int i16 = i10 + 6;
-                this.f8498h = i16;
+                this.f8572h = i16;
                 bArr[i15] = (byte) (((int) (j10 >> 40)) & 255);
                 int i17 = i10 + 7;
-                this.f8498h = i17;
+                this.f8572h = i17;
                 bArr[i16] = (byte) (((int) (j10 >> 48)) & 255);
-                this.f8498h = i10 + 8;
+                this.f8572h = i10 + 8;
                 bArr[i17] = (byte) (((int) (j10 >> 56)) & 255);
             } catch (IndexOutOfBoundsException e10) {
-                throw new d(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f8498h), Integer.valueOf(this.f8497g), 1), e10);
+                throw new d(String.format("Pos: %d, limit: %d, len: %d", Integer.valueOf(this.f8572h), Integer.valueOf(this.f8571g), 1), e10);
             }
         }
 
@@ -487,14 +487,14 @@ public abstract class k extends g {
     public static final class e extends b {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final OutputStream f8499i;
+        public final OutputStream f8573i;
 
         public e(OutputStream outputStream, int i10) {
             super(i10);
             if (outputStream == null) {
                 throw new NullPointerException("out");
             }
-            this.f8499i = outputStream;
+            this.f8573i = outputStream;
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.k
@@ -562,46 +562,46 @@ public abstract class k extends g {
         }
 
         public final void a1() throws IOException {
-            this.f8499i.write(this.f8491e, 0, this.f8493g);
-            this.f8493g = 0;
+            this.f8573i.write(this.f8565e, 0, this.f8567g);
+            this.f8567g = 0;
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.k
         public void b0() throws IOException {
-            if (this.f8493g > 0) {
+            if (this.f8567g > 0) {
                 a1();
             }
         }
 
         public final void b1(int i10) throws IOException {
-            if (this.f8492f - this.f8493g < i10) {
+            if (this.f8566f - this.f8567g < i10) {
                 a1();
             }
         }
 
         public void c1(byte[] bArr, int i10, int i11) throws IOException {
-            int i12 = this.f8492f;
-            int i13 = this.f8493g;
+            int i12 = this.f8566f;
+            int i13 = this.f8567g;
             if (i12 - i13 >= i11) {
-                System.arraycopy(bArr, i10, this.f8491e, i13, i11);
-                this.f8493g += i11;
-                this.f8494h += i11;
+                System.arraycopy(bArr, i10, this.f8565e, i13, i11);
+                this.f8567g += i11;
+                this.f8568h += i11;
                 return;
             }
             int i14 = i12 - i13;
-            System.arraycopy(bArr, i10, this.f8491e, i13, i14);
+            System.arraycopy(bArr, i10, this.f8565e, i13, i14);
             int i15 = i10 + i14;
             int i16 = i11 - i14;
-            this.f8493g = this.f8492f;
-            this.f8494h += i14;
+            this.f8567g = this.f8566f;
+            this.f8568h += i14;
             a1();
-            if (i16 <= this.f8492f) {
-                System.arraycopy(bArr, i15, this.f8491e, 0, i16);
-                this.f8493g = i16;
+            if (i16 <= this.f8566f) {
+                System.arraycopy(bArr, i15, this.f8565e, 0, i16);
+                this.f8567g = i16;
             } else {
-                this.f8499i.write(bArr, i15, i16);
+                this.f8573i.write(bArr, i15, i16);
             }
-            this.f8494h += i16;
+            this.f8568h += i16;
         }
 
         public void d1(h hVar) throws IOException {
@@ -621,7 +621,7 @@ public abstract class k extends g {
 
         public void g1(s0 s0Var, g1 g1Var) throws IOException {
             Q0(((com.google.crypto.tink.shaded.protobuf.a) s0Var).j(g1Var));
-            g1Var.j(s0Var, this.f8490a);
+            g1Var.j(s0Var, this.f8564a);
         }
 
         public void h1(String str) throws IOException {
@@ -630,7 +630,7 @@ public abstract class k extends g {
                 int length = str.length() * 3;
                 int iW = k.W(length);
                 int i10 = iW + length;
-                int i11 = this.f8492f;
+                int i11 = this.f8566f;
                 if (i10 > i11) {
                     byte[] bArr = new byte[length];
                     int iF = r1.f(str, bArr, 0, length);
@@ -638,29 +638,29 @@ public abstract class k extends g {
                     a(bArr, 0, iF);
                     return;
                 }
-                if (i10 > i11 - this.f8493g) {
+                if (i10 > i11 - this.f8567g) {
                     a1();
                 }
                 int iW2 = k.W(str.length());
-                int i12 = this.f8493g;
+                int i12 = this.f8567g;
                 try {
                     if (iW2 == iW) {
                         int i13 = i12 + iW2;
-                        this.f8493g = i13;
-                        int iF2 = r1.f(str, this.f8491e, i13, this.f8492f - i13);
-                        this.f8493g = i12;
+                        this.f8567g = i13;
+                        int iF2 = r1.f(str, this.f8565e, i13, this.f8566f - i13);
+                        this.f8567g = i12;
                         iG = (iF2 - i12) - iW2;
                         Y0(iG);
-                        this.f8493g = iF2;
+                        this.f8567g = iF2;
                     } else {
                         iG = r1.g(str);
                         Y0(iG);
-                        this.f8493g = r1.f(str, this.f8491e, this.f8493g, iG);
+                        this.f8567g = r1.f(str, this.f8565e, this.f8567g, iG);
                     }
-                    this.f8494h += iG;
+                    this.f8568h += iG;
                 } catch (r1.d e10) {
-                    this.f8494h -= this.f8493g - i12;
-                    this.f8493g = i12;
+                    this.f8568h -= this.f8567g - i12;
+                    this.f8567g = i12;
                     throw e10;
                 } catch (ArrayIndexOutOfBoundsException e11) {
                     throw new d(e11);
@@ -672,7 +672,7 @@ public abstract class k extends g {
 
         @Override // com.google.crypto.tink.shaded.protobuf.k
         public void i0(byte b) throws IOException {
-            if (this.f8493g == this.f8492f) {
+            if (this.f8567g == this.f8566f) {
                 a1();
             }
             T0(b);
@@ -1025,7 +1025,7 @@ public abstract class k extends g {
     }
 
     public final void c0(String str, r1.d dVar) throws d {
-        f8488c.log(Level.WARNING, "Converting ill-formed UTF-16. Your Protocol Buffer will not round trip correctly!", (Throwable) dVar);
+        f8562c.log(Level.WARNING, "Converting ill-formed UTF-16. Your Protocol Buffer will not round trip correctly!", (Throwable) dVar);
         byte[] bytes = str.getBytes(a0.b);
         try {
             Q0(bytes.length);
@@ -1092,7 +1092,7 @@ public abstract class k extends g {
 
     @Deprecated
     public final void x0(s0 s0Var, g1 g1Var) {
-        g1Var.j(s0Var, this.f8490a);
+        g1Var.j(s0Var, this.f8564a);
     }
 
     public abstract void y0(int i10, int i11);

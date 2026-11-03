@@ -20,24 +20,24 @@ import java.util.List;
 public class k {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final q f1796a;
+    public static final q f1641a;
     public static final w1.i<String, Typeface> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static Paint f1797c;
+    public static Paint f1642c;
 
     public static class a extends v2.g.c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public n2.h.f f1798a;
+        public n2.h.f f1643a;
 
         public a(n2.h.f fVar) {
-            this.f1798a = fVar;
+            this.f1643a = fVar;
         }
 
         @Override // v2.g.c
         public void a(int i10) {
-            n2.h.f fVar = this.f1798a;
+            n2.h.f fVar = this.f1643a;
             if (fVar != null) {
                 fVar.f(i10);
             }
@@ -45,7 +45,7 @@ public class k {
 
         @Override // v2.g.c
         public void b(Typeface typeface) {
-            n2.h.f fVar = this.f1798a;
+            n2.h.f fVar = this.f1643a;
             if (fVar != null) {
                 fVar.g(typeface);
             }
@@ -56,16 +56,16 @@ public class k {
         n5.a.c("TypefaceCompat static init");
         int i10 = Build.VERSION.SDK_INT;
         if (i10 >= 31) {
-            f1796a = new p();
+            f1641a = new p();
         } else if (i10 >= 29) {
-            f1796a = new o();
+            f1641a = new o();
         } else if (i10 >= 28) {
-            f1796a = new n();
+            f1641a = new n();
         } else {
-            f1796a = new m();
+            f1641a = new m();
         }
         b = new w1.i<>(16);
-        f1797c = null;
+        f1642c = null;
         n5.a.f();
     }
 
@@ -79,7 +79,7 @@ public class k {
     public static Typeface b(Context context, CancellationSignal cancellationSignal, v2.g.b[] bVarArr, int i10) {
         n5.a.c("TypefaceCompat.createFromFontInfo");
         try {
-            return f1796a.b(context, cancellationSignal, bVarArr, i10);
+            return f1641a.b(context, cancellationSignal, bVarArr, i10);
         } finally {
             n5.a.f();
         }
@@ -88,7 +88,7 @@ public class k {
     public static Typeface c(Context context, CancellationSignal cancellationSignal, List<v2.g.b[]> list, int i10) {
         n5.a.c("TypefaceCompat.createFromFontInfoWithFallback");
         try {
-            return f1796a.c(context, cancellationSignal, list, i10);
+            return f1641a.c(context, cancellationSignal, list, i10);
         } finally {
             n5.a.f();
         }
@@ -96,9 +96,9 @@ public class k {
 
     public static Typeface d(Context context, n2.e.b bVar, Resources resources, int i10, String str, int i11, int i12, n2.h.f fVar, Handler handler, boolean z10) {
         Typeface typefaceA;
-        if (bVar instanceof n2.e.C0433e) {
-            n2.e.C0433e c0433e = (n2.e.C0433e) bVar;
-            Typeface typefaceI = i(c0433e);
+        if (bVar instanceof n2.e.C0454e) {
+            n2.e.C0454e c0454e = (n2.e.C0454e) bVar;
+            Typeface typefaceI = i(c0454e);
             if (typefaceI != null) {
                 if (fVar != null) {
                     fVar.d(typefaceI, handler);
@@ -106,9 +106,9 @@ public class k {
                 b.e(f(resources, i10, str, i11, i12), typefaceI);
                 return typefaceI;
             }
-            typefaceA = v2.g.c(context, c0433e.b(), i12, !z10 ? fVar != null : c0433e.a() != 0, z10 ? c0433e.d() : -1, n2.h.f.e(handler), new a(fVar));
+            typefaceA = v2.g.c(context, c0454e.b(), i12, !z10 ? fVar != null : c0454e.a() != 0, z10 ? c0454e.d() : -1, n2.h.f.e(handler), new a(fVar));
         } else {
-            typefaceA = f1796a.a(context, (n2.e.c) bVar, resources, i12);
+            typefaceA = f1641a.a(context, (n2.e.c) bVar, resources, i12);
             if (fVar != null) {
                 if (typefaceA != null) {
                     fVar.d(typefaceA, handler);
@@ -124,7 +124,7 @@ public class k {
     }
 
     public static Typeface e(Context context, Resources resources, int i10, String str, int i11, int i12) {
-        Typeface typefaceD = f1796a.d(context, resources, i10, str, i12);
+        Typeface typefaceD = f1641a.d(context, resources, i10, str, i12);
         if (typefaceD != null) {
             b.e(f(resources, i10, str, i11, i12), typefaceD);
         }
@@ -150,14 +150,14 @@ public class k {
         return null;
     }
 
-    public static Typeface i(n2.e.C0433e c0433e) {
+    public static Typeface i(n2.e.C0454e c0454e) {
         FontFamily fontFamilyBuild;
         Typeface typefaceH;
-        String strC = c0433e.c();
+        String strC = c0454e.c();
         if (!TextUtils.isEmpty(strC) && (typefaceH = h(strC)) != null) {
             return typefaceH;
         }
-        List<v2.e> listB = c0433e.b();
+        List<v2.e> listB = c0454e.b();
         if (listB.size() == 1) {
             return h(listB.get(0).h());
         }
@@ -203,12 +203,12 @@ public class k {
     }
 
     public static Font j(Typeface typeface) {
-        if (f1797c == null) {
-            f1797c = new Paint();
+        if (f1642c == null) {
+            f1642c = new Paint();
         }
-        f1797c.setTextSize(10.0f);
-        f1797c.setTypeface(typeface);
-        PositionedGlyphs positionedGlyphsShapeTextRun = TextRunShaper.shapeTextRun((CharSequence) " ", 0, 1, 0, 1, 0.0f, 0.0f, false, f1797c);
+        f1642c.setTextSize(10.0f);
+        f1642c.setTypeface(typeface);
+        PositionedGlyphs positionedGlyphsShapeTextRun = TextRunShaper.shapeTextRun((CharSequence) " ", 0, 1, 0, 1, 0.0f, 0.0f, false, f1642c);
         if (positionedGlyphsShapeTextRun.glyphCount() == 0) {
             return null;
         }

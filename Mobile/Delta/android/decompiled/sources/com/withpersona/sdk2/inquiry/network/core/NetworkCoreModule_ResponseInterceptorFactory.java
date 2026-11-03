@@ -1,11 +1,11 @@
 package com.withpersona.sdk2.inquiry.network.core;
 
-import ft.h;
-import ft.i;
+import dt.h;
+import dt.i;
 import okhttp3.Interceptor;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class NetworkCoreModule_ResponseInterceptorFactory implements ft.d<Interceptor> {
+public final class NetworkCoreModule_ResponseInterceptorFactory implements dt.d<Interceptor> {
     private final NetworkCoreModule module;
     private final i<NetworkStateManager> networkStateManagerProvider;
 
@@ -22,7 +22,7 @@ public final class NetworkCoreModule_ResponseInterceptorFactory implements ft.d<
         return (Interceptor) h.e(networkCoreModule.responseInterceptor(networkStateManager));
     }
 
-    @Override // ht.a
+    @Override // ft.a
     public Interceptor get() {
         return responseInterceptor(this.module, this.networkStateManagerProvider.get());
     }

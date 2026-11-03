@@ -4,19 +4,19 @@ package com.google.android.gms.internal.measurement;
 public final class ca extends ga {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final int f6402d;
+    public final int f6475d;
 
     public ca(byte[] bArr, int i10, int i11) {
         super(bArr);
         ha.k(0, i11, bArr.length);
-        this.f6402d = i11;
+        this.f6475d = i11;
     }
 
     @Override // com.google.android.gms.internal.measurement.ga, com.google.android.gms.internal.measurement.ha
     public final byte b(int i10) {
-        int i11 = this.f6402d;
+        int i11 = this.f6475d;
         if (((i11 - (i10 + 1)) | i10) >= 0) {
-            return this.f6458c[i10];
+            return this.f6531c[i10];
         }
         if (i10 < 0) {
             StringBuilder sb2 = new StringBuilder(String.valueOf(i10).length() + 11);
@@ -34,12 +34,12 @@ public final class ca extends ga {
 
     @Override // com.google.android.gms.internal.measurement.ga, com.google.android.gms.internal.measurement.ha
     public final byte c(int i10) {
-        return this.f6458c[i10];
+        return this.f6531c[i10];
     }
 
     @Override // com.google.android.gms.internal.measurement.ga, com.google.android.gms.internal.measurement.ha
     public final int d() {
-        return this.f6402d;
+        return this.f6475d;
     }
 
     @Override // com.google.android.gms.internal.measurement.ga

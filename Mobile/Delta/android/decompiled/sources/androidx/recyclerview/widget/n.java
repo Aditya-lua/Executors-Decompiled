@@ -8,11 +8,11 @@ import android.view.ViewGroup;
 public abstract class n {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final RecyclerView.q f3279a;
+    public final RecyclerView.q f3124a;
     public int b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Rect f3280c;
+    public final Rect f3125c;
 
     public class a extends n {
         public a(RecyclerView.q qVar) {
@@ -21,76 +21,76 @@ public abstract class n {
 
         @Override // androidx.recyclerview.widget.n
         public int d(View view) {
-            return this.f3279a.Y(view) + ((ViewGroup.MarginLayoutParams) ((RecyclerView.r) view.getLayoutParams())).rightMargin;
+            return this.f3124a.Y(view) + ((ViewGroup.MarginLayoutParams) ((RecyclerView.r) view.getLayoutParams())).rightMargin;
         }
 
         @Override // androidx.recyclerview.widget.n
         public int e(View view) {
             RecyclerView.r rVar = (RecyclerView.r) view.getLayoutParams();
-            return this.f3279a.X(view) + ((ViewGroup.MarginLayoutParams) rVar).leftMargin + ((ViewGroup.MarginLayoutParams) rVar).rightMargin;
+            return this.f3124a.X(view) + ((ViewGroup.MarginLayoutParams) rVar).leftMargin + ((ViewGroup.MarginLayoutParams) rVar).rightMargin;
         }
 
         @Override // androidx.recyclerview.widget.n
         public int f(View view) {
             RecyclerView.r rVar = (RecyclerView.r) view.getLayoutParams();
-            return this.f3279a.W(view) + ((ViewGroup.MarginLayoutParams) rVar).topMargin + ((ViewGroup.MarginLayoutParams) rVar).bottomMargin;
+            return this.f3124a.W(view) + ((ViewGroup.MarginLayoutParams) rVar).topMargin + ((ViewGroup.MarginLayoutParams) rVar).bottomMargin;
         }
 
         @Override // androidx.recyclerview.widget.n
         public int g(View view) {
-            return this.f3279a.V(view) - ((ViewGroup.MarginLayoutParams) ((RecyclerView.r) view.getLayoutParams())).leftMargin;
+            return this.f3124a.V(view) - ((ViewGroup.MarginLayoutParams) ((RecyclerView.r) view.getLayoutParams())).leftMargin;
         }
 
         @Override // androidx.recyclerview.widget.n
         public int h() {
-            return this.f3279a.s0();
+            return this.f3124a.s0();
         }
 
         @Override // androidx.recyclerview.widget.n
         public int i() {
-            return this.f3279a.s0() - this.f3279a.j0();
+            return this.f3124a.s0() - this.f3124a.j0();
         }
 
         @Override // androidx.recyclerview.widget.n
         public int j() {
-            return this.f3279a.j0();
+            return this.f3124a.j0();
         }
 
         @Override // androidx.recyclerview.widget.n
         public int k() {
-            return this.f3279a.t0();
+            return this.f3124a.t0();
         }
 
         @Override // androidx.recyclerview.widget.n
         public int l() {
-            return this.f3279a.c0();
+            return this.f3124a.c0();
         }
 
         @Override // androidx.recyclerview.widget.n
         public int m() {
-            return this.f3279a.i0();
+            return this.f3124a.i0();
         }
 
         @Override // androidx.recyclerview.widget.n
         public int n() {
-            return (this.f3279a.s0() - this.f3279a.i0()) - this.f3279a.j0();
+            return (this.f3124a.s0() - this.f3124a.i0()) - this.f3124a.j0();
         }
 
         @Override // androidx.recyclerview.widget.n
         public int p(View view) {
-            this.f3279a.r0(view, true, this.f3280c);
-            return this.f3280c.right;
+            this.f3124a.r0(view, true, this.f3125c);
+            return this.f3125c.right;
         }
 
         @Override // androidx.recyclerview.widget.n
         public int q(View view) {
-            this.f3279a.r0(view, true, this.f3280c);
-            return this.f3280c.left;
+            this.f3124a.r0(view, true, this.f3125c);
+            return this.f3125c.left;
         }
 
         @Override // androidx.recyclerview.widget.n
         public void r(int i10) {
-            this.f3279a.H0(i10);
+            this.f3124a.H0(i10);
         }
     }
 
@@ -101,76 +101,76 @@ public abstract class n {
 
         @Override // androidx.recyclerview.widget.n
         public int d(View view) {
-            return this.f3279a.T(view) + ((ViewGroup.MarginLayoutParams) ((RecyclerView.r) view.getLayoutParams())).bottomMargin;
+            return this.f3124a.T(view) + ((ViewGroup.MarginLayoutParams) ((RecyclerView.r) view.getLayoutParams())).bottomMargin;
         }
 
         @Override // androidx.recyclerview.widget.n
         public int e(View view) {
             RecyclerView.r rVar = (RecyclerView.r) view.getLayoutParams();
-            return this.f3279a.W(view) + ((ViewGroup.MarginLayoutParams) rVar).topMargin + ((ViewGroup.MarginLayoutParams) rVar).bottomMargin;
+            return this.f3124a.W(view) + ((ViewGroup.MarginLayoutParams) rVar).topMargin + ((ViewGroup.MarginLayoutParams) rVar).bottomMargin;
         }
 
         @Override // androidx.recyclerview.widget.n
         public int f(View view) {
             RecyclerView.r rVar = (RecyclerView.r) view.getLayoutParams();
-            return this.f3279a.X(view) + ((ViewGroup.MarginLayoutParams) rVar).leftMargin + ((ViewGroup.MarginLayoutParams) rVar).rightMargin;
+            return this.f3124a.X(view) + ((ViewGroup.MarginLayoutParams) rVar).leftMargin + ((ViewGroup.MarginLayoutParams) rVar).rightMargin;
         }
 
         @Override // androidx.recyclerview.widget.n
         public int g(View view) {
-            return this.f3279a.Z(view) - ((ViewGroup.MarginLayoutParams) ((RecyclerView.r) view.getLayoutParams())).topMargin;
+            return this.f3124a.Z(view) - ((ViewGroup.MarginLayoutParams) ((RecyclerView.r) view.getLayoutParams())).topMargin;
         }
 
         @Override // androidx.recyclerview.widget.n
         public int h() {
-            return this.f3279a.b0();
+            return this.f3124a.b0();
         }
 
         @Override // androidx.recyclerview.widget.n
         public int i() {
-            return this.f3279a.b0() - this.f3279a.h0();
+            return this.f3124a.b0() - this.f3124a.h0();
         }
 
         @Override // androidx.recyclerview.widget.n
         public int j() {
-            return this.f3279a.h0();
+            return this.f3124a.h0();
         }
 
         @Override // androidx.recyclerview.widget.n
         public int k() {
-            return this.f3279a.c0();
+            return this.f3124a.c0();
         }
 
         @Override // androidx.recyclerview.widget.n
         public int l() {
-            return this.f3279a.t0();
+            return this.f3124a.t0();
         }
 
         @Override // androidx.recyclerview.widget.n
         public int m() {
-            return this.f3279a.k0();
+            return this.f3124a.k0();
         }
 
         @Override // androidx.recyclerview.widget.n
         public int n() {
-            return (this.f3279a.b0() - this.f3279a.k0()) - this.f3279a.h0();
+            return (this.f3124a.b0() - this.f3124a.k0()) - this.f3124a.h0();
         }
 
         @Override // androidx.recyclerview.widget.n
         public int p(View view) {
-            this.f3279a.r0(view, true, this.f3280c);
-            return this.f3280c.bottom;
+            this.f3124a.r0(view, true, this.f3125c);
+            return this.f3125c.bottom;
         }
 
         @Override // androidx.recyclerview.widget.n
         public int q(View view) {
-            this.f3279a.r0(view, true, this.f3280c);
-            return this.f3280c.top;
+            this.f3124a.r0(view, true, this.f3125c);
+            return this.f3125c.top;
         }
 
         @Override // androidx.recyclerview.widget.n
         public void r(int i10) {
-            this.f3279a.I0(i10);
+            this.f3124a.I0(i10);
         }
     }
 
@@ -237,7 +237,7 @@ public abstract class n {
 
     public n(RecyclerView.q qVar) {
         this.b = Integer.MIN_VALUE;
-        this.f3280c = new Rect();
-        this.f3279a = qVar;
+        this.f3125c = new Rect();
+        this.f3124a = qVar;
     }
 }

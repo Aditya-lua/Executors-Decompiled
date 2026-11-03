@@ -7,18 +7,18 @@ import java.util.concurrent.TimeUnit;
 public final class z {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final c0 f7350a;
+    public final c0 f7424a;
     public boolean b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public long f7351c;
+    public long f7425c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public long f7352d;
+    public long f7426d;
 
     public z(c0 c0Var) {
         x.c(c0Var, "ticker");
-        this.f7350a = c0Var;
+        this.f7424a = c0Var;
     }
 
     public static z b(c0 c0Var) {
@@ -36,7 +36,7 @@ public final class z {
     }
 
     public final z d() {
-        this.f7351c = 0L;
+        this.f7425c = 0L;
         this.b = false;
         return this;
     }
@@ -44,15 +44,15 @@ public final class z {
     public final z e() {
         x.e(!this.b, "This stopwatch is already running.");
         this.b = true;
-        this.f7352d = this.f7350a.a();
+        this.f7426d = this.f7424a.a();
         return this;
     }
 
     public final z f() {
-        long jA = this.f7350a.a();
+        long jA = this.f7424a.a();
         x.e(this.b, "This stopwatch is already stopped.");
         this.b = false;
-        this.f7351c += jA - this.f7352d;
+        this.f7425c += jA - this.f7426d;
         return this;
     }
 
@@ -61,7 +61,7 @@ public final class z {
     }
 
     public final long h() {
-        return this.b ? (this.f7350a.a() - this.f7352d) + this.f7351c : this.f7351c;
+        return this.b ? (this.f7424a.a() - this.f7426d) + this.f7425c : this.f7425c;
     }
 
     public final String toString() {
@@ -88,7 +88,7 @@ public final class z {
             }
         }
         String str2 = String.format(Locale.ROOT, "%.4g", Double.valueOf(jH / timeUnit2.convert(1L, timeUnit)));
-        switch (y.f7344a[timeUnit.ordinal()]) {
+        switch (y.f7418a[timeUnit.ordinal()]) {
             case 1:
                 str = "ns";
                 break;

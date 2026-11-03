@@ -3,17 +3,17 @@ package com.google.android.gms.internal.mlkit_vision_text_common;
 import androidx.annotation.NonNull;
 import java.util.HashMap;
 import java.util.Map;
-import qf.c;
-import qf.e;
-import qf.f;
-import qf.g;
-import rf.b;
+import rf.c;
+import rf.e;
+import rf.f;
+import rf.g;
+import sf.b;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class zzdb implements b {
     public static final /* synthetic */ int zza = 0;
     private static final e zzb = new e() { // from class: com.google.android.gms.internal.mlkit_vision_text_common.zzda
-        @Override // qf.b
+        @Override // rf.b
         public final void encode(Object obj, f fVar) {
             int i10 = zzdb.zza;
             throw new c("Couldn't find encoder for type ".concat(String.valueOf(obj.getClass().getCanonicalName())));
@@ -23,7 +23,7 @@ public final class zzdb implements b {
     private final Map zzd = new HashMap();
     private final e zze = zzb;
 
-    @Override // rf.b
+    @Override // sf.b
     @NonNull
     public final /* bridge */ /* synthetic */ b registerEncoder(@NonNull Class cls, @NonNull e eVar) {
         this.zzc.put(cls, eVar);

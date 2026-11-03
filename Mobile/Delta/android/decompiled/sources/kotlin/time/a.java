@@ -8,7 +8,7 @@ import okhttp3.internal.http2.Http2Connection;
 import org.jetbrains.annotations.NotNull;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000R\n\u0002\u0018\u0002\n\u0002\u0010\u000f\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0010\n\u0002\u0010\u0006\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b&\b\u0087@\u0018\u0000 Y2\b\u0012\u0004\u0012\u00020\u00000\u0001:\u00017B\u0011\b\u0000\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u0010\u0010\u0007\u001a\u00020\u0006HÖ\u0001¢\u0006\u0004\b\u0007\u0010\bJ\u001a\u0010\f\u001a\u00020\u000b2\b\u0010\n\u001a\u0004\u0018\u00010\tHÖ\u0003¢\u0006\u0004\b\f\u0010\rJ\u000f\u0010\u000e\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\u000e\u0010\u000fJ\u000f\u0010\u0010\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\u0010\u0010\u000fJ\u0010\u0010\u0011\u001a\u00020\u0000H\u0086\u0002¢\u0006\u0004\b\u0011\u0010\u0005J\u0018\u0010\u0012\u001a\u00020\u00002\u0006\u0010\n\u001a\u00020\u0000H\u0086\u0002¢\u0006\u0004\b\u0012\u0010\u0013J\u001f\u0010\u0016\u001a\u00020\u00002\u0006\u0010\u0014\u001a\u00020\u00022\u0006\u0010\u0015\u001a\u00020\u0002H\u0002¢\u0006\u0004\b\u0016\u0010\u0017J\u0018\u0010\u0018\u001a\u00020\u00002\u0006\u0010\n\u001a\u00020\u0000H\u0086\u0002¢\u0006\u0004\b\u0018\u0010\u0013J\u0018\u0010\u001a\u001a\u00020\u00002\u0006\u0010\u0019\u001a\u00020\u0006H\u0086\u0002¢\u0006\u0004\b\u001a\u0010\u001bJ\u0018\u0010\u001d\u001a\u00020\u00002\u0006\u0010\u0019\u001a\u00020\u001cH\u0086\u0002¢\u0006\u0004\b\u001d\u0010\u001eJ\r\u0010\u001f\u001a\u00020\u000b¢\u0006\u0004\b\u001f\u0010\u000fJ\r\u0010 \u001a\u00020\u000b¢\u0006\u0004\b \u0010\u000fJ\r\u0010!\u001a\u00020\u000b¢\u0006\u0004\b!\u0010\u000fJ\r\u0010\"\u001a\u00020\u000b¢\u0006\u0004\b\"\u0010\u000fJ\u0018\u0010#\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\u0000H\u0096\u0002¢\u0006\u0004\b#\u0010$J\u0015\u0010'\u001a\u00020\u001c2\u0006\u0010&\u001a\u00020%¢\u0006\u0004\b'\u0010(J\u0015\u0010)\u001a\u00020\u00022\u0006\u0010&\u001a\u00020%¢\u0006\u0004\b)\u0010*J\u000f\u0010,\u001a\u00020+H\u0016¢\u0006\u0004\b,\u0010-J?\u00105\u001a\u000204*\u00060.j\u0002`/2\u0006\u00100\u001a\u00020\u00062\u0006\u00101\u001a\u00020\u00062\u0006\u00102\u001a\u00020\u00062\u0006\u0010&\u001a\u00020+2\u0006\u00103\u001a\u00020\u000bH\u0002¢\u0006\u0004\b5\u00106R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b7\u0010\u001fR\u0014\u00109\u001a\u00020\u00028BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b8\u0010\u0005R\u0014\u0010<\u001a\u00020%8BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b:\u0010;R\u0011\u0010>\u001a\u00020\u00008F¢\u0006\u0006\u001a\u0004\b=\u0010\u0005R\u001a\u0010C\u001a\u00020\u00068@X\u0081\u0004¢\u0006\f\u0012\u0004\bA\u0010B\u001a\u0004\b?\u0010@R\u001a\u0010F\u001a\u00020\u00068@X\u0081\u0004¢\u0006\f\u0012\u0004\bE\u0010B\u001a\u0004\bD\u0010@R\u001a\u0010I\u001a\u00020\u00068@X\u0081\u0004¢\u0006\f\u0012\u0004\bH\u0010B\u001a\u0004\bG\u0010@R\u001a\u0010L\u001a\u00020\u00068@X\u0081\u0004¢\u0006\f\u0012\u0004\bK\u0010B\u001a\u0004\bJ\u0010@R\u0011\u0010N\u001a\u00020\u00028F¢\u0006\u0006\u001a\u0004\bM\u0010\u0005R\u0011\u0010P\u001a\u00020\u00028F¢\u0006\u0006\u001a\u0004\bO\u0010\u0005R\u0011\u0010R\u001a\u00020\u00028F¢\u0006\u0006\u001a\u0004\bQ\u0010\u0005R\u0011\u0010T\u001a\u00020\u00028F¢\u0006\u0006\u001a\u0004\bS\u0010\u0005R\u0011\u0010V\u001a\u00020\u00028F¢\u0006\u0006\u001a\u0004\bU\u0010\u0005R\u0011\u0010X\u001a\u00020\u00028F¢\u0006\u0006\u001a\u0004\bW\u0010\u0005\u0088\u0001\u0003\u0092\u0001\u00020\u0002¨\u0006Z"}, d2 = {"Lkotlin/time/a;", "", "", "rawValue", "l", "(J)J", "", "hashCode", "()I", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "H", "(J)Z", "G", "S", "M", "(JJ)J", "thisMillis", "otherNanos", "c", "(JJJ)J", "L", "scale", "O", "(JI)J", "", "N", "(JD)J", "J", "K", "I", "F", "j", "(JJ)I", "Lju/b;", "unit", "P", "(JLju/b;)D", "Q", "(JLju/b;)J", "", "R", "(J)Ljava/lang/String;", "Ljava/lang/StringBuilder;", "Lkotlin/text/StringBuilder;", "whole", "fractional", "fractionalSize", "isoZeroes", "", "d", "(JLjava/lang/StringBuilder;IIILjava/lang/String;Z)V", "a", "D", "value", "C", "(J)Lju/b;", "storageUnit", "q", "absoluteValue", "r", "(J)I", "getHoursComponent$annotations", "()V", "hoursComponent", "z", "getMinutesComponent$annotations", "minutesComponent", "B", "getSecondsComponent$annotations", "secondsComponent", "A", "getNanosecondsComponent$annotations", "nanosecondsComponent", "s", "inWholeDays", "u", "inWholeHours", "x", "inWholeMinutes", "y", "inWholeSeconds", "w", "inWholeMilliseconds", "v", "inWholeMicroseconds", "b", "kotlin-stdlib"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000R\n\u0002\u0018\u0002\n\u0002\u0010\u000f\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0010\n\u0002\u0010\u0006\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b&\b\u0087@\u0018\u0000 Y2\b\u0012\u0004\u0012\u00020\u00000\u0001:\u00017B\u0011\b\u0000\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u0010\u0010\u0007\u001a\u00020\u0006HÖ\u0001¢\u0006\u0004\b\u0007\u0010\bJ\u001a\u0010\f\u001a\u00020\u000b2\b\u0010\n\u001a\u0004\u0018\u00010\tHÖ\u0003¢\u0006\u0004\b\f\u0010\rJ\u000f\u0010\u000e\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\u000e\u0010\u000fJ\u000f\u0010\u0010\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\u0010\u0010\u000fJ\u0010\u0010\u0011\u001a\u00020\u0000H\u0086\u0002¢\u0006\u0004\b\u0011\u0010\u0005J\u0018\u0010\u0012\u001a\u00020\u00002\u0006\u0010\n\u001a\u00020\u0000H\u0086\u0002¢\u0006\u0004\b\u0012\u0010\u0013J\u001f\u0010\u0016\u001a\u00020\u00002\u0006\u0010\u0014\u001a\u00020\u00022\u0006\u0010\u0015\u001a\u00020\u0002H\u0002¢\u0006\u0004\b\u0016\u0010\u0017J\u0018\u0010\u0018\u001a\u00020\u00002\u0006\u0010\n\u001a\u00020\u0000H\u0086\u0002¢\u0006\u0004\b\u0018\u0010\u0013J\u0018\u0010\u001a\u001a\u00020\u00002\u0006\u0010\u0019\u001a\u00020\u0006H\u0086\u0002¢\u0006\u0004\b\u001a\u0010\u001bJ\u0018\u0010\u001d\u001a\u00020\u00002\u0006\u0010\u0019\u001a\u00020\u001cH\u0086\u0002¢\u0006\u0004\b\u001d\u0010\u001eJ\r\u0010\u001f\u001a\u00020\u000b¢\u0006\u0004\b\u001f\u0010\u000fJ\r\u0010 \u001a\u00020\u000b¢\u0006\u0004\b \u0010\u000fJ\r\u0010!\u001a\u00020\u000b¢\u0006\u0004\b!\u0010\u000fJ\r\u0010\"\u001a\u00020\u000b¢\u0006\u0004\b\"\u0010\u000fJ\u0018\u0010#\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\u0000H\u0096\u0002¢\u0006\u0004\b#\u0010$J\u0015\u0010'\u001a\u00020\u001c2\u0006\u0010&\u001a\u00020%¢\u0006\u0004\b'\u0010(J\u0015\u0010)\u001a\u00020\u00022\u0006\u0010&\u001a\u00020%¢\u0006\u0004\b)\u0010*J\u000f\u0010,\u001a\u00020+H\u0016¢\u0006\u0004\b,\u0010-J?\u00105\u001a\u000204*\u00060.j\u0002`/2\u0006\u00100\u001a\u00020\u00062\u0006\u00101\u001a\u00020\u00062\u0006\u00102\u001a\u00020\u00062\u0006\u0010&\u001a\u00020+2\u0006\u00103\u001a\u00020\u000bH\u0002¢\u0006\u0004\b5\u00106R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b7\u0010\u001fR\u0014\u00109\u001a\u00020\u00028BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b8\u0010\u0005R\u0014\u0010<\u001a\u00020%8BX\u0082\u0004¢\u0006\u0006\u001a\u0004\b:\u0010;R\u0011\u0010>\u001a\u00020\u00008F¢\u0006\u0006\u001a\u0004\b=\u0010\u0005R\u001a\u0010C\u001a\u00020\u00068@X\u0081\u0004¢\u0006\f\u0012\u0004\bA\u0010B\u001a\u0004\b?\u0010@R\u001a\u0010F\u001a\u00020\u00068@X\u0081\u0004¢\u0006\f\u0012\u0004\bE\u0010B\u001a\u0004\bD\u0010@R\u001a\u0010I\u001a\u00020\u00068@X\u0081\u0004¢\u0006\f\u0012\u0004\bH\u0010B\u001a\u0004\bG\u0010@R\u001a\u0010L\u001a\u00020\u00068@X\u0081\u0004¢\u0006\f\u0012\u0004\bK\u0010B\u001a\u0004\bJ\u0010@R\u0011\u0010N\u001a\u00020\u00028F¢\u0006\u0006\u001a\u0004\bM\u0010\u0005R\u0011\u0010P\u001a\u00020\u00028F¢\u0006\u0006\u001a\u0004\bO\u0010\u0005R\u0011\u0010R\u001a\u00020\u00028F¢\u0006\u0006\u001a\u0004\bQ\u0010\u0005R\u0011\u0010T\u001a\u00020\u00028F¢\u0006\u0006\u001a\u0004\bS\u0010\u0005R\u0011\u0010V\u001a\u00020\u00028F¢\u0006\u0006\u001a\u0004\bU\u0010\u0005R\u0011\u0010X\u001a\u00020\u00028F¢\u0006\u0006\u001a\u0004\bW\u0010\u0005\u0088\u0001\u0003\u0092\u0001\u00020\u0002¨\u0006Z"}, d2 = {"Lkotlin/time/a;", "", "", "rawValue", "l", "(J)J", "", "hashCode", "()I", "", "other", "", "equals", "(Ljava/lang/Object;)Z", "H", "(J)Z", "G", "S", "M", "(JJ)J", "thisMillis", "otherNanos", "c", "(JJJ)J", "L", "scale", "O", "(JI)J", "", "N", "(JD)J", "J", "K", "I", "F", "j", "(JJ)I", "Lhu/b;", "unit", "P", "(JLhu/b;)D", "Q", "(JLhu/b;)J", "", "R", "(J)Ljava/lang/String;", "Ljava/lang/StringBuilder;", "Lkotlin/text/StringBuilder;", "whole", "fractional", "fractionalSize", "isoZeroes", "", "d", "(JLjava/lang/StringBuilder;IIILjava/lang/String;Z)V", "a", "D", "value", "C", "(J)Lhu/b;", "storageUnit", "q", "absoluteValue", "r", "(J)I", "getHoursComponent$annotations", "()V", "hoursComponent", "z", "getMinutesComponent$annotations", "minutesComponent", "B", "getSecondsComponent$annotations", "secondsComponent", "A", "getNanosecondsComponent$annotations", "nanosecondsComponent", "s", "inWholeDays", "u", "inWholeHours", "x", "inWholeMinutes", "y", "inWholeSeconds", "w", "inWholeMilliseconds", "v", "inWholeMicroseconds", "b", "kotlin-stdlib"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class a implements Comparable<a> {
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
@@ -16,13 +16,13 @@ public final class a implements Comparable<a> {
     public static final Companion INSTANCE = new Companion(null);
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final long f22679c = l(0);
+    public static final long f23134c = l(0);
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final long f22680d = b.i(4611686018427387903L);
+    public static final long f23135d = b.i(4611686018427387903L);
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final long f22681e = b.i(-4611686018427387903L);
+    public static final long f23136e = b.i(-4611686018427387903L);
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     public final long rawValue;
@@ -35,11 +35,11 @@ public final class a implements Comparable<a> {
         }
 
         public final long a() {
-            return a.f22680d;
+            return a.f23135d;
         }
 
         public final long b() {
-            return a.f22679c;
+            return a.f23134c;
         }
 
         public Companion() {
@@ -64,8 +64,8 @@ public final class a implements Comparable<a> {
         return (int) (y(j10) % ((long) 60));
     }
 
-    public static final ju.b C(long j10) {
-        return H(j10) ? ju.b.NANOSECONDS : ju.b.MILLISECONDS;
+    public static final hu.b C(long j10) {
+        return H(j10) ? hu.b.NANOSECONDS : hu.b.MILLISECONDS;
     }
 
     public static final long D(long j10) {
@@ -89,7 +89,7 @@ public final class a implements Comparable<a> {
     }
 
     public static final boolean I(long j10) {
-        return j10 == f22680d || j10 == f22681e;
+        return j10 == f23135d || j10 == f23136e;
     }
 
     public static final boolean J(long j10) {
@@ -122,11 +122,11 @@ public final class a implements Comparable<a> {
     }
 
     public static final long N(long j10, double d10) {
-        int iC = cu.b.c(d10);
+        int iC = au.b.c(d10);
         if (iC == d10) {
             return O(j10, iC);
         }
-        ju.b bVarC = C(j10);
+        hu.b bVarC = C(j10);
         return b.o(P(j10, bVarC) * d10, bVarC);
     }
 
@@ -138,7 +138,7 @@ public final class a implements Comparable<a> {
             throw new IllegalArgumentException("Multiplying infinite duration by zero yields an undefined result.");
         }
         if (i10 == 0) {
-            return f22679c;
+            return f23134c;
         }
         long jD = D(j10);
         long j11 = i10;
@@ -147,7 +147,7 @@ public final class a implements Comparable<a> {
             if (j12 / j11 == jD) {
                 return b.i(kotlin.ranges.d.l(j12, new kotlin.ranges.c(-4611686018427387903L, 4611686018427387903L)));
             }
-            return cu.b.b(jD) * cu.b.a(i10) > 0 ? f22680d : f22681e;
+            return au.b.b(jD) * au.b.a(i10) > 0 ? f23135d : f23136e;
         }
         if (-2147483647L <= jD && jD < 2147483648L) {
             return b.k(j12);
@@ -159,31 +159,31 @@ public final class a implements Comparable<a> {
         long j13 = jN * j11;
         long jN2 = b.n((jD - b.m(jN)) * j11) + j13;
         if (j13 / j11 != jN || (jN2 ^ j13) < 0) {
-            return cu.b.b(jD) * cu.b.a(i10) > 0 ? f22680d : f22681e;
+            return au.b.b(jD) * au.b.a(i10) > 0 ? f23135d : f23136e;
         }
         return b.i(kotlin.ranges.d.l(jN2, new kotlin.ranges.c(-4611686018427387903L, 4611686018427387903L)));
     }
 
-    public static final double P(long j10, @NotNull ju.b unit) {
+    public static final double P(long j10, @NotNull hu.b unit) {
         Intrinsics.checkNotNullParameter(unit, "unit");
-        if (j10 == f22680d) {
+        if (j10 == f23135d) {
             return Double.POSITIVE_INFINITY;
         }
-        if (j10 == f22681e) {
+        if (j10 == f23136e) {
             return Double.NEGATIVE_INFINITY;
         }
-        return ju.c.a(D(j10), C(j10), unit);
+        return hu.c.a(D(j10), C(j10), unit);
     }
 
-    public static final long Q(long j10, @NotNull ju.b unit) {
+    public static final long Q(long j10, @NotNull hu.b unit) {
         Intrinsics.checkNotNullParameter(unit, "unit");
-        if (j10 == f22680d) {
+        if (j10 == f23135d) {
             return Long.MAX_VALUE;
         }
-        if (j10 == f22681e) {
+        if (j10 == f23136e) {
             return Long.MIN_VALUE;
         }
-        return ju.c.b(D(j10), C(j10), unit);
+        return hu.c.b(D(j10), C(j10), unit);
     }
 
     @NotNull
@@ -191,10 +191,10 @@ public final class a implements Comparable<a> {
         if (j10 == 0) {
             return "0s";
         }
-        if (j10 == f22680d) {
+        if (j10 == f23135d) {
             return "Infinity";
         }
-        if (j10 == f22681e) {
+        if (j10 == f23136e) {
             return "-Infinity";
         }
         boolean zJ = J(j10);
@@ -318,7 +318,7 @@ public final class a implements Comparable<a> {
     }
 
     public static long l(long j10) {
-        if (!ju.a.a()) {
+        if (!hu.a.a()) {
             return j10;
         }
         if (H(j10)) {
@@ -359,27 +359,27 @@ public final class a implements Comparable<a> {
     }
 
     public static final long s(long j10) {
-        return Q(j10, ju.b.DAYS);
+        return Q(j10, hu.b.DAYS);
     }
 
     public static final long u(long j10) {
-        return Q(j10, ju.b.HOURS);
+        return Q(j10, hu.b.HOURS);
     }
 
     public static final long v(long j10) {
-        return Q(j10, ju.b.MICROSECONDS);
+        return Q(j10, hu.b.MICROSECONDS);
     }
 
     public static final long w(long j10) {
-        return (G(j10) && F(j10)) ? D(j10) : Q(j10, ju.b.MILLISECONDS);
+        return (G(j10) && F(j10)) ? D(j10) : Q(j10, hu.b.MILLISECONDS);
     }
 
     public static final long x(long j10) {
-        return Q(j10, ju.b.MINUTES);
+        return Q(j10, hu.b.MINUTES);
     }
 
     public static final long y(long j10) {
-        return Q(j10, ju.b.SECONDS);
+        return Q(j10, hu.b.SECONDS);
     }
 
     public static final int z(long j10) {

@@ -8,7 +8,7 @@ import java.util.TreeMap;
 public final class hh {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final TreeMap f6482a = new TreeMap();
+    public final TreeMap f6555a = new TreeMap();
     public final TreeMap b = new TreeMap();
 
     public static final int c(u4 u4Var, p pVar, q qVar) {
@@ -27,7 +27,7 @@ public final class hh {
             if (!"edit".equals(str2)) {
                 throw new IllegalStateException("Unknown callback type: ".concat(String.valueOf(str2)));
             }
-            treeMap = this.f6482a;
+            treeMap = this.f6555a;
         }
         if (treeMap.containsKey(Integer.valueOf(i10))) {
             i10 = ((Integer) treeMap.lastKey()).intValue() + 1;
@@ -37,7 +37,7 @@ public final class hh {
 
     public final void b(u4 u4Var, c cVar) {
         z9 z9Var = new z9(cVar);
-        TreeMap treeMap = this.f6482a;
+        TreeMap treeMap = this.f6555a;
         for (Integer num : treeMap.keySet()) {
             b bVarClone = cVar.c().clone();
             int iC = c(u4Var, (p) treeMap.get(num), z9Var);

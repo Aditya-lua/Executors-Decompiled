@@ -8,19 +8,19 @@ import java.util.Objects;
 public final class s9 implements ue {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ qa f25949a;
+    public final /* synthetic */ qa f26770a;
 
     public s9(qa qaVar) {
         Objects.requireNonNull(qaVar);
-        this.f25949a = qaVar;
+        this.f26770a = qaVar;
     }
 
     @Override // nb.ue
     public final void a(String str, String str2, Bundle bundle) {
         if (TextUtils.isEmpty(str)) {
-            this.f25949a.p("auto", "_err", bundle);
+            this.f26770a.p("auto", "_err", bundle);
         } else {
-            this.f25949a.w("auto", "_err", bundle, str);
+            this.f26770a.w("auto", "_err", bundle, str);
         }
     }
 }

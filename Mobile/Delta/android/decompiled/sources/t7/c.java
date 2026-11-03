@@ -4,23 +4,23 @@ package t7;
 public class c<T> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final b<T> f31691a;
+    public final b<T> f32210a;
     public i7.a<?, ?> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public T f31692c;
+    public T f32211c;
 
     public c() {
-        this.f31691a = new b<>();
-        this.f31692c = null;
+        this.f32210a = new b<>();
+        this.f32211c = null;
     }
 
     public T a(b<T> bVar) {
-        return this.f31692c;
+        return this.f32211c;
     }
 
     public final T b(float f10, float f11, T t8, T t10, float f12, float f13, float f14) {
-        return a(this.f31691a.h(f10, f11, t8, t10, f12, f13, f14));
+        return a(this.f32210a.h(f10, f11, t8, t10, f12, f13, f14));
     }
 
     public final void c(i7.a<?, ?> aVar) {
@@ -28,7 +28,7 @@ public class c<T> {
     }
 
     public c(T t8) {
-        this.f31691a = new b<>();
-        this.f31692c = t8;
+        this.f32210a = new b<>();
+        this.f32211c = t8;
     }
 }

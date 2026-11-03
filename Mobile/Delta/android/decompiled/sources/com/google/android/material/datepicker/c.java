@@ -10,12 +10,12 @@ public class c {
     public static String a(Context context, long j10, boolean z10, boolean z11, boolean z12) {
         String strD = d(j10);
         if (z10) {
-            strD = String.format(context.getString(hc.i.f18924q), strD);
+            strD = String.format(context.getString(ic.i.f20746q), strD);
         }
         if (z11) {
-            return String.format(context.getString(hc.i.f18923p), strD);
+            return String.format(context.getString(ic.i.f20745p), strD);
         }
-        return z12 ? String.format(context.getString(hc.i.f18920m), strD) : strD;
+        return z12 ? String.format(context.getString(ic.i.f20742m), strD) : strD;
     }
 
     public static String b(long j10) {
@@ -31,7 +31,7 @@ public class c {
     }
 
     public static String e(Context context, int i10) {
-        return p.g().get(1) == i10 ? String.format(context.getString(hc.i.f18921n), Integer.valueOf(i10)) : String.format(context.getString(hc.i.f18922o), Integer.valueOf(i10));
+        return p.g().get(1) == i10 ? String.format(context.getString(ic.i.f20743n), Integer.valueOf(i10)) : String.format(context.getString(ic.i.f20744o), Integer.valueOf(i10));
     }
 
     public static String f(long j10) {

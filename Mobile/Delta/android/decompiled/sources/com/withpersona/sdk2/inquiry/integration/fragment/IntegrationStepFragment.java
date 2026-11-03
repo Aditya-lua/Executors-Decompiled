@@ -1,8 +1,5 @@
 package com.withpersona.sdk2.inquiry.integration.fragment;
 
-import an.ViewEnvironment;
-import an.a0;
-import an.e0;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Parcel;
@@ -19,8 +16,9 @@ import com.withpersona.sdk2.inquiry.integration.IntegrationView;
 import com.withpersona.sdk2.inquiry.integration.IntegrationWorkflow;
 import com.withpersona.sdk2.inquiry.integration.fragment.IntegrationStepFragment;
 import e4.l0;
-import jt.o;
-import jt.s;
+import gt.o;
+import gt.s;
+import iu.p0;
 import k4.CreationExtras;
 import kotlin.Metadata;
 import kotlin.Unit;
@@ -32,16 +30,18 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.d0;
 import kotlin.jvm.internal.k;
-import ku.p0;
-import nu.c0;
+import lu.c0;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pt.m;
-import zt.n;
+import xt.n;
+import ym.ViewEnvironment;
+import ym.a0;
+import ym.e0;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000b\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u000f\u0018\u0000 ?2\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001:\u0002@AB\u0007¢\u0006\u0004\b\u0004\u0010\u0005J!\u0010\u000b\u001a\u00020\n2\u0006\u0010\u0007\u001a\u00020\u00062\b\u0010\t\u001a\u0004\u0018\u00010\bH\u0016¢\u0006\u0004\b\u000b\u0010\fJ\u0017\u0010\u000e\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\u0003H\u0014¢\u0006\u0004\b\u000e\u0010\u000fJ)\u0010\u0015\u001a\u00020\n2\u0006\u0010\u0011\u001a\u00020\u00102\u0012\u0010\u0014\u001a\u000e\u0012\u0004\u0012\u00020\u0013\u0012\u0004\u0012\u00020\n0\u0012¢\u0006\u0004\b\u0015\u0010\u0016R\"\u0010\u001e\u001a\u00020\u00178\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\b\u0018\u0010\u0019\u001a\u0004\b\u001a\u0010\u001b\"\u0004\b\u001c\u0010\u001dR\"\u0010&\u001a\u00020\u001f8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\b \u0010!\u001a\u0004\b\"\u0010#\"\u0004\b$\u0010%R!\u0010-\u001a\u00020'8BX\u0082\u0084\u0002¢\u0006\u0012\n\u0004\b(\u0010)\u0012\u0004\b,\u0010\u0005\u001a\u0004\b*\u0010+R\u001b\u00102\u001a\u00020.8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b/\u0010)\u001a\u0004\b0\u00101R\u001b\u00108\u001a\u0002038BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b4\u00105\u001a\u0004\b6\u00107R$\u0010;\u001a\u0010\u0012\u0004\u0012\u00020\u0013\u0012\u0004\u0012\u00020\n\u0018\u00010\u00128\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b9\u0010:R\u0018\u0010>\u001a\u0004\u0018\u00010\u00068\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b<\u0010=¨\u0006B"}, d2 = {"Lcom/withpersona/sdk2/inquiry/integration/fragment/IntegrationStepFragment;", "Loq/c;", "Lnq/b;", "Lcom/withpersona/sdk2/inquiry/integration/IntegrationView;", "<init>", "()V", "Landroid/view/View;", "view", "Landroid/os/Bundle;", "savedInstanceState", "", "e1", "(Landroid/view/View;Landroid/os/Bundle;)V", "rendering", "q2", "(Lcom/withpersona/sdk2/inquiry/integration/IntegrationView;)V", "Lcom/withpersona/sdk2/inquiry/integration/IntegrationWorkflow$Input;", "input", "Lkotlin/Function1;", "Lcom/withpersona/sdk2/inquiry/integration/IntegrationWorkflow$b;", "handler", "r2", "(Lcom/withpersona/sdk2/inquiry/integration/IntegrationWorkflow$Input;Lkotlin/jvm/functions/Function1;)V", "Lcom/withpersona/sdk2/inquiry/integration/fragment/d$a;", "j0", "Lcom/withpersona/sdk2/inquiry/integration/fragment/d$a;", "p2", "()Lcom/withpersona/sdk2/inquiry/integration/fragment/d$a;", "setViewModelFactory", "(Lcom/withpersona/sdk2/inquiry/integration/fragment/d$a;)V", "viewModelFactory", "Lvq/a;", "k0", "Lvq/a;", "m2", "()Lvq/a;", "setSystemUiController", "(Lvq/a;)V", "systemUiController", "Lan/y;", "l0", "Ljt/h;", "n2", "()Lan/y;", "getViewEnvironment$annotations", "viewEnvironment", "Lcom/withpersona/sdk2/inquiry/integration/fragment/d;", "m0", "o2", "()Lcom/withpersona/sdk2/inquiry/integration/fragment/d;", "viewModel", "Lcom/withpersona/sdk2/inquiry/integration/fragment/IntegrationStepFragment$IntegrationStepFragmentArgs;", "n0", "Lkq/c;", "l2", "()Lcom/withpersona/sdk2/inquiry/integration/fragment/IntegrationStepFragment$IntegrationStepFragmentArgs;", "args", "o0", "Lkotlin/jvm/functions/Function1;", "currentOutputHandler", "p0", "Landroid/view/View;", "currentView", "q0", "b", "IntegrationStepFragmentArgs", "integration_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class IntegrationStepFragment extends oq.c<nq.b, IntegrationView> {
+@Metadata(d1 = {"\u0000b\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u000f\u0018\u0000 ?2\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001:\u0002@AB\u0007¢\u0006\u0004\b\u0004\u0010\u0005J!\u0010\u000b\u001a\u00020\n2\u0006\u0010\u0007\u001a\u00020\u00062\b\u0010\t\u001a\u0004\u0018\u00010\bH\u0016¢\u0006\u0004\b\u000b\u0010\fJ\u0017\u0010\u000e\u001a\u00020\n2\u0006\u0010\r\u001a\u00020\u0003H\u0014¢\u0006\u0004\b\u000e\u0010\u000fJ)\u0010\u0015\u001a\u00020\n2\u0006\u0010\u0011\u001a\u00020\u00102\u0012\u0010\u0014\u001a\u000e\u0012\u0004\u0012\u00020\u0013\u0012\u0004\u0012\u00020\n0\u0012¢\u0006\u0004\b\u0015\u0010\u0016R\"\u0010\u001e\u001a\u00020\u00178\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\b\u0018\u0010\u0019\u001a\u0004\b\u001a\u0010\u001b\"\u0004\b\u001c\u0010\u001dR\"\u0010&\u001a\u00020\u001f8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\b \u0010!\u001a\u0004\b\"\u0010#\"\u0004\b$\u0010%R!\u0010-\u001a\u00020'8BX\u0082\u0084\u0002¢\u0006\u0012\n\u0004\b(\u0010)\u0012\u0004\b,\u0010\u0005\u001a\u0004\b*\u0010+R\u001b\u00102\u001a\u00020.8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b/\u0010)\u001a\u0004\b0\u00101R\u001b\u00108\u001a\u0002038BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b4\u00105\u001a\u0004\b6\u00107R$\u0010;\u001a\u0010\u0012\u0004\u0012\u00020\u0013\u0012\u0004\u0012\u00020\n\u0018\u00010\u00128\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b9\u0010:R\u0018\u0010>\u001a\u0004\u0018\u00010\u00068\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b<\u0010=¨\u0006B"}, d2 = {"Lcom/withpersona/sdk2/inquiry/integration/fragment/IntegrationStepFragment;", "Lmq/c;", "Llq/b;", "Lcom/withpersona/sdk2/inquiry/integration/IntegrationView;", "<init>", "()V", "Landroid/view/View;", "view", "Landroid/os/Bundle;", "savedInstanceState", "", "e1", "(Landroid/view/View;Landroid/os/Bundle;)V", "rendering", "q2", "(Lcom/withpersona/sdk2/inquiry/integration/IntegrationView;)V", "Lcom/withpersona/sdk2/inquiry/integration/IntegrationWorkflow$Input;", "input", "Lkotlin/Function1;", "Lcom/withpersona/sdk2/inquiry/integration/IntegrationWorkflow$b;", "handler", "r2", "(Lcom/withpersona/sdk2/inquiry/integration/IntegrationWorkflow$Input;Lkotlin/jvm/functions/Function1;)V", "Lcom/withpersona/sdk2/inquiry/integration/fragment/d$a;", "j0", "Lcom/withpersona/sdk2/inquiry/integration/fragment/d$a;", "p2", "()Lcom/withpersona/sdk2/inquiry/integration/fragment/d$a;", "setViewModelFactory", "(Lcom/withpersona/sdk2/inquiry/integration/fragment/d$a;)V", "viewModelFactory", "Ltq/a;", "k0", "Ltq/a;", "m2", "()Ltq/a;", "setSystemUiController", "(Ltq/a;)V", "systemUiController", "Lym/y;", "l0", "Lgt/h;", "n2", "()Lym/y;", "getViewEnvironment$annotations", "viewEnvironment", "Lcom/withpersona/sdk2/inquiry/integration/fragment/d;", "m0", "o2", "()Lcom/withpersona/sdk2/inquiry/integration/fragment/d;", "viewModel", "Lcom/withpersona/sdk2/inquiry/integration/fragment/IntegrationStepFragment$IntegrationStepFragmentArgs;", "n0", "Liq/c;", "l2", "()Lcom/withpersona/sdk2/inquiry/integration/fragment/IntegrationStepFragment$IntegrationStepFragmentArgs;", "args", "o0", "Lkotlin/jvm/functions/Function1;", "currentOutputHandler", "p0", "Landroid/view/View;", "currentView", "q0", "b", "IntegrationStepFragmentArgs", "integration_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class IntegrationStepFragment extends mq.c<lq.b, IntegrationView> {
 
     /* JADX INFO: renamed from: q0, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -51,19 +51,19 @@ public final class IntegrationStepFragment extends oq.c<nq.b, IntegrationView> {
     public com.withpersona.sdk2.inquiry.integration.fragment.d.a viewModelFactory;
 
     /* JADX INFO: renamed from: k0, reason: collision with root package name and from kotlin metadata */
-    public vq.a systemUiController;
+    public tq.a systemUiController;
 
     /* JADX INFO: renamed from: l0, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final jt.h viewEnvironment;
+    public final gt.h viewEnvironment;
 
     /* JADX INFO: renamed from: m0, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final jt.h viewModel;
+    public final gt.h viewModel;
 
     /* JADX INFO: renamed from: n0, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final kq.c args;
+    public final iq.c args;
 
     /* JADX INFO: renamed from: o0, reason: collision with root package name and from kotlin metadata */
     @Nullable
@@ -123,22 +123,22 @@ public final class IntegrationStepFragment extends oq.c<nq.b, IntegrationView> {
     }
 
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final /* synthetic */ class a extends k implements n<LayoutInflater, ViewGroup, Boolean, nq.b> {
+    public static final /* synthetic */ class a extends k implements n<LayoutInflater, ViewGroup, Boolean, lq.b> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final a f11161a = new a();
+        public static final a f11242a = new a();
 
         public a() {
-            super(3, nq.b.class, "inflate", "inflate(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lcom/withpersona/sdk2/inquiry/shared/databinding/Pi2GenericUiStepScreenBinding;", 0);
+            super(3, lq.b.class, "inflate", "inflate(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lcom/withpersona/sdk2/inquiry/shared/databinding/Pi2GenericUiStepScreenBinding;", 0);
         }
 
-        public final nq.b d(LayoutInflater p8, ViewGroup viewGroup, boolean z10) {
+        public final lq.b d(LayoutInflater p8, ViewGroup viewGroup, boolean z10) {
             Intrinsics.checkNotNullParameter(p8, "p0");
-            return nq.b.c(p8, viewGroup, z10);
+            return lq.b.c(p8, viewGroup, z10);
         }
 
-        @Override // zt.n
-        public /* bridge */ /* synthetic */ nq.b invoke(LayoutInflater layoutInflater, ViewGroup viewGroup, Boolean bool) {
+        @Override // xt.n
+        public /* bridge */ /* synthetic */ lq.b invoke(LayoutInflater layoutInflater, ViewGroup viewGroup, Boolean bool) {
             return d(layoutInflater, viewGroup, bool.booleanValue());
         }
     }
@@ -153,76 +153,81 @@ public final class IntegrationStepFragment extends oq.c<nq.b, IntegrationView> {
         @NotNull
         public final IntegrationStepFragment a(@NotNull IntegrationWorkflow.Input props) {
             Intrinsics.checkNotNullParameter(props, "props");
-            return (IntegrationStepFragment) kq.b.a(new IntegrationStepFragment(), new IntegrationStepFragmentArgs(props));
+            return (IntegrationStepFragment) iq.b.a(new IntegrationStepFragment(), new IntegrationStepFragmentArgs(props));
         }
 
         public Companion() {
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.integration.fragment.IntegrationStepFragment$onViewCreated$1", f = "IntegrationStepFragment.kt", l = {73}, m = "invokeSuspend")
-    public static final class c extends m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.integration.fragment.IntegrationStepFragment$onViewCreated$1", f = "IntegrationStepFragment.kt", l = {73}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class c extends m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f11162t;
+        public int f11243t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public final /* synthetic */ b f11163u;
+        public final /* synthetic */ b f11244u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ IntegrationStepFragment f11164v;
+        public final /* synthetic */ IntegrationStepFragment f11245v;
 
         @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-        public static final class a<T> implements nu.i {
+        public static final class a<T> implements lu.i {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ IntegrationStepFragment f11165a;
+            public final /* synthetic */ IntegrationStepFragment f11246a;
             public final /* synthetic */ b b;
 
             public a(IntegrationStepFragment integrationStepFragment, b bVar) {
-                this.f11165a = integrationStepFragment;
+                this.f11246a = integrationStepFragment;
                 this.b = bVar;
             }
 
-            @Override // nu.i
+            @Override // lu.i
             /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-            public final Object emit(IntegrationWorkflow.b bVar, nt.b<? super Unit> bVar2) {
+            public final Object emit(IntegrationWorkflow.b bVar, lt.b<? super Unit> bVar2) {
                 if (bVar == null) {
-                    return Unit.f22483a;
+                    return Unit.f22938a;
                 }
-                if (this.f11165a.currentOutputHandler != null) {
+                if (this.f11246a.currentOutputHandler != null) {
                     this.b.a().setValue(null);
-                    Function1 function1 = this.f11165a.currentOutputHandler;
+                    Function1 function1 = this.f11246a.currentOutputHandler;
                     if (function1 != null) {
                         function1.invoke(bVar);
                     }
                 }
-                return Unit.f22483a;
+                return Unit.f22938a;
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public c(b bVar, IntegrationStepFragment integrationStepFragment, nt.b<? super c> bVar2) {
+        public c(b bVar, IntegrationStepFragment integrationStepFragment, lt.b<? super c> bVar2) {
             super(2, bVar2);
-            this.f11163u = bVar;
-            this.f11164v = integrationStepFragment;
+            this.f11244u = bVar;
+            this.f11245v = integrationStepFragment;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return new c(this.f11163u, this.f11164v, bVar);
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return new c(this.f11244u, this.f11245v, bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            Object objE = ot.c.e();
-            int i10 = this.f11162t;
+            Object objE = mt.c.e();
+            int i10 = this.f11243t;
             if (i10 == 0) {
                 o.b(obj);
-                c0<IntegrationWorkflow.b> c0VarA = this.f11163u.a();
-                a aVar = new a(this.f11164v, this.f11163u);
-                this.f11162t = 1;
+                c0<IntegrationWorkflow.b> c0VarA = this.f11244u.a();
+                a aVar = new a(this.f11245v, this.f11244u);
+                this.f11243t = 1;
                 if (c0VarA.collect(aVar, this) == objE) {
                     return objE;
                 }
@@ -232,12 +237,7 @@ public final class IntegrationStepFragment extends oq.c<nq.b, IntegrationView> {
                 }
                 o.b(obj);
             }
-            throw new jt.d();
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            throw new gt.d();
         }
     }
 
@@ -245,20 +245,20 @@ public final class IntegrationStepFragment extends oq.c<nq.b, IntegrationView> {
     public static final class d implements Function0<Bundle> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ androidx.fragment.app.c f11166a;
+        public final /* synthetic */ androidx.fragment.app.c f11247a;
 
         public d(androidx.fragment.app.c cVar) {
-            this.f11166a = cVar;
+            this.f11247a = cVar;
         }
 
         @Override // kotlin.jvm.functions.Function0
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public final Bundle invoke() {
-            Bundle bundleT = this.f11166a.t();
+            Bundle bundleT = this.f11247a.t();
             if (bundleT != null) {
                 return bundleT;
             }
-            throw new IllegalStateException("Fragment " + this.f11166a + " has null arguments");
+            throw new IllegalStateException("Fragment " + this.f11247a + " has null arguments");
         }
     }
 
@@ -266,18 +266,18 @@ public final class IntegrationStepFragment extends oq.c<nq.b, IntegrationView> {
     public static final class e implements Function0<a1.c> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ androidx.fragment.app.c f11167a;
+        public final /* synthetic */ androidx.fragment.app.c f11248a;
         public final /* synthetic */ Function1 b;
 
         public e(androidx.fragment.app.c cVar, Function1 function1) {
-            this.f11167a = cVar;
+            this.f11248a = cVar;
             this.b = function1;
         }
 
         @Override // kotlin.jvm.functions.Function0
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public final a1.c invoke() {
-            return new oq.d(this.f11167a, this.b);
+            return new mq.d(this.f11248a, this.b);
         }
     }
 
@@ -285,19 +285,19 @@ public final class IntegrationStepFragment extends oq.c<nq.b, IntegrationView> {
     public static final class f extends kotlin.jvm.internal.m implements Function0<androidx.fragment.app.c> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ androidx.fragment.app.c f11168i;
+        public final /* synthetic */ androidx.fragment.app.c f11249i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public f(androidx.fragment.app.c cVar) {
             super(0);
-            this.f11168i = cVar;
+            this.f11249i = cVar;
         }
 
         @Override // kotlin.jvm.functions.Function0
         @NotNull
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final androidx.fragment.app.c invoke() {
-            return this.f11168i;
+            return this.f11249i;
         }
     }
 
@@ -305,19 +305,19 @@ public final class IntegrationStepFragment extends oq.c<nq.b, IntegrationView> {
     public static final class g extends kotlin.jvm.internal.m implements Function0<c1> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ Function0 f11169i;
+        public final /* synthetic */ Function0 f11250i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public g(Function0 function0) {
             super(0);
-            this.f11169i = function0;
+            this.f11250i = function0;
         }
 
         @Override // kotlin.jvm.functions.Function0
         @NotNull
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final c1 invoke() {
-            return (c1) this.f11169i.invoke();
+            return (c1) this.f11250i.invoke();
         }
     }
 
@@ -325,19 +325,19 @@ public final class IntegrationStepFragment extends oq.c<nq.b, IntegrationView> {
     public static final class h extends kotlin.jvm.internal.m implements Function0<b1> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ jt.h f11170i;
+        public final /* synthetic */ gt.h f11251i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public h(jt.h hVar) {
+        public h(gt.h hVar) {
             super(0);
-            this.f11170i = hVar;
+            this.f11251i = hVar;
         }
 
         @Override // kotlin.jvm.functions.Function0
         @NotNull
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final b1 invoke() {
-            return l0.c(this.f11170i).w();
+            return l0.c(this.f11251i).v();
         }
     }
 
@@ -345,16 +345,16 @@ public final class IntegrationStepFragment extends oq.c<nq.b, IntegrationView> {
     public static final class i extends kotlin.jvm.internal.m implements Function0<CreationExtras> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ Function0 f11171i;
+        public final /* synthetic */ Function0 f11252i;
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public final /* synthetic */ jt.h f11172j;
+        public final /* synthetic */ gt.h f11253j;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public i(Function0 function0, jt.h hVar) {
+        public i(Function0 function0, gt.h hVar) {
             super(0);
-            this.f11171i = function0;
-            this.f11172j = hVar;
+            this.f11252i = function0;
+            this.f11253j = hVar;
         }
 
         @Override // kotlin.jvm.functions.Function0
@@ -362,33 +362,33 @@ public final class IntegrationStepFragment extends oq.c<nq.b, IntegrationView> {
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final CreationExtras invoke() {
             CreationExtras creationExtras;
-            Function0 function0 = this.f11171i;
+            Function0 function0 = this.f11252i;
             if (function0 != null && (creationExtras = (CreationExtras) function0.invoke()) != null) {
                 return creationExtras;
             }
-            c1 c1VarC = l0.c(this.f11172j);
+            c1 c1VarC = l0.c(this.f11253j);
             j jVar = c1VarC instanceof j ? (j) c1VarC : null;
-            return jVar != null ? jVar.Z() : CreationExtras.b.f22169c;
+            return jVar != null ? jVar.Y() : CreationExtras.b.f22393c;
         }
     }
 
     public IntegrationStepFragment() {
-        super(a.f11161a);
-        this.viewEnvironment = jt.i.b(new Function0() { // from class: yo.a
+        super(a.f11242a);
+        this.viewEnvironment = gt.i.b(new Function0() { // from class: wo.a
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return IntegrationStepFragment.s2(this.f36022a);
+                return IntegrationStepFragment.s2(this.f34651a);
             }
         });
-        e eVar = new e(this, new Function1() { // from class: yo.b
+        e eVar = new e(this, new Function1() { // from class: wo.b
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return IntegrationStepFragment.t2(this.f36023a, (androidx.p000lifecycle.l0) obj);
+                return IntegrationStepFragment.t2(this.f34652a, (androidx.p000lifecycle.l0) obj);
             }
         });
-        jt.h hVarA = jt.i.a(jt.k.NONE, new g(new f(this)));
+        gt.h hVarA = gt.i.a(gt.k.NONE, new g(new f(this)));
         this.viewModel = l0.b(this, d0.b(com.withpersona.sdk2.inquiry.integration.fragment.d.class), new h(hVarA), new i(null, hVarA), eVar);
-        this.args = new kq.c(d0.b(IntegrationStepFragmentArgs.class), new d(this));
+        this.args = new iq.c(d0.b(IntegrationStepFragmentArgs.class), new d(this));
     }
 
     private final ViewEnvironment n2() {
@@ -396,7 +396,7 @@ public final class IntegrationStepFragment extends oq.c<nq.b, IntegrationView> {
     }
 
     public static final ViewEnvironment s2(IntegrationStepFragment integrationStepFragment) {
-        return new ViewEnvironment(j0.g(s.a(vq.b.b, integrationStepFragment.m2())));
+        return new ViewEnvironment(j0.g(s.a(tq.b.b, integrationStepFragment.m2())));
     }
 
     public static final com.withpersona.sdk2.inquiry.integration.fragment.d t2(IntegrationStepFragment integrationStepFragment, androidx.p000lifecycle.l0 it) {
@@ -404,7 +404,7 @@ public final class IntegrationStepFragment extends oq.c<nq.b, IntegrationView> {
         return integrationStepFragment.p2().a(it);
     }
 
-    @Override // oq.c, androidx.fragment.app.c
+    @Override // mq.c, androidx.fragment.app.c
     public void e1(@NotNull View view, @Nullable Bundle savedInstanceState) {
         Intrinsics.checkNotNullParameter(view, "view");
         super.e1(view, savedInstanceState);
@@ -412,7 +412,7 @@ public final class IntegrationStepFragment extends oq.c<nq.b, IntegrationView> {
         g2(bVarE.c());
         androidx.p000lifecycle.s sVarK0 = k0();
         Intrinsics.checkNotNullExpressionValue(sVarK0, "getViewLifecycleOwner(...)");
-        ku.k.d(t.a(sVarK0), null, null, new c(bVarE, this, null), 3, null);
+        iu.k.d(t.a(sVarK0), null, null, new c(bVarE, this, null), 3, null);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -421,8 +421,8 @@ public final class IntegrationStepFragment extends oq.c<nq.b, IntegrationView> {
     }
 
     @NotNull
-    public final vq.a m2() {
-        vq.a aVar = this.systemUiController;
+    public final tq.a m2() {
+        tq.a aVar = this.systemUiController;
         if (aVar != null) {
             return aVar;
         }
@@ -445,7 +445,7 @@ public final class IntegrationStepFragment extends oq.c<nq.b, IntegrationView> {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // oq.c
+    @Override // mq.c
     /* JADX INFO: renamed from: q2, reason: merged with bridge method [inline-methods] */
     public void h2(@NotNull IntegrationView rendering) {
         Intrinsics.checkNotNullParameter(rendering, "rendering");
@@ -459,10 +459,10 @@ public final class IntegrationStepFragment extends oq.c<nq.b, IntegrationView> {
         }
         a0<IntegrationView> a0VarA = rendering.a();
         ViewEnvironment viewEnvironmentN2 = n2();
-        Context context = ((nq.b) b2()).getRoot().getContext();
+        Context context = ((lq.b) b2()).getRoot().getContext();
         Intrinsics.checkNotNullExpressionValue(context, "getContext(...)");
-        this.currentView = a0VarA.a(rendering, viewEnvironmentN2, context, ((nq.b) b2()).getRoot());
-        ((nq.b) b2()).getRoot().addView(this.currentView);
+        this.currentView = a0VarA.a(rendering, viewEnvironmentN2, context, ((lq.b) b2()).getRoot());
+        ((lq.b) b2()).getRoot().addView(this.currentView);
         View view2 = this.currentView;
         if (view2 != null) {
             e0.h(view2);

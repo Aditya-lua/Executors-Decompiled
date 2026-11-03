@@ -19,26 +19,26 @@ public class a {
     public static final Object b = new Object();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static volatile a f31694c;
+    public static volatile a f32213c;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final ConcurrentHashMap f31695a = new ConcurrentHashMap();
+    public final ConcurrentHashMap f32214a = new ConcurrentHashMap();
 
     @NonNull
     public static a b() {
-        if (f31694c == null) {
+        if (f32213c == null) {
             synchronized (b) {
                 try {
-                    if (f31694c == null) {
-                        f31694c = new a();
+                    if (f32213c == null) {
+                        f32213c = new a();
                     }
                 } catch (Throwable th2) {
                     throw th2;
                 }
             }
         }
-        a aVar = f31694c;
+        a aVar = f32213c;
         m.l(aVar);
         return aVar;
     }
@@ -67,13 +67,13 @@ public class a {
 
     public void c(@NonNull Context context, @NonNull ServiceConnection serviceConnection) {
         if (f(serviceConnection)) {
-            ConcurrentHashMap concurrentHashMap = this.f31695a;
+            ConcurrentHashMap concurrentHashMap = this.f32214a;
             if (concurrentHashMap.containsKey(serviceConnection)) {
                 try {
                     g(context, (ServiceConnection) concurrentHashMap.get(serviceConnection));
                     return;
                 } finally {
-                    this.f31695a.remove(serviceConnection);
+                    this.f32214a.remove(serviceConnection);
                 }
             }
         }
@@ -100,7 +100,7 @@ public class a {
         if (!f(serviceConnection)) {
             return h(context, intent, serviceConnection, i10, executor);
         }
-        ServiceConnection serviceConnection2 = (ServiceConnection) this.f31695a.putIfAbsent(serviceConnection, serviceConnection);
+        ServiceConnection serviceConnection2 = (ServiceConnection) this.f32214a.putIfAbsent(serviceConnection, serviceConnection);
         if (serviceConnection2 != null && serviceConnection != serviceConnection2) {
             Log.w("ConnectionTracker", String.format("Duplicate binding with the same ServiceConnection: %s, %s, %s.", serviceConnection, str, intent.getAction()));
         }
@@ -109,10 +109,10 @@ public class a {
             if (zH) {
                 return zH;
             }
-            this.f31695a.remove(serviceConnection, serviceConnection);
+            this.f32214a.remove(serviceConnection, serviceConnection);
             return false;
         } catch (Throwable th2) {
-            this.f31695a.remove(serviceConnection, serviceConnection);
+            this.f32214a.remove(serviceConnection, serviceConnection);
             throw th2;
         }
     }

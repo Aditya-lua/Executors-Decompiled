@@ -8,7 +8,7 @@ import android.view.Surface;
 public final class i {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final a f3766a;
+    public final a f3664a;
 
     public interface a {
         void a(long j10);
@@ -33,11 +33,11 @@ public final class i {
     public i(int i10, Surface surface) {
         int i11 = Build.VERSION.SDK_INT;
         if (i11 >= 33) {
-            this.f3766a = new m(i10, surface);
+            this.f3664a = new m(i10, surface);
         } else if (i11 >= 28) {
-            this.f3766a = new l(i10, surface);
+            this.f3664a = new l(i10, surface);
         } else {
-            this.f3766a = new k(i10, surface);
+            this.f3664a = new k(i10, surface);
         }
     }
 
@@ -59,57 +59,57 @@ public final class i {
     }
 
     public void a(Surface surface) {
-        this.f3766a.b(surface);
+        this.f3664a.b(surface);
     }
 
     public void b() {
-        this.f3766a.f();
+        this.f3664a.f();
     }
 
     public String c() {
-        return this.f3766a.e();
+        return this.f3664a.e();
     }
 
     public Surface d() {
-        return this.f3766a.getSurface();
+        return this.f3664a.getSurface();
     }
 
     public void e(long j10) {
-        this.f3766a.c(j10);
+        this.f3664a.c(j10);
     }
 
     public boolean equals(Object obj) {
         if (obj instanceof i) {
-            return this.f3766a.equals(((i) obj).f3766a);
+            return this.f3664a.equals(((i) obj).f3664a);
         }
         return false;
     }
 
     public void f(int i10) {
-        this.f3766a.g(i10);
+        this.f3664a.g(i10);
     }
 
     public void g(String str) {
-        this.f3766a.d(str);
+        this.f3664a.d(str);
     }
 
     public void h(long j10) {
-        this.f3766a.a(j10);
+        this.f3664a.a(j10);
     }
 
     public int hashCode() {
-        return this.f3766a.hashCode();
+        return this.f3664a.hashCode();
     }
 
     public Object i() {
-        return this.f3766a.h();
+        return this.f3664a.h();
     }
 
     public i(OutputConfiguration outputConfiguration) {
-        this.f3766a = m.k(outputConfiguration);
+        this.f3664a = m.k(outputConfiguration);
     }
 
     public i(a aVar) {
-        this.f3766a = aVar;
+        this.f3664a = aVar;
     }
 }

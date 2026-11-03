@@ -12,16 +12,16 @@ import java.util.Map;
 public class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public f f33709a;
+    public f f33915a;
     public u b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f33710c;
+    public boolean f33916c;
 
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f33711a;
+        public static final /* synthetic */ int[] f33917a;
         public static final /* synthetic */ int[] b;
 
         static {
@@ -124,36 +124,36 @@ public class b {
             } catch (NoSuchFieldError unused24) {
             }
             int[] iArr2 = new int[c.values().length];
-            f33711a = iArr2;
+            f33917a = iArr2;
             try {
                 iArr2[c.EQUALS.ordinal()] = 1;
             } catch (NoSuchFieldError unused25) {
             }
             try {
-                f33711a[c.INCLUDES.ordinal()] = 2;
+                f33917a[c.INCLUDES.ordinal()] = 2;
             } catch (NoSuchFieldError unused26) {
             }
             try {
-                f33711a[c.DASHMATCH.ordinal()] = 3;
+                f33917a[c.DASHMATCH.ordinal()] = 3;
             } catch (NoSuchFieldError unused27) {
             }
         }
     }
 
     /* JADX INFO: renamed from: w7.b$b, reason: collision with other inner class name */
-    public static class C0619b {
+    public static class C0629b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final String f33712a;
+        public final String f33918a;
         public final c b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final String f33713c;
+        public final String f33919c;
 
-        public C0619b(String str, c cVar, String str2) {
-            this.f33712a = str;
+        public C0629b(String str, c cVar, String str2) {
+            this.f33918a = str;
             this.b = cVar;
-            this.f33713c = str2;
+            this.f33919c = str2;
         }
     }
 
@@ -169,11 +169,11 @@ public class b {
         public static class a {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public int f33718a;
+            public int f33924a;
             public int b;
 
             public a(int i10, int i11) {
-                this.f33718a = i10;
+                this.f33924a = i10;
                 this.b = i11;
             }
         }
@@ -214,7 +214,7 @@ public class b {
                     aVar = new a(2, 0);
                 } else {
                     int i12 = (!f('+') && f('-')) ? -1 : 1;
-                    w7.c cVarC2 = w7.c.c(this.f34132a, this.b, this.f34133c, false);
+                    w7.c cVarC2 = w7.c.c(this.f34338a, this.b, this.f34339c, false);
                     if (cVarC2 != null) {
                         this.b = cVarC2.a();
                     }
@@ -229,7 +229,7 @@ public class b {
                         }
                         if (zF) {
                             A();
-                            cVarC = w7.c.c(this.f34132a, this.b, this.f34133c, false);
+                            cVarC = w7.c.c(this.f34338a, this.b, this.f34339c, false);
                             if (cVarC == null) {
                                 this.b = i10;
                                 return null;
@@ -272,7 +272,7 @@ public class b {
             if (h()) {
                 return null;
             }
-            char cCharAt = this.f34132a.charAt(this.b);
+            char cCharAt = this.f34338a.charAt(this.b);
             if (cCharAt != '\'' && cCharAt != '\"') {
                 return null;
             }
@@ -337,7 +337,7 @@ public class b {
             if (iP == i10) {
                 return null;
             }
-            String strSubstring = this.f34132a.substring(i10, iP);
+            String strSubstring = this.f34338a.substring(i10, iP);
             this.b = iP;
             return strSubstring;
         }
@@ -346,18 +346,18 @@ public class b {
             char cCharAt;
             int iC;
             StringBuilder sb2 = new StringBuilder();
-            while (!h() && (cCharAt = this.f34132a.charAt(this.b)) != '\'' && cCharAt != '\"' && cCharAt != '(' && cCharAt != ')' && !k(cCharAt) && !Character.isISOControl((int) cCharAt)) {
+            while (!h() && (cCharAt = this.f34338a.charAt(this.b)) != '\'' && cCharAt != '\"' && cCharAt != '(' && cCharAt != ')' && !k(cCharAt) && !Character.isISOControl((int) cCharAt)) {
                 this.b++;
                 if (cCharAt == '\\') {
                     if (!h()) {
-                        String str = this.f34132a;
+                        String str = this.f34338a;
                         int i10 = this.b;
                         this.b = i10 + 1;
                         cCharAt = str.charAt(i10);
                         if (cCharAt != '\n' && cCharAt != '\r' && cCharAt != '\f') {
                             int iC2 = C(cCharAt);
                             if (iC2 != -1) {
-                                for (int i11 = 1; i11 <= 5 && !h() && (iC = C(this.f34132a.charAt(this.b))) != -1; i11++) {
+                                for (int i11 = 1; i11 <= 5 && !h() && (iC = C(this.f34338a.charAt(this.b))) != -1; i11++) {
                                     this.b++;
                                     iC2 = (iC2 * 16) + iC;
                                 }
@@ -379,7 +379,7 @@ public class b {
                 return null;
             }
             int i10 = this.b;
-            int iCharAt = this.f34132a.charAt(i10);
+            int iCharAt = this.f34338a.charAt(i10);
             int i11 = i10;
             while (iCharAt != -1 && iCharAt != 59 && iCharAt != 125 && iCharAt != 33 && !j(iCharAt)) {
                 if (!k(iCharAt)) {
@@ -388,7 +388,7 @@ public class b {
                 iCharAt = a();
             }
             if (this.b > i10) {
-                return this.f34132a.substring(i10, i11);
+                return this.f34338a.substring(i10, i11);
             }
             this.b = i10;
             return null;
@@ -415,9 +415,9 @@ public class b {
                 return null;
             }
             Iterator<s> it = listL.iterator();
-            while (it.hasNext() && (list = it.next().f33769a) != null) {
+            while (it.hasNext() && (list = it.next().f33975a) != null) {
                 Iterator<t> it2 = list.iterator();
-                while (it2.hasNext() && (list2 = it2.next().f33772d) != null) {
+                while (it2.hasNext() && (list2 = it2.next().f33978d) != null) {
                     Iterator<g> it3 = list2.iterator();
                     while (it3.hasNext()) {
                         if (it3.next() instanceof k) {
@@ -654,7 +654,7 @@ public class b {
                     if (aVarD == null) {
                         throw new w7.a("Invalid or missing parameter section for pseudo class: " + strH);
                     }
-                    hVar = new h(aVarD.f33718a, aVarD.b, z10, z11, tVar.b);
+                    hVar = new h(aVarD.f33924a, aVarD.b, z10, z11, tVar.b);
                     sVar.b();
                     gVar = hVar;
                     tVar.b(gVar);
@@ -708,7 +708,7 @@ public class b {
                 return this.b;
             }
             int i11 = this.b;
-            int iCharAt = this.f34132a.charAt(i11);
+            int iCharAt = this.f34338a.charAt(i11);
             if (iCharAt == 45) {
                 iCharAt = a();
             }
@@ -756,31 +756,31 @@ public class b {
     public static class h implements g {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public int f33733a;
+        public int f33939a;
         public int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public boolean f33734c;
+        public boolean f33940c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public boolean f33735d;
+        public boolean f33941d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public String f33736e;
+        public String f33942e;
 
         public h(int i10, int i11, boolean z10, boolean z11, String str) {
-            this.f33733a = i10;
+            this.f33939a = i10;
             this.b = i11;
-            this.f33734c = z10;
-            this.f33735d = z11;
-            this.f33736e = str;
+            this.f33940c = z10;
+            this.f33941d = z11;
+            this.f33942e = str;
         }
 
         @Override // w7.b.g
         public boolean a(q qVar, w7.g.l0 l0Var) {
             int i10;
             int i11;
-            String strN = (this.f33735d && this.f33736e == null) ? l0Var.n() : this.f33736e;
+            String strN = (this.f33941d && this.f33942e == null) ? l0Var.n() : this.f33942e;
             w7.g.j0 j0Var = l0Var.b;
             if (j0Var != null) {
                 Iterator<w7.g.n0> it = j0Var.getChildren().iterator();
@@ -799,18 +799,18 @@ public class b {
                 i10 = 0;
                 i11 = 1;
             }
-            int i12 = this.f33734c ? i10 + 1 : i11 - i10;
-            int i13 = this.f33733a;
+            int i12 = this.f33940c ? i10 + 1 : i11 - i10;
+            int i13 = this.f33939a;
             if (i13 == 0) {
                 return i12 == this.b;
             }
             int i14 = this.b;
-            return (i12 - i14) % i13 == 0 && (Integer.signum(i12 - i14) == 0 || Integer.signum(i12 - this.b) == Integer.signum(this.f33733a));
+            return (i12 - i14) % i13 == 0 && (Integer.signum(i12 - i14) == 0 || Integer.signum(i12 - this.b) == Integer.signum(this.f33939a));
         }
 
         public String toString() {
-            String str = this.f33734c ? "" : "last-";
-            return this.f33735d ? String.format("nth-%schild(%dn%+d of type <%s>)", str, Integer.valueOf(this.f33733a), Integer.valueOf(this.b), this.f33736e) : String.format("nth-%schild(%dn%+d)", str, Integer.valueOf(this.f33733a), Integer.valueOf(this.b));
+            String str = this.f33940c ? "" : "last-";
+            return this.f33941d ? String.format("nth-%schild(%dn%+d of type <%s>)", str, Integer.valueOf(this.f33939a), Integer.valueOf(this.b), this.f33942e) : String.format("nth-%schild(%dn%+d)", str, Integer.valueOf(this.f33939a), Integer.valueOf(this.b));
         }
     }
 
@@ -862,18 +862,18 @@ public class b {
 
 
         /* JADX INFO: renamed from: z, reason: collision with root package name */
-        public static final Map<String, j> f33761z = new HashMap();
+        public static final Map<String, j> f33967z = new HashMap();
 
         static {
             for (j jVar : values()) {
                 if (jVar != UNSUPPORTED) {
-                    f33761z.put(jVar.name().replace('_', '-'), jVar);
+                    f33967z.put(jVar.name().replace('_', '-'), jVar);
                 }
             }
         }
 
         public static j a(String str) {
-            j jVar = f33761z.get(str);
+            j jVar = f33967z.get(str);
             return jVar != null ? jVar : UNSUPPORTED;
         }
     }
@@ -881,15 +881,15 @@ public class b {
     public static class k implements g {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public List<s> f33762a;
+        public List<s> f33968a;
 
         public k(List<s> list) {
-            this.f33762a = list;
+            this.f33968a = list;
         }
 
         @Override // w7.b.g
         public boolean a(q qVar, w7.g.l0 l0Var) {
-            Iterator<s> it = this.f33762a.iterator();
+            Iterator<s> it = this.f33968a.iterator();
             while (it.hasNext()) {
                 if (b.l(qVar, it.next(), l0Var)) {
                     return false;
@@ -899,7 +899,7 @@ public class b {
         }
 
         public int b() {
-            Iterator<s> it = this.f33762a.iterator();
+            Iterator<s> it = this.f33968a.iterator();
             int i10 = Integer.MIN_VALUE;
             while (it.hasNext()) {
                 int i11 = it.next().b;
@@ -911,17 +911,17 @@ public class b {
         }
 
         public String toString() {
-            return "not(" + this.f33762a + ")";
+            return "not(" + this.f33968a + ")";
         }
     }
 
     public static class l implements g {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public String f33763a;
+        public String f33969a;
 
         public l(String str) {
-            this.f33763a = str;
+            this.f33969a = str;
         }
 
         @Override // w7.b.g
@@ -930,25 +930,25 @@ public class b {
         }
 
         public String toString() {
-            return this.f33763a;
+            return this.f33969a;
         }
     }
 
     public static class m implements g {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public boolean f33764a;
+        public boolean f33970a;
         public String b;
 
         public m(boolean z10, String str) {
-            this.f33764a = z10;
+            this.f33970a = z10;
             this.b = str;
         }
 
         @Override // w7.b.g
         public boolean a(q qVar, w7.g.l0 l0Var) {
             int i10;
-            String strN = (this.f33764a && this.b == null) ? l0Var.n() : this.b;
+            String strN = (this.f33970a && this.b == null) ? l0Var.n() : this.b;
             w7.g.j0 j0Var = l0Var.b;
             if (j0Var != null) {
                 Iterator<w7.g.n0> it = j0Var.getChildren().iterator();
@@ -966,7 +966,7 @@ public class b {
         }
 
         public String toString() {
-            return this.f33764a ? String.format("only-of-type <%s>", this.b) : String.format("only-child", new Object[0]);
+            return this.f33970a ? String.format("only-of-type <%s>", this.b) : String.format("only-child", new Object[0]);
         }
     }
 
@@ -994,7 +994,7 @@ public class b {
 
         @Override // w7.b.g
         public boolean a(q qVar, w7.g.l0 l0Var) {
-            return qVar != null && l0Var == qVar.f33767a;
+            return qVar != null && l0Var == qVar.f33973a;
         }
 
         public String toString() {
@@ -1009,89 +1009,89 @@ public class b {
     public static class p {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public s f33765a;
+        public s f33971a;
         public w7.g.e0 b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public u f33766c;
+        public u f33972c;
 
         public p(s sVar, w7.g.e0 e0Var, u uVar) {
-            this.f33765a = sVar;
+            this.f33971a = sVar;
             this.b = e0Var;
-            this.f33766c = uVar;
+            this.f33972c = uVar;
         }
 
         public String toString() {
-            return String.valueOf(this.f33765a) + " {...} (src=" + this.f33766c + ")";
+            return String.valueOf(this.f33971a) + " {...} (src=" + this.f33972c + ")";
         }
     }
 
     public static class q {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public w7.g.l0 f33767a;
+        public w7.g.l0 f33973a;
 
         public String toString() {
-            w7.g.l0 l0Var = this.f33767a;
-            return l0Var != null ? String.format("<%s id=\"%s\">", l0Var.n(), this.f33767a.f33933c) : "";
+            w7.g.l0 l0Var = this.f33973a;
+            return l0Var != null ? String.format("<%s id=\"%s\">", l0Var.n(), this.f33973a.f34139c) : "";
         }
     }
 
     public static class r {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public List<p> f33768a = null;
+        public List<p> f33974a = null;
 
         public void a(p pVar) {
-            if (this.f33768a == null) {
-                this.f33768a = new ArrayList();
+            if (this.f33974a == null) {
+                this.f33974a = new ArrayList();
             }
-            for (int i10 = 0; i10 < this.f33768a.size(); i10++) {
-                if (this.f33768a.get(i10).f33765a.b > pVar.f33765a.b) {
-                    this.f33768a.add(i10, pVar);
+            for (int i10 = 0; i10 < this.f33974a.size(); i10++) {
+                if (this.f33974a.get(i10).f33971a.b > pVar.f33971a.b) {
+                    this.f33974a.add(i10, pVar);
                     return;
                 }
             }
-            this.f33768a.add(pVar);
+            this.f33974a.add(pVar);
         }
 
         public void b(r rVar) {
-            if (rVar.f33768a == null) {
+            if (rVar.f33974a == null) {
                 return;
             }
-            if (this.f33768a == null) {
-                this.f33768a = new ArrayList(rVar.f33768a.size());
+            if (this.f33974a == null) {
+                this.f33974a = new ArrayList(rVar.f33974a.size());
             }
-            Iterator<p> it = rVar.f33768a.iterator();
+            Iterator<p> it = rVar.f33974a.iterator();
             while (it.hasNext()) {
                 a(it.next());
             }
         }
 
         public List<p> c() {
-            return this.f33768a;
+            return this.f33974a;
         }
 
         public boolean d() {
-            List<p> list = this.f33768a;
+            List<p> list = this.f33974a;
             return list == null || list.isEmpty();
         }
 
         public void e(u uVar) {
-            List<p> list = this.f33768a;
+            List<p> list = this.f33974a;
             if (list == null) {
                 return;
             }
             Iterator<p> it = list.iterator();
             while (it.hasNext()) {
-                if (it.next().f33766c == uVar) {
+                if (it.next().f33972c == uVar) {
                     it.remove();
                 }
             }
         }
 
         public int f() {
-            List<p> list = this.f33768a;
+            List<p> list = this.f33974a;
             if (list != null) {
                 return list.size();
             }
@@ -1099,11 +1099,11 @@ public class b {
         }
 
         public String toString() {
-            if (this.f33768a == null) {
+            if (this.f33974a == null) {
                 return "";
             }
             StringBuilder sb2 = new StringBuilder();
-            Iterator<p> it = this.f33768a.iterator();
+            Iterator<p> it = this.f33974a.iterator();
             while (it.hasNext()) {
                 sb2.append(it.next().toString());
                 sb2.append('\n');
@@ -1115,39 +1115,39 @@ public class b {
     public static class t {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public e f33770a;
+        public e f33976a;
         public String b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public List<C0619b> f33771c = null;
+        public List<C0629b> f33977c = null;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public List<g> f33772d = null;
+        public List<g> f33978d = null;
 
         public t(e eVar, String str) {
-            this.f33770a = null;
+            this.f33976a = null;
             this.b = null;
-            this.f33770a = eVar == null ? e.DESCENDANT : eVar;
+            this.f33976a = eVar == null ? e.DESCENDANT : eVar;
             this.b = str;
         }
 
         public void a(String str, c cVar, String str2) {
-            if (this.f33771c == null) {
-                this.f33771c = new ArrayList();
+            if (this.f33977c == null) {
+                this.f33977c = new ArrayList();
             }
-            this.f33771c.add(new C0619b(str, cVar, str2));
+            this.f33977c.add(new C0629b(str, cVar, str2));
         }
 
         public void b(g gVar) {
-            if (this.f33772d == null) {
-                this.f33772d = new ArrayList();
+            if (this.f33978d == null) {
+                this.f33978d = new ArrayList();
             }
-            this.f33772d.add(gVar);
+            this.f33978d.add(gVar);
         }
 
         public String toString() {
             StringBuilder sb2 = new StringBuilder();
-            e eVar = this.f33770a;
+            e eVar = this.f33976a;
             if (eVar == e.CHILD) {
                 sb2.append("> ");
             } else if (eVar == e.FOLLOWS) {
@@ -1158,26 +1158,26 @@ public class b {
                 str = "*";
             }
             sb2.append(str);
-            List<C0619b> list = this.f33771c;
+            List<C0629b> list = this.f33977c;
             if (list != null) {
-                for (C0619b c0619b : list) {
+                for (C0629b c0629b : list) {
                     sb2.append('[');
-                    sb2.append(c0619b.f33712a);
-                    int i10 = a.f33711a[c0619b.b.ordinal()];
+                    sb2.append(c0629b.f33918a);
+                    int i10 = a.f33917a[c0629b.b.ordinal()];
                     if (i10 == 1) {
                         sb2.append('=');
-                        sb2.append(c0619b.f33713c);
+                        sb2.append(c0629b.f33919c);
                     } else if (i10 == 2) {
                         sb2.append("~=");
-                        sb2.append(c0619b.f33713c);
+                        sb2.append(c0629b.f33919c);
                     } else if (i10 == 3) {
                         sb2.append("|=");
-                        sb2.append(c0619b.f33713c);
+                        sb2.append(c0629b.f33919c);
                     }
                     sb2.append(']');
                 }
             }
-            List<g> list2 = this.f33772d;
+            List<g> list2 = this.f33978d;
             if (list2 != null) {
                 for (g gVar : list2) {
                     sb2.append(':');
@@ -1268,7 +1268,7 @@ public class b {
         if (!n(qVar, tVarE, list, i11, l0Var)) {
             return false;
         }
-        e eVar = tVarE.f33770a;
+        e eVar = tVarE.f33976a;
         if (eVar == e.DESCENDANT) {
             if (i10 == 0) {
                 return true;
@@ -1306,7 +1306,7 @@ public class b {
         if (!n(qVar, tVarE, list, i11, l0Var)) {
             return false;
         }
-        e eVar = tVarE.f33770a;
+        e eVar = tVarE.f33976a;
         if (eVar == e.DESCENDANT) {
             if (i10 == 0) {
                 return true;
@@ -1335,21 +1335,21 @@ public class b {
         if (str != null && !str.equals(l0Var.n().toLowerCase(Locale.US))) {
             return false;
         }
-        List<C0619b> list3 = tVar.f33771c;
+        List<C0629b> list3 = tVar.f33977c;
         if (list3 != null) {
-            for (C0619b c0619b : list3) {
-                String str2 = c0619b.f33712a;
+            for (C0629b c0629b : list3) {
+                String str2 = c0629b.f33918a;
                 str2.getClass();
                 if (str2.equals("id")) {
-                    if (!c0619b.f33713c.equals(l0Var.f33933c)) {
+                    if (!c0629b.f33919c.equals(l0Var.f34139c)) {
                         return false;
                     }
-                } else if (!str2.equals("class") || (list2 = l0Var.f33937g) == null || !list2.contains(c0619b.f33713c)) {
+                } else if (!str2.equals("class") || (list2 = l0Var.f34143g) == null || !list2.contains(c0629b.f33919c)) {
                     return false;
                 }
             }
         }
-        List<g> list4 = tVar.f33772d;
+        List<g> list4 = tVar.f33978d;
         if (list4 == null) {
             return true;
         }
@@ -1378,23 +1378,23 @@ public class b {
         if (strH == null) {
             throw new w7.a("Invalid '@' rule");
         }
-        if (!this.f33710c && strH.equals("media")) {
+        if (!this.f33916c && strH.equals("media")) {
             List<f> listH = h(dVar);
             if (!dVar.f('{')) {
                 throw new w7.a("Invalid @media rule: missing rule set");
             }
             dVar.A();
-            if (c(listH, this.f33709a)) {
-                this.f33710c = true;
+            if (c(listH, this.f33915a)) {
+                this.f33916c = true;
                 rVar.b(j(dVar));
-                this.f33710c = false;
+                this.f33916c = false;
             } else {
                 j(dVar);
             }
             if (!dVar.h() && !dVar.f('}')) {
                 throw new w7.a("Invalid @media rule: expected '}' at end of rule set");
             }
-        } else if (this.f33710c || !strH.equals("import")) {
+        } else if (this.f33916c || !strH.equals("import")) {
             p("Ignoring @%s rule", strH);
             o(dVar);
         } else {
@@ -1501,27 +1501,27 @@ public class b {
     }
 
     public b(f fVar, u uVar) {
-        this.f33710c = false;
-        this.f33709a = fVar;
+        this.f33916c = false;
+        this.f33915a = fVar;
         this.b = uVar;
     }
 
     public static class s {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public List<t> f33769a;
+        public List<t> f33975a;
         public int b;
 
         public s() {
-            this.f33769a = null;
+            this.f33975a = null;
             this.b = 0;
         }
 
         public void a(t tVar) {
-            if (this.f33769a == null) {
-                this.f33769a = new ArrayList();
+            if (this.f33975a == null) {
+                this.f33975a = new ArrayList();
             }
-            this.f33769a.add(tVar);
+            this.f33975a.add(tVar);
         }
 
         public void b() {
@@ -1537,16 +1537,16 @@ public class b {
         }
 
         public t e(int i10) {
-            return this.f33769a.get(i10);
+            return this.f33975a.get(i10);
         }
 
         public boolean f() {
-            List<t> list = this.f33769a;
+            List<t> list = this.f33975a;
             return list == null || list.isEmpty();
         }
 
         public int g() {
-            List<t> list = this.f33769a;
+            List<t> list = this.f33975a;
             if (list == null) {
                 return 0;
             }
@@ -1555,7 +1555,7 @@ public class b {
 
         public String toString() {
             StringBuilder sb2 = new StringBuilder();
-            Iterator<t> it = this.f33769a.iterator();
+            Iterator<t> it = this.f33975a.iterator();
             while (it.hasNext()) {
                 sb2.append(it.next());
                 sb2.append(' ');

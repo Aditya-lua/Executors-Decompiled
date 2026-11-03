@@ -11,11 +11,11 @@ import java.util.concurrent.CopyOnWriteArraySet;
 public abstract class a extends ValueAnimator {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Set<ValueAnimator.AnimatorUpdateListener> f30488a = new CopyOnWriteArraySet();
+    public final Set<ValueAnimator.AnimatorUpdateListener> f31035a = new CopyOnWriteArraySet();
     public final Set<Animator.AnimatorListener> b = new CopyOnWriteArraySet();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Set<Animator.AnimatorPauseListener> f30489c = new CopyOnWriteArraySet();
+    public final Set<Animator.AnimatorPauseListener> f31036c = new CopyOnWriteArraySet();
 
     public void a() {
         Iterator<Animator.AnimatorListener> it = this.b.iterator();
@@ -31,12 +31,12 @@ public abstract class a extends ValueAnimator {
 
     @Override // android.animation.Animator
     public void addPauseListener(Animator.AnimatorPauseListener animatorPauseListener) {
-        this.f30489c.add(animatorPauseListener);
+        this.f31036c.add(animatorPauseListener);
     }
 
     @Override // android.animation.ValueAnimator
     public void addUpdateListener(ValueAnimator.AnimatorUpdateListener animatorUpdateListener) {
-        this.f30488a.add(animatorUpdateListener);
+        this.f31035a.add(animatorUpdateListener);
     }
 
     public void b(boolean z10) {
@@ -47,7 +47,7 @@ public abstract class a extends ValueAnimator {
     }
 
     public void c() {
-        Iterator<Animator.AnimatorPauseListener> it = this.f30489c.iterator();
+        Iterator<Animator.AnimatorPauseListener> it = this.f31036c.iterator();
         while (it.hasNext()) {
             it.next().onAnimationPause(this);
         }
@@ -61,7 +61,7 @@ public abstract class a extends ValueAnimator {
     }
 
     public void f() {
-        Iterator<Animator.AnimatorPauseListener> it = this.f30489c.iterator();
+        Iterator<Animator.AnimatorPauseListener> it = this.f31036c.iterator();
         while (it.hasNext()) {
             it.next().onAnimationResume(this);
         }
@@ -80,7 +80,7 @@ public abstract class a extends ValueAnimator {
     }
 
     public void i() {
-        Iterator<ValueAnimator.AnimatorUpdateListener> it = this.f30488a.iterator();
+        Iterator<ValueAnimator.AnimatorUpdateListener> it = this.f31035a.iterator();
         while (it.hasNext()) {
             it.next().onAnimationUpdate(this);
         }
@@ -93,7 +93,7 @@ public abstract class a extends ValueAnimator {
 
     @Override // android.animation.ValueAnimator
     public void removeAllUpdateListeners() {
-        this.f30488a.clear();
+        this.f31035a.clear();
     }
 
     @Override // android.animation.Animator
@@ -103,12 +103,12 @@ public abstract class a extends ValueAnimator {
 
     @Override // android.animation.Animator
     public void removePauseListener(Animator.AnimatorPauseListener animatorPauseListener) {
-        this.f30489c.remove(animatorPauseListener);
+        this.f31036c.remove(animatorPauseListener);
     }
 
     @Override // android.animation.ValueAnimator
     public void removeUpdateListener(ValueAnimator.AnimatorUpdateListener animatorUpdateListener) {
-        this.f30488a.remove(animatorUpdateListener);
+        this.f31035a.remove(animatorUpdateListener);
     }
 
     @Override // android.animation.ValueAnimator, android.animation.Animator

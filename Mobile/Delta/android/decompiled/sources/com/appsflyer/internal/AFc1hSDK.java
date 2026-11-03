@@ -32,23 +32,23 @@ public final class AFc1hSDK extends HashMap<String, Object> {
     private static char AFKeystoreWrapper = 0;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    private static int f5253e = 1;
+    private static int f5326e = 1;
     private static char force;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    private static char f5254i;
+    private static char f5327i;
     private static char registerClient;
     private static char[] unregisterClient;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    private static int f5255v;
+    private static int f5328v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    private static char f5256w;
+    private static char f5329w;
     private final Map<String, Object> AFLogger;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    private final Context f5257d;
+    private final Context f5330d;
 
     static {
         registerClient();
@@ -65,8 +65,8 @@ public final class AFc1hSDK extends HashMap<String, Object> {
         Color.red(0);
         View.getDefaultSize(0, 0);
         AudioTrack.getMaxVolume();
-        int i10 = f5255v + 19;
-        f5253e = i10 % 128;
+        int i10 = f5328v + 19;
+        f5326e = i10 % 128;
         if (i10 % 2 == 0) {
             int i11 = 24 / 0;
         }
@@ -74,7 +74,7 @@ public final class AFc1hSDK extends HashMap<String, Object> {
 
     public AFc1hSDK(Map<String, Object> map, Context context) {
         this.AFLogger = map;
-        this.f5257d = context;
+        this.f5330d = context;
         put(AFLogger(), AFKeystoreWrapper());
     }
 
@@ -82,7 +82,7 @@ public final class AFc1hSDK extends HashMap<String, Object> {
         ArrayList arrayList = new ArrayList();
         int length = strArr.length;
         for (int i10 = 0; i10 < 3; i10++) {
-            f5255v = (f5253e + 97) % 128;
+            f5328v = (f5326e + 97) % 128;
             arrayList.add(Integer.valueOf(strArr[i10].length()));
         }
         Collections.sort(arrayList);
@@ -90,7 +90,7 @@ public final class AFc1hSDK extends HashMap<String, Object> {
         StringBuilder sb2 = new StringBuilder();
         int i11 = 0;
         while (i11 < iIntValue) {
-            f5255v = (f5253e + 83) % 128;
+            f5328v = (f5326e + 83) % 128;
             Integer numValueOf = null;
             int i12 = 0;
             while (i12 < 3) {
@@ -100,11 +100,11 @@ public final class AFc1hSDK extends HashMap<String, Object> {
                 }
                 numValueOf = Integer.valueOf(iCharAt);
                 i12++;
-                f5255v = (f5253e + 15) % 128;
+                f5328v = (f5326e + 15) % 128;
             }
             sb2.append(Integer.toHexString(numValueOf.intValue()));
             i11++;
-            f5255v = (f5253e + 71) % 128;
+            f5328v = (f5326e + 71) % 128;
         }
         return sb2;
     }
@@ -122,7 +122,7 @@ public final class AFc1hSDK extends HashMap<String, Object> {
             a("\u0018\u001b%\f㙣", 4 - ImageFormat.getBitsPerPixel(0), (byte) (Color.red(0) + 101), objArr2);
             String string3 = map2.get(((String) objArr2[0]).intern()).toString();
             if (string3 == null) {
-                f5255v = (f5253e + 83) % 128;
+                f5328v = (f5326e + 83) % 128;
                 Object[] objArr3 = new Object[1];
                 a("\u001f,$\u0018)\u0015 \u0017", (AudioTrack.getMinVolume() > 0.0f ? 1 : (AudioTrack.getMinVolume() == 0.0f ? 0 : -1)) + 8, (byte) (21 - ExpandableListView.getPackedPositionChild(0L)), objArr3);
                 string3 = ((String) objArr3[0]).intern();
@@ -135,8 +135,8 @@ public final class AFc1hSDK extends HashMap<String, Object> {
                 sbAFKeystoreWrapper.delete(4, length);
             } else {
                 while (length < 4) {
-                    int i10 = f5255v + 73;
-                    f5253e = i10 % 128;
+                    int i10 = f5328v + 73;
+                    f5326e = i10 % 128;
                     if (i10 % 2 == 0) {
                         length += 45;
                         sbAFKeystoreWrapper.append('\\');
@@ -206,7 +206,7 @@ public final class AFc1hSDK extends HashMap<String, Object> {
                 int i14 = ($11 + 7) % 128;
                 $10 = i14;
                 char c11 = cArr[i13];
-                aFk1sSDK.f5457d = c11;
+                aFk1sSDK.f5530d = c11;
                 char c12 = cArr[i13 + 1];
                 aFk1sSDK.AFKeystoreWrapper = c12;
                 if (c11 == c12) {
@@ -217,11 +217,11 @@ public final class AFc1hSDK extends HashMap<String, Object> {
                     int i15 = c11 / c10;
                     aFk1sSDK.unregisterClient = i15;
                     int i16 = c11 % c10;
-                    aFk1sSDK.f5458e = i16;
+                    aFk1sSDK.f5531e = i16;
                     int i17 = c12 / c10;
                     aFk1sSDK.registerClient = i17;
                     int i18 = c12 % c10;
-                    aFk1sSDK.f5459w = i18;
+                    aFk1sSDK.f5532w = i18;
                     if (i16 == i18) {
                         int i19 = ((i15 + c10) - 1) % c10;
                         aFk1sSDK.unregisterClient = i19;
@@ -231,9 +231,9 @@ public final class AFc1hSDK extends HashMap<String, Object> {
                         cArr4[i13 + 1] = cArr2[(i20 * c10) + i18];
                     } else if (i15 == i17) {
                         int i21 = ((i16 + c10) - 1) % c10;
-                        aFk1sSDK.f5458e = i21;
+                        aFk1sSDK.f5531e = i21;
                         int i22 = ((i18 + c10) - 1) % c10;
-                        aFk1sSDK.f5459w = i22;
+                        aFk1sSDK.f5532w = i22;
                         cArr4[i13] = cArr2[(i15 * c10) + i21];
                         cArr4[i13 + 1] = cArr2[(i17 * c10) + i22];
                     } else {
@@ -281,7 +281,7 @@ public final class AFc1hSDK extends HashMap<String, Object> {
             while (i14 < 16) {
                 char c10 = cArr3[1];
                 char c11 = cArr3[0];
-                char c12 = (char) (c10 - (((c11 + i13) ^ ((c11 << 4) + ((char) (((long) f5254i) ^ (-8065364185533233497L))))) ^ ((c11 >>> 5) + ((char) (((long) f5256w) ^ (-8065364185533233497L))))));
+                char c12 = (char) (c10 - (((c11 + i13) ^ ((c11 << 4) + ((char) (((long) f5327i) ^ (-8065364185533233497L))))) ^ ((c11 >>> 5) + ((char) (((long) f5329w) ^ (-8065364185533233497L))))));
                 cArr3[1] = c12;
                 cArr3[0] = (char) (c11 - (((c12 >>> 5) + ((char) (((long) force) ^ (-8065364185533233497L)))) ^ ((c12 + i13) ^ ((c12 << 4) + ((char) (((long) registerClient) ^ (-8065364185533233497L)))))));
                 i13 -= 40503;
@@ -300,8 +300,8 @@ public final class AFc1hSDK extends HashMap<String, Object> {
         AFKeystoreWrapper = (char) 64524;
         registerClient = (char) 19924;
         force = (char) 63335;
-        f5254i = (char) 43221;
-        f5256w = (char) 41623;
+        f5327i = (char) 43221;
+        f5329w = (char) 41623;
     }
 
     /* JADX WARN: Code duplicated, block: B:21:0x01b9  */
@@ -353,7 +353,7 @@ public final class AFc1hSDK extends HashMap<String, Object> {
         }
         String str = string;
         try {
-            Context context = this.f5257d;
+            Context context = this.f5330d;
             Object[] objArr8 = new Object[1];
             b("ꄜ䲶\uf29b脦쑷ⳤ㉇䭯\ueaed︕\udd09ḭࡿ铆抹绬炯\ude12혓\u1aeeᆛ箇䚔祛徃荁桳ꐂꄺ㮽쨃儳ꃝ䤫굍\ueded㍟〪", 37 - KeyEvent.normalizeMetaState(0), objArr8);
             Intent intentRegisterReceiver = context.registerReceiver(null, new IntentFilter(((String) objArr8[0]).intern()));
@@ -363,15 +363,15 @@ public final class AFc1hSDK extends HashMap<String, Object> {
                 b("\udd09ḭ䴌\uebb7쓋뾈뇽ຼ\uf3e3싺\uf74d댳", 12 - (AudioTrack.getMaxVolume() > 0.0f ? 1 : (AudioTrack.getMaxVolume() == 0.0f ? 0 : -1)), objArr9);
                 intExtra = intentRegisterReceiver.getIntExtra(((String) objArr9[0]).intern(), -2700);
             } else {
-                f5255v = (f5253e + 97) % 128;
+                f5328v = (f5326e + 97) % 128;
             }
-            String str2 = this.f5257d.getApplicationInfo().nativeLibraryDir;
+            String str2 = this.f5330d.getApplicationInfo().nativeLibraryDir;
             if (str2 != null) {
-                f5255v = (f5253e + 109) % 128;
+                f5328v = (f5326e + 109) % 128;
                 Object[] objArr10 = new Object[1];
                 b("獵푯ᔖ莔", Color.rgb(0, 0, 0) + 16777219, objArr10);
                 if (str2.contains(((String) objArr10[0]).intern())) {
-                    f5253e = (f5255v + 111) % 128;
+                    f5326e = (f5328v + 111) % 128;
                     i10 = 1;
                 } else {
                     i10 = 0;
@@ -379,7 +379,7 @@ public final class AFc1hSDK extends HashMap<String, Object> {
             } else {
                 i10 = 0;
             }
-            Context context2 = this.f5257d;
+            Context context2 = this.f5330d;
             Object[] objArr11 = new Object[1];
             a("\f\r\n\f\u0019\u001b", ExpandableListView.getPackedPositionGroup(0L) + 6, (byte) ((ViewConfiguration.getFadingEdgeLength() >> 16) + 70), objArr11);
             int size = ((SensorManager) context2.getSystemService(((String) objArr11[0]).intern())).getSensorList(-1).size();
@@ -405,7 +405,7 @@ public final class AFc1hSDK extends HashMap<String, Object> {
             sb7.append(str);
             byte[] bytes = string4.getBytes(Charset.defaultCharset());
             for (int i11 = 0; i11 < bytes.length; i11++) {
-                f5253e = (f5255v + 49) % 128;
+                f5326e = (f5328v + 49) % 128;
                 bytes[i11] = (byte) (bytes[i11] ^ ((i11 % 2) + 42));
             }
             StringBuilder sb8 = new StringBuilder();

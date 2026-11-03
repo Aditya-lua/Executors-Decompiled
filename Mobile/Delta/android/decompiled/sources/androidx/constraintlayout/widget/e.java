@@ -11,11 +11,11 @@ import androidx.annotation.NonNull;
 public class e extends View {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f1699a;
+    public int f1544a;
     public View b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public int f1700c;
+    public int f1545c;
 
     public void a(ConstraintLayout constraintLayout) {
         if (this.b == null) {
@@ -23,26 +23,26 @@ public class e extends View {
         }
         ConstraintLayout.b bVar = (ConstraintLayout.b) getLayoutParams();
         ConstraintLayout.b bVar2 = (ConstraintLayout.b) this.b.getLayoutParams();
-        bVar2.f1556v0.k1(0);
-        c2.e.b bVarA = bVar.f1556v0.A();
+        bVar2.f1401v0.k1(0);
+        c2.e.b bVarA = bVar.f1401v0.A();
         c2.e.b bVar3 = c2.e.b.FIXED;
         if (bVarA != bVar3) {
-            bVar.f1556v0.l1(bVar2.f1556v0.W());
+            bVar.f1401v0.l1(bVar2.f1401v0.W());
         }
-        if (bVar.f1556v0.T() != bVar3) {
-            bVar.f1556v0.M0(bVar2.f1556v0.x());
+        if (bVar.f1401v0.T() != bVar3) {
+            bVar.f1401v0.M0(bVar2.f1401v0.x());
         }
-        bVar2.f1556v0.k1(8);
+        bVar2.f1401v0.k1(8);
     }
 
     public void b(ConstraintLayout constraintLayout) {
-        if (this.f1699a == -1 && !isInEditMode()) {
-            setVisibility(this.f1700c);
+        if (this.f1544a == -1 && !isInEditMode()) {
+            setVisibility(this.f1545c);
         }
-        View viewFindViewById = constraintLayout.findViewById(this.f1699a);
+        View viewFindViewById = constraintLayout.findViewById(this.f1544a);
         this.b = viewFindViewById;
         if (viewFindViewById != null) {
-            ((ConstraintLayout.b) viewFindViewById.getLayoutParams()).f1532j0 = true;
+            ((ConstraintLayout.b) viewFindViewById.getLayoutParams()).f1377j0 = true;
             this.b.setVisibility(0);
             setVisibility(0);
         }
@@ -53,7 +53,7 @@ public class e extends View {
     }
 
     public int getEmptyVisibility() {
-        return this.f1700c;
+        return this.f1545c;
     }
 
     @Override // android.view.View
@@ -77,16 +77,16 @@ public class e extends View {
 
     public void setContentId(int i10) {
         View viewFindViewById;
-        if (this.f1699a == i10) {
+        if (this.f1544a == i10) {
             return;
         }
         View view = this.b;
         if (view != null) {
             view.setVisibility(0);
-            ((ConstraintLayout.b) this.b.getLayoutParams()).f1532j0 = false;
+            ((ConstraintLayout.b) this.b.getLayoutParams()).f1377j0 = false;
             this.b = null;
         }
-        this.f1699a = i10;
+        this.f1544a = i10;
         if (i10 == -1 || (viewFindViewById = ((View) getParent()).findViewById(i10)) == null) {
             return;
         }
@@ -94,6 +94,6 @@ public class e extends View {
     }
 
     public void setEmptyVisibility(int i10) {
-        this.f1700c = i10;
+        this.f1545c = i10;
     }
 }

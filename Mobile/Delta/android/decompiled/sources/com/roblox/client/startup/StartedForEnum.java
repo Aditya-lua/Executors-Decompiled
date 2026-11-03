@@ -19,13 +19,13 @@ public enum StartedForEnum {
 
 
     /* JADX INFO: renamed from: id, reason: collision with root package name */
-    private final int f9457id;
+    private final int f9536id;
 
     StartedForEnum(int i10) {
-        this.f9457id = i10;
+        this.f9536id = i10;
     }
 
     public int getId() {
-        return this.f9457id;
+        return this.f9536id;
     }
 }

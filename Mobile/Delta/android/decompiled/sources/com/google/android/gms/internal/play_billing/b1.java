@@ -7,21 +7,21 @@ import java.util.Objects;
 public final class b1 extends q0 {
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final q0 f7003g = new b1(null, new Object[0], 0);
+    public static final q0 f7077g = new b1(null, new Object[0], 0);
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final transient Object f7004d;
+    public final transient Object f7078d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final transient Object[] f7005e;
+    public final transient Object[] f7079e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final transient int f7006f;
+    public final transient int f7080f;
 
     public b1(Object obj, Object[] objArr, int i10) {
-        this.f7004d = obj;
-        this.f7005e = objArr;
-        this.f7006f = i10;
+        this.f7078d = obj;
+        this.f7079e = objArr;
+        this.f7080f = i10;
     }
 
     /* JADX WARN: Code duplicated, block: B:74:0x01b1  */
@@ -64,7 +64,7 @@ public final class b1 extends q0 {
         int i13 = i10;
         Object[] objArrCopyOf = objArr;
         if (i13 == 0) {
-            return (b1) f7003g;
+            return (b1) f7077g;
         }
         o0 o0Var2 = null;
         ?? r11 = 0;
@@ -255,7 +255,7 @@ public final class b1 extends q0 {
                 if (p0Var != null) {
                     throw o0Var.a();
                 }
-                p0Var.f7201c = o0Var;
+                p0Var.f7275c = o0Var;
                 Object obj12 = objArr2[r16];
                 int iIntValue = ((Integer) objArr2[i11]).intValue();
                 objArrCopyOf = Arrays.copyOf(objArrCopyOf, iIntValue + iIntValue);
@@ -283,7 +283,7 @@ public final class b1 extends q0 {
             if (p0Var != null) {
                 throw o0Var.a();
             }
-            p0Var.f7201c = o0Var;
+            p0Var.f7275c = o0Var;
             Object obj15 = objArr2[r16];
             int iIntValue2 = ((Integer) objArr2[i11]).intValue();
             objArrCopyOf = Arrays.copyOf(objArrCopyOf, iIntValue2 + iIntValue2);
@@ -295,17 +295,17 @@ public final class b1 extends q0 {
 
     @Override // com.google.android.gms.internal.play_billing.q0
     public final j0 a() {
-        return new a1(this.f7005e, 1, this.f7006f);
+        return new a1(this.f7079e, 1, this.f7080f);
     }
 
     @Override // com.google.android.gms.internal.play_billing.q0
     public final s0 d() {
-        return new y0(this, this.f7005e, 0, this.f7006f);
+        return new y0(this, this.f7079e, 0, this.f7080f);
     }
 
     @Override // com.google.android.gms.internal.play_billing.q0
     public final s0 e() {
-        return new z0(this, new a1(this.f7005e, 0, this.f7006f));
+        return new z0(this, new a1(this.f7079e, 0, this.f7080f));
     }
 
     /* JADX WARN: Code duplicated, block: B:4:0x0003  */
@@ -315,8 +315,8 @@ public final class b1 extends q0 {
         if (obj == null) {
             obj2 = null;
         } else {
-            int i10 = this.f7006f;
-            Object[] objArr = this.f7005e;
+            int i10 = this.f7080f;
+            Object[] objArr = this.f7079e;
             if (i10 == 1) {
                 Object obj3 = objArr[0];
                 Objects.requireNonNull(obj3);
@@ -327,7 +327,7 @@ public final class b1 extends q0 {
                     obj2 = null;
                 }
             } else {
-                Object obj4 = this.f7004d;
+                Object obj4 = this.f7078d;
                 if (obj4 == null) {
                     obj2 = null;
                 } else if (obj4 instanceof byte[]) {
@@ -392,6 +392,6 @@ public final class b1 extends q0 {
 
     @Override // java.util.Map
     public final int size() {
-        return this.f7006f;
+        return this.f7080f;
     }
 }

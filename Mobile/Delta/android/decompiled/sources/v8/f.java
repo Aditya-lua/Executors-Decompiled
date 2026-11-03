@@ -7,13 +7,13 @@ import com.google.firebase.appindexing.internal.zzj;
 public final class f {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f32875a = false;
+    public boolean f33443a = false;
     public int b = 0;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Bundle f32876c = new Bundle();
+    public final Bundle f33444c = new Bundle();
 
     public final zzj a() {
-        return new zzj(this.f32875a, this.b, "", this.f32876c, new Bundle());
+        return new zzj(this.f33443a, this.b, "", this.f33444c, new Bundle());
     }
 }

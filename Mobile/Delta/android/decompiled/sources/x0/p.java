@@ -6,10 +6,10 @@ import g0.v2;
 public final /* synthetic */ class p implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ v2 f34615a;
+    public final /* synthetic */ v2 f35113a;
 
     @Override // java.lang.Runnable
     public final void run() {
-        this.f34615a.z();
+        this.f35113a.z();
     }
 }

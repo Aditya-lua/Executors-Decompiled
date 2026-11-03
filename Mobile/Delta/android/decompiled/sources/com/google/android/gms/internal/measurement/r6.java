@@ -6,7 +6,7 @@ public final class r6 extends cb implements pc {
         throw null;
     }
 
-    public final String A() {
+    public final String B() {
         return ((s6) this.b).J();
     }
 
@@ -68,7 +68,7 @@ public final class r6 extends cb implements pc {
         return this;
     }
 
-    public final String x() {
+    public final String y() {
         return ((s6) this.b).G();
     }
 

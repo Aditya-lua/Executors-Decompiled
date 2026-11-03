@@ -4,10 +4,10 @@ package y3;
 public abstract class c<T> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f35569a;
+    public final String f36426a;
 
     public c(String str) {
-        this.f35569a = str;
+        this.f36426a = str;
     }
 
     public abstract float a(T t8);

@@ -13,72 +13,72 @@ import w1.j;
 public class f extends ActionMode {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f26938a;
+    public final Context f27503a;
     public final b b;
 
     public static class a implements b.a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final ActionMode.Callback f26939a;
+        public final ActionMode.Callback f27504a;
         public final Context b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final ArrayList<f> f26940c = new ArrayList<>();
+        public final ArrayList<f> f27505c = new ArrayList<>();
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final j<Menu, Menu> f26941d = new j<>();
+        public final j<Menu, Menu> f27506d = new j<>();
 
         public a(Context context, ActionMode.Callback callback) {
             this.b = context;
-            this.f26939a = callback;
+            this.f27504a = callback;
         }
 
         @Override // o.b.a
         public boolean a(b bVar, Menu menu) {
-            return this.f26939a.onCreateActionMode(e(bVar), f(menu));
+            return this.f27504a.onCreateActionMode(e(bVar), f(menu));
         }
 
         @Override // o.b.a
         public void b(b bVar) {
-            this.f26939a.onDestroyActionMode(e(bVar));
+            this.f27504a.onDestroyActionMode(e(bVar));
         }
 
         @Override // o.b.a
         public boolean c(b bVar, MenuItem menuItem) {
-            return this.f26939a.onActionItemClicked(e(bVar), new p.c(this.b, (r2.b) menuItem));
+            return this.f27504a.onActionItemClicked(e(bVar), new p.c(this.b, (r2.b) menuItem));
         }
 
         @Override // o.b.a
         public boolean d(b bVar, Menu menu) {
-            return this.f26939a.onPrepareActionMode(e(bVar), f(menu));
+            return this.f27504a.onPrepareActionMode(e(bVar), f(menu));
         }
 
         public ActionMode e(b bVar) {
-            int size = this.f26940c.size();
+            int size = this.f27505c.size();
             for (int i10 = 0; i10 < size; i10++) {
-                f fVar = this.f26940c.get(i10);
+                f fVar = this.f27505c.get(i10);
                 if (fVar != null && fVar.b == bVar) {
                     return fVar;
                 }
             }
             f fVar2 = new f(this.b, bVar);
-            this.f26940c.add(fVar2);
+            this.f27505c.add(fVar2);
             return fVar2;
         }
 
         public final Menu f(Menu menu) {
-            Menu menu2 = this.f26941d.get(menu);
+            Menu menu2 = this.f27506d.get(menu);
             if (menu2 != null) {
                 return menu2;
             }
             p.e eVar = new p.e(this.b, (r2.a) menu);
-            this.f26941d.put(menu, eVar);
+            this.f27506d.put(menu, eVar);
             return eVar;
         }
     }
 
     public f(Context context, b bVar) {
-        this.f26938a = context;
+        this.f27503a = context;
         this.b = bVar;
     }
 
@@ -94,7 +94,7 @@ public class f extends ActionMode {
 
     @Override // android.view.ActionMode
     public Menu getMenu() {
-        return new p.e(this.f26938a, (r2.a) this.b.e());
+        return new p.e(this.f27503a, (r2.a) this.b.e());
     }
 
     @Override // android.view.ActionMode

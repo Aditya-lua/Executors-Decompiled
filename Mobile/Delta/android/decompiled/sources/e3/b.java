@@ -33,7 +33,7 @@ public abstract class b {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final C0279b displayInfo;
+    public final C0293b displayInfo;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name and from kotlin metadata */
     @Nullable
@@ -42,7 +42,7 @@ public abstract class b {
     /* JADX INFO: renamed from: h, reason: collision with root package name and from kotlin metadata */
     public final boolean preferImmediatelyAvailableCredentials;
 
-    public b(@NotNull String type, @NotNull Bundle credentialData, @NotNull Bundle candidateQueryData, boolean z10, boolean z11, @NotNull C0279b displayInfo, @Nullable String str, boolean z12) {
+    public b(@NotNull String type, @NotNull Bundle credentialData, @NotNull Bundle candidateQueryData, boolean z10, boolean z11, @NotNull C0293b displayInfo, @Nullable String str, boolean z12) {
         Intrinsics.checkNotNullParameter(type, "type");
         Intrinsics.checkNotNullParameter(credentialData, "credentialData");
         Intrinsics.checkNotNullParameter(candidateQueryData, "candidateQueryData");
@@ -74,7 +74,7 @@ public abstract class b {
 
     @NotNull
     /* JADX INFO: renamed from: c, reason: from getter */
-    public final C0279b getDisplayInfo() {
+    public final C0293b getDisplayInfo() {
         return this.displayInfo;
     }
 
@@ -97,7 +97,7 @@ public abstract class b {
 
     /* JADX INFO: renamed from: e3.b$b, reason: collision with other inner class name */
     @Metadata(d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\r\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0011\u0018\u0000 \u001c2\u00020\u0001:\u0001\rB/\b\u0000\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\b\u0010\u0004\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u0006\u001a\u0004\u0018\u00010\u0005\u0012\b\u0010\b\u001a\u0004\u0018\u00010\u0007¢\u0006\u0004\b\t\u0010\nB\u001d\b\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0002¢\u0006\u0004\b\t\u0010\u000bJ\u000f\u0010\r\u001a\u00020\fH\u0007¢\u0006\u0004\b\r\u0010\u000eR\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\r\u0010\u000f\u001a\u0004\b\u0010\u0010\u0011R\u0019\u0010\u0004\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u0012\u0010\u000f\u001a\u0004\b\u0013\u0010\u0011R\u0019\u0010\u0006\u001a\u0004\u0018\u00010\u00058G¢\u0006\f\n\u0004\b\u0014\u0010\u0015\u001a\u0004\b\u0016\u0010\u0017R\u0019\u0010\b\u001a\u0004\u0018\u00010\u00078G¢\u0006\f\n\u0004\b\u0018\u0010\u0019\u001a\u0004\b\u001a\u0010\u001b¨\u0006\u001d"}, d2 = {"Le3/b$b;", "", "", "userId", "userDisplayName", "Landroid/graphics/drawable/Icon;", "credentialTypeIcon", "", "preferDefaultProvider", "<init>", "(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/drawable/Icon;Ljava/lang/String;)V", "(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V", "Landroid/os/Bundle;", "a", "()Landroid/os/Bundle;", "Ljava/lang/CharSequence;", "getUserId", "()Ljava/lang/CharSequence;", "b", "getUserDisplayName", "c", "Landroid/graphics/drawable/Icon;", "getCredentialTypeIcon", "()Landroid/graphics/drawable/Icon;", "d", "Ljava/lang/String;", "getPreferDefaultProvider", "()Ljava/lang/String;", "e", "credentials_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
-    public static final class C0279b {
+    public static final class C0293b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         @NotNull
@@ -115,7 +115,7 @@ public abstract class b {
         @Nullable
         public final String preferDefaultProvider;
 
-        public C0279b(@NotNull CharSequence userId, @Nullable CharSequence charSequence, @Nullable Icon icon, @Nullable String str) {
+        public C0293b(@NotNull CharSequence userId, @Nullable CharSequence charSequence, @Nullable Icon icon, @Nullable String str) {
             Intrinsics.checkNotNullParameter(userId, "userId");
             this.userId = userId;
             this.userDisplayName = charSequence;
@@ -140,7 +140,7 @@ public abstract class b {
         }
 
         /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
-        public C0279b(@NotNull CharSequence userId, @Nullable CharSequence charSequence) {
+        public C0293b(@NotNull CharSequence userId, @Nullable CharSequence charSequence) {
             this(userId, charSequence, null, null);
             Intrinsics.checkNotNullParameter(userId, "userId");
         }

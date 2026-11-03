@@ -19,17 +19,17 @@ import java.util.concurrent.Callable;
 public final class x7 implements Callable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ zzbg f26102a;
+    public final /* synthetic */ zzbg f26923a;
     public final /* synthetic */ String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final /* synthetic */ i8 f26103c;
+    public final /* synthetic */ i8 f26924c;
 
     public x7(i8 i8Var, zzbg zzbgVar, String str) {
-        this.f26102a = zzbgVar;
+        this.f26923a = zzbgVar;
         this.b = str;
         Objects.requireNonNull(i8Var);
-        this.f26103c = i8Var;
+        this.f26924c = i8Var;
     }
 
     @Override // java.util.concurrent.Callable
@@ -47,19 +47,19 @@ public final class x7 implements Callable {
         b0 b0VarA;
         long j10;
         byte[] bArr2;
-        i8 i8Var = this.f26103c;
+        i8 i8Var = this.f26924c;
         i8Var.z2().E();
         wa waVarJ0 = i8Var.z2().J0();
         waVarJ0.h();
-        g7 g7Var = waVarJ0.f25625a;
+        g7 g7Var = waVarJ0.f26446a;
         g7.q();
-        zzbg zzbgVar = this.f26102a;
+        zzbg zzbgVar = this.f26923a;
         n9.m.l(zzbgVar);
         String str2 = this.b;
         n9.m.f(str2);
-        String str3 = zzbgVar.f7422f;
+        String str3 = zzbgVar.f7496f;
         if (!"_iap".equals(str3) && !"_iapx".equals(str3)) {
-            waVarJ0.f25625a.a().v().c("Generating a payload for this event is not available. package_name, event_name", str2, str3);
+            waVarJ0.f26446a.a().v().c("Generating a payload for this event is not available. package_name, event_name", str2, str3);
             return null;
         }
         me meVar3 = waVarJ0.b;
@@ -71,7 +71,7 @@ public final class x7 implements Callable {
                 if (c6VarJ0.d()) {
                     com.google.android.gms.internal.measurement.z6 z6VarM0 = com.google.android.gms.internal.measurement.a7.m0();
                     z6VarM0.e0(1);
-                    z6VarM0.A("android");
+                    z6VarM0.B("android");
                     if (!TextUtils.isEmpty(c6VarJ0.o0())) {
                         z6VarM0.P(c6VarJ0.o0());
                     }
@@ -93,7 +93,7 @@ public final class x7 implements Callable {
                     z6VarM0.U0(c6VarJ0.X());
                     q8 q8VarG = waVarJ0.b.g(str2);
                     z6VarM0.c0(c6VarJ0.L0());
-                    if (g7Var.g() && waVarJ0.f25625a.w().k(z6VarM0.O()) && q8VarG.o(p8.AD_STORAGE) && !TextUtils.isEmpty(null)) {
+                    if (g7Var.g() && waVarJ0.f26446a.w().k(z6VarM0.O()) && q8VarG.o(p8.AD_STORAGE) && !TextUtils.isEmpty(null)) {
                         z6VarM0.I0(null);
                     }
                     z6VarM0.P0(q8VarG.k());
@@ -101,13 +101,13 @@ public final class x7 implements Callable {
                         Pair pairM = meVar3.L0().m(c6VarJ0.o0(), q8VarG);
                         if (c6VarJ0.P() && !TextUtils.isEmpty((CharSequence) pairM.first)) {
                             try {
-                                z6VarM0.U(wa.m((String) pairM.first, Long.toString(zzbgVar.f7425i)));
+                                z6VarM0.U(wa.m((String) pairM.first, Long.toString(zzbgVar.f7499i)));
                                 Object obj2 = pairM.second;
                                 if (obj2 != null) {
                                     z6VarM0.X(((Boolean) obj2).booleanValue());
                                 }
                             } catch (SecurityException e10) {
-                                waVarJ0.f25625a.a().v().b("Resettable device id encryption failed", e10.getMessage());
+                                waVarJ0.f26446a.a().v().b("Resettable device id encryption failed", e10.getMessage());
                                 bArr = new byte[0];
                                 meVar = waVarJ0.b;
                                 meVar.F0().t0();
@@ -115,7 +115,7 @@ public final class x7 implements Callable {
                             }
                         }
                     }
-                    g7 g7Var2 = waVarJ0.f25625a;
+                    g7 g7Var2 = waVarJ0.f26446a;
                     g7Var2.K().l();
                     z6VarM0.E(Build.MODEL);
                     g7Var2.K().l();
@@ -124,7 +124,7 @@ public final class x7 implements Callable {
                     z6VarM0.J(g7Var2.K().p());
                     try {
                         if (q8VarG.o(p8.ANALYTICS_STORAGE) && c6VarJ0.p0() != null) {
-                            z6VarM0.a0(wa.m((String) n9.m.l(c6VarJ0.p0()), Long.toString(zzbgVar.f7425i)));
+                            z6VarM0.a0(wa.m((String) n9.m.l(c6VarJ0.p0()), Long.toString(zzbgVar.f7499i)));
                         }
                         if (!TextUtils.isEmpty(c6VarJ0.x0())) {
                             z6VarM0.D0((String) n9.m.l(c6VarJ0.x0()));
@@ -139,18 +139,18 @@ public final class x7 implements Callable {
                                 break;
                             }
                             teVar = (te) it.next();
-                        } while (!"_lte".equals(teVar.f25996c));
-                        if (teVar == null || teVar.f25998e == null) {
-                            te teVar2 = new te(strO0, "auto", "_lte", waVarJ0.f25625a.e().a(), 0L);
+                        } while (!"_lte".equals(teVar.f26817c));
+                        if (teVar == null || teVar.f26819e == null) {
+                            te teVar2 = new te(strO0, "auto", "_lte", waVarJ0.f26446a.e().a(), 0L);
                             listC0.add(teVar2);
                             meVar4.F0().A0(teVar2);
                         }
                         com.google.android.gms.internal.measurement.r7[] r7VarArr = new com.google.android.gms.internal.measurement.r7[listC0.size()];
                         for (int i10 = 0; i10 < listC0.size(); i10++) {
                             com.google.android.gms.internal.measurement.q7 q7VarS = com.google.android.gms.internal.measurement.r7.S();
-                            q7VarS.z(((te) listC0.get(i10)).f25996c);
-                            q7VarS.x(((te) listC0.get(i10)).f25997d);
-                            meVar4.K0().G(q7VarS, ((te) listC0.get(i10)).f25998e);
+                            q7VarS.z(((te) listC0.get(i10)).f26817c);
+                            q7VarS.y(((te) listC0.get(i10)).f26818d);
+                            meVar4.K0().G(q7VarS, ((te) listC0.get(i10)).f26819e);
                             r7VarArr[i10] = (com.google.android.gms.internal.measurement.r7) q7VarS.t();
                         }
                         z6VarM0.l1(Arrays.asList(r7VarArr));
@@ -158,29 +158,29 @@ public final class x7 implements Callable {
                         meVar5.n(c6VarJ0, z6VarM0);
                         meVar5.o(c6VarJ0, z6VarM0);
                         x5 x5VarA = x5.a(zzbgVar);
-                        g7 g7Var3 = waVarJ0.f25625a;
+                        g7 g7Var3 = waVarJ0.f26446a;
                         ve veVarC = g7Var3.C();
-                        Bundle bundle2 = x5VarA.f26090d;
+                        Bundle bundle2 = x5VarA.f26911d;
                         veVarC.w(bundle2, meVar4.F0().G(str2));
                         g7Var3.C().u(x5VarA, g7Var3.w().w(str2));
                         bundle2.putLong("_c", 1L);
                         g7Var3.a().v().a("Marking in-app purchase as real-time");
                         bundle2.putLong("_r", 1L);
-                        String str4 = zzbgVar.f7424h;
+                        String str4 = zzbgVar.f7498h;
                         bundle2.putString("_o", str4);
                         if (g7Var3.C().P(z6VarM0.O(), c6VarJ0.l0())) {
                             g7Var3.C().A(bundle2, "_dbg", 1L);
                             g7Var3.C().A(bundle2, "_r", 1L);
                         }
                         t tVarF0 = meVar4.F0();
-                        String str5 = zzbgVar.f7422f;
+                        String str5 = zzbgVar.f7496f;
                         b0 b0VarV0 = tVarF0.v0(str2, str5);
                         if (b0VarV0 == null) {
                             meVar2 = meVar5;
                             obj = null;
                             bundle = bundle2;
                             str = str4;
-                            b0VarA = new b0(str2, str5, 0L, 0L, 0L, zzbgVar.f7425i, 0L, null, null, null, null);
+                            b0VarA = new b0(str2, str5, 0L, 0L, 0L, zzbgVar.f7499i, 0L, null, null, null, null);
                             z10 = true;
                             j10 = 0;
                             v6Var = v6VarO;
@@ -191,22 +191,22 @@ public final class x7 implements Callable {
                             z10 = true;
                             obj = null;
                             v6Var = v6VarO;
-                            long j11 = b0VarV0.f25350f;
-                            b0VarA = b0VarV0.a(zzbgVar.f7425i);
+                            long j11 = b0VarV0.f26171f;
+                            b0VarA = b0VarV0.a(zzbgVar.f7499i);
                             j10 = j11;
                         }
                         b0 b0Var = b0VarA;
                         meVar4.F0().w0(b0Var);
-                        g7 g7Var4 = waVarJ0.f25625a;
+                        g7 g7Var4 = waVarJ0.f26446a;
                         boolean z11 = z10;
                         me meVar6 = meVar2;
                         try {
-                            a0 a0Var = new a0(g7Var4, str, str2, str5, zzbgVar.f7425i, j10, bundle);
+                            a0 a0Var = new a0(g7Var4, str, str2, str5, zzbgVar.f7499i, j10, bundle);
                             com.google.android.gms.internal.measurement.n6 n6VarR = com.google.android.gms.internal.measurement.o6.R();
-                            n6VarR.S(a0Var.f25316d);
+                            n6VarR.S(a0Var.f26137d);
                             n6VarR.P(a0Var.b);
-                            n6VarR.U(a0Var.f25317e);
-                            zzbe zzbeVar = a0Var.f25318f;
+                            n6VarR.U(a0Var.f26138e);
+                            zzbe zzbeVar = a0Var.f26139f;
                             c0 c0Var = new c0(zzbeVar);
                             while (c0Var.hasNext()) {
                                 String next = c0Var.next();
@@ -221,9 +221,9 @@ public final class x7 implements Callable {
                             z6VarM0.b1(n6VarR);
                             com.google.android.gms.internal.measurement.b7 b7VarF = com.google.android.gms.internal.measurement.d7.F();
                             com.google.android.gms.internal.measurement.p6 p6VarF = com.google.android.gms.internal.measurement.q6.F();
-                            p6VarF.z(b0Var.f25347c);
-                            p6VarF.x(str5);
-                            b7VarF.x(p6VarF);
+                            p6VarF.z(b0Var.f26168c);
+                            p6VarF.y(str5);
+                            b7VarF.y(p6VarF);
                             z6VarM0.L0(b7VarF);
                             z6VarM0.B0(meVar4.I0().m(c6VarJ0.o0(), Collections.EMPTY_LIST, z6VarM0.f1(), Long.valueOf(n6VarR.R()), Long.valueOf(n6VarR.R()), false));
                             if (n6VarR.Q()) {
@@ -232,7 +232,7 @@ public final class x7 implements Callable {
                             }
                             long jB0 = c6VarJ0.B0();
                             if (jB0 != 0) {
-                                z6VarM0.x(jB0);
+                                z6VarM0.y(jB0);
                             }
                             long jZ0 = c6VarJ0.z0();
                             if (jZ0 != 0) {
@@ -261,7 +261,7 @@ public final class x7 implements Callable {
                             try {
                                 return meVar4.K0().V(((com.google.android.gms.internal.measurement.y6) v6Var.t()).d());
                             } catch (IOException e11) {
-                                waVarJ0.f25625a.a().o().c("Data loss. Failed to bundle and serialize. appId", w5.x(str2), e11);
+                                waVarJ0.f26446a.a().o().c("Data loss. Failed to bundle and serialize. appId", w5.x(str2), e11);
                                 return obj;
                             }
                         } catch (Throwable th2) {
@@ -271,7 +271,7 @@ public final class x7 implements Callable {
                     } catch (SecurityException e12) {
                         waVar = waVarJ0;
                         try {
-                            waVar.f25625a.a().v().b("app instance id encryption failed", e12.getMessage());
+                            waVar.f26446a.a().v().b("app instance id encryption failed", e12.getMessage());
                             bArr = new byte[0];
                             meVar = waVar.b;
                             meVar.F0().t0();
@@ -281,13 +281,13 @@ public final class x7 implements Callable {
                         }
                     }
                 } else {
-                    waVarJ0.f25625a.a().v().b("Log and bundle disabled. package_name", str2);
+                    waVarJ0.f26446a.a().v().b("Log and bundle disabled. package_name", str2);
                     bArr2 = new byte[0];
                 }
                 waVar.b.F0().t0();
                 throw th;
             }
-            waVarJ0.f25625a.a().v().b("Log and bundle not available. package_name", str2);
+            waVarJ0.f26446a.a().v().b("Log and bundle not available. package_name", str2);
             bArr2 = new byte[0];
             meVar3.F0().t0();
             return bArr2;

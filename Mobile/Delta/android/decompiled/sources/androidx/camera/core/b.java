@@ -12,10 +12,10 @@ public abstract class b implements d {
     public final d b;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object f1362a = new Object();
+    public final Object f1207a = new Object();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Set<a> f1363c = new HashSet();
+    public final Set<a> f1208c = new HashSet();
 
     public interface a {
         void a(d dVar);
@@ -26,30 +26,30 @@ public abstract class b implements d {
     }
 
     @Override // androidx.camera.core.d
-    public d.a[] H1() {
-        return this.b.H1();
+    public d.a[] E1() {
+        return this.b.E1();
     }
 
     @Override // androidx.camera.core.d
-    public i1 H2() {
-        return this.b.H2();
+    public void I0(Rect rect) {
+        this.b.I0(rect);
     }
 
     @Override // androidx.camera.core.d
-    public void M0(Rect rect) {
-        this.b.M0(rect);
+    public i1 I2() {
+        return this.b.I2();
     }
 
     public void a(a aVar) {
-        synchronized (this.f1362a) {
-            this.f1363c.add(aVar);
+        synchronized (this.f1207a) {
+            this.f1208c.add(aVar);
         }
     }
 
     public void b() {
         HashSet hashSet;
-        synchronized (this.f1362a) {
-            hashSet = new HashSet(this.f1363c);
+        synchronized (this.f1207a) {
+            hashSet = new HashSet(this.f1208c);
         }
         Iterator it = hashSet.iterator();
         while (it.hasNext()) {

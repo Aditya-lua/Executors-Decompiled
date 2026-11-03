@@ -15,15 +15,15 @@ public enum l {
 
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final char f25717a;
+    public final char f26538a;
 
     l(char c10) {
-        this.f25717a = c10;
+        this.f26538a = c10;
     }
 
     public static l a(char c10) {
         for (l lVar : values()) {
-            if (lVar.f25717a == c10) {
+            if (lVar.f26538a == c10) {
                 return lVar;
             }
         }
@@ -31,6 +31,6 @@ public enum l {
     }
 
     public final /* synthetic */ char b() {
-        return this.f25717a;
+        return this.f26538a;
     }
 }

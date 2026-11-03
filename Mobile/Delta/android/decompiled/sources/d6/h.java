@@ -61,12 +61,12 @@ public abstract class h<T> {
                 if (this.listeners.add(listener)) {
                     if (this.listeners.size() == 1) {
                         this.currentState = f();
-                        w.e().a(i.f14453a, getClass().getSimpleName() + ": initial state = " + this.currentState);
+                        w.e().a(i.f14433a, getClass().getSimpleName() + ": initial state = " + this.currentState);
                         i();
                     }
                     listener.a(this.currentState);
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -93,7 +93,7 @@ public abstract class h<T> {
                 if (this.listeners.remove(listener) && this.listeners.isEmpty()) {
                     j();
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -112,7 +112,7 @@ public abstract class h<T> {
                         h.b(listM0, this);
                     }
                 });
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             }
         }
     }

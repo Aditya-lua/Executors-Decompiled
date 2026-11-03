@@ -1,8 +1,8 @@
 package com.withpersona.sdk2.inquiry.tracking;
 
-import ft.d;
-import ft.h;
-import ft.i;
+import dt.d;
+import dt.h;
+import dt.i;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class TrackingEventsModule_TrackingEventsLoggerFactory implements d<TrackingEventsLogger> {
@@ -22,7 +22,7 @@ public final class TrackingEventsModule_TrackingEventsLoggerFactory implements d
         return (TrackingEventsLogger) h.e(trackingEventsModule.trackingEventsLogger(factory));
     }
 
-    @Override // ht.a
+    @Override // ft.a
     public TrackingEventsLogger get() {
         return trackingEventsLogger(this.module, this.factoryProvider.get());
     }

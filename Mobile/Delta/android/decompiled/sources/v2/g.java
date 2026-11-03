@@ -17,20 +17,20 @@ public class g {
     public static class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Uri f32724a;
+        public final Uri f33292a;
         public final int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final int f32725c;
+        public final int f33293c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final boolean f32726d;
+        public final boolean f33294d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final String f32727e;
+        public final String f33295e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public final int f32728f;
+        public final int f33296f;
 
         @Deprecated
         public b(Uri uri, int i10, int i11, boolean z10, int i12) {
@@ -42,12 +42,12 @@ public class g {
         }
 
         public int b() {
-            return this.f32728f;
+            return this.f33296f;
         }
 
         public String c() {
             if (i()) {
-                return this.f32724a.getAuthority();
+                return this.f33292a.getAuthority();
             }
             return null;
         }
@@ -57,41 +57,41 @@ public class g {
         }
 
         public Uri e() {
-            return this.f32724a;
+            return this.f33292a;
         }
 
         public String f() {
-            return this.f32727e;
+            return this.f33295e;
         }
 
         public int g() {
-            return this.f32725c;
+            return this.f33293c;
         }
 
         public boolean h() {
-            return this.f32726d;
+            return this.f33294d;
         }
 
         public boolean i() {
-            return Objects.equals(this.f32724a.getScheme(), "systemfont");
+            return Objects.equals(this.f33292a.getScheme(), "systemfont");
         }
 
         public b(Uri uri, int i10, int i11, boolean z10, String str, int i12) {
-            this.f32724a = (Uri) x2.g.g(uri);
+            this.f33292a = (Uri) x2.g.g(uri);
             this.b = i10;
-            this.f32725c = i11;
-            this.f32726d = z10;
-            this.f32727e = str;
-            this.f32728f = i12;
+            this.f33293c = i11;
+            this.f33294d = z10;
+            this.f33295e = str;
+            this.f33296f = i12;
         }
 
         public b(String str, String str2) {
-            this.f32724a = new Uri.Builder().scheme("systemfont").authority(str).build();
+            this.f33292a = new Uri.Builder().scheme("systemfont").authority(str).build();
             this.b = 0;
-            this.f32725c = 400;
-            this.f32726d = false;
-            this.f32727e = str2;
-            this.f32728f = 0;
+            this.f33293c = 400;
+            this.f33294d = false;
+            this.f33295e = str2;
+            this.f33296f = 0;
         }
     }
 
@@ -127,12 +127,12 @@ public class g {
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final int f32723a;
+        public final int f33291a;
         public final List<b[]> b;
 
         @Deprecated
         public a(int i10, b[] bVarArr) {
-            this.f32723a = i10;
+            this.f33291a = i10;
             this.b = Collections.singletonList(bVarArr);
         }
 
@@ -153,7 +153,7 @@ public class g {
         }
 
         public int e() {
-            return this.f32723a;
+            return this.f33291a;
         }
 
         public boolean f() {
@@ -161,7 +161,7 @@ public class g {
         }
 
         public a(int i10, List<b[]> list) {
-            this.f32723a = i10;
+            this.f33291a = i10;
             this.b = list;
         }
     }

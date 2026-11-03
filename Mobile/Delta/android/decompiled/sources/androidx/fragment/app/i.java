@@ -156,7 +156,7 @@ public abstract class i {
         @Override // androidx.fragment.app.i.d
         public void d() {
             super.d();
-            getFragment().f2612n = false;
+            getFragment().f2457n = false;
             this.fragmentStateManager.m();
         }
 
@@ -204,9 +204,9 @@ public abstract class i {
                 }
                 viewJ2.setVisibility(4);
             }
-            viewJ2.setAlpha(cVarK2.R());
+            viewJ2.setAlpha(cVarK2.Q());
             if (FragmentManager.N0(2)) {
-                Log.v("FragmentManager", "Setting view alpha to " + cVarK2.R() + " in onStart");
+                Log.v("FragmentManager", "Setting view alpha to " + cVarK2.Q() + " in onStart");
             }
         }
     }
@@ -305,10 +305,10 @@ public abstract class i {
 
             /* JADX INFO: renamed from: androidx.fragment.app.i$d$b$b, reason: collision with other inner class name */
             @Metadata(k = 3, mv = {1, 8, 0}, xi = 48)
-            public /* synthetic */ class C0042b {
+            public /* synthetic */ class C0038b {
 
                 /* JADX INFO: renamed from: a, reason: collision with root package name */
-                public static final /* synthetic */ int[] f2726a;
+                public static final /* synthetic */ int[] f2571a;
 
                 static {
                     int[] iArr = new int[b.values().length];
@@ -328,7 +328,7 @@ public abstract class i {
                         iArr[b.INVISIBLE.ordinal()] = 4;
                     } catch (NoSuchFieldError unused4) {
                     }
-                    f2726a = iArr;
+                    f2571a = iArr;
                 }
             }
 
@@ -343,7 +343,7 @@ public abstract class i {
                 if (FragmentManager.N0(2)) {
                     Log.v("FragmentManager", "SpecialEffectsController: Calling apply state");
                 }
-                int i10 = C0042b.f2726a[ordinal()];
+                int i10 = C0038b.f2571a[ordinal()];
                 if (i10 == 1) {
                     ViewParent parent = view.getParent();
                     ViewGroup viewGroup = parent instanceof ViewGroup ? (ViewGroup) parent : null;
@@ -391,7 +391,7 @@ public abstract class i {
         public /* synthetic */ class c {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public static final /* synthetic */ int[] f2727a;
+            public static final /* synthetic */ int[] f2572a;
 
             static {
                 int[] iArr = new int[a.values().length];
@@ -407,7 +407,7 @@ public abstract class i {
                     iArr[a.NONE.ordinal()] = 3;
                 } catch (NoSuchFieldError unused3) {
                 }
-                f2727a = iArr;
+                f2572a = iArr;
             }
         }
 
@@ -525,7 +525,7 @@ public abstract class i {
         public final void o(@NotNull b finalState, @NotNull a lifecycleImpact) {
             Intrinsics.checkNotNullParameter(finalState, "finalState");
             Intrinsics.checkNotNullParameter(lifecycleImpact, "lifecycleImpact");
-            int i10 = c.f2727a[lifecycleImpact.ordinal()];
+            int i10 = c.f2572a[lifecycleImpact.ordinal()];
             if (i10 == 1) {
                 if (this.finalState == b.REMOVED) {
                     if (FragmentManager.N0(2)) {
@@ -577,7 +577,7 @@ public abstract class i {
     public /* synthetic */ class e {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f2728a;
+        public static final /* synthetic */ int[] f2573a;
 
         static {
             int[] iArr = new int[d.a.values().length];
@@ -585,7 +585,7 @@ public abstract class i {
                 iArr[d.a.NONE.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
-            f2728a = iArr;
+            f2573a = iArr;
         }
     }
 
@@ -727,7 +727,7 @@ public abstract class i {
                 Intrinsics.checkNotNullExpressionValue(cVarK, "fragmentStateManager.fragment");
                 d dVarO = o(cVarK);
                 if (dVarO == null) {
-                    if (fragmentStateManager.k().f2612n || fragmentStateManager.k().f2611m) {
+                    if (fragmentStateManager.k().f2457n || fragmentStateManager.k().f2456m) {
                         androidx.fragment.app.c cVarK2 = fragmentStateManager.k();
                         Intrinsics.checkNotNullExpressionValue(cVarK2, "fragmentStateManager.fragment");
                         dVarO = p(cVarK2);
@@ -744,16 +744,16 @@ public abstract class i {
                 cVar.a(new Runnable() { // from class: e4.n0
                     @Override // java.lang.Runnable
                     public final void run() {
-                        androidx.fragment.app.i.h(this.f15149a, cVar);
+                        androidx.fragment.app.i.h(this.f15763a, cVar);
                     }
                 });
                 cVar.a(new Runnable() { // from class: e4.o0
                     @Override // java.lang.Runnable
                     public final void run() {
-                        androidx.fragment.app.i.i(this.f15151a, cVar);
+                        androidx.fragment.app.i.i(this.f15765a, cVar);
                     }
                 });
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -814,7 +814,7 @@ public abstract class i {
                         break;
                     }
                     d dVar = (d) it.next();
-                    if (this.pendingOperations.isEmpty() || !dVar.getFragment().f2612n) {
+                    if (this.pendingOperations.isEmpty() || !dVar.getFragment().f2457n) {
                         z10 = false;
                     }
                     dVar.r(z10);
@@ -872,7 +872,7 @@ public abstract class i {
                         Log.v("FragmentManager", "SpecialEffectsController: Finished executing pending operations");
                     }
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -938,7 +938,7 @@ public abstract class i {
                     }
                     dVar2.c(this.container);
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -964,7 +964,7 @@ public abstract class i {
         d.a lifecycleImpact = dVarO != null ? dVarO.getLifecycleImpact() : null;
         d dVarP = p(cVarK);
         d.a lifecycleImpact2 = dVarP != null ? dVarP.getLifecycleImpact() : null;
-        int i10 = lifecycleImpact == null ? -1 : e.f2728a[lifecycleImpact.ordinal()];
+        int i10 = lifecycleImpact == null ? -1 : e.f2573a[lifecycleImpact.ordinal()];
         return (i10 == -1 || i10 == 1) ? lifecycleImpact2 : lifecycleImpact;
     }
 
@@ -1018,7 +1018,7 @@ public abstract class i {
         Iterator<T> it = newPendingOperations.iterator();
         boolean z10 = true;
         while (it.hasNext()) {
-            if (!((d) it.next()).getFragment().f2612n) {
+            if (!((d) it.next()).getFragment().f2457n) {
                 z10 = false;
             }
         }
@@ -1056,7 +1056,7 @@ public abstract class i {
                 d dVar2 = dVarPrevious;
                 androidx.fragment.app.c fragment = dVar2 != null ? dVar2.getFragment() : null;
                 this.isContainerPostponed = fragment != null ? fragment.u0() : false;
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }

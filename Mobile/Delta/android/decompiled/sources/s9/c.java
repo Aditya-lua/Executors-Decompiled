@@ -6,14 +6,14 @@ import com.google.android.gms.common.moduleinstall.ModuleInstallStatusUpdate;
 public final class c extends i {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final l9.k f30553a;
+    public final l9.k f31100a;
 
     public c(l9.k kVar) {
-        this.f30553a = kVar;
+        this.f31100a = kVar;
     }
 
     @Override // s9.j
     public final void P1(ModuleInstallStatusUpdate moduleInstallStatusUpdate) {
-        this.f30553a.c(new b(this, moduleInstallStatusUpdate));
+        this.f31100a.c(new b(this, moduleInstallStatusUpdate));
     }
 }

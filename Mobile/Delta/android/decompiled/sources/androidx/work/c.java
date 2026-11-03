@@ -8,7 +8,7 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.Executor;
 import java.util.concurrent.atomic.AtomicInteger;
-import me.x;
+import ne.x;
 import x5.k;
 import x5.u0;
 
@@ -22,39 +22,39 @@ public abstract class c {
     public static abstract class a {
 
         /* JADX INFO: renamed from: androidx.work.c$a$a, reason: collision with other inner class name */
-        public static final class C0065a extends a {
+        public static final class C0061a extends a {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final androidx.work.b f3503a;
+            public final androidx.work.b f3348a;
 
-            public C0065a() {
-                this(androidx.work.b.f3500c);
+            public C0061a() {
+                this(androidx.work.b.f3345c);
             }
 
             public androidx.work.b e() {
-                return this.f3503a;
+                return this.f3348a;
             }
 
             public boolean equals(Object obj) {
                 if (this == obj) {
                     return true;
                 }
-                if (obj == null || C0065a.class != obj.getClass()) {
+                if (obj == null || C0061a.class != obj.getClass()) {
                     return false;
                 }
-                return this.f3503a.equals(((C0065a) obj).f3503a);
+                return this.f3348a.equals(((C0061a) obj).f3348a);
             }
 
             public int hashCode() {
-                return (C0065a.class.getName().hashCode() * 31) + this.f3503a.hashCode();
+                return (C0061a.class.getName().hashCode() * 31) + this.f3348a.hashCode();
             }
 
             public String toString() {
-                return "Failure {mOutputData=" + this.f3503a + '}';
+                return "Failure {mOutputData=" + this.f3348a + '}';
             }
 
-            public C0065a(androidx.work.b bVar) {
-                this.f3503a = bVar;
+            public C0061a(androidx.work.b bVar) {
+                this.f3348a = bVar;
             }
         }
 
@@ -76,48 +76,48 @@ public abstract class c {
         }
 
         /* JADX INFO: renamed from: androidx.work.c$a$c, reason: collision with other inner class name */
-        public static final class C0066c extends a {
+        public static final class C0062c extends a {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final androidx.work.b f3504a;
+            public final androidx.work.b f3349a;
 
-            public C0066c() {
-                this(androidx.work.b.f3500c);
+            public C0062c() {
+                this(androidx.work.b.f3345c);
             }
 
             public androidx.work.b e() {
-                return this.f3504a;
+                return this.f3349a;
             }
 
             public boolean equals(Object obj) {
                 if (this == obj) {
                     return true;
                 }
-                if (obj == null || C0066c.class != obj.getClass()) {
+                if (obj == null || C0062c.class != obj.getClass()) {
                     return false;
                 }
-                return this.f3504a.equals(((C0066c) obj).f3504a);
+                return this.f3349a.equals(((C0062c) obj).f3349a);
             }
 
             public int hashCode() {
-                return (C0066c.class.getName().hashCode() * 31) + this.f3504a.hashCode();
+                return (C0062c.class.getName().hashCode() * 31) + this.f3349a.hashCode();
             }
 
             public String toString() {
-                return "Success {mOutputData=" + this.f3504a + '}';
+                return "Success {mOutputData=" + this.f3349a + '}';
             }
 
-            public C0066c(androidx.work.b bVar) {
-                this.f3504a = bVar;
+            public C0062c(androidx.work.b bVar) {
+                this.f3349a = bVar;
             }
         }
 
         public static a a() {
-            return new C0065a();
+            return new C0061a();
         }
 
         public static a b(androidx.work.b bVar) {
-            return new C0065a(bVar);
+            return new C0061a(bVar);
         }
 
         public static a c() {
@@ -125,7 +125,7 @@ public abstract class c {
         }
 
         public static a d() {
-            return new C0066c();
+            return new C0062c();
         }
     }
 
@@ -154,8 +154,8 @@ public abstract class c {
     }
 
     public x<k> getForegroundInfoAsync() {
-        return y1.c.a(new y1.c.InterfaceC0650c() { // from class: x5.v
-            @Override // y1.c.InterfaceC0650c
+        return y1.c.a(new y1.c.InterfaceC0665c() { // from class: x5.v
+            @Override // y1.c.InterfaceC0665c
             public final Object a(y1.c.a aVar) {
                 return androidx.work.c.a(aVar);
             }

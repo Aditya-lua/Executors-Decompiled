@@ -1,50 +1,25 @@
 package nq;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ProgressBar;
-import androidx.annotation.NonNull;
-import jq.t;
-import jq.u;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import org.jetbrains.annotations.NotNull;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class f implements r5.a {
+@Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\b\u0007\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u000f\u0010\u0006\u001a\u00020\u0002H\u0007¢\u0006\u0004\b\u0006\u0010\u0007R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0006\u0010\b¨\u0006\t"}, d2 = {"Lnq/f;", "", "Lnq/e;", "externalInquiryController", "<init>", "(Lnq/e;)V", "a", "()Lnq/e;", "Lnq/e;", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class f {
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    @NonNull
-    public final View f26657a;
+    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
+    @NotNull
+    public final e externalInquiryController;
 
-    @NonNull
-    public final ProgressBar b;
-
-    public f(@NonNull View view, @NonNull ProgressBar progressBar) {
-        this.f26657a = view;
-        this.b = progressBar;
+    public f(@NotNull e externalInquiryController) {
+        Intrinsics.checkNotNullParameter(externalInquiryController, "externalInquiryController");
+        this.externalInquiryController = externalInquiryController;
     }
 
-    @NonNull
-    public static f a(@NonNull View view) {
-        int i10 = t.f21674v;
-        ProgressBar progressBar = (ProgressBar) r5.b.a(view, i10);
-        if (progressBar != null) {
-            return new f(view, progressBar);
-        }
-        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
-    }
-
-    @NonNull
-    public static f b(@NonNull LayoutInflater layoutInflater, @NonNull ViewGroup viewGroup) {
-        if (viewGroup == null) {
-            throw new NullPointerException("parent");
-        }
-        layoutInflater.inflate(u.f21683f, viewGroup);
-        return a(viewGroup);
-    }
-
-    @Override // r5.a
-    @NonNull
-    public View getRoot() {
-        return this.f26657a;
+    @NotNull
+    /* JADX INFO: renamed from: a, reason: from getter */
+    public final e getExternalInquiryController() {
+        return this.externalInquiryController;
     }
 }

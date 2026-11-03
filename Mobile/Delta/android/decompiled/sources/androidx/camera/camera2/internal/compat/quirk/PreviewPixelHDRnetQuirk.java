@@ -10,9 +10,9 @@ import n0.g3;
 public class PreviewPixelHDRnetQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final List<String> f1343a = Arrays.asList("sunfish", "bramble", "redfin", "barbet");
+    public static final List<String> f1188a = Arrays.asList("sunfish", "bramble", "redfin", "barbet");
 
     public static boolean g() {
-        return "Google".equals(Build.MANUFACTURER) && f1343a.contains(Build.DEVICE.toLowerCase(Locale.getDefault()));
+        return "Google".equals(Build.MANUFACTURER) && f1188a.contains(Build.DEVICE.toLowerCase(Locale.getDefault()));
     }
 }

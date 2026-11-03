@@ -7,7 +7,7 @@ import w1.j;
 public class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final j<ClassLoader, j<String, Class<?>>> f2664a = new j<>();
+    public static final j<ClassLoader, j<String, Class<?>>> f2509a = new j<>();
 
     public static boolean b(@NonNull ClassLoader classLoader, @NonNull String str) {
         try {
@@ -19,7 +19,7 @@ public class e {
 
     @NonNull
     public static Class<?> c(@NonNull ClassLoader classLoader, @NonNull String str) throws ClassNotFoundException {
-        j<ClassLoader, j<String, Class<?>>> jVar = f2664a;
+        j<ClassLoader, j<String, Class<?>>> jVar = f2509a;
         j<String, Class<?>> jVar2 = jVar.get(classLoader);
         if (jVar2 == null) {
             jVar2 = new j<>();

@@ -10,18 +10,18 @@ import com.appsflyer.sdk_base.referrer.Payload;
 public final class cf {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final g7 f25441a;
+    public final g7 f26262a;
 
     public cf(g7 g7Var) {
-        this.f25441a = g7Var;
+        this.f26262a = g7Var;
     }
 
     public final void a() {
-        g7 g7Var = this.f25441a;
+        g7 g7Var = this.f26262a;
         g7Var.b().h();
         if (e()) {
             if (d()) {
-                g7Var.x().f25689x.b(null);
+                g7Var.x().f26510x.b(null);
                 Bundle bundle = new Bundle();
                 bundle.putString(Payload.SOURCE, "(not set)");
                 bundle.putString("medium", "(not set)");
@@ -29,11 +29,11 @@ public final class cf {
                 bundle.putLong("_cc", 1L);
                 g7Var.B().t("auto", "_cmpx", bundle);
             } else {
-                String strA = g7Var.x().f25689x.a();
+                String strA = g7Var.x().f26510x.a();
                 if (TextUtils.isEmpty(strA)) {
                     g7Var.a().p().a("Cache still valid but referrer not found");
                 } else {
-                    long jA = g7Var.x().f25690y.a() / 3600000;
+                    long jA = g7Var.x().f26511y.a() / 3600000;
                     Uri uri = Uri.parse(strA);
                     Bundle bundle2 = new Bundle();
                     Pair pair = new Pair(uri.getPath(), bundle2);
@@ -44,15 +44,15 @@ public final class cf {
                     Object obj = pair.first;
                     g7Var.B().t(obj == null ? Payload.TYPE_APP : (String) obj, "_cmp", (Bundle) pair.second);
                 }
-                g7Var.x().f25689x.b(null);
+                g7Var.x().f26510x.b(null);
             }
-            g7Var.x().f25690y.b(0L);
+            g7Var.x().f26511y.b(0L);
         }
     }
 
     public final void b(String str, Bundle bundle) {
         String string;
-        g7 g7Var = this.f25441a;
+        g7 g7Var = this.f26262a;
         g7Var.b().h();
         if (g7Var.g()) {
             return;
@@ -73,13 +73,13 @@ public final class cf {
         if (TextUtils.isEmpty(string)) {
             return;
         }
-        g7Var.x().f25689x.b(string);
-        g7Var.x().f25690y.b(g7Var.e().a());
+        g7Var.x().f26510x.b(string);
+        g7Var.x().f26511y.b(g7Var.e().a());
     }
 
     public final void c() {
         if (e() && d()) {
-            this.f25441a.x().f25689x.b(null);
+            this.f26262a.x().f26510x.b(null);
         }
     }
 
@@ -87,11 +87,11 @@ public final class cf {
         if (!e()) {
             return false;
         }
-        g7 g7Var = this.f25441a;
-        return g7Var.e().a() - g7Var.x().f25690y.a() > g7Var.w().D(null, z4.f26179k0);
+        g7 g7Var = this.f26262a;
+        return g7Var.e().a() - g7Var.x().f26511y.a() > g7Var.w().D(null, z4.f27000k0);
     }
 
     public final boolean e() {
-        return this.f25441a.x().f25690y.a() > 0;
+        return this.f26262a.x().f26511y.a() > 0;
     }
 }

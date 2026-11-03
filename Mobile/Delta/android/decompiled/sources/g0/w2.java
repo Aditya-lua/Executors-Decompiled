@@ -24,75 +24,75 @@ import n0.t3;
 public abstract class w2 {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public i4<?> f17584e;
+    public i4<?> f18123e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public i4<?> f17585f;
+    public i4<?> f18124f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public Set<i0.b> f17586g;
+    public Set<i0.b> f18125g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public i4<?> f17587h;
+    public i4<?> f18126h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public t3 f17588i;
+    public t3 f18127i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public i4<?> f17589j;
+    public i4<?> f18128j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public Rect f17590k;
+    public Rect f18129k;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public n0.p0 f17592m;
+    public n0.p0 f18131m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public n0.p0 f17593n;
+    public n0.p0 f18132n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public n f17594o;
+    public n f18133o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public String f17595p;
+    public String f18134p;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f17581a = false;
+    public boolean f18120a = false;
     public final Set<c> b = new HashSet();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Object f17582c = new Object();
+    public final Object f18121c = new Object();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public b f17583d = b.INACTIVE;
+    public b f18122d = b.INACTIVE;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public Matrix f17591l = new Matrix();
+    public Matrix f18130l = new Matrix();
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public o3 f17596q = o3.b();
+    public o3 f18135q = o3.b();
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public o3 f17597r = o3.b();
+    public o3 f18136r = o3.b();
 
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f17598a;
+        public static final /* synthetic */ int[] f18137a;
 
         static {
             int[] iArr = new int[VideoStabilizationFeature.b.values().length];
-            f17598a = iArr;
+            f18137a = iArr;
             try {
                 iArr[VideoStabilizationFeature.b.OFF.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f17598a[VideoStabilizationFeature.b.ON.ordinal()] = 2;
+                f18137a[VideoStabilizationFeature.b.ON.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f17598a[VideoStabilizationFeature.b.PREVIEW.ordinal()] = 3;
+                f18137a[VideoStabilizationFeature.b.PREVIEW.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
         }
@@ -104,7 +104,7 @@ public abstract class w2 {
     }
 
     public interface c {
-        void g(w2 w2Var);
+        void f(w2 w2Var);
 
         void m(w2 w2Var);
 
@@ -114,8 +114,8 @@ public abstract class w2 {
     }
 
     public w2(i4<?> i4Var) {
-        this.f17585f = i4Var;
-        this.f17587h = i4Var;
+        this.f18124f = i4Var;
+        this.f18126h = i4Var;
     }
 
     public Set<k0> A(n0.o0 o0Var) {
@@ -128,13 +128,13 @@ public abstract class w2 {
 
     @SuppressLint({"WrongConstant"})
     public int C() {
-        return ((n0.i2) this.f17587h).J(0);
+        return ((n0.i2) this.f18126h).J(0);
     }
 
     public abstract i4.b<?, ?, ?> D(n0.n1 n1Var);
 
     public Rect E() {
-        return this.f17590k;
+        return this.f18129k;
     }
 
     public boolean F(int i10) {
@@ -148,7 +148,7 @@ public abstract class w2 {
     }
 
     public boolean G() {
-        return this.f17581a;
+        return this.f18120a;
     }
 
     public boolean H(n0.p0 p0Var) {
@@ -173,23 +173,23 @@ public abstract class w2 {
         } else {
             x2VarK0 = n0.x2.k0();
         }
-        if (this.f17585f.a(n0.i2.f24684m) || this.f17585f.a(n0.i2.f24688q)) {
-            n0.n1.a<a1.c> aVar = n0.i2.f24692u;
+        if (this.f18124f.a(n0.i2.f25505m) || this.f18124f.a(n0.i2.f25509q)) {
+            n0.n1.a<a1.c> aVar = n0.i2.f25513u;
             if (x2VarK0.a(aVar)) {
                 x2VarK0.m0(aVar);
             }
         }
-        i4<?> i4Var3 = this.f17585f;
-        n0.n1.a<a1.c> aVar2 = n0.i2.f24692u;
+        i4<?> i4Var3 = this.f18124f;
+        n0.n1.a<a1.c> aVar2 = n0.i2.f25513u;
         if (i4Var3.a(aVar2)) {
-            n0.n1.a<Size> aVar3 = n0.i2.f24690s;
-            if (x2VarK0.a(aVar3) && ((a1.c) this.f17585f.e(aVar2)).d() != null) {
+            n0.n1.a<Size> aVar3 = n0.i2.f25511s;
+            if (x2VarK0.a(aVar3) && ((a1.c) this.f18124f.e(aVar2)).d() != null) {
                 x2VarK0.m0(aVar3);
             }
         }
-        Iterator<n0.n1.a<?>> it = this.f17585f.b().iterator();
+        Iterator<n0.n1.a<?>> it = this.f18124f.b().iterator();
         while (it.hasNext()) {
-            n0.n1.P(x2VarK0, x2VarK0, this.f17585f, it.next());
+            n0.n1.P(x2VarK0, x2VarK0, this.f18124f, it.next());
         }
         if (i4Var != null) {
             for (n0.n1.a<?> aVar4 : i4Var.b()) {
@@ -198,13 +198,13 @@ public abstract class w2 {
                 }
             }
         }
-        if (x2VarK0.a(n0.i2.f24688q)) {
-            n0.n1.a<Integer> aVar5 = n0.i2.f24684m;
+        if (x2VarK0.a(n0.i2.f25509q)) {
+            n0.n1.a<Integer> aVar5 = n0.i2.f25505m;
             if (x2VarK0.a(aVar5)) {
                 x2VarK0.m0(aVar5);
             }
         }
-        n0.n1.a<a1.c> aVar6 = n0.i2.f24692u;
+        n0.n1.a<a1.c> aVar6 = n0.i2.f25513u;
         if (x2VarK0.a(aVar6) && ((a1.c) x2VarK0.e(aVar6)).a() != 0) {
             x2VarK0.G(i4.E, Boolean.TRUE);
         }
@@ -213,12 +213,12 @@ public abstract class w2 {
     }
 
     public final void J() {
-        this.f17583d = b.ACTIVE;
+        this.f18122d = b.ACTIVE;
         M();
     }
 
     public final void K() {
-        this.f17583d = b.INACTIVE;
+        this.f18122d = b.INACTIVE;
         M();
     }
 
@@ -230,7 +230,7 @@ public abstract class w2 {
     }
 
     public final void M() {
-        int iOrdinal = this.f17583d.ordinal();
+        int iOrdinal = this.f18122d.ordinal();
         if (iOrdinal == 0) {
             Iterator<c> it = this.b.iterator();
             while (it.hasNext()) {
@@ -250,7 +250,7 @@ public abstract class w2 {
     public final void N() {
         Iterator<c> it = this.b.iterator();
         while (it.hasNext()) {
-            it.next().g(this);
+            it.next().f(this);
         }
     }
 
@@ -265,15 +265,15 @@ public abstract class w2 {
     }
 
     public void R() {
-        this.f17581a = true;
+        this.f18120a = true;
     }
 
     public void S() {
-        this.f17581a = false;
+        this.f18120a = false;
     }
 
     public t3 T(n0.n1 n1Var) {
-        t3 t3Var = this.f17588i;
+        t3 t3Var = this.f18127i;
         if (t3Var != null) {
             return t3Var.i().d(n1Var).a();
         }
@@ -293,15 +293,15 @@ public abstract class w2 {
 
     public void X(n nVar) {
         x2.g.a(nVar == null || F(nVar.g()));
-        this.f17594o = nVar;
+        this.f18133o = nVar;
     }
 
     public void Y(Set<i0.b> set) {
-        this.f17586g = set != null ? new HashSet(set) : null;
+        this.f18125g = set != null ? new HashSet(set) : null;
     }
 
     public void Z(Matrix matrix) {
-        this.f17591l = new Matrix(matrix);
+        this.f18130l = new Matrix(matrix);
     }
 
     public final void a(c cVar) {
@@ -313,26 +313,26 @@ public abstract class w2 {
         if (iJ != -1 && iJ == i10) {
             return false;
         }
-        i4.b<?, ?, ?> bVarD = D(this.f17585f);
+        i4.b<?, ?, ?> bVarD = D(this.f18124f);
         w0.e.a(bVarD, i10);
-        this.f17585f = bVarD.e();
+        this.f18124f = bVarD.e();
         n0.p0 p0VarI = i();
         if (p0VarI == null) {
-            this.f17587h = this.f17585f;
+            this.f18126h = this.f18124f;
             return true;
         }
-        this.f17587h = I(p0VarI.k(), this.f17584e, this.f17589j);
+        this.f18126h = I(p0VarI.k(), this.f18123e, this.f18128j);
         return true;
     }
 
     public void b(o3.b bVar, t3 t3Var) {
-        if (!t3.f24861a.equals(t3Var.c())) {
+        if (!t3.f25682a.equals(t3Var.c())) {
             bVar.v(t3Var.c());
             return;
         }
-        synchronized (this.f17582c) {
+        synchronized (this.f18121c) {
             try {
-                List listC = ((n0.p0) x2.g.g(this.f17592m)).k().l().c(AeFpsRangeQuirk.class);
+                List listC = ((n0.p0) x2.g.g(this.f18131m)).k().l().c(AeFpsRangeQuirk.class);
                 boolean z10 = true;
                 if (listC.size() > 1) {
                     z10 = false;
@@ -348,18 +348,18 @@ public abstract class w2 {
     }
 
     public void b0(Rect rect) {
-        this.f17590k = rect;
+        this.f18129k = rect;
     }
 
     public final void c(n0.x2 x2Var) {
-        r1.a("UseCase", "applyFeaturesToConfig: mFeatureGroup = " + this.f17586g + ", this = " + this);
-        Set<i0.b> set = this.f17586g;
+        r1.a("UseCase", "applyFeaturesToConfig: mFeatureGroup = " + this.f18125g + ", this = " + this);
+        Set<i0.b> set = this.f18125g;
         if (set == null) {
             return;
         }
-        k0 k0VarF = DynamicRangeFeature.f21993j;
-        Range<Integer> range = t3.f24861a;
-        VideoStabilizationFeature.b bVarF = VideoStabilizationFeature.f22010j;
+        k0 k0VarF = DynamicRangeFeature.f22217j;
+        Range<Integer> range = t3.f25682a;
+        VideoStabilizationFeature.b bVarF = VideoStabilizationFeature.f22234j;
         for (i0.b bVar : set) {
             if (bVar instanceof DynamicRangeFeature) {
                 k0VarF = ((DynamicRangeFeature) bVar).getDynamicRange();
@@ -371,10 +371,10 @@ public abstract class w2 {
             }
         }
         if ((this instanceof a2) || s0.f.e0(this)) {
-            x2Var.G(n0.h2.f24672l, k0VarF);
+            x2Var.G(n0.h2.f25493l, k0VarF);
         }
         x2Var.G(i4.C, range);
-        int i10 = a.f17598a[bVarF.ordinal()];
+        int i10 = a.f18137a[bVarF.ordinal()];
         if (i10 == 1) {
             x2Var.G(i4.H, 1);
             x2Var.G(i4.I, 1);
@@ -392,35 +392,35 @@ public abstract class w2 {
 
     public final void c0(n0.p0 p0Var) {
         V();
-        synchronized (this.f17582c) {
+        synchronized (this.f18121c) {
             try {
-                n0.p0 p0Var2 = this.f17592m;
+                n0.p0 p0Var2 = this.f18131m;
                 if (p0Var == p0Var2) {
                     W(p0Var2);
-                    this.f17592m = null;
+                    this.f18131m = null;
                 }
-                n0.p0 p0Var3 = this.f17593n;
+                n0.p0 p0Var3 = this.f18132n;
                 if (p0Var == p0Var3) {
                     W(p0Var3);
-                    this.f17593n = null;
+                    this.f18132n = null;
                 }
             } catch (Throwable th2) {
                 throw th2;
             }
         }
-        this.f17588i = null;
-        this.f17590k = null;
-        this.f17587h = this.f17585f;
-        this.f17584e = null;
-        this.f17589j = null;
+        this.f18127i = null;
+        this.f18129k = null;
+        this.f18126h = this.f18124f;
+        this.f18123e = null;
+        this.f18128j = null;
     }
 
     @SuppressLint({"WrongConstant"})
     public final void d(n0.p0 p0Var, n0.p0 p0Var2, i4<?> i4Var, i4<?> i4Var2) {
-        synchronized (this.f17582c) {
+        synchronized (this.f18121c) {
             try {
-                this.f17592m = p0Var;
-                this.f17593n = p0Var2;
+                this.f18131m = p0Var;
+                this.f18132n = p0Var2;
                 a(p0Var);
                 if (p0Var2 != null) {
                     a(p0Var2);
@@ -429,9 +429,9 @@ public abstract class w2 {
                 throw th2;
             }
         }
-        this.f17584e = i4Var;
-        this.f17589j = i4Var2;
-        this.f17587h = I(p0Var.k(), this.f17584e, this.f17589j);
+        this.f18123e = i4Var;
+        this.f18128j = i4Var2;
+        this.f18126h = I(p0Var.k(), this.f18123e, this.f18128j);
         O();
     }
 
@@ -439,9 +439,9 @@ public abstract class w2 {
         if (list.isEmpty()) {
             return;
         }
-        this.f17596q = list.get(0);
+        this.f18135q = list.get(0);
         if (list.size() > 1) {
-            this.f17597r = list.get(1);
+            this.f18136r = list.get(1);
         }
         Iterator<o3> it = list.iterator();
         while (it.hasNext()) {
@@ -454,27 +454,27 @@ public abstract class w2 {
     }
 
     public i4<?> e() {
-        return this.f17585f;
+        return this.f18124f;
     }
 
     public void e0(t3 t3Var, t3 t3Var2) {
-        this.f17588i = U(t3Var, t3Var2);
+        this.f18127i = U(t3Var, t3Var2);
     }
 
     public int f() {
-        return ((n0.i2) this.f17587h).t(-1);
+        return ((n0.i2) this.f18126h).t(-1);
     }
 
     public void f0(n0.n1 n1Var) {
-        this.f17588i = T(n1Var);
+        this.f18127i = T(n1Var);
     }
 
     public t3 g() {
-        return this.f17588i;
+        return this.f18127i;
     }
 
     public Size h() {
-        t3 t3Var = this.f17588i;
+        t3 t3Var = this.f18127i;
         if (t3Var != null) {
             return t3Var.f();
         }
@@ -483,18 +483,18 @@ public abstract class w2 {
 
     public n0.p0 i() {
         n0.p0 p0Var;
-        synchronized (this.f17582c) {
-            p0Var = this.f17592m;
+        synchronized (this.f18121c) {
+            p0Var = this.f18131m;
         }
         return p0Var;
     }
 
     public n0.l0 j() {
-        synchronized (this.f17582c) {
+        synchronized (this.f18121c) {
             try {
-                n0.p0 p0Var = this.f17592m;
+                n0.p0 p0Var = this.f18131m;
                 if (p0Var == null) {
-                    return n0.l0.f24725a;
+                    return n0.l0.f25546a;
                 }
                 return p0Var.e();
             } catch (Throwable th2) {
@@ -508,35 +508,35 @@ public abstract class w2 {
     }
 
     public i4<?> l() {
-        return this.f17587h;
+        return this.f18126h;
     }
 
     public abstract i4<?> m(boolean z10, j4 j4Var);
 
     public n n() {
-        return this.f17594o;
+        return this.f18133o;
     }
 
     public Set<i0.b> o() {
-        return this.f17586g;
+        return this.f18125g;
     }
 
     public int p() {
-        return this.f17587h.p();
+        return this.f18126h.p();
     }
 
     public int q() {
-        return ((n0.i2) this.f17587h).g0(-1);
+        return ((n0.i2) this.f18126h).g0(-1);
     }
 
     public String r() {
-        String strU = this.f17587h.u("<UnknownUseCase-" + hashCode() + ">");
+        String strU = this.f18126h.u("<UnknownUseCase-" + hashCode() + ">");
         Objects.requireNonNull(strU);
         return strU;
     }
 
     public String s() {
-        return this.f17595p;
+        return this.f18134p;
     }
 
     public int t(n0.p0 p0Var) {
@@ -550,8 +550,8 @@ public abstract class w2 {
 
     public n0.p0 v() {
         n0.p0 p0Var;
-        synchronized (this.f17582c) {
-            p0Var = this.f17593n;
+        synchronized (this.f18121c) {
+            p0Var = this.f18132n;
         }
         return p0Var;
     }
@@ -564,14 +564,14 @@ public abstract class w2 {
     }
 
     public o3 x() {
-        return this.f17597r;
+        return this.f18136r;
     }
 
     public Matrix y() {
-        return this.f17591l;
+        return this.f18130l;
     }
 
     public o3 z() {
-        return this.f17596q;
+        return this.f18135q;
     }
 }

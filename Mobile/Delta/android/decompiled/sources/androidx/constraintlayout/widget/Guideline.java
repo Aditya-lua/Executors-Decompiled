@@ -11,11 +11,11 @@ import androidx.annotation.NonNull;
 public class Guideline extends View {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f1570a;
+    public boolean f1415a;
 
     public Guideline(Context context) {
         super(context);
-        this.f1570a = true;
+        this.f1415a = true;
         super.setVisibility(8);
     }
 
@@ -30,21 +30,21 @@ public class Guideline extends View {
     }
 
     public void setFilterRedundantCalls(boolean z10) {
-        this.f1570a = z10;
+        this.f1415a = z10;
     }
 
     public void setGuidelineBegin(int i10) {
         ConstraintLayout.b bVar = (ConstraintLayout.b) getLayoutParams();
-        if (this.f1570a && bVar.f1514a == i10) {
+        if (this.f1415a && bVar.f1359a == i10) {
             return;
         }
-        bVar.f1514a = i10;
+        bVar.f1359a = i10;
         setLayoutParams(bVar);
     }
 
     public void setGuidelineEnd(int i10) {
         ConstraintLayout.b bVar = (ConstraintLayout.b) getLayoutParams();
-        if (this.f1570a && bVar.b == i10) {
+        if (this.f1415a && bVar.b == i10) {
             return;
         }
         bVar.b = i10;
@@ -53,10 +53,10 @@ public class Guideline extends View {
 
     public void setGuidelinePercent(float f10) {
         ConstraintLayout.b bVar = (ConstraintLayout.b) getLayoutParams();
-        if (this.f1570a && bVar.f1517c == f10) {
+        if (this.f1415a && bVar.f1362c == f10) {
             return;
         }
-        bVar.f1517c = f10;
+        bVar.f1362c = f10;
         setLayoutParams(bVar);
     }
 
@@ -66,7 +66,7 @@ public class Guideline extends View {
 
     public Guideline(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.f1570a = true;
+        this.f1415a = true;
         super.setVisibility(8);
     }
 }

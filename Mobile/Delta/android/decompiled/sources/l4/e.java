@@ -14,7 +14,7 @@ public final class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final e f22941a = new e();
+    public static final e f23335a = new e();
 
     @NotNull
     public final <T extends x0> T a(@NotNull Class<T> modelClass) throws InvocationTargetException {

@@ -14,7 +14,7 @@ import java.util.Iterator;
 public final class v implements Iterable<Intent> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ArrayList<Intent> f22152a = new ArrayList<>();
+    public final ArrayList<Intent> f22376a = new ArrayList<>();
     public final Context b;
 
     public interface a {
@@ -30,7 +30,7 @@ public final class v implements Iterable<Intent> {
     }
 
     public v a(Intent intent) {
-        this.f22152a.add(intent);
+        this.f22376a.add(intent);
         return this;
     }
 
@@ -52,11 +52,11 @@ public final class v implements Iterable<Intent> {
     }
 
     public v c(ComponentName componentName) {
-        int size = this.f22152a.size();
+        int size = this.f22376a.size();
         try {
             Intent intentB = i.b(this.b, componentName);
             while (intentB != null) {
-                this.f22152a.add(size, intentB);
+                this.f22376a.add(size, intentB);
                 intentB = i.b(this.b, intentB.getComponent());
             }
             return this;
@@ -71,10 +71,10 @@ public final class v implements Iterable<Intent> {
     }
 
     public void f(Bundle bundle) {
-        if (this.f22152a.isEmpty()) {
+        if (this.f22376a.isEmpty()) {
             throw new IllegalStateException("No intents added to TaskStackBuilder; cannot startActivities");
         }
-        Intent[] intentArr = (Intent[]) this.f22152a.toArray(new Intent[0]);
+        Intent[] intentArr = (Intent[]) this.f22376a.toArray(new Intent[0]);
         intentArr[0] = new Intent(intentArr[0]).addFlags(268484608);
         if (l2.b.o(this.b, intentArr, bundle)) {
             return;
@@ -87,6 +87,6 @@ public final class v implements Iterable<Intent> {
     @Override // java.lang.Iterable
     @Deprecated
     public Iterator<Intent> iterator() {
-        return this.f22152a.iterator();
+        return this.f22376a.iterator();
     }
 }

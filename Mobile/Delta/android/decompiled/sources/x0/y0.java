@@ -12,18 +12,18 @@ import java.util.concurrent.RejectedExecutionException;
 public class y0 implements r0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final k2 f34664a;
+    public final k2 f35162a;
     public final Executor b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final x2.a<Throwable> f34665c;
+    public final x2.a<Throwable> f35163c;
 
     public y0(g0.n nVar) {
         k2 k2VarF = nVar.f();
         Objects.requireNonNull(k2VarF);
-        this.f34664a = k2VarF;
+        this.f35162a = k2VarF;
         this.b = nVar.c();
-        this.f34665c = nVar.b();
+        this.f35163c = nVar.b();
     }
 
     @Override // x0.r0
@@ -36,7 +36,7 @@ public class y0 implements r0 {
             this.b.execute(new Runnable() { // from class: x0.w0
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f34658a.f34664a.b(v2Var);
+                    this.f35156a.f35162a.b(v2Var);
                 }
             });
         } catch (RejectedExecutionException unused) {
@@ -45,7 +45,7 @@ public class y0 implements r0 {
     }
 
     @Override // x0.r0
-    public me.x<Void> c(int i10, int i11) {
+    public ne.x<Void> c(int i10, int i11) {
         return r0.n.n(new Exception("Snapshot not supported by external SurfaceProcessor"));
     }
 
@@ -55,7 +55,7 @@ public class y0 implements r0 {
             this.b.execute(new Runnable() { // from class: x0.x0
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f34661a.f34664a.d(j2Var);
+                    this.f35159a.f35162a.d(j2Var);
                 }
             });
         } catch (RejectedExecutionException unused) {
@@ -64,6 +64,6 @@ public class y0 implements r0 {
     }
 
     public String toString() {
-        return "SurfaceProcessorWithExecutor(" + this.f34664a + ")";
+        return "SurfaceProcessorWithExecutor(" + this.f35162a + ")";
     }
 }

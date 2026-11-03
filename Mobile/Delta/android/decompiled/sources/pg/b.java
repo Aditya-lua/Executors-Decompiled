@@ -15,11 +15,11 @@ public enum b {
 
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int[] f28601a;
+    public final int[] f28715a;
     public final int b;
 
     b(int[] iArr, int i10) {
-        this.f28601a = iArr;
+        this.f28715a = iArr;
         this.b = i10;
     }
 
@@ -35,6 +35,6 @@ public enum b {
         } else {
             c10 = iF <= 26 ? (char) 1 : (char) 2;
         }
-        return this.f28601a[c10];
+        return this.f28715a[c10];
     }
 }

@@ -1,0 +1,232 @@
+A  baseline-Delta-2.743.1136.apk  167,563,578 B  fdb861bea54e5dd3…  2380 members
+B  Delta-2.745.1142.apk  167,457,402 B  4d22c8be0f81251d…  2383 members
+identical members  2152
+changed members    215
+  ~ AndroidManifest.xml  56,752 B
+  ~ META-INF/KEY.RSA  1,363 B
+  ~ META-INF/KEY.SF  288,039 B
+  ~ META-INF/MANIFEST.MF  287,912 B
+  ~ META-INF/NativeShell_googleProdRelease.kotlin_module  222 B
+  ~ META-INF/appdome-threatevents_release.kotlin_module  29 B
+  ~ META-INF/camera_release.kotlin_module  112 B
+  ~ META-INF/com.google.firebase-firebase-common.kotlin_module  29 B
+  ~ META-INF/database_googleProdRelease.kotlin_module  29 B
+  ~ META-INF/device_release.kotlin_module  33 B
+  ~ META-INF/document_release.kotlin_module  82 B
+  ~ META-INF/gmasdk_googleProdRelease.kotlin_module  55 B
+  ~ META-INF/government-id_release.kotlin_module  156 B
+  ~ META-INF/inquiry-internal_release.kotlin_module  159 B
+  ~ META-INF/integration_release.kotlin_module  29 B
+  ~ META-INF/jp-my-number_release.kotlin_module  29 B
+  ~ META-INF/kotlin-stdlib-jdk8.kotlin_module  29 B
+  ~ META-INF/kotlin-stdlib.kotlin_module  505 B
+  ~ META-INF/kotlinx-coroutines-android.kotlin_module  29 B
+  ~ META-INF/kotlinx-coroutines-core.kotlin_module  395 B
+  ~ META-INF/kotlinx-coroutines-play-services.kotlin_module  29 B
+  ~ META-INF/launchers_release.kotlin_module  46 B
+  ~ META-INF/modal_release.kotlin_module  29 B
+  ~ META-INF/nfc_release.kotlin_module  29 B
+  ~ META-INF/okio.kotlin_module  100 B
+  ~ META-INF/operations-stdlib_release.kotlin_module  29 B
+  ~ META-INF/permissions_release.kotlin_module  77 B
+  ~ META-INF/renderscript-toolkit_release.kotlin_module  29 B
+  ~ META-INF/retrofit.kotlin_module  29 B
+  ~ META-INF/selfie_release.kotlin_module  102 B
+  ~ META-INF/shared_release.kotlin_module  193 B
+  ~ META-INF/ui-step-renderer_release.kotlin_module  370 B
+  ~ META-INF/ui_release.kotlin_module  122 B
+  ~ META-INF/universalapp_googleProdRelease.kotlin_module  38 B
+  ~ META-INF/utils_googleRelease.kotlin_module  32 B
+  ~ META-INF/utils_release.kotlin_module  38 B
+  ~ META-INF/webrtc_release.kotlin_module  29 B
+  ~ META-INF/wf1-container-android.kotlin_module  38 B
+  ~ META-INF/wf1-container-common.kotlin_module  29 B
+  ~ META-INF/wf1-core-android.kotlin_module  57 B
+  ~ META-INF/wf1-core-common.kotlin_module  32 B
+  ~ META-INF/wf1-workflow-core.kotlin_module  61 B
+  ~ META-INF/wf1-workflow-runtime.kotlin_module  44 B
+  ~ META-INF/workflows_release.kotlin_module  29 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_3.png  50,009 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_4.png  46,573 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_5.png  31,750 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_6.png  26,967 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_1x_7.png  8,046 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_10.png  38,887 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_11.png  53,309 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_12.png  9,837 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_13.png  65,436 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_14.png  6,225 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_15.png  47,419 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_16.png  48,533 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_17.png  18,780 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_18.png  12,724 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_19.png  9,838 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_2.png  21,003 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_20.png  9,140 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_21.png  30,014 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_3.png  19,670 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_4.png  13,718 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_5.png  17,619 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_6.png  17,998 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_7.png  26,786 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_8.png  20,675 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_2x_9.png  91,079 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_10.png  101,145 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_11.png  143,969 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_12.png  82,207 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_13.png  106,349 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_14.png  72,211 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_15.png  181,558 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_16.png  43,096 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_17.png  50,993 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_19.png  78,614 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_20.png  7,594 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_3.png  40,348 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_4.png  35,206 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_5.png  53,279 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_6.png  34,359 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_7.png  63,096 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_8.png  37,958 B
+  ~ assets/ExtraContent/LuaPackages/Packages/_Index/FoundationImages/FoundationImages/SpriteSheets/img_set_3x_9.png  143,299 B
+  ~ assets/ExtraContent/models/CrossExpVoiceDataModelPatch/CrossExpVoiceDataModelPatch.rbxm  354,915 B
+  ~ assets/ExtraContent/models/InExperience/InExperience.rbxm  13,958,113 B
+  ~ assets/ExtraContent/models/InExperience/InExperience_checksum  128 B
+  ~ assets/ExtraContent/models/Licenses/Licenses.rbxm  1,774 B
+  ~ assets/ExtraContent/models/UniversalApp/UniversalApp.rbxm  12,945,101 B
+  ~ assets/ExtraContent/models/UniversalApp/UniversalApp_checksum  128 B
+  ~ assets/content/configs/InExperiencePatchConfig/InExperiencePatchConfig.json  252 B
+  ~ assets/content/configs/UniversalAppPatchConfig/UniversalAppPatchConfig.json  253 B
+  ~ assets/content/guac/defaultConfigs/GuacDefaultPolicy-CJVDist.json  10,278 B
+  ~ assets/content/guac/defaultConfigs/GuacDefaultPolicy-GlobalDist.json  9,905 B
+  ~ assets/content/guac/defaultConfigs/GuacDefaultPolicy-VNGGamesDist.json  10,100 B
+  ~ assets/dexopt/baseline.prof  14,236 B
+  ~ assets/dexopt/baseline.profm  2,398 B
+  ~ assets/shaders/shaders_glsles3.pack  4,203,760 B
+  ~ assets/shaders/shaders_vulkan_mobile.pack  18,890,727 B
+  ~ classes.dex  9,078,696 B
+  ~ classes2.dex  6,233,928 B
+  ~ classes3.dex  6,998,664 B
+  ~ lib/arm64-v8a/libroblox.so  112,194,584 B
+  ~ lib/arm64-v8a/libzstd-jni-1.5.7-6.so  18,574,888 B
+  ~ res/drawable/abc_btn_check_material_anim.xml  816 B
+  ~ res/drawable/abc_btn_radio_material_anim.xml  816 B
+  ~ res/drawable/design_password_eye.xml  816 B
+  ~ res/drawable/m3_password_eye.xml  816 B
+  ~ res/drawable/mtrl_checkbox_button.xml  1,332 B
+  ~ res/drawable/mtrl_checkbox_button_icon.xml  1,572 B
+  ~ res/drawable/mtrl_switch_thumb.xml  2,004 B
+  ~ res/layout-land/material_clock_period_toggle_land.xml  1,232 B
+  ~ res/layout-land/material_timepicker.xml  1,676 B
+  ~ res/layout-land/mtrl_picker_header_dialog.xml  1,532 B
+  ~ res/layout-v21/notification_template_custom_big.xml  2,456 B
+  ~ res/layout-v21/notification_template_icon_group.xml  988 B
+  ~ res/layout-v26/mtrl_calendar_month.xml  744 B
+  ~ res/layout-watch-v20/abc_alert_dialog_title_material.xml  1,352 B
+  ~ res/layout/abc_activity_chooser_view_list_item.xml  1,304 B
+  ~ res/layout/abc_alert_dialog_button_bar_material.xml  1,584 B
+  ~ res/layout/abc_alert_dialog_material.xml  2,648 B
+  ~ res/layout/abc_alert_dialog_title_material.xml  1,560 B
+  ~ res/layout/abc_cascading_menu_item_layout.xml  1,868 B
+  ~ res/layout/abc_dialog_title_material.xml  1,116 B
+  ~ res/layout/abc_list_menu_item_layout.xml  1,396 B
+  ~ res/layout/abc_list_menu_item_radio.xml  532 B
+  ~ res/layout/abc_popup_menu_item_layout.xml  2,072 B
+  ~ res/layout/abc_search_view.xml  3,472 B
+  ~ res/layout/abc_select_dialog_material.xml  1,020 B
+  ~ res/layout/abc_tooltip.xml  1,056 B
+  ~ res/layout/activity_curltest.xml  1,304 B
+  ~ res/layout/activity_game.xml  1,732 B
+  ~ res/layout/activity_local_settings.xml  2,012 B
+  ~ res/layout/activity_main_no_bottom_margin.xml  1,572 B
+  ~ res/layout/activity_splash.xml  936 B
+  ~ res/layout/activity_web.xml  784 B
+  ~ res/layout/activity_web_with_overlay.xml  1,004 B
+  ~ res/layout/button_notification_stream_layout.xml  1,152 B
+  ~ res/layout/configlib_activity_config.xml  4,688 B
+  ~ res/layout/configlib_activity_useragent.xml  1,336 B
+  ~ res/layout/configure_studio_deployment_fragment.xml  1,860 B
+  ~ res/layout/design_bottom_navigation_item.xml  1,860 B
+  ~ res/layout/design_bottom_sheet_dialog.xml  1,224 B
+  ~ res/layout/design_layout_snackbar_include.xml  1,444 B
+  ~ res/layout/design_navigation_item_header.xml  440 B
+  ~ res/layout/design_text_input_end_icon.xml  656 B
+  ~ res/layout/design_text_input_start_icon.xml  652 B
+  ~ res/layout/dev_branch_commit_settings.xml  1,796 B
+  ~ res/layout/dev_rpc_settings.xml  2,396 B
+  ~ res/layout/dialog_fragment_app_rating_flagged.xml  3,484 B
+  ~ res/layout/fragment_custom_capture.xml  2,016 B
+  ~ res/layout/fragment_dialog_webview.xml  1,980 B
+  ~ res/layout/fragment_shared.xml  1,680 B
+  ~ res/layout/fragment_shared_deferred.xml  1,008 B
+  ~ res/layout/fragment_shared_lazy_retry.xml  1,576 B
+  ~ res/layout/fragment_webview_deprecated.xml  2,096 B
+  ~ res/layout/fragment_webview_with_floating_close.xml  2,372 B
+  ~ res/layout/friend_request_ignored_layout.xml  644 B
+  ~ res/layout/include_rbx_progress_bar.xml  440 B
+  ~ res/layout/loading_layout_wrapper.xml  588 B
+  ~ res/layout/m3_alert_dialog.xml  2,720 B
+  ~ res/layout/m3_alert_dialog_actions.xml  1,584 B
+  ~ res/layout/m3_alert_dialog_title.xml  956 B
+  ~ res/layout/m3_side_sheet_dialog.xml  1,140 B
+  ~ res/layout/material_clock_display.xml  796 B
+  ~ res/layout/material_clock_period_toggle.xml  1,220 B
+  ~ res/layout/material_clockface_view.xml  1,012 B
+  ~ res/layout/material_textinput_timepicker.xml  720 B
+  ~ res/layout/material_time_input.xml  956 B
+  ~ res/layout/material_timepicker.xml  1,608 B
+  ~ res/layout/material_timepicker_dialog.xml  2,892 B
+  ~ res/layout/material_timepicker_textinput_display.xml  728 B
+  ~ res/layout/mtrl_alert_dialog.xml  2,476 B
+  ~ res/layout/mtrl_alert_dialog_actions.xml  1,676 B
+  ~ res/layout/mtrl_alert_dialog_title.xml  956 B
+  ~ res/layout/mtrl_calendar_days_of_week.xml  436 B
+  ~ res/layout/mtrl_calendar_horizontal.xml  1,176 B
+  ~ res/layout/mtrl_calendar_month_labeled.xml  728 B
+  ~ res/layout/mtrl_calendar_month_navigation.xml  1,748 B
+  ~ res/layout/mtrl_calendar_months.xml  428 B
+  ~ res/layout/mtrl_calendar_vertical.xml  740 B
+  ~ res/layout/mtrl_layout_snackbar_include.xml  952 B
+  ~ res/layout/mtrl_navigation_rail_item.xml  1,984 B
+  ~ res/layout/mtrl_picker_dialog.xml  1,172 B
+  ~ res/layout/mtrl_picker_fullscreen.xml  880 B
+  ~ res/layout/mtrl_picker_header_dialog.xml  1,492 B
+  ~ res/layout/mtrl_picker_header_fullscreen.xml  2,800 B
+  ~ res/layout/mtrl_picker_header_selection_text.xml  712 B
+  ~ res/layout/mtrl_picker_header_title_text.xml  624 B
+  ~ res/layout/mtrl_picker_header_toggle.xml  528 B
+  ~ res/layout/mtrl_picker_text_input_date.xml  984 B
+  ~ res/layout/mtrl_picker_text_input_date_range.xml  1,580 B
+  ~ res/layout/mtrl_search_bar.xml  488 B
+  ~ res/layout/mtrl_search_view.xml  3,424 B
+  ~ res/layout/notification_stream_layout.xml  828 B
+  ~ res/layout/notification_template_part_time.xml  440 B
+  ~ res/layout/progress_bar.xml  588 B
+  ~ res/layout/recently_played_widget_empty_large_med.xml  1,924 B
+  … 15 more changed members
+only in A          13
+  - META-INF/services/ku.m0
+  - META-INF/services/qu.s
+  - assets/android/shared_compression_dictionaries/57ace1df87f8e37023aebc8d9ce7e0802ffc0ee11dbcc89b34b18ed4e75f1de7.dict
+  - res/mipmap-hdpi-v4/ic_launcher_halloween_2026_background.png
+  - res/mipmap-hdpi-v4/ic_launcher_halloween_2026_foreground.png
+  - res/mipmap-mdpi-v4/ic_launcher_halloween_2026_background.png
+  - res/mipmap-mdpi-v4/ic_launcher_halloween_2026_foreground.png
+  - res/mipmap-xhdpi-v4/ic_launcher_halloween_2026_background.png
+  - res/mipmap-xhdpi-v4/ic_launcher_halloween_2026_foreground.png
+  - res/mipmap-xxhdpi-v4/ic_launcher_halloween_2026_background.png
+only in B          16
+  + META-INF/services/iu.m0
+  + META-INF/services/ou.s
+  + assets/ExtraContent/textures/ui/LuaApp/graphic/home_background_halloween2026.jpg
+  + assets/android/shared_compression_dictionaries/35659ed0421961bc16f9bd3955ac6b8e583db18147d4c97c4ad62dc9f9d48438.dict
+  + assets/content/configs/DateTimeLocaleConfigs/nl-nl.json
+  + res/layout/loading_content_roblox.xml
+  + res/mipmap-hdpi-v4/ic_launcher_halloween_2026_background.webp
+  + res/mipmap-hdpi-v4/ic_launcher_halloween_2026_foreground.webp
+  + res/mipmap-mdpi-v4/ic_launcher_halloween_2026_background.webp
+  + res/mipmap-mdpi-v4/ic_launcher_halloween_2026_foreground.webp
+manifest differences
+  version_name: '2.743.1136' -> '2.745.1142'
+  version_code: '18934' -> '20136'
+  providers: ['androidx.core.content.FileProvider', 'androidx.startup.InitializationProvider', 'com.roblox.client.gmasdk.isolate.sandbox.GmaWebViewInitializerProvider', 'com.roblox.client.personasdk.PersonaInitProvider', 'com.roblox.client.provider.AppAssetsContentProvider', 'com.roblox.client.provider.ShellConfigurationContentProvider', 'com.withpersona.sdk2.inquiry.DocumentFileProvider'] -> ['androidx.core.content.FileProvider', 'androidx.startup.InitializationProvider', 'com.google.firebase.provider.FirebaseInitProvider', 'com.roblox.client.gmasdk.isolate.sandbox.GmaWebViewInitializerProvider', 'com.roblox.client.personasdk.PersonaInitProvider', 'com.roblox.client.provider.AppAssetsContentProvider', 'com.roblox.client.provider.ShellConfigurationContentProvider', 'com.withpersona.sdk2.inquiry.DocumentFileProvider']
+JSON               reversing-workspace/Delta/current/apk-diff.json

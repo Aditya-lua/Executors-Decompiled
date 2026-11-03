@@ -23,7 +23,7 @@ public class JobInfoSchedulerService extends JobService {
         t.c().e().m(aVarD.a(), i11, new Runnable() { // from class: i8.e
             @Override // java.lang.Runnable
             public final void run() {
-                this.f20354a.jobFinished(jobParameters, false);
+                this.f20470a.jobFinished(jobParameters, false);
             }
         });
         return true;

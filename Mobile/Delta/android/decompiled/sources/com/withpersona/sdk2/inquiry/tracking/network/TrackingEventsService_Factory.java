@@ -1,7 +1,7 @@
 package com.withpersona.sdk2.inquiry.tracking.network;
 
-import ft.d;
-import ft.i;
+import dt.d;
+import dt.i;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class TrackingEventsService_Factory implements d<TrackingEventsService> {
@@ -19,7 +19,7 @@ public final class TrackingEventsService_Factory implements d<TrackingEventsServ
         return new TrackingEventsService(trackingEventsServiceApi);
     }
 
-    @Override // ht.a
+    @Override // ft.a
     public TrackingEventsService get() {
         return newInstance(this.trackingEventsServiceApiProvider.get());
     }

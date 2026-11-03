@@ -3,10 +3,11 @@ package com.google.android.gms.fido.fido2.api.common;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.NonNull;
+import com.roblox.client.pushnotification.v2.model.PayloadNotificationChannel;
 
 /* JADX INFO: loaded from: classes.dex */
 public enum AttestationConveyancePreference implements Parcelable {
-    NONE("none"),
+    NONE(PayloadNotificationChannel.SOUND_NONE),
     INDIRECT("indirect"),
     DIRECT("direct");
 
@@ -30,7 +31,7 @@ public enum AttestationConveyancePreference implements Parcelable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final String f5898a;
+    public final String f5971a;
 
     public static class a extends Exception {
         public a(@NonNull String str) {
@@ -39,13 +40,13 @@ public enum AttestationConveyancePreference implements Parcelable {
     }
 
     AttestationConveyancePreference(String str) {
-        this.f5898a = str;
+        this.f5971a = str;
     }
 
     @NonNull
     public static AttestationConveyancePreference a(@NonNull String str) throws a {
         for (AttestationConveyancePreference attestationConveyancePreference : values()) {
-            if (str.equals(attestationConveyancePreference.f5898a)) {
+            if (str.equals(attestationConveyancePreference.f5971a)) {
                 return attestationConveyancePreference;
             }
         }
@@ -60,11 +61,11 @@ public enum AttestationConveyancePreference implements Parcelable {
     @Override // java.lang.Enum
     @NonNull
     public String toString() {
-        return this.f5898a;
+        return this.f5971a;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
-        parcel.writeString(this.f5898a);
+        parcel.writeString(this.f5971a);
     }
 }

@@ -82,13 +82,13 @@ public final class AFe1dSDK extends AFe1kSDK<String> {
         String str;
         Intrinsics.checkNotNullParameter(p8, "");
         AFh1hSDK aFh1hSDK = this.d;
-        Map<String, Object> map = aFh1hSDK.f5399d;
+        Map<String, Object> map = aFh1hSDK.f5472d;
         Intrinsics.checkNotNull(map);
-        map.put("app_id", this.registerClient.f5258d.f5305d.getPackageName());
+        map.put("app_id", this.registerClient.f5331d.f5378d.getPackageName());
         map.put("sdk_version", AFc1iSDK.unregisterClient());
         map.put("app_version_name", this.registerClient.r_().versionName);
         this.unregisterClient.AFKeystoreWrapper(map);
-        if (AFj1qSDK.unregisterClient(this.AFLogger.f5305d)) {
+        if (AFj1qSDK.unregisterClient(this.AFLogger.f5378d)) {
             try {
                 AFi1pSDK aFi1pSDKAFKeystoreWrapper = this.AFKeystoreWrapper.AFKeystoreWrapper();
                 if (aFi1pSDKAFKeystoreWrapper != null) {
@@ -100,7 +100,7 @@ public final class AFe1dSDK extends AFe1kSDK<String> {
                     if (str2 != null) {
                         linkedHashMap2.put("pia_token", str2);
                     }
-                    String str3 = aFi1pSDKAFKeystoreWrapper.f5423d;
+                    String str3 = aFi1pSDKAFKeystoreWrapper.f5496d;
                     if (str3 != null) {
                         linkedHashMap2.put("error_code", str3);
                     }
@@ -115,7 +115,7 @@ public final class AFe1dSDK extends AFe1kSDK<String> {
                 AFLoggerBase.e$default(AFLogger.INSTANCE, LogTag.PLAY_INTEGRITY_API, "Error while adding PIA data to payload", th2, true, false, false, false, 96, null);
             }
         } else {
-            Map<String, Object> map2 = aFh1hSDK.f5399d;
+            Map<String, Object> map2 = aFh1hSDK.f5472d;
             Intrinsics.checkNotNullExpressionValue(map2, "");
             AFj1iSDK.AFLogger(map2).put("pia_disabled", Boolean.TRUE);
         }
@@ -123,9 +123,9 @@ public final class AFe1dSDK extends AFe1kSDK<String> {
         AFh1hSDK aFh1hSDK2 = this.d;
         AFf1fSDK unregisterClient = getUnregisterClient();
         AFd1pSDK<String> aFd1pSDKAFLogger = d10.AFLogger(aFh1hSDK2, (String) AFf1fSDK.unregisterClient(new Object[]{unregisterClient}, -1660886869, 1660886871, System.identityHashCode(unregisterClient)), this.AFLogger);
-        Map<String, Object> map3 = this.d.f5399d;
+        Map<String, Object> map3 = this.d.f5472d;
         Intrinsics.checkNotNullExpressionValue(map3, "");
-        if (aFd1pSDKAFLogger != null && (aFd1oSDK = aFd1pSDKAFLogger.unregisterClient) != null && (str = aFd1oSDK.f5281d) != null) {
+        if (aFd1pSDKAFLogger != null && (aFd1oSDK = aFd1pSDKAFLogger.unregisterClient) != null && (str = aFd1oSDK.f5354d) != null) {
             JSONObject jSONObject = new JSONObject(map3);
             if (jSONObject.has("pia")) {
                 JSONObject jSONObject2 = jSONObject.getJSONObject("pia");

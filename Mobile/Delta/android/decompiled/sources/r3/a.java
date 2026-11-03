@@ -22,46 +22,46 @@ import y2.r;
 public abstract class a extends androidx.core.view.a {
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public static final Rect f29736n = new Rect(Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE);
+    public static final Rect f30138n = new Rect(Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE);
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public static final r3.b.a<p> f29737o = new C0527a();
+    public static final r3.b.a<p> f30139o = new C0529a();
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public static final r3.b.InterfaceC0528b<k<p>, p> f29738p = new b();
+    public static final r3.b.InterfaceC0530b<k<p>, p> f30140p = new b();
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final AccessibilityManager f29743h;
+    public final AccessibilityManager f30145h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final View f29744i;
+    public final View f30146i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public c f29745j;
+    public c f30147j;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Rect f29739d = new Rect();
+    public final Rect f30141d = new Rect();
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Rect f29740e = new Rect();
+    public final Rect f30142e = new Rect();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final Rect f29741f = new Rect();
+    public final Rect f30143f = new Rect();
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final int[] f29742g = new int[2];
+    public final int[] f30144g = new int[2];
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public int f29746k = Integer.MIN_VALUE;
+    public int f30148k = Integer.MIN_VALUE;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public int f29747l = Integer.MIN_VALUE;
+    public int f30149l = Integer.MIN_VALUE;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public int f29748m = Integer.MIN_VALUE;
+    public int f30150m = Integer.MIN_VALUE;
 
     /* JADX INFO: renamed from: r3.a$a, reason: collision with other inner class name */
-    public class C0527a implements r3.b.a<p> {
+    public class C0529a implements r3.b.a<p> {
         @Override // r3.b.a
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public void a(p pVar, Rect rect) {
@@ -69,14 +69,14 @@ public abstract class a extends androidx.core.view.a {
         }
     }
 
-    public class b implements r3.b.InterfaceC0528b<k<p>, p> {
-        @Override // r3.b.InterfaceC0528b
+    public class b implements r3.b.InterfaceC0530b<k<p>, p> {
+        @Override // r3.b.InterfaceC0530b
         /* JADX INFO: renamed from: c, reason: merged with bridge method [inline-methods] */
         public p a(k<p> kVar, int i10) {
             return kVar.k(i10);
         }
 
-        @Override // r3.b.InterfaceC0528b
+        @Override // r3.b.InterfaceC0530b
         /* JADX INFO: renamed from: d, reason: merged with bridge method [inline-methods] */
         public int b(k<p> kVar) {
             return kVar.j();
@@ -94,7 +94,7 @@ public abstract class a extends androidx.core.view.a {
 
         @Override // y2.q
         public p d(int i10) {
-            int i11 = i10 == 2 ? a.this.f29746k : a.this.f29747l;
+            int i11 = i10 == 2 ? a.this.f30148k : a.this.f30149l;
             if (i11 == Integer.MIN_VALUE) {
                 return null;
             }
@@ -111,8 +111,8 @@ public abstract class a extends androidx.core.view.a {
         if (view == null) {
             throw new IllegalArgumentException("View may not be null");
         }
-        this.f29744i = view;
-        this.f29743h = (AccessibilityManager) view.getContext().getSystemService("accessibility");
+        this.f30146i = view;
+        this.f30145h = (AccessibilityManager) view.getContext().getSystemService("accessibility");
         view.setFocusable(true);
         if (o0.x(view) == 0) {
             o0.w0(view, 1);
@@ -152,7 +152,7 @@ public abstract class a extends androidx.core.view.a {
     }
 
     public final int A() {
-        return this.f29747l;
+        return this.f30149l;
     }
 
     public abstract int B(float f10, float f11);
@@ -160,10 +160,10 @@ public abstract class a extends androidx.core.view.a {
     public abstract void C(List<Integer> list);
 
     public final boolean E(Rect rect) {
-        if (rect == null || rect.isEmpty() || this.f29744i.getWindowVisibility() != 0) {
+        if (rect == null || rect.isEmpty() || this.f30146i.getWindowVisibility() != 0) {
             return false;
         }
-        Object parent = this.f29744i.getParent();
+        Object parent = this.f30146i.getParent();
         while (parent instanceof View) {
             View view = (View) parent;
             if (view.getAlpha() <= 0.0f || view.getVisibility() != 0) {
@@ -177,24 +177,24 @@ public abstract class a extends androidx.core.view.a {
     public final boolean G(int i10, Rect rect) {
         p pVar;
         k<p> kVarY = y();
-        int i11 = this.f29747l;
+        int i11 = this.f30149l;
         p pVarE = i11 == Integer.MIN_VALUE ? null : kVarY.e(i11);
         if (i10 == 1 || i10 == 2) {
-            pVar = (p) r3.b.d(kVarY, f29738p, f29737o, pVarE, i10, o0.z(this.f29744i) == 1, false);
+            pVar = (p) r3.b.d(kVarY, f30140p, f30139o, pVarE, i10, o0.z(this.f30146i) == 1, false);
         } else {
             if (i10 != 17 && i10 != 33 && i10 != 66 && i10 != 130) {
                 throw new IllegalArgumentException("direction must be one of {FOCUS_FORWARD, FOCUS_BACKWARD, FOCUS_UP, FOCUS_DOWN, FOCUS_LEFT, FOCUS_RIGHT}.");
             }
             Rect rect2 = new Rect();
-            int i12 = this.f29747l;
+            int i12 = this.f30149l;
             if (i12 != Integer.MIN_VALUE) {
                 z(i12, rect2);
             } else if (rect != null) {
                 rect2.set(rect);
             } else {
-                D(this.f29744i, i10, rect2);
+                D(this.f30146i, i10, rect2);
             }
-            pVar = (p) r3.b.c(kVarY, f29738p, f29737o, pVarE, rect2, i10);
+            pVar = (p) r3.b.c(kVarY, f30140p, f30139o, pVarE, rect2, i10);
         }
         return T(pVar != null ? kVarY.h(kVarY.f(pVar)) : Integer.MIN_VALUE);
     }
@@ -205,7 +205,7 @@ public abstract class a extends androidx.core.view.a {
     }
 
     public final void I(boolean z10, int i10, Rect rect) {
-        int i11 = this.f29747l;
+        int i11 = this.f30149l;
         if (i11 != Integer.MIN_VALUE) {
             o(i11);
         }
@@ -246,26 +246,26 @@ public abstract class a extends androidx.core.view.a {
     }
 
     public final boolean R(int i10, Bundle bundle) {
-        return o0.b0(this.f29744i, i10, bundle);
+        return o0.b0(this.f30146i, i10, bundle);
     }
 
     public final boolean S(int i10) {
         int i11;
-        if (!this.f29743h.isEnabled() || !this.f29743h.isTouchExplorationEnabled() || (i11 = this.f29746k) == i10) {
+        if (!this.f30145h.isEnabled() || !this.f30145h.isTouchExplorationEnabled() || (i11 = this.f30148k) == i10) {
             return false;
         }
         if (i11 != Integer.MIN_VALUE) {
             n(i11);
         }
-        this.f29746k = i10;
-        this.f29744i.invalidate();
+        this.f30148k = i10;
+        this.f30146i.invalidate();
         U(i10, 32768);
         return true;
     }
 
     public final boolean T(int i10) {
         int i11;
-        if ((!this.f29744i.isFocused() && !this.f29744i.requestFocus()) || (i11 = this.f29747l) == i10) {
+        if ((!this.f30146i.isFocused() && !this.f30146i.requestFocus()) || (i11 = this.f30149l) == i10) {
             return false;
         }
         if (i11 != Integer.MIN_VALUE) {
@@ -274,7 +274,7 @@ public abstract class a extends androidx.core.view.a {
         if (i10 == Integer.MIN_VALUE) {
             return false;
         }
-        this.f29747l = i10;
+        this.f30149l = i10;
         O(i10, true);
         U(i10, 8);
         return true;
@@ -282,28 +282,28 @@ public abstract class a extends androidx.core.view.a {
 
     public final boolean U(int i10, int i11) {
         ViewParent parent;
-        if (i10 == Integer.MIN_VALUE || !this.f29743h.isEnabled() || (parent = this.f29744i.getParent()) == null) {
+        if (i10 == Integer.MIN_VALUE || !this.f30145h.isEnabled() || (parent = this.f30146i.getParent()) == null) {
             return false;
         }
-        return parent.requestSendAccessibilityEvent(this.f29744i, q(i10, i11));
+        return parent.requestSendAccessibilityEvent(this.f30146i, q(i10, i11));
     }
 
     public final void V(int i10) {
-        int i11 = this.f29748m;
+        int i11 = this.f30150m;
         if (i11 == i10) {
             return;
         }
-        this.f29748m = i10;
+        this.f30150m = i10;
         U(i10, 128);
         U(i11, Barcode.FORMAT_QR_CODE);
     }
 
     @Override // androidx.core.view.a
     public q b(View view) {
-        if (this.f29745j == null) {
-            this.f29745j = new c();
+        if (this.f30147j == null) {
+            this.f30147j = new c();
         }
-        return this.f29745j;
+        return this.f30147j;
     }
 
     @Override // androidx.core.view.a
@@ -319,27 +319,27 @@ public abstract class a extends androidx.core.view.a {
     }
 
     public final boolean n(int i10) {
-        if (this.f29746k != i10) {
+        if (this.f30148k != i10) {
             return false;
         }
-        this.f29746k = Integer.MIN_VALUE;
-        this.f29744i.invalidate();
+        this.f30148k = Integer.MIN_VALUE;
+        this.f30146i.invalidate();
         U(i10, 65536);
         return true;
     }
 
     public final boolean o(int i10) {
-        if (this.f29747l != i10) {
+        if (this.f30149l != i10) {
             return false;
         }
-        this.f29747l = Integer.MIN_VALUE;
+        this.f30149l = Integer.MIN_VALUE;
         O(i10, false);
         U(i10, 8);
         return true;
     }
 
     public final boolean p() {
-        int i10 = this.f29747l;
+        int i10 = this.f30149l;
         return i10 != Integer.MIN_VALUE && J(i10, 16, null);
     }
 
@@ -361,14 +361,14 @@ public abstract class a extends androidx.core.view.a {
             throw new RuntimeException("Callbacks must add text or a content description in populateEventForVirtualViewId()");
         }
         accessibilityEventObtain.setClassName(pVarH.p());
-        r.c(accessibilityEventObtain, this.f29744i, i10);
-        accessibilityEventObtain.setPackageName(this.f29744i.getContext().getPackageName());
+        r.c(accessibilityEventObtain, this.f30146i, i10);
+        accessibilityEventObtain.setPackageName(this.f30146i.getContext().getPackageName());
         return accessibilityEventObtain;
     }
 
     public final AccessibilityEvent s(int i10) {
         AccessibilityEvent accessibilityEventObtain = AccessibilityEvent.obtain(i10);
-        this.f29744i.onInitializeAccessibilityEvent(accessibilityEventObtain);
+        this.f30146i.onInitializeAccessibilityEvent(accessibilityEventObtain);
         return accessibilityEventObtain;
     }
 
@@ -378,16 +378,16 @@ public abstract class a extends androidx.core.view.a {
         pVarY.r0(true);
         pVarY.t0(true);
         pVarY.l0("android.view.View");
-        Rect rect = f29736n;
+        Rect rect = f30138n;
         pVarY.g0(rect);
         pVarY.h0(rect);
-        pVarY.C0(this.f29744i);
+        pVarY.C0(this.f30146i);
         N(i10, pVarY);
         if (pVarY.B() == null && pVarY.s() == null) {
             throw new RuntimeException("Callbacks must add text or a content description in populateNodeForVirtualViewId()");
         }
-        pVarY.j(this.f29740e);
-        if (this.f29740e.equals(rect)) {
+        pVarY.j(this.f30142e);
+        if (this.f30142e.equals(rect)) {
             throw new RuntimeException("Callbacks must set parent bounds in populateNodeForVirtualViewId()");
         }
         int iH = pVarY.h();
@@ -397,46 +397,46 @@ public abstract class a extends androidx.core.view.a {
         if ((iH & 128) != 0) {
             throw new RuntimeException("Callbacks must not add ACTION_CLEAR_ACCESSIBILITY_FOCUS in populateNodeForVirtualViewId()");
         }
-        pVarY.A0(this.f29744i.getContext().getPackageName());
-        pVarY.I0(this.f29744i, i10);
-        if (this.f29746k == i10) {
+        pVarY.A0(this.f30146i.getContext().getPackageName());
+        pVarY.I0(this.f30146i, i10);
+        if (this.f30148k == i10) {
             pVarY.e0(true);
             pVarY.a(128);
         } else {
             pVarY.e0(false);
             pVarY.a(64);
         }
-        boolean z10 = this.f29747l == i10;
+        boolean z10 = this.f30149l == i10;
         if (z10) {
             pVarY.a(2);
         } else if (pVarY.N()) {
             pVarY.a(1);
         }
         pVarY.u0(z10);
-        this.f29744i.getLocationOnScreen(this.f29742g);
-        pVarY.k(this.f29739d);
-        if (this.f29739d.equals(rect)) {
-            pVarY.j(this.f29739d);
+        this.f30146i.getLocationOnScreen(this.f30144g);
+        pVarY.k(this.f30141d);
+        if (this.f30141d.equals(rect)) {
+            pVarY.j(this.f30141d);
             if (pVarY.b != -1) {
                 p pVarY2 = p.Y();
                 for (int i11 = pVarY.b; i11 != -1; i11 = pVarY2.b) {
-                    pVarY2.D0(this.f29744i, -1);
-                    pVarY2.g0(f29736n);
+                    pVarY2.D0(this.f30146i, -1);
+                    pVarY2.g0(f30138n);
                     N(i11, pVarY2);
-                    pVarY2.j(this.f29740e);
-                    Rect rect2 = this.f29739d;
-                    Rect rect3 = this.f29740e;
+                    pVarY2.j(this.f30142e);
+                    Rect rect2 = this.f30141d;
+                    Rect rect3 = this.f30142e;
                     rect2.offset(rect3.left, rect3.top);
                 }
                 pVarY2.c0();
             }
-            this.f29739d.offset(this.f29742g[0] - this.f29744i.getScrollX(), this.f29742g[1] - this.f29744i.getScrollY());
+            this.f30141d.offset(this.f30144g[0] - this.f30146i.getScrollX(), this.f30144g[1] - this.f30146i.getScrollY());
         }
-        if (this.f29744i.getLocalVisibleRect(this.f29741f)) {
-            this.f29741f.offset(this.f29742g[0] - this.f29744i.getScrollX(), this.f29742g[1] - this.f29744i.getScrollY());
-            if (this.f29739d.intersect(this.f29741f)) {
-                pVarY.h0(this.f29739d);
-                if (E(this.f29739d)) {
+        if (this.f30146i.getLocalVisibleRect(this.f30143f)) {
+            this.f30143f.offset(this.f30144g[0] - this.f30146i.getScrollX(), this.f30144g[1] - this.f30146i.getScrollY());
+            if (this.f30141d.intersect(this.f30143f)) {
+                pVarY.h0(this.f30141d);
+                if (E(this.f30141d)) {
                     pVarY.M0(true);
                 }
             }
@@ -446,8 +446,8 @@ public abstract class a extends androidx.core.view.a {
 
     @NonNull
     public final p u() {
-        p pVarZ = p.Z(this.f29744i);
-        o0.Z(this.f29744i, pVarZ);
+        p pVarZ = p.Z(this.f30146i);
+        o0.Z(this.f30146i, pVarZ);
         ArrayList arrayList = new ArrayList();
         C(arrayList);
         if (pVarZ.o() > 0 && arrayList.size() > 0) {
@@ -455,16 +455,16 @@ public abstract class a extends androidx.core.view.a {
         }
         int size = arrayList.size();
         for (int i10 = 0; i10 < size; i10++) {
-            pVarZ.c(this.f29744i, ((Integer) arrayList.get(i10)).intValue());
+            pVarZ.c(this.f30146i, ((Integer) arrayList.get(i10)).intValue());
         }
         return pVarZ;
     }
 
     public final boolean v(@NonNull MotionEvent motionEvent) {
-        if (this.f29743h.isEnabled() && this.f29743h.isTouchExplorationEnabled()) {
+        if (this.f30145h.isEnabled() && this.f30145h.isTouchExplorationEnabled()) {
             int action = motionEvent.getAction();
             if (action != 7 && action != 9) {
-                if (action != 10 || this.f29748m == Integer.MIN_VALUE) {
+                if (action != 10 || this.f30150m == Integer.MIN_VALUE) {
                     return false;
                 }
                 V(Integer.MIN_VALUE);
@@ -527,7 +527,7 @@ public abstract class a extends androidx.core.view.a {
     }
 
     public final int x() {
-        return this.f29746k;
+        return this.f30148k;
     }
 
     public final k<p> y() {

@@ -10,26 +10,26 @@ public final class AFc1qSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NotNull
-    final List<AFc1pSDK> f5262d;
+    final List<AFc1pSDK> f5335d;
 
     public AFc1qSDK(@NotNull List<AFc1pSDK> list) {
         Intrinsics.checkNotNullParameter(list, "");
-        this.f5262d = list;
+        this.f5335d = list;
     }
 
     public final boolean equals(@Nullable Object obj) {
         if (this == obj) {
             return true;
         }
-        return (obj instanceof AFc1qSDK) && Intrinsics.c(this.f5262d, ((AFc1qSDK) obj).f5262d);
+        return (obj instanceof AFc1qSDK) && Intrinsics.c(this.f5335d, ((AFc1qSDK) obj).f5335d);
     }
 
     public final int hashCode() {
-        return this.f5262d.hashCode();
+        return this.f5335d.hashCode();
     }
 
     @NotNull
     public final String toString() {
-        return "StorageConfig(typeEntries=" + this.f5262d + ")";
+        return "StorageConfig(typeEntries=" + this.f5335d + ")";
     }
 }

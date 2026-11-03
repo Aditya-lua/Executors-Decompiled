@@ -1,11 +1,11 @@
 package com.withpersona.sdk2.inquiry.network.core;
 
 import com.withpersona.sdk2.inquiry.network.core.dto.UiComponentError;
+import hv.x;
 import java.io.IOException;
 import java.net.SocketTimeoutException;
 import java.util.Iterator;
 import java.util.List;
-import jv.x;
 import kotlin.Unit;
 import kotlin.collections.CollectionsKt;
 import kotlin.jvm.functions.Function1;
@@ -14,8 +14,8 @@ import kotlin.text.StringsKt;
 import okhttp3.ResponseBody;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import um.j;
-import um.w;
+import sm.j;
+import sm.w;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class NetworkUtilsKt {
@@ -25,8 +25,8 @@ public final class NetworkUtilsKt {
     public static final String SUBSYSTEM = "com.withpersona.sdk2.inquiry.network";
 
     /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.network.core.NetworkUtilsKt$enqueueWithRetryWhen$1, reason: invalid class name */
-    @pt.f(c = "com.withpersona.sdk2.inquiry.network.core.NetworkUtilsKt", f = "NetworkUtils.kt", l = {179}, m = "enqueueWithRetryWhen")
-    public static final class AnonymousClass1<T> extends pt.d {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.network.core.NetworkUtilsKt", f = "NetworkUtils.kt", l = {179}, m = "enqueueWithRetryWhen")
+    public static final class AnonymousClass1<T> extends nt.d {
         int I$0;
         Object L$0;
         Object L$1;
@@ -34,11 +34,11 @@ public final class NetworkUtilsKt {
         int label;
         /* synthetic */ Object result;
 
-        public AnonymousClass1(nt.b<? super AnonymousClass1> bVar) {
+        public AnonymousClass1(lt.b<? super AnonymousClass1> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
             this.result = obj;
@@ -48,7 +48,7 @@ public final class NetworkUtilsKt {
     }
 
     @Nullable
-    public static final <T> Object enqueueRetriableRequestWithRetry(@NotNull Function1<? super nt.b<? super x<T>>, ? extends Object> function1, @NotNull nt.b<? super NetworkCallResult<T>> bVar) {
+    public static final <T> Object enqueueRetriableRequestWithRetry(@NotNull Function1<? super lt.b<? super x<T>>, ? extends Object> function1, @NotNull lt.b<? super NetworkCallResult<T>> bVar) {
         return enqueueWithRetryWhen(function1, new Function1() { // from class: com.withpersona.sdk2.inquiry.network.core.f
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
@@ -58,7 +58,7 @@ public final class NetworkUtilsKt {
     }
 
     @Nullable
-    public static final <T> Object enqueueVerificationRequestWithRetry(@NotNull Function1<? super nt.b<? super x<T>>, ? extends Object> function1, @NotNull nt.b<? super NetworkCallResult<T>> bVar) {
+    public static final <T> Object enqueueVerificationRequestWithRetry(@NotNull Function1<? super lt.b<? super x<T>>, ? extends Object> function1, @NotNull lt.b<? super NetworkCallResult<T>> bVar) {
         return enqueueWithRetryWhen(function1, new Function1() { // from class: com.withpersona.sdk2.inquiry.network.core.g
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
@@ -89,7 +89,7 @@ public final class NetworkUtilsKt {
         	at jadx.core.dex.attributes.nodes.NotificationAttrNode.addError(NotificationAttrNode.java:19)
         */
     @org.jetbrains.annotations.Nullable
-    public static final <T> java.lang.Object enqueueWithRetryWhen(@org.jetbrains.annotations.NotNull kotlin.jvm.functions.Function1<? super nt.b<? super jv.x<T>>, ? extends java.lang.Object> r6, @org.jetbrains.annotations.NotNull kotlin.jvm.functions.Function1<? super com.withpersona.sdk2.inquiry.network.core.InternalErrorInfo.NetworkErrorInfo, java.lang.Boolean> r7, @org.jetbrains.annotations.NotNull nt.b<? super com.withpersona.sdk2.inquiry.network.core.NetworkCallResult<T>> r8) {
+    public static final <T> java.lang.Object enqueueWithRetryWhen(@org.jetbrains.annotations.NotNull kotlin.jvm.functions.Function1<? super lt.b<? super hv.x<T>>, ? extends java.lang.Object> r6, @org.jetbrains.annotations.NotNull kotlin.jvm.functions.Function1<? super com.withpersona.sdk2.inquiry.network.core.InternalErrorInfo.NetworkErrorInfo, java.lang.Boolean> r7, @org.jetbrains.annotations.NotNull lt.b<? super com.withpersona.sdk2.inquiry.network.core.NetworkCallResult<T>> r8) {
         /*
             boolean r0 = r8 instanceof com.withpersona.sdk2.inquiry.network.core.NetworkUtilsKt.AnonymousClass1
             if (r0 == 0) goto L13
@@ -107,7 +107,7 @@ public final class NetworkUtilsKt {
             r0.<init>(r8)
         L18:
             java.lang.Object r8 = r0.result
-            java.lang.Object r1 = ot.c.e()
+            java.lang.Object r1 = mt.c.e()
             int r2 = r0.label
             r3 = 1
             if (r2 == 0) goto L43
@@ -119,7 +119,7 @@ public final class NetworkUtilsKt {
             kotlin.jvm.functions.Function1 r7 = (kotlin.jvm.functions.Function1) r7
             java.lang.Object r2 = r0.L$0
             kotlin.jvm.functions.Function1 r2 = (kotlin.jvm.functions.Function1) r2
-            jt.o.b(r8)
+            gt.o.b(r8)
             r5 = r0
             r0 = r7
             r7 = r2
@@ -131,7 +131,7 @@ public final class NetworkUtilsKt {
             r6.<init>(r7)
             throw r6
         L43:
-            jt.o.b(r8)
+            gt.o.b(r8)
             r8 = 0
             r2 = 0
             r5 = r7
@@ -145,7 +145,7 @@ public final class NetworkUtilsKt {
             if (r6 >= r4) goto L90
             r2.L$0 = r7
             r2.L$1 = r8
-            java.lang.Object r0 = pt.l.a(r0)
+            java.lang.Object r0 = nt.l.a(r0)
             r2.L$2 = r0
             r2.I$0 = r6
             r2.label = r3
@@ -157,7 +157,7 @@ public final class NetworkUtilsKt {
             r0 = r8
             r8 = r5
         L69:
-            jv.x r8 = (jv.x) r8
+            hv.x r8 = (hv.x) r8
             boolean r4 = r8.g()
             if (r4 == 0) goto L7b
             com.withpersona.sdk2.inquiry.network.core.NetworkCallResult$Success r6 = new com.withpersona.sdk2.inquiry.network.core.NetworkCallResult$Success
@@ -187,7 +187,7 @@ public final class NetworkUtilsKt {
             r6.<init>(r7)
             throw r6
         */
-        throw new UnsupportedOperationException("Method not decompiled: com.withpersona.sdk2.inquiry.network.core.NetworkUtilsKt.enqueueWithRetryWhen(kotlin.jvm.functions.Function1, kotlin.jvm.functions.Function1, nt.b):java.lang.Object");
+        throw new UnsupportedOperationException("Method not decompiled: com.withpersona.sdk2.inquiry.network.core.NetworkUtilsKt.enqueueWithRetryWhen(kotlin.jvm.functions.Function1, kotlin.jvm.functions.Function1, lt.b):java.lang.Object");
     }
 
     @NotNull
@@ -228,7 +228,7 @@ public final class NetworkUtilsKt {
         List<ErrorResponse.Error> errors7;
         List<ErrorResponse.Error> errors8;
         ErrorResponse.Error error;
-        xu.g bodySource;
+        vu.g bodySource;
         String strH = xVar.h();
         ErrorResponse.Error rateLimitExceededError = null;
         String strH2 = (strH == null || StringsKt.p0(strH)) ? null : xVar.h();

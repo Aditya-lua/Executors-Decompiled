@@ -8,9 +8,9 @@ import java.util.concurrent.Callable;
 public final class x7 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Map f6897a = new HashMap();
+    public final Map f6971a = new HashMap();
 
     public final void a(String str, Callable callable) {
-        this.f6897a.put(str, callable);
+        this.f6971a.put(str, callable);
     }
 }

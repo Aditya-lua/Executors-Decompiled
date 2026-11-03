@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 public final class p {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Logger f32902a = Logger.getLogger(p.class.getName());
+    public static final Logger f33470a = Logger.getLogger(p.class.getName());
     public static final o b = new o(null);
 
     public static boolean a(String str) {

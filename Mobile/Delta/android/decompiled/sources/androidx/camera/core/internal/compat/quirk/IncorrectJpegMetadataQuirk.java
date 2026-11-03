@@ -13,10 +13,10 @@ import n0.g3;
 public final class IncorrectJpegMetadataQuirk implements g3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Set<String> f1393a = new HashSet(Arrays.asList("A24", "BEYOND0", "BEYOND2"));
+    public static final Set<String> f1238a = new HashSet(Arrays.asList("A24", "BEYOND0", "BEYOND2"));
 
     public static boolean i() {
-        return "Samsung".equalsIgnoreCase(Build.BRAND) && f1393a.contains(Build.DEVICE.toUpperCase(Locale.US));
+        return "Samsung".equalsIgnoreCase(Build.BRAND) && f1238a.contains(Build.DEVICE.toUpperCase(Locale.US));
     }
 
     public static boolean k() {
@@ -51,7 +51,7 @@ public final class IncorrectJpegMetadataQuirk implements g3 {
 
     public byte[] j(d dVar) {
         int iH = 0;
-        ByteBuffer byteBufferK = dVar.H1()[0].k();
+        ByteBuffer byteBufferK = dVar.E1()[0].k();
         byte[] bArr = new byte[byteBufferK.capacity()];
         byteBufferK.rewind();
         byteBufferK.get(bArr);

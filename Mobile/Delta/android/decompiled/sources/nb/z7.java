@@ -9,23 +9,23 @@ import java.util.concurrent.Callable;
 public final class z7 implements Callable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ zzr f26218a;
+    public final /* synthetic */ zzr f27039a;
     public final /* synthetic */ Bundle b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final /* synthetic */ i8 f26219c;
+    public final /* synthetic */ i8 f27040c;
 
     public z7(i8 i8Var, zzr zzrVar, Bundle bundle) {
-        this.f26218a = zzrVar;
+        this.f27039a = zzrVar;
         this.b = bundle;
         Objects.requireNonNull(i8Var);
-        this.f26219c = i8Var;
+        this.f27040c = i8Var;
     }
 
     @Override // java.util.concurrent.Callable
     public final /* bridge */ /* synthetic */ Object call() {
-        i8 i8Var = this.f26219c;
+        i8 i8Var = this.f27040c;
         i8Var.z2().E();
-        return i8Var.z2().q0(this.f26218a, this.b);
+        return i8Var.z2().q0(this.f27039a, this.b);
     }
 }

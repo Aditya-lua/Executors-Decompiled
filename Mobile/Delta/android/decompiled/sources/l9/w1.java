@@ -6,14 +6,14 @@ import com.google.android.gms.common.api.internal.BasePendingResult;
 public final class w1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ BasePendingResult f23101a;
+    public final /* synthetic */ BasePendingResult f23495a;
 
     public /* synthetic */ w1(BasePendingResult basePendingResult, v1 v1Var) {
-        this.f23101a = basePendingResult;
+        this.f23495a = basePendingResult;
     }
 
     public final void finalize() throws Throwable {
-        BasePendingResult.m(this.f23101a.f5736h);
+        BasePendingResult.m(this.f23495a.f5809h);
         super.finalize();
     }
 }

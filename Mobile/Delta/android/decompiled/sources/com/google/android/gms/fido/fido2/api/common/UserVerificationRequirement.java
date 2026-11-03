@@ -32,16 +32,16 @@ public enum UserVerificationRequirement implements Parcelable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final String f6025a;
+    public final String f6098a;
 
     UserVerificationRequirement(String str) {
-        this.f6025a = str;
+        this.f6098a = str;
     }
 
     @NonNull
     public static UserVerificationRequirement a(@NonNull String str) throws t {
         for (UserVerificationRequirement userVerificationRequirement : values()) {
-            if (str.equals(userVerificationRequirement.f6025a)) {
+            if (str.equals(userVerificationRequirement.f6098a)) {
                 return userVerificationRequirement;
             }
         }
@@ -56,11 +56,11 @@ public enum UserVerificationRequirement implements Parcelable {
     @Override // java.lang.Enum
     @NonNull
     public final String toString() {
-        return this.f6025a;
+        return this.f6098a;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(@NonNull Parcel parcel, int i10) {
-        parcel.writeString(this.f6025a);
+        parcel.writeString(this.f6098a);
     }
 }

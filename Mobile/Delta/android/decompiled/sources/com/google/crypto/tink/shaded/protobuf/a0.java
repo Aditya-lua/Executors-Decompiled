@@ -9,20 +9,20 @@ import java.util.RandomAccess;
 public final class a0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Charset f8388a = Charset.forName("US-ASCII");
+    public static final Charset f8462a = Charset.forName("US-ASCII");
     public static final Charset b = Charset.forName("UTF-8");
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final Charset f8389c = Charset.forName("ISO-8859-1");
+    public static final Charset f8463c = Charset.forName("ISO-8859-1");
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final byte[] f8390d;
+    public static final byte[] f8464d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final ByteBuffer f8391e;
+    public static final ByteBuffer f8465e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final com.google.crypto.tink.shaded.protobuf.i f8392f;
+    public static final com.google.crypto.tink.shaded.protobuf.i f8466f;
 
     public interface a extends i<Boolean> {
     }
@@ -61,9 +61,9 @@ public final class a0 {
 
     static {
         byte[] bArr = new byte[0];
-        f8390d = bArr;
-        f8391e = ByteBuffer.wrap(bArr);
-        f8392f = com.google.crypto.tink.shaded.protobuf.i.i(bArr);
+        f8464d = bArr;
+        f8465e = ByteBuffer.wrap(bArr);
+        f8466f = com.google.crypto.tink.shaded.protobuf.i.i(bArr);
     }
 
     public static <T> T a(T t8) {

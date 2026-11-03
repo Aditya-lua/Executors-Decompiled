@@ -15,32 +15,32 @@ import androidx.annotation.NonNull;
 public class h extends CheckedTextView {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final i f28985a;
+    public final i f29338a;
     public final e b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final a0 f28986c;
+    public final a0 f29339c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @NonNull
-    public n f28987d;
+    public n f29340d;
 
     public h(@NonNull Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, i.a.f19904t);
+        this(context, attributeSet, i.a.f20020t);
     }
 
     @NonNull
     private n getEmojiTextViewHelper() {
-        if (this.f28987d == null) {
-            this.f28987d = new n(this);
+        if (this.f29340d == null) {
+            this.f29340d = new n(this);
         }
-        return this.f28987d;
+        return this.f29340d;
     }
 
     @Override // android.widget.CheckedTextView, android.widget.TextView, android.view.View
     public void drawableStateChanged() {
         super.drawableStateChanged();
-        a0 a0Var = this.f28986c;
+        a0 a0Var = this.f29339c;
         if (a0Var != null) {
             a0Var.b();
         }
@@ -48,7 +48,7 @@ public class h extends CheckedTextView {
         if (eVar != null) {
             eVar.b();
         }
-        i iVar = this.f28985a;
+        i iVar = this.f29338a;
         if (iVar != null) {
             iVar.a();
         }
@@ -76,7 +76,7 @@ public class h extends CheckedTextView {
     }
 
     public ColorStateList getSupportCheckMarkTintList() {
-        i iVar = this.f28985a;
+        i iVar = this.f29338a;
         if (iVar != null) {
             return iVar.b();
         }
@@ -84,7 +84,7 @@ public class h extends CheckedTextView {
     }
 
     public PorterDuff.Mode getSupportCheckMarkTintMode() {
-        i iVar = this.f28985a;
+        i iVar = this.f29338a;
         if (iVar != null) {
             return iVar.c();
         }
@@ -92,11 +92,11 @@ public class h extends CheckedTextView {
     }
 
     public ColorStateList getSupportCompoundDrawablesTintList() {
-        return this.f28986c.j();
+        return this.f29339c.j();
     }
 
     public PorterDuff.Mode getSupportCompoundDrawablesTintMode() {
-        return this.f28986c.k();
+        return this.f29339c.k();
     }
 
     @Override // android.widget.TextView, android.view.View
@@ -131,7 +131,7 @@ public class h extends CheckedTextView {
     @Override // android.widget.CheckedTextView
     public void setCheckMarkDrawable(Drawable drawable) {
         super.setCheckMarkDrawable(drawable);
-        i iVar = this.f28985a;
+        i iVar = this.f29338a;
         if (iVar != null) {
             iVar.e();
         }
@@ -140,7 +140,7 @@ public class h extends CheckedTextView {
     @Override // android.widget.TextView
     public void setCompoundDrawables(Drawable drawable, Drawable drawable2, Drawable drawable3, Drawable drawable4) {
         super.setCompoundDrawables(drawable, drawable2, drawable3, drawable4);
-        a0 a0Var = this.f28986c;
+        a0 a0Var = this.f29339c;
         if (a0Var != null) {
             a0Var.p();
         }
@@ -149,7 +149,7 @@ public class h extends CheckedTextView {
     @Override // android.widget.TextView
     public void setCompoundDrawablesRelative(Drawable drawable, Drawable drawable2, Drawable drawable3, Drawable drawable4) {
         super.setCompoundDrawablesRelative(drawable, drawable2, drawable3, drawable4);
-        a0 a0Var = this.f28986c;
+        a0 a0Var = this.f29339c;
         if (a0Var != null) {
             a0Var.p();
         }
@@ -179,33 +179,33 @@ public class h extends CheckedTextView {
     }
 
     public void setSupportCheckMarkTintList(ColorStateList colorStateList) {
-        i iVar = this.f28985a;
+        i iVar = this.f29338a;
         if (iVar != null) {
             iVar.f(colorStateList);
         }
     }
 
     public void setSupportCheckMarkTintMode(PorterDuff.Mode mode) {
-        i iVar = this.f28985a;
+        i iVar = this.f29338a;
         if (iVar != null) {
             iVar.g(mode);
         }
     }
 
     public void setSupportCompoundDrawablesTintList(ColorStateList colorStateList) {
-        this.f28986c.w(colorStateList);
-        this.f28986c.b();
+        this.f29339c.w(colorStateList);
+        this.f29339c.b();
     }
 
     public void setSupportCompoundDrawablesTintMode(PorterDuff.Mode mode) {
-        this.f28986c.x(mode);
-        this.f28986c.b();
+        this.f29339c.x(mode);
+        this.f29339c.b();
     }
 
     @Override // android.widget.TextView
     public void setTextAppearance(@NonNull Context context, int i10) {
         super.setTextAppearance(context, i10);
-        a0 a0Var = this.f28986c;
+        a0 a0Var = this.f29339c;
         if (a0Var != null) {
             a0Var.q(context, i10);
         }
@@ -215,14 +215,14 @@ public class h extends CheckedTextView {
         super(x0.b(context), attributeSet, i10);
         v0.a(this, getContext());
         a0 a0Var = new a0(this);
-        this.f28986c = a0Var;
+        this.f29339c = a0Var;
         a0Var.m(attributeSet, i10);
         a0Var.b();
         e eVar = new e(this);
         this.b = eVar;
         eVar.e(attributeSet, i10);
         i iVar = new i(this);
-        this.f28985a = iVar;
+        this.f29338a = iVar;
         iVar.d(attributeSet, i10);
         getEmojiTextViewHelper().c(attributeSet, i10);
     }

@@ -4,7 +4,7 @@ package q7;
 public class n {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final r7.c.a f29262a = r7.c.a.a("fFamily", "fName", "fStyle", "ascent");
+    public static final r7.c.a f29615a = r7.c.a.a("fFamily", "fName", "fStyle", "ascent");
 
     public static l7.c a(r7.c cVar) {
         cVar.c();
@@ -13,7 +13,7 @@ public class n {
         float fH = 0.0f;
         String strM3 = null;
         while (cVar.f()) {
-            int iR = cVar.r(f29262a);
+            int iR = cVar.r(f29615a);
             if (iR == 0) {
                 strM = cVar.m();
             } else if (iR == 1) {

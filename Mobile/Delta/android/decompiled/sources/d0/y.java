@@ -12,16 +12,16 @@ import n0.k3;
 public class y {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final boolean f14270a;
+    public final boolean f14250a;
     public final boolean b;
 
     public y(k3 k3Var) {
-        this.f14270a = CaptureIntentPreviewQuirk.d(k3Var);
+        this.f14250a = CaptureIntentPreviewQuirk.d(k3Var);
         this.b = k3Var.a(ImageCaptureFailedForVideoSnapshotQuirk.class);
     }
 
     public Map<CaptureRequest.Key<?>, Object> a(int i10) {
-        if (i10 == 3 && this.f14270a) {
+        if (i10 == 3 && this.f14250a) {
             HashMap map = new HashMap();
             map.put(CaptureRequest.CONTROL_CAPTURE_INTENT, 1);
             return Collections.unmodifiableMap(map);

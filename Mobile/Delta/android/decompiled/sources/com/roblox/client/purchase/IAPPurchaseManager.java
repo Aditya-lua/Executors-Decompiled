@@ -9,66 +9,69 @@ import android.text.TextUtils;
 import android.view.WindowManager;
 import android.widget.TextView;
 import androidx.annotation.Keep;
+import cj.j;
+import cj.l;
+import cj.o;
+import cj.p;
 import com.roblox.client.personasdk.BuildConfig;
 import com.roblox.client.purchase.IAPPurchaseManager;
 import com.roblox.engine.jni.NativeGLInterface;
+import com.roblox.engine.jni.autovalue.NativePurchaseContext;
 import com.roblox.engine.jni.autovalue.PreparePaymentParams;
 import com.roblox.engine.jni.autovalue.ProcessPaymentParams;
-import ej.k;
-import fj.a0;
-import fj.m;
-import gk.p;
-import gk.s;
-import hj.ValidatePurchaseResponsePayload;
+import dj.a0;
+import dj.m;
+import ek.q;
+import ek.t;
+import fj.ValidatePurchaseResponsePayload;
 import java.util.HashMap;
-import sg.q0;
-import sg.y;
-import th.h;
-import vi.g;
-import wh.r0;
+import rg.q0;
+import rg.y;
+import rh.h;
+import uh.s0;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class IAPPurchaseManager {
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static ej.a f9182h = null;
+    public static cj.a f9255h = null;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static boolean f9183i = false;
+    public static boolean f9256i = false;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static ProgressDialog f9184j = null;
+    public static ProgressDialog f9257j = null;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static Activity f9185k = null;
+    public static Activity f9258k = null;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static String f9186l = "buyRobuxPage";
+    public static String f9259l = "buyRobuxPage";
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public static String f9187m = "buyUpsell";
+    public static String f9260m = "buyUpsell";
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public static String f9188n = "buyDevSub";
+    public static String f9261n = "buyDevSub";
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final boolean f9190c;
+    public final boolean f9263c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public ej.a f9191d;
+    public cj.a f9264d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public Handler f9192e;
+    public Handler f9265e;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public long f9189a = 0;
+    public long f9262a = 0;
     public String b = "";
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public r0 f9193f = new f();
+    public s0 f9266f = new f();
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public r0 f9194g = new f();
+    public s0 f9267g = new f();
 
     public class a implements Runnable {
         public a() {
@@ -76,7 +79,7 @@ public class IAPPurchaseManager {
 
         @Override // java.lang.Runnable
         public void run() {
-            IAPPurchaseManager.this.n(q0.f30962q1);
+            IAPPurchaseManager.this.r(q0.f30567q1);
         }
     }
 
@@ -86,7 +89,7 @@ public class IAPPurchaseManager {
 
         @Override // java.lang.Runnable
         public void run() {
-            IAPPurchaseManager.this.n(q0.f30962q1);
+            IAPPurchaseManager.this.r(q0.f30567q1);
         }
     }
 
@@ -96,7 +99,7 @@ public class IAPPurchaseManager {
 
         @Override // java.lang.Runnable
         public void run() {
-            IAPPurchaseManager.this.n(q0.f30965r1);
+            IAPPurchaseManager.this.r(q0.f30570r1);
         }
     }
 
@@ -106,68 +109,68 @@ public class IAPPurchaseManager {
 
         @Override // java.lang.Runnable
         public void run() {
-            IAPPurchaseManager.this.n(q0.f30962q1);
+            IAPPurchaseManager.this.r(q0.f30567q1);
         }
     }
 
     public class e implements Runnable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ k f9199a;
+        public final /* synthetic */ p f9272a;
         public final /* synthetic */ CharSequence b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ Activity f9200c;
+        public final /* synthetic */ Activity f9273c;
 
-        public e(k kVar, CharSequence charSequence, Activity activity) {
-            this.f9199a = kVar;
+        public e(p pVar, CharSequence charSequence, Activity activity) {
+            this.f9272a = pVar;
             this.b = charSequence;
-            this.f9200c = activity;
+            this.f9273c = activity;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            if (this.f9199a.f()) {
-                IAPPurchaseManager.p(this.b, this.f9200c);
+            if (this.f9272a.f()) {
+                IAPPurchaseManager.t(this.b, this.f9273c);
                 return;
             }
-            if (IAPPurchaseManager.f9183i) {
-                IAPPurchaseManager.f9182h.W(this.b.toString());
+            if (IAPPurchaseManager.f9256i) {
+                IAPPurchaseManager.f9255h.V(this.b.toString());
                 return;
             }
-            if (!h.a().c1()) {
-                IAPPurchaseManager.f9182h.q0().W(this.b.toString());
+            if (!h.a().k1()) {
+                IAPPurchaseManager.f9255h.q0().V(this.b.toString());
                 return;
             }
-            com.roblox.client.b bVarQ0 = IAPPurchaseManager.f9182h.q0();
+            com.roblox.client.b bVarQ0 = IAPPurchaseManager.f9255h.q0();
             if (bVarQ0 instanceof com.roblox.client.a) {
-                ((com.roblox.client.a) bVarQ0).W(this.b.toString());
+                ((com.roblox.client.a) bVarQ0).V(this.b.toString());
             } else {
-                p.h("rbx.purchaseflow", "PaymentsProtocol: paymentsProtocolPurchaseFinished stored_mActivityInterface.getRobloxActivity() is null.");
-                g.b().q("Payments-Protocol-Purchase-Finished-Null-Activity");
+                q.h("rbx.purchaseflow", "PaymentsProtocol: paymentsProtocolPurchaseFinished stored_mActivityInterface.getRobloxActivity() is null.");
+                ti.g.b().q("Payments-Protocol-Purchase-Finished-Null-Activity");
             }
         }
     }
 
-    public class f implements r0 {
+    public class f implements s0 {
 
         public class a implements Runnable {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ k f9202a;
+            public final /* synthetic */ p f9275a;
             public final /* synthetic */ CharSequence b;
 
-            public a(k kVar, CharSequence charSequence) {
-                this.f9202a = kVar;
+            public a(p pVar, CharSequence charSequence) {
+                this.f9275a = pVar;
                 this.b = charSequence;
             }
 
             @Override // java.lang.Runnable
             public void run() {
-                if (this.f9202a.f()) {
-                    IAPPurchaseManager.this.o(this.b);
+                if (this.f9275a.f()) {
+                    IAPPurchaseManager.this.s(this.b);
                 } else {
-                    IAPPurchaseManager.this.m(this.b.toString());
+                    IAPPurchaseManager.this.q(this.b.toString());
                 }
             }
         }
@@ -175,71 +178,127 @@ public class IAPPurchaseManager {
         public f() {
         }
 
-        @Override // wh.r0
+        @Override // uh.s0
         public void a(boolean z10, long j10, String str, String str2) {
-            IAPPurchaseManager.this.t(z10, j10, str, str2);
+            IAPPurchaseManager.this.x(z10, j10, str, str2);
         }
 
-        @Override // ej.j
+        @Override // cj.o
         public void b() {
         }
 
-        @Override // ej.j
-        public void c() {
-        }
-
-        @Override // ej.j
-        public void d() {
-        }
-
-        @Override // ej.j
-        public void e(k kVar) {
-            Activity activityF0 = IAPPurchaseManager.this.f9190c ? IAPPurchaseManager.this.f9191d.f0() : IAPPurchaseManager.this.f9191d.q0();
+        @Override // cj.o
+        public void c(p pVar) {
+            Activity activityF0 = IAPPurchaseManager.this.f9263c ? IAPPurchaseManager.this.f9264d.f0() : IAPPurchaseManager.this.f9264d.q0();
             if (activityF0 == null) {
                 return;
             }
-            IAPPurchaseManager.this.x(new a(kVar, kVar.d() ? IAPPurchaseManager.this.r(q0.f30968s1) : kVar.c(activityF0)));
+            IAPPurchaseManager.this.E(new a(pVar, pVar.d() ? IAPPurchaseManager.this.v(q0.f30573s1) : pVar.c(activityF0)));
+        }
+
+        @Override // cj.o
+        public void d() {
+        }
+
+        @Override // cj.o
+        public void e() {
         }
     }
 
-    public IAPPurchaseManager(ej.a aVar, boolean z10) {
-        this.f9191d = aVar;
-        this.f9190c = z10;
-        f9182h = aVar;
-        f9183i = z10;
-        this.f9192e = new Handler(Looper.getMainLooper());
+    public class g implements o {
+
+        /* JADX INFO: renamed from: a, reason: collision with root package name */
+        public final long f9277a;
+        public final String b;
+
+        /* JADX INFO: renamed from: c, reason: collision with root package name */
+        public final String f9278c;
+
+        public g(long j10, String str, String str2) {
+            this.f9277a = j10;
+            this.b = str;
+            this.f9278c = str2;
+        }
+
+        @Override // cj.o
+        public void b() {
+        }
+
+        /* JADX WARN: Multi-variable type inference failed */
+        @Override // cj.o
+        public void c(final p pVar) {
+            String strB;
+            if (!(pVar instanceof j) || (strB = ((j) pVar).b()) == null) {
+                strB = "";
+            }
+            String str = strB;
+            if (IAPPurchaseManager.f9259l.equals(this.f9278c)) {
+                final Activity activityF0 = IAPPurchaseManager.this.f9263c ? IAPPurchaseManager.this.f9264d.f0() : IAPPurchaseManager.this.f9264d.q0();
+                if (activityF0 != null) {
+                    IAPPurchaseManager.this.E(new Runnable() { // from class: cj.i
+                        @Override // java.lang.Runnable
+                        public final void run() {
+                            this.f5028a.g(activityF0, pVar);
+                        }
+                    });
+                }
+            } else {
+                IAPPurchaseManager.this.f9266f.c(pVar);
+            }
+            IAPPurchaseManager.this.x(pVar.d(), this.f9277a, this.b, str);
+        }
+
+        @Override // cj.o
+        public void d() {
+        }
+
+        @Override // cj.o
+        public void e() {
+        }
+
+        public final /* synthetic */ void g(Activity activity, p pVar) {
+            l.c(activity, pVar, this.b);
+        }
     }
 
-    public static void D(Context context, boolean z10) {
-        if (!s.g()) {
-            if (s.i()) {
-                String strK = fk.c.c().k();
-                long j10 = fk.c.c().j();
-                p.h("rbx.purchaseflow", "tryGrantPendingPurchases: username = " + strK + ", userId = " + j10);
+    public IAPPurchaseManager(cj.a aVar, boolean z10) {
+        this.f9264d = aVar;
+        this.f9263c = z10;
+        f9255h = aVar;
+        f9256i = z10;
+        this.f9265e = new Handler(Looper.getMainLooper());
+    }
+
+    public static void M(Context context, boolean z10) {
+        if (!t.g()) {
+            if (t.i()) {
+                String strK = dk.c.c().k();
+                long j10 = dk.c.c().j();
+                q.h("rbx.purchaseflow", "tryGrantPendingPurchases: username = " + strK + ", userId = " + j10);
                 if (TextUtils.isEmpty(strK)) {
                     return;
                 }
-                if (h.a().C5()) {
-                    ij.b.a(context);
+                if (h.a().M5()) {
+                    gj.b.a(context);
                     throw null;
                 }
                 if (j10 > 0) {
-                    ij.a.a(context);
+                    gj.a.a(context);
                     throw null;
                 }
-                ij.a.a(context);
+                gj.a.a(context);
                 throw null;
             }
             return;
         }
-        String strK2 = fk.c.c().k();
-        long j11 = fk.c.c().j();
+        String strK2 = dk.c.c().k();
+        long j11 = dk.c.c().j();
         if (TextUtils.isEmpty(strK2)) {
             return;
         }
-        p.h("rbx.purchaseflow", "tryGrantPendingPurchases: username = " + strK2 + ", userId = " + j11);
-        if (h.a().B1()) {
-            p.h("rbx.purchaseflow", "PaymentsProtocol: tryGrantPendingPurchases");
+        q.h("rbx.purchaseflow", "tryGrantPendingPurchases: username = " + strK2 + ", userId = " + j11);
+        if (h.a().L1()) {
+            q.h("rbx.purchaseflow", "PaymentsProtocol: tryGrantPendingPurchases");
             if (j11 > 0) {
                 a0.R(context).K(j11, z10);
                 return;
@@ -248,7 +307,7 @@ public class IAPPurchaseManager {
                 return;
             }
         }
-        if (h.a().g3() && h.a().p()) {
+        if (h.a().q3() && h.a().q()) {
             m.F0(context).m1(j11, strK2, z10);
         } else if (j11 > 0) {
             m.F0(context).A0(j11, strK2, z10);
@@ -258,61 +317,61 @@ public class IAPPurchaseManager {
     }
 
     public static /* synthetic */ void d(boolean z10) {
-        Activity activity = f9185k;
-        if (activity == null || activity.isFinishing() || f9185k.isDestroyed()) {
+        Activity activity = f9258k;
+        if (activity == null || activity.isFinishing() || f9258k.isDestroyed()) {
             return;
         }
-        if (f9184j == null) {
-            Activity activity2 = f9185k;
-            f9184j = q(activity2, null, activity2.getString(q0.P));
+        if (f9257j == null) {
+            Activity activity2 = f9258k;
+            f9257j = u(activity2, null, activity2.getString(q0.P));
         }
         if (z10) {
-            p.h("rbx.purchaseflow", "PaymentsProtocol: paymentsProtocolSetProgressBarDisplay show.");
-            f9184j.show();
+            q.h("rbx.purchaseflow", "PaymentsProtocol: paymentsProtocolSetProgressBarDisplay show.");
+            f9257j.show();
         } else {
-            p.h("rbx.purchaseflow", "PaymentsProtocol: paymentsProtocolSetProgressBarDisplay hide.");
-            f9184j.dismiss();
+            q.h("rbx.purchaseflow", "PaymentsProtocol: paymentsProtocolSetProgressBarDisplay hide.");
+            f9257j.dismiss();
         }
     }
 
     @Keep
     public static String getPlatformPaymentMethod() {
-        if (s.g()) {
+        if (t.g()) {
             return BuildConfig.STORE_TYPE;
         }
-        return (s.i() && h.a().C5()) ? "MilkyWayStore" : "";
+        return (t.i() && h.a().M5()) ? "MilkyWayStore" : "";
     }
 
     @Keep
     public static String getPlatformPaymentProviderType() {
-        if (s.g()) {
+        if (t.g()) {
             return BuildConfig.STORE_TYPE;
         }
-        return (s.i() && h.a().C5()) ? "MilkyWayStore" : "";
+        return (t.i() && h.a().M5()) ? "MilkyWayStore" : "";
     }
 
     @Keep
     public static boolean invokeStore(String str, String str2) {
-        p.h("rbx.purchaseflow", "PaymentsProtocol: invokeStore attempt.");
-        if (s.g()) {
-            Activity activityF0 = f9183i ? f9182h.f0() : f9182h.q0();
-            m.F0(activityF0).a(str, fk.c.c().j(), fk.c.c().k(), str2, activityF0);
+        q.h("rbx.purchaseflow", "PaymentsProtocol: invokeStore attempt.");
+        if (t.g()) {
+            Activity activityF0 = f9256i ? f9255h.f0() : f9255h.q0();
+            m.F0(activityF0).a(str, dk.c.c().j(), dk.c.c().k(), str2, activityF0);
             return false;
         }
-        if (!s.i()) {
+        if (!t.i()) {
             return false;
         }
-        ij.b.a(f9183i ? f9182h.f0() : f9182h.q0());
-        fk.c.c().j();
-        fk.c.c().k();
+        gj.b.a(f9256i ? f9255h.f0() : f9255h.q0());
+        dk.c.c().j();
+        dk.c.c().k();
         throw null;
     }
 
     @Keep
     public static void invokeStoreV2(String str, long j10, String str2) {
-        p.h("rbx.purchaseflow", "PaymentsProtocolV2: invokeStoreV2 attempt:" + str + ", " + j10 + ", " + str2);
-        if (s.g()) {
-            Activity activityF0 = f9183i ? f9182h.f0() : f9182h.q0();
+        q.h("rbx.purchaseflow", "PaymentsProtocolV2: invokeStoreV2 attempt:" + str + ", " + j10 + ", " + str2);
+        if (t.g()) {
+            Activity activityF0 = f9256i ? f9255h.f0() : f9255h.q0();
             a0.R(activityF0).Q(activityF0, new ValidatePurchaseResponsePayload(Long.valueOf(j10), str2, null), null, null);
         }
     }
@@ -341,44 +400,28 @@ public class IAPPurchaseManager {
 
     public static native void nativeSetUserId(long j10);
 
-    public static void p(CharSequence charSequence, Activity activity) {
-        androidx.appcompat.app.a aVarA = new androidx.appcompat.app.a.C0013a(activity).a();
-        TextView textView = new TextView(activity);
-        String string = activity.getString(q0.W);
-        int iIndexOf = charSequence.toString().indexOf(string);
-        hk.b.b(textView, charSequence.toString(), new hk.c(activity, null, string, iIndexOf, iIndexOf + string.length()));
-        textView.setTextSize(20.0f);
-        textView.setEllipsize(null);
-        aVarA.w(textView, 150, 100, 150, 100);
-        aVarA.setCanceledOnTouchOutside(true);
-        try {
-            aVarA.show();
-        } catch (WindowManager.BadTokenException unused) {
-        }
-    }
-
     @Keep
     public static boolean paymentsProtocolConcludeTransaction(String str, long j10, long j11) {
-        p.h("rbx.purchaseflow", "PaymentsProtocol: paymentsProtocolConcludeTransaction attempt.");
-        if (s.g()) {
-            m.F0(f9183i ? f9182h.f0() : f9182h.q0()).g(str, j10, fk.c.c().j());
+        q.h("rbx.purchaseflow", "PaymentsProtocol: paymentsProtocolConcludeTransaction attempt.");
+        if (t.g()) {
+            m.F0(f9256i ? f9255h.f0() : f9255h.q0()).g(str, j10, dk.c.c().j());
             return true;
         }
-        if (!s.i()) {
+        if (!t.i()) {
             return false;
         }
-        ij.b.a(f9183i ? f9182h.f0() : f9182h.q0());
-        fk.c.c().j();
+        gj.b.a(f9256i ? f9255h.f0() : f9255h.q0());
+        dk.c.c().j();
         throw null;
     }
 
     @Keep
     public static void paymentsProtocolHandlePreparePaymentErrorCode(int i10) {
-        if (h.a().B2()) {
-            if (s.g()) {
-                m.F0(f9183i ? f9182h.f0() : f9182h.q0()).m(i10);
-            } else if (s.i()) {
-                ij.b.a(f9183i ? f9182h.f0() : f9182h.q0());
+        if (h.a().M2()) {
+            if (t.g()) {
+                m.F0(f9256i ? f9255h.f0() : f9255h.q0()).m(i10);
+            } else if (t.i()) {
+                gj.b.a(f9256i ? f9255h.f0() : f9255h.q0());
                 throw null;
             }
         }
@@ -386,34 +429,34 @@ public class IAPPurchaseManager {
 
     @Keep
     public static void paymentsProtocolProcessPaymentCallback(long[] jArr, int i10, String str, String str2) {
-        p.h("rbx.purchaseflow", "PaymentsProtocolV2: paymentsProtocolProcessPaymentCallback attempt.");
-        if (s.g()) {
-            a0.R(f9183i ? f9182h.f0() : f9182h.q0()).q0(jArr, i10, str, str2);
+        q.h("rbx.purchaseflow", "PaymentsProtocolV2: paymentsProtocolProcessPaymentCallback attempt.");
+        if (t.g()) {
+            a0.R(f9256i ? f9255h.f0() : f9255h.q0()).q0(jArr, i10, str, str2);
         }
     }
 
     @Keep
-    public static void paymentsProtocolPurchaseFinished(k kVar) {
-        p.h("rbx.purchaseflow", "PaymentsProtocol: paymentsProtocolPurchaseFinished attempt.");
-        Activity activityF0 = f9183i ? f9182h.f0() : f9182h.q0();
+    public static void paymentsProtocolPurchaseFinished(p pVar) {
+        q.h("rbx.purchaseflow", "PaymentsProtocol: paymentsProtocolPurchaseFinished attempt.");
+        Activity activityF0 = f9256i ? f9255h.f0() : f9255h.q0();
         if (activityF0 == null) {
             return;
         }
-        new Handler(Looper.getMainLooper()).post(new e(kVar, kVar.c(activityF0), activityF0));
+        new Handler(Looper.getMainLooper()).post(new e(pVar, pVar.c(activityF0), activityF0));
     }
 
     @Keep
     public static void paymentsProtocolSetProgressBarDisplay(final boolean z10) {
-        if (h.a().d5()) {
-            p.h("rbx.purchaseflow", "PaymentsProtocol: paymentsProtocolSetProgressBarDisplay attempt.");
-            if (z10 || f9185k != null) {
-                if (f9185k == null) {
-                    p.h("rbx.purchaseflow", "PaymentsProtocol: initializing mPaymentsProtocolActivity");
-                    f9185k = f9182h.q0();
+        if (h.a().q5()) {
+            q.h("rbx.purchaseflow", "PaymentsProtocol: paymentsProtocolSetProgressBarDisplay attempt.");
+            if (z10 || f9258k != null) {
+                if (f9258k == null) {
+                    q.h("rbx.purchaseflow", "PaymentsProtocol: initializing mPaymentsProtocolActivity");
+                    f9258k = f9255h.q0();
                 }
-                Activity activity = f9185k;
+                Activity activity = f9258k;
                 if (activity != null) {
-                    activity.runOnUiThread(new Runnable() { // from class: ej.b
+                    activity.runOnUiThread(new Runnable() { // from class: cj.b
                         @Override // java.lang.Runnable
                         public final void run() {
                             IAPPurchaseManager.d(z10);
@@ -424,7 +467,35 @@ public class IAPPurchaseManager {
         }
     }
 
-    public static ProgressDialog q(Context context, String str, String str2) {
+    @Keep
+    public static boolean setCheckoutSessionId(String str) {
+        if (t.g()) {
+            return m.F0(f9256i ? f9255h.f0() : f9255h.q0()).l(str);
+        }
+        if (!t.i() || !h.a().M5()) {
+            return false;
+        }
+        gj.b.a(f9256i ? f9255h.f0() : f9255h.q0());
+        throw null;
+    }
+
+    public static void t(CharSequence charSequence, Activity activity) {
+        androidx.appcompat.app.a aVarA = new androidx.appcompat.app.a.C0009a(activity).a();
+        TextView textView = new TextView(activity);
+        String string = activity.getString(q0.W);
+        int iIndexOf = charSequence.toString().indexOf(string);
+        fk.b.b(textView, charSequence.toString(), new fk.c(activity, null, string, iIndexOf, iIndexOf + string.length()));
+        textView.setTextSize(20.0f);
+        textView.setEllipsize(null);
+        aVarA.x(textView, 150, 100, 150, 100);
+        aVarA.setCanceledOnTouchOutside(true);
+        try {
+            aVarA.show();
+        } catch (WindowManager.BadTokenException unused) {
+        }
+    }
+
+    public static ProgressDialog u(Context context, String str, String str2) {
         ProgressDialog progressDialog = new ProgressDialog(context);
         progressDialog.setTitle(str);
         progressDialog.setMessage(str2);
@@ -435,188 +506,153 @@ public class IAPPurchaseManager {
         return progressDialog;
     }
 
-    @Keep
-    public static boolean setCheckoutSessionId(String str) {
-        if (s.g()) {
-            return m.F0(f9183i ? f9182h.f0() : f9182h.q0()).l(str);
-        }
-        if (!s.i() || !h.a().C5()) {
-            return false;
-        }
-        ij.b.a(f9183i ? f9182h.f0() : f9182h.q0());
-        throw null;
+    public final /* synthetic */ void A() {
+        r(q0.f30582v1);
     }
 
-    public void A(long j10, String str, String str2) {
-        p.h("rbx.purchaseflow", "promptNativePurchaseWithPayload: userId = " + j10 + ", roblox-native-productId = " + str);
-        this.f9189a = j10;
-        if (s.j()) {
-            p.e("rbx.purchaseflow", "Luobu purchasing not enabled");
-            s(false, j10, str);
+    public final /* synthetic */ void B() {
+        r(q0.f30567q1);
+    }
+
+    public final /* synthetic */ void C() {
+        r(q0.f30582v1);
+    }
+
+    public final /* synthetic */ void D() {
+        r(q0.f30567q1);
+    }
+
+    public void E(Runnable runnable) {
+        this.f9265e.post(runnable);
+    }
+
+    public void F(long j10, String str) {
+        J(j10, str, "");
+    }
+
+    public void G(long j10, String str, String str2) {
+        K(j10, str, str2, "");
+    }
+
+    public void H(long j10, String str, NativePurchaseContext nativePurchaseContext) {
+        String strPaymentSessionId = nativePurchaseContext.paymentSessionId();
+        if (strPaymentSessionId == null) {
+            strPaymentSessionId = "";
+        }
+        L(j10, str, strPaymentSessionId, nativePurchaseContext.purchaseType(), nativePurchaseContext.isInApp());
+    }
+
+    public void I(long j10, String str, String str2) {
+        q.h("rbx.purchaseflow", "promptNativePurchaseWithPayload: userId = " + j10 + ", roblox-native-productId = " + str);
+        this.f9262a = j10;
+        if (t.j()) {
+            q.e("rbx.purchaseflow", "Luobu purchasing not enabled");
+            w(false, j10, str);
             return;
         }
-        Activity activityF0 = this.f9190c ? this.f9191d.f0() : this.f9191d.q0();
-        if (s.i()) {
-            if (!h.a().C5()) {
-                ij.a.a(activityF0);
+        Activity activityF0 = this.f9263c ? this.f9264d.f0() : this.f9264d.q0();
+        if (t.i()) {
+            if (!h.a().M5()) {
+                gj.a.a(activityF0);
                 throw null;
             }
-            x(new c());
-            s(false, j10, str);
+            E(new c());
+            w(false, j10, str);
             return;
         }
-        if (h.a().B1()) {
-            p.h("rbx.purchaseflow", "PaymentsProtocolV2: promptNativePurchaseWithPayload.");
-            if (a0.R(activityF0).d(j10, str, str2, activityF0, true, this.f9193f)) {
+        if (h.a().L1()) {
+            q.h("rbx.purchaseflow", "PaymentsProtocolV2: promptNativePurchaseWithPayload.");
+            if (a0.R(activityF0).h(j10, str, str2, activityF0, true, this.f9266f)) {
                 return;
             }
-            x(new Runnable() { // from class: ej.c
+            E(new Runnable() { // from class: cj.g
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f15610a.u();
+                    this.f5026a.y();
                 }
             });
-            s(false, j10, str);
+            w(false, j10, str);
             return;
         }
-        if (!h.a().g3()) {
-            if (m.F0(activityF0).d(j10, str, str2, activityF0, true, this.f9193f)) {
+        if (!h.a().q3()) {
+            if (m.F0(activityF0).h(j10, str, str2, activityF0, true, this.f9266f)) {
                 return;
             }
-            x(new d());
-            s(false, j10, str);
+            E(new d());
+            w(false, j10, str);
             return;
         }
-        p.h("rbx.purchaseflow", "PaymentsProtocol: promptNativePurchaseWithPayload.");
-        nativeSetMetricsPurchaseType(f9188n);
+        q.h("rbx.purchaseflow", "PaymentsProtocol: promptNativePurchaseWithPayload.");
+        nativeSetMetricsPurchaseType(f9261n);
         m mVarF0 = m.F0(activityF0);
         mVarF0.k(false);
-        if (h.a().R()) {
-            mVarF0.b(this.f9193f);
+        if (h.a().T()) {
+            mVarF0.j(this.f9266f);
         }
         nativeSetPaymentsProtocolIsInApp(false);
         nativeSetPaymentSessionId("");
         nativeSetUserId(j10);
-        mVarF0.f(str, j10, fk.c.c().k(), activityF0, str2);
+        mVarF0.f(str, j10, dk.c.c().k(), activityF0, str2);
     }
 
-    public void B(long j10, String str, String str2) {
-        p.h("rbx.purchaseflow", "promptNativePurchase: userId = " + j10 + ", productId = " + str);
-        this.f9189a = j10;
+    public void J(long j10, String str, String str2) {
+        L(j10, str, str2, f9260m, false);
+    }
+
+    public void K(long j10, String str, String str2, String str3) {
+        q.h("rbx.purchaseflow", "promptNativePurchase: player = " + j10 + ", productId = " + str);
+        this.f9262a = j10;
         this.b = str;
-        if (s.j()) {
-            Activity activityF0 = this.f9190c ? this.f9191d.f0() : this.f9191d.q0();
+        if (t.j()) {
+            Activity activityF0 = this.f9263c ? this.f9264d.f0() : this.f9264d.q0();
             if (activityF0 == null || activityF0.isFinishing()) {
                 return;
             }
-            y.h().j(activityF0).a(activityF0, str, j10, this.f9193f);
+            y.h().j(activityF0).b(activityF0, str, j10, this.f9266f);
             return;
         }
-        if (s.i()) {
-            Activity activityF1 = this.f9190c ? this.f9191d.f0() : this.f9191d.q0();
-            if (h.a().C5()) {
-                nativeSetMetricsPurchaseType(f9187m);
-                ij.b.a(activityF1);
+        if (t.i()) {
+            Activity activityF1 = this.f9263c ? this.f9264d.f0() : this.f9264d.q0();
+            if (!h.a().M5()) {
+                gj.a.a(activityF1);
                 throw null;
             }
-            ij.a.a(activityF1);
-            Long.toString(j10);
+            nativeSetMetricsPurchaseType(f9260m);
+            gj.b.a(activityF1);
             throw null;
         }
-        Activity activityF2 = this.f9190c ? this.f9191d.f0() : this.f9191d.q0();
-        if (h.a().B1()) {
-            p.h("rbx.purchaseflow", "PaymentsProtocolV2: promptNativePurchase.");
-            if (a0.R(activityF2).n(Long.toString(j10), str, activityF2, j10, this.f9193f)) {
+        Activity activityF2 = this.f9263c ? this.f9264d.f0() : this.f9264d.q0();
+        if (h.a().L1()) {
+            q.h("rbx.purchaseflow", "PaymentsProtocolV2: promptNativePurchase.");
+            if (a0.R(activityF2).n(str2, str, activityF2, j10, this.f9266f)) {
                 return;
             }
-            x(new Runnable() { // from class: ej.d
+            E(new Runnable() { // from class: cj.h
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f15611a.w();
+                    this.f5027a.z();
                 }
             });
-            s(false, j10, str);
+            w(false, j10, str);
             return;
         }
-        if (!h.a().g3()) {
-            if (m.F0(activityF2).n(Long.toString(j10), str, activityF2, j10, this.f9193f)) {
+        if (!h.a().q3()) {
+            if (m.F0(activityF2).n(str2, str, activityF2, j10, this.f9266f)) {
                 return;
             }
-            x(new b());
-            s(false, j10, str);
+            E(new a());
+            w(false, j10, str);
             return;
         }
-        nativeSetMetricsPurchaseType(f9187m);
+        nativeSetMetricsPurchaseType(f9260m);
         m mVarF0 = m.F0(activityF2);
-        mVarF0.j(null);
+        mVarF0.i(null);
         mVarF0.k(false);
-        if (h.a().R()) {
-            mVarF0.b(this.f9193f);
+        if (h.a().T()) {
+            mVarF0.j(this.f9266f);
         }
         nativeSetPaymentsProtocolIsInApp(false);
-        if (h.a().F1()) {
-            nativeSetPaymentSessionId(str2);
-        } else {
-            nativeSetPaymentSessionId("");
-        }
-        nativeSetProviderCurrencyCode(mVarF0.c(str));
-        nativeBeginPaymentsProtocolPurchase(str);
-    }
-
-    public void C(long j10, String str, String str2, String str3) {
-        p.h("rbx.purchaseflow", "promptNativePurchase: player = " + j10 + ", productId = " + str);
-        this.f9189a = j10;
-        this.b = str;
-        if (s.j()) {
-            Activity activityF0 = this.f9190c ? this.f9191d.f0() : this.f9191d.q0();
-            if (activityF0 == null || activityF0.isFinishing()) {
-                return;
-            }
-            y.h().j(activityF0).a(activityF0, str, j10, this.f9193f);
-            return;
-        }
-        if (s.i()) {
-            Activity activityF1 = this.f9190c ? this.f9191d.f0() : this.f9191d.q0();
-            if (!h.a().C5()) {
-                ij.a.a(activityF1);
-                throw null;
-            }
-            nativeSetMetricsPurchaseType(f9187m);
-            ij.b.a(activityF1);
-            throw null;
-        }
-        Activity activityF2 = this.f9190c ? this.f9191d.f0() : this.f9191d.q0();
-        if (h.a().B1()) {
-            p.h("rbx.purchaseflow", "PaymentsProtocolV2: promptNativePurchase.");
-            if (a0.R(activityF2).n(str2, str, activityF2, j10, this.f9193f)) {
-                return;
-            }
-            x(new Runnable() { // from class: ej.e
-                @Override // java.lang.Runnable
-                public final void run() {
-                    this.f15612a.v();
-                }
-            });
-            s(false, j10, str);
-            return;
-        }
-        if (!h.a().g3()) {
-            if (m.F0(activityF2).n(str2, str, activityF2, j10, this.f9193f)) {
-                return;
-            }
-            x(new a());
-            s(false, j10, str);
-            return;
-        }
-        nativeSetMetricsPurchaseType(f9187m);
-        m mVarF0 = m.F0(activityF2);
-        mVarF0.j(null);
-        mVarF0.k(false);
-        if (h.a().R()) {
-            mVarF0.b(this.f9193f);
-        }
-        nativeSetPaymentsProtocolIsInApp(false);
-        if (h.a().F1()) {
+        if (h.a().P1()) {
             nativeSetPaymentSessionId(str3);
         } else {
             nativeSetPaymentSessionId("");
@@ -625,46 +661,161 @@ public class IAPPurchaseManager {
         nativeBeginPaymentsProtocolPurchase(str);
     }
 
-    public final void m(String str) {
-        if (this.f9190c) {
-            this.f9191d.W(str);
+    public final void L(long j10, String str, String str2, String str3, boolean z10) {
+        q.h("rbx.purchaseflow", "promptNativePurchase: userId = " + j10 + ", productId = " + str);
+        this.f9262a = j10;
+        this.b = str;
+        if (t.j()) {
+            Activity activityF0 = this.f9263c ? this.f9264d.f0() : this.f9264d.q0();
+            if (activityF0 == null || activityF0.isFinishing()) {
+                return;
+            }
+            if (h.a().D4() && z10) {
+                y.h().j(activityF0).a(activityF0, str, new g(j10, str, str3));
+                return;
+            } else {
+                y.h().j(activityF0).b(activityF0, str, j10, this.f9266f);
+                return;
+            }
+        }
+        if (t.i()) {
+            Activity activityF1 = this.f9263c ? this.f9264d.f0() : this.f9264d.q0();
+            if (h.a().M5()) {
+                nativeSetMetricsPurchaseType(f9260m);
+                gj.b.a(activityF1);
+                throw null;
+            }
+            gj.a.a(activityF1);
+            if (!h.a().D4() || !z10) {
+                Long.toString(j10);
+                throw null;
+            }
+            E(new Runnable() { // from class: cj.c
+                @Override // java.lang.Runnable
+                public final void run() {
+                    this.f5022a.A();
+                }
+            });
+            w(false, j10, str);
+            return;
+        }
+        Activity activityF2 = this.f9263c ? this.f9264d.f0() : this.f9264d.q0();
+        if (h.a().L1()) {
+            q.h("rbx.purchaseflow", "PaymentsProtocolV2: promptNativePurchase.");
+            if (a0.R(activityF2).n(Long.toString(j10), str, activityF2, j10, this.f9266f)) {
+                return;
+            }
+            E(new Runnable() { // from class: cj.d
+                @Override // java.lang.Runnable
+                public final void run() {
+                    this.f5023a.B();
+                }
+            });
+            w(false, j10, str);
+            return;
+        }
+        if (!h.a().q3()) {
+            m mVarF0 = m.F0(activityF2);
+            if (!h.a().D4() || !z10) {
+                if (mVarF0.n(Long.toString(j10), str, activityF2, j10, this.f9266f)) {
+                    return;
+                }
+                E(new b());
+                w(false, j10, str);
+                return;
+            }
+            if (mVarF0 == null) {
+                E(new Runnable() { // from class: cj.e
+                    @Override // java.lang.Runnable
+                    public final void run() {
+                        this.f5024a.C();
+                    }
+                });
+                w(false, j10, str);
+                return;
+            } else {
+                if (mVarF0.b(dk.c.c().k(), str, activityF2, new g(j10, str, str3), false, str2)) {
+                    return;
+                }
+                E(new Runnable() { // from class: cj.f
+                    @Override // java.lang.Runnable
+                    public final void run() {
+                        this.f5025a.D();
+                    }
+                });
+                w(false, j10, str);
+                return;
+            }
+        }
+        if (h.a().D4()) {
+            nativeSetMetricsPurchaseType(str3);
         } else {
-            this.f9191d.q0().W(str);
+            nativeSetMetricsPurchaseType(f9260m);
+        }
+        m mVarF1 = m.F0(activityF2);
+        mVarF1.i(null);
+        if (h.a().D4()) {
+            mVarF1.k(z10);
+        } else {
+            mVarF1.k(false);
+        }
+        if (h.a().T()) {
+            mVarF1.j(this.f9266f);
+        }
+        if (h.a().D4()) {
+            nativeSetPaymentsProtocolIsInApp(z10);
+        } else {
+            nativeSetPaymentsProtocolIsInApp(false);
+        }
+        if (h.a().P1()) {
+            nativeSetPaymentSessionId(str2);
+        } else {
+            nativeSetPaymentSessionId("");
+        }
+        nativeSetProviderCurrencyCode(mVarF1.c(str));
+        nativeBeginPaymentsProtocolPurchase(str);
+    }
+
+    public final void q(String str) {
+        if (this.f9263c) {
+            this.f9264d.V(str);
+        } else {
+            this.f9264d.q0().V(str);
         }
     }
 
-    public final void n(int i10) {
-        if (this.f9190c) {
-            this.f9191d.U(i10);
+    public final void r(int i10) {
+        if (this.f9263c) {
+            this.f9264d.T(i10);
         } else {
-            this.f9191d.q0().U(i10);
+            this.f9264d.q0().T(i10);
         }
     }
 
-    public void o(CharSequence charSequence) {
-        Activity activityF0 = this.f9190c ? this.f9191d.f0() : this.f9191d.q0();
+    public void s(CharSequence charSequence) {
+        Activity activityF0 = this.f9263c ? this.f9264d.f0() : this.f9264d.q0();
         if (activityF0 == null) {
             return;
         }
-        p(charSequence, activityF0);
+        t(charSequence, activityF0);
     }
 
-    public String r(int i10) {
-        return this.f9190c ? this.f9191d.f0().getString(i10) : this.f9191d.q0().getString(i10);
+    public String v(int i10) {
+        return this.f9263c ? this.f9264d.f0().getString(i10) : this.f9264d.q0().getString(i10);
     }
 
-    public final void s(boolean z10, long j10, String str) {
-        t(z10, j10, str, "");
+    public final void w(boolean z10, long j10, String str) {
+        x(z10, j10, str, "");
     }
 
-    public final void t(boolean z10, long j10, String str, String str2) {
-        p.h("rbx.purchaseflow", "In-App purchase finished: success = " + z10 + ", player=" + j10 + ", productId=" + str + ", checkoutSessionId=" + str2);
-        if (this.f9189a == 0) {
-            p.h("rbx.purchaseflow", "AppShellFragment.inAppPurchaseFinished: userId == 0.");
+    public final void x(boolean z10, long j10, String str, String str2) {
+        q.h("rbx.purchaseflow", "In-App purchase finished: success = " + z10 + ", player=" + j10 + ", productId=" + str + ", checkoutSessionId=" + str2);
+        if (this.f9262a == 0) {
+            q.h("rbx.purchaseflow", "AppShellFragment.inAppPurchaseFinished: userId == 0.");
             return;
         }
-        p.h("rbx.purchaseflow", "Native call. Success=" + z10 + ", player=" + j10 + ", productId=" + str + ", checkoutSessionId" + str2);
-        if (h.a().l1()) {
+        q.h("rbx.purchaseflow", "Native call. Success=" + z10 + ", player=" + j10 + ", productId=" + str + ", checkoutSessionId" + str2);
+        if (h.a().u1()) {
             if (str2 == null) {
                 str2 = "";
             }
@@ -673,30 +824,14 @@ public class IAPPurchaseManager {
             NativeGLInterface.nativeInGamePurchaseFinished(z10, j10, str);
         }
         this.b = "";
-        this.f9189a = 0L;
+        this.f9262a = 0L;
     }
 
-    public final /* synthetic */ void u() {
-        n(q0.f30962q1);
+    public final /* synthetic */ void y() {
+        r(q0.f30567q1);
     }
 
-    public final /* synthetic */ void v() {
-        n(q0.f30962q1);
-    }
-
-    public final /* synthetic */ void w() {
-        n(q0.f30962q1);
-    }
-
-    public void x(Runnable runnable) {
-        this.f9192e.post(runnable);
-    }
-
-    public void y(long j10, String str) {
-        B(j10, str, "");
-    }
-
-    public void z(long j10, String str, String str2) {
-        C(j10, str, str2, "");
+    public final /* synthetic */ void z() {
+        r(q0.f30567q1);
     }
 }

@@ -18,26 +18,26 @@ public class DeleteBytesRequest extends AbstractSafeParcelable {
     public static final Parcelable.Creator<DeleteBytesRequest> CREATOR = new c();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final List f5662f;
+    public final List f5735f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final boolean f5663g;
+    public final boolean f5736g;
 
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public List f5664a = new ArrayList();
+        public List f5737a = new ArrayList();
         public boolean b = false;
 
         @NonNull
         public DeleteBytesRequest a() {
-            return new DeleteBytesRequest(this.f5664a, this.b);
+            return new DeleteBytesRequest(this.f5737a, this.b);
         }
 
         @NonNull
         public a b(@NonNull List<String> list) {
             m.m(list, "Keys cannot be set to null");
-            this.f5664a = list;
+            this.f5737a = list;
             return this;
         }
     }
@@ -50,25 +50,25 @@ public class DeleteBytesRequest extends AbstractSafeParcelable {
             }
             m.q(z11, "deleteAll was set to true but other constraint(s) was also provided: keys");
         }
-        this.f5663g = z10;
-        this.f5662f = new ArrayList();
+        this.f5736g = z10;
+        this.f5735f = new ArrayList();
         if (list != null) {
             Iterator it = list.iterator();
             while (it.hasNext()) {
                 String str = (String) it.next();
                 m.g(str, "Element in keys cannot be null or empty");
-                this.f5662f.add(str);
+                this.f5735f.add(str);
             }
         }
     }
 
     public boolean v3() {
-        return this.f5663g;
+        return this.f5736g;
     }
 
     @NonNull
     public List<String> w3() {
-        return Collections.unmodifiableList(this.f5662f);
+        return Collections.unmodifiableList(this.f5735f);
     }
 
     @Override // android.os.Parcelable

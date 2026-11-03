@@ -1,9 +1,9 @@
 package androidx.p000lifecycle;
 
+import iu.g1;
+import iu.z2;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
-import ku.g1;
-import ku.z2;
 import org.jetbrains.annotations.NotNull;
 
 /* JADX INFO: loaded from: classes.dex */
@@ -18,7 +18,7 @@ public final class q {
             if (nVar2 != null) {
                 return nVar2;
             }
-            nVar = new n(lVar, z2.b(null, 1, null).plus(g1.c().X()));
+            nVar = new n(lVar, z2.b(null, 1, null).plus(g1.c().W()));
         } while (!lVar.c().a(null, nVar));
         nVar.c();
         return nVar;

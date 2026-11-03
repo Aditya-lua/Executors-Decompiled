@@ -7,7 +7,7 @@ import java.util.Arrays;
 public final class h {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final y7.c f4038a;
+    public final y7.c f3936a;
     public final byte[] b;
 
     public h(@NonNull y7.c cVar, @NonNull byte[] bArr) {
@@ -17,7 +17,7 @@ public final class h {
         if (bArr == null) {
             throw new NullPointerException("bytes is null");
         }
-        this.f4038a = cVar;
+        this.f3936a = cVar;
         this.b = bArr;
     }
 
@@ -26,7 +26,7 @@ public final class h {
     }
 
     public y7.c b() {
-        return this.f4038a;
+        return this.f3936a;
     }
 
     public boolean equals(Object obj) {
@@ -37,17 +37,17 @@ public final class h {
             return false;
         }
         h hVar = (h) obj;
-        if (this.f4038a.equals(hVar.f4038a)) {
+        if (this.f3936a.equals(hVar.f3936a)) {
             return Arrays.equals(this.b, hVar.b);
         }
         return false;
     }
 
     public int hashCode() {
-        return ((this.f4038a.hashCode() ^ 1000003) * 1000003) ^ Arrays.hashCode(this.b);
+        return ((this.f3936a.hashCode() ^ 1000003) * 1000003) ^ Arrays.hashCode(this.b);
     }
 
     public String toString() {
-        return "EncodedPayload{encoding=" + this.f4038a + ", bytes=[...]}";
+        return "EncodedPayload{encoding=" + this.f3936a + ", bytes=[...]}";
     }
 }

@@ -1,32 +1,41 @@
 package jv;
 
-import android.annotation.TargetApi;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.concurrent.Executor;
+import hv.h;
+import okhttp3.ResponseBody;
+import sm.j;
+import sm.m;
+import vu.g;
 
-/* JADX INFO: loaded from: classes2.dex */
-public class c {
+/* JADX INFO: loaded from: classes3.dex */
+public final class c<T> implements h<ResponseBody, T> {
+    public static final vu.h b = vu.h.c("EFBBBF");
 
-    @TargetApi(24)
-    public static final class a extends c {
-        @Override // jv.c
-        public List<? extends e.a> a(Executor executor) {
-            return Arrays.asList(new g(), new i(executor));
-        }
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    public final sm.h<T> f22214a;
 
-        @Override // jv.c
-        public List<? extends h.a> b() {
-            return Collections.singletonList(new r());
-        }
+    public c(sm.h<T> hVar) {
+        this.f22214a = hVar;
     }
 
-    public List<? extends e.a> a(Executor executor) {
-        return Collections.singletonList(new i(executor));
-    }
-
-    public List<? extends h.a> b() {
-        return Collections.EMPTY_LIST;
+    @Override // hv.h
+    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+    public T a(ResponseBody responseBody) {
+        g source = responseBody.getSource();
+        try {
+            vu.h hVar = b;
+            if (source.m1(0L, hVar)) {
+                source.skip(hVar.I());
+            }
+            m mVarS = m.s(source);
+            T tFromJson = this.f22214a.fromJson(mVarS);
+            if (mVarS.u() != m.c.END_DOCUMENT) {
+                throw new j("JSON document was not fully consumed.");
+            }
+            responseBody.close();
+            return tFromJson;
+        } catch (Throwable th2) {
+            responseBody.close();
+            throw th2;
+        }
     }
 }

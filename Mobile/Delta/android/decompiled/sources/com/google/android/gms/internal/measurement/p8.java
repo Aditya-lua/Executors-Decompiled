@@ -23,59 +23,59 @@ import java.util.function.Function;
 public final class p8 implements t8 {
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final ConcurrentMap f6726i = new ConcurrentHashMap();
+    public static final ConcurrentMap f6799i = new ConcurrentHashMap();
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final String[] f6727j = {"key", "value"};
+    public static final String[] f6800j = {"key", "value"};
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ContentResolver f6728a;
+    public final ContentResolver f6801a;
     public final Uri b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Runnable f6729c;
+    public final Runnable f6802c;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public volatile Map f6733g;
+    public volatile Map f6806g;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public ContentObserver f6730d = null;
+    public ContentObserver f6803d = null;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public volatile boolean f6731e = true;
+    public volatile boolean f6804e = true;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final Object f6732f = new Object();
+    public final Object f6805f = new Object();
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final List f6734h = new ArrayList();
+    public final List f6807h = new ArrayList();
 
     public p8(ContentResolver contentResolver, Uri uri, Runnable runnable) {
-        ge.n.l(contentResolver);
-        ge.n.l(uri);
-        this.f6728a = contentResolver;
+        he.n.l(contentResolver);
+        he.n.l(uri);
+        this.f6801a = contentResolver;
         this.b = uri;
-        this.f6729c = runnable;
+        this.f6802c = runnable;
     }
 
     public static p8 c(final ContentResolver contentResolver, final Uri uri, final Runnable runnable) {
-        p8 p8Var = (p8) f6726i.computeIfAbsent(uri, new Function() { // from class: com.google.android.gms.internal.measurement.o8
+        p8 p8Var = (p8) f6799i.computeIfAbsent(uri, new Function() { // from class: com.google.android.gms.internal.measurement.o8
             @Override // java.util.function.Function
             public final /* synthetic */ Object apply(Object obj) {
                 return p8.g(contentResolver, uri, runnable, (Uri) obj);
             }
         });
         try {
-            if (!p8Var.f6731e) {
+            if (!p8Var.f6804e) {
                 return p8Var;
             }
             synchronized (p8Var) {
                 try {
-                    if (p8Var.f6731e) {
+                    if (p8Var.f6804e) {
                         m8 m8Var = new m8(p8Var, null);
-                        p8Var.f6728a.registerContentObserver(p8Var.b, false, m8Var);
-                        p8Var.f6730d = m8Var;
-                        p8Var.f6731e = false;
+                        p8Var.f6801a.registerContentObserver(p8Var.b, false, m8Var);
+                        p8Var.f6803d = m8Var;
+                        p8Var.f6804e = false;
                     }
                 } catch (Throwable th2) {
                     throw th2;
@@ -88,18 +88,18 @@ public final class p8 implements t8 {
     }
 
     public static void f() {
-        Iterator it = f6726i.values().iterator();
+        Iterator it = f6799i.values().iterator();
         while (it.hasNext()) {
             p8 p8Var = (p8) it.next();
             synchronized (p8Var) {
                 try {
-                    if (p8Var.f6731e) {
-                        p8Var.f6731e = false;
+                    if (p8Var.f6804e) {
+                        p8Var.f6804e = false;
                     } else {
-                        ContentObserver contentObserver = p8Var.f6730d;
+                        ContentObserver contentObserver = p8Var.f6803d;
                         if (contentObserver != null) {
-                            p8Var.f6728a.unregisterContentObserver(contentObserver);
-                            p8Var.f6730d = null;
+                            p8Var.f6801a.unregisterContentObserver(contentObserver);
+                            p8Var.f6803d = null;
                         }
                     }
                 } catch (Throwable th2) {
@@ -121,10 +121,10 @@ public final class p8 implements t8 {
 
     public final Map d() {
         Map map;
-        Map map2 = this.f6733g;
+        Map map2 = this.f6806g;
         if (map2 == null) {
-            synchronized (this.f6732f) {
-                map2 = this.f6733g;
+            synchronized (this.f6805f) {
+                map2 = this.f6806g;
                 if (map2 == null) {
                     StrictMode.ThreadPolicy threadPolicyAllowThreadDiskReads = StrictMode.allowThreadDiskReads();
                     try {
@@ -132,7 +132,7 @@ public final class p8 implements t8 {
                             map = (Map) t8.a(new s8() { // from class: com.google.android.gms.internal.measurement.n8
                                 @Override // com.google.android.gms.internal.measurement.s8
                                 public final /* synthetic */ Object zza() {
-                                    return this.f6683a.h();
+                                    return this.f6756a.h();
                                 }
                             });
                         } catch (Throwable th2) {
@@ -144,7 +144,7 @@ public final class p8 implements t8 {
                         map = Collections.EMPTY_MAP;
                     }
                     StrictMode.setThreadPolicy(threadPolicyAllowThreadDiskReads);
-                    this.f6733g = map;
+                    this.f6806g = map;
                     map2 = map;
                 }
             }
@@ -153,13 +153,13 @@ public final class p8 implements t8 {
     }
 
     public final void e() {
-        synchronized (this.f6732f) {
-            this.f6733g = null;
-            this.f6729c.run();
+        synchronized (this.f6805f) {
+            this.f6806g = null;
+            this.f6802c.run();
         }
         synchronized (this) {
             try {
-                Iterator it = this.f6734h.iterator();
+                Iterator it = this.f6807h.iterator();
                 while (it.hasNext()) {
                     ((q8) it.next()).zza();
                 }
@@ -170,7 +170,7 @@ public final class p8 implements t8 {
     }
 
     public final /* synthetic */ Map h() {
-        ContentResolver contentResolver = this.f6728a;
+        ContentResolver contentResolver = this.f6801a;
         Uri uri = this.b;
         ContentProviderClient contentProviderClientAcquireUnstableContentProviderClient = contentResolver.acquireUnstableContentProviderClient(uri);
         try {
@@ -179,7 +179,7 @@ public final class p8 implements t8 {
                 return Collections.EMPTY_MAP;
             }
             try {
-                Cursor cursorQuery = contentProviderClientAcquireUnstableContentProviderClient.query(uri, f6727j, null, null, null);
+                Cursor cursorQuery = contentProviderClientAcquireUnstableContentProviderClient.query(uri, f6800j, null, null, null);
                 try {
                     if (cursorQuery == null) {
                         Log.w("ConfigurationContentLdr", "ContentProvider query returned null cursor, using default values");

@@ -11,7 +11,7 @@ import java.util.WeakHashMap;
 public final class l0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static Map<VelocityTracker, m0> f1882a = Collections.synchronizedMap(new WeakHashMap());
+    public static Map<VelocityTracker, m0> f1727a = Collections.synchronizedMap(new WeakHashMap());
 
     public static class a {
         public static float a(VelocityTracker velocityTracker, int i10) {
@@ -22,10 +22,10 @@ public final class l0 {
     public static void a(VelocityTracker velocityTracker, MotionEvent motionEvent) {
         velocityTracker.addMovement(motionEvent);
         if (Build.VERSION.SDK_INT < 34 && motionEvent.getSource() == 4194304) {
-            if (!f1882a.containsKey(velocityTracker)) {
-                f1882a.put(velocityTracker, new m0());
+            if (!f1727a.containsKey(velocityTracker)) {
+                f1727a.put(velocityTracker, new m0());
             }
-            f1882a.get(velocityTracker).a(motionEvent);
+            f1727a.get(velocityTracker).a(motionEvent);
         }
     }
 
@@ -59,6 +59,6 @@ public final class l0 {
     }
 
     public static m0 e(VelocityTracker velocityTracker) {
-        return f1882a.get(velocityTracker);
+        return f1727a.get(velocityTracker);
     }
 }

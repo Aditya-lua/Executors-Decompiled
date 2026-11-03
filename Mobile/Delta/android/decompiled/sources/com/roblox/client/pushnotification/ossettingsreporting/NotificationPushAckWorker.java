@@ -1,20 +1,18 @@
 package com.roblox.client.pushnotification.ossettingsreporting;
 
-import ak.l2;
-import al.PushReceiveAckPostBody;
 import android.content.Context;
 import androidx.annotation.Keep;
 import androidx.work.CoroutineWorker;
 import androidx.work.WorkerParameters;
-import gk.p;
-import hu.l;
+import ek.q;
+import fu.l;
+import gt.n;
+import gt.o;
+import gt.s;
+import hv.m;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-import jt.n;
-import jt.o;
-import jt.s;
-import jv.m;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.collections.i0;
@@ -24,20 +22,22 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.d0;
 import kotlin.jvm.internal.u;
+import nt.f;
 import okhttp3.ResponseBody;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pt.f;
-import vk.g;
+import tk.g;
 import x5.d;
 import x5.j;
 import x5.p0;
 import x5.x;
 import x5.z;
-import zk.i;
+import xk.i;
+import yj.l2;
+import yk.PushReceiveAckPostBody;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0003\n\u0002\b\u0007\u0018\u0000 \r2\u00020\u0001:\u0003\u0011\r\u000fB\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bH\u0096@¢\u0006\u0004\b\t\u0010\nJ\u0017\u0010\r\u001a\u00020\b2\u0006\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\r\u0010\u000eR\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000f\u0010\u0010¨\u0006\u0012"}, d2 = {"Lcom/roblox/client/pushnotification/ossettingsreporting/NotificationPushAckWorker;", "Landroidx/work/CoroutineWorker;", "Landroid/content/Context;", "appContext", "Landroidx/work/WorkerParameters;", "workerParams", "<init>", "(Landroid/content/Context;Landroidx/work/WorkerParameters;)V", "Landroidx/work/c$a;", "doWork", "(Lnt/b;)Ljava/lang/Object;", "", "e", "b", "(Ljava/lang/Throwable;)Landroidx/work/c$a;", "a", "Landroidx/work/WorkerParameters;", "NotificationPushAckParams", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0003\n\u0002\b\u0007\u0018\u0000 \r2\u00020\u0001:\u0003\u0011\r\u000fB\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u0010\u0010\t\u001a\u00020\bH\u0096@¢\u0006\u0004\b\t\u0010\nJ\u0017\u0010\r\u001a\u00020\b2\u0006\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\r\u0010\u000eR\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000f\u0010\u0010¨\u0006\u0012"}, d2 = {"Lcom/roblox/client/pushnotification/ossettingsreporting/NotificationPushAckWorker;", "Landroidx/work/CoroutineWorker;", "Landroid/content/Context;", "appContext", "Landroidx/work/WorkerParameters;", "workerParams", "<init>", "(Landroid/content/Context;Landroidx/work/WorkerParameters;)V", "Landroidx/work/c$a;", "doWork", "(Llt/b;)Ljava/lang/Object;", "", "e", "b", "(Ljava/lang/Throwable;)Landroidx/work/c$a;", "a", "Landroidx/work/WorkerParameters;", "NotificationPushAckParams", "NativeShell_googleProdRelease"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class NotificationPushAckWorker extends CoroutineWorker {
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
@@ -158,7 +158,7 @@ public final class NotificationPushAckWorker extends CoroutineWorker {
         public final void a(@NotNull Context appContext, @NotNull b.NotificationAckInput input) {
             Intrinsics.checkNotNullParameter(appContext, "appContext");
             Intrinsics.checkNotNullParameter(input, "input");
-            p.h("NotificationOSSettingChangeReportingWorker", "Scheduling Push Ack Work");
+            q.h("NotificationOSSettingChangeReportingWorker", "Scheduling Push Ack Work");
             z zVarB = new z.a(NotificationPushAckWorker.class).k(new d.a().b(x.CONNECTED).a()).o(input.a()).b();
             p0.Companion companion = p0.INSTANCE;
             Context applicationContext = appContext.getApplicationContext();
@@ -169,7 +169,7 @@ public final class NotificationPushAckWorker extends CoroutineWorker {
         public final void b(@NotNull Context appContext, @NotNull b.SettingChangeInput input) {
             Intrinsics.checkNotNullParameter(appContext, "appContext");
             Intrinsics.checkNotNullParameter(input, "input");
-            p.h("NotificationOSSettingChangeReportingWorker", "Scheduling OS Notification Setting Change Reporting Work");
+            q.h("NotificationOSSettingChangeReportingWorker", "Scheduling OS Notification Setting Change Reporting Work");
             z zVarB = new z.a(NotificationPushAckWorker.class).k(new d.a().b(x.CONNECTED).a()).o(input.a()).b();
             p0.Companion companion = p0.INSTANCE;
             Context applicationContext = appContext.getApplicationContext();
@@ -336,36 +336,36 @@ public final class NotificationPushAckWorker extends CoroutineWorker {
 
     @f(c = "com.roblox.client.pushnotification.ossettingsreporting.NotificationPushAckWorker", f = "NotificationPushAckWorker.kt", l = {74}, m = "doWork", v = 1)
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final class c extends pt.d {
+    public static final class c extends nt.d {
         public /* synthetic */ Object A;
         public int C;
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f9308t;
+        public Object f9384t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f9309u;
+        public Object f9385u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public Object f9310v;
+        public Object f9386v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public Object f9311w;
+        public Object f9387w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public Object f9312x;
+        public Object f9388x;
 
         /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public int f9313y;
+        public int f9389y;
 
         /* JADX INFO: renamed from: z, reason: collision with root package name */
-        public int f9314z;
+        public int f9390z;
 
-        public c(nt.b<? super c> bVar) {
+        public c(lt.b<? super c> bVar) {
             super(bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         @Nullable
         public final Object invokeSuspend(@NotNull Object obj) {
             this.A = obj;
@@ -408,7 +408,7 @@ public final class NotificationPushAckWorker extends CoroutineWorker {
     /* JADX WARN: Code duplicated, block: B:7:0x0017  */
     @Override // androidx.work.CoroutineWorker
     @Nullable
-    public Object doWork(@NotNull nt.b<? super androidx.work.c.a> bVar) {
+    public Object doWork(@NotNull lt.b<? super androidx.work.c.a> bVar) {
         c cVar;
         Object objB;
         String str;
@@ -425,7 +425,7 @@ public final class NotificationPushAckWorker extends CoroutineWorker {
             cVar = new c(bVar);
         }
         Object objA = cVar.A;
-        Object objE = ot.c.e();
+        Object objE = mt.c.e();
         int i11 = cVar.C;
         try {
             if (i11 == 0) {
@@ -438,7 +438,7 @@ public final class NotificationPushAckWorker extends CoroutineWorker {
                 NotificationPushAckParams notificationPushAckParams = new NotificationPushAckParams(this.workerParams.d().e());
                 String deviceId = notificationPushAckParams.getDeviceId();
                 if (deviceId == null) {
-                    p.e("NotificationOSSettingChangeReportingWorker", "Device ID is missing in input data");
+                    q.e("NotificationOSSettingChangeReportingWorker", "Device ID is missing in input data");
                     androidx.work.c.a aVarA2 = androidx.work.c.a.a();
                     Intrinsics.checkNotNullExpressionValue(aVarA2, "failure(...)");
                     return aVarA2;
@@ -460,18 +460,18 @@ public final class NotificationPushAckWorker extends CoroutineWorker {
                 String[] changedChannels = notificationPushAckParams.getChangedChannels();
                 PushReceiveAckPostBody pushReceiveAckPostBody = new PushReceiveAckPostBody(notificationPushAckParams.getNotificationId(), notificationPushAckParams.getMetadata(), notificationPushAckParams.getReceivedTime(), deviceId, "AndroidNative", jLongValue, notificationPushAckParams.getNotificationType(), notificationPushAckParams.getPriority(), notificationPushAckParams.getOriginalPriority(), mapT, changedChannels != null ? kotlin.collections.m.j0(changedChannels) : null);
                 l2.b(getApplicationContext());
-                vk.b bVarC = g.c();
-                i iVarC = g.d().c(bVarC);
+                tk.b bVarC = g.c();
+                i iVarG = g.d().g(bVarC);
                 n.Companion companion = n.INSTANCE;
-                cVar.f9308t = pt.l.a(notificationPushAckParams);
-                cVar.f9309u = pt.l.a(iVarC);
-                cVar.f9310v = pt.l.a(notificationPushAckParams);
-                cVar.f9311w = pt.l.a(bVarC);
-                cVar.f9312x = pt.l.a(pushReceiveAckPostBody);
-                cVar.f9313y = 0;
-                cVar.f9314z = 0;
+                cVar.f9384t = nt.l.a(notificationPushAckParams);
+                cVar.f9385u = nt.l.a(iVarG);
+                cVar.f9386v = nt.l.a(notificationPushAckParams);
+                cVar.f9387w = nt.l.a(bVarC);
+                cVar.f9388x = nt.l.a(pushReceiveAckPostBody);
+                cVar.f9389y = 0;
+                cVar.f9390z = 0;
                 cVar.C = 1;
-                objA = iVarC.a(pushReceiveAckPostBody, cVar);
+                objA = iVarG.a(pushReceiveAckPostBody, cVar);
                 if (objA == objE) {
                     return objE;
                 }
@@ -496,7 +496,7 @@ public final class NotificationPushAckWorker extends CoroutineWorker {
             } else {
                 str = "Unexpected error: " + thE.getMessage();
             }
-            p.f("NotificationOSSettingChangeReportingWorker", str, thE);
+            q.f("NotificationOSSettingChangeReportingWorker", str, thE);
         }
         Throwable thE2 = n.e(objB);
         if (thE2 != null) {

@@ -1,6 +1,6 @@
 package com.withpersona.sdk2.inquiry;
 
-import jt.l;
+import gt.l;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;

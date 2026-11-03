@@ -1,19 +1,50 @@
 package yn;
 
-import kotlin.Metadata;
-import org.jetbrains.annotations.NotNull;
+import android.view.View;
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import com.google.android.material.card.MaterialCardView;
+import com.withpersona.sdk2.inquiry.shared.ui.ThemeableLottieAnimationView;
+import xn.n2;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\b\bf\u0018\u00002\u00020\u0001J\u000f\u0010\u0003\u001a\u00020\u0002H&¢\u0006\u0004\b\u0003\u0010\u0004R\u0014\u0010\b\u001a\u00020\u00058&X¦\u0004¢\u0006\u0006\u001a\u0004\b\u0006\u0010\u0007R\u0014\u0010\n\u001a\u00020\u00058&X¦\u0004¢\u0006\u0006\u001a\u0004\b\t\u0010\u0007R\u0014\u0010\f\u001a\u00020\u00058&X¦\u0004¢\u0006\u0006\u001a\u0004\b\u000b\u0010\u0007¨\u0006\rÀ\u0006\u0003"}, d2 = {"Lyn/b;", "", "", "a", "()Z", "", "c", "()Ljava/lang/String;", "manufacturer", "b", "model", "d", "versionRelease", "device_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public interface b {
-    boolean a();
+public final class b implements r5.a {
 
-    @NotNull
-    String b();
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    @NonNull
+    public final ConstraintLayout f36908a;
 
-    @NotNull
-    String c();
+    @NonNull
+    public final ThemeableLottieAnimationView b;
 
-    @NotNull
-    String d();
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    @NonNull
+    public final MaterialCardView f36909c;
+
+    public b(@NonNull ConstraintLayout constraintLayout, @NonNull ThemeableLottieAnimationView themeableLottieAnimationView, @NonNull MaterialCardView materialCardView) {
+        this.f36908a = constraintLayout;
+        this.b = themeableLottieAnimationView;
+        this.f36909c = materialCardView;
+    }
+
+    @NonNull
+    public static b a(@NonNull View view) {
+        int i10 = n2.f35895a;
+        ThemeableLottieAnimationView themeableLottieAnimationView = (ThemeableLottieAnimationView) r5.b.a(view, i10);
+        if (themeableLottieAnimationView != null) {
+            i10 = n2.f35899f;
+            MaterialCardView materialCardView = (MaterialCardView) r5.b.a(view, i10);
+            if (materialCardView != null) {
+                return new b((ConstraintLayout) view, themeableLottieAnimationView, materialCardView);
+            }
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
+    }
+
+    @Override // r5.a
+    @NonNull
+    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
+    public ConstraintLayout getRoot() {
+        return this.f36908a;
+    }
 }

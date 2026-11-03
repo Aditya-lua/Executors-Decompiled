@@ -14,19 +14,19 @@ import java.util.Map;
 public class m2 implements n0.z1 {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final boolean f36688c;
+    public final boolean f37383c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final String f36689d;
+    public final String f37384d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final int f36690e;
+    public final int f37385e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final Map<Integer, n0.a2> f36691f = new HashMap();
+    public final Map<Integer, n0.a2> f37386f = new HashMap();
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final n0.k3 f36692g;
+    public final n0.k3 f37387g;
 
     public static class a {
         public static EncoderProfiles a(String str, int i10) {
@@ -37,7 +37,7 @@ public class m2 implements n0.z1 {
     public m2(String str, n0.k3 k3Var) {
         boolean z10;
         int i10;
-        this.f36689d = str;
+        this.f37384d = str;
         try {
             i10 = Integer.parseInt(str);
             z10 = true;
@@ -46,24 +46,24 @@ public class m2 implements n0.z1 {
             z10 = false;
             i10 = -1;
         }
-        this.f36688c = z10;
-        this.f36690e = i10;
-        this.f36692g = k3Var;
+        this.f37383c = z10;
+        this.f37385e = i10;
+        this.f37387g = k3Var;
     }
 
     @Override // n0.z1
     public boolean a(int i10) {
-        return this.f36688c && b(i10) != null;
+        return this.f37383c && b(i10) != null;
     }
 
     @Override // n0.z1
     public n0.a2 b(int i10) {
         n0.a2 a2VarE = null;
-        if (!this.f36688c || !CamcorderProfile.hasProfile(this.f36690e, i10)) {
+        if (!this.f37383c || !CamcorderProfile.hasProfile(this.f37385e, i10)) {
             return null;
         }
-        if (this.f36691f.containsKey(Integer.valueOf(i10))) {
-            return this.f36691f.get(Integer.valueOf(i10));
+        if (this.f37386f.containsKey(Integer.valueOf(i10))) {
+            return this.f37386f.get(Integer.valueOf(i10));
         }
         n0.a2 a2VarF = f(i10);
         if (a2VarF == null || g(a2VarF)) {
@@ -73,14 +73,14 @@ public class m2 implements n0.z1 {
         } else if (i10 == 0) {
             a2VarE = e();
         }
-        this.f36691f.put(Integer.valueOf(i10), a2VarE);
+        this.f37386f.put(Integer.valueOf(i10), a2VarE);
         return a2VarE;
     }
 
     public final n0.a2 c(int i10) {
         CamcorderProfile camcorderProfile;
         try {
-            camcorderProfile = CamcorderProfile.get(this.f36690e, i10);
+            camcorderProfile = CamcorderProfile.get(this.f37385e, i10);
         } catch (RuntimeException e10) {
             g0.r1.m("Camera2EncoderProfilesProvider", "Unable to get CamcorderProfile by quality: " + i10, e10);
             camcorderProfile = null;
@@ -114,7 +114,7 @@ public class m2 implements n0.z1 {
 
     public final n0.a2 f(int i10) {
         if (Build.VERSION.SDK_INT >= 31) {
-            EncoderProfiles encoderProfilesA = a.a(this.f36689d, i10);
+            EncoderProfiles encoderProfilesA = a.a(this.f37384d, i10);
             if (encoderProfilesA == null) {
                 return null;
             }
@@ -132,7 +132,7 @@ public class m2 implements n0.z1 {
     }
 
     public final boolean g(n0.a2 a2Var) {
-        CamcorderProfileResolutionQuirk camcorderProfileResolutionQuirk = (CamcorderProfileResolutionQuirk) this.f36692g.b(CamcorderProfileResolutionQuirk.class);
+        CamcorderProfileResolutionQuirk camcorderProfileResolutionQuirk = (CamcorderProfileResolutionQuirk) this.f37387g.b(CamcorderProfileResolutionQuirk.class);
         if (camcorderProfileResolutionQuirk == null) {
             return true;
         }

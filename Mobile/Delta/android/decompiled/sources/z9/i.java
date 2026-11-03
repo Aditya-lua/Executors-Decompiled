@@ -18,7 +18,7 @@ public final class i extends db.a implements IInterface {
         parcelS2.writeInt(i10);
         o.d(parcelS2, aVar2);
         Parcel parcelR2 = r2(2, parcelS2);
-        y9.a aVarS2 = y9.a.AbstractBinderC0656a.s2(parcelR2.readStrongBinder());
+        y9.a aVarS2 = y9.a.AbstractBinderC0671a.s2(parcelR2.readStrongBinder());
         parcelR2.recycle();
         return aVarS2;
     }
@@ -30,7 +30,7 @@ public final class i extends db.a implements IInterface {
         parcelS2.writeInt(i10);
         o.d(parcelS2, aVar2);
         Parcel parcelR2 = r2(3, parcelS2);
-        y9.a aVarS2 = y9.a.AbstractBinderC0656a.s2(parcelR2.readStrongBinder());
+        y9.a aVarS2 = y9.a.AbstractBinderC0671a.s2(parcelR2.readStrongBinder());
         parcelR2.recycle();
         return aVarS2;
     }

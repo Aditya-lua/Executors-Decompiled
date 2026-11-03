@@ -9,11 +9,11 @@ import java.util.Map;
 public abstract class k implements q, m {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f6569a;
+    public final String f6642a;
     public final Map b = new HashMap();
 
     public k(String str) {
-        this.f6569a = str;
+        this.f6642a = str;
     }
 
     @Override // com.google.android.gms.internal.measurement.q
@@ -24,7 +24,7 @@ public abstract class k implements q, m {
     @Override // com.google.android.gms.internal.measurement.m
     public final q c(String str) {
         Map map = this.b;
-        return map.containsKey(str) ? (q) map.get(str) : q.f6743zo;
+        return map.containsKey(str) ? (q) map.get(str) : q.f6816yo;
     }
 
     @Override // com.google.android.gms.internal.measurement.m
@@ -38,7 +38,7 @@ public abstract class k implements q, m {
 
     @Override // com.google.android.gms.internal.measurement.q
     public final q e(String str, u4 u4Var, List list) {
-        return "toString".equals(str) ? new u(this.f6569a) : m.b(this, new u(str), u4Var, list);
+        return "toString".equals(str) ? new u(this.f6642a) : m.b(this, new u(str), u4Var, list);
     }
 
     public final boolean equals(Object obj) {
@@ -49,9 +49,9 @@ public abstract class k implements q, m {
             return false;
         }
         k kVar = (k) obj;
-        String str = this.f6569a;
+        String str = this.f6642a;
         if (str != null) {
-            return str.equals(kVar.f6569a);
+            return str.equals(kVar.f6642a);
         }
         return false;
     }
@@ -64,7 +64,7 @@ public abstract class k implements q, m {
     public abstract q h(u4 u4Var, List list);
 
     public final int hashCode() {
-        String str = this.f6569a;
+        String str = this.f6642a;
         if (str != null) {
             return str.hashCode();
         }
@@ -72,12 +72,12 @@ public abstract class k implements q, m {
     }
 
     public final String i() {
-        return this.f6569a;
+        return this.f6642a;
     }
 
     @Override // com.google.android.gms.internal.measurement.q
     public final String zzc() {
-        return this.f6569a;
+        return this.f6642a;
     }
 
     @Override // com.google.android.gms.internal.measurement.q

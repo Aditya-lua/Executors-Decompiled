@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import java.lang.ref.WeakReference;
 import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
-import me.x;
+import ne.x;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class c {
@@ -12,30 +12,30 @@ public final class c {
     public static final class a<T> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public Object f35489a;
+        public Object f36346a;
         public d<T> b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public f<Void> f35490c = f.B();
+        public f<Void> f36347c = f.B();
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public boolean f35491d;
+        public boolean f36348d;
 
         public void a(@NonNull Runnable runnable, @NonNull Executor executor) {
-            f<Void> fVar = this.f35490c;
+            f<Void> fVar = this.f36347c;
             if (fVar != null) {
                 fVar.a(runnable, executor);
             }
         }
 
         public void b() {
-            this.f35489a = null;
+            this.f36346a = null;
             this.b = null;
-            this.f35490c.x(null);
+            this.f36347c.x(null);
         }
 
         public boolean c(T t8) {
-            this.f35491d = true;
+            this.f36348d = true;
             d<T> dVar = this.b;
             boolean z10 = dVar != null && dVar.d(t8);
             if (z10) {
@@ -45,7 +45,7 @@ public final class c {
         }
 
         public boolean d() {
-            this.f35491d = true;
+            this.f36348d = true;
             d<T> dVar = this.b;
             boolean z10 = dVar != null && dVar.c(true);
             if (z10) {
@@ -55,13 +55,13 @@ public final class c {
         }
 
         public final void e() {
-            this.f35489a = null;
+            this.f36346a = null;
             this.b = null;
-            this.f35490c = null;
+            this.f36347c = null;
         }
 
         public boolean f(@NonNull Throwable th2) {
-            this.f35491d = true;
+            this.f36348d = true;
             d<T> dVar = this.b;
             boolean z10 = dVar != null && dVar.e(th2);
             if (z10) {
@@ -74,9 +74,9 @@ public final class c {
             f<Void> fVar;
             d<T> dVar = this.b;
             if (dVar != null && !dVar.isDone()) {
-                dVar.e(new b("The completer object was garbage collected - this future would otherwise never complete. The tag was: " + this.f35489a));
+                dVar.e(new b("The completer object was garbage collected - this future would otherwise never complete. The tag was: " + this.f36346a));
             }
-            if (this.f35491d || (fVar = this.f35490c) == null) {
+            if (this.f36348d || (fVar = this.f36347c) == null) {
                 return;
             }
             fVar.x(null);
@@ -95,14 +95,14 @@ public final class c {
     }
 
     /* JADX INFO: renamed from: y1.c$c, reason: collision with other inner class name */
-    public interface InterfaceC0650c<T> {
+    public interface InterfaceC0665c<T> {
         Object a(@NonNull a<T> aVar);
     }
 
     public static final class d<T> implements x<T> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final WeakReference<a<T>> f35492a;
+        public final WeakReference<a<T>> f36349a;
         public final y1.a<T> b = new a();
 
         public class a extends y1.a<T> {
@@ -111,19 +111,19 @@ public final class c {
 
             @Override // y1.a
             public String u() {
-                a<T> aVar = d.this.f35492a.get();
+                a<T> aVar = d.this.f36349a.get();
                 if (aVar == null) {
                     return "Completer object has been garbage collected, future will fail soon";
                 }
-                return "tag=[" + aVar.f35489a + "]";
+                return "tag=[" + aVar.f36346a + "]";
             }
         }
 
         public d(a<T> aVar) {
-            this.f35492a = new WeakReference<>(aVar);
+            this.f36349a = new WeakReference<>(aVar);
         }
 
-        @Override // me.x
+        @Override // ne.x
         public void a(@NonNull Runnable runnable, @NonNull Executor executor) {
             this.b.a(runnable, executor);
         }
@@ -134,7 +134,7 @@ public final class c {
 
         @Override // java.util.concurrent.Future
         public boolean cancel(boolean z10) {
-            a<T> aVar = this.f35492a.get();
+            a<T> aVar = this.f36349a.get();
             boolean zCancel = this.b.cancel(z10);
             if (zCancel && aVar != null) {
                 aVar.b();
@@ -176,17 +176,17 @@ public final class c {
     }
 
     @NonNull
-    public static <T> x<T> a(@NonNull InterfaceC0650c<T> interfaceC0650c) {
+    public static <T> x<T> a(@NonNull InterfaceC0665c<T> interfaceC0665c) {
         a<T> aVar = new a<>();
         d<T> dVar = new d<>(aVar);
         aVar.b = dVar;
-        aVar.f35489a = interfaceC0650c.getClass();
+        aVar.f36346a = interfaceC0665c.getClass();
         try {
-            Object objA = interfaceC0650c.a(aVar);
+            Object objA = interfaceC0665c.a(aVar);
             if (objA == null) {
                 return dVar;
             }
-            aVar.f35489a = objA;
+            aVar.f36346a = objA;
             return dVar;
         } catch (Exception e10) {
             dVar.e(e10);

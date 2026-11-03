@@ -1,5 +1,6 @@
 package com.withpersona.sdk2.inquiry.steps.ui.components;
 
+import ar.y4;
 import com.google.android.material.button.MaterialButton;
 import com.withpersona.sdk2.inquiry.network.dto.ui.BaseButtonAttributes;
 import com.withpersona.sdk2.inquiry.network.dto.ui.components.ActionButton;
@@ -50,15 +51,15 @@ import com.withpersona.sdk2.inquiry.network.dto.ui.components.VerifyPersonaButto
 import com.withpersona.sdk2.inquiry.network.dto.ui.styling.BaseButtonComponentStyle;
 import com.withpersona.sdk2.inquiry.shared.ui.ButtonWithLoadingIndicator;
 import com.withpersona.sdk2.inquiry.shared.ui.PersonaMaterialButton;
-import cr.y4;
+import gt.l;
+import hr.e;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import jr.e;
-import jt.l;
+import jp.j;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.collections.p;
@@ -66,19 +67,18 @@ import kotlin.collections.q;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
-import lp.j;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000X\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010$\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\u001a-\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00010\u0000*\b\u0012\u0004\u0012\u00020\u00010\u00002\u0006\u0010\u0002\u001a\u00020\u00012\u0006\u0010\u0003\u001a\u00020\u0001¢\u0006\u0004\b\u0004\u0010\u0005\u001a!\u0010\b\u001a\u0004\u0018\u00010\u0001*\b\u0012\u0004\u0012\u00020\u00010\u00002\u0006\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\b\u0010\t\u001a\u001d\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\u00010\u0000*\b\u0012\u0004\u0012\u00020\n0\u0000¢\u0006\u0004\b\u000b\u0010\f\u001a#\u0010\u000e\u001a\u000e\u0012\u0004\u0012\u00020\u0006\u0012\u0004\u0012\u00020\n0\r*\b\u0012\u0004\u0012\u00020\n0\u0000¢\u0006\u0004\b\u000e\u0010\u000f\u001a\u0013\u0010\u0010\u001a\u0004\u0018\u00010\u0001*\u00020\n¢\u0006\u0004\b\u0010\u0010\u0011\u001a\u0011\u0010\u0014\u001a\u00020\u0013*\u00020\u0012¢\u0006\u0004\b\u0014\u0010\u0015\u001a!\u0010\u001c\u001a\u00020\u001b*\u00020\u00162\u0006\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u001a\u001a\u00020\u0019¢\u0006\u0004\b\u001c\u0010\u001d\u001a!\u0010\u001f\u001a\u00020\u001e*\u00020\u00162\u0006\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u001a\u001a\u00020\u0019¢\u0006\u0004\b\u001f\u0010 \u001a\u0013\u0010\"\u001a\u00020!*\u00020\u0019H\u0003¢\u0006\u0004\b\"\u0010#¨\u0006$"}, d2 = {"", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;", "old", "new", "m", "(Ljava/util/List;Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;)Ljava/util/List;", "", "name", "g", "(Ljava/util/List;Ljava/lang/String;)Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/UiComponentConfig;", "i", "(Ljava/util/List;)Ljava/util/List;", "", "j", "(Ljava/util/List;)Ljava/util/Map;", "l", "(Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/UiComponentConfig;)Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/RemoteImage;", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/RemoteImageComponent;", "k", "(Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/RemoteImage;)Lcom/withpersona/sdk2/inquiry/steps/ui/components/RemoteImageComponent;", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/ButtonComponent;", "Lcr/y4;", "uiComponentHelper", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/Button;", "config", "Lcom/google/android/material/button/MaterialButton;", "c", "(Lcom/withpersona/sdk2/inquiry/steps/ui/components/ButtonComponent;Lcr/y4;Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/Button;)Lcom/google/android/material/button/MaterialButton;", "Lcom/withpersona/sdk2/inquiry/shared/ui/ButtonWithLoadingIndicator;", "e", "(Lcom/withpersona/sdk2/inquiry/steps/ui/components/ButtonComponent;Lcr/y4;Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/Button;)Lcom/withpersona/sdk2/inquiry/shared/ui/ButtonWithLoadingIndicator;", "", "h", "(Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/Button;)I", "ui-step-renderer_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000X\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010$\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0003\u001a-\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00010\u0000*\b\u0012\u0004\u0012\u00020\u00010\u00002\u0006\u0010\u0002\u001a\u00020\u00012\u0006\u0010\u0003\u001a\u00020\u0001¢\u0006\u0004\b\u0004\u0010\u0005\u001a!\u0010\b\u001a\u0004\u0018\u00010\u0001*\b\u0012\u0004\u0012\u00020\u00010\u00002\u0006\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\b\u0010\t\u001a\u001d\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\u00010\u0000*\b\u0012\u0004\u0012\u00020\n0\u0000¢\u0006\u0004\b\u000b\u0010\f\u001a#\u0010\u000e\u001a\u000e\u0012\u0004\u0012\u00020\u0006\u0012\u0004\u0012\u00020\n0\r*\b\u0012\u0004\u0012\u00020\n0\u0000¢\u0006\u0004\b\u000e\u0010\u000f\u001a\u0013\u0010\u0010\u001a\u0004\u0018\u00010\u0001*\u00020\n¢\u0006\u0004\b\u0010\u0010\u0011\u001a\u0011\u0010\u0014\u001a\u00020\u0013*\u00020\u0012¢\u0006\u0004\b\u0014\u0010\u0015\u001a!\u0010\u001c\u001a\u00020\u001b*\u00020\u00162\u0006\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u001a\u001a\u00020\u0019¢\u0006\u0004\b\u001c\u0010\u001d\u001a!\u0010\u001f\u001a\u00020\u001e*\u00020\u00162\u0006\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u001a\u001a\u00020\u0019¢\u0006\u0004\b\u001f\u0010 \u001a\u0013\u0010\"\u001a\u00020!*\u00020\u0019H\u0003¢\u0006\u0004\b\"\u0010#¨\u0006$"}, d2 = {"", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;", "old", "new", "m", "(Ljava/util/List;Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;)Ljava/util/List;", "", "name", "g", "(Ljava/util/List;Ljava/lang/String;)Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/UiComponentConfig;", "i", "(Ljava/util/List;)Ljava/util/List;", "", "j", "(Ljava/util/List;)Ljava/util/Map;", "l", "(Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/UiComponentConfig;)Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/RemoteImage;", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/RemoteImageComponent;", "k", "(Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/RemoteImage;)Lcom/withpersona/sdk2/inquiry/steps/ui/components/RemoteImageComponent;", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/ButtonComponent;", "Lar/y4;", "uiComponentHelper", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/Button;", "config", "Lcom/google/android/material/button/MaterialButton;", "c", "(Lcom/withpersona/sdk2/inquiry/steps/ui/components/ButtonComponent;Lar/y4;Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/Button;)Lcom/google/android/material/button/MaterialButton;", "Lcom/withpersona/sdk2/inquiry/shared/ui/ButtonWithLoadingIndicator;", "e", "(Lcom/withpersona/sdk2/inquiry/steps/ui/components/ButtonComponent;Lar/y4;Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/Button;)Lcom/withpersona/sdk2/inquiry/shared/ui/ButtonWithLoadingIndicator;", "", "h", "(Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/Button;)I", "ui-step-renderer_release"}, k = 2, mv = {2, 2, 0}, xi = 48)
 public final class b {
 
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
     public static final /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f13599a;
+        public static final /* synthetic */ int[] f13680a;
 
         static {
             int[] iArr = new int[Button.ButtonType.values().length];
@@ -90,7 +90,7 @@ public final class b {
                 iArr[Button.ButtonType.SECONDARY.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
-            f13599a = iArr;
+            f13680a = iArr;
         }
     }
 
@@ -113,7 +113,7 @@ public final class b {
         if (attributes2 != null) {
             personaMaterialButton2.setText(attributes2.getText());
         }
-        uiComponentHelper.d(new Function0() { // from class: cr.a5
+        uiComponentHelper.d(new Function0() { // from class: ar.a5
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
                 return com.withpersona.sdk2.inquiry.steps.ui.components.b.d(personaMaterialButton2, styles);
@@ -124,7 +124,7 @@ public final class b {
 
     public static final Unit d(PersonaMaterialButton personaMaterialButton, BaseButtonComponentStyle baseButtonComponentStyle) {
         e.h(personaMaterialButton, baseButtonComponentStyle, false, false, false, 14, null);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     @NotNull
@@ -146,7 +146,7 @@ public final class b {
         if (attributes2 != null) {
             buttonWithLoadingIndicator2.setText(attributes2.getText());
         }
-        uiComponentHelper.d(new Function0() { // from class: cr.z4
+        uiComponentHelper.d(new Function0() { // from class: ar.z4
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
                 return com.withpersona.sdk2.inquiry.steps.ui.components.b.f(buttonWithLoadingIndicator2, styles);
@@ -157,7 +157,7 @@ public final class b {
 
     public static final Unit f(ButtonWithLoadingIndicator buttonWithLoadingIndicator, BaseButtonComponentStyle baseButtonComponentStyle) {
         e.i(buttonWithLoadingIndicator, baseButtonComponentStyle, false, 2, null);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     @Nullable
@@ -179,14 +179,14 @@ public final class b {
     public static final int h(Button button) {
         BaseButtonAttributes attributes = button.getAttributes();
         Button.ButtonType buttonType = attributes != null ? attributes.getButtonType() : null;
-        int i10 = buttonType == null ? -1 : a.f13599a[buttonType.ordinal()];
+        int i10 = buttonType == null ? -1 : a.f13680a[buttonType.ordinal()];
         if (i10 != -1 && i10 != 1) {
             if (i10 == 2) {
-                return vp.a.f33341a;
+                return tp.a.f32477a;
             }
             throw new l();
         }
-        return hc.b.f18799x;
+        return ic.b.f20621x;
     }
 
     @NotNull
@@ -286,7 +286,7 @@ public final class b {
         }
         DefaultConstructorMarker defaultConstructorMarker = null;
         if (uiComponentConfig instanceof JpMyNumberNfcScan) {
-            if (j.f23505a.b()) {
+            if (j.f22158a.b()) {
                 return new JpMyNumberNfcScanComponent((JpMyNumberNfcScan) uiComponentConfig);
             }
             return null;
@@ -383,18 +383,18 @@ public final class b {
         Intrinsics.checkNotNullParameter(uiComponent, "new");
         List<? extends UiComponent> list2 = list;
         ArrayList arrayList = new ArrayList(q.u(list2, 10));
-        for (UiComponent uiComponentQ1 : list2) {
-            if (uiComponentQ1 instanceof UiComponentGroup) {
-                if (Intrinsics.c(uiComponentQ1, old)) {
-                    uiComponentQ1 = uiComponent;
+        for (UiComponent uiComponentP1 : list2) {
+            if (uiComponentP1 instanceof UiComponentGroup) {
+                if (Intrinsics.c(uiComponentP1, old)) {
+                    uiComponentP1 = uiComponent;
                 } else {
-                    UiComponentGroup uiComponentGroup = (UiComponentGroup) uiComponentQ1;
-                    uiComponentQ1 = uiComponentGroup.q1(m(uiComponentGroup.getChildren(), old, uiComponent));
+                    UiComponentGroup uiComponentGroup = (UiComponentGroup) uiComponentP1;
+                    uiComponentP1 = uiComponentGroup.p1(m(uiComponentGroup.getChildren(), old, uiComponent));
                 }
-            } else if (Intrinsics.c(uiComponentQ1, old)) {
-                uiComponentQ1 = uiComponent;
+            } else if (Intrinsics.c(uiComponentP1, old)) {
+                uiComponentP1 = uiComponent;
             }
-            arrayList.add(uiComponentQ1);
+            arrayList.add(uiComponentP1);
         }
         return arrayList;
     }

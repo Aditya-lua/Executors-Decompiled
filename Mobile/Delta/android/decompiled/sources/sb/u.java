@@ -8,21 +8,21 @@ import java.util.concurrent.Executor;
 public final class u implements h0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Executor f30608a;
+    public final Executor f31155a;
     public final c b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final n0 f30609c;
+    public final n0 f31156c;
 
     public u(@NonNull Executor executor, @NonNull c cVar, @NonNull n0 n0Var) {
-        this.f30608a = executor;
+        this.f31155a = executor;
         this.b = cVar;
-        this.f30609c = n0Var;
+        this.f31156c = n0Var;
     }
 
     @Override // sb.h0
     public final void b(@NonNull Task task) {
-        this.f30608a.execute(new t(this, task));
+        this.f31155a.execute(new t(this, task));
     }
 
     @Override // sb.h0

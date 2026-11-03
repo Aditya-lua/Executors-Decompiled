@@ -16,10 +16,10 @@ public final class s2 extends t2 {
         for (int i13 = i11; i13 >= 3; i13 -= 3) {
             int i14 = bArr[i12] & 255;
             int i15 = ((bArr[i12 + 1] & 255) << 8) | (i14 << 16) | (bArr[i12 + 2] & 255);
-            appendable.append(this.f15400f.a(i15 >>> 18));
-            appendable.append(this.f15400f.a((i15 >>> 12) & 63));
-            appendable.append(this.f15400f.a((i15 >>> 6) & 63));
-            appendable.append(this.f15400f.a(i15 & 63));
+            appendable.append(this.f16014f.a(i15 >>> 18));
+            appendable.append(this.f16014f.a((i15 >>> 12) & 63));
+            appendable.append(this.f16014f.a((i15 >>> 6) & 63));
+            appendable.append(this.f16014f.a(i15 & 63));
             i12 += 3;
         }
         if (i12 < i11) {

@@ -154,10 +154,10 @@ public enum s7 implements v4 {
 
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f7310a;
+    public final int f7384a;
 
     s7(int i10) {
-        this.f7310a = i10;
+        this.f7384a = i10;
     }
 
     public static s7 a(int i10) {
@@ -468,11 +468,11 @@ public enum s7 implements v4 {
 
     @Override // java.lang.Enum
     public final String toString() {
-        return Integer.toString(this.f7310a);
+        return Integer.toString(this.f7384a);
     }
 
     @Override // com.google.android.gms.internal.play_billing.v4
     public final int zza() {
-        return this.f7310a;
+        return this.f7384a;
     }
 }

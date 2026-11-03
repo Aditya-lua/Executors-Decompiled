@@ -7,26 +7,26 @@ import java.util.Arrays;
 public final class q2 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f15360a;
+    public final String f15974a;
     public final char[] b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final int f15361c;
+    public final int f15975c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final int f15362d;
+    public final int f15976d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final int f15363e;
+    public final int f15977e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f15364f;
+    public final int f15978f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final byte[] f15365g;
+    public final byte[] f15979g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final boolean f15366h;
+    public final boolean f15980h;
 
     /* JADX WARN: Illegal instructions before constructor call */
     public q2(String str, char[] cArr) {
@@ -89,15 +89,15 @@ public final class q2 {
                     cArr2[i11] = (char) c11;
                     i11++;
                 }
-                q2 q2Var = new q2(this.f15360a.concat(".upperCase()"), cArr2);
-                if (!this.f15366h || q2Var.f15366h) {
+                q2 q2Var = new q2(this.f15974a.concat(".upperCase()"), cArr2);
+                if (!this.f15980h || q2Var.f15980h) {
                     return q2Var;
                 }
-                byte[] bArr = q2Var.f15365g;
+                byte[] bArr = q2Var.f15979g;
                 byte[] bArrCopyOf = Arrays.copyOf(bArr, bArr.length);
                 for (i10 = 65; i10 <= 90; i10++) {
                     int i14 = i10 | 32;
-                    byte[] bArr2 = q2Var.f15365g;
+                    byte[] bArr2 = q2Var.f15979g;
                     byte b = bArr2[i10];
                     byte b10 = bArr2[i14];
                     if (b == -1) {
@@ -111,21 +111,21 @@ public final class q2 {
                         bArrCopyOf[i14] = b;
                     }
                 }
-                return new q2(q2Var.f15360a.concat(".ignoreCase()"), q2Var.b, bArrCopyOf, true);
+                return new q2(q2Var.f15974a.concat(".ignoreCase()"), q2Var.b, bArrCopyOf, true);
             }
             i12++;
         }
     }
 
     public final boolean c(char c10) {
-        byte[] bArr = this.f15365g;
+        byte[] bArr = this.f15979g;
         return bArr.length > 61 && bArr[61] != -1;
     }
 
     public final boolean equals(Object obj) {
         if (obj instanceof q2) {
             q2 q2Var = (q2) obj;
-            if (this.f15366h == q2Var.f15366h && Arrays.equals(this.b, q2Var.b)) {
+            if (this.f15980h == q2Var.f15980h && Arrays.equals(this.b, q2Var.b)) {
                 return true;
             }
         }
@@ -133,32 +133,32 @@ public final class q2 {
     }
 
     public final int hashCode() {
-        return Arrays.hashCode(this.b) + (true != this.f15366h ? 1237 : 1231);
+        return Arrays.hashCode(this.b) + (true != this.f15980h ? 1237 : 1231);
     }
 
     public final String toString() {
-        return this.f15360a;
+        return this.f15974a;
     }
 
     public q2(String str, char[] cArr, byte[] bArr, boolean z10) {
-        this.f15360a = str;
+        this.f15974a = str;
         cArr.getClass();
         this.b = cArr;
         try {
             int length = cArr.length;
             int iB = w2.b(length, RoundingMode.UNNECESSARY);
-            this.f15362d = iB;
+            this.f15976d = iB;
             int iNumberOfTrailingZeros = Integer.numberOfTrailingZeros(iB);
             int i10 = 1 << (3 - iNumberOfTrailingZeros);
-            this.f15363e = i10;
-            this.f15364f = iB >> iNumberOfTrailingZeros;
-            this.f15361c = length - 1;
-            this.f15365g = bArr;
+            this.f15977e = i10;
+            this.f15978f = iB >> iNumberOfTrailingZeros;
+            this.f15975c = length - 1;
+            this.f15979g = bArr;
             boolean[] zArr = new boolean[i10];
-            for (int i11 = 0; i11 < this.f15364f; i11++) {
-                zArr[w2.a(i11 * 8, this.f15362d, RoundingMode.CEILING)] = true;
+            for (int i11 = 0; i11 < this.f15978f; i11++) {
+                zArr[w2.a(i11 * 8, this.f15976d, RoundingMode.CEILING)] = true;
             }
-            this.f15366h = z10;
+            this.f15980h = z10;
         } catch (ArithmeticException e10) {
             throw new IllegalArgumentException("Illegal alphabet length " + cArr.length, e10);
         }

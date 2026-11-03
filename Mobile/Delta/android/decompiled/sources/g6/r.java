@@ -11,7 +11,7 @@ public final class r {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final r f17927a = new r();
+    public static final r f18466a = new r();
 
     @NotNull
     public final int[] a(@NotNull NetworkRequest request) {

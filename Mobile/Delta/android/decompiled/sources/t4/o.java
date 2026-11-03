@@ -25,13 +25,13 @@ public final class o extends s {
     @NotNull
     public GetTopicsRequest c(@NotNull b request) {
         Intrinsics.checkNotNullParameter(request, "request");
-        return d.f31592a.a(request);
+        return d.f32111a.a(request);
     }
 
     @Override // t4.s
     @NotNull
     public e d(@NotNull GetTopicsResponse response) {
         Intrinsics.checkNotNullParameter(response, "response");
-        return h.f31594a.b(response);
+        return h.f32113a.b(response);
     }
 }

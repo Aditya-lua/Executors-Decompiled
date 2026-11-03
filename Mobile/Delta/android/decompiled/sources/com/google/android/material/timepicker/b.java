@@ -7,10 +7,10 @@ import android.text.Spanned;
 public class b implements InputFilter {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f8348a;
+    public int f8422a;
 
     public b(int i10) {
-        this.f8348a = i10;
+        this.f8422a = i10;
     }
 
     @Override // android.text.InputFilter
@@ -18,7 +18,7 @@ public class b implements InputFilter {
         try {
             StringBuilder sb2 = new StringBuilder(spanned);
             sb2.replace(i12, i13, charSequence.subSequence(i10, i11).toString());
-            if (Integer.parseInt(sb2.toString()) <= this.f8348a) {
+            if (Integer.parseInt(sb2.toString()) <= this.f8422a) {
                 return null;
             }
             return "";

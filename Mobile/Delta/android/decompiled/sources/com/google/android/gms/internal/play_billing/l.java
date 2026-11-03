@@ -20,25 +20,25 @@ public enum l {
 
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public static final q0 f7141q;
+    public static final q0 f7215q;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f7143a;
+    public final int f7217a;
 
     static {
         p0 p0Var = new p0();
         for (l lVar : values()) {
-            p0Var.a(Integer.valueOf(lVar.f7143a), lVar);
+            p0Var.a(Integer.valueOf(lVar.f7217a), lVar);
         }
-        f7141q = p0Var.b();
+        f7215q = p0Var.b();
     }
 
     l(int i10) {
-        this.f7143a = i10;
+        this.f7217a = i10;
     }
 
     public static l a(int i10) {
-        q0 q0Var = f7141q;
+        q0 q0Var = f7215q;
         Integer numValueOf = Integer.valueOf(i10);
         return !q0Var.containsKey(numValueOf) ? RESPONSE_CODE_UNSPECIFIED : (l) q0Var.get(numValueOf);
     }

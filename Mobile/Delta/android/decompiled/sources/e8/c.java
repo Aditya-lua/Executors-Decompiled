@@ -4,24 +4,24 @@ package e8;
 public final class c {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final c f15228c = new a().a();
+    public static final c f15842c = new a().a();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final long f15229a;
+    public final long f15843a;
     public final b b;
 
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public long f15230a = 0;
+        public long f15844a = 0;
         public b b = b.REASON_UNKNOWN;
 
         public c a() {
-            return new c(this.f15230a, this.b);
+            return new c(this.f15844a, this.b);
         }
 
         public a b(long j10) {
-            this.f15230a = j10;
+            this.f15844a = j10;
             return this;
         }
 
@@ -31,7 +31,7 @@ public final class c {
         }
     }
 
-    public enum b implements tf.c {
+    public enum b implements uf.c {
         REASON_UNKNOWN(0),
         MESSAGE_TOO_OLD(1),
         CACHE_FULL(2),
@@ -42,20 +42,20 @@ public final class c {
 
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final int f15238a;
+        public final int f15852a;
 
         b(int i10) {
-            this.f15238a = i10;
+            this.f15852a = i10;
         }
 
-        @Override // tf.c
+        @Override // uf.c
         public int getNumber() {
-            return this.f15238a;
+            return this.f15852a;
         }
     }
 
     public c(long j10, b bVar) {
-        this.f15229a = j10;
+        this.f15843a = j10;
         this.b = bVar;
     }
 
@@ -63,12 +63,12 @@ public final class c {
         return new a();
     }
 
-    @tf.d(tag = 1)
+    @uf.d(tag = 1)
     public long a() {
-        return this.f15229a;
+        return this.f15843a;
     }
 
-    @tf.d(tag = 3)
+    @uf.d(tag = 3)
     public b b() {
         return this.b;
     }

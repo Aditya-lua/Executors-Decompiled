@@ -8,16 +8,16 @@ import android.os.Parcel;
 public class a implements IInterface {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final IBinder f37349a;
+    public final IBinder f38044a;
     public final String b = "com.google.android.gms.auth.api.phone.internal.ISmsRetrieverApiService";
 
     public a(IBinder iBinder, String str) {
-        this.f37349a = iBinder;
+        this.f38044a = iBinder;
     }
 
     @Override // android.os.IInterface
     public final IBinder asBinder() {
-        return this.f37349a;
+        return this.f38044a;
     }
 
     public final Parcel r2() {
@@ -29,7 +29,7 @@ public class a implements IInterface {
     public final void s2(int i10, Parcel parcel) {
         Parcel parcelObtain = Parcel.obtain();
         try {
-            this.f37349a.transact(i10, parcel, parcelObtain, 0);
+            this.f38044a.transact(i10, parcel, parcelObtain, 0);
             parcelObtain.readException();
         } finally {
             parcel.recycle();

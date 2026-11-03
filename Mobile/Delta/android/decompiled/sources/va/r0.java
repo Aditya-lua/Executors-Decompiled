@@ -6,14 +6,14 @@ import com.google.android.gms.internal.appindex.zzk;
 public final class r0 extends b {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final /* synthetic */ zzk[] f32906e;
+    public final /* synthetic */ zzk[] f33474e;
 
     public r0(c cVar, zzk[] zzkVarArr) {
-        this.f32906e = zzkVarArr;
+        this.f33474e = zzkVarArr;
     }
 
     @Override // va.b
     public final void h(a0 a0Var) {
-        a0Var.u2(new s0(this), this.f32906e);
+        a0Var.u2(new s0(this), this.f33474e);
     }
 }

@@ -6,15 +6,21 @@ import androidx.annotation.Keep;
 @Keep
 public final class CallingState {
     final String callId;
+    final CallingDirection direction;
     final CallingStatus status;
 
-    public CallingState(String str, CallingStatus callingStatus) {
+    public CallingState(String str, CallingStatus callingStatus, CallingDirection callingDirection) {
         this.callId = str;
         this.status = callingStatus;
+        this.direction = callingDirection;
     }
 
     public String getCallId() {
         return this.callId;
+    }
+
+    public CallingDirection getDirection() {
+        return this.direction;
     }
 
     public CallingStatus getStatus() {
@@ -22,6 +28,6 @@ public final class CallingState {
     }
 
     public String toString() {
-        return "CallingState{callId=" + this.callId + ",status=" + this.status + "}";
+        return "CallingState{callId=" + this.callId + ",status=" + this.status + ",direction=" + this.direction + "}";
     }
 }

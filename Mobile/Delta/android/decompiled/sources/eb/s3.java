@@ -7,28 +7,28 @@ import java.nio.charset.Charset;
 public final class s3 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Charset f15390a = Charset.forName("US-ASCII");
+    public static final Charset f16004a = Charset.forName("US-ASCII");
     public static final Charset b = Charset.forName("UTF-8");
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final Charset f15391c = Charset.forName("ISO-8859-1");
+    public static final Charset f16005c = Charset.forName("ISO-8859-1");
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final byte[] f15392d;
+    public static final byte[] f16006d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final ByteBuffer f15393e;
+    public static final ByteBuffer f16007e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final r3 f15394f;
+    public static final r3 f16008f;
 
     static {
         byte[] bArr = new byte[0];
-        f15392d = bArr;
-        f15393e = ByteBuffer.wrap(bArr);
-        int i10 = r3.f15370a;
+        f16006d = bArr;
+        f16007e = ByteBuffer.wrap(bArr);
+        int i10 = r3.f15984a;
         o3 o3Var = new o3(bArr, 0, 0, false, null);
         o3Var.a(0);
-        f15394f = o3Var;
+        f16008f = o3Var;
     }
 }

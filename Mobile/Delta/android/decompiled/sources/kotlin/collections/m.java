@@ -25,18 +25,18 @@ public class m extends l {
 
     /* JADX INFO: Add missing generic type declarations: [T] */
     @Metadata(d1 = {"\u0000\u0011\n\u0000\n\u0002\u0010\u001c\n\u0002\u0010(\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\b\u0012\u0004\u0012\u00028\u00000\u0001J\u0016\u0010\u0003\u001a\b\u0012\u0004\u0012\u00028\u00000\u0002H\u0096\u0002¢\u0006\u0004\b\u0003\u0010\u0004¨\u0006\u0005"}, d2 = {"kotlin/collections/m$a", "", "", "iterator", "()Ljava/util/Iterator;", "kotlin-stdlib"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    public static final class a<T> implements Iterable<T>, au.a {
+    public static final class a<T> implements Iterable<T>, yt.a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ Object[] f22503a;
+        public final /* synthetic */ Object[] f22958a;
 
         public a(Object[] objArr) {
-            this.f22503a = objArr;
+            this.f22958a = objArr;
         }
 
         @Override // java.lang.Iterable
         public Iterator<T> iterator() {
-            return kotlin.jvm.internal.c.a(this.f22503a);
+            return kotlin.jvm.internal.c.a(this.f22958a);
         }
     }
 
@@ -45,15 +45,15 @@ public class m extends l {
     public static final class b<T> implements Sequence<T> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ Object[] f22504a;
+        public final /* synthetic */ Object[] f22959a;
 
         public b(Object[] objArr) {
-            this.f22504a = objArr;
+            this.f22959a = objArr;
         }
 
         @Override // kotlin.sequences.Sequence
         public Iterator<T> iterator() {
-            return kotlin.jvm.internal.c.a(this.f22504a);
+            return kotlin.jvm.internal.c.a(this.f22959a);
         }
     }
 
@@ -66,7 +66,7 @@ public class m extends l {
     @NotNull
     public static <T> Sequence<T> B(@NotNull T[] tArr) {
         Intrinsics.checkNotNullParameter(tArr, "<this>");
-        return tArr.length == 0 ? iu.m.g() : new b(tArr);
+        return tArr.length == 0 ? gu.m.g() : new b(tArr);
     }
 
     public static boolean C(@NotNull byte[] bArr, byte b10) {
@@ -481,7 +481,7 @@ public class m extends l {
         int iMin = Math.min(tArr.length, other.length);
         ArrayList arrayList = new ArrayList(iMin);
         for (int i10 = 0; i10 < iMin; i10++) {
-            arrayList.add(jt.s.a(tArr[i10], other[i10]));
+            arrayList.add(gt.s.a(tArr[i10], other[i10]));
         }
         return arrayList;
     }

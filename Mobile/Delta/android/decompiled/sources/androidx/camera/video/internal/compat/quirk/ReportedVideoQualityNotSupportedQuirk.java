@@ -36,15 +36,15 @@ public class ReportedVideoQualityNotSupportedQuirk implements VideoQualityQuirk,
     @Override // androidx.camera.video.internal.compat.quirk.VideoQualityQuirk
     public boolean c(o0 o0Var, x xVar) {
         if (g() || h()) {
-            return xVar == x.f16052d;
+            return xVar == x.f16648d;
         }
         if (k()) {
-            return xVar == x.b || xVar == x.f16051c;
+            return xVar == x.b || xVar == x.f16647c;
         }
         if (i()) {
-            return o0Var.i() == 0 && (xVar == x.f16051c || xVar == x.b);
+            return o0Var.i() == 0 && (xVar == x.f16647c || xVar == x.b);
         }
-        return j() && o0Var.i() == 1 && xVar == x.f16052d;
+        return j() && o0Var.i() == 1 && xVar == x.f16648d;
     }
 
     @Override // androidx.camera.core.internal.compat.quirk.SurfaceProcessingQuirk

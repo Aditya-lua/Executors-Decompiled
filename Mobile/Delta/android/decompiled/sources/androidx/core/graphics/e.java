@@ -10,7 +10,7 @@ public final class e {
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public int f1794a;
+        public int f1639a;
         public boolean b;
     }
 
@@ -23,7 +23,7 @@ public final class e {
             return false;
         }
         for (int i10 = 0; i10 < bVarArr.length; i10++) {
-            if (bVarArr[i10].f1795a != bVarArr2[i10].f1795a || bVarArr[i10].b.length != bVarArr2[i10].b.length) {
+            if (bVarArr[i10].f1640a != bVarArr2[i10].f1640a || bVarArr[i10].b.length != bVarArr2[i10].b.length) {
                 return false;
             }
         }
@@ -127,10 +127,10 @@ public final class e {
                 z10 = true;
             }
             if (z12) {
-                aVar.f1794a = i11;
+                aVar.f1639a = i11;
             }
         }
-        aVar.f1794a = i11;
+        aVar.f1639a = i11;
     }
 
     public static float[] h(String str) {
@@ -145,7 +145,7 @@ public final class e {
             int i11 = 0;
             while (i10 < length) {
                 g(str, i10, aVar);
-                int i12 = aVar.f1794a;
+                int i12 = aVar.f1639a;
                 if (i10 < i12) {
                     fArr[i11] = Float.parseFloat(str.substring(i10, i12));
                     i11++;
@@ -173,14 +173,14 @@ public final class e {
         float[] fArr = new float[6];
         char c10 = 'm';
         for (b bVar : bVarArr) {
-            b.e(path, fArr, c10, bVar.f1795a, bVar.b);
-            c10 = bVar.f1795a;
+            b.e(path, fArr, c10, bVar.f1640a, bVar.b);
+            c10 = bVar.f1640a;
         }
     }
 
     public static void k(b[] bVarArr, b[] bVarArr2) {
         for (int i10 = 0; i10 < bVarArr2.length; i10++) {
-            bVarArr[i10].f1795a = bVarArr2[i10].f1795a;
+            bVarArr[i10].f1640a = bVarArr2[i10].f1640a;
             for (int i11 = 0; i11 < bVarArr2[i10].b.length; i11++) {
                 bVarArr[i10].b[i11] = bVarArr2[i10].b[i11];
             }
@@ -190,11 +190,11 @@ public final class e {
     public static class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public char f1795a;
+        public char f1640a;
         public final float[] b;
 
         public b(char c10, float[] fArr) {
-            this.f1795a = c10;
+            this.f1640a = c10;
             this.b = fArr;
         }
 
@@ -643,7 +643,7 @@ public final class e {
         }
 
         public b(b bVar) {
-            this.f1795a = bVar.f1795a;
+            this.f1640a = bVar.f1640a;
             float[] fArr = bVar.b;
             this.b = e.c(fArr, 0, fArr.length);
         }

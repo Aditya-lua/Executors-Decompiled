@@ -8,7 +8,7 @@ import android.view.WindowInsets;
 public final class t0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final WindowInsets f1913a = WindowInsetsCompat.CONSUMED.toWindowInsets();
+    public static final WindowInsets f1758a = WindowInsetsCompat.CONSUMED.toWindowInsets();
     public static boolean b = false;
 
     public static class a {
@@ -19,14 +19,14 @@ public final class t0 {
 
     public static /* synthetic */ WindowInsets a(WindowInsets[] windowInsetsArr, View.OnApplyWindowInsetsListener onApplyWindowInsetsListener, View view, WindowInsets windowInsets) {
         windowInsetsArr[0] = onApplyWindowInsetsListener != null ? onApplyWindowInsetsListener.onApplyWindowInsets(view, windowInsets) : view.onApplyWindowInsets(windowInsets);
-        return f1913a;
+        return f1758a;
     }
 
     public static WindowInsets b(View view, WindowInsets windowInsets) {
         Object tag = view.getTag(j2.e.M);
         Object tag2 = view.getTag(j2.e.U);
         final View.OnApplyWindowInsetsListener onApplyWindowInsetsListener = tag instanceof View.OnApplyWindowInsetsListener ? (View.OnApplyWindowInsetsListener) tag : tag2 instanceof View.OnApplyWindowInsetsListener ? (View.OnApplyWindowInsetsListener) tag2 : null;
-        final WindowInsets[] windowInsetsArr = {f1913a};
+        final WindowInsets[] windowInsetsArr = {f1758a};
         view.setOnApplyWindowInsetsListener(new View.OnApplyWindowInsetsListener() { // from class: androidx.core.view.s0
             @Override // android.view.View.OnApplyWindowInsetsListener
             public final WindowInsets onApplyWindowInsets(View view2, WindowInsets windowInsets2) {
@@ -48,7 +48,7 @@ public final class t0 {
             }
         }
         WindowInsets windowInsets3 = windowInsetsArr[0];
-        return windowInsets3 != null ? windowInsets3 : f1913a;
+        return windowInsets3 != null ? windowInsets3 : f1758a;
     }
 
     public static boolean c(ViewGroup viewGroup) {

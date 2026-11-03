@@ -6,14 +6,14 @@ import java.util.List;
 public final class c extends v0.b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final n0 f34563a;
+    public final n0 f35061a;
     public final List<z0.f> b;
 
     public c(n0 n0Var, List<z0.f> list) {
         if (n0Var == null) {
             throw new NullPointerException("Null surfaceEdge");
         }
-        this.f34563a = n0Var;
+        this.f35061a = n0Var;
         if (list == null) {
             throw new NullPointerException("Null outConfigs");
         }
@@ -27,7 +27,7 @@ public final class c extends v0.b {
 
     @Override // x0.v0.b
     public n0 b() {
-        return this.f34563a;
+        return this.f35061a;
     }
 
     public boolean equals(Object obj) {
@@ -36,7 +36,7 @@ public final class c extends v0.b {
         }
         if (obj instanceof v0.b) {
             v0.b bVar = (v0.b) obj;
-            if (this.f34563a.equals(bVar.b()) && this.b.equals(bVar.a())) {
+            if (this.f35061a.equals(bVar.b()) && this.b.equals(bVar.a())) {
                 return true;
             }
         }
@@ -44,10 +44,10 @@ public final class c extends v0.b {
     }
 
     public int hashCode() {
-        return ((this.f34563a.hashCode() ^ 1000003) * 1000003) ^ this.b.hashCode();
+        return ((this.f35061a.hashCode() ^ 1000003) * 1000003) ^ this.b.hashCode();
     }
 
     public String toString() {
-        return "In{surfaceEdge=" + this.f34563a + ", outConfigs=" + this.b + "}";
+        return "In{surfaceEdge=" + this.f35061a + ", outConfigs=" + this.b + "}";
     }
 }

@@ -7,20 +7,20 @@ import k9.a.d;
 public final class b<O extends k9.a.d> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f22989a;
+    public final int f23383a;
     public final k9.a b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final k9.a.d f22990c;
+    public final k9.a.d f23384c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final String f22991d;
+    public final String f23385d;
 
     public b(k9.a aVar, k9.a.d dVar, String str) {
         this.b = aVar;
-        this.f22990c = dVar;
-        this.f22991d = str;
-        this.f22989a = n9.k.c(aVar, dVar, str);
+        this.f23384c = dVar;
+        this.f23385d = str;
+        this.f23383a = n9.k.c(aVar, dVar, str);
     }
 
     @NonNull
@@ -44,10 +44,10 @@ public final class b<O extends k9.a.d> {
             return false;
         }
         b bVar = (b) obj;
-        return n9.k.b(this.b, bVar.b) && n9.k.b(this.f22990c, bVar.f22990c) && n9.k.b(this.f22991d, bVar.f22991d);
+        return n9.k.b(this.b, bVar.b) && n9.k.b(this.f23384c, bVar.f23384c) && n9.k.b(this.f23385d, bVar.f23385d);
     }
 
     public final int hashCode() {
-        return this.f22989a;
+        return this.f23383a;
     }
 }

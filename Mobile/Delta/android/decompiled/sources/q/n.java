@@ -12,13 +12,13 @@ public class n {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final TextView f29036a;
+    public final TextView f29389a;
 
     @NonNull
     public final b4.f b;
 
     public n(@NonNull TextView textView) {
-        this.f29036a = textView;
+        this.f29389a = textView;
         this.b = new b4.f(textView, false);
     }
 
@@ -32,9 +32,9 @@ public class n {
     }
 
     public void c(AttributeSet attributeSet, int i10) {
-        TypedArray typedArrayObtainStyledAttributes = this.f29036a.getContext().obtainStyledAttributes(attributeSet, i.j.f20058i0, i10, 0);
+        TypedArray typedArrayObtainStyledAttributes = this.f29389a.getContext().obtainStyledAttributes(attributeSet, i.j.f20174i0, i10, 0);
         try {
-            int i11 = i.j.f20128w0;
+            int i11 = i.j.f20244w0;
             boolean z10 = typedArrayObtainStyledAttributes.hasValue(i11) ? typedArrayObtainStyledAttributes.getBoolean(i11, true) : true;
             typedArrayObtainStyledAttributes.recycle();
             e(z10);

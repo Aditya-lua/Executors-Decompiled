@@ -10,11 +10,11 @@ public final class v0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final String f35008a;
+    public static final String f35506a;
 
     static {
         String strI = w.i("WorkerFactory");
         Intrinsics.checkNotNullExpressionValue(strI, "tagWithPrefix(...)");
-        f35008a = strI;
+        f35506a = strI;
     }
 }

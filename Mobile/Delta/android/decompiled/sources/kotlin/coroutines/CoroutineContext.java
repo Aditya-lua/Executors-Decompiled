@@ -35,7 +35,7 @@ public interface CoroutineContext {
             @NotNull
             public static CoroutineContext c(@NotNull Element element, @NotNull b<?> key) {
                 Intrinsics.checkNotNullParameter(key, "key");
-                return Intrinsics.c(element.getKey(), key) ? e.f22525a : element;
+                return Intrinsics.c(element.getKey(), key) ? e.f22980a : element;
             }
 
             @NotNull
@@ -58,7 +58,7 @@ public interface CoroutineContext {
         @NotNull
         public static CoroutineContext b(@NotNull CoroutineContext coroutineContext, @NotNull CoroutineContext context) {
             Intrinsics.checkNotNullParameter(context, "context");
-            return context == e.f22525a ? coroutineContext : (CoroutineContext) context.fold(coroutineContext, new Function2() { // from class: nt.d
+            return context == e.f22980a ? coroutineContext : (CoroutineContext) context.fold(coroutineContext, new Function2() { // from class: lt.d
                 @Override // kotlin.jvm.functions.Function2
                 public final Object invoke(Object obj, Object obj2) {
                     return CoroutineContext.a.c((CoroutineContext) obj, (CoroutineContext.Element) obj2);
@@ -70,7 +70,7 @@ public interface CoroutineContext {
             Intrinsics.checkNotNullParameter(acc, "acc");
             Intrinsics.checkNotNullParameter(element, "element");
             CoroutineContext coroutineContextMinusKey = acc.minusKey(element.getKey());
-            e eVar = e.f22525a;
+            e eVar = e.f22980a;
             if (coroutineContextMinusKey == eVar) {
                 return element;
             }

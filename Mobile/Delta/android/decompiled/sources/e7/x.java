@@ -13,7 +13,7 @@ public final class x {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final x f15217a = new x();
+    public static final x f15831a = new x();
 
     @Nullable
     public final String a(@NotNull String extension) {
@@ -22,7 +22,7 @@ public final class x {
         }
         String lowerCase = extension.toLowerCase(Locale.ROOT);
         Intrinsics.checkNotNullExpressionValue(lowerCase, "toLowerCase(...)");
-        String str = (String) y.f15218a.get(lowerCase);
+        String str = (String) y.f15832a.get(lowerCase);
         return str == null ? z.a(lowerCase) : str;
     }
 

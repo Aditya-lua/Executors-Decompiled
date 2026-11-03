@@ -6,89 +6,89 @@ import g0.t;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import me.x;
 import n0.a3;
 import n0.e0;
 import n0.o0;
 import n0.p0;
 import n0.u;
+import ne.x;
 import r0.n;
 
 /* JADX INFO: loaded from: classes.dex */
 public final class a implements a3.a<p0.a> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final o0 f1435a;
+    public final o0 f1280a;
     public final d0<PreviewView.e> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public PreviewView.e f1436c;
+    public PreviewView.e f1281c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final c f1437d;
+    public final c f1282d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public x<Void> f1438e;
+    public x<Void> f1283e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public boolean f1439f = false;
+    public boolean f1284f = false;
 
     /* JADX INFO: renamed from: androidx.camera.view.a$a, reason: collision with other inner class name */
-    public class C0020a implements r0.c<Void> {
+    public class C0016a implements r0.c<Void> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ List f1440a;
+        public final /* synthetic */ List f1285a;
         public final /* synthetic */ t b;
 
-        public C0020a(List list, t tVar) {
-            this.f1440a = list;
+        public C0016a(List list, t tVar) {
+            this.f1285a = list;
             this.b = tVar;
         }
 
         @Override // r0.c
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public void onSuccess(Void r8) {
-            a.this.f1438e = null;
+            a.this.f1283e = null;
         }
 
         @Override // r0.c
         public void onFailure(Throwable th2) {
-            a.this.f1438e = null;
-            if (this.f1440a.isEmpty()) {
+            a.this.f1283e = null;
+            if (this.f1285a.isEmpty()) {
                 return;
             }
-            Iterator it = this.f1440a.iterator();
+            Iterator it = this.f1285a.iterator();
             while (it.hasNext()) {
                 ((o0) this.b).v((u) it.next());
             }
-            this.f1440a.clear();
+            this.f1285a.clear();
         }
     }
 
     public class b extends u {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ y1.c.a f1442a;
+        public final /* synthetic */ y1.c.a f1287a;
         public final /* synthetic */ t b;
 
         public b(y1.c.a aVar, t tVar) {
-            this.f1442a = aVar;
+            this.f1287a = aVar;
             this.b = tVar;
         }
 
         @Override // n0.u
         public void b(int i10, e0 e0Var) {
-            this.f1442a.c(null);
+            this.f1287a.c(null);
             ((o0) this.b).v(this);
         }
     }
 
     public a(o0 o0Var, d0<PreviewView.e> d0Var, c cVar) {
-        this.f1435a = o0Var;
+        this.f1280a = o0Var;
         this.b = d0Var;
-        this.f1437d = cVar;
+        this.f1282d = cVar;
         synchronized (this) {
-            this.f1436c = d0Var.f();
+            this.f1281c = d0Var.f();
         }
     }
 
@@ -107,10 +107,10 @@ public final class a implements a3.a<p0.a> {
     }
 
     public final void e() {
-        x<Void> xVar = this.f1438e;
+        x<Void> xVar = this.f1283e;
         if (xVar != null) {
             xVar.cancel(false);
-            this.f1438e = null;
+            this.f1283e = null;
         }
     }
 
@@ -123,16 +123,16 @@ public final class a implements a3.a<p0.a> {
     public void a(p0.a aVar) {
         if (aVar == p0.a.CLOSING || aVar == p0.a.CLOSED || aVar == p0.a.RELEASING || aVar == p0.a.RELEASED) {
             i(PreviewView.e.IDLE);
-            if (this.f1439f) {
-                this.f1439f = false;
+            if (this.f1284f) {
+                this.f1284f = false;
                 e();
                 return;
             }
             return;
         }
-        if ((aVar == p0.a.OPENING || aVar == p0.a.OPEN || aVar == p0.a.PENDING_OPEN) && !this.f1439f) {
-            h(this.f1435a);
-            this.f1439f = true;
+        if ((aVar == p0.a.OPENING || aVar == p0.a.OPEN || aVar == p0.a.PENDING_OPEN) && !this.f1284f) {
+            h(this.f1280a);
+            this.f1284f = true;
         }
     }
 
@@ -141,26 +141,26 @@ public final class a implements a3.a<p0.a> {
         ArrayList arrayList = new ArrayList();
         r0.d dVarF = r0.d.c(j(tVar, arrayList)).g(new r0.a() { // from class: p1.o
             @Override // r0.a
-            public final me.x apply(Object obj) {
-                return this.f28181a.f1437d.i();
+            public final ne.x apply(Object obj) {
+                return this.f28400a.f1282d.i();
             }
         }, q0.c.b()).f(new t.a() { // from class: p1.p
             @Override // t.a
             public final Object apply(Object obj) {
-                return androidx.camera.view.a.d(this.f28185a, (Void) obj);
+                return androidx.camera.view.a.d(this.f28404a, (Void) obj);
             }
         }, q0.c.b());
-        this.f1438e = dVarF;
-        n.j(dVarF, new C0020a(arrayList, tVar), q0.c.b());
+        this.f1283e = dVarF;
+        n.j(dVarF, new C0016a(arrayList, tVar), q0.c.b());
     }
 
     public void i(PreviewView.e eVar) {
         synchronized (this) {
             try {
-                if (this.f1436c.equals(eVar)) {
+                if (this.f1281c.equals(eVar)) {
                     return;
                 }
-                this.f1436c = eVar;
+                this.f1281c = eVar;
                 r1.a("StreamStateObserver", "Update Preview stream state to " + eVar);
                 this.b.m(eVar);
             } catch (Throwable th2) {
@@ -170,10 +170,10 @@ public final class a implements a3.a<p0.a> {
     }
 
     public final x<Void> j(final t tVar, final List<u> list) {
-        return y1.c.a(new y1.c.InterfaceC0650c() { // from class: p1.q
-            @Override // y1.c.InterfaceC0650c
+        return y1.c.a(new y1.c.InterfaceC0665c() { // from class: p1.q
+            @Override // y1.c.InterfaceC0665c
             public final Object a(y1.c.a aVar) {
-                return androidx.camera.view.a.b(this.f28187a, tVar, list, aVar);
+                return androidx.camera.view.a.b(this.f28406a, tVar, list, aVar);
             }
         });
     }

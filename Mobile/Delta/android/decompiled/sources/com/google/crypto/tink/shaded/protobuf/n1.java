@@ -4,7 +4,7 @@ package com.google.crypto.tink.shaded.protobuf;
 public abstract class n1<T, B> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static volatile int f8514a = 100;
+    public static volatile int f8588a = 100;
 
     public abstract void a(B b, int i10, int i11);
 
@@ -62,7 +62,7 @@ public abstract class n1<T, B> {
         B bN = n();
         int iC = s1.c(iA2, 4);
         int i11 = i10 + 1;
-        if (i11 >= f8514a) {
+        if (i11 >= f8588a) {
             throw b0.i();
         }
         l(bN, f1Var, i11);

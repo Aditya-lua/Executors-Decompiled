@@ -10,7 +10,7 @@ import com.google.android.gms.internal.mlkit_vision_common.zzms;
 import com.google.android.gms.internal.mlkit_vision_common.zzmu;
 import com.google.mlkit.vision.common.InputImage;
 import java.util.List;
-import nd.a;
+import od.a;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class CommonConvertUtils {

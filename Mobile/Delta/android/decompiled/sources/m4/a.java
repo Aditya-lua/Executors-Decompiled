@@ -11,7 +11,7 @@ import java.io.PrintWriter;
 public abstract class a {
 
     /* JADX INFO: renamed from: m4.a$a, reason: collision with other inner class name */
-    public interface InterfaceC0421a<D> {
+    public interface InterfaceC0435a<D> {
         void a(@NonNull n4.b<D> bVar, D d10);
 
         @NonNull
@@ -22,14 +22,14 @@ public abstract class a {
 
     @NonNull
     public static <T extends s & c1> a b(@NonNull T t8) {
-        return new b(t8, t8.w());
+        return new b(t8, t8.v());
     }
 
     @Deprecated
     public abstract void a(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr);
 
     @NonNull
-    public abstract <D> n4.b<D> c(int i10, Bundle bundle, @NonNull InterfaceC0421a<D> interfaceC0421a);
+    public abstract <D> n4.b<D> c(int i10, Bundle bundle, @NonNull InterfaceC0435a<D> interfaceC0435a);
 
     public abstract void d();
 }

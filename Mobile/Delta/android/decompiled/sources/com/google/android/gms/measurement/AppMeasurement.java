@@ -24,7 +24,7 @@ public class AppMeasurement {
     public static volatile AppMeasurement b;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final c f7400a;
+    public final c f7474a;
 
     public static class ConditionalUserProperty {
 
@@ -112,7 +112,7 @@ public class AppMeasurement {
     }
 
     public AppMeasurement(g7 g7Var) {
-        this.f7400a = new a(g7Var);
+        this.f7474a = new a(g7Var);
     }
 
     /* JADX WARN: Unreachable blocks removed: 1, instructions: 1 */
@@ -137,34 +137,34 @@ public class AppMeasurement {
 
     @Keep
     public void beginAdUnitExposure(@NonNull String str) {
-        this.f7400a.h(str);
+        this.f7474a.h(str);
     }
 
     @Keep
     public void clearConditionalUserProperty(@NonNull String str, @NonNull String str2, @NonNull Bundle bundle) {
-        this.f7400a.k(str, str2, bundle);
+        this.f7474a.k(str, str2, bundle);
     }
 
     @Keep
     public void endAdUnitExposure(@NonNull String str) {
-        this.f7400a.c(str);
+        this.f7474a.c(str);
     }
 
     @Keep
     public long generateEventId() {
-        return this.f7400a.f();
+        return this.f7474a.f();
     }
 
     @NonNull
     @Keep
     public String getAppInstanceId() {
-        return this.f7400a.e();
+        return this.f7474a.e();
     }
 
     @NonNull
     @Keep
     public List<ConditionalUserProperty> getConditionalUserProperties(@NonNull String str, @NonNull String str2) {
-        List listL = this.f7400a.l(str, str2);
+        List listL = this.f7474a.l(str, str2);
         ArrayList arrayList = new ArrayList(listL == null ? 0 : listL.size());
         Iterator it = listL.iterator();
         while (it.hasNext()) {
@@ -176,35 +176,35 @@ public class AppMeasurement {
     @NonNull
     @Keep
     public String getCurrentScreenClass() {
-        return this.f7400a.d();
+        return this.f7474a.d();
     }
 
     @NonNull
     @Keep
     public String getCurrentScreenName() {
-        return this.f7400a.zzh();
+        return this.f7474a.zzh();
     }
 
     @NonNull
     @Keep
     public String getGmpAppId() {
-        return this.f7400a.g();
+        return this.f7474a.g();
     }
 
     @Keep
     public int getMaxUserProperties(@NonNull String str) {
-        return this.f7400a.i(str);
+        return this.f7474a.i(str);
     }
 
     @NonNull
     @Keep
     public Map<String, Object> getUserProperties(@NonNull String str, @NonNull String str2, boolean z10) {
-        return this.f7400a.j(str, str2, z10);
+        return this.f7474a.j(str, str2, z10);
     }
 
     @Keep
     public void logEventInternal(@NonNull String str, @NonNull String str2, @NonNull Bundle bundle) {
-        this.f7400a.a(str, str2, bundle);
+        this.f7474a.a(str, str2, bundle);
     }
 
     @Keep
@@ -257,7 +257,7 @@ public class AppMeasurement {
         if (bundle4 != null) {
             bundle.putBundle("expired_event_params", bundle4);
         }
-        c cVar = this.f7400a;
+        c cVar = this.f7474a;
         bundle.putLong("creation_timestamp", conditionalUserProperty.mCreationTimestamp);
         bundle.putBoolean("active", conditionalUserProperty.mActive);
         bundle.putLong("triggered_timestamp", conditionalUserProperty.mTriggeredTimestamp);
@@ -265,6 +265,6 @@ public class AppMeasurement {
     }
 
     public AppMeasurement(ra raVar) {
-        this.f7400a = new b(raVar);
+        this.f7474a = new b(raVar);
     }
 }

@@ -1,10 +1,10 @@
 package com.withpersona.sdk2.inquiry.tracking;
 
 import kotlin.Metadata;
+import nt.d;
+import nt.f;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pt.d;
-import pt.f;
 
 /* JADX INFO: loaded from: classes3.dex */
 @f(c = "com.withpersona.sdk2.inquiry.tracking.RealTrackingEventsLogger$Companion", f = "RealTrackingEventsLogger.kt", l = {101, 111}, m = "createTrackingEventsRequest")
@@ -21,12 +21,12 @@ public final class RealTrackingEventsLogger$Companion$createTrackingEventsReques
     final /* synthetic */ RealTrackingEventsLogger.Companion this$0;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public RealTrackingEventsLogger$Companion$createTrackingEventsRequest$1(RealTrackingEventsLogger.Companion companion, nt.b<? super RealTrackingEventsLogger$Companion$createTrackingEventsRequest$1> bVar) {
+    public RealTrackingEventsLogger$Companion$createTrackingEventsRequest$1(RealTrackingEventsLogger.Companion companion, lt.b<? super RealTrackingEventsLogger$Companion$createTrackingEventsRequest$1> bVar) {
         super(bVar);
         this.this$0 = companion;
     }
 
-    @Override // pt.a
+    @Override // nt.a
     @Nullable
     public final Object invokeSuspend(@NotNull Object obj) {
         this.result = obj;

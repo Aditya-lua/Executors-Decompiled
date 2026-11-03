@@ -1,5 +1,7 @@
 package com.google.android.material.textfield;
 
+import ad.h;
+import ad.o;
 import android.R;
 import android.accessibilityservice.AccessibilityServiceInfo;
 import android.content.Context;
@@ -20,44 +22,42 @@ import android.widget.Filterable;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
-import dd.c;
-import gd.g;
-import hc.j;
-import hc.k;
+import ed.c;
+import hd.g;
+import ic.j;
+import ic.k;
 import java.util.List;
 import q.d;
 import q.o0;
-import zc.h;
-import zc.o;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class MaterialAutoCompleteTextView extends d {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
     @NonNull
-    public final o0 f8211e;
+    public final o0 f8285e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final AccessibilityManager f8212f;
+    public final AccessibilityManager f8286f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
     @NonNull
-    public final Rect f8213g;
+    public final Rect f8287g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final int f8214h;
+    public final int f8288h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final float f8215i;
+    public final float f8289i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public ColorStateList f8216j;
+    public ColorStateList f8290j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public int f8217k;
+    public int f8291k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public ColorStateList f8218l;
+    public ColorStateList f8292l;
 
     public class a implements AdapterView.OnItemClickListener {
         public a() {
@@ -66,24 +66,24 @@ public class MaterialAutoCompleteTextView extends d {
         @Override // android.widget.AdapterView.OnItemClickListener
         public void onItemClick(AdapterView<?> adapterView, View view, int i10, long j10) {
             MaterialAutoCompleteTextView materialAutoCompleteTextView = MaterialAutoCompleteTextView.this;
-            MaterialAutoCompleteTextView.this.l(i10 < 0 ? materialAutoCompleteTextView.f8211e.u() : materialAutoCompleteTextView.getAdapter().getItem(i10));
+            MaterialAutoCompleteTextView.this.l(i10 < 0 ? materialAutoCompleteTextView.f8285e.u() : materialAutoCompleteTextView.getAdapter().getItem(i10));
             AdapterView.OnItemClickListener onItemClickListener = MaterialAutoCompleteTextView.this.getOnItemClickListener();
             if (onItemClickListener != null) {
                 if (view == null || i10 < 0) {
-                    view = MaterialAutoCompleteTextView.this.f8211e.x();
-                    i10 = MaterialAutoCompleteTextView.this.f8211e.w();
-                    j10 = MaterialAutoCompleteTextView.this.f8211e.v();
+                    view = MaterialAutoCompleteTextView.this.f8285e.x();
+                    i10 = MaterialAutoCompleteTextView.this.f8285e.w();
+                    j10 = MaterialAutoCompleteTextView.this.f8285e.v();
                 }
-                onItemClickListener.onItemClick(MaterialAutoCompleteTextView.this.f8211e.o(), view, i10, j10);
+                onItemClickListener.onItemClick(MaterialAutoCompleteTextView.this.f8285e.o(), view, i10, j10);
             }
-            MaterialAutoCompleteTextView.this.f8211e.dismiss();
+            MaterialAutoCompleteTextView.this.f8285e.dismiss();
         }
     }
 
     public class b<T> extends ArrayAdapter<String> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public ColorStateList f8220a;
+        public ColorStateList f8294a;
         public ColorStateList b;
 
         public b(Context context, @NonNull int i10, String[] strArr) {
@@ -97,29 +97,29 @@ public class MaterialAutoCompleteTextView extends d {
             }
             int[] iArr = {R.attr.state_hovered, -16842919};
             int[] iArr2 = {R.attr.state_selected, -16842919};
-            int colorForState = MaterialAutoCompleteTextView.this.f8218l.getColorForState(iArr2, 0);
-            int colorForState2 = MaterialAutoCompleteTextView.this.f8218l.getColorForState(iArr, 0);
-            return new ColorStateList(new int[][]{iArr2, iArr, new int[0]}, new int[]{tc.a.i(MaterialAutoCompleteTextView.this.f8217k, colorForState), tc.a.i(MaterialAutoCompleteTextView.this.f8217k, colorForState2), MaterialAutoCompleteTextView.this.f8217k});
+            int colorForState = MaterialAutoCompleteTextView.this.f8292l.getColorForState(iArr2, 0);
+            int colorForState2 = MaterialAutoCompleteTextView.this.f8292l.getColorForState(iArr, 0);
+            return new ColorStateList(new int[][]{iArr2, iArr, new int[0]}, new int[]{uc.a.i(MaterialAutoCompleteTextView.this.f8291k, colorForState), uc.a.i(MaterialAutoCompleteTextView.this.f8291k, colorForState2), MaterialAutoCompleteTextView.this.f8291k});
         }
 
         public final Drawable b() {
             if (!c()) {
                 return null;
             }
-            ColorDrawable colorDrawable = new ColorDrawable(MaterialAutoCompleteTextView.this.f8217k);
+            ColorDrawable colorDrawable = new ColorDrawable(MaterialAutoCompleteTextView.this.f8291k);
             if (this.b == null) {
                 return colorDrawable;
             }
-            q2.a.o(colorDrawable, this.f8220a);
+            q2.a.o(colorDrawable, this.f8294a);
             return new RippleDrawable(this.b, colorDrawable, null);
         }
 
         public final boolean c() {
-            return MaterialAutoCompleteTextView.this.f8217k != 0;
+            return MaterialAutoCompleteTextView.this.f8291k != 0;
         }
 
         public final boolean d() {
-            return MaterialAutoCompleteTextView.this.f8218l != null;
+            return MaterialAutoCompleteTextView.this.f8292l != null;
         }
 
         public final ColorStateList e() {
@@ -127,12 +127,12 @@ public class MaterialAutoCompleteTextView extends d {
                 return null;
             }
             int[] iArr = {R.attr.state_pressed};
-            return new ColorStateList(new int[][]{iArr, new int[0]}, new int[]{MaterialAutoCompleteTextView.this.f8218l.getColorForState(iArr, 0), 0});
+            return new ColorStateList(new int[][]{iArr, new int[0]}, new int[]{MaterialAutoCompleteTextView.this.f8292l.getColorForState(iArr, 0), 0});
         }
 
         public void f() {
             this.b = e();
-            this.f8220a = a();
+            this.f8294a = a();
         }
 
         @Override // android.widget.ArrayAdapter, android.widget.Adapter
@@ -147,13 +147,13 @@ public class MaterialAutoCompleteTextView extends d {
     }
 
     public MaterialAutoCompleteTextView(@NonNull Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, hc.b.f18768a);
+        this(context, attributeSet, ic.b.f20590a);
     }
 
     @Override // android.widget.AutoCompleteTextView
     public void dismissDropDown() {
         if (g()) {
-            this.f8211e.dismiss();
+            this.f8285e.dismiss();
         } else {
             super.dismissDropDown();
         }
@@ -173,7 +173,7 @@ public class MaterialAutoCompleteTextView extends d {
     }
 
     public ColorStateList getDropDownBackgroundTintList() {
-        return this.f8216j;
+        return this.f8290j;
     }
 
     @Override // android.widget.TextView
@@ -183,21 +183,21 @@ public class MaterialAutoCompleteTextView extends d {
     }
 
     public float getPopupElevation() {
-        return this.f8215i;
+        return this.f8289i;
     }
 
     public int getSimpleItemSelectedColor() {
-        return this.f8217k;
+        return this.f8291k;
     }
 
     public ColorStateList getSimpleItemSelectedRippleColor() {
-        return this.f8218l;
+        return this.f8292l;
     }
 
     public final boolean h() {
         List<AccessibilityServiceInfo> enabledAccessibilityServiceList;
-        AccessibilityManager accessibilityManager = this.f8212f;
-        if (accessibilityManager != null && accessibilityManager.isEnabled() && (enabledAccessibilityServiceList = this.f8212f.getEnabledAccessibilityServiceList(16)) != null) {
+        AccessibilityManager accessibilityManager = this.f8286f;
+        if (accessibilityManager != null && accessibilityManager.isEnabled() && (enabledAccessibilityServiceList = this.f8286f.getEnabledAccessibilityServiceList(16)) != null) {
             for (AccessibilityServiceInfo accessibilityServiceInfo : enabledAccessibilityServiceList) {
                 if (accessibilityServiceInfo.getSettingsActivityName() != null && accessibilityServiceInfo.getSettingsActivityName().contains("SwitchAccess")) {
                     return true;
@@ -208,7 +208,7 @@ public class MaterialAutoCompleteTextView extends d {
     }
 
     public final boolean i() {
-        AccessibilityManager accessibilityManager = this.f8212f;
+        AccessibilityManager accessibilityManager = this.f8286f;
         return accessibilityManager != null && accessibilityManager.isTouchExplorationEnabled();
     }
 
@@ -221,7 +221,7 @@ public class MaterialAutoCompleteTextView extends d {
         }
         int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(getMeasuredWidth(), 0);
         int iMakeMeasureSpec2 = View.MeasureSpec.makeMeasureSpec(getMeasuredHeight(), 0);
-        int iMin = Math.min(adapter.getCount(), Math.max(0, this.f8211e.w()) + 15);
+        int iMin = Math.min(adapter.getCount(), Math.max(0, this.f8285e.w()) + 15);
         View view = null;
         int iMax = 0;
         for (int iMax2 = Math.max(0, iMin - 15); iMax2 < iMin; iMax2++) {
@@ -237,10 +237,10 @@ public class MaterialAutoCompleteTextView extends d {
             view.measure(iMakeMeasureSpec, iMakeMeasureSpec2);
             iMax = Math.max(iMax, view.getMeasuredWidth());
         }
-        Drawable drawableG = this.f8211e.g();
+        Drawable drawableG = this.f8285e.g();
         if (drawableG != null) {
-            drawableG.getPadding(this.f8213g);
-            Rect rect = this.f8213g;
+            drawableG.getPadding(this.f8287g);
+            Rect rect = this.f8287g;
             iMax += rect.left + rect.right;
         }
         return iMax + textInputLayoutF.getEndIconView().getMeasuredWidth();
@@ -269,7 +269,7 @@ public class MaterialAutoCompleteTextView extends d {
     @Override // android.widget.AutoCompleteTextView, android.view.View
     public void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-        this.f8211e.dismiss();
+        this.f8285e.dismiss();
     }
 
     @Override // android.widget.TextView, android.view.View
@@ -291,13 +291,13 @@ public class MaterialAutoCompleteTextView extends d {
     @Override // android.widget.AutoCompleteTextView
     public <T extends ListAdapter & Filterable> void setAdapter(T t8) {
         super.setAdapter(t8);
-        this.f8211e.m(getAdapter());
+        this.f8285e.m(getAdapter());
     }
 
     @Override // android.widget.AutoCompleteTextView
     public void setDropDownBackgroundDrawable(Drawable drawable) {
         super.setDropDownBackgroundDrawable(drawable);
-        o0 o0Var = this.f8211e;
+        o0 o0Var = this.f8285e;
         if (o0Var != null) {
             o0Var.b(drawable);
         }
@@ -308,17 +308,17 @@ public class MaterialAutoCompleteTextView extends d {
     }
 
     public void setDropDownBackgroundTintList(ColorStateList colorStateList) {
-        this.f8216j = colorStateList;
+        this.f8290j = colorStateList;
         Drawable dropDownBackground = getDropDownBackground();
         if (dropDownBackground instanceof g) {
-            ((g) dropDownBackground).a0(this.f8216j);
+            ((g) dropDownBackground).a0(this.f8290j);
         }
     }
 
     @Override // android.widget.AutoCompleteTextView
     public void setOnItemSelectedListener(AdapterView.OnItemSelectedListener onItemSelectedListener) {
         super.setOnItemSelectedListener(onItemSelectedListener);
-        this.f8211e.L(getOnItemSelectedListener());
+        this.f8285e.L(getOnItemSelectedListener());
     }
 
     @Override // android.widget.TextView
@@ -328,14 +328,14 @@ public class MaterialAutoCompleteTextView extends d {
     }
 
     public void setSimpleItemSelectedColor(int i10) {
-        this.f8217k = i10;
+        this.f8291k = i10;
         if (getAdapter() instanceof b) {
             ((b) getAdapter()).f();
         }
     }
 
     public void setSimpleItemSelectedRippleColor(ColorStateList colorStateList) {
-        this.f8218l = colorStateList;
+        this.f8292l = colorStateList;
         if (getAdapter() instanceof b) {
             ((b) getAdapter()).f();
         }
@@ -348,32 +348,32 @@ public class MaterialAutoCompleteTextView extends d {
     @Override // android.widget.AutoCompleteTextView
     public void showDropDown() {
         if (g()) {
-            this.f8211e.show();
+            this.f8285e.show();
         } else {
             super.showDropDown();
         }
     }
 
     public MaterialAutoCompleteTextView(@NonNull Context context, AttributeSet attributeSet, int i10) {
-        super(ld.a.c(context, attributeSet, i10, 0), attributeSet, i10);
-        this.f8213g = new Rect();
+        super(md.a.c(context, attributeSet, i10, 0), attributeSet, i10);
+        this.f8287g = new Rect();
         Context context2 = getContext();
-        TypedArray typedArrayI = o.i(context2, attributeSet, k.f19166x2, i10, j.f18934e, new int[0]);
-        int i11 = k.f19175y2;
+        TypedArray typedArrayI = o.i(context2, attributeSet, k.f20988x2, i10, j.f20756e, new int[0]);
+        int i11 = k.f20997y2;
         if (typedArrayI.hasValue(i11) && typedArrayI.getInt(i11, 0) == 0) {
             setKeyListener(null);
         }
-        this.f8214h = typedArrayI.getResourceId(k.B2, hc.h.f18898m);
-        this.f8215i = typedArrayI.getDimensionPixelOffset(k.f19184z2, hc.d.Z);
+        this.f8288h = typedArrayI.getResourceId(k.B2, ic.h.f20720m);
+        this.f8289i = typedArrayI.getDimensionPixelOffset(k.f21006z2, ic.d.Z);
         int i12 = k.A2;
         if (typedArrayI.hasValue(i12)) {
-            this.f8216j = ColorStateList.valueOf(typedArrayI.getColor(i12, 0));
+            this.f8290j = ColorStateList.valueOf(typedArrayI.getColor(i12, 0));
         }
-        this.f8217k = typedArrayI.getColor(k.C2, 0);
-        this.f8218l = c.a(context2, typedArrayI, k.D2);
-        this.f8212f = (AccessibilityManager) context2.getSystemService("accessibility");
+        this.f8291k = typedArrayI.getColor(k.C2, 0);
+        this.f8292l = c.a(context2, typedArrayI, k.D2);
+        this.f8286f = (AccessibilityManager) context2.getSystemService("accessibility");
         o0 o0Var = new o0(context2);
-        this.f8211e = o0Var;
+        this.f8285e = o0Var;
         o0Var.I(true);
         o0Var.C(this);
         o0Var.H(2);
@@ -387,6 +387,6 @@ public class MaterialAutoCompleteTextView extends d {
     }
 
     public void setSimpleItems(@NonNull String[] strArr) {
-        setAdapter(new b(getContext(), this.f8214h, strArr));
+        setAdapter(new b(getContext(), this.f8288h, strArr));
     }
 }

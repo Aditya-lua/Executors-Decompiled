@@ -6,16 +6,16 @@ import java.util.List;
 public final class n {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final List<n0.l1> f23621a;
+    public final List<n0.l1> f24271a;
     public final a1 b;
 
     public n(List<n0.l1> list, a1 a1Var) {
-        this.f23621a = list;
+        this.f24271a = list;
         this.b = a1Var;
     }
 
     public List<n0.l1> a() {
-        return this.f23621a;
+        return this.f24271a;
     }
 
     public boolean b() {

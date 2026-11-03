@@ -4,5 +4,5 @@ package l6;
 public final class a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final int f22950a = 2131296412;
+    public static final int f23344a = 2131296412;
 }

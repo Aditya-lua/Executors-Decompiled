@@ -32,11 +32,11 @@ public final class AFc1eSDK {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
     @Nullable
-    public String f5247d;
+    public String f5320d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
     @Nullable
-    public String f5248e;
+    public String f5321e;
 
     @Nullable
     public String force;
@@ -53,7 +53,7 @@ public final class AFc1eSDK {
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
     @Nullable
-    public Long f5249i;
+    public Long f5322i;
 
     @Nullable
     public String registerClient;
@@ -85,7 +85,7 @@ public final class AFc1eSDK {
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
     @Nullable
-    public AFb1qSDK f5250v;
+    public AFb1qSDK f5323v;
 
     @Nullable
     public String valueOf;
@@ -95,7 +95,7 @@ public final class AFc1eSDK {
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
     @Nullable
-    public AFb1rSDK f5251w;
+    public AFb1rSDK f5324w;
 
     @NotNull
     public AFLogger.LogLevel enableTCFDataCollection = AFLogger.LogLevel.NONE;

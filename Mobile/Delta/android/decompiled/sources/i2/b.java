@@ -11,7 +11,7 @@ import android.view.ViewParent;
 public class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final ThreadLocal<Matrix> f20250a = new ThreadLocal<>();
+    public static final ThreadLocal<Matrix> f20366a = new ThreadLocal<>();
     public static final ThreadLocal<RectF> b = new ThreadLocal<>();
 
     public static void a(ViewGroup viewGroup, View view, Rect rect) {
@@ -34,7 +34,7 @@ public class b {
     }
 
     public static void c(ViewGroup viewGroup, View view, Rect rect) {
-        ThreadLocal<Matrix> threadLocal = f20250a;
+        ThreadLocal<Matrix> threadLocal = f20366a;
         Matrix matrix = threadLocal.get();
         if (matrix == null) {
             matrix = new Matrix();

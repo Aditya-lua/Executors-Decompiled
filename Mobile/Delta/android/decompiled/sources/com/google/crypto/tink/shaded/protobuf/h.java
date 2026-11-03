@@ -9,21 +9,21 @@ import java.util.NoSuchElementException;
 
 /* JADX INFO: loaded from: classes2.dex */
 public abstract class h implements Iterable<Byte>, Serializable {
-    public static final h b = new j(a0.f8390d);
+    public static final h b = new j(a0.f8464d);
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final f f8436c;
+    public static final f f8510c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final Comparator<h> f8437d;
+    public static final Comparator<h> f8511d;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f8438a = 0;
+    public int f8512a = 0;
 
     public class a extends c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public int f8439a = 0;
+        public int f8513a = 0;
         public final int b;
 
         public a() {
@@ -32,17 +32,17 @@ public abstract class h implements Iterable<Byte>, Serializable {
 
         @Override // com.google.crypto.tink.shaded.protobuf.h.g
         public byte c() {
-            int i10 = this.f8439a;
+            int i10 = this.f8513a;
             if (i10 >= this.b) {
                 throw new NoSuchElementException();
             }
-            this.f8439a = i10 + 1;
+            this.f8513a = i10 + 1;
             return h.this.i(i10);
         }
 
         @Override // java.util.Iterator
         public boolean hasNext() {
-            return this.f8439a < this.b;
+            return this.f8513a < this.b;
         }
     }
 
@@ -92,42 +92,42 @@ public abstract class h implements Iterable<Byte>, Serializable {
     public static final class e extends j {
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public final int f8441f;
+        public final int f8515f;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public final int f8442g;
+        public final int f8516g;
 
         public e(byte[] bArr, int i10, int i11) {
             super(bArr);
             h.d(i10, i10 + i11, bArr.length);
-            this.f8441f = i10;
-            this.f8442g = i11;
+            this.f8515f = i10;
+            this.f8516g = i11;
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.h.j
         public int E() {
-            return this.f8441f;
+            return this.f8515f;
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.h.j, com.google.crypto.tink.shaded.protobuf.h
         public byte b(int i10) {
             h.c(i10, size());
-            return this.f8444e[this.f8441f + i10];
+            return this.f8518e[this.f8515f + i10];
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.h.j, com.google.crypto.tink.shaded.protobuf.h
         public void h(byte[] bArr, int i10, int i11, int i12) {
-            System.arraycopy(this.f8444e, E() + i10, bArr, i11, i12);
+            System.arraycopy(this.f8518e, E() + i10, bArr, i11, i12);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.h.j, com.google.crypto.tink.shaded.protobuf.h
         public byte i(int i10) {
-            return this.f8444e[this.f8441f + i10];
+            return this.f8518e[this.f8515f + i10];
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.h.j, com.google.crypto.tink.shaded.protobuf.h
         public int size() {
-            return this.f8442g;
+            return this.f8516g;
         }
     }
 
@@ -140,29 +140,29 @@ public abstract class h implements Iterable<Byte>, Serializable {
     }
 
     /* JADX INFO: renamed from: com.google.crypto.tink.shaded.protobuf.h$h, reason: collision with other inner class name */
-    public static final class C0127h {
+    public static final class C0131h {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final com.google.crypto.tink.shaded.protobuf.k f8443a;
+        public final com.google.crypto.tink.shaded.protobuf.k f8517a;
         public final byte[] b;
 
-        public /* synthetic */ C0127h(int i10, a aVar) {
+        public /* synthetic */ C0131h(int i10, a aVar) {
             this(i10);
         }
 
         public h a() {
-            this.f8443a.c();
+            this.f8517a.c();
             return new j(this.b);
         }
 
         public com.google.crypto.tink.shaded.protobuf.k b() {
-            return this.f8443a;
+            return this.f8517a;
         }
 
-        public C0127h(int i10) {
+        public C0131h(int i10) {
             byte[] bArr = new byte[i10];
             this.b = bArr;
-            this.f8443a = com.google.crypto.tink.shaded.protobuf.k.f0(bArr);
+            this.f8517a = com.google.crypto.tink.shaded.protobuf.k.f0(bArr);
         }
     }
 
@@ -183,17 +183,17 @@ public abstract class h implements Iterable<Byte>, Serializable {
     public static class j extends i {
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final byte[] f8444e;
+        public final byte[] f8518e;
 
         public j(byte[] bArr) {
             super(null);
             bArr.getClass();
-            this.f8444e = bArr;
+            this.f8518e = bArr;
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.h
         public final void C(com.google.crypto.tink.shaded.protobuf.g gVar) {
-            gVar.a(this.f8444e, E(), size());
+            gVar.a(this.f8518e, E(), size());
         }
 
         public final boolean D(h hVar, int i10, int i11) {
@@ -208,8 +208,8 @@ public abstract class h implements Iterable<Byte>, Serializable {
                 return hVar.u(i10, i12).equals(u(0, i11));
             }
             j jVar = (j) hVar;
-            byte[] bArr = this.f8444e;
-            byte[] bArr2 = jVar.f8444e;
+            byte[] bArr = this.f8518e;
+            byte[] bArr2 = jVar.f8518e;
             int iE = E() + i11;
             int iE2 = E();
             int iE3 = jVar.E() + i10;
@@ -229,7 +229,7 @@ public abstract class h implements Iterable<Byte>, Serializable {
 
         @Override // com.google.crypto.tink.shaded.protobuf.h
         public byte b(int i10) {
-            return this.f8444e[i10];
+            return this.f8518e[i10];
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.h
@@ -257,33 +257,33 @@ public abstract class h implements Iterable<Byte>, Serializable {
 
         @Override // com.google.crypto.tink.shaded.protobuf.h
         public void h(byte[] bArr, int i10, int i11, int i12) {
-            System.arraycopy(this.f8444e, i10, bArr, i11, i12);
+            System.arraycopy(this.f8518e, i10, bArr, i11, i12);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.h
         public byte i(int i10) {
-            return this.f8444e[i10];
+            return this.f8518e[i10];
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.h
         public final com.google.crypto.tink.shaded.protobuf.i m() {
-            return com.google.crypto.tink.shaded.protobuf.i.k(this.f8444e, E(), size(), true);
+            return com.google.crypto.tink.shaded.protobuf.i.k(this.f8518e, E(), size(), true);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.h
         public final int p(int i10, int i11, int i12) {
-            return a0.h(i10, this.f8444e, E() + i11, i12);
+            return a0.h(i10, this.f8518e, E() + i11, i12);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.h
         public int size() {
-            return this.f8444e.length;
+            return this.f8518e.length;
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.h
         public final h u(int i10, int i11) {
             int iD = h.d(i10, i11, size());
-            return iD == 0 ? h.b : new e(this.f8444e, E() + i10, iD);
+            return iD == 0 ? h.b : new e(this.f8518e, E() + i10, iD);
         }
     }
 
@@ -305,8 +305,8 @@ public abstract class h implements Iterable<Byte>, Serializable {
 
     static {
         a aVar = null;
-        f8436c = com.google.crypto.tink.shaded.protobuf.d.c() ? new k(aVar) : new d(aVar);
-        f8437d = new b();
+        f8510c = com.google.crypto.tink.shaded.protobuf.d.c() ? new k(aVar) : new d(aVar);
+        f8511d = new b();
     }
 
     public static h A(byte[] bArr) {
@@ -346,15 +346,15 @@ public abstract class h implements Iterable<Byte>, Serializable {
 
     public static h f(byte[] bArr, int i10, int i11) {
         d(i10, i10 + i11, bArr.length);
-        return new j(f8436c.a(bArr, i10, i11));
+        return new j(f8510c.a(bArr, i10, i11));
     }
 
     public static h g(String str) {
         return new j(str.getBytes(a0.b));
     }
 
-    public static C0127h l(int i10) {
-        return new C0127h(i10, null);
+    public static C0131h l(int i10) {
+        return new C0131h(i10, null);
     }
 
     public static int y(byte b10) {
@@ -370,14 +370,14 @@ public abstract class h implements Iterable<Byte>, Serializable {
     public abstract void h(byte[] bArr, int i10, int i11, int i12);
 
     public final int hashCode() {
-        int iP = this.f8438a;
+        int iP = this.f8512a;
         if (iP == 0) {
             int size = size();
             iP = p(size, 0, size);
             if (iP == 0) {
                 iP = 1;
             }
-            this.f8438a = iP;
+            this.f8512a = iP;
         }
         return iP;
     }
@@ -397,7 +397,7 @@ public abstract class h implements Iterable<Byte>, Serializable {
     public abstract int size();
 
     public final int t() {
-        return this.f8438a;
+        return this.f8512a;
     }
 
     public final String toString() {
@@ -409,7 +409,7 @@ public abstract class h implements Iterable<Byte>, Serializable {
     public final byte[] x() {
         int size = size();
         if (size == 0) {
-            return a0.f8390d;
+            return a0.f8464d;
         }
         byte[] bArr = new byte[size];
         h(bArr, 0, 0, size);

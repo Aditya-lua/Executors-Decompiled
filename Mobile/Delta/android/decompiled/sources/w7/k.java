@@ -6,6 +6,7 @@ import android.util.Xml;
 import com.appsflyer.R;
 import com.google.mlkit.common.MlKitException;
 import com.google.mlkit.vision.barcode.common.Barcode;
+import com.roblox.client.pushnotification.v2.model.PayloadNotificationChannel;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -33,34 +34,34 @@ import org.xmlpull.v1.XmlPullParserException;
 public class k {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public int f34044d;
+    public int f34250d;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public w7.g f34042a = null;
+    public w7.g f34248a = null;
     public w7.g.j0 b = null;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f34043c = false;
+    public boolean f34249c = false;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public boolean f34045e = false;
+    public boolean f34251e = false;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public h f34046f = null;
+    public h f34252f = null;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public StringBuilder f34047g = null;
+    public StringBuilder f34253g = null;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public boolean f34048h = false;
+    public boolean f34254h = false;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public StringBuilder f34049i = null;
+    public StringBuilder f34255i = null;
 
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f34050a;
+        public static final /* synthetic */ int[] f34256a;
         public static final /* synthetic */ int[] b;
 
         static {
@@ -423,129 +424,129 @@ public class k {
             } catch (NoSuchFieldError unused89) {
             }
             int[] iArr2 = new int[h.values().length];
-            f34050a = iArr2;
+            f34256a = iArr2;
             try {
                 iArr2[h.svg.ordinal()] = 1;
             } catch (NoSuchFieldError unused90) {
             }
             try {
-                f34050a[h.g.ordinal()] = 2;
+                f34256a[h.g.ordinal()] = 2;
             } catch (NoSuchFieldError unused91) {
             }
             try {
-                f34050a[h.a.ordinal()] = 3;
+                f34256a[h.a.ordinal()] = 3;
             } catch (NoSuchFieldError unused92) {
             }
             try {
-                f34050a[h.defs.ordinal()] = 4;
+                f34256a[h.defs.ordinal()] = 4;
             } catch (NoSuchFieldError unused93) {
             }
             try {
-                f34050a[h.use.ordinal()] = 5;
+                f34256a[h.use.ordinal()] = 5;
             } catch (NoSuchFieldError unused94) {
             }
             try {
-                f34050a[h.path.ordinal()] = 6;
+                f34256a[h.path.ordinal()] = 6;
             } catch (NoSuchFieldError unused95) {
             }
             try {
-                f34050a[h.rect.ordinal()] = 7;
+                f34256a[h.rect.ordinal()] = 7;
             } catch (NoSuchFieldError unused96) {
             }
             try {
-                f34050a[h.circle.ordinal()] = 8;
+                f34256a[h.circle.ordinal()] = 8;
             } catch (NoSuchFieldError unused97) {
             }
             try {
-                f34050a[h.ellipse.ordinal()] = 9;
+                f34256a[h.ellipse.ordinal()] = 9;
             } catch (NoSuchFieldError unused98) {
             }
             try {
-                f34050a[h.line.ordinal()] = 10;
+                f34256a[h.line.ordinal()] = 10;
             } catch (NoSuchFieldError unused99) {
             }
             try {
-                f34050a[h.polyline.ordinal()] = 11;
+                f34256a[h.polyline.ordinal()] = 11;
             } catch (NoSuchFieldError unused100) {
             }
             try {
-                f34050a[h.polygon.ordinal()] = 12;
+                f34256a[h.polygon.ordinal()] = 12;
             } catch (NoSuchFieldError unused101) {
             }
             try {
-                f34050a[h.text.ordinal()] = 13;
+                f34256a[h.text.ordinal()] = 13;
             } catch (NoSuchFieldError unused102) {
             }
             try {
-                f34050a[h.tspan.ordinal()] = 14;
+                f34256a[h.tspan.ordinal()] = 14;
             } catch (NoSuchFieldError unused103) {
             }
             try {
-                f34050a[h.tref.ordinal()] = 15;
+                f34256a[h.tref.ordinal()] = 15;
             } catch (NoSuchFieldError unused104) {
             }
             try {
-                f34050a[h.SWITCH.ordinal()] = 16;
+                f34256a[h.SWITCH.ordinal()] = 16;
             } catch (NoSuchFieldError unused105) {
             }
             try {
-                f34050a[h.symbol.ordinal()] = 17;
+                f34256a[h.symbol.ordinal()] = 17;
             } catch (NoSuchFieldError unused106) {
             }
             try {
-                f34050a[h.marker.ordinal()] = 18;
+                f34256a[h.marker.ordinal()] = 18;
             } catch (NoSuchFieldError unused107) {
             }
             try {
-                f34050a[h.linearGradient.ordinal()] = 19;
+                f34256a[h.linearGradient.ordinal()] = 19;
             } catch (NoSuchFieldError unused108) {
             }
             try {
-                f34050a[h.radialGradient.ordinal()] = 20;
+                f34256a[h.radialGradient.ordinal()] = 20;
             } catch (NoSuchFieldError unused109) {
             }
             try {
-                f34050a[h.stop.ordinal()] = 21;
+                f34256a[h.stop.ordinal()] = 21;
             } catch (NoSuchFieldError unused110) {
             }
             try {
-                f34050a[h.title.ordinal()] = 22;
+                f34256a[h.title.ordinal()] = 22;
             } catch (NoSuchFieldError unused111) {
             }
             try {
-                f34050a[h.desc.ordinal()] = 23;
+                f34256a[h.desc.ordinal()] = 23;
             } catch (NoSuchFieldError unused112) {
             }
             try {
-                f34050a[h.clipPath.ordinal()] = 24;
+                f34256a[h.clipPath.ordinal()] = 24;
             } catch (NoSuchFieldError unused113) {
             }
             try {
-                f34050a[h.textPath.ordinal()] = 25;
+                f34256a[h.textPath.ordinal()] = 25;
             } catch (NoSuchFieldError unused114) {
             }
             try {
-                f34050a[h.pattern.ordinal()] = 26;
+                f34256a[h.pattern.ordinal()] = 26;
             } catch (NoSuchFieldError unused115) {
             }
             try {
-                f34050a[h.image.ordinal()] = 27;
+                f34256a[h.image.ordinal()] = 27;
             } catch (NoSuchFieldError unused116) {
             }
             try {
-                f34050a[h.view.ordinal()] = 28;
+                f34256a[h.view.ordinal()] = 28;
             } catch (NoSuchFieldError unused117) {
             }
             try {
-                f34050a[h.mask.ordinal()] = 29;
+                f34256a[h.mask.ordinal()] = 29;
             } catch (NoSuchFieldError unused118) {
             }
             try {
-                f34050a[h.style.ordinal()] = 30;
+                f34256a[h.style.ordinal()] = 30;
             } catch (NoSuchFieldError unused119) {
             }
             try {
-                f34050a[h.solidColor.ordinal()] = 31;
+                f34256a[h.solidColor.ordinal()] = 31;
             } catch (NoSuchFieldError unused120) {
             }
         }
@@ -554,12 +555,12 @@ public class k {
     public static class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final Map<String, w7.e.a> f34051a;
+        public static final Map<String, w7.e.a> f34257a;
 
         static {
             HashMap map = new HashMap(10);
-            f34051a = map;
-            map.put("none", w7.e.a.none);
+            f34257a = map;
+            map.put(PayloadNotificationChannel.SOUND_NONE, w7.e.a.none);
             map.put("xMinYMin", w7.e.a.xMinYMin);
             map.put("xMidYMin", w7.e.a.xMidYMin);
             map.put("xMaxYMin", w7.e.a.xMaxYMin);
@@ -572,18 +573,18 @@ public class k {
         }
 
         public static w7.e.a a(String str) {
-            return f34051a.get(str);
+            return f34257a.get(str);
         }
     }
 
     public static class c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final Map<String, Integer> f34052a;
+        public static final Map<String, Integer> f34258a;
 
         static {
             HashMap map = new HashMap(47);
-            f34052a = map;
+            f34258a = map;
             map.put("aliceblue", -984833);
             map.put("antiquewhite", -332841);
             map.put("aqua", -16711681);
@@ -736,18 +737,18 @@ public class k {
         }
 
         public static Integer a(String str) {
-            return f34052a.get(str);
+            return f34258a.get(str);
         }
     }
 
     public static class d {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final Map<String, w7.g.p> f34053a;
+        public static final Map<String, w7.g.p> f34259a;
 
         static {
             HashMap map = new HashMap(9);
-            f34053a = map;
+            f34259a = map;
             w7.g.d1 d1Var = w7.g.d1.pt;
             map.put("xx-small", new w7.g.p(0.694f, d1Var));
             map.put("x-small", new w7.g.p(0.833f, d1Var));
@@ -762,18 +763,18 @@ public class k {
         }
 
         public static w7.g.p a(String str) {
-            return f34053a.get(str);
+            return f34259a.get(str);
         }
     }
 
     public static class e {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final Map<String, Integer> f34054a;
+        public static final Map<String, Integer> f34260a;
 
         static {
             HashMap map = new HashMap(13);
-            f34054a = map;
+            f34260a = map;
             map.put("normal", 400);
             map.put("bold", 700);
             map.put("bolder", 1);
@@ -790,7 +791,7 @@ public class k {
         }
 
         public static Integer a(String str) {
-            return f34054a.get(str);
+            return f34260a.get(str);
         }
     }
 
@@ -1000,26 +1001,26 @@ public class k {
     public static class i {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public String f34132a;
+        public String f34338a;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public int f34133c;
+        public int f34339c;
         public int b = 0;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public w7.d f34134d = new w7.d();
+        public w7.d f34340d = new w7.d();
 
         public i(String str) {
-            this.f34133c = 0;
+            this.f34339c = 0;
             String strTrim = str.trim();
-            this.f34132a = strTrim;
-            this.f34133c = strTrim.length();
+            this.f34338a = strTrim;
+            this.f34339c = strTrim.length();
         }
 
         public void A() {
             while (true) {
                 int i10 = this.b;
-                if (i10 >= this.f34133c || !k(this.f34132a.charAt(i10))) {
+                if (i10 >= this.f34339c || !k(this.f34338a.charAt(i10))) {
                     return;
                 } else {
                     this.b++;
@@ -1029,24 +1030,24 @@ public class k {
 
         public int a() {
             int i10 = this.b;
-            int i11 = this.f34133c;
+            int i11 = this.f34339c;
             if (i10 == i11) {
                 return -1;
             }
             int i12 = i10 + 1;
             this.b = i12;
             if (i12 < i11) {
-                return this.f34132a.charAt(i12);
+                return this.f34338a.charAt(i12);
             }
             return -1;
         }
 
         public String b() {
             int i10 = this.b;
-            while (!h() && !k(this.f34132a.charAt(this.b))) {
+            while (!h() && !k(this.f34338a.charAt(this.b))) {
                 this.b++;
             }
-            String strSubstring = this.f34132a.substring(i10, this.b);
+            String strSubstring = this.f34338a.substring(i10, this.b);
             this.b = i10;
             return strSubstring;
         }
@@ -1077,7 +1078,7 @@ public class k {
 
         public boolean f(char c10) {
             int i10 = this.b;
-            boolean z10 = i10 < this.f34133c && this.f34132a.charAt(i10) == c10;
+            boolean z10 = i10 < this.f34339c && this.f34338a.charAt(i10) == c10;
             if (z10) {
                 this.b++;
             }
@@ -1087,7 +1088,7 @@ public class k {
         public boolean g(String str) {
             int length = str.length();
             int i10 = this.b;
-            boolean z10 = i10 <= this.f34133c - length && this.f34132a.substring(i10, i10 + length).equals(str);
+            boolean z10 = i10 <= this.f34339c - length && this.f34338a.substring(i10, i10 + length).equals(str);
             if (z10) {
                 this.b += length;
             }
@@ -1095,15 +1096,15 @@ public class k {
         }
 
         public boolean h() {
-            return this.b == this.f34133c;
+            return this.b == this.f34339c;
         }
 
         public boolean i() {
             int i10 = this.b;
-            if (i10 == this.f34133c) {
+            if (i10 == this.f34339c) {
                 return false;
             }
-            char cCharAt = this.f34132a.charAt(i10);
+            char cCharAt = this.f34338a.charAt(i10);
             if (cCharAt < 'a' || cCharAt > 'z') {
                 return cCharAt >= 'A' && cCharAt <= 'Z';
             }
@@ -1120,20 +1121,20 @@ public class k {
 
         public Integer l() {
             int i10 = this.b;
-            if (i10 == this.f34133c) {
+            if (i10 == this.f34339c) {
                 return null;
             }
-            String str = this.f34132a;
+            String str = this.f34338a;
             this.b = i10 + 1;
             return Integer.valueOf(str.charAt(i10));
         }
 
         public Boolean m() {
             int i10 = this.b;
-            if (i10 == this.f34133c) {
+            if (i10 == this.f34339c) {
                 return null;
             }
-            char cCharAt = this.f34132a.charAt(i10);
+            char cCharAt = this.f34338a.charAt(i10);
             if (cCharAt != '0' && cCharAt != '1') {
                 return null;
             }
@@ -1142,9 +1143,9 @@ public class k {
         }
 
         public float n() {
-            float fB = this.f34134d.b(this.f34132a, this.b, this.f34133c);
+            float fB = this.f34340d.b(this.f34338a, this.b, this.f34339c);
             if (!Float.isNaN(fB)) {
-                this.b = this.f34134d.a();
+                this.b = this.f34340d.a();
             }
             return fB;
         }
@@ -1154,7 +1155,7 @@ public class k {
                 return null;
             }
             int i10 = this.b;
-            int iCharAt = this.f34132a.charAt(i10);
+            int iCharAt = this.f34338a.charAt(i10);
             while (true) {
                 if ((iCharAt < 97 || iCharAt > 122) && (iCharAt < 65 || iCharAt > 90)) {
                     break;
@@ -1167,7 +1168,7 @@ public class k {
             }
             if (iCharAt == 40) {
                 this.b++;
-                return this.f34132a.substring(i10, i11);
+                return this.f34338a.substring(i10, i11);
             }
             this.b = i10;
             return null;
@@ -1187,7 +1188,7 @@ public class k {
                 return null;
             }
             int i10 = this.b;
-            char cCharAt = this.f34132a.charAt(i10);
+            char cCharAt = this.f34338a.charAt(i10);
             if (cCharAt != '\'' && cCharAt != '\"') {
                 return null;
             }
@@ -1201,7 +1202,7 @@ public class k {
             }
             int i11 = this.b;
             this.b = i11 + 1;
-            return this.f34132a.substring(i10 + 1, i11);
+            return this.f34338a.substring(i10 + 1, i11);
         }
 
         public String r() {
@@ -1216,7 +1217,7 @@ public class k {
             if (h()) {
                 return null;
             }
-            char cCharAt = this.f34132a.charAt(this.b);
+            char cCharAt = this.f34338a.charAt(this.b);
             if ((!z10 && k(cCharAt)) || cCharAt == c10) {
                 return null;
             }
@@ -1225,7 +1226,7 @@ public class k {
             while (iA != -1 && iA != c10 && (z10 || !k(iA))) {
                 iA = a();
             }
-            return this.f34132a.substring(i10, this.b);
+            return this.f34338a.substring(i10, this.b);
         }
 
         public String u(char c10) {
@@ -1236,16 +1237,16 @@ public class k {
             if (h()) {
                 return null;
             }
-            if (this.f34132a.charAt(this.b) == '%') {
+            if (this.f34338a.charAt(this.b) == '%') {
                 this.b++;
                 return w7.g.d1.percent;
             }
             int i10 = this.b;
-            if (i10 > this.f34133c - 2) {
+            if (i10 > this.f34339c - 2) {
                 return null;
             }
             try {
-                w7.g.d1 d1VarValueOf = w7.g.d1.valueOf(this.f34132a.substring(i10, i10 + 2).toLowerCase(Locale.US));
+                w7.g.d1 d1VarValueOf = w7.g.d1.valueOf(this.f34338a.substring(i10, i10 + 2).toLowerCase(Locale.US));
                 this.b += 2;
                 return d1VarValueOf;
             } catch (IllegalArgumentException unused) {
@@ -1258,7 +1259,7 @@ public class k {
                 return null;
             }
             int i10 = this.b;
-            char cCharAt = this.f34132a.charAt(i10);
+            char cCharAt = this.f34338a.charAt(i10);
             if ((cCharAt < 'A' || cCharAt > 'Z') && (cCharAt < 'a' || cCharAt > 'z')) {
                 this.b = i10;
                 return null;
@@ -1270,14 +1271,14 @@ public class k {
                 }
                 iA = a();
             }
-            return this.f34132a.substring(i10, this.b);
+            return this.f34338a.substring(i10, this.b);
         }
 
         public float x() {
             z();
-            float fB = this.f34134d.b(this.f34132a, this.b, this.f34133c);
+            float fB = this.f34340d.b(this.f34338a, this.b, this.f34339c);
             if (!Float.isNaN(fB)) {
-                this.b = this.f34134d.a();
+                this.b = this.f34340d.a();
             }
             return fB;
         }
@@ -1287,14 +1288,14 @@ public class k {
                 return null;
             }
             int i10 = this.b;
-            this.b = this.f34133c;
-            return this.f34132a.substring(i10);
+            this.b = this.f34339c;
+            return this.f34338a.substring(i10);
         }
 
         public boolean z() {
             A();
             int i10 = this.b;
-            if (i10 == this.f34133c || this.f34132a.charAt(i10) != ',') {
+            if (i10 == this.f34339c || this.f34338a.charAt(i10) != ',') {
                 return false;
             }
             this.b++;
@@ -1306,10 +1307,10 @@ public class k {
     public class j implements Attributes {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public XmlPullParser f34135a;
+        public XmlPullParser f34341a;
 
         public j(XmlPullParser xmlPullParser) {
-            this.f34135a = xmlPullParser;
+            this.f34341a = xmlPullParser;
         }
 
         @Override // org.xml.sax.Attributes
@@ -1319,21 +1320,21 @@ public class k {
 
         @Override // org.xml.sax.Attributes
         public int getLength() {
-            return this.f34135a.getAttributeCount();
+            return this.f34341a.getAttributeCount();
         }
 
         @Override // org.xml.sax.Attributes
         public String getLocalName(int i10) {
-            return this.f34135a.getAttributeName(i10);
+            return this.f34341a.getAttributeName(i10);
         }
 
         @Override // org.xml.sax.Attributes
         public String getQName(int i10) {
-            String attributeName = this.f34135a.getAttributeName(i10);
-            if (this.f34135a.getAttributePrefix(i10) == null) {
+            String attributeName = this.f34341a.getAttributeName(i10);
+            if (this.f34341a.getAttributePrefix(i10) == null) {
                 return attributeName;
             }
-            return this.f34135a.getAttributePrefix(i10) + ':' + attributeName;
+            return this.f34341a.getAttributePrefix(i10) + ':' + attributeName;
         }
 
         @Override // org.xml.sax.Attributes
@@ -1343,12 +1344,12 @@ public class k {
 
         @Override // org.xml.sax.Attributes
         public String getURI(int i10) {
-            return this.f34135a.getAttributeNamespace(i10);
+            return this.f34341a.getAttributeNamespace(i10);
         }
 
         @Override // org.xml.sax.Attributes
         public String getValue(int i10) {
-            return this.f34135a.getAttributeValue(i10);
+            return this.f34341a.getAttributeValue(i10);
         }
 
         @Override // org.xml.sax.Attributes
@@ -1453,10 +1454,10 @@ public class k {
             }
             iVar.A();
             if (iVar.h() || iVar.f(';')) {
-                if (l0Var.f33936f == null) {
-                    l0Var.f33936f = new w7.g.e0();
+                if (l0Var.f34142f == null) {
+                    l0Var.f34142f = new w7.g.e0();
                 }
-                S0(l0Var.f33936f, strS, strU);
+                S0(l0Var.f34142f, strS, strU);
                 iVar.A();
             }
         }
@@ -1491,19 +1492,19 @@ public class k {
         }
     }
 
-    public static w7.g.e0.EnumC0620g H0(String str) {
+    public static w7.g.e0.EnumC0630g H0(String str) {
         str.getClass();
         switch (str) {
             case "line-through":
-                return w7.g.e0.EnumC0620g.LineThrough;
+                return w7.g.e0.EnumC0630g.LineThrough;
             case "underline":
-                return w7.g.e0.EnumC0620g.Underline;
+                return w7.g.e0.EnumC0630g.Underline;
             case "none":
-                return w7.g.e0.EnumC0620g.None;
+                return w7.g.e0.EnumC0630g.None;
             case "blink":
-                return w7.g.e0.EnumC0620g.Blink;
+                return w7.g.e0.EnumC0630g.Blink;
             case "overline":
-                return w7.g.e0.EnumC0620g.Overline;
+                return w7.g.e0.EnumC0630g.Overline;
             default:
                 return null;
         }
@@ -1522,7 +1523,7 @@ public class k {
 
     public static w7.g.e0.i M0(String str) {
         str.getClass();
-        if (str.equals("none")) {
+        if (str.equals(PayloadNotificationChannel.SOUND_NONE)) {
             return w7.g.e0.i.None;
         }
         if (str.equals("non-scaling-stroke")) {
@@ -1563,166 +1564,166 @@ public class k {
                     w7.g.o0 o0VarT0 = t0(str2);
                     e0Var.b = o0VarT0;
                     if (o0VarT0 != null) {
-                        e0Var.f33844a |= 1;
+                        e0Var.f34050a |= 1;
                     }
                     break;
                 case 48:
                     w7.g.e0.a aVarE0 = e0(str2);
-                    e0Var.f33845c = aVarE0;
+                    e0Var.f34051c = aVarE0;
                     if (aVarE0 != null) {
-                        e0Var.f33844a |= 2;
+                        e0Var.f34050a |= 2;
                     }
                     break;
                 case 49:
                     Float fR0 = r0(str2);
-                    e0Var.f33846d = fR0;
+                    e0Var.f34052d = fR0;
                     if (fR0 != null) {
-                        e0Var.f33844a |= 4;
+                        e0Var.f34050a |= 4;
                     }
                     break;
                 case 50:
                     w7.g.o0 o0VarT1 = t0(str2);
-                    e0Var.f33847e = o0VarT1;
+                    e0Var.f34053e = o0VarT1;
                     if (o0VarT1 != null) {
-                        e0Var.f33844a |= 8;
+                        e0Var.f34050a |= 8;
                     }
                     break;
                 case 51:
                     Float fR1 = r0(str2);
-                    e0Var.f33848f = fR1;
+                    e0Var.f34054f = fR1;
                     if (fR1 != null) {
-                        e0Var.f33844a |= 16;
+                        e0Var.f34050a |= 16;
                     }
                     break;
                 case 52:
-                    e0Var.f33849g = o0(str2);
-                    e0Var.f33844a |= 32;
+                    e0Var.f34055g = o0(str2);
+                    e0Var.f34050a |= 32;
                     break;
                 case 53:
                     w7.g.e0.c cVarC0 = C0(str2);
-                    e0Var.f33850h = cVarC0;
+                    e0Var.f34056h = cVarC0;
                     if (cVarC0 != null) {
-                        e0Var.f33844a |= 64;
+                        e0Var.f34050a |= 64;
                     }
                     break;
                 case 54:
                     w7.g.e0.d dVarD0 = D0(str2);
-                    e0Var.f33851i = dVarD0;
+                    e0Var.f34057i = dVarD0;
                     if (dVarD0 != null) {
-                        e0Var.f33844a |= 128;
+                        e0Var.f34050a |= 128;
                     }
                     break;
                 case 55:
-                    e0Var.f33852j = Float.valueOf(f0(str2));
-                    e0Var.f33844a |= 256;
+                    e0Var.f34058j = Float.valueOf(f0(str2));
+                    e0Var.f34050a |= 256;
                     break;
                 case 56:
-                    if (!"none".equals(str2)) {
+                    if (!PayloadNotificationChannel.SOUND_NONE.equals(str2)) {
                         w7.g.p[] pVarArrB0 = B0(str2);
-                        e0Var.f33853k = pVarArrB0;
+                        e0Var.f34059k = pVarArrB0;
                         if (pVarArrB0 != null) {
-                            e0Var.f33844a |= 512;
+                            e0Var.f34050a |= 512;
                         }
                     } else {
-                        e0Var.f33853k = null;
-                        e0Var.f33844a |= 512;
+                        e0Var.f34059k = null;
+                        e0Var.f34050a |= 512;
                     }
                     break;
                 case 57:
-                    e0Var.f33854l = o0(str2);
-                    e0Var.f33844a |= RealWebSocket.DEFAULT_MINIMUM_DEFLATE_SIZE;
+                    e0Var.f34060l = o0(str2);
+                    e0Var.f34050a |= RealWebSocket.DEFAULT_MINIMUM_DEFLATE_SIZE;
                     break;
                 case 58:
-                    e0Var.f33855m = r0(str2);
-                    e0Var.f33844a |= 2048;
+                    e0Var.f34061m = r0(str2);
+                    e0Var.f34050a |= 2048;
                     break;
                 case 59:
-                    e0Var.f33856n = b0(str2);
-                    e0Var.f33844a |= 4096;
+                    e0Var.f34062n = b0(str2);
+                    e0Var.f34050a |= 4096;
                     break;
                 case 60:
                     h0(e0Var, str2);
                     break;
                 case 61:
                     List<String> listI0 = i0(str2);
-                    e0Var.f33857o = listI0;
+                    e0Var.f34063o = listI0;
                     if (listI0 != null) {
-                        e0Var.f33844a |= 8192;
+                        e0Var.f34050a |= 8192;
                     }
                     break;
                 case 62:
                     w7.g.p pVarJ0 = j0(str2);
-                    e0Var.f33858p = pVarJ0;
+                    e0Var.f34064p = pVarJ0;
                     if (pVarJ0 != null) {
-                        e0Var.f33844a |= Http2Stream.EMIT_BUFFER_SIZE;
+                        e0Var.f34050a |= Http2Stream.EMIT_BUFFER_SIZE;
                     }
                     break;
                 case 63:
                     Integer numL0 = l0(str2);
-                    e0Var.f33859q = numL0;
+                    e0Var.f34065q = numL0;
                     if (numL0 != null) {
-                        e0Var.f33844a |= 32768;
+                        e0Var.f34050a |= 32768;
                     }
                     break;
                 case 64:
                     w7.g.e0.b bVarK0 = k0(str2);
-                    e0Var.f33860r = bVarK0;
+                    e0Var.f34066r = bVarK0;
                     if (bVarK0 != null) {
-                        e0Var.f33844a |= 65536;
+                        e0Var.f34050a |= 65536;
                     }
                     break;
                 case 65:
-                    w7.g.e0.EnumC0620g enumC0620gH0 = H0(str2);
-                    e0Var.f33861s = enumC0620gH0;
-                    if (enumC0620gH0 != null) {
-                        e0Var.f33844a |= 131072;
+                    w7.g.e0.EnumC0630g enumC0630gH0 = H0(str2);
+                    e0Var.f34067s = enumC0630gH0;
+                    if (enumC0630gH0 != null) {
+                        e0Var.f34050a |= 131072;
                     }
                     break;
                 case 66:
                     w7.g.e0.h hVarI0 = I0(str2);
-                    e0Var.f33862t = hVarI0;
+                    e0Var.f34068t = hVarI0;
                     if (hVarI0 != null) {
-                        e0Var.f33844a |= 68719476736L;
+                        e0Var.f34050a |= 68719476736L;
                     }
                     break;
                 case 67:
                     w7.g.e0.f fVarG0 = G0(str2);
-                    e0Var.f33863u = fVarG0;
+                    e0Var.f34069u = fVarG0;
                     if (fVarG0 != null) {
-                        e0Var.f33844a |= 262144;
+                        e0Var.f34050a |= 262144;
                     }
                     break;
                 case 68:
                     Boolean boolS0 = s0(str2);
-                    e0Var.f33864v = boolS0;
+                    e0Var.f34070v = boolS0;
                     if (boolS0 != null) {
-                        e0Var.f33844a |= 524288;
+                        e0Var.f34050a |= 524288;
                     }
                     break;
                 case 69:
                     String strM0 = m0(str2, str);
-                    e0Var.f33866x = strM0;
-                    e0Var.f33867y = strM0;
-                    e0Var.f33868z = strM0;
-                    e0Var.f33844a |= 14680064;
+                    e0Var.f34072x = strM0;
+                    e0Var.f34073y = strM0;
+                    e0Var.f34074z = strM0;
+                    e0Var.f34050a |= 14680064;
                     break;
                 case 70:
-                    e0Var.f33866x = m0(str2, str);
-                    e0Var.f33844a |= 2097152;
+                    e0Var.f34072x = m0(str2, str);
+                    e0Var.f34050a |= 2097152;
                     break;
                 case 71:
-                    e0Var.f33867y = m0(str2, str);
-                    e0Var.f33844a |= 4194304;
+                    e0Var.f34073y = m0(str2, str);
+                    e0Var.f34050a |= 4194304;
                     break;
                 case 72:
-                    e0Var.f33868z = m0(str2, str);
-                    e0Var.f33844a |= 8388608;
+                    e0Var.f34074z = m0(str2, str);
+                    e0Var.f34050a |= 8388608;
                     break;
                 case 73:
                     if (str2.indexOf(R.styleable.AppCompatTheme_windowMinWidthMajor) < 0) {
                         if ("|inline|block|list-item|run-in|compact|marker|table|inline-table|table-row-group|table-header-group|table-footer-group|table-row|table-column-group|table-column|table-cell|table-caption|none|".contains('|' + str2 + '|')) {
-                            e0Var.A = Boolean.valueOf(!str2.equals("none"));
-                            e0Var.f33844a |= 16777216;
+                            e0Var.A = Boolean.valueOf(!str2.equals(PayloadNotificationChannel.SOUND_NONE));
+                            e0Var.f34050a |= 16777216;
                             break;
                         }
                     }
@@ -1731,14 +1732,14 @@ public class k {
                     if (str2.indexOf(R.styleable.AppCompatTheme_windowMinWidthMajor) < 0) {
                         if ("|visible|hidden|collapse|".contains('|' + str2 + '|')) {
                             e0Var.B = Boolean.valueOf(str2.equals("visible"));
-                            e0Var.f33844a |= 33554432;
+                            e0Var.f34050a |= 33554432;
                             break;
                         }
                     }
                     break;
                 case 75:
                     if (str2.equals("currentColor")) {
-                        e0Var.C = w7.g.C0621g.a();
+                        e0Var.C = w7.g.C0631g.a();
                     } else {
                         try {
                             e0Var.C = b0(str2);
@@ -1747,34 +1748,34 @@ public class k {
                             return;
                         }
                     }
-                    e0Var.f33844a |= 67108864;
+                    e0Var.f34050a |= 67108864;
                     break;
                 case 76:
                     e0Var.D = r0(str2);
-                    e0Var.f33844a |= 134217728;
+                    e0Var.f34050a |= 134217728;
                     break;
                 case 77:
                     w7.g.c cVarA0 = a0(str2);
-                    e0Var.f33865w = cVarA0;
+                    e0Var.f34071w = cVarA0;
                     if (cVarA0 != null) {
-                        e0Var.f33844a |= 1048576;
+                        e0Var.f34050a |= 1048576;
                     }
                     break;
                 case 78:
                     e0Var.E = m0(str2, str);
-                    e0Var.f33844a |= 268435456;
+                    e0Var.f34050a |= 268435456;
                     break;
                 case 79:
                     e0Var.F = e0(str2);
-                    e0Var.f33844a |= 536870912;
+                    e0Var.f34050a |= 536870912;
                     break;
                 case 80:
                     e0Var.G = m0(str2, str);
-                    e0Var.f33844a |= 1073741824;
+                    e0Var.f34050a |= 1073741824;
                     break;
                 case 81:
                     if (str2.equals("currentColor")) {
-                        e0Var.H = w7.g.C0621g.a();
+                        e0Var.H = w7.g.C0631g.a();
                     } else {
                         try {
                             e0Var.H = b0(str2);
@@ -1783,15 +1784,15 @@ public class k {
                             return;
                         }
                     }
-                    e0Var.f33844a |= 2147483648L;
+                    e0Var.f34050a |= 2147483648L;
                     break;
                 case 82:
                     e0Var.I = r0(str2);
-                    e0Var.f33844a |= 4294967296L;
+                    e0Var.f34050a |= 4294967296L;
                     break;
                 case 83:
                     if (str2.equals("currentColor")) {
-                        e0Var.J = w7.g.C0621g.a();
+                        e0Var.J = w7.g.C0631g.a();
                     } else {
                         try {
                             e0Var.J = b0(str2);
@@ -1800,24 +1801,24 @@ public class k {
                             return;
                         }
                     }
-                    e0Var.f33844a |= 8589934592L;
+                    e0Var.f34050a |= 8589934592L;
                     break;
                 case 84:
                     e0Var.K = r0(str2);
-                    e0Var.f33844a |= 17179869184L;
+                    e0Var.f34050a |= 17179869184L;
                     break;
                 case 85:
                     w7.g.e0.i iVarM0 = M0(str2);
                     e0Var.L = iVarM0;
                     if (iVarM0 != null) {
-                        e0Var.f33844a |= 34359738368L;
+                        e0Var.f34050a |= 34359738368L;
                     }
                     break;
                 case 86:
                     w7.g.e0.e eVarY0 = y0(str2);
                     e0Var.M = eVarY0;
                     if (eVarY0 != null) {
-                        e0Var.f33844a |= 137438953472L;
+                        e0Var.f34050a |= 137438953472L;
                     }
                     break;
             }
@@ -1946,11 +1947,11 @@ public class k {
 
     public static w7.g.o0 d0(String str) {
         str.getClass();
-        if (str.equals("none")) {
-            return w7.g.f.f33900c;
+        if (str.equals(PayloadNotificationChannel.SOUND_NONE)) {
+            return w7.g.f.f34106c;
         }
         if (str.equals("currentColor")) {
-            return w7.g.C0621g.a();
+            return w7.g.C0631g.a();
         }
         try {
             return b0(str);
@@ -2025,14 +2026,14 @@ public class k {
                 }
                 iVar.A();
             }
-            e0Var.f33857o = i0(iVar.y());
-            e0Var.f33858p = pVarJ0;
-            e0Var.f33859q = Integer.valueOf(numA == null ? 400 : numA.intValue());
+            e0Var.f34063o = i0(iVar.y());
+            e0Var.f34064p = pVarJ0;
+            e0Var.f34065q = Integer.valueOf(numA == null ? 400 : numA.intValue());
             if (bVarK0 == null) {
                 bVarK0 = w7.g.e0.b.Normal;
             }
-            e0Var.f33860r = bVarK0;
-            e0Var.f33844a |= 122880;
+            e0Var.f34066r = bVarK0;
+            e0Var.f34050a |= 122880;
         }
     }
 
@@ -2094,7 +2095,7 @@ public class k {
     }
 
     public static String m0(String str, String str2) {
-        if (!str.equals("none") && str.startsWith("url(")) {
+        if (!str.equals(PayloadNotificationChannel.SOUND_NONE) && str.startsWith("url(")) {
             return str.endsWith(")") ? str.substring(4, str.length() - 1).trim() : str.substring(4).trim();
         }
         return null;
@@ -2573,7 +2574,7 @@ public class k {
     }
 
     public static void w0(w7.g.p0 p0Var, String str) {
-        p0Var.f33951o = v0(str);
+        p0Var.f34157o = v0(str);
     }
 
     public static w7.g.e0.e y0(String str) {
@@ -2610,14 +2611,14 @@ public class k {
             String strTrim = attributes.getValue(i10).trim();
             switch (a.b[g.a(attributes.getLocalName(i10)).ordinal()]) {
                 case 12:
-                    dVar.f33830o = o0(strTrim);
+                    dVar.f34036o = o0(strTrim);
                     break;
                 case 13:
-                    dVar.f33831p = o0(strTrim);
+                    dVar.f34037p = o0(strTrim);
                     break;
                 case 14:
                     w7.g.p pVarO0 = o0(strTrim);
-                    dVar.f33832q = pVarO0;
+                    dVar.f34038q = pVarO0;
                     if (pVarO0.i()) {
                         throw new w7.j("Invalid <circle> element. r cannot be negative");
                     }
@@ -2632,12 +2633,12 @@ public class k {
             String strTrim = attributes.getValue(i10).trim();
             if (a.b[g.a(attributes.getLocalName(i10)).ordinal()] == 38) {
                 if ("objectBoundingBox".equals(strTrim)) {
-                    eVar.f33843p = Boolean.FALSE;
+                    eVar.f34049p = Boolean.FALSE;
                 } else {
                     if (!"userSpaceOnUse".equals(strTrim)) {
                         throw new w7.j("Invalid value for attribute clipPathUnits");
                     }
-                    eVar.f33843p = Boolean.TRUE;
+                    eVar.f34049p = Boolean.TRUE;
                 }
             }
         }
@@ -2671,17 +2672,17 @@ public class k {
         for (int i10 = 0; i10 < attributes.getLength(); i10++) {
             String qName = attributes.getQName(i10);
             if (qName.equals("id") || qName.equals("xml:id")) {
-                l0Var.f33933c = attributes.getValue(i10).trim();
+                l0Var.f34139c = attributes.getValue(i10).trim();
                 return;
             }
             if (qName.equals("xml:space")) {
                 String strTrim = attributes.getValue(i10).trim();
                 if ("default".equals(strTrim)) {
-                    l0Var.f33934d = Boolean.FALSE;
+                    l0Var.f34140d = Boolean.FALSE;
                     return;
                 } else {
                     if ("preserve".equals(strTrim)) {
-                        l0Var.f33934d = Boolean.TRUE;
+                        l0Var.f34140d = Boolean.TRUE;
                         return;
                     }
                     throw new w7.j("Invalid value for \"xml:space\" attribute: " + strTrim);
@@ -2696,7 +2697,7 @@ public class k {
             switch (a.b[g.a(attributes.getLocalName(i10)).ordinal()]) {
                 case 10:
                     w7.g.p pVarO0 = o0(strTrim);
-                    iVar.f33916q = pVarO0;
+                    iVar.f34122q = pVarO0;
                     if (pVarO0.i()) {
                         throw new w7.j("Invalid <ellipse> element. rx cannot be negative");
                     }
@@ -2704,17 +2705,17 @@ public class k {
                     break;
                 case 11:
                     w7.g.p pVarO1 = o0(strTrim);
-                    iVar.f33917r = pVarO1;
+                    iVar.f34123r = pVarO1;
                     if (pVarO1.i()) {
                         throw new w7.j("Invalid <ellipse> element. ry cannot be negative");
                     }
                     break;
                     break;
                 case 12:
-                    iVar.f33914o = o0(strTrim);
+                    iVar.f34120o = o0(strTrim);
                     break;
                 case 13:
-                    iVar.f33915p = o0(strTrim);
+                    iVar.f34121p = o0(strTrim);
                     break;
             }
         }
@@ -2731,24 +2732,24 @@ public class k {
                             if (!"userSpaceOnUse".equals(strTrim)) {
                                 throw new w7.j("Invalid value for attribute gradientUnits");
                             }
-                            jVar.f33924i = Boolean.TRUE;
+                            jVar.f34130i = Boolean.TRUE;
                         } else {
-                            jVar.f33924i = Boolean.FALSE;
+                            jVar.f34130i = Boolean.FALSE;
                         }
                         break;
                     case 33:
-                        jVar.f33925j = J0(strTrim);
+                        jVar.f34131j = J0(strTrim);
                         break;
                     case 34:
                         try {
-                            jVar.f33926k = w7.g.k.valueOf(strTrim);
+                            jVar.f34132k = w7.g.k.valueOf(strTrim);
                         } catch (IllegalArgumentException unused) {
                             throw new w7.j("Invalid spreadMethod attribute. \"" + strTrim + "\" is not a valid value.");
                         }
                         break;
                 }
             } else if ("".equals(attributes.getURI(i10)) || "http://www.w3.org/1999/xlink".equals(attributes.getURI(i10))) {
-                jVar.f33927l = strTrim;
+                jVar.f34133l = strTrim;
             }
         }
     }
@@ -2758,18 +2759,18 @@ public class k {
             String strTrim = attributes.getValue(i10).trim();
             int i11 = a.b[g.a(attributes.getLocalName(i10)).ordinal()];
             if (i11 == 1) {
-                oVar.f33945q = o0(strTrim);
+                oVar.f34151q = o0(strTrim);
             } else if (i11 == 2) {
-                oVar.f33946r = o0(strTrim);
+                oVar.f34152r = o0(strTrim);
             } else if (i11 == 3) {
                 w7.g.p pVarO0 = o0(strTrim);
-                oVar.f33947s = pVarO0;
+                oVar.f34153s = pVarO0;
                 if (pVarO0.i()) {
                     throw new w7.j("Invalid <use> element. width cannot be negative");
                 }
             } else if (i11 == 4) {
                 w7.g.p pVarO1 = o0(strTrim);
-                oVar.f33948t = pVarO1;
+                oVar.f34154t = pVarO1;
                 if (pVarO1.i()) {
                     throw new w7.j("Invalid <use> element. height cannot be negative");
                 }
@@ -2778,7 +2779,7 @@ public class k {
                     w0(oVar, strTrim);
                 }
             } else if ("".equals(attributes.getURI(i10)) || "http://www.w3.org/1999/xlink".equals(attributes.getURI(i10))) {
-                oVar.f33944p = strTrim;
+                oVar.f34150p = strTrim;
             }
         }
     }
@@ -2788,16 +2789,16 @@ public class k {
             String strTrim = attributes.getValue(i10).trim();
             switch (a.b[g.a(attributes.getLocalName(i10)).ordinal()]) {
                 case 15:
-                    qVar.f33952o = o0(strTrim);
+                    qVar.f34158o = o0(strTrim);
                     break;
                 case 16:
-                    qVar.f33953p = o0(strTrim);
+                    qVar.f34159p = o0(strTrim);
                     break;
                 case 17:
-                    qVar.f33954q = o0(strTrim);
+                    qVar.f34160q = o0(strTrim);
                     break;
                 case 18:
-                    qVar.f33955r = o0(strTrim);
+                    qVar.f34161r = o0(strTrim);
                     break;
             }
         }
@@ -2808,16 +2809,16 @@ public class k {
             String strTrim = attributes.getValue(i10).trim();
             switch (a.b[g.a(attributes.getLocalName(i10)).ordinal()]) {
                 case 15:
-                    m0Var.f33939m = o0(strTrim);
+                    m0Var.f34145m = o0(strTrim);
                     break;
                 case 16:
-                    m0Var.f33940n = o0(strTrim);
+                    m0Var.f34146n = o0(strTrim);
                     break;
                 case 17:
-                    m0Var.f33941o = o0(strTrim);
+                    m0Var.f34147o = o0(strTrim);
                     break;
                 case 18:
-                    m0Var.f33942p = o0(strTrim);
+                    m0Var.f34148p = o0(strTrim);
                     break;
             }
         }
@@ -2828,14 +2829,14 @@ public class k {
             String strTrim = attributes.getValue(i10).trim();
             switch (a.b[g.a(attributes.getLocalName(i10)).ordinal()]) {
                 case 26:
-                    rVar.f33962r = o0(strTrim);
+                    rVar.f34168r = o0(strTrim);
                     break;
                 case 27:
-                    rVar.f33963s = o0(strTrim);
+                    rVar.f34169s = o0(strTrim);
                     break;
                 case 28:
                     w7.g.p pVarO0 = o0(strTrim);
-                    rVar.f33964t = pVarO0;
+                    rVar.f34170t = pVarO0;
                     if (pVarO0.i()) {
                         throw new w7.j("Invalid <marker> element. markerWidth cannot be negative");
                     }
@@ -2843,7 +2844,7 @@ public class k {
                     break;
                 case 29:
                     w7.g.p pVarO1 = o0(strTrim);
-                    rVar.f33965u = pVarO1;
+                    rVar.f34171u = pVarO1;
                     if (pVarO1.i()) {
                         throw new w7.j("Invalid <marker> element. markerHeight cannot be negative");
                     }
@@ -2854,16 +2855,16 @@ public class k {
                         if (!"userSpaceOnUse".equals(strTrim)) {
                             throw new w7.j("Invalid value for attribute markerUnits");
                         }
-                        rVar.f33961q = true;
+                        rVar.f34167q = true;
                     } else {
-                        rVar.f33961q = false;
+                        rVar.f34167q = false;
                     }
                     break;
                 case 31:
                     if ("auto".equals(strTrim)) {
-                        rVar.f33966v = Float.valueOf(Float.NaN);
+                        rVar.f34172v = Float.valueOf(Float.NaN);
                     } else {
-                        rVar.f33966v = Float.valueOf(f0(strTrim));
+                        rVar.f34172v = Float.valueOf(f0(strTrim));
                     }
                     break;
             }
@@ -2987,18 +2988,18 @@ public class k {
             String strTrim = attributes.getValue(i10).trim();
             int i11 = a.b[g.a(attributes.getLocalName(i10)).ordinal()];
             if (i11 == 1) {
-                sVar.f33970q = o0(strTrim);
+                sVar.f34176q = o0(strTrim);
             } else if (i11 == 2) {
-                sVar.f33971r = o0(strTrim);
+                sVar.f34177r = o0(strTrim);
             } else if (i11 == 3) {
                 w7.g.p pVarO0 = o0(strTrim);
-                sVar.f33972s = pVarO0;
+                sVar.f34178s = pVarO0;
                 if (pVarO0.i()) {
                     throw new w7.j("Invalid <mask> element. width cannot be negative");
                 }
             } else if (i11 == 4) {
                 w7.g.p pVarO1 = o0(strTrim);
-                sVar.f33973t = pVarO1;
+                sVar.f34179t = pVarO1;
                 if (pVarO1.i()) {
                     throw new w7.j("Invalid <mask> element. height cannot be negative");
                 }
@@ -3006,20 +3007,20 @@ public class k {
                 if (i11 != 44) {
                     continue;
                 } else if ("objectBoundingBox".equals(strTrim)) {
-                    sVar.f33969p = Boolean.FALSE;
+                    sVar.f34175p = Boolean.FALSE;
                 } else {
                     if (!"userSpaceOnUse".equals(strTrim)) {
                         throw new w7.j("Invalid value for attribute maskContentUnits");
                     }
-                    sVar.f33969p = Boolean.TRUE;
+                    sVar.f34175p = Boolean.TRUE;
                 }
             } else if ("objectBoundingBox".equals(strTrim)) {
-                sVar.f33968o = Boolean.FALSE;
+                sVar.f34174o = Boolean.FALSE;
             } else {
                 if (!"userSpaceOnUse".equals(strTrim)) {
                     throw new w7.j("Invalid value for attribute maskUnits");
                 }
-                sVar.f33968o = Boolean.TRUE;
+                sVar.f34174o = Boolean.TRUE;
             }
         }
     }
@@ -3049,12 +3050,12 @@ public class k {
             String strTrim = attributes.getValue(i10).trim();
             int i11 = a.b[g.a(attributes.getLocalName(i10)).ordinal()];
             if (i11 == 8) {
-                vVar.f33977o = u0(strTrim);
+                vVar.f34183o = u0(strTrim);
             } else if (i11 != 9) {
                 continue;
             } else {
                 Float fValueOf = Float.valueOf(f0(strTrim));
-                vVar.f33978p = fValueOf;
+                vVar.f34184p = fValueOf;
                 if (fValueOf.floatValue() < 0.0f) {
                     throw new w7.j("Invalid <path> element. pathLength cannot be negative");
                 }
@@ -3078,7 +3079,7 @@ public class k {
                         i iVar = new i(xmlPullParserNewPullParser.getText());
                         r(iVar.r(), x0(iVar));
                     } else if (eventType == 10) {
-                        if (z10 && this.f34042a.m() == null && xmlPullParserNewPullParser.getText().contains("<!ENTITY ")) {
+                        if (z10 && this.f34248a.m() == null && xmlPullParserNewPullParser.getText().contains("<!ENTITY ")) {
                             try {
                                 Log.d("SVGParser", "Switching to SAX parser to process entities");
                                 inputStream.reset();
@@ -3122,18 +3123,18 @@ public class k {
             String strTrim = attributes.getValue(i10).trim();
             int i11 = a.b[g.a(attributes.getLocalName(i10)).ordinal()];
             if (i11 == 1) {
-                yVar.f33987t = o0(strTrim);
+                yVar.f34193t = o0(strTrim);
             } else if (i11 == 2) {
-                yVar.f33988u = o0(strTrim);
+                yVar.f34194u = o0(strTrim);
             } else if (i11 == 3) {
                 w7.g.p pVarO0 = o0(strTrim);
-                yVar.f33989v = pVarO0;
+                yVar.f34195v = pVarO0;
                 if (pVarO0.i()) {
                     throw new w7.j("Invalid <pattern> element. width cannot be negative");
                 }
             } else if (i11 == 4) {
                 w7.g.p pVarO1 = o0(strTrim);
-                yVar.f33990w = pVarO1;
+                yVar.f34196w = pVarO1;
                 if (pVarO1.i()) {
                     throw new w7.j("Invalid <pattern> element. height cannot be negative");
                 }
@@ -3144,9 +3145,9 @@ public class k {
                             if (!"userSpaceOnUse".equals(strTrim)) {
                                 throw new w7.j("Invalid value for attribute patternUnits");
                             }
-                            yVar.f33984q = Boolean.TRUE;
+                            yVar.f34190q = Boolean.TRUE;
                         } else {
-                            yVar.f33984q = Boolean.FALSE;
+                            yVar.f34190q = Boolean.FALSE;
                         }
                         break;
                     case 41:
@@ -3154,17 +3155,17 @@ public class k {
                             if (!"userSpaceOnUse".equals(strTrim)) {
                                 throw new w7.j("Invalid value for attribute patternContentUnits");
                             }
-                            yVar.f33985r = Boolean.TRUE;
+                            yVar.f34191r = Boolean.TRUE;
                         } else {
-                            yVar.f33985r = Boolean.FALSE;
+                            yVar.f34191r = Boolean.FALSE;
                         }
                         break;
                     case 42:
-                        yVar.f33986s = J0(strTrim);
+                        yVar.f34192s = J0(strTrim);
                         break;
                 }
             } else if ("".equals(attributes.getURI(i10)) || "http://www.w3.org/1999/xlink".equals(attributes.getURI(i10))) {
-                yVar.f33991x = strTrim;
+                yVar.f34197x = strTrim;
             }
         }
     }
@@ -3189,14 +3190,14 @@ public class k {
                     arrayList.add(Float.valueOf(fN));
                     arrayList.add(Float.valueOf(fN2));
                 }
-                zVar.f33992o = new float[arrayList.size()];
+                zVar.f34198o = new float[arrayList.size()];
                 int size = arrayList.size();
                 int i11 = 0;
                 int i12 = 0;
                 while (i12 < size) {
                     Object obj = arrayList.get(i12);
                     i12++;
-                    zVar.f33992o[i11] = ((Float) obj).floatValue();
+                    zVar.f34198o[i11] = ((Float) obj).floatValue();
                     i11++;
                 }
             }
@@ -3208,18 +3209,18 @@ public class k {
             String strTrim = attributes.getValue(i10).trim();
             int i11 = a.b[g.a(attributes.getLocalName(i10)).ordinal()];
             if (i11 == 35) {
-                q0Var.f33959p = o0(strTrim);
+                q0Var.f34165p = o0(strTrim);
             } else if (i11 != 36) {
                 switch (i11) {
                     case 12:
-                        q0Var.f33956m = o0(strTrim);
+                        q0Var.f34162m = o0(strTrim);
                         break;
                     case 13:
-                        q0Var.f33957n = o0(strTrim);
+                        q0Var.f34163n = o0(strTrim);
                         break;
                     case 14:
                         w7.g.p pVarO0 = o0(strTrim);
-                        q0Var.f33958o = pVarO0;
+                        q0Var.f34164o = pVarO0;
                         if (pVarO0.i()) {
                             throw new w7.j("Invalid <radialGradient> element. r cannot be negative");
                         }
@@ -3227,7 +3228,7 @@ public class k {
                         break;
                 }
             } else {
-                q0Var.f33960q = o0(strTrim);
+                q0Var.f34166q = o0(strTrim);
             }
         }
     }
@@ -3238,7 +3239,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.v vVar = new w7.g.v();
-        vVar.f33943a = this.f34042a;
+        vVar.f34149a = this.f34248a;
         vVar.b = this.b;
         D(vVar, attributes);
         S(vVar, attributes);
@@ -3253,24 +3254,24 @@ public class k {
             String strTrim = attributes.getValue(i10).trim();
             int i11 = a.b[g.a(attributes.getLocalName(i10)).ordinal()];
             if (i11 == 1) {
-                b0Var.f33819o = o0(strTrim);
+                b0Var.f34025o = o0(strTrim);
             } else if (i11 == 2) {
-                b0Var.f33820p = o0(strTrim);
+                b0Var.f34026p = o0(strTrim);
             } else if (i11 == 3) {
                 w7.g.p pVarO0 = o0(strTrim);
-                b0Var.f33821q = pVarO0;
+                b0Var.f34027q = pVarO0;
                 if (pVarO0.i()) {
                     throw new w7.j("Invalid <rect> element. width cannot be negative");
                 }
             } else if (i11 == 4) {
                 w7.g.p pVarO1 = o0(strTrim);
-                b0Var.f33822r = pVarO1;
+                b0Var.f34028r = pVarO1;
                 if (pVarO1.i()) {
                     throw new w7.j("Invalid <rect> element. height cannot be negative");
                 }
             } else if (i11 == 10) {
                 w7.g.p pVarO2 = o0(strTrim);
-                b0Var.f33823s = pVarO2;
+                b0Var.f34029s = pVarO2;
                 if (pVarO2.i()) {
                     throw new w7.j("Invalid <rect> element. rx cannot be negative");
                 }
@@ -3278,7 +3279,7 @@ public class k {
                 continue;
             } else {
                 w7.g.p pVarO3 = o0(strTrim);
-                b0Var.f33824t = pVarO3;
+                b0Var.f34030t = pVarO3;
                 if (pVarO3.i()) {
                     throw new w7.j("Invalid <rect> element. ry cannot be negative");
                 }
@@ -3292,7 +3293,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.y yVar = new w7.g.y();
-        yVar.f33943a = this.f34042a;
+        yVar.f34149a = this.f34248a;
         yVar.b = this.b;
         D(yVar, attributes);
         S(yVar, attributes);
@@ -3308,23 +3309,23 @@ public class k {
             String strTrim = attributes.getValue(i10).trim();
             int i11 = a.b[g.a(attributes.getLocalName(i10)).ordinal()];
             if (i11 == 1) {
-                f0Var.f33902q = o0(strTrim);
+                f0Var.f34108q = o0(strTrim);
             } else if (i11 == 2) {
-                f0Var.f33903r = o0(strTrim);
+                f0Var.f34109r = o0(strTrim);
             } else if (i11 == 3) {
                 w7.g.p pVarO0 = o0(strTrim);
-                f0Var.f33904s = pVarO0;
+                f0Var.f34110s = pVarO0;
                 if (pVarO0.i()) {
                     throw new w7.j("Invalid <svg> element. width cannot be negative");
                 }
             } else if (i11 == 4) {
                 w7.g.p pVarO1 = o0(strTrim);
-                f0Var.f33905t = pVarO1;
+                f0Var.f34111t = pVarO1;
                 if (pVarO1.i()) {
                     throw new w7.j("Invalid <svg> element. height cannot be negative");
                 }
             } else if (i11 == 5) {
-                f0Var.f33906u = strTrim;
+                f0Var.f34112u = strTrim;
             }
         }
     }
@@ -3335,7 +3336,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.z a0Var = new w7.g.a0();
-        a0Var.f33943a = this.f34042a;
+        a0Var.f34149a = this.f34248a;
         a0Var.b = this.b;
         D(a0Var, attributes);
         S(a0Var, attributes);
@@ -3349,7 +3350,7 @@ public class k {
         for (int i10 = 0; i10 < attributes.getLength(); i10++) {
             String strTrim = attributes.getValue(i10).trim();
             if (a.b[g.a(attributes.getLocalName(i10)).ordinal()] == 37) {
-                d0Var.f33833h = n0(strTrim);
+                d0Var.f34039h = n0(strTrim);
             }
         }
     }
@@ -3360,7 +3361,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.z zVar = new w7.g.z();
-        zVar.f33943a = this.f34042a;
+        zVar.f34149a = this.f34248a;
         zVar.b = this.b;
         D(zVar, attributes);
         S(zVar, attributes);
@@ -3378,12 +3379,12 @@ public class k {
                 if (i11 == 45) {
                     E0(l0Var, strTrim);
                 } else if (i11 != 46) {
-                    if (l0Var.f33935e == null) {
-                        l0Var.f33935e = new w7.g.e0();
+                    if (l0Var.f34141e == null) {
+                        l0Var.f34141e = new w7.g.e0();
                     }
-                    S0(l0Var.f33935e, attributes.getLocalName(i10), attributes.getValue(i10).trim());
+                    S0(l0Var.f34141e, attributes.getLocalName(i10), attributes.getValue(i10).trim());
                 } else {
-                    l0Var.f33937g = w7.b.f(strTrim);
+                    l0Var.f34143g = w7.b.f(strTrim);
                 }
             }
         }
@@ -3393,7 +3394,7 @@ public class k {
         for (int i10 = 0; i10 < attributes.getLength(); i10++) {
             String strTrim = attributes.getValue(i10).trim();
             if (a.b[g.a(attributes.getLocalName(i10)).ordinal()] == 6 && ("".equals(attributes.getURI(i10)) || "http://www.w3.org/1999/xlink".equals(attributes.getURI(i10)))) {
-                u0Var.f33975o = strTrim;
+                u0Var.f34181o = strTrim;
             }
         }
     }
@@ -3404,7 +3405,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.q0 q0Var = new w7.g.q0();
-        q0Var.f33943a = this.f34042a;
+        q0Var.f34149a = this.f34248a;
         q0Var.b = this.b;
         D(q0Var, attributes);
         S(q0Var, attributes);
@@ -3420,10 +3421,10 @@ public class k {
             int i11 = a.b[g.a(attributes.getLocalName(i10)).ordinal()];
             if (i11 != 6) {
                 if (i11 == 39) {
-                    z0Var.f33994p = o0(strTrim);
+                    z0Var.f34200p = o0(strTrim);
                 }
             } else if ("".equals(attributes.getURI(i10)) || "http://www.w3.org/1999/xlink".equals(attributes.getURI(i10))) {
-                z0Var.f33993o = strTrim;
+                z0Var.f34199o = strTrim;
             }
         }
     }
@@ -3434,7 +3435,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.b0 b0Var = new w7.g.b0();
-        b0Var.f33943a = this.f34042a;
+        b0Var.f34149a = this.f34248a;
         b0Var.b = this.b;
         D(b0Var, attributes);
         S(b0Var, attributes);
@@ -3449,13 +3450,13 @@ public class k {
             String strTrim = attributes.getValue(i10).trim();
             int i11 = a.b[g.a(attributes.getLocalName(i10)).ordinal()];
             if (i11 == 1) {
-                a1Var.f33812o = p0(strTrim);
+                a1Var.f34018o = p0(strTrim);
             } else if (i11 == 2) {
-                a1Var.f33813p = p0(strTrim);
+                a1Var.f34019p = p0(strTrim);
             } else if (i11 == 19) {
-                a1Var.f33814q = p0(strTrim);
+                a1Var.f34020q = p0(strTrim);
             } else if (i11 == 20) {
-                a1Var.f33815r = p0(strTrim);
+                a1Var.f34021r = p0(strTrim);
             }
         }
     }
@@ -3466,7 +3467,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.c0 c0Var = new w7.g.c0();
-        c0Var.f33943a = this.f34042a;
+        c0Var.f34149a = this.f34248a;
         c0Var.b = this.b;
         D(c0Var, attributes);
         S(c0Var, attributes);
@@ -3483,7 +3484,7 @@ public class k {
     }
 
     public final void W0() {
-        this.f34042a = new w7.g();
+        this.f34248a = new w7.g();
     }
 
     public final void X(w7.g.e1 e1Var, Attributes attributes) throws w7.j {
@@ -3491,37 +3492,37 @@ public class k {
             String strTrim = attributes.getValue(i10).trim();
             int i11 = a.b[g.a(attributes.getLocalName(i10)).ordinal()];
             if (i11 == 1) {
-                e1Var.f33896q = o0(strTrim);
+                e1Var.f34102q = o0(strTrim);
             } else if (i11 == 2) {
-                e1Var.f33897r = o0(strTrim);
+                e1Var.f34103r = o0(strTrim);
             } else if (i11 == 3) {
                 w7.g.p pVarO0 = o0(strTrim);
-                e1Var.f33898s = pVarO0;
+                e1Var.f34104s = pVarO0;
                 if (pVarO0.i()) {
                     throw new w7.j("Invalid <use> element. width cannot be negative");
                 }
             } else if (i11 == 4) {
                 w7.g.p pVarO1 = o0(strTrim);
-                e1Var.f33899t = pVarO1;
+                e1Var.f34105t = pVarO1;
                 if (pVarO1.i()) {
                     throw new w7.j("Invalid <use> element. height cannot be negative");
                 }
             } else if (i11 == 6 && ("".equals(attributes.getURI(i10)) || "http://www.w3.org/1999/xlink".equals(attributes.getURI(i10)))) {
-                e1Var.f33895p = strTrim;
+                e1Var.f34101p = strTrim;
             }
         }
     }
 
     public final void X0(String str, String str2, String str3, Attributes attributes) throws w7.j {
-        if (this.f34043c) {
-            this.f34044d++;
+        if (this.f34249c) {
+            this.f34250d++;
         }
         if ("http://www.w3.org/2000/svg".equals(str) || "".equals(str)) {
             if (str2.length() <= 0) {
                 str2 = str3;
             }
             h hVarA = h.a(str2);
-            switch (a.f34050a[hVarA.ordinal()]) {
+            switch (a.f34256a[hVarA.ordinal()]) {
                 case 1:
                     a1(attributes);
                     break;
@@ -3585,8 +3586,8 @@ public class k {
                     break;
                 case 22:
                 case 23:
-                    this.f34045e = true;
-                    this.f34046f = hVarA;
+                    this.f34251e = true;
+                    this.f34252f = hVarA;
                     break;
                 case 24:
                     k(attributes);
@@ -3613,8 +3614,8 @@ public class k {
                     V0(attributes);
                     break;
                 default:
-                    this.f34043c = true;
-                    this.f34044d = 1;
+                    this.f34249c = true;
+                    this.f34250d = 1;
                     break;
             }
         }
@@ -3627,7 +3628,7 @@ public class k {
             if (i11 == 7) {
                 w0(r0Var, strTrim);
             } else if (i11 == 87) {
-                r0Var.f33967p = N0(strTrim);
+                r0Var.f34173p = N0(strTrim);
             }
         }
     }
@@ -3642,7 +3643,7 @@ public class k {
             throw new w7.j("Invalid document. <stop> elements are only valid inside <linearGradient> or <radialGradient> elements.");
         }
         w7.g.d0 d0Var = new w7.g.d0();
-        d0Var.f33943a = this.f34042a;
+        d0Var.f34149a = this.f34248a;
         d0Var.b = this.b;
         D(d0Var, attributes);
         S(d0Var, attributes);
@@ -3652,7 +3653,7 @@ public class k {
     }
 
     public final void Z(String str) {
-        this.f34042a.a(new w7.b(w7.b.f.screen, w7.b.u.Document).d(str));
+        this.f34248a.a(new w7.b(w7.b.f.screen, w7.b.u.Document).d(str));
     }
 
     public final void Z0(Attributes attributes) throws w7.j {
@@ -3672,17 +3673,17 @@ public class k {
             }
         }
         if (zEquals && w7.b.b(str, w7.b.f.screen)) {
-            this.f34048h = true;
+            this.f34254h = true;
         } else {
-            this.f34043c = true;
-            this.f34044d = 1;
+            this.f34249c = true;
+            this.f34250d = 1;
         }
     }
 
     public final void a1(Attributes attributes) throws w7.j {
         l("<svg>", new Object[0]);
         w7.g.f0 f0Var = new w7.g.f0();
-        f0Var.f33943a = this.f34042a;
+        f0Var.f34149a = this.f34248a;
         f0Var.b = this.b;
         D(f0Var, attributes);
         S(f0Var, attributes);
@@ -3691,7 +3692,7 @@ public class k {
         Q(f0Var, attributes);
         w7.g.j0 j0Var = this.b;
         if (j0Var == null) {
-            this.f34042a.u(f0Var);
+            this.f34248a.u(f0Var);
         } else {
             j0Var.a(f0Var);
         }
@@ -3704,7 +3705,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.r0 t0Var = new w7.g.t0();
-        t0Var.f33943a = this.f34042a;
+        t0Var.f34149a = this.f34248a;
         t0Var.b = this.b;
         D(t0Var, attributes);
         S(t0Var, attributes);
@@ -3715,19 +3716,19 @@ public class k {
     }
 
     public final void c1(String str) {
-        if (this.f34043c) {
+        if (this.f34249c) {
             return;
         }
-        if (this.f34045e) {
-            if (this.f34047g == null) {
-                this.f34047g = new StringBuilder(str.length());
+        if (this.f34251e) {
+            if (this.f34253g == null) {
+                this.f34253g = new StringBuilder(str.length());
             }
-            this.f34047g.append(str);
-        } else if (this.f34048h) {
-            if (this.f34049i == null) {
-                this.f34049i = new StringBuilder(str.length());
+            this.f34253g.append(str);
+        } else if (this.f34254h) {
+            if (this.f34255i == null) {
+                this.f34255i = new StringBuilder(str.length());
             }
-            this.f34049i.append(str);
+            this.f34255i.append(str);
         } else if (this.b instanceof w7.g.y0) {
             h(str);
         }
@@ -3739,7 +3740,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.w0 w0Var = new w7.g.w0();
-        w0Var.f33943a = this.f34042a;
+        w0Var.f34149a = this.f34248a;
         w0Var.b = this.b;
         D(w0Var, attributes);
         S(w0Var, attributes);
@@ -3751,19 +3752,19 @@ public class k {
     }
 
     public final void e1(char[] cArr, int i10, int i11) {
-        if (this.f34043c) {
+        if (this.f34249c) {
             return;
         }
-        if (this.f34045e) {
-            if (this.f34047g == null) {
-                this.f34047g = new StringBuilder(i11);
+        if (this.f34251e) {
+            if (this.f34253g == null) {
+                this.f34253g = new StringBuilder(i11);
             }
-            this.f34047g.append(cArr, i10, i11);
-        } else if (this.f34048h) {
-            if (this.f34049i == null) {
-                this.f34049i = new StringBuilder(i11);
+            this.f34253g.append(cArr, i10, i11);
+        } else if (this.f34254h) {
+            if (this.f34255i == null) {
+                this.f34255i = new StringBuilder(i11);
             }
-            this.f34049i.append(cArr, i10, i11);
+            this.f34255i.append(cArr, i10, i11);
         } else if (this.b instanceof w7.g.y0) {
             h(new String(cArr, i10, i11));
         }
@@ -3775,7 +3776,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.z0 z0Var = new w7.g.z0();
-        z0Var.f33943a = this.f34042a;
+        z0Var.f34149a = this.f34248a;
         z0Var.b = this.b;
         D(z0Var, attributes);
         S(z0Var, attributes);
@@ -3801,7 +3802,7 @@ public class k {
             throw new w7.j("Invalid document. <tref> elements are only valid inside <text> or <tspan> elements.");
         }
         w7.g.u0 u0Var = new w7.g.u0();
-        u0Var.f33943a = this.f34042a;
+        u0Var.f34149a = this.f34248a;
         u0Var.b = this.b;
         D(u0Var, attributes);
         S(u0Var, attributes);
@@ -3818,17 +3819,17 @@ public class k {
 
     public final void h(String str) {
         w7.g.h0 h0Var = (w7.g.h0) this.b;
-        int size = h0Var.f33908i.size();
-        w7.g.n0 n0Var = size == 0 ? null : h0Var.f33908i.get(size - 1);
+        int size = h0Var.f34114i.size();
+        w7.g.n0 n0Var = size == 0 ? null : h0Var.f34114i.get(size - 1);
         if (!(n0Var instanceof w7.g.c1)) {
             this.b.a(new w7.g.c1(str));
             return;
         }
         StringBuilder sb2 = new StringBuilder();
         w7.g.c1 c1Var = (w7.g.c1) n0Var;
-        sb2.append(c1Var.f33828c);
+        sb2.append(c1Var.f34034c);
         sb2.append(str);
-        c1Var.f33828c = sb2.toString();
+        c1Var.f34034c = sb2.toString();
     }
 
     public final void h1(Attributes attributes) throws w7.j {
@@ -3841,7 +3842,7 @@ public class k {
             throw new w7.j("Invalid document. <tspan> elements are only valid inside <text> or other <tspan> elements.");
         }
         w7.g.v0 v0Var = new w7.g.v0();
-        v0Var.f33943a = this.f34042a;
+        v0Var.f34149a = this.f34248a;
         v0Var.b = this.b;
         D(v0Var, attributes);
         S(v0Var, attributes);
@@ -3863,7 +3864,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.d dVar = new w7.g.d();
-        dVar.f33943a = this.f34042a;
+        dVar.f34149a = this.f34248a;
         dVar.b = this.b;
         D(dVar, attributes);
         S(dVar, attributes);
@@ -3879,7 +3880,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.e1 e1Var = new w7.g.e1();
-        e1Var.f33943a = this.f34042a;
+        e1Var.f34149a = this.f34248a;
         e1Var.b = this.b;
         D(e1Var, attributes);
         S(e1Var, attributes);
@@ -3896,7 +3897,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.r0 f1Var = new w7.g.f1();
-        f1Var.f33943a = this.f34042a;
+        f1Var.f34149a = this.f34248a;
         f1Var.b = this.b;
         D(f1Var, attributes);
         C(f1Var, attributes);
@@ -3911,7 +3912,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.e eVar = new w7.g.e();
-        eVar.f33943a = this.f34042a;
+        eVar.f34149a = this.f34248a;
         eVar.b = this.b;
         D(eVar, attributes);
         S(eVar, attributes);
@@ -3928,7 +3929,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.s0 s0Var = new w7.g.s0();
-        s0Var.f33943a = this.f34042a;
+        s0Var.f34149a = this.f34248a;
         s0Var.b = this.b;
         D(s0Var, attributes);
         S(s0Var, attributes);
@@ -3947,7 +3948,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.h hVar = new w7.g.h();
-        hVar.f33943a = this.f34042a;
+        hVar.f34149a = this.f34248a;
         hVar.b = this.b;
         D(hVar, attributes);
         S(hVar, attributes);
@@ -3962,7 +3963,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.i iVar = new w7.g.i();
-        iVar.f33943a = this.f34042a;
+        iVar.f34149a = this.f34248a;
         iVar.b = this.b;
         D(iVar, attributes);
         S(iVar, attributes);
@@ -4004,11 +4005,11 @@ public class k {
     }
 
     public final void p(String str, String str2, String str3) {
-        if (this.f34043c) {
-            int i10 = this.f34044d - 1;
-            this.f34044d = i10;
+        if (this.f34249c) {
+            int i10 = this.f34250d - 1;
+            this.f34250d = i10;
             if (i10 == 0) {
-                this.f34043c = false;
+                this.f34249c = false;
                 return;
             }
         }
@@ -4016,29 +4017,29 @@ public class k {
             if (str2.length() <= 0) {
                 str2 = str3;
             }
-            int i11 = a.f34050a[h.a(str2).ordinal()];
+            int i11 = a.f34256a[h.a(str2).ordinal()];
             if (i11 != 1 && i11 != 2 && i11 != 4 && i11 != 5 && i11 != 13 && i11 != 14) {
                 switch (i11) {
                     case 22:
                     case 23:
-                        this.f34045e = false;
-                        StringBuilder sb2 = this.f34047g;
+                        this.f34251e = false;
+                        StringBuilder sb2 = this.f34253g;
                         if (sb2 != null) {
-                            h hVar = this.f34046f;
+                            h hVar = this.f34252f;
                             if (hVar == h.title) {
-                                this.f34042a.v(sb2.toString());
+                                this.f34248a.v(sb2.toString());
                             } else if (hVar == h.desc) {
-                                this.f34042a.q(sb2.toString());
+                                this.f34248a.q(sb2.toString());
                             }
-                            this.f34047g.setLength(0);
+                            this.f34253g.setLength(0);
                         }
                         break;
                     case 30:
-                        StringBuilder sb3 = this.f34049i;
+                        StringBuilder sb3 = this.f34255i;
                         if (sb3 != null) {
-                            this.f34048h = false;
+                            this.f34254h = false;
                             Z(sb3.toString());
-                            this.f34049i.setLength(0);
+                            this.f34255i.setLength(0);
                         }
                         break;
                 }
@@ -4054,7 +4055,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.m mVar = new w7.g.m();
-        mVar.f33943a = this.f34042a;
+        mVar.f34149a = this.f34248a;
         mVar.b = this.b;
         D(mVar, attributes);
         S(mVar, attributes);
@@ -4076,7 +4077,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.o oVar = new w7.g.o();
-        oVar.f33943a = this.f34042a;
+        oVar.f34149a = this.f34248a;
         oVar.b = this.b;
         D(oVar, attributes);
         S(oVar, attributes);
@@ -4093,7 +4094,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.q qVar = new w7.g.q();
-        qVar.f33943a = this.f34042a;
+        qVar.f34149a = this.f34248a;
         qVar.b = this.b;
         D(qVar, attributes);
         S(qVar, attributes);
@@ -4109,7 +4110,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.m0 m0Var = new w7.g.m0();
-        m0Var.f33943a = this.f34042a;
+        m0Var.f34149a = this.f34248a;
         m0Var.b = this.b;
         D(m0Var, attributes);
         S(m0Var, attributes);
@@ -4125,7 +4126,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.r rVar = new w7.g.r();
-        rVar.f33943a = this.f34042a;
+        rVar.f34149a = this.f34248a;
         rVar.b = this.b;
         D(rVar, attributes);
         S(rVar, attributes);
@@ -4155,7 +4156,7 @@ public class k {
             throw new w7.j("Invalid document. Root element must be <svg>");
         }
         w7.g.s sVar = new w7.g.s();
-        sVar.f33943a = this.f34042a;
+        sVar.f34149a = this.f34248a;
         sVar.b = this.b;
         D(sVar, attributes);
         S(sVar, attributes);
@@ -4181,7 +4182,7 @@ public class k {
         try {
             inputStream.mark(Barcode.FORMAT_AZTEC);
             L0(inputStream, z10);
-            return this.f34042a;
+            return this.f34248a;
         } finally {
             try {
                 inputStream.close();

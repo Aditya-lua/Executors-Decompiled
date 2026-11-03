@@ -2,7 +2,7 @@ package com.google.mlkit.vision.common.internal;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import nd.a;
+import od.a;
 
 /* JADX INFO: loaded from: classes2.dex */
 public final /* synthetic */ class zze implements OnCompleteListener {

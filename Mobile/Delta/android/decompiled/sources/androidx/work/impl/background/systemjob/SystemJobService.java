@@ -26,17 +26,17 @@ import y5.z;
 public class SystemJobService extends JobService implements e {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final String f3517e = w.i("SystemJobService");
+    public static final String f3362e = w.i("SystemJobService");
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public f1 f3518a;
+    public f1 f3363a;
     public final Map<WorkGenerationalId, JobParameters> b = new HashMap();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final z f3519c = z.b(false);
+    public final z f3364c = z.b(false);
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public b1 f3520d;
+    public b1 f3365d;
 
     public static class a {
         public static String[] a(JobParameters jobParameters) {
@@ -106,9 +106,9 @@ public class SystemJobService extends JobService implements e {
     @Override // y5.e
     public void d(WorkGenerationalId workGenerationalId, boolean z10) {
         a("onExecuted");
-        w.e().a(f3517e, workGenerationalId.getWorkSpecId() + " executed on JobScheduler");
+        w.e().a(f3362e, workGenerationalId.getWorkSpecId() + " executed on JobScheduler");
         JobParameters jobParametersRemove = this.b.remove(workGenerationalId);
-        this.f3519c.c(workGenerationalId);
+        this.f3364c.c(workGenerationalId);
         if (jobParametersRemove != null) {
             jobFinished(jobParametersRemove, z10);
         }
@@ -119,22 +119,22 @@ public class SystemJobService extends JobService implements e {
         super.onCreate();
         try {
             f1 f1VarP = f1.p(getApplicationContext());
-            this.f3518a = f1VarP;
+            this.f3363a = f1VarP;
             s sVarR = f1VarP.r();
-            this.f3520d = new d1(sVarR, this.f3518a.v());
+            this.f3365d = new d1(sVarR, this.f3363a.v());
             sVarR.e(this);
         } catch (IllegalStateException e10) {
             if (!Application.class.equals(getApplication().getClass())) {
                 throw new IllegalStateException("WorkManager needs to be initialized via a ContentProvider#onCreate() or an Application#onCreate().", e10);
             }
-            w.e().k(f3517e, "Could not find WorkManager instance; this may be because an auto-backup is in progress. Ignoring JobScheduler commands for now. Please make sure that you are initializing WorkManager if you have manually disabled WorkManagerInitializer.");
+            w.e().k(f3362e, "Could not find WorkManager instance; this may be because an auto-backup is in progress. Ignoring JobScheduler commands for now. Please make sure that you are initializing WorkManager if you have manually disabled WorkManagerInitializer.");
         }
     }
 
     @Override // android.app.Service
     public void onDestroy() {
         super.onDestroy();
-        f1 f1Var = this.f3518a;
+        f1 f1Var = this.f3363a;
         if (f1Var != null) {
             f1Var.r().m(this);
         }
@@ -143,21 +143,21 @@ public class SystemJobService extends JobService implements e {
     @Override // android.app.job.JobService
     public boolean onStartJob(JobParameters jobParameters) {
         a("onStartJob");
-        if (this.f3518a == null) {
-            w.e().a(f3517e, "WorkManager is not initialized; requesting retry.");
+        if (this.f3363a == null) {
+            w.e().a(f3362e, "WorkManager is not initialized; requesting retry.");
             jobFinished(jobParameters, true);
             return false;
         }
         WorkGenerationalId workGenerationalIdC = c(jobParameters);
         if (workGenerationalIdC == null) {
-            w.e().c(f3517e, "WorkSpec id not found!");
+            w.e().c(f3362e, "WorkSpec id not found!");
             return false;
         }
         if (this.b.containsKey(workGenerationalIdC)) {
-            w.e().a(f3517e, "Job is already being executed by SystemJobService: " + workGenerationalIdC);
+            w.e().a(f3362e, "Job is already being executed by SystemJobService: " + workGenerationalIdC);
             return false;
         }
-        w.e().a(f3517e, "onStartJob for " + workGenerationalIdC);
+        w.e().a(f3362e, "onStartJob for " + workGenerationalIdC);
         this.b.put(workGenerationalIdC, jobParameters);
         int i10 = Build.VERSION.SDK_INT;
         WorkerParameters.a aVar = new WorkerParameters.a();
@@ -165,33 +165,33 @@ public class SystemJobService extends JobService implements e {
             aVar.b = Arrays.asList(a.b(jobParameters));
         }
         if (a.a(jobParameters) != null) {
-            aVar.f3458a = Arrays.asList(a.a(jobParameters));
+            aVar.f3303a = Arrays.asList(a.a(jobParameters));
         }
         if (i10 >= 28) {
-            aVar.f3459c = b.a(jobParameters);
+            aVar.f3304c = b.a(jobParameters);
         }
-        this.f3520d.e(this.f3519c.f(workGenerationalIdC), aVar);
+        this.f3365d.e(this.f3364c.f(workGenerationalIdC), aVar);
         return true;
     }
 
     @Override // android.app.job.JobService
     public boolean onStopJob(JobParameters jobParameters) {
         a("onStopJob");
-        if (this.f3518a == null) {
-            w.e().a(f3517e, "WorkManager is not initialized; requesting retry.");
+        if (this.f3363a == null) {
+            w.e().a(f3362e, "WorkManager is not initialized; requesting retry.");
             return true;
         }
         WorkGenerationalId workGenerationalIdC = c(jobParameters);
         if (workGenerationalIdC == null) {
-            w.e().c(f3517e, "WorkSpec id not found!");
+            w.e().c(f3362e, "WorkSpec id not found!");
             return false;
         }
-        w.e().a(f3517e, "onStopJob for " + workGenerationalIdC);
+        w.e().a(f3362e, "onStopJob for " + workGenerationalIdC);
         this.b.remove(workGenerationalIdC);
-        y yVarC = this.f3519c.c(workGenerationalIdC);
+        y yVarC = this.f3364c.c(workGenerationalIdC);
         if (yVarC != null) {
-            this.f3520d.c(yVarC, Build.VERSION.SDK_INT >= 31 ? c.a(jobParameters) : -512);
+            this.f3365d.c(yVarC, Build.VERSION.SDK_INT >= 31 ? c.a(jobParameters) : -512);
         }
-        return !this.f3518a.r().j(workGenerationalIdC.getWorkSpecId());
+        return !this.f3363a.r().j(workGenerationalIdC.getWorkSpecId());
     }
 }

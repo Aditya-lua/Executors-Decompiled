@@ -14,75 +14,75 @@ jadx.core.utils.exceptions.JadxRuntimeException: Init of enum field 'e' uses ext
 public final class b0 {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final b0 f2131d;
+    public static final b0 f1976d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final b0 f2132e;
+    public static final b0 f1977e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final b0 f2133f;
+    public static final b0 f1978f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final b0 f2134g;
+    public static final b0 f1979g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final b0 f2135h;
+    public static final b0 f1980h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final b0 f2136i;
+    public static final b0 f1981i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final b0 f2137j;
+    public static final b0 f1982j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final b0 f2138k;
+    public static final b0 f1983k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public static final b0 f2139l;
+    public static final b0 f1984l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public static final b0 f2140m;
+    public static final b0 f1985m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public static final /* synthetic */ b0[] f2141n;
+    public static final /* synthetic */ b0[] f1986n;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Class<?> f2142a;
+    public final Class<?> f1987a;
     public final Class<?> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Object f2143c;
+    public final Object f1988c;
 
     static {
         b0 b0Var = new b0("VOID", 0, Void.class, Void.class, null);
-        f2131d = b0Var;
+        f1976d = b0Var;
         Class cls = Integer.TYPE;
         b0 b0Var2 = new b0("INT", 1, cls, Integer.class, 0);
-        f2132e = b0Var2;
+        f1977e = b0Var2;
         b0 b0Var3 = new b0("LONG", 2, Long.TYPE, Long.class, 0L);
-        f2133f = b0Var3;
+        f1978f = b0Var3;
         b0 b0Var4 = new b0("FLOAT", 3, Float.TYPE, Float.class, Float.valueOf(0.0f));
-        f2134g = b0Var4;
+        f1979g = b0Var4;
         b0 b0Var5 = new b0("DOUBLE", 4, Double.TYPE, Double.class, Double.valueOf(0.0d));
-        f2135h = b0Var5;
+        f1980h = b0Var5;
         b0 b0Var6 = new b0("BOOLEAN", 5, Boolean.TYPE, Boolean.class, Boolean.FALSE);
-        f2136i = b0Var6;
+        f1981i = b0Var6;
         b0 b0Var7 = new b0("STRING", 6, String.class, String.class, "");
-        f2137j = b0Var7;
+        f1982j = b0Var7;
         b0 b0Var8 = new b0("BYTE_STRING", 7, g.class, g.class, g.b);
-        f2138k = b0Var8;
+        f1983k = b0Var8;
         b0 b0Var9 = new b0("ENUM", 8, cls, Integer.class, null);
-        f2139l = b0Var9;
+        f1984l = b0Var9;
         b0 b0Var10 = new b0("MESSAGE", 9, Object.class, Object.class, null);
-        f2140m = b0Var10;
-        f2141n = new b0[]{b0Var, b0Var2, b0Var3, b0Var4, b0Var5, b0Var6, b0Var7, b0Var8, b0Var9, b0Var10};
+        f1985m = b0Var10;
+        f1986n = new b0[]{b0Var, b0Var2, b0Var3, b0Var4, b0Var5, b0Var6, b0Var7, b0Var8, b0Var9, b0Var10};
     }
 
     public b0(String str, int i10, Class cls, Class cls2, Object obj) {
         super(str, i10);
-        this.f2142a = cls;
+        this.f1987a = cls;
         this.b = cls2;
-        this.f2143c = obj;
+        this.f1988c = obj;
     }
 
     public static b0 valueOf(String str) {
@@ -90,7 +90,7 @@ public final class b0 {
     }
 
     public static b0[] values() {
-        return (b0[]) f2141n.clone();
+        return (b0[]) f1986n.clone();
     }
 
     public Class<?> a() {

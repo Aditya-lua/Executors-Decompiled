@@ -10,7 +10,7 @@ public abstract class h1 extends z0 implements Set {
 
     public static h1 f(int i10, Object... objArr) {
         if (i10 == 0) {
-            return u1.f15404i;
+            return u1.f16018i;
         }
         if (i10 == 1) {
             Object obj = objArr[0];
@@ -74,7 +74,7 @@ public abstract class h1 extends z0 implements Set {
     }
 
     public static h1 l() {
-        return u1.f15404i;
+        return u1.f16018i;
     }
 
     public static h1 m(Object obj) {

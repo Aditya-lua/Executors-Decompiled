@@ -6,16 +6,16 @@ import java.util.Objects;
 public final class eb implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ jb f25490a;
+    public final /* synthetic */ jb f26311a;
 
     public eb(jb jbVar) {
         Objects.requireNonNull(jbVar);
-        this.f25490a = jbVar;
+        this.f26311a = jbVar;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
-        jb jbVar = this.f25490a;
-        jbVar.f25633e = jbVar.D();
+        jb jbVar = this.f26311a;
+        jbVar.f26454e = jbVar.D();
     }
 }

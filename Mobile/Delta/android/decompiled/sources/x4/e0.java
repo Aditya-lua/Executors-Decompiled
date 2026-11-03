@@ -52,7 +52,7 @@ public final class e0 implements Executor {
                 if (runnablePoll != null) {
                     this.executor.execute(runnable);
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -73,7 +73,7 @@ public final class e0 implements Executor {
                 if (this.active == null) {
                     d();
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             } catch (Throwable th2) {
                 throw th2;
             }

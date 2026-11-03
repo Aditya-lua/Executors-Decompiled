@@ -8,15 +8,13 @@ import java.util.List;
 
 /* JADX INFO: loaded from: classes.dex */
 public interface e extends IInterface {
-    void D0(DataHolder dataHolder);
+    void F0(DataHolder dataHolder);
 
-    void I(DataHolder dataHolder);
+    void G(DataHolder dataHolder);
 
     void J1(int i10, String str);
 
     void K0(DataHolder dataHolder);
-
-    void O0(DataHolder dataHolder);
 
     void O1(DataHolder dataHolder);
 
@@ -24,23 +22,25 @@ public interface e extends IInterface {
 
     void R1(DataHolder dataHolder, String str, Contents contents, Contents contents2, Contents contents3);
 
+    void T0(int i10, String str);
+
+    void U0(Status status, String str);
+
     void U1(Status status, String str, List list);
 
-    void W0(int i10, String str);
+    void X0(DataHolder dataHolder);
 
-    void X0(Status status, String str);
-
-    void a1(DataHolder dataHolder);
-
-    void c0(DataHolder dataHolder, DataHolder dataHolder2);
+    void a0(DataHolder dataHolder, DataHolder dataHolder2);
 
     void e();
+
+    void k1(DataHolder dataHolder);
 
     void k2(DataHolder dataHolder);
 
     void n(DataHolder dataHolder);
 
-    void o1(DataHolder dataHolder);
+    void r0(DataHolder dataHolder);
 
-    void t0(DataHolder dataHolder);
+    void z0(DataHolder dataHolder);
 }

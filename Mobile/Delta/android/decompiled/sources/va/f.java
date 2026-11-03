@@ -6,20 +6,20 @@ import android.content.Context;
 public final class f extends j {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f32884a;
+    public final Context f33452a;
     public final r b;
 
     public f(Context context, r rVar) {
         if (context == null) {
             throw new NullPointerException("Null context");
         }
-        this.f32884a = context;
+        this.f33452a = context;
         this.b = rVar;
     }
 
     @Override // va.j
     public final Context a() {
-        return this.f32884a;
+        return this.f33452a;
     }
 
     @Override // va.j
@@ -33,7 +33,7 @@ public final class f extends j {
         }
         if (obj instanceof j) {
             j jVar = (j) obj;
-            if (this.f32884a.equals(jVar.a()) && this.b.equals(jVar.b())) {
+            if (this.f33452a.equals(jVar.a()) && this.b.equals(jVar.b())) {
                 return true;
             }
         }
@@ -41,10 +41,10 @@ public final class f extends j {
     }
 
     public final int hashCode() {
-        return ((this.f32884a.hashCode() ^ 1000003) * 1000003) ^ this.b.hashCode();
+        return ((this.f33452a.hashCode() ^ 1000003) * 1000003) ^ this.b.hashCode();
     }
 
     public final String toString() {
-        return "FlagsContext{context=" + this.f32884a.toString() + ", hermeticFileOverrides=" + this.b.toString() + "}";
+        return "FlagsContext{context=" + this.f33452a.toString() + ", hermeticFileOverrides=" + this.b.toString() + "}";
     }
 }

@@ -3,11 +3,11 @@ package o1;
 import android.util.Size;
 import com.google.mlkit.vision.barcode.common.Barcode;
 import f1.x;
+import gt.i;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import jt.i;
 import kotlin.Metadata;
 import kotlin.collections.o;
 import kotlin.jvm.functions.Function0;
@@ -20,7 +20,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000j\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u000f\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010%\n\u0002\b\u0004\u0018\u0000 ,2\u00020\u0001:\u0001\u000eB%\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\f\u0010\u0006\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004\u0012\u0006\u0010\b\u001a\u00020\u0007¢\u0006\u0004\b\t\u0010\nJ\u0017\u0010\u000e\u001a\u00020\r2\u0006\u0010\f\u001a\u00020\u000bH\u0016¢\u0006\u0004\b\u000e\u0010\u000fJ\u0019\u0010\u0011\u001a\u0004\u0018\u00010\u00102\u0006\u0010\f\u001a\u00020\u000bH\u0016¢\u0006\u0004\b\u0011\u0010\u0012J\u0019\u0010\u0013\u001a\u0004\u0018\u00010\u00102\u0006\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\u0013\u0010\u0012J\u0019\u0010\u0014\u001a\u0004\u0018\u00010\u00102\u0006\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\u0014\u0010\u0012J\u0019\u0010\u0016\u001a\u0004\u0018\u00010\u00152\u0006\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\u0016\u0010\u0017J)\u0010\u001b\u001a\u0004\u0018\u00010\u00152\u0006\u0010\u0018\u001a\u00020\u000b2\u0006\u0010\u0019\u001a\u00020\u000b2\u0006\u0010\u001a\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\u001b\u0010\u001cJ3\u0010\"\u001a\u00020\u00102\b\b\u0002\u0010\u001d\u001a\u00020\u000b2\b\b\u0002\u0010\u001e\u001a\u00020\u000b2\u0006\u0010\u001f\u001a\u00020\u00152\u0006\u0010!\u001a\u00020 H\u0002¢\u0006\u0004\b\"\u0010#Jm\u0010,\u001a\u00020\u00152\b\b\u0002\u0010$\u001a\u00020\u000b2\b\b\u0002\u0010&\u001a\u00020%2\u0006\u0010\u0018\u001a\u00020\u000b2\u0006\u0010\u0019\u001a\u00020\u000b2\u0006\u0010\u001a\u001a\u00020\u000b2\b\b\u0002\u0010'\u001a\u00020\u000b2\b\b\u0002\u0010(\u001a\u00020\u000b2\b\b\u0002\u0010)\u001a\u00020\u000b2\b\b\u0002\u0010*\u001a\u00020\u000b2\b\b\u0002\u0010+\u001a\u00020\u000bH\u0002¢\u0006\u0004\b,\u0010-JK\u00101\u001a\u00020 2\b\b\u0002\u0010$\u001a\u00020\u000b2\b\b\u0002\u0010&\u001a\u00020%2\b\b\u0002\u0010.\u001a\u00020\u000b2\b\b\u0002\u0010/\u001a\u00020\u000b2\b\b\u0002\u00100\u001a\u00020\u000b2\b\b\u0002\u0010(\u001a\u00020\u000bH\u0002¢\u0006\u0004\b1\u00102J\u0013\u00103\u001a\u00020\u000b*\u00020\u0005H\u0002¢\u0006\u0004\b3\u00104J#\u00106\u001a\u0004\u0018\u000105*\b\u0012\u0004\u0012\u00020\u00050\u00042\u0006\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b6\u00107R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b8\u00109R\u001a\u0010\u0006\u001a\b\u0012\u0004\u0012\u00020\u00050\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b1\u0010:R\u0014\u0010\b\u001a\u00020\u00078\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b;\u0010<R=\u0010C\u001a$\u0012\f\u0012\n ?*\u0004\u0018\u00010>0> ?*\u0010\u0012\f\u0012\n ?*\u0004\u0018\u00010>0>0\u00040=8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\"\u0010@\u001a\u0004\bA\u0010BR\"\u0010G\u001a\u0010\u0012\u0004\u0012\u00020\u000b\u0012\u0006\u0012\u0004\u0018\u00010\u00100D8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bE\u0010F¨\u0006H"}, d2 = {"Lo1/c;", "Ln0/z1;", "Ln0/o0;", "cameraInfo", "", "Lf1/x;", "targetQualities", "Lm1/r1$a;", "videoEncoderInfoFinder", "<init>", "(Ln0/o0;Ljava/util/List;Lm1/r1$a;)V", "", "quality", "", "a", "(I)Z", "Ln0/a2;", "b", "(I)Ln0/a2;", "m", "k", "Ln0/a2$c;", "l", "(I)Ln0/a2$c;", "width", "height", "bitrate", "p", "(III)Ln0/a2$c;", "defaultDurationSeconds", "recommendedFileFormat", "videoProfile", "Ln0/a2$a;", "audioProfile", "f", "(IILn0/a2$c;Ln0/a2$a;)Ln0/a2;", "codec", "", "mimeType", "frameRate", "profile", "bitDepth", "chromaSubsampling", "hdrFormat", "h", "(ILjava/lang/String;IIIIIIII)Ln0/a2$c;", "bitRate", "sampleRate", "channels", "d", "(ILjava/lang/String;IIII)Ln0/a2$a;", "o", "(Lf1/x;)I", "Lf1/x$b;", "j", "(Ljava/util/List;I)Lf1/x$b;", "c", "Ln0/o0;", "Ljava/util/List;", "e", "Lm1/r1$a;", "", "Landroid/util/Size;", "kotlin.jvm.PlatformType", "Ljt/h;", "n", "()Ljava/util/List;", "supportedSizes", "", "g", "Ljava/util/Map;", "encoderProfilesMap", "camera-video_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
+@Metadata(d1 = {"\u0000j\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u000f\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010!\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010%\n\u0002\b\u0004\u0018\u0000 ,2\u00020\u0001:\u0001\u000eB%\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\f\u0010\u0006\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004\u0012\u0006\u0010\b\u001a\u00020\u0007¢\u0006\u0004\b\t\u0010\nJ\u0017\u0010\u000e\u001a\u00020\r2\u0006\u0010\f\u001a\u00020\u000bH\u0016¢\u0006\u0004\b\u000e\u0010\u000fJ\u0019\u0010\u0011\u001a\u0004\u0018\u00010\u00102\u0006\u0010\f\u001a\u00020\u000bH\u0016¢\u0006\u0004\b\u0011\u0010\u0012J\u0019\u0010\u0013\u001a\u0004\u0018\u00010\u00102\u0006\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\u0013\u0010\u0012J\u0019\u0010\u0014\u001a\u0004\u0018\u00010\u00102\u0006\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\u0014\u0010\u0012J\u0019\u0010\u0016\u001a\u0004\u0018\u00010\u00152\u0006\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\u0016\u0010\u0017J)\u0010\u001b\u001a\u0004\u0018\u00010\u00152\u0006\u0010\u0018\u001a\u00020\u000b2\u0006\u0010\u0019\u001a\u00020\u000b2\u0006\u0010\u001a\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\u001b\u0010\u001cJ3\u0010\"\u001a\u00020\u00102\b\b\u0002\u0010\u001d\u001a\u00020\u000b2\b\b\u0002\u0010\u001e\u001a\u00020\u000b2\u0006\u0010\u001f\u001a\u00020\u00152\u0006\u0010!\u001a\u00020 H\u0002¢\u0006\u0004\b\"\u0010#Jm\u0010,\u001a\u00020\u00152\b\b\u0002\u0010$\u001a\u00020\u000b2\b\b\u0002\u0010&\u001a\u00020%2\u0006\u0010\u0018\u001a\u00020\u000b2\u0006\u0010\u0019\u001a\u00020\u000b2\u0006\u0010\u001a\u001a\u00020\u000b2\b\b\u0002\u0010'\u001a\u00020\u000b2\b\b\u0002\u0010(\u001a\u00020\u000b2\b\b\u0002\u0010)\u001a\u00020\u000b2\b\b\u0002\u0010*\u001a\u00020\u000b2\b\b\u0002\u0010+\u001a\u00020\u000bH\u0002¢\u0006\u0004\b,\u0010-JK\u00101\u001a\u00020 2\b\b\u0002\u0010$\u001a\u00020\u000b2\b\b\u0002\u0010&\u001a\u00020%2\b\b\u0002\u0010.\u001a\u00020\u000b2\b\b\u0002\u0010/\u001a\u00020\u000b2\b\b\u0002\u00100\u001a\u00020\u000b2\b\b\u0002\u0010(\u001a\u00020\u000bH\u0002¢\u0006\u0004\b1\u00102J\u0013\u00103\u001a\u00020\u000b*\u00020\u0005H\u0002¢\u0006\u0004\b3\u00104J#\u00106\u001a\u0004\u0018\u000105*\b\u0012\u0004\u0012\u00020\u00050\u00042\u0006\u0010\f\u001a\u00020\u000bH\u0002¢\u0006\u0004\b6\u00107R\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b8\u00109R\u001a\u0010\u0006\u001a\b\u0012\u0004\u0012\u00020\u00050\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b1\u0010:R\u0014\u0010\b\u001a\u00020\u00078\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b;\u0010<R=\u0010C\u001a$\u0012\f\u0012\n ?*\u0004\u0018\u00010>0> ?*\u0010\u0012\f\u0012\n ?*\u0004\u0018\u00010>0>0\u00040=8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\"\u0010@\u001a\u0004\bA\u0010BR\"\u0010G\u001a\u0010\u0012\u0004\u0012\u00020\u000b\u0012\u0006\u0012\u0004\u0018\u00010\u00100D8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bE\u0010F¨\u0006H"}, d2 = {"Lo1/c;", "Ln0/z1;", "Ln0/o0;", "cameraInfo", "", "Lf1/x;", "targetQualities", "Lm1/r1$a;", "videoEncoderInfoFinder", "<init>", "(Ln0/o0;Ljava/util/List;Lm1/r1$a;)V", "", "quality", "", "a", "(I)Z", "Ln0/a2;", "b", "(I)Ln0/a2;", "m", "k", "Ln0/a2$c;", "l", "(I)Ln0/a2$c;", "width", "height", "bitrate", "p", "(III)Ln0/a2$c;", "defaultDurationSeconds", "recommendedFileFormat", "videoProfile", "Ln0/a2$a;", "audioProfile", "f", "(IILn0/a2$c;Ln0/a2$a;)Ln0/a2;", "codec", "", "mimeType", "frameRate", "profile", "bitDepth", "chromaSubsampling", "hdrFormat", "h", "(ILjava/lang/String;IIIIIIII)Ln0/a2$c;", "bitRate", "sampleRate", "channels", "d", "(ILjava/lang/String;IIII)Ln0/a2$a;", "o", "(Lf1/x;)I", "Lf1/x$b;", "j", "(Ljava/util/List;I)Lf1/x$b;", "c", "Ln0/o0;", "Ljava/util/List;", "e", "Lm1/r1$a;", "", "Landroid/util/Size;", "kotlin.jvm.PlatformType", "Lgt/h;", "n", "()Ljava/util/List;", "supportedSizes", "", "g", "Ljava/util/Map;", "encoderProfilesMap", "camera-video_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
 public final class c implements z1 {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
@@ -37,7 +37,7 @@ public final class c implements z1 {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final jt.h supportedSizes;
+    public final gt.h supportedSizes;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -54,7 +54,7 @@ public final class c implements z1 {
         this.supportedSizes = i.b(new Function0() { // from class: o1.b
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return c.q(this.f26982a);
+                return c.q(this.f27547a);
             }
         });
         this.encoderProfilesMap = new LinkedHashMap();
@@ -204,16 +204,16 @@ public final class c implements z1 {
     }
 
     public final int o(x xVar) {
-        if (Intrinsics.c(xVar, x.f16052d)) {
+        if (Intrinsics.c(xVar, x.f16648d)) {
             return 40000000;
         }
-        if (Intrinsics.c(xVar, x.f16051c)) {
+        if (Intrinsics.c(xVar, x.f16647c)) {
             return 10000000;
         }
         if (Intrinsics.c(xVar, x.b)) {
             return 4000000;
         }
-        if (Intrinsics.c(xVar, x.f16050a)) {
+        if (Intrinsics.c(xVar, x.f16646a)) {
             return 2000000;
         }
         throw new IllegalArgumentException("Undefined bitrate for quality: " + xVar);

@@ -6,53 +6,53 @@ import android.util.Range;
 public final class n extends c2 {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final a0 f15890c;
+    public final a0 f16486c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final int f15891d;
+    public final int f16487d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Range<Integer> f15892e;
+    public final Range<Integer> f16488e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final int f15893f;
+    public final int f16489f;
 
     public static final class b extends c2.a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public a0 f15894a;
+        public a0 f16490a;
         public Integer b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public Range<Integer> f15895c;
+        public Range<Integer> f16491c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public Integer f15896d;
+        public Integer f16492d;
 
         @Override // f1.c2.a
         public c2 a() {
             String str = "";
-            if (this.f15894a == null) {
+            if (this.f16490a == null) {
                 str = " qualitySelector";
             }
             if (this.b == null) {
                 str = str + " encodeFrameRate";
             }
-            if (this.f15895c == null) {
+            if (this.f16491c == null) {
                 str = str + " bitrate";
             }
-            if (this.f15896d == null) {
+            if (this.f16492d == null) {
                 str = str + " aspectRatio";
             }
             if (str.isEmpty()) {
-                return new n(this.f15894a, this.b.intValue(), this.f15895c, this.f15896d.intValue());
+                return new n(this.f16490a, this.b.intValue(), this.f16491c, this.f16492d.intValue());
             }
             throw new IllegalStateException("Missing required properties:" + str);
         }
 
         @Override // f1.c2.a
         public c2.a b(int i10) {
-            this.f15896d = Integer.valueOf(i10);
+            this.f16492d = Integer.valueOf(i10);
             return this;
         }
 
@@ -61,7 +61,7 @@ public final class n extends c2 {
             if (range == null) {
                 throw new NullPointerException("Null bitrate");
             }
-            this.f15895c = range;
+            this.f16491c = range;
             return this;
         }
 
@@ -76,7 +76,7 @@ public final class n extends c2 {
             if (a0Var == null) {
                 throw new NullPointerException("Null qualitySelector");
             }
-            this.f15894a = a0Var;
+            this.f16490a = a0Var;
             return this;
         }
 
@@ -84,31 +84,31 @@ public final class n extends c2 {
         }
 
         public b(c2 c2Var) {
-            this.f15894a = c2Var.e();
+            this.f16490a = c2Var.e();
             this.b = Integer.valueOf(c2Var.d());
-            this.f15895c = c2Var.c();
-            this.f15896d = Integer.valueOf(c2Var.b());
+            this.f16491c = c2Var.c();
+            this.f16492d = Integer.valueOf(c2Var.b());
         }
     }
 
     @Override // f1.c2
     public int b() {
-        return this.f15893f;
+        return this.f16489f;
     }
 
     @Override // f1.c2
     public Range<Integer> c() {
-        return this.f15892e;
+        return this.f16488e;
     }
 
     @Override // f1.c2
     public int d() {
-        return this.f15891d;
+        return this.f16487d;
     }
 
     @Override // f1.c2
     public a0 e() {
-        return this.f15890c;
+        return this.f16486c;
     }
 
     public boolean equals(Object obj) {
@@ -117,7 +117,7 @@ public final class n extends c2 {
         }
         if (obj instanceof c2) {
             c2 c2Var = (c2) obj;
-            if (this.f15890c.equals(c2Var.e()) && this.f15891d == c2Var.d() && this.f15892e.equals(c2Var.c()) && this.f15893f == c2Var.b()) {
+            if (this.f16486c.equals(c2Var.e()) && this.f16487d == c2Var.d() && this.f16488e.equals(c2Var.c()) && this.f16489f == c2Var.b()) {
                 return true;
             }
         }
@@ -130,17 +130,17 @@ public final class n extends c2 {
     }
 
     public int hashCode() {
-        return ((((((this.f15890c.hashCode() ^ 1000003) * 1000003) ^ this.f15891d) * 1000003) ^ this.f15892e.hashCode()) * 1000003) ^ this.f15893f;
+        return ((((((this.f16486c.hashCode() ^ 1000003) * 1000003) ^ this.f16487d) * 1000003) ^ this.f16488e.hashCode()) * 1000003) ^ this.f16489f;
     }
 
     public String toString() {
-        return "VideoSpec{qualitySelector=" + this.f15890c + ", encodeFrameRate=" + this.f15891d + ", bitrate=" + this.f15892e + ", aspectRatio=" + this.f15893f + "}";
+        return "VideoSpec{qualitySelector=" + this.f16486c + ", encodeFrameRate=" + this.f16487d + ", bitrate=" + this.f16488e + ", aspectRatio=" + this.f16489f + "}";
     }
 
     public n(a0 a0Var, int i10, Range<Integer> range, int i11) {
-        this.f15890c = a0Var;
-        this.f15891d = i10;
-        this.f15892e = range;
-        this.f15893f = i11;
+        this.f16486c = a0Var;
+        this.f16487d = i10;
+        this.f16488e = range;
+        this.f16489f = i11;
     }
 }

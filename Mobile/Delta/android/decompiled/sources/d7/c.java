@@ -1,6 +1,6 @@
 package d7;
 
-import jt.l;
+import gt.l;
 import kotlin.Metadata;
 import org.jetbrains.annotations.NotNull;
 import x6.ErrorResult;

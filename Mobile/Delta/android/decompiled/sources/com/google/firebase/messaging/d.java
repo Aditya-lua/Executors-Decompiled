@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 public final class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final long f8759a = TimeUnit.MINUTES.toMillis(3);
+    public static final long f8833a = TimeUnit.MINUTES.toMillis(3);
 
     public static final class a {
         public static w1.a<String, String> a(Bundle bundle) {

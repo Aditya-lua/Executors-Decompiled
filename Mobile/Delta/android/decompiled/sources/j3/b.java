@@ -11,7 +11,7 @@ public final class b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final b f21089a = new b();
+    public static final b f21662a = new b();
 
     public static final boolean a(@NotNull Context ctx) {
         Intrinsics.checkNotNullParameter(ctx, "ctx");

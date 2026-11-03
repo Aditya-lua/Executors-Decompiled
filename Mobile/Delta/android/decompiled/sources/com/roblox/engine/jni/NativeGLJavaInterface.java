@@ -1,5 +1,6 @@
 package com.roblox.engine.jni;
 
+import com.roblox.engine.jni.autovalue.NativePurchaseContext;
 import com.roblox.engine.jni.model.DeviceStaticParams;
 import com.roblox.engine.jni.model.NativeTextBoxInfo;
 import java.lang.ref.WeakReference;
@@ -20,7 +21,7 @@ public class NativeGLJavaInterface {
     }
 
     public interface MobileAdvertisingIdGetter {
-        void T();
+        void S();
     }
 
     public interface OnAppShellReloadNeededListener {
@@ -59,7 +60,7 @@ public class NativeGLJavaInterface {
         if (mobileAdvertisingIdGetter == null) {
             return;
         }
-        mobileAdvertisingIdGetter.T();
+        mobileAdvertisingIdGetter.S();
     }
 
     public static void getWebViewUserAgent() {
@@ -123,12 +124,16 @@ public class NativeGLJavaInterface {
         sImplementation.k(j10, str, str2);
     }
 
+    public static void promptNativePurchaseWithContext(long j10, String str, NativePurchaseContext nativePurchaseContext) {
+        sImplementation.l(j10, str, nativePurchaseContext);
+    }
+
     public static void promptNativePurchaseWithPayload(long j10, String str, String str2) {
-        sImplementation.l(j10, str, str2);
+        sImplementation.m(j10, str, str2);
     }
 
     public static void promptNativePurchaseWithPaymentSessionId(long j10, String str, String str2, String str3) {
-        sImplementation.n(j10, str, str2, str3);
+        sImplementation.o(j10, str, str2, str3);
     }
 
     public static void replaceImplementation(Class<? extends EngineJavaCallback2> cls, EngineJavaCallback2 engineJavaCallback2) {
@@ -138,11 +143,11 @@ public class NativeGLJavaInterface {
     }
 
     public static void saveImageToAlbum(String str) {
-        sImplementation.o(str);
+        sImplementation.p(str);
     }
 
     public static void screenOrientationChanged(int i10) {
-        sImplementation.p(i10);
+        sImplementation.q(i10);
     }
 
     public static void setAppBridgeNotificationListener(OnAppBridgeNotificationListener onAppBridgeNotificationListener) {
@@ -180,7 +185,7 @@ public class NativeGLJavaInterface {
     }
 
     public static void showKeyboard(long j10, boolean z10, byte[] bArr, NativeTextBoxInfo nativeTextBoxInfo) {
-        sImplementation.q(j10, z10, bArr, nativeTextBoxInfo);
+        sImplementation.r(j10, z10, bArr, nativeTextBoxInfo);
     }
 
     public static void promptNativePurchase(long j10, String str) {
@@ -188,6 +193,6 @@ public class NativeGLJavaInterface {
     }
 
     public static void promptNativePurchaseWithPaymentSessionId(long j10, String str, String str2) {
-        sImplementation.m(j10, str, str2);
+        sImplementation.n(j10, str, str2);
     }
 }

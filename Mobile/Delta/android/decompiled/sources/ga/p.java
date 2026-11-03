@@ -4,17 +4,17 @@ package ga;
 public final class p {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f17972a = false;
+    public boolean f18511a = false;
     public boolean b = false;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public boolean f17973c = false;
+    public boolean f18512c = false;
 
     public /* synthetic */ p(byte[] bArr) {
     }
 
     public final p a(boolean z10) {
-        this.f17972a = true;
+        this.f18511a = true;
         return this;
     }
 
@@ -24,7 +24,7 @@ public final class p {
     }
 
     public final p c(boolean z10) {
-        this.f17973c = true;
+        this.f18512c = true;
         return this;
     }
 
@@ -33,7 +33,7 @@ public final class p {
     }
 
     public final /* synthetic */ boolean e() {
-        return this.f17972a;
+        return this.f18511a;
     }
 
     public final /* synthetic */ boolean f() {
@@ -41,6 +41,6 @@ public final class p {
     }
 
     public final /* synthetic */ boolean g() {
-        return this.f17973c;
+        return this.f18512c;
     }
 }

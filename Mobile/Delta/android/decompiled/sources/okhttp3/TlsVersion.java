@@ -17,7 +17,7 @@ public enum TlsVersion {
 
     @NotNull
     private final String javaName;
-    private static final /* synthetic */ qt.a $ENTRIES = qt.b.a(values());
+    private static final /* synthetic */ ot.a $ENTRIES = ot.b.a(values());
 
     /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
     @NotNull
@@ -76,7 +76,7 @@ public enum TlsVersion {
     }
 
     @NotNull
-    public static qt.a<TlsVersion> getEntries() {
+    public static ot.a<TlsVersion> getEntries() {
         return $ENTRIES;
     }
 

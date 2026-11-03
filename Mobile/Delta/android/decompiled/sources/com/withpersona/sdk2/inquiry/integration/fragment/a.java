@@ -2,7 +2,7 @@ package com.withpersona.sdk2.inquiry.integration.fragment;
 
 /* JADX INFO: loaded from: classes3.dex */
 public final class a {
-    public static void a(IntegrationStepFragment integrationStepFragment, vq.a aVar) {
+    public static void a(IntegrationStepFragment integrationStepFragment, tq.a aVar) {
         integrationStepFragment.systemUiController = aVar;
     }
 

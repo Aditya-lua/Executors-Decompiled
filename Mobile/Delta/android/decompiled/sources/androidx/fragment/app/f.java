@@ -47,9 +47,9 @@ public final class f {
         Intrinsics.checkNotNullParameter(f10, "f");
         c cVarD0 = this.fragmentManager.D0();
         if (cVarD0 != null) {
-            FragmentManager fragmentManagerM = cVarD0.M();
-            Intrinsics.checkNotNullExpressionValue(fragmentManagerM, "parent.getParentFragmentManager()");
-            fragmentManagerM.C0().a(f10, savedInstanceState, true);
+            FragmentManager fragmentManagerL = cVarD0.L();
+            Intrinsics.checkNotNullExpressionValue(fragmentManagerL, "parent.getParentFragmentManager()");
+            fragmentManagerL.C0().a(f10, savedInstanceState, true);
         }
         for (a aVar : this.lifecycleCallbacks) {
             if (!onlyRecursive || aVar.getRecursive()) {
@@ -64,9 +64,9 @@ public final class f {
         this.fragmentManager.A0().getContext();
         c cVarD0 = this.fragmentManager.D0();
         if (cVarD0 != null) {
-            FragmentManager fragmentManagerM = cVarD0.M();
-            Intrinsics.checkNotNullExpressionValue(fragmentManagerM, "parent.getParentFragmentManager()");
-            fragmentManagerM.C0().b(f10, true);
+            FragmentManager fragmentManagerL = cVarD0.L();
+            Intrinsics.checkNotNullExpressionValue(fragmentManagerL, "parent.getParentFragmentManager()");
+            fragmentManagerL.C0().b(f10, true);
         }
         for (a aVar : this.lifecycleCallbacks) {
             if (!onlyRecursive || aVar.getRecursive()) {
@@ -80,9 +80,9 @@ public final class f {
         Intrinsics.checkNotNullParameter(f10, "f");
         c cVarD0 = this.fragmentManager.D0();
         if (cVarD0 != null) {
-            FragmentManager fragmentManagerM = cVarD0.M();
-            Intrinsics.checkNotNullExpressionValue(fragmentManagerM, "parent.getParentFragmentManager()");
-            fragmentManagerM.C0().c(f10, savedInstanceState, true);
+            FragmentManager fragmentManagerL = cVarD0.L();
+            Intrinsics.checkNotNullExpressionValue(fragmentManagerL, "parent.getParentFragmentManager()");
+            fragmentManagerL.C0().c(f10, savedInstanceState, true);
         }
         for (a aVar : this.lifecycleCallbacks) {
             if (!onlyRecursive || aVar.getRecursive()) {
@@ -96,9 +96,9 @@ public final class f {
         Intrinsics.checkNotNullParameter(f10, "f");
         c cVarD0 = this.fragmentManager.D0();
         if (cVarD0 != null) {
-            FragmentManager fragmentManagerM = cVarD0.M();
-            Intrinsics.checkNotNullExpressionValue(fragmentManagerM, "parent.getParentFragmentManager()");
-            fragmentManagerM.C0().d(f10, true);
+            FragmentManager fragmentManagerL = cVarD0.L();
+            Intrinsics.checkNotNullExpressionValue(fragmentManagerL, "parent.getParentFragmentManager()");
+            fragmentManagerL.C0().d(f10, true);
         }
         for (a aVar : this.lifecycleCallbacks) {
             if (!onlyRecursive || aVar.getRecursive()) {
@@ -112,9 +112,9 @@ public final class f {
         Intrinsics.checkNotNullParameter(f10, "f");
         c cVarD0 = this.fragmentManager.D0();
         if (cVarD0 != null) {
-            FragmentManager fragmentManagerM = cVarD0.M();
-            Intrinsics.checkNotNullExpressionValue(fragmentManagerM, "parent.getParentFragmentManager()");
-            fragmentManagerM.C0().e(f10, true);
+            FragmentManager fragmentManagerL = cVarD0.L();
+            Intrinsics.checkNotNullExpressionValue(fragmentManagerL, "parent.getParentFragmentManager()");
+            fragmentManagerL.C0().e(f10, true);
         }
         for (a aVar : this.lifecycleCallbacks) {
             if (!onlyRecursive || aVar.getRecursive()) {
@@ -128,9 +128,9 @@ public final class f {
         Intrinsics.checkNotNullParameter(f10, "f");
         c cVarD0 = this.fragmentManager.D0();
         if (cVarD0 != null) {
-            FragmentManager fragmentManagerM = cVarD0.M();
-            Intrinsics.checkNotNullExpressionValue(fragmentManagerM, "parent.getParentFragmentManager()");
-            fragmentManagerM.C0().f(f10, true);
+            FragmentManager fragmentManagerL = cVarD0.L();
+            Intrinsics.checkNotNullExpressionValue(fragmentManagerL, "parent.getParentFragmentManager()");
+            fragmentManagerL.C0().f(f10, true);
         }
         for (a aVar : this.lifecycleCallbacks) {
             if (!onlyRecursive || aVar.getRecursive()) {
@@ -145,9 +145,9 @@ public final class f {
         this.fragmentManager.A0().getContext();
         c cVarD0 = this.fragmentManager.D0();
         if (cVarD0 != null) {
-            FragmentManager fragmentManagerM = cVarD0.M();
-            Intrinsics.checkNotNullExpressionValue(fragmentManagerM, "parent.getParentFragmentManager()");
-            fragmentManagerM.C0().g(f10, true);
+            FragmentManager fragmentManagerL = cVarD0.L();
+            Intrinsics.checkNotNullExpressionValue(fragmentManagerL, "parent.getParentFragmentManager()");
+            fragmentManagerL.C0().g(f10, true);
         }
         for (a aVar : this.lifecycleCallbacks) {
             if (!onlyRecursive || aVar.getRecursive()) {
@@ -161,9 +161,9 @@ public final class f {
         Intrinsics.checkNotNullParameter(f10, "f");
         c cVarD0 = this.fragmentManager.D0();
         if (cVarD0 != null) {
-            FragmentManager fragmentManagerM = cVarD0.M();
-            Intrinsics.checkNotNullExpressionValue(fragmentManagerM, "parent.getParentFragmentManager()");
-            fragmentManagerM.C0().h(f10, savedInstanceState, true);
+            FragmentManager fragmentManagerL = cVarD0.L();
+            Intrinsics.checkNotNullExpressionValue(fragmentManagerL, "parent.getParentFragmentManager()");
+            fragmentManagerL.C0().h(f10, savedInstanceState, true);
         }
         for (a aVar : this.lifecycleCallbacks) {
             if (!onlyRecursive || aVar.getRecursive()) {
@@ -177,9 +177,9 @@ public final class f {
         Intrinsics.checkNotNullParameter(f10, "f");
         c cVarD0 = this.fragmentManager.D0();
         if (cVarD0 != null) {
-            FragmentManager fragmentManagerM = cVarD0.M();
-            Intrinsics.checkNotNullExpressionValue(fragmentManagerM, "parent.getParentFragmentManager()");
-            fragmentManagerM.C0().i(f10, true);
+            FragmentManager fragmentManagerL = cVarD0.L();
+            Intrinsics.checkNotNullExpressionValue(fragmentManagerL, "parent.getParentFragmentManager()");
+            fragmentManagerL.C0().i(f10, true);
         }
         for (a aVar : this.lifecycleCallbacks) {
             if (!onlyRecursive || aVar.getRecursive()) {
@@ -194,9 +194,9 @@ public final class f {
         Intrinsics.checkNotNullParameter(outState, "outState");
         c cVarD0 = this.fragmentManager.D0();
         if (cVarD0 != null) {
-            FragmentManager fragmentManagerM = cVarD0.M();
-            Intrinsics.checkNotNullExpressionValue(fragmentManagerM, "parent.getParentFragmentManager()");
-            fragmentManagerM.C0().j(f10, outState, true);
+            FragmentManager fragmentManagerL = cVarD0.L();
+            Intrinsics.checkNotNullExpressionValue(fragmentManagerL, "parent.getParentFragmentManager()");
+            fragmentManagerL.C0().j(f10, outState, true);
         }
         for (a aVar : this.lifecycleCallbacks) {
             if (!onlyRecursive || aVar.getRecursive()) {
@@ -210,9 +210,9 @@ public final class f {
         Intrinsics.checkNotNullParameter(f10, "f");
         c cVarD0 = this.fragmentManager.D0();
         if (cVarD0 != null) {
-            FragmentManager fragmentManagerM = cVarD0.M();
-            Intrinsics.checkNotNullExpressionValue(fragmentManagerM, "parent.getParentFragmentManager()");
-            fragmentManagerM.C0().k(f10, true);
+            FragmentManager fragmentManagerL = cVarD0.L();
+            Intrinsics.checkNotNullExpressionValue(fragmentManagerL, "parent.getParentFragmentManager()");
+            fragmentManagerL.C0().k(f10, true);
         }
         for (a aVar : this.lifecycleCallbacks) {
             if (!onlyRecursive || aVar.getRecursive()) {
@@ -226,9 +226,9 @@ public final class f {
         Intrinsics.checkNotNullParameter(f10, "f");
         c cVarD0 = this.fragmentManager.D0();
         if (cVarD0 != null) {
-            FragmentManager fragmentManagerM = cVarD0.M();
-            Intrinsics.checkNotNullExpressionValue(fragmentManagerM, "parent.getParentFragmentManager()");
-            fragmentManagerM.C0().l(f10, true);
+            FragmentManager fragmentManagerL = cVarD0.L();
+            Intrinsics.checkNotNullExpressionValue(fragmentManagerL, "parent.getParentFragmentManager()");
+            fragmentManagerL.C0().l(f10, true);
         }
         for (a aVar : this.lifecycleCallbacks) {
             if (!onlyRecursive || aVar.getRecursive()) {
@@ -243,9 +243,9 @@ public final class f {
         Intrinsics.checkNotNullParameter(v5, "v");
         c cVarD0 = this.fragmentManager.D0();
         if (cVarD0 != null) {
-            FragmentManager fragmentManagerM = cVarD0.M();
-            Intrinsics.checkNotNullExpressionValue(fragmentManagerM, "parent.getParentFragmentManager()");
-            fragmentManagerM.C0().m(f10, v5, savedInstanceState, true);
+            FragmentManager fragmentManagerL = cVarD0.L();
+            Intrinsics.checkNotNullExpressionValue(fragmentManagerL, "parent.getParentFragmentManager()");
+            fragmentManagerL.C0().m(f10, v5, savedInstanceState, true);
         }
         for (a aVar : this.lifecycleCallbacks) {
             if (!onlyRecursive || aVar.getRecursive()) {
@@ -259,9 +259,9 @@ public final class f {
         Intrinsics.checkNotNullParameter(f10, "f");
         c cVarD0 = this.fragmentManager.D0();
         if (cVarD0 != null) {
-            FragmentManager fragmentManagerM = cVarD0.M();
-            Intrinsics.checkNotNullExpressionValue(fragmentManagerM, "parent.getParentFragmentManager()");
-            fragmentManagerM.C0().n(f10, true);
+            FragmentManager fragmentManagerL = cVarD0.L();
+            Intrinsics.checkNotNullExpressionValue(fragmentManagerL, "parent.getParentFragmentManager()");
+            fragmentManagerL.C0().n(f10, true);
         }
         for (a aVar : this.lifecycleCallbacks) {
             if (!onlyRecursive || aVar.getRecursive()) {

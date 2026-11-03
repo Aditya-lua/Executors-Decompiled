@@ -22,7 +22,7 @@ public final class a implements d0 {
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull
-    public final C0280a activityCallbacks;
+    public final C0294a activityCallbacks;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -37,12 +37,12 @@ public final class a implements d0 {
 
     /* JADX INFO: renamed from: e7.a$a, reason: collision with other inner class name */
     @Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0006\n\u0002\b\u0003\b\u0086\u0004\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u0015\u0010\t\u001a\u00020\b2\u0006\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\t\u0010\nJ\u0015\u0010\u000b\u001a\u00020\b2\u0006\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\u000b\u0010\nJ\u0017\u0010\u000e\u001a\u00020\b2\u0006\u0010\r\u001a\u00020\fH\u0016¢\u0006\u0004\b\u000e\u0010\u000fR\u0014\u0010\u0012\u001a\u00020\u00108\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\t\u0010\u0011¨\u0006\u0013"}, d2 = {"Le7/a$a;", "Le7/h;", "Lk6/w;", "strongImageLoaderReference", "<init>", "(Le7/a;Lk6/w;)V", "Landroid/content/Context;", "context", "", "a", "(Landroid/content/Context;)V", "b", "Landroid/app/Activity;", "activity", "onActivityStarted", "(Landroid/app/Activity;)V", "", "D", "backgroundMaxSizePercent", "coil-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    public final class C0280a implements h {
+    public final class C0294a implements h {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         public final double backgroundMaxSizePercent;
 
-        public C0280a(k6.w wVar) {
+        public C0294a(k6.w wVar) {
             this.backgroundMaxSizePercent = k6.u.d(wVar.getOptions());
         }
 
@@ -116,7 +116,7 @@ public final class a implements d0 {
                 if (aVar.c().get() == null) {
                     aVar.shutdown();
                 }
-                Unit unit = Unit.f22483a;
+                Unit unit = Unit.f22938a;
             }
         }
 
@@ -153,7 +153,7 @@ public final class a implements d0 {
                     } else {
                         aVar.shutdown();
                     }
-                    Unit unit = Unit.f22483a;
+                    Unit unit = Unit.f22938a;
                 } catch (Throwable th2) {
                     throw th2;
                 }
@@ -163,7 +163,7 @@ public final class a implements d0 {
 
     public a(@NotNull k6.w wVar) {
         this.imageLoader = new WeakReference<>(wVar);
-        this.activityCallbacks = new C0280a(wVar);
+        this.activityCallbacks = new C0294a(wVar);
     }
 
     @Override // e7.d0
@@ -184,7 +184,7 @@ public final class a implements d0 {
 
     @NotNull
     /* JADX INFO: renamed from: b, reason: from getter */
-    public final C0280a getActivityCallbacks() {
+    public final C0294a getActivityCallbacks() {
         return this.activityCallbacks;
     }
 

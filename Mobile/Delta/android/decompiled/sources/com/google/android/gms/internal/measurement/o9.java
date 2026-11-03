@@ -18,21 +18,21 @@ public enum o9 implements kb {
 
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final int f6712a;
+    public final int f6785a;
 
     o9(int i10) {
-        this.f6712a = i10;
+        this.f6785a = i10;
     }
 
     @Override // java.lang.Enum
     public final String toString() {
-        return Integer.toString(this.f6712a);
+        return Integer.toString(this.f6785a);
     }
 
     @Override // com.google.android.gms.internal.measurement.kb
     public final int zza() {
         if (this != UNRECOGNIZED) {
-            return this.f6712a;
+            return this.f6785a;
         }
         throw new IllegalArgumentException("Can't get the number of an unknown enum value.");
     }

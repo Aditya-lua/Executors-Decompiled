@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public final class r1 extends w1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final AtomicReference f6754a = new AtomicReference();
+    public final AtomicReference f6828a = new AtomicReference();
     public boolean b;
 
     /* JADX WARN: Code restructure failed: missing block: B:4:0x0003, code lost:
@@ -46,15 +46,15 @@ public final class r1 extends w1 {
 
     @Override // com.google.android.gms.internal.measurement.x1
     public final void l(Bundle bundle) {
-        AtomicReference atomicReference = this.f6754a;
+        AtomicReference atomicReference = this.f6828a;
         synchronized (atomicReference) {
             try {
                 try {
                     atomicReference.set(bundle);
                     this.b = true;
-                    this.f6754a.notify();
+                    this.f6828a.notify();
                 } catch (Throwable th2) {
-                    this.f6754a.notify();
+                    this.f6828a.notify();
                     throw th2;
                 }
             } catch (Throwable th3) {
@@ -73,7 +73,7 @@ public final class r1 extends w1 {
 
     public final Bundle u2(long j10) {
         Bundle bundle;
-        AtomicReference atomicReference = this.f6754a;
+        AtomicReference atomicReference = this.f6828a;
         synchronized (atomicReference) {
             if (!this.b) {
                 try {
@@ -82,7 +82,7 @@ public final class r1 extends w1 {
                     return null;
                 }
             }
-            bundle = (Bundle) this.f6754a.get();
+            bundle = (Bundle) this.f6828a.get();
         }
         return bundle;
     }

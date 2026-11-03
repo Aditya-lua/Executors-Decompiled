@@ -13,8 +13,11 @@ import com.withpersona.sdk2.inquiry.permissions.state.PermissionRequestStateMana
 import com.withpersona.sdk2.inquiry.tracking.TrackingEventsLogger;
 import com.withpersona.sdk2.inquiry.tracking.model.PermissionTrackingEventData;
 import com.withpersona.sdk2.inquiry.workflows.SimpleWorkflowState;
-import jt.l;
-import jt.o;
+import gt.l;
+import gt.o;
+import iu.g1;
+import iu.k;
+import iu.p0;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
@@ -22,22 +25,19 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
-import ku.g1;
-import ku.k;
-import ku.p0;
-import nu.c0;
-import nu.i;
+import lu.c0;
+import lu.i;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pt.m;
-import rp.CheckRequestPermissionRationaleStateView;
-import rp.h;
-import rp.j1;
-import rp.n1;
+import pp.CheckRequestPermissionRationaleStateView;
+import pp.h;
+import pp.j1;
+import pp.n1;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000P\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0015\u0018\u00002\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0001:\u0004./01BG\b\u0007\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0002\u0012\b\b\u0001\u0010\b\u001a\u00020\u0007\u0012\u0006\u0010\n\u001a\u00020\t\u0012\u0006\u0010\f\u001a\u00020\u000b\u0012\u0006\u0010\u000e\u001a\u00020\r\u0012\u0006\u0010\u0010\u001a\u00020\u000f\u0012\b\b\u0001\u0010\u0012\u001a\u00020\u0011¢\u0006\u0004\b\u0013\u0010\u0014J\u0015\u0010\u0016\u001a\u00020\u00032\u0006\u0010\u0015\u001a\u00020\u0002¢\u0006\u0004\b\u0016\u0010\u0017J\u001f\u0010\u001b\u001a\u00020\u001a2\u0006\u0010\u0018\u001a\u00020\u00022\u0006\u0010\u0019\u001a\u00020\u0003H\u0002¢\u0006\u0004\b\u001b\u0010\u001cJ\u0017\u0010\u001f\u001a\u00020\u001a2\u0006\u0010\u001e\u001a\u00020\u001dH\u0002¢\u0006\u0004\b\u001f\u0010 J\u000f\u0010!\u001a\u00020\u001aH\u0002¢\u0006\u0004\b!\u0010\"J\u000f\u0010#\u001a\u00020\u001aH\u0002¢\u0006\u0004\b#\u0010\"R\u0014\u0010\b\u001a\u00020\u00078\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b$\u0010%R\u0014\u0010\n\u001a\u00020\t8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b&\u0010'R\u0014\u0010\f\u001a\u00020\u000b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b(\u0010)R\u0014\u0010\u000e\u001a\u00020\r8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b*\u0010+R\u0014\u0010\u0010\u001a\u00020\u000f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b,\u0010-¨\u00062"}, d2 = {"Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager;", "Lvr/c;", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;", "Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$PermissionRequestState;", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Output;", "Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$d;", "initialProps", "Landroidx/lifecycle/l0;", "savedStateHandle", "Landroid/content/Context;", "applicationContext", "Lcom/withpersona/sdk2/inquiry/permissions/d$a;", "permissionRequestDialogWorkerFactory", "Lcom/withpersona/sdk2/inquiry/permissions/a$a;", "deviceFeatureRequestWorkerFactory", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "trackingEventsLogger", "Lku/p0;", "coroutineScope", "<init>", "(Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;Landroidx/lifecycle/l0;Landroid/content/Context;Lcom/withpersona/sdk2/inquiry/permissions/d$a;Lcom/withpersona/sdk2/inquiry/permissions/a$a;Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;Lku/p0;)V", "props", "x", "(Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;)Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$PermissionRequestState;", "renderProps", "renderState", "", "y", "(Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$PermissionRequestState;)V", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionState;", "output", "v", "(Lcom/withpersona/sdk2/inquiry/permissions/PermissionState;)V", "J", "()V", "w", "e", "Landroidx/lifecycle/l0;", "f", "Landroid/content/Context;", "g", "Lcom/withpersona/sdk2/inquiry/permissions/d$a;", "h", "Lcom/withpersona/sdk2/inquiry/permissions/a$a;", "i", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "c", "d", "PermissionRequestState", "DeviceFeatureRequestState", "permissions_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class PermissionRequestStateManager extends vr.c<PermissionRequestWorkflow.Props, PermissionRequestState, PermissionRequestWorkflow.Output, d> {
+@Metadata(d1 = {"\u0000P\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0015\u0018\u00002\u001a\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00050\u0001:\u0004./01BG\b\u0007\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0002\u0012\b\b\u0001\u0010\b\u001a\u00020\u0007\u0012\u0006\u0010\n\u001a\u00020\t\u0012\u0006\u0010\f\u001a\u00020\u000b\u0012\u0006\u0010\u000e\u001a\u00020\r\u0012\u0006\u0010\u0010\u001a\u00020\u000f\u0012\b\b\u0001\u0010\u0012\u001a\u00020\u0011¢\u0006\u0004\b\u0013\u0010\u0014J\u0015\u0010\u0016\u001a\u00020\u00032\u0006\u0010\u0015\u001a\u00020\u0002¢\u0006\u0004\b\u0016\u0010\u0017J\u001f\u0010\u001b\u001a\u00020\u001a2\u0006\u0010\u0018\u001a\u00020\u00022\u0006\u0010\u0019\u001a\u00020\u0003H\u0002¢\u0006\u0004\b\u001b\u0010\u001cJ\u0017\u0010\u001f\u001a\u00020\u001a2\u0006\u0010\u001e\u001a\u00020\u001dH\u0002¢\u0006\u0004\b\u001f\u0010 J\u000f\u0010!\u001a\u00020\u001aH\u0002¢\u0006\u0004\b!\u0010\"J\u000f\u0010#\u001a\u00020\u001aH\u0002¢\u0006\u0004\b#\u0010\"R\u0014\u0010\b\u001a\u00020\u00078\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b$\u0010%R\u0014\u0010\n\u001a\u00020\t8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b&\u0010'R\u0014\u0010\f\u001a\u00020\u000b8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b(\u0010)R\u0014\u0010\u000e\u001a\u00020\r8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b*\u0010+R\u0014\u0010\u0010\u001a\u00020\u000f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b,\u0010-¨\u00062"}, d2 = {"Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager;", "Ltr/c;", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;", "Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$PermissionRequestState;", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Output;", "Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$d;", "initialProps", "Landroidx/lifecycle/l0;", "savedStateHandle", "Landroid/content/Context;", "applicationContext", "Lcom/withpersona/sdk2/inquiry/permissions/d$a;", "permissionRequestDialogWorkerFactory", "Lcom/withpersona/sdk2/inquiry/permissions/a$a;", "deviceFeatureRequestWorkerFactory", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "trackingEventsLogger", "Liu/p0;", "coroutineScope", "<init>", "(Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;Landroidx/lifecycle/l0;Landroid/content/Context;Lcom/withpersona/sdk2/inquiry/permissions/d$a;Lcom/withpersona/sdk2/inquiry/permissions/a$a;Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;Liu/p0;)V", "props", "x", "(Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;)Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$PermissionRequestState;", "renderProps", "renderState", "", "y", "(Lcom/withpersona/sdk2/inquiry/permissions/PermissionRequestWorkflow$Props;Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$PermissionRequestState;)V", "Lcom/withpersona/sdk2/inquiry/permissions/PermissionState;", "output", "v", "(Lcom/withpersona/sdk2/inquiry/permissions/PermissionState;)V", "J", "()V", "w", "e", "Landroidx/lifecycle/l0;", "f", "Landroid/content/Context;", "g", "Lcom/withpersona/sdk2/inquiry/permissions/d$a;", "h", "Lcom/withpersona/sdk2/inquiry/permissions/a$a;", "i", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "c", "d", "PermissionRequestState", "DeviceFeatureRequestState", "permissions_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class PermissionRequestStateManager extends tr.c<PermissionRequestWorkflow.Props, PermissionRequestState, PermissionRequestWorkflow.Output, d> {
 
     /* JADX INFO: renamed from: e, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -53,7 +53,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
 
     /* JADX INFO: renamed from: h, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final com.withpersona.sdk2.inquiry.permissions.a.InterfaceC0225a deviceFeatureRequestWorkerFactory;
+    public final com.withpersona.sdk2.inquiry.permissions.a.InterfaceC0228a deviceFeatureRequestWorkerFactory;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -67,7 +67,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final CheckDeviceFeatureState f12372a = new CheckDeviceFeatureState();
+            public static final CheckDeviceFeatureState f12453a = new CheckDeviceFeatureState();
 
             @NotNull
             public static final Parcelable.Creator<CheckDeviceFeatureState> CREATOR = new a();
@@ -79,7 +79,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
                 public final CheckDeviceFeatureState createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return CheckDeviceFeatureState.f12372a;
+                    return CheckDeviceFeatureState.f12453a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -123,7 +123,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final RequestDeviceFeature f12373a = new RequestDeviceFeature();
+            public static final RequestDeviceFeature f12454a = new RequestDeviceFeature();
 
             @NotNull
             public static final Parcelable.Creator<RequestDeviceFeature> CREATOR = new a();
@@ -135,7 +135,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
                 public final RequestDeviceFeature createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return RequestDeviceFeature.f12373a;
+                    return RequestDeviceFeature.f12454a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -179,7 +179,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final ShowDeviceFeaturePrompt f12374a = new ShowDeviceFeaturePrompt();
+            public static final ShowDeviceFeaturePrompt f12455a = new ShowDeviceFeaturePrompt();
 
             @NotNull
             public static final Parcelable.Creator<ShowDeviceFeaturePrompt> CREATOR = new a();
@@ -191,7 +191,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
                 public final ShowDeviceFeaturePrompt createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return ShowDeviceFeaturePrompt.f12374a;
+                    return ShowDeviceFeaturePrompt.f12455a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -247,7 +247,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final CheckPermissionPermanentlyDenied f12375a = new CheckPermissionPermanentlyDenied();
+            public static final CheckPermissionPermanentlyDenied f12456a = new CheckPermissionPermanentlyDenied();
 
             @NotNull
             public static final Parcelable.Creator<CheckPermissionPermanentlyDenied> CREATOR = new a();
@@ -259,7 +259,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
                 public final CheckPermissionPermanentlyDenied createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return CheckPermissionPermanentlyDenied.f12375a;
+                    return CheckPermissionPermanentlyDenied.f12456a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -303,7 +303,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final CheckPermissionRationaleState f12376a = new CheckPermissionRationaleState();
+            public static final CheckPermissionRationaleState f12457a = new CheckPermissionRationaleState();
 
             @NotNull
             public static final Parcelable.Creator<CheckPermissionRationaleState> CREATOR = new a();
@@ -315,7 +315,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
                 public final CheckPermissionRationaleState createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return CheckPermissionRationaleState.f12376a;
+                    return CheckPermissionRationaleState.f12457a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -359,7 +359,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final CheckPermissionState f12377a = new CheckPermissionState();
+            public static final CheckPermissionState f12458a = new CheckPermissionState();
 
             @NotNull
             public static final Parcelable.Creator<CheckPermissionState> CREATOR = new a();
@@ -371,7 +371,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
                 public final CheckPermissionState createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return CheckPermissionState.f12377a;
+                    return CheckPermissionState.f12458a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -415,7 +415,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final Complete f12378a = new Complete();
+            public static final Complete f12459a = new Complete();
 
             @NotNull
             public static final Parcelable.Creator<Complete> CREATOR = new a();
@@ -427,7 +427,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
                 public final Complete createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return Complete.f12378a;
+                    return Complete.f12459a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -471,7 +471,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final RequestDeviceFeature f12379a = new RequestDeviceFeature();
+            public static final RequestDeviceFeature f12460a = new RequestDeviceFeature();
 
             @NotNull
             public static final Parcelable.Creator<RequestDeviceFeature> CREATOR = new a();
@@ -483,7 +483,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
                 public final RequestDeviceFeature createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return RequestDeviceFeature.f12379a;
+                    return RequestDeviceFeature.f12460a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -527,7 +527,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final RequestPermission f12380a = new RequestPermission();
+            public static final RequestPermission f12461a = new RequestPermission();
 
             @NotNull
             public static final Parcelable.Creator<RequestPermission> CREATOR = new a();
@@ -539,7 +539,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
                 public final RequestPermission createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return RequestPermission.f12380a;
+                    return RequestPermission.f12461a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -583,7 +583,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final ShowPermissionPermanentlyDeniedMessage f12381a = new ShowPermissionPermanentlyDeniedMessage();
+            public static final ShowPermissionPermanentlyDeniedMessage f12462a = new ShowPermissionPermanentlyDeniedMessage();
 
             @NotNull
             public static final Parcelable.Creator<ShowPermissionPermanentlyDeniedMessage> CREATOR = new a();
@@ -595,7 +595,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
                 public final ShowPermissionPermanentlyDeniedMessage createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return ShowPermissionPermanentlyDeniedMessage.f12381a;
+                    return ShowPermissionPermanentlyDeniedMessage.f12462a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -639,7 +639,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
             @NotNull
-            public static final ShowRequestPermissionRationale f12382a = new ShowRequestPermissionRationale();
+            public static final ShowRequestPermissionRationale f12463a = new ShowRequestPermissionRationale();
 
             @NotNull
             public static final Parcelable.Creator<ShowRequestPermissionRationale> CREATOR = new a();
@@ -651,7 +651,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
                 public final ShowRequestPermissionRationale createFromParcel(Parcel parcel) {
                     Intrinsics.checkNotNullParameter(parcel, "parcel");
                     parcel.readInt();
-                    return ShowRequestPermissionRationale.f12382a;
+                    return ShowRequestPermissionRationale.f12463a;
                 }
 
                 @Override // android.os.Parcelable.Creator
@@ -698,93 +698,98 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.permissions.state.PermissionRequestStateManager$1$1", f = "PermissionRequestStateManager.kt", l = {}, m = "invokeSuspend")
-    public static final class a extends m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.permissions.state.PermissionRequestStateManager$1$1", f = "PermissionRequestStateManager.kt", l = {}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class a extends m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f12383t;
+        public int f12464t;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ PermissionRequestState f12385v;
+        public final /* synthetic */ PermissionRequestState f12466v;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public a(PermissionRequestState permissionRequestState, nt.b<? super a> bVar) {
+        public a(PermissionRequestState permissionRequestState, lt.b<? super a> bVar) {
             super(2, bVar);
-            this.f12385v = permissionRequestState;
+            this.f12466v = permissionRequestState;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return PermissionRequestStateManager.this.new a(this.f12385v, bVar);
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return PermissionRequestStateManager.this.new a(this.f12466v, bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            ot.c.e();
-            if (this.f12383t != 0) {
+            mt.c.e();
+            if (this.f12464t != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
             o.b(obj);
             PermissionRequestStateManager permissionRequestStateManager = PermissionRequestStateManager.this;
-            permissionRequestStateManager.y(permissionRequestStateManager.b().getValue(), this.f12385v);
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((a) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            permissionRequestStateManager.y(permissionRequestStateManager.b().getValue(), this.f12466v);
+            return Unit.f22938a;
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.permissions.state.PermissionRequestStateManager$2", f = "PermissionRequestStateManager.kt", l = {80}, m = "invokeSuspend")
-    public static final class b extends m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.permissions.state.PermissionRequestStateManager$2", f = "PermissionRequestStateManager.kt", l = {80}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class b extends m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f12386t;
+        public int f12467t;
 
         @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
         public static final class a<T> implements i {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ PermissionRequestStateManager f12388a;
+            public final /* synthetic */ PermissionRequestStateManager f12469a;
 
             public a(PermissionRequestStateManager permissionRequestStateManager) {
-                this.f12388a = permissionRequestStateManager;
+                this.f12469a = permissionRequestStateManager;
             }
 
-            @Override // nu.i
+            @Override // lu.i
             /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-            public final Object emit(PermissionRequestWorkflow.Props props, nt.b<? super Unit> bVar) {
-                PermissionRequestStateManager permissionRequestStateManager = this.f12388a;
+            public final Object emit(PermissionRequestWorkflow.Props props, lt.b<? super Unit> bVar) {
+                PermissionRequestStateManager permissionRequestStateManager = this.f12469a;
                 PermissionRequestState permissionRequestState = (PermissionRequestState) permissionRequestStateManager.d().i();
                 if (permissionRequestState == null) {
-                    return Unit.f22483a;
+                    return Unit.f22938a;
                 }
                 permissionRequestStateManager.y(props, permissionRequestState);
-                return Unit.f22483a;
+                return Unit.f22938a;
             }
         }
 
-        public b(nt.b<? super b> bVar) {
+        public b(lt.b<? super b> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             return PermissionRequestStateManager.this.new b(bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((b) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            Object objE = ot.c.e();
-            int i10 = this.f12386t;
+            Object objE = mt.c.e();
+            int i10 = this.f12467t;
             if (i10 == 0) {
                 o.b(obj);
                 c0<PermissionRequestWorkflow.Props> c0VarB = PermissionRequestStateManager.this.b();
                 a aVar = new a(PermissionRequestStateManager.this);
-                this.f12386t = 1;
+                this.f12467t = 1;
                 if (c0VarB.collect(aVar, this) == objE) {
                     return objE;
                 }
@@ -794,12 +799,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
                 }
                 o.b(obj);
             }
-            throw new jt.d();
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((b) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            throw new gt.d();
         }
     }
 
@@ -812,7 +812,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
     @Metadata(d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\bv\u0018\u00002\u00020\u0001:\u0002\u0002\u0003\u0082\u0001\u0002\u0004\u0005¨\u0006\u0006À\u0006\u0003"}, d2 = {"Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$d;", "", "a", "b", "Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$d$a;", "Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$d$b;", "permissions_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public interface d {
 
-        @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0006\u0010\u0007\u001a\u0004\b\u0006\u0010\b¨\u0006\t"}, d2 = {"Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$d$a;", "Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$d;", "Lrp/h;", "view", "<init>", "(Lrp/h;)V", "a", "Lrp/h;", "()Lrp/h;", "permissions_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+        @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0006\u0010\u0007\u001a\u0004\b\u0006\u0010\b¨\u0006\t"}, d2 = {"Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$d$a;", "Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$d;", "Lpp/h;", "view", "<init>", "(Lpp/h;)V", "a", "Lpp/h;", "()Lpp/h;", "permissions_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
         public static final class a implements d {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -831,7 +831,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
             }
         }
 
-        @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0006\u0010\u0007\u001a\u0004\b\u0006\u0010\b¨\u0006\t"}, d2 = {"Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$d$b;", "Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$d;", "Lrp/i;", "view", "<init>", "(Lrp/i;)V", "a", "Lrp/i;", "()Lrp/i;", "permissions_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+        @Metadata(d1 = {"\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0006\u0010\u0007\u001a\u0004\b\u0006\u0010\b¨\u0006\t"}, d2 = {"Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$d$b;", "Lcom/withpersona/sdk2/inquiry/permissions/state/PermissionRequestStateManager$d;", "Lpp/i;", "view", "<init>", "(Lpp/i;)V", "a", "Lpp/i;", "()Lpp/i;", "permissions_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
         public static final class b implements d {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -851,133 +851,133 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
         }
     }
 
+    @nt.f(c = "com.withpersona.sdk2.inquiry.permissions.state.PermissionRequestStateManager$handleState$10", f = "PermissionRequestStateManager.kt", l = {}, m = "invokeSuspend")
     @Metadata(d1 = {"\u0000\u0006\n\u0000\n\u0002\u0010\u0002\u0010\u0000\u001a\u00020\u0001H\n"}, d2 = {"<anonymous>", ""}, k = 3, mv = {2, 2, 0}, xi = 48)
-    @pt.f(c = "com.withpersona.sdk2.inquiry.permissions.state.PermissionRequestStateManager$handleState$10", f = "PermissionRequestStateManager.kt", l = {}, m = "invokeSuspend")
-    public static final class e extends m implements Function1<nt.b<? super Unit>, Object> {
+    public static final class e extends m implements Function1<lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f12391t;
+        public int f12472t;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ PermissionRequestWorkflow.Props f12393v;
+        public final /* synthetic */ PermissionRequestWorkflow.Props f12474v;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public e(PermissionRequestWorkflow.Props props, nt.b<? super e> bVar) {
+        public e(PermissionRequestWorkflow.Props props, lt.b<? super e> bVar) {
             super(1, bVar);
-            this.f12393v = props;
+            this.f12474v = props;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(nt.b<?> bVar) {
-            return PermissionRequestStateManager.this.new e(this.f12393v, bVar);
+        @Override // nt.a
+        public final lt.b<Unit> create(lt.b<?> bVar) {
+            return PermissionRequestStateManager.this.new e(this.f12474v, bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            ot.c.e();
-            if (this.f12391t != 0) {
+            mt.c.e();
+            if (this.f12472t != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
             o.b(obj);
             if (com.withpersona.sdk2.inquiry.shared.inquiry_session.a.b(PermissionRequestStateManager.this.applicationContext)) {
-                PermissionRequestStateManager.this.v(new PermissionState(this.f12393v.getPermission(), j1.PermissionGranted));
+                PermissionRequestStateManager.this.v(new PermissionState(this.f12474v.getPermission(), j1.PermissionGranted));
             } else {
-                PermissionRequestStateManager.this.d().p(DeviceFeatureRequestState.ShowDeviceFeaturePrompt.f12374a);
+                PermissionRequestStateManager.this.d().p(DeviceFeatureRequestState.ShowDeviceFeaturePrompt.f12455a);
             }
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
 
         @Override // kotlin.jvm.functions.Function1
-        /* JADX INFO: renamed from: q, reason: merged with bridge method [inline-methods] */
-        public final Object invoke(nt.b<? super Unit> bVar) {
-            return ((e) create(bVar)).invokeSuspend(Unit.f22483a);
+        /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
+        public final Object invoke(lt.b<? super Unit> bVar) {
+            return ((e) create(bVar)).invokeSuspend(Unit.f22938a);
         }
     }
 
+    @nt.f(c = "com.withpersona.sdk2.inquiry.permissions.state.PermissionRequestStateManager$handleState$1", f = "PermissionRequestStateManager.kt", l = {}, m = "invokeSuspend")
     @Metadata(d1 = {"\u0000\u0006\n\u0000\n\u0002\u0010\u0002\u0010\u0000\u001a\u00020\u0001H\n"}, d2 = {"<anonymous>", ""}, k = 3, mv = {2, 2, 0}, xi = 48)
-    @pt.f(c = "com.withpersona.sdk2.inquiry.permissions.state.PermissionRequestStateManager$handleState$1", f = "PermissionRequestStateManager.kt", l = {}, m = "invokeSuspend")
-    public static final class f extends m implements Function1<nt.b<? super Unit>, Object> {
+    public static final class f extends m implements Function1<lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f12394t;
+        public int f12475t;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ PermissionRequestWorkflow.Props f12396v;
+        public final /* synthetic */ PermissionRequestWorkflow.Props f12477v;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public f(PermissionRequestWorkflow.Props props, nt.b<? super f> bVar) {
+        public f(PermissionRequestWorkflow.Props props, lt.b<? super f> bVar) {
             super(1, bVar);
-            this.f12396v = props;
+            this.f12477v = props;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(nt.b<?> bVar) {
-            return PermissionRequestStateManager.this.new f(this.f12396v, bVar);
+        @Override // nt.a
+        public final lt.b<Unit> create(lt.b<?> bVar) {
+            return PermissionRequestStateManager.this.new f(this.f12477v, bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            ot.c.e();
-            if (this.f12394t != 0) {
+            mt.c.e();
+            if (this.f12475t != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
             o.b(obj);
-            if (com.withpersona.sdk2.inquiry.permissions.g.b(PermissionRequestStateManager.this.applicationContext, this.f12396v.getPermission())) {
-                PermissionRequestStateManager.this.d().p(PermissionRequestState.RequestDeviceFeature.f12379a);
+            if (com.withpersona.sdk2.inquiry.permissions.g.b(PermissionRequestStateManager.this.applicationContext, this.f12477v.getPermission())) {
+                PermissionRequestStateManager.this.d().p(PermissionRequestState.RequestDeviceFeature.f12460a);
             } else {
-                PermissionRequestStateManager.this.d().p(PermissionRequestState.CheckPermissionRationaleState.f12376a);
+                PermissionRequestStateManager.this.d().p(PermissionRequestState.CheckPermissionRationaleState.f12457a);
             }
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
 
         @Override // kotlin.jvm.functions.Function1
-        /* JADX INFO: renamed from: q, reason: merged with bridge method [inline-methods] */
-        public final Object invoke(nt.b<? super Unit> bVar) {
-            return ((f) create(bVar)).invokeSuspend(Unit.f22483a);
+        /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
+        public final Object invoke(lt.b<? super Unit> bVar) {
+            return ((f) create(bVar)).invokeSuspend(Unit.f22938a);
         }
     }
 
+    @nt.f(c = "com.withpersona.sdk2.inquiry.permissions.state.PermissionRequestStateManager$handleState$6", f = "PermissionRequestStateManager.kt", l = {}, m = "invokeSuspend")
     @Metadata(d1 = {"\u0000\u0006\n\u0000\n\u0002\u0010\u0002\u0010\u0000\u001a\u00020\u0001H\n"}, d2 = {"<anonymous>", ""}, k = 3, mv = {2, 2, 0}, xi = 48)
-    @pt.f(c = "com.withpersona.sdk2.inquiry.permissions.state.PermissionRequestStateManager$handleState$6", f = "PermissionRequestStateManager.kt", l = {}, m = "invokeSuspend")
-    public static final class g extends m implements Function1<nt.b<? super Unit>, Object> {
+    public static final class g extends m implements Function1<lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f12397t;
+        public int f12478t;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ PermissionRequestWorkflow.Props f12399v;
+        public final /* synthetic */ PermissionRequestWorkflow.Props f12480v;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public g(PermissionRequestWorkflow.Props props, nt.b<? super g> bVar) {
+        public g(PermissionRequestWorkflow.Props props, lt.b<? super g> bVar) {
             super(1, bVar);
-            this.f12399v = props;
+            this.f12480v = props;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(nt.b<?> bVar) {
-            return PermissionRequestStateManager.this.new g(this.f12399v, bVar);
+        @Override // nt.a
+        public final lt.b<Unit> create(lt.b<?> bVar) {
+            return PermissionRequestStateManager.this.new g(this.f12480v, bVar);
         }
 
-        @Override // pt.a
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            ot.c.e();
-            if (this.f12397t != 0) {
+            mt.c.e();
+            if (this.f12478t != 0) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
             o.b(obj);
-            PermissionRequestStateManager.this.v(new PermissionState(this.f12399v.getPermission(), j1.PermissionGranted));
-            return Unit.f22483a;
+            PermissionRequestStateManager.this.v(new PermissionState(this.f12480v.getPermission(), j1.PermissionGranted));
+            return Unit.f22938a;
         }
 
         @Override // kotlin.jvm.functions.Function1
-        /* JADX INFO: renamed from: q, reason: merged with bridge method [inline-methods] */
-        public final Object invoke(nt.b<? super Unit> bVar) {
-            return ((g) create(bVar)).invokeSuspend(Unit.f22483a);
+        /* JADX INFO: renamed from: m, reason: merged with bridge method [inline-methods] */
+        public final Object invoke(lt.b<? super Unit> bVar) {
+            return ((g) create(bVar)).invokeSuspend(Unit.f22938a);
         }
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public PermissionRequestStateManager(@NotNull PermissionRequestWorkflow.Props initialProps, @NotNull l0 savedStateHandle, @NotNull Context applicationContext, @NotNull com.withpersona.sdk2.inquiry.permissions.d.a permissionRequestDialogWorkerFactory, @NotNull com.withpersona.sdk2.inquiry.permissions.a.InterfaceC0225a deviceFeatureRequestWorkerFactory, @NotNull TrackingEventsLogger trackingEventsLogger, @NotNull final p0 coroutineScope) {
+    public PermissionRequestStateManager(@NotNull PermissionRequestWorkflow.Props initialProps, @NotNull l0 savedStateHandle, @NotNull Context applicationContext, @NotNull com.withpersona.sdk2.inquiry.permissions.d.a permissionRequestDialogWorkerFactory, @NotNull com.withpersona.sdk2.inquiry.permissions.a.InterfaceC0228a deviceFeatureRequestWorkerFactory, @NotNull TrackingEventsLogger trackingEventsLogger, @NotNull final p0 coroutineScope) {
         super(initialProps, savedStateHandle, coroutineScope);
         Intrinsics.checkNotNullParameter(initialProps, "initialProps");
         Intrinsics.checkNotNullParameter(savedStateHandle, "savedStateHandle");
@@ -994,7 +994,7 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
         if (d().i() == null) {
             d().p(x(b().getValue()));
         }
-        d().o(new Function1() { // from class: up.a
+        d().o(new Function1() { // from class: sp.a
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
                 return PermissionRequestStateManager.r(coroutineScope, this, (PermissionRequestStateManager.PermissionRequestState) obj);
@@ -1007,90 +1007,90 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
         Intrinsics.checkNotNullParameter(it, "it");
         if (it instanceof com.withpersona.sdk2.inquiry.permissions.a.b.c) {
             permissionRequestStateManager.v(new PermissionState(props.getPermission(), j1.PermissionGranted));
-        } else if (it instanceof com.withpersona.sdk2.inquiry.permissions.a.b.C0226a) {
+        } else if (it instanceof com.withpersona.sdk2.inquiry.permissions.a.b.C0229a) {
             permissionRequestStateManager.v(new PermissionState(props.getPermission(), j1.PermissionRejected));
         } else {
-            if (!(it instanceof com.withpersona.sdk2.inquiry.permissions.a.b.C0227b)) {
+            if (!(it instanceof com.withpersona.sdk2.inquiry.permissions.a.b.C0230b)) {
                 throw new l();
             }
             permissionRequestStateManager.w();
             permissionRequestStateManager.v(new PermissionState(props.getPermission(), j1.SettingsLaunched));
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit B(PermissionRequestStateManager permissionRequestStateManager) {
-        permissionRequestStateManager.d().p(PermissionRequestState.RequestPermission.f12380a);
-        return Unit.f22483a;
+        permissionRequestStateManager.d().p(PermissionRequestState.RequestPermission.f12461a);
+        return Unit.f22938a;
     }
 
     public static final Unit C(PermissionRequestStateManager permissionRequestStateManager, PermissionRequestWorkflow.Props props) {
         permissionRequestStateManager.v(new PermissionState(props.getPermission(), j1.PermissionRejected));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit D(PermissionRequestStateManager permissionRequestStateManager, PermissionRequestWorkflow.Props props, com.withpersona.sdk2.inquiry.permissions.d.b it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        if (Intrinsics.c(it, com.withpersona.sdk2.inquiry.permissions.d.b.C0230b.f12316a)) {
-            permissionRequestStateManager.d().p(PermissionRequestState.RequestDeviceFeature.f12379a);
+        if (Intrinsics.c(it, com.withpersona.sdk2.inquiry.permissions.d.b.C0233b.f12397a)) {
+            permissionRequestStateManager.d().p(PermissionRequestState.RequestDeviceFeature.f12460a);
         } else {
-            if (!Intrinsics.c(it, com.withpersona.sdk2.inquiry.permissions.d.b.a.f12315a)) {
+            if (!Intrinsics.c(it, com.withpersona.sdk2.inquiry.permissions.d.b.a.f12396a)) {
                 throw new l();
             }
             if (props.getOptional()) {
                 permissionRequestStateManager.v(new PermissionState(props.getPermission(), j1.PermissionRejected));
             } else {
-                permissionRequestStateManager.d().p(PermissionRequestState.CheckPermissionPermanentlyDenied.f12375a);
+                permissionRequestStateManager.d().p(PermissionRequestState.CheckPermissionPermanentlyDenied.f12456a);
             }
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit E(PermissionRequestStateManager permissionRequestStateManager, PermissionRequestWorkflow.Props props, boolean z10) {
         if (z10) {
             permissionRequestStateManager.v(new PermissionState(props.getPermission(), j1.PermissionRejected));
         } else {
-            permissionRequestStateManager.d().p(PermissionRequestState.ShowPermissionPermanentlyDeniedMessage.f12381a);
+            permissionRequestStateManager.d().p(PermissionRequestState.ShowPermissionPermanentlyDeniedMessage.f12462a);
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit F(PermissionRequestStateManager permissionRequestStateManager, PermissionRequestWorkflow.Props props) {
         permissionRequestStateManager.J();
         permissionRequestStateManager.v(new PermissionState(props.getPermission(), j1.SettingsLaunched));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit G(PermissionRequestStateManager permissionRequestStateManager, PermissionRequestWorkflow.Props props) {
         permissionRequestStateManager.v(new PermissionState(props.getPermission(), j1.PermissionRejected));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit H(PermissionRequestStateManager permissionRequestStateManager) {
-        permissionRequestStateManager.d().p(DeviceFeatureRequestState.RequestDeviceFeature.f12373a);
-        return Unit.f22483a;
+        permissionRequestStateManager.d().p(DeviceFeatureRequestState.RequestDeviceFeature.f12454a);
+        return Unit.f22938a;
     }
 
     public static final Unit I(PermissionRequestStateManager permissionRequestStateManager, PermissionRequestWorkflow.Props props) {
         permissionRequestStateManager.v(new PermissionState(props.getPermission(), j1.PermissionRejected));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit r(p0 p0Var, PermissionRequestStateManager permissionRequestStateManager, PermissionRequestState permissionRequestState) {
         if (permissionRequestState == null) {
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
         k.d(p0Var, g1.d(), null, permissionRequestStateManager.new a(permissionRequestState, null), 2, null);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit z(PermissionRequestStateManager permissionRequestStateManager, boolean z10) {
         if (z10) {
-            permissionRequestStateManager.d().p(PermissionRequestState.ShowRequestPermissionRationale.f12382a);
+            permissionRequestStateManager.d().p(PermissionRequestState.ShowRequestPermissionRationale.f12463a);
         } else {
-            permissionRequestStateManager.d().p(PermissionRequestState.RequestPermission.f12380a);
+            permissionRequestStateManager.d().p(PermissionRequestState.RequestPermission.f12461a);
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public final void J() {
@@ -1114,126 +1114,126 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
     @NotNull
     public final PermissionRequestState x(@NotNull PermissionRequestWorkflow.Props props) {
         Intrinsics.checkNotNullParameter(props, "props");
-        return PermissionRequestState.CheckPermissionState.f12377a;
+        return PermissionRequestState.CheckPermissionState.f12458a;
     }
 
     public final void y(final PermissionRequestWorkflow.Props renderProps, PermissionRequestState renderState) {
-        if (Intrinsics.c(renderState, PermissionRequestState.CheckPermissionState.f12377a)) {
+        if (Intrinsics.c(renderState, PermissionRequestState.CheckPermissionState.f12458a)) {
             d().m("check_permission_state", new f(renderProps, null));
             return;
         }
-        if (Intrinsics.c(renderState, PermissionRequestState.CheckPermissionRationaleState.f12376a)) {
-            c().setValue(new d.b(new CheckRequestPermissionRationaleStateView(renderProps.getPermission(), false, new Function1() { // from class: up.c
+        if (Intrinsics.c(renderState, PermissionRequestState.CheckPermissionRationaleState.f12457a)) {
+            c().setValue(new d.b(new CheckRequestPermissionRationaleStateView(renderProps.getPermission(), false, new Function1() { // from class: sp.c
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return PermissionRequestStateManager.z(this.f32560a, ((Boolean) obj).booleanValue());
+                    return PermissionRequestStateManager.z(this.f31750a, ((Boolean) obj).booleanValue());
                 }
             })));
             return;
         }
-        if (Intrinsics.c(renderState, PermissionRequestState.ShowRequestPermissionRationale.f12382a)) {
+        if (Intrinsics.c(renderState, PermissionRequestState.ShowRequestPermissionRationale.f12463a)) {
             TrackingEventsLogger.logPermissionEvent$default(this.trackingEventsLogger, new PermissionTrackingEventData(n1.c(renderProps.getPermission()), "permission_sheet_presented", null, 4, null), false, 2, null);
             c0<d> c0VarC = c();
             String title = renderProps.getTitle();
             String rationale = renderProps.getRationale();
             String positiveButtonText = renderProps.getPositiveButtonText();
             if (positiveButtonText == null) {
-                positiveButtonText = this.applicationContext.getString(vp.g.D);
+                positiveButtonText = this.applicationContext.getString(tp.g.D);
                 Intrinsics.checkNotNullExpressionValue(positiveButtonText, "getString(...)");
             }
             String str = positiveButtonText;
             StepStyle styles = renderProps.getStyles();
-            Function0 function0 = new Function0() { // from class: up.d
+            Function0 function0 = new Function0() { // from class: sp.d
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return PermissionRequestStateManager.B(this.f32561a);
+                    return PermissionRequestStateManager.B(this.f31751a);
                 }
             };
             String negativeButtonText = renderProps.getNegativeButtonText();
             if (negativeButtonText == null) {
-                negativeButtonText = this.applicationContext.getString(vp.g.C);
+                negativeButtonText = this.applicationContext.getString(tp.g.C);
                 Intrinsics.checkNotNullExpressionValue(negativeButtonText, "getString(...)");
             }
-            c0VarC.setValue(new d.a(new h(title, rationale, str, styles, function0, negativeButtonText, new Function0() { // from class: up.e
+            c0VarC.setValue(new d.a(new h(title, rationale, str, styles, function0, negativeButtonText, new Function0() { // from class: sp.e
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return PermissionRequestStateManager.C(this.f32562a, renderProps);
+                    return PermissionRequestStateManager.C(this.f31752a, renderProps);
                 }
             })));
             return;
         }
-        if (Intrinsics.c(renderState, PermissionRequestState.RequestPermission.f12380a)) {
-            d().n(this.permissionRequestDialogWorkerFactory.a(renderProps.getPermission()), new Function1() { // from class: up.f
+        if (Intrinsics.c(renderState, PermissionRequestState.RequestPermission.f12461a)) {
+            d().n(this.permissionRequestDialogWorkerFactory.a(renderProps.getPermission()), new Function1() { // from class: sp.f
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return PermissionRequestStateManager.D(this.f32563a, renderProps, (com.withpersona.sdk2.inquiry.permissions.d.b) obj);
+                    return PermissionRequestStateManager.D(this.f31753a, renderProps, (com.withpersona.sdk2.inquiry.permissions.d.b) obj);
                 }
             });
             return;
         }
-        if (Intrinsics.c(renderState, PermissionRequestState.RequestDeviceFeature.f12379a)) {
+        if (Intrinsics.c(renderState, PermissionRequestState.RequestDeviceFeature.f12460a)) {
             if (renderProps.q()) {
-                d().p(DeviceFeatureRequestState.CheckDeviceFeatureState.f12372a);
+                d().p(DeviceFeatureRequestState.CheckDeviceFeatureState.f12453a);
                 return;
             } else {
                 d().m("request_device_feature", new g(renderProps, null));
                 return;
             }
         }
-        if (Intrinsics.c(renderState, PermissionRequestState.CheckPermissionPermanentlyDenied.f12375a)) {
-            c().setValue(new d.b(new CheckRequestPermissionRationaleStateView(renderProps.getPermission(), true, new Function1() { // from class: up.g
+        if (Intrinsics.c(renderState, PermissionRequestState.CheckPermissionPermanentlyDenied.f12456a)) {
+            c().setValue(new d.b(new CheckRequestPermissionRationaleStateView(renderProps.getPermission(), true, new Function1() { // from class: sp.g
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
-                    return PermissionRequestStateManager.E(this.f32564a, renderProps, ((Boolean) obj).booleanValue());
+                    return PermissionRequestStateManager.E(this.f31754a, renderProps, ((Boolean) obj).booleanValue());
                 }
             })));
             return;
         }
-        if (Intrinsics.c(renderState, PermissionRequestState.ShowPermissionPermanentlyDeniedMessage.f12381a)) {
+        if (Intrinsics.c(renderState, PermissionRequestState.ShowPermissionPermanentlyDeniedMessage.f12462a)) {
             c0<d> c0VarC2 = c();
             String title2 = renderProps.getTitle();
             String rationaleWhenPermanentlyDenied = renderProps.getRationaleWhenPermanentlyDenied();
             String positiveButtonText2 = renderProps.getPositiveButtonText();
             if (positiveButtonText2 == null) {
-                positiveButtonText2 = this.applicationContext.getString(vp.g.E);
+                positiveButtonText2 = this.applicationContext.getString(tp.g.E);
                 Intrinsics.checkNotNullExpressionValue(positiveButtonText2, "getString(...)");
             }
             String str2 = positiveButtonText2;
             StepStyle styles2 = renderProps.getStyles();
-            Function0 function1 = new Function0() { // from class: up.h
+            Function0 function1 = new Function0() { // from class: sp.h
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return PermissionRequestStateManager.F(this.f32565a, renderProps);
+                    return PermissionRequestStateManager.F(this.f31755a, renderProps);
                 }
             };
             String negativeButtonText2 = renderProps.getNegativeButtonText();
             if (negativeButtonText2 == null) {
-                negativeButtonText2 = this.applicationContext.getString(vp.g.C);
+                negativeButtonText2 = this.applicationContext.getString(tp.g.C);
                 Intrinsics.checkNotNullExpressionValue(negativeButtonText2, "getString(...)");
             }
-            c0VarC2.setValue(new d.a(new h(title2, rationaleWhenPermanentlyDenied, str2, styles2, function1, negativeButtonText2, new Function0() { // from class: up.i
+            c0VarC2.setValue(new d.a(new h(title2, rationaleWhenPermanentlyDenied, str2, styles2, function1, negativeButtonText2, new Function0() { // from class: sp.i
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return PermissionRequestStateManager.G(this.f32566a, renderProps);
+                    return PermissionRequestStateManager.G(this.f31756a, renderProps);
                 }
             })));
             return;
         }
-        if (Intrinsics.c(renderState, DeviceFeatureRequestState.CheckDeviceFeatureState.f12372a)) {
+        if (Intrinsics.c(renderState, DeviceFeatureRequestState.CheckDeviceFeatureState.f12453a)) {
             d().m("check_device_feature_state", new e(renderProps, null));
             return;
         }
-        if (!Intrinsics.c(renderState, DeviceFeatureRequestState.ShowDeviceFeaturePrompt.f12374a)) {
-            if (Intrinsics.c(renderState, DeviceFeatureRequestState.RequestDeviceFeature.f12373a)) {
-                d().n(this.deviceFeatureRequestWorkerFactory.a(), new Function1() { // from class: up.b
+        if (!Intrinsics.c(renderState, DeviceFeatureRequestState.ShowDeviceFeaturePrompt.f12455a)) {
+            if (Intrinsics.c(renderState, DeviceFeatureRequestState.RequestDeviceFeature.f12454a)) {
+                d().n(this.deviceFeatureRequestWorkerFactory.a(), new Function1() { // from class: sp.b
                     @Override // kotlin.jvm.functions.Function1
                     public final Object invoke(Object obj) {
-                        return PermissionRequestStateManager.A(this.f32559a, renderProps, (com.withpersona.sdk2.inquiry.permissions.a.b) obj);
+                        return PermissionRequestStateManager.A(this.f31749a, renderProps, (com.withpersona.sdk2.inquiry.permissions.a.b) obj);
                     }
                 });
                 return;
             } else {
-                if (!Intrinsics.c(renderState, PermissionRequestState.Complete.f12378a)) {
+                if (!Intrinsics.c(renderState, PermissionRequestState.Complete.f12459a)) {
                     throw new l();
                 }
                 return;
@@ -1253,20 +1253,20 @@ public final class PermissionRequestStateManager extends vr.c<PermissionRequestW
             positiveButtonText3 = "Allow";
         }
         StepStyle styles3 = renderProps.getStyles();
-        Function0 function2 = new Function0() { // from class: up.j
+        Function0 function2 = new Function0() { // from class: sp.j
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return PermissionRequestStateManager.H(this.f32567a);
+                return PermissionRequestStateManager.H(this.f31757a);
             }
         };
         String gpsFeatureModalNegativeButton = renderProps.getGpsFeatureModalNegativeButton();
         if (gpsFeatureModalNegativeButton == null) {
             gpsFeatureModalNegativeButton = "Cancel";
         }
-        c0VarC3.setValue(new d.a(new h(gpsFeatureTitle, gpsFeatureRationale, positiveButtonText3, styles3, function2, gpsFeatureModalNegativeButton, new Function0() { // from class: up.k
+        c0VarC3.setValue(new d.a(new h(gpsFeatureTitle, gpsFeatureRationale, positiveButtonText3, styles3, function2, gpsFeatureModalNegativeButton, new Function0() { // from class: sp.k
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return PermissionRequestStateManager.I(this.f32568a, renderProps);
+                return PermissionRequestStateManager.I(this.f31758a, renderProps);
             }
         })));
     }

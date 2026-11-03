@@ -1,153 +1,103 @@
 package cf;
 
-import af.r0;
-import af.s0;
-import bf.f0;
-import java.math.BigInteger;
+import bf.j0;
+import bf.l0;
 import java.security.GeneralSecurityException;
-import java.security.InvalidKeyException;
-import java.security.MessageDigest;
+import java.security.KeyFactory;
 import java.security.NoSuchProviderException;
-import java.security.interfaces.RSAPrivateCrtKey;
+import java.security.Provider;
+import java.security.Signature;
 import java.security.interfaces.RSAPublicKey;
-import java.security.spec.RSAPrivateCrtKeySpec;
 import java.security.spec.RSAPublicKeySpec;
-import javax.crypto.BadPaddingException;
-import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
+import java.util.Arrays;
+import we.s0;
 
 /* JADX INFO: loaded from: classes2.dex */
-public final class x implements oe.z {
+public final class x implements pe.a0 {
+
+    /* JADX INFO: renamed from: f, reason: collision with root package name */
+    public static final ue.b.EnumC0590b f4935f = ue.b.EnumC0590b.b;
+
+    /* JADX INFO: renamed from: g, reason: collision with root package name */
+    public static final byte[] f4936g = new byte[0];
+
+    /* JADX INFO: renamed from: h, reason: collision with root package name */
+    public static final byte[] f4937h = {0};
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final te.b.EnumC0569b f4913a = te.b.EnumC0569b.b;
-    public static final byte[] b = new byte[0];
+    public final RSAPublicKey f4938a;
+    public final String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final byte[] f4914c = {0};
+    public final byte[] f4939c;
 
-    public static final class b implements oe.z {
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    public final byte[] f4940d;
 
-        /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final RSAPrivateCrtKey f4915a;
-        public final RSAPublicKey b;
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    public final Provider f4941e;
 
-        /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final o f4916c;
-
-        /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final o f4917d;
-
-        /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final int f4918e;
-
-        /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public final byte[] f4919f;
-
-        /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public final byte[] f4920g;
-
-        private byte[] c(byte[] bArr) {
-            return d(b(bArr, this.b.getModulus().bitLength() - 1));
+    public x(RSAPublicKey rSAPublicKey, j0.c cVar, byte[] bArr, byte[] bArr2, Provider provider) throws GeneralSecurityException {
+        if (!f4935f.a()) {
+            throw new GeneralSecurityException("Can not use RSA-PKCS1.5 in FIPS-mode, as BoringCrypto module is not available.");
         }
-
-        @Override // oe.z
-        public byte[] a(byte[] bArr) {
-            byte[] bArrC = c(bArr);
-            byte[] bArr2 = this.f4919f;
-            return bArr2.length == 0 ? bArrC : e.a(bArr2, bArrC);
-        }
-
-        public final byte[] b(byte[] bArr, int i10) throws GeneralSecurityException {
-            a0.e(this.f4916c);
-            MessageDigest messageDigestA = m.f4872e.a(z.e(this.f4916c));
-            messageDigestA.update(bArr);
-            byte[] bArr2 = this.f4920g;
-            if (bArr2.length != 0) {
-                messageDigestA.update(bArr2);
-            }
-            byte[] bArrDigest = messageDigestA.digest();
-            int digestLength = messageDigestA.getDigestLength();
-            int i11 = 1;
-            int i12 = ((i10 - 1) / 8) + 1;
-            int i13 = this.f4918e;
-            if (i12 < digestLength + i13 + 2) {
-                throw new GeneralSecurityException("encoding error");
-            }
-            byte[] bArrA = u.a(i13);
-            int i14 = digestLength + 8;
-            byte[] bArr3 = new byte[this.f4918e + i14];
-            System.arraycopy(bArrDigest, 0, bArr3, 8, digestLength);
-            System.arraycopy(bArrA, 0, bArr3, i14, bArrA.length);
-            byte[] bArrDigest2 = messageDigestA.digest(bArr3);
-            int i15 = (i12 - digestLength) - 1;
-            byte[] bArr4 = new byte[i15];
-            int i16 = this.f4918e;
-            bArr4[((i12 - i16) - digestLength) - 2] = 1;
-            System.arraycopy(bArrA, 0, bArr4, ((i12 - i16) - digestLength) - 1, bArrA.length);
-            byte[] bArrD = z.d(bArrDigest2, i15, this.f4917d);
-            byte[] bArr5 = new byte[i15];
-            for (int i17 = 0; i17 < i15; i17++) {
-                bArr5[i17] = (byte) (bArr4[i17] ^ bArrD[i17]);
-            }
-            int i18 = 0;
-            while (true) {
-                int i19 = i11;
-                if (i18 >= (((long) i12) * 8) - ((long) i10)) {
-                    int i20 = digestLength + i15;
-                    byte[] bArr6 = new byte[i20 + 1];
-                    System.arraycopy(bArr5, 0, bArr6, 0, i15);
-                    System.arraycopy(bArrDigest2, 0, bArr6, i15, bArrDigest2.length);
-                    bArr6[i20] = -68;
-                    return bArr6;
-                }
-                int i21 = i18 / 8;
-                bArr5[i21] = (byte) ((~(i19 << (7 - (i18 % 8)))) & bArr5[i21]);
-                i18++;
-                i11 = i19;
-            }
-        }
-
-        public final byte[] d(byte[] bArr) throws BadPaddingException, IllegalBlockSizeException, InvalidKeyException {
-            m<n.a, Cipher> mVar = m.b;
-            Cipher cipherA = mVar.a("RSA/ECB/NOPADDING");
-            cipherA.init(2, this.f4915a);
-            byte[] bArrDoFinal = cipherA.doFinal(bArr);
-            Cipher cipherA2 = mVar.a("RSA/ECB/NOPADDING");
-            cipherA2.init(1, this.b);
-            if (new BigInteger(1, bArr).equals(new BigInteger(1, cipherA2.doFinal(bArrDoFinal)))) {
-                return bArrDoFinal;
-            }
-            throw new IllegalStateException("Security bug: RSA signature computation error");
-        }
-
-        public b(RSAPrivateCrtKey rSAPrivateCrtKey, o oVar, o oVar2, int i10, byte[] bArr, byte[] bArr2) throws GeneralSecurityException {
-            if (te.b.c()) {
-                throw new GeneralSecurityException("Can not use RSA PSS in FIPS-mode, as BoringCrypto module is not available.");
-            }
-            a0.e(oVar);
-            if (!oVar.equals(oVar2)) {
-                throw new GeneralSecurityException("sigHash and mgf1Hash must be the same");
-            }
-            a0.c(rSAPrivateCrtKey.getModulus().bitLength());
-            a0.d(rSAPrivateCrtKey.getPublicExponent());
-            this.f4915a = rSAPrivateCrtKey;
-            this.b = (RSAPublicKey) m.f4875h.a("RSA").generatePublic(new RSAPublicKeySpec(rSAPrivateCrtKey.getModulus(), rSAPrivateCrtKey.getPublicExponent()));
-            this.f4916c = oVar;
-            this.f4917d = oVar2;
-            this.f4918e = i10;
-            this.f4919f = bArr;
-            this.f4920g = bArr2;
-        }
+        df.a0.c(rSAPublicKey.getModulus().bitLength());
+        df.a0.d(rSAPublicKey.getPublicExponent());
+        this.f4938a = rSAPublicKey;
+        this.b = d(cVar);
+        this.f4939c = bArr;
+        this.f4940d = bArr2;
+        this.f4941e = provider;
     }
 
-    public static oe.z b(s0 s0Var) {
+    private static Provider b() {
+        if (!s0.d() || s0.c().intValue() > 21) {
+            return we.c.a();
+        }
+        return null;
+    }
+
+    public static pe.a0 c(l0 l0Var) throws NoSuchProviderException {
+        Provider providerB = b();
+        if (providerB != null) {
+            return new x((RSAPublicKey) KeyFactory.getInstance("RSA", providerB).generatePublic(new RSAPublicKeySpec(l0Var.d(), l0Var.e().e())), l0Var.e().c(), l0Var.b().d(), l0Var.e().f().equals(j0.d.f4110d) ? f4937h : f4936g, providerB);
+        }
+        throw new NoSuchProviderException("RSA-PKCS1.5 using Conscrypt is not supported.");
+    }
+
+    public static String d(j0.c cVar) throws GeneralSecurityException {
+        if (cVar == j0.c.b) {
+            return "SHA256withRSA";
+        }
+        if (cVar == j0.c.f4106c) {
+            return "SHA384withRSA";
+        }
+        if (cVar == j0.c.f4107d) {
+            return "SHA512withRSA";
+        }
+        throw new GeneralSecurityException("unknown hash type");
+    }
+
+    @Override // pe.a0
+    public void a(byte[] bArr, byte[] bArr2) throws GeneralSecurityException {
+        boolean zVerify;
+        if (!s0.e(this.f4939c, bArr)) {
+            throw new GeneralSecurityException("Invalid signature (output prefix mismatch)");
+        }
+        Signature signature = Signature.getInstance(this.b, this.f4941e);
+        signature.initVerify(this.f4938a);
+        signature.update(bArr2);
+        byte[] bArr3 = this.f4940d;
+        if (bArr3.length > 0) {
+            signature.update(bArr3);
+        }
         try {
-            return f0.b(s0Var);
-        } catch (NoSuchProviderException unused) {
-            RSAPrivateCrtKey rSAPrivateCrtKey = (RSAPrivateCrtKey) m.f4875h.a("RSA").generatePrivate(new RSAPrivateCrtKeySpec(s0Var.c().d(), s0Var.f().e(), s0Var.k().b(oe.j.a()), s0Var.i().b(oe.j.a()), s0Var.j().b(oe.j.a()), s0Var.g().b(oe.j.a()), s0Var.h().b(oe.j.a()), s0Var.e().b(oe.j.a())));
-            r0 r0VarF = s0Var.f();
-            return new b(rSAPrivateCrtKey, (o) y.b.c(r0VarF.g()), (o) y.b.c(r0VarF.c()), r0VarF.f(), s0Var.b().d(), s0Var.f().h().equals(r0.d.f488d) ? f4914c : b);
+            zVerify = signature.verify(Arrays.copyOfRange(bArr, this.f4939c.length, bArr.length));
+        } catch (RuntimeException unused) {
+            zVerify = false;
+        }
+        if (!zVerify) {
+            throw new GeneralSecurityException("Invalid signature");
         }
     }
 }

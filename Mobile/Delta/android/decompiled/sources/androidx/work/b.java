@@ -36,7 +36,7 @@ public final class b {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
     @NotNull
-    public static final b f3500c = new a().a();
+    public static final b f3345c = new a().a();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -63,7 +63,7 @@ public final class b {
             if (value == null) {
                 value = null;
             } else {
-                hu.c cVarB = d0.b(value.getClass());
+                fu.c cVarB = d0.b(value.getClass());
                 if (!Intrinsics.c(cVarB, d0.b(Boolean.TYPE)) && !Intrinsics.c(cVarB, d0.b(Byte.TYPE)) && !Intrinsics.c(cVarB, d0.b(Integer.TYPE)) && !Intrinsics.c(cVarB, d0.b(Long.TYPE)) && !Intrinsics.c(cVarB, d0.b(Float.TYPE)) && !Intrinsics.c(cVarB, d0.b(Double.TYPE)) && !Intrinsics.c(cVarB, d0.b(String.class)) && !Intrinsics.c(cVarB, d0.b(Boolean[].class)) && !Intrinsics.c(cVarB, d0.b(Byte[].class)) && !Intrinsics.c(cVarB, d0.b(Integer[].class)) && !Intrinsics.c(cVarB, d0.b(Long[].class)) && !Intrinsics.c(cVarB, d0.b(Float[].class)) && !Intrinsics.c(cVarB, d0.b(Double[].class)) && !Intrinsics.c(cVarB, d0.b(String[].class))) {
                     if (Intrinsics.c(cVarB, d0.b(boolean[].class))) {
                         value = f.h((boolean[]) value);
@@ -256,7 +256,7 @@ public final class b {
 
         public static final void f(DataOutputStream dataOutputStream, Object[] objArr) throws IOException {
             int i10;
-            hu.c cVarB = d0.b(objArr.getClass());
+            fu.c cVarB = d0.b(objArr.getClass());
             if (Intrinsics.c(cVarB, d0.b(Boolean[].class))) {
                 i10 = 8;
             } else if (Intrinsics.c(cVarB, d0.b(Byte[].class))) {
@@ -332,7 +332,7 @@ public final class b {
                 dataOutputStream.writeUTF((String) obj);
             } else {
                 if (!(obj instanceof Object[])) {
-                    throw new IllegalArgumentException("Unsupported value type " + d0.b(obj.getClass()).g());
+                    throw new IllegalArgumentException("Unsupported value type " + d0.b(obj.getClass()).h());
                 }
                 f(dataOutputStream, (Object[]) obj);
             }
@@ -351,7 +351,7 @@ public final class b {
                 throw new IllegalStateException("Data cannot occupy more than 10240 bytes when serialized");
             }
             if (bytes.length == 0) {
-                return b.f3500c;
+                return b.f3345c;
             }
             LinkedHashMap linkedHashMap = new LinkedHashMap();
             try {
@@ -365,12 +365,12 @@ public final class b {
                             linkedHashMap.put(objectInputStream.readUTF(), objectInputStream.readObject());
                             i10++;
                         }
-                        ut.c.a(objectInputStream, null);
+                        st.c.a(objectInputStream, null);
                     } catch (Throwable th2) {
                         try {
                             throw th2;
                         } catch (Throwable th3) {
-                            ut.c.a(objectInputStream, th2);
+                            st.c.a(objectInputStream, th2);
                             throw th3;
                         }
                     }
@@ -383,20 +383,20 @@ public final class b {
                             linkedHashMap.put(dataInputStream.readUTF(), d(dataInputStream, dataInputStream.readByte()));
                             i10++;
                         }
-                        ut.c.a(dataInputStream, null);
+                        st.c.a(dataInputStream, null);
                     } catch (Throwable th4) {
                         try {
                             throw th4;
                         } catch (Throwable th5) {
-                            ut.c.a(dataInputStream, th4);
+                            st.c.a(dataInputStream, th4);
                             throw th5;
                         }
                     }
                 }
             } catch (IOException e10) {
-                w.e().d(f.f34938a, "Error in Data#fromByteArray: ", e10);
+                w.e().d(f.f35436a, "Error in Data#fromByteArray: ", e10);
             } catch (ClassNotFoundException e11) {
-                w.e().d(f.f34938a, "Error in Data#fromByteArray: ", e11);
+                w.e().d(f.f35436a, "Error in Data#fromByteArray: ", e11);
             }
             return new b(linkedHashMap);
         }
@@ -418,19 +418,19 @@ public final class b {
                         throw new IllegalStateException("Data cannot occupy more than 10240 bytes when serialized");
                     }
                     byte[] byteArray = byteArrayOutputStream.toByteArray();
-                    ut.c.a(dataOutputStream, null);
+                    st.c.a(dataOutputStream, null);
                     Intrinsics.checkNotNull(byteArray);
                     return byteArray;
                 } catch (Throwable th2) {
                     try {
                         throw th2;
                     } catch (Throwable th3) {
-                        ut.c.a(dataOutputStream, th2);
+                        st.c.a(dataOutputStream, th2);
                         throw th3;
                     }
                 }
             } catch (IOException e10) {
-                w.e().d(f.f34938a, "Error in Data#toByteArray: ", e10);
+                w.e().d(f.f35436a, "Error in Data#toByteArray: ", e10);
                 return new byte[0];
             }
         }

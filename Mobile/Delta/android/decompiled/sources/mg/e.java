@@ -7,17 +7,17 @@ import java.nio.charset.UnsupportedCharsetException;
 public final class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Charset f24222a = Charset.defaultCharset();
+    public static final Charset f24791a = Charset.defaultCharset();
     public static final Charset b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final Charset f24223c;
+    public static final Charset f24792c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final Charset f24224d;
+    public static final Charset f24793d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final boolean f24225e;
+    public static final boolean f24794e;
 
     static {
         Charset charsetForName;
@@ -34,13 +34,13 @@ public final class e {
         } catch (UnsupportedCharsetException unused2) {
             charsetForName2 = null;
         }
-        f24223c = charsetForName2;
+        f24792c = charsetForName2;
         try {
             charsetForName3 = Charset.forName("EUC_JP");
         } catch (UnsupportedCharsetException unused3) {
         }
-        f24224d = charsetForName3;
+        f24793d = charsetForName3;
         Charset charset = b;
-        f24225e = (charset != null && charset.equals(f24222a)) || (charsetForName3 != null && charsetForName3.equals(f24222a));
+        f24794e = (charset != null && charset.equals(f24791a)) || (charsetForName3 != null && charsetForName3.equals(f24791a));
     }
 }

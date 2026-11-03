@@ -14,7 +14,7 @@ import java.util.Queue;
 public class o implements Application.ActivityLifecycleCallbacks {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Queue<String> f8793a = new ArrayDeque(10);
+    public final Queue<String> f8867a = new ArrayDeque(10);
 
     public final void a(Intent intent) {
         Bundle bundle = null;
@@ -23,10 +23,10 @@ public class o implements Application.ActivityLifecycleCallbacks {
             if (extras != null) {
                 String strH = f0.h(extras);
                 if (!TextUtils.isEmpty(strH)) {
-                    if (this.f8793a.contains(strH)) {
+                    if (this.f8867a.contains(strH)) {
                         return;
                     } else {
-                        this.f8793a.add(strH);
+                        this.f8867a.add(strH);
                     }
                 }
                 bundle = extras.getBundle("gcm.n.analytics_data");

@@ -13,11 +13,11 @@ import org.jetbrains.annotations.NotNull;
 
 /* JADX WARN: Enum visitor error
 jadx.core.utils.exceptions.JadxRuntimeException: Can't remove SSA var: r0v6 com.appsflyer.internal.AFa1mSDK[], still in use, count: 1, list:
-  (r0v6 com.appsflyer.internal.AFa1mSDK[]) from 0x0076: INVOKE (r0v6 com.appsflyer.internal.AFa1mSDK[]) STATIC call: qt.b.a(java.lang.Enum[]):qt.a A[MD:<E extends java.lang.Enum<E>>:(E extends java.lang.Enum<E>[]):qt.a<E extends java.lang.Enum<E>> (m), WRAPPED]
+  (r0v6 com.appsflyer.internal.AFa1mSDK[]) from 0x0076: INVOKE (r0v6 com.appsflyer.internal.AFa1mSDK[]) STATIC call: ot.b.a(java.lang.Enum[]):ot.a A[MD:<E extends java.lang.Enum<E>>:(E extends java.lang.Enum<E>[]):ot.a<E extends java.lang.Enum<E>> (m), WRAPPED]
 	at jadx.core.utils.InsnRemover.removeSsaVar(InsnRemover.java:164)
 	at jadx.core.utils.InsnRemover.unbindResult(InsnRemover.java:129)
 	at jadx.core.utils.InsnRemover.lambda$unbindInsns$1(InsnRemover.java:101)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
 	at jadx.core.utils.InsnRemover.unbindInsns(InsnRemover.java:100)
 	at jadx.core.utils.InsnRemover.removeAllAndUnbind(InsnRemover.java:257)
 	at jadx.core.dex.visitors.EnumVisitor.convertToEnum(EnumVisitor.java:187)
@@ -66,7 +66,7 @@ public final class AFa1mSDK {
 
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    private static final /* synthetic */ qt.a f5219i;
+    private static final /* synthetic */ ot.a f5292i;
 
     /* JADX INFO: renamed from: AFLogger, reason: from kotlin metadata */
     @NotNull
@@ -76,7 +76,7 @@ public final class AFa1mSDK {
     final String registerClient;
 
     static {
-        f5219i = qt.b.a(new AFa1mSDK[]{DebugLog, DisableAdvertisingIdentifiers, MinTimeBetweenSessions, CurrencyCode, Host, r10});
+        f5292i = ot.b.a(new AFa1mSDK[]{DebugLog, DisableAdvertisingIdentifiers, MinTimeBetweenSessions, CurrencyCode, Host, r10});
     }
 
     private AFa1mSDK(String str, Function1 function1) {
@@ -89,33 +89,33 @@ public final class AFa1mSDK {
     public static final Unit AFKeystoreWrapper(Object obj) {
         Intrinsics.checkNotNullParameter(obj, "");
         AFa1tSDK.d().setMinTimeBetweenSessions(((Integer) obj).intValue());
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public static final Unit AFLogger(Object obj) {
         Intrinsics.checkNotNullParameter(obj, "");
         AFa1tSDK.d().setCurrencyCode(obj.toString());
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public static final Unit d(Object obj) {
         Intrinsics.checkNotNullParameter(obj, "");
         AFa1tSDK.d().setDisableAdvertisingIdentifiers(((Boolean) obj).booleanValue());
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public static final Unit i(Object obj) {
         Intrinsics.checkNotNullParameter(obj, "");
         AppsFlyerLib.getInstance().setDeepLinkTimeout(((Integer) obj).intValue());
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     @NotNull
-    public static qt.a<AFa1mSDK> registerClient() {
-        return f5219i;
+    public static ot.a<AFa1mSDK> registerClient() {
+        return f5292i;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -131,7 +131,7 @@ public final class AFa1mSDK {
         } else {
             AFa1tSDK.d().setHost(obj3.toString(), obj2.toString());
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static AFa1mSDK valueOf(String str) {
@@ -146,6 +146,6 @@ public final class AFa1mSDK {
     public static final Unit registerClient(Object obj) {
         Intrinsics.checkNotNullParameter(obj, "");
         AFa1tSDK.d().setDebugLog(((Boolean) obj).booleanValue());
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 }

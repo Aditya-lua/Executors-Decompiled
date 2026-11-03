@@ -57,10 +57,10 @@ public final class FastFallbackExchangeFinder implements ExchangeFinder {
         Intrinsics.checkNotNullExpressionValue(it, "iterator(...)");
         while (it.hasNext()) {
             RoutePlanner.Plan next = it.next();
-            next.mo217cancel();
-            RoutePlanner.Plan planMo219retry = next.mo219retry();
-            if (planMo219retry != null) {
-                getRoutePlanner().getDeferredPlans().addLast(planMo219retry);
+            next.mo218cancel();
+            RoutePlanner.Plan planMo220retry = next.mo220retry();
+            if (planMo220retry != null) {
+                getRoutePlanner().getDeferredPlans().addLast(planMo220retry);
             }
         }
         this.tcpConnectsInFlight.clear();
@@ -131,12 +131,12 @@ public final class FastFallbackExchangeFinder implements ExchangeFinder {
                     if (connectResultLaunchTcpConnect.isSuccess()) {
                         cancelInFlightConnects();
                         if (!connectResultLaunchTcpConnect.getPlan().getIsReady()) {
-                            connectResultLaunchTcpConnect = connectResultLaunchTcpConnect.getPlan().mo222connectTlsEtc();
+                            connectResultLaunchTcpConnect = connectResultLaunchTcpConnect.getPlan().mo223connectTlsEtc();
                         }
                         if (connectResultLaunchTcpConnect.isSuccess()) {
-                            RealConnection realConnectionMo218handleSuccess = connectResultLaunchTcpConnect.getPlan().mo218handleSuccess();
+                            RealConnection realConnectionMo219handleSuccess = connectResultLaunchTcpConnect.getPlan().mo219handleSuccess();
                             cancelInFlightConnects();
-                            return realConnectionMo218handleSuccess;
+                            return realConnectionMo219handleSuccess;
                         }
                     }
                     Throwable throwable = connectResultLaunchTcpConnect.getThrowable();
@@ -147,7 +147,7 @@ public final class FastFallbackExchangeFinder implements ExchangeFinder {
                         if (iOException == null) {
                             iOException = (IOException) throwable;
                         } else {
-                            jt.a.a(iOException, throwable);
+                            gt.a.a(iOException, throwable);
                         }
                     }
                     RoutePlanner.Plan nextPlan = connectResultLaunchTcpConnect.getNextPlan();

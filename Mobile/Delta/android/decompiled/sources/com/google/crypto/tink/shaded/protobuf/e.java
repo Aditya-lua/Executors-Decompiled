@@ -4,86 +4,86 @@ package com.google.crypto.tink.shaded.protobuf;
 public final class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static volatile int f8422a = 100;
+    public static volatile int f8496a = 100;
 
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f8423a;
+        public static final /* synthetic */ int[] f8497a;
 
         static {
             int[] iArr = new int[s1.b.values().length];
-            f8423a = iArr;
+            f8497a = iArr;
             try {
-                iArr[s1.b.f8554c.ordinal()] = 1;
+                iArr[s1.b.f8628c.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f8423a[s1.b.f8555d.ordinal()] = 2;
+                f8497a[s1.b.f8629d.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f8423a[s1.b.f8556e.ordinal()] = 3;
+                f8497a[s1.b.f8630e.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
             try {
-                f8423a[s1.b.f8557f.ordinal()] = 4;
+                f8497a[s1.b.f8631f.ordinal()] = 4;
             } catch (NoSuchFieldError unused4) {
             }
             try {
-                f8423a[s1.b.f8558g.ordinal()] = 5;
+                f8497a[s1.b.f8632g.ordinal()] = 5;
             } catch (NoSuchFieldError unused5) {
             }
             try {
-                f8423a[s1.b.f8566o.ordinal()] = 6;
+                f8497a[s1.b.f8640o.ordinal()] = 6;
             } catch (NoSuchFieldError unused6) {
             }
             try {
-                f8423a[s1.b.f8559h.ordinal()] = 7;
+                f8497a[s1.b.f8633h.ordinal()] = 7;
             } catch (NoSuchFieldError unused7) {
             }
             try {
-                f8423a[s1.b.f8569r.ordinal()] = 8;
+                f8497a[s1.b.f8643r.ordinal()] = 8;
             } catch (NoSuchFieldError unused8) {
             }
             try {
-                f8423a[s1.b.f8560i.ordinal()] = 9;
+                f8497a[s1.b.f8634i.ordinal()] = 9;
             } catch (NoSuchFieldError unused9) {
             }
             try {
-                f8423a[s1.b.f8568q.ordinal()] = 10;
+                f8497a[s1.b.f8642q.ordinal()] = 10;
             } catch (NoSuchFieldError unused10) {
             }
             try {
-                f8423a[s1.b.f8561j.ordinal()] = 11;
+                f8497a[s1.b.f8635j.ordinal()] = 11;
             } catch (NoSuchFieldError unused11) {
             }
             try {
-                f8423a[s1.b.f8570s.ordinal()] = 12;
+                f8497a[s1.b.f8644s.ordinal()] = 12;
             } catch (NoSuchFieldError unused12) {
             }
             try {
-                f8423a[s1.b.f8571t.ordinal()] = 13;
+                f8497a[s1.b.f8645t.ordinal()] = 13;
             } catch (NoSuchFieldError unused13) {
             }
             try {
-                f8423a[s1.b.f8567p.ordinal()] = 14;
+                f8497a[s1.b.f8641p.ordinal()] = 14;
             } catch (NoSuchFieldError unused14) {
             }
             try {
-                f8423a[s1.b.f8565n.ordinal()] = 15;
+                f8497a[s1.b.f8639n.ordinal()] = 15;
             } catch (NoSuchFieldError unused15) {
             }
             try {
-                f8423a[s1.b.f8562k.ordinal()] = 16;
+                f8497a[s1.b.f8636k.ordinal()] = 16;
             } catch (NoSuchFieldError unused16) {
             }
             try {
-                f8423a[s1.b.f8563l.ordinal()] = 17;
+                f8497a[s1.b.f8637l.ordinal()] = 17;
             } catch (NoSuchFieldError unused17) {
             }
             try {
-                f8423a[s1.b.f8564m.ordinal()] = 18;
+                f8497a[s1.b.f8638m.ordinal()] = 18;
             } catch (NoSuchFieldError unused18) {
             }
         }
@@ -92,28 +92,28 @@ public final class e {
     public static final class b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public int f8424a;
+        public int f8498a;
         public long b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public Object f8425c;
+        public Object f8499c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final p f8426d;
+        public final p f8500d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public int f8427e;
+        public int f8501e;
 
         public b(p pVar) {
             pVar.getClass();
-            this.f8426d = pVar;
+            this.f8500d = pVar;
         }
     }
 
     public static int A(byte[] bArr, int i10, a0.i<?> iVar, b bVar) throws b0 {
         j0 j0Var = (j0) iVar;
         int iJ = J(bArr, i10, bVar);
-        int i11 = bVar.f8424a + iJ;
+        int i11 = bVar.f8498a + iJ;
         while (iJ < i11) {
             iJ = M(bArr, iJ, bVar);
             j0Var.e(bVar.b);
@@ -127,14 +127,14 @@ public final class e {
     public static int B(int i10, byte[] bArr, int i11, int i12, a0.i<?> iVar, b bVar) {
         z zVar = (z) iVar;
         int iJ = J(bArr, i11, bVar);
-        zVar.d(i.c(bVar.f8424a));
+        zVar.d(i.c(bVar.f8498a));
         while (iJ < i12) {
             int iJ2 = J(bArr, iJ, bVar);
-            if (i10 != bVar.f8424a) {
+            if (i10 != bVar.f8498a) {
                 break;
             }
             iJ = J(bArr, iJ2, bVar);
-            zVar.d(i.c(bVar.f8424a));
+            zVar.d(i.c(bVar.f8498a));
         }
         return iJ;
     }
@@ -145,7 +145,7 @@ public final class e {
         j0Var.e(i.d(bVar.b));
         while (iM < i12) {
             int iJ = J(bArr, iM, bVar);
-            if (i10 != bVar.f8424a) {
+            if (i10 != bVar.f8498a) {
                 break;
             }
             iM = M(bArr, iJ, bVar);
@@ -156,21 +156,21 @@ public final class e {
 
     public static int D(byte[] bArr, int i10, b bVar) throws b0 {
         int iJ = J(bArr, i10, bVar);
-        int i11 = bVar.f8424a;
+        int i11 = bVar.f8498a;
         if (i11 < 0) {
             throw b0.g();
         }
         if (i11 == 0) {
-            bVar.f8425c = "";
+            bVar.f8499c = "";
             return iJ;
         }
-        bVar.f8425c = new String(bArr, iJ, i11, a0.b);
+        bVar.f8499c = new String(bArr, iJ, i11, a0.b);
         return iJ + i11;
     }
 
     public static int E(int i10, byte[] bArr, int i11, int i12, a0.i<?> iVar, b bVar) throws b0 {
         int iJ = J(bArr, i11, bVar);
-        int i13 = bVar.f8424a;
+        int i13 = bVar.f8498a;
         if (i13 < 0) {
             throw b0.g();
         }
@@ -182,11 +182,11 @@ public final class e {
         }
         while (iJ < i12) {
             int iJ2 = J(bArr, iJ, bVar);
-            if (i10 != bVar.f8424a) {
+            if (i10 != bVar.f8498a) {
                 break;
             }
             iJ = J(bArr, iJ2, bVar);
-            int i14 = bVar.f8424a;
+            int i14 = bVar.f8498a;
             if (i14 < 0) {
                 throw b0.g();
             }
@@ -202,7 +202,7 @@ public final class e {
 
     public static int F(int i10, byte[] bArr, int i11, int i12, a0.i<?> iVar, b bVar) throws b0 {
         int iJ = J(bArr, i11, bVar);
-        int i13 = bVar.f8424a;
+        int i13 = bVar.f8498a;
         if (i13 < 0) {
             throw b0.g();
         }
@@ -218,11 +218,11 @@ public final class e {
         }
         while (iJ < i12) {
             int iJ2 = J(bArr, iJ, bVar);
-            if (i10 != bVar.f8424a) {
+            if (i10 != bVar.f8498a) {
                 break;
             }
             iJ = J(bArr, iJ2, bVar);
-            int i15 = bVar.f8424a;
+            int i15 = bVar.f8498a;
             if (i15 < 0) {
                 throw b0.g();
             }
@@ -242,15 +242,15 @@ public final class e {
 
     public static int G(byte[] bArr, int i10, b bVar) throws b0 {
         int iJ = J(bArr, i10, bVar);
-        int i11 = bVar.f8424a;
+        int i11 = bVar.f8498a;
         if (i11 < 0) {
             throw b0.g();
         }
         if (i11 == 0) {
-            bVar.f8425c = "";
+            bVar.f8499c = "";
             return iJ;
         }
-        bVar.f8425c = r1.e(bArr, iJ, i11);
+        bVar.f8499c = r1.e(bArr, iJ, i11);
         return iJ + i11;
     }
 
@@ -270,7 +270,7 @@ public final class e {
         }
         if (iB == 2) {
             int iJ = J(bArr, i11, bVar);
-            int i13 = bVar.f8424a;
+            int i13 = bVar.f8498a;
             if (i13 < 0) {
                 throw b0.g();
             }
@@ -293,20 +293,20 @@ public final class e {
         }
         o1 o1VarK = o1.k();
         int i14 = (i10 & (-8)) | 4;
-        int i15 = bVar.f8427e + 1;
-        bVar.f8427e = i15;
+        int i15 = bVar.f8501e + 1;
+        bVar.f8501e = i15;
         a(i15);
         int i16 = 0;
         while (i11 < i12) {
             int iJ2 = J(bArr, i11, bVar);
-            i16 = bVar.f8424a;
+            i16 = bVar.f8498a;
             if (i16 == i14) {
                 i11 = iJ2;
                 break;
             }
             i11 = H(i16, bArr, iJ2, i12, o1VarK, bVar);
         }
-        bVar.f8427e--;
+        bVar.f8501e--;
         if (i11 > i12 || i16 != i14) {
             throw b0.h();
         }
@@ -319,35 +319,35 @@ public final class e {
         int i13 = i11 + 1;
         byte b10 = bArr[i11];
         if (b10 >= 0) {
-            bVar.f8424a = i12 | (b10 << 7);
+            bVar.f8498a = i12 | (b10 << 7);
             return i13;
         }
         int i14 = i12 | ((b10 & 127) << 7);
         int i15 = i11 + 2;
         byte b11 = bArr[i13];
         if (b11 >= 0) {
-            bVar.f8424a = i14 | (b11 << 14);
+            bVar.f8498a = i14 | (b11 << 14);
             return i15;
         }
         int i16 = i14 | ((b11 & 127) << 14);
         int i17 = i11 + 3;
         byte b12 = bArr[i15];
         if (b12 >= 0) {
-            bVar.f8424a = i16 | (b12 << 21);
+            bVar.f8498a = i16 | (b12 << 21);
             return i17;
         }
         int i18 = i16 | ((b12 & 127) << 21);
         int i19 = i11 + 4;
         byte b13 = bArr[i17];
         if (b13 >= 0) {
-            bVar.f8424a = i18 | (b13 << 28);
+            bVar.f8498a = i18 | (b13 << 28);
             return i19;
         }
         int i20 = i18 | ((b13 & 127) << 28);
         while (true) {
             int i21 = i19 + 1;
             if (bArr[i19] >= 0) {
-                bVar.f8424a = i20;
+                bVar.f8498a = i20;
                 return i21;
             }
             i19 = i21;
@@ -360,21 +360,21 @@ public final class e {
         if (b10 < 0) {
             return I(b10, bArr, i11, bVar);
         }
-        bVar.f8424a = b10;
+        bVar.f8498a = b10;
         return i11;
     }
 
     public static int K(int i10, byte[] bArr, int i11, int i12, a0.i<?> iVar, b bVar) {
         z zVar = (z) iVar;
         int iJ = J(bArr, i11, bVar);
-        zVar.d(bVar.f8424a);
+        zVar.d(bVar.f8498a);
         while (iJ < i12) {
             int iJ2 = J(bArr, iJ, bVar);
-            if (i10 != bVar.f8424a) {
+            if (i10 != bVar.f8498a) {
                 break;
             }
             iJ = J(bArr, iJ2, bVar);
-            zVar.d(bVar.f8424a);
+            zVar.d(bVar.f8498a);
         }
         return iJ;
     }
@@ -412,7 +412,7 @@ public final class e {
         j0Var.e(bVar.b);
         while (iM < i12) {
             int iJ = J(bArr, iM, bVar);
-            if (i10 != bVar.f8424a) {
+            if (i10 != bVar.f8498a) {
                 break;
             }
             iM = M(bArr, iJ, bVar);
@@ -422,12 +422,12 @@ public final class e {
     }
 
     public static int O(Object obj, g1 g1Var, byte[] bArr, int i10, int i11, int i12, b bVar) throws b0 {
-        int i13 = bVar.f8427e + 1;
-        bVar.f8427e = i13;
+        int i13 = bVar.f8501e + 1;
+        bVar.f8501e = i13;
         a(i13);
         int iD0 = ((v0) g1Var).d0(obj, bArr, i10, i11, i12, bVar);
-        bVar.f8427e--;
-        bVar.f8425c = obj;
+        bVar.f8501e--;
+        bVar.f8499c = obj;
         return iD0;
     }
 
@@ -436,19 +436,19 @@ public final class e {
         int i12 = bArr[i10];
         if (i12 < 0) {
             I = I(i12, bArr, I, bVar);
-            i12 = bVar.f8424a;
+            i12 = bVar.f8498a;
         }
         int i13 = I;
         if (i12 < 0 || i12 > i11 - i13) {
             throw b0.m();
         }
-        int i14 = bVar.f8427e + 1;
-        bVar.f8427e = i14;
+        int i14 = bVar.f8501e + 1;
+        bVar.f8501e = i14;
         a(i14);
         int i15 = i13 + i12;
         g1Var.h(obj, bArr, i13, i15, bVar);
-        bVar.f8427e--;
-        bVar.f8425c = obj;
+        bVar.f8501e--;
+        bVar.f8499c = obj;
         return i15;
     }
 
@@ -464,7 +464,7 @@ public final class e {
             return i11 + 8;
         }
         if (iB == 2) {
-            return J(bArr, i11, bVar) + bVar.f8424a;
+            return J(bArr, i11, bVar) + bVar.f8498a;
         }
         if (iB != 3) {
             if (iB == 5) {
@@ -476,7 +476,7 @@ public final class e {
         int i14 = 0;
         while (i11 < i12) {
             i11 = J(bArr, i11, bVar);
-            i14 = bVar.f8424a;
+            i14 = bVar.f8498a;
             if (i14 == i13) {
                 break;
             }
@@ -489,7 +489,7 @@ public final class e {
     }
 
     public static void a(int i10) throws b0 {
-        if (i10 >= f8422a) {
+        if (i10 >= f8496a) {
             throw b0.i();
         }
     }
@@ -500,7 +500,7 @@ public final class e {
         fVar.e(bVar.b != 0);
         while (iM < i12) {
             int iJ = J(bArr, iM, bVar);
-            if (i10 != bVar.f8424a) {
+            if (i10 != bVar.f8498a) {
                 break;
             }
             iM = M(bArr, iJ, bVar);
@@ -511,7 +511,7 @@ public final class e {
 
     public static int c(byte[] bArr, int i10, b bVar) throws b0 {
         int iJ = J(bArr, i10, bVar);
-        int i11 = bVar.f8424a;
+        int i11 = bVar.f8498a;
         if (i11 < 0) {
             throw b0.g();
         }
@@ -519,16 +519,16 @@ public final class e {
             throw b0.m();
         }
         if (i11 == 0) {
-            bVar.f8425c = h.b;
+            bVar.f8499c = h.b;
             return iJ;
         }
-        bVar.f8425c = h.f(bArr, iJ, i11);
+        bVar.f8499c = h.f(bArr, iJ, i11);
         return iJ + i11;
     }
 
     public static int d(int i10, byte[] bArr, int i11, int i12, a0.i<?> iVar, b bVar) throws b0 {
         int iJ = J(bArr, i11, bVar);
-        int i13 = bVar.f8424a;
+        int i13 = bVar.f8498a;
         if (i13 < 0) {
             throw b0.g();
         }
@@ -543,11 +543,11 @@ public final class e {
         }
         while (iJ < i12) {
             int iJ2 = J(bArr, iJ, bVar);
-            if (i10 != bVar.f8424a) {
+            if (i10 != bVar.f8498a) {
                 break;
             }
             iJ = J(bArr, iJ2, bVar);
-            int i14 = bVar.f8424a;
+            int i14 = bVar.f8498a;
             if (i14 < 0) {
                 throw b0.g();
             }
@@ -574,7 +574,7 @@ public final class e {
         int i13 = i11 + 8;
         while (i13 < i12) {
             int iJ = J(bArr, i13, bVar);
-            if (i10 != bVar.f8424a) {
+            if (i10 != bVar.f8498a) {
                 break;
             }
             mVar.d(e(bArr, iJ));
@@ -590,7 +590,7 @@ public final class e {
         u<y.d> uVar = cVar.extensions;
         int i15 = i10 >>> 3;
         if (eVar.b.f() && eVar.b.m()) {
-            switch (a.f8423a[eVar.a().ordinal()]) {
+            switch (a.f8497a[eVar.a().ordinal()]) {
                 case 1:
                     m mVar = new m();
                     int iT = t(bArr, i11, mVar, bVar);
@@ -651,15 +651,15 @@ public final class e {
             }
         }
         Object objValueOf = null;
-        if (eVar.a() == s1.b.f8567p) {
+        if (eVar.a() == s1.b.f8641p) {
             i11 = J(bArr, i11, bVar);
-            if (eVar.b.b().a(bVar.f8424a) == null) {
-                i1.J(cVar, i15, bVar.f8424a, null, n1Var);
+            if (eVar.b.b().a(bVar.f8498a) == null) {
+                i1.J(cVar, i15, bVar.f8498a, null, n1Var);
                 return i11;
             }
-            objValueOf = Integer.valueOf(bVar.f8424a);
+            objValueOf = Integer.valueOf(bVar.f8498a);
         } else {
-            switch (a.f8423a[eVar.a().ordinal()]) {
+            switch (a.f8497a[eVar.a().ordinal()]) {
                 case 1:
                     i13 = i11;
                     objValueOf = Double.valueOf(e(bArr, i13));
@@ -678,7 +678,7 @@ public final class e {
                 case 5:
                 case 6:
                     i11 = J(bArr, i11, bVar);
-                    objValueOf = Integer.valueOf(bVar.f8424a);
+                    objValueOf = Integer.valueOf(bVar.f8498a);
                     break;
                 case 7:
                 case 8:
@@ -698,7 +698,7 @@ public final class e {
                     break;
                 case 12:
                     i11 = J(bArr, i11, bVar);
-                    objValueOf = Integer.valueOf(i.c(bVar.f8424a));
+                    objValueOf = Integer.valueOf(i.c(bVar.f8498a));
                     break;
                 case 13:
                     i11 = M(bArr, i11, bVar);
@@ -708,18 +708,18 @@ public final class e {
                     throw new IllegalStateException("Shouldn't reach here.");
                 case 15:
                     i11 = c(bArr, i11, bVar);
-                    objValueOf = bVar.f8425c;
+                    objValueOf = bVar.f8499c;
                     break;
                 case 16:
                     i11 = D(bArr, i11, bVar);
-                    objValueOf = bVar.f8425c;
+                    objValueOf = bVar.f8499c;
                     break;
                 case 17:
                     int i16 = (i15 << 3) | 4;
                     g1 g1VarC = c1.a().c(eVar.b().getClass());
                     if (eVar.d()) {
                         int iO = o(g1VarC, bArr, i11, i12, i16, bVar);
-                        uVar.a(eVar.b, bVar.f8425c);
+                        uVar.a(eVar.b, bVar.f8499c);
                         return iO;
                     }
                     Object objI = uVar.i(eVar.b);
@@ -732,7 +732,7 @@ public final class e {
                     g1 g1VarC2 = c1.a().c(eVar.b().getClass());
                     if (eVar.d()) {
                         int iQ = q(g1VarC2, bArr, i11, i12, bVar);
-                        uVar.a(eVar.b, bVar.f8425c);
+                        uVar.a(eVar.b, bVar.f8499c);
                         return iQ;
                     }
                     Object objI2 = uVar.i(eVar.b);
@@ -752,7 +752,7 @@ public final class e {
     }
 
     public static int h(int i10, byte[] bArr, int i11, int i12, Object obj, s0 s0Var, n1<o1, o1> n1Var, b bVar) {
-        y.e eVarA = bVar.f8426d.a(s0Var, i10 >>> 3);
+        y.e eVarA = bVar.f8500d.a(s0Var, i10 >>> 3);
         if (eVarA == null) {
             return H(i10, bArr, i11, i12, v0.w(obj), bVar);
         }
@@ -771,7 +771,7 @@ public final class e {
         int i13 = i11 + 4;
         while (i13 < i12) {
             int iJ = J(bArr, i13, bVar);
-            if (i10 != bVar.f8424a) {
+            if (i10 != bVar.f8498a) {
                 break;
             }
             zVar.d(i(bArr, iJ));
@@ -790,7 +790,7 @@ public final class e {
         int i13 = i11 + 8;
         while (i13 < i12) {
             int iJ = J(bArr, i13, bVar);
-            if (i10 != bVar.f8424a) {
+            if (i10 != bVar.f8498a) {
                 break;
             }
             j0Var.e(k(bArr, iJ));
@@ -809,7 +809,7 @@ public final class e {
         int i13 = i11 + 4;
         while (i13 < i12) {
             int iJ = J(bArr, i13, bVar);
-            if (i10 != bVar.f8424a) {
+            if (i10 != bVar.f8498a) {
                 break;
             }
             wVar.d(m(bArr, iJ));
@@ -822,21 +822,21 @@ public final class e {
         Object objE = g1Var.e();
         int iO = O(objE, g1Var, bArr, i10, i11, i12, bVar);
         g1Var.b(objE);
-        bVar.f8425c = objE;
+        bVar.f8499c = objE;
         return iO;
     }
 
     public static int p(g1 g1Var, int i10, byte[] bArr, int i11, int i12, a0.i<?> iVar, b bVar) throws b0 {
         int i13 = (i10 & (-8)) | 4;
         int iO = o(g1Var, bArr, i11, i12, i13, bVar);
-        iVar.add(bVar.f8425c);
+        iVar.add(bVar.f8499c);
         while (iO < i12) {
             int iJ = J(bArr, iO, bVar);
-            if (i10 != bVar.f8424a) {
+            if (i10 != bVar.f8498a) {
                 break;
             }
             iO = o(g1Var, bArr, iJ, i12, i13, bVar);
-            iVar.add(bVar.f8425c);
+            iVar.add(bVar.f8499c);
         }
         return iO;
     }
@@ -845,20 +845,20 @@ public final class e {
         Object objE = g1Var.e();
         int iP = P(objE, g1Var, bArr, i10, i11, bVar);
         g1Var.b(objE);
-        bVar.f8425c = objE;
+        bVar.f8499c = objE;
         return iP;
     }
 
     public static int r(g1<?> g1Var, int i10, byte[] bArr, int i11, int i12, a0.i<?> iVar, b bVar) throws b0 {
         int iQ = q(g1Var, bArr, i11, i12, bVar);
-        iVar.add(bVar.f8425c);
+        iVar.add(bVar.f8499c);
         while (iQ < i12) {
             int iJ = J(bArr, iQ, bVar);
-            if (i10 != bVar.f8424a) {
+            if (i10 != bVar.f8498a) {
                 break;
             }
             iQ = q(g1Var, bArr, iJ, i12, bVar);
-            iVar.add(bVar.f8425c);
+            iVar.add(bVar.f8499c);
         }
         return iQ;
     }
@@ -866,7 +866,7 @@ public final class e {
     public static int s(byte[] bArr, int i10, a0.i<?> iVar, b bVar) throws b0 {
         f fVar = (f) iVar;
         int iJ = J(bArr, i10, bVar);
-        int i11 = bVar.f8424a + iJ;
+        int i11 = bVar.f8498a + iJ;
         while (iJ < i11) {
             iJ = M(bArr, iJ, bVar);
             fVar.e(bVar.b != 0);
@@ -880,7 +880,7 @@ public final class e {
     public static int t(byte[] bArr, int i10, a0.i<?> iVar, b bVar) throws b0 {
         m mVar = (m) iVar;
         int iJ = J(bArr, i10, bVar);
-        int i11 = bVar.f8424a + iJ;
+        int i11 = bVar.f8498a + iJ;
         while (iJ < i11) {
             mVar.d(e(bArr, iJ));
             iJ += 8;
@@ -894,7 +894,7 @@ public final class e {
     public static int u(byte[] bArr, int i10, a0.i<?> iVar, b bVar) throws b0 {
         z zVar = (z) iVar;
         int iJ = J(bArr, i10, bVar);
-        int i11 = bVar.f8424a + iJ;
+        int i11 = bVar.f8498a + iJ;
         while (iJ < i11) {
             zVar.d(i(bArr, iJ));
             iJ += 4;
@@ -908,7 +908,7 @@ public final class e {
     public static int v(byte[] bArr, int i10, a0.i<?> iVar, b bVar) throws b0 {
         j0 j0Var = (j0) iVar;
         int iJ = J(bArr, i10, bVar);
-        int i11 = bVar.f8424a + iJ;
+        int i11 = bVar.f8498a + iJ;
         while (iJ < i11) {
             j0Var.e(k(bArr, iJ));
             iJ += 8;
@@ -922,7 +922,7 @@ public final class e {
     public static int w(byte[] bArr, int i10, a0.i<?> iVar, b bVar) throws b0 {
         w wVar = (w) iVar;
         int iJ = J(bArr, i10, bVar);
-        int i11 = bVar.f8424a + iJ;
+        int i11 = bVar.f8498a + iJ;
         while (iJ < i11) {
             wVar.d(m(bArr, iJ));
             iJ += 4;
@@ -936,10 +936,10 @@ public final class e {
     public static int x(byte[] bArr, int i10, a0.i<?> iVar, b bVar) throws b0 {
         z zVar = (z) iVar;
         int iJ = J(bArr, i10, bVar);
-        int i11 = bVar.f8424a + iJ;
+        int i11 = bVar.f8498a + iJ;
         while (iJ < i11) {
             iJ = J(bArr, iJ, bVar);
-            zVar.d(i.c(bVar.f8424a));
+            zVar.d(i.c(bVar.f8498a));
         }
         if (iJ == i11) {
             return iJ;
@@ -950,7 +950,7 @@ public final class e {
     public static int y(byte[] bArr, int i10, a0.i<?> iVar, b bVar) throws b0 {
         j0 j0Var = (j0) iVar;
         int iJ = J(bArr, i10, bVar);
-        int i11 = bVar.f8424a + iJ;
+        int i11 = bVar.f8498a + iJ;
         while (iJ < i11) {
             iJ = M(bArr, iJ, bVar);
             j0Var.e(i.d(bVar.b));
@@ -964,10 +964,10 @@ public final class e {
     public static int z(byte[] bArr, int i10, a0.i<?> iVar, b bVar) throws b0 {
         z zVar = (z) iVar;
         int iJ = J(bArr, i10, bVar);
-        int i11 = bVar.f8424a + iJ;
+        int i11 = bVar.f8498a + iJ;
         while (iJ < i11) {
             iJ = J(bArr, iJ, bVar);
-            zVar.d(bVar.f8424a);
+            zVar.d(bVar.f8498a);
         }
         if (iJ == i11) {
             return iJ;

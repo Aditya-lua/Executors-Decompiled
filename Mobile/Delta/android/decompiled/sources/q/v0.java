@@ -14,32 +14,32 @@ import androidx.annotation.NonNull;
 public class v0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final ThreadLocal<TypedValue> f29134a = new ThreadLocal<>();
+    public static final ThreadLocal<TypedValue> f29487a = new ThreadLocal<>();
     public static final int[] b = {-16842910};
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final int[] f29135c = {R.attr.state_focused};
+    public static final int[] f29488c = {R.attr.state_focused};
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final int[] f29136d = {R.attr.state_activated};
+    public static final int[] f29489d = {R.attr.state_activated};
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final int[] f29137e = {R.attr.state_pressed};
+    public static final int[] f29490e = {R.attr.state_pressed};
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final int[] f29138f = {R.attr.state_checked};
+    public static final int[] f29491f = {R.attr.state_checked};
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final int[] f29139g = {R.attr.state_selected};
+    public static final int[] f29492g = {R.attr.state_selected};
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final int[] f29140h = {-16842919, -16842908};
+    public static final int[] f29493h = {-16842919, -16842908};
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final int[] f29141i = new int[0];
+    public static final int[] f29494i = new int[0];
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final int[] f29142j = new int[1];
+    public static final int[] f29495j = new int[1];
 
     public static void a(@NonNull View view, @NonNull Context context) {
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(i.j.A0);
@@ -63,7 +63,7 @@ public class v0 {
     }
 
     public static int c(@NonNull Context context, int i10) {
-        int[] iArr = f29142j;
+        int[] iArr = f29495j;
         iArr[0] = i10;
         a1 a1VarU = a1.u(context, null, iArr);
         try {
@@ -79,7 +79,7 @@ public class v0 {
     }
 
     public static ColorStateList e(@NonNull Context context, int i10) {
-        int[] iArr = f29142j;
+        int[] iArr = f29495j;
         iArr[0] = i10;
         a1 a1VarU = a1.u(context, null, iArr);
         try {
@@ -90,7 +90,7 @@ public class v0 {
     }
 
     public static TypedValue f() {
-        ThreadLocal<TypedValue> threadLocal = f29134a;
+        ThreadLocal<TypedValue> threadLocal = f29487a;
         TypedValue typedValue = threadLocal.get();
         if (typedValue != null) {
             return typedValue;

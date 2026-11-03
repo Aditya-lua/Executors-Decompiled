@@ -8,13 +8,13 @@ public final class AFk1xSDK {
     static final byte[] registerClient = new byte[Barcode.FORMAT_QR_CODE];
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    static final int[] f5465d = new int[Barcode.FORMAT_QR_CODE];
+    static final int[] f5538d = new int[Barcode.FORMAT_QR_CODE];
     static final int[] unregisterClient = new int[Barcode.FORMAT_QR_CODE];
     static final int[] AFKeystoreWrapper = new int[Barcode.FORMAT_QR_CODE];
     static final int[] AFLogger = new int[Barcode.FORMAT_QR_CODE];
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    private static int[] f5466v = new int[10];
+    private static int[] f5539v = new int[10];
 
     static {
         byte[] bArr;
@@ -50,19 +50,19 @@ public final class AFk1xSDK {
             }
             int i17 = i16 ^ i12;
             int i18 = ((i14 ^ (i15 ^ i16)) << 24) | (i17 << 16) | ((i17 ^ i15) << 8) | (i17 ^ i14);
-            f5465d[i13] = i18;
+            f5538d[i13] = i18;
             unregisterClient[i13] = (i18 >>> 8) | (i18 << 24);
             AFKeystoreWrapper[i13] = (i18 >>> 16) | (i18 << 16);
             AFLogger[i13] = (i18 << 8) | (i18 >>> 24);
         }
-        f5466v[0] = 16777216;
+        f5539v[0] = 16777216;
         int i19 = 1;
         for (int i20 = 1; i20 < 10; i20++) {
             i19 <<= 1;
             if (i19 >= 256) {
                 i19 ^= 283;
             }
-            f5466v[i20] = i19 << 24;
+            f5539v[i20] = i19 << 24;
         }
     }
 
@@ -96,7 +96,7 @@ public final class AFk1xSDK {
             int i20 = iArr[i17 - 1];
             if (i18 == 0) {
                 byte[] bArr2 = force;
-                i20 = ((bArr2[i20 >>> 24] & 255) | (((bArr2[(i20 >>> 16) & 255] << 24) | ((bArr2[(i20 >>> 8) & 255] & 255) << 16)) | ((bArr2[i20 & 255] & 255) << 8))) ^ f5466v[i19];
+                i20 = ((bArr2[i20 >>> 24] & 255) | (((bArr2[(i20 >>> 16) & 255] << 24) | ((bArr2[(i20 >>> 8) & 255] & 255) << 16)) | ((bArr2[i20 & 255] & 255) << 8))) ^ f5539v[i19];
                 i18 = 4;
                 i19++;
             }
@@ -118,7 +118,7 @@ public final class AFk1xSDK {
         int i23 = i21 - 4;
         while (i22 < i10) {
             int i24 = iArr[i23];
-            int[] iArr3 = f5465d;
+            int[] iArr3 = f5538d;
             byte[] bArr3 = force;
             int i25 = iArr3[bArr3[i24 >>> 24] & 255];
             int[] iArr4 = unregisterClient;

@@ -11,10 +11,10 @@ import androidx.annotation.NonNull;
 public class o extends s {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public n f3281d;
+    public n f3126d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public n f3282e;
+    public n f3127e;
 
     public class a extends l {
         public a(Context context) {
@@ -24,12 +24,12 @@ public class o extends s {
         @Override // androidx.recyclerview.widget.l, androidx.recyclerview.widget.RecyclerView.a0
         public void o(@NonNull View view, @NonNull RecyclerView.b0 b0Var, @NonNull RecyclerView.a0.a aVar) {
             o oVar = o.this;
-            int[] iArrC = oVar.c(oVar.f3289a.getLayoutManager(), view);
+            int[] iArrC = oVar.c(oVar.f3134a.getLayoutManager(), view);
             int i10 = iArrC[0];
             int i11 = iArrC[1];
             int iW = w(Math.max(Math.abs(i10), Math.abs(i11)));
             if (iW > 0) {
-                aVar.d(i10, i11, iW, this.f3271j);
+                aVar.d(i10, i11, iW, this.f3116j);
             }
         }
 
@@ -63,7 +63,7 @@ public class o extends s {
     @Override // androidx.recyclerview.widget.s
     public RecyclerView.a0 d(@NonNull RecyclerView.q qVar) {
         if (qVar instanceof RecyclerView.a0.b) {
-            return new a(this.f3289a.getContext());
+            return new a(this.f3134a.getContext());
         }
         return null;
     }
@@ -152,11 +152,11 @@ public class o extends s {
 
     @NonNull
     public final n m(@NonNull RecyclerView.q qVar) {
-        n nVar = this.f3282e;
-        if (nVar == null || nVar.f3279a != qVar) {
-            this.f3282e = n.a(qVar);
+        n nVar = this.f3127e;
+        if (nVar == null || nVar.f3124a != qVar) {
+            this.f3127e = n.a(qVar);
         }
-        return this.f3282e;
+        return this.f3127e;
     }
 
     public final n n(RecyclerView.q qVar) {
@@ -171,11 +171,11 @@ public class o extends s {
 
     @NonNull
     public final n o(@NonNull RecyclerView.q qVar) {
-        n nVar = this.f3281d;
-        if (nVar == null || nVar.f3279a != qVar) {
-            this.f3281d = n.c(qVar);
+        n nVar = this.f3126d;
+        if (nVar == null || nVar.f3124a != qVar) {
+            this.f3126d = n.c(qVar);
         }
-        return this.f3281d;
+        return this.f3126d;
     }
 
     public final boolean p(RecyclerView.q qVar, int i10, int i11) {

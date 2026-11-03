@@ -18,7 +18,7 @@ public final class AFj1jSDK {
     public /* synthetic */ class AFa1vSDK {
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final /* synthetic */ int[] f5439d;
+        public static final /* synthetic */ int[] f5512d;
 
         static {
             int[] iArr = new int[kotlin.text.a.values().length];
@@ -58,7 +58,7 @@ public final class AFj1jSDK {
                 iArr[kotlin.text.a.FINAL_QUOTE_PUNCTUATION.ordinal()] = 9;
             } catch (NoSuchFieldError unused9) {
             }
-            f5439d = iArr;
+            f5512d = iArr;
         }
     }
 
@@ -86,7 +86,7 @@ public final class AFj1jSDK {
         StringBuilder sb2 = new StringBuilder();
         for (int i10 = 0; i10 < p8.length(); i10++) {
             char cCharAt = p8.charAt(i10);
-            switch (AFa1vSDK.f5439d[CharsKt.b(cCharAt).ordinal()]) {
+            switch (AFa1vSDK.f5512d[CharsKt.b(cCharAt).ordinal()]) {
                 case 3:
                 case 4:
                 case 5:
@@ -123,7 +123,7 @@ public final class AFj1jSDK {
         for (int i10 = 0; i10 < p8.length(); i10++) {
             char cCharAt = p8.charAt(i10);
             if (!CharsKt.c(cCharAt)) {
-                int i11 = AFa1vSDK.f5439d[CharsKt.b(cCharAt).ordinal()];
+                int i11 = AFa1vSDK.f5512d[CharsKt.b(cCharAt).ordinal()];
                 if (i11 != 1 && i11 != 2) {
                     sb2.append(cCharAt);
                 }

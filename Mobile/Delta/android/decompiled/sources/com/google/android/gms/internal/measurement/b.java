@@ -7,27 +7,27 @@ import java.util.Map;
 public final class b {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final he.w f6384d = he.w.x("_syn", "_err", "_el");
+    public static final ie.w f6457d = ie.w.x("_syn", "_err", "_el");
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public String f6385a;
+    public String f6458a;
     public final long b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Map f6386c;
+    public final Map f6459c;
 
     public b(String str, long j10, Map map) {
-        this.f6385a = str;
+        this.f6458a = str;
         this.b = j10;
         HashMap map2 = new HashMap();
-        this.f6386c = map2;
+        this.f6459c = map2;
         if (map != null) {
             map2.putAll(map);
         }
     }
 
     public static Object h(String str, Object obj, Object obj2) {
-        if (f6384d.contains(str) && (obj2 instanceof Double)) {
+        if (f6457d.contains(str) && (obj2 instanceof Double)) {
             return Long.valueOf(Math.round(((Double) obj2).doubleValue()));
         }
         if (str.startsWith("_")) {
@@ -50,24 +50,24 @@ public final class b {
     }
 
     public final String b() {
-        return this.f6385a;
+        return this.f6458a;
     }
 
     public final void c(String str) {
-        this.f6385a = str;
+        this.f6458a = str;
     }
 
     public final void d(String str, Object obj) {
         if (obj == null) {
-            this.f6386c.remove(str);
+            this.f6459c.remove(str);
         } else {
-            Map map = this.f6386c;
+            Map map = this.f6459c;
             map.put(str, h(str, map.get(str), obj));
         }
     }
 
     public final Object e(String str) {
-        Map map = this.f6386c;
+        Map map = this.f6459c;
         if (map.containsKey(str)) {
             return map.get(str);
         }
@@ -82,30 +82,30 @@ public final class b {
             return false;
         }
         b bVar = (b) obj;
-        if (this.b == bVar.b && this.f6385a.equals(bVar.f6385a)) {
-            return this.f6386c.equals(bVar.f6386c);
+        if (this.b == bVar.b && this.f6458a.equals(bVar.f6458a)) {
+            return this.f6459c.equals(bVar.f6459c);
         }
         return false;
     }
 
     public final Map f() {
-        return this.f6386c;
+        return this.f6459c;
     }
 
     /* JADX INFO: renamed from: g, reason: merged with bridge method [inline-methods] */
     public final b clone() {
-        return new b(this.f6385a, this.b, new HashMap(this.f6386c));
+        return new b(this.f6458a, this.b, new HashMap(this.f6459c));
     }
 
     public final int hashCode() {
-        int iHashCode = this.f6385a.hashCode() * 31;
+        int iHashCode = this.f6458a.hashCode() * 31;
         long j10 = this.b;
-        return ((iHashCode + ((int) (j10 ^ (j10 >>> 32)))) * 31) + this.f6386c.hashCode();
+        return ((iHashCode + ((int) (j10 ^ (j10 >>> 32)))) * 31) + this.f6459c.hashCode();
     }
 
     public final String toString() {
-        String str = this.f6385a;
-        String string = this.f6386c.toString();
+        String str = this.f6458a;
+        String string = this.f6459c.toString();
         int length = String.valueOf(str).length();
         long j10 = this.b;
         StringBuilder sb2 = new StringBuilder(length + 25 + String.valueOf(j10).length() + 9 + string.length() + 1);

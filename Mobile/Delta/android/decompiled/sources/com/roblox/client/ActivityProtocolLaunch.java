@@ -9,15 +9,15 @@ import com.roblox.client.startup.StartedForEnum;
 import com.roblox.protocols.externalidentity.ExternalIdentityHandler;
 import com.roblox.universalapp.linking.JNIBaseUrlProtocol;
 import com.roblox.universalapp.linking.JNIWebLoginProtocol;
-import gk.p;
-import km.f;
-import sg.y;
-import th.h;
+import ek.q;
+import im.f;
+import rg.y;
+import rh.h;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class ActivityProtocolLaunch extends a {
     public static boolean j2(String str) {
-        for (String str2 : h.a().g2().split(",")) {
+        for (String str2 : h.a().s2().split(",")) {
             if (str.startsWith(str2)) {
                 return true;
             }
@@ -42,43 +42,48 @@ public class ActivityProtocolLaunch extends a {
         super.onCreate(bundle);
         Intent intent = getIntent();
         Uri data = intent.getData();
-        if (h.a().W0() && data != null && "AndroidSearch".equals(data.getQueryParameter("joinAttemptOrigin"))) {
+        if (h.a().d1() && data != null && "AndroidSearch".equals(data.getQueryParameter("joinAttemptOrigin"))) {
             com.roblox.client.ossearch.a.c(data.toString());
         }
         boolean zM = com.roblox.client.startup.a.m();
         String dataString = intent.getDataString();
-        f.v().q(dataString, zM ? "android_warm_intent" : "android_cold_intent", false);
-        if (zM && h.a().I1() && i2(dataString) && ExternalIdentityHandler.onAppleRedirectReceived(dataString)) {
+        String str = zM ? "android_warm_intent" : "android_cold_intent";
+        if (h.a().g1()) {
+            f.F().h(dataString, str, false);
+        } else {
+            f.F().f(dataString, str, false);
+        }
+        if (zM && h.a().S1() && i2(dataString) && ExternalIdentityHandler.onAppleRedirectReceived(dataString)) {
             ExternalIdentityHandler.bringHostToFront(this);
             finish();
             return;
         }
-        if (h.a().G1()) {
-            p.h("rbx.externallaunch", "GameActivity = ON. Start new GameActivity to handle intent...");
-            f.v().s(intent);
+        if (h.a().Q1()) {
+            q.h("rbx.externallaunch", "GameActivity = ON. Start new GameActivity to handle intent...");
+            f.F().C(intent);
             if (!zM) {
                 y.h().d().h(intent);
             }
-            startActivity(MainGameActivity.g2(this, StartedForEnum.PROTOCOL_LAUNCH));
+            startActivity(MainGameActivity.h2(this, StartedForEnum.PROTOCOL_LAUNCH));
             finish();
             return;
         }
         if (zM) {
-            p.h("rbx.externallaunch", "onCreate() activity on existing stack - checking to launch data");
+            q.h("rbx.externallaunch", "onCreate() activity on existing stack - checking to launch data");
             k2();
-            f.v().e(dataString);
-            if (!h.a().k4() && (!h.a().s2() || !j2(dataString))) {
+            f.F().k(dataString);
+            if (!h.a().v4() && (!h.a().D2() || !j2(dataString))) {
                 y.h().f().g(true);
             }
         } else {
-            p.h("rbx.externallaunch", "onCreate() activity is root - starting splash (regular start-up flow)");
+            q.h("rbx.externallaunch", "onCreate() activity is root - starting splash (regular start-up flow)");
             if (JNIBaseUrlProtocol.maybeHandleColdStartProtocolLaunch(dataString)) {
-                p.b("rbx.externallaunch", "Base URL is switched for cold launch, cancel flag fetching for prefetch() and restart it.");
+                q.b("rbx.externallaunch", "Base URL is switched for cold launch, cancel flag fetching for prefetch() and restart it.");
                 com.roblox.client.startup.a.z(getApplicationContext());
             }
             JNIWebLoginProtocol.maybeHandleColdStartProtocolLaunch(dataString);
             startActivity(ActivitySplash.o2(this, StartedForEnum.PROTOCOL_LAUNCH));
-            f.v().s(intent);
+            f.F().C(intent);
             y.h().d().h(intent);
         }
         finish();

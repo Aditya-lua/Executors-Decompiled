@@ -12,23 +12,23 @@ import java.util.Map;
 public final class n9 implements t8 {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final Map f6684f = new w1.a();
+    public static final Map f6757f = new w1.a();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final SharedPreferences f6685a;
+    public final SharedPreferences f6758a;
     public SharedPreferences.OnSharedPreferenceChangeListener b;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public volatile Map f6687d;
+    public volatile Map f6760d;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Object f6686c = new Object();
+    public final Object f6759c = new Object();
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final List f6688e = new ArrayList();
+    public final List f6761e = new ArrayList();
 
     public n9(SharedPreferences sharedPreferences, Runnable runnable) {
-        this.f6685a = sharedPreferences;
+        this.f6758a = sharedPreferences;
     }
 
     public static n9 c(Context context, String str, Runnable runnable) {
@@ -38,7 +38,7 @@ public final class n9 implements t8 {
             return null;
         }
         synchronized (n9.class) {
-            Map map = f6684f;
+            Map map = f6757f;
             n9Var = (n9) map.get(str);
             if (n9Var == null) {
                 StrictMode.ThreadPolicy threadPolicyAllowThreadDiskReads = StrictMode.allowThreadDiskReads();
@@ -47,20 +47,20 @@ public final class n9 implements t8 {
                         if (k8.a()) {
                             context = context.createDeviceProtectedStorageContext();
                         }
-                        sharedPreferencesA = j1.a(context, str.substring(12), 0, f1.f6437a);
+                        sharedPreferencesA = j1.a(context, str.substring(12), 0, f1.f6510a);
                     } else {
-                        sharedPreferencesA = j1.a(context, str, 0, f1.f6437a);
+                        sharedPreferencesA = j1.a(context, str, 0, f1.f6510a);
                     }
                     StrictMode.setThreadPolicy(threadPolicyAllowThreadDiskReads);
                     n9Var = new n9(sharedPreferencesA, runnable);
                     SharedPreferences.OnSharedPreferenceChangeListener onSharedPreferenceChangeListener = new SharedPreferences.OnSharedPreferenceChangeListener() { // from class: com.google.android.gms.internal.measurement.m9
                         @Override // android.content.SharedPreferences.OnSharedPreferenceChangeListener
                         public final /* synthetic */ void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String str2) {
-                            this.f6623a.e(sharedPreferences, str2);
+                            this.f6696a.e(sharedPreferences, str2);
                         }
                     };
                     n9Var.b = onSharedPreferenceChangeListener;
-                    n9Var.f6685a.registerOnSharedPreferenceChangeListener(onSharedPreferenceChangeListener);
+                    n9Var.f6758a.registerOnSharedPreferenceChangeListener(onSharedPreferenceChangeListener);
                     map.put(str, n9Var);
                 } catch (Throwable th2) {
                     StrictMode.setThreadPolicy(threadPolicyAllowThreadDiskReads);
@@ -73,9 +73,9 @@ public final class n9 implements t8 {
 
     public static synchronized void d() {
         try {
-            Map map = f6684f;
+            Map map = f6757f;
             for (n9 n9Var : map.values()) {
-                n9Var.f6685a.unregisterOnSharedPreferenceChangeListener((SharedPreferences.OnSharedPreferenceChangeListener) ge.n.l(n9Var.b));
+                n9Var.f6758a.unregisterOnSharedPreferenceChangeListener((SharedPreferences.OnSharedPreferenceChangeListener) he.n.l(n9Var.b));
             }
             map.clear();
         } catch (Throwable th2) {
@@ -85,16 +85,16 @@ public final class n9 implements t8 {
 
     @Override // com.google.android.gms.internal.measurement.t8
     public final Object b(String str) {
-        Map<String, ?> map = this.f6687d;
+        Map<String, ?> map = this.f6760d;
         if (map == null) {
-            synchronized (this.f6686c) {
+            synchronized (this.f6759c) {
                 try {
-                    map = this.f6687d;
+                    map = this.f6760d;
                     if (map == null) {
                         StrictMode.ThreadPolicy threadPolicyAllowThreadDiskReads = StrictMode.allowThreadDiskReads();
                         try {
-                            Map<String, ?> all = this.f6685a.getAll();
-                            this.f6687d = all;
+                            Map<String, ?> all = this.f6758a.getAll();
+                            this.f6760d = all;
                             StrictMode.setThreadPolicy(threadPolicyAllowThreadDiskReads);
                             map = all;
                         } catch (Throwable th2) {
@@ -114,13 +114,13 @@ public final class n9 implements t8 {
     }
 
     public final /* synthetic */ void e(SharedPreferences sharedPreferences, String str) {
-        synchronized (this.f6686c) {
-            this.f6687d = null;
+        synchronized (this.f6759c) {
+            this.f6760d = null;
             l9.c();
         }
         synchronized (this) {
             try {
-                Iterator it = this.f6688e.iterator();
+                Iterator it = this.f6761e.iterator();
                 while (it.hasNext()) {
                     ((q8) it.next()).zza();
                 }

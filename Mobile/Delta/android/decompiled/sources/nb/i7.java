@@ -7,11 +7,11 @@ import java.util.Objects;
 public final class i7 implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ zzr f25597a;
+    public final /* synthetic */ zzr f26418a;
     public final /* synthetic */ i8 b;
 
     public i7(i8 i8Var, zzr zzrVar) {
-        this.f25597a = zzrVar;
+        this.f26418a = zzrVar;
         Objects.requireNonNull(i8Var);
         this.b = i8Var;
     }
@@ -20,6 +20,6 @@ public final class i7 implements Runnable {
     public final void run() {
         i8 i8Var = this.b;
         i8Var.z2().E();
-        i8Var.z2().h0(this.f25597a);
+        i8Var.z2().h0(this.f26418a);
     }
 }

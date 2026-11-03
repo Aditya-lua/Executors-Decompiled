@@ -4,10 +4,10 @@ package com.google.android.gms.internal.measurement;
 public final class u5 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final hc f6825a;
+    public static final hc f6899a;
 
     static {
-        wd wdVar = wd.f6879k;
-        f6825a = hc.a(wdVar, "", wdVar, "");
+        wd wdVar = wd.f6953k;
+        f6899a = hc.a(wdVar, "", wdVar, "");
     }
 }

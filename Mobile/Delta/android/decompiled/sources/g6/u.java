@@ -15,7 +15,7 @@ public final class u {
     public static final /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f17931a;
+        public static final /* synthetic */ int[] f18470a;
 
         static {
             int[] iArr = new int[x5.x.values().length];
@@ -31,7 +31,7 @@ public final class u {
                 iArr[x5.x.NOT_ROAMING.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
-            f17931a = iArr;
+            f18470a = iArr;
         }
     }
 
@@ -45,7 +45,7 @@ public final class u {
         if (Build.VERSION.SDK_INT >= 30 && xVar == x5.x.TEMPORARILY_UNMETERED) {
             return builderRemoveCapability.addCapability(25).build();
         }
-        int i10 = a.f17931a[xVar.ordinal()];
+        int i10 = a.f18470a[xVar.ordinal()];
         if (i10 == 1) {
             builderRemoveCapability = builderRemoveCapability.addTransportType(0);
         } else if (i10 == 2) {

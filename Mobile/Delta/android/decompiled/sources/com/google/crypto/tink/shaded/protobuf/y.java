@@ -19,22 +19,22 @@ public abstract class y<MessageType extends y<MessageType, BuilderType>, Builder
     private int memoizedSerializedSize = -1;
     protected o1 unknownFields = o1.c();
 
-    public static abstract class a<MessageType extends y<MessageType, BuilderType>, BuilderType extends a<MessageType, BuilderType>> extends com.google.crypto.tink.shaded.protobuf.a.AbstractC0126a<MessageType, BuilderType> {
+    public static abstract class a<MessageType extends y<MessageType, BuilderType>, BuilderType extends a<MessageType, BuilderType>> extends com.google.crypto.tink.shaded.protobuf.a.AbstractC0130a<MessageType, BuilderType> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final MessageType f8653a;
+        public final MessageType f8727a;
         public MessageType b;
 
         public a(MessageType messagetype) {
-            this.f8653a = messagetype;
+            this.f8727a = messagetype;
             if (messagetype.J()) {
                 throw new IllegalArgumentException("Default instance must be immutable.");
             }
-            this.b = (MessageType) A();
+            this.b = (MessageType) B();
         }
 
-        private MessageType A() {
-            return (MessageType) this.f8653a.P();
+        private MessageType B() {
+            return (MessageType) this.f8727a.P();
         }
 
         public static <MessageType> void z(MessageType messagetype, MessageType messagetype2) {
@@ -53,7 +53,7 @@ public abstract class y<MessageType extends y<MessageType, BuilderType>, Builder
             if (messagetype.isInitialized()) {
                 return messagetype;
             }
-            throw com.google.crypto.tink.shaded.protobuf.a.AbstractC0126a.n(messagetype);
+            throw com.google.crypto.tink.shaded.protobuf.a.AbstractC0130a.n(messagetype);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.s0.a
@@ -82,7 +82,7 @@ public abstract class y<MessageType extends y<MessageType, BuilderType>, Builder
         }
 
         public void s() {
-            MessageType messagetype = (MessageType) A();
+            MessageType messagetype = (MessageType) B();
             z(messagetype, this.b);
             this.b = messagetype;
         }
@@ -90,13 +90,13 @@ public abstract class y<MessageType extends y<MessageType, BuilderType>, Builder
         @Override // com.google.crypto.tink.shaded.protobuf.t0
         /* JADX INFO: renamed from: t, reason: merged with bridge method [inline-methods] */
         public MessageType f() {
-            return this.f8653a;
+            return this.f8727a;
         }
 
-        @Override // com.google.crypto.tink.shaded.protobuf.a.AbstractC0126a
+        @Override // com.google.crypto.tink.shaded.protobuf.a.AbstractC0130a
         /* JADX INFO: renamed from: v, reason: merged with bridge method [inline-methods] */
         public BuilderType j(MessageType messagetype) {
-            return (BuilderType) x(messagetype);
+            return (BuilderType) y(messagetype);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.s0.a
@@ -114,7 +114,7 @@ public abstract class y<MessageType extends y<MessageType, BuilderType>, Builder
             }
         }
 
-        public BuilderType x(MessageType messagetype) {
+        public BuilderType y(MessageType messagetype) {
             if (f().equals(messagetype)) {
                 return this;
             }
@@ -167,17 +167,17 @@ public abstract class y<MessageType extends y<MessageType, BuilderType>, Builder
     public static final class d implements u.b<d> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final a0.d<?> f8654a;
+        public final a0.d<?> f8728a;
         public final int b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final s1.b f8655c;
+        public final s1.b f8729c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final boolean f8656d;
+        public final boolean f8730d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final boolean f8657e;
+        public final boolean f8731e;
 
         @Override // java.lang.Comparable
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
@@ -186,17 +186,17 @@ public abstract class y<MessageType extends y<MessageType, BuilderType>, Builder
         }
 
         public a0.d<?> b() {
-            return this.f8654a;
+            return this.f8728a;
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.u.b
         public boolean f() {
-            return this.f8656d;
+            return this.f8730d;
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.u.b
         public s1.b g() {
-            return this.f8655c;
+            return this.f8729c;
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.u.b
@@ -207,24 +207,24 @@ public abstract class y<MessageType extends y<MessageType, BuilderType>, Builder
         /* JADX WARN: Multi-variable type inference failed */
         @Override // com.google.crypto.tink.shaded.protobuf.u.b
         public s0.a i(s0.a aVar, s0 s0Var) {
-            return ((a) aVar).x((y) s0Var);
+            return ((a) aVar).y((y) s0Var);
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.u.b
         public s1.c k() {
-            return this.f8655c.a();
+            return this.f8729c.a();
         }
 
         @Override // com.google.crypto.tink.shaded.protobuf.u.b
         public boolean m() {
-            return this.f8657e;
+            return this.f8731e;
         }
     }
 
     public static class e<ContainingType extends s0, Type> extends n<ContainingType, Type> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final s0 f8658a;
+        public final s0 f8732a;
         public final d b;
 
         public s1.b a() {
@@ -232,7 +232,7 @@ public abstract class y<MessageType extends y<MessageType, BuilderType>, Builder
         }
 
         public s0 b() {
-            return this.f8658a;
+            return this.f8732a;
         }
 
         public int c() {
@@ -240,7 +240,7 @@ public abstract class y<MessageType extends y<MessageType, BuilderType>, Builder
         }
 
         public boolean d() {
-            return this.b.f8656d;
+            return this.b.f8730d;
         }
     }
 
@@ -455,7 +455,7 @@ public abstract class y<MessageType extends y<MessageType, BuilderType>, Builder
     @Override // com.google.crypto.tink.shaded.protobuf.s0
     /* JADX INFO: renamed from: Y, reason: merged with bridge method [inline-methods] */
     public final BuilderType a() {
-        return (BuilderType) ((a) x(f.NEW_BUILDER)).x(this);
+        return (BuilderType) ((a) x(f.NEW_BUILDER)).y(this);
     }
 
     @Override // com.google.crypto.tink.shaded.protobuf.s0
@@ -558,7 +558,7 @@ public abstract class y<MessageType extends y<MessageType, BuilderType>, Builder
     }
 
     public final <MessageType extends y<MessageType, BuilderType>, BuilderType extends a<MessageType, BuilderType>> BuilderType w(MessageType messagetype) {
-        return (BuilderType) v().x(messagetype);
+        return (BuilderType) v().y(messagetype);
     }
 
     public Object x(f fVar) {

@@ -27,7 +27,7 @@ import dalvik.system.BaseDexClassLoader;
 import java.io.File;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class GameActivity extends j.b implements SurfaceHolder.Callback2, fe.a, y, ViewTreeObserver.OnGlobalLayoutListener {
+public class GameActivity extends j.b implements SurfaceHolder.Callback2, ge.a, y, ViewTreeObserver.OnGlobalLayoutListener {
     public static GameActivity O;
     public static long P;
     public int E;
@@ -74,32 +74,32 @@ public class GameActivity extends j.b implements SurfaceHolder.Callback2, fe.a, 
     public class d extends SurfaceView {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public InputConnection f8385a;
+        public InputConnection f8459a;
 
         public d(GameActivity gameActivity) {
             super(gameActivity);
             EditorInfo editorInfoG1 = gameActivity.G1();
-            this.f8385a = new InputConnection(gameActivity, this, new fe.b(editorInfoG1, editorInfoG1.inputType == 0)).setListener(gameActivity);
+            this.f8459a = new InputConnection(gameActivity, this, new ge.b(editorInfoG1, editorInfoG1.inputType == 0)).setListener(gameActivity);
         }
 
         @Override // android.view.View
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public InputConnection onCreateInputConnection(EditorInfo editorInfo) {
-            if (!this.f8385a.getSoftKeyboardActive()) {
+            if (!this.f8459a.getSoftKeyboardActive()) {
                 return null;
             }
             if (editorInfo != null) {
-                com.google.androidgamesdk.gametextinput.a.a(this.f8385a.getEditorInfo(), editorInfo);
+                com.google.androidgamesdk.gametextinput.a.a(this.f8459a.getEditorInfo(), editorInfo);
             }
-            return this.f8385a;
+            return this.f8459a;
         }
 
         public EditorInfo getEditorInfo() {
-            return this.f8385a.getEditorInfo();
+            return this.f8459a.getEditorInfo();
         }
 
         public void setEditorInfo(EditorInfo editorInfo) {
-            this.f8385a.setEditorInfo(editorInfo);
+            this.f8459a.setEditorInfo(editorInfo);
         }
     }
 
@@ -110,8 +110,8 @@ public class GameActivity extends j.b implements SurfaceHolder.Callback2, fe.a, 
         return null;
     }
 
-    @Override // fe.a
-    public void B(State state, boolean z10) {
+    @Override // ge.a
+    public void A(State state, boolean z10) {
         if (H1()) {
             return;
         }
@@ -120,6 +120,14 @@ public class GameActivity extends j.b implements SurfaceHolder.Callback2, fe.a, 
 
     public d E1() {
         return new d(this);
+    }
+
+    @Override // ge.a
+    public void G(int i10) {
+        if (H1()) {
+            return;
+        }
+        onEditorActionNative(P, i10);
     }
 
     public EditorInfo G1() {
@@ -133,14 +141,6 @@ public class GameActivity extends j.b implements SurfaceHolder.Callback2, fe.a, 
         return this.F;
     }
 
-    @Override // fe.a
-    public void H(int i10) {
-        if (H1()) {
-            return;
-        }
-        onEditorActionNative(P, i10);
-    }
-
     public final boolean H1() {
         return O != this;
     }
@@ -150,6 +150,22 @@ public class GameActivity extends j.b implements SurfaceHolder.Callback2, fe.a, 
             return false;
         }
         return windowInsetsCompat.isVisible(WindowInsetsCompat.Type.ime());
+    }
+
+    @Override // androidx.core.view.y
+    public WindowInsetsCompat J(View view, WindowInsetsCompat windowInsetsCompat) {
+        if (H1()) {
+            return windowInsetsCompat;
+        }
+        K1(windowInsetsCompat.getInsets(WindowInsetsCompat.Type.ime()));
+        boolean zI1 = I1(windowInsetsCompat);
+        if (zI1 != this.G) {
+            this.G = zI1;
+            M1(zI1);
+        }
+        onWindowInsetsChangedNative(P);
+        view.onApplyWindowInsets(windowInsetsCompat.toWindowInsets());
+        return windowInsetsCompat;
     }
 
     public void J1() {
@@ -166,22 +182,6 @@ public class GameActivity extends j.b implements SurfaceHolder.Callback2, fe.a, 
         setContentView(frameLayout);
         this.H.getHolder().addCallback(this);
         o0.A0(this.H, this);
-    }
-
-    @Override // androidx.core.view.y
-    public WindowInsetsCompat K(View view, WindowInsetsCompat windowInsetsCompat) {
-        if (H1()) {
-            return windowInsetsCompat;
-        }
-        K1(windowInsetsCompat.getInsets(WindowInsetsCompat.Type.ime()));
-        boolean zI1 = I1(windowInsetsCompat);
-        if (zI1 != this.G) {
-            this.G = zI1;
-            M1(zI1);
-        }
-        onWindowInsetsChangedNative(P);
-        view.onApplyWindowInsets(windowInsetsCompat.toWindowInsets());
-        return windowInsetsCompat;
     }
 
     public void K1(Insets insets) {
@@ -299,7 +299,7 @@ public class GameActivity extends j.b implements SurfaceHolder.Callback2, fe.a, 
             }
             d dVar2 = this.H;
             if (dVar2 != null) {
-                setInputConnectionNative(jInitializeNativeCode, dVar2.f8385a);
+                setInputConnectionNative(jInitializeNativeCode, dVar2.f8459a);
                 this.H.setOnCapturedPointerListener(new a());
                 this.H.setOnGenericMotionListener(new b());
                 this.H.setOnTouchListener(new c());
@@ -477,7 +477,7 @@ public class GameActivity extends j.b implements SurfaceHolder.Callback2, fe.a, 
     @Keep
     public void setImeEditorInfo(EditorInfo editorInfo) {
         this.F = editorInfo;
-        this.H.f8385a.setEditorInfo(editorInfo);
+        this.H.f8459a.setEditorInfo(editorInfo);
     }
 
     @Keep
@@ -486,7 +486,7 @@ public class GameActivity extends j.b implements SurfaceHolder.Callback2, fe.a, 
         editorInfoG1.inputType = i10;
         editorInfoG1.actionId = i11;
         editorInfoG1.imeOptions = i12;
-        this.H.f8385a.setEditorInfo(editorInfoG1);
+        this.H.f8459a.setEditorInfo(editorInfoG1);
     }
 
     public native void setInputConnectionNative(long j10, InputConnection inputConnection);

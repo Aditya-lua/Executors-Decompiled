@@ -9,21 +9,21 @@ import java.util.Locale;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class m3 implements Iterable<Byte>, Serializable {
-    public static final m3 b = new j3(s3.f15392d);
+    public static final m3 b = new j3(s3.f16006d);
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final Comparator f15305c;
+    public static final Comparator f15919c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final l3 f15306d;
+    public static final l3 f15920d;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f15307a = 0;
+    public int f15921a = 0;
 
     static {
-        int i10 = c3.f15255a;
-        f15306d = new l3(null);
-        f15305c = new e3();
+        int i10 = c3.f15869a;
+        f15920d = new l3(null);
+        f15919c = new e3();
     }
 
     public static int k(int i10, int i11, int i12) {
@@ -64,14 +64,14 @@ public abstract class m3 implements Iterable<Byte>, Serializable {
     public abstract InputStream h();
 
     public final int hashCode() {
-        int iF = this.f15307a;
+        int iF = this.f15921a;
         if (iF == 0) {
             int iD = d();
             iF = f(iD, 0, iD);
             if (iF == 0) {
                 iF = 1;
             }
-            this.f15307a = iF;
+            this.f15921a = iF;
         }
         return iF;
     }
@@ -84,13 +84,13 @@ public abstract class m3 implements Iterable<Byte>, Serializable {
     }
 
     public final int l() {
-        return this.f15307a;
+        return this.f15921a;
     }
 
     public final byte[] p() {
         int iD = d();
         if (iD == 0) {
-            return s3.f15392d;
+            return s3.f16006d;
         }
         byte[] bArr = new byte[iD];
         e(bArr, 0, 0, iD);

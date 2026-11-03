@@ -7,11 +7,11 @@ import java.util.Comparator;
 public final class b0 implements Comparator {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ k f6387a;
+    public final /* synthetic */ k f6460a;
     public final /* synthetic */ u4 b;
 
     public b0(k kVar, u4 u4Var) {
-        this.f6387a = kVar;
+        this.f6460a = kVar;
         this.b = u4Var;
     }
 
@@ -25,7 +25,7 @@ public final class b0 implements Comparator {
         if (qVar2 instanceof v) {
             return -1;
         }
-        k kVar = this.f6387a;
+        k kVar = this.f6460a;
         return kVar == null ? qVar.zzc().compareTo(qVar2.zzc()) : (int) v5.i(kVar.h(this.b, Arrays.asList(qVar, qVar2)).zzd().doubleValue());
     }
 }

@@ -1,7 +1,7 @@
 package com.google.android.renderscript;
 
 import android.graphics.Bitmap;
-import ee.a;
+import fe.a;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
@@ -13,14 +13,14 @@ public final class Toolkit {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final Toolkit f8381a;
+    public static final Toolkit f8455a;
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     public static long nativeHandle;
 
     static {
         Toolkit toolkit = new Toolkit();
-        f8381a = toolkit;
+        f8455a = toolkit;
         try {
             System.loadLibrary("renderscript-toolkit");
             nativeHandle = toolkit.createNative();

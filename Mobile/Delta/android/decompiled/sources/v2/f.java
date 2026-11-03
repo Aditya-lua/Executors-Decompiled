@@ -20,48 +20,48 @@ import w1.j;
 public class f {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final i<String, Typeface> f32711a = new i<>(16);
+    public static final i<String, Typeface> f33279a = new i<>(16);
     public static final ExecutorService b = h.a("fonts-androidx", 10, BacktraceMetrics.defaultTimeBetweenRetriesMs);
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final Object f32712c = new Object();
+    public static final Object f33280c = new Object();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final j<String, ArrayList<x2.a<e>>> f32713d = new j<>();
+    public static final j<String, ArrayList<x2.a<e>>> f33281d = new j<>();
 
     public class a implements Callable<e> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ String f32714a;
+        public final /* synthetic */ String f33282a;
         public final /* synthetic */ Context b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ v2.e f32715c;
+        public final /* synthetic */ v2.e f33283c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final /* synthetic */ int f32716d;
+        public final /* synthetic */ int f33284d;
 
         public a(String str, Context context, v2.e eVar, int i10) {
-            this.f32714a = str;
+            this.f33282a = str;
             this.b = context;
-            this.f32715c = eVar;
-            this.f32716d = i10;
+            this.f33283c = eVar;
+            this.f33284d = i10;
         }
 
         @Override // java.util.concurrent.Callable
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public e call() {
-            return f.c(this.f32714a, this.b, o0.a(new Object[]{this.f32715c}), this.f32716d);
+            return f.c(this.f33282a, this.b, o0.a(new Object[]{this.f33283c}), this.f33284d);
         }
     }
 
     public class b implements x2.a<e> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ v2.a f32717a;
+        public final /* synthetic */ v2.a f33285a;
 
         public b(v2.a aVar) {
-            this.f32717a = aVar;
+            this.f33285a = aVar;
         }
 
         @Override // x2.a
@@ -70,34 +70,34 @@ public class f {
             if (eVar == null) {
                 eVar = new e(-3);
             }
-            this.f32717a.b(eVar);
+            this.f33285a.b(eVar);
         }
     }
 
     public class c implements Callable<e> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ String f32718a;
+        public final /* synthetic */ String f33286a;
         public final /* synthetic */ Context b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ List f32719c;
+        public final /* synthetic */ List f33287c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final /* synthetic */ int f32720d;
+        public final /* synthetic */ int f33288d;
 
         public c(String str, Context context, List list, int i10) {
-            this.f32718a = str;
+            this.f33286a = str;
             this.b = context;
-            this.f32719c = list;
-            this.f32720d = i10;
+            this.f33287c = list;
+            this.f33288d = i10;
         }
 
         @Override // java.util.concurrent.Callable
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public e call() {
             try {
-                return f.c(this.f32718a, this.b, this.f32719c, this.f32720d);
+                return f.c(this.f33286a, this.b, this.f33287c, this.f33288d);
             } catch (Throwable unused) {
                 return new e(-3);
             }
@@ -107,23 +107,23 @@ public class f {
     public class d implements x2.a<e> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ String f32721a;
+        public final /* synthetic */ String f33289a;
 
         public d(String str) {
-            this.f32721a = str;
+            this.f33289a = str;
         }
 
         @Override // x2.a
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public void accept(e eVar) {
-            synchronized (f.f32712c) {
+            synchronized (f.f33280c) {
                 try {
-                    j<String, ArrayList<x2.a<e>>> jVar = f.f32713d;
-                    ArrayList<x2.a<e>> arrayList = jVar.get(this.f32721a);
+                    j<String, ArrayList<x2.a<e>>> jVar = f.f33281d;
+                    ArrayList<x2.a<e>> arrayList = jVar.get(this.f33289a);
                     if (arrayList == null) {
                         return;
                     }
-                    jVar.remove(this.f32721a);
+                    jVar.remove(this.f33289a);
                     for (int i10 = 0; i10 < arrayList.size(); i10++) {
                         arrayList.get(i10).accept(eVar);
                     }
@@ -172,7 +172,7 @@ public class f {
     public static e c(String str, Context context, List<v2.e> list, int i10) {
         n5.a.c("getFontSync");
         try {
-            i<String, Typeface> iVar = f32711a;
+            i<String, Typeface> iVar = f33279a;
             Typeface typefaceD = iVar.d(str);
             if (typefaceD != null) {
                 e eVar = new e(typefaceD);
@@ -210,15 +210,15 @@ public class f {
 
     public static Typeface d(Context context, List<v2.e> list, int i10, Executor executor, v2.a aVar) {
         String strA = a(list, i10);
-        Typeface typefaceD = f32711a.d(strA);
+        Typeface typefaceD = f33279a.d(strA);
         if (typefaceD != null) {
             aVar.b(new e(typefaceD));
             return typefaceD;
         }
         b bVar = new b(aVar);
-        synchronized (f32712c) {
+        synchronized (f33280c) {
             try {
-                j<String, ArrayList<x2.a<e>>> jVar = f32713d;
+                j<String, ArrayList<x2.a<e>>> jVar = f33281d;
                 ArrayList<x2.a<e>> arrayList = jVar.get(strA);
                 if (arrayList != null) {
                     arrayList.add(bVar);
@@ -241,7 +241,7 @@ public class f {
 
     public static Typeface e(Context context, v2.e eVar, v2.a aVar, int i10, int i11) {
         String strA = a(o0.a(new Object[]{eVar}), i10);
-        Typeface typefaceD = f32711a.d(strA);
+        Typeface typefaceD = f33279a.d(strA);
         if (typefaceD != null) {
             aVar.b(new e(typefaceD));
             return typefaceD;
@@ -249,12 +249,12 @@ public class f {
         if (i11 == -1) {
             e eVarC = c(strA, context, o0.a(new Object[]{eVar}), i10);
             aVar.b(eVarC);
-            return eVarC.f32722a;
+            return eVarC.f33290a;
         }
         try {
             e eVar2 = (e) h.d(b, new a(strA, context, eVar, i10), i11);
             aVar.b(eVar2);
-            return eVar2.f32722a;
+            return eVar2.f33290a;
         } catch (InterruptedException unused) {
             aVar.b(new e(-3));
             return null;
@@ -264,11 +264,11 @@ public class f {
     public static final class e {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Typeface f32722a;
+        public final Typeface f33290a;
         public final int b;
 
         public e(int i10) {
-            this.f32722a = null;
+            this.f33290a = null;
             this.b = i10;
         }
 
@@ -279,7 +279,7 @@ public class f {
 
         @SuppressLint({"WrongConstant"})
         public e(Typeface typeface) {
-            this.f32722a = typeface;
+            this.f33290a = typeface;
             this.b = 0;
         }
     }

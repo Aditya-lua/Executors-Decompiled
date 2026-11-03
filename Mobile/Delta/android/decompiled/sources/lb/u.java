@@ -11,7 +11,7 @@ public final class u implements Parcelable.Creator<LocationResult> {
     @Override // android.os.Parcelable.Creator
     public final /* bridge */ /* synthetic */ LocationResult createFromParcel(Parcel parcel) {
         int iD = o9.a.D(parcel);
-        List<Location> listL = LocationResult.f7380g;
+        List<Location> listL = LocationResult.f7454g;
         while (parcel.dataPosition() < iD) {
             int iU = o9.a.u(parcel);
             if (o9.a.n(iU) != 1) {

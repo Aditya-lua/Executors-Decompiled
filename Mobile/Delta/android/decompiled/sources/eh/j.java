@@ -1,37 +1,16 @@
 package eh;
 
-import android.view.MotionEvent;
-import gk.p;
+import android.app.Activity;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import org.jetbrains.annotations.NotNull;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class j {
-    public static int b = 0;
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static int f15559c = 1;
-
-    /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static int f15560d = 2;
-
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public int f15561a = b;
-
-    public void a(int i10) {
-        this.f15561a = i10;
-    }
-
-    public boolean b(MotionEvent motionEvent) {
-        int i10 = this.f15561a;
-        if (i10 > b) {
-            if (i10 == f15559c && (motionEvent.getFlags() & 1) == 1) {
-                p.b("rbx.input", "WINDOW_IS_OBSCURED");
-                return false;
-            }
-            if (this.f15561a == f15560d && (motionEvent.getFlags() & 2) == 2) {
-                p.b("rbx.input", "WINDOW_IS_PARTIALLY_OBSCURED");
-                return false;
-            }
-        }
-        return true;
+@Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u001a\u0011\u0010\u0002\u001a\u00020\u0001*\u00020\u0000¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"Landroid/app/Activity;", "Leh/i;", "a", "(Landroid/app/Activity;)Leh/i;", "NativeShell_googleProdRelease"}, k = 2, mv = {2, 2, 0}, xi = 48)
+public final class j {
+    @NotNull
+    public static final i a(@NotNull Activity activity) {
+        Intrinsics.checkNotNullParameter(activity, "<this>");
+        return c.c(activity);
     }
 }

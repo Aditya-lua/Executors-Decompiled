@@ -12,13 +12,13 @@ import com.withpersona.sdk2.inquiry.network.dto.ui.styling.StepStyles;
 import com.withpersona.sdk2.inquiry.network.dto.ui.styling.TextBasedComponentStyle;
 import com.withpersona.sdk2.inquiry.shared.ui.ThemeableLottieAnimationView;
 import f7.p0;
+import gt.l;
+import hq.k0;
+import hr.h0;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
-import jq.k0;
-import jr.h0;
-import jt.l;
 import k6.s;
 import kotlin.Metadata;
 import kotlin.Unit;
@@ -33,13 +33,13 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import ut.k;
+import st.k;
 import x6.ImageRequest;
-import zn.o2;
-import zn.p2;
+import xn.o2;
+import xn.p2;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000t\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\t\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0001GB/\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\f\u0010\t\u001a\b\u0012\u0004\u0012\u00020\b0\u0007\u0012\b\u0010\u000b\u001a\u0004\u0018\u00010\n¢\u0006\u0004\b\f\u0010\rJ\u0017\u0010\u0010\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\u000eH\u0016¢\u0006\u0004\b\u0010\u0010\u0011J\u001f\u0010\u0015\u001a\u00020\u00022\u0006\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0014\u001a\u00020\u000eH\u0016¢\u0006\u0004\b\u0015\u0010\u0016J\u001f\u0010\u0018\u001a\u00020\b2\u0006\u0010\u0017\u001a\u00020\u00022\u0006\u0010\u000f\u001a\u00020\u000eH\u0016¢\u0006\u0004\b\u0018\u0010\u0019J\u000f\u0010\u001a\u001a\u00020\u000eH\u0016¢\u0006\u0004\b\u001a\u0010\u001bJ#\u0010!\u001a\u00020\b2\u0006\u0010\u001d\u001a\u00020\u001c2\f\u0010 \u001a\b\u0012\u0004\u0012\u00020\u001f0\u001e¢\u0006\u0004\b!\u0010\"J+\u0010$\u001a\b\u0012\u0004\u0012\u00020#0\u001e2\u0006\u0010\u001d\u001a\u00020\u001c2\f\u0010 \u001a\b\u0012\u0004\u0012\u00020\u001f0\u001eH\u0002¢\u0006\u0004\b$\u0010%J\u0017\u0010(\u001a\u00020\b2\u0006\u0010'\u001a\u00020&H\u0002¢\u0006\u0004\b(\u0010)J\u0017\u0010+\u001a\u00020\b2\u0006\u0010'\u001a\u00020*H\u0002¢\u0006\u0004\b+\u0010,R\u0017\u0010\u0006\u001a\u00020\u00058\u0006¢\u0006\f\n\u0004\b-\u0010.\u001a\u0004\b/\u00100R\u001d\u0010\t\u001a\b\u0012\u0004\u0012\u00020\b0\u00078\u0006¢\u0006\f\n\u0004\b\u001a\u00101\u001a\u0004\b2\u00103R\u0019\u0010\u000b\u001a\u0004\u0018\u00010\n8\u0006¢\u0006\f\n\u0004\b4\u00105\u001a\u0004\b6\u00107R\u001c\u0010;\u001a\n 9*\u0004\u0018\u000108088\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0010\u0010:R\u001c\u0010>\u001a\b\u0012\u0004\u0012\u00020#0\u001e8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b<\u0010=R0\u0010F\u001a\u0010\u0012\u0004\u0012\u00020\u001f\u0012\u0004\u0012\u00020\b\u0018\u00010?8\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b@\u0010A\u001a\u0004\bB\u0010C\"\u0004\bD\u0010E¨\u0006H"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/f;", "Landroidx/recyclerview/widget/RecyclerView$h;", "Landroidx/recyclerview/widget/RecyclerView$f0;", "Landroid/content/Context;", "context", "Lk6/s;", "imageLoader", "Lkotlin/Function0;", "", "onClickAddButton", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "styles", "<init>", "(Landroid/content/Context;Lk6/s;Lkotlin/jvm/functions/Function0;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;)V", "", "position", "g", "(I)I", "Landroid/view/ViewGroup;", "parent", "viewType", "t", "(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$f0;", "holder", "r", "(Landroidx/recyclerview/widget/RecyclerView$f0;I)V", "e", "()I", "", "addButtonEnabled", "", "Lcom/withpersona/sdk2/inquiry/document/DocumentFile;", "documents", "K", "(ZLjava/util/List;)V", "Lcom/withpersona/sdk2/inquiry/document/f$a;", "G", "(ZLjava/util/List;)Ljava/util/List;", "Lao/d;", "binding", "F", "(Lao/d;)V", "Lao/b;", "E", "(Lao/b;)V", "d", "Lk6/s;", "getImageLoader", "()Lk6/s;", "Lkotlin/jvm/functions/Function0;", "getOnClickAddButton", "()Lkotlin/jvm/functions/Function0;", "f", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "getStyles", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "Landroid/view/LayoutInflater;", "kotlin.jvm.PlatformType", "Landroid/view/LayoutInflater;", "inflater", "h", "Ljava/util/List;", "items", "Lkotlin/Function1;", "i", "Lkotlin/jvm/functions/Function1;", "getRemoveDocument", "()Lkotlin/jvm/functions/Function1;", "J", "(Lkotlin/jvm/functions/Function1;)V", "removeDocument", "a", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000t\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\t\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0001GB/\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\f\u0010\t\u001a\b\u0012\u0004\u0012\u00020\b0\u0007\u0012\b\u0010\u000b\u001a\u0004\u0018\u00010\n¢\u0006\u0004\b\f\u0010\rJ\u0017\u0010\u0010\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\u000eH\u0016¢\u0006\u0004\b\u0010\u0010\u0011J\u001f\u0010\u0015\u001a\u00020\u00022\u0006\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0014\u001a\u00020\u000eH\u0016¢\u0006\u0004\b\u0015\u0010\u0016J\u001f\u0010\u0018\u001a\u00020\b2\u0006\u0010\u0017\u001a\u00020\u00022\u0006\u0010\u000f\u001a\u00020\u000eH\u0016¢\u0006\u0004\b\u0018\u0010\u0019J\u000f\u0010\u001a\u001a\u00020\u000eH\u0016¢\u0006\u0004\b\u001a\u0010\u001bJ#\u0010!\u001a\u00020\b2\u0006\u0010\u001d\u001a\u00020\u001c2\f\u0010 \u001a\b\u0012\u0004\u0012\u00020\u001f0\u001e¢\u0006\u0004\b!\u0010\"J+\u0010$\u001a\b\u0012\u0004\u0012\u00020#0\u001e2\u0006\u0010\u001d\u001a\u00020\u001c2\f\u0010 \u001a\b\u0012\u0004\u0012\u00020\u001f0\u001eH\u0002¢\u0006\u0004\b$\u0010%J\u0017\u0010(\u001a\u00020\b2\u0006\u0010'\u001a\u00020&H\u0002¢\u0006\u0004\b(\u0010)J\u0017\u0010+\u001a\u00020\b2\u0006\u0010'\u001a\u00020*H\u0002¢\u0006\u0004\b+\u0010,R\u0017\u0010\u0006\u001a\u00020\u00058\u0006¢\u0006\f\n\u0004\b-\u0010.\u001a\u0004\b/\u00100R\u001d\u0010\t\u001a\b\u0012\u0004\u0012\u00020\b0\u00078\u0006¢\u0006\f\n\u0004\b\u001a\u00101\u001a\u0004\b2\u00103R\u0019\u0010\u000b\u001a\u0004\u0018\u00010\n8\u0006¢\u0006\f\n\u0004\b4\u00105\u001a\u0004\b6\u00107R\u001c\u0010;\u001a\n 9*\u0004\u0018\u000108088\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0010\u0010:R\u001c\u0010>\u001a\b\u0012\u0004\u0012\u00020#0\u001e8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b<\u0010=R0\u0010F\u001a\u0010\u0012\u0004\u0012\u00020\u001f\u0012\u0004\u0012\u00020\b\u0018\u00010?8\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b@\u0010A\u001a\u0004\bB\u0010C\"\u0004\bD\u0010E¨\u0006H"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/f;", "Landroidx/recyclerview/widget/RecyclerView$h;", "Landroidx/recyclerview/widget/RecyclerView$f0;", "Landroid/content/Context;", "context", "Lk6/s;", "imageLoader", "Lkotlin/Function0;", "", "onClickAddButton", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "styles", "<init>", "(Landroid/content/Context;Lk6/s;Lkotlin/jvm/functions/Function0;Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;)V", "", "position", "g", "(I)I", "Landroid/view/ViewGroup;", "parent", "viewType", "t", "(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$f0;", "holder", "r", "(Landroidx/recyclerview/widget/RecyclerView$f0;I)V", "e", "()I", "", "addButtonEnabled", "", "Lcom/withpersona/sdk2/inquiry/document/DocumentFile;", "documents", "K", "(ZLjava/util/List;)V", "Lcom/withpersona/sdk2/inquiry/document/f$a;", "G", "(ZLjava/util/List;)Ljava/util/List;", "Lyn/d;", "binding", "F", "(Lyn/d;)V", "Lyn/b;", "E", "(Lyn/b;)V", "d", "Lk6/s;", "getImageLoader", "()Lk6/s;", "Lkotlin/jvm/functions/Function0;", "getOnClickAddButton", "()Lkotlin/jvm/functions/Function0;", "f", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "getStyles", "()Lcom/withpersona/sdk2/inquiry/network/dto/ui/styling/StepStyles$DocumentStepStyle;", "Landroid/view/LayoutInflater;", "kotlin.jvm.PlatformType", "Landroid/view/LayoutInflater;", "inflater", "h", "Ljava/util/List;", "items", "Lkotlin/Function1;", "i", "Lkotlin/jvm/functions/Function1;", "getRemoveDocument", "()Lkotlin/jvm/functions/Function1;", "J", "(Lkotlin/jvm/functions/Function1;)V", "removeDocument", "a", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public final class f extends RecyclerView.h<RecyclerView.f0> {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
@@ -70,8 +70,8 @@ public final class f extends RecyclerView.h<RecyclerView.f0> {
 
         /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.document.f$a$a, reason: collision with other inner class name */
         @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004"}, d2 = {"Lcom/withpersona/sdk2/inquiry/document/f$a$a;", "Lcom/withpersona/sdk2/inquiry/document/f$a;", "<init>", "()V", "document_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-        public static final class C0175a extends a {
-            public C0175a() {
+        public static final class C0178a extends a {
+            public C0178a() {
                 super(null);
             }
         }
@@ -246,24 +246,24 @@ public final class f extends RecyclerView.h<RecyclerView.f0> {
     public static final class b extends androidx.recyclerview.widget.g.b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ List<a> f10196a;
+        public final /* synthetic */ List<a> f10277a;
         public final /* synthetic */ List<a> b;
 
         /* JADX WARN: Multi-variable type inference failed */
         public b(List<? extends a> list, List<? extends a> list2) {
-            this.f10196a = list;
+            this.f10277a = list;
             this.b = list2;
         }
 
         @Override // androidx.recyclerview.widget.g.b
         public boolean a(int oldItemPosition, int newItemPosition) {
             boolean zC;
-            a aVar = this.f10196a.get(oldItemPosition);
+            a aVar = this.f10277a.get(oldItemPosition);
             a aVar2 = this.b.get(newItemPosition);
             if (!b(oldItemPosition, newItemPosition)) {
                 return false;
             }
-            if (aVar instanceof a.C0175a) {
+            if (aVar instanceof a.C0178a) {
                 zC = Intrinsics.c(aVar, aVar2);
             } else {
                 if (!(aVar instanceof a.b)) {
@@ -276,12 +276,12 @@ public final class f extends RecyclerView.h<RecyclerView.f0> {
 
         @Override // androidx.recyclerview.widget.g.b
         public boolean b(int oldItemPosition, int newItemPosition) {
-            a aVar = this.f10196a.get(oldItemPosition);
+            a aVar = this.f10277a.get(oldItemPosition);
             a aVar2 = this.b.get(newItemPosition);
             if (aVar.getClass() != aVar2.getClass()) {
                 return false;
             }
-            if (aVar instanceof a.C0175a) {
+            if (aVar instanceof a.C0178a) {
                 return true;
             }
             if (aVar instanceof a.b.Local) {
@@ -304,7 +304,7 @@ public final class f extends RecyclerView.h<RecyclerView.f0> {
 
         @Override // androidx.recyclerview.widget.g.b
         public int e() {
-            return this.f10196a.size();
+            return this.f10277a.size();
         }
     }
 
@@ -330,22 +330,22 @@ public final class f extends RecyclerView.h<RecyclerView.f0> {
         }
     }
 
-    public final void E(ao.b binding) {
+    public final void E(yn.b binding) {
         StepStyles.DocumentStepStyle documentStepStyle = this.styles;
         if (documentStepStyle == null) {
             return;
         }
         Double imagePreviewBorderRadius = documentStepStyle.getImagePreviewBorderRadius();
         if (imagePreviewBorderRadius != null) {
-            binding.f3550c.setRadius((float) jq.j.a(imagePreviewBorderRadius.doubleValue()));
+            binding.f36909c.setRadius((float) hq.j.a(imagePreviewBorderRadius.doubleValue()));
         }
         Double imagePreviewBorderWidth = this.styles.getImagePreviewBorderWidth();
         if (imagePreviewBorderWidth != null) {
-            binding.f3550c.setStrokeWidth((int) Math.ceil(jq.j.a(imagePreviewBorderWidth.doubleValue())));
+            binding.f36909c.setStrokeWidth((int) Math.ceil(hq.j.a(imagePreviewBorderWidth.doubleValue())));
         }
         Integer imagePreviewBorderColor = this.styles.getImagePreviewBorderColor();
         if (imagePreviewBorderColor != null) {
-            binding.f3550c.setStrokeColor(imagePreviewBorderColor.intValue());
+            binding.f36909c.setStrokeColor(imagePreviewBorderColor.intValue());
         }
         Integer imagePreviewMainAreaFillColor = this.styles.getImagePreviewMainAreaFillColor();
         if (imagePreviewMainAreaFillColor != null) {
@@ -353,33 +353,33 @@ public final class f extends RecyclerView.h<RecyclerView.f0> {
         }
         ThemeableLottieAnimationView addButton = binding.b;
         Intrinsics.checkNotNullExpressionValue(addButton, "addButton");
-        jr.g.m(addButton, this.styles.getImagePreviewPlusIconStrokeColor(), this.styles.getImagePreviewPlusIconFillColor(), null, null, new String[]{"#FFFFFF"}, new String[]{"#5B3FD3"}, null, new String[0], 68, null);
+        hr.g.m(addButton, this.styles.getImagePreviewPlusIconStrokeColor(), this.styles.getImagePreviewPlusIconFillColor(), null, null, new String[]{"#FFFFFF"}, new String[]{"#5B3FD3"}, null, new String[0], 68, null);
     }
 
-    public final void F(ao.d binding) {
+    public final void F(yn.d binding) {
         StepStyles.DocumentStepStyle documentStepStyle = this.styles;
         if (documentStepStyle == null) {
             return;
         }
         Integer strokeColorValue = documentStepStyle.getStrokeColorValue();
         if (strokeColorValue != null) {
-            binding.f3564f.setIndicatorColor(strokeColorValue.intValue());
+            binding.f36923f.setIndicatorColor(strokeColorValue.intValue());
         }
         Integer fillColorValue = this.styles.getFillColorValue();
         if (fillColorValue != null) {
-            binding.f3564f.setTrackColor(fillColorValue.intValue());
+            binding.f36923f.setTrackColor(fillColorValue.intValue());
         }
         Integer imagePreviewCropAreaFillColor = this.styles.getImagePreviewCropAreaFillColor();
         if (imagePreviewCropAreaFillColor != null) {
-            binding.f3562d.setBackgroundColor(imagePreviewCropAreaFillColor.intValue());
+            binding.f36921d.setBackgroundColor(imagePreviewCropAreaFillColor.intValue());
         }
         Double imagePreviewBorderRadius = this.styles.getImagePreviewBorderRadius();
         if (imagePreviewBorderRadius != null) {
-            binding.b.setRadius((float) jq.j.a(imagePreviewBorderRadius.doubleValue()));
+            binding.b.setRadius((float) hq.j.a(imagePreviewBorderRadius.doubleValue()));
         }
         Double imagePreviewBorderWidth = this.styles.getImagePreviewBorderWidth();
         if (imagePreviewBorderWidth != null) {
-            binding.b.setStrokeWidth((int) Math.ceil(jq.j.a(imagePreviewBorderWidth.doubleValue())));
+            binding.b.setStrokeWidth((int) Math.ceil(hq.j.a(imagePreviewBorderWidth.doubleValue())));
         }
         Integer imagePreviewBorderColor = this.styles.getImagePreviewBorderColor();
         if (imagePreviewBorderColor != null) {
@@ -387,17 +387,17 @@ public final class f extends RecyclerView.h<RecyclerView.f0> {
         }
         TextBasedComponentStyle imageNameStyleValue = this.styles.getImageNameStyleValue();
         if (imageNameStyleValue != null) {
-            TextView filenameView = binding.f3561c;
+            TextView filenameView = binding.f36920c;
             Intrinsics.checkNotNullExpressionValue(filenameView, "filenameView");
             h0.l(filenameView, imageNameStyleValue, null, 2, null);
         }
         Integer imagePreviewMainAreaFillColor = this.styles.getImagePreviewMainAreaFillColor();
         if (imagePreviewMainAreaFillColor != null) {
-            binding.f3563e.setBackgroundColor(imagePreviewMainAreaFillColor.intValue());
+            binding.f36922e.setBackgroundColor(imagePreviewMainAreaFillColor.intValue());
         }
-        ThemeableLottieAnimationView removeButton = binding.f3565g;
+        ThemeableLottieAnimationView removeButton = binding.f36924g;
         Intrinsics.checkNotNullExpressionValue(removeButton, "removeButton");
-        jr.g.m(removeButton, this.styles.getImagePreviewXIconStrokeColor(), this.styles.getImagePreviewXIconFillColor(), null, null, new String[]{"#6B6D82"}, new String[]{"#FFFFFF"}, null, new String[0], 68, null);
+        hr.g.m(removeButton, this.styles.getImagePreviewXIconStrokeColor(), this.styles.getImagePreviewXIconFillColor(), null, null, new String[]{"#6B6D82"}, new String[]{"#FFFFFF"}, null, new String[0], 68, null);
     }
 
     public final List<a> G(boolean addButtonEnabled, List<? extends DocumentFile> documents) {
@@ -418,7 +418,7 @@ public final class f extends RecyclerView.h<RecyclerView.f0> {
             arrayList.add(remote);
         }
         if (addButtonEnabled) {
-            arrayList.add(new a.C0175a());
+            arrayList.add(new a.C0178a());
         }
         return arrayList;
     }
@@ -450,7 +450,7 @@ public final class f extends RecyclerView.h<RecyclerView.f0> {
                     if (local.a().getUploadProgress() == 100) {
                         k(index);
                     } else {
-                        l(index, Unit.f22483a);
+                        l(index, Unit.f22938a);
                     }
                 }
             }
@@ -465,11 +465,11 @@ public final class f extends RecyclerView.h<RecyclerView.f0> {
     @Override // androidx.recyclerview.widget.RecyclerView.h
     public int g(int position) {
         a aVar = this.items.get(position);
-        if (aVar instanceof a.C0175a) {
-            return o2.f37795c;
+        if (aVar instanceof a.C0178a) {
+            return o2.f35918c;
         }
         if (aVar instanceof a.b) {
-            return o2.f37796d;
+            return o2.f35919d;
         }
         throw new l();
     }
@@ -478,11 +478,11 @@ public final class f extends RecyclerView.h<RecyclerView.f0> {
     public void r(@NotNull RecyclerView.f0 holder, int position) {
         Intrinsics.checkNotNullParameter(holder, "holder");
         final a aVar = this.items.get(position);
-        if (aVar instanceof a.C0175a) {
-            ((ao.b) k0.a(holder)).b.setOnClickListener(new View.OnClickListener() { // from class: zn.o
+        if (aVar instanceof a.C0178a) {
+            ((yn.b) k0.a(holder)).b.setOnClickListener(new View.OnClickListener() { // from class: xn.o
                 @Override // android.view.View.OnClickListener
                 public final void onClick(View view) {
-                    com.withpersona.sdk2.inquiry.document.f.H(this.f37792a, view);
+                    com.withpersona.sdk2.inquiry.document.f.H(this.f35915a, view);
                 }
             });
             return;
@@ -490,42 +490,42 @@ public final class f extends RecyclerView.h<RecyclerView.f0> {
         if (!(aVar instanceof a.b)) {
             throw new l();
         }
-        ao.d dVar = (ao.d) k0.a(holder);
-        dVar.f3565g.setOnClickListener(new View.OnClickListener() { // from class: zn.p
+        yn.d dVar = (yn.d) k0.a(holder);
+        dVar.f36924g.setOnClickListener(new View.OnClickListener() { // from class: xn.p
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
-                com.withpersona.sdk2.inquiry.document.f.I(this.f37798a, aVar, view);
+                com.withpersona.sdk2.inquiry.document.f.I(this.f35921a, aVar, view);
             }
         });
-        ImageView imageView = dVar.f3562d;
+        ImageView imageView = dVar.f36921d;
         Intrinsics.checkNotNullExpressionValue(imageView, "imageView");
         e7.c.a(imageView);
-        dVar.f3562d.setImageDrawable(null);
+        dVar.f36921d.setImageDrawable(null);
         a.b bVar = (a.b) aVar;
         if (bVar instanceof a.b.Local) {
             a.b.Local local = (a.b.Local) aVar;
-            dVar.f3562d.setVisibility(local.a().getUploadProgress() < 100 ? 4 : 0);
-            dVar.f3565g.setVisibility(8);
-            dVar.f3561c.setText(local.getFile().getName());
-            dVar.f3564f.setVisibility(local.a().getUploadProgress() < 100 ? 0 : 8);
-            dVar.f3564f.setProgress(local.a().getUploadProgress());
+            dVar.f36921d.setVisibility(local.a().getUploadProgress() < 100 ? 4 : 0);
+            dVar.f36924g.setVisibility(8);
+            dVar.f36920c.setText(local.getFile().getName());
+            dVar.f36923f.setVisibility(local.a().getUploadProgress() < 100 ? 0 : 8);
+            dVar.f36923f.setProgress(local.a().getUploadProgress());
             return;
         }
         if (!(bVar instanceof a.b.Remote)) {
             throw new l();
         }
-        dVar.f3562d.setVisibility(0);
+        dVar.f36921d.setVisibility(0);
         a.b.Remote remote = (a.b.Remote) aVar;
         if (Intrinsics.c(remote.getMimeType(), "application/pdf")) {
-            ImageView imageView2 = dVar.f3562d;
+            ImageView imageView2 = dVar.f36921d;
             Intrinsics.checkNotNullExpressionValue(imageView2, "imageView");
-            Integer numValueOf = Integer.valueOf(jq.s.f21644m);
+            Integer numValueOf = Integer.valueOf(hq.s.f19652m);
             s sVar = this.imageLoader;
             ImageRequest.a aVarQ = x6.j.q(new ImageRequest.a(imageView2.getContext()).c(numValueOf), imageView2);
             aVarQ.s(100, 100);
-            sVar.c(aVarQ.b());
+            sVar.d(aVarQ.b());
         } else {
-            ImageView imageView3 = dVar.f3562d;
+            ImageView imageView3 = dVar.f36921d;
             Intrinsics.checkNotNullExpressionValue(imageView3, "imageView");
             String remoteUrl = remote.getRemoteUrl();
             s sVar2 = this.imageLoader;
@@ -533,11 +533,11 @@ public final class f extends RecyclerView.h<RecyclerView.f0> {
             x6.i.c(aVarQ2, true);
             x6.j.d(aVarQ2, 100);
             aVarQ2.s(500, 500);
-            sVar2.c(aVarQ2.b());
+            sVar2.d(aVarQ2.b());
         }
-        dVar.f3564f.setVisibility(8);
-        dVar.f3565g.setVisibility(0);
-        dVar.f3561c.setText(remote.getFilename());
+        dVar.f36923f.setVisibility(8);
+        dVar.f36924g.setVisibility(0);
+        dVar.f36920c.setText(remote.getFilename());
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.h
@@ -547,32 +547,32 @@ public final class f extends RecyclerView.h<RecyclerView.f0> {
         f7.i iVarB2;
         Intrinsics.checkNotNullParameter(parent, "parent");
         View viewInflate = this.inflater.inflate(viewType, parent, false);
-        if (viewType == o2.f37795c) {
-            ao.b bVarA = ao.b.a(viewInflate);
+        if (viewType == o2.f35918c) {
+            yn.b bVarA = yn.b.a(viewInflate);
             Intrinsics.checkNotNullExpressionValue(bVarA, "bind(...)");
-            jq.j0 j0Var = new jq.j0(bVarA);
-            p0<f7.i> p0VarX = f7.q.x(((ao.b) j0Var.N()).getRoot().getContext(), p2.f37801a);
+            hq.j0 j0Var = new hq.j0(bVarA);
+            p0<f7.i> p0VarX = f7.q.x(((yn.b) j0Var.N()).getRoot().getContext(), p2.f35924a);
             if (p0VarX != null && (iVarB2 = p0VarX.b()) != null) {
-                ((ao.b) j0Var.N()).b.setComposition(iVarB2);
+                ((yn.b) j0Var.N()).b.setComposition(iVarB2);
             }
             r5.a aVarN = j0Var.N();
             Intrinsics.checkNotNullExpressionValue(aVarN, "<get-binding>(...)");
-            E((ao.b) aVarN);
+            E((yn.b) aVarN);
             return j0Var;
         }
-        if (viewType != o2.f37796d) {
+        if (viewType != o2.f35919d) {
             throw new IllegalStateException(("Unknown view type " + viewType).toString());
         }
-        ao.d dVarA = ao.d.a(viewInflate);
+        yn.d dVarA = yn.d.a(viewInflate);
         Intrinsics.checkNotNullExpressionValue(dVarA, "bind(...)");
-        jq.j0 j0Var2 = new jq.j0(dVarA);
-        p0<f7.i> p0VarX2 = f7.q.x(((ao.d) j0Var2.N()).getRoot().getContext(), p2.b);
+        hq.j0 j0Var2 = new hq.j0(dVarA);
+        p0<f7.i> p0VarX2 = f7.q.x(((yn.d) j0Var2.N()).getRoot().getContext(), p2.b);
         if (p0VarX2 != null && (iVarB = p0VarX2.b()) != null) {
-            ((ao.d) j0Var2.N()).f3565g.setComposition(iVarB);
+            ((yn.d) j0Var2.N()).f36924g.setComposition(iVarB);
         }
         r5.a aVarN2 = j0Var2.N();
         Intrinsics.checkNotNullExpressionValue(aVarN2, "<get-binding>(...)");
-        F((ao.d) aVarN2);
+        F((yn.d) aVarN2);
         return j0Var2;
     }
 }

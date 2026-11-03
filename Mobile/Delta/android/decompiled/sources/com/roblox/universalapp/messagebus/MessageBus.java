@@ -2,14 +2,14 @@ package com.roblox.universalapp.messagebus;
 
 import android.util.Log;
 import java.util.Map;
-import mm.g;
-import mm.h;
-import mm.i;
-import mm.j;
-import mm.k;
-import mm.l;
-import mm.m;
-import mm.n;
+import km.g;
+import km.h;
+import km.i;
+import km.j;
+import km.k;
+import km.l;
+import km.m;
+import km.n;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -19,15 +19,15 @@ public class MessageBus {
     public class a implements RawCallback {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ Callback f9807a;
+        public final /* synthetic */ Callback f9888a;
 
         public a(Callback callback) {
-            this.f9807a = callback;
+            this.f9888a = callback;
         }
 
         public void run(String str) {
             try {
-                this.f9807a.a(MessageBus.e(str));
+                this.f9888a.a(MessageBus.e(str));
             } catch (JSONException e10) {
                 Log.e("MessageBus", "Serializing message params in Do Subscribe failed with error: " + e10.getMessage());
             }
@@ -37,23 +37,23 @@ public class MessageBus {
     public class b implements RequestHandlerRaw {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ i f9808a;
+        public final /* synthetic */ i f9889a;
         public final /* synthetic */ String b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ String f9809c;
+        public final /* synthetic */ String f9890c;
 
         public b(i iVar, String str, String str2) {
-            this.f9808a = iVar;
+            this.f9889a = iVar;
             this.b = str;
-            this.f9809c = str2;
+            this.f9890c = str2;
         }
 
         public String run(String str) {
             try {
-                l lVarA = this.f9808a.a(MessageBus.e(str));
-                MessageBus.this.reportProtocolMethodResponseTelemetryData(this.b, this.f9809c, lVarA.f24431c, MessageBus.n(lVarA.b));
-                return MessageBus.n(lVarA.f24430a);
+                l lVarA = this.f9889a.a(MessageBus.e(str));
+                MessageBus.this.reportProtocolMethodResponseTelemetryData(this.b, this.f9890c, lVarA.f22910c, MessageBus.n(lVarA.b));
+                return MessageBus.n(lVarA.f22909a);
             } catch (JSONException e10) {
                 Log.e("MessageBus", "Serializing message params in getRequestHandlerRaw failed with error: " + e10.getMessage());
                 return "";
@@ -64,34 +64,34 @@ public class MessageBus {
     public class c implements RequestHandlerAsyncRaw {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ j f9811a;
+        public final /* synthetic */ j f9892a;
         public final /* synthetic */ String b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ String f9812c;
+        public final /* synthetic */ String f9893c;
 
         public c(j jVar, String str, String str2) {
-            this.f9811a = jVar;
+            this.f9892a = jVar;
             this.b = str;
-            this.f9812c = str2;
+            this.f9893c = str2;
         }
 
         public final /* synthetic */ void b(String str, String str2, String str3, l lVar) {
-            MessageBus.this.reportProtocolMethodResponseTelemetryData(str, str2, lVar.f24431c, MessageBus.n(lVar.b));
-            MessageBus.this.callResponseHandlerRaw(str3, MessageBus.n(lVar.f24430a));
+            MessageBus.this.reportProtocolMethodResponseTelemetryData(str, str2, lVar.f22910c, MessageBus.n(lVar.b));
+            MessageBus.this.callResponseHandlerRaw(str3, MessageBus.n(lVar.f22909a));
         }
 
         @Override // com.roblox.universalapp.messagebus.RequestHandlerAsyncRaw
         public void run(String str, final String str2) {
             try {
                 JSONObject jSONObjectE = MessageBus.e(str);
-                j jVar = this.f9811a;
+                j jVar = this.f9892a;
                 final String str3 = this.b;
-                final String str4 = this.f9812c;
-                jVar.a(jSONObjectE, new m() { // from class: mm.d
-                    @Override // mm.m
+                final String str4 = this.f9893c;
+                jVar.a(jSONObjectE, new m() { // from class: km.d
+                    @Override // km.m
                     public final void a(l lVar) {
-                        this.f24423a.b(str3, str4, str2, lVar);
+                        this.f22902a.b(str3, str4, str2, lVar);
                     }
                 });
             } catch (JSONException e10) {
@@ -103,7 +103,7 @@ public class MessageBus {
     public static class d {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final MessageBus f9814a = new MessageBus();
+        public static final MessageBus f9895a = new MessageBus();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -120,7 +120,7 @@ public class MessageBus {
     }
 
     public static MessageBus f() {
-        return d.f9814a;
+        return d.f9895a;
     }
 
     public static RawCallback g(Callback callback) {
@@ -130,7 +130,7 @@ public class MessageBus {
     public static native String getMessageId(String str, String str2);
 
     public static h h(final g gVar) {
-        return new h() { // from class: mm.c
+        return new h() { // from class: km.c
         };
     }
 
@@ -171,7 +171,7 @@ public class MessageBus {
         return new b(iVar, str, str2);
     }
 
-    public void k(mm.b bVar) {
+    public void k(km.b bVar) {
         reportProtocolMethodRequestTelemetryData(bVar.d(), bVar.b(), "");
         makeRequest(new MakeRequestContractRaw(bVar.d(), bVar.b(), n(bVar.c()), h(bVar.a())));
     }
@@ -199,7 +199,7 @@ public class MessageBus {
         setRequestHandlerAsyncRaw(str, str2, i(str, str2, jVar));
     }
 
-    public void r(mm.a aVar) {
+    public void r(km.a aVar) {
         setRequestHandlerAsync(new AsyncRequestHandlerRawContract(aVar.c(), aVar.b(), i(aVar.c(), aVar.c(), aVar.a())));
     }
 

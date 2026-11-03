@@ -11,7 +11,7 @@ public final class e5 extends com.google.android.gms.internal.measurement.o0 imp
     }
 
     @Override // nb.g5
-    public final void B0(List list) {
+    public final void x0(List list) {
         Parcel parcelS2 = s2();
         parcelS2.writeTypedList(list);
         u2(2, parcelS2);

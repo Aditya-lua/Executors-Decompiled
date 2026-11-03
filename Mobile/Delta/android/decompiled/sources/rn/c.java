@@ -1,17 +1,20 @@
 package rn;
 
-import java.util.List;
-import java.util.Set;
-
 /* JADX INFO: loaded from: classes3.dex */
-public interface c {
-    <D> D a(Class<D> cls, String str);
+public class c {
+    public static c a(int i10) {
+        return new ln.b(-1, i10, false);
+    }
 
-    List<sn.e> b();
+    public static c b(int i10) {
+        return new ln.b(i10, -1, false);
+    }
 
-    List<un.a> c();
+    public static c c() {
+        return new ln.b(-1, -1, true);
+    }
 
-    Set<Character> d();
-
-    List<sn.b> e();
+    public static c d() {
+        return null;
+    }
 }

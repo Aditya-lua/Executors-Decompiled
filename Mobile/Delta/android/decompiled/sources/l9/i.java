@@ -12,10 +12,10 @@ public class i {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NonNull
-    public final j f23031a;
+    public final j f23425a;
 
     public i(@NonNull j jVar) {
-        this.f23031a = jVar;
+        this.f23425a = jVar;
     }
 
     @NonNull
@@ -39,7 +39,7 @@ public class i {
 
     @NonNull
     public Activity b() {
-        Activity activityF = this.f23031a.f();
+        Activity activityF = this.f23425a.f();
         n9.m.l(activityF);
         return activityF;
     }

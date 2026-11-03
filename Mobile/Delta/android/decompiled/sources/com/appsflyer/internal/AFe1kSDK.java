@@ -185,7 +185,7 @@ public abstract class AFe1kSDK<Result> extends AFe1ySDK<AFd1fSDK<Result>> {
         this.v = aFd1fSDKAFKeystoreWrapper;
         String string = aFd1fSDKAFKeystoreWrapper.getBody().toString();
         AFd1uSDK aFd1uSDK = this.AFKeystoreWrapper;
-        String str2 = aFd1pSDKAFLogger.unregisterClient.f5281d;
+        String str2 = aFd1pSDKAFLogger.unregisterClient.f5354d;
         Intrinsics.checkNotNullExpressionValue(str2, "");
         aFd1uSDK.AFKeystoreWrapper(str2, aFd1fSDKAFKeystoreWrapper.getStatusCode(), string);
         AppsFlyerRequestListener appsFlyerRequestListenerAfWarnLog3 = afWarnLog();
@@ -222,7 +222,7 @@ public abstract class AFe1kSDK<Result> extends AFe1ySDK<AFd1fSDK<Result>> {
     private void d(@NotNull AFd1oSDK p8) {
         Intrinsics.checkNotNullParameter(p8, "");
         String str = this.i;
-        this.i = this.AFLogger.registerClient(new AFc1sSDK(p8.f5281d, p8.unregisterClient, "7.0.1", this.unregisterClient, p8.AFLogger));
+        this.i = this.AFLogger.registerClient(new AFc1sSDK(p8.f5354d, p8.unregisterClient, "7.0.1", this.unregisterClient, p8.AFLogger));
         if (str != null) {
             this.AFLogger.AFLogger(str);
         }

@@ -12,7 +12,7 @@ public final class r extends u {
         public a(File file) {
             super(new f.b());
             x2.g.h(file, "File can't be null.");
-            b.a aVar = (b.a) this.f16036a;
+            b.a aVar = (b.a) this.f16632a;
             this.b = aVar;
             aVar.d(file);
         }

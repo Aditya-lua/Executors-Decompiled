@@ -35,7 +35,7 @@ public final class a extends e<Boolean> {
         if (action == null) {
             return;
         }
-        w.e().a(b.f14443a, "Received " + action);
+        w.e().a(b.f14423a, "Received " + action);
         switch (action.hashCode()) {
             case -1886648615:
                 if (action.equals("android.intent.action.ACTION_POWER_DISCONNECTED")) {
@@ -77,7 +77,7 @@ public final class a extends e<Boolean> {
         if (intentRegisterReceiver != null) {
             return Boolean.valueOf(m(intentRegisterReceiver));
         }
-        w.e().c(b.f14443a, "getInitialState - null intent received");
+        w.e().c(b.f14423a, "getInitialState - null intent received");
         return Boolean.FALSE;
     }
 }

@@ -4,70 +4,70 @@ import android.os.Handler;
 import android.os.Looper;
 
 /* JADX INFO: loaded from: classes2.dex */
-public class a implements nl.b {
+public class a implements ll.b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public Handler f9741a = new Handler(Looper.getMainLooper());
+    public Handler f9822a = new Handler(Looper.getMainLooper());
     public f b;
 
     /* JADX INFO: renamed from: com.roblox.protocols.webview.a$a, reason: collision with other inner class name */
-    public class RunnableC0153a implements Runnable {
+    public class RunnableC0156a implements Runnable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ nl.a f9742a;
+        public final /* synthetic */ ll.a f9823a;
 
-        public RunnableC0153a(nl.a aVar) {
-            this.f9742a = aVar;
+        public RunnableC0156a(ll.a aVar) {
+            this.f9823a = aVar;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            a.this.b.g(this.f9742a);
+            a.this.b.d(this.f9823a);
         }
     }
 
     public class b implements Runnable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ nl.a f9743a;
+        public final /* synthetic */ ll.a f9824a;
 
-        public b(nl.a aVar) {
-            this.f9743a = aVar;
+        public b(ll.a aVar) {
+            this.f9824a = aVar;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            a.this.b.d(this.f9743a);
+            a.this.b.f(this.f9824a);
         }
     }
 
     public class c implements Runnable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ nl.a f9744a;
+        public final /* synthetic */ ll.a f9825a;
 
-        public c(nl.a aVar) {
-            this.f9744a = aVar;
+        public c(ll.a aVar) {
+            this.f9825a = aVar;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            a.this.b.g(this.f9744a);
+            a.this.b.d(this.f9825a);
         }
     }
 
     public class d implements Runnable {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ nl.a f9745a;
+        public final /* synthetic */ ll.a f9826a;
 
-        public d(nl.a aVar) {
-            this.f9745a = aVar;
+        public d(ll.a aVar) {
+            this.f9826a = aVar;
         }
 
         @Override // java.lang.Runnable
         public void run() {
-            a.this.b.g(this.f9745a);
+            a.this.b.d(this.f9826a);
         }
     }
 
@@ -82,18 +82,18 @@ public class a implements nl.b {
     }
 
     public interface f {
-        void d(nl.a aVar);
+        void d(ll.a aVar);
 
         void e();
 
-        void g(nl.a aVar);
+        void f(ll.a aVar);
     }
 
     public a(f fVar) {
         this.b = fVar;
     }
 
-    @Override // nl.b
+    @Override // ll.b
     public void a(String str, String str2, String str3, Boolean bool, String str4, Boolean bool2, Boolean bool3, Boolean bool4) {
         String str5 = str2;
         if (str5 == null) {
@@ -105,20 +105,20 @@ public class a implements nl.b {
         if (bool3 == null || bool3.booleanValue()) {
             z10 = false;
         }
-        this.f9741a.post(new d(new nl.a(str, str5, boolValueOf, bool5, Boolean.valueOf(z10), Boolean.valueOf(bool2 != null ? bool2.booleanValue() : false), Boolean.valueOf(bool4 != null ? bool4.booleanValue() : false))));
+        this.f9822a.post(new d(new ll.a(str, str5, boolValueOf, bool5, Boolean.valueOf(z10), Boolean.valueOf(bool2 != null ? bool2.booleanValue() : false), Boolean.valueOf(bool4 != null ? bool4.booleanValue() : false))));
     }
 
-    @Override // nl.b
+    @Override // ll.b
     public void b(String str, String str2, String str3, Boolean bool, String str4, Boolean bool2) {
-        this.f9741a.post(new b(new nl.a(str, str2, bool, null, null, Boolean.valueOf(bool2 != null ? bool2.booleanValue() : false))));
+        this.f9822a.post(new b(new ll.a(str, str2, bool, null, null, Boolean.valueOf(bool2 != null ? bool2.booleanValue() : false))));
     }
 
-    @Override // nl.b
+    @Override // ll.b
     public void c() {
-        this.f9741a.post(new e());
+        this.f9822a.post(new e());
     }
 
-    @Override // nl.b
+    @Override // ll.b
     public void d(String str, String str2, String str3, Boolean bool, String str4, Boolean bool2, Boolean bool3) {
         String str5 = str2;
         if (str5 == null) {
@@ -130,10 +130,10 @@ public class a implements nl.b {
         if (bool3 == null || bool3.booleanValue()) {
             z10 = false;
         }
-        this.f9741a.post(new c(new nl.a(str, str5, boolValueOf, bool4, Boolean.valueOf(z10), Boolean.valueOf(bool2 != null ? bool2.booleanValue() : false))));
+        this.f9822a.post(new c(new ll.a(str, str5, boolValueOf, bool4, Boolean.valueOf(z10), Boolean.valueOf(bool2 != null ? bool2.booleanValue() : false))));
     }
 
-    @Override // nl.b
+    @Override // ll.b
     public void e(String str, String str2, String str3, Boolean bool, String str4, Boolean bool2) {
         if (str2 == null) {
             str2 = "";
@@ -141,6 +141,6 @@ public class a implements nl.b {
         String str5 = str2;
         Boolean boolValueOf = Boolean.valueOf(bool != null ? bool.booleanValue() : true);
         Boolean bool3 = Boolean.FALSE;
-        this.f9741a.post(new RunnableC0153a(new nl.a(str, str5, boolValueOf, bool3, bool3, Boolean.valueOf(bool2 != null ? bool2.booleanValue() : false))));
+        this.f9822a.post(new RunnableC0156a(new ll.a(str, str5, boolValueOf, bool3, bool3, Boolean.valueOf(bool2 != null ? bool2.booleanValue() : false))));
     }
 }

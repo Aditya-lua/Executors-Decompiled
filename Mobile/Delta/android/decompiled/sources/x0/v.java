@@ -6,11 +6,11 @@ import g0.l1;
 public class v implements l1.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final androidx.camera.core.d f34652a;
+    public final androidx.camera.core.d f35150a;
     public final int b;
 
     public v(androidx.camera.core.d dVar, int i10) {
-        this.f34652a = dVar;
+        this.f35150a = dVar;
         this.b = i10;
     }
 }

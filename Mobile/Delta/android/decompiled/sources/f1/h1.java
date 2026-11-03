@@ -10,7 +10,7 @@ import java.util.Set;
 public interface h1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final h1 f15862a = new a();
+    public static final h1 f16458a = new a();
 
     public class a implements h1 {
         @Override // f1.h1
@@ -25,7 +25,7 @@ public interface h1 {
     }
 
     default x a(Size size, g0.k0 k0Var) {
-        return x.f16055g;
+        return x.f16651g;
     }
 
     default h1.i b(Size size, g0.k0 k0Var) {

@@ -19,7 +19,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0007\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0014\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b6\u0018\u00002\u00020\u0001:\u0012\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f \u0005!\"#$%&'(B\t\b\u0004¢\u0006\u0004\b\u0002\u0010\u0003R\"\u0010\u000b\u001a\u00020\u00048\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b\u0005\u0010\u0006\u001a\u0004\b\u0007\u0010\b\"\u0004\b\t\u0010\nR\u001a\u0010\u0010\u001a\b\u0012\u0004\u0012\u00020\r0\f8 X \u0004¢\u0006\u0006\u001a\u0004\b\u000e\u0010\u000fR\u0016\u0010\u0013\u001a\u0004\u0018\u00010\u00008 X \u0004¢\u0006\u0006\u001a\u0004\b\u0011\u0010\u0012R\u0014\u0010\u0017\u001a\u00020\u00148 X \u0004¢\u0006\u0006\u001a\u0004\b\u0015\u0010\u0016\u0082\u0001\u0011)*+,-./0123456789¨\u0006:"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "Lcom/withpersona/sdk2/inquiry/workflows/SimpleWorkflowState;", "<init>", "()V", "", "a", "Z", "getDidGoBack$selfie_release", "()Z", "x", "(Z)V", "didGoBack", "", "Lcom/withpersona/sdk2/inquiry/selfie/Selfie;", "w", "()Ljava/util/List;", "selfies", "u", "()Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "backState", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "v", "()Lcom/withpersona/sdk2/camera/CameraProperties$b;", "cameraFacingMode", "ShowInstructions", "WaitForCameraFeed", "RestartCamera", "WaitForWebRtcSetup", "ShowPoseHint", "StartCapture", "StartCaptureFaceDetected", "CountdownToCapture", "CountdownToManualCapture", "Capture", "AcquireNextPose", "CaptureTransition", "FinalizeLocalVideoCapture", "FinalizeWebRtc", "WebRtcFinished", "ReviewCaptures", "Submit", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$AcquireNextPose;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$Capture;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$CaptureTransition;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$CountdownToCapture;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$CountdownToManualCapture;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$FinalizeLocalVideoCapture;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$FinalizeWebRtc;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$RestartCamera;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$ReviewCaptures;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$ShowInstructions;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$ShowPoseHint;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$StartCapture;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$StartCaptureFaceDetected;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$Submit;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$WaitForCameraFeed;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$WaitForWebRtcSetup;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$WebRtcFinished;", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0007\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0014\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b6\u0018\u00002\u00020\u0001:\u0012\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f \u0005!\"#$%&'(B\t\b\u0004¢\u0006\u0004\b\u0002\u0010\u0003R\"\u0010\u000b\u001a\u00020\u00048\u0000@\u0000X\u0080\u000e¢\u0006\u0012\n\u0004\b\u0005\u0010\u0006\u001a\u0004\b\u0007\u0010\b\"\u0004\b\t\u0010\nR\u001a\u0010\u0010\u001a\b\u0012\u0004\u0012\u00020\r0\f8 X \u0004¢\u0006\u0006\u001a\u0004\b\u000e\u0010\u000fR\u0016\u0010\u0013\u001a\u0004\u0018\u00010\u00008 X \u0004¢\u0006\u0006\u001a\u0004\b\u0011\u0010\u0012R\u0014\u0010\u0017\u001a\u00020\u00148 X \u0004¢\u0006\u0006\u001a\u0004\b\u0015\u0010\u0016\u0082\u0001\u0011)*+,-./0123456789¨\u0006:"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "Lcom/withpersona/sdk2/inquiry/workflows/SimpleWorkflowState;", "<init>", "()V", "", "a", "Z", "getDidGoBack$selfie_release", "()Z", "y", "(Z)V", "didGoBack", "", "Lcom/withpersona/sdk2/inquiry/selfie/Selfie;", "w", "()Ljava/util/List;", "selfies", "u", "()Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "backState", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "v", "()Lcom/withpersona/sdk2/camera/CameraProperties$b;", "cameraFacingMode", "ShowInstructions", "WaitForCameraFeed", "RestartCamera", "WaitForWebRtcSetup", "ShowPoseHint", "StartCapture", "StartCaptureFaceDetected", "CountdownToCapture", "CountdownToManualCapture", "Capture", "AcquireNextPose", "CaptureTransition", "FinalizeLocalVideoCapture", "FinalizeWebRtc", "WebRtcFinished", "ReviewCaptures", "Submit", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$AcquireNextPose;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$Capture;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$CaptureTransition;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$CountdownToCapture;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$CountdownToManualCapture;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$FinalizeLocalVideoCapture;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$FinalizeWebRtc;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$RestartCamera;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$ReviewCaptures;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$ShowInstructions;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$ShowPoseHint;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$StartCapture;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$StartCaptureFaceDetected;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$Submit;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$WaitForCameraFeed;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$WaitForWebRtcSetup;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$WebRtcFinished;", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public abstract class SelfieState extends SimpleWorkflowState {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
@@ -116,7 +116,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        public static /* synthetic */ AcquireNextPose A(AcquireNextPose acquireNextPose, CameraProperties cameraProperties, long j10, List list, SelfieState selfieState, CameraProperties.b bVar, boolean z10, List list2, PoseConfigs poseConfigs, boolean z11, int i10, Object obj) {
+        public static /* synthetic */ AcquireNextPose B(AcquireNextPose acquireNextPose, CameraProperties cameraProperties, long j10, List list, SelfieState selfieState, CameraProperties.b bVar, boolean z10, List list2, PoseConfigs poseConfigs, boolean z11, int i10, Object obj) {
             if ((i10 & 1) != 0) {
                 cameraProperties = acquireNextPose.cameraProperties;
             }
@@ -202,13 +202,13 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         @Override // com.withpersona.sdk2.inquiry.selfie.a
         @NotNull
-        public kn.a j() {
+        public in.a j() {
             return super.j();
         }
 
         @Override // com.withpersona.sdk2.inquiry.selfie.a
         @Nullable
-        public kn.a m() {
+        public in.a m() {
             return super.m();
         }
 
@@ -284,7 +284,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         }
     }
 
-    @Metadata(d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0014\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0006\b\u0007\u0018\u00002\u00020\u0001B1\u0012\u0006\u0010\u0002\u001a\u00020\u0001\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0001\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\n\u0010\u000bJ\r\u0010\r\u001a\u00020\f¢\u0006\u0004\b\r\u0010\u000eJ\u001d\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u0011\u001a\u00020\f¢\u0006\u0004\b\u0013\u0010\u0014R\u0017\u0010\u0002\u001a\u00020\u00018\u0006¢\u0006\f\n\u0004\b\u0015\u0010\u0016\u001a\u0004\b\u0017\u0010\u0018R\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b\u0019\u0010\u001a\u001a\u0004\b\u001b\u0010\u001cR\u001c\u0010\u0005\u001a\u0004\u0018\u00010\u00018\u0010X\u0090\u0004¢\u0006\f\n\u0004\b\u001d\u0010\u0016\u001a\u0004\b\u001e\u0010\u0018R\u001a\u0010\u0007\u001a\u00020\u00068\u0010X\u0090\u0004¢\u0006\f\n\u0004\b\u001f\u0010 \u001a\u0004\b!\u0010\"R\u0017\u0010\t\u001a\u00020\b8\u0006¢\u0006\f\n\u0004\b#\u0010$\u001a\u0004\b%\u0010&R \u0010-\u001a\b\u0012\u0004\u0012\u00020(0'8PX\u0090\u0004¢\u0006\f\u0012\u0004\b+\u0010,\u001a\u0004\b)\u0010*¨\u0006."}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$CaptureTransition;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "nextState", "Lkn/a;", "completedPose", "backState", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "cameraFacingMode", "", "isFlashOn", "<init>", "(Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lkn/a;Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/camera/CameraProperties$b;Z)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "b", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "A", "()Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "c", "Lkn/a;", "z", "()Lkn/a;", "d", "u", "e", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "v", "()Lcom/withpersona/sdk2/camera/CameraProperties$b;", "f", "Z", "C", "()Z", "", "Lcom/withpersona/sdk2/inquiry/selfie/Selfie;", "w", "()Ljava/util/List;", "getSelfies$selfie_release$annotations", "()V", "selfies", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0014\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0006\b\u0007\u0018\u00002\u00020\u0001B1\u0012\u0006\u0010\u0002\u001a\u00020\u0001\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0001\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b¢\u0006\u0004\b\n\u0010\u000bJ\r\u0010\r\u001a\u00020\f¢\u0006\u0004\b\r\u0010\u000eJ\u001d\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u0011\u001a\u00020\f¢\u0006\u0004\b\u0013\u0010\u0014R\u0017\u0010\u0002\u001a\u00020\u00018\u0006¢\u0006\f\n\u0004\b\u0015\u0010\u0016\u001a\u0004\b\u0017\u0010\u0018R\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b\u0019\u0010\u001a\u001a\u0004\b\u001b\u0010\u001cR\u001c\u0010\u0005\u001a\u0004\u0018\u00010\u00018\u0010X\u0090\u0004¢\u0006\f\n\u0004\b\u001d\u0010\u0016\u001a\u0004\b\u001e\u0010\u0018R\u001a\u0010\u0007\u001a\u00020\u00068\u0010X\u0090\u0004¢\u0006\f\n\u0004\b\u001f\u0010 \u001a\u0004\b!\u0010\"R\u0017\u0010\t\u001a\u00020\b8\u0006¢\u0006\f\n\u0004\b#\u0010$\u001a\u0004\b%\u0010&R \u0010-\u001a\b\u0012\u0004\u0012\u00020(0'8PX\u0090\u0004¢\u0006\f\u0012\u0004\b+\u0010,\u001a\u0004\b)\u0010*¨\u0006."}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$CaptureTransition;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "nextState", "Lin/a;", "completedPose", "backState", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "cameraFacingMode", "", "isFlashOn", "<init>", "(Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lin/a;Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/camera/CameraProperties$b;Z)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "b", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "B", "()Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "c", "Lin/a;", "z", "()Lin/a;", "d", "u", "e", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "v", "()Lcom/withpersona/sdk2/camera/CameraProperties$b;", "f", "Z", "C", "()Z", "", "Lcom/withpersona/sdk2/inquiry/selfie/Selfie;", "w", "()Ljava/util/List;", "getSelfies$selfie_release$annotations", "()V", "selfies", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class CaptureTransition extends SelfieState {
 
         @NotNull
@@ -296,7 +296,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
         @NotNull
-        public final kn.a completedPose;
+        public final in.a completedPose;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
         @Nullable
@@ -315,7 +315,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
             /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
             public final CaptureTransition createFromParcel(Parcel parcel) {
                 Intrinsics.checkNotNullParameter(parcel, "parcel");
-                return new CaptureTransition((SelfieState) parcel.readParcelable(CaptureTransition.class.getClassLoader()), kn.a.valueOf(parcel.readString()), (SelfieState) parcel.readParcelable(CaptureTransition.class.getClassLoader()), CameraProperties.b.valueOf(parcel.readString()), parcel.readInt() != 0);
+                return new CaptureTransition((SelfieState) parcel.readParcelable(CaptureTransition.class.getClassLoader()), in.a.valueOf(parcel.readString()), (SelfieState) parcel.readParcelable(CaptureTransition.class.getClassLoader()), CameraProperties.b.valueOf(parcel.readString()), parcel.readInt() != 0);
             }
 
             @Override // android.os.Parcelable.Creator
@@ -326,7 +326,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public CaptureTransition(@NotNull SelfieState nextState, @NotNull kn.a completedPose, @Nullable SelfieState selfieState, @NotNull CameraProperties.b cameraFacingMode, boolean z10) {
+        public CaptureTransition(@NotNull SelfieState nextState, @NotNull in.a completedPose, @Nullable SelfieState selfieState, @NotNull CameraProperties.b cameraFacingMode, boolean z10) {
             super(null);
             Intrinsics.checkNotNullParameter(nextState, "nextState");
             Intrinsics.checkNotNullParameter(completedPose, "completedPose");
@@ -339,7 +339,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         }
 
         @NotNull
-        /* JADX INFO: renamed from: A, reason: from getter */
+        /* JADX INFO: renamed from: B, reason: from getter */
         public final SelfieState getNextState() {
             return this.nextState;
         }
@@ -386,12 +386,12 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         @NotNull
         /* JADX INFO: renamed from: z, reason: from getter */
-        public final kn.a getCompletedPose() {
+        public final in.a getCompletedPose() {
             return this.completedPose;
         }
     }
 
-    @Metadata(d1 = {"\u0000l\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0002\b)\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0087\b\u0018\u00002\u00020\u00012\u00020\u0002Bu\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0005\u0012\u0006\u0010\b\u001a\u00020\u0007\u0012\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t\u0012\u0006\u0010\r\u001a\u00020\f\u0012\b\b\u0002\u0010\u000f\u001a\u00020\u000e\u0012\u0006\u0010\u0010\u001a\u00020\f\u0012\b\u0010\u0011\u001a\u0004\u0018\u00010\u0001\u0012\u0006\u0010\u0013\u001a\u00020\u0012\u0012\u0006\u0010\u0015\u001a\u00020\u0014\u0012\u0006\u0010\u0016\u001a\u00020\u000e\u0012\u0006\u0010\u0017\u001a\u00020\u000e¢\u0006\u0004\b\u0018\u0010\u0019J\r\u0010\u001a\u001a\u00020\u0003¢\u0006\u0004\b\u001a\u0010\u001bJ\u001d\u0010 \u001a\u00020\u001f2\u0006\u0010\u001d\u001a\u00020\u001c2\u0006\u0010\u001e\u001a\u00020\u0003¢\u0006\u0004\b \u0010!J\u0092\u0001\u0010\"\u001a\u00020\u00002\b\b\u0002\u0010\u0004\u001a\u00020\u00032\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u00052\b\b\u0002\u0010\b\u001a\u00020\u00072\u000e\b\u0002\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t2\b\b\u0002\u0010\r\u001a\u00020\f2\b\b\u0002\u0010\u000f\u001a\u00020\u000e2\b\b\u0002\u0010\u0010\u001a\u00020\f2\n\b\u0002\u0010\u0011\u001a\u0004\u0018\u00010\u00012\b\b\u0002\u0010\u0013\u001a\u00020\u00122\b\b\u0002\u0010\u0015\u001a\u00020\u00142\b\b\u0002\u0010\u0016\u001a\u00020\u000e2\b\b\u0002\u0010\u0017\u001a\u00020\u000eHÆ\u0001¢\u0006\u0004\b\"\u0010#J\u0010\u0010%\u001a\u00020$HÖ\u0001¢\u0006\u0004\b%\u0010&J\u0010\u0010'\u001a\u00020\u0003HÖ\u0001¢\u0006\u0004\b'\u0010\u001bJ\u001a\u0010*\u001a\u00020\u000e2\b\u0010)\u001a\u0004\u0018\u00010(HÖ\u0003¢\u0006\u0004\b*\u0010+R\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b,\u0010-\u001a\u0004\b.\u0010\u001bR\u0019\u0010\u0006\u001a\u0004\u0018\u00010\u00058\u0006¢\u0006\f\n\u0004\b/\u00100\u001a\u0004\b1\u00102R\u001a\u0010\b\u001a\u00020\u00078\u0016X\u0096\u0004¢\u0006\f\n\u0004\b3\u00104\u001a\u0004\b5\u00106R \u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b7\u00108\u001a\u0004\b9\u0010:R\u001a\u0010\r\u001a\u00020\f8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b;\u0010<\u001a\u0004\b=\u0010>R\u001a\u0010\u000f\u001a\u00020\u000e8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b9\u0010?\u001a\u0004\b;\u0010@R\u001a\u0010\u0010\u001a\u00020\f8\u0016X\u0096\u0004¢\u0006\f\n\u0004\bA\u0010<\u001a\u0004\bB\u0010>R\u001c\u0010\u0011\u001a\u0004\u0018\u00010\u00018\u0010X\u0090\u0004¢\u0006\f\n\u0004\bC\u0010D\u001a\u0004\bE\u0010FR\u001a\u0010\u0013\u001a\u00020\u00128\u0016X\u0096\u0004¢\u0006\f\n\u0004\bG\u0010H\u001a\u0004\bC\u0010IR\u001a\u0010\u0015\u001a\u00020\u00148\u0010X\u0090\u0004¢\u0006\f\n\u0004\bJ\u0010K\u001a\u0004\bL\u0010MR\u001a\u0010\u0016\u001a\u00020\u000e8\u0016X\u0096\u0004¢\u0006\f\n\u0004\bN\u0010?\u001a\u0004\bO\u0010@R\u0017\u0010\u0017\u001a\u00020\u000e8\u0006¢\u0006\f\n\u0004\bP\u0010?\u001a\u0004\bQ\u0010@R&\u0010V\u001a\b\u0012\u0004\u0012\u00020R0\t8\u0010X\u0090\u0004¢\u0006\u0012\n\u0004\b=\u00108\u0012\u0004\bT\u0010U\u001a\u0004\bS\u0010:¨\u0006W"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$CountdownToManualCapture;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "Lcom/withpersona/sdk2/inquiry/selfie/b;", "", "countDown", "Lkn/b;", "selfieError", "Lcom/withpersona/sdk2/camera/CameraProperties;", "cameraProperties", "", "Lcom/withpersona/sdk2/inquiry/selfie/pose/PoseInfo;", "posesNeeded", "", "startCaptureTimestamp", "", "autoCaptureSupported", "startSelfieTimestamp", "backState", "Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "poseConfigs", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "cameraFacingMode", "isFlashEnabled", "isDimLightConditions", "<init>", "(ILkn/b;Lcom/withpersona/sdk2/camera/CameraProperties;Ljava/util/List;JZJLcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;Lcom/withpersona/sdk2/camera/CameraProperties$b;ZZ)V", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "z", "(ILkn/b;Lcom/withpersona/sdk2/camera/CameraProperties;Ljava/util/List;JZJLcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;Lcom/withpersona/sdk2/camera/CameraProperties$b;ZZ)Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$CountdownToManualCapture;", "", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "equals", "(Ljava/lang/Object;)Z", "b", "I", "C", "c", "Lkn/b;", "D", "()Lkn/b;", "d", "Lcom/withpersona/sdk2/camera/CameraProperties;", "a", "()Lcom/withpersona/sdk2/camera/CameraProperties;", "e", "Ljava/util/List;", "g", "()Ljava/util/List;", "f", "J", "n", "()J", "Z", "()Z", "h", "t", "i", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "u", "()Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "j", "Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "()Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "k", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "v", "()Lcom/withpersona/sdk2/camera/CameraProperties$b;", "l", "s", "m", "E", "Lcom/withpersona/sdk2/inquiry/selfie/Selfie;", "w", "getSelfies$selfie_release$annotations", "()V", "selfies", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000l\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0002\b)\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0087\b\u0018\u00002\u00020\u00012\u00020\u0002Bu\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0005\u0012\u0006\u0010\b\u001a\u00020\u0007\u0012\f\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t\u0012\u0006\u0010\r\u001a\u00020\f\u0012\b\b\u0002\u0010\u000f\u001a\u00020\u000e\u0012\u0006\u0010\u0010\u001a\u00020\f\u0012\b\u0010\u0011\u001a\u0004\u0018\u00010\u0001\u0012\u0006\u0010\u0013\u001a\u00020\u0012\u0012\u0006\u0010\u0015\u001a\u00020\u0014\u0012\u0006\u0010\u0016\u001a\u00020\u000e\u0012\u0006\u0010\u0017\u001a\u00020\u000e¢\u0006\u0004\b\u0018\u0010\u0019J\r\u0010\u001a\u001a\u00020\u0003¢\u0006\u0004\b\u001a\u0010\u001bJ\u001d\u0010 \u001a\u00020\u001f2\u0006\u0010\u001d\u001a\u00020\u001c2\u0006\u0010\u001e\u001a\u00020\u0003¢\u0006\u0004\b \u0010!J\u0092\u0001\u0010\"\u001a\u00020\u00002\b\b\u0002\u0010\u0004\u001a\u00020\u00032\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u00052\b\b\u0002\u0010\b\u001a\u00020\u00072\u000e\b\u0002\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t2\b\b\u0002\u0010\r\u001a\u00020\f2\b\b\u0002\u0010\u000f\u001a\u00020\u000e2\b\b\u0002\u0010\u0010\u001a\u00020\f2\n\b\u0002\u0010\u0011\u001a\u0004\u0018\u00010\u00012\b\b\u0002\u0010\u0013\u001a\u00020\u00122\b\b\u0002\u0010\u0015\u001a\u00020\u00142\b\b\u0002\u0010\u0016\u001a\u00020\u000e2\b\b\u0002\u0010\u0017\u001a\u00020\u000eHÆ\u0001¢\u0006\u0004\b\"\u0010#J\u0010\u0010%\u001a\u00020$HÖ\u0001¢\u0006\u0004\b%\u0010&J\u0010\u0010'\u001a\u00020\u0003HÖ\u0001¢\u0006\u0004\b'\u0010\u001bJ\u001a\u0010*\u001a\u00020\u000e2\b\u0010)\u001a\u0004\u0018\u00010(HÖ\u0003¢\u0006\u0004\b*\u0010+R\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b,\u0010-\u001a\u0004\b.\u0010\u001bR\u0019\u0010\u0006\u001a\u0004\u0018\u00010\u00058\u0006¢\u0006\f\n\u0004\b/\u00100\u001a\u0004\b1\u00102R\u001a\u0010\b\u001a\u00020\u00078\u0016X\u0096\u0004¢\u0006\f\n\u0004\b3\u00104\u001a\u0004\b5\u00106R \u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b7\u00108\u001a\u0004\b9\u0010:R\u001a\u0010\r\u001a\u00020\f8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b;\u0010<\u001a\u0004\b=\u0010>R\u001a\u0010\u000f\u001a\u00020\u000e8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b9\u0010?\u001a\u0004\b;\u0010@R\u001a\u0010\u0010\u001a\u00020\f8\u0016X\u0096\u0004¢\u0006\f\n\u0004\bA\u0010<\u001a\u0004\bB\u0010>R\u001c\u0010\u0011\u001a\u0004\u0018\u00010\u00018\u0010X\u0090\u0004¢\u0006\f\n\u0004\bC\u0010D\u001a\u0004\bE\u0010FR\u001a\u0010\u0013\u001a\u00020\u00128\u0016X\u0096\u0004¢\u0006\f\n\u0004\bG\u0010H\u001a\u0004\bC\u0010IR\u001a\u0010\u0015\u001a\u00020\u00148\u0010X\u0090\u0004¢\u0006\f\n\u0004\bJ\u0010K\u001a\u0004\bL\u0010MR\u001a\u0010\u0016\u001a\u00020\u000e8\u0016X\u0096\u0004¢\u0006\f\n\u0004\bN\u0010?\u001a\u0004\bO\u0010@R\u0017\u0010\u0017\u001a\u00020\u000e8\u0006¢\u0006\f\n\u0004\bP\u0010?\u001a\u0004\bQ\u0010@R&\u0010V\u001a\b\u0012\u0004\u0012\u00020R0\t8\u0010X\u0090\u0004¢\u0006\u0012\n\u0004\b=\u00108\u0012\u0004\bT\u0010U\u001a\u0004\bS\u0010:¨\u0006W"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$CountdownToManualCapture;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "Lcom/withpersona/sdk2/inquiry/selfie/b;", "", "countDown", "Lin/b;", "selfieError", "Lcom/withpersona/sdk2/camera/CameraProperties;", "cameraProperties", "", "Lcom/withpersona/sdk2/inquiry/selfie/pose/PoseInfo;", "posesNeeded", "", "startCaptureTimestamp", "", "autoCaptureSupported", "startSelfieTimestamp", "backState", "Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "poseConfigs", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "cameraFacingMode", "isFlashEnabled", "isDimLightConditions", "<init>", "(ILin/b;Lcom/withpersona/sdk2/camera/CameraProperties;Ljava/util/List;JZJLcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;Lcom/withpersona/sdk2/camera/CameraProperties$b;ZZ)V", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "z", "(ILin/b;Lcom/withpersona/sdk2/camera/CameraProperties;Ljava/util/List;JZJLcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;Lcom/withpersona/sdk2/camera/CameraProperties$b;ZZ)Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$CountdownToManualCapture;", "", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "equals", "(Ljava/lang/Object;)Z", "b", "I", "C", "c", "Lin/b;", "D", "()Lin/b;", "d", "Lcom/withpersona/sdk2/camera/CameraProperties;", "a", "()Lcom/withpersona/sdk2/camera/CameraProperties;", "e", "Ljava/util/List;", "g", "()Ljava/util/List;", "f", "J", "n", "()J", "Z", "()Z", "h", "t", "i", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "u", "()Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "j", "Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "()Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "k", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "v", "()Lcom/withpersona/sdk2/camera/CameraProperties$b;", "l", "s", "m", "E", "Lcom/withpersona/sdk2/inquiry/selfie/Selfie;", "w", "getSelfies$selfie_release$annotations", "()V", "selfies", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final /* data */ class CountdownToManualCapture extends SelfieState implements b {
 
         @NotNull
@@ -402,7 +402,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata and from toString */
         @Nullable
-        public final kn.b selfieError;
+        public final in.b selfieError;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata and from toString */
         @NotNull
@@ -453,7 +453,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
                 boolean z12;
                 Intrinsics.checkNotNullParameter(parcel, "parcel");
                 int i10 = parcel.readInt();
-                kn.b bVarValueOf = parcel.readInt() == 0 ? null : kn.b.valueOf(parcel.readString());
+                in.b bVarValueOf = parcel.readInt() == 0 ? null : in.b.valueOf(parcel.readString());
                 CameraProperties cameraProperties = (CameraProperties) parcel.readParcelable(CountdownToManualCapture.class.getClassLoader());
                 int i11 = parcel.readInt();
                 ArrayList arrayList = new ArrayList(i11);
@@ -480,7 +480,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
             }
         }
 
-        public /* synthetic */ CountdownToManualCapture(int i10, kn.b bVar, CameraProperties cameraProperties, List list, long j10, boolean z10, long j11, SelfieState selfieState, PoseConfigs poseConfigs, CameraProperties.b bVar2, boolean z11, boolean z12, int i11, DefaultConstructorMarker defaultConstructorMarker) {
+        public /* synthetic */ CountdownToManualCapture(int i10, in.b bVar, CameraProperties cameraProperties, List list, long j10, boolean z10, long j11, SelfieState selfieState, PoseConfigs poseConfigs, CameraProperties.b bVar2, boolean z11, boolean z12, int i11, DefaultConstructorMarker defaultConstructorMarker) {
             this(i10, (i11 & 2) != 0 ? null : bVar, cameraProperties, list, j10, (i11 & 32) != 0 ? true : z10, j11, selfieState, poseConfigs, bVar2, z11, z12);
         }
 
@@ -491,7 +491,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         @Nullable
         /* JADX INFO: renamed from: D, reason: from getter */
-        public final kn.b getSelfieError() {
+        public final in.b getSelfieError() {
             return this.selfieError;
         }
 
@@ -537,7 +537,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         public int hashCode() {
             int iHashCode = Integer.hashCode(this.countDown) * 31;
-            kn.b bVar = this.selfieError;
+            in.b bVar = this.selfieError;
             int iHashCode2 = (((((((((((iHashCode + (bVar == null ? 0 : bVar.hashCode())) * 31) + this.cameraProperties.hashCode()) * 31) + this.posesNeeded.hashCode()) * 31) + Long.hashCode(this.startCaptureTimestamp)) * 31) + Boolean.hashCode(this.autoCaptureSupported)) * 31) + Long.hashCode(this.startSelfieTimestamp)) * 31;
             SelfieState selfieState = this.backState;
             return ((((((((iHashCode2 + (selfieState != null ? selfieState.hashCode() : 0)) * 31) + this.poseConfigs.hashCode()) * 31) + this.cameraFacingMode.hashCode()) * 31) + Boolean.hashCode(this.isFlashEnabled)) * 31) + Boolean.hashCode(this.isDimLightConditions);
@@ -552,7 +552,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         @Override // com.withpersona.sdk2.inquiry.selfie.a
         @NotNull
-        public kn.a j() {
+        public in.a j() {
             return super.j();
         }
 
@@ -564,7 +564,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         @Override // com.withpersona.sdk2.inquiry.selfie.a
         @Nullable
-        public kn.a m() {
+        public in.a m() {
             return super.m();
         }
 
@@ -626,7 +626,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         public final void writeToParcel(@NotNull Parcel dest, int flags) {
             Intrinsics.checkNotNullParameter(dest, "dest");
             dest.writeInt(this.countDown);
-            kn.b bVar = this.selfieError;
+            in.b bVar = this.selfieError;
             if (bVar == null) {
                 dest.writeInt(0);
             } else {
@@ -651,7 +651,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         }
 
         @NotNull
-        public final CountdownToManualCapture z(int countDown, @Nullable kn.b selfieError, @NotNull CameraProperties cameraProperties, @NotNull List<PoseInfo> posesNeeded, long startCaptureTimestamp, boolean autoCaptureSupported, long startSelfieTimestamp, @Nullable SelfieState backState, @NotNull PoseConfigs poseConfigs, @NotNull CameraProperties.b cameraFacingMode, boolean isFlashEnabled, boolean isDimLightConditions) {
+        public final CountdownToManualCapture z(int countDown, @Nullable in.b selfieError, @NotNull CameraProperties cameraProperties, @NotNull List<PoseInfo> posesNeeded, long startCaptureTimestamp, boolean autoCaptureSupported, long startSelfieTimestamp, @Nullable SelfieState backState, @NotNull PoseConfigs poseConfigs, @NotNull CameraProperties.b cameraFacingMode, boolean isFlashEnabled, boolean isDimLightConditions) {
             Intrinsics.checkNotNullParameter(cameraProperties, "cameraProperties");
             Intrinsics.checkNotNullParameter(posesNeeded, "posesNeeded");
             Intrinsics.checkNotNullParameter(poseConfigs, "poseConfigs");
@@ -660,7 +660,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public CountdownToManualCapture(int i10, @Nullable kn.b bVar, @NotNull CameraProperties cameraProperties, @NotNull List<PoseInfo> posesNeeded, long j10, boolean z10, long j11, @Nullable SelfieState selfieState, @NotNull PoseConfigs poseConfigs, @NotNull CameraProperties.b cameraFacingMode, boolean z11, boolean z12) {
+        public CountdownToManualCapture(int i10, @Nullable in.b bVar, @NotNull CameraProperties cameraProperties, @NotNull List<PoseInfo> posesNeeded, long j10, boolean z10, long j11, @Nullable SelfieState selfieState, @NotNull PoseConfigs poseConfigs, @NotNull CameraProperties.b cameraFacingMode, boolean z11, boolean z12) {
             super(null);
             Intrinsics.checkNotNullParameter(cameraProperties, "cameraProperties");
             Intrinsics.checkNotNullParameter(posesNeeded, "posesNeeded");
@@ -752,7 +752,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        public static /* synthetic */ FinalizeLocalVideoCapture A(FinalizeLocalVideoCapture finalizeLocalVideoCapture, List list, long j10, boolean z10, boolean z11, CameraProperties cameraProperties, long j11, SelfieState selfieState, CameraProperties.b bVar, int i10, Object obj) {
+        public static /* synthetic */ FinalizeLocalVideoCapture B(FinalizeLocalVideoCapture finalizeLocalVideoCapture, List list, long j10, boolean z10, boolean z11, CameraProperties cameraProperties, long j11, SelfieState selfieState, CameraProperties.b bVar, int i10, Object obj) {
             if ((i10 & 1) != 0) {
                 list = finalizeLocalVideoCapture.selfies;
             }
@@ -1124,7 +1124,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         }
     }
 
-    @Metadata(d1 = {"\u0000H\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u001d\b\u0007\u0018\u00002\u00020\u0001BO\u0012\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00030\u0002\u0012\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00030\u0002\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0006\u0012\u0006\u0010\t\u001a\u00020\b\u0012\u0006\u0010\u000b\u001a\u00020\n\u0012\b\u0010\f\u001a\u0004\u0018\u00010\u0001\u0012\u0006\u0010\u000e\u001a\u00020\r¢\u0006\u0004\b\u000f\u0010\u0010J\r\u0010\u0012\u001a\u00020\u0011¢\u0006\u0004\b\u0012\u0010\u0013J\u001d\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u0015\u001a\u00020\u00142\u0006\u0010\u0016\u001a\u00020\u0011¢\u0006\u0004\b\u0018\u0010\u0019R \u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00030\u00028\u0010X\u0090\u0004¢\u0006\f\n\u0004\b\u001a\u0010\u001b\u001a\u0004\b\u001c\u0010\u001dR\u001d\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00030\u00028\u0006¢\u0006\f\n\u0004\b\u001e\u0010\u001b\u001a\u0004\b\u001f\u0010\u001dR\u0019\u0010\u0007\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\b \u0010!\u001a\u0004\b\"\u0010#R\u0017\u0010\t\u001a\u00020\b8\u0006¢\u0006\f\n\u0004\b$\u0010%\u001a\u0004\b&\u0010'R\u0017\u0010\u000b\u001a\u00020\n8\u0006¢\u0006\f\n\u0004\b(\u0010)\u001a\u0004\b*\u0010+R\u001c\u0010\f\u001a\u0004\u0018\u00010\u00018\u0010X\u0090\u0004¢\u0006\f\n\u0004\b,\u0010-\u001a\u0004\b.\u0010/R\u001a\u0010\u000e\u001a\u00020\r8\u0010X\u0090\u0004¢\u0006\f\n\u0004\b0\u00101\u001a\u0004\b2\u00103¨\u00064"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$ReviewCaptures;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "", "Lcom/withpersona/sdk2/inquiry/selfie/Selfie;", "selfies", "selfiesToReview", "", "webRtcObjectId", "Lcom/withpersona/sdk2/camera/CameraProperties;", "cameraProperties", "", "startSelfieTimestamp", "backState", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "cameraFacingMode", "<init>", "(Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lcom/withpersona/sdk2/camera/CameraProperties;JLcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/camera/CameraProperties$b;)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "b", "Ljava/util/List;", "w", "()Ljava/util/List;", "c", "z", "d", "Ljava/lang/String;", "A", "()Ljava/lang/String;", "e", "Lcom/withpersona/sdk2/camera/CameraProperties;", "a", "()Lcom/withpersona/sdk2/camera/CameraProperties;", "f", "J", "t", "()J", "g", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "u", "()Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "h", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "v", "()Lcom/withpersona/sdk2/camera/CameraProperties$b;", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000H\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u001d\b\u0007\u0018\u00002\u00020\u0001BO\u0012\f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00030\u0002\u0012\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00030\u0002\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\u0006\u0012\u0006\u0010\t\u001a\u00020\b\u0012\u0006\u0010\u000b\u001a\u00020\n\u0012\b\u0010\f\u001a\u0004\u0018\u00010\u0001\u0012\u0006\u0010\u000e\u001a\u00020\r¢\u0006\u0004\b\u000f\u0010\u0010J\r\u0010\u0012\u001a\u00020\u0011¢\u0006\u0004\b\u0012\u0010\u0013J\u001d\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u0015\u001a\u00020\u00142\u0006\u0010\u0016\u001a\u00020\u0011¢\u0006\u0004\b\u0018\u0010\u0019R \u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00030\u00028\u0010X\u0090\u0004¢\u0006\f\n\u0004\b\u001a\u0010\u001b\u001a\u0004\b\u001c\u0010\u001dR\u001d\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00030\u00028\u0006¢\u0006\f\n\u0004\b\u001e\u0010\u001b\u001a\u0004\b\u001f\u0010\u001dR\u0019\u0010\u0007\u001a\u0004\u0018\u00010\u00068\u0006¢\u0006\f\n\u0004\b \u0010!\u001a\u0004\b\"\u0010#R\u0017\u0010\t\u001a\u00020\b8\u0006¢\u0006\f\n\u0004\b$\u0010%\u001a\u0004\b&\u0010'R\u0017\u0010\u000b\u001a\u00020\n8\u0006¢\u0006\f\n\u0004\b(\u0010)\u001a\u0004\b*\u0010+R\u001c\u0010\f\u001a\u0004\u0018\u00010\u00018\u0010X\u0090\u0004¢\u0006\f\n\u0004\b,\u0010-\u001a\u0004\b.\u0010/R\u001a\u0010\u000e\u001a\u00020\r8\u0010X\u0090\u0004¢\u0006\f\n\u0004\b0\u00101\u001a\u0004\b2\u00103¨\u00064"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$ReviewCaptures;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "", "Lcom/withpersona/sdk2/inquiry/selfie/Selfie;", "selfies", "selfiesToReview", "", "webRtcObjectId", "Lcom/withpersona/sdk2/camera/CameraProperties;", "cameraProperties", "", "startSelfieTimestamp", "backState", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "cameraFacingMode", "<init>", "(Ljava/util/List;Ljava/util/List;Ljava/lang/String;Lcom/withpersona/sdk2/camera/CameraProperties;JLcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/camera/CameraProperties$b;)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "b", "Ljava/util/List;", "w", "()Ljava/util/List;", "c", "z", "d", "Ljava/lang/String;", "B", "()Ljava/lang/String;", "e", "Lcom/withpersona/sdk2/camera/CameraProperties;", "a", "()Lcom/withpersona/sdk2/camera/CameraProperties;", "f", "J", "t", "()J", "g", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "u", "()Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "h", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "v", "()Lcom/withpersona/sdk2/camera/CameraProperties$b;", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class ReviewCaptures extends SelfieState {
 
         @NotNull
@@ -1201,7 +1201,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         }
 
         @Nullable
-        /* JADX INFO: renamed from: A, reason: from getter */
+        /* JADX INFO: renamed from: B, reason: from getter */
         public final String getWebRtcObjectId() {
             return this.webRtcObjectId;
         }
@@ -1356,7 +1356,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        public static /* synthetic */ ShowPoseHint A(ShowPoseHint showPoseHint, List list, List list2, boolean z10, CameraProperties cameraProperties, long j10, SelfieState selfieState, PoseConfigs poseConfigs, CameraProperties.b bVar, boolean z11, int i10, Object obj) {
+        public static /* synthetic */ ShowPoseHint B(ShowPoseHint showPoseHint, List list, List list2, boolean z10, CameraProperties cameraProperties, long j10, SelfieState selfieState, PoseConfigs poseConfigs, CameraProperties.b bVar, boolean z11, int i10, Object obj) {
             if ((i10 & 1) != 0) {
                 list = showPoseHint.selfies;
             }
@@ -1440,13 +1440,13 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         @Override // com.withpersona.sdk2.inquiry.selfie.a
         @NotNull
-        public kn.a j() {
+        public in.a j() {
             return super.j();
         }
 
         @Override // com.withpersona.sdk2.inquiry.selfie.a
         @Nullable
-        public kn.a m() {
+        public in.a m() {
             return super.m();
         }
 
@@ -1703,7 +1703,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         @Override // com.withpersona.sdk2.inquiry.selfie.a
         @NotNull
-        public kn.a j() {
+        public in.a j() {
             return super.j();
         }
 
@@ -1715,7 +1715,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         @Override // com.withpersona.sdk2.inquiry.selfie.a
         @Nullable
-        public kn.a m() {
+        public in.a m() {
             return super.m();
         }
 
@@ -1868,7 +1868,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        public static /* synthetic */ Submit A(Submit submit, List list, String str, CameraProperties cameraProperties, long j10, SelfieState selfieState, CameraProperties.b bVar, int i10, InternalErrorInfo internalErrorInfo, int i11, Object obj) {
+        public static /* synthetic */ Submit B(Submit submit, List list, String str, CameraProperties cameraProperties, long j10, SelfieState selfieState, CameraProperties.b bVar, int i10, InternalErrorInfo internalErrorInfo, int i11, Object obj) {
             if ((i11 & 1) != 0) {
                 list = submit.selfies;
             }
@@ -2088,7 +2088,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        public static /* synthetic */ WaitForCameraFeed A(WaitForCameraFeed waitForCameraFeed, boolean z10, boolean z11, SelfieState selfieState, List list, PoseConfigs poseConfigs, boolean z12, CameraProperties.b bVar, boolean z13, int i10, Object obj) {
+        public static /* synthetic */ WaitForCameraFeed B(WaitForCameraFeed waitForCameraFeed, boolean z10, boolean z11, SelfieState selfieState, List list, PoseConfigs poseConfigs, boolean z12, CameraProperties.b bVar, boolean z13, int i10, Object obj) {
             if ((i10 & 1) != 0) {
                 z10 = waitForCameraFeed.hasRequestedCameraPermissions;
             }
@@ -2324,7 +2324,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         }
 
         /* JADX WARN: Multi-variable type inference failed */
-        public static /* synthetic */ WaitForWebRtcSetup A(WaitForWebRtcSetup waitForWebRtcSetup, String str, CameraProperties cameraProperties, long j10, SelfieState selfieState, List list, PoseConfigs poseConfigs, boolean z10, CameraProperties.b bVar, boolean z11, int i10, Object obj) {
+        public static /* synthetic */ WaitForWebRtcSetup B(WaitForWebRtcSetup waitForWebRtcSetup, String str, CameraProperties cameraProperties, long j10, SelfieState selfieState, List list, PoseConfigs poseConfigs, boolean z10, CameraProperties.b bVar, boolean z11, int i10, Object obj) {
             if ((i10 & 1) != 0) {
                 str = waitForWebRtcSetup.webRtcJwt;
             }
@@ -2415,13 +2415,13 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         @Override // com.withpersona.sdk2.inquiry.selfie.a
         @NotNull
-        public kn.a j() {
+        public in.a j() {
             return super.j();
         }
 
         @Override // com.withpersona.sdk2.inquiry.selfie.a
         @Nullable
-        public kn.a m() {
+        public in.a m() {
             return super.m();
         }
 
@@ -2625,7 +2625,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public static final /* synthetic */ qt.a f12561f = qt.b.a(a());
+        public static final /* synthetic */ ot.a f12642f = ot.b.a(a());
     }
 
     public /* synthetic */ SelfieState(DefaultConstructorMarker defaultConstructorMarker) {
@@ -2643,11 +2643,11 @@ public abstract class SelfieState extends SimpleWorkflowState {
     @NotNull
     public abstract List<Selfie> w();
 
-    public final void x(boolean z10) {
+    public final void y(boolean z10) {
         this.didGoBack = z10;
     }
 
-    @Metadata(d1 = {"\u0000x\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0007\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0002\b2\b\u0087\b\u0018\u00002\u00020\u00012\u00020\u0002B\u0095\u0001\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0005\u0012\u0006\u0010\b\u001a\u00020\u0007\u0012\u0006\u0010\n\u001a\u00020\t\u0012\u0006\u0010\u000b\u001a\u00020\u0007\u0012\u0006\u0010\r\u001a\u00020\f\u0012\b\u0010\u000f\u001a\u0004\u0018\u00010\u000e\u0012\f\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u00110\u0010\u0012\u000e\b\u0002\u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\u00130\u0010\u0012\b\u0010\u0015\u001a\u0004\u0018\u00010\u0001\u0012\u0006\u0010\u0017\u001a\u00020\u0016\u0012\u0006\u0010\u0019\u001a\u00020\u0018\u0012\u0006\u0010\u001b\u001a\u00020\u001a\u0012\u0006\u0010\u001c\u001a\u00020\u0018\u0012\u0006\u0010\u001d\u001a\u00020\u0018¢\u0006\u0004\b\u001e\u0010\u001fJ\r\u0010 \u001a\u00020\u0003¢\u0006\u0004\b \u0010!J\u001d\u0010&\u001a\u00020%2\u0006\u0010#\u001a\u00020\"2\u0006\u0010$\u001a\u00020\u0003¢\u0006\u0004\b&\u0010'J¸\u0001\u0010(\u001a\u00020\u00002\b\b\u0002\u0010\u0004\u001a\u00020\u00032\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u00052\b\b\u0002\u0010\b\u001a\u00020\u00072\b\b\u0002\u0010\n\u001a\u00020\t2\b\b\u0002\u0010\u000b\u001a\u00020\u00072\b\b\u0002\u0010\r\u001a\u00020\f2\n\b\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u000e2\u000e\b\u0002\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u00110\u00102\u000e\b\u0002\u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\u00130\u00102\n\b\u0002\u0010\u0015\u001a\u0004\u0018\u00010\u00012\b\b\u0002\u0010\u0017\u001a\u00020\u00162\b\b\u0002\u0010\u0019\u001a\u00020\u00182\b\b\u0002\u0010\u001b\u001a\u00020\u001a2\b\b\u0002\u0010\u001c\u001a\u00020\u00182\b\b\u0002\u0010\u001d\u001a\u00020\u0018HÆ\u0001¢\u0006\u0004\b(\u0010)J\u0010\u0010+\u001a\u00020*HÖ\u0001¢\u0006\u0004\b+\u0010,J\u0010\u0010-\u001a\u00020\u0003HÖ\u0001¢\u0006\u0004\b-\u0010!J\u001a\u00100\u001a\u00020\u00182\b\u0010/\u001a\u0004\u0018\u00010.HÖ\u0003¢\u0006\u0004\b0\u00101R\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b2\u00103\u001a\u0004\b4\u0010!R\u0019\u0010\u0006\u001a\u0004\u0018\u00010\u00058\u0006¢\u0006\f\n\u0004\b5\u00106\u001a\u0004\b7\u00108R\u0017\u0010\b\u001a\u00020\u00078\u0006¢\u0006\f\n\u0004\b9\u0010:\u001a\u0004\b;\u0010<R\u001a\u0010\n\u001a\u00020\t8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b=\u0010>\u001a\u0004\b?\u0010@R\u001a\u0010\u000b\u001a\u00020\u00078\u0016X\u0096\u0004¢\u0006\f\n\u0004\bA\u0010:\u001a\u0004\bB\u0010<R\u0017\u0010\r\u001a\u00020\f8\u0006¢\u0006\f\n\u0004\bC\u0010D\u001a\u0004\bE\u0010FR\u0019\u0010\u000f\u001a\u0004\u0018\u00010\u000e8\u0006¢\u0006\f\n\u0004\bG\u0010H\u001a\u0004\bI\u0010JR \u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u00110\u00108\u0016X\u0096\u0004¢\u0006\f\n\u0004\bK\u0010L\u001a\u0004\bC\u0010MR \u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\u00130\u00108\u0010X\u0090\u0004¢\u0006\f\n\u0004\bN\u0010L\u001a\u0004\bO\u0010MR\u001c\u0010\u0015\u001a\u0004\u0018\u00010\u00018\u0010X\u0090\u0004¢\u0006\f\n\u0004\bP\u0010Q\u001a\u0004\bR\u0010SR\u001a\u0010\u0017\u001a\u00020\u00168\u0016X\u0096\u0004¢\u0006\f\n\u0004\bT\u0010U\u001a\u0004\bK\u0010VR\u001a\u0010\u0019\u001a\u00020\u00188\u0016X\u0096\u0004¢\u0006\f\n\u0004\bW\u0010X\u001a\u0004\bA\u0010YR\u001a\u0010\u001b\u001a\u00020\u001a8\u0010X\u0090\u0004¢\u0006\f\n\u0004\b;\u0010Z\u001a\u0004\b[\u0010\\R\u001a\u0010\u001c\u001a\u00020\u00188\u0016X\u0096\u0004¢\u0006\f\n\u0004\b]\u0010X\u001a\u0004\b^\u0010YR\u0017\u0010\u001d\u001a\u00020\u00188\u0006¢\u0006\f\n\u0004\b_\u0010X\u001a\u0004\b3\u0010Y¨\u0006`"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$CountdownToCapture;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "Lcom/withpersona/sdk2/inquiry/selfie/a;", "", "countDown", "Lkn/b;", "selfieError", "", "startCaptureTimestamp", "Lcom/withpersona/sdk2/camera/CameraProperties;", "cameraProperties", "startSelfieTimestamp", "", "poseScore", "Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "brightnessInfo", "", "Lcom/withpersona/sdk2/inquiry/selfie/pose/PoseInfo;", "posesNeeded", "Lcom/withpersona/sdk2/inquiry/selfie/Selfie;", "selfies", "backState", "Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "poseConfigs", "", "autoCaptureSupported", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "cameraFacingMode", "isFlashEnabled", "isDimLightConditions", "<init>", "(ILkn/b;JLcom/withpersona/sdk2/camera/CameraProperties;JFLcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;Ljava/util/List;Ljava/util/List;Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;ZLcom/withpersona/sdk2/camera/CameraProperties$b;ZZ)V", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "z", "(ILkn/b;JLcom/withpersona/sdk2/camera/CameraProperties;JFLcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;Ljava/util/List;Ljava/util/List;Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;ZLcom/withpersona/sdk2/camera/CameraProperties$b;ZZ)Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$CountdownToCapture;", "", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "equals", "(Ljava/lang/Object;)Z", "b", "I", "D", "c", "Lkn/b;", "G", "()Lkn/b;", "d", "J", "n", "()J", "e", "Lcom/withpersona/sdk2/camera/CameraProperties;", "a", "()Lcom/withpersona/sdk2/camera/CameraProperties;", "f", "t", "g", "F", "E", "()F", "h", "Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "C", "()Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "i", "Ljava/util/List;", "()Ljava/util/List;", "j", "w", "k", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "u", "()Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "l", "Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "()Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "m", "Z", "()Z", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "v", "()Lcom/withpersona/sdk2/camera/CameraProperties$b;", "o", "s", "p", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000x\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0007\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0002\b2\b\u0087\b\u0018\u00002\u00020\u00012\u00020\u0002B\u0095\u0001\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0005\u0012\u0006\u0010\b\u001a\u00020\u0007\u0012\u0006\u0010\n\u001a\u00020\t\u0012\u0006\u0010\u000b\u001a\u00020\u0007\u0012\u0006\u0010\r\u001a\u00020\f\u0012\b\u0010\u000f\u001a\u0004\u0018\u00010\u000e\u0012\f\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u00110\u0010\u0012\u000e\b\u0002\u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\u00130\u0010\u0012\b\u0010\u0015\u001a\u0004\u0018\u00010\u0001\u0012\u0006\u0010\u0017\u001a\u00020\u0016\u0012\u0006\u0010\u0019\u001a\u00020\u0018\u0012\u0006\u0010\u001b\u001a\u00020\u001a\u0012\u0006\u0010\u001c\u001a\u00020\u0018\u0012\u0006\u0010\u001d\u001a\u00020\u0018¢\u0006\u0004\b\u001e\u0010\u001fJ\r\u0010 \u001a\u00020\u0003¢\u0006\u0004\b \u0010!J\u001d\u0010&\u001a\u00020%2\u0006\u0010#\u001a\u00020\"2\u0006\u0010$\u001a\u00020\u0003¢\u0006\u0004\b&\u0010'J¸\u0001\u0010(\u001a\u00020\u00002\b\b\u0002\u0010\u0004\u001a\u00020\u00032\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u00052\b\b\u0002\u0010\b\u001a\u00020\u00072\b\b\u0002\u0010\n\u001a\u00020\t2\b\b\u0002\u0010\u000b\u001a\u00020\u00072\b\b\u0002\u0010\r\u001a\u00020\f2\n\b\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u000e2\u000e\b\u0002\u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u00110\u00102\u000e\b\u0002\u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\u00130\u00102\n\b\u0002\u0010\u0015\u001a\u0004\u0018\u00010\u00012\b\b\u0002\u0010\u0017\u001a\u00020\u00162\b\b\u0002\u0010\u0019\u001a\u00020\u00182\b\b\u0002\u0010\u001b\u001a\u00020\u001a2\b\b\u0002\u0010\u001c\u001a\u00020\u00182\b\b\u0002\u0010\u001d\u001a\u00020\u0018HÆ\u0001¢\u0006\u0004\b(\u0010)J\u0010\u0010+\u001a\u00020*HÖ\u0001¢\u0006\u0004\b+\u0010,J\u0010\u0010-\u001a\u00020\u0003HÖ\u0001¢\u0006\u0004\b-\u0010!J\u001a\u00100\u001a\u00020\u00182\b\u0010/\u001a\u0004\u0018\u00010.HÖ\u0003¢\u0006\u0004\b0\u00101R\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b2\u00103\u001a\u0004\b4\u0010!R\u0019\u0010\u0006\u001a\u0004\u0018\u00010\u00058\u0006¢\u0006\f\n\u0004\b5\u00106\u001a\u0004\b7\u00108R\u0017\u0010\b\u001a\u00020\u00078\u0006¢\u0006\f\n\u0004\b9\u0010:\u001a\u0004\b;\u0010<R\u001a\u0010\n\u001a\u00020\t8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b=\u0010>\u001a\u0004\b?\u0010@R\u001a\u0010\u000b\u001a\u00020\u00078\u0016X\u0096\u0004¢\u0006\f\n\u0004\bA\u0010:\u001a\u0004\bB\u0010<R\u0017\u0010\r\u001a\u00020\f8\u0006¢\u0006\f\n\u0004\bC\u0010D\u001a\u0004\bE\u0010FR\u0019\u0010\u000f\u001a\u0004\u0018\u00010\u000e8\u0006¢\u0006\f\n\u0004\bG\u0010H\u001a\u0004\bI\u0010JR \u0010\u0012\u001a\b\u0012\u0004\u0012\u00020\u00110\u00108\u0016X\u0096\u0004¢\u0006\f\n\u0004\bK\u0010L\u001a\u0004\bC\u0010MR \u0010\u0014\u001a\b\u0012\u0004\u0012\u00020\u00130\u00108\u0010X\u0090\u0004¢\u0006\f\n\u0004\bN\u0010L\u001a\u0004\bO\u0010MR\u001c\u0010\u0015\u001a\u0004\u0018\u00010\u00018\u0010X\u0090\u0004¢\u0006\f\n\u0004\bP\u0010Q\u001a\u0004\bR\u0010SR\u001a\u0010\u0017\u001a\u00020\u00168\u0016X\u0096\u0004¢\u0006\f\n\u0004\bT\u0010U\u001a\u0004\bK\u0010VR\u001a\u0010\u0019\u001a\u00020\u00188\u0016X\u0096\u0004¢\u0006\f\n\u0004\bW\u0010X\u001a\u0004\bA\u0010YR\u001a\u0010\u001b\u001a\u00020\u001a8\u0010X\u0090\u0004¢\u0006\f\n\u0004\b;\u0010Z\u001a\u0004\b[\u0010\\R\u001a\u0010\u001c\u001a\u00020\u00188\u0016X\u0096\u0004¢\u0006\f\n\u0004\b]\u0010X\u001a\u0004\b^\u0010YR\u0017\u0010\u001d\u001a\u00020\u00188\u0006¢\u0006\f\n\u0004\b_\u0010X\u001a\u0004\b3\u0010Y¨\u0006`"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$CountdownToCapture;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "Lcom/withpersona/sdk2/inquiry/selfie/a;", "", "countDown", "Lin/b;", "selfieError", "", "startCaptureTimestamp", "Lcom/withpersona/sdk2/camera/CameraProperties;", "cameraProperties", "startSelfieTimestamp", "", "poseScore", "Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "brightnessInfo", "", "Lcom/withpersona/sdk2/inquiry/selfie/pose/PoseInfo;", "posesNeeded", "Lcom/withpersona/sdk2/inquiry/selfie/Selfie;", "selfies", "backState", "Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "poseConfigs", "", "autoCaptureSupported", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "cameraFacingMode", "isFlashEnabled", "isDimLightConditions", "<init>", "(ILin/b;JLcom/withpersona/sdk2/camera/CameraProperties;JFLcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;Ljava/util/List;Ljava/util/List;Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;ZLcom/withpersona/sdk2/camera/CameraProperties$b;ZZ)V", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "z", "(ILin/b;JLcom/withpersona/sdk2/camera/CameraProperties;JFLcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;Ljava/util/List;Ljava/util/List;Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;ZLcom/withpersona/sdk2/camera/CameraProperties$b;ZZ)Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$CountdownToCapture;", "", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "equals", "(Ljava/lang/Object;)Z", "b", "I", "D", "c", "Lin/b;", "G", "()Lin/b;", "d", "J", "n", "()J", "e", "Lcom/withpersona/sdk2/camera/CameraProperties;", "a", "()Lcom/withpersona/sdk2/camera/CameraProperties;", "f", "t", "g", "F", "E", "()F", "h", "Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "C", "()Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "i", "Ljava/util/List;", "()Ljava/util/List;", "j", "w", "k", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "u", "()Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "l", "Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "()Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "m", "Z", "()Z", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "v", "()Lcom/withpersona/sdk2/camera/CameraProperties$b;", "o", "s", "p", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final /* data */ class CountdownToCapture extends SelfieState implements com.withpersona.sdk2.inquiry.selfie.a {
 
         @NotNull
@@ -2658,7 +2658,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata and from toString */
         @Nullable
-        public final kn.b selfieError;
+        public final in.b selfieError;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata and from toString */
         public final long startCaptureTimestamp;
@@ -2713,7 +2713,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
             public final CountdownToCapture createFromParcel(Parcel parcel) {
                 Intrinsics.checkNotNullParameter(parcel, "parcel");
                 int i10 = parcel.readInt();
-                kn.b bVarValueOf = parcel.readInt() == 0 ? null : kn.b.valueOf(parcel.readString());
+                in.b bVarValueOf = parcel.readInt() == 0 ? null : in.b.valueOf(parcel.readString());
                 long j10 = parcel.readLong();
                 CameraProperties cameraProperties = (CameraProperties) parcel.readParcelable(CountdownToCapture.class.getClassLoader());
                 long j11 = parcel.readLong();
@@ -2739,7 +2739,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
             }
         }
 
-        public /* synthetic */ CountdownToCapture(int i10, kn.b bVar, long j10, CameraProperties cameraProperties, long j11, float f10, SelfieBrightnessInfo selfieBrightnessInfo, List list, List list2, SelfieState selfieState, PoseConfigs poseConfigs, boolean z10, CameraProperties.b bVar2, boolean z11, boolean z12, int i11, DefaultConstructorMarker defaultConstructorMarker) {
+        public /* synthetic */ CountdownToCapture(int i10, in.b bVar, long j10, CameraProperties cameraProperties, long j11, float f10, SelfieBrightnessInfo selfieBrightnessInfo, List list, List list2, SelfieState selfieState, PoseConfigs poseConfigs, boolean z10, CameraProperties.b bVar2, boolean z11, boolean z12, int i11, DefaultConstructorMarker defaultConstructorMarker) {
             this(i10, (i11 & 2) != 0 ? null : bVar, j10, cameraProperties, j11, f10, selfieBrightnessInfo, list, (i11 & Barcode.FORMAT_QR_CODE) != 0 ? kotlin.collections.p.k() : list2, selfieState, poseConfigs, z10, bVar2, z11, z12);
         }
 
@@ -2761,7 +2761,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         @Nullable
         /* JADX INFO: renamed from: G, reason: from getter */
-        public final kn.b getSelfieError() {
+        public final in.b getSelfieError() {
             return this.selfieError;
         }
 
@@ -2807,7 +2807,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         public int hashCode() {
             int iHashCode = Integer.hashCode(this.countDown) * 31;
-            kn.b bVar = this.selfieError;
+            in.b bVar = this.selfieError;
             int iHashCode2 = (((((((((iHashCode + (bVar == null ? 0 : bVar.hashCode())) * 31) + Long.hashCode(this.startCaptureTimestamp)) * 31) + this.cameraProperties.hashCode()) * 31) + Long.hashCode(this.startSelfieTimestamp)) * 31) + Float.hashCode(this.poseScore)) * 31;
             SelfieBrightnessInfo selfieBrightnessInfo = this.brightnessInfo;
             int iHashCode3 = (((((iHashCode2 + (selfieBrightnessInfo == null ? 0 : selfieBrightnessInfo.hashCode())) * 31) + this.posesNeeded.hashCode()) * 31) + this.selfies.hashCode()) * 31;
@@ -2824,7 +2824,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         @Override // com.withpersona.sdk2.inquiry.selfie.a
         @NotNull
-        public kn.a j() {
+        public in.a j() {
             return super.j();
         }
 
@@ -2836,7 +2836,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         @Override // com.withpersona.sdk2.inquiry.selfie.a
         @Nullable
-        public kn.a m() {
+        public in.a m() {
             return super.m();
         }
 
@@ -2892,7 +2892,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         public final void writeToParcel(@NotNull Parcel dest, int flags) {
             Intrinsics.checkNotNullParameter(dest, "dest");
             dest.writeInt(this.countDown);
-            kn.b bVar = this.selfieError;
+            in.b bVar = this.selfieError;
             if (bVar == null) {
                 dest.writeInt(0);
             } else {
@@ -2925,7 +2925,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         }
 
         @NotNull
-        public final CountdownToCapture z(int countDown, @Nullable kn.b selfieError, long startCaptureTimestamp, @NotNull CameraProperties cameraProperties, long startSelfieTimestamp, float poseScore, @Nullable SelfieBrightnessInfo brightnessInfo, @NotNull List<PoseInfo> posesNeeded, @NotNull List<? extends Selfie> selfies, @Nullable SelfieState backState, @NotNull PoseConfigs poseConfigs, boolean autoCaptureSupported, @NotNull CameraProperties.b cameraFacingMode, boolean isFlashEnabled, boolean isDimLightConditions) {
+        public final CountdownToCapture z(int countDown, @Nullable in.b selfieError, long startCaptureTimestamp, @NotNull CameraProperties cameraProperties, long startSelfieTimestamp, float poseScore, @Nullable SelfieBrightnessInfo brightnessInfo, @NotNull List<PoseInfo> posesNeeded, @NotNull List<? extends Selfie> selfies, @Nullable SelfieState backState, @NotNull PoseConfigs poseConfigs, boolean autoCaptureSupported, @NotNull CameraProperties.b cameraFacingMode, boolean isFlashEnabled, boolean isDimLightConditions) {
             Intrinsics.checkNotNullParameter(cameraProperties, "cameraProperties");
             Intrinsics.checkNotNullParameter(posesNeeded, "posesNeeded");
             Intrinsics.checkNotNullParameter(selfies, "selfies");
@@ -2936,7 +2936,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         /* JADX WARN: Multi-variable type inference failed */
-        public CountdownToCapture(int i10, @Nullable kn.b bVar, long j10, @NotNull CameraProperties cameraProperties, long j11, float f10, @Nullable SelfieBrightnessInfo selfieBrightnessInfo, @NotNull List<PoseInfo> posesNeeded, @NotNull List<? extends Selfie> selfies, @Nullable SelfieState selfieState, @NotNull PoseConfigs poseConfigs, boolean z10, @NotNull CameraProperties.b cameraFacingMode, boolean z11, boolean z12) {
+        public CountdownToCapture(int i10, @Nullable in.b bVar, long j10, @NotNull CameraProperties cameraProperties, long j11, float f10, @Nullable SelfieBrightnessInfo selfieBrightnessInfo, @NotNull List<PoseInfo> posesNeeded, @NotNull List<? extends Selfie> selfies, @Nullable SelfieState selfieState, @NotNull PoseConfigs poseConfigs, boolean z10, @NotNull CameraProperties.b cameraFacingMode, boolean z11, boolean z12) {
             super(null);
             Intrinsics.checkNotNullParameter(cameraProperties, "cameraProperties");
             Intrinsics.checkNotNullParameter(posesNeeded, "posesNeeded");
@@ -3003,7 +3003,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
             this(selfieState, (i10 & 2) != 0 ? CameraProperties.b.User : bVar, (i10 & 4) != 0 ? null : str);
         }
 
-        public static /* synthetic */ ShowInstructions A(ShowInstructions showInstructions, SelfieState selfieState, CameraProperties.b bVar, String str, int i10, Object obj) {
+        public static /* synthetic */ ShowInstructions B(ShowInstructions showInstructions, SelfieState selfieState, CameraProperties.b bVar, String str, int i10, Object obj) {
             if ((i10 & 1) != 0) {
                 selfieState = showInstructions.backState;
             }
@@ -3098,7 +3098,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
     public SelfieState() {
     }
 
-    @Metadata(d1 = {"\u0000\u0082\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0002\b7\b\u0087\b\u0018\u00002\u00020\u00012\u00020\u0002B¥\u0001\u0012\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\b\u0010\b\u001a\u0004\u0018\u00010\u0007\u0012\u000e\b\u0002\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t\u0012\f\u0010\r\u001a\b\u0012\u0004\u0012\u00020\f0\t\u0012\u0006\u0010\u000f\u001a\u00020\u000e\u0012\b\b\u0002\u0010\u0011\u001a\u00020\u0010\u0012\u0006\u0010\u0012\u001a\u00020\u000e\u0012\u0006\u0010\u0014\u001a\u00020\u0013\u0012\b\u0010\u0015\u001a\u0004\u0018\u00010\u0001\u0012\u0006\u0010\u0017\u001a\u00020\u0016\u0012\u0006\u0010\u0019\u001a\u00020\u0018\u0012\u0006\u0010\u001a\u001a\u00020\u0010\u0012\b\b\u0002\u0010\u001c\u001a\u00020\u001b\u0012\n\b\u0002\u0010\u001d\u001a\u0004\u0018\u00010\u000e\u0012\u0006\u0010\u001e\u001a\u00020\u0010¢\u0006\u0004\b\u001f\u0010 J\r\u0010\"\u001a\u00020!¢\u0006\u0004\b\"\u0010#J\u001d\u0010(\u001a\u00020'2\u0006\u0010%\u001a\u00020$2\u0006\u0010&\u001a\u00020!¢\u0006\u0004\b(\u0010)JÄ\u0001\u0010*\u001a\u00020\u00002\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u00032\b\b\u0002\u0010\u0006\u001a\u00020\u00052\n\b\u0002\u0010\b\u001a\u0004\u0018\u00010\u00072\u000e\b\u0002\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t2\u000e\b\u0002\u0010\r\u001a\b\u0012\u0004\u0012\u00020\f0\t2\b\b\u0002\u0010\u000f\u001a\u00020\u000e2\b\b\u0002\u0010\u0011\u001a\u00020\u00102\b\b\u0002\u0010\u0012\u001a\u00020\u000e2\b\b\u0002\u0010\u0014\u001a\u00020\u00132\n\b\u0002\u0010\u0015\u001a\u0004\u0018\u00010\u00012\b\b\u0002\u0010\u0017\u001a\u00020\u00162\b\b\u0002\u0010\u0019\u001a\u00020\u00182\b\b\u0002\u0010\u001a\u001a\u00020\u00102\b\b\u0002\u0010\u001c\u001a\u00020\u001b2\n\b\u0002\u0010\u001d\u001a\u0004\u0018\u00010\u000e2\b\b\u0002\u0010\u001e\u001a\u00020\u0010HÆ\u0001¢\u0006\u0004\b*\u0010+J\u0010\u0010-\u001a\u00020,HÖ\u0001¢\u0006\u0004\b-\u0010.J\u0010\u0010/\u001a\u00020!HÖ\u0001¢\u0006\u0004\b/\u0010#J\u001a\u00102\u001a\u00020\u00102\b\u00101\u001a\u0004\u0018\u000100HÖ\u0003¢\u0006\u0004\b2\u00103R\u0019\u0010\u0004\u001a\u0004\u0018\u00010\u00038\u0006¢\u0006\f\n\u0004\b4\u00105\u001a\u0004\b6\u00107R\u0017\u0010\u0006\u001a\u00020\u00058\u0006¢\u0006\f\n\u0004\b8\u00109\u001a\u0004\b:\u0010;R\u0019\u0010\b\u001a\u0004\u0018\u00010\u00078\u0006¢\u0006\f\n\u0004\b<\u0010=\u001a\u0004\b>\u0010?R \u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t8\u0010X\u0090\u0004¢\u0006\f\n\u0004\b@\u0010A\u001a\u0004\bB\u0010CR \u0010\r\u001a\b\u0012\u0004\u0012\u00020\f0\t8\u0016X\u0096\u0004¢\u0006\f\n\u0004\bD\u0010A\u001a\u0004\bE\u0010CR\u001a\u0010\u000f\u001a\u00020\u000e8\u0016X\u0096\u0004¢\u0006\f\n\u0004\bE\u0010F\u001a\u0004\bG\u0010HR\u001a\u0010\u0011\u001a\u00020\u00108\u0016X\u0096\u0004¢\u0006\f\n\u0004\bI\u0010J\u001a\u0004\bD\u0010KR\u001a\u0010\u0012\u001a\u00020\u000e8\u0016X\u0096\u0004¢\u0006\f\n\u0004\bL\u0010F\u001a\u0004\bM\u0010HR\u001a\u0010\u0014\u001a\u00020\u00138\u0016X\u0096\u0004¢\u0006\f\n\u0004\bN\u0010O\u001a\u0004\bP\u0010QR\u001c\u0010\u0015\u001a\u0004\u0018\u00010\u00018\u0010X\u0090\u0004¢\u0006\f\n\u0004\bR\u0010S\u001a\u0004\bT\u0010UR\u001a\u0010\u0017\u001a\u00020\u00168\u0016X\u0096\u0004¢\u0006\f\n\u0004\bV\u0010W\u001a\u0004\bL\u0010XR\u001a\u0010\u0019\u001a\u00020\u00188\u0010X\u0090\u0004¢\u0006\f\n\u0004\bY\u0010Z\u001a\u0004\b[\u0010\\R\u001a\u0010\u001a\u001a\u00020\u00108\u0016X\u0096\u0004¢\u0006\f\n\u0004\bG\u0010J\u001a\u0004\b]\u0010KR\u0017\u0010\u001c\u001a\u00020\u001b8\u0006¢\u0006\f\n\u0004\b^\u0010_\u001a\u0004\b`\u0010aR\u0019\u0010\u001d\u001a\u0004\u0018\u00010\u000e8\u0006¢\u0006\f\n\u0004\bb\u0010c\u001a\u0004\bd\u0010eR\u0017\u0010\u001e\u001a\u00020\u00108\u0006¢\u0006\f\n\u0004\bf\u0010J\u001a\u0004\bF\u0010K¨\u0006g"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$Capture;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "Lcom/withpersona/sdk2/inquiry/selfie/b;", "Lkn/b;", "selfieError", "", "poseScore", "Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "brightnessInfo", "", "Lcom/withpersona/sdk2/inquiry/selfie/Selfie;", "selfies", "Lcom/withpersona/sdk2/inquiry/selfie/pose/PoseInfo;", "posesNeeded", "", "startCaptureTimestamp", "", "autoCaptureSupported", "startSelfieTimestamp", "Lcom/withpersona/sdk2/camera/CameraProperties;", "cameraProperties", "backState", "Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "poseConfigs", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "cameraFacingMode", "isFlashEnabled", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$a;", "flashState", "captureDeadlineEpochMs", "isDimLightConditions", "<init>", "(Lkn/b;FLcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;Ljava/util/List;Ljava/util/List;JZJLcom/withpersona/sdk2/camera/CameraProperties;Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;Lcom/withpersona/sdk2/camera/CameraProperties$b;ZLcom/withpersona/sdk2/inquiry/selfie/SelfieState$a;Ljava/lang/Long;Z)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "z", "(Lkn/b;FLcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;Ljava/util/List;Ljava/util/List;JZJLcom/withpersona/sdk2/camera/CameraProperties;Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;Lcom/withpersona/sdk2/camera/CameraProperties$b;ZLcom/withpersona/sdk2/inquiry/selfie/SelfieState$a;Ljava/lang/Long;Z)Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$Capture;", "", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "equals", "(Ljava/lang/Object;)Z", "b", "Lkn/b;", "I", "()Lkn/b;", "c", "F", "G", "()F", "d", "Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "C", "()Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "e", "Ljava/util/List;", "w", "()Ljava/util/List;", "f", "g", "J", "n", "()J", "h", "Z", "()Z", "i", "t", "j", "Lcom/withpersona/sdk2/camera/CameraProperties;", "a", "()Lcom/withpersona/sdk2/camera/CameraProperties;", "k", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "u", "()Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "l", "Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "()Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "m", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "v", "()Lcom/withpersona/sdk2/camera/CameraProperties$b;", "s", "o", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$a;", "E", "()Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$a;", "p", "Ljava/lang/Long;", "D", "()Ljava/lang/Long;", "q", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000\u0082\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0002\b7\b\u0087\b\u0018\u00002\u00020\u00012\u00020\u0002B¥\u0001\u0012\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\b\u0010\b\u001a\u0004\u0018\u00010\u0007\u0012\u000e\b\u0002\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t\u0012\f\u0010\r\u001a\b\u0012\u0004\u0012\u00020\f0\t\u0012\u0006\u0010\u000f\u001a\u00020\u000e\u0012\b\b\u0002\u0010\u0011\u001a\u00020\u0010\u0012\u0006\u0010\u0012\u001a\u00020\u000e\u0012\u0006\u0010\u0014\u001a\u00020\u0013\u0012\b\u0010\u0015\u001a\u0004\u0018\u00010\u0001\u0012\u0006\u0010\u0017\u001a\u00020\u0016\u0012\u0006\u0010\u0019\u001a\u00020\u0018\u0012\u0006\u0010\u001a\u001a\u00020\u0010\u0012\b\b\u0002\u0010\u001c\u001a\u00020\u001b\u0012\n\b\u0002\u0010\u001d\u001a\u0004\u0018\u00010\u000e\u0012\u0006\u0010\u001e\u001a\u00020\u0010¢\u0006\u0004\b\u001f\u0010 J\r\u0010\"\u001a\u00020!¢\u0006\u0004\b\"\u0010#J\u001d\u0010(\u001a\u00020'2\u0006\u0010%\u001a\u00020$2\u0006\u0010&\u001a\u00020!¢\u0006\u0004\b(\u0010)JÄ\u0001\u0010*\u001a\u00020\u00002\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u00032\b\b\u0002\u0010\u0006\u001a\u00020\u00052\n\b\u0002\u0010\b\u001a\u0004\u0018\u00010\u00072\u000e\b\u0002\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t2\u000e\b\u0002\u0010\r\u001a\b\u0012\u0004\u0012\u00020\f0\t2\b\b\u0002\u0010\u000f\u001a\u00020\u000e2\b\b\u0002\u0010\u0011\u001a\u00020\u00102\b\b\u0002\u0010\u0012\u001a\u00020\u000e2\b\b\u0002\u0010\u0014\u001a\u00020\u00132\n\b\u0002\u0010\u0015\u001a\u0004\u0018\u00010\u00012\b\b\u0002\u0010\u0017\u001a\u00020\u00162\b\b\u0002\u0010\u0019\u001a\u00020\u00182\b\b\u0002\u0010\u001a\u001a\u00020\u00102\b\b\u0002\u0010\u001c\u001a\u00020\u001b2\n\b\u0002\u0010\u001d\u001a\u0004\u0018\u00010\u000e2\b\b\u0002\u0010\u001e\u001a\u00020\u0010HÆ\u0001¢\u0006\u0004\b*\u0010+J\u0010\u0010-\u001a\u00020,HÖ\u0001¢\u0006\u0004\b-\u0010.J\u0010\u0010/\u001a\u00020!HÖ\u0001¢\u0006\u0004\b/\u0010#J\u001a\u00102\u001a\u00020\u00102\b\u00101\u001a\u0004\u0018\u000100HÖ\u0003¢\u0006\u0004\b2\u00103R\u0019\u0010\u0004\u001a\u0004\u0018\u00010\u00038\u0006¢\u0006\f\n\u0004\b4\u00105\u001a\u0004\b6\u00107R\u0017\u0010\u0006\u001a\u00020\u00058\u0006¢\u0006\f\n\u0004\b8\u00109\u001a\u0004\b:\u0010;R\u0019\u0010\b\u001a\u0004\u0018\u00010\u00078\u0006¢\u0006\f\n\u0004\b<\u0010=\u001a\u0004\b>\u0010?R \u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\n0\t8\u0010X\u0090\u0004¢\u0006\f\n\u0004\b@\u0010A\u001a\u0004\bB\u0010CR \u0010\r\u001a\b\u0012\u0004\u0012\u00020\f0\t8\u0016X\u0096\u0004¢\u0006\f\n\u0004\bD\u0010A\u001a\u0004\bE\u0010CR\u001a\u0010\u000f\u001a\u00020\u000e8\u0016X\u0096\u0004¢\u0006\f\n\u0004\bE\u0010F\u001a\u0004\bG\u0010HR\u001a\u0010\u0011\u001a\u00020\u00108\u0016X\u0096\u0004¢\u0006\f\n\u0004\bI\u0010J\u001a\u0004\bD\u0010KR\u001a\u0010\u0012\u001a\u00020\u000e8\u0016X\u0096\u0004¢\u0006\f\n\u0004\bL\u0010F\u001a\u0004\bM\u0010HR\u001a\u0010\u0014\u001a\u00020\u00138\u0016X\u0096\u0004¢\u0006\f\n\u0004\bN\u0010O\u001a\u0004\bP\u0010QR\u001c\u0010\u0015\u001a\u0004\u0018\u00010\u00018\u0010X\u0090\u0004¢\u0006\f\n\u0004\bR\u0010S\u001a\u0004\bT\u0010UR\u001a\u0010\u0017\u001a\u00020\u00168\u0016X\u0096\u0004¢\u0006\f\n\u0004\bV\u0010W\u001a\u0004\bL\u0010XR\u001a\u0010\u0019\u001a\u00020\u00188\u0010X\u0090\u0004¢\u0006\f\n\u0004\bY\u0010Z\u001a\u0004\b[\u0010\\R\u001a\u0010\u001a\u001a\u00020\u00108\u0016X\u0096\u0004¢\u0006\f\n\u0004\bG\u0010J\u001a\u0004\b]\u0010KR\u0017\u0010\u001c\u001a\u00020\u001b8\u0006¢\u0006\f\n\u0004\b^\u0010_\u001a\u0004\b`\u0010aR\u0019\u0010\u001d\u001a\u0004\u0018\u00010\u000e8\u0006¢\u0006\f\n\u0004\bb\u0010c\u001a\u0004\bd\u0010eR\u0017\u0010\u001e\u001a\u00020\u00108\u0006¢\u0006\f\n\u0004\bf\u0010J\u001a\u0004\bF\u0010K¨\u0006g"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$Capture;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "Lcom/withpersona/sdk2/inquiry/selfie/b;", "Lin/b;", "selfieError", "", "poseScore", "Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "brightnessInfo", "", "Lcom/withpersona/sdk2/inquiry/selfie/Selfie;", "selfies", "Lcom/withpersona/sdk2/inquiry/selfie/pose/PoseInfo;", "posesNeeded", "", "startCaptureTimestamp", "", "autoCaptureSupported", "startSelfieTimestamp", "Lcom/withpersona/sdk2/camera/CameraProperties;", "cameraProperties", "backState", "Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "poseConfigs", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "cameraFacingMode", "isFlashEnabled", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$a;", "flashState", "captureDeadlineEpochMs", "isDimLightConditions", "<init>", "(Lin/b;FLcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;Ljava/util/List;Ljava/util/List;JZJLcom/withpersona/sdk2/camera/CameraProperties;Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;Lcom/withpersona/sdk2/camera/CameraProperties$b;ZLcom/withpersona/sdk2/inquiry/selfie/SelfieState$a;Ljava/lang/Long;Z)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "z", "(Lin/b;FLcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;Ljava/util/List;Ljava/util/List;JZJLcom/withpersona/sdk2/camera/CameraProperties;Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;Lcom/withpersona/sdk2/camera/CameraProperties$b;ZLcom/withpersona/sdk2/inquiry/selfie/SelfieState$a;Ljava/lang/Long;Z)Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$Capture;", "", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "equals", "(Ljava/lang/Object;)Z", "b", "Lin/b;", "I", "()Lin/b;", "c", "F", "G", "()F", "d", "Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "C", "()Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "e", "Ljava/util/List;", "w", "()Ljava/util/List;", "f", "g", "J", "n", "()J", "h", "Z", "()Z", "i", "t", "j", "Lcom/withpersona/sdk2/camera/CameraProperties;", "a", "()Lcom/withpersona/sdk2/camera/CameraProperties;", "k", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "u", "()Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "l", "Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "()Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "m", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "v", "()Lcom/withpersona/sdk2/camera/CameraProperties$b;", "s", "o", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$a;", "E", "()Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$a;", "p", "Ljava/lang/Long;", "D", "()Ljava/lang/Long;", "q", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final /* data */ class Capture extends SelfieState implements b {
 
         @NotNull
@@ -3106,7 +3106,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         /* JADX INFO: renamed from: b, reason: from kotlin metadata and from toString */
         @Nullable
-        public final kn.b selfieError;
+        public final in.b selfieError;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata and from toString */
         public final float poseScore;
@@ -3171,7 +3171,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
                 boolean z11;
                 boolean z12;
                 Intrinsics.checkNotNullParameter(parcel, "parcel");
-                kn.b bVarValueOf = parcel.readInt() == 0 ? null : kn.b.valueOf(parcel.readString());
+                in.b bVarValueOf = parcel.readInt() == 0 ? null : in.b.valueOf(parcel.readString());
                 float f10 = parcel.readFloat();
                 SelfieBrightnessInfo selfieBrightnessInfo = (SelfieBrightnessInfo) parcel.readParcelable(Capture.class.getClassLoader());
                 int i10 = parcel.readInt();
@@ -3204,7 +3204,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
             }
         }
 
-        public /* synthetic */ Capture(kn.b bVar, float f10, SelfieBrightnessInfo selfieBrightnessInfo, List list, List list2, long j10, boolean z10, long j11, CameraProperties cameraProperties, SelfieState selfieState, PoseConfigs poseConfigs, CameraProperties.b bVar2, boolean z11, a aVar, Long l10, boolean z12, int i10, DefaultConstructorMarker defaultConstructorMarker) {
+        public /* synthetic */ Capture(in.b bVar, float f10, SelfieBrightnessInfo selfieBrightnessInfo, List list, List list2, long j10, boolean z10, long j11, CameraProperties cameraProperties, SelfieState selfieState, PoseConfigs poseConfigs, CameraProperties.b bVar2, boolean z11, a aVar, Long l10, boolean z12, int i10, DefaultConstructorMarker defaultConstructorMarker) {
             this((i10 & 1) != 0 ? null : bVar, f10, selfieBrightnessInfo, (i10 & 8) != 0 ? kotlin.collections.p.k() : list, list2, j10, (i10 & 64) != 0 ? true : z10, j11, cameraProperties, selfieState, poseConfigs, bVar2, z11, (i10 & 8192) != 0 ? a.Disabled : aVar, (i10 & Http2.INITIAL_MAX_FRAME_SIZE) != 0 ? null : l10, z12);
         }
 
@@ -3233,7 +3233,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         @Nullable
         /* JADX INFO: renamed from: I, reason: from getter */
-        public final kn.b getSelfieError() {
+        public final in.b getSelfieError() {
             return this.selfieError;
         }
 
@@ -3278,7 +3278,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         }
 
         public int hashCode() {
-            kn.b bVar = this.selfieError;
+            in.b bVar = this.selfieError;
             int iHashCode = (((bVar == null ? 0 : bVar.hashCode()) * 31) + Float.hashCode(this.poseScore)) * 31;
             SelfieBrightnessInfo selfieBrightnessInfo = this.brightnessInfo;
             int iHashCode2 = (((((((((((((iHashCode + (selfieBrightnessInfo == null ? 0 : selfieBrightnessInfo.hashCode())) * 31) + this.selfies.hashCode()) * 31) + this.posesNeeded.hashCode()) * 31) + Long.hashCode(this.startCaptureTimestamp)) * 31) + Boolean.hashCode(this.autoCaptureSupported)) * 31) + Long.hashCode(this.startSelfieTimestamp)) * 31) + this.cameraProperties.hashCode()) * 31;
@@ -3297,7 +3297,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         @Override // com.withpersona.sdk2.inquiry.selfie.a
         @NotNull
-        public kn.a j() {
+        public in.a j() {
             return super.j();
         }
 
@@ -3309,7 +3309,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         @Override // com.withpersona.sdk2.inquiry.selfie.a
         @Nullable
-        public kn.a m() {
+        public in.a m() {
             return super.m();
         }
 
@@ -3370,7 +3370,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         @Override // android.os.Parcelable
         public final void writeToParcel(@NotNull Parcel dest, int flags) {
             Intrinsics.checkNotNullParameter(dest, "dest");
-            kn.b bVar = this.selfieError;
+            in.b bVar = this.selfieError;
             if (bVar == null) {
                 dest.writeInt(0);
             } else {
@@ -3411,7 +3411,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         }
 
         @NotNull
-        public final Capture z(@Nullable kn.b selfieError, float poseScore, @Nullable SelfieBrightnessInfo brightnessInfo, @NotNull List<? extends Selfie> selfies, @NotNull List<PoseInfo> posesNeeded, long startCaptureTimestamp, boolean autoCaptureSupported, long startSelfieTimestamp, @NotNull CameraProperties cameraProperties, @Nullable SelfieState backState, @NotNull PoseConfigs poseConfigs, @NotNull CameraProperties.b cameraFacingMode, boolean isFlashEnabled, @NotNull a flashState, @Nullable Long captureDeadlineEpochMs, boolean isDimLightConditions) {
+        public final Capture z(@Nullable in.b selfieError, float poseScore, @Nullable SelfieBrightnessInfo brightnessInfo, @NotNull List<? extends Selfie> selfies, @NotNull List<PoseInfo> posesNeeded, long startCaptureTimestamp, boolean autoCaptureSupported, long startSelfieTimestamp, @NotNull CameraProperties cameraProperties, @Nullable SelfieState backState, @NotNull PoseConfigs poseConfigs, @NotNull CameraProperties.b cameraFacingMode, boolean isFlashEnabled, @NotNull a flashState, @Nullable Long captureDeadlineEpochMs, boolean isDimLightConditions) {
             Intrinsics.checkNotNullParameter(selfies, "selfies");
             Intrinsics.checkNotNullParameter(posesNeeded, "posesNeeded");
             Intrinsics.checkNotNullParameter(cameraProperties, "cameraProperties");
@@ -3423,7 +3423,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         /* JADX WARN: Multi-variable type inference failed */
-        public Capture(@Nullable kn.b bVar, float f10, @Nullable SelfieBrightnessInfo selfieBrightnessInfo, @NotNull List<? extends Selfie> selfies, @NotNull List<PoseInfo> posesNeeded, long j10, boolean z10, long j11, @NotNull CameraProperties cameraProperties, @Nullable SelfieState selfieState, @NotNull PoseConfigs poseConfigs, @NotNull CameraProperties.b cameraFacingMode, boolean z11, @NotNull a flashState, @Nullable Long l10, boolean z12) {
+        public Capture(@Nullable in.b bVar, float f10, @Nullable SelfieBrightnessInfo selfieBrightnessInfo, @NotNull List<? extends Selfie> selfies, @NotNull List<PoseInfo> posesNeeded, long j10, boolean z10, long j11, @NotNull CameraProperties cameraProperties, @Nullable SelfieState selfieState, @NotNull PoseConfigs poseConfigs, @NotNull CameraProperties.b cameraFacingMode, boolean z11, @NotNull a flashState, @Nullable Long l10, boolean z12) {
             super(null);
             Intrinsics.checkNotNullParameter(selfies, "selfies");
             Intrinsics.checkNotNullParameter(posesNeeded, "posesNeeded");
@@ -3450,7 +3450,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         }
     }
 
-    @Metadata(d1 = {"\u0000z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0002\b2\b\u0087\b\u0018\u00002\u00020\u00012\u00020\u0002B\u0099\u0001\u0012\b\b\u0002\u0010\u0004\u001a\u00020\u0003\u0012\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0005\u0012\u0006\u0010\b\u001a\u00020\u0007\u0012\b\u0010\n\u001a\u0004\u0018\u00010\t\u0012\f\u0010\r\u001a\b\u0012\u0004\u0012\u00020\f0\u000b\u0012\u000e\b\u0002\u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\u000e0\u000b\u0012\u0006\u0010\u0011\u001a\u00020\u0010\u0012\b\b\u0002\u0010\u0012\u001a\u00020\u0003\u0012\u0006\u0010\u0013\u001a\u00020\u0010\u0012\u0006\u0010\u0015\u001a\u00020\u0014\u0012\b\u0010\u0016\u001a\u0004\u0018\u00010\u0001\u0012\u0006\u0010\u0018\u001a\u00020\u0017\u0012\u0006\u0010\u001a\u001a\u00020\u0019\u0012\u0006\u0010\u001b\u001a\u00020\u0003\u0012\u0006\u0010\u001c\u001a\u00020\u0003¢\u0006\u0004\b\u001d\u0010\u001eJ\r\u0010 \u001a\u00020\u001f¢\u0006\u0004\b \u0010!J\u001d\u0010&\u001a\u00020%2\u0006\u0010#\u001a\u00020\"2\u0006\u0010$\u001a\u00020\u001f¢\u0006\u0004\b&\u0010'J¸\u0001\u0010(\u001a\u00020\u00002\b\b\u0002\u0010\u0004\u001a\u00020\u00032\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u00052\b\b\u0002\u0010\b\u001a\u00020\u00072\n\b\u0002\u0010\n\u001a\u0004\u0018\u00010\t2\u000e\b\u0002\u0010\r\u001a\b\u0012\u0004\u0012\u00020\f0\u000b2\u000e\b\u0002\u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\u000e0\u000b2\b\b\u0002\u0010\u0011\u001a\u00020\u00102\b\b\u0002\u0010\u0012\u001a\u00020\u00032\b\b\u0002\u0010\u0013\u001a\u00020\u00102\b\b\u0002\u0010\u0015\u001a\u00020\u00142\n\b\u0002\u0010\u0016\u001a\u0004\u0018\u00010\u00012\b\b\u0002\u0010\u0018\u001a\u00020\u00172\b\b\u0002\u0010\u001a\u001a\u00020\u00192\b\b\u0002\u0010\u001b\u001a\u00020\u00032\b\b\u0002\u0010\u001c\u001a\u00020\u0003HÆ\u0001¢\u0006\u0004\b(\u0010)J\u0010\u0010+\u001a\u00020*HÖ\u0001¢\u0006\u0004\b+\u0010,J\u0010\u0010-\u001a\u00020\u001fHÖ\u0001¢\u0006\u0004\b-\u0010!J\u001a\u00100\u001a\u00020\u00032\b\u0010/\u001a\u0004\u0018\u00010.HÖ\u0003¢\u0006\u0004\b0\u00101R\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b2\u00103\u001a\u0004\b4\u00105R\u0019\u0010\u0006\u001a\u0004\u0018\u00010\u00058\u0006¢\u0006\f\n\u0004\b6\u00107\u001a\u0004\b8\u00109R\u0017\u0010\b\u001a\u00020\u00078\u0006¢\u0006\f\n\u0004\b:\u0010;\u001a\u0004\b<\u0010=R\u0019\u0010\n\u001a\u0004\u0018\u00010\t8\u0006¢\u0006\f\n\u0004\b>\u0010?\u001a\u0004\b@\u0010AR \u0010\r\u001a\b\u0012\u0004\u0012\u00020\f0\u000b8\u0016X\u0096\u0004¢\u0006\f\n\u0004\bB\u0010C\u001a\u0004\bD\u0010ER \u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\u000e0\u000b8\u0010X\u0090\u0004¢\u0006\f\n\u0004\bD\u0010C\u001a\u0004\bF\u0010ER\u001a\u0010\u0011\u001a\u00020\u00108\u0016X\u0096\u0004¢\u0006\f\n\u0004\bG\u0010H\u001a\u0004\bI\u0010JR\u001a\u0010\u0012\u001a\u00020\u00038\u0016X\u0096\u0004¢\u0006\f\n\u0004\bK\u00103\u001a\u0004\bB\u00105R\u001a\u0010\u0013\u001a\u00020\u00108\u0016X\u0096\u0004¢\u0006\f\n\u0004\bL\u0010H\u001a\u0004\bM\u0010JR\u001a\u0010\u0015\u001a\u00020\u00148\u0016X\u0096\u0004¢\u0006\f\n\u0004\bN\u0010O\u001a\u0004\bP\u0010QR\u001c\u0010\u0016\u001a\u0004\u0018\u00010\u00018\u0010X\u0090\u0004¢\u0006\f\n\u0004\bR\u0010S\u001a\u0004\bT\u0010UR\u001a\u0010\u0018\u001a\u00020\u00178\u0016X\u0096\u0004¢\u0006\f\n\u0004\bV\u0010W\u001a\u0004\bK\u0010XR\u001a\u0010\u001a\u001a\u00020\u00198\u0010X\u0090\u0004¢\u0006\f\n\u0004\bI\u0010Y\u001a\u0004\bZ\u0010[R\u001a\u0010\u001b\u001a\u00020\u00038\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\\\u00103\u001a\u0004\b]\u00105R\u0017\u0010\u001c\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b^\u00103\u001a\u0004\b_\u00105¨\u0006`"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$StartCapture;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "Lcom/withpersona/sdk2/inquiry/selfie/b;", "", "centered", "Lkn/b;", "selfieError", "", "poseScore", "Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "brightnessInfo", "", "Lcom/withpersona/sdk2/inquiry/selfie/pose/PoseInfo;", "posesNeeded", "Lcom/withpersona/sdk2/inquiry/selfie/Selfie;", "selfies", "", "startCaptureTimestamp", "autoCaptureSupported", "startSelfieTimestamp", "Lcom/withpersona/sdk2/camera/CameraProperties;", "cameraProperties", "backState", "Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "poseConfigs", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "cameraFacingMode", "isFlashEnabled", "isDimLightConditions", "<init>", "(ZLkn/b;FLcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;Ljava/util/List;Ljava/util/List;JZJLcom/withpersona/sdk2/camera/CameraProperties;Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;Lcom/withpersona/sdk2/camera/CameraProperties$b;ZZ)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "z", "(ZLkn/b;FLcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;Ljava/util/List;Ljava/util/List;JZJLcom/withpersona/sdk2/camera/CameraProperties;Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;Lcom/withpersona/sdk2/camera/CameraProperties$b;ZZ)Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$StartCapture;", "", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "equals", "(Ljava/lang/Object;)Z", "b", "Z", "getCentered", "()Z", "c", "Lkn/b;", "E", "()Lkn/b;", "d", "F", "D", "()F", "e", "Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "C", "()Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "f", "Ljava/util/List;", "g", "()Ljava/util/List;", "w", "h", "J", "n", "()J", "i", "j", "t", "k", "Lcom/withpersona/sdk2/camera/CameraProperties;", "a", "()Lcom/withpersona/sdk2/camera/CameraProperties;", "l", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "u", "()Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "m", "Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "()Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "v", "()Lcom/withpersona/sdk2/camera/CameraProperties$b;", "o", "s", "p", "G", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\u0000\n\u0002\b2\b\u0087\b\u0018\u00002\u00020\u00012\u00020\u0002B\u0099\u0001\u0012\b\b\u0002\u0010\u0004\u001a\u00020\u0003\u0012\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u0005\u0012\u0006\u0010\b\u001a\u00020\u0007\u0012\b\u0010\n\u001a\u0004\u0018\u00010\t\u0012\f\u0010\r\u001a\b\u0012\u0004\u0012\u00020\f0\u000b\u0012\u000e\b\u0002\u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\u000e0\u000b\u0012\u0006\u0010\u0011\u001a\u00020\u0010\u0012\b\b\u0002\u0010\u0012\u001a\u00020\u0003\u0012\u0006\u0010\u0013\u001a\u00020\u0010\u0012\u0006\u0010\u0015\u001a\u00020\u0014\u0012\b\u0010\u0016\u001a\u0004\u0018\u00010\u0001\u0012\u0006\u0010\u0018\u001a\u00020\u0017\u0012\u0006\u0010\u001a\u001a\u00020\u0019\u0012\u0006\u0010\u001b\u001a\u00020\u0003\u0012\u0006\u0010\u001c\u001a\u00020\u0003¢\u0006\u0004\b\u001d\u0010\u001eJ\r\u0010 \u001a\u00020\u001f¢\u0006\u0004\b \u0010!J\u001d\u0010&\u001a\u00020%2\u0006\u0010#\u001a\u00020\"2\u0006\u0010$\u001a\u00020\u001f¢\u0006\u0004\b&\u0010'J¸\u0001\u0010(\u001a\u00020\u00002\b\b\u0002\u0010\u0004\u001a\u00020\u00032\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u00052\b\b\u0002\u0010\b\u001a\u00020\u00072\n\b\u0002\u0010\n\u001a\u0004\u0018\u00010\t2\u000e\b\u0002\u0010\r\u001a\b\u0012\u0004\u0012\u00020\f0\u000b2\u000e\b\u0002\u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\u000e0\u000b2\b\b\u0002\u0010\u0011\u001a\u00020\u00102\b\b\u0002\u0010\u0012\u001a\u00020\u00032\b\b\u0002\u0010\u0013\u001a\u00020\u00102\b\b\u0002\u0010\u0015\u001a\u00020\u00142\n\b\u0002\u0010\u0016\u001a\u0004\u0018\u00010\u00012\b\b\u0002\u0010\u0018\u001a\u00020\u00172\b\b\u0002\u0010\u001a\u001a\u00020\u00192\b\b\u0002\u0010\u001b\u001a\u00020\u00032\b\b\u0002\u0010\u001c\u001a\u00020\u0003HÆ\u0001¢\u0006\u0004\b(\u0010)J\u0010\u0010+\u001a\u00020*HÖ\u0001¢\u0006\u0004\b+\u0010,J\u0010\u0010-\u001a\u00020\u001fHÖ\u0001¢\u0006\u0004\b-\u0010!J\u001a\u00100\u001a\u00020\u00032\b\u0010/\u001a\u0004\u0018\u00010.HÖ\u0003¢\u0006\u0004\b0\u00101R\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b2\u00103\u001a\u0004\b4\u00105R\u0019\u0010\u0006\u001a\u0004\u0018\u00010\u00058\u0006¢\u0006\f\n\u0004\b6\u00107\u001a\u0004\b8\u00109R\u0017\u0010\b\u001a\u00020\u00078\u0006¢\u0006\f\n\u0004\b:\u0010;\u001a\u0004\b<\u0010=R\u0019\u0010\n\u001a\u0004\u0018\u00010\t8\u0006¢\u0006\f\n\u0004\b>\u0010?\u001a\u0004\b@\u0010AR \u0010\r\u001a\b\u0012\u0004\u0012\u00020\f0\u000b8\u0016X\u0096\u0004¢\u0006\f\n\u0004\bB\u0010C\u001a\u0004\bD\u0010ER \u0010\u000f\u001a\b\u0012\u0004\u0012\u00020\u000e0\u000b8\u0010X\u0090\u0004¢\u0006\f\n\u0004\bD\u0010C\u001a\u0004\bF\u0010ER\u001a\u0010\u0011\u001a\u00020\u00108\u0016X\u0096\u0004¢\u0006\f\n\u0004\bG\u0010H\u001a\u0004\bI\u0010JR\u001a\u0010\u0012\u001a\u00020\u00038\u0016X\u0096\u0004¢\u0006\f\n\u0004\bK\u00103\u001a\u0004\bB\u00105R\u001a\u0010\u0013\u001a\u00020\u00108\u0016X\u0096\u0004¢\u0006\f\n\u0004\bL\u0010H\u001a\u0004\bM\u0010JR\u001a\u0010\u0015\u001a\u00020\u00148\u0016X\u0096\u0004¢\u0006\f\n\u0004\bN\u0010O\u001a\u0004\bP\u0010QR\u001c\u0010\u0016\u001a\u0004\u0018\u00010\u00018\u0010X\u0090\u0004¢\u0006\f\n\u0004\bR\u0010S\u001a\u0004\bT\u0010UR\u001a\u0010\u0018\u001a\u00020\u00178\u0016X\u0096\u0004¢\u0006\f\n\u0004\bV\u0010W\u001a\u0004\bK\u0010XR\u001a\u0010\u001a\u001a\u00020\u00198\u0010X\u0090\u0004¢\u0006\f\n\u0004\bI\u0010Y\u001a\u0004\bZ\u0010[R\u001a\u0010\u001b\u001a\u00020\u00038\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\\\u00103\u001a\u0004\b]\u00105R\u0017\u0010\u001c\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b^\u00103\u001a\u0004\b_\u00105¨\u0006`"}, d2 = {"Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$StartCapture;", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "Lcom/withpersona/sdk2/inquiry/selfie/b;", "", "centered", "Lin/b;", "selfieError", "", "poseScore", "Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "brightnessInfo", "", "Lcom/withpersona/sdk2/inquiry/selfie/pose/PoseInfo;", "posesNeeded", "Lcom/withpersona/sdk2/inquiry/selfie/Selfie;", "selfies", "", "startCaptureTimestamp", "autoCaptureSupported", "startSelfieTimestamp", "Lcom/withpersona/sdk2/camera/CameraProperties;", "cameraProperties", "backState", "Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "poseConfigs", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "cameraFacingMode", "isFlashEnabled", "isDimLightConditions", "<init>", "(ZLin/b;FLcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;Ljava/util/List;Ljava/util/List;JZJLcom/withpersona/sdk2/camera/CameraProperties;Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;Lcom/withpersona/sdk2/camera/CameraProperties$b;ZZ)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "z", "(ZLin/b;FLcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;Ljava/util/List;Ljava/util/List;JZJLcom/withpersona/sdk2/camera/CameraProperties;Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;Lcom/withpersona/sdk2/camera/CameraProperties$b;ZZ)Lcom/withpersona/sdk2/inquiry/selfie/SelfieState$StartCapture;", "", "toString", "()Ljava/lang/String;", "hashCode", "", "other", "equals", "(Ljava/lang/Object;)Z", "b", "Z", "getCentered", "()Z", "c", "Lin/b;", "E", "()Lin/b;", "d", "F", "D", "()F", "e", "Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "C", "()Lcom/withpersona/sdk2/camera/selfie/SelfieBrightnessInfo;", "f", "Ljava/util/List;", "g", "()Ljava/util/List;", "w", "h", "J", "n", "()J", "i", "j", "t", "k", "Lcom/withpersona/sdk2/camera/CameraProperties;", "a", "()Lcom/withpersona/sdk2/camera/CameraProperties;", "l", "Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "u", "()Lcom/withpersona/sdk2/inquiry/selfie/SelfieState;", "m", "Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "()Lcom/withpersona/sdk2/inquiry/selfie/PoseConfigs;", "Lcom/withpersona/sdk2/camera/CameraProperties$b;", "v", "()Lcom/withpersona/sdk2/camera/CameraProperties$b;", "o", "s", "p", "G", "selfie_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final /* data */ class StartCapture extends SelfieState implements b {
 
         @NotNull
@@ -3461,7 +3461,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata and from toString */
         @Nullable
-        public final kn.b selfieError;
+        public final in.b selfieError;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata and from toString */
         public final float poseScore;
@@ -3516,7 +3516,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
             public final StartCapture createFromParcel(Parcel parcel) {
                 Intrinsics.checkNotNullParameter(parcel, "parcel");
                 boolean z10 = parcel.readInt() != 0;
-                kn.b bVarValueOf = parcel.readInt() == 0 ? null : kn.b.valueOf(parcel.readString());
+                in.b bVarValueOf = parcel.readInt() == 0 ? null : in.b.valueOf(parcel.readString());
                 float f10 = parcel.readFloat();
                 SelfieBrightnessInfo selfieBrightnessInfo = (SelfieBrightnessInfo) parcel.readParcelable(StartCapture.class.getClassLoader());
                 int i10 = parcel.readInt();
@@ -3539,8 +3539,8 @@ public abstract class SelfieState extends SimpleWorkflowState {
             }
         }
 
-        public /* synthetic */ StartCapture(boolean z10, kn.b bVar, float f10, SelfieBrightnessInfo selfieBrightnessInfo, List list, List list2, long j10, boolean z11, long j11, CameraProperties cameraProperties, SelfieState selfieState, PoseConfigs poseConfigs, CameraProperties.b bVar2, boolean z12, boolean z13, int i10, DefaultConstructorMarker defaultConstructorMarker) {
-            this((i10 & 1) != 0 ? false : z10, (i10 & 2) != 0 ? kn.b.FaceNotCentered : bVar, f10, selfieBrightnessInfo, list, (i10 & 32) != 0 ? kotlin.collections.p.k() : list2, j10, (i10 & 128) != 0 ? true : z11, j11, cameraProperties, selfieState, poseConfigs, bVar2, z12, z13);
+        public /* synthetic */ StartCapture(boolean z10, in.b bVar, float f10, SelfieBrightnessInfo selfieBrightnessInfo, List list, List list2, long j10, boolean z11, long j11, CameraProperties cameraProperties, SelfieState selfieState, PoseConfigs poseConfigs, CameraProperties.b bVar2, boolean z12, boolean z13, int i10, DefaultConstructorMarker defaultConstructorMarker) {
+            this((i10 & 1) != 0 ? false : z10, (i10 & 2) != 0 ? in.b.FaceNotCentered : bVar, f10, selfieBrightnessInfo, list, (i10 & 32) != 0 ? kotlin.collections.p.k() : list2, j10, (i10 & 128) != 0 ? true : z11, j11, cameraProperties, selfieState, poseConfigs, bVar2, z12, z13);
         }
 
         @Nullable
@@ -3556,7 +3556,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         @Nullable
         /* JADX INFO: renamed from: E, reason: from getter */
-        public final kn.b getSelfieError() {
+        public final in.b getSelfieError() {
             return this.selfieError;
         }
 
@@ -3602,7 +3602,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         public int hashCode() {
             int iHashCode = Boolean.hashCode(this.centered) * 31;
-            kn.b bVar = this.selfieError;
+            in.b bVar = this.selfieError;
             int iHashCode2 = (((iHashCode + (bVar == null ? 0 : bVar.hashCode())) * 31) + Float.hashCode(this.poseScore)) * 31;
             SelfieBrightnessInfo selfieBrightnessInfo = this.brightnessInfo;
             int iHashCode3 = (((((((((((((iHashCode2 + (selfieBrightnessInfo == null ? 0 : selfieBrightnessInfo.hashCode())) * 31) + this.posesNeeded.hashCode()) * 31) + this.selfies.hashCode()) * 31) + Long.hashCode(this.startCaptureTimestamp)) * 31) + Boolean.hashCode(this.autoCaptureSupported)) * 31) + Long.hashCode(this.startSelfieTimestamp)) * 31) + this.cameraProperties.hashCode()) * 31;
@@ -3619,7 +3619,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         @Override // com.withpersona.sdk2.inquiry.selfie.a
         @NotNull
-        public kn.a j() {
+        public in.a j() {
             return super.j();
         }
 
@@ -3631,7 +3631,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         @Override // com.withpersona.sdk2.inquiry.selfie.a
         @Nullable
-        public kn.a m() {
+        public in.a m() {
             return super.m();
         }
 
@@ -3693,7 +3693,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         public final void writeToParcel(@NotNull Parcel dest, int flags) {
             Intrinsics.checkNotNullParameter(dest, "dest");
             dest.writeInt(this.centered ? 1 : 0);
-            kn.b bVar = this.selfieError;
+            in.b bVar = this.selfieError;
             if (bVar == null) {
                 dest.writeInt(0);
             } else {
@@ -3726,7 +3726,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
         }
 
         @NotNull
-        public final StartCapture z(boolean centered, @Nullable kn.b selfieError, float poseScore, @Nullable SelfieBrightnessInfo brightnessInfo, @NotNull List<PoseInfo> posesNeeded, @NotNull List<? extends Selfie> selfies, long startCaptureTimestamp, boolean autoCaptureSupported, long startSelfieTimestamp, @NotNull CameraProperties cameraProperties, @Nullable SelfieState backState, @NotNull PoseConfigs poseConfigs, @NotNull CameraProperties.b cameraFacingMode, boolean isFlashEnabled, boolean isDimLightConditions) {
+        public final StartCapture z(boolean centered, @Nullable in.b selfieError, float poseScore, @Nullable SelfieBrightnessInfo brightnessInfo, @NotNull List<PoseInfo> posesNeeded, @NotNull List<? extends Selfie> selfies, long startCaptureTimestamp, boolean autoCaptureSupported, long startSelfieTimestamp, @NotNull CameraProperties cameraProperties, @Nullable SelfieState backState, @NotNull PoseConfigs poseConfigs, @NotNull CameraProperties.b cameraFacingMode, boolean isFlashEnabled, boolean isDimLightConditions) {
             Intrinsics.checkNotNullParameter(posesNeeded, "posesNeeded");
             Intrinsics.checkNotNullParameter(selfies, "selfies");
             Intrinsics.checkNotNullParameter(cameraProperties, "cameraProperties");
@@ -3737,7 +3737,7 @@ public abstract class SelfieState extends SimpleWorkflowState {
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         /* JADX WARN: Multi-variable type inference failed */
-        public StartCapture(boolean z10, @Nullable kn.b bVar, float f10, @Nullable SelfieBrightnessInfo selfieBrightnessInfo, @NotNull List<PoseInfo> posesNeeded, @NotNull List<? extends Selfie> selfies, long j10, boolean z11, long j11, @NotNull CameraProperties cameraProperties, @Nullable SelfieState selfieState, @NotNull PoseConfigs poseConfigs, @NotNull CameraProperties.b cameraFacingMode, boolean z12, boolean z13) {
+        public StartCapture(boolean z10, @Nullable in.b bVar, float f10, @Nullable SelfieBrightnessInfo selfieBrightnessInfo, @NotNull List<PoseInfo> posesNeeded, @NotNull List<? extends Selfie> selfies, long j10, boolean z11, long j11, @NotNull CameraProperties cameraProperties, @Nullable SelfieState selfieState, @NotNull PoseConfigs poseConfigs, @NotNull CameraProperties.b cameraFacingMode, boolean z12, boolean z13) {
             super(null);
             Intrinsics.checkNotNullParameter(posesNeeded, "posesNeeded");
             Intrinsics.checkNotNullParameter(selfies, "selfies");

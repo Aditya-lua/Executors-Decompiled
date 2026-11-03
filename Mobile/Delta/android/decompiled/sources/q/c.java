@@ -28,56 +28,56 @@ import org.xmlpull.v1.XmlSerializer;
 public class c extends DataSetObservable {
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public static final String f28934m = "c";
+    public static final String f29287m = "c";
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public static final Object f28935n = new Object();
+    public static final Object f29288n = new Object();
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public static final Map<String, c> f28936o = new HashMap();
+    public static final Map<String, c> f29289o = new HashMap();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Context f28939d;
+    public final Context f29292d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final String f28940e;
+    public final String f29293e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public Intent f28941f;
+    public Intent f29294f;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object f28937a = new Object();
+    public final Object f29290a = new Object();
     public final List<a> b = new ArrayList();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final List<d> f28938c = new ArrayList();
+    public final List<d> f29291c = new ArrayList();
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public b f28942g = new C0509c();
+    public b f29295g = new C0508c();
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public int f28943h = 50;
+    public int f29296h = 50;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public boolean f28944i = true;
+    public boolean f29297i = true;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public boolean f28945j = false;
+    public boolean f29298j = false;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public boolean f28946k = true;
+    public boolean f29299k = true;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public boolean f28947l = false;
+    public boolean f29300l = false;
 
     public static final class a implements Comparable<a> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final ResolveInfo f28948a;
+        public final ResolveInfo f29301a;
         public float b;
 
         public a(ResolveInfo resolveInfo) {
-            this.f28948a = resolveInfo;
+            this.f29301a = resolveInfo;
         }
 
         @Override // java.lang.Comparable
@@ -98,7 +98,7 @@ public class c extends DataSetObservable {
         }
 
         public String toString() {
-            return "[resolveInfo:" + this.f28948a.toString() + "; weight:" + new BigDecimal(this.b) + "]";
+            return "[resolveInfo:" + this.f29301a.toString() + "; weight:" + new BigDecimal(this.b) + "]";
         }
     }
 
@@ -107,28 +107,28 @@ public class c extends DataSetObservable {
     }
 
     /* JADX INFO: renamed from: q.c$c, reason: collision with other inner class name */
-    public static final class C0509c implements b {
+    public static final class C0508c implements b {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Map<ComponentName, a> f28949a = new HashMap();
+        public final Map<ComponentName, a> f29302a = new HashMap();
 
         @Override // q.c.b
         public void a(Intent intent, List<a> list, List<d> list2) {
-            Map<ComponentName, a> map = this.f28949a;
+            Map<ComponentName, a> map = this.f29302a;
             map.clear();
             int size = list.size();
             for (int i10 = 0; i10 < size; i10++) {
                 a aVar = list.get(i10);
                 aVar.b = 0.0f;
-                ActivityInfo activityInfo = aVar.f28948a.activityInfo;
+                ActivityInfo activityInfo = aVar.f29301a.activityInfo;
                 map.put(new ComponentName(activityInfo.packageName, activityInfo.name), aVar);
             }
             float f10 = 1.0f;
             for (int size2 = list2.size() - 1; size2 >= 0; size2--) {
                 d dVar = list2.get(size2);
-                a aVar2 = map.get(dVar.f28950a);
+                a aVar2 = map.get(dVar.f29303a);
                 if (aVar2 != null) {
-                    aVar2.b += dVar.f28951c * f10;
+                    aVar2.b += dVar.f29304c * f10;
                     f10 *= 0.95f;
                 }
             }
@@ -139,11 +139,11 @@ public class c extends DataSetObservable {
     public static final class d {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final ComponentName f28950a;
+        public final ComponentName f29303a;
         public final long b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final float f28951c;
+        public final float f29304c;
 
         public d(String str, long j10, float f10) {
             this(ComponentName.unflattenFromString(str), j10, f10);
@@ -157,32 +157,32 @@ public class c extends DataSetObservable {
                 return false;
             }
             d dVar = (d) obj;
-            ComponentName componentName = this.f28950a;
+            ComponentName componentName = this.f29303a;
             if (componentName == null) {
-                if (dVar.f28950a != null) {
+                if (dVar.f29303a != null) {
                     return false;
                 }
-            } else if (!componentName.equals(dVar.f28950a)) {
+            } else if (!componentName.equals(dVar.f29303a)) {
                 return false;
             }
-            return this.b == dVar.b && Float.floatToIntBits(this.f28951c) == Float.floatToIntBits(dVar.f28951c);
+            return this.b == dVar.b && Float.floatToIntBits(this.f29304c) == Float.floatToIntBits(dVar.f29304c);
         }
 
         public int hashCode() {
-            ComponentName componentName = this.f28950a;
+            ComponentName componentName = this.f29303a;
             int iHashCode = componentName == null ? 0 : componentName.hashCode();
             long j10 = this.b;
-            return ((((iHashCode + 31) * 31) + ((int) (j10 ^ (j10 >>> 32)))) * 31) + Float.floatToIntBits(this.f28951c);
+            return ((((iHashCode + 31) * 31) + ((int) (j10 ^ (j10 >>> 32)))) * 31) + Float.floatToIntBits(this.f29304c);
         }
 
         public String toString() {
-            return "[; activity:" + this.f28950a + "; time:" + this.b + "; weight:" + new BigDecimal(this.f28951c) + "]";
+            return "[; activity:" + this.f29303a + "; time:" + this.b + "; weight:" + new BigDecimal(this.f29304c) + "]";
         }
 
         public d(ComponentName componentName, long j10, float f10) {
-            this.f28950a = componentName;
+            this.f29303a = componentName;
             this.b = j10;
-            this.f28951c = f10;
+            this.f29304c = f10;
         }
     }
 
@@ -197,7 +197,7 @@ public class c extends DataSetObservable {
             List list = (List) objArr[0];
             String str = (String) objArr[1];
             try {
-                FileOutputStream fileOutputStreamOpenFileOutput = c.this.f28939d.openFileOutput(str, 0);
+                FileOutputStream fileOutputStreamOpenFileOutput = c.this.f29292d.openFileOutput(str, 0);
                 XmlSerializer xmlSerializerNewSerializer = Xml.newSerializer();
                 try {
                     xmlSerializerNewSerializer.setOutput(fileOutputStreamOpenFileOutput, null);
@@ -207,21 +207,21 @@ public class c extends DataSetObservable {
                     for (int i10 = 0; i10 < size; i10++) {
                         d dVar = (d) list.remove(0);
                         xmlSerializerNewSerializer.startTag(null, "historical-record");
-                        xmlSerializerNewSerializer.attribute(null, "activity", dVar.f28950a.flattenToString());
+                        xmlSerializerNewSerializer.attribute(null, "activity", dVar.f29303a.flattenToString());
                         xmlSerializerNewSerializer.attribute(null, "time", String.valueOf(dVar.b));
-                        xmlSerializerNewSerializer.attribute(null, "weight", String.valueOf(dVar.f28951c));
+                        xmlSerializerNewSerializer.attribute(null, "weight", String.valueOf(dVar.f29304c));
                         xmlSerializerNewSerializer.endTag(null, "historical-record");
                     }
                     xmlSerializerNewSerializer.endTag(null, "historical-records");
                     xmlSerializerNewSerializer.endDocument();
                 } catch (IOException e10) {
-                    Log.e(c.f28934m, "Error writing historical record file: " + c.this.f28940e, e10);
+                    Log.e(c.f29287m, "Error writing historical record file: " + c.this.f29293e, e10);
                 } catch (IllegalStateException e11) {
-                    Log.e(c.f28934m, "Error writing historical record file: " + c.this.f28940e, e11);
+                    Log.e(c.f29287m, "Error writing historical record file: " + c.this.f29293e, e11);
                 } catch (IllegalArgumentException e12) {
-                    Log.e(c.f28934m, "Error writing historical record file: " + c.this.f28940e, e12);
+                    Log.e(c.f29287m, "Error writing historical record file: " + c.this.f29293e, e12);
                 } finally {
-                    c.this.f28944i = true;
+                    c.this.f29297i = true;
                     if (fileOutputStreamOpenFileOutput != null) {
                         try {
                             fileOutputStreamOpenFileOutput.close();
@@ -231,26 +231,26 @@ public class c extends DataSetObservable {
                 }
                 return null;
             } catch (FileNotFoundException e13) {
-                Log.e(c.f28934m, "Error writing historical record file: " + str, e13);
+                Log.e(c.f29287m, "Error writing historical record file: " + str, e13);
                 return null;
             }
         }
     }
 
     public c(Context context, String str) {
-        this.f28939d = context.getApplicationContext();
+        this.f29292d = context.getApplicationContext();
         if (TextUtils.isEmpty(str) || str.endsWith(".xml")) {
-            this.f28940e = str;
+            this.f29293e = str;
             return;
         }
-        this.f28940e = str + ".xml";
+        this.f29293e = str + ".xml";
     }
 
     public static c d(Context context, String str) {
         c cVar;
-        synchronized (f28935n) {
+        synchronized (f29288n) {
             try {
-                Map<String, c> map = f28936o;
+                Map<String, c> map = f29289o;
                 cVar = map.get(str);
                 if (cVar == null) {
                     cVar = new c(context, str);
@@ -264,9 +264,9 @@ public class c extends DataSetObservable {
     }
 
     public final boolean a(d dVar) {
-        boolean zAdd = this.f28938c.add(dVar);
+        boolean zAdd = this.f29291c.add(dVar);
         if (zAdd) {
-            this.f28946k = true;
+            this.f29299k = true;
             l();
             k();
             p();
@@ -276,15 +276,15 @@ public class c extends DataSetObservable {
     }
 
     public Intent b(int i10) {
-        synchronized (this.f28937a) {
+        synchronized (this.f29290a) {
             try {
-                if (this.f28941f == null) {
+                if (this.f29294f == null) {
                     return null;
                 }
                 c();
-                ActivityInfo activityInfo = this.b.get(i10).f28948a.activityInfo;
+                ActivityInfo activityInfo = this.b.get(i10).f29301a.activityInfo;
                 ComponentName componentName = new ComponentName(activityInfo.packageName, activityInfo.name);
-                Intent intent = new Intent(this.f28941f);
+                Intent intent = new Intent(this.f29294f);
                 intent.setComponent(componentName);
                 a(new d(componentName, System.currentTimeMillis(), 1.0f));
                 return intent;
@@ -305,16 +305,16 @@ public class c extends DataSetObservable {
 
     public ResolveInfo e(int i10) {
         ResolveInfo resolveInfo;
-        synchronized (this.f28937a) {
+        synchronized (this.f29290a) {
             c();
-            resolveInfo = this.b.get(i10).f28948a;
+            resolveInfo = this.b.get(i10).f29301a;
         }
         return resolveInfo;
     }
 
     public int f() {
         int size;
-        synchronized (this.f28937a) {
+        synchronized (this.f29290a) {
             c();
             size = this.b.size();
         }
@@ -322,13 +322,13 @@ public class c extends DataSetObservable {
     }
 
     public int g(ResolveInfo resolveInfo) {
-        synchronized (this.f28937a) {
+        synchronized (this.f29290a) {
             try {
                 c();
                 List<a> list = this.b;
                 int size = list.size();
                 for (int i10 = 0; i10 < size; i10++) {
-                    if (list.get(i10).f28948a == resolveInfo) {
+                    if (list.get(i10).f29301a == resolveInfo) {
                         return i10;
                     }
                 }
@@ -340,13 +340,13 @@ public class c extends DataSetObservable {
     }
 
     public ResolveInfo h() {
-        synchronized (this.f28937a) {
+        synchronized (this.f29290a) {
             try {
                 c();
                 if (this.b.isEmpty()) {
                     return null;
                 }
-                return this.b.get(0).f28948a;
+                return this.b.get(0).f29301a;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -355,20 +355,20 @@ public class c extends DataSetObservable {
 
     public int i() {
         int size;
-        synchronized (this.f28937a) {
+        synchronized (this.f29290a) {
             c();
-            size = this.f28938c.size();
+            size = this.f29291c.size();
         }
         return size;
     }
 
     public final boolean j() {
-        if (!this.f28947l || this.f28941f == null) {
+        if (!this.f29300l || this.f29294f == null) {
             return false;
         }
-        this.f28947l = false;
+        this.f29300l = false;
         this.b.clear();
-        List<ResolveInfo> listQueryIntentActivities = this.f28939d.getPackageManager().queryIntentActivities(this.f28941f, 0);
+        List<ResolveInfo> listQueryIntentActivities = this.f29292d.getPackageManager().queryIntentActivities(this.f29294f, 0);
         int size = listQueryIntentActivities.size();
         for (int i10 = 0; i10 < size; i10++) {
             this.b.add(new a(listQueryIntentActivities.get(i10)));
@@ -377,42 +377,42 @@ public class c extends DataSetObservable {
     }
 
     public final void k() {
-        if (!this.f28945j) {
+        if (!this.f29298j) {
             throw new IllegalStateException("No preceding call to #readHistoricalData");
         }
-        if (this.f28946k) {
-            this.f28946k = false;
-            if (TextUtils.isEmpty(this.f28940e)) {
+        if (this.f29299k) {
+            this.f29299k = false;
+            if (TextUtils.isEmpty(this.f29293e)) {
                 return;
             }
-            new e().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new ArrayList(this.f28938c), this.f28940e);
+            new e().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, new ArrayList(this.f29291c), this.f29293e);
         }
     }
 
     public final void l() {
-        int size = this.f28938c.size() - this.f28943h;
+        int size = this.f29291c.size() - this.f29296h;
         if (size <= 0) {
             return;
         }
-        this.f28946k = true;
+        this.f29299k = true;
         for (int i10 = 0; i10 < size; i10++) {
-            this.f28938c.remove(0);
+            this.f29291c.remove(0);
         }
     }
 
     public final boolean m() throws IOException {
-        if (!this.f28944i || !this.f28946k || TextUtils.isEmpty(this.f28940e)) {
+        if (!this.f29297i || !this.f29299k || TextUtils.isEmpty(this.f29293e)) {
             return false;
         }
-        this.f28944i = false;
-        this.f28945j = true;
+        this.f29297i = false;
+        this.f29298j = true;
         n();
         return true;
     }
 
     public final void n() throws IOException {
         try {
-            FileInputStream fileInputStreamOpenFileInput = this.f28939d.openFileInput(this.f28940e);
+            FileInputStream fileInputStreamOpenFileInput = this.f29292d.openFileInput(this.f29293e);
             try {
                 try {
                     XmlPullParser xmlPullParserNewPullParser = Xml.newPullParser();
@@ -422,7 +422,7 @@ public class c extends DataSetObservable {
                     if (!"historical-records".equals(xmlPullParserNewPullParser.getName())) {
                         throw new XmlPullParserException("Share records file does not start with historical-records tag.");
                     }
-                    List<d> list = this.f28938c;
+                    List<d> list = this.f29291c;
                     list.clear();
                     while (true) {
                         int next2 = xmlPullParserNewPullParser.next();
@@ -440,13 +440,13 @@ public class c extends DataSetObservable {
                         }
                     }
                 } catch (IOException e10) {
-                    Log.e(f28934m, "Error reading historical recrod file: " + this.f28940e, e10);
+                    Log.e(f29287m, "Error reading historical recrod file: " + this.f29293e, e10);
                     if (fileInputStreamOpenFileInput == null) {
                         return;
                     }
                     fileInputStreamOpenFileInput.close();
                 } catch (XmlPullParserException e11) {
-                    Log.e(f28934m, "Error reading historical recrod file: " + this.f28940e, e11);
+                    Log.e(f29287m, "Error reading historical recrod file: " + this.f29293e, e11);
                     if (fileInputStreamOpenFileInput == null) {
                         return;
                     }
@@ -466,13 +466,13 @@ public class c extends DataSetObservable {
     }
 
     public void o(int i10) {
-        synchronized (this.f28937a) {
+        synchronized (this.f29290a) {
             try {
                 c();
                 a aVar = this.b.get(i10);
                 a aVar2 = this.b.get(0);
                 float f10 = aVar2 != null ? (aVar2.b - aVar.b) + 5.0f : 1.0f;
-                ActivityInfo activityInfo = aVar.f28948a.activityInfo;
+                ActivityInfo activityInfo = aVar.f29301a.activityInfo;
                 a(new d(new ComponentName(activityInfo.packageName, activityInfo.name), System.currentTimeMillis(), f10));
             } catch (Throwable th2) {
                 throw th2;
@@ -481,10 +481,10 @@ public class c extends DataSetObservable {
     }
 
     public final boolean p() {
-        if (this.f28942g == null || this.f28941f == null || this.b.isEmpty() || this.f28938c.isEmpty()) {
+        if (this.f29295g == null || this.f29294f == null || this.b.isEmpty() || this.f29291c.isEmpty()) {
             return false;
         }
-        this.f28942g.a(this.f28941f, this.b, Collections.unmodifiableList(this.f28938c));
+        this.f29295g.a(this.f29294f, this.b, Collections.unmodifiableList(this.f29291c));
         return true;
     }
 }

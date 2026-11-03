@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 public class k {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final char[] f32098a = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+    public static final char[] f32751a = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
     public static final char[] b = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
 
     @NonNull
@@ -28,7 +28,7 @@ public class k {
         int length = bArr.length;
         StringBuilder sb2 = new StringBuilder(length + length);
         for (int i10 = 0; i10 < length && (!z10 || i10 != length - 1 || (bArr[i10] & 255) != 0); i10++) {
-            char[] cArr = f32098a;
+            char[] cArr = f32751a;
             sb2.append(cArr[(bArr[i10] & 240) >>> 4]);
             sb2.append(cArr[bArr[i10] & 15]);
         }

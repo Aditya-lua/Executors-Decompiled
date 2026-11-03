@@ -16,31 +16,31 @@ public class FidoAppIdExtension extends AbstractSafeParcelable {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NonNull
-    public final String f5960f;
+    public final String f6033f;
 
     public FidoAppIdExtension(@NonNull String str) {
-        this.f5960f = (String) m.l(str);
+        this.f6033f = (String) m.l(str);
     }
 
     public boolean equals(Object obj) {
         if (obj instanceof FidoAppIdExtension) {
-            return this.f5960f.equals(((FidoAppIdExtension) obj).f5960f);
+            return this.f6033f.equals(((FidoAppIdExtension) obj).f6033f);
         }
         return false;
     }
 
     public int hashCode() {
-        return k.c(this.f5960f);
+        return k.c(this.f6033f);
     }
 
     @NonNull
     public final String toString() {
-        return "FidoAppIdExtension{appid='" + this.f5960f + "'}";
+        return "FidoAppIdExtension{appid='" + this.f6033f + "'}";
     }
 
     @NonNull
     public String v3() {
-        return this.f5960f;
+        return this.f6033f;
     }
 
     @Override // android.os.Parcelable

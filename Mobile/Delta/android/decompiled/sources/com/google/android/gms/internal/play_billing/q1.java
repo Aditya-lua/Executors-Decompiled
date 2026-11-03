@@ -8,20 +8,20 @@ import sun.misc.Unsafe;
 public final class q1 extends n1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Unsafe f7210a;
+    public static final Unsafe f7284a;
     public static final long b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final long f7211c;
+    public static final long f7285c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final long f7212d;
+    public static final long f7286d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final long f7213e;
+    public static final long f7287e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final long f7214f;
+    public static final long f7288f;
 
     static {
         Unsafe unsafeH;
@@ -42,12 +42,12 @@ public final class q1 extends n1 {
                 }
             }
             try {
-                f7211c = unsafeH.objectFieldOffset(s1.class.getDeclaredField("c"));
+                f7285c = unsafeH.objectFieldOffset(s1.class.getDeclaredField("c"));
                 b = unsafeH.objectFieldOffset(s1.class.getDeclaredField("b"));
-                f7212d = unsafeH.objectFieldOffset(s1.class.getDeclaredField("a"));
-                f7213e = unsafeH.objectFieldOffset(r1.class.getDeclaredField("a"));
-                f7214f = unsafeH.objectFieldOffset(r1.class.getDeclaredField("b"));
-                f7210a = unsafeH;
+                f7286d = unsafeH.objectFieldOffset(s1.class.getDeclaredField("a"));
+                f7287e = unsafeH.objectFieldOffset(r1.class.getDeclaredField("a"));
+                f7288f = unsafeH.objectFieldOffset(r1.class.getDeclaredField("b"));
+                f7284a = unsafeH;
             } catch (NoSuchFieldException e10) {
                 throw new RuntimeException(e10);
             }
@@ -87,7 +87,7 @@ public final class q1 extends n1 {
     public final r1 b(s1 s1Var, r1 r1Var) {
         r1 r1Var2;
         do {
-            r1Var2 = s1Var.f7232c;
+            r1Var2 = s1Var.f7306c;
             if (r1Var == r1Var2) {
                 break;
             }
@@ -97,26 +97,26 @@ public final class q1 extends n1 {
 
     @Override // com.google.android.gms.internal.play_billing.n1
     public final void c(r1 r1Var, r1 r1Var2) {
-        f7210a.putObject(r1Var, f7214f, r1Var2);
+        f7284a.putObject(r1Var, f7288f, r1Var2);
     }
 
     @Override // com.google.android.gms.internal.play_billing.n1
     public final void d(r1 r1Var, Thread thread) {
-        f7210a.putObject(r1Var, f7213e, thread);
+        f7284a.putObject(r1Var, f7287e, thread);
     }
 
     @Override // com.google.android.gms.internal.play_billing.n1
     public final boolean e(s1 s1Var, k1 k1Var, k1 k1Var2) {
-        return u1.a(f7210a, s1Var, b, k1Var, k1Var2);
+        return u1.a(f7284a, s1Var, b, k1Var, k1Var2);
     }
 
     @Override // com.google.android.gms.internal.play_billing.n1
     public final boolean f(s1 s1Var, Object obj, Object obj2) {
-        return u1.a(f7210a, s1Var, f7212d, obj, obj2);
+        return u1.a(f7284a, s1Var, f7286d, obj, obj2);
     }
 
     @Override // com.google.android.gms.internal.play_billing.n1
     public final boolean g(s1 s1Var, r1 r1Var, r1 r1Var2) {
-        return u1.a(f7210a, s1Var, f7211c, r1Var, r1Var2);
+        return u1.a(f7284a, s1Var, f7285c, r1Var, r1Var2);
     }
 }

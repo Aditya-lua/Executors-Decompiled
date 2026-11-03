@@ -6,7 +6,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
-import me.x;
+import ne.x;
 
 /* JADX INFO: loaded from: classes.dex */
 public abstract class o<V> implements x<V> {
@@ -14,19 +14,19 @@ public abstract class o<V> implements x<V> {
     public static class a<V> extends o<V> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Throwable f29722a;
+        public final Throwable f30124a;
 
         public a(Throwable th2) {
-            this.f29722a = th2;
+            this.f30124a = th2;
         }
 
         @Override // r0.o, java.util.concurrent.Future
         public V get() throws ExecutionException {
-            throw new ExecutionException(this.f29722a);
+            throw new ExecutionException(this.f30124a);
         }
 
         public String toString() {
-            return super.toString() + "[status=FAILURE, cause=[" + this.f29722a + "]]";
+            return super.toString() + "[status=FAILURE, cause=[" + this.f30124a + "]]";
         }
     }
 
@@ -51,19 +51,19 @@ public abstract class o<V> implements x<V> {
         public static final o<Object> b = new c(null);
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final V f29723a;
+        public final V f30125a;
 
         public c(V v5) {
-            this.f29723a = v5;
+            this.f30125a = v5;
         }
 
         @Override // r0.o, java.util.concurrent.Future
         public V get() {
-            return this.f29723a;
+            return this.f30125a;
         }
 
         public String toString() {
-            return super.toString() + "[status=SUCCESS, result=[" + this.f29723a + "]]";
+            return super.toString() + "[status=SUCCESS, result=[" + this.f30125a + "]]";
         }
     }
 
@@ -71,7 +71,7 @@ public abstract class o<V> implements x<V> {
         return c.b;
     }
 
-    @Override // me.x
+    @Override // ne.x
     public void a(Runnable runnable, Executor executor) {
         x2.g.g(runnable);
         x2.g.g(executor);

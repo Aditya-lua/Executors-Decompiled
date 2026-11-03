@@ -10,13 +10,13 @@ public class t {
     public static w1.k<WeakReference<Interpolator>> b;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Interpolator f29270a = new LinearInterpolator();
+    public static final Interpolator f29623a = new LinearInterpolator();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static r7.c.a f29271c = r7.c.a.a("t", "s", "e", "o", "i", "h", "to", "ti");
+    public static r7.c.a f29624c = r7.c.a.a("t", "s", "e", "o", "i", "h", "to", "ti");
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static r7.c.a f29272d = r7.c.a.a("x", "y");
+    public static r7.c.a f29625d = r7.c.a.a("x", "y");
 
     public static WeakReference<Interpolator> a(int i10) {
         WeakReference<Interpolator> weakReferenceE;
@@ -73,7 +73,7 @@ public class t {
         boolean z10 = false;
         PointF pointFE4 = null;
         while (cVar.f()) {
-            switch (cVar.r(f29271c)) {
+            switch (cVar.r(f29624c)) {
                 case 0:
                     fH = (float) cVar.h();
                     break;
@@ -105,15 +105,15 @@ public class t {
         }
         cVar.e();
         if (z10) {
-            interpolatorB = f29270a;
+            interpolatorB = f29623a;
             t8 = tA2;
         } else {
-            interpolatorB = (pointFE == null || pointFE4 == null) ? f29270a : b(pointFE, pointFE4);
+            interpolatorB = (pointFE == null || pointFE4 == null) ? f29623a : b(pointFE, pointFE4);
             t8 = tA;
         }
         t7.a<T> aVar = new t7.a<>(iVar, tA2, t8, interpolatorB, fH, null);
-        aVar.f31683o = pointFE2;
-        aVar.f31684p = pointFE3;
+        aVar.f32202o = pointFE2;
+        aVar.f32203p = pointFE3;
         return aVar;
     }
 
@@ -143,7 +143,7 @@ public class t {
         float fH = 0.0f;
         T tA2 = null;
         while (cVar.f()) {
-            switch (cVar.r(f29271c)) {
+            switch (cVar.r(f29624c)) {
                 case 0:
                     fH = (float) cVar.h();
                     break;
@@ -162,7 +162,7 @@ public class t {
                         float fH4 = 0.0f;
                         float fH5 = 0.0f;
                         while (cVar.f()) {
-                            int iR = cVar.r(f29272d);
+                            int iR = cVar.r(f29625d);
                             if (iR == 0) {
                                 pointF2 = pointF5;
                                 r7.c.b bVarO = cVar.o();
@@ -213,7 +213,7 @@ public class t {
                         float fH6 = 0.0f;
                         float fH7 = 0.0f;
                         while (cVar.f()) {
-                            int iR2 = cVar.r(f29272d);
+                            int iR2 = cVar.r(f29625d);
                             if (iR2 != 0) {
                                 z10 = z11;
                                 if (iR2 != 1) {
@@ -285,12 +285,12 @@ public class t {
         PointF pointF11 = pointF5;
         cVar.e();
         if (z13) {
-            interpolator = f29270a;
+            interpolator = f29623a;
             t8 = tA;
         } else {
             if (pointFE == null || pointFE2 == null) {
                 if (pointF3 == null || pointF4 == null || pointF11 == null || pointF6 == null) {
-                    interpolatorB = f29270a;
+                    interpolatorB = f29623a;
                 } else {
                     interpolatorB2 = b(pointF3, pointF11);
                     interpolatorB3 = b(pointF4, pointF6);
@@ -304,8 +304,8 @@ public class t {
                     pointF = pointFE4;
                     aVar = new t7.a<>(iVar, tA, t8, interpolatorB2, interpolatorB3, fH, null);
                 }
-                aVar.f31683o = pointFE3;
-                aVar.f31684p = pointF;
+                aVar.f32202o = pointFE3;
+                aVar.f32203p = pointF;
                 return aVar;
             }
             interpolatorB = b(pointFE, pointFE2);
@@ -321,8 +321,8 @@ public class t {
             pointF = pointFE4;
             aVar = new t7.a<>(iVar, tA, t8, interpolator, fH, null);
         }
-        aVar.f31683o = pointFE3;
-        aVar.f31684p = pointF;
+        aVar.f32202o = pointFE3;
+        aVar.f32203p = pointF;
         return aVar;
     }
 

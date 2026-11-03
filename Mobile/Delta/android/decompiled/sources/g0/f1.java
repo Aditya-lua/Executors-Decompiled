@@ -46,35 +46,35 @@ public final class f1 extends w2 {
     public final m0.c0 D;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public final n0.j2.a f17397s;
+    public final n0.j2.a f17936s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public final int f17398t;
+    public final int f17937t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public final AtomicReference<Integer> f17399u;
+    public final AtomicReference<Integer> f17938u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public final int f17400v;
+    public final int f17939v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public int f17401w;
+    public int f17940w;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public Rational f17402x;
+    public Rational f17941x;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public s0.k f17403y;
+    public s0.k f17942y;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public o3.b f17404z;
+    public o3.b f17943z;
 
     public class a implements m0.c0 {
         public a() {
         }
 
         @Override // m0.c0
-        public me.x<Void> a(List<n0.l1> list) {
+        public ne.x<Void> a(List<n0.l1> list) {
             return f1.this.S0(list);
         }
 
@@ -92,7 +92,7 @@ public final class f1 extends w2 {
     public static final class b implements i4.b<f1, n0.g2, b>, n0.i2.a<b> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final n0.x2 f17406a;
+        public final n0.x2 f17945a;
 
         public b() {
             this(n0.x2.k0());
@@ -104,29 +104,29 @@ public final class f1 extends w2 {
 
         @Override // g0.l0
         public n0.w2 a() {
-            return this.f17406a;
+            return this.f17945a;
         }
 
         public f1 f() {
             Integer numValueOf = Integer.valueOf(Barcode.FORMAT_QR_CODE);
             Integer num = (Integer) a().h(n0.g2.T, null);
             if (num != null) {
-                a().G(n0.h2.f24670j, num);
+                a().G(n0.h2.f25491j, num);
             } else if (f1.E0(a())) {
-                a().G(n0.h2.f24670j, 32);
+                a().G(n0.h2.f25491j, 32);
             } else if (f1.F0(a())) {
-                a().G(n0.h2.f24670j, 32);
-                a().G(n0.h2.f24671k, numValueOf);
+                a().G(n0.h2.f25491j, 32);
+                a().G(n0.h2.f25492k, numValueOf);
             } else if (f1.G0(a())) {
-                a().G(n0.h2.f24670j, 4101);
-                a().G(n0.h2.f24672l, k0.f17469c);
+                a().G(n0.h2.f25491j, 4101);
+                a().G(n0.h2.f25493l, k0.f18008c);
             } else {
-                a().G(n0.h2.f24670j, numValueOf);
+                a().G(n0.h2.f25491j, numValueOf);
             }
             n0.g2 g2VarE = e();
             n0.i2.Y(g2VarE);
             f1 f1Var = new f1(g2VarE);
-            Size size = (Size) a().h(n0.i2.f24688q, null);
+            Size size = (Size) a().h(n0.i2.f25509q, null);
             if (size != null) {
                 f1Var.M0(new Rational(size.getWidth(), size.getHeight()));
             }
@@ -138,7 +138,7 @@ public final class f1 extends w2 {
                 if (num2 == null || !(num2.intValue() == 0 || num2.intValue() == 1 || num2.intValue() == 3 || num2.intValue() == 2)) {
                     throw new IllegalArgumentException("The flash mode is not allowed to set: " + num2);
                 }
-                if (num2.intValue() == 3 && a().h(n0.g2.f24651a0, null) == null) {
+                if (num2.intValue() == 3 && a().h(n0.g2.f25472a0, null) == null) {
                     throw new IllegalArgumentException("A ScreenFlash instance is required for FLASH_MODE_SCREEN but was not found. If value from PreviewView.getScreenFlash() is set to ImageCapture.setScreenFlash(), ensure PreviewView.setScreenFlashWindow() is invoked first.");
                 }
             }
@@ -148,7 +148,7 @@ public final class f1 extends w2 {
         @Override // n0.i4.b
         /* JADX INFO: renamed from: h, reason: merged with bridge method [inline-methods] */
         public n0.g2 e() {
-            return new n0.g2(c3.j0(this.f17406a));
+            return new n0.g2(c3.j0(this.f17945a));
         }
 
         public b i(int i10) {
@@ -162,7 +162,7 @@ public final class f1 extends w2 {
         }
 
         public b k(k0 k0Var) {
-            a().G(n0.h2.f24672l, k0Var);
+            a().G(n0.h2.f25493l, k0Var);
             return this;
         }
 
@@ -179,7 +179,7 @@ public final class f1 extends w2 {
         @Override // n0.i2.a
         /* JADX INFO: renamed from: n, reason: merged with bridge method [inline-methods] */
         public b b(a1.c cVar) {
-            a().G(n0.i2.f24692u, cVar);
+            a().G(n0.i2.f25513u, cVar);
             return this;
         }
 
@@ -198,7 +198,7 @@ public final class f1 extends w2 {
             if (i10 == -1) {
                 i10 = 0;
             }
-            a().G(n0.i2.f24684m, Integer.valueOf(i10));
+            a().G(n0.i2.f25505m, Integer.valueOf(i10));
             return this;
         }
 
@@ -219,19 +219,19 @@ public final class f1 extends w2 {
         @Deprecated
         /* JADX INFO: renamed from: t, reason: merged with bridge method [inline-methods] */
         public b d(Size size) {
-            a().G(n0.i2.f24688q, size);
+            a().G(n0.i2.f25509q, size);
             return this;
         }
 
         @Override // n0.i2.a
         /* JADX INFO: renamed from: u, reason: merged with bridge method [inline-methods] */
         public b c(int i10) {
-            a().G(n0.i2.f24685n, Integer.valueOf(i10));
+            a().G(n0.i2.f25506n, Integer.valueOf(i10));
             return this;
         }
 
         public b(n0.x2 x2Var) {
-            this.f17406a = x2Var;
+            this.f17945a = x2Var;
             Class cls = (Class) x2Var.h(s0.q.N, null);
             if (cls == null || cls.equals(f1.class)) {
                 j(j4.b.IMAGE_CAPTURE);
@@ -245,37 +245,37 @@ public final class f1 extends w2 {
     public static final class c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final u3 f17407a;
+        public static final u3 f17946a;
         public static final a1.c b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static final n0.g2 f17408c;
+        public static final n0.g2 f17947c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final k0 f17409d;
+        public static final k0 f17948d;
 
         static {
             u3 u3Var = u3.STILL_CAPTURE;
-            f17407a = u3Var;
+            f17946a = u3Var;
             a1.c cVarA = new a1.c.a().d(a1.a.f68c).f(a1.d.f77c).a();
             b = cVarA;
-            k0 k0Var = k0.f17470d;
-            f17409d = k0Var;
-            f17408c = new b().p(4).o(u3Var).q(0).b(cVarA).m(0).k(k0Var).e();
+            k0 k0Var = k0.f18009d;
+            f17948d = k0Var;
+            f17947c = new b().p(4).o(u3Var).q(0).b(cVarA).m(0).k(k0Var).e();
         }
 
         public n0.g2 a() {
-            return f17408c;
+            return f17947c;
         }
     }
 
     public static class d implements g1 {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final t f17410a;
+        public final t f17949a;
 
         public d(t tVar) {
-            this.f17410a = tVar;
+            this.f17949a = tVar;
         }
 
         @Override // g0.g1
@@ -297,14 +297,14 @@ public final class f1 extends w2 {
         }
 
         public final Set<Integer> b() {
-            t tVar = this.f17410a;
+            t tVar = this.f17949a;
             HashSet hashSet = null;
             if (!(tVar instanceof n0.e)) {
                 return null;
             }
             n0.n1 n1VarA = ((n0.e) tVar).C().k().a(j4.b.IMAGE_CAPTURE, 1);
             if (n1VarA != null) {
-                n0.n1.a<List<Pair<Integer, Size[]>>> aVar = n0.i2.f24691t;
+                n0.n1.a<List<Pair<Integer, Size[]>>> aVar = n0.i2.f25512t;
                 if (n1VarA.a(aVar)) {
                     hashSet = new HashSet();
                     hashSet.add(0);
@@ -321,7 +321,7 @@ public final class f1 extends w2 {
         }
 
         public final boolean c() {
-            t tVar = this.f17410a;
+            t tVar = this.f17949a;
             if (!(tVar instanceof n0.o0)) {
                 return false;
             }
@@ -333,7 +333,7 @@ public final class f1 extends w2 {
         }
 
         public final boolean d() {
-            t tVar = this.f17410a;
+            t tVar = this.f17949a;
             if (tVar instanceof n0.o0) {
                 return ((n0.o0) tVar).a().contains(4101);
             }
@@ -344,29 +344,29 @@ public final class f1 extends w2 {
     public static final class e {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public boolean f17411a;
+        public boolean f17950a;
         public boolean b = false;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public boolean f17412c;
+        public boolean f17951c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public Location f17413d;
+        public Location f17952d;
 
         public Location a() {
-            return this.f17413d;
+            return this.f17952d;
         }
 
         public boolean b() {
-            return this.f17411a;
+            return this.f17950a;
         }
 
         public boolean c() {
-            return this.f17412c;
+            return this.f17951c;
         }
 
         public String toString() {
-            return "Metadata{mIsReversedHorizontal=" + this.f17411a + ", mIsReversedVertical=" + this.f17412c + ", mLocation=" + this.f17413d + "}";
+            return "Metadata{mIsReversedHorizontal=" + this.f17950a + ", mIsReversedVertical=" + this.f17951c + ", mLocation=" + this.f17952d + "}";
         }
     }
 
@@ -400,55 +400,55 @@ public final class f1 extends w2 {
     public static final class h {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final File f17414a;
+        public final File f17953a;
         public final ContentResolver b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final Uri f17415c;
+        public final Uri f17954c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final ContentValues f17416d;
+        public final ContentValues f17955d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final OutputStream f17417e;
+        public final OutputStream f17956e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public final e f17418f;
+        public final e f17957f;
 
         public static final class a {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public File f17419a;
+            public File f17958a;
             public ContentResolver b;
 
             /* JADX INFO: renamed from: c, reason: collision with root package name */
-            public Uri f17420c;
+            public Uri f17959c;
 
             /* JADX INFO: renamed from: d, reason: collision with root package name */
-            public ContentValues f17421d;
+            public ContentValues f17960d;
 
             /* JADX INFO: renamed from: e, reason: collision with root package name */
-            public OutputStream f17422e;
+            public OutputStream f17961e;
 
             /* JADX INFO: renamed from: f, reason: collision with root package name */
-            public e f17423f;
+            public e f17962f;
 
             public a(File file) {
-                this.f17419a = file;
+                this.f17958a = file;
             }
 
             public h a() {
-                return new h(this.f17419a, this.b, this.f17420c, this.f17421d, this.f17422e, this.f17423f);
+                return new h(this.f17958a, this.b, this.f17959c, this.f17960d, this.f17961e, this.f17962f);
             }
         }
 
         public h(File file, ContentResolver contentResolver, Uri uri, ContentValues contentValues, OutputStream outputStream, e eVar) {
-            this.f17414a = file;
+            this.f17953a = file;
             this.b = contentResolver;
-            this.f17415c = uri;
-            this.f17416d = contentValues;
-            this.f17417e = outputStream;
-            this.f17418f = eVar == null ? new e() : eVar;
+            this.f17954c = uri;
+            this.f17955d = contentValues;
+            this.f17956e = outputStream;
+            this.f17957f = eVar == null ? new e() : eVar;
         }
 
         public ContentResolver a() {
@@ -456,38 +456,38 @@ public final class f1 extends w2 {
         }
 
         public ContentValues b() {
-            return this.f17416d;
+            return this.f17955d;
         }
 
         public File c() {
-            return this.f17414a;
+            return this.f17953a;
         }
 
         public e d() {
-            return this.f17418f;
+            return this.f17957f;
         }
 
         public OutputStream e() {
-            return this.f17417e;
+            return this.f17956e;
         }
 
         public Uri f() {
-            return this.f17415c;
+            return this.f17954c;
         }
 
         public String toString() {
-            return "OutputFileOptions{mFile=" + this.f17414a + ", mContentResolver=" + this.b + ", mSaveCollection=" + this.f17415c + ", mContentValues=" + this.f17416d + ", mOutputStream=" + this.f17417e + ", mMetadata=" + this.f17418f + "}";
+            return "OutputFileOptions{mFile=" + this.f17953a + ", mContentResolver=" + this.b + ", mSaveCollection=" + this.f17954c + ", mContentValues=" + this.f17955d + ", mOutputStream=" + this.f17956e + ", mMetadata=" + this.f17957f + "}";
         }
     }
 
     public static class i {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Uri f17424a;
+        public final Uri f17963a;
         public final int b;
 
         public i(Uri uri, int i10) {
-            this.f17424a = uri;
+            this.f17963a = uri;
             this.b = i10;
         }
     }
@@ -504,24 +504,24 @@ public final class f1 extends w2 {
 
     public f1(n0.g2 g2Var) {
         super(g2Var);
-        this.f17397s = new n0.j2.a() { // from class: g0.d1
+        this.f17936s = new n0.j2.a() { // from class: g0.d1
             @Override // n0.j2.a
             public final void a(n0.j2 j2Var) {
                 f1.h0(j2Var);
             }
         };
-        this.f17399u = new AtomicReference<>(null);
-        this.f17401w = -1;
-        this.f17402x = null;
+        this.f17938u = new AtomicReference<>(null);
+        this.f17940w = -1;
+        this.f17941x = null;
         this.D = new a();
         n0.g2 g2Var2 = (n0.g2) l();
         if (g2Var2.a(n0.g2.Q)) {
-            this.f17398t = g2Var2.i0();
+            this.f17937t = g2Var2.i0();
         } else {
-            this.f17398t = 1;
+            this.f17937t = 1;
         }
-        this.f17400v = g2Var2.k0(0);
-        this.f17403y = s0.k.g(g2Var2.o0());
+        this.f17939v = g2Var2.k0(0);
+        this.f17942y = s0.k.g(g2Var2.o0());
     }
 
     public static boolean D0(List<Pair<Integer, Size[]>> list, int i10) {
@@ -556,7 +556,7 @@ public final class f1 extends w2 {
         f1Var.B.pause();
         f1Var.r0(true);
         o3.b bVarS0 = f1Var.s0(f1Var.k(), (n0.g2) f1Var.l(), (t3) x2.g.g(f1Var.g()));
-        f1Var.f17404z = bVarS0;
+        f1Var.f17943z = bVarS0;
         f1Var.d0(o0.a(new Object[]{bVarS0.p()}));
         f1Var.L();
         f1Var.B.e();
@@ -598,7 +598,7 @@ public final class f1 extends w2 {
     }
 
     public final q3 A0() {
-        return i().f().w(null);
+        return i().g().w(null);
     }
 
     @Override // g0.w2
@@ -615,15 +615,15 @@ public final class f1 extends w2 {
         if (rectE != null) {
             return rectE;
         }
-        if (!w0.b.i(this.f17402x)) {
+        if (!w0.b.i(this.f17941x)) {
             return new Rect(0, 0, sizeH.getWidth(), sizeH.getHeight());
         }
         n0.p0 p0VarI = i();
         Objects.requireNonNull(p0VarI);
         int iT = t(p0VarI);
-        Rational rational = new Rational(this.f17402x.getDenominator(), this.f17402x.getNumerator());
+        Rational rational = new Rational(this.f17941x.getDenominator(), this.f17941x.getNumerator());
         if (!p0.a0.i(iT)) {
-            rational = this.f17402x;
+            rational = this.f17941x;
         }
         Rect rectA = w0.b.a(sizeH, rational);
         Objects.requireNonNull(rectA);
@@ -640,7 +640,7 @@ public final class f1 extends w2 {
     }
 
     public boolean H0() {
-        return ((Boolean) l().h(n0.g2.f24653c0, Boolean.FALSE)).booleanValue();
+        return ((Boolean) l().h(n0.g2.f25474c0, Boolean.FALSE)).booleanValue();
     }
 
     public final boolean I0(Map<Integer, List<Size>> map, int i10) {
@@ -648,16 +648,16 @@ public final class f1 extends w2 {
     }
 
     public final boolean J0() {
-        return (i() == null || i().f().w(null) == null) ? false : true;
+        return (i() == null || i().g().w(null) == null) ? false : true;
     }
 
     public void K0() {
-        synchronized (this.f17399u) {
+        synchronized (this.f17938u) {
             try {
-                if (this.f17399u.get() != null) {
+                if (this.f17938u.get() != null) {
                     return;
                 }
-                this.f17399u.set(Integer.valueOf(w0()));
+                this.f17938u.set(Integer.valueOf(w0()));
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -673,7 +673,7 @@ public final class f1 extends w2 {
     }
 
     public void M0(Rational rational) {
-        this.f17402x = rational;
+        this.f17941x = rational;
     }
 
     public void N0(int i10) {
@@ -682,15 +682,15 @@ public final class f1 extends w2 {
             if (i10 != 3) {
                 throw new IllegalArgumentException("Invalid flash mode: " + i10);
             }
-            if (this.f17403y.getScreenFlash() == null) {
+            if (this.f17942y.getScreenFlash() == null) {
                 throw new IllegalArgumentException("A ScreenFlash instance is required for FLASH_MODE_SCREEN but was not found. If value from PreviewView.getScreenFlash() is set to ImageCapture.setScreenFlash(), ensure PreviewView.setScreenFlashWindow() is invoked first.");
             }
             if (i() != null && u0() != 0) {
                 throw new IllegalArgumentException("Not a front camera despite setting FLASH_MODE_SCREEN");
             }
         }
-        synchronized (this.f17399u) {
-            this.f17401w = i10;
+        synchronized (this.f17938u) {
+            this.f17940w = i10;
             V0();
         }
     }
@@ -704,7 +704,7 @@ public final class f1 extends w2 {
     }
 
     public void O0(j jVar) {
-        this.f17403y = s0.k.g(jVar);
+        this.f17942y = s0.k.g(jVar);
         P0();
     }
 
@@ -716,7 +716,7 @@ public final class f1 extends w2 {
     }
 
     public final void P0() {
-        Q0(this.f17403y);
+        Q0(this.f17942y);
     }
 
     @Override // g0.w2
@@ -739,23 +739,23 @@ public final class f1 extends w2 {
         Integer num = (Integer) bVar.a().h(n0.g2.T, null);
         if (num != null) {
             x2.g.b(!J0() || num.intValue() == 256, "Cannot set non-JPEG buffer format with Extensions enabled.");
-            bVar.a().G(n0.h2.f24670j, Integer.valueOf(zT0 ? 35 : num.intValue()));
+            bVar.a().G(n0.h2.f25491j, Integer.valueOf(zT0 ? 35 : num.intValue()));
         } else if (E0(bVar.a())) {
-            bVar.a().G(n0.h2.f24670j, 32);
+            bVar.a().G(n0.h2.f25491j, 32);
         } else if (F0(bVar.a())) {
-            bVar.a().G(n0.h2.f24670j, 32);
-            bVar.a().G(n0.h2.f24671k, numValueOf);
+            bVar.a().G(n0.h2.f25491j, 32);
+            bVar.a().G(n0.h2.f25492k, numValueOf);
         } else if (G0(bVar.a())) {
-            bVar.a().G(n0.h2.f24670j, 4101);
-            bVar.a().G(n0.h2.f24672l, k0.f17469c);
+            bVar.a().G(n0.h2.f25491j, 4101);
+            bVar.a().G(n0.h2.f25493l, k0.f18008c);
         } else if (zT0) {
-            bVar.a().G(n0.h2.f24670j, 35);
+            bVar.a().G(n0.h2.f25491j, 35);
         } else {
-            List list = (List) bVar.a().h(n0.i2.f24691t, null);
+            List list = (List) bVar.a().h(n0.i2.f25512t, null);
             if (list == null || D0(list, Barcode.FORMAT_QR_CODE)) {
-                bVar.a().G(n0.h2.f24670j, numValueOf);
+                bVar.a().G(n0.h2.f25491j, numValueOf);
             } else if (D0(list, 35)) {
-                bVar.a().G(n0.h2.f24670j, 35);
+                bVar.a().G(n0.h2.f25491j, 35);
             }
         }
         return bVar.e();
@@ -767,10 +767,10 @@ public final class f1 extends w2 {
 
     public void R0(int i10) {
         int iC0 = C0();
-        if (!a0(i10) || this.f17402x == null) {
+        if (!a0(i10) || this.f17941x == null) {
             return;
         }
-        this.f17402x = w0.b.g(Math.abs(p0.c.b(i10) - p0.c.b(iC0)), this.f17402x);
+        this.f17941x = w0.b.g(Math.abs(p0.c.b(i10) - p0.c.b(iC0)), this.f17941x);
     }
 
     @Override // g0.w2
@@ -778,9 +778,9 @@ public final class f1 extends w2 {
         k0();
     }
 
-    public me.x<Void> S0(List<n0.l1> list) {
+    public ne.x<Void> S0(List<n0.l1> list) {
         p0.z.b();
-        return r0.n.x(j().f(list, this.f17398t, this.f17400v), new t.a() { // from class: g0.c1
+        return r0.n.x(j().f(list, this.f17937t, this.f17939v), new t.a() { // from class: g0.c1
             @Override // t.a
             public final Object apply(Object obj) {
                 return f1.i0((List) obj);
@@ -790,8 +790,8 @@ public final class f1 extends w2 {
 
     @Override // g0.w2
     public t3 T(n0.n1 n1Var) {
-        this.f17404z.g(n1Var);
-        d0(o0.a(new Object[]{this.f17404z.p()}));
+        this.f17943z.g(n1Var);
+        d0(o0.a(new Object[]{this.f17943z.p()}));
         return g().i().d(n1Var).a();
     }
 
@@ -800,7 +800,7 @@ public final class f1 extends w2 {
             q0.c.e().execute(new Runnable() { // from class: g0.e1
                 @Override // java.lang.Runnable
                 public final void run() {
-                    this.f17368a.T0(hVar, executor, gVar);
+                    this.f17907a.T0(hVar, executor, gVar);
                 }
             });
         } else {
@@ -812,7 +812,7 @@ public final class f1 extends w2 {
     public t3 U(t3 t3Var, t3 t3Var2) {
         r1.a("ImageCapture", "onSuggestedStreamSpecUpdated: primaryStreamSpec = " + t3Var + ", secondaryStreamSpec " + t3Var2);
         o3.b bVarS0 = s0(k(), (n0.g2) l(), t3Var);
-        this.f17404z = bVarS0;
+        this.f17943z = bVarS0;
         d0(o0.a(new Object[]{bVarS0.p()}));
         J();
         return t3Var;
@@ -820,7 +820,7 @@ public final class f1 extends w2 {
 
     public final void U0(Executor executor, f fVar, g gVar, h hVar, h hVar2) {
         p0.z.b();
-        if (w0() == 3 && this.f17403y.getScreenFlash() == null) {
+        if (w0() == 3 && this.f17942y.getScreenFlash() == null) {
             throw new IllegalArgumentException("A ScreenFlash instance is required for FLASH_MODE_SCREEN but was not found. If value from PreviewView.getScreenFlash() is set to ImageCapture.setScreenFlash(), ensure PreviewView.setScreenFlashWindow() is invoked first.");
         }
         Log.d("ImageCapture", "takePictureInternal");
@@ -838,7 +838,7 @@ public final class f1 extends w2 {
         }
         m0.b1 b1Var = this.B;
         Objects.requireNonNull(b1Var);
-        b1Var.b(m0.l1.v(executor, fVar, gVar, hVar, hVar2, B0(), y(), t(p0VarI), y0(), v0(), z10, this.f17404z.s()));
+        b1Var.b(m0.l1.v(executor, fVar, gVar, hVar, hVar2, B0(), y(), t(p0VarI), y0(), v0(), z10, this.f17943z.s()));
     }
 
     @Override // g0.w2
@@ -849,9 +849,9 @@ public final class f1 extends w2 {
     }
 
     public final void V0() {
-        synchronized (this.f17399u) {
+        synchronized (this.f17938u) {
             try {
-                if (this.f17399u.get() != null) {
+                if (this.f17938u.get() != null) {
                     return;
                 }
                 j().i(w0());
@@ -862,9 +862,9 @@ public final class f1 extends w2 {
     }
 
     public void W0() {
-        synchronized (this.f17399u) {
+        synchronized (this.f17938u) {
             try {
-                Integer andSet = this.f17399u.getAndSet(null);
+                Integer andSet = this.f17938u.getAndSet(null);
                 if (andSet == null) {
                     return;
                 }
@@ -878,7 +878,7 @@ public final class f1 extends w2 {
     }
 
     public final void k0() {
-        this.f17403y.f();
+        this.f17942y.f();
         m0.b1 b1Var = this.B;
         if (b1Var != null) {
             b1Var.c();
@@ -927,12 +927,12 @@ public final class f1 extends w2 {
         if (I0(mapF, 4101)) {
             arrayList.add(4101);
         }
-        int iA = !arrayList.isEmpty() ? i().f().I().a(i10, arrayList) : 0;
+        int iA = !arrayList.isEmpty() ? i().g().I().a(i10, arrayList) : 0;
         if (iA == 0) {
             return null;
         }
         List<Size> list = mapF.get(Integer.valueOf(iA));
-        a1.c cVar = (a1.c) l().h(n0.g2.f24652b0, null);
+        a1.c cVar = (a1.c) l().h(n0.g2.f25473b0, null);
         if (cVar == null) {
             return m0.k0.a((Size) Collections.max(list, new p0.e()), iA);
         }
@@ -1013,7 +1013,7 @@ public final class f1 extends w2 {
         o3.c cVar2 = new o3.c(new o3.d() { // from class: g0.b1
             @Override // n0.o3.d
             public final void a(o3 o3Var, o3.g gVar) {
-                f1.g0(this.f17347a, o3Var, gVar);
+                f1.g0(this.f17886a, o3Var, gVar);
             }
         });
         this.C = cVar2;
@@ -1061,13 +1061,13 @@ public final class f1 extends w2 {
     }
 
     public int v0() {
-        return this.f17398t;
+        return this.f17937t;
     }
 
     public int w0() {
         int iJ0;
-        synchronized (this.f17399u) {
-            iJ0 = this.f17401w;
+        synchronized (this.f17938u) {
+            iJ0 = this.f17940w;
             if (iJ0 == -1) {
                 iJ0 = ((n0.g2) l()).j0(2);
             }
@@ -1080,14 +1080,14 @@ public final class f1 extends w2 {
         if (g2Var.a(n0.g2.Z)) {
             return g2Var.n0();
         }
-        int i10 = this.f17398t;
+        int i10 = this.f17937t;
         if (i10 == 0) {
             return 100;
         }
         if (i10 == 1 || i10 == 2) {
             return 95;
         }
-        throw new IllegalStateException("CaptureMode " + this.f17398t + " is invalid");
+        throw new IllegalStateException("CaptureMode " + this.f17937t + " is invalid");
     }
 
     public int z0() {

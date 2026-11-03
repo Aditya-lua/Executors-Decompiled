@@ -1,8 +1,5 @@
 package com.withpersona.sdk2.inquiry.ui;
 
-import an.ViewEnvironment;
-import an.a0;
-import an.e0;
 import android.R;
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -30,8 +27,13 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.u0;
 import androidx.core.widget.NestedScrollView;
 import androidx.p000lifecycle.t;
-import ar.ComponentView;
-import ar.s;
+import ar.f2;
+import ar.p1;
+import ar.v3;
+import ar.w1;
+import ar.w3;
+import ar.x;
+import br.n;
 import com.appsflyer.sdk_base.referrer.Payload;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.button.MaterialButton;
@@ -112,17 +114,14 @@ import com.withpersona.sdk2.inquiry.steps.ui.network.Suggestion;
 import com.withpersona.sdk2.inquiry.steps.ui.view.ShadowedNestedScrollView;
 import com.withpersona.sdk2.inquiry.ui.UiWorkflow;
 import com.withpersona.sdk2.inquiry.ui.network.ComponentParam;
-import cr.f2;
-import cr.p1;
-import cr.v3;
-import cr.w1;
-import cr.w3;
-import cr.x;
-import dr.n;
 import e3.k0;
 import e3.l0;
 import e3.n0;
-import gr.w;
+import er.w;
+import hq.g0;
+import hq.z;
+import hr.r;
+import iu.p0;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -130,9 +129,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import jq.g0;
-import jq.z;
-import jr.r;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.Unit;
@@ -147,20 +143,24 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.d0;
 import kotlin.text.StringsKt;
-import ku.p0;
-import or.a2;
-import or.m1;
-import or.q1;
-import or.r1;
+import mr.a2;
+import mr.m1;
+import mr.q1;
+import mr.r1;
+import nt.m;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import pt.m;
-import zt.o;
+import xt.o;
+import ym.ViewEnvironment;
+import ym.a0;
+import ym.e0;
+import yq.ComponentView;
+import yq.s;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000þ\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010$\n\u0002\u0010\u000e\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010 \n\u0000\n\u0002\u0010\u000b\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010%\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\b\b\u0001\u0018\u0000 \u0086\u00012\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0002\u0087\u0001B\u0017\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0002¢\u0006\u0004\b\u0006\u0010\u0007J\u001f\u0010\f\u001a\u00020\u000b2\u0006\u0010\b\u001a\u00020\u00022\u0006\u0010\n\u001a\u00020\tH\u0016¢\u0006\u0004\b\f\u0010\rJG\u0010\u0014\u001a\u00020\u000b2\u0006\u0010\b\u001a\u00020\u00022\u0006\u0010\n\u001a\u00020\t2\u0012\u0010\u0011\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e2\u0012\u0010\u0013\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00120\u000eH\u0002¢\u0006\u0004\b\u0014\u0010\u0015JO\u0010\u0018\u001a\u00020\u000b2\u0006\u0010\b\u001a\u00020\u00022\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\u0017\u001a\u00020\u00162\u0012\u0010\u0011\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e2\u0012\u0010\u0013\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00120\u000eH\u0002¢\u0006\u0004\b\u0018\u0010\u0019Jk\u0010\u001f\u001a\u00020\u000b2\u0006\u0010\b\u001a\u00020\u00022\u0006\u0010\u0017\u001a\u00020\u001a2\u0006\u0010\u001c\u001a\u00020\u001b2\u0012\u0010\u0011\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e2\u0012\u0010\u0013\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00120\u000e2\u0006\u0010\n\u001a\u00020\t2\u0012\u0010\u001e\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u001d0\u000eH\u0002¢\u0006\u0004\b\u001f\u0010 J\u0017\u0010!\u001a\u00020\u000b2\u0006\u0010\b\u001a\u00020\u0002H\u0002¢\u0006\u0004\b!\u0010\"J9\u0010'\u001a\u00020\u000b2\f\u0010$\u001a\b\u0012\u0004\u0012\u00020\u001a0#2\u0012\u0010\u0011\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e2\u0006\u0010&\u001a\u00020%H\u0002¢\u0006\u0004\b'\u0010(J7\u0010)\u001a\u00020\u000b*\u00020\u001b2\u0012\u0010\u0011\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e2\u0006\u0010\u0017\u001a\u00020\u001a2\u0006\u0010&\u001a\u00020%H\u0002¢\u0006\u0004\b)\u0010*J/\u0010+\u001a\u00020\u000b*\u00020\u001b2\u0012\u0010\u0011\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e2\u0006\u0010\u0017\u001a\u00020\u001aH\u0002¢\u0006\u0004\b+\u0010,J7\u0010-\u001a\u00020\u000b*\u00020\u001b2\u0012\u0010\u0011\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e2\u0006\u0010\u0017\u001a\u00020\u001a2\u0006\u0010&\u001a\u00020%H\u0002¢\u0006\u0004\b-\u0010*J%\u00100\u001a\u00020\u000b2\u0006\u0010/\u001a\u00020.2\f\u0010$\u001a\b\u0012\u0004\u0012\u00020\u001a0#H\u0002¢\u0006\u0004\b0\u00101J'\u00106\u001a\u00020\u000b2\u0006\u0010/\u001a\u00020.2\u0006\u00103\u001a\u0002022\u0006\u00105\u001a\u000204H\u0002¢\u0006\u0004\b6\u00107J'\u0010:\u001a\u00020\u000b2\u0006\u0010\b\u001a\u00020\u00022\u0006\u0010\u0017\u001a\u0002082\u0006\u0010\u001c\u001a\u000209H\u0002¢\u0006\u0004\b:\u0010;J)\u0010>\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020=0\u000e2\f\u0010$\u001a\b\u0012\u0004\u0012\u00020<0#H\u0002¢\u0006\u0004\b>\u0010?JE\u0010D\u001a\u00020\u000b2\u0012\u0010@\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e2\u0012\u0010B\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020=0A2\f\u0010C\u001a\b\u0012\u0004\u0012\u00020<0#H\u0002¢\u0006\u0004\bD\u0010EJ\u0013\u0010G\u001a\u00020F*\u00020\u000fH\u0002¢\u0006\u0004\bG\u0010HJ\u0013\u0010K\u001a\u00020J*\u00020IH\u0002¢\u0006\u0004\bK\u0010LJ\u0019\u0010N\u001a\u00020M*\b\u0012\u0004\u0012\u00020\u000f0#H\u0002¢\u0006\u0004\bN\u0010OJ+\u0010P\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e*\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020=0\u000eH\u0002¢\u0006\u0004\bP\u0010QR\u0014\u0010\u0004\u001a\u00020\u00038\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bR\u0010SR \u0010V\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u001b0\u000e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bT\u0010UR \u0010\u001e\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u001d0\u000e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bW\u0010UR\u0016\u0010Z\u001a\u0004\u0018\u00010\u000f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bX\u0010YR\u0014\u0010^\u001a\u00020[8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\\\u0010]R\u0014\u0010b\u001a\u00020_8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b`\u0010aR\u0014\u0010f\u001a\u00020c8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bd\u0010eR\u0014\u0010j\u001a\u00020g8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bh\u0010iR\u0016\u0010m\u001a\u00020%8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bk\u0010lR\u001c\u0010q\u001a\b\u0012\u0004\u0012\u00020\u000b0n8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bo\u0010pR\u001c\u0010s\u001a\b\u0012\u0004\u0012\u00020\u000b0n8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\br\u0010pR(\u0010w\u001a\u0014\u0012\u0004\u0012\u00020\u001a\u0012\u0004\u0012\u00020%\u0012\u0004\u0012\u00020\u000b0t8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bu\u0010vR\"\u0010|\u001a\u000e\u0012\u0004\u0012\u00020y\u0012\u0004\u0012\u00020\u000b0x8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bz\u0010{R\"\u0010\u007f\u001a\u000e\u0012\u0004\u0012\u00020}\u0012\u0004\u0012\u00020\u000b0x8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b~\u0010{R%\u0010\u0082\u0001\u001a\u000f\u0012\u0005\u0012\u00030\u0080\u0001\u0012\u0004\u0012\u00020\u000b0x8\u0002@\u0002X\u0082\u000e¢\u0006\u0007\n\u0005\b\u0081\u0001\u0010{R#\u0010\u0085\u0001\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e8BX\u0082\u0004¢\u0006\b\u001a\u0006\b\u0083\u0001\u0010\u0084\u0001¨\u0006\u0088\u0001"}, d2 = {"Lcom/withpersona/sdk2/inquiry/ui/g;", "Lan/k;", "Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;", "Lpr/a;", "binding", "initialRendering", "<init>", "(Lpr/a;Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;)V", "rendering", "Lan/y;", "viewEnvironment", "", "x0", "(Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;Lan/y;)V", "", "", "", "componentParams", "Lcom/withpersona/sdk2/inquiry/ui/UiComponentErrorInfo;", "errors", "t0", "(Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;Lan/y;Ljava/util/Map;Ljava/util/Map;)V", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/SheetComponent;", "component", "o1", "(Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;Lan/y;Lcom/withpersona/sdk2/inquiry/steps/ui/components/SheetComponent;Ljava/util/Map;Ljava/util/Map;)V", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;", "Landroid/view/View;", "view", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/UiComponentConfig;", "componentNameToConfig", "H0", "(Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;Landroid/view/View;Ljava/util/Map;Ljava/util/Map;Lan/y;Ljava/util/Map;)V", "q0", "(Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;)V", "", "components", "", "isLoading", "f0", "(Ljava/util/List;Ljava/util/Map;Z)V", "c0", "(Landroid/view/View;Ljava/util/Map;Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;Z)V", "e0", "(Landroid/view/View;Ljava/util/Map;Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;)V", "d0", "Lar/g;", "result", "g0", "(Lar/g;Ljava/util/List;)V", "", "firstBelowTheFoldChildIndex", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/FooterComponent;", "footerComponent", "u0", "(Lar/g;ILcom/withpersona/sdk2/inquiry/steps/ui/components/FooterComponent;)V", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/ClickableStackComponent;", "Landroidx/constraintlayout/widget/ConstraintLayout;", "r0", "(Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;Lcom/withpersona/sdk2/inquiry/steps/ui/components/ClickableStackComponent;Landroidx/constraintlayout/widget/ConstraintLayout;)V", "Lar/a;", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam;", "h0", "(Ljava/util/List;)Ljava/util/Map;", "initialComponentValues", "", "outMap", "componentViews", "p0", "(Ljava/util/Map;Ljava/util/Map;Ljava/util/List;)V", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$ComponentString;", "E0", "(Ljava/lang/String;)Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$ComponentString;", "", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$ComponentNumber;", "D0", "(Ljava/lang/Number;)Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$ComponentNumber;", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$ComponentStringList;", "F0", "(Ljava/util/List;)Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$ComponentStringList;", "G0", "(Ljava/util/Map;)Ljava/util/Map;", "b", "Lpr/a;", "c", "Ljava/util/Map;", "componentNameToView", "d", "e", "Ljava/lang/String;", "navBarTitle", "Lhr/j;", "f", "Lhr/j;", "inputSelectBottomSheetController", "Lor/a2;", "g", "Lor/a2;", "signatureBottomSheetController", "Lor/q1;", "h", "Lor/q1;", "nestedUiBottomSheetController", "Ldr/n;", "i", "Ldr/n;", "helpBottomSheetController", "j", "Z", "hasScrolledToBottom", "Lkotlin/Function0;", "k", "Lkotlin/jvm/functions/Function0;", "onComplete", "l", "onCancel", "Lkotlin/Function2;", "m", "Lkotlin/jvm/functions/Function2;", "onClick", "Lkotlin/Function1;", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/GovernmentIdNfcScanComponent;", "n", "Lkotlin/jvm/functions/Function1;", "launchNfcScan", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/JpMyNumberNfcScanComponent;", "o", "launchJpMyNumberNfcScan", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/VerifyPersonaButtonComponent;", "p", "onVerifyPersonaClick", "i0", "()Ljava/util/Map;", "uiStateValues", "q", "a", "ui_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000þ\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010$\n\u0002\u0010\u000e\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010 \n\u0000\n\u0002\u0010\u000b\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010%\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\b\b\u0001\u0018\u0000 \u0086\u00012\b\u0012\u0004\u0012\u00020\u00020\u0001:\u0002\u0087\u0001B\u0017\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0002¢\u0006\u0004\b\u0006\u0010\u0007J\u001f\u0010\f\u001a\u00020\u000b2\u0006\u0010\b\u001a\u00020\u00022\u0006\u0010\n\u001a\u00020\tH\u0016¢\u0006\u0004\b\f\u0010\rJG\u0010\u0014\u001a\u00020\u000b2\u0006\u0010\b\u001a\u00020\u00022\u0006\u0010\n\u001a\u00020\t2\u0012\u0010\u0011\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e2\u0012\u0010\u0013\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00120\u000eH\u0002¢\u0006\u0004\b\u0014\u0010\u0015JO\u0010\u0018\u001a\u00020\u000b2\u0006\u0010\b\u001a\u00020\u00022\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\u0017\u001a\u00020\u00162\u0012\u0010\u0011\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e2\u0012\u0010\u0013\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00120\u000eH\u0002¢\u0006\u0004\b\u0018\u0010\u0019Jk\u0010\u001f\u001a\u00020\u000b2\u0006\u0010\b\u001a\u00020\u00022\u0006\u0010\u0017\u001a\u00020\u001a2\u0006\u0010\u001c\u001a\u00020\u001b2\u0012\u0010\u0011\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e2\u0012\u0010\u0013\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00120\u000e2\u0006\u0010\n\u001a\u00020\t2\u0012\u0010\u001e\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u001d0\u000eH\u0002¢\u0006\u0004\b\u001f\u0010 J\u0017\u0010!\u001a\u00020\u000b2\u0006\u0010\b\u001a\u00020\u0002H\u0002¢\u0006\u0004\b!\u0010\"J9\u0010'\u001a\u00020\u000b2\f\u0010$\u001a\b\u0012\u0004\u0012\u00020\u001a0#2\u0012\u0010\u0011\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e2\u0006\u0010&\u001a\u00020%H\u0002¢\u0006\u0004\b'\u0010(J7\u0010)\u001a\u00020\u000b*\u00020\u001b2\u0012\u0010\u0011\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e2\u0006\u0010\u0017\u001a\u00020\u001a2\u0006\u0010&\u001a\u00020%H\u0002¢\u0006\u0004\b)\u0010*J/\u0010+\u001a\u00020\u000b*\u00020\u001b2\u0012\u0010\u0011\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e2\u0006\u0010\u0017\u001a\u00020\u001aH\u0002¢\u0006\u0004\b+\u0010,J7\u0010-\u001a\u00020\u000b*\u00020\u001b2\u0012\u0010\u0011\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e2\u0006\u0010\u0017\u001a\u00020\u001a2\u0006\u0010&\u001a\u00020%H\u0002¢\u0006\u0004\b-\u0010*J%\u00100\u001a\u00020\u000b2\u0006\u0010/\u001a\u00020.2\f\u0010$\u001a\b\u0012\u0004\u0012\u00020\u001a0#H\u0002¢\u0006\u0004\b0\u00101J'\u00106\u001a\u00020\u000b2\u0006\u0010/\u001a\u00020.2\u0006\u00103\u001a\u0002022\u0006\u00105\u001a\u000204H\u0002¢\u0006\u0004\b6\u00107J'\u0010:\u001a\u00020\u000b2\u0006\u0010\b\u001a\u00020\u00022\u0006\u0010\u0017\u001a\u0002082\u0006\u0010\u001c\u001a\u000209H\u0002¢\u0006\u0004\b:\u0010;J)\u0010>\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020=0\u000e2\f\u0010$\u001a\b\u0012\u0004\u0012\u00020<0#H\u0002¢\u0006\u0004\b>\u0010?JE\u0010D\u001a\u00020\u000b2\u0012\u0010@\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e2\u0012\u0010B\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020=0A2\f\u0010C\u001a\b\u0012\u0004\u0012\u00020<0#H\u0002¢\u0006\u0004\bD\u0010EJ\u0013\u0010G\u001a\u00020F*\u00020\u000fH\u0002¢\u0006\u0004\bG\u0010HJ\u0013\u0010K\u001a\u00020J*\u00020IH\u0002¢\u0006\u0004\bK\u0010LJ\u0019\u0010N\u001a\u00020M*\b\u0012\u0004\u0012\u00020\u000f0#H\u0002¢\u0006\u0004\bN\u0010OJ+\u0010P\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e*\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020=0\u000eH\u0002¢\u0006\u0004\bP\u0010QR\u0014\u0010\u0004\u001a\u00020\u00038\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bR\u0010SR \u0010V\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u001b0\u000e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bT\u0010UR \u0010\u001e\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u001d0\u000e8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bW\u0010UR\u0016\u0010Z\u001a\u0004\u0018\u00010\u000f8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bX\u0010YR\u0014\u0010^\u001a\u00020[8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\\\u0010]R\u0014\u0010b\u001a\u00020_8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b`\u0010aR\u0014\u0010f\u001a\u00020c8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bd\u0010eR\u0014\u0010j\u001a\u00020g8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\bh\u0010iR\u0016\u0010m\u001a\u00020%8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bk\u0010lR\u001c\u0010q\u001a\b\u0012\u0004\u0012\u00020\u000b0n8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bo\u0010pR\u001c\u0010s\u001a\b\u0012\u0004\u0012\u00020\u000b0n8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\br\u0010pR(\u0010w\u001a\u0014\u0012\u0004\u0012\u00020\u001a\u0012\u0004\u0012\u00020%\u0012\u0004\u0012\u00020\u000b0t8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bu\u0010vR\"\u0010|\u001a\u000e\u0012\u0004\u0012\u00020y\u0012\u0004\u0012\u00020\u000b0x8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bz\u0010{R\"\u0010\u007f\u001a\u000e\u0012\u0004\u0012\u00020}\u0012\u0004\u0012\u00020\u000b0x8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b~\u0010{R%\u0010\u0082\u0001\u001a\u000f\u0012\u0005\u0012\u00030\u0080\u0001\u0012\u0004\u0012\u00020\u000b0x8\u0002@\u0002X\u0082\u000e¢\u0006\u0007\n\u0005\b\u0081\u0001\u0010{R#\u0010\u0085\u0001\u001a\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\u00100\u000e8BX\u0082\u0004¢\u0006\b\u001a\u0006\b\u0083\u0001\u0010\u0084\u0001¨\u0006\u0088\u0001"}, d2 = {"Lcom/withpersona/sdk2/inquiry/ui/g;", "Lym/k;", "Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;", "Lnr/a;", "binding", "initialRendering", "<init>", "(Lnr/a;Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;)V", "rendering", "Lym/y;", "viewEnvironment", "", "x0", "(Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;Lym/y;)V", "", "", "", "componentParams", "Lcom/withpersona/sdk2/inquiry/ui/UiComponentErrorInfo;", "errors", "t0", "(Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;Lym/y;Ljava/util/Map;Ljava/util/Map;)V", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/SheetComponent;", "component", "o1", "(Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;Lym/y;Lcom/withpersona/sdk2/inquiry/steps/ui/components/SheetComponent;Ljava/util/Map;Ljava/util/Map;)V", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;", "Landroid/view/View;", "view", "Lcom/withpersona/sdk2/inquiry/network/dto/ui/components/UiComponentConfig;", "componentNameToConfig", "H0", "(Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;Landroid/view/View;Ljava/util/Map;Ljava/util/Map;Lym/y;Ljava/util/Map;)V", "q0", "(Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;)V", "", "components", "", "isLoading", "f0", "(Ljava/util/List;Ljava/util/Map;Z)V", "c0", "(Landroid/view/View;Ljava/util/Map;Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;Z)V", "e0", "(Landroid/view/View;Ljava/util/Map;Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;)V", "d0", "Lyq/g;", "result", "g0", "(Lyq/g;Ljava/util/List;)V", "", "firstBelowTheFoldChildIndex", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/FooterComponent;", "footerComponent", "u0", "(Lyq/g;ILcom/withpersona/sdk2/inquiry/steps/ui/components/FooterComponent;)V", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/ClickableStackComponent;", "Landroidx/constraintlayout/widget/ConstraintLayout;", "r0", "(Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;Lcom/withpersona/sdk2/inquiry/steps/ui/components/ClickableStackComponent;Landroidx/constraintlayout/widget/ConstraintLayout;)V", "Lyq/a;", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam;", "h0", "(Ljava/util/List;)Ljava/util/Map;", "initialComponentValues", "", "outMap", "componentViews", "p0", "(Ljava/util/Map;Ljava/util/Map;Ljava/util/List;)V", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$ComponentString;", "E0", "(Ljava/lang/String;)Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$ComponentString;", "", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$ComponentNumber;", "D0", "(Ljava/lang/Number;)Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$ComponentNumber;", "Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$ComponentStringList;", "F0", "(Ljava/util/List;)Lcom/withpersona/sdk2/inquiry/ui/network/ComponentParam$ComponentStringList;", "G0", "(Ljava/util/Map;)Ljava/util/Map;", "b", "Lnr/a;", "c", "Ljava/util/Map;", "componentNameToView", "d", "e", "Ljava/lang/String;", "navBarTitle", "Lfr/j;", "f", "Lfr/j;", "inputSelectBottomSheetController", "Lmr/a2;", "g", "Lmr/a2;", "signatureBottomSheetController", "Lmr/q1;", "h", "Lmr/q1;", "nestedUiBottomSheetController", "Lbr/n;", "i", "Lbr/n;", "helpBottomSheetController", "j", "Z", "hasScrolledToBottom", "Lkotlin/Function0;", "k", "Lkotlin/jvm/functions/Function0;", "onComplete", "l", "onCancel", "Lkotlin/Function2;", "m", "Lkotlin/jvm/functions/Function2;", "onClick", "Lkotlin/Function1;", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/GovernmentIdNfcScanComponent;", "n", "Lkotlin/jvm/functions/Function1;", "launchNfcScan", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/JpMyNumberNfcScanComponent;", "o", "launchJpMyNumberNfcScan", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/VerifyPersonaButtonComponent;", "p", "onVerifyPersonaClick", "i0", "()Ljava/util/Map;", "uiStateValues", "q", "a", "ui_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 @SuppressLint({"ResourceType"})
-public final class g implements an.k<UiWorkflow.c.a> {
+public final class g implements ym.k<UiWorkflow.c.a> {
 
     /* JADX INFO: renamed from: q, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -168,7 +168,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
 
     /* JADX INFO: renamed from: b, reason: from kotlin metadata */
     @NotNull
-    public final pr.a binding;
+    public final nr.a binding;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -184,7 +184,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final hr.j inputSelectBottomSheetController;
+    public final fr.j inputSelectBottomSheetController;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -226,29 +226,29 @@ public final class g implements an.k<UiWorkflow.c.a> {
     public Function1<? super VerifyPersonaButtonComponent, Unit> onVerifyPersonaClick;
 
     /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.ui.g$a, reason: from kotlin metadata */
-    @Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0086\u0003\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0003\u0010\u0004J2\u0010\r\u001a\u00020\f2\u0006\u0010\u0005\u001a\u00020\u00022\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\b2\b\u0010\u000b\u001a\u0004\u0018\u00010\nH\u0096\u0001¢\u0006\u0004\b\r\u0010\u000eR\u001c\u0010\u0012\u001a\n\u0012\u0006\b\u0000\u0012\u00020\u00020\u000f8\u0016X\u0096\u0005¢\u0006\u0006\u001a\u0004\b\u0010\u0010\u0011¨\u0006\u0013"}, d2 = {"Lcom/withpersona/sdk2/inquiry/ui/g$a;", "Lan/a0;", "Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;", "<init>", "()V", "initialRendering", "Lan/y;", "initialViewEnvironment", "Landroid/content/Context;", "contextForNewView", "Landroid/view/ViewGroup;", "container", "Landroid/view/View;", "d", "(Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;Lan/y;Landroid/content/Context;Landroid/view/ViewGroup;)Landroid/view/View;", "Lhu/c;", "getType", "()Lhu/c;", Payload.TYPE, "ui_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    @Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0086\u0003\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0003\u0010\u0004J2\u0010\r\u001a\u00020\f2\u0006\u0010\u0005\u001a\u00020\u00022\u0006\u0010\u0007\u001a\u00020\u00062\u0006\u0010\t\u001a\u00020\b2\b\u0010\u000b\u001a\u0004\u0018\u00010\nH\u0096\u0001¢\u0006\u0004\b\r\u0010\u000eR\u001c\u0010\u0012\u001a\n\u0012\u0006\b\u0000\u0012\u00020\u00020\u000f8\u0016X\u0096\u0005¢\u0006\u0006\u001a\u0004\b\u0010\u0010\u0011¨\u0006\u0013"}, d2 = {"Lcom/withpersona/sdk2/inquiry/ui/g$a;", "Lym/a0;", "Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;", "<init>", "()V", "initialRendering", "Lym/y;", "initialViewEnvironment", "Landroid/content/Context;", "contextForNewView", "Landroid/view/ViewGroup;", "container", "Landroid/view/View;", "d", "(Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$c$a;Lym/y;Landroid/content/Context;Landroid/view/ViewGroup;)Landroid/view/View;", "Lfu/c;", "getType", "()Lfu/c;", Payload.TYPE, "ui_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class Companion implements a0<UiWorkflow.c.a> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ an.f<UiWorkflow.c.a> f13863a;
+        public final /* synthetic */ ym.f<UiWorkflow.c.a> f13944a;
 
         /* JADX INFO: renamed from: com.withpersona.sdk2.inquiry.ui.g$a$a, reason: collision with other inner class name */
         @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-        public static final /* synthetic */ class C0253a extends kotlin.jvm.internal.k implements Function2<UiWorkflow.c.a, ViewEnvironment, Unit> {
-            public C0253a(Object obj) {
+        public static final /* synthetic */ class C0256a extends kotlin.jvm.internal.k implements Function2<UiWorkflow.c.a, ViewEnvironment, Unit> {
+            public C0256a(Object obj) {
                 super(2, obj, g.class, "showRendering", "showRendering(Lcom/withpersona/sdk2/inquiry/ui/UiWorkflow$Screen$EntryScreen;Lcom/squareup/workflow1/ui/ViewEnvironment;)V", 0);
             }
 
             public final void d(UiWorkflow.c.a p8, ViewEnvironment p10) {
                 Intrinsics.checkNotNullParameter(p8, "p0");
                 Intrinsics.checkNotNullParameter(p10, "p1");
-                ((g) this.receiver).a(p8, p10);
+                ((g) this.receiver).b(p8, p10);
             }
 
             @Override // kotlin.jvm.functions.Function2
             public /* bridge */ /* synthetic */ Unit invoke(UiWorkflow.c.a aVar, ViewEnvironment viewEnvironment) {
                 d(aVar, viewEnvironment);
-                return Unit.f22483a;
+                return Unit.f22938a;
             }
         }
 
@@ -264,35 +264,35 @@ public final class g implements an.k<UiWorkflow.c.a> {
             if (viewGroup == null || (context2 = viewGroup.getContext()) == null) {
                 context2 = context;
             }
-            pr.a aVarC = pr.a.c(LayoutInflater.from(context2).cloneInContext(context));
+            nr.a aVarC = nr.a.c(LayoutInflater.from(context2).cloneInContext(context));
             CoordinatorLayout coordinatorLayoutB = aVarC.getRoot();
             Intrinsics.checkNotNullExpressionValue(coordinatorLayoutB, "getRoot(...)");
             Intrinsics.checkNotNull(aVarC);
-            e0.a(coordinatorLayoutB, initialRendering, initialViewEnvironment, new C0253a(new g(aVarC, initialRendering)));
+            e0.a(coordinatorLayoutB, initialRendering, initialViewEnvironment, new C0256a(new g(aVarC, initialRendering)));
             CoordinatorLayout coordinatorLayoutB2 = aVarC.getRoot();
             Intrinsics.checkNotNullExpressionValue(coordinatorLayoutB2, "let(...)");
             return coordinatorLayoutB2;
         }
 
-        @Override // an.a0
+        @Override // ym.a0
         @NotNull
         /* JADX INFO: renamed from: d, reason: merged with bridge method [inline-methods] */
         public View a(@NotNull UiWorkflow.c.a initialRendering, @NotNull ViewEnvironment initialViewEnvironment, @NotNull Context contextForNewView, @Nullable ViewGroup container) {
             Intrinsics.checkNotNullParameter(initialRendering, "initialRendering");
             Intrinsics.checkNotNullParameter(initialViewEnvironment, "initialViewEnvironment");
             Intrinsics.checkNotNullParameter(contextForNewView, "contextForNewView");
-            return this.f13863a.a(initialRendering, initialViewEnvironment, contextForNewView, container);
+            return this.f13944a.a(initialRendering, initialViewEnvironment, contextForNewView, container);
         }
 
-        @Override // an.a0
+        @Override // ym.a0
         @NotNull
-        public hu.c<? super UiWorkflow.c.a> getType() {
-            return this.f13863a.getType();
+        public fu.c<? super UiWorkflow.c.a> getType() {
+            return this.f13944a.getType();
         }
 
         public Companion() {
-            this.f13863a = new an.f<>(d0.b(UiWorkflow.c.a.class), new o() { // from class: or.z3
-                @Override // zt.o
+            this.f13944a = new ym.f<>(d0.b(UiWorkflow.c.a.class), new o() { // from class: mr.z3
+                @Override // xt.o
                 public final Object e(Object obj, Object obj2, Object obj3, Object obj4) {
                     return com.withpersona.sdk2.inquiry.ui.g.Companion.c((UiWorkflow.c.a) obj, (ViewEnvironment) obj2, (Context) obj3, (ViewGroup) obj4);
                 }
@@ -311,7 +311,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
         @Override // com.google.android.material.bottomsheet.BottomSheetBehavior.g
         public void b(View bottomSheet, float slideOffset) {
             Intrinsics.checkNotNullParameter(bottomSheet, "bottomSheet");
-            g.this.binding.f28850j.setPadding(g.this.binding.f28850j.getPaddingLeft(), g.this.binding.f28850j.getPaddingTop(), g.this.binding.f28850j.getPaddingRight(), this.b.u0() + ((int) (slideOffset * (g.this.binding.f28848h.getHeight() - this.b.u0()))));
+            g.this.binding.f27444j.setPadding(g.this.binding.f27444j.getPaddingLeft(), g.this.binding.f27444j.getPaddingTop(), g.this.binding.f27444j.getPaddingRight(), this.b.u0() + ((int) (slideOffset * (g.this.binding.f27442h.getHeight() - this.b.u0()))));
         }
 
         @Override // com.google.android.material.bottomsheet.BottomSheetBehavior.g
@@ -320,52 +320,57 @@ public final class g implements an.k<UiWorkflow.c.a> {
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.ui.UiScreenRunner$updateRendering$15$1$1", f = "UiScreenRunner.kt", l = {845}, m = "invokeSuspend")
-    public static final class c extends m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.ui.UiScreenRunner$updateRendering$15$1$1", f = "UiScreenRunner.kt", l = {845}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class c extends m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f13865t;
+        public int f13946t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public final /* synthetic */ e3.o f13866u;
+        public final /* synthetic */ e3.o f13947u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ View f13867v;
+        public final /* synthetic */ View f13948v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public final /* synthetic */ MdocRequestMetadata f13868w;
+        public final /* synthetic */ MdocRequestMetadata f13949w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public final /* synthetic */ UiComponent f13869x;
+        public final /* synthetic */ UiComponent f13950x;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public c(e3.o oVar, View view, MdocRequestMetadata mdocRequestMetadata, UiComponent uiComponent, nt.b<? super c> bVar) {
+        public c(e3.o oVar, View view, MdocRequestMetadata mdocRequestMetadata, UiComponent uiComponent, lt.b<? super c> bVar) {
             super(2, bVar);
-            this.f13866u = oVar;
-            this.f13867v = view;
-            this.f13868w = mdocRequestMetadata;
-            this.f13869x = uiComponent;
+            this.f13947u = oVar;
+            this.f13948v = view;
+            this.f13949w = mdocRequestMetadata;
+            this.f13950x = uiComponent;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return new c(this.f13866u, this.f13867v, this.f13868w, this.f13869x, bVar);
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return new c(this.f13947u, this.f13948v, this.f13949w, this.f13950x, bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            Object objE = ot.c.e();
-            int i10 = this.f13865t;
+            Object objE = mt.c.e();
+            int i10 = this.f13946t;
             try {
                 if (i10 == 0) {
-                    jt.o.b(obj);
-                    e3.o oVar = this.f13866u;
-                    Context context = this.f13867v.getContext();
+                    gt.o.b(obj);
+                    e3.o oVar = this.f13947u;
+                    Context context = this.f13948v.getContext();
                     Intrinsics.checkNotNullExpressionValue(context, "getContext(...)");
-                    k0 k0Var = new k0(kotlin.collections.o.d(new n0(((MdocRequestMetadata.GoogleWalletRequestMetadata) this.f13868w).getRequestJson())), null, false, null, false, 30, null);
-                    this.f13865t = 1;
-                    obj = oVar.b(context, k0Var, this);
+                    k0 k0Var = new k0(kotlin.collections.o.d(new n0(((MdocRequestMetadata.GoogleWalletRequestMetadata) this.f13949w).getRequestJson())), null, false, null, false, 30, null);
+                    this.f13946t = 1;
+                    obj = oVar.a(context, k0Var, this);
                     if (obj == objE) {
                         return objE;
                     }
@@ -373,23 +378,18 @@ public final class g implements an.k<UiWorkflow.c.a> {
                     if (i10 != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                     }
-                    jt.o.b(obj);
+                    gt.o.b(obj);
                 }
                 String strA = m1.a(((l0) obj).getCredential());
                 if (strA != null) {
-                    ((MdocComponent) this.f13869x).getMdocDataController().c(strA);
+                    ((MdocComponent) this.f13950x).getMdocDataController().c(strA);
                 } else {
-                    ((MdocComponent) this.f13869x).getErrorTextController().c(((MdocComponent) this.f13869x).getErrorRetrievingMdocText());
+                    ((MdocComponent) this.f13950x).getErrorTextController().c(((MdocComponent) this.f13950x).getErrorRetrievingMdocText());
                 }
             } catch (f3.n unused) {
-                ((MdocComponent) this.f13869x).getErrorTextController().c(((MdocComponent) this.f13869x).getErrorRetrievingMdocText());
+                ((MdocComponent) this.f13950x).getErrorTextController().c(((MdocComponent) this.f13950x).getErrorRetrievingMdocText());
             }
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((c) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            return Unit.f22938a;
         }
     }
 
@@ -397,7 +397,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
     public static final class d implements Function1<SubmitButtonComponent, Boolean> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final d f13870a = new d();
+        public static final d f13951a = new d();
 
         @Override // kotlin.jvm.functions.Function1
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
@@ -407,7 +407,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
         }
     }
 
-    public g(@NotNull pr.a binding, @NotNull final UiWorkflow.c.a initialRendering) {
+    public g(@NotNull nr.a binding, @NotNull final UiWorkflow.c.a initialRendering) {
         Map<String, UiComponentConfig> mapJ;
         Intrinsics.checkNotNullParameter(binding, "binding");
         Intrinsics.checkNotNullParameter(initialRendering, "initialRendering");
@@ -415,7 +415,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
         this.navBarTitle = initialRendering.getNavBarTitle();
         CoordinatorLayout coordinatorLayoutB = binding.getRoot();
         Intrinsics.checkNotNullExpressionValue(coordinatorLayoutB, "getRoot(...)");
-        this.inputSelectBottomSheetController = new hr.j(coordinatorLayoutB);
+        this.inputSelectBottomSheetController = new fr.j(coordinatorLayoutB);
         CoordinatorLayout coordinatorLayoutB2 = binding.getRoot();
         Intrinsics.checkNotNullExpressionValue(coordinatorLayoutB2, "getRoot(...)");
         this.signatureBottomSheetController = new a2(coordinatorLayoutB2);
@@ -425,60 +425,60 @@ public final class g implements an.k<UiWorkflow.c.a> {
         CoordinatorLayout coordinatorLayoutB4 = binding.getRoot();
         Intrinsics.checkNotNullExpressionValue(coordinatorLayoutB4, "getRoot(...)");
         this.helpBottomSheetController = new n(coordinatorLayoutB4);
-        this.onComplete = new Function0() { // from class: or.d2
+        this.onComplete = new Function0() { // from class: mr.d2
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
                 return com.withpersona.sdk2.inquiry.ui.g.n0();
             }
         };
-        this.onCancel = new Function0() { // from class: or.o2
+        this.onCancel = new Function0() { // from class: mr.o2
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
                 return com.withpersona.sdk2.inquiry.ui.g.l0();
             }
         };
-        this.onClick = new Function2() { // from class: or.z2
+        this.onClick = new Function2() { // from class: mr.z2
             @Override // kotlin.jvm.functions.Function2
             public final Object invoke(Object obj, Object obj2) {
                 return com.withpersona.sdk2.inquiry.ui.g.m0((UiComponent) obj, ((Boolean) obj2).booleanValue());
             }
         };
-        this.launchNfcScan = new Function1() { // from class: or.k3
+        this.launchNfcScan = new Function1() { // from class: mr.k3
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
                 return com.withpersona.sdk2.inquiry.ui.g.k0((GovernmentIdNfcScanComponent) obj);
             }
         };
-        this.launchJpMyNumberNfcScan = new Function1() { // from class: or.t3
+        this.launchJpMyNumberNfcScan = new Function1() { // from class: mr.t3
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
                 return com.withpersona.sdk2.inquiry.ui.g.j0((JpMyNumberNfcScanComponent) obj);
             }
         };
-        this.onVerifyPersonaClick = new Function1() { // from class: or.u3
+        this.onVerifyPersonaClick = new Function1() { // from class: mr.u3
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
                 return com.withpersona.sdk2.inquiry.ui.g.o0((VerifyPersonaButtonComponent) obj);
             }
         };
         Context context = binding.getRoot().getContext();
-        s sVar = s.f3757a;
+        s sVar = s.f37116a;
         Intrinsics.checkNotNull(context);
         List<UiComponent> listF = initialRendering.f();
         List<UiComponentConfig> listD = initialRendering.d();
-        final ar.g gVarH = s.h(sVar, context, new UiComponentScreen(listF, listD == null ? p.k() : listD, initialRendering.getStyles()), initialRendering.getIsLoading(), false, false, 16, null);
+        final yq.g gVarH = s.h(sVar, context, new UiComponentScreen(listF, listD == null ? p.k() : listD, initialRendering.getStyles()), initialRendering.getIsLoading(), false, false, 16, null);
         Integer numC = initialRendering.c();
         if (numC != null) {
-            binding.f28851k.setBackgroundColor(numC.intValue());
+            binding.f27445k.setBackgroundColor(numC.intValue());
         }
         Drawable drawableA = initialRendering.a(context);
         if (drawableA != null) {
-            binding.f28851k.setBackground(drawableA);
-            binding.f28843c.setBackgroundColor(0);
+            binding.f27445k.setBackground(drawableA);
+            binding.f27437c.setBackgroundColor(0);
         }
         Integer numH = initialRendering.h();
         if (numH != null) {
-            binding.f28849i.setControlsColor(numH.intValue());
+            binding.f27443i.setControlsColor(numH.intValue());
         }
         List<UiComponentConfig> listD2 = initialRendering.d();
         this.componentNameToConfig = (listD2 == null || (mapJ = com.withpersona.sdk2.inquiry.steps.ui.components.b.j(listD2)) == null) ? kotlin.collections.k0.j() : mapJ;
@@ -487,41 +487,41 @@ public final class g implements an.k<UiWorkflow.c.a> {
         Iterator<T> it = setEntrySet.iterator();
         while (it.hasNext()) {
             Map.Entry entry = (Map.Entry) it.next();
-            Pair pairA = jt.s.a(entry.getKey(), ((ComponentView) entry.getValue()).d());
+            Pair pairA = gt.s.a(entry.getKey(), ((ComponentView) entry.getValue()).d());
             linkedHashMap.put(pairA.c(), pairA.d());
         }
         this.componentNameToView = linkedHashMap;
-        this.binding.f28852l.addView(gVarH.getContentView());
+        this.binding.f27446l.addView(gVarH.getContentView());
         if (initialRendering.y() == StyleElements.PositionType.CENTER) {
             androidx.constraintlayout.widget.c cVar = new androidx.constraintlayout.widget.c();
             cVar.f(this.binding.b);
-            cVar.h(this.binding.f28852l.getId(), 4, this.binding.b.getId(), 4);
+            cVar.h(this.binding.f27446l.getId(), 4, this.binding.b.getId(), 4);
             cVar.c(this.binding.b);
         }
-        FrameLayout uiStepContainer = this.binding.f28852l;
+        FrameLayout uiStepContainer = this.binding.f27446l;
         Intrinsics.checkNotNullExpressionValue(uiStepContainer, "uiStepContainer");
-        jr.p.b(uiStepContainer, initialRendering.getStyles(), false, false, 6, null);
+        hr.p.b(uiStepContainer, initialRendering.getStyles(), false, false, 6, null);
         if (gVarH.getFooterView() != null) {
             g0(gVarH, initialRendering.f());
         }
         CoordinatorLayout coordinatorLayoutB5 = this.binding.getRoot();
         Intrinsics.checkNotNullExpressionValue(coordinatorLayoutB5, "getRoot(...)");
-        wq.g.g(coordinatorLayoutB5, new Function1() { // from class: or.v3
+        uq.g.g(coordinatorLayoutB5, new Function1() { // from class: mr.v3
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
                 return com.withpersona.sdk2.inquiry.ui.g.X(gVarH, this, (WindowInsetsCompat) obj);
             }
         });
-        this.binding.f28850j.setOnScrollChangeListener(new NestedScrollView.e() { // from class: or.w3
+        this.binding.f27444j.setOnScrollChangeListener(new NestedScrollView.e() { // from class: mr.w3
             @Override // androidx.core.widget.NestedScrollView.e
             public final void a(NestedScrollView nestedScrollView, int i10, int i11, int i12, int i13) {
-                com.withpersona.sdk2.inquiry.ui.g.Y(this.f27876a, initialRendering, nestedScrollView, i10, i11, i12, i13);
+                com.withpersona.sdk2.inquiry.ui.g.Y(this.f25265a, initialRendering, nestedScrollView, i10, i11, i12, i13);
             }
         });
-        this.binding.f28850j.post(new Runnable() { // from class: or.x3
+        this.binding.f27444j.post(new Runnable() { // from class: mr.x3
             @Override // java.lang.Runnable
             public final void run() {
-                com.withpersona.sdk2.inquiry.ui.g.Z(this.f27888a, initialRendering);
+                com.withpersona.sdk2.inquiry.ui.g.Z(this.f25277a, initialRendering);
             }
         });
     }
@@ -530,19 +530,19 @@ public final class g implements an.k<UiWorkflow.c.a> {
         if (aVar.getHelpBottomSheetViewModel() != null) {
             gVar.helpBottomSheetController.x(aVar.getStyles(), aVar.getHelpBottomSheetViewModel(), aVar.v(), aVar.j(), aVar.m());
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit B0(UiWorkflow.c.a aVar, g gVar, List list, UiComponent tappedComponent, boolean z10) {
         Intrinsics.checkNotNullParameter(tappedComponent, "tappedComponent");
         aVar.r().invoke(tappedComponent, Boolean.valueOf(z10), gVar.h0(list));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit C0(UiWorkflow.c.a aVar, g gVar, List list, VerifyPersonaButtonComponent it) {
         Intrinsics.checkNotNullParameter(it, "it");
         aVar.x().invoke(it, gVar.h0(list));
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final void I0(g gVar, View view) {
@@ -573,20 +573,20 @@ public final class g implements an.k<UiWorkflow.c.a> {
     }
 
     public static final Unit O0(View view, UiWorkflow.c.a aVar, g gVar) {
-        if (fr.a.f17219a.b(view)) {
-            SubmitButtonComponent submitButtonComponent = (SubmitButtonComponent) er.h.a(aVar.f(), d0.b(SubmitButtonComponent.class), d.f13870a);
+        if (dr.a.f15415a.b(view)) {
+            SubmitButtonComponent submitButtonComponent = (SubmitButtonComponent) cr.h.a(aVar.f(), d0.b(SubmitButtonComponent.class), d.f13951a);
             if (submitButtonComponent != null) {
                 gVar.onClick.invoke(submitButtonComponent, Boolean.valueOf(view.getVisibility() == 0));
             }
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final void P0(final MaterialAutoCompleteTextView materialAutoCompleteTextView, br.a aVar, final List<? extends TextInputLayout> list, final gr.d dVar, final UiWorkflow.c.a aVar2, final UiComponent uiComponent, final List<Suggestion> list2) {
+    public static final void P0(final MaterialAutoCompleteTextView materialAutoCompleteTextView, zq.a aVar, final List<? extends TextInputLayout> list, final er.d dVar, final UiWorkflow.c.a aVar2, final UiComponent uiComponent, final List<Suggestion> list2) {
         materialAutoCompleteTextView.setAdapter(aVar);
         aVar.notifyDataSetChanged();
         materialAutoCompleteTextView.setThreshold(1);
-        materialAutoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() { // from class: or.p3
+        materialAutoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() { // from class: mr.p3
             @Override // android.widget.AdapterView.OnItemClickListener
             public final void onItemClick(AdapterView adapterView, View view, int i10, long j10) {
                 com.withpersona.sdk2.inquiry.ui.g.Q0(list, dVar, materialAutoCompleteTextView, aVar2, uiComponent, list2, adapterView, view, i10, j10);
@@ -595,15 +595,15 @@ public final class g implements an.k<UiWorkflow.c.a> {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public static final void Q0(List list, gr.d dVar, MaterialAutoCompleteTextView materialAutoCompleteTextView, UiWorkflow.c.a aVar, UiComponent uiComponent, List list2, AdapterView adapterView, View view, int i10, long j10) {
+    public static final void Q0(List list, er.d dVar, MaterialAutoCompleteTextView materialAutoCompleteTextView, UiWorkflow.c.a aVar, UiComponent uiComponent, List list2, AdapterView adapterView, View view, int i10, long j10) {
         Iterator it = list.iterator();
         while (it.hasNext()) {
             ((TextInputLayout) it.next()).setEnabled(false);
         }
-        dVar.f18410s.setVisibility(0);
+        dVar.f16308s.setVisibility(0);
         Context context = materialAutoCompleteTextView.getContext();
         Intrinsics.checkNotNullExpressionValue(context, "getContext(...)");
-        jq.g.d(context);
+        hq.g.d(context);
         aVar.w().invoke(uiComponent, ((Suggestion) list2.get(i10)).getId());
     }
 
@@ -624,7 +624,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
         androidx.p000lifecycle.m mVarA;
         MdocRequestMetadata mdocRequestMetadataN = ((MdocComponent) uiComponent).getMdocRequestMetadata();
         if (!(mdocRequestMetadataN instanceof MdocRequestMetadata.GoogleWalletRequestMetadata)) {
-            throw new jt.l();
+            throw new gt.l();
         }
         e3.o.Companion aVar = e3.o.INSTANCE;
         Context context = view.getContext();
@@ -632,11 +632,11 @@ public final class g implements an.k<UiWorkflow.c.a> {
         e3.o oVarA = aVar.a(context);
         Context context2 = view.getContext();
         Intrinsics.checkNotNullExpressionValue(context2, "getContext(...)");
-        j.b bVarA = jq.g.a(context2);
+        j.b bVarA = hq.g.a(context2);
         if (bVarA == null || (mVarA = t.a(bVarA)) == null) {
             return;
         }
-        ku.k.d(mVarA, null, null, new c(oVarA, view, mdocRequestMetadataN, uiComponent, null), 3, null);
+        iu.k.d(mVarA, null, null, new c(oVarA, view, mdocRequestMetadataN, uiComponent, null), 3, null);
     }
 
     public static final void V0(g gVar, UiComponent uiComponent, View view, View view2) {
@@ -644,16 +644,16 @@ public final class g implements an.k<UiWorkflow.c.a> {
     }
 
     public static final Unit W0(final UiComponent uiComponent, g gVar) {
-        a1(gVar, ((InputInternationalDbComponent) uiComponent).getCountrySelectComponent(), new Function1() { // from class: or.q3
+        a1(gVar, ((InputInternationalDbComponent) uiComponent).getCountrySelectComponent(), new Function1() { // from class: mr.q3
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
                 return com.withpersona.sdk2.inquiry.ui.g.X0(uiComponent, (List) obj);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
-    public static final Unit X(ar.g gVar, g gVar2, WindowInsetsCompat insets) {
+    public static final Unit X(yq.g gVar, g gVar2, WindowInsetsCompat insets) {
         Intrinsics.checkNotNullParameter(insets, "insets");
         Insets insetsIgnoringVisibility = insets.getInsetsIgnoringVisibility(WindowInsetsCompat.Type.systemBars());
         Intrinsics.checkNotNullExpressionValue(insetsIgnoringVisibility, "getInsetsIgnoringVisibility(...)");
@@ -666,14 +666,14 @@ public final class g implements an.k<UiWorkflow.c.a> {
         int i13 = insetsIgnoringVisibility.right;
         View footerView = gVar.getFooterView();
         if (footerView == null) {
-            gVar2.binding.f28850j.setPadding(i12, i11, i13, iMax);
+            gVar2.binding.f27444j.setPadding(i12, i11, i13, iMax);
         } else {
-            ShadowedNestedScrollView nestedScroll = gVar2.binding.f28850j;
+            ShadowedNestedScrollView nestedScroll = gVar2.binding.f27444j;
             Intrinsics.checkNotNullExpressionValue(nestedScroll, "nestedScroll");
             nestedScroll.setPadding(i12, i11, i13, nestedScroll.getPaddingBottom());
             footerView.setPadding(i12, footerView.getPaddingTop(), i13, iMax);
         }
-        MaterialDivider footerDivider = gVar2.binding.f28844d;
+        MaterialDivider footerDivider = gVar2.binding.f27438d;
         Intrinsics.checkNotNullExpressionValue(footerDivider, "footerDivider");
         ViewGroup.LayoutParams layoutParams = footerDivider.getLayoutParams();
         if (layoutParams == null) {
@@ -682,10 +682,10 @@ public final class g implements an.k<UiWorkflow.c.a> {
         ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
         marginLayoutParams.bottomMargin = insetsIgnoringVisibility.bottom;
         footerDivider.setLayoutParams(marginLayoutParams);
-        CoordinatorLayout footerSheetCoordinatorLayout = gVar2.binding.f28846f;
+        CoordinatorLayout footerSheetCoordinatorLayout = gVar2.binding.f27440f;
         Intrinsics.checkNotNullExpressionValue(footerSheetCoordinatorLayout, "footerSheetCoordinatorLayout");
         footerSheetCoordinatorLayout.setPadding(i12, footerSheetCoordinatorLayout.getPaddingTop(), i13, iMax);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit X0(UiComponent uiComponent, List it) {
@@ -694,7 +694,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
         inputInternationalDbComponent.getCountryOptionsController().c(it);
         inputInternationalDbComponent.getIdTypeOptionsController().c(p.k());
         inputInternationalDbComponent.getIdValueController().c("");
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final void Y(g gVar, UiWorkflow.c.a aVar, NestedScrollView nestedScrollView, int i10, int i11, int i12, int i13) {
@@ -703,13 +703,13 @@ public final class g implements an.k<UiWorkflow.c.a> {
     }
 
     public static final Unit Y0(final UiComponent uiComponent, g gVar) {
-        a1(gVar, ((InputInternationalDbComponent) uiComponent).t(), new Function1() { // from class: or.j3
+        a1(gVar, ((InputInternationalDbComponent) uiComponent).t(), new Function1() { // from class: mr.j3
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
                 return com.withpersona.sdk2.inquiry.ui.g.Z0(uiComponent, (List) obj);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final void Z(g gVar, UiWorkflow.c.a aVar) {
@@ -721,11 +721,11 @@ public final class g implements an.k<UiWorkflow.c.a> {
         InputInternationalDbComponent inputInternationalDbComponent = (InputInternationalDbComponent) uiComponent;
         inputInternationalDbComponent.getIdTypeOptionsController().c(it);
         inputInternationalDbComponent.getIdValueController().c("");
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final void a0(g gVar, UiWorkflow.c.a aVar) {
-        if (gVar.hasScrolledToBottom || gVar.binding.f28850j.canScrollVertically(1)) {
+        if (gVar.hasScrolledToBottom || gVar.binding.f27444j.canScrollVertically(1)) {
             return;
         }
         gVar.hasScrolledToBottom = true;
@@ -736,90 +736,90 @@ public final class g implements an.k<UiWorkflow.c.a> {
         if (w1Var == null) {
             return;
         }
-        gVar.binding.f28849i.getBackButton().setEnabled(false);
-        gVar.binding.f28849i.setImportantForAccessibility(4);
-        gVar.binding.f28852l.setImportantForAccessibility(4);
-        gVar.inputSelectBottomSheetController.t(w1Var, new Function1() { // from class: or.s3
+        gVar.binding.f27443i.getBackButton().setEnabled(false);
+        gVar.binding.f27443i.setImportantForAccessibility(4);
+        gVar.binding.f27446l.setImportantForAccessibility(4);
+        gVar.inputSelectBottomSheetController.t(w1Var, new Function1() { // from class: mr.s3
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return com.withpersona.sdk2.inquiry.ui.g.b1(this.f27842a, function1, (List) obj);
+                return com.withpersona.sdk2.inquiry.ui.g.b1(this.f25231a, function1, (List) obj);
             }
         });
     }
 
     public static final Unit b1(g gVar, Function1 function1, List selectedItems) {
         Intrinsics.checkNotNullParameter(selectedItems, "selectedItems");
-        gVar.binding.f28849i.getBackButton().setEnabled(true);
-        gVar.binding.f28849i.setImportantForAccessibility(1);
-        gVar.binding.f28852l.setImportantForAccessibility(1);
+        gVar.binding.f27443i.getBackButton().setEnabled(true);
+        gVar.binding.f27443i.setImportantForAccessibility(1);
+        gVar.binding.f27446l.setImportantForAccessibility(1);
         if (!selectedItems.isEmpty()) {
             function1.invoke(selectedItems);
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit c1(final UiComponent uiComponent, g gVar) {
-        e1(gVar, ((InputPhoneNumberComponent) uiComponent).getCountryCodeSelectComponent(), new Function1() { // from class: or.n3
+        e1(gVar, ((InputPhoneNumberComponent) uiComponent).getCountryCodeSelectComponent(), new Function1() { // from class: mr.n3
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
                 return com.withpersona.sdk2.inquiry.ui.g.d1(uiComponent, (List) obj);
             }
         });
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit d1(UiComponent uiComponent, List it) {
         Intrinsics.checkNotNullParameter(it, "it");
         ((InputPhoneNumberComponent) uiComponent).getCountryCodeOptionsController().c(it);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final void e1(final g gVar, w1 w1Var, final Function1<? super List<Option>, Unit> function1) {
         if (w1Var == null) {
             return;
         }
-        gVar.binding.f28849i.getBackButton().setEnabled(false);
-        gVar.binding.f28849i.setImportantForAccessibility(4);
-        gVar.binding.f28852l.setImportantForAccessibility(4);
-        gVar.inputSelectBottomSheetController.t(w1Var, new Function1() { // from class: or.r3
+        gVar.binding.f27443i.getBackButton().setEnabled(false);
+        gVar.binding.f27443i.setImportantForAccessibility(4);
+        gVar.binding.f27446l.setImportantForAccessibility(4);
+        gVar.inputSelectBottomSheetController.t(w1Var, new Function1() { // from class: mr.r3
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return com.withpersona.sdk2.inquiry.ui.g.f1(this.f27830a, function1, (List) obj);
+                return com.withpersona.sdk2.inquiry.ui.g.f1(this.f25219a, function1, (List) obj);
             }
         });
     }
 
     public static final Unit f1(g gVar, Function1 function1, List selectedItems) {
         Intrinsics.checkNotNullParameter(selectedItems, "selectedItems");
-        gVar.binding.f28849i.getBackButton().setEnabled(true);
-        gVar.binding.f28849i.setImportantForAccessibility(1);
-        gVar.binding.f28852l.setImportantForAccessibility(1);
+        gVar.binding.f27443i.getBackButton().setEnabled(true);
+        gVar.binding.f27443i.setImportantForAccessibility(1);
+        gVar.binding.f27446l.setImportantForAccessibility(1);
         if (!selectedItems.isEmpty()) {
             function1.invoke(selectedItems);
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final void g1(final g gVar, final UiComponent uiComponent, ESignature eSignature, UiWorkflow.c.a aVar, ViewEnvironment viewEnvironment, View view) {
-        gVar.binding.f28849i.getBackButton().setEnabled(false);
-        gVar.binding.f28849i.setImportantForAccessibility(4);
-        gVar.binding.f28852l.setImportantForAccessibility(4);
-        gVar.signatureBottomSheetController.p((ESignatureComponent) uiComponent, eSignature, aVar.getStyles(), viewEnvironment, new Function2() { // from class: or.l3
+        gVar.binding.f27443i.getBackButton().setEnabled(false);
+        gVar.binding.f27443i.setImportantForAccessibility(4);
+        gVar.binding.f27446l.setImportantForAccessibility(4);
+        gVar.signatureBottomSheetController.p((ESignatureComponent) uiComponent, eSignature, aVar.getStyles(), viewEnvironment, new Function2() { // from class: mr.l3
             @Override // kotlin.jvm.functions.Function2
             public final Object invoke(Object obj, Object obj2) {
-                return com.withpersona.sdk2.inquiry.ui.g.h1(this.f27743a, uiComponent, ((Boolean) obj).booleanValue(), (Bitmap) obj2);
+                return com.withpersona.sdk2.inquiry.ui.g.h1(this.f25132a, uiComponent, ((Boolean) obj).booleanValue(), (Bitmap) obj2);
             }
         });
     }
 
     public static final Unit h1(g gVar, UiComponent uiComponent, boolean z10, Bitmap bitmap) {
-        gVar.binding.f28849i.getBackButton().setEnabled(true);
-        gVar.binding.f28849i.setImportantForAccessibility(1);
-        gVar.binding.f28852l.setImportantForAccessibility(1);
+        gVar.binding.f27443i.getBackButton().setEnabled(true);
+        gVar.binding.f27443i.setImportantForAccessibility(1);
+        gVar.binding.f27446l.setImportantForAccessibility(1);
         if (!z10) {
             ((ESignatureComponent) uiComponent).getBitmapController().c(bitmap);
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final void i1(g gVar, UiComponent uiComponent, View view) {
@@ -828,7 +828,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
 
     public static final Unit j0(JpMyNumberNfcScanComponent jpMyNumberNfcScanComponent) {
         Intrinsics.checkNotNullParameter(jpMyNumberNfcScanComponent, "<unused var>");
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final void j1(UiWorkflow.c.a aVar, g gVar, View view) {
@@ -839,7 +839,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
 
     public static final Unit k0(GovernmentIdNfcScanComponent governmentIdNfcScanComponent) {
         Intrinsics.checkNotNullParameter(governmentIdNfcScanComponent, "<unused var>");
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final void k1(g gVar, UiComponent uiComponent, View view) {
@@ -847,7 +847,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
     }
 
     public static final Unit l0() {
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final CharSequence l1(SelectedFile it) {
@@ -857,53 +857,53 @@ public final class g implements an.k<UiWorkflow.c.a> {
 
     public static final Unit m0(UiComponent uiComponent, boolean z10) {
         Intrinsics.checkNotNullParameter(uiComponent, "<unused var>");
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final void m1(final g gVar, final TextInputLayout textInputLayout, w1 w1Var, final w3<?> w3Var) {
-        gVar.binding.f28849i.getBackButton().setEnabled(false);
+        gVar.binding.f27443i.getBackButton().setEnabled(false);
         textInputLayout.setEnabled(false);
-        gVar.binding.f28849i.setImportantForAccessibility(4);
-        gVar.binding.f28852l.setImportantForAccessibility(4);
-        gVar.inputSelectBottomSheetController.t(w1Var, new Function1() { // from class: or.m3
+        gVar.binding.f27443i.setImportantForAccessibility(4);
+        gVar.binding.f27446l.setImportantForAccessibility(4);
+        gVar.inputSelectBottomSheetController.t(w1Var, new Function1() { // from class: mr.m3
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return com.withpersona.sdk2.inquiry.ui.g.n1(this.f27754a, textInputLayout, w3Var, (List) obj);
+                return com.withpersona.sdk2.inquiry.ui.g.n1(this.f25143a, textInputLayout, w3Var, (List) obj);
             }
         });
     }
 
     public static final Unit n0() {
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit n1(g gVar, TextInputLayout textInputLayout, w3 w3Var, List selectedItems) {
         Intrinsics.checkNotNullParameter(selectedItems, "selectedItems");
-        gVar.binding.f28849i.getBackButton().setEnabled(true);
+        gVar.binding.f27443i.getBackButton().setEnabled(true);
         textInputLayout.setEnabled(true);
         textInputLayout.requestLayout();
-        gVar.binding.f28849i.setImportantForAccessibility(1);
-        gVar.binding.f28852l.setImportantForAccessibility(1);
+        gVar.binding.f27443i.setImportantForAccessibility(1);
+        gVar.binding.f27446l.setImportantForAccessibility(1);
         w3Var.getSelectedOptionsController().c(selectedItems);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit o0(VerifyPersonaButtonComponent it) {
         Intrinsics.checkNotNullParameter(it, "it");
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public static final Unit p1(UiWorkflow.c.a aVar, SheetComponent sheetComponent, UiComponent it) {
         Intrinsics.checkNotNullParameter(it, "it");
         aVar.t().invoke(sheetComponent, it);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit q1(g gVar, UiComponent it) {
         Intrinsics.checkNotNullParameter(it, "it");
         gVar.nestedUiBottomSheetController.f();
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final void r1(Function1 function1, ComponentView componentView, View view) {
@@ -916,25 +916,25 @@ public final class g implements an.k<UiWorkflow.c.a> {
     }
 
     public static final void v0(g gVar, View view, BottomSheetBehavior bottomSheetBehavior, View view2, int i10, int i11, int i12, int i13, int i14, int i15, int i16, int i17) {
-        int bottom = gVar.binding.f28845e.getBottom();
+        int bottom = gVar.binding.f27439e.getBottom();
         Rect rect = new Rect();
         view.getDrawingRect(rect);
-        gVar.binding.f28848h.offsetDescendantRectToMyCoords(view, rect);
+        gVar.binding.f27442h.offsetDescendantRectToMyCoords(view, rect);
         int iU0 = bottomSheetBehavior.u0();
         bottomSheetBehavior.S0(rect.top);
         if (iU0 != bottomSheetBehavior.u0()) {
-            ShadowedNestedScrollView shadowedNestedScrollView = gVar.binding.f28850j;
-            shadowedNestedScrollView.setPadding(shadowedNestedScrollView.getPaddingLeft(), gVar.binding.f28850j.getPaddingTop(), gVar.binding.f28850j.getPaddingRight(), bottomSheetBehavior.u0());
+            ShadowedNestedScrollView shadowedNestedScrollView = gVar.binding.f27444j;
+            shadowedNestedScrollView.setPadding(shadowedNestedScrollView.getPaddingLeft(), gVar.binding.f27444j.getPaddingTop(), gVar.binding.f27444j.getPaddingRight(), bottomSheetBehavior.u0());
         }
         bottomSheetBehavior.Q0(bottom);
     }
 
     public static final void w0(g gVar, BottomSheetBehavior bottomSheetBehavior, View view, int i10, int i11, int i12, int i13, int i14, int i15, int i16, int i17) {
-        int bottom = gVar.binding.f28845e.getBottom();
+        int bottom = gVar.binding.f27439e.getBottom();
         bottomSheetBehavior.S0(bottom);
         bottomSheetBehavior.Q0(bottom);
-        ShadowedNestedScrollView shadowedNestedScrollView = gVar.binding.f28850j;
-        shadowedNestedScrollView.setPadding(shadowedNestedScrollView.getPaddingLeft(), gVar.binding.f28850j.getPaddingTop(), gVar.binding.f28850j.getPaddingRight(), bottom);
+        ShadowedNestedScrollView shadowedNestedScrollView = gVar.binding.f27444j;
+        shadowedNestedScrollView.setPadding(shadowedNestedScrollView.getPaddingLeft(), gVar.binding.f27444j.getPaddingTop(), gVar.binding.f27444j.getPaddingRight(), bottom);
     }
 
     public static final Unit y0(g gVar, UiWorkflow.c.a aVar) {
@@ -945,12 +945,12 @@ public final class g implements an.k<UiWorkflow.c.a> {
                 aVar.q().invoke();
             }
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit z0(UiWorkflow.c.a aVar) {
         aVar.q().invoke();
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public final ComponentParam.ComponentNumber D0(Number number) {
@@ -971,7 +971,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
         Iterator<T> it = setEntrySet.iterator();
         while (it.hasNext()) {
             Map.Entry entry = (Map.Entry) it.next();
-            Pair pairA = jt.s.a(entry.getKey(), com.withpersona.sdk2.inquiry.ui.network.a.a((ComponentParam) entry.getValue()));
+            Pair pairA = gt.s.a(entry.getKey(), com.withpersona.sdk2.inquiry.ui.network.a.a((ComponentParam) entry.getValue()));
             linkedHashMap.put(pairA.c(), pairA.d());
         }
         return linkedHashMap;
@@ -991,10 +991,10 @@ public final class g implements an.k<UiWorkflow.c.a> {
         Map<String, UiComponentErrorInfo> map2 = errors;
         if (component instanceof CompleteButtonComponent) {
             Intrinsics.d(view, "null cannot be cast to non-null type android.widget.Button");
-            ((Button) view).setOnClickListener(new View.OnClickListener() { // from class: or.l2
+            ((Button) view).setOnClickListener(new View.OnClickListener() { // from class: mr.l2
                 @Override // android.view.View.OnClickListener
                 public final void onClick(View view2) {
-                    com.withpersona.sdk2.inquiry.ui.g.I0(this.f27742a, view2);
+                    com.withpersona.sdk2.inquiry.ui.g.I0(this.f25131a, view2);
                 }
             });
             c0(view, componentParams, component, rendering.getIsLoading());
@@ -1003,10 +1003,10 @@ public final class g implements an.k<UiWorkflow.c.a> {
         if (component instanceof SubmitButtonComponent) {
             Intrinsics.d(view, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.shared.ui.ButtonWithLoadingIndicator");
             ButtonWithLoadingIndicator buttonWithLoadingIndicator = (ButtonWithLoadingIndicator) view;
-            buttonWithLoadingIndicator.setOnClickListener(new View.OnClickListener() { // from class: or.x2
+            buttonWithLoadingIndicator.setOnClickListener(new View.OnClickListener() { // from class: mr.x2
                 @Override // android.view.View.OnClickListener
                 public final void onClick(View view2) {
-                    com.withpersona.sdk2.inquiry.ui.g.J0(this.f27886a, component, view, view2);
+                    com.withpersona.sdk2.inquiry.ui.g.J0(this.f25275a, component, view, view2);
                 }
             });
             buttonWithLoadingIndicator.setIsLoading(rendering.getIsLoading() && ((SubmitButtonComponent) component).getWasTapped());
@@ -1016,10 +1016,10 @@ public final class g implements an.k<UiWorkflow.c.a> {
         if (component instanceof ActionButtonComponent) {
             Intrinsics.d(view, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.shared.ui.ButtonWithLoadingIndicator");
             ButtonWithLoadingIndicator buttonWithLoadingIndicator2 = (ButtonWithLoadingIndicator) view;
-            buttonWithLoadingIndicator2.setOnClickListener(new View.OnClickListener() { // from class: or.y2
+            buttonWithLoadingIndicator2.setOnClickListener(new View.OnClickListener() { // from class: mr.y2
                 @Override // android.view.View.OnClickListener
                 public final void onClick(View view2) {
-                    com.withpersona.sdk2.inquiry.ui.g.K0(this.f27899a, component, view, view2);
+                    com.withpersona.sdk2.inquiry.ui.g.K0(this.f25288a, component, view, view2);
                 }
             });
             buttonWithLoadingIndicator2.setIsLoading(rendering.getIsLoading() && ((ActionButtonComponent) component).getWasTapped());
@@ -1029,7 +1029,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
         if (component instanceof LinkButtonComponent) {
             Intrinsics.d(view, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.shared.ui.ButtonWithLoadingIndicator");
             final ButtonWithLoadingIndicator buttonWithLoadingIndicator3 = (ButtonWithLoadingIndicator) view;
-            buttonWithLoadingIndicator3.setOnClickListener(new View.OnClickListener() { // from class: or.a3
+            buttonWithLoadingIndicator3.setOnClickListener(new View.OnClickListener() { // from class: mr.a3
                 @Override // android.view.View.OnClickListener
                 public final void onClick(View view2) {
                     com.withpersona.sdk2.inquiry.ui.g.L0(component, buttonWithLoadingIndicator3, view2);
@@ -1040,20 +1040,20 @@ public final class g implements an.k<UiWorkflow.c.a> {
         }
         if (component instanceof CancelButtonComponent) {
             Intrinsics.d(view, "null cannot be cast to non-null type android.widget.Button");
-            ((Button) view).setOnClickListener(new View.OnClickListener() { // from class: or.b3
+            ((Button) view).setOnClickListener(new View.OnClickListener() { // from class: mr.b3
                 @Override // android.view.View.OnClickListener
                 public final void onClick(View view2) {
-                    com.withpersona.sdk2.inquiry.ui.g.M0(this.f27608a, view2);
+                    com.withpersona.sdk2.inquiry.ui.g.M0(this.f24997a, view2);
                 }
             });
             c0(view, componentParams, component, rendering.getIsLoading());
             return;
         }
         if (component instanceof VerifyPersonaButtonComponent) {
-            view.setOnClickListener(new View.OnClickListener() { // from class: or.c3
+            view.setOnClickListener(new View.OnClickListener() { // from class: mr.c3
                 @Override // android.view.View.OnClickListener
                 public final void onClick(View view2) {
-                    com.withpersona.sdk2.inquiry.ui.g.N0(this.f27620a, component, view2);
+                    com.withpersona.sdk2.inquiry.ui.g.N0(this.f25009a, component, view2);
                 }
             });
             ButtonWithLoadingIndicator buttonWithLoadingIndicator4 = view instanceof ButtonWithLoadingIndicator ? (ButtonWithLoadingIndicator) view : null;
@@ -1061,7 +1061,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
                 buttonWithLoadingIndicator4.setIsLoading(rendering.getIsLoading() && ((VerifyPersonaButtonComponent) component).getWasTapped());
             }
             c0(view, componentParams, component, rendering.getIsLoading());
-            Unit unit = Unit.f22483a;
+            Unit unit = Unit.f22938a;
             return;
         }
         if (component instanceof InputTextComponent) {
@@ -1073,9 +1073,9 @@ public final class g implements an.k<UiWorkflow.c.a> {
                 uiComponentErrorA = null;
             }
             UiComponentError.UiInputComponentError uiInputComponentError = (UiComponentError.UiInputComponentError) uiComponentErrorA;
-            mr.d.d(textInputLayout, uiInputComponentError != null ? uiInputComponentError.getMessage() : null, ((InputTextComponent) component).getErrorTextStyle());
+            kr.d.d(textInputLayout, uiInputComponentError != null ? uiInputComponentError.getMessage() : null, ((InputTextComponent) component).getErrorTextStyle());
             c0(view, componentParams, component, rendering.getIsLoading());
-            Unit unit2 = Unit.f22483a;
+            Unit unit2 = Unit.f22938a;
             return;
         }
         if (component instanceof InputTextAreaComponent) {
@@ -1087,27 +1087,27 @@ public final class g implements an.k<UiWorkflow.c.a> {
                 uiComponentErrorA2 = null;
             }
             UiComponentError.UiInputComponentError uiInputComponentError2 = (UiComponentError.UiInputComponentError) uiComponentErrorA2;
-            mr.d.d(textInputLayout2, uiInputComponentError2 != null ? uiInputComponentError2.getMessage() : null, ((InputTextAreaComponent) component).getErrorTextStyle());
+            kr.d.d(textInputLayout2, uiInputComponentError2 != null ? uiInputComponentError2.getMessage() : null, ((InputTextAreaComponent) component).getErrorTextStyle());
             c0(view, componentParams, component, rendering.getIsLoading());
-            Unit unit3 = Unit.f22483a;
+            Unit unit3 = Unit.f22938a;
             return;
         }
         if (component instanceof InputConfirmationCodeComponent) {
-            ((InputConfirmationCodeComponent) component).getSubmitCodeHelper().c(new Function0() { // from class: or.d3
+            ((InputConfirmationCodeComponent) component).getSubmitCodeHelper().c(new Function0() { // from class: mr.d3
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
                     return com.withpersona.sdk2.inquiry.ui.g.O0(view, rendering, this);
                 }
             });
             c0(view, componentParams, component, rendering.getIsLoading());
-            Unit unit4 = Unit.f22483a;
+            Unit unit4 = Unit.f22938a;
             return;
         }
         if (component instanceof InputAddressComponent) {
             Object tag = view.getTag();
             Intrinsics.d(tag, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.steps.ui.databinding.Pi2UiAddressFieldBinding");
-            gr.d dVar = (gr.d) tag;
-            List<View> listN = p.n(dVar.f18397f, dVar.f18405n, dVar.b, dVar.f18404m, dVar.f18403l);
+            er.d dVar = (er.d) tag;
+            List<View> listN = p.n(dVar.f16295f, dVar.f16303n, dVar.b, dVar.f16302m, dVar.f16301l);
             InputAddressComponent inputAddressComponent = (InputAddressComponent) component;
             UiComponentConfig uiComponentConfig = componentNameToConfig.get(inputAddressComponent.getName());
             Intrinsics.d(uiComponentConfig, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.network.dto.ui.components.InputAddress");
@@ -1118,11 +1118,11 @@ public final class g implements an.k<UiWorkflow.c.a> {
                 uiComponentErrorA3 = null;
             }
             UiComponentError.UiInputAddressComponentError uiInputAddressComponentError = (UiComponentError.UiInputAddressComponentError) uiComponentErrorA3;
-            List<Suggestion> listA = inputAddressComponent.A();
-            if (listA == null) {
-                listA = p.k();
+            List<Suggestion> listB = inputAddressComponent.B();
+            if (listB == null) {
+                listB = p.k();
             }
-            List<Suggestion> list = listA;
+            List<Suggestion> list = listB;
             Context context = view.getContext();
             Intrinsics.checkNotNullExpressionValue(context, "getContext(...)");
             List<Suggestion> list2 = list;
@@ -1133,11 +1133,11 @@ public final class g implements an.k<UiWorkflow.c.a> {
             }
             List listM0 = CollectionsKt.M0(arrayList2);
             InputAddress.AddressComponentStyle styles2 = inputAddress.getStyles();
-            br.a aVar = new br.a(context, R.layout.simple_list_item_1, listM0, (styles2 == null || (inputTextStyle2 = styles2.getInputTextStyle()) == null) ? null : inputTextStyle2.getFocusedTextBasedStyle());
-            MaterialAutoCompleteTextView addressFieldExpandedTextView = dVar.f18398g;
+            zq.a aVar = new zq.a(context, R.layout.simple_list_item_1, listM0, (styles2 == null || (inputTextStyle2 = styles2.getInputTextStyle()) == null) ? null : inputTextStyle2.getFocusedTextBasedStyle());
+            MaterialAutoCompleteTextView addressFieldExpandedTextView = dVar.f16296g;
             Intrinsics.checkNotNullExpressionValue(addressFieldExpandedTextView, "addressFieldExpandedTextView");
             P0(addressFieldExpandedTextView, aVar, listN, dVar, rendering, component, list);
-            MaterialAutoCompleteTextView addressFieldCollapsedTextView = dVar.f18396e;
+            MaterialAutoCompleteTextView addressFieldCollapsedTextView = dVar.f16294e;
             Intrinsics.checkNotNullExpressionValue(addressFieldCollapsedTextView, "addressFieldCollapsedTextView");
             P0(addressFieldCollapsedTextView, aVar, listN, dVar, rendering, component, list);
             if (Intrinsics.c(inputAddressComponent.getIsAddressAutocompleteLoading(), Boolean.FALSE)) {
@@ -1145,19 +1145,19 @@ public final class g implements an.k<UiWorkflow.c.a> {
                 while (it2.hasNext()) {
                     ((TextInputLayout) it2.next()).setEnabled(true);
                 }
-                dVar.f18410s.setVisibility(8);
+                dVar.f16308s.setVisibility(8);
             }
             if (uiInputAddressComponentError != null) {
                 inputAddressComponent.K(Boolean.FALSE);
             }
             if (Intrinsics.c(inputAddressComponent.getIsAddressComponentsCollapsed(), Boolean.FALSE)) {
-                dVar.f18400i.setVisibility(8);
-                dVar.f18401j.setVisibility(0);
-                dVar.f18402k.setLabelFor(dVar.f18401j.getId());
+                dVar.f16298i.setVisibility(8);
+                dVar.f16299j.setVisibility(0);
+                dVar.f16300k.setLabelFor(dVar.f16299j.getId());
             } else if (Intrinsics.c(inputAddressComponent.getIsAddressComponentsCollapsed(), Boolean.TRUE) || inputAddressComponent.getIsAddressComponentsCollapsed() == null) {
-                dVar.f18400i.setVisibility(0);
-                dVar.f18401j.setVisibility(8);
-                dVar.f18402k.setLabelFor(dVar.f18400i.getId());
+                dVar.f16298i.setVisibility(0);
+                dVar.f16299j.setVisibility(8);
+                dVar.f16300k.setLabelFor(dVar.f16298i.getId());
             }
             e0(view, componentParams, component);
             for (View view2 : listN) {
@@ -1166,25 +1166,25 @@ public final class g implements an.k<UiWorkflow.c.a> {
             }
             InputAddress.AddressComponentStyle styles3 = inputAddress.getStyles();
             TextBasedComponentStyle errorTextStyle = (styles3 == null || (inputTextStyle = styles3.getInputTextStyle()) == null) ? null : inputTextStyle.getErrorTextStyle();
-            TextInputLayout addressFieldCollapsed = dVar.f18395d;
+            TextInputLayout addressFieldCollapsed = dVar.f16293d;
             Intrinsics.checkNotNullExpressionValue(addressFieldCollapsed, "addressFieldCollapsed");
-            mr.d.d(addressFieldCollapsed, uiInputAddressComponentError != null ? uiInputAddressComponentError.getMessage().get("street_1") : null, errorTextStyle);
-            TextInputLayout addressFieldExpanded = dVar.f18397f;
+            kr.d.d(addressFieldCollapsed, uiInputAddressComponentError != null ? uiInputAddressComponentError.getMessage().get("street_1") : null, errorTextStyle);
+            TextInputLayout addressFieldExpanded = dVar.f16295f;
             Intrinsics.checkNotNullExpressionValue(addressFieldExpanded, "addressFieldExpanded");
-            mr.d.d(addressFieldExpanded, uiInputAddressComponentError != null ? uiInputAddressComponentError.getMessage().get("street_1") : null, errorTextStyle);
-            TextInputLayout addressSuite = dVar.f18405n;
+            kr.d.d(addressFieldExpanded, uiInputAddressComponentError != null ? uiInputAddressComponentError.getMessage().get("street_1") : null, errorTextStyle);
+            TextInputLayout addressSuite = dVar.f16303n;
             Intrinsics.checkNotNullExpressionValue(addressSuite, "addressSuite");
-            mr.d.d(addressSuite, uiInputAddressComponentError != null ? uiInputAddressComponentError.getMessage().get("street_2") : null, errorTextStyle);
+            kr.d.d(addressSuite, uiInputAddressComponentError != null ? uiInputAddressComponentError.getMessage().get("street_2") : null, errorTextStyle);
             TextInputLayout addressCity = dVar.b;
             Intrinsics.checkNotNullExpressionValue(addressCity, "addressCity");
-            mr.d.d(addressCity, uiInputAddressComponentError != null ? uiInputAddressComponentError.getMessage().get("city") : null, errorTextStyle);
-            TextInputLayout addressSubdivision = dVar.f18404m;
+            kr.d.d(addressCity, uiInputAddressComponentError != null ? uiInputAddressComponentError.getMessage().get("city") : null, errorTextStyle);
+            TextInputLayout addressSubdivision = dVar.f16302m;
             Intrinsics.checkNotNullExpressionValue(addressSubdivision, "addressSubdivision");
-            mr.d.d(addressSubdivision, uiInputAddressComponentError != null ? uiInputAddressComponentError.getMessage().get("subdivision") : null, errorTextStyle);
-            TextInputLayout addressPostalCode = dVar.f18403l;
+            kr.d.d(addressSubdivision, uiInputAddressComponentError != null ? uiInputAddressComponentError.getMessage().get("subdivision") : null, errorTextStyle);
+            TextInputLayout addressPostalCode = dVar.f16301l;
             Intrinsics.checkNotNullExpressionValue(addressPostalCode, "addressPostalCode");
-            mr.d.d(addressPostalCode, uiInputAddressComponentError != null ? uiInputAddressComponentError.getMessage().get("postal_code") : null, errorTextStyle);
-            Unit unit5 = Unit.f22483a;
+            kr.d.d(addressPostalCode, uiInputAddressComponentError != null ? uiInputAddressComponentError.getMessage().get("postal_code") : null, errorTextStyle);
+            Unit unit5 = Unit.f22938a;
             return;
         }
         if ((component instanceof InputSelectComponent) || (component instanceof InputMultiSelectComponent)) {
@@ -1193,34 +1193,34 @@ public final class g implements an.k<UiWorkflow.c.a> {
             Intrinsics.d(component, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.steps.ui.components.InputSelectBoxComponent");
             final w1 w1Var = (w1) component;
             final w3 w3Var = (w3) component;
-            textInputLayout3.setOnClickListener(new View.OnClickListener() { // from class: or.e3
+            textInputLayout3.setOnClickListener(new View.OnClickListener() { // from class: mr.e3
                 @Override // android.view.View.OnClickListener
                 public final void onClick(View view3) {
-                    com.withpersona.sdk2.inquiry.ui.g.R0(this.f27649a, textInputLayout3, w1Var, w3Var, view3);
+                    com.withpersona.sdk2.inquiry.ui.g.R0(this.f25038a, textInputLayout3, w1Var, w3Var, view3);
                 }
             });
             EditText editText = textInputLayout3.getEditText();
             if (editText != null) {
-                editText.setOnClickListener(new View.OnClickListener() { // from class: or.f3
+                editText.setOnClickListener(new View.OnClickListener() { // from class: mr.f3
                     @Override // android.view.View.OnClickListener
                     public final void onClick(View view3) {
-                        com.withpersona.sdk2.inquiry.ui.g.S0(this.f27663a, textInputLayout3, w1Var, w3Var, view3);
+                        com.withpersona.sdk2.inquiry.ui.g.S0(this.f25052a, textInputLayout3, w1Var, w3Var, view3);
                     }
                 });
-                Unit unit6 = Unit.f22483a;
+                Unit unit6 = Unit.f22938a;
             }
             EditText editText2 = textInputLayout3.getEditText();
             if (editText2 != null) {
-                editText2.setText(CollectionsKt.m0(w3Var.getSelectedOptionsController().b(), "\n", null, null, 0, null, new Function1() { // from class: or.g3
+                editText2.setText(CollectionsKt.m0(w3Var.getSelectedOptionsController().b(), "\n", null, null, 0, null, new Function1() { // from class: mr.g3
                     @Override // kotlin.jvm.functions.Function1
                     public final Object invoke(Object obj) {
                         return com.withpersona.sdk2.inquiry.ui.g.T0((Option) obj);
                     }
                 }, 30, null));
-                Unit unit7 = Unit.f22483a;
+                Unit unit7 = Unit.f22938a;
             }
             Option option = (Option) CollectionsKt.firstOrNull(w3Var.getSelectedOptionsController().b());
-            lr.c.h(textInputLayout3, option != null ? option.getLeadingImageUrl() : null);
+            jr.c.h(textInputLayout3, option != null ? option.getLeadingImageUrl() : null);
             UiComponentErrorInfo uiComponentErrorInfo4 = map2.get(component.getName());
             UiComponentError uiComponentErrorA4 = uiComponentErrorInfo4 != null ? uiComponentErrorInfo4.a(component.getLastValueUpdateTs()) : null;
             if (!(uiComponentErrorA4 instanceof UiComponentError.UiInputComponentError)) {
@@ -1228,16 +1228,16 @@ public final class g implements an.k<UiWorkflow.c.a> {
             }
             UiComponentError.UiInputComponentError uiInputComponentError3 = (UiComponentError.UiInputComponentError) uiComponentErrorA4;
             String message = uiInputComponentError3 != null ? uiInputComponentError3.getMessage() : null;
-            InputSelectBoxComponentStyle styles4 = w1Var.getF21571a();
-            mr.d.d(textInputLayout3, message, styles4 != null ? styles4.getErrorTextStyle() : null);
+            InputSelectBoxComponentStyle styles4 = w1Var.getF19579a();
+            kr.d.d(textInputLayout3, message, styles4 != null ? styles4.getErrorTextStyle() : null);
             c0(view, componentParams, component, rendering.getIsLoading());
-            Unit unit8 = Unit.f22483a;
+            Unit unit8 = Unit.f22938a;
             return;
         }
         if (component instanceof InputRadioGroupComponent) {
             Object tag2 = view.getTag();
             Intrinsics.d(tag2, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.steps.ui.databinding.Pi2UiInputRadioGroupBinding");
-            gr.n nVar = (gr.n) tag2;
+            er.n nVar = (er.n) tag2;
             UiComponentErrorInfo uiComponentErrorInfo5 = map2.get(component.getName());
             UiComponentError uiComponentErrorA5 = uiComponentErrorInfo5 != null ? uiComponentErrorInfo5.a(component.getLastValueUpdateTs()) : null;
             if (!(uiComponentErrorA5 instanceof UiComponentError.UiInputComponentError)) {
@@ -1245,7 +1245,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
             }
             UiComponentError.UiInputComponentError uiInputComponentError4 = (UiComponentError.UiInputComponentError) uiComponentErrorA5;
             String message2 = uiInputComponentError4 != null ? uiInputComponentError4.getMessage() : null;
-            TextView radioGroupError = nVar.f18440c;
+            TextView radioGroupError = nVar.f16338c;
             Intrinsics.checkNotNullExpressionValue(radioGroupError, "radioGroupError");
             if (message2 == null || StringsKt.p0(message2)) {
                 radioGroupError.setVisibility(8);
@@ -1255,13 +1255,13 @@ public final class g implements an.k<UiWorkflow.c.a> {
                 radioGroupError.setText(message2);
             }
             c0(view, componentParams, component, rendering.getIsLoading());
-            View viewFindViewById = view.findViewById(ar.d.f3698u0);
+            View viewFindViewById = view.findViewById(yq.d.f37057u0);
             Intrinsics.checkNotNullExpressionValue(viewFindViewById, "findViewById(...)");
             Iterator<View> it3 = u0.a((ViewGroup) viewFindViewById).iterator();
             while (it3.hasNext()) {
                 d0(it3.next(), componentParams, component, rendering.getIsLoading());
             }
-            Unit unit9 = Unit.f22483a;
+            Unit unit9 = Unit.f22938a;
             return;
         }
         if (component instanceof UiComponentGroup) {
@@ -1280,7 +1280,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
                 r0(rendering, (ClickableStackComponent) component, (ConstraintLayout) view);
             }
             c0(view, componentParams, component, rendering.getIsLoading());
-            Unit unit10 = Unit.f22483a;
+            Unit unit10 = Unit.f22938a;
             return;
         }
         if (component instanceof MdocComponent) {
@@ -1288,7 +1288,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
             Intrinsics.d(tag3, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.steps.ui.components.MdocComponentViewHolder");
             v3 v3Var = (v3) tag3;
             String strJ = ((MdocComponent) component).getErrorText();
-            v3Var.getLaunchButton().setOnClickListener(new View.OnClickListener() { // from class: or.m2
+            v3Var.getLaunchButton().setOnClickListener(new View.OnClickListener() { // from class: mr.m2
                 @Override // android.view.View.OnClickListener
                 public final void onClick(View view4) {
                     com.withpersona.sdk2.inquiry.ui.g.U0(component, view, view4);
@@ -1303,7 +1303,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
             }
             if (strJ == null || StringsKt.p0(strJ)) {
                 v3Var.getErrorLabel().setVisibility(8);
-                Unit unit11 = Unit.f22483a;
+                Unit unit11 = Unit.f22938a;
                 return;
             } else {
                 TextView errorLabel = v3Var.getErrorLabel();
@@ -1313,10 +1313,10 @@ public final class g implements an.k<UiWorkflow.c.a> {
             }
         }
         if (component instanceof ButtonComponent) {
-            view.setOnClickListener(new View.OnClickListener() { // from class: or.n2
+            view.setOnClickListener(new View.OnClickListener() { // from class: mr.n2
                 @Override // android.view.View.OnClickListener
                 public final void onClick(View view4) {
-                    com.withpersona.sdk2.inquiry.ui.g.V0(this.f27764a, component, view, view4);
+                    com.withpersona.sdk2.inquiry.ui.g.V0(this.f25153a, component, view, view4);
                 }
             });
             ButtonWithLoadingIndicator buttonWithLoadingIndicator5 = view instanceof ButtonWithLoadingIndicator ? (ButtonWithLoadingIndicator) view : null;
@@ -1324,46 +1324,46 @@ public final class g implements an.k<UiWorkflow.c.a> {
                 buttonWithLoadingIndicator5.setIsLoading(rendering.getIsLoading() && ((ButtonComponent) component).getWasTapped());
             }
             c0(view, componentParams, component, rendering.getIsLoading());
-            Unit unit12 = Unit.f22483a;
+            Unit unit12 = Unit.f22938a;
             return;
         }
         if (component instanceof InputDateComponent) {
             Object tag4 = view.getTag();
             Intrinsics.d(tag4, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.steps.ui.databinding.Pi2UiDateFieldBinding");
-            gr.f fVar = (gr.f) tag4;
+            er.f fVar = (er.f) tag4;
             UiComponentErrorInfo uiComponentErrorInfo7 = map2.get(component.getName());
             UiComponentError uiComponentErrorA7 = uiComponentErrorInfo7 != null ? uiComponentErrorInfo7.a(component.getLastValueUpdateTs()) : null;
             UiComponentError.UiInputComponentError uiInputComponentError6 = (UiComponentError.UiInputComponentError) (!(uiComponentErrorA7 instanceof UiComponentError.UiInputComponentError) ? null : uiComponentErrorA7);
             if (uiInputComponentError6 != null) {
-                fVar.f18417f.setError(uiInputComponentError6.getMessage());
-                fVar.f18414c.setError(uiInputComponentError6.getMessage());
-                fVar.f18419h.setError(uiInputComponentError6.getMessage());
-                fVar.f18416e.setText(uiInputComponentError6.getMessage());
-                fVar.f18416e.setVisibility(0);
+                fVar.f16315f.setError(uiInputComponentError6.getMessage());
+                fVar.f16312c.setError(uiInputComponentError6.getMessage());
+                fVar.f16317h.setError(uiInputComponentError6.getMessage());
+                fVar.f16314e.setText(uiInputComponentError6.getMessage());
+                fVar.f16314e.setVisibility(0);
             } else {
-                fVar.f18417f.setError("");
-                fVar.f18414c.setError("");
-                fVar.f18419h.setError("");
-                fVar.f18416e.setText("");
-                fVar.f18416e.setVisibility(8);
+                fVar.f16315f.setError("");
+                fVar.f16312c.setError("");
+                fVar.f16317h.setError("");
+                fVar.f16314e.setText("");
+                fVar.f16314e.setVisibility(8);
             }
             e0(view, componentParams, component);
-            View month = fVar.f18417f;
+            View month = fVar.f16315f;
             Intrinsics.checkNotNullExpressionValue(month, "month");
             d0(month, componentParams, component, rendering.getIsLoading());
-            View day = fVar.f18414c;
+            View day = fVar.f16312c;
             Intrinsics.checkNotNullExpressionValue(day, "day");
             d0(day, componentParams, component, rendering.getIsLoading());
-            View year = fVar.f18419h;
+            View year = fVar.f16317h;
             Intrinsics.checkNotNullExpressionValue(year, "year");
             d0(year, componentParams, component, rendering.getIsLoading());
-            Unit unit13 = Unit.f22483a;
+            Unit unit13 = Unit.f22938a;
             return;
         }
         if (component instanceof InputInternationalDbComponent) {
             Object tag5 = view.getTag();
             Intrinsics.d(tag5, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.steps.ui.databinding.Pi2UiInternationalDbFieldBinding");
-            gr.q qVar = (gr.q) tag5;
+            er.q qVar = (er.q) tag5;
             UiComponentErrorInfo uiComponentErrorInfo8 = map2.get(component.getName());
             UiComponentError uiComponentErrorA8 = uiComponentErrorInfo8 != null ? uiComponentErrorInfo8.a(component.getLastValueUpdateTs()) : null;
             if (!(uiComponentErrorA8 instanceof UiComponentError.UiInputInternationalDbComponentError)) {
@@ -1371,19 +1371,19 @@ public final class g implements an.k<UiWorkflow.c.a> {
             }
             UiComponentError.UiInputInternationalDbComponentError uiInputInternationalDbComponentError = (UiComponentError.UiInputInternationalDbComponentError) uiComponentErrorA8;
             Map<String, String> message3 = uiInputInternationalDbComponentError != null ? uiInputInternationalDbComponentError.getMessage() : null;
-            com.withpersona.sdk2.inquiry.steps.ui.components.a.n((InputInternationalDbComponent) component, qVar, new Function0() { // from class: or.p2
+            com.withpersona.sdk2.inquiry.steps.ui.components.a.n((InputInternationalDbComponent) component, qVar, new Function0() { // from class: mr.p2
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
                     return com.withpersona.sdk2.inquiry.ui.g.W0(component, this);
                 }
-            }, new Function0() { // from class: or.q2
+            }, new Function0() { // from class: mr.q2
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
                     return com.withpersona.sdk2.inquiry.ui.g.Y0(component, this);
                 }
             }, message3 != null ? message3.get("idb_country") : null, message3 != null ? message3.get("idb_type") : null, message3 != null ? message3.get("idb_value") : null);
             c0(view, componentParams, component, rendering.getIsLoading());
-            Unit unit14 = Unit.f22483a;
+            Unit unit14 = Unit.f22938a;
             return;
         }
         if (component instanceof InputMaskedTextComponent) {
@@ -1397,15 +1397,15 @@ public final class g implements an.k<UiWorkflow.c.a> {
             TextInputLayout textInputLayout4 = (TextInputLayout) view;
             String message4 = uiInputComponentError7 != null ? uiInputComponentError7.getMessage() : null;
             InputTextBasedComponentStyle inputTextBasedComponentStyleK = ((InputMaskedTextComponent) component).getStyles();
-            mr.d.d(textInputLayout4, message4, inputTextBasedComponentStyleK != null ? inputTextBasedComponentStyleK.getErrorTextStyle() : null);
+            kr.d.d(textInputLayout4, message4, inputTextBasedComponentStyleK != null ? inputTextBasedComponentStyleK.getErrorTextStyle() : null);
             c0(view, componentParams, component, rendering.getIsLoading());
-            Unit unit15 = Unit.f22483a;
+            Unit unit15 = Unit.f22938a;
             return;
         }
         if (component instanceof InputPhoneNumberComponent) {
             Object tag6 = view.getTag();
             Intrinsics.d(tag6, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.steps.ui.databinding.Pi2UiInputPhoneNumberBinding");
-            gr.m mVar = (gr.m) tag6;
+            er.m mVar = (er.m) tag6;
             UiComponentErrorInfo uiComponentErrorInfo10 = map2.get(component.getName());
             UiComponentError uiComponentErrorA10 = uiComponentErrorInfo10 != null ? uiComponentErrorInfo10.a(component.getLastValueUpdateTs()) : null;
             if (!(uiComponentErrorA10 instanceof UiComponentError.UiInputComponentError)) {
@@ -1416,15 +1416,15 @@ public final class g implements an.k<UiWorkflow.c.a> {
             Intrinsics.checkNotNullExpressionValue(inputLayout, "inputLayout");
             String message5 = uiInputComponentError8 != null ? uiInputComponentError8.getMessage() : null;
             InputPhoneNumberComponent inputPhoneNumberComponent = (InputPhoneNumberComponent) component;
-            mr.d.d(inputLayout, message5, inputPhoneNumberComponent.getErrorTextStyle());
-            p1.e(inputPhoneNumberComponent, mVar, new Function0() { // from class: or.r2
+            kr.d.d(inputLayout, message5, inputPhoneNumberComponent.getErrorTextStyle());
+            p1.e(inputPhoneNumberComponent, mVar, new Function0() { // from class: mr.r2
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
                     return com.withpersona.sdk2.inquiry.ui.g.c1(component, this);
                 }
             });
             c0(view, componentParams, component, rendering.getIsLoading());
-            Unit unit16 = Unit.f22483a;
+            Unit unit16 = Unit.f22938a;
             return;
         }
         if (component instanceof InputNumberComponent) {
@@ -1439,9 +1439,9 @@ public final class g implements an.k<UiWorkflow.c.a> {
             String message6 = uiInputComponentError9 != null ? uiInputComponentError9.getMessage() : null;
             UiComponentConfig uiComponentConfig2 = componentNameToConfig.get(((InputNumberComponent) component).getName());
             InputNumber inputNumber = uiComponentConfig2 instanceof InputNumber ? (InputNumber) uiComponentConfig2 : null;
-            mr.d.d(textInputLayout5, message6, (inputNumber == null || (styles = inputNumber.getStyles()) == null) ? null : styles.getErrorTextStyle());
+            kr.d.d(textInputLayout5, message6, (inputNumber == null || (styles = inputNumber.getStyles()) == null) ? null : styles.getErrorTextStyle());
             c0(view, componentParams, component, rendering.getIsLoading());
-            Unit unit17 = Unit.f22483a;
+            Unit unit17 = Unit.f22938a;
             return;
         }
         if (component instanceof InputCurrencyComponent) {
@@ -1452,51 +1452,51 @@ public final class g implements an.k<UiWorkflow.c.a> {
             }
             UiComponentError.UiInputComponentError uiInputComponentError10 = (UiComponentError.UiInputComponentError) uiComponentErrorA12;
             Intrinsics.d(view, "null cannot be cast to non-null type com.google.android.material.textfield.TextInputLayout");
-            mr.d.d((TextInputLayout) view, uiInputComponentError10 != null ? uiInputComponentError10.getMessage() : null, ((InputCurrencyComponent) component).getErrorTextStyle());
+            kr.d.d((TextInputLayout) view, uiInputComponentError10 != null ? uiInputComponentError10.getMessage() : null, ((InputCurrencyComponent) component).getErrorTextStyle());
             c0(view, componentParams, component, rendering.getIsLoading());
-            Unit unit18 = Unit.f22483a;
+            Unit unit18 = Unit.f22938a;
             return;
         }
         if (component instanceof InputCheckboxComponent) {
             Object tag7 = view.getTag();
             Intrinsics.d(tag7, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.steps.ui.databinding.Pi2UiInputCheckboxBinding");
-            gr.i iVar = (gr.i) tag7;
+            er.i iVar = (er.i) tag7;
             UiComponentErrorInfo uiComponentErrorInfo13 = map2.get(component.getName());
             UiComponentError uiComponentErrorA13 = uiComponentErrorInfo13 != null ? uiComponentErrorInfo13.a(component.getLastValueUpdateTs()) : null;
             UiComponentError.UiInputComponentError uiInputComponentError11 = (UiComponentError.UiInputComponentError) (!(uiComponentErrorA13 instanceof UiComponentError.UiInputComponentError) ? null : uiComponentErrorA13);
             if (uiInputComponentError11 != null) {
-                iVar.f18427d.setText(uiInputComponentError11.getMessage());
-                iVar.f18427d.setVisibility(0);
+                iVar.f16325d.setText(uiInputComponentError11.getMessage());
+                iVar.f16325d.setVisibility(0);
             } else {
-                iVar.f18427d.setText("");
-                iVar.f18427d.setVisibility(8);
+                iVar.f16325d.setText("");
+                iVar.f16325d.setVisibility(8);
             }
             c0(view, componentParams, component, rendering.getIsLoading());
-            Unit unit19 = Unit.f22483a;
+            Unit unit19 = Unit.f22938a;
             return;
         }
         if (component instanceof InputCheckboxGroupComponent) {
             Object tag8 = view.getTag();
             Intrinsics.d(tag8, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.steps.ui.databinding.Pi2UiInputCheckboxGroupBinding");
-            gr.j jVar = (gr.j) tag8;
+            er.j jVar = (er.j) tag8;
             UiComponentErrorInfo uiComponentErrorInfo14 = map2.get(component.getName());
             UiComponentError uiComponentErrorA14 = uiComponentErrorInfo14 != null ? uiComponentErrorInfo14.a(component.getLastValueUpdateTs()) : null;
             UiComponentError.UiInputComponentError uiInputComponentError12 = (UiComponentError.UiInputComponentError) (!(uiComponentErrorA14 instanceof UiComponentError.UiInputComponentError) ? null : uiComponentErrorA14);
             if (uiInputComponentError12 != null) {
-                jVar.f18430c.setText(uiInputComponentError12.getMessage());
-                jVar.f18430c.setVisibility(0);
+                jVar.f16328c.setText(uiInputComponentError12.getMessage());
+                jVar.f16328c.setVisibility(0);
             } else {
-                jVar.f18430c.setText("");
-                jVar.f18430c.setVisibility(8);
+                jVar.f16328c.setText("");
+                jVar.f16328c.setVisibility(8);
             }
             c0(view, componentParams, component, rendering.getIsLoading());
-            View viewFindViewById2 = view.findViewById(ar.d.f3691r);
+            View viewFindViewById2 = view.findViewById(yq.d.f37050r);
             Intrinsics.checkNotNullExpressionValue(viewFindViewById2, "findViewById(...)");
             Iterator<View> it4 = u0.a((ViewGroup) viewFindViewById2).iterator();
             while (it4.hasNext()) {
                 d0(it4.next(), componentParams, component, rendering.getIsLoading());
             }
-            Unit unit20 = Unit.f22483a;
+            Unit unit20 = Unit.f22938a;
             return;
         }
         if (component instanceof ESignatureComponent) {
@@ -1514,21 +1514,21 @@ public final class g implements an.k<UiWorkflow.c.a> {
             }
             UiComponentError.UiInputComponentError uiInputComponentError13 = (UiComponentError.UiInputComponentError) uiComponentErrorA15;
             if (uiInputComponentError13 != null) {
-                wVar.f18465d.setText(uiInputComponentError13.getMessage());
-                wVar.f18465d.setVisibility(0);
+                wVar.f16363d.setText(uiInputComponentError13.getMessage());
+                wVar.f16363d.setVisibility(0);
             } else {
-                wVar.f18465d.setText("");
-                wVar.f18465d.setVisibility(8);
+                wVar.f16363d.setText("");
+                wVar.f16363d.setVisibility(8);
             }
             ESignature.Attributes attributes2 = eSignature.getAttributes();
             if ((attributes2 != null ? attributes2.getLabel() : null) != null) {
-                TextView textView = wVar.f18466e;
+                TextView textView = wVar.f16364e;
                 ESignature.Attributes attributes3 = eSignature.getAttributes();
                 textView.setText(attributes3 != null ? attributes3.getLabel() : null);
-                wVar.f18466e.setVisibility(0);
+                wVar.f16364e.setVisibility(0);
             } else {
-                wVar.f18466e.setText("");
-                wVar.f18466e.setVisibility(8);
+                wVar.f16364e.setText("");
+                wVar.f16364e.setVisibility(8);
             }
             Bitmap bitmapB = eSignatureComponent.getBitmapController().b();
             if (bitmapB == null) {
@@ -1545,59 +1545,59 @@ public final class g implements an.k<UiWorkflow.c.a> {
                 textView2.setText(placeholder);
                 Object tag12 = view.getTag();
                 Intrinsics.d(tag12, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.steps.ui.databinding.Pi2UiSignatureFieldBinding");
-                ((w) tag12).f18468g.setVisibility(8);
+                ((w) tag12).f16366g.setVisibility(8);
                 Object tag13 = view.getTag();
                 Intrinsics.d(tag13, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.steps.ui.databinding.Pi2UiSignatureFieldBinding");
-                ((w) tag13).f18464c.setVisibility(8);
+                ((w) tag13).f16362c.setVisibility(8);
             } else {
                 Object tag14 = view.getTag();
                 Intrinsics.d(tag14, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.steps.ui.databinding.Pi2UiSignatureFieldBinding");
-                ((w) tag14).f18468g.setImageBitmap(bitmapB);
+                ((w) tag14).f16366g.setImageBitmap(bitmapB);
                 Object tag15 = view.getTag();
                 Intrinsics.d(tag15, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.steps.ui.databinding.Pi2UiSignatureFieldBinding");
                 ((w) tag15).b.setVisibility(8);
                 Object tag16 = view.getTag();
                 Intrinsics.d(tag16, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.steps.ui.databinding.Pi2UiSignatureFieldBinding");
-                ((w) tag16).f18468g.setVisibility(0);
+                ((w) tag16).f16366g.setVisibility(0);
                 Object tag17 = view.getTag();
                 Intrinsics.d(tag17, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.steps.ui.databinding.Pi2UiSignatureFieldBinding");
-                ((w) tag17).f18464c.setVisibility(0);
+                ((w) tag17).f16362c.setVisibility(0);
             }
-            wVar.f18467f.setOnClickListener(new View.OnClickListener() { // from class: or.s2
+            wVar.f16365f.setOnClickListener(new View.OnClickListener() { // from class: mr.s2
                 @Override // android.view.View.OnClickListener
                 public final void onClick(View view4) {
-                    com.withpersona.sdk2.inquiry.ui.g.g1(this.f27838a, component, eSignature, rendering, viewEnvironment, view4);
+                    com.withpersona.sdk2.inquiry.ui.g.g1(this.f25227a, component, eSignature, rendering, viewEnvironment, view4);
                 }
             });
             e0(view, componentParams, component);
-            View signatureContainer = wVar.f18467f;
+            View signatureContainer = wVar.f16365f;
             Intrinsics.checkNotNullExpressionValue(signatureContainer, "signatureContainer");
             d0(signatureContainer, componentParams, component, rendering.getIsLoading());
-            Unit unit21 = Unit.f22483a;
+            Unit unit21 = Unit.f22938a;
             return;
         }
         if (component instanceof GovernmentIdNfcScanComponent) {
             Object tag18 = view.getTag();
             Intrinsics.d(tag18, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.steps.ui.components.GovernmentIdNfcScanViewHolder");
-            cr.w wVar2 = (cr.w) tag18;
+            ar.w wVar2 = (ar.w) tag18;
             ButtonWithLoadingIndicator buttonWithLoadingIndicatorF = wVar2.getLaunchButton();
             buttonWithLoadingIndicatorF.setIsLoading(rendering.getIsLoading() && ((GovernmentIdNfcScanComponent) component).getWasTapped());
             c0(buttonWithLoadingIndicatorF, componentParams, component, rendering.getIsLoading());
-            buttonWithLoadingIndicatorF.setOnClickListener(new View.OnClickListener() { // from class: or.t2
+            buttonWithLoadingIndicatorF.setOnClickListener(new View.OnClickListener() { // from class: mr.t2
                 @Override // android.view.View.OnClickListener
                 public final void onClick(View view4) {
-                    com.withpersona.sdk2.inquiry.ui.g.i1(this.f27850a, component, view4);
+                    com.withpersona.sdk2.inquiry.ui.g.i1(this.f25239a, component, view4);
                 }
             });
             View viewG = wVar2.getTipsButton();
             if (viewG != null) {
-                viewG.setOnClickListener(new View.OnClickListener() { // from class: or.u2
+                viewG.setOnClickListener(new View.OnClickListener() { // from class: mr.u2
                     @Override // android.view.View.OnClickListener
                     public final void onClick(View view4) {
                         com.withpersona.sdk2.inquiry.ui.g.j1(rendering, this, view4);
                     }
                 });
-                Unit unit22 = Unit.f22483a;
+                Unit unit22 = Unit.f22938a;
             }
             UiComponentErrorInfo uiComponentErrorInfo16 = map2.get(component.getName());
             UiComponentError uiComponentErrorA16 = uiComponentErrorInfo16 != null ? uiComponentErrorInfo16.a(component.getLastValueUpdateTs()) : null;
@@ -1612,7 +1612,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
             }
             if (!(uiComponentErrorA16 instanceof UiComponentError.UiGovernmentIdNfcScanComponentError)) {
                 wVar2.getErrorLabel().setVisibility(8);
-                Unit unit23 = Unit.f22483a;
+                Unit unit23 = Unit.f22938a;
                 return;
             }
             TextInputLayout textInputLayoutA = wVar2.getCardAccessNumber();
@@ -1620,16 +1620,16 @@ public final class g implements an.k<UiWorkflow.c.a> {
             String str = uiGovernmentIdNfcScanComponentError.getMessage().get(GovernmentIdNfcScan.cardAccessNumberName);
             GovernmentIdNfcScanComponent governmentIdNfcScanComponent = (GovernmentIdNfcScanComponent) component;
             GovernmentIdNfcScan.GovernmentIdNfcScanStyles styles5 = governmentIdNfcScanComponent.getConfig().getStyles();
-            mr.d.d(textInputLayoutA, str, (styles5 == null || (cardAccessNumberStyle = styles5.getCardAccessNumberStyle()) == null) ? null : cardAccessNumberStyle.getErrorTextStyle());
+            kr.d.d(textInputLayoutA, str, (styles5 == null || (cardAccessNumberStyle = styles5.getCardAccessNumberStyle()) == null) ? null : cardAccessNumberStyle.getErrorTextStyle());
             TextInputLayout textInputLayoutC = wVar2.getDocumentNumber();
             String str2 = uiGovernmentIdNfcScanComponentError.getMessage().get(GovernmentIdNfcScan.documentNumberName);
             GovernmentIdNfcScan.GovernmentIdNfcScanStyles styles6 = governmentIdNfcScanComponent.getConfig().getStyles();
-            mr.d.d(textInputLayoutC, str2, (styles6 == null || (documentNumberStyle = styles6.getDocumentNumberStyle()) == null) ? null : documentNumberStyle.getErrorTextStyle());
-            wVar2.getDateOfBirthBinding().f18416e.setText(uiGovernmentIdNfcScanComponentError.getMessage().get(GovernmentIdNfcScan.dateOfBirthName));
-            wVar2.getDateOfBirthBinding().f18416e.setVisibility(0);
-            wVar2.getExpirationDateBinding().f18416e.setText(uiGovernmentIdNfcScanComponentError.getMessage().get(GovernmentIdNfcScan.expirationDateName));
-            wVar2.getExpirationDateBinding().f18416e.setVisibility(0);
-            Unit unit24 = Unit.f22483a;
+            kr.d.d(textInputLayoutC, str2, (styles6 == null || (documentNumberStyle = styles6.getDocumentNumberStyle()) == null) ? null : documentNumberStyle.getErrorTextStyle());
+            wVar2.getDateOfBirthBinding().f16314e.setText(uiGovernmentIdNfcScanComponentError.getMessage().get(GovernmentIdNfcScan.dateOfBirthName));
+            wVar2.getDateOfBirthBinding().f16314e.setVisibility(0);
+            wVar2.getExpirationDateBinding().f16314e.setText(uiGovernmentIdNfcScanComponentError.getMessage().get(GovernmentIdNfcScan.expirationDateName));
+            wVar2.getExpirationDateBinding().f16314e.setVisibility(0);
+            Unit unit24 = Unit.f22938a;
             return;
         }
         if (component instanceof JpMyNumberNfcScanComponent) {
@@ -1642,10 +1642,10 @@ public final class g implements an.k<UiWorkflow.c.a> {
             if (((JpMyNumberNfcScanComponent) component).getValidOperation() == null) {
                 buttonWithLoadingIndicatorB.setEnabled(false);
             } else {
-                buttonWithLoadingIndicatorB.setOnClickListener(new View.OnClickListener() { // from class: or.v2
+                buttonWithLoadingIndicatorB.setOnClickListener(new View.OnClickListener() { // from class: mr.v2
                     @Override // android.view.View.OnClickListener
                     public final void onClick(View view4) {
-                        com.withpersona.sdk2.inquiry.ui.g.k1(this.f27868a, component, view4);
+                        com.withpersona.sdk2.inquiry.ui.g.k1(this.f25257a, component, view4);
                     }
                 });
             }
@@ -1654,7 +1654,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
             UiComponentError uiComponentError = uiComponentErrorA17 == null ? null : uiComponentErrorA17;
             if (!(uiComponentError instanceof UiComponentError.UiInputComponentError)) {
                 f2Var.getErrorLabel().setVisibility(8);
-                Unit unit25 = Unit.f22483a;
+                Unit unit25 = Unit.f22938a;
                 return;
             } else {
                 TextView textViewA = f2Var.getErrorLabel();
@@ -1665,35 +1665,35 @@ public final class g implements an.k<UiWorkflow.c.a> {
         }
         if ((component instanceof CreatePersonaSheetComponent) || (component instanceof ImagePreviewComponent) || (component instanceof LocalImageComponent) || (component instanceof PrivacyPolicyComponent) || (component instanceof QRCodeComponent) || (component instanceof RemoteImageComponent) || (component instanceof SpacerComponent) || (component instanceof TextComponent) || (component instanceof TitleComponent) || (component instanceof BrandingComponent)) {
             c0(view, componentParams, component, rendering.getIsLoading());
-            Unit unit26 = Unit.f22483a;
+            Unit unit26 = Unit.f22938a;
             return;
         }
         if (!(component instanceof InputFileUploadComponent)) {
             if (component instanceof PhoneNumberSnaComponent) {
-                Unit unit27 = Unit.f22483a;
+                Unit unit27 = Unit.f22938a;
                 return;
             } else {
                 if (!(component instanceof HelpBottomSheetComponent)) {
-                    throw new jt.l();
+                    throw new gt.l();
                 }
-                Unit unit28 = Unit.f22483a;
+                Unit unit28 = Unit.f22938a;
                 return;
             }
         }
         Object tag20 = view.getTag();
         Intrinsics.d(tag20, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.steps.ui.databinding.Pi2UiInputFileUploadBinding");
-        gr.k kVar = (gr.k) tag20;
+        er.k kVar = (er.k) tag20;
         InputFileUploadComponent inputFileUploadComponent = (InputFileUploadComponent) component;
         UiComponentConfig uiComponentConfig4 = componentNameToConfig.get(inputFileUploadComponent.getName());
         InputFileUpload inputFileUpload = uiComponentConfig4 instanceof InputFileUpload ? (InputFileUpload) uiComponentConfig4 : null;
         if (!inputFileUploadComponent.k().isEmpty()) {
-            kVar.f18433c.setText(CollectionsKt.m0(inputFileUploadComponent.k(), ", ", null, null, 0, null, new Function1() { // from class: or.w2
+            kVar.f16331c.setText(CollectionsKt.m0(inputFileUploadComponent.k(), ", ", null, null, 0, null, new Function1() { // from class: mr.w2
                 @Override // kotlin.jvm.functions.Function1
                 public final Object invoke(Object obj) {
                     return com.withpersona.sdk2.inquiry.ui.g.l1((SelectedFile) obj);
                 }
             }, 30, null));
-            kVar.f18433c.setVisibility(0);
+            kVar.f16331c.setVisibility(0);
         } else if (inputFileUploadComponent.getHasPrefill()) {
             if (inputFileUpload == null || (attributes = inputFileUpload.getAttributes()) == null || (prefill = attributes.getPrefill()) == null) {
                 arrayList = null;
@@ -1707,28 +1707,28 @@ public final class g implements an.k<UiWorkflow.c.a> {
                 arrayList = arrayList3;
             }
             if (arrayList == null || arrayList.isEmpty()) {
-                kVar.f18433c.setText(vp.g.f33400o);
-                kVar.f18433c.setVisibility(0);
+                kVar.f16331c.setText(tp.g.f32536o);
+                kVar.f16331c.setVisibility(0);
             } else {
-                kVar.f18433c.setText(CollectionsKt.m0(arrayList, ", ", null, null, 0, null, null, 62, null));
-                kVar.f18433c.setVisibility(0);
+                kVar.f16331c.setText(CollectionsKt.m0(arrayList, ", ", null, null, 0, null, null, 62, null));
+                kVar.f16331c.setVisibility(0);
             }
         } else {
-            kVar.f18433c.setText(vp.g.f33400o);
-            kVar.f18433c.setVisibility(0);
+            kVar.f16331c.setText(tp.g.f32536o);
+            kVar.f16331c.setVisibility(0);
         }
         UiComponentErrorInfo uiComponentErrorInfo18 = map2.get(component.getName());
         UiComponentError uiComponentErrorA18 = uiComponentErrorInfo18 != null ? uiComponentErrorInfo18.a(component.getLastValueUpdateTs()) : null;
         UiComponentError.UiInputComponentError uiInputComponentError14 = (UiComponentError.UiInputComponentError) (!(uiComponentErrorA18 instanceof UiComponentError.UiInputComponentError) ? null : uiComponentErrorA18);
         if (uiInputComponentError14 != null) {
-            kVar.f18434d.setText(uiInputComponentError14.getMessage());
-            kVar.f18434d.setVisibility(0);
+            kVar.f16332d.setText(uiInputComponentError14.getMessage());
+            kVar.f16332d.setVisibility(0);
         } else {
-            kVar.f18434d.setText("");
-            kVar.f18434d.setVisibility(8);
+            kVar.f16332d.setText("");
+            kVar.f16332d.setVisibility(8);
         }
         c0(view, componentParams, component, rendering.getIsLoading());
-        Unit unit29 = Unit.f22483a;
+        Unit unit29 = Unit.f22938a;
     }
 
     public final void c0(View view, Map<String, ? extends Object> map, UiComponent uiComponent, boolean z10) {
@@ -1738,8 +1738,8 @@ public final class g implements an.k<UiWorkflow.c.a> {
 
     public final void d0(View view, Map<String, ? extends Object> map, UiComponent uiComponent, boolean z10) {
         Boolean value;
-        if (uiComponent instanceof cr.o) {
-            JsonLogicBoolean disabled = ((cr.o) uiComponent).getDisabled();
+        if (uiComponent instanceof ar.o) {
+            JsonLogicBoolean disabled = ((ar.o) uiComponent).getDisabled();
             boolean z11 = false;
             boolean zBooleanValue = (disabled == null || (value = disabled.getValue(map, map.get(uiComponent.getName()), i0())) == null) ? false : value.booleanValue();
             if (!z10 && !zBooleanValue) {
@@ -1759,7 +1759,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
             view.setVisibility(z10 ? 8 : 0);
             Iterator<T> it = xVar.i().iterator();
             while (it.hasNext()) {
-                ((mr.a) it.next()).a(map, z10, i0());
+                ((kr.a) it.next()).a(map, z10, i0());
             }
         }
     }
@@ -1776,7 +1776,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
         }
     }
 
-    public final void g0(ar.g result, List<? extends UiComponent> components) {
+    public final void g0(yq.g result, List<? extends UiComponent> components) {
         ArrayList arrayList = new ArrayList();
         for (Object obj : components) {
             if (obj instanceof FooterComponent) {
@@ -1791,7 +1791,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
         if (numG != null) {
             u0(result, numG.intValue(), footerComponent);
         } else {
-            this.binding.f28843c.addView(result.getFooterView());
+            this.binding.f27437c.addView(result.getFooterView());
         }
     }
 
@@ -1813,28 +1813,28 @@ public final class g implements an.k<UiWorkflow.c.a> {
     }
 
     public final Map<String, Object> i0() {
-        return j0.g(jt.s.a("scrolled_to_bottom_of_screen", Boolean.valueOf(this.hasScrolledToBottom)));
+        return j0.g(gt.s.a("scrolled_to_bottom_of_screen", Boolean.valueOf(this.hasScrolledToBottom)));
     }
 
     public final void o1(final UiWorkflow.c.a rendering, ViewEnvironment viewEnvironment, final SheetComponent component, Map<String, ? extends Object> componentParams, Map<String, UiComponentErrorInfo> errors) {
-        ar.h viewBindings;
+        yq.h viewBindings;
         Map<String, ComponentView> mapA;
         if (!(component instanceof CreatePersonaSheetComponent)) {
-            throw new jt.l();
+            throw new gt.l();
         }
         CreatePersonaSheet.CardCtaPage.ComponentNameMapping componentNameMapping = ((CreatePersonaSheetComponent) component).getCtaCard().getComponentNameMapping();
-        List<Pair<String, Function1<UiComponent, Unit>>> listB = new NestedUiStep.a().a(componentNameMapping != null ? componentNameMapping.getStartButton() : null, new Function1() { // from class: or.i2
+        List<Pair<String, Function1<UiComponent, Unit>>> listB = new NestedUiStep.a().a(componentNameMapping != null ? componentNameMapping.getStartButton() : null, new Function1() { // from class: mr.i2
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
                 return com.withpersona.sdk2.inquiry.ui.g.p1(rendering, component, (UiComponent) obj);
             }
-        }).a(componentNameMapping != null ? componentNameMapping.getDismissButton() : null, new Function1() { // from class: or.j2
+        }).a(componentNameMapping != null ? componentNameMapping.getDismissButton() : null, new Function1() { // from class: mr.j2
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return com.withpersona.sdk2.inquiry.ui.g.q1(this.f27717a, (UiComponent) obj);
+                return com.withpersona.sdk2.inquiry.ui.g.q1(this.f25106a, (UiComponent) obj);
             }
         }).b();
-        ar.g gVarE = this.nestedUiBottomSheetController.e();
+        yq.g gVarE = this.nestedUiBottomSheetController.e();
         if (gVarE == null || (viewBindings = gVarE.getViewBindings()) == null || (mapA = viewBindings.a()) == null) {
             return;
         }
@@ -1846,7 +1846,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
             final Function1<UiComponent, Unit> function1D = pair.d();
             final ComponentView componentView = mapA.get(strC);
             if (componentView != null) {
-                componentView.d().setOnClickListener(new View.OnClickListener() { // from class: or.k2
+                componentView.d().setOnClickListener(new View.OnClickListener() { // from class: mr.k2
                     @Override // android.view.View.OnClickListener
                     public final void onClick(View view) {
                         com.withpersona.sdk2.inquiry.ui.g.r1(function1D, componentView, view);
@@ -1885,7 +1885,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
                     outMap.put(inputTextAreaComponent.getName(), E0(inputTextAreaComponent.getTextController().b()));
                 } else if (component instanceof InputPhoneNumberComponent) {
                     InputPhoneNumberComponent inputPhoneNumberComponent = (InputPhoneNumberComponent) component;
-                    String strH = er.f.f15752a.h((Option) CollectionsKt.d0(inputPhoneNumberComponent.getCountryCodeOptionsController().b()));
+                    String strH = cr.f.f14193a.h((Option) CollectionsKt.d0(inputPhoneNumberComponent.getCountryCodeOptionsController().b()));
                     outMap.put(inputPhoneNumberComponent.getName(), E0(strH + " " + inputPhoneNumberComponent.getTextController().b()));
                 } else if (component instanceof InputConfirmationCodeComponent) {
                     InputConfirmationCodeComponent inputConfirmationCodeComponent = (InputConfirmationCodeComponent) component;
@@ -1954,17 +1954,17 @@ public final class g implements an.k<UiWorkflow.c.a> {
                 } else if (component instanceof ESignatureComponent) {
                     ESignatureComponent eSignatureComponent = (ESignatureComponent) component;
                     Bitmap bitmapB = eSignatureComponent.getBitmapController().b();
-                    outMap.put(eSignatureComponent.getName(), new ComponentParam.ESignature(bitmapB != null ? er.h.g(bitmapB) : null));
+                    outMap.put(eSignatureComponent.getName(), new ComponentParam.ESignature(bitmapB != null ? cr.h.g(bitmapB) : null));
                 } else if (component instanceof GovernmentIdNfcScanComponent) {
                     GovernmentIdNfcScanComponent governmentIdNfcScanComponent = (GovernmentIdNfcScanComponent) component;
                     GovernmentIdNfcData governmentIdNfcDataB = governmentIdNfcScanComponent.getNfcDataController().b();
                     if (governmentIdNfcDataB != null) {
                         Uri dg1Uri = governmentIdNfcDataB.getDg1Uri();
-                        String strEncodeToString2 = (dg1Uri == null || (fileA3 = t2.c.a(dg1Uri)) == null || (bArrG3 = ut.i.g(fileA3)) == null) ? null : Base64.encodeToString(bArrG3, 0);
+                        String strEncodeToString2 = (dg1Uri == null || (fileA3 = t2.c.a(dg1Uri)) == null || (bArrG3 = st.i.g(fileA3)) == null) ? null : Base64.encodeToString(bArrG3, 0);
                         Uri dg2Uri = governmentIdNfcDataB.getDg2Uri();
-                        String strEncodeToString3 = (dg2Uri == null || (fileA2 = t2.c.a(dg2Uri)) == null || (bArrG2 = ut.i.g(fileA2)) == null) ? null : Base64.encodeToString(bArrG2, 0);
+                        String strEncodeToString3 = (dg2Uri == null || (fileA2 = t2.c.a(dg2Uri)) == null || (bArrG2 = st.i.g(fileA2)) == null) ? null : Base64.encodeToString(bArrG2, 0);
                         Uri sodUri = governmentIdNfcDataB.getSodUri();
-                        if (sodUri != null && (fileA = t2.c.a(sodUri)) != null && (bArrG = ut.i.g(fileA)) != null) {
+                        if (sodUri != null && (fileA = t2.c.a(sodUri)) != null && (bArrG = st.i.g(fileA)) != null) {
                             strEncodeToString = Base64.encodeToString(bArrG, 0);
                         }
                         outMap.put(governmentIdNfcScanComponent.getName(), new ComponentParam.GovernmentIdNfcScan(strEncodeToString2, strEncodeToString3, strEncodeToString, governmentIdNfcDataB.getChipAuthenticationStatus()));
@@ -2000,7 +2000,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
                     }
                     outMap.put(name2, new ComponentParam.FileUpload(arrayList3, inputFileUploadComponent.getHasPrefill()));
                 } else if (!(component instanceof ActionButtonComponent) && !(component instanceof CancelButtonComponent) && !(component instanceof CombinedStepButtonComponent) && !(component instanceof CompleteButtonComponent) && !(component instanceof LinkButtonComponent) && !(component instanceof SubmitButtonComponent) && !(component instanceof ImagePreviewComponent) && !(component instanceof LocalImageComponent) && !(component instanceof PrivacyPolicyComponent) && !(component instanceof QRCodeComponent) && !(component instanceof RemoteImageComponent) && !(component instanceof SpacerComponent) && !(component instanceof TextComponent) && !(component instanceof TitleComponent) && !(component instanceof BrandingComponent) && !(component instanceof CreatePersonaSheetComponent) && !(component instanceof VerifyPersonaButtonComponent) && !(component instanceof HelpBottomSheetComponent) && !(component instanceof PhoneNumberSnaComponent)) {
-                    throw new jt.l();
+                    throw new gt.l();
                 }
             }
         }
@@ -2020,7 +2020,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
     }
 
     public final void r0(UiWorkflow.c.a rendering, final ClickableStackComponent component, final ConstraintLayout view) {
-        view.setOnClickListener(new View.OnClickListener() { // from class: or.o3
+        view.setOnClickListener(new View.OnClickListener() { // from class: mr.o3
             @Override // android.view.View.OnClickListener
             public final void onClick(View view2) {
                 com.withpersona.sdk2.inquiry.ui.g.s0(component, this, view, view2);
@@ -2068,7 +2068,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
                 i10++;
                 SheetComponent sheetComponent2 = (SheetComponent) obj3;
                 if (!sheetComponent2.getShown()) {
-                    sheetComponent2.p2(true);
+                    sheetComponent2.q2(true);
                     this.nestedUiBottomSheetController.g(sheetComponent2, viewEnvironment);
                     break;
                 }
@@ -2080,40 +2080,40 @@ public final class g implements an.k<UiWorkflow.c.a> {
         }
     }
 
-    public final void u0(ar.g result, int firstBelowTheFoldChildIndex, FooterComponent footerComponent) {
-        this.binding.f28844d.setVisibility(0);
-        this.binding.f28846f.setVisibility(0);
+    public final void u0(yq.g result, int firstBelowTheFoldChildIndex, FooterComponent footerComponent) {
+        this.binding.f27438d.setVisibility(0);
+        this.binding.f27440f.setVisibility(0);
         View footerView = result.getFooterView();
         Drawable background = footerView != null ? footerView.getBackground() : null;
         ColorDrawable colorDrawable = background instanceof ColorDrawable ? (ColorDrawable) background : null;
         int color = colorDrawable != null ? colorDrawable.getColor() : 0;
-        Drawable background2 = this.binding.f28848h.getBackground();
+        Drawable background2 = this.binding.f27442h.getBackground();
         LayerDrawable layerDrawable = background2 instanceof LayerDrawable ? (LayerDrawable) background2 : null;
-        Drawable drawableFindDrawableByLayerId = layerDrawable != null ? layerDrawable.findDrawableByLayerId(r1.f27817k) : null;
+        Drawable drawableFindDrawableByLayerId = layerDrawable != null ? layerDrawable.findDrawableByLayerId(r1.f25206k) : null;
         GradientDrawable gradientDrawable = drawableFindDrawableByLayerId instanceof GradientDrawable ? (GradientDrawable) drawableFindDrawableByLayerId : null;
         if (gradientDrawable != null) {
             gradientDrawable.setColor(color);
         }
-        this.binding.f28845e.addView(result.getFooterView());
+        this.binding.f27439e.addView(result.getFooterView());
         UiComponent uiComponent = (UiComponent) CollectionsKt.f0(footerComponent.getChildren(), firstBelowTheFoldChildIndex);
         final View view = this.componentNameToView.get(uiComponent != null ? uiComponent.getName() : null);
-        final BottomSheetBehavior bottomSheetBehaviorQ0 = BottomSheetBehavior.q0(this.binding.f28848h);
+        final BottomSheetBehavior bottomSheetBehaviorQ0 = BottomSheetBehavior.q0(this.binding.f27442h);
         Intrinsics.checkNotNullExpressionValue(bottomSheetBehaviorQ0, "from(...)");
-        this.binding.f28850j.setVerticalFadingEdgeEnabled(false);
+        this.binding.f27444j.setVerticalFadingEdgeEnabled(false);
         if (view != null) {
-            this.binding.f28847g.setVisibility(0);
-            this.binding.f28845e.addOnLayoutChangeListener(new View.OnLayoutChangeListener() { // from class: or.h3
+            this.binding.f27441g.setVisibility(0);
+            this.binding.f27439e.addOnLayoutChangeListener(new View.OnLayoutChangeListener() { // from class: mr.h3
                 @Override // android.view.View.OnLayoutChangeListener
                 public final void onLayoutChange(View view2, int i10, int i11, int i12, int i13, int i14, int i15, int i16, int i17) {
-                    com.withpersona.sdk2.inquiry.ui.g.v0(this.f27693a, view, bottomSheetBehaviorQ0, view2, i10, i11, i12, i13, i14, i15, i16, i17);
+                    com.withpersona.sdk2.inquiry.ui.g.v0(this.f25082a, view, bottomSheetBehaviorQ0, view2, i10, i11, i12, i13, i14, i15, i16, i17);
                 }
             });
         } else {
-            this.binding.f28847g.setVisibility(4);
-            this.binding.f28845e.addOnLayoutChangeListener(new View.OnLayoutChangeListener() { // from class: or.i3
+            this.binding.f27441g.setVisibility(4);
+            this.binding.f27439e.addOnLayoutChangeListener(new View.OnLayoutChangeListener() { // from class: mr.i3
                 @Override // android.view.View.OnLayoutChangeListener
                 public final void onLayoutChange(View view2, int i10, int i11, int i12, int i13, int i14, int i15, int i16, int i17) {
-                    com.withpersona.sdk2.inquiry.ui.g.w0(this.f27706a, bottomSheetBehaviorQ0, view2, i10, i11, i12, i13, i14, i15, i16, i17);
+                    com.withpersona.sdk2.inquiry.ui.g.w0(this.f25095a, bottomSheetBehaviorQ0, view2, i10, i11, i12, i13, i14, i15, i16, i17);
                 }
             });
         }
@@ -2121,9 +2121,9 @@ public final class g implements an.k<UiWorkflow.c.a> {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // an.k
+    @Override // ym.k
     /* JADX INFO: renamed from: x0, reason: merged with bridge method [inline-methods] */
-    public void a(@NotNull final UiWorkflow.c.a rendering, @NotNull ViewEnvironment viewEnvironment) {
+    public void b(@NotNull final UiWorkflow.c.a rendering, @NotNull ViewEnvironment viewEnvironment) {
         int iD;
         Intrinsics.checkNotNullParameter(rendering, "rendering");
         Intrinsics.checkNotNullParameter(viewEnvironment, "viewEnvironment");
@@ -2157,7 +2157,7 @@ public final class g implements an.k<UiWorkflow.c.a> {
             iD = numC.intValue();
         }
         Intrinsics.checkNotNull(context);
-        vq.c.b(viewEnvironment, context, iD);
+        tq.c.b(viewEnvironment, context, iD);
         this.launchNfcScan = rendering.l();
         this.launchJpMyNumberNfcScan = rendering.k();
         int size = arrayList.size();
@@ -2167,25 +2167,25 @@ public final class g implements an.k<UiWorkflow.c.a> {
             H0(rendering, componentView2.getComponent(), componentView2.getView(), mapG0, linkedHashMap, viewEnvironment, this.componentNameToConfig);
         }
         NavigationState navigationStateO = rendering.getNavigationState();
-        Pi2NavigationBar navigationBar = this.binding.f28849i;
+        Pi2NavigationBar navigationBar = this.binding.f27443i;
         Intrinsics.checkNotNullExpressionValue(navigationBar, "navigationBar");
         CoordinatorLayout coordinatorLayoutB = this.binding.getRoot();
         Intrinsics.checkNotNullExpressionValue(coordinatorLayoutB, "getRoot(...)");
         String str = this.navBarTitle;
         StepStyles.UiStepStyle uiStepStyleA = rendering.getStyles();
-        Rect rectH = uiStepStyleA != null ? er.h.h(uiStepStyleA) : null;
+        Rect rectH = uiStepStyleA != null ? cr.h.h(uiStepStyleA) : null;
         StepStyles.UiStepStyle uiStepStyleA2 = rendering.getStyles();
-        ir.c.d(navigationStateO, new Function0() { // from class: or.y3
+        gr.c.d(navigationStateO, new Function0() { // from class: mr.y3
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return com.withpersona.sdk2.inquiry.ui.g.y0(this.f27901a, rendering);
+                return com.withpersona.sdk2.inquiry.ui.g.y0(this.f25290a, rendering);
             }
-        }, new Function0() { // from class: or.e2
+        }, new Function0() { // from class: mr.e2
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
                 return com.withpersona.sdk2.inquiry.ui.g.z0(rendering);
             }
-        }, new Function0() { // from class: or.f2
+        }, new Function0() { // from class: mr.f2
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
                 return com.withpersona.sdk2.inquiry.ui.g.A0(rendering, this);
@@ -2196,22 +2196,22 @@ public final class g implements an.k<UiWorkflow.c.a> {
         g0.b(coordinatorLayoutB2, rendering.getError(), rendering.u(), null, 0, 0, 56, null);
         this.onComplete = rendering.s();
         this.onCancel = rendering.q();
-        this.onClick = new Function2() { // from class: or.g2
+        this.onClick = new Function2() { // from class: mr.g2
             @Override // kotlin.jvm.functions.Function2
             public final Object invoke(Object obj2, Object obj3) {
                 return com.withpersona.sdk2.inquiry.ui.g.B0(rendering, this, arrayList, (UiComponent) obj2, ((Boolean) obj3).booleanValue());
             }
         };
-        this.onVerifyPersonaClick = new Function1() { // from class: or.h2
+        this.onVerifyPersonaClick = new Function1() { // from class: mr.h2
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj2) {
                 return com.withpersona.sdk2.inquiry.ui.g.C0(rendering, this, arrayList, (VerifyPersonaButtonComponent) obj2);
             }
         };
-        UiWorkflow.c.a.AutoSubmit c0251aB = rendering.getAutoSubmit();
-        if (c0251aB != null) {
-            if (c0251aB.getIsReadyToSubmit()) {
-                AutoSubmitableComponent autoSubmitableComponentA = c0251aB.getComponent();
+        UiWorkflow.c.a.AutoSubmit c0254aB = rendering.getAutoSubmit();
+        if (c0254aB != null) {
+            if (c0254aB.getIsReadyToSubmit()) {
+                AutoSubmitableComponent autoSubmitableComponentA = c0254aB.getComponent();
                 if ((autoSubmitableComponentA instanceof ActionButtonComponent) || (autoSubmitableComponentA instanceof SubmitButtonComponent)) {
                     Function2<? super UiComponent, ? super Boolean, Unit> function2 = this.onClick;
                     View view2 = this.componentNameToView.get(((ButtonComponent) autoSubmitableComponentA).getName());
@@ -2227,12 +2227,12 @@ public final class g implements an.k<UiWorkflow.c.a> {
                     PhoneNumberSnaComponent phoneNumberSnaComponent = (PhoneNumberSnaComponent) autoSubmitableComponentA;
                     rendering.r().invoke(autoSubmitableComponentA, Boolean.FALSE, j0.g(new Pair(phoneNumberSnaComponent.getName(), new ComponentParam.PhoneNumberSnaParams(phoneNumberSnaComponent.getCode(), phoneNumberSnaComponent.getErrorName(), phoneNumberSnaComponent.getErrorMessage()))));
                 }
-            } else if (c0251aB.getCountdownText() != null) {
-                View view3 = this.componentNameToView.get(c0251aB.getComponent().getName());
+            } else if (c0254aB.getCountdownText() != null) {
+                View view3 = this.componentNameToView.get(c0254aB.getComponent().getName());
                 if (view3 instanceof ButtonWithLoadingIndicator) {
-                    ((ButtonWithLoadingIndicator) view3).setText(c0251aB.getCountdownText());
+                    ((ButtonWithLoadingIndicator) view3).setText(c0254aB.getCountdownText());
                 } else if (view3 instanceof MaterialButton) {
-                    ((MaterialButton) view3).setText(c0251aB.getCountdownText());
+                    ((MaterialButton) view3).setText(c0254aB.getCountdownText());
                 }
             }
         }

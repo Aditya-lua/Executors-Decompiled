@@ -1,28 +1,33 @@
 package ju;
 
-import java.text.DecimalFormat;
+import android.os.Looper;
+import iu.n2;
+import java.util.List;
 import kotlin.Metadata;
 import org.jetbrains.annotations.NotNull;
+import ou.s;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000\u0018\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\"\u001a\u0010\u0004\u001a\u00020\u00008\u0000X\u0080\u0004¢\u0006\f\n\u0004\b\u0001\u0010\u0002\u001a\u0004\b\u0001\u0010\u0003\" \u0010\n\u001a\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00070\u00060\u00058\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\b\u0010\t¨\u0006\u000b"}, d2 = {"", "a", "Z", "()Z", "durationAssertionsEnabled", "", "Ljava/lang/ThreadLocal;", "Ljava/text/DecimalFormat;", "b", "[Ljava/lang/ThreadLocal;", "precisionFormats", "kotlin-stdlib"}, k = 2, mv = {2, 2, 0}, xi = 48)
-public final class a {
-
-    /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final boolean f21816a = false;
-
+@Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010 \n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0004\b\u0000\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u001d\u0010\u0007\u001a\u00020\u00062\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00010\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\bJ\u000f\u0010\n\u001a\u00020\tH\u0016¢\u0006\u0004\b\n\u0010\u000bR\u0014\u0010\u000f\u001a\u00020\f8VX\u0096\u0004¢\u0006\u0006\u001a\u0004\b\r\u0010\u000e¨\u0006\u0010"}, d2 = {"Lju/a;", "Lou/s;", "<init>", "()V", "", "allFactories", "Liu/n2;", "b", "(Ljava/util/List;)Liu/n2;", "", "a", "()Ljava/lang/String;", "", "c", "()I", "loadPriority", "kotlinx-coroutines-android"}, k = 1, mv = {2, 1, 0}, xi = 48)
+public final class a implements s {
+    @Override // ou.s
     @NotNull
-    public static final ThreadLocal<DecimalFormat>[] b;
-
-    static {
-        ThreadLocal<DecimalFormat>[] threadLocalArr = new ThreadLocal[4];
-        for (int i10 = 0; i10 < 4; i10++) {
-            threadLocalArr[i10] = new ThreadLocal<>();
-        }
-        b = threadLocalArr;
+    public String a() {
+        return "For tests Dispatchers.setMain from kotlinx-coroutines-test module can be used";
     }
 
-    public static final boolean a() {
-        return f21816a;
+    @Override // ou.s
+    @NotNull
+    public n2 b(@NotNull List<? extends s> allFactories) {
+        Looper mainLooper = Looper.getMainLooper();
+        if (mainLooper != null) {
+            return new f(h.a(mainLooper, true), null, 2, null);
+        }
+        throw new IllegalStateException("The main looper is not available");
+    }
+
+    @Override // ou.s
+    public int c() {
+        return 1073741823;
     }
 }

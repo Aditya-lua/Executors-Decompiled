@@ -16,15 +16,15 @@ public final class u0 {
     public static final class a implements Sequence<View> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        final /* synthetic */ ViewGroup f1918a;
+        final /* synthetic */ ViewGroup f1763a;
 
         public a(ViewGroup viewGroup) {
-            this.f1918a = viewGroup;
+            this.f1763a = viewGroup;
         }
 
         @Override // kotlin.sequences.Sequence
         public Iterator<View> iterator() {
-            return u0.c(this.f1918a);
+            return u0.c(this.f1763a);
         }
     }
 
@@ -32,7 +32,7 @@ public final class u0 {
     public static final class b implements Function1<View, Iterator<? extends View>> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final b f1919a = new b();
+        public static final b f1764a = new b();
 
         @Override // kotlin.jvm.functions.Function1
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
@@ -47,7 +47,7 @@ public final class u0 {
     }
 
     @Metadata(d1 = {"\u0000%\n\u0000\n\u0002\u0010)\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0004*\u0001\u0000\b\n\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001J\u0010\u0010\u0004\u001a\u00020\u0003H\u0096\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\u0010\u0010\u0006\u001a\u00020\u0002H\u0096\u0002¢\u0006\u0004\b\u0006\u0010\u0007J\u000f\u0010\t\u001a\u00020\bH\u0016¢\u0006\u0004\b\t\u0010\nR\u0016\u0010\u000e\u001a\u00020\u000b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\f\u0010\r¨\u0006\u000f"}, d2 = {"androidx/core/view/u0$c", "", "Landroid/view/View;", "", "hasNext", "()Z", "b", "()Landroid/view/View;", "", "remove", "()V", "", "a", "I", "index", "core-ktx_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
-    public static final class c implements Iterator<View>, au.a {
+    public static final class c implements Iterator<View>, yt.a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         public int index;
@@ -88,15 +88,15 @@ public final class u0 {
     public static final class d implements Sequence<View> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ ViewGroup f1921a;
+        public final /* synthetic */ ViewGroup f1766a;
 
         public d(ViewGroup viewGroup) {
-            this.f1921a = viewGroup;
+            this.f1766a = viewGroup;
         }
 
         @Override // kotlin.sequences.Sequence
         public Iterator<View> iterator() {
-            return new k0(u0.a(this.f1921a).iterator(), b.f1919a);
+            return new k0(u0.a(this.f1766a).iterator(), b.f1764a);
         }
     }
 

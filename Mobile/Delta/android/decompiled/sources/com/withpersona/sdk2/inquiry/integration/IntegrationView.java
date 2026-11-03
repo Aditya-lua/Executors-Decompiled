@@ -1,8 +1,5 @@
 package com.withpersona.sdk2.inquiry.integration;
 
-import an.ViewEnvironment;
-import an.a0;
-import an.x;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Parcel;
@@ -12,9 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import ar.ComponentView;
-import ar.g;
-import ar.s;
 import com.withpersona.sdk2.inquiry.integration.IntegrationView;
 import com.withpersona.sdk2.inquiry.network.dto.ui.styling.StepStyles;
 import com.withpersona.sdk2.inquiry.shared.navigation.NavigationState;
@@ -23,13 +17,13 @@ import com.withpersona.sdk2.inquiry.shared.ui.Pi2NavigationBar;
 import com.withpersona.sdk2.inquiry.steps.ui.UiComponentScreen;
 import com.withpersona.sdk2.inquiry.steps.ui.components.ActionButtonComponent;
 import com.withpersona.sdk2.inquiry.steps.ui.components.UiComponent;
-import er.h;
+import cr.h;
+import hr.p;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import jr.p;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.Unit;
@@ -40,11 +34,17 @@ import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.d0;
 import kotlin.jvm.internal.k;
 import org.jetbrains.annotations.NotNull;
-import zt.n;
+import xt.n;
+import ym.ViewEnvironment;
+import ym.a0;
+import ym.x;
+import yq.ComponentView;
+import yq.g;
+import yq.s;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010$\n\u0002\u0018\u0002\n\u0002\b\u0018\n\u0002\u0018\u0002\n\u0002\b\u0007\b\u0007\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u00012\u00020\u0002Ba\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\f\u0010\t\u001a\b\u0012\u0004\u0012\u00020\b0\u0007\u0012\f\u0010\n\u001a\b\u0012\u0004\u0012\u00020\b0\u0007\u0012$\u0010\u0010\u001a \u0012\u001c\u0012\u001a\u0012\u0004\u0012\u00020\r\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\b0\u000e0\f0\u000b\u0012\u0006\u0010\u0012\u001a\u00020\u0011¢\u0006\u0004\b\u0013\u0010\u0014J\r\u0010\u0016\u001a\u00020\u0015¢\u0006\u0004\b\u0016\u0010\u0017J\u001d\u0010\u001b\u001a\u00020\b2\u0006\u0010\u0019\u001a\u00020\u00182\u0006\u0010\u001a\u001a\u00020\u0015¢\u0006\u0004\b\u001b\u0010\u001cJ3\u0010#\u001a\u00020\b2\u0006\u0010\u001e\u001a\u00020\u001d2\u0006\u0010\u001f\u001a\u00020\u00002\u0012\u0010\"\u001a\u000e\u0012\u0004\u0012\u00020\r\u0012\u0004\u0012\u00020!0 H\u0002¢\u0006\u0004\b#\u0010$R\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b%\u0010&\u001a\u0004\b'\u0010(R\u0017\u0010\u0006\u001a\u00020\u00058\u0006¢\u0006\f\n\u0004\b)\u0010*\u001a\u0004\b+\u0010,R\u001d\u0010\t\u001a\b\u0012\u0004\u0012\u00020\b0\u00078\u0006¢\u0006\f\n\u0004\b-\u0010.\u001a\u0004\b/\u00100R\u001d\u0010\n\u001a\b\u0012\u0004\u0012\u00020\b0\u00078\u0006¢\u0006\f\n\u0004\b1\u0010.\u001a\u0004\b2\u00100R5\u0010\u0010\u001a \u0012\u001c\u0012\u001a\u0012\u0004\u0012\u00020\r\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\b0\u000e0\f0\u000b8\u0006¢\u0006\f\n\u0004\b3\u00104\u001a\u0004\b5\u00106R\u0017\u0010\u0012\u001a\u00020\u00118\u0006¢\u0006\f\n\u0004\b7\u00108\u001a\u0004\b\u0012\u00109R&\u0010@\u001a\b\u0012\u0004\u0012\u00020\u00000:8\u0016X\u0096\u0004¢\u0006\u0012\n\u0004\b;\u0010<\u0012\u0004\b>\u0010?\u001a\u0004\b%\u0010=¨\u0006A"}, d2 = {"Lcom/withpersona/sdk2/inquiry/integration/IntegrationView;", "Lan/b;", "Landroid/os/Parcelable;", "Lcom/withpersona/sdk2/inquiry/steps/ui/UiComponentScreen;", "uiScreen", "Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "navigationState", "Lkotlin/Function0;", "", "onBack", "onCancel", "", "Lkotlin/Pair;", "", "Lkotlin/Function1;", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;", "componentNameToAction", "", "isLoading", "<init>", "(Lcom/withpersona/sdk2/inquiry/steps/ui/UiComponentScreen;Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Ljava/util/List;Z)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "writeToParcel", "(Landroid/os/Parcel;I)V", "Lnq/b;", "binding", "rendering", "", "Lar/a;", "componentNameToComponentView", "m", "(Lnq/b;Lcom/withpersona/sdk2/inquiry/integration/IntegrationView;Ljava/util/Map;)V", "a", "Lcom/withpersona/sdk2/inquiry/steps/ui/UiComponentScreen;", "getUiScreen", "()Lcom/withpersona/sdk2/inquiry/steps/ui/UiComponentScreen;", "b", "Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "getNavigationState", "()Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "c", "Lkotlin/jvm/functions/Function0;", "getOnBack", "()Lkotlin/jvm/functions/Function0;", "d", "getOnCancel", "e", "Ljava/util/List;", "getComponentNameToAction", "()Ljava/util/List;", "f", "Z", "()Z", "Lan/a0;", "g", "Lan/a0;", "()Lan/a0;", "getViewFactory$annotations", "()V", "viewFactory", "integration_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class IntegrationView implements an.b<IntegrationView>, Parcelable {
+@Metadata(d1 = {"\u0000n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010$\n\u0002\u0018\u0002\n\u0002\b\u0018\n\u0002\u0018\u0002\n\u0002\b\u0007\b\u0007\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u00012\u00020\u0002Ba\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\f\u0010\t\u001a\b\u0012\u0004\u0012\u00020\b0\u0007\u0012\f\u0010\n\u001a\b\u0012\u0004\u0012\u00020\b0\u0007\u0012$\u0010\u0010\u001a \u0012\u001c\u0012\u001a\u0012\u0004\u0012\u00020\r\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\b0\u000e0\f0\u000b\u0012\u0006\u0010\u0012\u001a\u00020\u0011¢\u0006\u0004\b\u0013\u0010\u0014J\r\u0010\u0016\u001a\u00020\u0015¢\u0006\u0004\b\u0016\u0010\u0017J\u001d\u0010\u001b\u001a\u00020\b2\u0006\u0010\u0019\u001a\u00020\u00182\u0006\u0010\u001a\u001a\u00020\u0015¢\u0006\u0004\b\u001b\u0010\u001cJ3\u0010#\u001a\u00020\b2\u0006\u0010\u001e\u001a\u00020\u001d2\u0006\u0010\u001f\u001a\u00020\u00002\u0012\u0010\"\u001a\u000e\u0012\u0004\u0012\u00020\r\u0012\u0004\u0012\u00020!0 H\u0002¢\u0006\u0004\b#\u0010$R\u0017\u0010\u0004\u001a\u00020\u00038\u0006¢\u0006\f\n\u0004\b%\u0010&\u001a\u0004\b'\u0010(R\u0017\u0010\u0006\u001a\u00020\u00058\u0006¢\u0006\f\n\u0004\b)\u0010*\u001a\u0004\b+\u0010,R\u001d\u0010\t\u001a\b\u0012\u0004\u0012\u00020\b0\u00078\u0006¢\u0006\f\n\u0004\b-\u0010.\u001a\u0004\b/\u00100R\u001d\u0010\n\u001a\b\u0012\u0004\u0012\u00020\b0\u00078\u0006¢\u0006\f\n\u0004\b1\u0010.\u001a\u0004\b2\u00100R5\u0010\u0010\u001a \u0012\u001c\u0012\u001a\u0012\u0004\u0012\u00020\r\u0012\u0010\u0012\u000e\u0012\u0004\u0012\u00020\u000f\u0012\u0004\u0012\u00020\b0\u000e0\f0\u000b8\u0006¢\u0006\f\n\u0004\b3\u00104\u001a\u0004\b5\u00106R\u0017\u0010\u0012\u001a\u00020\u00118\u0006¢\u0006\f\n\u0004\b7\u00108\u001a\u0004\b\u0012\u00109R&\u0010@\u001a\b\u0012\u0004\u0012\u00020\u00000:8\u0016X\u0096\u0004¢\u0006\u0012\n\u0004\b;\u0010<\u0012\u0004\b>\u0010?\u001a\u0004\b%\u0010=¨\u0006A"}, d2 = {"Lcom/withpersona/sdk2/inquiry/integration/IntegrationView;", "Lym/b;", "Landroid/os/Parcelable;", "Lcom/withpersona/sdk2/inquiry/steps/ui/UiComponentScreen;", "uiScreen", "Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "navigationState", "Lkotlin/Function0;", "", "onBack", "onCancel", "", "Lkotlin/Pair;", "", "Lkotlin/Function1;", "Lcom/withpersona/sdk2/inquiry/steps/ui/components/UiComponent;", "componentNameToAction", "", "isLoading", "<init>", "(Lcom/withpersona/sdk2/inquiry/steps/ui/UiComponentScreen;Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Ljava/util/List;Z)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "writeToParcel", "(Landroid/os/Parcel;I)V", "Llq/b;", "binding", "rendering", "", "Lyq/a;", "componentNameToComponentView", "m", "(Llq/b;Lcom/withpersona/sdk2/inquiry/integration/IntegrationView;Ljava/util/Map;)V", "a", "Lcom/withpersona/sdk2/inquiry/steps/ui/UiComponentScreen;", "getUiScreen", "()Lcom/withpersona/sdk2/inquiry/steps/ui/UiComponentScreen;", "b", "Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "getNavigationState", "()Lcom/withpersona/sdk2/inquiry/shared/navigation/NavigationState;", "c", "Lkotlin/jvm/functions/Function0;", "getOnBack", "()Lkotlin/jvm/functions/Function0;", "d", "getOnCancel", "e", "Ljava/util/List;", "getComponentNameToAction", "()Ljava/util/List;", "f", "Z", "()Z", "Lym/a0;", "g", "Lym/a0;", "()Lym/a0;", "getViewFactory$annotations", "()V", "viewFactory", "integration_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class IntegrationView implements ym.b<IntegrationView>, Parcelable {
 
     @NotNull
     public static final Parcelable.Creator<IntegrationView> CREATOR = new a();
@@ -102,120 +102,120 @@ public final class IntegrationView implements an.b<IntegrationView>, Parcelable 
     }
 
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final /* synthetic */ class b extends k implements n<LayoutInflater, ViewGroup, Boolean, nq.b> {
+    public static final /* synthetic */ class b extends k implements n<LayoutInflater, ViewGroup, Boolean, lq.b> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final b f11099a = new b();
+        public static final b f11180a = new b();
 
         public b() {
-            super(3, nq.b.class, "inflate", "inflate(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lcom/withpersona/sdk2/inquiry/shared/databinding/Pi2GenericUiStepScreenBinding;", 0);
+            super(3, lq.b.class, "inflate", "inflate(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lcom/withpersona/sdk2/inquiry/shared/databinding/Pi2GenericUiStepScreenBinding;", 0);
         }
 
-        public final nq.b d(LayoutInflater p8, ViewGroup viewGroup, boolean z10) {
+        public final lq.b d(LayoutInflater p8, ViewGroup viewGroup, boolean z10) {
             Intrinsics.checkNotNullParameter(p8, "p0");
-            return nq.b.c(p8, viewGroup, z10);
+            return lq.b.c(p8, viewGroup, z10);
         }
 
-        @Override // zt.n
-        public /* bridge */ /* synthetic */ nq.b invoke(LayoutInflater layoutInflater, ViewGroup viewGroup, Boolean bool) {
+        @Override // xt.n
+        public /* bridge */ /* synthetic */ lq.b invoke(LayoutInflater layoutInflater, ViewGroup viewGroup, Boolean bool) {
             return d(layoutInflater, viewGroup, bool.booleanValue());
         }
     }
 
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final class c implements Function1<nq.b, an.k<IntegrationView>> {
+    public static final class c implements Function1<lq.b, ym.k<IntegrationView>> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ UiComponentScreen f11100a;
+        public final /* synthetic */ UiComponentScreen f11181a;
         public final /* synthetic */ Function2 b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ boolean f11101c;
+        public final /* synthetic */ boolean f11182c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final /* synthetic */ n f11102d;
+        public final /* synthetic */ n f11183d;
 
         @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-        public static final class a<RenderingT> implements an.k {
+        public static final class a<RenderingT> implements ym.k {
             public final /* synthetic */ UiComponentScreen b;
 
             /* JADX INFO: renamed from: c, reason: collision with root package name */
-            public final /* synthetic */ nq.b f11103c;
+            public final /* synthetic */ lq.b f11184c;
 
             /* JADX INFO: renamed from: d, reason: collision with root package name */
-            public final /* synthetic */ n f11104d;
+            public final /* synthetic */ n f11185d;
 
             /* JADX INFO: renamed from: e, reason: collision with root package name */
-            public final /* synthetic */ g f11105e;
+            public final /* synthetic */ g f11186e;
 
-            public a(UiComponentScreen uiComponentScreen, nq.b bVar, n nVar, g gVar) {
+            public a(UiComponentScreen uiComponentScreen, lq.b bVar, n nVar, g gVar) {
                 this.b = uiComponentScreen;
-                this.f11103c = bVar;
-                this.f11104d = nVar;
-                this.f11105e = gVar;
+                this.f11184c = bVar;
+                this.f11185d = nVar;
+                this.f11186e = gVar;
             }
 
-            @Override // an.k
-            public final void a(RenderingT rendering, ViewEnvironment viewEnvironment) {
+            @Override // ym.k
+            public final void b(RenderingT rendering, ViewEnvironment viewEnvironment) {
                 Intrinsics.checkNotNullParameter(rendering, "rendering");
                 Intrinsics.checkNotNullParameter(viewEnvironment, "viewEnvironment");
                 Integer numI = this.b.i();
                 if (numI != null) {
-                    nq.b bVar = this.f11103c;
+                    lq.b bVar = this.f11184c;
                     int iIntValue = numI.intValue();
                     bVar.getRoot().setBackgroundColor(iIntValue);
                     Context context = bVar.getRoot().getContext();
                     Intrinsics.checkNotNullExpressionValue(context, "getContext(...)");
-                    vq.c.b(viewEnvironment, context, iIntValue);
+                    tq.c.b(viewEnvironment, context, iIntValue);
                 }
                 UiComponentScreen uiComponentScreen = this.b;
-                Context context2 = this.f11103c.getRoot().getContext();
+                Context context2 = this.f11184c.getRoot().getContext();
                 Intrinsics.checkNotNullExpressionValue(context2, "getContext(...)");
                 Drawable drawableA = uiComponentScreen.a(context2);
                 if (drawableA != null) {
-                    nq.b bVar2 = this.f11103c;
+                    lq.b bVar2 = this.f11184c;
                     bVar2.getRoot().setBackground(drawableA);
-                    bVar2.f26638d.setBackgroundColor(0);
+                    bVar2.f23927d.setBackgroundColor(0);
                 }
-                n nVar = this.f11104d;
-                nq.b bVar3 = this.f11103c;
+                n nVar = this.f11185d;
+                lq.b bVar3 = this.f11184c;
                 Intrinsics.checkNotNull(bVar3);
-                nVar.invoke(bVar3, rendering, this.f11105e.getViewBindings().a());
+                nVar.invoke(bVar3, rendering, this.f11186e.getViewBindings().a());
             }
         }
 
         public c(UiComponentScreen uiComponentScreen, Function2 function2, boolean z10, n nVar) {
-            this.f11100a = uiComponentScreen;
+            this.f11181a = uiComponentScreen;
             this.b = function2;
-            this.f11101c = z10;
-            this.f11102d = nVar;
+            this.f11182c = z10;
+            this.f11183d = nVar;
         }
 
         @Override // kotlin.jvm.functions.Function1
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
-        public final an.k<IntegrationView> invoke(nq.b binding) {
+        public final ym.k<IntegrationView> invoke(lq.b binding) {
             Intrinsics.checkNotNullParameter(binding, "binding");
-            return new a(this.f11100a, binding, this.f11102d, s.f3757a.l(binding, this.f11100a, this.b, this.f11101c));
+            return new a(this.f11181a, binding, this.f11183d, s.f37116a.l(binding, this.f11181a, this.b, this.f11182c));
         }
     }
 
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final /* synthetic */ class d extends k implements n<nq.b, IntegrationView, Map<String, ? extends ComponentView>, Unit> {
+    public static final /* synthetic */ class d extends k implements n<lq.b, IntegrationView, Map<String, ? extends ComponentView>, Unit> {
         public d(Object obj) {
             super(3, obj, IntegrationView.class, "showRendering", "showRendering(Lcom/withpersona/sdk2/inquiry/shared/databinding/Pi2GenericUiStepScreenBinding;Lcom/withpersona/sdk2/inquiry/integration/IntegrationView;Ljava/util/Map;)V", 0);
         }
 
-        public final void d(nq.b p8, IntegrationView p10, Map<String, ComponentView> p11) {
+        public final void d(lq.b p8, IntegrationView p10, Map<String, ComponentView> p11) {
             Intrinsics.checkNotNullParameter(p8, "p0");
             Intrinsics.checkNotNullParameter(p10, "p1");
             Intrinsics.checkNotNullParameter(p11, "p2");
             ((IntegrationView) this.receiver).m(p8, p10, p11);
         }
 
-        @Override // zt.n
-        public /* bridge */ /* synthetic */ Unit invoke(nq.b bVar, IntegrationView integrationView, Map<String, ? extends ComponentView> map) {
+        @Override // xt.n
+        public /* bridge */ /* synthetic */ Unit invoke(lq.b bVar, IntegrationView integrationView, Map<String, ? extends ComponentView> map) {
             d(bVar, integrationView, map);
-            return Unit.f22483a;
+            return Unit.f22938a;
         }
     }
 
@@ -232,16 +232,16 @@ public final class IntegrationView implements an.b<IntegrationView>, Parcelable 
         this.onCancel = onCancel;
         this.componentNameToAction = componentNameToAction;
         this.isLoading = z10;
-        s sVar = s.f3757a;
-        Function2 function2 = new Function2() { // from class: xo.f
+        s sVar = s.f37116a;
+        Function2 function2 = new Function2() { // from class: vo.f
             @Override // kotlin.jvm.functions.Function2
             public final Object invoke(Object obj, Object obj2) {
-                return IntegrationView.q((nq.b) obj, (Map) obj2);
+                return IntegrationView.q((lq.b) obj, (Map) obj2);
             }
         };
         d dVar = new d(this);
-        an.k.Companion companion = an.k.INSTANCE;
-        this.viewFactory = new x(d0.b(IntegrationView.class), b.f11099a, new c(uiScreen, function2, true, dVar));
+        ym.k.Companion companion = ym.k.INSTANCE;
+        this.viewFactory = new x(d0.b(IntegrationView.class), b.f11180a, new c(uiScreen, function2, true, dVar));
     }
 
     public static final void n(Function1 function1, ComponentView componentView, View view) {
@@ -250,25 +250,25 @@ public final class IntegrationView implements an.b<IntegrationView>, Parcelable 
 
     public static final Unit o(IntegrationView integrationView) {
         integrationView.onBack.invoke();
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit p(IntegrationView integrationView) {
         integrationView.onCancel.invoke();
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public static final Unit q(nq.b binding, Map map) {
+    public static final Unit q(lq.b binding, Map map) {
         Intrinsics.checkNotNullParameter(binding, "binding");
         Intrinsics.checkNotNullParameter(map, "<unused var>");
         ConstraintLayout root = binding.getRoot();
         Intrinsics.checkNotNullExpressionValue(root, "getRoot(...)");
-        wq.g.d(root, false, false, false, false, 15, null);
-        return Unit.f22483a;
+        uq.g.d(root, false, false, false, false, 15, null);
+        return Unit.f22938a;
     }
 
-    @Override // an.b
+    @Override // ym.b
     @NotNull
     public a0<IntegrationView> a() {
         return this.viewFactory;
@@ -279,13 +279,13 @@ public final class IntegrationView implements an.b<IntegrationView>, Parcelable 
         return 0;
     }
 
-    public final void m(nq.b binding, final IntegrationView rendering, Map<String, ComponentView> componentNameToComponentView) {
+    public final void m(lq.b binding, final IntegrationView rendering, Map<String, ComponentView> componentNameToComponentView) {
         for (Pair<String, Function1<UiComponent, Unit>> pair : this.componentNameToAction) {
             String strC = pair.c();
             final Function1<UiComponent, Unit> function1D = pair.d();
             final ComponentView componentView = componentNameToComponentView.get(strC);
             if (componentView != null) {
-                componentView.d().setOnClickListener(new View.OnClickListener() { // from class: xo.g
+                componentView.d().setOnClickListener(new View.OnClickListener() { // from class: vo.g
                     @Override // android.view.View.OnClickListener
                     public final void onClick(View view) {
                         IntegrationView.n(function1D, componentView, view);
@@ -299,24 +299,24 @@ public final class IntegrationView implements an.b<IntegrationView>, Parcelable 
             }
         }
         NavigationState navigationState = rendering.navigationState;
-        Function0 function0 = new Function0() { // from class: xo.h
+        Function0 function0 = new Function0() { // from class: vo.h
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return IntegrationView.o(this.f35269a);
+                return IntegrationView.o(this.f33591a);
             }
         };
-        Function0 function1 = new Function0() { // from class: xo.i
+        Function0 function1 = new Function0() { // from class: vo.i
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return IntegrationView.p(this.f35270a);
+                return IntegrationView.p(this.f33592a);
             }
         };
-        Pi2NavigationBar navigationBar = binding.f26639e;
+        Pi2NavigationBar navigationBar = binding.f23928e;
         Intrinsics.checkNotNullExpressionValue(navigationBar, "navigationBar");
         ConstraintLayout root = binding.getRoot();
         Intrinsics.checkNotNullExpressionValue(root, "getRoot(...)");
         StepStyles.UiStepStyle styles = rendering.uiScreen.getStyles();
-        ir.c.e(navigationState, function0, function1, null, navigationBar, root, styles != null ? h.h(styles) : null, null, null, 392, null);
+        gr.c.e(navigationState, function0, function1, null, navigationBar, root, styles != null ? h.h(styles) : null, null, null, 392, null);
         FrameLayout contentContainer = binding.b;
         Intrinsics.checkNotNullExpressionValue(contentContainer, "contentContainer");
         p.b(contentContainer, rendering.uiScreen.getStyles(), false, false, 6, null);

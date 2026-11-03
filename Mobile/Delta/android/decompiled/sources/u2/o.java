@@ -10,17 +10,17 @@ import java.lang.reflect.Method;
 public final class o {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static long f32042a;
+    public static long f32695a;
     public static Method b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static Method f32043c;
+    public static Method f32696c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static Method f32044d;
+    public static Method f32697d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static Method f32045e;
+    public static Method f32698e;
 
     public static class a {
         public static boolean a() {
@@ -31,13 +31,13 @@ public final class o {
     static {
         if (Build.VERSION.SDK_INT < 29) {
             try {
-                f32042a = Trace.class.getField("TRACE_TAG_APP").getLong(null);
+                f32695a = Trace.class.getField("TRACE_TAG_APP").getLong(null);
                 Class cls = Long.TYPE;
                 b = Trace.class.getMethod("isTagEnabled", cls);
                 Class cls2 = Integer.TYPE;
-                f32043c = Trace.class.getMethod("asyncTraceBegin", cls, String.class, cls2);
-                f32044d = Trace.class.getMethod("asyncTraceEnd", cls, String.class, cls2);
-                f32045e = Trace.class.getMethod("traceCounter", cls, String.class, cls2);
+                f32696c = Trace.class.getMethod("asyncTraceBegin", cls, String.class, cls2);
+                f32697d = Trace.class.getMethod("asyncTraceEnd", cls, String.class, cls2);
+                f32698e = Trace.class.getMethod("traceCounter", cls, String.class, cls2);
             } catch (Exception e10) {
                 Log.i("TraceCompat", "Unable to initialize via reflection.", e10);
             }
@@ -57,7 +57,7 @@ public final class o {
             return a.a();
         }
         try {
-            return ((Boolean) b.invoke(null, Long.valueOf(f32042a))).booleanValue();
+            return ((Boolean) b.invoke(null, Long.valueOf(f32695a))).booleanValue();
         } catch (Exception unused) {
             Log.v("TraceCompat", "Unable to invoke isTagEnabled() via reflection.");
             return false;

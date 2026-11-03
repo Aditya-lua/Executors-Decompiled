@@ -19,32 +19,32 @@ public class PublicKeyCredential extends AbstractSafeParcelable {
     public static final Parcelable.Creator<PublicKeyCredential> CREATOR = new k();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final String f5962f;
+    public final String f6035f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
     @NonNull
-    public final String f5963g;
+    public final String f6036g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final m3 f5964h;
+    public final m3 f6037h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final AuthenticatorAttestationResponse f5965i;
+    public final AuthenticatorAttestationResponse f6038i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final AuthenticatorAssertionResponse f5966j;
+    public final AuthenticatorAssertionResponse f6039j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final AuthenticatorErrorResponse f5967k;
+    public final AuthenticatorErrorResponse f6040k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final AuthenticationExtensionsClientOutputs f5968l;
+    public final AuthenticationExtensionsClientOutputs f6041l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final String f5969m;
+    public final String f6042m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public String f5970n;
+    public String f6043n;
 
     public PublicKeyCredential(String str, @NonNull String str2, m3 m3Var, AuthenticatorAttestationResponse authenticatorAttestationResponse, AuthenticatorAssertionResponse authenticatorAssertionResponse, AuthenticatorErrorResponse authenticatorErrorResponse, AuthenticationExtensionsClientOutputs authenticationExtensionsClientOutputs, String str3, String str4) {
         boolean z10 = false;
@@ -53,15 +53,15 @@ public class PublicKeyCredential extends AbstractSafeParcelable {
             z10 = true;
         }
         m.b(z10, "Must provide id and rawId if not an error response.");
-        this.f5962f = str;
-        this.f5963g = str2;
-        this.f5964h = m3Var;
-        this.f5965i = authenticatorAttestationResponse;
-        this.f5966j = authenticatorAssertionResponse;
-        this.f5967k = authenticatorErrorResponse;
-        this.f5968l = authenticationExtensionsClientOutputs;
-        this.f5969m = str3;
-        this.f5970n = null;
+        this.f6035f = str;
+        this.f6036g = str2;
+        this.f6037h = m3Var;
+        this.f6038i = authenticatorAttestationResponse;
+        this.f6039j = authenticatorAssertionResponse;
+        this.f6040k = authenticatorErrorResponse;
+        this.f6041l = authenticationExtensionsClientOutputs;
+        this.f6042m = str3;
+        this.f6043n = null;
     }
 
     @NonNull
@@ -71,7 +71,7 @@ public class PublicKeyCredential extends AbstractSafeParcelable {
 
     @NonNull
     public String A3() {
-        return this.f5963g;
+        return this.f6036g;
     }
 
     @NonNull
@@ -84,33 +84,33 @@ public class PublicKeyCredential extends AbstractSafeParcelable {
         JSONObject jSONObjectY3;
         try {
             JSONObject jSONObject = new JSONObject();
-            m3 m3Var = this.f5964h;
+            m3 m3Var = this.f6037h;
             if (m3Var != null && m3Var.p().length > 0) {
-                jSONObject.put("rawId", u9.c.b(this.f5964h.p()));
+                jSONObject.put("rawId", u9.c.b(this.f6037h.p()));
             }
-            String str = this.f5969m;
+            String str = this.f6042m;
             if (str != null) {
                 jSONObject.put("authenticatorAttachment", str);
             }
-            String str2 = this.f5963g;
-            if (str2 != null && this.f5967k == null) {
+            String str2 = this.f6036g;
+            if (str2 != null && this.f6040k == null) {
                 jSONObject.put(Payload.TYPE, str2);
             }
-            String str3 = this.f5962f;
+            String str3 = this.f6035f;
             if (str3 != null) {
                 jSONObject.put("id", str3);
             }
             String str4 = Payload.RESPONSE;
-            AuthenticatorAssertionResponse authenticatorAssertionResponse = this.f5966j;
+            AuthenticatorAssertionResponse authenticatorAssertionResponse = this.f6039j;
             boolean z10 = true;
             if (authenticatorAssertionResponse != null) {
                 jSONObjectY3 = authenticatorAssertionResponse.A3();
             } else {
-                AuthenticatorAttestationResponse authenticatorAttestationResponse = this.f5965i;
+                AuthenticatorAttestationResponse authenticatorAttestationResponse = this.f6038i;
                 if (authenticatorAttestationResponse != null) {
                     jSONObjectY3 = authenticatorAttestationResponse.z3();
                 } else {
-                    AuthenticatorErrorResponse authenticatorErrorResponse = this.f5967k;
+                    AuthenticatorErrorResponse authenticatorErrorResponse = this.f6040k;
                     z10 = false;
                     if (authenticatorErrorResponse != null) {
                         jSONObjectY3 = authenticatorErrorResponse.y3();
@@ -123,7 +123,7 @@ public class PublicKeyCredential extends AbstractSafeParcelable {
             if (jSONObjectY3 != null) {
                 jSONObject.put(str4, jSONObjectY3);
             }
-            AuthenticationExtensionsClientOutputs authenticationExtensionsClientOutputs = this.f5968l;
+            AuthenticationExtensionsClientOutputs authenticationExtensionsClientOutputs = this.f6041l;
             if (authenticationExtensionsClientOutputs != null) {
                 jSONObject.put("clientExtensionResults", authenticationExtensionsClientOutputs.x3());
                 return jSONObject;
@@ -142,60 +142,60 @@ public class PublicKeyCredential extends AbstractSafeParcelable {
             return false;
         }
         PublicKeyCredential publicKeyCredential = (PublicKeyCredential) obj;
-        return n9.k.b(this.f5962f, publicKeyCredential.f5962f) && n9.k.b(this.f5963g, publicKeyCredential.f5963g) && n9.k.b(this.f5964h, publicKeyCredential.f5964h) && n9.k.b(this.f5965i, publicKeyCredential.f5965i) && n9.k.b(this.f5966j, publicKeyCredential.f5966j) && n9.k.b(this.f5967k, publicKeyCredential.f5967k) && n9.k.b(this.f5968l, publicKeyCredential.f5968l) && n9.k.b(this.f5969m, publicKeyCredential.f5969m);
+        return n9.k.b(this.f6035f, publicKeyCredential.f6035f) && n9.k.b(this.f6036g, publicKeyCredential.f6036g) && n9.k.b(this.f6037h, publicKeyCredential.f6037h) && n9.k.b(this.f6038i, publicKeyCredential.f6038i) && n9.k.b(this.f6039j, publicKeyCredential.f6039j) && n9.k.b(this.f6040k, publicKeyCredential.f6040k) && n9.k.b(this.f6041l, publicKeyCredential.f6041l) && n9.k.b(this.f6042m, publicKeyCredential.f6042m);
     }
 
     public int hashCode() {
-        return n9.k.c(this.f5962f, this.f5963g, this.f5964h, this.f5966j, this.f5965i, this.f5967k, this.f5968l, this.f5969m);
+        return n9.k.c(this.f6035f, this.f6036g, this.f6037h, this.f6039j, this.f6038i, this.f6040k, this.f6041l, this.f6042m);
     }
 
     @NonNull
     public final String toString() {
-        m3 m3Var = this.f5964h;
+        m3 m3Var = this.f6037h;
         byte[] bArrP = m3Var == null ? null : m3Var.p();
-        String str = this.f5963g;
-        String str2 = this.f5962f;
-        AuthenticatorAttestationResponse authenticatorAttestationResponse = this.f5965i;
-        AuthenticatorAssertionResponse authenticatorAssertionResponse = this.f5966j;
-        AuthenticatorErrorResponse authenticatorErrorResponse = this.f5967k;
-        AuthenticationExtensionsClientOutputs authenticationExtensionsClientOutputs = this.f5968l;
-        String str3 = this.f5969m;
+        String str = this.f6036g;
+        String str2 = this.f6035f;
+        AuthenticatorAttestationResponse authenticatorAttestationResponse = this.f6038i;
+        AuthenticatorAssertionResponse authenticatorAssertionResponse = this.f6039j;
+        AuthenticatorErrorResponse authenticatorErrorResponse = this.f6040k;
+        AuthenticationExtensionsClientOutputs authenticationExtensionsClientOutputs = this.f6041l;
+        String str3 = this.f6042m;
         return "PublicKeyCredential{\n id='" + str2 + "', \n type='" + str + "', \n rawId=" + u9.c.b(bArrP) + ", \n registerResponse=" + String.valueOf(authenticatorAttestationResponse) + ", \n signResponse=" + String.valueOf(authenticatorAssertionResponse) + ", \n errorResponse=" + String.valueOf(authenticatorErrorResponse) + ", \n extensionsClientOutputs=" + String.valueOf(authenticationExtensionsClientOutputs) + ", \n authenticatorAttachment='" + str3 + "'}";
     }
 
     public String v3() {
-        return this.f5969m;
+        return this.f6042m;
     }
 
     public AuthenticationExtensionsClientOutputs w3() {
-        return this.f5968l;
+        return this.f6041l;
     }
 
     @Override // android.os.Parcelable
     public void writeToParcel(@NonNull Parcel parcel, int i10) {
         if (p4.b()) {
-            this.f5970n = C3().toString();
+            this.f6043n = C3().toString();
         }
         int iA = o9.b.a(parcel);
         o9.b.v(parcel, 1, x3(), false);
         o9.b.v(parcel, 2, A3(), false);
         o9.b.g(parcel, 3, y3(), false);
-        o9.b.t(parcel, 4, this.f5965i, i10, false);
-        o9.b.t(parcel, 5, this.f5966j, i10, false);
-        o9.b.t(parcel, 6, this.f5967k, i10, false);
+        o9.b.t(parcel, 4, this.f6038i, i10, false);
+        o9.b.t(parcel, 5, this.f6039j, i10, false);
+        o9.b.t(parcel, 6, this.f6040k, i10, false);
         o9.b.t(parcel, 7, w3(), i10, false);
         o9.b.v(parcel, 8, v3(), false);
-        o9.b.v(parcel, 9, this.f5970n, false);
+        o9.b.v(parcel, 9, this.f6043n, false);
         o9.b.b(parcel, iA);
-        this.f5970n = null;
+        this.f6043n = null;
     }
 
     public String x3() {
-        return this.f5962f;
+        return this.f6035f;
     }
 
     public byte[] y3() {
-        m3 m3Var = this.f5964h;
+        m3 m3Var = this.f6037h;
         if (m3Var == null) {
             return null;
         }
@@ -204,15 +204,15 @@ public class PublicKeyCredential extends AbstractSafeParcelable {
 
     @NonNull
     public AuthenticatorResponse z3() {
-        AuthenticatorAttestationResponse authenticatorAttestationResponse = this.f5965i;
+        AuthenticatorAttestationResponse authenticatorAttestationResponse = this.f6038i;
         if (authenticatorAttestationResponse != null) {
             return authenticatorAttestationResponse;
         }
-        AuthenticatorAssertionResponse authenticatorAssertionResponse = this.f5966j;
+        AuthenticatorAssertionResponse authenticatorAssertionResponse = this.f6039j;
         if (authenticatorAssertionResponse != null) {
             return authenticatorAssertionResponse;
         }
-        AuthenticatorErrorResponse authenticatorErrorResponse = this.f5967k;
+        AuthenticatorErrorResponse authenticatorErrorResponse = this.f6040k;
         if (authenticatorErrorResponse != null) {
             return authenticatorErrorResponse;
         }

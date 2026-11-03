@@ -8,10 +8,10 @@ public final class SystemDialogContext {
     final boolean dismissed;
 
     /* JADX INFO: renamed from: id, reason: collision with root package name */
-    final long f9726id;
+    final long f9807id;
 
     public SystemDialogContext(long j10, boolean z10) {
-        this.f9726id = j10;
+        this.f9807id = j10;
         this.dismissed = z10;
     }
 
@@ -20,10 +20,10 @@ public final class SystemDialogContext {
     }
 
     public long getId() {
-        return this.f9726id;
+        return this.f9807id;
     }
 
     public String toString() {
-        return "SystemDialogContext{id=" + this.f9726id + ",dismissed=" + this.dismissed + "}";
+        return "SystemDialogContext{id=" + this.f9807id + ",dismissed=" + this.dismissed + "}";
     }
 }

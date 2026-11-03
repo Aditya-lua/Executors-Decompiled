@@ -12,10 +12,10 @@ public enum GovIdCaptureSide {
     BarcodePdf417,
     PassportSignature;
 
-    private static final /* synthetic */ qt.a $ENTRIES = qt.b.a(values());
+    private static final /* synthetic */ ot.a $ENTRIES = ot.b.a(values());
 
     @NotNull
-    public static qt.a<GovIdCaptureSide> getEntries() {
+    public static ot.a<GovIdCaptureSide> getEntries() {
         return $ENTRIES;
     }
 }

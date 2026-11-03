@@ -21,11 +21,11 @@ import okhttp3.internal._UtilCommonKt;
 import okhttp3.internal._UtilJvmKt;
 import okhttp3.internal.platform.Platform;
 import org.jetbrains.annotations.NotNull;
-import xu.e;
-import xu.h;
+import vu.e;
+import vu.h;
 
 /* JADX INFO: loaded from: classes2.dex */
-@Metadata(d1 = {"\u0000T\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010!\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\u0005\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\u001a\u001f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003*\u00020\u00002\u0006\u0010\u0002\u001a\u00020\u0001¢\u0006\u0004\b\u0005\u0010\u0006\u001a!\u0010\u000b\u001a\u00020\n*\u00020\u00072\f\u0010\t\u001a\b\u0012\u0004\u0012\u00020\u00040\bH\u0002¢\u0006\u0004\b\u000b\u0010\f\u001a\u0013\u0010\u000e\u001a\u00020\r*\u00020\u0007H\u0002¢\u0006\u0004\b\u000e\u0010\u000f\u001a\u001b\u0010\u0012\u001a\u00020\r*\u00020\u00072\u0006\u0010\u0011\u001a\u00020\u0010H\u0002¢\u0006\u0004\b\u0012\u0010\u0013\u001a\u0015\u0010\u0014\u001a\u0004\u0018\u00010\u0001*\u00020\u0007H\u0002¢\u0006\u0004\b\u0014\u0010\u0015\u001a\u0015\u0010\u0016\u001a\u0004\u0018\u00010\u0001*\u00020\u0007H\u0002¢\u0006\u0004\b\u0016\u0010\u0015\u001a!\u0010\u001b\u001a\u00020\n*\u00020\u00172\u0006\u0010\u0019\u001a\u00020\u00182\u0006\u0010\u001a\u001a\u00020\u0000¢\u0006\u0004\b\u001b\u0010\u001c\u001a\u0011\u0010\u001e\u001a\u00020\r*\u00020\u001d¢\u0006\u0004\b\u001e\u0010\u001f\u001a\u0017\u0010!\u001a\u00020\r2\u0006\u0010 \u001a\u00020\u001dH\u0007¢\u0006\u0004\b!\u0010\u001f\"\u0014\u0010#\u001a\u00020\"8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b#\u0010$\"\u0014\u0010%\u001a\u00020\"8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b%\u0010$¨\u0006&"}, d2 = {"Lokhttp3/Headers;", "", "headerName", "", "Lokhttp3/Challenge;", "parseChallenges", "(Lokhttp3/Headers;Ljava/lang/String;)Ljava/util/List;", "Lxu/e;", "", "result", "", "readChallengeHeader", "(Lxu/e;Ljava/util/List;)V", "", "skipCommasAndWhitespace", "(Lxu/e;)Z", "", "prefix", "startsWith", "(Lxu/e;B)Z", "readQuotedString", "(Lxu/e;)Ljava/lang/String;", "readToken", "Lokhttp3/CookieJar;", "Lokhttp3/HttpUrl;", "url", "headers", "receiveHeaders", "(Lokhttp3/CookieJar;Lokhttp3/HttpUrl;Lokhttp3/Headers;)V", "Lokhttp3/Response;", "promisesBody", "(Lokhttp3/Response;)Z", Payload.RESPONSE, "hasBody", "Lxu/h;", "QUOTED_STRING_DELIMITERS", "Lxu/h;", "TOKEN_DELIMITERS", "okhttp"}, k = 2, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000T\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010!\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\u0005\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0004\u001a\u001f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003*\u00020\u00002\u0006\u0010\u0002\u001a\u00020\u0001¢\u0006\u0004\b\u0005\u0010\u0006\u001a!\u0010\u000b\u001a\u00020\n*\u00020\u00072\f\u0010\t\u001a\b\u0012\u0004\u0012\u00020\u00040\bH\u0002¢\u0006\u0004\b\u000b\u0010\f\u001a\u0013\u0010\u000e\u001a\u00020\r*\u00020\u0007H\u0002¢\u0006\u0004\b\u000e\u0010\u000f\u001a\u001b\u0010\u0012\u001a\u00020\r*\u00020\u00072\u0006\u0010\u0011\u001a\u00020\u0010H\u0002¢\u0006\u0004\b\u0012\u0010\u0013\u001a\u0015\u0010\u0014\u001a\u0004\u0018\u00010\u0001*\u00020\u0007H\u0002¢\u0006\u0004\b\u0014\u0010\u0015\u001a\u0015\u0010\u0016\u001a\u0004\u0018\u00010\u0001*\u00020\u0007H\u0002¢\u0006\u0004\b\u0016\u0010\u0015\u001a!\u0010\u001b\u001a\u00020\n*\u00020\u00172\u0006\u0010\u0019\u001a\u00020\u00182\u0006\u0010\u001a\u001a\u00020\u0000¢\u0006\u0004\b\u001b\u0010\u001c\u001a\u0011\u0010\u001e\u001a\u00020\r*\u00020\u001d¢\u0006\u0004\b\u001e\u0010\u001f\u001a\u0017\u0010!\u001a\u00020\r2\u0006\u0010 \u001a\u00020\u001dH\u0007¢\u0006\u0004\b!\u0010\u001f\"\u0014\u0010#\u001a\u00020\"8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b#\u0010$\"\u0014\u0010%\u001a\u00020\"8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b%\u0010$¨\u0006&"}, d2 = {"Lokhttp3/Headers;", "", "headerName", "", "Lokhttp3/Challenge;", "parseChallenges", "(Lokhttp3/Headers;Ljava/lang/String;)Ljava/util/List;", "Lvu/e;", "", "result", "", "readChallengeHeader", "(Lvu/e;Ljava/util/List;)V", "", "skipCommasAndWhitespace", "(Lvu/e;)Z", "", "prefix", "startsWith", "(Lvu/e;B)Z", "readQuotedString", "(Lvu/e;)Ljava/lang/String;", "readToken", "Lokhttp3/CookieJar;", "Lokhttp3/HttpUrl;", "url", "headers", "receiveHeaders", "(Lokhttp3/CookieJar;Lokhttp3/HttpUrl;Lokhttp3/Headers;)V", "Lokhttp3/Response;", "promisesBody", "(Lokhttp3/Response;)Z", Payload.RESPONSE, "hasBody", "Lvu/h;", "QUOTED_STRING_DELIMITERS", "Lvu/h;", "TOKEN_DELIMITERS", "okhttp"}, k = 2, mv = {2, 2, 0}, xi = 48)
 public final class HttpHeaders {
 
     @NotNull
@@ -54,7 +54,7 @@ public final class HttpHeaders {
         for (int i10 = 0; i10 < size; i10++) {
             if (x.E(headerName, headers.name(i10), true)) {
                 try {
-                    readChallengeHeader(new e().C0(headers.value(i10)), arrayList);
+                    readChallengeHeader(new e().y0(headers.value(i10)), arrayList);
                 } catch (EOFException e10) {
                     Platform.INSTANCE.get().log("Unable to parse challenge", 5, e10);
                 }
@@ -91,7 +91,7 @@ public final class HttpHeaders {
                 boolean zSkipCommasAndWhitespace = skipCommasAndWhitespace(eVar);
                 String token3 = readToken(eVar);
                 if (token3 == null) {
-                    if (eVar.Z1()) {
+                    if (eVar.a2()) {
                         list.add(new Challenge(token2, (Map<String, String>) k0.j()));
                         return;
                     }
@@ -99,7 +99,7 @@ public final class HttpHeaders {
                 }
                 int iSkipAll = _UtilCommonKt.skipAll(eVar, (byte) 61);
                 boolean zSkipCommasAndWhitespace2 = skipCommasAndWhitespace(eVar);
-                if (zSkipCommasAndWhitespace || !(zSkipCommasAndWhitespace2 || eVar.Z1())) {
+                if (zSkipCommasAndWhitespace || !(zSkipCommasAndWhitespace2 || eVar.a2())) {
                     LinkedHashMap linkedHashMap = new LinkedHashMap();
                     int iSkipAll2 = iSkipAll + _UtilCommonKt.skipAll(eVar, (byte) 61);
                     while (true) {
@@ -140,7 +140,7 @@ public final class HttpHeaders {
                                 if (token != null || ((String) linkedHashMap.put(token3, token)) != null) {
                                     return;
                                 }
-                                if (skipCommasAndWhitespace(eVar) && !eVar.Z1()) {
+                                if (skipCommasAndWhitespace(eVar) && !eVar.a2()) {
                                     return;
                                 } else {
                                     token3 = null;
@@ -167,31 +167,31 @@ public final class HttpHeaders {
         }
         e eVar2 = new e();
         while (true) {
-            long jH0 = eVar.h0(QUOTED_STRING_DELIMITERS);
-            if (jH0 == -1) {
+            long jE1 = eVar.e1(QUOTED_STRING_DELIMITERS);
+            if (jE1 == -1) {
                 return null;
             }
-            if (eVar.j(jH0) == 34) {
-                eVar2.write(eVar, jH0);
+            if (eVar.j(jE1) == 34) {
+                eVar2.write(eVar, jE1);
                 eVar.readByte();
-                return eVar2.R2();
+                return eVar2.Q2();
             }
-            if (eVar.getSize() == jH0 + 1) {
+            if (eVar.getSize() == jE1 + 1) {
                 return null;
             }
-            eVar2.write(eVar, jH0);
+            eVar2.write(eVar, jE1);
             eVar.readByte();
             eVar2.write(eVar, 1L);
         }
     }
 
     private static final String readToken(e eVar) {
-        long jH0 = eVar.h0(TOKEN_DELIMITERS);
-        if (jH0 == -1) {
-            jH0 = eVar.getSize();
+        long jE1 = eVar.e1(TOKEN_DELIMITERS);
+        if (jE1 == -1) {
+            jE1 = eVar.getSize();
         }
-        if (jH0 != 0) {
-            return eVar.G1(jH0);
+        if (jE1 != 0) {
+            return eVar.D1(jE1);
         }
         return null;
     }
@@ -212,7 +212,7 @@ public final class HttpHeaders {
 
     private static final boolean skipCommasAndWhitespace(e eVar) throws EOFException {
         boolean z10 = false;
-        while (!eVar.Z1()) {
+        while (!eVar.a2()) {
             byte bJ = eVar.j(0L);
             if (bJ != 44) {
                 if (bJ != 32 && bJ != 9) {
@@ -228,6 +228,6 @@ public final class HttpHeaders {
     }
 
     private static final boolean startsWith(e eVar, byte b) {
-        return !eVar.Z1() && eVar.j(0L) == b;
+        return !eVar.a2() && eVar.j(0L) == b;
     }
 }

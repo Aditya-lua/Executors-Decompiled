@@ -4,10 +4,10 @@ package g0;
 public final class n0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f17494a;
+    public boolean f18033a;
 
     public n0(boolean z10) {
-        this.f17494a = z10;
+        this.f18033a = z10;
     }
 
     public static n0 a(boolean z10) {
@@ -19,6 +19,6 @@ public final class n0 {
     }
 
     public boolean c() {
-        return this.f17494a;
+        return this.f18033a;
     }
 }

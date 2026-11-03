@@ -6,7 +6,7 @@ import android.graphics.PointF;
 public class c0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final r7.c.a f29234a = r7.c.a.a("nm", "sy", "pt", "p", "r", "or", "os", "ir", "is", "hd", "d");
+    public static final r7.c.a f29587a = r7.c.a.a("nm", "sy", "pt", "p", "r", "or", "os", "ir", "is", "hd", "d");
 
     public static n7.k a(r7.c cVar, f7.i iVar, int i10) {
         boolean zG = false;
@@ -21,7 +21,7 @@ public class c0 {
         m7.b bVarF3 = null;
         m7.b bVarF4 = null;
         while (cVar.f()) {
-            switch (cVar.r(f29234a)) {
+            switch (cVar.r(f29587a)) {
                 case 0:
                     strM = cVar.m();
                     break;

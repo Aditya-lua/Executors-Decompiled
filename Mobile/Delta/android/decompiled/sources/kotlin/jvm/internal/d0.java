@@ -7,8 +7,8 @@ import kotlin.reflect.KTypeProjection;
 public class d0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final e0 f22554a;
-    public static final hu.c[] b;
+    public static final e0 f23009a;
+    public static final fu.c[] b;
 
     static {
         e0 e0Var = null;
@@ -19,55 +19,55 @@ public class d0 {
         if (e0Var == null) {
             e0Var = new e0();
         }
-        f22554a = e0Var;
-        b = new hu.c[0];
+        f23009a = e0Var;
+        b = new fu.c[0];
     }
 
-    public static hu.g a(j jVar) {
-        return f22554a.a(jVar);
+    public static fu.g a(j jVar) {
+        return f23009a.a(jVar);
     }
 
-    public static hu.c b(Class cls) {
-        return f22554a.b(cls);
+    public static fu.c b(Class cls) {
+        return f23009a.b(cls);
     }
 
-    public static hu.f c(Class cls) {
-        return f22554a.c(cls, "");
+    public static fu.f c(Class cls) {
+        return f23009a.c(cls, "");
     }
 
-    public static hu.h d(n nVar) {
-        return f22554a.d(nVar);
+    public static fu.h d(n nVar) {
+        return f23009a.d(nVar);
     }
 
-    public static hu.m e(Class cls) {
-        return f22554a.j(b(cls), Collections.EMPTY_LIST, true);
+    public static fu.m e(Class cls) {
+        return f23009a.j(b(cls), Collections.EMPTY_LIST, true);
     }
 
-    public static hu.i f(r rVar) {
-        return f22554a.e(rVar);
+    public static fu.i f(r rVar) {
+        return f23009a.e(rVar);
     }
 
-    public static hu.j g(t tVar) {
-        return f22554a.f(tVar);
+    public static fu.j g(t tVar) {
+        return f23009a.f(tVar);
     }
 
-    public static hu.k h(v vVar) {
-        return f22554a.g(vVar);
+    public static fu.k h(v vVar) {
+        return f23009a.g(vVar);
     }
 
     public static String i(i iVar) {
-        return f22554a.h(iVar);
+        return f23009a.h(iVar);
     }
 
     public static String j(m mVar) {
-        return f22554a.i(mVar);
+        return f23009a.i(mVar);
     }
 
-    public static hu.m k(Class cls) {
-        return f22554a.j(b(cls), Collections.EMPTY_LIST, false);
+    public static fu.m k(Class cls) {
+        return f23009a.j(b(cls), Collections.EMPTY_LIST, false);
     }
 
-    public static hu.m l(Class cls, KTypeProjection kTypeProjection) {
-        return f22554a.j(b(cls), Collections.singletonList(kTypeProjection), false);
+    public static fu.m l(Class cls, KTypeProjection kTypeProjection) {
+        return f23009a.j(b(cls), Collections.singletonList(kTypeProjection), false);
     }
 }

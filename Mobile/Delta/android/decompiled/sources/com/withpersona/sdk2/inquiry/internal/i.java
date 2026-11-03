@@ -27,6 +27,7 @@ import com.withpersona.sdk2.inquiry.tracking.TrackingEventsModule;
 import com.withpersona.sdk2.inquiry.tracking.model.InquiryEndReason;
 import com.withpersona.sdk2.inquiry.types.collected_data.ErrorCode;
 import e4.l0;
+import iu.p0;
 import java.util.Map;
 import k4.CreationExtras;
 import kotlin.Metadata;
@@ -36,44 +37,43 @@ import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.d0;
 import kotlin.text.StringsKt;
-import ku.p0;
-import nu.b0;
-import nu.c0;
+import lu.b0;
+import lu.c0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import wo.ScreenState;
-import zo.e0;
-import zo.x;
+import uo.ScreenState;
+import xo.e0;
+import xo.x;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000\u008e\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\b\n\u0002\b\u0005\b\u0000\u0018\u00002\u00020\u00012\u00020\u00022\u00020\u0003B\u0007¢\u0006\u0004\b\u0004\u0010\u0005J\u0017\u0010\t\u001a\u00020\b2\u0006\u0010\u0007\u001a\u00020\u0006H\u0002¢\u0006\u0004\b\t\u0010\nJ\u000f\u0010\u000b\u001a\u00020\u0006H\u0002¢\u0006\u0004\b\u000b\u0010\fJ\u0017\u0010\u000f\u001a\u00020\b2\u0006\u0010\u000e\u001a\u00020\rH\u0002¢\u0006\u0004\b\u000f\u0010\u0010J\u0019\u0010\u0013\u001a\u00020\b2\b\u0010\u0012\u001a\u0004\u0018\u00010\u0011H\u0002¢\u0006\u0004\b\u0013\u0010\u0014J\u0017\u0010\u0017\u001a\u00020\b2\u0006\u0010\u0016\u001a\u00020\u0015H\u0002¢\u0006\u0004\b\u0017\u0010\u0018J\u000f\u0010\u0019\u001a\u00020\bH\u0002¢\u0006\u0004\b\u0019\u0010\u0005J\u0017\u0010\u001a\u001a\u00020\b2\u0006\u0010\u000e\u001a\u00020\rH\u0016¢\u0006\u0004\b\u001a\u0010\u0010J\u0019\u0010\u001c\u001a\u00020\b2\b\u0010\u001b\u001a\u0004\u0018\u00010\u0015H\u0016¢\u0006\u0004\b\u001c\u0010\u0018J+\u0010\"\u001a\u00020!2\u0006\u0010\u001e\u001a\u00020\u001d2\b\u0010 \u001a\u0004\u0018\u00010\u001f2\b\u0010\u001b\u001a\u0004\u0018\u00010\u0015H\u0016¢\u0006\u0004\b\"\u0010#J!\u0010%\u001a\u00020\b2\u0006\u0010$\u001a\u00020!2\b\u0010\u001b\u001a\u0004\u0018\u00010\u0015H\u0016¢\u0006\u0004\b%\u0010&J\u000f\u0010'\u001a\u00020\bH\u0016¢\u0006\u0004\b'\u0010\u0005J\u000f\u0010(\u001a\u00020\bH\u0016¢\u0006\u0004\b(\u0010\u0005J\u000f\u0010)\u001a\u00020\bH\u0016¢\u0006\u0004\b)\u0010\u0005J\u000f\u0010*\u001a\u00020\bH\u0016¢\u0006\u0004\b*\u0010\u0005J\u000f\u0010+\u001a\u00020\bH\u0016¢\u0006\u0004\b+\u0010\u0005J\u000f\u0010,\u001a\u00020\bH\u0016¢\u0006\u0004\b,\u0010\u0005J\u0017\u0010.\u001a\u00020\b2\u0006\u0010-\u001a\u00020\u0015H\u0016¢\u0006\u0004\b.\u0010\u0018J\u0011\u00100\u001a\u0004\u0018\u00010/H\u0000¢\u0006\u0004\b0\u00101J\u0011\u00102\u001a\u0004\u0018\u00010\rH\u0016¢\u0006\u0004\b2\u00103J\u0017\u00106\u001a\u00020\b2\u0006\u00105\u001a\u000204H\u0000¢\u0006\u0004\b6\u00107J\r\u00109\u001a\u000208¢\u0006\u0004\b9\u0010:J\u0015\u0010=\u001a\u00020\b2\u0006\u0010<\u001a\u00020;¢\u0006\u0004\b=\u0010>R\u001b\u0010D\u001a\u00020?8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b@\u0010A\u001a\u0004\bB\u0010CR\u001b\u0010I\u001a\u00020E8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\bF\u0010A\u001a\u0004\bG\u0010HR\u0016\u0010M\u001a\u00020J8\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\bK\u0010LR\u0018\u0010P\u001a\u0004\u0018\u00010\r8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bN\u0010OR\u0014\u0010T\u001a\u00020Q8VX\u0096\u0004¢\u0006\u0006\u001a\u0004\bR\u0010SR\u0014\u0010U\u001a\u00020\u00068VX\u0096\u0004¢\u0006\u0006\u001a\u0004\bU\u0010\f¨\u0006V"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/i;", "Landroidx/fragment/app/c;", "Lwo/b;", "Lkq/d;", "<init>", "()V", "", "resetState", "", "h2", "(Z)V", "r2", "()Z", "Landroid/content/Context;", "context", "i2", "(Landroid/content/Context;)V", "", "redirectUri", "p2", "(Ljava/lang/String;)V", "Landroid/os/Bundle;", "resultBundle", "q2", "(Landroid/os/Bundle;)V", "g2", "C0", "savedInstanceState", "F0", "Landroid/view/LayoutInflater;", "inflater", "Landroid/view/ViewGroup;", "container", "Landroid/view/View;", "J0", "(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;", "view", "e1", "(Landroid/view/View;Landroid/os/Bundle;)V", "c1", "a1", "V0", "d1", "K0", "N0", "outState", "b1", "Lwo/a;", "k2", "()Lwo/a;", "x", "()Landroid/content/Context;", "Lcom/withpersona/sdk2/inquiry/internal/InquiryWorkflow$Output$Cancel;", "cancelOutput", "n2", "(Lcom/withpersona/sdk2/inquiry/internal/InquiryWorkflow$Output$Cancel;)V", "Lcom/withpersona/sdk2/inquiry/internal/workflows/a$a;", "m2", "()Lcom/withpersona/sdk2/inquiry/internal/workflows/a$a;", "Lcom/withpersona/sdk2/inquiry/internal/InquiryWorkflow$Output;", "output", "o2", "(Lcom/withpersona/sdk2/inquiry/internal/InquiryWorkflow$Output;)V", "Lcom/withpersona/sdk2/inquiry/internal/h;", "f0", "Ljt/h;", "j2", "()Lcom/withpersona/sdk2/inquiry/internal/h;", "args", "Lzo/x;", "g0", "l2", "()Lzo/x;", "viewModel", "Lbp/f;", "h0", "Lbp/f;", "binding", "i0", "Landroid/content/Context;", "themedContext", "", "getTheme", "()Ljava/lang/Integer;", "theme", "isInline", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
+@Metadata(d1 = {"\u0000\u008e\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\b\n\u0002\b\u0005\b\u0000\u0018\u00002\u00020\u00012\u00020\u00022\u00020\u0003B\u0007¢\u0006\u0004\b\u0004\u0010\u0005J\u0017\u0010\t\u001a\u00020\b2\u0006\u0010\u0007\u001a\u00020\u0006H\u0002¢\u0006\u0004\b\t\u0010\nJ\u000f\u0010\u000b\u001a\u00020\u0006H\u0002¢\u0006\u0004\b\u000b\u0010\fJ\u0017\u0010\u000f\u001a\u00020\b2\u0006\u0010\u000e\u001a\u00020\rH\u0002¢\u0006\u0004\b\u000f\u0010\u0010J\u0019\u0010\u0013\u001a\u00020\b2\b\u0010\u0012\u001a\u0004\u0018\u00010\u0011H\u0002¢\u0006\u0004\b\u0013\u0010\u0014J\u0017\u0010\u0017\u001a\u00020\b2\u0006\u0010\u0016\u001a\u00020\u0015H\u0002¢\u0006\u0004\b\u0017\u0010\u0018J\u000f\u0010\u0019\u001a\u00020\bH\u0002¢\u0006\u0004\b\u0019\u0010\u0005J\u0017\u0010\u001a\u001a\u00020\b2\u0006\u0010\u000e\u001a\u00020\rH\u0016¢\u0006\u0004\b\u001a\u0010\u0010J\u0019\u0010\u001c\u001a\u00020\b2\b\u0010\u001b\u001a\u0004\u0018\u00010\u0015H\u0016¢\u0006\u0004\b\u001c\u0010\u0018J+\u0010\"\u001a\u00020!2\u0006\u0010\u001e\u001a\u00020\u001d2\b\u0010 \u001a\u0004\u0018\u00010\u001f2\b\u0010\u001b\u001a\u0004\u0018\u00010\u0015H\u0016¢\u0006\u0004\b\"\u0010#J!\u0010%\u001a\u00020\b2\u0006\u0010$\u001a\u00020!2\b\u0010\u001b\u001a\u0004\u0018\u00010\u0015H\u0016¢\u0006\u0004\b%\u0010&J\u000f\u0010'\u001a\u00020\bH\u0016¢\u0006\u0004\b'\u0010\u0005J\u000f\u0010(\u001a\u00020\bH\u0016¢\u0006\u0004\b(\u0010\u0005J\u000f\u0010)\u001a\u00020\bH\u0016¢\u0006\u0004\b)\u0010\u0005J\u000f\u0010*\u001a\u00020\bH\u0016¢\u0006\u0004\b*\u0010\u0005J\u000f\u0010+\u001a\u00020\bH\u0016¢\u0006\u0004\b+\u0010\u0005J\u000f\u0010,\u001a\u00020\bH\u0016¢\u0006\u0004\b,\u0010\u0005J\u0017\u0010.\u001a\u00020\b2\u0006\u0010-\u001a\u00020\u0015H\u0016¢\u0006\u0004\b.\u0010\u0018J\u0011\u00100\u001a\u0004\u0018\u00010/H\u0000¢\u0006\u0004\b0\u00101J\u0011\u00102\u001a\u0004\u0018\u00010\rH\u0016¢\u0006\u0004\b2\u00103J\u0017\u00106\u001a\u00020\b2\u0006\u00105\u001a\u000204H\u0000¢\u0006\u0004\b6\u00107J\r\u00109\u001a\u000208¢\u0006\u0004\b9\u0010:J\u0015\u0010=\u001a\u00020\b2\u0006\u0010<\u001a\u00020;¢\u0006\u0004\b=\u0010>R\u001b\u0010D\u001a\u00020?8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b@\u0010A\u001a\u0004\bB\u0010CR\u001b\u0010I\u001a\u00020E8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\bF\u0010A\u001a\u0004\bG\u0010HR\u0016\u0010M\u001a\u00020J8\u0002@\u0002X\u0082.¢\u0006\u0006\n\u0004\bK\u0010LR\u0018\u0010P\u001a\u0004\u0018\u00010\r8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\bN\u0010OR\u0014\u0010T\u001a\u00020Q8VX\u0096\u0004¢\u0006\u0006\u001a\u0004\bR\u0010SR\u0014\u0010U\u001a\u00020\u00068VX\u0096\u0004¢\u0006\u0006\u001a\u0004\bU\u0010\f¨\u0006V"}, d2 = {"Lcom/withpersona/sdk2/inquiry/internal/i;", "Landroidx/fragment/app/c;", "Luo/b;", "Liq/d;", "<init>", "()V", "", "resetState", "", "h2", "(Z)V", "r2", "()Z", "Landroid/content/Context;", "context", "i2", "(Landroid/content/Context;)V", "", "redirectUri", "p2", "(Ljava/lang/String;)V", "Landroid/os/Bundle;", "resultBundle", "q2", "(Landroid/os/Bundle;)V", "g2", "C0", "savedInstanceState", "F0", "Landroid/view/LayoutInflater;", "inflater", "Landroid/view/ViewGroup;", "container", "Landroid/view/View;", "J0", "(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;", "view", "e1", "(Landroid/view/View;Landroid/os/Bundle;)V", "c1", "a1", "V0", "d1", "K0", "N0", "outState", "b1", "Luo/a;", "k2", "()Luo/a;", "w", "()Landroid/content/Context;", "Lcom/withpersona/sdk2/inquiry/internal/InquiryWorkflow$Output$Cancel;", "cancelOutput", "n2", "(Lcom/withpersona/sdk2/inquiry/internal/InquiryWorkflow$Output$Cancel;)V", "Lcom/withpersona/sdk2/inquiry/internal/workflows/a$a;", "m2", "()Lcom/withpersona/sdk2/inquiry/internal/workflows/a$a;", "Lcom/withpersona/sdk2/inquiry/internal/InquiryWorkflow$Output;", "output", "o2", "(Lcom/withpersona/sdk2/inquiry/internal/InquiryWorkflow$Output;)V", "Lcom/withpersona/sdk2/inquiry/internal/h;", "f0", "Lgt/h;", "j2", "()Lcom/withpersona/sdk2/inquiry/internal/h;", "args", "Lxo/x;", "g0", "l2", "()Lxo/x;", "viewModel", "Lzo/f;", "h0", "Lzo/f;", "binding", "i0", "Landroid/content/Context;", "themedContext", "", "getTheme", "()Ljava/lang/Integer;", "theme", "isInline", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class i extends androidx.fragment.app.c implements uo.b, iq.d {
 
     /* JADX INFO: renamed from: f0, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final jt.h args = jt.i.b(new Function0() { // from class: zo.u
+    public final gt.h args = gt.i.b(new Function0() { // from class: xo.u
         @Override // kotlin.jvm.functions.Function0
         public final Object invoke() {
-            return com.withpersona.sdk2.inquiry.internal.i.f2(this.f37948a);
+            return com.withpersona.sdk2.inquiry.internal.i.f2(this.f36071a);
         }
     });
 
     /* JADX INFO: renamed from: g0, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final jt.h viewModel;
+    public final gt.h viewModel;
 
     /* JADX INFO: renamed from: h0, reason: collision with root package name and from kotlin metadata */
-    public bp.f binding;
+    public zo.f binding;
 
     /* JADX INFO: renamed from: i0, reason: collision with root package name and from kotlin metadata */
     @Nullable
     public Context themedContext;
 
-    @Metadata(d1 = {"\u00005\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0007*\u0001\u0000\b\n\u0018\u00002\u00020\u0001R \u0010\b\u001a\b\u0012\u0004\u0012\u00020\u00030\u00028\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u0004\u0010\u0005\u001a\u0004\b\u0006\u0010\u0007R \u0010\u000e\u001a\b\u0012\u0004\u0012\u00020\n0\t8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u000b\u0010\f\u001a\u0004\b\u000b\u0010\rR \u0010\u0013\u001a\b\u0012\u0004\u0012\u00020\u00100\u000f8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u0006\u0010\u0011\u001a\u0004\b\u0004\u0010\u0012R\u001a\u0010\u0018\u001a\u00020\u00148\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u0015\u0010\u0016\u001a\u0004\b\u0015\u0010\u0017R\u001a\u0010\u001a\u001a\u00020\u00148\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u0019\u0010\u0016\u001a\u0004\b\u0019\u0010\u0017¨\u0006\u001b"}, d2 = {"com/withpersona/sdk2/inquiry/internal/i$a", "Lpq/e;", "Lnu/h;", "Lpq/a;", "a", "Lnu/h;", "c", "()Lnu/h;", "controllerRequestFlow", "Lnu/c0;", "Lwo/c;", "b", "Lnu/c0;", "()Lnu/c0;", "screenStateFlow", "Lnu/b0;", "Lcom/withpersona/sdk2/inquiry/inline_inquiry/InquiryEvent;", "Lnu/b0;", "()Lnu/b0;", "eventFlow", "", "d", "Z", "()Z", "isNavBarEnabled", "e", "handleBackPress", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    public static final class a implements pq.e {
+    @Metadata(d1 = {"\u00005\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0007*\u0001\u0000\b\n\u0018\u00002\u00020\u0001R \u0010\b\u001a\b\u0012\u0004\u0012\u00020\u00030\u00028\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u0004\u0010\u0005\u001a\u0004\b\u0006\u0010\u0007R \u0010\u000e\u001a\b\u0012\u0004\u0012\u00020\n0\t8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u000b\u0010\f\u001a\u0004\b\u000b\u0010\rR \u0010\u0013\u001a\b\u0012\u0004\u0012\u00020\u00100\u000f8\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u0006\u0010\u0011\u001a\u0004\b\u0004\u0010\u0012R\u001a\u0010\u0018\u001a\u00020\u00148\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u0015\u0010\u0016\u001a\u0004\b\u0015\u0010\u0017R\u001a\u0010\u001a\u001a\u00020\u00148\u0016X\u0096\u0004¢\u0006\f\n\u0004\b\u0019\u0010\u0016\u001a\u0004\b\u0019\u0010\u0017¨\u0006\u001b"}, d2 = {"com/withpersona/sdk2/inquiry/internal/i$a", "Lnq/e;", "Llu/h;", "Lnq/a;", "a", "Llu/h;", "c", "()Llu/h;", "controllerRequestFlow", "Llu/c0;", "Luo/c;", "b", "Llu/c0;", "()Llu/c0;", "screenStateFlow", "Llu/b0;", "Lcom/withpersona/sdk2/inquiry/inline_inquiry/InquiryEvent;", "Llu/b0;", "()Llu/b0;", "eventFlow", "", "d", "Z", "()Z", "isNavBarEnabled", "e", "handleBackPress", "inquiry-internal_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final class a implements nq.e {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
-        public final nu.h<pq.a> controllerRequestFlow;
+        public final lu.h<nq.a> controllerRequestFlow;
 
         /* JADX INFO: renamed from: b, reason: from kotlin metadata */
         public final c0<ScreenState> screenStateFlow;
@@ -95,80 +95,85 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
             this.handleBackPress = iVar.j2().l();
         }
 
-        @Override // pq.e
+        @Override // nq.e
         public b0<InquiryEvent> a() {
             return this.eventFlow;
         }
 
-        @Override // pq.e
+        @Override // nq.e
         public c0<ScreenState> b() {
             return this.screenStateFlow;
         }
 
-        @Override // pq.e
-        public nu.h<pq.a> c() {
+        @Override // nq.e
+        public lu.h<nq.a> c() {
             return this.controllerRequestFlow;
         }
 
-        @Override // pq.e
+        @Override // nq.e
         /* JADX INFO: renamed from: d, reason: from getter */
         public boolean getIsNavBarEnabled() {
             return this.isNavBarEnabled;
         }
 
-        @Override // pq.e
+        @Override // nq.e
         /* JADX INFO: renamed from: e, reason: from getter */
         public boolean getHandleBackPress() {
             return this.handleBackPress;
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.internal.InquiryFragment$onViewCreated$1", f = "InquiryFragment.kt", l = {152}, m = "invokeSuspend")
-    public static final class b extends pt.m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.internal.InquiryFragment$onViewCreated$1", f = "InquiryFragment.kt", l = {152}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class b extends nt.m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f11820t;
+        public int f11901t;
 
         @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-        public static final class a<T> implements nu.i {
+        public static final class a<T> implements lu.i {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ i f11822a;
+            public final /* synthetic */ i f11903a;
 
             public a(i iVar) {
-                this.f11822a = iVar;
+                this.f11903a = iVar;
             }
 
-            public final Object b(boolean z10, nt.b<? super Unit> bVar) {
-                this.f11822a.h2(true);
-                return Unit.f22483a;
+            public final Object b(boolean z10, lt.b<? super Unit> bVar) {
+                this.f11903a.h2(true);
+                return Unit.f22938a;
             }
 
-            @Override // nu.i
-            public /* bridge */ /* synthetic */ Object emit(Object obj, nt.b bVar) {
+            @Override // lu.i
+            public /* bridge */ /* synthetic */ Object emit(Object obj, lt.b bVar) {
                 return b(((Boolean) obj).booleanValue(), bVar);
             }
         }
 
-        public b(nt.b<? super b> bVar) {
+        public b(lt.b<? super b> bVar) {
             super(2, bVar);
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
             return i.this.new b(bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((b) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            Object objE = ot.c.e();
-            int i10 = this.f11820t;
+            Object objE = mt.c.e();
+            int i10 = this.f11901t;
             if (i10 == 0) {
-                jt.o.b(obj);
-                nu.h hVarN = nu.j.n(i.this.l2().m(), 1);
+                gt.o.b(obj);
+                lu.h hVarN = lu.j.n(i.this.l2().m(), 1);
                 a aVar = new a(i.this);
-                this.f11820t = 1;
+                this.f11901t = 1;
                 if (hVarN.collect(aVar, this) == objE) {
                     return objE;
                 }
@@ -176,14 +181,9 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
                 if (i10 != 1) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                 }
-                jt.o.b(obj);
+                gt.o.b(obj);
             }
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((b) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            return Unit.f22938a;
         }
     }
 
@@ -191,19 +191,19 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
     public static final class c extends kotlin.jvm.internal.m implements Function0<androidx.fragment.app.c> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ androidx.fragment.app.c f11823i;
+        public final /* synthetic */ androidx.fragment.app.c f11904i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public c(androidx.fragment.app.c cVar) {
             super(0);
-            this.f11823i = cVar;
+            this.f11904i = cVar;
         }
 
         @Override // kotlin.jvm.functions.Function0
         @NotNull
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final androidx.fragment.app.c invoke() {
-            return this.f11823i;
+            return this.f11904i;
         }
     }
 
@@ -211,19 +211,19 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
     public static final class d extends kotlin.jvm.internal.m implements Function0<c1> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ Function0 f11824i;
+        public final /* synthetic */ Function0 f11905i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public d(Function0 function0) {
             super(0);
-            this.f11824i = function0;
+            this.f11905i = function0;
         }
 
         @Override // kotlin.jvm.functions.Function0
         @NotNull
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final c1 invoke() {
-            return (c1) this.f11824i.invoke();
+            return (c1) this.f11905i.invoke();
         }
     }
 
@@ -231,19 +231,19 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
     public static final class e extends kotlin.jvm.internal.m implements Function0<b1> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ jt.h f11825i;
+        public final /* synthetic */ gt.h f11906i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public e(jt.h hVar) {
+        public e(gt.h hVar) {
             super(0);
-            this.f11825i = hVar;
+            this.f11906i = hVar;
         }
 
         @Override // kotlin.jvm.functions.Function0
         @NotNull
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final b1 invoke() {
-            return l0.c(this.f11825i).w();
+            return l0.c(this.f11906i).v();
         }
     }
 
@@ -251,16 +251,16 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
     public static final class f extends kotlin.jvm.internal.m implements Function0<CreationExtras> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ Function0 f11826i;
+        public final /* synthetic */ Function0 f11907i;
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public final /* synthetic */ jt.h f11827j;
+        public final /* synthetic */ gt.h f11908j;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public f(Function0 function0, jt.h hVar) {
+        public f(Function0 function0, gt.h hVar) {
             super(0);
-            this.f11826i = function0;
-            this.f11827j = hVar;
+            this.f11907i = function0;
+            this.f11908j = hVar;
         }
 
         @Override // kotlin.jvm.functions.Function0
@@ -268,13 +268,13 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final CreationExtras invoke() {
             CreationExtras creationExtras;
-            Function0 function0 = this.f11826i;
+            Function0 function0 = this.f11907i;
             if (function0 != null && (creationExtras = (CreationExtras) function0.invoke()) != null) {
                 return creationExtras;
             }
-            c1 c1VarC = l0.c(this.f11827j);
+            c1 c1VarC = l0.c(this.f11908j);
             androidx.p000lifecycle.j jVar = c1VarC instanceof androidx.p000lifecycle.j ? (androidx.p000lifecycle.j) c1VarC : null;
-            return jVar != null ? jVar.Z() : CreationExtras.b.f22169c;
+            return jVar != null ? jVar.Y() : CreationExtras.b.f22393c;
         }
     }
 
@@ -282,31 +282,31 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
     public static final class g extends kotlin.jvm.internal.m implements Function0<a1.c> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ androidx.fragment.app.c f11828i;
+        public final /* synthetic */ androidx.fragment.app.c f11909i;
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public final /* synthetic */ jt.h f11829j;
+        public final /* synthetic */ gt.h f11910j;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public g(androidx.fragment.app.c cVar, jt.h hVar) {
+        public g(androidx.fragment.app.c cVar, gt.h hVar) {
             super(0);
-            this.f11828i = cVar;
-            this.f11829j = hVar;
+            this.f11909i = cVar;
+            this.f11910j = hVar;
         }
 
         @Override // kotlin.jvm.functions.Function0
         @NotNull
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final a1.c invoke() {
-            a1.c cVarX;
-            c1 c1VarC = l0.c(this.f11829j);
+            a1.c cVarW;
+            c1 c1VarC = l0.c(this.f11910j);
             androidx.p000lifecycle.j jVar = c1VarC instanceof androidx.p000lifecycle.j ? (androidx.p000lifecycle.j) c1VarC : null;
-            return (jVar == null || (cVarX = jVar.X()) == null) ? this.f11828i.X() : cVarX;
+            return (jVar == null || (cVarW = jVar.W()) == null) ? this.f11909i.W() : cVarW;
         }
     }
 
     public i() {
-        jt.h hVarA = jt.i.a(jt.k.NONE, new d(new c(this)));
+        gt.h hVarA = gt.i.a(gt.k.NONE, new d(new c(this)));
         this.viewModel = l0.b(this, d0.b(x.class), new e(hVarA), new f(null, hVarA), new g(this, hVarA));
     }
 
@@ -334,7 +334,7 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
         bundle.putString("ERROR_DEBUG_MESSAGE_KEY", "Invalid session token.");
         bundle.putParcelable("ERROR_CODE_KEY", ErrorCode.SessionTokenError);
         q2(bundle);
-        M().a1();
+        L().a1();
         return false;
     }
 
@@ -358,9 +358,9 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
         }
         i2(context);
         super.F0(savedInstanceState);
-        cp.c.a(contextI1);
+        ap.c.a(contextI1);
         if (j2().e() || j2().b()) {
-            cp.c.d(contextI1, l2().getSdkFilesManager().b());
+            ap.c.d(contextI1, l2().getSdkFilesManager().b());
         }
     }
 
@@ -369,7 +369,7 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
     public View J0(@NotNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Intrinsics.checkNotNullParameter(inflater, "inflater");
         super.J0(inflater, container, savedInstanceState);
-        bp.f fVarC = bp.f.c(inflater, container, false);
+        zo.f fVarC = zo.f.c(inflater, container, false);
         Intrinsics.checkNotNullExpressionValue(fVarC, "inflate(...)");
         this.binding = fVarC;
         if (fVarC == null) {
@@ -385,8 +385,8 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
     public void K0() {
         Context contextI1 = I1();
         Intrinsics.checkNotNullExpressionValue(contextI1, "requireContext(...)");
-        cp.c.e(contextI1);
-        wo.a aVarK2 = k2();
+        ap.c.e(contextI1);
+        uo.a aVarK2 = k2();
         if (aVarK2 != null) {
             aVarK2.a();
         }
@@ -416,7 +416,7 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
     public void b1(@NotNull Bundle outState) {
         Intrinsics.checkNotNullParameter(outState, "outState");
         super.b1(outState);
-        kr.a.INSTANCE.a().e(outState);
+        ir.a.INSTANCE.a().e(outState);
     }
 
     @Override // androidx.fragment.app.c
@@ -424,7 +424,7 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
         super.c1();
         Context contextI1 = I1();
         Intrinsics.checkNotNullExpressionValue(contextI1, "requireContext(...)");
-        xn.c.d(contextI1);
+        vn.c.d(contextI1);
     }
 
     @Override // androidx.fragment.app.c
@@ -432,7 +432,7 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
         super.d1();
         Context contextI1 = I1();
         Intrinsics.checkNotNullExpressionValue(contextI1, "requireContext(...)");
-        xn.c.f(contextI1);
+        vn.c.f(contextI1);
     }
 
     @Override // androidx.fragment.app.c
@@ -441,15 +441,15 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
         super.e1(view, savedInstanceState);
         try {
             if (r2()) {
-                kr.a.INSTANCE.a().b(savedInstanceState);
+                ir.a.INSTANCE.a().b(savedInstanceState);
                 l2().B(this);
                 l2().n().o(j2().m());
                 l2().A().o(j2().w());
                 androidx.p000lifecycle.s sVarK0 = k0();
                 Intrinsics.checkNotNullExpressionValue(sVarK0, "getViewLifecycleOwner(...)");
-                ku.k.d(androidx.p000lifecycle.t.a(sVarK0), null, null, new b(null), 3, null);
+                iu.k.d(androidx.p000lifecycle.t.a(sVarK0), null, null, new b(null), 3, null);
                 h2(false);
-                wo.a aVarK2 = k2();
+                uo.a aVarK2 = k2();
                 if (aVarK2 != null) {
                     aVarK2.b(this);
                 }
@@ -461,7 +461,7 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
             if (j2().e()) {
                 Context contextI1 = I1();
                 Intrinsics.checkNotNullExpressionValue(contextI1, "requireContext(...)");
-                cp.c.c(contextI1).c(e10);
+                ap.c.c(contextI1).c(e10);
             }
             Bundle bundle = new Bundle();
             bundle.putString("PERSONA_ACTIVITY_RESULT", "INQUIRY_ERROR");
@@ -472,7 +472,7 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
     }
 
     public final void g2() {
-        zo.s sVarF = l2().getComponent();
+        xo.s sVarF = l2().getComponent();
         if (sVarF == null) {
             return;
         }
@@ -481,13 +481,13 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
         l2().getSdkFilesManager().a();
     }
 
-    @Override // kq.d
+    @Override // iq.d
     @NotNull
     public Integer getTheme() {
         int iIntValue;
         if (isInline()) {
             Integer numC = j2().C();
-            iIntValue = (numC == null || numC.intValue() == 0) ? vp.h.f33413c : numC.intValue();
+            iIntValue = (numC == null || numC.intValue() == 0) ? tp.h.f32549c : numC.intValue();
         } else {
             iIntValue = 0;
         }
@@ -521,19 +521,19 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
         }
         if (resetState) {
             i2(context);
-            FragmentManager fragmentManagerV = v();
-            Intrinsics.checkNotNullExpressionValue(fragmentManagerV, "getChildFragmentManager(...)");
-            androidx.fragment.app.h hVarR = fragmentManagerV.r();
-            hVarR.n(e0.f37853d, InquiryWorkflowFragment.INSTANCE.a(j2().m(), j2().w(), templateProps));
+            FragmentManager fragmentManagerU = u();
+            Intrinsics.checkNotNullExpressionValue(fragmentManagerU, "getChildFragmentManager(...)");
+            androidx.fragment.app.h hVarR = fragmentManagerU.r();
+            hVarR.n(e0.f35976d, InquiryWorkflowFragment.INSTANCE.a(j2().m(), j2().w(), templateProps));
             hVarR.g();
             return;
         }
-        FragmentManager fragmentManagerV2 = v();
-        int i10 = e0.f37853d;
-        if (fragmentManagerV2.m0(i10) == null) {
-            FragmentManager fragmentManagerV3 = v();
-            Intrinsics.checkNotNullExpressionValue(fragmentManagerV3, "getChildFragmentManager(...)");
-            androidx.fragment.app.h hVarR2 = fragmentManagerV3.r();
+        FragmentManager fragmentManagerU2 = u();
+        int i10 = e0.f35976d;
+        if (fragmentManagerU2.m0(i10) == null) {
+            FragmentManager fragmentManagerU3 = u();
+            Intrinsics.checkNotNullExpressionValue(fragmentManagerU3, "getChildFragmentManager(...)");
+            androidx.fragment.app.h hVarR2 = fragmentManagerU3.r();
             hVarR2.n(i10, InquiryWorkflowFragment.INSTANCE.a(j2().m(), j2().w(), templateProps));
             hVarR2.g();
         }
@@ -551,51 +551,51 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
         String strG = zT ? j2().G() : "https://webrtc-consumer.withpersona.com";
         String strI = zT ? j2().i() : "https://inquiry-fallback.withpersona.com";
         String strE = zT ? j2().E() : "https://tg.withpersona.com";
-        mq.a aVarI = j2().u() ? l2().getDataCollector() : new mq.d();
+        kq.a aVarI = j2().u() ? l2().getDataCollector() : new kq.d();
         FallbackMode fallbackModeH = (l2().m().getValue().booleanValue() || j2().y() != null) ? FallbackMode.ALWAYS : j2().h();
         if (fallbackModeH == FallbackMode.ALWAYS) {
-            aVar = new com.withpersona.sdk2.inquiry.internal.fallbackmode.a(com.withpersona.sdk2.inquiry.internal.fallbackmode.c.a.f11749a);
+            aVar = new com.withpersona.sdk2.inquiry.internal.fallbackmode.a(com.withpersona.sdk2.inquiry.internal.fallbackmode.c.a.f11830a);
         } else {
             StaticInquiryTemplate staticInquiryTemplateY = j2().y();
             LocalStaticInquiryTemplate localStaticInquiryTemplate = staticInquiryTemplateY instanceof LocalStaticInquiryTemplate ? (LocalStaticInquiryTemplate) staticInquiryTemplateY : null;
-            aVar = localStaticInquiryTemplate != null ? new com.withpersona.sdk2.inquiry.internal.fallbackmode.a(new com.withpersona.sdk2.inquiry.internal.fallbackmode.c.b(localStaticInquiryTemplate.getResourceId())) : new com.withpersona.sdk2.inquiry.internal.fallbackmode.a(com.withpersona.sdk2.inquiry.internal.fallbackmode.c.a.f11749a);
+            aVar = localStaticInquiryTemplate != null ? new com.withpersona.sdk2.inquiry.internal.fallbackmode.a(new com.withpersona.sdk2.inquiry.internal.fallbackmode.c.b(localStaticInquiryTemplate.getResourceId())) : new com.withpersona.sdk2.inquiry.internal.fallbackmode.a(com.withpersona.sdk2.inquiry.internal.fallbackmode.c.a.f11830a);
         }
         a aVar2 = new a(this);
         com.withpersona.sdk2.inquiry.internal.e.a aVarA = com.withpersona.sdk2.inquiry.internal.e.a();
         e4.q qVarH1 = H1();
         Intrinsics.checkNotNullExpressionValue(qVarH1, "requireActivity(...)");
-        com.withpersona.sdk2.inquiry.internal.e.a aVarC = aVarA.j(new zo.n(qVarH1, j2().n(), y0.a(l2()))).e(new mp.i(l2().t(), l2().k(), l2().z())).f(new mp.q(l2().j())).o(new mp.w(l2().u())).n(new qp.e(l2().s())).l(new lp.c(l2().p())).c(new mp.d(l2().h()));
+        com.withpersona.sdk2.inquiry.internal.e.a aVarC = aVarA.j(new xo.n(qVarH1, j2().n(), y0.a(l2()))).e(new kp.i(l2().t(), l2().k(), l2().z())).f(new kp.q(l2().j())).o(new kp.w(l2().u())).n(new op.e(l2().s())).l(new jp.c(l2().p())).c(new kp.d(l2().h()));
         boolean zF = j2().F();
         String strG2 = j2().g();
         String strN = j2().n();
         StyleVariant styleVariantZ = j2().z();
-        zo.s sVarB = aVarC.m(new NetworkCoreModule(zF, strG2, strN, styleVariantZ != null ? styleVariantZ.getValue() : null, j2().p())).d(new mq.b(aVarI)).k(new com.withpersona.sdk2.inquiry.internal.network.f(strV, strG, strI, j2().p())).a(aVar).g(new pq.f(aVar2)).q(new jq.c0(j2().c(), j2().d())).p(new mp.c0(l2().v())).h(new dp.c(fallbackModeH, j2().f(), l2().getSavedStateHandle())).i(new qq.a(l2().getSdkFilesManager())).r(new TrackingEventsModule(strE)).b();
+        xo.s sVarB = aVarC.m(new NetworkCoreModule(zF, strG2, strN, styleVariantZ != null ? styleVariantZ.getValue() : null, j2().p())).d(new kq.b(aVarI)).k(new com.withpersona.sdk2.inquiry.internal.network.f(strV, strG, strI, j2().p())).a(aVar).g(new nq.f(aVar2)).q(new hq.c0(j2().c(), j2().d())).p(new kp.c0(l2().v())).h(new bp.c(fallbackModeH, j2().f(), l2().getSavedStateHandle())).i(new oq.a(l2().getSdkFilesManager())).r(new TrackingEventsModule(strE)).b();
         l2().H(sVarB);
-        kr.a.INSTANCE.b(sVarB.h());
-        qp.c.f29590a.a(sVarB.b());
+        ir.a.INSTANCE.b(sVarB.h());
+        op.c.f28134a.a(sVarB.b());
     }
 
-    @Override // kq.d
+    @Override // iq.d
     public boolean isInline() {
         return H1().getClass() != InquiryActivity.class;
     }
 
     @Nullable
-    public final wo.a k2() {
-        d5.i iVarK = K();
+    public final uo.a k2() {
+        d5.i iVarJ = J();
         LayoutInflater.Factory factoryP = p();
-        if (iVarK instanceof wo.a) {
-            return (wo.a) iVarK;
+        if (iVarJ instanceof uo.a) {
+            return (uo.a) iVarJ;
         }
-        if (factoryP instanceof wo.a) {
-            return (wo.a) factoryP;
+        if (factoryP instanceof uo.a) {
+            return (uo.a) factoryP;
         }
         return null;
     }
 
     @NotNull
-    public final com.withpersona.sdk2.inquiry.internal.workflows.a.InterfaceC0222a m2() {
-        zo.s sVarF = l2().getComponent();
+    public final com.withpersona.sdk2.inquiry.internal.workflows.a.InterfaceC0225a m2() {
+        xo.s sVarF = l2().getComponent();
         if (sVarF != null) {
             return sVarF.f();
         }
@@ -603,12 +603,12 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
     }
 
     public final void n2(@NotNull InquiryWorkflow$Output.Cancel cancelOutput) {
-        zo.s sVarF;
-        zo.i iVarD;
+        xo.s sVarF;
+        xo.i iVarD;
         TrackingEventsLogger trackingEventsLoggerB;
         Intrinsics.checkNotNullParameter(cancelOutput, "cancelOutput");
         long jCurrentTimeMillis = System.currentTimeMillis() - l2().getInquiryStartTimeMs();
-        zo.s sVarF2 = l2().getComponent();
+        xo.s sVarF2 = l2().getComponent();
         if (sVarF2 != null && (trackingEventsLoggerB = sVarF2.b()) != null) {
             TrackingEventsLogger.logInquiryEndEvent$default(trackingEventsLoggerB, InquiryEndReason.Cancel, jCurrentTimeMillis, null, false, 12, null);
         }
@@ -621,7 +621,7 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
         }
         Bundle bundle = new Bundle();
         bundle.putString("PERSONA_ACTIVITY_RESULT", "INQUIRY_CANCELED");
-        if (jq.j.f(cancelOutput.getInquiryId())) {
+        if (hq.j.f(cancelOutput.getInquiryId())) {
             bundle.putString("INQUIRY_ID_KEY", cancelOutput.getInquiryId());
             String sessionToken2 = cancelOutput.getSessionToken();
             bundle.putString("SESSION_TOKEN_KEY", sessionToken2 != null ? h.INSTANCE.a(sessionToken2) : null);
@@ -631,7 +631,7 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
 
     public final void o2(@NotNull InquiryWorkflow$Output output) {
         Intrinsics.checkNotNullParameter(output, "output");
-        zo.s sVarF = l2().getComponent();
+        xo.s sVarF = l2().getComponent();
         if (sVarF == null) {
             return;
         }
@@ -642,7 +642,7 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
         } else if (output instanceof InquiryWorkflow$Output.Error) {
             TrackingEventsLogger.logInquiryEndEvent$default(sVarF.b(), InquiryEndReason.Error, jCurrentTimeMillis, ((InquiryWorkflow$Output.Error) output).getDebugMessage(), false, 8, null);
         } else if (!(output instanceof InquiryWorkflow$Output.Cancel)) {
-            throw new jt.l();
+            throw new gt.l();
         }
         String sessionToken = output.getSessionToken();
         if (sessionToken != null) {
@@ -656,7 +656,7 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
             bundle.putString("INQUIRY_ID_KEY", complete.getInquiryId());
             bundle.putString("INQUIRY_STATUS_KEY", complete.getInquiryStatus());
             bundle.putParcelable("FIELDS_MAP_KEY", new InquiryFieldsMap(complete.a()));
-            bundle.putParcelable("COLLECTED_DATA", zo.a.d(l2().getDataCollector().c()));
+            bundle.putParcelable("COLLECTED_DATA", xo.a.d(l2().getDataCollector().c()));
             String sessionToken2 = complete.getSessionToken();
             bundle.putString("SESSION_TOKEN_KEY", sessionToken2 != null ? h.INSTANCE.a(sessionToken2) : null);
             q2(bundle);
@@ -675,19 +675,19 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
                 n2(cancel);
                 return;
             }
-            ap.e.Companion aVar = ap.e.INSTANCE;
-            FragmentManager fragmentManagerV = v();
-            Intrinsics.checkNotNullExpressionValue(fragmentManagerV, "getChildFragmentManager(...)");
-            aVar.a(fragmentManagerV, getTheme().intValue(), cancel);
+            yo.e.Companion aVar = yo.e.INSTANCE;
+            FragmentManager fragmentManagerU = u();
+            Intrinsics.checkNotNullExpressionValue(fragmentManagerU, "getChildFragmentManager(...)");
+            aVar.a(fragmentManagerU, getTheme().intValue(), cancel);
             return;
         }
         if (!(output instanceof InquiryWorkflow$Output.Error)) {
-            throw new jt.l();
+            throw new gt.l();
         }
         InquiryWorkflow$Output.Error error = (InquiryWorkflow$Output.Error) output;
         String sessionToken3 = error.getSessionToken();
         if (sessionToken3 != null) {
-            sVarF.d().f(sessionToken3, error.getCause());
+            sVarF.d().e(sessionToken3, error.getCause());
         }
         Bundle bundle2 = new Bundle();
         bundle2.putString("PERSONA_ACTIVITY_RESULT", "INQUIRY_ERROR");
@@ -700,13 +700,13 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
         if (redirectUri != null) {
             try {
                 Intent intent = new Intent("android.intent.action.VIEW", Uri.parse(redirectUri));
-                Context contextX = x();
-                if (contextX != null) {
-                    contextX.startActivity(intent);
-                    Unit unit = Unit.f22483a;
+                Context contextW = w();
+                if (contextW != null) {
+                    contextW.startActivity(intent);
+                    Unit unit = Unit.f22938a;
                 }
             } catch (Exception unused) {
-                Unit unit2 = Unit.f22483a;
+                Unit unit2 = Unit.f22938a;
             }
         }
     }
@@ -718,8 +718,8 @@ public final class i extends androidx.fragment.app.c implements wo.b, kq.d {
 
     @Override // androidx.fragment.app.c
     @Nullable
-    public Context x() {
+    public Context w() {
         Context context = this.themedContext;
-        return context == null ? super.x() : context;
+        return context == null ? super.w() : context;
     }
 }

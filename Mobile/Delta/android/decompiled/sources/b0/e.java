@@ -11,7 +11,7 @@ import java.util.Set;
 public final class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final a f3761a;
+    public final a f3659a;
 
     public interface a {
         DynamicRangeProfiles a();
@@ -22,12 +22,12 @@ public final class e {
     }
 
     public e(a aVar) {
-        this.f3761a = aVar;
+        this.f3659a = aVar;
     }
 
     public static e a(c0 c0Var) {
         e eVarE = Build.VERSION.SDK_INT >= 33 ? e(y.f.a(c0Var.a(CameraCharacteristics.REQUEST_AVAILABLE_DYNAMIC_RANGE_PROFILES))) : null;
-        return eVarE == null ? g.f3763a : eVarE;
+        return eVarE == null ? g.f3661a : eVarE;
     }
 
     public static e e(DynamicRangeProfiles dynamicRangeProfiles) {
@@ -39,15 +39,15 @@ public final class e {
     }
 
     public Set<k0> b(k0 k0Var) {
-        return this.f3761a.d(k0Var);
+        return this.f3659a.d(k0Var);
     }
 
     public Set<k0> c() {
-        return this.f3761a.c();
+        return this.f3659a.c();
     }
 
     public DynamicRangeProfiles d() {
         x2.g.j(Build.VERSION.SDK_INT >= 33, "DynamicRangesCompat can only be converted to DynamicRangeProfiles on API 33 or higher.");
-        return this.f3761a.a();
+        return this.f3659a.a();
     }
 }

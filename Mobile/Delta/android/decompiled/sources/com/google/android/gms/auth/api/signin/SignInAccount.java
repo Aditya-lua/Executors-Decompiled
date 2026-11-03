@@ -17,32 +17,32 @@ public class SignInAccount extends AbstractSafeParcelable implements ReflectedPa
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @Deprecated
-    public final String f5654f;
+    public final String f5727f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final GoogleSignInAccount f5655g;
+    public final GoogleSignInAccount f5728g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
     @Deprecated
-    public final String f5656h;
+    public final String f5729h;
 
     public SignInAccount(String str, GoogleSignInAccount googleSignInAccount, String str2) {
-        this.f5655g = googleSignInAccount;
-        this.f5654f = m.g(str, "8.3 and 8.4 SDKs require non-null email");
-        this.f5656h = m.g(str2, "8.3 and 8.4 SDKs require non-null userId");
+        this.f5728g = googleSignInAccount;
+        this.f5727f = m.g(str, "8.3 and 8.4 SDKs require non-null email");
+        this.f5729h = m.g(str2, "8.3 and 8.4 SDKs require non-null userId");
     }
 
     public final GoogleSignInAccount v3() {
-        return this.f5655g;
+        return this.f5728g;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(@NonNull Parcel parcel, int i10) {
-        String str = this.f5654f;
+        String str = this.f5727f;
         int iA = b.a(parcel);
         b.v(parcel, 4, str, false);
-        b.t(parcel, 7, this.f5655g, i10, false);
-        b.v(parcel, 8, this.f5656h, false);
+        b.t(parcel, 7, this.f5728g, i10, false);
+        b.v(parcel, 8, this.f5729h, false);
         b.b(parcel, iA);
     }
 }

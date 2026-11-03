@@ -12,28 +12,28 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public final class i0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final c f1872a;
+    public final c f1717a;
 
     public static class a extends c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final View f1873a;
+        public final View f1718a;
 
         public a(View view) {
-            this.f1873a = view;
+            this.f1718a = view;
         }
 
         @Override // androidx.core.view.i0.c
         public void a() {
-            View view = this.f1873a;
+            View view = this.f1718a;
             if (view != null) {
-                ((InputMethodManager) view.getContext().getSystemService("input_method")).hideSoftInputFromWindow(this.f1873a.getWindowToken(), 0);
+                ((InputMethodManager) view.getContext().getSystemService("input_method")).hideSoftInputFromWindow(this.f1718a.getWindowToken(), 0);
             }
         }
 
         @Override // androidx.core.view.i0.c
         public void b() {
-            final View viewFindViewById = this.f1873a;
+            final View viewFindViewById = this.f1718a;
             if (viewFindViewById == null) {
                 return;
             }
@@ -43,7 +43,7 @@ public final class i0 {
                 viewFindViewById = viewFindViewById.getRootView().findFocus();
             }
             if (viewFindViewById == null) {
-                viewFindViewById = this.f1873a.getRootView().findViewById(R.id.content);
+                viewFindViewById = this.f1718a.getRootView().findViewById(R.id.content);
             }
             if (viewFindViewById == null || !viewFindViewById.hasWindowFocus()) {
                 return;
@@ -70,25 +70,25 @@ public final class i0 {
 
     public i0(View view) {
         if (Build.VERSION.SDK_INT >= 30) {
-            this.f1872a = new b(view);
+            this.f1717a = new b(view);
         } else {
-            this.f1872a = new a(view);
+            this.f1717a = new a(view);
         }
     }
 
     public void a() {
-        this.f1872a.a();
+        this.f1717a.a();
     }
 
     public void b() {
-        this.f1872a.b();
+        this.f1717a.b();
     }
 
     public static class b extends a {
         public View b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public WindowInsetsController f1874c;
+        public WindowInsetsController f1719c;
 
         public b(View view) {
             super(view);
@@ -98,7 +98,7 @@ public final class i0 {
         @Override // androidx.core.view.i0.a, androidx.core.view.i0.c
         public void a() {
             View view;
-            WindowInsetsController windowInsetsController = this.f1874c;
+            WindowInsetsController windowInsetsController = this.f1719c;
             if (windowInsetsController == null) {
                 View view2 = this.b;
                 windowInsetsController = view2 != null ? view2.getWindowInsetsController() : null;
@@ -128,7 +128,7 @@ public final class i0 {
             if (view != null && Build.VERSION.SDK_INT < 33) {
                 ((InputMethodManager) view.getContext().getSystemService("input_method")).isActive();
             }
-            WindowInsetsController windowInsetsController = this.f1874c;
+            WindowInsetsController windowInsetsController = this.f1719c;
             if (windowInsetsController == null) {
                 View view2 = this.b;
                 windowInsetsController = view2 != null ? view2.getWindowInsetsController() : null;
@@ -141,12 +141,12 @@ public final class i0 {
 
         public b(WindowInsetsController windowInsetsController) {
             super(null);
-            this.f1874c = windowInsetsController;
+            this.f1719c = windowInsetsController;
         }
     }
 
     @Deprecated
     public i0(WindowInsetsController windowInsetsController) {
-        this.f1872a = new b(windowInsetsController);
+        this.f1717a = new b(windowInsetsController);
     }
 }

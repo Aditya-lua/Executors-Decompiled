@@ -14,22 +14,22 @@ public class UserVerificationMethodExtension extends AbstractSafeParcelable {
     public static final Parcelable.Creator<UserVerificationMethodExtension> CREATOR = new r();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final boolean f6021f;
+    public final boolean f6094f;
 
     public UserVerificationMethodExtension(boolean z10) {
-        this.f6021f = z10;
+        this.f6094f = z10;
     }
 
     public boolean equals(Object obj) {
-        return (obj instanceof UserVerificationMethodExtension) && this.f6021f == ((UserVerificationMethodExtension) obj).f6021f;
+        return (obj instanceof UserVerificationMethodExtension) && this.f6094f == ((UserVerificationMethodExtension) obj).f6094f;
     }
 
     public int hashCode() {
-        return k.c(Boolean.valueOf(this.f6021f));
+        return k.c(Boolean.valueOf(this.f6094f));
     }
 
     public boolean v3() {
-        return this.f6021f;
+        return this.f6094f;
     }
 
     @Override // android.os.Parcelable

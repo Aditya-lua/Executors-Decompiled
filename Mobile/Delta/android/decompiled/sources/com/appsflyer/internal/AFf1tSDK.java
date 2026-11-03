@@ -69,16 +69,16 @@ public class AFf1tSDK extends AFe1kSDK<String> {
         AFi1zSDK aFi1zSDK;
         Intrinsics.checkNotNullParameter(p8, "");
         d(this.registerClient);
-        if (this.registerClient.f5399d.containsKey("meta")) {
+        if (this.registerClient.f5472d.containsKey("meta")) {
             AFh1aSDK aFh1aSDK = this.AFLogger.unregisterClient.AFLogger;
             if (AFh1pSDK.unregisterClient((aFh1aSDK == null || (aFh1gSDK = aFh1aSDK.registerClient) == null || (aFi1zSDK = aFh1gSDK.AFKeystoreWrapper) == null) ? 1.0d : aFi1zSDK.AFLogger)) {
-                this.registerClient.f5399d.remove("meta");
+                this.registerClient.f5472d.remove("meta");
             }
         }
         AFd1pSDK<String> aFd1pSDKAFLogger = getD().AFLogger(this.registerClient, p8, this.d);
         AFe1cSDK aFe1cSDK = this.v;
         String string = toString();
-        Map<String, ? extends Object> map = this.registerClient.f5399d;
+        Map<String, ? extends Object> map = this.registerClient.f5472d;
         Intrinsics.checkNotNullExpressionValue(map, "");
         aFe1cSDK.registerClient(string, aFd1pSDKAFLogger, map);
         return aFd1pSDKAFLogger;
@@ -111,9 +111,9 @@ public class AFf1tSDK extends AFe1kSDK<String> {
             }
             if (p8.d()) {
                 AFf1fSDK unregisterClient = getUnregisterClient();
-                p8.AFKeystoreWrapper((Map) AFf1fSDK.unregisterClient(new Object[]{unregisterClient, p8.f5399d}, 1953197941, -1953197940, System.identityHashCode(unregisterClient)));
+                p8.AFKeystoreWrapper((Map) AFf1fSDK.unregisterClient(new Object[]{unregisterClient, p8.f5472d}, 1953197941, -1953197940, System.identityHashCode(unregisterClient)));
                 AFf1fSDK unregisterClient2 = getUnregisterClient();
-                p8.AFKeystoreWrapper((Map) AFf1fSDK.unregisterClient(new Object[]{unregisterClient2, p8.f5399d}, 389111715, -389111715, System.identityHashCode(unregisterClient2)));
+                p8.AFKeystoreWrapper((Map) AFf1fSDK.unregisterClient(new Object[]{unregisterClient2, p8.f5472d}, 389111715, -389111715, System.identityHashCode(unregisterClient2)));
             }
             p8.AFKeystoreWrapper(getUnregisterClient().AFKeystoreWrapper());
             boolean z10 = this.AFLogger.contains(AFd1bSDK.LAUNCH) || this.AFLogger.contains(AFd1bSDK.CONVERSION);
@@ -121,11 +121,11 @@ public class AFf1tSDK extends AFe1kSDK<String> {
                 p8.unregisterClient(this.i.AFKeystoreWrapper.AFLogger("appsFlyerCount", 0));
             }
             if (p8.registerClient()) {
-                Map<String, Object> map = p8.f5399d;
+                Map<String, Object> map = p8.f5472d;
                 Intrinsics.checkNotNullExpressionValue(map, "");
                 Map<String, Object> mapAFLogger = AFj1iSDK.AFLogger(map);
                 AFd1jSDK aFd1jSDK = this.unregisterClient;
-                HostMeta hostMeta = new HostMeta(aFd1jSDK.d(), aFd1jSDK.registerClient(), AFd1jSDK.f5277d == null ? AFd1dSDK.DEFAULT : AFd1dSDK.API);
+                HostMeta hostMeta = new HostMeta(aFd1jSDK.d(), aFd1jSDK.registerClient(), AFd1jSDK.f5350d == null ? AFd1dSDK.DEFAULT : AFd1dSDK.API);
                 JSONObject jSONObject = new JSONObject();
                 jSONObject.put("name", hostMeta.name);
                 AFd1dSDK aFd1dSDK = hostMeta.method;
@@ -140,12 +140,12 @@ public class AFf1tSDK extends AFe1kSDK<String> {
             }
             String strAFLogger = this.i.AFLogger("AF_PREINSTALL_DISABLED");
             if (strAFLogger != null ? Boolean.parseBoolean(strAFLogger) : false) {
-                Map<String, Object> map2 = p8.f5399d;
+                Map<String, Object> map2 = p8.f5472d;
                 Intrinsics.checkNotNullExpressionValue(map2, "");
                 AFj1iSDK.AFLogger(map2).put("preinstall_disabled", Boolean.TRUE);
             }
             AFf1eSDK aFf1eSDK = this.AFKeystoreWrapper;
-            Map<String, Object> map3 = p8.f5399d;
+            Map<String, Object> map3 = p8.f5472d;
             Intrinsics.checkNotNullExpressionValue(map3, "");
             AFe1zSDK aFe1zSDKAFKeystoreWrapper = p8.AFKeystoreWrapper();
             Intrinsics.checkNotNullExpressionValue(aFe1zSDKAFKeystoreWrapper, "");
@@ -169,7 +169,7 @@ public class AFf1tSDK extends AFe1kSDK<String> {
     public void registerClient(@NotNull AFh1pSDK p8) {
         Intrinsics.checkNotNullParameter(p8, "");
         AFg1rSDK aFg1rSDK = this.w;
-        Map<String, Object> map = p8.f5399d;
+        Map<String, Object> map = p8.f5472d;
         Intrinsics.checkNotNullExpressionValue(map, "");
         aFg1rSDK.d(map);
     }
@@ -247,7 +247,7 @@ public class AFf1tSDK extends AFe1kSDK<String> {
     public void e(@NotNull AFh1pSDK p8) {
         Intrinsics.checkNotNullParameter(p8, "");
         AFg1rSDK aFg1rSDK = this.w;
-        Map<String, Object> map = p8.f5399d;
+        Map<String, Object> map = p8.f5472d;
         Intrinsics.checkNotNullExpressionValue(map, "");
         aFg1rSDK.unregisterClient(map);
     }

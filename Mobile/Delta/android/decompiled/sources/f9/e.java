@@ -12,7 +12,7 @@ public final class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final e f16501a = new e();
+    public static final e f17097a = new e();
 
     @NotNull
     public static final f a(@NonNull Context context) {

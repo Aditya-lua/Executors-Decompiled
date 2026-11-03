@@ -27,25 +27,25 @@ import org.xmlpull.v1.XmlPullParserException;
 
 /* JADX INFO: loaded from: classes.dex */
 public class c extends e implements Animatable {
-    public C0493c b;
+    public C0499c b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public Context f28230c;
+    public Context f28449c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public ArgbEvaluator f28231d;
+    public ArgbEvaluator f28450d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public d f28232e;
+    public d f28451e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public Animator.AnimatorListener f28233f;
+    public Animator.AnimatorListener f28452f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public ArrayList<p5.b> f28234g;
+    public ArrayList<p5.b> f28453g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final Drawable.Callback f28235h;
+    public final Drawable.Callback f28454h;
 
     public class a implements Drawable.Callback {
         public a() {
@@ -73,7 +73,7 @@ public class c extends e implements Animatable {
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationEnd(Animator animator) {
-            ArrayList arrayList = new ArrayList(c.this.f28234g);
+            ArrayList arrayList = new ArrayList(c.this.f28453g);
             int size = arrayList.size();
             for (int i10 = 0; i10 < size; i10++) {
                 ((p5.b) arrayList.get(i10)).b(c.this);
@@ -82,7 +82,7 @@ public class c extends e implements Animatable {
 
         @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
         public void onAnimationStart(Animator animator) {
-            ArrayList arrayList = new ArrayList(c.this.f28234g);
+            ArrayList arrayList = new ArrayList(c.this.f28453g);
             int size = arrayList.size();
             for (int i10 = 0; i10 < size; i10++) {
                 ((p5.b) arrayList.get(i10)).c(c.this);
@@ -91,25 +91,25 @@ public class c extends e implements Animatable {
     }
 
     /* JADX INFO: renamed from: p5.c$c, reason: collision with other inner class name */
-    public static class C0493c extends Drawable.ConstantState {
+    public static class C0499c extends Drawable.ConstantState {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public int f28238a;
+        public int f28457a;
         public f b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public AnimatorSet f28239c;
+        public AnimatorSet f28458c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public ArrayList<Animator> f28240d;
+        public ArrayList<Animator> f28459d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public w1.a<Animator, String> f28241e;
+        public w1.a<Animator, String> f28460e;
 
-        public C0493c(Context context, C0493c c0493c, Drawable.Callback callback, Resources resources) {
-            if (c0493c != null) {
-                this.f28238a = c0493c.f28238a;
-                f fVar = c0493c.b;
+        public C0499c(Context context, C0499c c0499c, Drawable.Callback callback, Resources resources) {
+            if (c0499c != null) {
+                this.f28457a = c0499c.f28457a;
+                f fVar = c0499c.b;
                 if (fVar != null) {
                     Drawable.ConstantState constantState = fVar.getConstantState();
                     if (resources != null) {
@@ -120,21 +120,21 @@ public class c extends e implements Animatable {
                     f fVar2 = (f) this.b.mutate();
                     this.b = fVar2;
                     fVar2.setCallback(callback);
-                    this.b.setBounds(c0493c.b.getBounds());
+                    this.b.setBounds(c0499c.b.getBounds());
                     this.b.g(false);
                 }
-                ArrayList<Animator> arrayList = c0493c.f28240d;
+                ArrayList<Animator> arrayList = c0499c.f28459d;
                 if (arrayList != null) {
                     int size = arrayList.size();
-                    this.f28240d = new ArrayList<>(size);
-                    this.f28241e = new w1.a<>(size);
+                    this.f28459d = new ArrayList<>(size);
+                    this.f28460e = new w1.a<>(size);
                     for (int i10 = 0; i10 < size; i10++) {
-                        Animator animator = c0493c.f28240d.get(i10);
+                        Animator animator = c0499c.f28459d.get(i10);
                         Animator animatorClone = animator.clone();
-                        String str = c0493c.f28241e.get(animator);
+                        String str = c0499c.f28460e.get(animator);
                         animatorClone.setTarget(this.b.c(str));
-                        this.f28240d.add(animatorClone);
-                        this.f28241e.put(animatorClone, str);
+                        this.f28459d.add(animatorClone);
+                        this.f28460e.put(animatorClone, str);
                     }
                     a();
                 }
@@ -142,15 +142,15 @@ public class c extends e implements Animatable {
         }
 
         public void a() {
-            if (this.f28239c == null) {
-                this.f28239c = new AnimatorSet();
+            if (this.f28458c == null) {
+                this.f28458c = new AnimatorSet();
             }
-            this.f28239c.playTogether(this.f28240d);
+            this.f28458c.playTogether(this.f28459d);
         }
 
         @Override // android.graphics.drawable.Drawable.ConstantState
         public int getChangingConfigurations() {
-            return this.f28238a;
+            return this.f28457a;
         }
 
         @Override // android.graphics.drawable.Drawable.ConstantState
@@ -171,9 +171,9 @@ public class c extends e implements Animatable {
     public static c a(@NonNull Context context, int i10) {
         c cVar = new c(context);
         Drawable drawableE = h.e(context.getResources(), i10, context.getTheme());
-        cVar.f28243a = drawableE;
-        drawableE.setCallback(cVar.f28235h);
-        cVar.f28232e = new d(cVar.f28243a.getConstantState());
+        cVar.f28462a = drawableE;
+        drawableE.setCallback(cVar.f28454h);
+        cVar.f28451e = new d(cVar.f28462a.getConstantState());
         return cVar;
     }
 
@@ -187,14 +187,14 @@ public class c extends e implements Animatable {
 
     @Override // p5.e, android.graphics.drawable.Drawable
     public void applyTheme(Resources.Theme theme) {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         if (drawable != null) {
             q2.a.a(drawable, theme);
         }
     }
 
     public void b(@NonNull p5.b bVar) {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         if (drawable != null) {
             c((AnimatedVectorDrawable) drawable, bVar);
             return;
@@ -202,22 +202,22 @@ public class c extends e implements Animatable {
         if (bVar == null) {
             return;
         }
-        if (this.f28234g == null) {
-            this.f28234g = new ArrayList<>();
+        if (this.f28453g == null) {
+            this.f28453g = new ArrayList<>();
         }
-        if (this.f28234g.contains(bVar)) {
+        if (this.f28453g.contains(bVar)) {
             return;
         }
-        this.f28234g.add(bVar);
-        if (this.f28233f == null) {
-            this.f28233f = new b();
+        this.f28453g.add(bVar);
+        if (this.f28452f == null) {
+            this.f28452f = new b();
         }
-        this.b.f28239c.addListener(this.f28233f);
+        this.b.f28458c.addListener(this.f28452f);
     }
 
     @Override // android.graphics.drawable.Drawable
     public boolean canApplyTheme() {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         if (drawable != null) {
             return q2.a.b(drawable);
         }
@@ -230,48 +230,48 @@ public class c extends e implements Animatable {
     }
 
     public final void d() {
-        Animator.AnimatorListener animatorListener = this.f28233f;
+        Animator.AnimatorListener animatorListener = this.f28452f;
         if (animatorListener != null) {
-            this.b.f28239c.removeListener(animatorListener);
-            this.f28233f = null;
+            this.b.f28458c.removeListener(animatorListener);
+            this.f28452f = null;
         }
     }
 
     @Override // android.graphics.drawable.Drawable
     public void draw(Canvas canvas) {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         if (drawable != null) {
             drawable.draw(canvas);
             return;
         }
         this.b.b.draw(canvas);
-        if (this.b.f28239c.isStarted()) {
+        if (this.b.f28458c.isStarted()) {
             invalidateSelf();
         }
     }
 
     public final void e(String str, Animator animator) {
         animator.setTarget(this.b.b.c(str));
-        C0493c c0493c = this.b;
-        if (c0493c.f28240d == null) {
-            c0493c.f28240d = new ArrayList<>();
-            this.b.f28241e = new w1.a<>();
+        C0499c c0499c = this.b;
+        if (c0499c.f28459d == null) {
+            c0499c.f28459d = new ArrayList<>();
+            this.b.f28460e = new w1.a<>();
         }
-        this.b.f28240d.add(animator);
-        this.b.f28241e.put(animator, str);
+        this.b.f28459d.add(animator);
+        this.b.f28460e.put(animator, str);
     }
 
     public boolean f(@NonNull p5.b bVar) {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         if (drawable != null) {
             g((AnimatedVectorDrawable) drawable, bVar);
         }
-        ArrayList<p5.b> arrayList = this.f28234g;
+        ArrayList<p5.b> arrayList = this.f28453g;
         if (arrayList == null || bVar == null) {
             return false;
         }
         boolean zRemove = arrayList.remove(bVar);
-        if (this.f28234g.size() == 0) {
+        if (this.f28453g.size() == 0) {
             d();
         }
         return zRemove;
@@ -279,26 +279,26 @@ public class c extends e implements Animatable {
 
     @Override // android.graphics.drawable.Drawable
     public int getAlpha() {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         return drawable != null ? q2.a.d(drawable) : this.b.b.getAlpha();
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getChangingConfigurations() {
-        Drawable drawable = this.f28243a;
-        return drawable != null ? drawable.getChangingConfigurations() : super.getChangingConfigurations() | this.b.f28238a;
+        Drawable drawable = this.f28462a;
+        return drawable != null ? drawable.getChangingConfigurations() : super.getChangingConfigurations() | this.b.f28457a;
     }
 
     @Override // android.graphics.drawable.Drawable
     public ColorFilter getColorFilter() {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         return drawable != null ? q2.a.e(drawable) : this.b.b.getColorFilter();
     }
 
     @Override // android.graphics.drawable.Drawable
     public Drawable.ConstantState getConstantState() {
-        if (this.f28243a != null) {
-            return new d(this.f28243a.getConstantState());
+        if (this.f28462a != null) {
+            return new d(this.f28462a.getConstantState());
         }
         return null;
     }
@@ -310,13 +310,13 @@ public class c extends e implements Animatable {
 
     @Override // android.graphics.drawable.Drawable
     public int getIntrinsicHeight() {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         return drawable != null ? drawable.getIntrinsicHeight() : this.b.b.getIntrinsicHeight();
     }
 
     @Override // android.graphics.drawable.Drawable
     public int getIntrinsicWidth() {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         return drawable != null ? drawable.getIntrinsicWidth() : this.b.b.getIntrinsicWidth();
     }
 
@@ -332,7 +332,7 @@ public class c extends e implements Animatable {
 
     @Override // android.graphics.drawable.Drawable
     public int getOpacity() {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         return drawable != null ? drawable.getOpacity() : this.b.b.getOpacity();
     }
 
@@ -353,7 +353,7 @@ public class c extends e implements Animatable {
 
     @Override // android.graphics.drawable.Drawable
     public void inflate(Resources resources, XmlPullParser xmlPullParser, AttributeSet attributeSet, Resources.Theme theme) throws XmlPullParserException, IOException {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         if (drawable != null) {
             q2.a.g(drawable, resources, xmlPullParser, attributeSet, theme);
             return;
@@ -364,12 +364,12 @@ public class c extends e implements Animatable {
             if (eventType == 2) {
                 String name = xmlPullParser.getName();
                 if ("animated-vector".equals(name)) {
-                    TypedArray typedArrayI = k.i(resources, theme, attributeSet, p5.a.f28220e);
+                    TypedArray typedArrayI = k.i(resources, theme, attributeSet, p5.a.f28439e);
                     int resourceId = typedArrayI.getResourceId(0, 0);
                     if (resourceId != 0) {
                         f fVarB = f.b(resources, resourceId, theme);
                         fVarB.g(false);
-                        fVarB.setCallback(this.f28235h);
+                        fVarB.setCallback(this.f28454h);
                         f fVar = this.b.b;
                         if (fVar != null) {
                             fVar.setCallback(null);
@@ -378,11 +378,11 @@ public class c extends e implements Animatable {
                     }
                     typedArrayI.recycle();
                 } else if ("target".equals(name)) {
-                    TypedArray typedArrayObtainAttributes = resources.obtainAttributes(attributeSet, p5.a.f28221f);
+                    TypedArray typedArrayObtainAttributes = resources.obtainAttributes(attributeSet, p5.a.f28440f);
                     String string = typedArrayObtainAttributes.getString(0);
                     int resourceId2 = typedArrayObtainAttributes.getResourceId(1, 0);
                     if (resourceId2 != 0) {
-                        Context context = this.f28230c;
+                        Context context = this.f28449c;
                         if (context == null) {
                             typedArrayObtainAttributes.recycle();
                             throw new IllegalStateException("Context can't be null when inflating animators");
@@ -401,19 +401,19 @@ public class c extends e implements Animatable {
 
     @Override // android.graphics.drawable.Drawable
     public boolean isAutoMirrored() {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         return drawable != null ? q2.a.h(drawable) : this.b.b.isAutoMirrored();
     }
 
     @Override // android.graphics.drawable.Animatable
     public boolean isRunning() {
-        Drawable drawable = this.f28243a;
-        return drawable != null ? ((AnimatedVectorDrawable) drawable).isRunning() : this.b.f28239c.isRunning();
+        Drawable drawable = this.f28462a;
+        return drawable != null ? ((AnimatedVectorDrawable) drawable).isRunning() : this.b.f28458c.isRunning();
     }
 
     @Override // android.graphics.drawable.Drawable
     public boolean isStateful() {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         return drawable != null ? drawable.isStateful() : this.b.b.isStateful();
     }
 
@@ -424,7 +424,7 @@ public class c extends e implements Animatable {
 
     @Override // android.graphics.drawable.Drawable
     public Drawable mutate() {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         if (drawable != null) {
             drawable.mutate();
         }
@@ -433,7 +433,7 @@ public class c extends e implements Animatable {
 
     @Override // android.graphics.drawable.Drawable
     public void onBoundsChange(Rect rect) {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         if (drawable != null) {
             drawable.setBounds(rect);
         } else {
@@ -443,19 +443,19 @@ public class c extends e implements Animatable {
 
     @Override // p5.e, android.graphics.drawable.Drawable
     public boolean onLevelChange(int i10) {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         return drawable != null ? drawable.setLevel(i10) : this.b.b.setLevel(i10);
     }
 
     @Override // android.graphics.drawable.Drawable
     public boolean onStateChange(int[] iArr) {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         return drawable != null ? drawable.setState(iArr) : this.b.b.setState(iArr);
     }
 
     @Override // android.graphics.drawable.Drawable
     public void setAlpha(int i10) {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         if (drawable != null) {
             drawable.setAlpha(i10);
         } else {
@@ -465,7 +465,7 @@ public class c extends e implements Animatable {
 
     @Override // android.graphics.drawable.Drawable
     public void setAutoMirrored(boolean z10) {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         if (drawable != null) {
             q2.a.j(drawable, z10);
         } else {
@@ -505,7 +505,7 @@ public class c extends e implements Animatable {
 
     @Override // android.graphics.drawable.Drawable
     public void setTint(int i10) {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         if (drawable != null) {
             q2.a.n(drawable, i10);
         } else {
@@ -515,7 +515,7 @@ public class c extends e implements Animatable {
 
     @Override // android.graphics.drawable.Drawable
     public void setTintList(ColorStateList colorStateList) {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         if (drawable != null) {
             q2.a.o(drawable, colorStateList);
         } else {
@@ -525,7 +525,7 @@ public class c extends e implements Animatable {
 
     @Override // android.graphics.drawable.Drawable
     public void setTintMode(PorterDuff.Mode mode) {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         if (drawable != null) {
             q2.a.p(drawable, mode);
         } else {
@@ -535,7 +535,7 @@ public class c extends e implements Animatable {
 
     @Override // android.graphics.drawable.Drawable
     public boolean setVisible(boolean z10, boolean z11) {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         if (drawable != null) {
             return drawable.setVisible(z10, z11);
         }
@@ -545,25 +545,25 @@ public class c extends e implements Animatable {
 
     @Override // android.graphics.drawable.Animatable
     public void start() {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         if (drawable != null) {
             ((AnimatedVectorDrawable) drawable).start();
         } else {
-            if (this.b.f28239c.isStarted()) {
+            if (this.b.f28458c.isStarted()) {
                 return;
             }
-            this.b.f28239c.start();
+            this.b.f28458c.start();
             invalidateSelf();
         }
     }
 
     @Override // android.graphics.drawable.Animatable
     public void stop() {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         if (drawable != null) {
             ((AnimatedVectorDrawable) drawable).stop();
         } else {
-            this.b.f28239c.end();
+            this.b.f28458c.end();
         }
     }
 
@@ -573,7 +573,7 @@ public class c extends e implements Animatable {
 
     @Override // android.graphics.drawable.Drawable
     public void setColorFilter(ColorFilter colorFilter) {
-        Drawable drawable = this.f28243a;
+        Drawable drawable = this.f28462a;
         if (drawable != null) {
             drawable.setColorFilter(colorFilter);
         } else {
@@ -584,61 +584,61 @@ public class c extends e implements Animatable {
     public static class d extends Drawable.ConstantState {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final Drawable.ConstantState f28242a;
+        public final Drawable.ConstantState f28461a;
 
         public d(Drawable.ConstantState constantState) {
-            this.f28242a = constantState;
+            this.f28461a = constantState;
         }
 
         @Override // android.graphics.drawable.Drawable.ConstantState
         public boolean canApplyTheme() {
-            return this.f28242a.canApplyTheme();
+            return this.f28461a.canApplyTheme();
         }
 
         @Override // android.graphics.drawable.Drawable.ConstantState
         public int getChangingConfigurations() {
-            return this.f28242a.getChangingConfigurations();
+            return this.f28461a.getChangingConfigurations();
         }
 
         @Override // android.graphics.drawable.Drawable.ConstantState
         public Drawable newDrawable() {
             c cVar = new c();
-            Drawable drawableNewDrawable = this.f28242a.newDrawable();
-            cVar.f28243a = drawableNewDrawable;
-            drawableNewDrawable.setCallback(cVar.f28235h);
+            Drawable drawableNewDrawable = this.f28461a.newDrawable();
+            cVar.f28462a = drawableNewDrawable;
+            drawableNewDrawable.setCallback(cVar.f28454h);
             return cVar;
         }
 
         @Override // android.graphics.drawable.Drawable.ConstantState
         public Drawable newDrawable(Resources resources) {
             c cVar = new c();
-            Drawable drawableNewDrawable = this.f28242a.newDrawable(resources);
-            cVar.f28243a = drawableNewDrawable;
-            drawableNewDrawable.setCallback(cVar.f28235h);
+            Drawable drawableNewDrawable = this.f28461a.newDrawable(resources);
+            cVar.f28462a = drawableNewDrawable;
+            drawableNewDrawable.setCallback(cVar.f28454h);
             return cVar;
         }
 
         @Override // android.graphics.drawable.Drawable.ConstantState
         public Drawable newDrawable(Resources resources, Resources.Theme theme) {
             c cVar = new c();
-            Drawable drawableNewDrawable = this.f28242a.newDrawable(resources, theme);
-            cVar.f28243a = drawableNewDrawable;
-            drawableNewDrawable.setCallback(cVar.f28235h);
+            Drawable drawableNewDrawable = this.f28461a.newDrawable(resources, theme);
+            cVar.f28462a = drawableNewDrawable;
+            drawableNewDrawable.setCallback(cVar.f28454h);
             return cVar;
         }
     }
 
-    public c(Context context, C0493c c0493c, Resources resources) {
-        this.f28231d = null;
-        this.f28233f = null;
-        this.f28234g = null;
+    public c(Context context, C0499c c0499c, Resources resources) {
+        this.f28450d = null;
+        this.f28452f = null;
+        this.f28453g = null;
         a aVar = new a();
-        this.f28235h = aVar;
-        this.f28230c = context;
-        if (c0493c != null) {
-            this.b = c0493c;
+        this.f28454h = aVar;
+        this.f28449c = context;
+        if (c0499c != null) {
+            this.b = c0499c;
         } else {
-            this.b = new C0493c(context, c0493c, aVar, resources);
+            this.b = new C0499c(context, c0499c, aVar, resources);
         }
     }
 

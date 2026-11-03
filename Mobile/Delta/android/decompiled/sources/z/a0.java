@@ -14,63 +14,63 @@ import java.util.Set;
 public final class a0 implements n0.n0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f36423a;
+    public final Context f37118a;
     public final h0.a b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final n0.h1 f36424c;
+    public final n0.h1 f37119c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final n0.g1 f36425d;
+    public final n0.g1 f37120d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final a0.p0 f36426e;
+    public final a0.p0 f37121e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final q3 f36427f;
+    public final q3 f37122f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final long f36428g;
+    public final long f37123g;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final s0.m f36430i;
+    public final s0.m f37125i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final g0.g0 f36431j;
+    public final g0.g0 f37126j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final q2 f36432k;
+    public final q2 f37127k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final g0.v f36433l;
+    public final g0.v f37128l;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final Map<String, z0> f36429h = new HashMap();
+    public final Map<String, z0> f37124h = new HashMap();
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final Object f36434m = new Object();
+    public final Object f37129m = new Object();
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public List<String> f36435n = new ArrayList();
+    public List<String> f37130n = new ArrayList();
 
     public a0(Context context, n0.h1 h1Var, g0.v vVar, long j10, g0.g0 g0Var, s0.m mVar) throws g0.p1 {
-        this.f36423a = context;
-        this.f36424c = h1Var;
+        this.f37118a = context;
+        this.f37119c = h1Var;
         a0.p0 p0VarB = a0.p0.b(context, h1Var.c());
-        this.f36426e = p0VarB;
-        this.f36427f = q3.c(context);
+        this.f37121e = p0VarB;
+        this.f37122f = q3.c(context);
         e0.a aVar = new e0.a(p0VarB);
         this.b = aVar;
         n0.g1 g1Var = new n0.g1(aVar, 1);
-        this.f36425d = g1Var;
+        this.f37120d = g1Var;
         aVar.c(g1Var);
-        this.f36428g = j10;
-        this.f36430i = mVar;
-        this.f36431j = g0Var;
-        this.f36433l = vVar;
+        this.f37123g = j10;
+        this.f37125i = mVar;
+        this.f37126j = g0Var;
+        this.f37128l = vVar;
         try {
             List<String> listAsList = Arrays.asList(p0VarB.d());
-            this.f36432k = new q2(listAsList, p0VarB, h1Var.b());
+            this.f37127k = new q2(listAsList, p0VarB, h1Var.b());
             e(listAsList);
         } catch (a0.f e10) {
             throw new g0.p1(a3.a(e10));
@@ -79,24 +79,24 @@ public final class a0 implements n0.n0 {
 
     @Override // n0.n0
     public n0.p0 b(String str) {
-        synchronized (this.f36434m) {
-            if (!this.f36435n.contains(str)) {
+        synchronized (this.f37129m) {
+            if (!this.f37130n.contains(str)) {
                 throw new IllegalArgumentException("The given camera id is not on the available camera id list.");
             }
         }
-        return new u0(this.f36423a, this.f36426e, str, h(str), this.b, this.f36425d, this.f36424c.b(), this.f36424c.c(), this.f36427f, this.f36428g, this.f36431j);
+        return new u0(this.f37118a, this.f37121e, str, h(str), this.b, this.f37120d, this.f37119c.b(), this.f37119c.c(), this.f37122f, this.f37123g, this.f37126j);
     }
 
     @Override // n0.n0
     public n0.a3<List<g0.s>> c() {
-        return this.f36432k;
+        return this.f37127k;
     }
 
     @Override // n0.n0
     public Set<String> d() {
         LinkedHashSet linkedHashSet;
-        synchronized (this.f36434m) {
-            linkedHashSet = new LinkedHashSet(this.f36435n);
+        synchronized (this.f37129m) {
+            linkedHashSet = new LinkedHashSet(this.f37130n);
         }
         return linkedHashSet;
     }
@@ -104,14 +104,14 @@ public final class a0 implements n0.n0 {
     @Override // n0.r0
     public void e(List<String> list) throws g0.p1 {
         try {
-            List<String> listG = g(y2.b(this, this.f36433l, new ArrayList(list)));
-            synchronized (this.f36434m) {
+            List<String> listG = g(y2.b(this, this.f37128l, new ArrayList(list)));
+            synchronized (this.f37129m) {
                 try {
-                    if (this.f36435n.equals(listG)) {
+                    if (this.f37130n.equals(listG)) {
                         return;
                     }
-                    g0.r1.a("Camera2CameraFactory", "Updated available camera list: " + this.f36435n + " -> " + listG);
-                    this.f36435n = listG;
+                    g0.r1.a("Camera2CameraFactory", "Updated available camera list: " + this.f37130n + " -> " + listG);
+                    this.f37130n = listG;
                 } catch (Throwable th2) {
                     throw th2;
                 }
@@ -132,7 +132,7 @@ public final class a0 implements n0.n0 {
         for (String str : list) {
             if (str.equals("0") || str.equals("1")) {
                 arrayList.add(str);
-            } else if (x2.a(this.f36426e, str)) {
+            } else if (x2.a(this.f37121e, str)) {
                 arrayList.add(str);
             } else {
                 g0.r1.a("Camera2CameraFactory", "Camera " + str + " is filtered out because its capabilities do not contain REQUEST_AVAILABLE_CAPABILITIES_BACKWARD_COMPATIBLE.");
@@ -143,12 +143,12 @@ public final class a0 implements n0.n0 {
 
     public z0 h(String str) throws g0.x {
         try {
-            z0 z0Var = this.f36429h.get(str);
+            z0 z0Var = this.f37124h.get(str);
             if (z0Var != null) {
                 return z0Var;
             }
-            z0 z0Var2 = new z0(str, this.f36426e, this.f36430i);
-            this.f36429h.put(str, z0Var2);
+            z0 z0Var2 = new z0(str, this.f37121e, this.f37125i);
+            this.f37124h.put(str, z0Var2);
             return z0Var2;
         } catch (a0.f e10) {
             throw a3.a(e10);
@@ -158,12 +158,12 @@ public final class a0 implements n0.n0 {
     @Override // n0.n0
     /* JADX INFO: renamed from: i, reason: merged with bridge method [inline-methods] */
     public a0.p0 a() {
-        return this.f36426e;
+        return this.f37121e;
     }
 
     @Override // n0.n0
     public void shutdown() {
         this.b.shutdown();
-        this.f36432k.h();
+        this.f37127k.h();
     }
 }

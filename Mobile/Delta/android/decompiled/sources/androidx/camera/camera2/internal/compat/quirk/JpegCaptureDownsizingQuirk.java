@@ -13,9 +13,9 @@ import java.util.Set;
 public class JpegCaptureDownsizingQuirk implements SoftwareJpegEncodingPreferredQuirk {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Set<String> f1340a = new HashSet(Arrays.asList("redmi note 8 pro"));
+    public static final Set<String> f1185a = new HashSet(Arrays.asList("redmi note 8 pro"));
 
     public static boolean g(c0 c0Var) {
-        return f1340a.contains(Build.MODEL.toLowerCase(Locale.US)) && ((Integer) c0Var.a(CameraCharacteristics.LENS_FACING)).intValue() == 0;
+        return f1185a.contains(Build.MODEL.toLowerCase(Locale.US)) && ((Integer) c0Var.a(CameraCharacteristics.LENS_FACING)).intValue() == 0;
     }
 }

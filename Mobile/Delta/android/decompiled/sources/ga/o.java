@@ -14,31 +14,31 @@ import java.util.concurrent.atomic.AtomicReference;
 public final class o {
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final AtomicReference f17966g = new AtomicReference();
+    public static final AtomicReference f18505g = new AtomicReference();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Application f17967a;
+    public final Application f18506a;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public WeakReference f17970e;
+    public WeakReference f18509e;
     public final Application.ActivityLifecycleCallbacks b = new n(this, null);
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Object f17968c = new Object();
+    public final Object f18507c = new Object();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Set f17969d = Collections.newSetFromMap(new WeakHashMap());
+    public final Set f18508d = Collections.newSetFromMap(new WeakHashMap());
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public boolean f17971f = false;
+    public boolean f18510f = false;
 
     public o(Application application) {
-        this.f17967a = application;
+        this.f18506a = application;
     }
 
     public static o a(Application application) {
         n9.m.l(application);
-        AtomicReference atomicReference = f17966g;
+        AtomicReference atomicReference = f18505g;
         o oVar = (o) atomicReference.get();
         if (oVar != null) {
             return oVar;
@@ -48,11 +48,11 @@ public final class o {
     }
 
     public final void b() {
-        synchronized (this.f17968c) {
+        synchronized (this.f18507c) {
             try {
-                if (!this.f17971f) {
-                    this.f17967a.registerActivityLifecycleCallbacks(this.b);
-                    this.f17971f = true;
+                if (!this.f18510f) {
+                    this.f18506a.registerActivityLifecycleCallbacks(this.b);
+                    this.f18510f = true;
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -62,16 +62,16 @@ public final class o {
 
     public final void c(final l lVar) {
         n9.m.l(lVar);
-        synchronized (this.f17968c) {
-            this.f17969d.add(lVar);
+        synchronized (this.f18507c) {
+            this.f18508d.add(lVar);
         }
         if (Looper.myLooper() == Looper.getMainLooper()) {
             e(lVar);
         } else {
-            sb.l.f30589a.execute(new Runnable() { // from class: ga.m
+            sb.l.f31136a.execute(new Runnable() { // from class: ga.m
                 @Override // java.lang.Runnable
                 public final /* synthetic */ void run() {
-                    this.f17964a.e(lVar);
+                    this.f18503a.e(lVar);
                 }
             });
         }
@@ -79,8 +79,8 @@ public final class o {
 
     public final Activity d() {
         Activity activity;
-        synchronized (this.f17968c) {
-            WeakReference weakReference = this.f17970e;
+        synchronized (this.f18507c) {
+            WeakReference weakReference = this.f18509e;
             activity = weakReference == null ? null : (Activity) weakReference.get();
         }
         return activity;
@@ -88,13 +88,13 @@ public final class o {
 
     public final /* synthetic */ void f(Activity activity) {
         n9.m.l(activity);
-        synchronized (this.f17968c) {
+        synchronized (this.f18507c) {
             try {
                 if (d() == activity) {
                     return;
                 }
-                this.f17970e = new WeakReference(activity);
-                Iterator it = this.f17969d.iterator();
+                this.f18509e = new WeakReference(activity);
+                Iterator it = this.f18508d.iterator();
                 while (it.hasNext()) {
                     ((l) it.next()).a(activity);
                 }
@@ -105,14 +105,14 @@ public final class o {
     }
 
     public final /* synthetic */ void g(Activity activity) {
-        synchronized (this.f17968c) {
+        synchronized (this.f18507c) {
             try {
-                WeakReference weakReference = this.f17970e;
+                WeakReference weakReference = this.f18509e;
                 if (weakReference == null) {
                     return;
                 }
                 if (weakReference.get() == activity) {
-                    this.f17970e = null;
+                    this.f18509e = null;
                 }
             } catch (Throwable th2) {
                 throw th2;

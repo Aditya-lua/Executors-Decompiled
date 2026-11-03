@@ -50,7 +50,7 @@ public final class AFe1fSDK extends AFe1kSDK<DdlResponse> {
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
     @NotNull
-    private final AFa1oSDK f5309v;
+    private final AFa1oSDK f5382v;
 
     @NotNull
     private final List<Referrer> valueOf;
@@ -89,7 +89,7 @@ public final class AFe1fSDK extends AFe1kSDK<DdlResponse> {
         super(AFd1bSDK.DLSDK, new AFe1zSDK[]{AFd1bSDK.RC_CDN, AFd1bSDK.FETCH_ADVERTISING_ID}, aFc1bSDK, "DdlSdk");
         Intrinsics.checkNotNullParameter(aFc1bSDK, "");
         int i10 = 0;
-        this.f5309v = new AFa1oSDK();
+        this.f5382v = new AFa1oSDK();
         AFc1iSDK aFc1iSDKAFLogger = aFc1bSDK.AFLogger();
         Intrinsics.checkNotNullExpressionValue(aFc1iSDKAFLogger, "");
         this.force = aFc1iSDKAFLogger;
@@ -196,11 +196,11 @@ public final class AFe1fSDK extends AFe1kSDK<DdlResponse> {
                 AFLogger.INSTANCE.e(LogTag.DDL, "Unexpected ddl requestCount - end", new IllegalStateException("Metrics: Unexpected ddl requestCount = ".concat(String.valueOf(i10))), false, false);
             } else {
                 int i11 = i10 - 1;
-                aFh1xSDK.f5412v[i11] = System.currentTimeMillis();
+                aFh1xSDK.f5485v[i11] = System.currentTimeMillis();
                 long j10 = aFh1xSDK.force[i11];
                 if (j10 != 0) {
-                    long[] jArr = aFh1xSDK.f5413w;
-                    jArr[i11] = aFh1xSDK.f5412v[i11] - j10;
+                    long[] jArr = aFh1xSDK.f5486w;
+                    jArr[i11] = aFh1xSDK.f5485v[i11] - j10;
                     aFh1xSDK.registerClient.put("net", jArr);
                 } else {
                     AFLogger aFLogger = AFLogger.INSTANCE;
@@ -238,15 +238,15 @@ public final class AFe1fSDK extends AFe1kSDK<DdlResponse> {
                 return aFd1cSDKRegisterClient;
             }
             if (this.afWarnLog <= 1 && ddlResponse.secondPing) {
-                Object obj = this.f5309v.f5399d.get(Payload.RFRS);
+                Object obj = this.f5382v.f5472d.get(Payload.RFRS);
                 List list = obj instanceof List ? (List) obj : null;
-                if ((list != null ? list.size() : 0) < this.AppsFlyerLib && !this.f5309v.f5399d.containsKey(Payload.RFRS)) {
+                if ((list != null ? list.size() : 0) < this.AppsFlyerLib && !this.f5382v.f5472d.containsKey(Payload.RFRS)) {
                     AFLogger aFLogger3 = AFLogger.INSTANCE;
                     AFLoggerBase.d$default(aFLogger3, LogTag.DDL, "Waiting for referrers...", false, 4, null);
                     this.getLevel.await();
                     AFh1xSDK aFh1xSDK2 = this.afDebugLog;
                     long jCurrentTimeMillis = System.currentTimeMillis();
-                    long j11 = aFh1xSDK2.f5412v[0];
+                    long j11 = aFh1xSDK2.f5485v[0];
                     if (j11 != 0) {
                         aFh1xSDK2.registerClient.put("rfr_wait", Long.valueOf(jCurrentTimeMillis - j11));
                     } else {
@@ -302,7 +302,7 @@ public final class AFe1fSDK extends AFe1kSDK<DdlResponse> {
         int i10 = this.afWarnLog + 1;
         this.afWarnLog = i10;
         AFLoggerBase.d$default(AFLogger.INSTANCE, LogTag.DDL, "Preparing request " + i10, false, 4, null);
-        Map<String, Object> map = this.f5309v.f5399d;
+        Map<String, Object> map = this.f5382v.f5472d;
         if (this.afWarnLog == 1) {
             map.put("is_first", Boolean.valueOf(this.force.AFKeystoreWrapper.AFLogger("appsFlyerCount", 0) == 0));
             Locale locale = Locale.getDefault();
@@ -310,7 +310,7 @@ public final class AFe1fSDK extends AFe1kSDK<DdlResponse> {
             map.put("os", Build.VERSION.RELEASE);
             map.put(Payload.TYPE, Build.MODEL);
             map.put("request_id", AFb1jSDK.AFLogger(this.force.AFKeystoreWrapper));
-            AFb1rSDK aFb1rSDK = this.afInfoLog.f5251w;
+            AFb1rSDK aFb1rSDK = this.afInfoLog.f5324w;
             if (aFb1rSDK != null && (strArr = aFb1rSDK.AFKeystoreWrapper) != null) {
                 map.put("sharing_filter", strArr);
             }
@@ -319,7 +319,7 @@ public final class AFe1fSDK extends AFe1kSDK<DdlResponse> {
             if (mapUnregisterClient != null) {
                 map.put("gaid", mapUnregisterClient);
             }
-            Map<String, String> mapUnregisterClient2 = unregisterClient(AFb1iSDK.unregisterClient(this.force.f5258d.f5305d));
+            Map<String, String> mapUnregisterClient2 = unregisterClient(AFb1iSDK.unregisterClient(this.force.f5331d.f5378d));
             if (mapUnregisterClient2 != null) {
                 map.put("oaid", mapUnregisterClient2);
             }
@@ -338,7 +338,7 @@ public final class AFe1fSDK extends AFe1kSDK<DdlResponse> {
                 if (str2 != null) {
                     Object obj2 = referrer.map.get(Payload.SOURCE);
                     Intrinsics.d(obj2, "");
-                    mapM = kotlin.collections.k0.m(jt.s.a(Payload.SOURCE, (String) obj2), jt.s.a("value", str2));
+                    mapM = kotlin.collections.k0.m(gt.s.a(Payload.SOURCE, (String) obj2), gt.s.a("value", str2));
                 } else {
                     mapM = null;
                 }
@@ -352,13 +352,13 @@ public final class AFe1fSDK extends AFe1kSDK<DdlResponse> {
         if (!arrayList.isEmpty()) {
             map.put(Payload.RFRS, arrayList);
         }
-        AFa1oSDK aFa1oSDK = this.f5309v;
+        AFa1oSDK aFa1oSDK = this.f5382v;
         AFj1mSDK aFj1mSDK = new AFj1mSDK(this.force);
         AFf1fSDK aFf1fSDKAfInfoLog = getUnregisterClient();
         String str3 = (String) AFf1fSDK.unregisterClient(new Object[]{aFf1fSDKAfInfoLog}, -1660886869, 1660886871, System.identityHashCode(aFf1fSDKAfInfoLog));
-        Object obj3 = this.f5309v.f5399d.get("timestamp");
+        Object obj3 = this.f5382v.f5472d.get("timestamp");
         Intrinsics.d(obj3, "");
-        aFa1oSDK.f5401i = aFj1mSDK.AFLogger(str3, (String) obj3);
+        aFa1oSDK.f5474i = aFj1mSDK.AFLogger(str3, (String) obj3);
         AFh1xSDK aFh1xSDK = this.afDebugLog;
         int i11 = this.afWarnLog;
         if (i11 <= 0 || i11 > 2) {
@@ -367,7 +367,7 @@ public final class AFe1fSDK extends AFe1kSDK<DdlResponse> {
             int i12 = i11 - 1;
             aFh1xSDK.force[i12] = System.currentTimeMillis();
             if (i12 == 0) {
-                long j10 = aFh1xSDK.f5410e;
+                long j10 = aFh1xSDK.f5483e;
                 if (j10 != 0) {
                     aFh1xSDK.registerClient.put("from_fg", Long.valueOf(aFh1xSDK.force[i12] - j10));
                 } else {
@@ -376,7 +376,7 @@ public final class AFe1fSDK extends AFe1kSDK<DdlResponse> {
             }
         }
         AFd1sSDK aFd1sSDKAfDebugLog = getD();
-        AFd1pSDK<DdlResponse> aFd1pSDK = (AFd1pSDK) AFd1sSDK.d(new Object[]{aFd1sSDKAfDebugLog, this.f5309v}, 232910799, -232910798, System.identityHashCode(aFd1sSDKAfDebugLog));
+        AFd1pSDK<DdlResponse> aFd1pSDK = (AFd1pSDK) AFd1sSDK.d(new Object[]{aFd1sSDKAfDebugLog, this.f5382v}, 232910799, -232910798, System.identityHashCode(aFd1sSDKAfDebugLog));
         Intrinsics.checkNotNullExpressionValue(aFd1pSDK, "");
         return aFd1pSDK;
     }
@@ -394,12 +394,12 @@ public final class AFe1fSDK extends AFe1kSDK<DdlResponse> {
 
     private static Map<String, String> unregisterClient(AFb1lSDK aFb1lSDK) {
         String str;
-        if (aFb1lSDK == null || (str = aFb1lSDK.f5235d) == null) {
+        if (aFb1lSDK == null || (str = aFb1lSDK.f5308d) == null) {
             return null;
         }
         Boolean bool = aFb1lSDK.AFLogger;
         if (bool == null || !bool.booleanValue()) {
-            return kotlin.collections.k0.m(jt.s.a(Payload.TYPE, "unhashed"), jt.s.a("value", str));
+            return kotlin.collections.k0.m(gt.s.a(Payload.TYPE, "unhashed"), gt.s.a("value", str));
         }
         return null;
     }

@@ -35,80 +35,80 @@ public final class g5 {
     public final j0.a D;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final String f36561k;
+    public final String f37256k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final g f36562l;
+    public final g f37257l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final a0.c0 f36563m;
+    public final a0.c0 f37258m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public final d0.f f36564n;
+    public final d0.f f37259n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public final int f36565o;
+    public final int f37260o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public boolean f36566p;
+    public boolean f37261p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public boolean f36567q;
+    public boolean f37262q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public final boolean f36568r;
+    public final boolean f37263r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public final boolean f36569s;
+    public final boolean f37264s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public boolean f36570t;
+    public boolean f37265t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public boolean f36571u;
+    public boolean f37266u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public final boolean f36572v;
+    public final boolean f37267v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public n0.x3 f36573w;
+    public n0.x3 f37268w;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public final q3 f36575y;
+    public final q3 f37270y;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final List<n0.v3> f36552a = new ArrayList();
+    public final List<n0.v3> f37247a = new ArrayList();
     public final List<n0.v3> b = new ArrayList();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final List<n0.v3> f36553c = new ArrayList();
+    public final List<n0.v3> f37248c = new ArrayList();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final List<n0.v3> f36554d = new ArrayList();
+    public final List<n0.v3> f37249d = new ArrayList();
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final List<n0.v3> f36555e = new ArrayList();
+    public final List<n0.v3> f37250e = new ArrayList();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final List<n0.v3> f36556f = new ArrayList();
+    public final List<n0.v3> f37251f = new ArrayList();
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final Map<d, List<n0.v3>> f36557g = new HashMap();
+    public final Map<d, List<n0.v3>> f37252g = new HashMap();
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final List<n0.v3> f36558h = new ArrayList();
+    public final List<n0.v3> f37253h = new ArrayList();
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final List<n0.v3> f36559i = new ArrayList();
+    public final List<n0.v3> f37254i = new ArrayList();
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final List<n0.v3> f36560j = new ArrayList();
+    public final List<n0.v3> f37255j = new ArrayList();
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public List<Integer> f36574x = new ArrayList();
+    public List<Integer> f37269x = new ArrayList();
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public final d0.x f36576z = new d0.x();
+    public final d0.x f37271z = new d0.x();
     public final d0.t A = new d0.t();
 
     public static class a {
@@ -166,56 +166,56 @@ public final class g5 {
     }
 
     public g5(Context context, String str, a0.p0 p0Var, g gVar, j0.a aVar) throws g0.x {
-        this.f36566p = false;
-        this.f36567q = false;
-        this.f36570t = false;
-        this.f36571u = false;
+        this.f37261p = false;
+        this.f37262q = false;
+        this.f37265t = false;
+        this.f37266u = false;
         String str2 = (String) x2.g.g(str);
-        this.f36561k = str2;
-        this.f36562l = (g) x2.g.g(gVar);
-        this.f36564n = new d0.f();
-        this.f36575y = q3.c(context);
+        this.f37256k = str2;
+        this.f37257l = (g) x2.g.g(gVar);
+        this.f37259n = new d0.f();
+        this.f37270y = q3.c(context);
         try {
             a0.c0 c0VarC = p0Var.c(str2);
-            this.f36563m = c0VarC;
+            this.f37258m = c0VarC;
             Integer num = (Integer) c0VarC.a(CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL);
-            this.f36565o = num != null ? num.intValue() : 2;
+            this.f37260o = num != null ? num.intValue() : 2;
             int[] iArr = (int[]) c0VarC.a(CameraCharacteristics.REQUEST_AVAILABLE_CAPABILITIES);
             if (iArr != null) {
                 for (int i10 : iArr) {
                     if (i10 == 3) {
-                        this.f36566p = true;
+                        this.f37261p = true;
                     } else if (i10 == 6) {
-                        this.f36567q = true;
+                        this.f37262q = true;
                     } else if (Build.VERSION.SDK_INT >= 31 && i10 == 16) {
-                        this.f36570t = true;
+                        this.f37265t = true;
                     } else if (i10 == 1) {
-                        this.f36571u = true;
+                        this.f37266u = true;
                     }
                 }
             }
-            r3 r3Var = new r3(this.f36563m);
+            r3 r3Var = new r3(this.f37258m);
             this.B = r3Var;
-            this.C = new m4(this.f36563m);
+            this.C = new m4(this.f37258m);
             q();
-            if (this.f36570t) {
+            if (this.f37265t) {
                 t();
             }
             boolean zHasSystemFeature = context.getPackageManager().hasSystemFeature("android.hardware.camera.concurrent");
-            this.f36568r = zHasSystemFeature;
+            this.f37263r = zHasSystemFeature;
             if (zHasSystemFeature) {
                 l();
             }
             if (r3Var.d()) {
                 k();
             }
-            boolean zH = c5.h(this.f36563m);
-            this.f36569s = zH;
+            boolean zH = c5.h(this.f37258m);
+            this.f37264s = zH;
             if (zH) {
                 p();
             }
-            boolean zA = y5.a(this.f36563m);
-            this.f36572v = zA;
+            boolean zA = y5.a(this.f37258m);
+            this.f37267v = zA;
             if (zA) {
                 o();
             }
@@ -299,7 +299,7 @@ public final class g5 {
     }
 
     public static boolean S(int i10, Range<Integer> range, int i11) {
-        return n0.t3.f24861a.equals(range) || i11 >= i10 || i11 >= ((Integer) range.getUpper()).intValue();
+        return n0.t3.f25682a.equals(range) || i11 >= i10 || i11 >= ((Integer) range.getUpper()).intValue();
     }
 
     public static boolean U(List<n0.g> list, Map<n0.i4<?>, List<Size>> map) {
@@ -334,7 +334,7 @@ public final class g5 {
         }
         p0.e eVar = new p0.e();
         Size size = (Size) Collections.max(Arrays.asList(sizeArrD), eVar);
-        Size size2 = w0.d.f33583a;
+        Size size2 = w0.d.f33789a;
         if (z10 && (sizeArrA = a.a(streamConfigurationMap, i10)) != null && sizeArrA.length > 0) {
             size2 = (Size) Collections.max(Arrays.asList(sizeArrA), eVar);
         }
@@ -354,15 +354,15 @@ public final class g5 {
         if (!c5.n(dVar)) {
             return null;
         }
-        Iterator<n0.v3> it = this.f36560j.iterator();
+        Iterator<n0.v3> it = this.f37255j.iterator();
         while (it.hasNext()) {
             final List<SurfaceConfig> listD = it.next().d(list);
             if (listD != null) {
                 boolean zA = c5.a(map, map2, listD);
-                jt.e0 e0Var = new jt.e0(new Function0() { // from class: z.e5
+                gt.e0 e0Var = new gt.e0(new Function0() { // from class: z.e5
                     @Override // kotlin.jvm.functions.Function0
                     public final Object invoke() {
-                        return Boolean.valueOf(c5.c(this.f36489a.f36563m, listD));
+                        return Boolean.valueOf(c5.c(this.f37184a.f37258m, listD));
                     }
                 });
                 if (zA && ((Boolean) e0Var.getValue()).booleanValue()) {
@@ -375,14 +375,14 @@ public final class g5 {
 
     public final Size G() {
         try {
-            Size sizeH = H(Integer.parseInt(this.f36561k));
+            Size sizeH = H(Integer.parseInt(this.f37256k));
             if (sizeH != null) {
                 return sizeH;
             }
         } catch (NumberFormatException unused) {
         }
         Size sizeI = I();
-        return sizeI != null ? sizeI : w0.d.f33585d;
+        return sizeI != null ? sizeI : w0.d.f33791d;
     }
 
     public final Size H(int i10) {
@@ -390,7 +390,7 @@ public final class g5 {
         int[] iArr = {1, 13, 10, 8, 12, 6, 5, 4};
         for (int i11 = 0; i11 < 8; i11++) {
             int i12 = iArr[i11];
-            if (this.f36562l.b(i10, i12) && (camcorderProfileA = this.f36562l.a(i10, i12)) != null) {
+            if (this.f37257l.b(i10, i12) && (camcorderProfileA = this.f37257l.a(i10, i12)) != null) {
                 return new Size(camcorderProfileA.videoFrameWidth, camcorderProfileA.videoFrameHeight);
             }
         }
@@ -400,7 +400,7 @@ public final class g5 {
     public final Size I() {
         Size[] outputSizes;
         try {
-            outputSizes = this.f36563m.e().h().getOutputSizes(MediaRecorder.class);
+            outputSizes = this.f37258m.e().h().getOutputSizes(MediaRecorder.class);
         } catch (Throwable unused) {
             outputSizes = null;
         }
@@ -410,7 +410,7 @@ public final class g5 {
         Arrays.sort(outputSizes, new p0.e(true));
         for (Size size : outputSizes) {
             int width = size.getWidth();
-            Size size2 = w0.d.f33587f;
+            Size size2 = w0.d.f33793f;
             if (width <= size2.getWidth() && size.getHeight() <= size2.getHeight()) {
                 return size;
             }
@@ -430,7 +430,7 @@ public final class g5 {
         g0.r1.a("SupportedSurfaceCombination", "resolvedDynamicRanges = " + mapG);
         boolean zU = U(list, mapD);
         if (z13) {
-            rangeN = n0.t3.f24861a;
+            rangeN = n0.t3.f25682a;
             zT = false;
         } else {
             zT = T(list, arrayList);
@@ -438,49 +438,49 @@ public final class g5 {
         }
         Range<Integer> range = rangeN;
         boolean z14 = zT;
-        g0.r1.a("SupportedSurfaceCombination", "getSuggestedStreamSpecifications: isPreviewStabilizationOn = " + z10 + ", mIsPreviewStabilizationSupported = " + this.f36572v + ", isFeatureComboInvocation = " + z12);
-        if (z10 && !this.f36572v && z12) {
+        g0.r1.a("SupportedSurfaceCombination", "getSuggestedStreamSpecifications: isPreviewStabilizationOn = " + z10 + ", mIsPreviewStabilizationSupported = " + this.f37267v + ", isFeatureComboInvocation = " + z12);
+        if (z10 && !this.f37267v && z12) {
             throw new IllegalArgumentException("Preview stabilization is not supported by the camera.");
         }
         return Y(w(mapG.values(), range, z10, zU, z12), h(i10, z11, mapG, z10, zU, zL, z12, false, range, z14), list, mapD, arrayList, listR, mapG, z13);
     }
 
     public final List<n0.v3> L(d dVar) {
-        if (this.f36557g.containsKey(dVar)) {
-            return this.f36557g.get(dVar);
+        if (this.f37252g.containsKey(dVar)) {
+            return this.f37252g.get(dVar);
         }
         List<n0.v3> arrayList = new ArrayList<>();
         if (dVar.k()) {
-            if (this.f36556f.isEmpty()) {
+            if (this.f37251f.isEmpty()) {
                 m();
             }
-            arrayList.addAll(this.f36556f);
+            arrayList.addAll(this.f37251f);
         } else if (dVar.i()) {
-            if (this.f36559i.isEmpty()) {
+            if (this.f37254i.isEmpty()) {
                 s();
             }
             if (dVar.a() == 0) {
-                arrayList.addAll(this.f36559i);
+                arrayList.addAll(this.f37254i);
             }
         } else if (dVar.f()) {
-            if (this.f36555e.isEmpty()) {
+            if (this.f37250e.isEmpty()) {
                 n();
             }
-            arrayList.addAll(this.f36555e);
+            arrayList.addAll(this.f37250e);
         } else if (dVar.b() == 8) {
             int iA = dVar.a();
             if (iA == 1) {
-                arrayList = this.f36553c;
+                arrayList = this.f37248c;
             } else if (iA != 2) {
-                arrayList.addAll(dVar.g() ? this.f36554d : this.f36552a);
+                arrayList.addAll(dVar.g() ? this.f37249d : this.f37247a);
             } else {
                 arrayList.addAll(this.b);
-                arrayList.addAll(this.f36552a);
+                arrayList.addAll(this.f37247a);
             }
         } else if (dVar.b() == 10 && dVar.a() == 0) {
-            arrayList.addAll(this.f36558h);
+            arrayList.addAll(this.f37253h);
         }
-        this.f36557g.put(dVar, arrayList);
+        this.f37252g.put(dVar, arrayList);
         return arrayList;
     }
 
@@ -506,14 +506,14 @@ public final class g5 {
     }
 
     public final Range<Integer> N(List<n0.g> list, List<n0.i4<?>> list2, List<Integer> list3, boolean z10) {
-        Range<Integer> rangeQ = n0.t3.f24861a;
+        Range<Integer> rangeQ = n0.t3.f25682a;
         Iterator<n0.g> it = list.iterator();
         while (it.hasNext()) {
             rangeQ = Q(it.next().i(), rangeQ, z10);
         }
         Iterator<Integer> it2 = list3.iterator();
         while (it2.hasNext()) {
-            Range<Integer> rangeZ = list2.get(it2.next().intValue()).z(n0.t3.f24861a);
+            Range<Integer> rangeZ = list2.get(it2.next().intValue()).z(n0.t3.f25682a);
             Objects.requireNonNull(rangeZ);
             rangeQ = Q(rangeZ, rangeQ, z10);
         }
@@ -525,20 +525,20 @@ public final class g5 {
     }
 
     public n0.x3 P(int i10) {
-        if (!this.f36574x.contains(Integer.valueOf(i10))) {
-            c0(this.f36573w.n(), w0.d.f33586e, i10);
-            c0(this.f36573w.l(), w0.d.f33588g, i10);
-            b0(this.f36573w.h(), i10, null);
-            b0(this.f36573w.f(), i10, p0.a.f28051a);
-            b0(this.f36573w.d(), i10, p0.a.f28052c);
-            d0(this.f36573w.p(), i10);
-            this.f36574x.add(Integer.valueOf(i10));
+        if (!this.f37269x.contains(Integer.valueOf(i10))) {
+            c0(this.f37268w.n(), w0.d.f33792e, i10);
+            c0(this.f37268w.l(), w0.d.f33794g, i10);
+            b0(this.f37268w.h(), i10, null);
+            b0(this.f37268w.f(), i10, p0.a.f28270a);
+            b0(this.f37268w.d(), i10, p0.a.f28271c);
+            d0(this.f37268w.p(), i10);
+            this.f37269x.add(Integer.valueOf(i10));
         }
-        return this.f36573w;
+        return this.f37268w;
     }
 
     public final Range<Integer> Q(Range<Integer> range, Range<Integer> range2, boolean z10) {
-        Range<Integer> range3 = n0.t3.f24861a;
+        Range<Integer> range3 = n0.t3.f25682a;
         if (range3.equals(range2) && range3.equals(range)) {
             return range3;
         }
@@ -596,10 +596,10 @@ public final class g5 {
 
     public final void W(d dVar, Range<Integer> range, Size size, int i10, n0.u3 u3Var, boolean z10, Map<SurfaceConfig.b, Set<Integer>> map, List<Size> list) {
         SurfaceConfig.b configSize = SurfaceConfig.l(i10, size, P(i10), dVar.a(), dVar.k() ? SurfaceConfig.c.FEATURE_COMBINATION_TABLE : SurfaceConfig.c.CAPTURE_SESSION_TABLES, u3Var).getConfigSize();
-        Range<Integer> range2 = n0.t3.f24861a;
+        Range<Integer> range2 = n0.t3.f25682a;
         int iY = (!range2.equals(range) || z10) ? y(i10, size, dVar.f()) : Integer.MAX_VALUE;
         if (dVar.e()) {
-            if (configSize == SurfaceConfig.b.f24922q) {
+            if (configSize == SurfaceConfig.b.f25743q) {
                 return;
             }
             if (!range2.equals(range) && iY < ((Integer) range.getUpper()).intValue()) {
@@ -619,11 +619,11 @@ public final class g5 {
     }
 
     public final void X() {
-        this.f36575y.g();
-        if (this.f36573w == null) {
+        this.f37270y.g();
+        if (this.f37268w == null) {
             r();
         } else {
-            this.f36573w = n0.x3.a(this.f36573w.b(), this.f36573w.n(), this.f36575y.f(), this.f36573w.l(), this.f36573w.j(), this.f36573w.h(), this.f36573w.f(), this.f36573w.d(), this.f36573w.p());
+            this.f37268w = n0.x3.a(this.f37268w.b(), this.f37268w.n(), this.f37270y.f(), this.f37268w.l(), this.f37268w.j(), this.f37268w.h(), this.f37268w.f(), this.f37268w.d(), this.f37268w.p());
         }
     }
 
@@ -652,7 +652,7 @@ public final class g5 {
         List<n0.i4<?>> list5 = list2;
         g0.r1.a("SupportedSurfaceCombination", "resolveSpecsBySettings: featureSettings = " + dVar);
         if (!dVar.k() && !V(dVar, list, map)) {
-            throw new IllegalArgumentException("No supported surface combination is found for camera device - Id : " + this.f36561k + ".  May be attempting to bind too many use cases. Existing surfaces: " + list4 + ". New configs: " + list5 + ". GroupableFeature settings: " + dVar);
+            throw new IllegalArgumentException("No supported surface combination is found for camera device - Id : " + this.f37256k + ".  May be attempting to bind too many use cases. Existing surfaces: " + list4 + ". New configs: " + list5 + ". GroupableFeature settings: " + dVar);
         }
         Map<n0.i4<?>, List<Size>> mapI = i(map, dVar, z10);
         ArrayList arrayList = new ArrayList();
@@ -673,7 +673,7 @@ public final class g5 {
         boolean zD = c5.d(list4, list5);
         int iB = B(list4, dVar.f());
         List<SurfaceConfig> listC = null;
-        if (!this.f36569s || zD) {
+        if (!this.f37264s || zD) {
             map3 = map7;
             map4 = map8;
             i10 = iB;
@@ -715,16 +715,16 @@ public final class g5 {
         int iE = bVarJ.e();
         int iC = bVarJ.c();
         if (listA == null) {
-            throw new IllegalArgumentException("No supported surface combination is found for camera device - Id : " + this.f36561k + " and Hardware level: " + this.f36565o + ". May be the specified resolution is too large and not supported. Existing surfaces: " + list + " New configs: " + list2);
+            throw new IllegalArgumentException("No supported surface combination is found for camera device - Id : " + this.f37256k + " and Hardware level: " + this.f37260o + ". May be the specified resolution is too large and not supported. Existing surfaces: " + list + " New configs: " + list2);
         }
-        Range<Integer> rangeX = n0.t3.f24861a;
+        Range<Integer> rangeX = n0.t3.f25682a;
         if (rangeX.equals(dVar.c())) {
             iC = iC;
             if (dVar.f()) {
-                rangeX = x(m4.f36695f, iD, this.C.f(listA));
+                rangeX = x(m4.f37390f, iD, this.C.f(listA));
             }
         } else {
-            Range<Integer>[] rangeArrF = dVar.f() ? this.C.f(listA) : (Range[]) this.f36563m.a(CameraCharacteristics.CONTROL_AE_AVAILABLE_TARGET_FPS_RANGES);
+            Range<Integer>[] rangeArrF = dVar.f() ? this.C.f(listA) : (Range[]) this.f37258m.a(CameraCharacteristics.CONTROL_AE_AVAILABLE_TARGET_FPS_RANGES);
             Range<Integer> rangeX2 = x(dVar.c(), iD, rangeArrF);
             if (dVar.e() || dVar.h()) {
                 x2.g.b(rangeX2.equals(dVar.c()), "Target FPS range " + dVar.c() + " is not supported. Max FPS supported by the calculated best combination: " + iD + ". Calculated best FPS range for device: " + rangeX2 + ". Device supported FPS ranges: " + Arrays.toString(rangeArrF));
@@ -736,7 +736,7 @@ public final class g5 {
             n0.i4<?> next = it3.next();
             Iterator<n0.i4<?>> it4 = it3;
             n0.t3.a aVarH = n0.t3.a(listA.get(list3.indexOf(Integer.valueOf(list2.indexOf(next))))).g(dVar.f() ? 1 : 0).b((g0.k0) x2.g.g(map2.get(next))).d(c5.e(next)).h(dVar.d());
-            if (!n0.t3.f24861a.equals(rangeX)) {
+            if (!n0.t3.f25682a.equals(rangeX)) {
                 aVarH.c(rangeX);
             }
             map6.put(next, aVarH.a());
@@ -747,7 +747,7 @@ public final class g5 {
                 if (listA.get(i11).equals(listB.get(i11))) {
                 }
             }
-            if (!c5.k(this.f36563m, list, map6, map5)) {
+            if (!c5.k(this.f37258m, list, map6, map5)) {
                 c5.l(map6, map5, map9, map10, list7);
             }
         }
@@ -759,7 +759,7 @@ public final class g5 {
     }
 
     public final void b0(Map<Integer, Size> map, int i10, Rational rational) {
-        Size sizeA = A(this.f36563m.e().h(), i10, true, rational);
+        Size sizeA = A(this.f37258m.e().h(), i10, true, rational);
         if (sizeA != null) {
             map.put(Integer.valueOf(i10), sizeA);
         }
@@ -767,9 +767,9 @@ public final class g5 {
 
     public List<Size> c(List<Size> list, int i10) {
         Rational rational;
-        int iA = this.f36576z.a(this.f36561k, this.f36563m);
+        int iA = this.f37271z.a(this.f37256k, this.f37258m);
         if (iA == 0) {
-            rational = p0.a.f28051a;
+            rational = p0.a.f28270a;
         } else if (iA != 1) {
             rational = null;
             if (iA == 2) {
@@ -781,7 +781,7 @@ public final class g5 {
                 throw new AssertionError("Undefined targetAspectRatio: " + iA);
             }
         } else {
-            rational = p0.a.f28052c;
+            rational = p0.a.f28271c;
         }
         if (rational != null) {
             ArrayList arrayList = new ArrayList();
@@ -800,8 +800,8 @@ public final class g5 {
     }
 
     public final void c0(Map<Integer, Size> map, Size size, int i10) {
-        if (this.f36568r) {
-            Size sizeA = A(this.f36563m.e().h(), i10, false, null);
+        if (this.f37263r) {
+            Size sizeA = A(this.f37258m.e().h(), i10, false, null);
             Integer numValueOf = Integer.valueOf(i10);
             if (sizeA != null) {
                 size = (Size) Collections.min(Arrays.asList(size, sizeA), new p0.e());
@@ -815,7 +815,7 @@ public final class g5 {
 
     public final void d0(Map<Integer, Size> map, int i10) {
         StreamConfigurationMap streamConfigurationMap;
-        if (Build.VERSION.SDK_INT < 31 || !this.f36570t || (streamConfigurationMap = (StreamConfigurationMap) this.f36563m.a(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP_MAXIMUM_RESOLUTION)) == null) {
+        if (Build.VERSION.SDK_INT < 31 || !this.f37265t || (streamConfigurationMap = (StreamConfigurationMap) this.f37258m.a(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP_MAXIMUM_RESOLUTION)) == null) {
             return;
         }
         map.put(Integer.valueOf(i10), A(streamConfigurationMap, i10, true, null));
@@ -852,7 +852,7 @@ public final class g5 {
             g0.k0 k0Var = map.get(surfaceConfig);
             Objects.requireNonNull(k0Var);
             n0.o3.b bVarA = j0.a.a(i4Var, sizeH, k0Var);
-            bVarA.v(n0.t3.f24861a.equals(rangeC) ? FpsRangeFeature.f22002k : rangeC);
+            bVarA.v(n0.t3.f25682a.equals(rangeC) ? FpsRangeFeature.f22226k : rangeC);
             if (dVar.g()) {
                 bVarA.z(2);
             }
@@ -865,13 +865,13 @@ public final class g5 {
     public final d h(int i10, boolean z10, Map<n0.i4<?>, g0.k0> map, boolean z11, boolean z12, boolean z13, boolean z14, boolean z15, Range<Integer> range, boolean z16) {
         int iJ = J(map);
         if (i10 != 0 && z12) {
-            throw new IllegalArgumentException(String.format("Camera device id is %s. Ultra HDR is not currently supported in %s camera mode.", this.f36561k, n0.q0.a(i10)));
+            throw new IllegalArgumentException(String.format("Camera device id is %s. Ultra HDR is not currently supported in %s camera mode.", this.f37256k, n0.q0.a(i10)));
         }
         if (i10 != 0 && iJ == 10) {
-            throw new IllegalArgumentException(String.format("Camera device id is %s. 10 bit dynamic range is not currently supported in %s camera mode.", this.f36561k, n0.q0.a(i10)));
+            throw new IllegalArgumentException(String.format("Camera device id is %s. 10 bit dynamic range is not currently supported in %s camera mode.", this.f37256k, n0.q0.a(i10)));
         }
         if (i10 != 0 && z14) {
-            throw new IllegalArgumentException(String.format("Camera device id is %s. Feature combination query is not currently supported in %s camera mode.", this.f36561k, n0.q0.a(i10)));
+            throw new IllegalArgumentException(String.format("Camera device id is %s. Feature combination query is not currently supported in %s camera mode.", this.f37256k, n0.q0.a(i10)));
         }
         if (z13 && z14) {
             throw new IllegalArgumentException("High-speed session is not supported with feature combination");
@@ -879,8 +879,8 @@ public final class g5 {
         if (z13 && !this.C.m()) {
             throw new IllegalArgumentException("High-speed session is not supported on this device.");
         }
-        if (z14 && range == n0.t3.f24861a && z15) {
-            range = FpsRangeFeature.f22002k;
+        if (z14 && range == n0.t3.f25682a && z15) {
+            range = FpsRangeFeature.f22226k;
         }
         return d.j(i10, z10, iJ, z11, z12, z13, z14, z15, range, z16);
     }
@@ -941,7 +941,7 @@ public final class g5 {
             int i14 = 0;
             while (i14 < list8.size()) {
                 SurfaceConfig surfaceConfig = list8.get(i14);
-                g0.k0 k0VarC = g0.k0.f17469c;
+                g0.k0 k0VarC = g0.k0.f18008c;
                 int i15 = i14;
                 if (map2.containsKey(Integer.valueOf(i15))) {
                     n0.g gVar = map2.get(Integer.valueOf(i15));
@@ -959,10 +959,10 @@ public final class g5 {
                 map4.put(surfaceConfig, k0VarC);
                 i14 = i15 + 1;
             }
-            jt.e0 e0Var = new jt.e0(new Function0() { // from class: z.f5
+            gt.e0 e0Var = new gt.e0(new Function0() { // from class: z.f5
                 @Override // kotlin.jvm.functions.Function0
                 public final Object invoke() {
-                    return Boolean.valueOf(this.f36503a.e(dVar, list8, map4, list2, list3));
+                    return Boolean.valueOf(this.f37198a.e(dVar, list8, map4, list2, list3));
                 }
             });
             if (z10 && ((Boolean) e0Var.getValue()).booleanValue() && (i11 == Integer.MAX_VALUE || i11 < iIntValue)) {
@@ -1018,54 +1018,54 @@ public final class g5 {
                 it = it2;
             }
         }
-        return (!dVar2.e() || n0.t3.f24861a.equals(rangeC) || (i12 != Integer.MAX_VALUE && i12 >= ((Integer) rangeC.getUpper()).intValue())) ? b.f(list6, list7, i12, i13, i11) : b.f(null, null, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE);
+        return (!dVar2.e() || n0.t3.f25682a.equals(rangeC) || (i12 != Integer.MAX_VALUE && i12 >= ((Integer) rangeC.getUpper()).intValue())) ? b.f(list6, list7, i12, i13, i11) : b.f(null, null, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE);
     }
 
     public final void k() {
-        this.f36558h.addAll(i4.e());
+        this.f37253h.addAll(i4.e());
     }
 
     public final void l() {
-        this.f36553c.addAll(i4.g());
+        this.f37248c.addAll(i4.g());
     }
 
     public final void m() {
-        this.f36556f.addAll(i4.c());
+        this.f37251f.addAll(i4.c());
     }
 
     public final void n() {
         if (this.C.m()) {
-            this.f36555e.clear();
+            this.f37250e.clear();
             Size sizeI = this.C.i();
             if (sizeI != null) {
-                this.f36555e.addAll(i4.b(sizeI, P(34)));
+                this.f37250e.addAll(i4.b(sizeI, P(34)));
             }
         }
     }
 
     public final void o() {
         if (Build.VERSION.SDK_INT >= 33) {
-            this.f36554d.addAll(i4.l());
+            this.f37249d.addAll(i4.l());
         }
     }
 
     public final void p() {
         if (Build.VERSION.SDK_INT >= 33) {
-            this.f36560j.addAll(i4.n());
+            this.f37255j.addAll(i4.n());
         }
     }
 
     public final void q() {
-        this.f36552a.addAll(i4.d(this.f36565o, this.f36566p, this.f36567q));
-        this.f36552a.addAll(this.f36564n.a(this.f36561k));
+        this.f37247a.addAll(i4.d(this.f37260o, this.f37261p, this.f37262q));
+        this.f37247a.addAll(this.f37259n.a(this.f37256k));
     }
 
     public final void r() {
-        this.f36573w = n0.x3.a(w0.d.f33584c, new HashMap(), this.f36575y.f(), new HashMap(), G(), new HashMap(), new HashMap(), new HashMap(), new HashMap());
+        this.f37268w = n0.x3.a(w0.d.f33790c, new HashMap(), this.f37270y.f(), new HashMap(), G(), new HashMap(), new HashMap(), new HashMap(), new HashMap());
     }
 
     public final void s() {
-        this.f36559i.addAll(i4.o());
+        this.f37254i.addAll(i4.o());
     }
 
     public final void t() {
@@ -1114,7 +1114,7 @@ public final class g5 {
         if (!z12) {
             return c.WITHOUT_FEATURE_COMBO;
         }
-        ?? Contains = collection.contains(g0.k0.f17472f);
+        ?? Contains = collection.contains(g0.k0.f18011f);
         if (range != null && ((Integer) range.getUpper()).intValue() == 60) {
             i10 = Contains;
             i10 = Contains;
@@ -1133,7 +1133,7 @@ public final class g5 {
     }
 
     public final Range<Integer> x(Range<Integer> range, int i10, Range<Integer>[] rangeArr) {
-        Range<Integer> rangeF = n0.t3.f24861a;
+        Range<Integer> rangeF = n0.t3.f25682a;
         if (rangeF.equals(range) || rangeArr == null) {
             return rangeF;
         }
@@ -1142,7 +1142,7 @@ public final class g5 {
         for (Range<Integer> range3 : rangeArr) {
             Objects.requireNonNull(range3);
             if (i10 >= ((Integer) range3.getLower()).intValue()) {
-                if (rangeF.equals(n0.t3.f24861a)) {
+                if (rangeF.equals(n0.t3.f25682a)) {
                     rangeF = range3;
                 }
                 if (range3.equals(range2)) {
@@ -1171,7 +1171,7 @@ public final class g5 {
 
     public final int y(int i10, Size size, boolean z10) {
         x2.g.i(!z10 || i10 == 34);
-        return z10 ? this.C.h(size) : z(this.f36563m, i10, size);
+        return z10 ? this.C.h(size) : z(this.f37258m, i10, size);
     }
 
     public final int z(a0.c0 c0Var, int i10, Size size) {
@@ -1181,7 +1181,7 @@ public final class g5 {
         if (jF > 0) {
             return (int) (1.0E9d / jF);
         }
-        if (!this.f36571u) {
+        if (!this.f37266u) {
             return Integer.MAX_VALUE;
         }
         g0.r1.l("SupportedSurfaceCombination", "minFrameDuration: " + jF + " is invalid for imageFormat = " + i10 + ", size = " + size);

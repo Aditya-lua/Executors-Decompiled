@@ -26,54 +26,54 @@ import okhttp3.internal.ws.WebSocketProtocol;
 public class i {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final String[] f28076c = {"", "BYTE", "STRING", "USHORT", "ULONG", "URATIONAL", "SBYTE", "UNDEFINED", "SSHORT", "SLONG", "SRATIONAL", "SINGLE", "DOUBLE", "IFD"};
+    public static final String[] f28295c = {"", "BYTE", "STRING", "USHORT", "ULONG", "URATIONAL", "SBYTE", "UNDEFINED", "SSHORT", "SLONG", "SRATIONAL", "SINGLE", "DOUBLE", "IFD"};
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final k[] f28077d;
+    public static final k[] f28296d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final k[] f28078e;
+    public static final k[] f28297e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final k[] f28079f;
+    public static final k[] f28298f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public static final k[] f28080g;
+    public static final k[] f28299g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public static final k[] f28081h;
+    public static final k[] f28300h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public static final k[][] f28082i;
+    public static final k[][] f28301i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public static final HashSet<String> f28083j;
+    public static final HashSet<String> f28302j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public static final String f28084k;
+    public static final String f28303k;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final List<Map<String, h>> f28085a;
+    public final List<Map<String, h>> f28304a;
     public final ByteOrder b;
 
     public static /* synthetic */ class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f28086a;
+        public static final /* synthetic */ int[] f28305a;
 
         static {
             int[] iArr = new int[d0.values().length];
-            f28086a = iArr;
+            f28305a = iArr;
             try {
                 iArr[d0.READY.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                f28086a[d0.NONE.ordinal()] = 2;
+                f28305a[d0.NONE.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
             try {
-                f28086a[d0.FIRED.ordinal()] = 3;
+                f28305a[d0.FIRED.ordinal()] = 3;
             } catch (NoSuchFieldError unused3) {
             }
         }
@@ -82,83 +82,83 @@ public class i {
     public static final class b {
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public static final Pattern f28087c = Pattern.compile("^(\\d{2}):(\\d{2}):(\\d{2})$");
+        public static final Pattern f28306c = Pattern.compile("^(\\d{2}):(\\d{2}):(\\d{2})$");
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final Pattern f28088d = Pattern.compile("^(\\d{4}):(\\d{2}):(\\d{2})\\s(\\d{2}):(\\d{2}):(\\d{2})$");
+        public static final Pattern f28307d = Pattern.compile("^(\\d{4}):(\\d{2}):(\\d{2})\\s(\\d{2}):(\\d{2}):(\\d{2})$");
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public static final Pattern f28089e = Pattern.compile("^(\\d{4})-(\\d{2})-(\\d{2})\\s(\\d{2}):(\\d{2}):(\\d{2})$");
+        public static final Pattern f28308e = Pattern.compile("^(\\d{4})-(\\d{2})-(\\d{2})\\s(\\d{2}):(\\d{2}):(\\d{2})$");
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public static final List<HashMap<String, k>> f28090f = Collections.list(new a());
+        public static final List<HashMap<String, k>> f28309f = Collections.list(new a());
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final List<Map<String, h>> f28091a = Collections.list(new C0490b());
+        public final List<Map<String, h>> f28310a = Collections.list(new C0496b());
         public final ByteOrder b;
 
         public class a implements Enumeration<HashMap<String, k>> {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public int f28092a = 0;
+            public int f28311a = 0;
 
             @Override // java.util.Enumeration
             /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
             public HashMap<String, k> nextElement() {
                 HashMap<String, k> map = new HashMap<>();
-                for (k kVar : i.f28082i[this.f28092a]) {
+                for (k kVar : i.f28301i[this.f28311a]) {
                     map.put(kVar.b, kVar);
                 }
-                this.f28092a++;
+                this.f28311a++;
                 return map;
             }
 
             @Override // java.util.Enumeration
             public boolean hasMoreElements() {
-                return this.f28092a < i.f28082i.length;
+                return this.f28311a < i.f28301i.length;
             }
         }
 
         /* JADX INFO: renamed from: p0.i$b$b, reason: collision with other inner class name */
-        public class C0490b implements Enumeration<Map<String, h>> {
+        public class C0496b implements Enumeration<Map<String, h>> {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public int f28093a = 0;
+            public int f28312a = 0;
 
-            public C0490b() {
+            public C0496b() {
             }
 
             @Override // java.util.Enumeration
             /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
             public Map<String, h> nextElement() {
-                this.f28093a++;
+                this.f28312a++;
                 return new HashMap();
             }
 
             @Override // java.util.Enumeration
             public boolean hasMoreElements() {
-                return this.f28093a < i.f28082i.length;
+                return this.f28312a < i.f28301i.length;
             }
         }
 
         public class c implements Enumeration<Map<String, h>> {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final Enumeration<Map<String, h>> f28094a;
+            public final Enumeration<Map<String, h>> f28313a;
 
             public c() {
-                this.f28094a = Collections.enumeration(b.this.f28091a);
+                this.f28313a = Collections.enumeration(b.this.f28310a);
             }
 
             @Override // java.util.Enumeration
             /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
             public Map<String, h> nextElement() {
-                return new HashMap(this.f28094a.nextElement());
+                return new HashMap(this.f28313a.nextElement());
             }
 
             @Override // java.util.Enumeration
             public boolean hasMoreElements() {
-                return this.f28094a.hasMoreElements();
+                return this.f28313a.hasMoreElements();
             }
         }
 
@@ -227,7 +227,7 @@ public class i {
             if (!list.get(1).isEmpty()) {
                 d("ExposureProgram", String.valueOf(0), list);
                 d("ExifVersion", "0230", list);
-                d("ComponentsConfiguration", i.f28084k, list);
+                d("ComponentsConfiguration", i.f28303k, list);
                 d("MeteringMode", String.valueOf(0), list);
                 d("LightSource", String.valueOf(0), list);
                 d("FlashpixVersion", "0100", list);
@@ -252,7 +252,7 @@ public class i {
         }
 
         public b c(String str, String str2) {
-            e(str, str2, this.f28091a);
+            e(str, str2, this.f28310a);
             return this;
         }
 
@@ -275,8 +275,8 @@ public class i {
             String str3 = str;
             String strReplaceAll = str2;
             if (("DateTime".equals(str3) || "DateTimeOriginal".equals(str3) || "DateTimeDigitized".equals(str3)) && strReplaceAll != null) {
-                boolean zFind = f28088d.matcher(strReplaceAll).find();
-                boolean zFind2 = f28089e.matcher(strReplaceAll).find();
+                boolean zFind = f28307d.matcher(strReplaceAll).find();
+                boolean zFind2 = f28308e.matcher(strReplaceAll).find();
                 if (strReplaceAll.length() != 19 || (!zFind && !zFind2)) {
                     r1.l("ExifData", "Invalid value for " + str3 + " : " + strReplaceAll);
                     return;
@@ -291,9 +291,9 @@ public class i {
             String str4 = str3;
             int i12 = 2;
             int i13 = 1;
-            if (strReplaceAll != null && i.f28083j.contains(str4)) {
+            if (strReplaceAll != null && i.f28302j.contains(str4)) {
                 if (str4.equals("GPSTimeStamp")) {
-                    Matcher matcher = f28087c.matcher(strReplaceAll);
+                    Matcher matcher = f28306c.matcher(strReplaceAll);
                     if (!matcher.find()) {
                         r1.l("ExifData", "Invalid value for " + str4 + " : " + strReplaceAll);
                         return;
@@ -309,24 +309,24 @@ public class i {
                 }
             }
             int i14 = 0;
-            while (i14 < i.f28082i.length) {
-                k kVar = f28090f.get(i14).get(str4);
+            while (i14 < i.f28301i.length) {
+                k kVar = f28309f.get(i14).get(str4);
                 if (kVar == null) {
                     i10 = i13;
                 } else {
                     if (strReplaceAll != null) {
                         Pair<Integer, Integer> pairB = b(strReplaceAll);
                         int i15 = -1;
-                        if (kVar.f28104c == ((Integer) pairB.first).intValue() || kVar.f28104c == ((Integer) pairB.second).intValue()) {
-                            i11 = kVar.f28104c;
+                        if (kVar.f28323c == ((Integer) pairB.first).intValue() || kVar.f28323c == ((Integer) pairB.second).intValue()) {
+                            i11 = kVar.f28323c;
                         } else {
-                            int i16 = kVar.f28105d;
-                            if (i16 == -1 || !(i16 == ((Integer) pairB.first).intValue() || kVar.f28105d == ((Integer) pairB.second).intValue())) {
-                                i11 = kVar.f28104c;
+                            int i16 = kVar.f28324d;
+                            if (i16 == -1 || !(i16 == ((Integer) pairB.first).intValue() || kVar.f28324d == ((Integer) pairB.second).intValue())) {
+                                i11 = kVar.f28323c;
                                 if (i11 == i13 || i11 == 7 || i11 == i12) {
                                 }
                             } else {
-                                i11 = kVar.f28105d;
+                                i11 = kVar.f28324d;
                             }
                         }
                         String str5 = "/";
@@ -427,7 +427,7 @@ public class i {
             if (d0Var == d0.UNKNOWN) {
                 return this;
             }
-            int i11 = a.f28086a[d0Var.ordinal()];
+            int i11 = a.f28305a[d0Var.ordinal()];
             if (i11 == 1) {
                 i10 = 0;
             } else if (i11 == 2) {
@@ -501,23 +501,23 @@ public class i {
 
     static {
         k[] kVarArr = {new k("ImageWidth", Barcode.FORMAT_QR_CODE, 3, 4), new k("ImageLength", 257, 3, 4), new k("Make", 271, 2), new k("Model", 272, 2), new k("Orientation", 274, 3), new k("XResolution", 282, 5), new k("YResolution", 283, 5), new k("ResolutionUnit", 296, 3), new k("Software", 305, 2), new k("DateTime", 306, 2), new k("YCbCrPositioning", 531, 3), new k("SubIFDPointer", 330, 4), new k("ExifIFDPointer", 34665, 4), new k("GPSInfoIFDPointer", 34853, 4)};
-        f28077d = kVarArr;
+        f28296d = kVarArr;
         k[] kVarArr2 = {new k("ExposureTime", 33434, 5), new k("FNumber", 33437, 5), new k("ExposureProgram", 34850, 3), new k("PhotographicSensitivity", 34855, 3), new k("SensitivityType", 34864, 3), new k("ExifVersion", 36864, 2), new k("DateTimeOriginal", 36867, 2), new k("DateTimeDigitized", 36868, 2), new k("ComponentsConfiguration", 37121, 7), new k("ShutterSpeedValue", 37377, 10), new k("ApertureValue", 37378, 5), new k("BrightnessValue", 37379, 10), new k("ExposureBiasValue", 37380, 10), new k("MaxApertureValue", 37381, 5), new k("MeteringMode", 37383, 3), new k("LightSource", 37384, 3), new k("Flash", 37385, 3), new k("FocalLength", 37386, 5), new k("SubSecTime", 37520, 2), new k("SubSecTimeOriginal", 37521, 2), new k("SubSecTimeDigitized", 37522, 2), new k("FlashpixVersion", 40960, 7), new k("ColorSpace", 40961, 3), new k("PixelXDimension", 40962, 3, 4), new k("PixelYDimension", 40963, 3, 4), new k("InteroperabilityIFDPointer", 40965, 4), new k("FocalPlaneResolutionUnit", 41488, 3), new k("SensingMethod", 41495, 3), new k("FileSource", 41728, 7), new k("SceneType", 41729, 7), new k("CustomRendered", 41985, 3), new k("ExposureMode", 41986, 3), new k("WhiteBalance", 41987, 3), new k("SceneCaptureType", 41990, 3), new k("Contrast", 41992, 3), new k("Saturation", 41993, 3), new k("Sharpness", 41994, 3)};
-        f28078e = kVarArr2;
+        f28297e = kVarArr2;
         k[] kVarArr3 = {new k("GPSVersionID", 0, 1), new k("GPSLatitudeRef", 1, 2), new k("GPSLatitude", 2, 5, 10), new k("GPSLongitudeRef", 3, 2), new k("GPSLongitude", 4, 5, 10), new k("GPSAltitudeRef", 5, 1), new k("GPSAltitude", 6, 5), new k("GPSTimeStamp", 7, 5), new k("GPSSpeedRef", 12, 2), new k("GPSTrackRef", 14, 2), new k("GPSImgDirectionRef", 16, 2), new k("GPSDestBearingRef", 23, 2), new k("GPSDestDistanceRef", 25, 2)};
-        f28079f = kVarArr3;
-        f28080g = new k[]{new k("SubIFDPointer", 330, 4), new k("ExifIFDPointer", 34665, 4), new k("GPSInfoIFDPointer", 34853, 4), new k("InteroperabilityIFDPointer", 40965, 4)};
+        f28298f = kVarArr3;
+        f28299g = new k[]{new k("SubIFDPointer", 330, 4), new k("ExifIFDPointer", 34665, 4), new k("GPSInfoIFDPointer", 34853, 4), new k("InteroperabilityIFDPointer", 40965, 4)};
         k[] kVarArr4 = {new k("InteroperabilityIndex", 1, 2)};
-        f28081h = kVarArr4;
-        f28082i = new k[][]{kVarArr, kVarArr2, kVarArr3, kVarArr4};
-        f28083j = new HashSet<>(Arrays.asList("FNumber", "ExposureTime", "GPSTimeStamp"));
-        f28084k = new String(new byte[]{1, 2, 3, 0}, StandardCharsets.UTF_8);
+        f28300h = kVarArr4;
+        f28301i = new k[][]{kVarArr, kVarArr2, kVarArr3, kVarArr4};
+        f28302j = new HashSet<>(Arrays.asList("FNumber", "ExposureTime", "GPSTimeStamp"));
+        f28303k = new String(new byte[]{1, 2, 3, 0}, StandardCharsets.UTF_8);
     }
 
     public i(ByteOrder byteOrder, List<Map<String, h>> list) {
-        x2.g.j(list.size() == f28082i.length, "Malformed attributes list. Number of IFDs mismatch.");
+        x2.g.j(list.size() == f28301i.length, "Malformed attributes list. Number of IFDs mismatch.");
         this.b = byteOrder;
-        this.f28085a = list;
+        this.f28304a = list;
     }
 
     public static b b() {
@@ -526,16 +526,16 @@ public class i {
 
     public static i c(androidx.camera.core.d dVar, int i10) {
         b bVarB = b();
-        if (dVar.H2() != null) {
-            dVar.H2().a(bVarB);
+        if (dVar.I2() != null) {
+            dVar.I2().a(bVarB);
         }
         bVarB.m(i10);
         return bVarB.j(dVar.getWidth()).i(dVar.getHeight()).a();
     }
 
     public Map<String, h> d(int i10) {
-        x2.g.c(i10, 0, f28082i.length, "Invalid IFD index: " + i10 + ". Index should be between [0, EXIF_TAGS.length] ");
-        return this.f28085a.get(i10);
+        x2.g.c(i10, 0, f28301i.length, "Invalid IFD index: " + i10 + ". Index should be between [0, EXIF_TAGS.length] ");
+        return this.f28304a.get(i10);
     }
 
     public ByteOrder e() {

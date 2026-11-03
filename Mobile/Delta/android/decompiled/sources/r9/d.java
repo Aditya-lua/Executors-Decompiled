@@ -10,30 +10,30 @@ import n9.m;
 public final class d {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final List f29823a;
+    public final List f30225a;
     public final r9.a b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final Executor f29824c;
+    public final Executor f30226c;
 
     public static class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final List f29825a = new ArrayList();
+        public final List f30227a = new ArrayList();
         public r9.a b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public Executor f29826c;
+        public Executor f30228c;
 
         @NonNull
         public a a(@NonNull k9.h hVar) {
-            this.f29825a.add(hVar);
+            this.f30227a.add(hVar);
             return this;
         }
 
         @NonNull
         public d b() {
-            return new d(this.f29825a, this.b, this.f29826c, true, null);
+            return new d(this.f30227a, this.b, this.f30228c, true, null);
         }
     }
 
@@ -43,9 +43,9 @@ public final class d {
         if (executor != null) {
             m.m(aVar, "Listener must not be null when listener executor is set.");
         }
-        this.f29823a = list;
+        this.f30225a = list;
         this.b = aVar;
-        this.f29824c = executor;
+        this.f30226c = executor;
     }
 
     @NonNull
@@ -55,7 +55,7 @@ public final class d {
 
     @NonNull
     public List<k9.h> a() {
-        return this.f29823a;
+        return this.f30225a;
     }
 
     public r9.a b() {
@@ -63,6 +63,6 @@ public final class d {
     }
 
     public Executor c() {
-        return this.f29824c;
+        return this.f30226c;
     }
 }

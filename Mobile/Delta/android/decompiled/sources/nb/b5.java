@@ -6,7 +6,7 @@ public abstract class b5 extends a4 {
 
     public b5(g7 g7Var) {
         super(g7Var);
-        this.f25625a.k();
+        this.f26446a.k();
     }
 
     public final boolean i() {
@@ -26,7 +26,7 @@ public abstract class b5 extends a4 {
         if (m()) {
             return;
         }
-        this.f25625a.l();
+        this.f26446a.l();
         this.b = true;
     }
 
@@ -35,7 +35,7 @@ public abstract class b5 extends a4 {
             throw new IllegalStateException("Can't initialize twice");
         }
         n();
-        this.f25625a.l();
+        this.f26446a.l();
         this.b = true;
     }
 

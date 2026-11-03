@@ -10,10 +10,10 @@ public enum SelfieCaptureButtonType {
     FLASH,
     SWITCH_CAMERA;
 
-    private static final /* synthetic */ qt.a $ENTRIES = qt.b.a(values());
+    private static final /* synthetic */ ot.a $ENTRIES = ot.b.a(values());
 
     @NotNull
-    public static qt.a<SelfieCaptureButtonType> getEntries() {
+    public static ot.a<SelfieCaptureButtonType> getEntries() {
         return $ENTRIES;
     }
 }

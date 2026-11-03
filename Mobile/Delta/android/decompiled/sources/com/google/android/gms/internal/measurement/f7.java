@@ -13,11 +13,11 @@ public final class f7 extends gb implements pc {
     static {
         f7 f7Var = new f7();
         zzg = f7Var;
-        gb.u(f7.class, f7Var);
+        gb.t(f7.class, f7Var);
     }
 
     public static e7 P() {
-        return (e7) zzg.q();
+        return (e7) zzg.p();
     }
 
     public static f7 Q() {

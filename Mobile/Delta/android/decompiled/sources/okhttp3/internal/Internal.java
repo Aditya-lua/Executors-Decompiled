@@ -1,8 +1,8 @@
 package okhttp3.internal;
 
+import gt.s;
 import java.nio.charset.Charset;
 import javax.net.ssl.SSLSocket;
-import jt.s;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.jvm.internal.Intrinsics;

@@ -7,7 +7,7 @@ import java.util.Collections;
 public class p {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final r7.c.a f29264a = r7.c.a.a("nm", "g", "o", "t", "s", "e", "r", "hd");
+    public static final r7.c.a f29617a = r7.c.a.a("nm", "g", "o", "t", "s", "e", "r", "hd");
     public static final r7.c.a b = r7.c.a.a("p", "k");
 
     public static n7.e a(r7.c cVar, f7.i iVar) {
@@ -20,7 +20,7 @@ public class p {
         m7.f fVarI2 = null;
         boolean zG = false;
         while (cVar.f()) {
-            switch (cVar.r(f29264a)) {
+            switch (cVar.r(f29617a)) {
                 case 0:
                     strM = cVar.m();
                     break;

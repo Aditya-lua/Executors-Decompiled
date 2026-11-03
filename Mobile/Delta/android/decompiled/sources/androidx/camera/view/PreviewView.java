@@ -45,57 +45,57 @@ import p1.x;
 public final class PreviewView extends FrameLayout {
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public static final c f1406p = c.PERFORMANCE;
+    public static final c f1251p = c.PERFORMANCE;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public c f1407a;
+    public c f1252a;
     public androidx.camera.view.c b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final f0 f1408c;
+    public final f0 f1253c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final androidx.camera.view.b f1409d;
+    public final androidx.camera.view.b f1254d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public boolean f1410e;
+    public boolean f1255e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final d0<e> f1411f;
+    public final d0<e> f1256f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final AtomicReference<androidx.camera.view.a> f1412g;
+    public final AtomicReference<androidx.camera.view.a> f1257g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public i f1413h;
+    public i f1258h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public x f1414i;
+    public x f1259i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final q1.a f1415j;
+    public final q1.a f1260j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public o0 f1416k;
+    public o0 f1261k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public MotionEvent f1417l;
+    public MotionEvent f1262l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final b f1418m;
+    public final b f1263m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public final View.OnLayoutChangeListener f1419n;
+    public final View.OnLayoutChangeListener f1264n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public final a2.c f1420o;
+    public final a2.c f1265o;
 
     public class a implements a2.c {
         public a() {
         }
 
         public static /* synthetic */ void c(a aVar, androidx.camera.view.a aVar2, p0 p0Var) {
-            if (t.a(PreviewView.this.f1412g, aVar2, null)) {
+            if (t.a(PreviewView.this.f1257g, aVar2, null)) {
                 aVar2.i(e.IDLE);
             }
             aVar2.f();
@@ -107,11 +107,11 @@ public final class PreviewView extends FrameLayout {
             androidx.camera.view.c cVar;
             aVar.getClass();
             r1.a("PreviewView", "Preview transformation info updated. " + hVar);
-            PreviewView.this.f1409d.r(hVar, v2Var.q(), p0Var.k().i() == 0);
+            PreviewView.this.f1254d.r(hVar, v2Var.q(), p0Var.k().i() == 0);
             if (hVar.d() == -1 || ((cVar = (previewView = PreviewView.this).b) != null && (cVar instanceof androidx.camera.view.d))) {
-                PreviewView.this.f1410e = true;
+                PreviewView.this.f1255e = true;
             } else {
-                previewView.f1410e = false;
+                previewView.f1255e = false;
             }
             PreviewView.this.e();
         }
@@ -123,48 +123,48 @@ public final class PreviewView extends FrameLayout {
                 l2.b.i(PreviewView.this.getContext()).execute(new Runnable() { // from class: p1.u
                     @Override // java.lang.Runnable
                     public final void run() {
-                        PreviewView.this.f1420o.a(v2Var);
+                        PreviewView.this.f1265o.a(v2Var);
                     }
                 });
                 return;
             }
             r1.a("PreviewView", "Surface requested by Preview.");
             final p0 p0VarM = v2Var.m();
-            PreviewView.this.f1416k = p0VarM.k();
-            PreviewView.this.f1414i.g(p0VarM.k().h());
+            PreviewView.this.f1261k = p0VarM.k();
+            PreviewView.this.f1259i.g(p0VarM.k().h());
             v2Var.x(l2.b.i(PreviewView.this.getContext()), new v2.i() { // from class: p1.v
                 @Override // g0.v2.i
                 public final void a(v2.h hVar) {
-                    PreviewView.a.d(this.f28192a, p0VarM, v2Var, hVar);
+                    PreviewView.a.d(this.f28411a, p0VarM, v2Var, hVar);
                 }
             });
             PreviewView previewView = PreviewView.this;
-            if (!PreviewView.f(previewView.b, v2Var, previewView.f1407a)) {
+            if (!PreviewView.f(previewView.b, v2Var, previewView.f1252a)) {
                 PreviewView previewView2 = PreviewView.this;
-                if (PreviewView.g(v2Var, previewView2.f1407a)) {
+                if (PreviewView.g(v2Var, previewView2.f1252a)) {
                     PreviewView previewView3 = PreviewView.this;
-                    dVar = new androidx.camera.view.e(previewView3, previewView3.f1409d);
+                    dVar = new androidx.camera.view.e(previewView3, previewView3.f1254d);
                 } else {
                     PreviewView previewView4 = PreviewView.this;
-                    dVar = new androidx.camera.view.d(previewView4, previewView4.f1409d);
+                    dVar = new androidx.camera.view.d(previewView4, previewView4.f1254d);
                 }
                 previewView2.b = dVar;
             }
             o0 o0VarK = p0VarM.k();
             PreviewView previewView5 = PreviewView.this;
-            final androidx.camera.view.a aVar = new androidx.camera.view.a(o0VarK, previewView5.f1411f, previewView5.b);
-            PreviewView.this.f1412g.set(aVar);
+            final androidx.camera.view.a aVar = new androidx.camera.view.a(o0VarK, previewView5.f1256f, previewView5.b);
+            PreviewView.this.f1257g.set(aVar);
             p0VarM.b().c(l2.b.i(PreviewView.this.getContext()), aVar);
             PreviewView.this.b.g(v2Var, new androidx.camera.view.c.a() { // from class: p1.w
                 @Override // androidx.camera.view.c.a
                 public final void a() {
-                    PreviewView.a.c(this.f28194a, aVar, p0VarM);
+                    PreviewView.a.c(this.f28413a, aVar, p0VarM);
                 }
             });
             PreviewView previewView6 = PreviewView.this;
-            if (previewView6.indexOfChild(previewView6.f1408c) == -1) {
+            if (previewView6.indexOfChild(previewView6.f1253c) == -1) {
                 PreviewView previewView7 = PreviewView.this;
-                previewView7.addView(previewView7.f1408c);
+                previewView7.addView(previewView7.f1253c);
             }
             PreviewView.this.getClass();
         }
@@ -198,15 +198,15 @@ public final class PreviewView extends FrameLayout {
 
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final int f1425a;
+        public final int f1270a;
 
         c(int i10) {
-            this.f1425a = i10;
+            this.f1270a = i10;
         }
 
         public static c b(int i10) {
             for (c cVar : values()) {
-                if (cVar.f1425a == i10) {
+                if (cVar.f1270a == i10) {
                     return cVar;
                 }
             }
@@ -214,7 +214,7 @@ public final class PreviewView extends FrameLayout {
         }
 
         public int c() {
-            return this.f1425a;
+            return this.f1270a;
         }
     }
 
@@ -228,15 +228,15 @@ public final class PreviewView extends FrameLayout {
 
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final int f1432a;
+        public final int f1277a;
 
         d(int i10) {
-            this.f1432a = i10;
+            this.f1277a = i10;
         }
 
         public static d b(int i10) {
             for (d dVar : values()) {
-                if (dVar.f1432a == i10) {
+                if (dVar.f1277a == i10) {
                     return dVar;
                 }
             }
@@ -244,7 +244,7 @@ public final class PreviewView extends FrameLayout {
         }
 
         public int c() {
-            return this.f1432a;
+            return this.f1277a;
         }
     }
 
@@ -258,15 +258,15 @@ public final class PreviewView extends FrameLayout {
     }
 
     public static /* synthetic */ boolean a(PreviewView previewView, q1.a.c cVar) {
-        if (!(cVar instanceof q1.a.c.C0513c)) {
+        if (!(cVar instanceof q1.a.c.C0512c)) {
             previewView.getClass();
             return true;
         }
-        i iVar = previewView.f1413h;
+        i iVar = previewView.f1258h;
         if (iVar == null) {
             return true;
         }
-        iVar.A(((q1.a.c.C0513c) cVar).getIncrementalScaleFactor());
+        iVar.A(((q1.a.c.C0512c) cVar).getIncrementalScaleFactor());
         return true;
     }
 
@@ -308,7 +308,7 @@ public final class PreviewView extends FrameLayout {
     }
 
     private f1.j getScreenFlashInternal() {
-        return this.f1408c.getScreenFlash();
+        return this.f1253c.getScreenFlash();
     }
 
     private int getViewPortScaleType() {
@@ -330,22 +330,22 @@ public final class PreviewView extends FrameLayout {
     }
 
     private void setScreenFlashUiInfo(f1.j jVar) {
-        i iVar = this.f1413h;
+        i iVar = this.f1258h;
         if (iVar == null) {
             r1.a("PreviewView", "setScreenFlashUiInfo: mCameraController is null!");
         } else {
-            iVar.H(new r1.a(r1.a.EnumC0526a.PREVIEW_VIEW, jVar));
+            iVar.H(new r1.a(r1.a.EnumC0528a.PREVIEW_VIEW, jVar));
         }
     }
 
     public final void c(boolean z10) {
         z.b();
         y2 viewPort = getViewPort();
-        if (this.f1413h == null || viewPort == null || !isAttachedToWindow()) {
+        if (this.f1258h == null || viewPort == null || !isAttachedToWindow()) {
             return;
         }
         try {
-            this.f1413h.c(getSurfaceProvider(), viewPort);
+            this.f1258h.c(getSurfaceProvider(), viewPort);
         } catch (IllegalStateException e10) {
             if (!z10) {
                 throw e10;
@@ -369,8 +369,8 @@ public final class PreviewView extends FrameLayout {
             j();
             this.b.h();
         }
-        this.f1414i.f(new Size(getWidth(), getHeight()), getLayoutDirection());
-        i iVar = this.f1413h;
+        this.f1259i.f(new Size(getWidth(), getHeight()), getLayoutDirection());
+        i iVar = this.f1258h;
         if (iVar != null) {
             iVar.V(getSensorToViewTransform());
         }
@@ -387,7 +387,7 @@ public final class PreviewView extends FrameLayout {
 
     public i getController() {
         z.b();
-        return this.f1413h;
+        return this.f1258h;
     }
 
     public Display getDefaultDisplay() {
@@ -400,23 +400,23 @@ public final class PreviewView extends FrameLayout {
 
     public c getImplementationMode() {
         z.b();
-        return this.f1407a;
+        return this.f1252a;
     }
 
     public v1 getMeteringPointFactory() {
         z.b();
-        return this.f1414i;
+        return this.f1259i;
     }
 
     public t1.b getOutputTransform() {
         Matrix matrixJ;
         z.b();
         try {
-            matrixJ = this.f1409d.j(new Size(getWidth(), getHeight()), getLayoutDirection());
+            matrixJ = this.f1254d.j(new Size(getWidth(), getHeight()), getLayoutDirection());
         } catch (IllegalStateException unused) {
             matrixJ = null;
         }
-        Rect rectI = this.f1409d.i();
+        Rect rectI = this.f1254d.i();
         if (matrixJ == null || rectI == null) {
             r1.a("PreviewView", "Transform info is not ready");
             return null;
@@ -431,12 +431,12 @@ public final class PreviewView extends FrameLayout {
     }
 
     public androidx.p000lifecycle.a0<e> getPreviewStreamState() {
-        return this.f1411f;
+        return this.f1256f;
     }
 
     public d getScaleType() {
         z.b();
-        return this.f1409d.g();
+        return this.f1254d.g();
     }
 
     public f1.j getScreenFlash() {
@@ -448,12 +448,12 @@ public final class PreviewView extends FrameLayout {
         if (getWidth() == 0 || getHeight() == 0) {
             return null;
         }
-        return this.f1409d.h(new Size(getWidth(), getHeight()), getLayoutDirection());
+        return this.f1254d.h(new Size(getWidth(), getHeight()), getLayoutDirection());
     }
 
     public a2.c getSurfaceProvider() {
         z.b();
-        return this.f1420o;
+        return this.f1265o;
     }
 
     public y2 getViewPort() {
@@ -470,7 +470,7 @@ public final class PreviewView extends FrameLayout {
         if (displayManager == null) {
             return;
         }
-        displayManager.registerDisplayListener(this.f1418m, new Handler(Looper.getMainLooper()));
+        displayManager.registerDisplayListener(this.f1263m, new Handler(Looper.getMainLooper()));
     }
 
     public void i() {
@@ -478,16 +478,16 @@ public final class PreviewView extends FrameLayout {
         if (displayManager == null) {
             return;
         }
-        displayManager.unregisterDisplayListener(this.f1418m);
+        displayManager.unregisterDisplayListener(this.f1263m);
     }
 
     public void j() {
         Display defaultDisplay;
         o0 o0Var;
-        if (!this.f1410e || (defaultDisplay = getDefaultDisplay()) == null || (o0Var = this.f1416k) == null) {
+        if (!this.f1255e || (defaultDisplay = getDefaultDisplay()) == null || (o0Var = this.f1261k) == null) {
             return;
         }
-        this.f1409d.o(o0Var.w(defaultDisplay.getRotation()), defaultDisplay.getRotation());
+        this.f1254d.o(o0Var.w(defaultDisplay.getRotation()), defaultDisplay.getRotation());
     }
 
     @Override // android.view.ViewGroup, android.view.View
@@ -496,7 +496,7 @@ public final class PreviewView extends FrameLayout {
         if (!isInEditMode()) {
             h();
         }
-        addOnLayoutChangeListener(this.f1419n);
+        addOnLayoutChangeListener(this.f1264n);
         androidx.camera.view.c cVar = this.b;
         if (cVar != null) {
             cVar.d();
@@ -507,12 +507,12 @@ public final class PreviewView extends FrameLayout {
     @Override // android.view.ViewGroup, android.view.View
     public void onDetachedFromWindow() {
         super.onDetachedFromWindow();
-        removeOnLayoutChangeListener(this.f1419n);
+        removeOnLayoutChangeListener(this.f1264n);
         androidx.camera.view.c cVar = this.b;
         if (cVar != null) {
             cVar.e();
         }
-        i iVar = this.f1413h;
+        i iVar = this.f1258h;
         if (iVar != null) {
             iVar.d();
         }
@@ -524,64 +524,64 @@ public final class PreviewView extends FrameLayout {
 
     @Override // android.view.View
     public boolean onTouchEvent(MotionEvent motionEvent) {
-        if (this.f1413h == null) {
+        if (this.f1258h == null) {
             return super.onTouchEvent(motionEvent);
         }
         boolean z10 = motionEvent.getPointerCount() == 1;
         boolean z11 = motionEvent.getAction() == 1;
         boolean z12 = motionEvent.getEventTime() - motionEvent.getDownTime() < ((long) ViewConfiguration.getLongPressTimeout());
         if (!z10 || !z11 || !z12) {
-            return this.f1415j.f(motionEvent) || super.onTouchEvent(motionEvent);
+            return this.f1260j.f(motionEvent) || super.onTouchEvent(motionEvent);
         }
-        this.f1417l = motionEvent;
+        this.f1262l = motionEvent;
         performClick();
         return true;
     }
 
     @Override // android.view.View
     public boolean performClick() {
-        if (this.f1413h != null) {
-            MotionEvent motionEvent = this.f1417l;
+        if (this.f1258h != null) {
+            MotionEvent motionEvent = this.f1262l;
             float x10 = motionEvent != null ? motionEvent.getX() : getWidth() / 2.0f;
-            MotionEvent motionEvent2 = this.f1417l;
-            this.f1413h.B(this.f1414i, x10, motionEvent2 != null ? motionEvent2.getY() : getHeight() / 2.0f);
+            MotionEvent motionEvent2 = this.f1262l;
+            this.f1258h.B(this.f1259i, x10, motionEvent2 != null ? motionEvent2.getY() : getHeight() / 2.0f);
         }
-        this.f1417l = null;
+        this.f1262l = null;
         return super.performClick();
     }
 
     public void setController(i iVar) {
         z.b();
-        i iVar2 = this.f1413h;
+        i iVar2 = this.f1258h;
         if (iVar2 != null && iVar2 != iVar) {
             iVar2.d();
             setScreenFlashUiInfo(null);
         }
-        this.f1413h = iVar;
+        this.f1258h = iVar;
         c(false);
         setScreenFlashUiInfo(getScreenFlashInternal());
     }
 
     public void setImplementationMode(c cVar) {
         z.b();
-        this.f1407a = cVar;
+        this.f1252a = cVar;
         c cVar2 = c.PERFORMANCE;
     }
 
     public void setScaleType(d dVar) {
         z.b();
-        this.f1409d.q(dVar);
+        this.f1254d.q(dVar);
         e();
         c(false);
     }
 
     public void setScreenFlashOverlayColor(int i10) {
-        this.f1408c.setBackgroundColor(i10);
+        this.f1253c.setBackgroundColor(i10);
     }
 
     public void setScreenFlashWindow(Window window) {
         z.b();
-        this.f1408c.setScreenFlashWindow(window);
+        this.f1253c.setScreenFlashWindow(window);
         setScreenFlashUiInfo(getScreenFlashInternal());
     }
 
@@ -591,42 +591,42 @@ public final class PreviewView extends FrameLayout {
 
     public PreviewView(Context context, AttributeSet attributeSet, int i10, int i11) {
         super(context, attributeSet, i10, i11);
-        c cVar = f1406p;
-        this.f1407a = cVar;
+        c cVar = f1251p;
+        this.f1252a = cVar;
         androidx.camera.view.b bVar = new androidx.camera.view.b();
-        this.f1409d = bVar;
-        this.f1410e = true;
-        this.f1411f = new d0<>(e.IDLE);
-        this.f1412g = new AtomicReference<>();
-        this.f1414i = new x(bVar);
-        this.f1418m = new b();
-        this.f1419n = new View.OnLayoutChangeListener() { // from class: p1.r
+        this.f1254d = bVar;
+        this.f1255e = true;
+        this.f1256f = new d0<>(e.IDLE);
+        this.f1257g = new AtomicReference<>();
+        this.f1259i = new x(bVar);
+        this.f1263m = new b();
+        this.f1264n = new View.OnLayoutChangeListener() { // from class: p1.r
             @Override // android.view.View.OnLayoutChangeListener
             public final void onLayoutChange(View view, int i12, int i13, int i14, int i15, int i16, int i17, int i18, int i19) {
-                PreviewView.b(this.f28189a, view, i12, i13, i14, i15, i16, i17, i18, i19);
+                PreviewView.b(this.f28408a, view, i12, i13, i14, i15, i16, i17, i18, i19);
             }
         };
-        this.f1420o = new a();
+        this.f1265o = new a();
         z.b();
         Resources.Theme theme = context.getTheme();
-        int[] iArr = p1.a0.f28119a;
+        int[] iArr = p1.a0.f28338a;
         TypedArray typedArrayObtainStyledAttributes = theme.obtainStyledAttributes(attributeSet, iArr, i10, i11);
         androidx.core.view.o0.k0(this, context, iArr, attributeSet, typedArrayObtainStyledAttributes, i10, i11);
         try {
-            setScaleType(d.b(typedArrayObtainStyledAttributes.getInteger(p1.a0.f28120c, bVar.g().c())));
+            setScaleType(d.b(typedArrayObtainStyledAttributes.getInteger(p1.a0.f28339c, bVar.g().c())));
             setImplementationMode(c.b(typedArrayObtainStyledAttributes.getInteger(p1.a0.b, cVar.c())));
             typedArrayObtainStyledAttributes.recycle();
-            this.f1415j = new q1.a(context, new q1.a.b() { // from class: p1.s
+            this.f1260j = new q1.a(context, new q1.a.b() { // from class: p1.s
                 @Override // q1.a.b
                 public final boolean a(q1.a.c cVar2) {
-                    return PreviewView.a(this.f28190a, cVar2);
+                    return PreviewView.a(this.f28409a, cVar2);
                 }
             });
             if (getBackground() == null) {
                 setBackgroundColor(l2.b.c(getContext(), R.color.black));
             }
             f0 f0Var = new f0(context);
-            this.f1408c = f0Var;
+            this.f1253c = f0Var;
             f0Var.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
         } catch (Throwable th2) {
             typedArrayObtainStyledAttributes.recycle();

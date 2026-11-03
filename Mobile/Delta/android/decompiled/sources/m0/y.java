@@ -11,7 +11,7 @@ import java.io.IOException;
 public class y implements x0.a0<a, g0.f1.i> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public DngCreator f23680a;
+    public DngCreator f24330a;
 
     public static abstract class a {
         public static a d(androidx.camera.core.d dVar, int i10, g0.f1.h hVar) {
@@ -56,8 +56,8 @@ public class y implements x0.a0<a, g0.f1.i> {
             try {
                 FileOutputStream fileOutputStream = new FileOutputStream(file);
                 try {
-                    this.f23680a.setOrientation(b(i10));
-                    this.f23680a.writeImage(fileOutputStream, dVar.p());
+                    this.f24330a.setOrientation(b(i10));
+                    this.f24330a.writeImage(fileOutputStream, dVar.p());
                     fileOutputStream.close();
                     dVar.close();
                 } catch (Throwable th2) {
@@ -82,6 +82,6 @@ public class y implements x0.a0<a, g0.f1.i> {
     }
 
     public y(DngCreator dngCreator) {
-        this.f23680a = dngCreator;
+        this.f24330a = dngCreator;
     }
 }

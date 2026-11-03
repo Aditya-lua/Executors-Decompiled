@@ -6,11 +6,11 @@ import java.util.List;
 public final class i6 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final t6 f7107a;
+    public static final t6 f7181a;
 
     static {
-        int i10 = e3.f7032a;
-        f7107a = new v6();
+        int i10 = e3.f7106a;
+        f7181a = new v6();
     }
 
     public static void A(int i10, List list, i7 i7Var, boolean z10) {
@@ -279,7 +279,7 @@ public final class i6 {
     }
 
     public static t6 r() {
-        return f7107a;
+        return f7181a;
     }
 
     public static Object s(Object obj, int i10, int i11, Object obj2, t6 t6Var) {
@@ -291,7 +291,7 @@ public final class i6 {
     }
 
     public static void t(g4 g4Var, Object obj, Object obj2) {
-        if (((q4) obj2).zzb.f7119a.isEmpty()) {
+        if (((q4) obj2).zzb.f7193a.isEmpty()) {
             return;
         }
         throw null;

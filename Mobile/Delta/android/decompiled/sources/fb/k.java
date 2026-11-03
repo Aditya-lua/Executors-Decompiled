@@ -12,17 +12,17 @@ import java.util.Objects;
 public final class k {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final k f16547c = new k();
+    public static final k f17143c = new k();
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f16548a;
+    public boolean f17144a;
     public boolean b;
 
     public final boolean a(Activity activity) {
         Bundle bundle;
         Bundle bundle2;
         if (this.b) {
-            return this.f16548a;
+            return this.f17144a;
         }
         ActivityInfo activityInfo = null;
         try {
@@ -40,7 +40,7 @@ public final class k {
                 zEquals = Objects.equals(bundle2.getString("android.app.lib_name", ""), "Unreal");
             }
         }
-        this.f16548a = zEquals;
+        this.f17144a = zEquals;
         this.b = true;
         return zEquals;
     }

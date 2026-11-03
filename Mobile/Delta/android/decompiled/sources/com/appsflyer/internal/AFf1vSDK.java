@@ -13,14 +13,14 @@ public final class AFf1vSDK extends AFf1tSDK {
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
     @NotNull
-    private final AFh1lSDK f5362v;
+    private final AFh1lSDK f5435v;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public AFf1vSDK(@NotNull AFh1lSDK aFh1lSDK, @NotNull AFc1bSDK aFc1bSDK) {
         super(aFh1lSDK, aFc1bSDK, null, 4, null);
         Intrinsics.checkNotNullParameter(aFh1lSDK, "");
         Intrinsics.checkNotNullParameter(aFc1bSDK, "");
-        this.f5362v = aFh1lSDK;
+        this.f5435v = aFh1lSDK;
     }
 
     @Override // com.appsflyer.internal.AFf1tSDK
@@ -29,13 +29,13 @@ public final class AFf1vSDK extends AFf1tSDK {
         super.d(aFh1pSDK);
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         LinkedHashMap linkedHashMap2 = new LinkedHashMap();
-        AFAdRevenueData aFAdRevenueData = this.f5362v.afDebugLog;
+        AFAdRevenueData aFAdRevenueData = this.f5435v.afDebugLog;
         Intrinsics.checkNotNullExpressionValue(aFAdRevenueData, "");
         linkedHashMap.put("monetization_network", aFAdRevenueData.getMonetizationNetwork());
         linkedHashMap.put("event_revenue_currency", aFAdRevenueData.getCurrencyIso4217Code());
         linkedHashMap.put("mediation_network", aFAdRevenueData.getMediationNetwork().getValue());
         linkedHashMap.put("event_revenue", Double.valueOf(aFAdRevenueData.getRevenue()));
-        Map<String, Object> map = this.f5362v.AFLoggerLogLevel;
+        Map<String, Object> map = this.f5435v.AFLoggerLogLevel;
         if (map != null && !map.isEmpty()) {
             List listN = kotlin.collections.p.n(AdRevenueScheme.AD_TYPE, AdRevenueScheme.AD_UNIT, "country", AdRevenueScheme.PLACEMENT);
             for (Map.Entry<String, Object> entry : map.entrySet()) {
@@ -52,7 +52,7 @@ public final class AFf1vSDK extends AFf1tSDK {
         LinkedHashMap linkedHashMap3 = new LinkedHashMap();
         linkedHashMap3.put("name", "adrevenue_sdk");
         linkedHashMap3.put("payload", linkedHashMap);
-        Map<String, Object> map2 = aFh1pSDK.f5399d;
+        Map<String, Object> map2 = aFh1pSDK.f5472d;
         Intrinsics.checkNotNullExpressionValue(map2, "");
         map2.put("ad_network", linkedHashMap3);
     }

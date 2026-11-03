@@ -17,29 +17,29 @@ public class x {
     public androidx.camera.core.f b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public androidx.camera.core.f f23667c;
+    public androidx.camera.core.f f24317c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public androidx.camera.core.f f23668d;
+    public androidx.camera.core.f f24318d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public u0.a f23669e;
+    public u0.a f24319e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public c f23670f;
+    public c f24320f;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public v0 f23666a = null;
+    public v0 f24316a = null;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public j0 f23671g = null;
+    public j0 f24321g = null;
 
     public class a extends n0.u {
         public a() {
         }
 
         public static /* synthetic */ void e(a aVar) {
-            v0 v0Var = x.this.f23666a;
+            v0 v0Var = x.this.f24316a;
             if (v0Var != null) {
                 v0Var.p();
             }
@@ -50,7 +50,7 @@ public class x {
             q0.c.e().execute(new Runnable() { // from class: m0.w
                 @Override // java.lang.Runnable
                 public final void run() {
-                    x.a.e(this.f23664a);
+                    x.a.e(this.f24314a);
                 }
             });
         }
@@ -59,10 +59,10 @@ public class x {
     public class b implements r0.c<Void> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ v0 f23673a;
+        public final /* synthetic */ v0 f24323a;
 
         public b(v0 v0Var) {
-            this.f23673a = v0Var;
+            this.f24323a = v0Var;
         }
 
         @Override // r0.c
@@ -73,12 +73,12 @@ public class x {
         @Override // r0.c
         public void onFailure(Throwable th2) {
             p0.z.b();
-            if (this.f23673a == x.this.f23666a) {
-                r1.l("CaptureNode", "request aborted, id=" + x.this.f23666a.e());
-                if (x.this.f23671g != null) {
-                    x.this.f23671g.i();
+            if (this.f24323a == x.this.f24316a) {
+                r1.l("CaptureNode", "request aborted, id=" + x.this.f24316a.e());
+                if (x.this.f24321g != null) {
+                    x.this.f24321g.i();
                 }
-                x.this.f23666a = null;
+                x.this.f24316a = null;
             }
         }
     }
@@ -87,16 +87,16 @@ public class x {
         public n0.u b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public u1 f23675c;
+        public u1 f24325c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public u1 f23676d;
+        public u1 f24326d;
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public n0.u f23674a = new a();
+        public n0.u f24324a = new a();
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public u1 f23677e = null;
+        public u1 f24327e = null;
 
         public class a extends n0.u {
             public a() {
@@ -108,7 +108,7 @@ public class x {
         }
 
         public n0.u a() {
-            return this.f23674a;
+            return this.f24324a;
         }
 
         public abstract x0.u<b1.a> b();
@@ -122,7 +122,7 @@ public class x {
         public abstract k0 f();
 
         public u1 g() {
-            return this.f23677e;
+            return this.f24327e;
         }
 
         public abstract x0.u<v0> h();
@@ -132,13 +132,13 @@ public class x {
         }
 
         public u1 j() {
-            return this.f23676d;
+            return this.f24326d;
         }
 
         public abstract Size k();
 
         public u1 l() {
-            u1 u1Var = this.f23675c;
+            u1 u1Var = this.f24325c;
             Objects.requireNonNull(u1Var);
             return u1Var;
         }
@@ -146,11 +146,11 @@ public class x {
         public abstract boolean m();
 
         public void o(n0.u uVar) {
-            this.f23674a = uVar;
+            this.f24324a = uVar;
         }
 
         public void p(Surface surface, Size size, int i10) {
-            this.f23677e = new k2(surface, size, i10);
+            this.f24327e = new k2(surface, size, i10);
         }
 
         public void q(n0.u uVar) {
@@ -158,13 +158,13 @@ public class x {
         }
 
         public void r(Surface surface) {
-            x2.g.j(this.f23676d == null, "The secondary surface is already set.");
-            this.f23676d = new k2(surface, k(), d());
+            x2.g.j(this.f24326d == null, "The secondary surface is already set.");
+            this.f24326d = new k2(surface, k(), d());
         }
 
         public void s(Surface surface) {
-            x2.g.j(this.f23675c == null, "The surface is already set.");
-            this.f23675c = new k2(surface, k(), d());
+            x2.g.j(this.f24325c == null, "The surface is already set.");
+            this.f24325c = new k2(surface, k(), d());
         }
     }
 
@@ -176,12 +176,12 @@ public class x {
                 xVar.k(dVarB);
                 return;
             }
-            v0 v0Var = xVar.f23666a;
+            v0 v0Var = xVar.f24316a;
             if (v0Var != null) {
                 xVar.p(b1.a.c(v0Var.e(), new g0.h1(2, "Failed to acquire latest image", null)));
             }
         } catch (IllegalStateException e10) {
-            v0 v0Var2 = xVar.f23666a;
+            v0 v0Var2 = xVar.f24316a;
             if (v0Var2 != null) {
                 xVar.p(b1.a.c(v0Var2.e(), new g0.h1(2, "Failed to acquire latest image", e10)));
             }
@@ -190,7 +190,7 @@ public class x {
 
     public static /* synthetic */ void b(x xVar, v0 v0Var) {
         xVar.l(v0Var);
-        xVar.f23671g.h(v0Var);
+        xVar.f24321g.h(v0Var);
     }
 
     public static /* synthetic */ void d(androidx.camera.core.f fVar) {
@@ -231,29 +231,29 @@ public class x {
         v0 v0Var;
         v0 v0Var2;
         p0.z.b();
-        u0.a aVar = this.f23669e;
+        u0.a aVar = this.f24319e;
         Objects.requireNonNull(aVar);
-        aVar.a().accept(u0.b.c(this.f23666a, dVar));
-        v0 v0Var3 = this.f23666a;
-        c cVar = this.f23670f;
+        aVar.a().accept(u0.b.c(this.f24316a, dVar));
+        v0 v0Var3 = this.f24316a;
+        c cVar = this.f24320f;
         boolean z10 = cVar != null && cVar.e().size() > 1;
-        if (z10 && (v0Var2 = this.f23666a) != null) {
+        if (z10 && (v0Var2 = this.f24316a) != null) {
             v0Var2.k().u(dVar.getFormat(), true);
         }
-        if (!z10 || ((v0Var = this.f23666a) != null && v0Var.k().s())) {
-            this.f23666a = null;
+        if (!z10 || ((v0Var = this.f24316a) != null && v0Var.k().s())) {
+            this.f24316a = null;
         }
         v0Var3.s();
     }
 
     public void k(androidx.camera.core.d dVar) {
         p0.z.b();
-        if (this.f23666a == null) {
+        if (this.f24316a == null) {
             r1.l("CaptureNode", "Discarding ImageProxy which was inadvertently acquired: " + dVar);
             dVar.close();
             return;
         }
-        if (((Integer) dVar.H2().c().d(this.f23666a.j())) != null) {
+        if (((Integer) dVar.I2().c().d(this.f24316a.j())) != null) {
             j(dVar);
         } else {
             r1.l("CaptureNode", "Discarding ImageProxy which was acquired for aborted request");
@@ -265,28 +265,28 @@ public class x {
         p0.z.b();
         x2.g.j(v0Var.i().size() == 1, "only one capture stage is supported.");
         x2.g.j(i() > 0, "Too many acquire images. Close image to be able to process next.");
-        this.f23666a = v0Var;
+        this.f24316a = v0Var;
         r0.n.j(v0Var.a(), new b(v0Var), q0.c.b());
     }
 
     public final void m(androidx.camera.core.d dVar) {
-        if (this.f23666a == null) {
+        if (this.f24316a == null) {
             r1.l("CaptureNode", "Postview image is closed due to request completed or aborted");
             dVar.close();
         } else {
-            u0.a aVar = this.f23669e;
+            u0.a aVar = this.f24319e;
             Objects.requireNonNull(aVar);
-            aVar.d().accept(u0.b.c(this.f23666a, dVar));
+            aVar.d().accept(u0.b.c(this.f24316a, dVar));
         }
     }
 
     public void n() {
         p0.z.b();
-        c cVar = this.f23670f;
+        c cVar = this.f24320f;
         Objects.requireNonNull(cVar);
         androidx.camera.core.f fVar = this.b;
         Objects.requireNonNull(fVar);
-        o(cVar, fVar, this.f23667c, this.f23668d);
+        o(cVar, fVar, this.f24317c, this.f24318d);
     }
 
     public final void o(c cVar, final androidx.camera.core.f fVar, final androidx.camera.core.f fVar2, final androidx.camera.core.f fVar3) {
@@ -320,18 +320,18 @@ public class x {
 
     public void p(b1.a aVar) {
         p0.z.b();
-        v0 v0Var = this.f23666a;
+        v0 v0Var = this.f24316a;
         if (v0Var == null || v0Var.e() != aVar.b()) {
             return;
         }
-        this.f23666a.n(aVar.a());
+        this.f24316a.n(aVar.a());
     }
 
     public final void q(j2 j2Var) {
         j2Var.f(new j2.a() { // from class: m0.v
             @Override // n0.j2.a
             public final void a(j2 j2Var2) {
-                x.a(this.f23651a, j2Var2);
+                x.a(this.f24301a, j2Var2);
             }
         }, q0.c.e());
     }
@@ -347,8 +347,8 @@ public class x {
         j2 j2Var;
         androidx.camera.core.e eVar;
         j2 j2Var2;
-        x2.g.j(this.f23670f == null && this.b == null, "CaptureNode does not support recreation yet.");
-        this.f23670f = cVar;
+        x2.g.j(this.f24320f == null && this.b == null, "CaptureNode does not support recreation yet.");
+        this.f24320f = cVar;
         Size sizeK = cVar.k();
         int iD = cVar.d();
         boolean zM = cVar.m();
@@ -357,11 +357,11 @@ public class x {
         n0.u uVarB = null;
         if (zM || cVar.c() != null) {
             j0 j0Var = new j0(h(cVar.c(), sizeK.getWidth(), sizeK.getHeight(), iD));
-            this.f23671g = j0Var;
+            this.f24321g = j0Var;
             aVar = new x2.a() { // from class: m0.p
                 @Override // x2.a
                 public final void accept(Object obj) {
-                    x.b(this.f23625a, (v0) obj);
+                    x.b(this.f24275a, (v0) obj);
                 }
             };
             j2Var = j0Var;
@@ -384,7 +384,7 @@ public class x {
             aVar = new x2.a() { // from class: m0.o
                 @Override // x2.a
                 public final void accept(Object obj) {
-                    this.f23623a.l((v0) obj);
+                    this.f24273a.l((v0) obj);
                 }
             };
             j2Var = j2Var2;
@@ -404,26 +404,26 @@ public class x {
             j2VarH.f(new j2.a() { // from class: m0.q
                 @Override // n0.j2.a
                 public final void a(j2 j2Var3) {
-                    x.e(this.f23627a, j2Var3);
+                    x.e(this.f24277a, j2Var3);
                 }
             }, q0.c.e());
-            this.f23668d = new androidx.camera.core.f(j2VarH);
+            this.f24318d = new androidx.camera.core.f(j2VarH);
             cVar.p(j2VarH.getSurface(), k0VarF.c(), k0VarF.b());
         }
         if (z10 && eVar != null) {
             cVar.r(eVar.getSurface());
-            this.f23667c = new androidx.camera.core.f(eVar);
+            this.f24317c = new androidx.camera.core.f(eVar);
             q(eVar);
         }
         cVar.h().a(aVar);
         cVar.b().a(new x2.a() { // from class: m0.r
             @Override // x2.a
             public final void accept(Object obj) {
-                this.f23629a.p((b1.a) obj);
+                this.f24279a.p((b1.a) obj);
             }
         });
         u0.a aVarE = u0.a.e(cVar.d(), cVar.e());
-        this.f23669e = aVarE;
+        this.f24319e = aVarE;
         return aVarE;
     }
 }

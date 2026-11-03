@@ -12,7 +12,7 @@ import n0.k3;
 public final class b0 implements x0.a0<a, x0.b0<byte[]>> {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final v0.d f23573a;
+    public final v0.d f24223a;
 
     public static abstract class a {
         public static a c(x0.b0<androidx.camera.core.d> b0Var, int i10) {
@@ -25,7 +25,7 @@ public final class b0 implements x0.a0<a, x0.b0<byte[]>> {
     }
 
     public b0(k3 k3Var) {
-        this.f23573a = new v0.d(k3Var);
+        this.f24223a = new v0.d(k3Var);
     }
 
     public static p0.g b(byte[] bArr) throws g0.h1 {
@@ -60,7 +60,7 @@ public final class b0 implements x0.a0<a, x0.b0<byte[]>> {
 
     public final x0.b0<byte[]> c(a aVar, int i10) {
         x0.b0<androidx.camera.core.d> b0VarB = aVar.b();
-        byte[] bArrA = this.f23573a.a(b0VarB.c());
+        byte[] bArrA = this.f24223a.a(b0VarB.c());
         p0.g gVarD = b0VarB.d();
         Objects.requireNonNull(gVarD);
         return x0.b0.m(bArrA, gVarD, i10, b0VarB.h(), b0VarB.b(), b0VarB.f(), b0VarB.g(), b0VarB.a());

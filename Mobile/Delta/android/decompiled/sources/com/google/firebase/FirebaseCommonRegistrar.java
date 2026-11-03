@@ -5,12 +5,12 @@ import android.content.pm.ApplicationInfo;
 import android.os.Build;
 import com.google.firebase.FirebaseCommonRegistrar;
 import com.google.firebase.components.ComponentRegistrar;
-import gg.e;
-import gg.h;
+import hg.e;
+import hg.h;
 import java.util.ArrayList;
 import java.util.List;
-import lf.c;
-import vf.f;
+import mf.c;
+import wf.f;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class FirebaseCommonRegistrar implements ComponentRegistrar {
@@ -49,33 +49,33 @@ public class FirebaseCommonRegistrar implements ComponentRegistrar {
     @Override // com.google.firebase.components.ComponentRegistrar
     public List<c<?>> getComponents() {
         ArrayList arrayList = new ArrayList();
-        arrayList.add(gg.c.c());
+        arrayList.add(hg.c.c());
         arrayList.add(f.g());
         arrayList.add(h.b("fire-android", String.valueOf(Build.VERSION.SDK_INT)));
         arrayList.add(h.b("fire-core", "22.0.1"));
         arrayList.add(h.b("device-name", e(Build.PRODUCT)));
         arrayList.add(h.b("device-model", e(Build.DEVICE)));
         arrayList.add(h.b("device-brand", e(Build.BRAND)));
-        arrayList.add(h.c("android-target-sdk", new h.a() { // from class: ef.f
-            @Override // gg.h.a
+        arrayList.add(h.c("android-target-sdk", new h.a() { // from class: ff.f
+            @Override // hg.h.a
             public final String a(Object obj) {
                 return FirebaseCommonRegistrar.c((Context) obj);
             }
         }));
-        arrayList.add(h.c("android-min-sdk", new h.a() { // from class: ef.g
-            @Override // gg.h.a
+        arrayList.add(h.c("android-min-sdk", new h.a() { // from class: ff.g
+            @Override // hg.h.a
             public final String a(Object obj) {
                 return FirebaseCommonRegistrar.b((Context) obj);
             }
         }));
-        arrayList.add(h.c("android-platform", new h.a() { // from class: ef.h
-            @Override // gg.h.a
+        arrayList.add(h.c("android-platform", new h.a() { // from class: ff.h
+            @Override // hg.h.a
             public final String a(Object obj) {
                 return FirebaseCommonRegistrar.d((Context) obj);
             }
         }));
-        arrayList.add(h.c("android-installer", new h.a() { // from class: ef.i
-            @Override // gg.h.a
+        arrayList.add(h.c("android-installer", new h.a() { // from class: ff.i
+            @Override // hg.h.a
             public final String a(Object obj) {
                 return FirebaseCommonRegistrar.a((Context) obj);
             }

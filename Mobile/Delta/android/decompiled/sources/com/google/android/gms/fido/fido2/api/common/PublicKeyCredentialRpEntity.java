@@ -16,19 +16,19 @@ public class PublicKeyCredentialRpEntity extends AbstractSafeParcelable {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NonNull
-    public final String f6000f;
+    public final String f6073f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
     @NonNull
-    public final String f6001g;
+    public final String f6074g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final String f6002h;
+    public final String f6075h;
 
     public PublicKeyCredentialRpEntity(@NonNull String str, @NonNull String str2, String str3) {
-        this.f6000f = (String) m.l(str);
-        this.f6001g = (String) m.l(str2);
-        this.f6002h = str3;
+        this.f6073f = (String) m.l(str);
+        this.f6074g = (String) m.l(str2);
+        this.f6075h = str3;
     }
 
     public boolean equals(Object obj) {
@@ -36,30 +36,30 @@ public class PublicKeyCredentialRpEntity extends AbstractSafeParcelable {
             return false;
         }
         PublicKeyCredentialRpEntity publicKeyCredentialRpEntity = (PublicKeyCredentialRpEntity) obj;
-        return k.b(this.f6000f, publicKeyCredentialRpEntity.f6000f) && k.b(this.f6001g, publicKeyCredentialRpEntity.f6001g) && k.b(this.f6002h, publicKeyCredentialRpEntity.f6002h);
+        return k.b(this.f6073f, publicKeyCredentialRpEntity.f6073f) && k.b(this.f6074g, publicKeyCredentialRpEntity.f6074g) && k.b(this.f6075h, publicKeyCredentialRpEntity.f6075h);
     }
 
     @NonNull
     public String getName() {
-        return this.f6001g;
+        return this.f6074g;
     }
 
     public int hashCode() {
-        return k.c(this.f6000f, this.f6001g, this.f6002h);
+        return k.c(this.f6073f, this.f6074g, this.f6075h);
     }
 
     @NonNull
     public final String toString() {
-        return "PublicKeyCredentialRpEntity{\n id='" + this.f6000f + "', \n name='" + this.f6001g + "', \n icon='" + this.f6002h + "'}";
+        return "PublicKeyCredentialRpEntity{\n id='" + this.f6073f + "', \n name='" + this.f6074g + "', \n icon='" + this.f6075h + "'}";
     }
 
     public String v3() {
-        return this.f6002h;
+        return this.f6075h;
     }
 
     @NonNull
     public String w3() {
-        return this.f6000f;
+        return this.f6073f;
     }
 
     @Override // android.os.Parcelable

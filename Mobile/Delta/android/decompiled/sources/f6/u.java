@@ -38,21 +38,21 @@ public final class u implements p {
         public void a(f5.d statement, SystemIdInfo entity) {
             Intrinsics.checkNotNullParameter(statement, "statement");
             Intrinsics.checkNotNullParameter(entity, "entity");
-            statement.k0(1, entity.workSpecId);
-            statement.z(2, entity.getGeneration());
-            statement.z(3, entity.systemId);
+            statement.h0(1, entity.workSpecId);
+            statement.y(2, entity.getGeneration());
+            statement.y(3, entity.systemId);
         }
     }
 
     /* JADX INFO: renamed from: f6.u$b, reason: from kotlin metadata */
-    @Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0006\u001a\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u00050\u0004¢\u0006\u0004\b\u0006\u0010\u0007¨\u0006\b"}, d2 = {"Lf6/u$b;", "", "<init>", "()V", "", "Lhu/c;", "a", "()Ljava/util/List;", "work-runtime_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
+    @Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u0017\u0010\u0006\u001a\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u00050\u0004¢\u0006\u0004\b\u0006\u0010\u0007¨\u0006\b"}, d2 = {"Lf6/u$b;", "", "<init>", "()V", "", "Lfu/c;", "a", "()Ljava/util/List;", "work-runtime_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
     public static final class Companion {
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
             this();
         }
 
         @NotNull
-        public final List<hu.c<?>> a() {
+        public final List<fu.c<?>> a() {
             return kotlin.collections.p.k();
         }
 
@@ -70,9 +70,9 @@ public final class u implements p {
         Intrinsics.checkNotNullParameter(_connection, "_connection");
         f5.d dVarR3 = _connection.r3(str);
         try {
-            dVarR3.k0(1, str2);
-            dVarR3.z(2, i10);
-            return dVarR3.g3() ? new SystemIdInfo(dVarR3.E2(c5.j.c(dVarR3, "work_spec_id")), (int) dVarR3.getLong(c5.j.c(dVarR3, "generation")), (int) dVarR3.getLong(c5.j.c(dVarR3, "system_id"))) : null;
+            dVarR3.h0(1, str2);
+            dVarR3.y(2, i10);
+            return dVarR3.i3() ? new SystemIdInfo(dVarR3.F2(c5.j.c(dVarR3, "work_spec_id")), (int) dVarR3.getLong(c5.j.c(dVarR3, "generation")), (int) dVarR3.getLong(c5.j.c(dVarR3, "system_id"))) : null;
         } finally {
             dVarR3.close();
         }
@@ -83,8 +83,8 @@ public final class u implements p {
         f5.d dVarR3 = _connection.r3(str);
         try {
             ArrayList arrayList = new ArrayList();
-            while (dVarR3.g3()) {
-                arrayList.add(dVarR3.E2(0));
+            while (dVarR3.i3()) {
+                arrayList.add(dVarR3.F2(0));
             }
             dVarR3.close();
             return arrayList;
@@ -97,16 +97,16 @@ public final class u implements p {
     public static final Unit l(u uVar, SystemIdInfo systemIdInfo, f5.b _connection) throws Exception {
         Intrinsics.checkNotNullParameter(_connection, "_connection");
         uVar.__insertAdapterOfSystemIdInfo.d(_connection, systemIdInfo);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit m(String str, String str2, f5.b _connection) {
         Intrinsics.checkNotNullParameter(_connection, "_connection");
         f5.d dVarR3 = _connection.r3(str);
         try {
-            dVarR3.k0(1, str2);
-            dVarR3.g3();
-            return Unit.f22483a;
+            dVarR3.h0(1, str2);
+            dVarR3.i3();
+            return Unit.f22938a;
         } finally {
             dVarR3.close();
         }
@@ -118,7 +118,7 @@ public final class u implements p {
         c5.a.c(this.__db, false, true, new Function1() { // from class: f6.q
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return u.l(this.f16303a, systemIdInfo, (f5.b) obj);
+                return u.l(this.f16899a, systemIdInfo, (f5.b) obj);
             }
         });
     }

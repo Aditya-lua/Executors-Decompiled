@@ -18,28 +18,28 @@ import java.util.concurrent.TimeoutException;
 public class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ExecutorService f8763a;
+    public final ExecutorService f8837a;
     public final Context b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final h0 f8764c;
+    public final h0 f8838c;
 
     public e(Context context, h0 h0Var, ExecutorService executorService) {
-        this.f8763a = executorService;
+        this.f8837a = executorService;
         this.b = context;
-        this.f8764c = h0Var;
+        this.f8838c = h0Var;
     }
 
     public boolean a() {
-        if (this.f8764c.a("gcm.n.noui")) {
+        if (this.f8838c.a("gcm.n.noui")) {
             return true;
         }
         if (b()) {
             return false;
         }
         d0 d0VarD = d();
-        c.a aVarE = c.e(this.b, this.f8764c);
-        e(aVarE.f8754a, d0VarD);
+        c.a aVarE = c.e(this.b, this.f8838c);
+        e(aVarE.f8828a, d0VarD);
         c(aVarE);
         return true;
     }
@@ -69,13 +69,13 @@ public class e {
         if (Log.isLoggable("FirebaseMessaging", 3)) {
             Log.d("FirebaseMessaging", "Showing notification");
         }
-        ((NotificationManager) this.b.getSystemService("notification")).notify(aVar.b, aVar.f8755c, aVar.f8754a.c());
+        ((NotificationManager) this.b.getSystemService("notification")).notify(aVar.b, aVar.f8829c, aVar.f8828a.c());
     }
 
     public final d0 d() {
-        d0 d0VarD = d0.d(this.f8764c.p("gcm.n.image"));
+        d0 d0VarD = d0.d(this.f8838c.p("gcm.n.image"));
         if (d0VarD != null) {
-            d0VarD.f(this.f8763a);
+            d0VarD.f(this.f8837a);
         }
         return d0VarD;
     }

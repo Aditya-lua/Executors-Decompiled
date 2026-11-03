@@ -6,29 +6,29 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import eh.e;
-import eh.f;
+import dh.e;
+import dh.f;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class RbxButton extends Button {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public RbxButton f8991a;
+    public RbxButton f9065a;
     public f b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public View.OnClickListener f8992c;
+    public View.OnClickListener f9066c;
 
     public RbxButton(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        this.f8991a = null;
+        this.f9065a = null;
         this.b = null;
         e.c(this, context, attributeSet);
         a(attributeSet);
     }
 
     public final void a(AttributeSet attributeSet) {
-        this.f8991a = this;
+        this.f9065a = this;
         this.b = new f(this, attributeSet);
     }
 
@@ -47,6 +47,6 @@ public class RbxButton extends Button {
     @Override // android.view.View
     public void setOnClickListener(View.OnClickListener onClickListener) {
         super.setOnClickListener(onClickListener);
-        this.f8992c = onClickListener;
+        this.f9066c = onClickListener;
     }
 }

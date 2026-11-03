@@ -27,12 +27,12 @@ import okhttp3.internal.IsProbablyUtf8Kt;
 import okhttp3.internal.http.HttpHeaders;
 import okhttp3.internal.platform.Platform;
 import org.jetbrains.annotations.NotNull;
-import qt.a;
-import qt.b;
-import ut.c;
-import xu.e;
-import xu.g;
-import xu.s;
+import ot.a;
+import ot.b;
+import st.c;
+import vu.e;
+import vu.g;
+import vu.s;
 
 /* JADX INFO: loaded from: classes2.dex */
 @Metadata(d1 = {"\u0000`\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\"\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u0011\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0006\u0018\u0000 *2\u00020\u0001:\u0003()*B\u0013\b\u0007\u0012\b\b\u0002\u0010\u0002\u001a\u00020\u0003¢\u0006\u0004\b\u0004\u0010\u0005J\u000e\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0011\u001a\u00020\bJ\u001f\u0010\u0012\u001a\u00020\u00102\u0012\u0010\u0011\u001a\n\u0012\u0006\b\u0001\u0012\u00020\b0\u0013\"\u00020\b¢\u0006\u0002\u0010\u0014J\u000e\u0010\u0015\u001a\u00020\u00002\u0006\u0010\n\u001a\u00020\u000bJ\r\u0010\f\u001a\u00020\u000bH\u0007¢\u0006\u0002\b\u0016J\u0010\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u001aH\u0016J\u0015\u0010\u001b\u001a\u00020\b2\u0006\u0010\u001c\u001a\u00020\u001dH\u0000¢\u0006\u0002\b\u001eJ\u0018\u0010\u001f\u001a\u00020\u00102\u0006\u0010 \u001a\u00020!2\u0006\u0010\"\u001a\u00020#H\u0002J\u0010\u0010$\u001a\u00020%2\u0006\u0010 \u001a\u00020!H\u0002J\u0010\u0010&\u001a\u00020%2\u0006\u0010'\u001a\u00020\u0018H\u0002R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004¢\u0006\u0002\n\u0000R\u0014\u0010\u0006\u001a\b\u0012\u0004\u0012\u00020\b0\u0007X\u0082\u000e¢\u0006\u0002\n\u0000R\u0014\u0010\t\u001a\b\u0012\u0004\u0012\u00020\b0\u0007X\u0082\u000e¢\u0006\u0002\n\u0000R\u001c\u0010\n\u001a\u00020\u000b@\u0007X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\f\u0010\r\"\u0004\b\n\u0010\u000e¨\u0006+"}, d2 = {"Lokhttp3/logging/HttpLoggingInterceptor;", "Lokhttp3/Interceptor;", "logger", "Lokhttp3/logging/HttpLoggingInterceptor$Logger;", "<init>", "(Lokhttp3/logging/HttpLoggingInterceptor$Logger;)V", "headersToRedact", "", "", "queryParamsNameToRedact", "level", "Lokhttp3/logging/HttpLoggingInterceptor$Level;", "getLevel", "()Lokhttp3/logging/HttpLoggingInterceptor$Level;", "(Lokhttp3/logging/HttpLoggingInterceptor$Level;)V", "redactHeader", "", "name", "redactQueryParams", "", "([Ljava/lang/String;)V", "setLevel", "-deprecated_level", "intercept", "Lokhttp3/Response;", "chain", "Lokhttp3/Interceptor$Chain;", "redactUrl", "url", "Lokhttp3/HttpUrl;", "redactUrl$logging_interceptor", "logHeader", "headers", "Lokhttp3/Headers;", "i", "", "bodyHasUnknownEncoding", "", "bodyIsStreaming", Payload.RESPONSE, "Level", "Logger", "Companion", "logging-interceptor"}, k = 1, mv = {2, 2, 0}, xi = 48)
@@ -199,7 +199,7 @@ public final class HttpLoggingInterceptor implements Interceptor {
                             s sVar = new s(eVar);
                             try {
                                 eVar = new e();
-                                eVar.g2(sVar);
+                                eVar.c3(sVar);
                                 c.a(sVar, null);
                             } catch (Throwable th2) {
                                 try {
@@ -220,7 +220,7 @@ public final class HttpLoggingInterceptor implements Interceptor {
                         } else if (lValueOf != null) {
                             this.logger.log("--> END " + request.method() + " (" + eVar.getSize() + "-byte, " + lValueOf.longValue() + "-gzipped-byte body)");
                         } else {
-                            this.logger.log(eVar.z2(charsetCharsetOrUtf8));
+                            this.logger.log(eVar.A2(charsetCharsetOrUtf8));
                             this.logger.log("--> END " + request.method() + " (" + requestBodyBody.contentLength() + "-byte body)");
                         }
                     }
@@ -295,7 +295,7 @@ public final class HttpLoggingInterceptor implements Interceptor {
                         s sVar2 = new s(bufferField.clone());
                         try {
                             bufferField = new e();
-                            bufferField.g2(sVar2);
+                            bufferField.c3(sVar2);
                             c.a(sVar2, null);
                             l10 = lValueOf2;
                         } catch (Throwable th4) {
@@ -317,7 +317,7 @@ public final class HttpLoggingInterceptor implements Interceptor {
                     }
                     if (contentLength != 0) {
                         this.logger.log("");
-                        this.logger.log(bufferField.clone().z2(charsetCharsetOrUtf9));
+                        this.logger.log(bufferField.clone().A2(charsetCharsetOrUtf9));
                     }
                     Logger logger2 = this.logger;
                     StringBuilder sb6 = new StringBuilder();
@@ -350,7 +350,7 @@ public final class HttpLoggingInterceptor implements Interceptor {
 
     public final void redactHeader(@NotNull String name) {
         Intrinsics.checkNotNullParameter(name, "name");
-        TreeSet treeSet = new TreeSet(x.G(g0.f22559a));
+        TreeSet treeSet = new TreeSet(x.G(g0.f23014a));
         u.z(treeSet, this.headersToRedact);
         treeSet.add(name);
         this.headersToRedact = treeSet;
@@ -358,7 +358,7 @@ public final class HttpLoggingInterceptor implements Interceptor {
 
     public final void redactQueryParams(@NotNull String... name) {
         Intrinsics.checkNotNullParameter(name, "name");
-        TreeSet treeSet = new TreeSet(x.G(g0.f22559a));
+        TreeSet treeSet = new TreeSet(x.G(g0.f23014a));
         u.z(treeSet, this.queryParamsNameToRedact);
         u.A(treeSet, name);
         this.queryParamsNameToRedact = treeSet;

@@ -15,14 +15,14 @@ import androidx.core.view.o0;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.button.MaterialButton;
-import hc.j;
-import hc.k;
-import ic.h;
+import ic.j;
+import ic.k;
 import java.util.List;
+import jc.h;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class ExtendedFloatingActionButton extends MaterialButton implements CoordinatorLayout.b {
-    public static final int C = j.f18952w;
+    public static final int C = j.f20774w;
     public static final Property<View, Float> D = new a(Float.class, "width");
     public static final Property<View, Float> E = new b(Float.class, "height");
     public static final Property<View, Float> F = new c(Float.class, "paddingStart");
@@ -33,23 +33,23 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
     public ColorStateList B;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public final int f7929u;
+    public final int f8003u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public int f7930v;
+    public int f8004v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public int f7931w;
+    public int f8005w;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
     @NonNull
-    public final CoordinatorLayout.c<ExtendedFloatingActionButton> f7932x;
+    public final CoordinatorLayout.c<ExtendedFloatingActionButton> f8006x;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public boolean f7933y;
+    public boolean f8007y;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public boolean f7934z;
+    public boolean f8008z;
 
     public class a extends Property<View, Float> {
         public a(Class cls, String str) {
@@ -135,7 +135,7 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
     @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.b
     @NonNull
     public CoordinatorLayout.c<ExtendedFloatingActionButton> getBehavior() {
-        return this.f7932x;
+        return this.f8006x;
     }
 
     public int getCollapsedPadding() {
@@ -143,7 +143,7 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
     }
 
     public int getCollapsedSize() {
-        int i10 = this.f7929u;
+        int i10 = this.f8003u;
         return i10 < 0 ? (Math.min(o0.E(this), o0.D(this)) * 2) + getIconSize() : i10;
     }
 
@@ -177,8 +177,8 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
     @Override // com.google.android.material.button.MaterialButton, android.widget.TextView, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        if (this.f7933y && TextUtils.isEmpty(getText()) && getIcon() != null) {
-            this.f7933y = false;
+        if (this.f8007y && TextUtils.isEmpty(getText()) && getIcon() != null) {
+            this.f8007y = false;
             throw null;
         }
     }
@@ -196,7 +196,7 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
     }
 
     public void setExtended(boolean z10) {
-        if (this.f7933y != z10) {
+        if (this.f8007y != z10) {
             throw null;
         }
     }
@@ -212,21 +212,21 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
     @Override // android.widget.TextView, android.view.View
     public void setPadding(int i10, int i11, int i12, int i13) {
         super.setPadding(i10, i11, i12, i13);
-        if (!this.f7933y || this.f7934z) {
+        if (!this.f8007y || this.f8008z) {
             return;
         }
-        this.f7930v = o0.E(this);
-        this.f7931w = o0.D(this);
+        this.f8004v = o0.E(this);
+        this.f8005w = o0.D(this);
     }
 
     @Override // android.widget.TextView, android.view.View
     public void setPaddingRelative(int i10, int i11, int i12, int i13) {
         super.setPaddingRelative(i10, i11, i12, i13);
-        if (!this.f7933y || this.f7934z) {
+        if (!this.f8007y || this.f8008z) {
             return;
         }
-        this.f7930v = i10;
-        this.f7931w = i12;
+        this.f8004v = i10;
+        this.f8005w = i12;
     }
 
     public void setShowMotionSpec(h hVar) {
@@ -254,15 +254,15 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
     public static class ExtendedFloatingActionButtonBehavior<T extends ExtendedFloatingActionButton> extends CoordinatorLayout.c<T> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public Rect f7935a;
+        public Rect f8009a;
         public boolean b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public boolean f7936c;
+        public boolean f8010c;
 
         public ExtendedFloatingActionButtonBehavior() {
             this.b = false;
-            this.f7936c = true;
+            this.f8010c = true;
         }
 
         public static boolean K(@NonNull View view) {
@@ -274,7 +274,7 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
 
         public void I(@NonNull ExtendedFloatingActionButton extendedFloatingActionButton) {
-            extendedFloatingActionButton.k(this.f7936c ? 3 : 0, null);
+            extendedFloatingActionButton.k(this.f8010c ? 3 : 0, null);
         }
 
         @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
@@ -319,22 +319,22 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
         }
 
         public final boolean N(@NonNull View view, @NonNull ExtendedFloatingActionButton extendedFloatingActionButton) {
-            return (this.b || this.f7936c) && ((CoordinatorLayout.f) extendedFloatingActionButton.getLayoutParams()).e() == view.getId();
+            return (this.b || this.f8010c) && ((CoordinatorLayout.f) extendedFloatingActionButton.getLayoutParams()).e() == view.getId();
         }
 
         public void O(@NonNull ExtendedFloatingActionButton extendedFloatingActionButton) {
-            extendedFloatingActionButton.k(this.f7936c ? 2 : 1, null);
+            extendedFloatingActionButton.k(this.f8010c ? 2 : 1, null);
         }
 
         public final boolean P(CoordinatorLayout coordinatorLayout, @NonNull AppBarLayout appBarLayout, @NonNull ExtendedFloatingActionButton extendedFloatingActionButton) {
             if (!N(appBarLayout, extendedFloatingActionButton)) {
                 return false;
             }
-            if (this.f7935a == null) {
-                this.f7935a = new Rect();
+            if (this.f8009a == null) {
+                this.f8009a = new Rect();
             }
-            Rect rect = this.f7935a;
-            zc.c.a(coordinatorLayout, appBarLayout, rect);
+            Rect rect = this.f8009a;
+            ad.c.a(coordinatorLayout, appBarLayout, rect);
             if (rect.bottom <= appBarLayout.getMinimumHeightForVisibleOverlappingContent()) {
                 O(extendedFloatingActionButton);
                 return true;
@@ -357,8 +357,8 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
 
         @Override // androidx.coordinatorlayout.widget.CoordinatorLayout.c
         public void k(@NonNull CoordinatorLayout.f fVar) {
-            if (fVar.f1734h == 0) {
-                fVar.f1734h = 80;
+            if (fVar.f1579h == 0) {
+                fVar.f1579h = 80;
             }
         }
 
@@ -366,7 +366,7 @@ public class ExtendedFloatingActionButton extends MaterialButton implements Coor
             super(context, attributeSet);
             TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, k.D1);
             this.b = typedArrayObtainStyledAttributes.getBoolean(k.E1, false);
-            this.f7936c = typedArrayObtainStyledAttributes.getBoolean(k.F1, true);
+            this.f8010c = typedArrayObtainStyledAttributes.getBoolean(k.F1, true);
             typedArrayObtainStyledAttributes.recycle();
         }
     }

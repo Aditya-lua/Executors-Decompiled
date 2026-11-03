@@ -25,140 +25,140 @@ public class PublicKeyCredentialCreationOptions extends RequestOptions {
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NonNull
-    public final PublicKeyCredentialRpEntity f5971f;
+    public final PublicKeyCredentialRpEntity f6044f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
     @NonNull
-    public final PublicKeyCredentialUserEntity f5972g;
+    public final PublicKeyCredentialUserEntity f6045g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
     @NonNull
-    public final byte[] f5973h;
+    public final byte[] f6046h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
     @NonNull
-    public final List f5974i;
+    public final List f6047i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final Double f5975j;
+    public final Double f6048j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final List f5976k;
+    public final List f6049k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final AuthenticatorSelectionCriteria f5977l;
+    public final AuthenticatorSelectionCriteria f6050l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final Integer f5978m;
+    public final Integer f6051m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public final TokenBinding f5979n;
+    public final TokenBinding f6052n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public final AttestationConveyancePreference f5980o;
+    public final AttestationConveyancePreference f6053o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public final AuthenticationExtensions f5981p;
+    public final AuthenticationExtensions f6054p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
-    public final String f5982q;
+    public final String f6055q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public ResultReceiver f5983r;
+    public ResultReceiver f6056r;
 
     public static final class a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public PublicKeyCredentialRpEntity f5984a;
+        public PublicKeyCredentialRpEntity f6057a;
         public PublicKeyCredentialUserEntity b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public byte[] f5985c;
+        public byte[] f6058c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public List f5986d;
+        public List f6059d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public Double f5987e;
+        public Double f6060e;
 
         /* JADX INFO: renamed from: f, reason: collision with root package name */
-        public List f5988f;
+        public List f6061f;
 
         /* JADX INFO: renamed from: g, reason: collision with root package name */
-        public AuthenticatorSelectionCriteria f5989g;
+        public AuthenticatorSelectionCriteria f6062g;
 
         /* JADX INFO: renamed from: h, reason: collision with root package name */
-        public Integer f5990h;
+        public Integer f6063h;
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public TokenBinding f5991i;
+        public TokenBinding f6064i;
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public AttestationConveyancePreference f5992j;
+        public AttestationConveyancePreference f6065j;
 
         /* JADX INFO: renamed from: k, reason: collision with root package name */
-        public AuthenticationExtensions f5993k;
+        public AuthenticationExtensions f6066k;
 
         @NonNull
         public PublicKeyCredentialCreationOptions a() {
-            PublicKeyCredentialRpEntity publicKeyCredentialRpEntity = this.f5984a;
+            PublicKeyCredentialRpEntity publicKeyCredentialRpEntity = this.f6057a;
             PublicKeyCredentialUserEntity publicKeyCredentialUserEntity = this.b;
-            byte[] bArr = this.f5985c;
-            List list = this.f5986d;
-            Double d10 = this.f5987e;
-            List list2 = this.f5988f;
-            AuthenticatorSelectionCriteria authenticatorSelectionCriteria = this.f5989g;
-            Integer num = this.f5990h;
-            TokenBinding tokenBinding = this.f5991i;
-            AttestationConveyancePreference attestationConveyancePreference = this.f5992j;
-            return new PublicKeyCredentialCreationOptions(publicKeyCredentialRpEntity, publicKeyCredentialUserEntity, bArr, list, d10, list2, authenticatorSelectionCriteria, num, tokenBinding, attestationConveyancePreference == null ? null : attestationConveyancePreference.toString(), this.f5993k, null, null);
+            byte[] bArr = this.f6058c;
+            List list = this.f6059d;
+            Double d10 = this.f6060e;
+            List list2 = this.f6061f;
+            AuthenticatorSelectionCriteria authenticatorSelectionCriteria = this.f6062g;
+            Integer num = this.f6063h;
+            TokenBinding tokenBinding = this.f6064i;
+            AttestationConveyancePreference attestationConveyancePreference = this.f6065j;
+            return new PublicKeyCredentialCreationOptions(publicKeyCredentialRpEntity, publicKeyCredentialUserEntity, bArr, list, d10, list2, authenticatorSelectionCriteria, num, tokenBinding, attestationConveyancePreference == null ? null : attestationConveyancePreference.toString(), this.f6066k, null, null);
         }
 
         @NonNull
         public a b(AttestationConveyancePreference attestationConveyancePreference) {
-            this.f5992j = attestationConveyancePreference;
+            this.f6065j = attestationConveyancePreference;
             return this;
         }
 
         @NonNull
         public a c(AuthenticationExtensions authenticationExtensions) {
-            this.f5993k = authenticationExtensions;
+            this.f6066k = authenticationExtensions;
             return this;
         }
 
         @NonNull
         public a d(AuthenticatorSelectionCriteria authenticatorSelectionCriteria) {
-            this.f5989g = authenticatorSelectionCriteria;
+            this.f6062g = authenticatorSelectionCriteria;
             return this;
         }
 
         @NonNull
         public a e(@NonNull byte[] bArr) {
-            this.f5985c = (byte[]) m.l(bArr);
+            this.f6058c = (byte[]) m.l(bArr);
             return this;
         }
 
         @NonNull
         public a f(List<PublicKeyCredentialDescriptor> list) {
-            this.f5988f = list;
+            this.f6061f = list;
             return this;
         }
 
         @NonNull
         public a g(@NonNull List<PublicKeyCredentialParameters> list) {
-            this.f5986d = (List) m.l(list);
+            this.f6059d = (List) m.l(list);
             return this;
         }
 
         @NonNull
         public a h(@NonNull PublicKeyCredentialRpEntity publicKeyCredentialRpEntity) {
-            this.f5984a = (PublicKeyCredentialRpEntity) m.l(publicKeyCredentialRpEntity);
+            this.f6057a = (PublicKeyCredentialRpEntity) m.l(publicKeyCredentialRpEntity);
             return this;
         }
 
         @NonNull
         public a i(Double d10) {
-            this.f5987e = d10;
+            this.f6060e = d10;
             return this;
         }
 
@@ -170,47 +170,47 @@ public class PublicKeyCredentialCreationOptions extends RequestOptions {
     }
 
     public PublicKeyCredentialCreationOptions(@NonNull PublicKeyCredentialRpEntity publicKeyCredentialRpEntity, @NonNull PublicKeyCredentialUserEntity publicKeyCredentialUserEntity, @NonNull byte[] bArr, @NonNull List list, Double d10, List list2, AuthenticatorSelectionCriteria authenticatorSelectionCriteria, Integer num, TokenBinding tokenBinding, String str, AuthenticationExtensions authenticationExtensions, String str2, ResultReceiver resultReceiver) {
-        this.f5983r = resultReceiver;
+        this.f6056r = resultReceiver;
         if (str2 != null) {
             try {
                 PublicKeyCredentialCreationOptions publicKeyCredentialCreationOptionsH3 = H3(new JSONObject(str2));
-                this.f5971f = publicKeyCredentialCreationOptionsH3.f5971f;
-                this.f5972g = publicKeyCredentialCreationOptionsH3.f5972g;
-                this.f5973h = publicKeyCredentialCreationOptionsH3.f5973h;
-                this.f5974i = publicKeyCredentialCreationOptionsH3.f5974i;
-                this.f5975j = publicKeyCredentialCreationOptionsH3.f5975j;
-                this.f5976k = publicKeyCredentialCreationOptionsH3.f5976k;
-                this.f5977l = publicKeyCredentialCreationOptionsH3.f5977l;
-                this.f5978m = publicKeyCredentialCreationOptionsH3.f5978m;
-                this.f5979n = publicKeyCredentialCreationOptionsH3.f5979n;
-                this.f5980o = publicKeyCredentialCreationOptionsH3.f5980o;
-                this.f5981p = publicKeyCredentialCreationOptionsH3.f5981p;
-                this.f5982q = str2;
+                this.f6044f = publicKeyCredentialCreationOptionsH3.f6044f;
+                this.f6045g = publicKeyCredentialCreationOptionsH3.f6045g;
+                this.f6046h = publicKeyCredentialCreationOptionsH3.f6046h;
+                this.f6047i = publicKeyCredentialCreationOptionsH3.f6047i;
+                this.f6048j = publicKeyCredentialCreationOptionsH3.f6048j;
+                this.f6049k = publicKeyCredentialCreationOptionsH3.f6049k;
+                this.f6050l = publicKeyCredentialCreationOptionsH3.f6050l;
+                this.f6051m = publicKeyCredentialCreationOptionsH3.f6051m;
+                this.f6052n = publicKeyCredentialCreationOptionsH3.f6052n;
+                this.f6053o = publicKeyCredentialCreationOptionsH3.f6053o;
+                this.f6054p = publicKeyCredentialCreationOptionsH3.f6054p;
+                this.f6055q = str2;
                 return;
             } catch (JSONException e10) {
                 throw new IllegalArgumentException(e10);
             }
         }
-        this.f5971f = (PublicKeyCredentialRpEntity) m.l(publicKeyCredentialRpEntity);
-        this.f5972g = (PublicKeyCredentialUserEntity) m.l(publicKeyCredentialUserEntity);
-        this.f5973h = (byte[]) m.l(bArr);
-        this.f5974i = (List) m.l(list);
-        this.f5975j = d10;
-        this.f5976k = list2;
-        this.f5977l = authenticatorSelectionCriteria;
-        this.f5978m = num;
-        this.f5979n = tokenBinding;
+        this.f6044f = (PublicKeyCredentialRpEntity) m.l(publicKeyCredentialRpEntity);
+        this.f6045g = (PublicKeyCredentialUserEntity) m.l(publicKeyCredentialUserEntity);
+        this.f6046h = (byte[]) m.l(bArr);
+        this.f6047i = (List) m.l(list);
+        this.f6048j = d10;
+        this.f6049k = list2;
+        this.f6050l = authenticatorSelectionCriteria;
+        this.f6051m = num;
+        this.f6052n = tokenBinding;
         if (str != null) {
             try {
-                this.f5980o = AttestationConveyancePreference.a(str);
+                this.f6053o = AttestationConveyancePreference.a(str);
             } catch (AttestationConveyancePreference.a e11) {
                 throw new IllegalArgumentException(e11);
             }
         } else {
-            this.f5980o = null;
+            this.f6053o = null;
         }
-        this.f5981p = authenticationExtensions;
-        this.f5982q = null;
+        this.f6054p = authenticationExtensions;
+        this.f6055q = null;
     }
 
     @NonNull
@@ -269,34 +269,34 @@ public class PublicKeyCredentialCreationOptions extends RequestOptions {
     }
 
     public String A3() {
-        return this.f5982q;
+        return this.f6055q;
     }
 
     @NonNull
     public List<PublicKeyCredentialParameters> B3() {
-        return this.f5974i;
+        return this.f6047i;
     }
 
     public Integer C3() {
-        return this.f5978m;
+        return this.f6051m;
     }
 
     @NonNull
     public PublicKeyCredentialRpEntity D3() {
-        return this.f5971f;
+        return this.f6044f;
     }
 
     public Double E3() {
-        return this.f5975j;
+        return this.f6048j;
     }
 
     public TokenBinding F3() {
-        return this.f5979n;
+        return this.f6052n;
     }
 
     @NonNull
     public PublicKeyCredentialUserEntity G3() {
-        return this.f5972g;
+        return this.f6045g;
     }
 
     public boolean equals(@NonNull Object obj) {
@@ -306,28 +306,28 @@ public class PublicKeyCredentialCreationOptions extends RequestOptions {
             return false;
         }
         PublicKeyCredentialCreationOptions publicKeyCredentialCreationOptions = (PublicKeyCredentialCreationOptions) obj;
-        return k.b(this.f5971f, publicKeyCredentialCreationOptions.f5971f) && k.b(this.f5972g, publicKeyCredentialCreationOptions.f5972g) && Arrays.equals(this.f5973h, publicKeyCredentialCreationOptions.f5973h) && k.b(this.f5975j, publicKeyCredentialCreationOptions.f5975j) && this.f5974i.containsAll(publicKeyCredentialCreationOptions.f5974i) && publicKeyCredentialCreationOptions.f5974i.containsAll(this.f5974i) && (((list = this.f5976k) == null && publicKeyCredentialCreationOptions.f5976k == null) || (list != null && (list2 = publicKeyCredentialCreationOptions.f5976k) != null && list.containsAll(list2) && publicKeyCredentialCreationOptions.f5976k.containsAll(this.f5976k))) && k.b(this.f5977l, publicKeyCredentialCreationOptions.f5977l) && k.b(this.f5978m, publicKeyCredentialCreationOptions.f5978m) && k.b(this.f5979n, publicKeyCredentialCreationOptions.f5979n) && k.b(this.f5980o, publicKeyCredentialCreationOptions.f5980o) && k.b(this.f5981p, publicKeyCredentialCreationOptions.f5981p) && k.b(this.f5982q, publicKeyCredentialCreationOptions.f5982q);
+        return k.b(this.f6044f, publicKeyCredentialCreationOptions.f6044f) && k.b(this.f6045g, publicKeyCredentialCreationOptions.f6045g) && Arrays.equals(this.f6046h, publicKeyCredentialCreationOptions.f6046h) && k.b(this.f6048j, publicKeyCredentialCreationOptions.f6048j) && this.f6047i.containsAll(publicKeyCredentialCreationOptions.f6047i) && publicKeyCredentialCreationOptions.f6047i.containsAll(this.f6047i) && (((list = this.f6049k) == null && publicKeyCredentialCreationOptions.f6049k == null) || (list != null && (list2 = publicKeyCredentialCreationOptions.f6049k) != null && list.containsAll(list2) && publicKeyCredentialCreationOptions.f6049k.containsAll(this.f6049k))) && k.b(this.f6050l, publicKeyCredentialCreationOptions.f6050l) && k.b(this.f6051m, publicKeyCredentialCreationOptions.f6051m) && k.b(this.f6052n, publicKeyCredentialCreationOptions.f6052n) && k.b(this.f6053o, publicKeyCredentialCreationOptions.f6053o) && k.b(this.f6054p, publicKeyCredentialCreationOptions.f6054p) && k.b(this.f6055q, publicKeyCredentialCreationOptions.f6055q);
     }
 
     public int hashCode() {
-        return k.c(this.f5971f, this.f5972g, Integer.valueOf(Arrays.hashCode(this.f5973h)), this.f5974i, this.f5975j, this.f5976k, this.f5977l, this.f5978m, this.f5979n, this.f5980o, this.f5981p, this.f5982q);
+        return k.c(this.f6044f, this.f6045g, Integer.valueOf(Arrays.hashCode(this.f6046h)), this.f6047i, this.f6048j, this.f6049k, this.f6050l, this.f6051m, this.f6052n, this.f6053o, this.f6054p, this.f6055q);
     }
 
     @NonNull
     public final String toString() {
-        AuthenticationExtensions authenticationExtensions = this.f5981p;
-        AttestationConveyancePreference attestationConveyancePreference = this.f5980o;
-        TokenBinding tokenBinding = this.f5979n;
-        AuthenticatorSelectionCriteria authenticatorSelectionCriteria = this.f5977l;
-        List list = this.f5976k;
-        List list2 = this.f5974i;
-        byte[] bArr = this.f5973h;
-        PublicKeyCredentialUserEntity publicKeyCredentialUserEntity = this.f5972g;
-        return "PublicKeyCredentialCreationOptions{\n rp=" + String.valueOf(this.f5971f) + ", \n user=" + String.valueOf(publicKeyCredentialUserEntity) + ", \n challenge=" + u9.c.b(bArr) + ", \n parameters=" + String.valueOf(list2) + ", \n timeoutSeconds=" + this.f5975j + ", \n excludeList=" + String.valueOf(list) + ", \n authenticatorSelection=" + String.valueOf(authenticatorSelectionCriteria) + ", \n requestId=" + this.f5978m + ", \n tokenBinding=" + String.valueOf(tokenBinding) + ", \n attestationConveyancePreference=" + String.valueOf(attestationConveyancePreference) + ", \n authenticationExtensions=" + String.valueOf(authenticationExtensions) + "}";
+        AuthenticationExtensions authenticationExtensions = this.f6054p;
+        AttestationConveyancePreference attestationConveyancePreference = this.f6053o;
+        TokenBinding tokenBinding = this.f6052n;
+        AuthenticatorSelectionCriteria authenticatorSelectionCriteria = this.f6050l;
+        List list = this.f6049k;
+        List list2 = this.f6047i;
+        byte[] bArr = this.f6046h;
+        PublicKeyCredentialUserEntity publicKeyCredentialUserEntity = this.f6045g;
+        return "PublicKeyCredentialCreationOptions{\n rp=" + String.valueOf(this.f6044f) + ", \n user=" + String.valueOf(publicKeyCredentialUserEntity) + ", \n challenge=" + u9.c.b(bArr) + ", \n parameters=" + String.valueOf(list2) + ", \n timeoutSeconds=" + this.f6048j + ", \n excludeList=" + String.valueOf(list) + ", \n authenticatorSelection=" + String.valueOf(authenticatorSelectionCriteria) + ", \n requestId=" + this.f6051m + ", \n tokenBinding=" + String.valueOf(tokenBinding) + ", \n attestationConveyancePreference=" + String.valueOf(attestationConveyancePreference) + ", \n authenticationExtensions=" + String.valueOf(authenticationExtensions) + "}";
     }
 
     public String v3() {
-        AttestationConveyancePreference attestationConveyancePreference = this.f5980o;
+        AttestationConveyancePreference attestationConveyancePreference = this.f6053o;
         if (attestationConveyancePreference == null) {
             return null;
         }
@@ -335,7 +335,7 @@ public class PublicKeyCredentialCreationOptions extends RequestOptions {
     }
 
     public AuthenticationExtensions w3() {
-        return this.f5981p;
+        return this.f6054p;
     }
 
     @Override // android.os.Parcelable
@@ -353,38 +353,38 @@ public class PublicKeyCredentialCreationOptions extends RequestOptions {
         o9.b.v(parcel, 11, v3(), false);
         o9.b.t(parcel, 12, w3(), i10, false);
         o9.b.v(parcel, 13, A3(), false);
-        o9.b.t(parcel, 14, this.f5983r, i10, false);
+        o9.b.t(parcel, 14, this.f6056r, i10, false);
         o9.b.b(parcel, iA);
     }
 
     public AuthenticatorSelectionCriteria x3() {
-        return this.f5977l;
+        return this.f6050l;
     }
 
     @NonNull
     public byte[] y3() {
-        return this.f5973h;
+        return this.f6046h;
     }
 
     public List<PublicKeyCredentialDescriptor> z3() {
-        return this.f5976k;
+        return this.f6049k;
     }
 
     public PublicKeyCredentialCreationOptions(@NonNull String str) {
         try {
             PublicKeyCredentialCreationOptions publicKeyCredentialCreationOptionsH3 = H3(new JSONObject(str));
-            this.f5971f = publicKeyCredentialCreationOptionsH3.f5971f;
-            this.f5972g = publicKeyCredentialCreationOptionsH3.f5972g;
-            this.f5973h = publicKeyCredentialCreationOptionsH3.f5973h;
-            this.f5974i = publicKeyCredentialCreationOptionsH3.f5974i;
-            this.f5975j = publicKeyCredentialCreationOptionsH3.f5975j;
-            this.f5976k = publicKeyCredentialCreationOptionsH3.f5976k;
-            this.f5977l = publicKeyCredentialCreationOptionsH3.f5977l;
-            this.f5978m = publicKeyCredentialCreationOptionsH3.f5978m;
-            this.f5979n = publicKeyCredentialCreationOptionsH3.f5979n;
-            this.f5980o = publicKeyCredentialCreationOptionsH3.f5980o;
-            this.f5981p = publicKeyCredentialCreationOptionsH3.f5981p;
-            this.f5982q = str;
+            this.f6044f = publicKeyCredentialCreationOptionsH3.f6044f;
+            this.f6045g = publicKeyCredentialCreationOptionsH3.f6045g;
+            this.f6046h = publicKeyCredentialCreationOptionsH3.f6046h;
+            this.f6047i = publicKeyCredentialCreationOptionsH3.f6047i;
+            this.f6048j = publicKeyCredentialCreationOptionsH3.f6048j;
+            this.f6049k = publicKeyCredentialCreationOptionsH3.f6049k;
+            this.f6050l = publicKeyCredentialCreationOptionsH3.f6050l;
+            this.f6051m = publicKeyCredentialCreationOptionsH3.f6051m;
+            this.f6052n = publicKeyCredentialCreationOptionsH3.f6052n;
+            this.f6053o = publicKeyCredentialCreationOptionsH3.f6053o;
+            this.f6054p = publicKeyCredentialCreationOptionsH3.f6054p;
+            this.f6055q = str;
         } catch (JSONException e10) {
             throw new IllegalArgumentException(e10);
         }

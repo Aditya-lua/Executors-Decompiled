@@ -14,15 +14,15 @@ import android.view.View;
 import android.view.animation.LinearInterpolator;
 import androidx.core.graphics.c;
 import com.withpersona.sdk2.inquiry.shared.ui.SpotlightView;
-import jq.j;
-import jq.w;
+import hq.j;
+import hq.w;
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import wq.z;
+import uq.z;
 
 /* JADX INFO: loaded from: classes3.dex */
 @Metadata(d1 = {"\u0000^\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0007\n\u0002\b\u0010\u0018\u00002\u00020\u0001B\u001d\b\u0016\u0012\b\u0010\u0003\u001a\u0004\u0018\u00010\u0002\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004¢\u0006\u0004\b\u0006\u0010\u0007J\u000f\u0010\t\u001a\u00020\bH\u0014¢\u0006\u0004\b\t\u0010\nJ\u001f\u0010\u000e\u001a\u00020\b2\u0006\u0010\f\u001a\u00020\u000b2\u0006\u0010\r\u001a\u00020\u000bH\u0014¢\u0006\u0004\b\u000e\u0010\u000fJ\u0017\u0010\u0012\u001a\u00020\b2\u0006\u0010\u0011\u001a\u00020\u0010H\u0016¢\u0006\u0004\b\u0012\u0010\u0013J\u0015\u0010\u0015\u001a\u00020\b2\u0006\u0010\u0014\u001a\u00020\u000b¢\u0006\u0004\b\u0015\u0010\u0016J#\u0010\u0017\u001a\u00020\b2\b\u0010\u0003\u001a\u0004\u0018\u00010\u00022\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0002¢\u0006\u0004\b\u0017\u0010\u0007J/\u0010\u001c\u001a\u00020\b2\u0006\u0010\u0018\u001a\u00020\u000b2\u0006\u0010\u0019\u001a\u00020\u000b2\u0006\u0010\u001a\u001a\u00020\u000b2\u0006\u0010\u001b\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\u001c\u0010\u001dR\u0018\u0010!\u001a\u0004\u0018\u00010\u001e8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u001f\u0010 R\u0016\u0010$\u001a\u00020\u000b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\"\u0010#R\u0018\u0010(\u001a\u0004\u0018\u00010%8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b&\u0010'R\u0016\u0010\u0014\u001a\u00020\u000b8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b)\u0010#R\u0018\u0010,\u001a\u0004\u0018\u00010*8\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b\u0017\u0010+R\u0014\u00100\u001a\u00020-8\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b.\u0010/R\u0014\u00103\u001a\u0002018\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u001c\u00102R\"\u0010;\u001a\u0002048\u0006@\u0006X\u0086\u000e¢\u0006\u0012\n\u0004\b5\u00106\u001a\u0004\b7\u00108\"\u0004\b9\u0010:R.\u0010C\u001a\u0004\u0018\u00010\u00012\b\u0010<\u001a\u0004\u0018\u00010\u00018\u0006@FX\u0086\u000e¢\u0006\u0012\n\u0004\b=\u0010>\u001a\u0004\b?\u0010@\"\u0004\bA\u0010B¨\u0006D"}, d2 = {"Lcom/withpersona/sdk2/inquiry/shared/ui/SpotlightView;", "Landroid/view/View;", "Landroid/content/Context;", "context", "Landroid/util/AttributeSet;", "attrs", "<init>", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", "", "onFinishInflate", "()V", "", "widthMeasureSpec", "heightMeasureSpec", "onMeasure", "(II)V", "Landroid/graphics/Canvas;", "canvas", "draw", "(Landroid/graphics/Canvas;)V", "borderColor", "setBorderColor", "(I)V", "e", "left", "top", "right", "bottom", "g", "(IIII)V", "Landroid/animation/ValueAnimator;", "a", "Landroid/animation/ValueAnimator;", "intensityAnimator", "b", "I", "targetViewId", "Landroid/graphics/Path;", "c", "Landroid/graphics/Path;", "clipPath", "d", "Landroid/graphics/Rect;", "Landroid/graphics/Rect;", "rect", "Landroid/graphics/Paint;", "f", "Landroid/graphics/Paint;", "borderPaint", "Landroid/view/View$OnLayoutChangeListener;", "Landroid/view/View$OnLayoutChangeListener;", "targetLayoutChangeListener", "", "h", "F", "getRadius", "()F", "setRadius", "(F)V", "radius", "value", "i", "Landroid/view/View;", "getTargetView", "()Landroid/view/View;", "setTargetView", "(Landroid/view/View;)V", "targetView", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
@@ -91,10 +91,10 @@ public final class SpotlightView extends View {
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.STROKE);
         this.borderPaint = paint;
-        this.targetLayoutChangeListener = new View.OnLayoutChangeListener() { // from class: wq.r
+        this.targetLayoutChangeListener = new View.OnLayoutChangeListener() { // from class: uq.r
             @Override // android.view.View.OnLayoutChangeListener
             public final void onLayoutChange(View view, int i10, int i11, int i12, int i13, int i14, int i15, int i16, int i17) {
-                SpotlightView.i(this.f34528a, view, i10, i11, i12, i13, i14, i15, i16, i17);
+                SpotlightView.i(this.f33212a, view, i10, i11, i12, i13, i14, i15, i16, i17);
             }
         };
         e(context, attributeSet);
@@ -105,7 +105,7 @@ public final class SpotlightView extends View {
         if (parent instanceof View) {
             spotlightView.setTargetView(((View) parent).findViewById(spotlightView.targetViewId));
         }
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final void h(SpotlightView spotlightView, int i10, int i11, ValueAnimator it) {
@@ -167,12 +167,12 @@ public final class SpotlightView extends View {
     public final void e(Context context, AttributeSet attrs) {
         Resources.Theme theme;
         TypedArray typedArrayObtainStyledAttributes;
-        if (context == null || (theme = context.getTheme()) == null || (typedArrayObtainStyledAttributes = theme.obtainStyledAttributes(attrs, w.f21719j, 0, 0)) == null) {
+        if (context == null || (theme = context.getTheme()) == null || (typedArrayObtainStyledAttributes = theme.obtainStyledAttributes(attrs, w.f19727j, 0, 0)) == null) {
             return;
         }
         try {
-            this.targetViewId = typedArrayObtainStyledAttributes.getResourceId(w.f21721l, 0);
-            this.radius = typedArrayObtainStyledAttributes.getDimensionPixelSize(w.f21720k, 0);
+            this.targetViewId = typedArrayObtainStyledAttributes.getResourceId(w.f19729l, 0);
+            this.radius = typedArrayObtainStyledAttributes.getDimensionPixelSize(w.f19728k, 0);
         } finally {
             typedArrayObtainStyledAttributes.recycle();
         }
@@ -199,10 +199,10 @@ public final class SpotlightView extends View {
     @Override // android.view.View
     public void onFinishInflate() {
         super.onFinishInflate();
-        z.b(this, new Function0() { // from class: wq.q
+        z.b(this, new Function0() { // from class: uq.q
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return SpotlightView.f(this.f34527a);
+                return SpotlightView.f(this.f33211a);
             }
         });
     }
@@ -231,10 +231,10 @@ public final class SpotlightView extends View {
         valueAnimatorOfFloat.setStartDelay(0L);
         valueAnimatorOfFloat.setRepeatCount(0);
         valueAnimatorOfFloat.setDuration(200L);
-        valueAnimatorOfFloat.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: wq.p
+        valueAnimatorOfFloat.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: uq.p
             @Override // android.animation.ValueAnimator.AnimatorUpdateListener
             public final void onAnimationUpdate(ValueAnimator valueAnimator2) {
-                SpotlightView.h(this.f34525a, i10, borderColor, valueAnimator2);
+                SpotlightView.h(this.f33209a, i10, borderColor, valueAnimator2);
             }
         });
         Intrinsics.checkNotNull(valueAnimatorOfFloat);

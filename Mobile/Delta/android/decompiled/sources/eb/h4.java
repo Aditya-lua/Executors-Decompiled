@@ -10,17 +10,17 @@ import java.nio.charset.StandardCharsets;
 public final class h4 implements Closeable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final InputStream f15273a;
+    public final InputStream f15887a;
     public g4 b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final byte[] f15274c = new byte[8];
+    public final byte[] f15888c = new byte[8];
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final i4 f15275d = i4.a();
+    public final i4 f15889d = i4.a();
 
     public h4(InputStream inputStream) {
-        this.f15273a = inputStream;
+        this.f15887a = inputStream;
     }
 
     public final long a() throws IOException {
@@ -31,7 +31,7 @@ public final class h4 implements Closeable {
             throw new UnsupportedOperationException(String.format("the maximum supported array length is %s", Long.MAX_VALUE));
         }
         if (jH > 0) {
-            this.f15275d.g(jH);
+            this.f15889d.g(jH);
         }
         return jH;
     }
@@ -62,48 +62,48 @@ public final class h4 implements Closeable {
             throw new UnsupportedOperationException("the maximum supported map length is 4611686018427387903L");
         }
         if (jH > 0) {
-            this.f15275d.g(jH + jH);
+            this.f15889d.g(jH + jH);
         }
         return jH;
     }
 
     @Override // java.io.Closeable, java.lang.AutoCloseable
     public final void close() throws IOException {
-        this.f15273a.close();
-        this.f15275d.b();
+        this.f15887a.close();
+        this.f15889d.b();
     }
 
     public final g4 d() throws IOException {
         if (this.b == null) {
-            int i10 = this.f15273a.read();
+            int i10 = this.f15887a.read();
             if (i10 == -1) {
-                this.f15275d.b();
+                this.f15889d.b();
                 return null;
             }
             g4 g4Var = new g4(i10);
             this.b = g4Var;
             byte b = g4Var.b();
             if (b == -128 || b == -96 || b == -64) {
-                this.f15275d.d();
-                this.f15275d.f();
+                this.f15889d.d();
+                this.f15889d.f();
             } else {
                 if (b != -32) {
                     if (b != 0 && b != 32) {
                         if (b == 64) {
-                            this.f15275d.e(-1L);
+                            this.f15889d.e(-1L);
                         } else {
                             if (b != 96) {
                                 throw new IllegalStateException(String.format("invalid major type: %s", Integer.valueOf(this.b.c())));
                             }
-                            this.f15275d.e(-2L);
+                            this.f15889d.e(-2L);
                         }
                     }
-                    this.f15275d.f();
+                    this.f15889d.f();
                 } else if (this.b.a() == 31) {
-                    this.f15275d.c();
+                    this.f15889d.c();
                 }
-                this.f15275d.d();
-                this.f15275d.f();
+                this.f15889d.d();
+                this.f15889d.f();
             }
         }
         return this.b;
@@ -141,7 +141,7 @@ public final class h4 implements Closeable {
             return jA;
         }
         if (this.b.a() == 24) {
-            int i10 = this.f15273a.read();
+            int i10 = this.f15887a.read();
             if (i10 == -1) {
                 throw new EOFException();
             }
@@ -149,13 +149,13 @@ public final class h4 implements Closeable {
             return ((long) i10) & 255;
         }
         if (this.b.a() == 25) {
-            m(this.f15274c, 2);
-            byte[] bArr = this.f15274c;
+            m(this.f15888c, 2);
+            byte[] bArr = this.f15888c;
             return ((((long) bArr[0]) & 255) << 8) | (((long) bArr[1]) & 255);
         }
         if (this.b.a() == 26) {
-            m(this.f15274c, 4);
-            byte[] bArr2 = this.f15274c;
+            m(this.f15888c, 4);
+            byte[] bArr2 = this.f15888c;
             long j10 = bArr2[0];
             long j11 = bArr2[1];
             return (((long) bArr2[3]) & 255) | ((j11 & 255) << 16) | ((j10 & 255) << 24) | ((bArr2[2] & 255) << 8);
@@ -163,8 +163,8 @@ public final class h4 implements Closeable {
         if (this.b.a() != 27) {
             throw new IOException(String.format("invalid additional information %s for major type %s", Byte.valueOf(this.b.a()), Integer.valueOf(this.b.c())));
         }
-        m(this.f15274c, 8);
-        byte[] bArr3 = this.f15274c;
+        m(this.f15888c, 8);
+        byte[] bArr3 = this.f15888c;
         long j12 = bArr3[0];
         long j13 = bArr3[1];
         long j14 = bArr3[2];
@@ -189,7 +189,7 @@ public final class h4 implements Closeable {
     public final void m(byte[] bArr, int i10) throws IOException {
         int i11 = 0;
         while (i11 != i10) {
-            int i12 = this.f15273a.read(bArr, i11, i10 - i11);
+            int i12 = this.f15887a.read(bArr, i11, i10 - i11);
             if (i12 == -1) {
                 throw new EOFException();
             }
@@ -204,7 +204,7 @@ public final class h4 implements Closeable {
         if (jH < 0 || jH > 2147483647L) {
             throw new UnsupportedOperationException(String.format("the maximum supported byte/text string length is %s bytes", Integer.MAX_VALUE));
         }
-        if (this.f15273a.available() < jH) {
+        if (this.f15887a.available() < jH) {
             throw new EOFException();
         }
         int i10 = (int) jH;

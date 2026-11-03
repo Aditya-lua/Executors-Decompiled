@@ -8,12 +8,12 @@ import org.jetbrains.annotations.Nullable;
 import x6.Options;
 
 /* JADX INFO: loaded from: classes.dex */
-@Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\bg\u0018\u0000 \r2\u00020\u0001:\u0003\t\u000f\rJ(\u0010\t\u001a\u00020\b2\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u0006H¦@¢\u0006\u0004\b\t\u0010\nJ2\u0010\r\u001a\u00020\f2\b\u0010\u0003\u001a\u0004\u0018\u00010\u00022\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u000b\u001a\u00020\u00022\u0006\u0010\u0007\u001a\u00020\u0006H¦@¢\u0006\u0004\b\r\u0010\u000eø\u0001\u0000\u0082\u0002\u0006\n\u0004\b!0\u0001¨\u0006\u0010À\u0006\u0001"}, d2 = {"Lt6/b;", "", "Lt6/q;", "cacheResponse", "Lt6/o;", "networkRequest", "Lx6/p;", "options", "Lt6/b$b;", "b", "(Lt6/q;Lt6/o;Lx6/p;Lnt/b;)Ljava/lang/Object;", "networkResponse", "Lt6/b$c;", "a", "(Lt6/q;Lt6/o;Lt6/q;Lx6/p;Lnt/b;)Ljava/lang/Object;", "c", "coil-network-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+@Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0004\bg\u0018\u0000 \r2\u00020\u0001:\u0003\t\u000f\rJ(\u0010\t\u001a\u00020\b2\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u0006H¦@¢\u0006\u0004\b\t\u0010\nJ2\u0010\r\u001a\u00020\f2\b\u0010\u0003\u001a\u0004\u0018\u00010\u00022\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u000b\u001a\u00020\u00022\u0006\u0010\u0007\u001a\u00020\u0006H¦@¢\u0006\u0004\b\r\u0010\u000eø\u0001\u0000\u0082\u0002\u0006\n\u0004\b!0\u0001¨\u0006\u0010À\u0006\u0001"}, d2 = {"Lt6/b;", "", "Lt6/q;", "cacheResponse", "Lt6/o;", "networkRequest", "Lx6/p;", "options", "Lt6/b$b;", "b", "(Lt6/q;Lt6/o;Lx6/p;Llt/b;)Ljava/lang/Object;", "networkResponse", "Lt6/b$c;", "a", "(Lt6/q;Lt6/o;Lt6/q;Lx6/p;Llt/b;)Ljava/lang/Object;", "c", "coil-network-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
 public interface b {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public static final Companion INSTANCE = Companion.f31606a;
+    public static final Companion INSTANCE = Companion.f32125a;
 
     @NotNull
     public static final b b = new u6.a();
@@ -23,7 +23,7 @@ public interface b {
     public static final class Companion {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ Companion f31606a = new Companion();
+        public static final /* synthetic */ Companion f32125a = new Companion();
     }
 
     /* JADX INFO: renamed from: t6.b$b, reason: collision with other inner class name and from toString */
@@ -79,10 +79,10 @@ public interface b {
     }
 
     @Nullable
-    Object a(@Nullable NetworkResponse networkResponse, @NotNull NetworkRequest networkRequest, @NotNull NetworkResponse networkResponse2, @NotNull Options options, @NotNull nt.b<? super WriteResult> bVar);
+    Object a(@Nullable NetworkResponse networkResponse, @NotNull NetworkRequest networkRequest, @NotNull NetworkResponse networkResponse2, @NotNull Options options, @NotNull lt.b<? super WriteResult> bVar);
 
     @Nullable
-    Object b(@NotNull NetworkResponse networkResponse, @NotNull NetworkRequest networkRequest, @NotNull Options options, @NotNull nt.b<? super ReadResult> bVar);
+    Object b(@NotNull NetworkResponse networkResponse, @NotNull NetworkRequest networkRequest, @NotNull Options options, @NotNull lt.b<? super ReadResult> bVar);
 
     /* JADX INFO: renamed from: t6.b$c, reason: from toString */
     @Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0007\u0018\u0000 \u00142\u00020\u0001:\u0001\u0011B\u0011\b\u0016\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005B\t\b\u0012¢\u0006\u0004\b\u0004\u0010\u0006J\u001a\u0010\t\u001a\u00020\b2\b\u0010\u0007\u001a\u0004\u0018\u00010\u0001H\u0096\u0002¢\u0006\u0004\b\t\u0010\nJ\u000f\u0010\f\u001a\u00020\u000bH\u0016¢\u0006\u0004\b\f\u0010\rJ\u000f\u0010\u000f\u001a\u00020\u000eH\u0016¢\u0006\u0004\b\u000f\u0010\u0010R\u0019\u0010\u0003\u001a\u0004\u0018\u00010\u00028\u0006¢\u0006\f\n\u0004\b\u0011\u0010\u0012\u001a\u0004\b\u0011\u0010\u0013¨\u0006\u0015"}, d2 = {"Lt6/b$c;", "", "Lt6/q;", Payload.RESPONSE, "<init>", "(Lt6/q;)V", "()V", "other", "", "equals", "(Ljava/lang/Object;)Z", "", "hashCode", "()I", "", "toString", "()Ljava/lang/String;", "a", "Lt6/q;", "()Lt6/q;", "b", "coil-network-core_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
@@ -90,7 +90,7 @@ public interface b {
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
         @NotNull
-        public static final WriteResult f31608c = new WriteResult();
+        public static final WriteResult f32127c = new WriteResult();
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata and from toString */
         @Nullable

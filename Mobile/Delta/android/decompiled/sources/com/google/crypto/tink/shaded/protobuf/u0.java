@@ -14,17 +14,17 @@ import java.util.TreeMap;
 public final class u0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final char[] f8590a;
+    public static final char[] f8664a;
 
     static {
         char[] cArr = new char[80];
-        f8590a = cArr;
+        f8664a = cArr;
         Arrays.fill(cArr, ' ');
     }
 
     public static void a(int i10, StringBuilder sb2) {
         while (i10 > 0) {
-            char[] cArr = f8590a;
+            char[] cArr = f8664a;
             int length = i10 > cArr.length ? cArr.length : i10;
             sb2.append(cArr, 0, length);
             i10 -= length;

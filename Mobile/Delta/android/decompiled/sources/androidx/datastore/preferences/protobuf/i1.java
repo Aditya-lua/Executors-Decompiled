@@ -8,11 +8,11 @@ import java.util.RandomAccess;
 public final class i1 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Class<?> f2202a = B();
+    public static final Class<?> f2047a = B();
     public static final n1<?, ?> b = C();
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static final n1<?, ?> f2203c = new p1();
+    public static final n1<?, ?> f2048c = new p1();
 
     public static <UT, UB> UB A(Object obj, int i10, List<Integer> list, z.c cVar, UB ub, n1<UT, UB> n1Var) {
         if (cVar == null) {
@@ -50,7 +50,7 @@ public final class i1 {
     }
 
     public static Class<?> B() {
-        if (c1.f2152d) {
+        if (c1.f1997d) {
             return null;
         }
         try {
@@ -73,7 +73,7 @@ public final class i1 {
     }
 
     public static Class<?> D() {
-        if (c1.f2152d) {
+        if (c1.f1997d) {
             return null;
         }
         try {
@@ -101,7 +101,7 @@ public final class i1 {
 
     public static void H(Class<?> cls) {
         Class<?> cls2;
-        if (!x.class.isAssignableFrom(cls) && !c1.f2152d && (cls2 = f2202a) != null && !cls2.isAssignableFrom(cls)) {
+        if (!x.class.isAssignableFrom(cls) && !c1.f1997d && (cls2 = f2047a) != null && !cls2.isAssignableFrom(cls)) {
             throw new IllegalArgumentException("Message classes must extend GeneratedMessage or GeneratedMessageLite");
         }
     }
@@ -126,7 +126,7 @@ public final class i1 {
     }
 
     public static n1<?, ?> L() {
-        return f2203c;
+        return f2048c;
     }
 
     public static void M(int i10, List<Boolean> list, t1 t1Var, boolean z10) {

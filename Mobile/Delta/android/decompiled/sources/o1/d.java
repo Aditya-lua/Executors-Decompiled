@@ -14,13 +14,13 @@ import n0.z1;
 public class d implements z1 {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final z1 f26989c;
+    public final z1 f27554c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public Map<Integer, a2> f26990d;
+    public Map<Integer, a2> f27555d;
 
     public d(z1 z1Var, k3 k3Var, o0 o0Var, r1.a aVar) {
-        this.f26989c = z1Var;
+        this.f27554c = z1Var;
         List listC = k3Var.c(ExtraSupportedQualityQuirk.class);
         if (listC.isEmpty()) {
             return;
@@ -28,13 +28,13 @@ public class d implements z1 {
         x2.g.i(listC.size() == 1);
         Map<Integer, a2> mapG = ((ExtraSupportedQualityQuirk) listC.get(0)).g(o0Var, z1Var, aVar);
         if (mapG != null) {
-            this.f26990d = new HashMap(mapG);
+            this.f27555d = new HashMap(mapG);
         }
     }
 
     private a2 c(int i10) {
-        Map<Integer, a2> map = this.f26990d;
-        return (map == null || !map.containsKey(Integer.valueOf(i10))) ? this.f26989c.b(i10) : this.f26990d.get(Integer.valueOf(i10));
+        Map<Integer, a2> map = this.f27555d;
+        return (map == null || !map.containsKey(Integer.valueOf(i10))) ? this.f27554c.b(i10) : this.f27555d.get(Integer.valueOf(i10));
     }
 
     @Override // n0.z1

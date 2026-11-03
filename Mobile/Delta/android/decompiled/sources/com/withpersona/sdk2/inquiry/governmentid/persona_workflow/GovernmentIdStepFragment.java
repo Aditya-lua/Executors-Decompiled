@@ -1,6 +1,5 @@
 package com.withpersona.sdk2.inquiry.governmentid.persona_workflow;
 
-import an.ViewEnvironment;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -16,24 +15,24 @@ import androidx.p000lifecycle.a1;
 import androidx.p000lifecycle.b1;
 import androidx.p000lifecycle.c1;
 import androidx.p000lifecycle.t;
-import ar.ComponentView;
 import com.withpersona.sdk2.inquiry.governmentid.GovernmentIdWorkflow;
 import com.withpersona.sdk2.inquiry.governmentid.Screen;
 import com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment;
 import com.withpersona.sdk2.inquiry.steps.ui.UiComponentScreen;
 import com.withpersona.sdk2.inquiry.tracking.TrackingEventsLogger;
+import dn.x;
 import e4.l0;
-import fn.x;
-import io.n2;
+import go.n2;
+import gt.s;
+import ho.b0;
+import ho.y;
+import hq.i0;
+import io.u;
+import io.w;
+import iu.p0;
 import java.io.File;
 import java.util.Map;
-import jo.b0;
-import jo.y;
-import jq.i0;
-import jt.s;
 import k4.CreationExtras;
-import ko.u;
-import ko.w;
 import kotlin.Metadata;
 import kotlin.Pair;
 import kotlin.Unit;
@@ -44,15 +43,16 @@ import kotlin.jvm.functions.Function2;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.d0;
-import ku.p0;
-import nu.c0;
+import lu.c0;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import to.q;
+import ro.q;
+import ym.ViewEnvironment;
+import yq.ComponentView;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000ê\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u0000\n\u0002\b\u000e\n\u0002\u0018\u0002\n\u0002\b\u0007\u0018\u0000 \u0093\u00012\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001:\u0004\u0094\u0001\u0095\u0001B\u0007¢\u0006\u0004\b\u0004\u0010\u0005J\u000f\u0010\u0007\u001a\u00020\u0006H\u0002¢\u0006\u0004\b\u0007\u0010\u0005J%\u0010\u000b\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u00032\f\u0010\n\u001a\b\u0012\u0004\u0012\u00020\u00060\tH\u0002¢\u0006\u0004\b\u000b\u0010\fJ\u001f\u0010\u0011\u001a\u00020\u00062\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\u000fH\u0002¢\u0006\u0004\b\u0011\u0010\u0012J\u001f\u0010\u0016\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u00132\u0006\u0010\u0015\u001a\u00020\u0014H\u0002¢\u0006\u0004\b\u0016\u0010\u0017J\u001f\u0010\u0019\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u00182\u0006\u0010\u0015\u001a\u00020\u0014H\u0002¢\u0006\u0004\b\u0019\u0010\u001aJ\u001f\u0010\u001c\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u001b2\u0006\u0010\u0015\u001a\u00020\u0014H\u0002¢\u0006\u0004\b\u001c\u0010\u001dJ\u001f\u0010\u001f\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u001e2\u0006\u0010\u0015\u001a\u00020\u0014H\u0002¢\u0006\u0004\b\u001f\u0010 J#\u0010%\u001a\u000e\u0012\u0004\u0012\u00020$\u0012\u0004\u0012\u00020\r0#2\u0006\u0010\"\u001a\u00020!H\u0002¢\u0006\u0004\b%\u0010&J#\u0010)\u001a\u000e\u0012\u0004\u0012\u00020(\u0012\u0004\u0012\u00020\r0#2\u0006\u0010\b\u001a\u00020'H\u0002¢\u0006\u0004\b)\u0010*J!\u0010.\u001a\u00020\u00062\u0006\u0010+\u001a\u00020\r2\b\u0010-\u001a\u0004\u0018\u00010,H\u0016¢\u0006\u0004\b.\u0010/J\u0017\u00100\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u0003H\u0014¢\u0006\u0004\b0\u00101J)\u00107\u001a\u00020\u00062\u0006\u00103\u001a\u0002022\u0012\u00106\u001a\u000e\u0012\u0004\u0012\u000205\u0012\u0004\u0012\u00020\u000604¢\u0006\u0004\b7\u00108J\u000f\u00109\u001a\u00020\u0006H\u0016¢\u0006\u0004\b9\u0010\u0005R\u001b\u0010?\u001a\u00020:8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b;\u0010<\u001a\u0004\b=\u0010>R\"\u0010G\u001a\u00020@8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\bA\u0010B\u001a\u0004\bC\u0010D\"\u0004\bE\u0010FR\"\u0010O\u001a\u00020H8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\bI\u0010J\u001a\u0004\bK\u0010L\"\u0004\bM\u0010NR(\u0010X\u001a\b\u0012\u0004\u0012\u00020Q0P8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\bR\u0010S\u001a\u0004\bT\u0010U\"\u0004\bV\u0010WR\"\u0010`\u001a\u00020Y8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\bZ\u0010[\u001a\u0004\b\\\u0010]\"\u0004\b^\u0010_R\"\u0010h\u001a\u00020a8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\bb\u0010c\u001a\u0004\bd\u0010e\"\u0004\bf\u0010gR\"\u0010p\u001a\u00020i8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\bj\u0010k\u001a\u0004\bl\u0010m\"\u0004\bn\u0010oR!\u0010w\u001a\u00020q8BX\u0082\u0084\u0002¢\u0006\u0012\n\u0004\br\u0010s\u0012\u0004\bv\u0010\u0005\u001a\u0004\bt\u0010uR\u001b\u0010|\u001a\u00020x8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\by\u0010s\u001a\u0004\bz\u0010{R$\u0010\u007f\u001a\u0010\u0012\u0004\u0012\u000205\u0012\u0004\u0012\u00020\u0006\u0018\u0001048\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b}\u0010~R\u001c\u0010\u0083\u0001\u001a\u0005\u0018\u00010\u0080\u00018\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0081\u0001\u0010\u0082\u0001R\u001b\u0010\u0086\u0001\u001a\u0004\u0018\u00010\u00038\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0084\u0001\u0010\u0085\u0001R\u001b\u0010\u0088\u0001\u001a\u0004\u0018\u00010\u00038\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0087\u0001\u0010\u0085\u0001R\u001b\u0010\u008b\u0001\u001a\u0004\u0018\u00010$8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0089\u0001\u0010\u008a\u0001R\u001b\u0010\u008e\u0001\u001a\u0004\u0018\u00010\r8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u008c\u0001\u0010\u008d\u0001R\u001c\u0010\u0092\u0001\u001a\u0005\u0018\u00010\u008f\u00018\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0090\u0001\u0010\u0091\u0001¨\u0006\u0096\u0001"}, d2 = {"Lcom/withpersona/sdk2/inquiry/governmentid/persona_workflow/GovernmentIdStepFragment;", "Loq/c;", "Lno/e;", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen;", "<init>", "()V", "", "F2", "rendering", "Lkotlin/Function0;", "bind", "G2", "(Lcom/withpersona/sdk2/inquiry/governmentid/Screen;Lkotlin/jvm/functions/Function0;)V", "Landroid/view/View;", "newView", "Lwq/l;", "transition", "Q2", "(Landroid/view/View;Lwq/l;)V", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen$g;", "Landroid/content/Context;", "context", "C2", "(Lcom/withpersona/sdk2/inquiry/governmentid/Screen$g;Landroid/content/Context;)V", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen$d;", "y2", "(Lcom/withpersona/sdk2/inquiry/governmentid/Screen$d;Landroid/content/Context;)V", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen$j;", "E2", "(Lcom/withpersona/sdk2/inquiry/governmentid/Screen$j;Landroid/content/Context;)V", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen$f;", "z2", "(Lcom/withpersona/sdk2/inquiry/governmentid/Screen$f;Landroid/content/Context;)V", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen$b;", "initialRendering", "Lkotlin/Pair;", "Lko/u;", "w2", "(Lcom/withpersona/sdk2/inquiry/governmentid/Screen$b;)Lkotlin/Pair;", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen$h;", "Lto/q;", "D2", "(Lcom/withpersona/sdk2/inquiry/governmentid/Screen$h;)Lkotlin/Pair;", "view", "Landroid/os/Bundle;", "savedInstanceState", "e1", "(Landroid/view/View;Landroid/os/Bundle;)V", "S2", "(Lcom/withpersona/sdk2/inquiry/governmentid/Screen;)V", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input;", "input", "Lkotlin/Function1;", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$a;", "handler", "R2", "(Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input;Lkotlin/jvm/functions/Function1;)V", "M0", "Lcom/withpersona/sdk2/inquiry/governmentid/persona_workflow/GovernmentIdStepFragment$GovernmentIdStepFragmentArgs;", "j0", "Lkq/c;", "H2", "()Lcom/withpersona/sdk2/inquiry/governmentid/persona_workflow/GovernmentIdStepFragment$GovernmentIdStepFragmentArgs;", "args", "Lcom/withpersona/sdk2/inquiry/governmentid/persona_workflow/d$a;", "k0", "Lcom/withpersona/sdk2/inquiry/governmentid/persona_workflow/d$a;", "P2", "()Lcom/withpersona/sdk2/inquiry/governmentid/persona_workflow/d$a;", "setViewModelFactory", "(Lcom/withpersona/sdk2/inquiry/governmentid/persona_workflow/d$a;)V", "viewModelFactory", "Lcom/withpersona/sdk2/camera/b;", "l0", "Lcom/withpersona/sdk2/camera/b;", "I2", "()Lcom/withpersona/sdk2/camera/b;", "setCameraPreview", "(Lcom/withpersona/sdk2/camera/b;)V", "cameraPreview", "Lct/a;", "Lfn/x;", "m0", "Lct/a;", "K2", "()Lct/a;", "setGovernmentIdFeed", "(Lct/a;)V", "governmentIdFeed", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "n0", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "M2", "()Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "setTrackingEventsLogger", "(Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;)V", "trackingEventsLogger", "Lgo/e;", "o0", "Lgo/e;", "J2", "()Lgo/e;", "setFeatureFlagManager", "(Lgo/e;)V", "featureFlagManager", "Lvq/a;", "p0", "Lvq/a;", "L2", "()Lvq/a;", "setSystemUiController", "(Lvq/a;)V", "systemUiController", "Lan/y;", "q0", "Ljt/h;", "N2", "()Lan/y;", "getViewEnvironment$annotations", "viewEnvironment", "Lcom/withpersona/sdk2/inquiry/governmentid/persona_workflow/d;", "r0", "O2", "()Lcom/withpersona/sdk2/inquiry/governmentid/persona_workflow/d;", "viewModel", "s0", "Lkotlin/jvm/functions/Function1;", "currentOutputHandler", "", "t0", "Ljava/lang/Object;", "currentRunner", "u0", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen;", "currentScreen", "v0", "pendingRendering", "w0", "Lko/u;", "retainedCameraRunner", "x0", "Landroid/view/View;", "retainedCameraView", "Lfn/g;", "y0", "Lfn/g;", "cameraController", "z0", "b", "GovernmentIdStepFragmentArgs", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
+@Metadata(d1 = {"\u0000ê\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u0000\n\u0002\b\u000e\n\u0002\u0018\u0002\n\u0002\b\u0007\u0018\u0000 \u0093\u00012\u000e\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u00030\u0001:\u0004\u0094\u0001\u0095\u0001B\u0007¢\u0006\u0004\b\u0004\u0010\u0005J\u000f\u0010\u0007\u001a\u00020\u0006H\u0002¢\u0006\u0004\b\u0007\u0010\u0005J%\u0010\u000b\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u00032\f\u0010\n\u001a\b\u0012\u0004\u0012\u00020\u00060\tH\u0002¢\u0006\u0004\b\u000b\u0010\fJ\u001f\u0010\u0011\u001a\u00020\u00062\u0006\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0010\u001a\u00020\u000fH\u0002¢\u0006\u0004\b\u0011\u0010\u0012J\u001f\u0010\u0016\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u00132\u0006\u0010\u0015\u001a\u00020\u0014H\u0002¢\u0006\u0004\b\u0016\u0010\u0017J\u001f\u0010\u0019\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u00182\u0006\u0010\u0015\u001a\u00020\u0014H\u0002¢\u0006\u0004\b\u0019\u0010\u001aJ\u001f\u0010\u001c\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u001b2\u0006\u0010\u0015\u001a\u00020\u0014H\u0002¢\u0006\u0004\b\u001c\u0010\u001dJ\u001f\u0010\u001f\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u001e2\u0006\u0010\u0015\u001a\u00020\u0014H\u0002¢\u0006\u0004\b\u001f\u0010 J#\u0010%\u001a\u000e\u0012\u0004\u0012\u00020$\u0012\u0004\u0012\u00020\r0#2\u0006\u0010\"\u001a\u00020!H\u0002¢\u0006\u0004\b%\u0010&J#\u0010)\u001a\u000e\u0012\u0004\u0012\u00020(\u0012\u0004\u0012\u00020\r0#2\u0006\u0010\b\u001a\u00020'H\u0002¢\u0006\u0004\b)\u0010*J!\u0010.\u001a\u00020\u00062\u0006\u0010+\u001a\u00020\r2\b\u0010-\u001a\u0004\u0018\u00010,H\u0016¢\u0006\u0004\b.\u0010/J\u0017\u00100\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\u0003H\u0014¢\u0006\u0004\b0\u00101J)\u00107\u001a\u00020\u00062\u0006\u00103\u001a\u0002022\u0012\u00106\u001a\u000e\u0012\u0004\u0012\u000205\u0012\u0004\u0012\u00020\u000604¢\u0006\u0004\b7\u00108J\u000f\u00109\u001a\u00020\u0006H\u0016¢\u0006\u0004\b9\u0010\u0005R\u001b\u0010?\u001a\u00020:8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b;\u0010<\u001a\u0004\b=\u0010>R\"\u0010G\u001a\u00020@8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\bA\u0010B\u001a\u0004\bC\u0010D\"\u0004\bE\u0010FR\"\u0010O\u001a\u00020H8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\bI\u0010J\u001a\u0004\bK\u0010L\"\u0004\bM\u0010NR(\u0010X\u001a\b\u0012\u0004\u0012\u00020Q0P8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\bR\u0010S\u001a\u0004\bT\u0010U\"\u0004\bV\u0010WR\"\u0010`\u001a\u00020Y8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\bZ\u0010[\u001a\u0004\b\\\u0010]\"\u0004\b^\u0010_R\"\u0010h\u001a\u00020a8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\bb\u0010c\u001a\u0004\bd\u0010e\"\u0004\bf\u0010gR\"\u0010p\u001a\u00020i8\u0006@\u0006X\u0087.¢\u0006\u0012\n\u0004\bj\u0010k\u001a\u0004\bl\u0010m\"\u0004\bn\u0010oR!\u0010w\u001a\u00020q8BX\u0082\u0084\u0002¢\u0006\u0012\n\u0004\br\u0010s\u0012\u0004\bv\u0010\u0005\u001a\u0004\bt\u0010uR\u001b\u0010|\u001a\u00020x8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\by\u0010s\u001a\u0004\bz\u0010{R$\u0010\u007f\u001a\u0010\u0012\u0004\u0012\u000205\u0012\u0004\u0012\u00020\u0006\u0018\u0001048\u0002@\u0002X\u0082\u000e¢\u0006\u0006\n\u0004\b}\u0010~R\u001c\u0010\u0083\u0001\u001a\u0005\u0018\u00010\u0080\u00018\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0081\u0001\u0010\u0082\u0001R\u001b\u0010\u0086\u0001\u001a\u0004\u0018\u00010\u00038\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0084\u0001\u0010\u0085\u0001R\u001b\u0010\u0088\u0001\u001a\u0004\u0018\u00010\u00038\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0087\u0001\u0010\u0085\u0001R\u001b\u0010\u008b\u0001\u001a\u0004\u0018\u00010$8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0089\u0001\u0010\u008a\u0001R\u001b\u0010\u008e\u0001\u001a\u0004\u0018\u00010\r8\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u008c\u0001\u0010\u008d\u0001R\u001c\u0010\u0092\u0001\u001a\u0005\u0018\u00010\u008f\u00018\u0002@\u0002X\u0082\u000e¢\u0006\b\n\u0006\b\u0090\u0001\u0010\u0091\u0001¨\u0006\u0096\u0001"}, d2 = {"Lcom/withpersona/sdk2/inquiry/governmentid/persona_workflow/GovernmentIdStepFragment;", "Lmq/c;", "Llo/e;", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen;", "<init>", "()V", "", "F2", "rendering", "Lkotlin/Function0;", "bind", "G2", "(Lcom/withpersona/sdk2/inquiry/governmentid/Screen;Lkotlin/jvm/functions/Function0;)V", "Landroid/view/View;", "newView", "Luq/l;", "transition", "Q2", "(Landroid/view/View;Luq/l;)V", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen$g;", "Landroid/content/Context;", "context", "C2", "(Lcom/withpersona/sdk2/inquiry/governmentid/Screen$g;Landroid/content/Context;)V", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen$d;", "y2", "(Lcom/withpersona/sdk2/inquiry/governmentid/Screen$d;Landroid/content/Context;)V", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen$j;", "E2", "(Lcom/withpersona/sdk2/inquiry/governmentid/Screen$j;Landroid/content/Context;)V", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen$f;", "z2", "(Lcom/withpersona/sdk2/inquiry/governmentid/Screen$f;Landroid/content/Context;)V", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen$b;", "initialRendering", "Lkotlin/Pair;", "Lio/u;", "w2", "(Lcom/withpersona/sdk2/inquiry/governmentid/Screen$b;)Lkotlin/Pair;", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen$h;", "Lro/q;", "D2", "(Lcom/withpersona/sdk2/inquiry/governmentid/Screen$h;)Lkotlin/Pair;", "view", "Landroid/os/Bundle;", "savedInstanceState", "e1", "(Landroid/view/View;Landroid/os/Bundle;)V", "S2", "(Lcom/withpersona/sdk2/inquiry/governmentid/Screen;)V", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input;", "input", "Lkotlin/Function1;", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$a;", "handler", "R2", "(Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input;Lkotlin/jvm/functions/Function1;)V", "M0", "Lcom/withpersona/sdk2/inquiry/governmentid/persona_workflow/GovernmentIdStepFragment$GovernmentIdStepFragmentArgs;", "j0", "Liq/c;", "H2", "()Lcom/withpersona/sdk2/inquiry/governmentid/persona_workflow/GovernmentIdStepFragment$GovernmentIdStepFragmentArgs;", "args", "Lcom/withpersona/sdk2/inquiry/governmentid/persona_workflow/d$a;", "k0", "Lcom/withpersona/sdk2/inquiry/governmentid/persona_workflow/d$a;", "P2", "()Lcom/withpersona/sdk2/inquiry/governmentid/persona_workflow/d$a;", "setViewModelFactory", "(Lcom/withpersona/sdk2/inquiry/governmentid/persona_workflow/d$a;)V", "viewModelFactory", "Lcom/withpersona/sdk2/camera/b;", "l0", "Lcom/withpersona/sdk2/camera/b;", "I2", "()Lcom/withpersona/sdk2/camera/b;", "setCameraPreview", "(Lcom/withpersona/sdk2/camera/b;)V", "cameraPreview", "Lat/a;", "Ldn/x;", "m0", "Lat/a;", "K2", "()Lat/a;", "setGovernmentIdFeed", "(Lat/a;)V", "governmentIdFeed", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "n0", "Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "M2", "()Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;", "setTrackingEventsLogger", "(Lcom/withpersona/sdk2/inquiry/tracking/TrackingEventsLogger;)V", "trackingEventsLogger", "Leo/e;", "o0", "Leo/e;", "J2", "()Leo/e;", "setFeatureFlagManager", "(Leo/e;)V", "featureFlagManager", "Ltq/a;", "p0", "Ltq/a;", "L2", "()Ltq/a;", "setSystemUiController", "(Ltq/a;)V", "systemUiController", "Lym/y;", "q0", "Lgt/h;", "N2", "()Lym/y;", "getViewEnvironment$annotations", "viewEnvironment", "Lcom/withpersona/sdk2/inquiry/governmentid/persona_workflow/d;", "r0", "O2", "()Lcom/withpersona/sdk2/inquiry/governmentid/persona_workflow/d;", "viewModel", "s0", "Lkotlin/jvm/functions/Function1;", "currentOutputHandler", "", "t0", "Ljava/lang/Object;", "currentRunner", "u0", "Lcom/withpersona/sdk2/inquiry/governmentid/Screen;", "currentScreen", "v0", "pendingRendering", "w0", "Lio/u;", "retainedCameraRunner", "x0", "Landroid/view/View;", "retainedCameraView", "Ldn/g;", "y0", "Ldn/g;", "cameraController", "z0", "b", "GovernmentIdStepFragmentArgs", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class GovernmentIdStepFragment extends mq.c<lo.e, Screen> {
 
     /* JADX INFO: renamed from: z0, reason: collision with root package name and from kotlin metadata */
     @NotNull
@@ -60,7 +60,7 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
 
     /* JADX INFO: renamed from: j0, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final kq.c args;
+    public final iq.c args;
 
     /* JADX INFO: renamed from: k0, reason: collision with root package name and from kotlin metadata */
     public com.withpersona.sdk2.inquiry.governmentid.persona_workflow.d.a viewModelFactory;
@@ -69,24 +69,24 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
     public com.withpersona.sdk2.camera.b cameraPreview;
 
     /* JADX INFO: renamed from: m0, reason: collision with root package name and from kotlin metadata */
-    public ct.a<x> governmentIdFeed;
+    public at.a<x> governmentIdFeed;
 
     /* JADX INFO: renamed from: n0, reason: collision with root package name and from kotlin metadata */
     public TrackingEventsLogger trackingEventsLogger;
 
     /* JADX INFO: renamed from: o0, reason: collision with root package name and from kotlin metadata */
-    public go.e featureFlagManager;
+    public eo.e featureFlagManager;
 
     /* JADX INFO: renamed from: p0, reason: collision with root package name and from kotlin metadata */
-    public vq.a systemUiController;
+    public tq.a systemUiController;
 
     /* JADX INFO: renamed from: q0, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final jt.h viewEnvironment;
+    public final gt.h viewEnvironment;
 
     /* JADX INFO: renamed from: r0, reason: collision with root package name and from kotlin metadata */
     @NotNull
-    public final jt.h viewModel;
+    public final gt.h viewModel;
 
     /* JADX INFO: renamed from: s0, reason: collision with root package name and from kotlin metadata */
     @Nullable
@@ -114,7 +114,7 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
 
     /* JADX INFO: renamed from: y0, reason: collision with root package name and from kotlin metadata */
     @Nullable
-    public fn.g cameraController;
+    public dn.g cameraController;
 
     @Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0006\b\u0001\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002¢\u0006\u0004\b\u0004\u0010\u0005J\r\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\u0007\u0010\bJ\u001d\u0010\r\u001a\u00020\f2\u0006\u0010\n\u001a\u00020\t2\u0006\u0010\u000b\u001a\u00020\u0006¢\u0006\u0004\b\r\u0010\u000eR\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u000f\u0010\u0010\u001a\u0004\b\u000f\u0010\u0011¨\u0006\u0012"}, d2 = {"Lcom/withpersona/sdk2/inquiry/governmentid/persona_workflow/GovernmentIdStepFragment$GovernmentIdStepFragmentArgs;", "Landroid/os/Parcelable;", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input;", "props", "<init>", "(Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input;)V", "", "describeContents", "()I", "Landroid/os/Parcel;", "dest", "flags", "", "writeToParcel", "(Landroid/os/Parcel;I)V", "a", "Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input;", "()Lcom/withpersona/sdk2/inquiry/governmentid/GovernmentIdWorkflow$Input;", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
     public static final class GovernmentIdStepFragmentArgs implements Parcelable {
@@ -166,22 +166,22 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
     }
 
     @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final /* synthetic */ class a extends kotlin.jvm.internal.k implements zt.n<LayoutInflater, ViewGroup, Boolean, no.e> {
+    public static final /* synthetic */ class a extends kotlin.jvm.internal.k implements xt.n<LayoutInflater, ViewGroup, Boolean, lo.e> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final a f10997a = new a();
+        public static final a f11078a = new a();
 
         public a() {
-            super(3, no.e.class, "inflate", "inflate(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lcom/withpersona/sdk2/inquiry/governmentid/databinding/Pi2GovernmentidFragmentBinding;", 0);
+            super(3, lo.e.class, "inflate", "inflate(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Z)Lcom/withpersona/sdk2/inquiry/governmentid/databinding/Pi2GovernmentidFragmentBinding;", 0);
         }
 
-        public final no.e d(LayoutInflater p8, ViewGroup viewGroup, boolean z10) {
+        public final lo.e d(LayoutInflater p8, ViewGroup viewGroup, boolean z10) {
             Intrinsics.checkNotNullParameter(p8, "p0");
-            return no.e.c(p8, viewGroup, z10);
+            return lo.e.c(p8, viewGroup, z10);
         }
 
-        @Override // zt.n
-        public /* bridge */ /* synthetic */ no.e invoke(LayoutInflater layoutInflater, ViewGroup viewGroup, Boolean bool) {
+        @Override // xt.n
+        public /* bridge */ /* synthetic */ lo.e invoke(LayoutInflater layoutInflater, ViewGroup viewGroup, Boolean bool) {
             return d(layoutInflater, viewGroup, bool.booleanValue());
         }
     }
@@ -196,7 +196,7 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
         @NotNull
         public final GovernmentIdStepFragment a(@NotNull GovernmentIdWorkflow.Input props) {
             Intrinsics.checkNotNullParameter(props, "props");
-            return (GovernmentIdStepFragment) kq.b.a(new GovernmentIdStepFragment(), new GovernmentIdStepFragmentArgs(props));
+            return (GovernmentIdStepFragment) iq.b.a(new GovernmentIdStepFragment(), new GovernmentIdStepFragmentArgs(props));
         }
 
         public Companion() {
@@ -207,48 +207,48 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
     public static final /* synthetic */ class c {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public static final /* synthetic */ int[] f10998a;
+        public static final /* synthetic */ int[] f11079a;
 
         static {
-            int[] iArr = new int[io.d.values().length];
+            int[] iArr = new int[go.d.values().length];
             try {
-                iArr[io.d.V0.ordinal()] = 1;
+                iArr[go.d.V0.ordinal()] = 1;
             } catch (NoSuchFieldError unused) {
             }
             try {
-                iArr[io.d.K0000.ordinal()] = 2;
+                iArr[go.d.K0000.ordinal()] = 2;
             } catch (NoSuchFieldError unused2) {
             }
-            f10998a = iArr;
+            f11079a = iArr;
         }
     }
 
-    @Metadata(d1 = {"\u0000\u0019\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\b\u0012\u0004\u0012\u00028\u00000\u0001J!\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0002\u001a\u00028\u00002\b\u0010\u0004\u001a\u0004\u0018\u00010\u0003H\u0016¢\u0006\u0004\b\u0006\u0010\u0007¨\u0006\b"}, d2 = {"com/withpersona/sdk2/inquiry/governmentid/persona_workflow/GovernmentIdStepFragment$d", "Lar/f;", "rendering", "Lvq/a;", "systemUiController", "", "b", "(Ljava/lang/Object;Lvq/a;)V", "ui-step-renderer_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    public static final class d implements ar.f<Screen.f> {
+    @Metadata(d1 = {"\u0000\u0019\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\b\u0012\u0004\u0012\u00028\u00000\u0001J!\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0002\u001a\u00028\u00002\b\u0010\u0004\u001a\u0004\u0018\u00010\u0003H\u0016¢\u0006\u0004\b\u0006\u0010\u0007¨\u0006\b"}, d2 = {"com/withpersona/sdk2/inquiry/governmentid/persona_workflow/GovernmentIdStepFragment$d", "Lyq/f;", "rendering", "Ltq/a;", "systemUiController", "", "a", "(Ljava/lang/Object;Ltq/a;)V", "ui-step-renderer_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final class d implements yq.f<Screen.f> {
         public final /* synthetic */ UiComponentScreen b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final /* synthetic */ nq.b f10999c;
+        public final /* synthetic */ lq.b f11080c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final /* synthetic */ zt.n f11000d;
+        public final /* synthetic */ xt.n f11081d;
 
         /* JADX INFO: renamed from: e, reason: collision with root package name */
-        public final /* synthetic */ ar.g f11001e;
+        public final /* synthetic */ yq.g f11082e;
 
-        public d(UiComponentScreen uiComponentScreen, nq.b bVar, zt.n nVar, ar.g gVar) {
+        public d(UiComponentScreen uiComponentScreen, lq.b bVar, xt.n nVar, yq.g gVar) {
             this.b = uiComponentScreen;
-            this.f10999c = bVar;
-            this.f11000d = nVar;
-            this.f11001e = gVar;
+            this.f11080c = bVar;
+            this.f11081d = nVar;
+            this.f11082e = gVar;
         }
 
-        @Override // ar.f
-        public void b(Screen.f rendering, vq.a systemUiController) {
+        @Override // yq.f
+        public void a(Screen.f rendering, tq.a systemUiController) {
             Intrinsics.checkNotNullParameter(rendering, "rendering");
             Integer numI = this.b.i();
             if (numI != null) {
-                nq.b bVar = this.f10999c;
+                lq.b bVar = this.f11080c;
                 int iIntValue = numI.intValue();
                 bVar.getRoot().setBackgroundColor(iIntValue);
                 if (systemUiController != null) {
@@ -258,166 +258,171 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
                 }
             }
             UiComponentScreen uiComponentScreen = this.b;
-            Context context2 = this.f10999c.getRoot().getContext();
+            Context context2 = this.f11080c.getRoot().getContext();
             Intrinsics.checkNotNullExpressionValue(context2, "getContext(...)");
             Drawable drawableA = uiComponentScreen.a(context2);
             if (drawableA != null) {
-                nq.b bVar2 = this.f10999c;
+                lq.b bVar2 = this.f11080c;
                 bVar2.getRoot().setBackground(drawableA);
-                bVar2.f26638d.setBackgroundColor(0);
+                bVar2.f23927d.setBackgroundColor(0);
             }
-            this.f11000d.invoke(this.f10999c, rendering, this.f11001e.getViewBindings().a());
+            this.f11081d.invoke(this.f11080c, rendering, this.f11082e.getViewBindings().a());
         }
     }
 
-    @Metadata(d1 = {"\u0000\u001d\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J!\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"com/withpersona/sdk2/inquiry/governmentid/persona_workflow/GovernmentIdStepFragment$e", "Lto/k$a;", "Landroid/content/Context;", "context", "Landroid/view/ViewGroup;", "container", "Lto/k;", "a", "(Landroid/content/Context;Landroid/view/ViewGroup;)Lto/k;", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    public static final class e implements to.k.a {
-        @Override // to.k.a
-        public to.k a(Context context, ViewGroup container) {
+    @Metadata(d1 = {"\u0000\u001d\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J!\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"com/withpersona/sdk2/inquiry/governmentid/persona_workflow/GovernmentIdStepFragment$e", "Lro/k$a;", "Landroid/content/Context;", "context", "Landroid/view/ViewGroup;", "container", "Lro/k;", "a", "(Landroid/content/Context;Landroid/view/ViewGroup;)Lro/k;", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final class e implements ro.k.a {
+        @Override // ro.k.a
+        public ro.k a(Context context, ViewGroup container) {
             Intrinsics.checkNotNullParameter(context, "context");
-            return new to.j(context, container);
+            return new ro.j(context, container);
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment$finalizeVideoCaptureThenBind$1", f = "GovernmentIdStepFragment.kt", l = {343}, m = "invokeSuspend")
-    public static final class f extends pt.m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment$finalizeVideoCaptureThenBind$1", f = "GovernmentIdStepFragment.kt", l = {343}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class f extends nt.m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f11002t;
+        public int f11083t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public final /* synthetic */ fn.g f11003u;
+        public final /* synthetic */ dn.g f11084u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ Function0<Unit> f11004v;
+        public final /* synthetic */ Function0<Unit> f11085v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public final /* synthetic */ GovernmentIdStepFragment f11005w;
+        public final /* synthetic */ GovernmentIdStepFragment f11086w;
 
         /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public final /* synthetic */ Screen f11006x;
+        public final /* synthetic */ Screen f11087x;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public f(fn.g gVar, Function0<Unit> function0, GovernmentIdStepFragment governmentIdStepFragment, Screen screen, nt.b<? super f> bVar) {
+        public f(dn.g gVar, Function0<Unit> function0, GovernmentIdStepFragment governmentIdStepFragment, Screen screen, lt.b<? super f> bVar) {
             super(2, bVar);
-            this.f11003u = gVar;
-            this.f11004v = function0;
-            this.f11005w = governmentIdStepFragment;
-            this.f11006x = screen;
+            this.f11084u = gVar;
+            this.f11085v = function0;
+            this.f11086w = governmentIdStepFragment;
+            this.f11087x = screen;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return new f(this.f11003u, this.f11004v, this.f11005w, this.f11006x, bVar);
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return new f(this.f11084u, this.f11085v, this.f11086w, this.f11087x, bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((f) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            Object objI;
-            Object objE = ot.c.e();
-            int i10 = this.f11002t;
+            Object objK;
+            Object objE = mt.c.e();
+            int i10 = this.f11083t;
             if (i10 == 0) {
-                jt.o.b(obj);
-                fn.g gVar = this.f11003u;
+                gt.o.b(obj);
+                dn.g gVar = this.f11084u;
                 if (gVar != null) {
-                    this.f11002t = 1;
-                    objI = gVar.i(this);
-                    if (objI == objE) {
+                    this.f11083t = 1;
+                    objK = gVar.k(this);
+                    if (objK == objE) {
                         return objE;
                     }
                 }
-                this.f11004v.invoke();
-                this.f11005w.F2();
-                this.f11005w.currentScreen = this.f11006x;
-                return Unit.f22483a;
+                this.f11085v.invoke();
+                this.f11086w.F2();
+                this.f11086w.currentScreen = this.f11087x;
+                return Unit.f22938a;
             }
             if (i10 != 1) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            jt.o.b(obj);
-            objI = ((jt.n) obj).getValue();
-            GovernmentIdStepFragment governmentIdStepFragment = this.f11005w;
-            fn.g gVar2 = this.f11003u;
-            if (jt.n.h(objI)) {
-                governmentIdStepFragment.O2().getGovernmentIdStepStateManager().f0((File) objI, gVar2.a());
+            gt.o.b(obj);
+            objK = ((gt.n) obj).getValue();
+            GovernmentIdStepFragment governmentIdStepFragment = this.f11086w;
+            dn.g gVar2 = this.f11084u;
+            if (gt.n.h(objK)) {
+                governmentIdStepFragment.O2().getGovernmentIdStepStateManager().f0((File) objK, gVar2.a());
             }
-            jt.n.a(objI);
-            this.f11004v.invoke();
-            this.f11005w.F2();
-            this.f11005w.currentScreen = this.f11006x;
-            return Unit.f22483a;
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((f) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            gt.n.a(objK);
+            this.f11085v.invoke();
+            this.f11086w.F2();
+            this.f11086w.currentScreen = this.f11087x;
+            return Unit.f22938a;
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment$onViewCreated$1", f = "GovernmentIdStepFragment.kt", l = {144}, m = "invokeSuspend")
-    public static final class g extends pt.m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment$onViewCreated$1", f = "GovernmentIdStepFragment.kt", l = {144}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class g extends nt.m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f11007t;
+        public int f11088t;
 
         /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public final /* synthetic */ b f11008u;
+        public final /* synthetic */ b f11089u;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ GovernmentIdStepFragment f11009v;
+        public final /* synthetic */ GovernmentIdStepFragment f11090v;
 
         @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-        public static final class a<T> implements nu.i {
+        public static final class a<T> implements lu.i {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public final /* synthetic */ GovernmentIdStepFragment f11010a;
+            public final /* synthetic */ GovernmentIdStepFragment f11091a;
             public final /* synthetic */ b b;
 
             public a(GovernmentIdStepFragment governmentIdStepFragment, b bVar) {
-                this.f11010a = governmentIdStepFragment;
+                this.f11091a = governmentIdStepFragment;
                 this.b = bVar;
             }
 
-            @Override // nu.i
+            @Override // lu.i
             /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-            public final Object emit(GovernmentIdWorkflow.a aVar, nt.b<? super Unit> bVar) {
+            public final Object emit(GovernmentIdWorkflow.a aVar, lt.b<? super Unit> bVar) {
                 if (aVar == null) {
-                    return Unit.f22483a;
+                    return Unit.f22938a;
                 }
-                if (this.f11010a.currentOutputHandler != null) {
+                if (this.f11091a.currentOutputHandler != null) {
                     this.b.a().setValue(null);
-                    Function1 function1 = this.f11010a.currentOutputHandler;
+                    Function1 function1 = this.f11091a.currentOutputHandler;
                     if (function1 != null) {
                         function1.invoke(aVar);
                     }
                 }
-                return Unit.f22483a;
+                return Unit.f22938a;
             }
         }
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public g(b bVar, GovernmentIdStepFragment governmentIdStepFragment, nt.b<? super g> bVar2) {
+        public g(b bVar, GovernmentIdStepFragment governmentIdStepFragment, lt.b<? super g> bVar2) {
             super(2, bVar2);
-            this.f11008u = bVar;
-            this.f11009v = governmentIdStepFragment;
+            this.f11089u = bVar;
+            this.f11090v = governmentIdStepFragment;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return new g(this.f11008u, this.f11009v, bVar);
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return new g(this.f11089u, this.f11090v, bVar);
         }
 
-        @Override // pt.a
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((g) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
+        }
+
+        @Override // nt.a
         public final Object invokeSuspend(Object obj) {
-            Object objE = ot.c.e();
-            int i10 = this.f11007t;
+            Object objE = mt.c.e();
+            int i10 = this.f11088t;
             if (i10 == 0) {
-                jt.o.b(obj);
-                c0<GovernmentIdWorkflow.a> c0VarA = this.f11008u.a();
-                a aVar = new a(this.f11009v, this.f11008u);
-                this.f11007t = 1;
+                gt.o.b(obj);
+                c0<GovernmentIdWorkflow.a> c0VarA = this.f11089u.a();
+                a aVar = new a(this.f11090v, this.f11089u);
+                this.f11088t = 1;
                 if (c0VarA.collect(aVar, this) == objE) {
                     return objE;
                 }
@@ -425,40 +430,40 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
                 if (i10 != 1) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                 }
-                jt.o.b(obj);
+                gt.o.b(obj);
             }
-            throw new jt.d();
-        }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((g) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
+            throw new gt.d();
         }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment$render$16", f = "GovernmentIdStepFragment.kt", l = {313, 314}, m = "invokeSuspend")
-    public static final class h extends pt.m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment$render$16", f = "GovernmentIdStepFragment.kt", l = {313, 314}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class h extends nt.m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f11011t;
+        public int f11092t;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ Screen f11013v;
+        public final /* synthetic */ Screen f11094v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public final /* synthetic */ Context f11014w;
+        public final /* synthetic */ Context f11095w;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public h(Screen screen, Context context, nt.b<? super h> bVar) {
+        public h(Screen screen, Context context, lt.b<? super h> bVar) {
             super(2, bVar);
-            this.f11013v = screen;
-            this.f11014w = context;
+            this.f11094v = screen;
+            this.f11095w = context;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return GovernmentIdStepFragment.this.new h(this.f11013v, this.f11014w, bVar);
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return GovernmentIdStepFragment.this.new h(this.f11094v, this.f11095w, bVar);
+        }
+
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((h) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:13:0x0035, code lost:
@@ -469,7 +474,7 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
         
             if (r5.b(r1, r4) == r0) goto L18;
          */
-        @Override // pt.a
+        @Override // nt.a
         /*
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct add '--show-bad-code' argument
@@ -477,14 +482,14 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
         public final java.lang.Object invokeSuspend(java.lang.Object r5) {
             /*
                 r4 = this;
-                java.lang.Object r0 = ot.c.e()
-                int r1 = r4.f11011t
+                java.lang.Object r0 = mt.c.e()
+                int r1 = r4.f11092t
                 r2 = 2
                 r3 = 1
                 if (r1 == 0) goto L24
                 if (r1 == r3) goto L1a
                 if (r1 != r2) goto L12
-                jt.o.b(r5)
+                gt.o.b(r5)
                 goto L51
             L12:
                 java.lang.IllegalStateException r5 = new java.lang.IllegalStateException
@@ -492,78 +497,78 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
                 r5.<init>(r0)
                 throw r5
             L1a:
-                jt.o.b(r5)
-                jt.n r5 = (jt.n) r5
+                gt.o.b(r5)
+                gt.n r5 = (gt.n) r5
                 java.lang.Object r5 = r5.getValue()
                 goto L38
             L24:
-                jt.o.b(r5)
+                gt.o.b(r5)
                 com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment r5 = com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.this
-                fn.g r5 = com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.s2(r5)
+                dn.g r5 = com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.s2(r5)
                 if (r5 == 0) goto L3b
-                r4.f11011t = r3
-                java.lang.Object r5 = r5.i(r4)
+                r4.f11092t = r3
+                java.lang.Object r5 = r5.k(r4)
                 if (r5 != r0) goto L38
                 goto L50
             L38:
-                jt.n.a(r5)
+                gt.n.a(r5)
             L3b:
-                fn.j r5 = fn.j.f16915a
+                dn.j r5 = dn.j.f15111a
                 com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment r1 = com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.this
                 android.content.Context r1 = r1.I1()
                 java.lang.String r3 = "requireContext(...)"
                 kotlin.jvm.internal.Intrinsics.checkNotNullExpressionValue(r1, r3)
-                r4.f11011t = r2
+                r4.f11092t = r2
                 java.lang.Object r5 = r5.b(r1, r4)
                 if (r5 != r0) goto L51
             L50:
                 return r0
             L51:
                 com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment r5 = com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.this
-                com.withpersona.sdk2.inquiry.governmentid.Screen r0 = r4.f11013v
+                com.withpersona.sdk2.inquiry.governmentid.Screen r0 = r4.f11094v
                 com.withpersona.sdk2.inquiry.governmentid.Screen$g r0 = (com.withpersona.sdk2.inquiry.governmentid.Screen.g) r0
-                android.content.Context r1 = r4.f11014w
+                android.content.Context r1 = r4.f11095w
                 com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.q2(r5, r0, r1)
                 com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment r5 = com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.this
                 com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.r2(r5)
                 com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment r5 = com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.this
-                com.withpersona.sdk2.inquiry.governmentid.Screen r0 = r4.f11013v
+                com.withpersona.sdk2.inquiry.governmentid.Screen r0 = r4.f11094v
                 com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.v2(r5, r0)
-                kotlin.Unit r5 = kotlin.Unit.f22483a
+                kotlin.Unit r5 = kotlin.Unit.f22938a
                 return r5
             */
             throw new UnsupportedOperationException("Method not decompiled: com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.h.invokeSuspend(java.lang.Object):java.lang.Object");
         }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((h) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
-        }
     }
 
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Lku/p0;", "", "<anonymous>", "(Lku/p0;)V"}, k = 3, mv = {2, 2, 0})
-    @pt.f(c = "com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment$render$9", f = "GovernmentIdStepFragment.kt", l = {252, 253}, m = "invokeSuspend")
-    public static final class i extends pt.m implements Function2<p0, nt.b<? super Unit>, Object> {
+    @nt.f(c = "com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment$render$9", f = "GovernmentIdStepFragment.kt", l = {252, 253}, m = "invokeSuspend")
+    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\u0010\u0002\u001a\u00020\u0001*\u00020\u0000H\n¢\u0006\u0004\b\u0002\u0010\u0003"}, d2 = {"Liu/p0;", "", "<anonymous>", "(Liu/p0;)V"}, k = 3, mv = {2, 2, 0})
+    public static final class i extends nt.m implements Function2<p0, lt.b<? super Unit>, Object> {
 
         /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public int f11015t;
+        public int f11096t;
 
         /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public final /* synthetic */ Screen f11017v;
+        public final /* synthetic */ Screen f11098v;
 
         /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public final /* synthetic */ Context f11018w;
+        public final /* synthetic */ Context f11099w;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public i(Screen screen, Context context, nt.b<? super i> bVar) {
+        public i(Screen screen, Context context, lt.b<? super i> bVar) {
             super(2, bVar);
-            this.f11017v = screen;
-            this.f11018w = context;
+            this.f11098v = screen;
+            this.f11099w = context;
         }
 
-        @Override // pt.a
-        public final nt.b<Unit> create(Object obj, nt.b<?> bVar) {
-            return GovernmentIdStepFragment.this.new i(this.f11017v, this.f11018w, bVar);
+        @Override // nt.a
+        public final lt.b<Unit> create(Object obj, lt.b<?> bVar) {
+            return GovernmentIdStepFragment.this.new i(this.f11098v, this.f11099w, bVar);
+        }
+
+        @Override // kotlin.jvm.functions.Function2
+        public final Object invoke(p0 p0Var, lt.b<? super Unit> bVar) {
+            return ((i) create(p0Var, bVar)).invokeSuspend(Unit.f22938a);
         }
 
         /* JADX WARN: Code restructure failed: missing block: B:13:0x0035, code lost:
@@ -574,7 +579,7 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
         
             if (r5.b(r1, r4) == r0) goto L18;
          */
-        @Override // pt.a
+        @Override // nt.a
         /*
             Code decompiled incorrectly, please refer to instructions dump.
             To view partially-correct add '--show-bad-code' argument
@@ -582,14 +587,14 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
         public final java.lang.Object invokeSuspend(java.lang.Object r5) {
             /*
                 r4 = this;
-                java.lang.Object r0 = ot.c.e()
-                int r1 = r4.f11015t
+                java.lang.Object r0 = mt.c.e()
+                int r1 = r4.f11096t
                 r2 = 2
                 r3 = 1
                 if (r1 == 0) goto L24
                 if (r1 == r3) goto L1a
                 if (r1 != r2) goto L12
-                jt.o.b(r5)
+                gt.o.b(r5)
                 goto L51
             L12:
                 java.lang.IllegalStateException r5 = new java.lang.IllegalStateException
@@ -597,59 +602,54 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
                 r5.<init>(r0)
                 throw r5
             L1a:
-                jt.o.b(r5)
-                jt.n r5 = (jt.n) r5
+                gt.o.b(r5)
+                gt.n r5 = (gt.n) r5
                 java.lang.Object r5 = r5.getValue()
                 goto L38
             L24:
-                jt.o.b(r5)
+                gt.o.b(r5)
                 com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment r5 = com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.this
-                fn.g r5 = com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.s2(r5)
+                dn.g r5 = com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.s2(r5)
                 if (r5 == 0) goto L3b
-                r4.f11015t = r3
-                java.lang.Object r5 = r5.i(r4)
+                r4.f11096t = r3
+                java.lang.Object r5 = r5.k(r4)
                 if (r5 != r0) goto L38
                 goto L50
             L38:
-                jt.n.a(r5)
+                gt.n.a(r5)
             L3b:
-                fn.j r5 = fn.j.f16915a
+                dn.j r5 = dn.j.f15111a
                 com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment r1 = com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.this
                 android.content.Context r1 = r1.I1()
                 java.lang.String r3 = "requireContext(...)"
                 kotlin.jvm.internal.Intrinsics.checkNotNullExpressionValue(r1, r3)
-                r4.f11015t = r2
+                r4.f11096t = r2
                 java.lang.Object r5 = r5.b(r1, r4)
                 if (r5 != r0) goto L51
             L50:
                 return r0
             L51:
                 com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment r5 = com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.this
-                com.withpersona.sdk2.inquiry.governmentid.Screen r0 = r4.f11017v
+                com.withpersona.sdk2.inquiry.governmentid.Screen r0 = r4.f11098v
                 com.withpersona.sdk2.inquiry.governmentid.Screen$d r0 = (com.withpersona.sdk2.inquiry.governmentid.Screen.d) r0
-                android.content.Context r1 = r4.f11018w
+                android.content.Context r1 = r4.f11099w
                 com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.p2(r5, r0, r1)
                 com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment r5 = com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.this
                 com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.r2(r5)
                 com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment r5 = com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.this
-                com.withpersona.sdk2.inquiry.governmentid.Screen r0 = r4.f11017v
+                com.withpersona.sdk2.inquiry.governmentid.Screen r0 = r4.f11098v
                 com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.v2(r5, r0)
-                kotlin.Unit r5 = kotlin.Unit.f22483a
+                kotlin.Unit r5 = kotlin.Unit.f22938a
                 return r5
             */
             throw new UnsupportedOperationException("Method not decompiled: com.withpersona.sdk2.inquiry.governmentid.persona_workflow.GovernmentIdStepFragment.i.invokeSuspend(java.lang.Object):java.lang.Object");
         }
-
-        @Override // kotlin.jvm.functions.Function2
-        public final Object invoke(p0 p0Var, nt.b<? super Unit> bVar) {
-            return ((i) create(p0Var, bVar)).invokeSuspend(Unit.f22483a);
-        }
     }
 
-    @Metadata(d1 = {"\u0000\u001d\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J!\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"com/withpersona/sdk2/inquiry/governmentid/persona_workflow/GovernmentIdStepFragment$j", "Ljo/c0$a;", "Landroid/content/Context;", "context", "Landroid/view/ViewGroup;", "container", "Ljo/c0;", "a", "(Landroid/content/Context;Landroid/view/ViewGroup;)Ljo/c0;", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-    public static final class j implements jo.c0.a {
-        @Override // jo.c0.a
-        public jo.c0 a(Context context, ViewGroup container) {
+    @Metadata(d1 = {"\u0000\u001d\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J!\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0003\u001a\u00020\u00022\b\u0010\u0005\u001a\u0004\u0018\u00010\u0004H\u0016¢\u0006\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"com/withpersona/sdk2/inquiry/governmentid/persona_workflow/GovernmentIdStepFragment$j", "Lho/c0$a;", "Landroid/content/Context;", "context", "Landroid/view/ViewGroup;", "container", "Lho/c0;", "a", "(Landroid/content/Context;Landroid/view/ViewGroup;)Lho/c0;", "government-id_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+    public static final class j implements ho.c0.a {
+        @Override // ho.c0.a
+        public ho.c0 a(Context context, ViewGroup container) {
             Intrinsics.checkNotNullParameter(context, "context");
             return new y(context, container);
         }
@@ -659,20 +659,20 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
     public static final class k implements Function0<Bundle> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ androidx.fragment.app.c f11019a;
+        public final /* synthetic */ androidx.fragment.app.c f11100a;
 
         public k(androidx.fragment.app.c cVar) {
-            this.f11019a = cVar;
+            this.f11100a = cVar;
         }
 
         @Override // kotlin.jvm.functions.Function0
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public final Bundle invoke() {
-            Bundle bundleT = this.f11019a.t();
+            Bundle bundleT = this.f11100a.t();
             if (bundleT != null) {
                 return bundleT;
             }
-            throw new IllegalStateException("Fragment " + this.f11019a + " has null arguments");
+            throw new IllegalStateException("Fragment " + this.f11100a + " has null arguments");
         }
     }
 
@@ -680,18 +680,18 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
     public static final class l implements Function0<a1.c> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final /* synthetic */ androidx.fragment.app.c f11020a;
+        public final /* synthetic */ androidx.fragment.app.c f11101a;
         public final /* synthetic */ Function1 b;
 
         public l(androidx.fragment.app.c cVar, Function1 function1) {
-            this.f11020a = cVar;
+            this.f11101a = cVar;
             this.b = function1;
         }
 
         @Override // kotlin.jvm.functions.Function0
         /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
         public final a1.c invoke() {
-            return new oq.d(this.f11020a, this.b);
+            return new mq.d(this.f11101a, this.b);
         }
     }
 
@@ -699,19 +699,19 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
     public static final class m extends kotlin.jvm.internal.m implements Function0<androidx.fragment.app.c> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ androidx.fragment.app.c f11021i;
+        public final /* synthetic */ androidx.fragment.app.c f11102i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public m(androidx.fragment.app.c cVar) {
             super(0);
-            this.f11021i = cVar;
+            this.f11102i = cVar;
         }
 
         @Override // kotlin.jvm.functions.Function0
         @NotNull
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final androidx.fragment.app.c invoke() {
-            return this.f11021i;
+            return this.f11102i;
         }
     }
 
@@ -719,19 +719,19 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
     public static final class n extends kotlin.jvm.internal.m implements Function0<c1> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ Function0 f11022i;
+        public final /* synthetic */ Function0 f11103i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public n(Function0 function0) {
             super(0);
-            this.f11022i = function0;
+            this.f11103i = function0;
         }
 
         @Override // kotlin.jvm.functions.Function0
         @NotNull
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final c1 invoke() {
-            return (c1) this.f11022i.invoke();
+            return (c1) this.f11103i.invoke();
         }
     }
 
@@ -739,19 +739,19 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
     public static final class o extends kotlin.jvm.internal.m implements Function0<b1> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ jt.h f11023i;
+        public final /* synthetic */ gt.h f11104i;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public o(jt.h hVar) {
+        public o(gt.h hVar) {
             super(0);
-            this.f11023i = hVar;
+            this.f11104i = hVar;
         }
 
         @Override // kotlin.jvm.functions.Function0
         @NotNull
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final b1 invoke() {
-            return l0.c(this.f11023i).w();
+            return l0.c(this.f11104i).v();
         }
     }
 
@@ -759,16 +759,16 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
     public static final class p extends kotlin.jvm.internal.m implements Function0<CreationExtras> {
 
         /* JADX INFO: renamed from: i, reason: collision with root package name */
-        public final /* synthetic */ Function0 f11024i;
+        public final /* synthetic */ Function0 f11105i;
 
         /* JADX INFO: renamed from: j, reason: collision with root package name */
-        public final /* synthetic */ jt.h f11025j;
+        public final /* synthetic */ gt.h f11106j;
 
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-        public p(Function0 function0, jt.h hVar) {
+        public p(Function0 function0, gt.h hVar) {
             super(0);
-            this.f11024i = function0;
-            this.f11025j = hVar;
+            this.f11105i = function0;
+            this.f11106j = hVar;
         }
 
         @Override // kotlin.jvm.functions.Function0
@@ -776,64 +776,64 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
         /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
         public final CreationExtras invoke() {
             CreationExtras creationExtras;
-            Function0 function0 = this.f11024i;
+            Function0 function0 = this.f11105i;
             if (function0 != null && (creationExtras = (CreationExtras) function0.invoke()) != null) {
                 return creationExtras;
             }
-            c1 c1VarC = l0.c(this.f11025j);
+            c1 c1VarC = l0.c(this.f11106j);
             androidx.p000lifecycle.j jVar = c1VarC instanceof androidx.p000lifecycle.j ? (androidx.p000lifecycle.j) c1VarC : null;
-            return jVar != null ? jVar.Z() : CreationExtras.b.f22169c;
+            return jVar != null ? jVar.Y() : CreationExtras.b.f22393c;
         }
     }
 
     public GovernmentIdStepFragment() {
-        super(a.f10997a);
-        this.args = new kq.c(d0.b(GovernmentIdStepFragmentArgs.class), new k(this));
-        this.viewEnvironment = jt.i.b(new Function0() { // from class: qo.h
+        super(a.f11078a);
+        this.args = new iq.c(d0.b(GovernmentIdStepFragmentArgs.class), new k(this));
+        this.viewEnvironment = gt.i.b(new Function0() { // from class: oo.h
             @Override // kotlin.jvm.functions.Function0
             public final Object invoke() {
-                return GovernmentIdStepFragment.V2(this.f29542a);
+                return GovernmentIdStepFragment.V2(this.f28086a);
             }
         });
-        l lVar = new l(this, new Function1() { // from class: qo.i
+        l lVar = new l(this, new Function1() { // from class: oo.i
             @Override // kotlin.jvm.functions.Function1
             public final Object invoke(Object obj) {
-                return GovernmentIdStepFragment.W2(this.f29544a, (androidx.p000lifecycle.l0) obj);
+                return GovernmentIdStepFragment.W2(this.f28088a, (androidx.p000lifecycle.l0) obj);
             }
         });
-        jt.h hVarA = jt.i.a(jt.k.NONE, new n(new m(this)));
+        gt.h hVarA = gt.i.a(gt.k.NONE, new n(new m(this)));
         this.viewModel = l0.b(this, d0.b(com.withpersona.sdk2.inquiry.governmentid.persona_workflow.d.class), new o(hVarA), new p(null, hVarA), lVar);
     }
 
-    public static final Unit A2(nq.b binding, Map map) {
+    public static final Unit A2(lq.b binding, Map map) {
         Intrinsics.checkNotNullParameter(binding, "binding");
         Intrinsics.checkNotNullParameter(map, "<unused var>");
         ConstraintLayout root = binding.getRoot();
         Intrinsics.checkNotNullExpressionValue(root, "getRoot(...)");
-        wq.g.d(root, false, false, false, false, 15, null);
-        return Unit.f22483a;
+        uq.g.d(root, false, false, false, false, 15, null);
+        return Unit.f22938a;
     }
 
-    public static final Unit B2(nq.b binding, Screen.f pendingRendering, Map map) {
+    public static final Unit B2(lq.b binding, Screen.f pendingRendering, Map map) {
         Intrinsics.checkNotNullParameter(binding, "binding");
         Intrinsics.checkNotNullParameter(pendingRendering, "pendingRendering");
         Intrinsics.checkNotNullParameter(map, "<unused var>");
-        qo.o.d(binding, pendingRendering);
-        return Unit.f22483a;
+        oo.o.d(binding, pendingRendering);
+        return Unit.f22938a;
     }
 
     public static final Unit T2(GovernmentIdStepFragment governmentIdStepFragment, Screen screen, Context context) {
         governmentIdStepFragment.E2((Screen.j) screen, context);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final Unit U2(GovernmentIdStepFragment governmentIdStepFragment, Screen screen, Context context) {
         governmentIdStepFragment.z2((Screen.f) screen, context);
-        return Unit.f22483a;
+        return Unit.f22938a;
     }
 
     public static final ViewEnvironment V2(GovernmentIdStepFragment governmentIdStepFragment) {
-        return new ViewEnvironment(j0.g(s.a(vq.b.b, governmentIdStepFragment.L2())));
+        return new ViewEnvironment(j0.g(s.a(tq.b.b, governmentIdStepFragment.L2())));
     }
 
     public static final com.withpersona.sdk2.inquiry.governmentid.persona_workflow.d W2(GovernmentIdStepFragment governmentIdStepFragment, androidx.p000lifecycle.l0 it) {
@@ -841,56 +841,56 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
         return governmentIdStepFragment.P2().a(it, governmentIdStepFragment.H2().getProps());
     }
 
-    public static final w x2(x governmentIdFeed, com.withpersona.sdk2.camera.b cameraPreview, go.e featureFlagManager, Screen.b initialRendering, Context context, ViewGroup viewGroup) {
+    public static final w x2(x governmentIdFeed, com.withpersona.sdk2.camera.b cameraPreview, eo.e featureFlagManager, Screen.b initialRendering, Context context, ViewGroup viewGroup) {
         Intrinsics.checkNotNullParameter(governmentIdFeed, "governmentIdFeed");
         Intrinsics.checkNotNullParameter(cameraPreview, "cameraPreview");
         Intrinsics.checkNotNullParameter(featureFlagManager, "featureFlagManager");
         Intrinsics.checkNotNullParameter(initialRendering, "initialRendering");
         Intrinsics.checkNotNullParameter(context, "context");
-        return new ko.m(governmentIdFeed, cameraPreview, featureFlagManager, initialRendering, context, viewGroup);
+        return new io.m(governmentIdFeed, cameraPreview, featureFlagManager, initialRendering, context, viewGroup);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public final void C2(Screen.g rendering, Context context) {
         Object obj = this.currentRunner;
         View view = null;
-        if (!(obj instanceof so.k)) {
+        if (!(obj instanceof qo.k)) {
             obj = null;
         }
-        Object obj2 = (so.k) obj;
+        Object obj2 = (qo.k) obj;
         if (obj2 == null) {
-            no.h hVarC = no.h.c(LayoutInflater.from(context), ((no.e) b2()).b, false);
+            lo.h hVarC = lo.h.c(LayoutInflater.from(context), ((lo.e) b2()).b, false);
             Intrinsics.checkNotNullExpressionValue(hVarC, "inflate(...)");
-            Pair pair = new Pair(new so.k(hVarC), hVarC.getRoot());
+            Pair pair = new Pair(new qo.k(hVarC), hVarC.getRoot());
             Object objA = pair.a();
             view = (View) pair.b();
             obj2 = objA;
         }
-        wq.l transition = rendering.b(this.currentScreen) ? wq.l.NONE : rendering.getTransition();
+        uq.l transition = rendering.b(this.currentScreen) ? uq.l.NONE : rendering.getTransition();
         if (view != null) {
             Q2(view, transition);
         }
-        ((so.k) obj2).a(rendering, N2());
+        ((qo.k) obj2).b(rendering, N2());
         this.currentRunner = obj2;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
     public final Pair<q, View> D2(Screen.h rendering) {
-        wn.d dVar;
-        Context context = ((no.e) b2()).b.getContext();
-        wn.a.C0631a c0631aC = wn.a.f34452a.c(to.k.a.class, new e());
-        int i10 = c.f10998a[rendering.getDesignVersion().ordinal()];
+        un.d dVar;
+        Context context = ((lo.e) b2()).b.getContext();
+        un.a.C0599a c0599aC = un.a.f33136a.c(ro.k.a.class, new e());
+        int i10 = c.f11079a[rendering.getDesignVersion().ordinal()];
         if (i10 == 1) {
-            dVar = wn.d.DefaultGovIdReview;
+            dVar = un.d.DefaultGovIdReview;
         } else {
             if (i10 != 2) {
-                throw new jt.l();
+                throw new gt.l();
             }
-            dVar = wn.d.K0000GovIdReview;
+            dVar = un.d.K0000GovIdReview;
         }
-        to.k.a aVar = (to.k.a) c0631aC.a(dVar);
+        ro.k.a aVar = (ro.k.a) c0599aC.a(dVar);
         Intrinsics.checkNotNull(context);
-        to.k kVarA = aVar.a(context, ((no.e) b2()).b);
+        ro.k kVarA = aVar.a(context, ((lo.e) b2()).b);
         return new Pair<>(new q(kVarA), kVarA.getRoot());
     }
 
@@ -903,18 +903,18 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
         }
         Object obj2 = (com.withpersona.sdk2.inquiry.governmentid.m) obj;
         if (obj2 == null) {
-            no.m mVarC = no.m.c(LayoutInflater.from(context), ((no.e) b2()).b, false);
+            lo.m mVarC = lo.m.c(LayoutInflater.from(context), ((lo.e) b2()).b, false);
             Intrinsics.checkNotNullExpressionValue(mVarC, "inflate(...)");
             Pair pair = new Pair(new com.withpersona.sdk2.inquiry.governmentid.m(mVarC), mVarC.getRoot());
             Object objA = pair.a();
             view = (View) pair.b();
             obj2 = objA;
         }
-        wq.l transition = rendering.b(this.currentScreen) ? wq.l.NONE : rendering.getTransition();
+        uq.l transition = rendering.b(this.currentScreen) ? uq.l.NONE : rendering.getTransition();
         if (view != null) {
             Q2(view, transition);
         }
-        ((com.withpersona.sdk2.inquiry.governmentid.m) obj2).a(rendering, N2());
+        ((com.withpersona.sdk2.inquiry.governmentid.m) obj2).b(rendering, N2());
         this.currentRunner = obj2;
     }
 
@@ -934,10 +934,10 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
     }
 
     public final void G2(Screen rendering, Function0<Unit> bind) {
-        fn.g gVar = this.cameraController;
+        dn.g gVar = this.cameraController;
         androidx.p000lifecycle.s sVarK0 = k0();
         Intrinsics.checkNotNullExpressionValue(sVarK0, "getViewLifecycleOwner(...)");
-        ku.k.d(t.a(sVarK0), null, null, new f(gVar, bind, this, rendering, null), 3, null);
+        iu.k.d(t.a(sVarK0), null, null, new f(gVar, bind, this, rendering, null), 3, null);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -956,8 +956,8 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
     }
 
     @NotNull
-    public final go.e J2() {
-        go.e eVar = this.featureFlagManager;
+    public final eo.e J2() {
+        eo.e eVar = this.featureFlagManager;
         if (eVar != null) {
             return eVar;
         }
@@ -966,8 +966,8 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
     }
 
     @NotNull
-    public final ct.a<x> K2() {
-        ct.a<x> aVar = this.governmentIdFeed;
+    public final at.a<x> K2() {
+        at.a<x> aVar = this.governmentIdFeed;
         if (aVar != null) {
             return aVar;
         }
@@ -976,8 +976,8 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
     }
 
     @NotNull
-    public final vq.a L2() {
-        vq.a aVar = this.systemUiController;
+    public final tq.a L2() {
+        tq.a aVar = this.systemUiController;
         if (aVar != null) {
             return aVar;
         }
@@ -985,7 +985,7 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
         return null;
     }
 
-    @Override // kq.a, androidx.fragment.app.c
+    @Override // iq.a, androidx.fragment.app.c
     public void M0() {
         F2();
         super.M0();
@@ -1020,22 +1020,22 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public final void Q2(View newView, wq.l transition) {
-        FrameLayout frameLayout = ((no.e) b2()).b;
-        int i10 = n2.f20725l0;
+    public final void Q2(View newView, uq.l transition) {
+        FrameLayout frameLayout = ((lo.e) b2()).b;
+        int i10 = n2.f18782l0;
         Object tag = frameLayout.getTag(i10);
         View view = tag instanceof View ? (View) tag : null;
         if (this.currentScreen == null) {
-            transition = wq.l.NONE;
+            transition = uq.l.NONE;
         }
         if (view != null) {
-            FrameLayout content = ((no.e) b2()).b;
+            FrameLayout content = ((lo.e) b2()).b;
             Intrinsics.checkNotNullExpressionValue(content, "content");
             i0.a(content, view, newView, transition);
         } else {
-            ((no.e) b2()).b.addView(newView);
+            ((lo.e) b2()).b.addView(newView);
         }
-        ((no.e) b2()).b.setTag(i10, newView);
+        ((lo.e) b2()).b.setTag(i10, newView);
     }
 
     public final void R2(@NotNull GovernmentIdWorkflow.Input input, @NotNull Function1<? super GovernmentIdWorkflow.a, Unit> handler) {
@@ -1052,13 +1052,13 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
     /* JADX WARN: Code duplicated, block: B:125:0x02cf  */
     /* JADX WARN: Code duplicated, block: B:127:0x02d5  */
     /* JADX WARN: Multi-variable type inference failed */
-    @Override // oq.c
+    @Override // mq.c
     /* JADX INFO: renamed from: S2, reason: merged with bridge method [inline-methods] */
     public void h2(@NotNull final Screen rendering) {
         Object obj;
         q qVar;
-        wq.l transition;
-        wn.d dVar;
+        uq.l transition;
+        un.d dVar;
         Intrinsics.checkNotNullParameter(rendering, "rendering");
         if (!d2()) {
             this.pendingRendering = rendering;
@@ -1074,32 +1074,32 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
             }
             Object obj3 = (com.withpersona.sdk2.inquiry.governmentid.i) obj2;
             if (obj3 == null) {
-                no.g gVarC = no.g.c(LayoutInflater.from(contextI1), ((no.e) b2()).b, false);
+                lo.g gVarC = lo.g.c(LayoutInflater.from(contextI1), ((lo.e) b2()).b, false);
                 Intrinsics.checkNotNullExpressionValue(gVarC, "inflate(...)");
                 Pair pair = new Pair(new com.withpersona.sdk2.inquiry.governmentid.i(gVarC), gVarC.getRoot());
                 Object objA = pair.a();
                 viewB = (View) pair.b();
                 obj3 = objA;
             }
-            wq.l transition2 = rendering.b(this.currentScreen) ? wq.l.NONE : rendering.getTransition();
+            uq.l transition2 = rendering.b(this.currentScreen) ? uq.l.NONE : rendering.getTransition();
             if (viewB != null) {
                 Q2(viewB, transition2);
             }
-            ((com.withpersona.sdk2.inquiry.governmentid.i) obj3).a((Screen.e) rendering, N2());
+            ((com.withpersona.sdk2.inquiry.governmentid.i) obj3).b((Screen.e) rendering, N2());
             this.currentRunner = obj3;
         } else if (rendering instanceof Screen.a) {
-            wn.a.C0631a c0631aC = wn.a.f34452a.c(jo.c0.a.class, new j());
+            un.a.C0599a c0599aC = un.a.f33136a.c(ho.c0.a.class, new j());
             Screen.a aVar = (Screen.a) rendering;
-            int i10 = c.f10998a[aVar.getDesignVersion().ordinal()];
+            int i10 = c.f11079a[aVar.getDesignVersion().ordinal()];
             if (i10 == 1) {
-                dVar = wn.d.DefaultSelectCountryAndIdClass;
+                dVar = un.d.DefaultSelectCountryAndIdClass;
             } else {
                 if (i10 != 2) {
-                    throw new jt.l();
+                    throw new gt.l();
                 }
-                dVar = wn.d.K0000SelectCountryAndIdClass;
+                dVar = un.d.K0000SelectCountryAndIdClass;
             }
-            jo.c0 c0VarA = ((jo.c0.a) c0631aC.a(dVar)).a(contextI1, ((no.e) b2()).b);
+            ho.c0 c0VarA = ((ho.c0.a) c0599aC.a(dVar)).a(contextI1, ((lo.e) b2()).b);
             Object obj4 = this.currentRunner;
             if (!(obj4 instanceof b0)) {
                 obj4 = null;
@@ -1111,18 +1111,18 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
                 viewB = (View) pair2.b();
                 obj5 = objA2;
             }
-            wq.l transition3 = rendering.b(this.currentScreen) ? wq.l.NONE : rendering.getTransition();
+            uq.l transition3 = rendering.b(this.currentScreen) ? uq.l.NONE : rendering.getTransition();
             if (viewB != null) {
                 Q2(viewB, transition3);
             }
-            ((b0) obj5).a(aVar, N2());
+            ((b0) obj5).b(aVar, N2());
             this.currentRunner = obj5;
         } else if (rendering instanceof Screen.b) {
             if ((this.currentScreen instanceof Screen.h) && (this.currentRunner instanceof q)) {
-                Object tag = ((no.e) b2()).b.getTag(n2.f20725l0);
+                Object tag = ((lo.e) b2()).b.getTag(n2.f18782l0);
                 View view = tag instanceof View ? (View) tag : null;
                 if (view != null) {
-                    ((no.e) b2()).b.removeView(view);
+                    ((lo.e) b2()).b.removeView(view);
                 }
             }
             View view2 = this.retainedCameraView;
@@ -1130,10 +1130,10 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
                 if (view2 != null) {
                     view2.setVisibility(0);
                 }
-                ((no.e) b2()).b.setTag(n2.f20725l0, this.retainedCameraView);
+                ((lo.e) b2()).b.setTag(n2.f18782l0, this.retainedCameraView);
                 u uVar = this.retainedCameraRunner;
                 if (uVar != null) {
-                    uVar.a((Screen.b) rendering, N2());
+                    uVar.b((Screen.b) rendering, N2());
                 }
                 this.currentRunner = this.retainedCameraRunner;
             } else {
@@ -1148,39 +1148,39 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
                     viewB = pairW2.b();
                     uVar2 = uVarA;
                 }
-                wq.l transition4 = rendering.b(this.currentScreen) ? wq.l.NONE : rendering.getTransition();
+                uq.l transition4 = rendering.b(this.currentScreen) ? uq.l.NONE : rendering.getTransition();
                 if (viewB != null) {
                     Q2(viewB, transition4);
                 }
-                uVar2.a((Screen.b) rendering, N2());
+                uVar2.b((Screen.b) rendering, N2());
                 this.currentRunner = uVar2;
             }
         } else if (rendering instanceof Screen.c) {
             Object obj7 = this.currentRunner;
-            if (!(obj7 instanceof so.e)) {
+            if (!(obj7 instanceof qo.e)) {
                 obj7 = null;
             }
-            Object obj8 = (so.e) obj7;
+            Object obj8 = (qo.e) obj7;
             if (obj8 == null) {
-                no.d dVarC = no.d.c(LayoutInflater.from(contextI1), ((no.e) b2()).b, false);
+                lo.d dVarC = lo.d.c(LayoutInflater.from(contextI1), ((lo.e) b2()).b, false);
                 Intrinsics.checkNotNullExpressionValue(dVarC, "inflate(...)");
-                Pair pair3 = new Pair(new so.e(dVarC), dVarC.getRoot());
+                Pair pair3 = new Pair(new qo.e(dVarC), dVarC.getRoot());
                 Object objA3 = pair3.a();
                 viewB = (View) pair3.b();
                 obj8 = objA3;
             }
-            wq.l transition5 = rendering.b(this.currentScreen) ? wq.l.NONE : rendering.getTransition();
+            uq.l transition5 = rendering.b(this.currentScreen) ? uq.l.NONE : rendering.getTransition();
             if (viewB != null) {
                 Q2(viewB, transition5);
             }
-            ((so.e) obj8).a((Screen.c) rendering, N2());
+            ((qo.e) obj8).b((Screen.c) rendering, N2());
             this.currentRunner = obj8;
         } else if (rendering instanceof Screen.d) {
             Screen.d dVar2 = (Screen.d) rendering;
             if (dVar2.getVideoCaptureEnabled() && this.cameraController != null) {
                 androidx.p000lifecycle.s sVarK0 = k0();
                 Intrinsics.checkNotNullExpressionValue(sVarK0, "getViewLifecycleOwner(...)");
-                ku.k.d(t.a(sVarK0), null, null, new i(rendering, contextI1, null), 3, null);
+                iu.k.d(t.a(sVarK0), null, null, new i(rendering, contextI1, null), 3, null);
                 return;
             }
             y2(dVar2, contextI1);
@@ -1191,8 +1191,8 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
                 if ((obj9 instanceof u) && (this.currentScreen instanceof Screen.b)) {
                     Intrinsics.d(obj9, "null cannot be cast to non-null type com.withpersona.sdk2.inquiry.governmentid.cameraScreen.CameraScreenRunner");
                     this.retainedCameraRunner = (u) obj9;
-                    FrameLayout frameLayout = ((no.e) b2()).b;
-                    int i11 = n2.f20725l0;
+                    FrameLayout frameLayout = ((lo.e) b2()).b;
+                    int i11 = n2.f18782l0;
                     Object tag2 = frameLayout.getTag(i11);
                     viewB = tag2 instanceof View ? (View) tag2 : null;
                     this.retainedCameraView = viewB;
@@ -1202,9 +1202,9 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
                     Pair<q, View> pairD2 = D2(hVar);
                     q qVarA = pairD2.a();
                     View viewB2 = pairD2.b();
-                    ((no.e) b2()).b.addView(viewB2);
-                    ((no.e) b2()).b.setTag(i11, viewB2);
-                    qVarA.a(hVar, N2());
+                    ((lo.e) b2()).b.addView(viewB2);
+                    ((lo.e) b2()).b.setTag(i11, viewB2);
+                    qVarA.b(hVar, N2());
                     this.currentRunner = qVarA;
                 } else {
                     obj = this.currentRunner;
@@ -1219,14 +1219,14 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
                         qVar = qVarA2;
                     }
                     if (rendering.b(this.currentScreen)) {
-                        transition = wq.l.NONE;
+                        transition = uq.l.NONE;
                     } else {
                         transition = rendering.getTransition();
                     }
                     if (viewB != null) {
                         Q2(viewB, transition);
                     }
-                    qVar.a(hVar, N2());
+                    qVar.b(hVar, N2());
                     this.currentRunner = qVar;
                 }
             } else {
@@ -1242,43 +1242,43 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
                     qVar = qVarA3;
                 }
                 if (rendering.b(this.currentScreen)) {
-                    transition = wq.l.NONE;
+                    transition = uq.l.NONE;
                 } else {
                     transition = rendering.getTransition();
                 }
                 if (viewB != null) {
                     Q2(viewB, transition);
                 }
-                qVar.a(hVar, N2());
+                qVar.b(hVar, N2());
                 this.currentRunner = qVar;
             }
         } else if (rendering instanceof Screen.i) {
             Object obj10 = this.currentRunner;
-            if (!(obj10 instanceof so.p)) {
+            if (!(obj10 instanceof qo.p)) {
                 obj10 = null;
             }
-            Object obj11 = (so.p) obj10;
+            Object obj11 = (qo.p) obj10;
             if (obj11 == null) {
-                no.j jVarC = no.j.c(LayoutInflater.from(contextI1), ((no.e) b2()).b, false);
+                lo.j jVarC = lo.j.c(LayoutInflater.from(contextI1), ((lo.e) b2()).b, false);
                 Intrinsics.checkNotNullExpressionValue(jVarC, "inflate(...)");
-                Pair pair4 = new Pair(new so.p(jVarC), jVarC.getRoot());
+                Pair pair4 = new Pair(new qo.p(jVarC), jVarC.getRoot());
                 Object objA4 = pair4.a();
                 viewB = (View) pair4.b();
                 obj11 = objA4;
             }
-            wq.l transition6 = rendering.b(this.currentScreen) ? wq.l.NONE : rendering.getTransition();
+            uq.l transition6 = rendering.b(this.currentScreen) ? uq.l.NONE : rendering.getTransition();
             if (viewB != null) {
                 Q2(viewB, transition6);
             }
-            ((so.p) obj11).a((Screen.i) rendering, N2());
+            ((qo.p) obj11).b((Screen.i) rendering, N2());
             this.currentRunner = obj11;
         } else if (rendering instanceof Screen.j) {
             Screen.j jVar = (Screen.j) rendering;
             if (jVar.getIsFinalizingVideoCapture()) {
-                G2(rendering, new Function0() { // from class: qo.f
+                G2(rendering, new Function0() { // from class: oo.f
                     @Override // kotlin.jvm.functions.Function0
                     public final Object invoke() {
-                        return GovernmentIdStepFragment.T2(this.f29536a, rendering, contextI1);
+                        return GovernmentIdStepFragment.T2(this.f28080a, rendering, contextI1);
                     }
                 });
                 return;
@@ -1287,10 +1287,10 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
         } else if (rendering instanceof Screen.f) {
             Screen.f fVar = (Screen.f) rendering;
             if (fVar.getIsFinalizingVideoCapture()) {
-                G2(rendering, new Function0() { // from class: qo.g
+                G2(rendering, new Function0() { // from class: oo.g
                     @Override // kotlin.jvm.functions.Function0
                     public final Object invoke() {
-                        return GovernmentIdStepFragment.U2(this.f29539a, rendering, contextI1);
+                        return GovernmentIdStepFragment.U2(this.f28083a, rendering, contextI1);
                     }
                 });
                 return;
@@ -1298,12 +1298,12 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
             z2(fVar, contextI1);
         } else {
             if (!(rendering instanceof Screen.g)) {
-                throw new jt.l();
+                throw new gt.l();
             }
             if (this.cameraController != null) {
                 androidx.p000lifecycle.s sVarK1 = k0();
                 Intrinsics.checkNotNullExpressionValue(sVarK1, "getViewLifecycleOwner(...)");
-                ku.k.d(t.a(sVarK1), null, null, new h(rendering, contextI1, null), 3, null);
+                iu.k.d(t.a(sVarK1), null, null, new h(rendering, contextI1, null), 3, null);
                 return;
             }
             C2((Screen.g) rendering, contextI1);
@@ -1311,7 +1311,7 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
         this.currentScreen = rendering;
     }
 
-    @Override // oq.c, androidx.fragment.app.c
+    @Override // mq.c, androidx.fragment.app.c
     public void e1(@NotNull View view, @Nullable Bundle savedInstanceState) {
         Intrinsics.checkNotNullParameter(view, "view");
         super.e1(view, savedInstanceState);
@@ -1319,7 +1319,7 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
         g2(governmentIdStepStateManager.c());
         androidx.p000lifecycle.s sVarK0 = k0();
         Intrinsics.checkNotNullExpressionValue(sVarK0, "getViewLifecycleOwner(...)");
-        ku.k.d(t.a(sVarK0), null, null, new g(governmentIdStepStateManager, this, null), 3, null);
+        iu.k.d(t.a(sVarK0), null, null, new g(governmentIdStepStateManager, this, null), 3, null);
         Screen screen = this.pendingRendering;
         if (screen != null) {
             h2(screen);
@@ -1329,32 +1329,32 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
 
     /* JADX WARN: Multi-variable type inference failed */
     public final Pair<u, View> w2(Screen.b initialRendering) {
-        wn.d dVar;
-        Context context = ((no.e) b2()).b.getContext();
-        wn.a.C0631a c0631aC = wn.a.f34452a.c(w.a.class, new w.a() { // from class: qo.j
-            @Override // ko.w.a
-            public final ko.w b(fn.x xVar, com.withpersona.sdk2.camera.b bVar, go.e eVar, Screen.b bVar2, Context context2, ViewGroup viewGroup) {
+        un.d dVar;
+        Context context = ((lo.e) b2()).b.getContext();
+        un.a.C0599a c0599aC = un.a.f33136a.c(w.a.class, new w.a() { // from class: oo.j
+            @Override // io.w.a
+            public final io.w b(dn.x xVar, com.withpersona.sdk2.camera.b bVar, eo.e eVar, Screen.b bVar2, Context context2, ViewGroup viewGroup) {
                 return GovernmentIdStepFragment.x2(xVar, bVar, eVar, bVar2, context2, viewGroup);
             }
         });
-        int i10 = c.f10998a[initialRendering.getDesignVersion().ordinal()];
+        int i10 = c.f11079a[initialRendering.getDesignVersion().ordinal()];
         if (i10 == 1) {
-            dVar = wn.d.DefaultGovIdCapture;
+            dVar = un.d.DefaultGovIdCapture;
         } else {
             if (i10 != 2) {
-                throw new jt.l();
+                throw new gt.l();
             }
-            dVar = wn.d.K0000GovIdCapture;
+            dVar = un.d.K0000GovIdCapture;
         }
-        w.a aVar = (w.a) c0631aC.a(dVar);
+        w.a aVar = (w.a) c0599aC.a(dVar);
         x xVar = K2().get();
         Intrinsics.checkNotNullExpressionValue(xVar, "get(...)");
         com.withpersona.sdk2.camera.b bVarI2 = I2();
-        go.e eVarJ2 = J2();
+        eo.e eVarJ2 = J2();
         Intrinsics.checkNotNull(context);
-        w wVarB = aVar.b(xVar, bVarI2, eVarJ2, initialRendering, context, ((no.e) b2()).b);
+        w wVarB = aVar.b(xVar, bVarI2, eVarJ2, initialRendering, context, ((lo.e) b2()).b);
         this.cameraController = wVarB.getCameraController();
-        fn.g cameraController = wVarB.getCameraController();
+        dn.g cameraController = wVarB.getCameraController();
         x xVar2 = K2().get();
         Intrinsics.checkNotNullExpressionValue(xVar2, "get(...)");
         return new Pair<>(new u(context, wVarB, cameraController, xVar2, M2()), wVarB.getRoot());
@@ -1364,62 +1364,62 @@ public final class GovernmentIdStepFragment extends oq.c<no.e, Screen> {
     public final void y2(Screen.d rendering, Context context) {
         Object obj = this.currentRunner;
         View view = null;
-        if (!(obj instanceof so.j)) {
+        if (!(obj instanceof qo.j)) {
             obj = null;
         }
-        Object obj2 = (so.j) obj;
+        Object obj2 = (qo.j) obj;
         if (obj2 == null) {
-            no.a aVarC = no.a.c(LayoutInflater.from(context), ((no.e) b2()).b, false);
+            lo.a aVarC = lo.a.c(LayoutInflater.from(context), ((lo.e) b2()).b, false);
             Intrinsics.checkNotNullExpressionValue(aVarC, "inflate(...)");
-            Pair pair = new Pair(new so.j(aVarC), aVarC.getRoot());
+            Pair pair = new Pair(new qo.j(aVarC), aVarC.getRoot());
             Object objA = pair.a();
             view = (View) pair.b();
             obj2 = objA;
         }
-        wq.l transition = rendering.b(this.currentScreen) ? wq.l.NONE : rendering.getTransition();
+        uq.l transition = rendering.b(this.currentScreen) ? uq.l.NONE : rendering.getTransition();
         if (view != null) {
             Q2(view, transition);
         }
-        ((so.j) obj2).a(rendering, N2());
+        ((qo.j) obj2).b(rendering, N2());
         this.currentRunner = obj2;
     }
 
     public final void z2(Screen.f rendering, Context context) {
         Object obj = this.currentRunner;
         View view = null;
-        if (!(obj instanceof qo.a)) {
+        if (!(obj instanceof oo.a)) {
             obj = null;
         }
-        Object objA = (qo.a) obj;
+        Object objA = (oo.a) obj;
         if (objA == null) {
             FrameLayout frameLayout = new FrameLayout(context);
-            ar.s sVar = ar.s.f3757a;
+            yq.s sVar = yq.s.f37116a;
             UiComponentScreen uiScreen = rendering.getUiScreen();
-            Function2<? super nq.b, ? super Map<String, ComponentView>, Unit> function2 = new Function2() { // from class: qo.k
+            Function2<? super lq.b, ? super Map<String, ComponentView>, Unit> function2 = new Function2() { // from class: oo.k
                 @Override // kotlin.jvm.functions.Function2
                 public final Object invoke(Object obj2, Object obj3) {
-                    return GovernmentIdStepFragment.A2((nq.b) obj2, (Map) obj3);
+                    return GovernmentIdStepFragment.A2((lq.b) obj2, (Map) obj3);
                 }
             };
-            zt.n nVar = new zt.n() { // from class: qo.l
-                @Override // zt.n
+            xt.n nVar = new xt.n() { // from class: oo.l
+                @Override // xt.n
                 public final Object invoke(Object obj2, Object obj3, Object obj4) {
-                    return GovernmentIdStepFragment.B2((nq.b) obj2, (Screen.f) obj3, (Map) obj4);
+                    return GovernmentIdStepFragment.B2((lq.b) obj2, (Screen.f) obj3, (Map) obj4);
                 }
             };
-            nq.b bVarC = nq.b.c(LayoutInflater.from(frameLayout.getContext()), frameLayout, false);
+            lq.b bVarC = lq.b.c(LayoutInflater.from(frameLayout.getContext()), frameLayout, false);
             Intrinsics.checkNotNullExpressionValue(bVarC, "inflate(...)");
             frameLayout.removeAllViews();
             frameLayout.addView(bVarC.getRoot());
-            Pair pair = new Pair(new qo.a(new d(uiScreen, bVarC, nVar, sVar.l(bVarC, uiScreen, function2, true))), frameLayout);
+            Pair pair = new Pair(new oo.a(new d(uiScreen, bVarC, nVar, sVar.l(bVarC, uiScreen, function2, true))), frameLayout);
             objA = pair.a();
             view = (View) pair.b();
         }
-        wq.l transition = rendering.b(this.currentScreen) ? wq.l.NONE : rendering.getTransition();
+        uq.l transition = rendering.b(this.currentScreen) ? uq.l.NONE : rendering.getTransition();
         if (view != null) {
             Q2(view, transition);
         }
-        ((qo.a) objA).b(rendering, L2());
+        ((oo.a) objA).a(rendering, L2());
         this.currentRunner = objA;
     }
 }

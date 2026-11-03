@@ -1,5 +1,7 @@
 package com.google.android.material.checkbox;
 
+import ad.o;
+import ad.r;
 import android.R;
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -21,17 +23,15 @@ import android.view.autofill.AutofillManager;
 import android.widget.CompoundButton;
 import androidx.annotation.NonNull;
 import d3.d;
-import hc.e;
-import hc.f;
-import hc.i;
-import hc.j;
-import hc.k;
+import ic.e;
+import ic.f;
+import ic.i;
+import ic.j;
+import ic.k;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import q.a1;
 import q.g;
-import zc.o;
-import zc.r;
 
 /* JADX INFO: loaded from: classes2.dex */
 public class MaterialCheckBox extends g {
@@ -42,73 +42,73 @@ public class MaterialCheckBox extends g {
     public static final int C;
 
     /* JADX INFO: renamed from: y, reason: collision with root package name */
-    public static final int f7741y = j.f18950u;
+    public static final int f7815y = j.f20772u;
 
     /* JADX INFO: renamed from: z, reason: collision with root package name */
-    public static final int[] f7742z = {hc.b.f18770b0};
+    public static final int[] f7816z = {ic.b.f20592b0};
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
     @NonNull
-    public final LinkedHashSet<c> f7743e;
+    public final LinkedHashSet<c> f7817e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
     @NonNull
-    public final LinkedHashSet<b> f7744f;
+    public final LinkedHashSet<b> f7818f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public ColorStateList f7745g;
+    public ColorStateList f7819g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public boolean f7746h;
+    public boolean f7820h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public boolean f7747i;
+    public boolean f7821i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public boolean f7748j;
+    public boolean f7822j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public CharSequence f7749k;
+    public CharSequence f7823k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public Drawable f7750l;
+    public Drawable f7824l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public Drawable f7751m;
+    public Drawable f7825m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public boolean f7752n;
+    public boolean f7826n;
 
     /* JADX INFO: renamed from: o, reason: collision with root package name */
-    public ColorStateList f7753o;
+    public ColorStateList f7827o;
 
     /* JADX INFO: renamed from: p, reason: collision with root package name */
-    public ColorStateList f7754p;
+    public ColorStateList f7828p;
 
     /* JADX INFO: renamed from: q, reason: collision with root package name */
     @NonNull
-    public PorterDuff.Mode f7755q;
+    public PorterDuff.Mode f7829q;
 
     /* JADX INFO: renamed from: r, reason: collision with root package name */
-    public int f7756r;
+    public int f7830r;
 
     /* JADX INFO: renamed from: s, reason: collision with root package name */
-    public int[] f7757s;
+    public int[] f7831s;
 
     /* JADX INFO: renamed from: t, reason: collision with root package name */
-    public boolean f7758t;
+    public boolean f7832t;
 
     /* JADX INFO: renamed from: u, reason: collision with root package name */
-    public CharSequence f7759u;
+    public CharSequence f7833u;
 
     /* JADX INFO: renamed from: v, reason: collision with root package name */
-    public CompoundButton.OnCheckedChangeListener f7760v;
+    public CompoundButton.OnCheckedChangeListener f7834v;
 
     /* JADX INFO: renamed from: w, reason: collision with root package name */
-    public final p5.c f7761w;
+    public final p5.c f7835w;
 
     /* JADX INFO: renamed from: x, reason: collision with root package name */
-    public final p5.b f7762x;
+    public final p5.b f7836x;
 
     public static class SavedState extends View.BaseSavedState {
 
@@ -116,7 +116,7 @@ public class MaterialCheckBox extends g {
         public static final Parcelable.Creator<SavedState> CREATOR = new a();
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public int f7763a;
+        public int f7837a;
 
         public class a implements Parcelable.Creator<SavedState> {
             @Override // android.os.Parcelable.Creator
@@ -138,7 +138,7 @@ public class MaterialCheckBox extends g {
 
         @NonNull
         public final String a() {
-            int i10 = this.f7763a;
+            int i10 = this.f7837a;
             if (i10 != 1) {
                 return i10 != 2 ? "unchecked" : "indeterminate";
             }
@@ -153,7 +153,7 @@ public class MaterialCheckBox extends g {
         @Override // android.view.View.BaseSavedState, android.view.AbsSavedState, android.os.Parcelable
         public void writeToParcel(Parcel parcel, int i10) {
             super.writeToParcel(parcel, i10);
-            parcel.writeValue(Integer.valueOf(this.f7763a));
+            parcel.writeValue(Integer.valueOf(this.f7837a));
         }
 
         public SavedState(Parcelable parcelable) {
@@ -162,7 +162,7 @@ public class MaterialCheckBox extends g {
 
         public SavedState(Parcel parcel) {
             super(parcel);
-            this.f7763a = ((Integer) parcel.readValue(getClass().getClassLoader())).intValue();
+            this.f7837a = ((Integer) parcel.readValue(getClass().getClassLoader())).intValue();
         }
     }
 
@@ -173,7 +173,7 @@ public class MaterialCheckBox extends g {
         @Override // p5.b
         public void b(Drawable drawable) {
             super.b(drawable);
-            ColorStateList colorStateList = MaterialCheckBox.this.f7753o;
+            ColorStateList colorStateList = MaterialCheckBox.this.f7827o;
             if (colorStateList != null) {
                 q2.a.o(drawable, colorStateList);
             }
@@ -183,9 +183,9 @@ public class MaterialCheckBox extends g {
         public void c(Drawable drawable) {
             super.c(drawable);
             MaterialCheckBox materialCheckBox = MaterialCheckBox.this;
-            ColorStateList colorStateList = materialCheckBox.f7753o;
+            ColorStateList colorStateList = materialCheckBox.f7827o;
             if (colorStateList != null) {
-                q2.a.n(drawable, colorStateList.getColorForState(materialCheckBox.f7757s, MaterialCheckBox.this.f7753o.getDefaultColor()));
+                q2.a.n(drawable, colorStateList.getColorForState(materialCheckBox.f7831s, MaterialCheckBox.this.f7827o.getDefaultColor()));
             }
         }
     }
@@ -199,45 +199,45 @@ public class MaterialCheckBox extends g {
     }
 
     static {
-        int i10 = hc.b.f18769a0;
+        int i10 = ic.b.f20591a0;
         A = new int[]{i10};
         B = new int[][]{new int[]{R.attr.state_enabled, i10}, new int[]{R.attr.state_enabled, R.attr.state_checked}, new int[]{R.attr.state_enabled, -16842912}, new int[]{-16842910, R.attr.state_checked}, new int[]{-16842910, -16842912}};
         C = Resources.getSystem().getIdentifier("btn_check_material_anim", "drawable", "android");
     }
 
     public MaterialCheckBox(Context context, AttributeSet attributeSet) {
-        this(context, attributeSet, hc.b.f18773d);
+        this(context, attributeSet, ic.b.f20595d);
     }
 
     @NonNull
     private String getButtonStateDescription() {
-        int i10 = this.f7756r;
+        int i10 = this.f7830r;
         if (i10 == 1) {
-            return getResources().getString(i.f18915h);
+            return getResources().getString(i.f20737h);
         }
-        return i10 == 0 ? getResources().getString(i.f18917j) : getResources().getString(i.f18916i);
+        return i10 == 0 ? getResources().getString(i.f20739j) : getResources().getString(i.f20738i);
     }
 
     private ColorStateList getMaterialThemeColorsTintList() {
-        if (this.f7745g == null) {
+        if (this.f7819g == null) {
             int[][] iArr = B;
             int[] iArr2 = new int[iArr.length];
-            int iD = tc.a.d(this, hc.b.f18779g);
-            int iD2 = tc.a.d(this, hc.b.f18783i);
-            int iD3 = tc.a.d(this, hc.b.f18790o);
-            int iD4 = tc.a.d(this, hc.b.f18785j);
-            iArr2[0] = tc.a.j(iD3, iD2, 1.0f);
-            iArr2[1] = tc.a.j(iD3, iD, 1.0f);
-            iArr2[2] = tc.a.j(iD3, iD4, 0.54f);
-            iArr2[3] = tc.a.j(iD3, iD4, 0.38f);
-            iArr2[4] = tc.a.j(iD3, iD4, 0.38f);
-            this.f7745g = new ColorStateList(iArr, iArr2);
+            int iD = uc.a.d(this, ic.b.f20601g);
+            int iD2 = uc.a.d(this, ic.b.f20605i);
+            int iD3 = uc.a.d(this, ic.b.f20612o);
+            int iD4 = uc.a.d(this, ic.b.f20607j);
+            iArr2[0] = uc.a.j(iD3, iD2, 1.0f);
+            iArr2[1] = uc.a.j(iD3, iD, 1.0f);
+            iArr2[2] = uc.a.j(iD3, iD4, 0.54f);
+            iArr2[3] = uc.a.j(iD3, iD4, 0.38f);
+            iArr2[4] = uc.a.j(iD3, iD4, 0.38f);
+            this.f7819g = new ColorStateList(iArr, iArr2);
         }
-        return this.f7745g;
+        return this.f7819g;
     }
 
     private ColorStateList getSuperButtonTintList() {
-        ColorStateList colorStateList = this.f7753o;
+        ColorStateList colorStateList = this.f7827o;
         if (colorStateList != null) {
             return colorStateList;
         }
@@ -245,7 +245,7 @@ public class MaterialCheckBox extends g {
     }
 
     public void c(@NonNull b bVar) {
-        this.f7744f.add(bVar);
+        this.f7818f.add(bVar);
     }
 
     public final boolean d(a1 a1Var) {
@@ -253,20 +253,20 @@ public class MaterialCheckBox extends g {
     }
 
     public boolean e() {
-        return this.f7748j;
+        return this.f7822j;
     }
 
     public final void f() {
-        this.f7750l = vc.c.d(this.f7750l, this.f7753o, d.c(this));
-        this.f7751m = vc.c.d(this.f7751m, this.f7754p, this.f7755q);
+        this.f7824l = wc.c.d(this.f7824l, this.f7827o, d.c(this));
+        this.f7825m = wc.c.d(this.f7825m, this.f7828p, this.f7829q);
         h();
         i();
-        super.setButtonDrawable(vc.c.a(this.f7750l, this.f7751m));
+        super.setButtonDrawable(wc.c.a(this.f7824l, this.f7825m));
         refreshDrawableState();
     }
 
     public final void g() {
-        if (Build.VERSION.SDK_INT < 30 || this.f7759u != null) {
+        if (Build.VERSION.SDK_INT < 30 || this.f7833u != null) {
             return;
         }
         super.setStateDescription(getButtonStateDescription());
@@ -274,63 +274,63 @@ public class MaterialCheckBox extends g {
 
     @Override // android.widget.CompoundButton
     public Drawable getButtonDrawable() {
-        return this.f7750l;
+        return this.f7824l;
     }
 
     public Drawable getButtonIconDrawable() {
-        return this.f7751m;
+        return this.f7825m;
     }
 
     public ColorStateList getButtonIconTintList() {
-        return this.f7754p;
+        return this.f7828p;
     }
 
     @NonNull
     public PorterDuff.Mode getButtonIconTintMode() {
-        return this.f7755q;
+        return this.f7829q;
     }
 
     @Override // android.widget.CompoundButton
     public ColorStateList getButtonTintList() {
-        return this.f7753o;
+        return this.f7827o;
     }
 
     public int getCheckedState() {
-        return this.f7756r;
+        return this.f7830r;
     }
 
     public CharSequence getErrorAccessibilityLabel() {
-        return this.f7749k;
+        return this.f7823k;
     }
 
     public final void h() {
         p5.c cVar;
-        if (this.f7752n) {
-            p5.c cVar2 = this.f7761w;
+        if (this.f7826n) {
+            p5.c cVar2 = this.f7835w;
             if (cVar2 != null) {
-                cVar2.f(this.f7762x);
-                this.f7761w.b(this.f7762x);
+                cVar2.f(this.f7836x);
+                this.f7835w.b(this.f7836x);
             }
-            Drawable drawable = this.f7750l;
-            if (!(drawable instanceof AnimatedStateListDrawable) || (cVar = this.f7761w) == null) {
+            Drawable drawable = this.f7824l;
+            if (!(drawable instanceof AnimatedStateListDrawable) || (cVar = this.f7835w) == null) {
                 return;
             }
             int i10 = f.b;
             int i11 = f.W;
             ((AnimatedStateListDrawable) drawable).addTransition(i10, i11, cVar, false);
-            ((AnimatedStateListDrawable) this.f7750l).addTransition(f.f18868j, i11, this.f7761w, false);
+            ((AnimatedStateListDrawable) this.f7824l).addTransition(f.f20690j, i11, this.f7835w, false);
         }
     }
 
     public final void i() {
         ColorStateList colorStateList;
         ColorStateList colorStateList2;
-        Drawable drawable = this.f7750l;
-        if (drawable != null && (colorStateList2 = this.f7753o) != null) {
+        Drawable drawable = this.f7824l;
+        if (drawable != null && (colorStateList2 = this.f7827o) != null) {
             q2.a.o(drawable, colorStateList2);
         }
-        Drawable drawable2 = this.f7751m;
-        if (drawable2 == null || (colorStateList = this.f7754p) == null) {
+        Drawable drawable2 = this.f7825m;
+        if (drawable2 == null || (colorStateList = this.f7828p) == null) {
             return;
         }
         q2.a.o(drawable2, colorStateList);
@@ -338,7 +338,7 @@ public class MaterialCheckBox extends g {
 
     @Override // android.widget.CompoundButton, android.widget.Checkable
     public boolean isChecked() {
-        return this.f7756r == 1;
+        return this.f7830r == 1;
     }
 
     public final void j() {
@@ -347,7 +347,7 @@ public class MaterialCheckBox extends g {
     @Override // android.widget.TextView, android.view.View
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        if (this.f7746h && this.f7753o == null && this.f7754p == null) {
+        if (this.f7820h && this.f7827o == null && this.f7828p == null) {
             setUseMaterialThemeColors(true);
         }
     }
@@ -356,12 +356,12 @@ public class MaterialCheckBox extends g {
     public int[] onCreateDrawableState(int i10) {
         int[] iArrOnCreateDrawableState = super.onCreateDrawableState(i10 + 2);
         if (getCheckedState() == 2) {
-            View.mergeDrawableStates(iArrOnCreateDrawableState, f7742z);
+            View.mergeDrawableStates(iArrOnCreateDrawableState, f7816z);
         }
         if (e()) {
             View.mergeDrawableStates(iArrOnCreateDrawableState, A);
         }
-        this.f7757s = vc.c.f(iArrOnCreateDrawableState);
+        this.f7831s = wc.c.f(iArrOnCreateDrawableState);
         j();
         return iArrOnCreateDrawableState;
     }
@@ -369,7 +369,7 @@ public class MaterialCheckBox extends g {
     @Override // android.widget.CompoundButton, android.widget.TextView, android.view.View
     public void onDraw(Canvas canvas) {
         Drawable drawableA;
-        if (!this.f7747i || !TextUtils.isEmpty(getText()) || (drawableA = d.a(this)) == null) {
+        if (!this.f7821i || !TextUtils.isEmpty(getText()) || (drawableA = d.a(this)) == null) {
             super.onDraw(canvas);
             return;
         }
@@ -388,7 +388,7 @@ public class MaterialCheckBox extends g {
     public void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo accessibilityNodeInfo) {
         super.onInitializeAccessibilityNodeInfo(accessibilityNodeInfo);
         if (accessibilityNodeInfo != null && e()) {
-            accessibilityNodeInfo.setText(((Object) accessibilityNodeInfo.getText()) + ", " + ((Object) this.f7749k));
+            accessibilityNodeInfo.setText(((Object) accessibilityNodeInfo.getText()) + ", " + ((Object) this.f7823k));
         }
     }
 
@@ -400,13 +400,13 @@ public class MaterialCheckBox extends g {
         }
         SavedState savedState = (SavedState) parcelable;
         super.onRestoreInstanceState(savedState.getSuperState());
-        setCheckedState(savedState.f7763a);
+        setCheckedState(savedState.f7837a);
     }
 
     @Override // android.widget.CompoundButton, android.widget.TextView, android.view.View
     public Parcelable onSaveInstanceState() {
         SavedState savedState = new SavedState(super.onSaveInstanceState());
-        savedState.f7763a = getCheckedState();
+        savedState.f7837a = getCheckedState();
         return savedState;
     }
 
@@ -416,7 +416,7 @@ public class MaterialCheckBox extends g {
     }
 
     public void setButtonIconDrawable(Drawable drawable) {
-        this.f7751m = drawable;
+        this.f7825m = drawable;
         f();
     }
 
@@ -425,27 +425,27 @@ public class MaterialCheckBox extends g {
     }
 
     public void setButtonIconTintList(ColorStateList colorStateList) {
-        if (this.f7754p == colorStateList) {
+        if (this.f7828p == colorStateList) {
             return;
         }
-        this.f7754p = colorStateList;
+        this.f7828p = colorStateList;
         f();
     }
 
     public void setButtonIconTintMode(@NonNull PorterDuff.Mode mode) {
-        if (this.f7755q == mode) {
+        if (this.f7829q == mode) {
             return;
         }
-        this.f7755q = mode;
+        this.f7829q = mode;
         f();
     }
 
     @Override // android.widget.CompoundButton
     public void setButtonTintList(ColorStateList colorStateList) {
-        if (this.f7753o == colorStateList) {
+        if (this.f7827o == colorStateList) {
             return;
         }
-        this.f7753o = colorStateList;
+        this.f7827o = colorStateList;
         f();
     }
 
@@ -456,7 +456,7 @@ public class MaterialCheckBox extends g {
     }
 
     public void setCenterIfNoTextEnabled(boolean z10) {
-        this.f7747i = z10;
+        this.f7821i = z10;
     }
 
     @Override // android.widget.CompoundButton, android.widget.Checkable
@@ -466,30 +466,30 @@ public class MaterialCheckBox extends g {
 
     public void setCheckedState(int i10) {
         CompoundButton.OnCheckedChangeListener onCheckedChangeListener;
-        if (this.f7756r != i10) {
-            this.f7756r = i10;
+        if (this.f7830r != i10) {
+            this.f7830r = i10;
             super.setChecked(i10 == 1);
             refreshDrawableState();
             g();
-            if (this.f7758t) {
+            if (this.f7832t) {
                 return;
             }
-            this.f7758t = true;
-            LinkedHashSet<b> linkedHashSet = this.f7744f;
+            this.f7832t = true;
+            LinkedHashSet<b> linkedHashSet = this.f7818f;
             if (linkedHashSet != null) {
                 Iterator<b> it = linkedHashSet.iterator();
                 while (it.hasNext()) {
-                    it.next().a(this, this.f7756r);
+                    it.next().a(this, this.f7830r);
                 }
             }
-            if (this.f7756r != 2 && (onCheckedChangeListener = this.f7760v) != null) {
+            if (this.f7830r != 2 && (onCheckedChangeListener = this.f7834v) != null) {
                 onCheckedChangeListener.onCheckedChanged(this, isChecked());
             }
             AutofillManager autofillManager = (AutofillManager) getContext().getSystemService(AutofillManager.class);
             if (autofillManager != null) {
                 autofillManager.notifyValueChanged(this);
             }
-            this.f7758t = false;
+            this.f7832t = false;
         }
     }
 
@@ -500,7 +500,7 @@ public class MaterialCheckBox extends g {
     }
 
     public void setErrorAccessibilityLabel(CharSequence charSequence) {
-        this.f7749k = charSequence;
+        this.f7823k = charSequence;
     }
 
     public void setErrorAccessibilityLabelResource(int i10) {
@@ -508,25 +508,25 @@ public class MaterialCheckBox extends g {
     }
 
     public void setErrorShown(boolean z10) {
-        if (this.f7748j == z10) {
+        if (this.f7822j == z10) {
             return;
         }
-        this.f7748j = z10;
+        this.f7822j = z10;
         refreshDrawableState();
-        Iterator<c> it = this.f7743e.iterator();
+        Iterator<c> it = this.f7817e.iterator();
         while (it.hasNext()) {
-            it.next().a(this, this.f7748j);
+            it.next().a(this, this.f7822j);
         }
     }
 
     @Override // android.widget.CompoundButton
     public void setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener onCheckedChangeListener) {
-        this.f7760v = onCheckedChangeListener;
+        this.f7834v = onCheckedChangeListener;
     }
 
     @Override // android.widget.CompoundButton, android.view.View
     public void setStateDescription(CharSequence charSequence) {
-        this.f7759u = charSequence;
+        this.f7833u = charSequence;
         if (charSequence == null) {
             g();
         } else {
@@ -535,7 +535,7 @@ public class MaterialCheckBox extends g {
     }
 
     public void setUseMaterialThemeColors(boolean z10) {
-        this.f7746h = z10;
+        this.f7820h = z10;
         if (z10) {
             d.d(this, getMaterialThemeColorsTintList());
         } else {
@@ -550,32 +550,32 @@ public class MaterialCheckBox extends g {
 
     /* JADX WARN: Illegal instructions before constructor call */
     public MaterialCheckBox(Context context, AttributeSet attributeSet, int i10) {
-        int i11 = f7741y;
-        super(ld.a.c(context, attributeSet, i10, i11), attributeSet, i10);
-        this.f7743e = new LinkedHashSet<>();
-        this.f7744f = new LinkedHashSet<>();
-        this.f7761w = p5.c.a(getContext(), e.f18854h);
-        this.f7762x = new a();
+        int i11 = f7815y;
+        super(md.a.c(context, attributeSet, i10, i11), attributeSet, i10);
+        this.f7817e = new LinkedHashSet<>();
+        this.f7818f = new LinkedHashSet<>();
+        this.f7835w = p5.c.a(getContext(), e.f20676h);
+        this.f7836x = new a();
         Context context2 = getContext();
-        this.f7750l = d.a(this);
-        this.f7753o = getSuperButtonTintList();
+        this.f7824l = d.a(this);
+        this.f7827o = getSuperButtonTintList();
         setSupportButtonTintList(null);
         a1 a1VarJ = o.j(context2, attributeSet, k.L3, i10, i11, new int[0]);
-        this.f7751m = a1VarJ.g(k.O3);
-        if (this.f7750l != null && o.g(context2) && d(a1VarJ)) {
+        this.f7825m = a1VarJ.g(k.O3);
+        if (this.f7824l != null && o.g(context2) && d(a1VarJ)) {
             super.setButtonDrawable((Drawable) null);
-            this.f7750l = k.a.b(context2, e.f18853g);
-            this.f7752n = true;
-            if (this.f7751m == null) {
-                this.f7751m = k.a.b(context2, e.f18855i);
+            this.f7824l = k.a.b(context2, e.f20675g);
+            this.f7826n = true;
+            if (this.f7825m == null) {
+                this.f7825m = k.a.b(context2, e.f20677i);
             }
         }
-        this.f7754p = dd.c.b(context2, a1VarJ, k.P3);
-        this.f7755q = r.i(a1VarJ.k(k.Q3, -1), PorterDuff.Mode.SRC_IN);
-        this.f7746h = a1VarJ.a(k.V3, false);
-        this.f7747i = a1VarJ.a(k.R3, true);
-        this.f7748j = a1VarJ.a(k.U3, false);
-        this.f7749k = a1VarJ.p(k.T3);
+        this.f7828p = ed.c.b(context2, a1VarJ, k.P3);
+        this.f7829q = r.i(a1VarJ.k(k.Q3, -1), PorterDuff.Mode.SRC_IN);
+        this.f7820h = a1VarJ.a(k.V3, false);
+        this.f7821i = a1VarJ.a(k.R3, true);
+        this.f7822j = a1VarJ.a(k.U3, false);
+        this.f7823k = a1VarJ.p(k.T3);
         int i12 = k.S3;
         if (a1VarJ.s(i12)) {
             setCheckedState(a1VarJ.k(i12, 0));
@@ -586,8 +586,8 @@ public class MaterialCheckBox extends g {
 
     @Override // q.g, android.widget.CompoundButton
     public void setButtonDrawable(Drawable drawable) {
-        this.f7750l = drawable;
-        this.f7752n = false;
+        this.f7824l = drawable;
+        this.f7826n = false;
         f();
     }
 }

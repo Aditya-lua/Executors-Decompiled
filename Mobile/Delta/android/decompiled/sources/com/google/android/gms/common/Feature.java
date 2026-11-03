@@ -15,23 +15,23 @@ public class Feature extends AbstractSafeParcelable {
     public static final Parcelable.Creator<Feature> CREATOR = new p();
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final String f5694f;
+    public final String f5767f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
     @Deprecated
-    public final int f5695g;
+    public final int f5768g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final long f5696h;
+    public final long f5769h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final boolean f5697i;
+    public final boolean f5770i;
 
     public Feature(@NonNull String str, int i10, long j10, boolean z10) {
-        this.f5694f = str;
-        this.f5695g = i10;
-        this.f5696h = j10;
-        this.f5697i = z10;
+        this.f5767f = str;
+        this.f5768g = i10;
+        this.f5769h = j10;
+        this.f5770i = z10;
     }
 
     public final boolean equals(Object obj) {
@@ -46,7 +46,7 @@ public class Feature extends AbstractSafeParcelable {
 
     @NonNull
     public String getName() {
-        return this.f5694f;
+        return this.f5767f;
     }
 
     public final int hashCode() {
@@ -63,19 +63,19 @@ public class Feature extends AbstractSafeParcelable {
     }
 
     public boolean v3() {
-        return this.f5697i;
+        return this.f5770i;
     }
 
     public long w3() {
-        long j10 = this.f5696h;
-        return j10 == -1 ? this.f5695g : j10;
+        long j10 = this.f5769h;
+        return j10 == -1 ? this.f5768g : j10;
     }
 
     @Override // android.os.Parcelable
     public final void writeToParcel(@NonNull Parcel parcel, int i10) {
         int iA = b.a(parcel);
         b.v(parcel, 1, getName(), false);
-        b.n(parcel, 2, this.f5695g);
+        b.n(parcel, 2, this.f5768g);
         b.r(parcel, 3, w3());
         b.c(parcel, 4, v3());
         b.b(parcel, iA);

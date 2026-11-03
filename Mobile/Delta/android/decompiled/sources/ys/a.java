@@ -3,9 +3,7 @@ package ys;
 import androidx.annotation.NonNull;
 
 /* JADX INFO: loaded from: classes3.dex */
-public abstract class a {
+public interface a {
     @NonNull
-    public static a a() {
-        return new b();
-    }
+    CharSequence a(String str, @NonNull String str2);
 }

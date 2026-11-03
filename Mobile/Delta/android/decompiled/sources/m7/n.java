@@ -7,32 +7,32 @@ import f7.h0;
 public class n implements n7.c {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final e f24030a;
+    public final e f24680a;
     public final o<PointF, PointF> b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final g f24031c;
+    public final g f24681c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final b f24032d;
+    public final b f24682d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final d f24033e;
+    public final d f24683e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final b f24034f;
+    public final b f24684f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final b f24035g;
+    public final b f24685g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final b f24036h;
+    public final b f24686h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final b f24037i;
+    public final b f24687i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public boolean f24038j;
+    public boolean f24688j;
 
     public n() {
         this(null, null, null, null, null, null, null, null, null);
@@ -48,15 +48,15 @@ public class n implements n7.c {
     }
 
     public e c() {
-        return this.f24030a;
+        return this.f24680a;
     }
 
     public b d() {
-        return this.f24037i;
+        return this.f24687i;
     }
 
     public d e() {
-        return this.f24033e;
+        return this.f24683e;
     }
 
     public o<PointF, PointF> f() {
@@ -64,43 +64,43 @@ public class n implements n7.c {
     }
 
     public b g() {
-        return this.f24032d;
+        return this.f24682d;
     }
 
     public g h() {
-        return this.f24031c;
+        return this.f24681c;
     }
 
     public b i() {
-        return this.f24034f;
+        return this.f24684f;
     }
 
     public b j() {
-        return this.f24035g;
+        return this.f24685g;
     }
 
     public b k() {
-        return this.f24036h;
+        return this.f24686h;
     }
 
     public boolean l() {
-        return this.f24038j;
+        return this.f24688j;
     }
 
     public void m(boolean z10) {
-        this.f24038j = z10;
+        this.f24688j = z10;
     }
 
     public n(e eVar, o<PointF, PointF> oVar, g gVar, b bVar, d dVar, b bVar2, b bVar3, b bVar4, b bVar5) {
-        this.f24038j = false;
-        this.f24030a = eVar;
+        this.f24688j = false;
+        this.f24680a = eVar;
         this.b = oVar;
-        this.f24031c = gVar;
-        this.f24032d = bVar;
-        this.f24033e = dVar;
-        this.f24036h = bVar2;
-        this.f24037i = bVar3;
-        this.f24034f = bVar4;
-        this.f24035g = bVar5;
+        this.f24681c = gVar;
+        this.f24682d = bVar;
+        this.f24683e = dVar;
+        this.f24686h = bVar2;
+        this.f24687i = bVar3;
+        this.f24684f = bVar4;
+        this.f24685g = bVar5;
     }
 }

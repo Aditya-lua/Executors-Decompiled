@@ -15,11 +15,11 @@ import org.xmlpull.v1.XmlSerializer;
 public class e {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static final Object f22034a = new Object();
+    public static final Object f22258a = new Object();
 
     /* JADX WARN: Code duplicated, block: B:42:0x003e A[EXC_TOP_SPLITTER, SYNTHETIC] */
     public static void a(Context context, String str) {
-        synchronized (f22034a) {
+        synchronized (f22258a) {
             if (str.equals("")) {
                 context.deleteFile("androidx.appcompat.app.AppCompatDelegate.application_locales_record_file");
                 return;
@@ -66,33 +66,43 @@ public class e {
       0x0046: PHI (r1v2 java.lang.String) = (r1v0 java.lang.String), (r1v4 java.lang.String) binds: [B:29:0x0053, B:23:0x0044] A[DONT_GENERATE, DONT_INLINE], SYNTHETIC] */
     public static String b(Context context) {
         String attributeValue;
-        synchronized (f22034a) {
+        synchronized (f22258a) {
             attributeValue = "";
             try {
-                FileInputStream fileInputStreamOpenFileInput = context.openFileInput("androidx.appcompat.app.AppCompatDelegate.application_locales_record_file");
                 try {
+                    FileInputStream fileInputStreamOpenFileInput = context.openFileInput("androidx.appcompat.app.AppCompatDelegate.application_locales_record_file");
                     try {
-                        XmlPullParser xmlPullParserNewPullParser = Xml.newPullParser();
-                        xmlPullParserNewPullParser.setInput(fileInputStreamOpenFileInput, "UTF-8");
-                        int depth = xmlPullParserNewPullParser.getDepth();
-                        while (true) {
-                            int next = xmlPullParserNewPullParser.next();
-                            if (next != 1 && (next != 3 || xmlPullParserNewPullParser.getDepth() > depth)) {
-                                if (next != 3 && next != 4 && xmlPullParserNewPullParser.getName().equals("locales")) {
-                                    attributeValue = xmlPullParserNewPullParser.getAttributeValue(null, "application_locales");
+                        try {
+                            XmlPullParser xmlPullParserNewPullParser = Xml.newPullParser();
+                            xmlPullParserNewPullParser.setInput(fileInputStreamOpenFileInput, "UTF-8");
+                            int depth = xmlPullParserNewPullParser.getDepth();
+                            while (true) {
+                                int next = xmlPullParserNewPullParser.next();
+                                if (next != 1 && (next != 3 || xmlPullParserNewPullParser.getDepth() > depth)) {
+                                    if (next != 3 && next != 4 && xmlPullParserNewPullParser.getName().equals("locales")) {
+                                        attributeValue = xmlPullParserNewPullParser.getAttributeValue(null, "application_locales");
+                                        break;
+                                    }
+                                } else {
                                     break;
                                 }
-                            } else {
-                                break;
                             }
-                        }
-                        if (fileInputStreamOpenFileInput != null) {
-                            try {
-                                fileInputStreamOpenFileInput.close();
-                            } catch (IOException unused) {
+                            if (fileInputStreamOpenFileInput != null) {
+                                try {
+                                    fileInputStreamOpenFileInput.close();
+                                } catch (IOException unused) {
+                                }
                             }
+                        } catch (Throwable th2) {
+                            if (fileInputStreamOpenFileInput != null) {
+                                try {
+                                    fileInputStreamOpenFileInput.close();
+                                } catch (IOException unused2) {
+                                }
+                            }
+                            throw th2;
                         }
-                    } catch (IOException | XmlPullParserException unused2) {
+                    } catch (IOException | XmlPullParserException unused3) {
                         Log.w("AppLocalesStorageHelper", "Reading app Locales : Unable to parse through file :androidx.appcompat.app.AppCompatDelegate.application_locales_record_file");
                         if (fileInputStreamOpenFileInput != null) {
                             fileInputStreamOpenFileInput.close();
@@ -101,14 +111,8 @@ public class e {
                     if (attributeValue.isEmpty()) {
                         context.deleteFile("androidx.appcompat.app.AppCompatDelegate.application_locales_record_file");
                     }
-                } catch (Throwable th2) {
-                    if (fileInputStreamOpenFileInput != null) {
-                        try {
-                            fileInputStreamOpenFileInput.close();
-                        } catch (IOException unused3) {
-                        }
-                    }
-                    throw th2;
+                } catch (Throwable th3) {
+                    throw th3;
                 }
             } catch (FileNotFoundException unused4) {
                 return "";

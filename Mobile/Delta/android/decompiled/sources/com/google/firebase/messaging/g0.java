@@ -12,28 +12,28 @@ import java.util.List;
 public class g0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Context f8770a;
+    public final Context f8844a;
     public String b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public String f8771c;
+    public String f8845c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public int f8772d;
+    public int f8846d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public int f8773e = 0;
+    public int f8847e = 0;
 
     public g0(Context context) {
-        this.f8770a = context;
+        this.f8844a = context;
     }
 
-    public static String c(ef.e eVar) {
-        String strD = eVar.n().d();
+    public static String c(ff.e eVar) {
+        String strD = eVar.m().d();
         if (strD != null) {
             return strD;
         }
-        String strC = eVar.n().c();
+        String strC = eVar.m().c();
         if (!strC.startsWith("1:")) {
             return strC;
         }
@@ -61,33 +61,33 @@ public class g0 {
 
     public synchronized String b() {
         try {
-            if (this.f8771c == null) {
+            if (this.f8845c == null) {
                 h();
             }
         } catch (Throwable th2) {
             throw th2;
         }
-        return this.f8771c;
+        return this.f8845c;
     }
 
     public synchronized int d() {
         PackageInfo packageInfoF;
         try {
-            if (this.f8772d == 0 && (packageInfoF = f("com.google.android.gms")) != null) {
-                this.f8772d = packageInfoF.versionCode;
+            if (this.f8846d == 0 && (packageInfoF = f("com.google.android.gms")) != null) {
+                this.f8846d = packageInfoF.versionCode;
             }
         } catch (Throwable th2) {
             throw th2;
         }
-        return this.f8772d;
+        return this.f8846d;
     }
 
     public synchronized int e() {
-        int i10 = this.f8773e;
+        int i10 = this.f8847e;
         if (i10 != 0) {
             return i10;
         }
-        PackageManager packageManager = this.f8770a.getPackageManager();
+        PackageManager packageManager = this.f8844a.getPackageManager();
         if (packageManager.checkPermission("com.google.android.c2dm.permission.SEND", "com.google.android.gms") == -1) {
             Log.e("FirebaseMessaging", "Google Play services missing or without correct permission.");
             return 0;
@@ -97,7 +97,7 @@ public class g0 {
             intent.setPackage("com.google.android.gms");
             List<ResolveInfo> listQueryIntentServices = packageManager.queryIntentServices(intent, 0);
             if (listQueryIntentServices != null && listQueryIntentServices.size() > 0) {
-                this.f8773e = 1;
+                this.f8847e = 1;
                 return 1;
             }
         }
@@ -105,21 +105,21 @@ public class g0 {
         intent2.setPackage("com.google.android.gms");
         List<ResolveInfo> listQueryBroadcastReceivers = packageManager.queryBroadcastReceivers(intent2, 0);
         if (listQueryBroadcastReceivers != null && listQueryBroadcastReceivers.size() > 0) {
-            this.f8773e = 2;
+            this.f8847e = 2;
             return 2;
         }
         Log.w("FirebaseMessaging", "Failed to resolve IID implementation package, falling back");
         if (u9.m.g()) {
-            this.f8773e = 2;
+            this.f8847e = 2;
         } else {
-            this.f8773e = 1;
+            this.f8847e = 1;
         }
-        return this.f8773e;
+        return this.f8847e;
     }
 
     public final PackageInfo f(String str) {
         try {
-            return this.f8770a.getPackageManager().getPackageInfo(str, 0);
+            return this.f8844a.getPackageManager().getPackageInfo(str, 0);
         } catch (PackageManager.NameNotFoundException e10) {
             Log.w("FirebaseMessaging", "Failed to find package " + e10);
             return null;
@@ -131,10 +131,10 @@ public class g0 {
     }
 
     public final synchronized void h() {
-        PackageInfo packageInfoF = f(this.f8770a.getPackageName());
+        PackageInfo packageInfoF = f(this.f8844a.getPackageName());
         if (packageInfoF != null) {
             this.b = Integer.toString(packageInfoF.versionCode);
-            this.f8771c = packageInfoF.versionName;
+            this.f8845c = packageInfoF.versionName;
         }
     }
 }

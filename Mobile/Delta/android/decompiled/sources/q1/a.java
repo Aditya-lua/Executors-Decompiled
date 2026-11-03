@@ -105,8 +105,8 @@ public final class a {
 
         /* JADX INFO: renamed from: q1.a$c$a, reason: collision with other inner class name */
         @Metadata(d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0010\b\n\u0002\b\u0005\u0018\u00002\u00020\u0001B%\u0012\b\b\u0001\u0010\u0003\u001a\u00020\u0002\u0012\b\b\u0001\u0010\u0005\u001a\u00020\u0004\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0004¢\u0006\u0004\b\u0007\u0010\b¨\u0006\t"}, d2 = {"Lq1/a$c$a;", "Lq1/a$c;", "", "eventTime", "", "focusX", "focusY", "<init>", "(JII)V", "camera-view_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
-        public static final class C0512a extends c {
-            public C0512a(long j10, int i10, int i11) {
+        public static final class C0511a extends c {
+            public C0511a(long j10, int i10, int i11) {
                 super(j10, i10, i11, null);
             }
         }
@@ -125,12 +125,12 @@ public final class a {
 
         /* JADX INFO: renamed from: q1.a$c$c, reason: collision with other inner class name */
         @Metadata(d1 = {"\u0000\u001e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\t\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0007\n\u0002\b\b\u0018\u00002\u00020\u0001B/\u0012\b\b\u0001\u0010\u0003\u001a\u00020\u0002\u0012\b\b\u0001\u0010\u0005\u001a\u00020\u0004\u0012\b\b\u0001\u0010\u0006\u001a\u00020\u0004\u0012\b\b\u0001\u0010\b\u001a\u00020\u0007¢\u0006\u0004\b\t\u0010\nR\u0017\u0010\b\u001a\u00020\u00078\u0006¢\u0006\f\n\u0004\b\u000b\u0010\f\u001a\u0004\b\r\u0010\u000e¨\u0006\u000f"}, d2 = {"Lq1/a$c$c;", "Lq1/a$c;", "", "eventTime", "", "focusX", "focusY", "", "incrementalScaleFactor", "<init>", "(JIIF)V", "d", "F", "a", "()F", "camera-view_release"}, k = 1, mv = {2, 0, 0}, xi = 48)
-        public static final class C0513c extends c {
+        public static final class C0512c extends c {
 
             /* JADX INFO: renamed from: d, reason: collision with root package name and from kotlin metadata */
             public final float incrementalScaleFactor;
 
-            public C0513c(long j10, int i10, int i11, float f10) {
+            public C0512c(long j10, int i10, int i11, float f10) {
                 super(j10, i10, i11, null);
                 this.incrementalScaleFactor = f10;
             }
@@ -275,8 +275,8 @@ public final class a {
         float f19 = f16 * f17;
         float fHypot = e() ? f19 : (float) Math.hypot(f18, f19);
         boolean z16 = this.isInProgress;
-        this.focusX = cu.b.d(f11);
-        this.focusY = cu.b.d(f10);
+        this.focusX = au.b.d(f11);
+        this.focusY = au.b.d(f10);
         if (!e() && this.isInProgress && (fHypot < this.minSpan || z14)) {
             this.listener.a(new c.b(this.eventTime, this.focusX, this.focusY, d()));
             this.isInProgress = false;
@@ -301,13 +301,13 @@ public final class a {
             this.previousSpan = fHypot;
             long j10 = this.eventTime;
             this.prevTime = j10;
-            this.isInProgress = this.listener.a(new c.C0512a(j10, this.focusX, this.focusY));
+            this.isInProgress = this.listener.a(new c.C0511a(j10, this.focusX, this.focusY));
         }
         if (actionMasked == 2) {
             this.currentSpanX = f18;
             this.currentSpanY = f19;
             this.currentSpan = fHypot;
-            if (this.isInProgress ? this.listener.a(new c.C0513c(this.eventTime, this.focusX, this.focusY, d())) : z10) {
+            if (this.isInProgress ? this.listener.a(new c.C0512c(this.eventTime, this.focusX, this.focusY, d())) : z10) {
                 this.previousSpanX = this.currentSpanX;
                 this.previousSpanY = this.currentSpanY;
                 this.previousSpan = this.currentSpan;

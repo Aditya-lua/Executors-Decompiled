@@ -11,11 +11,11 @@ public final class p7 extends gb implements pc {
     static {
         p7 p7Var = new p7();
         zzg = p7Var;
-        gb.u(p7.class, p7Var);
+        gb.t(p7.class, p7Var);
     }
 
     public static i7 G() {
-        return (i7) zzg.q();
+        return (i7) zzg.p();
     }
 
     public static p7 H() {
@@ -29,7 +29,7 @@ public final class p7 extends gb implements pc {
             return (byte) 1;
         }
         if (i11 == 2) {
-            return gb.v(zzg, "\u0004\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001᠌\u0000\u0002᠌\u0001\u0003᠌\u0002", new Object[]{"zzb", "zzd", n7.f6682a, "zze", j7.f6556a, "zzf", l7.f6601a});
+            return gb.v(zzg, "\u0004\u0003\u0000\u0001\u0001\u0003\u0003\u0000\u0000\u0000\u0001᠌\u0000\u0002᠌\u0001\u0003᠌\u0002", new Object[]{"zzb", "zzd", n7.f6755a, "zze", j7.f6629a, "zzf", l7.f6674a});
         }
         if (i11 == 3) {
             return new p7();

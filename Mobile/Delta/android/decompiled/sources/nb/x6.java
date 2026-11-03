@@ -21,51 +21,51 @@ import java.util.concurrent.Callable;
 public final class x6 extends xd implements j {
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final Map f26091d;
+    public final Map f26912d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final Map f26092e;
+    public final Map f26913e;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public final Map f26093f;
+    public final Map f26914f;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public final Map f26094g;
+    public final Map f26915g;
 
     /* JADX INFO: renamed from: h, reason: collision with root package name */
-    public final Map f26095h;
+    public final Map f26916h;
 
     /* JADX INFO: renamed from: i, reason: collision with root package name */
-    public final Map f26096i;
+    public final Map f26917i;
 
     /* JADX INFO: renamed from: j, reason: collision with root package name */
-    public final w1.i f26097j;
+    public final w1.i f26918j;
 
     /* JADX INFO: renamed from: k, reason: collision with root package name */
-    public final gg f26098k;
+    public final gg f26919k;
 
     /* JADX INFO: renamed from: l, reason: collision with root package name */
-    public final Map f26099l;
+    public final Map f26920l;
 
     /* JADX INFO: renamed from: m, reason: collision with root package name */
-    public final Map f26100m;
+    public final Map f26921m;
 
     /* JADX INFO: renamed from: n, reason: collision with root package name */
-    public final Map f26101n;
+    public final Map f26922n;
 
     public x6(me meVar) {
         super(meVar);
-        this.f26091d = new w1.a();
-        this.f26092e = new w1.a();
-        this.f26093f = new w1.a();
-        this.f26094g = new w1.a();
-        this.f26095h = new w1.a();
-        this.f26099l = new w1.a();
-        this.f26100m = new w1.a();
-        this.f26101n = new w1.a();
-        this.f26096i = new w1.a();
-        this.f26097j = new q6(this, 20);
-        this.f26098k = new r6(this);
+        this.f26912d = new w1.a();
+        this.f26913e = new w1.a();
+        this.f26914f = new w1.a();
+        this.f26915g = new w1.a();
+        this.f26916h = new w1.a();
+        this.f26920l = new w1.a();
+        this.f26921m = new w1.a();
+        this.f26922n = new w1.a();
+        this.f26917i = new w1.a();
+        this.f26918j = new q6(this, 20);
+        this.f26919k = new r6(this);
     }
 
     public static final Map u(com.google.android.gms.internal.measurement.g5 g5Var) {
@@ -97,32 +97,32 @@ public final class x6 extends xd implements j {
 
     public final void A(String str) {
         h();
-        this.f26100m.put(str, null);
+        this.f26921m.put(str, null);
     }
 
     public final void B(String str) {
         h();
-        this.f26095h.remove(str);
+        this.f26916h.remove(str);
     }
 
-    public final boolean C(String str, byte[] bArr, String str2, String str3) throws Throwable {
+    public final boolean C(String str, byte[] bArr, String str2, String str3) {
         j();
         h();
         n9.m.f(str);
-        com.google.android.gms.internal.measurement.f5 f5Var = (com.google.android.gms.internal.measurement.f5) t(str, bArr).r();
+        com.google.android.gms.internal.measurement.f5 f5Var = (com.google.android.gms.internal.measurement.f5) t(str, bArr).q();
         r(str, f5Var);
         s(str, (com.google.android.gms.internal.measurement.g5) f5Var.t());
-        this.f26095h.put(str, (com.google.android.gms.internal.measurement.g5) f5Var.t());
-        this.f26099l.put(str, f5Var.J());
-        this.f26100m.put(str, str2);
-        this.f26101n.put(str, str3);
-        this.f26091d.put(str, u((com.google.android.gms.internal.measurement.g5) f5Var.t()));
+        this.f26916h.put(str, (com.google.android.gms.internal.measurement.g5) f5Var.t());
+        this.f26920l.put(str, f5Var.J());
+        this.f26921m.put(str, str2);
+        this.f26922n.put(str, str3);
+        this.f26912d.put(str, u((com.google.android.gms.internal.measurement.g5) f5Var.t()));
         this.b.F0().Y(str, new ArrayList(f5Var.C()));
         try {
             f5Var.D();
             bArr = ((com.google.android.gms.internal.measurement.g5) f5Var.t()).d();
         } catch (RuntimeException e10) {
-            this.f25625a.a().r().c("Unable to serialize reduced-size config. Storing full config instead. appId", w5.x(str), e10);
+            this.f26446a.a().r().c("Unable to serialize reduced-size config. Storing full config instead. appId", w5.x(str), e10);
         }
         t tVarF0 = this.b.F0();
         n9.m.f(str);
@@ -134,17 +134,17 @@ public final class x6 extends xd implements j {
         contentValues.put("e_tag", str3);
         try {
             if (tVarF0.u0().update("apps", contentValues, "app_id = ?", new String[]{str}) == 0) {
-                tVarF0.f25625a.a().o().b("Failed to update remote config (got 0). appId", w5.x(str));
+                tVarF0.f26446a.a().o().b("Failed to update remote config (got 0). appId", w5.x(str));
             }
         } catch (SQLiteException e11) {
-            tVarF0.f25625a.a().o().c("Error storing remote config. appId", w5.x(str), e11);
+            tVarF0.f26446a.a().o().c("Error storing remote config. appId", w5.x(str), e11);
         }
         f5Var.E();
-        this.f26095h.put(str, (com.google.android.gms.internal.measurement.g5) f5Var.t());
+        this.f26916h.put(str, (com.google.android.gms.internal.measurement.g5) f5Var.t());
         return true;
     }
 
-    public final boolean D(String str, String str2) throws Throwable {
+    public final boolean D(String str, String str2) {
         Boolean bool;
         h();
         q(str);
@@ -154,21 +154,21 @@ public final class x6 extends xd implements j {
         if (I(str) && ve.r0(str2)) {
             return true;
         }
-        Map map = (Map) this.f26093f.get(str);
+        Map map = (Map) this.f26914f.get(str);
         if (map == null || (bool = (Boolean) map.get(str2)) == null) {
             return false;
         }
         return bool.booleanValue();
     }
 
-    public final boolean E(String str, String str2) throws Throwable {
+    public final boolean E(String str, String str2) {
         Boolean bool;
         h();
         q(str);
         if ("ecommerce_purchase".equals(str2) || "purchase".equals(str2) || "refund".equals(str2)) {
             return true;
         }
-        Map map = (Map) this.f26094g.get(str);
+        Map map = (Map) this.f26915g.get(str);
         if (map == null || (bool = (Boolean) map.get(str2)) == null) {
             return false;
         }
@@ -178,14 +178,14 @@ public final class x6 extends xd implements j {
     public final Set F(String str) {
         h();
         q(str);
-        return (Set) this.f26092e.get(str);
+        return (Set) this.f26913e.get(str);
     }
 
-    public final int G(String str, String str2) throws Throwable {
+    public final int G(String str, String str2) {
         Integer num;
         h();
         q(str);
-        Map map = (Map) this.f26096i.get(str);
+        Map map = (Map) this.f26917i.get(str);
         if (map == null || (num = (Integer) map.get(str2)) == null) {
             return 1;
         }
@@ -200,55 +200,55 @@ public final class x6 extends xd implements j {
         return "1".equals(f(str, "measurement.upload.blacklist_public"));
     }
 
-    public final boolean J(String str) throws Throwable {
+    public final boolean J(String str) {
         h();
         q(str);
-        Map map = this.f26092e;
+        Map map = this.f26913e;
         if (map.get(str) != null) {
             return ((Set) map.get(str)).contains(Payload.DEVICE_MODEL) || ((Set) map.get(str)).contains("device_info");
         }
         return false;
     }
 
-    public final boolean K(String str) throws Throwable {
+    public final boolean K(String str) {
         h();
         q(str);
-        Map map = this.f26092e;
+        Map map = this.f26913e;
         if (map.get(str) != null) {
             return ((Set) map.get(str)).contains("os_version") || ((Set) map.get(str)).contains("device_info");
         }
         return false;
     }
 
-    public final boolean L(String str) throws Throwable {
+    public final boolean L(String str) {
         h();
         q(str);
-        Map map = this.f26092e;
+        Map map = this.f26913e;
         return map.get(str) != null && ((Set) map.get(str)).contains("user_id");
     }
 
-    public final boolean M(String str) throws Throwable {
+    public final boolean M(String str) {
         h();
         q(str);
-        Map map = this.f26092e;
+        Map map = this.f26913e;
         return map.get(str) != null && ((Set) map.get(str)).contains("google_signals");
     }
 
-    public final boolean N(String str) throws Throwable {
+    public final boolean N(String str) {
         h();
         q(str);
-        Map map = this.f26092e;
+        Map map = this.f26913e;
         return map.get(str) != null && ((Set) map.get(str)).contains("app_instance_id");
     }
 
-    public final boolean O(String str) throws Throwable {
+    public final boolean O(String str) {
         h();
         q(str);
-        Map map = this.f26092e;
+        Map map = this.f26913e;
         return map.get(str) != null && ((Set) map.get(str)).contains("enhanced_user_id");
     }
 
-    public final boolean P(String str, p8 p8Var) throws Throwable {
+    public final boolean P(String str, p8 p8Var) {
         h();
         q(str);
         com.google.android.gms.internal.measurement.a5 a5VarR = R(str);
@@ -312,10 +312,10 @@ public final class x6 extends xd implements j {
     }
 
     @Override // nb.j
-    public final String f(String str, String str2) throws Throwable {
+    public final String f(String str, String str2) {
         h();
         q(str);
-        Map map = (Map) this.f26091d.get(str);
+        Map map = (Map) this.f26912d.get(str);
         if (map != null) {
             return (String) map.get(str2);
         }
@@ -346,7 +346,7 @@ public final class x6 extends xd implements j {
         return n8.UNINITIALIZED;
     }
 
-    public final boolean n(String str) throws Throwable {
+    public final boolean n(String str) {
         h();
         q(str);
         com.google.android.gms.internal.measurement.a5 a5VarR = R(str);
@@ -361,49 +361,49 @@ public final class x6 extends xd implements j {
         return false;
     }
 
-    public final /* synthetic */ com.google.android.gms.internal.measurement.d1 o(String str) throws Throwable {
+    public final /* synthetic */ com.google.android.gms.internal.measurement.d1 o(String str) {
         j();
         n9.m.f(str);
         o oVarN0 = this.b.F0().N0(str);
         if (oVarN0 == null) {
             return null;
         }
-        this.f25625a.a().w().b("Populate EES config from database on cache miss. appId", str);
-        s(str, t(str, oVarN0.f25807a));
-        return (com.google.android.gms.internal.measurement.d1) this.f26097j.j().get(str);
+        this.f26446a.a().w().b("Populate EES config from database on cache miss. appId", str);
+        s(str, t(str, oVarN0.f26628a));
+        return (com.google.android.gms.internal.measurement.d1) this.f26918j.j().get(str);
     }
 
     public final /* synthetic */ Map p() {
-        return this.f26091d;
+        return this.f26912d;
     }
 
-    public final void q(String str) throws Throwable {
+    public final void q(String str) {
         j();
         h();
         n9.m.f(str);
-        Map map = this.f26095h;
+        Map map = this.f26916h;
         if (map.get(str) == null) {
             o oVarN0 = this.b.F0().N0(str);
             if (oVarN0 != null) {
-                com.google.android.gms.internal.measurement.f5 f5Var = (com.google.android.gms.internal.measurement.f5) t(str, oVarN0.f25807a).r();
+                com.google.android.gms.internal.measurement.f5 f5Var = (com.google.android.gms.internal.measurement.f5) t(str, oVarN0.f26628a).q();
                 r(str, f5Var);
-                this.f26091d.put(str, u((com.google.android.gms.internal.measurement.g5) f5Var.t()));
+                this.f26912d.put(str, u((com.google.android.gms.internal.measurement.g5) f5Var.t()));
                 map.put(str, (com.google.android.gms.internal.measurement.g5) f5Var.t());
                 s(str, (com.google.android.gms.internal.measurement.g5) f5Var.t());
-                this.f26099l.put(str, f5Var.J());
-                this.f26100m.put(str, oVarN0.b);
-                this.f26101n.put(str, oVarN0.f25808c);
+                this.f26920l.put(str, f5Var.J());
+                this.f26921m.put(str, oVarN0.b);
+                this.f26922n.put(str, oVarN0.f26629c);
                 return;
             }
-            this.f26091d.put(str, null);
-            this.f26093f.put(str, null);
-            this.f26092e.put(str, null);
-            this.f26094g.put(str, null);
+            this.f26912d.put(str, null);
+            this.f26914f.put(str, null);
+            this.f26913e.put(str, null);
+            this.f26915g.put(str, null);
             map.put(str, null);
-            this.f26099l.put(str, null);
-            this.f26100m.put(str, null);
-            this.f26101n.put(str, null);
-            this.f26096i.put(str, null);
+            this.f26920l.put(str, null);
+            this.f26921m.put(str, null);
+            this.f26922n.put(str, null);
+            this.f26917i.put(str, null);
         }
     }
 
@@ -416,44 +416,44 @@ public final class x6 extends xd implements j {
         while (it.hasNext()) {
             hashSet.add(((com.google.android.gms.internal.measurement.c5) it.next()).F());
         }
-        for (int i10 = 0; i10 < f5Var.x(); i10++) {
-            com.google.android.gms.internal.measurement.d5 d5Var = (com.google.android.gms.internal.measurement.d5) f5Var.z(i10).r();
-            if (d5Var.x().isEmpty()) {
-                this.f25625a.a().r().a("EventConfig contained null event name");
+        for (int i10 = 0; i10 < f5Var.y(); i10++) {
+            com.google.android.gms.internal.measurement.d5 d5Var = (com.google.android.gms.internal.measurement.d5) f5Var.z(i10).q();
+            if (d5Var.y().isEmpty()) {
+                this.f26446a.a().r().a("EventConfig contained null event name");
             } else {
-                String strX = d5Var.x();
-                String strB = r8.b(d5Var.x());
+                String strY = d5Var.y();
+                String strB = r8.b(d5Var.y());
                 if (!TextUtils.isEmpty(strB)) {
                     d5Var.z(strB);
-                    f5Var.A(i10, d5Var);
+                    f5Var.B(i10, d5Var);
                 }
-                if (d5Var.A() && d5Var.C()) {
-                    aVar.put(strX, Boolean.TRUE);
+                if (d5Var.B() && d5Var.C()) {
+                    aVar.put(strY, Boolean.TRUE);
                 }
                 if (d5Var.D() && d5Var.E()) {
-                    aVar2.put(d5Var.x(), Boolean.TRUE);
+                    aVar2.put(d5Var.y(), Boolean.TRUE);
                 }
                 if (d5Var.G()) {
                     if (d5Var.J() < 2 || d5Var.J() > 65535) {
-                        this.f25625a.a().r().c("Invalid sampling rate. Event name, sample rate", d5Var.x(), Integer.valueOf(d5Var.J()));
+                        this.f26446a.a().r().c("Invalid sampling rate. Event name, sample rate", d5Var.y(), Integer.valueOf(d5Var.J()));
                     } else {
-                        aVar3.put(d5Var.x(), Integer.valueOf(d5Var.J()));
+                        aVar3.put(d5Var.y(), Integer.valueOf(d5Var.J()));
                     }
                 }
             }
         }
-        this.f26092e.put(str, hashSet);
-        this.f26093f.put(str, aVar);
-        this.f26094g.put(str, aVar2);
-        this.f26096i.put(str, aVar3);
+        this.f26913e.put(str, hashSet);
+        this.f26914f.put(str, aVar);
+        this.f26915g.put(str, aVar2);
+        this.f26917i.put(str, aVar3);
     }
 
     public final void s(final String str, com.google.android.gms.internal.measurement.g5 g5Var) {
         if (g5Var.Q() == 0) {
-            this.f26097j.f(str);
+            this.f26918j.f(str);
             return;
         }
-        g7 g7Var = this.f25625a;
+        g7 g7Var = this.f26446a;
         g7Var.a().w().b("EES programs found", Integer.valueOf(g5Var.Q()));
         com.google.android.gms.internal.measurement.y7 y7Var = (com.google.android.gms.internal.measurement.y7) g5Var.P().get(0);
         try {
@@ -461,13 +461,13 @@ public final class x6 extends xd implements j {
             d1Var.a("internal.remoteConfig", new Callable() { // from class: nb.w6
                 @Override // java.util.concurrent.Callable
                 public final /* synthetic */ Object call() {
-                    return new com.google.android.gms.internal.measurement.bc("internal.remoteConfig", new s6(this.f26068a, str));
+                    return new com.google.android.gms.internal.measurement.bc("internal.remoteConfig", new s6(this.f26889a, str));
                 }
             });
             d1Var.a("internal.appMetadata", new Callable() { // from class: nb.t6
                 @Override // java.util.concurrent.Callable
                 public final /* synthetic */ Object call() {
-                    final x6 x6Var = this.f25978a;
+                    final x6 x6Var = this.f26799a;
                     final String str2 = str;
                     return new ch("internal.appMetadata", new Callable() { // from class: nb.v6
                         @Override // java.util.concurrent.Callable
@@ -479,7 +479,7 @@ public final class x6 extends xd implements j {
                             HashMap map = new HashMap();
                             map.put("platform", "android");
                             map.put("package_name", str3);
-                            x6Var2.f25625a.w().A();
+                            x6Var2.f26446a.w().A();
                             map.put("gmp_version", 133005L);
                             if (c6VarJ0 != null) {
                                 String strD0 = c6VarJ0.D0();
@@ -497,18 +497,18 @@ public final class x6 extends xd implements j {
             d1Var.a("internal.logger", new Callable() { // from class: nb.u6
                 @Override // java.util.concurrent.Callable
                 public final /* synthetic */ Object call() {
-                    return new bh(this.f26007a.f26098k);
+                    return new bh(this.f26828a.f26919k);
                 }
             });
             d1Var.f(y7Var);
-            this.f26097j.e(str, d1Var);
+            this.f26918j.e(str, d1Var);
             g7Var.a().w().c("EES program loaded for appId, activities", str, Integer.valueOf(y7Var.G().G()));
             Iterator it = y7Var.G().F().iterator();
             while (it.hasNext()) {
                 g7Var.a().w().b("EES program activity", ((com.google.android.gms.internal.measurement.v7) it.next()).F());
             }
         } catch (com.google.android.gms.internal.measurement.d2 unused) {
-            this.f25625a.a().o().b("Failed to load EES program. appId", str);
+            this.f26446a.a().o().b("Failed to load EES program. appId", str);
         }
     }
 
@@ -518,13 +518,13 @@ public final class x6 extends xd implements j {
         }
         try {
             com.google.android.gms.internal.measurement.g5 g5Var = (com.google.android.gms.internal.measurement.g5) ((com.google.android.gms.internal.measurement.f5) re.W(com.google.android.gms.internal.measurement.g5.X(), bArr)).t();
-            this.f25625a.a().w().c("Parsed config. version, gmp_app_id", g5Var.F() ? Long.valueOf(g5Var.G()) : null, g5Var.H() ? g5Var.J() : null);
+            this.f26446a.a().w().c("Parsed config. version, gmp_app_id", g5Var.F() ? Long.valueOf(g5Var.G()) : null, g5Var.H() ? g5Var.J() : null);
             return g5Var;
         } catch (com.google.android.gms.internal.measurement.sb e10) {
-            this.f25625a.a().r().c("Unable to merge remote config. appId", w5.x(str), e10);
+            this.f26446a.a().r().c("Unable to merge remote config. appId", w5.x(str), e10);
             return com.google.android.gms.internal.measurement.g5.Y();
         } catch (RuntimeException e11) {
-            this.f25625a.a().r().c("Unable to merge remote config. appId", w5.x(str), e11);
+            this.f26446a.a().r().c("Unable to merge remote config. appId", w5.x(str), e11);
             return com.google.android.gms.internal.measurement.g5.Y();
         }
     }
@@ -534,22 +534,22 @@ public final class x6 extends xd implements j {
         h();
         n9.m.f(str);
         q(str);
-        return (com.google.android.gms.internal.measurement.g5) this.f26095h.get(str);
+        return (com.google.android.gms.internal.measurement.g5) this.f26916h.get(str);
     }
 
     public final String x(String str) {
         h();
         q(str);
-        return (String) this.f26099l.get(str);
+        return (String) this.f26920l.get(str);
     }
 
     public final String y(String str) {
         h();
-        return (String) this.f26100m.get(str);
+        return (String) this.f26921m.get(str);
     }
 
     public final String z(String str) {
         h();
-        return (String) this.f26101n.get(str);
+        return (String) this.f26922n.get(str);
     }
 }

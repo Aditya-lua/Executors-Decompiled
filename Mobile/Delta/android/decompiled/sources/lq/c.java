@@ -1,28 +1,78 @@
 package lq;
 
-import kotlin.Metadata;
-import kotlin.jvm.internal.Intrinsics;
-import ku.g1;
-import ku.l0;
-import ku.p0;
-import org.jetbrains.annotations.NotNull;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import hq.t;
+import hq.u;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0007\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003J\u000f\u0010\u0005\u001a\u00020\u0004H\u0007¢\u0006\u0004\b\u0005\u0010\u0006J\u000f\u0010\u0007\u001a\u00020\u0004H\u0007¢\u0006\u0004\b\u0007\u0010\u0006J\u0017\u0010\u000b\u001a\u00020\n2\u0006\u0010\t\u001a\u00020\bH\u0007¢\u0006\u0004\b\u000b\u0010\f¨\u0006\r"}, d2 = {"Llq/c;", "", "<init>", "()V", "Lku/l0;", "c", "()Lku/l0;", "b", "Llq/a;", "coroutineScopeFactory", "Lku/p0;", "a", "(Llq/a;)Lku/p0;", "shared_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class c {
-    @NotNull
-    public final p0 a(@NotNull a coroutineScopeFactory) {
-        Intrinsics.checkNotNullParameter(coroutineScopeFactory, "coroutineScopeFactory");
-        return coroutineScopeFactory.a();
+public final class c implements r5.a {
+
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
+    @NonNull
+    public final View f23929a;
+
+    @NonNull
+    public final ImageView b;
+
+    /* JADX INFO: renamed from: c, reason: collision with root package name */
+    @NonNull
+    public final ImageView f23930c;
+
+    /* JADX INFO: renamed from: d, reason: collision with root package name */
+    @NonNull
+    public final ImageView f23931d;
+
+    /* JADX INFO: renamed from: e, reason: collision with root package name */
+    @NonNull
+    public final TextView f23932e;
+
+    public c(@NonNull View view, @NonNull ImageView imageView, @NonNull ImageView imageView2, @NonNull ImageView imageView3, @NonNull TextView textView) {
+        this.f23929a = view;
+        this.b = imageView;
+        this.f23930c = imageView2;
+        this.f23931d = imageView3;
+        this.f23932e = textView;
     }
 
-    @NotNull
-    public final l0 b() {
-        return g1.a();
+    @NonNull
+    public static c a(@NonNull View view) {
+        int i10 = t.f19673m;
+        ImageView imageView = (ImageView) r5.b.a(view, i10);
+        if (imageView != null) {
+            i10 = t.f19674n;
+            ImageView imageView2 = (ImageView) r5.b.a(view, i10);
+            if (imageView2 != null) {
+                i10 = t.f19675o;
+                ImageView imageView3 = (ImageView) r5.b.a(view, i10);
+                if (imageView3 != null) {
+                    i10 = t.f19676p;
+                    TextView textView = (TextView) r5.b.a(view, i10);
+                    if (textView != null) {
+                        return new c(view, imageView, imageView2, imageView3, textView);
+                    }
+                }
+            }
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
     }
 
-    @NotNull
-    public final l0 c() {
-        return g1.b();
+    @NonNull
+    public static c b(@NonNull LayoutInflater layoutInflater, @NonNull ViewGroup viewGroup) {
+        if (viewGroup == null) {
+            throw new NullPointerException("parent");
+        }
+        layoutInflater.inflate(u.f19688c, viewGroup);
+        return a(viewGroup);
+    }
+
+    @Override // r5.a
+    @NonNull
+    public View getRoot() {
+        return this.f23929a;
     }
 }

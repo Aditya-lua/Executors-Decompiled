@@ -9,14 +9,14 @@ import java.util.RandomAccess;
 public abstract class d3 extends AbstractList implements y4 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public boolean f7025a;
+    public boolean f7099a;
 
     public d3(boolean z10) {
-        this.f7025a = z10;
+        this.f7099a = z10;
     }
 
     public final void a() {
-        if (this.f7025a) {
+        if (this.f7099a) {
             return;
         }
         b();
@@ -90,14 +90,14 @@ public abstract class d3 extends AbstractList implements y4 {
 
     @Override // com.google.android.gms.internal.play_billing.y4
     public final void zzb() {
-        if (this.f7025a) {
-            this.f7025a = false;
+        if (this.f7099a) {
+            this.f7099a = false;
         }
     }
 
     @Override // com.google.android.gms.internal.play_billing.y4
     public final boolean zzc() {
-        return this.f7025a;
+        return this.f7099a;
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List

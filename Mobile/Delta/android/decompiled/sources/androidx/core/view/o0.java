@@ -41,17 +41,17 @@ import java.util.WeakHashMap;
 public class o0 {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public static WeakHashMap<View, y0> f1893a;
+    public static WeakHashMap<View, y0> f1738a;
     public static Field b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public static boolean f1894c;
+    public static boolean f1739c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public static final int[] f1895d = {j2.e.b, j2.e.f21034c, j2.e.f21045n, j2.e.f21056y, j2.e.B, j2.e.C, j2.e.D, j2.e.E, j2.e.F, j2.e.G, j2.e.f21035d, j2.e.f21036e, j2.e.f21037f, j2.e.f21038g, j2.e.f21039h, j2.e.f21040i, j2.e.f21041j, j2.e.f21042k, j2.e.f21043l, j2.e.f21044m, j2.e.f21046o, j2.e.f21047p, j2.e.f21048q, j2.e.f21049r, j2.e.f21050s, j2.e.f21051t, j2.e.f21052u, j2.e.f21053v, j2.e.f21054w, j2.e.f21055x, j2.e.f21057z, j2.e.A};
+    public static final int[] f1740d = {j2.e.b, j2.e.f21607c, j2.e.f21618n, j2.e.f21629y, j2.e.B, j2.e.C, j2.e.D, j2.e.E, j2.e.F, j2.e.G, j2.e.f21608d, j2.e.f21609e, j2.e.f21610f, j2.e.f21611g, j2.e.f21612h, j2.e.f21613i, j2.e.f21614j, j2.e.f21615k, j2.e.f21616l, j2.e.f21617m, j2.e.f21619o, j2.e.f21620p, j2.e.f21621q, j2.e.f21622r, j2.e.f21623s, j2.e.f21624t, j2.e.f21625u, j2.e.f21626v, j2.e.f21627w, j2.e.f21628x, j2.e.f21630z, j2.e.A};
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public static final a0 f1896e = new a0() { // from class: androidx.core.view.n0
+    public static final a0 f1741e = new a0() { // from class: androidx.core.view.n0
         @Override // androidx.core.view.a0
         public final d a(d dVar) {
             return o0.a(dVar);
@@ -59,7 +59,7 @@ public class o0 {
     };
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public static final e f1897f = new e();
+    public static final e f1742f = new e();
 
     public class a extends f<Boolean> {
         public a(int i10, Class cls, int i11) {
@@ -160,10 +160,10 @@ public class o0 {
     public static class e implements ViewTreeObserver.OnGlobalLayoutListener, View.OnAttachStateChangeListener {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final WeakHashMap<View, Boolean> f1898a = new WeakHashMap<>();
+        public final WeakHashMap<View, Boolean> f1743a = new WeakHashMap<>();
 
         public void a(View view) {
-            this.f1898a.put(view, Boolean.valueOf(view.isShown() && view.getWindowVisibility() == 0));
+            this.f1743a.put(view, Boolean.valueOf(view.isShown() && view.getWindowVisibility() == 0));
             view.addOnAttachStateChangeListener(this);
             if (view.isAttachedToWindow()) {
                 c(view);
@@ -185,7 +185,7 @@ public class o0 {
         }
 
         public void d(View view) {
-            this.f1898a.remove(view);
+            this.f1743a.remove(view);
             view.removeOnAttachStateChangeListener(this);
             e(view);
         }
@@ -197,7 +197,7 @@ public class o0 {
         @Override // android.view.ViewTreeObserver.OnGlobalLayoutListener
         public void onGlobalLayout() {
             if (Build.VERSION.SDK_INT < 28) {
-                Iterator<Map.Entry<View, Boolean>> it = this.f1898a.entrySet().iterator();
+                Iterator<Map.Entry<View, Boolean>> it = this.f1743a.entrySet().iterator();
                 while (it.hasNext()) {
                     b(it.next());
                 }
@@ -217,14 +217,14 @@ public class o0 {
     public static abstract class f<T> {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public final int f1899a;
+        public final int f1744a;
         public final Class<T> b;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public final int f1900c;
+        public final int f1745c;
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public final int f1901d;
+        public final int f1746d;
 
         public f(int i10, Class<T> cls, int i11) {
             this(i10, cls, 0, i11);
@@ -235,7 +235,7 @@ public class o0 {
         }
 
         public final boolean b() {
-            return Build.VERSION.SDK_INT >= this.f1900c;
+            return Build.VERSION.SDK_INT >= this.f1745c;
         }
 
         public abstract T c(View view);
@@ -246,7 +246,7 @@ public class o0 {
             if (b()) {
                 return c(view);
             }
-            T t8 = (T) view.getTag(this.f1899a);
+            T t8 = (T) view.getTag(this.f1744a);
             if (this.b.isInstance(t8)) {
                 return t8;
             }
@@ -258,18 +258,18 @@ public class o0 {
                 d(view, t8);
             } else if (g(e(view), t8)) {
                 o0.j(view);
-                view.setTag(this.f1899a, t8);
-                o0.V(view, this.f1901d);
+                view.setTag(this.f1744a, t8);
+                o0.V(view, this.f1746d);
             }
         }
 
         public abstract boolean g(T t8, T t10);
 
         public f(int i10, Class<T> cls, int i11, int i12) {
-            this.f1899a = i10;
+            this.f1744a = i10;
             this.b = cls;
-            this.f1901d = i11;
-            this.f1900c = i12;
+            this.f1746d = i11;
+            this.f1745c = i12;
         }
     }
 
@@ -292,15 +292,15 @@ public class o0 {
         public class a implements View.OnApplyWindowInsetsListener {
 
             /* JADX INFO: renamed from: a, reason: collision with root package name */
-            public WindowInsetsCompat f1902a = null;
+            public WindowInsetsCompat f1747a = null;
             public final /* synthetic */ View b;
 
             /* JADX INFO: renamed from: c, reason: collision with root package name */
-            public final /* synthetic */ y f1903c;
+            public final /* synthetic */ y f1748c;
 
             public a(View view, y yVar) {
                 this.b = view;
-                this.f1903c = yVar;
+                this.f1748c = yVar;
             }
 
             @Override // android.view.View.OnApplyWindowInsetsListener
@@ -309,17 +309,17 @@ public class o0 {
                 int i10 = Build.VERSION.SDK_INT;
                 if (i10 < 30) {
                     h.a(windowInsets, this.b);
-                    if (windowInsetsCompat.equals(this.f1902a)) {
-                        return this.f1903c.K(view, windowInsetsCompat).toWindowInsets();
+                    if (windowInsetsCompat.equals(this.f1747a)) {
+                        return this.f1748c.J(view, windowInsetsCompat).toWindowInsets();
                     }
                 }
-                this.f1902a = windowInsetsCompat;
-                WindowInsetsCompat windowInsetsCompatK = this.f1903c.K(view, windowInsetsCompat);
+                this.f1747a = windowInsetsCompat;
+                WindowInsetsCompat windowInsetsCompatJ = this.f1748c.J(view, windowInsetsCompat);
                 if (i10 >= 30) {
-                    return windowInsetsCompatK.toWindowInsets();
+                    return windowInsetsCompatJ.toWindowInsets();
                 }
                 o0.j0(view);
-                return windowInsetsCompatK.toWindowInsets();
+                return windowInsetsCompatJ.toWindowInsets();
             }
         }
 
@@ -518,14 +518,14 @@ public class o0 {
     public static class p {
 
         /* JADX INFO: renamed from: d, reason: collision with root package name */
-        public static final ArrayList<WeakReference<View>> f1904d = new ArrayList<>();
+        public static final ArrayList<WeakReference<View>> f1749d = new ArrayList<>();
 
         /* JADX INFO: renamed from: a, reason: collision with root package name */
-        public WeakHashMap<View, Boolean> f1905a = null;
+        public WeakHashMap<View, Boolean> f1750a = null;
         public SparseArray<WeakReference<View>> b = null;
 
         /* JADX INFO: renamed from: c, reason: collision with root package name */
-        public WeakReference<KeyEvent> f1906c = null;
+        public WeakReference<KeyEvent> f1751c = null;
 
         public static p a(View view) {
             int i10 = j2.e.S;
@@ -553,7 +553,7 @@ public class o0 {
         }
 
         public final View c(View view, KeyEvent keyEvent) {
-            WeakHashMap<View, Boolean> weakHashMap = this.f1905a;
+            WeakHashMap<View, Boolean> weakHashMap = this.f1750a;
             if (weakHashMap != null && weakHashMap.containsKey(view)) {
                 if (view instanceof ViewGroup) {
                     ViewGroup viewGroup = (ViewGroup) view;
@@ -594,11 +594,11 @@ public class o0 {
         public boolean f(KeyEvent keyEvent) {
             WeakReference<View> weakReferenceValueAt;
             int iIndexOfKey;
-            WeakReference<KeyEvent> weakReference = this.f1906c;
+            WeakReference<KeyEvent> weakReference = this.f1751c;
             if (weakReference != null && weakReference.get() == keyEvent) {
                 return false;
             }
-            this.f1906c = new WeakReference<>(keyEvent);
+            this.f1751c = new WeakReference<>(keyEvent);
             SparseArray<WeakReference<View>> sparseArrayD = d();
             if (keyEvent.getAction() != 1 || (iIndexOfKey = sparseArrayD.indexOfKey(keyEvent.getKeyCode())) < 0) {
                 weakReferenceValueAt = null;
@@ -620,28 +620,28 @@ public class o0 {
         }
 
         public final void g() {
-            WeakHashMap<View, Boolean> weakHashMap = this.f1905a;
+            WeakHashMap<View, Boolean> weakHashMap = this.f1750a;
             if (weakHashMap != null) {
                 weakHashMap.clear();
             }
-            ArrayList<WeakReference<View>> arrayList = f1904d;
+            ArrayList<WeakReference<View>> arrayList = f1749d;
             if (arrayList.isEmpty()) {
                 return;
             }
             synchronized (arrayList) {
                 try {
-                    if (this.f1905a == null) {
-                        this.f1905a = new WeakHashMap<>();
+                    if (this.f1750a == null) {
+                        this.f1750a = new WeakHashMap<>();
                     }
                     for (int size = arrayList.size() - 1; size >= 0; size--) {
-                        ArrayList<WeakReference<View>> arrayList2 = f1904d;
+                        ArrayList<WeakReference<View>> arrayList2 = f1749d;
                         View view = arrayList2.get(size).get();
                         if (view == null) {
                             arrayList2.remove(size);
                         } else {
-                            this.f1905a.put(view, Boolean.TRUE);
+                            this.f1750a.put(view, Boolean.TRUE);
                             for (ViewParent parent = view.getParent(); parent instanceof View; parent = parent.getParent()) {
-                                this.f1905a.put((View) parent, Boolean.TRUE);
+                                this.f1750a.put((View) parent, Boolean.TRUE);
                             }
                         }
                     }
@@ -923,15 +923,15 @@ public class o0 {
 
     @Deprecated
     public static y0 e(View view) {
-        if (f1893a == null) {
-            f1893a = new WeakHashMap<>();
+        if (f1738a == null) {
+            f1738a = new WeakHashMap<>();
         }
-        y0 y0Var = f1893a.get(view);
+        y0 y0Var = f1738a.get(view);
         if (y0Var != null) {
             return y0Var;
         }
         y0 y0Var2 = new y0(view);
-        f1893a.put(view, y0Var2);
+        f1738a.put(view, y0Var2);
         return y0Var2;
     }
 
@@ -1027,7 +1027,7 @@ public class o0 {
         if (accessibilityDelegateM == null) {
             return null;
         }
-        return accessibilityDelegateM instanceof androidx.core.view.a.C0026a ? ((androidx.core.view.a.C0026a) accessibilityDelegateM).f1814a : new androidx.core.view.a(accessibilityDelegateM);
+        return accessibilityDelegateM instanceof androidx.core.view.a.C0022a ? ((androidx.core.view.a.C0022a) accessibilityDelegateM).f1659a : new androidx.core.view.a(accessibilityDelegateM);
     }
 
     public static f<Boolean> l0() {
@@ -1039,7 +1039,7 @@ public class o0 {
     }
 
     public static void m0(View view, androidx.core.view.a aVar) {
-        if (aVar == null && (m(view) instanceof androidx.core.view.a.C0026a)) {
+        if (aVar == null && (m(view) instanceof androidx.core.view.a.C0022a)) {
             aVar = new androidx.core.view.a();
         }
         x0(view);
@@ -1047,7 +1047,7 @@ public class o0 {
     }
 
     public static View.AccessibilityDelegate n(View view) {
-        if (f1894c) {
+        if (f1739c) {
             return null;
         }
         if (b == null) {
@@ -1056,7 +1056,7 @@ public class o0 {
                 b = declaredField;
                 declaredField.setAccessible(true);
             } catch (Throwable unused) {
-                f1894c = true;
+                f1739c = true;
                 return null;
             }
         }
@@ -1067,7 +1067,7 @@ public class o0 {
             }
             return null;
         } catch (Throwable unused2) {
-            f1894c = true;
+            f1739c = true;
             return null;
         }
     }
@@ -1099,9 +1099,9 @@ public class o0 {
     public static void p0(View view, CharSequence charSequence) {
         a0().f(view, charSequence);
         if (charSequence != null) {
-            f1897f.a(view);
+            f1742f.a(view);
         } else {
-            f1897f.d(view);
+            f1742f.d(view);
         }
     }
 
@@ -1115,7 +1115,7 @@ public class o0 {
         int i11 = -1;
         int i12 = 0;
         while (true) {
-            int[] iArr = f1895d;
+            int[] iArr = f1740d;
             if (i12 >= iArr.length || i11 != -1) {
                 break;
             }
@@ -1173,7 +1173,7 @@ public class o0 {
 
     /* JADX WARN: Multi-variable type inference failed */
     public static a0 v(View view) {
-        return view instanceof a0 ? (a0) view : f1896e;
+        return view instanceof a0 ? (a0) view : f1741e;
     }
 
     @Deprecated

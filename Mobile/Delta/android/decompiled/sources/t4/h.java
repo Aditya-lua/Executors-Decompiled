@@ -18,7 +18,7 @@ public final class h {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public static final h f31594a = new h();
+    public static final h f32113a = new h();
 
     @NotNull
     public final e a(@NotNull GetTopicsResponse response) {

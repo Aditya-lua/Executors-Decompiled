@@ -11,27 +11,27 @@ import android.os.RemoteException;
 public final class f {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object f33572a = new Object();
+    public final Object f33778a = new Object();
     public final c.b b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final c.a f33573c;
+    public final c.a f33779c;
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public final ComponentName f33574d;
+    public final ComponentName f33780d;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public final PendingIntent f33575e;
+    public final PendingIntent f33781e;
 
     public f(c.b bVar, c.a aVar, ComponentName componentName, PendingIntent pendingIntent) {
         this.b = bVar;
-        this.f33573c = aVar;
-        this.f33574d = componentName;
-        this.f33575e = pendingIntent;
+        this.f33779c = aVar;
+        this.f33780d = componentName;
+        this.f33781e = pendingIntent;
     }
 
     public final void a(Bundle bundle) {
-        PendingIntent pendingIntent = this.f33575e;
+        PendingIntent pendingIntent = this.f33781e;
         if (pendingIntent != null) {
             bundle.putParcelable("android.support.customtabs.extra.SESSION_ID", pendingIntent);
         }
@@ -51,7 +51,7 @@ public final class f {
         if (uri != null) {
             bundle.putParcelable("target_origin", uri);
         }
-        if (this.f33575e != null) {
+        if (this.f33781e != null) {
             a(bundle);
         }
         if (bundle.isEmpty()) {
@@ -61,24 +61,24 @@ public final class f {
     }
 
     public IBinder d() {
-        return this.f33573c.asBinder();
+        return this.f33779c.asBinder();
     }
 
     public ComponentName e() {
-        return this.f33574d;
+        return this.f33780d;
     }
 
     public PendingIntent f() {
-        return this.f33575e;
+        return this.f33781e;
     }
 
     public int g(String str, Bundle bundle) {
-        int iA0;
+        int iW0;
         Bundle bundleB = b(bundle);
-        synchronized (this.f33572a) {
+        synchronized (this.f33778a) {
             try {
                 try {
-                    iA0 = this.b.A0(this.f33573c, str, bundleB);
+                    iW0 = this.b.w0(this.f33779c, str, bundleB);
                 } catch (RemoteException unused) {
                     return -2;
                 }
@@ -86,7 +86,7 @@ public final class f {
                 throw th2;
             }
         }
-        return iA0;
+        return iW0;
     }
 
     public boolean h(Uri uri) {
@@ -97,10 +97,10 @@ public final class f {
         try {
             Bundle bundleC = c(uri2);
             if (bundleC == null) {
-                return this.b.n1(this.f33573c, uri);
+                return this.b.j1(this.f33779c, uri);
             }
             bundle.putAll(bundleC);
-            return this.b.l2(this.f33573c, uri, bundle);
+            return this.b.l2(this.f33779c, uri, bundle);
         } catch (RemoteException unused) {
             return false;
         }

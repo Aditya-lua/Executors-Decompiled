@@ -1,28 +1,26 @@
 package lp;
 
-import com.withpersona.sdk2.inquiry.jpmynumber.JpMyNumberNfcReaderConfig;
+import dt.i;
 
 /* JADX INFO: loaded from: classes3.dex */
-public final class f implements ft.d<g.c<JpMyNumberNfcReaderConfig>> {
+public final class f {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final c f23495a;
+    public final i<b> f23919a;
 
-    public f(c cVar) {
-        this.f23495a = cVar;
+    public f(i<b> iVar) {
+        this.f23919a = iVar;
     }
 
-    public static f a(c cVar) {
-        return new f(cVar);
+    public static f a(i<b> iVar) {
+        return new f(iVar);
     }
 
-    public static g.c<JpMyNumberNfcReaderConfig> c(c cVar) {
-        return (g.c) ft.h.e(cVar.a());
+    public static e c(b bVar, String str) {
+        return new e(bVar, str);
     }
 
-    @Override // ht.a
-    /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public g.c<JpMyNumberNfcReaderConfig> get() {
-        return c(this.f23495a);
+    public e b(String str) {
+        return c(this.f23919a.get(), str);
     }
 }

@@ -32,7 +32,7 @@ public final class a {
     /* JADX INFO: renamed from: o3.a$a, reason: collision with other inner class name */
     @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\b\u0007\u0018\u0000 \u00022\u00020\u0001:\u0001\u0002¨\u0006\u0003"}, d2 = {"Lo3/a$a;", "", "a", "credentials_release"}, k = 1, mv = {2, 1, 0}, xi = 48)
     @SuppressLint({"ObsoleteSdkInt"})
-    public static final class C0464a {
+    public static final class C0475a {
 
         /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
         @NotNull
@@ -174,26 +174,26 @@ public final class a {
         @Nullable
         public final f a(@NotNull Intent intent) {
             Intrinsics.checkNotNullParameter(intent, "intent");
-            return Build.VERSION.SDK_INT >= 34 ? b.INSTANCE.a(intent) : C0464a.INSTANCE.a(intent);
+            return Build.VERSION.SDK_INT >= 34 ? b.INSTANCE.a(intent) : C0475a.INSTANCE.a(intent);
         }
 
         @Nullable
         public final c b(@NotNull String type, @NotNull Intent intent) {
             Intrinsics.checkNotNullParameter(type, "type");
             Intrinsics.checkNotNullParameter(intent, "intent");
-            return Build.VERSION.SDK_INT >= 34 ? b.INSTANCE.b(type, intent) : C0464a.INSTANCE.b(intent);
+            return Build.VERSION.SDK_INT >= 34 ? b.INSTANCE.b(type, intent) : C0475a.INSTANCE.b(intent);
         }
 
         @Nullable
         public final n c(@NotNull Intent intent) {
             Intrinsics.checkNotNullParameter(intent, "intent");
-            return Build.VERSION.SDK_INT >= 34 ? b.INSTANCE.c(intent) : C0464a.INSTANCE.c(intent);
+            return Build.VERSION.SDK_INT >= 34 ? b.INSTANCE.c(intent) : C0475a.INSTANCE.c(intent);
         }
 
         @Nullable
         public final l0 d(@NotNull Intent intent) {
             Intrinsics.checkNotNullParameter(intent, "intent");
-            return Build.VERSION.SDK_INT >= 34 ? b.INSTANCE.d(intent) : C0464a.INSTANCE.d(intent);
+            return Build.VERSION.SDK_INT >= 34 ? b.INSTANCE.d(intent) : C0475a.INSTANCE.d(intent);
         }
 
         public Companion() {

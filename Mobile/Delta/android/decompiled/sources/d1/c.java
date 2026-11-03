@@ -23,26 +23,26 @@ public final class c implements r, l {
     public final s b;
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final s0.f f14275c;
+    public final s0.f f14255c;
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final Object f14274a = new Object();
+    public final Object f14254a = new Object();
 
     /* JADX INFO: renamed from: d, reason: collision with root package name */
-    public volatile boolean f14276d = false;
+    public volatile boolean f14256d = false;
 
     /* JADX INFO: renamed from: e, reason: collision with root package name */
-    public boolean f14277e = false;
+    public boolean f14257e = false;
 
     /* JADX INFO: renamed from: f, reason: collision with root package name */
-    public boolean f14278f = false;
+    public boolean f14258f = false;
 
     /* JADX INFO: renamed from: g, reason: collision with root package name */
-    public g2 f14279g = null;
+    public g2 f14259g = null;
 
     public c(s sVar, s0.f fVar) {
         this.b = sVar;
-        this.f14275c = fVar;
+        this.f14255c = fVar;
         if (sVar.a().getState().b(androidx.lifecycle.l.b.STARTED)) {
             fVar.w();
         } else {
@@ -60,10 +60,10 @@ public final class c implements r, l {
     }
 
     public void A() {
-        synchronized (this.f14274a) {
+        synchronized (this.f14254a) {
             try {
-                if (this.f14277e) {
-                    this.f14277e = false;
+                if (this.f14257e) {
+                    this.f14257e = false;
                     if (this.b.a().getState().b(androidx.lifecycle.l.b.STARTED)) {
                         onStart(this.b);
                     }
@@ -76,38 +76,38 @@ public final class c implements r, l {
 
     @Override // g0.l
     public m c() {
-        return this.f14275c.c();
+        return this.f14255c.c();
     }
 
     @Override // g0.l
     public t d() {
-        return this.f14275c.d();
+        return this.f14255c.d();
     }
 
     public void n(final g2 g2Var) {
-        synchronized (this.f14274a) {
+        synchronized (this.f14254a) {
             try {
-                if (this.f14279g == null) {
-                    this.f14279g = g2Var;
+                if (this.f14259g == null) {
+                    this.f14259g = g2Var;
                 } else if (g2Var.getIsLegacy()) {
-                    if (!this.f14279g.getIsLegacy()) {
+                    if (!this.f14259g.getIsLegacy()) {
                         throw new IllegalStateException("Cannot bind use cases when a SessionConfig is already bound to this LifecycleOwner. Please unbind first");
                     }
-                    ArrayList arrayList = new ArrayList(this.f14279g.k());
+                    ArrayList arrayList = new ArrayList(this.f14259g.k());
                     arrayList.addAll(g2Var.k());
-                    this.f14279g = new q1(arrayList, g2Var.getViewPort(), g2Var.c());
+                    this.f14259g = new q1(arrayList, g2Var.getViewPort(), g2Var.c());
                 } else {
-                    if (this.f14279g.getIsLegacy()) {
+                    if (this.f14259g.getIsLegacy()) {
                         throw new IllegalStateException("Cannot bind the SessionConfig when use cases are bound to this LifecycleOwner already. Please unbind first");
                     }
-                    this.f14279g = g2Var;
-                    s0.f fVar = this.f14275c;
+                    this.f14259g = g2Var;
+                    s0.f fVar = this.f14255c;
                     fVar.f0(fVar.O());
                 }
-                this.f14275c.m0(g2Var.getViewPort());
-                this.f14275c.i0(g2Var.c());
-                this.f14275c.l0(g2Var.getSessionType());
-                this.f14275c.k0(g2Var.f());
+                this.f14255c.m0(g2Var.getViewPort());
+                this.f14255c.i0(g2Var.c());
+                this.f14255c.l0(g2Var.getSessionType());
+                this.f14255c.k0(g2Var.f());
                 final ResolvedFeatureGroup resolvedFeatureGroupB = ResolvedFeatureGroup.b(g2Var, (o0) d());
                 g2Var.getFeatureSelectionListenerExecutor().execute(new Runnable() { // from class: d1.b
                     @Override // java.lang.Runnable
@@ -115,7 +115,7 @@ public final class c implements r, l {
                         c.m(resolvedFeatureGroupB, g2Var);
                     }
                 });
-                this.f14275c.n(g2Var.k(), resolvedFeatureGroupB);
+                this.f14255c.n(g2Var.k(), resolvedFeatureGroupB);
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -124,29 +124,29 @@ public final class c implements r, l {
 
     @f0(androidx.lifecycle.l.a.ON_DESTROY)
     public void onDestroy(s sVar) {
-        synchronized (this.f14274a) {
-            s0.f fVar = this.f14275c;
+        synchronized (this.f14254a) {
+            s0.f fVar = this.f14255c;
             fVar.f0(fVar.O());
         }
     }
 
     @f0(androidx.lifecycle.l.a.ON_PAUSE)
     public void onPause(s sVar) {
-        this.f14275c.h(false);
+        this.f14255c.h(false);
     }
 
     @f0(androidx.lifecycle.l.a.ON_RESUME)
     public void onResume(s sVar) {
-        this.f14275c.h(true);
+        this.f14255c.h(true);
     }
 
     @f0(androidx.lifecycle.l.a.ON_START)
     public void onStart(s sVar) {
-        synchronized (this.f14274a) {
+        synchronized (this.f14254a) {
             try {
-                if (!this.f14277e && !this.f14278f) {
-                    this.f14275c.w();
-                    this.f14276d = true;
+                if (!this.f14257e && !this.f14258f) {
+                    this.f14255c.w();
+                    this.f14256d = true;
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -156,11 +156,11 @@ public final class c implements r, l {
 
     @f0(androidx.lifecycle.l.a.ON_STOP)
     public void onStop(s sVar) {
-        synchronized (this.f14274a) {
+        synchronized (this.f14254a) {
             try {
-                if (!this.f14277e && !this.f14278f) {
-                    this.f14275c.H();
-                    this.f14276d = false;
+                if (!this.f14257e && !this.f14258f) {
+                    this.f14255c.H();
+                    this.f14256d = false;
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -169,12 +169,12 @@ public final class c implements r, l {
     }
 
     public s0.f s() {
-        return this.f14275c;
+        return this.f14255c;
     }
 
     public s t() {
         s sVar;
-        synchronized (this.f14274a) {
+        synchronized (this.f14254a) {
             sVar = this.b;
         }
         return sVar;
@@ -182,37 +182,37 @@ public final class c implements r, l {
 
     public List<w2> u() {
         List<w2> listUnmodifiableList;
-        synchronized (this.f14274a) {
-            listUnmodifiableList = Collections.unmodifiableList(this.f14275c.O());
+        synchronized (this.f14254a) {
+            listUnmodifiableList = Collections.unmodifiableList(this.f14255c.O());
         }
         return listUnmodifiableList;
     }
 
     public boolean v(w2 w2Var) {
         boolean zContains;
-        synchronized (this.f14274a) {
-            zContains = this.f14275c.O().contains(w2Var);
+        synchronized (this.f14254a) {
+            zContains = this.f14255c.O().contains(w2Var);
         }
         return zContains;
     }
 
     public boolean w() {
         boolean zM;
-        synchronized (this.f14274a) {
-            g2 g2Var = this.f14279g;
+        synchronized (this.f14254a) {
+            g2 g2Var = this.f14259g;
             zM = g2Var == null ? false : g2Var.getIsLegacy();
         }
         return zM;
     }
 
     public void x() {
-        synchronized (this.f14274a) {
+        synchronized (this.f14254a) {
             try {
-                if (this.f14277e) {
+                if (this.f14257e) {
                     return;
                 }
                 onStop(this.b);
-                this.f14277e = true;
+                this.f14257e = true;
             } catch (Throwable th2) {
                 throw th2;
             }
@@ -220,28 +220,28 @@ public final class c implements r, l {
     }
 
     public void y(g2 g2Var) {
-        synchronized (this.f14274a) {
+        synchronized (this.f14254a) {
             try {
-                g2 g2Var2 = this.f14279g;
+                g2 g2Var2 = this.f14259g;
                 if (g2Var2 != null && g2Var2.getIsLegacy() == g2Var.getIsLegacy()) {
                     q1 q1Var = null;
-                    if (this.f14279g.getIsLegacy() || g2Var.getIsLegacy()) {
-                        if (this.f14279g.getIsLegacy() && g2Var.getIsLegacy()) {
-                            ArrayList arrayList = new ArrayList(this.f14279g.k());
+                    if (this.f14259g.getIsLegacy() || g2Var.getIsLegacy()) {
+                        if (this.f14259g.getIsLegacy() && g2Var.getIsLegacy()) {
+                            ArrayList arrayList = new ArrayList(this.f14259g.k());
                             arrayList.removeAll(g2Var.k());
                             if (!arrayList.isEmpty()) {
-                                q1Var = new q1(arrayList, this.f14279g.getViewPort(), this.f14279g.c());
+                                q1Var = new q1(arrayList, this.f14259g.getViewPort(), this.f14259g.c());
                             }
-                            this.f14279g = q1Var;
+                            this.f14259g = q1Var;
                         }
-                    } else if (this.f14279g != g2Var) {
+                    } else if (this.f14259g != g2Var) {
                         return;
                     } else {
-                        this.f14279g = null;
+                        this.f14259g = null;
                     }
                     ArrayList arrayList2 = new ArrayList(g2Var.k());
-                    arrayList2.retainAll(this.f14275c.O());
-                    this.f14275c.f0(arrayList2);
+                    arrayList2.retainAll(this.f14255c.O());
+                    this.f14255c.f0(arrayList2);
                 }
             } catch (Throwable th2) {
                 throw th2;
@@ -250,10 +250,10 @@ public final class c implements r, l {
     }
 
     public void z() {
-        synchronized (this.f14274a) {
-            s0.f fVar = this.f14275c;
+        synchronized (this.f14254a) {
+            s0.f fVar = this.f14255c;
             fVar.f0(fVar.O());
-            this.f14279g = null;
+            this.f14259g = null;
         }
     }
 }

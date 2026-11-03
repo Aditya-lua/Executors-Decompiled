@@ -7,18 +7,18 @@ import java.util.concurrent.Executor;
 public final class v implements Runnable {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final /* synthetic */ Task f30610a;
+    public final /* synthetic */ Task f31157a;
     public final /* synthetic */ w b;
 
     public v(w wVar, Task task) {
         this.b = wVar;
-        this.f30610a = task;
+        this.f31157a = task;
     }
 
     @Override // java.lang.Runnable
     public final void run() {
         try {
-            Task task = (Task) this.b.b.then(this.f30610a);
+            Task task = (Task) this.b.b.then(this.f31157a);
             if (task == null) {
                 this.b.onFailure(new NullPointerException("Continuation returned null"));
                 return;
@@ -30,12 +30,12 @@ public final class v implements Runnable {
             task.a(executor, this.b);
         } catch (i e10) {
             if (e10.getCause() instanceof Exception) {
-                this.b.f30612c.p((Exception) e10.getCause());
+                this.b.f31159c.p((Exception) e10.getCause());
             } else {
-                this.b.f30612c.p(e10);
+                this.b.f31159c.p(e10);
             }
         } catch (Exception e11) {
-            this.b.f30612c.p(e11);
+            this.b.f31159c.p(e11);
         }
     }
 }

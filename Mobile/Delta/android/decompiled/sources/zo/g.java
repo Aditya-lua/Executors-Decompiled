@@ -1,32 +1,52 @@
 package zo;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import com.airbnb.lottie.LottieAnimationView;
+import xo.e0;
+import xo.f0;
+
 /* JADX INFO: loaded from: classes3.dex */
-public final class g implements ft.d<f> {
+public final class g implements r5.a {
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final ft.i<yn.d> f37881a;
-    public final ft.i<com.withpersona.sdk2.inquiry.internal.network.e> b;
+    @NonNull
+    public final ConstraintLayout f38231a;
 
-    /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final ft.i<ku.l0> f37882c;
+    @NonNull
+    public final LottieAnimationView b;
 
-    public g(ft.i<yn.d> iVar, ft.i<com.withpersona.sdk2.inquiry.internal.network.e> iVar2, ft.i<ku.l0> iVar3) {
-        this.f37881a = iVar;
-        this.b = iVar2;
-        this.f37882c = iVar3;
+    public g(@NonNull ConstraintLayout constraintLayout, @NonNull LottieAnimationView lottieAnimationView) {
+        this.f38231a = constraintLayout;
+        this.b = lottieAnimationView;
     }
 
-    public static g a(ft.i<yn.d> iVar, ft.i<com.withpersona.sdk2.inquiry.internal.network.e> iVar2, ft.i<ku.l0> iVar3) {
-        return new g(iVar, iVar2, iVar3);
+    @NonNull
+    public static g a(@NonNull View view) {
+        int i10 = e0.f35974a;
+        LottieAnimationView lottieAnimationView = (LottieAnimationView) r5.b.a(view, i10);
+        if (lottieAnimationView != null) {
+            return new g((ConstraintLayout) view, lottieAnimationView);
+        }
+        throw new NullPointerException("Missing required view with ID: ".concat(view.getResources().getResourceName(i10)));
     }
 
-    public static f c(yn.d dVar, com.withpersona.sdk2.inquiry.internal.network.e eVar, ku.l0 l0Var) {
-        return new f(dVar, eVar, l0Var);
+    @NonNull
+    public static g c(@NonNull LayoutInflater layoutInflater, ViewGroup viewGroup, boolean z10) {
+        View viewInflate = layoutInflater.inflate(f0.f36003g, viewGroup, false);
+        if (z10) {
+            viewGroup.addView(viewInflate);
+        }
+        return a(viewInflate);
     }
 
-    @Override // ht.a
+    @Override // r5.a
+    @NonNull
     /* JADX INFO: renamed from: b, reason: merged with bridge method [inline-methods] */
-    public f get() {
-        return c(this.f37881a.get(), this.b.get(), this.f37882c.get());
+    public ConstraintLayout getRoot() {
+        return this.f38231a;
     }
 }

@@ -1,101 +1,84 @@
 package gn;
 
-import fn.j0;
-import java.util.Map;
-import jt.s;
+import android.media.Image;
+import com.appsflyer.sdk_base.referrer.Payload;
+import java.nio.ByteBuffer;
 import kotlin.Metadata;
-import kotlin.collections.k0;
 import kotlin.jvm.internal.Intrinsics;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 /* JADX INFO: loaded from: classes3.dex */
-@Metadata(d1 = {"\u0000:\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010$\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\u0006\u0010\u0007J(\u0010\u000e\u001a\b\u0012\u0004\u0012\u00020\r0\f2\u0006\u0010\t\u001a\u00020\b2\b\u0010\u000b\u001a\u0004\u0018\u00010\nH\u0096@¢\u0006\u0004\b\u000e\u0010\u000fR\u0014\u0010\u0003\u001a\u00020\u00028\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u000e\u0010\u0010R\u0014\u0010\u0005\u001a\u00020\u00048\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0011\u0010\u0012R \u0010\u0017\u001a\u000e\u0012\u0004\u0012\u00020\u0001\u0012\u0004\u0012\u00020\u00140\u00138\u0002X\u0082\u0004¢\u0006\u0006\n\u0004\b\u0015\u0010\u0016¨\u0006\u0018"}, d2 = {"Lgn/g;", "Lgn/e;", "Lgn/j;", "idFrontAnalyzer", "Lgn/d;", "barcodePdf417Analyzer", "<init>", "(Lgn/j;Lgn/d;)V", "Lfn/z;", "image", "Landroid/graphics/Rect;", "viewfinderRect", "Ljt/n;", "Lgn/a;", "a", "(Lfn/z;Landroid/graphics/Rect;Lnt/b;)Ljava/lang/Object;", "Lgn/j;", "b", "Lgn/d;", "", "Lfn/j0$c;", "c", "Ljava/util/Map;", "analyzers", "camera_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
-public final class g implements e {
+@Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\b\t\bÆ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J\u001d\u0010\b\u001a\u00020\u00072\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0006\u001a\u00020\u0004¢\u0006\u0004\b\b\u0010\tJ/\u0010\u000e\u001a\u00020\u00072\u0006\u0010\u0005\u001a\u00020\n2\u0006\u0010\u0006\u001a\u00020\n2\u0006\u0010\f\u001a\u00020\u000b2\u0006\u0010\r\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\u000e\u0010\u000fJ/\u0010\u0010\u001a\u00020\u00072\u0006\u0010\u0005\u001a\u00020\n2\u0006\u0010\u0006\u001a\u00020\n2\u0006\u0010\f\u001a\u00020\u000b2\u0006\u0010\r\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\u0010\u0010\u000fJ/\u0010\u0013\u001a\u00020\u00072\u0006\u0010\u0005\u001a\u00020\n2\u0006\u0010\u0006\u001a\u00020\n2\u0006\u0010\u0011\u001a\u00020\u000b2\u0006\u0010\u0012\u001a\u00020\u000bH\u0002¢\u0006\u0004\b\u0013\u0010\u000f¨\u0006\u0014"}, d2 = {"Lgn/g;", "", "<init>", "()V", "Landroid/media/Image;", Payload.SOURCE, "destination", "", "d", "(Landroid/media/Image;Landroid/media/Image;)V", "Landroid/media/Image$Plane;", "", "planeWidth", "planeHeight", "a", "(Landroid/media/Image$Plane;Landroid/media/Image$Plane;II)V", "c", "rowLength", "rowCount", "b", "camera_release"}, k = 1, mv = {2, 2, 0}, xi = 48)
+public final class g {
 
-    /* JADX INFO: renamed from: a, reason: collision with root package name and from kotlin metadata */
+    /* JADX INFO: renamed from: a, reason: collision with root package name */
     @NotNull
-    public final j idFrontAnalyzer;
+    public static final g f18640a = new g();
 
-    /* JADX INFO: renamed from: b, reason: from kotlin metadata */
-    @NotNull
-    public final d barcodePdf417Analyzer;
-
-    /* JADX INFO: renamed from: c, reason: collision with root package name and from kotlin metadata */
-    @NotNull
-    public final Map<e, j0.c> analyzers;
-
-    @pt.f(c = "com.withpersona.sdk2.camera.analyzers.FrontOrBackAnalyzer", f = "FrontOrBackAnalyzer.kt", l = {27}, m = "analyze-0E7RQCE")
-    @Metadata(k = 3, mv = {2, 2, 0}, xi = 48)
-    public static final class a extends pt.d {
-        public int B;
-
-        /* JADX INFO: renamed from: t, reason: collision with root package name */
-        public Object f18263t;
-
-        /* JADX INFO: renamed from: u, reason: collision with root package name */
-        public Object f18264u;
-
-        /* JADX INFO: renamed from: v, reason: collision with root package name */
-        public Object f18265v;
-
-        /* JADX INFO: renamed from: w, reason: collision with root package name */
-        public Object f18266w;
-
-        /* JADX INFO: renamed from: x, reason: collision with root package name */
-        public Object f18267x;
-
-        /* JADX INFO: renamed from: y, reason: collision with root package name */
-        public Object f18268y;
-
-        /* JADX INFO: renamed from: z, reason: collision with root package name */
-        public /* synthetic */ Object f18269z;
-
-        public a(nt.b<? super a> bVar) {
-            super(bVar);
-        }
-
-        @Override // pt.a
-        @Nullable
-        public final Object invokeSuspend(@NotNull Object obj) {
-            this.f18269z = obj;
-            this.B |= Integer.MIN_VALUE;
-            Object objA = g.this.a(null, null, this);
-            return objA == ot.c.e() ? objA : jt.n.a(objA);
+    public final void a(Image.Plane source, Image.Plane destination, int planeWidth, int planeHeight) {
+        if (source.getPixelStride() == 1 && destination.getPixelStride() == 1) {
+            b(source, destination, planeWidth, planeHeight);
+        } else if (source.getPixelStride() == 2 && destination.getPixelStride() == 2) {
+            b(source, destination, (planeWidth * 2) - 1, planeHeight);
+        } else {
+            c(source, destination, planeWidth, planeHeight);
         }
     }
 
-    public g(@NotNull j idFrontAnalyzer, @NotNull d barcodePdf417Analyzer) {
-        Intrinsics.checkNotNullParameter(idFrontAnalyzer, "idFrontAnalyzer");
-        Intrinsics.checkNotNullParameter(barcodePdf417Analyzer, "barcodePdf417Analyzer");
-        this.idFrontAnalyzer = idFrontAnalyzer;
-        this.barcodePdf417Analyzer = barcodePdf417Analyzer;
-        this.analyzers = k0.m(s.a(barcodePdf417Analyzer, j0.c.Back), s.a(idFrontAnalyzer, j0.c.Front));
+    public final void b(Image.Plane source, Image.Plane destination, int rowLength, int rowCount) {
+        ByteBuffer byteBufferDuplicate = source.getBuffer().duplicate();
+        ByteBuffer byteBufferDuplicate2 = destination.getBuffer().duplicate();
+        int iPosition = byteBufferDuplicate.position();
+        int iPosition2 = byteBufferDuplicate2.position();
+        if (source.getRowStride() == rowLength && destination.getRowStride() == rowLength) {
+            byteBufferDuplicate.limit(iPosition + (rowLength * rowCount));
+            byteBufferDuplicate2.put(byteBufferDuplicate);
+            return;
+        }
+        for (int i10 = 0; i10 < rowCount; i10++) {
+            int rowStride = (source.getRowStride() * i10) + iPosition;
+            byteBufferDuplicate.limit(rowStride + rowLength);
+            byteBufferDuplicate.position(rowStride);
+            byteBufferDuplicate2.position((destination.getRowStride() * i10) + iPosition2);
+            byteBufferDuplicate2.put(byteBufferDuplicate);
+        }
     }
 
-    /* JADX WARN: Code duplicated, block: B:17:0x006b  */
-    /* JADX WARN: Code duplicated, block: B:19:0x0095 A[RETURN] */
-    /* JADX WARN: Code duplicated, block: B:20:0x0096  */
-    /* JADX WARN: Code duplicated, block: B:23:0x00a1  */
-    /* JADX WARN: Code duplicated, block: B:25:0x00ac  */
-    /* JADX WARN: Code duplicated, block: B:29:0x00bc  */
-    /* JADX WARN: Code duplicated, block: B:7:0x0013  */
-    /* JADX WARN: Multi-variable type inference failed */
-    /* JADX WARN: Type inference failed for: r10v11, types: [T, java.lang.Throwable] */
-    /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:20:0x0096 -> B:21:0x009b). Please report as a decompilation issue!!! */
-    /*  JADX ERROR: JadxOverflowException in pass: RegionMakerVisitor
-        jadx.core.utils.exceptions.JadxOverflowException: Regions stack size limit reached
-        	at jadx.core.utils.ErrorsCounter.addError(ErrorsCounter.java:59)
-        	at jadx.core.utils.ErrorsCounter.error(ErrorsCounter.java:31)
-        	at jadx.core.dex.attributes.nodes.NotificationAttrNode.addError(NotificationAttrNode.java:19)
-        */
-    @Override // gn.e
-    @org.jetbrains.annotations.Nullable
-    public java.lang.Object a(@org.jetbrains.annotations.NotNull fn.z r10, @org.jetbrains.annotations.Nullable android.graphics.Rect r11, @org.jetbrains.annotations.NotNull nt.b<? super jt.n<? extends gn.a>> r12) {
-        /*
-            Method dump skipped, instruction units count: 223
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: gn.g.a(fn.z, android.graphics.Rect, nt.b):java.lang.Object");
+    public final void c(Image.Plane source, Image.Plane destination, int planeWidth, int planeHeight) {
+        ByteBuffer byteBufferDuplicate = source.getBuffer().duplicate();
+        ByteBuffer byteBufferDuplicate2 = destination.getBuffer().duplicate();
+        int iPosition = byteBufferDuplicate.position();
+        int iPosition2 = byteBufferDuplicate2.position();
+        for (int i10 = 0; i10 < planeHeight; i10++) {
+            int rowStride = (source.getRowStride() * i10) + iPosition;
+            int rowStride2 = (destination.getRowStride() * i10) + iPosition2;
+            for (int i11 = 0; i11 < planeWidth; i11++) {
+                byteBufferDuplicate2.put(rowStride2, byteBufferDuplicate.get(rowStride));
+                rowStride += source.getPixelStride();
+                rowStride2 += destination.getPixelStride();
+            }
+        }
+    }
+
+    public final void d(@NotNull Image source, @NotNull Image destination) {
+        Intrinsics.checkNotNullParameter(source, "source");
+        Intrinsics.checkNotNullParameter(destination, "destination");
+        int width = source.getWidth() / 2;
+        int height = source.getHeight() / 2;
+        Image.Plane plane = source.getPlanes()[0];
+        Intrinsics.checkNotNullExpressionValue(plane, "get(...)");
+        Image.Plane plane2 = destination.getPlanes()[0];
+        Intrinsics.checkNotNullExpressionValue(plane2, "get(...)");
+        a(plane, plane2, source.getWidth(), source.getHeight());
+        Image.Plane plane3 = source.getPlanes()[1];
+        Intrinsics.checkNotNullExpressionValue(plane3, "get(...)");
+        Image.Plane plane4 = destination.getPlanes()[1];
+        Intrinsics.checkNotNullExpressionValue(plane4, "get(...)");
+        a(plane3, plane4, width, height);
+        Image.Plane plane5 = source.getPlanes()[2];
+        Intrinsics.checkNotNullExpressionValue(plane5, "get(...)");
+        Image.Plane plane6 = destination.getPlanes()[2];
+        Intrinsics.checkNotNullExpressionValue(plane6, "get(...)");
+        a(plane5, plane6, width, height);
     }
 }

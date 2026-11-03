@@ -7,11 +7,11 @@ import java.util.Objects;
 public final class x0 extends n0 {
 
     /* JADX INFO: renamed from: c, reason: collision with root package name */
-    public final /* synthetic */ y0 f7339c;
+    public final /* synthetic */ y0 f7413c;
 
     public x0(y0 y0Var) {
         Objects.requireNonNull(y0Var);
-        this.f7339c = y0Var;
+        this.f7413c = y0Var;
     }
 
     @Override // com.google.android.gms.internal.play_billing.j0
@@ -21,18 +21,18 @@ public final class x0 extends n0 {
 
     @Override // java.util.List
     public final /* bridge */ /* synthetic */ Object get(int i10) {
-        y0 y0Var = this.f7339c;
-        x.a(i10, y0Var.f7347e, "index");
+        y0 y0Var = this.f7413c;
+        x.a(i10, y0Var.f7421e, "index");
         int i11 = i10 + i10;
-        Object obj = y0Var.f7346d[i11];
+        Object obj = y0Var.f7420d[i11];
         Objects.requireNonNull(obj);
-        Object obj2 = y0Var.f7346d[i11 + 1];
+        Object obj2 = y0Var.f7420d[i11 + 1];
         Objects.requireNonNull(obj2);
         return new AbstractMap.SimpleImmutableEntry(obj, obj2);
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final int size() {
-        return this.f7339c.f7347e;
+        return this.f7413c.f7421e;
     }
 }

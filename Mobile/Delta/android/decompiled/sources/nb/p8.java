@@ -9,9 +9,9 @@ public enum p8 {
 
 
     /* JADX INFO: renamed from: a, reason: collision with root package name */
-    public final String f25855a;
+    public final String f26676a;
 
     p8(String str) {
-        this.f25855a = str;
+        this.f26676a = str;
     }
 }

@@ -34,15 +34,15 @@ public class b extends e4.q implements c, v.a {
     }
 
     /* JADX INFO: renamed from: j.b$b, reason: collision with other inner class name */
-    public class C0369b implements f.b {
-        public C0369b() {
+    public class C0370b implements f.b {
+        public C0370b() {
         }
 
         @Override // f.b
         public void a(@NonNull Context context) {
             e eVarS1 = b.this.s1();
             eVarS1.s();
-            eVarS1.w(b.this.A().a("androidx:appcompat"));
+            eVarS1.w(b.this.z().a("androidx:appcompat"));
         }
     }
 
@@ -85,7 +85,7 @@ public class b extends e4.q implements c, v.a {
     }
 
     @Override // j.c
-    public void M(@NonNull o.b bVar) {
+    public void L(@NonNull o.b bVar) {
     }
 
     @Override // e.p, android.app.Activity
@@ -269,19 +269,19 @@ public class b extends e4.q implements c, v.a {
     }
 
     public final void u1() {
-        A().c("androidx:appcompat", new a());
-        N0(new C0369b());
+        z().c("androidx:appcompat", new a());
+        N0(new C0370b());
     }
 
     public void v1(@NonNull v vVar) {
         vVar.b(this);
     }
 
-    public void w1(@NonNull u2.j jVar) {
+    @Override // j.c
+    public void w(@NonNull o.b bVar) {
     }
 
-    @Override // j.c
-    public void x(@NonNull o.b bVar) {
+    public void w1(@NonNull u2.j jVar) {
     }
 
     public void x1(int i10) {
